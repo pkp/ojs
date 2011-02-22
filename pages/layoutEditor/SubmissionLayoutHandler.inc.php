@@ -51,7 +51,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		import('classes.submission.proofreader.ProofreaderAction');
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_LAYOUT');
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 
 		if ($layoutSignoff->getDateNotified() != null && $layoutSignoff->getDateUnderway() == null)
 		{
@@ -590,8 +590,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function _layoutEditingEnabled(&$submission) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$layoutEditorProofreadSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+		$layoutEditorProofreadSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 
 		return(($layoutSignoff->getDateNotified() != null
 			&& $layoutSignoff->getDateCompleted() == null)

@@ -2276,7 +2276,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId, 'editing');
 
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$signoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoff->setDateUnderway(null);
 		$signoff->setDateCompleted(null);

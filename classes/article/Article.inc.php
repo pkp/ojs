@@ -498,19 +498,19 @@ class Article extends Submission {
 		}
 
 		if($copyeditor) {
-			$copyedSignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
+			$copyedSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
 			$userId = $copyedSignoff->getUserId();
 			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'copyeditor');
 		}
 
 		if($layoutEditor) {
-			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 			$userId = $layoutSignoff->getUserId();
 			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'layoutEditor');
 		}
 
 		if($proofreader) {
-			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 			$userId = $proofSignoff->getUserId();
 			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'proofreader');
 		}
@@ -535,7 +535,7 @@ class Article extends Submission {
 	 */
 	function getSignoff($signoffType) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		return $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
+		return $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 	}
 
 	/**
@@ -548,7 +548,7 @@ class Article extends Submission {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
+		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) {
 			$returner = false;
 			return $returner;
@@ -572,7 +572,7 @@ class Article extends Submission {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
+		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) {
 			$returner = false;
 			return $returner;
@@ -590,7 +590,7 @@ class Article extends Submission {
 	function getUserIdBySignoffType($signoffType) {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
-		$signoff = $signoffDao->getBySymbolic($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
+		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) return false;
 
 		return $signoff->getUserId();

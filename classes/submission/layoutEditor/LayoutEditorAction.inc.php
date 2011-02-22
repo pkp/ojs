@@ -3,7 +3,7 @@
 /**
  * @defgroup submission_layoutEditor_LayoutEditorAction
  */
- 
+
 /**
  * @file classes/submission/layoutEditor/LayoutEditorAction.inc.php
  *
@@ -147,7 +147,7 @@ class LayoutEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($layoutSignoff->getDateCompleted() != null) {
 			return true;
 		}
@@ -255,7 +255,7 @@ class LayoutEditorAction extends Action {
 
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				
+
 				// Send a notification to associated users
 				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -267,7 +267,7 @@ class LayoutEditorAction extends Action {
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
 					);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email($request);
 				}
@@ -308,7 +308,7 @@ class LayoutEditorAction extends Action {
 
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				
+
 				// Send a notification to associated users
 				import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -320,7 +320,7 @@ class LayoutEditorAction extends Action {
 						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
 					);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email($request);
 				}
@@ -352,7 +352,7 @@ class LayoutEditorAction extends Action {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$suppDao =& DAORegistry::getDAO('SuppFileDAO');
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($layoutSignoff->getFileId() == $fileId) {
 			$canDownload = true;
 		} else if($galleyDao->galleyExistsByFileId($article->getId(), $fileId)) {

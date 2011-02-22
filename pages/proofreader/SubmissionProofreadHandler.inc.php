@@ -9,7 +9,7 @@
  * @class SubmissionProofreadHandler
  * @ingroup pages_proofreader
  *
- * @brief Handle requests for proofreader submission functions. 
+ * @brief Handle requests for proofreader submission functions.
  */
 
 // $Id$
@@ -19,14 +19,14 @@ import('pages.proofreader.ProofreaderHandler');
 class SubmissionProofreadHandler extends ProofreaderHandler {
 	/** submission associated with the request **/
 	var $submission;
-	
+
 	/**
 	 * Constructor
 	 **/
 	function SubmissionProofreadHandler() {
 		parent::ProofreaderHandler();
 	}
-	
+
 	/**
 	 * Submission - Proofreading view
 	 */
@@ -52,7 +52,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr->assign_by_ref('authors', $authors);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
-		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');		
+		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
@@ -77,7 +77,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'proofreader', 'completeProofreader'))) {
 			$request->redirect(null, null, 'submission', $articleId);
-		}		
+		}
 	}
 
 	function viewMetadata($args, $request) {
@@ -107,16 +107,16 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$submission =& $proofreaderDao->getSubmission($articleId, $journal->getId());
 
 		if (isset($submission)) {
-			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+			$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 			if ($proofSignoff->getUserId() == $user->getId()) {
 				$isValid = true;
-			}			
+			}
 		}
 
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		
+
 		$this->submission =& $submission;
 		return true;
 	}
