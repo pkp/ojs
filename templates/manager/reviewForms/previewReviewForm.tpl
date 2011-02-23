@@ -13,7 +13,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{if $reviewForm->getCompleteCount()==0 && $reviewForm->getIncompleteCount()==0}
+{if $completeCounts[$reviewForm->getId()]==0 && $incompleteCounts[$reviewForm->getId()]==0}
+	{assign var=canEdit value=1}
+{else}
+	{assign var=canEdit value=0}
+{/if}
+
+{if $canEdit}
 	<ul class="menu">
 		<li><a href="{url op="editReviewForm" path=$reviewForm->getId()}">{translate key="manager.reviewForms.edit"}</a></li>
 		<li><a href="{url op="reviewFormElements" path=$reviewForm->getId()}">{translate key="manager.reviewFormElements"}</a></li>
@@ -62,7 +68,7 @@
 
 <br/>
 
-<form id="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getId()}{/if}">
+<form id="previewReviewForm" method="post" action="{if !$canEdit}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getId()}{/if}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

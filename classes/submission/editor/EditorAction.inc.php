@@ -106,7 +106,7 @@ class EditorAction extends SectionEditorAction {
 
 		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
-		// Add a long entry before doing anything.
+		// Add a log entry before doing anything.
 		import('classes.article.log.ArticleLog');
 		import('classes.article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($request, $article, ARTICLE_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', array('editorName' => $user->getFullName()));

@@ -35,15 +35,16 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 		<td class="headseparator" colspan="4">&nbsp;</td>
 	</tr>
 {iterate from=reviewForms item=reviewForm name=reviewForms}
-{if $reviewForm->getCompleteCount() == 0 && $reviewForm->getIncompleteCount() == 0}
+{assign var=reviewFormId value=$reviewForm->getId()}
+{if $completeCounts[$reviewFormId] == 0 && $incompleteCounts[$reviewFormId] == 0}
 	{assign var=canEdit value=1}
 {else}
 	{assign var=canEdit value=0}
 {/if}
 	<tr valign="top" id="reviewform-{$reviewForm->getId()}" class="data">
 		<td class="drag">{$reviewForm->getLocalizedTitle()|escape}</td>
-		<td class="drag">{$reviewForm->getIncompleteCount()|escape}</td>
-		<td class="drag">{$reviewForm->getCompleteCount()|escape}</td>
+		<td class="drag">{$incompleteCounts[$reviewFormId]}</td>
+		<td class="drag">{$completeCounts[$reviewFormId]}</td>
 		<td align="right" class="nowrap">
 			{if $canEdit}<a href="{url op="editReviewForm" path=$reviewForm->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|{/if}
 			{strip}
