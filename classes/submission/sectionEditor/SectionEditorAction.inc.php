@@ -318,7 +318,7 @@ class SectionEditorAction extends Action {
 					// Add log
 					import('classes.article.log.ArticleLog');
 					import('classes.article.log.ArticleEventLogEntry');
-					ArticleLog::logEvent($sectionEditorSubmission->getId(), ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
+					ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_CANCEL, 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
 				} else {
 					if (!$request->getUserVar('continued')) {
 						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -500,6 +500,8 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
@@ -518,7 +520,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getId(), 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_RATE, 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -583,13 +585,14 @@ class SectionEditorAction extends Action {
 
 			if ($logEntry) {
 				// Add log
+				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 				import('classes.article.log.ArticleLog');
 				import('classes.article.log.ArticleEventLogEntry');
 				ArticleLog::logEvent(
-					$articleId,
+					$request,
+					$sectionEditorSubmission,
 					ARTICLE_LOG_REVIEW_SET_DUE_DATE,
-					ARTICLE_LOG_TYPE_REVIEW,
-					$reviewAssignment->getId(),
 					'log.review.reviewDueDateSet',
 					array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -778,7 +781,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true), 'log.copyedit.copyeditFileSet');
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_SET_FILE, 'log.copyedit.copyeditFileSet');
 		}
 	}
 
