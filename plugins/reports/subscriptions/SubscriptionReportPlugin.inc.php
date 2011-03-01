@@ -267,10 +267,10 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	 * @return String Text with replaced and stripped HTML tags
 	 */
 	function _html2text($html) {
-		$html = String::regexp_replace('/<[\/]?p>/', chr(10), $html);
+		$html = String::regexp_replace('/<[\/]?p>/', chr(13) . chr(10), $html);
 		$html = String::regexp_replace('/<li>/', '&bull; ', $html);
-		$html = String::regexp_replace('/<\/li>/', chr(10), $html);
-		$html = String::regexp_replace('/<br[ ]?[\/]?>/', chr(10), $html);
+		$html = String::regexp_replace('/<\/li>/', chr(13) . chr(10), $html);
+		$html = String::regexp_replace('/<br[ ]?[\/]?>/', chr(13) . chr(10), $html);
 		$html = String::html2utf(strip_tags($html));
 		return $html;
 	}
@@ -286,7 +286,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 
 		for($i=0; $i<$numRanges; $i++) {
 			$ipRangesString .= $ipRanges[$i];
-			if ( $i+1 < $numRanges) $ipRangesString .= chr(10);
+			if ( $i+1 < $numRanges) $ipRangesString .= chr(13) . chr(10);
 		}
 
 		return $ipRangesString;
