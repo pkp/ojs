@@ -414,7 +414,7 @@ class ArticleHandler extends Handler {
 	 * @see lib/pkp/classes/handler/PKPHandler#validate()
 	 * @param $request Request
 	 * @param $articleId integer
-	 * @param $galleyId integer
+	 * @param $galleyId int or string
 	 */
 	function validate(&$request, $articleId, $galleyId = null) {
 		$router =& $request->getRouter();
@@ -461,14 +461,14 @@ class ArticleHandler extends Handler {
 			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $articleId);
 
 			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
+			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
 				Validation::redirectLogin();
 			}
 
 			// bypass all validation if subscription based on domain or ip is valid
 			// or if the user is just requesting the abstract
 			if ( (!$isSubscribedDomain && $subscriptionRequired) &&
-			     (isset($galleyId) && $galleyId!=0) ) {
+			     (isset($galleyId) && $galleyId) ) {
 
 				// Subscription Access
 				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $articleId);
@@ -484,9 +484,9 @@ class ArticleHandler extends Handler {
 						if ( $paymentManager->onlyPdfEnabled() ) {
 							$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 							if ($journal->getSetting('enablePublicGalleyId')) {
-								$galley =& $galleyDao->getGalley($galleyId, $articleId);
-							} else {
 								$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $articleId);
+							} else {
+								$galley =& $galleyDao->getGalley($galleyId, $articleId);
 							}
 							if ( $galley && !$galley->isPdfGalley() ) {
 								$this->journal =& $journal;
