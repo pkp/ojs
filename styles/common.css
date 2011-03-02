@@ -439,6 +439,7 @@ ul.tagit {
 	border-color:#C6C6C6;
 	overflow:auto !important;
 	width:500px;
+	margin-bottom: 0px;
 }
 ul.tagit li {
 	-moz-border-radius:5px 5px 5px 5px;

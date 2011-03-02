@@ -251,10 +251,11 @@ class ProfileForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
+		$userId = $user->getId();
 
 		// Add reviewing interests to interests table
 		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = Request::getUserVar('interestsKeywords');
+		$interests = is_array(Request::getUserVar('interestsKeywords')) ? Request::getUserVar('interestsKeywords') : array();
 		$interests = array_map('urldecode', $interests); // The interests are coming in encoded -- Decode them for DB storage
 		$interestTextOnly = Request::getUserVar('interests');
 		if(!empty($interestsTextOnly)) {
@@ -266,7 +267,7 @@ class ProfileForm extends Form {
 		} elseif (isset($interests) && !is_array($interests)) {
 			$interests = array($interests);
 		}
-		$interestDao->insertInterests($interests, $user->getId(), true);
+		$interestDao->insertInterests($interests, $userId, true);
 
 
 		$site =& Request::getSite();

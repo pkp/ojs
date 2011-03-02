@@ -45,7 +45,7 @@
 		<td width="15%">{translate key="user.username"}</td>
 		<td width="20%">{translate key="user.email"}</td>
 		<td width="25%">{translate key="user.roles"}</td>
-	</tr>	
+	</tr>
 	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
@@ -59,16 +59,16 @@
 			{foreach from=$user->getSignature(null) key=locale item=value}
 				<input type="hidden" name="{$userKey|escape}_signature[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
-			<input type="hidden" name="{$userKey|escape}_interests" value="{$user->getInterests()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_interests" value="{$user->getTemporaryInterests()|escape}" />
 			{foreach from=$user->getGossip(null) key=locale item=value}
 				<input type="hidden" name="{$userKey|escape}_gossip[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
 			{foreach name=locales from=$user->getLocales() item=locale}
 				<input type="hidden" name="{$userKey|escape}_locales[]" value="{$locale|escape}" />
-			{/foreach}			
+			{/foreach}
 			{foreach from=$user->getAffiliation(null) key=locale item=value}
 				<input type="hidden" name="{$userKey|escape}_affiliation[{$locale|escape}]" value="{$value|escape}" />
-			{/foreach}			
+			{/foreach}
 			<input type="hidden" name="{$userKey|escape}_country" value="{$user->getCountry()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_mailingAddress" value="{$user->getMailingAddress()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_fax" value="{$user->getFax()|escape}" />
