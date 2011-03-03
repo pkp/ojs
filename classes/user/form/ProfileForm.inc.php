@@ -228,6 +228,12 @@ class ProfileForm extends Form {
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
 		}
+
+		$interests = $this->getData('interestsKeywords');
+		if ($interests != null && is_array($interests)) {
+			// The interests are coming in encoded -- Decode them for DB storage
+			$this->setData('interestsKeywords', array_map('urldecode', $interests));
+		}
 	}
 
 	/**
@@ -255,8 +261,7 @@ class ProfileForm extends Form {
 
 		// Add reviewing interests to interests table
 		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = is_array(Request::getUserVar('interestsKeywords')) ? Request::getUserVar('interestsKeywords') : array();
-		$interests = array_map('urldecode', $interests); // The interests are coming in encoded -- Decode them for DB storage
+		$interests = is_array($this->getData('interestsKeywords')) ? $this->getData('interestsKeywords') : array();
 		$interestTextOnly = Request::getUserVar('interests');
 		if(!empty($interestsTextOnly)) {
 			// If JS is disabled, this will be the input to read

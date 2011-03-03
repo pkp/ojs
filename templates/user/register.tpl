@@ -20,7 +20,7 @@
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
 			// This is the list of interests in the system used to populate the autocomplete
-			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
+			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}],{/if}{literal}
 			// There are no current interests for the user since they're just registering; Assign an empty list
 			currentTags: []
 		});
@@ -142,7 +142,7 @@
 		<tr valign="top">
 			<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
 			<td class="value">
-				<textarea id="affiliation[{$formLocale|escape}]" name="affiliation" rows="5" cols="40" class="textArea">{$affiliation[$formLocale]|escape}</textarea><br/>
+				<textarea id="affiliation" name="affiliation[{$formLocale|escape}]" rows="5" cols="40" class="textArea">{$affiliation[$formLocale]|escape}</textarea><br/>
 				<span class="instruct">{translate key="user.affiliation.description"}</span>
 			</td>
 		</tr>
