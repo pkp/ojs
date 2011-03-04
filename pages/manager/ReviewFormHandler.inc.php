@@ -495,43 +495,45 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Change the sequence of a review form element.
 	 */
-	function moveReviewFormElement() {
+	function moveReviewFormElement($args, $request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
-		$reviewFormElement =& $reviewFormElementDao->getReviewFormElement(Request::getUserVar('id'));
+		$reviewFormElement =& $reviewFormElementDao->getReviewFormElement($request->getUserVar('id'));
 
-		if (isset($reviewFormElement) && $reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), ASSOC_TYPE_JOURNAL, $journal->getId())) {
-			$direction = Request::getUserVar('d');
+		if (!isset($reviewFormElement) || !$reviewFormDao->unusedReviewFormExists($reviewFormElement->getReviewFormId(), ASSOC_TYPE_JOURNAL, $journal->getId())) {
+			$request->redirect(null, null, 'reviewForms');
+		}
 
-			if ($direction != null) {
-				// moving with up or down arrow
-				$reviewFormElement->setSequence($reviewFormElement->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+		$direction = $request->getUserVar('d');
 
-			} else {
-				// drag and drop
-				$prevId = Request::getUserVar('prevId');
-				if ($prevId == null)
-					$prevSeq = 0;
-				else {
-					$prevReviewFormElement = $reviewFormElementDao->getReviewFormElement($prevId);
-					$prevSeq = $prevReviewFormElement->getSequence();
-				}
+		if ($direction != null) {
+			// moving with up or down arrow
+			$reviewFormElement->setSequence($reviewFormElement->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
 
-				$reviewFormElement->setSequence($prevSeq + .5);
+		} else {
+			// drag and drop
+			$prevId = $request->getUserVar('prevId');
+			if ($prevId == null)
+				$prevSeq = 0;
+			else {
+				$prevReviewFormElement = $reviewFormElementDao->getReviewFormElement($prevId);
+				$prevSeq = $prevReviewFormElement->getSequence();
 			}
 
-			$reviewFormElementDao->updateObject($reviewFormElement);
-			$reviewFormElementDao->resequenceReviewFormElements($reviewFormElement->getReviewFormId());
+			$reviewFormElement->setSequence($prevSeq + .5);
 		}
+
+		$reviewFormElementDao->updateObject($reviewFormElement);
+		$reviewFormElementDao->resequenceReviewFormElements($reviewFormElement->getReviewFormId());
 
 		// Moving up or down with the arrows requires a page reload.
 		// In the case of a drag and drop move, the display has been
 		// updated on the client side, so no reload is necessary.
 		if ($direction != null) {
-			Request::redirect(null, null, 'reviewFormElements', array($reviewFormElement->getReviewFormId()));
+			$request->redirect(null, null, 'reviewFormElements', array($reviewFormElement->getReviewFormId()));
 		}
 	}
 
