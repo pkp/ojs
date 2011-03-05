@@ -859,7 +859,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="gifts.purchaseGiftIndividualSubscription">Gift Subscription</message>
 	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
 	<message key="gifts.details">Gift Details</message>
-	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will received a copy of this email).</message>
+	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
 	<message key="gifts.gift">Gift</message>
 	<message key="gifts.noteTitle">Title</message>
 	<message key="gifts.note">Gift Note</message>
