@@ -75,12 +75,16 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 			}
 		}
 
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
 			$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 			$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
 		}
+
+		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
+		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
 
 		return parent::getContents($templateMgr);
 	}

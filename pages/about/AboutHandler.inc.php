@@ -355,6 +355,10 @@ class AboutHandler extends Handler {
 		$individualSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
 		$institutionalSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
 
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
+
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
@@ -362,6 +366,7 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('subscriptionFax', $subscriptionFax);
 		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
 		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
+		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
 		$templateMgr->assign('individualSubscriptionTypes', $individualSubscriptionTypes);
 		$templateMgr->assign('institutionalSubscriptionTypes', $institutionalSubscriptionTypes);
 		

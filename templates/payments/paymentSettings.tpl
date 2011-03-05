@@ -195,6 +195,18 @@
 </tr>
 </table>
 </div>
+<div id="gifts">
+<h3>{translate key="manager.payment.giftFees"}</h3>
+
+<p>{translate key="manager.payment.giftFeesDescription"}</p>
+
+<table width="100%" class="data">
+<tr>
+	<td class="value" width="20%"><input type="checkbox" name="acceptGiftSubscriptionPayments" id="acceptGiftSubscriptionPayments" value="1"{if $acceptGiftSubscriptionPayments} checked="checked"{/if} /></td>
+	<td class="label" width="80%">{fieldLabel name="acceptGiftSubscriptionPayments" key="manager.payment.options.acceptGiftSubscriptionPayments"}</td>
+</tr>
+</table>
+</div>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" /></p>
 </form>
 </div>

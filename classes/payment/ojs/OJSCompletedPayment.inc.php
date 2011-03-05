@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -153,6 +154,17 @@ class OJSCompletedPayment extends Payment {
 				} else {
 					return Locale::translate('payment.type.publication');
 				}
+			case PAYMENT_TYPE_GIFT:
+				$giftDao =& DAORegistry::getDAO('GiftDAO');
+				$gift =& $giftDao->getGift($this->assocId);
+
+				// Try to return gift details in name
+				if ($gift) {
+					return $gift->getGiftName();
+				}
+
+				// Otherwise, generic gift name
+				return Locale::translate('payment.type.gift');
 		}
 	}
 
@@ -224,6 +236,28 @@ class OJSCompletedPayment extends Payment {
 				} else {
 					return Locale::translate('payment.type.publication');
 				}
+			case PAYMENT_TYPE_GIFT:
+				$giftDao =& DAORegistry::getDAO('GiftDAO');
+				$gift =& $giftDao->getGift($this->assocId);
+
+				// Try to return gift details in description
+				if ($gift) {
+					import('classes.gift.Gift');
+
+					if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
+						$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
+
+						if ($subscriptionType) {
+							return $subscriptionType->getSubscriptionTypeDescription();	
+						} else {
+							return Locale::translate('payment.type.gift') . ' ' . Locale::translate('payment.type.gift.subscription');								
+						}
+					}
+				}
+
+				// Otherwise, generic gift name
+				return Locale::translate('payment.type.gift');
 		}
 	}
 
@@ -331,6 +365,16 @@ class OJSCompletedPayment extends Payment {
 				$issue =& $issueDao->getIssueById($this->assocId, $this->journalId);
 				if (!$issue) return Locale::translate('manager.payment.notFound');
 				return $issue->getIssueIdentification(false, true);
+			case PAYMENT_TYPE_GIFT:
+				$giftDao =& DAORegistry::getDAO('GiftDAO');
+				$gift =& $giftDao->getGift($this->assocId);
+
+				// Try to get buyer and recipient details
+				if ($gift) {
+					return Locale::translate('gifts.buyer') . ': ' . $gift->getBuyerFullName() . ' (' . $gift->getBuyerEmail() . ') ' . Locale::translate('gifts.recipient') . ': ' . $gift->getRecipientFullName() . ' (' . $gift->getRecipientEmail() . ')';
+				} else {
+					return false;
+				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_DONATION:
 				return false;

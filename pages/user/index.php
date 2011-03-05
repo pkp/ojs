@@ -46,6 +46,8 @@ switch ($op) {
 		import('pages.user.EmailHandler');
 		break;
 	case 'index':
+	case 'gifts':
+	case 'redeemGift':
 	case 'subscriptions':
 	case 'setLocale':
 	case 'become':

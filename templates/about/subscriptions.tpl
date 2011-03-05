@@ -34,6 +34,10 @@
 	{if !empty($subscriptionAdditionalInformation)}
 		{$subscriptionAdditionalInformation|nl2br}<br />
 	{/if}
+	{if $acceptGiftSubscriptionPayments}
+		{translate key="gifts.giftSubscriptionsAvailable"}&nbsp;
+		<a class="action" href="{url page="gifts" op="purchaseGiftSubscription"}">{translate key="gifts.purchaseGiftSubscription"}</a>
+	{/if}
 </p>
 </div>
 

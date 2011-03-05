@@ -65,7 +65,8 @@ class PaymentSettingsForm extends Form {
 							'donationFeeName' => 'string',
 							'donationFeeDescription' => 'string',
 							'restrictOnlyPdf' => 'bool',
-						  	'acceptSubscriptionPayments' => 'bool'
+							'acceptSubscriptionPayments' => 'bool',
+							'acceptGiftSubscriptionPayments' => 'bool'
 		);
 
 		$this->addCheck(new FormValidatorCustom($this, 'submissionFee', 'optional', 'manager.payment.form.numeric', create_function('$submissionFee', 'return is_numeric($submissionFee) && $submissionFee >= 0;')));

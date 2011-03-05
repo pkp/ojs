@@ -54,4 +54,8 @@
 	{if $userLoggedIn}
 		<a href="{url page="user" op="subscriptions"}">{translate key="user.subscriptions.mySubscriptions"}</a>
 	{/if}
+	{if $acceptGiftSubscriptionPayments}
+		<br />
+		<a href="{url page="gifts" op="purchaseGiftSubscription"}">{translate key="gifts.purchaseGiftSubscription"}</a>
+	{/if}
 </div>

@@ -908,5 +908,65 @@ Copy-Editor, {$journalName}
 </body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
-</email_texts>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Dear {$recipientFirstName},
 
+{$buyerFullName} would like to share a gift with you at {$journalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+You will receive a follow-up email that includes login details and instructions for redeeming your gift.
+
+We hope that you enjoy your gift!
+
+{$principalContactSignature}
+</body>
+		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Redeem Your Gift: Login Details</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} would like to share a gift with you at {$journalName}:
+
+{$giftDetails}
+
+
+To redeem your gift, please login to the journal website at {$giftUrl}
+
+Your username: {$username}
+Your password: {$password}
+
+Once logged in, you can change your password at any time.
+
+We hope that you enjoy your gift!
+
+{$principalContactSignature}
+</body>
+		<description>This email notifies a gift recipient of their login details for a new account.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Redeem Your Gift: Login Details</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} would like to share a gift with you at {$journalName}:
+
+{$giftDetails}
+
+
+To redeem your gift, please login to the journal website at {$giftUrl}
+
+Your username: {$username}
+
+We hope that you enjoy your gift!
+
+{$principalContactSignature}
+</body>
+		<description>This email notifies a gift recipient of their login details.</description>
+	</email_text>
+</email_texts>

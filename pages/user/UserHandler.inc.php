@@ -93,6 +93,8 @@ class UserHandler extends Handler {
 
 			import('classes.payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
+			$acceptGiftPayments = $paymentManager->acceptGiftPayments();
+			$templateMgr->assign('acceptGiftPayments', $acceptGiftPayments);
 			$membershipEnabled = $paymentManager->membershipEnabled();
 			$templateMgr->assign('membershipEnabled', $membershipEnabled);
 
@@ -111,6 +113,115 @@ class UserHandler extends Handler {
 		$templateMgr->assign('setupIncomplete', $setupIncomplete); 
 		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $userId, ROLE_ID_SITE_ADMIN));
 		$templateMgr->display('user/index.tpl');
+	}
+
+	/**
+	 * Display user gifts page
+	 **/
+	function gifts($args, $request) {
+		$this->validate();
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+
+		// Ensure gift payments are enabled
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
+		if (!$acceptGiftPayments) Request::redirect(null, 'user');
+
+		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
+		$journalId = $journal->getId();
+		$user =& Request::getUser();
+		$userId = $user->getId();
+
+		// Get user's redeemed and unreedemed gift subscriptions
+		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$giftSubscriptions =& $giftDao->getGiftsByTypeAndRecipient(
+			ASSOC_TYPE_JOURNAL,
+			$journalId,
+			GIFT_TYPE_SUBSCRIPTION,
+			$userId
+		);
+
+		$this->setupTemplate(true);
+		$templateMgr =& TemplateManager::getManager();
+
+		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
+		$templateMgr->assign('journalPath', $journal->getPath());
+		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
+		$templateMgr->assign_by_ref('giftSubscriptions', $giftSubscriptions);
+		$templateMgr->display('user/gifts.tpl');
+
+	}
+
+	/**
+	 * User redeems a gift
+	 **/
+	function redeemGift($args, $request) {
+		$this->validate();
+
+		if (empty($args)) Request::redirect(null, 'user');
+
+		$journal =& Request::getJournal();
+		if (!$journal) Request::redirect(null, 'user');
+
+		// Ensure gift payments are enabled
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
+		if (!$acceptGiftPayments) Request::redirect(null, 'user');
+
+		$journalId = $journal->getId();
+		$user =& Request::getUser();
+		$userId = $user->getId();
+		$giftId = isset($args[0]) ? (int) $args[0] : 0;
+
+		// Try to redeem the gift
+		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$status = $giftDao->redeemGift(
+			ASSOC_TYPE_JOURNAL,
+			$journalId,
+			$userId,
+			$giftId
+		);
+
+		// Report redeem status to user
+		import('lib.pkp.classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+
+		switch ($status) {
+			case GIFT_REDEEM_STATUS_SUCCESS:
+				$message = 'gifts.giftRedeemed';
+				$notificationType = NOTIFICATION_TYPE_SUCCESS;
+				break;
+			case GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
+				$message = 'gifts.noGiftToRedeem';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+				break;
+			case GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
+				$message = 'gifts.giftAlreadyRedeemed';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+				break;
+			case GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
+				$message = 'gifts.giftNotValid';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+				break;
+			case GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
+				$message = 'gifts.subscriptionTypeNotValid';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+				break;
+			case GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
+				$message = 'gifts.subscriptionNonExpiring';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+				break;
+			default:
+				$message = 'gifts.noGiftToRedeem';
+				$notificationType = NOTIFICATION_TYPE_ERROR;
+		}
+
+		$notificationManager->createTrivialNotification('notification.notification', $message, $notificationType);
+		$request->redirect(null, 'user', 'gifts');
 	}
 
 	/**
