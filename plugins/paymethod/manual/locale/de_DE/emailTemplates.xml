@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * emailTemplates.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -15,8 +15,10 @@
 		<subject>Benachrichtigung über manuelle Zahlung</subject>
 		<body>Eine manuelle Zahlung ist für die Zeitschrift {$journalName} und den/die Benutzer/in {$userFullName} (Benutzer/innen-Name "{$userName}") angekündigt worden.
 
-Gezahlt werden soll für "{$itemName}". Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).
+Gezahlt werden soll für "{$itemName}".
+Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).
 
 Diese E-Mail wurde vom OJS-Plug-In Manuelle Gebührenzahlung erzeugt.</body>
+		<description>Diese E-Mail-Vorlage wird genutzt, um eine/n Zeitschriftenverwalter/in darüber zu benachrichtigen, dass eine manuelle Zahlung beantragt worden ist.</description>
 	</email_text>
 </email_texts>

@@ -5,15 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  
+  * Google Analytics plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
   * $Id$
   -->
   
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google-Analytics-Plug-In</message>
@@ -26,11 +25,10 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Account-ID</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Klicken Sie in Google Analytics auf "Check Status", um die Aufzeichnungen für Ihre Webseite einsehen zu können. Die Account-ID wird angezeigt im Code: _uacct = "###". Geben Sie den Text ein, der ### entspricht.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Bitte geben Sie die Account-ID ein.</message>
-
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Tracking-Code</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Bitte wählen Sie einen Tracking-Code zur Verwendung aus.</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy Tracking Code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Neuer Tracking-Code (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics Account-Nummer</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Um die Leser/innenschaft veröffentlichter Artikel per Google Analytics zu verfolgen, geben Sie hier eine Account-Nummer ein (z.B. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Eine oder mehrere Google-Analytics-Accountnummern, die für Autor/innen des Beitrags eingegeben worden sind, sind nicht gültig.</message>

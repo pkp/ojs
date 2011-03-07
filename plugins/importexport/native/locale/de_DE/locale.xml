@@ -5,15 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   *
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
   * $Id$
   -->
 
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.native.displayName">Beiträge- und Ausgaben-XML-Plug-In</message>
 	<message key="plugins.importexport.native.description">Artikel und Ausgaben importieren und exportieren</message>
 
@@ -112,6 +111,7 @@ Folgende Formate sind gültig:
 
 	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Ein Interessenskonflikt für Autor/in "{$authorFullName}" des Artikels "{$articleTitle}" der Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Biografische Informationen für Autor/in "{$authorFullName}" des Artikels "{$articleTitle}" der Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Für den Autor  "{$authorFullName}" des Artikels "{$articleTitle}" in der Ausgabe "{$issueTitle}" wurde eine Institution in einer Sprachversion ("{$locale}") angegeben, die diese Zeitschrift nicht unterstützt.</message>
 
 	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Eine Korrekturfassung "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 
@@ -123,9 +123,8 @@ Folgende Formate sind gültig:
 	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Ein Publisher von Zusatzdateien ("{$suppFileTitle}") für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Ein Sponsor von Zusatzdateien ("{$suppFileTitle}") für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Eine Quelle von Zusatzdateien ("{$suppFileTitle}") für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
-	
+
 	<message key="plugins.importexport.native.import.success">Import erfolgreich</message>
 	<message key="plugins.importexport.native.import.success.description">Der Import war erfolgreich. Die erfolgreich importierten Elemente sind unten aufgeführt.</message>
 
-	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Für den Autor  "{$authorFullName}" des Artikels "{$articleTitle}" in der Ausgabe "{$issueTitle}" wurde eine Institution in einer Sprachversion ("{$locale}") angegeben, die diese Zeitschrift nicht unterstützt.</message>
 </locale>

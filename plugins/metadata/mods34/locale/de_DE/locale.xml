@@ -8,11 +8,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  *
-  * $Id$
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21-Metadaten-Format</message>
-	<message key="plugins.OAIMetadata.marcxml.description">Strukturiert Metadaten auf eine zum MARC21-Format kompatible Weise.</message>
+	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4-Artikel-Verbindung</message>
+	<message key="plugins.metadata.mods34.articleAdapter.description">Extrahiert Metadaten aus Artikeln/speist Metadaten in Artikel ein.</message>
 </locale>

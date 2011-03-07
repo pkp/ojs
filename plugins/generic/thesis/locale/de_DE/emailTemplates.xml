@@ -21,6 +21,7 @@ Bitte antworten Sie einfach an {$thesisName} ({$thesisEmail}) mit dem Inhalt die
 
 Vielen Dank.
 
+
 Titel: {$title}
 Autor/in: {$studentName}
 Abschluss: {$degree}
@@ -35,5 +36,6 @@ Abstract
 {$abstract}
 
 {$thesisContactSignature}</body>
+			<description>Diese E-Mail-Vorlage wird benutzt, um die Einreichung eines Dissertations-Abstracts durch eine/n Dissertant/in zu bestätigen. Sie wird an die/den Betreuer/in geschickt, die/der gebeten wird, die Details des eingereichten Dissertations-Abstracts zu bestätigen.</description>
 	</email_text>
 </email_texts>
