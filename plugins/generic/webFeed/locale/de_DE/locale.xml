@@ -5,26 +5,25 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
   * $Id$
   -->
   
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.webfeed.displayName">Web-Feed-Plug-In</message>
 	<message key="plugins.generic.webfeed.description">Dieses Plug-In erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe.</message>
 
 	<message key="plugins.generic.webfeed.settings">Einstellungen</message>
 	<message key="plugins.generic.webfeed.settings.issue">Links zu Web-Feeds nur auf den Seiten der Ausgabe anzeigen.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Web-Feed-Links nur auf der Hauptseite und den Ausgaben-Seiten anzeigen</message>
 	<message key="plugins.generic.webfeed.settings.all">>Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Items in der aktuellen Ausgabe anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">Aktuelle Veröffentlichungen.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Bitte geben sie eine positive, ganze Zahl für aktuelle Veröffentlichungen an.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Web-Feed-Links nur auf der Hauptseite und den Ausgaben-Seiten anzeigen</message>
 	<message key="plugins.generic.webfeed.atom.altText">Atom-Logo</message>
 	<message key="plugins.generic.webfeed.rss1.altText">RSS1-Logo</message>
 	<message key="plugins.generic.webfeed.rss2.altText">RSS2-Logo</message>

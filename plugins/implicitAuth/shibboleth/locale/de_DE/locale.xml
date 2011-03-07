@@ -5,15 +5,16 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
- * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
+  * English locale contributed by Dan Galewsky, University of Texas
   *
   * $Id$
   -->
  
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth-Plug-In</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Das ShibAuth-Plug-In betrifft die gesamte Website und wird in der OJS-Konfigurationsdatei aktiviert.</message>
 </locale>

@@ -5,19 +5,18 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  
+  * phpMyVisites plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
   * $Id$
   -->
-  
-<locale name="de_DE" full_name="German">
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites-Plug-In</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Integration von OJS mit phpMyVisites, einer Open-Source-Applikation zur Traffic- und Nutzungsanalyse. Voraussetzung ist, dass phpMyVisites bereits installiert ist. Siehe <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> für weitere Informationen.]]></message>
-
 	<!-- phpMyVisites-Einstellungen verwalten -->
 	<message key="plugins.generic.phpmv.manager.settings">Einstellungen</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites-Einstellungen</message>

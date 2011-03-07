@@ -5,15 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  
+  * LDAP authentication plugin localization strings for the de_DE (Deutsch(Deutschland)) locale.
+  *
   * $Id$
   -->
   
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Dieses Plug-In ermöglicht es, den Berechtigungsnachweis über eine externe LDAP-Datenquelle zu beziehen und Benutzer/innenkonten mit dieser Quelle zu synchronisieren.</message>
 	
@@ -28,6 +27,8 @@
 	<message key="plugins.auth.ldap.settings.managerdn.description">z.B., "cn=Verwalter,dc=beispiel,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">Verwalter-Passwort</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">Verwalter DN und Passwort werden nur gebraucht, wenn die Profil/Passwort-Synchronisierung oder Benutzer/innen-Einrichtungsoptionen aktiviert sind. Falls LDAP nur zum Berechtigungsnachweis verwendet wird, können diese Optionen entfallen.</message>
+	<message key="plugins.auth.ldap.settings.uid">Benutzer/innenkonto-Attribut</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Das Attribut, dessen Wert ein Benutzer/in-Objekt eindeutig identifiziert, z.B. uid oder cn oder sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Passwortverschlüsselung</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description">Hashformat für im Server zu speichernde Passwörter. SSHA wird empfohlen (erfordert PHP >= 4.3.0).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL-Einstellungen (optional)</message>
@@ -37,6 +38,4 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Bereich</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Erforderliche Berechtigungs ID</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL Sicherheitseigenschaften</message>
-	<message key="plugins.auth.ldap.settings.uid">Benutzer/innenkonto-Attribut</message>
-	<message key="plugins.auth.ldap.settings.uid.description">Das Attribut, dessen Wert ein Benutzer/in-Objekt eindeutig identifiziert, z.B. uid oder cn oder sAMAccountName.</message>
 </locale>

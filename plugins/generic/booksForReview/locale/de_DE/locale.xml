@@ -7,10 +7,10 @@
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Books for review plugin localization strings for the en_US (U.S. English) locale.
+  * Books for review plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Buch wurde angefragt. Warten auf Bestätigung durch Redakteur/in.</message>
@@ -46,7 +46,7 @@
 	<message key="plugins.generic.booksForReview.editor.bookDetails">Buchdetails</message>
 	<message key="plugins.generic.booksForReview.editor.notes">Zusätzliche Hinweise</message>
 	<message key="plugins.generic.booksForReview.editor.notesInstructions">Nur für Redakteur/in. Wird nicht als Teil der Buchrezension veröffentlicht.</message>
-	<message key="plugins.generic.booksForReview.editor.title">Title</message>
+	<message key="plugins.generic.booksForReview.editor.title">Titel</message>
 	<message key="plugins.generic.booksForReview.editor.editor">Redakteur/in</message>
 	<message key="plugins.generic.booksForReview.editor.status">Status</message>
 	<message key="plugins.generic.booksForReview.editor.dueDate">Fällig</message>
@@ -56,7 +56,7 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Sind Sie sicher, dass Sie diese/n Autor/in löschen und die Rezensionsgeschichte des Buchs bereinigen möchten?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission">Einreichung auswählen</message>
 	<message key="plugins.generic.booksForReview.editor.select">Auswählen</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Bearbeiten</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Einreichung</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Rezensent/in</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Zuteilen</message>
@@ -110,31 +110,7 @@
 	<!-- Books For Review Settings Management -->
 	<message key="plugins.generic.booksForReview.settings">Einstellungen</message>
 	<message key="plugins.generic.booksForReview.booksForReviewSettings">Rezensionsbücher-Einstellungen</message>
-	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Modus 1</h5>
-<p>Der folgende Ablauf wird unterstützt:</p>
-<ul>
-<li>Redakteur/in fügt zur Rezension verfügbare Bücher hinzu.</li>
-<li>Autor/innen, die daran interessiert sind, ein Buch zu rezensieren, können dem/der Redakteur/in eine Rezension anbieten.</li>
-<li>Redakteur/in kann das Rezensionsangebot annehmen oder ablehnen und den/die Autor/in darüber hinformieren.</li>
-<li>Wenn ein Rezensionsangebot akzeptiert worden ist
-<ul>
-<li>Wird das Buch nicht länger als verfügbar aufgeführt.</li>
-<li>Wird ein Fälligkeitsdatum für die Rezension gesetzt.</li>
-<li>Kann der/die Redakteur/in das Buch an den/die Autor/in schicken.</li>
-</ul>
-</li>
-<li>Autor/in reicht die Buchrezension über den normalen Online-Einreichungsprozess ein.</li>
-<li>Die Metadaten des Buchs werden als Teil der eingereichten Buchrezension veröffentlicht.</li>
-</ul>
-<p>Dieses Plug-In unterstützt Zeitschriften mit mehreren Redakteur/innen. Wenn ein/e Redakteur/in ein neues Buch zur Rezension einträgt, wird er oder sie zuständige/r Redakteur/in und Kontakt für dieses Buch.</p>
-
-<h5>Modus 2</h5>
-<p>Der folgende Ablauf wird unterstützt:</p>
-<ul>
-<li>Redakteur/in fügt Bücher hinzu.</li>
-<li>Redakteur/in ordnet Beiträge den jeweiligen Büchern zu.</li>
-<li>Die Metadaten des Buchs werden als Teil der eingereichten Buchrezension veröffentlicht.</li>
-</ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Modus 1</h5><p>Der folgende Ablauf wird unterstützt:</p><ul><li>Redakteur/in fügt zur Rezension verfügbare Bücher hinzu.</li><li>Autor/innen, die daran interessiert sind, ein Buch zu rezensieren, können dem/der Redakteur/in eine Rezension anbieten.</li><li>Redakteur/in kann das Rezensionsangebot annehmen oder ablehnen und den/die Autor/in darüber hinformieren.</li><li>Wenn ein Rezensionsangebot akzeptiert worden ist<ul><li>Wird das Buch nicht länger als verfügbar aufgeführt.</li><li>Wird ein Fälligkeitsdatum für die Rezension gesetzt.</li><li>Kann der/die Redakteur/in das Buch an den/die Autor/in schicken.</li></ul></li><li>Autor/in reicht die Buchrezension über den normalen Online-Einreichungsprozess ein.</li><li>Die Metadaten des Buchs werden als Teil der eingereichten Buchrezension veröffentlicht.</li></ul><p>Dieses Plug-In unterstützt Zeitschriften mit mehreren Redakteur/innen. Wenn ein/e Redakteur/in ein neues Buch zur Rezension einträgt, wird er oder sie zuständige/r Redakteur/in und Kontakt für dieses Buch.</p><h5>Modus 2</h5><p>Der folgende Ablauf wird unterstützt:</p><ul><li>Redakteur/in fügt Bücher hinzu.</li><li>Redakteur/in ordnet Beiträge den jeweiligen Büchern zu.</li><li>Die Metadaten des Buchs werden als Teil der eingereichten Buchrezension veröffentlicht.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Verwaltung</message>
 	<message key="plugins.generic.booksForReview.settings.modeFull">Modus 1: Verfügbare Rezensionstitel auflisten, Rezensent/innen verwalten und Metadaten der Bücher veröffentlichen.</message>
 	<message key="plugins.generic.booksForReview.settings.modeMetadata">Modus 2: Nur Metadaten der Bücher veröffentlichen.</message>
@@ -149,8 +125,7 @@
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">Tag(e) vor dem Fälligkeitsdatum schicken.</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Autor/innen eine Erinnerungs-E-Mail</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">Tag(e) nach dem Fälligkeitsdatum schicken.</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss der/die Zeitschriftenverwalter/in die <tt>scheduled_tasks</tt>-Option in der OJS-Konfigurationsdatei auswählen. Eventuell sind weitere Einstellungen des Servers (die vielleicht nicht auf allen Servern möglich sind) erforderlich, um diese Funktionen zu ermöglichen, vgl. die OJS-Dokumentation.
-Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss der/die Zeitschriftenverwalter/in die <tt>scheduled_tasks</tt>-Option in der OJS-Konfigurationsdatei auswählen. Eventuell sind weitere Einstellungen des Servers (die vielleicht nicht auf allen Servern möglich sind) erforderlich, um diese Funktionen zu ermöglichen, vgl. die OJS-Dokumentation. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">Zusätzliche Informationen</message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Zusätzliche Informationen, die zusammen mit den zu rezensierenden Büchern veröffentlicht werden.</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Bitte geben Sie die Zahl an Wochen ein, nach der Buchrezensionen fällig sind.</message>
@@ -181,10 +156,7 @@ Additional server configuration may be required to support this functionality (w
 
 	<!-- Books For Review Public -->
 	<message key="plugins.generic.booksForReview.public.booksForReview">Bücher zur Rezension</message>
-	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Um ein Buch zur Rezension anzufordern:</p>
-<ul>
-<li>Als Autor/in bei dieser Zeitschrift <a href="{$registerUrl}" target="_parent">registrieren</a>.</li>
-<li>Als Autor/in <a href="{$loginAuthorUrl}" target="_parent">einloggen</a>.</li>]]></message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Um ein Buch zur Rezension anzufordern:</p><ul><li>Als Autor/in bei dieser Zeitschrift <a href="{$registerUrl}" target="_parent">registrieren</a>.</li><li>Als Autor/in <a href="{$loginAuthorUrl}" target="_parent">einloggen</a>.</li><li>Auf den Link klicken, der zum Buch gehört, das Sie interessiert.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.public.copy">Exemplar verfügbar</message>
 	<message key="plugins.generic.booksForReview.public.copyYes">Ja</message>
 	<message key="plugins.generic.booksForReview.public.copyNo">nein</message>
