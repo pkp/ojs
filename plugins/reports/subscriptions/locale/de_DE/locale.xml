@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.reports.subscriptions.displayName">Abonnement-Bericht</message>
+	<message key="plugins.reports.subscriptions.description">Dieses Plug-In liefert einen CSV-Bericht, der eine Liste der Abonnent/innen und zugehöriger Informationen enthält.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Adresse der Institution</message>
+	<message key="plugins.reports.subscriptions.ipRanges">IP-Bereiche</message>
+</locale>

@@ -5,15 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen Querelles-Net und Forum Qualitative Sozialforschung (FQS).
-  
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  *
   * $Id$
   -->
   
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.gateways.resolver.displayName">Resolver-Plug-In</message>
 	<message key="plugins.gateways.resolver.description">Dieses Plug-In verwaltet Verweise für Ausgaben und Artikel, ausgehend von Zitationsinformationen.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Verweis nichts findbar. Vergewissern Sie sich, dass die Angabe vollständig ist und sich auf ein Element in dieser OJS-Anwendung bezieht.</message>

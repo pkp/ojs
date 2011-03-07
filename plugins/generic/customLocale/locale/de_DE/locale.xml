@@ -5,15 +5,14 @@
   * locale.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   *
   * $Id$
   -->
  
-<locale name="de_DE" full_name="German">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.customLocale.name">Plug-In für die Regionalanpassung</message>
 	<message key="plugins.generic.customLocale.description">Dieses Plug-In ermöglicht die Anpassung der Standardeinstellungen für die Texte der von OJS verwandten Benutzungsoberfläche.</message>
 
@@ -22,6 +21,7 @@
 	<message key="plugins.generic.customLocale.fileDescription">Geben Sie den angepassten Text in das jeweilige Feld ein. Lassen Sie das Feld leer, wenn der OJS-Standardtext genutzt werden soll.</message>
 	<message key="plugins.generic.customLocale.localeName">Name der Regionaleinstellung</message>
 	<message key="plugins.generic.customLocale.localeKey">Schlüssel</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Geben Sie einen kompletten locale-Schlüssel an, nach dem gesucht werden soll.</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Wert</message>
 	<message key="plugins.generic.customLocale.customize">Anpassen</message>
 	<message key="plugins.generic.customLocale.availableLocales">Verfügbare Regionaleinstellungen</message>
@@ -32,5 +32,4 @@
 	<message key="plugins.generic.customLocale.file.edit">{$filename} bearbeiten</message>
 	<message key="plugins.generic.customLocale.file.reference">Standardtext</message>
 	<message key="plugins.generic.customLocale.file.custom">Angepasster Text</message>
-	<message key="plugins.generic.customLocale.localeKey.description">Geben Sie einen kompletten locale-Schlüssel an, nach dem gesucht werden soll.</message>
 </locale>

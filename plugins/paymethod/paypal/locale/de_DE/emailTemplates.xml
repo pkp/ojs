@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * emailTemplates.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -24,6 +24,8 @@ Zusätzliche Informationen (soweit angegeben):
 {$additionalInfo}
 
 Server vars:
-{$serverVars}</body>
+{$serverVars}
+</body>
+		<description>Diese E-Mail-Vorlage wird genutzt, um den primären Zeitschriftenkontakt darüber zu benachrichtigen, dass verdächtige Aktivitäten durch das PayPal-PlugIn entdeckt worden sind.</description>
 	</email_text>
 </email_texts>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   *
   * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.sword.displayName">SWORD-Plug-In</message>
 	<message key="plugins.generic.sword.description">Zeitschriftenverwalter/innen und (optional) Autor/innen erlauben, Artikel über das SWORD-Protokoll zu archivieren</message>
 	<message key="plugins.generic.sword.enabled">Das SWORD-Plug-In wurde aktiviert.</message>
@@ -30,7 +30,8 @@
 <p><strong>Automatisch</strong>: Das Archivieren geschieht automatisch. Der komplette SWORD-Ablageort ist angegeben, Benutzer/innenname und Passwort müssen angegeben werden. Das Archivieren geschieht nach der Benachrichtigung des Autors/der Autorin über die Annahme.<br />
 <strong>Optional; flexibel</strong>: Der/die Autor/in kann auswählen, ob archiviert werden soll. Der angegebene URL gibt ein Servicedokument an, und der/die Autor/in kann aus dem Dokument entscheiden, welcher spezifische Ablageort genutzt werden soll.  Die Ablage geschieht nach der Benachrichtigung des Autors/der Autorin über die Annahme.<br />
 <strong>Optional; fest</strong>: Der/die Autor/in kann auswählen, ob archiviert werden soll. Der URL gibt den genauen SWORD-Ablageort an. Die Ablage geschieht nach der Benachrichtigung des Autors/der Autorin über die Annahme.<br />
-<strong>Nur Zeitschriftenverwalter/in:</strong> Nur der/die Zeitschriftenverwalter/in kann diesen Ablageort benutzen. Der URL gibt ein Servicedokument. Die Ablage wird manuell durch den/die Zeitschriftenverwalter/in mittels der Import/Export-Schnittstelle in der Zeitschriftenverwaltung durchgeführt.</p>]]></message>
+<strong>Nur Zeitschriftenverwalter/in:</strong> Nur der/die Zeitschriftenverwalter/in kann diesen Ablageort benutzen. Der URL gibt ein Servicedokument. Die Ablage wird manuell durch den/die Zeitschriftenverwalter/in mittels der Import/Export-Schnittstelle in der Zeitschriftenverwaltung durchgeführt.
+</p>]]></message>
 	<message key="plugins.generic.sword.depositPoints.password.description">Wenn Sie hier kein Passwort angeben, werden Sie und/oder der/die Autor/in bei der Einreichung nach einem gefragt. Beachten Sie, dass dieses Passwort für alle Zeitschriftenverwalter/innen sichtbar sein wird und unverschlüsselt in der Datenbank gespeichert werden wird.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Name</message>
 	<message key="plugins.generic.sword.automaticDepositComplete">Das Element "{$itemTitle}" wurde automatisch in dem Repositorium "{$repositoryName}" archiviert.</message>
