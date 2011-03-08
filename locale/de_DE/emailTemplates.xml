@@ -629,7 +629,7 @@ ich habe die Fahnenkorrekturen meines Manuskripts "{$articleTitle}" für {$journ
 		<description>Diese E-Mail von der/dem Autor/in an Korrekturlektor/in und Redakteur/in benachrichtigt diese, dass der Korrekturlektoratdurchgang der Autorin/des Autors abgeschlossen ist und dann Details in den Kommentaren zum Artikel zu finden sind.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Eingangsbestätigung für die Korrekturfassung an Verfasser/in</subject>
+		<subject>Eingangsbestätigung für die Korrekturfassung an Autor/in</subject>
 		<body>{$authorName},
 
 vielen Dank für die Fahnenkorrektur Ihres Manuskripts "{$articleTitle}". Wir freuen uns auf die baldige Veröffentlichung Ihres Beitrags in {$journalName}.
