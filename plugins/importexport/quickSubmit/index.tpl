@@ -61,26 +61,50 @@ function updateAbstractRequired() {
 
 <div id="chooseDestination">
 	<h3>{translate key="plugins.importexport.quickSubmit.chooseDestination"}</h3>
-	
+
 	<p>{translate key="plugins.importexport.quickSubmit.chooseDestinationDescription"}</p>
 
 	<table class="data" width="100%">
-		<tr valign="top">	
+		<tr valign="top">
 			<td class="label" width="5%">
 				<input type="radio" name="destination" id="destinationUnpublished" value="queue" {if not $publishToIssue} checked="checked"{/if}{if $enablePageNumber} onclick="document.submit.pages.disabled = true;document.submit.pagesHidden.value = document.submit.pages.value; document.submit.pages.value = '';"{/if}/>
 			</td>
-			<td class="value" width="95%">{fieldLabel name="destinationUnpublished" key="plugins.importexport.quickSubmit.leaveUnpublished"}</td>
+			<td colspan="2" class="value" width="95%">{fieldLabel name="destinationUnpublished" key="plugins.importexport.quickSubmit.leaveUnpublished"}</td>
 		</tr>
-		<tr valign="top">	
-			<td class="label">
+		<tr valign="top">
+			<td rowspan="2" class="label">
 				<input type="radio" id="destinationIssue" name="destination" value="issue" {if $publishToIssue} checked="checked"{/if}{if $enablePageNumber} onclick="document.submit.pages.disabled = false;document.submit.pages.value = document.submit.pagesHidden.value;"{/if}/>
 			</td>
-			<td class="value">{fieldLabel name="destinationIssue" key="plugins.importexport.quickSubmit.addToExisting"} <select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select></td>
+			<td width="20%" class="value">
+				{fieldLabel name="destinationIssue" key="plugins.importexport.quickSubmit.addToExisting"}
+			</td>
+			<td class="value">
+				<select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">
+				<label for="issueId">{translate key="editor.issues.published"}</label>
+			</td>
+			<td class="value">
+				{* Find good values for starting and ending year options *}
+				{assign var=currentYear value=$smarty.now|date_format:"%Y"}
+				{if $datePublished}
+					{assign var=publishedYear value=$datePublished|date_format:"%Y"}
+					{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
+					{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
+				{else}
+					{* No issue publication date info *}
+					{math|assign:"minYear" equation="x-10" x=$currentYear}
+					{math|assign:"maxYear" equation="x+2" x=$currentYear}
+				{/if}
+				{html_select_date prefix="datePublished" time=$datePublished|default:"---" all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear year_empty="common.year"|translate month_empty="common.month"|translate day_empty="common.day"|translate}
+			</td>
 		</tr>
 		{if $enablePageNumber}
 			<tr valign="top">
 				<td class="label">&nbsp;</td>
-				<td class="value">
+				<td colspan="2" class="value">
 					{fieldLabel name="pages" key="editor.issues.pages"}&nbsp;
 					<input name="pages" id="pages" {if $publishToIssue}value="{$pages|escape}" {else}disabled="disabled" {/if}size="20" maxlength="40" class="textField" />
 					<input type="hidden" name="pagesHidden" value="{$pages|escape}" />
