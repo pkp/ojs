@@ -159,7 +159,7 @@ class RegistrationForm extends Form {
 			'salutation', 'firstName', 'middleName', 'lastName',
 			'gender', 'initials', 'country',
 			'affiliation', 'email', 'confirmEmail', 'userUrl', 'phone', 'fax', 'signature',
-			'mailingAddress', 'biography', 'interestsKeywords', 'userLocales',
+			'mailingAddress', 'biography', 'interests', 'interestsKeywords', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 			'registerAsReviewer', 'existingUser', 'sendPassword'
 		);
@@ -266,19 +266,10 @@ class RegistrationForm extends Form {
 				return false;
 			}
 
- 			$interestDao =& DAORegistry::getDAO('InterestDAO');
-			$interests = is_array($this->getData('interestsKeywords')) ? $this->getData('interestsKeywords') : array();
-			$interestTextOnly = Request::getUserVar('interests');
-			if(!empty($interestsTextOnly)) {
-				// If JS is disabled, this will be the input to read
-				$interestsTextOnly = explode(",", $interestTextOnly);
-			} else $interestsTextOnly = null;
-			if ($interestsTextOnly && !isset($interests)) {
-				$interests = $interestsTextOnly;
-			} elseif (isset($interests) && !is_array($interests)) {
-				$interests = array($interests);
-			}
-			$interestDao->insertInterests($interests, $userId, true);
+			// Insert the user interests
+			import('lib.pkp.classes.user.InterestManager');
+			$interestManager = new InterestManager();
+			$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
 
 			$sessionManager =& SessionManager::getManager();
 			$session =& $sessionManager->getUserSession();

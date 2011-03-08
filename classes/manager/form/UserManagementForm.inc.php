@@ -219,6 +219,7 @@ class UserManagementForm extends Form {
 			'country',
 			'biography',
 			'interestsKeywords',
+			'interests',
 			'gossip',
 			'userLocales',
 			'generatePassword',
@@ -369,20 +370,9 @@ class UserManagementForm extends Form {
 			}
 		}
 
-		// Add reviewing interests to interests table
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = is_array($this->getData('interestsKeywords')) ? $this->getData('interestsKeywords') : array();
-		$interestTextOnly = Request::getUserVar('interests');
-		if(!empty($interestsTextOnly)) {
-			// If JS is disabled, this will be the input to read
-			$interestsTextOnly = explode(",", $interestTextOnly);
-		} else $interestsTextOnly = null;
-		if ($interestsTextOnly && !isset($interests)) {
-			$interests = $interestsTextOnly;
-		} elseif (isset($interests) && !is_array($interests)) {
-			$interests = array($interests);
-		}
-		$interestDao->insertInterests($interests, $userId, true);
+		import('lib.pkp.classes.user.InterestManager');
+		$interestManager = new InterestManager();
+		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
 	}
 }
 

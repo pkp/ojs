@@ -104,6 +104,7 @@ class CreateReviewerForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
+			'interests',
 			'interestsKeywords',
 			'gossip',
 			'userLocales',
@@ -184,20 +185,10 @@ class CreateReviewerForm extends Form {
 		$user->setDateRegistered(Core::getCurrentDate());
 		$userId = $userDao->insertUser($user);
 
-		// Add reviewing interests to interests table
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = is_array($this->getData('interestsKeywords')) ? $this->getData('interestsKeywords') : array();
-		$interestTextOnly = Request::getUserVar('interests');
-		if(!empty($interestsTextOnly)) {
-			// If JS is disabled, this will be the input to read
-			$interestsTextOnly = explode(",", $interestTextOnly);
-		} else $interestsTextOnly = null;
-		if ($interestsTextOnly && !isset($interests)) {
-			$interests = $interestsTextOnly;
-		} elseif (isset($interests) && !is_array($interests)) {
-			$interests = array($interests);
-		}
-		$interestDao->insertInterests($interests, $userId, true);
+		// Insert the user interests
+		import('lib.pkp.classes.user.InterestManager');
+		$interestManager = new InterestManager();
+		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journal =& Request::getJournal();
