@@ -35,7 +35,7 @@
 	<sql>
 		<rename table="subscriptions" to="subscriptions_old" />
 	</sql>
-	
+
 	<!-- Bug #4149: Migrate copyed_assignments, layouted_assignments, proof_assignments into signoffs table -->
 	<sql>
 		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, file_id, file_revision, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_COPYEDITING_INITIAL', 257, c.article_id, c.copyeditor_id, a.copyedit_file_id, c.initial_revision, c.date_notified, c.date_underway, c.date_completed, c.date_acknowledged FROM copyed_assignments c LEFT JOIN articles a ON (c.article_id = a.article_id AND c.initial_revision > 0) WHERE c.copyeditor_id IS NOT NULL</query><!-- 257 == ASSOC_TYPE_ARTICLE -->
@@ -44,10 +44,10 @@
 
 		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, file_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_LAYOUT', 257, l.article_id, l.editor_id, l.layout_file_id, l.date_notified, l.date_underway, l.date_completed, l.date_acknowledged FROM layouted_assignments l</query>
 
-		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_PROOFREADING_AUTHOR', 257, p.article_id, p.proofreader_id, p.date_author_notified, p.date_author_underway, p.date_author_completed, p.date_author_acknowledged FROM proof_assignments p</query>
+		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_PROOFREADING_AUTHOR', 257, p.article_id, a.user_id, p.date_author_notified, p.date_author_underway, p.date_author_completed, p.date_author_acknowledged FROM proof_assignments p LEFT JOIN articles a ON (p.article_id = a.article_id)</query>
 		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_PROOFREADING_PROOFREADER', 257, p.article_id, p.proofreader_id, p.date_proofreader_notified, p.date_proofreader_underway, p.date_proofreader_completed, p.date_proofreader_acknowledged FROM proof_assignments p</query>
-		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_PROOFREADING_LAYOUT', 257, p.article_id, p.proofreader_id, p.date_layouteditor_notified, p.date_layouteditor_underway, p.date_layouteditor_completed, p.date_layouteditor_acknowledged FROM proof_assignments p</query>
-	
+		<query>INSERT INTO signoffs (symbolic, assoc_type, assoc_id, user_id, date_notified, date_underway, date_completed, date_acknowledged) SELECT 'SIGNOFF_PROOFREADING_LAYOUT', 257, p.article_id, l.editor_id, p.date_layouteditor_notified, p.date_layouteditor_underway, p.date_layouteditor_completed, p.date_layouteditor_acknowledged FROM proof_assignments p LEFT JOIN layouted_assignments l ON (p.article_id = l.article_id)</query>
+
 		<drop table="copyed_assignments" />
 		<drop table="layouted_assignments" />
 		<drop table="proof_assignments" />

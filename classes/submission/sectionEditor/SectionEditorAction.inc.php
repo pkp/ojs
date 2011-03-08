@@ -1489,7 +1489,7 @@ class SectionEditorAction extends Action {
 
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
@@ -1538,7 +1538,7 @@ class SectionEditorAction extends Action {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 
-		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getArticleId());
 		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
