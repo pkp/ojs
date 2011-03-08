@@ -13,8 +13,19 @@
   -->
   
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- Section default -->
+	<message key="section.default.title">Artikel</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy"></message>
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Der Beitrag ist bisher unveröffentlicht und wurde auch keiner anderen Zeitschrift vorgelegt (andernfalls ist eine Erklärung in "Kommentare für die Redaktion" beigefügt).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft Word, RTF oder WordPerfect vor.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Grafiken und Tabellen sind an geeigneter Stelle im Text eingefügt und nicht am Textende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text folgt den stilistischen und bibliografischen Vorgaben in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Richtlinien für Autor/innen</a> , die unter "Über uns" zu finden sind.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Falls der Beitrag für eine Rubrik eingereicht wird, die Peer Review vorsieht, werden die Hinweise <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Eine anonyme Begutachtung sicherstellen</a>) beachtet.]]></message>
@@ -24,6 +35,7 @@
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Das Lektorat soll die Lesbarkeit, Klarheit, Grammatik, Wortwahl und Formatierung des Artikels verbessern. Hier besteht für die Autor/innen die letzte Möglichkeit, noch einmal wesentliche Veränderungen am Text vorzunehmen. Danach werden nur noch Korrekturen von Tippfehlern vorgenommen.
 
 Der zu lektorierende Text hat das Format Word oder .rtf, was seine Bearbeitung als  Textverarbeitungsdokument erleichtert. In den hier gegebenen Anweisungen werden zwei verschiedene Herangehensweisen an das Lektorat vorgestellt. Die erste basiert auf der "Änderungen verfolgen"-Funktion von Microsoft Word und setzt voraus, dass sowohl Lektor/in als auch Redakteur/in und Autor/in Zugang zu diesem Programm haben. Die zweite vorgeschlagene Vorgehensweise für das Lektorat kann unabhängig von einer bestimmten Software durchgeführt werden. Es wird hier mit der Erlaubnis von Harvard Educational Review präsentiert, für die das System entwickelt wurde.  Damit Vorschläge für die Verbesserungen der Abläufe in dieser Zeitschrift gemacht werden können, kann die Zeitschriftenredaktion diese Anweisungen verändern.
+
 
 <h4>Lektoratssysteme</h4>
 
@@ -43,121 +55,104 @@ Nachdem der Text von Redakteur/in und Autor/in überprüft wurde, nimmt die Lekt
 Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearbeiten:
 
 <strong>Auf vorgeschlagene Änderungen reagieren</strong>
-&nbsp; Heben Sie den Fettsatz bei allen von Ihnen akzeptierten Änderungen auf
+&nbsp; Heben Sie den Fettsatz bei allen von Ihnen akzeptierten Änderungen auf.
 &nbsp; Für alle abgelehnten Änderungen den Originaltext wiederherstellen und <strong>fett</strong>setzen
 
 <strong>Einschübe und Streichungen</strong>
 &nbsp; Einschübe: neuen Text durch <strong>Fettsatz</strong> markieren
-&nbsp; Streichungen: gelöschten Text durch <b>[gelöschter Text]</strong> markieren
-&nbsp; Falls Sie einen ganzen Satz oder mehr streichen, machen Sie eine Anmerkung, z.B. <b>[ 2 Sätze gestrichen]</strong>
+&nbsp; Streichungen: gelöschten Text durch <strong>[gelöschter Text]</strong> markieren
+&nbsp; Falls Sie einen ganzen Satz oder mehr streichen, machen Sie eine Anmerkung, z.B. <strong>[2 Sätze gestrichen]</strong>
 
 <strong>Auf Nachfragen an die Autorin/den Autors reagieren (NadA)</strong>
 &nbsp; Lassen Sie alle NadA in Fettsatz im Text. Nicht löschen
 &nbsp; Um auf eine NadA zu reagieren, schreiben Sie einem Kommentar hinter die Nachfrage. Kommentare sollten wie folgt abgegrenzt werden :
-<b>[Kommentar:</strong>]
-&nbsp; z.B. <b>[Kommentar: Erweitere Diskussion der Methodologie, wie Sie vorgeschlagen haben]</strong>
+<strong>[Kommentar:</strong>]
+&nbsp; z.B. <strong>[Kommentar: Erweitere Diskussion der Methodologie, wie Sie vorgeschlagen haben]</strong>
 
 <strong>Kommentieren</strong>
 &nbsp; Verwenden Sie Kommentare, um Änderungen in der Textorganisation oder größere Umarbeitungen zu erläutern
-&nbsp; z.B. <b>[Kommentar: Habe den untenstehenden Absatz von S.5 nach S.7 verschoben]</strong>
+&nbsp; z.B. <strong>[Kommentar: Habe den untenstehenden Absatz von S.5 nach S.7 verschoben]</strong>
 &nbsp; Hinweis: Verwenden Sie beim Verweis auf die Seitennummerierung die Seitenzahlen der ihnen zugegangenen gedruckten Version des Manuskripts. Dies ist wichtig, weil sich die Nummerierung bei der elektronischen Bearbeitung änderen kann.
 
 <h4>Beispiel einer elektronischen Bearbeitung</h4>
 
-<strong>Ursprüngliche "Manuskript"-Datei</strong>
+<ol>
+<li><strong>Erstes Lektorat.</strong> Die Lektorin/der Lektor der Zeitschrift wird den Text überarbeiten, um Fluss, Deutlichkeit, Grammatik, Ausdrucksweise und Formatierung zu verbessen und, sofern nötig, Fragen an die Autorin/den Autor hinzuzufügen. Sobald das Erste Lektorat abgeschlossen worden ist, wird die Lektorin/(der Lektor das überarbeitete Dokument über die Website der Zeitschrift hochladen und die Autorin/den Autor benachrichtigen, dass das überarbeitete Manuskript zur Durchsicht bereit steht./li>
+<li><strong>Lektorat durch Autor/in.</strong> Bevor Autor/innen wesentliche Abweichungen von der Struktur und Anlage des überarbeiteten Manuskripts vornehmen, müssen sie sich mit den für diesen Text zuständigen Redakteur/innen absprechen. Autor/innen sollten alle im Ersten Lektorat vorgenommenen Änderungen akzeptieren/ablehnen und auf alle Fragen an die/den Autor/in antworten. Wenn die Überarbeitung abgeschlossen worden ist, sollten Autor/innen die Datei von AuthorNameQA.doc zu AuthorNameQAR.doc (z.B. von MüllerQA.doc zu MüllerQAR.doc) umgenennen und das überarbeitete Dokument über die Website der Zeitschrift wie angegeben hochladen.</li>
+<li><strong>Endgültiges Lektorat.</strong> Die Lektorin/der Lektor der Zeitschrift wird die Autor/innenänderungen überprüfen und die Antworten der Autor/innen einarbeiten, um ein endgültiges Manuskript zu erstellen. Nach Fertigstellung wird die Lektorin/der Lektor das fertige Dokument über die Website der Zeitschrift hochladen und die Layouterin/den Layouter benachrichtigen, das Layout fertigzustellen.</li>
+</ol>]]></message>
 
-Ehe Sie Struktur und Organisation des Originals wesentlich verändern, setzen Sie sich bitte mit den anderen Personen in Verbindung, die den Text ebenfalls bearbeiten werden. Nachdem Sie die Überarbeitung abgeschlossen haben, benennen Sie die Datei von AutorinnennameNadA.doc in AutorinnennameNadR.doc um (zum Beispiel von MüllerNadA.doc in MüllerNadR.doc). Drucken Sie die Datei aus und schicken Sie den Ausdruck, zusammen mit einer elektronischen Version der komplett überarbeiteten und umbenannten Datei (auf Diskette, CD o.ä.).
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Aktive Literaturverweise zum Layoutprozess hinzufügen</h4>
+	<p>Wenn ein Beitrag in HTML oder PDF konvertiert wird, sollen alle Hyperlinks im Beitrag aktiv sein.</p>
+	<h4>A. Autor/in liefert einen Link zum Literaturverweis</h4>
+	<ol>
+	<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), fügen Sie die Worte ANZEIGEN am Ende des Literaturverweises ein.</li>
+<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die übermittelte URL hinzufügen.</li>
+	</ol>
+	<h4>B. Leser/innen ermöglichen, nach Verweisen in Google Scholar zu suchen</h4>
+	<ol>
+		<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Titel des zitierten Werkes (wenn der Titel zu unspezifisch ist – z.B. "Frieden" –, nehmen Sie Autor/in und Titel).</li>
+		<li>Fügen Sie den Titel zwischen den %22 ein und fügen Sie ein + zwischen jedem Wort ein: http://scholar.google.com/scholar?q=%22TITEL+HIER+EINFÜGEN%22</li>
 
+	<li>Fügen Sie die Worte GOOGLE SCHOLAR SUCHE am Ende des Literaturverweises ein.</li>
+	<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
+	</ol>
+	<h4>C. Leser/innen ermöglichen, nach Verweisen mit einem DOI zu suchen</h4>
+	<ol>
+	<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Verweis in die CrossRef Abfrage: http://www.crossref.org/freeTextQuery/</li>
+	<li>Fügen Sie den DOI, den die Abfrage liefert, in die folgende URL ein (zwischen = und &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Fügen Sie das Wort CrossRef am Ende des Literaturverweises ein.</li>
+	<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
+	</ol>]]></message>
 
-<strong>Der Autorin/dem Autor wurde das Manuskript mit Änderungswünschen und Nachfragen zurückgeschickt</strong>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Die Korrekturlektur-Phase dient dazu, alle Rechtschreib-, Grammatik- und Formatfehler in der Fahne ausfindig zu machen. In dieser Phase können keine tiefgreifenderen Veränderungen vorgenommen werden, außer es ist mit der/dem Rubrikredakteur/in abgesprochen. Klicken Sie unter "Layout" "Fahne anzeigen" an, um die HTML-, PDF- oder anderen Dateiformate anzusehen, in denen der Beitrag veröffentlicht wird.</p>
+	<h4>Bei Rechtschreib-und Grammatikfehlern</h4>
 
-Ehe Sie Struktur und Organisation des <strong>von uns zugesandten Manuskripts </strong> wesentlich verändern, setzen Sie sich bitte mit den <strong>Redakteur/innen</strong> in Verbindung, die Ihren Text ebenfalls bearbeiten. Nachdem Sie die Überarbeitung abgeschlossen haben, benennen Sie die Datei von AutorinnennameNadA.doc in AutorinnennameNadR.doc um (zum Beispiel von MüllerNadA.doc in MüllerNadR.doc). Drucken Sie die Datei aus und schicken Sie den Ausdruck, zusammen mit einer elektronischen Version der komplett überarbeiteten und umbenannten Datei (auf Diskette, CD o.ä.). <b>[NadA: Es ist wahrscheinlich hilfreich, hier noch einmal darauf hinzuweisen, wie wichtig es ist, dass die Anweisungen für die elektronische Bearbeitung von Manuskripten genau befolgt werden. Es kann sonst sein, dass der Redaktionsprozess wesentlich verlangsamt wird.]</strong>
+	<p>Kopieren Sie das fragliche Wort oder die Wortfolge und geben Sie sie in das Feld für Korrekturlektorat-Korrekturen zusammen mit "ÄNDERE IN"-Anweisungen für die Redakteurin/den Redakteur wie folgt ein...</p>
 
-<strong>An HER zurückgesandtes überarbeitetes Manuskript</strong>
+	<pre>1. ÄNDERE...
+	wie die anderen
+	IN...
+	als die anderen</pre>
+	<br />
+	<pre>2. ÄNDERE...
+	Malinowsky
+	IN...
+	Malinowski</pre>
+	<br />
 
-Ehe Sie Struktur und Organisation des <strong>von uns zugesandten Manuskripts </strong> wesentlich verändern, setzen Sie sich bitte mit den <strong>Redakteur/innen </strong> in Verbindung, die Ihren Text ebenfalls bearbeiten. <strong>Bitte beachten Sie, dass ein Nichteinhalten der nachfolgenden Anweisungen die Veröffentlichung ihres Manuskripts wesentlich verzögern kann.</strong>
+	<h4>Für Formatfehler</h4>
 
-Nachdem Sie die Überarbeitung abgeschlossen haben, benennen Sie die Datei von AutorinnennameNadA.doc in AutorinnennameNadR.doc um (zum Beispiel von MüllerNadA.doc in MüllerNadR.doc). Drucken Sie die Datei aus und schicken Sie den Ausdruck, zusammen mit einer elektronischen Version der <b>[gelöschtes Wort]</strong> überarbeiteten und umbenannten Datei (auf Diskette, CD o.ä.). <b>[NadA: Es ist wahrscheinlich hilfreich, hier noch einmal darauf hinzuweisen, wie wichtig es ist, dass die Anweisungen für die elektronische Bearbeitung von Manuskripten genau befolgt werden. Es kann sonst sein, dass der Redaktionsprozess wesentlich verlangsamt wird.] [Kommentar: Ihrem Wunsch gemäß, habe einen entsprechenden Satz eingefügt.]</strong>
+	<p>Geben Sie "FORMAT" in das Feld für Korrekturlektorat-Korrekturen ein, gefolgt von einer Beschreibung von Stelle und die Art des Problems.</p>
+	<br />
+	<pre>3. FORMAT
+	Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht rechtsbündig.</pre>
+	<br />
+	<pre>4. FORMAT
+	Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
 
-<strong>Hinweise:</strong>
-&bull; Die Aufhebung des Fettsatzes bedeutet, dass die vorgeschlagenen Änderungen am ersten Satz angenommen wurden
-&bull; Ein Satz wurde auf Anregung der Redaktion ergänzt. Der Fettsatz weist auf das Einfügen von neuem Text hin. 
-&bull; [gelöschtes Wort] verweist auf die Löschung von "komplett"
-&bull; Der Kommentar enthält eine Antwort auf die Nachfrage aus der Redaktion NadA]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
+{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Wir empfehlen unseren Leser/innen, sich für die Benachrichtigung bei neuen Veröffentlichungen dieser Zeitschrift einzutragen. Verwenden Sie den <a href="{$indexUrl}/{$journalPath}/user/register">Registrieren</a>-Link oben auf der Startseite der Zeitschrift. Angemeldete Leser/innen erhalten zu jeder neuen Ausgabe der Zeitschrift die Inhaltsangabe per E-Mail zugeschickt. Die Anmeldung ermöglicht es gleichzeitig der Zeitschrift, einen gewissen Grad an Unterstützung oder eine gewisse Leser/innenschaft zu belegen. Siehe die Regelungen zum <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Schutz persönlicher Daten</a> der Zeitschrift, die sicherstellen, dass weder Namen noch E-Mail-Adressen registrierter Benutzer/innen zu anderen Zwecken verwendet werden.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Haben Sie Interesse, einen Beitrag bei dieser Zeitschrift einzureichen? Wir möchten Sie auf <a href="{$indexUrl}/{$journalPath}/about">Über uns</a>, wo Sie die Richtlinien der Zeitschrift einsehen können, und auf  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Richtlinien für Autor/innen</a> verweisen. Autor/innen müssen sich <a href="{$indexUrl}/{$journalPath}/user/register">registrieren</a>, bevor Sie einen Beitrag bei der Zeitschrift einreichen können. Falls Sie bereits angemeldet sind, einfach <a href="{$indexUrl}/{$journalPath}/login">einloggen</a> und die "Fünf Schritte zur Einreichung" abarbeiten.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wir ermutigen Forschungsbibliotheken, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Darüber hinaus bietet das Open Source Veröffentlichungssystem dieser Zeitschrift Bibliotheken die Möglichkeit, Zeitschriften, an denen Mitglieder ihrer Fakultät mitarbeiten, online bereitzustellen. Siehe <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Diese Zeitschrift verwendet das LOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href="http://lockss.org/">Mehr...</a>]]></message>
-	<message key="default.journalSettings.submissionFeeDescription">Autor/innen müssen als Teil des Einreichungsprozesses eine Einreichungsgebühr bezahlen, um sich an den Begutachtungskosten zu beteiligen.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Wenn Sie diese Gebühr zahlen, garantieren wir Ihnen, dass die Begutachtung, die Redaktionsentscheidung und die Benachrichtigung der Autorin/des Autors bezüglich dieses Manuskripts innerhalb der nächsten vier Wochen stattfinden wird.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Sollte dieser Beitrag zur Veröffentlichung kommen, ist eine Veröffentlichungsgebühr zu zahlen, um die Kosten der Veröffentlichung zu decken.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, diesen Artikel anzuzeigen, herunterzuladen und auszudrucken.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
-	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine  Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Die Korrekturlektur-Phase dient dazu, alle Rechtschreib-, Grammatik- und Formatfehler in der Fahne ausfindig zu machen. In dieser Phase können keine tiefgreifenderen Veränderungen vorgenommen werden, außer es ist mit der/dem Rubrikredakteur/in abgesprochen. Klicken Sie unter "Layout" "Fahne anzeigen" an, um die HTML-, PDF- oder anderen Dateiformate anzusehen, in denen der Beitrag veröffentlicht wird.</p>
-<h4>Bei Rechtschreib-und Grammatikfehlern</h4>
 
-<p>Kopieren Sie das fragliche Wort oder die Wortfolge und geben Sie sie in das Feld für Korrekturlektorat-Korrekturen zusammen mit "ÄNDERE IN"-Anweisungen für die Redakteurin/den Redakteur wie folgt ein...</p>
-
-<pre>1. ÄNDERE...
-wie die anderen
-IN...
-als die anderen</pre>
-<br />
-<pre>2. ÄNDERE...
-Malinowsky
-IN...
-Malinowski</pre>
-<br />
-
-<h4>Für Formatfehler</h4>
-
-<p>Geben Sie "FORMAT" in das Feld für Korrekturlektorat-Korrekturen ein, gefolgt von einer Beschreibung von Stelle und die Art des Problems.</p>
-<br />
-<pre>3. FORMAT
-Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht rechtsbündig.</pre>
-<br />
-<pre>4. FORMAT
-Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
-	<message key="section.default.title">Artikel</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
-	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>
-	<message key="section.default.abbrev">ART</message>
+	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
+	<message key="default.journalSettings.submissionFeeDescription">Autor/innen müssen als Teil des Einreichungsprozesses eine Einreichungsgebühr bezahlen, um sich an den Begutachtungskosten zu beteiligen.</message>
 	<message key="default.journalSettings.fastTrackFee">Beschleunigte Begutachtung</message>
-	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Wenn Sie diese Gebühr zahlen, garantieren wir Ihnen, dass die Begutachtung, die Redaktionsentscheidung und die Benachrichtigung der Autorin/des Autors bezüglich dieses Manuskripts innerhalb der nächsten vier Wochen stattfinden wird.</message>
 	<message key="default.journalSettings.publicationFee">Veröffentlichung des Beitrags</message>
+	<message key="default.journalSettings.publicationFeeDescription">Sollte dieser Beitrag zur Veröffentlichung kommen, ist eine Veröffentlichungsgebühr zu zahlen, um die Kosten der Veröffentlichung zu decken.</message>
+	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Artikel erwerben</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, diesen Artikel anzuzeigen, herunterzuladen und auszudrucken.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Ausgabe erwerben</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, die Ausgabe anzuzeigen, herunterzuladen und auszudrucken.</message>
 	<message key="default.journalSettings.membershipFee">Mitgliedschaft</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Aktive Literaturverweise zum Layoutprozess hinzufügen</h4>
-
-<p>Wenn ein Beitrag in HTML oder PDF konvertiert wird, sollen alle Hyperlinks im Beitrag aktiv sein.</p>
-
-<h4>A. Autor/in liefert einen Link zum Literaturverweis</h4>
-
-<ol>
-<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), fügen Sie die Worte ANZEIGEN am Ende des Literaturverweises ein.</li>
-<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die übermittelte URL hinzufügen.</li>
-</ol>
-
-<h4>B. Leser/innen ermöglichen, nach Verweisen in Google Scholar zu suchen</h4>
-<ol>
-<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Titel des zitierten Werkes (wenn der Titel zu unspezifisch ist – z.B. "Frieden" –, nehmen Sie Autor/in und Titel).</li>
-<li>Fügen Sie den Titel zwischen den %22 ein und fügen Sie ein + zwischen jedem Wort ein: http://scholar.google.com/scholar?q=%22TITEL+HIER+EINFÜGEN%22</li>
-<li>Fügen Sie die Worte GOOGLE SCHOLAR SUCHE am Ende des Literaturverweises ein.</li>
-<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
-</ol>
-
-<h4>C. Leser/innen ermöglichen, nach Verweisen mit einem DOI zu suchen</h4>
-<ol>
-<li>Während der Beitrag noch im Textverarbeitungsformat ist (z.B. Word), kopieren Sie den Verweis in die CrossRef Abfrage: http://www.crossref.org/freeTextQuery/</li>
-<li>Fügen Sie den DOI, den die Abfrage liefert, in die folgende URL ein (zwischen = und &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-<li>Fügen Sie das Wort CrossRef am Ende des Literaturverweises ein.</li>
-<li>Verwandeln Sie diese Worte in einen Hyperlink, indem Sie mit den Mitteln des Textverarbeitungsprogramms die in Schritt 2 gebildete URL hinzufügen.</li>
-</ol>]]></message>
-	<message key="section.default.policy">(leer)</message>
+	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
+	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
+	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine  Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
 </locale>
