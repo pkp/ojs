@@ -175,8 +175,12 @@ class MetsExportDom {
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $mods, 'mods:identifier', $url);
 		XMLCustomWriter::setAttribute($modsIdentifier, 'type', 'uri');
 		$modsOriginInfo =& XMLCustomWriter::createElement($doc, 'mods:originInfo');
-		$timeIssued = date(DATE_W3C, strtotime($issue->getDatePublished()));
-		$modsDateIssued = XMLCustomWriter::createChildWithText($doc, $modsOriginInfo, 'mods:dateIssued', $timeIssued);
+
+		if ($issue->getDatePublished()) {
+			$timeIssued = date(DATE_W3C, strtotime($issue->getDatePublished()));
+			$modsDateIssued = XMLCustomWriter::createChildWithText($doc, $modsOriginInfo, 'mods:dateIssued', $timeIssued);
+		}
+
 		XMLCustomWriter::appendChild($mods, $modsOriginInfo);
 		$modsRelatedItem =& XMLCustomWriter::createElement($doc, 'mods:relatedItem');
 		XMLCustomWriter::setAttribute($modsRelatedItem, 'type', 'host');
@@ -271,7 +275,7 @@ class MetsExportDom {
 			$i++;
 		}
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'article');
-		if($issue->getDatePublished() != '') {
+		if($issue->getDatePublished()) {
 			$timeIssued = date(DATE_W3C, strtotime($issue->getDatePublished()));
 			$originInfo =& XMLCustomWriter::createElement($doc, 'mods:originInfo');
 			$sDate = XMLCustomWriter::createChildWithText($doc, $originInfo, 'mods:dateIssued', $timeIssued);
@@ -368,7 +372,7 @@ class MetsExportDom {
 			XMLCustomWriter::appendChild($mods, $creatorNode);
 		}
 		if($suppFile->getDescription() != '') XMLCustomWriter::createChildWithText($doc, $mods, 'mods:abstract', $suppFile->getDescription());
-		if($suppFile->getDateCreated() != '') {
+		if($suppFile->getDateCreated()) {
 			$originInfo =& XMLCustomWriter::createElement($doc, 'mods:originInfo');
 			$timeIssued = date(DATE_W3C, strtotime($suppFile->getDateCreated()));
 			$sDate = XMLCustomWriter::createChildWithText($doc, $originInfo, 'mods:dateCreated', $timeIssued);

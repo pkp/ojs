@@ -53,7 +53,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 	{iterate from=issues item=issue}
 	<tr valign="top" class="data" id="issue-{$issue->getId()}">
 		<td class="drag"><a href="{url op="issueToc" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
-		<td class="drag">{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
+		<td class="drag">{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 		<td class="drag">{$issue->getNumArticles()|escape}</td>
 		<td><a href="{url op="moveIssue" d=u id=$issue->getId() issuesPage=$page }">&uarr;</a>	<a href="{url op="moveIssue" d=d id=$issue->getId() issuesPage=$page }">&darr;</a></td>
 		<td align="right"><a href="{url op="removeIssue" path=$issue->getId() issuesPage=$page }" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>

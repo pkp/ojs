@@ -277,6 +277,12 @@ class NativeExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'pages', $article->getPages(), false);
 
+		// NOTE that this is a required field for import, but it's
+		// possible here to generate nonconforming XML via export b/c
+		// of the potentially missing date_published node. This is due
+		// to legacy data issues WRT an earlier lack of ability to
+		// define article pub dates. Some legacy data will be missing
+		// this date.
 		XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
 
 		if ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {

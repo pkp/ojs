@@ -74,7 +74,7 @@ class EruditExportDom {
 
 		$digPubNode =& XMLCustomWriter::createElement($doc, 'digpub');
 		XMLCustomWriter::appendChild($issueNode, $digPubNode);
-		XMLCustomWriter::createChildWithText($doc, $digPubNode, 'date', EruditExportDom::formatDate($issue->getDatePublished()));
+		if ($issue->getDatePublished()) XMLCustomWriter::createChildWithText($doc, $digPubNode, 'date', EruditExportDom::formatDate($issue->getDatePublished()));
 
 		/* --- Publisher & DTD --- */
 

@@ -81,7 +81,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			"\txsi:schemaLocation=\"http://www.loc.gov/MARC21/slim\n" .
 			"\thttp://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd\">\n" .
 			"\t<leader>     cam         3u     </leader>\n" .
-			"\t<controlfield tag=\"008\">\"" . date('ymd Y', strtotime($issue->getDatePublished())) . "                        eng  \"</controlfield>\n" .
+			($article->getDatePublished()?"\t<controlfield tag=\"008\">\"" . date('ymd Y', strtotime($article->getDatePublished())) . "                        eng  \"</controlfield>\n":'') .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
 			$this->formatElement('245', '0', '0', 'a', $article->getTitle($journal->getPrimaryLocale())) .
 			$this->formatElement('720', ' ', ' ', 'a', $creators) .
@@ -89,7 +89,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			$this->formatElement('520', ' ', ' ', 'a', $article->getLocalizedAbstract()) .
 			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
 			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getLocalizedSponsor())) .
-			$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()) .
+			($issue->getDatePublished()?$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()):'') .
 			$this->formatElement('655', ' ', '7', 'a', $section->getLocalizedIdentifyType()) .
 			$this->formatElement('856', ' ', ' ', 'q', $format) .
 			$this->formatElement('856', '4', '0', 'u', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .

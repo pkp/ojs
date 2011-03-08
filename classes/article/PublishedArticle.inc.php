@@ -83,11 +83,9 @@ class PublishedArticle extends Article {
 	 * Get date published.
 	 * @return date
 	 */
-
 	function getDatePublished() {
 		return $this->getData('datePublished');
 	}
-
 
 	/**
 	 * Set date published.

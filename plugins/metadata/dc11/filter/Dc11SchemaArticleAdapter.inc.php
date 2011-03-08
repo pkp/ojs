@@ -118,7 +118,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Date
 		if (is_a($article, 'PublishedArticle')) {
-			$dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
+			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
+			elseif ($issue->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
 		}
 
 		// Type

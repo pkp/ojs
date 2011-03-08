@@ -55,7 +55,9 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$onlineIssn = $journal->getSetting('onlineIssn');
 		$primaryLocale = $journal->getPrimaryLocale();
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
-		$datePublished = strtotime($article->getDatePublished());
+		$datePublished = $article->getDatePublished();
+		if (!$datePublished) $datePublished = $issue->getDatePublished();
+		if ($datePublished) $datePublished = strtotime($datePublished);
 
 		$response = "<article\n" .
 			"\txmlns=\"http://dtd.nlm.nih.gov/publishing/2.3\"\n" .
@@ -116,13 +118,15 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// Include editorships (optimized)
 		$response .= $this->getEditorialInfo($journal->getId());
 
-		$response .=
-			"\t\t\t</contrib-group>\n" .
+		$response .= "\t\t\t</contrib-group>\n";
+		if ($datePublished) $response .=
 			"\t\t\t<pub-date pub-type=\"epub\">\n" .
 			"\t\t\t\t<day>" . strftime('%d', $datePublished) . "</day>\n" .
 			"\t\t\t\t<month>" . strftime('%m', $datePublished) . "</month>\n" .
 			"\t\t\t\t<year>" . strftime('%Y', $datePublished) . "</year>\n" .
-			"\t\t\t</pub-date>\n" .
+			"\t\t\t</pub-date>\n";
+
+		$response .=
 			($issue->getShowYear()?"\t\t\t<pub-date pub-type=\"collection\"><year>" . htmlspecialchars(Core::cleanVar($issue->getYear())) . "</year></pub-date>\n":'') .
 			($issue->getShowVolume()?"\t\t\t<volume>" . htmlspecialchars(Core::cleanVar($issue->getVolume())) . "</volume>\n":'') .
 			($issue->getShowNumber()?"\t\t\t<issue seq=\"" . htmlspecialchars(Core::cleanVar(($sectionSeq[$section->getId()]*100) + $article->getSeq())) . "\">" . htmlspecialchars(Core::cleanVar($issue->getNumber())) . "</issue>\n":'') .
@@ -147,7 +151,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$response .=
 			"\t\t\t<permissions>\n" .
 			((($s = $journal->getLocalizedSetting('copyrightNotice')) != '')?"\t\t\t\t<copyright-statement>" . htmlspecialchars(Core::cleanVar($s)) . "</copyright-statement>\n":'') .
-			"\t\t\t\t<copyright-year>" . strftime('%Y', $datePublished) . "</copyright-year>\n" .
+			($datePublished?"\t\t\t\t<copyright-year>" . strftime('%Y', $datePublished) . "</copyright-year>\n":'') .
 			"\t\t\t</permissions>\n" .
 			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
 

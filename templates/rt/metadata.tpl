@@ -93,7 +93,7 @@
 	<td>7.</td>
 	<td>{translate key="rt.metadata.dublinCore.date"}</td>
 	<td>{translate key="rt.metadata.pkp.date"}</td>
-	<td>{$article->getDatePublished()|date_format:$dateFormatShort}</td>
+	<td>{$article->getDatePublished()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
