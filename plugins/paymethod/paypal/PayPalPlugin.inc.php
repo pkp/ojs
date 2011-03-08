@@ -113,6 +113,7 @@ class PayPalPlugin extends PaymethodPlugin {
 		$user =& Request::getUser();
 
 		$params = array(
+			'charset' => Config::getVar('i18n', 'client_charset'),
 			'business' => $this->getSetting($journal->getId(), 'selleraccount'),
 			'item_name' => $queuedPayment->getName(),
 			'item_description' => $queuedPayment->getDescription(),  // not a paypal parameter (PayPal uses item_name)
