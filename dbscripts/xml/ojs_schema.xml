@@ -604,9 +604,7 @@
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="date_published" type="T">
-			<NOTNULL/>
-		</field>
+		<field name="date_published" type="T"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
