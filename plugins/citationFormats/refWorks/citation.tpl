@@ -17,7 +17,7 @@
 	journal = {{/literal}{$journal->getLocalizedTitle()|escape}{literal}},
 {/literal}{if $issue}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{literal}
-	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
+	year = {{/literal}{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn|escape}{literal}},{/literal}{/if}
 
 {literal}	url = {{/literal}{$articleUrl}{literal}}

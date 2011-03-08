@@ -19,7 +19,19 @@
 {/if}
 	<meta name="citation_authors" content="{foreach name="authors" from=$article->getAuthors() item=author}{$author->getLastName()|escape}, {$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if}{if !$smarty.foreach.authors.last}; {/if}{/foreach}"/>
 	<meta name="citation_title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
+
+{**
+ * Google Scholar date: Use article publication date, falling back on issue
+ * publication date and issue year in sequence.
+ *}
+{if $article->getDatePublished()}
 	<meta name="citation_date" content="{$article->getDatePublished()|date_format:"%d/%m/%Y"}"/>
+{elseif $issue->getDatePublished()}
+	<meta name="citation_date" content="{$issue->getDatePublished()|date_format:"%d/%m/%Y"}"/>
+{elseif $issue->getYear()}
+	<meta name="citation_date" content="{$issue->getYear()|escape}"/>
+{/if}
+
 	<meta name="citation_volume" content="{$issue->getVolume()|strip_tags|escape}"/>
 	<meta name="citation_issue" content="{$issue->getNumber()|strip_tags|escape}"/>
 {if $article->getPages()}

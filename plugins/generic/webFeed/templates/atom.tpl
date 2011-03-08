@@ -13,7 +13,17 @@
 	{* required elements *}
 	<id>{url page="issue" op="feed"}</id>
 	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
-	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
+
+	{* Figure out feed updated date *}
+	{assign var=latestDate value=$issue->getDatePublished()}
+	{foreach name=sections from=$publishedArticles item=section}
+		{foreach from=$section.articles item=article}
+			{if $article->getDateModified() > $latestDate}
+				{assign var=latestDate value=$article->getDateModified()}
+			{/if}
+		{/foreach}
+	{/foreach}
+	<updated>{$latestDate|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
 	{if $journal->getSetting('contactName')}
@@ -75,7 +85,9 @@
 				{* <category/> *}
 				{* <contributor/> *}
 
-				<published>{$article->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
+				{if $article->getDatePublished()}
+					<published>{$article->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
+				{/if}
 
 				{* <source/> *}
 				{* <rights/> *}

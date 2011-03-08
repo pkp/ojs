@@ -73,8 +73,12 @@ class PubMedExportDom {
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
 
-		$pubDateNode =& PubMedExportDom::generatePubDateDom($doc, $article->getDatePublished(), 'epublish');
-		XMLCustomWriter::appendChild($journalNode, $pubDateNode);
+		$datePublished = $article->getDatePublished();
+		if (!$datePublished) $datePublished = $issue->getDatePublished();
+		if ($datePublished) {
+			$pubDateNode =& PubMedExportDom::generatePubDateDom($doc, $datePublished, 'epublish');
+			XMLCustomWriter::appendChild($journalNode, $pubDateNode);
+		}
 
 		/* --- Replaces --- */
 		// this creates a blank replaces tag since OJS doesn't contain PMID metadata

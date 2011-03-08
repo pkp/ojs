@@ -80,7 +80,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
 			"\txsi:schemaLocation=\"http://www.openarchives.org/OAI/1.1/oai_marc\n" .
 			"\thttp://www.openarchives.org/OAI/1.1/oai_marc.xsd\">\n" .
-			"\t<fixfield id=\"008\">\"" . date('ymd Y', strtotime($issue->getDatePublished())) . '												eng  "</fixfield>' . "\n" .
+			($article->getDatePublished()?"\t<fixfield id=\"008\">\"" . date('ymd Y', strtotime($article->getDatePublished())) . '												eng  "</fixfield>' . "\n":'') .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
 			$this->formatElement('245', '0', '0', 'a', $article->getTitle($journal->getPrimaryLocale())) .
 			$this->formatElement('720', ' ', ' ', 'a', $creators) .
@@ -88,7 +88,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			$this->formatElement('520', ' ', ' ', 'a', $article->getLocalizedAbstract()) .
 			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
 			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getLocalizedSponsor())) .
-			$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()) .
+			($issue->getDatePublished()?$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()):'') .
 			$this->formatElement('655', ' ', '7', 'a', $section->getLocalizedIdentifyType()) .
 			$this->formatElement('856', ' ', ' ', 'q', $format) .
 			$this->formatElement('856', '4', '0', 'u', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
