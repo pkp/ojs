@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.3.5_update.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.3.5 database updates XML file.
+  -->
+<data>
+	<!-- Bug #6451: Check and purge incorrect publication date data -->
+	<!--
+	  - 1. Drop the NOT NULL constraint on pa.date_published. This is not
+	  -    reliably done by ADODB.
+	  -->
+	<sql>
+		<query driver="mysql">ALTER TABLE published_articles CHANGE COLUMN date_published date_published DATETIME</query>
+		<query driver="postgres7">ALTER TABLE published_articles ALTER COLUMN date_published DROP NOT NULL</query>
+	</sql>
+
+	<!--
+	  - 2. Null out pa.date_published from entries where the date published
+	  -    is less than 5 minutes after the date submitted. (Likely to
+	  -    indicate a batch process such as expedited submission or quick
+	  -    submit.)
+	  -->
+	<sql>
+		<query driver="mysql">UPDATE published_articles pa, articles a SET pa.date_published = NULL WHERE a.article_id = pa.article_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &lt; 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &gt;= 0</query>
+		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT a.article_id FROM published_articles pa, articles a WHERE a.article_id = pa.article_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &lt; 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &gt;= 0)</query>
+	</sql>
+</data>
