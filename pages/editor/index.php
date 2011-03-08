@@ -130,12 +130,13 @@ switch ($op) {
 	// Scheduling functions
 	//
 	case 'scheduleForPublication':
-	 //
-	 // Payments
-	 //
-	 case 'waiveSubmissionFee':
-	 case 'waiveFastTrackFee':
-	 case 'waivePublicationFee':
+	case 'setDatePublished':
+	//
+	// Payments
+	//
+	case 'waiveSubmissionFee':
+	case 'waiveFastTrackFee':
+	case 'waivePublicationFee':
 		define('HANDLER_CLASS', 'SubmissionEditHandler');
 		import('pages.sectionEditor.SubmissionEditHandler');
 		break;

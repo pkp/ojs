@@ -86,12 +86,12 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		$form->readInputData();
 		$formLocale = $form->getFormLocale();
 
-		if (Request::getUserVar('addAuthor')) {
+		if ($request->getUserVar('addAuthor')) {
 			$editData = true;
 			$authors = $form->getData('authors');
 			$authors[] = array();
 			$form->setData('authors', $authors);
-		} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
+		} else if (($delAuthor = $request->getUserVar('delAuthor')) && count($delAuthor) == 1) {
 			$editData = true;
 			list($delAuthor) = array_keys($delAuthor);
 			$delAuthor = (int) $delAuthor;
@@ -107,11 +107,11 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 			if ($form->getData('primaryContact') == $delAuthor) {
 				$form->setData('primaryContact', 0);
 			}
-		} else if (Request::getUserVar('moveAuthor')) {
+		} else if ($request->getUserVar('moveAuthor')) {
 			$editData = true;
-			$moveAuthorDir = Request::getUserVar('moveAuthorDir');
+			$moveAuthorDir = $request->getUserVar('moveAuthorDir');
 			$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
-			$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
+			$moveAuthorIndex = (int) $request->getUserVar('moveAuthorIndex');
 			$authors = $form->getData('authors');
 
 			if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
@@ -136,16 +136,16 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 				}
 			}
 			$form->setData('authors', $authors);
-		} else if (Request::getUserVar('uploadSubmissionFile')) {
+		} else if ($request->getUserVar('uploadSubmissionFile')) {
 			$editData = true;
 			$tempFileId = $form->getData('tempFileId');
 			$tempFileId[$formLocale] = $form->uploadSubmissionFile('submissionFile');
 			$form->setData('tempFileId', $tempFileId);
 		}
 
-		if (Request::getUserVar('createAnother') && $form->validate()) {
+		if ($request->getUserVar('createAnother') && $form->validate()) {
 			$form->execute();
-			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
+			$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		} else if (!isset($editData) && $form->validate()) {
 			$form->execute();
 			$templateMgr->display($this->getTemplatePath() . 'submitSuccess.tpl');

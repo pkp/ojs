@@ -136,6 +136,8 @@ class QuickSubmitForm extends Form {
 			)
 		);
 
+		$this->readUserDateVars(array('datePublished'));
+
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($this->getData('sectionId'));
 		if ($section && !$section->getAbstractsNotRequired()) {
@@ -156,7 +158,7 @@ class QuickSubmitForm extends Form {
 
 		$temporaryFile = $temporaryFileManager->handleUpload($fileName, $user->getId());
 
-		if($temporaryFile) {
+		if ($temporaryFile) {
 			return $temporaryFile->getId();
 		} else {
 			return false;
@@ -387,7 +389,7 @@ class QuickSubmitForm extends Form {
 				$publishedArticle = new PublishedArticle();
 				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
-				$publishedArticle->setDatePublished(Core::getCurrentDate());
+				$publishedArticle->setDatePublished($this->getData('datePublished'));
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticle->setViews(0);
 				$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);

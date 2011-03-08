@@ -88,14 +88,20 @@
 	<tr valign="top">
 		<td class="label">{translate key="common.status"}</td>
 		<td class="value">
-			{if $issue->getDatePublished()}
+			{if $issue->getPublished()}
 				{translate key="editor.issues.published"}&nbsp;&nbsp;
 				{* Find good values for starting and ending year options *}
-				{assign var=publishedYear value=$issue->getDatePublished()|date_format:"%Y"}
 				{assign var=currentYear value=$smarty.now|date_format:"%Y"}
-				{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
-				{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
-				{html_select_date prefix="datePublished" time=$datePublished all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear}
+				{if $datePublished}
+					{assign var=publishedYear value=$datePublished|date_format:"%Y"}
+					{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
+					{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
+				{else}
+					{* No issue publication date info *}
+					{math|assign:"minYear" equation="x-10" x=$currentYear}
+					{math|assign:"maxYear" equation="x+2" x=$currentYear}
+				{/if}
+				{html_select_date prefix="datePublished" time=$datePublished|default:"---" all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear year_empty="-" month_empty="-" day_empty="-"}
 			{else}
 				{translate key="editor.issues.unpublished"}
 			{/if}

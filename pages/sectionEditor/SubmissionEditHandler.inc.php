@@ -307,7 +307,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
-		$templateMgr->assign('publicatonFeeEnabled',  $publicationFeeEnabled);
+		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ( $publicationFeeEnabled ) {
 			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 		}
@@ -2306,13 +2306,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * Schedule/unschedule an article for publication.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function scheduleForPublication($args) {
+	function scheduleForPublication($args, $request) {
 		$articleId = (int) array_shift($args);
-		$issueId = (int) Request::getUserVar('issueId');
+		$issueId = (int) $request->getUserVar('issueId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -2370,7 +2372,30 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
 
-		Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
+		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
+	}
+
+	/**
+	 * Set the publication date for a published article
+	 * @param $args array
+	 * @param $request object
+	 */
+	function setDatePublished($args, $request) {
+		$articleId = (int) array_shift($args);
+		$issueId = (int) $request->getUserVar('issueId');
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+
+		$journal =& $request->getJournal();
+		$submission =& $this->submission;
+
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		if ($publishedArticle) {
+			$datePublished = $request->getUserDateVar('datePublished');
+			$publishedArticle->setDatePublished($datePublished);
+			$publishedArticleDao->updatePublishedArticle($publishedArticle);
+		}
+		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}
 
 	/**
