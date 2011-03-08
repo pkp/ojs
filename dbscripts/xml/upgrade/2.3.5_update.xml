@@ -13,7 +13,7 @@
 	<!-- Bug #6451: Check and purge incorrect publication date data -->
 	<!--
 	  - 1. Drop the NOT NULL constraint on pa.date_published. This is not
-	  -    reliably done by ADODB. 
+	  -    reliably done by ADODB.
 	  -->
 	<sql>
 		<query driver="mysql">ALTER TABLE published_articles CHANGE COLUMN date_published date_published DATETIME</query>
@@ -21,14 +21,13 @@
 	</sql>
 
 	<!--
-	  - 2. Null out pa.date_published from entries where there is a duped
-	  -    editor decision entry. (See bug #6428.) Duplicate entries help
-	  -    us to identify submissions that were created via the QuickSubmit
-	  -    or Expedited Submission processes (i.e. the two cases where
-	  -    publication dates will be incorrect).
+	  - 2. Null out pa.date_published from entries where the date published
+	  -    is less than 5 minutes after the date submitted. (Likely to
+	  -    indicate a batch process such as expedited submission or quick
+	  -    submit.)
 	  -->
 	<sql>
-		<query driver="mysql">UPDATE published_articles pa, edit_decisions e1, edit_decisions e2, articles a SET pa.date_published = NULL WHERE pa.article_id = a.article_id AND e1.article_id = a.article_id AND e2.article_id = a.article_id AND e1.edit_decision_id <> e2.edit_decision_id AND e1.date_decided = e2.date_decided AND pa.date_published >= a.date_submitted</query>
-		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT DISTINCT a.article_id FROM articles a, published_articles pa, edit_decisions e1, edit_decisions e2 WHERE pa.article_id = a.article_id AND e1.article_id = a.article_id AND e2.article_id = a.article_id AND e1.edit_decision_id <> e2.edit_decision_id AND e1.date_decided = e2.date_decided AND pa.date_published >= a.date_submitted)</query>
+		<query driver="mysql">UPDATE published_articles pa, articles a SET pa.date_published = NULL WHERE a.article_id = pa.article_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) < 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) >= 0</query>
+		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT a.article_id FROM published_articles pa, articles a WHERE a.article_id = pa.article_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) < 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) >= 0)</query>
 	</sql>
 </data>
