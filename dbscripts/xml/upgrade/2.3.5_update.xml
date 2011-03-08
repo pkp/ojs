@@ -27,7 +27,7 @@
 	  -    submit.)
 	  -->
 	<sql>
-		<query driver="mysql">UPDATE published_articles pa, articles a SET pa.date_published = NULL WHERE a.article_id = pa.article_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) < 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) >= 0</query>
-		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT a.article_id FROM published_articles pa, articles a WHERE a.article_id = pa.article_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) < 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) >= 0)</query>
+		<query driver="mysql">UPDATE published_articles pa, articles a SET pa.date_published = NULL WHERE a.article_id = pa.article_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &lt; 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &gt;= 0</query>
+		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT a.article_id FROM published_articles pa, articles a WHERE a.article_id = pa.article_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &lt; 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &gt;= 0)</query>
 	</sql>
 </data>
