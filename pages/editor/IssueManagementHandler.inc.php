@@ -546,16 +546,21 @@ class IssueManagementHandler extends EditorHandler {
 	function moveArticleToc($args, $request) {
 		$this->validate(null, true);
 		$issue =& $this->issue;
+		$articleId = (int) $request->getUserVar('id');
 
 		$journal =& $request->getJournal();
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleById($request->getUserVar('id'));
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleById($articleId);
+
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $articleDao->getArticle($articleId, $journal->getId());
+
 		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 
-		if (!$publishedArticle || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
+		if (!$publishedArticle || !$article || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
 
 		if ($d = $request->getUserVar('d')) {
 			// Moving by up/down arrows
@@ -575,7 +580,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
-		$publishedArticleDao->resequencePublishedArticles($publishedArticle->getSectionId(), $issue->getIssueId());
+		$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issue->getIssueId());
 
 		// Only redirect if we're not doing drag and drop
 		if ($d) {
