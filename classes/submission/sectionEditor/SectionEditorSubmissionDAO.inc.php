@@ -174,9 +174,9 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		// Update editor decisions
 		for ($i = 1; $i <= $sectionEditorSubmission->getCurrentRound(); $i++) {
-			$editorDecisions = $sectionEditorSubmission->getDecisions($i);
+			$editorDecisions =& $sectionEditorSubmission->getDecisions($i);
 			if (is_array($editorDecisions)) {
-				foreach ($editorDecisions as $editorDecision) {
+				foreach ($editorDecisions as $key => $editorDecision) {
 					if ($editorDecision['editDecisionId'] == null) {
 						$this->update(
 							sprintf('INSERT INTO edit_decisions
@@ -185,9 +185,11 @@ class SectionEditorSubmissionDAO extends DAO {
 								$this->datetimeToDB($editorDecision['dateDecided'])),
 							array($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
 						);
+						$editorDecisions[$key]['editDecisionId'] = $this->getInsertId('edit_decisions', 'edit_decision_id');
 					}
 				}
 			}
+			unset($editorDecisions);
 		}
 		if ($this->reviewRoundExists($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound())) {
 			$this->update(

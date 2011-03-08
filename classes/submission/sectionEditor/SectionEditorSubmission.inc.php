@@ -208,13 +208,14 @@ class SectionEditorSubmission extends Article {
 	 * Get editor decisions.
 	 * @return array
 	 */
-	function getDecisions($round = null) {
+	function &getDecisions($round = null) {
 		if ($round == null) {
 			return $this->editorDecisions;
 		} else {
 			if (isset($this->editorDecisions[$round])) return $this->editorDecisions[$round];
-			else return null;
 		}
+		$returner = null;
+		return $returner;
 	}
 
 	/**

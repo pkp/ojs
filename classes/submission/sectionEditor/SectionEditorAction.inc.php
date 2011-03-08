@@ -49,7 +49,7 @@ class SectionEditorAction extends Action {
 	 * @param $decision int
 	 * @param $request object
 	 */
-	function recordDecision($sectionEditorSubmission, $decision, $request) {
+	function recordDecision(&$sectionEditorSubmission, $decision, $request) {
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		if (empty($editAssignments)) return;
 
