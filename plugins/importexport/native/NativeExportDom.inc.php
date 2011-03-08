@@ -315,7 +315,7 @@ class NativeExportDom {
 
 		$affiliations = $author->getAffiliation(null);
 		if (is_array($affiliations)) foreach ($affiliations as $locale => $affiliation) {
-			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
+			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $affiliation, false);
 			XMLCustomWriter::setAttribute($n, 'locale', $locale);
 			unset($n);
 		}
