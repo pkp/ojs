@@ -159,7 +159,7 @@ class RegistrationForm extends Form {
 			'salutation', 'firstName', 'middleName', 'lastName',
 			'gender', 'initials', 'country',
 			'affiliation', 'email', 'confirmEmail', 'userUrl', 'phone', 'fax', 'signature',
-			'mailingAddress', 'biography', 'interestsKeywords', 'userLocales',
+			'mailingAddress', 'biography', 'interests', 'interestsKeywords', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 			'registerAsReviewer', 'existingUser', 'sendPassword'
 		);
@@ -177,6 +177,12 @@ class RegistrationForm extends Form {
 		if ($this->getData('username') != null) {
 			// Usernames must be lowercase
 			$this->setData('username', strtolower($this->getData('username')));
+		}
+
+		$interests = $this->getData('interestsKeywords');
+		if ($interests != null && is_array($interests)) {
+			// The interests are coming in encoded -- Decode them for DB storage
+			$this->setData('interestsKeywords', array_map('urldecode', $interests));
 		}
 	}
 
@@ -260,21 +266,10 @@ class RegistrationForm extends Form {
 				return false;
 			}
 
-			// Add reviewing interests to interests table
-			$interestDao =& DAORegistry::getDAO('InterestDAO');
-			$interests = Request::getUserVar('interestsKeywords');
-			$interests = array_map('urldecode', $interests); // The interests are coming in encoded -- Decode them for DB storage
-			$interestTextOnly = Request::getUserVar('interests');
-			if(!empty($interestsTextOnly)) {
-				// If JS is disabled, this will be the input to read
-				$interestsTextOnly = explode(",", $interestTextOnly);
-			} else $interestsTextOnly = null;
-			if ($interestsTextOnly && !isset($interests)) {
-				$interests = $interestsTextOnly;
-			} elseif (isset($interests) && !is_array($interests)) {
-				$interests = array($interests);
-			}
-			$interestDao->insertInterests($interests, $user->getId(), true);
+			// Insert the user interests
+			import('lib.pkp.classes.user.InterestManager');
+			$interestManager = new InterestManager();
+			$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
 
 			$sessionManager =& SessionManager::getManager();
 			$session =& $sessionManager->getUserSession();

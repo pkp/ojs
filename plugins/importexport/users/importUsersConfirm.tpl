@@ -59,7 +59,7 @@
 			{foreach from=$user->getSignature(null) key=locale item=value}
 				<input type="hidden" name="{$userKey|escape}_signature[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
-			<input type="hidden" name="{$userKey|escape}_interests" value="{$user->getInterests()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_interests" value="{$user->getTemporaryInterests()|escape}" />
 			{foreach from=$user->getGossip(null) key=locale item=value}
 				<input type="hidden" name="{$userKey|escape}_gossip[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}

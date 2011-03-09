@@ -218,6 +218,7 @@ class ProfileForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
+			'interests',
 			'interestsKeywords',
 			'userLocales',
 			'readerRole',
@@ -227,6 +228,12 @@ class ProfileForm extends Form {
 
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
+		}
+
+		$interests = $this->getData('interestsKeywords');
+		if ($interests != null && is_array($interests)) {
+			// The interests are coming in encoded -- Decode them for DB storage
+			$this->setData('interestsKeywords', array_map('urldecode', $interests));
 		}
 	}
 
@@ -251,22 +258,12 @@ class ProfileForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
+		$userId = $user->getId();
 
-		// Add reviewing interests to interests table
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		$interests = Request::getUserVar('interestsKeywords');
-		$interests = array_map('urldecode', $interests); // The interests are coming in encoded -- Decode them for DB storage
-		$interestTextOnly = Request::getUserVar('interests');
-		if(!empty($interestsTextOnly)) {
-			// If JS is disabled, this will be the input to read
-			$interestsTextOnly = explode(",", $interestTextOnly);
-		} else $interestsTextOnly = null;
-		if ($interestsTextOnly && !isset($interests)) {
-			$interests = $interestsTextOnly;
-		} elseif (isset($interests) && !is_array($interests)) {
-			$interests = array($interests);
-		}
-		$interestDao->insertInterests($interests, $user->getId(), true);
+		// Insert the user interests
+		import('lib.pkp.classes.user.InterestManager');
+		$interestManager = new InterestManager();
+		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
 
 
 		$site =& Request::getSite();
