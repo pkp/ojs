@@ -371,7 +371,7 @@ class ArticleHandler extends Handler {
 		}
 		if ($galley) $galleyDao->incrementViews($galley->getId());
 
-		if ($article && $galley && !HookRegistry::call('$this->downloadFile', array(&$article, &$galley))) {
+		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
 			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getId());
 			$articleFileManager->downloadFile($galley->getFileId());
