@@ -168,10 +168,6 @@
 		<value>true</value>
 	</setting>
 	<setting type="bool" locale="0">
-		<name>rtAuthorBio</name>
-		<value>true</value>
-	</setting>
-	<setting type="bool" locale="0">
 		<name>rtDefineTerms</name>
 		<value>true</value>
 	</setting>

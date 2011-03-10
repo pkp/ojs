@@ -39,7 +39,6 @@ class RTDAO extends DAO {
 		$rt->setViewMetadata($journal->getSetting('rtViewMetadata')?true:false);
 		$rt->setSupplementaryFiles($journal->getSetting('rtSupplementaryFiles')?true:false);
 		$rt->setPrinterFriendly($journal->getSetting('rtPrinterFriendly')?true:false);
-		$rt->setAuthorBio($journal->getSetting('rtAuthorBio')?true:false);
 		$rt->setDefineTerms($journal->getSetting('rtDefineTerms')?true:false);
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
@@ -70,7 +69,6 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtViewMetadata', $rt->getViewMetadata(), 'bool');
 		$journal->updateSetting('rtSupplementaryFiles', $rt->getSupplementaryFiles(), 'bool');
 		$journal->updateSetting('rtPrinterFriendly', $rt->getPrinterFriendly(), 'bool');
-		$journal->updateSetting('rtAuthorBio', $rt->getAuthorBio(), 'bool');
 		$journal->updateSetting('rtDefineTerms', $rt->getDefineTerms(), 'bool');
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');

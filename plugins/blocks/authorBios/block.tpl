@@ -9,7 +9,6 @@
  * $Id$
  *}
 
-{if $journalRt && $journalRt->getEnabled() && $journalRt->getAuthorBio()}
 <div class="block" id="sidebarRTAuthorBios">
 	<span class="blockTitle">
 		{if count($article->getAuthors()) gt 1}
@@ -34,4 +33,3 @@
 
 	{/foreach}
 </div>
-{/if}

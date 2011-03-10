@@ -30,34 +30,6 @@ class RTHandler extends ArticleHandler {
 	function RTHandler(&$request) {
 		parent::ArticleHandler($request);
 	}
-	/**
-	 * Display an author biography
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function bio($args, &$request) {
-		$router =& $request->getRouter();
-		$this->setupTemplate();
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($request, $articleId, $galleyId);
-
-		$journal =& $router->getContext($request);
-		$article =& $this->article;
-
-		$rtDao =& DAORegistry::getDAO('RTDAO');
-		$journalRt =& $rtDao->getJournalRTByJournal($journal);
-
-		if (!$journalRt || !$journalRt->getAuthorBio()) {
-			$request->redirect(null, $router->getRequestedPage($request));
-		}
-
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign_by_ref('article', $article);
-		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->display('rt/bio.tpl');
-	}
 
 	/**
 	 * Display the article metadata

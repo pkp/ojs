@@ -98,7 +98,6 @@ class Upgrade extends Installer {
 			$rt->setViewMetadata($row['view_metadata']);
 			$rt->setSupplementaryFiles($row['supplementary_files']);
 			$rt->setPrinterFriendly($row['printer_friendly']);
-			$rt->setAuthorBio($row['author_bio']);
 			$rt->setDefineTerms($row['define_terms']);
 
 			$journal->updateSetting('enableComments', $row['add_comment']?COMMENTS_AUTHENTICATED:COMMENTS_DISABLED);
