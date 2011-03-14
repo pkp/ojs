@@ -17,9 +17,7 @@
 	journal = {{/literal}{$journal->getLocalizedTitle()|bibtex_escape}{literal}},
 {/literal}{if $issue}{literal}	volume = {{/literal}{$issue->getVolume()|bibtex_escape}{literal}},
 	number = {{/literal}{$issue->getNumber()|bibtex_escape}{literal}},{/literal}{/if}{literal}
-{/literal}{if $article->getDatePublished() || $issue->getDatePublished()}{literal}
-	year = {{/literal}{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{else}{$issue->getDatePublished()|date_format:'%Y'}{/if}{literal}},
-{/literal}{/if}{literal}
+	year = {{/literal}{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}{literal}},
 	keywords = {{/literal}{$article->getLocalizedSubject()|bibtex_escape}{literal}},
 	abstract = {{/literal}{$article->getLocalizedAbstract()|strip_tags:false|bibtex_escape}{literal}},
 {/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')}
