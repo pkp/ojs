@@ -47,9 +47,13 @@ class AuthorBiosBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
-
-		return parent::getContents($templateMgr);
+		// Only show the block for article pages.
+		switch (Request::getRequestedPage() . '/' . Request::getRequestedOp()) {
+			case 'article/view':
+				return parent::getContents($templateMgr);
+			default:
+				return '';
+		}
 	}
 }
 
