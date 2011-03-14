@@ -93,7 +93,17 @@
 	<td>7.</td>
 	<td>{translate key="rt.metadata.dublinCore.date"}</td>
 	<td>{translate key="rt.metadata.pkp.date"}</td>
-	<td>{$article->getDatePublished()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+	<td>
+		{if $article->getDatePublished()}
+			{$article->getDatePublished()|date_format:$dateFormatShort}
+		{elseif $issue && $issue->getDatePublished()}
+			{$issue->getDatePublished()|date_format:$dateFormatShort}
+		{elseif $issue}
+			{$issue->getYear()|escape}
+		{else}
+			&mdash;
+		{/if}
+	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
