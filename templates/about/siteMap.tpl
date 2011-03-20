@@ -48,7 +48,7 @@
 					{else}
 						<ul class="plain">
 							<li><a href="{url journal=$currentJournal->getPath() page="login"}">{translate key="navigation.login"}</a></li>
-							<li><a href="{url journal=$currentJournal->getPath() page="register"}">{translate key="navigation.register"}</a></li>
+							<li><a href="{url journal=$currentJournal->getPath() page="user" op="register"}">{translate key="navigation.register"}</a></li>
 						</ul>
 					{/if}
 				</li>
