@@ -22,14 +22,14 @@
 
 {**
  * Google Scholar date: Use article publication date, falling back on issue
- * publication date and issue year in sequence.
+ * year and issue publication date in sequence. Bug #6480.
  *}
 {if $article->getDatePublished()}
 	<meta name="citation_date" content="{$article->getDatePublished()|date_format:"%d/%m/%Y"}"/>
-{elseif $issue->getDatePublished()}
-	<meta name="citation_date" content="{$issue->getDatePublished()|date_format:"%d/%m/%Y"}"/>
 {elseif $issue->getYear()}
 	<meta name="citation_date" content="{$issue->getYear()|escape}"/>
+{elseif $issue->getDatePublished()}
+	<meta name="citation_date" content="{$issue->getDatePublished()|date_format:"%d/%m/%Y"}"/>
 {/if}
 
 	<meta name="citation_volume" content="{$issue->getVolume()|strip_tags|escape}"/>
