@@ -13,6 +13,6 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.reports.views.displayName">Bericht ansehen</message>
-	<message key="plugins.reports.views.description">Dieses Plug-In liefert einen CSV-Bericht, der die Leser/innenschaft für jeden Artikel beschreibt.</message>
+	<message key="plugins.reports.views.displayName">Lese-Bericht</message>
+	<message key="plugins.reports.views.description">Dieses Plug-In liefert einen CSV-Bericht, der die Leser/innenschaft für jeden Artikel angibt.</message>
 </locale>
