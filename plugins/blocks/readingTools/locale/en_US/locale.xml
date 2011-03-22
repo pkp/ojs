@@ -23,4 +23,15 @@
 	<message key="plugins.block.readingTools.loginRequired">Login required</message>
 	<message key="plugins.block.readingTools.printThisArticle">Print this article</message>
 	<message key="plugins.block.readingTools.postComment">Post a Comment</message>
+
+	<!-- alternative text for icons -->
+	<message key="plugins.block.readingTools.abstract.altText">Abstract</message>
+	<message key="plugins.block.readingTools.printArticle.altText">Print article</message>
+	<message key="plugins.block.readingTools.metadata.altText">Metadata</message>
+	<message key="plugins.block.readingTools.citeArticle.altText">Cite article</message>
+	<message key="plugins.block.readingTools.suppFiles.altText">Supplementary files</message>
+	<message key="plugins.block.readingTools.findingReferences.altText">Finding References</message>
+	<message key="plugins.block.readingTools.editorialPolicies.altText">Review policy</message>
+	<message key="plugins.block.readingTools.emailArticle.altText">Email article</message>
+	<message key="plugins.block.readingTools.postComment.altText">Post comment</message>
 </locale>
