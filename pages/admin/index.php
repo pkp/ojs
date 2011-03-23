@@ -75,7 +75,7 @@ switch ($op) {
 	case 'systemInfo':
 	case 'editSystemConfig':
 	case 'saveSystemConfig':
-	case 'phpInfo':
+	case 'phpinfo':
 	case 'expireSessions':
 	case 'clearTemplateCache':
 	case 'clearDataCache':
