@@ -16,7 +16,7 @@
 class TranslatorAction {
 	/**
 	 * Export the locale files to the browser as a tarball.
-	 * Requires /bin/tar for operation.
+	 * Requires tar for operation (configured in config.inc.php).
 	 */
 	function export($locale) {
 		// Construct the tar command
