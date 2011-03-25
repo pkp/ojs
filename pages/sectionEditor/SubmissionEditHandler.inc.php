@@ -1022,11 +1022,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					// The conditions are met for being able
 					// to send a file to copyediting.
 					SectionEditorAction::setCopyeditFile($submission, $file[0], $file[1], $request);
-
-					$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
-					$signoff->setFileId($file[0]);
-					$signoff->setFileRevision($file[1]);
-					$signoffDao->updateObject($signoff);
 				}
 				$redirectTarget = 'submissionEditing';
 			}
