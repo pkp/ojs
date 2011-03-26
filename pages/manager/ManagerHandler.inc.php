@@ -74,7 +74,7 @@ class ManagerHandler extends Handler {
 					// Special case for emailing entire groups:
 					// Check for a group ID and add recipients.
 					$groupDao =& DAORegistry::getDAO('GroupDAO');
-					$group =& $groupDao->getGroup($groupId);
+					$group =& $groupDao->getById($groupId);
 					if ($group && $group->getAssocId() == $journal->getId() && $group->getAssocType() == ASSOC_TYPE_JOURNAL) {
 						$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 						$memberships =& $groupMembershipDao->getMemberships($group->getId());

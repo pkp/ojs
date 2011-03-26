@@ -94,7 +94,7 @@ class GroupHandler extends ManagerHandler {
 				$prevSeq = 0;
 			else {
 				$journal =& Request::getJournal();
-				$prevGroup =& $groupDao->getGroup($prevId, ASSOC_TYPE_JOURNAL, $journal->getId());
+				$prevGroup =& $groupDao->getById($prevId, ASSOC_TYPE_JOURNAL, $journal->getId());
 				$prevSeq = $prevGroup->getSequence();
 			}
 
@@ -124,7 +124,7 @@ class GroupHandler extends ManagerHandler {
 
 		if ($groupId !== null) {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
+			$group =& $groupDao->getById($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
 			if (!$group) {
 				Request::redirect(null, null, 'groups');
 			}
@@ -386,7 +386,7 @@ class GroupHandler extends ManagerHandler {
 
 		if ($groupId !== null) {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$group =& $groupDao->getGroup($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
+			$group =& $groupDao->getById($groupId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
 			if (!$group) $passedValidation = false;
 			else $this->group =& $group;

@@ -197,7 +197,7 @@ class AboutHandler extends Handler {
 		$groupId = (int) array_shift($args);
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
-		$group =& $groupDao->getGroup($groupId);
+		$group =& $groupDao->getById($groupId);
 
 		if (	!$journal || !$group ||
 			$group->getContext() != GROUP_CONTEXT_PEOPLE ||

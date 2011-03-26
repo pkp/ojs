@@ -96,7 +96,7 @@ class GroupForm extends Form {
 		$journal =& Request::getJournal();
 
 		if (!isset($this->group)) {
-			$this->group = new Group();
+			$this->group = $groupDao->newDataObject();
 		}
 
 		$this->group->setAssocType(ASSOC_TYPE_JOURNAL);
