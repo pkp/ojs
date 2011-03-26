@@ -344,9 +344,10 @@ class OJSPaymentManager extends PaymentManager {
 				$buyerFullName = $gift->getBuyerFullName();
 				$giftDetails = $queuedPayment->getName();
 				$giftNote = $gift->getGiftNote();
+				$giftLocale = $gift->getLocale();
 
 				import('classes.mail.MailTemplate');
-				$mail = new MailTemplate('GIFT_AVAILABLE');
+				$mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'giftNoteTitle' => $giftNoteTitle,
@@ -370,10 +371,10 @@ class OJSPaymentManager extends PaymentManager {
 				);
 
 				if ($newUserAccount) {
-					$mail = new MailTemplate('GIFT_USER_REGISTER');
+					$mail = new MailTemplate('GIFT_USER_REGISTER', $giftLocale);
 					$params['password'] = $password;
 				} else {
-					$mail = new MailTemplate('GIFT_USER_LOGIN');
+					$mail = new MailTemplate('GIFT_USER_LOGIN', $giftLocale);
 				}
 
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));

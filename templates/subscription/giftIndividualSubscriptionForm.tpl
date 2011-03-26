@@ -99,6 +99,14 @@
 	</select></td>
 </tr>
 <tr valign="top">
+	<td class="label">{fieldLabel name="giftLocale" required="true" key="common.language"}</td>
+	<td class="value">
+		<select name="giftLocale" id="giftLocale" class="selectMenu">
+		{html_options options=$supportedLocales selected=$giftLocale|default:$formLocale}
+		</select>
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="giftNoteTitle" required="true" key="gifts.noteTitle"}</td>
 	<td class="value"><input type="text" id="giftNoteTitle" name="giftNoteTitle" value="{$giftNoteTitle|escape}" size="60" maxlength="90" class="textField" /></td>
 </tr>

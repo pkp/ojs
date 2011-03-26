@@ -59,6 +59,21 @@ class GiftIndividualSubscriptionForm extends Form {
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao =& DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
 
+		// Ensure a locale is provided and valid
+		$this->addCheck(
+			new FormValidator(
+				$this,
+				'giftLocale',
+				'required',
+				'gifts.localeRequired'
+			),
+			create_function(
+				'$giftLocale, $availableLocales',
+				'return in_array($giftLocale, $availableLocales);'
+			),
+			array_keys($journal->getSupportedLocaleNames())
+		);
+
 		// Form was POSTed
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -67,7 +82,9 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);
 		parent::display();
 	}
@@ -87,6 +104,7 @@ class GiftIndividualSubscriptionForm extends Form {
 			'recipientLastName',
 			'recipientEmail',
 			'confirmRecipientEmail',
+			'giftLocale',
 			'giftNoteTitle',
 			'giftNote',
 			'typeId'
@@ -127,6 +145,7 @@ class GiftIndividualSubscriptionForm extends Form {
 		$gift->setRecipientLastName($this->getData('recipientLastName'));
 		$gift->setRecipientEmail($this->getData('recipientEmail'));
 		$gift->setRecipientUserId(null);
+		$gift->setLocale($this->getData('giftLocale'));
 		$gift->setGiftNoteTitle($this->getData('giftNoteTitle'));
 		$gift->setGiftNote($this->getData('giftNote'));
 

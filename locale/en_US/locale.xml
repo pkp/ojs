@@ -865,6 +865,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="gifts.note">Gift Note</message>
 	<message key="gifts.noteTitleRequired">Please provide a title for your personalized message.</message>
 	<message key="gifts.noteRequired">Please provide a personalized message.</message>
+	<message key="gifts.localeRequired">Please select a language for your personalized message.</message>
 	<message key="gifts.myGifts">My Gifts</message>
 	<message key="gifts.manageMyGifts">Manage My Gifts</message>
 	<message key="gifts.redeemGift">Redeem Gift</message>
