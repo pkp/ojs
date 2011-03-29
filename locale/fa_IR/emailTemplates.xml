@@ -885,4 +885,59 @@ Subscription Type:
 {$userFirstName}
 ویراستار, {$journalName}</body>
 	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>سلام {$recipientFirstName},
+
+{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+{$giftDetails}
+
+{$giftNote}
+
+‎ایمیل دیگری حاوی اطلاعات لاگ این به نشریه و دریافت هدیه اشتراک شما برایتان فرستاده شده‫.‬
+‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
+
+
+{$principalContactSignature}</body>
+		<description>این ایمیل به دریافت کننده هدیه اطلاع میدهد که هدیه خریده شده و آماده دریافت است‫.‬</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
+		<body>سلام {$recipientFirstName},
+
+{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+
+{$giftDetails}
+
+‎برای دریافت هدیه لطفا با اسم و رمز زیر در سایت ما به آدرس{$giftUrl}  لاگ این کنید‫.‬
+
+‎اسم ورود: {$username}
+‎رمز ورود: {$password}
+
+‎بعد از ورود شما میتوانید رمزتان را هر موقعی خواستید تغییر دهید‫.‬
+
+‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
+
+{$principalContactSignature}</body>
+		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
+		<body>سلام {$recipientFirstName},
+
+{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+
+{$giftDetails}
+
+
+‎برای دریافت هدیه لطفا با اسم و رمز زیر در سایت ما به آدرس{$giftUrl}  لاگ این کنید‫.‬
+
+‎اسم ورود: {$username}
+
+‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
+
+
+{$principalContactSignature}</body>
+		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
+	</email_text>
 </email_texts>

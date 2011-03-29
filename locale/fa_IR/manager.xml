@@ -43,6 +43,9 @@
 	<message key="manager.payment.enable">فعال سازی</message>
 	<message key="manager.payment.feePaymentOptions">گزینه های نحوه پرداخت</message>
 	<message key="manager.payment.form.numeric">(تمام هزینه ها باید مقادیر عددی مثبت باشند (ممیزهای دهدهی مجاز می باشد</message>
+	<message key="manager.payment.giftFees">هدایا</message>
+	<message key="manager.payment.giftFeesDescription">لینک مرتبط با اشتراکات اهدایی در صفحه اشتراکات و همچنین بلوک اشتراکات کنار صفحه ظاهر خواهد شد</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">این گزینه پرداختی های مربوط به اشتراکات اهدایی را روشن میکند و به خوانندگان نشریه اجازه میدهد تا برای دیگران اشتراک نشریه را هدیه بخرند.</message>
 	<message key="manager.payment.generalFees">قیمت عمومی</message>
 	<message key="manager.payment.generalFeesDescription">عضویت در انجمن در قسمت &quot;درباره مجله&quot; تحت قسمت سیاست ها خواهد آمد و لینک اهدا در بالای قمیت جستجو  در نوار حاشیه خواهد آمد.</message>
 	<message key="manager.payment.generalOptions">گزینه های عمومی</message>
