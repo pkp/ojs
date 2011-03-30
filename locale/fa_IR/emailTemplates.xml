@@ -889,7 +889,7 @@ Subscription Type:
 		<subject>{$giftNoteTitle}</subject>
 		<body>سلام {$recipientFirstName},
 
-{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬
 {$giftDetails}
 
 {$giftNote}
@@ -898,14 +898,14 @@ Subscription Type:
 ‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
 
 
-{$principalContactSignature}</body>
+{$giftContactSignature}</body>
 		<description>این ایمیل به دریافت کننده هدیه اطلاع میدهد که هدیه خریده شده و آماده دریافت است‫.‬</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
 		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
 		<body>سلام {$recipientFirstName},
 
-{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬
 
 {$giftDetails}
 
@@ -918,14 +918,14 @@ Subscription Type:
 
 ‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
 
-{$principalContactSignature}</body>
+{$giftContactSignature}</body>
 		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
 	</email_text>
 	<email_text key="GIFT_USER_LOGIN">
 		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
 		<body>سلام {$recipientFirstName},
 
-{$buyerFullName}  اشتراک نشریه {$journalName} را برای شما هدیه خریده است‫: ‬
+{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬
 
 {$giftDetails}
 
@@ -937,7 +937,7 @@ Subscription Type:
 ‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬
 
 
-{$principalContactSignature}</body>
+{$giftContactSignature}</body>
 		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
 	</email_text>
 </email_texts>

@@ -27,21 +27,23 @@ class Gift extends PKPGift {
 
 	/**
 	 * Get the name of the gift based on gift type.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getGiftName() {
+	function getGiftName($locale = null) {
+		if (!isset($locale)) $locale = Locale::getLocale();
 		switch ($this->getGiftType()){
 			case GIFT_TYPE_SUBSCRIPTION:
 				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getGiftAssocId());
 				if ($subscriptionType) {
-					return Locale::translate('payment.type.gift') . ' ' . Locale::translate('payment.type.gift.subscription') . ': ' . $subscriptionType->getSubscriptionTypeName() . ' - ' . $subscriptionType->getDurationYearsMonths();
+					return Locale::translate('payment.type.gift', null, $locale) . ' ' . Locale::translate('payment.type.gift.subscription', null, $locale) . ': ' . $subscriptionType->getName($locale) . ' - ' . $subscriptionType->getDurationYearsMonths($locale);
 				} else {
-					return Locale::translate('payment.type.gift') . ' ' . Locale::translate('payment.type.gift.subscription');
+					return Locale::translate('payment.type.gift', null, $locale) . ' ' . Locale::translate('payment.type.gift.subscription', null, $locale);
 				}
 				break;
 			default:
-				return Locale::translate('payment.type.gift');
+				return Locale::translate('payment.type.gift', null, $locale);
 		}
 	}
 }

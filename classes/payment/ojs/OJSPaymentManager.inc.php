@@ -273,7 +273,6 @@ class OJSPaymentManager extends PaymentManager {
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_GIFT:
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 				$giftId = $queuedPayment->getAssocId();
 				$giftDao =& DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($giftId);
@@ -342,19 +341,25 @@ class OJSPaymentManager extends PaymentManager {
 				// Send gift available email to recipient, cc buyer
 				$giftNoteTitle = $gift->getGiftNoteTitle();
 				$buyerFullName = $gift->getBuyerFullName();
-				$giftDetails = $queuedPayment->getName();
 				$giftNote = $gift->getGiftNote();
 				$giftLocale = $gift->getLocale();
 
+				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON), $giftLocale);
+				$giftDetails = $gift->getGiftName($giftLocale);
+				$giftJournalName = $journal->getTitle($giftLocale);
+				$giftContactSignature = $journal->getSetting('contactName', $giftLocale);
+
 				import('classes.mail.MailTemplate');
 				$mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
-				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+				$mail->setFrom($journal->getSetting('contactEmail', $giftLocale), $journal->getSetting('contactName', $giftLocale));
 				$mail->assignParams(array(
+					'giftJournalName' => $giftJournalName,
 					'giftNoteTitle' => $giftNoteTitle,
 					'recipientFirstName' => $recipientFirstName,
 					'buyerFullName' => $buyerFullName,
 					'giftDetails' => $giftDetails,
-					'giftNote' => $giftNote
+					'giftNote' => $giftNote,
+					'giftContactSignature' => $giftContactSignature
 				));
 				$mail->addRecipient($recipientEmail, $user->getFullName());
 				$mail->addCc($gift->getBuyerEmail(), $gift->getBuyerFullName());
@@ -363,11 +368,13 @@ class OJSPaymentManager extends PaymentManager {
 
 				// Send gift login details to recipient
 				$params = array(
+					'giftJournalName' => $giftJournalName,
 					'recipientFirstName' => $recipientFirstName,
 					'buyerFullName' => $buyerFullName,
 					'giftDetails' => $giftDetails,
 					'giftUrl' => Request::url($journal->getPath(), 'user', 'gifts'),
-					'username' => $user->getUsername()
+					'username' => $user->getUsername(),
+					'giftContactSignature' => $giftContactSignature
 				);
 
 				if ($newUserAccount) {
