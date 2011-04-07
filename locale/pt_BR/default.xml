@@ -138,4 +138,5 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="default.journalSettings.purchaseArticleFee">Adquirir artigo</message>
 	<message key="default.journalSettings.membershipFee">Registro em entidade de classe</message>
 	<message key="default.journalSettings.donationFee">Doações à revista</message>
+	<message key="section.default.policy">Política padrão de seção</message>
 </locale>
