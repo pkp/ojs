@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.subscriptions.displayName">Relatório de assinaturas</message>
+	<message key="plugins.reports.subscriptions.description">Este plugin implementa um relatório em formato CSV contendo a lista de assinaturas e suas informações.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Endereço postal da instituição</message>
+	<message key="plugins.reports.subscriptions.ipRanges">Faixas de IP</message>
+</locale>
