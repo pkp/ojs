@@ -733,7 +733,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve a list of all reviewers along with information about their current status with respect to an article's current round.
+	 * Retrieve a list of all reviewers with respect to an article's current round.
 	 * @param $journalId int
 	 * @param $articleId int
 	 * @param $round int
@@ -744,17 +744,29 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$paramArray = array($articleId, $round, ASSOC_TYPE_USER, 'interest', $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
-		$searchSql = '';
-
+		// Convert the field being searched for to a DB element to select on
 		$searchTypeMap = array(
 			USER_FIELD_FIRSTNAME => 'u.first_name',
 			USER_FIELD_LASTNAME => 'u.last_name',
 			USER_FIELD_USERNAME => 'u.username',
 			USER_FIELD_EMAIL => 'u.email',
 			USER_FIELD_INTERESTS => 'cves.setting_value'
-			);
+		);
 
+		// Generate the SQL used to filter the results based on what the user is searching for
+		$paramArray = array((int) $articleId, (int) $round);
+		$joinInterests = false;
+		if($searchType == USER_FIELD_INTERESTS) {
+			$paramArray[] = ASSOC_TYPE_USER;
+			$paramArray[] = 'interest';
+			$joinInterests = true;
+		}
+
+		// Push some extra default parameters to the SQL parameter array
+		$paramArray[] = (int) $journalId;
+		$paramArray[] = ROLE_ID_REVIEWER;
+
+		$searchSql = '';
 		if (isset($search) && isset($searchTypeMap[$searchType])) {
 			$fieldName = $searchTypeMap[$searchType];
 			switch ($searchMatch) {
@@ -783,31 +795,53 @@ class SectionEditorSubmissionDAO extends DAO {
 				break;
 		}
 
-		$result =& $this->retrieveRange(
-			'SELECT DISTINCT
+
+		// If we are sorting a column, we'll need to configure the additional join conditions
+		$sortSelect = '';
+		$joinAll = $joinComplete = $joinIncomplete = false;
+		$selectQuality = $selectLatest = $selectComplete = $selectAverage = $selectIncomplete = false;
+		if($sortBy) switch($sortBy) {
+			case 'quality':
+				$selectQuality = $joinAll = true;
+				break;
+			case 'latest':
+				$selectLatest = $joinAll = true;
+				break;
+			case 'done':
+				$selectComplete = $joinComplete = true;
+				break;
+			case 'average':
+				$selectAverage = $joinComplete = true;
+				break;
+			case 'active':
+				$selectIncomplete = $joinIncomplete = true;
+				break;
+		}
+
+		$sql = 'SELECT DISTINCT
 				u.user_id,
 				u.last_name,
-				ar.review_id,
-				AVG(ra.quality) AS average_quality,
-				COUNT(ac.review_id) AS completed,
-				COUNT(ai.review_id) AS incomplete,
-				MAX(ac.date_notified) AS latest,
-				AVG(ac.date_completed-ac.date_notified) AS average
-			FROM	users u
-				LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
-				LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL)
-				LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_completed IS NULL)
-				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
-				LEFT JOIN roles r ON (r.user_id = u.user_id)
-				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
-				LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
+				ar.review_id ' .
+				($selectQuality ? ', AVG(ac.quality) AS average_quality ' : '') .
+				($selectLatest ? ', MAX(ac.date_notified) AS latest ' : '') .
+				($selectComplete ? ', COUNT(ra.review_id) AS completed ' : '') .
+				($selectAverage ? ', AVG(ra.date_completed-ra.date_notified) AS average ' : '') .
+				($selectIncomplete ? ', COUNT(ai.review_id) AS incomplete ' : '') .
+			'FROM roles r, users u
+				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?) ' .
+				($joinInterests ? 'LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
 				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
-			WHERE u.user_id = r.user_id AND
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id) ':'') .
+		 		($joinAll ? 'LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id) ':'') .
+				($joinComplete ? 'LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id AND ra.date_completed IS NOT NULL) ':'') .
+				($joinIncomplete ? 'LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_notified IS NOT NULL AND ai.cancelled = 0 AND ai.date_completed IS NULL) ':'') .
+			'WHERE u.user_id = r.user_id AND
 				r.journal_id = ? AND
-				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
-			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
-			$paramArray, $rangeInfo
+				r.role_id = ? ' . $searchSql . ' GROUP BY u.user_id, u.last_name, ar.review_id' .
+			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
+
+		$result =& $this->retrieveRange(
+			$sql, $paramArray, $rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnReviewerUserFromRow');
@@ -996,7 +1030,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function getReviewerStatistics($journalId) {
 		$statistics = Array();
 
-		// Get counts of completed submissions
+		// Get latest review request date
 		$result =& $this->retrieve(
 			'SELECT	r.reviewer_id, MAX(r.date_notified) AS last_notified
 			FROM	review_assignments r,
