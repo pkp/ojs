@@ -91,16 +91,18 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 */
 	function authenticate($username, $password) {
 		$valid = false;
-		if ($this->open()) {
-			if ($entry = $this->getUserEntry($username)) {
-				$userdn = ldap_get_dn($this->conn, $entry);
-				if ($this->bind($userdn, $password)) {
-					$valid = true;
+		if ($password != null) {
+			if ($this->open()) {
+				if ($entry = $this->getUserEntry($username)) {
+					$userdn = ldap_get_dn($this->conn, $entry);
+					if ($this->bind($userdn, $password)) {
+						$valid = true;
+					}
 				}
+				$this->close();
 			}
-			$this->close();
+			return $valid;
 		}
-		return $valid;
 	}
 
 
