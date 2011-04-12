@@ -237,16 +237,16 @@ allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b
 
 ;Implicit Auth Header Variables
 
-;implicit_auth_header_first_name = HTTP_TDL_GIVENNAME
-;implicit_auth_header_last_name = HTTP_TDL_SN
-;implicit_auth_header_email = HTTP_TDL_MAIL
-;implicit_auth_header_phone = HTTP_TDL_TELEPHONENUMBER
-;implicit_auth_header_initials = HTTP_TDL_METADATA_INITIALS
-;implicit_auth_header_mailing_address = HTTP_TDL_METADATA_TDLHOMEPOSTALADDRESS
-;implicit_auth_header_uin = HTTP_TDL_TDLUID
+;implicit_auth_header_first_name = HTTP_GIVENNAME
+;implicit_auth_header_last_name = HTTP_SN
+;implicit_auth_header_email = HTTP_MAIL
+;implicit_auth_header_phone = HTTP_TELEPHONENUMBER
+;implicit_auth_header_initials = HTTP_METADATA_INITIALS
+;implicit_auth_header_mailing_address = HTTP_METADATA_HOMEPOSTALADDRESS
+;implicit_auth_header_uin = HTTP_UID
 
 ; A space delimited list of uins to make admin
-;implicit_auth_admin_list = "100000040@tdl.org 85B7FA892DAA90F7@utexas.edu 100000012@tdl.org"
+;implicit_auth_admin_list = "jdoe@email.ca jshmo@email.ca"
 
 ; URL of the implicit auth 'Way Finder' page. See pages/login/LoginHandler.inc.php for usage.
 
