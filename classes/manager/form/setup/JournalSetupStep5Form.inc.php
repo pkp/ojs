@@ -233,11 +233,11 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		// Save the block plugin layout settings.
 		$blockVars = array('blockSelectLeft', 'blockUnselected', 'blockSelectRight');
 		foreach ($blockVars as $varName) {
-			$$varName = split(' ', Request::getUserVar($varName));
+			$$varName = array_map('urldecode', split(' ', Request::getUserVar($varName)));
 		}
 
 		$plugins =& PluginRegistry::loadCategory('blocks');
-		foreach ($plugins as $key => $junk) {
+		foreach ($plugins as $key => $junk) {echo "$key<br/>\n";
 			$plugin =& $plugins[$key]; // Ref hack
 			$plugin->setEnabled(!in_array($plugin->getName(), $blockUnselected));
 			if (in_array($plugin->getName(), $blockSelectLeft)) {
