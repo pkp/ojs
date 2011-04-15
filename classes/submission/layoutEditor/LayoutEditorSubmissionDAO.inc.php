@@ -271,9 +271,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 				sle.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)'; 
+			$sql .= ' AND a.status = ' . STATUS_QUEUED . ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)'; 
 		} else {
-			$sql .= ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
+			$sql .= ' AND a.status <> ' . STATUS_QUEUED . ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
 		}
 
 		$result =& $this->retrieveRange(
