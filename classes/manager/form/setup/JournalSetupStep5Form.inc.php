@@ -237,7 +237,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		}
 
 		$plugins =& PluginRegistry::loadCategory('blocks');
-		foreach ($plugins as $key => $junk) {echo "$key<br/>\n";
+		foreach ($plugins as $key => $junk) {
 			$plugin =& $plugins[$key]; // Ref hack
 			$plugin->setEnabled(!in_array($plugin->getName(), $blockUnselected));
 			if (in_array($plugin->getName(), $blockSelectLeft)) {
