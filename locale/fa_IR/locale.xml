@@ -635,6 +635,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="gifts.note">پیغام شخصی</message>
 	<message key="gifts.noteTitleRequired">لطفا برای پیغام شخصی خود عنوانی انتخاب کنید</message>
 	<message key="gifts.noteRequired">لطفا پیغام شخصی را پر کنید</message>
+	<message key="gifts.localeRequired">پیغام شخصی تان را به چه زبانی مایلید بنویسید؟</message>
 	<message key="gifts.myGifts">هدیه های من</message>
 	<message key="gifts.manageMyGifts">مدیریت هدیه های من</message>
 	<message key="gifts.redeemGift">دریافت هدیه</message>
