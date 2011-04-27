@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class ViewReportPlugin
  * @ingroup plugins_reports_views
  *
@@ -60,6 +60,7 @@ class ViewReportPlugin extends ReportPlugin {
 		$issueDatesPublished = array();
 		$articleTitles = array();
 		$articleIssueIdentificationMap = array();
+		$numGalleyTypes = 1;
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -93,9 +94,14 @@ class ViewReportPlugin extends ReportPlugin {
 					$galleyLabels[] = $label;
 				}
 
+				// Make sure the array is the same size as in previous iterations
+				//  so that we insert values into the right location
+				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], $numGalleyTypes, '');
+
 				$views = $galley->getViews();
 				$galleyViews[$articleId][$i] = $views;
 				$galleyViewTotals[$articleId] += $views;
+				$numGalleyTypes = count($galleyViews[$articleId]);
 			}
 
 			// Clean up
