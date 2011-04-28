@@ -12,7 +12,7 @@
 	{if $galley->isHTMLGalley()}
 		{$galley->getHTMLContents()}
 	{elseif $galley->isPdfGalley()}
-		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
+		{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal) escape=false}
 		{translate|assign:"noPluginText" key='article.pdf.pluginMissing'}
 		<script type="text/javascript"><!--{literal}
 			$(document).ready(function(){
