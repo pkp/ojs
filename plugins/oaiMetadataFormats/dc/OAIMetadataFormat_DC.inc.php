@@ -75,7 +75,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			// Relation
 			$relation = array();
 			foreach ($article->getSuppFiles() as $suppFile) {
-				$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
+				$relation[] = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getId(), $suppFile->getFileId()));
 			}
 	
 			$response = "<oai_dc:dc\n" .
