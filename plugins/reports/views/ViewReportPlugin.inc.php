@@ -60,7 +60,6 @@ class ViewReportPlugin extends ReportPlugin {
 		$issueDatesPublished = array();
 		$articleTitles = array();
 		$articleIssueIdentificationMap = array();
-		$numGalleyTypes = 1;
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -96,12 +95,11 @@ class ViewReportPlugin extends ReportPlugin {
 
 				// Make sure the array is the same size as in previous iterations
 				//  so that we insert values into the right location
-				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], $numGalleyTypes, '');
+				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
 
 				$views = $galley->getViews();
 				$galleyViews[$articleId][$i] = $views;
 				$galleyViewTotals[$articleId] += $views;
-				$numGalleyTypes = count($galleyViews[$articleId]);
 			}
 
 			// Clean up
