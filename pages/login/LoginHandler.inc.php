@@ -84,7 +84,14 @@ class LoginHandler extends PKPLoginHandler {
 
 		Request::redirect(null, 'user');
 	}
-	
+
+	/**
+	 * Get the log in URL.
+	 */
+	function _getLoginUrl() {
+		return Request::url(null, 'login', 'signIn');
+	}
+
 	/**
 	 * Helper Function - set mail from address
 	 * @param MailTemplate $mail 
