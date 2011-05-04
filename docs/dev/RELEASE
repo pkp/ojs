@@ -14,9 +14,9 @@ OJS release:
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
 
-	git log --pretty=oneline <last-tag>..HEAD # Generate a log from the last release
+	git log --oneline <last-tag>..HEAD        # Generate a log from the last release
         | egrep -o "(#|\*)([0-9]+)(#|\*)"     # Look for bug IDs in the commit notes
-        | sed -r "s/(#|\*)//g"                # Remove the octothorpes
+        | sed -r "s/(#|\*)//g"                # Remove the octothorpes (sed -E on OSX)
         | sort -nu                            # Get a unique sorted list
         > bug_ids.txt                         # Dump to a file
 
