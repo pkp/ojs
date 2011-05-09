@@ -29,7 +29,6 @@
 	<!-- Bug #5440: Migrate submission notes into PKP "notes" -->
 	<sql>
 		<query>UPDATE notes SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
-		<query>UPDATE notes, articles SET notes.context_id = articles.journal_id WHERE articles.article_id = notes.assoc_id</query>
 	</sql>
 	<!-- Bug #5543: Implement multilingual specification -->
 	<sql>
