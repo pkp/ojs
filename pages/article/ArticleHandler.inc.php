@@ -193,7 +193,7 @@ class ArticleHandler extends Handler {
 			Validation::isLoggedIn()))
 		));
 		$templateMgr->assign('enableComments', $enableComments);
-		$templateMgr->assign('postingLoginRequired', ($enableComments != COMMENTS_ANONYMOUS && !Validation::isLoggedIn()));
+		$templateMgr->assign('postingLoginRequired', ($enableComments != COMMENTS_UNAUTHENTICATED && !Validation::isLoggedIn()));
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
