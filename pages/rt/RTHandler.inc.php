@@ -209,7 +209,7 @@ class RTHandler extends ArticleHandler {
 	function printerFriendly($args, &$request) {
 		$router =& $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$this->validate($request, $articleId, $galleyId);
 		$journal =& $router->getContext($request);
@@ -226,7 +226,11 @@ class RTHandler extends ArticleHandler {
 		}
 
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $articleGalleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
+		} else {
+			$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
+		}
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getJournalId(), true);
