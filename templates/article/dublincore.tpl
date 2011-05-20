@@ -50,8 +50,13 @@
 {if $article->getPages()}
 	<meta name="DC.Identifier.pageNumber" content="{$article->getPages()|escape}"/>
 {/if}
-{if $article->getDOI()}
-	<meta name="DC.Identifier.DOI" content="{$article->getDOI()|escape}"/>
+{if $issue->getPublished()}
+	{assign var=doi value=$article->getDOI()}
+{else}
+	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
+{/if}
+{if $doi}
+	<meta name="DC.Identifier.DOI" content="{$doi|escape}"/>
 {/if}
 	<meta name="DC.Identifier.URI" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>

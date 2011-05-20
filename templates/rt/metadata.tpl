@@ -137,7 +137,11 @@
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
 	<td><a target="_new" href="{url page="article" op="view" path=$articleId}">{url page="article" op="view" path=$articleId}</a></td>
 </tr>
-{assign var=doi value=$article->getDOI()}
+{if $issue->getPublished()}
+	{assign var=doi value=$article->getDOI()}
+{else}
+	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
+{/if}
 {if $doi}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">

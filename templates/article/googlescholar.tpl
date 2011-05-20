@@ -37,8 +37,13 @@
 {if $article->getPages()}
 	<meta name="citation_firstpage" content="{$article->getPages()|escape}"/>
 {/if}
-{if $article->getDOI()}
-	<meta name="citation_doi" content="{$article->getDOI()|escape}"/>
+{if $issue->getPublished()}
+	{assign var=doi value=$article->getDOI()}
+{else}
+	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
+{/if}
+{if $doi}
+	<meta name="citation_doi" content="{$doi|escape}"/>
 {/if}
 	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 {if $article->getLanguage()}
