@@ -1,3 +1,45 @@
+commit bd19f1ae28c3c91a953210f14deda323aa6152cc
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Fri May 20 08:15:01 2011 -0700
+
+    *6652* DOIs should not be fixed on preview
+
+commit e4e4f0fcee483112c3a78e6dceceddf81386eea9
+Author: Matthew Crider <mattcrider@gmail.com>
+Date:   Thu May 19 15:16:55 2011 -0700
+
+    *6648* Use String::mime_content_type to determine file type for temporary files
+
+commit 56182d81b65cfa264b4c8849896c283228180cee
+Author: michael-pkp <michael.pkp@gmail.com>
+Date:   Tue May 17 15:47:20 2011 -0700
+
+    *6634* RT "Print this article" button doesn't work with custom galley identifiers
+
+commit 4e7809e489bbcf37227e173adc9c761421550ba8
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Mon May 16 13:14:09 2011 -0700
+
+    *6644* Fixed unauthenticated/anonymous RT link
+
+commit d3e7814af042cd6e29e060da543b9896fed2ecc6
+Author: Matthew Crider <mattcrider@gmail.com>
+Date:   Fri May 13 11:43:05 2011 -0700
+
+    *6645* Enabled TinyMCE for author's supplementary file error page
+
+commit 18faa4f22ab6936fd61a83e32577df2ea363befb
+Author: bozana <bozana.bokan@fu-berlin.de>
+Date:   Mon May 16 18:49:03 2011 +0200
+
+    *6647* fixed native export error
+
+commit 8d2a55296b731861410e310f1db3ef7e1ae2131f
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Mon May 9 10:49:22 2011 +0100
+
+    *6245* Removed broken / unnecessary update
+
 commit 8937b196535b0220f4d6ca744493afe28666bbf1
 Author: Alec Smecher <alec@smecher.bc.ca>
 Date:   Mon May 2 16:56:47 2011 -0700
