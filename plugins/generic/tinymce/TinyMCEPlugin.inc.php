@@ -189,7 +189,8 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'manager/setup':
 			case 'manager/saveSetup':
-				switch (array_shift(Request::getRequestedArgs())) {
+				$args = Request::getRequestedArgs();
+				switch (array_shift($args)) {
 					case 1:
 						$fields[] = 'mailingAddress';
 						$fields[] = 'contactMailingAddress';
