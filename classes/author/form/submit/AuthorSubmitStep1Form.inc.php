@@ -100,11 +100,12 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
 			// Try these locales in order until we find one that's
 			// supported to use as a default.
+			$fallbackLocales = array_keys($supportedSubmissionLocales);
 			$tryLocales = array(
 				$this->getFormLocale(), // Current form locale
 				Locale::getLocale(), // Current UI locale
 				$journal->getPrimaryLocale(), // Journal locale
-				$supportedSubmissionLocales[array_shift(array_keys($supportedSubmissionLocales))] // Fallback: first one on the list
+				$supportedSubmissionLocales[array_shift($fallbackLocales)] // Fallback: first one on the list
 			);
 			$this->_data = array();
 			foreach ($tryLocales as $locale) {
