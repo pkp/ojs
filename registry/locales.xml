@@ -18,24 +18,24 @@
 	<locale key="ca_ES" complete="false" name="Catalan" iso639-2b="cat" />
 	<locale key="cs_CZ" complete="false" name="Czech" iso639-2b="cze" />
 	<locale key="da_DK" complete="false" name="Danish" iso639-2b="dan" />
-	<locale key="de_DE" name="Deutsch (Deutschland)" iso639-2b="ger" />
+	<locale key="de_DE" name="Deutsch" iso639-2b="ger" />
 	<locale key="en_US" name="English" iso639-2b="eng" />
 	<locale key="el_GR" name="Greek" iso639-2b="gre" />
-	<locale key="es_ES" name="Español (España)" iso639-2b="spa" />
-	<locale key="eu_ES" complete="false" name="Basque (Euskara)" iso639-2b="eus" />
+	<locale key="es_ES" name="Español" iso639-2b="spa" />
+	<locale key="eu_ES" complete="false" name="Basque" iso639-2b="eus" />
 	<locale key="fa_IR" name="Persian" iso639-2b="per" />
-	<locale key="fr_CA" name="Français (Canada)" iso639-2b="fre" />
+	<locale key="fr_CA" name="Français" iso639-2b="fre" />
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" />
 	<locale key="it_IT" name="Italiano" iso639-2b="ita" />
 	<locale key="ja_JP" name="日本語" iso639-2b="jpn" />
 	<locale key="nl_NL" name="Nederlands" iso639-2b="dut" />
 	<locale key="no_NO" complete="false" name="Norwegian" iso639-2b="nor" />
 	<locale key="pt_BR" name="Português (Brasil)" iso639-2b="por" />
-	<locale key="pt_PT" name="Português" iso639-2b="por" />
+	<locale key="pt_PT" name="Português (Portugal)" iso639-2b="por" />
 	<locale key="ro_RO" name="Romanian" iso639-2b="rum" />
 	<locale key="ru_RU" complete="false" name="Russian" iso639-2b="rus" />
 	<locale key="sv_SE" complete="false" name="Swedish" iso639-2b="swe" />
-	<locale key="tr_TR" complete="false" name="Türkiye Türkçesi" iso639-2b="tur" />
+	<locale key="tr_TR" complete="false" name="Türkçe" iso639-2b="tur" />
 	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" />
 	<locale key="zh_CN" complete="true" name="简体中文" iso639-2b="chi" />
 	<locale key="zh_TW" complete="false" name="繁體中文" iso639-2b="chi" />
