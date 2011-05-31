@@ -10,7 +10,7 @@
  *}
 <div id="editors">
 <h3>{translate key="user.role.editors"}</h3>
-<form action="{url op="setEditorFlags"}" method="post">
+<form action="{url page="editor" op="setEditorFlags"}" method="post">
 <input type="hidden" name="articleId" value="{$submission->getId()}"/>
 <table width="100%" class="listing">
 	<tr class="heading" valign="bottom">
@@ -61,7 +61,7 @@
 			</td>
 			<td>{if $editAssignment->getDateNotified()}{$editAssignment->getDateNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 			{if $isEditor}
-				<td><a href="{url op="deleteEditAssignment" path=$editAssignment->getEditId()}" class="action">{translate key="common.delete"}</a></td>
+				<td><a href="{url page="editor" op="deleteEditAssignment" path=$editAssignment->getEditId()}" class="action">{translate key="common.delete"}</a></td>
 			{/if}
 		</tr>
 	{foreachelse}
@@ -70,9 +70,9 @@
 </table>
 {if $isEditor}
 	<input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>&nbsp;&nbsp;
-	<a href="{url op="assignEditor" path="sectionEditor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignSectionEditor"}</a>
-	|&nbsp;<a href="{url op="assignEditor" path="editor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignEditor"}</a>
-	{if !$selfAssigned}|&nbsp;<a href="{url op="assignEditor" path="editor" editorId=$userId articleId=$submission->getId()}" class="action">{translate key="common.addSelf"}</a>{/if}
+	<a href="{url page="editor" op="assignEditor" path="sectionEditor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignSectionEditor"}</a>
+	|&nbsp;<a href="{url page="editor" op="assignEditor" path="editor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignEditor"}</a>
+	{if !$selfAssigned}|&nbsp;<a href="{url page="editor" op="assignEditor" path="editor" editorId=$userId articleId=$submission->getId()}" class="action">{translate key="common.addSelf"}</a>{/if}
 {/if}
 </form>
 </div>
