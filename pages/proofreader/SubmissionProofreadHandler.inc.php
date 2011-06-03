@@ -41,7 +41,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$authors = $authorDao->getAuthorsByArticle($articleId);
+		$authors = $authorDao->getAuthorsBySubmissionId($articleId);
 
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');

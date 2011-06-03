@@ -29,30 +29,6 @@ class AuthorDAO extends PKPAuthorDAO {
 	}
 
 	/**
-	 * Retrieve all authors for a submission.
-	 * @param $submissionId int
-	 * @return array Authors ordered by sequence
-	 */
-	function &getAuthorsByArticle($submissionId) {
-		$authors = array();
-
-		$result =& $this->retrieve(
-			'SELECT * FROM authors WHERE submission_id = ? ORDER BY seq',
-			(int) $submissionId
-		);
-
-		while (!$result->EOF) {
-			$authors[] =& $this->_returnAuthorFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $authors;
-	}
-
-	/**
 	 * Retrieve all published submissions associated with authors with
 	 * the given first name, middle name, last name, affiliation, and country.
 	 * @param $journalId int (null if no restriction desired)
@@ -243,7 +219,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @param $submissionId int
 	 */
 	function deleteAuthorsByArticle($submissionId) {
-		$authors =& $this->getAuthorsByArticle($submissionId);
+		$authors =& $this->getAuthorsBySubmissionId($submissionId);
 		foreach ($authors as $author) {
 			$this->deleteAuthor($author);
 		}

@@ -217,7 +217,7 @@ class QuickSubmitForm extends Form {
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
 				// Update an existing author
-				$author =& $article->getAuthor($authors[$i]['authorId']);
+				$author =& $authorDao->getAuthor($authors[$i]['authorId'], $articleId);
 				$isExistingAuthor = true;
 			} else {
 				// Create a new author
@@ -244,7 +244,8 @@ class QuickSubmitForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				if ($isExistingAuthor == false) {
-					$article->addAuthor($author);
+					$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
+					$authorDao->insertAuthor($author);
 				}
 			}
 		}

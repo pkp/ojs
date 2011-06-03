@@ -163,8 +163,6 @@ class ArticleDAO extends DAO {
 		$article->setHideAuthor($row['hide_author']);
 		$article->setCommentsStatus($row['comments_status']);
 
-		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
-
 		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
 
 		HookRegistry::call('ArticleDAO::_returnArticleFromRow', array(&$article, &$row));
@@ -283,12 +281,6 @@ class ArticleDAO extends DAO {
 			} else {
 				$this->authorDao->insertAuthor($authors[$i]);
 			}
-		}
-
-		// Remove deleted authors
-		$removedAuthors = $article->getRemovedAuthors();
-		for ($i=0, $count=count($removedAuthors); $i < $count; $i++) {
-			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getId());
 		}
 
 		// Update author sequence numbers

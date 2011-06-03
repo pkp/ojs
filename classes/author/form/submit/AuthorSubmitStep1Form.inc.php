@@ -157,10 +157,14 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setSubmissionProgress($this->step + 1);
 			$this->article->setLanguage(String::substr($this->article->getLocale(), 0, 2));
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
+			$articleDao->insertArticle($this->article);
+			$this->articleId = $this->article->getId();
 
 			// Set user to initial author
+			$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 			$user =& $this->request->getUser();
 			$author = new Author();
+			$author->setSubmissionId($this->articleId);
 			$author->setFirstName($user->getFirstName());
 			$author->setMiddleName($user->getMiddleName());
 			$author->setLastName($user->getLastName());
@@ -170,10 +174,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setUrl($user->getUrl());
 			$author->setBiography($user->getBiography(null), null);
 			$author->setPrimaryContact(1);
-			$this->article->addAuthor($author);
-
-			$articleDao->insertArticle($this->article);
-			$this->articleId = $this->article->getId();
+			$authorDao->insertAuthor($author);
 		}
 
 		return $this->articleId;

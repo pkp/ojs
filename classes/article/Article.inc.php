@@ -62,17 +62,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Add an author.
-	 * @param $author Author
-	 */
-	function addAuthor($author) {
-		if ($author->getSubmissionId() == null) {
-			$author->setSubmissionId($this->getId());
-		}
-		parent::addAuthor($author);
-	}
-
-	/**
 	 * Get "localized" article title (if applicable). DEPRECATED
 	 * in favour of getLocalizedTitle.
 	 * @return string
