@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Êtes-vous certain de vouloir supprimer cet auteur et effacer l'historique de ce compte rendu de livre?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Sélectionner&nbsp;une&nbsp;soumission]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Sélectionner</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Soumission</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Critique de livre</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Assigner</message>

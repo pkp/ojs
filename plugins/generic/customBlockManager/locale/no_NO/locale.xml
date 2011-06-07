@@ -17,7 +17,6 @@
 	<message key="plugins.generic.customBlockManager.description">Denne programutvidelsen lar deg administrere tilpassede blokker. Du kan redigere blokkene i innstillingene i hver programutvidelse du lager her.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Du kan bruke denne programutvidelsen til å legge til eller slette tilpassede blokker.  Du kan så redigere innholdet via <a href="{$systemPluginsUrl}">Programutvidelser</a>-siden (i blokk-programutvidelser).  For å plassere din programutvidelse på ønsket plass i sidemenyen, gå til <a href="{$setupStep56}">Oppsett steg 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Innstillinger</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Blokknavn</message>	
 	<message key="plugins.generic.customBlockManager.action">Handling</message>	
 	<message key="plugins.generic.customBlockManager.delete">Slett</message>	

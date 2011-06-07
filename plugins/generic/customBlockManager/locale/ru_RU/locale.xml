@@ -14,10 +14,8 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.customBlockManager.displayName">Модуль собственных блоков</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Вы можете использовать этот модуль для создания и удаления собственных модулей блоков.  После этого содержание блока можно отредактировать на странице <a href="{$systemPluginsUrl}">Системные Модули</a> (в разделе модулей блоков).  Для размещения Вашего модуля в требуемое место на боковой панели смотрите <a href="{$setupStep56}">Шаг 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Настройки</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Имя блока</message>	
 	<message key="plugins.generic.customBlockManager.action">Действие</message>	
 	<message key="plugins.generic.customBlockManager.delete">Удалить</message>	

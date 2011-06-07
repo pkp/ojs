@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">آیا مطمئن هستید که میخواهید این نویسنده را حذف کنید و تاریخچه کارشناسی این کتاب را حذف کنید؟</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Select&nbsp;Submission]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">انتخاب</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">ساب میشن</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">کارشناس کتاب</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">انتساب</message>

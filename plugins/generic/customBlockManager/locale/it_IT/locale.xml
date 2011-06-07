@@ -17,7 +17,6 @@
 	<message key="plugins.generic.customBlockManager.description">Questo plugin permette di gestire blocchi personalizzati sulle barre laterali. E' possibile modificare i blocchi nelle impostazioni di ciascun plugin creato.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Si può utilizzare il plugin per aggiungere o cancellare plugin di blocchi personalizzati. Puoi successivamente modificare il contenuto dei plugin  tramite la pagina <a href="{$systemPluginsUrl}">Plugin</a> (nella sezione Plugin per i blocchi).  Per definire la posizione in cui comparirà il plugin, utilizza il <a href="{$setupStep56}">punto 5.6 del Setup</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Impostazioni</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Nome del blocco</message>	
 	<message key="plugins.generic.customBlockManager.action">Azione</message>	
 	<message key="plugins.generic.customBlockManager.delete">Cancella</message>	

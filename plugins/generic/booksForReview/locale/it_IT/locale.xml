@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Sei sicuro di voler cancellare quest'autore e pulire la storia della recensione</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Seleziona&nbsp;proposta]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Seleziona</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Submission</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Recensore</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Assegna</message>

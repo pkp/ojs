@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Deseja realmente excluir este autor e o histórico desta revisão de literatura?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Escolha&nbsp;a&nbsp;submissão]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Escolha</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Submissão</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Avaliador</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Designar</message>

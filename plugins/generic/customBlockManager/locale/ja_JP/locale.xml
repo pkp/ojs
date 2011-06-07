@@ -14,10 +14,8 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.customBlockManager.displayName">カスタムブロック管理</message>
-	<message key="plugins.generic.customBlockManager.description"></message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[このプラグインを使用してカスタムブロックプラグインを追加・削除することができます。<a href="{$systemPluginsUrl}">システムプラグイン</a> ページ (ブロックプラグインセクション)からコンテンツを編集することができます。サイドバーの好きな位置にプラグインを配置するには <a href="{$setupStep56}">雑誌設定 5.6</a>を参照してください。]]></message>
 	<message key="plugins.generic.customBlockManager.settings">設定</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">ブロック名</message>	
 	<message key="plugins.generic.customBlockManager.action">実行</message>	
 	<message key="plugins.generic.customBlockManager.delete">削除</message>	

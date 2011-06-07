@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Wet u zeker dat u deze auteur wilt verwijderen en de geschiedenis van het boek wilt wissen?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Selecteer&nbsp;inzending]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Selecteer</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Inzending</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Boekbespreker</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Ken toe</message>
