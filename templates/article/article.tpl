@@ -82,7 +82,17 @@
 		</div>
 	{/if}
 
+	{if $article->getLocalizedSubject()}
+		<div id="articleSubject">
+		<h4>{translate key="article.subject"}</h4>
+		<br />
+		<div>{$article->getLocalizedSubject()|escape}</div>
+		<br />
+		</div>
+	{/if}
+
 	{if $citationFactory->getCount()}
+		<div id="articleCitations">
 		<h4>{translate key="submission.citations"}</h4>
 		<br />
 		<div>
@@ -91,6 +101,7 @@
 			{/iterate}
 		</div>
 		<br />
+		</div>
 	{/if}
 
 	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain)}
