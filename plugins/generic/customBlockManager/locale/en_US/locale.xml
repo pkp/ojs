@@ -14,7 +14,6 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.customBlockManager.displayName">Custom Block Manager</message>
-	<message key="plugins.generic.customBlockManager.description">This plugin lets you create addition sidebar blocks.  Once they are created, you can edit their content and rearrange them within the sidebars.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[You can use this plugin to add or delete custom block plugins.  You can then edit the content through the <a href="{$systemPluginsUrl}">System Plugins</a> page (in the Blocks Plugin section).  To place your plugin in the desired location in the sidebar, go to <a href="{$setupStep56}">Setup step 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Settings</message>
 	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
