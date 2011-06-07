@@ -236,39 +236,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	}
 
 	/**
-	 * Get the number of active reviews for all published review forms of a journal.
-	 * @return array
-	 */
-	function getActiveReviewCountsForReviewForms($journalId) {
-		$returner = array();
-		$result =& $this->retrieve(
-			'SELECT	r.review_form_id, COUNT(r.review_id) AS count
-			FROM	review_assignments r,
-				articles a,
-				review_forms rf
-			WHERE	r.submission_id = a.article_id AND
-				a.journal_id = ? AND
-				r.review_form_id = rf.review_form_id AND
-				rf.published = 1 AND
-				r.date_confirmed IS NOT NULL AND
-				r.date_completed IS NULL
-			GROUP BY r.review_form_id',
-			$journalId
-		);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$returner[$row['review_form_id']] = $row['count'];
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-
-	/**
 	 * Construct a new data object corresponding to this DAO.
 	 * @return ReviewAssignment
 	 */
