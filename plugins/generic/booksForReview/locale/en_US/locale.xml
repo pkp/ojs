@@ -40,7 +40,6 @@
 	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Books For Review - Submitted</message>
 	<message key="plugins.generic.booksForReview.editor.create">Create Book for Review</message>
 	<message key="plugins.generic.booksForReview.editor.createNewUser">Create New User</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit Book for Review</message>
 	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Edit Book Metadata</message>
 	<message key="plugins.generic.booksForReview.editor.delete">Delete Book for Review</message>
 	<message key="plugins.generic.booksForReview.editor.bookDetails">Book Details</message>
