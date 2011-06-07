@@ -40,7 +40,6 @@
 	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Bücher zur Rezension - Eingereichte</message>
 	<message key="plugins.generic.booksForReview.editor.create">Buch zur Rezension anlegen</message>
 	<message key="plugins.generic.booksForReview.editor.createNewUser">Neue/n Nutzer/in anlegen</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Bearbeiten</message>
 	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Buch-Metadaten bearbeiten</message>
 	<message key="plugins.generic.booksForReview.editor.delete">Rezensionstitel löschen</message>
 	<message key="plugins.generic.booksForReview.editor.bookDetails">Buchdetails</message>

@@ -17,7 +17,6 @@
 	<message key="plugins.generic.customBlockManager.description">Este plugin permite criar blocos laterais adicionais. Uma vez criados, poderão ser editados os seus conteúdos e reorganizados no interior das barras laterais de navegação.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Poderá utilizar este plugin para adicionar ou eliminar plugins de blocos personalizados.  Poderá editar o conteúdo através de <a href="{$systemPluginsUrl}">Sistema de Plugins</a> página (em secção de Plugins de Bloco).  Para posicionar o plugin no local pretendido na barra lateral, navegar até <a href="{$setupStep56}">Passo 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Configurações</message>
-	<message key="plugins.generic.customBlockManager.description">Este Plugin permite gerir blocos laterais personalizados. Poderá editar os blocos nas configurações de cada plugin que foram criados aqui.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Nome do Bloco</message>	
 	<message key="plugins.generic.customBlockManager.action">Acção</message>	
 	<message key="plugins.generic.customBlockManager.delete">Eliminar</message>	

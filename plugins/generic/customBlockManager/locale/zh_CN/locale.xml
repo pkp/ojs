@@ -17,7 +17,6 @@
 	<message key="plugins.generic.customBlockManager.description">本插件允许在边栏增加区块，和对边栏区块的重新排序。(This plugin lets you create addition sidebar blocks.  Once they are created, you can edit their content and rearrange them within the sidebars.)</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[你可以使用本插件来添加和删除自定义的块插件。然后，可以在<a href="{$systemPluginsUrl}">System Plugins</a>页面编辑内容。在<a href="{$setupStep56}">Setup step 5.6</a>页面设定插件在边栏所需的位置。(You can use this plugin to add or delete custom block plugins.  You can then edit the content through the <a href="{$systemPluginsUrl}">System Plugins</a> page (in the Blocks Plugin section).  To place your plugin in the desired location in the sidebar, go to <a href="{$setupStep56}">Setup step 5.6</a>)]]></message>
 	<message key="plugins.generic.customBlockManager.settings">设置(Settings)</message>
-	<message key="plugins.generic.customBlockManager.description">本插件可以让你管理自定义的边栏区块。在这里创建的插件，可以在每个插的设置中编辑该插件。(This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.)</message>
 	<message key="plugins.generic.customBlockManager.blockName">区块名称(Block Name)</message>	
 	<message key="plugins.generic.customBlockManager.action">行为(Action)</message>	
 	<message key="plugins.generic.customBlockManager.delete">删除(Delete)</message>	

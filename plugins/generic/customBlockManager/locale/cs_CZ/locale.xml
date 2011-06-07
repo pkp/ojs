@@ -14,10 +14,8 @@
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.customBlockManager.displayName">Manažer uživatelských panelů</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Můžete použít tento plugin pro přidání nebo smazání pluginů uživatelských panelů. Potom můžete editovat obsah prostřednictvím stránky <a href="{$systemPluginsUrl}">Systémových pluginů</a> (v sekci panelových pluginů).  Pro umístění vašeho pluginu na požadované místo v postraním panelu, přejděte ke  <a href="{$setupStep56}">Kroku 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Nastavení</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Název panelu</message>	
 	<message key="plugins.generic.customBlockManager.action">Akce</message>	
 	<message key="plugins.generic.customBlockManager.delete">Smazat</message>	

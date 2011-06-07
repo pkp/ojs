@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">¿Está seguro de desear borrar este autor y limpiar el historial de revisión de esta petición?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Seleccionar&nbsp;Presentación]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Seleccionar</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Presentación</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Revisor de Petición</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Asignar</message>

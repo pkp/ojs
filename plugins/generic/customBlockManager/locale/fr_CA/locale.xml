@@ -16,7 +16,6 @@
 	<message key="plugins.generic.customBlockManager.displayName">Gestionnaire de bloc personnalisé</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Vous pouvez utiliser ce plugiciel pour ajouter ou supprimer des plugiciels de blocs personnalisés. Vous pouvez alors modifier le contenu à l'aide de la page de <a href="{$systemPluginsUrl}">Plugiciels du système</a> (dans la section Plugiciel de blocs). Pour placer votre plugiciel à l'emplacement souhaité dans l'encadré latéral, aller à <a href="{$setupStep56}">Passer à l'étape 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Paramètres</message>
-	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Nom du bloc</message>	
 	<message key="plugins.generic.customBlockManager.action">Action</message>	
 	<message key="plugins.generic.customBlockManager.delete">Supprimer</message>	

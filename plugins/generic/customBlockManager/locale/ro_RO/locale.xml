@@ -17,7 +17,6 @@
 	<message key="plugins.generic.customBlockManager.description">Acest modul îți permite crearea unor zone suplimentare în bara laterală. Din moment ce acestea sunt create, poți edita conținutul și poți să le rearanjezi în bara laterală.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Poți folosi acest modul pentru a adăuga sau șterge module particularizate. Poți modifica conținutul utilizând pagina <a href="{$systemPluginsUrl}">modulelor de sistem</a> (din secțiunea modulelor pentru blocuri). Pentru a pune acest modul în locația dorită în bara laterală, mergi la <a href="{$setupStep56}">pasul 5.6 al setărilor</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Setări</message>
-	<message key="plugins.generic.customBlockManager.description">Acest modul îți permite gestionarea blocurilor particularizate din bara laterală. Poți edita blocurile din setări pentru fiecare modul pe care îl creezi aici.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Numele blocului</message>	
 	<message key="plugins.generic.customBlockManager.action">Acțiune</message>	
 	<message key="plugins.generic.customBlockManager.delete">Șterge</message>	

@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Ești sigur că dorești să elimini acest autor și să elimini istoricul de evaluare pentru această carte?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Selectează&nbsp;propunerea]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Selectează</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Propunere</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Evaluator al cărții</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Angajează</message>

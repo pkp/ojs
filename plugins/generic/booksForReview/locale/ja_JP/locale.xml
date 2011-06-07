@@ -56,7 +56,6 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">この著者とこの図書の書評の履歴を削除してもよいですか?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission">投稿を選択</message>
 	<message key="plugins.generic.booksForReview.editor.select">選択</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.booksForReview.editor.submission">投稿</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">評者</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">任命</message>
