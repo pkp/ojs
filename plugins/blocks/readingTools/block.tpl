@@ -44,9 +44,11 @@
 			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/findingReferences.png" class="articleToolIcon" /> <a href="javascript:openRTWindow('{url page="rt" op="findingReferences" path=$article->getId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a>
 		</div>
 	{/if}
-	<div class="articleToolItem">
-		<img src="{$baseUrl}/plugins/blocks/readingTools/icons/editorialPolicies.png" class="articleToolIcon" /> <a href="{url page="about" op="editorialPolicies" anchor="peerReviewProcess"}" target="_parent">{translate key="rt.reviewPolicy"}</a>
-	</div>
+	{if $journalRt->getViewReviewPolicy()}
+		<div class="articleToolItem">
+			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/editorialPolicies.png" class="articleToolIcon" /> <a href="{url page="about" op="editorialPolicies" anchor="peerReviewProcess"}" target="_parent">{translate key="rt.reviewPolicy"}</a>
+		</div>
+	{/if}
 	{if $journalRt->getEmailOthers()}
 		<div class="articleToolItem">
 			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/emailArticle.png" class="articleToolIcon" />

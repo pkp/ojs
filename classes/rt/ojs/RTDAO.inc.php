@@ -43,6 +43,7 @@ class RTDAO extends DAO {
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
 		$rt->setFindingReferences($journal->getSetting('rtFindingReferences')?true:false);
+		$rt->setViewReviewPolicy($journal->getSetting('rtViewReviewPolicy')?true:false);
 
 		$rt->setSharingEnabled($journal->getSetting("rtSharingEnabled") ? $journal->getSetting("rtSharingEnabled") : "");
 		$rt->setSharingUserName($journal->getSetting("rtSharingUserName") ? $journal->getSetting("rtSharingUserName") : "");
@@ -73,6 +74,7 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
 		$journal->updateSetting('rtFindingReferences', $rt->getFindingReferences());
+		$journal->updateSetting('rtViewReviewPolicy', $rt->getViewReviewPolicy());
 
 		$journal->updateSetting("rtSharingEnabled", $rt->getSharingEnabled());
 		$journal->updateSetting("rtSharingUserName", $rt->getSharingUserName());
