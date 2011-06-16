@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.form.Form');
 
+define('COVER_PAGE_IMAGE_NAME', 'coverPage');
+
 class MetadataForm extends Form {
 	/** @var Article current article */
 	var $article;
@@ -257,6 +259,28 @@ class MetadataForm extends Form {
 	}
 
 	/**
+	 * Check to ensure that the form is correctly validated.
+	 */
+	function validate() {
+		// Verify that an image cover, if supplied, is actually an image.
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->uploadedFileExists(COVER_PAGE_IMAGE_NAME)) {
+			$type = $publicFileManager->getUploadedFileType(COVER_PAGE_IMAGE_NAME);
+			$extension = $publicFileManager->getImageExtension($type);
+			if (!$extension) {
+				// Not a valid image.
+				$this->addError('imageFile', Locale::translate('submission.layout.imageInvalid'));
+				return false;
+			}
+		}
+
+		// Fall back on parent validation
+		return parent::validate();
+	}
+
+
+	/**
 	 * Save changes to article.
 	 * @param $request PKPRequest
 	 * @return int the article ID
@@ -279,11 +303,11 @@ class MetadataForm extends Form {
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->uploadedFileExists('coverPage')) {
+		if ($publicFileManager->uploadedFileExists(COVER_PAGE_IMAGE_NAME)) {
 			$journal = Request::getJournal();
-			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
-			$newFileName = 'cover_article_' . $this->getData('articleId') . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
-			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
+			$originalFileName = $publicFileManager->getUploadedFileName(COVER_PAGE_IMAGE_NAME);
+			$newFileName = 'cover_article_' . $this->article->getId() . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
+			$publicFileManager->uploadJournalFile($journal->getId(), COVER_PAGE_IMAGE_NAME, $newFileName);
 			$article->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$article->setFileName($newFileName, $this->getFormLocale());
 
