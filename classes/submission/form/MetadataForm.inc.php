@@ -306,7 +306,8 @@ class MetadataForm extends Form {
 		if ($publicFileManager->uploadedFileExists(COVER_PAGE_IMAGE_NAME)) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName(COVER_PAGE_IMAGE_NAME);
-			$newFileName = 'cover_article_' . $this->article->getId() . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
+			$type = $publicFileManager->getUploadedFileType(COVER_PAGE_IMAGE_NAME);
+			$newFileName = 'cover_article_' . $this->article->getId() . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($type);
 			$publicFileManager->uploadJournalFile($journal->getId(), COVER_PAGE_IMAGE_NAME, $newFileName);
 			$article->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$article->setFileName($newFileName, $this->getFormLocale());
