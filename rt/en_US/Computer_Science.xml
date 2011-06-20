@@ -115,7 +115,7 @@
 			<search_title>Free On-Line Dictionary of Computing</search_title>
 			<search_description>FOLDOC is a searchable dictionary of acronyms, jargon, programming languages, tools, architecture, operating systems, networking, theory, conventions, standards, mathematics, telecoms, electronics, institutions, companies, projects, products, and history related to computing.</search_description>
 			<url>http://foldoc.org/</url>
-			<search_url>http://wombat.doc.ic.ac.uk/foldoc/foldoc.cgi?action=Search&amp;query={$formKeywords}</search_url>
+			<search_url>http://foldoc.org/{$formKeywords}</search_url>
 			
 		</search>
 		<search>
