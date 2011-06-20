@@ -127,7 +127,7 @@ PKP OAI
 			<search_description>FOLDOC
 لغتنامه ای است که می توان ترکیبات، اصطلاحات، زبانهای قابل برنامه ریزی، ابزار، معماری، سیستمهای عامل، شبکه سازی، تئوری، معاهدات، استانداردها، ریاضیات، تله کامز، الکترونیکز، موسسات، شرکت ها، پروژه ها، تولیدات و تاریخچه ی مربوط به محاسبه را در آن جستجو کرد.</search_description>
 			<url>http://foldoc.org/</url>
-			<search_url>http://wombat.doc.ic.ac.uk/foldoc/foldoc.cgi?action=Search&amp;query={$formKeywords}</search_url>
+			<search_url>http://foldoc.org/{$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>لغتنامه آن لاین مریام – وبستر</search_title>
