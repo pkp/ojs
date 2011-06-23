@@ -175,7 +175,7 @@ switch ($op) {
 	case 'saveIssue':
 	case 'issueData':
 	case 'editIssue':
-	case 'removeCoverPage':
+	case 'removeIssueCoverPage':
 	case 'removeStyleFile':
 	case 'issueToc':
 	case 'updateIssueToc':
