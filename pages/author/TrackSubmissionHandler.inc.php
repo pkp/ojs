@@ -371,10 +371,15 @@ class TrackSubmissionHandler extends AuthorHandler {
 	/**
 	 * Remove cover page from article
 	 */
-	function removeCoverPage($args, $request) {
+	function removeArticleCoverPage($args, $request) {
 		$articleId = (int) array_shift($args);
-		$formLocale = array_shift($args);
 		$this->validate($request, $articleId);
+
+		$formLocale = array_shift($args);
+		if (!Locale::isLocaleValid($formLocale)) {
+			$request->redirect(null, null, 'viewMetadata', $articleId);
+		}
+
 		$submission =& $this->submission;
 		$journal =& $request->getJournal();
 

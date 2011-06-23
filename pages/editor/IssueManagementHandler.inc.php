@@ -247,14 +247,19 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Remove cover page from issue
 	 */
-	function removeCoverPage($args, $request) {
+	function removeIssueCoverPage($args, $request) {
 		$issueId = (int) array_shift($args);
-		$formLocale = array_shift($args);
 		$this->validate($issueId, true);
+
+		$formLocale = array_shift($args);
+		if (!Locale::isLocaleValid($formLocale)) {
+			$request->redirect(null, null, 'issueData', $issueId);
+		}
+
+		$journal =& $request->getJournal();
 		$issue =& $this->issue;
 
 		import('classes.file.PublicFileManager');
-		$journal =& $request->getJournal();
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$issue->getFileName($formLocale));
 		$issue->setFileName('', $formLocale);
