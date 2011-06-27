@@ -132,7 +132,7 @@ function SubmitIfAnyIsChecked() {
 	{/if}
 </table>
 
-<p><input type="button" value="{translate key="common.export"}" class="button defaultButton" onclick="SubmitIfAnyIsChecked();return false;"/>&nbsp;<input type="button" id="selButton" value="Select All" class="button" onclick="javascript:selectAll();" /></p>
+<p><input type="button" value="{translate key="common.export"}" class="button defaultButton" onclick="SubmitIfAnyIsChecked();return false;"/>&nbsp;<input type="button" id="selButton" value="{translate key="common.selectAll}" class="button" onclick="javascript:selectAll();" /></p>
 </form>
 
 {include file="common/footer.tpl"}
