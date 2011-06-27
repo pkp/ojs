@@ -7,11 +7,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
-  *
-  * $Id$
   -->
 
-<install version="2.3.5.0">
+<install version="2.3.6.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -118,7 +116,7 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate3.xml" /><!-- review_forms -->
 	</upgrade>
 
-	<upgrade minversion="2.2.0.0" maxversion="2.3.4.9">
+	<upgrade minversion="2.2.0.0" maxversion="2.3.5.9">
 		<!--
 		  - Not including 2.1.1, where user_settings first became available, because the 2.2.0_usersettings migration process
 		  - has renamed it to user_settings_old by this point.
@@ -126,7 +124,7 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations1.xml" condition="return $installer->columnExists('users', 'affiliation');" />
 	</upgrade>
 
-	<upgrade minversion="2.2.0.0" maxversion="2.3.4.9">
+	<upgrade minversion="2.2.0.0" maxversion="2.3.5.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
@@ -256,6 +254,11 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.3.4.9">
 		<data file="dbscripts/xml/upgrade/2.3.5_update.xml" />
 		<note file="docs/release-notes/README-2.3.5" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.3.5.9">
+		<data file="dbscripts/xml/upgrade/2.3.6_update.xml" />
+		<note file="docs/release-notes/README-2.3.6" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
