@@ -764,22 +764,24 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveArticleToc($args, $request) {
 		$this->validate(null, true);
-		$issue =& $this->issue;
-		$articleId = (int) $request->getUserVar('id');
+		$pubId = (int) $request->getUserVar('id');
 
 		$journal =& $request->getJournal();
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleById($articleId);
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleById($pubId);
 
+		if (!$publishedArticle) $request->redirect(null, null, 'index');
+
+		$articleId = $publishedArticle->getId();
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($articleId, $journal->getId());
 
 		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 
-		if (!$publishedArticle || !$article || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
+		if (!$article || !$issue || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
 
 		if ($d = $request->getUserVar('d')) {
 			// Moving by up/down arrows
