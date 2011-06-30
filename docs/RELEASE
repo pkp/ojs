@@ -1,6 +1,6 @@
 OJS 2.3.6 Release Notes
 GIT tag: ojs-2_3_6-0
-Release date: June 28, 2011
+Release date: June 30, 2011
 ===========================
 
 New Features
@@ -27,3 +27,4 @@ Bug Fixes
 	#6719# Issue ToC sorting options broken
 	#6723# Some ICO file types don't upload for favicon
 	#6724# Unlocalized button in METS plugin
+	#6727# Lack of writable image dir results in iBrowser fatal error

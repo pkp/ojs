@@ -1,3 +1,9 @@
+commit cdcfe722a64c3d8a02fe19eef400bf144a9f22b6
+Author: Matthew Crider <mattcrider@gmail.com>
+Date:   Wed Jun 29 11:28:46 2011 -0700
+
+    *6727* Produce human-readable errors when iBrowser doesn't have write access to its image directory
+
 commit 8347aeafdba701555f868e69e96f858c959c7a41
 Author: michael-pkp <michael.pkp@gmail.com>
 Date:   Tue Jun 28 10:18:21 2011 -0700
