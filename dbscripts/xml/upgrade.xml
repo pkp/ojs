@@ -257,7 +257,6 @@
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.5.9">
-		<data file="dbscripts/xml/upgrade/2.3.6_update.xml" />
 		<note file="docs/release-notes/README-2.3.6" />
 	</upgrade>
 
