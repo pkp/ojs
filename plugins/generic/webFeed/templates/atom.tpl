@@ -18,8 +18,8 @@
 	{assign var=latestDate value=$issue->getDatePublished()}
 	{foreach name=sections from=$publishedArticles item=section}
 		{foreach from=$section.articles item=article}
-			{if $article->getDateModified() > $latestDate}
-				{assign var=latestDate value=$article->getDateModified()}
+			{if $article->getLastModified() > $latestDate}
+				{assign var=latestDate value=$article->getLastModified()}
 			{/if}
 		{/foreach}
 	{/foreach}
