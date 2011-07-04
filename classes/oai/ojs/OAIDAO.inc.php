@@ -76,11 +76,14 @@ class OAIDAO extends DAO {
 			'SELECT	MIN(a.last_modified)
 			FROM	published_articles pa,
 				articles a,
-				issues i
+				issues i,
+				journals j
 			WHERE	pa.issue_id = i.issue_id AND
 				i.published = 1 AND
-				a.article_id = pa.article_id'
-			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
+				a.article_id = pa.article_id AND
+				i.journal_id = j.journal_id AND
+				j.enabled = 1'
+			. (isset($journalId) ? ' AND j.journal_id = ?' : ''),
 
 			isset($journalId) ? ((int) $journalId) : false
 		);
@@ -108,11 +111,14 @@ class OAIDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	COUNT(*)
 			FROM	published_articles pa,
-				issues i
+				issues i,
+				journals j
 			WHERE	pa.issue_id = i.issue_id AND
 				i.published = 1 AND
+				i.journal_id = j.journal_id AND
+				j.enabled = 1 AND
 				pa.article_id = ?'
-			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
+			. (isset($journalId) ? ' AND j.journal_id = ?' : ''),
 
 			isset($journalId) ? array((int) $articleId, (int) $journalId) : ((int) $articleId)
 		);
@@ -147,6 +153,7 @@ class OAIDAO extends DAO {
 			WHERE	pa.article_id = a.article_id
 				AND s.section_id = a.section_id
 				AND j.journal_id = a.journal_id
+				AND j.enabled = 1
 				AND pa.issue_id = i.issue_id
 				AND i.published = 1
 				AND pa.article_id = ?'
@@ -202,6 +209,7 @@ class OAIDAO extends DAO {
 			WHERE	pa.article_id = a.article_id
 				AND s.section_id = a.section_id
 				AND j.journal_id = a.journal_id
+				AND j.enabled = 1
 				AND pa.issue_id = i.issue_id
 				AND i.published = 1'
 				. (isset($journalId) ? ' AND a.journal_id = ?' : '')
@@ -261,6 +269,7 @@ class OAIDAO extends DAO {
 			WHERE	pa.article_id = a.article_id
 				AND s.section_id = a.section_id
 				AND j.journal_id = a.journal_id
+				AND j.enabled = 1
 				AND pa.issue_id = i.issue_id AND i.published = 1'
 				. (isset($journalId) ? ' AND a.journal_id = ?' : '')
 				. (isset($sectionId) ? ' AND a.section_id = ?' : '')
