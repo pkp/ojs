@@ -6,7 +6,6 @@
  *
  * List of operations this plugin can perform
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.native.displayName"}

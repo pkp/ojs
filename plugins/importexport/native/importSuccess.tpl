@@ -6,7 +6,6 @@
  *
  * Display a list of the successfully-imported entities.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.native.import.success"}

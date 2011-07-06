@@ -6,7 +6,6 @@
  *
  * Display an error message for an aborted import process.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.native.import.error"}

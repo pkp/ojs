@@ -58,23 +58,23 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
 			case 'exportIssues':
-				$issueIds = Request::getUserVar('issueId');
+				$issueIds = $request->getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId);
-					if (!$issue) Request::redirect();
+					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+					if (!$issue) $request->redirect();
 					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId);
-				if (!$issue) Request::redirect();
+				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+				if (!$issue) $request->redirect();
 				$this->exportIssue($journal, $issue);
 				break;
 			case 'exportArticle':
@@ -83,7 +83,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$this->exportArticle($journal, $result['issue'], $result['section'], $result['publishedArticle']);
 				break;
 			case 'exportArticles':
-				$articleIds = Request::getUserVar('articleId');
+				$articleIds = $request->getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
 				$results =& ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($results);
@@ -115,10 +115,10 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				import('classes.file.TemporaryFileManager');
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$sectionDao =& DAORegistry::getDAO('SectionDAO');
-				$user =& Request::getUser();
+				$user =& $request->getUser();
 				$temporaryFileManager = new TemporaryFileManager();
 
-				if (($existingFileId = Request::getUserVar('temporaryFileId'))) {
+				if (($existingFileId = $request->getUserVar('temporaryFileId'))) {
 					// The user has just entered more context. Fetch an existing file.
 					$temporaryFile = TemporaryFileManager::getFile($existingFileId, $user->getId());
 				} else {
@@ -130,11 +130,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'user' => $user
 				);
 
-				if (($sectionId = Request::getUserVar('sectionId'))) {
+				if (($sectionId = $request->getUserVar('sectionId'))) {
 					$context['section'] = $sectionDao->getSection($sectionId);
 				}
 
-				if (($issueId = Request::getUserVar('issueId'))) {
+				if (($issueId = $request->getUserVar('issueId'))) {
 					$context['issue'] = $issueDao->getIssueById($issueId, $journal->getId());
 				}
 
@@ -435,7 +435,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 							echo Locale::translate('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
 							return;
 						}
-						$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
+						$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $journal->getId());
 
 						$sectionDao =& DAORegistry::getDAO('SectionDAO');
 						$section =& $sectionDao->getSection($publishedArticle->getSectionId());

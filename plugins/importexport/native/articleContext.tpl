@@ -6,7 +6,6 @@
  *
  * Prompt for "context" for article import: section and issue
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.native.import.articles"}
