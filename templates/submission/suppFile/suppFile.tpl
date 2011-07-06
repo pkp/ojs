@@ -109,11 +109,14 @@
 </table>
 </div>
 <div class="separator"></div>
+
+{call_hook name="Templates::Submission::SuppFile::AdditionalMetadata"}
+
 <div id="supplementaryFileUpload">
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
 <table id="suppFile" class="data">
-{if $suppFile}
+{if $suppFile && $suppFile->getFileId()}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
 		<td width="80%" class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
@@ -150,7 +153,7 @@
 <table id="showReviewers" width="100%" class="data">
 	<tr valign="top">
 		<td class="label">
-			{if $suppFile}
+			{if $suppFile && $suppFile->getFileId()}
 				{fieldLabel name="uploadSuppFile" key="common.replaceFile"}
 			{else}
 				{fieldLabel name="uploadSuppFile" key="common.upload"}
@@ -158,7 +161,7 @@
 		</td>
 		<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="author.submit.supplementaryFiles.saveToUpload"}</td>
 	</tr>
-	{if not $suppFile}
+	{if not ($suppFile && $suppFile->getFileId())}
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td class="value">
