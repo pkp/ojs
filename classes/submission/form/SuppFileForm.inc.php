@@ -166,7 +166,7 @@ class SuppFileForm extends Form {
 				'showReviewers' => 1
 			);
 		}
-
+		return parent::initData();
 	}
 
 	/**
@@ -202,6 +202,8 @@ class SuppFileForm extends Form {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
+
+		parent::execute();
 
 		if (isset($this->suppFile)) {
 			$suppFile =& $this->suppFile;

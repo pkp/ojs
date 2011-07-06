@@ -135,7 +135,7 @@ class AuthorSubmitSuppFileForm extends Form {
 				'type' => ''
 			);
 		}
-
+		return parent::initData();
 	}
 
 	/**
@@ -170,6 +170,8 @@ class AuthorSubmitSuppFileForm extends Form {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = 'uploadSuppFile';
+
+		parent::execute();
 
 		// edit an existing supp file, otherwise create new supp file entry
 		if (isset($this->suppFile)) {
