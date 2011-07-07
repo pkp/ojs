@@ -68,6 +68,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 					if (!$issue) $request->redirect();
 					$issues[] =& $issue;
+					unset($issue);
 				}
 				$this->exportIssues($journal, $issues);
 				break;

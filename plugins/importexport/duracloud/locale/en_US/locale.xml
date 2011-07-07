@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.duracloud.displayName">DuraCloud Import/Export Plugin</message>
+	<message key="plugins.importexport.duracloud.description">Archive and restore issues using an external DuraCloud service for storage</message>
+
+	<message key="plugins.importexport.duracloud.configuration">DuraCloud Configuration</message>
+	<message key="plugins.importexport.duracloud.configuration.unconfigured.description">You are not currently signed in to a DuraCloud account. Please enter your credentials below. These will not be stored beyond the current session.</message>
+	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[You are currently signed into DuraCloud at <a href="{$url}">{$escapedUrl}</a> with username "{$username}". These credentials will not be stored beyond the current session. To clear your credentials immediately, click to <a href="{$logoutUrl}">log out</a>.]]></message>
+	<message key="plugins.importexport.duracloud.configuration.urlRequired">A valid DuraCloud base URL is required.</message>
+	<message key="plugins.importexport.duracloud.configuration.usernameRequired">A DuraCloud username is required.</message>
+	<message key="plugins.importexport.duracloud.configuration.passwordRequired">A DuraCloud password is required.</message>
+	<message key="plugins.importexport.duracloud.configuration.credentialsInvalid">Could not connect to the specified DuraCloud instance with the supplied credentials. Please check the credentials and try again.</message>
+	<message key="plugins.importexport.duracloud.configuration.space">Space</message>
+	<message key="plugins.importexport.duracloud.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Additional parameters are required for importing data as follows, depending
+on the root node of the XML document.
+
+If the root node is <article> or <articles>, additional parameters are required.
+The following formats are accepted:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.duracloud.export">Export Data</message>
+	<message key="plugins.importexport.duracloud.export.issues">Export Issues</message>
+	<message key="plugins.importexport.duracloud.export.results">Export Results</message>
+	<message key="plugins.importexport.duracloud.export.results.description">Here are the results of the export action for each of the selected issues.</message>
+	<message key="plugins.importexport.duracloud.export.results.success"><![CDATA[{$issueIdentification} was successfully exported to <a href="{$targetLocation}">{$targetLocationEscaped}</a>.]]></message>
+	<message key="plugins.importexport.duracloud.export.results.failure">{$issueIdentification} could not be exported.</message>
+
+	<message key="plugins.importexport.duracloud.selectIssue">Select Issue</message>
+
+	<message key="plugins.importexport.duracloud.import">Import Data</message>
+	<message key="plugins.importexport.duracloud.import.description">This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.duracloud.import.error">Import Error</message>
+	<message key="plugins.importexport.duracloud.import.error.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
+
+	<message key="plugins.importexport.duracloud.cliError">ERROR:</message>
+	<message key="plugins.importexport.duracloud.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
+
+	<message key="plugins.importexport.duracloud.import.success">Import Successful</message>
+	<message key="plugins.importexport.duracloud.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
+
+</locale>
