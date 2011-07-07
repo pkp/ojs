@@ -56,7 +56,7 @@ The following formats are accepted:
 
 	<message key="plugins.importexport.duracloud.selectIssue">Select Issue</message>
 
-	<message key="plugins.importexport.duracloud.import">Import Data</message>
+	<message key="plugins.importexport.duracloud.import.issues">Import Issues</message>
 	<message key="plugins.importexport.duracloud.import.description">This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
 
 	<message key="plugins.importexport.duracloud.import.error">Import Error</message>

@@ -55,7 +55,13 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
-		switch ($verb = array_shift($args)) {
+		switch (array_shift($args)) {
+			case 'importIssue':
+				fatalError('NOT IMPLEMENTED');
+				break;
+			case 'importIssues':
+				fatalError('NOT IMPLEMENTED');
+				break;
 			case 'exportIssues':
 				$issueIds = $request->getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
@@ -82,7 +88,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign('issues', array($issue->getId() => $issue));
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');
 				return;
-			case 'issues':
+			case 'exportableIssues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
 				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
@@ -90,7 +96,14 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
-				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
+				$templateMgr->display($this->getTemplatePath() . 'exportableIssues.tpl');
+				return;
+			case 'importableIssues':
+				// Display a list of issues for import
+				$this->setBreadcrumbs(array(), true);
+				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				$templateMgr->assign('issues', $this->getImportableIssues());
+				$templateMgr->display($this->getTemplatePath() . 'importableIssues.tpl');
 				return;
 			case 'signIn':
 				$this->setBreadcrumbs();
@@ -141,7 +154,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		// Store the file in DuraCloud.
 		$dcc = $this->getDuraCloudConnection();
 		$ds = new DuraStore($dcc);
-		$descriptor = new DuraCloudContentDescriptor(array('creator' => $this->getName(), 'identification' => $issue->getIssueIdentification()));
+		$descriptor = new DuraCloudContentDescriptor(array('creator' => $this->getName(), 'identification' => $issue->getIssueIdentification(), 'date_published' => $issue->getDatePublished(), 'num_articles' => $issue->getNumArticles()));
 		$content = new DuraCloudFileContent($descriptor);
 		$fp = fopen($filename, 'r');
 		$content->setResource($fp);
@@ -339,6 +352,39 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$sessionManager =& SessionManager::getManager();
 		$session =& $sessionManager->getUserSession();
 		return (boolean) $session->getSessionVar('duracloudUrl');
+	}
+
+	/**
+	 * Get a list of importable issues from the DuraSpace instance.
+	 * @return array(contentId => issueIdentification)
+	 */
+	function getImportableIssues() {
+		$dcc =& $this->getDuraCloudConnection();
+		$duraStore = new DuraStore($dcc);
+		$spaceId = $this->getDuraCloudSpace();
+		$contents = $duraStore->getSpace($spaceId, $metadata, null, 'issue-');
+		if (!$contents) return $contents;
+
+		$returner = array();
+		foreach ($contents as $contentId) {
+			$content = $duraStore->getContent($spaceId, $contentId);
+			if (!$content) continue; // Could not fetch content
+
+			$descriptor =& $content->getDescriptor();
+			if (!$descriptor) continue; // Could not get descriptor
+
+			$metadata = $descriptor->getMetadata();
+			if (!$metadata) continue; // Could not get metadata
+
+			if (!isset($metadata['creator']) || $metadata['creator'] != $this->getName()) continue; // Not created by this plugin
+
+			if (!isset($metadata['identification'])) continue; // Could not get identification
+
+			$returner[$contentId] = $metadata;
+			unset($metadata);
+		}
+
+		return $returner;
 	}
 }
 

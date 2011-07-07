@@ -29,4 +29,6 @@
 	{/foreach}
 </ul>
 
+<p><a href="{plugin_url}">{translate key="common.continue"}</a></p>
+
 {include file="common/footer.tpl"}

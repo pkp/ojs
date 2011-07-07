@@ -31,16 +31,11 @@
 	</form>
 
 	{if in_array($duracloudSpace, $spaces)}{* if $duracloudSpace valid *}
-		<h3>{translate key="plugins.importexport.duracloud.export"}</h3>
+		<h3>{translate key="manager.importExport"}</h3>
 		<ul class="plain">
-			<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.duracloud.export.issues"}</a></li>
+			<li>&#187; <a href="{plugin_url path="exportableIssues"}">{translate key="plugins.importexport.duracloud.export.issues"}</a></li>
+			<li>&#187; <a href="{plugin_url path="importableIssues"}">{translate key="plugins.importexport.duracloud.import.issues"}</a></li>
 		</ul>
-
-		<h3>{translate key="plugins.importexport.duracloud.import"}</h3>
-		<p>{translate key="plugins.importexport.duracloud.import.description"}</p>
-		<form action="{plugin_url path="import"}" method="post" enctype="multipart/form-data">
-		<input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
-		</form>
 	{/if}{* $duracloudSpace is valid *}
 
 {else}{* The plugin has not been configured; display the login form. *}
