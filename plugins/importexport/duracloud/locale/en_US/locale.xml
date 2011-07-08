@@ -24,28 +24,17 @@
 	<message key="plugins.importexport.duracloud.configuration.passwordRequired">A DuraCloud password is required.</message>
 	<message key="plugins.importexport.duracloud.configuration.credentialsInvalid">Could not connect to the specified DuraCloud instance with the supplied credentials. Please check the credentials and try again.</message>
 	<message key="plugins.importexport.duracloud.configuration.space">Space</message>
-	<message key="plugins.importexport.duracloud.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+	<message key="plugins.importexport.duracloud.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName}
+	[base_url] [username] [password]
+	[ojs_journal_path] [duracloud_space_id] [command] ...
 Commands:
-	import [xmlFileName] [journal_path] [user_name] ...
-	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-	export [xmlFileName] [journal_path] article [articleId]
-	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
-	export [xmlFileName] [journal_path] issue [issueId]
-
-Additional parameters are required for importing data as follows, depending
-on the root node of the XML document.
-
-If the root node is <article> or <articles>, additional parameters are required.
-The following formats are accepted:
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
-	issue_id [issueId] section_id [sectionId]
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
-	issue_id [issueId] section_name [name]
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
-	issue_id [issueId] section_abbrev [abbrev]
+	importIssues [user_name] [issueId1] [issueId2] ...
+	exportIssues [issueId1] [issueId2] ...
+Example:
+	php {$scriptName} {$pluginName} \
+		https://pkp.duracloud.org myUsername myPassword \
+		demojournal testspace \
+		exportIssues 1
 ]]></message>
 	<message key="plugins.importexport.duracloud.export">Export Data</message>
 	<message key="plugins.importexport.duracloud.export.issues">Export Issues</message>

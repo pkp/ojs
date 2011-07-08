@@ -249,7 +249,6 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 
 			// Parse the document
 			$doc =& $nativeImportExportPlugin->getDocument($fp);
-			fclose($fp);
 
 			// Import the issue
 			$nativeImportExportPlugin->import('NativeImportDom');
@@ -269,8 +268,15 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @param $args Parameters to the plugin
 	 */ 
 	function executeCLI($scriptName, &$args) {
-		$command = array_shift($args);
+		// First, DuraCloud access info
+		$baseUrl = array_shift($args);
+		$username = array_shift($args);
+		$password = array_shift($args);
+
+		// Context and commands
 		$journalPath = array_shift($args);
+		$spaceId = array_shift($args);
+		$command = array_shift($args);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -283,14 +289,26 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		if (!$journal) {
 			if ($journalPath != '') {
 				echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-				echo Locale::translate('plugins.importexport.duracloud.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo Locale::translate('plugins.importexport.duracloud.error.unknownJournal', array('journalPath' => $journalPath)) . "\n";
+				return;
 			}
 			$this->usage($scriptName);
 			return;
 		}
 
+		$this->storeDuraCloudConfiguration($baseUrl, $username, $password);
+		$this->setDuraCloudSpace($spaceId);
+		// Verify that the configuration and space ID are valid
+		$dcc =& $this->getDuraCloudConnection();
+		$ds = new DuraStore($dcc);
+		if ($ds->getSpace($spaceId, $metadata) === false) {
+			echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
+			echo Locale::translate('plugins.importexport.duracloud.configuration.credentialsInvalid') . "\n";
+			return;
+		}
+
 		switch ($command) {
-			case 'import':
+			case 'importIssues':
 				$userName = array_shift($args);
 				$user =& $userDao->getUserByUsername($userName);
 
@@ -303,40 +321,25 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 					return;
 				}
 
-				fatalError('UNIMPLEMENTED.');
-				break;
-			case 'export':
-				switch (array_shift($args)) {
-					case 'issue':
-						$issueId = array_shift($args);
-						$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
-						if ($issue == null) {
-							echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.duracloud.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
-							return;
-						}
-						if (!$this->exportIssue($journal, $issue)) {
-							echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.duracloud.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-						}
-						return;
-					case 'issues':
-						$issues = array();
-						while (($issueId = array_shift($args))!==null) {
-							$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
-							if ($issue == null) {
-								echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-								echo Locale::translate('plugins.importexport.duracloud.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
-								return;
-							}
-							$issues[] =& $issue;
-						}
-						if (!$this->exportIssues($journal, $issues)) {
-							echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.duracloud.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-						}
-						return;
+				$results =& $this->importIssues($user, $journal, $args);
+				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+				foreach ($results as $id => $result) {
+					echo "	$id: " . ($result?$result->getIssueIdentification():'') . "\n";
 				}
+				return;
+				break;
+			case 'exportIssues':
+				$issues = array();
+				foreach ($args as $issueId) {
+					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+					$issues[$issue->getId()] =& $issue;
+					unset($issue);
+				}
+				$results = $this->exportIssues($journal, $issues);
+				foreach ($results as $id => $result) {
+					echo "	$id: $result\n";
+				}
+				return;
 				break;
 		}
 		$this->usage($scriptName);
