@@ -18,7 +18,7 @@
 
 	<message key="plugins.importexport.duracloud.configuration">DuraCloud Configuration</message>
 	<message key="plugins.importexport.duracloud.configuration.unconfigured.description">You are not currently signed in to a DuraCloud account. Please enter your credentials below. These will not be stored beyond the current session.</message>
-	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[You are currently signed into DuraCloud at <a href="{$url}">{$escapedUrl}</a> with username "{$username}". These credentials will not be stored beyond the current session. To clear your credentials immediately, click to <a href="{$logoutUrl}">log out</a>.]]></message>
+	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[You are currently signed into DuraCloud at <a href="{$url}">{$escapedUrl}</a> with username "{$username}". These credentials will not be stored beyond the current session. To clear your credentials immediately, click to <a href="{$logoutUrl}">log out</a> of DuraCloud.]]></message>
 	<message key="plugins.importexport.duracloud.configuration.urlRequired">A valid DuraCloud base URL is required.</message>
 	<message key="plugins.importexport.duracloud.configuration.usernameRequired">A DuraCloud username is required.</message>
 	<message key="plugins.importexport.duracloud.configuration.passwordRequired">A DuraCloud password is required.</message>
@@ -53,6 +53,10 @@ The following formats are accepted:
 	<message key="plugins.importexport.duracloud.export.results.description">Here are the results of the export action for each of the selected issues.</message>
 	<message key="plugins.importexport.duracloud.export.results.success"><![CDATA[{$issueIdentification} was successfully exported to <a href="{$targetLocation}">{$targetLocationEscaped}</a>.]]></message>
 	<message key="plugins.importexport.duracloud.export.results.failure">{$issueIdentification} could not be exported.</message>
+	<message key="plugins.importexport.duracloud.import.results">Import Results</message>
+	<message key="plugins.importexport.duracloud.import.results.description">Here are the results of the import action for each of the selected issues.</message>
+	<message key="plugins.importexport.duracloud.import.results.success"><![CDATA[{$issueIdentification} was successfully imported from "{$contentId}".]]></message>
+	<message key="plugins.importexport.duracloud.import.results.failure">{$contentId} could not be imported.</message>
 
 	<message key="plugins.importexport.duracloud.selectIssue">Select Issue</message>
 

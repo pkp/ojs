@@ -55,12 +55,22 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		switch (array_shift($args)) {
 			case 'importIssue':
-				fatalError('NOT IMPLEMENTED');
+				$contentId = array_shift($args);
+				$issue =& $this->importIssue($user, $journal, $contentId);
+				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->assign('results', array($contentId => $issue));
+				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
+				return;
 				break;
 			case 'importIssues':
-				fatalError('NOT IMPLEMENTED');
+				$results =& $this->importIssues($user, $journal, $request->getUserVar('contentId'));
+				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->assign('results', $results);
+				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
+				return;
 				break;
 			case 'exportIssues':
 				$issueIds = $request->getUserVar('issueId');
@@ -179,6 +189,80 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		}
 		return $results;
 	}
+
+	/**
+	 * Import an issue from DuraCloud.
+	 * @param $user User
+	 * @param $journal Journal
+	 * @param $contentId string
+	 * @return Issue iff success; false otherwise
+	 */
+	function importIssue(&$user, &$journal, $contentId) {
+		// Get the file from DuraCloud.
+		$dcc = $this->getDuraCloudConnection();
+		$ds = new DuraStore($dcc);
+		$content = $ds->getContent($this->getDuraCloudSpace(), $contentId);
+		if (!$content) return false;
+
+		// Get and reset the resource
+		$fp =& $content->getResource();
+		fseek($fp, 0);
+
+		// Parse the document
+		$nativeImportExportPlugin =& $this->getNativeImportExportPlugin();
+		$doc =& $nativeImportExportPlugin->getDocument($fp);
+
+		// Import the issue
+		$nativeImportExportPlugin->import('NativeImportDom');
+		$dependentItems = $errors = array();
+		$issue = null;
+		if (!NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, false, $dependentItems)) return false;
+
+		return $issue;
+	}
+
+	/**
+	 * Import issues from DuraCloud.
+	 * @param $user User
+	 * @param $journal Journal
+	 * @param $contentId string
+	 * @return array with result for each contentId (see importIssue)
+	 */
+	function importIssues(&$user, &$journal, $contentIds) {
+		// Get the file from DuraCloud.
+		$dcc = $this->getDuraCloudConnection();
+		$ds = new DuraStore($dcc);
+		$result = array();
+		$dependentItems = $errors = array();
+		$nativeImportExportPlugin =& $this->getNativeImportExportPlugin();
+
+		foreach ($contentIds as $contentId) {
+			$content = $ds->getContent($this->getDuraCloudSpace(), $contentId);
+			if (!$content) {
+				$result[$contentId] = false;
+				continue;
+			}
+
+			// Get and reset the resource
+			$fp =& $content->getResource();
+			fseek($fp, 0);
+
+			// Parse the document
+			$doc =& $nativeImportExportPlugin->getDocument($fp);
+			fclose($fp);
+
+			// Import the issue
+			$nativeImportExportPlugin->import('NativeImportDom');
+			$issue = null;
+			NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, false, $dependentItems);
+			$result[$contentId] =& $issue;
+
+			unset($issue, $fp);
+		}
+
+		return $result;
+	}
+
 
 	/**
 	 * Execute import/export tasks using the command-line interface.

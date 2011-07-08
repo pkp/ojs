@@ -768,17 +768,8 @@ class NativeImportDom {
 		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
 		if (($language = $articleNode->getAttribute('language'))) $article->setLanguage($language);
 
-		/* --- Handle authors --- */
-		$hasErrors = false;
-		for ($index = 0; ($node = $articleNode->getChildByName('author', $index)); $index++) {
-			if (!NativeImportDom::handleAuthorNode($journal, $node, $issue, $section, $article, $authorErrors)) {
-				$errors = array_merge($errors, $authorErrors);
-				$hasErrors = true;
-			}
-		}
-		if ($hasErrors) return false;
-
 		/* --- Handle covers --- */
+		$hasErrors = false;
 		for ($index = 0; ($node = $articleNode->getChildByName('cover', $index)); $index++) {
 			if (!NativeImportDom::handleArticleCoverNode($journal, $node, $article, $coverErrors, $isCommandLine)) {
 				$errors = array_merge($errors, $coverErrors);
@@ -793,9 +784,19 @@ class NativeImportDom {
 					break;
 			}
 		}
+		if ($hasErrors) return false;
 
 		$articleDao->insertArticle($article);
 		$dependentItems[] = array('article', $article);
+
+		/* --- Handle authors --- */
+		for ($index = 0; ($node = $articleNode->getChildByName('author', $index)); $index++) {
+			if (!NativeImportDom::handleAuthorNode($journal, $node, $issue, $section, $article, $authorErrors)) {
+				$errors = array_merge($errors, $authorErrors);
+				$hasErrors = true;
+			}
+		}
+		if ($hasErrors) return false;
 
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');

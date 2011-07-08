@@ -47,7 +47,7 @@ function toggleChecked() {
 
 {foreach name=issues from=$issues key=key item=issue}
 	<tr valign="top">
-		<td><input type="checkbox" name="issueId[]" value="{$key|escape}"/></td>
+		<td><input type="checkbox" name="contentId[]" value="{$key|escape}"/></td>
 		<td>{$issue.identification|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue.date_published|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 		<td>{$issue.num_articles|escape}</td>
