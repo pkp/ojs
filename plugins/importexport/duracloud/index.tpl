@@ -43,8 +43,8 @@
 		{include file="common/formErrors.tpl"}
 		<table width="100%" class="data">
 			<tr valign="top">
-				<td width="10%" class="label">{fieldLabel key="common.url" name="duracloudUrl" required=true}</td>
-				<td width="90%" class="value"><input type="text" name="duracloudUrl" id="duracloudUrl" value="{$duracloudUrl|escape}" /></td>
+				<td width="20%" class="label">{fieldLabel key="common.url" name="duracloudUrl" required=true}</td>
+				<td width="80%" class="value"><input type="text" name="duracloudUrl" id="duracloudUrl" value="{$duracloudUrl|escape}" /></td>
 			</tr>
 			<tr valign="top">
 				<td class="label">{fieldLabel key="user.username" name="duracloudUsername" required=true}</td>
