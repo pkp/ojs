@@ -152,6 +152,7 @@ class RegistrationHandler extends UserHandler {
 			$user->setDateValidated(Core::getCurrentDate());
 			$userDao->updateObject($user);
 
+			$this->setupTemplate(true);
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('message', 'user.login.activated');
 			return $templateMgr->display('common/message.tpl');
