@@ -168,8 +168,17 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Relation
 		if (is_a($article, 'PublishedArticle')) {
+			// full texts URLs
+			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
+			foreach ($galleys as $galley) {
+				$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+				$dc11Description->addStatement('dc:relation', $relation);
+				unset($relation);
+			}
+			// supp files URLs			
 			foreach ($article->getSuppFiles() as $suppFile) {
-				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getId(), $suppFile->getId()));
+				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
 				$dc11Description->addStatement('dc:relation', $relation);
 				unset($relation);
 			}
