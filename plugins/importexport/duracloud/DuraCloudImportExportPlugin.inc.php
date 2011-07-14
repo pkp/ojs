@@ -24,10 +24,6 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
-		if ($success) {
-			// Load the DuraCloud-PHP library.
-			require_once('lib/DuraCloud-PHP/DuraCloudPHP.inc.php');
-		}
 		return $success;
 	}
 
@@ -51,6 +47,9 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		parent::display($args, $request);
+
+		// Load the DuraCloud-PHP library.
+		require_once('lib/DuraCloud-PHP/DuraCloudPHP.inc.php');
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
@@ -272,6 +271,9 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$baseUrl = array_shift($args);
 		$username = array_shift($args);
 		$password = array_shift($args);
+
+		// Load the DuraCloud-PHP library.
+		require_once('lib/DuraCloud-PHP/DuraCloudPHP.inc.php');
 
 		// Context and commands
 		$journalPath = array_shift($args);
