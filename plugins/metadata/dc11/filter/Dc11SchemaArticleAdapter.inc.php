@@ -164,8 +164,19 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
 
 		// Language
-		$dc11Description->addStatement('dc:language', strip_tags($article->getLanguage()));
-
+		 if (is_a($article, 'PublishedArticle')) {
+			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
+			$locales = array();
+			foreach ($galleys as $galley) {
+				$galleyLocale = $galley->getLocale();
+				if(!in_array($galleyLocale, $locales)) {
+					$locales[] = $galleyLocale;
+					$dc11Description->addStatement('dc:language', Locale::getIso3FromLocale($galleyLocale));
+				}
+			}
+		} 
+		
 		// Relation
 		if (is_a($article, 'PublishedArticle')) {
 			// full texts URLs
