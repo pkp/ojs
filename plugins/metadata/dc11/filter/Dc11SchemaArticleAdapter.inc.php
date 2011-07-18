@@ -114,8 +114,13 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:publisher', $publishers);
 
 		// Contributor
-		$this->_addLocalizedElements($dc11Description, 'dc:contributor', $article->getSponsor(null));
+		$contributors = $article->getSponsor(null);
+		foreach ($contributors as $locale => $contributor) {
+			$contributors[$locale] = array_map('trim', explode(';', $contributor));
+		}
+		$this->_addLocalizedElements($dc11Description, 'dc:contributor', $contributors);
 
+		
 		// Date
 		if (is_a($article, 'PublishedArticle')) {
 			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
