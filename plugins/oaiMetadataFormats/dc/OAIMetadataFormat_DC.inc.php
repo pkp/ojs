@@ -71,7 +71,17 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			foreach ($galleys as $galley) {
 				$formats[] = $galley->getFileType();
 			}
-	
+					
+			// Languages
+			$languages = array();
+			foreach ($galleys as $galley) {
+				$galleyLocale = $galley->getLocale();
+				$iso3 = Locale::getIso3FromLocale($galleyLocale);
+				if(!in_array($iso3, $languages)) {
+					$languages[] = $iso3;
+				}
+			}
+
 			// Relation
 			$relation = array();
 			// full texts URLs
@@ -109,7 +119,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 				$this->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
 				(($doi = $article->getDOI())?$this->formatElement('identifier', $doi, false, array('xsi:type' => 'dcterms:DOI')):'') .
 				$this->formatElement('source', $sources, true) .
-				$this->formatElement('language', strip_tags($article->getLanguage())) .
+				$this->formatElement('language', $languages) .
 				$this->formatElement('relation', $relation) .
 				$this->formatElement(
 					'coverage',
