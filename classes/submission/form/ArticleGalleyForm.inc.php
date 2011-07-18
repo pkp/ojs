@@ -52,7 +52,7 @@ class ArticleGalleyForm extends Form {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
-		$this->addCheck(new FormValidator($this, 'galleyLocale', 'required', 'submission.layout.galleyLocaleRequired'), create_function('$galleyLocale,$availableLocales', 'return in_array($galleyLocale,$availableLocales);'), array_keys($journal->getSupportedLocaleNames()));
+		$this->addCheck(new FormValidator($this, 'galleyLocale', 'required', 'submission.layout.galleyLocaleRequired'), create_function('$galleyLocale,$availableLocales', 'return in_array($galleyLocale,$availableLocales);'), array_keys($journal->getSupportedSubmissionLocaleNames()));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -65,7 +65,7 @@ class ArticleGalleyForm extends Form {
 
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
-		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
+		$templateMgr->assign('supportedSubmissionLocales', $journal->getSupportedSubmissionLocaleNames());
 		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
 		if (isset($this->galley)) {
