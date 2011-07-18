@@ -51,7 +51,7 @@
 	{/if}
 {else}
 	<div id="topBar">
-		{assign var=galleys value=$article->getLocalizedGalleys()}
+		{assign var=galleys value=$article->getGalleys()}
 		{if $galleys && $subscriptionRequired && $showGalleyLinks}
 			<div id="accessKey">
 				<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
@@ -113,7 +113,7 @@
 	{if $galleys}
 		{translate key="reader.fullText"}
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
-			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+			{foreach from=$article->getGalleys() item=galley name=galleyList}
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || !$galley->isPdfGalley()}
