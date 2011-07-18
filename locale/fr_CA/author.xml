@@ -60,8 +60,6 @@
 	<message key="author.submit.addAuthor">Ajouter un auteur</message>
 	<message key="author.submit.deleteAuthor">Supprimer un auteur</message>
 	<message key="author.submit.submissionIndexingDescription">Fournir les termes pour l'indexation de la soumission; séparer les termes par un point-virgule (terme1; terme2; terme3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Organismes de soutien</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifier les organismes qui ont fourni du financement ou du soutien pour le travail présenté dans cette soumission.</message>
 	<message key="author.submit.coverageInstructions">Renvoie à une lieu géo-spatial, une couverture historique ou chronologique, et/ou à des caractéristiques d'un échantillon de recherche.</message>
 	<message key="author.submit.subjectClassInstructions">Utiliser le système de classification par liens pour sélectionner les termes de la classification et, s'il y a lieu, les numéros.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codes supplémentaires</a>.]]></message>

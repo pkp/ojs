@@ -60,8 +60,6 @@
 	<message key="author.submit.addAuthor">Añadir autor/a</message>
 	<message key="author.submit.deleteAuthor">Borrar autor/a</message>
 	<message key="author.submit.submissionIndexingDescription">Proporcione palabras clave para indexar el envío; separe los términos con punto y coma (término1; término2; término3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Agencias de apoyo</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifique las agencias que proporcionan financiación o apoyo para el trabajo presentado en este envío.</message>
 	<message key="author.submit.coverageInstructions">Se refiere a la localización geo-espacial, cronológica o cobertura histórica, y/o características de ejemplos de investigación.</message>
 	<message key="author.submit.subjectClassInstructions">Utilice el sistema de clasificación hiperenlazado para seleccionar términos de clasificación y, si es necesario, números.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>

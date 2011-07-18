@@ -59,8 +59,6 @@
 	<message key="author.submit.addAuthor">Gehitu egilea</message>
 	<message key="author.submit.deleteAuthor">Ezabatu egilea</message>
 	<message key="author.submit.submissionIndexingDescription">Sartu bidalketa indexatzeko hitzak edo terminoak, puntu eta komaz bereizita (1terminoa; 2terminoa; 3terminoa).</message>
-	<message key="author.submit.submissionSupportingAgencies">Agentzia laguntzaileak</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifikatu bidalketa honetan aurkezten den lanari diru-laguntza edo bestelakoa ematen dioten agentziak.</message>
 	<message key="author.submit.coverageInstructions">Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo ikerketaren ezaugarriak.</message>
 	<message key="author.submit.subjectClassInstructions">Erabili hiperestekatutako sailkapen-sistema bidalketa sailkatzeko terminoak eta, egoki bada, zenbakiak hautatzeko.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[euskara=eu; ingelesa=en; frantsesa=fr; gaztelania=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Kode gehiago</a>.]]></message>

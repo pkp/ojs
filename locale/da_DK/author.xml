@@ -56,8 +56,6 @@
 	<message key="author.submit.addAuthor">Tilføj forfatter</message>
 	<message key="author.submit.deleteAuthor">Slet forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Angiv termer for indeksering af manuskriptet, og adskil termerne med et semikolon (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Støtteinstanser</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identificer instanser, der yder finansiering eller support til det værk, der præsenteres i dette manuskript.</message>
 	<message key="author.submit.coverageInstructions">Henviser til geografisk placering, kronologisk eller historisk dækning og/eller karaktertræk ved forskningseksempel.</message>
 	<message key="author.submit.subjectClassInstructions">Brug klassificeringssystemet med hyperlinks til at vælge klassificeringstermer og eventuelt numre.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Spansk=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>

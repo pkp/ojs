@@ -60,8 +60,6 @@
 	<message key="author.submit.addAuthor">Lägg till författare</message>
 	<message key="author.submit.deleteAuthor">Ta bort författare</message>
 	<message key="author.submit.submissionIndexingDescription">Lägg till relevanta sökord för indexering, separera orden med semikolon (ord1; ord2; ord3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Stöttat av:</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Uppge de personer eller organisationer som  bistått med finansiering eller support av forskningen som manuskriptet bygger på.</message>
 	<message key="author.submit.agencies">Organisationer eller motsvarande som har bidragit till manuskriptet</message>
 	<message key="author.submit.coverageInstructions">Refererar till geospatial, kronologisk eller historisk täckning, och/eller karakteristika av forskningsurvalet.</message>
 	<message key="author.submit.subjectClassInstructions">Använd klassificeringslänken för att ange ämnen.</message>

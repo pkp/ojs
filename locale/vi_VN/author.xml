@@ -60,8 +60,6 @@
 	<message key="author.submit.addAuthor">Thêm tác giả</message>
 	<message key="author.submit.deleteAuthor">Xóa tác giả</message>
 	<message key="author.submit.submissionIndexingDescription">Nhập các từ khóa để lập chỉ mục cho bài nộp; phân tách các từ khóa bằng dấu chấm phẩy (từ khóa 1; từ khóa 2; từ khóa 3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Các cơ quan bảo trợ</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Nêu danh tính các cơ quan cung cấp tài chính hoặc hỗ trợ cho tác phẩm sử dụng trong bài nộp này.</message>
 	<message key="author.submit.coverageInstructions">Chỉ vị trí địa lý, phạm vi thời gian hoặc lịch sử, và/hoặc những đặc trưng của mẫu nghiên cứu.</message>
 	<message key="author.submit.subjectClassInstructions">Sử dụng các hệ thông phân loại có siêu liên kết để lựa chọn các thuật ngữ phân loại và chỉ số phân loại, nếu có thể.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Các mã khác</a>.]]></message>

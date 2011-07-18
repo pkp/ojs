@@ -56,8 +56,6 @@
 	<message key="author.submit.addAuthor">Auteur toevoegen</message>
 	<message key="author.submit.deleteAuthor">Auteur verwijderen</message>
 	<message key="author.submit.submissionIndexingDescription">Geef termen voor het indexeren van de inzendingen. Scheid de termen met een puntkomma (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Ondersteunende organisaties</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Benoem de organisaties die geld of ondersteuning geleverd hebben voor het werk dat in deze inzending gepresenteerd wordt.</message>
 	<message key="author.submit.coverageInstructions">Refereert aan geo-spatiale locatie, chronologische of historische dekking en/of karakteristieken van het onderzoeksvoorbeeld.</message>
 	<message key="author.submit.subjectClassInstructions">Gebruik het classificatiesysteem met hyperlinks voor het selecteren van classificatietermen en, indien van toepassing, -nummers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Engels=en; Frans=fr; Spaans=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additionele codes</a>.]]></message>

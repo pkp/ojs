@@ -60,8 +60,6 @@
 	<message key="author.submit.addAuthor">Προσθήκη συγγραφέα</message>
 	<message key="author.submit.deleteAuthor">Διαγραφή συγγραφέα</message>
 	<message key="author.submit.submissionIndexingDescription">Επιλέξτε τους όρους που περιγράφουν καλύτερα το περιεχόμενο της υποβολής με βάση τις κατηγορίες που χρησιμοποιούνται από το περιοδικό αυτό, και τα παραδείγματα που παρέχονται από τον επιμελητή. Διαχωρίστε τους όρους με το σύμβολο του ερωτηματικού  (όρος1; όρος2; όρος3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Φορείς υποστήριξης/χρηματοδότησης</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Καθορίστε τους φορείς που παρείχαν χρηματοδότηση ή υποστήριξη για την υλοποίησης του έργου που παρουσιάζεται στην υποβολή αυτή.</message>
 	<message key="author.submit.coverageInstructions"> Αναφέρεται στη γεω-χωρική τοποθεσία, την χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας.</message>
 	<message key="author.submit.subjectClassInstructions">Χρησιμοποιήστε το σύστημα ταξινόμησης με σύνδεση υπερκειμένου για να επιλέξετε τους όρους ταξινόμησης και, εάν είναι κατάλληλοι, τους αριθμούς.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr;  Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html"  target="_blank">Additional codes</a>.]]></message>

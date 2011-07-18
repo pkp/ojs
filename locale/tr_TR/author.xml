@@ -49,8 +49,6 @@
 	<message key="author.submit.selectPrincipalContact">Editöryal iletişim için birincil irtibat.</message>
 	<message key="author.submit.addAuthor">Yazar ekle</message>
 	<message key="author.submit.deleteAuthor">Yazarı sil</message>
-	<message key="author.submit.submissionSupportingAgencies">Destekleyen kuruluşlar</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Bu çalışmayı maddi ya da başka bir şekilde destekleyen kuruluşları tanımlar.</message>
 	<message key="author.submit.coverageInstructions">Araştırma materyalinin coğrafik lokalizasyonunu, kronolojik ya da tarihsel  kapsamını, ve/veya karekteristiğini belirtir.</message>
 	<message key="author.submit.subjectClassInstructions">Sınıflandırma terimleri ve uygunsa numaraları seçmek için hiperlik edilmiş sınıflama sitemini kullanınız.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>

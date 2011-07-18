@@ -69,8 +69,6 @@
 	<message key="author.submit.addAuthor">Autor/in hinzufügen</message>
 	<message key="author.submit.deleteAuthor">Autor/in löschen</message>
 	<message key="author.submit.submissionIndexingDescription">Stellen Sie Begriffe für die Indizierung des Beitrags zusammen; trennen Sie diese Begriffe durch ein Semikolon (Begriff1; Begriff2; Begriff3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Unterstützt durch</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Benennen Sie diejenigen Institutionen, die die Arbeit, die im vorliegenden Beitrag vorgestellt wird, unterstützt oder finanziert haben.</message>
 	<message key="author.submit.coverageInstructions">Bezieht sich auf den räumlich-geographischen sowie den zeitlichen Bereich und auf die Eigenschaften des Forschungsgegenstandes.</message>
 	<message key="author.submit.subjectClassInstructions">Benutzen Sie die verlinkte Schlagwortsystematik zur Auswahl von Klassifizierungsbegriffen und, falls zutreffend, -zahlen.></message>
 	<message key="author.submit.languageInstructions"><![CDATA[deutsch=de; englisch=en; französisch=fr; spanisch=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
