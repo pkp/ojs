@@ -58,7 +58,12 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			if (!empty($publisherInstitution)) {
 				$publishers = array($journal->getPrimaryLocale() => $publisherInstitution);
 			}
-	
+			
+			// Contributor
+			$contributors = $this->stripAssocArray((array) $article->getSponsor(null));
+			foreach ($contributors as $key => $contributor) {
+				$contributors[$key] = array_map('trim', explode(';', $contributor));
+			}	
 			// Types
 			$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
 			$types = array_merge_recursive(
@@ -112,7 +117,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 				) .
 				$this->formatElement('description', $this->stripAssocArray((array) $article->getAbstract(null)), true) .
 				$this->formatElement('publisher', $publishers, true) .
-				$this->formatElement('contributor', $this->stripAssocArray((array) $article->getSponsor(null)), true) .
+				$this->formatElement('contributor', $contributors, true) .
 				$this->formatElement('date', date('Y-m-d', strtotime($issue->getDatePublished()))) .
 				$this->formatElement('type', $types, true) .
 				$this->formatElement('format', $formats) .
