@@ -74,8 +74,15 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 	
 			// Relation
 			$relation = array();
+			// full texts URLs
+			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
+			foreach ($galleys as $galley) {
+				$relation[] = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+			}
+			// supp files URLs  
 			foreach ($article->getSuppFiles() as $suppFile) {
-				$relation[] = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getId(), $suppFile->getFileId()));
+				$relation[] = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
 			}
 	
 			$response = "<oai_dc:dc\n" .
