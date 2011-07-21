@@ -21,7 +21,7 @@
 	{/if}
 	{if $journalRt->getPrinterFriendly()}
 		<div class="articleToolItem">
-			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/printArticle.png" class="articleToolIcon" /> <a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{url page="rt" op="printerFriendly" path=$articleId|to_array:$galleyId}');{else}{url page="article" op="download" path=$articleId|to_array:$galley->getGalleyId()}{/if}">{translate key="plugins.block.readingTools.printThisArticle"}</a>
+			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/printArticle.png" class="articleToolIcon" /> <a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{url page="rt" op="printerFriendly" path=$articleId|to_array:$galleyId}');{else}{url page="article" op="download" path=$articleId|to_array:$galleyId}{/if}">{translate key="plugins.block.readingTools.printThisArticle"}</a>
 		</div>
 	{/if}
 	{if $journalRt->getViewMetadata()}
