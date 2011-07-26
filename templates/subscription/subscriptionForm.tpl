@@ -100,12 +100,3 @@ function chooseEndDate() {
 		<input type="text" name="referenceNumber" value="{$referenceNumber|escape}" id="referenceNumber" size="30" maxlength="40" class="textField" />
 	</td>
 </tr>
-
-{* For new subscriptions, select end date for default subscription type *}
-{if !$subscriptionId}
-	<script type="text/javascript">
-	<!--
-	chooseEndDate();
-	// -->
-	</script>
-{/if}

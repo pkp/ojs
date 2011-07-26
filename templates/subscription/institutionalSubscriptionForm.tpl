@@ -45,7 +45,17 @@
 		</td>
 	</tr>
 {/if}
+
 {include file="subscription/subscriptionForm.tpl"}
+
+{* For new subscriptions, set end date for default subscription type *}
+{if !$subscriptionId && !$ipRanges}
+	<script type="text/javascript">
+	<!--
+	chooseEndDate();
+	// -->
+	</script>
+{/if}
 </table>
 
 <br />
