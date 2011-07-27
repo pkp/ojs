@@ -51,6 +51,20 @@ function updateAbstractRequired() {
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{plugin_url|assign:"quickSubmitUrl" escape=false}
+			{* Maintain localized author info across requests *}
+			{foreach from=$authors key=authorIndex item=author}
+				{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
+					{foreach from=$author.competingInterests key="thisLocale" item="thisCompetingInterests"}
+						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
+					{/foreach}
+				{/if}
+				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
+				{/foreach}
+				{foreach from=$author.affiliation key="thisLocale" item="thisAffiliation"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][affiliation][{$thisLocale|escape}]" value="{$thisAffiliation|escape}" />{/if}
+				{/foreach}
+			{/foreach}
 			{form_language_chooser form="submit" url=$quickSubmitUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
