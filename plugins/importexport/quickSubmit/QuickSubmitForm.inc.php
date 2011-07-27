@@ -84,7 +84,7 @@ class QuickSubmitForm extends Form {
 		import('classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 		$tempFileId = $this->getData('tempFileId');
-		if ($tempFileId[$formLocale] > 0) {
+		if (isset($tempFileId[$formLocale]) && $tempFileId[$formLocale] > 0) {
 			$submissionFile = $temporaryFileManager->getFile($tempFileId[$formLocale], $user->getId());
 			$templateMgr->assign_by_ref('submissionFile', $submissionFile);
 		}
