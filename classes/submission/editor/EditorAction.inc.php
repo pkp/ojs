@@ -162,6 +162,10 @@ class EditorAction extends SectionEditorAction {
 
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 			$galleyDao->insertGalley($galley);
+
+			// Update file search index
+			import('classes.search.ArticleSearchIndex');
+			ArticleSearchIndex::updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 		}
 
 		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
