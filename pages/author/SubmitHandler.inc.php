@@ -163,9 +163,9 @@ class SubmitHandler extends AuthorHandler {
 					$article =& $articleDao->getArticle($articleId);
 					$roleDao =& DAORegistry::getDAO('RoleDAO');
 					$notificationUsers = array();
-					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR);
-					$notifyUsers = $editors->toArray();
-					while ($editor =& $editors->next()) {
+					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
+					while (!$editors->eof()) {
+						$editor =& $editors->next();
 						$url = $request->url(null, 'editor', 'submission', $articleId);
 						$notificationManager->createNotification(
 							$editor->getId(), 'notification.type.articleSubmitted',
