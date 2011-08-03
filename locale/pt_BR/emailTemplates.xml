@@ -383,7 +383,7 @@ Sua contribuição é fundamental para a qualidade dos trabalhos publicados.
 		<body>{$reviewerName},
 
 Este é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" à revista {$journalName}. 
-Esperamos receber sua avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
+Esperamos receber sua avaliação até {$reviewDueDate}, e aguardamos o recebimento assim que for possível.
 
 Caso não possua o login e a senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com o seu login. 
 Criar nova senha: {$passwordResetUrl}.
@@ -403,7 +403,7 @@ Aguardando seu contato,
 		<body>{$reviewerName},
 
 Esta mensagem é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. 
-Esperamos receber a avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
+Esperamos receber a avaliação até {$reviewDueDate}, e aguardamos o recebimento assim que for possível.
 
 Clique no link a seguir para realizar a avaliação.
 URL da Submissão: {$submissionReviewUrl}
@@ -421,7 +421,7 @@ Aguardando seu contato,
 
 Este é um lembrete automático, referente à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. 
 
-Esperávamos receber a avaliação até {$reviewDuedate}, e este e-mail foi enviado automaticamente pois o prazo para entrega foi ultrapassado.
+Esperávamos receber a avaliação até {$reviewDueDate}, e este e-mail foi enviado automaticamente pois o prazo para entrega foi ultrapassado.
 Aguardamos o recebimento da avaliação assim que for possível concluí-la.
 
 Caso não possua o login e a senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via e-mail junto com o seu login. 
@@ -442,7 +442,7 @@ Aguardando seu contato,
 
 Este é um lembrete automático, referente à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. 
 
-O prazo para entrega da avaliação era {$reviewDuedate}, e este e-mail foi enviado automaticamente pois o prazo se esgotou.
+O prazo para entrega da avaliação era {$reviewDueDate}, e este e-mail foi enviado automaticamente pois o prazo se esgotou.
 Aguardamos o recebimento da avaliação assim que for possível concluí-la.
 
 Caso não possua o login e a senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via e-mail junto com o seu login.
