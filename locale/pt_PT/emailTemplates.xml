@@ -384,7 +384,7 @@ A sua contribuição é fundamental para a qualidade dos trabalhos publicados.
 		<subject>Lembrete de pedido de revisão</subject>
 		<body>{$reviewerName},
 
-Esta mensagem é apenas um lembrete relativamente ao pedido de revisão da submissão "{$articleTitle}" à revista {$journalName}. Esperamos receber a sua revisão até {$reviewDuedate} e aguardamos o recebimento assim que for possível.
+Esta mensagem é apenas um lembrete relativamente ao pedido de revisão da submissão "{$articleTitle}" à revista {$journalName}. Esperamos receber a sua revisão até {$reviewDueDate} e aguardamos o recebimento assim que for possível.
 
 Caso não possua o nome de utilizador e a senha para aceder ao sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com os seus dados de acesso. 
 
@@ -403,7 +403,7 @@ Aguardando o seu contacto,
 		<subject>Lembrete de pedido de revisão</subject>
 		<body>{$reviewerName},
 
-Esta mensagem é apenas um lembrete relativamente ao pedido de revisão da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a revisão até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
+Esta mensagem é apenas um lembrete relativamente ao pedido de revisão da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a revisão até {$reviewDueDate}, e aguardamos o recebimento assim que for possível.
 
 Caso não possua o nome de utilizador e a senha para aceder ao sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com os seus dados de acesso.
 
@@ -424,7 +424,7 @@ Aguardando o seu contacto,
 
 Este é apenas um lembrete automático, referente ao pedido de revisão da submissão "{$articleTitle}" a {$journalName}. 
 
-Esperávamos receber a revisão até {$reviewDuedate} e este email foi enviado automaticamente pois o prazo para entrega foi ultrapassado.
+Esperávamos receber a revisão até {$reviewDueDate} e este email foi enviado automaticamente pois o prazo para entrega foi ultrapassado.
 
 Aguardamos o recebimento da revisão assim que for possível concluí-la.
 
@@ -447,7 +447,7 @@ Aguardando o seu contacto,
 
 Este é apenas um lembrete automático, referente ao pedido de revisão da submissão "{$articleTitle}" a {$journalName}. 
 
-O prazo para entrega da revisão era {$reviewDuedate} e este email foi enviado automaticamente pois o prazo expirou.
+O prazo para entrega da revisão era {$reviewDueDate} e este email foi enviado automaticamente pois o prazo expirou.
 
 Aguardamos o recebimento da revisão assim que for possível concluí-la.
 
