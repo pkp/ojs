@@ -712,8 +712,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Avertissement :</strong> Si l'installation de la base de données échoue, vous devrez peut-être supprimer votre base de données OJS ou les tables de votre base de données avant de tenter de réinstaller la base de données.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>L'installateur n'a pas pu écraser automatiquement le fichier de configuration. Avant de tenter d'utiliser le système, veuillez ouvrir <tt>config.inc.php</tt> dans un éditeur de texte approprié et remplacer son contenu par le contenu de la zone de texte ci-dessous.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Installation manuelle</h4>
-<p>Les énoncés SQL pour la création du schéma de la base de données OJS et des données initiales sont affichés ci-dessous. Prendre note que le système sera inutilisable tant que ces énoncés n'auront pas été exécutés manuellement. Vous devrez aussi configurer manuellement le fichier de configuration <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation d'OJS réussie.</p>
 	<p>Pour commencer à utiliser le système, <a href="{$loginUrl}">se connecter</a> avec les nom d'utilisateur et mot de passe saisis à la page précédente.</p>
 	<p>Si vous voulez recevoir des nouvelles et mises à jour, vous pouvez :</p>

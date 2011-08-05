@@ -849,9 +849,7 @@ El camp Actives llista les revisions en curs.]]></message>
 	<li><tt>cache/t_compile/</tt> té permís d’escriptura: {$writable_templates_compile}</li>
 	<li><tt>cache/_db</tt> té permís d’escriptura: {$writable_db_cache}</li>
 </ul>
-<p>2. Creeu un directori amb permís d’escriptura per a emmagatzemar-hi els fitxers penjats (vegeu la secció "Configuració de fitxers").</p>
-<h4>Instal·lació manual</h4>
-<p>Seleccioneu <strong>Instal·lació manual</strong> per a visualitzar les expressions SQL necessàries per a crear l’esquema i les dades inicials per a la base de dades de l’OJS que us permetran instal·lar la base de dades de manera manual. Aquesta opció és útil si esteu depurant problemes de la instal·lació, especialment si treballeu amb plataformes no admeses pel sistema. Noteu que aquest mètode d’instal·lació no intentarà crear la base de dades ni cap taula. En canvi, sí que s’emplenarà el fitxer de la base de dades amb els paràmetres proporcionats.</p>]]></message>
+<p>2. Creeu un directori amb permís d’escriptura per a emmagatzemar-hi els fitxers penjats (vegeu la secció "Configuració de fitxers").</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versió {$version}</h4>
 	
 <p>Gràcies per baixar l’<strong>Open Journal Systems</strong> del Public Knowledge Project.  Abans de continuar, llegiu els fitxers <a href="{$baseUrl}/docs/README">README</a> i <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> que s’inclouen amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si necessiteu informar sobre errors o demanar suport tècnic per a l’Open Journal Systems, entreu al <a href="http://pkp.sfu.ca/support/forum">fòrum de suport</a> o visiteu el <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sistema d’informació d’errors</a> en línia del PKP.  Noteu que el fòrum de suport és el mètode de contacte principal, encara que també us podeu posar en contacte amb l’equip per correu electrònic: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
@@ -866,8 +864,6 @@ El camp Actives llista les revisions en curs.]]></message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Avís</b>: si la instal·lació ha fallat just durant el procés d’instal·lació de la base de dades, és possible que hàgiu de suprimir la base de dades de l’OJS o les taules abans de tornar a intentar instal·lar-la.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Important:</h4>
 <p>L’instal·lador no ha pogut sobreescriure automàticament el fitxer de configuració. Abans d’intentar utilitzar el sistema, obriu el fitxer <tt>config.inc.php</tt> en un editor de textos adequat i reemplaceu-ne els continguts amb les dades que apareixen en el quadre de text següent.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Instal·lació manual</h4>
-A continuació es mostren les expressions SQL necessàries per a crear l’esquema i les dades inicials per a la base de dades de l’OJS. Noteu que no podreu utilitzar el sistema fins que no executeu aquestes expressions de manera manual. A més, també haureu de configurar manualment el fitxer de configuració <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>La instal·lació de l’OJS s’ha completat correctament.</p>
 <p>Per a començar a utilitzar el sistema, <a href="{$loginUrl}">inicieu la sessió</a> amb el nom d’usuari i la contrasenya que heu introduït a la pàgina anterior.</p>
 <p>Si voleu rebre notícies i actualitzacions, <strong>registreu-vos a <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Si ens voleu fer arribar dubtes o comentaris, entreu al <a href="http://pkp.sfu.ca/support/forum" target="_new">fòrum de suport</a>.</p>]]></message>

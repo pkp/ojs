@@ -813,8 +813,6 @@
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>警告：</strong>如果安裝失敗部分是因為安裝資料庫的關係，在嘗試重新安裝資料庫之前，您可能需要刪除您的OJS資料庫或者資料表。]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要！</h4>
 <p>安裝檔無法自動覆寫設定檔。在嘗試使用本系統之前，請以合適的編輯器開啟<tt>config.inc.php</tt>並且變更其內容為下列文字欄位中的內容。</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>手動安裝</h4>
-<p>建立OJS資料庫架構和初始資料的SQL指令已經顯示如上。注意，除非這些指令已經手動執行過了，否則系統將無法使用。您也將必須手動地設定<tt>config.inc.php</tt>設定檔。</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>OJS已經成功安裝！</p>
 <p>要開始使用本系統，請以您在上一個網頁中輸入的使用者名稱和密碼進行<a href="{$loginUrl}">登入</a></p>
 <p>如果您希望收到新聞和更新訊息，請<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>

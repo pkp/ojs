@@ -826,8 +826,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Waarschuwing:</b> Als de installatie tijdens de database-installatie misloop moet u de OJS database of de database-tabellen verwijderen voor u de installatie opnieuw probeert te doen.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Belangrijk!</h4>
 <p>Het installatieprogramma kon het configuratiebestand niet overschrijven. Open alvorens het systeem te gebruiken <tt>config.inc.php</tt> in een geschikte teksteditor en vervang de inhoud ervan door de inhoud van het tekstveld hieronder.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Handmatige installatie</h4>
-<p>De SQL opdrachten om het OJS databaseschema en de initiële inhoud aan te maken staan hieronder. Merk op dat het systeem pas bruikbaar is als deze opdrachten uitgevoerd zijn. U moet ook het configuratiebestand <tt>config.inc.php</tt> met de hand configureren.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installatie van OJS is succesvol afgerond.</p>
 <p><a href="{$loginUrl}">Log in</a> met de gebruikersnaam en het wachtwoord van de vorige pagina om het systeem in gebruik te nemen.</p>
 <p>Als u nieuws en updates wilt ontvangen, <strong>registreer u dan op <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Als u vragen of opmerkingen heeft, bezoek dan het <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>

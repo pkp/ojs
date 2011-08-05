@@ -613,8 +613,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>警告:</strong> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]></message>
   <message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要!</h4>
 <p>設定ファイルを上書きする保存することができませんでした。システムを使用する前に、適当なエディターで <tt>config.inc.php</tt> ファイルを開いて、その内容を以下のテキストフィールドの内容に置き換えてください。</p>]]></message>
-  <message key="installer.manualSQLInstructions"><![CDATA[<h4>マニュアルインストール</h4>
-<p>OJSデータベーススキーマと初期データを作成するためのSQL文を以下に表示しました。これらのSQL文をマニュアルで実行しないとシステムは利用できないことに注意してください。また、<tt>config.inc.php</tt> 設定ファイルについてもマニュアルで設定する必要があります。</p>]]></message>
   <message key="installer.installationComplete"><![CDATA[<p>OJSのインストールが終了しました。</p>
 <p>このシステムの利用を開始するには、前画面でユーザ名とパスワードを入力して<a href="{$loginUrl}">ログイン</a>してください。</p>
 <p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>

@@ -1897,11 +1897,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
 </ul>
 
-<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>
-
-<h4>Manual installation</h4>
-
-<p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
+<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>ÒJß Vèrþîóñ {$version}</h4>
 	
 <p>Thåñk ýóü fór ðówñlóåðîñg thè Püblîç Kñówlèðgè Prójèçt'þ <strong>Òpèñ Jóürñål ßýþtèmþ</strong>. Bèfórè próçèèðîñg, plèåþè rèåð thè <a href="{$baseUrl}/docs/README">RÉÆÐMÉ</a> åñð <a href="{$baseUrl}/docs/UPGRADE">ÜPGRÆÐÉ</a> fîlèþ îñçlüðèð wîth thîþ þóftwårè. Fór mórè îñfórmåtîóñ åbóüt thè Püblîç Kñówlèðgè Prójèçt åñð îtþ þóftwårè prójèçtþ, plèåþè vîþît thè <a href="http://pkp.sfu.ca/" target="_blank">PKP wèb þîtè</a>. Îf ýóü håvè büg rèpórtþ ór tèçhñîçål þüppórt îñqüîrîèþ åbóüt Òpèñ Jóürñål ßýþtèmþ, þèè thè <a href="http://pkp.sfu.ca/support/forum">þüppórt fórüm</a> ór vîþît PKP'þ óñlîñè <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">büg rèpórtîñg þýþtèm</a>. Ælthóügh thè þüppórt fórüm îþ thè prèfèrrèð mèthóð óf çóñtåçt, ýóü çåñ ålþó èmåîl thè tèåm åt <a href="mailto:pkp.contact@gmail.com">pkp-þüppórt@þfü.çå</a>.</p>
@@ -1943,8 +1939,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Æ üñîqüè îðèñtîfîèr üþèð tó îðèñtîfý mètåðåtå rèçórðþ îñðèxèð fróm thîþ þîtè üþîñg thè <a href="http://www.openarchives.org/" target="_blank">Òpèñ Ærçhîvèþ Îñîtîåtîvè</a> Prótóçól fór Mètåðåtå Hårvèþtîñg.]]></message>
 	<message key="installer.installApplication">Îñþtåll Òpèñ Jóürñål ßýþtèmþ</message>
 	<message key="installer.upgradeApplication">Üpgråðè Òpèñ Jóürñål ßýþtèmþ</message>
-	<message key="installer.manualInstall">Måñüål Îñþtåll</message>
-	<message key="installer.manualUpgrade">Måñüål Üpgråðè</message>
 	<message key="installer.form.localeRequired">Æ lóçålè müþt bè þèlèçtèð.</message>
 	<message key="installer.form.clientCharsetRequired">Æ çlîèñt çhåråçtèr þèt müþt bè þèlèçtèð.</message>
 	<message key="installer.form.filesDirRequired">Thè ðîrèçtórý tó bè üþèð fór þtórîñg üplóåðèð fîlèþ îþ rèqüîrèð.</message>
@@ -1967,8 +1961,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ÎMPÒRTÆÑT!</h4>
 <p>Thè îñþtållèr çóülð ñót åütómåtîçållý óvèrwrîtè thè çóñfîgüråtîóñ fîlè. Bèfórè åttèmptîñg tó üþè thè þýþtèm, plèåþè ópèñ <tt>çóñfîg.îñç.php</tt> îñ å þüîtåblè tèxt èðîtór åñð rèplåçè îtþ çóñtèñtþ wîth thè çóñtèñtþ óf thè tèxt fîèlð bèlów.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Çóñtèñtþ óf çóñfîgüråtîóñ fîlè</message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Måñüål îñþtållåtîóñ</h4>
-<p>Thè ßQL þtåtèmèñtþ tó çrèåtè thè ÒJß ðåtåbåþè þçhèmå åñð îñîtîål ðåtå årè ðîþplåýèð bèlów. Ñótè thåt thè þýþtèm wîll bè üñüþåblè üñtîl thèþè þtåtèmèñtþ håvè bèèñ èxèçütèð måñüållý. Ýóü wîll ålþó håvè tó måñüållý çóñfîgürè thè <tt>çóñfîg.îñç.php</tt> çóñfîgüråtîóñ fîlè.</p>]]></message>
 	<message key="installer.installerSQLStatements">ßQL þtåtèmèñtþ fór îñþtållåtîóñ</message>
 	<message key="installer.installationComplete"><![CDATA[<p>Îñþtållåtîóñ óf ÒJß håþ çómplètèð þüççèþþfüllý.</p>
 <p>Tó bègîñ üþîñg thè þýþtèm, <a href="{$loginUrl}">lógîñ</a> wîth thè üþèrñåmè åñð påþþwórð èñtèrèð óñ thè prèvîóüþ pågè.</p>

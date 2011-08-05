@@ -76,10 +76,6 @@ Para instalar o sistema:
 	4. Digite no navegador a "url" do site 
          (ex.: http://seudomínio.com/caminho/do/ojs/> e siga as instruções na 
          tela.
-	   
-	   O instalador oferece uma opção de "instalação manual" que mostrará os 
-         comandos SQL necessários para criar a base de dados do sistema, porém 
-         deverão ser executados manualmente.
 	 
 	5. Passos adicionais recomendados pós-instalação:
 	

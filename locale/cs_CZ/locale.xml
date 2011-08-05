@@ -828,8 +828,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Varování:</b> Pokud instalace selhala v průběhu instalace databáze, budete možná muset odstranit Vaši OJS databázy nebo databázové tabulky před tím, než se pokusíte databázy přeinstalovat.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>DŮLEŽITÉ!</h4>
 <p>Instalace nemohla automaticky přepsat konfigurační soubor. Než se pokusíte používat systém, otevřete prosím <tt>config.inc.php</tt> ve vhodném textovém editoru a nahraďte jeho obsah obsahem níže uvedeného textového pole.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Ruční instalace</h4>
-<p>SQL příkazy pro vytvoření schématu OJS databáze a úvodních dat jsou zobrazeny níže. Vězte, že systém bude nepoužitelný dokud tyto příkazy nebudou ručně spuštěny. Budete také muset ručně nastavit <tt>config.inc.php</tt> konfigurační soubor.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalace OJS byla úspěšně dokončena.</p>
 <p>Abyste začali používat systém, <a href="{$loginUrl}">přihlaste se</a> pomocí uživatelského jména a hesla, které jste zadali na předchozí stránce.</p>
 <p>Pokud chcete dostávat informace o novinkách a aktualizacích, <strong>zaregistrujte se prosím na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Pokud máte otázky nebo komentáře, navštivte prosím <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>

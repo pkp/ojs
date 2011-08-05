@@ -723,11 +723,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<li><tt>cache/_db/</tt> tiene permisos de escritura: {$writable_db_cache}</li>
 </ul>
 
-<p>2. Es necesario crear un directorio para almacenar los ficheros subidos y que tenga permisos de escritura (véase "Configuración de los ficheros" más abajo).</p>
-
-<h4>Instalación manual</h4>
-
-<p>Seleccione <strong>Instalación manual</strong> para mostrar las sentencias SQL necesarias para crear la estructura de la base de datos de OJS y los datos iniciales, de manera que la instalación de la base de datos se pueda realizar manualmente. Esta opción es útil para depurar problemas de instalación, especialmente en plataformas no soportadas. Tenga en cuenta que este método de instalación no intentará crear la base de datos o tabla alguna, aunque el fichero de configuración será modificado con los parámetros de conexión a la base de datos suministrados.</p>]]></message>
+<p>2. Es necesario crear un directorio para almacenar los ficheros subidos y que tenga permisos de escritura (véase "Configuración de los ficheros" más abajo).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versión de OJS {$version}</h4>
 	
 <p>Gracias por descargar el <strong>Open Journal Systems</strong> de the Public Knowledge Project's. Antes de continuar le rogamos que lea el fichero <a href="{$baseUrl}/docs/README">README</a> que se incluye con el software. Para obtener más información sobre el Public Knowledge Project y sus proyectos de software, visite el <a href="http://pkp.sfu.ca/" target="_blank">sitio web del PKP</a> (en inglés). Si tiene informes de fallos o preguntas de soporte técnico sobre Open Journal Systems, visite el <a href="http://pkp.sfu.ca/support/forum">foro de soporte</a> o visite el <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sistema de notificación de errores online</a> de PKP. Aunque el método de contacto preferido es el foro de soporte, también se puede poner en contacto con el equipo por correo-e en <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p></message>
@@ -742,8 +738,6 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cuidado:</strong> Si la instalación falló justo cuando estaba instalando la base de datos es posible que sea necesario eliminar la base de datos OJS o las tablas antes de intentar reinstalar la base de datos.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>¡IMPORTANTE!</h4>
 <p>El instalador no ha podido sobreescribir automáticamente el fichero de configuración. Antes de usar el sistema abra <tt>config.inc.php</tt> en un editor de textos y reemplace su contenido con el contenido del fichero que le mostramos abajo.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Instalación manual</h4>
-<p>A continuación se muestran las sentencias SQL para crear el esquema de base de datos de OJS y los datos iniciales. Tenga en cuenta que el sistema no se podrá usar hasta que se hayan ejecutado manualmente estas sentencias. También tendrá que configurar manualmente el fichero de configuración <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>La instalación de OJS se ha completado con éxito.</p>
 <p>Para empezar a usar el sistema, <a href="{$loginUrl}">lóguese</a> con el nombre de usuaria/o y contraseña introducidos en la página anterior.</p>
 <p>Si quiere recibir noticias y actualización, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, por favor, visite el <a href="http://pkp.sfu.ca/support/forum" target="_new">foro de soporte</a>.</p>]]></message>

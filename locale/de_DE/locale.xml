@@ -945,8 +945,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warnung:</strong> Wenn die Datenbank-Installation fehlschlägt, müssen Sie eventuell die OJS-Datenbank bzw. die Datenbank-Tabellen von Hand löschen, bevor Sie eine erneute Installation der Datenbank probieren können.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>WICHTIG!</h4>
 <p>Die Installationsprozedur konnte die Konfigurationsdatei nicht automatisch überschreiben. Bevor Sie versuchen, das System zu benutzen, öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuelle Installation</h4>
-<p>Die SQL-Anweisungen zum Anlegen des OJS-Datenbankschemas und für die anfänglich enthaltenen Daten werden unten angezeigt. Bitte beachten Sie, dass das System unbenutzbar ist, bis diese Anweisungen manuell ausgeführt worden sind. Außerdem müssen Sie die <tt>config.inc.php</tt>-Konfigurationsdatei von Hand bearbeiten.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Die Installation von OJS wurde erfolgreich abgeschlossen.</p>
 <p>Um mit der Nutzung des Systems zu beginnen, <a href="{$loginUrl}">loggen</a> Sie sich bitte mit dem auf der vorherigen Seite eingegebenen Benutzer/innen-Namen und dem entsprechenden Passwort <a href="{$loginUrl}">ein</a>.</p>
 <p>Wenn Sie in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten:</p>

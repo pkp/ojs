@@ -835,8 +835,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel!</b> Hvis installationen mislykkedes midt under databaseinstallationen, bliver du muligvis nødt til at opgive OJS-databasen eller databasetabellerne, inden du forsøger at geninstallere databasen.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VIGTIGT!</h4>
 <p>Installationsprogrammet kunne ikke automatisk overskrive konfigurationsfilen. Inden du forsøger at benytte systemet, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuel installation</h4>
-<p>De SQL-sætninger, der skal bruges til oprettelse af OJS-databaseskemaet og de første data, er vist nedenfor. Vær opmærksom på, at systemet ikke kan benyttes, før disse sætninger er blevet udført manuelt. Du skal også konfigurere konfigurationsfilen <tt>config.inc.php</tt> manuelt.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installationen af OJS er fuldført.</p>
 <p>Hvis du vil begynde at benytte systemet, skal du <a href="{$loginUrl}">logge på</a> med det brugernavn og den adgangskode, der blev angivet på den forrige side.</p>
 <p>Hvis du vil modtage nyheder og opdateringer, <strong>skal du registrere dig på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørgsmål eller kommentarer, skal du besøge <a href="http://pkp.sfu.ca/support/forum" target="_new">supportforummet</a>.</p>]]></message>

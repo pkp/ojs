@@ -756,8 +756,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Upozorenje:</b> Ako je instalacija neuspjela djelomično prilikom instalacije baze podataka morat ćete izbrisati vašu OJS bazu podataka ili tablice baze podataka prije ponovnog pokušaja instalacije baze podataka.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VAŽNO!</h4>
 <p>Instalacijski program ne može automatski pisati preko konfiguracijske datoteke. Prije pokušanja korištenja sustava, molimo otvorite <tt>config.inc.php</tt> u odgovarajućem uređivaču teksta i zamijenite njegov sadržaj sa sadržajem teksta koji se nalazi u polju ispod.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Ručna instalacija</h4>
-<p>SQL izjave za kreiranje sheme OJS baze podataka i inicijalnih podataka su prikazani ispod. Uzmite u obzir za će sustav biti neupotrebljiv sve dok te izjave nisu provedene ručno. Također ćete morati ručno konfigurirati datoteku <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalacija OJS-a je dovršena uspješno.</p>
 <p>Da biste počeli koristiti sustav, <a href="{$loginUrl}">prijavite se</a> s korisničkim imenom i lozinkom navedenim na prošloj stranici.</p>
 <p>Ako želite primati vijesti i dopune, <strong>molimo da se registrirate na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ako imate pitanja ili komentare, molimo posjetite <a href="http://pkp.sfu.ca/support/forum" target="_new">forum podrške</a>.</p>]]></message>

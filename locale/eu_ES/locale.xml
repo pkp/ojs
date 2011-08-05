@@ -882,8 +882,6 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Kontuz:</strong> Datu-basea instalatzean huts egin badu instalazioak, zure OJS datu-basea edo datu-baseko taulak askatu beharko dituzu datu-basea instalatzen saiatu aurretik.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>GARRANTZITSUA!</h4>
 <p>Instalatzaileak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Sistema erabiltzen saiatu aurretik, ireki <tt>config.inc.php</tt> testu-editore egoki batekin eta ordeztu bertako edukia beheko testu-eremuaren edukiarekin.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Eskuzko instalazioa</h4>
-<p>Behean erakusten dira OJS datu-basearen eskema eta hasierako datuak sortzeko SQL instrukzioak. Kontuan izan, sistema ezingo dela erabili instrukzio horiek eskuz exekutatu arte. <tt>config.inc.php</tt> konfigurazio-fitxategia ere eskuz konfiguratu beharko duzu.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>OJS ondo instalatu da.</p>
 <p>Sistema erabiltzen hasteko, <a href="{$loginUrl}">hasi saioa</a> aurreko orrian sartutako erabiltzaile-izenarekin eta pasahitzarekin.</p>
 <p>Albisteen eta eguneratzeen berri jakin nahi baduzu, <strong>erregistratu <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> helbidean.</strong> Galderarik edo oharrik egin nahi baduzu, bisitatu <a href="http://pkp.sfu.ca/support/forum" target="_new">laguntza teknikoko foroa</a>.</p>]]></message>

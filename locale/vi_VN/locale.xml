@@ -727,8 +727,6 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cảnh báo:</strong> Nếu cài đặt CSDL thất bại giữa chừng, quý vị có thể cần bỏ CSDL OJS hoặc các bảng trong CSDL trước khi cài đặt lại CSDL.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>QUAN TRỌNG!</h4>
 <p>Bộ cài đặt không thể tự động ghi đè lên file cấu hình. Trước khi thử sử dụng phần mềm, vui lòng mở file <tt>config.inc.php</tt> bằng một phần mềm soạn thảo văn bản thô (text) phù hợp và thay thế nội dung của file bằng nội dung sau đây.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Cài đặt bằng tay</h4>
-<p>SQL statements dùng để tạo cấu trúc CSDL OJS và dữ liệu ban đầu được hiển thị ở đây. Lưu ý rằng phần mềm sẽ không hoạt động được cho tới khi các  statements được thực hiện bằng tay. Quý vị cũng sẽ phải điều chỉnh file cấu hình <tt>config.inc.php</tt> bằng tay.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Cài đặt phần mềm OJS đã hoàn thành.</p>
 <p>Để bắt đầu sử dụng phần mềm, hãy <a href="{$loginUrl}">đăng nhập</a> bằng bí danh và mật khẩu đã khai báo ở trang trước.</p>
 <p>Nếu quý vị muốn nhận được tin tức và cập nhật, <strong>vui lòng đăng ký tại <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Nếu quý vị có câu hỏi hoặc bình luận, vui lòng ghé thăm <a href="http://pkp.sfu.ca/support/forum" target="_new">diễn đàn hỗ trợ</a>.</p>]]></message>

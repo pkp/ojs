@@ -1029,8 +1029,6 @@ Note that if your site administrator has already registered this site with these
 <p>安装档无法自动覆盖配置文件。在尝试使用本系统之前，请以合适的编辑器开启<tt>config.inc.php</tt>并且变更其内容为下列文字栏位中的内容。</p>]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要！</h4>
 <p>安装档无法自动覆盖配置文件。在尝试使用本系统之前，请以合适的编辑器开启<tt>config.inc.php</tt>并且变更其内容为下列文字栏位中的内容。</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>手动安装</h4>
-<p>建立OJS数据库架构和初始资料的SQL指令已经显示如上。注意，除非这些指令已经手动执行过了，否则系统将无法使用。您也将必须手动地配置<tt>config.inc.php</tt>配置文件。</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>OJS已经成功安装！</p>
 <p>要开始使用本系统，请以您在上一个网页中输入的用户名称和密码进行<a href="{$loginUrl}">登入</a></p>
 <p>如果您希望收到新闻和更新信息，请<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>注册。</strong> 如果您有问题或建议，请访问<a href="http://pkp.sfu.ca/support/forum" target="_new">支持讨论区</a>.</p>]]></message>

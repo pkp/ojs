@@ -764,8 +764,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Dikkat:</strong>Eğer yükleme, veritabanının yüklenmesi yoluyla başarısız olmuşsa veritabanını yeniden yüklemeyi denemeden önce ADS veritabanını veya veritabanı tablolarını indirmeniz gerekebilir.  ]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>Yükleyici konfigürasyon dosyasını otomatik olarak yazamaz. Sistemi kullanmayı denemeden önce lütfen açınız. <tt>config.inc.php</tt>aşağıdakine uygun bir metin editöründe ve içeriklerini aşağıdaki metin alanının içerikleri ile değiştirin.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuel yükleme </h4>
-<p>ADS veritabanı şemasını ve ilk verileri oluşturmak için gerekli SQL açıklamaları aşağıda gösterilmiştir. Sistemin, bu açıklamalar manuel olarak yürürlüğe konulana kadar kullanılamayacağına dikkat edin. Aynı zamanda <tt>config.inc.php</tt> dosyasını manuel olarak konfigüre etmeniz gerekecektir.]]></message>
 <message key="installer.installerSQLStatements">Yükleme için SQL açıklamaları</message>
 	<message key="installer.installationComplete"><![CDATA[<p>ADS yüklemesi başarıyla tamamlandı.</p>
 <p>Sistemi kullanmaya başlamak için bir önceki sayfada girilen kullanıcı adı ve şifre ile <a href="{$loginUrl}">kullanıcı girişi </a> yapınız.</p>
