@@ -519,8 +519,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>اخطار:</b> چنانچه نصب بصورت نیمه کاره رها شود ممکن است لازم شود بانک اطلاعاتی و یا جداول ایجاد شده را حذف کنید و سپس اقدام به نصب مجدد کنید.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>مهم!</h4>
 <p>برنامه نصب کننده نمی تواند بطور اتوماتیک در فایل تنظیمات بنویسد. قبل از شروع کار با سیستم لطفا فایل <tt>config.inc.php</tt> را در یک ویرایشگر مناسب متنی باز کرده و محتوای آنرا با محتوای جعبه متن زیر عوض کنید..</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>نصب دستی</h4>
-<p>جملات SQL لازم برای ایجاد ساختار بانک اطلاعاتی OJS و داده های اولیه آندر زیر نشان داده شده است. قابل ذکر اسست تا وقتی که این جملات بصورت دستی اجرا نشوند سیستم بدون استفاده باقی میماند. همچنین باید بروش دستی فایل  <tt>config.inc.php</tt> را ویرایش کنید.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>نصب OJS با موفقیت پایان یافت.</p>
 <p>برای شروع کار باسیستم ، با استفاده از نام کاربری و رمز عبوری که در مرحله قبل وارد کردید به سیستم  <a href="{$loginUrl}">وارد</a> شوید.</p>
 <p>چنانچه مایلید اخبار و تازه ها را دریافت کنید <strong>لطفا در  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت نام کنید.</strong> چنانچه سوال یا نظری دارید لطفا از  <a href="http://pkp.sfu.ca/support/forum" target="_new">فوروم حمایت</a> بازدید کنید.</p>]]></message>

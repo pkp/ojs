@@ -694,13 +694,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 </ul>
 </li>
 
-<li>Um diretório para armazenar os arquivos de submissão deve ser criado e com permissão de escrita (veja mais abaixo Configuração de Arquivos).</li></ol>
-
-
-
-<h4>Instalação Manual</h4>
-
-<p>Escolha a opção <strong>Instalação Manual</strong> para exibir os comandos SQL necessários para criar o esquema da base de dados do sistema e inserir dados iniciais e executar a instalação manual. Esta opção é útil para verificação de erros na instalação, particularmente para plataformas não suportadas. Note que o método manual não tentará criar a base ou as tabelas, embora o documento de configuração possua as configurações necessárias para tal.</p>]]></message>
+<li>Um diretório para armazenar os arquivos de submissão deve ser criado e com permissão de escrita (veja mais abaixo Configuração de Arquivos).</li></ol>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versão {$version}</h4>
 
 <p>Agradecemos seu interesse em utilizar o <strong>Open Journal Systems</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README_pt">README_pt</a> e o <a href="{$baseUrl}/docs/UPGRADE_pt">UPGRADE_pt</a>incluído com o pacote. Para maiores informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, acesse o <a href="http://pkp.sfu.ca/" target="_blank">portal do PKP</a>. Clique em <href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://seer.ibict.br/" target="_blank">portal do SEER</a>para maiores informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Open Journal Systems visite o <a href="pkp.sfu.ca/support/forum">PKP Support Forum</a>, ou <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Sistema de Controle de erros Bugzilla</a> do PKP. Embora os fóruns sejam a forma preferencial de contato, também pode-se entrar em contato com a Equipe do SEER por meio dos formulários disponíveis na seção <a href="http://seer.ibict.br/index.php?option=com_content&task=view&id=270&Itemid=113" target="_blank">Fale conosco</a> no <a href="http://seer.ibict.br" target="_blank">portal do SEER</a> e para a <a href="mailto:pkp.contact@gmail.com">Equipe do PKP (pkp.contact@gmail.com)</a>.</p>
@@ -716,8 +710,6 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>AVISO:</strong> em caso de erro durante a instalação da base de dados, pode ser necessário eliminar a base de dados ou as tabelas antes de executar novamente a instalação.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>O instalador não pode sobrescrever o documento de configuração. Antes de usar o sistema, edite o documento <tt>config.inc.php</tt> em um editor de texto e substitua todo o conteúdo pelo texto apresentado no campo a seguir.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Instalação Manual</h4>
-<p>Seguem os comandos SQL para criar o esquema da base de dados e inclusão de dados iniciais. Note que o sistema não poderá ser usado até a execução manual dos comandos. Será necessário também configurar manualmente o documento <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalação do sistema concluída com sucesso.</p>
 <p>Para iniciar o uso do sistema, <a href="{$loginUrl}">acesse o sistema</a> com o login e a senha informados durante a instalação.</p>]]></message>
 <message key="installer.upgradeComplete"><![CDATA[<p>Atualização para a versão {$version} concluída com sucesso.</p>
