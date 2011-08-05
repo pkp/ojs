@@ -203,24 +203,28 @@ class SuppFileForm extends Form {
 
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
 
-		parent::execute();
-
 		if (isset($this->suppFile)) {
-			$suppFile =& $this->suppFile;
+			parent::execute();
 
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
-				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
+				$fileId = $this->suppFile->getFileId();
+				if ($fileId != 0) {
+					$articleFileManager->uploadSuppFile($fileName, $fileId);
+				} else {
+					$fileId = $articleFileManager->uploadSuppFile($fileName);
+					$this->suppFile->setFileId($fileId);
+				}
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			}
 
 			// Index metadata
-			ArticleSearchIndex::indexSuppFileMetadata($suppFile);
+			ArticleSearchIndex::indexSuppFileMetadata($this->suppFile);
 
 			// Update existing supplementary file
-			$this->setSuppFileData($suppFile);
-			$suppFileDao->updateSuppFile($suppFile);
+			$this->setSuppFileData($this->suppFile);
+			$suppFileDao->updateSuppFile($this->suppFile);
 
 		} else {
 			// Upload file, if file selected.
@@ -233,14 +237,16 @@ class SuppFileForm extends Form {
 			}
 
 			// Insert new supplementary file		
-			$suppFile = new SuppFile();
-			$suppFile->setArticleId($this->article->getId());
-			$suppFile->setFileId($fileId);
-			$this->setSuppFileData($suppFile);
-			$suppFileDao->insertSuppFile($suppFile);
-			$this->suppFileId = $suppFile->getId();
-		}
+			$this->suppFile = new SuppFile();
+			$this->suppFile->setArticleId($this->article->getId());
+			$this->suppFile->setFileId($fileId);
 
+			parent::execute();
+
+			$this->setSuppFileData($this->suppFile);
+			$suppFileDao->insertSuppFile($this->suppFile);
+			$this->suppFileId = $this->suppFile->getId();
+		}
 		return $this->suppFileId;
 	}
 
