@@ -171,22 +171,20 @@ class AuthorSubmitSuppFileForm extends Form {
 
 		$fileName = 'uploadSuppFile';
 
-		parent::execute();
-
 		// edit an existing supp file, otherwise create new supp file entry
 		if (isset($this->suppFile)) {
-			$suppFile =& $this->suppFile;
+			parent::execute();
 
 			// Remove old file and upload new, if file is selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-				$suppFileId = $articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId(), true);
-				$suppFile->setFileId($suppFileId);
+				$suppFileId = $articleFileManager->uploadSuppFile($fileName, $this->suppFile->getFileId(), true);
+				$this->suppFile->setFileId($suppFileId);
 			}
 
 			// Update existing supplementary file
-			$this->setSuppFileData($suppFile);
-			$suppFileDao->updateSuppFile($suppFile);
+			$this->setSuppFileData($this->suppFile);
+			$suppFileDao->updateSuppFile($this->suppFile);
 
 		} else {
 			// Upload file, if file selected.
@@ -197,12 +195,15 @@ class AuthorSubmitSuppFileForm extends Form {
 			}
 
 			// Insert new supplementary file
-			$suppFile = new SuppFile();
-			$suppFile->setArticleId($this->articleId);
-			$suppFile->setFileId($fileId);
-			$this->setSuppFileData($suppFile);
-			$suppFileDao->insertSuppFile($suppFile);
-			$this->suppFileId = $suppFile->getId();
+			$this->suppFile = new SuppFile();
+			$this->suppFile->setArticleId($this->articleId);
+			$this->suppFile->setFileId($fileId);
+
+			parent::execute();
+
+			$this->setSuppFileData($this->suppFile);
+			$suppFileDao->insertSuppFile($this->suppFile);
+			$this->suppFileId = $this->suppFile->getId();
 		}
 
 		return $this->suppFileId;
