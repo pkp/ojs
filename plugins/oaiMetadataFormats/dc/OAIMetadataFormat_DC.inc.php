@@ -122,7 +122,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 				$this->formatElement('type', $types, true) .
 				$this->formatElement('format', $formats) .
 				$this->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
-				(($doi = $article->getDOI())?$this->formatElement('identifier', $doi, false, array('xsi:type' => 'dcterms:DOI')):'') .
+				(($doi = $article->getDOI())?$this->formatElement('identifier', $doi, false):'') .
 				$this->formatElement('source', $sources, true) .
 				$this->formatElement('language', $languages) .
 				$this->formatElement('relation', $relation) .

@@ -433,7 +433,7 @@ class OpenAIREPlugin extends GenericPlugin {
 			$dcOAIMetadataFormat->formatElement('type', $types, true) .
 			$dcOAIMetadataFormat->formatElement('format', $formats) .
 			$dcOAIMetadataFormat->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
-			(($doi = $article->getDOI())?$dcOAIMetadataFormat->formatElement('identifier', $doi, false, array('xsi:type' => 'dcterms:DOI')):'') .
+			(($doi = $article->getDOI())?$dcOAIMetadataFormat->formatElement('identifier', $doi, false):'') .
 			$dcOAIMetadataFormat->formatElement('source', $sources, true) .
 			$dcOAIMetadataFormat->formatElement('language', strip_tags($article->getLanguage())) .
 			$dcOAIMetadataFormat->formatElement('relation', $relation) .
