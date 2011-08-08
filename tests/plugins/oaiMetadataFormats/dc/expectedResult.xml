@@ -18,7 +18,7 @@
 	<dc:type xml:lang="en-US">art-type</dc:type>
 	<dc:format>galley-filetype</dc:format>
 	<dc:identifier>router-url</dc:identifier>
-	<dc:identifier xsi:type="dcterms:DOI">article-doi</dc:identifier>
+	<dc:identifier>article-doi</dc:identifier>
 	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
 	<dc:language>en_US</dc:language>
 	<dc:relation>router-url</dc:relation>

@@ -152,7 +152,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Identifier: DOI
 		if($doi = $article->getDOI()) {
-			$dc11Description->addStatement('dc:identifier[@xsi:type="dcterms:DOI"]', $doi);
+			$dc11Description->addStatement('dc:identifier', $doi);
 		}
 
 		// Source (journal title, issue id and pages)
