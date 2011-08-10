@@ -149,6 +149,7 @@
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
 	<schema file="lib/pkp/xml/schema/comments.xml" />
 	<schema file="lib/pkp/xml/schema/notes.xml" />
+	<schema file="lib/pkp/xml/schema/mutex.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -267,6 +268,12 @@
 		<data file="plugins/generic/counter/counter_monthly_log_1_1.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
+		<!-- 2.x to 2.4 -->
+		<!-- Mutex help table. -->
+		<data file="lib/pkp/xml/mutexData.xml" />
+	</upgrade>
+	
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

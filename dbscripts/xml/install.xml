@@ -29,7 +29,11 @@
 	<schema file="lib/pkp/xml/schema/notes.xml" />
 	<schema file="lib/pkp/xml/schema/metadata.xml" />
 	<schema file="lib/pkp/xml/schema/gifts.xml" />
+	<schema file="lib/pkp/xml/schema/mutex.xml" />
 
+	<!-- PKP data components -->
+	<data file="lib/pkp/xml/mutexData.xml" />
+	
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
 
