@@ -41,7 +41,7 @@
 				// PUBLISHING_MODE_OPEN
 				form.openAccessPolicy.disabled = false;
 				form.showGalleyLinks.disabled = true;
-			} elseif (form.publishingMode[1].checked) {
+			} else if (form.publishingMode[1].checked) {
 				// PUBLISHING_MODE_SUBSCRIPTION
 				form.openAccessPolicy.disabled = true;
 				form.showGalleyLinks.disabled = false;
