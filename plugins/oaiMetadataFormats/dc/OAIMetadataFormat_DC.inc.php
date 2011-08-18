@@ -165,14 +165,18 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		$response = '';
 		foreach ($value as $key => $v) {
 			$key = str_replace('_', '-', $key);
-			if (!$multilingual) $response .= "\t<dc:$name$attribText>" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
+			if (!$multilingual && $v != '') $response .= "\t<dc:$name$attribText>" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
 			else {
 				if (is_array($v)) {
 					foreach ($v as $subV) {
-						$response .= "\t<dc:$name xml:lang=\"$key\">" . OAIUtils::prepOutput($subV) . "</dc:$name>\n";
+						if ($subV != '') {
+							$response .= "\t<dc:$name xml:lang=\"$key\">" . OAIUtils::prepOutput($subV) . "</dc:$name>\n";
+						}
 					}
 				} else {
-					$response .= "\t<dc:$name xml:lang=\"$key\">" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
+					if ($v != '') {
+						$response .= "\t<dc:$name xml:lang=\"$key\">" . OAIUtils::prepOutput($v) . "</dc:$name>\n";
+					}
 				}
 			}
 		}
