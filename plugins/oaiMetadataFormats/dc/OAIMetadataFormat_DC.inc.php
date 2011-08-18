@@ -63,8 +63,11 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$contributors = $this->stripAssocArray((array) $article->getSponsor(null));
 			foreach ($contributors as $key => $contributor) {
 				$contributors[$key] = array_map('trim', explode(';', $contributor));
-			}	
+			}
+				
 			// Types
+			$driverType = 'info:eu-repo/semantics/article';
+			$driverVersion = 'info:eu-repo/semantics/publishedVersion';
 			$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
 			$types = array_merge_recursive(
 				empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
@@ -119,7 +122,9 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 				$this->formatElement('publisher', $publishers, true) .
 				$this->formatElement('contributor', $contributors, true) .
 				$this->formatElement('date', date('Y-m-d', strtotime($issue->getDatePublished()))) .
+				$this->formatElement('type', $driverType) .
 				$this->formatElement('type', $types, true) .
+				$this->formatElement('type', $driverVersion) .
 				$this->formatElement('format', $formats) .
 				$this->formatElement('identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
 				(($doi = $article->getDOI())?$this->formatElement('identifier', $doi, false):'') .
