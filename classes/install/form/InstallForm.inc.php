@@ -78,6 +78,10 @@ class InstallForm extends Form {
 		if (function_exists('sha1')) {
 			$this->supportedEncryptionAlgorithms['sha1'] = 'SHA1';
 		}
+		if (CRYPT_BLOWFISH == 1) {
+			$this->supportedEncryptionAlgorithms['bcrypt'] = 'BCRYPT';
+		}
+
 
 		$this->supportedDatabaseDrivers = array (
 			// <adodb-driver> => array(<php-module>, <name>)
