@@ -39,7 +39,7 @@
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>欢迎来到{$siteTitle}邮件列表!</subject>
 		<body>您已签署接收来自{$siteTitle}的通知。
-			
+
 请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}
 
 如果您想停止接收邮件通知，请前往{$unsubscribeLink}然后输入您的邮件地址和密码。
@@ -48,15 +48,6 @@
 
 {$principalContactSignature}</body>
 		<description>这封电子邮件是发送给刚刚从通知邮件列表中注册的未注册用户.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>你在{$siteTitle}的通知邮件列表信息</subject>
-		<body>您用来禁用邮件通知的新密码是：{$password}
-
-如果您想停止接收邮件通知，请前往{$unsubscribeLink}然后输入您的邮件地址和密码。
-
-{$principalContactSignature}</body>
-		<description>这封电子邮件是发送给通知邮件列表上的未注册用户。当他们表明忘记密码或者无法登录的时候为他们提供一个重置密码的URL。</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>密码重置确认</subject>
@@ -178,7 +169,7 @@
 		<subject>不适合的稿件</subject>
 		<body>{$authorName}:
 
-我们针对〈{$articleTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$journalName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。 
+我们针对〈{$articleTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$journalName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -194,7 +185,7 @@
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>对于〈{$articleTitle}〉的决定意见</subject>
 		<body>您身为投稿到《{$journalName}》之稿件〈{$articleTitle}〉的审查人之一，我寄给您已经寄发给作者的审查意见书以及编辑决定意见。再次感谢您对这个审查程序所做出的重要贡献。
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -455,8 +446,8 @@
 我们现在已经完成您投到{$journalName}的"{$articleTitle}" 的文字编辑.通过如下步骤，审查拟议的修改并回复到作者质询:
 
 1. 通过下面的期刊URL以您的用户名和密码登录到指定期刊 (需要的时候可以使用忘记链接).
-2. 点击起始文字编辑文件并下载文件1，并且打开文字编辑版本. 
-3. 审查文字编辑，使用Word的跟踪变化作出适当修改，并回答质询. 
+2. 点击起始文字编辑文件并下载文件1，并且打开文字编辑版本.
+3. 审查文字编辑，使用Word的跟踪变化作出适当修改，并回答质询.
 4. 保存文件到桌面，并且将文件上传到作者文字编辑的文件2.
 5. 点击email图标完成编辑，并且发送邮件给编辑.
 
@@ -828,7 +819,7 @@ Username: {$layoutEditorUsername}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>订阅购买: 团体</subject>
-		<body>一个《{$journalName} 》的团体订阅已经被在线购买，详细如下： 
+		<body>一个《{$journalName} 》的团体订阅已经被在线购买，详细如下：
 		激活这个订阅, 请使用提供的订阅URL，并且设置订阅状态为'激活（Active）'.
 
 订阅类型:

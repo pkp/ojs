@@ -1304,6 +1304,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
+	 * @param $request Request
 	 */
 	function saveSuppFile($args, $request) {
 		$articleId = $request->getUserVar('articleId');
@@ -1323,16 +1324,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.suppFileModified',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED
+					$request, $userRole['id'], NOTIFICATION_TYPE_SUPP_FILE_MODIFIED,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 
@@ -1628,8 +1628,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Save changes to a galley.
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request Request
 	 */
-	function saveGalley($args) {
+	function saveGalley($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -1645,16 +1646,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = Request::url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.galleyModified',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_GALLEY_MODIFIED
+					$request, $userRole['id'], NOTIFICATION_TYPE_GALLEY_MODIFIED,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 

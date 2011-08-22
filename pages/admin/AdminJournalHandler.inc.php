@@ -98,9 +98,11 @@ class AdminJournalHandler extends AdminHandler {
 			PluginRegistry::loadCategory('blocks');
 			$settingsForm->execute();
 
-			import('lib.pkp.classes.notification.NotificationManager');
+			$user =& $request->getUser();
+
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+			$notificationManager->createTrivialNotification($user->getId());
 			$request->redirect(null, null, 'journals');
 
 		} else {

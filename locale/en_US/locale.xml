@@ -555,7 +555,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="reviewer.article.recommendation">Recommendation</message>
 	<message key="reviewer.article.submitReview">Submit Review To Editor</message>
 	<message key="reviewer.article.reviewerComments">Comments</message>
-	<message key="reviewer.article.uploadedFile">Uploaded files</message>	
+	<message key="reviewer.article.uploadedFile">Uploaded files</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
         <message key="reviewer.article.schedule.request">Editor's Request</message>
@@ -682,7 +682,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the 
+	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the
 current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 
 	<!-- Registration -->
@@ -1102,24 +1102,24 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.mailListDescription">Enter your email address to receive immediate notifications of important new content added to the journal.</message>
 	<message key="notification.notificationsPublicDescription">This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
 
-	<message key="notification.type.articleSubmitted">A new article, "{$param}", has been submitted.</message>
-	<message key="notification.type.copyeditComment">A copyeditor has left a comment on "{$param}".</message>
+	<message key="notification.type.articleSubmitted">A new article, "{$title}", has been submitted.</message>
+	<message key="notification.type.copyeditComment">A copyeditor has left a comment on "{$title}".</message>
 	<message key="notification.type.editing">Editing Events</message>
-	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$param}".</message>
-	<message key="notification.type.galleyModified">A galley has been modified for "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$title}".</message>
+	<message key="notification.type.galleyModified">A galley has been modified for "{$title}".</message>
 	<message key="notification.type.issuePublished">An issue has been published.</message>
-	<message key="notification.type.layoutComment">A comment has been left about "{$param}'s" layout.</message>
-	<message key="notification.type.metadataModified">"{$param}'s" metadata has been modified.</message>
-	<message key="notification.type.newAnnouncement">A new announcement has been created.</message>	
-	<message key="notification.type.proofreadComment">A comment has been left by a proofreader on "{$param}".</message>
-	<message key="notification.type.reviewerComment">A reviewer has commented on "{$param}".</message>
-	<message key="notification.type.reviewerFormComment">A review form review has been submitted for "{$param}".</message>
+	<message key="notification.type.layoutComment">A comment has been left about "{$title}'s" layout.</message>
+	<message key="notification.type.metadataModified">"{$title}'s" metadata has been modified.</message>
+	<message key="notification.type.newAnnouncement">A new announcement has been created.</message>
+	<message key="notification.type.proofreadComment">A comment has been left by a proofreader on "{$title}".</message>
+	<message key="notification.type.reviewerComment">A reviewer has commented on "{$title}".</message>
+	<message key="notification.type.reviewerFormComment">A review form review has been submitted for "{$title}".</message>
 	<message key="notification.type.reviewing">Reviewing Events</message>
 	<message key="notification.type.site">Site Events</message>
-	<message key="notification.type.submissionComment">An editor has made a comment on "{$param}".</message>
+	<message key="notification.type.submissionComment">An editor has made a comment on "{$title}".</message>
 	<message key="notification.type.submissions">Submission Events</message>
-	<message key="notification.type.suppFileModified">"{$param}'s" supplementary file(s) has been modified.</message>
-	<message key="notification.type.userComment">A reader has made a comment on "{$param}"</message>
+	<message key="notification.type.suppFileModified">"{$title}'s" supplementary file(s) has been modified.</message>
+	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
 
 	<!--
 	 *

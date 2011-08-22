@@ -3,7 +3,7 @@
 /**
  * @defgroup submission_proofreader_ProofreaderAction
  */
- 
+
 /**
  * @file classes/submission/proofreader/ProofreaderAction.inc.php
  *
@@ -156,7 +156,7 @@ class ProofreaderAction extends Action {
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateNotified';
 				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
-				
+
 				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
@@ -176,7 +176,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER;
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateAcknowledged';
-			
+
 				$receiver = $sectionEditorSubmission->getUserBySignoffType($signoffType);
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
@@ -194,7 +194,7 @@ class ProofreaderAction extends Action {
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateCompleted';
 				$getDateField = 'getDateCompleted';
-				
+
 				$setNextDateField = 'setDateNotified';
 				$nextSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 
@@ -272,7 +272,7 @@ class ProofreaderAction extends Action {
 
 				$addParamArray = array(
 					'layoutEditorName' => $receiverName,
-					'editorialContactSignature' => $user->getContactSignature() 	
+					'editorialContactSignature' => $user->getContactSignature()
 				);
 				break;
 
@@ -308,13 +308,13 @@ class ProofreaderAction extends Action {
 				break;
 
 			default:
-				return true;	
+				return true;
 		}
 
 		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $articleId);
 
 		if (isset($getDateField)) {
-			$date = $signoff->$getDateField();		
+			$date = $signoff->$getDateField();
 			if (isset($date)) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
@@ -349,10 +349,10 @@ class ProofreaderAction extends Action {
 			if (isset($nullifyDateFields)) foreach ($nullifyDateFields as $fieldSetter) {
 				$signoff->$fieldSetter(null);
 			}
-			
+
 			$signoffDao->updateObject($signoff);
 			if(isset($nextSignoff)) $signoffDao->updateObject($nextSignoff);
-		
+
 			return true;
 		}
 
@@ -434,6 +434,7 @@ class ProofreaderAction extends Action {
 	 * Post proofread comment.
 	 * @param $article object
 	 * @param $emailComment boolean
+	 * @param $request Request
 	 */
 	function postProofreadComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('ProofreaderAction::postProofreadComment', array(&$article, &$emailComment))) {
@@ -446,17 +447,16 @@ class ProofreaderAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.proofreadComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_PROOFREAD_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email($request);
 				}
@@ -487,7 +487,7 @@ class ProofreaderAction extends Action {
 	 * Post layout comment.
 	 * @param $article object
 	 * @param $emailComment boolean
-	 * @param $request object
+	 * @param $request Request
 	 */
 	function postLayoutComment($article, $emailComment, $request) {
 		if (!HookRegistry::call('ProofreaderAction::postLayoutComment', array(&$article, &$emailComment))) {
@@ -498,19 +498,18 @@ class ProofreaderAction extends Action {
 
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-								
+
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.layoutComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_LAYOUT_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email($request);
 				}

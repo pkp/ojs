@@ -1836,7 +1836,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
-	 * @param $request object
+	 * @param $request Request
 	 */
 	function postPeerReviewComment(&$article, $reviewId, $emailComment, $request) {
 		if (HookRegistry::call('SectionEditorAction::postPeerReviewComment', array(&$article, &$reviewId, &$emailComment))) return;
@@ -1850,14 +1850,13 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-			$notificationUsers = $article->getAssociatedUserIds();
+			$notificationUsers = $article->getAssociatedUserIds(false, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.reviewerComment',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT
+					$request, $userRole['id'], NOTIFICATION_TYPE_REVIEWER_COMMENT,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 
@@ -1890,7 +1889,7 @@ class SectionEditorAction extends Action {
 	 * Post editor decision comment.
 	 * @param $article int
 	 * @param $emailComment boolean
-	 * @param $request object
+	 * @param $request Request
 	 */
 	function postEditorDecisionComment($article, $emailComment, $request) {
 		if (HookRegistry::call('SectionEditorAction::postEditorDecisionComment', array(&$article, &$emailComment))) return;
@@ -1904,14 +1903,13 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.editorDecisionComment',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT
+					$request, $userRole['id'], NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 
@@ -2150,14 +2148,13 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'copyedit');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.copyeditComment',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_COPYEDIT_COMMENT
+					$request, $userRole['id'], NOTIFICATION_TYPE_COPYEDIT_COMMENT,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 
@@ -2189,6 +2186,7 @@ class SectionEditorAction extends Action {
 	 * Post layout comment.
 	 * @param $article object
 	 * @param $emailComment boolean
+	 * @param $request Request
 	 */
 	function postLayoutComment($article, $emailComment, $request) {
 		if (HookRegistry::call('SectionEditorAction::postLayoutComment', array(&$article, &$emailComment))) return;
@@ -2202,14 +2200,13 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.layoutComment',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
+					$request, $userRole['id'], NOTIFICATION_TYPE_LAYOUT_COMMENT,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 
@@ -2241,7 +2238,7 @@ class SectionEditorAction extends Action {
 	 * Post proofread comment.
 	 * @param $article object
 	 * @param $emailComment boolean
-	 * @param $request object
+	 * @param $request Request
 	 */
 	function postProofreadComment($article, $emailComment, $request) {
 		if (HookRegistry::call('SectionEditorAction::postProofreadComment', array(&$article, &$emailComment))) return;
@@ -2255,14 +2252,13 @@ class SectionEditorAction extends Action {
 			$commentForm->execute();
 
 			// Send a notification to associated users
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
-				$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 				$notificationManager->createNotification(
-					$userRole['id'], 'notification.type.proofreadComment',
-					$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
+					$request, $userRole['id'], NOTIFICATION_TYPE_PROOFREAD_COMMENT,
+					$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 				);
 			}
 

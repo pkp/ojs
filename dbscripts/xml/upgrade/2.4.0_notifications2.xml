@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_notifications2.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 Database update XML file; Drops the notification*_old tables now that we've migrated them
+  *
+  * $Id$
+  -->
+
+<data>
+	<sql>
+		<drop table="notifications_old" />
+		<drop table="notification_settings_old" />
+		<query>DELETE FROM email_templates_default_data WHERE email_key = 'NOTIFICATION_MAILLIST_PASSWORD'</query>
+	</sql>
+</data>

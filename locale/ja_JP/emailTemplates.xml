@@ -136,7 +136,7 @@
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>「{$articleTitle}」に対する判断</subject>
 		<body>雑誌『{$journalName}』への投稿物「{$articleTitle}」の査読者の1人として、この投稿物の著者に送る査読結果と編集上の判断を送付します。本プロセスの遂行に当たって、貴殿の多大なるご協力に感謝いたします。
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -391,7 +391,7 @@
 
 原稿のURL: {$submissionCopyeditingUrl}
 ユーザ名: {$authorUsername}
- 
+
 今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
 
 よろしくお願いいたします。
@@ -723,7 +723,7 @@
 		<subject>アカウントの確認</subject>
 		<body>{$userFullName} 様
 
-雑誌「{$journalName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。 
+雑誌「{$journalName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。
 Y
 {$activateUrl}
 
@@ -791,24 +791,13 @@ Link: {$url}
 		<subject>編集者の判断</subject>
 		<body>{$authorName}:
 
-私たちはあなたが {$journalTitle}, に投稿された "{$articleTitle}"  
+私たちはあなたが {$journalTitle}, に投稿された "{$articleTitle}"
 について結論に達しました。
 
 結果:
 
 {$editorialContactSignature}</body>
 		<description></description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>あなたの {$siteTitle} についての通知メーリングリスト情報</subject>
-		<body>あなたの通知メール停止のための新しいパスワードは
-{$password}
-です。
-
-もし通知メールの受信を停止したい場合は，下記のページであなたのメールアドレスとパスワードを入力してください。
-{$unsubscribeLink} 
-
-{$principalContactSignature}</body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>編集者の判断</subject>

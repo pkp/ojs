@@ -31,7 +31,7 @@ Link: {$url}
 Link: {$url}
 --
 
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>This email is sent to unregistered users on the notification mailing list.</description>
@@ -39,24 +39,13 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
 		<body>You have signed up to receive notifications from {$siteTitle}.
-			
+
 Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
 
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
-
-Your password for disabling notification emails is: {$password}
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Your notification mailing list information for {$siteTitle}</subject>
-		<body>Your new password for disabling notification emails is: {$password}
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
-
-{$principalContactSignature}</body>
-		<description>This email is sent to an unregistered user on the notification mailing list when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Password Reset Confirmation</subject>
@@ -193,7 +182,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decision on "{$articleTitle}"</subject>
 		<body>As one of the reviewers for the submission, "{$articleTitle}," to {$journalName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -203,7 +192,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		<subject>Editorial Assignment</subject>
 		<body>{$editorialContactName}:
 
-The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
+The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.
 
 Submission URL: {$submissionUrl}
 Username: {$editorUsername}
@@ -440,7 +429,7 @@ I would ask that you undertake the copyediting of "{$articleTitle}" for {$journa
 1. Click on the Submission URL below.
 2. Log into the journal and click on the File that appears in Step 1.
 3. Consult Copyediting Instructions posted on webpage.
-4. Open the downloaded file and copyedit, while adding Author Queries as needed. 
+4. Open the downloaded file and copyedit, while adding Author Queries as needed.
 5. Save copyedited file, and upload to Step 1 of Copyediting.
 6. Send the COMPLETE email to the editor.
 
@@ -458,8 +447,8 @@ Username: {$copyeditorUsername}
 We have now copyedited your submission "{$articleTitle}" for {$journalName}. To review the proposed changes and respond to Author Queries, please follow these steps:
 
 1. Log into the journal using URL below with your username and password (use Forgot link if needed).
-2. Click on the file at 1. Initial Copyedit File to download and open copyedited version. 
-3. Review the copyediting, making changes using Track Changes in Word, and answer queries. 
+2. Click on the file at 1. Initial Copyedit File to download and open copyedited version.
+3. Review the copyediting, making changes using Track Changes in Word, and answer queries.
 4. Save file to desktop and upload it in 2. Author Copyedit.
 5. Click the email icon under COMPLETE and send email to the editor.
 
@@ -585,7 +574,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Galleys Complete</subject>
 		<body>{$editorialContactName}:
 
-Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading. 
+Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading.
 
 If you have any questions, please contact me.
 

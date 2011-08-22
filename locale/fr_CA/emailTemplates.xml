@@ -81,9 +81,9 @@ Merci,
 
 Le programme LOCKSS <http://lockss.org/>, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir les détails ci-dessous. Le logiciel est gratuit et fonctionne sur tout ordinateur personnel. Il est facile de le mettre en ligne et ne requiert que très peu de maintenance.
 
-Pour nous aider dans le processus d'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider la collection et la préservation des titres produits par votre faculté et par les autres chercheurs à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. 
+Pour nous aider dans le processus d'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider la collection et la préservation des titres produits par votre faculté et par les autres chercheurs à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système.
 
-Nous attendons de vos nouvelles pour savoir s'il est possible pour vous de fournir un support d'archivage pour cette revue. 
+Nous attendons de vos nouvelles pour savoir s'il est possible pour vous de fournir un support d'archivage pour cette revue.
 
 Merci,
 {$principalContactSignature}]]></body>
@@ -107,7 +107,7 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 		<subject>Soumission non conforme</subject>
 		<body><![CDATA[{$authorName}:
 
-Une évaluation initiale de votre manuscrit intitulé « {$articleTitle} » a démontré que votre soumission ne se conforme pas aux orientations de la revue {$journalName}. Nous vous suggérons de consulter la description de cette revue en cliquant sur l'onglet « À propos de la revue » et en lisant le contenu de la revue pour en apprendre davantage sur les articles que nous publions. Vous pourriez aussi considérer soumettre votre manuscrit à une revue plus appropriée. 
+Une évaluation initiale de votre manuscrit intitulé « {$articleTitle} » a démontré que votre soumission ne se conforme pas aux orientations de la revue {$journalName}. Nous vous suggérons de consulter la description de cette revue en cliquant sur l'onglet « À propos de la revue » et en lisant le contenu de la revue pour en apprendre davantage sur les articles que nous publions. Vous pourriez aussi considérer soumettre votre manuscrit à une revue plus appropriée.
 
 {$editorialContactSignature}]]></body>
 		<description></description>
@@ -197,7 +197,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:
 
-Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel. 
+Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel.
 
 Veuillez nous faire savoir par courriel d'ici le {$weekLaterDate} si vous acceptez ou non d'effectuer cette évaluation.
 
@@ -374,14 +374,14 @@ Nous avons maintenant terminé la révision initiale de votre manuscrit intitul�
 2. Se connecter au site Web de la revue et cliquer sur le fichier qui apparaît à l'Étape 1.
 3. Ouvrir la soumission téléchargée.
 4. Évaluer le texte, incluant les propositions de révision et les requêtes de l'auteur.
-5. Effectuer toutes les modifications nécessaires qui pourrait améliorer le texte. 
+5. Effectuer toutes les modifications nécessaires qui pourrait améliorer le texte.
 6. Lorsque tout est complété, téléchargé le fichier à l'Étape 2.
 7. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation afin de vous assurer que tout êtes exact et complet.
 8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.
 
 URL de la soumission : {$submissionCopyeditingUrl}
 Nom d'utilisateur : {$authorUsername}
- 
+
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.
 
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.
@@ -467,7 +467,7 @@ Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des qu
 		<subject>Mise en page des épreuves terminée</subject>
 		<body><![CDATA[{$editorialContactName}:
 
-Les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName} sont maintenant prêtes pour la révision. 
+Les épreuves du manuscrit intitulé « {$articleTitle} » pour {$journalName} sont maintenant prêtes pour la révision.
 
 Si vous avez des questions, n'hésitez pas à communiquer avec moi.
 
@@ -729,20 +729,12 @@ Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsu
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Bienvenue à la liste de diffusion de {$siteTitle}!</subject>
 		<body>Vous vous êtes inscrits pour recevoir des avis de {$siteTitle}.
-			
+
 Veuillez cliquer sur ce lien pour confirmer votre demande et ajouter votre adresse de courriel à la liste de diffusion : {$confirmLink}
 
 Si vous souhaitez  arrêter l'envoi d'avis par courriels, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.
 
 Votre mot de passe pour désactiver les courriels d'avis est : {$password}
-
-{$principalContactSignature}</body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Votre information de liste de diffusion d'avis pour {$siteTitle}</subject>
-		<body>Votre nouveau mot de passe pour désactiver les avis par courriel est : {$password}
-
-Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.
 
 {$principalContactSignature}</body>
 	</email_text>

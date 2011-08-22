@@ -9,7 +9,7 @@
  * @class SubmissionReviewHandler
  * @ingroup pages_reviewer
  *
- * @brief Handle requests for submission tracking. 
+ * @brief Handle requests for submission tracking.
  */
 
 // $Id$
@@ -19,10 +19,10 @@ import('pages.reviewer.ReviewerHandler');
 class SubmissionReviewHandler extends ReviewerHandler {
 	/** submission associated with the request **/
 	var $submission;
-	
+
 	/** user associated with the request **/
 	var $user;
-		
+
 	/**
 	 * Constructor
 	 **/
@@ -72,7 +72,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
-		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.review');		
+		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.review');
 		$templateMgr->display('reviewer/submission.tpl');
 	}
 
@@ -167,7 +167,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
-		
+
 		ReviewerAction::uploadReviewerVersion($reviewId, $this->submission, $request);
 		$request->redirect(null, null, 'submission', $reviewId);
 	}
@@ -175,7 +175,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	/*
 	 * Delete one of the reviewer's annotated versions of an article.
 	 */
-	function deleteReviewerVersion($args, $request) {		
+	function deleteReviewerVersion($args, $request) {
 		$reviewId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revision = (int) array_shift($args);
@@ -221,7 +221,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 */
 	function editReviewFormResponse($args, $request) {
 		$reviewId = (int) array_shift($args);
-		
+
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
@@ -245,7 +245,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		// For form errors (#6562)
 		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 
-		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId)) {
+		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId, $request)) {
 			$request->redirect(null, null, 'submission', $reviewId);
 		}
 	}

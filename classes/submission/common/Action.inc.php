@@ -150,13 +150,13 @@ class Action extends PKPAction {
 				$metadataForm->execute($request);
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = $router->url($request, null, $userRole['role'], 'submission', $article->getId(), null, 'metadata');
-					$notificationManager->createNotification($userRole['id'], 'notification.type.metadataModified',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_METADATA_MODIFIED
+					$notificationManager->createNotification(
+						$request, $userRole['id'], NOTIFICATION_TYPE_METADATA_MODIFIED,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
 
@@ -266,14 +266,13 @@ class Action extends PKPAction {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'editorDecision');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.submissionComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_SUBMISSION_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_SUBMISSION_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
 

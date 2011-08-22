@@ -54,9 +54,10 @@ class JournalLanguagesHandler extends ManagerHandler {
 
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-			import('lib.pkp.classes.notification.NotificationManager');
+			$user =& $request->getUser();
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+			$notificationManager->createTrivialNotification($user->getId());
 			$request->redirect(null, null, 'index');
 		} else {
 			$settingsForm->display();
@@ -91,10 +92,12 @@ class JournalLanguagesHandler extends ManagerHandler {
 			$locale
 		);
 
+		$user =& $request->getUser();
+
 		// Display a notification
-		import('lib.pkp.classes.notification.NotificationManager');
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
-		$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+		$notificationManager->createTrivialNotification($user->getId());
 		$request->redirect(null, null, 'languages');
 	}
 }

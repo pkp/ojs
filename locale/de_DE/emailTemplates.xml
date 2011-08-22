@@ -39,7 +39,7 @@ Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Willkommen zu der  {$siteTitle}-Mailingliste!</subject>
 		<body>Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.
-			
+
 Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}
 
 Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.
@@ -48,15 +48,6 @@ Ihr Passwort zum Abbestellen der Mailingliste ist: {$password}
 
 {$principalContactSignature}</body>
 		<description>Diese E-Mail wird an Benutzer/innen gesendet, die gerade die Benachrichtigungs-Mailingliste abonniert haben.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Informationen zur Benachrichtigungs-Mailingliste von {$siteTitle}</subject>
-		<body>Ihr neues Passwort zum Abbestellen der Mailingliste ist: {$password}
-
-Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.
-
-{$principalContactSignature}</body>
-		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Reset-Bestätigung für Ihr Passwort</subject>
@@ -139,7 +130,7 @@ Die Webadresse der LOCKSS-Erklärung für unsere Zeitschrift ist: {$journalUrl}/
 
 Wir gehen von der Annahme aus, dass Sie bereits an LOCKSS beteiligt sind. Falls weitere Metadaten zur Aufnahme unserer Zeitschrift in Ihre Version von LOCKSS gebraucht werden, stellen wir sie Ihnen gern zur Verfügung.
 
-Vielen Dank, 
+Vielen Dank,
 {$principalContactSignature}</body>
 		<description>Diese E-Mail bittet die/den Verwalter/in eines LOCKSS-Archivs zu überlegen, diese Zeitschrift in ihr/sein Archiv aufzunehmen. Sie liefert die URL zur LOCKSS-Erklärung der Herausgeber/innen der Zeitschrift.</description>
 	</email_text>
@@ -161,7 +152,7 @@ Vielen Dank,
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Eingangsbestätigung</subject>
-		<body>{$authorName}, 
+		<body>{$authorName},
 
 vielen Dank für die Einreichung Ihres Manuskript "{$articleTitle}" zur Veröffentlichung in {$journalName}. Das Verwaltungssystem unserer Webzeitschrift erlaubt Ihnen, jederzeit den Lauf Ihres Beitrags im Redaktionsprozess zu beobachten. Sie loggen sich dazu einfach auf unserer Webseite ein:
 
@@ -177,7 +168,7 @@ Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interes
 		<subject>Ungeeigneter Beitrag</subject>
 		<body>{$authorName},
 
-eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$journalName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter "Über uns" und die aktuellen Inhalte anseehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen. 
+eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$journalName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter "Über uns" und die aktuellen Inhalte anseehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -193,7 +184,7 @@ eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderun
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Entscheidung zu "{$articleTitle}</subject>
 		<body>Als Gutachter/in zur Einreichung "{$articleTitle}" für {$journalName} sende ich Ihnen die Gutachten und die redaktionelle Entscheidung, die an die Autorin/den Autor des Textes geschickt worden sind. Vielen Dank nochmals für den wichtigen Beitrag, den Sie zu diesem Prozess geleistet haben.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -334,7 +325,7 @@ vielen Dank für Ihr Gutachten zum Beitrag "{$articleTitle}" für {$journalName}
 
 wir möchten Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten bis zum {$reviewDueDate} zu erhalten. Wir würden uns freuen, wenn es uns baldmöglichst zur Verfügung stünde.
 
-Falls Ihnen Benutzer/innenname und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl} 
+Falls Ihnen Benutzer/innenname und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}
 
 URL des Beitrags: {$submissionReviewUrl}
 
@@ -362,7 +353,7 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 
 hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$articleTitle}" für {$journalName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.
 
-Falls Ihnen Benutzer/innennamen und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl} 
+Falls Ihnen Benutzer/innennamen und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}
 
 URL des Beitrags: {$submissionReviewUrl}
 
@@ -379,7 +370,7 @@ hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag "{$arti
 
 URL des Beitrags: {$submissionReviewUrl}
 
-Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift mit Ihrer wertvollen gutachterlichen Arbeit zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören. 
+Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift mit Ihrer wertvollen gutachterlichen Arbeit zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.
 
 {$editorialContactSignature}</body>
 		<description>Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website).</description>
@@ -468,14 +459,14 @@ Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen
 URL des Beitrags: {$submissionEditingUrl}
 Benutzer/innenname: {$authorUsername}
 
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, 
+Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben,
 geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.
- 
+
 {$copyeditorName}</body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Eingangsbestätigung für lektorierte Fassung</subject>
-		<body>{$copyeditorName}, 
+		<body>{$copyeditorName},
 
 vielen Dank für das Lektorat des Manuskripts "{$articleTitle}". Ihre Mitarbeit unterstützt uns bei den Bemühungen, die Qualität der Beiträge in {$journalName} zu sichern.
 
@@ -484,7 +475,7 @@ vielen Dank für das Lektorat des Manuskripts "{$articleTitle}". Ihre Mitarbeit 
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Bitte um Durchsicht der lektorierten Fassung</subject>
-		<body>{$authorName},	
+		<body>{$authorName},
 
 Ihre Einreichung "{$articleTitle}" für {$journalName} hat den ersten Lektoratsschritt passiert, und Sie können ihn jetzt durchsehen. Gehen Sie bitte folgendermaßen vor:
 
@@ -501,7 +492,7 @@ Benutzer/innename: {$authorUsername}
 
 Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden danach noch gebeten, die Fahnen zu korrigieren. Dann können Sie jedoch nur noch kleinere Typographie- und Layoutfehler korrigieren.
 
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, benachrichtigen Sie mich bitte. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift. 
+Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, benachrichtigen Sie mich bitte. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.
 
 {$editorialContactSignature}</body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um diese/n darum zu bitten, die Arbeit der Lektorin/des Lektors korrekturzulesen. Sie liefert Informationen über den Zugang zu dem Manuskript und weist darauf hin, dass dies die letzte Gelegenheit für die Autorin/den Autor ist, nennenswerte Änderungen vorzunehmen.</description>
@@ -512,7 +503,7 @@ Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzuko
 
 ich habe nun die lektorierte Fassung meines Manuskripts "{$articleTitle}" für {$journalName} korrigiert. Es steht damit für die abschließende Durchsicht und die Vorbereitung des Layouts für die Veröffentlichung in {$journalName} zur Verfügung.
 
-Mit bestem Dank für Ihre Bemühungen um meinen Beitrag, 
+Mit bestem Dank für Ihre Bemühungen um meinen Beitrag,
 {$authorName}</body>
 		<description>This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</description>
 	</email_text>
@@ -634,7 +625,7 @@ ich habe die Fahnenkorrekturen meines Manuskripts "{$articleTitle}" für {$journ
 
 vielen Dank für die Fahnenkorrektur Ihres Manuskripts "{$articleTitle}". Wir freuen uns auf die baldige Veröffentlichung Ihres Beitrags in {$journalName}.
 
-Wenn Sie sich für unseren Benachrichtigungsdienst einschreiben, erhalten Sie gleich bei Erscheinen eine E-Mail mit dem Inhaltsverzeichnis der neuen Nummer. Falls Sie Fragen haben, benachrichtigen Sie uns bitte. 
+Wenn Sie sich für unseren Benachrichtigungsdienst einschreiben, erhalten Sie gleich bei Erscheinen eine E-Mail mit dem Inhaltsverzeichnis der neuen Nummer. Falls Sie Fragen haben, benachrichtigen Sie uns bitte.
 
 {$editorialContactSignature}</body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in bestätigt den Abschluss des ersten Korrekturlektoratdurchgangs und dankt ihr/ihm für die Mitwirkung.</description>
@@ -663,7 +654,7 @@ Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzuko
 		<subject>Lektorat beendet</subject>
 		<body>{$editorialContactName},
 
-ich habe das Lektorat für das Manuskript "{$articleTitle}" für {$journalName} beendet. Die Fahnen sind für die Endkorrekturen durch die Layoutredakteurin/den Layoutredakteur fertiggestellt. 
+ich habe das Lektorat für das Manuskript "{$articleTitle}" für {$journalName} beendet. Die Fahnen sind für die Endkorrekturen durch die Layoutredakteurin/den Layoutredakteur fertiggestellt.
 
 {$proofreaderName}</body>
 		<description>Diese E-Mail von der/dem Korrekturlektor/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass die/der Korrekturlektor/in das Korrekturlektorat beendet hat.</description>
@@ -731,7 +722,7 @@ Um auf Inhalte, die nur Abonnent/innen zur Verfügung stehen, zuzugreifen, logge
 
 Einmal eingeloggt, können Sie jederzeit die Einzelheiten Ihres Benutzer/innenprofils und Ihr Passwort ändern.
 
-Beachten Sie bitte, dass Sie sich nicht einloggen müssen, wenn Sie ein institutionelles Abonnement haben. Das System gestattet Ihnen dann automatisch den Zugang zu den Inhalten für Abonnent/innen. 
+Beachten Sie bitte, dass Sie sich nicht einloggen müssen, wenn Sie ein institutionelles Abonnement haben. Das System gestattet Ihnen dann automatisch den Zugang zu den Inhalten für Abonnent/innen.
 
 Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
 

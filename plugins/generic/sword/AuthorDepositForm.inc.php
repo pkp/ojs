@@ -78,15 +78,17 @@ class AuthorDepositForm extends Form {
 
 	/**
 	 * Perform SWORD deposit
+	 * @param $request Request
 	 */
-	function execute() {
+	function execute(&$request) {
+		$user =& $request->getUser();
 		import('classes.sword.OJSSwordDeposit');
 		$deposit = new OJSSwordDeposit($this->article);
 		$deposit->setMetadata();
 		$deposit->addEditorial();
 		$deposit->createPackage();
 
-		import('lib.pkp.classes.notification.NotificationManager');
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 
 		$allowAuthorSpecify = $this->swordPlugin->getSetting($this->article->getJournalId(), 'allowAuthorSpecify');
@@ -98,7 +100,8 @@ class AuthorDepositForm extends Form {
 				$this->getData('authorDepositPassword')
 			);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $this->getData('authorDepositUrl'))), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$params = array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $this->getData('authorDepositUrl'));
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE, $params);
 		}
 
 		$depositableDepositPoints = $this->_getDepositableDepositPoints();
@@ -118,7 +121,9 @@ class AuthorDepositForm extends Form {
 				$depositPoint['password']
 			);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$user =& $request->getUser();
+			$params = array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $depositPoint['name']);
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE, $params);
 		}
 
 		$deposit->cleanup();

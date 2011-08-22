@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_notifications.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 database updates XML file; Renames the notification* tables for migration.
+  *
+  -->
+
+<data>
+	<!-- Bug #6792: Notification overhaul -->
+	<sql>
+		<rename table="notifications" to="notifications_old" />
+		<rename table="notification_settings" to="notification_settings_old" />
+	</sql>
+</data>

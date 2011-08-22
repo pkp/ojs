@@ -24,7 +24,7 @@ Promjena lozinke: {$url}
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Promjena lozinke</subject>
-		<body>Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis. 
+		<body>Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis.
 
 Vaše korisničko ime: {$username}
 Vaša nova lozinka: {$password}
@@ -47,7 +47,7 @@ Srdačno,
 		<subject>Objavljen novi broj</subject>
 		<body>Poštovani čitatelji,
 
-upravo je objavljen novi broj časopisa {$journalName} koji je dostupan na adresi {$journalUrl}. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge. 
+upravo je objavljen novi broj časopisa {$journalName} koji je dostupan na adresi {$journalUrl}. Pozivamo vas da pregledate sadržaj broja i posjetite našu mrežnu stranicu kako bi pročitali vama zanimljive članke i druge priloge.
 
 Hvala vam na interesu za naš rad,
 {$editorialContactSignature}</body>
@@ -57,7 +57,7 @@ Hvala vam na interesu za naš rad,
 		<subject>Zamolba za arhiviranje časopisa {$journalName}</subject>
 		<body>Poštovani [Knjižničar ustanove],
 
-{$journalName} &lt;{$journalUrl}&gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe). 
+{$journalName} &lt;{$journalUrl}&gt; je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).
 
 [Kratki opis časopisa]
 
@@ -73,7 +73,7 @@ Unaprijed hvala,
 		<subject>Zamolba za arhiviranje časopisa {$journalName}</subject>
 		<body>Poštovani [Knjižničar ustanove],
 
-{$journalName} &lt;{$journalUrl}&gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe). 
+{$journalName} &lt;{$journalUrl}&gt; časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe).
 
 [Kratki opis časopisa]
 
@@ -94,7 +94,7 @@ zahvaljujemo što ste prijavili prilog "{$articleTitle}" našem časopisu {$jour
 URL rukopisa: {$submissionUrl}
 Korisničko ime: {$authorUsername}
 
-U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite. 
+U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.
 
 Srdačno,
 {$editorialContactSignature}</body>
@@ -134,7 +134,7 @@ Srdačno,
 		<subject>Dodjela uredničkog zaduženja</subject>
 		<body>{$editorialContactName},
 
-u okviru raspodjele uredničkih zaduženja za časopis {$journalName} vama je dodijeljen zaprimljeni prilog "{$articleTitle}" kako biste proveli postupak njegova uređivanja. 
+u okviru raspodjele uredničkih zaduženja za časopis {$journalName} vama je dodijeljen zaprimljeni prilog "{$articleTitle}" kako biste proveli postupak njegova uređivanja.
 
 URL priloga: {$submissionUrl}
 Korisničko ime: {$editorUsername}
@@ -172,7 +172,7 @@ Srdačno,
 
 s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka "{$articleTitle}" prijavljenog u naš časopis {$journalName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.
 
-Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. 
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.
 
 Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.
 
@@ -265,7 +265,7 @@ U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stran
 URL članka: {$submissionReviewUrl}
 
 Molimo vas da nas izvijestite u kojem ste roku u mogućnosti izraditi recenziju. Nadamo se skorom odgovoru.
- 
+
 Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao.</description>
@@ -276,11 +276,11 @@ Srdačno,
 
 Željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka, "{$articleTitle}," za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
 
-Podsjećamo da do priloga možete doći izravno prateći ovu kodiranu pozivnicu: 
+Podsjećamo da do priloga možete doći izravno prateći ovu kodiranu pozivnicu:
 {$submissionReviewUrl}
 
 Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
- 
+
 {$editorialContactSignature}</body>
 		<description>Ovu e-poštu je poslao urednik rubrike da podsjeti recenzenta da je njegova recenzija dospjela.</description>
 	</email_text>
@@ -295,7 +295,7 @@ U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stran
 URL članka: {$submissionReviewUrl}
 
 Molimo vas da nas izvijestite u kojem ste roku u mogućnosti izraditi recenziju. Nadamo se skorom odgovoru.
- 
+
 Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovaj se obrazac e-pošte automatski šalje recenzentu kada datum naveden kao rok za izradu recenzije istekao (pogledajte Opcije recenzije unutar Postavljanja časopisa, 2. korak), a recenzentu nije omogućen pristup jednim klikom. Za ovu funkciju Raspoređeni zadaci moraju biti aktivirani i namješteni (pogledajte konfiguracijsku datoteku stranice).</description>
@@ -306,11 +306,11 @@ Srdačno,
 
 željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka "{$articleTitle}" za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
 
-Do priloga možete doći izravno prateći ovu kodiranu pozivnicu: 
+Do priloga možete doći izravno prateći ovu kodiranu pozivnicu:
 URL članka: {$submissionReviewUrl}
 
 Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
- 
+
 Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao. Obrazac se koristi ukoliko je recenzentu je omogućen pristup jednim klikom.</description>
@@ -335,7 +335,7 @@ Srdačno,
 		<subject>Napravljena lektura</subject>
 		<body>Poštovana/i {$editorialContactName},
 
-prvi krug lekture rukopisa "{$articleTitle}" za časopis {$journalName} je završen. Rukopis je sada spreman da autor i urednik na njemu izvrše pregled promjena i upita. 
+prvi krug lekture rukopisa "{$articleTitle}" za časopis {$journalName} je završen. Rukopis je sada spreman da autor i urednik na njemu izvrše pregled promjena i upita.
 
 Srdačno,
 {$copyeditorName}</body>
@@ -344,7 +344,7 @@ Srdačno,
 		<subject>Zaprimljena lektura</subject>
 		<body>Poštovana/i {$copyeditorName},
 
-hvala vam što ste izvršili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}. 
+hvala vam što ste izvršili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}.
 
 Srdačno,
 {$editorialContactSignature}
@@ -361,8 +361,8 @@ Ovo je posljednja prilika da izvršite neke promjene u vašem prilogu. Tekst će
 
 URL rukopisa: {$submissionCopyeditingUrl}
 Korisničko ime: {$authorUsername}
- 
-U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite. 
+
+U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite.
 
 Srdačno,
 {$editorialContactSignature}
@@ -398,7 +398,7 @@ Srdačno,
 autor i urednik učinili su pregled lekture rukopisa "{$articleTitle}" za časopis {$journalName}. Temeljem priloženih napomena molim vas da izradite konačnu, "čistu verziju", koja će biti upućena u prijelom.
 
 URL rukopisa: {$submissionCopyeditingUrl}
-Korisničko ime: {$copyeditorUsername}	
+Korisničko ime: {$copyeditorUsername}
 
 Srdačno,
 {$editorialContactSignature}</body>
@@ -418,7 +418,7 @@ Srdačno,
 		<subject>Zaprimljena završna lektura</subject>
 		<body>Poštovana/i {$copyeditorName},
 
-hvala vam što ste završili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}. 
+hvala vam što ste završili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}.
 
 Srdačno,
 {$editorialContactSignature}</body>
@@ -434,7 +434,7 @@ URL rukopisa: {$submissionLayoutUrl}
 Korisničko ime: {$layoutEditorUsername}
 
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.
- 
+
 Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da mu je dodijeljen zadatak  izrade prijeloma priloga.</description>
@@ -443,7 +443,7 @@ Srdačno,
 		<subject>Napravljen prijelom</subject>
 		<body>Poštovana/i {$editorialContactName},
 
-prijelom priloga "{$articleTitle}" za časopis {$journalName} je završen te spreman za korekturu. 
+prijelom priloga "{$articleTitle}" za časopis {$journalName} je završen te spreman za korekturu.
 U slučaju da imate bilo kakvih pitanja molim vas da mi se obratite.
 
 Srdačno,
@@ -480,7 +480,7 @@ Srdačno,
 		<subject>Napravljena korektura (Autor)</subject>
 		<body>Poštovana/i {$editorialContactName},
 
-korektura prijeloma mog priloga "{$articleTitle}" za časopis {$journalName} je napravljena. Prijelom je sada spreman za završne ispravke korektora. 
+korektura prijeloma mog priloga "{$articleTitle}" za časopis {$journalName} je napravljena. Prijelom je sada spreman za završne ispravke korektora.
 
 Srdačno,
 {$authorName}</body>
@@ -502,7 +502,7 @@ Srdačno,
 		<subject>Zamolba za korekturu</subject>
 		<body>Poštovana/i {$proofreaderName},
 
-molim vas da izvršite korekturu prijeloma priloga "{$articleTitle}" za časopis {$journalName}. 
+molim vas da izvršite korekturu prijeloma priloga "{$articleTitle}" za časopis {$journalName}.
 
 URL Rukopisa: {$submissionUrl}
 Korisničko ime: {$proofreaderUsername}
@@ -527,8 +527,8 @@ Srdačno,
 		<subject>Zaprimljena korektura</subject>
 		<body>Poštovana/i {$proofreaderName},
 
-zahvaljujem vam na korekturi prijeloma priloga "{$articleTitle}" za časopis {$journalName}. 
- 
+zahvaljujem vam na korekturi prijeloma priloga "{$articleTitle}" za časopis {$journalName}.
+
 Srdačno,
 {$editorialContactSignature}</body>
 		<description>Ovim obrascem e-pošte urednik rubrike potvrđuje korektoru zaprimanje korekture.</description>
@@ -542,7 +542,7 @@ molimo vas da izvršite potrebne ispravke u prijelomu priloga "{$articleTitle}" 
 URL priloga: {$submissionUrl}
 Korisničko ime: {$layoutEditorUsername}
 
-U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite. 
+U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.
 
 Srdačno,
 {$editorialContactSignature}</body>
@@ -658,7 +658,7 @@ Srdačno,
 		<subject>Registrirani ste kao recenzent časopisa {$journalName}</subject>
 		<body>Imajući u vidu vaše područje ekspertize, odlučili smo registrirati vas u bazu recenzenata časopisa {$journalName}. Ovo vas ne obvezuje ni na koji način, već samo omogućava uredništvu da vas kontaktira sa informacijama o prilozima koje biste potencijalno mogli recenzirati. Po zaprimljenom pozivu za recenziju, bit ćete u mogućnosti pregledati naslov i sažetak konkretnog rada čiju recenziju predlažemo, te ćete uvijek biti u mogućnosti prihvatiti ili odbiti rencenzijsko zaduženje. Također, u bilo kojem trenutku možete zatražiti da uklonimo vaše ime iz baze recenzenata i zatvorimo vaš korisnički račun.
 
-Ovdje vam prilažemo vaše korisničko ime i lozinku, koja vam je potrebna za rad sa časopisom kroz naš sustav za elektroničko uređivanje. U njemu možete i dopuniti svoje korisničke detalje (npr. recenzentske interese). 
+Ovdje vam prilažemo vaše korisničko ime i lozinku, koja vam je potrebna za rad sa časopisom kroz naš sustav za elektroničko uređivanje. U njemu možete i dopuniti svoje korisničke detalje (npr. recenzentske interese).
 
 Korisničko ime: {$username}
 Lozinka: {$password}

@@ -9,7 +9,7 @@
  * @class AdminLanguagesHandler
  * @ingroup pages_admin
  *
- * @brief Handle requests for changing site language settings. 
+ * @brief Handle requests for changing site language settings.
  */
 
 // $Id$
@@ -94,10 +94,12 @@ class AdminLanguagesHandler extends AdminHandler {
 
 		$this->_removeLocalesFromJournals($request);
 
-		import('lib.pkp.classes.notification.NotificationManager');
+		$user =& $request->getUser();
+
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
-		$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
- 
+		$notificationManager->createTrivialNotification($user->getId());
+
 		$request->redirect(null, null, 'index');
 	}
 
@@ -235,9 +237,12 @@ class AdminLanguagesHandler extends AdminHandler {
 			return;
 		}
 
-		import('lib.pkp.classes.notification.NotificationManager');
+		$user =& $request->getUser();
+
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
-		$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('admin.languages.localeInstalled', array('locale' => $locale)), NOTIFICATION_TYPE_SUCCESS, null, false);
+		$params = array('locale' => $locale);
+		$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_LOCALE_INSTALLED, $params);
 		$request->redirect(null, null, 'languages');
 	}
 }

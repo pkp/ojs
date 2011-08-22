@@ -9,7 +9,7 @@
  * @class AdminSettingsHandler
  * @ingroup pages_admin
  *
- * @brief Handle requests for changing site admin settings. 
+ * @brief Handle requests for changing site admin settings.
  *
  * $Id$
  */
@@ -83,9 +83,10 @@ class AdminSettingsHandler extends AdminHandler {
 			}
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
-			import('lib.pkp.classes.notification.NotificationManager');
+			$user =& $request->getUser();
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$notificationManager->createTrivialNotification('notification.notification', 'common.changesSaved');
+			$notificationManager->createTrivialNotification($user->getId());
 			$request->redirect(null, null, 'index');
 		}
 		$settingsForm->display();

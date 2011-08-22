@@ -20,6 +20,11 @@ define('SWORD_DEPOSIT_TYPE_OPTIONAL_SELECTION',	2);
 define('SWORD_DEPOSIT_TYPE_OPTIONAL_FIXED',	3);
 define('SWORD_DEPOSIT_TYPE_MANAGER',		4);
 
+define('NOTIFICATION_TYPE_SWORD_ENABLED',				NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000001);
+define('NOTIFICATION_TYPE_SWORD_DISABLED',				NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000002);
+define('NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000003);
+define('NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000004);
+
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SwordPlugin extends GenericPlugin {
@@ -45,6 +50,7 @@ class SwordPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAuthorDeposits'));
+				HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
 			}
 			$this->addLocaleData();
 			return true;
@@ -121,7 +127,7 @@ class SwordPlugin extends GenericPlugin {
 		$depositPoints = $this->getSetting($journal->getId(), 'depositPoints');
 		import('classes.sword.OJSSwordDeposit');
 
-		import('lib.pkp.classes.notification.NotificationManager');
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 
 		$sendDepositNotification = $this->getSetting($journal->getId(), 'allowAuthorSpecify') ? true : false;
@@ -145,7 +151,9 @@ class SwordPlugin extends GenericPlugin {
 			$deposit->cleanup();
 			unset($deposit);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.automaticDepositComplete', array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$user =& $request->getUser();
+			$params = array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name']);
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE, $params);
 		}
 
 		if ($sendDepositNotification) {
@@ -170,6 +178,38 @@ class SwordPlugin extends GenericPlugin {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Hook registry function to provide notification messages for SWORD notifications
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackNotificationContents($hookName, $args) {
+		$notification =& $args[0];
+		$message =& $args[1];
+
+		$type = $notification->getType();
+		assert(isset($type));
+
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+
+		switch ($type) {
+			case NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE:
+				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
+				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
+				$message = __('plugins.generic.sword.depositComplete', $notificationManager->getParamsForCurrentLocale($params));
+			case NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE:
+				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
+				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
+				$message = __('plugins.generic.sword.automaticDepositComplete', $notificationManager->getParamsForCurrentLocale($params));
+			case NOTIFICATION_TYPE_SWORD_ENABLED:
+				$message = __('plugins.generic.sword.enabled');
+			case NOTIFICATION_TYPE_SWORD_DISABLED:
+				$message = __('plugins.generic.sword.disable');
+		}
+
 	}
 
 	/**
@@ -199,9 +239,9 @@ class SwordPlugin extends GenericPlugin {
  	 * Execute a management verb on this plugin
  	 * @param $verb string
  	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
+	 * @param $message string Result status message
+	 * @return boolean
+	 */
 	function manage($verb, $args, &$message) {
 		$returner = true;
 		$journal =& Request::getJournal();
@@ -231,12 +271,12 @@ class SwordPlugin extends GenericPlugin {
 				break;
 			case 'enable':
 				$this->updateSetting($journal->getId(), 'enabled', true);
-				$message = Locale::translate('plugins.generic.sword.enabled');
+				$message = NOTIFICATION_TYPE_SWORD_ENABLED;
 				$returner = false;
 				break;
 			case 'disable':
 				$this->updateSetting($journal->getId(), 'enabled', false);
-				$message = Locale::translate('plugins.generic.sword.disabled');
+				$message = NOTIFICATION_TYPE_SWORD_DISABLED;
 				$returner = false;
 				break;
 			case 'createDepositPoint':

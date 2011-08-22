@@ -138,7 +138,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decision on "{$articleTitle}"</subject>
 		<body>As one of the reviewers for the submission, "{$articleTitle}," to {$journalName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -148,7 +148,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		<subject>Editorial Assignment</subject>
 		<body>{$editorialContactName}:
 
-The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
+The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.
 
 Submission URL: {$submissionUrl}
 Username: {$editorUsername}
@@ -297,7 +297,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Copyediting Completed</subject>
 		<body>{$editorialContactName}:
 
-I have now completed the first round of copyediting of  the manuscript, "{$articleTitle}," for {$journalName}. It is now ready for the author and editor to review the changes and queries. 
+I have now completed the first round of copyediting of  the manuscript, "{$articleTitle}," for {$journalName}. It is now ready for the author and editor to review the changes and queries.
 
 Thank you,
 {$copyeditorName}</body>
@@ -321,7 +321,7 @@ This is the last opportunity that you have to make substantial changes. You will
 
 Manuscript URL: {$submissionCopyeditingUrl}
 Username: {$authorUsername}
- 
+
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</body>
@@ -396,7 +396,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Galleys Complete</subject>
 		<body>{$editorialContactName}:
 
-Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading. 
+Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading.
 
 If you have any questions, please contact me.
 
@@ -450,7 +450,7 @@ If you subscribe to our notification service, you will receive an email of the T
 		<subject>Proofreading Request</subject>
 		<body>{$proofreaderName}:
 
-I would ask that you proofread the galleys for the manuscript, "{$articleTitle}," for {$journalName}. 
+I would ask that you proofread the galleys for the manuscript, "{$articleTitle}," for {$journalName}.
 
 Manuscript URL: {$submissionUrl}
 Username: {$proofreaderUsername}
@@ -548,14 +548,6 @@ Thank you for completing the proofreading corrections for the galleys associated
 Если не хотите получать извещения, пожалуйста нажмите на ссылку {$unsubscribeLink}  и введите свой почтовый адрес и пароль.
 
 Пароль для отключения извещений: {$password}
-
-{$principalContactSignature}</body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Информация о списке рассылки извещений {$siteTitle}</subject>
-		<body>Ваш новый пароль для отключения извещений: {$password}
-
-Если хотите прекратить их получение, пройдите по ссылке {$unsubscribeLink}, а там введите свой почтовый адрес и этот пароль.
 
 {$principalContactSignature}</body>
 	</email_text>

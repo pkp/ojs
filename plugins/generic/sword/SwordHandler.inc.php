@@ -55,7 +55,7 @@ class SwordHandler extends Handler {
 		if ($save) {
 			$authorDepositForm->readInputData();
 			if ($authorDepositForm->validate()) {
-				$authorDepositForm->execute();
+				$authorDepositForm->execute($request);
 				$request->redirect(null, 'author');
 			} else {
 				$authorDepositForm->display();

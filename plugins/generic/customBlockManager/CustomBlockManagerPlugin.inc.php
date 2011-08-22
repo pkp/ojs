@@ -90,8 +90,8 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args, &$message) {
-		if (!parent::manage($verb, $args, $message)) return false;
+	function manage($verb, $args, &$message, &$messageParams) {
+		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		switch ($verb) {
 			case 'settings':
 				$journal =& Request::getJournal();

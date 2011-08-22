@@ -811,6 +811,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Publish issue
+	 * @param $args array
+	 * @param $request Request
 	 */
 	function publishIssue($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -863,7 +865,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao->updateCurrentIssue($journalId,$issue);
 
 		// Send a notification to associated users
-		import('lib.pkp.classes.notification.NotificationManager');
+		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
@@ -873,17 +875,16 @@ class IssueManagementHandler extends EditorHandler {
 			$notificationUsers[] = array('id' => $user->getId());
 			unset($user);
 		}
-		$url = $request->url(null, 'issue', 'current');
 		foreach ($notificationUsers as $userRole) {
 			$notificationManager->createNotification(
-				$userRole['id'], 'notification.type.issuePublished',
-				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
+				$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+				$article->getJournalId()
 			);
 		}
-		$notificationManager->sendToMailingList(
+		$notificationManager->sendToMailingList($request,
 			$notificationManager->createNotification(
-				0, 'notification.type.issuePublished',
-				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
+				$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+				$article->getJournalId()
 			)
 		);
 

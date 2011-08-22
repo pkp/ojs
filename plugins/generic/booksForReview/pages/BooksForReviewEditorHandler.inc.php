@@ -9,7 +9,7 @@
  * @class BooksForReviewEditorHandler
  * @ingroup plugins_generic_booksForReview
  *
- * @brief Handle requests for editor books for review functions. 
+ * @brief Handle requests for editor books for review functions.
  */
 
 import('classes.handler.Handler');
@@ -35,7 +35,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (!empty($search)) {
 			$searchField = $request->getUserVar('searchField');
 			$searchMatch = $request->getUserVar('searchMatch');
-		}			
+		}
 
 		$path = !isset($args) || empty($args) ? null : $args[0];
 
@@ -64,9 +64,9 @@ class BooksForReviewEditorHandler extends Handler {
 				$path = '';
 				$status = null;
 				$template = 'booksForReviewAll.tpl';
-		}	
+		}
 
-			
+
 		import('pages.editor.EditorHandler');
 		$user =& $request->getUser();
 		$filterEditorOptions = array(
@@ -82,7 +82,7 @@ class BooksForReviewEditorHandler extends Handler {
 			if ($filterEditor == null) {
 				$filterEditor = FILTER_EDITOR_ALL;
 				$user->updateSetting('filterEditor', $filterEditor, 'int', $journalId);
-			}	
+			}
 		}
 
 		if ($filterEditor == FILTER_EDITOR_ME) {
@@ -147,7 +147,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -199,7 +199,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -260,18 +260,19 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrForm->execute();
 
 				if ($bookId == null) {
-					$message = 'plugins.generic.booksForReview.notification.bookCreated';
+					$notificationType = NOTIFICATION_TYPE_BOOK_CREATED;
 				} else {
-					$message = 'plugins.generic.booksForReview.notification.bookUpdated';
+					$notificationType = NOTIFICATION_TYPE_BOOK_UPDATED;
 				}
-				import('lib.pkp.classes.notification.NotificationManager');
+				$user =& $request->getUser();
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', $message);
+				$notificationManager->createTrivialNotification($user->getId(), $notificationType);
 				if ($request->getUserVar('createAnother')) {
 					$request->redirect(null, 'editor', 'createBookForReview', null, array('returnPage' => $returnPage));
 				} else {
 					$request->redirect(null, 'editor', 'booksForReview', $returnPage);
-				}				
+				}
 			} else {
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
@@ -284,7 +285,7 @@ class BooksForReviewEditorHandler extends Handler {
 				$templateMgr->assign('returnPage', $returnPage);
 				$templateMgr->assign_by_ref('countries', $countries);
 				$bfrForm->display();
-			}		
+			}
 		} else {
 			$request->redirect(null, 'editor');
 		}
@@ -302,14 +303,14 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		if (!empty($args)) {
-			$bookId = (int) $args[0];	
+			$bookId = (int) $args[0];
 			$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
 
 			if ($returnPage != null) {
 				$validPages =& $this->getValidReturnPages();
 				if (!in_array($returnPage, $validPages)) {
 					$returnPage = null;
-				} 
+				}
 			}
 
 			$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -317,10 +318,10 @@ class BooksForReviewEditorHandler extends Handler {
 			// Ensure book for review is for this journal
 			if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
 				$bfrDao->deleteBookForReviewById($bookId);
-
-				import('lib.pkp.classes.notification.NotificationManager');
+				$user =& $request->getUser();
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.bookDeleted');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_DELETED);
 			}
 		}
 		$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -356,10 +357,10 @@ class BooksForReviewEditorHandler extends Handler {
 			$form->readInputData();
 			if ($form->validate()) {
 				$form->execute();
-
-				import('lib.pkp.classes.notification.NotificationManager');
+				$user =& $request->getUser();
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.settingsSaved');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED);
 
 				$request->redirect(null, 'editor', 'booksForReviewSettings');
 			} else {
@@ -381,14 +382,14 @@ class BooksForReviewEditorHandler extends Handler {
 		$journalId = $journal->getId();
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -451,14 +452,14 @@ class BooksForReviewEditorHandler extends Handler {
 		$journalId = $journal->getId();
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -524,7 +525,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
-	
+
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
@@ -532,12 +533,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
@@ -551,10 +552,11 @@ class BooksForReviewEditorHandler extends Handler {
 				$book->setArticleId($articleId);
 				$book->setStatus(BFR_STATUS_SUBMITTED);
 				$bfrDao->updateObject($book);
+				$user =& $request->getUser();
 
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.submissionAssigned');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED);
 			}
 		}
 		$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -569,7 +571,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
-	
+
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
@@ -577,12 +579,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
@@ -619,7 +621,7 @@ class BooksForReviewEditorHandler extends Handler {
 				if ($send && !$email->hasErrors()) {
 					// Update book for review
 					$dueWeeks = $bfrPlugin->getSetting($journalId, 'dueWeeks');
-					$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60); 
+					$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 					$dueDate = date('Y-m-d H:i:s', $dueDateTimestamp);
 
 					$book->setUserId($userId);
@@ -628,11 +630,12 @@ class BooksForReviewEditorHandler extends Handler {
 					$book->setDateDue($dueDate);
 					$bfrDao->updateObject($book);
 
-					$email->send(); 
+					$email->send();
+					$user =& $request->getUser();
 
-					import('lib.pkp.classes.notification.NotificationManager');
+					import('classes.notification.NotificationManager');
 					$notificationManager = new NotificationManager();
-					$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.authorAssigned');
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED);
 
 					$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 
@@ -640,10 +643,10 @@ class BooksForReviewEditorHandler extends Handler {
 				} else {
 					if (!$request->getUserVar('continued')) {
 						$dueWeeks = $bfrPlugin->getSetting($journalId, 'dueWeeks');
-						$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60); 
+						$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 
 						if (empty($userMailingAddress)) {
-							$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress'); 
+							$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress');
 						} else {
 							$countryDao =& DAORegistry::getDAO('CountryDAO');
 							$countries =& $countryDao->getCountries();
@@ -666,7 +669,7 @@ class BooksForReviewEditorHandler extends Handler {
 						$email->assignParams($paramArray);
 					}
 					$returnUrl = $request->url(null, 'editor', 'assignBookForReviewAuthor', $bookId, array('returnPage' => $returnPage, 'userId' => $userId));
-					$email->displayEditForm($returnUrl);	
+					$email->displayEditForm($returnUrl);
 				}
 			}
 		}
@@ -682,7 +685,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
-	
+
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
@@ -690,12 +693,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
@@ -715,10 +718,11 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
+				$user =& $request->getUser();
 
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.authorDenied');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED);
 
 				$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 
@@ -741,7 +745,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'denyBookForReviewAuthor', $bookId, array('returnPage' => $returnPage));
-				$email->displayEditForm($returnUrl);	
+				$email->displayEditForm($returnUrl);
 			}
 		}
 		$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -756,7 +760,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
-	
+
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
@@ -764,12 +768,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
@@ -788,10 +792,11 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
+				$user =& $request->getUser();
 
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.bookMailed');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_MAILED);
 
 				$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 
@@ -806,7 +811,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$userCountryCode = $book->getUserCountry();
 
 					if (empty($userMailingAddress)) {
-						$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress'); 
+						$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress');
 					} else {
 						$countryDao =& DAORegistry::getDAO('CountryDAO');
 						$countries =& $countryDao->getCountries();
@@ -827,7 +832,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'notifyBookForReviewMailed', $bookId, array('returnPage' => $returnPage));
-				$email->displayEditForm($returnUrl);	
+				$email->displayEditForm($returnUrl);
 			}
 		}
 		$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -842,7 +847,7 @@ class BooksForReviewEditorHandler extends Handler {
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
-	
+
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
@@ -850,12 +855,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$bookId = (int) $args[0];	
+		$bookId = (int) $args[0];
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
@@ -880,10 +885,11 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
+				$user =& $request->getUser();
 
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationManager->createTrivialNotification('notification.notification', 'plugins.generic.booksForReview.notification.authorRemoved');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED);
 
 				$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 
@@ -906,7 +912,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$email->assignParams($paramArray);
 				}
 				$returnUrl = $request->url(null, 'editor', 'removeBookForReviewAuthor', $bookId, array('returnPage' => $returnPage));
-				$email->displayEditForm($returnUrl);	
+				$email->displayEditForm($returnUrl);
 			}
 		}
 		$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -936,7 +942,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$validPages =& $this->getValidReturnPages();
 			if (!in_array($returnPage, $validPages)) {
 				$returnPage = null;
-			} 
+			}
 		}
 
 		$journal =& $request->getJournal();
@@ -953,7 +959,7 @@ class BooksForReviewEditorHandler extends Handler {
 	}
 
 	/**
-	 * Return valid landing/return pages 
+	 * Return valid landing/return pages
 	 */
 	function &getValidReturnPages() {
 		$validPages = array(
@@ -976,10 +982,10 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		if (!isset($bfrPlugin)) return false;
- 
+
 		if (!$bfrPlugin->getEnabled()) return false;
 
-		if (!Validation::isEditor($journal->getId())) Validation::redirectLogin();; 
+		if (!Validation::isEditor($journal->getId())) Validation::redirectLogin();;
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -1008,11 +1014,11 @@ class BooksForReviewEditorHandler extends Handler {
 				$validPages =& $this->getValidReturnPages();
 				if (!in_array($returnPage, $validPages)) {
 					$returnPage = null;
-				} 
+				}
 			}
 
 			$pageCrumbs[] = array(
-				Request::url(null, 'editor', 'booksForReview', $returnPage), 
+				Request::url(null, 'editor', 'booksForReview', $returnPage),
 				Locale::Translate('plugins.generic.booksForReview.displayName'),
 				true
 			);

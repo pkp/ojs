@@ -47,7 +47,7 @@ class ReviewerAction extends Action {
 		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
-		// Only confirm the review for the reviewer if 
+		// Only confirm the review for the reviewer if
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			import('classes.mail.ArticleMailTemplate');
@@ -90,7 +90,7 @@ class ReviewerAction extends Action {
 					$dateFormatShort = Config::getVar('general', 'date_format_short');
 					if ($reviewDueDate == -1) $reviewDueDate = $dateFormatShort; // Default to something human-readable if no date specified
 					else $reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
-					
+
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $reviewer->getFullName(),
@@ -189,7 +189,7 @@ class ReviewerAction extends Action {
 	 */
 	function uploadReviewerVersion($reviewId, $reviewerSubmission, $request) {
 		import('classes.file.ArticleFileManager');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		$articleFileManager = new ArticleFileManager($reviewAssignment->getSubmissionId());
@@ -265,7 +265,7 @@ class ReviewerAction extends Action {
 	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
-	 * @param $request object
+	 * @param $request Request
 	 */
 	function postPeerReviewComment(&$user, &$article, $reviewId, $emailComment, $request) {
 		if (!HookRegistry::call('ReviewerAction::postPeerReviewComment', array(&$user, &$article, &$reviewId, &$emailComment))) {
@@ -279,17 +279,16 @@ class ReviewerAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$notificationUsers = $article->getAssociatedUserIds();
+				$notificationUsers = $article->getAssociatedUserIds(false, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.reviewerComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_REVIEWER_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
-				
+
 				if ($emailComment) {
 					$commentForm->email($request);
 				}
@@ -321,8 +320,9 @@ class ReviewerAction extends Action {
 	 * Save review form response.
 	 * @param $reviewId int
 	 * @param $reviewFormId int
+	 * @param $request Request
 	 */
-	function saveReviewFormResponse($reviewId, $reviewFormId) {
+	function saveReviewFormResponse($reviewId, $reviewFormId, $request) {
 		if (!HookRegistry::call('ReviewerAction::saveReviewFormResponse', array($reviewId, $reviewFormId))) {
 			import('classes.submission.form.ReviewFormResponseForm');
 
@@ -332,22 +332,21 @@ class ReviewerAction extends Action {
 				$reviewForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 				$articleId = $reviewAssignment->getSubmissionId();
-				$articleDao =& DAORegistry::getDAO('ArticleDAO'); 
+				$articleDao =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDao->getArticle($articleId);
-				$notificationUsers = $article->getAssociatedUserIds();
+				$notificationUsers = $article->getAssociatedUserIds(false, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.reviewerFormComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
-				
+
 			} else {
 				$reviewForm->display();
 				return false;
@@ -368,7 +367,7 @@ class ReviewerAction extends Action {
 	 * @param $revision int
 	 */
 	function downloadReviewerFile($reviewId, $article, $fileId, $revision = null) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');		
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$journal =& Request::getJournal();
 

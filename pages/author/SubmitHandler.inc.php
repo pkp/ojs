@@ -157,7 +157,7 @@ class SubmitHandler extends AuthorHandler {
 
 				if ($step == 5) {
 					// Send a notification to associated users
-					import('lib.pkp.classes.notification.NotificationManager');
+					import('classes.notification.NotificationManager');
 					$notificationManager = new NotificationManager();
 					$articleDao =& DAORegistry::getDAO('ArticleDAO');
 					$article =& $articleDao->getArticle($articleId);
@@ -165,10 +165,9 @@ class SubmitHandler extends AuthorHandler {
 					$notificationUsers = array();
 					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 					while ($editor =& $editors->next()) {
-						$url = $request->url(null, 'editor', 'submission', $articleId);
 						$notificationManager->createNotification(
-							$editor->getId(), 'notification.type.articleSubmitted',
-							$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_ARTICLE_SUBMITTED
+							$request, $editor->getId(), NOTIFICATION_TYPE_ARTICLE_SUBMITTED,
+							$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 						);
 						unset($editor);
 					}

@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Displays the notification settings page and unchecks  
+ * Displays the notification settings page and unchecks
  *
  *}
 {strip}
@@ -12,24 +12,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{if $status == 'subscribeError'}
-	<ul>
-		<li><span class="formError">{translate key="notification.subscribeError"}</span></li>
-	<ul>
-{elseif $status == 'subscribeSuccess'}
-	<ul>
-		<li>{translate key="notification.subscribeSuccess"}</li>
-	</ul>
-{elseif $status == 'confirmError'}
-	<ul>
-		<li><span class="formError">{translate key="notification.confirmError"}</span></li>
-	<ul>
-{elseif $status == 'confirmSuccess'}
-	<ul>
-		<li>{translate key="notification.confirmSuccess"}</li>
-	</ul>
-{/if}
-
+<ul>
+<li class="pkp_form">
+	<span{if $error} class="pkp_form_error"{/if}>
+		{translate key="notification.$status"}
+	</span>
+</li>
+<ul>
 
 {include file="common/footer.tpl"}
 

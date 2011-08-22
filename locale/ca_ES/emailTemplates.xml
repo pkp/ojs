@@ -152,10 +152,10 @@ Després d'una primera revisió de "{$articleTitle}", hem decidit que aquesta tr
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decisió sobre "{$articleTitle}"</subject>
-		<body>Com a membre del grup de revisors de la tramesa "{$articleTitle}" per a la revista {$journalName}, us faig arribar les revisions i la decisió de l'editor enviats a l'autor d'aquesta obra. 
+		<body>Com a membre del grup de revisors de la tramesa "{$articleTitle}" per a la revista {$journalName}, us faig arribar les revisions i la decisió de l'editor enviats a l'autor d'aquesta obra.
 
 Gràcies una vegada més per la vostra important contribució a aquest procés.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -355,7 +355,7 @@ M'agradaria demanar-vos que us encarreguéssiu de la revisió de "{$articleTitle
 1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
 2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu en el pas 1.
 3. Consulteu les instruccions per a la correcció que hi ha publicades a la pàgina web.
-4. Obriu el fitxer que heu baixat i corregiu-lo. Hi podeu incloure totes les consultes a l'autor que considereu necessàries. 
+4. Obriu el fitxer que heu baixat i corregiu-lo. Hi podeu incloure totes les consultes a l'autor que considereu necessàries.
 5. Deseu el fitxer corregit i pengeu-lo en el pas 1 de la correcció.
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.
 
@@ -373,8 +373,8 @@ Nom d'usuari: {$copyeditorUsername}
 Ja hem corregit la vostra tramesa "{$articleTitle}" per a {$journalName}. Seguiu els passos següents per a revisar els canvis proposats i respondre a les consultes a l'autor:
 
 1. Inicieu la sessió a la revista fent clic a l'URL que s'indica més endavant en aquest missatge i introduint-hi el vostre nom d'usuari i la vostra contrasenya (utilitzeu l'enllaç Oblida, si escau).
-2. Feu clic al fitxer que hi ha a 1. Fitxer de la correcció inicial per a baixar i obrir la versió corregida. 
-3. Reviseu la correcció, feu-hi els canvis necessaris mitjançant l'eina de seguiment de canvis del Word i responeu les consultes. 
+2. Feu clic al fitxer que hi ha a 1. Fitxer de la correcció inicial per a baixar i obrir la versió corregida.
+3. Reviseu la correcció, feu-hi els canvis necessaris mitjançant l'eina de seguiment de canvis del Word i responeu les consultes.
 4. Deseu el fitxer a l'escriptori i pengeu-lo a 2. Correcció de l'autor.
 5. Feu clic a la icona de correu electrònic que hi ha a sota de COMPLET i envieu el missatge de correu electrònic a l'editor.
 
@@ -383,7 +383,7 @@ Noteu que aquesta serà la darrera oportunitat que tindreu per a fer canvis subs
 URL del manuscrit: {$submissionEditingUrl}
 Nom d'usuari: {$authorUsername}
 
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. 
+Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
 
 Gràcies per la vostra contribució a aquesta revista.
 
@@ -419,7 +419,7 @@ Nom d'usuari: {$authorUsername}
 
 Noteu que aquesta serà la darrera oportunitat que tindreu per a fer correccions substancials a la tramesa, atès que a l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format.
 
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. 
+Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
 
 Gràcies per la vostra contribució a aquesta revista,
 
@@ -430,7 +430,7 @@ Gràcies per la vostra contribució a aquesta revista,
 		<subject>Revisió de la correcció completada</subject>
 		<body>Benvolgut/uda {$editorialContactName},
 
-Ja he revisat la correcció del manuscrit "{$articleTitle}" per a {$journalName}. Per tant, la tramesa ja és a punt per a fer-hi la darrera ronda de revisió i preparar-la per a la maquetació. 
+Ja he revisat la correcció del manuscrit "{$articleTitle}" per a {$journalName}. Per tant, la tramesa ja és a punt per a fer-hi la darrera ronda de revisió i preparar-la per a la maquetació.
 
 Gràcies per aquesta contribució a la meva obra.
 
@@ -497,7 +497,7 @@ URL de {$journalName}: {$journalUrl}
 URL de la tramesa: {$submissionLayoutUrl}
 Nom d'usuari: {$layoutEditorUsername}
 
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. 
+Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
 
 Gràcies per la vostra contribució a aquesta revista.
 
@@ -508,7 +508,7 @@ Gràcies per la vostra contribució a aquesta revista.
 		<subject>Galerades completades</subject>
 		<body>Benvolgut/uda {$editorialContactName},
 
-Ja he preparat les galerades del manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, ja estan a punt per a entrar en el procés de correcció de proves. 
+Ja he preparat les galerades del manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, ja estan a punt per a entrar en el procés de correcció de proves.
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
@@ -547,7 +547,7 @@ Nom d'usuari: {$authorUsername}
 		<subject>Correcció de proves completada (autor)</subject>
 		<body>Benvolgut/uda {$editorialContactName},
 
-He acabat la correcció de proves de les galerades per al meu manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el corrector i el maquetista hi facin les correccions finals. 
+He acabat la correcció de proves de les galerades per al meu manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el corrector i el maquetista hi facin les correccions finals.
 
 {$authorName}</body>
 		<description>Aquest missatge de correu electrònic té l'autor com a remitent i s'envia al corrector de proves i a l'editor per a notificar-los que s'ha completat la ronda de correcció de proves i que en trobaran més detalls als comentaris de l'article.</description>
@@ -579,7 +579,7 @@ Us volem demanar que us encarregueu de la correcció de proves de la tramesa "{$
 URL del manuscrit: {$submissionUrl}
 Nom d'usuari: {$proofreaderUsername}
 
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. 
+Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
 
 Gràcies per la vostra contribució a aquesta revista.
 
@@ -590,7 +590,7 @@ Gràcies per la vostra contribució a aquesta revista.
 		<subject>Correcció de proves completada</subject>
 		<body>Benvolgut/uda {$editorialContactName},
 
-He acabat la correcció de proves de les galerades per al manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el maquetista hi faci les correccions finals. 
+He acabat la correcció de proves de les galerades per al manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el maquetista hi faci les correccions finals.
 
 {$proofreaderName}</body>
 		<description>Aquest missatge de correu electrònic té el corrector de proves com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de correcció de proves.</description>
@@ -619,7 +619,7 @@ URL de {$journalName}: {$journalUrl}
 URL de la tramesa: {$submissionUrl}
 Nom d'usuari: {$layoutEditorUsername}
 
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. 
+Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
 
 Gràcies per la vostra contribució a aquesta revista.
 

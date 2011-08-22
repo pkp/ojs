@@ -34,6 +34,11 @@ class CommentHandler extends Handler {
 		parent::Handler();
 	}
 
+	/**
+	 * View a comment
+	 * @param $args array
+	 * @param $request object
+	 */
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -73,7 +78,12 @@ class CommentHandler extends Handler {
 		$templateMgr->display('comment/comments.tpl');
 	}
 
-	function add($args) {
+	/**
+	 * Add a comment
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function add($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
@@ -118,16 +128,15 @@ class CommentHandler extends Handler {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$articleDao =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDao->getArticle($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
-					$url = Request::url(null, null, 'view', array($articleId, $galleyId, $parentId));
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.userComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_USER_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_USER_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
 
@@ -140,6 +149,7 @@ class CommentHandler extends Handler {
 
 	/**
 	 * Delete the specified comment and all its children.
+	 * @params $args array
 	 */
 	function delete($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
@@ -166,6 +176,7 @@ class CommentHandler extends Handler {
 
 	/**
 	 * Validation
+	 * @param $articleId int
 	 */
 	function validate($articleId) {
 		parent::validate();

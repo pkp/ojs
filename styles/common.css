@@ -14,6 +14,7 @@
  * FIXME: (Re)move once OJS styles are consolidated with new styles and themes
  */
 @import url("../lib/pkp/styles/themes/default/pnotify.css");
+@import url("../lib/pkp/styles/themes/default/notificationIcons.css");
 
 .ui-pnotify-title {
 	font-size: 0.8em;

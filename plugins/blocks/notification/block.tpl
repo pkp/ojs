@@ -15,10 +15,10 @@
 		{if $isUserLoggedIn}
 			<li><a href="{url page="notification"}">{translate key="common.view"}</a>
 				{if $unreadNotifications > 0}{translate key="notification.notificationsNew" numNew=$unreadNotifications}{/if}</li>
-			<li><a href="{url page="notification" op="settings"}">{translate key="common.manage"}</a></li>			
+			<li><a href="{url page="notification" op="settings"}">{translate key="common.manage"}</a></li>
 		{else}
 			<li><a href="{url page="notification"}">{translate key="common.view"}</a></li>
-			<li><a href="{url page="notification" op="subscribeMailList"}">{translate key="notification.subscribe"}</a> / <a href="{url page="notification" op="unsubscribeMailList"}">{translate key="notification.unsubscribe"}</a></li>	
+			<li><a href="{url page="notification" op="subscribeMailList"}">{translate key="notification.subscribe"}</a></li>
 		{/if}
 	</ul>
 </div>

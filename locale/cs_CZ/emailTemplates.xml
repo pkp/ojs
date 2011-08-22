@@ -146,7 +146,7 @@ Z úvodního prostudování příspěvku "{$articleTitle}" jasně vyplynulo, že
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Rozhodnutí o "{$articleTitle}"</subject>
 		<body>Jako jednomu z recenzentů přípsěvku "{$articleTitle}" do {$journalName} Vám zasílám posudky a editorské rozhodnutí, které bylo posláno autorovi příspěvku. Ještě jednou děkujeme za Vaši důležitou pomoc v tomto recenzním řízení.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -156,7 +156,7 @@ Z úvodního prostudování příspěvku "{$articleTitle}" jasně vyplynulo, že
 		<subject>Editorský úkol</subject>
 		<body>{$editorialContactName}:
 
-Byl Vám přidělen příspěvek "{$articleTitle}" do {$journalName}, abyste s ním v roli editora sekce prošel redakčním zpracováním.  
+Byl Vám přidělen příspěvek "{$articleTitle}" do {$journalName}, abyste s ním v roli editora sekce prošel redakčním zpracováním.
 
 URL příspěvku: {$submissionUrl}
 Uživatelské jméno: {$editorUsername}
@@ -238,7 +238,7 @@ Instrukce pro zpracování recenze
 		<subject>Žádost o zrušení recenze</subject>
 		<body>{$reviewerName}:
 
-V tomto bodě jsme se rozhodli odvolat naši žádost, abyste pro nás zpracoval recenzi příspěvku "{$articleTitle}" pro {$journalName}. Omlouváme se za veškeré nepříjemnosti, které by Vám to mohlo způsobit, a doufáme, že Vás budeme moci oslovit ohledně recenzních řízení tohoto časopisu v budoucnu. 
+V tomto bodě jsme se rozhodli odvolat naši žádost, abyste pro nás zpracoval recenzi příspěvku "{$articleTitle}" pro {$journalName}. Omlouváme se za veškeré nepříjemnosti, které by Vám to mohlo způsobit, a doufáme, že Vás budeme moci oslovit ohledně recenzních řízení tohoto časopisu v budoucnu.
 
 V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte.
 
@@ -728,20 +728,12 @@ Pokud chcete ukončit odebírání těchto informačních emalů, přejděte pro
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Vítejte na rezesílacím seznamu {$siteTitle}!</subject>
 		<body>Přihlásil jste se k odběru oznámení z {$siteTitle}.
-			
+
 Pro potvrzení Vaší žádosti a přidání Vaší emailové adresy do rozesílacího seznamu klikněte prosím na tento odkaz: {$confirmLink}
 
 Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a vložte Vaši emailovou adresu a heslo.
 
 Vaše heslo pro zakázání informačních emailů je: {$password}
-
-{$principalContactSignature}</body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Informace k Vašemu emailovému upozorňování pro {$siteTitle}</subject>
-		<body>Vaše nové heslo pro zakázání informačních emailů je: {$password}
-
-Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a zadejte svou emailovou adresu a heslo.
 
 {$principalContactSignature}</body>
 	</email_text>

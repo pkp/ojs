@@ -257,14 +257,13 @@ class LayoutEditorAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'layout');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.layoutComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_LAYOUT_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_LAYOUT_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
 
@@ -310,14 +309,13 @@ class LayoutEditorAction extends Action {
 				$commentForm->execute();
 
 				// Send a notification to associated users
-				import('lib.pkp.classes.notification.NotificationManager');
+				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationUsers = $article->getAssociatedUserIds(true, false);
 				foreach ($notificationUsers as $userRole) {
-					$url = $request->url(null, $userRole['role'], 'submissionEditing', $article->getId(), null, 'proofread');
 					$notificationManager->createNotification(
-						$userRole['id'], 'notification.type.proofreadComment',
-						$article->getLocalizedTitle(), $url, 1, NOTIFICATION_TYPE_PROOFREAD_COMMENT
+						$request, $userRole['id'], NOTIFICATION_TYPE_PROOFREAD_COMMENT,
+						$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 					);
 				}
 

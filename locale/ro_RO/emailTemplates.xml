@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ro_RO (Romanian) locale.
-  * Provided by Constantinescu Nicolaie. 
+  * Provided by Constantinescu Nicolaie.
   *
   * $Id: emailTemplates.xml,v 1.0 8:37 PM 8/3/2010 kosson Exp $
   -->
@@ -41,7 +41,7 @@ Dacă nu mai doriți să primiți emailuri de înștiințare, mergeți la {$unsu
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Bine ați venit pe lista de email {$siteTitle}!</subject>
 		<body>V-ați înscris pentru a primi înștiințări de la {$siteTitle}.
-			
+
 Dați clic pe acest link pentru a confirma solicitarea de adăugare a emailului pe această listă: {$confirmLink}
 
 Dacă nu mai doriți să primiți emailuri de înștiințare, mergeți la {$unsubscribeLink}, unde introduceți adresa de email și parola.
@@ -50,15 +50,6 @@ Parola pentru dezactivarea înștiințărilor prin email este: {$password}
 
 {$principalContactSignature}</body>
 		<description>Acest email este trimis unui utilizator neînregistrat pe site, dar care s-a înscris doar pe lista de email.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Informațiile privind lista de email pentru {$siteTitle}</subject>
-		<body>Noua parolă pentru dezactivarea înștiințărilor prin email este: {$password}
-
-Dacă nu mai doriți să primiți emailuri de înștiințare, mergeți la {$unsubscribeLink}, unde introduceți adresa de email și parola.
-
-{$principalContactSignature}</body>
-		<description>Acest email este trimis doar utilizatorilor neînregistrați pe lista de email și care au indicat faptul că și-au uitat parola, neputându-se autentifica. Este oferită o adresă URL pe care o pot urma pentru a-și reseta parola.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmarea de resetare a parolei</subject>
@@ -195,7 +186,7 @@ O evaluare inițială pentru "{$articleTitle}" a scos la iveală faptul că prop
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decizia asupra "{$articleTitle}"</subject>
 		<body>În calitatea de evaluator pentru propunerea intitulată "{$articleTitle}," pentru {$journalName}, vă trimit evaluarea și decizia care au fost transmise autorului acestei lucrări. Vă mulțumesc încă o dată pentru contribuția importantă la acest proces.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -205,7 +196,7 @@ O evaluare inițială pentru "{$articleTitle}" a scos la iveală faptul că prop
 		<subject>Sarcină redacțională</subject>
 		<body>{$editorialContactName}:
 
-Propunerea intitulată "{$articleTitle}" trimisă revistei {$journalName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.  
+Propunerea intitulată "{$articleTitle}" trimisă revistei {$journalName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.
 
 URL-ul propunerii: {$submissionUrl}
 Nume utilizator: {$editorUsername}
@@ -441,7 +432,7 @@ Vă solicităm inițierea (tehno)redactării articolului intitulat "{$articleTit
 1. Clic pe URL-ul propunerii mai jos.
 2. Autentificați-vă la revistă și clic pe fișierul care apare la pasul 1.
 3. Consultați instrucțiunile privind (tehno)redactarea postate pe pagină.
-4. Deschideți fișierul descărcat și procedați la (tehno)redactare, formulând în același timp și întrebările pentru autor dacă acestea există și sunt necesare. 
+4. Deschideți fișierul descărcat și procedați la (tehno)redactare, formulând în același timp și întrebările pentru autor dacă acestea există și sunt necesare.
 5. Salvați fișierul (tehno)redactat și încărcați-l la pasul 1 corspunzător (tehno)redactării.
 6. Trimiteți un email complet cu toate neclaritățile redactorului.
 
@@ -459,8 +450,8 @@ Nume utilizator: {$copyeditorUsername}
 Am făcut (tehno)redactarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Pentru a trece în revistă modificările propuse și pentru a răspunde la întrebările pentru autor, urmați următorii pași:
 
 1. Autentificați-vă la revistă urmând URL-ul de mai jos folosind numele de utilizator și parola proprie (la nevoie folosește linkul „am uitat”).
-2. Clic pe fișierul de la pasul 1. Este fișierul inițial al (tehno)redactării pentru a fi descărcat și deschis. 
-3. Trece în revistă (tehno)redactarea făcând modificări cu ajutorul instrumentului Word Track Changes cât și răspunsurile la întrebări. 
+2. Clic pe fișierul de la pasul 1. Este fișierul inițial al (tehno)redactării pentru a fi descărcat și deschis.
+3. Trece în revistă (tehno)redactarea făcând modificări cu ajutorul instrumentului Word Track Changes cât și răspunsurile la întrebări.
 4. Salvează fișierul pe desktop și încarcă-l la pasul 2. (Tehno)redactarea autorului.
 5. Clic pe pictograma de email de sub ÎNCHEIAT și trimite un email redactorului.
 
@@ -586,7 +577,7 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 		<subject>Asamblare încheiată</subject>
 		<body>{$editorialContactName}:
 
-Asamblarea a fost pregătită pentru manuscrisul intitulat "{$articleTitle}" propus revistei {$journalName} și este gata de corectură. 
+Asamblarea a fost pregătită pentru manuscrisul intitulat "{$articleTitle}" propus revistei {$journalName} și este gata de corectură.
 
 Dacă sunt întrebări, contactați-mă.
 

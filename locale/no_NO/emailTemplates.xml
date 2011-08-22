@@ -119,7 +119,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Redaksjonell beslutning om "{$articleTitle}"</subject>
 		<body>Fordi du har vært med på å vurdere manuskriptet "{$articleTitle}," for publisering i {$journalName}, sender jeg deg herved de samme uttalelsene og beslutningene som forfatteren har mottatt. Samtidig vil jeg igjen takke for at du bidrar til arbeidet med  {$journalName}.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -129,7 +129,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi
 		<subject>Redaksjonelt oppdrag</subject>
 		<body>{$editorialContactName}:
 
-Som seksjonsredaktør i {$journalName} er du herved oppnevnt til å føre det innsendte manuskriptet "{$articleTitle}" gjennom den redaksjonelle prosessen.  
+Som seksjonsredaktør i {$journalName} er du herved oppnevnt til å føre det innsendte manuskriptet "{$articleTitle}" gjennom den redaksjonelle prosessen.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$editorUsername}
@@ -194,7 +194,7 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
 Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.
 
-Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. 
+Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.
 
 Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
@@ -328,7 +328,7 @@ Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterlige
 		<subject>Manusredigeringen er fullført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå fullført første runde med manusredigering av  manuskriptet "{$articleTitle}" for {$journalName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer. 
+Jeg har nå fullført første runde med manusredigering av  manuskriptet "{$articleTitle}" for {$journalName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer.
 
 Jeg vil samtidig benytte anledningen til å takke for oppdraget,
 {$copyeditorName}</body>
@@ -352,7 +352,7 @@ Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige
 
 Manuskript URL: {$submissionCopyeditingUrl}
 Brukernavn: {$authorUsername}
- 
+
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.
 
 {$editorialContactSignature}</body>
@@ -427,7 +427,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Sideoppsett fullført</subject>
 		<body>{$editorialContactName}:
 
-Sidene til manuskriptet "{$articleTitle}" er nå satt opp for {$journalName}, og er klare for korrekturlesing. 
+Sidene til manuskriptet "{$articleTitle}" er nå satt opp for {$journalName}, og er klare for korrekturlesing.
 
 Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter meg.
 
@@ -481,7 +481,7 @@ Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgav
 		<subject>Forespørsel om korrekturlesning</subject>
 		<body>{$proofreaderName}:
 
-Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet "{$articleTitle}" for {$journalName}. 
+Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet "{$articleTitle}" for {$journalName}.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$proofreaderUsername}
@@ -668,27 +668,19 @@ Lenke: {$url}
 Lenke: {$url}
 --
 
-Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubscribeLink} og oppgi din e-postadresse og passord. 
+Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubscribeLink} og oppgi din e-postadresse og passord.
 
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Velkommen til e-postlisten til {$siteTitle}!</subject>
 		<body>Du har bedt om å få meldinger fra {$siteTitle}.
-			
+
 Vennligst klikke på denne lenken for å bekrefte ditt ønske og legge din e-postadresse til e-postlisten: {$confirmLink}
 
 Om du ikke lenger ønsker å få meldinger via e-post, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.
 
 Ditt passord for å slå av e-postmeldinger er: {$password}
-
-{$principalContactSignature}</body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Din e-postmeldingsinformasjon vedrørende {$siteTitle}</subject>
-		<body>Ditt nye passord for å stoppe e-postmeldinger er: {$password}
-
-Om du ikke lenger ønsker å motta e-postmeldinger, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.
 
 {$principalContactSignature}</body>
 	</email_text>

@@ -146,7 +146,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>“{$articleTitle}” artikuluari buruzko erabakia</subject>
 		<body>{$journalName} aldizkariko “{$articleTitle}” artikuluaren ebaluatzaileetako bat zarenez, egileari bidali diogun ebaluazioa eta erabakia bidaltzen dizkizut. Berriro ere eskerrak eman nahi dizkizugu prozesu honi egin diozun ekarpen garrantzitsuagatik.
- 
+
 {$editorialContactSignature}
 
 {$comments}</body>
@@ -156,7 +156,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 		<subject>Editore-lana esleitzea</subject>
 		<body>{$editorialContactName}:
 
-{$journalName} aldizkariko “{$articleTitle}” artikulua esleitu dizugu prozesu editorialean eraman dezazun, Ataleko editore gisa.  
+{$journalName} aldizkariko “{$articleTitle}” artikulua esleitu dizugu prozesu editorialean eraman dezazun, Ataleko editore gisa.
 
 Artikuluaren URLa: {$submissionUrl}
 Erabiltzaile-izena: {$editorUsername}
@@ -345,7 +345,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 1. Egin klik behean, Artikuluaren URLan.
 2. Sartu aldizkarian eta egin klik 1. urratsean agertzen den Fitxategian.
 3. Irakurri Zuzenketak egiteko webgunean jarrita dauden instrukzioak.
-4. Ireki deskargatutako fitxategia eta zuzendu, Egile-kontsultak gehituz behar izanez gero. 
+4. Ireki deskargatutako fitxategia eta zuzendu, Egile-kontsultak gehituz behar izanez gero.
 5. Gorde zuzendutako fitxategia, eta kargatu Zuzenketako 1. urratsean.
 6. Bidali BUKATU duzula adierazteko mezua editoreari.
 
@@ -363,8 +363,8 @@ Erabiltzaile-izena: {$copyeditorUsername}
 {$journalName} aldizkarirako "{$articleTitle}" artikuluaren zuzenketa eginda dago. Proposatutako aldaketak ikusteko eta Egile-kontsultei erantzuteko, jarraitu urrats hauei mesedez:
 
 1. Sartu aldizkarian beheko URLaren bidez zure erabiltzaile-izenarekin eta pasahitzarekin (ahaztu bazaizu, erabili horretarako dagoen esteka).
-2. Egin klik "1. Lehenengo zuzenketa" azpiko Fitxategian, zuzendutako bertsioa deskargatu eta irekitzeko. 
-3. Berrikusi zuzenketak, egin aldaketak Word-en "Aldaketen kontrola" (Track Changes; Control de cambios) erabiliz, eta erantzun kontsultei. 
+2. Egin klik "1. Lehenengo zuzenketa" azpiko Fitxategian, zuzendutako bertsioa deskargatu eta irekitzeko.
+3. Berrikusi zuzenketak, egin aldaketak Word-en "Aldaketen kontrola" (Track Changes; Control de cambios) erabiliz, eta erantzun kontsultei.
 4. Gorde fitxategia mahaigainean eta kargatu "2. Egilearen zuzenketa" puntuan.
 5. Egin klik BUKATUTAren azpiko mezu-ikonoan, eta bidali mezua editoreari.
 
@@ -490,7 +490,7 @@ Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar za
 		<subject>Galeradak eginda</subject>
 		<body>{$editorialContactName}:
 
-{$journalName} aldizkarirako "{$articleTitle}" eskuizkribuaren galeradak eginda daude, proba-zuzenketa hasteko prest. 
+{$journalName} aldizkarirako "{$articleTitle}" eskuizkribuaren galeradak eginda daude, proba-zuzenketa hasteko prest.
 
 Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.
 
@@ -621,8 +621,8 @@ Eskerrik asko {$journalName} aldizkarirako "{$articleTitle}" eskuizkribuaren pro
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Interesgarria izan litekeen artikulu bat</subject>
-		<body>Artikulu hau zuretzat interesgarria izango dela uste dut: 
-Titulua: {$articleTitle} 
+		<body>Artikulu hau zuretzat interesgarria izango dela uste dut:
+Titulua: {$articleTitle}
 Egilea: {$authorName}
 Aldizkaria: {$journalName} bol: {$volume} zk: {$number} ({$year})
 URLa: {$articleUrl}</body>
@@ -734,7 +734,7 @@ Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira et
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Ongi etorri {$siteTitle} posta-zerrendara!</subject>
 		<body>{$siteTitle} gunearen jakinarazpenak jasotzeko izena eman duzu.
-			
+
 Egin klik esteka honetan zure eskaera berresteko eta zure helbide elektronikoa posta-zerrendan gehitzeko: {$confirmLink}
 
 Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.
@@ -743,15 +743,6 @@ Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}
 
 {$principalContactSignature}</body>
 		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu berriei bidaltzen zaie.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>{$siteTitle} jakinarazpenen posta-zerrendari buruzko informazioa</subject>
-		<body>Hau da jakinarazpen-mezuak desgaitzeko zure pasahitz berria: {$password}
-
-Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.
-
-{$principalContactSignature}</body>
-		<description>Jakinarazpenen posta-zerrendako erabiltzaile erregistratu gabeei bidaltzen zaie mezu hau, pasahitza ahaztu dutela edo sartu ezinda dabiltzala adierazten dutenean. Pasahitza berrezartzeko URL bat ematen du.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editorearen erabakia</subject>
@@ -894,7 +885,7 @@ Harpidetza URLa: {$subscriptionUrl}</body>
 Mesedez, egiaztatu edo emango al zeniguke zure {$articleTitle} artikuluan agertzen den aipu egokia honako erreferentzia honetarako?
 
 
-{$rawCitation} 
+{$rawCitation}
 
 
 Eskerrik asko!
