@@ -225,6 +225,17 @@ class Validation {
 				if (function_exists('sha1')) {
 					return sha1($valueToEncrypt);
 				}
+			// http://yorickpeterse.com/articles/use-bcrypt-fool/
+			// https://gist.github.com/1053158
+			// http://stackoverflow.com/questions/2225720/
+			case 'bcrypt':
+ 				if (CRYPT_BLOWFISH != 1) {
+ 					throw new Exception("need php >= 5.3");
+ 				} else {
+ 					$salt = '$2a$12$' . 
+						strtr(base64_encode(md5($user, true)),'+','.');
+ 					return crypt($password, $salt);
+ 				}
 			case 'md5':
 			default:
 				return md5($valueToEncrypt);
