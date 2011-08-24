@@ -14,9 +14,9 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.customBlockManager.displayName">Verwaltung eigener Blöcke</message>
-	<message key="plugins.generic.customBlockManager.description">Dieses Plug-In lässt Sie eigene Sidebar-Blöcke verwalten. Sie können die Blöcke in den Einstellungen jedes Plug-Ins, das Sie hier anlegen, verwalten.</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Sie können dieses Plug-In benutzen, um eigene Block-Plug-Ins hinzuzufügen oder zu löschen. Sie können dann den Inhalt über die Seite <a href="{$systemPluginsUrl}">System-Plug-Ins</a> (im Abschnitt Block-Plug-Ins) bearbeiten. Um Ihr Plug-In am gewünschten Ort in der Sidebar zu platzieren, gehen Sie zu <a href="{$setupStep56}">Schritt 5.6 des Setups</a>.]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Einstellungen</message>
+	<message key="plugins.generic.customBlockManager.description">Dieses Plug-In lässt Sie eigene Sidebar-Blöcke verwalten. Sie können die Blöcke in den Einstellungen jedes Plug-Ins, das Sie hier anlegen, verwalten.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Name des Blocks</message>	
 	<message key="plugins.generic.customBlockManager.action">Aktion</message>	
 	<message key="plugins.generic.customBlockManager.delete">Löschen</message>	
