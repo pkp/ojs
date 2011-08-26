@@ -135,6 +135,7 @@
 		</td>
 	</tr>
 {/if}
+{if $allowRegReviewer || $isReviewer}
 <tr valign="top">
 	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
 	<td class="value">
@@ -146,6 +147,7 @@
 		</textarea>
 	</td>
 </tr>
+{/if}
 <tr valign="top">
 	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
