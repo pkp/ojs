@@ -15,7 +15,8 @@
 				var addthis_pub = '{$sharingUserName}';
 			</script>
 		{/if}
-
+		<br />
+		<br />
 		<div class="addthis_container">
 			<a href="http://www.addthis.com/bookmark.php"
 				onmouseover="return addthis_open(this, '', '{$sharingArticleURL|escape:"javascript"}', '{$sharingArticleTitle|escape:"javascript"}')"
