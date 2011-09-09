@@ -218,7 +218,7 @@ class PublishedArticleDAO extends DAO {
 				AND a.doi = ?
 				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
 				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY date_published '. ($reverse?'DESC':'ASC'),
+			ORDER BY date_published',
 			$params,
 			$rangeInfo
 		);
