@@ -19,8 +19,9 @@ class LoginHandler extends PKPLoginHandler {
 	/**
 	 * Sign in as another user. 
 	 * @param $args array ($userId)
+	 * @param $request PKPRequest
 	 */
-	function signInAsUser($args) {
+	function signInAsUser($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		// only managers and admins have permission
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
@@ -28,7 +29,7 @@ class LoginHandler extends PKPLoginHandler {
 
 		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
-			$journal =& Request::getJournal();
+			$journal =& $request->getJournal();
 
 			if (!Validation::canAdminister($journal->getId(), $userId)) {
 				$this->setupTemplate();
@@ -37,14 +38,14 @@ class LoginHandler extends PKPLoginHandler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-				$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
+				$templateMgr->assign('backLink', $request->url(null, null, 'people', 'all'));
 				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 				return $templateMgr->display('common/error.tpl');
 			}
 
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$newUser =& $userDao->getUser($userId);
-			$session =& Request::getSession();
+			$session =& $request->getSession();
 
 			// FIXME Support "stack" of signed-in-as user IDs?
 			if (isset($newUser) && $session->getUserId() != $newUser->getId()) {
@@ -52,19 +53,21 @@ class LoginHandler extends PKPLoginHandler {
 				$session->setSessionVar('userId', $userId);
 				$session->setUserId($userId);
 				$session->setSessionVar('username', $newUser->getUsername());
-				Request::redirect(null, 'user');
+				$request->redirect(null, 'user');
 			}
 		}
-		Request::redirect(null, Request::getRequestedPage());
+		$request->redirect(null, $request->getRequestedPage());
 	}
 
 	/**
 	 * Restore original user account after signing in as a user.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function signOutAsUser() {
+	function signOutAsUser($args, &$request) {
 		$this->validate();
 
-		$session =& Request::getSession();
+		$session =& $request->getSession();
 		$signedInAs = $session->getSessionVar('signedInAs');
 
 		if (isset($signedInAs) && !empty($signedInAs)) {
@@ -82,23 +85,25 @@ class LoginHandler extends PKPLoginHandler {
 			}
 		}
 
-		Request::redirect(null, 'user');
+		$request->redirect(null, 'user');
 	}
 
 	/**
 	 * Get the log in URL.
+	 * @param $request PKPRequest
 	 */
-	function _getLoginUrl() {
-		return Request::url(null, 'login', 'signIn');
+	function _getLoginUrl($request) {
+		return $request->url(null, 'login', 'signIn');
 	}
 
 	/**
 	 * Helper Function - set mail from address
-	 * @param MailTemplate $mail 
+	 * @param $request PKPRequest
+	 * @param $mail MailTemplate
 	 */
-	function _setMailFrom(&$mail) {
-		$site =& Request::getSite();
-		$journal =& Request::getJournal();
+	function _setMailFrom($request, &$mail) {
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
 		
 		// Set the sender based on the current context
 		if ($journal && $journal->getSetting('supportEmail')) {
