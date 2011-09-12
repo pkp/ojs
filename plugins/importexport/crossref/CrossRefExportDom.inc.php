@@ -20,7 +20,7 @@ import('lib.pkp.classes.xml.XMLCustomWriter');
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.0');
 define('CROSSREF_VERSION' , '4.3.0');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.0 http://www.crossref.org/schema/4.3.0/crossref4.3.0.xsd');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.0 http://www.crossref.org/schema/deposit/crossref4.3.0.xsd');
 
 class CrossRefExportDom {
 
