@@ -27,16 +27,16 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	/**
 	 * @see PKPAnnouncementHandler::_getAnnouncementsEnabled()
 	 */
-	function _getAnnouncementsEnabled() {
-		$journal =& Request::getJournal();
+	function _getAnnouncementsEnabled($request) {
+		$journal =& $request->getJournal();
 		return $journal->getSetting('enableAnnouncements');
 	}
 
 	/**
 	 * @see PKPAnnouncementHandler::_getAnnouncements()
 	 */
-	function &_getAnnouncements($rangeInfo = null) {
-		$journal =& Request::getJournal();
+	function &_getAnnouncements($request, $rangeInfo = null) {
+		$journal =& $request->getJournal();
 
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
 		$announcements =& $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
@@ -47,16 +47,16 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	/**
 	 * @see PKPAnnouncementHandler::_getAnnouncementsIntroduction()
 	 */
-	function _getAnnouncementsIntroduction() {
-		$journal =& Request::getJournal();
+	function _getAnnouncementsIntroduction($request) {
+		$journal =& $request->getJournal();
 		return $journal->getLocalizedSetting('announcementsIntroduction');
 	}
 
 	/**
 	 * @see PKPAnnouncementHandler::_announcementIsValid()
 	 */
-	function _announcementIsValid($announcementId) {
-		$journal =& Request::getJournal();
+	function _announcementIsValid($request, $announcementId) {
+		$journal =& $request->getJournal();
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
 		return ($announcementId != null && $announcementDao->getAnnouncementAssocId($announcementId) == $journal->getId());
 	}
