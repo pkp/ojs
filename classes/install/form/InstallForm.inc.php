@@ -63,12 +63,12 @@ class InstallForm extends Form {
 		);
 
 		$this->supportedConnectionCharsets = array (
-			'' => Locale::translate('common.notApplicable'),
+			'' => __('common.notApplicable'),
 			'utf8' => 'Unicode (UTF-8)'
 		);
 
 		$this->supportedDatabaseCharsets = array (
-			'' => Locale::translate('common.notApplicable'),
+			'' => __('common.notApplicable'),
 			'utf8' => 'Unicode (UTF-8)'
 		);
 
@@ -120,8 +120,10 @@ class InstallForm extends Form {
 		$templateMgr->assign('connectionCharsetOptions', $this->supportedConnectionCharsets);
 		$templateMgr->assign('databaseCharsetOptions', $this->supportedDatabaseCharsets);
 		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
+		$templateMgr->assign('allowFileUploads', get_cfg_var('file_uploads') ? __('common.yes') : __('common.no'));
+		$templateMgr->assign('maxFileUploadSize', get_cfg_var('upload_max_filesize'));
 		$templateMgr->assign('databaseDriverOptions', $this->checkDBDrivers());
-		$templateMgr->assign('supportsMBString', String::hasMBString() ? Locale::translate('common.yes') : Locale::translate('common.no'));
+		$templateMgr->assign('supportsMBString', String::hasMBString() ? __('common.yes') : __('common.no'));
 		$templateMgr->assign('phpIsSupportedVersion', version_compare(PHP_REQUIRED_VERSION, PHP_VERSION) != 1);
 		$templateMgr->assign('phpRequiredVersion', PHP_REQUIRED_VERSION);
 		$templateMgr->assign('phpVersion', PHP_VERSION);
@@ -253,7 +255,7 @@ class InstallForm extends Form {
 	 */
 	function dbInstallError($errorMsg) {
 		$templateMgr =& TemplateManager::getManager();
-		if (empty($errorMsg)) $errorMsg = Locale::translate('common.error.databaseErrorUnknown');
+		if (empty($errorMsg)) $errorMsg = __('common.error.databaseErrorUnknown');
 		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => $errorMsg));
 		error_log($errorMsg);
 		$this->display();
