@@ -179,7 +179,7 @@ class IssueFileManager extends FileManager {
 		$issueFile->setDateUploaded(Core::getCurrentDate());
 		$issueFile->setDateModified(Core::getCurrentDate());
 		$issueFile->setFileName('');
-		$issueFile->setFileType($_FILES[$fileName]['type']);
+		$issueFile->setFileType($this->getUploadedFileType($fileName));
 		$issueFile->setFileSize($_FILES[$fileName]['size']);
 		$issueFile->setOriginalFileName($this->truncateFileName($_FILES[$fileName]['name'], 127));
 		$issueFile->setContentType($contentType);

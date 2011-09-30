@@ -513,7 +513,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setDateModified(Core::getCurrentDate());
 		}
 
-		$articleFile->setFileType($_FILES[$fileName]['type']);
+		$articleFile->setFileType($this->getUploadedFileType($fileName));
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
 		$articleFile->setFileStage($fileStage);

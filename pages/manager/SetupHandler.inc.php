@@ -200,7 +200,7 @@ class SetupHandler extends ManagerHandler {
 						if (!is_array($templates)) $templates = array();
 						$templateId = count($templates);
 						$originalFilename = $_FILES['template-file']['name'];
-						$fileType = $_FILES['template-file']['type'];
+						$fileType = $journalFileManager->getUploadedFileType('template-file');
 						$filename = "template-$templateId." . $journalFileManager->parseFileExtension($originalFilename);
 						$journalFileManager->uploadFile('template-file', $filename);
 						$templates[$templateId] = array(
