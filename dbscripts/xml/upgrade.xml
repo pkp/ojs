@@ -130,9 +130,9 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.3.9">
-		<!-- 2.x to 2.3.4 -->
-		<data file="dbscripts/xml/upgrade/2.3.4_preupdate.xml" />
+	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
+		<!-- 2.x to 2.4 -->
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate.xml" />
 	</upgrade>
 
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
@@ -260,9 +260,6 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.4.9">
 		<!-- 2.x to 2.3.5 -->
-		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US" />
-		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
-		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
 		<data file="dbscripts/xml/upgrade/2.3.5_update.xml" />
 		<note file="docs/release-notes/README-2.3.5" />
 	</upgrade>
@@ -274,8 +271,13 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
+		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US" />
+		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
+		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
 		<!-- Mutex help table. -->
 		<data file="lib/pkp/xml/mutexData.xml" />
+		<data file="dbscripts/xml/upgrade/2.4.0_update.xml" />
+		<note file="docs/release-notes/README-2.4.0" />
 	</upgrade>
 
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
