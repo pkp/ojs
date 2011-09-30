@@ -264,6 +264,15 @@
 		<note file="docs/release-notes/README-2.3.5" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.3.5.9">
+		<note file="docs/release-notes/README-2.3.6" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.3.6.9">
+		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
+		<note file="docs/release-notes/README-2.3.7" />
+	</upgrade>
+
 	<upgrade minversion="2.2.3.0" maxversion="2.3.2.0">
 		<!-- COUNTER - counter_monthly_log update.-->
 		<data file="plugins/generic/counter/counter_monthly_log_1_1.xml" />
