@@ -101,8 +101,12 @@ class ReviewerAction extends Action {
 					// Format the review due date
 					$reviewDueDate = strtotime($reviewAssignment->getDateDue());
 					$dateFormatShort = Config::getVar('general', 'date_format_short');
-					if ($reviewDueDate == -1) $reviewDueDate = $dateFormatShort; // Default to something human-readable if no date specified
-					else $reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
+					if ($reviewDueDate === -1 || $reviewDueDate === false) {
+						// Default to something human-readable if no date specified
+						$reviewDueDate = '_____';
+					} else {
+						$reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
+					}
 					
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
