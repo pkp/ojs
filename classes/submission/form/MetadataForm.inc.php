@@ -393,6 +393,7 @@ class MetadataForm extends Form {
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);
 				}
+				unset($author);
 			}
 		}
 
