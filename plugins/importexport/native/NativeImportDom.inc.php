@@ -872,7 +872,7 @@ class NativeImportDom {
 		$hasErrors = false;
 		$galleyCount = 0;
 		for ($index=0; $index < count($articleNode->children); $index++) {
-			$node =& $articleNode->children[$index];
+			$node = $articleNode->children[$index];
 
 			if ($node->getName() == 'htmlgalley') $isHtml = true;
 			elseif ($node->getName() == 'galley') $isHtml = false;
@@ -883,6 +883,7 @@ class NativeImportDom {
 				$hasErrors = true;
 			}
 			$galleyCount++;
+			unset($node);
 		}
 		if ($hasErrors) return false;
 
