@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file tests/functional/oai/FunctionalOaiNlmTest.inc.php
+ *
+ * Copyright (c) 2000-2011 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class FunctionalOaiNlmTest
+ * @ingroup tests_functional_oai
+ *
+ * @brief Test NLM OAI output.
+ */
+
+
+import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
+
+class FunctionalOaiNlmTest extends OaiWebServiceTestCase {
+	public function testDoi() {
+		// Configure the web service request
+		$this->webServiceRequest->setParams($params = array(
+			'verb' => 'GetRecord',
+			'metadataPrefix' => 'nlm',
+			'identifier' => 'oai:ojs.ojs-test.cedis.fu-berlin.de:article/1'
+		));
+
+		// Check DOI node with XPath.
+		$namespaces = array(
+			'nlm' => 'http://dtd.nlm.nih.gov/publishing/2.3'
+		);
+		$xPath = $this->getXPath($namespaces);
+		self::assertEquals('10.1234/t.v1i1.1', $xPath->evaluate('string(/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/nlm:article/nlm:front/nlm:article-meta/nlm:article-id[@pub-id-type="doi"])'));
+	}
+}
+?>
