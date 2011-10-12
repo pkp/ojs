@@ -180,7 +180,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
+			$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
@@ -197,7 +197,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
+			$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
@@ -205,10 +205,10 @@ class JournalOAI extends OAI {
 	/**
 	 * @see OAI#sets
 	 */
-	function &sets($offset, &$total) {
+	function &sets($offset, $limit, &$total) {
 		$sets = null;
-		if (!HookRegistry::call('JournalOAI::sets', array(&$this, $offset, $total, &$sets))) {
-			$sets =& $this->dao->getJournalSets($this->journalId, $offset, $total);
+		if (!HookRegistry::call('JournalOAI::sets', array(&$this, $offset, $limit, $total, &$sets))) {
+			$sets =& $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);
 		}
 		return $sets;
 	}
