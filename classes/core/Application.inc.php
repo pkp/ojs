@@ -85,6 +85,8 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleNoteDAO' => 'classes.article.ArticleNoteDAO', // DEPRECATED
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
+			'ArticleTombstoneDAO' => 'classes.article.ArticleTombstoneDAO',
+			'ArticleTombstoneSettingsDAO' => 'classes.article.ArticleTombstoneSettingsDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
 			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',

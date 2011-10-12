@@ -488,6 +488,79 @@
 	</table>
 
 	<!--
+      *
+      * TABLE article_tombstones
+      *
+      -->
+    <table name="article_tombstones">
+        <field name="tombstone_id" type="I8">
+            <KEY />
+            <AUTOINCREMENT />
+        </field>
+        <field name="article_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="date_deleted" type="T">
+            <NOTNULL />
+        </field>
+        <field name="journal_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="section_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="set_spec" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <field name="set_name" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <field name="oai_identifier" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <descr>Archived, removed from TOC, unscheduled or uplublished journal articles.</descr>
+		<index name="article_tombstones_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="article_tombstones_article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE article_tombstone_settings
+	  *
+	  -->
+	<table name="article_tombstone_settings">
+		<field name="tombstone_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Article tombstone settings.</descr>
+		<index name="article_tombstone_settings_tombstone_id">
+			<col>tombstone_id</col>
+		</index>
+		<index name="article_tombstone_settings_pkey">
+			<col>tombstone_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
 	  *
 	  * TABLE articles
 	  *

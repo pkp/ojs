@@ -1384,7 +1384,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	function restoreToQueue($args, $request) {
-		$articleId = (int) array_shift($request);
+		$articleId = (int) array_shift($args);
 		$this->validate($articleId);
 		$submission =& $this->submission;
 
@@ -2315,6 +2315,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 
+		if ($publishedArticle) {
+			if (!$issue || !$issue->getPublished()) {
+				$fromIssue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $journal->getId());
+				if ($fromIssue->getPublished()) {
+					// Insert article tombstone 
+					import('classes.article.ArticleTombstoneManager');
+					$articleTombstoneManager = new ArticleTombstoneManager();
+					$articleTombstoneManager->insertArticleTombstone($submission, $journal);
+				}
+			}
+		}
+		
 		if ($issue) {
 			// Schedule against an issue.
 			if ($publishedArticle) {
@@ -2356,6 +2368,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
+			// delete article tombstone
+			$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
+			$articleTombstoneDao->deleteByArticleId($submission->getId());
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
 		}

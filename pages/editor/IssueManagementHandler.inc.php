@@ -86,13 +86,21 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId);
 		$issue =& $this->issue;
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
-
+		
+		$journal =& $request->getJournal();
+		
 		// remove all published articles and return original articles to editing queue
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
+			// Insert article tombstone if the issue is published 
+			import('classes.article.ArticleTombstoneManager');
+			$articleTombstoneManager = new ArticleTombstoneManager();
 			foreach ($publishedArticles as $article) {
+				if ($isBackIssue) {
+					$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				}
 				$articleDao->changeArticleStatus($article->getId(),STATUS_QUEUED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
 			}
@@ -101,7 +109,6 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssue($issue);
 		if ($issue->getCurrent()) {
-			$journal =& $request->getJournal();
 			$issues = $issueDao->getPublishedIssues($journal->getId());
 			if (!$issues->eof()) {
 				$issue =& $issues->next();
@@ -612,6 +619,11 @@ class IssueManagementHandler extends EditorHandler {
 
 		$articles = $publishedArticleDao->getPublishedArticles($issueId);
 
+		// insert article tombstone, if an article is removed from a published issue 
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 		foreach($articles as $article) {
 			$articleId = $article->getId();
 			$pubId = $article->getPubId();
@@ -629,6 +641,9 @@ class IssueManagementHandler extends EditorHandler {
 					$publishedArticleDao->updatePublishedArticleField($pubId, 'access_status', $accessStatus[$pubId]);
 				}
 			} else {
+				if ($issue->getPublished()) {
+					$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				}
 				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
 
@@ -834,6 +849,9 @@ class IssueManagementHandler extends EditorHandler {
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 				}
+				// delete article tombstone
+				$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
+				$articleTombstoneDao->deleteByArticleId($article->getId());
 				unset($article);
 			}
 		}
@@ -900,7 +918,6 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $this->issue;
 
 		$journal =& $request->getJournal();
-		$journalId = $journal->getId();
 
 		$issue->setCurrent(0);
 		$issue->setPublished(0);
@@ -909,6 +926,14 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateIssue($issue);
 
+		// insert article tombstones for all articles
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
+		foreach ($publishedArticles as $article) {				
+			$articleTombstoneManager->insertArticleTombstone($article, $journal);
+		}
 		$request->redirect(null, null, 'futureIssues');
 	}
 
