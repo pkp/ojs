@@ -25,7 +25,6 @@
 	<message key="manager.people.enrollSyncJournal">с журналем</message>
 	<message key="manager.people.syncUserDescription"></message>
 	<message key="manager.sections.assigned">Редакторы данного раздела</message>
-	<message key="manager.sections.confirmDelete">Вы уверены, что хотите убрать данный раздел? Все статьи в нем надо будет перенаприть в другие разделы, иначе они исчезнут.</message>
 	<message key="manager.sections.create">Создать раздел</message>
 	<message key="manager.section.sectionEditorInstructions"></message>
 	<message key="manager.sections.editorRestriction">Статьи в этот раздел могут присылать только редакторы.</message>

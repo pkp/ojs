@@ -120,7 +120,6 @@
 	<message key="manager.reviewForms.title">Tên mẫu</message>
 	<message key="manager.sections.abstractsNotRequired">Không yêu cầu tóm tắt</message>
 	<message key="manager.sections.assigned">Các BTV của Chuyên mục này</message>
-	<message key="manager.sections.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn chuyên mục này? Quý vị sẽ phải xuất bản lại bất kỳ bài viết nào trong chuyên mục này.</message>
 	<message key="manager.sections.create">Tạo chuyên mục mới</message>
 	<message key="manager.sections.disableComments">Không có bạn đọc bình luận chuyên mục này.</message>
 	<message key="manager.section.sectionEditorInstructions">Lựa chọn trong số BTV hiện có và "Bổ nhiệm BTV" cho chuyên mục này.</message>

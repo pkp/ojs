@@ -127,7 +127,6 @@
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Kræv ikke abstracts</message>
 	<message key="manager.sections.assigned">Redaktører for denne sektion</message>
-	<message key="manager.sections.confirmDelete">Er du sikker på, at du vil slette denne sektion permanent? Du bliver nødt til at publicere artiklerne i denne sektion igen.</message>
 	<message key="manager.sections.create">Opret sektion</message>
 	<message key="manager.sections.disableComments">Deaktiver mulighed for læserkommentarer i denne sektion</message>
 	<message key="manager.section.sectionEditorInstructions">Vælg blandt de tilgængelige sektionsredaktører, og &quot;Tildel redaktør&quot; til denne sektion.</message>

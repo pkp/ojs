@@ -123,7 +123,6 @@
 	<message key="manager.reviewForms.title">Název</message>
 	<message key="manager.sections.abstractsNotRequired">Nepožadovat abstrakta</message>
 	<message key="manager.sections.assigned">Editoři této sekce</message>
-	<message key="manager.sections.confirmDelete">Jste si jistý, že chcete trvale odstranit tuto sekci? Budete muset znovu publikovat všechny články v této sekci.</message>
 	<message key="manager.sections.create">Vytvořit sekci</message>
 	<message key="manager.sections.disableComments">Zakázat komentáře čtenářů pro tuto sekci.</message>
 	<message key="manager.section.sectionEditorInstructions">Vyberte z dostupných editorů sekcí a "Přidělte editora" této sekci.</message>

@@ -159,7 +159,6 @@
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Benötigt keine Abstracts.</message>
 	<message key="manager.sections.assigned">Rubrikredakteur/innen dieser Rubrik</message>
-	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen? Dadurch müssen Sie alle Artikel dieser Rubrik erneut veröffentlichen.</message>
 	<message key="manager.sections.create">Eine Rubrik erstellen</message>
 	<message key="manager.sections.disableComments">Leser/innenkommentare für diese Rubrik ausschalten.</message>
 	<message key="manager.section.sectionEditorInstructions"><![CDATA[Fügen Sie dieser Rubrik eine/n Rubrikredakteur/in aus den zur Verfügung stehenden Rubrikredakteur/innen hinzu. Sobald er/sie hinzugefügt worden ist, geben Sie an, ob die/der Rubrikredakteur/in den BEGUTACHTUNGS- (Peer Review) oder den REDAKTIONSPROZESS (Lektorat, Layout und Korrekturlektorat) von Beiträgen zu dieser Rubrik durchführen soll. Rubrikredakteur/innen können Sie anlegen, in dem Sie auf <a href="{$sectionEditorsUrl}">Rubrikredakteur/innen</a> unter Funktionen in der Zeitschriftenverwaltung klicken.]]></message>

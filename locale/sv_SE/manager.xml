@@ -98,7 +98,6 @@
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Kräver inte abstract</message>
 	<message key="manager.sections.assigned">Den här sektionens redaktörer</message>
-	<message key="manager.sections.confirmDelete">Är du säker på att du vill radera den här sektionen permanent? Du måste i så fall publicera artiklarna igen.</message>
 	<message key="manager.sections.create">Skapa sektion</message>
 	<message key="manager.section.sectionEditorInstructions">Välj tillgängliga sektionsredaktörer till den här sektionen bland "Välj redaktör".</message>
 	<message key="manager.sections.editorRestriction">Material kan bara skickas in av redaktörer och sektionsredaktörer.</message>

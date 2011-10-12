@@ -83,7 +83,6 @@
 	<message key="manager.people.syncUserDescription">登録ユーザの同期機能は、指定した雑誌において指定した役割で登録されているすべてのユーザを、この雑誌においても同じ役割で登録します。この機能は、複数の雑誌で共通のユーザグループ（査読者など）を指定することを可能にします。</message>
 	<message key="manager.plugins.description">このページでは、雑誌管理者が現在インストールされているプラグインを評価したり、場合によっては設定したりすることができます。</message>
 	<message key="manager.sections.assigned">このセクションの編集者</message>
-	<message key="manager.sections.confirmDelete">このセクションを削除してもよいですか。これを実行すると、このセクションのすべての論文･記事を再出版しなければならなくなります。</message>
 	<message key="manager.sections.create">セクションの作成</message>
 	<message key="manager.section.sectionEditorInstructions">任命可能なセクションエディタの中からこのセクションの「セクションエディタを選択」してください。</message>
 	<message key="manager.sections.editorRestriction">編集者とセクションエディタのみ投稿可能。</message>

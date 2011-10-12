@@ -34,12 +34,13 @@ class SectionHandler extends ManagerHandler {
 		$rangeInfo =& Handler::getRangeInfo('sections');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getId(), $rangeInfo);
-
+		$emptySectionIds = $sectionDao->getJournalEmptySectionIds($journal->getId());
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
+		$templateMgr->assign('emptySectionIds', $emptySectionIds);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		$templateMgr->display('manager/sections/sections.tpl');
 	}

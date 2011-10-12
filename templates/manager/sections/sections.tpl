@@ -39,7 +39,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 		<td class="drag">{$section->getLocalizedTitle()|escape}</td>
 		<td class="drag">{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">
-			<a href="{url op="editSection" path=$section->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u id=$section->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d id=$section->getId()}">&darr;</a>
+			<a href="{url op="editSection" path=$section->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSection" path=$section->getId()}" onclick="{if !in_array($section->getId(), $emptySectionIds)}alert('{translate|escape:"jsparam" key="manager.sections.alertDelete"}'); return false{else}return confirm('{translate|escape:"jsparam" key="manager.sections.confirmDelete"}'){/if}" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveSection" d=u id=$section->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveSection" d=d id=$section->getId()}">&darr;</a>
 		</td>
 	</tr>
 {/iterate}

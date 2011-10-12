@@ -123,7 +123,6 @@
 	<message key="manager.reviewForms.title">Titolo</message>
 	<message key="manager.sections.abstractsNotRequired">Non richiedono abstract.</message>
 	<message key="manager.sections.assigned">Editor di questa sezione</message>
-	<message key="manager.sections.confirmDelete">Siete sicuri di voler cancellare definitivamente questa sezione? Se sì dovrete ripubblicare tutti gli articoli attualmente presenti.</message>
 	<message key="manager.sections.create">Crea una sezione</message>
 	<message key="manager.sections.disableComments">Disabilita i commenti dei lettori per questa sezione</message>
 	<message key="manager.section.sectionEditorInstructions">Aggiungi un Section Editor a questa sezione per assegnargli automaticamente le submission effettuate in questa sezione (comunque potrai sempre assegnare manualmente un SE, quando arriva ogni submission).

@@ -36,7 +36,6 @@
 	<message key="manager.people.mergeUsers.into.description">Velg en bruker du vil overføre den foregående brukerens forfatterskap, redigeringsoppdrag etc.</message>
 	<message key="manager.people.syncUserDescription">Vervingssynkronisering verver alle brukere som allerede er vervet i angitt rolle i det angitte tidsskriftet til samme rolle i dette tidsskriftet. Denne funksjonen tillater at et felles sett brukere (for eks. fagkonsulenter) synkroniseres mellom tidsskrift.</message>
 	<message key="manager.sections.assigned">Denne seksjonens redaktører</message>
-	<message key="manager.sections.confirmDelete">Er du sikker på at du vil slette denne seksjonen for alltid? Du vil måtte re-publisere alle artikler i denne seksjonen.</message>
 	<message key="manager.sections.create">Opprett seksjon</message>
 	<message key="manager.section.sectionEditorInstructions">Velg blant de tilgjengelige seksjonsredaktørene og 'Oppnevn Redaktør' for denne seksjonen.</message>
 	<message key="manager.sections.editorRestriction">Element kan bare sendes inn av redaktører og seksjonsredaktører.</message>

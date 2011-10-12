@@ -35,7 +35,6 @@
 	<message key="manager.people.mergeUsers.into.description">選擇一個使用者，將之前所選之使用者的權限、編輯指派工作等等重新歸屬給他。</message>
 	<message key="manager.people.syncUserDescription">角色同步化會在這份期刊中指派「在特定期刊中已經有特定角色的使用者」同樣的角色。這個功能允許一組常見的使用者（例如，審查人）在期刊之間進行同步化。</message>
 	<message key="manager.sections.assigned">此文稿類型的編輯</message>
-	<message key="manager.sections.confirmDelete">您確定您要永久性地刪除這個文稿類型？您將必須重新出版屬於此文稿類型的所有文章。</message>
 	<message key="manager.sections.create">新增文稿類型</message>
 	<message key="manager.section.sectionEditorInstructions">從可供選擇的文稿類型編輯中指派這文稿類型的編輯。</message>
 	<message key="manager.sections.editorRestriction">只有編輯和文稿類型編輯可以送出項目。</message>

@@ -29,7 +29,6 @@
 	<message key="manager.people.mergeUsers.into.description">Önceki seçilen kullanıcının sistemde kalacak hesabını seçiniz (tüm kayırları bu kullanıcıya taşınacaktır).</message>
 	<message key="manager.people.syncUserDescription">Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örn. Eleştirmenler) dergiler arasında senkronize eder.</message>
 	<message key="manager.sections.assigned">Bu bölümün Editörleri</message>
-	<message key="manager.sections.confirmDelete">Bu bölümü kalıcı olarak çıkarmakta emin misiniz? Bu bölümde herhangi bir yayını yeniden yayımlamanız gerekecektir.</message>
 	<message key="manager.sections.create">Bölüm oluşturun</message>
 	<message key="manager.section.sectionEditorInstructions">Uygun bölüm editörleri arasından seçin ve bu bölüme bölüm editörü olarak editör atayın.</message>
 	<message key="manager.sections.editorRestriction">Maddeler sadece editörler ve bölüm editörleri tarafından sunulabilir.</message>

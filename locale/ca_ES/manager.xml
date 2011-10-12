@@ -128,7 +128,6 @@
 	<message key="manager.reviewForms.title">Títol</message>
 	<message key="manager.sections.abstractsNotRequired">No necessiten resums</message>
 	<message key="manager.sections.assigned">Editors/es per a aquesta secció</message>
-	<message key="manager.sections.confirmDelete">Esteu segur/a que voleu suprimir aquesta secció de manera permanent? Si ho feu, haureu de tornar a publicar tots els articles de la secció.</message>
 	<message key="manager.sections.create">Crea una secció</message>
 	<message key="manager.sections.disableComments">Desactiva els comentaris dels lectors/es per a aquesta secció.</message>
 	<message key="manager.section.sectionEditorInstructions">Seleccioneu un dels editors/es de secció disponibles i assigneu-lo a aquesta secció.</message>

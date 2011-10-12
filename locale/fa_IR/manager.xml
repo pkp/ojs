@@ -122,7 +122,6 @@
 	<message key="manager.reviewForms.title">عنوان</message>
 	<message key="manager.sections.abstractsNotRequired">نیاز به چکیده ندارد</message>
 	<message key="manager.sections.assigned">دبیر این نوع مقاله</message>
-	<message key="manager.sections.confirmDelete">آیا میخواهید این نوع مقاله را برای همیشه حذف کنید؟ در صورت پشیمانی میبایست مقالات مربوط به این قسمت را از نو منتشر کنید.</message>
 	<message key="manager.sections.create">ایجاد نوع مقاله</message>
 	<message key="manager.sections.disableComments">غیر فعال کردن ارائه نظر توسط خوانندگان برای این نوع مقاله</message>
 	<message key="manager.section.sectionEditorInstructions">از بین دبیران یک نفر را انتخاب و به عنوان دبیر این نوع مقاله انتخاب کنید.</message>

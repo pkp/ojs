@@ -120,7 +120,6 @@
 	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
 	<message key="manager.sections.assigned">Editores desta seção</message>
-	<message key="manager.sections.confirmDelete">Deseja realmente excluir permanentemente esta seção? Os artigos desta seção deverão ser publicados novamente.</message>
 	<message key="manager.sections.create">Incluir seção</message>
 	<message key="manager.sections.disableComments">Desabilitar comentários dos leitores para esta seção.</message>
 	<message key="manager.section.sectionEditorInstructions">Escolha dentre os editores de seção disponíveis e clique em "Designar editor" a esta seção.</message>

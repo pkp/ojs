@@ -382,6 +382,29 @@ class SectionDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all empty (without articles) section ids for a journal.
+	 * @return array
+	 */
+	function getJournalEmptySectionIds($journalId) {
+		$returner = array();
+
+		$result =& $this->retrieve(
+			'SELECT s.section_id FROM sections s LEFT JOIN articles a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
+			(int) $journalId
+		);
+
+		while (!$result->EOF) {
+			$returner[] = $result->fields[0];
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+	
+	/**
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
 	 */

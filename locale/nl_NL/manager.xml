@@ -123,7 +123,6 @@
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Samenvattingen niet verplicht stellen</message>
 	<message key="manager.sections.assigned">De redacteuren van deze sectie</message>
-	<message key="manager.sections.confirmDelete">Weet u zeker dat u deze sectie wilt verwijderen? U moet artikelen in deze sectie dan opnieuw publiceren.</message>
 	<message key="manager.sections.create">Sectie aanmaken</message>
 	<message key="manager.sections.disableComments">Lezerscommentaren uitschakelen voor deze sectie.</message>
 	<message key="manager.section.sectionEditorInstructions">Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteuren worden toegevoegd door te klikken op Sectieredacteuren bij Rollen in Tijdschriftbeheer.</message>
