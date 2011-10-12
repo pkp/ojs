@@ -252,7 +252,8 @@ class PublishedArticle extends Article {
 		$journalId = $this->getJournalId();
 
 		// Get the Journal object (optimized)
-		$journal =& Request::getJournal();
+		$request =& PKPApplication::getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal || $journal->getId() != $journalId) {
 			unset($journal);
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
