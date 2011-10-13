@@ -38,7 +38,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &getGalley($galleyId, $articleId = null) {
-		$params = array($galleyId);
+		$params = array((int) $galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result =& $this->retrieve(
 			'SELECT	g.*,
@@ -132,7 +132,7 @@ class ArticleGalleyDAO extends DAO {
 			FROM article_galleys g
 			LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE g.article_id = ? ORDER BY g.seq',
-			$articleId
+			(int) $articleId
 		);
 
 		while (!$result->EOF) {
@@ -160,7 +160,25 @@ class ArticleGalleyDAO extends DAO {
 		if (!isset($galley)) $galley =& $this->getGalley((int) $galleyId, $articleId);
 		return $galley;
 	}
+	
+	/**
+	 * Get the list of fields for which data is localized.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array();
+	}
 
+	/**
+	 * Update the localized fields for this galley.
+	 * @param $galley
+	 */
+	function updateLocaleFields(&$galley) {
+		$this->updateDataObjectSettings('article_galley_settings', $galley, array(
+			'galley_id' => $galley->getId()
+		));
+	}
+	
 	/**
 	 * Internal function to return an ArticleGalley object from a row.
 	 * @param $row array
@@ -201,6 +219,8 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 
+		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
+		
 		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
 
 		return $galley;
@@ -218,19 +238,20 @@ class ArticleGalleyDAO extends DAO {
 				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$galley->getPublicGalleyId(),
-				$galley->getArticleId(),
-				$galley->getFileId(),
+				(int) $galley->getArticleId(),
+				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
-				(int)$galley->isHTMLGalley(),
-				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
+				(int) $galley->isHTMLGalley(),
+				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence()
 			)
 		);
 		$galley->setId($this->getInsertGalleyId());
-
+		$this->updateLocaleFields($galley);
+		
 		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getId()));
-
+		
 		return $galley->getId();
 	}
 
@@ -239,7 +260,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $galley ArticleGalley
 	 */
 	function updateGalley(&$galley) {
-		return $this->update(
+		$this->update(
 			'UPDATE article_galleys
 				SET
 					public_galley_id = ?,
@@ -252,15 +273,16 @@ class ArticleGalleyDAO extends DAO {
 				WHERE galley_id = ?',
 			array(
 				$galley->getPublicGalleyId(),
-				$galley->getFileId(),
+				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
-				(int)$galley->isHTMLGalley(),
-				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
+				(int) $galley->isHTMLGalley(),
+				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
-				$galley->getId()
+				(int) $galley->getId()
 			)
 		);
+		$this->updateLocaleFields($galley);
 	}
 
 	/**
@@ -280,17 +302,19 @@ class ArticleGalleyDAO extends DAO {
 
 		HookRegistry::call('ArticleGalleyDAO::deleteGalleyById', array(&$galleyId, &$articleId));
 
-		$this->deleteImagesByGalley($galleyId);
 		if (isset($articleId)) {
-			return $this->update(
+			$this->update(
 				'DELETE FROM article_galleys WHERE galley_id = ? AND article_id = ?',
-				array($galleyId, $articleId)
+				array((int) $galleyId, (int) $articleId)
 			);
-
 		} else {
-			return $this->update(
-				'DELETE FROM article_galleys WHERE galley_id = ?', $galleyId
+			$this->update(
+				'DELETE FROM article_galleys WHERE galley_id = ?', (int) $galleyId
 			);
+		}
+		if ($this->getAffectedRows()) {
+			$this->update('DELETE FROM article_galley_settings WHERE galley_id = ?', array((int) $galleyId));
+			$this->deleteImagesByGalley($galleyId);
 		}
 	}
 
@@ -316,7 +340,7 @@ class ArticleGalleyDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_galleys
 			WHERE article_id = ? AND file_id = ?',
-			array($articleId, $fileId)
+			array((int) $articleId, (int) $fileId)
 		);
 
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
@@ -335,7 +359,7 @@ class ArticleGalleyDAO extends DAO {
 		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {
 			return $this->update(
 				'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
-				$galleyId
+				(int) $galleyId
 			);
 		} else return false;
 	}
@@ -347,7 +371,7 @@ class ArticleGalleyDAO extends DAO {
 	function resequenceGalleys($articleId) {
 		$result =& $this->retrieve(
 			'SELECT galley_id FROM article_galleys WHERE article_id = ? ORDER BY seq',
-			$articleId
+			(int) $articleId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
@@ -371,7 +395,7 @@ class ArticleGalleyDAO extends DAO {
 	function getNextGalleySequence($articleId) {
 		$result =& $this->retrieve(
 			'SELECT MAX(seq) + 1 FROM article_galleys WHERE article_id = ?',
-			$articleId
+			(int) $articleId
 		);
 		$returner = floor($result->fields[0]);
 
@@ -405,7 +429,7 @@ class ArticleGalleyDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT a.* FROM article_html_galley_images i, article_files a
 			WHERE i.file_id = a.file_id AND i.galley_id = ?',
-			$galleyId
+			(int) $galleyId
 		);
 
 		while (!$result->EOF) {
@@ -430,7 +454,7 @@ class ArticleGalleyDAO extends DAO {
 			(galley_id, file_id)
 			VALUES
 			(?, ?)',
-			array($galleyId, $fileId)
+			array((int) $galleyId, (int) $fileId)
 		);
 	}
 
@@ -443,7 +467,7 @@ class ArticleGalleyDAO extends DAO {
 		return $this->update(
 			'DELETE FROM article_html_galley_images
 			WHERE galley_id = ? AND file_id = ?',
-			array($galleyId, $fileId)
+			array((int) $galleyId, (int) $fileId)
 		);
 	}
 
@@ -454,7 +478,7 @@ class ArticleGalleyDAO extends DAO {
 	function deleteImagesByGalley($galleyId) {
 		return $this->update(
 			'DELETE FROM article_html_galley_images WHERE galley_id = ?',
-			$galleyId
+			(int) $galleyId
 		);
 	}
 }

@@ -942,6 +942,39 @@
 
 	<!--
 	  *
+	  * TABLE article_galley_settings
+	  *
+	  -->
+	<table name="article_galley_settings">
+		<field name="galley_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Article galley metadata.</descr>
+		<index name="article_galley_settings_galley_id">
+			<col>galley_id</col>
+		</index>
+		<index name="article_galley_settings_pkey">
+			<col>galley_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
 	  * TABLE article_html_galley_images
 	  *
 	  -->
