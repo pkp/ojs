@@ -503,7 +503,7 @@ class ArticleHandler extends Handler {
 						 * and just let them access the article */
 						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId)
+						if ( $completedPaymentDAO->hasPaidPurchaseArticle($userId, $articleId)
 							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) {
 							$this->journal =& $journal;
 							$this->issue =& $issue;
