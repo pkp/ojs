@@ -58,15 +58,18 @@ class OpenAIREPlugin extends GenericPlugin {
 			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
 							
 			// Add OpenAIRE set to OAI results
-			HookRegistry::register('JournalOAI::sets', array($this, 'sets'));
+			HookRegistry::register('OAIDAO::getJournalSets', array($this, 'sets'));
 			HookRegistry::register('JournalOAI::identifiers', array($this, 'identifiers'));
 			HookRegistry::register('JournalOAI::records', array($this, 'records'));
 			HookRegistry::register('OAIDAO::_returnRecordFromRow', array($this, 'changeRecord'));
 			HookRegistry::register('OAIDAO::_returnIdentifierFromRow', array($this, 'changeIdentifier'));
 			
-			// Change Dc11Desctiption -- consider OpenAIRE elements relation, rights and date
+			 // Change Dc11Desctiption -- consider OpenAIRE elements relation, rights and date
 			HookRegistry::register('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, 'changeDc11Desctiption'));
-						
+
+			// consider OpenAIRE articles in article tombstones
+			HookRegistry::register('ArticleTombstoneManager::insertArticleTombstone', array($this, 'insertOpenAIREArticleTombstone'));
+			
 		}
 		return $success;
 	}
@@ -165,43 +168,9 @@ class OpenAIREPlugin extends GenericPlugin {
 	 * Add OpenAIRE set
 	 */
 	function sets($hookName, $params) {
-		$journalOAI =& $params[0];
-		$offset = $params[1];
-		$total = $params[2];
-		$sets =& $params[3];
-		$journalId = $journalOAI->journalId;	
-		$journalDao =& DAORegistry::getDAO('JournalDAO');	
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-
-		if (isset($journalId)) {
-			$journals = array($journalDao->getJournal($journalId));
-		} else {
-			$journals =& $journalDao->getJournals();
-			$journals =& $journals->toArray();
-		}
-
-		// FIXME Set descriptions
-		$sets = array();
-		$openAIRESetName = "EC_fundedresources";
-		$openAIRESetAbbrev = "ec_fundedresources";
-		foreach ($journals as $journal) {
-			$title = $journal->getLocalizedTitle();
-			$abbrev = $journal->getPath();
-			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
-
-			$sections =& $sectionDao->getJournalSections($journal->getId());
-			foreach ($sections->toArray() as $section) {
-				array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $section->getLocalizedTitle(), ''));
-			}			
-			array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($openAIRESetAbbrev), $openAIRESetName, ''));
-		}
-
-		
-		if ($offset != 0) {
-			$sets = array_slice($sets, $offset);
-		}
-
-		return true;
+		$sets =& $params[5];
+		array_push($sets, new OAISet('ec_fundedresources', 'EC_fundedresources', ''));
+		return false;
 	}
 
 	/**
@@ -218,14 +187,13 @@ class OpenAIREPlugin extends GenericPlugin {
 		$records =& $params[7];
 		
 		$records = array();
-		if (isset($set) && strpos($set, 'ec_fundedresources') != false) {
+		if (isset($set) && $set == 'ec_fundedresources') {
 			$journalId = $journalOAI->journalId;
 			$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
 			$openAIREDao->setOAI($journalOAI);
 			$records = $openAIREDao->getOpenAIRERecords($journalId, $from, $until, $offset, $limit, $total);
 			return true;
-		} 
-		
+		} 		
 		return false;
 	}	
 	
@@ -243,14 +211,13 @@ class OpenAIREPlugin extends GenericPlugin {
 		$records =& $params[7];
 		
 		$records = array();
-		if (isset($set) && strpos($set, 'ec_fundedresources') != false) {
+		if (isset($set) && $set == 'ec_fundedresources') {
 			$journalId = $journalOAI->journalId;
 			$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
 			$openAIREDao->setOAI($journalOAI);
 			$records = $openAIREDao->getOpenAIREIdentifiers($journalId, $from, $until, $offset, $limit, $total);
 			return true;
 		}
-
 		return false;
 	}	
 		
@@ -261,11 +228,9 @@ class OpenAIREPlugin extends GenericPlugin {
 		$record =& $params[0];
 		$row = $params[1];
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getJournal($row['journal_id']);
 		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
-		if ($openAIREDao->isOpenAIREArticle($row['article_id'])) {
-			$record->sets[] = $journal->getPath() . ':ec_fundedresources';
+		if ($openAIREDao->isOpenAIRERecord($row)) {
+			$record->sets[] = 'ec_fundedresources';
 		}
 		return false;	
 	}
@@ -277,16 +242,14 @@ class OpenAIREPlugin extends GenericPlugin {
 		$record =& $params[0];
 		$row = $params[1];
 		
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getJournal($row['journal_id']);
 		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
-		if ($openAIREDao->isOpenAIREArticle($row['article_id'])) {
-			$record->sets[] = $journal->getPath() . ':ec_fundedresources';
+		if ($openAIREDao->isOpenAIRERecord($row)) {
+			$record->sets[] = 'ec_fundedresources';
 		}	
 		return false;	
 	}
-	
-	/**
+
+ 	/**
 	 * Change Dc11 Description to consider the OpenAIRE elements
 	 */
 	function changeDc11Desctiption($hookName, $params) {
@@ -295,14 +258,14 @@ class OpenAIREPlugin extends GenericPlugin {
 		$journal = $params[2];
 		$issue = $params[3];
 		$dc11Description =& $params[4];
-
+		
 		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
 		$openAIREDao->setOAI($journalOAI);
 		if ($openAIREDao->isOpenAIREArticle($article->getArticleId())) {
 		
-			// Determine OpenAIRE DC elements values		
+			// Determine OpenAIRE DC elements values
 			// OpenAIRE DC Relation
-			$articleProjectID = $article->getData('projectID');	
+			$articleProjectID = $article->getData('projectID');
 			$openAIRERelation = 'info:eu-repo/grantAgreement/EC/FP7/' . $articleProjectID;
 			
 			// OpenAIRE DC Rights
@@ -321,11 +284,11 @@ class OpenAIREPlugin extends GenericPlugin {
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == NULL) {
 						$status = 'closedAccess';
 					}
-				} 
+				}
 			}
 			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
 				$status = 'restrictedAccess';
-			}			
+			}
 			$openAIRERights = $openAIRERights . $status;
 			
 			// OpenAIRE DC Date
@@ -334,29 +297,29 @@ class OpenAIREPlugin extends GenericPlugin {
 				$openAIREDate = 'info:eu-repo/date/embargoEnd/' . date('Y-m-d', strtotime($issue->getOpenAccessDate()));
 			}
 			
-			// Get current DC statements		
+			// Get current DC statements
 			$dcRelationValues = array();
 			$dcRightsValues = array();
 			$dcDateValues = array();
 			if ($dc11Description->hasStatement('dc:relation')) {
 				$dcRelationValues = $dc11Description->getStatement('dc:relation');
-			}		
+			}
 			if ($dc11Description->hasStatement('dc:rights')) {
 				$dcRightsValues = $dc11Description->getStatementTranslations('dc:rights');
-			}		
+			}
 			if ($dc11Description->hasStatement('dc:date')) {
 				$dcDateValues = $dc11Description->getStatement('dc:date');
-			}	
-
+			}
+			
 			// Set new DC statements, concerning OpenAIRE
 			array_unshift($dcRelationValues, $openAIRERelation);
 			$newDCRelationStatements = array('dc:relation' => $dcRelationValues);
 			$dc11Description->setStatements($newDCRelationStatements);
 			
 			foreach ($dcRightsValues as $key => $value) {
-				array_unshift($value, $openAIRERights); 
-				$dcRightsValues[$key] = $value; 
-			}		
+				array_unshift($value, $openAIRERights);
+				$dcRightsValues[$key] = $value;
+			}
 			if (!array_key_exists($journal->getPrimaryLocale(), $dcRightsValues)) {
 				$dcRightsValues[$journal->getPrimaryLocale()] = array($openAIRERights);
 			}
@@ -366,12 +329,26 @@ class OpenAIREPlugin extends GenericPlugin {
 			if ($openAIREDate != null) {
 				array_unshift($dcDateValues, $openAIREDate);
 				$newDCDateStatements = array('dc:date' => $dcDateValues);
-				$dc11Description->setStatements($newDCDateStatements);			
+				$dc11Description->setStatements($newDCDateStatements);
 			}
-		}
-
+		}	
 		return false;
 	}
+
+	/**
+	 * Consider the OpenAIRE set in the article tombstone
+	 */
+	function insertOpenAIREArticleTombstone($hookName, $params) {
+		$articleTombstone =& $params[0];
+
+		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+		if ($openAIREDao->isOpenAIREArticle($articleTombstone->getArticleId())) {
+			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
+			$articleTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'openaire', true, 'bool');
+		}
+		return false;	
+	}
+	
 	
 }
 ?>
