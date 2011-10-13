@@ -221,19 +221,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		if (!empty($text)) $response .= "\t<body><p>" . htmlspecialchars(Core::cleanVar(Core::cleanVar($text))) . "</p></body>\n";
 
 		// Add NLM citation info
-		import('lib.pkp.classes.importexport.nlm.PKPSubmissionNlmXmlFilter');
-		$nlmFilter = new PKPSubmissionNlmXmlFilter();
-		$nlmXml = $nlmFilter->execute($article);
-
-		// Downgrade to an NLM 2.3 ref-list
-		import('lib.pkp.classes.xslt.XSLTransformationFilter');
-		$downgradeFilter = new XSLTransformationFilter('NLM 3.0 to 2.3 ref-list downgrade', array('xml::*', 'xml::*'));
-		$downgradeFilter->setXSLFilename('lib/pkp/classes/importexport/nlm/nlm-ref-list-30-to-23.xsl');
-
-		// To suppress the XML header, get the DOM and convert it to
-		// string explicitly. (Also check for empty node.)
-		$downgradeFilter->setResultType(XSL_TRANSFORMER_DOCTYPE_DOM);
-		$nlmXmlDom = $downgradeFilter->execute($nlmXml);
+		$filterDao =& DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+		$nlmFilters = $filterDao->getObjectsByGroup('submission=>nlm23-article-xml');
+		assert(count($nlmFilters) == 1);
+		$nlmFilter = array_pop($nlmFilters);
+		$nlmXmlDom = $nlmFilter->execute($article);
 		$documentElement =& $nlmXmlDom->documentElement;
 
 		// Work-around for hasChildNodes being stupid about whitespace.
