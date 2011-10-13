@@ -78,6 +78,9 @@
 </table>
 </div>
 <br/>
+
+{call_hook name="Templates::Submission::Layout::GalleyForm::AdditionalMetadata"}
+
 {if $galley->isHTMLGalley()}
 <div id="htmlGalley">
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>

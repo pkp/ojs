@@ -107,7 +107,7 @@ class ArticleGalleyForm extends Form {
 		} else {
 			$this->_data = array();
 		}
-
+		parent::initData();
 	}
 
 	/**
@@ -174,6 +174,7 @@ class ArticleGalleyForm extends Form {
 				$galley->setPublicGalleyId($this->getData('publicGalleyId'));
 			}
 			$galley->setLocale($this->getData('galleyLocale'));
+			parent::execute();
 			$galleyDao->updateGalley($galley);
 
 		} else {
@@ -232,7 +233,7 @@ class ArticleGalleyForm extends Form {
 
 				$galley->setPublicgalleyId($publicGalleyId . $suffix);
 			}
-
+			parent::execute();
 			// Insert new galley
 			$galleyDao->insertGalley($galley);
 			$this->galleyId = $galley->getId();

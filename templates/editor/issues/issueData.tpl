@@ -140,6 +140,9 @@
 {/if}
 
 <div class="separator"></div>
+
+{call_hook name="Templates::Editor::Issues::IssueData::AdditionalMetadata"}
+
 <div id="issueCover">
 <h3>{translate key="editor.issues.cover"}</h3>
 <table width="100%" class="data">

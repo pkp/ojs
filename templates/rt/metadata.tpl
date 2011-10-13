@@ -137,13 +137,13 @@
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
 	<td><a target="_new" href="{url page="article" op="view" path=$articleId}">{url page="article" op="view" path=$articleId}</a></td>
 </tr>
+<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {if $issue->getPublished()}
 	{assign var=doi value=$article->getDOI()}
 {else}
 	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
 {/if}
 {if $doi}
-<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>10.</td>
 	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
@@ -152,6 +152,7 @@
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {/if}
+{call_hook name="Templates::RT::Metadata::PersistentIdentifier"}
 <tr valign="top">
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>

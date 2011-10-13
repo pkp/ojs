@@ -24,7 +24,9 @@ import('lib.pkp.classes.form.Form');
 import('classes.issue.Issue'); // Bring in constants
 
 class IssueForm extends Form {
-
+	/** @var Issue current issue */
+	var $issue;
+	
 	/**
 	 * Constructor.
 	 */
@@ -126,6 +128,7 @@ class IssueForm extends Form {
 		}
 
 		if (isset($issue)) {
+			$this->issue =& $issue;
 			$this->_data = array(
 				'title' => $issue->getTitle(null), // Localized
 				'volume' => $issue->getVolume(),
@@ -150,6 +153,7 @@ class IssueForm extends Form {
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
+			parent::initData();
 			return $issue->getId();
 
 		} else {
@@ -336,9 +340,12 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
+	
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if ($issueId) {
 			$issue->setId($issueId);
+			$this->issue =& $issue;
+			parent::execute();
 			$issueDao->updateIssue($issue);
 		} else {
 			$issue->setPublished(0);
