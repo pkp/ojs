@@ -814,12 +814,11 @@ class Upgrade extends Installer {
 
 			$notificationDao->update(
 				sprintf('INSERT INTO notifications
-						(notification_id, user_id, level, date_created, date_read, context_id, type, assoc_type, assoc_id)
+						(user_id, level, date_created, date_read, context_id, type, assoc_type, assoc_id)
 					VALUES
-						(?, ?, ?, %s, %s, ?, ?, ?, ?)',
+						(?, ?, %s, %s, ?, ?, ?, ?)',
 					$notificationDao->datetimeToDB($notification->getDateCreated()), $notificationDao->datetimeToDB($notification->getDateRead())),
 				array(
-					(int) $notification->getId(),
 					(int) $notification->getUserId(),
 					(int) $notification->getLevel(),
 					(int) $notification->getContextId(),

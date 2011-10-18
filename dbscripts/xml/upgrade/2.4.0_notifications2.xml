@@ -16,6 +16,7 @@
 	<sql>
 		<drop table="notifications_old" />
 		<drop table="notification_settings_old" />
+    	<query>DELETE FROM email_templates_default WHERE email_key = 'NOTIFICATION_MAILLIST_PASSWORD'</query>
 		<query>DELETE FROM email_templates_default_data WHERE email_key = 'NOTIFICATION_MAILLIST_PASSWORD'</query>
 	</sql>
 </data>

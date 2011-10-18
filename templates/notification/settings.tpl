@@ -29,12 +29,12 @@
 			<li>{translate key=$settingKey title=$titleVar}
 			<ul class="plain">
 				<li><span>
-					<input id='{$settingName|escape}' type="checkbox" name='{$settingName|escape}' {if !$settingId|in_array:$blockedNotifications} checked="checked"{/if} />
-					{fieldLabel name='$settingName|escape' key="notification.allow"}
+					<input id="{$settingName|escape}" type="checkbox" name="{$settingName|escape}" {if !$settingId|in_array:$blockedNotifications} checked="checked"{/if} />
+					{fieldLabel name="$settingName|escape" key="notification.allow"}
 				</span></li>
 				<li><span>
-					<input id='{$emailSettingName|escape}' type="checkbox" name='{$emailSettingName|escape}'{if $settingId|in_array:$emailSettings} checked="checked"{/if} />
-					{fieldLabel name='$emailSettingName|escape' key="notification.email"}
+					<input id="{$emailSettingName|escape}" type="checkbox" name="{$emailSettingName|escape}"{if $settingId|in_array:$emailSettings} checked="checked"{/if} />
+					{fieldLabel name="$emailSettingName|escape" key="notification.email"}
 				</span></li>
 			</ul>
 		</ul>
