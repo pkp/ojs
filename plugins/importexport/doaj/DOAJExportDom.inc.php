@@ -94,7 +94,7 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'doi',  $article->getDoi(), false);
 
 		/* --- Article's publication date, volume, issue, DOI --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPubId(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPublishedArticleId(), false);
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getLocalizedType(), false);
 

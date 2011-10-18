@@ -32,7 +32,7 @@ class PublishedArticle extends Article {
 	 * Get ID of published article.
 	 * @return int
 	 */
-	function getPubId() {
+	function getPublishedArticleId() {
 		return $this->getData('pubId');
 	}
 
@@ -40,7 +40,7 @@ class PublishedArticle extends Article {
 	 * Set ID of published article.
 	 * @param $pubId int
 	 */
-	function setPubId($pubId) {
+	function setPublishedArticleId($pubId) {
 		return $this->setData('pubId', $pubId);
 	}
 

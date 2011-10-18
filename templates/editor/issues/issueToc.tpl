@@ -88,8 +88,8 @@ $(document).ready(function() {
 
 	{assign var="articleSeq" value=$articleSeq+1}
 	{assign var="articleId" value=$article->getId()}
-	<tr id="article-{$article->getPubId()|escape}" class="data">
-		<td><a href="{url op="moveArticleToc" d=u id=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" d=d id=$article->getPubId()}" class="plain">&darr;</a></td>
+	<tr id="article-{$article->getPublishedArticleId()|escape}" class="data">
+		<td><a href="{url op="moveArticleToc" d=u id=$article->getPublishedArticleId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" d=d id=$article->getPublishedArticleId()}" class="plain">&darr;</a></td>
 		<td>
 			{foreach from=$article->getAuthors() item=author name=authorList}
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
@@ -97,13 +97,13 @@ $(document).ready(function() {
 		</td>
 		<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
-		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
+		<td><select name="accessStatus[{$article->getPublishedArticleId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}
 		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
 		{/if}
 		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
-		<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPubId()}" /></td>
+		<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPublishedArticleId()}" /></td>
 		<td>
 			{if in_array($article->getId(), $proofedArticleIds)}
 				{icon name="checked"}

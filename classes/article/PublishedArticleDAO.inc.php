@@ -377,7 +377,7 @@ class PublishedArticleDAO extends DAO {
 		$row = $result->GetRowAssoc(false);
 
 		$publishedArticle = new PublishedArticle();
-		$publishedArticle->setPubId($row['pub_id']);
+		$publishedArticle->setPublishedArticleId($row['pub_id']);
 		$publishedArticle->setId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
@@ -635,7 +635,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
 		$publishedArticle = new PublishedArticle();
-		$publishedArticle->setPubId($row['pub_id']);
+		$publishedArticle->setPublishedArticleId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$publishedArticle->setSeq($row['seq']);
@@ -677,8 +677,8 @@ class PublishedArticleDAO extends DAO {
 			)
 		);
 
-		$publishedArticle->setPubId($this->getInsertPublishedArticleId());
-		return $publishedArticle->getPubId();
+		$publishedArticle->setPublishedArticleId($this->getInsertPublishedArticleId());
+		return $publishedArticle->getPublishedArticleId();
 	}
 
 	/**
@@ -769,7 +769,7 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId(),
-				$publishedArticle->getPubId()
+				$publishedArticle->getPublishedArticleId()
 			)
 		);
 

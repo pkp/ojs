@@ -855,7 +855,7 @@ class NativeImportDom {
 		$publishedArticle->setViews(0);
 		$publishedArticle->setPublicArticleId($articleNode->getAttribute('public_id'));
 
-		$publishedArticle->setPubId($publishedArticleDao->insertPublishedArticle($publishedArticle));
+		$publishedArticle->setPublishedArticleId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
 		$publishedArticleDao->resequencePublishedArticles($section->getId(), $issue->getId());
 

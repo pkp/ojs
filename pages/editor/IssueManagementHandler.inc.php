@@ -102,7 +102,7 @@ class IssueManagementHandler extends EditorHandler {
 					$articleTombstoneManager->insertArticleTombstone($article, $journal);
 				}
 				$articleDao->changeArticleStatus($article->getId(),STATUS_QUEUED);
-				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
+				$publishedArticleDao->deletePublishedArticleById($article->getPublishedArticleId());
 			}
 		}
 
@@ -626,7 +626,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 		foreach($articles as $article) {
 			$articleId = $article->getId();
-			$pubId = $article->getPubId();
+			$pubId = $article->getPublishedArticleId();
 			if (!isset($removedArticles[$articleId])) {
 				if (isset($pages[$articleId])) {
 					$article->setPages($pages[$articleId]);
