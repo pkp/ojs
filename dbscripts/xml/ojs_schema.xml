@@ -771,6 +771,7 @@
 		<field name="type" type="C2" size="255"/>
 		<field name="language" type="C2" size="10"/>
 		<field name="public_supp_file_id" type="C2" size="255"/>
+		<field name="remote_url" type="C2" size="255"/>
 		<field name="date_created" type="D"/>
 		<field name="show_reviewers" type="I1">
 			<DEFAULT VALUE="0"/>
@@ -929,6 +930,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="remote_url" type="C2" size="255" />
 		<descr>Article galleys.</descr>
 		<index name="article_galleys_article_id">
 			<col>article_id</col>

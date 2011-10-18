@@ -1267,12 +1267,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
+					
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
+		if (!$suppFile) {
+			$request->redirect(null, null, 'submissionEditing', $articleId);
+		}
+		
 		$this->setupTemplate(true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
-
 		$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
-
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -1443,7 +1448,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$this->uploadLayoutVersion();
 
 		} else if ($layoutFileType == 'galley') {
-			$this->uploadGalley('layoutFile');
+			$this->uploadGalley('layoutFile', $request);
 
 		} else if ($layoutFileType == 'supp') {
 			$this->uploadSuppFile('layoutFile', $request);
@@ -1589,14 +1594,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Create a new galley with the uploaded file.
 	 */
-	function uploadGalley($fileName = null) {
-		$articleId = Request::getUserVar('articleId');
+	function uploadGalley($fileName = null, $request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$submission =& $this->submission;
 
 		import('classes.submission.form.ArticleGalleyForm');
  		$galleyForm = new ArticleGalleyForm($articleId);
-		$galleyId = $galleyForm->execute($fileName);
+		$galleyId = $galleyForm->execute($fileName, $request->getUserVar('createRemote'));
 
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
@@ -1605,18 +1609,21 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Edit a galley.
 	 * @param $args array ($articleId, $galleyId)
 	 */
-	function editGalley($args) {
+	function editGalley($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$submission =& $this->submission;
-
+			
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley =& $galleyDao->getGalley($galleyId, $articleId);
+		if (!$galley) {
+			$request->redirect(null, null, 'submissionEditing', $articleId);
+		}
+		
 		$this->setupTemplate(true, $articleId, 'editing');
 
 		import('classes.submission.form.ArticleGalleyForm');
-
 		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
-
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -1781,7 +1788,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$suppFileForm = new SuppFileForm($submission, $journal);
 		$suppFileForm->setData('title', array($submission->getLocale() => Locale::translate('common.untitled')));
-		$suppFileId = $suppFileForm->execute($fileName);
+		$suppFileId = $suppFileForm->execute($fileName, $request->getUserVar('createRemote'));
 
 		$request->redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
 	}

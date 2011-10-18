@@ -210,7 +210,8 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setFileStage($row['file_stage']);
 		$galley->setSequence($row['seq']);
 		$galley->setViews($row['views']);
-
+		$galley->setRemoteURL($row['remote_url']);
+		
 		// ArticleFile set methods
 		$galley->setFileName($row['file_name']);
 		$galley->setOriginalFileName($row['original_file_name']);
@@ -233,9 +234,9 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
-				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq)
+				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$galley->getPublicGalleyId(),
 				(int) $galley->getArticleId(),
@@ -244,7 +245,8 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getLocale(),
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
-				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence()
+				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence(),
+				$galley->getRemoteURL()
 			)
 		);
 		$galley->setId($this->getInsertGalleyId());
@@ -269,7 +271,8 @@ class ArticleGalleyDAO extends DAO {
 					locale = ?,
 					html_galley = ?,
 					style_file_id = ?,
-					seq = ?
+					seq = ?,
+					remote_url = ?
 				WHERE galley_id = ?',
 			array(
 				$galley->getPublicGalleyId(),
@@ -279,6 +282,7 @@ class ArticleGalleyDAO extends DAO {
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
+				$galley->getRemoteURL(),
 				(int) $galley->getId()
 			)
 		);

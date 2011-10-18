@@ -387,7 +387,23 @@ class SuppFile extends ArticleFile {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
+	
+	/**
+	 * Set remote URL of supplementary file.
+	 * @param $remoteURL string
+	 */
+	function setRemoteURL($remoteURL) {
+		return $this->setData('remoteURL', $remoteURL);
+	}
 
+	/**
+	 * Get remote URL of supplementary file.
+	 * @return string
+	 */
+	function getRemoteURL() {
+		return $this->getData('remoteURL');
+	}
+	
 	/**
 	 * Return the "best" supp file ID -- If a public ID is set,
 	 * use it; otherwise use the internal Id. (Checks the journal

@@ -90,6 +90,9 @@ class ArticleHandler extends Handler {
 		}
 
 		if ($galley && !$galley->isHtmlGalley() && !$galley->isPdfGalley()) {
+			if ($galley->getRemoteURL()) {
+				$request->redirectUrl($galley->getRemoteURL());
+			}
 			if ($galley->isInlineable()) {
 				$this->viewFile(
 					array($galley->getArticleId(), $galley->getId()),
@@ -401,6 +404,9 @@ class ArticleHandler extends Handler {
 		if ($article && $suppFile) {
 			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getId());
+			if ($suppFile->getRemoteURL()) {
+				$request->redirectUrl($suppFile->getRemoteURL());
+			}
 			if ($suppFile->isInlineable()) {
 				$articleFileManager->viewFile($suppFile->getFileId());
 			} else {

@@ -58,6 +58,7 @@ class SuppFileForm extends Form {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
+		$this->addCheck(new FormValidatorURL($this, 'remoteURL', 'optional', 'submission.layout.galleyRemoteURLValid'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -187,7 +188,8 @@ class SuppFileForm extends Form {
 				'source',
 				'language',
 				'showReviewers',
-				'publicSuppFileId'
+				'publicSuppFileId',
+				'remoteURL'
 			)
 		);
 	}
@@ -196,7 +198,7 @@ class SuppFileForm extends Form {
 	 * Save changes to the supplementary file.
 	 * @return int the supplementary file ID
 	 */
-	function execute($fileName = null) {
+	function execute($fileName = null, $createRemote = false) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->article->getId());
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
@@ -224,6 +226,9 @@ class SuppFileForm extends Form {
 
 			// Update existing supplementary file
 			$this->setSuppFileData($this->suppFile);
+			if ($this->getData('remoteURL')) {
+				$this->suppFile->setRemoteURL($this->getData('remoteURL'));
+			}
 			$suppFileDao->updateSuppFile($this->suppFile);
 
 		} else {
@@ -240,7 +245,10 @@ class SuppFileForm extends Form {
 			$this->suppFile = new SuppFile();
 			$this->suppFile->setArticleId($this->article->getId());
 			$this->suppFile->setFileId($fileId);
-
+		
+			if ($createRemote) {
+				$this->suppFile->setRemoteURL(Locale::translate('common.remoteURL'));
+			}
 			parent::execute();
 
 			$this->setSuppFileData($this->suppFile);

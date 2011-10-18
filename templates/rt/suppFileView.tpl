@@ -72,6 +72,12 @@
 
 <table width="100%" class="data">
 {if $suppFile}
+{if $suppFile->getRemoteURL()}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="submission.layout.galleyRemoteURL"}</td>
+		<td width="80%" class="value"><a href="{$suppFile->getRemoteURL()|escape}">{$suppFile->getRemoteURL()|escape}</a></td>
+	</tr>
+{else}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
 		<td width="80%" class="value"><a href="{url page="article" op="downloadSuppFile" path=$articleId|to_array:$suppFile->getBestSuppFileId($currentJournal)}">{$suppFile->getFileName()|escape}</a></td>
@@ -89,6 +95,7 @@
 		<td class="value">{$suppFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 	</tr>
 	</table>
+{/if}
 {else}
 	<tr valign="top">
 		<td colspan="2" class="noResults">{translate key="author.submit.suppFile.noFile"}</td>

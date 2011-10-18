@@ -119,6 +119,7 @@ class SuppFileDAO extends DAO {
 		$suppFile = new SuppFile();
 		$suppFile->setId($row['supp_id']);
 		$suppFile->setPublicSuppFileId($row['public_supp_file_id']);
+		$suppFile->setRemoteURL($row['remote_url']);
 		$suppFile->setFileId($row['file_id']);
 		$suppFile->setArticleId($row['article_id']);
 		$suppFile->setType($row['type']);
@@ -156,12 +157,13 @@ class SuppFileDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO article_supplementary_files
-				(public_supp_file_id, file_id, article_id, type, date_created, language, show_reviewers, date_submitted, seq)
+				(public_supp_file_id, remote_url, file_id, article_id, type, date_created, language, show_reviewers, date_submitted, seq)
 				VALUES
-				(?, ?, ?, ?, %s, ?, ?, %s, ?)',
+				(?, ?, ?, ?, ?, %s, ?, ?, %s, ?)',
 				$this->dateToDB($suppFile->getDateCreated()), $this->datetimeToDB($suppFile->getDateSubmitted())),
 			array(
 				$suppFile->getPublicSuppFileId(),
+				$suppFile->getRemoteURL(),
 				$suppFile->getFileId(),
 				$suppFile->getArticleId(),
 				$suppFile->getType(),
@@ -184,6 +186,7 @@ class SuppFileDAO extends DAO {
 			sprintf('UPDATE article_supplementary_files
 				SET
 					public_supp_file_id = ?,
+					remote_url = ?,
 					file_id = ?,
 					type = ?,
 					date_created = %s,
@@ -194,6 +197,7 @@ class SuppFileDAO extends DAO {
 				$this->dateToDB($suppFile->getDateCreated())),
 			array(
 				$suppFile->getPublicSuppFileId(),
+				$suppFile->getRemoteURL(),
 				$suppFile->getFileId(),
 				$suppFile->getType(),
 				$suppFile->getLanguage(),

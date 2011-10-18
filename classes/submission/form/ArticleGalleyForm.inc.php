@@ -53,6 +53,7 @@ class ArticleGalleyForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
 		$this->addCheck(new FormValidator($this, 'galleyLocale', 'required', 'submission.layout.galleyLocaleRequired'), create_function('$galleyLocale,$availableLocales', 'return in_array($galleyLocale,$availableLocales);'), array_keys($journal->getSupportedSubmissionLocaleNames()));
+		$this->addCheck(new FormValidatorURL($this, 'remoteURL', 'optional', 'submission.layout.galleyRemoteURLValid'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -119,7 +120,8 @@ class ArticleGalleyForm extends Form {
 				'label',
 				'publicGalleyId',
 				'deleteStyleFile',
-				'galleyLocale'
+				'galleyLocale',
+				'remoteURL'
 			)
 		);
 	}
@@ -128,7 +130,7 @@ class ArticleGalleyForm extends Form {
 	 * Save changes to the galley.
 	 * @return int the galley ID
 	 */
-	function execute($fileName = null) {
+	function execute($fileName = null, $createRemote = false) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -174,6 +176,9 @@ class ArticleGalleyForm extends Form {
 				$galley->setPublicGalleyId($this->getData('publicGalleyId'));
 			}
 			$galley->setLocale($this->getData('galleyLocale'));
+			if ($this->getData('remoteURL')) {
+				$galley->setRemoteURL($this->getData('remoteURL'));
+			}
 			parent::execute();
 			$galleyDao->updateGalley($galley);
 
@@ -200,6 +205,10 @@ class ArticleGalleyForm extends Form {
 				if ($galley->isHTMLGalley()) {
 					$galley->setLabel('HTML');
 					if ($enablePublicGalleyId) $galley->setPublicGalleyId('html');
+				} else if ($createRemote) {
+					$galley->setLabel(Locale::translate('common.remote'));
+					$galley->setRemoteURL(Locale::translate('common.remoteURL'));
+					if ($enablePublicGalleyId) $galley->setPublicGalleyId(strtolower(Locale::translate('common.remote')));
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
@@ -220,8 +229,10 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
-			$galley->setLocale($this->getData('galleyLocale'));
-
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle($this->articleId, $journal->getId());
+			$galley->setLocale($article->getLocale());
+			
 			if ($enablePublicGalleyId) {
 				// check to make sure the assigned public id doesn't already exist
 				$publicGalleyId = $galley->getPublicgalleyId();

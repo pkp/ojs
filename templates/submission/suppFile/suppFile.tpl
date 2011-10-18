@@ -116,63 +116,70 @@
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
 <table id="suppFile" class="data">
-{if $suppFile && $suppFile->getFileId()}
+{if $suppFile && $suppFile->getRemoteURL()}
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="common.fileName"}</td>
-		<td width="80%" class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="common.originalFileName"}</td>
-		<td class="value">{$suppFile->getOriginalFileName()|escape}</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="common.fileSize"}</td>
-		<td class="value">{$suppFile->getNiceFileSize()}</td>
-	</tr>
-	<tr>
-		<td class="label">{translate key="common.dateUploaded"}</td>
-		<td class="value">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
-	</tr>
-</table>
-
-<table width="100%"  class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
+		<td width="20%" class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
+		<td width="80%" class="value"><input type="text" name="remoteURL" id="remoteURL" value="{$suppFile->getRemoteURL()|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 </table>
 {else}
-	<tr valign="top">
-		<td colspan="2" class="nodata">{translate key="author.submit.suppFile.noFile"}</td>
-	</tr>
-</table>
-{/if}
-
-<br />
-
-<table id="showReviewers" width="100%" class="data">
-	<tr valign="top">
-		<td class="label">
-			{if $suppFile && $suppFile->getFileId()}
-				{fieldLabel name="uploadSuppFile" key="common.replaceFile"}
-			{else}
-				{fieldLabel name="uploadSuppFile" key="common.upload"}
-			{/if}
-		</td>
-		<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="author.submit.supplementaryFiles.saveToUpload"}</td>
-	</tr>
-	{if not ($suppFile && $suppFile->getFileId())}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td class="value">
-			<input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} />&nbsp;
-			<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label>
-		</td>
-	</tr>
+	{if $suppFile && $suppFile->getFileId()}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="common.fileName"}</td>
+			<td width="80%" class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="common.originalFileName"}</td>
+			<td class="value">{$suppFile->getOriginalFileName()|escape}</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="common.fileSize"}</td>
+			<td class="value">{$suppFile->getNiceFileSize()}</td>
+		</tr>
+		<tr>
+			<td class="label">{translate key="common.dateUploaded"}</td>
+			<td class="value">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
+		</tr>
+	</table>
+	
+	<table width="100%"  class="data">
+		<tr valign="top">
+			<td width="5%" class="label"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /></td>
+			<td width="95%" class="value"><label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
+		</tr>
+	</table>
+	{else}
+		<tr valign="top">
+			<td colspan="2" class="nodata">{translate key="author.submit.suppFile.noFile"}</td>
+		</tr>
+	</table>
 	{/if}
-</table>
-</div>
-
+	
+	<br />
+	
+	<table id="showReviewers" width="100%" class="data">
+		<tr valign="top">
+			<td class="label">
+				{if $suppFile && $suppFile->getFileId()}
+					{fieldLabel name="uploadSuppFile" key="common.replaceFile"}
+				{else}
+					{fieldLabel name="uploadSuppFile" key="common.upload"}
+				{/if}
+			</td>
+			<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="author.submit.supplementaryFiles.saveToUpload"}</td>
+		</tr>
+		{if not ($suppFile && $suppFile->getFileId())}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td class="value">
+				<input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} />&nbsp;
+				<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label>
+			</td>
+		</tr>
+		{/if}
+	</table>
+	</div>
+{/if}
 <div class="separator"></div>
 
 

@@ -192,6 +192,22 @@ class ArticleGalley extends ArticleFile {
 		}
 		return $this->getId();
 	}
+	
+	/**
+	 * Set remote URL of the galley.
+	 * @param $remoteURL string
+	 */
+	function setRemoteURL($remoteURL) {
+		return $this->setData('remoteURL', $remoteURL);
+	}
+
+	/**
+	 * Get remote URL of the galley.
+	 * @return string
+	 */
+	function getRemoteURL() {
+		return $this->getData('remoteURL');
+	}	
 }
 
 ?>

@@ -26,6 +26,10 @@
 	<td width="20%" class="label">{fieldLabel name="label" required="true" key="submission.layout.galleyLabel"}</td>
 	<td width="80%" class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
 </tr>
+<tr valign="top">
+	<td>&nbsp;</td>
+	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>
+</tr>
 
 {if $enablePublicGalleyId}
 	<tr valign="top">
@@ -33,11 +37,6 @@
 		<td class="value"><input type="text" name="publicGalleyId" id="publicGalleyId" value="{$publicGalleyId|escape}" size="20" maxlength="255" class="textField" /></td>
 	</tr>
 {/if}{* $enablePublicGalleyId *}
-
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>
-</tr>
 
 <tr valign="top">
 	<td class="label">{fieldLabel name="galleyLocale" required="true" key="common.language"}</td>
@@ -48,33 +47,40 @@
 	</td>
 </tr>
 
-<tr valign="top">
-	<td class="label">{translate key="common.fileName"}</td>
-	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
-</tr>
-<tr valign="top">
-	<td class="label">{translate key="common.originalFileName"}</td>
-	<td class="value">{$galley->getOriginalFileName()|escape}</td>
-</tr>
-<tr valign="top">
-	<td class="label">{translate key="common.fileType"}</td>
-	<td class="value">{$galley->getFileType()|escape}</td>
-</tr>
-<tr valign="top">
-	<td class="label">{translate key="common.fileSize"}</td>
-	<td class="value">{$galley->getNiceFileSize()}</td>
-</tr>
-<tr valign="top">
-	<td class="label">{translate key="common.dateUploaded"}</td>
-	<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
-</tr>
-
-<tr valign="top">
-	<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
-	<td class="value">
-		<input type="file" name="galleyFile" id="galleyFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}
-	</td>
-</tr>
+{if $galley->getRemoteURL()}
+	<tr valign="top">
+		<td class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
+		<td class="value"><input type="text" name="remoteURL" id="remoteURL" value="{$galley->getRemoteURL()|escape}" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+{else}
+	<tr valign="top">
+		<td class="label">{translate key="common.fileName"}</td>
+		<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.originalFileName"}</td>
+		<td class="value">{$galley->getOriginalFileName()|escape}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.fileType"}</td>
+		<td class="value">{$galley->getFileType()|escape}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.fileSize"}</td>
+		<td class="value">{$galley->getNiceFileSize()}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.dateUploaded"}</td>
+		<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
+	</tr>
+	
+	<tr valign="top">
+		<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
+		<td class="value">
+			<input type="file" name="galleyFile" id="galleyFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}
+		</td>
+	</tr>
+{/if}
 </table>
 </div>
 <br/>
@@ -165,7 +171,6 @@
 <input type="submit" name="uploadImage" class="button" value="{translate key="common.upload"}" />
 </div>
 {/if}
-
 <br />
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submissionEditing" path=$articleId escape=false}'" /></p>
