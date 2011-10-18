@@ -218,12 +218,12 @@ class NativeImportDom {
 		}
 
 		if (($value = $issueNode->getAttribute('public_id')) != '') {
-			$anotherIssue = $issueDao->getIssueByPublicIssueId($value, $journal->getId());
+			$anotherIssue = $issueDao->getIssueByPubId('publisher-id', $value, $journal->getId());
 			if ($anotherIssue) {
 				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
 				$hasErrors = true;
 			} else {
-				$issue->setPublicIssueId($value);
+				$issue->setStoredPubId('publisher-id', $value);
 			}
 		}
 
@@ -775,12 +775,9 @@ class NativeImportDom {
 		}
 
 		for ($index=0; ($node = $articleNode->getChildByName('id', $index)); $index++) {
-			switch ($node->getAttribute('type')) {
-				case 'doi':
-					$article->setStoredPubId('doi', $node->getValue());
-					break;
-			}
+			$article->setStoredPubId($node->getAttribute('type'), $node->getValue());
 		}
+		$article->setStoredPubId('publisher-id', $articleNode->getAttribute('public_id'));
 		if ($hasErrors) return false;
 
 		$articleDao->insertArticle($article);
@@ -853,7 +850,6 @@ class NativeImportDom {
 		$publishedArticle->setAccessStatus($node?ARTICLE_ACCESS_OPEN:ARTICLE_ACCESS_ISSUE_DEFAULT);
 		$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 		$publishedArticle->setViews(0);
-		$publishedArticle->setPublicArticleId($articleNode->getAttribute('public_id'));
 
 		$publishedArticle->setPublishedArticleId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
@@ -1192,7 +1188,7 @@ class NativeImportDom {
 		}
 
 		$suppFile->setLanguage($suppNode->getAttribute('language'));
-		$suppFile->setPublicSuppFileId($suppNode->getAttribute('public_id'));
+		$suppFile->setStoredPubId('publisher-id', $suppNode->getAttribute('public_id'));
 
 		if (!($fileNode = $suppNode->getChildByName('file'))) {
 			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));

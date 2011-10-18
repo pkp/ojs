@@ -83,12 +83,12 @@ class IssueForm extends Form {
 			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'editor.issues.titleRequired'));
 		}
 
-		// check if public issue ID has already used
+		// check if public issue ID has already been used
 		$journal =& Request::getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getId())) {
+		if ($publicIssueId && $issueDao->pubIdExists('publisher-id', $publicIssueId, $issueId, $journal->getId())) {
 			$this->addError('publicIssueId', __('editor.issues.issuePublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
@@ -146,7 +146,7 @@ class IssueForm extends Form {
 				'year' => $issue->getYear(),
 				'datePublished' => $issue->getDatePublished(),
 				'description' => $issue->getDescription(null), // Localized
-				'publicIssueId' => $issue->getPublicIssueId(),
+				'publicIssueId' => $issue->getPubId('publisher-id'),
 				'accessStatus' => $issue->getAccessStatus(),
 				'openAccessDate' => $issue->getOpenAccessDate(),
 				'showVolume' => $issue->getShowVolume(),
@@ -319,7 +319,7 @@ class IssueForm extends Form {
 			$issue->setDatePublished($this->getData('datePublished'));
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
-		$issue->setPublicIssueId($this->getData('publicIssueId'));
+		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
 		$issue->setShowVolume(empty($showVolume) ? 0 : $showVolume);
 		$issue->setShowNumber(empty($showNumber) ? 0 : $showNumber);
 		$issue->setShowYear(empty($showYear) ? 0 : $showYear);

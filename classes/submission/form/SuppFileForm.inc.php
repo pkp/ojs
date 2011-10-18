@@ -128,7 +128,7 @@ class SuppFileForm extends Form {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getId())) {
+		if ($publicSuppFileId && $suppFileDao->pubIdExists('publisher-id', $publicSuppFileId, $this->suppFileId, $journal->getId())) {
 			$this->addError('publicIssueId', __('author.suppFile.suppFilePublicIdentificationExists'));
 			$this->addErrorField('publicSuppFileId');
 		}
@@ -166,7 +166,7 @@ class SuppFileForm extends Form {
 				'source' => $suppFile->getSource(null), // Localized
 				'language' => $suppFile->getLanguage(),
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
-				'publicSuppFileId' => $suppFile->getPublicSuppFileId(),
+				'publicSuppFileId' => $suppFile->getPubId('publisher-id'),
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
 				'storedDoi' => $suppFile->getStoredDoi(),
 				'doiSuffix' => $suppFile->getData('doiSuffix')
@@ -288,7 +288,7 @@ class SuppFileForm extends Form {
 		$suppFile->setSource($this->getData('source'), null); // Localized
 		$suppFile->setLanguage($this->getData('language'));
 		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
-		$suppFile->setPublicSuppFileId($this->getData('publicSuppFileId'));
+		$suppFile->setStoredPubId('publisher-id', $this->getData('publicSuppFileId'));
 		// Update DOI if unique.
 		// FIXME: Move this to DOI PID plug-in.
 		$doiSuffix = $this->getData('doiSuffix');

@@ -48,7 +48,6 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				g.style_file_id,
 				g.seq,
 				g.locale,
-				g.public_galley_id,
 				a.file_name,
 				a.original_file_name,
 				a.file_stage,

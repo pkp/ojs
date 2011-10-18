@@ -62,8 +62,9 @@ class ArticleDAO extends DAO {
 	function getAdditionalFieldNames() {
 		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
-		$additionalFields[] = 'pub-id::doi';
 		$additionalFields[] = 'doiSuffix';
+		$additionalFields[] = 'pub-id::doi';
+		$additionalFields[] = 'pub-id::publisher-id';
 		return $additionalFields;
 	}
 
@@ -565,7 +566,7 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Change the public ID of an article
+	 * Change the public ID of an article.
 	 * @param $articleId int
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
@@ -574,9 +575,10 @@ class ArticleDAO extends DAO {
 	 */
 	function changePubId($articleId, $pubIdType, $pubId) {
 		$idFields = array(
-			'article_id' => $articleId
+			'article_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
+			'article_id' => $articleId,
 			'locale' => '',
 			'setting_name' => 'pub-id::'.$pubIdType,
 			'setting_type' => 'string',
@@ -584,6 +586,35 @@ class ArticleDAO extends DAO {
 		);
 		$this->replace('article_settings', $updateArray, $idFields);
 		$this->flushCache();
+	}
+
+	/**
+	 * Checks if public identifier exists (other than for the specified
+	 * article ID, which is treated as an exception).
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 * @param $articleId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function pubIdExists($pubIdType, $pubId, $articleId, $journalId) {
+		$result =& $this->retrieve(
+			'SELECT COUNT(*)
+			FROM article_settings ast
+				INNER JOIN articles a ON ast.article_id = a.article_id
+			WHERE ast.setting_name = ? and ast.setting_value = ? and ast.article_id <> ? AND a.journal_id = ?',
+			array(
+				'pub-id::'.$pubIdType,
+				$pubId,
+				(int) $articleId,
+				(int) $journalId
+			)
+		);
+		$returner = $result->fields[0] ? true : false;
+		$result->Close();
+		return $returner;
 	}
 
 	/**

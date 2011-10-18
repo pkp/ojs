@@ -157,22 +157,44 @@ class ArticleGalley extends ArticleFile {
 	}
 
 	/**
-	 * Get public galley id
-	 * @return string
+	 * Get a public ID for this galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
-	function getPublicGalleyId() {
+	function getPubId($pubIdType, $preview = false) {
+		// If we already have an assigned ID, use it.
+		$storedId = $this->getStoredPubId($pubIdType);
+
 		// Ensure that blanks are treated as nulls.
-		$returner = $this->getData('publicGalleyId');
-		if ($returner === '') return null;
-		return $returner;
+		if ($storedId === '') {
+			$storedId = null;
+		}
+
+		return $storedId;
 	}
 
 	/**
-	 * Set public galley id
-	 * @param $publicGalleyId string
+	 * Get stored public ID of the galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @return string
 	 */
-	function setPublicGalleyId($publicGalleyId) {
-		return $this->setData('publicGalleyId', $publicGalleyId);
+	function getStoredPubId($pubIdType) {
+		return $this->getData('pub-id::'.$pubIdType);
+	}
+
+	/**
+	 * Set stored public galley id.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 */
+	function setStoredPubId($pubIdType, $pubId) {
+		return $this->setData('pub-id::'.$pubIdType, $pubId);
 	}
 
 	/**
@@ -184,7 +206,7 @@ class ArticleGalley extends ArticleFile {
 	 */
 	function getBestGalleyId(&$journal) {
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$publicGalleyId = $this->getPublicGalleyId();
+			$publicGalleyId = $this->getPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;
 		}
 		return $this->getId();

@@ -76,29 +76,36 @@ class IssueDAO extends DAO {
 
 	/**
 	 * Retrieve Issue by public issue id
-	 * @param $publicIssueId string
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 * @param $journalId int optional
 	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function &getIssueByPublicIssueId($publicIssueId, $journalId = null, $useCache = false) {
-		if ($useCache) {
+	function &getIssueByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
+		if ($useCache && $pubIdType == 'publisher-id') {
 			$cache =& $this->_getCache('issues');
-			$returner = $cache->get($publicIssueId);
+			$returner = $cache->get($pubId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
 
-		if (isset($journalId)) {
-			$result =& $this->retrieve(
-				'SELECT i.* FROM issues i WHERE public_issue_id = ? AND journal_id = ?',
-				array($publicIssueId, $journalId)
-			);
-		} else {
-			$result =& $this->retrieve(
-				'SELECT i.* FROM issues i WHERE public_issue_id = ?', $publicIssueId
-			);
-		}
+		$params = array(
+			'pub-id::'.$pubIdType,
+			$pubId
+		);
+		if ($journalId) $params[] = (int) $journalId;
+		$result =& $this->retrieve(
+			'SELECT i.*
+			FROM	issues i
+				INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
+			WHERE	ist.setting_name = ? AND
+				ist.setting_value = ?
+				' . ($journalId?' AND i.journal_id = ?':''),
+			$params
+		);
 
 		$issue = null;
 		if ($result->RecordCount() != 0) {
@@ -150,7 +157,7 @@ class IssueDAO extends DAO {
 	 * @return Issue object
 	 */
 	function &getIssueByBestIssueId($issueId, $journalId = null, $useCache = false) {
-		$issue =& $this->getIssueByPublicIssueId($issueId, $journalId, $useCache);
+		$issue =& $this->getIssueByPubId('publisher-id', $issueId, $journalId, $useCache);
 		if (!isset($issue)) $issue =& $this->getIssueById((int) $issueId, $journalId, $useCache);
 		return $issue;
 	}
@@ -273,7 +280,6 @@ class IssueDAO extends DAO {
 		$issue->setDateNotified($this->datetimeFromDB($row['date_notified']));
 		$issue->setAccessStatus($row['access_status']);
 		$issue->setOpenAccessDate($this->datetimeFromDB($row['open_access_date']));
-		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setShowVolume($row['show_volume']);
 		$issue->setShowNumber($row['show_number']);
 		$issue->setShowYear($row['show_year']);
@@ -303,8 +309,9 @@ class IssueDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
+		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
-		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'pub-id::publisher-id';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -327,9 +334,9 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, public_issue_id, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, doi)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
@@ -339,14 +346,12 @@ class IssueDAO extends DAO {
 				$issue->getPublished(),
 				$issue->getCurrent(),
 				(int) $issue->getAccessStatus(),
-				$issue->getPublicIssueId(),
 				(int) $issue->getShowVolume(),
 				(int) $issue->getShowNumber(),
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
-				$issue->getOriginalStyleFileName(),
-				$issue->getStoredDOI()
+				$issue->getOriginalStyleFileName()
 			)
 		);
 
@@ -407,7 +412,6 @@ class IssueDAO extends DAO {
 					date_published = %s,
 					date_notified = %s,
 					open_access_date = %s,
-					public_issue_id = ?,
 					access_status = ?,
 					show_volume = ?,
 					show_number = ?,
@@ -425,7 +429,6 @@ class IssueDAO extends DAO {
 				$issue->getYear(),
 				(int) $issue->getPublished(),
 				(int) $issue->getCurrent(),
-				$issue->getPublicIssueId(),
 				(int) $issue->getAccessStatus(),
 				(int) $issue->getShowVolume(),
 				(int) $issue->getShowNumber(),
@@ -507,7 +510,8 @@ class IssueDAO extends DAO {
 
 	/**
 	 * Checks if issue exists
-	 * @param $publicIssueId string
+	 * @param $issueId int
+	 * @param $journalId int
 	 * @return boolean
 	 */
 	function issueIdExists($issueId, $journalId) {
@@ -519,19 +523,31 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Checks if public identifier exists
-	 * @param $publicIssueId string
+	 * Checks if public identifier exists (other than for the specified
+	 * issue ID, which is treated as an exception).
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 * @param $issueId int
+	 * @param $journalId int
 	 * @return boolean
 	 */
-	function publicIssueIdExists($publicIssueId, $issueId, $journalId) {
+	function pubIdExists($pubIdType, $pubId, $issueId, $journalId) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM issues WHERE public_issue_id = ? AND issue_id <> ? AND journal_id = ?', array($publicIssueId, $issueId, $journalId)
+			'SELECT COUNT(*)
+			FROM issue_settings ist
+				INNER JOIN issues i ON ist.issue_id = i.issue_id
+			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
+			array(
+				'pub-id::'.$pubIdType,
+				$pubId,
+				(int) $issueId,
+				(int) $journalId
+			)
 		);
 		$returner = $result->fields[0] ? true : false;
-
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 

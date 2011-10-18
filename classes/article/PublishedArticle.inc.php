@@ -200,25 +200,6 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get public article id
-	 * @return string
-	 */
-	function getPublicArticleId() {
-		// Ensure that blanks are treated as nulls.
-		$returner = $this->getData('publicArticleId');
-		if ($returner === '') return null;
-		return $returner;
-	}
-
-	/**
-	 * Set public article id
-	 * @param $publicArticleId string
-	 */
-	function setPublicArticleId($publicArticleId) {
-		return $this->setData('publicArticleId', $publicArticleId);
-	}
-
-	/**
 	 * Return the "best" article ID -- If a public article ID is set,
 	 * use it; otherwise use the internal article Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)
@@ -233,7 +214,7 @@ class PublishedArticle extends Article {
 		}
 
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$publicArticleId = $this->getPublicArticleId();
+			$publicArticleId = $this->getPubId('publisher-id');
 			if (!empty($publicArticleId)) return $publicArticleId;
 		}
 		return $this->getId();
@@ -250,7 +231,6 @@ class PublishedArticle extends Article {
 		import('classes.article.DoiHelper');
 		$doiHelper = new DoiHelper();
 		return $doiHelper->getDOI($this, $preview);
-
 	}
 }
 

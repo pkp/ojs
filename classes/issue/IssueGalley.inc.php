@@ -138,34 +138,56 @@ class IssueGalley extends IssueFile {
 	}
 
 	/**
-	 * Get public galley id
+	 * Get a public ID for this galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @var $preview boolean If true, generate a non-persisted preview only.
+	 */
+	function getPubId($pubIdType, $preview = false) {
+		// If we already have an assigned ID, use it.
+		$storedId = $this->getStoredPubId($pubIdType);
+
+		// Ensure that blanks are treated as nulls.
+		if ($storedId === '') {
+			$storedId = null;
+		}
+
+		return $storedId;
+	}
+
+	/**
+	 * Get stored public ID of the galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @return string
 	 */
-	function getPublicGalleyId() {
-		// Ensure that blanks are treated as nulls.
-		$returner = $this->getData('publicGalleyId');
-		if ($returner === '') return null;
-		return $returner;
+	function getStoredPubId($pubIdType) {
+		return $this->getData('pub-id::'.$pubIdType);
 	}
 
 	/**
-	 * Set public galley id
-	 * @param $publicGalleyId string
+	 * Set stored public galley id.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function setPublicGalleyId($publicGalleyId) {
-		return $this->setData('publicGalleyId', $publicGalleyId);
+	function setStoredPubId($pubIdType, $pubId) {
+		return $this->setData('pub-id::'.$pubIdType, $pubId);
 	}
 
 	/**
-	 * Return the "best" galley ID -- If a public galley ID is set,
-	 * use it; otherwise use the internal galley Id. (Checks the journal
+	 * Return the "best" article ID -- If a public article ID is set,
+	 * use it; otherwise use the internal article Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)
 	 * @param $journal Object the journal this galley is in
 	 * @return string
 	 */
 	function getBestGalleyId(&$journal) {
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$publicGalleyId = $this->getPublicGalleyId();
+			$publicGalleyId = $this->getPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;
 		}
 		return $this->getId();

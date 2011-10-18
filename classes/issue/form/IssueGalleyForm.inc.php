@@ -149,7 +149,7 @@ class IssueGalleyForm extends Form {
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
 		$publicGalleyId = $this->getData('publicGalleyId');
 
-		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->getGalleyId(), $this->getIssueId())) {
+		if ($publicGalleyId && $galleyDao->pubIdExists('publisher-id', $publicGalleyId, $this->getGalleyId(), $this->getIssueId())) {
 			$this->addError('publicGalleyId', __('editor.issues.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
@@ -166,7 +166,7 @@ class IssueGalleyForm extends Form {
 		if ($galley) {
 			$this->_data = array(
 				'label' => $galley->getLabel(),
-				'publicGalleyId' => $galley->getPublicGalleyId(),
+				'publicGalleyId' => $galley->getPubId('publisher-id'),
 				'galleyLocale' => $galley->getLocale()
 			);
 		} else {
@@ -215,7 +215,7 @@ class IssueGalleyForm extends Form {
 
 			$galley->setLabel($this->getData('label'));
 			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley->setPublicGalleyId($this->getData('publicGalleyId'));
+				$galley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			}
 			$galley->setLocale($this->getData('galleyLocale'));
 
@@ -243,13 +243,13 @@ class IssueGalleyForm extends Form {
 				if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
-						if ($enablePublicGalleyId) $galley->setPublicGalleyId('pdf');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'pdf');
 					} else if (strstr($fileType, 'postscript')) {
 						$galley->setLabel('PostScript');
-						if ($enablePublicGalleyId) $galley->setPublicGalleyId('ps');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'ps');
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
-						if ($enablePublicGalleyId) $galley->setPublicGalleyId('xml');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'xml');
 					}
 				}
 
@@ -264,14 +264,14 @@ class IssueGalleyForm extends Form {
 
 			if ($enablePublicGalleyId) {
 				// Ensure the assigned public id doesn't already exist
-				$publicGalleyId = $galley->getPublicGalleyId();
+				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
-				while ($galleyDao->publicGalleyIdExists($publicGalleyId . $suffix, 0, $galley->getIssueId())) {
+				while ($galleyDao->pubIdExists('publisher-id', $publicGalleyId . $suffix, 0, $galley->getIssueId())) {
 					$suffix = '_'.$i++;
 				}
 
-				$galley->setPublicGalleyId($publicGalleyId . $suffix);
+				$galley->setStoredPubId('publisher-id', $publicGalleyId . $suffix);
 			}
 
 			// Insert new galley into the db

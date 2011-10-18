@@ -100,7 +100,7 @@ $(document).ready(function() {
 		<td><select name="accessStatus[{$article->getPublishedArticleId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}
-		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
+		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPubId('publisher-id')|escape}" size="7" maxlength="255" class="textField" /></td>
 		{/if}
 		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
 		<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPublishedArticleId()}" /></td>

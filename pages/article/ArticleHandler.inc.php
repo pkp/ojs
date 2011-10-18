@@ -396,7 +396,7 @@ class ArticleHandler extends Handler {
 
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		if ($journal->getSetting('enablePublicSuppFileId')) {
-			$suppFile =& $suppFileDao->getSuppFileByBestSuppFileId($article->getId(), $suppId);
+			$suppFile =& $suppFileDao->getSuppFileByBestSuppFileId($suppId, $article->getId());
 		} else {
 			$suppFile =& $suppFileDao->getSuppFile((int) $suppId, $article->getId());
 		}

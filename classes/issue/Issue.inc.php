@@ -264,22 +264,44 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get public issue id
-	 * @return string
+	 * Get a public ID for this issue.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
-	function getPublicIssueId() {
-		// Ensure that blanks are treated as nulls
-		$returner = $this->getData('publicIssueId');
-		if ($returner === '') return null;
-		return $returner;
+	function getPubId($pubIdType, $preview = false) {
+		// If we already have an assigned ID, use it.
+		$storedId = $this->getStoredPubId($pubIdType);
+
+		// Ensure that blanks are treated as nulls.
+		if ($storedId === '') {
+			$storedId = null;
+		}
+
+		return $storedId;
 	}
 
 	/**
-	 * set public issue id
-	 * @param $publicIssueId string
+	 * Get stored public ID of the issue.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @return string
 	 */
-	function setPublicIssueId($publicIssueId) {
-		return $this->setData('publicIssueId', $publicIssueId);
+	function getStoredPubId($pubIdType) {
+		return $this->getData('pub-id::'.$pubIdType);
+	}
+
+	/**
+	 * Set stored public issue id.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 */
+	function setStoredPubId($pubIdType, $pubId) {
+		return $this->setData('pub-id::'.$pubIdType, $pubId);
 	}
 
 	/**
@@ -764,7 +786,7 @@ class Issue extends DataObject {
 		}
 
 		if ($journal->getSetting('enablePublicIssueId')) {
-			$publicIssueId = $this->getPublicIssueId();
+			$publicIssueId = $this->getPubId('publisher-id');
 			if (!empty($publicIssueId)) return $publicIssueId;
 		}
 		return $this->getId();

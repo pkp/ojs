@@ -633,8 +633,8 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				if (isset($publishedArticles[$articleId])) {
 					$publicArticleId = $publishedArticles[$articleId];
-					if (!$publicArticleId || !$publishedArticleDao->publicArticleIdExists($publicArticleId, $articleId, $journal->getId())) {
-						$publishedArticleDao->updatePublishedArticleField($pubId, 'public_article_id', $publicArticleId);
+					if (!$publicArticleId || !$articleDao->pubIdExists('publisher-id', $publicArticleId, $articleId, $journal->getId())) {
+						$article->setStoredPubId('publisher-id', $publicArticleId);
 					}
 				}
 				if (isset($accessStatus[$pubId])) {

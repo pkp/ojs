@@ -62,44 +62,53 @@ class ArticleGalleyDAO extends DAO {
 
 	/**
 	 * Checks if public identifier exists (other than for the specified
-	 * galley ID, which is treated as an exception)
-	 * @param $publicGalleyId string
+	 * galley ID, which is treated as an exception).
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 * @param $galleyId int
 	 * @param $articleId int
 	 * @return boolean
 	 */
-	function publicGalleyIdExists($publicGalleyId, $galleyId, $articleId) {
+	function pubIdExists($pubIdType, $pubId, $galleyId, $articleId) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM article_galleys WHERE public_galley_id = ? AND galley_id <> ? AND article_id = ?',
+			'SELECT COUNT(*)
+			FROM article_galley_settings ags
+				INNER JOIN article_galleys ag ON ags.galley_id = ag.galley_id
+			WHERE ags.setting_name = ? AND ags.setting_value = ? AND ags.galley_id <> ? AND ag.article_id = ?',
 			array(
-				$publicGalleyId,
+				'pub-id::'.$pubIdType,
+				$pubId,
 				(int) $galleyId,
 				(int) $articleId
 			)
 		);
 		$returner = $result->fields[0] ? true : false;
-
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
 	/**
 	 * Retrieve a galley by ID.
-	 * @param $publicGalleyId string
-	 * @param $articleId int optional
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 * @param $articleId int
 	 * @return ArticleGalley
 	 */
-	function &getGalleyByPublicGalleyId($publicGalleyId, $articleId) {
+	function &getGalleyByPubId($pubIdType, $pubId, $articleId) {
 		$result =& $this->retrieve(
 			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 			FROM	article_galleys g
+				INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-			WHERE	g.public_galley_id = ? AND
+			WHERE	gs.setting_name = ? AND
+				gs.setting_value = ? AND
 				g.article_id = ?',
-			array($publicGalleyId, (int) $articleId)
+			array('pub-id::'.$pubIdType, $pubId, (int) $articleId)
 		);
 
 		$returner = null;
@@ -153,7 +162,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return galley object
 	 */
 	function &getGalleyByBestGalleyId($galleyId, $articleId) {
-		if ($galleyId != '') $galley =& $this->getGalleyByPublicGalleyId($galleyId, $articleId);
+		if ($galleyId != '') $galley =& $this->getGalleyByPubId('publisher-id', $galleyId, $articleId);
 		if (!isset($galley)) $galley =& $this->getGalley((int) $galleyId, $articleId);
 		return $galley;
 	}
@@ -172,8 +181,9 @@ class ArticleGalleyDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
+		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
-		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'pub-id::publisher-id';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -211,7 +221,6 @@ class ArticleGalleyDAO extends DAO {
 			$galley = new ArticleGalley();
 		}
 		$galley->setId($row['galley_id']);
-		$galley->setPublicGalleyId($row['public_galley_id']);
 		$galley->setArticleId($row['article_id']);
 		$galley->setLocale($row['locale']);
 		$galley->setFileId($row['file_id']);
@@ -244,11 +253,10 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
-				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, doi)
+				(article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
-				$galley->getPublicGalleyId(),
 				(int) $galley->getArticleId(),
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
@@ -256,8 +264,7 @@ class ArticleGalleyDAO extends DAO {
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence(),
-				$galley->getRemoteURL(),
-				$galley->getStoredDOI()
+				$galley->getRemoteURL()
 			)
 		);
 		$galley->setId($this->getInsertGalleyId());
@@ -276,7 +283,6 @@ class ArticleGalleyDAO extends DAO {
 		$this->update(
 			'UPDATE article_galleys
 				SET
-					public_galley_id = ?,
 					file_id = ?,
 					label = ?,
 					locale = ?,
@@ -287,7 +293,6 @@ class ArticleGalleyDAO extends DAO {
 					doi = ?
 				WHERE galley_id = ?',
 			array(
-				$galley->getPublicGalleyId(),
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),

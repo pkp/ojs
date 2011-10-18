@@ -134,11 +134,11 @@ class PubMedExportDom {
 		// how this is handled is journal-specific, and will require either
 		// configuration in the plugin, or an update to the core code.
 		// this is also related to DOI-handling within OJS
-		if ($article->getPublicArticleId()) {
+		if ($article->getPubId('publisher-id')) {
 			$articleIdListNode =& XMLCustomWriter::createElement($doc, 'ArticleIdList');
 			XMLCustomWriter::appendChild($root, $articleIdListNode);
 
-			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
+			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPubId('publisher-id'));
 			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
 

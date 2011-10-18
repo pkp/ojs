@@ -36,7 +36,7 @@ class NativeExportDom {
 		XMLCustomWriter::setAttribute($root, 'identification', $idType, false);
 
 		XMLCustomWriter::setAttribute($root, 'current', $issue->getCurrent()?'true':'false');
-		XMLCustomWriter::setAttribute($root, 'public_id', $issue->getPublicIssueId(), false);
+		XMLCustomWriter::setAttribute($root, 'public_id', $issue->getPubId('publisher-id'), false);
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'id', $issue->getId());
 
@@ -421,7 +421,7 @@ class NativeExportDom {
 		}
 
 		XMLCustomWriter::setAttribute($root, 'type', $suppFileType);
-		XMLCustomWriter::setAttribute($root, 'public_id', $suppFile->getPublicSuppFileId(), false);
+		XMLCustomWriter::setAttribute($root, 'public_id', $suppFile->getPubId('publisher-id'), false);
 		XMLCustomWriter::setAttribute($root, 'language', $suppFile->getLanguage(), false);
 
 		if (is_array($suppFile->getTitle(null))) foreach ($suppFile->getTitle(null) as $locale => $title) {

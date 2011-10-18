@@ -77,12 +77,12 @@ class ArticleGalleyForm extends Form {
 	 * Validate the form
 	 */
 	function validate() {
-		// check if public galley ID has already used
+		// check if public galley ID has already been used
 		$journal =& Request::getJournal();
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId, $this->articleId)) {
+		if ($publicGalleyId && $galleyDao->pubIdExists('publisher-id', $publicGalleyId, $this->galleyId, $this->articleId)) {
 			$this->addError('publicGalleyId', __('submission.layout.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
@@ -109,7 +109,7 @@ class ArticleGalleyForm extends Form {
 			$galley =& $this->galley;
 			$this->_data = array(
 				'label' => $galley->getLabel(),
-				'publicGalleyId' => $galley->getPublicGalleyId(),
+				'publicGalleyId' => $galley->getPubId('publisher-id'),
 				'galleyLocale' => $galley->getLocale(),
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
 				'storedDoi' => $galley->getStoredDoi(),
@@ -189,7 +189,7 @@ class ArticleGalleyForm extends Form {
 			// Update existing galley
 			$galley->setLabel($this->getData('label'));
 			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley->setPublicGalleyId($this->getData('publicGalleyId'));
+				$galley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			}
 			$galley->setLocale($this->getData('galleyLocale'));
 			if ($this->getData('remoteURL')) {
@@ -223,7 +223,7 @@ class ArticleGalleyForm extends Form {
 				$enablePublicGalleyId = $journal->getSetting('enablePublicGalleyId');
 				if ($galley->isHTMLGalley()) {
 					$galley->setLabel('HTML');
-					if ($enablePublicGalleyId) $galley->setPublicGalleyId('html');
+					if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'html');
 				} else if ($createRemote) {
 					$galley->setLabel(__('common.remote'));
 					$galley->setRemoteURL(__('common.remoteURL'));
@@ -231,13 +231,13 @@ class ArticleGalleyForm extends Form {
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
-						if ($enablePublicGalleyId) $galley->setPublicgalleyId('pdf');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'pdf');
 					} else if (strstr($fileType, 'postscript')) {
 						$galley->setLabel('PostScript');
-						if ($enablePublicGalleyId) $galley->setPublicgalleyId('ps');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'ps');
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
-						if ($enablePublicGalleyId) $galley->setPublicgalleyId('xml');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'xml');
 					}
 				}
 
@@ -254,14 +254,14 @@ class ArticleGalleyForm extends Form {
 			
 			if ($enablePublicGalleyId) {
 				// check to make sure the assigned public id doesn't already exist
-				$publicGalleyId = $galley->getPublicgalleyId();
+				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
-				while ($galleyDao->publicGalleyIdExists($publicGalleyId . $suffix, 0, $galley->getArticleId())) {
+				while ($galleyDao->pubIdExists('publisher-id', $publicGalleyId . $suffix, 0, $galley->getArticleId())) {
 					$suffix = '_'.$i++;
 				}
 
-				$galley->setPublicgalleyId($publicGalleyId . $suffix);
+				$galley->setStoredPubId('publisher-id', $publicGalleyId . $suffix);
 			}
 
 			// FIXME: Move this to DOI PID plug-in.

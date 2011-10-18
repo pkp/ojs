@@ -309,7 +309,6 @@
 			<DEFAULT VALUE="1" />
 		</field>
 		<field name="open_access_date" type="T" />
-		<field name="public_issue_id" type="C2" size="255" />
 		<field name="show_volume" type="I1">
 			<NOTNULL />
 			<DEFAULT VALUE="0" />
@@ -332,11 +331,6 @@
 		<descr>Journal issues.</descr>
 		<index name="issues_journal_id">
 			<col>journal_id</col>
-		</index>
-		<index name="issues_public_issue_id">
-			<col>public_issue_id</col>
-			<col>journal_id</col>
-			<UNIQUE />
 		</index>
 	</table>
 
@@ -370,6 +364,12 @@
 			<col>setting_name</col>
 			<UNIQUE />
 		</index>
+		<index name="issue_settings_alternate_key">
+			<!-- used by IssueDAO::pubIdExists() -->
+			<col>issue_id</col>
+			<col>setting_name</col>
+			<col>setting_value</col>
+		</index>
 	</table>
 
 	<!--
@@ -382,7 +382,6 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="public_galley_id" type="C2" size="255" />
 		<field name="locale" type="C2" size="5"/>
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
@@ -403,10 +402,44 @@
 		<index name="issue_galleys_issue_id">
 			<col>issue_id</col>
 		</index>
-		<index name="issue_galleys_public_id">
-			<col>public_galley_id</col>
-			<col>issue_id</col>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_galley_settings
+	  *
+	  -->
+	<table name="issue_galley_settings">
+		<field name="galley_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Issue galley metadata.</descr>
+		<index name="issue_galley_settings_galley_id">
+			<col>galley_id</col>
+		</index>
+		<index name="issue_galley_settings_pkey">
+			<col>galley_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
 			<UNIQUE/>
+		</index>
+		<index name="issue_galley_settings_alternate_key">
+			<!-- used by IssueGalleyDAO::pubIdExists() -->
+			<col>galley_id</col>
+			<col>setting_name</col>
+			<col>setting_value</col>
 		</index>
 	</table>
 
@@ -626,6 +659,12 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
+		<index name="article_settings_alternate_key">
+			<!-- used by ArticleDAO::pubIdExists() -->
+			<col>article_id</col>
+			<col>setting_name</col>
+			<col>setting_value</col>
+		</index>
 	</table>
 
 	<!--
@@ -657,7 +696,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="public_article_id" type="C2" size="255"/>
 		<descr>Journal articles.</descr>
 		<index name="published_articles_article_id">
 			<col>article_id</col>
@@ -665,9 +703,6 @@
 		</index>
 		<index name="published_articles_issue_id">
 			<col>issue_id</col>
-		</index>
-		<index name="published_articles_public_article_id">
-			<col>public_article_id</col>
 		</index>
 	</table>
 
@@ -737,7 +772,6 @@
 		</field>
 		<field name="type" type="C2" size="255"/>
 		<field name="language" type="C2" size="10"/>
-		<field name="public_supp_file_id" type="C2" size="255"/>
 		<field name="remote_url" type="C2" size="255"/>
 		<field name="date_created" type="D"/>
 		<field name="show_reviewers" type="I1">
@@ -757,9 +791,6 @@
 		</index>
 		<index name="article_supplementary_files_article_id">
 			<col>article_id</col>
-		</index>
-		<index name="supp_public_supp_file_id">
-			<col>public_supp_file_id</col>
 		</index>
 	</table>
 
@@ -793,6 +824,12 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
+		</index>
+		<index name="article_supp_file_settings_alternate_key">
+			<!-- used by SuppFileDAO::pubIdExists() -->
+			<col>supp_id</col>
+			<col>setting_name</col>
+			<col>setting_value</col>
 		</index>
 	</table>
 
@@ -876,7 +913,6 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="public_galley_id" type="C2" size="255" />
 		<field name="locale" type="C2" size="5"/>
 		<field name="article_id" type="I8">
 			<NOTNULL/>
@@ -903,11 +939,6 @@
 		<descr>Article galleys.</descr>
 		<index name="article_galleys_article_id">
 			<col>article_id</col>
-		</index>
-		<index name="article_galleys_public_id">
-			<col>public_galley_id</col>
-			<col>article_id</col>
-			<UNIQUE/>
 		</index>
 	</table>
 
@@ -941,6 +972,12 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
+		</index>
+		<index name="article_galley_settings_alternate_key">
+			<!-- used by ArticleGalleyDAO::pubIdExists() -->
+			<col>galley_id</col>
+			<col>setting_name</col>
+			<col>setting_value</col>
 		</index>
 	</table>
 
