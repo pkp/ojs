@@ -69,7 +69,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$article->setSubjectClass('article-subject-class', 'en_US');
 		$article->setAbstract('article-abstract', 'en_US');
 		$article->setSponsor('article-sponsor', 'en_US');
-		$article->setStoredDOI('article-doi');
+		$article->setStoredPubId('doi', 'article-doi');
 		$article->setLanguage('en_US');
 		$article->setCoverageGeo('article-coverage-geo', 'en_US');
 		$article->setCoverageChron('article-coverage-chron', 'en_US');

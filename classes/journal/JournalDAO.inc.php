@@ -332,6 +332,31 @@ class JournalDAO extends DAO {
 	}
 
 	/**
+	 * Delete the public IDs of all articles in a journal.
+	 * @param $journalId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deleteAllPubIds($journalId, $pubIdType) {
+		// Remove public IDs of the given type from all articles.
+		$settingName = 'pub-id::'.$pubIdType;
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articles =& $articleDao->getArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			$this->update(
+				'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
+				array(
+					$settingName,
+					(int)$article->getId()
+				)
+			);
+			unset($article);
+		}
+		$articleDao->flushCache();
+	}
+
+	/**
 	 * Sequentially renumber journals in their sequence order.
 	 */
 	function resequenceJournals() {

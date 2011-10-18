@@ -777,7 +777,7 @@ class NativeImportDom {
 		for ($index=0; ($node = $articleNode->getChildByName('id', $index)); $index++) {
 			switch ($node->getAttribute('type')) {
 				case 'doi':
-					$article->setStoredDOI($node->getValue());
+					$article->setStoredPubId('doi', $node->getValue());
 					break;
 			}
 		}

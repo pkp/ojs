@@ -240,15 +240,17 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get a DOI for this article.
+	 * Get a public ID for this article.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
-	function getDOI($preview = false) {
+	function getPubId($pubIdType, $preview = false) {
 		import('classes.article.DoiHelper');
 		$doiHelper = new DoiHelper();
 		return $doiHelper->getDOI($this, $preview);
-                                // %Y - year
-				$suffixPattern = String::regexp_replace('/%Y/', $issue->getYear(), $suffixPattern);
+
 	}
 }
 

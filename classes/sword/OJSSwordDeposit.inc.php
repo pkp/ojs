@@ -74,7 +74,7 @@ class OJSSwordDeposit {
 
 		// The article can be published or not. Support either.
 		if (is_a($this->article, 'PublishedArticle')) {
-			$doi = $this->article->getDOI();
+			$doi = $this->article->getPubId('doi');
 			if ($doi !== null) $this->package->setIdentifier($doi);
 		}
 

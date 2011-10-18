@@ -112,7 +112,7 @@ class PubMedExportDom {
 		}
 
 		/* --- DOI --- */
-		if ($doi = $article->getDOI()) {
+		if ($doi = $article->getPubId('doi')) {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
 		}

@@ -62,6 +62,7 @@ class ArticleDAO extends DAO {
 	function getAdditionalFieldNames() {
 		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'pub-id::doi';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -156,7 +157,6 @@ class ArticleDAO extends DAO {
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
-		$article->setStoredDOI($row['doi']);
 		$article->setLanguage($row['language']);
 		$article->setCommentsToEditor($row['comments_to_ed']);
 		$article->setCitations($row['citations']);
@@ -189,9 +189,9 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(locale, user_id, journal_id, section_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status, doi)
+				(locale, user_id, journal_id, section_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -211,8 +211,7 @@ class ArticleDAO extends DAO {
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
-				(int) $article->getCommentsStatus(),
-				$article->getStoredDOI()
+				(int) $article->getCommentsStatus()
 			)
 		);
 
@@ -256,8 +255,7 @@ class ArticleDAO extends DAO {
 					pages = ?,
 					fast_tracked = ?,
 					hide_author = ?,
-					comments_status = ?,
-					doi = ?
+					comments_status = ?
 				WHERE article_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -278,7 +276,6 @@ class ArticleDAO extends DAO {
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
 				(int) $article->getCommentsStatus(),
-				$article->getStoredDOI(),
 				$article->getId()
 			)
 		);
@@ -568,15 +565,24 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Change the DOI of an article
+	 * Change the public ID of an article
 	 * @param $articleId int
-	 * @param $doi string
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function changeDOI($articleId, $doi) {
-		$this->update(
-			'UPDATE articles SET doi = ? WHERE article_id = ?', array($doi, (int) $articleId)
+	function changePubId($articleId, $pubIdType, $pubId) {
+		$idFields = array(
+			'article_id' => $articleId
 		);
-
+		$updateArray = array(
+			'locale' => '',
+			'setting_name' => 'pub-id::'.$pubIdType,
+			'setting_type' => 'string',
+			'setting_value' => (string)$pubId
+		);
+		$this->replace('article_settings', $updateArray, $idFields);
 		$this->flushCache();
 	}
 

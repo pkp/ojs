@@ -136,19 +136,25 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get stored DOI of the submission.
+	 * Get stored public ID of the submission.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @return int
 	 */
-	function getStoredDOI() {
-		return $this->getData('doi');
+	function getStoredPubId($pubIdType) {
+		return $this->getData('pub-id::'.$pubIdType);
 	}
 
 	/**
-	 * Set the stored DOI of the submission.
-	 * @param $doi string
+	 * Set the stored public ID of the submission.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function setStoredDOI($doi) {
-		return $this->setData('doi', $doi);
+	function setStoredPubId($pubIdType, $pubId) {
+		return $this->setData('pub-id::'.$pubIdType, $pubId);
 	}
 
 	/**

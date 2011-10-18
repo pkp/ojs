@@ -120,7 +120,7 @@ class MetadataForm extends Form {
 				'abstract' => $article->getAbstract(null), // Localized
 				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $article->getStoredDoi(),
+				'storedDoi' => $article->getStoredPubId('doi'),
 				'doiSuffix' => $article->getData('doiSuffix'),
 				'showCoverPage' => $article->getShowCoverPage(null), // Localized
 				'hideCoverPageToc' => $article->getHideCoverPageToc(null), // Localized

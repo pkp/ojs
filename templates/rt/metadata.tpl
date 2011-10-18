@@ -139,9 +139,9 @@
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {if $issue->getPublished()}
-	{assign var=doi value=$article->getDOI()}
+	{assign var=doi value=$article->getPubId('doi')}
 {else}
-	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
+	{assign var=doi value=$article->getPubId('doi', true)}{* Don't affix DOI *}
 {/if}
 {if $doi}
 	<tr><td colspan="4" class="separator">&nbsp;</td></tr>

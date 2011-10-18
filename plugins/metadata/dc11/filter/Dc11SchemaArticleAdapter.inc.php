@@ -151,7 +151,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Identifier: DOI
-		if($doi = $article->getDOI()) {
+		if($doi = $article->getPubId('doi')) {
 			$dc11Description->addStatement('dc:identifier', $doi);
 		}
 

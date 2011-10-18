@@ -144,7 +144,7 @@ class NativeExportDom {
 
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root =& XMLCustomWriter::createElement($doc, 'article');
-		if ($doi = $article->getDOI()) {
+		if ($doi = $article->getPubId('doi')) {
 			$idNode =& XMLCustomWriter::createChildWithText($doc, $root, 'id', $doi);
 			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
 		}
