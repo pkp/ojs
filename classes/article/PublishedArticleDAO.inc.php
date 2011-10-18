@@ -177,13 +177,16 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all published articles in a journal by DOI.
-	 * @param $doi string
+	 * Retrieve all published articles in a journal by public ID.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 * @param $journalId int
 	 * @param $rangeInfo object
 	 * @return object
 	 */
-	function &getPublishedArticlesByDOI($doi, $journalId = null, $rangeInfo = null) {
+	function &getPublishedArticlesByPubId($pubIdType, $pubId, $journalId = null, $rangeInfo = null) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$params = array(
@@ -195,7 +198,8 @@ class PublishedArticleDAO extends DAO {
 			$primaryLocale,
 			'abbrev',
 			$locale,
-			$doi
+			'pub-id::'.$pubIdType,
+			$pubId
 		);
 		if ($journalId !== null) $params[] = (int) $journalId;
 		$result =& $this->retrieveRange(
@@ -204,6 +208,7 @@ class PublishedArticleDAO extends DAO {
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	published_articles pa
+				INNER JOIN article_settings atl ON pa.article_id = atl.article_id
 				LEFT JOIN articles a ON pa.article_id = a.article_id
 				LEFT JOIN issues i ON pa.issue_id = i.issue_id
 				LEFT JOIN sections s ON s.section_id = a.section_id
@@ -212,7 +217,7 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE 	i.published = 1
-				AND a.doi = ?
+				AND atl.setting_name = ? AND atl.setting_value = ?
 				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
 				AND a.status <> ' . STATUS_ARCHIVED . '
 			ORDER BY date_published',

@@ -67,7 +67,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$doi = implode('/', $args);
 				$journal =& $request->getJournal();
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$articles =& $publishedArticleDao->getPublishedArticlesByDOI($doi, $journal?$journal->getId():null);
+				$articles =& $publishedArticleDao->getPublishedArticlesByPubId('doi', $doi, $journal?$journal->getId():null);
 				while ($article =& $articles->next()) {
 					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
 				}
