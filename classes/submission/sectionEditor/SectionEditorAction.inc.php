@@ -2112,7 +2112,7 @@ class SectionEditorAction extends Action {
 
 		$user =& $request->getUser();
 		import('classes.mail.ArticleMailTemplate');
-		$email = new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
+		$email = new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS', null, null, null, true, true);
 
 		if ($send && !$email->hasErrors() && !$inhibitExistingEmail) {
 			HookRegistry::call('SectionEditorAction::blindCcReviewsToReviewers', array(&$article, &$reviewAssignments, &$email));
