@@ -86,7 +86,7 @@
 	<td>6.</td>
 	<td>{translate key="rt.metadata.dublinCore.contributor"}</td>
 	<td>{translate key="rt.metadata.pkp.sponsors"}</td>
-	<td>{$article->getArticleSponsor()|escape}</td>
+	<td>{$article->getLocalizedSponsor()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">

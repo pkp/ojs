@@ -52,7 +52,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getJournalId(), true);
+		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);

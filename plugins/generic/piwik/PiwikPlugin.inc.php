@@ -140,9 +140,9 @@ class PiwikPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if (!$journal) return false;
-		return $this->getSetting($journal->getJournalId(), 'enabled');
+		return $this->getSetting($journal->getId(), 'enabled');
 	}
 
 	/**

@@ -45,7 +45,7 @@ class ArticleFile extends SubmissionFile {
 		$journalId = $article->getJournalId();
 
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
-		'/articles/' . $this->getArticleId() . '/' . $this->getType() . '/' . $this->getFileName();
+		'/articles/' . $this->getArticleId() . '/' . $this->getFileStage() . '/' . $this->getFileName();
 	}
 
 	//
