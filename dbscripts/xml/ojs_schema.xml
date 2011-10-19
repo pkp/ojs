@@ -364,9 +364,12 @@
 			<col>setting_name</col>
 			<UNIQUE />
 		</index>
-		<index name="issue_settings_alternate_key">
-			<!-- used by IssueDAO::pubIdExists() -->
-			<col>issue_id</col>
+		<index name="issue_settings_name_value" platform="mysql">
+			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
+			<col>setting_name(50)</col>
+			<col>setting_value(150)</col>
+		</index>
+		<index name="issue_settings_name_value" platform="postgres7">
 			<col>setting_name</col>
 			<col>setting_value</col>
 		</index>
@@ -434,12 +437,6 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
-		</index>
-		<index name="issue_galley_settings_alternate_key">
-			<!-- used by IssueGalleyDAO::pubIdExists() -->
-			<col>galley_id</col>
-			<col>setting_name</col>
-			<col>setting_value</col>
 		</index>
 	</table>
 
@@ -659,9 +656,12 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
-		<index name="article_settings_alternate_key">
-			<!-- used by ArticleDAO::pubIdExists() -->
-			<col>article_id</col>
+		<index name="article_settings_name_value" platform="mysql">
+			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
+			<col>setting_name(50)</col>
+			<col>setting_value(150)</col>
+		</index>
+		<index name="article_settings_name_value" platform="postgres7">
 			<col>setting_name</col>
 			<col>setting_value</col>
 		</index>
@@ -825,9 +825,12 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
-		<index name="article_supp_file_settings_alternate_key">
-			<!-- used by SuppFileDAO::pubIdExists() -->
-			<col>supp_id</col>
+		<index name="article_supp_file_settings_name_value" platform="mysql">
+			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
+			<col>setting_name(50)</col>
+			<col>setting_value(150)</col>
+		</index>
+		<index name="article_supp_file_settings_name_value" platform="postgres7">
 			<col>setting_name</col>
 			<col>setting_value</col>
 		</index>
@@ -973,9 +976,12 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
-		<index name="article_galley_settings_alternate_key">
-			<!-- used by ArticleGalleyDAO::pubIdExists() -->
-			<col>galley_id</col>
+		<index name="article_galley_settings_name_value" platform="mysql">
+			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
+			<col>setting_name(50)</col>
+			<col>setting_value(150)</col>
+		</index>
+		<index name="article_galley_settings_name_value" platform="postgres7">
 			<col>setting_name</col>
 			<col>setting_value</col>
 		</index>

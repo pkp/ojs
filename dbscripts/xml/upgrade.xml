@@ -135,6 +135,12 @@
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate.xml" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_emaillog.xml" condition="return $installer->columnExists('article_email_log', 'log_id');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_reviewrounds.xml" condition="return !$installer->columnExists('review_rounds', 'review_round_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues.xml" condition="return $installer->columnExists('issues', 'public_issue_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles.xml" condition="return $installer->columnExists('articles', 'doi');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_published_articles.xml" condition="return $installer->columnExists('published_articles', 'public_article_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issue_galleys.xml" condition="return $installer->columnExists('issue_galleys', 'public_galley_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys.xml" condition="return $installer->columnExists('article_galleys', 'public_galley_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files.xml" condition="return $installer->columnExists('article_supplementary_files', 'public_supp_file_id');" />
 	</upgrade>
 	
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
@@ -290,6 +296,13 @@
 		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
 		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
 		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US" />
+		<!-- ID upgrade -->
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues2.xml" condition="return $installer->tableExists('issues_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles2.xml" condition="return $installer->tableExists('articles_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_published_articles2.xml" condition="return $installer->tableExists('published_articles_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issue_galleys2.xml" condition="return $installer->tableExists('issue_galleys_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys2.xml" condition="return $installer->tableExists('article_galleys_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files2.xml" condition="return $installer->tableExists('article_supp_files_old');" />
 		<!-- Mutex help table. -->
 		<data file="lib/pkp/xml/mutexData.xml" />
 		<data file="dbscripts/xml/upgrade/2.4.0_update.xml" />

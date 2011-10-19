@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_idupdate_article_galleys.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 id update pre-migration script, run prior to schema sync.
+  *
+  -->
+
+<data>
+	<!-- Prepare migration of public ids and DOIs to settings tables -->
+	<sql>
+		<rename table="article_galleys" to="article_galleys_old" />
+	</sql>
+</data>
