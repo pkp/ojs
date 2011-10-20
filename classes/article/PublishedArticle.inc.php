@@ -269,9 +269,16 @@ class PublishedArticle extends Article {
 
 		if (!$issue || !$journal || $journal->getId() != $issue->getJournalId() ) return null;
 
+		$doi = null;
 		switch ( $doiSuffixSetting ) {
-			case 'customIdentifier':
+			case 'publisherId':
 				$doi = $doiPrefix . '/' . $this->getBestArticleId();
+				break;
+			case 'customId':
+				$doiSuffix = $this->getData('doiSuffix');
+				if ($doiSuffix) {
+					$doi = $doiPrefix . '/' . $doiSuffix;
+				}
 				break;
 			case 'pattern':
 				$suffixPattern = $journal->getSetting('doiSuffixPattern');
@@ -293,7 +300,7 @@ class PublishedArticle extends Article {
 				$doi = $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getId();
 		}
 
-		if (!$preview) {
+		if ($doi && !$preview) {
 			// Save the generated DOI
 			$this->setStoredDOI($doi);
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');

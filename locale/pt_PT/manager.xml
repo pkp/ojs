@@ -625,7 +625,7 @@
 	<message key="manager.setup.doiSuffixPattern">Use o padrão fornecido abaixo para gerar sufixos DOI. Use %j para iniciais da revista, %v para o volume, %i para a edição, %a para o código do artigo no sistema e %p para o número da página.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Por exemplo, vl%viss%ipp%p poderia criar um DOI to tipo 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, desde que seja único para cada artigo publicado.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve estar activado no Passo 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve estar activado no Passo 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar no formato 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Favicon da revista</message>
 	<message key="manager.setup.journalFaviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>

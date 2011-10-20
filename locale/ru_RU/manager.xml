@@ -490,7 +490,7 @@
 	<message key="manager.setup.doiSuffixPattern">Используйте введенный выше формат для генерации суффиксов DOI. В нем %j будет заменено начальными буквами названия журнала, %v номером тома, %i номером выпуску, %a идентификатором статьи в системе OJS и %p номером первой страницы.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Например , vol%viss%ipp%p может произвести DOI типа 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Суффикс DOI может иметь любой формат, но должен быть уникальными для каждой опубликованной статьи.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Использование "собственного идентификатора" для опубликованных статей в качестве суффикса DOI (должно быть включено на Шаге 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Использование "собственного идентификатора" для опубликованных статей в качестве суффикса DOI (должно быть включено на Шаге 4).</message>
 	<message key="manager.setup.editorDecision">Редакционное решение</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Примечание:</strong> Для использования этой опции администратор сайта должен включить <tt>allow_envelope_sender</tt> в конфигурационном файле OJS. Могут также потребоваться дополнительные изменения конфигурации сервера (что может быть не возможным на конкретном сервере), как описано в документации OJS.]]></message>
 	<message key="manager.setup.enableAnnouncements">Разрешить менеджерам журнала добавление обьявлений.</message>

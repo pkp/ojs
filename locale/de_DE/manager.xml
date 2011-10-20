@@ -253,7 +253,7 @@
 	<message key="manager.setup.doiSuffixPattern">Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %a für den OJS-Artikel-ID und %p für die Seitenzahl.</message>
 	<message key="manager.setup.doiSuffixPattern.example">vol%viss%ipp%p würde z-B. einen DOI 10.1234/vol3iss2pp230 erzeugen</message>
 	<message key="manager.setup.doiSuffixDescription">Ein DOI-Suffix kann jede beliebige Form haben, muss aber für jede veröffentlichte Einheit eindeutig sein.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4 zugelassen werden).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4 zugelassen werden).</message>
 	<message key="manager.setup.doiReassign">DOI neu zuweisen</message>
 	<message key="manager.setup.doiReassign.description">Wenn Sie Ihre DOI-Konfiguration ändern, werden bereits zugewiesene DOI nicht betroffen sein. Sobald die DOI-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden DOI zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
 	<message key="manager.setup.editorDecision">Redaktionsentscheidung</message>

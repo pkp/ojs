@@ -667,7 +667,7 @@
 	<message key="manager.setup.doiSuffixPattern">Gebruik het patroon hieronder om DOI achtervoegsels te genereren. Gebruik %j voor de tijdschrift initiaal, %i voor het nummer, %a voor het OJS artikel en %p voor het paginanummer.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Bijvoorbeeld, vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Een DOI achtervoegsel kan iedere vorm aannemen, maar moet uniek zijn voor ieder gepubliceerd item.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Gebruik de "aangepaste identificatie"  van gepubliceerde items als DOI achtervoegsel (moet ingeschakeld worden in stap 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Gebruik de "aangepaste identificatie"  van gepubliceerde items als DOI achtervoegsel (moet ingeschakeld worden in stap 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">Het DOI patroon moet de vorm 10.xxxx hebben.</message>
 	<message key="manager.setup.journalFaviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
 	<message key="manager.setup.journalFaviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>

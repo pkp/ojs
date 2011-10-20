@@ -119,6 +119,9 @@ class MetadataForm extends Form {
 				'title' => $article->getTitle(null), // Localized
 				'abstract' => $article->getAbstract(null), // Localized
 				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'storedDoi' => $article->getStoredDoi(),
+				'doiSuffix' => $article->getData('doiSuffix'),
 				'showCoverPage' => $article->getShowCoverPage(null), // Localized
 				'hideCoverPageToc' => $article->getHideCoverPageToc(null), // Localized
 				'hideCoverPageAbstract' => $article->getHideCoverPageAbstract(null), // Localized
@@ -229,6 +232,7 @@ class MetadataForm extends Form {
 				'title',
 				'abstract',
 				'coverPageAltText',
+				'doiSuffix',
 				'showCoverPage',
 				'hideCoverPageToc',
 				'hideCoverPageAbstract',
@@ -272,6 +276,17 @@ class MetadataForm extends Form {
 				// Not a valid image.
 				$this->addError('imageFile', __('submission.layout.imageInvalid'));
 				return false;
+			}
+		}
+
+		// Verify DOI uniqueness.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			$journal = Request::getJournal();
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			if($articleDao->doiSuffixExists($doiSuffix, $this->article->getId(), $journal->getId())) {
+				$this->addError('doiSuffix', Locale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
 
@@ -406,6 +421,13 @@ class MetadataForm extends Form {
 		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$authorDao->deleteAuthorById($deletedAuthors[$i], $article->getId());
+		}
+
+		// Update DOI if unique.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			$article->setData('doiSuffix', $doiSuffix);
 		}
 
 		parent::execute();

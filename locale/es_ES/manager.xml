@@ -665,7 +665,7 @@
 	<message key="manager.subscriptions.form.userProfileInstructions">Nota: Todos los cambios de abajo son para el perfil del usuario en todo el sistema.</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá en la sección "Sobre nosotros"  de la revista y puede ser usado para describir cambios en cargos, consejo editorial, y otros temas de relevancia para la historia de la revista.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Por ejemplo, vol%viss%ipp%p podría crear un DOI del tipo 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Use "Identificador Personalizado" para ítems publicados como de sufijo DOI (tiene que estar habilitado en el Paso 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Use "Identificador Personalizado" para ítems publicados como de sufijo DOI (tiene que estar habilitado en el Paso 4).</message>
 	<message key="manager.setup.sponsorNoteDescription">Este texto aparecerá bajo la cabecera "Patrocinadores" y sobre la lista de los nombres y URLs de los patrocinadores bajo "Patrocinio de la Revista" en la página "Sobre Nostros".</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Las notificaciones automatizadas por email (disponibles para edición por los Gestores de la Revista en Emails Preparados de OJS) pueden ser enviadas al Gestor de Suscripciones tras completar los pagos online de suscripción.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notificar al Gestor de Suscripciones por email sobre la compra online de una suscripción individual.</message>

@@ -625,7 +625,7 @@
 	<message key="manager.setup.doiSuffixPattern">Χρησιμοποιήστε το παρακάτω υπόδειγμα για να αναπαράγεται προθέματα DOI.  Χρησιμοποιήστε %j για αρχικά περιοδικών, %v για αριθμούς τόμων, %i για αριθμούς τευχών, %a για τους κωδικούς άρθρων σύμφωνα με το OJS, και %p για τους αριθμούς σελίδων.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Για παράδειγμα, το vol%viss%ipp%p θα δημιουργήσει ένα DOI όπως το 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Το πρόθημα DOI μπορεί να πάρει οποιαδήποτε φόρμα, αλλά θα πρέπει να είναι μοναδικό για κάθε δημοσιευμένο τεκμήριο.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Χρησιμοποιήστε το "Προσαρμοσμένο Αναγνωριστικό" για δημοσιευμένα τεκμήρια (πρέπει να ενεργοποιηθεί στο Βήμα 4.)</message>
+	<message key="manager.setup.doiSuffixPublisherId">Χρησιμοποιήστε το "Προσαρμοσμένο Αναγνωριστικό" για δημοσιευμένα τεκμήρια (πρέπει να ενεργοποιηθεί στο Βήμα 4.)</message>
 	<message key="manager.setup.form.doiPrefixPattern">Το υπόδειγμα DOI πρέπει να είναι της μορφής 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Favicon περιοδικού</message>
 	<message key="manager.setup.journalFaviconDescription">Εισάγετε ένα favicon για το περιοδικό που θα εμφανίζεται στη μπάρα πλοήγηση όταν οι χρήστες επισκέπτονται τον ιστότοπο του περιοδικού σας.</message>

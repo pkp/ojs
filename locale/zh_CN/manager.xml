@@ -241,7 +241,7 @@
 	<message key="manager.setup.doiSuffixPattern">使用如下公用DOI后缀模板： %j 表示期刊缩写, %v 表示期刊卷, %i 表示期刊期, %a 表示OJS的文章ID, %p 表示文章页码.</message>
 	<message key="manager.setup.doiSuffixPattern.example">例如, vol%viss%ipp%p 可以创建DOI表示为10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">DOI后缀可以使用任何格式，但是对于每个出版物他必须是唯一的。</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">为出版项目使用“定制标识”作为DOI后缀（需要在第四步激活）。</message>
+	<message key="manager.setup.doiSuffixPublisherId">为出版项目使用“定制标识”作为DOI后缀（需要在第四步激活）。</message>
 	<message key="manager.setup.editorDecision">编辑决策</message>
 	<message key="manager.setup.editorialMembers">前往「委员会成员」并新增「编辑委员会」以及/或者「审稿委员会」成员。在期刊运作的任何阶段都可以做到这件事情。</message>
 	<message key="manager.setup.editorialProcess1">一个或多个编辑处理这些基本步骤，但并没有特别分配预定的角色。</message>

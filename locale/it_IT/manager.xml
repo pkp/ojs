@@ -663,7 +663,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptions.institutionName">Nome dell'ente</message>
 	<message key="manager.setup.doiSuffixPattern.example">Per esempio,  vol%viss%ipp%p crea un DOI analogo a 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription"><![CDATA[Un suffisso DOI pu&#242; assumere qualsiasi forma, ma deve essere univoco nel sistema.]]></message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Usa gli "Identificatori personalizzati" per oggetti pubblicati come suffissi DOI (deve essere abilitato al punto 4 del Setup).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Usa gli "Identificatori personalizzati" per oggetti pubblicati come suffissi DOI (deve essere abilitato al punto 4 del Setup).</message>
 	<message key="manager.setup.journalFaviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
 	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>

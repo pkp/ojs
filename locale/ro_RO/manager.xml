@@ -242,7 +242,7 @@
 	<message key="manager.setup.doiSuffixPattern">Folosește formatul introdus mai pentru a genera sufixe DOI. Folosește %j pentru inițialele revistei, %v pentru numărul de volum, %i pentru numărul de revistă, %a pentru identificatorul de articol al articolului prezent în sistemul OJS și %p pentru numărul paginii.</message>
 	<message key="manager.setup.doiSuffixPattern.example">De exemplu: vol%viss%ipp%p poate genera un DOI astfel: 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Un sufix DOI poate avea orice formă, dar trebuie să fie unic pentru fiecare articol publicat.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Folosește „identificator particularizat” pentru articolele publicate ca fiind un sufix DOI (acesta trebuie activat la Pasul 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Folosește „identificator particularizat” pentru articolele publicate ca fiind un sufix DOI (acesta trebuie activat la Pasul 4).</message>
 	<message key="manager.setup.editorDecision">Decizia redactorului</message>
 	<message key="manager.setup.editorialMembers">Mergi la membrii colectivului şi mai adaugă dintre aceștia la colectivul redacţional şi/sau la cel de evaluare. Acest lucru poate fi făcut în orice moment al activităţii revistei.</message>
 	<message key="manager.setup.editorialProcess1">Unu sau mai mulţi redactori gestionează paşii de bază fără a avea roluri desemnate.</message>

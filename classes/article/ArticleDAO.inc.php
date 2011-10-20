@@ -55,6 +55,18 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
+	 * Get a list of additional fields that do not have
+	 * dedicated accessors.
+	 * @return array
+	 */
+	function getAdditionalFieldNames() {
+		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'doiSuffix';
+		return $additionalFields;
+	}
+
+	/**
 	 * Update the settings for this object
 	 * @param $article object
 	 */
@@ -519,6 +531,30 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
+	 * Checks if the given DOI suffix exists.
+	 * FIXME: Move this to DOI PID plug-in.
+	 * @param $doiSuffix string
+	 * @param $articleId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function doiSuffixExists($doiSuffix, $articleId, $journalId) {
+		$result =& $this->retrieve(
+			'SELECT COUNT(*)
+			FROM articles a
+			INNER JOIN article_settings ast ON a.article_id = ast.article_id
+			WHERE ast.setting_name = ? AND ast.setting_value = ? AND a.article_id <> ? AND a.journal_id = ?',
+			array('doiSuffix', $doiSuffix, (int) $articleId, (int) $journalId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Change the status of the article
 	 * @param $articleId int
 	 * @param $status int
@@ -544,23 +580,16 @@ class ArticleDAO extends DAO {
 		$this->flushCache();
 	}
 
-	function assignDOIs($forceReassign = false, $journalId = null) {
-		if ($forceReassign) {
-			$this->update(
-				'UPDATE articles SET doi = null' . ($journalId !== null?' WHERE journal_id = ?':''),
-				$journalId !== null?array((int) $journalId):false
-			);
-			$this->flushCache();
-		}
-
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$articles =& $publishedArticleDao->getPublishedArticlesByJournalId($journalId);
-		while ($article =& $articles->next()) {
-			// Cause a DOI to be fetched and stored.
-			$article->getDOI();
-			unset($article);
-		}
-
+	/**
+	 * Remove all DOIs from the given journal.
+	 * @param $journalId int
+	 */
+	function deleteDOIs($journalId) {
+		// Delete the generated DOI.
+		$this->update(
+			'UPDATE articles SET doi = null' . ($journalId !== null?' WHERE journal_id = ?':''),
+			$journalId !== null?array((int) $journalId):false
+		);
 		$this->flushCache();
 	}
 

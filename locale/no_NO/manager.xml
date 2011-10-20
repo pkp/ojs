@@ -644,7 +644,7 @@
 	<message key="manager.setup.history">Tidsskriftets historie</message>
 	<message key="manager.setup.doiSuffixPattern.example">For eksempel vil vol%viss%ipp%p kunne skape en slik DOI: 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Et DOI-suffiks kan ha mange former, men må være unikt for hver enkelt publisert element.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Bruk «Individuell identifikator» for publiserte elementer som DOI-suffiks (må slås på i steg 4)</message>
+	<message key="manager.setup.doiSuffixPublisherId">Bruk «Individuell identifikator» for publiserte elementer som DOI-suffiks (må slås på i steg 4)</message>
 	<message key="manager.setup.form.doiPrefixPattern">DOI-mønsteret må være på formen 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Tidsskriftets favicon</message>
 	<message key="manager.setup.journalFaviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>

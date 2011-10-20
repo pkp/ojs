@@ -631,7 +631,7 @@
 	<message key="manager.setup.doiSuffixPattern">ازالگوی زیر برای تولید پسوند دی او آی استفاده کن. %j یعنی اختصار مجله، %v یعنی شماره دوره، %i یعنی شماره مجله، %a یعنی آی دی مقاله او ج اس و %p یعنی شماره صفحه</message>
 	<message key="manager.setup.doiSuffixPattern.example">به انوان مثال vol%viss%ipp%p یک دی او آی مانند 10.1234/vol3iss2pp230 ممکن است تولید کند.</message>
 	<message key="manager.setup.doiSuffixDescription">پسوند دی او آی به هر شکلی میتواند درآید، ولی میبایست برای هر آیتم منتشر شده منحصر به فرد باشد.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">بکاربردن پسوند دی او آی به عنوان شناسه دلخواه. ابتدا باید در مرحله ۴ فعال شده باشد.</message>
+	<message key="manager.setup.doiSuffixPublisherId">بکاربردن پسوند دی او آی به عنوان شناسه دلخواه. ابتدا باید در مرحله ۴ فعال شده باشد.</message>
 	<message key="manager.setup.form.doiPrefixPattern">الکوی دی او آی میبایست بصورت 10.xxxx باشد.</message>
 	<message key="manager.setup.issnDescription"><![CDATA[شابن یا شماره استاندارد بین المللی نشریه یه عدد هشت رقمی است که مشخصه انتشارات ادواری میباشد . شامل ادواری های الکترونیکی نیز میشود. اداره آن توسط شبکه کسترده ای از مراکز ملی است که توسط یک مرکز بین المللی در پاریس هماهنگ میگردند. پشتیبان آن یونسکو و دولت فرانسه است. شابن را میتوان از 
 <a href="http://www.issn.org" target="_new">وب سایت شابن</a>

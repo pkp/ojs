@@ -625,7 +625,7 @@
 	<message key="manager.setup.doiSuffixPattern">Erabili azpian sartutako eredua DOI atzizkiak sortzeko. Erabili %j aldizkariaren inizialetarako, %v bolumenaren zenbakirako, %i gaiaren zenbakirako, %a OJS-ko artikuluaren ID-rako, eta %p orri kopururako.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Adibidez, vol%viss%ipp%p ereduak honelako 10.1234/vol3iss2pp230 DOI-a sor dezake.</message>
 	<message key="manager.setup.doiSuffixDescription">DOI atzizkiak zeinahi forma har dezake, baina bakarra izan behar da argitaratutako elementu bakoitzeko.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Erabili “Identifikatzaile pertsonalizatua” argitaratutako elementuentzat, hala nola DOI atzizkia (4. urratsean gaitu behar da).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Erabili “Identifikatzaile pertsonalizatua” argitaratutako elementuentzat, hala nola DOI atzizkia (4. urratsean gaitu behar da).</message>
 	<message key="manager.setup.doiReassign">Berriz izendatu DOI-ak</message>
 	<message key="manager.setup.doiReassign.description">Zure DOI konfigurazioa aldatuz gero, dagoeneko izendatuta dauden DOIei ez die eragingo. DOI konfigurazioa gorde ondoren, botoi hau erabili extistitzen diren DOI guztiak ezabatzeko; hartara, ezarpen berriek existitzen diren artikuluei eragingo diete.</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Ebaluatzaileak (aurkezpenak ebaluatzeko moduan daudenak)</message>

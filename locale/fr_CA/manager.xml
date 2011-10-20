@@ -623,7 +623,7 @@
 	<message key="manager.setup.doiSuffixPattern">Utiliser la forme inscrite ci-dessous pour générer les suffixes DOI. Utiliser %j pour les initiales de la revue, %v pour le numéro du volume, %i pour le numéro de la publication, %a pour l'ID de l'article dans OJS, et %p pour le numéro de page.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p pourrait générer un DOI tel que 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique pour chaque article publié.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Utiliser l'« Identifiant personnalisé » comme suffixe DOI pour les articles publiés (doit être activé à l'Étape 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Utiliser l'« Identifiant personnalisé » comme suffixe DOI pour les articles publiés (doit être activé à l'Étape 4).</message>
 	<message key="manager.setup.form.doiPrefixPattern">Le DOI doit avoir le format 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Icône (favicon) de la revue</message>
 	<message key="manager.setup.journalFaviconDescription">Ajouter un icône (favicon) pour cette revue pour fins d'affichage à côté de la barre de navigation quand les utilisateurs visitent votre site.</message>

@@ -246,6 +246,7 @@
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
 	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if available).</message>
+	<message key="manager.setup.doi">DOI</message>
 	<message key="manager.setup.doiPrefix">DOI Prefix</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org" target="_new">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
 	<message key="manager.setup.doiSuffix">DOI Suffix</message>
@@ -253,7 +254,9 @@
 	<message key="manager.setup.doiSuffixPattern">Use the pattern entered below to generate DOI suffixes.  Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, and %p for the page number.</message>
 	<message key="manager.setup.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">A DOI suffix can take any form, but must be unique for each published item.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Use the "Custom Identifier" for published items as the DOI suffix (must be enabled in Step 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Use the "Custom Identifier" for published items as the DOI suffix (must be enabled in Step 4). This is the same identifier that will be used for public URLs.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifier">Enter an individual DOI suffix for each published item independent from the URL. You'll find a DOI input field on each item's meta-data page.</message>
+	<message key="manager.setup.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
 	<message key="manager.setup.doiReassign">Reassign DOIs</message>
 	<message key="manager.setup.doiReassign.description">If you change your DOI configuration, DOIs that have already been assigned will not be affected. Once the DOI configuration is saved, use this button to clear all existing DOIs so that the new settings will take effect with existing articles.</message>
 	<message key="manager.setup.editorDecision">Editor Decision</message>

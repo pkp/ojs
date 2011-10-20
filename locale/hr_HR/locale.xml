@@ -1142,7 +1142,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="manager.setup.doiSuffixPattern">Shemu generiranja DOI sufiksa možete izmijeniti pomoću ovog retka. Koristite oznaku %j za inicijale časopisa, %v za godište, %i za broj u godištu, %a za identifikacijski broj članka i %p za broj stranice.</message>
 	<message key="manager.setup.doiSuffixPattern.example">Na primjer, shema vol%viss%ipp%p bi generirala DOI nalik ovome: 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">DOI sufiks može imati bilo kakav oblik, ali mora biti jedinstven za svaki objavljeni prilog.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Generiraj DOI sufiks za priloge koristeći jedinstveni identifikator pojedinačno unesen za svaku česticu (mora biti omogućeno u koraku 4).</message>
+	<message key="manager.setup.doiSuffixPublisherId">Generiraj DOI sufiks za priloge koristeći jedinstveni identifikator pojedinačno unesen za svaku česticu (mora biti omogućeno u koraku 4).</message>
 	<message key="manager.setup.publisherNoteDescription">Ovaj će se tekst prikazati ispod naslova "nakladnik" a iznad nakladnikova imena i/ili mrežne adrese.</message>
 	<message key="manager.setup.sponsorNoteDescription">Ovaj će se tekst prikazati ispod naslova "izdavač" a iznad imena i/ili mrežne adrese izdavača.</message>
 	<message key="manager.setup.contributorNoteDescription">Ovaj će se tekst prikazati ispod naslova "časopis podupiru" a iznad imena i/ili mrežnih adresa institucija koje podupiru izlaženje časopisa.</message>
