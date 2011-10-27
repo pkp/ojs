@@ -25,8 +25,8 @@ class ArticleReportDAO extends DAO {
 	 * @return array
 	 */
 	function getArticleReport($journalId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 
 		$result =& $this->retrieve(
 			'SELECT	a.article_id AS article_id,

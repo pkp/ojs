@@ -50,11 +50,11 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.phpmv.displayName');
+		return __('plugins.generic.phpmv.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.phpmv.description');
+		return __('plugins.generic.phpmv.description');
 	}
 
 	/**
@@ -108,7 +108,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', Locale::translate('plugins.generic.phpmv.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.phpmv.manager.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -156,7 +156,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& Request::getJournal();
 
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$this->import('PhpMyVisitesSettingsForm');
 				$form = new PhpMyVisitesSettingsForm($this, $journal->getId());
 				if (Request::getUserVar('save')) {

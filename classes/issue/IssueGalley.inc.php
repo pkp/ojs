@@ -66,8 +66,8 @@ class IssueGalley extends IssueFile {
 	 */
 	function getGalleyLabel() {
 		$label = $this->getLabel();
-		if ($this->getLocale() != Locale::getLocale()) {
-			$locales = Locale::getAllLocales();
+		if ($this->getLocale() != AppLocale::getLocale()) {
+			$locales = AppLocale::getAllLocales();
 			$label .= ' (' . $locales[$this->getLocale()] . ')';
 		}
 		return $label;

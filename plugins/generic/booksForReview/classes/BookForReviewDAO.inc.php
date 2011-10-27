@@ -311,7 +311,7 @@ class BookForReviewDAO extends DAO {
 			// Delete cover image files (for all locales) from the filesystem
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$locales = Locale::getSupportedLocales();
+			$locales = AppLocale::getSupportedLocales();
 			foreach ($locales as $locale) {	
 				$publicFileManager->removeJournalFile($book->getJournalId(), $book->getFileName($locale));
 			}

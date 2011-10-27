@@ -71,8 +71,8 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle objects array
 	 */
 	function &getPublishedArticles($issueId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$publishedArticles = array();
 
 		$params = array(
@@ -141,8 +141,8 @@ class PublishedArticleDAO extends DAO {
 	 * @return object
 	 */
 	function &getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			'title',
 			$primaryLocale,
@@ -187,8 +187,8 @@ class PublishedArticleDAO extends DAO {
 	 * @return object
 	 */
 	function &getPublishedArticlesByDOI($doi, $journalId = null, $rangeInfo = null) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			'title',
 			$primaryLocale,
@@ -240,9 +240,9 @@ class PublishedArticleDAO extends DAO {
 			return $returner;
 		}
 
-		$primaryLocale = Locale::getPrimaryLocale();
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$publishedArticles = array();
 
 		$result =& $this->retrieve(
@@ -317,8 +317,8 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle objects array
 	 */
 	function &getPublishedArticlesBySectionId($sectionId, $issueId, $simple = false) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
@@ -412,8 +412,8 @@ class PublishedArticleDAO extends DAO {
 			return $returner;
 		}
 
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			'title',
 			$primaryLocale,
@@ -471,8 +471,8 @@ class PublishedArticleDAO extends DAO {
 			return $returner;
 		}
 
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 
 		$params = array(
 			'title',
@@ -541,7 +541,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$params = array(
-			'cleanTitle', Locale::getLocale(),
+			'cleanTitle', AppLocale::getLocale(),
 			'cleanTitle'
 		);
 		if (isset($journalId)) $params[] = $journalId;
@@ -824,8 +824,8 @@ class PublishedArticleDAO extends DAO {
 	 * @return $authors array Author Objects
 	 */
 	function getPublishedArticleAuthors($issueId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 
 		$authors = array();
 		$result =& $this->retrieve(

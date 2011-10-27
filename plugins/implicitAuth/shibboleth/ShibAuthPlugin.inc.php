@@ -24,11 +24,11 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.implicitAuth.shibboleth.displayName');
+		return __('plugins.implicitAuth.shibboleth.displayName');
 	}	
 	
 	function getDescription() {
-		return Locale::translate('plugins.implicitAuth.shibboleth.description');
+		return __('plugins.implicitAuth.shibboleth.description');
 	}
 	
 	

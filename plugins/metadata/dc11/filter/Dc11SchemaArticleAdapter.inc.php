@@ -62,7 +62,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	function &extractMetadataFromDataObject(&$article) {
 		assert(is_a($article, 'Article'));
 
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 
 		// Retrieve data that belongs to the article.
 		// FIXME: Retrieve this data from the respective entity DAOs rather than
@@ -130,7 +130,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Type
 		$types = $section->getIdentifyType(null);
 		$types = array_merge_recursive(
-			empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
+			empty($types)?array(AppLocale::getLocale() => __('rt.metadata.pkp.peerReviewed')):$types,
 			(array) $article->getType(null)
 		);
 		$this->_addLocalizedElements($dc11Description, 'dc:type', $types);
@@ -177,7 +177,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				$galleyLocale = $galley->getLocale();
 				if(!in_array($galleyLocale, $locales)) {
 					$locales[] = $galleyLocale;
-					$dc11Description->addStatement('dc:language', Locale::getIso3FromLocale($galleyLocale));
+					$dc11Description->addStatement('dc:language', AppLocale::getIso3FromLocale($galleyLocale));
 				}
 			}
 		} 

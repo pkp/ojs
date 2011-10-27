@@ -33,7 +33,7 @@ class SwordPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.sword.displayName');
+		return __('plugins.generic.sword.displayName');
 	}
 
 	/**
@@ -41,7 +41,7 @@ class SwordPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.sword.description');
+		return __('plugins.generic.sword.description');
 	}
 
 	function register($category, $path) {
@@ -220,16 +220,16 @@ class SwordPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
-				Locale::translate('manager.plugins.disable')
+				__('manager.plugins.disable')
 			);
 			$verbs[] = array(
 				'settings',
-				Locale::translate('plugins.generic.sword.settings')
+				__('plugins.generic.sword.settings')
 			);
 		} else {
 			$verbs[] = array(
 				'enable',
-				Locale::translate('manager.plugins.enable')
+				__('manager.plugins.enable')
 			);
 		}
 		return $verbs;
@@ -249,7 +249,7 @@ class SwordPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 

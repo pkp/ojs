@@ -41,7 +41,7 @@ class BrowsePlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.browse.displayName');
+		return __('plugins.generic.browse.displayName');
 	}
 
 	/**
@@ -49,7 +49,7 @@ class BrowsePlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.browse.description');
+		return __('plugins.generic.browse.description');
 	}
 	
 	/**
@@ -102,7 +102,7 @@ class BrowsePlugin extends GenericPlugin {
 				if (in_array($op, $editorPages)) {
 					define('HANDLER_CLASS', 'BrowseHandler');
 					define('BROWSE_PLUGIN_NAME', $this->getName());
-					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+					AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BrowseHandler.inc.php';
 				}
@@ -140,7 +140,7 @@ class BrowsePlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', Locale::translate('plugins.generic.browse.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.browse.manager.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}

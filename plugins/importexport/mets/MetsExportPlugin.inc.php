@@ -40,11 +40,11 @@ class METSExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.METSExport.displayName');
+		return __('plugins.importexport.METSExport.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.METSExport.description');
+		return __('plugins.importexport.METSExport.description');
 	}
 
 	function display(&$args, $request) {
@@ -74,7 +74,7 @@ class METSExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 

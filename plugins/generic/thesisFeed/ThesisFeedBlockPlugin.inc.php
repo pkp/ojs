@@ -50,14 +50,14 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.thesisfeed.displayName');
+		return __('plugins.generic.thesisfeed.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.thesisfeed.description');
+		return __('plugins.generic.thesisfeed.description');
 	}
 
 	/**

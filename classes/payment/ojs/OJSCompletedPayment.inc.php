@@ -106,53 +106,53 @@ class OJSCompletedPayment extends Payment {
 					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
 				}
-				if (!$subscription) return Locale::translate('payment.type.subscription');
+				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
-				return Locale::translate('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
 			case PAYMENT_TYPE_DONATION:
 				if ($journal->getLocalizedSetting('donationFeeName') != '') {
 					return $journal->getLocalizedSetting('donationFeeName');
 				} else {
-					return Locale::translate('payment.type.donation');
+					return __('payment.type.donation');
 				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ($journal->getLocalizedSetting('membershipFeeName') != '') {
 					return $journal->getLocalizedSetting('membershipFeeName');
 				} else {
-					return Locale::translate('payment.type.membership');
+					return __('payment.type.membership');
 				}
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				if ($journal->getLocalizedSetting('purchaseArticleFeeName') != '') {
 					return $journal->getLocalizedSetting('purchaseArticleFeeName');
 				} else {
-					return Locale::translate('payment.type.purchaseArticle');
+					return __('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				if ($journal->getLocalizedSetting('purchaseIssueFeeName') != '') {
 					return $journal->getLocalizedSetting('purchaseIssueFeeName');
 				} else {
-					return Locale::translate('payment.type.purchaseIssue');
+					return __('payment.type.purchaseIssue');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ($journal->getLocalizedSetting('submissionFeeName') != '') {
 					return $journal->getLocalizedSetting('submissionFeeName');
 				} else {
-					return Locale::translate('payment.type.submission');
+					return __('payment.type.submission');
 				}
 			case PAYMENT_TYPE_FASTTRACK:
 				if ($journal->getLocalizedSetting('fastTrackFeeName') != '') {
 					return $journal->getLocalizedSetting('fastTrackFeeName');
 				} else {
-					return Locale::translate('payment.type.fastTrack');
+					return __('payment.type.fastTrack');
 				}
 			case PAYMENT_TYPE_PUBLICATION:
 				if ($journal->getLocalizedSetting('publicationFeeName') != '') {
 					return $journal->getLocalizedSetting('publicationFeeName');
 				} else {
-					return Locale::translate('payment.type.publication');
+					return __('payment.type.publication');
 				}
 			case PAYMENT_TYPE_GIFT:
 				$giftDao =& DAORegistry::getDAO('GiftDAO');
@@ -164,7 +164,7 @@ class OJSCompletedPayment extends Payment {
 				}
 
 				// Otherwise, generic gift name
-				return Locale::translate('payment.type.gift');
+				return __('payment.type.gift');
 		}
 	}
 
@@ -189,7 +189,7 @@ class OJSCompletedPayment extends Payment {
 					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
 				}
-				if (!$subscription) return Locale::translate('payment.type.subscription');
+				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -198,43 +198,43 @@ class OJSCompletedPayment extends Payment {
 				if ($journal->getLocalizedSetting('donationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('donationFeeDescription');
 				} else {
-					return Locale::translate('payment.type.donation');
+					return __('payment.type.donation');
 				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ($journal->getLocalizedSetting('membershipFeeDescription') != '') {
 					return $journal->getLocalizedSetting('membershipFeeDescription');
 				} else {
-					return Locale::translate('payment.type.membership');
+					return __('payment.type.membership');
 				}
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				if ($journal->getLocalizedSetting('purchaseArticleFeeDescription') != '') {
 					return $journal->getLocalizedSetting('purchaseArticleFeeDescription');
 				} else {
-					return Locale::translate('payment.type.purchaseArticle');
+					return __('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				if ($journal->getLocalizedSetting('purchaseIssueFeeDescription') != '') {
 					return $journal->getLocalizedSetting('purchaseIssueFeeDescription');
 				} else {
-					return Locale::translate('payment.type.purchaseIssue');
+					return __('payment.type.purchaseIssue');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ($journal->getLocalizedSetting('submissionFeeDescription') != '') {
 					return $journal->getLocalizedSetting('submissionFeeDescription');
 				} else {
-					return Locale::translate('payment.type.submission');
+					return __('payment.type.submission');
 				}
 			case PAYMENT_TYPE_FASTTRACK:
 				if ($journal->getLocalizedSetting('fastTrackFeeDescription') != '') {
 					return $journal->getLocalizedSetting('fastTrackFeeDescription');
 				} else {
-					return Locale::translate('payment.type.fastTrack');
+					return __('payment.type.fastTrack');
 				}
 			case PAYMENT_TYPE_PUBLICATION:
 				if ($journal->getLocalizedSetting('publicationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('publicationFeeDescription');
 				} else {
-					return Locale::translate('payment.type.publication');
+					return __('payment.type.publication');
 				}
 			case PAYMENT_TYPE_GIFT:
 				$giftDao =& DAORegistry::getDAO('GiftDAO');
@@ -251,13 +251,13 @@ class OJSCompletedPayment extends Payment {
 						if ($subscriptionType) {
 							return $subscriptionType->getSubscriptionTypeDescription();	
 						} else {
-							return Locale::translate('payment.type.gift') . ' ' . Locale::translate('payment.type.gift.subscription');								
+							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');								
 						}
 					}
 				}
 
 				// Otherwise, generic gift name
-				return Locale::translate('payment.type.gift');
+				return __('payment.type.gift');
 		}
 	}
 
@@ -341,7 +341,7 @@ class OJSCompletedPayment extends Payment {
 					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
 				}
-				if (!$subscription) return Locale::translate('manager.payment.notFound');
+				if (!$subscription) return __('manager.payment.notFound');
 
 				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -357,13 +357,13 @@ class OJSCompletedPayment extends Payment {
 				// all the article-related payments should output the article title
 				$articleDao =& DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDao->getArticle($this->assocId, $this->journalId);
-				if (!$article) return Locale::translate('manager.payment.notFound');
+				if (!$article) return __('manager.payment.notFound');
 				return $article->getLocalizedTitle();
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				// Purchase issue payment should output the issue title
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issue =& $issueDao->getIssueById($this->assocId, $this->journalId);
-				if (!$issue) return Locale::translate('manager.payment.notFound');
+				if (!$issue) return __('manager.payment.notFound');
 				return $issue->getIssueIdentification(false, true);
 			case PAYMENT_TYPE_GIFT:
 				$giftDao =& DAORegistry::getDAO('GiftDAO');
@@ -371,7 +371,7 @@ class OJSCompletedPayment extends Payment {
 
 				// Try to get buyer and recipient details
 				if ($gift) {
-					return Locale::translate('gifts.buyer') . ': ' . $gift->getBuyerFullName() . ' (' . $gift->getBuyerEmail() . ') ' . Locale::translate('gifts.recipient') . ': ' . $gift->getRecipientFullName() . ' (' . $gift->getRecipientEmail() . ')';
+					return __('gifts.buyer') . ': ' . $gift->getBuyerFullName() . ' (' . $gift->getBuyerEmail() . ') ' . __('gifts.recipient') . ': ' . $gift->getRecipientFullName() . ' (' . $gift->getRecipientEmail() . ')';
 				} else {
 					return false;
 				}

@@ -58,8 +58,8 @@ class IssueHandler extends Handler {
 		if ($issue != null) {
 			$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
 		} else {
-			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
-			$issueHeadingTitle = Locale::translate('current.noCurrentIssue');
+			$issueCrumbTitle = __('current.noCurrentIssue');
+			$issueHeadingTitle = __('current.noCurrentIssue');
 		}
 
 		// Display creative commons logo/licence if enabled
@@ -114,7 +114,7 @@ class IssueHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);
-		$templateMgr->assign('locale', Locale::getLocale());
+		$templateMgr->assign('locale', AppLocale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
@@ -155,8 +155,8 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'view', $issueId), $issue->getIssueIdentification(false, true), true)));
-		$templateMgr->assign('issueHeadingTitle', Locale::translate('issue.viewIssue'));
-		$templateMgr->assign('locale', Locale::getLocale());
+		$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
+		$templateMgr->assign('locale', AppLocale::getLocale());
 
 		$templateMgr->display('issue/issueGalley.tpl');
 	}
@@ -366,7 +366,7 @@ class IssueHandler extends Handler {
 
 	function setupTemplate() {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR));
 	}
 
 	/**
@@ -412,7 +412,7 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
-			$locale = Locale::getLocale();
+			$locale = AppLocale::getLocale();
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
@@ -490,8 +490,8 @@ class IssueHandler extends Handler {
 			}
 
 		} else {
-			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
-			$issueHeadingTitle = Locale::translate('archive.issueUnavailable');
+			$issueCrumbTitle = __('archive.issueUnavailable');
+			$issueHeadingTitle = __('archive.issueUnavailable');
 		}
 
 		if ($styleFileName = $issue->getStyleFileName()) {

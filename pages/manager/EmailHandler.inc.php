@@ -35,7 +35,7 @@ class EmailHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates =& $emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getId());
+		$emailTemplates =& $emailTemplateDao->getEmailTemplates(AppLocale::getLocale(), $journal->getId());
 
 		import('lib.pkp.classes.core.ArrayItemIterator');
 		$emailTemplates =& ArrayItemIterator::fromRangeInfo($emailTemplates, $rangeInfo);

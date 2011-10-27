@@ -168,7 +168,7 @@ class ReviewerAction extends Action {
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $reviewer->getFullName(),
 						'articleTitle' => strip_tags($reviewerSubmission->getLocalizedTitle()),
-						'recommendation' => Locale::translate($reviewerRecommendationOptions[$recommendation])
+						'recommendation' => __($reviewerRecommendationOptions[$recommendation])
 					));
 				}
 

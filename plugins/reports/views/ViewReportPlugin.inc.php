@@ -40,11 +40,11 @@ class ViewReportPlugin extends ReportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.reports.views.displayName');
+		return __('plugins.reports.views.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.reports.views.description');
+		return __('plugins.reports.views.description');
 	}
 
 	function display(&$args) {

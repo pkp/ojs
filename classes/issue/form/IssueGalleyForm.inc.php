@@ -150,7 +150,7 @@ class IssueGalleyForm extends Form {
 		$publicGalleyId = $this->getData('publicGalleyId');
 
 		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->getGalleyId(), $this->getIssueId())) {
-			$this->addError('publicGalleyId', Locale::translate('editor.issues.galleyPublicIdentificationExists'));
+			$this->addError('publicGalleyId', __('editor.issues.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
 
@@ -254,7 +254,7 @@ class IssueGalleyForm extends Form {
 				}
 
 				if ($galley->getLabel() == null) {
-					$galley->setLabel(Locale::translate('common.untitled'));
+					$galley->setLabel(__('common.untitled'));
 				}
 
 			} else {

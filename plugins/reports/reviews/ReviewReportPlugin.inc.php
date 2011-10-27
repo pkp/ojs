@@ -45,11 +45,11 @@ class ReviewReportPlugin extends ReportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.reports.reviews.displayName');
+		return __('plugins.reports.reviews.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.reports.reviews.description');
+		return __('plugins.reports.reviews.description');
 	}
 
 	function display(&$args) {
@@ -57,7 +57,7 @@ class ReviewReportPlugin extends ReportPlugin {
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		$reviewReportDao =& DAORegistry::getDAO('ReviewReportDAO');
 		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getId());
@@ -71,29 +71,29 @@ class ReviewReportPlugin extends ReportPlugin {
 			}
 		}
 
-		$yesnoMessages = array( 0 => Locale::translate('common.no'), 1 => Locale::translate('common.yes'));
+		$yesnoMessages = array( 0 => __('common.no'), 1 => __('common.yes'));
 
 		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$recommendations = ReviewAssignment::getReviewerRecommendationOptions();
 
 		$columns = array(
-			'round' => Locale::translate('plugins.reports.reviews.round'),
-			'article' => Locale::translate('article.articles'),
-			'articleid' => Locale::translate('article.submissionId'),
-			'reviewerid' => Locale::translate('plugins.reports.reviews.reviewerId'),
-			'reviewer' => Locale::translate('plugins.reports.reviews.reviewer'),
-			'firstname' => Locale::translate('user.firstName'),
-			'middlename' => Locale::translate('user.middleName'),
-			'lastname' => Locale::translate('user.lastName'),
-			'dateassigned' => Locale::translate('plugins.reports.reviews.dateAssigned'),
-			'datenotified' => Locale::translate('plugins.reports.reviews.dateNotified'),
-			'dateconfirmed' => Locale::translate('plugins.reports.reviews.dateConfirmed'),
-			'datecompleted' => Locale::translate('plugins.reports.reviews.dateCompleted'),
-			'datereminded' => Locale::translate('plugins.reports.reviews.dateReminded'),
-			'declined' => Locale::translate('submissions.declined'),
-			'cancelled' => Locale::translate('common.cancelled'),
-			'recommendation' => Locale::translate('reviewer.article.recommendation'),
-			'comments' => Locale::translate('comments.commentsOnArticle')
+			'round' => __('plugins.reports.reviews.round'),
+			'article' => __('article.articles'),
+			'articleid' => __('article.submissionId'),
+			'reviewerid' => __('plugins.reports.reviews.reviewerId'),
+			'reviewer' => __('plugins.reports.reviews.reviewer'),
+			'firstname' => __('user.firstName'),
+			'middlename' => __('user.middleName'),
+			'lastname' => __('user.lastName'),
+			'dateassigned' => __('plugins.reports.reviews.dateAssigned'),
+			'datenotified' => __('plugins.reports.reviews.dateNotified'),
+			'dateconfirmed' => __('plugins.reports.reviews.dateConfirmed'),
+			'datecompleted' => __('plugins.reports.reviews.dateCompleted'),
+			'datereminded' => __('plugins.reports.reviews.dateReminded'),
+			'declined' => __('submissions.declined'),
+			'cancelled' => __('common.cancelled'),
+			'recommendation' => __('reviewer.article.recommendation'),
+			'comments' => __('comments.commentsOnArticle')
 		);
 		$yesNoArray = array('declined', 'cancelled');
 
@@ -105,7 +105,7 @@ class ReviewReportPlugin extends ReportPlugin {
 				if (in_array($index, $yesNoArray)) {
 					$columns[$index] = $yesnoMessages[$row[$index]];
 				} elseif ($index == "recommendation") {
-					$columns[$index] = (!isset($row[$index])) ? Locale::translate('common.none') : Locale::translate($recommendations[$row[$index]]);
+					$columns[$index] = (!isset($row[$index])) ? __('common.none') : __($recommendations[$row[$index]]);
 				} elseif ($index == "comments") {
 					if (isset($comments[$row['articleid']][$row['reviewerid']])) {
 						$columns[$index] = $comments[$row['articleid']][$row['reviewerid']];

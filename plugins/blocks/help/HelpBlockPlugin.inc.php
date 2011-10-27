@@ -67,14 +67,14 @@ class HelpBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.block.help.displayName');
+		return __('plugins.block.help.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.block.help.description');
+		return __('plugins.block.help.description');
 	}
 }
 

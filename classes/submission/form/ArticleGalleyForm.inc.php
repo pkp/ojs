@@ -86,7 +86,7 @@ class ArticleGalleyForm extends Form {
 
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId, $this->articleId)) {
-			$this->addError('publicGalleyId', Locale::translate('submission.layout.galleyPublicIdentificationExists'));
+			$this->addError('publicGalleyId', __('submission.layout.galleyPublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
 
@@ -206,9 +206,9 @@ class ArticleGalleyForm extends Form {
 					$galley->setLabel('HTML');
 					if ($enablePublicGalleyId) $galley->setPublicGalleyId('html');
 				} else if ($createRemote) {
-					$galley->setLabel(Locale::translate('common.remote'));
-					$galley->setRemoteURL(Locale::translate('common.remoteURL'));
-					if ($enablePublicGalleyId) $galley->setPublicGalleyId(strtolower(Locale::translate('common.remote')));
+					$galley->setLabel(__('common.remote'));
+					$galley->setRemoteURL(__('common.remoteURL'));
+					if ($enablePublicGalleyId) $galley->setPublicGalleyId(strtolower(__('common.remote')));
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
@@ -223,7 +223,7 @@ class ArticleGalleyForm extends Form {
 				}
 
 				if ($galley->getLabel() == null) {
-					$galley->setLabel(Locale::translate('common.untitled'));
+					$galley->setLabel(__('common.untitled'));
 				}
 
 			} else {
@@ -274,7 +274,7 @@ class ArticleGalleyForm extends Form {
 			$type = $fileManager->getUploadedFileType($fileName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
-				$this->addError('imageFile', Locale::translate('submission.layout.imageInvalid'));
+				$this->addError('imageFile', __('submission.layout.imageInvalid'));
 				return false;
 			}
 

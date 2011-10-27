@@ -43,7 +43,7 @@ class LanguageSettingsForm extends Form {
 		$localeCheck = create_function('$locale,$availableLocales', 'return in_array($locale,$availableLocales);');
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('Locale', 'isLocaleValid'));
+		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('AppLocale', 'isLocaleValid'));
 		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), $localeCheck, array(&$this->availableLocales));
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -103,7 +103,7 @@ class LanguageSettingsForm extends Form {
 		foreach (array('supportedLocales', 'supportedSubmissionLocales', 'supportedFormLocales') as $name) {
 			$$name = array();
 			foreach ($this->getData($name) as $locale) {
-				if (Locale::isLocaleValid($locale) && in_array($locale, $this->availableLocales)) {
+				if (AppLocale::isLocaleValid($locale) && in_array($locale, $this->availableLocales)) {
 					array_push($$name, $locale);
 				}
 			}

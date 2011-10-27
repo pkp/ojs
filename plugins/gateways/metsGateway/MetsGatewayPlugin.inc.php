@@ -42,18 +42,18 @@ class METSGatewayPlugin extends GatewayPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.gateways.metsGateway.displayName');
+		return __('plugins.gateways.metsGateway.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.gateways.metsGateway.description');
+		return __('plugins.gateways.metsGateway.description');
 	}
 
 	function getManagementVerbs() {
 		$verbs = parent::getManagementVerbs();
 		if (!$this->getEnabled()) return $verbs;
 		$verbs[] = array(
-			'settings', Locale::translate('plugins.gateways.metsGateway.settings')
+			'settings', __('plugins.gateways.metsGateway.settings')
 		);
 		return $verbs;
 	}
@@ -131,7 +131,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('message', 'plugins.gateways.metsGateway.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');

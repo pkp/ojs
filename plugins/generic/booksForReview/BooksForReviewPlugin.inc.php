@@ -105,11 +105,11 @@ class BooksForReviewPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.booksForReview.displayName');
+		return __('plugins.generic.booksForReview.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.booksForReview.description');
+		return __('plugins.generic.booksForReview.description');
 	}
 
 	/**
@@ -249,7 +249,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $editorPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewEditorHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_OJS_EDITOR));
+					AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_OJS_EDITOR));
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewEditorHandler.inc.php';
 				}
@@ -274,7 +274,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $authorPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewAuthorHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_OJS_AUTHOR));
+					AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_OJS_AUTHOR));
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewAuthorHandler.inc.php';
 				}
@@ -299,7 +299,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $publicPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+					AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewHandler.inc.php';
 				}
@@ -416,7 +416,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$baseCoverPagePath = Request::getBaseUrl() . '/';
 				$baseCoverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 				$smarty->assign('baseCoverPagePath', $baseCoverPagePath);
-				$smarty->assign('locale', Locale::getLocale());
+				$smarty->assign('locale', AppLocale::getLocale());
 				$smarty->assign('book', $book);
 				$output .= $smarty->fetch($this->getTemplatePath() . 'coverPageAbstract.tpl'); 
 			} else {

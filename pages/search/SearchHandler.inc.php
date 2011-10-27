@@ -56,7 +56,7 @@ class SearchHandler extends Handler {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getJournalTitles(true);
 			$templateMgr->assign('siteSearch', true);
-			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
+			$templateMgr->assign('journalOptions', array('' => AppLocale::Translate('search.allJournals')) + $journals);
 			$journalPath = Request::getRequestedJournalPath();
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);
 		} else {
@@ -153,7 +153,7 @@ class SearchHandler extends Handler {
 
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
-			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->assign_by_ref('authors', $authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}

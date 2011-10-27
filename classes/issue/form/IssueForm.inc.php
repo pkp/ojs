@@ -55,8 +55,8 @@ class IssueForm extends Form {
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
 		$templateMgr->assign('accessOptions', array(
-			ISSUE_ACCESS_OPEN => Locale::Translate('editor.issues.openAccess'),
-			ISSUE_ACCESS_SUBSCRIPTION => Locale::Translate('editor.issues.subscription')
+			ISSUE_ACCESS_OPEN => AppLocale::Translate('editor.issues.openAccess'),
+			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
 		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
@@ -90,7 +90,7 @@ class IssueForm extends Form {
 
 		$publicIssueId = $this->getData('publicIssueId');
 		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getId())) {
-			$this->addError('publicIssueId', Locale::translate('editor.issues.issuePublicIdentificationExists'));
+			$this->addError('publicIssueId', __('editor.issues.issuePublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
 
@@ -100,7 +100,7 @@ class IssueForm extends Form {
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			if (!$publicFileManager->getImageExtension($type)) {
-				$this->addError('coverPage', Locale::translate('editor.issues.invalidCoverPageFormat'));
+				$this->addError('coverPage', __('editor.issues.invalidCoverPageFormat'));
 				$this->addErrorField('coverPage');
 			}
 		}
@@ -108,7 +108,7 @@ class IssueForm extends Form {
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
 			$type = $publicFileManager->getUploadedFileType('styleFile');
 			if ($type != 'text/plain' && $type != 'text/css') {
-				$this->addError('styleFile', Locale::translate('editor.issues.invalidStyleFormat'));
+				$this->addError('styleFile', __('editor.issues.invalidStyleFormat'));
 			}
 		}
 

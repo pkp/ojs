@@ -220,7 +220,7 @@ class CommentHandler extends Handler {
 
 	function setupTemplate($article, $galleyId, $comment = null) {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
 		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
 

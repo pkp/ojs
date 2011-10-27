@@ -44,11 +44,11 @@ class XMLGalleyPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.xmlGalley.displayName');
+		return __('plugins.generic.xmlGalley.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.xmlGalley.description');
+		return __('plugins.generic.xmlGalley.description');
 	}
 
 	/**
@@ -193,7 +193,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', Locale::translate('plugins.generic.xmlGalley.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.xmlGalley.manager.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -239,13 +239,13 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 					// check the result
 					if (trim(preg_replace("/\s+/", " ", $result)) != "Open Journal Systems Success" ) {
-						$form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.externalXSLTFailure'));
+						$form->addError('content', __('plugins.generic.xmlGalley.settings.externalXSLTFailure'));
 					} else $templateMgr->assign('testSuccess', true);
 
 				}
 
 			case 'settings':
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				// if we are updating XSLT settings or switching XSL sheets
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
@@ -286,9 +286,9 @@ class XMLGalleyPlugin extends GenericPlugin {
 							$this->updateSetting($journal->getId(), 'XSLstylesheet', 'custom');
 							$this->updateSetting($journal->getId(), 'customXSL', $fileName);
 
-						} else $form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.customXSLInvalid'));
+						} else $form->addError('content', __('plugins.generic.xmlGalley.settings.customXSLInvalid'));
 
-					} else $form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.customXSLRequired'));
+					} else $form->addError('content', __('plugins.generic.xmlGalley.settings.customXSLRequired'));
 
 					// re-populate the form values with the new settings
 					$form->initData();

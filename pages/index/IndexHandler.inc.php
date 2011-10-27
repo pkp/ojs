@@ -107,7 +107,7 @@ class IndexHandler extends Handler {
 			);
 			$templateMgr->assign_by_ref('journals', $journals);
 
-			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');

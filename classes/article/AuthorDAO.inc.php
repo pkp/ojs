@@ -95,8 +95,8 @@ class AuthorDAO extends PKPAuthorDAO {
 	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$authors = array();
 		$params = array(
-			'affiliation', Locale::getPrimaryLocale(),
-			'affiliation', Locale::getLocale()
+			'affiliation', AppLocale::getPrimaryLocale(),
+			'affiliation', AppLocale::getLocale()
 		);
 
 		if (isset($journalId)) $params[] = $journalId;

@@ -115,7 +115,7 @@ class SharingRT {
 	 */
 	function sharingLocale($default) {
 		// getLocale() returns a string like 'en_US'.
-		$locale = Locale::getLocale();
+		$locale = AppLocale::getLocale();
 		$lang = substr($locale, 0, 2);
 		$languages = SharingRT::getLanguages();
 		if (isset ($languages[$lang])) {

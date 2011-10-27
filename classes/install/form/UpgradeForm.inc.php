@@ -91,7 +91,7 @@ class UpgradeForm extends Form {
 	 */
 	function dbInstallError($errorMsg) {
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => empty($errorMsg) ? Locale::translate('common.error.databaseErrorUnknown') : $errorMsg));
+		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => empty($errorMsg) ? __('common.error.databaseErrorUnknown') : $errorMsg));
 		$this->display();
 	}
 

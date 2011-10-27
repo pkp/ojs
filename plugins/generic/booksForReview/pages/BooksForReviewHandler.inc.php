@@ -59,7 +59,7 @@ class BooksForReviewHandler extends Handler {
 		$coverPagePath = $request->getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 		$templateMgr->assign('coverPagePath', $coverPagePath);
-		$templateMgr->assign('locale', Locale::getLocale());
+		$templateMgr->assign('locale', AppLocale::getLocale());
 
 		$fieldOptions = Array(
 			BFR_FIELD_TITLE => 'plugins.generic.booksForReview.field.title',
@@ -105,7 +105,7 @@ class BooksForReviewHandler extends Handler {
 
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('coverPagePath', $coverPagePath);
-				$templateMgr->assign('locale', Locale::getLocale());
+				$templateMgr->assign('locale', AppLocale::getLocale());
 				$templateMgr->assign_by_ref('bookForReview', $book);
 				$templateMgr->assign('isAuthor', $isAuthor);
 				$templateMgr->display($bfrPlugin->getTemplatePath() . 'bookForReview.tpl');
@@ -142,7 +142,7 @@ class BooksForReviewHandler extends Handler {
 				'pageHierarchy',
 				array(
 					Request::url(null, 'booksForReview'), 
-					Locale::Translate('plugins.generic.booksForReview.displayName'),
+					AppLocale::Translate('plugins.generic.booksForReview.displayName'),
 					true
 				)
 			);

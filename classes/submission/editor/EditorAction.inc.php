@@ -144,7 +144,7 @@ class EditorAction extends SectionEditorAction {
 			}
 			$galley->setArticleId($article->getId());
 			$galley->setFileId($fileId);
-			$galley->setLocale(Locale::getLocale());
+			$galley->setLocale(AppLocale::getLocale());
 
 			if ($galley->isHTMLGalley()) {
 				$galley->setLabel('HTML');
@@ -156,7 +156,7 @@ class EditorAction extends SectionEditorAction {
 				} else if (strstr($fileType, 'xml')) {
 					$galley->setLabel('XML');
 				} else {
-					$galley->setLabel(Locale::translate('common.untitled'));
+					$galley->setLabel(__('common.untitled'));
 				}
 			}
 

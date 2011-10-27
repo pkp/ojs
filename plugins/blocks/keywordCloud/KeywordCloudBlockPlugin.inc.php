@@ -26,14 +26,14 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.block.keywordCloud.displayName');
+		return __('plugins.block.keywordCloud.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.block.keywordCloud.description');
+		return __('plugins.block.keywordCloud.description');
 	}
 
 	function _cacheMiss(&$cache, $id) {
@@ -67,7 +67,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 
 		$cacheManager =& CacheManager::getManager();
-		$cache =& $cacheManager->getFileCache('keywords_' . Locale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
+		$cache =& $cacheManager->getFileCache('keywords_' . AppLocale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
 		// If the cache is older than a couple of days, regenerate it
 		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * KEYWORD_BLOCK_CACHE_DAYS) $cache->flush();
 

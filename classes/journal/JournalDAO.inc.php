@@ -243,9 +243,9 @@ class JournalDAO extends DAO {
 			$params = array_merge(
 				array(
 					'title',
-					Locale::getPrimaryLocale(),
+					AppLocale::getPrimaryLocale(),
 					'title',
-					Locale::getLocale()
+					AppLocale::getLocale()
 				),
 				$params
 			);

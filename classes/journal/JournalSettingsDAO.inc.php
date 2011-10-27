@@ -236,7 +236,7 @@ class JournalSettingsDAO extends DAO {
 				$this->updateSetting(
 					$journalId,
 					$name,
-					$isLocaleField?array(Locale::getLocale() => $value):$value,
+					$isLocaleField?array(AppLocale::getLocale() => $value):$value,
 					$type,
 					$isLocaleField
 				);
@@ -257,8 +257,8 @@ class JournalSettingsDAO extends DAO {
 	function _performLocalizedReplacement($rawInput, $paramArray = array(), $locale = null) {
 		preg_match('{{translate key="([^"]+)"}}', $rawInput, $matches);
 		if ( isset($matches[1]) ) {
-			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_OJS_MANAGER), $locale);
-			return Locale::translate($matches[1], $paramArray, $locale);
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_OJS_MANAGER), $locale);
+			return __($matches[1], $paramArray, $locale);
 		}
 
 		return $rawInput;
@@ -343,7 +343,7 @@ class JournalSettingsDAO extends DAO {
 	 * Used internally by journal setting installation code to perform translation function.
 	 */
 	function _installer_regexp_callback($matches) {
-		return Locale::translate($matches[1]);
+		return __($matches[1]);
 	}
 }
 

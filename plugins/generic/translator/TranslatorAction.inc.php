@@ -48,9 +48,9 @@ class TranslatorAction {
 	}
 
 	function getLocaleFiles($locale) {
-		if (!Locale::isLocaleValid($locale)) return null;
+		if (!AppLocale::isLocaleValid($locale)) return null;
 
-		$localeFiles = Locale::getFilenameComponentMap($locale);
+		$localeFiles = AppLocale::getFilenameComponentMap($locale);
 		$plugins =& PluginRegistry::loadAllPlugins();
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];
@@ -136,7 +136,7 @@ class TranslatorAction {
 	 * @return array
 	 */
 	function testLocale($locale, $referenceLocale) {
-		$localeFileNames = Locale::getFilenameComponentMap($locale);
+		$localeFileNames = AppLocale::getFilenameComponentMap($locale);
 
 		$errors = array();
 		foreach ($localeFileNames as $localeFileName) {
@@ -198,8 +198,8 @@ class TranslatorAction {
 
 			// We've successfully found a matching reference email.
 			// Compare it against the translation.
-			$bodyParams = Locale::getParameterNames($email['body']);
-			$referenceBodyParams = Locale::getParameterNames($referenceEmails[$emailKey]['body']);
+			$bodyParams = AppLocale::getParameterNames($email['body']);
+			$referenceBodyParams = AppLocale::getParameterNames($referenceEmails[$emailKey]['body']);
 			$diff = array_diff($bodyParams, $referenceBodyParams);
 			if (!empty($diff)) {
 				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
@@ -208,8 +208,8 @@ class TranslatorAction {
 				);
 			}
 
-			$subjectParams = Locale::getParameterNames($email['subject']);
-			$referenceSubjectParams = Locale::getParameterNames($referenceEmails[$emailKey]['subject']);
+			$subjectParams = AppLocale::getParameterNames($email['subject']);
+			$referenceSubjectParams = AppLocale::getParameterNames($referenceEmails[$emailKey]['subject']);
 
 			$diff = array_diff($subjectParams, $referenceSubjectParams);
 			if (!empty($diff)) {

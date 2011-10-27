@@ -50,7 +50,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// allowed to submit to.
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
+		$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -77,7 +77,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$templateMgr->assign(
 			'supportedSubmissionLocaleNames',
 			array_flip(array_intersect(
-				array_flip(Locale::getAllLocales()),
+				array_flip(AppLocale::getAllLocales()),
 				$supportedSubmissionLocales
 			))
 		);
@@ -103,7 +103,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$fallbackLocales = array_keys($supportedSubmissionLocales);
 			$tryLocales = array(
 				$this->getFormLocale(), // Current form locale
-				Locale::getLocale(), // Current UI locale
+				AppLocale::getLocale(), // Current UI locale
 				$journal->getPrimaryLocale(), // Journal locale
 				$supportedSubmissionLocales[array_shift($fallbackLocales)] // Fallback: first one on the list
 			);

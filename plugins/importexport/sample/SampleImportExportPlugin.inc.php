@@ -49,11 +49,11 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.sample.displayName');
+		return __('plugins.importexport.sample.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.sample.description');
+		return __('plugins.importexport.sample.description');
 	}
 
 	function display(&$args, $request) {

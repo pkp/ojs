@@ -39,17 +39,17 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.quickSubmit.displayName');
+		return __('plugins.importexport.quickSubmit.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.quickSubmit.description');
+		return __('plugins.importexport.quickSubmit.description');
 	}
 
 	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION));
 		$this->setBreadcrumbs();
 
 		if (array_shift($args) == 'saveSubmit') {

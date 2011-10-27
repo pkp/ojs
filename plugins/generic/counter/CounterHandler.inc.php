@@ -92,7 +92,7 @@ class CounterHandler extends Handler {
 		}
 
 		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
-		$siteTitle = $siteSettingsDao->getSetting('title',Locale::getLocale());
+		$siteTitle = $siteSettingsDao->getSetting('title',AppLocale::getLocale());
 
 		$base_url =& Config::getVar('general','base_url');
 
@@ -256,18 +256,18 @@ class CounterHandler extends Handler {
 		header('content-disposition: attachment; filename=counter-' . date('Ymd') . '.csv');
 
 		$fp = fopen('php://output', 'wt');
-		String::fputcsv($fp, array(Locale::translate('plugins.generic.counter.1a.title1')));
-		String::fputcsv($fp, array(Locale::translate('plugins.generic.counter.1a.title2', array('year' => $year))));
+		String::fputcsv($fp, array(__('plugins.generic.counter.1a.title1')));
+		String::fputcsv($fp, array(__('plugins.generic.counter.1a.title2', array('year' => $year))));
 		String::fputcsv($fp, array()); // FIXME: Criteria should be here?
-		String::fputcsv($fp, array(Locale::translate('plugins.generic.counter.1a.dateRun')));
+		String::fputcsv($fp, array(__('plugins.generic.counter.1a.dateRun')));
 		String::fputcsv($fp, array(strftime("%Y-%m-%d")));
 
 		$cols = array(
 			'',
-			Locale::translate('plugins.generic.counter.1a.publisher'),
-			Locale::translate('plugins.generic.counter.1a.platform'),
-			Locale::translate('plugins.generic.counter.1a.printIssn'),
-			Locale::translate('plugins.generic.counter.1a.onlineIssn')
+			__('plugins.generic.counter.1a.publisher'),
+			__('plugins.generic.counter.1a.platform'),
+			__('plugins.generic.counter.1a.printIssn'),
+			__('plugins.generic.counter.1a.onlineIssn')
 		);
 		for ($i=1; $i<=12; $i++) {
 			$time = strtotime($year . '-' . $i . '-01');
@@ -275,15 +275,15 @@ class CounterHandler extends Handler {
 			$cols[] = strftime('%b-%Y', $time);
 		}
 
-		$cols[] = Locale::translate('plugins.generic.counter.1a.ytdTotal');
-		$cols[] = Locale::translate('plugins.generic.counter.1a.ytdHtml');
-		$cols[] = Locale::translate('plugins.generic.counter.1a.ytdPdf');
+		$cols[] = __('plugins.generic.counter.1a.ytdTotal');
+		$cols[] = __('plugins.generic.counter.1a.ytdHtml');
+		$cols[] = __('plugins.generic.counter.1a.ytdPdf');
 		fputcsv($fp, $cols);
 
 		// Display the totals first
 		$totals = $counterReportDao->getMonthlyTotalRange($begin, $end);
 		$cols = array(
-			Locale::translate('plugins.generic.counter.1a.totalForAllJournals'),
+			__('plugins.generic.counter.1a.totalForAllJournals'),
 			'-', // Publisher
 			'', // Platform
 			'-',

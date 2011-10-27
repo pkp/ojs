@@ -30,11 +30,11 @@ class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.OAIMetadata.rfc1807.displayName');
+		return __('plugins.OAIMetadata.rfc1807.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.OAIMetadata.rfc1807.description');
+		return __('plugins.OAIMetadata.rfc1807.description');
 	}
 
 	function getFormatClass() {

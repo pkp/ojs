@@ -101,7 +101,7 @@ class CommentForm extends Form {
 			if ($user) {
 				$this->_data['posterName'] = $user->getFullName();
 				$this->_data['posterEmail'] = $user->getEmail();
-				$this->_data['title'] = ($comment?Locale::translate('common.re') . ' ' . $comment->getTitle():'');
+				$this->_data['title'] = ($comment?__('common.re') . ' ' . $comment->getTitle():'');
 			}
 		}
 	}

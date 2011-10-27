@@ -52,8 +52,8 @@ class AuthorSubmissionDAO extends DAO {
 	 * @return AuthorSubmission
 	 */
 	function &getAuthorSubmission($articleId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$result =& $this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -167,8 +167,8 @@ class AuthorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory continaing AuthorSubmissions
 	 */
 	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$result =& $this->retrieveRange(
 			'SELECT	a.*,
 				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,

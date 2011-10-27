@@ -137,7 +137,7 @@ class ArticleHandler extends Handler {
 			}
 
 			// Article cover page.
-			$locale = Locale::getLocale();
+			$locale = AppLocale::getLocale();
 			if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
@@ -546,7 +546,7 @@ class ArticleHandler extends Handler {
 
 	function setupTemplate() {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION));
 	}
 }
 

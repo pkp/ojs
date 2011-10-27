@@ -70,8 +70,8 @@ class BooksForReviewEditorHandler extends Handler {
 		import('pages.editor.EditorHandler');
 		$user =& $request->getUser();
 		$filterEditorOptions = array(
-			FILTER_EDITOR_ALL => Locale::Translate('editor.allEditors'),
-			FILTER_EDITOR_ME => Locale::Translate('editor.me')
+			FILTER_EDITOR_ALL => AppLocale::Translate('editor.allEditors'),
+			FILTER_EDITOR_ME => AppLocale::Translate('editor.me')
 		);
 
 		$filterEditor = $request->getUserVar('filterEditor');
@@ -438,7 +438,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'journal.roles.author');
 		$templateMgr->assign('bookId', $bookId);
 		$templateMgr->assign('returnPage', $returnPage);
-		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'editor' . '/' . 'authors.tpl');
 	}
 
@@ -646,7 +646,7 @@ class BooksForReviewEditorHandler extends Handler {
 						$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 
 						if (empty($userMailingAddress)) {
-							$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress');
+							$userMailingAddress = __('plugins.generic.booksForReview.editor.noMailingAddress');
 						} else {
 							$countryDao =& DAORegistry::getDAO('CountryDAO');
 							$countries =& $countryDao->getCountries();
@@ -811,7 +811,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$userCountryCode = $book->getUserCountry();
 
 					if (empty($userMailingAddress)) {
-						$userMailingAddress = Locale::translate('plugins.generic.booksForReview.editor.noMailingAddress');
+						$userMailingAddress = __('plugins.generic.booksForReview.editor.noMailingAddress');
 					} else {
 						$countryDao =& DAORegistry::getDAO('CountryDAO');
 						$countries =& $countryDao->getCountries();
@@ -931,7 +931,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$bookId = (int) $args[0];
 		$formLocale = $args[1];
 
-		if (!Locale::isLocaleValid($formLocale)) {
+		if (!AppLocale::isLocaleValid($formLocale)) {
 			$request->redirect(null, 'editor');
 		}
 
@@ -1019,7 +1019,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 			$pageCrumbs[] = array(
 				Request::url(null, 'editor', 'booksForReview', $returnPage),
-				Locale::Translate('plugins.generic.booksForReview.displayName'),
+				AppLocale::Translate('plugins.generic.booksForReview.displayName'),
 				true
 			);
 		}

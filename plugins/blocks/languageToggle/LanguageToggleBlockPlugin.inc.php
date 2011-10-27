@@ -67,14 +67,14 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.block.languageToggle.displayName');
+		return __('plugins.block.languageToggle.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.block.languageToggle.description');
+		return __('plugins.block.languageToggle.description');
 	}
 
 	/**
@@ -92,7 +92,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 				$locales =& $site->getSupportedLocaleNames();
 			}
 		} else {
-			$locales =& Locale::getAllLocales();
+			$locales =& AppLocale::getAllLocales();
 			$templateMgr->assign('languageToggleNoUser', true);
 		}
 

@@ -263,7 +263,7 @@ class RegistrationForm extends Form {
 
 			$locales = array();
 			foreach ($this->getData('userLocales') as $locale) {
-				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+				if (AppLocale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
 					array_push($locales, $locale);
 				}
 			}
@@ -281,7 +281,7 @@ class RegistrationForm extends Form {
 				// The account should be created in a disabled
 				// state.
 				$user->setDisabled(true);
-				$user->setDisabledReason(Locale::translate('user.login.accountNotValidated'));
+				$user->setDisabledReason(__('user.login.accountNotValidated'));
 			}
 
 			$userDao =& DAORegistry::getDAO('UserDAO');

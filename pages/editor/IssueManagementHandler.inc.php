@@ -259,7 +259,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId, true);
 
 		$formLocale = array_shift($args);
-		if (!Locale::isLocaleValid($formLocale)) {
+		if (!AppLocale::isLocaleValid($formLocale)) {
 			$request->redirect(null, null, 'issueData', $issueId);
 		}
 
@@ -583,8 +583,8 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign_by_ref('sections', $sections);
 
 		$templateMgr->assign('accessOptions', array(
-			ARTICLE_ACCESS_ISSUE_DEFAULT => Locale::Translate('editor.issues.default'),
-			ARTICLE_ACCESS_OPEN => Locale::Translate('editor.issues.open')
+			ARTICLE_ACCESS_ISSUE_DEFAULT => AppLocale::Translate('editor.issues.default'),
+			ARTICLE_ACCESS_OPEN => AppLocale::Translate('editor.issues.open')
 		));
 
 		import('classes.issue.IssueAction');

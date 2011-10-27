@@ -34,15 +34,15 @@ class CbeCitationPlugin extends CitationPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.citationFormats.cbe.displayName');
+		return __('plugins.citationFormats.cbe.displayName');
 	}
 
 	function getCitationFormatName() {
-		return Locale::translate('plugins.citationFormats.cbe.citationFormatName');
+		return __('plugins.citationFormats.cbe.citationFormatName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.citationFormats.cbe.description');
+		return __('plugins.citationFormats.cbe.description');
 	}
 
 }

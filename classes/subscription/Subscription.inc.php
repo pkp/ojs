@@ -221,19 +221,19 @@ class Subscription extends DataObject {
 	function getStatusString() {
 		switch ($this->getData('status')) {
 			case SUBSCRIPTION_STATUS_ACTIVE:
-				return Locale::translate('subscriptions.status.active');
+				return __('subscriptions.status.active');
 			case SUBSCRIPTION_STATUS_NEEDS_INFORMATION:
-				return Locale::translate('subscriptions.status.needsInformation');
+				return __('subscriptions.status.needsInformation');
 			case SUBSCRIPTION_STATUS_NEEDS_APPROVAL:
-				return Locale::translate('subscriptions.status.needsApproval');
+				return __('subscriptions.status.needsApproval');
 			case SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT:
-				return Locale::translate('subscriptions.status.awaitingManualPayment');
+				return __('subscriptions.status.awaitingManualPayment');
 			case SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT:
-				return Locale::translate('subscriptions.status.awaitingOnlinePayment');
+				return __('subscriptions.status.awaitingOnlinePayment');
 			case SUBSCRIPTION_STATUS_OTHER:
-				return Locale::translate('subscriptions.status.other');
+				return __('subscriptions.status.other');
 			default:
-				return Locale::translate('subscriptions.status');
+				return __('subscriptions.status');
 		}
 	}
 

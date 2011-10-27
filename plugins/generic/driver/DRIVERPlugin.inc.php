@@ -49,11 +49,11 @@ class DRIVERPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.driver.displayName');
+		return __('plugins.generic.driver.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.driver.description');
+		return __('plugins.generic.driver.description');
 	}	
 		
 	/*

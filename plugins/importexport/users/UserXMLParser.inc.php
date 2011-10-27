@@ -58,7 +58,7 @@ class UserXMLParser {
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getJournal($this->journalId);
-		$journalPrimaryLocale = Locale::getPrimaryLocale();
+		$journalPrimaryLocale = AppLocale::getPrimaryLocale();
 
 		$site =& Request::getSite();
 		$siteSupportedLocales = $site->getSupportedLocales();
@@ -81,7 +81,7 @@ class UserXMLParser {
 								if (isset($encrypted) && $encrypted !== 'plaintext') {
 									$ojsEncryptionScheme = Config::getVar('security', 'encryption');
 									if ($encrypted != $ojsEncryptionScheme) {
-										$this->errors[] = Locale::translate('plugins.importexport.users.import.encryptionMismatch', array('importHash' => $encrypted, 'ojsHash' => $ojsEncryptionScheme));
+										$this->errors[] = __('plugins.importexport.users.import.encryptionMismatch', array('importHash' => $encrypted, 'ojsHash' => $ojsEncryptionScheme));
 									}
 									$newUser->setPassword($attrib->getValue());
 								} else {
@@ -150,7 +150,7 @@ class UserXMLParser {
 							case 'locales':
 								$locales = array();
 								foreach (explode(':', $attrib->getValue()) as $locale) {
-									if (Locale::isLocaleValid($locale) && in_array($locale, $siteSupportedLocales)) {
+									if (AppLocale::isLocaleValid($locale) && in_array($locale, $siteSupportedLocales)) {
 										array_push($locales, $locale);
 									}
 								}
@@ -237,7 +237,7 @@ class UserXMLParser {
 				if (!$userDao->insertUser($user)) {
 					// Failed to add user!
 					$this->errors[] = sprintf('%s: %s (%s)',
-						Locale::translate('manager.people.importUsers.failedToImportUser'),
+						__('manager.people.importUsers.failedToImportUser'),
 						$user->getFullName(), $user->getUsername());
 
 					if ($continueOnError) {
@@ -268,7 +268,7 @@ class UserXMLParser {
 					if (!$roleDao->insertRole($role)) {
 						// Failed to add role!
 						$this->errors[] = sprintf('%s: %s - %s (%s)',
-							Locale::translate('manager.people.importUsers.failedToImportRole'),
+							__('manager.people.importUsers.failedToImportRole'),
 							$role->getRoleName(),
 							$user->getFullName(), $user->getUsername());
 

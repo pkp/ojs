@@ -49,11 +49,11 @@ class ExternalFeedPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.externalFeed.displayName');
+		return __('plugins.generic.externalFeed.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.externalFeed.description');
+		return __('plugins.generic.externalFeed.description');
 	}
 
 	/**
@@ -159,8 +159,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('feeds', Locale::translate('plugins.generic.externalFeed.manager.feeds'));
-			$verbs[] = array('settings', Locale::translate('plugins.generic.externalFeed.manager.settings'));
+			$verbs[] = array('feeds', __('plugins.generic.externalFeed.manager.feeds'));
+			$verbs[] = array('settings', __('plugins.generic.externalFeed.manager.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}
@@ -220,10 +220,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$output .= '</tr>';
 						$output .= '<tr class="details">';
 						$output .= '<td class="posted">';
-						$output .= Locale::Translate('plugins.generic.externalFeed.posted') . ': ' . date('Y-m-d', strtotime($item->get_date()));
+						$output .= AppLocale::Translate('plugins.generic.externalFeed.posted') . ': ' . date('Y-m-d', strtotime($item->get_date()));
 						$output .= '</td>';
 						$output .= '<td class="more">';
-						$output .= '<a href="' . $item->get_permalink() . '" target="_blank">' . Locale::Translate('plugins.generic.externalFeed.more') . '</a>';
+						$output .= '<a href="' . $item->get_permalink() . '" target="_blank">' . AppLocale::Translate('plugins.generic.externalFeed.more') . '</a>';
 						$output .= '</td>';
 						$output .= '</tr>';
 
@@ -268,7 +268,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
-		Locale::requireComponents(
+		AppLocale::requireComponents(
 			array(
 				LOCALE_COMPONENT_APPLICATION_COMMON,
 				LOCALE_COMPONENT_PKP_MANAGER,

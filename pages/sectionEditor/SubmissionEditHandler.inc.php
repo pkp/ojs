@@ -43,7 +43,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// FIXME? For comments.readerComments under Status and
 		// author.submit.selectPrincipalContact under Metadata
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR));
 
 		$this->setupTemplate(true, $articleId);
 
@@ -168,7 +168,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -480,7 +480,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getId()));
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
-			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->assign('reviewerDatabaseLinks', $journal->getSetting('reviewerDatabaseLinks'));
 			$templateMgr->assign('sort', $sort);
 			$templateMgr->assign('sortDirection', $sortDirection);
@@ -540,7 +540,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enrollSearch($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.enrollment, manager.people.enroll
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.enrollment, manager.people.enroll
 		$submission =& $this->submission;
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
@@ -584,7 +584,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		));
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 
 		$templateMgr->assign('helpTopicId', 'journal.roles.index');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
@@ -843,7 +843,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('country', $country);
 
 			$templateMgr->assign_by_ref('user', $user);
-			$templateMgr->assign('localeNames', Locale::getAllLocales());
+			$templateMgr->assign('localeNames', AppLocale::getAllLocales());
 			$templateMgr->assign('helpTopicId', 'journal.roles.index');
 			$templateMgr->display('sectionEditor/userProfile.tpl');
 		}
@@ -854,7 +854,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId);
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
@@ -864,7 +864,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveMetadata($args, &$request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
@@ -881,7 +881,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 
 		$formLocale = $args[1];
-		if (!Locale::isLocaleValid($formLocale)) {
+		if (!AppLocale::isLocaleValid($formLocale)) {
 			$request->redirect(null, null, 'viewMetadata', $articleId);
 		}
 
@@ -1098,7 +1098,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.copyeditor');
-			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
@@ -1534,7 +1534,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
-			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 
 			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
@@ -1787,7 +1787,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('classes.submission.form.SuppFileForm');
 
 		$suppFileForm = new SuppFileForm($submission, $journal);
-		$suppFileForm->setData('title', array($submission->getLocale() => Locale::translate('common.untitled')));
+		$suppFileForm->setData('title', array($submission->getLocale() => __('common.untitled')));
 		$suppFileId = $suppFileForm->execute($fileName, $request->getUserVar('createRemote'));
 
 		$request->redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));

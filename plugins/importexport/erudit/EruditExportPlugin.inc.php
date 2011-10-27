@@ -42,11 +42,11 @@ class EruditExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.erudit.displayName');
+		return __('plugins.importexport.erudit.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.erudit.description');
+		return __('plugins.importexport.erudit.description');
 	}
 
 	function display(&$args, $request) {
@@ -72,7 +72,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			default:
 				// Display a list of articles for export
 				$this->setBreadcrumbs();
-				Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
@@ -125,8 +125,8 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
-				echo Locale::translate('plugins.importexport.erudit.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo __('plugins.importexport.erudit.cliError') . "\n";
+				echo __('plugins.importexport.erudit.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;
@@ -134,8 +134,8 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getId(), $articleId);
 		if ($publishedArticle == null) {
-			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
-			echo Locale::translate('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
+			echo __('plugins.importexport.erudit.cliError') . "\n";
+			echo __('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
 			return;
 		}
 		foreach ($publishedArticle->getGalleys() as $thisGalley) {
@@ -145,13 +145,13 @@ class EruditExportPlugin extends ImportExportPlugin {
 			}
 		}
 		if (!isset($galley)) {
-			echo Locale::translate('plugins.importexport.erudit.export.error.galleyNotFound', array('galleyLabel' => $galleyLabel)) . "\n\n";
+			echo __('plugins.importexport.erudit.export.error.galleyNotFound', array('galleyLabel' => $galleyLabel)) . "\n\n";
 			return;
 		}
 		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 		if (!$this->exportArticle($journal, $issue, $publishedArticle, $galley, $xmlFile)) {
-			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
-			echo Locale::translate('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+			echo __('plugins.importexport.erudit.cliError') . "\n";
+			echo __('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 		}
 	}
 
@@ -159,7 +159,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 	 * Display the command-line usage information
 	 */
 	function usage($scriptName) {
-		echo Locale::translate('plugins.importexport.erudit.cliUsage', array(
+		echo __('plugins.importexport.erudit.cliUsage', array(
 			'scriptName' => $scriptName,
 			'pluginName' => $this->getName()
 		)) . "\n";

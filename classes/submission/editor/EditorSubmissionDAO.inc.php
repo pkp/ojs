@@ -45,8 +45,8 @@ class EditorSubmissionDAO extends DAO {
 	 * @return EditorSubmission
 	 */
 	function &getEditorSubmission($articleId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$result =& $this->retrieve(
 			'SELECT
 				a.*,
@@ -179,8 +179,8 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array result
 	 */
 	function &_getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $editorId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $additionalWhereSql, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_COPYEDITING_FINAL',

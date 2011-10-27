@@ -37,11 +37,11 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.duracloud.displayName');
+		return __('plugins.importexport.duracloud.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.duracloud.description');
+		return __('plugins.importexport.duracloud.description');
 	}
 
 	function display(&$args, $request) {
@@ -100,7 +100,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'exportableIssues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
@@ -110,7 +110,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'importableIssues':
 				// Display a list of issues for import
 				$this->setBreadcrumbs(array(), true);
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$templateMgr->assign('issues', $this->getImportableIssues());
 				$templateMgr->display($this->getTemplatePath() . 'importableIssues.tpl');
 				return;
@@ -290,8 +290,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-				echo Locale::translate('plugins.importexport.duracloud.error.unknownJournal', array('journalPath' => $journalPath)) . "\n";
+				echo __('plugins.importexport.duracloud.cliError') . "\n";
+				echo __('plugins.importexport.duracloud.error.unknownJournal', array('journalPath' => $journalPath)) . "\n";
 				return;
 			}
 			$this->usage($scriptName);
@@ -304,8 +304,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$dcc =& $this->getDuraCloudConnection();
 		$ds = new DuraStore($dcc);
 		if ($ds->getSpace($spaceId, $metadata) === false) {
-			echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-			echo Locale::translate('plugins.importexport.duracloud.configuration.credentialsInvalid') . "\n";
+			echo __('plugins.importexport.duracloud.cliError') . "\n";
+			echo __('plugins.importexport.duracloud.configuration.credentialsInvalid') . "\n";
 			return;
 		}
 
@@ -316,15 +316,15 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 
 				if (!$user) {
 					if ($userName != '') {
-						echo Locale::translate('plugins.importexport.duracloud.cliError') . "\n";
-						echo Locale::translate('plugins.importexport.duracloud.error.unknownUser', array('userName' => $userName)) . "\n\n";
+						echo __('plugins.importexport.duracloud.cliError') . "\n";
+						echo __('plugins.importexport.duracloud.error.unknownUser', array('userName' => $userName)) . "\n\n";
 					}
 					$this->usage($scriptName);
 					return;
 				}
 
 				$results =& $this->importIssues($user, $journal, $args);
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 				foreach ($results as $id => $result) {
 					echo "	$id: " . ($result?$result->getIssueIdentification():'') . "\n";
 				}
@@ -351,7 +351,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * Display the command-line usage information
 	 */
 	function usage($scriptName) {
-		echo Locale::translate('plugins.importexport.duracloud.cliUsage', array(
+		echo __('plugins.importexport.duracloud.cliUsage', array(
 			'scriptName' => $scriptName,
 			'pluginName' => $this->getName()
 		)) . "\n";

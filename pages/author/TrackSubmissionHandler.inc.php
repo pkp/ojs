@@ -151,7 +151,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$authorSubmission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId);
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.article.decision etc. FIXME?
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.article.decision etc. FIXME?
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewModifiedByRound = $reviewAssignmentDao->getLastModifiedByRound($articleId);
@@ -376,7 +376,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 
 		$formLocale = array_shift($args);
-		if (!Locale::isLocaleValid($formLocale)) {
+		if (!AppLocale::isLocaleValid($formLocale)) {
 			$request->redirect(null, null, 'viewMetadata', $articleId);
 		}
 

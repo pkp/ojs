@@ -50,8 +50,8 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @return CopyeditorSubmission
 	 */
 	function &getCopyeditorSubmission($articleId) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$result =& $this->retrieve(
 			'SELECT	a.*,
 				e.editor_id,
@@ -132,8 +132,8 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @return array CopyeditorSubmissions
 	 */
 	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$locale = Locale::getLocale();
-		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
 		$params = array(
 			'title', // Section title
 			$primaryLocale,

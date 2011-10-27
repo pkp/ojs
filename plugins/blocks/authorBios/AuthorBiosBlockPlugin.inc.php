@@ -23,14 +23,14 @@ class AuthorBiosBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.block.authorBios.displayName');
+		return __('plugins.block.authorBios.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.block.authorBios.description');
+		return __('plugins.block.authorBios.description');
 	}
 
 	/**

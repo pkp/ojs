@@ -43,8 +43,8 @@ class AboutHandler extends Handler {
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getId()));
 
 			$customAboutItems =& $journalSettingsDao->getSetting($journal->getId(), 'customAboutItems');
-			if (isset($customAboutItems[Locale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getLocale()]);
-			elseif (isset($customAboutItems[Locale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getPrimaryLocale()]);
+			if (isset($customAboutItems[AppLocale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[AppLocale::getLocale()]);
+			elseif (isset($customAboutItems[AppLocale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[AppLocale::getPrimaryLocale()]);
 
 			foreach ($this->_getPublicStatisticsNames() as $name) {
 				if ($journal->getSetting($name)) {
@@ -85,7 +85,7 @@ class AboutHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
 		
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER));
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
@@ -516,7 +516,7 @@ class AboutHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 
-		foreach (array(Locale::getLocale(), $primaryLocale = Locale::getPrimaryLocale(), 'en_US') as $locale) {
+		foreach (array(AppLocale::getLocale(), $primaryLocale = AppLocale::getPrimaryLocale(), 'en_US') as $locale) {
 			$edProcessFile = "locale/$locale/edprocesslarge.png";
 			if (file_exists($edProcessFile)) break;
 		}

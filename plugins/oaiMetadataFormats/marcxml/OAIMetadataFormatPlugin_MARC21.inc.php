@@ -29,11 +29,11 @@ class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.OAIMetadata.marcxml.displayName');
+		return __('plugins.OAIMetadata.marcxml.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.OAIMetadata.marcxml.description');
+		return __('plugins.OAIMetadata.marcxml.description');
 	}
 
 	function getFormatClass() {
