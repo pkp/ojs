@@ -186,4 +186,10 @@ class AppLocale extends PKPLocale {
 	}
 }
 
+if (!class_exists('Locale')) {
+	class Locale extends AppLocale {
+		// This is used for backwards compatibility (bug #5240)
+	}
+}
+
 ?>
