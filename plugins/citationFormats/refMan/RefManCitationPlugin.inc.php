@@ -34,15 +34,15 @@ class RefManCitationPlugin extends CitationPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.citationFormats.refMan.displayName');
+		return __('plugins.citationFormats.refMan.displayName');
 	}
 
 	function getCitationFormatName() {
-		return Locale::translate('plugins.citationFormats.refMan.citationFormatName');
+		return __('plugins.citationFormats.refMan.citationFormatName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.citationFormats.refMan.description');
+		return __('plugins.citationFormats.refMan.description');
 	}
 
 	/**

@@ -59,8 +59,8 @@ class InformationHandler extends Handler {
 				$pageTitle = $pageCrumbTitle = 'navigation.competingInterestGuidelines';
 				break;
 			case 'sampleCopyrightWording':
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));				
-				$content = Locale::translate('manager.setup.authorCopyrightNotice.sample');
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));				
+				$content = __('manager.setup.authorCopyrightNotice.sample');
 				$pageTitle = $pageCrumbTitle = 'manager.setup.copyrightNotice';
 				break;
 			default:

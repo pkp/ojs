@@ -288,9 +288,9 @@ class Thesis extends DataObject {
 		}
 
 		if ($lastNameFirst) {
-			return Locale::translate('plugins.generic.thesis.studentFullNameLast', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
+			return __('plugins.generic.thesis.studentFullNameLast', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
 		} else {
-			return Locale::translate('plugins.generic.thesis.studentFullName', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
+			return __('plugins.generic.thesis.studentFullName', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
 		}
 	}
 
@@ -403,9 +403,9 @@ class Thesis extends DataObject {
 		}
 
 		if ($lastNameFirst) {
-			return Locale::translate('plugins.generic.thesis.supervisorFullNameLast', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
+			return __('plugins.generic.thesis.supervisorFullNameLast', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
 		} else {
-			return Locale::translate('plugins.generic.thesis.supervisorFullName', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
+			return __('plugins.generic.thesis.supervisorFullName', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
 		}
 	}
 

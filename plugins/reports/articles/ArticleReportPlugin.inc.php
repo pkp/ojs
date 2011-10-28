@@ -45,11 +45,11 @@ class ArticleReportPlugin extends ReportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.reports.articles.displayName');
+		return __('plugins.reports.articles.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.reports.articles.description');
+		return __('plugins.reports.articles.description');
 	}
 
 	function display(&$args) {
@@ -70,41 +70,41 @@ class ArticleReportPlugin extends ReportPlugin {
 			}
 		}
 
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		import('classes.article.Article');
 		$decisionMessages = array(
-			SUBMISSION_EDITOR_DECISION_ACCEPT => Locale::translate('editor.article.decision.accept'),
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => Locale::translate('editor.article.decision.pendingRevisions'),
-			SUBMISSION_EDITOR_DECISION_RESUBMIT => Locale::translate('editor.article.decision.resubmit'),
-			SUBMISSION_EDITOR_DECISION_DECLINE => Locale::translate('editor.article.decision.decline'),
-			null => Locale::translate('plugins.reports.articles.nodecision')
+			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),
+			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.article.decision.resubmit'),
+			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.article.decision.decline'),
+			null => __('plugins.reports.articles.nodecision')
 		);
 
 		$columns = array(
-			'article_id' => Locale::translate('article.submissionId'),
-			'title' => Locale::translate('article.title'),
-			'abstract' => Locale::translate('article.abstract')
+			'article_id' => __('article.submissionId'),
+			'title' => __('article.title'),
+			'abstract' => __('article.abstract')
 		);
 			
 		for ($a = 1; $a <= $maxAuthors; $a++) {
 			$columns = array_merge($columns, array(
-				'fname' . $a => Locale::translate('user.firstName') . " (" . Locale::translate('user.role.author') . " $a)",
-				'mname' . $a => Locale::translate('user.middleName') . " (" . Locale::translate('user.role.author') . " $a)",
-				'lname' . $a => Locale::translate('user.lastName') . " (" . Locale::translate('user.role.author') . " $a)",
-				'country' . $a => Locale::translate('common.country') . " (" . Locale::translate('user.role.author') . " $a)",
-				'affiliation' . $a => Locale::translate('user.affiliation') . " (" . Locale::translate('user.role.author') . " $a)",
-				'email' . $a => Locale::translate('user.email') . " (" . Locale::translate('user.role.author') . " $a)",
-				'url' . $a => Locale::translate('user.url') . " (" . Locale::translate('user.role.author') . " $a)",
-				'biography' . $a => Locale::translate('user.biography') . " (" . Locale::translate('user.role.author') . " $a)"
+				'fname' . $a => __('user.firstName') . " (" . __('user.role.author') . " $a)",
+				'mname' . $a => __('user.middleName') . " (" . __('user.role.author') . " $a)",
+				'lname' . $a => __('user.lastName') . " (" . __('user.role.author') . " $a)",
+				'country' . $a => __('common.country') . " (" . __('user.role.author') . " $a)",
+				'affiliation' . $a => __('user.affiliation') . " (" . __('user.role.author') . " $a)",
+				'email' . $a => __('user.email') . " (" . __('user.role.author') . " $a)",
+				'url' . $a => __('user.url') . " (" . __('user.role.author') . " $a)",
+				'biography' . $a => __('user.biography') . " (" . __('user.role.author') . " $a)"
 			));
 		}
 			
 		$columns = array_merge($columns, array(
-			'section_title' => Locale::translate('section.title'),
-			'language' => Locale::translate('common.language'),
-			'editor_decision' => Locale::translate('submission.editorDecision'),
-			'status' => Locale::translate('common.status')
+			'section_title' => __('section.title'),
+			'language' => __('common.language'),
+			'editor_decision' => __('submission.editorDecision'),
+			'status' => __('common.status')
 		));
 
 		$fp = fopen('php://output', 'wt');
@@ -125,7 +125,7 @@ class ArticleReportPlugin extends ReportPlugin {
 						$columns[$index] = $decisionMessages[null];
 					}
 				} elseif ($index == 'status') {
-					$columns[$index] = Locale::translate($statusMap[$row[$index]]);
+					$columns[$index] = __($statusMap[$row[$index]]);
 				} elseif ($index == 'abstract') {
 					$columns[$index] = html_entity_decode(strip_tags($row[$index]));
 				} elseif (strstr($index, 'biography') !== false) {

@@ -72,11 +72,11 @@ class OpenAIREPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.openAIRE.displayName');
+		return __('plugins.generic.openAIRE.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.openAIRE.description');
+		return __('plugins.generic.openAIRE.description');
 	}	
 	
 	/*
@@ -300,7 +300,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
 	
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		
 		// Sources contains journal title, issue ID, and pages
 		$sources = $dcOAIMetadataFormat->stripAssocArray((array) $journal->getTitle(null));
@@ -332,7 +332,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		// Types
 		$types = $dcOAIMetadataFormat->stripAssocArray((array) $section->getIdentifyType(null));
 		$types = array_merge_recursive(
-			empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
+			empty($types)?array(AppLocale::getLocale() => __('rt.metadata.pkp.peerReviewed')):$types,
 			$dcOAIMetadataFormat->stripAssocArray((array) $article->getType(null))
 		);
 	
@@ -399,7 +399,7 @@ class OpenAIREPlugin extends GenericPlugin {
 			array_unshift($relation, $openAIRERelation);
 
 			$rights = array_merge_recursive(
-				empty($rights)?array(Locale::getLocale() => $openAIRERights):
+				empty($rights)?array(AppLocale::getLocale() => $openAIRERights):
 				$dcOAIMetadataFormat->stripAssocArray((array) $openAIRERightsValues), $rights
 			);
 			

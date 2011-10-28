@@ -127,11 +127,11 @@ class SehlPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.sehl.name');
+		return __('plugins.generic.sehl.name');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.sehl.description');
+		return __('plugins.generic.sehl.description');
 	}
 }
 

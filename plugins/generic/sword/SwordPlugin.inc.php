@@ -28,7 +28,7 @@ class SwordPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.sword.displayName');
+		return __('plugins.generic.sword.displayName');
 	}
 
 	/**
@@ -36,7 +36,7 @@ class SwordPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.sword.description');
+		return __('plugins.generic.sword.description');
 	}
 
 	function register($category, $path) {
@@ -144,7 +144,7 @@ class SwordPlugin extends GenericPlugin {
 			$deposit->cleanup();
 			unset($deposit);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.automaticDepositComplete', array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$notificationManager->createTrivialNotification(__('notification.notification'), __('plugins.generic.sword.automaticDepositComplete', array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
 		}
 
 		if ($sendDepositNotification) {
@@ -179,16 +179,16 @@ class SwordPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
-				Locale::translate('manager.plugins.disable')
+				__('manager.plugins.disable')
 			);
 			$verbs[] = array(
 				'settings',
-				Locale::translate('plugins.generic.sword.settings')
+				__('plugins.generic.sword.settings')
 			);
 		} else {
 			$verbs[] = array(
 				'enable',
-				Locale::translate('manager.plugins.enable')
+				__('manager.plugins.enable')
 			);
 		}
 		return $verbs;
@@ -208,7 +208,7 @@ class SwordPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER));
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
@@ -230,12 +230,12 @@ class SwordPlugin extends GenericPlugin {
 				break;
 			case 'enable':
 				$this->updateSetting($journal->getId(), 'enabled', true);
-				$message = Locale::translate('plugins.generic.sword.enabled');
+				$message = __('plugins.generic.sword.enabled');
 				$returner = false;
 				break;
 			case 'disable':
 				$this->updateSetting($journal->getId(), 'enabled', false);
-				$message = Locale::translate('plugins.generic.sword.disabled');
+				$message = __('plugins.generic.sword.disabled');
 				$returner = false;
 				break;
 			case 'createDepositPoint':

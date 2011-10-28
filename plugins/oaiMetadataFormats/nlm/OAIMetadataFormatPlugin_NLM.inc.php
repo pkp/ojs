@@ -26,11 +26,11 @@ class OAIMetadataFormatPlugin_NLM extends OAIMetadataFormatPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.oaiMetadata.nlm.displayName');
+		return __('plugins.oaiMetadata.nlm.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.oaiMetadata.nlm.description');
+		return __('plugins.oaiMetadata.nlm.description');
 	}
 
 	function getFormatClass() {

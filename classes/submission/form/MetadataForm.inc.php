@@ -76,7 +76,7 @@ class MetadataForm extends Form {
 				true,
 				$article->getLocale(),
 				array_flip(array_intersect(
-					array_flip(Locale::getAllLocales()),
+					array_flip(AppLocale::getAllLocales()),
 					$supportedSubmissionLocales
 				))
 			);
@@ -185,7 +185,7 @@ class MetadataForm extends Form {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.cover.xxx locale keys; FIXME?
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.cover.xxx locale keys; FIXME?
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getId():null);
@@ -204,9 +204,9 @@ class MetadataForm extends Form {
 		if ($this->isEditor) {
 			import('classes.article.Article');
 			$hideAuthorOptions = array(
-				AUTHOR_TOC_DEFAULT => Locale::Translate('editor.article.hideTocAuthorDefault'),
-				AUTHOR_TOC_HIDE => Locale::Translate('editor.article.hideTocAuthorHide'),
-				AUTHOR_TOC_SHOW => Locale::Translate('editor.article.hideTocAuthorShow')
+				AUTHOR_TOC_DEFAULT => AppLocale::Translate('editor.article.hideTocAuthorDefault'),
+				AUTHOR_TOC_HIDE => AppLocale::Translate('editor.article.hideTocAuthorHide'),
+				AUTHOR_TOC_SHOW => AppLocale::Translate('editor.article.hideTocAuthorShow')
 			);
 			$templateMgr->assign('hideAuthorOptions', $hideAuthorOptions);
 			$templateMgr->assign('isEditor', true);
@@ -270,7 +270,7 @@ class MetadataForm extends Form {
 			$extension = $publicFileManager->getImageExtension($type);
 			if (!$extension) {
 				// Not a valid image.
-				$this->addError('imageFile', Locale::translate('submission.layout.imageInvalid'));
+				$this->addError('imageFile', __('submission.layout.imageInvalid'));
 				return false;
 			}
 		}

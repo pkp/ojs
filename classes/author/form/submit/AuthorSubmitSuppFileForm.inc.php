@@ -45,7 +45,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			true,
 			$article->getLocale(),
 			array_flip(array_intersect(
-				array_flip(Locale::getAllLocales()),
+				array_flip(AppLocale::getAllLocales()),
 				$supportedSubmissionLocales
 			))
 		);

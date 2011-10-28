@@ -42,11 +42,11 @@ class CustomThemePlugin extends ThemePlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.theme.custom.name');
+		return __('plugins.theme.custom.name');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.theme.custom.description');
+		return __('plugins.theme.custom.description');
 	}
 
 	function getStylesheetFilename() {
@@ -54,7 +54,7 @@ class CustomThemePlugin extends ThemePlugin {
 	}
 
 	function getManagementVerbs() {
-		return array(array('settings', Locale::translate('plugins.theme.custom.settings')));
+		return array(array('settings', __('plugins.theme.custom.settings')));
 	}
 
 	/**

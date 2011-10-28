@@ -92,7 +92,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		//
 		// 1) Check whether PHP5 is available.
 		if (!checkPhpVersion('5.0.0')) {
-			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 			$citationEditorError = 'submission.citations.editor.php5Required';
 		} else {
 			$citationEditorError = null;

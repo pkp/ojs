@@ -99,8 +99,8 @@ class GatewayHandler extends Handler {
 
 			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
-				$localeNames =& Locale::getAllLocales();
-				$primaryLocale = Locale::getPrimaryLocale();
+				$localeNames =& AppLocale::getAllLocales();
+				$primaryLocale = AppLocale::getPrimaryLocale();
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
 			$templateMgr->assign_by_ref('locales', $locales);

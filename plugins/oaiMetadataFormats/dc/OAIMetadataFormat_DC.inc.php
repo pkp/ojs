@@ -30,7 +30,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$issue =& $record->getData('issue');
 			$galleys =& $record->getData('galleys');
 	
-			Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 	
 			// Sources contains journal title, issue ID, and pages
 			$sources = $this->stripAssocArray((array) $journal->getTitle(null));
@@ -70,7 +70,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$driverVersion = 'info:eu-repo/semantics/publishedVersion';
 			$types = $this->stripAssocArray((array) $section->getIdentifyType(null));
 			$types = array_merge_recursive(
-				empty($types)?array(Locale::getLocale() => Locale::translate('rt.metadata.pkp.peerReviewed')):$types,
+				empty($types)?array(AppLocale::getLocale() => __('rt.metadata.pkp.peerReviewed')):$types,
 				$this->stripAssocArray((array) $article->getType(null))
 			);
 	
@@ -84,7 +84,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$languages = array();
 			foreach ($galleys as $galley) {
 				$galleyLocale = $galley->getLocale();
-				$iso3 = Locale::getIso3FromLocale($galleyLocale);
+				$iso3 = AppLocale::getIso3FromLocale($galleyLocale);
 				if(!in_array($iso3, $languages)) {
 					$languages[] = $iso3;
 				}

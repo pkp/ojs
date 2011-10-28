@@ -239,7 +239,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$this->validate($reviewId);
 
 		// For form errors (#6562)
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 
 		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId)) {
 			$request->redirect(null, null, 'submission', $reviewId);

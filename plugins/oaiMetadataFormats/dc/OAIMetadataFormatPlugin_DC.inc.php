@@ -26,11 +26,11 @@ class OAIMetadataFormatPlugin_DC extends OAIMetadataFormatPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.oaiMetadata.dc.displayName');
+		return __('plugins.oaiMetadata.dc.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.oaiMetadata.dc.description');
+		return __('plugins.oaiMetadata.dc.description');
 	}
 
 	function getFormatClass() {

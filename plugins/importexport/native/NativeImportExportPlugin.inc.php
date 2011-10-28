@@ -45,11 +45,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.importexport.native.displayName');
+		return __('plugins.importexport.native.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.importexport.native.description');
+		return __('plugins.importexport.native.description');
 	}
 
 	function display(&$args) {
@@ -91,7 +91,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
@@ -152,7 +152,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					if (!isset($context['issue']) || !isset($context['section'])) {
 						$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 						$templateMgr->assign_by_ref('issues', $issues);
-						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), false));
+						$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), false));
 						$templateMgr->assign('temporaryFileId', $temporaryFile->getId());
 						return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
 					}
@@ -335,8 +335,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-				echo Locale::translate('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo __('plugins.importexport.native.cliError') . "\n";
+				echo __('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;
@@ -354,8 +354,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				if (!$user) {
 					if ($userName != '') {
-						echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-						echo Locale::translate('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+						echo __('plugins.importexport.native.cliError') . "\n";
+						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
 					}
 					$this->usage($scriptName);
 					return;
@@ -376,8 +376,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						if (array_shift($args) !== 'issue_id') return $this->usage($scriptName);
 						$issue =& $issueDao->getIssueByBestIssueId(($issueId = array_shift($args)), $journal->getId());
 						if (!$issue) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
 							return;
 						}
 
@@ -398,8 +398,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						}
 
 						if (!$section) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.sectionNotFound', array('sectionIdentifier' => $sectionIdentifier)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.sectionNotFound', array('sectionIdentifier' => $sectionIdentifier)) . "\n\n";
 							return;
 						}
 						$context['section'] =& $section;
@@ -407,20 +407,20 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				$result = $this->handleImport($context, $doc, $errors, $issues, $articles, true);
 				if ($result) {
-					echo Locale::translate('plugins.importexport.native.import.success.description') . "\n\n";
-					if (!empty($issues)) echo Locale::translate('issue.issues') . ":\n";
+					echo __('plugins.importexport.native.import.success.description') . "\n\n";
+					if (!empty($issues)) echo __('issue.issues') . ":\n";
 					foreach ($issues as $issue) {
 						echo "\t" . $issue->getIssueIdentification() . "\n";
 					}
 
-					if (!empty($articles)) echo Locale::translate('article.articles') . ":\n";
+					if (!empty($articles)) echo __('article.articles') . ":\n";
 					foreach ($articles as $article) {
 						echo "\t" . $article->getLocalizedTitle() . "\n";
 					}
 				} else {
-					echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+					echo __('plugins.importexport.native.cliError') . "\n";
 					foreach ($errors as $error) {
-						echo "\t" . Locale::translate($error[0], $error[1]) . "\n";
+						echo "\t" . __($error[0], $error[1]) . "\n";
 					}
 				}
 				return;
@@ -431,8 +431,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$articleId = array_shift($args);
 						$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId($journal->getId(), $articleId);
 						if ($publishedArticle == null) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
 							return;
 						}
 						$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
@@ -441,28 +441,28 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$section =& $sectionDao->getSection($publishedArticle->getSectionId());
 
 						if (!$this->exportArticle($journal, $issue, $section, $publishedArticle, $xmlFile)) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
 						return;
 					case 'articles':
 						$results =& ArticleSearch::formatResults($args);
 						if (!$this->exportArticles($results, $xmlFile)) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
 						return;
 					case 'issue':
 						$issueId = array_shift($args);
 						$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 						if ($issue == null) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
 							return;
 						}
 						if (!$this->exportIssue($journal, $issue, $xmlFile)) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
 						return;
 					case 'issues':
@@ -470,15 +470,15 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						while (($issueId = array_shift($args))!==null) {
 							$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
 							if ($issue == null) {
-								echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-								echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+								echo __('plugins.importexport.native.cliError') . "\n";
+								echo __('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
 								return;
 							}
 							$issues[] =& $issue;
 						}
 						if (!$this->exportIssues($journal, $issues, $xmlFile)) {
-							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
-							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+							echo __('plugins.importexport.native.cliError') . "\n";
+							echo __('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
 						return;
 				}
@@ -491,7 +491,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * Display the command-line usage information
 	 */
 	function usage($scriptName) {
-		echo Locale::translate('plugins.importexport.native.cliUsage', array(
+		echo __('plugins.importexport.native.cliUsage', array(
 			'scriptName' => $scriptName,
 			'pluginName' => $this->getName()
 		)) . "\n";

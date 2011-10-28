@@ -67,7 +67,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	function exportCitations($args, &$request) {
 		$dispatcher =& $this->getDispatcher();
 		$articleMetadataUrl = $dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'viewMetadata', $this->getAssocId());
-		$noCitationsFoundMessage = Locale::translate("submission.citations.editor.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
+		$noCitationsFoundMessage = __("submission.citations.editor.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
 		return parent::exportCitations($args, $request, $noCitationsFoundMessage);
 	}
 }

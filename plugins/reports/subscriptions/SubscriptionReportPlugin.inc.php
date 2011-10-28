@@ -41,7 +41,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	 * @return String display name of plugin
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.reports.subscriptions.displayName');
+		return __('plugins.reports.subscriptions.displayName');
 	}
 
 	/**
@@ -49,7 +49,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	 * @return String description text for this plugin
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.reports.subscriptions.description');
+		return __('plugins.reports.subscriptions.description');
 	}
 
 	/**
@@ -70,28 +70,28 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 
 		// Columns for individual subscriptions
-		$columns = array(Locale::translate('subscriptionManager.individualSubscriptions'));
+		$columns = array(__('subscriptionManager.individualSubscriptions'));
 		String::fputcsv($fp, array_values($columns));
 
 		$columnsCommon = array(
-			'subscription_id' => Locale::translate('common.id'),
-			'status' => Locale::translate('subscriptions.status'),
-			'type' => Locale::translate('common.type'),
-			'format' => Locale::translate('subscriptionTypes.format'),
-			'date_start' => Locale::translate('manager.subscriptions.dateStart'),
-			'date_end' => Locale::translate('manager.subscriptions.dateEnd'),
-			'membership' => Locale::translate('manager.subscriptions.membership'),
-			'reference_number' => Locale::translate('manager.subscriptions.referenceNumber'),
-			'notes' => Locale::translate('common.notes')
+			'subscription_id' => __('common.id'),
+			'status' => __('subscriptions.status'),
+			'type' => __('common.type'),
+			'format' => __('subscriptionTypes.format'),
+			'date_start' => __('manager.subscriptions.dateStart'),
+			'date_end' => __('manager.subscriptions.dateEnd'),
+			'membership' => __('manager.subscriptions.membership'),
+			'reference_number' => __('manager.subscriptions.referenceNumber'),
+			'notes' => __('common.notes')
 		);
 
 		$columnsIndividual = array(
-			'name' => Locale::translate('user.name'),
-			'mailing_address' => Locale::translate('common.mailingAddress'),
-			'country' => Locale::translate('common.country'),
-			'email' => Locale::translate('user.email'),
-			'phone' => Locale::translate('user.phone'),
-			'fax' => Locale::translate('user.fax')
+			'name' => __('user.name'),
+			'mailing_address' => __('common.mailingAddress'),
+			'country' => __('common.country'),
+			'email' => __('user.email'),
+			'phone' => __('user.phone'),
+			'fax' => __('user.fax')
 		);
 
 		$columns = array_merge($columnsCommon, $columnsIndividual);
@@ -117,7 +117,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getSubscriptionTypeSummaryString();
 						break;
 					case 'format':
-						$columns[$index] = Locale::translate($subscriptionType->getFormatString());
+						$columns[$index] = __($subscriptionType->getFormatString());
 						break;
 					case 'date_start':
 						$columns[$index] = $subscription->getDateStart();
@@ -164,20 +164,20 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array('');
 		String::fputcsv($fp, array_values($columns));
 
-		$columns = array(Locale::translate('subscriptionManager.institutionalSubscriptions'));
+		$columns = array(__('subscriptionManager.institutionalSubscriptions'));
 		String::fputcsv($fp, array_values($columns));
 
 		$columnsInstitution = array(
-			'institution_name' => Locale::translate('manager.subscriptions.institutionName'),
-			'institution_mailing_address' => Locale::translate('plugins.reports.subscriptions.institutionMailingAddress'),
-			'domain' => Locale::translate('manager.subscriptions.domain'),
-			'ip_ranges' => Locale::translate('plugins.reports.subscriptions.ipRanges'),
-			'contact' => Locale::translate('manager.subscriptions.contact'),
-			'mailing_address' => Locale::translate('common.mailingAddress'),
-			'country' => Locale::translate('common.country'),
-			'email' => Locale::translate('user.email'),
-			'phone' => Locale::translate('user.phone'),
-			'fax' => Locale::translate('user.fax')
+			'institution_name' => __('manager.subscriptions.institutionName'),
+			'institution_mailing_address' => __('plugins.reports.subscriptions.institutionMailingAddress'),
+			'domain' => __('manager.subscriptions.domain'),
+			'ip_ranges' => __('plugins.reports.subscriptions.ipRanges'),
+			'contact' => __('manager.subscriptions.contact'),
+			'mailing_address' => __('common.mailingAddress'),
+			'country' => __('common.country'),
+			'email' => __('user.email'),
+			'phone' => __('user.phone'),
+			'fax' => __('user.fax')
 		);
 
 		$columns = array_merge($columnsCommon, $columnsInstitution);
@@ -203,7 +203,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getSubscriptionTypeSummaryString();
 						break;
 					case 'format':
-						$columns[$index] = Locale::translate($subscriptionType->getFormatString());
+						$columns[$index] = __($subscriptionType->getFormatString());
 						break;
 					case 'date_start':
 						$columns[$index] = $subscription->getDateStart();

@@ -21,7 +21,7 @@ class UserBlockPlugin extends BlockPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
-			Locale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
 		}
 		return $success;
 	}
@@ -47,14 +47,14 @@ class UserBlockPlugin extends BlockPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.block.user.displayName');
+		return __('plugins.block.user.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.block.user.description');
+		return __('plugins.block.user.description');
 	}
 
 	function getContents(&$templateMgr) {

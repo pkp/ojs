@@ -45,8 +45,8 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @return ProofreaderSubmission
 	 */
 	function &getSubmission($articleId, $journalId = null) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 
 		$params = array(
 			'title',
@@ -127,8 +127,8 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @return array ProofreaderSubmission
 	 */
 	function &getSubmissions($proofreaderId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 
 		$params = array(
 			'title', // Section title

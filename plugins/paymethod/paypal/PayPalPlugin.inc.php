@@ -30,7 +30,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @return String
 	 */	
 	function getDisplayName() {
-		return Locale::translate('plugins.paymethod.paypal.displayName');
+		return __('plugins.paymethod.paypal.displayName');
 	}
 
 	/**
@@ -38,7 +38,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @return String
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.paymethod.paypal.description');
+		return __('plugins.paymethod.paypal.description');
 	}   
 
 	/**
@@ -122,7 +122,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'no_note' => 1,
 			'no_shipping' => 1,
 			'currency_code' => $queuedPayment->getCurrencyCode(),
-			'lc' => String::substr(Locale::getLocale(), 3), 
+			'lc' => String::substr(AppLocale::getLocale(), 3), 
 			'custom' => $queuedPaymentId,
 			'notify_url' => Request::url(null, 'payment', 'plugin', array($this->getName(), 'ipn')),  
 			'return' => $queuedPayment->getRequestUrl(),
@@ -133,7 +133,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'cmd' => '_xclick'
 		);
 
-		Locale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('params', $params);
 		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getId(), 'paypalurl'));

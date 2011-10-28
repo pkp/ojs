@@ -46,8 +46,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @return LayoutEditorSubmission
 	 */
 	function &getSubmission($articleId, $journalId =  null) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			'title',
 			$primaryLocale,
@@ -126,8 +126,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @return array LayoutEditorSubmission
 	 */
 	function &getSubmissions($editorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
-		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
 		$params = array(
 			'title', // Section title
 			$primaryLocale,

@@ -153,7 +153,7 @@ class JournalSiteSettingsForm extends Form {
 			// Install default journal settings
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$titles = $this->getData('title');
-			Locale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON));
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON));
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('journalPath'),
@@ -170,11 +170,11 @@ class JournalSiteSettingsForm extends Form {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$section = new Section();
 			$section->setJournalId($journal->getId());
-			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());
-			$section->setAbbrev(Locale::translate('section.default.abbrev'), $journal->getPrimaryLocale());
+			$section->setTitle(__('section.default.title'), $journal->getPrimaryLocale());
+			$section->setAbbrev(__('section.default.abbrev'), $journal->getPrimaryLocale());
 			$section->setMetaIndexed(true);
 			$section->setMetaReviewed(true);
-			$section->setPolicy(Locale::translate('section.default.policy'), $journal->getPrimaryLocale());
+			$section->setPolicy(__('section.default.policy'), $journal->getPrimaryLocale());
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);

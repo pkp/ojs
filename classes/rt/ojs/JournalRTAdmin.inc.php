@@ -41,7 +41,7 @@ class JournalRTAdmin extends RTAdmin {
 
 		if ($deleteBeforeLoad) $this->dao->deleteVersionsByJournalId($this->journalId);
 
-		$localeFilesLocation = RT_DIRECTORY . DIRECTORY_SEPARATOR . Locale::getLocale();
+		$localeFilesLocation = RT_DIRECTORY . DIRECTORY_SEPARATOR . AppLocale::getLocale();
 		if (!file_exists($localeFilesLocation)) {
 			// If no reading tools exist for the given locale, use the default set
 			$localeFilesLocation = RT_DIRECTORY . DIRECTORY_SEPARATOR . DEFAULT_RT_LOCALE;
@@ -53,7 +53,7 @@ class JournalRTAdmin extends RTAdmin {
 		$versions = $parser->parseAll($localeFilesLocation);
 		foreach ($versions as $version) {
 			if ($overrideLocale) {
-				$version->setLocale(Locale::getLocale());
+				$version->setLocale(AppLocale::getLocale());
 			}
 			$this->dao->insertVersion($this->journalId, $version);
 		}

@@ -228,7 +228,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('homeHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homeHeaderTitleImage', Locale::translate('manager.setup.homeTitleImageInvalid'));
+							$setupForm->addError('homeHeaderTitleImage', __('manager.setup.homeTitleImageInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteHomeHeaderTitleImage')) {
@@ -239,7 +239,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('homeHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homeHeaderLogoImage', Locale::translate('manager.setup.homeHeaderImageInvalid'));
+							$setupForm->addError('homeHeaderLogoImage', __('manager.setup.homeHeaderImageInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteHomeHeaderLogoImage')) {
@@ -250,7 +250,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('journalFavicon', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('journalFavicon', Locale::translate('manager.setup.journalFaviconInvalid'));
+							$setupForm->addError('journalFavicon', __('manager.setup.journalFaviconInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteJournalFavicon')) {
@@ -261,7 +261,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('pageHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('pageHeaderTitleImage', Locale::translate('manager.setup.pageHeaderTitleImageInvalid'));
+							$setupForm->addError('pageHeaderTitleImage', __('manager.setup.pageHeaderTitleImageInvalid'));
 						}
 
 					} else if ($request->getUserVar('deletePageHeaderTitleImage')) {
@@ -272,7 +272,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('pageHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('pageHeaderLogoImage', Locale::translate('manager.setup.pageHeaderLogoImageInvalid'));
+							$setupForm->addError('pageHeaderLogoImage', __('manager.setup.pageHeaderLogoImageInvalid'));
 						}
 
 					} else if ($request->getUserVar('deletePageHeaderLogoImage')) {
@@ -283,7 +283,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('homepageImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homepageImage', Locale::translate('manager.setup.homepageImageInvalid'));
+							$setupForm->addError('homepageImage', __('manager.setup.homepageImageInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteHomepageImage')) {
@@ -293,7 +293,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadStyleSheet('journalStyleSheet')) {
 							$editData = true;
 						} else {
-							$setupForm->addError('journalStyleSheet', Locale::translate('manager.setup.journalStyleSheetInvalid'));
+							$setupForm->addError('journalStyleSheet', __('manager.setup.journalStyleSheetInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteJournalStyleSheet')) {

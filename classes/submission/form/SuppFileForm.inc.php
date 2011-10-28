@@ -41,7 +41,7 @@ class SuppFileForm extends Form {
 			true,
 			$article->getLocale(),
 			array_flip(array_intersect(
-				array_flip(Locale::getAllLocales()),
+				array_flip(AppLocale::getAllLocales()),
 				$supportedSubmissionLocales
 			))
 		);
@@ -131,7 +131,7 @@ class SuppFileForm extends Form {
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
 		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getId())) {
-			$this->addError('publicIssueId', Locale::translate('author.suppFile.suppFilePublicIdentificationExists'));
+			$this->addError('publicIssueId', __('author.suppFile.suppFilePublicIdentificationExists'));
 			$this->addErrorField('publicSuppFileId');
 		}
 

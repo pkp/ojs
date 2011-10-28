@@ -66,7 +66,7 @@ class IssueHandler extends Handler {
 			$arg = isset($args[0]) ? $args[0] : '';
 			$showToc = ($arg == 'showToc') ? true : false;
 
-			$locale = Locale::getLocale();
+			$locale = AppLocale::getLocale();
 			$templateMgr->assign('locale', $locale);
 
 			$coverPagePath = Request::getBaseUrl() . '/';
@@ -127,8 +127,8 @@ class IssueHandler extends Handler {
 			}			
 			
 		} else {
-			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
-			$issueHeadingTitle = Locale::translate('current.noCurrentIssue');
+			$issueCrumbTitle = __('current.noCurrentIssue');
+			$issueHeadingTitle = __('current.noCurrentIssue');
 		}
  
 		// Display creative commons logo/licence if enabled
@@ -190,7 +190,7 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
-			$locale = Locale::getLocale();
+			$locale = AppLocale::getLocale();
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
@@ -256,8 +256,8 @@ class IssueHandler extends Handler {
 			}			
 
 		} else {
-			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
-			$issueHeadingTitle = Locale::translate('archive.issueUnavailable');
+			$issueCrumbTitle = __('archive.issueUnavailable');
+			$issueHeadingTitle = __('archive.issueUnavailable');
 		}
 
 		if ($styleFileName = $issue->getStyleFileName()) {
@@ -292,7 +292,7 @@ class IssueHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);
-		$templateMgr->assign('locale', Locale::getLocale());
+		$templateMgr->assign('locale', AppLocale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
@@ -300,7 +300,7 @@ class IssueHandler extends Handler {
 		
 	function setupTemplate() {
 		parent::setupTemplate();
-		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR));
 	}
 }
 

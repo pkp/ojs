@@ -67,47 +67,47 @@ class OJSQueuedPayment extends QueuedPayment {
 					$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
 				}
-				if ( !$subscription) return Locale::translate('payment.type.subscription');
+				if ( !$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
 
-				return Locale::translate('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
 			case PAYMENT_TYPE_DONATION:
 				if ( $journal->getLocalizedSetting('donationFeeName') != '') {
 					return $journal->getLocalizedSetting('donationFeeName');
 				} else {
-					return Locale::translate('payment.type.donation');
+					return __('payment.type.donation');
 				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ( $journal->getLocalizedSetting('membershipFeeName') != '') {
 					return $journal->getLocalizedSetting('membershipFeeName');
 				} else {
-					return Locale::translate('payment.type.membership');
+					return __('payment.type.membership');
 				}
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				if ( $journal->getLocalizedSetting('purchaseArticleFeeName') != '' ) {
 					return $journal->getLocalizedSetting('purchaseArticleFeeName');
 				} else {
-					return Locale::translate('payment.type.purchaseArticle');
+					return __('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ( $journal->getLocalizedSetting('submissionFeeName') != '' ) {
 					return $journal->getLocalizedSetting('submissionFeeName');
 				} else {
-					return Locale::translate('payment.type.submission');
+					return __('payment.type.submission');
 				}
 			case PAYMENT_TYPE_FASTTRACK:
 				if ( $journal->getLocalizedSetting('fastTrackFeeName') != '' ) {
 					return $journal->getLocalizedSetting('fastTrackFeeName');
 				} else {
-					return Locale::translate('payment.type.fastTrack');
+					return __('payment.type.fastTrack');
 				}
 			case PAYMENT_TYPE_PUBLICATION:
 				if ( $journal->getLocalizedSetting('publicationFeeName') != '' ) {
 					return $journal->getLocalizedSetting('publicationFeeName');
 				} else {
-					return Locale::translate('payment.type.publication');
+					return __('payment.type.publication');
 				}
 		}
 	}
@@ -133,7 +133,7 @@ class OJSQueuedPayment extends QueuedPayment {
 					$individualSubscriptionDAO =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDAO->getSubscription($this->assocId);
 				}
-				if ( !$subscription) return Locale::translate('payment.type.subscription');
+				if ( !$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
@@ -142,37 +142,37 @@ class OJSQueuedPayment extends QueuedPayment {
 				if ( $journal->getLocalizedSetting('donationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('donationFeeDescription');
 				} else {
-					return Locale::translate('payment.type.donation');
+					return __('payment.type.donation');
 				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ( $journal->getLocalizedSetting('membershipFeeDescription') != '') {
 					return $journal->getLocalizedSetting('membershipFeeDescription');
 				} else {
-					return Locale::translate('payment.type.membership');
+					return __('payment.type.membership');
 				}
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				if ( $journal->getLocalizedSetting('purchaseArticleFeeDescription') != '') {
 					return $journal->getLocalizedSetting('purchaseArticleFeeDescription');
 				} else {
-					return Locale::translate('payment.type.purchaseArticle');
+					return __('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ( $journal->getLocalizedSetting('submissionFeeDescription') != '' ) {
 					return $journal->getLocalizedSetting('submissionFeeDescription');
 				} else {
-					return Locale::translate('payment.type.submission');
+					return __('payment.type.submission');
 				}
 			case PAYMENT_TYPE_FASTTRACK:
 				if ( $journal->getLocalizedSetting('fastTrackFeeDescription') != '' ) {
 					return $journal->getLocalizedSetting('fastTrackFeeDescription');
 				} else {
-					return Locale::translate('payment.type.fastTrack');
+					return __('payment.type.fastTrack');
 				}
 			case PAYMENT_TYPE_PUBLICATION:
 				if ( $journal->getLocalizedSetting('publicationFeeDescription') != '' ) {
 					return $journal->getLocalizedSetting('publicationFeeDescription');
 				} else {
-					return Locale::translate('payment.type.publication');
+					return __('payment.type.publication');
 				}
 		}
 	}

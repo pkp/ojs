@@ -34,7 +34,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.announcementfeed.displayName');
+		return __('plugins.generic.announcementfeed.displayName');
 	}
 
 	/**
@@ -42,7 +42,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.announcementfeed.description');
+		return __('plugins.generic.announcementfeed.description');
 	}
 
 	/**
@@ -99,7 +99,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', Locale::translate('plugins.generic.announcementfeed.settings'));
+			$verbs[] = array('settings', __('plugins.generic.announcementfeed.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}

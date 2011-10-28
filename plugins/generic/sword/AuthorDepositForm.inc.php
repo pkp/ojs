@@ -98,7 +98,7 @@ class AuthorDepositForm extends Form {
 				$this->getData('authorDepositPassword')
 			);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $this->getData('authorDepositUrl'))), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$notificationManager->createTrivialNotification(__('notification.notification'), __('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $this->getData('authorDepositUrl'))), NOTIFICATION_TYPE_SUCCESS, null, false);
 		}
 
 		$depositableDepositPoints = $this->_getDepositableDepositPoints();
@@ -118,7 +118,7 @@ class AuthorDepositForm extends Form {
 				$depositPoint['password']
 			);
 
-			$notificationManager->createTrivialNotification(Locale::translate('notification.notification'), Locale::translate('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
+			$notificationManager->createTrivialNotification(__('notification.notification'), __('plugins.generic.sword.depositComplete', array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $depositPoint['name'])), NOTIFICATION_TYPE_SUCCESS, null, false);
 		}
 
 		$deposit->cleanup();

@@ -282,13 +282,13 @@ class SubscriptionForm extends Form {
 			$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
 		}
 		if ($subscriptionPhone != '') {
-			$subscriptionContactSignature .= "\n" . Locale::translate('user.phone') . ': ' . $subscriptionPhone;
+			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
 		}
 		if ($subscriptionFax != '') {
-			$subscriptionContactSignature .= "\n" . Locale::translate('user.fax') . ': ' . $subscriptionFax;
+			$subscriptionContactSignature .= "\n" . __('user.fax') . ': ' . $subscriptionFax;
 		}
 
-		$subscriptionContactSignature .= "\n" . Locale::translate('user.email') . ': ' . $subscriptionEmail;
+		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
 
 		$paramArray = array(
 			'subscriberName' => $user->getFullName(),
