@@ -75,13 +75,6 @@ class CreateReviewerForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
-		// Get all available interests to populate the autocomplete with
-		if ($interestDao->getAllUniqueInterests()) {
-			$existingInterests = $interestDao->getAllUniqueInterests();
-		} else $existingInterests = null;
-		$templateMgr->assign('existingInterests', $existingInterests);
-
 		parent::display();
 	}
 
@@ -104,8 +97,8 @@ class CreateReviewerForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
-			'interests',
-			'interestsKeywords',
+			'interestsTextOnly',
+			'keywords',
 			'gossip',
 			'userLocales',
 			'sendNotify',
@@ -121,10 +114,10 @@ class CreateReviewerForm extends Form {
 			$this->setData('username', strtolower($this->getData('username')));
 		}
 
-		$interests = $this->getData('interestsKeywords');
-		if ($interests != null && is_array($interests)) {
+		$keywords = $this->getData('keywords');
+		if ($keywords != null && is_array($keywords['interests'])) {
 			// The interests are coming in encoded -- Decode them for DB storage
-			$this->setData('interestsKeywords', array_map('urldecode', $interests));
+			$this->setData('interestsKeywords', array_map('urldecode', $keywords['interests']));
 		}
 	}
 
@@ -186,9 +179,10 @@ class CreateReviewerForm extends Form {
 		$userId = $userDao->insertUser($user);
 
 		// Insert the user interests
+		$interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
 		import('lib.pkp.classes.user.InterestManager');
 		$interestManager = new InterestManager();
-		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+		$interestManager->setInterestsForUser($user, $interests);
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$journal =& Request::getJournal();

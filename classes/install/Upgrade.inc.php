@@ -932,6 +932,74 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/*
+	 * For 2.3.7 upgrade: Improve reviewing interests storage structure
+	 * @return boolean
+	 */
+	function migrateReviewingInterests2() {
+		$interestDao =& DAORegistry::getDAO('InterestDAO'); /* @var $interestDao InterestDAO */
+		$interestEntryDao =& DAORegistry::getDAO('InterestEntryDAO'); /* @var $interestEntryDao InterestEntryDAO */
+
+		// Check if this upgrade method has already been run to prevent data corruption on subsequent upgrade attempts
+		$idempotenceCheck =& $interestDao->retrieve('SELECT * FROM controlled_vocabs cv WHERE symbolic = ?', array('interest'));
+		$row = $idempotenceCheck->GetRowAssoc(false);
+		if ($idempotenceCheck->RecordCount() == 1 && $row['assoc_id'] == 0 && $row['assoc_type'] == 0) return true;
+		unset($idempotenceCheck);
+
+		// Get all interests for all users
+		$result =& $interestDao->retrieve('SELECT cves.setting_value as interest_keyword, cv.assoc_id as user_id
+											FROM controlled_vocabs cv
+											LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
+											LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)');
+
+		$oldEntries =& $interestDao->retrieve('SELECT controlled_vocab_entry_id FROM controlled_vocab_entry_settings cves WHERE cves.setting_name = ?', array('interest'));
+		while (!$oldEntries->EOF) {
+			$row = $oldEntries->GetRowAssoc(false);
+			$controlledVocabEntryId = (int) $row['controlled_vocab_entry_id'];
+			$interestDao->update('DELETE FROM controlled_vocab_entries WHERE controlled_vocab_entry_id = ?', $controlledVocabEntryId);
+			$interestDao->update('DELETE FROM controlled_vocab_entry_settings WHERE controlled_vocab_entry_id = ?', $controlledVocabEntryId);
+			$oldEntries->MoveNext();
+		}
+		$oldEntries->Close();
+		unset($oldEntries);
+
+		$controlledVocab = $interestDao->build();
+
+		// Insert the user interests using the new storage structure
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+
+			$userId = (int) $row['user_id'];
+			$interest = $row['interest_keyword'];
+
+			$interestEntry = $interestEntryDao->getBySetting($interest, $controlledVocab->getSymbolic(),
+				$controlledVocab->getAssocId(), $controlledVocab->getAssocType(),
+				$controlledVocab->getSymbolic()
+			);
+
+			if(!$interestEntry) {
+				$interestEntry = $interestEntryDao->newDataObject(); /* @var $interestEntry InterestEntry */
+				$interestEntry->setInterest($interest);
+				$interestEntry->setControlledVocabId($controlledVocab->getId());
+				$interestEntryDao->insertObject($interestEntry);
+			}
+
+			$interestEntryDao->update(
+				'INSERT INTO user_interests (user_id, controlled_vocab_entry_id) VALUES (?, ?)',
+				array($userId, (int) $interestEntry->getId())
+			);
+
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+
+		// Remove the obsolete interest data
+		$interestDao->update('DELETE FROM controlled_vocabs WHERE symbolic = ?', array('interest'));
+
+		return true;
+	}
 }
 
 ?>

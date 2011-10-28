@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_user
  */
- 
+
 /**
  * @file pages/user/index.php
  *
@@ -11,12 +11,9 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_user
- * @brief Handle requests for user functions. 
+ * @brief Handle requests for user functions.
  *
  */
-
-// $Id$
-
 
 switch ($op) {
 	//
@@ -45,6 +42,9 @@ switch ($op) {
 		define('HANDLER_CLASS', 'EmailHandler');
 		import('pages.user.EmailHandler');
 		break;
+	//
+	// Misc.
+	//
 	case 'index':
 	case 'gifts':
 	case 'redeemGift':
@@ -61,6 +61,10 @@ switch ($op) {
 	case 'payMembership':
 		define('HANDLER_CLASS', 'UserHandler');
 		import('pages.user.UserHandler');
+		break;
+	case 'getInterests':
+		define('HANDLER_CLASS', 'PKPUserHandler');
+		import('lib.pkp.pages.user.PKPUserHandler');
 		break;
 }
 

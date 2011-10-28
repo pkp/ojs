@@ -162,16 +162,9 @@ class ProfileForm extends Form {
 	 */
 	function initData(&$args, &$request) {
 		$user =& $request->getUser();
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
 
-		// Get all available interests to populate the autocomplete with
-		if ($interestDao->getAllUniqueInterests()) {
-			$existingInterests = $interestDao->getAllUniqueInterests();
-		} else $existingInterests = null;
-		// Get the user's current set of interests
-		if ($interestDao->getInterests($user->getId())) {
-			$currentInterests = $interestDao->getInterests($user->getId());
-		} else $currentInterests = null;
+		import('lib.pkp.classes.user.InterestManager');
+		$interestManager = new InterestManager();
 
 		$this->_data = array(
 			'salutation' => $user->getSalutation(),
@@ -193,8 +186,8 @@ class ProfileForm extends Form {
 			'isAuthor' => Validation::isAuthor(),
 			'isReader' => Validation::isReader(),
 			'isReviewer' => Validation::isReviewer(),
-			'existingInterests' => $existingInterests,
-			'interestsKeywords' => $currentInterests
+			'interestsKeywords' => $interestManager->getInterestsForUser($user),
+			'interestsTextOnly' => $interestManager->getInterestsString($user),
 		);
 	}
 
@@ -218,8 +211,8 @@ class ProfileForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
-			'interests',
-			'interestsKeywords',
+			'keywords',
+			'interestsTextOnly',
 			'userLocales',
 			'readerRole',
 			'authorRole',
@@ -230,10 +223,10 @@ class ProfileForm extends Form {
 			$this->setData('userLocales', array());
 		}
 
-		$interests = $this->getData('interestsKeywords');
-		if ($interests != null && is_array($interests)) {
+		$keywords = $this->getData('keywords');
+		if ($keywords != null && is_array($keywords['interests'])) {
 			// The interests are coming in encoded -- Decode them for DB storage
-			$this->setData('interestsKeywords', array_map('urldecode', $interests));
+			$this->setData('interestsKeywords', array_map('urldecode', $keywords['interests']));
 		}
 	}
 
@@ -258,13 +251,12 @@ class ProfileForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
-		$userId = $user->getId();
 
 		// Insert the user interests
+		$interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
 		import('lib.pkp.classes.user.InterestManager');
 		$interestManager = new InterestManager();
-		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
-
+		$interestManager->setInterestsForUser($user, $interests);
 
 		$site =& Request::getSite();
 		$availableLocales = $site->getSupportedLocales();

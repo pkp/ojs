@@ -757,8 +757,6 @@ class SectionEditorSubmissionDAO extends DAO {
 		$paramArray = array((int) $articleId, (int) $round);
 		$joinInterests = false;
 		if($searchType == USER_FIELD_INTERESTS) {
-			$paramArray[] = ASSOC_TYPE_USER;
-			$paramArray[] = 'interest';
 			$joinInterests = true;
 		}
 
@@ -829,9 +827,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				($selectIncomplete ? ', COUNT(ai.review_id) AS incomplete ' : '') .
 			'FROM roles r, users u
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?) ' .
-				($joinInterests ? 'LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
-				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id) ':'') .
+				($joinInterests ? 'LEFT JOIN user_interests ui ON (ui.user_id = u.user_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = ui.controlled_vocab_entry_id) ':'') .
 		 		($joinAll ? 'LEFT JOIN review_assignments ac ON (ac.reviewer_id = u.user_id) ':'') .
 				($joinComplete ? 'LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id AND ra.date_completed IS NOT NULL) ':'') .
 				($joinIncomplete ? 'LEFT JOIN review_assignments ai ON (ai.reviewer_id = u.user_id AND ai.date_notified IS NOT NULL AND ai.cancelled = 0 AND ai.date_completed IS NULL) ':'') .

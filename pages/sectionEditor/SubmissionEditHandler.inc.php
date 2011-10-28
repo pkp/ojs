@@ -453,7 +453,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 
 			$rangeInfo =& Handler::getRangeInfo('reviewers');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection); /* @var $reviewers DAOResultFactory */
 
 			$journal = Request::getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -841,6 +841,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$country = $countryDao->getCountry($user->getCountry());
 			}
 			$templateMgr->assign('country', $country);
+
+			$templateMgr->assign('userInterests', $user->getInterestString());
 
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('localeNames', AppLocale::getAllLocales());

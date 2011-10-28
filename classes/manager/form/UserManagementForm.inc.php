@@ -140,19 +140,12 @@ class UserManagementForm extends Form {
 	 * Initialize form data from current user profile.
 	 */
 	function initData(&$args, &$request) {
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
 		if (isset($this->userId)) {
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$user =& $userDao->getUser($this->userId);
 
-			// Get all available interests to populate the autocomplete with
-			if ($interestDao->getAllUniqueInterests()) {
-				$existingInterests = $interestDao->getAllUniqueInterests();
-			} else $existingInterests = null;
-			// Get the user's current set of interests
-			if ($interestDao->getInterests($user->getId())) {
-				$currentInterests = $interestDao->getInterests($user->getId());
-			} else $currentInterests = null;
+			import('lib.pkp.classes.user.InterestManager');
+			$interestManager = new InterestManager();
 
 			if ($user != null) {
 				$this->_data = array(
@@ -173,8 +166,8 @@ class UserManagementForm extends Form {
 					'mailingAddress' => $user->getMailingAddress(),
 					'country' => $user->getCountry(),
 					'biography' => $user->getBiography(null), // Localized
-					'existingInterests' => $existingInterests,
-					'interestsKeywords' => $currentInterests,
+					'interestsKeywords' => $interestManager->getInterestsForUser($user),
+					'interestsTextOnly' => $interestManager->getInterestsString($user),
 					'gossip' => $user->getGossip(null), // Localized
 					'userLocales' => $user->getLocales()
 				);
@@ -218,8 +211,8 @@ class UserManagementForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
-			'interestsKeywords',
-			'interests',
+			'interestsTextOnly',
+			'keywords',
 			'gossip',
 			'userLocales',
 			'generatePassword',
@@ -239,10 +232,10 @@ class UserManagementForm extends Form {
 			$this->setData('username', strtolower($this->getData('username')));
 		}
 
-		$interests = $this->getData('interestsKeywords');
-		if ($interests != null && is_array($interests)) {
+		$keywords = $this->getData('keywords');
+		if ($keywords != null && is_array($keywords['interests'])) {
 			// The interests are coming in encoded -- Decode them for DB storage
-			$this->setData('interestsKeywords', array_map('urldecode', $interests));
+			$this->setData('interestsKeywords', array_map('urldecode', $keywords['interests']));
 		}
 	}
 
@@ -370,9 +363,11 @@ class UserManagementForm extends Form {
 			}
 		}
 
+		// Insert the user interests
+		$interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
 		import('lib.pkp.classes.user.InterestManager');
 		$interestManager = new InterestManager();
-		$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+		$interestManager->setInterestsForUser($user, $interests);
 	}
 }
 
