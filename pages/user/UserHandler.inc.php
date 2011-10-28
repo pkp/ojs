@@ -12,17 +12,14 @@
  * @brief Handle requests for user functions.
  */
 
-// $Id$
+import('lib.pkp.pages.user.PKPUserHandler');
 
-
-import('classes.handler.Handler');
-
-class UserHandler extends Handler {
+class UserHandler extends PKPUserHandler {
 	/**
 	 * Constructor
 	 **/
 	function UserHandler() {
-		parent::Handler();
+		parent::PKPUserHandler();
 	}
 
 	/**
@@ -41,10 +38,10 @@ class UserHandler extends Handler {
 
 		$journal =& Request::getJournal();
 		$templateMgr->assign('helpTopicId', 'user.userHome');
-		
+
 		$user =& Request::getUser();
 		$userId = $user->getId();
-		
+
 		$setupIncomplete = array();
 		$submissionsCount = array();
 		$isValid = array();
@@ -59,10 +56,10 @@ class UserHandler extends Handler {
 			// Fetch the user's roles for each journal
 			while ($journal =& $journals->next()) {
 				$journalId = $journal->getId();
-				
+
 				// Determine if journal setup is incomplete, to provide a message for JM
 				$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
-							
+
 				$roles =& $roleDao->getRolesByUserId($userId, $journalId);
 				if (!empty($roles)) {
 					$userJournals[] =& $journal;
@@ -77,14 +74,14 @@ class UserHandler extends Handler {
 
 		} else { // Currently within a journal's context.
 			$journalId = $journal->getId();
-			
+
 			// Determine if journal setup is incomplete, to provide a message for JM
 			$setupIncomplete[$journalId] = $this->checkIncompleteSetup($journal);
-			
+
 			$userJournals = array($journal);
-			
+
 			$this->getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
-			
+
 			$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionsEnabled = $journal->getSetting('publishingMode') ==  PUBLISHING_MODE_SUBSCRIPTION
 				&& ($subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false)
@@ -108,13 +105,13 @@ class UserHandler extends Handler {
 
 		$templateMgr->assign('isValid', $isValid);
 		$templateMgr->assign('submissionsCount', $submissionsCount);
-		$templateMgr->assign('setupIncomplete', $setupIncomplete); 
+		$templateMgr->assign('setupIncomplete', $setupIncomplete);
 		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $userId, ROLE_ID_SITE_ADMIN));
 		$templateMgr->display('user/index.tpl');
 	}
 
 	/**
-	 * Display subscriptions page 
+	 * Display subscriptions page
 	 **/
 	function subscriptions() {
 		$this->validate();
@@ -123,7 +120,7 @@ class UserHandler extends Handler {
 		if (!$journal) Request::redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION)
 			Request::redirect(null, 'user');
-		
+
 		$journalId = $journal->getId();
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$individualSubscriptionTypesExist = $subscriptionTypeDAO->subscriptionTypesExistByInstitutional($journalId, false);
@@ -174,14 +171,14 @@ class UserHandler extends Handler {
 		$templateMgr->display('user/subscriptions.tpl');
 
 	}
-	
+
 	/**
 	 * Gather information about a user's role within a journal.
 	 * @param $userId int
-	 * @param $journalId int 
+	 * @param $journalId int
 	 * @param $submissionsCount array reference
 	 * @param $isValid array reference
-	
+
 	 */
 	function getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
 		if (Validation::isJournalManager($journalId)) {
@@ -227,14 +224,14 @@ class UserHandler extends Handler {
 			$isValid["Reviewer"][$journalId] = true;
 		}
 	}
-	
+
 	/**
 	 * Determine if the journal's setup has been sufficiently completed.
-	 * @param $journal Object 
+	 * @param $journal Object
 	 * @return boolean True iff setup is incomplete
 	 */
 	function checkIncompleteSetup($journal) {
-		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" || 
+		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" ||
 		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
 			return true;
 		} else return false;
@@ -407,7 +404,7 @@ class UserHandler extends Handler {
 	function purchaseSubscription($args) {
 		$this->validate();
 
-		if (empty($args)) Request::redirect(null, 'user'); 
+		if (empty($args)) Request::redirect(null, 'user');
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
@@ -443,7 +440,7 @@ class UserHandler extends Handler {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
 				Request::redirect(null, 'user');
-			}	
+			}
 
 			// Ensure subscription can be updated
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
@@ -455,7 +452,7 @@ class UserHandler extends Handler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
 
 			if ($institutional) {
 				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
@@ -470,7 +467,7 @@ class UserHandler extends Handler {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
 					Request::redirect(null, 'user');
-				}	
+				}
 				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
 			}
 		}
@@ -482,7 +479,7 @@ class UserHandler extends Handler {
 	function payPurchaseSubscription($args) {
 		$this->validate();
 
-		if (empty($args)) Request::redirect(null, 'user'); 
+		if (empty($args)) Request::redirect(null, 'user');
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
@@ -518,7 +515,7 @@ class UserHandler extends Handler {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
 				Request::redirect(null, 'user');
-			}	
+			}
 
 			// Ensure subscription can be updated
 			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
@@ -530,7 +527,7 @@ class UserHandler extends Handler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
 
 			if ($institutional) {
 				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
@@ -545,7 +542,7 @@ class UserHandler extends Handler {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
 					Request::redirect(null, 'user');
-				}	
+				}
 				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
 			}
 		}
@@ -582,7 +579,7 @@ class UserHandler extends Handler {
 	function completePurchaseSubscription($args) {
 		$this->validate();
 
-		if (count($args) != 2) Request::redirect(null, 'user'); 
+		if (count($args) != 2) Request::redirect(null, 'user');
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
@@ -615,7 +612,7 @@ class UserHandler extends Handler {
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
-		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
 
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
@@ -629,7 +626,7 @@ class UserHandler extends Handler {
 	function payRenewSubscription($args) {
 		$this->validate();
 
-		if (count($args) != 2) Request::redirect(null, 'user'); 
+		if (count($args) != 2) Request::redirect(null, 'user');
 
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect(null, 'user');
@@ -659,7 +656,7 @@ class UserHandler extends Handler {
 
 		$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
 
-		if ($subscription->isNonExpiring()) Request::redirect(null, 'user'); 
+		if ($subscription->isNonExpiring()) Request::redirect(null, 'user');
 
 		import('classes.subscription.Subscription');
 		$subscriptionStatus = $subscription->getStatus();
@@ -669,7 +666,7 @@ class UserHandler extends Handler {
 			SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 		);
 
-		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user'); 
+		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
 
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());

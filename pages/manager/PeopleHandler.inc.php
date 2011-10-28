@@ -698,7 +698,6 @@ class PeopleHandler extends ManagerHandler {
 			$user = $userDao->getUserByUsername($userId);
 		}
 
-
 		if ($user == null) {
 			// Non-existent user requested
 			$templateMgr->assign('pageTitle', 'manager.people');
@@ -729,6 +728,8 @@ class PeopleHandler extends ManagerHandler {
 				$country = $countryDao->getCountry($user->getCountry());
 			}
 			$templateMgr->assign('country', $country);
+
+			$templateMgr->assign('userInterests', $user->getInterestString());
 
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('localeNames', AppLocale::getAllLocales());

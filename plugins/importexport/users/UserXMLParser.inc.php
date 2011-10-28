@@ -49,7 +49,7 @@ class UserXMLParser {
 	 * @param $file string path to the XML file to parse
 	 * @return array ImportedUsers the collection of users read from the file
 	 */
-	function &parseData($file) {	
+	function &parseData($file) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		$success = true;
@@ -251,13 +251,12 @@ class UserXMLParser {
 			}
 
 			// Add reviewing interests to interests table
-			$interestDao =& DAORegistry::getDAO('InterestDAO');
 			$interests = $user->getTemporaryInterests();
 			$interests = explode(',', $interests);
 			$interests = array_map('trim', $interests); // Trim leading whitespace
-			if(is_array($interests) && !empty($interests)) {
-				$interestDao->insertInterests($interests, $user->getId());
-			}
+			import('lib.pkp.classes.user.InterestManager');
+			$interestManager = new InterestManager();
+			$interestManager->setInterestsForUser($user, $interests);
 
 			// Enroll user in specified roles
 			// If the user is already enrolled in a role, that role is skipped
@@ -284,7 +283,7 @@ class UserXMLParser {
 			}
 
 			if ($sendNotify && !$userExists) {
-				// Send email notification to user as if user just registered themselves			
+				// Send email notification to user as if user just registered themselves
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
 				$mail->sendWithParams(array(
 					'journalName' => $journal->getTitle($journal->getPrimaryLocale()),
@@ -399,7 +398,7 @@ class ImportedUser extends User {
 	 * @param $unencryptedPassword string
 	 */
 	function setUnencryptedPassword($unencryptedPassword) {
-		$this->setData('unencryptedPassword', $unencryptedPassword);	
+		$this->setData('unencryptedPassword', $unencryptedPassword);
 	}
 
 	/**

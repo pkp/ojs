@@ -146,7 +146,8 @@ class RoleDAO extends DAO {
 	function &getUsersByRoleId($roleId = null, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$users = array();
 
-		$paramArray = array(ASSOC_TYPE_USER, 'interest');
+		$joinInterests = $searchType == USER_FIELD_INTERESTS ? true: false;
+		$paramArray = array();
 		if (isset($roleId)) $paramArray[] = (int) $roleId;
 		if (isset($journalId)) $paramArray[] = (int) $journalId;
 
@@ -194,10 +195,10 @@ class RoleDAO extends DAO {
 		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
-			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
-				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id),
-				roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
+			'SELECT DISTINCT u.* FROM users AS u' .
+				($joinInterests ? ' LEFT JOIN user_interests ui ON (ui.user_id = u.user_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = ui.controlled_vocab_entry_id) ':'') . ', roles AS r
+				WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
 			$paramArray,
 			$dbResultRange
 		);
@@ -218,7 +219,8 @@ class RoleDAO extends DAO {
 	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$users = array();
 
-		$paramArray = array(ASSOC_TYPE_USER, 'interest', (int) $journalId);
+		$joinInterests = $searchType == USER_FIELD_INTERESTS ? true: false;
+		$paramArray = array((int) $journalId);
 		$searchSql = '';
 
 		$searchTypeMap = array(
@@ -259,11 +261,10 @@ class RoleDAO extends DAO {
 		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
-
-			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN controlled_vocabs cv ON (cv.assoc_type = ? AND cv.assoc_id = u.user_id AND cv.symbolic = ?)
-				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id),
-				roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
+			'SELECT DISTINCT u.* FROM users AS u' .
+				($joinInterests ? ' LEFT JOIN user_interests ui ON (ui.user_id = u.user_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = ui.controlled_vocab_entry_id) ':'') . ', roles AS r
+				WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
 			$paramArray,
 			$dbResultRange
 		);
