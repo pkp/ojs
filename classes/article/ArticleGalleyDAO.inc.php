@@ -167,6 +167,18 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Get a list of additional fields that do not have
+	 * dedicated accessors.
+	 * @return array
+	 */
+	function getAdditionalFieldNames() {
+		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'doiSuffix';
+		return $additionalFields;
+	}
+
+	/**
 	 * Update the localized fields for this galley.
 	 * @param $galley
 	 */
@@ -216,6 +228,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setFileSize($row['file_size']);
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
+		$galley->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
@@ -231,9 +244,9 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
-				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
+				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, doi)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$galley->getPublicGalleyId(),
 				(int) $galley->getArticleId(),
@@ -243,7 +256,8 @@ class ArticleGalleyDAO extends DAO {
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence(),
-				$galley->getRemoteURL()
+				$galley->getRemoteURL(),
+				$galley->getStoredDOI()
 			)
 		);
 		$galley->setId($this->getInsertGalleyId());
@@ -269,7 +283,8 @@ class ArticleGalleyDAO extends DAO {
 					html_galley = ?,
 					style_file_id = ?,
 					seq = ?,
-					remote_url = ?
+					remote_url = ?,
+					doi = ?
 				WHERE galley_id = ?',
 			array(
 				$galley->getPublicGalleyId(),
@@ -280,6 +295,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
 				$galley->getRemoteURL(),
+				$galley->getStoredDOI(),
 				(int) $galley->getId()
 			)
 		);
@@ -481,6 +497,42 @@ class ArticleGalleyDAO extends DAO {
 			'DELETE FROM article_html_galley_images WHERE galley_id = ?',
 			(int) $galleyId
 		);
+	}
+
+	/**
+	 * Change the DOI.
+	 * @param $galleyId int
+	 * @param $doi string
+	 */
+	function changeDOI($galleyId, $doi) {
+		$this->update(
+			'UPDATE article_galleys SET doi = ? WHERE galley_id = ?', array($doi, (int) $galleyId)
+		);
+	}
+
+	/**
+	 * Checks if the given DOI suffix exists.
+	 * @param $doiSuffix string
+	 * @param $galleyId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function doiSuffixExists($doiSuffix, $galleyId, $journalId) {
+		if (is_null($galleyId)) $galleyId = 0;
+		$result =& $this->retrieve(
+			'SELECT COUNT(*)
+			FROM article_galleys g
+			INNER JOIN article_galley_settings gst ON g.galley_id = gst.galley_id
+			INNER JOIN articles a ON g.article_id = a.article_id
+			WHERE gst.setting_name = ? AND gst.setting_value = ? AND g.galley_id <> ? AND a.journal_id = ?',
+			array('doiSuffix', $doiSuffix, (int) $galleyId, (int) $journalId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 }
 

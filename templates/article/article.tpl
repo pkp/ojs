@@ -6,6 +6,18 @@
  *
  * Article View.
  *}
+{if $galley}
+	{assign var=pubObject value=$galley}
+{else}
+	{assign var=pubObject value=$article}
+{/if}
+{if $issue->getPublished()}
+	{assign var=doi value=$pubObject->getDOI()}
+{else}
+	{assign var=doi value=$pubObject->getDOI(true)}{* Don't affix DOI *}
+{/if}
+
+
 {include file="article/header.tpl"}
 
 {if $galley}
@@ -134,6 +146,13 @@
 			&nbsp;<a href="{url page="about" op="subscriptions"}" target="_parent">{translate key="reader.subscribersOnly"}</a>
 		{/if}
 	{/if}
+{/if}
+
+{* FIXME: This will be moved to DOI PID-plug-in in the next release. *}
+{if $doi}
+	<br />
+	<br />
+	doi:<a id="pub-id::doi" href="http://dx.doi.org/{$doi|escape|escape:url}">{$doi|escape}</a>
 {/if}
 
 {include file="article/comments.tpl"}

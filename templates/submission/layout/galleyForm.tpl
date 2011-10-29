@@ -85,6 +85,8 @@
 </div>
 <br/>
 
+{include file="editor/editDoi.tpl" objectType="Galley"}
+
 {call_hook name="Templates::Submission::Layout::GalleyForm::AdditionalMetadata"}
 
 {if $galley->isHTMLGalley()}

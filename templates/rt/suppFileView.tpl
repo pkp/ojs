@@ -62,6 +62,17 @@
 		<td class="label">{translate key="common.language"}</td>
 		<td class="value">{$suppFile->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
+	{if $issue && $issue->getPublished()}
+		{assign var=doi value=$suppFile->getDOI()}
+	{else}
+		{assign var=doi value=$suppFile->getDOI(true)}{* Don't affix DOI *}
+	{/if}
+	{if $doi}
+		<tr valign="top">
+			<td>{translate key="rt.metadata.pkp.doi"}</td>
+			<td>{$doi|escape}</a></td>
+		</tr>
+	{/if}
 </table>
 </div>
 

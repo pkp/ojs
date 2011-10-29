@@ -115,6 +115,9 @@
 	</tr>
 </table>
 </div>
+
+{include file="editor/editDoi.tpl" objectType="Issue"}
+
 {if ($currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && !$enableDelayedOpenAccess) || ($currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $enableDelayedOpenAccess && $issue->getPublished())}
 <div class="separator"></div>
 <div id="issueAccess">

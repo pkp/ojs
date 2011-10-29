@@ -17,6 +17,8 @@
  * @brief Class for Issue.
  */
 
+import('classes.article.DoiHelper');
+
 define('ISSUE_ACCESS_OPEN', 1);
 define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
@@ -278,6 +280,31 @@ class Issue extends DataObject {
 	 */
 	function setPublicIssueId($publicIssueId) {
 		return $this->setData('publicIssueId', $publicIssueId);
+	}
+
+	/**
+	 * Get or generate DOI.
+	 * @var $preview boolean If true, generate a non-persisted preview only.
+	 */
+	function getDOI($preview = false) {
+		$doiHelper = new DoiHelper();
+		return $doiHelper->getDOI($this, $preview);
+	}
+
+	/**
+	 * Get stored DOI.
+	 * @return int
+	 */
+	function getStoredDOI() {
+		return $this->getData('doi');
+	}
+
+	/**
+	 * Set the stored DOI.
+	 * @param $doi string
+	 */
+	function setStoredDOI($doi) {
+		return $this->setData('doi', $doi);
 	}
 
 	/**

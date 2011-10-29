@@ -98,6 +98,18 @@ class SuppFileDAO extends DAO {
 	}
 
 	/**
+	 * Get a list of additional fields that do not have
+	 * dedicated accessors.
+	 * @return array
+	 */
+	function getAdditionalFieldNames() {
+		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'doiSuffix';
+		return $additionalFields;
+	}
+
+	/**
 	 * Update the localized fields for this supp file.
 	 * @param $suppFile
 	 */
@@ -133,6 +145,7 @@ class SuppFileDAO extends DAO {
 		$suppFile->setFileSize($row['file_size']);
 		$suppFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$suppFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
+		$suppFile->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('article_supp_file_settings', 'supp_id', $row['supp_id'], $suppFile);
 
@@ -154,9 +167,9 @@ class SuppFileDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO article_supplementary_files
-				(public_supp_file_id, remote_url, file_id, article_id, type, date_created, language, show_reviewers, date_submitted, seq)
+				(public_supp_file_id, remote_url, file_id, article_id, type, date_created, language, show_reviewers, date_submitted, seq, doi)
 				VALUES
-				(?, ?, ?, ?, ?, %s, ?, ?, %s, ?)',
+				(?, ?, ?, ?, ?, %s, ?, ?, %s, ?, ?)',
 				$this->dateToDB($suppFile->getDateCreated()), $this->datetimeToDB($suppFile->getDateSubmitted())),
 			array(
 				$suppFile->getPublicSuppFileId(),
@@ -166,7 +179,8 @@ class SuppFileDAO extends DAO {
 				$suppFile->getType(),
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
-				$suppFile->getSequence()
+				$suppFile->getSequence(),
+				$suppFile->getStoredDOI()
 			)
 		);
 		$suppFile->setId($this->getInsertSuppFileId());
@@ -189,7 +203,8 @@ class SuppFileDAO extends DAO {
 					date_created = %s,
 					language = ?,
 					show_reviewers = ?,
-					seq = ?
+					seq = ?,
+					doi = ?
 				WHERE supp_id = ?',
 				$this->dateToDB($suppFile->getDateCreated())),
 			array(
@@ -200,6 +215,7 @@ class SuppFileDAO extends DAO {
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
 				$suppFile->getSequence(),
+				$suppFile->getStoredDOI(),
 				$suppFile->getId()
 			)
 		);
@@ -338,6 +354,42 @@ class SuppFileDAO extends DAO {
 	function suppFileExistsByPublicId($publicSuppFileId, $suppId, $journalId) {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM article_supplementary_files f, articles a WHERE f.article_id = a.article_id AND f.public_supp_file_id = ? AND f.supp_id <> ? AND a.journal_id = ?', array($publicSuppFileId, $suppId, $journalId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Change the DOI.
+	 * @param $suppFileId int
+	 * @param $doi string
+	 */
+	function changeDOI($suppFileId, $doi) {
+		$this->update(
+			'UPDATE article_supplementary_files SET doi = ? WHERE supp_id = ?', array($doi, (int) $suppFileId)
+		);
+	}
+
+	/**
+	 * Checks if the given DOI suffix exists.
+	 * @param $doiSuffix string
+	 * @param $suppFileId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function doiSuffixExists($doiSuffix, $suppFileId, $journalId) {
+		if (is_null($suppFileId)) $suppFileId = 0;
+		$result =& $this->retrieve(
+			'SELECT COUNT(*)
+			FROM article_supplementary_files s
+			INNER JOIN article_supp_file_settings sst ON s.supp_id = sst.supp_id
+			INNER JOIN articles a ON s.article_id = a.article_id
+			WHERE sst.setting_name = ? AND sst.setting_value = ? AND s.supp_id <> ? AND a.journal_id = ?',
+			array('doiSuffix', $doiSuffix, (int) $suppFileId, (int) $journalId)
 		);
 		$returner = $result->fields[0] ? true : false;
 

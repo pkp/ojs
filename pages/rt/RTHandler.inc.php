@@ -411,6 +411,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('suppFile', $suppFile);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('issue', $this->issue);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFileView.tpl');

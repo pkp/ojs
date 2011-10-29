@@ -57,6 +57,20 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="doiObjects" key="manager.setup.doiObjects"}</td>
+		<td width="80%" class="value">
+			<span class="instruct">{translate key="manager.setup.explainDois"}</span><br />
+			<input type="checkbox" name="enableIssueDoi" id="enableIssueDoi" value="1"{if $enableIssueDoi} checked="checked"{/if} />
+			<label for="enableIssueDoi">{translate key="manager.setup.enableIssueDoi"}</label><br />
+			<input type="checkbox" name="enableArticleDoi" id="enableArticleDoi" value="1"{if $enableArticleDoi} checked="checked"{/if} />
+			<label for="enableArticleDoi">{translate key="manager.setup.enableArticleDoi"}</label><br />
+			<input type="checkbox" name="enableGalleyDoi" id="enableGalleyDoi" value="1"{if $enableGalleyDoi} checked="checked"{/if} />
+			<label for="enableGalleyDoi">{translate key="manager.setup.enableGalleyDoi"}</label><br />
+			<input type="checkbox" name="enableSuppFileDoi" id="enableSuppFileDoi" value="1"{if $enableSuppFileDoi} checked="checked"{/if} />
+			<label for="enableSuppFileDoi">{translate key="manager.setup.enableSuppFileDoi"}</label><br />
+		</td>
+	</tr>
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="doiPrefix" key="manager.setup.doiPrefix"}</td>
 		<td width="80%" class="value"><input type="text" name="doiPrefix" value="{$doiPrefix|escape}" size="8" maxlength="8" id="doiPrefix" class="textField" />
 		<br />
@@ -68,40 +82,75 @@
 		<td width="80%" class="value">
 			<table width="100%" class="data">
 				<tr>
-				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffix" value="pattern" {if $doiSuffix eq "pattern"}checked{/if} />
-				</td>
-				<td width="95%" class="value">
-					{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixPattern"}
-					<br />
-					<input type="text" name="doiSuffixPattern" value="{$doiSuffixPattern|escape}" size="15" maxlength="50" id="doiSuffixPattern" class="textField" />
-					<br />
-					<span class="instruct">{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern.example"}</span>
-				</td>
+					<td width="5%" class="label" align="right" valign="top">
+						<input type="radio" name="doiSuffix" id="doiSuffix" value="pattern" {if $doiSuffix eq "pattern"}checked{/if} />
+					</td>
+					<td width="95%" class="value">
+						{fieldLabel name="doiSuffix" key="manager.setup.doiSuffixPattern"}
+					</td>
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<input type="text" name="doiIssueSuffixPattern" value="{$doiIssueSuffixPattern|escape}" size="15" maxlength="50" id="doiIssueSuffixPattern" class="textField" />
+						<span class="instruct">{translate key="manager.setup.doiSuffixPattern.issues"}</span>
+					</td>
 				</tr>
 				<tr>
-				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffixDefault" value="default" {if ($doiSuffix neq "pattern" && $doiSuffix neq "publisherId")}checked{/if} />
-				</td>
-				<td width="95%" class="value">
-					{fieldLabel name="doiSuffixDefault" key="manager.setup.doiSuffixDefault"}
-				</td>
+					<td>&nbsp;</td>
+					<td>
+						<input type="text" name="doiArticleSuffixPattern" value="{$doiArticleSuffixPattern|escape}" size="15" maxlength="50" id="doiArticleSuffixPattern" class="textField" />
+						<span class="instruct">{translate key="manager.setup.doiSuffixPattern.articles"}</span>
+					</td>
 				</tr>
 				<tr>
-				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffixPublisherId" value="publisherId" {if $doiSuffix eq "publisherId"}checked{/if} />
-				</td>
-				<td width="95%" class="value">
-					{fieldLabel name="doiSuffixPublisherId" key="manager.setup.doiSuffixPublisherId"}
-				</td>
+					<td>&nbsp;</td>
+					<td>
+						<input type="text" name="doiGalleySuffixPattern" value="{$doiGalleySuffixPattern|escape}" size="15" maxlength="50" id="doiGalleySuffixPattern" class="textField" />
+						<span class="instruct">{translate key="manager.setup.doiSuffixPattern.galleys"}</span>
+					</td>
 				</tr>
 				<tr>
-				<td width="5%" class="label" align="right" valign="top">
-					<input type="radio" name="doiSuffix" id="doiSuffixCustomIdentifier" value="customId" {if $doiSuffix eq "customId"}checked{/if} />
-				</td>
-				<td width="95%" class="value">
-					{fieldLabel name="doiSuffixCustomIdentifier" key="manager.setup.doiSuffixCustomIdentifier"}
-				</td>
+					<td>&nbsp;</td>
+					<td>
+						<input type="text" name="doiSuppFileSuffixPattern" value="{$doiSuppFileSuffixPattern|escape}" size="15" maxlength="50" id="doiSuppFileSuffixPattern" class="textField" />
+						<span class="instruct">{translate key="manager.setup.doiSuffixPattern.suppFiles"}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<span class="instruct">{fieldLabel name="doiSuffixPattern" key="manager.setup.doiSuffixPattern.example"}</span>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td width="5%" class="label" align="right" valign="top">
+						<input type="radio" name="doiSuffix" id="doiSuffixDefault" value="default" {if !in_array($doiSuffix, array("pattern", "publisherId", "customId"))}checked{/if} />
+					</td>
+					<td width="95%" class="value">
+						{fieldLabel name="doiSuffixDefault" key="manager.setup.doiSuffixDefault"}
+						<br />
+						<span class="instruct">{translate key="manager.setup.doiSuffixDefault.description"}</span>
+					</td>
+					</tr>
+				<tr>
+					<td width="5%" class="label" align="right" valign="top">
+						<input type="radio" name="doiSuffix" id="doiSuffixPublisherId" value="publisherId" {if $doiSuffix eq "publisherId"}checked{/if} />
+					</td>
+					<td width="95%" class="value">
+						{fieldLabel name="doiSuffixPublisherId" key="manager.setup.doiSuffixPublisherId"}
+					</td>
+				</tr>
+				<tr>
+					<td width="5%" class="label" align="right" valign="top">
+						<input type="radio" name="doiSuffix" id="doiSuffixCustomIdentifier" value="customId" {if $doiSuffix eq "customId"}checked{/if} />
+					</td>
+					<td width="95%" class="value">
+						{fieldLabel name="doiSuffixCustomIdentifier" key="manager.setup.doiSuffixCustomIdentifier"}
+					</td>
 				</tr>
 			</table>
 			<span class="instruct">{translate key="manager.setup.doiSuffixDescription"}</span>

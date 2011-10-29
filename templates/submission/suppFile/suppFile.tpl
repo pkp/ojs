@@ -110,6 +110,8 @@
 </div>
 <div class="separator"></div>
 
+{include file="editor/editDoi.tpl" objectType="SuppFile"}
+
 {call_hook name="Templates::Submission::SuppFile::AdditionalMetadata"}
 
 <div id="supplementaryFileUpload">

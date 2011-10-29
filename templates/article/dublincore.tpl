@@ -50,11 +50,6 @@
 {if $article->getPages()}
 	<meta name="DC.Identifier.pageNumber" content="{$article->getPages()|escape}"/>
 {/if}
-{if $issue->getPublished()}
-	{assign var=doi value=$article->getDOI()}
-{else}
-	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
-{/if}
 {if $doi}
 	<meta name="DC.Identifier.DOI" content="{$doi|escape}"/>
 {/if}

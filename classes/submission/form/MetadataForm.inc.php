@@ -232,6 +232,7 @@ class MetadataForm extends Form {
 				'title',
 				'abstract',
 				'coverPageAltText',
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
 				'doiSuffix',
 				'showCoverPage',
 				'hideCoverPageToc',
@@ -284,9 +285,10 @@ class MetadataForm extends Form {
 		$doiSuffix = $this->getData('doiSuffix');
 		if (!empty($doiSuffix)) {
 			$journal = Request::getJournal();
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			if($articleDao->doiSuffixExists($doiSuffix, $this->article->getId(), $journal->getId())) {
-				$this->addError('doiSuffix', Locale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
+			import('classes.article.DoiHelper');
+			$doiHelper = new DoiHelper();
+			if($doiHelper->doiSuffixExists($doiSuffix, $this->article, $journal->getId())) {
+				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
 

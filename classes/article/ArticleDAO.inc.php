@@ -532,13 +532,13 @@ class ArticleDAO extends DAO {
 
 	/**
 	 * Checks if the given DOI suffix exists.
-	 * FIXME: Move this to DOI PID plug-in.
 	 * @param $doiSuffix string
 	 * @param $articleId int
 	 * @param $journalId int
 	 * @return boolean
 	 */
 	function doiSuffixExists($doiSuffix, $articleId, $journalId) {
+		if (is_null($articleId)) $articleId = 0;
 		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM articles a
@@ -577,19 +577,6 @@ class ArticleDAO extends DAO {
 			'UPDATE articles SET doi = ? WHERE article_id = ?', array($doi, (int) $articleId)
 		);
 
-		$this->flushCache();
-	}
-
-	/**
-	 * Remove all DOIs from the given journal.
-	 * @param $journalId int
-	 */
-	function deleteDOIs($journalId) {
-		// Delete the generated DOI.
-		$this->update(
-			'UPDATE articles SET doi = null' . ($journalId !== null?' WHERE journal_id = ?':''),
-			$journalId !== null?array((int) $journalId):false
-		);
 		$this->flushCache();
 	}
 

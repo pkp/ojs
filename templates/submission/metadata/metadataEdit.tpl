@@ -389,26 +389,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-{* DOI - FIXME: Will be moved to a PID-plug-in in the next release. *}
-{if $currentJournal->getSetting('doiSuffix') == 'customId' || $storedDoi}
-	<div id="pub-id::doi">
-		<h3>{translate key="manager.setup.doi"}</h3>
-		{if empty($storedDoi)}
-			<table width="100%" class="data">
-				<tr valign="top">
-					<td rowspan="2" width="10%" class="label">{fieldLabel name="doiSuffix" key="manager.setup.doiSuffix"}</td>
-					<td rowspan="2" width="10%" align="right">{$currentJournal->getSetting('doiPrefix')|escape}/</td>
-					<td width="80%" class="value"><input type="text" class="textField" name="doiSuffix" id="doiSuffix" value="{$doiSuffix|escape}" size="20" maxlength="20" />
-				</tr>
-				<tr valign="top">
-					<td colspan="3"><span class="instruct">{translate key="manager.setup.doiSuffixDescription"}</span></td>
-				</tr>
-			</table>
-		{else}
-			{$storedDoi}
-		{/if}
-	</div>
-{/if}
+{include file="editor/editDoi.tpl" objectType="Article"}
 
 {call_hook name="Templates::Submission::MetadataEdit::AdditionalMetadata"}
 

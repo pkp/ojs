@@ -357,6 +357,39 @@ class JournalDAO extends DAO {
 	}
 
 	/**
+	 * Remove all DOIs from the given journal.
+	 * @param $journalId int
+	 */
+	function deleteDOIs($journalId) {
+		$journalId = (int) $journalId;
+
+		// issues
+		$this->update(
+			'UPDATE issues SET doi = null WHERE journal_id = ?',
+			$journalId
+		);
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$issueDao->flushCache();
+
+		// articles
+		$this->update(
+			'UPDATE articles SET doi = null WHERE journal_id = ?',
+			$journalId
+		);
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao->flushCache();
+
+		// galleys and supp files
+		$articles =& $articleDao->getArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			$articleId = (int) $article->getId();
+			$this->update('UPDATE article_galleys SET doi = null WHERE article_id = ?', $articleId);
+			$this->update('UPDATE article_supplementary_files SET doi = null WHERE article_id = ?', $articleId);
+			unset($article);
+		}
+	}
+
+	/**
 	 * Get the ID of the last inserted journal.
 	 * @return int
 	 */

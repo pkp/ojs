@@ -244,70 +244,11 @@ class PublishedArticle extends Article {
 	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
 	function getDOI($preview = false) {
-		// If we already have an assigned DOI, use it.
-		$storedDOI = $this->getStoredDOI();
-		if ($storedDOI) return $storedDOI;
-
-		// Otherwise, create a new one.
-		$journalId = $this->getJournalId();
-
-		// Get the Journal object (optimized)
-		$request =& PKPApplication::getRequest();
-		$journal =& $request->getJournal();
-		if (!$journal || $journal->getId() != $journalId) {
-			unset($journal);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($journalId);
-		}
-
-		if (($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
-		$doiSuffixSetting = $journal->getSetting('doiSuffix');
-
-		// Get the issue
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueById($this->getIssueId(), $this->getJournalId(), true);
-
-		if (!$issue || !$journal || $journal->getId() != $issue->getJournalId() ) return null;
-
-		$doi = null;
-		switch ( $doiSuffixSetting ) {
-			case 'publisherId':
-				$doi = $doiPrefix . '/' . $this->getBestArticleId();
-				break;
-			case 'customId':
-				$doiSuffix = $this->getData('doiSuffix');
-				if ($doiSuffix) {
-					$doi = $doiPrefix . '/' . $doiSuffix;
-				}
-				break;
-			case 'pattern':
-				$suffixPattern = $journal->getSetting('doiSuffixPattern');
-				// %j - journal initials
-				$suffixPattern = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials')), $suffixPattern);
-				// %v - volume number
-				$suffixPattern = String::regexp_replace('/%v/', $issue->getVolume(), $suffixPattern);
-				// %i - issue number
-				$suffixPattern = String::regexp_replace('/%i/', $issue->getNumber(), $suffixPattern);
+		import('classes.article.DoiHelper');
+		$doiHelper = new DoiHelper();
+		return $doiHelper->getDOI($this, $preview);
                                 // %Y - year
 				$suffixPattern = String::regexp_replace('/%Y/', $issue->getYear(), $suffixPattern);
-				// %a - article id
-				$suffixPattern = String::regexp_replace('/%a/', $this->getId(), $suffixPattern);
-				// %p - page number
-				$suffixPattern = String::regexp_replace('/%p/', $this->getPages(), $suffixPattern);
-				$doi = $doiPrefix . '/' . $suffixPattern;
-				break;
-			default:
-				$doi = $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getId();
-		}
-
-		if ($doi && !$preview) {
-			// Save the generated DOI
-			$this->setStoredDOI($doi);
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$articleDao->changeDOI($this->getId(), $doi);
-		}
-
-		return $doi;
 	}
 }
 

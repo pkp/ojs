@@ -8,6 +8,18 @@
  *}
 {include file="issue/header.tpl"}
 
+{* FIXME: This will be moved to DOI PID-plug-in in the next release. *}
+{if $issue->getPublished()}
+	{assign var=doi value=$issue->getDOI()}
+{else}
+	{assign var=doi value=$issue->getDOI(true)}{* Don't affix DOI *}
+{/if}
+{if $doi}
+	doi:<a id="pub-id::doi" href="http://dx.doi.org/{$doi|escape|escape:url}">{$doi|escape}</a>
+	<br />
+	<br />
+{/if}
+
 {include file="issue/view.tpl"}
 
 {include file="common/footer.tpl"}

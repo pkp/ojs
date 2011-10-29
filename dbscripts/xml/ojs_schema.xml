@@ -328,6 +328,7 @@
 		</field>
 		<field name="style_file_name" type="C2" size="90"/>
 		<field name="original_style_file_name" type="C2" size="255"/>
+		<field name="doi" type="C2" size="255"/>
 		<descr>Journal issues.</descr>
 		<index name="issues_journal_id">
 			<col>journal_id</col>
@@ -750,6 +751,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="doi" type="C2" size="255"/>
 		<descr>Supplementary files attached to articles.</descr>
 		<index name="article_supplementary_files_file_id">
 			<col>file_id</col>
@@ -893,6 +895,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="doi" type="C2" size="255"/>
 		<field name="views" type="I4">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

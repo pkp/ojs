@@ -214,13 +214,46 @@ class IssueDAO extends DAO {
 		);
 		if ($issue) $this->updateIssue($issue);
 
-		$cache =& $this->_getCache('issues');
-		$cache->flush();
-		unset($cache);
-		$cache =& $this->_getCache('current');
-		$cache->flush();
+		$this->flushCache();
 	}
 
+
+	/**
+	 * Change the DOI.
+	 * @param $issueId int
+	 * @param $doi string
+	 */
+	function changeDOI($issueId, $doi) {
+		$this->update(
+			'UPDATE issues SET doi = ? WHERE issue_id = ?', array($doi, (int) $issueId)
+		);
+
+		$this->flushCache();
+	}
+
+	/**
+	 * Checks if the given DOI suffix exists.
+	 * @param $doiSuffix string
+	 * @param $issueId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function doiSuffixExists($doiSuffix, $issueId, $journalId) {
+		if (is_null($issueId)) $issueId = 0;
+		$result =& $this->retrieve(
+			'SELECT COUNT(*)
+			FROM issues i
+			INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
+			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
+			array('doiSuffix', $doiSuffix, (int) $issueId, (int) $journalId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
 
 	/**
 	 * creates and returns an issue object from a row
@@ -247,6 +280,7 @@ class IssueDAO extends DAO {
 		$issue->setShowTitle($row['show_title']);
 		$issue->setStyleFileName($row['style_file_name']);
 		$issue->setOriginalStyleFileName($row['original_style_file_name']);
+		$issue->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
@@ -261,6 +295,18 @@ class IssueDAO extends DAO {
 	 */
 	function getLocaleFieldNames() {
 		return array('title', 'coverPageDescription', 'coverPageAltText', 'showCoverPage', 'hideCoverPageArchives', 'hideCoverPageCover', 'originalFileName', 'fileName', 'width', 'height', 'description');
+	}
+
+	/**
+	 * Get a list of additional fields that do not have
+	 * dedicated accessors.
+	 * @return array
+	 */
+	function getAdditionalFieldNames() {
+		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
+		$additionalFields[] = 'doiSuffix';
+		return $additionalFields;
 	}
 
 	/**
@@ -281,9 +327,9 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, public_issue_id, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, public_issue_id, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, doi)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
@@ -299,7 +345,8 @@ class IssueDAO extends DAO {
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
-				$issue->getOriginalStyleFileName()
+				$issue->getOriginalStyleFileName(),
+				$issue->getStoredDOI()
 			)
 		);
 
@@ -367,7 +414,8 @@ class IssueDAO extends DAO {
 					show_year = ?,
 					show_title = ?,
 					style_file_name = ?,
-					original_style_file_name = ?
+					original_style_file_name = ?,
+					doi = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
@@ -385,6 +433,7 @@ class IssueDAO extends DAO {
 				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName(),
+				$issue->getStoredDOI(),
 				(int) $issue->getId()
 			)
 		);
@@ -395,11 +444,7 @@ class IssueDAO extends DAO {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
 
-		$cache =& $this->_getCache('issues');
-		$cache->flush();
-		unset($cache);
-		$cache =& $this->_getCache('current');
-		$cache->flush();
+		$this->flushCache();
 	}
 
 	/**
@@ -445,11 +490,7 @@ class IssueDAO extends DAO {
 		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
-		$cache =& $this->_getCache('issues');
-		$cache->flush();
-		unset($cache);
-		$cache =& $this->_getCache('current');
-		$cache->flush();
+		$this->flushCache();
 	}
 
 	/**
@@ -724,6 +765,17 @@ class IssueDAO extends DAO {
 		$result->Close();
 		unset($result);
 		$this->resequenceCustomIssueOrders($journalId);
+	}
+
+	/**
+	 * Flush the issue cache.
+	 */
+	function flushCache() {
+		$cache =& $this->_getCache('issues');
+		$cache->flush();
+		unset($cache);
+		$cache =& $this->_getCache('current');
+		$cache->flush();
 	}
 }
 

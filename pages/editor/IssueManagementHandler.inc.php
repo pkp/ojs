@@ -240,7 +240,7 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		$issueForm->readInputData();
 
-		if ($issueForm->validate($issueId)) {
+		if ($issueForm->validate($issue)) {
 			$issueForm->execute($issueId);
 			$issueForm->initData($issueId);
 		}

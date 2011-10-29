@@ -144,13 +144,14 @@
 	{assign var=doi value=$article->getDOI(true)}{* Don't affix DOI *}
 {/if}
 {if $doi}
-<tr valign="top">
-	<td>10.</td>
-	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
-	<td>{translate key="rt.metadata.pkp.doi"}</td>
-	<td>{$doi|escape}</a></td>
-</tr>
-<tr><td colspan="4" class="separator">&nbsp;</td></tr>
+	<tr><td colspan="4" class="separator">&nbsp;</td></tr>
+	<tr valign="top">
+		<td>10.</td>
+		<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
+		<td>{translate key="rt.metadata.pkp.doi"}</td>
+		<td>{$doi|escape}</a></td>
+	</tr>
+	<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {/if}
 {call_hook name="Templates::RT::Metadata::PersistentIdentifier"}
 <tr valign="top">

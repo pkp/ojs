@@ -79,9 +79,9 @@ class SetupHandler extends ManagerHandler {
 			switch ($step) {
 				case 1:
 					if ($request->getUserVar('reassignDOIs')) {
-						$articleDao =& DAORegistry::getDAO('ArticleDAO');
+						$journalDao =& DAORegistry::getDAO('JournalDAO');
 						$journal =& $request->getJournal();
-						$articleDao->deleteDOIs($journal->getId());
+						$journalDao->deleteDOIs($journal->getId());
 						$editData = true;
 					} else if ($request->getUserVar('addSponsor')) {
 						// Add a sponsor

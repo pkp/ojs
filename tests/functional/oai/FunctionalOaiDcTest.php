@@ -16,6 +16,21 @@
 import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
 
 class FunctionalOaiDcTest extends OaiWebServiceTestCase {
+
+	/**
+	 * SCENARIO: Export article in DC format over OAI
+	 *   GIVEN a DOI has been assigned for a given {publishing object}
+	 *    WHEN I export the corresponding article in DC format over OAI
+	 *    THEN DOI-specific {DC fields} will be present in the OAI-message.
+	 *
+	 * EXAMPLES:
+	 *   publishing object | DC fields
+	 *   ==================|================================================
+	 *   issue             | <dc:source>10.4321/t.v1i1</dc:source>
+	 *   article           | <dc:identifier>10.4321/t.v1i1.1</dc:identifier>
+	 *   galley            | <dc:relation>10.4321/t.v1i1.g1</dc:relation>
+	 *   supp-file         | <dc:relation>10.4321/t.v1i1.s1</dc:relation>
+	 */
 	public function testDoi() {
 		// Configure the web service request
 		$this->webServiceRequest->setParams($params = array(
@@ -31,6 +46,8 @@ class FunctionalOaiDcTest extends OaiWebServiceTestCase {
 		);
 		$xPath = $this->getXPath($namespaces);
 		self::assertEquals('10.1234/t.v1i1.1', $xPath->evaluate('string(/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier[2])'));
+
+		$this->markTestIncomplete('Export article in DC format over OAI');
 	}
 }
 ?>

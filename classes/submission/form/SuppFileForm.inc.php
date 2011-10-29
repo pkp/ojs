@@ -133,6 +133,17 @@ class SuppFileForm extends Form {
 			$this->addErrorField('publicSuppFileId');
 		}
 
+		// Verify DOI uniqueness.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			import('classes.article.DoiHelper');
+			$doiHelper = new DoiHelper();
+			if($doiHelper->doiSuffixExists($doiSuffix, $this->suppFile, $journal->getId())) {
+				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
+			}
+		}
+
 		return parent::validate();
 	}
 
@@ -155,7 +166,10 @@ class SuppFileForm extends Form {
 				'source' => $suppFile->getSource(null), // Localized
 				'language' => $suppFile->getLanguage(),
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
-				'publicSuppFileId' => $suppFile->getPublicSuppFileId()
+				'publicSuppFileId' => $suppFile->getPublicSuppFileId(),
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'storedDoi' => $suppFile->getStoredDoi(),
+				'doiSuffix' => $suppFile->getData('doiSuffix')
 			);
 
 		} else {
@@ -186,7 +200,9 @@ class SuppFileForm extends Form {
 				'language',
 				'showReviewers',
 				'publicSuppFileId',
-				'remoteURL'
+				'remoteURL',
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'doiSuffix'
 			)
 		);
 	}
@@ -273,6 +289,13 @@ class SuppFileForm extends Form {
 		$suppFile->setLanguage($this->getData('language'));
 		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
 		$suppFile->setPublicSuppFileId($this->getData('publicSuppFileId'));
+		// Update DOI if unique.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			$suppFile->setData('doiSuffix', $doiSuffix);
+		}
+
 	}
 }
 

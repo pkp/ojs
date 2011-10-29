@@ -87,6 +87,17 @@ class ArticleGalleyForm extends Form {
 			$this->addErrorField('publicIssueId');
 		}
 
+		// Verify DOI uniqueness.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			import('classes.article.DoiHelper');
+			$doiHelper = new DoiHelper();
+			if($doiHelper->doiSuffixExists($doiSuffix, $this->galley, $journal->getId())) {
+				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
+			}
+		}
+
 		return parent::validate();
 	}
 
@@ -99,7 +110,10 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $galley->getLabel(),
 				'publicGalleyId' => $galley->getPublicGalleyId(),
-				'galleyLocale' => $galley->getLocale()
+				'galleyLocale' => $galley->getLocale(),
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'storedDoi' => $galley->getStoredDoi(),
+				'doiSuffix' => $galley->getData('doiSuffix')
 			);
 
 		} else {
@@ -118,7 +132,9 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId',
 				'deleteStyleFile',
 				'galleyLocale',
-				'remoteURL'
+				'remoteURL',
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'doiSuffix'
 			)
 		);
 	}
@@ -135,6 +151,9 @@ class ArticleGalleyForm extends Form {
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
 		$journal =& Request::getJournal();
 		$fileId = null;
+
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
 
 		if (isset($this->galley)) {
 			$galley =& $this->galley;
@@ -176,6 +195,9 @@ class ArticleGalleyForm extends Form {
 			if ($this->getData('remoteURL')) {
 				$galley->setRemoteURL($this->getData('remoteURL'));
 			}
+			// FIXME: Move this to DOI PID plug-in.
+			if (!empty($doiSuffix)) $galley->setData('doiSuffix', $doiSuffix);
+
 			parent::execute();
 			$galleyDao->updateGalley($galley);
 
@@ -241,7 +263,11 @@ class ArticleGalleyForm extends Form {
 
 				$galley->setPublicgalleyId($publicGalleyId . $suffix);
 			}
+
+			// FIXME: Move this to DOI PID plug-in.
+			if (!empty($doiSuffix)) $galley->setData('doiSuffix', $doiSuffix);
 			parent::execute();
+
 			// Insert new galley
 			$galleyDao->insertGalley($galley);
 			$this->galleyId = $galley->getId();

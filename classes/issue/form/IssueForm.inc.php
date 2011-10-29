@@ -64,7 +64,9 @@ class IssueForm extends Form {
 	/**
 	 * Validate the form
 	 */
-	function validate($issueId = 0) {
+	function validate($issue = null) {
+		$issueId = ($issue?$issue->getId():0);
+
 		if ($this->getData('showVolume')) {
 			$this->addCheck(new FormValidatorCustom($this, 'volume', 'required', 'editor.issues.volumeRequired', create_function('$volume', 'return ($volume > 0);')));
 		}
@@ -109,6 +111,17 @@ class IssueForm extends Form {
 			}
 		}
 
+		// Verify DOI uniqueness.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			import('classes.article.DoiHelper');
+			$doiHelper = new DoiHelper();
+			if($doiHelper->doiSuffixExists($doiSuffix, $issue, $journal->getId())) {
+				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
+			}
+		}
+
 		return parent::validate();
 	}
 
@@ -148,7 +161,10 @@ class IssueForm extends Form {
 				'hideCoverPageArchives' => $issue->getHideCoverPageArchives(null), // Localized
 				'hideCoverPageCover' => $issue->getHideCoverPageCover(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
-				'originalStyleFileName' => $issue->getOriginalStyleFileName()
+				'originalStyleFileName' => $issue->getOriginalStyleFileName(),
+				// FIXME: Will be moved to DOI PID plug-in in the next release.
+				'storedDoi' => $issue->getStoredDoi(),
+				'doiSuffix' => $issue->getData('doiSuffix'),
 			);
 			parent::initData();
 			return $issue->getId();
@@ -261,7 +277,8 @@ class IssueForm extends Form {
 			'hideCoverPageCover',
 			'articles',
 			'styleFileName',
-			'originalStyleFileName'
+			'originalStyleFileName',
+			'doiSuffix'
 		));
 
 		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
@@ -337,7 +354,13 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
-	
+		// Update DOI if unique.
+		// FIXME: Move this to DOI PID plug-in.
+		$doiSuffix = $this->getData('doiSuffix');
+		if (!empty($doiSuffix)) {
+			$issue->setData('doiSuffix', $doiSuffix);
+		}
+
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if ($issueId) {
 			$issue->setId($issueId);
