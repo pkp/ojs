@@ -99,6 +99,27 @@ class SuppFileDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all supplementary files of a journal.
+	 * @param $journalId int
+	 * @return DAOResultFactory
+	 */
+	function &getSuppFilesByJournalId($journalId) {
+		$result =& $this->retrieve(
+			'SELECT
+				s.*,
+				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+			FROM article_supplementary_files s
+			LEFT JOIN article_files af ON (s.file_id = af.file_id)
+			INNER JOIN articles a ON (s.article_id = a.article_id)
+			WHERE a.journal_id = ?',
+			(int) $journalId
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSuppFileFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Get the list of fields for which data is localized.
 	 * @return array
 	 */
@@ -115,6 +136,7 @@ class SuppFileDAO extends DAO {
 		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
 		$additionalFields[] = 'pub-id::publisher-id';
+		$additionalFields[] = 'pub-id::doi';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -154,7 +176,6 @@ class SuppFileDAO extends DAO {
 		$suppFile->setFileSize($row['file_size']);
 		$suppFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$suppFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
-		$suppFile->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('article_supp_file_settings', 'supp_id', $row['supp_id'], $suppFile);
 
@@ -209,8 +230,7 @@ class SuppFileDAO extends DAO {
 					date_created = %s,
 					language = ?,
 					show_reviewers = ?,
-					seq = ?,
-					doi = ?
+					seq = ?
 				WHERE supp_id = ?',
 				$this->dateToDB($suppFile->getDateCreated())),
 			array(
@@ -220,7 +240,6 @@ class SuppFileDAO extends DAO {
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
 				$suppFile->getSequence(),
-				$suppFile->getStoredDOI(),
 				$suppFile->getId()
 			)
 		);
@@ -375,22 +394,56 @@ class SuppFileDAO extends DAO {
 			)
 		);
 		$returner = $result->fields[0] ? true : false;
-
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
 	/**
-	 * Change the DOI.
+	 * Change the public ID of a supplementary file.
 	 * @param $suppFileId int
-	 * @param $doi string
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function changeDOI($suppFileId, $doi) {
-		$this->update(
-			'UPDATE article_supplementary_files SET doi = ? WHERE supp_id = ?', array($doi, (int) $suppFileId)
+	function changePubId($suppFileId, $pubIdType, $pubId) {
+		$idFields = array(
+			'supp_id', 'locale', 'setting_name'
 		);
+		$updateArray = array(
+			'supp_id' => $suppFileId,
+			'locale' => '',
+			'setting_name' => 'pub-id::'.$pubIdType,
+			'setting_type' => 'string',
+			'setting_value' => (string)$pubId
+		);
+		$this->replace('article_supp_file_settings', $updateArray, $idFields);
+	}
+
+
+	/**
+	 * Delete the public IDs of all supplementary files in a journal.
+	 * @param $journalId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deleteAllPubIds($journalId, $pubIdType) {
+		$journalId = (int) $journalId;
+		$settingName = 'pub-id::'.$pubIdType;
+
+		$suppFiles =& $this->getSuppFilesByJournalId($journalId);
+		while ($suppFile =& $suppFiles->next()) {
+			$this->update(
+				'DELETE FROM article_supp_file_settings WHERE setting_name = ? AND supp_id = ?',
+				array(
+					$settingName,
+					(int)$suppFile->getId()
+				)
+			);
+			unset($suppFile);
+		}
+		$this->flushCache();
 	}
 }
 

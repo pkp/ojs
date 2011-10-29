@@ -332,28 +332,19 @@ class JournalDAO extends DAO {
 	}
 
 	/**
-	 * Delete the public IDs of all articles in a journal.
+	 * Delete the public IDs of all publishing objects in a journal.
 	 * @param $journalId int
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 */
 	function deleteAllPubIds($journalId, $pubIdType) {
-		// Remove public IDs of the given type from all articles.
-		$settingName = 'pub-id::'.$pubIdType;
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$articles =& $articleDao->getArticlesByJournalId($journalId);
-		while ($article =& $articles->next()) {
-			$this->update(
-				'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
-				array(
-					$settingName,
-					(int)$article->getId()
-				)
-			);
-			unset($article);
+		$pubObjectDaos = array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO', 'SuppFileDAO');
+		foreach($pubObjectDaos as $daoName) {
+			$dao =& DAORegistry::getDAO($daoName);
+			$dao->deleteAllPubIds($journalId, $pubIdType);
+			unset($dao);
 		}
-		$articleDao->flushCache();
 	}
 
 	/**
@@ -379,39 +370,6 @@ class JournalDAO extends DAO {
 
 		$result->close();
 		unset($result);
-	}
-
-	/**
-	 * Remove all DOIs from the given journal.
-	 * @param $journalId int
-	 */
-	function deleteDOIs($journalId) {
-		$journalId = (int) $journalId;
-
-		// issues
-		$this->update(
-			'UPDATE issues SET doi = null WHERE journal_id = ?',
-			$journalId
-		);
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issueDao->flushCache();
-
-		// articles
-		$this->update(
-			'UPDATE articles SET doi = null WHERE journal_id = ?',
-			$journalId
-		);
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$articleDao->flushCache();
-
-		// galleys and supp files
-		$articles =& $articleDao->getArticlesByJournalId($journalId);
-		while ($article =& $articles->next()) {
-			$articleId = (int) $article->getId();
-			$this->update('UPDATE article_galleys SET doi = null WHERE article_id = ?', $articleId);
-			$this->update('UPDATE article_supplementary_files SET doi = null WHERE article_id = ?', $articleId);
-			unset($article);
-		}
 	}
 
 	/**

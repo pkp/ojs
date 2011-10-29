@@ -47,47 +47,6 @@ class SuppFile extends ArticleFile {
 	}
 
 	/**
-	 * Get a public ID for this supplementary file.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @var $preview boolean If true, generate a non-persisted preview only.
-	 */
-	function getPubId($pubIdType, $preview = false) {
-		// If we already have an assigned ID, use it.
-		$storedId = $this->getStoredPubId($pubIdType);
-
-		// Ensure that blanks are treated as nulls.
-		if ($storedId === '') {
-			$storedId = null;
-		}
-
-		return $storedId;
-	}
-
-	/**
-	 * Get stored public ID of the supplementary file.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @return string
-	 */
-	function getStoredPubId($pubIdType) {
-		return $this->getData('pub-id::'.$pubIdType);
-	}
-
-	/**
-	 * Set stored public supplementary file id.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 */
-	function setStoredPubId($pubIdType, $pubId) {
-		return $this->setData('pub-id::'.$pubIdType, $pubId);
-	}
-
-	/**
 	 * Get ID of article.
 	 * @return int
 	 */

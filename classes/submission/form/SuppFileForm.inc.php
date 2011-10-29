@@ -139,7 +139,7 @@ class SuppFileForm extends Form {
 		if (!empty($doiSuffix)) {
 			import('classes.article.DoiHelper');
 			$doiHelper = new DoiHelper();
-			if($doiHelper->doiSuffixExists($doiSuffix, $this->suppFile, $journal->getId())) {
+			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->suppFile, $journal->getId())) {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
@@ -168,7 +168,7 @@ class SuppFileForm extends Form {
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
 				'publicSuppFileId' => $suppFile->getPubId('publisher-id'),
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $suppFile->getStoredDoi(),
+				'storedDoi' => $suppFile->getStoredPubId('doi'),
 				'doiSuffix' => $suppFile->getData('doiSuffix')
 			);
 

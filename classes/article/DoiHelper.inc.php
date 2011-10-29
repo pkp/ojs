@@ -9,24 +9,27 @@
  * @class DoiHelper
  * @ingroup article
  *
- * @brief A helper class to generate DOIs for a number of OJS publishing objects.
+ * @brief A helper class to deal with public IDs. This class only exists
+ *        to collect PID-related code in a central place before it is moved
+ *        to plug-ins.
  *
- * FIXME: This code will be moved to a DOI PID plug-in in the next release.
+ * FIXME: This code must be moved to a PID plug-ins in the next release.
  */
 
 
 class DoiHelper {
 	/**
 	 * Get a DOI for the given publishing object.
-	 * @param $pubObject object A PublishedArticle, Issue,
+	 * @param $pubObject object An Article, Issue,
 	 *   ArticleGalley, IssueGalley or SuppFile
 	 * @param $preview boolean If true, generate a non-persisted preview only.
+	 * @return string|null
 	 */
 	function getDOI(&$pubObject, $preview = false) {
 		// Determine the type of the publishing object.
 		$allowedTypes = array(
 			'Issue' => 'Issue',
-			'PublishedArticle' => 'Article',
+			'Article' => 'Article',
 			'ArticleGalley' => 'Galley',
 			'SuppFile' => 'SuppFile'
 		);
@@ -43,19 +46,27 @@ class DoiHelper {
 			return null;
 		}
 
-		// Get the journal object (optimized).
+		// Initialize variables for publication objects.
+		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
+		$article = ($pubObjectType == 'Article' ? $pubObject : null);
+		$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
+		$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
+
+		// Get the journal id of the object.
 		if (in_array($pubObjectType, array('Issue', 'Article'))) {
 			$journalId = $pubObject->getJournalId();
 		} else {
-			$journalId = null;
+			// Retrieve the published article.
+			assert(is_a($pubObject, 'ArticleFile'));
+			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), null, true);
+			if (!$article) return null;
+
+			// Now we can identify the journal.
+			$journalId = $article->getJournalId();
 		}
-		$request =& PKPApplication::getRequest();
-		$journal =& $request->getJournal(); /* @var $journal Journal */
-		if (!is_null($journalId) && (!$journal || $journal->getId() != $journalId)) {
-			unset($journal);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($journalId);
-		}
+
+		$journal =& $this->_getJournal($journalId);
 		if (!$journal) return null;
 
 		// Check whether DOIs are enabled for the given object type.
@@ -63,21 +74,8 @@ class DoiHelper {
 		if (!$doiEnabled) return null;
 
 		// If we already have an assigned DOI, use it.
-		$storedDOI = $pubObject->getStoredDOI();
+		$storedDOI = $pubObject->getStoredPubId('doi');
 		if ($storedDOI) return $storedDOI;
-
-		// Identify published objects.
-		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
-		$article = ($pubObjectType == 'Article' ? $pubObject : null);
-		$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
-		$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
-
-		// Retrieve the published article.
-		if (is_a($pubObject, 'ArticleFile')) {
-			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), $journal->getId(), true);
-			if (!$article) return null;
-		}
 
 		// Retrieve the issue.
 		if (!is_a($pubObject, 'Issue')) {
@@ -85,7 +83,7 @@ class DoiHelper {
 			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
 		}
-		if (!$issue || $journal->getId() != $issue->getJournalId()) return null;
+		if ($issue && $journal->getId() != $issue->getJournalId()) return null;
 
 		// Retrieve the DOI prefix.
 		$doiPrefix = $journal->getSetting('doiPrefix');
@@ -95,12 +93,18 @@ class DoiHelper {
 		$doiSuffixGenerationStrategy = $journal->getSetting('doiSuffix');
 		switch ($doiSuffixGenerationStrategy) {
 			case 'publisherId':
-				$doiSuffix = (string) call_user_method("getBest${pubObjectType}Id", $pubObject, $journal);
-				// When the suffix equals the object's ID then
-				// require an object-specific pre-fix to be sure that
-				// the suffix is unique.
-				if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
-					$doiSuffix = strtolower($pubObjectType{0}) . $doiSuffix;
+				// FIXME: Find a better solution when we work with Articles rather
+				// than PublishedArticles.
+				if (is_a($pubObject, 'PublishedArticle') && !is_a($pubObject, 'PublishedArticle')) {
+					$doiSuffix = null;
+				} else {
+					$doiSuffix = (string) call_user_func_array(array($pubObject, "getBest${pubObjectType}Id"), array(&$journal));
+					// When the suffix equals the object's ID then
+					// require an object-specific pre-fix to be sure that
+					// the suffix is unique.
+					if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
+						$doiSuffix = strtolower($pubObjectType{0}) . $doiSuffix;
+					}
 				}
 				break;
 
@@ -109,6 +113,10 @@ class DoiHelper {
 				break;
 
 			case 'pattern':
+				if (!$issue) {
+					$doiSuffix = null;
+					break;
+				}
 				$doiSuffix = $journal->getSetting("doi${pubObjectType}SuffixPattern");
 
 				// %j - journal initials
@@ -142,6 +150,10 @@ class DoiHelper {
 				break;
 
 			default:
+				if (!$issue) {
+					$doiSuffix = null;
+					break;
+				}
 				$doiSuffix = String::strtolower($journal->getLocalizedSetting('initials'));
 
 				if ($issue) {
@@ -167,11 +179,11 @@ class DoiHelper {
 
 		if (!$preview) {
 			// Save the generated DOI.
-			$pubObject->setStoredDOI($doi);
+			$pubObject->setStoredPubId('doi', $doi);
 			foreach($this->_getDAOs() as $objectType => $daoName) {
 				if (is_a($pubObject, $objectType)) {
 					$dao =& DAORegistry::getDAO($daoName);
-					$dao->changeDOI($pubObject->getId(), $doi);
+					$dao->changePubId($pubObject->getId(), 'doi', $doi);
 					break;
 				}
 			}
@@ -181,31 +193,90 @@ class DoiHelper {
 	}
 
 	/**
-	 * Check whether the given suffix already exists for
-	 * any object of this journal.
+	 * Check whether the given suffix may lead to
+	 * a duplicate DOI.
 	 * @param $doiSuffix string
 	 * @param $pubObject object
 	 * @param $journalId integer
 	 * @return boolean
 	 */
-	function doiSuffixExists($doiSuffix, &$pubObject, $journalId) {
-		if (!empty($doiSuffix)) {
-			foreach($this->_getDaos() as $pubObjectType => $daoName) {
-				$dao =& DAORegistry::getDAO($daoName);
-				if (is_a($pubObject, $pubObjectType)) {
-					$excludedId = $pubObject->getId();
-				} else {
-					$excludedId = null;
-				}
-				if($dao->doiSuffixExists($doiSuffix, $excludedId, $journalId)) {
-					return true;
-				}
-				unset($dao);
+	function postedSuffixIsAdmissible($postedSuffix, &$pubObject, $journalId) {
+		if (empty($postedSuffix)) return true;
+
+		// FIXME: Hack to ensure that we get a published article if possible.
+		// Remove this when we have migrated getBest...(), etc. to Article.
+		if (is_a($pubObject, 'SectionEditorSubmission')) {
+			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+			$pubArticle =& $articleDao->getPublishedArticleByArticleId($pubObject->getId());
+			if (is_a($pubArticle, 'PublishedArticle')) {
+				unset($pubObject);
+				$pubObject =& $pubArticle;
 			}
 		}
-		return false;
+
+		// Construct the potential new DOI with the posted suffix.
+		$journal =& $this->_getJournal($journalId);
+		$doiPrefix = $journal->getSetting('doiPrefix');
+		if (empty($doiPrefix)) return true;
+		$newDoi = $doiPrefix . '/' . $postedSuffix;
+
+		// Check all objects of the journal whether they have
+		// the same DOI. This includes DOIs that are not yet generated
+		// but could be generated at any moment if someone accessed
+		// the object publicly.
+		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley', 'SuppFile');
+		foreach($typesToCheck as $pubObjectType) {
+			switch($pubObjectType) {
+				case 'Issue':
+					$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+					$objectsToCheck =& $issueDao->getIssues($journalId);
+					break;
+
+				case 'PublishedArticle':
+					// FIXME: We temporarily have to use the published article
+					// DAO here until we've moved DOI-generation to the Article
+					// class.
+					$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+					$objectsToCheck =& $articleDao->getPublishedArticlesByJournalId($journalId);
+					break;
+
+				case 'ArticleGalley':
+					$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
+					break;
+
+				case 'SuppFile':
+					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+					$objectsToCheck =& $suppFileDao->getSuppFilesByJournalId($journalId);
+					break;
+			}
+
+			$excludedId = (is_a($pubObject, $pubObjectType) ? $pubObject->getId() : null);
+			while ($objectToCheck =& $objectsToCheck->next()) {
+				// The publication object for which the new DOI
+				// should be admissible is to be ignored. Otherwise
+				// we might get false positives by checking against
+				// a DOI that we're about to change anyway.
+				if ($objectToCheck->getId() == $excludedId) continue;
+
+				// Check for ID clashes.
+				$existingDoi = $this->getDOI($objectToCheck, true);
+				if ($newDoi == $existingDoi) return false;
+
+				unset($objectToCheck);
+			}
+
+			unset($objectsToCheck);
+		}
+
+		// We did not find any ID collision, so go ahead.
+		return true;
 	}
 
+
+	/*
+	 * Private helper methods
+	 */
 	/**
 	 * Return an array that assigns object types
 	 * to their corresponding DAOs.
@@ -218,6 +289,29 @@ class DoiHelper {
 			'ArticleGalley' => 'ArticleGalleyDAO',
 			'SuppFile' => 'SuppFileDAO'
 		);
+	}
+
+	/**
+	 * Get the journal object.
+	 * @param $journalId integer
+	 * @return Journal
+	 */
+	function &_getJournal($journalId) {
+		assert(is_numeric($journalId));
+
+		// Get the journal object from the context (optimized).
+		$request =& Application::getRequest();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request); /* @var $journal Journal */
+
+		// Check whether we still have to retrieve the journal from the database.
+		if (!$journal || $journal->getId() != $journalId) {
+			unset($journal);
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getJournal($journalId);
+		}
+
+		return $journal;
 	}
 }
 

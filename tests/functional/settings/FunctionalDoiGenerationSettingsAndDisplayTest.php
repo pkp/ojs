@@ -31,6 +31,18 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
+	 * @see WebTestCase::getAffectedTables()
+	 */
+	protected function getAffectedTables() {
+		return array(
+			'journals', 'journal_settings', 'issues', 'issue_settings',
+			'published_articles', 'articles', 'article_settings',
+			'article_galleys', 'article_galley_settings',
+			'article_supplementary_files', 'article_supp_file_settings'
+		);
+	}
+
+	/**
 	 * BACKGROUND:
 	 *   GIVEN I am on the journal settings page step 1 (details)
 	 *
@@ -45,7 +57,9 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			'setup' => array(
 				'url' => $this->baseUrl.'/index.php/test/manager/setup/%id',
 				'doiPrefix' => 'id=doiPrefix',
-				'reassignDOIs' => 'name=reassignDOIs'
+				'reassignDOIs' => 'name=reassignDOIs',
+				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]',
+				'saved' => $this->baseUrl.'/index.php/test/manager/setupSaved/1'
 			),
 
 			// public pages
@@ -105,7 +119,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			$this->pages["metadata-$objectType"] += array(
 				'doi' => '//div[@id="pub-id::doi"]',
 				'doiInput' => '//div[@id="pub-id::doi"]//input',
-				'formError' => '//ul[@class="formErrorList"]//a[@href="#doiSuffix"]'
+				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#doiSuffix"]'
 			);
 		}
 
@@ -121,7 +135,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Display of DOIs for various journal objects
+	 * SCENARIO OUTLINE: Display of DOIs for various journal objects
 	 *    WHEN I enable DOIs for {object type}
 	 *     AND I open up the {object page}
 	 *    THEN an issue DOI will appear on that page in the given {display format}.
@@ -138,7 +152,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *               |                                          |   DC <meta>, Google <meta>
 	 *   supp file   | .../rt/suppFileMetadata/1/0/1            | visible (10.xxxx/xxx)
 	 *
-	 * SCENARIO: Standard pattern for suffix generation
+	 * SCENARIO OUTLINE: Standard pattern for suffix generation
 	 *    WHEN I select the "default pattern" suffix generation strategy
 	 *    THEN DOI suffixes for {object type} must follow a certain
 	 *         {default pattern} where %j stands for the initials of the journal,
@@ -179,7 +193,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Disabled DOIs
+	 * SCENARIO OUTLINE: Disabled DOIs
 	 *    WHEN I disable DOIs for {object type}
 	 *     AND I open up the {object page}
 	 *    THEN no issue DOI will appear anywhere on that page.
@@ -208,7 +222,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Individual journal prefix
+	 * SCENARIO OUTLINE: Individual journal prefix
 	 *    WHEN I set the {DOI prefix}
 	 *    THEN all DOIs for issues, articles, galleys and supp files
 	 *         must start with that prefix (i.e. {DOI prefix}/xxx).
@@ -231,7 +245,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Custom pattern for suffix generation
+	 * SCENARIO OUTLINE: Custom pattern for suffix generation
 	 *    WHEN I select the "custom pattern" suffix generation strategy
 	 *    THEN DOI suffixes for {object type} must be generated according to
 	 *         the GIVEN {custom pattern} where %j stands for the initials of the
@@ -272,7 +286,56 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Suffix generation based on custom ID (custom URL suffix)
+	 * SCENARIO: Empty custom pattern not allowed
+	 *    WHEN I select the "individual DOI suffix" option
+	 *     AND I do not enter any suffix generation patterns
+	 *         for an enabled publishing object
+	 *    THEN an error message should alert me that I must
+	 *         enter a pattern for enabled objects
+	 *     AND no error message appears when leaving fields
+	 *         of non-enabled publishing objects empty.
+	 */
+	public function testDoiCustomSuffixPatternEmptyNotAllowed() {
+		// Select the "individual DOI suffix" option.
+		$this->click('id=doiSuffix');
+
+		// Make sure that DOIs for all object types
+		// are enabled but that their suffix patterns are empty.
+		foreach ($this->objectTypes as $objectType) {
+			$this->check("id=enable${objectType}Doi");
+			$this->type("id=doi${objectType}SuffixPattern", '');
+		}
+
+		// Try to save settings.
+		$this->clickAndWait('css=input.button.defaultButton');
+
+		// Now we should find error messages for all four object
+		// types.
+		foreach ($this->objectTypes as $objectType) {
+			$formError = str_replace(
+				'%id', "doi${objectType}SuffixPattern",
+				$this->pages['setup']['formError']
+			);
+			$this->assertElementPresent($formError);
+		}
+
+		// Disable DOIs for all object types and the
+		// error messages should disappear.
+		foreach ($this->objectTypes as $objectType) {
+			$this->uncheck("id=enable${objectType}Doi");
+		}
+
+		// Save settings.
+		$this->clickAndWait('css=input.button.defaultButton');
+
+		// If the save action was successful then
+		// we should see the save confirmation page.
+		$this->waitForLocation('exact:'.$this->pages['setup']['saved']);
+	}
+
+
+	/**
+	 * SCENARIO OUTLINE: Suffix generation based on custom ID (custom URL suffix)
 	 *    WHEN I select the "custom identifier" option
 	 *    THEN the {generated DOI} for a GIVEN {object type} must be equal
 	 *         to the prefix plus the {custom identifier} or - in the absence of such
@@ -336,7 +399,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO: Suffix generation based on custom ID (URL independent)
+	 * SCENARIO OUTLINE: Suffix generation based on custom ID (URL independent)
 	 *    WHEN I select the "individual DOI suffix" option
 	 *    THEN an input field for the individual identifier must be present
 	 *         on the {object type}s meta-data entry page as long as no
@@ -458,6 +521,8 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 		// Explicitly stop Selenium otherwise our session
 		// will not be freed for re-use.
 		$this->stop();
+
+		parent::tearDown();
 	}
 
 	/**

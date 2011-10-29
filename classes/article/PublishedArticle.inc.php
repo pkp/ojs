@@ -228,9 +228,20 @@ class PublishedArticle extends Article {
 	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
 	function getPubId($pubIdType, $preview = false) {
-		import('classes.article.DoiHelper');
-		$doiHelper = new DoiHelper();
-		return $doiHelper->getDOI($this, $preview);
+		// If we already have an assigned ID, use it.
+		$storedId = $this->getStoredPubId($pubIdType);
+		if (!empty($storedId)) return $storedId;
+
+		switch($pubIdType) {
+			case 'doi':
+				import('classes.article.DoiHelper');
+				$doiHelper = new DoiHelper();
+				return $doiHelper->getDOI($this, $preview);
+
+			default:
+				// Unknown pub-id-type or pub-id not (yet) set.
+				return null;
+		}
 	}
 }
 

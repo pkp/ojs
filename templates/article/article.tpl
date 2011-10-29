@@ -12,9 +12,9 @@
 	{assign var=pubObject value=$article}
 {/if}
 {if $issue->getPublished()}
-	{assign var=doi value=$pubObject->getDOI()}
+	{assign var=doi value=$pubObject->getPubId('doi')}
 {else}
-	{assign var=doi value=$pubObject->getDOI(true)}{* Don't affix DOI *}
+	{assign var=doi value=$pubObject->getPubId('doi', true)}{* Don't affix DOI *}
 {/if}
 
 

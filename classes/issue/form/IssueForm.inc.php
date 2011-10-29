@@ -117,7 +117,7 @@ class IssueForm extends Form {
 		if (!empty($doiSuffix)) {
 			import('classes.article.DoiHelper');
 			$doiHelper = new DoiHelper();
-			if($doiHelper->doiSuffixExists($doiSuffix, $issue, $journal->getId())) {
+			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $issue, $journal->getId())) {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
@@ -163,7 +163,7 @@ class IssueForm extends Form {
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName(),
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $issue->getStoredDoi(),
+				'storedDoi' => $issue->getStoredPubId('doi'),
 				'doiSuffix' => $issue->getData('doiSuffix'),
 			);
 			parent::initData();

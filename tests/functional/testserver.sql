@@ -1,8 +1,8 @@
--- MySQL dump 10.10
+-- MySQL dump 10.13  Distrib 5.1.58, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: ojs_dev
+-- Host: localhost    Database: pkpojs
 -- ------------------------------------------------------
--- Server version	5.0.26
+-- Server version	5.1.58-1ubuntu1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20,16 +20,19 @@
 --
 
 DROP TABLE IF EXISTS `access_keys`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `access_keys` (
-  `access_key_id` bigint(20) NOT NULL auto_increment,
+  `access_key_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context` varchar(40) NOT NULL,
   `key_hash` varchar(40) NOT NULL,
   `user_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) default NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `expiry_date` datetime NOT NULL,
-  PRIMARY KEY  (`access_key_id`),
+  PRIMARY KEY (`access_key_id`),
   KEY `access_keys_hash` (`key_hash`,`user_id`,`context`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `access_keys`
@@ -45,6 +48,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `announcement_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `announcement_settings` (
   `announcement_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -54,6 +59,7 @@ CREATE TABLE `announcement_settings` (
   UNIQUE KEY `announcement_settings_pkey` (`announcement_id`,`locale`,`setting_name`),
   KEY `announcement_settings_announcement_id` (`announcement_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `announcement_settings`
@@ -69,6 +75,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `announcement_type_settings` (
   `type_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -78,6 +86,7 @@ CREATE TABLE `announcement_type_settings` (
   UNIQUE KEY `announcement_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `announcement_type_settings_type_id` (`type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `announcement_type_settings`
@@ -93,13 +102,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `announcement_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `announcement_types` (
-  `type_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` smallint(6) default NULL,
+  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint(6) DEFAULT NULL,
   `assoc_id` bigint(20) NOT NULL,
-  PRIMARY KEY  (`type_id`),
+  PRIMARY KEY (`type_id`),
   KEY `announcement_types_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `announcement_types`
@@ -115,16 +127,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `announcements`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `announcements` (
-  `announcement_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` smallint(6) default NULL,
+  `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint(6) DEFAULT NULL,
   `assoc_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) default NULL,
-  `date_expire` datetime default NULL,
+  `type_id` bigint(20) DEFAULT NULL,
+  `date_expire` datetime DEFAULT NULL,
   `date_posted` datetime NOT NULL,
-  PRIMARY KEY  (`announcement_id`),
+  PRIMARY KEY (`announcement_id`),
   KEY `announcements_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `announcements`
@@ -140,21 +155,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_comments` (
-  `comment_id` bigint(20) NOT NULL auto_increment,
-  `comment_type` bigint(20) default NULL,
+  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `comment_type` bigint(20) DEFAULT NULL,
   `role_id` bigint(20) NOT NULL,
   `article_id` bigint(20) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
   `author_id` bigint(20) NOT NULL,
   `comment_title` varchar(255) NOT NULL,
   `comments` text,
-  `date_posted` datetime default NULL,
-  `date_modified` datetime default NULL,
-  `viewable` tinyint(4) default NULL,
-  PRIMARY KEY  (`comment_id`),
+  `date_posted` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `viewable` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`comment_id`),
   KEY `article_comments_article_id` (`article_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_comments`
@@ -170,24 +188,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_email_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_email_log` (
-  `log_id` bigint(20) NOT NULL auto_increment,
+  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `sender_id` bigint(20) NOT NULL,
   `date_sent` datetime NOT NULL,
-  `ip_address` varchar(15) default NULL,
-  `event_type` bigint(20) default NULL,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
-  `from_address` varchar(255) default NULL,
+  `ip_address` varchar(15) DEFAULT NULL,
+  `event_type` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
+  `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
   `bcc_recipients` text,
-  `subject` varchar(255) default NULL,
+  `subject` varchar(255) DEFAULT NULL,
   `body` text,
-  PRIMARY KEY  (`log_id`),
+  PRIMARY KEY (`log_id`),
   KEY `article_email_log_article_id` (`article_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_email_log`
@@ -199,29 +220,64 @@ LOCK TABLES `article_email_log` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `article_event_log`
+--
+
+DROP TABLE IF EXISTS `article_event_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `article_event_log` (
+  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `article_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `date_logged` datetime NOT NULL,
+  `ip_address` varchar(15) NOT NULL,
+  `log_level` varchar(1) DEFAULT NULL,
+  `event_type` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
+  `message` text,
+  PRIMARY KEY (`log_id`),
+  KEY `article_event_log_article_id` (`article_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `article_event_log`
+--
+
+LOCK TABLES `article_event_log` WRITE;
+/*!40000 ALTER TABLE `article_event_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `article_event_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `article_files`
 --
 
 DROP TABLE IF EXISTS `article_files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_files` (
-  `file_id` bigint(20) NOT NULL auto_increment,
+  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `revision` bigint(20) NOT NULL,
-  `source_file_id` bigint(20) default NULL,
-  `source_revision` bigint(20) default NULL,
+  `source_file_id` bigint(20) DEFAULT NULL,
+  `source_revision` bigint(20) DEFAULT NULL,
   `article_id` bigint(20) NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) NOT NULL,
   `file_size` bigint(20) NOT NULL,
-  `original_file_name` varchar(127) default NULL,
-  `file_stage` bigint(20) default NULL,
-  `viewable` tinyint(4) default NULL,
+  `original_file_name` varchar(127) DEFAULT NULL,
+  `file_stage` bigint(20) NOT NULL,
+  `viewable` tinyint(4) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   `round` tinyint(4) NOT NULL,
-  `assoc_id` bigint(20) default NULL,
-  PRIMARY KEY  (`file_id`,`revision`),
+  `assoc_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`file_id`,`revision`),
   KEY `article_files_article_id` (`article_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_files`
@@ -238,6 +294,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_galley_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_galley_settings` (
   `galley_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -247,6 +305,7 @@ CREATE TABLE `article_galley_settings` (
   UNIQUE KEY `article_galley_settings_pkey` (`galley_id`,`locale`,`setting_name`),
   KEY `article_galley_settings_galley_id` (`galley_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_galley_settings`
@@ -254,7 +313,7 @@ CREATE TABLE `article_galley_settings` (
 
 LOCK TABLES `article_galley_settings` WRITE;
 /*!40000 ALTER TABLE `article_galley_settings` DISABLE KEYS */;
-INSERT INTO `article_galley_settings` VALUES (1,'','pub-id::publisher-id',NULL,'string');
+INSERT INTO `article_galley_settings` VALUES (1,'','pub-id::publisher-id','','string'),(1,'','doiSuffix','custom_galley_doi','string'),(1,'','pub-id::doi','10.1234/t.v1i1.1.g1','string');
 /*!40000 ALTER TABLE `article_galley_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,19 +322,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_galleys`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_galleys` (
-  `galley_id` bigint(20) NOT NULL auto_increment,
-  `locale` varchar(5) default NULL,
+  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(5) DEFAULT NULL,
   `article_id` bigint(20) NOT NULL,
   `file_id` bigint(20) NOT NULL,
-  `label` varchar(32) default NULL,
+  `label` varchar(32) DEFAULT NULL,
   `html_galley` tinyint(4) NOT NULL,
-  `style_file_id` bigint(20) default NULL,
+  `style_file_id` bigint(20) DEFAULT NULL,
   `seq` double NOT NULL,
   `views` int(11) NOT NULL,
-  PRIMARY KEY  (`galley_id`),
+  `remote_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`galley_id`),
   KEY `article_galleys_article_id` (`article_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_galleys`
@@ -283,7 +346,7 @@ CREATE TABLE `article_galleys` (
 
 LOCK TABLES `article_galleys` WRITE;
 /*!40000 ALTER TABLE `article_galleys` DISABLE KEYS */;
-INSERT INTO `article_galleys` VALUES (1,'en_US',1,1,'Test Galley',0,NULL,0,0);
+INSERT INTO `article_galleys` VALUES (1,'en_US',1,1,'Test Galley',0,NULL,0,0,NULL);
 /*!40000 ALTER TABLE `article_galleys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,11 +355,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_html_galley_images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_html_galley_images` (
   `galley_id` bigint(20) NOT NULL,
   `file_id` bigint(20) NOT NULL,
   UNIQUE KEY `article_html_galley_images_pkey` (`galley_id`,`file_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_html_galley_images`
@@ -312,8 +378,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_notes` (
-  `note_id` bigint(20) NOT NULL auto_increment,
+  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
   `date_created` datetime NOT NULL,
@@ -321,11 +389,12 @@ CREATE TABLE `article_notes` (
   `title` varchar(255) NOT NULL,
   `note` text,
   `file_id` bigint(20) NOT NULL,
-  PRIMARY KEY  (`note_id`),
+  PRIMARY KEY (`note_id`),
   KEY `article_notes_article_id` (`article_id`),
   KEY `article_notes_user_id` (`user_id`),
   KEY `article_notes_file_id` (`file_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_notes`
@@ -341,12 +410,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_search_keyword_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_search_keyword_list` (
-  `keyword_id` bigint(20) NOT NULL auto_increment,
+  `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
-  PRIMARY KEY  (`keyword_id`),
+  PRIMARY KEY (`keyword_id`),
   UNIQUE KEY `article_search_keyword_text` (`keyword_text`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_search_keyword_list`
@@ -354,7 +426,7 @@ CREATE TABLE `article_search_keyword_list` (
 
 LOCK TABLES `article_search_keyword_list` WRITE;
 /*!40000 ALTER TABLE `article_search_keyword_list` DISABLE KEYS */;
-INSERT INTO `article_search_keyword_list` VALUES (1,'doi'),(2,'tester'),(3,'test'),(4,'submission'),(5,'untitled');
+INSERT INTO `article_search_keyword_list` VALUES (1,'doi'),(2,'tester'),(3,'test'),(4,'submission'),(5,'untitled'),(6,'article'),(7,'supp'),(8,'file');
 /*!40000 ALTER TABLE `article_search_keyword_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,6 +435,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_search_object_keywords`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_search_object_keywords` (
   `object_id` bigint(20) NOT NULL,
   `keyword_id` bigint(20) NOT NULL,
@@ -370,6 +444,7 @@ CREATE TABLE `article_search_object_keywords` (
   UNIQUE KEY `article_search_object_keywords_pkey` (`object_id`,`pos`),
   KEY `article_search_object_keywords_keyword_id` (`keyword_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_search_object_keywords`
@@ -377,7 +452,7 @@ CREATE TABLE `article_search_object_keywords` (
 
 LOCK TABLES `article_search_object_keywords` WRITE;
 /*!40000 ALTER TABLE `article_search_object_keywords` DISABLE KEYS */;
-INSERT INTO `article_search_object_keywords` VALUES (1,1,0),(1,2,1),(2,1,0),(2,3,1),(3,1,0),(3,3,1),(3,4,2),(8,5,0);
+INSERT INTO `article_search_object_keywords` VALUES (1,1,0),(1,2,1),(2,1,0),(2,3,1),(3,1,0),(3,3,1),(3,4,2),(8,8,2),(9,1,0),(9,2,1),(10,1,0),(10,3,1),(10,6,2),(11,1,0),(11,3,1),(11,6,2),(16,1,0),(16,2,1),(17,1,0),(17,3,1),(18,1,0),(18,3,1),(18,4,2),(23,1,0),(23,2,1),(24,1,0),(24,3,1),(25,1,0),(25,3,1),(25,4,2),(8,7,1),(8,3,0),(30,1,0),(30,2,1),(31,1,0),(31,3,1),(32,1,0),(32,3,1),(32,4,2),(37,1,0),(37,2,1),(38,1,0),(38,3,1),(39,1,0),(39,3,1),(39,4,2),(44,1,0),(44,2,1),(45,1,0),(45,3,1),(46,1,0),(46,3,1),(46,4,2),(51,1,0),(51,2,1),(52,1,0),(52,3,1),(53,1,0),(53,3,1),(53,4,2);
 /*!40000 ALTER TABLE `article_search_object_keywords` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -386,13 +461,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_search_objects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_search_objects` (
-  `object_id` bigint(20) NOT NULL auto_increment,
+  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `type` int(11) NOT NULL,
-  `assoc_id` bigint(20) default NULL,
-  PRIMARY KEY  (`object_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  `assoc_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`object_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_search_objects`
@@ -400,7 +478,7 @@ CREATE TABLE `article_search_objects` (
 
 LOCK TABLES `article_search_objects` WRITE;
 /*!40000 ALTER TABLE `article_search_objects` DISABLE KEYS */;
-INSERT INTO `article_search_objects` VALUES (1,1,1,0),(2,1,2,0),(3,1,4,0),(4,1,8,0),(5,1,16,0),(6,1,32,0),(7,1,64,0),(8,1,256,2);
+INSERT INTO `article_search_objects` VALUES (1,1,1,0),(2,1,2,0),(3,1,4,0),(4,1,8,0),(5,1,16,0),(6,1,32,0),(7,1,64,0),(8,1,256,2),(9,2,1,0),(10,2,2,0),(11,2,4,0),(12,2,8,0),(13,2,16,0),(14,2,32,0),(15,2,64,0),(16,1,1,0),(17,1,2,0),(18,1,4,0),(19,1,8,0),(20,1,16,0),(21,1,32,0),(22,1,64,0),(23,1,1,0),(24,1,2,0),(25,1,4,0),(26,1,8,0),(27,1,16,0),(28,1,32,0),(29,1,64,0),(30,1,1,0),(31,1,2,0),(32,1,4,0),(33,1,8,0),(34,1,16,0),(35,1,32,0),(36,1,64,0),(37,1,1,0),(38,1,2,0),(39,1,4,0),(40,1,8,0),(41,1,16,0),(42,1,32,0),(43,1,64,0),(44,1,1,0),(45,1,2,0),(46,1,4,0),(47,1,8,0),(48,1,16,0),(49,1,32,0),(50,1,64,0),(51,1,1,0),(52,1,2,0),(53,1,4,0),(54,1,8,0),(55,1,16,0),(56,1,32,0),(57,1,64,0);
 /*!40000 ALTER TABLE `article_search_objects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -409,6 +487,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_settings` (
   `article_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -418,6 +498,7 @@ CREATE TABLE `article_settings` (
   UNIQUE KEY `article_settings_pkey` (`article_id`,`locale`,`setting_name`),
   KEY `article_settings_article_id` (`article_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_settings`
@@ -425,7 +506,7 @@ CREATE TABLE `article_settings` (
 
 LOCK TABLES `article_settings` WRITE;
 /*!40000 ALTER TABLE `article_settings` DISABLE KEYS */;
-INSERT INTO `article_settings` VALUES (1,'en_US','title','DOI Test','string'),(1,'en_US','cleanTitle','DOI Test','string'),(1,'en_US','abstract','DOI Test Submission','string'),(1,'en_US','sponsor','','string'),(1,'','pub-id::doi','10.1234/t.v1i1.1','string'),(1,'','pub-id::publisher-id','doi_test_url','string');
+INSERT INTO `article_settings` VALUES (1,'en_US','title','DOI Test','string'),(1,'en_US','cleanTitle','DOI Test','string'),(1,'en_US','abstract','DOI Test Submission','string'),(1,'en_US','sponsor','','string'),(1,'en_US','coverPageAltText','','string'),(1,'','pub-id::publisher-id','','string'),(2,'en_US','title','DOI Test - Second Article','string'),(2,'en_US','cleanTitle','DOI Test  Second Article','string'),(2,'en_US','abstract','DOI Test Second Article','string'),(2,'en_US','sponsor','','string'),(1,'en_US','showCoverPage','0','int'),(1,'en_US','hideCoverPageToc','0','int'),(1,'en_US','hideCoverPageAbstract','0','int'),(1,'','doiSuffix','custom_article_doi','string'),(1,'','pub-id::doi','10.1234/t.v1i1.1','string');
 /*!40000 ALTER TABLE `article_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -434,6 +515,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_supp_file_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_supp_file_settings` (
   `supp_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -443,6 +526,7 @@ CREATE TABLE `article_supp_file_settings` (
   UNIQUE KEY `article_supp_file_settings_pkey` (`supp_id`,`locale`,`setting_name`),
   KEY `article_supp_file_settings_supp_id` (`supp_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_supp_file_settings`
@@ -450,7 +534,7 @@ CREATE TABLE `article_supp_file_settings` (
 
 LOCK TABLES `article_supp_file_settings` WRITE;
 /*!40000 ALTER TABLE `article_supp_file_settings` DISABLE KEYS */;
-INSERT INTO `article_supp_file_settings` VALUES (1,'en_US','title','Test Supp File','string'),(1,'en_US','creator','','string'),(1,'en_US','subject','','string'),(1,'en_US','typeOther','','string'),(1,'en_US','description','','string'),(1,'en_US','publisher','','string'),(1,'en_US','sponsor','','string'),(1,'en_US','source','','string'),(1,'','pub-id::publisher-id',NULL,'string');
+INSERT INTO `article_supp_file_settings` VALUES (1,'en_US','title','Test Supp File','string'),(1,'en_US','creator','','string'),(1,'en_US','subject','','string'),(1,'en_US','typeOther','','string'),(1,'en_US','description','','string'),(1,'en_US','publisher','','string'),(1,'en_US','sponsor','','string'),(1,'en_US','source','','string'),(1,'','pub-id::publisher-id','','string'),(1,'','doiSuffix','custom_suppfile_doi','string'),(1,'','pub-id::doi','10.1234/t.v1i1.1.s1','string');
 /*!40000 ALTER TABLE `article_supp_file_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -459,20 +543,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_supplementary_files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_supplementary_files` (
-  `supp_id` bigint(20) NOT NULL auto_increment,
+  `supp_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `file_id` bigint(20) NOT NULL,
   `article_id` bigint(20) NOT NULL,
-  `type` varchar(255) default NULL,
-  `language` varchar(10) default NULL,
-  `date_created` date default NULL,
-  `show_reviewers` tinyint(4) default NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `language` varchar(10) DEFAULT NULL,
+  `date_created` date DEFAULT NULL,
+  `show_reviewers` tinyint(4) DEFAULT NULL,
   `date_submitted` datetime NOT NULL,
   `seq` double NOT NULL,
-  PRIMARY KEY  (`supp_id`),
+  `remote_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`supp_id`),
   KEY `article_supplementary_files_file_id` (`file_id`),
   KEY `article_supplementary_files_article_id` (`article_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_supplementary_files`
@@ -480,7 +568,7 @@ CREATE TABLE `article_supplementary_files` (
 
 LOCK TABLES `article_supplementary_files` WRITE;
 /*!40000 ALTER TABLE `article_supplementary_files` DISABLE KEYS */;
-INSERT INTO `article_supplementary_files` VALUES (1,2,1,'Research Instrument','','2011-10-17',0,'2011-10-17 20:28:52',0);
+INSERT INTO `article_supplementary_files` VALUES (1,2,1,'Research Instrument','','2011-10-17',0,'2011-10-17 20:28:52',0,NULL);
 /*!40000 ALTER TABLE `article_supplementary_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -489,6 +577,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_tombstone_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_tombstone_settings` (
   `tombstone_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -498,6 +588,7 @@ CREATE TABLE `article_tombstone_settings` (
   UNIQUE KEY `article_tombstone_settings_pkey` (`tombstone_id`,`locale`,`setting_name`),
   KEY `article_tombstone_settings_tombstone_id` (`tombstone_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_tombstone_settings`
@@ -513,8 +604,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_tombstones`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL auto_increment,
+  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `date_deleted` datetime NOT NULL,
   `journal_id` bigint(20) NOT NULL,
@@ -522,10 +615,11 @@ CREATE TABLE `article_tombstones` (
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
-  PRIMARY KEY  (`tombstone_id`),
+  PRIMARY KEY (`tombstone_id`),
   KEY `article_tombstones_journal_id` (`journal_id`),
   KEY `article_tombstones_article_id` (`article_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_tombstones`
@@ -541,15 +635,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `article_xml_galleys`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `article_xml_galleys` (
-  `xml_galley_id` bigint(20) NOT NULL auto_increment,
+  `xml_galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `galley_id` bigint(20) NOT NULL,
   `article_id` bigint(20) NOT NULL,
   `label` varchar(32) NOT NULL,
   `galley_type` varchar(255) NOT NULL,
   `views` int(11) NOT NULL,
-  PRIMARY KEY  (`xml_galley_id`)
+  PRIMARY KEY (`xml_galley_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `article_xml_galleys`
@@ -565,34 +662,37 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `articles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `articles` (
-  `article_id` bigint(20) NOT NULL auto_increment,
-  `locale` varchar(5) default NULL,
+  `article_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(5) DEFAULT NULL,
   `user_id` bigint(20) NOT NULL,
   `journal_id` bigint(20) NOT NULL,
-  `section_id` bigint(20) default NULL,
-  `language` varchar(10) default NULL,
+  `section_id` bigint(20) DEFAULT NULL,
+  `language` varchar(10) DEFAULT NULL,
   `comments_to_ed` text,
   `citations` text,
-  `date_submitted` datetime default NULL,
-  `last_modified` datetime default NULL,
-  `date_status_modified` datetime default NULL,
+  `date_submitted` datetime DEFAULT NULL,
+  `last_modified` datetime DEFAULT NULL,
+  `date_status_modified` datetime DEFAULT NULL,
   `status` tinyint(4) NOT NULL,
   `submission_progress` tinyint(4) NOT NULL,
   `current_round` tinyint(4) NOT NULL,
-  `submission_file_id` bigint(20) default NULL,
-  `revised_file_id` bigint(20) default NULL,
-  `review_file_id` bigint(20) default NULL,
-  `editor_file_id` bigint(20) default NULL,
-  `pages` varchar(255) default NULL,
+  `submission_file_id` bigint(20) DEFAULT NULL,
+  `revised_file_id` bigint(20) DEFAULT NULL,
+  `review_file_id` bigint(20) DEFAULT NULL,
+  `editor_file_id` bigint(20) DEFAULT NULL,
+  `pages` varchar(255) DEFAULT NULL,
   `fast_tracked` tinyint(4) NOT NULL,
   `hide_author` tinyint(4) NOT NULL,
   `comments_status` tinyint(4) NOT NULL,
-  PRIMARY KEY  (`article_id`),
+  PRIMARY KEY (`article_id`),
   KEY `articles_user_id` (`user_id`),
   KEY `articles_journal_id` (`journal_id`),
   KEY `articles_section_id` (`section_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `articles`
@@ -600,7 +700,7 @@ CREATE TABLE `articles` (
 
 LOCK TABLES `articles` WRITE;
 /*!40000 ALTER TABLE `articles` DISABLE KEYS */;
-INSERT INTO `articles` VALUES (1,'en_US',1,1,1,'en','',NULL,'2011-10-06 11:31:07','2011-10-18 00:11:37','2011-10-06 11:33:57',3,0,1,NULL,NULL,NULL,NULL,NULL,0,0,0);
+INSERT INTO `articles` VALUES (1,'en_US',1,1,1,'en','',NULL,'2011-10-06 11:31:07','2011-11-01 00:58:17','2011-10-06 11:33:57',3,0,1,NULL,NULL,NULL,NULL,NULL,0,0,0),(2,'en_US',1,1,1,'en','',NULL,'2011-10-20 15:46:53','2011-10-20 15:46:53','2011-10-20 15:46:53',1,0,1,NULL,NULL,NULL,NULL,NULL,0,0,0);
 /*!40000 ALTER TABLE `articles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -609,14 +709,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `auth_sources`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `auth_sources` (
-  `auth_id` bigint(20) NOT NULL auto_increment,
+  `auth_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(60) NOT NULL,
   `plugin` varchar(32) NOT NULL,
   `auth_default` tinyint(4) NOT NULL,
   `settings` text,
-  PRIMARY KEY  (`auth_id`)
+  PRIMARY KEY (`auth_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `auth_sources`
@@ -632,6 +735,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `author_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `author_settings` (
   `author_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -641,6 +746,7 @@ CREATE TABLE `author_settings` (
   UNIQUE KEY `author_settings_pkey` (`author_id`,`locale`,`setting_name`),
   KEY `author_settings_author_id` (`author_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `author_settings`
@@ -648,7 +754,7 @@ CREATE TABLE `author_settings` (
 
 LOCK TABLES `author_settings` WRITE;
 /*!40000 ALTER TABLE `author_settings` DISABLE KEYS */;
-INSERT INTO `author_settings` VALUES (1,'en_US','biography','','string'),(1,'en_US','affiliation','','string');
+INSERT INTO `author_settings` VALUES (1,'en_US','biography','','string'),(1,'en_US','affiliation','','string'),(2,'en_US','biography','','string'),(2,'en_US','affiliation','','string');
 /*!40000 ALTER TABLE `author_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -657,21 +763,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `authors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `authors` (
-  `author_id` bigint(20) NOT NULL auto_increment,
+  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
   `primary_contact` tinyint(4) NOT NULL,
   `seq` double NOT NULL,
   `first_name` varchar(40) NOT NULL,
-  `middle_name` varchar(40) default NULL,
+  `middle_name` varchar(40) DEFAULT NULL,
   `last_name` varchar(90) NOT NULL,
-  `country` varchar(90) default NULL,
+  `country` varchar(90) DEFAULT NULL,
   `email` varchar(90) NOT NULL,
-  `url` varchar(255) default NULL,
-  `user_group_id` bigint(20) default NULL,
-  PRIMARY KEY  (`author_id`),
+  `url` varchar(255) DEFAULT NULL,
+  `user_group_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`author_id`),
   KEY `authors_submission_id` (`submission_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `authors`
@@ -679,7 +788,7 @@ CREATE TABLE `authors` (
 
 LOCK TABLES `authors` WRITE;
 /*!40000 ALTER TABLE `authors` DISABLE KEYS */;
-INSERT INTO `authors` VALUES (1,1,1,1,'DOI','','Tester','','jerico.dev@gmail.com','',NULL);
+INSERT INTO `authors` VALUES (1,1,1,1,'DOI','','Tester','','jerico.dev@gmail.com','',NULL),(2,2,1,1,'DOI','2.','Tester','','jerico.dev@gmail.com','',NULL);
 /*!40000 ALTER TABLE `authors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -688,8 +797,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `books_for_review`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `books_for_review` (
-  `book_id` bigint(20) NOT NULL auto_increment,
+  `book_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `status` smallint(6) NOT NULL,
   `author_type` smallint(6) NOT NULL,
@@ -697,23 +808,24 @@ CREATE TABLE `books_for_review` (
   `year` smallint(6) NOT NULL,
   `language` varchar(10) NOT NULL,
   `copy` tinyint(4) NOT NULL,
-  `url` varchar(255) default NULL,
-  `edition` tinyint(4) default NULL,
-  `pages` smallint(6) default NULL,
-  `isbn` varchar(30) default NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `edition` tinyint(4) DEFAULT NULL,
+  `pages` smallint(6) DEFAULT NULL,
+  `isbn` varchar(30) DEFAULT NULL,
   `date_created` datetime NOT NULL,
-  `date_requested` datetime default NULL,
-  `date_assigned` datetime default NULL,
-  `date_mailed` datetime default NULL,
-  `date_due` datetime default NULL,
-  `date_submitted` datetime default NULL,
-  `user_id` bigint(20) default NULL,
-  `editor_id` bigint(20) default NULL,
-  `article_id` bigint(20) default NULL,
+  `date_requested` datetime DEFAULT NULL,
+  `date_assigned` datetime DEFAULT NULL,
+  `date_mailed` datetime DEFAULT NULL,
+  `date_due` datetime DEFAULT NULL,
+  `date_submitted` datetime DEFAULT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `editor_id` bigint(20) DEFAULT NULL,
+  `article_id` bigint(20) DEFAULT NULL,
   `notes` text,
-  PRIMARY KEY  (`book_id`),
+  PRIMARY KEY (`book_id`),
   KEY `bfr_id` (`book_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `books_for_review`
@@ -729,16 +841,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `books_for_review_authors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `books_for_review_authors` (
-  `author_id` bigint(20) NOT NULL auto_increment,
+  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `book_id` bigint(20) NOT NULL,
   `seq` double NOT NULL,
   `first_name` varchar(40) NOT NULL,
-  `middle_name` varchar(40) default NULL,
+  `middle_name` varchar(40) DEFAULT NULL,
   `last_name` varchar(90) NOT NULL,
-  PRIMARY KEY  (`author_id`),
+  PRIMARY KEY (`author_id`),
   KEY `bfr_book_id` (`book_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `books_for_review_authors`
@@ -754,6 +869,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `books_for_review_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `books_for_review_settings` (
   `book_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -763,6 +880,7 @@ CREATE TABLE `books_for_review_settings` (
   UNIQUE KEY `bfr_settings_pkey` (`book_id`,`locale`,`setting_name`),
   KEY `bfr_settings_book_id` (`book_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `books_for_review_settings`
@@ -778,13 +896,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `captchas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `captchas` (
-  `captcha_id` bigint(20) NOT NULL auto_increment,
+  `captcha_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `session_id` varchar(40) NOT NULL,
   `value` varchar(20) NOT NULL,
   `date_created` datetime NOT NULL,
-  PRIMARY KEY  (`captcha_id`)
+  PRIMARY KEY (`captcha_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `captchas`
@@ -800,6 +921,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `citation_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `citation_settings` (
   `citation_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -809,6 +932,7 @@ CREATE TABLE `citation_settings` (
   UNIQUE KEY `citation_settings_pkey` (`citation_id`,`locale`,`setting_name`),
   KEY `citation_settings_citation_id` (`citation_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `citation_settings`
@@ -824,18 +948,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `citations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `citations` (
-  `citation_id` bigint(20) NOT NULL auto_increment,
+  `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
   `citation_state` bigint(20) NOT NULL,
   `raw_citation` text,
   `seq` bigint(20) NOT NULL,
-  `lock_id` varchar(23) default NULL,
-  PRIMARY KEY  (`citation_id`),
+  `lock_id` varchar(23) DEFAULT NULL,
+  PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citations_assoc_seq` (`assoc_type`,`assoc_id`,`seq`),
   KEY `citations_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `citations`
@@ -851,24 +978,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `comments` (
-  `comment_id` bigint(20) NOT NULL auto_increment,
+  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
-  `parent_comment_id` bigint(20) default NULL,
+  `parent_comment_id` bigint(20) DEFAULT NULL,
   `num_children` int(11) NOT NULL,
-  `user_id` bigint(20) default NULL,
+  `user_id` bigint(20) DEFAULT NULL,
   `poster_ip` varchar(15) NOT NULL,
-  `poster_name` varchar(90) default NULL,
-  `poster_email` varchar(90) default NULL,
+  `poster_name` varchar(90) DEFAULT NULL,
+  `poster_email` varchar(90) DEFAULT NULL,
   `title` varchar(255) NOT NULL,
   `body` text,
-  `date_posted` datetime default NULL,
-  `date_modified` datetime default NULL,
-  PRIMARY KEY  (`comment_id`),
+  `date_posted` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`comment_id`),
   KEY `comments_submission_id` (`submission_id`),
   KEY `comments_parent_comment_id` (`parent_comment_id`),
   KEY `comments_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `comments`
@@ -884,18 +1014,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `completed_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `completed_payments` (
-  `completed_payment_id` bigint(20) NOT NULL auto_increment,
+  `completed_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
   `payment_type` bigint(20) NOT NULL,
   `journal_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `amount` double NOT NULL,
-  `currency_code_alpha` varchar(3) default NULL,
-  `payment_method_plugin_name` varchar(80) default NULL,
-  PRIMARY KEY  (`completed_payment_id`)
+  `currency_code_alpha` varchar(3) DEFAULT NULL,
+  `payment_method_plugin_name` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`completed_payment_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `completed_payments`
@@ -911,13 +1044,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `controlled_vocab_entries` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL auto_increment,
+  `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `controlled_vocab_id` bigint(20) NOT NULL,
-  `seq` double default NULL,
-  PRIMARY KEY  (`controlled_vocab_entry_id`),
+  `seq` double DEFAULT NULL,
+  PRIMARY KEY (`controlled_vocab_entry_id`),
   KEY `controlled_vocab_entries_cv_id` (`controlled_vocab_id`,`seq`)
 ) ENGINE=MyISAM AUTO_INCREMENT=317 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `controlled_vocab_entries`
@@ -934,6 +1070,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
   `controlled_vocab_entry_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -943,6 +1081,7 @@ CREATE TABLE `controlled_vocab_entry_settings` (
   UNIQUE KEY `c_v_e_s_pkey` (`controlled_vocab_entry_id`,`locale`,`setting_name`),
   KEY `c_v_e_s_entry_id` (`controlled_vocab_entry_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `controlled_vocab_entry_settings`
@@ -959,14 +1098,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `controlled_vocabs` (
-  `controlled_vocab_id` bigint(20) NOT NULL auto_increment,
+  `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
   `assoc_type` bigint(20) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
-  PRIMARY KEY  (`controlled_vocab_id`),
+  PRIMARY KEY (`controlled_vocab_id`),
   UNIQUE KEY `controlled_vocab_symbolic` (`symbolic`,`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=303 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `controlled_vocabs`
@@ -983,6 +1125,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `counter_monthly_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `counter_monthly_log` (
   `year` bigint(20) NOT NULL,
   `month` bigint(20) NOT NULL,
@@ -992,6 +1136,7 @@ CREATE TABLE `counter_monthly_log` (
   `count_other` bigint(20) NOT NULL,
   UNIQUE KEY `counter_monthly_log_key` (`year`,`month`,`journal_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `counter_monthly_log`
@@ -1007,12 +1152,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `custom_issue_orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `custom_issue_orders` (
   `issue_id` bigint(20) NOT NULL,
   `journal_id` bigint(20) NOT NULL,
   `seq` double NOT NULL,
   UNIQUE KEY `custom_issue_orders_pkey` (`issue_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `custom_issue_orders`
@@ -1029,12 +1177,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `custom_section_orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `custom_section_orders` (
   `issue_id` bigint(20) NOT NULL,
   `section_id` bigint(20) NOT NULL,
   `seq` double NOT NULL,
   UNIQUE KEY `custom_section_orders_pkey` (`issue_id`,`section_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `custom_section_orders`
@@ -1050,19 +1201,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `edit_assignments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `edit_assignments` (
-  `edit_id` bigint(20) NOT NULL auto_increment,
+  `edit_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `editor_id` bigint(20) NOT NULL,
   `can_edit` tinyint(4) NOT NULL,
   `can_review` tinyint(4) NOT NULL,
-  `date_assigned` datetime default NULL,
-  `date_notified` datetime default NULL,
-  `date_underway` datetime default NULL,
-  PRIMARY KEY  (`edit_id`),
+  `date_assigned` datetime DEFAULT NULL,
+  `date_notified` datetime DEFAULT NULL,
+  `date_underway` datetime DEFAULT NULL,
+  PRIMARY KEY (`edit_id`),
   KEY `edit_assignments_article_id` (`article_id`),
   KEY `edit_assignments_editor_id` (`editor_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `edit_assignments`
@@ -1078,17 +1232,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `edit_decisions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `edit_decisions` (
-  `edit_decision_id` bigint(20) NOT NULL auto_increment,
+  `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `round` tinyint(4) NOT NULL,
   `editor_id` bigint(20) NOT NULL,
   `decision` tinyint(4) NOT NULL,
   `date_decided` datetime NOT NULL,
-  PRIMARY KEY  (`edit_decision_id`),
+  PRIMARY KEY (`edit_decision_id`),
   KEY `edit_decisions_article_id` (`article_id`),
   KEY `edit_decisions_editor_id` (`editor_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `edit_decisions`
@@ -1104,23 +1261,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `email_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_log` (
-  `log_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `sender_id` bigint(20) NOT NULL,
   `date_sent` datetime NOT NULL,
-  `ip_address` varchar(39) default NULL,
-  `event_type` bigint(20) default NULL,
-  `from_address` varchar(255) default NULL,
+  `ip_address` varchar(39) DEFAULT NULL,
+  `event_type` bigint(20) DEFAULT NULL,
+  `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
   `bcc_recipients` text,
-  `subject` varchar(255) default NULL,
+  `subject` varchar(255) DEFAULT NULL,
   `body` text,
-  PRIMARY KEY  (`log_id`),
+  PRIMARY KEY (`log_id`),
   KEY `email_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `email_log`
@@ -1128,7 +1288,7 @@ CREATE TABLE `email_log` (
 
 LOCK TABLES `email_log` WRITE;
 /*!40000 ALTER TABLE `email_log` DISABLE KEYS */;
-INSERT INTO `email_log` VALUES (1,257,1,1,'2011-10-06 11:31:13','::1',NULL,'\"FUB Integration Test Principal Contact\" <jerico.dev@gmail.com>','\"admin \" <jerico.dev@gmail.com>',NULL,NULL,'[T] Submission Acknowledgement','admin :\n\nThank you for submitting the manuscript, \"DOI Test\" to test. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:\n\nManuscript URL: http://localhost/pkp-ojs/index.php/test/author/submission/1\nUsername: admin\n\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.\n\nFUB Integration Test Principal Contact\ntest\n________________________________________________________________________\r\ntest\r\nhttp://localhost/pkp-ojs/index.php/test');
+INSERT INTO `email_log` VALUES (1,257,1,1,'2011-10-06 11:31:13','::1',NULL,'\"FUB Integration Test Principal Contact\" <jerico.dev@gmail.com>','\"admin \" <jerico.dev@gmail.com>',NULL,NULL,'[T] Submission Acknowledgement','admin :\n\nThank you for submitting the manuscript, \"DOI Test\" to test. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:\n\nManuscript URL: http://localhost/pkp-ojs/index.php/test/author/submission/1\nUsername: admin\n\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.\n\nFUB Integration Test Principal Contact\ntest\n________________________________________________________________________\r\ntest\r\nhttp://localhost/pkp-ojs/index.php/test'),(2,257,2,1,'2011-10-20 15:46:53','187.15.48.79',NULL,'\"FUB Integration Test Principal Contact\" <jerico.dev@gmail.com>','\"admin \" <jerico.dev@gmail.com>',NULL,NULL,'[T] Submission Acknowledgement','admin :\n\nThank you for submitting the manuscript, \"DOI Test - Second Article\" to test. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:\n\nManuscript URL: http://ojs-test.cedis.fu-berlin.de/ojs-dev/index.php/test/author/submission/2\nUsername: admin\n\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.\n\nFUB Integration Test Principal Contact\ntest\n________________________________________________________________________\r\ntest\r\nhttp://localhost/pkp-ojs/index.php/test');
 /*!40000 ALTER TABLE `email_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1137,16 +1297,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `email_templates`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_templates` (
-  `email_id` bigint(20) NOT NULL auto_increment,
+  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email_key` varchar(30) NOT NULL,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `enabled` tinyint(4) NOT NULL,
-  PRIMARY KEY  (`email_id`),
+  PRIMARY KEY (`email_id`),
   UNIQUE KEY `email_templates_email_key` (`email_key`,`assoc_type`,`assoc_id`),
   KEY `email_templates_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `email_templates`
@@ -1162,15 +1325,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `email_templates_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_templates_data` (
   `email_key` varchar(30) NOT NULL,
   `locale` varchar(5) NOT NULL,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `subject` varchar(120) NOT NULL,
   `body` text,
   UNIQUE KEY `email_templates_data_pkey` (`email_key`,`locale`,`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `email_templates_data`
@@ -1186,16 +1352,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `email_templates_default`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_templates_default` (
-  `email_id` bigint(20) NOT NULL auto_increment,
+  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email_key` varchar(30) NOT NULL,
   `can_disable` tinyint(4) NOT NULL,
   `can_edit` tinyint(4) NOT NULL,
-  `from_role_id` bigint(20) default NULL,
-  `to_role_id` bigint(20) default NULL,
-  PRIMARY KEY  (`email_id`),
+  `from_role_id` bigint(20) DEFAULT NULL,
+  `to_role_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`email_id`),
   KEY `email_templates_default_email_key` (`email_key`)
 ) ENGINE=MyISAM AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `email_templates_default`
@@ -1212,6 +1381,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_templates_default_data` (
   `email_key` varchar(30) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1220,6 +1391,7 @@ CREATE TABLE `email_templates_default_data` (
   `description` text,
   UNIQUE KEY `email_templates_default_data_pkey` (`email_key`,`locale`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `email_templates_default_data`
@@ -1236,19 +1408,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `event_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `event_log` (
-  `log_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `user_id` bigint(20) NOT NULL,
   `date_logged` datetime NOT NULL,
   `ip_address` varchar(39) NOT NULL,
-  `event_type` bigint(20) default NULL,
+  `event_type` bigint(20) DEFAULT NULL,
   `message` text,
-  `is_translated` tinyint(4) default NULL,
-  PRIMARY KEY  (`log_id`),
+  `is_translated` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`log_id`),
   KEY `event_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `event_log`
@@ -1256,7 +1431,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,257,1,1,'2011-10-06 11:31:13','::1',268435457,'log.author.submitted',0);
+INSERT INTO `event_log` VALUES (1,257,1,1,'2011-10-06 11:31:13','::1',268435457,'log.author.submitted',0),(2,257,2,1,'2011-10-20 15:46:54','187.15.48.79',268435457,'log.author.submitted',0),(3,257,1,1,'2011-10-20 16:50:03','160.45.170.42',268435458,'log.editor.metadataModified',0),(4,257,1,1,'2011-10-28 23:14:15','160.45.170.42',268435458,'log.editor.metadataModified',0),(5,257,1,1,'2011-10-29 07:49:54','160.45.170.42',268435458,'log.editor.metadataModified',0),(6,257,1,1,'2011-10-31 22:18:03','160.45.170.42',268435458,'log.editor.metadataModified',0),(7,257,1,1,'2011-10-31 22:26:41','160.45.170.42',268435458,'log.editor.metadataModified',0),(8,257,1,1,'2011-11-01 00:58:17','160.45.170.42',268435458,'log.editor.metadataModified',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1265,6 +1440,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `event_log_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `event_log_settings` (
   `log_id` bigint(20) NOT NULL,
   `setting_name` varchar(255) NOT NULL,
@@ -1273,6 +1450,7 @@ CREATE TABLE `event_log_settings` (
   UNIQUE KEY `event_log_settings_pkey` (`log_id`,`setting_name`),
   KEY `event_log_settings_log_id` (`log_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `event_log_settings`
@@ -1280,7 +1458,7 @@ CREATE TABLE `event_log_settings` (
 
 LOCK TABLES `event_log_settings` WRITE;
 /*!40000 ALTER TABLE `event_log_settings` DISABLE KEYS */;
-INSERT INTO `event_log_settings` VALUES (1,'authorName','admin ','string'),(1,'old_log_id','257','int');
+INSERT INTO `event_log_settings` VALUES (1,'authorName','admin ','string'),(1,'old_log_id','257','int'),(2,'authorName','admin ','string'),(3,'editorName','admin ','string'),(4,'editorName','admin ','string'),(5,'editorName','admin ','string'),(6,'editorName','admin ','string'),(7,'editorName','admin ','string'),(8,'editorName','admin ','string');
 /*!40000 ALTER TABLE `event_log_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1289,6 +1467,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `external_feed_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `external_feed_settings` (
   `feed_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1297,6 +1477,7 @@ CREATE TABLE `external_feed_settings` (
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `external_feed_settings_pkey` (`feed_id`,`locale`,`setting_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `external_feed_settings`
@@ -1312,18 +1493,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `external_feeds`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `external_feeds` (
-  `feed_id` bigint(20) NOT NULL auto_increment,
+  `feed_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `url` varchar(255) NOT NULL,
   `seq` double NOT NULL,
   `display_homepage` tinyint(4) NOT NULL,
   `display_block` smallint(6) NOT NULL,
-  `limit_items` tinyint(4) default NULL,
-  `recent_items` smallint(6) default NULL,
-  PRIMARY KEY  (`feed_id`),
+  `limit_items` tinyint(4) DEFAULT NULL,
+  `recent_items` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`feed_id`),
   KEY `external_feeds_journal_id` (`journal_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `external_feeds`
@@ -1339,16 +1523,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `filter_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `filter_groups` (
-  `filter_group_id` bigint(20) NOT NULL auto_increment,
-  `symbolic` varchar(255) default NULL,
-  `display_name` varchar(255) default NULL,
-  `description` varchar(255) default NULL,
-  `input_type` varchar(255) default NULL,
-  `output_type` varchar(255) default NULL,
-  PRIMARY KEY  (`filter_group_id`),
+  `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `symbolic` varchar(255) DEFAULT NULL,
+  `display_name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `input_type` varchar(255) DEFAULT NULL,
+  `output_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`filter_group_id`),
   UNIQUE KEY `filter_groups_symbolic` (`symbolic`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `filter_groups`
@@ -1365,6 +1552,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `filter_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `filter_settings` (
   `filter_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1374,6 +1563,7 @@ CREATE TABLE `filter_settings` (
   UNIQUE KEY `filter_settings_pkey` (`filter_id`,`locale`,`setting_name`),
   KEY `filter_settings_id` (`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `filter_settings`
@@ -1390,17 +1580,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `filters`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `filters` (
-  `filter_id` bigint(20) NOT NULL auto_increment,
+  `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `filter_group_id` bigint(20) NOT NULL,
   `context_id` bigint(20) NOT NULL,
-  `display_name` varchar(255) default NULL,
-  `class_name` varchar(255) default NULL,
+  `display_name` varchar(255) DEFAULT NULL,
+  `class_name` varchar(255) DEFAULT NULL,
   `is_template` tinyint(4) NOT NULL,
   `parent_filter_id` bigint(20) NOT NULL,
   `seq` bigint(20) NOT NULL,
-  PRIMARY KEY  (`filter_id`)
+  PRIMARY KEY (`filter_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `filters`
@@ -1417,31 +1610,34 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `gifts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gifts` (
-  `gift_id` bigint(20) NOT NULL auto_increment,
+  `gift_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` smallint(6) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
   `status` tinyint(4) NOT NULL,
   `gift_type` smallint(6) NOT NULL,
   `gift_assoc_id` bigint(20) NOT NULL,
   `buyer_first_name` varchar(40) NOT NULL,
-  `buyer_middle_name` varchar(40) default NULL,
+  `buyer_middle_name` varchar(40) DEFAULT NULL,
   `buyer_last_name` varchar(90) NOT NULL,
   `buyer_email` varchar(90) NOT NULL,
-  `buyer_user_id` bigint(20) default NULL,
+  `buyer_user_id` bigint(20) DEFAULT NULL,
   `recipient_first_name` varchar(40) NOT NULL,
-  `recipient_middle_name` varchar(40) default NULL,
+  `recipient_middle_name` varchar(40) DEFAULT NULL,
   `recipient_last_name` varchar(90) NOT NULL,
   `recipient_email` varchar(90) NOT NULL,
-  `recipient_user_id` bigint(20) default NULL,
-  `date_redeemed` datetime default NULL,
+  `recipient_user_id` bigint(20) DEFAULT NULL,
+  `date_redeemed` datetime DEFAULT NULL,
   `locale` varchar(5) NOT NULL,
-  `gift_note_title` varchar(90) default NULL,
+  `gift_note_title` varchar(90) DEFAULT NULL,
   `gift_note` text,
   `notes` text,
-  PRIMARY KEY  (`gift_id`),
+  PRIMARY KEY (`gift_id`),
   KEY `gifts_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `gifts`
@@ -1457,6 +1653,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `group_memberships`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `group_memberships` (
   `user_id` bigint(20) NOT NULL,
   `group_id` bigint(20) NOT NULL,
@@ -1464,6 +1662,7 @@ CREATE TABLE `group_memberships` (
   `seq` double NOT NULL,
   UNIQUE KEY `group_memberships_pkey` (`user_id`,`group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `group_memberships`
@@ -1479,6 +1678,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `group_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `group_settings` (
   `group_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1488,6 +1689,7 @@ CREATE TABLE `group_settings` (
   UNIQUE KEY `group_settings_pkey` (`group_id`,`locale`,`setting_name`),
   KEY `group_settings_group_id` (`group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `group_settings`
@@ -1503,17 +1705,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `groups` (
-  `group_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` smallint(6) default NULL,
-  `publish_email` smallint(6) default NULL,
-  `assoc_id` bigint(20) default NULL,
-  `context` bigint(20) default NULL,
+  `group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint(6) DEFAULT NULL,
+  `publish_email` smallint(6) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
+  `context` bigint(20) DEFAULT NULL,
   `about_displayed` tinyint(4) NOT NULL,
   `seq` double NOT NULL,
-  PRIMARY KEY  (`group_id`),
+  PRIMARY KEY (`group_id`),
   KEY `groups_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `groups`
@@ -1529,17 +1734,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `institutional_subscription_ip`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `institutional_subscription_ip` (
-  `institutional_subscription_ip_id` bigint(20) NOT NULL auto_increment,
+  `institutional_subscription_ip_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `subscription_id` bigint(20) NOT NULL,
   `ip_string` varchar(40) NOT NULL,
   `ip_start` bigint(20) NOT NULL,
-  `ip_end` bigint(20) default NULL,
-  PRIMARY KEY  (`institutional_subscription_ip_id`),
+  `ip_end` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`institutional_subscription_ip_id`),
   KEY `institutional_subscription_ip_subscription_id` (`subscription_id`),
   KEY `institutional_subscription_ip_start` (`ip_start`),
   KEY `institutional_subscription_ip_end` (`ip_end`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `institutional_subscription_ip`
@@ -1555,16 +1763,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `institutional_subscriptions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `institutional_subscriptions` (
-  `institutional_subscription_id` bigint(20) NOT NULL auto_increment,
+  `institutional_subscription_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `subscription_id` bigint(20) NOT NULL,
   `institution_name` varchar(255) NOT NULL,
-  `mailing_address` varchar(255) default NULL,
-  `domain` varchar(255) default NULL,
-  PRIMARY KEY  (`institutional_subscription_id`),
+  `mailing_address` varchar(255) DEFAULT NULL,
+  `domain` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`institutional_subscription_id`),
   KEY `institutional_subscriptions_subscription_id` (`subscription_id`),
   KEY `institutional_subscriptions_domain` (`domain`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `institutional_subscriptions`
@@ -1580,19 +1791,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `issue_files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `issue_files` (
-  `file_id` bigint(20) NOT NULL auto_increment,
+  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `issue_id` bigint(20) NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) NOT NULL,
   `file_size` bigint(20) NOT NULL,
   `content_type` bigint(20) NOT NULL,
-  `original_file_name` varchar(127) default NULL,
+  `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  PRIMARY KEY  (`file_id`),
+  PRIMARY KEY (`file_id`),
   KEY `issue_files_issue_id` (`issue_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `issue_files`
@@ -1608,6 +1822,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `issue_galley_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `issue_galley_settings` (
   `galley_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1617,6 +1833,7 @@ CREATE TABLE `issue_galley_settings` (
   UNIQUE KEY `issue_galley_settings_pkey` (`galley_id`,`locale`,`setting_name`),
   KEY `issue_galley_settings_galley_id` (`galley_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `issue_galley_settings`
@@ -1632,17 +1849,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `issue_galleys`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `issue_galleys` (
-  `galley_id` bigint(20) NOT NULL auto_increment,
-  `locale` varchar(5) default NULL,
+  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(5) DEFAULT NULL,
   `issue_id` bigint(20) NOT NULL,
   `file_id` bigint(20) NOT NULL,
-  `label` varchar(32) default NULL,
+  `label` varchar(32) DEFAULT NULL,
   `seq` double NOT NULL,
   `views` int(11) NOT NULL,
-  PRIMARY KEY  (`galley_id`),
+  PRIMARY KEY (`galley_id`),
   KEY `issue_galleys_issue_id` (`issue_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `issue_galleys`
@@ -1658,6 +1878,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `issue_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `issue_settings` (
   `issue_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1667,6 +1889,7 @@ CREATE TABLE `issue_settings` (
   UNIQUE KEY `issue_settings_pkey` (`issue_id`,`locale`,`setting_name`),
   KEY `issue_settings_issue_id` (`issue_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `issue_settings`
@@ -1674,7 +1897,7 @@ CREATE TABLE `issue_settings` (
 
 LOCK TABLES `issue_settings` WRITE;
 /*!40000 ALTER TABLE `issue_settings` DISABLE KEYS */;
-INSERT INTO `issue_settings` VALUES (1,'en_US','title','DOI Test','string'),(1,'en_US','coverPageDescription','','string'),(1,'en_US','showCoverPage','0','int'),(1,'en_US','hideCoverPageArchives','0','int'),(1,'en_US','hideCoverPageCover','0','int'),(1,'en_US','description','','string'),(1,'en_US','coverPageAltText','','string');
+INSERT INTO `issue_settings` VALUES (1,'en_US','title','DOI Test','string'),(1,'en_US','coverPageDescription','','string'),(1,'en_US','showCoverPage','0','int'),(1,'en_US','hideCoverPageArchives','0','int'),(1,'en_US','hideCoverPageCover','0','int'),(1,'en_US','description','','string'),(1,'en_US','coverPageAltText','','string'),(1,'','doiSuffix','custom_issue_doi','string'),(1,'','pub-id::publisher-id','','string'),(1,'','pub-id::doi','10.1234/t.v1i1','string');
 /*!40000 ALTER TABLE `issue_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1683,27 +1906,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `issues`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `issues` (
-  `issue_id` bigint(20) NOT NULL auto_increment,
+  `issue_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
-  `volume` smallint(6) default NULL,
-  `number` varchar(10) default NULL,
-  `year` smallint(6) default NULL,
+  `volume` smallint(6) DEFAULT NULL,
+  `number` varchar(10) DEFAULT NULL,
+  `year` smallint(6) DEFAULT NULL,
   `published` tinyint(4) NOT NULL,
   `current` tinyint(4) NOT NULL,
-  `date_published` datetime default NULL,
-  `date_notified` datetime default NULL,
+  `date_published` datetime DEFAULT NULL,
+  `date_notified` datetime DEFAULT NULL,
   `access_status` tinyint(4) NOT NULL,
-  `open_access_date` datetime default NULL,
+  `open_access_date` datetime DEFAULT NULL,
   `show_volume` tinyint(4) NOT NULL,
   `show_number` tinyint(4) NOT NULL,
   `show_year` tinyint(4) NOT NULL,
   `show_title` tinyint(4) NOT NULL,
-  `style_file_name` varchar(90) default NULL,
-  `original_style_file_name` varchar(255) default NULL,
-  PRIMARY KEY  (`issue_id`),
+  `style_file_name` varchar(90) DEFAULT NULL,
+  `original_style_file_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`issue_id`),
   KEY `issues_journal_id` (`journal_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `issues`
@@ -1711,7 +1937,7 @@ CREATE TABLE `issues` (
 
 LOCK TABLES `issues` WRITE;
 /*!40000 ALTER TABLE `issues` DISABLE KEYS */;
-INSERT INTO `issues` VALUES (1,1,1,'1',2011,1,1,'2011-10-06 11:33:57',NULL,0,NULL,1,1,1,1,NULL,NULL);
+INSERT INTO `issues` VALUES (1,1,1,'1',2011,1,1,'2011-10-06 00:00:00',NULL,0,NULL,1,1,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `issues` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1720,6 +1946,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `journal_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `journal_settings` (
   `journal_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1729,6 +1957,7 @@ CREATE TABLE `journal_settings` (
   UNIQUE KEY `journal_settings_pkey` (`journal_id`,`locale`,`setting_name`),
   KEY `journal_settings_journal_id` (`journal_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `journal_settings`
@@ -1736,7 +1965,7 @@ CREATE TABLE `journal_settings` (
 
 LOCK TABLES `journal_settings` WRITE;
 /*!40000 ALTER TABLE `journal_settings` DISABLE KEYS */;
-INSERT INTO `journal_settings` VALUES (1,'','numPageLinks','10','int'),(1,'','itemsPerPage','25','int'),(1,'','numWeeksPerReview','4','int'),(1,'en_US','privacyStatement','The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.','string'),(1,'en_US','openAccessPolicy','This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.','string'),(1,'en_US','authorSelfArchivePolicy','This journal permits and encourages authors to post items submitted to the journal on personal websites or institutional repositories both prior to and after publication, while providing bibliographic details that credit, if applicable, its publication in this journal.','string'),(1,'en_US','copyeditInstructions','The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text because the next stage is restricted to typos and formatting corrections.   The file to be copyedited is in Word or .rtf format and therefore can easily be edited as a word processing document. The set of instructions displayed here proposes two approaches to copyediting. One is based on Microsoft Word\'s Track Changes feature and requires that the copy editor, editor, and author have access to this program. A second system, which is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.   <h4>Copyediting Systems</h4> <strong>1. Microsoft Word\'s Track Changes</strong> Under Tools in the menu bar, the feature Track Changes enables the copy editor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copy editor can posit queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded, and the editor is notified. The editor then reviews the text and notifies the author.  The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets.   After the text has been reviewed by editor and author, the copy editor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.   <strong>2. Harvard Educational Review </strong> <strong>Instructions for Making Electronic Revisions to the Manuscript</strong> Please follow the following protocol for making electronic revisions to your manuscript:  <strong>Responding to suggested changes.</strong> For each of the suggested changes that you accept, unbold the text.   For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it.  <strong>Making additions and deletions.</strong> Indicate additions by <strong>bolding</strong> the new text.   Replace deleted sections with: <strong>[deleted text]</strong>.   If you delete one or more sentence, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>.  <strong>Responding to Queries to the Author (QAs).</strong> Keep all QAs intact and bolded within the text. Do not delete them.   To reply to a QA, add a comment after it. Comments should be delimited using: <strong>[Comment:]</strong> e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>.  <strong>Making comments.</strong> Use comments to explain organizational changes or major revisions   e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7].</strong> Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.  <h4>An Illustration of an Electronic Revision</h4> <ol> <li><strong>Initial copyedit.</strong> The journal copy editor will edit the text to improve flow, clarity, grammar, wording, and formatting, as well as including author queries as necessary. Once the initial edit is complete, the copy editor will upload the revised document through the journal Web site and notify the author that the edited manuscript is available for review.</li> <li><strong>Author copyedit.</strong> Before making dramatic departures from the structure and organization of the edited manuscript, authors must check in with the editors who are co-chairing the piece. Authors should accept/reject any changes made during the initial copyediting, as appropriate, and respond to all author queries. When finished with the revisions, authors should rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc) and upload the revised document through the journal Web site as directed.</li> <li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li> </ol>','string'),(1,'','useLayoutEditors','0','bool'),(1,'','emailSignature','________________________________________________________________________\r\ntest\r\nhttp://localhost/pkp-ojs/index.php/test','string'),(1,'en_US','proofInstructions','<p>The proofreading stage is intended to catch any errors in the galley\'s spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p> <h4>For Spelling and Grammar Errors</h4> <p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with \"CHANGE-TO\" instructions to the editor as follows:</p> <pre>1. CHANGE...\r\n	then the others\r\n	TO...\r\n	than the others</pre> <br /> <pre>2. CHANGE...\r\n	Malinowsky\r\n	TO...\r\n	Malinowski</pre> <br /> <h4>For Formatting Errors</h4> <p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title \"FORMATTING\" as follows:</p> <br /> <pre>3. FORMATTING\r\n	The numbers in Table 3 are not aligned in the third column.</pre> <br /> <pre>4. FORMATTING\r\n	The paragraph that begins \"This last topic...\" is not indented.</pre>','string'),(1,'en_US','refLinkInstructions','<h4>To Add Reference Linking to the Layout Process</h4> <p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p> <h4>A. When the Author Provides a Link with the Reference</h4> <ol> <li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li> <li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li> </ol> <h4>B. Enabling Readers to Search Google Scholar For References</h4> <ol> <li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., \"Peace\"—then copy author and title).</li> <li>Paste the reference\'s title between the %22\'s, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&amp;hl=en&amp;lr=&amp;btnG=Search.</li> <li>Add the phrase GS SEARCH to the end of each citation in the submission\'s References list.</li> <li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li> </ol> <h4>C. Enabling Readers to Search for References with a DOI</h4> <ol> <li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li> <li>Paste each DOI that the Query provides in the following URL (between = and &amp;): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&amp;link_type=DOI.</li> <li>Add the phrase CrossRef to the end of each citation in the submission\'s References list.</li> <li>Turn that phrase into a hyperlink by highlighting the phrase and using Word\'s Insert Hyperlink tool and the appropriate URL prepared in #2.</li> </ol>','string'),(1,'en_US','readerInformation','We encourage readers to sign up for the publishing notification service for this journal. Use the <a href=\"/pkp-ojs/index.php/test/user/register\">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal\'s <a href=\"/pkp-ojs/index.php/test/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.','string'),(1,'en_US','authorInformation','Interested in submitting to this journal? We recommend that you review the <a href=\"/pkp-ojs/index.php/test/about\">About the Journal</a> page for the journal\'s section policies, as well as the <a href=\"/pkp-ojs/index.php/test/about/submissions#authorGuidelines\">Author Guidelines</a>. Authors need to <a href=\"/pkp-ojs/index.php/test/user/register\">register</a> with the journal prior to submitting or, if already registered, can simply <a href=\"/pkp-ojs/index.php/index/login\">log in</a> and begin the five-step process.','string'),(1,'','displayCurrentIssue','0','bool'),(1,'en_US','librarianInformation','We encourage research librarians to list this journal among their library\'s electronic journal holdings. As well, it may be worth noting that this journal\'s open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>).','string'),(1,'en_US','lockssLicense','This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href=\"http://lockss.org/\">More...</a>','string'),(1,'','supportedLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'','supportedFormLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'','supportedSubmissionLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'en_US','submissionChecklist','a:6:{i:0;a:2:{s:7:\"content\";s:165:\"The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).\";s:5:\"order\";s:1:\"1\";}i:1;a:2:{s:7:\"content\";s:95:\"The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect document file format.\";s:5:\"order\";s:1:\"2\";}i:2;a:2:{s:7:\"content\";s:60:\"Where available, URLs for the references have been provided.\";s:5:\"order\";s:1:\"3\";}i:3;a:2:{s:7:\"content\";s:239:\"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.\";s:5:\"order\";s:1:\"4\";}i:4;a:2:{s:7:\"content\";s:239:\"The text adheres to the stylistic and bibliographic requirements outlined in the <a href=\"http://localhost/pkp-ojs/index.php/test/about/submissions#authorGuidelines\" target=\"_new\">Author Guidelines</a>, which is found in About the Journal.\";s:5:\"order\";s:1:\"5\";}i:5;a:2:{s:7:\"content\";s:230:\"If submitting to a peer-reviewed section of the journal, the instructions in <a href=\"javascript:openHelp(\'http://localhost/pkp-ojs/index.php/test/help/view/editorial/topic/000044\')\">Ensuring a Blind Review</a> have been followed.\";s:5:\"order\";s:1:\"6\";}}','object'),(1,'','rtAbstract','1','bool'),(1,'','rtCaptureCite','1','bool'),(1,'','rtViewMetadata','1','bool'),(1,'','rtSupplementaryFiles','1','bool'),(1,'','rtPrinterFriendly','1','bool'),(1,'','rtDefineTerms','1','bool'),(1,'','rtAddComment','1','bool'),(1,'','rtEmailAuthor','1','bool'),(1,'','rtEmailOthers','1','bool'),(1,'','allowRegReviewer','1','bool'),(1,'','allowRegAuthor','1','bool'),(1,'','allowRegReader','1','bool'),(1,'','submissionFee','0','int'),(1,'en_US','submissionFeeName','Article Submission','string'),(1,'en_US','submissionFeeDescription','Authors are required to pay an Article Submission Fee as part of the submission process to contribute to review costs.','string'),(1,'','fastTrackFee','0','int'),(1,'en_US','fastTrackFeeName','Fast-Track Review','string'),(1,'en_US','fastTrackFeeDescription','With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.','string'),(1,'','publicationFee','0','int'),(1,'en_US','publicationFeeName','Article Publication','string'),(1,'en_US','publicationFeeDescription','If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.','string'),(1,'en_US','waiverPolicy','If you do not have funds to pay such fees, you will have an opportunity to waive each fee. We do not want fees to prevent the publication of worthy work.','string'),(1,'','purchaseArticleFee','0','int'),(1,'en_US','purchaseArticleFeeName','Purchase Article','string'),(1,'en_US','purchaseArticleFeeDescription','The payment of this fee will enable you to view, download, and print this article.','string'),(1,'','membershipFee','0','int'),(1,'en_US','membershipFeeName','Association Membership','string'),(1,'en_US','membershipFeeDescription','The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.','string'),(1,'en_US','donationFeeName','Donations to journal','string'),(1,'en_US','donationFeeDescription','Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.','string'),(1,'en_US','title','test','string'),(1,'en_US','initials','T','string'),(1,'','printIssn','','string'),(1,'','onlineIssn','','string'),(1,'','doiPrefix','10.1234','string'),(1,'','doiSuffix','default','string'),(1,'','doiSuffixPattern','','string'),(1,'','mailingAddress','','string'),(1,'','categories','N;','object'),(1,'','useEditorialBoard','0','bool'),(1,'','contactName','FUB Integration Test Principal Contact','string'),(1,'','contactEmail','jerico.dev@gmail.com','string'),(1,'','contactPhone','','string'),(1,'','contactFax','','string'),(1,'','supportName','FUB Integration Test Tech Contact','string'),(1,'','supportEmail','jerico.dev@gmail.com','string'),(1,'','supportPhone','','string'),(1,'','sponsors','a:0:{}','object'),(1,'','publisherInstitution','','string'),(1,'','publisherUrl','','string'),(1,'','contributors','a:0:{}','object'),(1,'','envelopeSender','','string'),(1,'','enableComments','0','int'),(1,'','rtEnabled','1','bool'),(1,'','rtVersionId','0','int'),(1,'','rtFindingReferences','0','bool'),(1,'','rtViewReviewPolicy','0','bool'),(1,'','rtSharingEnabled','','string'),(1,'','rtSharingUserName','','string'),(1,'','rtSharingButtonStyle','','string'),(1,'','rtSharingDropDownMenu','','string'),(1,'','rtSharingBrand','','string'),(1,'','rtSharingDropDown','','string'),(1,'','rtSharingLanguage','','string'),(1,'','rtSharingLogo','','string'),(1,'','rtSharingLogoBackground','','string'),(1,'','rtSharingLogoColor','','string'),(1,'en_US','navItems','a:1:{i:0;a:2:{s:4:\"name\";s:0:\"\";s:3:\"url\";s:0:\"\";}}','object'),(1,'','journalTheme','','string'),(1,'','disableUserReg','0','bool'),(1,'','restrictSiteAccess','0','bool'),(1,'','restrictArticleAccess','0','bool'),(1,'','publicationFormatVolume','0','bool'),(1,'','publicationFormatNumber','0','bool'),(1,'','publicationFormatYear','0','bool'),(1,'','publicationFormatTitle','0','bool'),(1,'','initialVolume','0','int'),(1,'','initialNumber','0','int'),(1,'','initialYear','0','int'),(1,'','useCopyeditors','0','bool'),(1,'','provideRefLinkInstructions','0','bool'),(1,'','useProofreaders','0','bool'),(1,'','publishingMode','0','int'),(1,'','showGalleyLinks','0','bool'),(1,'','enableAnnouncements','0','bool'),(1,'','enableAnnouncementsHomepage','0','bool'),(1,'','numAnnouncementsHomepage','0','int'),(1,'','volumePerYear','0','int'),(1,'','issuePerVolume','0','int'),(1,'','enablePublicIssueId','1','bool'),(1,'','enablePublicArticleId','1','bool'),(1,'','enablePublicGalleyId','1','bool'),(1,'','enablePublicSuppFileId','1','bool'),(1,'','enablePageNumber','0','bool');
+INSERT INTO `journal_settings` VALUES (1,'','numPageLinks','10','int'),(1,'','itemsPerPage','25','int'),(1,'','numWeeksPerReview','4','int'),(1,'en_US','privacyStatement','The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.','string'),(1,'en_US','openAccessPolicy','This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.','string'),(1,'en_US','authorSelfArchivePolicy','This journal permits and encourages authors to post items submitted to the journal on personal websites or institutional repositories both prior to and after publication, while providing bibliographic details that credit, if applicable, its publication in this journal.','string'),(1,'en_US','copyeditInstructions','The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text because the next stage is restricted to typos and formatting corrections.   The file to be copyedited is in Word or .rtf format and therefore can easily be edited as a word processing document. The set of instructions displayed here proposes two approaches to copyediting. One is based on Microsoft Word\'s Track Changes feature and requires that the copy editor, editor, and author have access to this program. A second system, which is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.   <h4>Copyediting Systems</h4> <strong>1. Microsoft Word\'s Track Changes</strong> Under Tools in the menu bar, the feature Track Changes enables the copy editor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copy editor can posit queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded, and the editor is notified. The editor then reviews the text and notifies the author.  The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets.   After the text has been reviewed by editor and author, the copy editor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.   <strong>2. Harvard Educational Review </strong> <strong>Instructions for Making Electronic Revisions to the Manuscript</strong> Please follow the following protocol for making electronic revisions to your manuscript:  <strong>Responding to suggested changes.</strong> For each of the suggested changes that you accept, unbold the text.   For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it.  <strong>Making additions and deletions.</strong> Indicate additions by <strong>bolding</strong> the new text.   Replace deleted sections with: <strong>[deleted text]</strong>.   If you delete one or more sentence, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>.  <strong>Responding to Queries to the Author (QAs).</strong> Keep all QAs intact and bolded within the text. Do not delete them.   To reply to a QA, add a comment after it. Comments should be delimited using: <strong>[Comment:]</strong> e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>.  <strong>Making comments.</strong> Use comments to explain organizational changes or major revisions   e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7].</strong> Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.  <h4>An Illustration of an Electronic Revision</h4> <ol> <li><strong>Initial copyedit.</strong> The journal copy editor will edit the text to improve flow, clarity, grammar, wording, and formatting, as well as including author queries as necessary. Once the initial edit is complete, the copy editor will upload the revised document through the journal Web site and notify the author that the edited manuscript is available for review.</li> <li><strong>Author copyedit.</strong> Before making dramatic departures from the structure and organization of the edited manuscript, authors must check in with the editors who are co-chairing the piece. Authors should accept/reject any changes made during the initial copyediting, as appropriate, and respond to all author queries. When finished with the revisions, authors should rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc) and upload the revised document through the journal Web site as directed.</li> <li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li> </ol>','string'),(1,'','useLayoutEditors','0','bool'),(1,'','emailSignature','________________________________________________________________________\r\ntest\r\nhttp://localhost/pkp-ojs/index.php/test','string'),(1,'en_US','proofInstructions','<p>The proofreading stage is intended to catch any errors in the galley\'s spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p> <h4>For Spelling and Grammar Errors</h4> <p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with \"CHANGE-TO\" instructions to the editor as follows:</p> <pre>1. CHANGE...\r\n	then the others\r\n	TO...\r\n	than the others</pre> <br /> <pre>2. CHANGE...\r\n	Malinowsky\r\n	TO...\r\n	Malinowski</pre> <br /> <h4>For Formatting Errors</h4> <p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title \"FORMATTING\" as follows:</p> <br /> <pre>3. FORMATTING\r\n	The numbers in Table 3 are not aligned in the third column.</pre> <br /> <pre>4. FORMATTING\r\n	The paragraph that begins \"This last topic...\" is not indented.</pre>','string'),(1,'en_US','refLinkInstructions','<h4>To Add Reference Linking to the Layout Process</h4> <p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p> <h4>A. When the Author Provides a Link with the Reference</h4> <ol> <li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li> <li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li> </ol> <h4>B. Enabling Readers to Search Google Scholar For References</h4> <ol> <li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., \"Peace\"—then copy author and title).</li> <li>Paste the reference\'s title between the %22\'s, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&amp;hl=en&amp;lr=&amp;btnG=Search.</li> <li>Add the phrase GS SEARCH to the end of each citation in the submission\'s References list.</li> <li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li> </ol> <h4>C. Enabling Readers to Search for References with a DOI</h4> <ol> <li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li> <li>Paste each DOI that the Query provides in the following URL (between = and &amp;): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&amp;link_type=DOI.</li> <li>Add the phrase CrossRef to the end of each citation in the submission\'s References list.</li> <li>Turn that phrase into a hyperlink by highlighting the phrase and using Word\'s Insert Hyperlink tool and the appropriate URL prepared in #2.</li> </ol>','string'),(1,'en_US','readerInformation','We encourage readers to sign up for the publishing notification service for this journal. Use the <a href=\"/pkp-ojs/index.php/test/user/register\">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal\'s <a href=\"/pkp-ojs/index.php/test/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.','string'),(1,'en_US','authorInformation','Interested in submitting to this journal? We recommend that you review the <a href=\"/pkp-ojs/index.php/test/about\">About the Journal</a> page for the journal\'s section policies, as well as the <a href=\"/pkp-ojs/index.php/test/about/submissions#authorGuidelines\">Author Guidelines</a>. Authors need to <a href=\"/pkp-ojs/index.php/test/user/register\">register</a> with the journal prior to submitting or, if already registered, can simply <a href=\"/pkp-ojs/index.php/index/login\">log in</a> and begin the five-step process.','string'),(1,'','displayCurrentIssue','0','bool'),(1,'en_US','librarianInformation','We encourage research librarians to list this journal among their library\'s electronic journal holdings. As well, it may be worth noting that this journal\'s open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>).','string'),(1,'en_US','lockssLicense','This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href=\"http://lockss.org/\">More...</a>','string'),(1,'','supportedLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'','supportedFormLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'','supportedSubmissionLocales','a:1:{i:0;s:5:\"en_US\";}','object'),(1,'en_US','submissionChecklist','a:6:{i:0;a:2:{s:7:\"content\";s:165:\"The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).\";s:5:\"order\";s:1:\"1\";}i:1;a:2:{s:7:\"content\";s:95:\"The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect document file format.\";s:5:\"order\";s:1:\"2\";}i:2;a:2:{s:7:\"content\";s:60:\"Where available, URLs for the references have been provided.\";s:5:\"order\";s:1:\"3\";}i:3;a:2:{s:7:\"content\";s:239:\"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.\";s:5:\"order\";s:1:\"4\";}i:4;a:2:{s:7:\"content\";s:239:\"The text adheres to the stylistic and bibliographic requirements outlined in the <a href=\"http://localhost/pkp-ojs/index.php/test/about/submissions#authorGuidelines\" target=\"_new\">Author Guidelines</a>, which is found in About the Journal.\";s:5:\"order\";s:1:\"5\";}i:5;a:2:{s:7:\"content\";s:230:\"If submitting to a peer-reviewed section of the journal, the instructions in <a href=\"javascript:openHelp(\'http://localhost/pkp-ojs/index.php/test/help/view/editorial/topic/000044\')\">Ensuring a Blind Review</a> have been followed.\";s:5:\"order\";s:1:\"6\";}}','object'),(1,'','rtAbstract','1','bool'),(1,'','rtCaptureCite','1','bool'),(1,'','rtViewMetadata','1','bool'),(1,'','rtSupplementaryFiles','1','bool'),(1,'','rtPrinterFriendly','1','bool'),(1,'','rtDefineTerms','1','bool'),(1,'','rtAddComment','1','bool'),(1,'','rtEmailAuthor','1','bool'),(1,'','rtEmailOthers','1','bool'),(1,'','allowRegReviewer','1','bool'),(1,'','allowRegAuthor','1','bool'),(1,'','allowRegReader','1','bool'),(1,'','submissionFee','0','int'),(1,'en_US','submissionFeeName','Article Submission','string'),(1,'en_US','submissionFeeDescription','Authors are required to pay an Article Submission Fee as part of the submission process to contribute to review costs.','string'),(1,'','fastTrackFee','0','int'),(1,'en_US','fastTrackFeeName','Fast-Track Review','string'),(1,'en_US','fastTrackFeeDescription','With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.','string'),(1,'','publicationFee','0','int'),(1,'en_US','publicationFeeName','Article Publication','string'),(1,'en_US','publicationFeeDescription','If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.','string'),(1,'en_US','waiverPolicy','If you do not have funds to pay such fees, you will have an opportunity to waive each fee. We do not want fees to prevent the publication of worthy work.','string'),(1,'','purchaseArticleFee','0','int'),(1,'en_US','purchaseArticleFeeName','Purchase Article','string'),(1,'en_US','purchaseArticleFeeDescription','The payment of this fee will enable you to view, download, and print this article.','string'),(1,'','membershipFee','0','int'),(1,'en_US','membershipFeeName','Association Membership','string'),(1,'en_US','membershipFeeDescription','The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.','string'),(1,'en_US','donationFeeName','Donations to journal','string'),(1,'en_US','donationFeeDescription','Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.','string'),(1,'en_US','title','test','string'),(1,'en_US','initials','T','string'),(1,'','printIssn','','string'),(1,'','onlineIssn','','string'),(1,'','doiPrefix','10.1234','string'),(1,'','doiSuffix','default','string'),(1,'','doiSuffixPattern','','string'),(1,'','mailingAddress','','string'),(1,'','categories','N;','object'),(1,'','useEditorialBoard','0','bool'),(1,'','contactName','FUB Integration Test Principal Contact','string'),(1,'','contactEmail','jerico.dev@gmail.com','string'),(1,'','contactPhone','','string'),(1,'','contactFax','','string'),(1,'','supportName','FUB Integration Test Tech Contact','string'),(1,'','supportEmail','jerico.dev@gmail.com','string'),(1,'','supportPhone','','string'),(1,'','sponsors','a:0:{}','object'),(1,'','publisherInstitution','','string'),(1,'','publisherUrl','','string'),(1,'','contributors','a:0:{}','object'),(1,'','envelopeSender','','string'),(1,'','enableComments','0','int'),(1,'','rtEnabled','1','bool'),(1,'','rtVersionId','0','int'),(1,'','rtFindingReferences','0','bool'),(1,'','rtViewReviewPolicy','0','bool'),(1,'','rtSharingEnabled','','string'),(1,'','rtSharingUserName','','string'),(1,'','rtSharingButtonStyle','','string'),(1,'','rtSharingDropDownMenu','','string'),(1,'','rtSharingBrand','','string'),(1,'','rtSharingDropDown','','string'),(1,'','rtSharingLanguage','','string'),(1,'','rtSharingLogo','','string'),(1,'','rtSharingLogoBackground','','string'),(1,'','rtSharingLogoColor','','string'),(1,'en_US','navItems','a:1:{i:0;a:2:{s:4:\"name\";s:0:\"\";s:3:\"url\";s:0:\"\";}}','object'),(1,'','journalTheme','','string'),(1,'','disableUserReg','0','bool'),(1,'','restrictSiteAccess','0','bool'),(1,'','restrictArticleAccess','0','bool'),(1,'','publicationFormatVolume','0','bool'),(1,'','publicationFormatNumber','0','bool'),(1,'','publicationFormatYear','0','bool'),(1,'','publicationFormatTitle','0','bool'),(1,'','initialVolume','0','int'),(1,'','initialNumber','0','int'),(1,'','initialYear','0','int'),(1,'','useCopyeditors','0','bool'),(1,'','provideRefLinkInstructions','0','bool'),(1,'','useProofreaders','0','bool'),(1,'','publishingMode','0','int'),(1,'','showGalleyLinks','0','bool'),(1,'','enableAnnouncements','0','bool'),(1,'','enableAnnouncementsHomepage','0','bool'),(1,'','numAnnouncementsHomepage','0','int'),(1,'','volumePerYear','0','int'),(1,'','issuePerVolume','0','int'),(1,'','enablePublicIssueId','0','bool'),(1,'','enablePublicArticleId','0','bool'),(1,'','enablePublicGalleyId','0','bool'),(1,'','enablePublicSuppFileId','0','bool'),(1,'','enablePageNumber','0','bool'),(1,'','enableIssueDoi','1','bool'),(1,'','enableArticleDoi','1','bool'),(1,'','enableGalleyDoi','1','bool'),(1,'','enableSuppFileDoi','1','bool'),(1,'','doiIssueSuffixPattern','','string'),(1,'','doiArticleSuffixPattern','','string'),(1,'','doiGalleySuffixPattern','','string'),(1,'','doiSuppFileSuffixPattern','','string');
 /*!40000 ALTER TABLE `journal_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1745,15 +1974,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `journals`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `journals` (
-  `journal_id` bigint(20) NOT NULL auto_increment,
+  `journal_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
   `seq` double NOT NULL,
   `primary_locale` varchar(5) NOT NULL,
   `enabled` tinyint(4) NOT NULL,
-  PRIMARY KEY  (`journal_id`),
+  PRIMARY KEY (`journal_id`),
   UNIQUE KEY `journals_path` (`path`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `journals`
@@ -1770,6 +2002,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `metadata_description_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `metadata_description_settings` (
   `metadata_description_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -1779,6 +2013,7 @@ CREATE TABLE `metadata_description_settings` (
   UNIQUE KEY `metadata_descripton_settings_pkey` (`metadata_description_id`,`locale`,`setting_name`),
   KEY `metadata_description_settings_id` (`metadata_description_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `metadata_description_settings`
@@ -1794,17 +2029,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `metadata_descriptions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `metadata_descriptions` (
-  `metadata_description_id` bigint(20) NOT NULL auto_increment,
+  `metadata_description_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
   `schema_namespace` varchar(255) NOT NULL,
   `schema_name` varchar(255) NOT NULL,
-  `display_name` varchar(255) default NULL,
+  `display_name` varchar(255) DEFAULT NULL,
   `seq` bigint(20) NOT NULL,
-  PRIMARY KEY  (`metadata_description_id`),
+  PRIMARY KEY (`metadata_description_id`),
   KEY `metadata_descriptions_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `metadata_descriptions`
@@ -1820,10 +2058,13 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `mutex`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mutex` (
   `i` tinyint(4) NOT NULL,
-  PRIMARY KEY  (`i`)
+  PRIMARY KEY (`i`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `mutex`
@@ -1840,19 +2081,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notes` (
-  `note_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `user_id` bigint(20) NOT NULL,
   `date_created` datetime NOT NULL,
-  `date_modified` datetime default NULL,
-  `title` varchar(255) default NULL,
-  `file_id` bigint(20) default NULL,
+  `date_modified` datetime DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `file_id` bigint(20) DEFAULT NULL,
   `contents` text,
-  PRIMARY KEY  (`note_id`),
+  PRIMARY KEY (`note_id`),
   KEY `notes_assoc` (`assoc_type`,`assoc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `notes`
@@ -1868,15 +2112,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `notification_mail_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notification_mail_list` (
-  `notification_mail_list_id` bigint(20) NOT NULL auto_increment,
+  `notification_mail_list_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
   `confirmed` tinyint(4) NOT NULL,
   `token` varchar(40) NOT NULL,
   `context` bigint(20) NOT NULL,
-  PRIMARY KEY  (`notification_mail_list_id`),
+  PRIMARY KEY (`notification_mail_list_id`),
   UNIQUE KEY `notification_mail_list_email_context` (`email`,`context`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `notification_mail_list`
@@ -1892,16 +2139,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `notification_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notification_settings` (
-  `setting_id` bigint(20) NOT NULL auto_increment,
+  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `notification_id` bigint(20) NOT NULL,
-  `locale` varchar(5) default NULL,
+  `locale` varchar(5) DEFAULT NULL,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
-  PRIMARY KEY  (`setting_id`),
+  PRIMARY KEY (`setting_id`),
   UNIQUE KEY `notification_settings_pkey` (`notification_id`,`locale`,`setting_name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `notification_settings`
@@ -1917,15 +2167,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notification_subscription_settings` (
-  `setting_id` bigint(20) NOT NULL auto_increment,
+  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text,
   `user_id` bigint(20) NOT NULL,
   `context` bigint(20) NOT NULL,
   `setting_type` varchar(6) NOT NULL,
-  PRIMARY KEY  (`setting_id`)
+  PRIMARY KEY (`setting_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `notification_subscription_settings`
@@ -1941,21 +2194,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `notifications`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notifications` (
-  `notification_id` bigint(20) NOT NULL auto_increment,
+  `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) default NULL,
+  `user_id` bigint(20) DEFAULT NULL,
   `level` bigint(20) NOT NULL,
   `type` bigint(20) NOT NULL,
   `date_created` datetime NOT NULL,
-  `date_read` datetime default NULL,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
-  PRIMARY KEY  (`notification_id`),
+  `date_read` datetime DEFAULT NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`notification_id`),
   KEY `notifications_context_id_user_id` (`context_id`,`user_id`,`level`),
   KEY `notifications_context_id` (`context_id`,`level`),
   KEY `notifications_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `notifications`
@@ -1963,7 +2219,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (1,0,1,2,257,'2011-10-06 11:31:13',NULL,0,0),(2,0,1,2,257,'2011-10-17 20:28:34',NULL,0,0),(3,0,1,2,257,'2011-10-17 20:29:08',NULL,0,0);
+INSERT INTO `notifications` VALUES (1,0,1,2,257,'2011-10-06 11:31:13',NULL,0,0),(2,0,1,2,257,'2011-10-17 20:28:34',NULL,0,0),(3,0,1,2,257,'2011-10-17 20:29:08',NULL,0,0),(4,1,1,2,16777217,'2011-10-20 15:46:54',NULL,257,2),(5,1,1,2,16777218,'2011-10-20 16:50:03',NULL,257,1),(7,1,1,2,16777218,'2011-10-28 23:14:15',NULL,257,1),(9,1,1,2,16777222,'2011-10-29 07:49:14',NULL,257,1),(10,1,1,2,16777220,'2011-10-29 07:49:18',NULL,257,1),(11,1,1,2,16777222,'2011-10-29 07:49:31',NULL,257,1),(12,1,1,2,16777220,'2011-10-29 07:49:34',NULL,257,1),(13,1,1,2,16777218,'2011-10-29 07:49:54',NULL,257,1),(21,1,1,2,16777222,'2011-10-31 22:17:23',NULL,257,1),(17,1,1,2,16777222,'2011-10-29 07:50:12',NULL,257,1),(19,1,1,2,16777220,'2011-10-29 07:50:19',NULL,257,1),(22,1,1,2,16777220,'2011-10-31 22:17:27',NULL,257,1),(23,1,1,2,16777222,'2011-10-31 22:17:40',NULL,257,1),(24,1,1,2,16777220,'2011-10-31 22:17:42',NULL,257,1),(25,1,1,2,16777218,'2011-10-31 22:18:03',NULL,257,1),(33,1,1,2,16777222,'2011-10-31 22:26:00',NULL,257,1),(29,1,1,2,16777222,'2011-10-31 22:18:21',NULL,257,1),(31,1,1,2,16777220,'2011-10-31 22:18:28',NULL,257,1),(34,1,1,2,16777220,'2011-10-31 22:26:03',NULL,257,1),(35,1,1,2,16777222,'2011-10-31 22:26:17',NULL,257,1),(36,1,1,2,16777220,'2011-10-31 22:26:20',NULL,257,1),(37,1,1,2,16777218,'2011-10-31 22:26:41',NULL,257,1),(45,1,1,2,16777222,'2011-11-01 00:57:37',NULL,257,1),(41,1,1,2,16777222,'2011-10-31 22:26:58',NULL,257,1),(43,1,1,2,16777220,'2011-10-31 22:27:05',NULL,257,1),(46,1,1,2,16777220,'2011-11-01 00:57:41',NULL,257,1),(47,1,1,2,16777222,'2011-11-01 00:57:54',NULL,257,1),(48,1,1,2,16777220,'2011-11-01 00:57:57',NULL,257,1),(49,1,1,2,16777218,'2011-11-01 00:58:17',NULL,257,1),(53,1,1,2,16777222,'2011-11-01 00:58:35',NULL,257,1),(55,1,1,2,16777220,'2011-11-01 00:58:42',NULL,257,1);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1972,6 +2228,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `oai_resumption_tokens` (
   `token` varchar(32) NOT NULL,
   `expire` bigint(20) NOT NULL,
@@ -1979,6 +2237,7 @@ CREATE TABLE `oai_resumption_tokens` (
   `params` text,
   UNIQUE KEY `oai_resumption_tokens_pkey` (`token`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `oai_resumption_tokens`
@@ -1994,17 +2253,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `paypal_transactions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paypal_transactions` (
   `txn_id` varchar(17) NOT NULL,
-  `txn_type` varchar(20) default NULL,
-  `payer_email` varchar(127) default NULL,
-  `receiver_email` varchar(127) default NULL,
-  `item_number` varchar(127) default NULL,
-  `payment_date` varchar(127) default NULL,
-  `payer_id` varchar(13) default NULL,
-  `receiver_id` varchar(13) default NULL,
-  PRIMARY KEY  (`txn_id`)
+  `txn_type` varchar(20) DEFAULT NULL,
+  `payer_email` varchar(127) DEFAULT NULL,
+  `receiver_email` varchar(127) DEFAULT NULL,
+  `item_number` varchar(127) DEFAULT NULL,
+  `payment_date` varchar(127) DEFAULT NULL,
+  `payer_id` varchar(13) DEFAULT NULL,
+  `receiver_id` varchar(13) DEFAULT NULL,
+  PRIMARY KEY (`txn_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `paypal_transactions`
@@ -2020,6 +2282,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `plugin_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `plugin_settings` (
   `plugin_name` varchar(80) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2030,6 +2294,7 @@ CREATE TABLE `plugin_settings` (
   UNIQUE KEY `plugin_settings_pkey` (`plugin_name`,`locale`,`journal_id`,`setting_name`),
   KEY `plugin_settings_plugin_name` (`plugin_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `plugin_settings`
@@ -2046,6 +2311,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `processes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `processes` (
   `process_id` varchar(23) NOT NULL,
   `process_type` tinyint(4) NOT NULL,
@@ -2053,6 +2320,7 @@ CREATE TABLE `processes` (
   `obliterated` tinyint(4) NOT NULL,
   UNIQUE KEY `processes_pkey` (`process_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `processes`
@@ -2068,18 +2336,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `published_articles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `published_articles` (
-  `pub_id` bigint(20) NOT NULL auto_increment,
+  `pub_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `issue_id` bigint(20) NOT NULL,
-  `date_published` datetime default NULL,
+  `date_published` datetime DEFAULT NULL,
   `seq` double NOT NULL,
   `views` int(11) NOT NULL,
   `access_status` tinyint(4) NOT NULL,
-  PRIMARY KEY  (`pub_id`),
+  PRIMARY KEY (`pub_id`),
   UNIQUE KEY `published_articles_article_id` (`article_id`),
   KEY `published_articles_issue_id` (`issue_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `published_articles`
@@ -2087,7 +2358,7 @@ CREATE TABLE `published_articles` (
 
 LOCK TABLES `published_articles` WRITE;
 /*!40000 ALTER TABLE `published_articles` DISABLE KEYS */;
-INSERT INTO `published_articles` VALUES (1,1,1,'2011-10-06 00:00:00',1,93,0);
+INSERT INTO `published_articles` VALUES (1,1,1,'2011-10-06 00:00:00',1,171,0);
 /*!40000 ALTER TABLE `published_articles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2096,14 +2367,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `queued_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `queued_payments` (
-  `queued_payment_id` bigint(20) NOT NULL auto_increment,
+  `queued_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `date_created` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  `expiry_date` date default NULL,
+  `expiry_date` date DEFAULT NULL,
   `payment_data` text,
-  PRIMARY KEY  (`queued_payment_id`)
+  PRIMARY KEY (`queued_payment_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `queued_payments`
@@ -2119,6 +2393,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `referral_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `referral_settings` (
   `referral_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2128,6 +2404,7 @@ CREATE TABLE `referral_settings` (
   UNIQUE KEY `referral_settings_pkey` (`referral_id`,`locale`,`setting_name`),
   KEY `referral_settings_referral_id` (`referral_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `referral_settings`
@@ -2143,16 +2420,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `referrals`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `referrals` (
-  `referral_id` bigint(20) NOT NULL auto_increment,
+  `referral_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `article_id` bigint(20) NOT NULL,
   `status` smallint(6) NOT NULL,
   `url` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   `link_count` bigint(20) NOT NULL,
-  PRIMARY KEY  (`referral_id`),
+  PRIMARY KEY (`referral_id`),
   UNIQUE KEY `referral_article_id` (`article_id`,`url`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `referrals`
@@ -2169,39 +2449,42 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_assignments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_assignments` (
-  `review_id` bigint(20) NOT NULL auto_increment,
+  `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
   `reviewer_id` bigint(20) NOT NULL,
   `competing_interests` text,
   `regret_message` text,
-  `recommendation` tinyint(4) default NULL,
-  `date_assigned` datetime default NULL,
-  `date_notified` datetime default NULL,
-  `date_confirmed` datetime default NULL,
-  `date_completed` datetime default NULL,
-  `date_acknowledged` datetime default NULL,
-  `date_due` datetime default NULL,
-  `date_response_due` datetime default NULL,
-  `last_modified` datetime default NULL,
+  `recommendation` tinyint(4) DEFAULT NULL,
+  `date_assigned` datetime DEFAULT NULL,
+  `date_notified` datetime DEFAULT NULL,
+  `date_confirmed` datetime DEFAULT NULL,
+  `date_completed` datetime DEFAULT NULL,
+  `date_acknowledged` datetime DEFAULT NULL,
+  `date_due` datetime DEFAULT NULL,
+  `date_response_due` datetime DEFAULT NULL,
+  `last_modified` datetime DEFAULT NULL,
   `reminder_was_automatic` tinyint(4) NOT NULL,
   `declined` tinyint(4) NOT NULL,
   `replaced` tinyint(4) NOT NULL,
   `cancelled` tinyint(4) NOT NULL,
-  `reviewer_file_id` bigint(20) default NULL,
-  `date_rated` datetime default NULL,
-  `date_reminded` datetime default NULL,
-  `quality` tinyint(4) default NULL,
+  `reviewer_file_id` bigint(20) DEFAULT NULL,
+  `date_rated` datetime DEFAULT NULL,
+  `date_reminded` datetime DEFAULT NULL,
+  `quality` tinyint(4) DEFAULT NULL,
   `stage_id` tinyint(4) NOT NULL,
   `review_method` tinyint(4) NOT NULL,
   `round` tinyint(4) NOT NULL,
   `step` tinyint(4) NOT NULL,
-  `review_form_id` bigint(20) default NULL,
-  PRIMARY KEY  (`review_id`),
+  `review_form_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`review_id`),
   KEY `review_assignments_submission_id` (`submission_id`),
   KEY `review_assignments_reviewer_id` (`reviewer_id`),
   KEY `review_assignments_form_id` (`review_form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_assignments`
@@ -2217,6 +2500,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_form_element_settings` (
   `review_form_element_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2226,6 +2511,7 @@ CREATE TABLE `review_form_element_settings` (
   UNIQUE KEY `review_form_element_settings_pkey` (`review_form_element_id`,`locale`,`setting_name`),
   KEY `review_form_element_settings_review_form_element_id` (`review_form_element_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_form_element_settings`
@@ -2241,16 +2527,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_form_elements`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_form_elements` (
-  `review_form_element_id` bigint(20) NOT NULL auto_increment,
+  `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `review_form_id` bigint(20) NOT NULL,
-  `seq` double default NULL,
-  `element_type` bigint(20) default NULL,
-  `required` tinyint(4) default NULL,
-  `included` tinyint(4) default NULL,
-  PRIMARY KEY  (`review_form_element_id`),
+  `seq` double DEFAULT NULL,
+  `element_type` bigint(20) DEFAULT NULL,
+  `required` tinyint(4) DEFAULT NULL,
+  `included` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`review_form_element_id`),
   KEY `review_form_elements_review_form_id` (`review_form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_form_elements`
@@ -2266,13 +2555,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_form_responses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_form_responses` (
   `review_form_element_id` bigint(20) NOT NULL,
   `review_id` bigint(20) NOT NULL,
-  `response_type` varchar(6) default NULL,
+  `response_type` varchar(6) DEFAULT NULL,
   `response_value` text,
   KEY `review_form_responses_pkey` (`review_form_element_id`,`review_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_form_responses`
@@ -2288,6 +2580,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_form_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_form_settings` (
   `review_form_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2297,6 +2591,7 @@ CREATE TABLE `review_form_settings` (
   UNIQUE KEY `review_form_settings_pkey` (`review_form_id`,`locale`,`setting_name`),
   KEY `review_form_settings_review_form_id` (`review_form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_form_settings`
@@ -2312,14 +2607,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_forms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_forms` (
-  `review_form_id` bigint(20) NOT NULL auto_increment,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
-  `seq` double default NULL,
-  `is_active` tinyint(4) default NULL,
-  PRIMARY KEY  (`review_form_id`)
+  `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
+  `seq` double DEFAULT NULL,
+  `is_active` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`review_form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_forms`
@@ -2335,17 +2633,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `review_rounds`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `review_rounds` (
-  `review_round_id` bigint(20) NOT NULL auto_increment,
+  `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) default NULL,
+  `stage_id` bigint(20) DEFAULT NULL,
   `round` tinyint(4) NOT NULL,
-  `review_revision` bigint(20) default NULL,
-  `status` bigint(20) default NULL,
-  PRIMARY KEY  (`review_round_id`),
+  `review_revision` bigint(20) DEFAULT NULL,
+  `status` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`review_round_id`),
   UNIQUE KEY `review_rounds_pkey` (`submission_id`,`stage_id`,`round`),
   KEY `review_rounds_submission_id` (`submission_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `review_rounds`
@@ -2361,6 +2662,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `roles` (
   `journal_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
@@ -2370,6 +2673,7 @@ CREATE TABLE `roles` (
   KEY `roles_user_id` (`user_id`),
   KEY `roles_role_id` (`role_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `roles`
@@ -2386,8 +2690,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `rt_contexts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rt_contexts` (
-  `context_id` bigint(20) NOT NULL auto_increment,
+  `context_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version_id` bigint(20) NOT NULL,
   `title` varchar(120) NOT NULL,
   `abbrev` varchar(32) NOT NULL,
@@ -2397,9 +2703,10 @@ CREATE TABLE `rt_contexts` (
   `define_terms` tinyint(4) NOT NULL,
   `geo_terms` tinyint(4) NOT NULL,
   `seq` double NOT NULL,
-  PRIMARY KEY  (`context_id`),
+  PRIMARY KEY (`context_id`),
   KEY `rt_contexts_version_id` (`version_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=248 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `rt_contexts`
@@ -2416,8 +2723,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `rt_searches`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rt_searches` (
-  `search_id` bigint(20) NOT NULL auto_increment,
+  `search_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
   `title` varchar(120) NOT NULL,
   `description` text,
@@ -2425,9 +2734,10 @@ CREATE TABLE `rt_searches` (
   `search_url` text,
   `search_post` text,
   `seq` double NOT NULL,
-  PRIMARY KEY  (`search_id`),
+  PRIMARY KEY (`search_id`),
   KEY `rt_searches_context_id` (`context_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1282 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `rt_searches`
@@ -2444,17 +2754,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `rt_versions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rt_versions` (
-  `version_id` bigint(20) NOT NULL auto_increment,
+  `version_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `version_key` varchar(40) NOT NULL,
-  `locale` varchar(5) default NULL,
+  `locale` varchar(5) DEFAULT NULL,
   `title` varchar(120) NOT NULL,
   `description` text,
-  PRIMARY KEY  (`version_id`),
+  PRIMARY KEY (`version_id`),
   KEY `rt_versions_journal_id` (`journal_id`),
   KEY `rt_versions_version_key` (`version_key`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `rt_versions`
@@ -2471,11 +2784,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `scheduled_tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `scheduled_tasks` (
   `class_name` varchar(255) NOT NULL,
-  `last_run` datetime default NULL,
+  `last_run` datetime DEFAULT NULL,
   UNIQUE KEY `scheduled_tasks_pkey` (`class_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `scheduled_tasks`
@@ -2491,6 +2807,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `section_editors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `section_editors` (
   `journal_id` bigint(20) NOT NULL,
   `section_id` bigint(20) NOT NULL,
@@ -2502,6 +2820,7 @@ CREATE TABLE `section_editors` (
   KEY `section_editors_section_id` (`section_id`),
   KEY `section_editors_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `section_editors`
@@ -2517,6 +2836,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `section_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `section_settings` (
   `section_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2526,6 +2847,7 @@ CREATE TABLE `section_settings` (
   UNIQUE KEY `section_settings_pkey` (`section_id`,`locale`,`setting_name`),
   KEY `section_settings_section_id` (`section_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `section_settings`
@@ -2542,10 +2864,12 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `sections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sections` (
-  `section_id` bigint(20) NOT NULL auto_increment,
+  `section_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
-  `review_form_id` bigint(20) default NULL,
+  `review_form_id` bigint(20) DEFAULT NULL,
   `seq` double NOT NULL,
   `editor_restricted` tinyint(4) NOT NULL,
   `meta_indexed` tinyint(4) NOT NULL,
@@ -2555,10 +2879,11 @@ CREATE TABLE `sections` (
   `hide_author` tinyint(4) NOT NULL,
   `hide_about` tinyint(4) NOT NULL,
   `disable_comments` tinyint(4) NOT NULL,
-  `abstract_word_count` bigint(20) default NULL,
-  PRIMARY KEY  (`section_id`),
+  `abstract_word_count` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`section_id`),
   KEY `sections_journal_id` (`journal_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `sections`
@@ -2575,11 +2900,13 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `sessions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sessions` (
   `session_id` varchar(40) NOT NULL,
-  `user_id` bigint(20) default NULL,
+  `user_id` bigint(20) DEFAULT NULL,
   `ip_address` varchar(39) NOT NULL,
-  `user_agent` varchar(255) default NULL,
+  `user_agent` varchar(255) DEFAULT NULL,
   `created` bigint(20) NOT NULL,
   `last_used` bigint(20) NOT NULL,
   `remember` tinyint(4) NOT NULL,
@@ -2587,6 +2914,7 @@ CREATE TABLE `sessions` (
   UNIQUE KEY `sessions_pkey` (`session_id`),
   KEY `sessions_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `sessions`
@@ -2594,7 +2922,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('5qk50iocvik7epsug7q5pmmr60',1,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317901801,1317941781,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('gotheeu0mithekagp4pkdl1613',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911127,1317911127,0,''),('hidavkomcvmvs0qn4poat2hoe5',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911786,1317911786,0,''),('7dm2ucv416mkl71aqrscq1pjp6',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911807,1317911807,0,''),('eef7pmi7fae535rgbqtqjffov6',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911832,1317911832,0,''),('m07lkd26j6emubat4i7f9h7g15',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317915362,1317915362,0,''),('8rj54b299la0egs08o6m52pnr5',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317921366,1317921366,0,''),('8hbr5jvl3nngt8efvbjdslgog6n3qcj7',NULL,'160.45.170.42','0',1318440591,1318440591,0,''),('bj6rkah4mg1ma95vri0nt7se7r9h0ql2',NULL,'187.15.22.212','0',1318362820,1318362820,0,''),('oji4qhsv59d9nkhi3hj23t3ukniqo5od',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318176437,1318176503,0,''),('0hkhphfe0v6pth1a378r6o2l7fb7u36s',NULL,'160.45.170.42','0',1318440591,1318440591,0,''),('rojmfifld6vos45sb55au1phnpph9n6f',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318182064,1318182070,0,''),('2e82sf69s26njfs61lcmgs67ntpttsls',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318187829,1318187835,0,''),('oq7tu0cusivdu3htubdmld4sddeebreh',NULL,'201.29.145.137','0',1318187833,1318187833,0,''),('219oc99ck0qpjg01i9vum420j8k728hv',NULL,'201.29.145.137','0',1318187914,1318187914,0,''),('tgs8luffsoq1gf0hhgrqgdgtae4cq60t',NULL,'201.29.145.137','0',1318188350,1318188350,0,''),('ajm79sbupcnscv7h5g5h37cqul5qegvs',NULL,'201.29.145.137','0',1318188456,1318188456,0,''),('6gfpreki8fb15scpot7k27uja6ooe75g',NULL,'201.29.145.137','0',1318188465,1318188465,0,''),('k70nj1ef29iu1fcrvq27h5aa25m7c8th',NULL,'201.29.145.137','0',1318195084,1318195084,0,''),('5gtdel236bs5178jtufenne5nuvfii1l',NULL,'201.29.145.137','0',1318195139,1318195139,0,''),('k1jns6imt7k3cv74q8b2854iarpsmsm3',NULL,'201.29.145.137','0',1318195152,1318195152,0,''),('2e7h006h6qqrfvgvqejalgo7935sqv0l',NULL,'201.29.145.137','0',1318195180,1318195180,0,''),('csltv5qt74oejaqofpbphd1he21a2lim',NULL,'201.29.145.137','0',1318195213,1318195213,0,''),('gjnuab92l3q8qpibkf4uoqqmiq64hjo8',NULL,'201.29.145.137','0',1318195240,1318195240,0,''),('8k8fmd0rnqp281viea8qcia249mphkoe',NULL,'201.29.145.137','0',1318195249,1318195249,0,''),('b03f8d2o2h0afmb6mdleooakqkkt02va',NULL,'201.29.145.137','0',1318195282,1318195282,0,''),('aehni2l2mlr1ljgbs38o95kf3a5t7k21',NULL,'201.29.145.137','0',1318195291,1318195291,0,''),('9t0l3k0srvsu4n2fclubhmc125qmdrig',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318195531,1318196303,0,''),('cupm3kjl10edsmuo7akvvihb9r4tt668',NULL,'201.29.145.137','0',1318195536,1318195536,0,''),('f2hsfafnk58e9agphfrl1ofd7v4bol18',NULL,'201.29.145.137','0',1318196301,1318196301,0,''),('0dkr5fmo01ee9i49rnbclk9l3smtce36',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318201826,1318201835,0,''),('sbbbvishka8av3hu3l8v7d0rtoa1ehkh',NULL,'201.29.145.137','0',1318201831,1318201831,0,''),('e8cpasfs687dl62nnmfbcbni7sqjth2s',NULL,'201.29.145.137','0',1318201832,1318201832,0,''),('30si2lli7e060ev70eobmreh370t4785',NULL,'201.29.145.137','0',1318201833,1318201833,0,''),('gru5517phhm7ld83jnk4bfbcpdut8vdn',NULL,'201.29.145.137','0',1318201862,1318201862,0,''),('nojkaph6v6bpqs8d43mvv2ah3dicklt8',NULL,'201.29.145.137','0',1318201868,1318201868,0,''),('3jgqg3o42p98lo7qeld719ie4joakptv',NULL,'201.29.145.137','0',1318201869,1318201869,0,''),('uq5jo20hrk9fuqqbn49pve5lh2ut5afj',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318337216,1318337231,0,''),('2gdrq4ehesp0um67hca7fqk2bli4l4bg',NULL,'187.15.22.212','0',1318358606,1318358606,0,''),('k2rt9vou2nd18vk933hc4l6sbsgmspo3',NULL,'187.15.22.212','0',1318358607,1318358607,0,''),('uhnrnmsun5jbduocb0ulcjj64nbalg4f',NULL,'187.15.22.212','0',1318358608,1318358608,0,''),('l0j9oekol9vtm7n632cud7tare3detav',NULL,'187.15.22.212','0',1318359411,1318359411,0,''),('mvdit04rn57ee96dafb1cohfu8394r58',NULL,'187.15.22.212','0',1318359412,1318359412,0,''),('r97ubt2cc0q4ooki54uafme4um93k9cf',NULL,'187.15.22.212','0',1318359413,1318359413,0,''),('775dkbmrm8576u764tge51qohcv3ein7',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318359479,1318360178,0,''),('3id6k5ihmusahka0v6tq77jh52ebgi4d',NULL,'160.45.170.42','0',1318359481,1318359481,0,''),('k1p5kfpkhsmlfe01gbqk4p0lpst0g4hl',NULL,'160.45.170.42','0',1318359481,1318359481,0,''),('q64rr9jhfgt9at02544c61c79dn3fcj1',NULL,'160.45.170.42','0',1318359482,1318359482,0,''),('2kctged903o0a5hm7jshp49h0j8rr9ob',NULL,'187.15.22.212','0',1318359518,1318359518,0,''),('jnkm2jrapfhraicnk6decbepj7ro8eu7',NULL,'187.15.22.212','0',1318359519,1318359519,0,''),('7hkmm09aqeigivuumn7s0554uqme5v0d',NULL,'187.15.22.212','0',1318359520,1318359520,0,''),('eipdkgft44l3al1p774es4km7vc57epd',NULL,'160.45.170.42','0',1318360155,1318360155,0,''),('4k2dp7ad5p3cuhfumaorekg11huv0pnp',NULL,'160.45.170.42','0',1318360156,1318360156,0,''),('fmo1d71m543e46q6m94v7auftjq9bb2r',NULL,'160.45.170.42','0',1318360156,1318360156,0,''),('ofcf5qe5i3do39gope9uhliem8onopt8',NULL,'160.45.170.42','0',1318360177,1318360177,0,''),('pegva0tc89rsk8iu6ig8pbi40qppvhg1',NULL,'160.45.170.42','0',1318360178,1318360178,0,''),('f9ivlstn729dro1u1r2fho7g1m3efru4',NULL,'160.45.170.42','0',1318360178,1318360178,0,''),('2883culkiuu71e8v3d94eflsm44ggacn',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318360280,1318360284,0,''),('f5oi7fuvubqhbhil07dne7d0i91h87n4',NULL,'160.45.170.42','0',1318360282,1318360282,0,''),('g5uosl6tjl1u6m2n1k9n85jvpf8t6lag',NULL,'160.45.170.42','0',1318360282,1318360282,0,''),('tle8cdt6n9pdnmbv1sb96lcjmuaf5fig',NULL,'160.45.170.42','0',1318360283,1318360283,0,''),('ftofuvqn9eqp0d523cpif3se7h2o47ph',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318360342,1318361019,0,''),('6k0bfts7gbeuo10s3q09bj4um4o82lvn',NULL,'160.45.170.42','0',1318360344,1318360344,0,''),('djh52jsfnbg1kb5euotdk0kukgsot5ru',NULL,'160.45.170.42','0',1318360344,1318360344,0,''),('99t05id9640umitdai6vh76mq7471c07',NULL,'160.45.170.42','0',1318360345,1318360345,0,''),('9ovkt3s2dn6r8566kfodn3ubabmuquc9',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('t39jj0bgj0c153dln0sm8gfss5557hf7',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('vnl6qhqk975js6nk1icv623ial673cik',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('o9l6hi00h7ghrbjt81l8p5es84taqu8g',NULL,'160.45.170.42','0',1318360494,1318360494,0,''),('tv8q8nbvsmo480l96e9udbctifto25l3',NULL,'160.45.170.42','0',1318360494,1318360494,0,''),('b3ba6on3ujqda6gvar0luek1ktl6tgk1',NULL,'160.45.170.42','0',1318360495,1318360495,0,''),('c73kap77urfhnoqjpsamp0e3pphe153v',NULL,'160.45.170.42','0',1318360612,1318360612,0,''),('651546h3mm18fpni31mapct7mjsg02ed',NULL,'160.45.170.42','0',1318360612,1318360612,0,''),('j26ugheu7itfruin80pappavsnjo94b1',NULL,'160.45.170.42','0',1318360613,1318360613,0,''),('rgfqen3v1agvsbv75leckdnjtbbqsos8',NULL,'160.45.170.42','0',1318360678,1318360678,0,''),('j53kuj6k7r429tvmkdj4cm3t1bd1g86i',NULL,'160.45.170.42','0',1318360678,1318360678,0,''),('ni3r1ppbt77tg1jkldkoehaiuc9j6r17',NULL,'160.45.170.42','0',1318360680,1318360680,0,''),('kashgjqsnongkh3qtm008rapg9qf9b1l',NULL,'160.45.170.42','0',1318360722,1318360722,0,''),('m05p9be1ii65agijj0h7psh81lcb413u',NULL,'160.45.170.42','0',1318360723,1318360723,0,''),('akipeqqp743khqpfhis861dd5jpga6ll',NULL,'160.45.170.42','0',1318360723,1318360723,0,''),('ld38plmg7jv5p3uh8ph2gcttusdd0op8',NULL,'160.45.170.42','0',1318360756,1318360756,0,''),('3t34cs11a60f531a4t50ks594m5mu09j',NULL,'160.45.170.42','0',1318360757,1318360757,0,''),('6mejthfaop0jbvqjc0t55q3k7i41380c',NULL,'160.45.170.42','0',1318360757,1318360757,0,''),('4c4tb11lo91mhlh5n2n9c0fgh0r6cek6',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('pl3ashii2smiq0n47dp8j9esvcem2n5u',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('8l2ph8asj34fao48883tuhvgctj7a1aj',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('64oig1f4108soltv5jofgnbo71vk8gbk',NULL,'160.45.170.42','0',1318361018,1318361018,0,''),('tmmpsfr74f0rckk558847s51u1a262p5',NULL,'160.45.170.42','0',1318361018,1318361018,0,''),('g2ias9o3p2ajuvpp1jp6mdn0bfsjv0jn',NULL,'160.45.170.42','0',1318361019,1318361019,0,''),('ql3n2uclrthl8d10ksfhl2sve78nh618',NULL,'187.15.22.212','0',1318361033,1318361033,0,''),('lh2594alg3upmmaflp2lrilo438sgmu4',NULL,'187.15.22.212','0',1318361060,1318361060,0,''),('9hheo6imrlo5opv5sh6s7olt8jjelv05',NULL,'187.15.22.212','0',1318361061,1318361061,0,''),('ddsd6criobfklevo3gp7l1smklgqhooq',NULL,'187.15.22.212','0',1318361090,1318361090,0,''),('herc4ha1vmakeo8ueuek0h6t5gj4monp',NULL,'187.15.22.212','0',1318361091,1318361091,0,''),('f3766ed5irf8rl99tph9o5qv43hs4snl',NULL,'187.15.22.212','0',1318361127,1318361127,0,''),('3vj5ban0ff0hf4r0ndg79esoi315iuip',NULL,'187.15.22.212','0',1318361129,1318361129,0,''),('vllek2k9ulusa891neqi979qh6qiflir',NULL,'187.15.22.212','0',1318362821,1318362821,0,''),('92f037gu345qff1a0j4oulaec8nip300',NULL,'187.15.22.212','0',1318362834,1318362834,0,''),('1m3mhd14ds0h5d04ggiud8k79gho2cbh',NULL,'187.15.22.212','0',1318362834,1318362834,0,''),('2lnmq65dd18lu9ham4echn49jcbbrlc1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318363738,1318364680,0,''),('k2ket9stuai4io4jtd4euvl0iuod5png',NULL,'160.45.170.42','0',1318363739,1318363739,0,''),('nqo3vr72d3mbvlj7mv250gr301q16ctr',NULL,'160.45.170.42','0',1318363740,1318363740,0,''),('n03j11cq0e6jtvqk09cg6rmp969ckrjq',NULL,'160.45.170.42','0',1318363740,1318363740,0,''),('rpioflln5gthscc3530m684iuehonimv',NULL,'160.45.170.42','0',1318364121,1318364121,0,''),('14jjnq4d67onn5mqhapedi5cekpla50j',NULL,'160.45.170.42','0',1318364121,1318364121,0,''),('70me4r3lfe654ljjp6ks5mrme1n8kqee',NULL,'160.45.170.42','0',1318364447,1318364447,0,''),('5rgu3rhqarl0c471fj8qr5fceltjs8v3',NULL,'160.45.170.42','0',1318364447,1318364447,0,''),('e4ejtr56ig3kn2tckeaj5mhfuain789k',NULL,'160.45.170.42','0',1318364679,1318364679,0,''),('eli78vvibop43mnr69t19c0ppjr1ai36',NULL,'160.45.170.42','0',1318364680,1318364680,0,''),('3qnje4i008jnjld5jlig3kmv46oofeqt',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318428095,1318428300,0,''),('amsh571ut0a7uoj753jn9p2krrp4fcn6',NULL,'160.45.170.42','0',1318428097,1318428097,0,''),('51mm9klg1cce32f2gns591td1l0hr0bd',NULL,'160.45.170.42','0',1318428097,1318428097,0,''),('lqpg3a7h21tacf83cdc8pha7dvpdbprb',NULL,'160.45.170.42','0',1318428300,1318428300,0,''),('f3rs53v84me9f3jaergkps5cfk7rlqle',NULL,'160.45.170.42','0',1318428300,1318428300,0,''),('oqle5cf542ks1qbrhrn4hbomp7l83lg1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318433376,1318433767,0,''),('tnc4dlrub5cb0n4l12bdc0mvc2hieqp7',NULL,'160.45.170.42','0',1318433378,1318433378,0,''),('ftb8vnmmrb1vh3usnt03u5q4jub6em7g',NULL,'160.45.170.42','0',1318433379,1318433379,0,''),('q8glgjpostlq08f49rcu6fqh9vjji3c4',NULL,'160.45.170.42','0',1318433766,1318433766,0,''),('18gv32et2gmbhlb1gqrmvcif03p4598i',NULL,'160.45.170.42','0',1318433767,1318433767,0,''),('3adq6s8oan0ac79clsmpefnrqef861js',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318439798,1318439800,0,''),('gmfipuiamq8sk5kiesdhgfrnrtoevta8',NULL,'160.45.170.42','0',1318439800,1318439800,0,''),('4h5gaj9cp5ro2mhkjjkd6bi5t1f4ms16',NULL,'160.45.170.42','0',1318439800,1318439800,0,''),('qdl8rb35qvnicjdnar0tuvhc9e63360v',NULL,'160.45.170.42','0',1318439801,1318439802,0,''),('mrsus3j0lnq1phabkiuk2dli97aemqrp',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318440223,1318440592,0,''),('83vjadbl50a52jmi0rhathc73agtp66m',NULL,'160.45.170.42','0',1318440225,1318440225,0,''),('asbna0qi6k2pkf601dlindf292c51jol',NULL,'160.45.170.42','0',1318440225,1318440225,0,''),('ipjb2hvr0md2m6m38sgq4rkugr62j7ah',NULL,'160.45.170.42','0',1318440228,1318440228,0,''),('skjdc4ncdi7h5542ekjpqb2slnl038e2',NULL,'160.45.170.42','0',1318440349,1318440350,0,''),('25oij1pvuuqnqpvplptefv7v63puqhm4',NULL,'160.45.170.42','0',1318440451,1318440451,0,''),('cfeg1dtis7aae7b7sq7d4ig9bu9sm39f',NULL,'187.15.22.212','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318361151,1318440511,0,'username|s:5:\"admin\";'),('pr3rk8srj9hjb5n85qq6ui2phbf4di9v',1,'160.45.170.42','0',1318440593,1318440593,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u86ha641vaca5d2dlnie8p7mnpqoef1h',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318443076,1318443080,0,''),('06kb5cs72mujv8ldgl15bk8l2vpsogjj',NULL,'160.45.170.42','0',1318443078,1318443078,0,''),('g6en0l8tgidp3mf5osshd9b9mtnoqjgc',NULL,'160.45.170.42','0',1318443079,1318443079,0,''),('6htbru1asosn11qfo2vhp2udcggnp7nh',1,'160.45.170.42','0',1318443081,1318443081,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('9o0gvh8o9kqneqjtb9fmd2271qjjd5b4',1,'160.45.170.42','0',1318443081,1318443082,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6e5fd5h8o4eoqtamslo8qq31rh25pj14',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318443876,1318444293,0,''),('tvdullg0ohovnhj8gep637tp0n4rrpk6',NULL,'160.45.170.42','0',1318443878,1318443878,0,''),('v4sk5o953qtqmn89l553rj46u81mme7j',NULL,'160.45.170.42','0',1318443878,1318443878,0,''),('uul2g2v26mu5fali0h6pqvbha5927ps9',1,'160.45.170.42','0',1318443881,1318443881,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('v9j4qo4bqoqtgbcsoiuoi7mqb9r63ore',1,'160.45.170.42','0',1318443881,1318443881,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0ovvboghkmp7v1arudu9e0f86djaj6rv',NULL,'160.45.170.42','0',1318444261,1318444261,0,''),('q25p46843ognluo0eu5rg6vcqcakko60',NULL,'160.45.170.42','0',1318444262,1318444262,0,''),('frt67a7vdt6cqps1v428hp50ajqmg5i1',1,'160.45.170.42','0',1318444263,1318444263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u0r142q0qpa72qjpdd6bhogc7suf6c9k',1,'160.45.170.42','0',1318444263,1318444264,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tbbruh2pdj60cd417mfl9f1jae0vo3dg',NULL,'160.45.170.42','0',1318444293,1318444293,0,''),('b43vslm77akpbkm3vi0n91mdlc4fcffk',NULL,'160.45.170.42','0',1318444293,1318444293,0,''),('1nh927t3gucr2amabr7dnhgjasvd32s1',1,'160.45.170.42','0',1318444294,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tb52av430eudumjburg5sc0ele8roj53',1,'160.45.170.42','0',1318444295,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6mdl4esjiics6m3mo8upm54b9ri4pddd',1,'160.45.170.42','0',1318444295,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('omgs2imbsqs51qch38jmj7a7qqf44rrk',NULL,'160.45.170.42','0',1318854262,1318854262,0,''),('bfbgag86o15ooa5i0j2lse2qi91o5okp',NULL,'160.45.170.42','0',1318854262,1318854262,0,''),('bsaap8b9usc8buoj25ohepn20k5fjbfb',1,'160.45.170.42','0',1318854263,1318854263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('p7utpgtupjefg0si63li5uo1si0m1c8e',1,'160.45.170.42','0',1318854263,1318854263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('te4o5id6dioqm5msq5h69p8ef0pkjfd0',1,'160.45.170.42','0',1318854263,1318854264,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u8vr352gatbpmfft0ffsvtfdfk4rm6qg',NULL,'160.45.170.42','0',1318854664,1318854664,0,''),('1bg0ap9arl3afcng0slnukktq5plgand',NULL,'160.45.170.42','0',1318854664,1318854664,0,''),('0ckmvrrpnblmdacdtftg5mekd0mm86l1',1,'160.45.170.42','0',1318854665,1318854665,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0t9kalof60npmf290f7hhll0u4q2vka4',1,'160.45.170.42','0',1318854665,1318854665,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l4vika7301lsq8fvlk8l6ah6pute4n4p',1,'160.45.170.42','0',1318854665,1318854666,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('7l1pmedddu8s038p6p86ehdsi2k8oba1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); de; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318856830,1318857013,0,''),('hn77au151rak6470m95sjcvlms9cncsh',NULL,'160.45.170.42','0',1318856832,1318856832,0,''),('u7og90fq70802dl0ms69vl1nse48c1ob',NULL,'160.45.170.42','0',1318856832,1318856832,0,''),('ec3ar2ffo8r1463o2oepjlgpk8urobr1',1,'160.45.170.42','0',1318856834,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4j61djqd2knj3g35arm58klf59m81p27',1,'160.45.170.42','0',1318856835,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('uru6d2t8qsaen7g3ldsj838g0un91rnn',1,'160.45.170.42','0',1318856835,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lsiqlureo277pfl93ktba1d6t38ko8km',NULL,'160.45.170.42','0',1318857012,1318857012,0,''),('brlilr4g2q464jerhoddumfn1uk2o0a7',NULL,'160.45.170.42','0',1318857013,1318857013,0,''),('ppqlflrqqso1823doea70s1flqp40igm',1,'160.45.170.42','0',1318857014,1318857014,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('anep8jp1btaliaa83obmt4sq497mgqkf',1,'160.45.170.42','0',1318857015,1318857015,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('cqqqjt507976l56o8l07bpgagvedpoml',1,'160.45.170.42','0',1318857015,1318857015,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('qu40o0ovbhnqihl4nog55efm54o50o3n',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); de; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318857945,1318858516,0,''),('gkppf33me1sani4htnen8adj0t8g2jo9',NULL,'160.45.170.42','0',1318857947,1318857947,0,''),('25lcvd2mbrmi5jdum8tlk3huh95941q2',NULL,'160.45.170.42','0',1318857947,1318857947,0,''),('mv7kb920t1auv228qtm3m3b75qltg6fl',1,'160.45.170.42','0',1318857950,1318857950,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('vd8it3drib68m1l05cn5oujdh0mifbbt',1,'160.45.170.42','0',1318857950,1318857951,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('d40fq6ndm3r0ielnjd4o6648916bcqij',1,'160.45.170.42','0',1318857951,1318857951,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('s5sdevt3qfv789k3pl2q7v9e3gbndrcj',NULL,'160.45.170.42','0',1318858018,1318858018,0,''),('h5kgag08ndfi3ogdu6nf49iaosku0tc7',NULL,'160.45.170.42','0',1318858018,1318858018,0,''),('rtekcsk35c4qidpalteblup6boiqluvc',1,'160.45.170.42','0',1318858020,1318858020,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('mntd02fnc7p1m005ip583lk8bhsscjg9',1,'160.45.170.42','0',1318858020,1318858020,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0602v24ji0ajqqia9qbn20st9slbjljj',1,'160.45.170.42','0',1318858020,1318858021,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4i1kjidfvbccms3d0fkq8eom7dp14ka4',NULL,'160.45.170.42','0',1318858431,1318858431,0,''),('7hu7eukbghb0pbf48ursjtfi2vi5lc4t',NULL,'160.45.170.42','0',1318858431,1318858431,0,''),('q90makvu6hdqkn1i3jmov5ps43fc4sjp',1,'160.45.170.42','0',1318858433,1318858433,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ak57m6miv3tt45f6n0lu9d6clm49jhbe',1,'160.45.170.42','0',1318858433,1318858433,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('mt9qvdvfmj1lf1fnr0vjbsg8etha0sa5',1,'160.45.170.42','0',1318858434,1318858434,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('kct6dfgspd4b08147np41g79rkb9lqab',NULL,'160.45.170.42','0',1318858515,1318858515,0,''),('gj035aklq4548usq0jboa85iiva9uq55',NULL,'160.45.170.42','0',1318858516,1318858516,0,''),('a3ob1m9utaf0phf2f9beq4hp9904l55b',1,'160.45.170.42','0',1318858517,1318858517,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0cl8t8ql6ruae4e3bannjja9hjek1cd3',1,'160.45.170.42','0',1318858518,1318858518,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ukfeqf1fga4feaksge2kval9h55v0um0',1,'160.45.170.42','0',1318858518,1318858518,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l7fomva22847ii6ni6o1lo8j3bgu0m8b',NULL,'160.45.170.42','0',1318868011,1318868011,0,''),('5mi4tguua2uk5jaemoq6pmrg0ennuik4',NULL,'160.45.170.42','0',1318868012,1318868012,0,''),('ccivgdug5rajhfjpv6e7uhh43hburssg',1,'160.45.170.42','0',1318868012,1318868012,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('s8un2jut9vbl1pasgjkmk6fep6ht5539',1,'160.45.170.42','0',1318868012,1318868012,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('g659efr75g2b32m97ijs6ibm9qbf66na',1,'160.45.170.42','0',1318868013,1318868013,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jkuqeq0ngj591afrlt6ve39cn6gb8692',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318868093,1318868437,0,''),('1lcg2sea260cssm3f7r86a1as2q2ucer',NULL,'160.45.170.42','0',1318868095,1318868095,0,''),('jkcg7otumj0o2t832p0m4et8kn2t03ht',NULL,'160.45.170.42','0',1318868095,1318868095,0,''),('l4smdg9lqtcc5va4lhsed84ie6jo4f24',1,'160.45.170.42','0',1318868097,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('pk1d9cpv37qem5srvjea68ghlht5ahbh',1,'160.45.170.42','0',1318868098,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('omagojrg2psca3iobe6lejl1397cvn7s',1,'160.45.170.42','0',1318868098,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('c6tvgdkkqa95halhmpmg9kgl7v0qj9he',NULL,'160.45.170.42','0',1318868229,1318868229,0,''),('d6iruic61m0lb6a2t54ron3cl5iqus2u',NULL,'160.45.170.42','0',1318868230,1318868230,0,''),('325j5cc1dt6f6ojepf83smnku5p7hunj',1,'160.45.170.42','0',1318868231,1318868231,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('a5smnvmhak8jcljdtms0f6jq1dlbjqna',1,'160.45.170.42','0',1318868231,1318868231,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lpatkkjojdt916vqt2utv41lpe7u77ho',1,'160.45.170.42','0',1318868232,1318868232,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('at64fcbc08mbdjugmn9hp4v07cj75l0d',1,'187.15.9.148','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318868277,1318889497,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('v4qu2gbodueuovb2tb54sqmae5s8hqea',NULL,'160.45.170.42','0',1318868436,1318868436,0,''),('rngd6g7mp8caglpp81m8ji0jdlp6mji5',NULL,'160.45.170.42','0',1318868436,1318868436,0,''),('e918d2809bp9pat29s7mutpirgr5277e',1,'160.45.170.42','0',1318868438,1318868438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('fktn3vpem3ch2bspkdmotoigiodpibqi',1,'160.45.170.42','0',1318868438,1318868438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('gvgakesgbcg7sie0odggv8ocs7mi82hs',1,'160.45.170.42','0',1318868439,1318868439,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lncqen589hd1la1kho0m75ci1c6sg3qh',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318870194,1318871786,0,''),('t5jk3g1ooae4j274un54u9198bve35va',NULL,'160.45.170.42','0',1318870196,1318870196,0,''),('qs559vrc7eq0vkja473pmmsrtg8is08i',NULL,'160.45.170.42','0',1318870197,1318870197,0,''),('qou2l102qismqgg67tgf4m6bltjilnbg',1,'160.45.170.42','0',1318870199,1318870199,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('t7844l7o4obp1e7e9uhv9o6v36u0audo',1,'160.45.170.42','0',1318870199,1318870199,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('1vpv1cltb83a8eolf9v7tlo931hqm7sr',1,'160.45.170.42','0',1318870200,1318870200,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('da0totuf61niu5c2t2srt8lurlhi9flh',NULL,'160.45.170.42','0',1318870420,1318870420,0,''),('08l8qqjpub8o5hlqdncc6i08lh8mtgqq',NULL,'160.45.170.42','0',1318870420,1318870420,0,''),('f2a17cm1fpq2e36pbl4f8vappcgom29m',1,'160.45.170.42','0',1318870421,1318870421,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('csddrd5u0ndnu0pmijjl4vrejprcs52t',1,'160.45.170.42','0',1318870422,1318870422,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('5sunigj5oths6k16pu8ppedrrgrj37bi',1,'160.45.170.42','0',1318870422,1318870422,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ifmrug581govb83gh0c0c6uprm9g4m2l',NULL,'160.45.170.42','0',1318870435,1318870435,0,''),('cnjmra65jssa19nkhb8ib84n3m3eu595',NULL,'160.45.170.42','0',1318870436,1318870436,0,''),('450k3j284bf7t7ltih259ntshagm2k8s',1,'160.45.170.42','0',1318870437,1318870437,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('k0eqkm3ts1fb2a81lfbo88cfl8qmo1ms',1,'160.45.170.42','0',1318870437,1318870438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('i0avkd8477akgjp058vn5t7ptkrqjtie',1,'160.45.170.42','0',1318870438,1318870438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('nfcl09heaspruqhutn1jbd8b9t1c4qbg',NULL,'160.45.170.42','0',1318870794,1318870794,0,''),('9jcem20ahru46634q81njpt84iinkd8b',NULL,'160.45.170.42','0',1318870794,1318870794,0,''),('58hurqsthgt62r8l2m2rpdp2senfs7ar',1,'160.45.170.42','0',1318870796,1318870796,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jdi99f78oup3o3rt8tdtggm8v02523a5',1,'160.45.170.42','0',1318870796,1318870797,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('f7fnmikocrtqg3cqeaj6boroaf9bnccn',1,'160.45.170.42','0',1318870797,1318870797,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tvdqh7l95d7j4a4pg0thud3blhm478fh',NULL,'160.45.170.42','0',1318870886,1318870886,0,''),('u2jei9fhl1r52hjrbgmu0f5ohtgpojc2',NULL,'160.45.170.42','0',1318870886,1318870886,0,''),('rfjjcqom7s9qhvt54ncpj37jf5r0cddf',1,'160.45.170.42','0',1318870887,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('duh756sn2tnhsnippnfqitsl7dnah5e8',1,'160.45.170.42','0',1318870888,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('7964cvc5qta0i80ibtskhmfma4i7njho',1,'160.45.170.42','0',1318870888,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('8jh2tb6f8m7fpdmqeoqggl27ef1i04um',NULL,'160.45.170.42','0',1318870946,1318870946,0,''),('5au8fdhhjlkaa6eptk7ebsbgkqp8e5h4',NULL,'160.45.170.42','0',1318870946,1318870946,0,''),('co4qh2dp8k5r0ds6ma2cdt52gib05u1l',1,'160.45.170.42','0',1318870947,1318870948,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('sraqtc4geoal7ojd268fb1jmfk2l7259',1,'160.45.170.42','0',1318870948,1318870948,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tlrb2fe7i3gtjilht05gd7467f2jupm1',1,'160.45.170.42','0',1318870948,1318870949,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jro0v56hoecmg5a83ksv7etoqkl5egpf',NULL,'160.45.170.42','0',1318871630,1318871630,0,''),('cqeujnofst2e0sd3646lqrq11lu352sc',NULL,'160.45.170.42','0',1318871630,1318871630,0,''),('d58t1vni2e7u6vjsm7n55djaacsr6b73',1,'160.45.170.42','0',1318871631,1318871631,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('271un1s7lqa0tcqe16kkl1uo97vh3kgq',1,'160.45.170.42','0',1318871632,1318871632,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('orjvhp19nm93oa1f0kcjd72rk4d50869',1,'160.45.170.42','0',1318871632,1318871632,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('376dqkktseii96bsr96rgree6k30967g',NULL,'160.45.170.42','0',1318871682,1318871682,0,''),('vpomjo89djtvd6ra6ju5ecabhtig9ip6',NULL,'160.45.170.42','0',1318871683,1318871683,0,''),('ajnjmnpnrimkvnp73uvmg7n1q16dv9ns',1,'160.45.170.42','0',1318871684,1318871684,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('p72416kj4r0emje2q7nf6got4o43c3dc',1,'160.45.170.42','0',1318871684,1318871685,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ti7ta86sbdkhia9qhjap1gqqqgrutg95',1,'160.45.170.42','0',1318871685,1318871685,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rjfnvqutjheaqf25ns93sd35fbnebmsv',NULL,'160.45.170.42','0',1318871785,1318871785,0,''),('p4qll6tvfha3thvmbsv32u2649h5fcs1',NULL,'160.45.170.42','0',1318871786,1318871786,0,''),('b3549ve4egefv1ucl7ki9ulmj605c2if',1,'160.45.170.42','0',1318871787,1318871787,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('80dlifu2249a6u2qu7i430c73ov43c21',1,'160.45.170.42','0',1318871787,1318871788,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ava14jjh5e0i9qk29kg9i494uk975qub',1,'160.45.170.42','0',1318871788,1318871788,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('04qh0hauuoa178m8cd25vf7mq70cbqct',NULL,'160.45.170.42','0',1318890538,1318890538,0,''),('k1mvh0rk3isimcjd2736mbpgk2c6hjus',NULL,'160.45.170.42','0',1318890538,1318890538,0,''),('li37ah4bhliup8opq39q89q482g5pd82',1,'160.45.170.42','0',1318890538,1318890539,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('fhvrl8gup69qta06lhcupl9qcd9poj4h',1,'160.45.170.42','0',1318890539,1318890539,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('k2mook7q8sn8fq5nveha7n1o3bbb2h7b',1,'160.45.170.42','0',1318890539,1318890540,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('8612dogg6vqrccvflcuco3no03kjgh3h',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318890670,1318890673,0,''),('i8lrr216egpo252st2tassoehm6oge69',NULL,'160.45.170.42','0',1318890672,1318890672,0,''),('r8u52qq4ohaqvpg3007cthrjkf7gff46',NULL,'160.45.170.42','0',1318890672,1318890672,0,''),('thhi48el1qj5gngr76fda0sqe4jqk319',1,'160.45.170.42','0',1318890674,1318890674,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rb5km00us7uktmoc896qqt5o53q2qm3d',1,'160.45.170.42','0',1318890675,1318890675,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ge271ct8vsd0dil50e7bqf9jabjnk6bj',1,'160.45.170.42','0',1318890675,1318890675,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('2u4rl5eib6qkrl9cjc3h79fq1i02eopt',1,'187.15.48.79','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318938775,1318938796,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ntqpj7s38pb5k2lm538hqnvj4um71cb8',NULL,'160.45.170.42','0',1318939040,1318939040,0,''),('1eeucs1v48htiqhlucp7169ikruk7umg',NULL,'160.45.170.42','0',1318939041,1318939041,0,''),('ic2hifrn8jstdjbibetl6hmprq2daeo1',1,'160.45.170.42','0',1318939041,1318939041,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4roa34phnh5tehubrked40ufs8holujp',1,'160.45.170.42','0',1318939042,1318939042,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ooi1ab3562j2dp6k3nbfp6or8tvdkmi0',1,'160.45.170.42','0',1318939042,1318939042,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tkrj1faq2q2pqn4dq7q3669h34i9e3pt',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318939161,1318939162,0,''),('gb7l9oqvk94gcn0oa37nj3b706fqlqm5',NULL,'160.45.170.42','0',1318939163,1318939163,0,''),('lsi65rradvls1e9ou8ka2op78c9nn4mg',NULL,'160.45.170.42','0',1318939163,1318939163,0,''),('nov2rqi7flcj9kdf5m0i24174gbk5o2g',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318939789,1318939857,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('vu7ca17d5bmu4gkq7l8h1t9jf1p6euor',NULL,'160.45.170.42','0',1318939791,1318939791,0,''),('4cr6lgmk3a8pq9geoousvftcipsa09jm',NULL,'160.45.170.42','0',1318939792,1318939792,0,''),('580r5jirib4hn9rv0hlclktgs5q2rr81',1,'160.45.170.42','0',1318939858,1318939858,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('cuerhh1s5dvu25oq7i56l5c6329a17qv',1,'160.45.170.42','0',1318939859,1318939859,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('89o84sfe37b2ijqq0ab55hrb9pgb2lj5',1,'160.45.170.42','0',1318939859,1318939859,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('q07vhhakmups9kitla455icdntmjl6dd',1,'187.15.48.79','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318990661,1318990746,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('np949ju6okb15qc8usip4fh6t9ia3nov',1,'187.15.48.79','0',1318990666,1318990667,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l1t805ic4mnvlhqnkdmik9jrer0ad4t2',1,'187.15.48.79','0',1318990668,1318990668,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('59rdf681j89n9f523u65f24itul7aj3v',1,'187.15.48.79','0',1318990669,1318990670,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('okfpke6kdputaoss6vromodj7sljhtgd',NULL,'187.15.48.79','0',1318990672,1318990672,0,''),('pk37i8jrtnhiiihdcsdq3j0152hav0u7',NULL,'187.15.48.79','0',1318990673,1318990673,0,''),('hg9al6q049srpt0tdie0kd73h6occ8j7',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318998898,1318998964,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('roi533e90e646m72d21uo3sc8cla5v0u',NULL,'160.45.170.42','0',1318998900,1318998900,0,''),('uggm387un26jjs32amt7dqen6l5mafh0',NULL,'160.45.170.42','0',1318998900,1318998900,0,''),('h63shupkib8aincbh3njeadl12ornrrk',1,'160.45.170.42','0',1318998965,1318998965,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('t2vg5r2ot9ds6qkaecufofmnpgp69mqh',1,'160.45.170.42','0',1318998965,1318998965,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rbuj1mekf843dd2mapuhnhoa73ramcs7',1,'160.45.170.42','0',1318998966,1318998966,0,'userId|s:1:\"1\";username|s:5:\"admin\";');
+INSERT INTO `sessions` VALUES ('5qk50iocvik7epsug7q5pmmr60',1,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317901801,1317941781,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('gotheeu0mithekagp4pkdl1613',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911127,1317911127,0,''),('hidavkomcvmvs0qn4poat2hoe5',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911786,1317911786,0,''),('7dm2ucv416mkl71aqrscq1pjp6',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911807,1317911807,0,''),('eef7pmi7fae535rgbqtqjffov6',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317911832,1317911832,0,''),('m07lkd26j6emubat4i7f9h7g15',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317915362,1317915362,0,''),('8rj54b299la0egs08o6m52pnr5',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1317921366,1317921366,0,''),('8hbr5jvl3nngt8efvbjdslgog6n3qcj7',NULL,'160.45.170.42','0',1318440591,1318440591,0,''),('bj6rkah4mg1ma95vri0nt7se7r9h0ql2',NULL,'187.15.22.212','0',1318362820,1318362820,0,''),('oji4qhsv59d9nkhi3hj23t3ukniqo5od',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318176437,1318176503,0,''),('0hkhphfe0v6pth1a378r6o2l7fb7u36s',NULL,'160.45.170.42','0',1318440591,1318440591,0,''),('rojmfifld6vos45sb55au1phnpph9n6f',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318182064,1318182070,0,''),('2e82sf69s26njfs61lcmgs67ntpttsls',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318187829,1318187835,0,''),('oq7tu0cusivdu3htubdmld4sddeebreh',NULL,'201.29.145.137','0',1318187833,1318187833,0,''),('219oc99ck0qpjg01i9vum420j8k728hv',NULL,'201.29.145.137','0',1318187914,1318187914,0,''),('tgs8luffsoq1gf0hhgrqgdgtae4cq60t',NULL,'201.29.145.137','0',1318188350,1318188350,0,''),('ajm79sbupcnscv7h5g5h37cqul5qegvs',NULL,'201.29.145.137','0',1318188456,1318188456,0,''),('6gfpreki8fb15scpot7k27uja6ooe75g',NULL,'201.29.145.137','0',1318188465,1318188465,0,''),('k70nj1ef29iu1fcrvq27h5aa25m7c8th',NULL,'201.29.145.137','0',1318195084,1318195084,0,''),('5gtdel236bs5178jtufenne5nuvfii1l',NULL,'201.29.145.137','0',1318195139,1318195139,0,''),('k1jns6imt7k3cv74q8b2854iarpsmsm3',NULL,'201.29.145.137','0',1318195152,1318195152,0,''),('2e7h006h6qqrfvgvqejalgo7935sqv0l',NULL,'201.29.145.137','0',1318195180,1318195180,0,''),('csltv5qt74oejaqofpbphd1he21a2lim',NULL,'201.29.145.137','0',1318195213,1318195213,0,''),('gjnuab92l3q8qpibkf4uoqqmiq64hjo8',NULL,'201.29.145.137','0',1318195240,1318195240,0,''),('8k8fmd0rnqp281viea8qcia249mphkoe',NULL,'201.29.145.137','0',1318195249,1318195249,0,''),('b03f8d2o2h0afmb6mdleooakqkkt02va',NULL,'201.29.145.137','0',1318195282,1318195282,0,''),('aehni2l2mlr1ljgbs38o95kf3a5t7k21',NULL,'201.29.145.137','0',1318195291,1318195291,0,''),('9t0l3k0srvsu4n2fclubhmc125qmdrig',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318195531,1318196303,0,''),('cupm3kjl10edsmuo7akvvihb9r4tt668',NULL,'201.29.145.137','0',1318195536,1318195536,0,''),('f2hsfafnk58e9agphfrl1ofd7v4bol18',NULL,'201.29.145.137','0',1318196301,1318196301,0,''),('0dkr5fmo01ee9i49rnbclk9l3smtce36',NULL,'201.29.145.137','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318201826,1318201835,0,''),('sbbbvishka8av3hu3l8v7d0rtoa1ehkh',NULL,'201.29.145.137','0',1318201831,1318201831,0,''),('e8cpasfs687dl62nnmfbcbni7sqjth2s',NULL,'201.29.145.137','0',1318201832,1318201832,0,''),('30si2lli7e060ev70eobmreh370t4785',NULL,'201.29.145.137','0',1318201833,1318201833,0,''),('gru5517phhm7ld83jnk4bfbcpdut8vdn',NULL,'201.29.145.137','0',1318201862,1318201862,0,''),('nojkaph6v6bpqs8d43mvv2ah3dicklt8',NULL,'201.29.145.137','0',1318201868,1318201868,0,''),('3jgqg3o42p98lo7qeld719ie4joakptv',NULL,'201.29.145.137','0',1318201869,1318201869,0,''),('uq5jo20hrk9fuqqbn49pve5lh2ut5afj',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318337216,1318337231,0,''),('2gdrq4ehesp0um67hca7fqk2bli4l4bg',NULL,'187.15.22.212','0',1318358606,1318358606,0,''),('k2rt9vou2nd18vk933hc4l6sbsgmspo3',NULL,'187.15.22.212','0',1318358607,1318358607,0,''),('uhnrnmsun5jbduocb0ulcjj64nbalg4f',NULL,'187.15.22.212','0',1318358608,1318358608,0,''),('l0j9oekol9vtm7n632cud7tare3detav',NULL,'187.15.22.212','0',1318359411,1318359411,0,''),('mvdit04rn57ee96dafb1cohfu8394r58',NULL,'187.15.22.212','0',1318359412,1318359412,0,''),('r97ubt2cc0q4ooki54uafme4um93k9cf',NULL,'187.15.22.212','0',1318359413,1318359413,0,''),('775dkbmrm8576u764tge51qohcv3ein7',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318359479,1318360178,0,''),('3id6k5ihmusahka0v6tq77jh52ebgi4d',NULL,'160.45.170.42','0',1318359481,1318359481,0,''),('k1p5kfpkhsmlfe01gbqk4p0lpst0g4hl',NULL,'160.45.170.42','0',1318359481,1318359481,0,''),('q64rr9jhfgt9at02544c61c79dn3fcj1',NULL,'160.45.170.42','0',1318359482,1318359482,0,''),('2kctged903o0a5hm7jshp49h0j8rr9ob',NULL,'187.15.22.212','0',1318359518,1318359518,0,''),('jnkm2jrapfhraicnk6decbepj7ro8eu7',NULL,'187.15.22.212','0',1318359519,1318359519,0,''),('7hkmm09aqeigivuumn7s0554uqme5v0d',NULL,'187.15.22.212','0',1318359520,1318359520,0,''),('eipdkgft44l3al1p774es4km7vc57epd',NULL,'160.45.170.42','0',1318360155,1318360155,0,''),('4k2dp7ad5p3cuhfumaorekg11huv0pnp',NULL,'160.45.170.42','0',1318360156,1318360156,0,''),('fmo1d71m543e46q6m94v7auftjq9bb2r',NULL,'160.45.170.42','0',1318360156,1318360156,0,''),('ofcf5qe5i3do39gope9uhliem8onopt8',NULL,'160.45.170.42','0',1318360177,1318360177,0,''),('pegva0tc89rsk8iu6ig8pbi40qppvhg1',NULL,'160.45.170.42','0',1318360178,1318360178,0,''),('f9ivlstn729dro1u1r2fho7g1m3efru4',NULL,'160.45.170.42','0',1318360178,1318360178,0,''),('2883culkiuu71e8v3d94eflsm44ggacn',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318360280,1318360284,0,''),('f5oi7fuvubqhbhil07dne7d0i91h87n4',NULL,'160.45.170.42','0',1318360282,1318360282,0,''),('g5uosl6tjl1u6m2n1k9n85jvpf8t6lag',NULL,'160.45.170.42','0',1318360282,1318360282,0,''),('tle8cdt6n9pdnmbv1sb96lcjmuaf5fig',NULL,'160.45.170.42','0',1318360283,1318360283,0,''),('ftofuvqn9eqp0d523cpif3se7h2o47ph',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318360342,1318361019,0,''),('6k0bfts7gbeuo10s3q09bj4um4o82lvn',NULL,'160.45.170.42','0',1318360344,1318360344,0,''),('djh52jsfnbg1kb5euotdk0kukgsot5ru',NULL,'160.45.170.42','0',1318360344,1318360344,0,''),('99t05id9640umitdai6vh76mq7471c07',NULL,'160.45.170.42','0',1318360345,1318360345,0,''),('9ovkt3s2dn6r8566kfodn3ubabmuquc9',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('t39jj0bgj0c153dln0sm8gfss5557hf7',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('vnl6qhqk975js6nk1icv623ial673cik',NULL,'160.45.170.42','0',1318360354,1318360354,0,''),('o9l6hi00h7ghrbjt81l8p5es84taqu8g',NULL,'160.45.170.42','0',1318360494,1318360494,0,''),('tv8q8nbvsmo480l96e9udbctifto25l3',NULL,'160.45.170.42','0',1318360494,1318360494,0,''),('b3ba6on3ujqda6gvar0luek1ktl6tgk1',NULL,'160.45.170.42','0',1318360495,1318360495,0,''),('c73kap77urfhnoqjpsamp0e3pphe153v',NULL,'160.45.170.42','0',1318360612,1318360612,0,''),('651546h3mm18fpni31mapct7mjsg02ed',NULL,'160.45.170.42','0',1318360612,1318360612,0,''),('j26ugheu7itfruin80pappavsnjo94b1',NULL,'160.45.170.42','0',1318360613,1318360613,0,''),('rgfqen3v1agvsbv75leckdnjtbbqsos8',NULL,'160.45.170.42','0',1318360678,1318360678,0,''),('j53kuj6k7r429tvmkdj4cm3t1bd1g86i',NULL,'160.45.170.42','0',1318360678,1318360678,0,''),('ni3r1ppbt77tg1jkldkoehaiuc9j6r17',NULL,'160.45.170.42','0',1318360680,1318360680,0,''),('kashgjqsnongkh3qtm008rapg9qf9b1l',NULL,'160.45.170.42','0',1318360722,1318360722,0,''),('m05p9be1ii65agijj0h7psh81lcb413u',NULL,'160.45.170.42','0',1318360723,1318360723,0,''),('akipeqqp743khqpfhis861dd5jpga6ll',NULL,'160.45.170.42','0',1318360723,1318360723,0,''),('ld38plmg7jv5p3uh8ph2gcttusdd0op8',NULL,'160.45.170.42','0',1318360756,1318360756,0,''),('3t34cs11a60f531a4t50ks594m5mu09j',NULL,'160.45.170.42','0',1318360757,1318360757,0,''),('6mejthfaop0jbvqjc0t55q3k7i41380c',NULL,'160.45.170.42','0',1318360757,1318360757,0,''),('4c4tb11lo91mhlh5n2n9c0fgh0r6cek6',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('pl3ashii2smiq0n47dp8j9esvcem2n5u',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('8l2ph8asj34fao48883tuhvgctj7a1aj',NULL,'160.45.170.42','0',1318360792,1318360792,0,''),('64oig1f4108soltv5jofgnbo71vk8gbk',NULL,'160.45.170.42','0',1318361018,1318361018,0,''),('tmmpsfr74f0rckk558847s51u1a262p5',NULL,'160.45.170.42','0',1318361018,1318361018,0,''),('g2ias9o3p2ajuvpp1jp6mdn0bfsjv0jn',NULL,'160.45.170.42','0',1318361019,1318361019,0,''),('ql3n2uclrthl8d10ksfhl2sve78nh618',NULL,'187.15.22.212','0',1318361033,1318361033,0,''),('lh2594alg3upmmaflp2lrilo438sgmu4',NULL,'187.15.22.212','0',1318361060,1318361060,0,''),('9hheo6imrlo5opv5sh6s7olt8jjelv05',NULL,'187.15.22.212','0',1318361061,1318361061,0,''),('ddsd6criobfklevo3gp7l1smklgqhooq',NULL,'187.15.22.212','0',1318361090,1318361090,0,''),('herc4ha1vmakeo8ueuek0h6t5gj4monp',NULL,'187.15.22.212','0',1318361091,1318361091,0,''),('f3766ed5irf8rl99tph9o5qv43hs4snl',NULL,'187.15.22.212','0',1318361127,1318361127,0,''),('3vj5ban0ff0hf4r0ndg79esoi315iuip',NULL,'187.15.22.212','0',1318361129,1318361129,0,''),('vllek2k9ulusa891neqi979qh6qiflir',NULL,'187.15.22.212','0',1318362821,1318362821,0,''),('92f037gu345qff1a0j4oulaec8nip300',NULL,'187.15.22.212','0',1318362834,1318362834,0,''),('1m3mhd14ds0h5d04ggiud8k79gho2cbh',NULL,'187.15.22.212','0',1318362834,1318362834,0,''),('2lnmq65dd18lu9ham4echn49jcbbrlc1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318363738,1318364680,0,''),('k2ket9stuai4io4jtd4euvl0iuod5png',NULL,'160.45.170.42','0',1318363739,1318363739,0,''),('nqo3vr72d3mbvlj7mv250gr301q16ctr',NULL,'160.45.170.42','0',1318363740,1318363740,0,''),('n03j11cq0e6jtvqk09cg6rmp969ckrjq',NULL,'160.45.170.42','0',1318363740,1318363740,0,''),('rpioflln5gthscc3530m684iuehonimv',NULL,'160.45.170.42','0',1318364121,1318364121,0,''),('14jjnq4d67onn5mqhapedi5cekpla50j',NULL,'160.45.170.42','0',1318364121,1318364121,0,''),('70me4r3lfe654ljjp6ks5mrme1n8kqee',NULL,'160.45.170.42','0',1318364447,1318364447,0,''),('5rgu3rhqarl0c471fj8qr5fceltjs8v3',NULL,'160.45.170.42','0',1318364447,1318364447,0,''),('e4ejtr56ig3kn2tckeaj5mhfuain789k',NULL,'160.45.170.42','0',1318364679,1318364679,0,''),('eli78vvibop43mnr69t19c0ppjr1ai36',NULL,'160.45.170.42','0',1318364680,1318364680,0,''),('3qnje4i008jnjld5jlig3kmv46oofeqt',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318428095,1318428300,0,''),('amsh571ut0a7uoj753jn9p2krrp4fcn6',NULL,'160.45.170.42','0',1318428097,1318428097,0,''),('51mm9klg1cce32f2gns591td1l0hr0bd',NULL,'160.45.170.42','0',1318428097,1318428097,0,''),('lqpg3a7h21tacf83cdc8pha7dvpdbprb',NULL,'160.45.170.42','0',1318428300,1318428300,0,''),('f3rs53v84me9f3jaergkps5cfk7rlqle',NULL,'160.45.170.42','0',1318428300,1318428300,0,''),('oqle5cf542ks1qbrhrn4hbomp7l83lg1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318433376,1318433767,0,''),('tnc4dlrub5cb0n4l12bdc0mvc2hieqp7',NULL,'160.45.170.42','0',1318433378,1318433378,0,''),('ftb8vnmmrb1vh3usnt03u5q4jub6em7g',NULL,'160.45.170.42','0',1318433379,1318433379,0,''),('q8glgjpostlq08f49rcu6fqh9vjji3c4',NULL,'160.45.170.42','0',1318433766,1318433766,0,''),('18gv32et2gmbhlb1gqrmvcif03p4598i',NULL,'160.45.170.42','0',1318433767,1318433767,0,''),('3adq6s8oan0ac79clsmpefnrqef861js',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318439798,1318439800,0,''),('gmfipuiamq8sk5kiesdhgfrnrtoevta8',NULL,'160.45.170.42','0',1318439800,1318439800,0,''),('4h5gaj9cp5ro2mhkjjkd6bi5t1f4ms16',NULL,'160.45.170.42','0',1318439800,1318439800,0,''),('qdl8rb35qvnicjdnar0tuvhc9e63360v',NULL,'160.45.170.42','0',1318439801,1318439802,0,''),('mrsus3j0lnq1phabkiuk2dli97aemqrp',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318440223,1318440592,0,''),('83vjadbl50a52jmi0rhathc73agtp66m',NULL,'160.45.170.42','0',1318440225,1318440225,0,''),('asbna0qi6k2pkf601dlindf292c51jol',NULL,'160.45.170.42','0',1318440225,1318440225,0,''),('ipjb2hvr0md2m6m38sgq4rkugr62j7ah',NULL,'160.45.170.42','0',1318440228,1318440228,0,''),('skjdc4ncdi7h5542ekjpqb2slnl038e2',NULL,'160.45.170.42','0',1318440349,1318440350,0,''),('25oij1pvuuqnqpvplptefv7v63puqhm4',NULL,'160.45.170.42','0',1318440451,1318440451,0,''),('cfeg1dtis7aae7b7sq7d4ig9bu9sm39f',NULL,'187.15.22.212','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318361151,1318440511,0,'username|s:5:\"admin\";'),('pr3rk8srj9hjb5n85qq6ui2phbf4di9v',1,'160.45.170.42','0',1318440593,1318440593,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u86ha641vaca5d2dlnie8p7mnpqoef1h',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318443076,1318443080,0,''),('06kb5cs72mujv8ldgl15bk8l2vpsogjj',NULL,'160.45.170.42','0',1318443078,1318443078,0,''),('g6en0l8tgidp3mf5osshd9b9mtnoqjgc',NULL,'160.45.170.42','0',1318443079,1318443079,0,''),('6htbru1asosn11qfo2vhp2udcggnp7nh',1,'160.45.170.42','0',1318443081,1318443081,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('9o0gvh8o9kqneqjtb9fmd2271qjjd5b4',1,'160.45.170.42','0',1318443081,1318443082,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6e5fd5h8o4eoqtamslo8qq31rh25pj14',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318443876,1318444293,0,''),('tvdullg0ohovnhj8gep637tp0n4rrpk6',NULL,'160.45.170.42','0',1318443878,1318443878,0,''),('v4sk5o953qtqmn89l553rj46u81mme7j',NULL,'160.45.170.42','0',1318443878,1318443878,0,''),('uul2g2v26mu5fali0h6pqvbha5927ps9',1,'160.45.170.42','0',1318443881,1318443881,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('v9j4qo4bqoqtgbcsoiuoi7mqb9r63ore',1,'160.45.170.42','0',1318443881,1318443881,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0ovvboghkmp7v1arudu9e0f86djaj6rv',NULL,'160.45.170.42','0',1318444261,1318444261,0,''),('q25p46843ognluo0eu5rg6vcqcakko60',NULL,'160.45.170.42','0',1318444262,1318444262,0,''),('frt67a7vdt6cqps1v428hp50ajqmg5i1',1,'160.45.170.42','0',1318444263,1318444263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u0r142q0qpa72qjpdd6bhogc7suf6c9k',1,'160.45.170.42','0',1318444263,1318444264,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tbbruh2pdj60cd417mfl9f1jae0vo3dg',NULL,'160.45.170.42','0',1318444293,1318444293,0,''),('b43vslm77akpbkm3vi0n91mdlc4fcffk',NULL,'160.45.170.42','0',1318444293,1318444293,0,''),('1nh927t3gucr2amabr7dnhgjasvd32s1',1,'160.45.170.42','0',1318444294,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tb52av430eudumjburg5sc0ele8roj53',1,'160.45.170.42','0',1318444295,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6mdl4esjiics6m3mo8upm54b9ri4pddd',1,'160.45.170.42','0',1318444295,1318444295,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('omgs2imbsqs51qch38jmj7a7qqf44rrk',NULL,'160.45.170.42','0',1318854262,1318854262,0,''),('bfbgag86o15ooa5i0j2lse2qi91o5okp',NULL,'160.45.170.42','0',1318854262,1318854262,0,''),('bsaap8b9usc8buoj25ohepn20k5fjbfb',1,'160.45.170.42','0',1318854263,1318854263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('p7utpgtupjefg0si63li5uo1si0m1c8e',1,'160.45.170.42','0',1318854263,1318854263,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('te4o5id6dioqm5msq5h69p8ef0pkjfd0',1,'160.45.170.42','0',1318854263,1318854264,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u8vr352gatbpmfft0ffsvtfdfk4rm6qg',NULL,'160.45.170.42','0',1318854664,1318854664,0,''),('1bg0ap9arl3afcng0slnukktq5plgand',NULL,'160.45.170.42','0',1318854664,1318854664,0,''),('0ckmvrrpnblmdacdtftg5mekd0mm86l1',1,'160.45.170.42','0',1318854665,1318854665,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0t9kalof60npmf290f7hhll0u4q2vka4',1,'160.45.170.42','0',1318854665,1318854665,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l4vika7301lsq8fvlk8l6ah6pute4n4p',1,'160.45.170.42','0',1318854665,1318854666,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('7l1pmedddu8s038p6p86ehdsi2k8oba1',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); de; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318856830,1318857013,0,''),('hn77au151rak6470m95sjcvlms9cncsh',NULL,'160.45.170.42','0',1318856832,1318856832,0,''),('u7og90fq70802dl0ms69vl1nse48c1ob',NULL,'160.45.170.42','0',1318856832,1318856832,0,''),('ec3ar2ffo8r1463o2oepjlgpk8urobr1',1,'160.45.170.42','0',1318856834,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4j61djqd2knj3g35arm58klf59m81p27',1,'160.45.170.42','0',1318856835,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('uru6d2t8qsaen7g3ldsj838g0un91rnn',1,'160.45.170.42','0',1318856835,1318856835,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lsiqlureo277pfl93ktba1d6t38ko8km',NULL,'160.45.170.42','0',1318857012,1318857012,0,''),('brlilr4g2q464jerhoddumfn1uk2o0a7',NULL,'160.45.170.42','0',1318857013,1318857013,0,''),('ppqlflrqqso1823doea70s1flqp40igm',1,'160.45.170.42','0',1318857014,1318857014,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('anep8jp1btaliaa83obmt4sq497mgqkf',1,'160.45.170.42','0',1318857015,1318857015,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('cqqqjt507976l56o8l07bpgagvedpoml',1,'160.45.170.42','0',1318857015,1318857015,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('qu40o0ovbhnqihl4nog55efm54o50o3n',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); de; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318857945,1318858516,0,''),('gkppf33me1sani4htnen8adj0t8g2jo9',NULL,'160.45.170.42','0',1318857947,1318857947,0,''),('25lcvd2mbrmi5jdum8tlk3huh95941q2',NULL,'160.45.170.42','0',1318857947,1318857947,0,''),('mv7kb920t1auv228qtm3m3b75qltg6fl',1,'160.45.170.42','0',1318857950,1318857950,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('vd8it3drib68m1l05cn5oujdh0mifbbt',1,'160.45.170.42','0',1318857950,1318857951,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('d40fq6ndm3r0ielnjd4o6648916bcqij',1,'160.45.170.42','0',1318857951,1318857951,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('s5sdevt3qfv789k3pl2q7v9e3gbndrcj',NULL,'160.45.170.42','0',1318858018,1318858018,0,''),('h5kgag08ndfi3ogdu6nf49iaosku0tc7',NULL,'160.45.170.42','0',1318858018,1318858018,0,''),('rtekcsk35c4qidpalteblup6boiqluvc',1,'160.45.170.42','0',1318858020,1318858020,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('mntd02fnc7p1m005ip583lk8bhsscjg9',1,'160.45.170.42','0',1318858020,1318858020,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0602v24ji0ajqqia9qbn20st9slbjljj',1,'160.45.170.42','0',1318858020,1318858021,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4i1kjidfvbccms3d0fkq8eom7dp14ka4',NULL,'160.45.170.42','0',1318858431,1318858431,0,''),('7hu7eukbghb0pbf48ursjtfi2vi5lc4t',NULL,'160.45.170.42','0',1318858431,1318858431,0,''),('q90makvu6hdqkn1i3jmov5ps43fc4sjp',1,'160.45.170.42','0',1318858433,1318858433,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ak57m6miv3tt45f6n0lu9d6clm49jhbe',1,'160.45.170.42','0',1318858433,1318858433,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('mt9qvdvfmj1lf1fnr0vjbsg8etha0sa5',1,'160.45.170.42','0',1318858434,1318858434,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('kct6dfgspd4b08147np41g79rkb9lqab',NULL,'160.45.170.42','0',1318858515,1318858515,0,''),('gj035aklq4548usq0jboa85iiva9uq55',NULL,'160.45.170.42','0',1318858516,1318858516,0,''),('a3ob1m9utaf0phf2f9beq4hp9904l55b',1,'160.45.170.42','0',1318858517,1318858517,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0cl8t8ql6ruae4e3bannjja9hjek1cd3',1,'160.45.170.42','0',1318858518,1318858518,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ukfeqf1fga4feaksge2kval9h55v0um0',1,'160.45.170.42','0',1318858518,1318858518,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l7fomva22847ii6ni6o1lo8j3bgu0m8b',NULL,'160.45.170.42','0',1318868011,1318868011,0,''),('5mi4tguua2uk5jaemoq6pmrg0ennuik4',NULL,'160.45.170.42','0',1318868012,1318868012,0,''),('ccivgdug5rajhfjpv6e7uhh43hburssg',1,'160.45.170.42','0',1318868012,1318868012,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('s8un2jut9vbl1pasgjkmk6fep6ht5539',1,'160.45.170.42','0',1318868012,1318868012,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('g659efr75g2b32m97ijs6ibm9qbf66na',1,'160.45.170.42','0',1318868013,1318868013,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jkuqeq0ngj591afrlt6ve39cn6gb8692',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318868093,1318868437,0,''),('1lcg2sea260cssm3f7r86a1as2q2ucer',NULL,'160.45.170.42','0',1318868095,1318868095,0,''),('jkcg7otumj0o2t832p0m4et8kn2t03ht',NULL,'160.45.170.42','0',1318868095,1318868095,0,''),('l4smdg9lqtcc5va4lhsed84ie6jo4f24',1,'160.45.170.42','0',1318868097,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('pk1d9cpv37qem5srvjea68ghlht5ahbh',1,'160.45.170.42','0',1318868098,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('omagojrg2psca3iobe6lejl1397cvn7s',1,'160.45.170.42','0',1318868098,1318868098,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('c6tvgdkkqa95halhmpmg9kgl7v0qj9he',NULL,'160.45.170.42','0',1318868229,1318868229,0,''),('d6iruic61m0lb6a2t54ron3cl5iqus2u',NULL,'160.45.170.42','0',1318868230,1318868230,0,''),('325j5cc1dt6f6ojepf83smnku5p7hunj',1,'160.45.170.42','0',1318868231,1318868231,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('a5smnvmhak8jcljdtms0f6jq1dlbjqna',1,'160.45.170.42','0',1318868231,1318868231,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lpatkkjojdt916vqt2utv41lpe7u77ho',1,'160.45.170.42','0',1318868232,1318868232,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('at64fcbc08mbdjugmn9hp4v07cj75l0d',1,'187.15.9.148','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318868277,1318889497,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('v4qu2gbodueuovb2tb54sqmae5s8hqea',NULL,'160.45.170.42','0',1318868436,1318868436,0,''),('rngd6g7mp8caglpp81m8ji0jdlp6mji5',NULL,'160.45.170.42','0',1318868436,1318868436,0,''),('e918d2809bp9pat29s7mutpirgr5277e',1,'160.45.170.42','0',1318868438,1318868438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('fktn3vpem3ch2bspkdmotoigiodpibqi',1,'160.45.170.42','0',1318868438,1318868438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('gvgakesgbcg7sie0odggv8ocs7mi82hs',1,'160.45.170.42','0',1318868439,1318868439,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('lncqen589hd1la1kho0m75ci1c6sg3qh',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318870194,1318871786,0,''),('t5jk3g1ooae4j274un54u9198bve35va',NULL,'160.45.170.42','0',1318870196,1318870196,0,''),('qs559vrc7eq0vkja473pmmsrtg8is08i',NULL,'160.45.170.42','0',1318870197,1318870197,0,''),('qou2l102qismqgg67tgf4m6bltjilnbg',1,'160.45.170.42','0',1318870199,1318870199,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('t7844l7o4obp1e7e9uhv9o6v36u0audo',1,'160.45.170.42','0',1318870199,1318870199,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('1vpv1cltb83a8eolf9v7tlo931hqm7sr',1,'160.45.170.42','0',1318870200,1318870200,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('da0totuf61niu5c2t2srt8lurlhi9flh',NULL,'160.45.170.42','0',1318870420,1318870420,0,''),('08l8qqjpub8o5hlqdncc6i08lh8mtgqq',NULL,'160.45.170.42','0',1318870420,1318870420,0,''),('f2a17cm1fpq2e36pbl4f8vappcgom29m',1,'160.45.170.42','0',1318870421,1318870421,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('csddrd5u0ndnu0pmijjl4vrejprcs52t',1,'160.45.170.42','0',1318870422,1318870422,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('5sunigj5oths6k16pu8ppedrrgrj37bi',1,'160.45.170.42','0',1318870422,1318870422,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ifmrug581govb83gh0c0c6uprm9g4m2l',NULL,'160.45.170.42','0',1318870435,1318870435,0,''),('cnjmra65jssa19nkhb8ib84n3m3eu595',NULL,'160.45.170.42','0',1318870436,1318870436,0,''),('450k3j284bf7t7ltih259ntshagm2k8s',1,'160.45.170.42','0',1318870437,1318870437,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('k0eqkm3ts1fb2a81lfbo88cfl8qmo1ms',1,'160.45.170.42','0',1318870437,1318870438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('i0avkd8477akgjp058vn5t7ptkrqjtie',1,'160.45.170.42','0',1318870438,1318870438,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('nfcl09heaspruqhutn1jbd8b9t1c4qbg',NULL,'160.45.170.42','0',1318870794,1318870794,0,''),('9jcem20ahru46634q81njpt84iinkd8b',NULL,'160.45.170.42','0',1318870794,1318870794,0,''),('58hurqsthgt62r8l2m2rpdp2senfs7ar',1,'160.45.170.42','0',1318870796,1318870796,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jdi99f78oup3o3rt8tdtggm8v02523a5',1,'160.45.170.42','0',1318870796,1318870797,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('f7fnmikocrtqg3cqeaj6boroaf9bnccn',1,'160.45.170.42','0',1318870797,1318870797,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tvdqh7l95d7j4a4pg0thud3blhm478fh',NULL,'160.45.170.42','0',1318870886,1318870886,0,''),('u2jei9fhl1r52hjrbgmu0f5ohtgpojc2',NULL,'160.45.170.42','0',1318870886,1318870886,0,''),('rfjjcqom7s9qhvt54ncpj37jf5r0cddf',1,'160.45.170.42','0',1318870887,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('duh756sn2tnhsnippnfqitsl7dnah5e8',1,'160.45.170.42','0',1318870888,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('7964cvc5qta0i80ibtskhmfma4i7njho',1,'160.45.170.42','0',1318870888,1318870888,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('8jh2tb6f8m7fpdmqeoqggl27ef1i04um',NULL,'160.45.170.42','0',1318870946,1318870946,0,''),('5au8fdhhjlkaa6eptk7ebsbgkqp8e5h4',NULL,'160.45.170.42','0',1318870946,1318870946,0,''),('co4qh2dp8k5r0ds6ma2cdt52gib05u1l',1,'160.45.170.42','0',1318870947,1318870948,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('sraqtc4geoal7ojd268fb1jmfk2l7259',1,'160.45.170.42','0',1318870948,1318870948,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tlrb2fe7i3gtjilht05gd7467f2jupm1',1,'160.45.170.42','0',1318870948,1318870949,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('jro0v56hoecmg5a83ksv7etoqkl5egpf',NULL,'160.45.170.42','0',1318871630,1318871630,0,''),('cqeujnofst2e0sd3646lqrq11lu352sc',NULL,'160.45.170.42','0',1318871630,1318871630,0,''),('d58t1vni2e7u6vjsm7n55djaacsr6b73',1,'160.45.170.42','0',1318871631,1318871631,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('271un1s7lqa0tcqe16kkl1uo97vh3kgq',1,'160.45.170.42','0',1318871632,1318871632,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('orjvhp19nm93oa1f0kcjd72rk4d50869',1,'160.45.170.42','0',1318871632,1318871632,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('376dqkktseii96bsr96rgree6k30967g',NULL,'160.45.170.42','0',1318871682,1318871682,0,''),('vpomjo89djtvd6ra6ju5ecabhtig9ip6',NULL,'160.45.170.42','0',1318871683,1318871683,0,''),('ajnjmnpnrimkvnp73uvmg7n1q16dv9ns',1,'160.45.170.42','0',1318871684,1318871684,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('p72416kj4r0emje2q7nf6got4o43c3dc',1,'160.45.170.42','0',1318871684,1318871685,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ti7ta86sbdkhia9qhjap1gqqqgrutg95',1,'160.45.170.42','0',1318871685,1318871685,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rjfnvqutjheaqf25ns93sd35fbnebmsv',NULL,'160.45.170.42','0',1318871785,1318871785,0,''),('p4qll6tvfha3thvmbsv32u2649h5fcs1',NULL,'160.45.170.42','0',1318871786,1318871786,0,''),('b3549ve4egefv1ucl7ki9ulmj605c2if',1,'160.45.170.42','0',1318871787,1318871787,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('80dlifu2249a6u2qu7i430c73ov43c21',1,'160.45.170.42','0',1318871787,1318871788,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ava14jjh5e0i9qk29kg9i494uk975qub',1,'160.45.170.42','0',1318871788,1318871788,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('04qh0hauuoa178m8cd25vf7mq70cbqct',NULL,'160.45.170.42','0',1318890538,1318890538,0,''),('k1mvh0rk3isimcjd2736mbpgk2c6hjus',NULL,'160.45.170.42','0',1318890538,1318890538,0,''),('li37ah4bhliup8opq39q89q482g5pd82',1,'160.45.170.42','0',1318890538,1318890539,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('fhvrl8gup69qta06lhcupl9qcd9poj4h',1,'160.45.170.42','0',1318890539,1318890539,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('k2mook7q8sn8fq5nveha7n1o3bbb2h7b',1,'160.45.170.42','0',1318890539,1318890540,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('8612dogg6vqrccvflcuco3no03kjgh3h',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318890670,1318890673,0,''),('i8lrr216egpo252st2tassoehm6oge69',NULL,'160.45.170.42','0',1318890672,1318890672,0,''),('r8u52qq4ohaqvpg3007cthrjkf7gff46',NULL,'160.45.170.42','0',1318890672,1318890672,0,''),('thhi48el1qj5gngr76fda0sqe4jqk319',1,'160.45.170.42','0',1318890674,1318890674,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rb5km00us7uktmoc896qqt5o53q2qm3d',1,'160.45.170.42','0',1318890675,1318890675,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ge271ct8vsd0dil50e7bqf9jabjnk6bj',1,'160.45.170.42','0',1318890675,1318890675,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('2u4rl5eib6qkrl9cjc3h79fq1i02eopt',1,'187.15.48.79','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318938775,1318938796,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ntqpj7s38pb5k2lm538hqnvj4um71cb8',NULL,'160.45.170.42','0',1318939040,1318939040,0,''),('1eeucs1v48htiqhlucp7169ikruk7umg',NULL,'160.45.170.42','0',1318939041,1318939041,0,''),('ic2hifrn8jstdjbibetl6hmprq2daeo1',1,'160.45.170.42','0',1318939041,1318939041,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('4roa34phnh5tehubrked40ufs8holujp',1,'160.45.170.42','0',1318939042,1318939042,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ooi1ab3562j2dp6k3nbfp6or8tvdkmi0',1,'160.45.170.42','0',1318939042,1318939042,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tkrj1faq2q2pqn4dq7q3669h34i9e3pt',NULL,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318939161,1318939162,0,''),('gb7l9oqvk94gcn0oa37nj3b706fqlqm5',NULL,'160.45.170.42','0',1318939163,1318939163,0,''),('lsi65rradvls1e9ou8ka2op78c9nn4mg',NULL,'160.45.170.42','0',1318939163,1318939163,0,''),('nov2rqi7flcj9kdf5m0i24174gbk5o2g',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318939789,1318939857,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('vu7ca17d5bmu4gkq7l8h1t9jf1p6euor',NULL,'160.45.170.42','0',1318939791,1318939791,0,''),('4cr6lgmk3a8pq9geoousvftcipsa09jm',NULL,'160.45.170.42','0',1318939792,1318939792,0,''),('580r5jirib4hn9rv0hlclktgs5q2rr81',1,'160.45.170.42','0',1318939858,1318939858,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('cuerhh1s5dvu25oq7i56l5c6329a17qv',1,'160.45.170.42','0',1318939859,1318939859,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('89o84sfe37b2ijqq0ab55hrb9pgb2lj5',1,'160.45.170.42','0',1318939859,1318939859,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('q07vhhakmups9kitla455icdntmjl6dd',1,'187.15.48.79','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1318990661,1318990746,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('np949ju6okb15qc8usip4fh6t9ia3nov',1,'187.15.48.79','0',1318990666,1318990667,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('l1t805ic4mnvlhqnkdmik9jrer0ad4t2',1,'187.15.48.79','0',1318990668,1318990668,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('59rdf681j89n9f523u65f24itul7aj3v',1,'187.15.48.79','0',1318990669,1318990670,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('okfpke6kdputaoss6vromodj7sljhtgd',NULL,'187.15.48.79','0',1318990672,1318990672,0,''),('pk37i8jrtnhiiihdcsdq3j0152hav0u7',NULL,'187.15.48.79','0',1318990673,1318990673,0,''),('hg9al6q049srpt0tdie0kd73h6occ8j7',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1318998898,1318998964,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('roi533e90e646m72d21uo3sc8cla5v0u',NULL,'160.45.170.42','0',1318998900,1318998900,0,''),('uggm387un26jjs32amt7dqen6l5mafh0',NULL,'160.45.170.42','0',1318998900,1318998900,0,''),('h63shupkib8aincbh3njeadl12ornrrk',1,'160.45.170.42','0',1318998965,1318998965,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('t2vg5r2ot9ds6qkaecufofmnpgp69mqh',1,'160.45.170.42','0',1318998965,1318998965,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('rbuj1mekf843dd2mapuhnhoa73ramcs7',1,'160.45.170.42','0',1318998966,1318998966,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('o5qls4045elej8mpi86kcsvm8f8eg16f',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1319000104,1319000173,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('u6nm2tbmbmk849jbcj0taan22mmbcbg3',NULL,'160.45.170.42','0',1319000106,1319000106,0,''),('gve5231hk0lnifq0m3fkc7ipaldhe0k9',NULL,'160.45.170.42','0',1319000107,1319000107,0,''),('ck95uc5s065e7mjqv76mgov8bftc151d',1,'160.45.170.42','0',1319000174,1319000174,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('mv0hsf1c2ve96c1m3oitfmqmijbj0kah',1,'160.45.170.42','0',1319000174,1319000174,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ab4do1jiod9niqkia0k82rqtd8ttb47c',1,'160.45.170.42','0',1319000175,1319000175,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0g86vsckg85455207lalf0mevr8hbqlb',1,'187.15.48.79','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1319118332,1319118413,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ivdi8etld9tgu8u58n5oqddndr8j1eqj',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1319122134,1319122231,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('tr73cismu5g7ab911flbu2mhndi1nn83',NULL,'160.45.170.42','0',1319122136,1319122136,0,''),('3lfn89fro1raejte9ikh3nrdbgsr9ct4',NULL,'160.45.170.42','0',1319122137,1319122137,0,''),('7gcbf1ptjip1g7ite3i86cc48264jjn5',1,'160.45.170.42','0',1319122232,1319122232,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('fclfp4k52irurhq9mtcp5s1m2u31g8t1',1,'160.45.170.42','0',1319122233,1319122233,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('5uvjbld9neevhm005c32a96c7s06t3fq',1,'160.45.170.42','0',1319122233,1319122233,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('alij1p9ouitq9j9m9crla06ao6hbemru',1,'187.15.18.240','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1319812813,1319834345,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('2s1d9l7d0jvnv2mtcop13d38ge2cfc4l',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1319836387,1319836483,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('8a6s4g4586dta45p2m4qq3l42kbgmog0',NULL,'160.45.170.42','0',1319836389,1319836389,0,''),('u1s7nual1ta9prn9nrleisa1stcstrl9',NULL,'160.45.170.42','0',1319836389,1319836389,0,''),('amr80q3g310p84b4h047ke902140lp4l',1,'160.45.170.42','0',1319836484,1319836484,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('e58e2037jv9l0jr5998shvgpf02juoke',1,'160.45.170.42','0',1319836484,1319836484,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ukp3o2665cgo6cuhbem8su8pubc3enap',1,'160.45.170.42','0',1319836485,1319836485,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('oqco8kfopgpdfl4q90do2lvo54fnlql1',NULL,'160.45.170.42','0',1319867230,1319867230,0,''),('892fones3vsleo8laa6njgq22v2f1p9j',NULL,'160.45.170.42','0',1319867230,1319867230,0,''),('ohqdm6461csord3n7g7mpb0g0d6gilhs',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1319867249,1319867447,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('41lr9l88nc8rlsqn9mof4d88nqd7vg9g',1,'160.45.170.42','0',1319867449,1319867449,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('m2l1r646bndjhgvle4sdv10ofovgv2ru',1,'160.45.170.42','0',1319867449,1319867450,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('qm4mvojd0d7nlm8eqlkrk9lrcp3hlgvd',1,'160.45.170.42','0',1319867450,1319867450,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6msdh4jp15j66s6lam413dn4pm4nio8i',1,'160.45.168.185','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1320068939,1320068971,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('hcsdkcid2sdtf5ce2vvab5ker26u4qle',NULL,'160.45.170.42','0',1320095707,1320095707,0,''),('vkub1euktsg57t695tv1fv28dehncrde',NULL,'160.45.170.42','0',1320095708,1320095708,0,''),('f34tjobecuducur5567i1job53eb55b2',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1320095726,1320096453,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('2dt0nlh61vrvgmtguni4f767rv7nnk8k',1,'160.45.170.42','0',1320095937,1320095937,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('ro75gr8m3h4iqnhpagcik9a520rdn6u0',1,'160.45.170.42','0',1320095938,1320095938,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('cunecl3h82a7et4aet61sue6b5d2tl6c',1,'160.45.170.42','0',1320095939,1320095939,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('j7qg9o1pbbgh6il5imfmtrqpl27a40gm',NULL,'187.15.93.73','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1320096081,1320096081,0,''),('2iju3hp3vrjqcii75p5m1tarhuu0h8cr',NULL,'160.45.170.42','0',1320096240,1320096240,0,''),('snl1scear99m9sjie3gfo5c25lvmlqpj',NULL,'160.45.170.42','0',1320096240,1320096240,0,''),('cm0ubo2b6m0jc9370bkou06dnocg95d4',1,'160.45.170.42','0',1320096455,1320096455,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('0d57ntlev8o0sh2ebv69k72k626v1p65',1,'160.45.170.42','0',1320096456,1320096456,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('qc2tjusn39pme8jt21budf4thtd75k9m',1,'160.45.170.42','0',1320096456,1320096456,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('88beukhdpvk2rmegoei4n7bo88lu8fnh',NULL,'160.45.170.42','0',1320104938,1320104938,0,''),('np6hhl29sj89kscgq4l71q91qvgcohsv',NULL,'160.45.170.42','0',1320104938,1320104938,0,''),('gq994lc0eer0cfskact53h3tfgbml6kp',NULL,'160.45.170.42','0',1320105324,1320105324,0,''),('v93653nsdcg7dbip21r1mp81dfr74081',NULL,'160.45.170.42','0',1320105325,1320105325,0,''),('ecri6ap0i7s11qfsnq7m484mji9pnrne',1,'160.45.170.42','Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.9) Gecko/20100317 SUSE/3.5.9-0.4.1 Firefox/3.5.9',1320105344,1320105549,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('2so5fbe46bhmi4kejcv0612c51r16vsj',1,'160.45.170.42','0',1320105551,1320105551,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('hcjtoqioc0kl6g5qc2ajk5hi4jiumqie',1,'160.45.170.42','0',1320105552,1320105552,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('6ub6lqecf5sg450qq6737ap59hkr4okh',1,'160.45.170.42','0',1320105552,1320105553,0,'userId|s:1:\"1\";username|s:5:\"admin\";'),('10q5jroclthvfqplr3fabjhov1',NULL,'::1','Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',1320264538,1320264538,0,'');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2603,22 +2931,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `signoffs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `signoffs` (
-  `signoff_id` bigint(20) NOT NULL auto_increment,
+  `signoff_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(32) NOT NULL,
   `assoc_type` bigint(20) NOT NULL,
   `assoc_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) default NULL,
-  `file_revision` bigint(20) default NULL,
-  `date_notified` datetime default NULL,
-  `date_underway` datetime default NULL,
-  `date_completed` datetime default NULL,
-  `date_acknowledged` datetime default NULL,
-  `user_group_id` bigint(20) default NULL,
-  PRIMARY KEY  (`signoff_id`),
+  `file_id` bigint(20) DEFAULT NULL,
+  `file_revision` bigint(20) DEFAULT NULL,
+  `date_notified` datetime DEFAULT NULL,
+  `date_underway` datetime DEFAULT NULL,
+  `date_completed` datetime DEFAULT NULL,
+  `date_acknowledged` datetime DEFAULT NULL,
+  `user_group_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`signoff_id`),
   UNIQUE KEY `signoff_symbolic` (`assoc_type`,`assoc_id`,`symbolic`,`user_id`,`user_group_id`,`file_id`,`file_revision`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `signoffs`
@@ -2626,7 +2957,7 @@ CREATE TABLE `signoffs` (
 
 LOCK TABLES `signoffs` WRITE;
 /*!40000 ALTER TABLE `signoffs` DISABLE KEYS */;
-INSERT INTO `signoffs` VALUES (1,'SIGNOFF_COPYEDITING_INITIAL',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,'SIGNOFF_COPYEDITING_AUTHOR',257,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'SIGNOFF_COPYEDITING_FINAL',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,'SIGNOFF_LAYOUT',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,'SIGNOFF_PROOFREADING_AUTHOR',257,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'SIGNOFF_PROOFREADING_PROOFREADER',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'SIGNOFF_PROOFREADING_LAYOUT',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `signoffs` VALUES (1,'SIGNOFF_COPYEDITING_INITIAL',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,'SIGNOFF_COPYEDITING_AUTHOR',257,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'SIGNOFF_COPYEDITING_FINAL',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,'SIGNOFF_LAYOUT',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,'SIGNOFF_PROOFREADING_AUTHOR',257,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'SIGNOFF_PROOFREADING_PROOFREADER',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'SIGNOFF_PROOFREADING_LAYOUT',257,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'SIGNOFF_COPYEDITING_INITIAL',257,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(9,'SIGNOFF_COPYEDITING_AUTHOR',257,2,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(10,'SIGNOFF_COPYEDITING_FINAL',257,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(11,'SIGNOFF_LAYOUT',257,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(12,'SIGNOFF_PROOFREADING_AUTHOR',257,2,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(13,'SIGNOFF_PROOFREADING_PROOFREADER',257,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(14,'SIGNOFF_PROOFREADING_LAYOUT',257,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `signoffs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2635,14 +2966,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `site`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `site` (
   `redirect` bigint(20) NOT NULL,
   `primary_locale` varchar(5) NOT NULL,
   `min_password_length` tinyint(4) NOT NULL,
   `installed_locales` varchar(255) NOT NULL,
-  `supported_locales` varchar(255) default NULL,
-  `original_style_file_name` varchar(255) default NULL
+  `supported_locales` varchar(255) DEFAULT NULL,
+  `original_style_file_name` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `site`
@@ -2659,6 +2993,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `site_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `site_settings` (
   `setting_name` varchar(255) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2666,6 +3002,7 @@ CREATE TABLE `site_settings` (
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `site_settings_pkey` (`setting_name`,`locale`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `site_settings`
@@ -2682,6 +3019,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `static_page_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `static_page_settings` (
   `static_page_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2691,6 +3030,7 @@ CREATE TABLE `static_page_settings` (
   UNIQUE KEY `static_page_settings_pkey` (`static_page_id`,`locale`,`setting_name`),
   KEY `static_page_settings_static_page_id` (`static_page_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `static_page_settings`
@@ -2706,12 +3046,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `static_pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `static_pages` (
-  `static_page_id` bigint(20) NOT NULL auto_increment,
+  `static_page_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
   `journal_id` bigint(20) NOT NULL,
-  PRIMARY KEY  (`static_page_id`)
+  PRIMARY KEY (`static_page_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `static_pages`
@@ -2727,6 +3070,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `subscription_type_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `subscription_type_settings` (
   `type_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
@@ -2736,6 +3081,7 @@ CREATE TABLE `subscription_type_settings` (
   UNIQUE KEY `subscription_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `subscription_type_settings_type_id` (`type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `subscription_type_settings`
@@ -2751,20 +3097,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `subscription_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `subscription_types` (
-  `type_id` bigint(20) NOT NULL auto_increment,
+  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `cost` double NOT NULL,
   `currency_code_alpha` varchar(3) NOT NULL,
   `non_expiring` tinyint(4) NOT NULL,
-  `duration` smallint(6) default NULL,
+  `duration` smallint(6) DEFAULT NULL,
   `format` smallint(6) NOT NULL,
   `institutional` tinyint(4) NOT NULL,
   `membership` tinyint(4) NOT NULL,
   `disable_public_display` tinyint(4) NOT NULL,
   `seq` double NOT NULL,
-  PRIMARY KEY  (`type_id`)
+  PRIMARY KEY (`type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `subscription_types`
@@ -2780,19 +3129,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `subscriptions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `subscriptions` (
-  `subscription_id` bigint(20) NOT NULL auto_increment,
+  `subscription_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
   `type_id` bigint(20) NOT NULL,
-  `date_start` date default NULL,
-  `date_end` datetime default NULL,
+  `date_start` date DEFAULT NULL,
+  `date_end` datetime DEFAULT NULL,
   `status` tinyint(4) NOT NULL,
-  `membership` varchar(40) default NULL,
-  `reference_number` varchar(40) default NULL,
+  `membership` varchar(40) DEFAULT NULL,
+  `reference_number` varchar(40) DEFAULT NULL,
   `notes` text,
-  PRIMARY KEY  (`subscription_id`)
+  PRIMARY KEY (`subscription_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `subscriptions`
@@ -2808,17 +3160,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `temporary_files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `temporary_files` (
-  `file_id` bigint(20) NOT NULL auto_increment,
+  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
   `file_name` varchar(90) NOT NULL,
-  `file_type` varchar(255) default NULL,
+  `file_type` varchar(255) DEFAULT NULL,
   `file_size` bigint(20) NOT NULL,
-  `original_file_name` varchar(127) default NULL,
+  `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
-  PRIMARY KEY  (`file_id`),
+  PRIMARY KEY (`file_id`),
   KEY `temporary_files_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `temporary_files`
@@ -2834,12 +3189,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `theses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `theses` (
-  `thesis_id` bigint(20) NOT NULL auto_increment,
+  `thesis_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `journal_id` bigint(20) NOT NULL,
   `status` smallint(6) NOT NULL,
   `degree` smallint(6) NOT NULL,
-  `degree_name` varchar(255) default NULL,
+  `degree_name` varchar(255) DEFAULT NULL,
   `department` varchar(255) NOT NULL,
   `university` varchar(255) NOT NULL,
   `date_approved` datetime NOT NULL,
@@ -2848,27 +3205,28 @@ CREATE TABLE `theses` (
   `abstract` text,
   `comment` text,
   `student_first_name` varchar(40) NOT NULL,
-  `student_middle_name` varchar(40) default NULL,
+  `student_middle_name` varchar(40) DEFAULT NULL,
   `student_last_name` varchar(90) NOT NULL,
   `student_email` varchar(90) NOT NULL,
-  `student_email_publish` tinyint(4) default NULL,
+  `student_email_publish` tinyint(4) DEFAULT NULL,
   `student_bio` text,
   `supervisor_first_name` varchar(40) NOT NULL,
-  `supervisor_middle_name` varchar(40) default NULL,
+  `supervisor_middle_name` varchar(40) DEFAULT NULL,
   `supervisor_last_name` varchar(90) NOT NULL,
   `supervisor_email` varchar(90) NOT NULL,
-  `discipline` varchar(255) default NULL,
-  `subject_class` varchar(255) default NULL,
-  `subject` varchar(255) default NULL,
-  `coverage_geo` varchar(255) default NULL,
-  `coverage_chron` varchar(255) default NULL,
-  `coverage_sample` varchar(255) default NULL,
-  `method` varchar(255) default NULL,
-  `language` varchar(10) default NULL,
+  `discipline` varchar(255) DEFAULT NULL,
+  `subject_class` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `coverage_geo` varchar(255) DEFAULT NULL,
+  `coverage_chron` varchar(255) DEFAULT NULL,
+  `coverage_sample` varchar(255) DEFAULT NULL,
+  `method` varchar(255) DEFAULT NULL,
+  `language` varchar(10) DEFAULT NULL,
   `date_submitted` datetime NOT NULL,
-  PRIMARY KEY  (`thesis_id`),
+  PRIMARY KEY (`thesis_id`),
   KEY `theses_journal_id` (`journal_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `theses`
@@ -2884,11 +3242,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `user_interests`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_interests` (
   `user_id` bigint(20) NOT NULL,
   `controlled_vocab_entry_id` bigint(20) NOT NULL,
   UNIQUE KEY `u_e_pkey` (`user_id`,`controlled_vocab_entry_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user_interests`
@@ -2904,17 +3265,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `user_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_settings` (
   `user_id` bigint(20) NOT NULL,
   `locale` varchar(5) NOT NULL,
   `setting_name` varchar(255) NOT NULL,
-  `assoc_type` bigint(20) default NULL,
-  `assoc_id` bigint(20) default NULL,
+  `assoc_type` bigint(20) DEFAULT NULL,
+  `assoc_id` bigint(20) DEFAULT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `user_settings_pkey` (`user_id`,`locale`,`setting_name`,`assoc_type`,`assoc_id`),
   KEY `user_settings_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user_settings`
@@ -2931,37 +3295,40 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `user_id` bigint(20) NOT NULL auto_increment,
+  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `salutation` varchar(40) default NULL,
+  `salutation` varchar(40) DEFAULT NULL,
   `first_name` varchar(40) NOT NULL,
-  `middle_name` varchar(40) default NULL,
+  `middle_name` varchar(40) DEFAULT NULL,
   `last_name` varchar(90) NOT NULL,
-  `gender` varchar(1) default NULL,
-  `initials` varchar(5) default NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `initials` varchar(5) DEFAULT NULL,
   `email` varchar(90) NOT NULL,
-  `url` varchar(255) default NULL,
-  `phone` varchar(24) default NULL,
-  `fax` varchar(24) default NULL,
-  `mailing_address` varchar(255) default NULL,
-  `billing_address` varchar(255) default NULL,
-  `country` varchar(90) default NULL,
-  `locales` varchar(255) default NULL,
-  `date_last_email` datetime default NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `phone` varchar(24) DEFAULT NULL,
+  `fax` varchar(24) DEFAULT NULL,
+  `mailing_address` varchar(255) DEFAULT NULL,
+  `billing_address` varchar(255) DEFAULT NULL,
+  `country` varchar(90) DEFAULT NULL,
+  `locales` varchar(255) DEFAULT NULL,
+  `date_last_email` datetime DEFAULT NULL,
   `date_registered` datetime NOT NULL,
-  `date_validated` datetime default NULL,
+  `date_validated` datetime DEFAULT NULL,
   `date_last_login` datetime NOT NULL,
-  `must_change_password` tinyint(4) default NULL,
-  `auth_id` bigint(20) default NULL,
-  `auth_str` varchar(255) default NULL,
+  `must_change_password` tinyint(4) DEFAULT NULL,
+  `auth_id` bigint(20) DEFAULT NULL,
+  `auth_str` varchar(255) DEFAULT NULL,
   `disabled` tinyint(4) NOT NULL,
   `disabled_reason` text,
-  PRIMARY KEY  (`user_id`),
+  PRIMARY KEY (`user_id`),
   UNIQUE KEY `users_username` (`username`),
   UNIQUE KEY `users_email` (`email`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
@@ -2969,7 +3336,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','c03e0b9aa2b64ee96247ef38d5f42e860dbbebb8',NULL,'admin',NULL,'',NULL,NULL,'jerico.dev@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'2011-10-06 08:45:41',NULL,'2011-10-19 06:36:06',0,NULL,NULL,0,NULL);
+INSERT INTO `users` VALUES (1,'admin','c03e0b9aa2b64ee96247ef38d5f42e860dbbebb8',NULL,'admin',NULL,'',NULL,NULL,'jerico.dev@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'2011-10-06 08:45:41',NULL,'2011-11-01 00:59:13',0,NULL,NULL,0,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2978,6 +3345,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `versions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `versions` (
   `major` int(11) NOT NULL,
   `minor` int(11) NOT NULL,
@@ -2985,13 +3354,14 @@ CREATE TABLE `versions` (
   `build` int(11) NOT NULL,
   `date_installed` datetime NOT NULL,
   `current` tinyint(4) NOT NULL,
-  `product_type` varchar(30) default NULL,
-  `product` varchar(30) default NULL,
-  `product_class_name` varchar(80) default NULL,
+  `product_type` varchar(30) DEFAULT NULL,
+  `product` varchar(30) DEFAULT NULL,
+  `product_class_name` varchar(80) DEFAULT NULL,
   `lazy_load` tinyint(4) NOT NULL,
   `sitewide` tinyint(4) NOT NULL,
   UNIQUE KEY `versions_pkey` (`product_type`,`product`,`major`,`minor`,`revision`,`build`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `versions`
@@ -3012,4 +3382,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-10-19  4:51:22
+-- Dump completed on 2011-11-02 18:09:23

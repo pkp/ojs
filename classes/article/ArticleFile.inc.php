@@ -78,28 +78,49 @@ class ArticleFile extends SubmissionFile {
 	}
 
 	/**
-	 * Get or generate DOI.
+	 * Get a public ID for this galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
-	function getDOI($preview = false) {
-		$doiHelper = new DoiHelper();
-		return $doiHelper->getDOI($this, $preview);
+	function getPubId($pubIdType, $preview = false) {
+		// If we already have an assigned ID, use it.
+		$storedId = $this->getStoredPubId($pubIdType);
+		if (!empty($storedId)) return $storedId;
+
+		switch($pubIdType) {
+			case 'doi':
+				import('classes.article.DoiHelper');
+				$doiHelper = new DoiHelper();
+				return $doiHelper->getDOI($this, $preview);
+
+			default:
+				// Unknown pub-id-type or pub-id not (yet) set.
+				return null;
+		}
 	}
 
 	/**
-	 * Get stored DOI.
-	 * @return int
+	 * Get stored public ID of the galley.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @return string
 	 */
-	function getStoredDOI() {
-		return $this->getData('doi');
+	function getStoredPubId($pubIdType) {
+		return $this->getData('pub-id::'.$pubIdType);
 	}
 
 	/**
-	 * Set the stored DOI.
-	 * @param $doi string
+	 * Set stored public galley id.
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function setStoredDOI($doi) {
-		return $this->setData('doi', $doi);
+	function setStoredPubId($pubIdType, $pubId) {
+		return $this->setData('pub-id::'.$pubIdType, $pubId);
 	}
 }
 

@@ -93,7 +93,7 @@ class ArticleGalleyForm extends Form {
 		if (!empty($doiSuffix)) {
 			import('classes.article.DoiHelper');
 			$doiHelper = new DoiHelper();
-			if($doiHelper->doiSuffixExists($doiSuffix, $this->galley, $journal->getId())) {
+			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->galley, $journal->getId())) {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
@@ -112,7 +112,7 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId' => $galley->getPubId('publisher-id'),
 				'galleyLocale' => $galley->getLocale(),
 				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $galley->getStoredDoi(),
+				'storedDoi' => $galley->getStoredPubId('doi'),
 				'doiSuffix' => $galley->getData('doiSuffix')
 			);
 

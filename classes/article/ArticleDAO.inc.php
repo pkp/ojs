@@ -60,11 +60,11 @@ class ArticleDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
-		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
-		$additionalFields[] = 'doiSuffix';
-		$additionalFields[] = 'pub-id::doi';
+		$additionalFields = parent::getAdditionalFieldNames();
 		$additionalFields[] = 'pub-id::publisher-id';
+		$additionalFields[] = 'pub-id::doi';
+		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
 
@@ -529,30 +529,6 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Checks if the given DOI suffix exists.
-	 * @param $doiSuffix string
-	 * @param $articleId int
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function doiSuffixExists($doiSuffix, $articleId, $journalId) {
-		if (is_null($articleId)) $articleId = 0;
-		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM articles a
-			INNER JOIN article_settings ast ON a.article_id = ast.article_id
-			WHERE ast.setting_name = ? AND ast.setting_value = ? AND a.article_id <> ? AND a.journal_id = ?',
-			array('doiSuffix', $doiSuffix, (int) $articleId, (int) $journalId)
-		);
-		$returner = $result->fields[0] ? true : false;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-
-	/**
 	 * Change the status of the article
 	 * @param $articleId int
 	 * @param $status int
@@ -626,6 +602,31 @@ class ArticleDAO extends DAO {
 			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
 		);
 
+		$this->flushCache();
+	}
+
+	/**
+	 * Delete the public IDs of all articles in a journal.
+	 * @param $journalId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deleteAllPubIds($journalId, $pubIdType) {
+		$journalId = (int) $journalId;
+		$settingName = 'pub-id::'.$pubIdType;
+
+		$articles =& $this->getArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			$this->update(
+				'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
+				array(
+					$settingName,
+					(int)$article->getId()
+				)
+			);
+			unset($article);
+		}
 		$this->flushCache();
 	}
 

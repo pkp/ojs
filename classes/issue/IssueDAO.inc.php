@@ -226,40 +226,26 @@ class IssueDAO extends DAO {
 
 
 	/**
-	 * Change the DOI.
+	 * Change the public ID of an issue.
 	 * @param $issueId int
-	 * @param $doi string
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function changeDOI($issueId, $doi) {
-		$this->update(
-			'UPDATE issues SET doi = ? WHERE issue_id = ?', array($doi, (int) $issueId)
+	function changePubId($issueId, $pubIdType, $pubId) {
+		$idFields = array(
+			'issue_id', 'locale', 'setting_name'
 		);
-
+		$updateArray = array(
+			'issue_id' => $issueId,
+			'locale' => '',
+			'setting_name' => 'pub-id::'.$pubIdType,
+			'setting_type' => 'string',
+			'setting_value' => (string)$pubId
+		);
+		$this->replace('issue_settings', $updateArray, $idFields);
 		$this->flushCache();
-	}
-
-	/**
-	 * Checks if the given DOI suffix exists.
-	 * @param $doiSuffix string
-	 * @param $issueId int
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function doiSuffixExists($doiSuffix, $issueId, $journalId) {
-		if (is_null($issueId)) $issueId = 0;
-		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM issues i
-			INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
-			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
-			array('doiSuffix', $doiSuffix, (int) $issueId, (int) $journalId)
-		);
-		$returner = $result->fields[0] ? true : false;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
 	}
 
 	/**
@@ -286,7 +272,6 @@ class IssueDAO extends DAO {
 		$issue->setShowTitle($row['show_title']);
 		$issue->setStyleFileName($row['style_file_name']);
 		$issue->setOriginalStyleFileName($row['original_style_file_name']);
-		$issue->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
@@ -312,6 +297,7 @@ class IssueDAO extends DAO {
 		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
 		$additionalFields[] = 'pub-id::publisher-id';
+		$additionalFields[] = 'pub-id::doi';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -418,8 +404,7 @@ class IssueDAO extends DAO {
 					show_year = ?,
 					show_title = ?,
 					style_file_name = ?,
-					original_style_file_name = ?,
-					doi = ?
+					original_style_file_name = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
@@ -436,7 +421,6 @@ class IssueDAO extends DAO {
 				(int) $issue->getShowTitle(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName(),
-				$issue->getStoredDOI(),
 				(int) $issue->getId()
 			)
 		);
@@ -781,6 +765,32 @@ class IssueDAO extends DAO {
 		$result->Close();
 		unset($result);
 		$this->resequenceCustomIssueOrders($journalId);
+	}
+
+	/**
+	 * Delete the public IDs of all issues of a journal.
+	 * @param $journalId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deleteAllPubIds($journalId, $pubIdType) {
+		$journalId = (int) $journalId;
+		$settingName = 'pub-id::'.$pubIdType;
+
+		// issues
+		$issues =& $this->getIssues($journalId);
+		while ($issue =& $issues->next()) {
+			$this->update(
+				'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
+				array(
+					$settingName,
+					(int)$issue->getId()
+				)
+			);
+			unset($issue);
+		}
+		$this->flushCache();
 	}
 
 	/**

@@ -155,6 +155,27 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all galleys of a journal.
+	 * @param $journalId int
+	 * @return DAOResultFactory
+	 */
+	function &getGalleysByJournalId($journalId) {
+		$result =& $this->retrieve(
+			'SELECT
+				g.*,
+				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+			FROM article_galleys g
+			LEFT JOIN article_files af ON (g.file_id = af.file_id)
+			INNER JOIN articles a ON (g.article_id = a.article_id)
+			WHERE a.journal_id = ?',
+			(int) $journalId
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Retrieve article galley by public galley id or, failing that,
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
@@ -184,6 +205,7 @@ class ArticleGalleyDAO extends DAO {
 		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
 		$additionalFields[] = 'pub-id::publisher-id';
+		$additionalFields[] = 'pub-id::doi';
 		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
@@ -229,7 +251,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setSequence($row['seq']);
 		$galley->setViews($row['views']);
 		$galley->setRemoteURL($row['remote_url']);
-		
+
 		// ArticleFile set methods
 		$galley->setFileName($row['file_name']);
 		$galley->setOriginalFileName($row['original_file_name']);
@@ -237,7 +259,6 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setFileSize($row['file_size']);
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
-		$galley->setStoredDOI($row['doi']);
 
 		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
@@ -289,8 +310,7 @@ class ArticleGalleyDAO extends DAO {
 					html_galley = ?,
 					style_file_id = ?,
 					seq = ?,
-					remote_url = ?,
-					doi = ?
+					remote_url = ?
 				WHERE galley_id = ?',
 			array(
 				(int) $galley->getFileId(),
@@ -300,7 +320,6 @@ class ArticleGalleyDAO extends DAO {
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
 				$galley->getRemoteURL(),
-				$galley->getStoredDOI(),
 				(int) $galley->getId()
 			)
 		);
@@ -505,39 +524,50 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
-	 * Change the DOI.
+	 * Change the public ID of a galley.
 	 * @param $galleyId int
-	 * @param $doi string
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
 	 */
-	function changeDOI($galleyId, $doi) {
-		$this->update(
-			'UPDATE article_galleys SET doi = ? WHERE galley_id = ?', array($doi, (int) $galleyId)
+	function changePubId($galleyId, $pubIdType, $pubId) {
+		$idFields = array(
+			'galley_id', 'locale', 'setting_name'
 		);
+		$updateArray = array(
+			'galley_id' => $galleyId,
+			'locale' => '',
+			'setting_name' => 'pub-id::'.$pubIdType,
+			'setting_type' => 'string',
+			'setting_value' => (string)$pubId
+		);
+		$this->replace('article_galley_settings', $updateArray, $idFields);
 	}
 
 	/**
-	 * Checks if the given DOI suffix exists.
-	 * @param $doiSuffix string
-	 * @param $galleyId int
+	 * Delete the public IDs of all galleys in a journal.
 	 * @param $journalId int
-	 * @return boolean
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 */
-	function doiSuffixExists($doiSuffix, $galleyId, $journalId) {
-		if (is_null($galleyId)) $galleyId = 0;
-		$result =& $this->retrieve(
-			'SELECT COUNT(*)
-			FROM article_galleys g
-			INNER JOIN article_galley_settings gst ON g.galley_id = gst.galley_id
-			INNER JOIN articles a ON g.article_id = a.article_id
-			WHERE gst.setting_name = ? AND gst.setting_value = ? AND g.galley_id <> ? AND a.journal_id = ?',
-			array('doiSuffix', $doiSuffix, (int) $galleyId, (int) $journalId)
-		);
-		$returner = $result->fields[0] ? true : false;
+	function deleteAllPubIds($journalId, $pubIdType) {
+		$journalId = (int) $journalId;
+		$settingName = 'pub-id::'.$pubIdType;
 
-		$result->Close();
-		unset($result);
-
-		return $returner;
+		$galleys =& $this->getGalleysByJournalId($journalId);
+		while ($galley =& $galleys->next()) {
+			$this->update(
+				'DELETE FROM article_galley_settings WHERE setting_name = ? AND galley_id = ?',
+				array(
+					$settingName,
+					(int)$galley->getId()
+				)
+			);
+			unset($galley);
+		}
+		$this->flushCache();
 	}
 }
 

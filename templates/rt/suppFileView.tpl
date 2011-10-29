@@ -63,9 +63,9 @@
 		<td class="value">{$suppFile->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 	{if $issue && $issue->getPublished()}
-		{assign var=doi value=$suppFile->getDOI()}
+		{assign var=doi value=$suppFile->getPubId('doi')}
 	{else}
-		{assign var=doi value=$suppFile->getDOI(true)}{* Don't affix DOI *}
+		{assign var=doi value=$suppFile->getPubId('doi', true)}{* Don't affix DOI *}
 	{/if}
 	{if $doi}
 		<tr valign="top">

@@ -287,7 +287,7 @@ class MetadataForm extends Form {
 			$journal = Request::getJournal();
 			import('classes.article.DoiHelper');
 			$doiHelper = new DoiHelper();
-			if($doiHelper->doiSuffixExists($doiSuffix, $this->article, $journal->getId())) {
+			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->article, $journal->getId())) {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}

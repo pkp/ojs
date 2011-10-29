@@ -17,8 +17,6 @@
  * @brief Class for Issue.
  */
 
-import('classes.article.DoiHelper');
-
 define('ISSUE_ACCESS_OPEN', 1);
 define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
@@ -273,13 +271,18 @@ class Issue extends DataObject {
 	function getPubId($pubIdType, $preview = false) {
 		// If we already have an assigned ID, use it.
 		$storedId = $this->getStoredPubId($pubIdType);
+		if (!empty($storedId)) return $storedId;
 
-		// Ensure that blanks are treated as nulls.
-		if ($storedId === '') {
-			$storedId = null;
+		switch($pubIdType) {
+			case 'doi':
+				import('classes.article.DoiHelper');
+				$doiHelper = new DoiHelper();
+				return $doiHelper->getDOI($this, $preview);
+
+			default:
+				// Unknown pub-id-type or pub-id not (yet) set.
+				return null;
 		}
-
-		return $storedId;
 	}
 
 	/**
@@ -302,31 +305,6 @@ class Issue extends DataObject {
 	 */
 	function setStoredPubId($pubIdType, $pubId) {
 		return $this->setData('pub-id::'.$pubIdType, $pubId);
-	}
-
-	/**
-	 * Get or generate DOI.
-	 * @var $preview boolean If true, generate a non-persisted preview only.
-	 */
-	function getDOI($preview = false) {
-		$doiHelper = new DoiHelper();
-		return $doiHelper->getDOI($this, $preview);
-	}
-
-	/**
-	 * Get stored DOI.
-	 * @return int
-	 */
-	function getStoredDOI() {
-		return $this->getData('doi');
-	}
-
-	/**
-	 * Set the stored DOI.
-	 * @param $doi string
-	 */
-	function setStoredDOI($doi) {
-		return $this->setData('doi', $doi);
 	}
 
 	/**
