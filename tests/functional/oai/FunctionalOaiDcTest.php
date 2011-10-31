@@ -18,7 +18,7 @@ import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
 class FunctionalOaiDcTest extends OaiWebServiceTestCase {
 
 	/**
-	 * SCENARIO: Export article in DC format over OAI
+	 * SCENARIO OUTLINE: Export article in DC format over OAI
 	 *   GIVEN a DOI has been assigned for a given {publishing object}
 	 *    WHEN I export the corresponding article in DC format over OAI
 	 *    THEN DOI-specific {DC fields} will be present in the OAI-message.
@@ -44,10 +44,33 @@ class FunctionalOaiDcTest extends OaiWebServiceTestCase {
 			'oai_dc' => 'http://www.openarchives.org/OAI/2.0/oai_dc/',
 			'dc' => 'http://purl.org/dc/elements/1.1/'
 		);
-		$xPath = $this->getXPath($namespaces);
-		self::assertEquals('10.1234/t.v1i1.1', $xPath->evaluate('string(/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier[2])'));
-
-		$this->markTestIncomplete('Export article in DC format over OAI');
+		$domXPath = $this->getXPath($namespaces);
+		$testCases = array(
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:source' => array('10.1234/t.v1i1'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier' => array('10.1234/t.v1i1.1'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:relation' => array(
+				'10.1234/t.v1i1.1.g1', '10.1234/t.v1i1.1.s1'
+			)
+		);
+		foreach($testCases as $xPath => $expectedDoiList) {
+			$nodeList = $domXPath->query($xPath);
+			self::assertGreaterThan(1, $nodeList->length, "Error while checking $xPath: No nodes found.");
+			foreach($expectedDoiList as $expectedDoi) {
+				for ($index = 1; $index <= $nodeList->length; $index++) {
+					$node = $nodeList->item($index-1);
+					// self::assertType() has been removed from PHPUnit 3.6
+					// but self::assertInstanceOf() is not present in PHPUnit 3.4
+					// which is our current test server version.
+					// FIXME: change this to assertInstanceOf() after upgrading the
+					// test server.
+					self::assertTrue(is_a($node, 'DOMNode'));
+					if ($node->textContent == $expectedDoi) break;
+				}
+				if ($index > $nodeList->length) {
+					self::fail("Error while checking $xPath: Node with $expectedDoi not found.");
+				}
+			}
+		}
 	}
 }
 ?>

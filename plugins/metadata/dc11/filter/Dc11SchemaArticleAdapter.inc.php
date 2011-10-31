@@ -150,11 +150,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 			$dc11Description->addStatement('dc:identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId())));
 		}
 
-		// Identifier: DOI
-		if($doi = $article->getPubId('doi')) {
-			$dc11Description->addStatement('dc:identifier', $doi);
-		}
-
 		// Source (journal title, issue id and pages)
 		$sources = $journal->getTitle(null);
 		$pages = $article->getPages();
@@ -168,36 +163,43 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
 
-		// Language
-		 if (is_a($article, 'PublishedArticle')) {
+		// Get galleys and supp files.
+		$galleys = array();
+		$suppFiles = array();
+		if (is_a($article, 'PublishedArticle')) {
 			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
-			$locales = array();
+			$suppFiles =& $article->getSuppFiles();
+		}
+
+		// Language
+		$locales = array();
+		if (is_a($article, 'PublishedArticle')) {
 			foreach ($galleys as $galley) {
 				$galleyLocale = $galley->getLocale();
-				if(!in_array($galleyLocale, $locales)) {
+				if(!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {
 					$locales[] = $galleyLocale;
 					$dc11Description->addStatement('dc:language', AppLocale::getIso3FromLocale($galleyLocale));
 				}
 			}
-		} 
-		
+		}
+		$articleLanguage = $article->getLanguage();
+		if (empty($locales) && !empty($articleLanguage)) {
+			$dc11Description->addStatement('dc:language', strip_tags($articleLanguage));
+		}
+
 		// Relation
-		if (is_a($article, 'PublishedArticle')) {
-			// full texts URLs
-			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
-			foreach ($galleys as $galley) {
-				$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
-				$dc11Description->addStatement('dc:relation', $relation);
-				unset($relation);
-			}
-			// supp files URLs			
-			foreach ($article->getSuppFiles() as $suppFile) {
-				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
-				$dc11Description->addStatement('dc:relation', $relation);
-				unset($relation);
-			}
+		// full texts URLs
+		foreach ($galleys as $galley) {
+			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
+			$dc11Description->addStatement('dc:relation', $relation);
+			unset($relation);
+		}
+		// supp files URLs
+		foreach ($suppFiles as $suppFile) {
+			$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
+			$dc11Description->addStatement('dc:relation', $relation);
+			unset($relation);
 		}
 
 		// Coverage
@@ -209,6 +211,27 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Rights
 		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
+
+		// FIXME: This will be moved to the DOI PID plug-in in.
+		// Identifier: DOI
+		if ($issueDoi = $issue->getPubId('doi')) {
+			$dc11Description->addStatement('dc:source', $issueDoi);
+		}
+		if ($articleDoi = $article->getPubId('doi')) {
+			$dc11Description->addStatement('dc:identifier', $articleDoi);
+		}
+		foreach ($galleys as $galley) {
+			$galleyDoi = $galley->getPubId('doi');
+			if ($galleyDoi) {
+				$dc11Description->addStatement('dc:relation', $galleyDoi);
+			}
+		}
+		foreach ($suppFiles as $suppFile) {
+			$suppFileDoi = $suppFile->getPubId('doi');
+			if ($suppFileDoi) {
+				$dc11Description->addStatement('dc:relation', $suppFileDoi);
+			}
+		}
 
 		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array(&$this, $article, $journal, $issue, &$dc11Description));
 
