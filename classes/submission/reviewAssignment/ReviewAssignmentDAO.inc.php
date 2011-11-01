@@ -265,6 +265,13 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		HookRegistry::call('ReviewAssignmentDAO::_fromRow', array(&$reviewAssignment, &$row));
 		return $reviewAssignment;
 	}
+
+	/**
+	* @see PKPReviewAssignmentDAO::getReviewRoundJoin()
+	*/
+	function getReviewRoundJoin() {
+		return 'r.submission_id = r2.submission_id AND r.round = r2.round';
+	}
 }
 
 ?>
