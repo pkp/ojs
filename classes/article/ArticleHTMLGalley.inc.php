@@ -76,7 +76,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		}
 
 		// Perform replacement for ojs://... URLs
-		$contents = String::regexp_replace_callback(
+		$contents = preg_replace_callback(
 			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
 			array(&$this, '_handleOjsUrl'),
 			$contents
