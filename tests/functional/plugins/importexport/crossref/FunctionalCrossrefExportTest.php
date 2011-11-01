@@ -18,7 +18,7 @@ import('lib.pkp.tests.functional.plugins.importexport.FunctionalImportExportBase
 class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 
 	/**
-	 * SCENARIO: Export article into CrossRef deposit format XML files
+	 * SCENARIO OUTLINE: Export article into CrossRef deposit format XML files
 	 *   GIVEN a DOI has been assigned for a given {publishing object}
 	 *    WHEN I export the corresponding article in CrossRef deposit format
 	 *    THEN the object's DOI data (ID and URL) will be accessible in the
@@ -35,9 +35,26 @@ class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	public function testDoi() {
 		$export = $this->getXpathOnExport('CrossRefExportPlugin/exportArticle/1');
-		self::assertEquals('10.1234/t.v1i1.1', $export->evaluate('string(/cr:doi_batch/cr:body/cr:journal/cr:journal_article/cr:doi_data/cr:doi)'));
+		$export->registerNamespace('cr', 'http://www.crossref.org/schema/4.3.0');
 
-		$this->markTestIncomplete('Export article into CrossRef deposit format XML files');
+		$basePath = '/cr:doi_batch/cr:body/cr:journal';
+		$baseUrl = Config::getVar('debug', 'webtest_base_url');
+		$testCases = array(
+			'cr:journal_issue/cr:doi_data/cr:doi' => '10.1234/t.v1i1',
+			'cr:journal_issue/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/issue/view/1',
+			'cr:journal_article/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1',
+			'cr:journal_article/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/article/view/1',
+			'cr:journal_article/cr:component_list/cr:component/cr:titles/cr:title' => 'Test Supp File',
+			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1.s1',
+			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/article/downloadSuppFile/1/1'
+		);
+		foreach($testCases as $xPath => $expectedDoi) {
+			self::assertEquals(
+				$expectedDoi,
+				$export->evaluate("string($basePath/$xPath)"),
+				"Error while evaluating $xPath:"
+			);
+		}
 	}
 }
 ?>
