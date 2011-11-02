@@ -964,6 +964,8 @@ We hope that you enjoy your gift!
 
 A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
 
+Submission URL: {$submissionUrl}
+
 {$editorialContactSignature}</body>
         <description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
     </email_text>

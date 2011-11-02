@@ -116,6 +116,7 @@ class AuthorAction extends Action {
 			import('classes.mail.ArticleMailTemplate');
 			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY');			
 			if ($email->isEnabled()) {
+				$isEditor = false;
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getId());
 				$assignedEditors = $email->ccAssignedEditors($authorSubmission->getId());
 				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
@@ -123,13 +124,17 @@ class AuthorAction extends Action {
 					$editorName = $journal->getSetting('contactName');
 				} else {
 					$editor = array_shift($assignedSectionEditors);
-					if (!$editor) $editor = array_shift($assignedEditors);
+					if (!$editor) {
+						$editor = array_shift($assignedEditors);
+						$isEditor = true;
+					}
 					$editorName = $editor->getEditorFullName();
 				}
 				$paramArray = array(
 					'editorialContactName' => $editorName,
 					'articleTitle' => $authorSubmission->getLocalizedTitle(),
 					'authorName' => $user->getFullName(),
+					'submissionUrl' => $request->url(null, $isEditor?'editor':'sectionEditor', 'submissionReview', $authorSubmission->getId()),
 					'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle()
 				);
 				$email->assignParams($paramArray);
