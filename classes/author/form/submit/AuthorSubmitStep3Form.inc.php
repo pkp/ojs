@@ -210,6 +210,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
 
+				HookRegistry::call('Author::Form::Submit::AuthorSubmitStep3Form::Execute', array(&$author, &$authors[$i]));
+				
 				if ($isExistingAuthor) {
 					$authorDao->updateAuthor($author);
 				} else {

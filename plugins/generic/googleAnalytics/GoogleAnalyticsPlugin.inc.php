@@ -37,8 +37,8 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 			HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'metadataInitData'));
 
 			// Hook for execute in two forms
-			HookRegistry::register('authorsubmitstep3form::execute', array($this, 'metadataExecute'));
-			HookRegistry::register('metadataform::execute', array($this, 'metadataExecute'));
+			HookRegistry::register('Author::Form::Submit::AuthorSubmitStep3Form::Execute', array($this, 'metadataExecute'));
+			HookRegistry::register('Submission::Form::MetadataForm::Execute', array($this, 'metadataExecute'));
 
 			// Add element for AuthorDAO for storage
 			HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
@@ -146,15 +146,9 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	}
 
 	function metadataExecute($hookName, $params) {
-		$form =& $params[0];
-		$article =& $form->article;
-		$formAuthors = $form->getData('authors');
-		$articleAuthors =& $article->getAuthors();
-
-		for ($i=0; $i<count($articleAuthors); $i++) {
-			$articleAuthors[$i]->setData('gs', $formAuthors[$i]['gs']);
-		}
-
+		$author =& $params[0];
+		$formAuthor =& $params[1];
+		$author->setData('gs', $formAuthor['gs']);				
 		return false;
 	}
 

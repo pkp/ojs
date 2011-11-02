@@ -391,6 +391,8 @@ class MetadataForm extends Form {
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
 
+				HookRegistry::call('Submission::Form::MetadataForm::Execute', array(&$author, &$authors[$i]));
+				
 				if ($isExistingAuthor) {
 					$authorDao->updateAuthor($author);
 				} else {
