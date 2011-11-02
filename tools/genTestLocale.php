@@ -21,7 +21,7 @@ define('DEFAULT_IN_LOCALE', 'en_US');
 define('DEFAULT_OUT_LOCALE', 'te_ST');
 define('DEFAULT_OUT_LOCALE_NAME', "Test Lo\xc3\xa7ale");
 
-import('classes.i18n.Locale');
+import('classes.i18n.AppLocale');
 
 class genTestLocale extends CommandLineTool {
 
