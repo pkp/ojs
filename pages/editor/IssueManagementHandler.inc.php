@@ -896,13 +896,13 @@ class IssueManagementHandler extends EditorHandler {
 		foreach ($notificationUsers as $userRole) {
 			$notificationManager->createNotification(
 				$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-				$article->getJournalId()
+				$journalId
 			);
 		}
 		$notificationManager->sendToMailingList($request,
 			$notificationManager->createNotification(
 				$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-				$article->getJournalId()
+				$journalId
 			)
 		);
 
