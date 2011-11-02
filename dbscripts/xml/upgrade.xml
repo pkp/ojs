@@ -283,6 +283,7 @@
 		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US" />
 		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
 		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
+		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US" />
 		<!-- Mutex help table. -->
 		<data file="lib/pkp/xml/mutexData.xml" />
 		<data file="dbscripts/xml/upgrade/2.4.0_update.xml" />

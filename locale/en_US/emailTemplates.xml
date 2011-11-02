@@ -958,4 +958,13 @@ We hope that you enjoy your gift!
 </body>
 		<description>This email notifies a gift recipient of their login details.</description>
 	</email_text>
+<email_text key="REVISED_VERSION_NOTIFY">
+        <subject>Revised Version Uploaded</subject>
+        <body>{$editorialContactName}:
+
+A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
+
+{$editorialContactSignature}</body>
+        <description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+    </email_text>
 </email_texts>

@@ -111,8 +111,31 @@ class AuthorAction extends Action {
 
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
-			// Add log entry
 			$user =& $request->getUser();
+			$journal =& $request->getJournal();
+			import('classes.mail.ArticleMailTemplate');
+			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY');			
+			if ($email->isEnabled()) {
+				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getId());
+				$assignedEditors = $email->ccAssignedEditors($authorSubmission->getId());
+				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
+					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+					$editorName = $journal->getSetting('contactName');
+				} else {
+					$editor = array_shift($assignedSectionEditors);
+					if (!$editor) $editor = array_shift($assignedEditors);
+					$editorName = $editor->getEditorFullName();
+				}
+				$paramArray = array(
+					'editorialContactName' => $editorName,
+					'articleTitle' => $authorSubmission->getLocalizedTitle(),
+					'authorName' => $user->getFullName(),
+					'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle()
+				);
+				$email->assignParams($paramArray);
+				$email->send($request);
+			}
+			// Add log entry
 			import('classes.article.log.ArticleLog');
 			ArticleLog::logEvent($request, $authorSubmission, ARTICLE_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId));
 		}
