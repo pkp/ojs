@@ -16,7 +16,7 @@
  * @brief OJS-specific AddThis end-user interface.
  */
 
-import('classes.i18n.Locale');
+import('classes.i18n.AppLocale');
 
 class SharingRT {
 	function getLanguages() {
