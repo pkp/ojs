@@ -44,7 +44,7 @@
 	<td width="25%" align="right">
 			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 		{if $issueAvailable}
-		{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}
+		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
 			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}
