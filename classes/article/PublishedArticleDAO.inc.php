@@ -467,7 +467,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByPubId($pubIdType, $pubId, $journalId, $useCache = false) {
+	function &getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
 		if ($useCache && $pubIdType == 'publisher-id') {
 			$cache =& $this->_getPublishedArticleCache();
 			$returner = $cache->get($pubId);

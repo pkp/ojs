@@ -317,7 +317,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
@@ -416,9 +416,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						echo "\t" . $article->getLocalizedTitle() . "\n";
 					}
 				} else {
-					echo __('plugins.importexport.native.cliError') . "\n";
+					$errorsTranslated = array();
 					foreach ($errors as $error) {
-						echo "\t" . __($error[0], $error[1]) . "\n";
+						$errorsTranslated[] = __($error[0], $error[1]);
+					}
+					echo __('plugins.importexport.native.cliError') . "\n";
+					foreach ($errorsTranslated as $errorTranslated) {
+						echo "\t" . $errorTranslated . "\n";
 					}
 				}
 				return;

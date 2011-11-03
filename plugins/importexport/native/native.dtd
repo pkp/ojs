@@ -42,11 +42,12 @@
 
 <!ENTITY % externalformat "href | embed">
 
+<!-- Contains public IDs (not OJS-internal IDs, e.g. DOIs), except
+     for the publisher id which is the public-id attribute of the
+     publishing object's (issue, article, galley, supp file) root
+     node. -->
 <!ELEMENT id (#PCDATA)>
-	<!--
-	  - For articles, the plugin can import and export DOIs in the "id"
-	  - element using type="doi".
-	  -->
+	<!-- The type attribute follows NLM pub-id-type semantics. -->
 	<!ATTLIST id
 		type CDATA #IMPLIED>
 
@@ -75,7 +76,7 @@
 <!ELEMENT image (%externalformat;)>
 
 <!-- Issue-related elements -->
-<!ELEMENT issue (id?, title*, description*, volume?, number?, year?, cover*, date_published?, (access_date | open_access)?, section+)>
+<!ELEMENT issue (id*, title*, description*, volume?, number?, year?, cover*, date_published?, (access_date | open_access)?, section+)>
 	<!ATTLIST issue
 		identification (title|num_vol_year|vol|vol_year|year) "title"
 		published (true|false) "false"
@@ -117,7 +118,7 @@
   *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (id?, title+, abstract*, indexing?, sponsor*, author*, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author*, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		language CDATA "en">
@@ -186,15 +187,15 @@
 
 <!ELEMENT stylesheet (%externalformat;)>
 
-<!ELEMENT galley (label, file)>
+<!ELEMENT galley (id*, label, file)>
 	<!ATTLIST galley
 		locale CDATA #IMPLIED>
 
-<!ELEMENT htmlgalley (label, file, stylesheet?, image*)>
+<!ELEMENT htmlgalley (id*, label, file, stylesheet?, image*)>
 	<!ATTLIST htmlgalley
 		locale CDATA #IMPLIED>
 
-<!ELEMENT supplemental_file (title+, creator*, subject*, type_other?, description*, publisher*, sponsor*, date_created?, source*, file)>
+<!ELEMENT supplemental_file (id*, title+, creator*, subject*, type_other?, description*, publisher*, sponsor*, date_created?, source*, file)>
 	<!ATTLIST supplemental_file
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
 		language CDATA "en"

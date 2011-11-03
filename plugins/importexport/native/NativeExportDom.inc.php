@@ -18,6 +18,8 @@ class NativeExportDom {
 	function &generateIssueDom(&$doc, &$journal, &$issue) {
 		$root =& XMLCustomWriter::createElement($doc, 'issue');
 
+		NativeExportDom::generatePubId($doc, $root, $issue, $issue);
+
 		XMLCustomWriter::setAttribute($root, 'published', $issue->getPublished()?'true':'false');
 
 		switch (
@@ -37,8 +39,6 @@ class NativeExportDom {
 
 		XMLCustomWriter::setAttribute($root, 'current', $issue->getCurrent()?'true':'false');
 		XMLCustomWriter::setAttribute($root, 'public_id', $issue->getPubId('publisher-id'), false);
-
-		XMLCustomWriter::createChildWithText($doc, $root, 'id', $issue->getId());
 
 		if (is_array($issue->getTitle(null))) foreach ($issue->getTitle(null) as $locale => $title) {
 			$titleNode =& XMLCustomWriter::createChildWithText($doc, $root, 'title', $title, false);
@@ -144,10 +144,8 @@ class NativeExportDom {
 
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root =& XMLCustomWriter::createElement($doc, 'article');
-		if ($doi = $article->getPubId('doi')) {
-			$idNode =& XMLCustomWriter::createChildWithText($doc, $root, 'id', $doi);
-			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
-		}
+
+		NativeExportDom::generatePubId($doc, $root, $article, $issue);
 
 		/* --- Titles and Abstracts --- */
 		if (is_array($article->getTitle(null))) foreach ($article->getTitle(null) as $locale => $title) {
@@ -349,6 +347,8 @@ class NativeExportDom {
 		$root =& XMLCustomWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
 		if ($root) XMLCustomWriter::setAttribute($root, 'locale', $galley->getLocale());
 
+		NativeExportDom::generatePubId($doc, $root, $galley, $issue);
+
 		XMLCustomWriter::createChildWithText($doc, $root, 'label', $galley->getLabel());
 
 		/* --- Galley file --- */
@@ -391,6 +391,8 @@ class NativeExportDom {
 	
 	function &generateSuppFileDom(&$doc, &$journal, &$issue, &$article, &$suppFile) {
 		$root =& XMLCustomWriter::createElement($doc, 'supplemental_file');
+
+		NativeExportDom::generatePubId($doc, $root, $suppFile, $issue);
 
 		// FIXME: These should be constants!
 		switch ($suppFile->getType()) {
@@ -483,6 +485,21 @@ class NativeExportDom {
 	function formatDate($date) {
 		if ($date == '') return null;
 		return date('Y-m-d', strtotime($date));
+	}
+
+	/**
+	 * Add ID-nodes to the given node.
+	 * @param $doc DOMDocument
+	 * @param $node DOMNode
+	 * @param $pubObject object
+	 * @param $issue Issue
+	 */
+	function generatePubId(&$doc, &$node, &$pubObject, &$issue) {
+		// FIXME: This will be moved to the DOI PID plug-in in the next release.
+		if ($issue->getPublished() && ($doi = $pubObject->getPubId('doi'))) {
+			$idNode =& XMLCustomWriter::createChildWithText($doc, $node, 'id', $doi);
+			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
+		}
 	}
 }
 

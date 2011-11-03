@@ -51,16 +51,22 @@ class SuppFileDAO extends DAO {
 	 * @param $articleId int
 	 * @return SuppFile
 	 */
-	function &getSuppFileByPubId($pubIdType, $pubId, $articleId) {
+	function &getSuppFileByPubId($pubIdType, $pubId, $articleId = null) {
+		$params = array(
+			'pub-id::'.$pubIdType,
+			$pubId
+		);
+		if ($articleId) $params[] = (int) $articleId;
+
 		$result =& $this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
 				FROM	article_supplementary_files s
 					INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
 					LEFT JOIN article_files a ON s.file_id = a.file_id
 				WHERE	sfs.setting_name = ? AND
-					sfs.setting_value = ? AND
-					s.article_id = ?',
-			array('pub-id::'.$pubIdType, $pubId, (int) $articleId)
+					sfs.setting_value = ?
+				' . ($articleId?' AND s.article_id = ?':''),
+			$params
 		);
 
 		$returner = null;

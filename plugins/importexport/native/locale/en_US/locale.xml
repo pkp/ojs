@@ -124,6 +124,10 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">A sponsor of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A source of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
 
+	<message key="plugins.importexport.native.import.error.invalidPubId">Your import file contains a dataset with an invalid ${pubIdType}: '${pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Your import file contains a dataset with a ${pubIdType} '${pubId}' that already exists for another object in the database. Please make sure that you never import objects with IDs that already exist in the database.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Your import file contains a dataset with an ID-type '${pubIdType}' that no ID-plugin can handle. Please install and/or activate the corresponding ID plug-in before trying to import this dataset.</message>
+	
 	<message key="plugins.importexport.native.import.success">Import Successful</message>
 	<message key="plugins.importexport.native.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
 

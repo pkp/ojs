@@ -90,6 +90,9 @@ class NativeImportDom {
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
+		/* --- Set IDs --- */
+		if (!NativeImportDom::handlePubIds($issueNode, $issue, $journal, $issue, $article, $errors)) $hasErrors = true;
+
 		/* --- Set title, description, volume, number, and year --- */
 
 		$titleExists = false;
@@ -774,11 +777,8 @@ class NativeImportDom {
 			}
 		}
 
-		for ($index=0; ($node = $articleNode->getChildByName('id', $index)); $index++) {
-			$article->setStoredPubId($node->getAttribute('type'), $node->getValue());
-		}
-		$article->setStoredPubId('publisher-id', $articleNode->getAttribute('public_id'));
-		if ($hasErrors) return false;
+		/* --- Set IDs --- */
+		if (!NativeImportDom::handlePubIds($articleNode, $article, $journal, $issue, $article, $errors)) $hasErrors = true;
 
 		$articleDao->insertArticle($article);
 		$dependentItems[] = array('article', $article);
@@ -962,6 +962,9 @@ class NativeImportDom {
 		$galley->setArticleId($article->getId());
 		$galley->setSequence($galleyCount);
 
+		/* --- Set IDs --- */
+		if (!NativeImportDom::handlePubIds($galleyNode, $galley, $journal, $issue, $article, $errors)) return false;
+
 		// just journal supported locales?
 		$locale = $galleyNode->getAttribute('locale');
 		if ($locale == '') {
@@ -1077,6 +1080,59 @@ class NativeImportDom {
 		return true;
 	}
 
+	/**
+	 * Import a DOI from the XML node to the given publication object.
+	 * @param $node DOMNode
+	 * @param $pubObject object
+	 * @param $journal Journal
+	 * @param $issue Issue
+	 * @param $article Article
+	 * @param $errors array
+	 */
+	function handlePubIds(&$node, &$pubObject, &$journal, &$issue, &$article, &$errors) {
+		// FIXME: Will be moved to DOI PID plug-in in the next release.
+		// Instantiate the DOI Helper.
+		import('classes.article.DoiHelper');
+		$doiHelper = new DoiHelper();
+
+		for ($index=0; ($idNode = $node->getChildByName('id', $index)); $index++) {
+			$pubIdType = $idNode->getAttribute('type');
+
+			// Ignore legacy-type id nodes - this was used to export
+			// issue IDs but was never really imported.
+			if (is_null($pubIdType)) continue;
+
+			$errorParams = array(
+				'pubIdType' => $pubIdType
+			);
+
+			switch ($pubIdType) {
+				case 'doi':
+					// FIXME: Will be moved to DOI PID plug-in in the next release.
+					$doi = $idNode->getValue();
+					$errorParams['pubId'] = $doi;
+
+					$doiParts = explode('/', $doi, 2);
+					if (count($doiParts) != 2) {
+						$errors[] = array('plugins.importexport.native.import.error.invalidPubId', $errorParams);
+						return false;
+					}
+					$doiSuffix = array_pop($doiParts);
+					if (!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $pubObject, $journal->getId())) {
+						$errors[] = array('plugins.importexport.native.import.error.duplicatePubId', $errorParams);
+						return false;
+					}
+					$pubObject->setStoredPubId('doi', $doi);
+					break;
+
+				default:
+					$errors[] = array('plugins.importexport.native.import.error.unknownPubId', $errorParams);
+					return false;
+			}
+		}
+		return true;
+	}
+
 	function handleSuppFileNode(&$journal, &$suppNode, &$issue, &$section, &$article, &$errors, $isCommandLine, &$articleFileManager) {
 		$errors = array();
 
@@ -1087,6 +1143,9 @@ class NativeImportDom {
 
 		$suppFile = new SuppFile();
 		$suppFile->setArticleId($article->getId());
+
+		/* --- Set IDs --- */
+		if (!NativeImportDom::handlePubIds($suppNode, $suppFile, $journal, $issue, $article, $errors)) return false;
 
 		for ($index=0; ($node = $suppNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');

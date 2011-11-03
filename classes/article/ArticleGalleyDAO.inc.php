@@ -98,7 +98,13 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return ArticleGalley
 	 */
-	function &getGalleyByPubId($pubIdType, $pubId, $articleId) {
+	function &getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
+		$params = array(
+			'pub-id::'.$pubIdType,
+			$pubId
+		);
+		if ($articleId) $params[] = (int) $articleId;
+
 		$result =& $this->retrieve(
 			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
@@ -106,9 +112,9 @@ class ArticleGalleyDAO extends DAO {
 				INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	gs.setting_name = ? AND
-				gs.setting_value = ? AND
-				g.article_id = ?',
-			array('pub-id::'.$pubIdType, $pubId, (int) $articleId)
+				gs.setting_value = ?
+				' . ($articleId?' AND g.article_id = ?':''),
+			$params
 		);
 
 		$returner = null;
