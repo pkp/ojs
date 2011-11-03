@@ -138,18 +138,18 @@ class ArticleMailTemplate extends MailTemplate {
 		}
 	}
 
-	function ccAssignedEditors($articleId) {
+	function toAssignedEditors($articleId) {
 		$returner = array();
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
 		while ($editAssignment =& $editAssignments->next()) {
-			$this->addCc($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+			$this->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
 			$returner[] =& $editAssignment;
 			unset($editAssignment);
 		}
 		return $returner;
 	}
-
+	
 	function toAssignedReviewingSectionEditors($articleId) {
 		$returner = array();
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
@@ -174,6 +174,18 @@ class ArticleMailTemplate extends MailTemplate {
 		return $returner;
 	}
 
+	function ccAssignedEditors($articleId) {
+		$returner = array();
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
+		while ($editAssignment =& $editAssignments->next()) {
+			$this->addCc($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+			$returner[] =& $editAssignment;
+			unset($editAssignment);
+		}
+		return $returner;
+	}
+		
 	function ccAssignedReviewingSectionEditors($articleId) {
 		$returner = array();
 		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');

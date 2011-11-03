@@ -118,18 +118,19 @@ class AuthorAction extends Action {
 			if ($email->isEnabled()) {
 				$isEditor = false;
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getId());
-				$assignedEditors = $email->ccAssignedEditors($authorSubmission->getId());
-				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
+				$editor = array_shift($assignedSectionEditors);
+				if (!$editor) {
+					$isEditor = true;
+					$assignedEditors = $email->toAssignedEditors($authorSubmission->getId());
+					$editor = array_shift($assignedEditors);
+				}
+				if (!$editor) {
 					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 					$editorName = $journal->getSetting('contactName');
 				} else {
-					$editor = array_shift($assignedSectionEditors);
-					if (!$editor) {
-						$editor = array_shift($assignedEditors);
-						$isEditor = true;
-					}
 					$editorName = $editor->getEditorFullName();
 				}
+				
 				$paramArray = array(
 					'editorialContactName' => $editorName,
 					'articleTitle' => $authorSubmission->getLocalizedTitle(),
