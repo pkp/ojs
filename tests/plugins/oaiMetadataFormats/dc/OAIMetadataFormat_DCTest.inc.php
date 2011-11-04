@@ -41,10 +41,12 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$author->setFirstName('author-firstname');
 		$author->setLastName('author-lastname');
 		$author->setAffiliation('author-affiliation', 'en_US');
+		$author->setEmail('someone@example.com');
 
 		// Supplementary file
 		import('classes.article.SuppFile');
 		$suppFile = new SuppFile();
+		$suppFile->setId(97);
 		$suppFile->setFileId(999);
 
 		// Article
@@ -55,8 +57,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		        ->will($this->returnValue(9));
 		$article->setId(9);
 		$author->setSubmissionId($article->getId());
-		$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-		$authorDao->insertAuthor($author);
 		$article->setSuppFiles(array($suppFile));
 		$article->setPages(15);
 		$article->setType('art-type', 'en_US');
@@ -76,6 +76,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Galleys
 		import('classes.article.ArticleGalley');
 		$galley = new ArticleGalley();
+		$galley->setId(98);
 		$galley->setFileType('galley-filetype');
 		$galleys = array($galley);
 
@@ -113,7 +114,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$router->setApplication($application);
 		$router->expects($this->any())
 		       ->method('url')
-		       ->will($this->returnValue('router-url'));
+		       ->will($this->returnCallback(array($this, 'routerUrl')));
 
 		// Request
 		import('classes.core.Request');
@@ -127,6 +128,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		//
 		// Create mock DAOs
 		//
+
+		// Create a mocked AuthorDAO that returns our test author.
+		import('classes.article.AuthorDAO');
+		$authorDao = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'));
+		$authorDao->expects($this->any())
+		          ->method('getAuthorsBySubmissionId')
+		          ->will($this->returnValue(array($author)));
+		DAORegistry::registerDAO('AuthorDAO', $authorDao);
 
 		// Create a mocked OAIDAO that returns our test data.
 		import('classes.oai.ojs.OAIDAO');
@@ -192,9 +201,26 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			case 'publisherInstitution':
 				return array('journal-publisher');
 
+			case 'enablePublicGalleyId':
+				return false;
+
+			case 'enablePublicSuppFileId':
+				return false;
+
 			default:
 				self::fail();
 		}
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Callback for router url construction simulation.
+	 */
+	function routerUrl(&$request, $newContext = null, $handler = null, $op = null, $path = null) {
+       	return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }
 ?>
