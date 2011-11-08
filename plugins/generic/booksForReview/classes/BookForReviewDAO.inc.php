@@ -250,18 +250,18 @@ class BookForReviewDAO extends DAO {
 			array(
 				$book->getJournalId(),
 				$book->getStatus(),
-				$book->getUserId(),
-				$book->getEditorId(),
+				$this->nullOrInt($book->getUserId()),
+				$this->nullOrInt($book->getEditorId()),
 				$book->getAuthorType(),
 				$book->getPublisher(),
 				$book->getUrl(),
 				$book->getYear(),
 				$book->getLanguage(),
 				$book->getCopy(),
-				$book->getEdition(),
-				$book->getPages(),
+				$this->nullOrInt($book->getEdition()),
+				$this->nullOrInt($book->getPages()),
 				$book->getISBN(),
-				$book->getArticleId(),
+				$this->nullOrInt($book->getArticleId()),
 				$book->getNotes(),
 				$book->getId()
 			)
