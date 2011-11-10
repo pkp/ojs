@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Piwik plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 0.9 2010/08/12 luiz_borges Exp $
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">Piwik Plugin</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Integrate OJS with Piwik, a free and open source web site traffic analysis application. Requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="piwik site">Piwik site</a> for more information.]]></message>
+
+	<!-- Piwik Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings">Settings</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">Piwik Settings</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>With this plugin enabled Piwik may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="Piwik site">Piwik site</a> for more information.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Piwik Url</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">The full url to your Piwik installation (i.e. http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Please enter a valid url. Include http:// at the start.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Site profile ID</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Within Piwik, click on Settings -> Websites. The site profile ID is displayed next to your site profile name.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Please enter a site profile ID.</message>
+
+</locale>
