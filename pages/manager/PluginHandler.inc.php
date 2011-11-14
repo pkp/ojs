@@ -84,7 +84,7 @@ class PluginHandler extends ManagerHandler {
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = $messageParams = null;
-		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message, $messageParams)) {
+		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message, $messageParams, $request)) {
 			if ($message) {
 				$user =& $request->getUser();
 				import('classes.notification.NotificationManager');

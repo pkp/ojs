@@ -14,7 +14,7 @@
 	<DOISerialIssueVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1</DOI>
-		<DOIWebsiteLink>http://localhost/pkp-ojs-stable/index.php/test/issue/view/1</DOIWebsiteLink>
+		<DOIWebsiteLink>http://some-domain/index.php/test/issue/view/1</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Test Publisher</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -25,13 +25,13 @@
 		</ProductIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="eng">
-					<TitleType>01</TitleType>
-					<TitleText>test</TitleText>
-				</Title>
 				<Title textformat="06" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
+				</Title>
+				<Title textformat="06" language="eng">
+					<TitleType>01</TitleType>
+					<TitleText>test</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -77,22 +77,22 @@
 			</Extent>
 			 -->
 			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="eng">
-				<TitleType>01</TitleType>
-				<TitleText>Test Issue</TitleText>
-			</Title>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
 				<TitleText>test-de, Vol 1, No 1 (2011)</TitleText>
 			</Title>
+			<Title textformat="06" language="eng">
+				<TitleType>01</TitleType>
+				<TitleText>Test Issue</TitleText>
+			</Title>
 		</JournalIssue>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="06" language="eng">Issue description</Text>
+			<Text textformat="06" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
 		</OtherText>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="06" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
+			<Text textformat="06" language="eng">Issue description</Text>
 		</OtherText>
 		<!-- Includes articles-as-work -->
 		<RelatedWork>

@@ -15,7 +15,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g1</DOI>
-		<DOIWebsiteLink>http://localhost/pkp-ojs-stable/index.php/test/article/view/1/1</DOIWebsiteLink>
+		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/1</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Test Publisher</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -26,13 +26,13 @@
 		</ProductIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="eng">
-					<TitleType>01</TitleType>
-					<TitleText>test</TitleText>
-				</Title>
 				<Title textformat="06" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
+				</Title>
+				<Title textformat="06" language="eng">
+					<TitleType>01</TitleType>
+					<TitleText>test</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -82,13 +82,13 @@
 				<ExtentUnit>17</ExtentUnit>
 			</Extent>
 			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="eng">
-				<TitleType>01</TitleType>
-				<TitleText>DOI Test (PDF, English)</TitleText>
-			</Title>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Testartikel (PDF, Englisch)</TitleText>
+			</Title>
+			<Title textformat="06" language="eng">
+				<TitleType>01</TitleType>
+				<TitleText>DOI Test (PDF, English)</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>
@@ -115,11 +115,11 @@
 			</Subject>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="eng">DOI Test Submission</Text>
+				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
 			</OtherText>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
+				<Text textformat="06" language="eng">DOI Test Submission</Text>
 			</OtherText>
 			<!-- Is a manifestation of article-as-work -->
 			<RelatedWork>
@@ -178,7 +178,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g2</DOI>
-		<DOIWebsiteLink>http://localhost/pkp-ojs-stable/index.php/test/article/view/1/2</DOIWebsiteLink>
+		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/2</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Test Publisher</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -189,13 +189,13 @@
 		</ProductIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="eng">
-					<TitleType>01</TitleType>
-					<TitleText>test</TitleText>
-				</Title>
 				<Title textformat="06" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
+				</Title>
+				<Title textformat="06" language="eng">
+					<TitleType>01</TitleType>
+					<TitleText>test</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -245,13 +245,13 @@
 				<ExtentUnit>17</ExtentUnit>
 			</Extent>
 			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="eng">
-				<TitleType>01</TitleType>
-				<TitleText>DOI Test (PDF, German)</TitleText>
-			</Title>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Testartikel (PDF, Deutsch)</TitleText>
+			</Title>
+			<Title textformat="06" language="eng">
+				<TitleType>01</TitleType>
+				<TitleText>DOI Test (PDF, German)</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>
@@ -278,11 +278,11 @@
 			</Subject>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="eng">DOI Test Submission</Text>
+				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
 			</OtherText>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
+				<Text textformat="06" language="eng">DOI Test Submission</Text>
 			</OtherText>
 			<!-- Is a manifestation of article-as-work -->
 			<RelatedWork>
@@ -329,7 +329,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g3</DOI>
-		<DOIWebsiteLink>http://localhost/pkp-ojs-stable/index.php/test/article/view/1/3</DOIWebsiteLink>
+		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/3</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Test Publisher</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -340,13 +340,13 @@
 		</ProductIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="eng">
-					<TitleType>01</TitleType>
-					<TitleText>test</TitleText>
-				</Title>
 				<Title textformat="06" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
+				</Title>
+				<Title textformat="06" language="eng">
+					<TitleType>01</TitleType>
+					<TitleText>test</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -396,13 +396,13 @@
 				<ExtentUnit>17</ExtentUnit>
 			</Extent>
 			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="eng">
-				<TitleType>01</TitleType>
-				<TitleText>DOI Test (HTML, English)</TitleText>
-			</Title>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Testartikel (HTML, Englisch)</TitleText>
+			</Title>
+			<Title textformat="06" language="eng">
+				<TitleType>01</TitleType>
+				<TitleText>DOI Test (HTML, English)</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>
@@ -429,11 +429,11 @@
 			</Subject>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="eng">DOI Test Submission</Text>
+				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
 			</OtherText>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
+				<Text textformat="06" language="eng">DOI Test Submission</Text>
 			</OtherText>
 			<!-- Is a manifestation of article-as-work -->
 			<RelatedWork>

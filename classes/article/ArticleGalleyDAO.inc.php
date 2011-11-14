@@ -99,35 +99,107 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
-		$params = array(
-			'pub-id::'.$pubIdType,
-			$pubId
-		);
-		if ($articleId) $params[] = (int) $articleId;
-
-		$result =& $this->retrieve(
-			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-			FROM	article_galleys g
-				INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-			WHERE	gs.setting_name = ? AND
-				gs.setting_value = ?
-				' . ($articleId?' AND g.article_id = ?':''),
-			$params
-		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+		$galleys =& $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
+		if (empty($galleys)) {
+			$galley = null;
 		} else {
-			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
+			assert(count($galleys) == 1);
+			$galley =& $galleys[0];
 		}
 
-		$result->Close();
-		unset($result);
+		return $galley;
+	}
 
-		return $returner;
+	/**
+	 * Find galleys by querying galley settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $articleId int optional
+	 * @param $journalId int optional
+	 * @return array The galleys identified by setting.
+	 */
+	function &getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+		$params = array($settingName);
+
+		$sql = 'SELECT	g.*,
+		        	af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+		        FROM	article_galleys g
+		        	LEFT JOIN article_files af ON (g.file_id = af.file_id)
+		        	INNER JOIN articles a ON a.article_id = g.article_id
+		        	LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
+			        WHERE	gs.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
+			        WHERE	gs.setting_name = ? AND gs.setting_value = ?';
+		}
+		if ($articleId) {
+			$params[] = (int) $articleId;
+			$sql .= ' AND g.article_id = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY a.journal_id, pa.issue_id, g.galley_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$galleys = array();
+		while (!$result->EOF) {
+			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $galleys;
+	}
+
+	/**
+	 * Find galleys by querying galley settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $articleId int optional
+	 * @param $journalId int optional
+	 * @return array The galleys identified by setting.
+	 */
+	function &getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+		$params = array($settingName);
+
+		$sql = 'SELECT	g.*,
+		        	af.file_name, af.original_file_name, af.type, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+		        FROM	article_galleys g
+		        	LEFT JOIN article_files af ON (g.file_id = af.file_id)
+		        	INNER JOIN articles a ON a.article_id = g.article_id
+		        	LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
+			        WHERE	gs.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
+			        WHERE	gs.setting_name = ? AND gs.setting_value = ?';
+		}
+		if ($articleId) {
+			$params[] = (int) $articleId;
+			$sql .= ' AND g.article_id = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY a.journal_id, pa.issue_id, g.galley_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$galleys = array();
+		while (!$result->EOF) {
+			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $galleys;
 	}
 
 	/**

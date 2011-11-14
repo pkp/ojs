@@ -52,32 +52,105 @@ class SuppFileDAO extends DAO {
 	 * @return SuppFile
 	 */
 	function &getSuppFileByPubId($pubIdType, $pubId, $articleId = null) {
-		$params = array(
-			'pub-id::'.$pubIdType,
-			$pubId
-		);
-		if ($articleId) $params[] = (int) $articleId;
-
-		$result =& $this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-				FROM	article_supplementary_files s
-					INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
-					LEFT JOIN article_files a ON s.file_id = a.file_id
-				WHERE	sfs.setting_name = ? AND
-					sfs.setting_value = ?
-				' . ($articleId?' AND s.article_id = ?':''),
-			$params
-		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+		$suppFiles =& $this->getSuppFilesBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
+		if (empty($suppFiles)) {
+			$suppFile = null;
+		} else {
+			assert(count($suppFiles) == 1);
+			$suppFile =& $suppFiles[0];
 		}
 
-		$result->Close();
-		unset($result);
+		return $suppFile;
+	}
 
-		return $returner;
+	/**
+	 * Find supp files by querying supp file settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $articleId int optional
+	 * @param $journalId int optional
+	 * @return array The supp files identified by setting.
+	 */
+	function &getSuppFilesBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+		$params = array($settingName);
+
+		$sql = 'SELECT s.*, af.file_name, af.original_file_name, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+		        FROM	article_supplementary_files s
+		        	LEFT JOIN article_files af ON s.file_id = af.file_id
+		        	INNER JOIN articles a ON a.article_id = s.article_id
+		        	LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id AND sfs.setting_name = ?
+			        WHERE	sfs.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
+			        WHERE	sfs.setting_name = ? AND sfs.setting_value = ?';
+		}
+		if ($articleId) {
+			$params[] = (int) $articleId;
+			$sql .= ' AND s.article_id = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY a.journal_id, pa.issue_id, s.supp_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$suppFiles = array();
+		while (!$result->EOF) {
+			$suppFiles[] =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $suppFiles;
+	}
+
+	/**
+	 * Find supp files by querying supp file settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $articleId int optional
+	 * @param $journalId int optional
+	 * @return array The supp files identified by setting.
+	 */
+	function &getSuppFilesBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+		$params = array($settingName);
+
+		$sql = 'SELECT s.*, af.file_name, af.original_file_name, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+		        FROM	article_supplementary_files s
+		        	LEFT JOIN article_files af ON s.file_id = af.file_id
+		        	INNER JOIN articles a ON a.article_id = s.article_id
+		        	LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id AND sfs.setting_name = ?
+			        WHERE	sfs.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
+			        WHERE	sfs.setting_name = ? AND sfs.setting_value = ?';
+		}
+		if ($articleId) {
+			$params[] = (int) $articleId;
+			$sql .= ' AND s.article_id = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY a.journal_id, pa.issue_id, s.supp_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$suppFiles = array();
+		while (!$result->EOF) {
+			$suppFiles[] =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $suppFiles;
 	}
 
 	/**

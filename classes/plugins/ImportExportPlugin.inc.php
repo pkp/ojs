@@ -119,10 +119,12 @@ class ImportExportPlugin extends Plugin {
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, $message, $messageParams = null, $request = null) {
 		if ($verb === 'importexport') {
 			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		return false;
 	}
 
@@ -130,15 +132,23 @@ class ImportExportPlugin extends Plugin {
 	 * Extend the {url ...} smarty to support import/export plugins.
 	 */
 	function smartyPluginUrl($params, &$smarty) {
-		$path = array('plugin', $this->getName());
-		if (is_array($params['path'])) {
-			$params['path'] = array_merge($path, $params['path']);
-		} elseif (!empty($params['path'])) {
-			$params['path'] = array_merge($path, array($params['path']));
-		} else {
-			$params['path'] = $path;
+		if (!empty($params['path'])) $path = $params['path'];
+		if (!is_array($path)) $path = array($params['path']);
+
+		// Check whether our path points to a management verb.
+		$managementVerbs = array();
+		foreach($this->getManagementVerbs() as $managementVerb) {
+			$managementVerbs[] = $managementVerb[0];
 		}
-		return $smarty->smartyUrl($params, $smarty);
+		if (count($path) == 1 && in_array($path[0], $managementVerbs)) {
+			// Management verbs will be routed to the plugin's manage method.
+			$params['op'] = 'plugin';
+			return parent::smartyPluginUrl($params, $smarty);
+		} else {
+			// All other paths will be routed to the plugin's display method.
+			$params['path'] = array_merge(array('plugin', $this->getName()), $path);
+			return $smarty->smartyUrl($params, $smarty);
+		}
 	}
 }
 

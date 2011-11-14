@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.medra.displayName">mEDRA Export/Registration Plugin</message>
+	<message key="plugins.importexport.medra.description">Export issue, article and galley metadata in Onix for DOI (O4DOI) format and register DOIs with the mEDRA registration agency.</message>
+
+	<message key="plugins.importexport.medra.errors.DOIsNotAvailable">A valid DOI prefix must be specified in the Journal Setup in order to use this plugin.</message>
+
+	<message key="plugins.importexport.medra.settings">Settings</message>
+	<message key="plugins.importexport.medra.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the mEDRA export plug-in before using it for the first time.]]></message>
+	
+	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plug-in:</message>
+	<message key="plugins.importexport.medra.settings.form.work">work</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>	
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Please choose whether you want to export issues as <a href="http://www.medra.org/en/metadata_td.htm">'works'</a> or <a href="http://www.medra.org/en/metadata_td.htm">'manifestations'</a>.]]></message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Please choose the country to be informed as 'publication country' to mEDRA.</message>
+
+	<message key="plugins.importexport.medra.export">Export Data</message>
+	<message key="plugins.importexport.medra.export.unregistered">Export all unregistered issues, articles and galleys</message>
+	<message key="plugins.importexport.medra.export.selectUnregistered">Select unregistered Issues, Articles and Galleys</message>
+	<message key="plugins.importexport.medra.export.noUnregistered">All issues, articles and galleys have already been registered (or none of them has a DOI assigned).</message>
+	<message key="plugins.importexport.medra.export.issues">Export specific issues</message>
+	<message key="plugins.importexport.medra.export.selectIssue">Select Issues</message>
+	<message key="plugins.importexport.medra.export.noIssues">No issues currently have DOIs assigned.</message>
+	<message key="plugins.importexport.medra.export.articles">Export specific articles</message>
+	<message key="plugins.importexport.medra.export.selectArticle">Select Articles</message>
+	<message key="plugins.importexport.medra.export.noArticles">No articles currently have DOIs assigned.</message>
+	<message key="plugins.importexport.medra.export.galleys">Export specific galleys</message>
+	<message key="plugins.importexport.medra.export.selectGalley">Select Galleys</message>
+	<message key="plugins.importexport.medra.export.noGalleys">No galleys currently have DOIs assigned.</message>
+
+	<message key="plugins.importexport.medra.export.error.issueNotFound">No issue matched the specified issue ID: {$param}.</message>
+	<message key="plugins.importexport.medra.export.error.articleNotFound">No article matched the specified article ID: {$param}.</message>
+	<message key="plugins.importexport.medra.export.error.galleyNotFound">No galley matched the specified galley ID: {$param}.</message>
+	<message key="plugins.importexport.medra.export.error.publisherNotSet">Please enter a publisher in the Journal Setup (step 1 - details) before exporting to mEDRA.</message>
+	<message key="plugins.importexport.medra.export.error.supportEmailNotSet">Please enter a technical support contact in the Journal Setup (step 1 - details) before exporting to mEDRA.</message>
+	<message key="plugins.importexport.medra.export.error.noDoiAssigned">The object with ID {$param} does not have a DOI assigned.</message>
+	<message key="plugins.importexport.medra.export.error.unknownJournal">No journal matched the specified journal path: {$param}.</message>
+	<message key="plugins.importexport.medra.export.error.unknownObjectType">The object type {$param} cannot be exported.</message>
+	<message key="plugins.importexport.medra.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
+
+	<message key="plugins.importexport.medra.notification.exportSuccessful">Sucessfully exported selected objects to '{$param}'</message>
+
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm">'manifestations'</a>.]]></message>
+		
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Usage: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
+	<message key="plugins.importexport.medra.cliError">ERROR:</message>
+</locale>

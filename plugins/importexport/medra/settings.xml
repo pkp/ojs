@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * settings.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  -->
+
+<plugin_settings>
+	<setting type="int">
+		<name>exportIssuesAs</name>
+		<value>1</value> <!-- O4DOI_ISSUE_AS_WORK -->
+	</setting>
+	<setting type="string">
+		<name>publicationCountry</name>
+		<value>US</value> <!-- ISO 3166-1 -->
+	</setting>
+</plugin_settings>

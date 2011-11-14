@@ -177,59 +177,6 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all published articles in a journal by public ID.
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 * @param $journalId int
-	 * @param $rangeInfo object
-	 * @return object
-	 */
-	function &getPublishedArticlesByPubId($pubIdType, $pubId, $journalId = null, $rangeInfo = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			'pub-id::'.$pubIdType,
-			$pubId
-		);
-		if ($journalId !== null) $params[] = (int) $journalId;
-		$result =& $this->retrieveRange(
-			'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_articles pa
-				INNER JOIN article_settings atl ON pa.article_id = atl.article_id
-				LEFT JOIN articles a ON pa.article_id = a.article_id
-				LEFT JOIN issues i ON pa.issue_id = i.issue_id
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE 	i.published = 1
-				AND atl.setting_name = ? AND atl.setting_value = ?
-				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
-				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY date_published',
-			$params,
-			$rangeInfo
-		);
-
-		$returner = new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
-		return $returner;
-	}
-
-	/**
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
 	 * @param $useCache boolean optional
@@ -475,6 +422,18 @@ class PublishedArticleDAO extends DAO {
 			return $returner;
 		}
 
+		$publishedArticles =& $this->getPublishedArticlesBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
+		if (empty($publishedArticles)) {
+			$publishedArticle = null;
+		} else {
+			assert(count($publishedArticles) == 1);
+			$publishedArticle =& $publishedArticles[0];
+		}
+
+		return $publishedArticle;
+	}
+
+	function &getPublishedArticlesBySetting($settingName, $settingValue, $journalId = null) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
@@ -487,39 +446,102 @@ class PublishedArticleDAO extends DAO {
 			$primaryLocale,
 			'abbrev',
 			$locale,
-			'pub-id::'.$pubIdType,
-			$pubId
-		);
-		if ($journalId) $params[] = (int) $journalId;
-
-		$result =& $this->retrieve(
-			'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_articles pa
-				INNER JOIN articles a ON pa.article_id = a.article_id
-				INNER JOIN article_settings ast ON a.article_id = ast.article_id
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	ast.setting_name = ? AND
-				ast.setting_value = ?
-				' . ($journalId?' AND a.journal_id = ?':''),
-			$params
+			$settingName
 		);
 
-		$publishedArticle = null;
-		if ($result->RecordCount() != 0) {
-			$publishedArticle =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+		$sql = 'SELECT	pa.*,
+		        	a.*,
+		        	COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+		        	COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+		        FROM	published_articles pa
+		        	INNER JOIN articles a ON pa.article_id = a.article_id
+		        	LEFT JOIN sections s ON s.section_id = a.section_id
+		        	LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+		        	LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+		        	LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+		        	LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
+			        WHERE	ast.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
+			        WHERE	ast.setting_name = ? AND ast.setting_value = ?';
 		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY pa.issue_id, a.article_id';
+		$result =& $this->retrieve($sql, $params);
 
+		$publishedArticles = array();
+		while (!$result->EOF) {
+			$publishedArticles[] =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
 		$result->Close();
-		unset($result);
 
-		return $publishedArticle;
+		return $publishedArticles;
+	}
+
+	/**
+	 * Find published articles by querying article settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $journalId int optional
+	 * @return array The articles identified by setting.
+	 */
+	function &getPublishedArticlesBySetting($settingName, $settingValue, $journalId = null) {
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$settingName
+		);
+
+		$sql = 'SELECT	pa.*,
+		        	a.*,
+		        	COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+		        	COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+		        FROM	published_articles pa
+		        	INNER JOIN articles a ON pa.article_id = a.article_id
+		        	LEFT JOIN sections s ON s.section_id = a.section_id
+		        	LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+		        	LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+		        	LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+		        	LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
+			        WHERE	ast.setting_value IS NULL';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
+			        WHERE	ast.setting_name = ? AND ast.setting_value = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY pa.issue_id, a.article_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$publishedArticles = array();
+		while (!$result->EOF) {
+			$publishedArticles[] =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $publishedArticles;
 	}
 
 	/**
