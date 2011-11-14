@@ -157,7 +157,7 @@ class ArticleGalleyDAO extends DAO {
 		if (!isset($galley)) $galley =& $this->getGalley((int) $galleyId, $articleId);
 		return $galley;
 	}
-	
+
 	/**
 	 * Get the list of fields for which data is localized.
 	 * @return array
@@ -175,7 +175,7 @@ class ArticleGalleyDAO extends DAO {
 			'galley_id' => $galley->getId()
 		));
 	}
-	
+
 	/**
 	 * Internal function to return an ArticleGalley object from a row.
 	 * @param $row array
@@ -218,7 +218,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 
 		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
-		
+
 		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
 
 		return $galley;
@@ -248,9 +248,9 @@ class ArticleGalleyDAO extends DAO {
 		);
 		$galley->setId($this->getInsertGalleyId());
 		$this->updateLocaleFields($galley);
-		
+
 		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getId()));
-		
+
 		return $galley->getId();
 	}
 

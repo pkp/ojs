@@ -626,7 +626,7 @@ class PublishedArticleDAO extends DAO {
 
 		return $articleIds;
 	}
-	
+
 	/**
 	 * creates and returns a published article object from a row, including all supp files etc.
 	 * @param $row array
