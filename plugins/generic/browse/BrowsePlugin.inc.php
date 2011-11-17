@@ -26,7 +26,7 @@ class BrowsePlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				// Add new navigation items in the navigation block plugin				
+				// Add new navigation items in the navigation block plugin
 				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array(&$this, 'addNavigationItem'));
 				// Handler for browse plugin pages
 				HookRegistry::register('LoadHandler', array($this, 'setupBrowseHandler'));
@@ -34,8 +34,8 @@ class BrowsePlugin extends GenericPlugin {
 			return true;
 		}
 		return false;
-	}	
-	
+	}
+
 	/**
 	 * Get the display name of this plugin.
 	 * @return string
@@ -51,7 +51,7 @@ class BrowsePlugin extends GenericPlugin {
 	function getDescription() {
 		return __('plugins.generic.browse.description');
 	}
-	
+
 	/**
 	 * Get the template path for this plugin.
 	 */
@@ -74,7 +74,7 @@ class BrowsePlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		$journal =& $smarty->get_template_vars('currentJournal');
-		
+
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {
 			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '"}">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
 		}
@@ -85,7 +85,7 @@ class BrowsePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Enable editor pixel tags management. 
+	 * Enable editor pixel tags management.
 	 */
 	function setupBrowseHandler($hookName, $params) {
 		$page =& $params[0];
@@ -109,7 +109,7 @@ class BrowsePlugin extends GenericPlugin {
 			}
 		}
 	}
-	
+
 	/**
 	 * Set the breadcrumbs, given the plugin's tree of items to append.
 	 * @param $subclass boolean
@@ -133,7 +133,7 @@ class BrowsePlugin extends GenericPlugin {
 
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
-		
+
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -150,17 +150,18 @@ class BrowsePlugin extends GenericPlugin {
  	 * @param $verb string
  	 * @param $args array
 	 * @param $message string Location for the plugin to put a result msg
+	 * @param $messageParams array
  	 * @return boolean
  	 */
-	function manage($verb, $args, &$message) {
-		if (!parent::manage($verb, $args, $message)) return false;
+	function manage($verb, $args, &$message, &$messageParams) {
+		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& Request::getJournal();
-				
+
 				$this->import('classes.form.BrowseSettingsForm');
 				$form = new BrowseSettingsForm($this, $journal->getId());
 
