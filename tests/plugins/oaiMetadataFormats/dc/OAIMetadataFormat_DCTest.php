@@ -18,6 +18,8 @@
  */
 
 
+require_mock_env('lib/pkp/tests/mock2');
+
 import('lib.pkp.tests.PKPTestCase');
 
 import('lib.pkp.classes.oai.OAIStruct');
@@ -101,6 +103,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		      ->method('getIssueIdentification')
 		      ->will($this->returnValue('issue-identification'));
 		$issue->setDatePublished('2010-11-05');
+		$issue->setJournalId(1);
 
 
 		//
@@ -219,7 +222,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 	/**
 	 * Callback for router url construction simulation.
 	 */
-	function routerUrl(&$request, $newContext = null, $handler = null, $op = null, $path = null) {
+	function routerUrl($request, $newContext = null, $handler = null, $op = null, $path = null) {
        	return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }

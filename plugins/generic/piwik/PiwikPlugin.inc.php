@@ -14,7 +14,7 @@
 
 // $Id: PiwikPlugin.inc.php,v 0.9 2010/08/12 luiz_borges Exp $
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class PiwikPlugin extends GenericPlugin {
 
@@ -29,7 +29,7 @@ class PiwikPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed')) return false;
 		$this->addLocaleData();
 		if ($success) {
-			// Insert Piwik page tag to common footer  
+			// Insert Piwik page tag to common footer
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
 
 			// Insert Piwik page tag to article footer
@@ -159,7 +159,7 @@ class PiwikPlugin extends GenericPlugin {
 
 	/**
 	 * Insert Piwik page tag to footer
-	 */  
+	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
 			$smarty = &$params[1];

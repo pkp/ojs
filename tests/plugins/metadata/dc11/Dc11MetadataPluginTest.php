@@ -26,8 +26,7 @@ class Dc11MetadataPluginTest extends PKPDc11MetadataPluginTest {
 	 * @covers PKPDc11MetadataPlugin
 	 */
 	public function testDc11MetadataPlugin() {
-		parent::testDc11MetadataPlugin(
-				array('article=>dc11'));
+		parent::testDc11MetadataPlugin(array('article=>dc11'));
 	}
 }
 ?>
