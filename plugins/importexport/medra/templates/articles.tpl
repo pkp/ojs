@@ -46,7 +46,7 @@
 			{assign var="noArticles" value="true"}
 			{iterate from=articles item=articleData}
 				{assign var=article value=$articleData.publishedArticle}
-				{if $article->getDOI()}
+				{if $article->getPubId('doi')}
 					{assign var="noArticles" value="false"}
 					{assign var=issue value=$articleData.issue}
 					<tr valign="top">

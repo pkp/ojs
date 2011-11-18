@@ -447,7 +447,7 @@ class O4DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'NotificationType', O4DOI_NOTIFICATION_TYPE_NEW);
 
 		// DOI (mandatory)
-		$doi = $object->getDOI();
+		$doi = $object->getPubId('doi');
 		if (empty($doi)) {
 			$this->_addError('plugins.importexport.medra.export.error.noDoiAssigned', $object->getId());
 			return $falseVar;
@@ -548,7 +548,7 @@ class O4DOIExportDom {
 				$issueWorkOrProduct = 'Product';
 			}
 			$relatedIssueIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId());
-			$doi = $issue->getDOI();
+			$doi = $issue->getPubId('doi');
 			if (!empty($doi)) $relatedIssueIds[O4DOI_ID_TYPE_DOI] = $doi;
 			$relatedIssueElement =& $this->_relationElement($issueWorkOrProduct, O4DOI_RELATION_IS_PART_OF, $relatedIssueIds);
 
@@ -562,7 +562,7 @@ class O4DOIExportDom {
 					$relatedGalleyIds = array(
 						O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId() . '-' . $relatedGalley->getId()
 					);
-					$doi = $relatedGalley->getDOI();
+					$doi = $relatedGalley->getPubId('doi');
 					if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
 					$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_IS_MANIFESTED_IN, $relatedGalleyIds);
 					XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
@@ -577,7 +577,7 @@ class O4DOIExportDom {
 				// related work:
 				// - is a manifestation of article-as-work
 				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId());
-				$doi = $article->getDOI();
+				$doi = $article->getPubId('doi');
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_IS_A_MANIFESTATION_OF, $relatedArticleIds);
 				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
@@ -591,7 +591,7 @@ class O4DOIExportDom {
 					$relatedGalleyIds = array(
 						O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId() . '-' . $relatedGalley->getId()
 					);
-					$doi = $relatedGalley->getDOI();
+					$doi = $relatedGalley->getPubId('doi');
 					if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
 
 					// - is a different form of all other articles-as-manifestation
@@ -624,7 +624,7 @@ class O4DOIExportDom {
 			// - includes articles-as-work
 			foreach ($articlesByIssue as $relatedArticle) {
 				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $relatedArticle->getId());
-				$doi = $relatedArticle->getDOI();
+				$doi = $relatedArticle->getPubId('doi');
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_INCLUDES, $relatedArticleIds);
 				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
@@ -637,7 +637,7 @@ class O4DOIExportDom {
 				$relatedGalleyIds = array(
 					O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $relatedGalley->getArticleId() . '-' . $relatedGalley->getId()
 				);
-				$doi = $relatedGalley->getDOI();
+				$doi = $relatedGalley->getPubId('doi');
 				if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_INCLUDES, $relatedGalleyIds);
 				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);

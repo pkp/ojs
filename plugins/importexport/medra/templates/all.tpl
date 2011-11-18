@@ -45,7 +45,7 @@
 
 			{assign var=noObjects value="true"}
 			{foreach from=$issues item=issue}
-				{if $issue->getDOI()}
+				{if $issue->getPubId('doi')}
 					{assign var=noObjects value="false"}
 					<tr valign="top">
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}" checked="checked" /></td>
@@ -61,7 +61,7 @@
 			{/foreach}
 			{foreach from=$articles item=articleData}
 				{assign var=article value=$articleData.article}
-				{if $article->getDOI()}
+				{if $article->getPubId('doi')}
 					{assign var=noObjects value="false"}
 					{assign var=issue value=$articleData.issue}
 					<tr valign="top">
@@ -78,7 +78,7 @@
 			{/foreach}
 			{foreach from=$galleys item=galleyData name=galleys}
 				{assign var=galley value=$galleyData.galley}
-				{if $galley->getDOI()}
+				{if $galley->getPubId('doi')}
 					{assign var=noObjects value="false"}
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}

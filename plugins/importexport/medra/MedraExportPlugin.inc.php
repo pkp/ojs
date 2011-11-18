@@ -121,7 +121,7 @@ class MedraExportPlugin extends ImportExportPlugin {
 	 * @param $request Request
 	 */
 	function display(&$args, &$request) {
-		parent::display($args);
+		parent::display($args, $request);
 
 		// Retrieve journal from the request context.
 		$router =& $request->getRouter();
@@ -192,6 +192,7 @@ class MedraExportPlugin extends ImportExportPlugin {
 				}
 				if ($result === true) {
 					$this->_sendNotification(
+						$request,
 						'plugins.importexport.medra.notification.exportSuccessful',
 						NOTIFICATION_TYPE_SUCCESS,
 						$exportPath . '{issues|articles|galleys}.xml'
@@ -210,6 +211,7 @@ class MedraExportPlugin extends ImportExportPlugin {
 				foreach($result as $error) {
 					assert(is_array($error) && count($error) >= 1);
 					$this->_sendNotification(
+						$request,
 						$error[0],
 						NOTIFICATION_TYPE_ERROR,
 						(isset($error[1]) ? $error[1] : null)
@@ -292,8 +294,8 @@ class MedraExportPlugin extends ImportExportPlugin {
 	/**
 	 * @see ImportExportPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$request) {
-		parent::manage($verb, $args, $message, $request);
+	function manage($verb, $args, &$message, &$messageParams, &$request) {
+		parent::manage($verb, $args, $message, $messageParams, $request);
 
 		switch ($verb) {
 			case 'settings':
@@ -696,7 +698,7 @@ class MedraExportPlugin extends ImportExportPlugin {
 				// Only export objects that have a DOI assigned.
 				// NB: This may generate DOIs for the selected
 				// objects on the fly.
-				if (!is_null($foundObject->getDoi())) $objects[] =& $foundObject;
+				if (!is_null($foundObject->getPubId('doi'))) $objects[] =& $foundObject;
 				unset($foundObject);
 			}
 			unset($foundObjects);
@@ -764,23 +766,30 @@ class MedraExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Add a notification.
+	 * @param $request Request
 	 * @param $message string An i18n key.
-	 * @param $param string An additional parameter for the message.
 	 * @param $notificationType integer One of the NOTIFICATION_TYPE_* constants.
+	 * @param $param string An additional parameter for the message.
 	 */
-	function _sendNotification($message, $notificationType, $param = null) {
+	function _sendNotification(&$request, $message, $notificationType, $param = null) {
 		static $notificationManager = null;
 
 		if (is_null($notificationManager)) {
-			import('lib.pkp.classes.notification.NotificationManager');
+			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 		}
 
+		if (!is_null($param)) {
+			$params = array('param' => $param);
+		} else {
+			$params = null;
+		}
+
+		$user =& $request->getUser();
 		$notificationManager->createTrivialNotification(
-			'notification.notification',
-			$message,
+			$user->getId(),
 			$notificationType,
-			$param
+			array('contents' => __($message, $params))
 		);
 	}
 }

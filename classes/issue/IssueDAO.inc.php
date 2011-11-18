@@ -140,42 +140,6 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Find issues by querying issue settings.
-	 * @param $settingName string
-	 * @param $settingValue mixed
-	 * @param $journalId int optional
-	 * @return array The issues identified by setting.
-	 */
-	function &getIssuesBySetting($settingName, $settingValue, $journalId = null) {
-		$params = array($settingName);
-		$sql = 'SELECT	i.*
-		        FROM	issues i ';
-		if (is_null($settingValue)) {
-			$sql .= 'LEFT JOIN issue_settings ist ON i.issue_id = ist.issue_id AND ist.setting_name = ?
-			        WHERE	ist.setting_value IS NULL';
-		} else {
-			$params[] = $settingValue;
-			$sql .= 'INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
-			        WHERE	ist.setting_name = ? AND ist.setting_value = ?';
-		}
-		if ($journalId) {
-			$params[] = (int) $journalId;
-			$sql .= ' AND i.journal_id = ?';
-		}
-		$sql .= ' ORDER BY i.issue_id';
-		$result =& $this->retrieve($sql, $params);
-
-		$issues = array();
-		while (!$result->EOF) {
-			$issues[] =& $this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-
-		return $issues;
-	}
-
-	/**
 	 * Retrieve Issue by some combination of volume, number, and year
 	 * @param $journalId int
 	 * @param $volume int

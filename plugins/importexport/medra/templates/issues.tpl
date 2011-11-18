@@ -44,7 +44,7 @@
 
 			{assign var="noIssues" value="true"}
 			{iterate from=issues item=issue}
-				{if $issue->getDOI()}
+				{if $issue->getPubId('doi')}
 					{assign var="noIssues" value="false"}
 					<tr valign="top">
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>

@@ -46,7 +46,7 @@
 			{assign var="noGalleys" value="true"}
 			{iterate from=galleys item=galleyData}
 				{assign var=galley value=$galleyData.galley}
-				{if $galley->getDoi()}
+				{if $galley->getPubId('doi')}
 					{assign var="noGalleys" value="false"}
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
