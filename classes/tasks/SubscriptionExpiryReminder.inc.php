@@ -70,7 +70,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		);
 
 		import('classes.mail.MailTemplate');
-		$mail = new MailTemplate($emailKey);
+		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale());
 		$mail->setFrom($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
