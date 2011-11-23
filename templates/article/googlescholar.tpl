@@ -58,7 +58,7 @@
 {/foreach}{/if}
 {foreach from=$article->getGalleys() item=gs_galley}
 {if $gs_galley->getFileType()=="application/pdf"}
-	<meta name="citation_pdf_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
+	<meta name="citation_pdf_url" content="{url page="article" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
 {else}
 	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$gs_galley->getBestGalleyId($currentJournal)}"/>
 {/if}
