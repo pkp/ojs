@@ -59,7 +59,7 @@ class Install extends PKPInstall {
 		// Add initial site data
 		$locale = $this->getParam('locale');
 		$siteDao =& DAORegistry::getDAO('SiteDAO', $this->dbconn);
-		$site = new Site();
+		$site = $siteDao->newDataObject();
 		$site->setRedirect(0);
 		$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
 		$site->setPrimaryLocale($locale);
