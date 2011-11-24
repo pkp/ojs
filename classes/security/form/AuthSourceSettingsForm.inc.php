@@ -86,7 +86,7 @@ class AuthSourceSettingsForm extends Form {
 	function execute() {
 		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
 
-		$auth = new AuthSource();
+		$auth = $authDao->newDataObject();
 		$auth->setAuthId($this->authId);
 		$auth->setTitle($this->getData('title'));
 		$auth->setSettings($this->getData('settings'));
