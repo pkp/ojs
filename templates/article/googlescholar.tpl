@@ -17,8 +17,13 @@
 {if $issn}
 	<meta name="citation_issn" content="{$issn|strip_tags|escape}"/>
 {/if}
-	<meta name="citation_authors" content="{foreach name="authors" from=$article->getAuthors() item=author}{$author->getLastName()|escape}, {$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if}{if !$smarty.foreach.authors.last}; {/if}{/foreach}"/>
-	<meta name="citation_title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
+{foreach name="authors" from=$article->getAuthors() item=author}
+        <meta name="citation_author" content="{$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if} {$author->getLastName()|escape}"/>
+{if $author->getLocalizedAffiliation() != ""}
+        <meta name="citation_author_affiliation" content="{$author->getLocalizedAffiliation()|strip_tags|escape}"/>
+{/if}
+{/foreach}	
+<meta name="citation_title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
 
 {**
  * Google Scholar date: Use article publication date, falling back on issue
