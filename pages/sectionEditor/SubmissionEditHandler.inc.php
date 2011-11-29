@@ -1026,11 +1026,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$file = explode(',', $request->getUserVar('editorDecisionFile'));
 			if (isset($file[0]) && isset($file[1])) {
 				SectionEditorAction::resubmitFile($submission, $file[0], $file[1], $request);
-
-				$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
-				$signoff->setFileId($file[0]);
-				$signoff->setFileRevision($file[1]);
-				$signoffDao->updateObject($signoff);
 			}
 		}
 
