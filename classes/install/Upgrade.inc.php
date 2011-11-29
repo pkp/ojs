@@ -899,6 +899,36 @@ class Upgrade extends Installer {
 		$result->Close();
 		unset($result);
 
+		return true;
+	}
+
+
+	/**
+	 * For 2.3.7 Upgrade -- Remove author revised file upload IDs erroneously added to copyedit signoff
+	 */
+	function removeAuthorRevisedFilesFromSignoffs() {
+		import('classes.article.Article');
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO'); /* @var $signoffDao SignoffDAO */
+
+		$result =& $signoffDao->retrieve(
+			'SELECT DISTINCT s.signoff_id
+			FROM articles a
+				JOIN signoffs s ON (a.article_id = s.assoc_id)
+			WHERE s.symbolic = ?
+				AND s.file_id = a.revised_file_id',
+			'SIGNOFF_COPYEDITING_INITIAL'
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+
+			$signoff = $signoffDao->getById($row['signoff_id']); /* @var $signoff Signoff */
+			$signoff->setFileId(null);
+			$signoff->setFileRevision(null);
+			$signoffDao->updateObject($signoff);
+
+			$result->MoveNext();
+		}
 
 		return true;
 	}

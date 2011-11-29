@@ -270,6 +270,7 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.6.9">
 		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
+		<code function="removeAuthorRevisedFilesFromSignoffs" />
 		<note file="docs/release-notes/README-2.3.7" />
 	</upgrade>
 
