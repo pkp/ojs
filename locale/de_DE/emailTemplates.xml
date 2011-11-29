@@ -166,7 +166,7 @@ Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interes
 		<subject>Ungeeigneter Beitrag</subject>
 		<body>{$authorName},
 
-eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$journalName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter "Über uns" und die aktuellen Inhalte anseehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen.
+eine erste Lektüre von "{$articleTitle}" ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$journalName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter "Über uns" und die aktuellen Inhalte ansehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -478,7 +478,8 @@ vielen Dank für das Lektorat des Manuskripts "{$articleTitle}". Ihre Mitarbeit 
 Ihre Einreichung "{$articleTitle}" für {$journalName} hat den ersten Lektoratsschritt passiert, und Sie können ihn jetzt durchsehen. Gehen Sie bitte folgendermaßen vor:
 
 1. Klicken Sie auf die unten stehende URL Ihres Beitrags.
-2. Loggen Sie sich bitte mit Ihrem Benutzer/innennamen bei der Zeitschrift ein und klicken Sie auf den Dateinamen, der bei Schritt 1 erscheint. 3. Öffnen Sie die heruntergeladene Version Ihres Beitrags.
+2. Loggen Sie sich bitte mit Ihrem Benutzer/innennamen bei der Zeitschrift ein und klicken Sie auf den Dateinamen, der bei Schritt 1 erscheint.
+3. Öffnen Sie die heruntergeladene Version Ihres Beitrags.
 4. Überprüfen Sie den Text einschließlich der Änderungsvorschläge in Ihrem Manuskript und beantworten Sie die ggf. dort gestellte Fragen.
 5. Sie können weitere eigene Verbesserungen in Ihrem Text vornehmen.
 6. Laden Sie die fertige Korrekturversion in Schritt 2 wieder hoch.
@@ -734,7 +735,6 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.
 {$journalName} hat soeben die nächste Ausgabe frei zugänglich gemacht. Wir laden Sie ein, sich hier das Inhaltsverzeichnis und auf unserer Webseite ({$journalUrl}) die Sie interessierenden Beiträge anzusehen.
 
 Wir danken für Ihr Interesse an unserer Arbeit,
-{$editorialContactSignature}
 {$editorialContactSignature}</body>
 		<description>Diese E-Mail wird an registrierte Leser/innen gesendet, die darum gebeten haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird.</description>
 	</email_text>

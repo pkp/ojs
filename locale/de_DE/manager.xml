@@ -29,7 +29,7 @@
 	<message key="manager.language.forms">Formulare</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Dies wird alle Einstellungen, die Sie für diese Regionaleinstellung gewählt hatten, ersetzen.</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Die Standardeinstellungen für diese Regionaleinstellung wiederherstellen</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS steht den Benutzer/innen in jeder der unterstützten Sprachen zur Verfügung. Außerdem kann OJS als ein mehrsprachiges System arbeiten, wodurch den Benutzer/innen die Möglichkeit gegeben wird, auf jeder einzelnen Seite zwischen den Sprachen hin und her zu springen und bestimmte Daten in zusätzlichen Sprachen einzugeben.<br /><br/>Sollte eine von OJS unterstützte Sprache nicht nachfolgend aufgelistet werden, bitten Sie Ihre/n Website-Administrator/in, die Sprache von der Administrationsoberfläche aus zu installieren. Konsultieren Sie die OJS-Dokumentation für Anweisungen bezüglich der Unterstützung weiterer Sprachen. ]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS steht den Benutzer/innen in jeder der unterstützten Sprachen zur Verfügung. Außerdem kann OJS als ein mehrsprachiges System arbeiten, wodurch den Benutzer/innen die Möglichkeit gegeben wird, auf jeder einzelnen Seite zwischen den Sprachen hin und her zu springen und bestimmte Daten in zusätzlichen Sprachen einzugeben.<br /><br />Sollte eine von OJS unterstützte Sprache nicht nachfolgend aufgelistet werden, bitten Sie Ihre/n Website-Administrator/in, die Sprache von der Administrationsoberfläche aus zu installieren. Konsultieren Sie die OJS-Dokumentation für Anweisungen bezüglich der Unterstützung weiterer Sprachen. ]]></message>
 	<message key="manager.languages.noneAvailable">Leider ist keine weitere Sprache verfügbar. Setzen Sie sich mit Ihrer Administratorin/Ihrem Administrator in Verbindung, wenn Sie in der Zeitschrift weitere Sprachen verwenden möchten.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Dies ist die Standardsprache der Zeitschriften-Website.</message>
 	<message key="manager.managementPages">Verwaltung</message>
@@ -239,7 +239,7 @@
 	<message key="manager.setup.customTags">Tags anpassen</message>
 	<message key="manager.setup.customTagsDescription">HTML-Kopfzeilen, die auf jeder Seite erscheinen (z.B. META-Einträge).</message>
 	<message key="manager.setup.details">Angaben zur Zeitschrift</message>
-	<message key="manager.setup.details.description">Name der Zeitschrift, ISSN, Kontakte, Unterstützer/innen und Suchmaschinen</message>
+	<message key="manager.setup.details.description">Name der Zeitschrift, ISSN, Kontakte, Unterstützer/innen und Suchmaschinen.</message>
 	<message key="manager.setup.disableUserRegistration">Zeitschriftenverwalter/innen registrieren alle Benutzer/innen; Redakteur/innen und Rubrikredakteur/innen können nur Gutachter/innen registrieren.</message>
 	<message key="manager.setup.discipline">Fachgebiet und Untergebiet</message>
 	<message key="manager.setup.disciplineDescription">Hilfreich im Fall einer fachübergreifenden Zeitschrift oder wenn Autor/innen disziplinübergreifende Themen behandeln</message>
@@ -350,7 +350,7 @@
 	<message key="manager.setup.layoutInstructions">Anweisungen für das Layout</message>
 	<message key="manager.setup.layoutInstructionsDescription">Anweisungen für die Formatierung zu veröffentlichender Beiträge können nachfolgend in HTML oder einfachem Text eingegeben werden. Sie werden den Layouter/innen und Rubrikredakteur/innen auf der Redaktionsseite jedes Beitrags zur Verfügung gestellt. (Da jede Zeitschrift ihre eigenen Layoutstrukturen, Formate, bibliografischen Standards, Style Sheets usw. haben kann, sind hier keine Standardanweisungen vorgesehen.)</message>
 	<message key="manager.setup.layoutTemplates">Layoutvorlagen</message>
-	<message key="manager.setup.layoutTemplatesDescription">Layoutvorlagen für alle Standardformate der Zeitschrift (z.B. Beiträge, Rezensionen usw.) können hochgeladen und unter "Layout" abgerufen werden, wobei alle Dateiformate (z.B., pdf, doc usw.) benutzt werden können. Anmerkungen zu Zeichensatz, Schriftgröße, Rand etc. erleichtern Layouter/innen und Korrekturlektor/innen die Arbeit.</message>
+	<message key="manager.setup.layoutTemplatesDescription">Layoutvorlagen für alle Standardformate der Zeitschrift (z.B. Beiträge, Rezensionen usw.) können hochgeladen und unter "Layout" abgerufen werden, wobei alle Dateiformate (z.B. pdf, doc usw.) benutzt werden können. Anmerkungen zu Zeichensatz, Schriftgröße, Rand etc. erleichtern Layouter/innen und Korrekturlektor/innen die Arbeit.</message>
 	<message key="manager.setup.layoutTemplates.file">Vorlagendatei</message>
 	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Listen</message>
@@ -470,7 +470,7 @@
 	<message key="manager.setup.subjectClassificationExamples">(z.B. Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
-	<message key="manager.setup.subjectProvideExamples">Geben Sie Beispiele für Schlagworte oder Themen als Hilfestellung für die Autor/innen an.</message>
+	<message key="manager.setup.subjectProvideExamples">Geben Sie als Hilfestellung für die Autor/innen Beispiele für Schlagworte oder Themen an</message>
 	<message key="manager.setup.submissionGuidelines">Richtlinien für die Beitragseinreichung</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checkliste für die Beitragseinreichung</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Autor/innen, die beabsichtigen, einen Beitrag einzureichen, werden zunächst gebeten, die Checkliste Punkt für Punkt abzuarbeiten. Die Liste erscheint bei den Richtlinien für Autor/innen unter "Über uns". Die Liste kann weiter unten verändert werden, doch müssen alle Punkte der Liste abgehakt sein, bevor die Autor/innen mit dem Einreichen ihres Beitrags fortfahren können.</message>
