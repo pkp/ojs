@@ -693,5 +693,5 @@
 
 	<!-- Kategorien -->
 	<message key="manager.setup.categories">Kategorien</message>
-	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsuchen.</message>
+	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
 </locale>
