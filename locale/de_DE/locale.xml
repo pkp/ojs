@@ -743,12 +743,12 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 
 	<!-- Suche -->
-	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchsuchen</message>
+	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchsehen</message>
 	<message key="search.searchFor">Artikel durchsuchen nach</message>
 	<message key="search.author">Autor/in</message>
 	<message key="search.withinJournal">In</message>
 	<message key="search.allJournals">allen Zeitschriften</message>
-	<message key="search.authorIndex">Autor/innenverzeichnis durchsuchen</message>
+	<message key="search.authorIndex">Autor/innenverzeichnis durchsehen</message>
 	<message key="search.authorDetails">Nähere Angaben zu den Autor/innen</message>
 	<message key="search.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
@@ -785,7 +785,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Index: Archiv -->
 	<message key="archive.archives">Archiv</message>
-	<message key="archive.browse">Ältere Ausgaben durchsuchen</message>
+	<message key="archive.browse">Ältere Ausgaben durchsehen</message>
 	<message key="archive.issueUnavailable">Ausgabe nicht verfügbar</message>
 
 	<!-- Über uns -->
