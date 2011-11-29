@@ -494,10 +494,10 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<!-- Navigation im Seitenleistenmenü -->
 
 	<!-- Begutachtung von Beiträgen (Redakteur/innen) -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br/>
-Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
-"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br/>
-"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br />
+Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
+"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br />
+"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br />
 "Aktuell" bezieht sich auf die Anzahl momentan übernommener oder in Betracht gezogener Begutachtungen.]]></message>
 
 
@@ -1072,8 +1072,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Lesewerkzeuge - Suche -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br/>
-Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br />
+Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br />
 Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen.]]></message>
 
 	<!-- Lesewerkzeuge - Elemente -->
