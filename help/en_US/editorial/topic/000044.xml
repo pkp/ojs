@@ -15,9 +15,50 @@
 <topic id="editorial/topic/000044" locale="en_US" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
 		<![CDATA[<p>To ensure the integrity of the blind peer-review for submission to this journal, every effort should be made to prevent the identities of the authors and reviewers from being known to each other. This involves the authors, editors, and reviewers (who upload documents as part of their review) checking to see if the following steps have been taken with regard to the text and the file properties:</p>
-<ol><li>The authors of the document have deleted their names from the text, with "Author" and year used in the references and footnotes, instead of the authors' name, article title, etc.</li>
-<li>With Microsoft Office documents, author identification should also be removed from the properties for the file (see under File in Word), by clicking on the following, beginning with File on the main menu of the Microsoft application: File &gt; Save As &gt; Tools (or Options with a Mac) &gt; Security &gt; Remove personal information from file properties on save &gt; Save.</li>
-<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
-</ol>]]>
+		
+		<ol>
+			<li>The authors of the document have deleted their names from the text, with "Author" and year used in the references and footnotes, instead of the authors' name, article title, etc.</li>
+			
+			<li><p>With Microsoft Office documents, author identification should also be removed from the properties for the file.</p>
+		
+			<p>For <strong>Microsoft 2003</strong> and previous versions, and <strong>Macintosh</strong> versions of Word:</p>
+			<ul>
+				<li>Under the File menu select: Save As &gt; Tools (or Options with a Mac) &gt; Security &gt; Remove personal information from file properties on save &gt; Save.</li>
+			</ul>
+			
+			<p>For <strong>MacIntosh Word 2008</strong> (and future versions)</p>
+			<ol>
+				<li>Under the File menu select "Properties."</li>
+				<li>Under the Summary tab remove all of the identifying information from all of the fields.</li>
+				<li>Save the File.</li>
+			</ol>
+		
+			<p>For <strong>Microsoft 2007</strong> (Windows):</p>
+			<ol>
+				<li>Click on the office button in the upper-left hand corner of the office application</li>
+				<li>Select "Prepare" from the menu options.</li>
+				<li>Select "Properties" for the "Prepare" menu options.</li>
+				<li>Delete all of the information in the document property fields that appear under the main menu options.</li>
+				<li>Save the document and close the document property field section.</li>
+			</ol>
+
+			<p>For <strong>Microsoft 2010</strong> (Windows):</p>
+			<ol>
+				<li>Under the File menu select "Prepare for sharing."</li>
+				<li>Click on the "Check for issues" icon.</li>
+				<li>click on "inspect document" icon.</li>
+				<li>Uncheck all of the checkboxes except "Document Properties and Personal information".</li>
+				<li>Run the document inspector, which will then do a search of the document properties and indicated if any document property fields contain any information.</li>
+				<li>If the document inspector finds that some of the document properties contain information it will notify you and give you the option to "Remove all," which you will click to remove the document properties and personal information from the document.</li>
+			</ol>
+		</li>
+		<li><p>For <strong>PDF files</strong>:</p>
+		<ul>
+			<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
+		</ul>
+	</li>
+</ul>
+
+		]]>
 	</section>
 </topic>
