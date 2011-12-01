@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration Plugin</message>
+	<message key="plugins.importexport.datacite.description">Export or register issue, article, galley and supplementary file metadata in DataCite format.</message>
+
+	<message key="plugins.importexport.datacite.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the DataCite export plug-in before using it for the first time.]]></message>
+ 
+	<message key="plugins.importexport.datacite.settings.form.description">Please configure the DataCite export plug-in:</message>
+	<message key="plugins.importexport.datacite.settings.form.symbol">Username (symbol)</message>
+	<message key="plugins.importexport.datacite.settings.form.savePassword">Do you want to store your password to the database?</message>
+	<message key="plugins.importexport.datacite.settings.form.savePasswordInstruction">Please be careful. Anyone with access to your database or database backup will be able to read your password.</message>
+ 
+	<message key="plugins.importexport.datacite.export.suppFiles">Export specific supplementary files</message>
+	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>
+	<message key="plugins.importexport.datacite.export.noSuppFiles">No supplementary files currently have DOIs assigned.</message>
+ 
+	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">No supplementary file matched the specified suppfile ID: {$param}.</message>
+ 
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Usage: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+]]></message>
+</locale>

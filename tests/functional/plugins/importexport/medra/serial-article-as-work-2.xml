@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ONIXDOISerialArticleVersionRegistrationMessage
+<ONIXDOISerialArticleWorkRegistrationMessage
 	xmlns="http://www.editeur.org/onix/DOIMetadata/2.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
@@ -11,18 +11,18 @@
 		<SentDate>201111082218</SentDate>
 		<MessageNote>This dataset was exported with ojs2, version x.x.x.x.</MessageNote>
 	</Header>
-	<DOISerialArticleVersion>
+	<DOISerialArticleWork>
 		<NotificationType>06</NotificationType>
-		<DOI>10.1234/t.v1i1.1.g1</DOI>
-		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/1</DOIWebsiteLink>
-		<DOIStructuralType>Digital Fixation</DOIStructuralType>
+		<DOI>10.1234/t.v1i1.1</DOI>
+		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1</DOIWebsiteLink>
+		<DOIStructuralType>Abstraction</DOIStructuralType>
 		<RegistrantName>Test Publisher</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
-		<ProductIdentifier>
-			<!-- Internal journal-issue-article-galley ID -->
-			<ProductIDType>01</ProductIDType>
-			<IDValue>1-1-1-g1</IDValue>
-		</ProductIdentifier>
+		<WorkIdentifier>
+			<!-- Internal journal-issue-article ID -->
+			<WorkIDType>01</WorkIDType>
+			<IDValue>1-1-1</IDValue>
+		</WorkIdentifier>
 		<SerialPublication>
 			<SerialWork>
 				<Title textformat="06" language="ger">
@@ -75,19 +75,14 @@
 			<TextItem>
 				<NumberOfPages>33</NumberOfPages>
 			</TextItem>
-			<Extent>
-				<ExtentType>22</ExtentType>
-				<ExtentValue>15951</ExtentValue>
-				<ExtentUnit>17</ExtentUnit>
-			</Extent>
 			<PublicationDate>20111006</PublicationDate>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
-				<TitleText>DOI Testartikel (PDF, Englisch)</TitleText>
+				<TitleText>DOI Testartikel</TitleText>
 			</Title>
 			<Title textformat="06" language="eng">
 				<TitleType>01</TitleType>
-				<TitleText>DOI Test (PDF, English)</TitleText>
+				<TitleText>DOI Test</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>
@@ -120,21 +115,9 @@
 				<TextTypeCode>01</TextTypeCode>
 				<Text textformat="06" language="eng">DOI Test Submission</Text>
 			</OtherText>
-			<!-- Is a manifestation of article-as-work -->
-			<RelatedWork>
-				<RelationCode>90</RelationCode>
-				<WorkIdentifier>
-					<WorkIDType>01</WorkIDType>
-					<IDValue>1-1-1</IDValue>
-				</WorkIdentifier>
-				<WorkIdentifier>
-					<WorkIDType>06</WorkIDType>
-					<IDValue>10.1234/t.v1i1.1</IDValue>
-				</WorkIdentifier>
-			</RelatedWork>
-			<!-- Further related works: -->
-				<!-- FIXME: Is a new version of an updated article-as-manifestation -->
-				<!-- FIXME: Has a new version: the updated article-as-manifestation -->
+			<!-- Further related works (will only occur when updating an article-as-work): -->
+				<!-- FIXME: Is a new version of an updated article-as-work -->
+				<!-- FIXME: Has a new version: the updated article-as-work -->
 			<!-- Is part of issue-as-manifestation (we assume submission of issues as manifestations here) -->
 			<RelatedProduct>
 				<RelationCode>81</RelationCode>
@@ -147,9 +130,20 @@
 					<IDValue>10.1234/t.v1i1</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
-			<!-- Is a different language version of all other articles-as-manifestation with the same article id and form but different language -->
+			<!-- Is manifested in articles-as-manifestation (a.k.a. galleys) -->
 			<RelatedProduct>
-				<RelationCode>85</RelationCode>
+				<RelationCode>89</RelationCode>
+				<ProductIdentifier>
+					<ProductIDType>01</ProductIDType>
+					<IDValue>1-1-1-g1</IDValue>
+				</ProductIdentifier>
+				<ProductIdentifier>
+					<ProductIDType>06</ProductIDType>
+					<IDValue>10.1234/t.v1i1.1.g1</IDValue>
+				</ProductIdentifier>
+			</RelatedProduct>
+			<RelatedProduct>
+				<RelationCode>89</RelationCode>
 				<ProductIdentifier>
 					<ProductIDType>01</ProductIDType>
 					<IDValue>1-1-1-g2</IDValue>
@@ -159,9 +153,8 @@
 					<IDValue>10.1234/t.v1i1.1.g2</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
-			<!-- Is a different form of all other articles-as-manifestation with the same article id and language but different form -->
 			<RelatedProduct>
-				<RelationCode>84</RelationCode>
+				<RelationCode>89</RelationCode>
 				<ProductIdentifier>
 					<ProductIDType>01</ProductIDType>
 					<IDValue>1-1-1-g3</IDValue>
@@ -172,5 +165,5 @@
 				</ProductIdentifier>
 			</RelatedProduct>
 		</ContentItem>
-	</DOISerialArticleVersion>
-</ONIXDOISerialArticleVersionRegistrationMessage>
+	</DOISerialArticleWork>
+</ONIXDOISerialArticleWorkRegistrationMessage>

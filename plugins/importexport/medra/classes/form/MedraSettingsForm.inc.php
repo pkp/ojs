@@ -13,35 +13,9 @@
  */
 
 
-import('lib.pkp.classes.form.Form');
+import('plugins.importexport.medra.classes.form.DoiExportSettingsForm');
 
-class MedraSettingsForm extends Form {
-
-	//
-	// Private properties
-	//
-	/** @var integer */
-	var $_journalId;
-
-	/**
-	 * Get the journal ID.
-	 * @return integer
-	 */
-	function _getJournalId() {
-		return $this->_journalId;
-	}
-
-	/** @var MedraExportPlugin */
-	var $_plugin;
-
-	/**
-	 * Get the plugin.
-	 * @return MedraExportPlugin
-	 */
-	function &_getPlugIn() {
-		return $this->_plugin;
-	}
-
+class MedraSettingsForm extends DoiExportSettingsForm {
 
 	//
 	// Constructor
@@ -53,12 +27,9 @@ class MedraSettingsForm extends Form {
 	 */
 	function MedraSettingsForm(&$plugin, $journalId) {
 		// Configure the object.
-		parent::Form($plugin->getTemplatePath() . 'settings.tpl');
-		$this->_journalId = $journalId;
-		$this->_plugin =& $plugin;
+		parent::DoiExportSettingsForm($plugin, $journalId);
 
 		// Add form validation checks.
-		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorInSet($this, 'exportIssuesAs', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.exportIssuesAs', array(O4DOI_ISSUE_AS_WORK, O4DOI_ISSUE_AS_MANIFESTATION)));
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
 	}
@@ -85,31 +56,18 @@ class MedraSettingsForm extends Form {
 		parent::display();
 	}
 
-	/**
-	 * @see Form::initData()
-	 */
-	function initData() {
-		$plugin =& $this->_getPlugIn();
-		foreach ($this->_getFormFields() as $settingName => $settingType) {
-			$this->setData($settingName, $plugin->getSetting($this->_getJournalId(), $settingName));
-		}
-	}
 
+	//
+	// Implement template methods from DoiExportSettingsForm
+	//
 	/**
-	 * @see Form::readInputData()
+	 * @see DoiExportSettingsForm::getFormFields()
 	 */
-	function readInputData() {
-		$this->readUserVars(array_keys($this->_getFormFields()));
-	}
-
-	/**
-	 * @see Form::execute()
-	 */
-	function execute() {
-		$plugin =& $this->_getPlugIn();
-		foreach($this->_getFormFields() as $settingName => $settingType) {
-			$plugin->updateSetting($this->_getJournalId(), $settingName, $this->getData($settingName), $settingType);
-		}
+	function getFormFields() {
+		return array(
+			'exportIssuesAs' => 'int',
+			'publicationCountry' => 'string'
+		);
 	}
 
 
@@ -124,17 +82,6 @@ class MedraSettingsForm extends Form {
 		$countryDao =& DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
 		$countries =& $countryDao->getCountries();
 		return $countries;
-	}
-
-	/**
-	 * Return a list of form fields.
-	 * @return array
-	 */
-	function _getFormFields() {
-		return array(
-			'exportIssuesAs' => 'int',
-			'publicationCountry' => 'string'
-		);
 	}
 }
 

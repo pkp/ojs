@@ -1,5 +1,5 @@
 {**
- * @file plugins/importexport/medra/templates/articles.tpl
+ * @file plugins/importexport/datacite/templates/articles.tpl
  *
  * Copyright (c) 2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -26,7 +26,6 @@
 <br/>
 
 <div id="articles">
-	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
 	<form action="{plugin_url path="exportArticles"}" method="post" name="articles">
 		<table width="100%" class="listing">
 			<tr>

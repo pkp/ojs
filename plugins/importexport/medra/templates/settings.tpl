@@ -7,7 +7,7 @@
  * mEDRA plugin settings
  *}
 {strip}
-{assign var="pageTitle" value="plugins.importexport.medra.settings"}
+{assign var="pageTitle" value="plugins.importexport.common.settings"}
 {include file="common/header.tpl"}
 {/strip}
 <div id="medraSettings">

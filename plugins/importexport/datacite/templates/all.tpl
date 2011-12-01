@@ -1,5 +1,5 @@
 {**
- * @file plugins/importexport/medra/templates/all.tpl
+ * @file plugins/importexport/datacite/templates/all.tpl
  *
  * Copyright (c) 2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -16,7 +16,7 @@
 	function toggleChecked() {
 		var elements = document.exportAll.elements;
 		for (var i=0; i < elements.length; i++) {
-			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]') {
+			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]' || elements[i].name == 'suppFileId[]') {
 				elements[i].checked = !elements[i].checked;
 			}
 		}
@@ -26,7 +26,6 @@
 <br/>
 
 <div id="allUnregistered">
-	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
 	<form action="{plugin_url path="exportAll"}" method="post" name="exportAll">
 		<table width="100%" class="listing">
 			<tr>
@@ -91,7 +90,25 @@
 						<td>{$article->getAuthorString()|escape}</td>
 					</tr>
 					<tr>
-						<td colspan="5" class="{if $smarty.foreach.galleys.last}end{/if}separator">&nbsp;</td>
+						<td colspan="5" class="separator">&nbsp;</td>
+					</tr>
+				{/if}
+			{/foreach}
+			{foreach from=$suppFiles item=suppFileData name=suppFiles}
+				{assign var=suppFile value=$suppFileData.suppFile}
+				{if $suppFile->getPubId('doi')}
+					{assign var=noObjects value="false"}
+					{assign var=article value=$suppFileData.article}
+					{assign var=issue value=$suppFileData.issue}
+					<tr valign="top">
+						<td><input type="checkbox" name="suppFileId[]" value="{$suppFile->getId()}" checked="checked" /></td>
+						<td>{translate key="article.suppFile"}</td>
+						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
+						<td><a href="{url page="rt" op="suppFileMetadata" path=$article->getId()|to_array:0:$suppFile->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$suppFile->getSuppFileTitle()|cat:')'|strip_unsafe_html}</a></td>
+						<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
+					</tr>
+					<tr>
+						<td colspan="5" class="{if $smarty.foreach.suppFiles.last}end{/if}separator">&nbsp;</td>
 					</tr>
 				{/if}
 			{/foreach}

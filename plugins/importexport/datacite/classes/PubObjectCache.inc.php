@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @file plugins/importexport/medra/classes/O4DOIObjectCache.inc.php
+ * @file plugins/importexport/.../classes/PubObjectCache.inc.php
  *
  * Copyright (c) 2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class O4DOIObjectCache
- * @ingroup plugins_importexport_medra_classes
+ * @class PubObjectCache
+ * @ingroup plugins_importexport_..._classes
  *
- * @brief A cache for publication objects required during O4DOI export.
+ * @brief A cache for publication objects required during export.
  */
 
 
-class O4DOIObjectCache {
+class PubObjectCache {
 	/* @var array */
 	var $_objectCache = array();
 
@@ -23,7 +23,7 @@ class O4DOIObjectCache {
 	//
 	/**
 	 * Add a publishing object to the cache.
-	 * @param $object Issue|PublishedArticle|ArticleGalley
+	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
 	 * @param $parent PublishedArticle|null Only required when adding a galley.
 	 */
 	function add(&$object, &$parent) {
@@ -39,6 +39,10 @@ class O4DOIObjectCache {
 			$this->_insertInternally($object, 'galleys', $object->getId());
 			$this->_insertInternally($object, 'galleysByArticle', $object->getArticleId(), $object->getId());
 			$this->_insertInternally($object, 'galleysByIssue', $parent->getIssueId(), $object->getId());
+		}
+		if (is_a($object, 'SuppFile')) {
+			$this->_insertInternally($object, 'suppFiles', $object->getId());
+			$this->_insertInternally($object, 'suppFilesByArticle', $object->getArticleId(), $object->getId());
 		}
 	}
 

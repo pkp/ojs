@@ -107,7 +107,7 @@
 			<RelationCode>80</RelationCode>
 			<ProductIdentifier>
 				<ProductIDType>01</ProductIDType>
-				<IDValue>1-1-1-1</IDValue>
+				<IDValue>1-1-1-g1</IDValue>
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>
@@ -118,7 +118,7 @@
 			<RelationCode>80</RelationCode>
 			<ProductIdentifier>
 				<ProductIDType>01</ProductIDType>
-				<IDValue>1-1-1-2</IDValue>
+				<IDValue>1-1-1-g2</IDValue>
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>
@@ -129,7 +129,7 @@
 			<RelationCode>80</RelationCode>
 			<ProductIdentifier>
 				<ProductIDType>01</ProductIDType>
-				<IDValue>1-1-1-3</IDValue>
+				<IDValue>1-1-1-g3</IDValue>
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>

@@ -13,9 +13,9 @@
  */
 
 
-import('lib.pkp.classes.xml.XMLCustomWriter');
+import('plugins.importexport.datacite.classes.DoiExportDom');
 
-define('O4DOI_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
+// XML attributes
 define('O4DOI_XMLNS' , 'http://www.editeur.org/onix/DOIMetadata/2.0');
 define('O4DOI_XSI_SCHEMALOCATION' , 'http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd');
 
@@ -76,47 +76,11 @@ define('O4DOI_RELATION_IS_A_LANGUAGE_VERSION_OF', '85');
 define('O4DOI_RELATION_IS_MANIFESTED_IN', '89');
 define('O4DOI_RELATION_IS_A_MANIFESTATION_OF', '90');
 
-
-class O4DOIExportDom {
-
-	//
-	// Public properties
-	//
-	/** @var array */
-	var $_errors = array();
-
-	/**
-	 * Retrieve export error details.
-     * @return array
-	 */
-	function getErrors() {
-		return $this->_errors;
-	}
-
-	/**
-	 * Add an error to the errors list.
-	 * @param $errorTranslationKey string An i18n key.
-	 * @param $param string|null An additional translation parameter.
-	 */
-	function _addError($errorTranslationKey, $param = null) {
-		$this->_errors[] = array($errorTranslationKey, $param);
-	}
-
+class O4DOIExportDom extends DoiExportDom {
 
 	//
 	// Private properties
 	//
-	/** @var XMLNode|DOMImplementation */
-	var $_doc;
-
-	/**
-	 * Get the XML document.
-	 * @return XMLNode|DOMImplementation
-	 */
-	function &_getDoc() {
-		return $this->_doc;
-	}
-
 	/** @var integer */
 	var $_schema;
 
@@ -146,14 +110,6 @@ class O4DOIExportDom {
 	 */
 	function _getObjectType() {
 		return $this->_getSchemaInfo('objectType');
-	}
-
-	/**
-	 * The DOM's root element.
-	 * @return string
-	 */
-	function _getRootElementName() {
-		return $this->_getSchemaInfo('rootElementName');
 	}
 
 	/**
@@ -187,7 +143,7 @@ class O4DOIExportDom {
 	 * Get the current request.
 	 * @return Request
 	 */
-	function &_getRequest() {
+	function &getRequest() {
 		return $this->_request;
 	}
 
@@ -199,18 +155,18 @@ class O4DOIExportDom {
 	 * O4DOI message.
 	 * @return Journal
 	 */
-	function &_getJournal() {
+	function &getJournal() {
 		return $this->_journal;
 	}
 
-	/** @var O4DOIObjectCache A cache for publication objects */
+	/** @var PubObjectCache A cache for publication objects */
 	var $_cache;
 
 	/**
 	 * Get the object cache.
-	 * @return O4DOIObjectCache
+	 * @return PubObjectCache
 	 */
-	function &_getCache() {
+	function &getCache() {
 		return $this->_cache;
 	}
 
@@ -234,18 +190,15 @@ class O4DOIExportDom {
 	 * @param $request Request
 	 * @param $schema string One of the O4DOI_* schema constants.
 	 * @param $journal Journal
-	 * @param $objectCache O4DOIObjectCache
+	 * @param $objectCache PubObjectCache
 	 * @param $exportIssuesAs Whether issues are exported as work
 	 *  or as manifestation. One of the O4DOI_* schema constants.
 	 */
 	function O4DOIExportDom(&$request, $schema, &$journal, &$objectCache, $exportIssuesAs) {
 		// Configure the DOM.
-		$this->_doc =& XMLCustomWriter::createDocument();
+		parent::DoiExportDom($request, $journal, $objectCache);
 		$this->_schema = $schema;
 		$this->_schemaInfo = $this->_setSchemaInfo($this->_getSchema());
-		$this->_request =& $request;
-		$this->_journal =& $journal;
-		$this->_cache =& $objectCache;
 		$this->_exportIssuesAs = $exportIssuesAs;
 	}
 
@@ -254,37 +207,25 @@ class O4DOIExportDom {
 	// Public methods
 	//
 	/**
-	 * Generate the O4DOI XML document.
+	 * @see DoiExportDom::generate()
 	 *
-	 * This method either returns a fully validated O4DOI document
-	 * containing all given objects for export or it returns a boolean
-	 * 'false' to indicate an error.
-	 *
-	 * If one or more errors occur then O4DOIExportDom::getErrors()
-	 * will return localized error details for display by the client.
-	 *
-	 * @param $objects array An array of issues, articles or galleys. The
-	 *  array must not contain more than one object type.
 	 * @param $publicationCountry string This would normally have to be
 	 *  a journal property but it isn't. We therefore pass it into this
 	 *  method as an external parameter.
-	 *
-	 * @return XMLNode|DOMImplementation|boolean An XML document or 'false'
-	 *  if an error occurred.
 	 */
 	function &generate(&$objects, $publicationCountry) {
 		$falseVar = false;
 
-		// Create the root element.
-		$doc =& $this->_getDoc();
-		$rootElement =& $this->_rootElement();
+		// Create the XML document and its root element.
+		$doc =& $this->getDoc();
+		$rootElement =& $this->rootElement();
 		XMLCustomWriter::appendChild($doc, $rootElement);
 
 		// The publisher is needed, both in the header and the payload.
-		$journal =& $this->_getJournal();
+		$journal =& $this->getJournal();
 		$publisher = $journal->getSetting('publisherInstitution');
 		if (empty($publisher)) {
-			$this->_addError('plugins.importexport.medra.export.error.publisherNotSet');
+			$this->_addError('plugins.importexport.common.export.error.publisherNotSet');
 			return $falseVar;
 		}
 
@@ -300,6 +241,77 @@ class O4DOIExportDom {
 		}
 
 		return $doc;
+	}
+
+
+	//
+	// Implement protected template methods from DoiExportDom
+	//
+	/**
+	 * @see DoiExportDom::getRootElementName()
+	 */
+	function getRootElementName() {
+		return $this->_getSchemaInfo('rootElementName');
+	}
+
+	/**
+	 * @see DoiExportDom::getNamespace()
+	 */
+	function getNamespace() {
+		return O4DOI_XMLNS;
+	}
+
+	/**
+	 * @see DoiExportDom::getXmlSchemaLocation()
+	 */
+	function getXmlSchemaLocation() {
+		return O4DOI_XSI_SCHEMALOCATION;
+	}
+
+	/**
+	 * Retrieve all the OJS publication objects containing the
+	 * data required to generate the given O4DOI schema.
+	 *
+	 * @param $object Issue|PublishedArticle|ArticleGalley The object to export.
+	 *
+	 * @return array An array with the required OJS objects.
+	 */
+	function &retrievePublicationObjects(&$object) {
+		// Initialize local variables.
+		$nullVar = null;
+ 		$journal =& $this->getJournal();
+ 		$cache =& $this->getCache();
+
+		// Retrieve basic OJS objects.
+		$publicationObjects = parent::retrievePublicationObjects($object);
+
+		// Retrieve additional related objects.
+		// For articles and galleys: Retrieve all galleys of the article:
+		if (is_a($object, 'PublishedArticle') || is_a($object, 'ArticleGalley')) {
+			assert(isset($publicationObjects['article']));
+			$publicationObjects['galleysByArticle'] =& $this->retrieveGalleysByArticle($publicationObjects['article']);
+		}
+
+		// For issues: Retrieve all articles and galleys of the issue:
+		if (is_a($object, 'Issue')) {
+			// Articles by issue.
+			assert(isset($publicationObjects['issue']));
+			$issue =& $publicationObjects['issue'];
+			$publicationObjects['articlesByIssue'] =& $this->retrieveArticlesByIssue($issue);
+
+			// Galleys by issue.
+			$issueId = $issue->getId();
+			if (!$cache->isCached('galleysByIssue', $issueId)) {
+				foreach($publicationObjects['articlesByIssue'] as $article) {
+					$this->retrieveGalleysByArticle($article);
+					unset($article);
+				}
+				$cache->markComplete('galleysByIssue', $issueId);
+			}
+			$publicationObjects['galleysByIssue'] =& $cache->get('galleysByIssue', $issueId);
+		}
+
+		return $publicationObjects;
 	}
 
 
@@ -349,24 +361,6 @@ class O4DOIExportDom {
 	}
 
 	/**
-	 * Generate the O4DOI root element depending on the
-	 * given schema type.
-	 *
-	 * @return XMLNode|DOMImplementation
-	 */
-	function &_rootElement() {
-		// Create the root element and make it the document element of the document.
-		$rootElement =& XMLCustomWriter::createElement($this->_getDoc(), $this->_getRootElementName());
-
-		// Add root-level attributes.
-		XMLCustomWriter::setAttribute($rootElement, 'xmlns', O4DOI_XMLNS);
-		XMLCustomWriter::setAttribute($rootElement, 'xmlns:xsi', O4DOI_XMLNS_XSI);
-		XMLCustomWriter::setAttribute($rootElement, 'xsi:schemaLocation', O4DOI_XSI_SCHEMALOCATION);
-
-		return $rootElement;
-	}
-
-	/**
 	 * Generate the O4DOI header element.
 	 *
 	 * @param $fromCompany string
@@ -375,11 +369,11 @@ class O4DOIExportDom {
 	 */
 	function &_headerElement($fromCompany) {
 		$falseVar = false;
-		$journal =& $this->_getJournal();
-		$headerElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Header');
+		$journal =& $this->getJournal();
+		$headerElement =& XMLCustomWriter::createElement($this->getDoc(), 'Header');
 
 		// Publisher (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'FromCompany', $fromCompany);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'FromCompany', $fromCompany);
 
 		// Technical Contact
 		$technicalContact = $journal->getSetting('supportName');
@@ -388,7 +382,7 @@ class O4DOIExportDom {
 			if (!empty($technicalContactPhone)) {
 				$technicalContact .= ', ' . $technicalContactPhone;
 			}
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'FromPerson', $technicalContact);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'FromPerson', $technicalContact);
 		}
 
 		// Technical Contact Email (mandatory)
@@ -397,20 +391,20 @@ class O4DOIExportDom {
 			$this->_addError('plugins.importexport.medra.export.error.supportEmailNotSet');
 			return $falseVar;
 		}
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'FromEmail', $technicalContactEmail);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'FromEmail', $technicalContactEmail);
 
 		// Addressee
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'ToCompany', 'mEDRA');
+		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'ToCompany', 'mEDRA');
 
 		// Timestamp
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'SentDate', date('YmdHi'));
+		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'SentDate', date('YmdHi'));
 
 		// Message note
 		$app =& PKPApplication::getApplication();
 		$name = $app->getName();
 		$version = $app->getCurrentVersion();
 		$versionString = $version->getVersionString();
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $headerElement, 'MessageNote', "This dataset was exported with $name, version $versionString.");
+		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'MessageNote', "This dataset was exported with $name, version $versionString.");
 
 		return $headerElement;
 	}
@@ -425,8 +419,12 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_objectElement(&$object, $publisher, $publicationCountry) {
+		// Initialize local variables.
 		$falseVar = false;
-		$journal =& $this->_getJournal();
+		$journal =& $this->getJournal();
+
+		// Make sure that the schema and the object combine.
+		assert(is_a($object, $this->_getObjectType()));
 
 		// Declare variables that will contain publication objects.
 		$issue = null; /* @var $issue Issue */
@@ -437,25 +435,25 @@ class O4DOIExportDom {
 		$galleysByIssue = null;
 
 		// Retrieve required publication objects (depends on the schema of this DOM).
-		$pubObjects =& $this->_retrievePublicationObjects($object);
+		$pubObjects =& $this->retrievePublicationObjects($object);
 		extract($pubObjects);
 
 		// Main object element.
-		$objectElement =& XMLCustomWriter::createElement($this->_getDoc(), $this->_getObjectElementName());
+		$objectElement =& XMLCustomWriter::createElement($this->getDoc(), $this->_getObjectElementName());
 
 		// Notification type (mandatory, 06 - new record)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'NotificationType', O4DOI_NOTIFICATION_TYPE_NEW);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'NotificationType', O4DOI_NOTIFICATION_TYPE_NEW);
 
 		// DOI (mandatory)
 		$doi = $object->getPubId('doi');
 		if (empty($doi)) {
-			$this->_addError('plugins.importexport.medra.export.error.noDoiAssigned', $object->getId());
+			$this->_addError('plugins.importexport.common.export.error.noDoiAssigned', $object->getId());
 			return $falseVar;
 		}
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'DOI', $doi);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOI', $doi);
 
 		// DOI URL (mandatory)
-		$request =& $this->_getRequest();
+		$request =& $this->getRequest();
 		$router =& $request->getRouter();
 		switch ($this->_getSchema()) {
 			case O4DOI_ISSUE_AS_WORK:
@@ -472,36 +470,23 @@ class O4DOIExportDom {
 				break;
 		}
 		assert(!empty($url));
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'DOIWebsiteLink', $url);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOIWebsiteLink', $url);
 
 		// DOI strucural type
 		if ($this->_isWork()) {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'DOIStructuralType', 'Abstraction');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOIStructuralType', 'Abstraction');
 		} else {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'DOIStructuralType', 'Digital Fixation');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOIStructuralType', 'Digital Fixation');
 		}
 
 		// Registrant (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'RegistrantName', $publisher);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'RegistrantName', $publisher);
 
 		// Registration authority (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $objectElement, 'RegistrationAuthority', 'mEDRA');
+		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'RegistrationAuthority', 'mEDRA');
 
-		// Internal ID
-		$internalId = '';
-		switch ($this->_getSchema()) {
-			case O4DOI_ARTICLE_AS_MANIFESTATION:
-				$internalId = '-' . $galley->getId();
-
-			case O4DOI_ARTICLE_AS_WORK:
-				$internalId = '-' . $article->getId() . $internalId;
-
-			case O4DOI_ISSUE_AS_WORK:
-			case O4DOI_ISSUE_AS_MANIFESTATION:
-				$internalId = '-' . $issue->getId() . $internalId;
-		}
-		$internalId = $journal->getId() . $internalId;
-		XMLCustomWriter::appendChild($objectElement, $this->_idElement($this->_isWork()?'Work':'Product', O4DOI_ID_TYPE_PROPRIETARY, $internalId));
+		// Proprietary ID
+		XMLCustomWriter::appendChild($objectElement, $this->_idElement($this->_isWork()?'Work':'Product', O4DOI_ID_TYPE_PROPRIETARY, $this->getProprietaryId($journal, $issue, $article, $galley)));
 
 		// Serial Publication (mandatory)
 		XMLCustomWriter::appendChild($objectElement, $this->_serialPublicationElement($issue, $publisher, $publicationCountry));
@@ -547,7 +532,7 @@ class O4DOIExportDom {
 				// - is part of issue-as-manifestation
 				$issueWorkOrProduct = 'Product';
 			}
-			$relatedIssueIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId());
+			$relatedIssueIds = array(O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue));
 			$doi = $issue->getPubId('doi');
 			if (!empty($doi)) $relatedIssueIds[O4DOI_ID_TYPE_DOI] = $doi;
 			$relatedIssueElement =& $this->_relationElement($issueWorkOrProduct, O4DOI_RELATION_IS_PART_OF, $relatedIssueIds);
@@ -560,7 +545,7 @@ class O4DOIExportDom {
 				// - is manifested in articles-as-manifestation
 				foreach($galleysByArticle as $relatedGalley) {
 					$relatedGalleyIds = array(
-						O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId() . '-' . $relatedGalley->getId()
+						O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue, $article, $relatedGalley)
 					);
 					$doi = $relatedGalley->getPubId('doi');
 					if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
@@ -576,7 +561,7 @@ class O4DOIExportDom {
 
 				// related work:
 				// - is a manifestation of article-as-work
-				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId());
+				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue, $article));
 				$doi = $article->getPubId('doi');
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_IS_A_MANIFESTATION_OF, $relatedArticleIds);
@@ -589,7 +574,7 @@ class O4DOIExportDom {
 				// related products:
 				foreach($galleysByArticle as $relatedGalley) {
 					$relatedGalleyIds = array(
-						O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $article->getId() . '-' . $relatedGalley->getId()
+						O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue, $article, $relatedGalley)
 					);
 					$doi = $relatedGalley->getPubId('doi');
 					if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
@@ -623,7 +608,7 @@ class O4DOIExportDom {
 			// related works:
 			// - includes articles-as-work
 			foreach ($articlesByIssue as $relatedArticle) {
-				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $relatedArticle->getId());
+				$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue, $relatedArticle));
 				$doi = $relatedArticle->getPubId('doi');
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_INCLUDES, $relatedArticleIds);
@@ -635,7 +620,7 @@ class O4DOIExportDom {
 			// - includes articles-as-manifestation
 			foreach($galleysByIssue as $relatedGalley) {
 				$relatedGalleyIds = array(
-					O4DOI_ID_TYPE_PROPRIETARY => $journal->getId() . '-' . $issue->getId() . '-' . $relatedGalley->getArticleId() . '-' . $relatedGalley->getId()
+					O4DOI_ID_TYPE_PROPRIETARY => $this->getProprietaryId($journal, $issue, $relatedGalley, $relatedGalley)
 				);
 				$doi = $relatedGalley->getPubId('doi');
 				if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
@@ -649,120 +634,6 @@ class O4DOIExportDom {
 	}
 
 	/**
-	 * Retrieve all the OJS publication objects containing the
-	 * data required to generate the given O4DOI schema.
-	 *
-	 * @param $object Issue|PublishedArticle|ArticleGalley The object to export.
-	 *
-	 * @return array An array with the required OJS objects.
-	 */
-	function &_retrievePublicationObjects(&$object) {
-		$nullVar = null;
- 		$journal =& $this->_getJournal();
- 		$cache =& $this->_getCache();
-
-		// Make sure that the schema and the object combine.
-		assert(is_a($object, $this->_getObjectType()));
-
-		// Retrieve additional OJS objects required for the given schema.
-		$publicationObjects = array();
-		switch ($this->_getSchema()) {
-			case O4DOI_ISSUE_AS_WORK:
-			case O4DOI_ISSUE_AS_MANIFESTATION:
-				$cache->add($object, $nullVar);
-				$publicationObjects['issue'] =& $object;
-				break;
-
-			case O4DOI_ARTICLE_AS_WORK:
-				$cache->add($object, $nullVar);
-				$publicationObjects['article'] =& $object;
-				break;
-
-			case O4DOI_ARTICLE_AS_MANIFESTATION:
-				$publicationObjects['galley'] =& $object;
-				$articleId = $object->getArticleId();
-				if ($cache->isCached('articles', $articleId)) {
-					$article =& $cache->get('articles', $articleId);
-				} else {
-					$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-					$article =& $articleDao->getPublishedArticleByArticleId($articleId, $journal->getId());
-					if ($article) $cache->add($article, $nullVar);
-				}
-				assert(is_a($article, 'PublishedArticle'));
-				$cache->add($object, $article);
-				$publicationObjects['article'] =& $article;
-				break;
-		}
-
-		// Retrieve the issue if it's not yet there.
-		if (!isset($publicationObjects['issue'])) {
-			assert(isset($publicationObjects['article']));
-			$issueId = $publicationObjects['article']->getIssueId();
-			if ($cache->isCached('issues', $issueId)) {
-				$issue =& $cache->get('issues', $issueId);
-			} else {
-				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
-				if ($issue) $cache->add($issue, $nullVar);
-			}
-			assert(is_a($issue, 'Issue'));
-			$publicationObjects['issue'] =& $issue;
-		}
-
-		// For articles: Retrieve all galleys of the article:
-		if ($this->_isArticle()) {
-			assert(isset($publicationObjects['article']));
-			$articleId = $publicationObjects['article']->getId();
-			if (!$cache->isCached('galleysByArticle', $articleId)) {
-				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-				$galleys =& $galleyDao->getGalleysByArticle($articleId);
-				foreach($galleys as $galley) {
-					$cache->add($galley, $publicationObjects['article']);
-					unset($galley);
-				}
-				$cache->markComplete('galleysByArticle', $articleId);
-			}
-			$publicationObjects['galleysByArticle'] =& $cache->get('galleysByArticle', $articleId);
-
-		// For issues: Retrieve all articles and galleys of the issue:
-		} else {
-			// Articles by issue
-			$issueId = $publicationObjects['issue']->getId();
-			if (!$cache->isCached('articlesByIssue', $issueId)) {
-				$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-				$articles =& $articleDao->getPublishedArticles($issueId);
-				foreach ($articles as $article) {
-					$cache->add($article, $nullVar);
-					unset($article);
-				}
-				$cache->markComplete('articlesByIssue', $issueId);
-			}
-			$publicationObjects['articlesByIssue'] =& $cache->get('articlesByIssue', $issueId);
-
-			// Galleys by issue
-			if (!$cache->isCached('galleysByIssue', $issueId)) {
-				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-				foreach($publicationObjects['articlesByIssue'] as $article) {
-					$articleId = $article->getId();
-					if (!$cache->isCached('galleysByArticle', $articleId)) {
-						$galleys =& $galleyDao->getGalleysByArticle($articleId);
-						foreach($galleys as $galley) {
-							$cache->add($galley, $article);
-							unset($galley);
-						}
-						$cache->markComplete('galleysByArticle', $articleId);
-					}
-					unset($article);
-				}
-				$cache->markComplete('galleysByIssue', $issueId);
-			}
-			$publicationObjects['galleysByIssue'] =& $cache->get('galleysByIssue', $issueId);
-		}
-
-		return $publicationObjects;
-	}
-
-	/**
 	 * Create a work or product id element.
 	 *
 	 * @param $workOrProduct string "Work" or "Product"
@@ -772,13 +643,13 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_idElement($workOrProduct, $idType, $id) {
-		$idElement =& XMLCustomWriter::createElement($this->_getDoc(), "${workOrProduct}Identifier");
+		$idElement =& XMLCustomWriter::createElement($this->getDoc(), "${workOrProduct}Identifier");
 
 		// ID type (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $idElement, "${workOrProduct}IDType", $idType);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $idElement, "${workOrProduct}IDType", $idType);
 
 		// ID (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $idElement, 'IDValue', $id);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $idElement, 'IDValue', $id);
 
 		return $idElement;
 	}
@@ -793,8 +664,8 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialPublicationElement(&$issue, $publisher, $publicationCountry) {
-		$journal =& $this->_getJournal();
-		$serialElement =& XMLCustomWriter::createElement($this->_getDoc(), 'SerialPublication');
+		$journal =& $this->getJournal();
+		$serialElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialPublication');
 
 		// Serial Work (mandatory)
 		XMLCustomWriter::appendChild($serialElement, $this->_serialWorkElement($publisher, $publicationCountry));
@@ -820,8 +691,8 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialWorkElement($publisher, $publicationCountry) {
-		$journal =& $this->_getJournal();
-		$serialWorkElement =& XMLCustomWriter::createElement($this->_getDoc(), 'SerialWork');
+		$journal =& $this->getJournal();
+		$serialWorkElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialWork');
 
 		// Title (mandatory)
 		$foundATitle = false;
@@ -838,7 +709,7 @@ class O4DOIExportDom {
 		XMLCustomWriter::appendChild($serialWorkElement, $this->_publisherElement($publisher));
 
 		// Country of Publication (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $serialWorkElement, 'CountryOfPublication', $publicationCountry);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $serialWorkElement, 'CountryOfPublication', $publicationCountry);
 
 		return $serialWorkElement;
 	}
@@ -852,7 +723,7 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_titleElement($locale, $localizedTitle) {
-		$titleElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Title');
+		$titleElement =& XMLCustomWriter::createElement($this->getDoc(), 'Title');
 
 		// Text format
 		XMLCustomWriter::setAttribute($titleElement, 'textformat', O4DOI_TEXTFORMAT_DEFAULT);
@@ -863,10 +734,10 @@ class O4DOIExportDom {
 		XMLCustomWriter::setAttribute($titleElement, 'language', $language);
 
 		// Title type (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $titleElement, 'TitleType', O4DOI_TITLE_TYPE_FULL);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $titleElement, 'TitleType', O4DOI_TITLE_TYPE_FULL);
 
 		// Title text (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $titleElement, 'TitleText', $localizedTitle);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $titleElement, 'TitleText', $localizedTitle);
 
 		return $titleElement;
 	}
@@ -879,13 +750,13 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_publisherElement($publisher) {
-		$publisherElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Publisher');
+		$publisherElement =& XMLCustomWriter::createElement($this->getDoc(), 'Publisher');
 
 		// Publishing role (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $publisherElement, 'PublishingRole', O4DOI_PUBLISHING_ROLE_PUBLISHER);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $publisherElement, 'PublishingRole', O4DOI_PUBLISHING_ROLE_PUBLISHER);
 
 		// Publisher name (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $publisherElement, 'PublisherName', $publisher);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $publisherElement, 'PublisherName', $publisher);
 
 		return $publisherElement;
 	}
@@ -899,12 +770,12 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialVersionElement($issn, $productForm) {
-		$journal =& $this->_getJournal();
-		$serialVersionElement =& XMLCustomWriter::createElement($this->_getDoc(), 'SerialVersion');
+		$journal =& $this->getJournal();
+		$serialVersionElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialVersion');
 
 		// Proprietary Journal Identifier
 		if ($productForm == O4DOI_PRODUCT_FORM_ELECTRONIC) {
-			XMLCustomWriter::appendChild($serialVersionElement, $this->_idElement('Product', O4DOI_ID_TYPE_PROPRIETARY, $journal->getId()));
+			XMLCustomWriter::appendChild($serialVersionElement, $this->_idElement('Product', O4DOI_ID_TYPE_PROPRIETARY, $this->getProprietaryID($journal)));
 		}
 
 		// ISSN
@@ -914,14 +785,14 @@ class O4DOIExportDom {
 		}
 
 		// Product Form
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $serialVersionElement, 'ProductForm', $productForm);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $serialVersionElement, 'ProductForm', $productForm);
 
 		if ($productForm == O4DOI_PRODUCT_FORM_ELECTRONIC) {
 			// ePublication Format
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $serialVersionElement, 'EpubFormat', O4DOI_EPUB_FORMAT_HTML);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $serialVersionElement, 'EpubFormat', O4DOI_EPUB_FORMAT_HTML);
 
 			// ePublication Format Description
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $serialVersionElement, 'EpubFormatDescription', 'Open Journal Systems (OJS)');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $serialVersionElement, 'EpubFormatDescription', 'Open Journal Systems (OJS)');
 		}
 
 		return $serialVersionElement;
@@ -935,24 +806,24 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_journalIssueElement(&$issue) {
-		$journalIssueElement =& XMLCustomWriter::createElement($this->_getDoc(), 'JournalIssue');
+		$journalIssueElement =& XMLCustomWriter::createElement($this->getDoc(), 'JournalIssue');
 
 		// Volume
 		$volume = $issue->getVolume();
 		if (!empty($volume)) {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $journalIssueElement, 'JournalVolumeNumber', $volume);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $journalIssueElement, 'JournalVolumeNumber', $volume);
 		}
 
 		// Number
 		$number = $issue->getNumber();
 		if (!empty($number)) {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $journalIssueElement, 'JournalIssueNumber', $number);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $journalIssueElement, 'JournalIssueNumber', $number);
 		}
 
 		// Identification
 		$identification = $issue->getIssueIdentification();
 		if (!empty($identification)) {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $journalIssueElement, 'JournalIssueDesignation', $identification);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $journalIssueElement, 'JournalIssueDesignation', $identification);
 		}
 
 		assert(!(empty($number) && empty($identification)));
@@ -961,8 +832,8 @@ class O4DOIExportDom {
 		$year = (string)$issue->getYear();
 		$yearlen = strlen($year);
 		if (!empty($year) && ($yearlen == 2 || $yearlen == 4)) {
-			$issueDate =& XMLCustomWriter::createElement($this->_getDoc(), 'JournalIssueDate');
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $issueDate, 'DateFormat', O4DOI_DATE_FORMAT_YYYY);
+			$issueDate =& XMLCustomWriter::createElement($this->getDoc(), 'JournalIssueDate');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $issueDate, 'DateFormat', O4DOI_DATE_FORMAT_YYYY);
 
 			// Try to extend the year if necessary.
 			if ($yearlen == 2) {
@@ -974,21 +845,20 @@ class O4DOIExportDom {
 					$year = '19' . $year;
 				}
 			}
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $issueDate, 'Date', $year);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $issueDate, 'Date', $year);
 			XMLCustomWriter::appendChild($journalIssueElement, $issueDate);
 		}
 
 		// Extent (for issues-as-manifestation only)
-		// FIXME: Uncomment this in dev.
-		// if (!$this->_isWork()) {
-		//	$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-		//	$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
-		//	if (!empty($issueGalleys)) {
-		//		foreach($issueGalleys as $issueGalley) {
-		//			XMLCustomWriter::appendChild($journalIssueElement, $this->_extentElement($issueGalley));
-		//		}
-		//	}
-		// }
+		if (!$this->_isWork()) {
+			$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+			$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
+			if (!empty($issueGalleys)) {
+				foreach($issueGalleys as $issueGalley) {
+					XMLCustomWriter::appendChild($journalIssueElement, $this->_extentElement($issueGalley));
+				}
+			}
+		}
 
 		if ($this->_getObjectType() == 'Issue') {
 			// Publication Date
@@ -998,7 +868,7 @@ class O4DOIExportDom {
 			}
 
 			// Issue Title (mandatory)
-			$journal =& $this->_getJournal();
+			$journal =& $this->getJournal();
 			$foundATitle = false;
 			foreach ($this->_getExportLanguages($journal) as $locale => $localeName) {
 				$localizedTitle = $issue->getTitle($locale);
@@ -1025,21 +895,21 @@ class O4DOIExportDom {
 	/**
 	 * Create an extent element.
 	 *
-	 * @param $file ArticleFile
+	 * @param $file PKPFile
 	 *
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_extentElement(&$file) {
-		$extentElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Extent');
+		$extentElement =& XMLCustomWriter::createElement($this->getDoc(), 'Extent');
 
 		// Extent type
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $extentElement, 'ExtentType', O4DOI_EXTENT_TYPE_FILESIZE);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $extentElement, 'ExtentType', O4DOI_EXTENT_TYPE_FILESIZE);
 
 		// Extent value
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $extentElement, 'ExtentValue', $file->getFileSize());
+		XMLCustomWriter::createChildWithText($this->getDoc(), $extentElement, 'ExtentValue', $file->getFileSize());
 
 		// Extent unit
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $extentElement, 'ExtentUnit', O4DOI_EXTENT_UNIT_BYTES);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $extentElement, 'ExtentUnit', O4DOI_EXTENT_UNIT_BYTES);
 
 		return $extentElement;
 	}
@@ -1052,10 +922,7 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_publicationDateElement($datePublished) {
-		$publicationDateElement =& XMLCustomWriter::createElement($this->_getDoc(), 'PublicationDate');
-		$textNode =& XMLCustomWriter::createTextNode($this->_getDoc(), date('Ymd', strtotime($datePublished)));
-		XMLCustomWriter::appendChild($publicationDateElement, $textNode);
-		return $publicationDateElement;
+		return $this->createElementWithText('PublicationDate', date('Ymd', strtotime($datePublished)));
 	}
 
 	/**
@@ -1068,18 +935,18 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_contentItemElement(&$article, &$galley) {
-		$contentItemElement =& XMLCustomWriter::createElement($this->_getDoc(), 'ContentItem');
+		$contentItemElement =& XMLCustomWriter::createElement($this->getDoc(), 'ContentItem');
 
 		// Sequence number
 		$seq = $article->getSeq();
 		assert(!empty($seq));
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $contentItemElement, 'SequenceNumber', $seq);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $contentItemElement, 'SequenceNumber', $seq);
 
 		// Number of pages
 		$pages = $article->getPages();
 		if (!empty($pages)) {
-			$textItemElement =& XMLCustomWriter::createElement($this->_getDoc(), 'TextItem');
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $textItemElement, 'NumberOfPages', $pages);
+			$textItemElement =& XMLCustomWriter::createElement($this->getDoc(), 'TextItem');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $textItemElement, 'NumberOfPages', $pages);
 			XMLCustomWriter::appendChild($contentItemElement, $textItemElement);
 		}
 
@@ -1095,22 +962,12 @@ class O4DOIExportDom {
 		}
 
 		// Primary locale of the object.
-		$primaryObjectLocale = null;
-		if (is_a($galley, 'ArticleGalley')) {
-			$primaryObjectLocale = $galley->getLocale();
-		}
-		if (empty($primaryObjectLocale) && is_a($article, 'PublishedArticle')) {
-			$primaryObjectLocale = $article->getLocale();
-		}
-		if (empty($primaryObjectLocale)) {
-			$primaryObjectLocale = $journal->getPrimaryLocale();
-		}
-		assert(AppLocale::isLocaleValid($primaryObjectLocale));
-		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
+		$primaryObjectLocale = $this->getPrimaryObjectLocale($article, $galley);
 
 		// Article Title (mandatory)
+		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
 		$foundATitle = false;
-		$journal =& $this->_getJournal();
+		$journal =& $this->getJournal();
 		foreach ($this->_getExportLanguages($journal) as $locale => $localeName) {
 			$localizedTitle = $article->getTitle($locale);
 			if (!empty($localizedTitle)) {
@@ -1140,9 +997,9 @@ class O4DOIExportDom {
 		// Language
 		$languageCode = AppLocale::get3LetterIsoFromLocale($primaryObjectLocale);
 		assert(!empty($languageCode));
-		$languageElement = XMLCustomWriter::createElement($this->_getDoc(), 'Language');
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $languageElement, 'LanguageRole', O4DOI_LANGUAGE_ROLE_LANGUAGE_OF_TEXT);
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $languageElement, 'LanguageCode', $languageCode);
+		$languageElement = XMLCustomWriter::createElement($this->getDoc(), 'Language');
+		XMLCustomWriter::createChildWithText($this->getDoc(), $languageElement, 'LanguageRole', O4DOI_LANGUAGE_ROLE_LANGUAGE_OF_TEXT);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $languageElement, 'LanguageCode', $languageCode);
 		XMLCustomWriter::appendChild($contentItemElement, $languageElement);
 
 		// Article keywords
@@ -1155,28 +1012,7 @@ class O4DOIExportDom {
 		}
 
 		// Subject class
-		$subjectSchemeTitle = $journal->getSetting('metaSubjectClassTitle', $primaryObjectLocale);
-		if (empty($subjectSchemeTitle)) {
-			$subjectSchemeTitle = $journal->getLocalizedSetting('metaSubjectClassTitle');
-		}
-		$subjectSchemeUrl = $journal->getSetting('metaSubjectClassUrl', $primaryObjectLocale);
-		if ($subjectSchemeUrl == 'http://') $subjectSchemeUrl = '';
-		if (empty($subjectSchemeUrl)) {
-			$subjectSchemeUrl = $journal->getLocalizedSetting('metaSubjectClassUrl');
-		}
-		if (empty($subjectSchemeTitle)) {
-			$subjectSchemeName = $subjectSchemeUrl;
-		} else {
-			if (empty($subjectSchemeUrl)) {
-				$subjectSchemeName = $subjectSchemeTitle;
-			} else {
-				$subjectSchemeName = "$subjectSchemeTitle ($subjectSchemeUrl)";
-			}
-		}
-		$subjectCode = $article->getSubjectClass($primaryObjectLocale);
-		if (empty($subjectCode)) {
-			$subjectCode = $article->getLocalizedSubjectClass();
-		}
+		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($article, $primaryObjectLocale);
 		if (!(empty($subjectSchemeName) || empty($subjectCode))) {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_subjectElement(O4DOI_SUBJECT_SCHEME_PROPRIETARY, $subjectCode, $subjectSchemeName));
 		}
@@ -1193,25 +1029,25 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_contributorElement(&$author, $primaryObjectLocale) {
-		$contributorElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Contributor');
+		$contributorElement =& XMLCustomWriter::createElement($this->getDoc(), 'Contributor');
 
 		// Sequence number
 		$seq = $author->getSequence();
 		assert(!empty($seq));
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $contributorElement, 'SequenceNumber', $seq);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'SequenceNumber', $seq);
 
 		// Contributor role (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $contributorElement, 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR);
 
 		// Person name (mandatory)
 		$personName = $author->getFullName();
 		assert(!empty($personName));
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $contributorElement, 'PersonName', $personName);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'PersonName', $personName);
 
 		// Inverted person name
 		$invertedPersonName = $author->getFullName(true);
 		assert(!empty($invertedPersonName));
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $contributorElement, 'PersonNameInverted', $invertedPersonName);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'PersonNameInverted', $invertedPersonName);
 
 		// Affiliation
 		$affiliation = $author->getAffiliation($primaryObjectLocale);
@@ -1219,8 +1055,8 @@ class O4DOIExportDom {
 			$affiliation = $author->getLocalizedAffiliation();
 		}
 		if (!empty($affiliation)) {
-			$affiliationElement = XMLCustomWriter::createElement($this->_getDoc(), 'ProfessionalAffiliation');
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $affiliationElement, 'Affiliation', $affiliation);
+			$affiliationElement = XMLCustomWriter::createElement($this->getDoc(), 'ProfessionalAffiliation');
+			XMLCustomWriter::createChildWithText($this->getDoc(), $affiliationElement, 'Affiliation', $affiliation);
 			XMLCustomWriter::appendChild($contributorElement, $affiliationElement);
 		}
 
@@ -1230,7 +1066,7 @@ class O4DOIExportDom {
 			$bioNote = $author->getLocalizedBiography();
 		}
 		if (!empty($bioNote)) {
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $contributorElement, 'BiographicalNote', $bioNote);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'BiographicalNote', $bioNote);
 		}
 
 		return $contributorElement;
@@ -1246,20 +1082,20 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_subjectElement($subjectSchemeId, $subjectHeadingOrCode, $subjectSchemeName = null) {
-		$subjectElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Subject');
+		$subjectElement =& XMLCustomWriter::createElement($this->getDoc(), 'Subject');
 
 		// Subject Scheme Identifier
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $subjectElement, 'SubjectSchemeIdentifier', $subjectSchemeId);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $subjectElement, 'SubjectSchemeIdentifier', $subjectSchemeId);
 
 		if (is_null($subjectSchemeName)) {
 			// Subject Heading
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $subjectElement, 'SubjectHeadingText', $subjectHeadingOrCode);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $subjectElement, 'SubjectHeadingText', $subjectHeadingOrCode);
 		} else {
 			// Subject Scheme Name
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $subjectElement, 'SubjectSchemeName', $subjectSchemeName);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $subjectElement, 'SubjectSchemeName', $subjectSchemeName);
 
 			// Subject Code
-			XMLCustomWriter::createChildWithText($this->_getDoc(), $subjectElement, 'SubjectCode', $subjectHeadingOrCode);
+			XMLCustomWriter::createChildWithText($this->getDoc(), $subjectElement, 'SubjectCode', $subjectHeadingOrCode);
 		}
 
 		return $subjectElement;
@@ -1274,24 +1110,21 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_otherTextElement($locale, $description) {
-		$otherTextElement =& XMLCustomWriter::createElement($this->_getDoc(), 'OtherText');
+		$otherTextElement =& XMLCustomWriter::createElement($this->getDoc(), 'OtherText');
 
-		// Text type
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $otherTextElement, 'TextTypeCode', O4DOI_TEXT_TYPE_MAIN_DESCRIPTION);
+		// Text Type
+		XMLCustomWriter::createChildWithText($this->getDoc(), $otherTextElement, 'TextTypeCode', O4DOI_TEXT_TYPE_MAIN_DESCRIPTION);
 
-		// Text
-		$textElement =& XMLCustomWriter::createElement($this->_getDoc(), 'Text');
-		$textElementContent =& XMLCustomWriter::createTextNode($this->_getDoc(), $description);
-		XMLCustomWriter::appendChild($textElement, $textElementContent);
-
-		// Text format
-		XMLCustomWriter::setAttribute($textElement, 'textformat', O4DOI_TEXTFORMAT_DEFAULT);
-
-		// Language
+		// Text Language
 		$language = AppLocale::get3LetterIsoFromLocale($locale);
 		assert(!empty($language));
-		XMLCustomWriter::setAttribute($textElement, 'language', $language);
 
+		// Text element and attributes
+		$attributes = array(
+			'textformat' => O4DOI_TEXTFORMAT_DEFAULT,
+			'language' => $language
+		);
+		$textElement =& $this->createElementWithText('Text', $description, $attributes);
 		XMLCustomWriter::appendChild($otherTextElement, $textElement);
 
 		return $otherTextElement;
@@ -1307,10 +1140,10 @@ class O4DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_relationElement($workOrProduct, $relationCode, $ids) {
-		$relationElement =& XMLCustomWriter::createElement($this->_getDoc(), "Related$workOrProduct");
+		$relationElement =& XMLCustomWriter::createElement($this->getDoc(), "Related$workOrProduct");
 
 		// Relation code (mandatory)
-		XMLCustomWriter::createChildWithText($this->_getDoc(), $relationElement, 'RelationCode', $relationCode);
+		XMLCustomWriter::createChildWithText($this->getDoc(), $relationElement, 'RelationCode', $relationCode);
 
 		// Work/Product ID (mandatory)
 		foreach($ids as $idType => $id) {

@@ -1,5 +1,5 @@
 {**
- * @file plugins/importexport/medra/templates/galleys.tpl
+ * @file plugins/importexport/datacite/templates/galleys.tpl
  *
  * Copyright (c) 2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -26,7 +26,6 @@
 <br/>
 
 <div id="galleys">
-	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
 	<form action="{plugin_url path="exportGalleys"}" method="post" name="galleys">
 		<table width="100%" class="listing">
 			<tr>
