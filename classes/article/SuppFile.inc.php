@@ -94,8 +94,8 @@ class SuppFile extends ArticleFile {
 	 * @param $locale string
 	 * @return string
 	 */
-	function getTitle() {
-		return $this->getData('title');
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
 
 	/**
