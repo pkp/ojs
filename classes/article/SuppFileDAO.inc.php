@@ -75,7 +75,7 @@ class SuppFileDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
-			$articleId
+			(int) $articleId
 		);
 
 		while (!$result->EOF) {
