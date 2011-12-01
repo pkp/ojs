@@ -79,7 +79,8 @@ class ImportExportPlugin extends Plugin {
 
 	/**
 	 * Display the import/export plugin UI.
-	 * @param $args Array The array of arguments the user supplied.
+	 * @param $args array The array of arguments the user supplied.
+	 * @param $request Request
 	 */
 	function display(&$args, $request) {
 		$templateManager =& TemplateManager::getManager();
