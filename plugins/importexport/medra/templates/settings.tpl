@@ -11,22 +11,42 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="medraSettings">
+	{include file="common/formErrors.tpl"}
 	<br />
 	<br />
 
-	<div id="description">{translate key="plugins.importexport.medra.settings.form.description"}</div>
+	<div id="description"><b>{translate key="plugins.importexport.medra.settings.form.description"}</b></div>
 
 	<br />
 
 	<form method="post" action="{plugin_url path="settings"}">
-		{include file="common/formErrors.tpl"}
 		<table width="100%" class="data">
 			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="exportIssuesAs" required="true" key="plugins.importexport.medra.settings.form.exportIssuesAs"}</td>
+				<td width="20%" class="label">{fieldLabel name="registrantName" required="true" key="plugins.importexport.medra.settings.form.registrantName"}</td>
 				<td width="80%" class="value">
-					<select name="exportIssuesAs" id="exportIssuesAs" class="selectMenu">
-						{html_options options=$exportIssueOptions selected=$exportIssuesAs}
-					</select>
+					<input type="text" name="registrantName" value="{$registrantName|escape}" size="20" maxlength="50" id="registrantName" class="textField" />
+				</td>
+			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr valign="top">
+				<td width="20%" colspan="2" class="label">{fieldLabel name="fromFields" key="plugins.importexport.medra.settings.form.fromFields"}</td>
+			</tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="fromCompany" required="true" key="plugins.importexport.medra.settings.form.fromCompany"}</td>
+				<td width="80%" class="value">
+					<input type="text" name="fromCompany" value="{$fromCompany|escape}" size="20" maxlength="30" id="fromCompany" class="textField" />
+				</td>
+			</tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="fromName" required="true" key="plugins.importexport.medra.settings.form.fromName"}</td>
+				<td width="80%" class="value">
+					<input type="text" name="fromName" value="{$fromName|escape}" size="20" maxlength="50" id="fromName" class="textField" />
+				</td>
+			</tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="fromEmail" required="true" key="plugins.importexport.medra.settings.form.fromEmail"}</td>
+				<td width="80%" class="value">
+					<input type="text" name="fromEmail" value="{$fromEmail|escape}" size="20" maxlength="50" id="fromEmail" class="textField" />
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
@@ -35,6 +55,19 @@
 				<td width="80%" class="value">
 					<select name="publicationCountry" id="publicationCountry" class="selectMenu">
 						{html_options options=$countries selected=$publicationCountry}
+					</select>
+				</td>
+			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr valign="top">
+				<td width="20%" class="label">
+					{* We cannot use the form vocab here because it will escape the label
+					   and we need a link in there. *}
+					<label for="exportIssuesAs">{translate key="plugins.importexport.medra.settings.form.exportIssuesAs"} *</label>
+				</td>
+				<td width="80%" class="value">
+					<select name="exportIssuesAs" id="exportIssuesAs" class="selectMenu">
+						{html_options options=$exportIssueOptions selected=$exportIssuesAs}
 					</select>
 				</td>
 			</tr>

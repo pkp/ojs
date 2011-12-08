@@ -116,7 +116,7 @@ class SuppFileForm extends Form {
 		if (isset($this->suppFile)) {
 			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
-		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');		
+		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');
 		parent::display();
 	}
 
@@ -125,11 +125,11 @@ class SuppFileForm extends Form {
 	 */
 	function validate() {
 		$journal =& Request::getJournal();
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $suppFileDao->pubIdExists('publisher-id', $publicSuppFileId, $this->suppFileId, $journal->getId())) {
-			$this->addError('publicIssueId', __('author.suppFile.suppFilePublicIdentificationExists'));
+		if ($publicSuppFileId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicSuppFileId, ASSOC_TYPE_SUPP_FILE, $this->suppFileId)) {
+			$this->addError('publicSuppFileId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicSuppFileId)));
 			$this->addErrorField('publicSuppFileId');
 		}
 
@@ -254,11 +254,11 @@ class SuppFileForm extends Form {
 				$fileId = 0;
 			}
 
-			// Insert new supplementary file		
+			// Insert new supplementary file
 			$this->suppFile = new SuppFile();
 			$this->suppFile->setArticleId($this->article->getId());
 			$this->suppFile->setFileId($fileId);
-		
+
 			if ($createRemote) {
 				$this->suppFile->setRemoteURL(__('common.remoteURL'));
 			}
@@ -291,11 +291,13 @@ class SuppFileForm extends Form {
 		$suppFile->setStoredPubId('publisher-id', $this->getData('publicSuppFileId'));
 		// Update DOI if unique.
 		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
+		$storedDoi = $suppFile->getStoredPubId('doi');
+		if (empty($storedDoi)) {
+			// The DOI suffix can only be changed as long
+			// as no DOI has been generated.
+			$doiSuffix = $this->getData('doiSuffix');
 			$suppFile->setData('doiSuffix', $doiSuffix);
 		}
-
 	}
 }
 

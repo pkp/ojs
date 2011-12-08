@@ -146,12 +146,12 @@ class IssueGalleyForm extends Form {
 	function validate() {
 		// Check if public galley ID is already being used
 		$journal =& Request::getJournal();
-		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
-		$publicGalleyId = $this->getData('publicGalleyId');
+		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
-		if ($publicGalleyId && $galleyDao->pubIdExists('publisher-id', $publicGalleyId, $this->getGalleyId(), $this->getIssueId())) {
-			$this->addError('publicGalleyId', __('editor.issues.galleyPublicIdentificationExists'));
-			$this->addErrorField('publicIssueId');
+		$publicGalleyId = $this->getData('publicGalleyId');
+		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->getGalleyId())) {
+			$this->addError('publicGalleyId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
+			$this->addErrorField('publicGalleyId');
 		}
 
 		return parent::validate();
@@ -264,10 +264,11 @@ class IssueGalleyForm extends Form {
 
 			if ($enablePublicGalleyId) {
 				// Ensure the assigned public id doesn't already exist
+				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
-				while ($galleyDao->pubIdExists('publisher-id', $publicGalleyId . $suffix, 0, $galley->getIssueId())) {
+				while ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId . $suffix)) {
 					$suffix = '_'.$i++;
 				}
 

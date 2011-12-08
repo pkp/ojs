@@ -4,9 +4,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
 	<Header>
-		<FromCompany>Test Publisher</FromCompany>
-		<FromPerson>FUB Integration Test Tech Contact</FromPerson>
-		<FromEmail>jerico.dev@gmail.com</FromEmail>
+		<FromCompany>From Company</FromCompany>
+		<FromPerson>From Person</FromPerson>
+		<FromEmail>from@email.com</FromEmail>
 		<ToCompany>mEDRA</ToCompany>
 		<SentDate>201111082218</SentDate>
 		<MessageNote>This dataset was exported with ojs2, version x.x.x.x.</MessageNote>
@@ -16,7 +16,7 @@
 		<DOI>10.1234/t.v1i1.1.g1</DOI>
 		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/1</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
-		<RegistrantName>Test Publisher</RegistrantName>
+		<RegistrantName>Registrant</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
 		<ProductIdentifier>
 			<!-- Internal journal-issue-article-galley ID -->
@@ -83,11 +83,11 @@
 			<PublicationDate>20111006</PublicationDate>
 			<Title textformat="06" language="ger">
 				<TitleType>01</TitleType>
-				<TitleText>DOI Testartikel (PDF, Englisch)</TitleText>
+				<TitleText>DOI Testartikel</TitleText>
 			</Title>
 			<Title textformat="06" language="eng">
 				<TitleType>01</TitleType>
-				<TitleText>DOI Test (PDF, English)</TitleText>
+				<TitleText>DOI Test</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>

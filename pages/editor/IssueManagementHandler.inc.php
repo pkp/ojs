@@ -632,10 +632,25 @@ class IssueManagementHandler extends EditorHandler {
 					$article->setPages($pages[$articleId]);
 				}
 				if (isset($publishedArticles[$articleId])) {
+					$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 					$publicArticleId = $publishedArticles[$articleId];
-					if (!$publicArticleId || !$articleDao->pubIdExists('publisher-id', $publicArticleId, $articleId, $journal->getId())) {
-						$article->setStoredPubId('publisher-id', $publicArticleId);
+					if ($publicArticleId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicArticleId, ASSOC_TYPE_ARTICLE, $articleId)) {
+						// We are not in a form so we cannot send form errors.
+						// Let's at least send a notification to give some feedback
+						// to the user.
+						import('classes.notification.NotificationManager');
+						$notificationManager = new NotificationManager();
+						AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+						$message = 'editor.publicIdentificationExists';
+						$params = array('publicIdentifier' => $publicArticleId);
+						$user =& $request->getUser();
+						$notificationManager->createTrivialNotification(
+							$user->getId(), NOTIFICATION_TYPE_ERROR,
+							array('contents' => __($message, $params))
+						);
+						$publicArticleId = '';
 					}
+					$article->setStoredPubId('publisher-id', $publicArticleId);
 				}
 				if (isset($accessStatus[$pubId])) {
 					$publishedArticleDao->updatePublishedArticleField($pubId, 'access_status', $accessStatus[$pubId]);

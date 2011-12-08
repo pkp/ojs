@@ -409,7 +409,7 @@ class MetadataForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				HookRegistry::call('Submission::Form::MetadataForm::Execute', array(&$author, &$authors[$i]));
-				
+
 				if ($isExistingAuthor) {
 					$authorDao->updateAuthor($author);
 				} else {
@@ -427,8 +427,11 @@ class MetadataForm extends Form {
 
 		// Update DOI if unique.
 		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
+		$storedDoi = $article->getStoredPubId('doi');
+		if (empty($storedDoi)) {
+			// The DOI suffix can only be changed as long
+			// as no DOI has been generated.
+			$doiSuffix = $this->getData('doiSuffix');
 			$article->setData('doiSuffix', $doiSuffix);
 		}
 

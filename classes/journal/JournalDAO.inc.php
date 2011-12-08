@@ -348,6 +348,41 @@ class JournalDAO extends DAO {
 	}
 
 	/**
+	 * Check whether the given public ID exists for any publishing
+	 * object in a journal.
+	 * @param $journalId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 * @param $pubId string
+	 * @param $assocType int The object type of an object to be excluded from
+	 *  the search. Identified by one of the ASSOC_TYPE_* constants.
+	 * @param $assocId int The id of an object to be excluded from the search.
+	 * @return boolean
+	 */
+	function anyPubIdExists($journalId, $pubIdType, $pubId,
+			$assocType = ASSOC_TYPE_ANY, $assocId = 0) {
+		$pubObjectDaos = array(
+			ASSOC_TYPE_ISSUE => 'IssueDAO',
+			ASSOC_TYPE_ARTICLE => 'ArticleDAO',
+			ASSOC_TYPE_GALLEY => 'ArticleGalleyDAO',
+			ASSOC_TYPE_ISSUE_GALLEY => 'IssueGalleyDAO',
+			ASSOC_TYPE_SUPP_FILE => 'SuppFileDAO'
+		);
+		foreach($pubObjectDaos as $daoAssocType => $daoName) {
+			$dao =& DAORegistry::getDAO($daoName);
+			if ($assocType == $daoAssocType) {
+				$excludedId = $assocId;
+			} else {
+				$excludedId = 0;
+			}
+			if ($dao->pubIdExists($pubIdType, $pubId, $excludedId, $journalId)) return true;
+			unset($dao);
+		}
+		return false;
+	}
+
+	/**
 	 * Sequentially renumber journals in their sequence order.
 	 */
 	function resequenceJournals() {

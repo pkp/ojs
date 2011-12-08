@@ -25,12 +25,17 @@ define('DATACITE_DATE_ISSUED', 'Issued');
 define('DATACITE_DATE_SUBMITTED', 'Submitted');
 define('DATACITE_DATE_ACCEPTED', 'Accepted');
 define('DATACITE_DATE_CREATED', 'Created');
+define('DATACITE_DATE_UPDATED', 'Updated');
 
 // Identifier types
 define('DATACITE_IDTYPE_PROPRIETARY', 'publisherId');
 define('DATACITE_IDTYPE_EISSN', 'EISSN');
 define('DATACITE_IDTYPE_ISSN', 'ISSN');
 define('DATACITE_IDTYPE_DOI', 'DOI');
+
+// Title types
+define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
+define('DATACITE_TITLETYPE_ALTERNATIVE', 'AlternativeTitle');
 
 // Relation types
 define('DATACITE_RELTYPE_ISVARIANTFORMOF', 'IsVariantFormOf');
@@ -53,12 +58,13 @@ class DataciteExportDom extends DoiExportDom {
 	/**
 	 * Constructor
 	 * @param $request Request
+	 * @param $plugin DoiExportPlugin
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
-	function DataciteExportDom(&$request, &$journal, &$objectCache) {
+	function DataciteExportDom(&$request, &$plugin, &$journal, &$objectCache) {
 		// Configure the DOM.
-		parent::DoiExportDom($request, $journal, $objectCache);
+		parent::DoiExportDom($request, $plugin, $journal, $objectCache);
 	}
 
 
@@ -91,11 +97,7 @@ class DataciteExportDom extends DoiExportDom {
 		// The publisher is required.
 		$publisher = (is_a($object, 'SuppFile') ? $object->getSuppFilePublisher() : null);
 		if (empty($publisher)) {
-			$publisher = $journal->getSetting('publisherInstitution');
-		}
-		if (empty($publisher)) {
-			$this->_addError('plugins.importexport.common.export.error.publisherNotSet');
-			return $falseVar;
+			$publisher = $this->getPublisher();
 		}
 
 		// Identify the object locale.
@@ -143,8 +145,10 @@ class DataciteExportDom extends DoiExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($primaryObjectLocale));
 
 		// Resource Type
-		$resourceTypeElement =& $this->_resourceTypeElement($articleFile);
-		if ($resourceTypeElement) XMLCustomWriter::appendChild($rootElement, $resourceTypeElement);
+		if (!is_a($object, 'SuppFile')) {
+			$resourceTypeElement =& $this->_resourceTypeElement($object);
+			XMLCustomWriter::appendChild($rootElement, $resourceTypeElement);
+		}
 
 		// Alternate Identifiers
 		XMLCustomWriter::appendChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $articleFile));
@@ -369,6 +373,7 @@ class DataciteExportDom extends DoiExportDom {
 		$cache =& $this->getCache();
 
 		// Get an array of localized titles.
+		$alternativeTitle = null;
 		switch (true) {
 			case is_a($object, 'SuppFile'):
 				$titles = $object->getTitle(null);
@@ -386,6 +391,10 @@ class DataciteExportDom extends DoiExportDom {
 
 			case is_a($object, 'Issue'):
 				$titles = $this->_getIssueInformation($object);
+				$alternativeTitle = $object->getTitle($primaryObjectLocale);
+				if (empty($alternativeTitle)) {
+					$alternativeTitle = $object->getLocalizedTitle();
+				}
 				break;
 		}
 
@@ -396,13 +405,18 @@ class DataciteExportDom extends DoiExportDom {
 
 		// Start with the primary title.
 		if (isset($titles[$primaryObjectLocale])) {
-			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($titles[$primaryObjectLocale], $primaryObjectLocale, true));
+			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($titles[$primaryObjectLocale]));
 			unset($titles[$primaryObjectLocale]);
 		}
 
 		// Then let the translated titles follow.
 		foreach($titles as $locale => $title) {
-			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($title, $locale));
+			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($title, DATACITE_TITLETYPE_TRANSLATED));
+		}
+
+		// And finally the alternative title.
+		if (!empty($alternativeTitle)) {
+			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($alternativeTitle, DATACITE_TITLETYPE_ALTERNATIVE));
 		}
 
 		return $titlesElement;
@@ -411,14 +425,13 @@ class DataciteExportDom extends DoiExportDom {
 	/**
 	 * Create a single title element.
 	 * @param $title string
-	 * @param $locale string
-	 * @param $isPrimaryLocale boolean
+	 * @param $titleType string One of the DATACITE_TITLETYPE_* constants.
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_titleElement($title, $locale, $isPrimaryLocale = false) {
+	function &_titleElement($title, $titleType = null) {
 		$titleElement =& $this->createElementWithText('title', $title);
-		if (!$isPrimaryLocale) {
-			XMLCustomWriter::setAttribute($titleElement, 'titleType', 'TranslatedTitle');
+		if (!is_null($titleType)) {
+			XMLCustomWriter::setAttribute($titleElement, 'titleType', $titleType);
 		}
 		return $titleElement;
 	}
@@ -484,7 +497,7 @@ class DataciteExportDom extends DoiExportDom {
 		$datesElement =& XMLCustomWriter::createElement($this->getDoc(), 'dates');
 		$dates = array();
 
-		// Created date (for supp files only): supp file date created
+		// Created date (for supp files only): supp file date created.
 		if (!empty($suppFile)) {
 			$createdDate = $suppFile->getDateCreated();
 			if (!empty($createdDate)) {
@@ -492,7 +505,7 @@ class DataciteExportDom extends DoiExportDom {
 			}
 		}
 
-		// Submitted date (for articles and galleys): article date submitted
+		// Submitted date (for articles and galleys): article date submitted.
 		if (!empty($article)) {
 			$submittedDate = $article->getDateSubmitted();
 			if (!empty($submittedDate)) {
@@ -503,7 +516,7 @@ class DataciteExportDom extends DoiExportDom {
 			}
 		}
 
-		// Submitted date (for supp files): supp file date submitted
+		// Submitted date (for supp files): supp file date submitted.
 		if (!empty($suppFile)) {
 			$submittedDate = $suppFile->getDateSubmitted();
 			if (!empty($submittedDate)) {
@@ -511,7 +524,7 @@ class DataciteExportDom extends DoiExportDom {
 			}
 		}
 
-		// Accepted date (for galleys and supp files): article file uploaded:
+		// Accepted date (for galleys and supp files): article file uploaded.
 		if (!empty($articleFile)) {
 			$acceptedDate = $articleFile->getDateUploaded();
 			if (!empty($acceptedDate)) {
@@ -519,13 +532,18 @@ class DataciteExportDom extends DoiExportDom {
 			}
 		}
 
-		// Issued date: publication date
+		// Issued date: publication date.
 		$dates[DATACITE_DATE_ISSUED] = $publicationDate;
 
 		// Available date: issue open access date.
 		$availableDate = $issue->getOpenAccessDate();
 		if (!empty($availableDate)) {
 			$dates[DATACITE_DATE_AVAILABLE] = $availableDate;
+		}
+
+		// Last modified date (for articles): last modified date.
+		if (!empty($article) && empty($articleFile)) {
+			$dates[DATACITE_DATE_UPDATED] = $article->getLastModified();
 		}
 
 		// Create the date elements for all dates.
@@ -553,16 +571,23 @@ class DataciteExportDom extends DoiExportDom {
 
 	/**
 	 * Create a resource type element.
-	 * @param $galley ArticleFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_resourceTypeElement($articleFile) {
-		$nullVar = null;
-		if (!is_a($articleFile, 'ArticleFile')) return $nullVar;
+	function &_resourceTypeElement($object) {
+		switch (true) {
+			case is_a($object, 'Issue'):
+				$resourceType = 'Journal Issue';
+				break;
 
-		// Identify the file type.
-		$resourceType = $this->getFileType($articleFile);
-		if (is_null($resourceType)) return $nullVar;
+			case is_a($object, 'PublishedArticle'):
+			case is_a($object, 'ArticleGalley'):
+				$resourceType = 'Article';
+				break;
+
+			default:
+				assert(false);
+		}
 
 		// Create the resourceType element.
 		return $this->createElementWithText('resourceType', $resourceType, array('resourceTypeGeneral' => 'Text'));
@@ -590,7 +615,7 @@ class DataciteExportDom extends DoiExportDom {
 			)
 		);
 
-		// eISSN - for issues only.
+		// ISSN - for issues only.
 		if (is_a($object, 'Issue')) {
 			$onlineIssn = $journal->getSetting('onlineIssn');
 			if (!empty($onlineIssn)) {
@@ -599,6 +624,17 @@ class DataciteExportDom extends DoiExportDom {
 					$this->createElementWithText(
 						'alternateIdentifier', $onlineIssn,
 						array('alternateIdentifierType' => DATACITE_IDTYPE_EISSN)
+					)
+				);
+			}
+
+			$printIssn = $journal->getSetting('printIssn');
+			if (!empty($printIssn)) {
+				XMLCustomWriter::appendChild(
+					$alternateIdentifiersElement,
+					$this->createElementWithText(
+						'alternateIdentifier', $printIssn,
+						array('alternateIdentifierType' => DATACITE_IDTYPE_ISSN)
 					)
 				);
 			}
@@ -624,14 +660,10 @@ class DataciteExportDom extends DoiExportDom {
 
 		switch (true) {
 			case is_a($object, 'Issue'):
-				// Variant form: pISSN.
-				$issnId =& $this->_relatedIdentifierElement($journal, DATACITE_IDTYPE_ISSN, DATACITE_RELTYPE_ISVARIANTFORMOF);
-				if (!is_null($issnId)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $issnId);
-
 				// Parts: articles in this issue.
 				assert(is_array($articlesByIssue));
 				foreach($articlesByIssue as $articleInIssue) {
-					$doi =& $this->_relatedIdentifierElement($articleInIssue, DATACITE_IDTYPE_DOI, DATACITE_RELTYPE_HASPART);
+					$doi =& $this->_relatedIdentifierElement($articleInIssue, DATACITE_RELTYPE_HASPART);
 					if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 					unset($articleInIssue, $doi);
 				}
@@ -640,7 +672,7 @@ class DataciteExportDom extends DoiExportDom {
 			case is_a($object, 'PublishedArticle'):
 				// Part of: issue.
 				assert(is_a($issue, 'Issue'));
-				$doi =& $this->_relatedIdentifierElement($issue, DATACITE_IDTYPE_DOI, DATACITE_RELTYPE_ISPARTOF);
+				$doi =& $this->_relatedIdentifierElement($issue, DATACITE_RELTYPE_ISPARTOF);
 				if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 				unset($doi);
 
@@ -648,12 +680,12 @@ class DataciteExportDom extends DoiExportDom {
 				assert(is_array($galleysByArticle) && is_array($suppFilesByArticle));
 				$relType = DATACITE_RELTYPE_HASPART;
 				foreach($galleysByArticle as $galleyInArticle) {
-					$doi =& $this->_relatedIdentifierElement($galleyInArticle, DATACITE_IDTYPE_DOI, $relType);
+					$doi =& $this->_relatedIdentifierElement($galleyInArticle, $relType);
 					if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 					unset($galleyInArticle, $doi);
 				}
 				foreach($suppFilesByArticle as $suppFileInArticle) {
-					$doi =& $this->_relatedIdentifierElement($suppFileInArticle, DATACITE_IDTYPE_DOI, $relType);
+					$doi =& $this->_relatedIdentifierElement($suppFileInArticle, $relType);
 					if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 					unset($suppFileInArticle, $doi);
 				}
@@ -662,7 +694,7 @@ class DataciteExportDom extends DoiExportDom {
 			case is_a($object, 'ArticleFile'):
 				// Part of: article.
 				assert(is_a($article, 'Article'));
-				$doi =& $this->_relatedIdentifierElement($article, DATACITE_IDTYPE_DOI, DATACITE_RELTYPE_ISPARTOF);
+				$doi =& $this->_relatedIdentifierElement($article, DATACITE_RELTYPE_ISPARTOF);
 				if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 				break;
 		}
@@ -671,27 +703,14 @@ class DataciteExportDom extends DoiExportDom {
 	}
 
 	/**
-	 * Create an identifier element.
+	 * Create an identifier element with the object's DOI.
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
-	 * @param $identifierType string One of the DATACITE_IDTYPE_* constants.
 	 * @param $relationType string One of the DATACITE_RELTYPE_* constants.
 	 * @return XMLNode|DOMImplementation|null Can be null if the given ID Type
 	 *  has not been assigned to the given object.
 	 */
-	function &_relatedIdentifierElement(&$object, $identifierType, $relationType) {
-		switch ($identifierType) {
-			case DATACITE_IDTYPE_DOI:
-				$id = $object->getPubId('doi');
-				break;
-
-			case DATACITE_IDTYPE_ISSN:
-				assert(is_a($object, 'Journal'));
-				$id = $object->getSetting('printIssn');
-				break;
-
-			default:
-				assert(false);
-		}
+	function &_relatedIdentifierElement(&$object, $relationType) {
+		$id = $object->getPubId('doi');
 
 		if (empty($id)) {
 			return $nullVar;
@@ -701,7 +720,7 @@ class DataciteExportDom extends DoiExportDom {
 		return $this->createElementWithText(
 			'relatedIdentifier', $id,
 			array(
-				'relatedIdentifierType' => $identifierType,
+				'relatedIdentifierType' => DATACITE_IDTYPE_DOI,
 				'relationType' => $relationType
 			)
 		);
@@ -870,7 +889,6 @@ class DataciteExportDom extends DoiExportDom {
 		assert(is_array($articlesByIssue));
 		$toc = '';
 		foreach($articlesByIssue as $articleInIssue) {
-			if (!empty($toc)) $toc .= "\n";
 			$currentEntry = $articleInIssue->getTitle($primaryObjectLocale);
 			if (empty($currentEntry)) $currentEntry = $articleInIssue->getLocalizedTitle();
 			assert(!empty($currentEntry));
@@ -878,7 +896,7 @@ class DataciteExportDom extends DoiExportDom {
 			if (!empty($pages)) {
 				$currentEntry .= '...' . $pages;
 			}
-			$toc .= $currentEntry;
+			$toc .= $currentEntry . "<br />";
 			unset($articleInIssue);
 		}
 		return $toc;

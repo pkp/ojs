@@ -11,12 +11,28 @@
   -->
 
 <plugin_settings>
-	<setting type="int">
-		<name>exportIssuesAs</name>
-		<value>1</value> <!-- O4DOI_ISSUE_AS_WORK -->
+	<setting type="string">
+		<name>registrantName</name>
+		<value></value>
+	</setting>
+	<setting type="string">
+		<name>fromCompany</name>
+		<value></value>
+	</setting>
+	<setting type="string">
+		<name>fromName</name>
+		<value></value>
+	</setting>
+	<setting type="string">
+		<name>fromEmail</name>
+		<value></value>
 	</setting>
 	<setting type="string">
 		<name>publicationCountry</name>
 		<value>US</value> <!-- ISO 3166-1 -->
+	</setting>
+	<setting type="int">
+		<name>exportIssuesAs</name>
+		<value>1</value> <!-- O4DOI_ISSUE_AS_WORK -->
 	</setting>
 </plugin_settings>

@@ -14,12 +14,22 @@
 <br/>
 
 <h3>{translate key="plugins.importexport.common.settings"}</h3>
+{if !empty($configurationErrors)}
+	{foreach from=$configurationErrors item=configurationError}
+		{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
+			{translate key="plugins.importexport.common.error.DOIsNotAvailable"}
+			{translate key="manager.setup.doiPrefixDescription"}<br /><br />
+		{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
+			{translate key="plugins.importexport.common.error.pluginNotConfigured"}
+		{/if}
+	{/foreach}
+{/if}
 {capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
 {translate key="plugins.importexport.medra.settings.description" settingsUrl=$settingsUrl}
 
-<h3>{translate key="plugins.importexport.common.export"}</h3>
+{if empty($configurationErrors)}
+	<h3>{translate key="plugins.importexport.common.export"}</h3>
 
-{if $journal->getSetting('doiPrefix')}
 	<ul class="plain">
 		<li>&#187; <a href="{plugin_url path="all"}">{translate key="plugins.importexport.common.export.unregistered"}</a></li>
 		<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.common.export.issues"}</a></li>
@@ -28,9 +38,7 @@
 	</ul>
 	<p/>
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
-{else}
-	{translate key="plugins.importexport.common.errors.DOIsNotAvailable"} <br /><br />
-	{translate key="manager.setup.doiPrefixDescription"}
 {/if}
 
+<br /><br />
 {include file="common/footer.tpl"}

@@ -30,6 +30,10 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 		parent::DoiExportSettingsForm($plugin, $journalId);
 
 		// Add form validation checks.
+		$this->addCheck(new FormValidator($this, 'registrantName', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.registrantNameRequired'));
+		$this->addCheck(new FormValidator($this, 'fromCompany', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.fromCompanyRequired'));
+		$this->addCheck(new FormValidator($this, 'fromName', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.fromNameRequired'));
+		$this->addCheck(new FormValidatorEmail($this, 'fromEmail', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.fromEmailRequired'));
 		$this->addCheck(new FormValidatorInSet($this, 'exportIssuesAs', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.exportIssuesAs', array(O4DOI_ISSUE_AS_WORK, O4DOI_ISSUE_AS_MANIFESTATION)));
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
 	}
@@ -65,8 +69,12 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 	 */
 	function getFormFields() {
 		return array(
-			'exportIssuesAs' => 'int',
-			'publicationCountry' => 'string'
+			'registrantName' => 'string',
+			'fromCompany' => 'string',
+			'fromName' => 'string',
+			'fromEmail' => 'string',
+			'publicationCountry' => 'string',
+			'exportIssuesAs' => 'int'
 		);
 	}
 

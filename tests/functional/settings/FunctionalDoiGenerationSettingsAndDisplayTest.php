@@ -100,7 +100,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			),
 			'metadata-article' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/viewMetadata/%id',
-				'urlSuffixPage' => $this->baseUrl.'/index.php/test/editor/issueToc/1',
+				'urlSuffixPage' => $this->baseUrl.'/index.php/test/editor/issueToc/%id',
 				'urlSuffix' => 'name=publishedArticles[1]'
 			),
 			'metadata-galley' => array(
@@ -119,7 +119,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			$this->pages["metadata-$objectType"] += array(
 				'doi' => '//div[@id="pub-id::doi"]',
 				'doiInput' => '//div[@id="pub-id::doi"]//input',
-				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#doiSuffix"]'
+				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
 			);
 		}
 
@@ -340,9 +340,10 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *    THEN the {generated DOI} for a GIVEN {object type} must be equal
 	 *         to the prefix plus the {custom identifier} or - in the absence of such
 	 *         an identifier - equal to the internal {object id} of the corresponding
-	 *         publication object. The internal id - if used - must be preceded by some
-	 *         unique object type dependent letter to avoid duplicate DOIs, except for
-	 *         articles where no letter will be used to maintain backwards compatibility.
+	 *         publication object
+	 *     AND the internal id - if used - must be preceded by some unique object type
+	 *         dependent letter to avoid duplicate DOIs, except for articles where no
+	 *         letter will be used to maintain backwards compatibility.
 	 *
 	 * EXAMPLES:
 	 *   object type | custom identifier  | object id | generated DOI
@@ -399,30 +400,148 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 
 	/**
+	 * SCENARIO OUTLINE: Check for duplicate url suffixes across object types
+	 *   GIVEN I already assigned the custom identifier “doitest” to
+	 *         a {publication object} in the database
+	 *    WHEN I select the "custom identifier" option
+	 *     AND I navigate to the {meta-data page} of another object
+	 *     AND I enter that same custom identifier for the other object
+	 *     AND I click the “Save” button
+	 *    THEN the object will not be saved
+	 *     AND the form will redisplay with an error message "...".
+	 *
+	 * EXAMPLES:
+	 *   publication object | meta-data page
+	 *   ===================|========================
+	 *   issue              | editor/editSuppFile/1/1
+	 *   article            | editor/issueData/1
+	 *   galley             | editor/viewMetadata/1
+	 *   supp file          | editor/editGalley/1/1
+	 */
+	public function testCheckForDuplicateUrlSuffixesAcrossObjectTypes() {
+		// This test is not about testing the settings GUI so
+		// configure DOIs via the database which is faster.
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journal = $journalDao->getJournal(1);
+		$journal->updateSetting('doiSuffix', 'publisherId');
+		foreach($this->objectTypes as $objectType) {
+			$journal->updateSetting('enablePublic' . $objectType . 'Id', true);
+		}
+
+		// Assign object types to DAO names and methods.
+		$daos = array(
+			'Issue' => array('IssueDAO', 'getIssueById', 'updateIssue'),
+			'Article' => array('PublishedArticleDAO', 'getPublishedArticleByArticleId', 'updateArticle'),
+			'Galley' => array('ArticleGalleyDAO', 'getGalley', 'updateGalley'),
+			'SuppFile' => array('SuppFileDAO', 'getSuppFile', 'updateSuppFile')
+		);
+
+		// Test examples.
+		$examples = array(
+			'Issue' => 'SuppFile',
+			'Article' => 'Issue',
+			'Galley' => 'Article',
+			'SuppFile' => 'Galley'
+		);
+
+		// Go through all object types.
+		foreach($this->objectTypes as $objectType) {
+			try {
+				// Assign the URL suffix "doitest" to an object
+				// with the given object type. Again, this is not
+				// to test the DOI so we do it directly in the
+				// database.
+				$dao = DAORegistry::getDAO($daos[$objectType][0]);
+				// Retrieve the object.
+				$object = $dao->$daos[$objectType][1](1);
+				// Set its URL suffix to 'doitest'.
+				$object->setStoredPubId('publisher-id', 'doitest');
+				// Due to the 'unconventional' implementation of the article
+				// DAOs we have to manually change our DAO for article update.
+				if (is_a($object, 'PublishedArticle')) $dao = $dao->articleDao;
+				// Update the object.
+				$dao->$daos[$objectType][2]($object);
+
+				// Navigate to the meta-data page given in the example
+				// and enter the (duplicate) URL suffix "doitest" and
+				// try to save the form.
+				$targetObjectType = $examples[$objectType];
+				$this->setUrlSuffix(strtolower($targetObjectType), 'doitest');
+
+				// Check that the form is being redisplayed with an error.
+				$expectedErrorMessage = "The public identifier 'doitest' already exists";
+				if ($targetObjectType == 'Article') {
+					// We expect a notification in the case of article
+					// URL suffixes as they are edited in the issue toc
+					// which is not a form.
+					$this->waitForLocation(
+						'exact:'.str_replace('%id', '1', $this->pages['metadata-article']['urlSuffixPage'])
+					);
+					$this->assertText('css=.ui-pnotify-text', $expectedErrorMessage);
+				} else {
+					// All other target objects are edited in forms and should
+					// produce a form error.
+					$metadataPage = 'metadata-' . strtolower($targetObjectType);
+					$this->assertText(
+						str_replace(
+							'%id', "public${targetObjectType}Id",
+							$this->pages[$metadataPage]['formError']
+						),
+						$expectedErrorMessage
+					);
+				}
+			} catch(Exception $e) {
+				$objectType = strtolower($objectType);
+				$targetObjectType = strtolower($targetObjectType);
+				throw $this->improveException($e, "example $objectType / $targetObjectType");
+			}
+		}
+	}
+
+	/**
 	 * SCENARIO OUTLINE: Suffix generation based on custom ID (URL independent)
 	 *    WHEN I select the "individual DOI suffix" option
-	 *    THEN an input field for the individual identifier must be present
+	 *    THEN I see an input field for the individual identifier
 	 *         on the {object type}s meta-data entry page as long as no
 	 *         DOI has been generated yet
 	 *     AND the {generated DOI} for a GIVEN {object type} must be equal
 	 *         to the prefix plus the {individual identifier} or - if no identifier
-	 *         has been entered - equal to the internal {object id} of the
-	 *         corresponding publication object. The internal id - if used - must be
-	 *         preceded by some unique object type dependent letter to avoid duplicate
-	 *         DOIs, except for articles where no letter will be used to maintain
-	 *         backwards compatibility.
+	 *         has been entered - no DOI will be generated
+	 *     AND the internal id - if used - must be preceded by some unique object
+	 *         type dependent letter to avoid duplicate DOIs, except for articles
+	 *         where no letter will be used to maintain backwards compatibility.
 	 *
 	 * EXAMPLES:
-	 *   object type | individual identifier | object id | generated DOI
-	 *   ============|=======================|===========|===============================
-	 *   article     | article_suffix        |         1 | 10.1234/article_suffix
-	 *   article     |                       |         1 | 10.1234/1
-	 *   issue       | issue_suffix          |         1 | 10.1234/issue_suffix
-	 *   issue       |                       |         1 | 10.1234/i1
-	 *   galley      | article_galley_suffix |         1 | 10.1234/article_galley_suffix
-	 *   galley      |                       |         1 | 10.1234/g1
-	 *   supp file   | supp_file_suffix      |         1 | 10.1234/supp_file_suffix
-	 *   supp file   |                       |         1 | 10.1234/s1
+	 *   object type | individual identifier | generated DOI
+	 *   ============|=======================|===============================
+	 *   article     | article_suffix        | 10.1234/article_suffix
+	 *   article     | ./.                   | ./.
+	 *   issue       | issue_suffix          | 10.1234/issue_suffix
+	 *   issue       | ./.                   | ./.
+	 *   galley      | article_galley_suffix | 10.1234/article_galley_suffix
+	 *   galley      | ./.                   | ./.
+	 *   supp file   | supp_file_suffix      | 10.1234/supp_file_suffix
+	 *   supp file   | ./.                   | ./.
+	 *
+	 *
+	 * SCENARIO OUTLINE: Delete custom suffix.
+	 *   GIVEN I select the "individual DOI suffix" option
+	 *     AND I already assigned a custom DOI suffix to a
+	 *         {publication object}
+	 *     BUT a DOI has not yet been generated for that object
+	 *    WHEN I empty the custom suffix field for that object
+	 *         on its corresponding {meta-data page}
+	 *     AND I click the “Save” button
+	 *    THEN the existing custom DOI suffix should be deleted
+	 *         in the database.
+	 *
+	 * EXAMPLES:
+	 *   publication object | meta-data page
+	 *   ===================|========================
+	 *   issue              | editor/issueData/1
+	 *   article            | editor/viewMetadata/1
+	 *   galley             | editor/editGalley/1/1
+	 *   supp file          | editor/editSuppFile/1/1
 	 */
 	public function testDoiSuffixIsCustomId() {
 		// Change the suffix generation method.
@@ -433,8 +552,8 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			$objectType = strtolower($objectType);
 
 			// An input field should be present on all meta-data pages
-			// as long as no DOI has been stored.
-			$this->checkMetadataPage($objectType, $editable = true);
+			// as long as no DOI has been generated.
+			$this->checkMetadataPage($objectType, $editable = true, '');
 
 			// Check that an already existing suffix cannot be re-used.
 			if ($objectType != 'article') {
@@ -444,13 +563,25 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			}
 
 			// Let's enter a custom DOI.
-			$metadataPage = $this->pages["metadata-$objectType"];
 			$customSuffix = "custom_${objectType}_doi";
-			$this->type($metadataPage['doiInput'], $customSuffix);
-			$this->clickAndWait('css=input.button.defaultButton');
-			$this->assertElementNotPresent($metadataPage['formError']);
+			$this->setCustomId($objectType, $customSuffix);
 
-			// Check whether the custom DOI has been correctly generated.
+			// Make sure that the suffix has been saved and is being
+			// re-displayed in the form which should still be editable.
+			$this->checkMetadataPage($objectType, $editable = true, $customSuffix);
+
+			// Enter an empty suffix (=delete the suffix).
+			$this->setCustomId($objectType, '');
+
+			// Check that no DOI is being generated when entering
+			// while the suffix is empty.
+			$this->checkDoiDisplay($objectType, false);
+
+			// Re-enter the suffix.
+			$this->checkMetadataPage($objectType, $editable = true, '');
+			$this->setCustomId($objectType, $customSuffix);
+
+			// Check whether a custom DOI is correctly generated.
 			$expectedDoi = "10.1234/$customSuffix";
 			$this->checkDoiDisplay($objectType, $expectedDoi);
 
@@ -515,7 +646,8 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 		// to Selenium to clean up our configuration.
 		$this->start();
 
-		// Reset to standard settings.
+		// Reset to standard settings. We have to do this
+		// through the UI to correctly reset caches, too.
 		$this->resetDoiSettings();
 
 		// Explicitly stop Selenium otherwise our session
@@ -609,10 +741,10 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 
 			// Save settings.
 			$this->clickAndWait('css=input.button.defaultButton');
-
-			// Delete existing DOIs.
-			$this->deleteExistingDois();
 		}
+
+		// Delete existing DOIs.
+		$this->deleteExistingDois();
 	}
 
 	/**
@@ -659,6 +791,23 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 			$this->assertConfirmation('Save changes to table of contents?');
 		}
 	}
+
+	/**
+	 * Enter a custom suffix for the given object
+	 * type and save the form. Make sure that the
+	 * form does not produce an error.
+	 * @param $objectType string
+	 * @param $customSuffix string
+	 */
+	private function setCustomId($objectType, $customSuffix) {
+		$metadataPage = $this->pages["metadata-$objectType"];
+		$this->type($metadataPage['doiInput'], $customSuffix);
+		$this->clickAndWait('css=input.button.defaultButton');
+		$this->assertElementNotPresent(
+			str_replace('%id', 'doiSuffix', $metadataPage['formError'])
+		);
+	}
+
 
 	/**
 	 * Check whether the given DOI appears on the object's page.
@@ -730,7 +879,7 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 				$this->open($this->getUrl($metadataPage, 1));
 			}
 			if ($editable) {
-				$this->assertElementPresent($this->pages[$metadataPage]['doiInput']);
+				$this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
 			} else {
 				$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
 				$this->assertText($this->pages[$metadataPage]['doi'], $expectedDoi);
@@ -755,7 +904,9 @@ class FunctionalDoiGenerationSettingsAndDisplayTest extends WebTestCase {
 		$this->open($this->getUrl($metadataPage, $objectId));
 		$this->type($this->pages[$metadataPage]['doiInput'], $existingSuffix);
 		$this->clickAndWait('css=input.button.defaultButton');
-		$this->assertElementPresent($this->pages[$metadataPage]['formError']);
+		$this->assertElementPresent(
+			str_replace('%id', 'doiSuffix', $this->pages[$metadataPage]['formError'])
+		);
 	}
 
 	/**

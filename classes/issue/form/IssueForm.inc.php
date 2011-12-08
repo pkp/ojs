@@ -23,7 +23,7 @@ import('classes.issue.Issue'); // Bring in constants
 class IssueForm extends Form {
 	/** @var Issue current issue */
 	var $issue;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -85,11 +85,11 @@ class IssueForm extends Form {
 
 		// check if public issue ID has already been used
 		$journal =& Request::getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $issueDao->pubIdExists('publisher-id', $publicIssueId, $issueId, $journal->getId())) {
-			$this->addError('publicIssueId', __('editor.issues.issuePublicIdentificationExists'));
+		if ($publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $issueId)) {
+			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
 			$this->addErrorField('publicIssueId');
 		}
 
@@ -356,8 +356,11 @@ class IssueForm extends Form {
 
 		// Update DOI if unique.
 		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
+		$storedDoi = $issue->getStoredPubId('doi');
+		if (empty($storedDoi)) {
+			// The DOI suffix can only be changed as long
+			// as no DOI has been generated.
+			$doiSuffix = $this->getData('doiSuffix');
 			$issue->setData('doiSuffix', $doiSuffix);
 		}
 

@@ -18,8 +18,8 @@
  
 	<message key="plugins.importexport.datacite.settings.form.description">Please configure the DataCite export plug-in:</message>
 	<message key="plugins.importexport.datacite.settings.form.symbol">Username (symbol)</message>
-	<message key="plugins.importexport.datacite.settings.form.savePassword">Do you want to store your password to the database?</message>
-	<message key="plugins.importexport.datacite.settings.form.savePasswordInstruction">Please be careful. Anyone with access to your database or database backup will be able to read your password.</message>
+	<message key="plugins.importexport.datacite.settings.form.password">Password</message>
+	<message key="plugins.importexport.datacite.settings.form.passwordInstruction">Persons who have access to your database or database backup will be able to read your password. If you are not sure that your password can be safely stored in the database then please leave the password field empty. In that case you'll be asked to enter your password whenever you access the DataCite server.</message>
  
 	<message key="plugins.importexport.datacite.export.suppFiles">Export specific supplementary files</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>

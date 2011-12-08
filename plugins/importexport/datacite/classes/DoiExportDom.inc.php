@@ -71,6 +71,21 @@ class DoiExportDom {
 		return $this->_request;
 	}
 
+	/** @var DoiExportPlugin */
+	var $_plugin;
+
+	/**
+	 * Get a plug-in setting.
+	 * @return mixed
+	 */
+	function getPluginSetting($settingName) {
+		$plugin =& $this->_plugin;
+		$journal =& $this->getJournal();
+		$settingValue = $plugin->getSetting($journal->getId(), $settingName);
+		assert(!empty($settingValue));
+		return $settingValue;
+	}
+
 	/** @var Journal */
 	var $_journal;
 
@@ -101,13 +116,15 @@ class DoiExportDom {
 	/**
 	 * Constructor
 	 * @param $request Request
+	 * @param $plugin DoiExportPlugin
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
-	function DoiExportDom(&$request, &$journal, &$objectCache) {
+	function DoiExportDom(&$request, &$plugin, &$journal, &$objectCache) {
 		// Configure the DOM.
 		$this->_doc =& XMLCustomWriter::createDocument();
 		$this->_request =& $request;
+		$this->_plugin =& $plugin;
 		$this->_journal =& $journal;
 		$this->_cache =& $objectCache;
 	}
@@ -379,6 +396,22 @@ class DoiExportDom {
 			$proprietaryId .= $articleFile->getId();
 		}
 		return $proprietaryId;
+	}
+
+	/**
+	 * Identify the publisher of the journal.
+	 * @return string
+	 */
+	function getPublisher() {
+		$journal =& $this->getJournal();
+		$publisher = $journal->getSetting('publisherInstitution');
+		if (empty($publisher)) {
+			// Use the journal title if no publisher is set.
+			// This corresponds to the logic implemented for OAI interfaces, too.
+			$publisher = $journal->getLocalizedTitle();
+		}
+		assert(!empty($publisher));
+		return $publisher;
 	}
 
 	/**

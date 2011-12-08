@@ -18,10 +18,18 @@ import('lib.pkp.tests.functional.plugins.importexport.FunctionalImportExportBase
 // Input types (for settings tests).
 define('TEST_INPUTTYPE_SELECT', 0x01);
 define('TEST_INPUTTYPE_TEXT', 0x02);
+define('TEST_INPUTTYPE_EMAIL', 0x03);
 
 class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	protected
-		$pluginId, $pages, $initialPluginSettings, $initialJournalSettings;
+		/**
+		 * This variable will be read by cleanXml(), see there.
+		 * @var boolean
+		 */
+		$expectJournalNameAsPublisher = false,
+
+		/** Other internal test parameters */
+		$pluginId, $pages, $defaultPluginSettings, $initialPluginSettings, $initialJournalSettings;
 
 
 	//
@@ -53,6 +61,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			'articles' => $indexPage . '/articles',
 			'galleys' => $indexPage . '/galleys',
 		);
+
+		// Store initial journal configuration.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal = $journalDao->getJournal(1);
 		$this->initialJournalSettings = array(
@@ -61,6 +71,13 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			'publisherInstitution' => $journal->getSetting('publisherInstitution'),
 			'supportEmail' => $journal->getSetting('supportEmail')
 		);
+
+		// Store initial plug-in configuration.
+		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
+		$this->initialPluginSettings = array();
+		foreach ($this->defaultPluginSettings as $settingName => $settingValue) {
+			$this->initialPluginSettings[] = $settingsDao->getSetting(1, $this->pluginId . 'exportplugin', $settingName);
+		}
 	}
 
 	/**
@@ -75,8 +92,31 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			$journal->updateSetting($settingName, $settingValue);
 		}
 
+		// Restore initial plug-in configuration.
+		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
+		foreach ($this->initialPluginSettings as $settingName => $settingValue) {
+			$settingsDao->updateSetting(1, $this->pluginId . 'exportplugin', $settingName, $settingValue);
+		}
+
 		// Restore tables, etc.
 		parent::tearDown();
+	}
+
+
+	/**
+	 * SCENARIO: missing publisher will be replaced with journal name
+	 *
+	 *   GIVEN I did not configure a publisher in journal setup step 1
+	 *    WHEN I export an object
+	 *    THEN the O4DOI publisher field will be set to the journal name.
+	 */
+	protected function testExpectJournalNameAsPublisher() {
+		// Test whether a missing publisher is being replaced
+		// with the journal name.
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journal = $journalDao->getJournal(1);
+		$journal->updateSetting('publisherInstitution', '');
+		$this->expectJournalNameAsPublisher = true;
 	}
 
 
@@ -84,7 +124,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 * SCENARIO OUTLINE: Export OJS object(s).
 	 *
 	 *   GIVEN I navigate to the {export plug-in}'s settings page
-	 *     AND I activate {options} (if any)
+	 *     AND I configure {options} (if any)
 	 *     AND I assign a DOI to one or more OJS objects of type
 	 *         {object type} with {object id(s)}
 	 *     AND I navigate to that/these object(s) in the {export plug-in}
@@ -353,6 +393,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 						break;
 
 					case TEST_INPUTTYPE_TEXT:
+					case TEST_INPUTTYPE_EMAIL:
 						$this->type($setting, $value);
 						break;
 
@@ -382,14 +423,20 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 
 	/**
-	 * SCENARIO: Disable plug-in when no DOI prefix is configured.
+	 * SCENARIO: Disable plug-in when .
 	 *
-	 *   GIVEN I have no DOI prefix configured
+	 *   GIVEN I have {configuration error}
 	 *    WHEN I navigate to the plug-in home page
 	 *    THEN I'll see an error message
 	 *     AND there'll be no links to the export pages.
+	 *
+	 * EXAMPLES:
+	 *   configuration error
+	 *   ==========================
+	 *   no DOI prefix configured
+	 *   not configured the plug-in
 	 */
-	protected function testDoiPrefixError($exportPages) {
+	protected function testConfigurationError($exportPages, $sampleConfigParam) {
 		$this->logIn();
 
 		// Make sure that no DOI prefix is configured.
@@ -397,47 +444,19 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$journal = $journalDao->getJournal(1);
 		$journal->updateSetting('doiPrefix', '');
 
-		// Navigate to the plug-in home page.
-		$this->open($this->pages['index']);
+		// Assert that the error is being discovered by the plug-in.
+		$this->assertConfigurationError($exportPages, 'A valid DOI prefix must be specified');
 
-		// Check the error message.
-		$this->assertText('content', 'A valid DOI prefix must be specified');
+		// Now configure a prefix but make sure that the given
+		// sample configuration parameter is empty.
+		$journal->updateSetting('doiPrefix', '10.1234');
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', $sampleConfigParam, '');
+		$this->assertConfigurationError($exportPages, 'The plug-in is not fully set up');
 
-		// Make sure that no links are present.
-		foreach ($exportPages as $page) {
-			try {
-				$this->assertElementNotPresent('css=a[href="'.$this->pages[$page].'"]');
-			} catch(Exception $e) {
-				throw $this->improveException($e, "$page page");
-			}
-		}
-	}
-
-
-	/**
-	 * SCENARIO: Tryping to export when no publisher configured.
-	 *
-	 *   GIVEN I've got no publisher configured
-	 *    WHEN I try to export
-	 *    THEN I'll be notified that I have to configure
-	 *         a publisher before I can export to the DOI agency.
-	 */
-	public function testPublisherNotConfiguredError() {
-		$this->logIn();
-
-		// Make sure that no publisher is configured.
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
-		$journal->updateSetting('publisherInstitution', '');
-
-		// Try to export any object.
-		$this->open($this->pages['issues']);
-		$this->check('css=input[name="issueId[]"]');
-		$this->click('css=input.button.defaultButton');
-
-		// I should now be notified that I have to set a publisher first.
-		$this->waitForLocation('exact:'.$this->pages['index']);
-		$this->assertText('css=.ui-pnotify-text', 'Please enter a publisher');
+		// With the default configuration export should be allowed.
+		$this->configurePlugin();
+		$this->assertConfigurationError($exportPages);
 	}
 
 
@@ -620,6 +639,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Fix missing translations. This is a problem of the test environment not of the implementation.
 		$xml = str_replace('##issue.vol##', 'Vol', $xml);
 		$xml = str_replace('##issue.no##', 'No', $xml);
+
 		return $xml;
 	}
 
@@ -639,11 +659,42 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				// Recursively check XML if we have a sub-array (=sub-tar) of files.
 				$this->assertXml($file, array_shift($xml));
 			} else {
+				$xmlString = array_shift($xml);
+
+				if ($this->expectJournalNameAsPublisher) {
+					$xmlString = $this->checkThatPublisherIsJournalName($xmlString);
+				}
+
 				$this->assertXmlStringEqualsXmlFile(
 					'./tests/functional/plugins/importexport/' . $this->pluginId . '/' . $file,
-					$this->cleanXml(array_shift($xml)), 'Error while checking ' . $file
+					$this->cleanXml($xmlString), 'Error while checking ' . $file
 				);
 			}
+		}
+	}
+
+	/**
+	 * Check whether the publisher has been correctly
+	 * replaced by the journal name.
+	 * @param $xml string
+	 * @return string
+	 */
+	protected function checkThatPublisherIsJournalName($xml) {
+		self::fail('Must be implemented by subclass');
+	}
+
+	/**
+	 * Alter the plugin-configuration directly in the database.
+	 *
+	 * NB: We do not use Selenium here to improve performance.
+	 *
+	 * @param $settings array
+	 */
+	protected function configurePlugin($settings = array()) {
+		$settings = $settings + $this->defaultPluginSettings;
+		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
+		foreach($settings as $settingName => $settingValue) {
+			$settingsDao->updateSetting(1, $this->pluginId . 'exportplugin', $settingName, $settingValue);
 		}
 	}
 
@@ -661,6 +712,35 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$router = new PageRouter();
 		$router->setApplication($application);
 		$request->setRouter($router);
+	}
+
+	/**
+	 * Test configuration error.
+	 * @param $exportPages array
+	 * @param $expectedErrorMessage string
+	 */
+	private function assertConfigurationError($exportPages, $expectedErrorMessage = null) {
+		// Navigate to the plug-in home page.
+		$this->open($this->pages['index']);
+
+		// Check the error message.
+		if (!is_null($expectedErrorMessage)) {
+			$this->assertText('content', $expectedErrorMessage);
+		}
+
+		// Make sure that (no) export links are present.
+		foreach ($exportPages as $page) {
+			try {
+				$locator = 'css=a[href="'.$this->pages[$page].'"]';
+				if (is_null($expectedErrorMessage)) {
+					$this->assertElementPresent($locator);
+				} else {
+					$this->assertElementNotPresent($locator);
+				}
+			} catch(Exception $e) {
+				throw $this->improveException($e, "$page page");
+			}
+		}
 	}
 }
 ?>

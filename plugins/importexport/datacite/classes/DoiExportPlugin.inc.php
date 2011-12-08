@@ -28,6 +28,10 @@ define('DOI_OBJECT_REGISTERED', 0x02);
 define('DOI_EXPORT_FILE_XML', 0x01);
 define('DOI_EXPORT_FILE_TAR', 0x02);
 
+// Configuration errors.
+define('DOI_EXPORT_CONFIGERROR_DOIPREFIX', 0x01);
+define('DOI_EXPORT_CONFIGERROR_SETTINGS', 0x02);
+
 class DoiExportPlugin extends ImportExportPlugin {
 
 	//
@@ -272,17 +276,14 @@ class DoiExportPlugin extends ImportExportPlugin {
 				$router =& $request->getRouter();
 				$journal =& $router->getContext($request);
 
-				$settingsFormClassName = $this->getSettingsFormClassName();
-				$this->import('classes.form.' . $settingsFormClassName);
-				$form = new $settingsFormClassName($this, $journal->getId());
-
+				$form =& $this->_instantiateSettingsForm($journal);
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
 						$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 					} else {
-						$this->setBreadCrumbs(array(), false);
+						$this->setBreadCrumbs(array(), true);
 						$form->display();
 					}
 				} else {
@@ -686,8 +687,29 @@ class DoiExportPlugin extends ImportExportPlugin {
 	function _displayPluginHomePage(&$journal) {
 		$this->setBreadcrumbs();
 
-		// Prepare and display the index page template.
+		// Check for configuration errors:
+		$configurationErrors = array();
+
+		// 1) missing DOI prefix
+		$doiPrefix = $journal->getSetting('doiPrefix');
+		if (empty($doiPrefix)) {
+			$configurationErrors[] = DOI_EXPORT_CONFIGERROR_DOIPREFIX;
+		}
+
+		// 2) missing plug-in setting
+		$form =& $this->_instantiateSettingsForm($journal);
+		foreach($form->getFormFields() as $fieldName => $fieldType) {
+			$setting = $this->getSetting($journal->getId(), $fieldName);
+			if (empty($setting)) {
+				$configurationErrors[] = DOI_EXPORT_CONFIGERROR_SETTINGS;
+				break;
+			}
+		}
+
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign_by_ref('configurationErrors', $configurationErrors);
+
+		// Prepare and display the index page template.
 		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 	}
@@ -1035,6 +1057,19 @@ class DoiExportPlugin extends ImportExportPlugin {
 				'pluginName' => $this->getName()
 			)
 		) . "\n";
+	}
+
+	/**
+	 * Instantiate the settings form.
+	 * @param $journal Journal
+	 * @return DoiExportSettingsForm
+	 */
+	function &_instantiateSettingsForm(&$journal) {
+		$settingsFormClassName = $this->getSettingsFormClassName();
+		$this->import('classes.form.' . $settingsFormClassName);
+		$settingsForm = new $settingsFormClassName($this, $journal->getId());
+		assert(is_a($settingsForm, 'DoiExportSettingsForm'));
+		return $settingsForm;
 	}
 
 	/**

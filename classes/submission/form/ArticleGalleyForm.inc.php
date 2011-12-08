@@ -79,12 +79,12 @@ class ArticleGalleyForm extends Form {
 	function validate() {
 		// check if public galley ID has already been used
 		$journal =& Request::getJournal();
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $galleyDao->pubIdExists('publisher-id', $publicGalleyId, $this->galleyId, $this->articleId)) {
-			$this->addError('publicGalleyId', __('submission.layout.galleyPublicIdentificationExists'));
-			$this->addErrorField('publicIssueId');
+		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_GALLEY, $this->galleyId)) {
+			$this->addError('publicGalleyId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
+			$this->addErrorField('publicGalleyId');
 		}
 
 		// Verify DOI uniqueness.
@@ -195,8 +195,14 @@ class ArticleGalleyForm extends Form {
 			if ($this->getData('remoteURL')) {
 				$galley->setRemoteURL($this->getData('remoteURL'));
 			}
+
 			// FIXME: Move this to DOI PID plug-in.
-			if (!empty($doiSuffix)) $galley->setData('doiSuffix', $doiSuffix);
+			$storedDoi = $galley->getStoredPubId('doi');
+			if (empty($storedDoi)) {
+				// The DOI suffix can only be changed as long
+				// as no DOI has been generated.
+				$galley->setData('doiSuffix', $doiSuffix);
+			}
 
 			parent::execute();
 			$galleyDao->updateGalley($galley);
@@ -251,13 +257,14 @@ class ArticleGalleyForm extends Form {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($this->articleId, $journal->getId());
 			$galley->setLocale($article->getLocale());
-			
+
 			if ($enablePublicGalleyId) {
 				// check to make sure the assigned public id doesn't already exist
+				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
-				while ($galleyDao->pubIdExists('publisher-id', $publicGalleyId . $suffix, 0, $galley->getArticleId())) {
+				while ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId . $suffix)) {
 					$suffix = '_'.$i++;
 				}
 
@@ -265,7 +272,7 @@ class ArticleGalleyForm extends Form {
 			}
 
 			// FIXME: Move this to DOI PID plug-in.
-			if (!empty($doiSuffix)) $galley->setData('doiSuffix', $doiSuffix);
+			$galley->setData('doiSuffix', $doiSuffix);
 			parent::execute();
 
 			// Insert new galley

@@ -38,14 +38,15 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			'suppFiles' => $indexPage . '/suppFiles',
 			'settings' => $baseUrl . '/index.php/test/manager/plugin/importexport/DataciteExportPlugin/settings'
 		);
+
+		$this->defaultPluginSettings = array(
+			'symbol' => 'test-symbol',
+			'password' => 'test-password'
+		);
+
 		parent::setUp();
 
-		// Store initial plug-in configuration.
-		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
-		$this->initialPluginSettings = array(
-			'symbol' => $settingsDao->getSetting(1, 'dataciteexportplugin', 'symbol'),
-			'password' => $settingsDao->getSetting(1, 'dataciteexportplugin', 'password')
-		);
+		$this->configurePlugin();
 	}
 
 
@@ -58,8 +59,32 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.    |issue      |1           |DataCite resource|datacite-issue.xml
 	 */
 	public function testExportIssue() {
-		$this->configurePlugin();
+		$this->testExpectJournalNameAsPublisher();
 		$this->doExportObjectTest('issue', 1, 'DataciteExportPlugin', 'datacite-issue.xml');
+	}
+
+
+	/**
+	 * SCENARIO: see FunctionalDoiExportTest::testExpectJournalNameAsPublisher()
+	 */
+	protected function checkThatPublisherIsJournalName($xml) {
+		// Test that the publisher is set to the journal title.
+		self::assertContains('<publisher>test</publisher>', $xml);
+		self::assertContains('<creatorName>test</creatorName>', $xml);
+
+		// Change publisher to the default.
+		$xml = str_replace(
+			'<publisher>test</publisher>',
+			'<publisher>Test Publisher</publisher>',
+			$xml
+		);
+
+		// Change (issue) creator to the default.
+		return str_replace(
+			'<creatorName>test</creatorName>',
+			'<creatorName>Test Publisher</creatorName>',
+			$xml
+		);
 	}
 
 
@@ -72,7 +97,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.    |article    |1           |DataCite resource|datacite-article.xml
 	 */
 	public function testExportArticle() {
-		$this->configurePlugin();
 		$this->doExportObjectTest('article', 1, 'DataciteExportPlugin', 'datacite-article.xml');
 	}
 
@@ -86,7 +110,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.    |galley     |1,2,3       |DataCite resource|datacite-galley-{1,2,3}.xml
 	 */
 	public function testExportGalley() {
-		$this->configurePlugin();
 		$sampleFiles = array(
 			'datacite-galley-1.xml',
 			'datacite-galley-2.xml',
@@ -105,7 +128,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.    |supp file  |1           |DataCite resource|datacite-supp-file.xml
 	 */
 	public function testExportSuppFile() {
-		$this->configurePlugin();
 		$this->doExportObjectTest('suppFile', 1, 'DataciteExportPlugin', 'datacite-supp-file.xml');
 	}
 
@@ -119,7 +141,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|issue 1; article 1; galleys 1, 2 and 3; supp-file 1|datacite-article.xml,datacite-galley-{1,2,3}.xml,datacite-issue.xml,datacite-supp-file.xml
 	 */
 	public function testExportUnregisteredDois() {
-		$this->configurePlugin();
 		$objects = array(
 			'issue' => 1,
 			'article' => 1,
@@ -208,10 +229,10 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO: See FunctionalDoiExportTest::testDoiPrefixError().
+	 * SCENARIO: See FunctionalDoiExportTest::testConfigurationError().
 	 */
-	public function testDoiPrefixError() {
-		parent::testDoiPrefixError(array('issues', 'articles', 'galleys', 'suppFiles', 'all'));
+	public function testConfigurationError() {
+		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'suppFiles', 'all'), 'symbol');
 	}
 
 
@@ -236,9 +257,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			array('galleys', '1 2 3', array('datacite-galley-1.xml', 'datacite-galley-2.xml', 'datacite-galley-3.xml')),
 			array('suppFiles', '1', 'datacite-supp-file.xml')
 		);
-
-		// Configure the plug-in.
-		$this->configurePlugin();
 
 		foreach($examples as $example) {
 			list($exportObjectType, $objectIds, $xmlFiles) = $example;
@@ -295,23 +313,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		parent::testNonExistentObjectIdCliError('DataciteExportPlugin');
 	}
 
-
-	/**
-	 * @see PHPUnit_Framework_TestCase::tearDown()
-	 */
-	protected function tearDown() {
-		// Restoring the tables alone will not update the settings cache
-		// so we have to do this manually.
-		assert(count($this->initialPluginSettings) == 2);
-		$this->configurePlugin(
-			$this->initialPluginSettings['symbol'],
-			$this->initialPluginSettings['password']
-		);
-
-		// Restore tables, etc.
-		parent::tearDown();
-	}
-
 	/**
 	 * @see FunctionalDoiExportTest::cleanXml()
 	 */
@@ -320,24 +321,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		$xml = str_replace('##editor.issues.pages##', 'Pages', $xml);
 
 		return parent::cleanXml($xml);
-	}
-
-
-	//
-	// Private helper methods
-	//
-	/**
-	 * Alter the plugin-configuration directly in the database.
-	 *
-	 * NB: We do not use Selenium here to improve performance.
-	 *
-	 * @param $symbol string
-	 * @param $password string
-	 */
-	private function configurePlugin($symbol = '', $password = '') {
-		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
-		$settingsDao->updateSetting(1, 'dataciteexportplugin', 'symbol', $symbol);
-		$settingsDao->updateSetting(1, 'dataciteexportplugin', 'password', $password);
 	}
 }
 ?>

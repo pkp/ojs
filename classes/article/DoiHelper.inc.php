@@ -223,7 +223,10 @@ class DoiHelper {
 		// Check all objects of the journal whether they have
 		// the same DOI. This includes DOIs that are not yet generated
 		// but could be generated at any moment if someone accessed
-		// the object publicly.
+		// the object publicly. We have to check "real" DOIs rather than
+		// the DOI suffixes only as a DOI with the given suffix may exist
+		// (e.g. through import) even if the suffix itself is not in the
+		// database.
 		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley', 'SuppFile');
 		foreach($typesToCheck as $pubObjectType) {
 			switch($pubObjectType) {

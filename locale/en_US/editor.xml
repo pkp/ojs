@@ -26,6 +26,7 @@
 	<message key="editor.allSections">All Sections</message>
 	<message key="editor.allEditors">All Editors</message>
 	<message key="editor.me">Me</message>
+	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or supplementary file). Please choose unique identifiers within your journal.</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
@@ -65,7 +66,6 @@
 	<message key="editor.issues.accessStatus">Access status</message>
 	<message key="editor.issues.accessDate">Open access date</message>
 	<message key="editor.issues.enableOpenAccessDate">Enable delayed open access</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Public issue identification already exists.</message>
 	<message key="editor.issues.coverPage">Cover image</message>
 	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Uploaded</message>

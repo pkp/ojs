@@ -154,7 +154,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 		$exportFiles = array();
 		foreach($objects as $object) {
 			// Generate the export XML.
-			$dom = new DataciteExportDom($request, $journal, $this->getCache());
+			$dom = new DataciteExportDom($request, $this, $journal, $this->getCache());
 			$doc =& $dom->generate($object);
 			if ($doc === false) {
 				$this->cleanTmpfiles($targetPath, $exportFiles);

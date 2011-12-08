@@ -91,14 +91,10 @@ class MedraExportPlugin extends DoiExportPlugin {
 		$schema = $this->_identifyO4DOISchema($exportType, $journal, $exportIssuesAs);
 		assert(!is_null($schema));
 
-		// Get the journal's publication country which is a plug-in setting.
-		$publicationCountry = $this->getSetting($journal->getId(), 'publicationCountry');
-		assert(!empty($publicationCountry));
-
 		// Create the XML DOM and document.
 		$this->import('classes.O4DOIExportDom');
-		$dom = new O4DOIExportDom($request, $schema, $journal, $this->getCache(), $exportIssuesAs);
-		$doc =& $dom->generate($objects, $publicationCountry);
+		$dom = new O4DOIExportDom($request, $this, $schema, $journal, $this->getCache(), $exportIssuesAs);
+		$doc =& $dom->generate($objects);
 		if ($doc === false) return $dom->getErrors();
 
 		// Write the result to the target file.

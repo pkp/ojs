@@ -23,8 +23,10 @@
 		<date dateType="Submitted">2011-10-06</date>
 		<date dateType="Accepted">2011-10-06</date>
 		<date dateType="Issued">2011-10-06</date>
+		<date dateType="Updated">2011-12-09</date>
 	</dates>
 	<language>eng</language>
+	<resourceType resourceTypeGeneral="Text">Article</resourceType>
 	<alternateIdentifiers>
 		<alternateIdentifier alternateIdentifierType="publisherId">1-1-1</alternateIdentifier>
 	</alternateIdentifiers>

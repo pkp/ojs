@@ -71,20 +71,21 @@ class IssueGalleyDAO extends DAO {
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @param $pubId string
 	 * @param $galleyId int
-	 * @param $issueId int
+	 * @param $journalId int
 	 * @return boolean
 	 */
-	function pubIdExists($pubIdType, $pubId, $galleyId, $issueId) {
+	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM issue_galley_settings igs
 				INNER JOIN issue_galleys ig ON igs.galley_id = ig.galley_id
-			WHERE igs.setting_name = ? AND igs.setting_value = ? AND igs.galley_id <> ? AND ig.issue_id = ?',
+				INNER JOIN issues i ON ig.issue_id = i.issue_id
+			WHERE igs.setting_name = ? AND igs.setting_value = ? AND igs.galley_id <> ? AND i.journal_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
 				(int) $galleyId,
-				(int) $issueId
+				(int) $journalId
 			)
 		);
 		$returner = $result->fields[0] ? true : false;

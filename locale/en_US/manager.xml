@@ -257,7 +257,7 @@
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) and is in the format 10.xxxx (e.g. 10.1234).]]></message>
 	<message key="manager.setup.doiSuffix">DOI Suffix</message>
 	<message key="manager.setup.doiSuffixDefault">Use default patterns.</message>
-	<message key="manager.setup.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.g%g.s%s for supplementary files.]]></message>
+	<message key="manager.setup.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.s%s for supplementary files.]]></message>
 	<message key="manager.setup.doiSuffixPattern">Use the pattern entered below to generate DOI suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %s for the OJS supplementary file ID and %p for the page number.</message>
 	<message key="manager.setup.doiSuffixPattern.issues">for issues</message>
 	<message key="manager.setup.doiSuffixPattern.articles">for articles</message>
