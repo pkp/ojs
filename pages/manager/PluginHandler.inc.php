@@ -18,15 +18,17 @@ import('pages.manager.ManagerHandler');
 class PluginHandler extends ManagerHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function PluginHandler() {
 		parent::ManagerHandler();
 	}
 
 	/**
 	 * Display a list of plugins along with management options.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function plugins($args) {
+	function plugins($args, &$request) {
 		$category = isset($args[0])?$args[0]:null;
 		$categories = PluginRegistry::getCategories();
 
@@ -41,7 +43,7 @@ class PluginHandler extends ManagerHandler {
 
 			$this->setupTemplate(false);
 			$templateMgr->assign('pageTitle', 'plugins.categories.' . $category);
-			$templateMgr->assign('pageHierarchy', PluginHandler::setBreadcrumbs(true));
+			$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, true));
 		} else {
 			// No plugin specified; display all.
 			$mainPage = true;
@@ -55,7 +57,7 @@ class PluginHandler extends ManagerHandler {
 
 			$this->setupTemplate(true);
 			$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
-			$templateMgr->assign('pageHierarchy', PluginHandler::setBreadcrumbs(false));
+			$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, false));
 		}
 
 		$templateMgr->assign_by_ref('plugins', $plugins);
@@ -95,18 +97,19 @@ class PluginHandler extends ManagerHandler {
 
 	/**
 	 * Set the page's breadcrumbs
+	 * @param $request PKPRequest
 	 * @param $subclass boolean
 	 */
-	function setBreadcrumbs($subclass = false) {
+	function setBreadcrumbs($request, $subclass = false) {
 		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user',
 				false
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'manager.journalManagement',
 				false
 			)
@@ -114,7 +117,7 @@ class PluginHandler extends ManagerHandler {
 
 		if ($subclass) {
 			$pageCrumbs[] = array(
-				Request::url(null, 'manager', 'plugins'),
+				$request->url(null, 'manager', 'plugins'),
 				'manager.plugins.pluginManagement',
 				false
 			);
@@ -122,7 +125,6 @@ class PluginHandler extends ManagerHandler {
 
 		return $pageCrumbs;
 	}
-
 }
 
 ?>
