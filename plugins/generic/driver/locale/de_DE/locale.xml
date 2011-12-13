@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/driver/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DRIVER plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  -->
+ 
+<locale name="en_US" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.driver.displayName">DRIVER</message>
+	<message key="plugins.generic.driver.description">Das DRIVER-Plug-In erweitert die OAI-PMH-Schnittstelle gemäß DRIVER Guidelines 2.0, damit OJS-Zeitschriften DRIVER-kompatibel werden können.</message>
+</locale>
