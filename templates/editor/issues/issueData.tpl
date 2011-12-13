@@ -144,6 +144,11 @@
 
 <div class="separator"></div>
 
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+	{include file="$pubIdMetadataFile" pubObject=$issue}
+{/foreach}
+
 {call_hook name="Templates::Editor::Issues::IssueData::AdditionalMetadata"}
 
 <div id="issueCover">

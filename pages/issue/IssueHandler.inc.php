@@ -66,6 +66,9 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('issue/viewPage.tpl');
 	}
 
@@ -90,6 +93,9 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('issue/viewPage.tpl');
 
 	}

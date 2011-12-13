@@ -154,6 +154,18 @@
 	<br />
 	doi:<a id="pub-id::doi" href="http://dx.doi.org/{$doi|escape|escape:url}">{$doi|escape}</a>
 {/if}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{if $issue->getPublished()}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
+	{else}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Don't affix the pubId *}
+	{/if}
+	{if $pubId}
+		<br />
+		<br />
+		{$pubIdPlugin->getPubIdDisplayType()|escape}: {if $pubIdPlugin->getResolvingURL($pubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($pubId)|escape}">{$pubId|escape}</a>{else}{$pubId|escape}{/if}
+	{/if}
+{/foreach}
 
 {include file="article/comments.tpl"}
 

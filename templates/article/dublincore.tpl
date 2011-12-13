@@ -44,7 +44,7 @@
 	<meta name="DC.Description" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$metaValue|strip_tags|escape}"/>
 {/foreach}{/if}
 {foreach from=$article->getGalleys() item=dcGalley}
-	<meta name="DC.Format" scheme="IMT" content="{$dcGalley->getFileType()|escape}"/>		
+	<meta name="DC.Format" scheme="IMT" content="{$dcGalley->getFileType()|escape}"/>
 {/foreach}
 	<meta name="DC.Identifier" content="{$article->getBestArticleId($currentJournal)|escape}"/>
 {if $article->getPages()}
@@ -53,6 +53,16 @@
 {if $doi}
 	<meta name="DC.Identifier.DOI" content="{$doi|escape}"/>
 {/if}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{if $issue->getPublished()}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
+	{else}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Don't affix the pubId *}
+	{/if}
+	{if $pubId}
+		<meta name="DC.Identifier.{$pubIdPlugin->getPubIdDisplayType()|escape}" content="{$pubId|escape}"/>
+	{/if}
+{/foreach}
 	<meta name="DC.Identifier.URI" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>
 {* DC.Publisher (publishing institution) *}
@@ -86,5 +96,5 @@
 	{/if}
 {/foreach}
 	<meta name="DC.Type" content="Text.Serial.Journal"/>
-	<meta name="DC.Type.articleType" content="{$article->getSectionTitle()|strip_tags|escape}"/>	
+	<meta name="DC.Type.articleType" content="{$article->getSectionTitle()|strip_tags|escape}"/>
 

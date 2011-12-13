@@ -70,6 +70,9 @@ class ArticleGalleyForm extends Form {
 			$templateMgr->assign_by_ref('galley', $this->galley);
 		}
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		parent::display();
 	}
 
@@ -97,6 +100,10 @@ class ArticleGalleyForm extends Form {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
+		// verify the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->validate($journal->getId(), $this, $this->galley);
 
 		return parent::validate();
 	}
@@ -119,6 +126,11 @@ class ArticleGalleyForm extends Form {
 		} else {
 			$this->_data = array();
 		}
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->init($this, $galley);
+
 		parent::initData();
 	}
 
@@ -137,6 +149,11 @@ class ArticleGalleyForm extends Form {
 				'doiSuffix'
 			)
 		);
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->readInputData($this);
+
 	}
 
 	/**
@@ -203,6 +220,10 @@ class ArticleGalleyForm extends Form {
 				// as no DOI has been generated.
 				$galley->setData('doiSuffix', $doiSuffix);
 			}
+			// consider the additional field names from the public identifer plugins
+			import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->execute($this, $galley);
 
 			parent::execute();
 			$galleyDao->updateGalley($galley);

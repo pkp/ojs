@@ -153,6 +153,22 @@
 	</tr>
 	<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {/if}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{if $issue->getPublished()}
+		{assign var=pubId value=$pubIdPlugin->getPubId($article)}
+	{else}
+		{assign var=pubId value=$pubIdPlugin->getPubId($article, true)}{* Don't affix the pubId *}
+	{/if}
+	{if $pubId}
+		<tr valign="top">
+			<td>10.</td>
+			<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
+			<td>{$pubIdPlugin->getPubIdFullName()|escape}</td>
+			<td>{$pubId|escape}</a></td>
+		</tr>
+		<tr><td colspan="4" class="separator">&nbsp;</td></tr>
+	{/if}
+{/foreach}
 {call_hook name="Templates::RT::Metadata::PersistentIdentifier"}
 <tr valign="top">
 	<td>11.</td>

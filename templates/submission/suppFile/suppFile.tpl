@@ -112,6 +112,11 @@
 
 {include file="editor/editDoi.tpl" objectType="SuppFile"}
 
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+	{include file="$pubIdMetadataFile" pubObject=$suppFile}
+{/foreach}
+
 {call_hook name="Templates::Submission::SuppFile::AdditionalMetadata"}
 
 <div id="supplementaryFileUpload">
@@ -143,7 +148,7 @@
 			<td class="value">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 		</tr>
 	</table>
-	
+
 	<table width="100%"  class="data">
 		<tr valign="top">
 			<td width="5%" class="label"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /></td>
@@ -156,9 +161,9 @@
 		</tr>
 	</table>
 	{/if}
-	
+
 	<br />
-	
+
 	<table id="showReviewers" width="100%" class="data">
 		<tr valign="top">
 			<td class="label">

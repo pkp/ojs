@@ -22,7 +22,7 @@
 {if $author->getLocalizedAffiliation() != ""}
         <meta name="citation_author_institution" content="{$author->getLocalizedAffiliation()|strip_tags|escape}"/>
 {/if}
-{/foreach}	
+{/foreach}
 <meta name="citation_title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
 
 {**
@@ -45,6 +45,16 @@
 {if $doi}
 	<meta name="citation_doi" content="{$doi|escape}"/>
 {/if}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{if $issue->getPublished()}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
+	{else}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Don't affix the pubId *}
+	{/if}
+	{if $pubId}
+		<meta name="citation_{$pubIdPlugin->getPubIdDisplayType()|escape|lower}" content="{$pubId|escape}"/>
+	{/if}
+{/foreach}
 	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 {if $article->getLanguage()}
 	<meta name="citation_language" content="{$article->getLanguage()|strip_tags|escape}"/>

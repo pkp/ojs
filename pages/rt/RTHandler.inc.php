@@ -62,6 +62,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('rt/metadata.tpl');
 	}
 
@@ -414,6 +417,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('issue', $this->issue);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('rt/suppFileView.tpl');
 	}
 

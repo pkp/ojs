@@ -384,6 +384,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
+	<message key="plugins.categories.pubIds">Public Identifier Plugins</message>
+	<message key="plugins.categories.pubIds.description">These plugins implement support for a public identifier.</message>
 
 	<!-- Files Browser -->
 

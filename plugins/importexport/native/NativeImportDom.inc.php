@@ -1126,8 +1126,26 @@ class NativeImportDom {
 					break;
 
 				default:
-					$errors[] = array('plugins.importexport.native.import.error.unknownPubId', $errorParams);
-					return false;
+						$pubIdPlugins =& PluginRegistry::loadCategory('pubIds');
+						$pubIdPluginFound = false;
+						foreach ($pubIdPlugins as $pubIdPlugin) {
+							if ($pubIdPlugin->getEnabled($journal->getId()) && $pubIdPlugin->getPubIdType() == $pubIdType) {
+								$pubId = $idNode->getValue();
+								$errorParams['pubId'] = $pubId;
+								if (!$pubIdPlugin->checkDuplicate($pubId, $pubObject, $journal->getId())) {
+									$errors[] = array('plugins.importexport.native.import.error.duplicatePubId', $errorParams);
+									return false;
+								}
+								$pubObject->setStoredPubId($pubIdType, $pubId);
+								$pubIdPluginFound = true;
+								break;
+							}
+						}
+						if (!$pubIdPluginFound) {
+								$errors[] = array('plugins.importexport.native.import.error.unknownPubId', $errorParams);
+								return false;
+						}
+						break;
 			}
 		}
 		return true;

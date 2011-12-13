@@ -120,7 +120,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:contributor', $contributors);
 
-		
+
 		// Date
 		if (is_a($article, 'PublishedArticle')) {
 			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
@@ -230,6 +230,26 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 			$suppFileDoi = $suppFile->getPubId('doi');
 			if ($suppFileDoi) {
 				$dc11Description->addStatement('dc:relation', $suppFileDoi);
+			}
+		}
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			if ($pubIssueId = $pubIdPlugin->getPubId($issue)) {
+				$dc11Description->addStatement('dc:source', $pubIssueId);
+			}
+			if ($pubArticleId = $pubIdPlugin->getPubId($article)) {
+				$dc11Description->addStatement('dc:identifier', $pubArticleId);
+			}
+			foreach ($galleys as $galley) {
+				if ($pubGalleyId = $pubIdPlugin->getPubId($galley)) {
+					$dc11Description->addStatement('dc:relation', $pubGalleyId);
+				}
+			}
+			foreach ($suppFiles as $suppFile) {
+				if ($pubSuppFileId = $pubIdPlugin->getPubId($suppFile)) {
+					$dc11Description->addStatement('dc:relation', $pubSuppFileId);
+				}
 			}
 		}
 

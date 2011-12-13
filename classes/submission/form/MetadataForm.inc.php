@@ -141,6 +141,10 @@ class MetadataForm extends Form {
 				'citations' => $article->getCitations(),
 				'hideAuthor' => $article->getHideAuthor()
 			);
+			// consider the additional field names from the public identifer plugins
+			import('classes.plugins.PubIdPluginHelper');
+			$pubIdPluginHelper = new PubIdPluginHelper();
+			$pubIdPluginHelper->init($this, $article);
 
 			$authors =& $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
@@ -214,6 +218,10 @@ class MetadataForm extends Form {
 			$templateMgr->assign('hideAuthorOptions', $hideAuthorOptions);
 			$templateMgr->assign('isEditor', true);
 		}
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
+		$templateMgr->assign_by_ref('article', $this->article);
 
 		parent::display();
 	}
@@ -254,6 +262,10 @@ class MetadataForm extends Form {
 				'hideAuthor'
 			)
 		);
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->readInputData($this);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($this->article->getSectionId());
@@ -291,6 +303,11 @@ class MetadataForm extends Form {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
+		// verify the additional field names from the public identifer plugins
+		$journal = Request::getJournal();
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->validate($journal->getId(), $this, $this->article);
 
 		// Fall back on parent validation
 		return parent::validate();
@@ -373,6 +390,10 @@ class MetadataForm extends Form {
 		if ($this->isEditor) {
 			$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
 		}
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->execute($this, $article);
 
 		// Update authors
 		$authors = $this->getData('authors');

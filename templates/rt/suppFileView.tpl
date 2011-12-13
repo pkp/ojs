@@ -73,6 +73,19 @@
 			<td>{$doi|escape}</a></td>
 		</tr>
 	{/if}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{if $issue->getPublished()}
+			{assign var=pubId value=$pubIdPlugin->getPubId($suppFile)}
+		{else}
+			{assign var=pubId value=$pubIdPlugin->getPubId($suppFile, true)}{* Don't affix the pubId *}
+		{/if}
+		{if $pubId}
+			<tr valign="top">
+				<td>{$pubIdPlugin->getPubIdFullName()|escape}</td>
+				<td>{$pubId|escape}</a></td>
+			</tr>
+		{/if}
+	{/foreach}
 </table>
 </div>
 

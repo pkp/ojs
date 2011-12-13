@@ -19,6 +19,18 @@
 	<br />
 	<br />
 {/if}
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{if $issue->getPublished()}
+		{assign var=pubId value=$pubIdPlugin->getPubId($issue)}
+	{else}
+		{assign var=pubId value=$pubIdPlugin->getPubId($issue, true)}{* Don't affix the pubId *}
+	{/if}
+	{if $pubId}
+		{$pubIdPlugin->getPubIdDisplayType()|escape}: {if $pubIdPlugin->getResolvingURL($pubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($pubId)|escape}">{$pubId|escape}</a>{else}{$pubId|escape}{/if}
+		<br />
+		<br />
+	{/if}
+{/foreach}
 
 {include file="issue/view.tpl"}
 

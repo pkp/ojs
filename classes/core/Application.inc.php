@@ -163,6 +163,7 @@ class Application extends PKPApplication {
 			'importexport',
 			'oaiMetadataFormats',
 			'paymethod',
+			'pubIds',
 			'reports',
 			'themes'
 		);

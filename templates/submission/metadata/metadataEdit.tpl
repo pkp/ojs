@@ -391,6 +391,11 @@ function moveAuthor(dir, authorIndex) {
 
 {include file="editor/editDoi.tpl" objectType="Article"}
 
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+	{include file="$pubIdMetadataFile" pubObject=$article}
+{/foreach}
+
 {call_hook name="Templates::Submission::MetadataEdit::AdditionalMetadata"}
 
 {if $journalSettings.metaCitations}

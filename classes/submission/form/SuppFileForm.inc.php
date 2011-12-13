@@ -117,6 +117,9 @@ class SuppFileForm extends Form {
 			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
 		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		parent::display();
 	}
 
@@ -143,6 +146,10 @@ class SuppFileForm extends Form {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
+		// verify the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->validate($journal->getId(), $this, $this->suppFile);
 
 		return parent::validate();
 	}
@@ -178,6 +185,11 @@ class SuppFileForm extends Form {
 				'showReviewers' => 1
 			);
 		}
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->init($this, $suppFile);
+
 		return parent::initData();
 	}
 
@@ -205,6 +217,11 @@ class SuppFileForm extends Form {
 				'doiSuffix'
 			)
 		);
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->readInputData($this);
+
 	}
 
 	/**
@@ -298,6 +315,11 @@ class SuppFileForm extends Form {
 			$doiSuffix = $this->getData('doiSuffix');
 			$suppFile->setData('doiSuffix', $doiSuffix);
 		}
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->execute($this, $suppFile);
+
 	}
 }
 

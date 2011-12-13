@@ -57,7 +57,9 @@ class IssueForm extends Form {
 		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
-
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		parent::display();
 	}
 
@@ -121,6 +123,10 @@ class IssueForm extends Form {
 				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
 			}
 		}
+		// verify the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->validate($journal->getId(), $this, $issue);
 
 		return parent::validate();
 	}
@@ -166,6 +172,11 @@ class IssueForm extends Form {
 				'storedDoi' => $issue->getStoredPubId('doi'),
 				'doiSuffix' => $issue->getData('doiSuffix'),
 			);
+			// consider the additional field names from the public identifer plugins
+			import('classes.plugins.PubIdPluginHelper');
+			$pubIdPluginHelper = new PubIdPluginHelper();
+			$pubIdPluginHelper->init($this, $issue);
+
 			parent::initData();
 			return $issue->getId();
 
@@ -280,6 +291,10 @@ class IssueForm extends Form {
 			'originalStyleFileName',
 			'doiSuffix'
 		));
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->readInputData($this);
 
 		$this->readUserDateVars(array('datePublished', 'openAccessDate'));
 
@@ -363,6 +378,10 @@ class IssueForm extends Form {
 			$doiSuffix = $this->getData('doiSuffix');
 			$issue->setData('doiSuffix', $doiSuffix);
 		}
+		// consider the additional field names from the public identifer plugins
+		import('classes.plugins.PubIdPluginHelper');
+		$pubIdPluginHelper = new PubIdPluginHelper();
+		$pubIdPluginHelper->execute($this, $issue);
 
 		// if issueId is supplied, then update issue otherwise insert a new one
 		if ($issueId) {
@@ -409,6 +428,7 @@ class IssueForm extends Form {
 
 		return $issueId;
 	}
+
 }
 
 ?>

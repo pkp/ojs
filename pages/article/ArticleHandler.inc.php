@@ -229,7 +229,9 @@ class ArticleHandler extends Handler {
 			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms',
 			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText'
 		));
-
+		// consider public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('article/article.tpl');
 	}
 

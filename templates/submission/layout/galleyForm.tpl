@@ -73,7 +73,7 @@
 		<td class="label">{translate key="common.dateUploaded"}</td>
 		<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
 		<td class="value">
@@ -86,6 +86,11 @@
 <br/>
 
 {include file="editor/editDoi.tpl" objectType="Galley"}
+
+{foreach from=$pubIdPlugins item=pubIdPlugin}
+	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+	{include file="$pubIdMetadataFile" pubObject=$galley}
+{/foreach}
 
 {call_hook name="Templates::Submission::Layout::GalleyForm::AdditionalMetadata"}
 
