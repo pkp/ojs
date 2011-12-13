@@ -171,7 +171,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$this->import('UserExportDom');
 				$users =& $roleDao->getUsersByJournalId($journal->getId());
 				$users =& $users->toArray();
-				$doc =& UserExportDom::exportUsers($journal, $users);
+				$userExportDom = new UserExportDom();
+				$doc =& $userExportDom->exportUsers($journal, $users);
 				header("Content-Type: application/xml");
 				header("Cache-Control: private");
 				header("Content-Disposition: attachment; filename=\"users.xml\"");
@@ -190,7 +191,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$rolePaths[] = $rolePath;
 				}
 				$users = array_values($users);
-				$doc =& UserExportDom::exportUsers($journal, $users, $rolePaths);
+				$userExportDom = new UserExportDom();
+				$doc =& $userExportDom->exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
 				header("Cache-Control: private");
 				header("Content-Disposition: attachment; filename=\"users.xml\"");
@@ -275,7 +277,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					}
 					$users = array_values($users);
 				}
-				$doc =& UserExportDom::exportUsers($journal, $users, $rolePaths);
+				$userExportDom = new UserExportDom();
+				$doc =& $userExportDom->exportUsers($journal, $users, $rolePaths);
 				if (($h = fopen($xmlFile, 'wb'))===false) {
 					echo __('plugins.importexport.users.export.errorsOccurred') . ":\n";
 					echo __('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";
