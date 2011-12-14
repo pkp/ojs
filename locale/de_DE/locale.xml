@@ -518,8 +518,8 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="sectionEditor.regrets.title">#{$articleId} Absagen durch Gutachter/innen, Abbrüche &amp; Frühere Durchgänge</message>
 	<message key="sectionEditor.regrets">Absagen</message>
 	<message key="sectionEditor.regrets.link">Absagen, Abbrüche, frühere Durchgänge anzeigen</message>
-	<message key="sectionEditor.regrets.reviewRound">Peer Review, Durchgang {$cycle}</message>
-	<message key="sectionEditor.regrets.decisionRound">Redaktionsentscheidung, Durchgang {$cycle}</message>
+	<message key="sectionEditor.regrets.reviewRound">Peer Review, Durchgang {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Redaktionsentscheidung, Durchgang {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Absagen durch Gutachter/innen &amp; Abbrüche</message>
 	<message key="sectionEditor.regrets.regret">Absage</message>
 	<message key="sectionEditor.regrets.result">Ergebnis</message>
