@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/browse/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Durchsuchen</message>
+	<message key="plugins.generic.browse.description">Dieses Plug-In ermöglicht das Durchsehen nach Rubriken und/oder Identifikationstypen.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Einstellungen</message>
+	<message key="plugins.generic.browse.manager.settings.description"><![CDATA[Bitte richten Sie die folgenden zusätzlichen Möglichkeiten zum Durchsehen ein:]]></message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Einstellungen zum Durchsehen</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Durchsehen</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Wählen Sie aus, nach welchen Objekten das Durchsehen möglich sein soll.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Nach Rubrik</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Identifikationstypen</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Ausgeschlossene Rubriken</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Wählen Sie Rubriken aus, die nicht berücksichtigt werden sollen.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Ausgeschlossene Identifikationstypen</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Wählen Sie Identifikationstypen aus, die nicht berücksichtigt werden sollen.</message>
+
+	<message key="plugins.generic.browse.search.sections">Nach Rubriken</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Rubrikenverzeichnis durchsehen</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Rubrikdetails</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Nach Identifikationstypen</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Identifikationstypenverzeichnis durchsehen</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Identifikationstypendetails</message>
+
+</locale>

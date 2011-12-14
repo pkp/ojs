@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * emailTemplateData.xml
+  * @file plugins/generic/booksForReview/locale/de_DE/emailTemplates.xml
   *
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Localized Books for review email templates.
   *
-  * $Id$
   -->
 <email_texts locale="de_DE">
 	<email_text key="BFR_REVIEW_REMINDER">
@@ -94,7 +94,7 @@ Bitte stellen Sie sicher, dass Ihre Anschrift in Ihrem Benutzer/innenprofil aktu
 Die Anschrift, die wir momentan in unseren Unterlagen haben, ist:
 {$authorMailingAddress}
 
-Wenn diese Adresse unvollständig ist oder Sie nicht mehr unter dieser Anschrift erreichbar sind, benutzen Sie bitten den folgenden URL zum Benutzer/innenprofil, um Ihre Anschrift zu aktualisieren:
+Wenn diese Adresse unvollständig ist oder Sie nicht mehr unter dieser Anschrift erreichbar sind, benutzen Sie bitte den folgenden URL zum Benutzer/innenprofil, um Ihre Anschrift zu aktualisieren:
 
 Benutzer/innenprofil-URL: {$userProfileUrl}
  
