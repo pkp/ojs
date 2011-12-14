@@ -366,7 +366,7 @@ class IssueHandler extends Handler {
 
 	function setupTemplate() {
 		parent::setupTemplate();
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR));
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_EDITOR);
 	}
 
 	/**

@@ -185,7 +185,7 @@ class MetadataForm extends Form {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.cover.xxx locale keys; FIXME?
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR); // editor.cover.xxx locale keys; FIXME?
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getId():null);

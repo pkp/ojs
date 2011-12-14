@@ -390,7 +390,7 @@ class RTHandler extends ArticleHandler {
 	function suppFileMetadata($args, &$request) {
 		$router =& $request->getRouter();
 		$this->setupTemplate();
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;

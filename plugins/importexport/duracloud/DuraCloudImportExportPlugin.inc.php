@@ -100,7 +100,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'exportableIssues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
@@ -110,7 +110,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'importableIssues':
 				// Display a list of issues for import
 				$this->setBreadcrumbs(array(), true);
-				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
 				$templateMgr->assign('issues', $this->getImportableIssues());
 				$templateMgr->display($this->getTemplatePath() . 'importableIssues.tpl');
 				return;
@@ -324,7 +324,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				}
 
 				$results =& $this->importIssues($user, $journal, $args);
-				AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 				foreach ($results as $id => $result) {
 					echo "	$id: " . ($result?$result->getIssueIdentification():'') . "\n";
 				}

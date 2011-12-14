@@ -401,7 +401,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function assignEditor($args, $request) {
 		$this->validate();
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.noneEnrolled
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.noneEnrolled
 
 		$journal =& $request->getJournal();
 		$articleId = $request->getUserVar('articleId');

@@ -43,7 +43,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// FIXME? For comments.readerComments under Status and
 		// author.submit.selectPrincipalContact under Metadata
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR);
 
 		$this->setupTemplate(true, $articleId);
 
@@ -168,7 +168,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER);
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -540,7 +540,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enrollSearch($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_MANAGER)); // manager.people.enrollment, manager.people.enroll
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.enrollment, manager.people.enroll
 		$submission =& $this->submission;
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
@@ -854,7 +854,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId);
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 
@@ -864,7 +864,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveMetadata($args, &$request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_AUTHOR));
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'summary');
 

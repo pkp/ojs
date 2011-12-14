@@ -133,7 +133,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'cmd' => '_xclick'
 		);
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('params', $params);
 		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getId(), 'paypalurl'));

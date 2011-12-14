@@ -62,7 +62,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	function &extractMetadataFromDataObject(&$article) {
 		assert(is_a($article, 'Article'));
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 
 		// Retrieve data that belongs to the article.
 		// FIXME: Retrieve this data from the respective entity DAOs rather than

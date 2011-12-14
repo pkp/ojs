@@ -71,7 +71,7 @@ class SectionEditorAction extends Action {
 			$decisions = SectionEditorSubmission::getEditorDecisionOptions();
 			// Add log
 			import('classes.article.log.ArticleLog');
-			AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_OJS_EDITOR));
+			AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_OJS_EDITOR);
 			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])));
 		}
 	}

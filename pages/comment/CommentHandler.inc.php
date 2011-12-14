@@ -218,9 +218,15 @@ class CommentHandler extends Handler {
 		return true;
 	}
 
+	/**
+	 * Set up the comment template.
+	 * @param $article Article
+	 * @param $galleyId int
+	 * @param $comment Comment
+	 */
 	function setupTemplate($article, $galleyId, $comment = null) {
 		parent::setupTemplate();
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_READER));
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER);
 		$templateMgr =& TemplateManager::getManager();
 		$journal =& Request::getJournal();
 
