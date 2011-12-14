@@ -494,10 +494,10 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<!-- Navigation im Seitenleistenmenü -->
 
 	<!-- Begutachtung von Beiträgen (Redakteur/innen) -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br/>
-Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
-"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br/>
-"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br />
+Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
+"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br />
+"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br />
 "Aktuell" bezieht sich auf die Anzahl momentan übernommener oder in Betracht gezogener Begutachtungen.]]></message>
 
 
@@ -518,8 +518,8 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br/>
 	<message key="sectionEditor.regrets.title">#{$articleId} Absagen durch Gutachter/innen, Abbrüche &amp; Frühere Durchgänge</message>
 	<message key="sectionEditor.regrets">Absagen</message>
 	<message key="sectionEditor.regrets.link">Absagen, Abbrüche, frühere Durchgänge anzeigen</message>
-	<message key="sectionEditor.regrets.reviewRound">Peer Review, Durchgang {$cycle}</message>
-	<message key="sectionEditor.regrets.decisionRound">Redaktionsentscheidung, Durchgang {$cycle}</message>
+	<message key="sectionEditor.regrets.reviewRound">Peer Review, Durchgang {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Redaktionsentscheidung, Durchgang {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Absagen durch Gutachter/innen &amp; Abbrüche</message>
 	<message key="sectionEditor.regrets.regret">Absage</message>
 	<message key="sectionEditor.regrets.result">Ergebnis</message>
@@ -743,12 +743,12 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 
 	<!-- Suche -->
-	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchsuchen</message>
+	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchsehen</message>
 	<message key="search.searchFor">Artikel durchsuchen nach</message>
 	<message key="search.author">Autor/in</message>
 	<message key="search.withinJournal">In</message>
 	<message key="search.allJournals">allen Zeitschriften</message>
-	<message key="search.authorIndex">Autor/innenverzeichnis durchsuchen</message>
+	<message key="search.authorIndex">Autor/innenverzeichnis durchsehen</message>
 	<message key="search.authorDetails">Nähere Angaben zu den Autor/innen</message>
 	<message key="search.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
@@ -785,7 +785,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Index: Archiv -->
 	<message key="archive.archives">Archiv</message>
-	<message key="archive.browse">Ältere Ausgaben durchsuchen</message>
+	<message key="archive.browse">Ältere Ausgaben durchsehen</message>
 	<message key="archive.issueUnavailable">Ausgabe nicht verfügbar</message>
 
 	<!-- Über uns -->
@@ -1072,8 +1072,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Lesewerkzeuge - Suche -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br/>
-Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br />
+Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br />
 Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen.]]></message>
 
 	<!-- Lesewerkzeuge - Elemente -->

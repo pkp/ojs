@@ -158,7 +158,7 @@
 	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Um ein Buch zur Rezension anzufordern:</p><ul><li>Als Autor/in bei dieser Zeitschrift <a href="{$registerUrl}" target="_parent">registrieren</a>.</li><li>Als Autor/in <a href="{$loginAuthorUrl}" target="_parent">einloggen</a>.</li><li>Auf den Link klicken, der zum Buch gehört, das Sie interessiert.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.public.copy">Exemplar verfügbar</message>
 	<message key="plugins.generic.booksForReview.public.copyYes">Ja</message>
-	<message key="plugins.generic.booksForReview.public.copyNo">nein</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">Nein</message>
 	<message key="plugins.generic.booksForReview.public.language">Sprache</message>
 	<message key="plugins.generic.booksForReview.public.edition">Auflage</message>
 	<message key="plugins.generic.booksForReview.public.pages">Seiten</message>

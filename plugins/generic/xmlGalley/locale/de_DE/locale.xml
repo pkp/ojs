@@ -26,7 +26,7 @@
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Nicht verfügbar</message>
 
 	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Externes Erstellen von XSLT-Befehlzeilen (z.B. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Bitte den vollständigen Pfad in das XSLT-Erstellungstool eingeben, mit allen erfoderlichen Parametern. Bitte nutzen Sie %xsl, um den Ort der XSL-Stylesheet-Datei zu ersetzen, und %xml, um den Ort der XML-Quelldatei zu ersetzen, z.B.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Bitte den vollständigen Pfad in das XSLT-Erstellungstool eingeben, mit allen erfoderlichen Parametern. Bitte nutzen Sie %xsl, um den Ort der XSL-Stylesheet-Datei zu ersetzen, und %xml, um den Ort der XML-Quelldatei zu ersetzen, z.B.: <br /><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">XSLT testen</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Externer XSLT-Test erfolgreich.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Externer XSLT-Test fehlgeschlagen.</message>
@@ -36,7 +36,7 @@
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.xslFOP">Aktivierung der Erzeugung von PDF-Korrekturfassungen mittels XSL-FO (z.B. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Bitte den vollständigen Pfad des FO-Prozessors eingeben, mit allen erforderlichen Parametern. Bitte nutzen Sie %fo, um den Ort der XSL-FO-Datei zu ersetzen, und %pdf, um den Ort der PDF-Datei zu ersetzen; eg: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Bitte den vollständigen Pfad des FO-Prozessors eingeben, mit allen erforderlichen Parametern. Bitte nutzen Sie %fo, um den Ort der XSL-FO-Datei zu ersetzen, und %pdf, um den Ort der PDF-Datei zu ersetzen; eg: <br /><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired"><![CDATA[>Ein externer FO-Befehlzeilen-Prozessor muss spezifiziert werden.]]></message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">XSL-Stylesheet anpassen</message>
