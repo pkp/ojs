@@ -208,8 +208,8 @@ class SectionDAO extends DAO {
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
-				$section->getJournalId(),
-				$section->getReviewFormId(),
+				(int)$section->getJournalId(),
+				(int)$section->getReviewFormId(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
 				$section->getMetaReviewed() ? 1 : 0,
@@ -249,18 +249,18 @@ class SectionDAO extends DAO {
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
-				$section->getReviewFormId(),
-				$section->getSequence(),
-				$section->getMetaIndexed(),
-				$section->getMetaReviewed(),
-				$section->getAbstractsNotRequired(),
-				$section->getEditorRestricted(),
-				$section->getHideTitle(),
-				$section->getHideAuthor(),
-				$section->getHideAbout(),
-				$section->getDisableComments(),
+				(int)$section->getReviewFormId(),
+				$this->nullOrInt($section->getSequence()),
+				(int)$section->getMetaIndexed(),
+				(int)$section->getMetaReviewed(),
+				(int)$section->getAbstractsNotRequired(),
+				(int)$section->getEditorRestricted(),
+				(int)$section->getHideTitle(),
+				(int)$section->getHideAuthor(),
+				(int)$section->getHideAbout(),
+				(int)$section->getDisableComments(),
 				$this->nullOrInt($section->getAbstractWordCount()),
-				$section->getId()
+				(int)$section->getId()
 			)
 		);
 		$this->updateLocaleFields($section);
