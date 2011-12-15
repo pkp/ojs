@@ -22,6 +22,12 @@
 	<form method="post" action="{plugin_url path="settings"}">
 		<table width="100%" class="data">
 			<tr valign="top">
+				<td colspan="2">
+					<span class="instruct">{translate key="plugins.importexport.datacite.intro"}</span>
+				</td>
+			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr valign="top">
 				<td width="20%" class="label">{fieldLabel name="symbol" required="true" key="plugins.importexport.datacite.settings.form.symbol"}</td>
 				<td width="80%" class="value">
 					<input type="text" name="symbol" value="{$symbol|escape}" size="20" maxlength="50" id="symbol" class="textField" />
@@ -29,16 +35,12 @@
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
 			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="password" key="plugins.importexport.datacite.settings.form.password"}</td>
+				<td width="20%" class="label">{fieldLabel name="password" required="true" key="plugins.importexport.datacite.settings.form.password"}</td>
 				<td width="80%" class="value">
 					<input type="password" name="password" value="{$password|escape}" size="20" maxlength="50" id="password" class="textField" />
 				</td>
 			</tr>
-			<tr valign="top">
-				<td colspan="2">
-					<span class="instruct">{translate key="plugins.importexport.datacite.settings.form.passwordInstruction"}</span>
-				</td>
-			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
 		</table>
 
 		<p><span class="formRequired">{translate key="common.requiredField"}</span></p>

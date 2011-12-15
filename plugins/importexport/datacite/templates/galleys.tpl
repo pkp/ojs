@@ -50,12 +50,22 @@
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
 					{assign var=issue value=$galleyData.issue}
+					{capture assign="updateOrRegister"}{strip}
+						{if $galley->getData('datacite::registeredDoi')}
+							{translate key="plugins.importexport.common.update"}
+						{else}
+							{translate key="plugins.importexport.common.register"}
+						{/if}
+					{/strip}{/capture}
 					<tr valign="top">
 						<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}"/></td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 						<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>
 						<td>{$article->getAuthorString()|escape}</td>
-						<td align="right"><a href="{plugin_url path="exportGalley"|to_array:$galley->getId()}" class="action">{translate key="common.export"}</a></td>
+						<td align="right"><nobr>
+							<a href="{plugin_url path="registerGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" class="action">{$updateOrRegister}</a>
+							<a href="{plugin_url path="exportGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" class="action">{translate key="common.export"}</a>
+						</nobr></td>
 					</tr>
 					<tr>
 						<td colspan="5" class="{if $galleys->eof()}end{/if}separator">&nbsp;</td>
@@ -77,9 +87,15 @@
 			{/if}
 		</table>
 		<p>
-			<input type="submit" name="export" value="{translate key="common.export"}" class="button defaultButton"/>
+			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" class="button defaultButton"/>
+			&nbsp;
+			<input type="submit" name="export" value="{translate key="common.export"}" class="button"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+		</p>
+		<p>
+			{translate key="plugins.importexport.common.register.warning"}
 		</p>
 	</form>
 </div>

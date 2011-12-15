@@ -71,6 +71,15 @@ class DoiExportDom {
 		return $this->_request;
 	}
 
+	/**
+	 * Are we in test mode?
+	 * @return boolean
+	 */
+	function getTestMode() {
+		$request =& $this->getRequest();
+		return ($request->getUserVar('testMode') == '1');
+	}
+
 	/** @var DoiExportPlugin */
 	var $_plugin;
 

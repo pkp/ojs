@@ -16,6 +16,13 @@
 
 	<message key="plugins.importexport.common.settings">Settings</message>
 
+	<message key="plugins.importexport.common.register">Register</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DataCite server returned an error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registration successful!</message>
+	<message key="plugins.importexport.common.register.warning">Registering many objects can take a long time. So please be patient after clicking the "Register" button. You'll be notified when registration is complete.</message>
+
+	<message key="plugins.importexport.common.update">Update</message>
+		
 	<message key="plugins.importexport.common.export">Export Data</message>
 	<message key="plugins.importexport.common.export.unregistered">Export all unregistered issues, articles and galleys</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Select unregistered Issues, Articles and Galleys</message>

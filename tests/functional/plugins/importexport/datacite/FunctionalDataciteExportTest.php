@@ -25,6 +25,9 @@ import('plugins.importexport.datacite.DataciteExportPlugin');
 
 class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
+	/** @var string See testRegisterObject() */
+	private $fileToRegister;
+
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
 	 */
@@ -40,11 +43,11 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		);
 
 		$this->defaultPluginSettings = array(
-			'symbol' => 'test-symbol',
-			'password' => 'test-password'
+			'symbol' => 'TIB.OJSTEST',
+			'password' => base64_encode(Config::getVar('debug', 'webtest_datacite_pw'))
 		);
 
-		parent::setUp();
+		parent::setUp('10.5072');
 
 		$this->configurePlugin();
 	}
@@ -149,11 +152,9 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		);
 		$xmlFiles = array(
 			'datacite-article.xml',
-			array(
-				'datacite-galley-1.xml',
-				'datacite-galley-2.xml',
-				'datacite-galley-3.xml',
-			),
+			'datacite-galley-1.xml',
+			'datacite-galley-2.xml',
+			'datacite-galley-3.xml',
 			'datacite-issue.xml',
 			'datacite-supp-file.xml'
 		);
@@ -175,9 +176,10 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   Galley  |.../manager/importexport/plugin/DataciteExportPlugin/galleys  |Export
 	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Register
 	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Export
+	 * @group current
 	 */
 	public function testRegisterOrExportSpecificObjects() {
-		parent::testRegisterOrExportSpecificObjects(array('issue', 'article', 'galley', 'suppFile'));
+		parent::testRegisterOrExportSpecificObjects('DataciteExportPlugin', array('issue', 'article', 'galley', 'suppFile'), true);
 	}
 
 
@@ -185,7 +187,22 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
 	 */
 	public function testRegisterUnregisteredDois() {
-		parent::testRegisterUnregisteredDois(array('Issue', 'Article', 'Galley', 'Supplementary File'));
+		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley', 'Supplementary File'), true);
+
+		// Check whether the DOIs and meta-data have actually been registered.
+		$registrationTests = array(
+			array('datacite-issue.xml', 'issue/view/1', '10.5072/t.v1i1'),
+			array('datacite-article.xml', 'article/view/1', '10.5072/t.v1i1.1'),
+			array('datacite-galley-1.xml', 'article/view/1/1', '10.5072/t.v1i1.1.g1'),
+			array('datacite-galley-2.xml', 'article/view/1/2', '10.5072/t.v1i1.1.g2'),
+			array('datacite-galley-3.xml', 'article/view/1/3', '10.5072/t.v1i1.1.g3'),
+			array('datacite-supp-file.xml', 'article/downloadSuppFile/1/1', '10.5072/t.v1i1.1.s1')
+		);
+		foreach($registrationTests as $registrationTest) {
+			list($sampleFile, $targetUrl, $doi) = $registrationTest;
+			$targetUrl = 'http://example.com/index.php/test/' . $targetUrl;
+			$this->checkDoiRegistration($targetUrl, $doi, $sampleFile);
+		}
 	}
 
 
@@ -237,7 +254,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO OUTLINE: See FunctionalDoiExportTest::testExportObjectsViaCLI().
+	 * SCENARIO OUTLINE: CLI export, see FunctionalDoiExportTest::testExportAndRegisterObjectsViaCli().
 	 *
 	 * EXAMPLES:
 	 *
@@ -248,8 +265,20 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.     |galleys           |1         |datacite-galley-1.xml
 	 *   DataciteExportPlugin|./.     |galleys           |1 2 3     |datacite-galley-{1,2,3}.xml
 	 *   DataciteExportPlugin|./.     |suppFiles         |1         |datacite-supp-file.xml
+	 *
+	 *
+	 * SCENARIO OUTLINE: CLI registration, see FunctionalDoiExportTest::testExportAndRegisterObjectsViaCli().
+	 *
+	 * EXAMPLES:
+	 *   export plug-in      |settings|export object type|object ids
+	 *   ====================|========|==================|==========
+	 *   DataciteExportPlugin|./.     |issues            |1
+	 *   DataciteExportPlugin|./.     |articles          |1
+	 *   DataciteExportPlugin|./.     |galleys           |1
+	 *   DataciteExportPlugin|./.     |galleys           |1 2 3
+	 *   DataciteExportPlugin|./.     |suppFiles         |1
 	 */
-	public function testExportObjectsViaCLI() {
+	public function testExportAndRegisterObjectsViaCli() {
 		$examples = array(
 			array('issues', '1', 'datacite-issue.xml'),
 			array('articles', '1', 'datacite-article.xml'),
@@ -260,25 +289,9 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 		foreach($examples as $example) {
 			list($exportObjectType, $objectIds, $xmlFiles) = $example;
-			parent::testExportObjectsViaCLI('DataciteExportPlugin', $exportObjectType, $objectIds, $xmlFiles);
+			parent::testExportAndRegisterObjectsViaCli('DataciteExportPlugin', 'export', $exportObjectType, $objectIds, $xmlFiles);
+			parent::testExportAndRegisterObjectsViaCli('DataciteExportPlugin', 'register', $exportObjectType, $objectIds);
 		}
-	}
-
-
-	/**
-	 * SCENARIO OUTLINE: Register objects on the command line.
-	 *
-	 * EXAMPLES:
-	 *
-	 *   export plug-in      |export object type|object ids
-	 *   ====================|==================|==========
-	 *   DataciteExportPlugin|issues            |1
-	 *   DataciteExportPlugin|articles          |1
-	 *   DataciteExportPlugin|galleys           |1 2 3
-	 *   DataciteExportPlugin|suppFiles         |1
-	 */
-	public function testRegisterObjectViaCLI() {
-		parent::testRegisterObjectViaCLI();
 	}
 
 
@@ -313,12 +326,98 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		parent::testNonExistentObjectIdCliError('DataciteExportPlugin');
 	}
 
+
+	//
+	// Implement template methods from FunctionalDoiExportTest
+	//
+	/**
+	 * @see FunctionalDoiExportTest::checkDoiRegistration()
+	 */
+	protected function checkDoiRegistration($expectedTargetUrl, $doi, $sampleFile) {
+		// Prepare HTTP session.
+		$curlCh = curl_init ();
+
+		// Set up basic authentication.
+		$login = 'TIB.OJSTEST:' . Config::getVar('debug', 'webtest_datacite_pw');
+		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+		curl_setopt($curlCh, CURLOPT_USERPWD, $login);
+
+		// Request the DOI's URL over SSL.
+		$apiUrl = "https://mds.datacite.org/%action/$doi?testMode=true";
+		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
+		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
+
+		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
+		try {
+			$tests = array(
+				'doi' => $doi,
+				'metadata' => $sampleFile
+			);
+			foreach($tests as $action => $expectedResponse) {
+				// Set the URL for the API request.
+				curl_setopt($curlCh, CURLOPT_URL, str_replace('%action', $action, $apiUrl));
+
+				// Wait for Handle to propagate our information
+				// but not longer than 1 minute.
+				$lastStatus = null;
+				$tryAgain = true;
+				for ($secs=0; $secs <= 60 && $tryAgain; $secs+=10) {
+					// Status 204 means that the DOI has been registered
+					// but is not yet available due to Handle's latency.
+					if ($lastStatus == 204) {
+						sleep(5);
+					}
+					$response = curl_exec($curlCh);
+					$lastStatus = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
+					$tryAgain = ($lastStatus == 204);
+				}
+
+				if ($lastStatus == 204) {
+					self::fail("The DOI $doi has been correctly registered but is not yet available " .
+						"due to Handle's latency. Please re-execute this test in a few minutes.");
+				}
+
+				// The return status should be 200 - OK.
+				self::assertEquals(200, $lastStatus);
+				if ($action == 'doi') {
+					// Check the registered target URL.
+					self::assertEquals($expectedTargetUrl, $response);
+				} else {
+					// Check the registered meta-data.
+					$this->assertXml($sampleFile, $response);
+				}
+			}
+			// Check the registered meta-data.
+		} catch(Exception $e) {
+			curl_close($curlCh);
+			throw $e;
+		}
+
+
+		// Destroy HTTP session.
+		curl_close($curlCh);
+	}
+
 	/**
 	 * @see FunctionalDoiExportTest::cleanXml()
 	 */
 	protected function cleanXml($xml) {
 		// Fix missing translations.
 		$xml = str_replace('##editor.issues.pages##', 'Pages', $xml);
+
+		// Fix modified date.
+		if (strpos($xml, '<date dateType="Updated">') !== false) {
+			// We have to fix the modified date as it changes
+			// too often (e.g. by using the test server manually)
+			// to be controlled reliably.
+			// Make sure we got the actual modified date but
+			// replace it with the modified date in the sample data
+			// so that our tests do not bail.
+			$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+			$article = $articleDao->getArticle(1);
+			$modifiedDate = date('Y-m-d', strtotime($article->getLastModified()));
+			$xml = str_replace('<date dateType="Updated">' . $modifiedDate, '<date dateType="Updated">2011-12-09', $xml);
+		}
 
 		return parent::cleanXml($xml);
 	}

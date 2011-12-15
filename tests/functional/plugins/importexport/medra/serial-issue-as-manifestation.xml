@@ -14,7 +14,7 @@
 	<DOISerialIssueVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1</DOI>
-		<DOIWebsiteLink>http://some-domain/index.php/test/issue/view/1</DOIWebsiteLink>
+		<DOIWebsiteLink>http://example.com/index.php/test/issue/view/1</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>

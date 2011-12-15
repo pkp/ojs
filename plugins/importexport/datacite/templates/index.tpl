@@ -26,6 +26,9 @@
 {/if}
 {capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
 {translate key="plugins.importexport.datacite.settings.description" settingsUrl=$settingsUrl}
+<br />
+<br />
+{translate key="plugins.importexport.datacite.intro"}
 
 {if empty($configurationErrors)}
 	<h3>{translate key="plugins.importexport.common.export"}</h3>

@@ -29,7 +29,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$expectJournalNameAsPublisher = false,
 
 		/** Other internal test parameters */
-		$pluginId, $pages, $defaultPluginSettings, $initialPluginSettings, $initialJournalSettings;
+		$pluginId, $pages, $defaultPluginSettings, $initialPluginSettings, $initialJournalSettings, $doiPrefix;
 
 
 	//
@@ -52,7 +52,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp($doiPrefix = '10.1234') {
 		parent::setUp();
 		$indexPage = $this->pages['index'];
 		$this->pages += array(
@@ -71,6 +71,14 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			'publisherInstitution' => $journal->getSetting('publisherInstitution'),
 			'supportEmail' => $journal->getSetting('supportEmail')
 		);
+
+		// Reset DOI prefix and all DOIs.
+		$this->doiPrefix = $doiPrefix;
+		$journal->updateSetting('doiPrefix', $doiPrefix);
+		$journal->updateSetting('doiSuffix', 'default');
+		PKPTestHelper::xdebugScream(false);
+		$journalDao->deleteAllPubIds(1, 'doi');
+		PKPTestHelper::xdebugScream(true);
 
 		// Store initial plug-in configuration.
 		$settingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $settingsDao PluginSettingsDAO */
@@ -201,39 +209,69 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *         registered/exported as a new object.
 	 *
 	 * EXAMPLES: See sub-classes.
+	 *
+	 *
+	 * SCENARIO: Registration notification.
+	 *   GIVEN I clicked the register button on one of the
+	 *         export pages
+	 *    WHEN the registration was successful
+	 *    THEN I'll be redirected to the plug-in's index page
+	 *     AND I'll see a notification "Registration successful"
+	 *     AND the registration button of the registered object(s)
+	 *         will change to "Update".
 	 */
-	protected function testRegisterOrExportSpecificObjects($objectTypes) {
+	protected function testRegisterOrExportSpecificObjects($pluginName, $objectTypes, $testRegistration = false) {
 		$this->logIn();
+		$this->removeRegisteredDois($pluginName);
 		foreach($objectTypes as $objectType) {
 			try {
-				// Navigate to the object's export page.
+				// Navigate to the object's export page (in test mode).
 				$page = $objectType.'s';
-				$this->open($this->pages[$page]);
-				// Check whether clicking the export button in the table exports
-				// a single element. We do not actually export as this is already
-				// being tested elsewhere.
-				$this->assertText('css=a.action[href="'.$this->pages['index'].'/export'.ucfirst($objectType).'/1"]', 'Export');
+				$testMode = ($testRegistration ? '?testMode=1' : '');
+				$this->open($this->pages[$page] . $testMode);
 
-				// Check whether clicking the register button in the table registers
-				// a single element.
-				// FIXME: Need to implement registration to test this (see AP9).
+				// Single object:
+				// - Export.
+				// We do not actually export as this is already being tested elsewhere.
+				$buttonLocator = 'css=a.action[href="'.$this->pages['index'].'/%action'.ucfirst($objectType).'/1' . $testMode . '"]';
+				$this->assertText(str_replace('%action', 'export', $buttonLocator), 'Export');
 
-				// Check whether submitting the form via export button exports
-				// all selected elements. We do not actually export as this is
-				// already being tested elsewhere.
+				// - Register.
+				if ($testRegistration) {
+					$registerButton = str_replace('%action', 'register', $buttonLocator);
+					$this->assertText($registerButton, 'Register');
+					$this->clickAndWait($registerButton);
+					// When registration was successfull then we should be
+					// redirected to the index page and see a notification
+					// "Registration Successful".
+					$this->waitForLocation('exact:'.$this->pages['index']);
+					$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+
+					// Re-open the page.
+					$this->open($this->pages[$page] . $testMode);
+					// Make sure that the button for the registered object now reads "Update"
+					// rather than "Register".
+					$this->assertText($registerButton, 'Update');
+				}
+
+				// Several objects:
+				// - Export.
+				// We do not actually export as this is being tested elsewhere.
 				$this->assertElementPresent('css=form[name="'.$objectType.'s"][action="'.$this->pages['index'].'/export'.ucfirst($objectType).'s"]');
 				$this->assertElementPresent('css=input[name="'.$objectType.'Id[]"]');
 				$this->assertElementPresent('css=input.button[name="export"]');
 
-				// Check whether submitting the form via register button registers
-				// all selected elements.
-				// FIXME: Need to implement registration to test this (see AP9).
+				// -Register.
+				if ($testRegistration) {
+					$this->click('css=input.button[value="Select All"]');
+					$this->clickAndWait('css=input.button[name="register"]');
+					$this->waitForLocation('exact:'.$this->pages['index']);
+					$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+				}
 			} catch(Exception $e) {
 				throw $this->improveException($e, $objectType);
 			}
 		}
-
-		self::markTestIncomplete('Need to implement registration to complete this test (see AP9).');
 	}
 
 
@@ -242,22 +280,24 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *
 	 *   GIVEN I navigate to the DOI export plug-in home page
 	 *    WHEN I click the "register all unregistered DOIs" button
-	 *    THEN a list of all unregistered objects will be compiled and
-	 *         displayed for confirmation
-	 *     AND the user will be presented with an "Export" and a "Register" button.
+	 *    THEN I'll see a list of all unregistered objects
+	 *     AND I'll be presented with an "Export" and a "Register" button.
 	 *
 	 * SCENARIO: Register unregistered DOIs - part 2
 	 *
 	 *   GIVEN I am presented with a list of unregistered objects after
 	 *         having clicked the "register all unregistered DOIs" button
+	 *     AND I have selected all objects on that page
 	 *    WHEN I click the "Register" button
 	 *    THEN all DOIs of issues, articles and galleys on that list
 	 *         will be automatically registered with the DOI agency as new objects.
-	 *     AND a notification will inform the user about the successful
-	 *         registration.
+	 *     AND I'll be redirected to the plug-ins home page
+	 *     AND I'll see a notification 'Registration successful'
+	 *     AND the list with unregistered objects will be empty.
 	 */
-	protected function testRegisterUnregisteredDois($expectedObjectCaptions) {
+	protected function testRegisterUnregisteredDois($pluginName, $expectedObjectCaptions, $testRegistration = false) {
 		$this->logIn();
+		$this->removeRegisteredDois($pluginName);
 
 		// Part 1:
 		// Navigate to the mEDRA export plug-in home page.
@@ -270,41 +310,25 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		foreach($expectedObjectCaptions as $expectedObjectCaption) {
 			$this->assertElementPresent($objectTypeColumn . '[text()="' . $expectedObjectCaption . '"]');
 		}
+		// Check whether we have an export (register) button.
+		$this->assertElementPresent('css=input.button[name="export"]');
+		if ($testRegistration) $this->assertElementPresent('css=input.button[name="export"]');
 
 		// Part 2:
-		self::markTestIncomplete('Need to implement registration to complete this test (see AP9).');
-	}
+		if ($testRegistration) {
+			// We have to re-open the page in test mode.
+			$this->open($this->pages['all'] . '?testMode=1');
+			$this->setTimeout(120000); // Registering can take a long time.
+			$this->clickAndWait('css=input.button[name="register"]');
+			$this->setTimeout(30000);
+			$this->waitForLocation('exact:'.$this->pages['index']);
+			$this->assertText('css=.ui-pnotify-text', 'Registration successful');
 
-
-	/**
-	 * SCENARIO: Update button.
-	 *
-	 *    WHEN I navigate to an object in the DOI export plug-in
-	 *         that has already been transmitted to the DOI agency
-	 *    THEN there will be an "Update" rather than a "Register" button
-	 *
-	 * SCENARIO: Update specific issues/articles (DOI unchanged).
-	 *
-	 *   GIVEN I navigate to an object in the DOI export plug-in
-	 *         that has already been transmitted to the DOI agency
-	 *     AND the DOI has not changed
-	 *    WHEN I click the "Update" button
-	 *    THEN the meta-data of the selected object will be automatically
-	 *         registered with the DOI agency as an updated version of a
-	 *         previously transmitted object.
-	 *
-	 * SCENARIO: Update specific issues/articles (DOI changed).
-	 *
-	 *   GIVEN I navigate to an object in the DOI export plug-in
-	 *         that has already been transmitted to the DOI agency
-	 *     AND the DOI for the object has changed since its first registration
-	 *    WHEN I click the "Update" button
-	 *    THEN the new DOI will be automatically registered with the DOI
-	 *         agency as a new object with a relation to the object identified
-	 *         by the previous DOI.
-	 */
-	public function testUpdate() {
-		self::markTestIncomplete('Need to implement registration to test this (see AP9).');
+			// Now the re-open the page to see whether all newly registered
+			// objects have disappeared from the list of unregistered objects.
+			$this->open($this->pages['all']);
+			$this->assertElementPresent('css=td.nodata');
+		}
 	}
 
 
@@ -326,10 +350,9 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$journal->updateSetting('doiSuffix', 'customId');
 
 		// Delete all existing DOIs.
-		$scream = ini_get('xdebug.scream');
-		ini_set('xdebug.scream', false);
+		PKPTestHelper::xdebugScream(false);
 		$journalDao->deleteAllPubIds(1, 'doi');
-		ini_set('xdebug.scream', $scream);
+		PKPTestHelper::xdebugScream(true);
 
 		// Make sure that no custom suffix is saved for our test objects.
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
@@ -449,7 +472,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Now configure a prefix but make sure that the given
 		// sample configuration parameter is empty.
-		$journal->updateSetting('doiPrefix', '10.1234');
+		$journal->updateSetting('doiPrefix', $this->doiPrefix);
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', $sampleConfigParam, '');
 		$this->assertConfigurationError($exportPages, 'The plug-in is not fully set up');
@@ -473,9 +496,24 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *        will contain the XML specified in {XML file(s)}.
 	 *
 	 * EXAMPLES: See sub-classes.
+	 *
+	 *
+	 * SCENARIO OUTLINE: Register objects on the command line.
+	 *
+	 *  GIVEN I am in the applications base directory
+	 *    AND I configured the DOI plug-in with {settings}
+	 *   WHEN I enter the following command on the command line:
+	 *        > php tools/importExport.php {export plug-in} \
+	 *        > register test {export object type} {object ids}
+	 *   THEN the given objects will be registered with the
+	 *        registration agency.
+	 *    AND the script will return "Registration successful".
+	 *
+	 * EXAMPLES: See sub-classes.
 	 */
-	protected function testExportObjectsViaCLI($exportPlugin, $exportObjectType, $objectIds, $xmlFiles) {
-		$this->fakeRouter();
+	protected function testExportAndRegisterObjectsViaCli($exportPlugin, $command, $exportObjectType, $objectIds, $xmlFiles = null) {
+		$request = $this->fakeRouter();
+		if ($command == 'register') $request->_requestVars['testMode'] = 1;
 
 		// Immutable test parameters.
 		$outputFile = Config::getVar('files', 'files_dir') . '/test';
@@ -483,57 +521,52 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		try {
 			// Construct the command line arguments.
-			$args = array('export', $outputFile, $journalPath, $exportObjectType);
-			$args = array_merge($args, explode(' ', $objectIds));
+			$args = array($command);
+			if ($command == 'export') {
+				$args[] = $outputFile;
+			}
+			$args = array_merge($args, array($journalPath, $exportObjectType), explode(' ', $objectIds));
 
 			// Call the CLI.
-			$result = $this->executeCLI($exportPlugin, $args);
+			$result = $this->executeCli($exportPlugin, $args);
 
-			// Check that we didn't get any error messages.
-			$this->assertEquals('', $result);
-
-			// Check the existence of the output file.
-			$realOutputFiles = glob("$outputFile.{xml,tar.gz}", GLOB_BRACE);
-			try {
-				self::assertEquals(1, count($realOutputFiles));
-			} catch (Exception $e) {
-				foreach($realOutputFiles as $realOutputFile) {
-					unlink($realOutputFile);
-				}
-				throw $e;
-			}
-			$realOutputFile = realpath(array_pop($realOutputFiles));
-
-			// Check the XML.
-			if (pathinfo($realOutputFile, PATHINFO_EXTENSION) == 'xml') {
-				$exportedXml = file_get_contents($realOutputFile);
+			if ($command == 'export') {
+				// Check that we didn't get any error messages.
+				$this->assertEquals('', $result);
 			} else {
-				$exportedXml = $this->extractTarFile($realOutputFile);
+				// We should get feedback that the registration was successful.
+				$this->assertRegExp('/##plugins.importexport.common.register.success##/', $result);
 			}
-			$this->assertXml($xmlFiles, $exportedXml);
-			unlink($realOutputFile);
+
+			if ($command == 'export') {
+				// Check the existence of the output file.
+				$realOutputFiles = glob("$outputFile.{xml,tar.gz}", GLOB_BRACE);
+				try {
+					self::assertEquals(1, count($realOutputFiles));
+				} catch (Exception $e) {
+					foreach($realOutputFiles as $realOutputFile) {
+						unlink($realOutputFile);
+					}
+					throw $e;
+				}
+				$realOutputFile = realpath(array_pop($realOutputFiles));
+
+				// Check the XML.
+				if (pathinfo($realOutputFile, PATHINFO_EXTENSION) == 'xml') {
+					$exportedXml = file_get_contents($realOutputFile);
+				} else {
+					$exportedXml = $this->extractTarFile($realOutputFile);
+				}
+				$this->assertXml($xmlFiles, $exportedXml);
+				unlink($realOutputFile);
+			}
 		} catch(Exception $e) {
-			$commandLine = "'php tools /importExport.php $exportPlugin "
-				. "files/test.xml test $exportObjectType "
+			$commandLine = "'php tools/importExport.php $exportPlugin $command "
+				. ($command == 'export' ? 'files/test.xml ' : '')
+				. "test $exportObjectType "
 				. "$objectIds'";
 			throw $this->improveException($e, $commandLine);
 		}
-	}
-
-
-	/**
-	 * SCENARIO OUTLINE: Register objects on the command line.
-	 *
-	 *   WHEN I enter the following command on the command line:
-	 *        > php tools/importExport.php {export plug-in} \
-	 *        > register test {export object type} {object ids}
-	 *   THEN the specified objects will be automatically registered
-	 *        with mEDRA.
-	 *
-	 * EXAMPLES: See sub-classes.
-	 */
-	protected function testRegisterObjectViaCLI() {
-		self::markTestIncomplete('Need to implement registration to test this (see AP9).');
 	}
 
 
@@ -555,7 +588,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Call the CLI.
 		// NB: We check the translation key rather than the string. This is a limitation
 		// of the test environment, not of the implementation.
-		$result = $this->executeCLI($exportPlugin, $args);
+		$result = $this->executeCli($exportPlugin, $args);
 		$this->assertRegExp('/##plugins.importexport.common.export.error.unknownObjectType##/', $result);
 	}
 
@@ -577,7 +610,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Call the CLI.
 		// NB: We check the translation key rather than the string. This is a limitation
 		// of the test environment, not of the implementation.
-		$result = $this->executeCLI($exportPlugin, $args);
+		$result = $this->executeCli($exportPlugin, $args);
 		$this->assertRegExp('/##plugins.importexport.common.export.error.unknownJournal##/', $result);
 	}
 
@@ -598,7 +631,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Call the CLI.
 		// NB: We check the translation key rather than the string. This is a limitation
 		// of the test environment, not of the implementation.
-		$result = $this->executeCLI($exportPlugin, $args);
+		$result = $this->executeCli($exportPlugin, $args);
 		$this->assertRegExp('/##plugins.importexport.common.export.error.outputFileNotWritable##/', $result);
 	}
 
@@ -621,7 +654,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			// Call the CLI.
 			// NB: We check the translation key rather than the string. This is a limitation
 			// of the test environment, not of the implementation.
-			$result = $this->executeCLI($exportPlugin, $args);
+			$result = $this->executeCli($exportPlugin, $args);
 			$this->assertRegExp("/##plugins.importexport.common.export.error.${objectType}NotFound##/", $result);
 		}
 	}
@@ -666,11 +699,21 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				}
 
 				$this->assertXmlStringEqualsXmlFile(
-					'./tests/functional/plugins/importexport/' . $this->pluginId . '/' . $file,
+					$this->getSampleFileLocation($file),
 					$this->cleanXml($xmlString), 'Error while checking ' . $file
 				);
 			}
 		}
+	}
+
+	/**
+	 * Return the path of a sample file relative
+	 * to the application base directory.
+	 * @param $fileName string
+	 * @return string
+	 */
+	protected function getSampleFileLocation($fileName) {
+		return './tests/functional/plugins/importexport/' . $this->pluginId . '/' . $fileName;
 	}
 
 	/**
@@ -698,20 +741,69 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		}
 	}
 
+	/**
+	 * Check whether the given DOI resolves correctly to the
+	 * given target URL and has the meta-data from the sample
+	 * file registered.
+	 * @param $expectedTargetUrl string
+	 * @param $objectType string
+	 * @param $sampleFile string
+	 */
+	protected function checkDoiRegistration($expectedTargetUrl, $doi, $sampleFile) {
+		self::fail('not implemented');
+	}
 
-	//
-	// Private helper methods
-	//
 	/**
 	 * Fake a router for CLI tests.
+	 * @return Request
 	 */
-	private function fakeRouter() {
+	protected function fakeRouter($host = null) {
+		if ($host) $_SERVER['HTTP_HOST'] = $host;
+		$_SERVER['SCRIPT_NAME'] = '/index.php';
+		$_SERVER['PATH_INFO'] = '/test';
 		$application = PKPApplication::getApplication();
 		$request = $application->getRequest();
 		import('classes.core.PageRouter');
 		$router = new PageRouter();
 		$router->setApplication($application);
 		$request->setRouter($router);
+		return $request;
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Remove registered DOIs for all out test objects.
+	 * @param $pluginName string
+	 */
+	private function removeRegisteredDois($pluginName) {
+		// Mark all our test objects as "unregistered".
+		$configurations = array(
+			'Issue' => array('IssueDAO', 'updateIssue', 'getIssueById', 1),
+			'Article' => array('ArticleDAO', 'updateArticle', 'getArticle', 1),
+			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley', 'getGalley', array(1,2,3)),
+			'SuppFile' => array('SuppFileDAO', 'updateSuppFile', 'getSuppFile', 1)
+		);
+		$pluginInstance = $this->instantiatePlugin($pluginName);
+		foreach($configurations as $objectType => $configuration) {
+			list($daoName, $updateMethod, $getMethod, $testIds) = $configuration;
+			$dao = DAORegistry::getDAO($daoName);
+			if (is_scalar($testIds)) $testIds = array($testIds);
+
+			$hookName = strtolower($daoName) . '::getAdditionalFieldNames';
+			HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
+			foreach($testIds as $testId) {
+				// Retrieve the test object.
+				$testObject = $dao->$getMethod($testId);
+
+				// Remove the registered DOI.
+				$testObject->setData($this->pluginId . '::' . DOI_EXPORT_REGDOI, '');
+				$dao->$updateMethod($testObject);
+			}
+			HookRegistry::clear($hookName);
+		}
 	}
 
 	/**

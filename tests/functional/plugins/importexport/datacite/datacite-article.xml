@@ -3,7 +3,7 @@
 	xmlns="http://datacite.org/schema/kernel-2.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
-	<identifier identifierType="DOI">10.1234/t.v1i1.1</identifier>
+	<identifier identifierType="DOI">10.5072/t.v1i1.1</identifier>
 	<creators>
 		<creator>
 			<creatorName>Tester, DOI</creatorName>
@@ -31,11 +31,11 @@
 		<alternateIdentifier alternateIdentifierType="publisherId">1-1-1</alternateIdentifier>
 	</alternateIdentifiers>
 	<relatedIdentifiers>
-		<relatedIdentifier relatedIdentifierType="DOI" relationType="IsPartOf">10.1234/t.v1i1</relatedIdentifier>
-		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.1234/t.v1i1.1.g1</relatedIdentifier>
-		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.1234/t.v1i1.1.g2</relatedIdentifier>
-		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.1234/t.v1i1.1.g3</relatedIdentifier>
-		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.1234/t.v1i1.1.s1</relatedIdentifier>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="IsPartOf">10.5072/t.v1i1</relatedIdentifier>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5072/t.v1i1.1.g1</relatedIdentifier>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5072/t.v1i1.1.g2</relatedIdentifier>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5072/t.v1i1.1.g3</relatedIdentifier>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5072/t.v1i1.1.s1</relatedIdentifier>
 	</relatedIdentifiers>
 	<sizes>
 		<size>33 Pages</size>

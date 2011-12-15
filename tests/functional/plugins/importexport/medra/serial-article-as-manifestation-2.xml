@@ -15,7 +15,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g1</DOI>
-		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/1</DOIWebsiteLink>
+		<DOIWebsiteLink>http://example.com/index.php/test/article/view/1/1</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -178,7 +178,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g2</DOI>
-		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/2</DOIWebsiteLink>
+		<DOIWebsiteLink>http://example.com/index.php/test/article/view/1/2</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>
@@ -329,7 +329,7 @@
 	<DOISerialArticleVersion>
 		<NotificationType>06</NotificationType>
 		<DOI>10.1234/t.v1i1.1.g3</DOI>
-		<DOIWebsiteLink>http://some-domain/index.php/test/article/view/1/3</DOIWebsiteLink>
+		<DOIWebsiteLink>http://example.com/index.php/test/article/view/1/3</DOIWebsiteLink>
 		<DOIStructuralType>Digital Fixation</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
 		<RegistrationAuthority>mEDRA</RegistrationAuthority>

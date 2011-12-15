@@ -33,10 +33,10 @@
 			</tr>
 			<tr class="heading" valign="bottom">
 				<td width="5%">&nbsp;</td>
-				<td width="60%">{translate key="issue.issue"}</td>
+				<td width="55%">{translate key="issue.issue"}</td>
 				<td width="15%">{translate key="editor.issues.published"}</td>
 				<td width="15%">{translate key="editor.issues.numArticles"}</td>
-				<td width="5%" align="right">{translate key="common.action"}</td>
+				<td width="10%" align="right">{translate key="common.action"}</td>
 			</tr>
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -46,12 +46,22 @@
 			{iterate from=issues item=issue}
 				{if $issue->getPubId('doi')}
 					{assign var="noIssues" value="false"}
+					{capture assign="updateOrRegister"}{strip}
+						{if $issue->getData('datacite::registeredDoi')}
+							{translate key="plugins.importexport.common.update"}
+						{else}
+							{translate key="plugins.importexport.common.register"}
+						{/if}
+					{/strip}{/capture}
 					<tr valign="top">
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 						<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 						<td>{$issue->getNumArticles()|escape}</td>
-						<td align="right"><a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}" class="action">{translate key="common.export"}</a></td>
+						<td align="right"><nobr>
+							<a href="{plugin_url path="registerIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" class="action">{$updateOrRegister}</a>
+							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" class="action">{translate key="common.export"}</a>
+						</nobr></td>
 					</tr>
 					<tr>
 						<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
@@ -73,9 +83,15 @@
 			{/if}
 		</table>
 		<p>
-			<input type="submit" name="export" value="{translate key="common.export"}" class="button defaultButton"/>
+			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" class="button defaultButton"/>
+			&nbsp;
+			<input type="submit" name="export" value="{translate key="common.export"}" class="button"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+		</p>
+		<p>
+			{translate key="plugins.importexport.common.register.warning"}
 		</p>
 	</form>
 </div>

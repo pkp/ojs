@@ -165,7 +165,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   Galley  |.../manager/importexport/plugin/MedraExportPlugin/galleys  |Export
 	 */
 	public function testRegisterOrExportSpecificObjects() {
-		parent::testRegisterOrExportSpecificObjects(array('issue', 'article', 'galley'));
+		parent::testRegisterOrExportSpecificObjects('MedraExportPlugin', array('issue', 'article', 'galley'));
 	}
 
 
@@ -173,7 +173,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
 	 */
 	public function testRegisterUnregisteredDois() {
-		parent::testRegisterUnregisteredDois(array('Issue', 'Article', 'Galley'));
+		parent::testRegisterUnregisteredDois('MedraExportPlugin', array('Issue', 'Article', 'Galley'));
 	}
 
 
@@ -260,7 +260,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO OUTLINE: See FunctionalDoiExportTest::testExportObjectsViaCLI().
+	 * SCENARIO OUTLINE: CLI export, see FunctionalDoiExportTest::testExportAndRegisterObjectsViaCli().
 	 *
 	 * EXAMPLES:
 	 *
@@ -272,7 +272,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as man.|galleys           |1         |serial-article-as-manifestation-1.xml
 	 *   MedraExportPlugin|exp. issues as man.|galleys           |1 2 3     |serial-article-as-manifestation-2.xml
 	 */
-	public function testExportObjectsViaCLI() {
+	public function testExportAndRegisterObjectsViaCli() {
 		$examples = array(
 			array(O4DOI_ISSUE_AS_WORK, 'issues', '1', 'serial-issue-as-work.xml'),
 			array(O4DOI_ISSUE_AS_MANIFESTATION, 'issues', '1', 'serial-issue-as-manifestation.xml'),
@@ -287,24 +287,8 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 			// Configure the issue export type.
 			$this->configurePlugin(array('exportIssuesAs' => $exportIssuesAs));
 
-			parent::testExportObjectsViaCLI('MedraExportPlugin', $exportObjectType, $objectIds, $xmlFile);
+			parent::testExportAndRegisterObjectsViaCli('MedraExportPlugin', 'export', $exportObjectType, $objectIds, $xmlFile);
 		}
-	}
-
-
-	/**
-	 * SCENARIO OUTLINE: Register objects on the command line.
-	 *
-	 * EXAMPLES:
-	 *
-	 *   export plug-in   |export object type|object ids
-	 *   =================|==================|==========
-	 *   MedraExportPlugin|issues            |1
-	 *   MedraExportPlugin|articles          |1
-	 *   MedraExportPlugin|galleys           |1 2 3
-	 */
-	public function testRegisterObjectViaCLI() {
-		parent::testRegisterObjectViaCLI();
 	}
 
 
@@ -340,12 +324,15 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	}
 
 
+	//
+	// Implement template methods from FunctionalDoiExportTest
+	//
 	/**
 	 * @see FunctionalDoiExportTest::cleanXml()
 	 */
 	protected function cleanXml($xml) {
 		// Fix URLs.
-		$xml = String::regexp_replace('#http://[^\s]+/index.php/(test|index)#', 'http://some-domain/index.php/test', $xml);
+		$xml = String::regexp_replace('#http://[^\s]+/index.php/(test|index)#', 'http://example.com/index.php/test', $xml);
 
 		// Fix sent date.
 		$xml = String::regexp_replace('/<SentDate>[0-9]{12}<\/SentDate>/', '<SentDate>201111082218</SentDate>', $xml);

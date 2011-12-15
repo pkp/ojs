@@ -30,8 +30,9 @@ class DataciteSettingsForm extends DoiExportSettingsForm {
 		parent::DoiExportSettingsForm($plugin, $journalId);
 
 		// Add form validation checks.
-		$this->addCheck(new FormValidator($this, 'symbol', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.datacite.settings.form.symbol'));
-		$this->addCheck(new FormValidator($this, 'password', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.common.settings.form.password'));
+		// The symbol is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
+		$this->addCheck(new FormValidatorRegExp($this, 'symbol', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.datacite.settings.form.symbolRequired', '/^[^:]+$/'));
+		$this->addCheck(new FormValidator($this, 'password', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.datacite.settings.form.passwordRequired'));
 	}
 
 

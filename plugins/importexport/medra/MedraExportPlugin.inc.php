@@ -74,16 +74,9 @@ class MedraExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::multipleObjectsPerExportFile()
+	 * @see DoiExportPlugin::generateExportFiles()
 	 */
-	function multipleObjectsPerExportFile() {
-		return true;
-	}
-
-	/**
-	 * @see DoiExportPlugin::generateExportFile()
-	 */
-	function generateExportFile(&$request, $exportType, &$objects, $targetFilename, &$journal) {
+	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
 		assert(count($objects) >= 1);
 
 		// Identify the O4DOI schema to export.
@@ -95,11 +88,16 @@ class MedraExportPlugin extends DoiExportPlugin {
 		$this->import('classes.O4DOIExportDom');
 		$dom = new O4DOIExportDom($request, $this, $schema, $journal, $this->getCache(), $exportIssuesAs);
 		$doc =& $dom->generate($objects);
-		if ($doc === false) return $dom->getErrors();
+		if ($doc === false) {
+			$errors =& $dom->getErrors();
+			return false;
+		}
 
 		// Write the result to the target file.
-		file_put_contents($targetFilename, XMLCustomWriter::getXML($doc));
-		return true;
+		$exportFileName = $this->getTargetFileName($targetPath, $exportType);
+		file_put_contents($exportFileName, XMLCustomWriter::getXML($doc));
+		$generatedFiles = array($exportFileName => &$objects);
+		return $generatedFiles;
 	}
 
 	//

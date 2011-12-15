@@ -122,9 +122,15 @@
 			{/if}
 		</table>
 		<p>
-			<input type="submit" value="{translate key="common.export"}" class="button defaultButton"/>
+			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" class="button defaultButton"/>
+			&nbsp;
+			<input type="submit" name="export" value="{translate key="common.export"}" class="button"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+		</p>
+		<p>
+			{translate key="plugins.importexport.common.register.warning"}
 		</p>
 	</form>
 </div>
