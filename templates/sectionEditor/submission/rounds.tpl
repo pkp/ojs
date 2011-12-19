@@ -76,8 +76,9 @@
 </table>
 </div>
 {assign var="start" value="A"|ord}
+{assign var=reviewKey value=0}
 
-{foreach from=$roundAssignments item=reviewAssignment key=reviewKey}
+{foreach from=$roundAssignments item=reviewAssignment}
 {assign var="reviewId" value=$reviewAssignment->getId()}
 
 {if !$reviewAssignment->getCancelled()}
@@ -183,6 +184,7 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 	</tr>
 </table>
 {/if}
+{assign var=reviewKey value=$reviewKey+1}
 {/foreach}
 </div>
 <div class="separator"></div>
