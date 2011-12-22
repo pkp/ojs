@@ -672,8 +672,8 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="about.statistics">Estadísticas</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte del proceso de envío, se les requiere a los autores que indiquen que su envío cumpla con todos los siguientes elementos, y que acepten que envíos que no cumplan con estas indicaciones pueden ser devueltos al autor.</message>
 	<message key="about.delayedOpenAccess">Acceso Libre Diferido</message>
-	<message key="about.delayedOpenAccessDescription1">El contenido de esta revisa está disponible de forma de acceso libre</message>
-	<message key="about.delayedOpenAccessDescription2">mes(es) después de que un número se halla publicado.</message>
+	<message key="about.delayedOpenAccessDescription1">El contenido de esta revista está disponible en forma de acceso libre</message>
+	<message key="about.delayedOpenAccessDescription2">mes(es) después de que un número se haya publicado.</message>
 	<message key="about.authorSelfArchive">Auto-Archivo de Autores</message>
 	
 	<!-- Announcement -->
