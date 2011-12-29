@@ -100,6 +100,50 @@ class MedraExportPlugin extends DoiExportPlugin {
 		return $generatedFiles;
 	}
 
+	/**
+	 * @see DoiExportPlugin::registerDoi()
+	 */
+	function registerDoi(&$request, &$journal, &$objects, $file) {
+		// Use a different endpoint for testing and
+		// production.
+		$this->import('classes.MedraWebservice');
+		$endpoint = ($this->isTestMode($request) ? MEDRA_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT);
+
+		// Get credentials.
+		$username = $this->getSetting($journal->getId(), 'username');
+		$password = base64_decode($this->getSetting($journal->getId(), 'password'));
+
+		// Retrieve the XML.
+		assert(is_readable($file));
+		$xml = file_get_contents($file);
+		assert($xml !== false && !empty($xml));
+
+		// Instantiate the mEDRA web service wrapper.
+		$ws = new MedraWebservice($endpoint, $username, $password);
+
+		// Register the XML with mEDRA.
+		$result = $ws->upload($xml);
+
+		if ($result === true) {
+			// Mark all objects as registered.
+			foreach($objects as $object) {
+				$this->markRegistered($request, $object, MEDRA_WS_TESTPREFIX);
+			}
+		} else {
+			// Handle errors.
+			if (is_string($result)) {
+				$result = array(
+					array('plugins.importexport.common.register.error.mdsError', $result)
+				);
+			} else {
+				$result = false;
+			}
+		}
+
+		return $result;
+	}
+
+
 	//
 	// Private helper methods
 	//

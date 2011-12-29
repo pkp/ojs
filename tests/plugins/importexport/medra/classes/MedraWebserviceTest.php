@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file tests/plugins/importexport/medra/classes/MedraWebserviceTest.inc.php
+ *
+ * Copyright (c) 2000-2011 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class MedraWebserviceTest
+ * @ingroup tests_plugins_importexport_medra_classes
+ * @see MedraWebserviceTest
+ *
+ * @brief Test class for MedraWebservice.
+ */
+
+import('lib.pkp.tests.PKPTestCase');
+import('plugins.importexport.medra.classes.MedraWebservice');
+
+class MedraWebserviceTest extends PKPTestCase {
+	private $ws;
+
+	protected function setUp() {
+		$this->ws = new MedraWebservice(MEDRA_WS_ENDPOINT_DEV, 'TEST_OJS', Config::getVar('debug', 'webtest_medra_pw'));
+		parent::setUp();
+	}
+
+	/**
+	 * @covers MedraWebservice
+	 */
+	public function testUpload() {
+		self::assertTrue($this->ws->upload($this->getTestData()));
+	}
+
+	/**
+	 * @covers MedraWebservice
+	 */
+	public function testUploadWithError() {
+		$metadata = str_replace('SerialVersion', 'UnknownElement', $this->getTestData());
+		$expectedError = "mEDRA: 200 - uploaded file is not valid cvc-complex-type.2.4.a: ".
+			"Invalid content was found starting with element 'UnknownElement'. " .
+			"One of '{\"http://www.editeur.org/onix/DOIMetadata/2.0\":SerialVersion}' is expected.";
+		self::assertEquals($expectedError, $this->ws->upload($metadata));
+	}
+
+	/**
+	 * @covers MedraWebservice
+	 */
+	public function testViewMetadata() {
+		$dom = new DOMDocument('1.0', 'utf-8');
+		$dom->loadXML($this->getTestData());
+		$elem = $dom->getElementsByTagName('DOISerialIssueWork')->item(0);
+		$attr = $dom->createAttribute('xmlns');
+		$attr->value = 'http://www.editeur.org/onix/DOIMetadata/2.0';
+		$elem->appendChild($attr);
+
+		$result = str_replace(
+			'<NotificationType>07</NotificationType>',
+			'<NotificationType>06</NotificationType>',
+			$this->ws->viewMetadata('1749/t.v1i1')
+		);
+
+		self::assertXmlStringEqualsXmlString($dom->saveXml($elem), $result);
+	}
+
+	/**
+	 * O4DOI data for testing.
+	 * @return string
+	 */
+	private function getTestData() {
+		$sampleFile = './tests/functional/plugins/importexport/medra/serial-issue-as-work.xml';
+		return file_get_contents($sampleFile);
+	}
+}
+?>

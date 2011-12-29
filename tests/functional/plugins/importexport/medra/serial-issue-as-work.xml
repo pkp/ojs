@@ -2,7 +2,7 @@
 <ONIXDOISerialIssueWorkRegistrationMessage
 	xmlns="http://www.editeur.org/onix/DOIMetadata/2.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
+	xsi:schemaLocation="http://www.editeur.org/onix/DOIMetadata/2.0 http://medra.dev.cineca.it/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
 	<Header>
 		<FromCompany>From Company</FromCompany>
 		<FromPerson>From Person</FromPerson>
@@ -13,7 +13,7 @@
 	</Header>
 	<DOISerialIssueWork>
 		<NotificationType>06</NotificationType>
-		<DOI>10.1234/t.v1i1</DOI>
+		<DOI>1749/t.v1i1</DOI>
 		<DOIWebsiteLink>http://example.com/index.php/test/issue/view/1</DOIWebsiteLink>
 		<DOIStructuralType>Abstraction</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
@@ -25,11 +25,11 @@
 		</WorkIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="ger">
+				<Title textformat="00" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
 				</Title>
-				<Title textformat="06" language="eng">
+				<Title textformat="00" language="eng">
 					<TitleType>01</TitleType>
 					<TitleText>test</TitleText>
 				</Title>
@@ -70,22 +70,18 @@
 				<Date>2011</Date>
 			</JournalIssueDate>
 			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="ger">
-				<TitleType>01</TitleType>
-				<TitleText>test-de, Vol 1, No 1 (2011)</TitleText>
-			</Title>
-			<Title textformat="06" language="eng">
-				<TitleType>01</TitleType>
+			<Title textformat="00" language="eng">
+				<TitleType>07</TitleType>
 				<TitleText>Test Issue</TitleText>
 			</Title>
 		</JournalIssue>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="06" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
+			<Text textformat="00" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
 		</OtherText>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="06" language="eng">Issue description</Text>
+			<Text textformat="00" language="eng">Issue description</Text>
 		</OtherText>
 		<!-- Includes articles-as-work -->
 		<RelatedWork>
@@ -96,7 +92,7 @@
 			</WorkIdentifier>
 			<WorkIdentifier>
 				<WorkIDType>06</WorkIDType>
-				<IDValue>10.1234/t.v1i1.1</IDValue>
+				<IDValue>1749/t.v1i1.1</IDValue>
 			</WorkIdentifier>
 		</RelatedWork>
 		<!-- Further possible related works (will only occur when updating an issue-as-work): -->
@@ -111,7 +107,7 @@
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>
-				<IDValue>10.1234/t.v1i1.1.g1</IDValue>
+				<IDValue>1749/t.v1i1.1.g1</IDValue>
 			</ProductIdentifier>
 		</RelatedProduct>
 		<RelatedProduct>
@@ -122,7 +118,7 @@
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>
-				<IDValue>10.1234/t.v1i1.1.g2</IDValue>
+				<IDValue>1749/t.v1i1.1.g2</IDValue>
 			</ProductIdentifier>
 		</RelatedProduct>
 		<RelatedProduct>
@@ -133,7 +129,7 @@
 			</ProductIdentifier>
 			<ProductIdentifier>
 				<ProductIDType>06</ProductIDType>
-				<IDValue>10.1234/t.v1i1.1.g3</IDValue>
+				<IDValue>1749/t.v1i1.1.g3</IDValue>
 			</ProductIdentifier>
 		</RelatedProduct>
 	</DOISerialIssueWork>

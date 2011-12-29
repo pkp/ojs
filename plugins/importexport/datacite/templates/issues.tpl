@@ -46,21 +46,23 @@
 			{iterate from=issues item=issue}
 				{if $issue->getPubId('doi')}
 					{assign var="noIssues" value="false"}
-					{capture assign="updateOrRegister"}{strip}
-						{if $issue->getData('datacite::registeredDoi')}
-							{translate key="plugins.importexport.common.update"}
-						{else}
-							{translate key="plugins.importexport.common.register"}
-						{/if}
-					{/strip}{/capture}
+					{if $issue->getData('datacite::registeredDoi')}
+						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
+						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
+					{else}
+						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
+						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
+					{/if}
 					<tr valign="top">
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 						<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 						<td>{$issue->getNumArticles()|escape}</td>
 						<td align="right"><nobr>
-							<a href="{plugin_url path="registerIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" class="action">{$updateOrRegister}</a>
-							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" class="action">{translate key="common.export"}</a>
+							{if $hasCredentials}
+								<a href="{plugin_url path="registerIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							{/if}
+							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 						</nobr></td>
 					</tr>
 					<tr>
@@ -84,14 +86,21 @@
 		</table>
 		<p>
 			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
-			<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" class="button defaultButton"/>
-			&nbsp;
-			<input type="submit" name="export" value="{translate key="common.export"}" class="button"/>
+			{if $hasCredentials}
+				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
+				&nbsp;
+			{/if}
+			<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
 		</p>
 		<p>
-			{translate key="plugins.importexport.common.register.warning"}
+			{if $hasCredentials}
+				{translate key="plugins.importexport.common.register.warning"}
+			{else}
+				{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
+				{translate key="plugins.importexport.common.register.noCredentials" settingsUrl=$settingsUrl}
+			{/if}
 		</p>
 	</form>
 </div>

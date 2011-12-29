@@ -28,14 +28,14 @@
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
 			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="symbol" required="true" key="plugins.importexport.datacite.settings.form.symbol"}</td>
+				<td width="20%" class="label">{fieldLabel name="username" key="plugins.importexport.datacite.settings.form.username"}</td>
 				<td width="80%" class="value">
-					<input type="text" name="symbol" value="{$symbol|escape}" size="20" maxlength="50" id="symbol" class="textField" />
+					<input type="text" name="username" value="{$username|escape}" size="20" maxlength="50" id="username" class="textField" />
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
 			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="password" required="true" key="plugins.importexport.datacite.settings.form.password"}</td>
+				<td width="20%" class="label">{fieldLabel name="password" key="plugins.importexport.common.settings.form.password"}</td>
 				<td width="80%" class="value">
 					<input type="password" name="password" value="{$password|escape}" size="20" maxlength="50" id="password" class="textField" />
 				</td>

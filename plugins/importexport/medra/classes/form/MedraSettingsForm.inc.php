@@ -36,6 +36,8 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 		$this->addCheck(new FormValidatorEmail($this, 'fromEmail', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.fromEmailRequired'));
 		$this->addCheck(new FormValidatorInSet($this, 'exportIssuesAs', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.exportIssuesAs', array(O4DOI_ISSUE_AS_WORK, O4DOI_ISSUE_AS_MANIFESTATION)));
 		$this->addCheck(new FormValidatorInSet($this, 'publicationCountry', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.publicationCountry', array_keys($this->_getCountries())));
+		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
+		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.medra.settings.form.usernameRequired', '/^[^:]+$/'));
 	}
 
 
@@ -74,7 +76,9 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 			'fromName' => 'string',
 			'fromEmail' => 'string',
 			'publicationCountry' => 'string',
-			'exportIssuesAs' => 'int'
+			'exportIssuesAs' => 'int',
+			'username' => 'string',
+			'password' => 'string'
 		);
 	}
 

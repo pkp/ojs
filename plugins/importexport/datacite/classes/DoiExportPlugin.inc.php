@@ -132,6 +132,10 @@ class DoiExportPlugin extends ImportExportPlugin {
 
 		$op = strtolower(array_shift($args));
 
+		// Check whether we deal with a single object or
+		// multiple objects.
+		$multiSelect = (substr($op, -1) == 's');
+
 		// Check whether we serve an exportation request.
 		if (substr($op, 0, 6) == 'export') {
 			// Check whether the "register" button was clicked.
@@ -145,6 +149,9 @@ class DoiExportPlugin extends ImportExportPlugin {
 		// Check whether we serve a registration request.
 		} elseif (substr($op, 0, 8) == 'register') {
 			$action = 'register';
+		// Check whether we serve a reset request (which is allowed for single targets only).
+		} elseif (!$multiSelect && substr($op, 0, 5) == 'reset') {
+			$action = 'reset';
 		// By default we assume a display request.
 		} else {
 			$action = 'display';
@@ -155,90 +162,118 @@ class DoiExportPlugin extends ImportExportPlugin {
 		// "index" must be last so that it is selected if nothing else
 		// matches.
 		$objectTypes = $this->getAllObjectTypes();
-		$targets = array_merge(
-			array_keys($objectTypes),
-			array('all', 'index')
-		);
+		$targets = array_keys($objectTypes);
+		if ($action != 'reset') $targets[] = 'all';
+		$targets[] = 'index';
 		foreach($targets as $target) {
 			if (strpos($op, strtolower($target)) !== false) break;
 		}
 		if ($target == 'index') $action = 'display';
 
-		// Check whether we deal with a single object or
-		// multiple objects.
-		$multiSelect = (substr($op, -1) == 's');
-
 		// Dispatch the action.
-		if ($action == 'export' || $action == 'register') {
-			// Find the objects to be exported (registered).
-			if ($target == 'all') {
-				$exportSpec = array();
-				foreach ($objectTypes as $objectName => $exportType) {
-					$objectIds = $request->getUserVar($objectName . 'Id');
-					if (!empty($objectIds)) {
-						$exportSpec[$exportType] = $objectIds;
+		switch($action) {
+			case 'export':
+			case 'register':
+				// Find the objects to be exported (registered).
+				if ($target == 'all') {
+					$exportSpec = array();
+					foreach ($objectTypes as $objectName => $exportType) {
+						$objectIds = $request->getUserVar($objectName . 'Id');
+						if (!empty($objectIds)) {
+							$exportSpec[$exportType] = $objectIds;
+						}
+					}
+				} else {
+					assert(isset($objectTypes[$target]));
+					if ($multiSelect) {
+						$exportSpec = array($objectTypes[$target] => $request->getUserVar($target . 'Id'));
+					} else {
+						$exportSpec = array($objectTypes[$target] => array_shift($args));
 					}
 				}
-			} else {
-				assert(isset($objectTypes[$target]));
-				if ($multiSelect) {
-					$exportSpec = array($objectTypes[$target] => $request->getUserVar($target . 'Id'));
+
+				if ($action == 'export') {
+					// Export selected objects.
+					$result = $this->exportObjects($request, $exportSpec, $journal);
 				} else {
-					$exportSpec = array($objectTypes[$target] => array_shift($args));
+					// Register selected objects.
+					$result = $this->registerObjects($request, $exportSpec, $journal);
+
+					// Provide the user with some visual feedback that
+					// registration was successful.
+					if ($result === true) {
+						$this->_sendNotification(
+							$request,
+							'plugins.importexport.common.register.success',
+							NOTIFICATION_TYPE_SUCCESS
+						);
+
+						// Redisplay the changed object list.
+						if ($result === true) {
+							$listAction = $target . ($target == 'all' ? '' : 's');
+							$request->redirect(
+								null, null, null,
+								array('plugin', $this->getName(), $listAction),
+								($this->isTestMode($request) ? array('testMode' => 1) : null)
+							);
+						}
+					}
 				}
-			}
+				break;
 
-			if ($action == 'export') {
-				// Export all unregistered.
-				$result = $this->exportObjects($request, $exportSpec, $journal);
-			} else {
-				// Register all unregistered.
-				$result = $this->registerObjects($request, $exportSpec, $journal);
+			case 'reset':
+				// Reset the selected target object to "unregistered" state.
+				$result = $this->resetRegistration($objectTypes[$target], array_shift($args), $journal);
 
-				// Provide the user with some visual feedback that
-				// registration was successful.
+				// Redisplay the changed object list.
 				if ($result === true) {
-					$this->_sendNotification(
-						$request,
-						'plugins.importexport.common.register.success',
-						NOTIFICATION_TYPE_SUCCESS
+					$request->redirect(
+						null, null, null,
+						array('plugin', $this->getName(), $target.'s'),
+						($this->isTestMode($request) ? array('testMode' => 1) : null)
 					);
 				}
-			}
-		} else {
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('testMode', ($request->getUserVar('testMode') == '1' ? true : false));
+				break;
 
-			// Display.
-			switch ($target) {
-				case 'issue':
-					$this->_displayIssueList($templateMgr, $journal);
-					break;
+			default: // Display.
+				$templateMgr =& TemplateManager::getManager();
 
-				case 'article':
-					$this->_displayArticleList($templateMgr, $journal);
-					break;
+				// Test mode.
+				$templateMgr->assign('testMode', $this->isTestMode($request));
 
-				case 'galley':
-					$this->_displayGalleyList($templateMgr, $journal);
-					break;
+				// Export without account.
+				$username = $this->getSetting($journal->getId(), 'username');
+				$templateMgr->assign('hasCredentials', !empty($username));
 
-				case 'suppFile':
-					$this->displaySuppFileList($templateMgr, $journal);
-					break;
+				switch ($target) {
+					case 'issue':
+						$this->_displayIssueList($templateMgr, $journal);
+						break;
 
-				case 'all':
-					$this->displayAllUnregisteredObjects($templateMgr, $journal);
-					break;
+					case 'article':
+						$this->_displayArticleList($templateMgr, $journal);
+						break;
 
-				default:
-					$this->_displayPluginHomePage($templateMgr, $journal);
-			}
-			$result = true;
+					case 'galley':
+						$this->_displayGalleyList($templateMgr, $journal);
+						break;
+
+					case 'suppFile':
+						$this->displaySuppFileList($templateMgr, $journal);
+						break;
+
+					case 'all':
+						$this->displayAllUnregisteredObjects($templateMgr, $journal);
+						break;
+
+					default:
+						$this->_displayPluginHomePage($templateMgr, $journal);
+				}
+				$result = true;
 		}
 
 		// Redirect to the index page.
-		if ($result !== true || $action == 'register') {
+		if ($result !== true) {
 			if (is_array($result) && !empty($result)) {
 				foreach($result as $error) {
 					assert(is_array($error) && count($error) >= 1);
@@ -675,6 +710,15 @@ class DoiExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
+	 * Check whether we are in test mode.
+	 * @param $request Request
+	 * @return boolean
+	 */
+	function isTestMode(&$request) {
+		return ($request->getUserVar('testMode') == '1');
+	}
+
+	/**
 	 * Mark an object as "registered"
 	 * by saving it's DOI to the object's
 	 * "registeredDoi" setting.
@@ -682,9 +726,49 @@ class DoiExportPlugin extends ImportExportPlugin {
 	 * id so that we do not get name clashes
 	 * when several DOI registration plug-ins
 	 * are active at the same time.
+	 * @parem $request Request
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @parem $testPrefix string
 	 */
-	function markRegistered(&$object) {
+	function markRegistered(&$request, &$object, $testPrefix) {
+		$registeredDoi = $object->getPubId('doi');
+		assert(!empty($registeredDoi));
+		if ($this->isTestMode($request)) {
+			$registeredDoi = String::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
+		}
+		$this->saveRegisteredDoi($object, $registeredDoi);
+	}
+
+	/**
+	 * Reset the given object.
+	 *
+	 * @param $objectType integer A DOI_EXPORT_* constant.
+	 * @param $objectId integer The ID of the object to be reset.
+	 * @param $journal Journal
+	 *
+	 * @return boolean|array An array of error messages if something went
+	 *  wrong or boolean 'true' for success.
+	 */
+	function resetRegistration($objectType, $objectId, &$journal) {
+		// Identify the object to be reset.
+		$errors = array();
+		$objects =& $this->_getObjectsFromIds($objectType, $objectId, $journal->getId(), $errors);
+		if ($objects === false || count($objects) != 1) {
+			return $errors;
+		}
+
+		// Reset the object.
+		$this->saveRegisteredDoi($objects[0], '');
+
+		return true;
+	}
+
+	/**
+	 * Set the object's "registeredDoi" setting.
+	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @parem $registeredDoi string
+	 */
+	function saveRegisteredDoi(&$object, $registeredDoi) {
 		// Identify the dao name and update method for the given object.
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateIssue'),
@@ -709,8 +793,6 @@ class DoiExportPlugin extends ImportExportPlugin {
 		// when the DAO does not know about it.
 		$this->registerDaoHook($daoName);
 		$dao =& DAORegistry::getDAO($daoName);
-		$registeredDoi = $object->getPubId('doi');
-		assert(!empty($registeredDoi));
 		$object->setData($this->getPluginId() . '::' . DOI_EXPORT_REGDOI, $registeredDoi);
 		$dao->$daoMethod($object);
 	}
@@ -807,10 +889,11 @@ class DoiExportPlugin extends ImportExportPlugin {
 			$configurationErrors[] = DOI_EXPORT_CONFIGERROR_DOIPREFIX;
 		}
 
-		// 2) missing plug-in setting (all are mandatory except for
-		//    passwords).
+		// 2) missing plug-in setting.
 		$form =& $this->_instantiateSettingsForm($journal);
 		foreach($form->getFormFields() as $fieldName => $fieldType) {
+			if ($form->isOptional($fieldName)) continue;
+
 			$setting = $this->getSetting($journal->getId(), $fieldName);
 			if (empty($setting)) {
 				$configurationErrors[] = DOI_EXPORT_CONFIGERROR_SETTINGS;

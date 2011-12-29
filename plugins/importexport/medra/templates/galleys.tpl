@@ -51,12 +51,25 @@
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
 					{assign var=issue value=$galleyData.issue}
+					{if $galley->getData('medra::registeredDoi')}
+						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
+						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
+					{else}
+						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
+						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
+					{/if}
 					<tr valign="top">
 						<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}"/></td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 						<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>
 						<td>{$article->getAuthorString()|escape}</td>
-						<td align="right"><a href="{plugin_url path="exportGalley"|to_array:$galley->getId()}" class="action">{translate key="common.export"}</a></td>
+						<td align="right"><nobr>
+							{if $hasCredentials}
+								<a href="{plugin_url path="registerGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+								{if $galley->getData('medra::registeredDoi')}<a href="{plugin_url path="resetGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
+							{/if}
+							<a href="{plugin_url path="exportGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+						</nobr></td>
 					</tr>
 					<tr>
 						<td colspan="5" class="{if $galleys->eof()}end{/if}separator">&nbsp;</td>
@@ -78,9 +91,22 @@
 			{/if}
 		</table>
 		<p>
-			<input type="submit" name="export" value="{translate key="common.export"}" class="button defaultButton"/>
+			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if $hasCredentials}
+				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
+				&nbsp;
+			{/if}
+			<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+		</p>
+		<p>
+			{if $hasCredentials}
+				{translate key="plugins.importexport.common.register.warning"}
+			{else}
+				{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
+				{translate key="plugins.importexport.common.register.noCredentials" settingsUrl=$settingsUrl}
+			{/if}
 		</p>
 	</form>
 </div>

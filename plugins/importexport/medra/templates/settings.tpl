@@ -71,6 +71,25 @@
 					</select>
 				</td>
 			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr valign="top">
+				<td colspan="2">
+					<span class="instruct">{translate key="plugins.importexport.medra.intro"}</span>
+				</td>
+			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="username" key="plugins.importexport.medra.settings.form.username"}</td>
+				<td width="80%" class="value">
+					<input type="text" name="username" value="{$username|escape}" size="20" maxlength="50" id="username" class="textField" />
+				</td>
+			</tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="password" key="plugins.importexport.common.settings.form.password"}</td>
+				<td width="80%" class="value">
+					<input type="password" name="password" value="{$password|escape}" size="20" maxlength="50" id="password" class="textField" />
+				</td>
+			</tr>
 		</table>
 
 		<p><span class="formRequired">{translate key="common.requiredField"}</span></p>

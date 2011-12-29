@@ -31,12 +31,12 @@ class DoiExportSettingsForm extends Form {
 		return $this->_journalId;
 	}
 
-	/** @var DataciteExportPlugin */
+	/** @var DoiExportPlugin */
 	var $_plugin;
 
 	/**
 	 * Get the plugin.
-	 * @return DataciteExportPlugin
+	 * @return DoiExportPlugin
 	 */
 	function &getPlugIn() {
 		return $this->_plugin;
@@ -65,6 +65,20 @@ class DoiExportSettingsForm extends Form {
 	//
 	// Implement template methods from Form
 	//
+	/**
+	 * @see Form::getData()
+	 */
+	function getData($key) {
+		$value = parent::getData($key);
+		if ($key == 'password') {
+			// Unfortunately there is no password vault in OJS that
+			// would allow us to save encrypted passwords so we just
+			// scramble it a bit.
+			$value = base64_encode($value);
+		}
+		return $value;
+	}
+
 	/**
 	 * @see Form::initData()
 	 */
@@ -102,7 +116,12 @@ class DoiExportSettingsForm extends Form {
 	 */
 	function getSetting($settingName) {
 		$plugin =& $this->getPlugIn();
-		return $plugin->getSetting($this->getJournalId(), $settingName);
+		$settingValue = $plugin->getSetting($this->getJournalId(), $settingName);
+		if ($settingName == 'password') {
+			// See comment in self::getData() about PW scrambling.
+			$settingValue = base64_decode($settingValue);
+		}
+		return $settingValue;
 	}
 
 	/**
@@ -112,6 +131,14 @@ class DoiExportSettingsForm extends Form {
 	function getFormFields() {
 		return array();
 	}
-}
 
+	/**
+	 * Check whether a given setting is optional.
+	 * @param $settingName string
+	 * @return boolean
+	 */
+	function isOptional($settingName) {
+		return in_array($settingName, array('username', 'password'));
+	}
+}
 ?>

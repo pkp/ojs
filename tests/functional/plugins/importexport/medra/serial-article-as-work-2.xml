@@ -2,7 +2,7 @@
 <ONIXDOISerialArticleWorkRegistrationMessage
 	xmlns="http://www.editeur.org/onix/DOIMetadata/2.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
+	xsi:schemaLocation="http://www.editeur.org/onix/DOIMetadata/2.0 http://medra.dev.cineca.it/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd">
 	<Header>
 		<FromCompany>From Company</FromCompany>
 		<FromPerson>From Person</FromPerson>
@@ -12,8 +12,8 @@
 		<MessageNote>This dataset was exported with ojs2, version x.x.x.x.</MessageNote>
 	</Header>
 	<DOISerialArticleWork>
-		<NotificationType>06</NotificationType>
-		<DOI>10.1234/t.v1i1.1</DOI>
+		<NotificationType>07</NotificationType>
+		<DOI>1749/t.v1i1.1</DOI>
 		<DOIWebsiteLink>http://example.com/index.php/test/article/view/1</DOIWebsiteLink>
 		<DOIStructuralType>Abstraction</DOIStructuralType>
 		<RegistrantName>Registrant</RegistrantName>
@@ -25,11 +25,11 @@
 		</WorkIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="06" language="ger">
+				<Title textformat="00" language="ger">
 					<TitleType>01</TitleType>
 					<TitleText>test-de</TitleText>
 				</Title>
-				<Title textformat="06" language="eng">
+				<Title textformat="00" language="eng">
 					<TitleType>01</TitleType>
 					<TitleText>test</TitleText>
 				</Title>
@@ -75,12 +75,11 @@
 			<TextItem>
 				<NumberOfPages>33</NumberOfPages>
 			</TextItem>
-			<PublicationDate>20111006</PublicationDate>
-			<Title textformat="06" language="ger">
+			<Title textformat="00" language="ger">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Testartikel</TitleText>
 			</Title>
-			<Title textformat="06" language="eng">
+			<Title textformat="00" language="eng">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Test</TitleText>
 			</Title>
@@ -109,12 +108,13 @@
 			</Subject>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="ger">Ein Artikel zum Testen von DOIs</Text>
+				<Text textformat="00" language="ger">Ein Artikel zum Testen von DOIs</Text>
 			</OtherText>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="06" language="eng">DOI Test Submission</Text>
+				<Text textformat="00" language="eng">DOI Test Submission</Text>
 			</OtherText>
+			<PublicationDate>20111006</PublicationDate>
 			<!-- Further related works (will only occur when updating an article-as-work): -->
 				<!-- FIXME: Is a new version of an updated article-as-work -->
 				<!-- FIXME: Has a new version: the updated article-as-work -->
@@ -127,7 +127,7 @@
 				</ProductIdentifier>
 				<ProductIdentifier>
 					<ProductIDType>06</ProductIDType>
-					<IDValue>10.1234/t.v1i1</IDValue>
+					<IDValue>1749/t.v1i1</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
 			<!-- Is manifested in articles-as-manifestation (a.k.a. galleys) -->
@@ -139,7 +139,7 @@
 				</ProductIdentifier>
 				<ProductIdentifier>
 					<ProductIDType>06</ProductIDType>
-					<IDValue>10.1234/t.v1i1.1.g1</IDValue>
+					<IDValue>1749/t.v1i1.1.g1</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
 			<RelatedProduct>
@@ -150,7 +150,7 @@
 				</ProductIdentifier>
 				<ProductIdentifier>
 					<ProductIDType>06</ProductIDType>
-					<IDValue>10.1234/t.v1i1.1.g2</IDValue>
+					<IDValue>1749/t.v1i1.1.g2</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
 			<RelatedProduct>
@@ -161,7 +161,7 @@
 				</ProductIdentifier>
 				<ProductIdentifier>
 					<ProductIDType>06</ProductIDType>
-					<IDValue>10.1234/t.v1i1.1.g3</IDValue>
+					<IDValue>1749/t.v1i1.1.g3</IDValue>
 				</ProductIdentifier>
 			</RelatedProduct>
 		</ContentItem>

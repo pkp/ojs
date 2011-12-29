@@ -24,6 +24,7 @@ import('tests.functional.plugins.importexport.FunctionalDoiExportTest');
 import('plugins.importexport.datacite.DataciteExportPlugin');
 
 class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
+	const TEST_ACCOUNT = 'TIB.OJSTEST';
 
 	/** @var string See testRegisterObject() */
 	private $fileToRegister;
@@ -43,7 +44,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		);
 
 		$this->defaultPluginSettings = array(
-			'symbol' => 'TIB.OJSTEST',
+			'username' => self::TEST_ACCOUNT,
 			'password' => base64_encode(Config::getVar('debug', 'webtest_datacite_pw'))
 		);
 
@@ -176,10 +177,9 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   Galley  |.../manager/importexport/plugin/DataciteExportPlugin/galleys  |Export
 	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Register
 	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Export
-	 * @group current
 	 */
 	public function testRegisterOrExportSpecificObjects() {
-		parent::testRegisterOrExportSpecificObjects('DataciteExportPlugin', array('issue', 'article', 'galley', 'suppFile'), true);
+		parent::testRegisterOrExportSpecificObjects('DataciteExportPlugin', array('issue', 'article', 'galley', 'suppFile'), self::TEST_ACCOUNT);
 	}
 
 
@@ -187,7 +187,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
 	 */
 	public function testRegisterUnregisteredDois() {
-		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley', 'Supplementary File'), true);
+		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley', 'Supplementary File'), self::TEST_ACCOUNT);
 
 		// Check whether the DOIs and meta-data have actually been registered.
 		$registrationTests = array(
@@ -201,7 +201,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		foreach($registrationTests as $registrationTest) {
 			list($sampleFile, $targetUrl, $doi) = $registrationTest;
 			$targetUrl = 'http://example.com/index.php/test/' . $targetUrl;
-			$this->checkDoiRegistration($targetUrl, $doi, $sampleFile);
+			$this->checkDoiRegistration($doi, $sampleFile, $targetUrl);
 		}
 	}
 
@@ -229,16 +229,16 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	public function testPluginSettings() {
 		$tests = array(
 			array(
-				'symbol' => 'some-test-symbol',
+				'username' => 'some-test-symbol',
 				'password' => 'some-password'
 			),
 			array(
-				'symbol' => 'some-other-symbol',
+				'username' => 'some-other-symbol',
 				'password' => 'another-password'
 			)
 		);
 		$inputTypes = array(
-			'symbol' => TEST_INPUTTYPE_TEXT,
+			'username' => TEST_INPUTTYPE_TEXT,
 			'password' => TEST_INPUTTYPE_TEXT
 		);
 		parent::testPluginSettings($tests, $inputTypes);
@@ -246,10 +246,15 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO: See FunctionalDoiExportTest::testConfigurationError().
+	 * SCENARIO OUTLINE: See FunctionalDoiExportTest::testConfigurationError().
+	 *
+	 * EXAMPLES:
+	 *   configuration error
+	 *   ==========================
+	 *   no DOI prefix configured
 	 */
 	public function testConfigurationError() {
-		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'suppFiles', 'all'), 'symbol');
+		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'suppFiles', 'all'));
 	}
 
 
@@ -333,7 +338,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	/**
 	 * @see FunctionalDoiExportTest::checkDoiRegistration()
 	 */
-	protected function checkDoiRegistration($expectedTargetUrl, $doi, $sampleFile) {
+	protected function checkDoiRegistration($doi, $sampleFile, $expectedTargetUrl) {
 		// Prepare HTTP session.
 		$curlCh = curl_init ();
 

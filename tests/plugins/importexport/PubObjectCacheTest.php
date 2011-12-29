@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/plugins/importexport/PUbObjectCacheTest.inc.php
+ * @file tests/plugins/importexport/PubObjectCacheTest.inc.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

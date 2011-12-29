@@ -186,7 +186,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 		// Get the DOI and the URL for the object.
 		$doi = $object->getPubId('doi');
 		assert(!empty($doi));
-		if ($request->getUserVar('testMode') == '1') {
+		if ($this->isTestMode($request)) {
 			$doi = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
 		$url = $this->_getObjectUrl($request, $journal, $object);
@@ -199,10 +199,10 @@ class DataciteExportPlugin extends DoiExportPlugin {
 		curl_setopt($curlCh, CURLOPT_POST, true);
 
 		// Set up basic authentication.
-		$symbol = $this->getSetting($journal->getId(), 'symbol');
+		$username = $this->getSetting($journal->getId(), 'username');
 		$password = base64_decode($this->getSetting($journal->getId(), 'password'));
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		curl_setopt($curlCh, CURLOPT_USERPWD, "$symbol:$password");
+		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
 
 		// Set up SSL.
 		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
@@ -247,7 +247,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 
 		if ($result === true) {
 			// Mark the object as registered.
-			$this->markRegistered($object);
+			$this->markRegistered($request, $object, DATACITE_API_TESTPREFIX);
 		}
 
 		return $result;
@@ -355,7 +355,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 				break;
 		}
 
-		if ($request->getUserVar('testMode') == '1') {
+		if ($this->isTestMode($request)) {
 			// Change server domain for testing.
 			$url = String::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}

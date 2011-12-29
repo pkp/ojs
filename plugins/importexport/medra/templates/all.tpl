@@ -105,9 +105,22 @@
 			{/if}
 		</table>
 		<p>
-			<input type="submit" name="export" value="{translate key="common.export"}" class="button defaultButton"/>
+			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if $hasCredentials}
+				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
+				&nbsp;
+			{/if}
+			<input type="submit" name="export" value="{translate key="common.export"}" title="{translate key="plugins.importexport.common.exportDescription"}" class="button{if !$hasCredentials}  defaultButton{/if}"/>
 			&nbsp;
 			<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" />
+		</p>
+		<p>
+			{if $hasCredentials}
+				{translate key="plugins.importexport.common.register.warning"}
+			{else}
+				{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
+				{translate key="plugins.importexport.common.register.noCredentials" settingsUrl=$settingsUrl}
+			{/if}
 		</p>
 	</form>
 </div>

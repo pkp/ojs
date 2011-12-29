@@ -12,7 +12,7 @@
 
 <plugin_settings>
 	<setting type="string">
-		<name>symbol</name>
+		<name>username</name>
 		<value></value>
 	</setting>
 	<setting type="string">

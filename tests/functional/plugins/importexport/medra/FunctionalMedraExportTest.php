@@ -24,6 +24,7 @@ import('tests.functional.plugins.importexport.FunctionalDoiExportTest');
 import('plugins.importexport.medra.MedraExportPlugin');
 
 class FunctionalMedraExportTest extends FunctionalDoiExportTest {
+	const TEST_ACCOUNT = 'TEST_OJS';
 
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
@@ -38,6 +39,8 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		);
 
 		$this->defaultPluginSettings = array(
+			'username' => self::TEST_ACCOUNT,
+			'password' => base64_encode(Config::getVar('debug', 'webtest_medra_pw')),
 			'registrantName' => 'Registrant',
 			'fromCompany' => 'From Company',
 			'fromName' => 'From Person',
@@ -46,7 +49,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 			'exportIssuesAs' => O4DOI_ISSUE_AS_WORK
 		);
 
-		parent::setUp();
+		parent::setUp('1749');
 	}
 
 
@@ -61,6 +64,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as work|issue      |1           |O4DOI serial issue as work|serial-issue-as-work.xml
 	 */
 	public function testExportSerialIssueAsWork() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_WORK));
 		$this->testExpectJournalNameAsPublisher();
 		$this->doExportObjectTest('issue', 1, 'MedraExportPlugin', 'serial-issue-as-work.xml');
@@ -92,6 +96,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as man.|issue      |1           |O4DOI serial issue as man.|serial-issue-as-manifestation.xml
 	 */
 	public function testExportSerialIssueAsManifestation() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_MANIFESTATION));
 		$this->doExportObjectTest('issue', 1, 'MedraExportPlugin', 'serial-issue-as-manifestation.xml');
 	}
@@ -106,6 +111,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as work|article    |1           |O4DOI serial art. as work |serial-article-as-work-1.xml
 	 */
 	public function testExportSerialArticleAsWork() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_WORK));
 		$this->doExportObjectTest('article', 1, 'MedraExportPlugin', 'serial-article-as-work-1.xml');
 	}
@@ -121,6 +127,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as man.|galley     |1,2,3       |O4DOI serial art. as man. |serial-article-as-manifestation-2.xml
 	 */
 	public function testExportSerialArticleAsManifestation() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_MANIFESTATION));
 		$this->doExportObjectTest('galley', 1, 'MedraExportPlugin', 'serial-article-as-manifestation-1.xml', true);
 		$this->doExportObjectTest('galley', array(1,2,3), 'MedraExportPlugin', 'serial-article-as-manifestation-2.xml', true);
@@ -136,7 +143,20 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|issue 1; article 1; galleys 1, 2 and 3|serial-article-as-{work,manifestation}-2.xml,serial-issue-as-manifestation.xml
 	 */
 	public function testExportUnregisteredDois() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_MANIFESTATION));
+
+		// Test whether exporting updates changes correctly
+		// sets the notification type.
+		$pluginInstance = $this->instantiatePlugin('MedraExportPlugin');
+		$hookName = 'articledao::getAdditionalFieldNames';
+		HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$testObject = $articleDao->getArticle(1);
+		$testObject->setData('medra::' . DOI_EXPORT_REGDOI, '1749/t.v1i1.1');
+		$articleDao->updateArticle($testObject);
+		HookRegistry::clear($hookName);
+
 		$objects = array(
 			'issue' => 1,
 			'article' => 1,
@@ -163,17 +183,32 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   Article |.../manager/importexport/plugin/MedraExportPlugin/articles |Export
 	 *   Galley  |.../manager/importexport/plugin/MedraExportPlugin/galleys  |Register
 	 *   Galley  |.../manager/importexport/plugin/MedraExportPlugin/galleys  |Export
+	 *
+	 *
+	 * SCENARIO: Reset button.
+	 *   GIVEN I already registered an object once
+	 *    WHEN I am navigating to the list containing the object
+	 *    THEN I'll see an additional "Reset" button
+	 *
+	 *
+	 * SCENARIO: Reset the registration state.
+	 *    WHEN I click on the "Reset" button in an object list
+	 *    THEN all internal registration state will be deleted
+	 *     AND the registration button will read "Register" rather
+	 *         than "Update" again
+	 *     AND I will no longer see an additional "Reset" button.
 	 */
 	public function testRegisterOrExportSpecificObjects() {
-		parent::testRegisterOrExportSpecificObjects('MedraExportPlugin', array('issue', 'article', 'galley'));
+		parent::testRegisterOrExportSpecificObjects('MedraExportPlugin', array('issue', 'article', 'galley'), self::TEST_ACCOUNT, true);
 	}
 
 
 	/**
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
+	 * @group current
 	 */
 	public function testRegisterUnregisteredDois() {
-		parent::testRegisterUnregisteredDois('MedraExportPlugin', array('Issue', 'Article', 'Galley'));
+		parent::testRegisterUnregisteredDois('MedraExportPlugin', array('Issue', 'Article', 'Galley'), self::TEST_ACCOUNT);
 	}
 
 
@@ -252,10 +287,22 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO: See FunctionalDoiExportTest::testConfigurationError().
+	 * SCENARIO OUTLINE: See FunctionalDoiExportTest::testConfigurationError().
+	 *
+	 * EXAMPLES:
+	 *   configuration error
+	 *   ==========================
+	 *   no DOI prefix configured
+	 *   not configured the plug-in
 	 */
 	public function testConfigurationError() {
-		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'all'), 'registrantName');
+		$exportPages = array('issues', 'articles', 'galleys', 'all');
+		parent::testConfigurationError($exportPages);
+
+		// Test that the plug-in cannot be used when required configuration parameters are missing.
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'registrantName', '');
+		$this->assertConfigurationError($exportPages, 'The plug-in is not fully set up');
 	}
 
 
@@ -273,6 +320,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 *   MedraExportPlugin|exp. issues as man.|galleys           |1 2 3     |serial-article-as-manifestation-2.xml
 	 */
 	public function testExportAndRegisterObjectsViaCli() {
+		$this->removeRegisteredDois('MedraExportPlugin');
 		$examples = array(
 			array(O4DOI_ISSUE_AS_WORK, 'issues', '1', 'serial-issue-as-work.xml'),
 			array(O4DOI_ISSUE_AS_MANIFESTATION, 'issues', '1', 'serial-issue-as-manifestation.xml'),
@@ -288,6 +336,8 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 			$this->configurePlugin(array('exportIssuesAs' => $exportIssuesAs));
 
 			parent::testExportAndRegisterObjectsViaCli('MedraExportPlugin', 'export', $exportObjectType, $objectIds, $xmlFile);
+			parent::testExportAndRegisterObjectsViaCli('MedraExportPlugin', 'register', $exportObjectType, $objectIds);
+			$this->removeRegisteredDois('MedraExportPlugin');
 		}
 	}
 

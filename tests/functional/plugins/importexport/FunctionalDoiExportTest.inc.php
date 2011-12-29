@@ -52,7 +52,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
 	 */
-	protected function setUp($doiPrefix = '10.1234') {
+	protected function setUp($doiPrefix) {
 		parent::setUp();
 		$indexPage = $this->pages['index'];
 		$this->pages += array(
@@ -148,16 +148,15 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		if (!$singleTest || ($singleTest && count($objectIds) == 1)) {
 			// Export single object.
 			$sampleFile = (is_array($sampleFiles) ? $sampleFiles[0] : $sampleFiles);
-			$xml = $this->getXmlOnExport($exportPlugin . '/export'. ucfirst($objectType) . '/' . $objectIds[0]);
+			$xml = $this->getXmlOnExport($exportPlugin . '/export'. ucfirst($objectType) . '/' . $objectIds[0], 'testMode=1');
 			$this->assertXml($sampleFile, $xml);
 		}
 
 		if (!$singleTest || ($singleTest && count($objectIds) > 1)) {
 			// Export via multi-object form request.
-			$objectParams = '';
+			$objectParams = 'testMode=1';
 			foreach($objectIds as $objectId) {
-				if (!empty($objectParams)) $objectParams .= '&';
-				$objectParams .= "${objectType}Id[]=$objectId";
+				$objectParams .= "&${objectType}Id[]=$objectId";
 			}
 			$xml = $this->getXmlOnExport($exportPlugin . '/export' . ucfirst($objectType) . 's', $objectParams);
 			$this->assertXml($sampleFiles, $xml);
@@ -184,12 +183,11 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	protected function testExportUnregisteredDois($exportPlugin, $objects, $xmlFiles) {
 		// Export a selection of unregistered objects.
 		// NB: getXmlOnExport() automatically unpacks the received tar archive.
-		$objectParams = '';
+		$objectParams = 'testMode=1';
 		foreach($objects as $objectType => $objectIds) {
 			if (is_scalar($objectIds)) $objectIds = array($objectIds);
 			foreach($objectIds as $objectId) {
-				if (!empty($objectParams)) $objectParams .= '&';
-				$objectParams .= "${objectType}Id[]=$objectId";
+				$objectParams .= "&${objectType}Id[]=$objectId";
 			}
 		}
 		$xml = $this->getXmlOnExport($exportPlugin . '/exportAll', $objectParams);
@@ -219,39 +217,60 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *     AND I'll see a notification "Registration successful"
 	 *     AND the registration button of the registered object(s)
 	 *         will change to "Update".
+	 *
+	 *
+	 * SCENARIO: Export without registration account.
+	 *   GIVEN I do not have a registration account
+	 *     AND I therefore entered no credentials on the
+	 *         plug-in's configuration page
+	 *    WHEN I navigate to an {export page}
+	 *    THEN I'll not see any "Registration" buttons
+	 *     BUT "Export" still works.
 	 */
-	protected function testRegisterOrExportSpecificObjects($pluginName, $objectTypes, $testRegistration = false) {
+	protected function testRegisterOrExportSpecificObjects($pluginName, $objectTypes, $testAccount, $testReset = false) {
 		$this->logIn();
 		$this->removeRegisteredDois($pluginName);
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		foreach($objectTypes as $objectType) {
 			try {
 				// Navigate to the object's export page (in test mode).
-				$page = $objectType.'s';
-				$testMode = ($testRegistration ? '?testMode=1' : '');
-				$this->open($this->pages[$page] . $testMode);
+				$pageUrl = $this->pages[$objectType.'s'] . '?testMode=1';
+				$this->open($pageUrl);
 
 				// Single object:
 				// - Export.
 				// We do not actually export as this is already being tested elsewhere.
-				$buttonLocator = 'css=a.action[href="'.$this->pages['index'].'/%action'.ucfirst($objectType).'/1' . $testMode . '"]';
-				$this->assertText(str_replace('%action', 'export', $buttonLocator), 'Export');
+				$buttonLocator = 'css=a.action[href="'.$this->pages['index'].'/%action'.ucfirst($objectType).'/1?testMode=1"]';
+				$exportButton = str_replace('%action', 'export', $buttonLocator);
+				$this->assertText($exportButton, 'Export');
 
 				// - Register.
-				if ($testRegistration) {
-					$registerButton = str_replace('%action', 'register', $buttonLocator);
-					$this->assertText($registerButton, 'Register');
-					$this->clickAndWait($registerButton);
-					// When registration was successfull then we should be
-					// redirected to the index page and see a notification
-					// "Registration Successful".
-					$this->waitForLocation('exact:'.$this->pages['index']);
-					$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+				$registerButton = str_replace('%action', 'register', $buttonLocator);
+				$this->assertText($registerButton, 'Register');
+				$this->clickAndWait($registerButton);
+				// When registration was successful then we should be
+				// redirected to the index page and see a notification
+				// "Registration Successful".
+				$this->waitForLocation('exact:'.$pageUrl);
+				$this->assertText('css=.ui-pnotify-text', 'Registration successful');
 
-					// Re-open the page.
-					$this->open($this->pages[$page] . $testMode);
-					// Make sure that the button for the registered object now reads "Update"
-					// rather than "Register".
-					$this->assertText($registerButton, 'Update');
+				// Make sure that the button for the registered object now reads "Update"
+				// rather than "Register".
+				$this->assertText($registerButton, 'Update');
+
+				// Test the reset button.
+				if ($testReset) {
+					// There should be a "Reset" button for already registered objects.
+					$resetButton = str_replace('%action', 'reset', $buttonLocator);
+					$this->assertElementPresent($resetButton);
+					$this->assertText($resetButton, 'Reset');
+					// When I reset the object ...
+					$this->clickAndWait($resetButton);
+					$this->waitForLocation('exact:'.$pageUrl);
+					// ... then the registration button reads "Register" again ...
+					$this->assertText($registerButton, 'Register');
+					// ... and the "Reset" button should have disappeared.
+					$this->assertElementNotPresent($resetButton);
 				}
 
 				// Several objects:
@@ -262,12 +281,23 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				$this->assertElementPresent('css=input.button[name="export"]');
 
 				// -Register.
-				if ($testRegistration) {
-					$this->click('css=input.button[value="Select All"]');
-					$this->clickAndWait('css=input.button[name="register"]');
-					$this->waitForLocation('exact:'.$this->pages['index']);
-					$this->assertText('css=.ui-pnotify-text', 'Registration successful');
-				}
+				$this->click('css=input.button[value="Select All"]');
+				$this->clickAndWait('css=input.button[name="register"]');
+				$this->waitForLocation('exact:'.$pageUrl);
+				$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+
+				// Export without registration account:
+				// Delete the account setting.
+				$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
+				// Reload the page.
+				$this->open($pageUrl);
+				// Check that only export buttons are visible now.
+				$this->assertElementPresent($exportButton);
+				$this->assertElementNotPresent($registerButton);
+				$this->assertElementPresent('css=input.button[name="export"]');
+				$this->assertElementNotPresent('css=input.button[name="register"]');
+				// Reconfigure the account setting.
+				$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', $testAccount);
 			} catch(Exception $e) {
 				throw $this->improveException($e, $objectType);
 			}
@@ -294,8 +324,10 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *     AND I'll be redirected to the plug-ins home page
 	 *     AND I'll see a notification 'Registration successful'
 	 *     AND the list with unregistered objects will be empty.
+	 *
+	 * SCENARIO: Export without registration account, see self::testRegisterOrExportSpecificObjects()
 	 */
-	protected function testRegisterUnregisteredDois($pluginName, $expectedObjectCaptions, $testRegistration = false) {
+	protected function testRegisterUnregisteredDois($pluginName, $expectedObjectCaptions, $testAccount) {
 		$this->logIn();
 		$this->removeRegisteredDois($pluginName);
 
@@ -312,23 +344,33 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		}
 		// Check whether we have an export (register) button.
 		$this->assertElementPresent('css=input.button[name="export"]');
-		if ($testRegistration) $this->assertElementPresent('css=input.button[name="export"]');
+		$this->assertElementPresent('css=input.button[name="register"]');
+
+		// Export without registration account:
+		// Delete the account setting.
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
+		// Reload the page.
+		$pageUrl = $this->pages['all'] . '?testMode=1';
+		$this->open($pageUrl);
+		// Check that only export buttons are visible now.
+		$this->assertElementPresent('css=input.button[name="export"]');
+		$this->assertElementNotPresent('css=input.button[name="register"]');
+		// Reconfigure the account setting.
+		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', $testAccount);
 
 		// Part 2:
-		if ($testRegistration) {
-			// We have to re-open the page in test mode.
-			$this->open($this->pages['all'] . '?testMode=1');
-			$this->setTimeout(120000); // Registering can take a long time.
-			$this->clickAndWait('css=input.button[name="register"]');
-			$this->setTimeout(30000);
-			$this->waitForLocation('exact:'.$this->pages['index']);
-			$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+		// We have to re-open the page in test mode.
+		$this->open($pageUrl);
+		$this->setTimeout(120000); // Registering can take a long time.
+		$this->clickAndWait('css=input.button[name="register"]');
+		$this->setTimeout(30000);
+		$this->waitForLocation('exact:'.$pageUrl);
+		$this->assertText('css=.ui-pnotify-text', 'Registration successful');
 
-			// Now the re-open the page to see whether all newly registered
-			// objects have disappeared from the list of unregistered objects.
-			$this->open($this->pages['all']);
-			$this->assertElementPresent('css=td.nodata');
-		}
+		// Check that all newly registered objects have disappeared
+		// from the list of unregistered objects.
+		$this->assertElementPresent('css=td.nodata');
 	}
 
 
@@ -446,20 +488,16 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 
 	/**
-	 * SCENARIO: Disable plug-in when .
+	 * SCENARIO OUTLINE: Disable plug-in when .
 	 *
 	 *   GIVEN I have {configuration error}
 	 *    WHEN I navigate to the plug-in home page
 	 *    THEN I'll see an error message
 	 *     AND there'll be no links to the export pages.
 	 *
-	 * EXAMPLES:
-	 *   configuration error
-	 *   ==========================
-	 *   no DOI prefix configured
-	 *   not configured the plug-in
+	 * EXAMPLES: See sub-classes.
 	 */
-	protected function testConfigurationError($exportPages, $sampleConfigParam) {
+	protected function testConfigurationError($exportPages) {
 		$this->logIn();
 
 		// Make sure that no DOI prefix is configured.
@@ -470,15 +508,10 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Assert that the error is being discovered by the plug-in.
 		$this->assertConfigurationError($exportPages, 'A valid DOI prefix must be specified');
 
-		// Now configure a prefix but make sure that the given
-		// sample configuration parameter is empty.
+		// Export should be allowed even when non-mandatory settings are not set.
 		$journal->updateSetting('doiPrefix', $this->doiPrefix);
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
-		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', $sampleConfigParam, '');
-		$this->assertConfigurationError($exportPages, 'The plug-in is not fully set up');
-
-		// With the default configuration export should be allowed.
-		$this->configurePlugin();
+		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
 		$this->assertConfigurationError($exportPages);
 	}
 
@@ -513,7 +546,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function testExportAndRegisterObjectsViaCli($exportPlugin, $command, $exportObjectType, $objectIds, $xmlFiles = null) {
 		$request = $this->fakeRouter();
-		if ($command == 'register') $request->_requestVars['testMode'] = 1;
+		$request->_requestVars['testMode'] = 1;
 
 		// Immutable test parameters.
 		$outputFile = Config::getVar('files', 'files_dir') . '/test';
@@ -745,11 +778,11 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 * Check whether the given DOI resolves correctly to the
 	 * given target URL and has the meta-data from the sample
 	 * file registered.
-	 * @param $expectedTargetUrl string
 	 * @param $objectType string
 	 * @param $sampleFile string
+	 * @param $expectedTargetUrl string
 	 */
-	protected function checkDoiRegistration($expectedTargetUrl, $doi, $sampleFile) {
+	protected function checkDoiRegistration($doi, $sampleFile, $expectedTargetUrl = null) {
 		self::fail('not implemented');
 	}
 
@@ -770,15 +803,11 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		return $request;
 	}
 
-
-	//
-	// Private helper methods
-	//
 	/**
 	 * Remove registered DOIs for all out test objects.
 	 * @param $pluginName string
 	 */
-	private function removeRegisteredDois($pluginName) {
+	protected function removeRegisteredDois($pluginName) {
 		// Mark all our test objects as "unregistered".
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateIssue', 'getIssueById', 1),
@@ -811,7 +840,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 * @param $exportPages array
 	 * @param $expectedErrorMessage string
 	 */
-	private function assertConfigurationError($exportPages, $expectedErrorMessage = null) {
+	protected function assertConfigurationError($exportPages, $expectedErrorMessage = null) {
 		// Navigate to the plug-in home page.
 		$this->open($this->pages['index']);
 
