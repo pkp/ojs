@@ -143,6 +143,7 @@ class RoleDAO extends DAO {
 		$groupedRoles = array();
 		foreach ($roles as $role) {
 			$groupedRoles[$role->getJournalId()][$role->getRoleId()] =& $role;
+			unset($role);
 		}
 
 		return $groupedRoles;
