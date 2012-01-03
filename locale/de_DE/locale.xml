@@ -356,9 +356,6 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 </ul>]]></message>
 
 	<!-- Systeminformationen -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Verwenden Sie dieses Formular, um Ihre Systemkonfiguration zu ändern (die Datei <tt>config.inc.php</tt>). Klicken Sie auf "Speichern", um die neue Konfiguration zu sichern, oder auf "Anzeigen", um die aktualisierte Konfigurationsdatei nur anzuzeigen, ohne die bestehende Konfiguration zu ändern.
-<br /><br />
-<span class="formError">Warnung: Änderungen an diesen Einstellungen können Ihre Website unzugänglich machen (die Konfigurationsdatei muss dann von Hand wiederhergestellt werden). Wir empfehlen daher dringend, Änderungen nur dann vorzunehmen, wenn Sie genau wissen, was Sie tun.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Beachten Sie:</div>
 <p>Das System konnte die Konfigurationsdatei nicht automatisch überschreiben. Öffnen Sie  <tt>config.inc.php</tt> mit einem geeigneten Texteditor und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.</p>]]></message>
 

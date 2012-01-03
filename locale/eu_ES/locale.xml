@@ -332,9 +332,6 @@ Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-kon
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Erabili inprimaki hau zure sistema-konfigurazioa (<tt>config.inc.php</tt> fitxategia) aldatzeko. Sakatu 'Gorde' konfigurazio berria gordetzeko, edo 'Bistaratu' konfigurazio-fitxategi eguneratua bistaratzeko bakarrik, lehengo konfigurazioa aldatu gabe.
-<br /><br />
-<span class="formError">Kontuz: Ezarpen hauek aldatzean zure gunea sarbiderik gabe utz dezakezu (konfigurazio-fitxategia eskuz konpondu beharrean). Ez ezazu aldaketarik egin, oso ondo ez baldin badakizu zertan zabiltzan.</span>]]></message>
 	<message 
 key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</div>
 <p>Sistemak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.</p>]]></message>

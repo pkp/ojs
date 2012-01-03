@@ -297,9 +297,6 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Brug denne formular til at ændre systemkonfigurationen (filen <tt>config.inc.php</tt>). Klik på Gem for at gemme den nye konfiguration eller på "Vis" for kun at få vist den opdaterede konfigurationsfil og ikke ændre den eksisterende konfiguration.
-<br /><br />
-<span class="formError">Advarsel! Ændring af disse indstillinger kan medføre, at det ikke er muligt at oprette adgang til webstedet (hvilket kræver, at konfigurationsfilen rettes manuelt). Det anbefales, at du ikke foretager nogen ændringer, medmindre du præcist ved, hvad du laver.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>BEMÆRK!</div>
 <p>Systemet kunne ikke automatisk overskrive konfigurationsfilen. Hvis du vil aktivere konfigurationsændringerne, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
 

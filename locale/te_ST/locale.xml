@@ -582,9 +582,6 @@
 	<message key="admin.server.apacheVersion">Æpåçhè vèrþîóñ</message>
 	<message key="admin.server.dbDriver">Ðåtåbåþè ðrîvèr</message>
 	<message key="admin.server.dbVersion">Ðåtåbåþè þèrvèr vèrþîóñ</message>
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Üþè thîþ fórm tó móðîfý ýóür þýþtèm çóñfîgüråtîóñ (thè <tt>çóñfîg.îñç.php</tt> fîlè). Çlîçk ßåvè tó þåvè ýóür ñèw çóñfîgüråtîóñ, ór "Ðîþplåý" tó þîmplý ðîþplåý thè üpðåtèð çóñfîgüråtîóñ fîlè åñð ñót móðîfý ýóür èxîþtîñg çóñfîgüråtîóñ.
-<br /><br />
-<span class="formError">Wårñîñg: Móðîfýîñg thèþè þèttîñgþ çåñ pótèñtîållý lèåvè ýóür þîtè îñ åñ îñåççèþþîblè þtåtè (rèqüîrîñg ýóür çóñfîgüråtîóñ fîlè tó bè måñüållý fîxèð). Ît îþ þtróñglý rèçómmèñðèð thåt ýóü ðó ñót måkè åñý çhåñgèþ üñlèþþ ýóü kñów èxåçtlý whåt ýóü årè ðóîñg.</span>]]></message>
 	<message key="admin.saveSystemConfig">ßåvè Çóñfîgüråtîóñ</message>
 	<message key="admin.displayNewSystemConfig">Ðîþplåý Ñèw Çóñfîgüråtîóñ</message>
 	<message key="admin.systemConfigFileReadError"><![CDATA[Thè çóñfîgüråtîóñ fîlè <tt>çóñfîg.îñç.php</tt> ðóèþ ñót èxîþt, îþ ñót rèåðåblè, ór îþ îñvålîð.]]></message>

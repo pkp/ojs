@@ -276,9 +276,6 @@
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Utiliser ce formulaire pour modifier la configuration de votre système (le fichier <tt>config.inc.php</tt>). Cliquer sur Enregistrer pour enregistrer votre nouvelle configuration, ou sur Afficher pour uniquement voir le fichier de configuration mis à jour et ne pas modifier la configuration actuelle.
-<br /><br />
-<span class="formError">Avertissement : Modifier ces paramètres peut éventuellement rendre votre site inaccessible (vous obligeant à réparer manuellement votre fichier de configuration). Il est fortement déconseillé d'appliquer ces changements si vous ne savez pas exactement ce que vous faites.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Le système n'a pu modifier automatiquement le fichier de configuration. Pour appliquer les changements à votre fichier de configuration, vous devez ouvrir <tt>config.inc.php</tt> dans un éditeur de texte approprié et remplacer son contenu par le contenu de la zone de texte ci-dessous.</p>]]></message>
 	

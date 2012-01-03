@@ -338,9 +338,6 @@ Noteu que podeu desactivar la interfície OAI per a aquest lloc editant la confi
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Utilitzeu aquest formulari per a modificar la configuració del sistema (el fitxer <tt>config.inc.php</tt>). Feu clic a Desa per a desar la nova configuració, o a Visualitza si només voleu visualitzar el fitxer de configuració actualitzat però no hi voleu fer cap modificació.
-<br /><br />
-<span class="formError">Advertiment: la modificació d’aquests paràmetres podria deixar el lloc en estat inaccessible i requerir la modificació manual del fitxer de configuració. Es recomana no fer cap canvi en aquest fitxer si no se’n domina el funcionament.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVÍS</div>
 <p>El sistema no ha pogut sobreescriure automàticament el fitxer de configuració. Per a aplicar els canvis a la configuració heu d’obrir el fitxer <tt>config.inc.php</tt> en un editor de textos adequat i substituir-ne el contingut amb el contingut del camp de text que es mostra a continuació.</p>]]></message>
 

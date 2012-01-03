@@ -263,9 +263,6 @@ Note que a interface OAI pode ser desactivada para este portal nas configuraçõ
 </ul>]]></message> 
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Utilize o formulário para modificar as configurações do sistema (o documento <tt>config.inc.php</tt>). Clique em "Guardar" para concluir as alterações de configuração, ou "Exibir" para apenas mostrar as configurações actualizadas sem realizar as modificações.
-<br /><br />
-<span class="formError">Advertência: Alterações nas configurações podem deixar o portal inacessível (obrigando a alterar manualmente o ficheiro). É altamente recomendado que as alterações sejam realizadas por um especialista.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>AVISO!</div>
 <p>O sistema não conseguiu alterar automaticamente o documento de configuração. Para aplicar as alterações é necessário editar o ficheiro <tt>config.inc.php</tt> manualmente em algum editor de texto, substituindo-o com o conteúdo do campo a seguir.</p>]]></message>
 

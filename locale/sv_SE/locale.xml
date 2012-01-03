@@ -327,9 +327,6 @@ Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Använd det här formuläret för att ändra dina systeminställningar (the <tt>config.inc.php</tt> file). Klicka Spara för att spara ändringarna, eller "Display" för att visa ändringarna utan att ta bort aktuella inställningar.
-<br /><br />
-<span class="formError">Varning: Om du ändrar de här inställningarna kan sidan bli oåtkomlig (i så fall måste konfigureringsfilerna repareras manuellt.). Ändra ingenting om du inte vet exakt vad du gör.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBSERVERA!</div>
 <p>Systemet kunde inte automatiskt skriva över konfiguationsfilen. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i ett lämpligt textredigeringsprogram och ersätt innehållet med informationen i textfältet nedan.</p>]]></message>
 

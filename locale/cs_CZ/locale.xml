@@ -293,9 +293,6 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Použijte tento formulář k úpravě Vaší systémové konfigurace (<tt>config.inc.php</tt> souboru). Klikněte na Uložit, abyste Vaši novou konfiguraci uložili nebo na „Zobrazit“, abyste jednoduše zobrazili aktualizovaný konfigurační soubor, avšak současně nezměnili existující konfiguraci.
-<br /><br />
-<span class="formError">Upozornění: Změna těchto nastavení teoreticky může způsobit, že Vaše stránka zůstane nepřístupná (bude nutné opravit konfigurační soubor manuálně). Je důrazně doporučováno, abyste neprováděli žádné změny, pokud přesně nevíte, co děláte.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>POZNÁMKA!</div>
 <p>Systém nemohl automaticky přepsat konfigurační soubor. K provedení změn konfigurace musíte otevřít <tt>config.inc.php</tt> ve vhodném textovém editoru a nahradit jeho obsah obsahem textového pole níže.</p>]]></message>
 

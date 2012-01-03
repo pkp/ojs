@@ -243,11 +243,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 </ul>]]>
   </message>
   <!-- System Information -->
-  <message key="admin.editSystemConfigInstructions">
-    <![CDATA[システム設定（<tt>config.inc.php</tt>ファイル）を変更する場合は、このフォームを使用してください。新しい設定値を保存する場合は「設定を保存」、変更した設定値を表示するだけで設定ファイルを更新しない場合は「設定を表示」ボタンをクリックしてください。
-<br /><br />
-<span class="formError">警告: この設定を変更するとこのサイトを不安定な状態にする恐れがあります（この場合、直接設定ファイルを修正する必要があります）。自分が行うことを正確に理解していない限り、この設定を変更しないことを強く推奨します。</span>]]>
-  </message>
   <message key="admin.overwriteConfigFileInstructions">
     <![CDATA[<h4>注意</div>
 <p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>

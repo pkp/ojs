@@ -279,9 +279,6 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Bu formu sisteminizin yapılanmasını değiştirmek için kullanınız (<tt>config.inc.php</tt> dosyası). Yeni yapılanmanızı saklamak için Save tuşuna basınız, veya güncellenmiş yapılanmayı basitçe görüntülemek ve mevcut yapılanmanızı korumak için "display" tuşuna basınız.
-<br /><br />
-<span class="formError">Uyarı: Bu ayarları değiştirmek sitenizi erişilemez bir duruma getirebilir (Sisteminizin yapılanmasının elle onarılması gerekebilir). Ne yaptığınızı tam olarak bilmeden herhangi bir değişiklik yapmamanız şiddetle tavsiye edilir.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Sistem otomatik olarak yapılanma dosyasının üzerine yazamaz. Yapılanma değişikliklerini uygulayabilmek için <tt>config.inc.php</tt> yi uygun bir yazı düzenleyicide açmak ve içeriğini aşağıdaki yazı alanında belirtilen içerikle değiştirmeniz gerekir. </p>]]></message>
 

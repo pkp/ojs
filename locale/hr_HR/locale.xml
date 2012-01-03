@@ -275,9 +275,6 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 </ul>]]></message>
 	
 	<!--  System Information  --><message key="admin.systemVersion">Verzija OJS-a</message>
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Koristite ovaj formular kako biste izmijenili svoju konfiguraciju sustava (datoteku <tt>config.inc.php</tt>). Kliknite "spremi" kako biste pohranili svoju novu konfiguraciju ili "prikaži" da biste jednostavno prikazali ažuriranu konfiguracijsku datoteku i ne izmijenili već postojeću konfiguraciju. 
-<br /><br />
-<span class="formError">Upozorenje: Izmjenjivanje ovih postavki može potencijalno ostaviti svoju stranicu u stanju  nepristupačnosti (što uključuje ručno ispravljanje vaše konfiguracijske datoteke). Iznimno je preporučljivo da ne činite nikakve promjene ukoliko ne znate što točno radite.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBAVIJEST!</h4>
 <p>Sustav ne može automatski obaviti prepisivanje preko konfiguracijske datoteke. Kako biste primjenili konfiguracijske izmjene morate otvoriti datoteku <tt>config.inc.php</tt> u prikladnom uređivaču teksta i zamijeniti njegov sadržaj sa sadržajem teksta u polju ispod.</p>]]></message>
 

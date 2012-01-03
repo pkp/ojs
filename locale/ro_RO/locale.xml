@@ -373,9 +373,6 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Foloseşte acest formular pentru a modifica (fişierul <tt>config.inc.php</tt>) pentru configurarea sistemului. Apasă pe "salvează" pentru a salva configurarea nouă sau pe "afişează" pentru a vedea pur şi simplu fişierul de configurare actualizat şi nu pentru a modifica configurarea existentă.
-<br /><br />
-<span class="formError">Atenţie: Modificarea acestor setări poate să conducă la inaccesibilitatea siteului (necesită repararea prin modificarea de mână a fişierului de configurare). Este recomandat să nu faceţi modificări dacă nu ştiţi cu exactitate ceea ce faceţi .</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTĂ!</div>
 <p>Sistemul nu a putut suprascrie automat fişierul de configurare. Pentru a aplica modificările, trebuie să deschizi <tt>config.inc.php</tt> într-un editor de text şi să înlocuieşti conţinutul cu cel din câmpul de text de mai jos.</p>]]></message>
 
