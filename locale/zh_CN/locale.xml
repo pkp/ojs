@@ -362,10 +362,6 @@
 		</ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions">><![CDATA[
-		使用这个表单来修改您的系统配置(<tt>config.inc.php</tt> 文件)。按下「存档」来保存您做的新配置，或者按下「显示」仅仅显示出更新过的配置文件，但是不修改您现有的配置。
-		<br /><br />
-		<span class="formError">警告：修改这些配置可能会让您的网站处于一种无法存取的状态（您需要手动地修正您的配置文件）我们强烈建议您，除非您完全知道您在做什么，否则不要做任何的修改。</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
 <p>系统无法自动覆盖这个配置文件。要应用您的配置变更，您必须以适合的编辑器开启<tt>config.inc.php</tt>，并以下列文字栏位中的内容来替换其内容。</p>]]>></message>
 	

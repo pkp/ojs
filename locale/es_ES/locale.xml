@@ -279,9 +279,6 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Utilice este formulario para modificar la configuración de su sistema (el fichero <tt>config.inc.php</tt>). Haga click en "guardar" para guardar la nueva configuración, o en "mostrar" para simplemente mostrar el fichero de configuración actualizado sin modificar la configuración actual.
-<br /><br />
-<span class="formError">Advertencia: La modificación de estos valores puede provocar que su sitio quede inaccesible (siendo necesario arreglar el fichero de configuración manualmente). Se recomienda encarecidamente que no realice ningún cambio si no sabe exactamente qué está haciendo.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>¡ATENCIÓN!</div>
 <p>El sistema no pudo sobreescribir automáticamente el fichero de configuración. Para aplicar los cambios a la configuración es necesario que abra el fichero <tt>config.inc.php</tt> en un editor de texto y reemplace el texto existente con el que le mostramos abajo.</p>]]></message>
 	

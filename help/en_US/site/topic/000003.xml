@@ -18,7 +18,7 @@
 	</section>
 
 	<section title="System Information">
-		<![CDATA[<p>General information about the server environment and OJS version history (including past upgrades). A web-based interface to modify the OJS configuration file is also provided.</p>]]>
+		<![CDATA[<p>General information about the server environment and OJS version history (including past upgrades). A web-based interface to view the OJS configuration file is also provided.</p>]]>
 	</section>
 
 	<section title="Expire User Sessions">

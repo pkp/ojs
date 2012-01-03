@@ -279,9 +279,6 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Sử dụng mẫu này để sửa cấu hình hệ thống (File <tt>config.inc.php</tt>). Nhấp chuột vào nút Ghi để ghi lại cấu hình mới, hoặc nút "Hiển thị" để chỉ hiển thị cấu hình cập nhật nhất mà không sửa.
-<br /><br />
-<span class="formError">Cảnh báo: Sửa những thông số này có thể khiến website của quý vị trong tình trạng không truy cập được (và đòi hỏi phải sửa lại file cấu hình bằng tay). Chúng tôi khuyến nghị là q không nên thay đổi gì trừ khi quý vị biết chính xác điều quý vị đang làm.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>LƯU Ý!</div>
 <p>Hệ thống không thể tự động ghi đè lên file cấu hình. Để thực hiện những thay đổi cấu hình quý vị phải mở file <tt>config.inc.php</tt> bằng phần mềm soạn thảo text phù hợp và thay nội dung file bằng nội dung dưới đây.</p>]]></message>
 

@@ -65,7 +65,6 @@
 
 <div id="systemConfiguration">
 <h3>{translate key="admin.systemConfiguration"}</h3>
-<a class="action" href="{url op="editSystemConfig"}">{translate key="common.edit"}</a>
 <p>{translate key="admin.systemConfigurationDescription"}</p>
 
 {foreach from=$configData key=sectionName item=sectionData}

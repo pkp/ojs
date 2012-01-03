@@ -290,9 +290,6 @@
 </ul>]]></message>
 	
 	<!-- System Information 系統資訊 -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[使用這個表單來修改您的系統設定(<tt>config.inc.php</tt> 檔案)。按下「存檔」來儲存您做的新設定，或者按下「顯示」僅僅顯示出更新過的設定檔案，但是不修改您現有的設定。
-<br /><br />
-<span class="formError">警告：修改這些設定可能會讓您的網站處於一種無法存取的狀態（您需要手動地修正您的設定檔）我們強烈建議您，除非您完全知道您在做什麼，否則不要做任何的修改。</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
 <p>系統無法自動覆寫這個設定檔。要應用您的設定變更，您必須以適合的編輯器開啟<tt>config.inc.php</tt>，並以下列文字欄位中的內容來取代其內容。</p>]]></message>
 

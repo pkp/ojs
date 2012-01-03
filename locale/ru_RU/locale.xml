@@ -349,20 +349,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- System Information -->
 
-
-
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
-<br /><br />
-<span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</div>
 <p>Система не сможет автоматически переписать конфиг файл. Чтобы применить настройки, Вам нужно открыть  <tt>config.inc.php</tt> в соотв. текстовом редакторе и заполнить все нужные поля.</p>]]></message>
-
-
-
-
-
-
-	
 	
 	<!-- Journal Management -->
 

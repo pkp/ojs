@@ -119,7 +119,7 @@ To install OJS:
 	   "PATCH_FILE" should be replaced with the path to the patch file that 
 	   was downloaded, e.g. "6276-ojs.patch".
 
-	   5. Open a web browser to <http://yourdomain.com/path/to/ojs/> and
+	5. Open a web browser to <http://yourdomain.com/path/to/ojs/> and
 	   follow the on-screen installation instructions.
 	   
 	   Alternatively, the command-line installer can be used instead by

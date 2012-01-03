@@ -293,9 +293,6 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Gebruik dit formulier om de systeeminstellingen te wijzgigen (het <tt>config.inc.php</tt> bestand). Klik op Bewaar om de nieuwe instellingen op te slaan of Bekijk om het nieuwe instellingenbestand te bekijken zonder de bestaande instellingen te veranderen.
-<br /><br />
-<span class="formError">Waarschuwing: Het veranderen van deze instellingen kan uw site mogelijk ontoegankelijk maken (het configuratiebestand moet dan met de hand hersteld worden). Het is sterk aan te raden om alleen veranderingen aan te brengen als u exact weet wat u doet.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</div>
 <p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>]]></message>
 

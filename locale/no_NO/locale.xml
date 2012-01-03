@@ -273,9 +273,6 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Bruk dette skjemaet for å modifisere systemkonfigurasjonen (<tt>config.inc.php</tt>-filen). Klikk Lagre for å lagre din nye konfigurasjon, eller 'Vis' for bare å vise den oppdaterte konfigurasjonsfilen og ikke modifisere den eksisterende konfigurasjonen.
-<br /><br />
-<span class="formError">Advarsel: Hvis disse innstillingene modifiseres kan nettstedet bli utilgjengelig (noe som vil kreve at konfigurasjonsfilen repareres manuelt). Du bør ikke gjøre endringer her, medmindre du vet nøyaktig hva du holder på med.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBS!</div>
 <p>Systemet kunne ikke automatisk overskrive konfigurasjonsfilen. For å endre konfigurasjonen må du åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram, og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
 
