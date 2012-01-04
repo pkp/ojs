@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/customBlockManager/SettingsForm.inc.php
  *
- * Copyright (c) 2003-2011 John Willinsky. For full terms see the file docs/COPYING.
+ * Copyright (c) 2003-2012 John Willinsky. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
  *

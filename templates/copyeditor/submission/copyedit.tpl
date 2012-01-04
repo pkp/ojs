@@ -1,7 +1,7 @@
 {**
  * templates/copyeditor/submission/copyedit.tpl
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the copyeditor's submission management table.

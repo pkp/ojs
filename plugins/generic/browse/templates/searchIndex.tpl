@@ -1,7 +1,7 @@
 {**
  * plugins/generic/browse/templates/searchIndex.tpl
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display journal browse objects (sections or identify types)
