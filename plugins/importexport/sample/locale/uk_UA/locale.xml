@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  * $Id$
+  -->
+ 
+<locale name="uk_UA" full_name="Ukrainian">
+	<message key="plugins.importexport.sample.displayName">Приклад модуля імпорту/експорту</message>
+	<message key="plugins.importexport.sample.description">Цей модуль пропонується як приклад для використання розробниками модулів імпорту/експорту. Сам по собі цей модуль не дуже корисний.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Оберіть випуск</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Оберіть випуск для експорту.</message>
+</locale>
