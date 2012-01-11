@@ -387,11 +387,7 @@ class IssueHandler extends Handler {
 		if (!HookRegistry::call('IssueHandler::viewFile', array(&$issue, &$galley))) {
 			import('classes.file.IssueFileManager');
 			$issueFileManager = new IssueFileManager($issue->getId());
-			if ($inline) {
-				return $issueFileManager->viewFile($galley->getFileId());
-			} else {
-				return $issueFileManager->downloadFile($galley->getFileId());
-			}
+			return $issueFileManager->downloadFile($galley->getFileId(), null, $inline);
 		}
 	}
 

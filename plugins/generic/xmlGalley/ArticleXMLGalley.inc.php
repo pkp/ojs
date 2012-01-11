@@ -270,7 +270,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		}
 
 		// use FileManager to send file to browser
-		$fileManager->viewFile($pdfFileName, $this->getFileType());
+		$fileManager->downloadFile($pdfFileName, $this->getFileType(), true);
 
 		return true;
 	}

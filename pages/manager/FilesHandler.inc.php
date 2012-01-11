@@ -44,7 +44,7 @@ class FilesHandler extends ManagerHandler {
 			if ($request->getUserVar('download')) {
 				$fileManager->downloadFile($currentPath);
 			} else {
-				$fileManager->viewFile($currentPath, $this->_fileMimeType($currentPath));
+				$fileManager->downloadFile($currentPath, $this->_fileMimeType($currentPath), true);
 			}
 
 		} else {

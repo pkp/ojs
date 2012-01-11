@@ -130,14 +130,6 @@ class IssueFileManager extends FileManager {
 	}
 
 	/**
-	 * View a file inline (variant of downloadFile).
-	 * @see IssueFileManager::downloadFile
-	 */
-	function viewFile($fileId) {
-		$this->downloadFile($fileId, true);
-	}
-
-	/**
 	 * Return directory path based on issue content type (used for naming files).
 	 * @param $contentType int
 	 * @return string

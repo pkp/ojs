@@ -191,7 +191,7 @@ class Action extends PKPAction {
 	function viewFile($articleId, $fileId, $revision = null) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($articleId);
-		return $articleFileManager->viewFile($fileId, $revision);
+		return $articleFileManager->downloadFile($fileId, $revision, true);
 	}
 
 	/**

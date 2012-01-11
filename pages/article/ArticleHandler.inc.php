@@ -407,11 +407,7 @@ class ArticleHandler extends Handler {
 			if ($suppFile->getRemoteURL()) {
 				$request->redirectUrl($suppFile->getRemoteURL());
 			}
-			if ($suppFile->isInlineable()) {
-				$articleFileManager->viewFile($suppFile->getFileId());
-			} else {
-				$articleFileManager->downloadFile($suppFile->getFileId());
-			}
+			$articleFileManager->downloadFile($suppFile->getFileId(), null, $suppFile->isInlineable());
 		}
 	}
 
