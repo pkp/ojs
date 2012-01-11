@@ -110,7 +110,8 @@ class CustomThemeSettingsForm extends Form {
 		$css .= "input.defaultButton {color: $customThemeForegroundColour;}\n";
 
 		import('lib.pkp.classes.file.FileManager');
-		FileManager::writeFile(dirname(__FILE__) . '/custom.css', $css);
+		$fileManager = new FileManager();
+		$fileManager->writeFile(dirname(__FILE__) . '/custom.css', $css);
 	}
 }
 

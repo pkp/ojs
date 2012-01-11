@@ -52,12 +52,13 @@ class TemplateManager extends PKPTemplateManager {
 
 			$journal =& $router->getContext($request);
 			$site =& $request->getSite();
-
-			$siteFilesDir = $request->getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
+a
+			$publicFileManager = new PublicFileManager();
+			$siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
-			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
+			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename);
 
 			$this->assign('homeContext', array());
@@ -69,7 +70,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getLocalizedTitle();
 				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()));
+				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
 
 				$this->assign('primaryLocale', $journal->getPrimaryLocale());
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
@@ -84,7 +85,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $journal->getLocalizedFavicon());
-				$this->assign('faviconDir', $request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()));
+				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
 				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
@@ -110,7 +111,7 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
 				if ($journalStyleSheet) {
-					$this->addStyleSheet($request->getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getId()) . '/' . $journalStyleSheet['uploadName']);
+					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $journalStyleSheet['uploadName']);
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');

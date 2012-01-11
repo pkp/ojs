@@ -102,7 +102,8 @@ class genTestLocale extends CommandLineTool {
 		$destDir = dirname($outFile);
 		if (!file_exists($destDir)) {
 			import('lib.pkp.classes.file.FileManager');
-			if (!FileManager::mkdir($destDir)) {
+			$fileManager = new FileManager();
+			if (!$fileManager->mkdir($destDir)) {
 				printf('Failed to createDirectory \'%s\'', $destDir);
 				exit(1);
 			}

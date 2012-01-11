@@ -145,10 +145,11 @@ class JournalSiteSettingsForm extends Form {
 
 			// Make the file directories for the journal
 			import('lib.pkp.classes.file.FileManager');
-			FileManager::mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
-			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
-			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');
-			FileManager::mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
+			$fileManager = new FileManager();
+			$fileManager->mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
+			$fileManager->mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
+			$fileManager->mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');
+			$fileManager->mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
 
 			// Install default journal settings
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');

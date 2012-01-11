@@ -192,10 +192,11 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 */
 	function viewFileContents() {
 		import('lib.pkp.classes.file.FileManager');
-		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
+		$fileManager = new FileManager();
+		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace($fileManager->parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
 		// if file does not exist or is outdated, regenerate it from FO
-		if ( !FileManager::fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
+		if (!$fileManager->fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
 
 			// render XML into XSL-FO
 			$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getId());
@@ -265,11 +266,11 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// clear the temporary FO file
-			FileManager::deleteFile($tempFoName);
+			$fileManager->deleteFile($tempFoName);
 		}
 
 		// use FileManager to send file to browser
-		FileManager::viewFile($pdfFileName, $this->getFileType());
+		$fileManager->viewFile($pdfFileName, $this->getFileType());
 
 		return true;
 	}
@@ -285,7 +286,8 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 */
 	function transformXSLT($xmlFile, $xslFile, $xsltType = "", $arguments = null) {
 		// if either XML or XSL file don't exist, then fail without trying to process XSLT
-		if (!FileManager::fileExists($xmlFile) || !FileManager::fileExists($xslFile)) return false;
+		$fileManager = new FileManager();
+		if (!$fileManager->fileExists($xmlFile) || !$fileManager->fileExists($xslFile)) return false;
 
 		// Determine the appropriate XSLT processor for the system
 		if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {

@@ -515,7 +515,7 @@ class ArticleFileManager extends FileManager {
 
 		$articleFile->setFileType($this->getUploadedFileType($fileName));
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
-		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
+		$articleFile->setOriginalFileName($this->truncateFileName($_FILES[$fileName]['name'], 127));
 		$articleFile->setFileStage($fileStage);
 		$articleFile->setRound($this->article->getCurrentRound());
 
@@ -570,7 +570,7 @@ class ArticleFileManager extends FileManager {
 
 		$articleFile->setFileType($mimeType);
 		$articleFile->setFileSize(strlen($contents));
-		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($fileName, 127));
+		$articleFile->setOriginalFileName($this->truncateFileName($fileName, 127));
 		$articleFile->setFileStage($fileStage);
 		$articleFile->setRound($this->article->getCurrentRound());
 
@@ -623,7 +623,7 @@ class ArticleFileManager extends FileManager {
 		}
 
 		$articleFile->setFileType($mimeType);
-		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName(basename($url), 127));
+		$articleFile->setOriginalFileName($this->truncateFileName(basename($url), 127));
 		$articleFile->setFileStage($fileStage);
 		$articleFile->setRound($this->article->getCurrentRound());
 

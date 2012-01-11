@@ -475,6 +475,7 @@ class MetsExportDom {
 	function generateArticleHtmlGalleyImageFileDom(&$doc, &$root, $article, $galley, $imageFile, $useAttribute) {
 		import('classes.file.PublicFileManager');
 		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath = MetsExportDom::getPublicFilePath($imageFile , '/public/');
@@ -491,7 +492,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUM', $chkmd5return);
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUMTYPE', 'MD5');
 		if($contentWrapper == 'FContent') {
-			$fileContent =& FileManager::readFile($filePath);
+			$fileContent =& $fileManager->readFile($filePath);
 			$fContent =& XMLCustomWriter::createElement($doc, 'METS:FContent');
 			$fNameNode =&XMLCustomWriter::createChildWithText($doc, $fContent, 'METS:binData',base64_encode($fileContent));
 			XMLCustomWriter::appendChild($mfile, $fContent);
@@ -512,6 +513,7 @@ class MetsExportDom {
 	function generateArticleFileDom(&$doc, &$root, $article, &$galleyFile, $useAttribute) {
 		import('classes.file.PublicFileManager');
 		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath = MetsExportDom::getPublicFilePath($galleyFile , '/public/');
@@ -524,7 +526,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUM', $chkmd5return);
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUMTYPE', 'MD5');
 		if($contentWrapper == 'FContent') {
-			$fileContent =& FileManager::readFile($filePath);
+			$fileContent =& $fileManager->readFile($filePath);
 			$fContent =& XMLCustomWriter::createElement($doc, 'METS:FContent');
 			$fNameNode =&XMLCustomWriter::createChildWithText($doc, $fContent, 'METS:binData',base64_encode($fileContent));
 			XMLCustomWriter::appendChild($mfile, $fContent);
@@ -545,6 +547,7 @@ class MetsExportDom {
 	function generateArticleSuppFileDom(&$doc, &$root, $article, &$suppFile) {
 		import('classes.file.PublicFileManager');
 		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile =& XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath = MetsExportDom::getPublicFilePath($suppFile , '/supp/');;
@@ -556,7 +559,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUM', $chkmd5return);
 		XMLCustomWriter::setAttribute($mfile, 'CHECKSUMTYPE', 'MD5');
 		if($contentWrapper == 'FContent') {
-			$fileContent =& FileManager::readFile($filePath);
+			$fileContent =& $fileManager->readFile($filePath);
 			$fContent =& XMLCustomWriter::createElement($doc, 'METS:FContent');
 			$fNameNode =&XMLCustomWriter::createChildWithText($doc, $fContent, 'METS:binData',base64_encode($fileContent));
 			XMLCustomWriter::appendChild($mfile, $fContent);

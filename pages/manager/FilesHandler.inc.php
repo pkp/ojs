@@ -32,6 +32,7 @@ class FilesHandler extends ManagerHandler {
 		$this->setupTemplate(true);
 
 		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
@@ -59,7 +60,7 @@ class FilesHandler extends ManagerHandler {
 							'isDir' => $isDir,
 							'mimetype' => $isDir ? '' : $this->_fileMimeType($filePath),
 							'mtime' => filemtime($filePath),
-							'size' => $isDir ? '' : FileManager::getNiceFileSize(filesize($filePath)),
+							'size' => $isDir ? '' : $fileManager->getNiceFileSize(filesize($filePath)),
 						);
 						$files[$file] = $info;
 					}
