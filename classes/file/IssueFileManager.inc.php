@@ -38,6 +38,8 @@ class IssueFileManager extends FileManager {
 
 		$this->setIssueId($issueId);
 		$this->setFilesDir(Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issueId . '/');
+
+		parent::FileManager();
 	}
 
 	/**
