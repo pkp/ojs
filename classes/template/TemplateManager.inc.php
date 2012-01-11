@@ -52,7 +52,7 @@ class TemplateManager extends PKPTemplateManager {
 
 			$journal =& $router->getContext($request);
 			$site =& $request->getSite();
-a
+
 			$publicFileManager = new PublicFileManager();
 			$siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
