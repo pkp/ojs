@@ -54,6 +54,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					a.file_name,
 					a.original_file_name,
 					a.file_type,
+					a.type,
 					a.file_size,
 					a.date_uploaded,
 					a.date_modified
@@ -78,6 +79,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					a.file_name,
 					a.original_file_name,
 					a.file_type,
+					a.type,
 					a.file_size,
 					a.date_uploaded,
 					a.date_modified
