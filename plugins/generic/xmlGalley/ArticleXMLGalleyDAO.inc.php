@@ -39,55 +39,33 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 	 * @return ArticleXMLGalley
 	 */
 	function _getXMLGalleyFromId($galleyId, $articleId = null) {
+		$params = array((int) $galleyId);
+		if ($articleId) $params[] = (int) $articleId;
 
 		// get derived galley from DB
-		if (isset($articleId)) {
-			$result =& $this->retrieve(
-				'SELECT	x.*,
-					x.galley_type AS file_type,
-					g.file_id,
-					g.html_galley,
-					g.style_file_id,
-					g.seq,
-					g.locale,
-					g.public_galley_id,
-					a.file_name,
-					a.original_file_name,
-					a.file_type,
-					a.file_size,
-					a.date_uploaded,
-					a.date_modified
-				FROM	article_xml_galleys x
-					LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
-					LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE	x.galley_id = ? AND
-					x.article_id = ?',
-				array((int) $galleyId, (int) $articleId)
-			);
-
-		} else {
-			$result =& $this->retrieve(
-				'SELECT	x.*,
-					x.galley_type AS file_type, 
-					g.file_id,
-					g.html_galley,
-					g.style_file_id,
-					g.seq,
-					g.locale,
-					g.public_galley_id,
-					a.file_name,
-					a.original_file_name,
-					a.file_type,
-					a.file_size,
-					a.date_uploaded,
-					a.date_modified
-				FROM	article_xml_galleys x
-					LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
-					LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE	x.galley_id = ?',
-				array((int) $galleyId)
-			);
-		}
+		$result =& $this->retrieve(
+			'SELECT	x.*,
+				x.galley_type AS file_type,
+				g.file_id,
+				g.html_galley,
+				g.style_file_id,
+				g.seq,
+				g.locale,
+				g.public_galley_id,
+				a.file_name,
+				a.original_file_name,
+				a.file_stage,
+				a.file_type,
+				a.file_size,
+				a.date_uploaded,
+				a.date_modified
+			FROM	article_xml_galleys x
+				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+				LEFT JOIN article_files a ON (g.file_id = a.file_id)
+			WHERE	x.galley_id = ?
+				' . ($articleId?' AND x.article_id = ?':''),
+			$params
+		);
 
 		// transform row into an ArticleXMLGalley object
 		if ($result->RecordCount() != 0) {
