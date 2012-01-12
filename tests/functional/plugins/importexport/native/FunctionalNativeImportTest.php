@@ -24,6 +24,12 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		'Galley' => '10.1234/t.v1i1.1.g1-imp-test',
 		'SuppFile' => '10.1234/t.v1i1.1.s1-imp-test'
 	);
+	private $expectedURNs = array(
+		'Issue' => 'urn:nbn:de:0000-t.v1i1-imp-test8',
+		'PublishedArticle' => 'urn:nbn:de:0000-t.v1i1.1-imp-test5',
+		'Galley' => 'urn:nbn:de:0000-t.v1i1.1.g1-imp-test5',
+		'SuppFile' => 'urn:nbn:de:0000-t.v1i1.1.s1-imp-test9'
+	);
 
 	/**
 	 * @see WebTestCase::getAffectedTables()
@@ -62,16 +68,27 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			'Galley' => 'ArticleGalleyDAO',
 			'SuppFile' => 'SuppFileDAO'
 		);
+		$articelId = null;
 		foreach ($daos as $objectType => $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
 			$pubObject = call_user_func(array($dao, "get${objectType}ByPubId"), 'doi', $this->expectedDois[$objectType]);
 			self::assertNotNull($pubObject, "Error while testing $objectType: object or DOI has not been imported.");
+			$pubObjectByURN = call_user_func(array($dao, "get${objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
+			self::assertNotNull($pubObjectByURN, "Error while testing $objectType: object or URN has not been imported.");
+			if ($objectType == 'PublishedArticle') {
+				$articelId = $pubObject->getArticleId();
+			}
 		}
 
 		// Trying to import the same file again should lead to an error.
 		$args = array('import', $testfile, 'test', 'admin');
 		$result = $this->executeCli('NativeImportExportPlugin', $args);
 		self::assertRegExp('/##plugins.importexport.native.import.error.duplicatePubId##/', $result);
+
+		// Delete inserted article files from the filesystem.
+		import('classes.file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($articelId);
+		$articleFileManager->deleteArticleTree();
 	}
 
 	public function testNativeDoiImportWithErrors() {

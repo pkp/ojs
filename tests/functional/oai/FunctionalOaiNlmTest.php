@@ -21,7 +21,7 @@ class FunctionalOaiNlmTest extends OaiWebServiceTestCase {
 		$this->webServiceRequest->setParams($params = array(
 			'verb' => 'GetRecord',
 			'metadataPrefix' => 'nlm',
-			'identifier' => 'oai:ojs.ojs-test.cedis.fu-berlin.de:article/1'
+			'identifier' => 'oai:'.Config::getVar('oai', 'repository_id').':article/1'
 		));
 
 		// Check DOI node with XPath.

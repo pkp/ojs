@@ -21,9 +21,13 @@ class FunctionalNativeExportTest extends FunctionalImportExportBaseTestCase {
 		$export = $this->getXpathOnExport('NativeImportExportPlugin/exportIssue/1');
 		$testCases = array(
 			'/issue/id[@type="doi"]' => '10.1234/t.v1i1',
+			'/issue/id[@type="other::urn"]' => 'urn:nbn:de:0000-t.v1i19',
 			'/issue/section/article[1]/id[@type="doi"]' => '10.1234/t.v1i1.1',
+			'/issue/section/article[1]/id[@type="other::urn"]' => 'urn:nbn:de:0000-t.v1i1.18',
 			'/issue/section/article[1]/galley[1]/id[@type="doi"]' => '10.1234/t.v1i1.1.g1',
-			'/issue/section/article[1]/supplemental_file[1]/id[@type="doi"]' => '10.1234/t.v1i1.1.s1'
+			'/issue/section/article[1]/galley[1]/id[@type="other::urn"]' => 'urn:nbn:de:0000-t.v1i1.1.g17',
+			'/issue/section/article[1]/supplemental_file[1]/id[@type="doi"]' => '10.1234/t.v1i1.1.s1',
+			'/issue/section/article[1]/supplemental_file[1]/id[@type="other::urn"]' => 'urn:nbn:de:0000-t.v1i1.1.s19'
 		);
 		foreach($testCases as $xPath => $expectedDoi) {
 			self::assertEquals(

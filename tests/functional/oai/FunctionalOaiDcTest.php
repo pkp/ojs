@@ -19,24 +19,28 @@ class FunctionalOaiDcTest extends OaiWebServiceTestCase {
 
 	/**
 	 * SCENARIO OUTLINE: Export article in DC format over OAI
-	 *   GIVEN a DOI has been assigned for a given {publishing object}
+	 *   GIVEN a DOI and a URN have been assigned for a given {publishing object}
 	 *    WHEN I export the corresponding article in DC format over OAI
-	 *    THEN DOI-specific {DC fields} will be present in the OAI-message.
+	 *    THEN DOI and URN specific {DC fields} will be present in the OAI-message.
 	 *
 	 * EXAMPLES:
 	 *   publishing object | DC fields
 	 *   ==================|================================================
 	 *   issue             | <dc:source>10.4321/t.v1i1</dc:source>
+	 *   issue             | <dc:source>urn:nbn:de:0000-t.v1i19</dc:source>
 	 *   article           | <dc:identifier>10.4321/t.v1i1.1</dc:identifier>
+	 *   article           | <dc:identifier>urn:nbn:de:0000-t.v1i1.18</dc:identifier>
 	 *   galley            | <dc:relation>10.4321/t.v1i1.g1</dc:relation>
+	 *   galley            | <dc:relation>urn:nbn:de:0000-t.v1i1.1.g17</dc:relation>
 	 *   supp-file         | <dc:relation>10.4321/t.v1i1.s1</dc:relation>
+	 *   supp-file         | <dc:relation>urn:nbn:de:0000-t.v1i1.1.s19</dc:relation>
 	 */
-	public function testDoi() {
+	public function testDOIAndURN() {
 		// Configure the web service request
 		$this->webServiceRequest->setParams($params = array(
 			'verb' => 'GetRecord',
 			'metadataPrefix' => 'oai_dc',
-			'identifier' => 'oai:ojs.ojs-test.cedis.fu-berlin.de:article/1'
+			'identifier' => 'oai:'.Config::getVar('oai', 'repository_id').':article/1'
 		));
 
 		// Check DOI node with XPath.
@@ -46,10 +50,10 @@ class FunctionalOaiDcTest extends OaiWebServiceTestCase {
 		);
 		$domXPath = $this->getXPath($namespaces);
 		$testCases = array(
-			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:source' => array('10.1234/t.v1i1'),
-			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier' => array('10.1234/t.v1i1.1'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:source' => array('10.1234/t.v1i1', 'urn:nbn:de:0000-t.v1i19'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier' => array('10.1234/t.v1i1.1', 'urn:nbn:de:0000-t.v1i1.18'),
 			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:relation' => array(
-				'10.1234/t.v1i1.1.g1', '10.1234/t.v1i1.1.s1'
+				'10.1234/t.v1i1.1.g1', '10.1234/t.v1i1.1.s1', 'urn:nbn:de:0000-t.v1i1.1.g17', 'urn:nbn:de:0000-t.v1i1.1.s19'
 			)
 		);
 		foreach($testCases as $xPath => $expectedDoiList) {
