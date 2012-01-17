@@ -719,7 +719,7 @@ class Upgrade extends Installer {
 	 */
 	function migrateReviewingInterests() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$interestDao =& DAORegistry::getDAO('InterestDAO');
+		$controlledVocabDao =& DAORegistry::getDAO('ControlledVocabDAO');
 
 		$result =& $userDao->retrieve('SELECT setting_value as interests, user_id FROM user_settings WHERE setting_name = ?', 'interests');
 		while (!$result->EOF) {
@@ -729,15 +729,32 @@ class Upgrade extends Installer {
 				$userId = $row['user_id'];
 				$interests = explode(',', $row['interests']);
 
-				if (empty($interests))  $interests = array();
+				if (empty($interests)) $interests = array();
 				elseif (!is_array($interests)) $interests = array($interests);
 
-				// Trim whitespace from the beginning and end of each element
-				foreach($interests as $key => $interest) {
-					$interests[$key] = trim($interest);
+				$controlledVocabDao->update(
+					sprintf('INSERT INTO controlled_vocabs (symbolic, assoc_type, assoc_id) VALUES (?, ?, ?)'),
+					array('interest', ROLE_ID_REVIEWER, $userId)
+				);
+				$controlledVocabId = $controlledVocabDao->getInsertId('controlled_vocabs', 'controlled_vocab_id');
+
+				foreach($interests as $interest) {
+					// Trim unnecessary whitespace
+					$interest = trim($interest);
+
+					$controlledVocabDao->update(
+						sprintf('INSERT INTO controlled_vocab_entries (controlled_vocab_id) VALUES (?)'),
+						array($controlledVocabId)
+					);
+
+					$controlledVocabEntryId = $controlledVocabDao->getInsertId('controlled_vocab_entries', 'controlled_vocab_entry_id');
+
+					$controlledVocabDao->update(
+						sprintf('INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)'),
+						array($controlledVocabEntryId, 'interest', $interest, 'string')
+					);
 				}
 
-				$interestDao->insertInterests($interests, $userId, false);
 			}
 
 			$result->MoveNext();
@@ -951,7 +968,8 @@ class Upgrade extends Installer {
 		$result =& $interestDao->retrieve('SELECT cves.setting_value as interest_keyword, cv.assoc_id as user_id
 											FROM controlled_vocabs cv
 											LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-											LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)');
+											LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
+											WHERE cv.symbolic = ?', array('interest'));
 
 		$oldEntries =& $interestDao->retrieve('SELECT controlled_vocab_entry_id FROM controlled_vocab_entry_settings cves WHERE cves.setting_name = ?', array('interest'));
 		while (!$oldEntries->EOF) {
