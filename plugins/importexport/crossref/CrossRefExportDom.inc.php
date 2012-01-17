@@ -185,9 +185,9 @@ class CrossRefExportDom {
 		}
 		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
 
-		/* publication date of issue */
-		if ($issue->getDatePublished()) {
-			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $issue->getDatePublished());
+		/* publication date of article */
+		if ($article->getDatePublished()) {
+			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $article->getDatePublished());
 			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 		}
 
