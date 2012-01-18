@@ -458,7 +458,7 @@ class ArticleHandler extends Handler {
 		}
 
 		// Make sure the reader has rights to view the article/issue.
-		if ($issue && $issue->getPublished()) {
+		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $articleId);
 
