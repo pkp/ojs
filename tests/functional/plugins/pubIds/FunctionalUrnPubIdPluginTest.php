@@ -1,29 +1,42 @@
 <?php
 
 /**
- * @file tests/functional/settings/FunctionalURNGenerationSettingsAndDisplayTest.inc.php
+ * @file tests/functional/plugins/pubIds/FunctionalUrnPubIdPluginTest.inc.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class FunctionalURNGenerationSettingsAndDisplayTest
- * @ingroup tests_functional_settings
+ * @class FunctionalUrnPubIdPluginTest
+ * @ingroup tests_functional_plugins_pubIds
  *
- * @brief Test URN generation settings and display.
+ * @brief Test URN plug-in.
  *
  * FEATURE: URN support -- settings
- *   AS A    	journal manager
- *   I WANT TO	be able to define rules how URNs should be used (assigned, generated, displayed)
- *   AS AN   	editor
- *   I WANT TO	be able to use URNs accoriding to the rules: to assign them to the publishing items, to generate them (if not autoamtically) and to see them in the metadata
- *   AS A    	reader
- *   I WANT TO	be able to see them
+ *   AS A    journal manager
+ *   I WANT  to be able to define rules how URNs should be
+ *           used (assigned, generated, displayed)
+ *   SO THAT ... FIXME-BB ...
+ *
+ *   AS AN   editor
+ *   I WANT  to be able to use URNs according to the rules:
+ *           to assign them to the publishing items, to generate
+ *           them (if not autoamtically) and to see them in
+ *           the metadata
+ *   SO THAT ... FIXME-BB ...
+ *
+ *   AS A    reader
+ *   I WANT  to be able to see URNs
+ *   SO THAT ... FIXME-BB ...
+ *
+ * FIXME-BB: I think there is quite a bit of duplicate code between this class
+ * and the FunctionalDoiPubIdPluginTest which can be resolved by creating a common
+ * subclass for both or moving common code to a helper class.
  */
 
 
 import('lib.pkp.tests.WebTestCase');
 
-class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
+class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	private
 		$pages,
 		$objectTypes = array('Article', 'Issue', 'Galley', 'SuppFile'); // order is significant!
@@ -33,6 +46,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 */
 	protected function getAffectedTables() {
 		return array(
+			// FIXME-BB: Do you really change something in journals?
 			'journals', 'journal_settings', 'issues', 'issue_settings',
 			'published_articles', 'articles', 'article_settings',
 			'article_galleys', 'article_galley_settings',
@@ -53,17 +67,17 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 		// metadata pages
 		$this->pages = array(
 			// journal setup
-			'journalsetup' => array(
+			'journal-setup' => array(
 				'url' => $this->baseUrl.'/index.php/test/manager/setup/%id',
-				'saved' => $this->baseUrl.'/index.php/test/manager/setupSaved/1'
+				'saved' => $this->baseUrl.'/index.php/test/manager/setupSaved/1' // FIXME-BB: Where do you use this?
 			),
-			// urn plugin setup
-			'setup' => array(
+
+			// URN plug-in settings
+			'settings' => array(
 				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/URNPlugin/settings',
 				'urnPrefix' => 'id=urnPrefix',
-				'clearURNs' => 'name=clearURNs',
+				'clearURNs' => 'name=clearPubIds',
 				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
-				//'saved' => $this->baseUrl.'/index.php/test/manager/setupSaved/1'
 			),
 
 			// object view pages
@@ -183,12 +197,9 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | supp file 	|
 	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function requiredFields() {
+	public function testRequiredFields() {
 		// Define no prefix
-		$this->type($this->pages['setup']['urnPrefix'], '');
+		$this->type($this->pages['settings']['urnPrefix'], '');
 		// Disable URNs for all objects.
 		foreach($this->objectTypes as $objectType) {
 			$enableObject = 'id=enable'.$objectType.'URN';
@@ -200,9 +211,9 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 		// Try to save settings.
 		$this->clickAndWait('css=input.button.defaultButton');
 		// Now we should find the error messages
-		$formPrefixError = str_replace('%id', "urnPrefix", $this->pages['setup']['formError']);
-		$formObjectError = str_replace('%id', "enableIssueURN", $this->pages['setup']['formError']);
-		$formNamespaceError = str_replace('%id', "namespace", $this->pages['setup']['formError']);
+		$formPrefixError = str_replace('%id', "urnPrefix", $this->pages['settings']['formError']);
+		$formObjectError = str_replace('%id', "enableIssueURN", $this->pages['settings']['formError']);
+		$formNamespaceError = str_replace('%id', "namespace", $this->pages['settings']['formError']);
 		$this->assertElementPresent($formPrefixError);
 		$this->assertElementPresent($formObjectError);
 		$this->assertElementPresent($formNamespaceError);
@@ -215,16 +226,13 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *     THEN	I see the error message "The URN prefix pattern must be in the form 'urn:<NID>:<NSS>'."
 	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function validPrefix() {
+	public function testValidPrefix() {
 		// Define wrong prefix
-		$this->type($this->pages['setup']['urnPrefix'], 'asdfg');
+		$this->type($this->pages['settings']['urnPrefix'], 'asdfg');
 		// Try to save settings.
 		$this->clickAndWait('css=input.button.defaultButton');
 		// Now we should find the error message
-		$formError = str_replace('%id', "urnPrefix", $this->pages['setup']['formError']);
+		$formError = str_replace('%id', "urnPrefix", $this->pages['settings']['formError']);
 		$this->assertElementPresent($formError);
 	}
 
@@ -245,10 +253,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | supp file 	|
 	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function requiredCustomSuffixPatterns() {
+	public function testRequiredCustomSuffixPatterns() {
 		// Select the custom suffix pattern option.
 		$this->click('id=urnSuffixPattern');
 
@@ -267,7 +272,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 		foreach ($this->objectTypes as $objectType) {
 			$formError = str_replace(
 				'%id', "urn${objectType}SuffixPattern",
-				$this->pages['setup']['formError']
+				$this->pages['settings']['formError']
 			);
 			$this->assertElementPresent($formError);
 		}
@@ -298,10 +303,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | supp file 	| %j.v%vi%i.%a.s%s	| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-t.v1i1.1.s19	|
 	 *        | supp file 	| %j.v%vi%i.%a.s%s	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-t.v1i1.1.s19	|
 	 */
-	/**
-	 * @test
-	 */
-	public function defaultSuffixPattern() {
+	public function testDefaultSuffixPattern() {
 		// Enable URNs with default settings for all objects.
 		$this->configureURN();
 
@@ -337,10 +339,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | supp file 	| test.%j.v%vi%i.%a.s%s	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-test.t.v1i1.1.s11	|
 	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function customSuffixPattern() {
+	public function testCustomSuffixPattern() {
 		// Configure custom pattern.
 		$customPattern = array(
 			'Issue' => 'test.%j.v%vi%i',
@@ -387,10 +386,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | supp file 	| 						| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-s10				|
 	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function customPublicURL() {
+	public function testCustomPublicURL() {
 		// Enable custom URL suffixes.
 		$this->configureURN('urn:nbn:de:0000-', 'urnSuffixPublisherId');
 
@@ -476,12 +472,8 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *        | URN							| custom suffix	| editor/view page                                   	|
 	 *        =========================================================================================================
 	 *        | urn:nbn:de:0000-galley18   	| galley18  	| .../editor/viewMetadata/2                         	|
-	 *
 	 */
-	/**
-	 * @test
-	 */
-	public function customSuffix() {
+	public function testCustomSuffix() {
 		// Change the suffix generation method.
 		$this->configureURN('urn:nbn:de:0000-', 'urnSuffixCustomIdentifier');
 
@@ -542,10 +534,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 *       AND	I press the button "Reasing URNs"
 	 *      THEN	I see the changed URN for that object
 	 */
-	/**
-	 * @test
-	 */
-	public function settingChanges() {
+	public function testSettingChanges() {
 		// Configure URN defaults and delete all existing URNs.
 		$this->configureURN();
 
@@ -553,7 +542,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 		$this->checkURNDisplay('article', 'urn:nbn:de:0000-t.v1i1.1');
 
 		// Change and save a URN setting without deleting URNs.
-		$this->open($this->getUrl($this->pages['setup']));
+		$this->open($this->getUrl($this->pages['settings']));
 		$this->type('id=urnPrefix', 'urn:nbn:de:0001-');
 		$this->clickAndWait('css=input.button.defaultButton');
 
@@ -598,9 +587,9 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 * Open the settings page
 	 */
 	private function openSettingsPage() {
-		$this->verifyLocation('exact:'.$this->getUrl($this->pages['setup']));
+		$this->verifyLocation('exact:'.$this->getUrl($this->pages['settings']));
 		if (!$this->verified()) {
-			$this->open($this->getUrl($this->pages['setup']));
+			$this->open($this->getUrl($this->pages['settings']));
 		}
 	}
 
@@ -622,7 +611,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 			$enableObject = 'id=enable'.$objectType.'URN';
 			$this->verifyChecked($enableObject);
 		}
-		$this->verifyValue($this->pages['setup']['urnPrefix'], 'exact:'.$prefix);
+		$this->verifyValue($this->pages['settings']['urnPrefix'], 'exact:'.$prefix);
 		$this->verifyValue('id='.$suffixGenerationMethod, 'exact:on');
 		$this->verifyChecked('id=checkNo');
 		$this->verifyNotSelectedValue('id=namespace', '');
@@ -634,7 +623,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 				$this->check($enableObject);
 			}
 			// Configure the prefix.
-			$this->type($this->pages['setup']['urnPrefix'], $prefix);
+			$this->type($this->pages['settings']['urnPrefix'], $prefix);
 			// Suffix generation method
 			$this->click('id='.$suffixGenerationMethod);
 			// Cehck number
@@ -661,7 +650,7 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 */
 	private function configurePublisherIds($enabled = true) {
 		// Enable publisher IDs for all objects.
-		$this->open($this->getUrl($this->pages['journalsetup'], 4));
+		$this->open($this->getUrl($this->pages['journal-setup'], 4));
 		foreach($this->objectTypes as $objectType) {
 			$optionLocator = "id=enablePublic${objectType}Id";
 			if ($enabled) {
@@ -699,8 +688,8 @@ class FunctionalURNGenerationSettingsAndDisplayTest extends WebTestCase {
 	 * Delete all existing URNs.
 	 */
 	private function deleteExistingURNs() {
-		$this->open($this->getUrl($this->pages['setup']));
-		$this->clickAndWait($this->pages['setup']['clearURNs']);
+		$this->open($this->getUrl($this->pages['settings']));
+		$this->clickAndWait($this->pages['settings']['clearURNs']);
 		$this->getConfirmation();
 	}
 

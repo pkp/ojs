@@ -18,7 +18,6 @@
 	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the objects (issues, articles, galley and supplementary files) in OJS.</message>
 
 	<!-- URN manager options, setting -->
-	<message key="plugins.pubIds.urn.manager.settings">Settings</message>
 	<message key="plugins.pubIds.urn.manager.settings.description"><![CDATA[Please do the following setup steps to be able to manage and use URNs in OJS:]]></message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN Settings</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Prefix</message>
@@ -61,6 +60,7 @@
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>
 
 	<!-- URN import/export plugin -->
+	<!-- FIXME-BB: Shouldn't these translations go into plug-ins they belong to? -->
 	<message key="plugins.pubIds.urn.importexport.displayName">URN XML Plugin</message>
 	<message key="plugins.pubIds.urn.importexport.description">Import and export URNs</message>
 

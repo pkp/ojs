@@ -16,21 +16,26 @@
 import('classes.plugins.Plugin');
 
 class PubIdPlugin extends Plugin {
+
+	//
+	// Constructor
+	//
 	function PubIdPlugin() {
 		parent::Plugin();
 	}
 
+
+	//
+	// Implement template methods from PKPPlugin
+	//
 	/**
-	 * Called as a plugin is registered to the registry.
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @see PKPPlugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
-			// Enable storage of the additional fields
-			foreach($this->getDAOs() as $daoName) {
+			// Enable storage of additional fields.
+			foreach($this->_getDAOs() as $daoName) {
 				HookRegistry::register(strtolower($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 			}
 		}
@@ -38,58 +43,106 @@ class PubIdPlugin extends Plugin {
 	}
 
 	/**
-	 * Get the name of this plugin.
-	 * The name must be unique within its category.
-	 * @return String name of plugin
+	 * @see PKPPlugin::getManagementVerbs()
 	 */
-	function getName() {
-		assert(false); // Should always be overridden
+	function getManagementVerbs() {
+		if ($this->getEnabled()) {
+			$verbs = array(
+				array(
+					'disable',
+					Locale::translate('manager.plugins.disable')
+				),
+				array(
+					'settings',
+					Locale::translate('manager.plugins.settings')
+				)
+			);
+		} else {
+			$verbs = array(
+				array(
+					'enable',
+					Locale::translate('manager.plugins.enable')
+				)
+			);
+		}
+		return $verbs;
 	}
 
 	/**
-	 * Get the display name for this plugin.
-	 * @return String
+	 * @see PKPPlugin::manage()
 	 */
-	function getDisplayName() {
-		assert(false); // Should always be overridden
+	function manage($verb, $args) {
+		$templateManager =& TemplateManager::getManager();
+		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		if (!$this->getEnabled() && $verb != 'enable') return false;
+		switch ($verb) {
+			case 'enable':
+				$this->setEnabled(true);
+				return false;
+
+			case 'disable':
+				$this->setEnabled(false);
+				return false;
+
+			case 'settings':
+				$templateMgr =& TemplateManager::getManager();
+				$journal =& Request::getJournal();
+
+				$settingsFormName = $this->getSettingsFormName();
+				$settingsFormNameParts = explode('.', $settingsFormName);
+				$settingsFormClassName = array_pop($settingsFormNameParts);
+				$this->import($settingsFormName);
+				$form = new $settingsFormClassName($this, $journal->getId());
+				if (Request::getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						Request::redirect(null, 'manager', 'plugin');
+						return false;
+					} else {
+						$this->_setBreadcrumbs();
+						$form->display();
+					}
+				} elseif (Request::getUserVar('clearPubIds')) {
+					$form->readInputData();
+					$journalDao =& DAORegistry::getDAO('JournalDAO');
+					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
+					$this->_setBreadcrumbs();
+					$form->display();
+				} else {
+					$this->_setBreadcrumbs();
+					$form->initData();
+					$form->display();
+				}
+				return true;
+
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
+		}
 	}
 
-	/**
-	 * Get a description of this plugin.
-	 */
-	function getDescription() {
-		assert(false); // Should always be overridden
-	}
 
-
-	/*
-	 * Get and Set
-	 */
-
+	//
+	// Protected template methods to be implemented by sub-classes.
+	//
 	/**
 	 * Get the public identifier.
 	 * @param $pubObject object
 	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
 	 * @param $preview boolean
 	 *  when true, the public identifier will not be stored
+	 * @return string
 	 */
 	function getPubId($pubObject, $preview = false) {
 		assert(false); // Should always be overridden
 	}
 
 	/**
-	 * Set and store a public identifier.
-	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
-	 * @param $pubId string
-	 */
-	function setStoredPubId($pubObject, $pubId) {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Public identifier type, that is used in the database.
-	 * S. http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html
+	 * Public identifier type, see
+	 * http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html
+	 * @return string
 	 */
 	function getPubIdType() {
 		assert(false); // Should always be overridden
@@ -97,6 +150,7 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Public identifier type that will be displayed to the reader.
+	 * @return string
 	 */
 	function getPubIdDisplayType() {
 		assert(false); // Should always be overridden
@@ -104,6 +158,7 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Full name of the public identifier.
+	 * @return string
 	 */
 	function getPubIdFullName() {
 		assert(false); // Should always be overridden
@@ -120,21 +175,32 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Get the file (path + filename)
-	 * that is included in the objects metadata pages.
+	 * to be included into the object's
+	 * metadata pages.
+	 * @return string
 	 */
 	function getPubIdMetadataFile() {
 		assert(false); // Should be overridden
 	}
 
 	/**
-	 * Verify posted data.
-	 * @param $data string
+	 * Get the class name of the settings form.
+	 * @return string
+	 */
+	function getSettingsFormName() {
+		assert(false); // Should be overridden
+	}
+
+	/**
+	 * Verify form data.
+	 * @param $fieldName string The form field to be checked.
+	 * @param $fieldValue string The value of the form field.
 	 * @param $pubObject object
 	 * @param $journalId integer
-	 * @param $errorMsg string
+	 * @param $errorMsg string Return validation error messages here.
 	 * @return boolean
 	 */
-	function verifyData($data, &$pubObject, $journalId, &$errorMsg) {
+	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
 		assert(false); // Should be overridden
 	}
 
@@ -144,13 +210,24 @@ class PubIdPlugin extends Plugin {
 	 * @param $pubObject object
 	 * @param $journalId integer
 	 * @return boolean
+	 * FIXME-BB: Maybe checkDuplicate() and verifyData() can be the same function?
 	 */
 	function checkDuplicate($pubId, &$pubObject, $journalId) {
 		assert(false); // Should be overridden
 	}
 
 	/**
+	 * Check whether the given pubId is valid.
+	 * @param $pubId string
+	 * @return boolean
+	 */
+	function validatePubId($pubId) {
+		return true; // Assume a valid ID by default;
+	}
+
+	/**
 	 * Get the additional form field names.
+	 * @return array
 	 */
 	function getFormFieldNames() {
 		assert(false); // Should be overridden
@@ -158,24 +235,33 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Get additional field names to be considered for storage.
+	 * @return array
 	 */
 	function getDAOFieldNames() {
 		assert(false); // Should be overridden
 	}
 
+
+	//
+	// Public API
+	//
 	/**
-	 * Return the name of the corresponding DAO.
-	 * @param $pubObject object
-	 * @return string
+	 * Add the suffix element and the public identifier
+	 * to the object (issue, article, galley, supplementary file).
+	 * @param $hookName string
+	 * @param $params array ()
 	 */
-	function getDAO($pubObjectType) {
-		$daos =  array(
-			'Issue' => 'IssueDAO',
-			'Article' => 'ArticleDAO',
-			'Galley' => 'ArticleGalleyDAO',
-			'SuppFile' => 'SuppFileDAO'
-		);
-		return $daos[$pubObjectType];
+	function getAdditionalFieldNames($hookName, $params) {
+		$fields =& $params[1];
+		$formFieldNames = $this->getFormFieldNames();
+		foreach ($formFieldNames as $formFieldName) {
+			$fields[] = $formFieldName;
+		}
+		$daoFieldNames = $this->getDAOFieldNames();
+		foreach ($daoFieldNames as $daoFieldName) {
+			$fields[] = $daoFieldName;
+		}
+		return false;
 	}
 
 	/**
@@ -207,36 +293,38 @@ class PubIdPlugin extends Plugin {
 	}
 
 	/**
-	 * Return an array of the corresponding DAOs.
-	 * @return array
+	 * Set and store a public identifier.
+	 * @param $pubObject Issue|Article|ArticleGalley|SuppFile
+	 * @param $pubObjectType string As returned from self::getPubObjectType()
+	 * @param $pubId string
+	 * @return string
 	 */
-	protected function getDAOs() {
-		return array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO', 'SuppFileDAO');
+	function setStoredPubId(&$pubObject, $pubObjectType, $pubId) {
+		$dao =& $this->getDAO($pubObjectType);
+		$dao->changePubId($pubObject->getId(), $this->getPubIdType(), $pubId);
+		$pubObject->setStoredPubId($this->getPubIdType(), $pubId);
 	}
 
-
-
 	/**
-	 * Add the suffix element and the public identifier
-	 * to the object (issue, article, galley, supplementary file).
-	 * @param $hookName string
-	 * @param $params array ()
+	 * Return the name of the corresponding DAO.
+	 * @param $pubObject object
+	 * @return DAO
 	 */
-	function getAdditionalFieldNames($hookName, $params) {
-		$fields =& $params[1];
-		$formFieldNames = $this->getFormFieldNames();
-		foreach ($formFieldNames as $formFieldName) {
-			$fields[] = $formFieldName;
-		}
-		$daoFieldNames = $this->getDAOFieldNames();
-		foreach ($daoFieldNames as $daoFieldName) {
-			$fields[] = $daoFieldName;
-		}
-		return false;
+	function &getDAO($pubObjectType) {
+		$daos =  array(
+			'Issue' => 'IssueDAO',
+			'Article' => 'ArticleDAO',
+			'Galley' => 'ArticleGalleyDAO',
+			'SuppFile' => 'SuppFileDAO'
+		);
+		$daoName = $daos[$pubObjectType];
+		assert(!empty($daoName));
+		return DAORegistry::getDAO($daoName);
 	}
 
 	/**
 	 * Determine whether or not this plugin is enabled.
+	 * @return boolean
 	 */
 	function getEnabled($journalId = null) {
 		if (!$journalId) {
@@ -252,6 +340,7 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Set the enabled/disabled state of this plugin.
+	 * @param $enabled boolean
 	 */
 	function setEnabled($enabled) {
 		$journal =& Request::getJournal();
@@ -266,38 +355,39 @@ class PubIdPlugin extends Plugin {
 		return false;
 	}
 
+
+	//
+	// Private helper methods
+	//
 	/**
-	 * Display verbs for the management interface.
+	 * Return an array of the corresponding DAOs.
+	 * @return array
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
-		if ($this->getEnabled()) {
-			$verbs[] = array(
-				'disable',
-				Locale::translate('manager.plugins.disable')
-			);
-		} else {
-			$verbs[] = array(
-				'enable',
-				Locale::translate('manager.plugins.enable')
-			);
-		}
-		return $verbs;
+	function _getDAOs() {
+		return array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO', 'SuppFileDAO');
 	}
 
 	/**
-	 * Perform management functions.
+	 * Set the breadcrumbs, given the plugin's tree of items to append.
 	 */
-	function manage($verb, $args) {
-		$templateManager =& TemplateManager::getManager();
-		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		switch ($verb) {
-			case 'enable': $this->setEnabled(true); break;
-			case 'disable': $this->setEnabled(false); break;
-		}
-		return false;
+	function _setBreadcrumbs() {
+		$templateMgr =& TemplateManager::getManager();
+		$pageCrumbs = array(
+			array(
+				Request::url(null, 'user'),
+				'navigation.user'
+			),
+			array(
+				Request::url(null, 'manager'),
+				'user.role.manager'
+			),
+			array(
+				Request::url(null, 'manager', 'plugins'),
+				'manager.plugins'
+			)
+		);
+		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
-
 }
 
 ?>

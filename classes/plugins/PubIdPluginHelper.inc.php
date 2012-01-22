@@ -26,9 +26,9 @@ class PubIdPluginHelper {
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			$fieldNames = $pubIdPlugin->getFormFieldNames();
 			foreach ($fieldNames as $fieldName) {
-				$data = $form->getData($fieldName);
+				$fieldValue = $form->getData($fieldName);
 				$errorMsg = '';
-				if(!$pubIdPlugin->verifyData($data, $pubObject, $journalId, $errorMsg)) {
+				if(!$pubIdPlugin->verifyData($fieldName, $fieldValue, $pubObject, $journalId, $errorMsg)) {
 					$form->addError($fieldName, $errorMsg);
 				}
 			}
@@ -69,10 +69,13 @@ class PubIdPluginHelper {
 	function execute(&$form, &$pubObject) {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			$fieldNames = $pubIdPlugin->getFormFieldNames();
-			foreach ($fieldNames as $fieldName) {
-				$data = $form->getData($fieldName);
-				if (!empty($data)) {
+			// Public ID data can only be changed as long
+			// as no ID has been generated.
+			$storedId = $pubObject->getStoredPubId($pubIdPlugin->getPubIdType());
+			if (empty($storedId)) {
+				$fieldNames = $pubIdPlugin->getFormFieldNames();
+				foreach ($fieldNames as $fieldName) {
+					$data = $form->getData($fieldName);
 					$pubObject->setData($fieldName, $data);
 				}
 			}

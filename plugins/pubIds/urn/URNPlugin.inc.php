@@ -15,8 +15,11 @@
 
 import('classes.plugins.PubIdPlugin');
 
+// FIXME-BB: Rename class to UrnPubIdPlugin? This would
+// correspond to how other plug-ins are being named.
 class URNPlugin extends PubIdPlugin {
 
+	// FIXME-BB: Comments are missing, see example in DoiPubIdPlugin.
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
@@ -40,6 +43,10 @@ class URNPlugin extends PubIdPlugin {
 	}
 
 
+	// FIXME-BB: The following are all overridden template methods
+	// from PubIdPlugin. IMO they should not be commented as if they
+	// were new methods but rather use @see comments. (See how I did it
+	// in DoiPubIdPlugin.
 	/*
 	 * Get and Set
 	 */
@@ -108,7 +115,7 @@ class URNPlugin extends PubIdPlugin {
 					}
 					$urn = $urnPrefix . $urnSuffix;
 					if ($this->getSetting($journal->getId(), 'checkNo')) {
-						$urn .= $this->calculateCheckNo($urn);
+						$urn .= $this->_calculateCheckNo($urn);
 					}
 					break;
 
@@ -150,7 +157,7 @@ class URNPlugin extends PubIdPlugin {
 						}
 						$urn = $urnPrefix . $suffixPattern;
 						if ($this->getSetting($journal->getId(), 'checkNo')) {
-							$urn .= $this->calculateCheckNo($urn);
+							$urn .= $this->_calculateCheckNo($urn);
 						}
 					}
 					break;
@@ -170,7 +177,7 @@ class URNPlugin extends PubIdPlugin {
 						}
 						$urn = $urnPrefix . $suffixPattern;
 						if ($this->getSetting($journal->getId(), 'checkNo')) {
-							$urn .= $this->calculateCheckNo($urn);
+							$urn .= $this->_calculateCheckNo($urn);
 						}
 					} else {
 						$suffixPattern = '%j.v%vi%i';
@@ -188,24 +195,10 @@ class URNPlugin extends PubIdPlugin {
 			}
 
 			if ($urn && !$preview) {
-					$this->setStoredPubId($pubObject, $urn);
+				$this->setStoredPubId($pubObject, $pubObjectType, $urn);
 			}
 		}
 		return $urn;
-	}
-
-	/**
-	 * Set and store a public identifier.
-	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
-	 * @param $pubId string
-	 */
-	function setStoredPubId(&$pubObject, $pubId) {
-		$pubObjectType = $this->getPubObjectType($pubObject);
-		$daoName = $this->getDAO($pubObjectType);
-		$dao =& DAORegistry::getDAO($daoName);
-		$dao->changePubId($pubObject->getId(), $this->getPubIdType(), $pubId);
-		$pubObject->setStoredPubId($this->getPubIdType(), $pubId);
 	}
 
 	/**
@@ -262,20 +255,23 @@ class URNPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * Check whether the given suffix may lead to a duplicate URN.
-	 * @param $urnSuffix string
-	 * @param $pubObject object
-	 * @param $journalId integer
-	 * @param $errorMsg string
-	 * @return boolean
+	 * @see PubIdPlugin::getSettingsFormName()
 	 */
-	function verifyData($urnSuffix, &$pubObject, $journalId, &$errorMsg) {
-		if (empty($urnSuffix)) return true;
+	function getSettingsFormName() {
+		return 'classes.form.URNSettingsForm';
+	}
+
+	/**
+	 * @see PubIdPlugin::verifyData()
+	 */
+	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
+		assert($fieldName == 'urnSuffix');
+		if (empty($fieldValue)) return true;
 
 		// Construct the potential new URN with the posted suffix.
 		$urnPrefix = $this->getSetting($journalId, 'urnPrefix');
 		if (empty($urnPrefix)) return true;
-		$newURN = $urnPrefix . $urnSuffix;
+		$newURN = $urnPrefix . $fieldValue;
 		if(!$this->checkDuplicate($newURN, $pubObject, $journalId)) {
 			$errorMsg = AppLocale::translate('plugins.pubIds.urn.form.customIdentifierNotUnique');
 			return false;
@@ -341,6 +337,10 @@ class URNPlugin extends PubIdPlugin {
 		return true;
 	}
 
+
+	//
+	// Private helper methods
+	//
 	/**
 	 * Get the last, check number.
 	 * Algorithm (s. http://www.persistent-identifier.de/?link=316):
@@ -350,7 +350,7 @@ class URNPlugin extends PubIdPlugin {
 	 *  the sum is devided by the last number,
 	 *  the last number of the quotient before the decimal point is the check number.
 	 */
-	function calculateCheckNo($urn) {
+	function _calculateCheckNo($urn) {
 	    $urnLower = strtolower($urn);
 
 	    $conversionTable = array('9' => '41', '8' => '9', '7' => '8', '6' => '7', '5' => '6', '4' => '5', '3' => '4', '2' => '3', '1' => '2', '0' => '1', 'a' => '18', 'b' => '14', 'c' => '19', 'd' => '15', 'e' => '16', 'f' => '21', 'g' => '22', 'h' => '23', 'i' => '24', 'j' => '25', 'k' => '42', 'l' => '26', 'm' => '27', 'n' => '13', 'o' => '28', 'p' => '29', 'q' => '31', 'r' => '12', 's' => '32', 't' => '33', 'u' => '11', 'v' => '34', 'w' => '35', 'x' => '36', 'y' => '37', 'z' => '38', '-' => '39', ':' => '17', '_' => '43', '/' => '45', '.' => '47', '+' => '49');
@@ -370,88 +370,6 @@ class URNPlugin extends PubIdPlugin {
 	    $quotString = (string)$quotRound;
 
 	    return $quotString[strlen($quotString)-1];
-	}
-
-	/**
-	 * Set the breadcrumbs, given the plugin's tree of items to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
-		$pageCrumbs = array(
-			array(
-				Request::url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				Request::url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
-			'manager.plugins'
-		);
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
-	 * Display verbs for the management interface.
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if (!$this->getEnabled()) return $verbs;
-		$verbs[] = array(
-			'settings', Locale::translate('plugins.pubIds.urn.manager.settings')
-		);
-		return $verbs;
-	}
-
-	/*
- 	 * Execute a management verb on this plugin.
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Location for the plugin to put a result msg
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message) {
-		if (parent::manage($verb, $args)) return true;
-		if (!$this->getEnabled()) return false;
-		switch ($verb) {
-			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
-
-				$this->import('classes.form.URNSettingsForm');
-				$form = new URNSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
-					$form->readInputData();
-					if ($form->validate()) {
-						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
-						return false;
-					} else {
-						$this->setBreadCrumbs(true);
-						$form->display();
-					}
-				} elseif (Request::getUserVar('clearURNs')) {
-					$form->readInputData();
-					$journalDao =& DAORegistry::getDAO('JournalDAO');
-					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
-					$this->setBreadCrumbs(true);
-					$form->display();
-				} else {
-					$this->setBreadCrumbs(true);
-					$form->initData();
-					$form->display();
-				}
-				return true;
-			default:
-				// Unknown management verb
-				assert(false);
-				return false;
-		}
 	}
 }
 
