@@ -52,7 +52,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		$journal =& Request::getJournal();
 
-		switch (array_shift($args)) {							
+		switch (array_shift($args)) {
 			case 'exportIssues':
 				$issueIds = Request::getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
@@ -107,7 +107,12 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				break;
 			default:
 				$this->setBreadcrumbs();
-				$templateMgr->assign_by_ref('journal', $journal);
+				$doiPrefix = null;
+				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+				if (isset($pubIdPlugins['DoiPubIdPlugin'])) {
+					$doiPrefix = $pubIdPlugins['DoiPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
+				}
+				$templateMgr->assign('doiPrefix', $doiPrefix);
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}
@@ -193,7 +198,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
 					// Create the metadata node
 					// this does not need to be repeated for every article
-					// but its allowed to be and its simpler to do so					
+					// but its allowed to be and its simpler to do so
 					$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
 					$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
 					XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);

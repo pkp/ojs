@@ -113,17 +113,7 @@ class IssueForm extends Form {
 			}
 		}
 
-		// Verify DOI uniqueness.
-		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
-			import('classes.article.DoiHelper');
-			$doiHelper = new DoiHelper();
-			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $issue, $journal->getId())) {
-				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
-			}
-		}
-		// verify the additional field names from the public identifer plugins
+		// Verify additional fields from public identifer plug-ins.
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
 		$pubIdPluginHelper->validate($journal->getId(), $this, $issue);
@@ -167,10 +157,7 @@ class IssueForm extends Form {
 				'hideCoverPageArchives' => $issue->getHideCoverPageArchives(null), // Localized
 				'hideCoverPageCover' => $issue->getHideCoverPageCover(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
-				'originalStyleFileName' => $issue->getOriginalStyleFileName(),
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $issue->getStoredPubId('doi'),
-				'doiSuffix' => $issue->getData('doiSuffix'),
+				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
 			// consider the additional field names from the public identifer plugins
 			import('classes.plugins.PubIdPluginHelper');
@@ -288,8 +275,7 @@ class IssueForm extends Form {
 			'hideCoverPageCover',
 			'articles',
 			'styleFileName',
-			'originalStyleFileName',
-			'doiSuffix'
+			'originalStyleFileName'
 		));
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
@@ -369,15 +355,6 @@ class IssueForm extends Form {
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
-		// Update DOI if unique.
-		// FIXME: Move this to DOI PID plug-in.
-		$storedDoi = $issue->getStoredPubId('doi');
-		if (empty($storedDoi)) {
-			// The DOI suffix can only be changed as long
-			// as no DOI has been generated.
-			$doiSuffix = $this->getData('doiSuffix');
-			$issue->setData('doiSuffix', $doiSuffix);
-		}
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();

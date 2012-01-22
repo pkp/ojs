@@ -29,7 +29,10 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$expectJournalNameAsPublisher = false,
 
 		/** Other internal test parameters */
-		$pluginId, $pages, $defaultPluginSettings, $initialPluginSettings, $initialJournalSettings, $doiPrefix;
+		$pluginId, $pages,
+		$defaultPluginSettings, $initialPluginSettings,
+		$initialJournalSettings, $initialDoiSettings,
+		$doiPrefix;
 
 
 	//
@@ -66,16 +69,24 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal = $journalDao->getJournal(1);
 		$this->initialJournalSettings = array(
-			'doiPrefix', $journal->getSetting('doiPrefix'),
-			'doiSuffix' => $journal->getSetting('doiSuffix'),
 			'publisherInstitution' => $journal->getSetting('publisherInstitution'),
 			'supportEmail' => $journal->getSetting('supportEmail')
 		);
 
+		// Store initial DOI settings.
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
+		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$this->initialDoiSettings = array(
+			'enabled' => $doiPlugin->getSetting(1, 'enabled'),
+			'doiPrefix' => $doiPlugin->getSetting(1, 'doiPrefix'),
+			'doiSuffix' => $doiPlugin->getSetting(1, 'doiSuffix')
+		);
+
 		// Reset DOI prefix and all DOIs.
 		$this->doiPrefix = $doiPrefix;
-		$journal->updateSetting('doiPrefix', $doiPrefix);
-		$journal->updateSetting('doiSuffix', 'default');
+		$doiPlugin->updateSetting(1, 'enabled', true);
+		$doiPlugin->updateSetting(1, 'doiPrefix', $doiPrefix);
+		$doiPlugin->updateSetting(1, 'doiSuffix', 'default');
 		PKPTestHelper::xdebugScream(false);
 		$journalDao->deleteAllPubIds(1, 'doi');
 		PKPTestHelper::xdebugScream(true);
@@ -98,6 +109,13 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$journal = $journalDao->getJournal(1);
 		foreach($this->initialJournalSettings as $settingName => $settingValue) {
 			$journal->updateSetting($settingName, $settingValue);
+		}
+
+		// Restore initial DOI configuration.
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
+		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		foreach($this->initialDoiSettings as $settingName => $settingValue) {
+			$doiPlugin->updateSetting(1, $settingName, $settingValue);
 		}
 
 		// Restore initial plug-in configuration.
@@ -251,8 +269,9 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				// When registration was successful then we should be
 				// redirected to the index page and see a notification
 				// "Registration Successful".
-				$this->waitForLocation('exact:'.$pageUrl);
-				$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+				$this->setTimeout(120000); // Registering can take a long time.
+				$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
+				$this->setTimeout(30000);
 
 				// Make sure that the button for the registered object now reads "Update"
 				// rather than "Register".
@@ -283,8 +302,9 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				// -Register.
 				$this->click('css=input.button[value="Select All"]');
 				$this->clickAndWait('css=input.button[name="register"]');
-				$this->waitForLocation('exact:'.$pageUrl);
-				$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+				$this->setTimeout(120000); // Registering can take a long time.
+				$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
+				$this->setTimeout(30000);
 
 				// Export without registration account:
 				// Delete the account setting.
@@ -362,11 +382,11 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Part 2:
 		// We have to re-open the page in test mode.
 		$this->open($pageUrl);
-		$this->setTimeout(120000); // Registering can take a long time.
+		$this->setTimeout(180000); // Registering can take a long time.
 		$this->clickAndWait('css=input.button[name="register"]');
 		$this->setTimeout(30000);
 		$this->waitForLocation('exact:'.$pageUrl);
-		$this->assertText('css=.ui-pnotify-text', 'Registration successful');
+		$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
 
 		// Check that all newly registered objects have disappeared
 		// from the list of unregistered objects.
@@ -387,11 +407,12 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$this->logIn();
 
 		// Configure custom DOIs.
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
-		$journal->updateSetting('doiSuffix', 'customId');
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
+		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin->updateSetting(1, 'doiSuffix', 'customId');
 
 		// Delete all existing DOIs.
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		PKPTestHelper::xdebugScream(false);
 		$journalDao->deleteAllPubIds(1, 'doi');
 		PKPTestHelper::xdebugScream(true);
@@ -499,17 +520,25 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function testConfigurationError($exportPages) {
 		$this->logIn();
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
+		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$noDoiError = 'specify a valid DOI prefix';
 
-		// Make sure that no DOI prefix is configured.
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
-		$journal->updateSetting('doiPrefix', '');
+		// Disable the DOI plug-in.
+		$doiPlugin->updateSetting(1, 'enabled', false);
 
 		// Assert that the error is being discovered by the plug-in.
-		$this->assertConfigurationError($exportPages, 'A valid DOI prefix must be specified');
+		$this->assertConfigurationError($exportPages, $noDoiError);
+
+		// Enable the DOI plug-in but make sure that no DOI prefix is configured.
+		$doiPlugin->updateSetting(1, 'enabled', true);
+		$doiPlugin->updateSetting(1, 'doiPrefix', '');
+
+		// Assert that the error is being discovered by the plug-in.
+		$this->assertConfigurationError($exportPages, $noDoiError);
 
 		// Export should be allowed even when non-mandatory settings are not set.
-		$journal->updateSetting('doiPrefix', $this->doiPrefix);
+		$doiPlugin->updateSetting(1, 'doiPrefix', $this->doiPrefix);
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
 		$this->assertConfigurationError($exportPages);
@@ -831,7 +860,14 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				$testObject->setData($this->pluginId . '::' . DOI_EXPORT_REGDOI, '');
 				$dao->$updateMethod($testObject);
 			}
-			HookRegistry::clear($hookName);
+
+			$hooks = HookRegistry::getHooks();
+			foreach($hooks[$hookName] as $index => $hook) {
+				if (is_a($hook[0], $pluginName)) {
+					unset($hooks[$hookName][$index]);
+					break;
+				}
+			}
 		}
 	}
 

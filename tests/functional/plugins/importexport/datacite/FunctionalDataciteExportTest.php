@@ -185,6 +185,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 	/**
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
+	 * @group current
 	 */
 	public function testRegisterUnregisteredDois() {
 		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley', 'Supplementary File'), self::TEST_ACCOUNT);
@@ -217,6 +218,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/galleys
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/suppFiles
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/all
+	 * @group current
 	 */
 	public function testObjectsWithoutDOICannotBeSelectedForExport() {
 		parent::testObjectsWithoutDOICannotBeSelectedForExport(array('issues', 'articles', 'galleys', 'suppFiles', 'all'));

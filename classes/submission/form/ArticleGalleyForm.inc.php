@@ -90,17 +90,7 @@ class ArticleGalleyForm extends Form {
 			$this->addErrorField('publicGalleyId');
 		}
 
-		// Verify DOI uniqueness.
-		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
-			import('classes.article.DoiHelper');
-			$doiHelper = new DoiHelper();
-			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->galley, $journal->getId())) {
-				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
-			}
-		}
-		// verify the additional field names from the public identifer plugins
+		// Verify additional fields from public identifer plug-ins.
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
 		$pubIdPluginHelper->validate($journal->getId(), $this, $this->galley);
@@ -117,10 +107,7 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $galley->getLabel(),
 				'publicGalleyId' => $galley->getPubId('publisher-id'),
-				'galleyLocale' => $galley->getLocale(),
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $galley->getStoredPubId('doi'),
-				'doiSuffix' => $galley->getData('doiSuffix')
+				'galleyLocale' => $galley->getLocale()
 			);
 
 		} else {
@@ -144,9 +131,7 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId',
 				'deleteStyleFile',
 				'galleyLocale',
-				'remoteURL',
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'doiSuffix'
+				'remoteURL'
 			)
 		);
 		// consider the additional field names from the public identifer plugins
@@ -168,9 +153,6 @@ class ArticleGalleyForm extends Form {
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
 		$journal =& Request::getJournal();
 		$fileId = null;
-
-		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
 
 		if (isset($this->galley)) {
 			$galley =& $this->galley;
@@ -213,17 +195,10 @@ class ArticleGalleyForm extends Form {
 				$galley->setRemoteURL($this->getData('remoteURL'));
 			}
 
-			// FIXME: Move this to DOI PID plug-in.
-			$storedDoi = $galley->getStoredPubId('doi');
-			if (empty($storedDoi)) {
-				// The DOI suffix can only be changed as long
-				// as no DOI has been generated.
-				$galley->setData('doiSuffix', $doiSuffix);
-			}
 			// consider the additional field names from the public identifer plugins
 			import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->execute($this, $galley);
+			$pubIdPluginHelper = new PubIdPluginHelper();
+			$pubIdPluginHelper->execute($this, $galley);
 
 			parent::execute();
 			$galleyDao->updateGalley($galley);
@@ -292,8 +267,6 @@ class ArticleGalleyForm extends Form {
 				$galley->setStoredPubId('publisher-id', $publicGalleyId . $suffix);
 			}
 
-			// FIXME: Move this to DOI PID plug-in.
-			$galley->setData('doiSuffix', $doiSuffix);
 			parent::execute();
 
 			// Insert new galley

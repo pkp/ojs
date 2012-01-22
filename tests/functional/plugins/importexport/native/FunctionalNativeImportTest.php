@@ -76,7 +76,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			$pubObjectByURN = call_user_func(array($dao, "get${objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
 			self::assertNotNull($pubObjectByURN, "Error while testing $objectType: object or URN has not been imported.");
 			if ($objectType == 'PublishedArticle') {
-				$articelId = $pubObject->getArticleId();
+				$articelId = $pubObject->getId();
 			}
 		}
 

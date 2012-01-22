@@ -1081,7 +1081,7 @@ class NativeImportDom {
 	}
 
 	/**
-	 * Import a DOI from the XML node to the given publication object.
+	 * Import a public ID from the XML node to the given publication object.
 	 * @param $node DOMNode
 	 * @param $pubObject object
 	 * @param $journal Journal
@@ -1090,11 +1090,6 @@ class NativeImportDom {
 	 * @param $errors array
 	 */
 	function handlePubIds(&$node, &$pubObject, &$journal, &$issue, &$article, &$errors) {
-		// FIXME: Will be moved to DOI PID plug-in in the next release.
-		// Instantiate the DOI Helper.
-		import('classes.article.DoiHelper');
-		$doiHelper = new DoiHelper();
-
 		for ($index=0; ($idNode = $node->getChildByName('id', $index)); $index++) {
 			$pubIdType = $idNode->getAttribute('type');
 
@@ -1106,46 +1101,28 @@ class NativeImportDom {
 				'pubIdType' => $pubIdType
 			);
 
-			switch ($pubIdType) {
-				case 'doi':
-					// FIXME: Will be moved to DOI PID plug-in in the next release.
-					$doi = $idNode->getValue();
-					$errorParams['pubId'] = $doi;
-
-					$doiParts = explode('/', $doi, 2);
-					if (count($doiParts) != 2) {
+			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
+			$pubIdPluginFound = false;
+			foreach ($pubIdPlugins as $pubIdPlugin) {
+				if ($pubIdPlugin->getPubIdType() == $pubIdType) {
+					$pubId = $idNode->getValue();
+					$errorParams['pubId'] = $pubId;
+					if (!$pubIdPlugin->validatePubId($pubId)) {
 						$errors[] = array('plugins.importexport.native.import.error.invalidPubId', $errorParams);
 						return false;
 					}
-					$doiSuffix = array_pop($doiParts);
-					if (!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $pubObject, $journal->getId())) {
+					if (!$pubIdPlugin->checkDuplicate($pubId, $pubObject, $journal->getId())) {
 						$errors[] = array('plugins.importexport.native.import.error.duplicatePubId', $errorParams);
 						return false;
 					}
-					$pubObject->setStoredPubId('doi', $doi);
+					$pubObject->setStoredPubId($pubIdType, $pubId);
+					$pubIdPluginFound = true;
 					break;
-
-				default:
-						$pubIdPlugins =& PluginRegistry::loadCategory('pubIds');
-						$pubIdPluginFound = false;
-						foreach ($pubIdPlugins as $pubIdPlugin) {
-							if ($pubIdPlugin->getEnabled($journal->getId()) && $pubIdPlugin->getPubIdType() == $pubIdType) {
-								$pubId = $idNode->getValue();
-								$errorParams['pubId'] = $pubId;
-								if (!$pubIdPlugin->checkDuplicate($pubId, $pubObject, $journal->getId())) {
-									$errors[] = array('plugins.importexport.native.import.error.duplicatePubId', $errorParams);
-									return false;
-								}
-								$pubObject->setStoredPubId($pubIdType, $pubId);
-								$pubIdPluginFound = true;
-								break;
-							}
-						}
-						if (!$pubIdPluginFound) {
-								$errors[] = array('plugins.importexport.native.import.error.unknownPubId', $errorParams);
-								return false;
-						}
-						break;
+				}
+			}
+			if (!$pubIdPluginFound) {
+				$errors[] = array('plugins.importexport.native.import.error.unknownPubId', $errorParams);
+				return false;
 			}
 		}
 		return true;

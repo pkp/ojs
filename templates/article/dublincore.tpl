@@ -50,14 +50,11 @@
 {if $article->getPages()}
 	<meta name="DC.Identifier.pageNumber" content="{$article->getPages()|escape}"/>
 {/if}
-{if $doi}
-	<meta name="DC.Identifier.DOI" content="{$doi|escape}"/>
-{/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
 		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
 	{else}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Don't affix the pubId *}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Preview rather than assign a pubId *}
 	{/if}
 	{if $pubId}
 		<meta name="DC.Identifier.{$pubIdPlugin->getPubIdDisplayType()|escape}" content="{$pubId|escape}"/>

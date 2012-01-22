@@ -17,8 +17,7 @@
 {if !empty($configurationErrors)}
 	{foreach from=$configurationErrors item=configurationError}
 		{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
-			{translate key="plugins.importexport.common.error.DOIsNotAvailable"}
-			{translate key="manager.setup.doiPrefixDescription"}<br /><br />
+			{translate key="plugins.importexport.common.error.DOIsNotAvailable"}<br /><br />
 		{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
 			{translate key="plugins.importexport.common.error.pluginNotConfigured"}
 		{/if}

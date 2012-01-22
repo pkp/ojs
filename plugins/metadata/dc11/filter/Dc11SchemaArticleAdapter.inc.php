@@ -189,51 +189,21 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Relation
-		// full texts URLs
+		// full text URLs
 		foreach ($galleys as $galley) {
 			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId($journal), $galley->getBestGalleyId($journal)));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}
-		// supp files URLs
+		// supp file URLs
 		foreach ($suppFiles as $suppFile) {
 			$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}
 
-		// Coverage
-		$coverage = array_merge_recursive(
-				(array) $article->getCoverageGeo(null),
-				(array) $article->getCoverageChron(null),
-				(array) $article->getCoverageSample(null));
-		$this->_addLocalizedElements($dc11Description, 'dc:coverage', $coverage);
-
-		// Rights
-		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
-
-		// FIXME: This will be moved to the DOI PID plug-in in.
-		// Identifier: DOI
-		if ($issueDoi = $issue->getPubId('doi')) {
-			$dc11Description->addStatement('dc:source', $issueDoi);
-		}
-		if ($articleDoi = $article->getPubId('doi')) {
-			$dc11Description->addStatement('dc:identifier', $articleDoi);
-		}
-		foreach ($galleys as $galley) {
-			$galleyDoi = $galley->getPubId('doi');
-			if ($galleyDoi) {
-				$dc11Description->addStatement('dc:relation', $galleyDoi);
-			}
-		}
-		foreach ($suppFiles as $suppFile) {
-			$suppFileDoi = $suppFile->getPubId('doi');
-			if ($suppFileDoi) {
-				$dc11Description->addStatement('dc:relation', $suppFileDoi);
-			}
-		}
-		// consider public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		// Public identifiers
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIssueId = $pubIdPlugin->getPubId($issue)) {
 				$dc11Description->addStatement('dc:source', $pubIssueId);
@@ -252,6 +222,16 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				}
 			}
 		}
+
+		// Coverage
+		$coverage = array_merge_recursive(
+				(array) $article->getCoverageGeo(null),
+				(array) $article->getCoverageChron(null),
+				(array) $article->getCoverageSample(null));
+		$this->_addLocalizedElements($dc11Description, 'dc:coverage', $coverage);
+
+		// Rights
+		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
 
 		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array(&$this, $article, $journal, $issue, &$dc11Description));
 

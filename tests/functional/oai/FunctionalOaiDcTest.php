@@ -15,7 +15,7 @@
 
 import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
 
-class FunctionalOaiDcTest extends OaiWebServiceTestCase {
+class FunctionalOaiDcTest extends FunctionalOaiBaseTestCase {
 
 	/**
 	 * SCENARIO OUTLINE: Export article in DC format over OAI

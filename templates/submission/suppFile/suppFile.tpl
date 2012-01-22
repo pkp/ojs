@@ -110,8 +110,6 @@
 </div>
 <div class="separator"></div>
 
-{include file="editor/editDoi.tpl" objectType="SuppFile"}
-
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
 	{include file="$pubIdMetadataFile" pubObject=$suppFile}

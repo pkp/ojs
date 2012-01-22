@@ -5,8 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit a galley.
- *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.galley"}
@@ -84,8 +82,6 @@
 </table>
 </div>
 <br/>
-
-{include file="editor/editDoi.tpl" objectType="Galley"}
 
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}

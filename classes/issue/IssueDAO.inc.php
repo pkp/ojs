@@ -315,11 +315,9 @@ class IssueDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
-		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
-		$additionalFields[] = 'pub-id::doi';
-		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
 

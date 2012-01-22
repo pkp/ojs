@@ -62,22 +62,11 @@
 		<td class="label">{translate key="common.language"}</td>
 		<td class="value">{$suppFile->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
-	{if $issue && $issue->getPublished()}
-		{assign var=doi value=$suppFile->getPubId('doi')}
-	{else}
-		{assign var=doi value=$suppFile->getPubId('doi', true)}{* Don't affix DOI *}
-	{/if}
-	{if $doi}
-		<tr valign="top">
-			<td>{translate key="rt.metadata.pkp.doi"}</td>
-			<td>{$doi|escape}</a></td>
-		</tr>
-	{/if}
 	{foreach from=$pubIdPlugins item=pubIdPlugin}
 		{if $issue->getPublished()}
 			{assign var=pubId value=$pubIdPlugin->getPubId($suppFile)}
 		{else}
-			{assign var=pubId value=$pubIdPlugin->getPubId($suppFile, true)}{* Don't affix the pubId *}
+			{assign var=pubId value=$pubIdPlugin->getPubId($suppFile, true)}{* Preview rather than assign a pubId *}
 		{/if}
 		{if $pubId}
 			<tr valign="top">

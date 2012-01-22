@@ -50,6 +50,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$suppFile = new SuppFile();
 		$suppFile->setId(97);
 		$suppFile->setFileId(999);
+		$suppFile->setStoredPubId('doi', 'supp-file-doi');
 
 		// Article
 		import('classes.article.PublishedArticle');
@@ -58,6 +59,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		        ->method('getBestArticleId')
 		        ->will($this->returnValue(9));
 		$article->setId(9);
+		$article->setJournalId(1);
 		$author->setSubmissionId($article->getId());
 		$article->setSuppFiles(array($suppFile));
 		$article->setPages(15);
@@ -80,6 +82,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$galley = new ArticleGalley();
 		$galley->setId(98);
 		$galley->setFileType('galley-filetype');
+		$galley->setStoredPubId('doi', 'galley-doi');
 		$galleys = array($galley);
 
 		// Journal
@@ -90,6 +93,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		        ->will($this->returnCallback(array($this, 'getJournalSetting')));
 		$journal->setPrimaryLocale('en_US');
 		$journal->setPath('journal-path');
+		$journal->setId(1);
 
 		// Section
 		import('classes.journal.Section');
@@ -102,7 +106,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$issue->expects($this->any())
 		      ->method('getIssueIdentification')
 		      ->will($this->returnValue('issue-identification'));
+		$issue->setId(96);
 		$issue->setDatePublished('2010-11-05');
+		$issue->setStoredPubId('doi', 'issue-doi');
 		$issue->setJournalId(1);
 
 
@@ -156,7 +162,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 		// Create a mocked ArticleGalleyDAO that returns our test data.
 		import('classes.article.ArticleGalleyDAO');
-		$articleGalleyDao = $this->getMock('OAIDAO', array('getGalleysByArticle'));
+		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'));
 		$articleGalleyDao->expects($this->any())
 		                 ->method('getGalleysByArticle')
 		                 ->will($this->returnValue($galleys));

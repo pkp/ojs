@@ -389,8 +389,6 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-{include file="editor/editDoi.tpl" objectType="Article"}
-
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
 	{include file="$pubIdMetadataFile" pubObject=$article}

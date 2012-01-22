@@ -495,24 +495,17 @@ class NativeExportDom {
 	 * @param $issue Issue
 	 */
 	function generatePubId(&$doc, &$node, &$pubObject, &$issue) {
-		// FIXME: This will be moved to the DOI PID plug-in in the next release.
-		if ($issue->getPublished() && ($doi = $pubObject->getPubId('doi'))) {
-			$idNode =& XMLCustomWriter::createChildWithText($doc, $node, 'id', $doi);
-			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
-		}
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds');
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $issue->getJournalId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->getEnabled($issue->getJournalId())) {
-				if ($issue->getPublished()) {
-					$pubId = $pubIdPlugin->getPubId($pubObject);
-				} else {
-					$pubId = $pubIdPlugin->getPubId($pubObject, true);
-				}
-				if ($pubId) {
-					$pubIdType = $pubIdPlugin->getPubIdType();
-					$idNode =& XMLCustomWriter::createChildWithText($doc, $node, 'id', $pubId);
-					XMLCustomWriter::setAttribute($idNode, 'type', $pubIdType);
-				}
+			if ($issue->getPublished()) {
+				$pubId = $pubIdPlugin->getPubId($pubObject);
+			} else {
+				$pubId = $pubIdPlugin->getPubId($pubObject, true);
+			}
+			if ($pubId) {
+				$pubIdType = $pubIdPlugin->getPubIdType();
+				$idNode =& XMLCustomWriter::createChildWithText($doc, $node, 'id', $pubId);
+				XMLCustomWriter::setAttribute($idNode, 'type', $pubIdType);
 			}
 		}
 	}

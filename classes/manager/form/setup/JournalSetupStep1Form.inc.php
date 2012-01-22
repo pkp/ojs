@@ -27,16 +27,6 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'abbreviation' => 'string',
 				'printIssn' => 'string',
 				'onlineIssn' => 'string',
-				'enableIssueDoi' => 'bool',
-				'enableArticleDoi' => 'bool',
-				'enableGalleyDoi' => 'bool',
-				'enableSuppFileDoi' => 'bool',
-				'doiPrefix' => 'string',
-				'doiSuffix' => 'string',
-				'doiIssueSuffixPattern' => 'string',
-				'doiArticleSuffixPattern' => 'string',
-				'doiGalleySuffixPattern' => 'string',
-				'doiSuppFileSuffixPattern' => 'string',
 				'mailingAddress' => 'string',
 				'categories' => 'object',
 				'useEditorialBoard' => 'bool',
@@ -69,7 +59,6 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.journalTitleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'initials', 'required', 'manager.setup.form.journalInitialsRequired'));
-		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'optional', 'manager.setup.form.doiPrefixPattern', '/^10\.[0-9][0-9][0-9][0-9][0-9]?$/'));
 		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
 		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
@@ -83,33 +72,6 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	function getLocaleFieldNames() {
 		return array('title', 'initials', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'sponsorNote', 'publisherNote', 'contributorNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
 	}
-
-	/**
-	 * @see Form::validate()
-	 */
-	function validate() {
-		// FIXME: Will be moved to PID DOI plugin in next release.
-		if ($this->getData('doiSuffix') == 'pattern') {
-			// When individual DOI patterns are enabled then we have
-			// to check for every object that we want to generate
-			// DOIs for whether a pattern has really been entered.
-			foreach(array('Issue', 'Article', 'Galley', 'SuppFile') as $objectType) {
-				if ($this->getData("enable${objectType}Doi")) {
-					$this->addCheck(
-						new FormValidator(
-							$this, "doi${objectType}SuffixPattern", 'required',
-							// NB: We cannot use translation parameters here...
-							// FormValidator won't let us. So we use one key per
-							// object type.
-							"manager.setup.form.doi${objectType}SuffixPatternRequired"
-						)
-					);
-				}
-			}
-		}
-		return parent::validate();
-	}
-
 
 	/**
 	 * Execute the form, but first:

@@ -11,11 +11,6 @@
 {else}
 	{assign var=pubObject value=$article}
 {/if}
-{if $issue->getPublished()}
-	{assign var=doi value=$pubObject->getPubId('doi')}
-{else}
-	{assign var=doi value=$pubObject->getPubId('doi', true)}{* Don't affix DOI *}
-{/if}
 
 
 {include file="article/header.tpl"}
@@ -148,17 +143,11 @@
 	{/if}
 {/if}
 
-{* FIXME: This will be moved to DOI PID-plug-in in the next release. *}
-{if $doi}
-	<br />
-	<br />
-	doi:<a id="pub-id::doi" href="http://dx.doi.org/{$doi|escape|escape:url}">{$doi|escape}</a>
-{/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
 		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
 	{else}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Don't affix the pubId *}
+		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Preview rather than assign a pubId *}
 	{/if}
 	{if $pubId}
 		<br />

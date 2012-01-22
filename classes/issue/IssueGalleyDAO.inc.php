@@ -202,8 +202,8 @@ class IssueGalleyDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
-		// FIXME: Get the following names of PIDs from PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
 		return $additionalFields;
 	}

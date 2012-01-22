@@ -78,13 +78,7 @@ class SetupHandler extends ManagerHandler {
 			// Check for any special cases before trying to save
 			switch ($step) {
 				case 1:
-					if ($request->getUserVar('reassignDOIs')) {
-						$journal =& $request->getJournal();
-						$journalDao =& DAORegistry::getDAO('JournalDAO');
-						$journalDao->deleteAllPubIds($journal->getId(), 'doi');
-						$editData = true;
-
-					} else if ($request->getUserVar('addSponsor')) {
+					if ($request->getUserVar('addSponsor')) {
 						// Add a sponsor
 						$editData = true;
 						$sponsors = $setupForm->getData('sponsors');
@@ -224,6 +218,7 @@ class SetupHandler extends ManagerHandler {
 					}
 					$setupForm->setData('templates', $templates);
 					break;
+
 				case 5:
 					if ($request->getUserVar('uploadHomeHeaderTitleImage')) {
 						if ($setupForm->uploadImage('homeHeaderTitleImage', $formLocale)) {

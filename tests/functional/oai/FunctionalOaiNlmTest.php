@@ -15,7 +15,7 @@
 
 import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
 
-class FunctionalOaiNlmTest extends OaiWebServiceTestCase {
+class FunctionalOaiNlmTest extends FunctionalOaiBaseTestCase {
 	public function testDoi() {
 		// Configure the web service request
 		$this->webServiceRequest->setParams($params = array(

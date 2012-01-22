@@ -884,7 +884,11 @@ class DoiExportPlugin extends ImportExportPlugin {
 		$configurationErrors = array();
 
 		// 1) missing DOI prefix
-		$doiPrefix = $journal->getSetting('doiPrefix');
+		$doiPrefix = null;
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+		if (isset($pubIdPlugins['DoiPubIdPlugin'])) {
+			$doiPrefix = $pubIdPlugins['DoiPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
+		}
 		if (empty($doiPrefix)) {
 			$configurationErrors[] = DOI_EXPORT_CONFIGERROR_DOIPREFIX;
 		}

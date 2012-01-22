@@ -1,50 +1,72 @@
 <?php
 
 /**
- * @file classes/article/DoiHelper.inc.php
+ * @file plugins/pubIds/doi/DoiPubIdPlugin.inc.php
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiHelper
- * @ingroup article
+ * @class DoiPubIdPlugin
+ * @ingroup plugins_pubIds_doi
  *
- * @brief A helper class to deal with public IDs. This class only exists
- *        to collect PID-related code in a central place before it is moved
- *        to plug-ins.
- *
- * FIXME: This code must be moved to a PID plug-ins in the next release.
+ * @brief DOI plugin class
  */
 
 
-class DoiHelper {
+import('classes.plugins.PubIdPlugin');
+
+class DoiPubIdPlugin extends PubIdPlugin {
+
+	//
+	// Implement template methods from PKPPlugin.
+	//
 	/**
-	 * Get a DOI for the given publishing object.
-	 * @param $pubObject object An Article, Issue,
-	 *   ArticleGalley, IssueGalley or SuppFile
-	 * @param $preview boolean If true, generate a non-persisted preview only.
-	 * @return string|null
+	 * @see PubIdPlugin::register()
 	 */
-	function getDOI(&$pubObject, $preview = false) {
+	function register($category, $path) {
+		$success = parent::register($category, $path);
+		$this->addLocaleData();
+		return $success;
+	}
+
+	/**
+	 * @see PKPPlugin::getName()
+	 */
+	function getName() {
+		return 'DoiPubIdPlugin';
+	}
+
+	/**
+	 * @see PKPPlugin::getDisplayName()
+	 */
+	function getDisplayName() {
+		return Locale::translate('plugins.pubIds.doi.displayName');
+	}
+
+	/**
+	 * @see PKPPlugin::getDescription()
+	 */
+	function getDescription() {
+		return Locale::translate('plugins.pubIds.doi.description');
+	}
+
+	/**
+	 * @see PKPPlugin::getTemplatePath()
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	}
+
+
+	//
+	// Implement template methods from PubIdPlugin.
+	//
+	/**
+	 * @see PubIdPlugin::getPubId()
+	 */
+	function getPubId(&$pubObject, $preview = false) {
 		// Determine the type of the publishing object.
-		$allowedTypes = array(
-			'Issue' => 'Issue',
-			'Article' => 'Article',
-			'ArticleGalley' => 'Galley',
-			'SuppFile' => 'SuppFile'
-		);
-		$pubObjectType = null;
-		foreach ($allowedTypes as $allowedType => $pubObjectTypeCandidate) {
-			if (is_a($pubObject, $allowedType)) {
-				$pubObjectType = $pubObjectTypeCandidate;
-				break;
-			}
-		}
-		if (is_null($pubObjectType)) {
-			// This must be a dev error, so bail with an assertion.
-			assert(false);
-			return null;
-		}
+		$pubObjectType = $this->getPubObjectType($pubObject);
 
 		// Initialize variables for publication objects.
 		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
@@ -68,9 +90,10 @@ class DoiHelper {
 
 		$journal =& $this->_getJournal($journalId);
 		if (!$journal) return null;
+		$journalId = $journal->getId();
 
 		// Check whether DOIs are enabled for the given object type.
-		$doiEnabled = ($journal->getSetting("enable${pubObjectType}Doi") == '1');
+		$doiEnabled = ($this->getSetting($journalId, "enable${pubObjectType}Doi") == '1');
 		if (!$doiEnabled) return null;
 
 		// If we already have an assigned DOI, use it.
@@ -83,14 +106,14 @@ class DoiHelper {
 			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
 		}
-		if ($issue && $journal->getId() != $issue->getJournalId()) return null;
+		if ($issue && $journalId != $issue->getJournalId()) return null;
 
 		// Retrieve the DOI prefix.
-		$doiPrefix = $journal->getSetting('doiPrefix');
+		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
 		if (empty($doiPrefix)) return null;
 
 		// Generate the DOI suffix.
-		$doiSuffixGenerationStrategy = $journal->getSetting('doiSuffix');
+		$doiSuffixGenerationStrategy = $this->getSetting($journalId, 'doiSuffix');
 		switch ($doiSuffixGenerationStrategy) {
 			case 'publisherId':
 				// FIXME: Find a better solution when we work with Articles rather
@@ -117,7 +140,7 @@ class DoiHelper {
 					$doiSuffix = null;
 					break;
 				}
-				$doiSuffix = $journal->getSetting("doi${pubObjectType}SuffixPattern");
+				$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
 
 				// %j - journal initials
 				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials')), $doiSuffix);
@@ -179,29 +202,113 @@ class DoiHelper {
 
 		if (!$preview) {
 			// Save the generated DOI.
-			$pubObject->setStoredPubId('doi', $doi);
-			foreach($this->_getDAOs() as $objectType => $daoName) {
-				if (is_a($pubObject, $objectType)) {
-					$dao =& DAORegistry::getDAO($daoName);
-					$dao->changePubId($pubObject->getId(), 'doi', $doi);
-					break;
-				}
-			}
+			$this->setStoredPubId($pubObject, $pubObjectType, $doi);
 		}
 
 		return $doi;
 	}
 
 	/**
+	 * @see PubIdPlugin::getPubIdType()
+	 */
+	function getPubIdType() {
+		return 'doi';
+	}
+
+	/**
+	 * @see PubIdPlugin::getPubIdDisplayType()
+	 */
+	function getPubIdDisplayType() {
+		return 'DOI';
+	}
+
+	/**
+	 * @see PubIdPlugin::getPubIdFullName()
+	 */
+	function getPubIdFullName() {
+		return 'Digital Object Identifier';
+	}
+
+	/**
+	 * @see PubIdPlugin::getResolvingURL()
+	 */
+	function getResolvingURL($pubId) {
+		return 'http://dx.doi.org/'.$pubId;
+	}
+
+	/**
+	 * @see PubIdPlugin::getFormFieldNames()
+	 */
+	function getFormFieldNames() {
+		return array('doiSuffix');
+	}
+
+	/**
+	 * @see PubIdPlugin::getDAOFieldNames()
+	 */
+	function getDAOFieldNames() {
+		return array('pub-id::doi');
+	}
+
+	/**
+	 * @see PubIdPlugin::getPubIdMetadataFile()
+	 */
+	function getPubIdMetadataFile() {
+		return $this->getTemplatePath().'doiSuffixEdit.tpl';
+	}
+
+	/**
+	 * @see PubIdPlugin::getSettingsFormName()
+	 */
+	function getSettingsFormName() {
+		return 'classes.form.DoiSettingsForm';
+	}
+
+	/**
+	 * @see PubIdPlugin::verifyData()
+	 */
+	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
+		// Verify DOI uniqueness.
+		assert($fieldName == 'doiSuffix');
+		if($this->_suffixIsAdmissible($fieldValue, $pubObject, $journalId)) {
+			return true;
+		} else {
+			$errorMsg = AppLocale::translate('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
+			return false;
+		}
+	}
+
+	/**
+	 * @see PubIdPlugin::checkDuplicate()
+	 */
+	function checkDuplicate($pubId, &$pubObject, $journalId) {
+		$doiParts = explode('/', $pubId, 2);
+		$doiSuffix = array_pop($doiParts);
+		return $this->_suffixIsAdmissible($doiSuffix, $pubObject, $journalId);
+	}
+
+	/**
+	 * @see PubIdPlugin::validatePubId()
+	 */
+	function validatePubId($pubId) {
+		$doiParts = explode('/', $pubId, 2);
+		return count($doiParts) == 2;
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
 	 * Check whether the given suffix may lead to
 	 * a duplicate DOI.
-	 * @param $doiSuffix string
+	 * @param $newSuffix string
 	 * @param $pubObject object
 	 * @param $journalId integer
 	 * @return boolean
 	 */
-	function postedSuffixIsAdmissible($postedSuffix, &$pubObject, $journalId) {
-		if (empty($postedSuffix)) return true;
+	function _suffixIsAdmissible($newSuffix, &$pubObject, $journalId) {
+		if (empty($newSuffix)) return true;
 
 		// FIXME: Hack to ensure that we get a published article if possible.
 		// Remove this when we have migrated getBest...(), etc. to Article.
@@ -215,10 +322,9 @@ class DoiHelper {
 		}
 
 		// Construct the potential new DOI with the posted suffix.
-		$journal =& $this->_getJournal($journalId);
-		$doiPrefix = $journal->getSetting('doiPrefix');
+		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
 		if (empty($doiPrefix)) return true;
-		$newDoi = $doiPrefix . '/' . $postedSuffix;
+		$newDoi = $doiPrefix . '/' . $newSuffix;
 
 		// Check all objects of the journal whether they have
 		// the same DOI. This includes DOIs that are not yet generated
@@ -263,7 +369,7 @@ class DoiHelper {
 				if ($objectToCheck->getId() == $excludedId) continue;
 
 				// Check for ID clashes.
-				$existingDoi = $this->getDOI($objectToCheck, true);
+				$existingDoi = $this->getPubId($objectToCheck, true);
 				if ($newDoi == $existingDoi) return false;
 
 				unset($objectToCheck);
@@ -274,24 +380,6 @@ class DoiHelper {
 
 		// We did not find any ID collision, so go ahead.
 		return true;
-	}
-
-
-	/*
-	 * Private helper methods
-	 */
-	/**
-	 * Return an array that assigns object types
-	 * to their corresponding DAOs.
-	 * @return array
-	 */
-	function _getDAOs() {
-		return array(
-			'Issue' => 'IssueDAO',
-			'Article' => 'ArticleDAO',
-			'ArticleGalley' => 'ArticleGalleyDAO',
-			'SuppFile' => 'SuppFileDAO'
-		);
 	}
 
 	/**

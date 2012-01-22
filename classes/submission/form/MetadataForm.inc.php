@@ -119,9 +119,6 @@ class MetadataForm extends Form {
 				'title' => $article->getTitle(null), // Localized
 				'abstract' => $article->getAbstract(null), // Localized
 				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $article->getStoredPubId('doi'),
-				'doiSuffix' => $article->getData('doiSuffix'),
 				'showCoverPage' => $article->getShowCoverPage(null), // Localized
 				'hideCoverPageToc' => $article->getHideCoverPageToc(null), // Localized
 				'hideCoverPageAbstract' => $article->getHideCoverPageAbstract(null), // Localized
@@ -240,8 +237,6 @@ class MetadataForm extends Form {
 				'title',
 				'abstract',
 				'coverPageAltText',
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'doiSuffix',
 				'showCoverPage',
 				'hideCoverPageToc',
 				'hideCoverPageAbstract',
@@ -292,18 +287,7 @@ class MetadataForm extends Form {
 			}
 		}
 
-		// Verify DOI uniqueness.
-		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
-			$journal = Request::getJournal();
-			import('classes.article.DoiHelper');
-			$doiHelper = new DoiHelper();
-			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->article, $journal->getId())) {
-				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
-			}
-		}
-		// verify the additional field names from the public identifer plugins
+		// Verify additional fields from public identifer plug-ins.
 		$journal = Request::getJournal();
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
@@ -444,16 +428,6 @@ class MetadataForm extends Form {
 		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$authorDao->deleteAuthorById($deletedAuthors[$i], $article->getId());
-		}
-
-		// Update DOI if unique.
-		// FIXME: Move this to DOI PID plug-in.
-		$storedDoi = $article->getStoredPubId('doi');
-		if (empty($storedDoi)) {
-			// The DOI suffix can only be changed as long
-			// as no DOI has been generated.
-			$doiSuffix = $this->getData('doiSuffix');
-			$article->setData('doiSuffix', $doiSuffix);
 		}
 
 		parent::execute();

@@ -14,7 +14,7 @@
  * FEATURE: Import and Export of the public identifiers
  *   AS A    journal manager
  *   I WANT  to be able to import and exoprt the public identifiers for issues, articles, galleys and supplementary files
- *
+ *   SO THAT ...( why? added value?)...FIXME-BB...
  */
 
 
@@ -52,7 +52,9 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 
 	public function testPubIdsImport() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		PKPTestHelper::xdebugScream(false);
 		$journalDao->deleteAllPubIds(1, 'other::urn');
+		PKPTestHelper::xdebugScream(true);
 
 		$testfile = 'tests/functional/plugins/importexport/pubIds/sample.xml';
 		$args = array('import', $testfile, 'test', 'admin');

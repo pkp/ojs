@@ -155,7 +155,15 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		$testObject = $articleDao->getArticle(1);
 		$testObject->setData('medra::' . DOI_EXPORT_REGDOI, '1749/t.v1i1.1');
 		$articleDao->updateArticle($testObject);
-		HookRegistry::clear($hookName);
+
+		// Remove the hook.
+		$hooks = HookRegistry::getHooks();
+		foreach($hooks[$hookName] as $index => $hook) {
+			if (is_a($hook[0], 'MedraExportPlugin')) {
+				unset($hooks[$hookName][$index]);
+				break;
+			}
+		}
 
 		$objects = array(
 			'issue' => 1,
@@ -205,7 +213,6 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 	/**
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
-	 * @group current
 	 */
 	public function testRegisterUnregisteredDois() {
 		parent::testRegisterUnregisteredDois('MedraExportPlugin', array('Issue', 'Article', 'Galley'), self::TEST_ACCOUNT);

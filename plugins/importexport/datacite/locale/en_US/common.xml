@@ -11,7 +11,7 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">A valid DOI prefix must be specified in the Journal Setup (step 1) in order to use this plugin.</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">The plug-in is not fully set up.</message>
 
 	<message key="plugins.importexport.common.settings">Settings</message>

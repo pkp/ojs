@@ -136,17 +136,7 @@ class SuppFileForm extends Form {
 			$this->addErrorField('publicSuppFileId');
 		}
 
-		// Verify DOI uniqueness.
-		// FIXME: Move this to DOI PID plug-in.
-		$doiSuffix = $this->getData('doiSuffix');
-		if (!empty($doiSuffix)) {
-			import('classes.article.DoiHelper');
-			$doiHelper = new DoiHelper();
-			if(!$doiHelper->postedSuffixIsAdmissible($doiSuffix, $this->suppFile, $journal->getId())) {
-				$this->addError('doiSuffix', AppLocale::translate('manager.setup.doiSuffixCustomIdentifierNotUnique'));
-			}
-		}
-		// verify the additional field names from the public identifer plugins
+		// Verify additional fields from public identifer plug-ins.
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
 		$pubIdPluginHelper->validate($journal->getId(), $this, $this->suppFile);
@@ -173,10 +163,7 @@ class SuppFileForm extends Form {
 				'source' => $suppFile->getSource(null), // Localized
 				'language' => $suppFile->getLanguage(),
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
-				'publicSuppFileId' => $suppFile->getPubId('publisher-id'),
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'storedDoi' => $suppFile->getStoredPubId('doi'),
-				'doiSuffix' => $suppFile->getData('doiSuffix')
+				'publicSuppFileId' => $suppFile->getPubId('publisher-id')
 			);
 
 		} else {
@@ -212,9 +199,7 @@ class SuppFileForm extends Form {
 				'language',
 				'showReviewers',
 				'publicSuppFileId',
-				'remoteURL',
-				// FIXME: Will be moved to DOI PID plug-in in the next release.
-				'doiSuffix'
+				'remoteURL'
 			)
 		);
 		// consider the additional field names from the public identifer plugins
@@ -306,15 +291,6 @@ class SuppFileForm extends Form {
 		$suppFile->setLanguage($this->getData('language'));
 		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
 		$suppFile->setStoredPubId('publisher-id', $this->getData('publicSuppFileId'));
-		// Update DOI if unique.
-		// FIXME: Move this to DOI PID plug-in.
-		$storedDoi = $suppFile->getStoredPubId('doi');
-		if (empty($storedDoi)) {
-			// The DOI suffix can only be changed as long
-			// as no DOI has been generated.
-			$doiSuffix = $this->getData('doiSuffix');
-			$suppFile->setData('doiSuffix', $doiSuffix);
-		}
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();

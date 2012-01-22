@@ -171,11 +171,10 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		$pubObjectId = $pubIdNode->getAttribute('pubObjectId');
 
 		$pubIdPluginFound = false;
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds');
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->getEnabled($journal->getId()) && $pubIdPlugin->getPubIdType() == $pubIdType) {
-				$daoName = $pubIdPlugin->getDAO($pubObjectType);
-				$dao =& DAORegistry::getDAO($daoName);
+			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
+				$dao =& $pubIdPlugin->getDAO($pubObjectType);
 				switch ($pubObjectType) {
 					case 'Issue':
 						$pubObject =& $dao->getIssueById($pubObjectId, $journal->getId());
@@ -199,7 +198,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 						if (!$pubIdPlugin->checkDuplicate($pubIdValue, $pubObject, $journal->getId())) {
 							$errors[] = array('plugins.importexport.pubIds.import.error.duplicatePubId', array('pubId' => $pubIdValue));
 						} else {
-							$pubIdPlugin->setStoredPubId($pubObject, $pubIdValue);
+							$pubIdPlugin->setStoredPubId($pubObject, $pubObjectType, $pubIdValue);
 							$pubId = array('pubObjectType' => $pubObjectType, 'pubObjectId' => $pubObjectId, 'value' => $pubIdValue);
 						}
 					} else {
@@ -263,21 +262,19 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	 * @param $journalId int
 	 */
 	function generatePubId(&$doc, &$node, &$pubObject, $journalId) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds');
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->getEnabled($journalId)) {
-				$pubIdType = $pubIdPlugin->getPubIdType();
-				$pubId = $pubObject->getStoredPubId($pubIdType);
-				if ($pubId) {
-					$pubObjectType = $pubIdPlugin->getPubObjectType($pubObject);
+			$pubIdType = $pubIdPlugin->getPubIdType();
+			$pubId = $pubObject->getStoredPubId($pubIdType);
+			if ($pubId) {
+				$pubObjectType = $pubIdPlugin->getPubObjectType($pubObject);
 
-					$pubIdNode =& XMLCustomWriter::createChildWithText($doc, $node, 'pubId', $pubId);
+				$pubIdNode =& XMLCustomWriter::createChildWithText($doc, $node, 'pubId', $pubId);
 
-					XMLCustomWriter::setAttribute($pubIdNode, 'pubIdType', $pubIdType);
-					XMLCustomWriter::setAttribute($pubIdNode, 'pubObjectType', $pubObjectType);
-					XMLCustomWriter::setAttribute($pubIdNode, 'pubObjectId', $pubObject->getId());
+				XMLCustomWriter::setAttribute($pubIdNode, 'pubIdType', $pubIdType);
+				XMLCustomWriter::setAttribute($pubIdNode, 'pubObjectType', $pubObjectType);
+				XMLCustomWriter::setAttribute($pubIdNode, 'pubObjectId', $pubObject->getId());
 
-				}
 			}
 		}
 	}

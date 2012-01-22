@@ -8,22 +8,11 @@
  *}
 {include file="issue/header.tpl"}
 
-{* FIXME: This will be moved to DOI PID-plug-in in the next release. *}
-{if $issue->getPublished()}
-	{assign var=doi value=$issue->getPubId('doi')}
-{else}
-	{assign var=doi value=$issue->getPubId('doi', true)}{* Don't affix DOI *}
-{/if}
-{if $doi}
-	doi:<a id="pub-id::doi" href="http://dx.doi.org/{$doi|escape|escape:url}">{$doi|escape}</a>
-	<br />
-	<br />
-{/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
 		{assign var=pubId value=$pubIdPlugin->getPubId($issue)}
 	{else}
-		{assign var=pubId value=$pubIdPlugin->getPubId($issue, true)}{* Don't affix the pubId *}
+		{assign var=pubId value=$pubIdPlugin->getPubId($issue, true)}{* Preview rather than assign a pubId *}
 	{/if}
 	{if $pubId}
 		{$pubIdPlugin->getPubIdDisplayType()|escape}: {if $pubIdPlugin->getResolvingURL($pubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($pubId)|escape}">{$pubId|escape}</a>{else}{$pubId|escape}{/if}

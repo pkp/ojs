@@ -85,20 +85,28 @@ class ArticleFile extends SubmissionFile {
 	 * @var $preview boolean If true, generate a non-persisted preview only.
 	 */
 	function getPubId($pubIdType, $preview = false) {
-		// If we already have an assigned ID, use it.
-		$storedId = $this->getStoredPubId($pubIdType);
-		if (!empty($storedId)) return $storedId;
-
-		switch($pubIdType) {
-			case 'doi':
-				import('classes.article.DoiHelper');
-				$doiHelper = new DoiHelper();
-				return $doiHelper->getDOI($this, $preview);
-
-			default:
-				// Unknown pub-id-type or pub-id not (yet) set.
-				return null;
+		// FIXME: Move publisher-id to PID plug-in.
+		if ($pubIdType === 'publisher-id') {
+			$pubId = $this->getStoredPubId($pubIdType);
+			return ($pubId ? $pubId : null);
 		}
+
+		// Retrieve the article.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$article =& $articleDao->getArticle($this->getArticleId(), null, true);
+		if (!$article) return null;
+
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $article->getJournalId());
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
+				// If we already have an assigned ID, use it.
+				$storedId = $this->getStoredPubId($pubIdType);
+				if (!empty($storedId)) return $storedId;
+
+				return $pubIdPlugin->getPubId($this, $preview);
+			}
+		}
+		return null;
 	}
 
 	/**

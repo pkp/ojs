@@ -63,8 +63,6 @@ class ArticleDAO extends DAO {
 		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
 		$additionalFields[] = 'pub-id::publisher-id';
-		$additionalFields[] = 'pub-id::doi';
-		$additionalFields[] = 'doiSuffix';
 		return $additionalFields;
 	}
 
