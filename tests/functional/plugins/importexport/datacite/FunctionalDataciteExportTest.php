@@ -27,7 +27,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	const TEST_ACCOUNT = 'TIB.OJSTEST';
 
 	/** @var string See testRegisterObject() */
-	private $fileToRegister;
+	private $fileToRegister, $dcPassword;
 
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
@@ -35,7 +35,21 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	protected function setUp() {
 		$this->pluginId = 'datacite';
 
+		// Retrieve and check configuration. (We're in a chicken
+		// and egg situation: This means that we cannot call
+		// parent::setUp() at this point so we have to retrieve
+		// the base URL here although it will be retrieved again
+		// in the parent class.)
 		$baseUrl = Config::getVar('debug', 'webtest_base_url');
+		$this->dcPassword = Config::getVar('debug', 'webtest_datacite_pw');
+		if (empty($baseUrl) || empty($this->dcPassword)) {
+			$this->markTestSkipped(
+				'Please set webtest_base_url and webtest_datacite_pw in your ' .
+				'config.php\'s [debug] section to the base url of your test server ' .
+				'and the password of your DataCite test account.'
+			);
+		}
+
 		$indexPage = $baseUrl . '/index.php/test/manager/importexport/plugin/DataciteExportPlugin';
 		$this->pages = array(
 			'index' => $indexPage,
@@ -45,7 +59,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 		$this->defaultPluginSettings = array(
 			'username' => self::TEST_ACCOUNT,
-			'password' => base64_encode(Config::getVar('debug', 'webtest_datacite_pw'))
+			'password' => base64_encode($this->dcPassword)
 		);
 
 		parent::setUp('10.5072');
@@ -345,7 +359,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		$curlCh = curl_init ();
 
 		// Set up basic authentication.
-		$login = 'TIB.OJSTEST:' . Config::getVar('debug', 'webtest_datacite_pw');
+		$login = 'TIB.OJSTEST:' . $this->dcPassword;
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($curlCh, CURLOPT_USERPWD, $login);
 

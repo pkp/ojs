@@ -38,15 +38,14 @@ class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 		$export->registerNamespace('cr', 'http://www.crossref.org/schema/4.3.0');
 
 		$basePath = '/cr:doi_batch/cr:body/cr:journal';
-		$baseUrl = Config::getVar('debug', 'webtest_base_url');
 		$testCases = array(
 			'cr:journal_issue/cr:doi_data/cr:doi' => '10.1234/t.v1i1',
-			'cr:journal_issue/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/issue/view/1',
+			'cr:journal_issue/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/issue/view/1',
 			'cr:journal_article/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1',
-			'cr:journal_article/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/article/view/1',
+			'cr:journal_article/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/article/view/1',
 			'cr:journal_article/cr:component_list/cr:component/cr:titles/cr:title' => 'Test Supp File',
 			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1.s1',
-			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:resource' => $baseUrl . '/index.php/test/article/downloadSuppFile/1/1'
+			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/article/downloadSuppFile/1/1'
 		);
 		foreach($testCases as $xPath => $expectedDoi) {
 			self::assertEquals(

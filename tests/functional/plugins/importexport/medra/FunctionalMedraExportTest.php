@@ -32,7 +32,21 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	protected function setUp() {
 		$this->pluginId = 'medra';
 
+		// Retrieve and check configuration. (We're in a chicken
+		// and egg situation: This means that we cannot call
+		// parent::setUp() at this point so we have to retrieve
+		// the base URL here although it will be retrieved again
+		// in the parent class.)
 		$baseUrl = Config::getVar('debug', 'webtest_base_url');
+		$medraPassword = Config::getVar('debug', 'webtest_medra_pw');
+		if (empty($baseUrl) || empty($medraPassword)) {
+			$this->markTestSkipped(
+				'Please set webtest_base_url and webtest_medra_pw in your ' .
+				'config.php\'s [debug] section to the base url of your test server ' .
+				'and the password of your Medra test account.'
+			);
+		}
+
 		$this->pages = array(
 			'index' => $baseUrl . '/index.php/test/manager/importexport/plugin/MedraExportPlugin',
 			'settings' => $baseUrl . '/index.php/test/manager/plugin/importexport/MedraExportPlugin/settings'
@@ -40,7 +54,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 		$this->defaultPluginSettings = array(
 			'username' => self::TEST_ACCOUNT,
-			'password' => base64_encode(Config::getVar('debug', 'webtest_medra_pw')),
+			'password' => base64_encode($medraPassword),
 			'registrantName' => 'Registrant',
 			'fromCompany' => 'From Company',
 			'fromName' => 'From Person',

@@ -20,7 +20,16 @@ class MedraWebserviceTest extends PKPTestCase {
 	private $ws;
 
 	protected function setUp() {
-		$this->ws = new MedraWebservice(MEDRA_WS_ENDPOINT_DEV, 'TEST_OJS', Config::getVar('debug', 'webtest_medra_pw'));
+		// Retrieve and check configuration.
+		$medraPassword = Config::getVar('debug', 'webtest_medra_pw');
+		if (empty($medraPassword)) {
+			$this->markTestSkipped(
+				'Please set webtest_medra_pw in your config.php\'s ' .
+				'[debug] section to the password of your Medra test account.'
+			);
+		}
+
+		$this->ws = new MedraWebservice(MEDRA_WS_ENDPOINT_DEV, 'TEST_OJS', $medraPassword);
 		parent::setUp();
 	}
 
