@@ -50,10 +50,10 @@ class FunctionalOaiDcTest extends FunctionalOaiBaseTestCase {
 		);
 		$domXPath = $this->getXPath($namespaces);
 		$testCases = array(
-			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:source' => array('10.1234/t.v1i1', 'urn:nbn:de:0000-t.v1i19'),
-			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier' => array('10.1234/t.v1i1.1', 'urn:nbn:de:0000-t.v1i1.18'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:source' => array('urn:nbn:de:0000-t.v1i19', '10.1234/t.v1i1'),
+			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:identifier' => array('urn:nbn:de:0000-t.v1i1.18', '10.1234/t.v1i1.1'),
 			'/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/oai_dc:dc/dc:relation' => array(
-				'10.1234/t.v1i1.1.g1', '10.1234/t.v1i1.1.s1', 'urn:nbn:de:0000-t.v1i1.1.g17', 'urn:nbn:de:0000-t.v1i1.1.s19'
+				'urn:nbn:de:0000-t.v1i1.1.g17', 'urn:nbn:de:0000-t.v1i1.1.s19', '10.1234/t.v1i1.1.g1', '10.1234/t.v1i1.1.s1'
 			)
 		);
 		foreach($testCases as $xPath => $expectedDoiList) {

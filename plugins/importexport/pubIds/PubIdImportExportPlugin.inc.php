@@ -100,7 +100,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 
 				if (($existingFileId = $request->getUserVar('temporaryFileId'))) {
 					// The user has just entered more context. Fetch an existing file.
-					$temporaryFile = TemporaryFileManager::getFile($existingFileId, $user->getId());
+					$temporaryFile = $temporaryFileManager->getFile($existingFileId, $user->getId());
 				} else {
 					$temporaryFile = $temporaryFileManager->handleUpload('importFile', $user->getId());
 				}

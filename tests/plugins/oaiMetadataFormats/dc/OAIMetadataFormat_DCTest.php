@@ -28,6 +28,21 @@ import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
 
 class OAIMetadataFormat_DCTest extends PKPTestCase {
+
+	/**
+	 * @see PKPTestCase::getMockedDAOs()
+	 */
+	protected function getMockedDAOs() {
+		return array('AuthorDAO', 'OAIDAO', 'ArticleGalleyDAO', 'PublishedArticleDAO');
+	}
+
+	/**
+	 * @see PKPTestCase::getMockedRegistryKeys()
+	 */
+	protected function getMockedRegistryKeys() {
+		return array('request');
+	}
+
 	/**
 	 * @covers OAIMetadataFormat_DC
 	 * @covers Dc11SchemaArticleAdapter
@@ -168,6 +183,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		                 ->will($this->returnValue($galleys));
 		DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
 
+		// Create a mocked PublishedArticleDAO that returns our test article.
+		import('classes.article.PublishedArticleDAO');
+		$articleDao = $this->getMock('PublishedArticleDAO', array('getPublishedArticleByArticleId'));
+		$articleDao->expects($this->any())
+		            ->method('getPublishedArticleByArticleId')
+		            ->will($this->returnValue($article));
+		DAORegistry::registerDAO('PublishedArticleDAO', $articleDao);
 
 		//
 		// Test

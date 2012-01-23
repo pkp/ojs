@@ -564,7 +564,8 @@ class DoiExportPlugin extends ImportExportPlugin {
 				$errors[] = array('plugins.importexport.common.export.error.outputFileNotWritable', $outputFile);
 				return $errors;
 			}
-			FileManager::copyFile($finalExportFileName, $outputFile);
+			$fileManager = new FileManager();
+			$fileManager->copyFile($finalExportFileName, $outputFile);
 		}
 
 		// Remove all temporary files.
@@ -1208,7 +1209,8 @@ class DoiExportPlugin extends ImportExportPlugin {
 	function _getExportPath() {
 		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginId();
 		if (!file_exists($exportPath)) {
-			FileManager::mkdir($exportPath);
+			$fileManager = new FileManager();
+			$fileManager->mkdir($exportPath);
 		}
 		if (!is_writable($exportPath)) {
 			$errors = array(

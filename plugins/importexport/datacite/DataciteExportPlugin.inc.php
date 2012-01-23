@@ -166,7 +166,8 @@ class DataciteExportPlugin extends DoiExportPlugin {
 			// Write the result.
 			$exportFile = $this->getTargetFileName($targetPath, $exportType, $object->getId());
 			file_put_contents($exportFile, XMLCustomWriter::getXML($doc));
-			FileManager::setMode($exportFile, FILE_MODE_MASK);
+			$fileManager = new FileManager();
+			$fileManager->setMode($exportFile, FILE_MODE_MASK);
 			$exportFiles[$exportFile] = array(&$object);
 			unset($object);
 		}

@@ -629,7 +629,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			// Cehck number
 			$this->check('id=checkNo');
 			// Select no namespace
-			$this->select('id=namespace', 'value=1');
+			$this->select('id=namespace', 'value=urn:nbn:de');
 			// Configure the suffix patterns.
 			foreach ($pattern as $objectType => $suffixPattern) {
 				$this->type(
