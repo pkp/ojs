@@ -12,8 +12,8 @@
 <version>
 	<application>urn</application>
 	<type>plugins.pubIds</type>
-	<release>1.1.0.0</release>
-	<date>2011-10-13</date>
+	<release>1.0.0.0</release>
+	<date>2012-01-24</date>
 	<lazy-load>1</lazy-load>
-	<class>URNPlugin</class>
+	<class>URNPubIdPlugin</class>
 </version>

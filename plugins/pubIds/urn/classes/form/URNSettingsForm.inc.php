@@ -17,20 +17,26 @@ import('lib.pkp.classes.form.Form');
 
 class URNSettingsForm extends Form {
 
-	/** @var $journalId int */
-	var $journalId;
+	//
+	// Private properties
+	//
+	/** @var integer */
+	var $_journalId;
 
-	/** @var $plugin object */
-	var $plugin;
+	/** @var URNPubIdPlugin */
+	var $_plugin;
 
+	//
+	// Constructor
+	//
 	/**
 	 * Constructor
-	 * @param $plugin object
-	 * @param $journalId int
+	 * @param $plugin URNPubIdPlugin
+	 * @param $journalId integer
 	 */
 	function URNSettingsForm(&$plugin, $journalId) {
-		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+		$this->_journalId = $journalId;
+		$this->_plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
@@ -45,8 +51,11 @@ class URNSettingsForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
+	//
+	// Implement template methods from Form
+	//
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display() {
 		$namespaces = array(
@@ -62,55 +71,54 @@ class URNSettingsForm extends Form {
 	}
 
 	/**
-	 * Initialize form data.
+	 * @see Form::initData()
 	 */
 	function initData() {
-		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin =& $this->_plugin;
 
-
-		$this->_data = array(
-			'enableIssueURN' => $plugin->getSetting($journalId, 'enableIssueURN'),
-			'enableArticleURN' => $plugin->getSetting($journalId, 'enableArticleURN'),
-			'enableGalleyURN' => $plugin->getSetting($journalId, 'enableGalleyURN'),
-			'enableSuppFileURN' => $plugin->getSetting($journalId, 'enableSuppFileURN'),
-			'urnPrefix' => $plugin->getSetting($journalId, 'urnPrefix'),
-			'urnSuffix' => $plugin->getSetting($journalId, 'urnSuffix'),
-			'urnIssueSuffixPattern' => $plugin->getSetting($journalId, 'urnIssueSuffixPattern'),
-			'urnArticleSuffixPattern' => $plugin->getSetting($journalId, 'urnArticleSuffixPattern'),
-			'urnGalleySuffixPattern' => $plugin->getSetting($journalId, 'urnGalleySuffixPattern'),
-			'urnSuppFileSuffixPattern' => $plugin->getSetting($journalId, 'urnSuppFileSuffixPattern'),
-			'checkNo' => $plugin->getSetting($journalId, 'checkNo'),
-			'namespace' => $plugin->getSetting($journalId, 'namespace')
-		);
+		foreach($this->_getFormFields() as $fieldName => $fieldType) {
+			$this->setData($fieldName, $plugin->getSetting($journalId, $fieldName));
+		}
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enableIssueURN', 'enableArticleURN', 'enableGalleyURN', 'enableSuppFileURN', 'urnPrefix', 'urnSuffix', 'urnIssueSuffixPattern', 'urnArticleSuffixPattern', 'urnGalleySuffixPattern', 'urnSuppFileSuffixPattern', 'checkNo', 'namespace'));
+		$this->readUserVars(array_keys($this->_getFormFields()));
 	}
 
 	/**
-	 * Save settings.
+	 * @see Form::validate()
 	 */
 	function execute() {
-		$plugin =& $this->plugin;
-		$journalId = $this->journalId;
+		$plugin =& $this->_plugin;
+		$journalId = $this->_journalId;
 
-		$plugin->updateSetting($journalId, 'enableIssueURN', $this->getData('enableIssueURN'), 'bool');
-		$plugin->updateSetting($journalId, 'enableArticleURN', $this->getData('enableArticleURN'), 'bool');
-		$plugin->updateSetting($journalId, 'enableGalleyURN', $this->getData('enableGalleyURN'), 'bool');
-		$plugin->updateSetting($journalId, 'enableSuppFileURN', $this->getData('enableSuppFileURN'), 'bool');
-		$plugin->updateSetting($journalId, 'urnPrefix', $this->getData('urnPrefix'), 'string');
-		$plugin->updateSetting($journalId, 'urnSuffix', $this->getData('urnSuffix'), 'string');
-		$plugin->updateSetting($journalId, 'urnIssueSuffixPattern', $this->getData('urnIssueSuffixPattern'), 'string');
-		$plugin->updateSetting($journalId, 'urnArticleSuffixPattern', $this->getData('urnArticleSuffixPattern'), 'string');
-		$plugin->updateSetting($journalId, 'urnGalleySuffixPattern', $this->getData('urnGalleySuffixPattern'), 'string');
-		$plugin->updateSetting($journalId, 'urnSuppFileSuffixPattern', $this->getData('urnSuppFileSuffixPattern'), 'string');
-		$plugin->updateSetting($journalId, 'checkNo', $this->getData('checkNo'), 'bool');
-		$plugin->updateSetting($journalId, 'namespace', $this->getData('namespace'), 'string');
+		foreach($this->_getFormFields() as $fieldName => $fieldType) {
+			$plugin->updateSetting($journalId, $fieldName, $this->getData($fieldName), $fieldType);
+		}
+	}
+
+	//
+	// Private helper methods
+	//
+	function _getFormFields() {
+		return array(
+			'enableIssueURN' => 'bool',
+			'enableArticleURN' => 'bool',
+			'enableGalleyURN' => 'bool',
+			'enableSuppFileURN' => 'bool',
+			'urnPrefix' => 'string',
+			'urnSuffix' => 'string',
+			'urnIssueSuffixPattern' => 'string',
+			'urnArticleSuffixPattern' => 'string',
+			'urnGalleySuffixPattern' => 'string',
+			'urnSuppFileSuffixPattern' => 'string',
+			'checkNo' => 'bool',
+			'namespace' => 'string'
+		);
 	}
 }
 

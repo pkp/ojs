@@ -31,12 +31,12 @@ class DoiSettingsForm extends Form {
 		return $this->_journalId;
 	}
 
-	/** @var DoiExportPlugin */
+	/** @var DoiPubIdPlugin */
 	var $_plugin;
 
 	/**
 	 * Get the plugin.
-	 * @return DoiExportPlugin
+	 * @return DoiPubIdPlugin
 	 */
 	function &_getPlugIn() {
 		return $this->_plugin;
@@ -48,7 +48,7 @@ class DoiSettingsForm extends Form {
 	//
 	/**
 	 * Constructor
-	 * @param $plugin DoiExportPlugin
+	 * @param $plugin DoiPubIdPlugin
 	 * @param $journalId integer
 	 */
 	function DoiSettingsForm(&$plugin, $journalId) {

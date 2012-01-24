@@ -59,29 +59,6 @@
 	<!-- consider URNs at other places in the system -->
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>
 
-	<!-- URN import/export plugin -->
-	<!-- FIXME-BB: Shouldn't these translations go into plug-ins they belong to? -->
-	<message key="plugins.pubIds.urn.importexport.displayName">URN XML Plugin</message>
-	<message key="plugins.pubIds.urn.importexport.description">Import and export URNs</message>
-
-	<message key="plugins.pubIds.urn.importexport.export">Export URNs</message>
-	<message key="plugins.pubIds.urn.importexport.export.description">Export URNs description...</message>
-	<message key="plugins.pubIds.urn.importexport.export.forIssues">Export URNs</message>
-	<message key="plugins.pubIds.urn.importexport.export.selectIssue">Select Issue</message>
-	<message key="plugins.pubIds.urn.importexport.export.selectIssue.description">Please select issues, for whose objects you whish to export URNs.</message>
-
-	<message key="plugins.pubIds.urn.importexport.import">Import URNs</message>
-	<message key="plugins.pubIds.urn.importexport.import.description">Import URNs description...</message>
-	<message key="plugins.pubIds.urn.importexport.import.results">Import Results</message>
-	<message key="plugins.pubIds.urn.importexport.import.errors">Import Errors</message>
-	<message key="plugins.pubIds.urn.importexport.import.errors.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
-	<message key="plugins.pubIds.urn.importexport.import.success">Import Success</message>
-	<message key="plugins.pubIds.urn.importexport.import.success.description">Successfully-imported URNs are listed below.</message>
-
-	<!-- URN OAI plugin -->
-	<message key="plugins.pubIds.urn.oaiMetadata.epicur.displayName">Epicur URN Metadata Format</message>
-	<message key="plugins.pubIds.urn.oaiMetadata.epicur.description">Structures URN metadata in a way that is consistent with the Epicur format.</message>
-	
 	<!-- errors -->
 	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Please choose the objects URNs should be assigned to.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Please enter the URN prefix.</message>
@@ -93,11 +70,5 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Please choose a namespace.</message>
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
-
-	<message key="plugins.pubIds.urn.importexport.import.error.uploadFailed">The upload failed; please ensure that uploads are allowed on your server and that the file is not too big for your PHP and web server configuration.</message>
-	<message key="plugins.pubIds.urn.importexport.import.error.unsupportedRoot">This plugin does not support the supplied root node "{$rootName}". Please ensure that the file is correctly formed and try again.</message>
-	<message key="plugins.pubIds.urn.importexport.import.error.unknownObjectType">An unknown object type "{$objectType}" was specified in the "objectType" attribute to the "urn" element with the "{$urn}" value.</message>
-	<message key="plugins.pubIds.urn.importexport.import.error.unknownObject">The object "{$objectType}" with ID = {$objectId} specified in the "urn" element with the value "{$urn}" deos not exist for this journal.</message>
-	<message key="plugins.pubIds.urn.importexport.import.error.urnExists">URN for {$objectType} with ID = {$objectId} already exists.</message>
 
 </locale>

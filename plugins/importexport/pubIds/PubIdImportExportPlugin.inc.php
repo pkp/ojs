@@ -21,11 +21,12 @@ define('PID_DTD_URL', 'http://pkp.sfu.ca/ojs/dtds/2.3/pubIds.dtd');
 define('PID_DTD_ID', '-//PKP//OJS PubIds XML//EN');
 
 class PubIdImportExportPlugin extends ImportExportPlugin {
+
+	//
+	// Implement template methods from ImportExportPlugin and PKPPlugin.
+	//
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @see PKPPlugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -34,29 +35,36 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
+	 * @see ImportExportPlugin::getName()
 	 */
 	function getName() {
 		return 'PubIdImportExportPlugin';
 	}
 
+	/**
+	 * @see ImportExportPlugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return AppLocale::translate('plugins.importexport.pubIds.displayName');
 	}
 
+	/**
+	 * @see ImportExportPlugin::getDescription()
+	 */
 	function getDescription() {
 		return AppLocale::translate('plugins.importexport.pubIds.description');
 	}
 
 	/**
-	 * Get the template path for this plugin.
+	 * @see PKPPlugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
 	}
 
+	/**
+	 * @see ImportExportPlugin::display()
+	 */
 	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		parent::display($args, $request);
@@ -300,8 +308,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Execute import/export tasks using the command-line interface.
-	 * @param $args Parameters to the plugin
+	 * @see ImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
 		$command = array_shift($args);
@@ -406,7 +413,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Display the command-line usage information
+	 * @see ImportExportPlugin::usage()
 	 */
 	function usage($scriptName) {
 		echo __('plugins.importexport.pubIds.cliUsage', array(

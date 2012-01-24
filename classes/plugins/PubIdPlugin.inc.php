@@ -210,7 +210,6 @@ class PubIdPlugin extends Plugin {
 	 * @param $pubObject object
 	 * @param $journalId integer
 	 * @return boolean
-	 * FIXME-BB: Maybe checkDuplicate() and verifyData() can be the same function?
 	 */
 	function checkDuplicate($pubId, &$pubObject, $journalId) {
 		assert(false); // Should be overridden

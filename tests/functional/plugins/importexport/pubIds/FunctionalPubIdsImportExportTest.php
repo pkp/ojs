@@ -14,7 +14,7 @@
  * FEATURE: Import and Export of the public identifiers
  *   AS A    journal manager
  *   I WANT  to be able to import and exoprt the public identifiers for issues, articles, galleys and supplementary files
- *   SO THAT ...( why? added value?)...FIXME-BB...
+ *   SO THAT already used public identifiers can be integrated and managed in the system.
  */
 
 
@@ -64,11 +64,11 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 		// Export single object.
 		$export = $this->getXpathOnExport('PubIdImportExportPlugin/exportIssue/1');
 		$testCases = array(
-			'//pubId[@pubObjectType="Issue"]' => 'urn:nbn:de:1234-issue1URNSuffix',
-			'//pubId[@pubObjectType="Article"]' => 'urn:nbn:de:1234-article1URNSuffix',
-			'//pubId[@pubObjectType="Galley"][@pubObjectId="1"]' => 'urn:nbn:de:1234-galley1URNSuffix',
-			'//pubId[@pubObjectType="Galley"][@pubObjectId="2"]' => 'urn:nbn:de:1234-galley2URNSuffix',
-		'//pubId[@pubObjectType="SuppFile"]' => 'urn:nbn:de:1234-suppFile1URNSuffix'
+			'//pubId[@pubIdType="other::urn"][@pubObjectType="Issue"]' => 'urn:nbn:de:1234-issue1URNSuffix',
+			'//pubId[@pubIdType="other::urn"][@pubObjectType="Article"]' => 'urn:nbn:de:1234-article1URNSuffix',
+			'//pubId[@pubIdType="other::urn"][@pubObjectType="Galley"][@pubObjectId="1"]' => 'urn:nbn:de:1234-galley1URNSuffix',
+			'//pubId[@pubIdType="other::urn"][@pubObjectType="Galley"][@pubObjectId="2"]' => 'urn:nbn:de:1234-galley2URNSuffix',
+			'//pubId[@pubIdType="other::urn"][@pubObjectType="SuppFile"]' => 'urn:nbn:de:1234-suppFile1URNSuffix'
 			);
 		foreach($testCases as $xPath => $expectedPubId) {
 			self::assertEquals(

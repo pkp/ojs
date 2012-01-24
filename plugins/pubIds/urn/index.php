@@ -14,8 +14,8 @@
  * @brief Wrapper for urn plugin.
  *
  */
-require_once('URNPlugin.inc.php');
+require_once('URNPubIdPlugin.inc.php');
 
-return new URNPlugin();
+return new URNPubIdPlugin();
 
 ?>

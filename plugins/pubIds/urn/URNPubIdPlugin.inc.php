@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/pubIds/urn/URNPlugin.inc.php
+ * @file plugins/pubIds/urn/URNPubIdPlugin.inc.php
  *
  * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class URNPlugin
+ * @class URNPubIdPlugin
  * @ingroup plugins_pubIds_urn
  *
  * @brief URN plugin class
@@ -15,47 +15,54 @@
 
 import('classes.plugins.PubIdPlugin');
 
-// FIXME-BB: Rename class to UrnPubIdPlugin? This would
-// correspond to how other plug-ins are being named.
-class URNPlugin extends PubIdPlugin {
+class URNPubIdPlugin extends PubIdPlugin {
 
-	// FIXME-BB: Comments are missing, see example in DoiPubIdPlugin.
+	//
+	// Implement template methods from PKPPlugin.
+	//
+	/**
+	 * @see PubIdPlugin::register()
+	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 		return $success;
 	}
 
+	/**
+	 * @see PKPPlugin::getName()
+	 */
 	function getName() {
-		return 'URNPlugin';
+		return 'URNPubIdPlugin';
 	}
 
+	/**
+	 * @see PKPPlugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return Locale::translate('plugins.pubIds.urn.displayName');
 	}
 
+	/**
+	 * @see PKPPlugin::getDescription()
+	 */
 	function getDescription() {
 		return Locale::translate('plugins.pubIds.urn.description');
 	}
 
+	/**
+	 * @see PKPPlugin::getTemplatePath()
+	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
 	}
 
 
-	// FIXME-BB: The following are all overridden template methods
-	// from PubIdPlugin. IMO they should not be commented as if they
-	// were new methods but rather use @see comments. (See how I did it
-	// in DoiPubIdPlugin.
-	/*
-	 * Get and Set
-	 */
+	//
+	// Implement template methods from PubIdPlugin.
+	//
 	/**
-	 * Get the public identifier.
-	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
-	 * @param $preview boolean
-	 *  when true, the public identifier will not be stored
+	 * @see PubIdPlugin::getPubId()
 	 */
 	function getPubId(&$pubObject, $preview = false) {
 		$urn = $pubObject->getStoredPubId($this->getPubIdType());
@@ -202,53 +209,49 @@ class URNPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * Public identifier type, that is used in the database.
-	 * S. http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html
+	 * @see PubIdPlugin::getPubIdType()
 	 */
 	function getPubIdType() {
 		return 'other::urn';
 	}
 
 	/**
-	 * Public identifier type that will be displayed to the reader.
+	 * @see PubIdPlugin::getPubIdDisplayType()
 	 */
 	function getPubIdDisplayType() {
 		return 'URN';
 	}
 
 	/**
-	 * Full name of the public identifier.
+	 * @see PubIdPlugin::getPubIdFullName()
 	 */
 	function getPubIdFullName() {
 		return 'Uniform Resource Name';
 	}
 
 	/**
-	 * Get the whole resolving URL.
-	 * @param $pubId string
-	 * @return string resolving URL
+	 * @see PubIdPlugin::getResolvingURL()
 	 */
 	function getResolvingURL($pubId) {
 		return 'http://nbn-resolving.de/'.$pubId;
 	}
 
 	/**
-	 * Get additional field names to be considered for custom suffix.
+	 * @see PubIdPlugin::getFormFieldNames()
 	 */
 	function getFormFieldNames() {
 		return array('urnSuffix');
 	}
 
 	/**
-	 * Get additional field names to be considered for storage.
+	 * @see PubIdPlugin::getDAOFieldNames()
 	 */
 	function getDAOFieldNames() {
 		return array('pub-id::other::urn');
 	}
 
 	/**
-	 * Get the file (path + file name)
-	 * that is included in the objects metadata pages.
+	 * @see PubIdPlugin::getPubIdMetadataFile()
 	 */
 	function getPubIdMetadataFile() {
 		return $this->getTemplatePath().'urnSuffixEdit.tpl';
@@ -280,11 +283,7 @@ class URNPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * Check for duplicate URN.
-	 * @param $data string
-	 * @param $pubObject object
-	 * @param $journalId integer
-	 * @return boolean
+	 * @see PubIdPlugin::checkDuplicate()
 	 */
 	function checkDuplicate($newURN, &$pubObject, $journalId) {
 		// Check all objects of the journal whether they have the same URN.

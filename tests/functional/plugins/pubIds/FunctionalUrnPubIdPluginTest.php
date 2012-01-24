@@ -15,18 +15,18 @@
  *   AS A    journal manager
  *   I WANT  to be able to define rules how URNs should be
  *           used (assigned, generated, displayed)
- *   SO THAT ... FIXME-BB ...
+ *   SO THAT they can be correctly and uniquely used and identified.
  *
  *   AS AN   editor
  *   I WANT  to be able to use URNs according to the rules:
  *           to assign them to the publishing items, to generate
  *           them (if not autoamtically) and to see them in
  *           the metadata
- *   SO THAT ... FIXME-BB ...
+ *   SO THAT I am able to easily manage them.
  *
  *   AS A    reader
  *   I WANT  to be able to see URNs
- *   SO THAT ... FIXME-BB ...
+ *   SO THAT I can persistently use them.
  *
  * FIXME-BB: I think there is quite a bit of duplicate code between this class
  * and the FunctionalDoiPubIdPluginTest which can be resolved by creating a common
@@ -46,8 +46,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 */
 	protected function getAffectedTables() {
 		return array(
-			// FIXME-BB: Do you really change something in journals?
-			'journals', 'journal_settings', 'issues', 'issue_settings',
+			'journal_settings', 'issues', 'issue_settings',
 			'published_articles', 'articles', 'article_settings',
 			'article_galleys', 'article_galley_settings',
 			'article_supplementary_files', 'article_supp_file_settings',
@@ -68,13 +67,12 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$this->pages = array(
 			// journal setup
 			'journal-setup' => array(
-				'url' => $this->baseUrl.'/index.php/test/manager/setup/%id',
-				'saved' => $this->baseUrl.'/index.php/test/manager/setupSaved/1' // FIXME-BB: Where do you use this?
+				'url' => $this->baseUrl.'/index.php/test/manager/setup/%id'
 			),
 
 			// URN plug-in settings
 			'settings' => array(
-				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/URNPlugin/settings',
+				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/URNPubIdPlugin/settings',
 				'urnPrefix' => 'id=urnPrefix',
 				'clearURNs' => 'name=clearPubIds',
 				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
