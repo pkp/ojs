@@ -423,6 +423,22 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	}
 
 	/**
+	 * SCENARIO OUTLINE: Check number is missing
+	 *    GIVEN	I have chosen custom suffix
+	 *      AND URN for an item hasn't been generated yet
+	 *     WHEN	I am on {editor/view page} for that object
+	 *      AND	I specify the {custom suffix}
+	 *      AND	I click on the "Save" button
+	 *     THEN	I see the error message "Check number is missing."
+	 *
+	 * EXAMPLES:
+	 *        | object type	| custom suffix	| editor/view page                                   	|
+	 *         ======================================================================================
+	 *        | issue     	| issue1    	| .../editor/issueData/1                            	|
+	 *        | article   	| article1  	| .../editor/viewMetadata/1                         	|
+	 *        | galley    	| galley1   	| .../editor/editGalley/1/1                         	|
+	 *        | supp file 	| suppfile1 	| .../editor/editSuppFile/1/1?from=submissionEditing	|
+	 *
 	 * SCENARIO OUTLINE: Define a custom suffix
 	 *    GIVEN	I have chosen custom suffix
 	 *      AND URN for an item hasn't been generated yet
@@ -438,7 +454,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	| article1  	| .../editor/viewMetadata/1                         	| article13     	|
 	 *        | galley    	| galley1   	| .../editor/editGalley/1/1                         	| galley18      	|
 	 *        | supp file 	| suppfile1 	| .../editor/editSuppFile/1/1?from=submissionEditing	| suppfile14    	|
-	 *
 	 *
 	 * SCENARIO OUTLINE: Custom suffix
 	 *    GIVEN	I specified {custom suffix}
@@ -491,9 +506,15 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			$customSuffix = "${objectType}1";
 			$customSuffixWithCheckNo = "${objectType}1".$objectCheckNo[$objectType];
 			$this->type($metadataPage['urnInput'], $customSuffix);
+
+			// Try to save metadata.
+			// Check number is missing message.
+			$this->clickAndWait('css=input.button.defaultButton');
+			$this->assertElementPresent($metadataPage['formError']);
+
+			// Calculate the check number.
 			$this->click('name=checkNo');
 			$this->assertValue($metadataPage['urnInput'], $customSuffixWithCheckNo);
-
 			// Try to save metadata.
 			$this->clickAndWait('css=input.button.defaultButton');
 			$this->assertElementNotPresent($metadataPage['formError']);

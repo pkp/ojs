@@ -270,21 +270,19 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
 		// Verify DOI uniqueness.
 		assert($fieldName == 'doiSuffix');
-		if($this->_suffixIsAdmissible($fieldValue, $pubObject, $journalId)) {
+		if (empty($fieldValue)) return true;
+
+		// Construct the potential new DOI with the posted suffix.
+		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
+		if (empty($doiPrefix)) return true;
+		$newDoi = $doiPrefix . '/' . $fieldValue;
+
+		if($this->checkDuplicate($newDoi, $pubObject, $journalId)) {
 			return true;
 		} else {
 			$errorMsg = AppLocale::translate('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
 			return false;
 		}
-	}
-
-	/**
-	 * @see PubIdPlugin::checkDuplicate()
-	 */
-	function checkDuplicate($pubId, &$pubObject, $journalId) {
-		$doiParts = explode('/', $pubId, 2);
-		$doiSuffix = array_pop($doiParts);
-		return $this->_suffixIsAdmissible($doiSuffix, $pubObject, $journalId);
 	}
 
 	/**
@@ -299,89 +297,6 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Check whether the given suffix may lead to
-	 * a duplicate DOI.
-	 * @param $newSuffix string
-	 * @param $pubObject object
-	 * @param $journalId integer
-	 * @return boolean
-	 */
-	function _suffixIsAdmissible($newSuffix, &$pubObject, $journalId) {
-		if (empty($newSuffix)) return true;
-
-		// FIXME: Hack to ensure that we get a published article if possible.
-		// Remove this when we have migrated getBest...(), etc. to Article.
-		if (is_a($pubObject, 'SectionEditorSubmission')) {
-			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$pubArticle =& $articleDao->getPublishedArticleByArticleId($pubObject->getId());
-			if (is_a($pubArticle, 'PublishedArticle')) {
-				unset($pubObject);
-				$pubObject =& $pubArticle;
-			}
-		}
-
-		// Construct the potential new DOI with the posted suffix.
-		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
-		if (empty($doiPrefix)) return true;
-		$newDoi = $doiPrefix . '/' . $newSuffix;
-
-		// Check all objects of the journal whether they have
-		// the same DOI. This includes DOIs that are not yet generated
-		// but could be generated at any moment if someone accessed
-		// the object publicly. We have to check "real" DOIs rather than
-		// the DOI suffixes only as a DOI with the given suffix may exist
-		// (e.g. through import) even if the suffix itself is not in the
-		// database.
-		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley', 'SuppFile');
-		foreach($typesToCheck as $pubObjectType) {
-			switch($pubObjectType) {
-				case 'Issue':
-					$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-					$objectsToCheck =& $issueDao->getIssues($journalId);
-					break;
-
-				case 'PublishedArticle':
-					// FIXME: We temporarily have to use the published article
-					// DAO here until we've moved DOI-generation to the Article
-					// class.
-					$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-					$objectsToCheck =& $articleDao->getPublishedArticlesByJournalId($journalId);
-					break;
-
-				case 'ArticleGalley':
-					$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
-					break;
-
-				case 'SuppFile':
-					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-					$objectsToCheck =& $suppFileDao->getSuppFilesByJournalId($journalId);
-					break;
-			}
-
-			$excludedId = (is_a($pubObject, $pubObjectType) ? $pubObject->getId() : null);
-			while ($objectToCheck =& $objectsToCheck->next()) {
-				// The publication object for which the new DOI
-				// should be admissible is to be ignored. Otherwise
-				// we might get false positives by checking against
-				// a DOI that we're about to change anyway.
-				if ($objectToCheck->getId() == $excludedId) continue;
-
-				// Check for ID clashes.
-				$existingDoi = $this->getPubId($objectToCheck, true);
-				if ($newDoi == $existingDoi) return false;
-
-				unset($objectToCheck);
-			}
-
-			unset($objectsToCheck);
-		}
-
-		// We did not find any ID collision, so go ahead.
-		return true;
-	}
-
 	/**
 	 * Get the journal object.
 	 * @param $journalId integer

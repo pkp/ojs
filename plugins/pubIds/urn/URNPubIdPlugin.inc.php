@@ -275,6 +275,14 @@ class URNPubIdPlugin extends PubIdPlugin {
 		$urnPrefix = $this->getSetting($journalId, 'urnPrefix');
 		if (empty($urnPrefix)) return true;
 		$newURN = $urnPrefix . $fieldValue;
+		if ($this->getSetting($journalId, 'checkNo')) {
+			$newURNWithoutCheckNo = substr($newURN, 0, -1);
+			$newURNWithCheckNo = $newURNWithoutCheckNo . $this->_calculateCheckNo($newURNWithoutCheckNo);
+			if ($newURN != $newURNWithCheckNo) {
+				$errorMsg = AppLocale::translate('plugins.pubIds.urn.form.checkNoRequired');
+				return false;
+			}
+		}
 		if(!$this->checkDuplicate($newURN, $pubObject, $journalId)) {
 			$errorMsg = AppLocale::translate('plugins.pubIds.urn.form.customIdentifierNotUnique');
 			return false;
@@ -285,6 +293,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::checkDuplicate()
 	 */
+	/*
 	function checkDuplicate($newURN, &$pubObject, $journalId) {
 		// Check all objects of the journal whether they have the same URN.
 		// This also includes URNs that are not generated yet.
@@ -335,6 +344,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 		// We did not find any ID collision, so go ahead.
 		return true;
 	}
+	*/
 
 
 	//

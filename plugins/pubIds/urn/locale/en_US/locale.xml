@@ -70,5 +70,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Please choose a namespace.</message>
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>
 
 </locale>
