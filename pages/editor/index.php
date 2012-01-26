@@ -40,6 +40,7 @@ switch ($op) {
 	case 'remindReviewer':
 	case 'thankReviewer':
 	case 'rateReviewer':
+	case 'reassignReviewer':
 	case 'confirmReviewForReviewer':
 	case 'uploadReviewForReviewer':
 	case 'enterReviewerRecommendation':

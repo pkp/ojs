@@ -136,6 +136,7 @@ switch ($op) {
 	 //
 	 // Payments
 	 //
+	case 'reassignReviewer':
 	case 'waiveSubmissionFee':
 	case 'waiveFastTrackFee':
 	case 'waivePublicationFee':
