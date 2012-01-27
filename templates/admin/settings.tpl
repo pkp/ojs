@@ -94,6 +94,17 @@
 		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength" required="true"}</td>
 		<td colspan="2" class="value"><input type="text" id="minPasswordLength" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 	</tr>
+	<tr>
+		<td width="20%" class="label"><label for="journalTheme">{translate key="admin.settings.siteTheme"}</label></td>
+		<td width="80%" class="value">
+			<select name="siteTheme" class="selectMenu" id="theme"{if empty($themes)} disabled="disabled"{/if}>
+				<option value="">{translate key="common.none"}</option>
+				{foreach from=$themes key=path item=themePlugin}
+					<option value="{$path|escape}"{if $path == $siteTheme} selected="selected"{/if}>{$themePlugin->getDisplayName()|escape}</option>
+				{/foreach}
+			</select>
+		</td>
+	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="admin.settings.siteStyleSheet"}</td>
 		<td colspan="2" width="80%" class="value">

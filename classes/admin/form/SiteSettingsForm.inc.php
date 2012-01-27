@@ -30,7 +30,18 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournalTitles();
 		$templateMgr =& TemplateManager::getManager();
+
+		$allThemes =& PluginRegistry::loadCategory('themes');
+		$themes = array();
+		foreach ($allThemes as $key => $junk) {
+			$plugin =& $allThemes[$key]; // by ref
+			$themes[basename($plugin->getPluginPath())] =& $plugin;
+			unset($plugin);
+		}
+		$templateMgr->assign('themes', $themes);
+
 		$templateMgr->assign('redirectOptions', $journals);
+
 		return parent::display();
 	}
 
