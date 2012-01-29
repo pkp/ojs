@@ -122,7 +122,7 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
 	<td class="value">
-		{include file="form/interestsInput.tpl" FBV_interestKeywords=$interestsKeywords FBV_interestsTextOnly=$interestsTextOnly}
+		{include file="form/interestsInput.tpl" FBV_interestsKeywords=$interestsKeywords FBV_interestsTextOnly=$interestsTextOnly}
 	</td>
 </tr>
 {/if}
