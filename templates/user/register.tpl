@@ -216,7 +216,7 @@
 		{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" id="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> <label for="registerAsReviewer">{translate key="user.role.reviewer"}</label>: {if $existingUser}{translate key="user.register.reviewerDescriptionNoInterests"}{else}{translate key="user.register.reviewerDescription"}{/if}
 		<br /><div id="reviewerInterestsContainer" style="margin-left:25px;">
 			<label class="desc">{translate key="user.register.reviewerInterests"}</label>
-			{include file="form/interestsInput.tpl" FBV_interestKeywords=$interestsKeywords FBV_interestsTextOnly=$interestsTextOnly}
+			{include file="form/interestsInput.tpl" FBV_interestsKeywords=$interestsKeywords FBV_interestsTextOnly=$interestsTextOnly}
 		</div>
 		</td>
 		{/if}
