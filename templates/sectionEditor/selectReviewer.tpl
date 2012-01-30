@@ -97,11 +97,7 @@ function sortSearch(heading, direction) {
 	<td>{$reviewerStats.incomplete|default:0}</td>
 	<td>
 		{if $reviewer->review_id}
-			{if $reviewer->declined}
-				<a class="action" href="{url op="reassignReviewer" path=$articleId|to_array:$reviewer->getUserId()}">{translate key="editor.reassign"}</a>
-			{else}
-				{translate key="common.alreadyAssigned"}
-			{/if}
+			{translate key="common.alreadyAssigned"}
 		{else}
 		<a class="action" href="{url op="selectReviewer" path=$articleId|to_array:$reviewer->getId()}">{translate key="common.assign"}</a>
 		{/if}
