@@ -2363,6 +2363,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			// Schedule against an issue.
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
+				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			} else {
 				$publishedArticle = new PublishedArticle();
@@ -2374,9 +2375,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);
 
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);
-
-				// Resequence the articles.
-				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
 				// If we're using custom section ordering, and if this is the first
 				// article published in a section, make sure we enter a custom ordering
@@ -2392,10 +2390,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if ($publishedArticle) {
 				// This was published elsewhere; make sure we don't
 				// mess up sequencing information.
-				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				$issueId = $publishedArticle->getIssueId();
 				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 			}
 		}
+		// Resequence the articles.
+		$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
+
 		$submission->stampStatusModified();
 
 		if ($issue && $issue->getPublished()) {
