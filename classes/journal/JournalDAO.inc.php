@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Journal objects.
  */
 
-// $Id$
-
-
 import ('classes.journal.Journal');
 
 define('JOURNAL_FIELD_TITLE', 1);
@@ -27,9 +24,10 @@ class JournalDAO extends DAO {
 	 * @param $journalId int
 	 * @return Journal
 	 */
-	function &getJournal($journalId) {
+	function &getById($journalId) {
 		$result =& $this->retrieve(
-			'SELECT * FROM journals WHERE journal_id = ?', $journalId
+			'SELECT * FROM journals WHERE journal_id = ?',
+			(int) $journalId
 		);
 
 		$returner = null;
@@ -38,6 +36,15 @@ class JournalDAO extends DAO {
 		}
 		$result->Close();
 		unset($result);
+		return $returner;
+	}
+
+	/**
+	 * Deprecated. @see JournalDAO::getById
+	 */
+	function &getJournal($journalId) {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
+		$returner =& $this->getById($journalId);
 		return $returner;
 	}
 

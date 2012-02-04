@@ -261,7 +261,7 @@ class ArticleSearch {
 				// Get the journal, storing in cache if necessary.
 				$journalId = $article->getJournalId();
 				if (!isset($journalCache[$journalId])) {
-					$journalCache[$journalId] = $journalDao->getJournal($journalId);
+					$journalCache[$journalId] = $journalDao->getById($journalId);
 				}
 
 				// Get the issue, storing in cache if necessary.

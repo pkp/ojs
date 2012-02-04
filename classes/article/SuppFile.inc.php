@@ -417,7 +417,7 @@ class SuppFile extends ArticleFile {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($this->getArticleId());
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($article->getJournalId());
+			$journal =& $journalDao->getById($article->getJournalId());
 		}
 
 		if ($journal->getSetting('enablePublicSuppFileId')) {

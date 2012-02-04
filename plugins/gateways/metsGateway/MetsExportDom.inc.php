@@ -481,7 +481,7 @@ class MetsExportDom {
 		$filePath = MetsExportDom::getPublicFilePath($imageFile , '/public/');
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($article->getJournalId());
+		$journal =& $journalDao->getById($article->getJournalId());
 
 		$chkmd5return = md5_file($filePath);
 		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getId());
@@ -677,7 +677,7 @@ class MetsExportDom {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($file->getArticleId());
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getJournal($article->getJournalId());
+		$journal = $journalDao->getById($article->getJournalId());
 		$base_url =& Config::getVar('general','base_url');
 		$url = $base_url.'/index.php/'.$journal->getPath().'/article/download/'.$file->getArticleId().'/'.$file->getBestGalleyId($journal);
 		return $url;
@@ -692,7 +692,7 @@ class MetsExportDom {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($file->getArticleId());
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getJournal($article->getJournalId());
+		$journal = $journalDao->getById($article->getJournalId());
 		$base_url =& Config::getVar('general','base_url');
 		$url = $base_url.'/index.php/'.$journal->getPath().'/article/downloadSuppFile/'.$file->getArticleId().'/'.$file->getSuppFileId();
 		return $url;

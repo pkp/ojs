@@ -103,7 +103,7 @@ class ReviewReminder extends ScheduledTask {
 				$article =& $articleDao->getArticle($reviewAssignment->getSubmissionId());
 				if ($journal == null || $journal->getId() != $article->getJournalId()) {
 					unset($journal);
-					$journal =& $journalDao->getJournal($article->getJournalId());
+					$journal =& $journalDao->getById($article->getJournalId());
 
 					$inviteReminderEnabled = $journal->getSetting('remindForInvite');
 					$submitReminderEnabled = $journal->getSetting('remindForSubmit');

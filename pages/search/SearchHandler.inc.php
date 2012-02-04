@@ -113,7 +113,7 @@ class SearchHandler extends Handler {
 					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {
-					$journals[$journalId] =& $journalDao->getJournal($journalId);
+					$journals[$journalId] =& $journalDao->getById($journalId);
 				}
 				if (!isset($sections[$sectionId])) {
 					$sections[$sectionId] =& $sectionDao->getSection($sectionId, $journalId, true);
@@ -246,7 +246,7 @@ class SearchHandler extends Handler {
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($searchJournalId);
+			$journal =& $journalDao->getById($searchJournalId);
 		} else {
 			$journal =& Request::getJournal();
 		}
@@ -280,7 +280,7 @@ class SearchHandler extends Handler {
 		$searchJournalId = Request::getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($searchJournalId);
+			$journal =& $journalDao->getById($searchJournalId);
 			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
 		} else {
 			$journal =& Request::getJournal();

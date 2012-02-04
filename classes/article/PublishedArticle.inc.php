@@ -232,7 +232,7 @@ class PublishedArticle extends Article {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getJournal($this->getJournalId());
+			$journal = $journalDao->getById($this->getJournalId());
 		}
 
 		if ($journal->getSetting('enablePublicArticleId')) {
@@ -259,7 +259,7 @@ class PublishedArticle extends Article {
 		if (!$journal || $journal->getId() != $journalId) {
 			unset($journal);
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($journalId);
+			$journal =& $journalDao->getById($journalId);
 		}
 
 		if (($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;

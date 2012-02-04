@@ -735,7 +735,7 @@ class Issue extends DataObject {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getJournal($this->getJournalId());
+			$journal = $journalDao->getById($this->getJournalId());
 		}
 
 		if ($journal->getSetting('enablePublicIssueId')) {

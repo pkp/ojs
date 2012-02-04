@@ -57,7 +57,7 @@ class UserXMLParser {
 		$tree = $this->parser->parse($file);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($this->journalId);
+		$journal =& $journalDao->getById($this->journalId);
 		$journalPrimaryLocale = AppLocale::getPrimaryLocale();
 
 		$site =& Request::getSite();
@@ -194,7 +194,7 @@ class UserXMLParser {
 			$mail = new MailTemplate('USER_REGISTER');
 
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($this->journalId);
+			$journal =& $journalDao->getById($this->journalId);
 			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 

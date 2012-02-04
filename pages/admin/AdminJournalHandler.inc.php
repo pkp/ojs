@@ -149,7 +149,7 @@ class AdminJournalHandler extends AdminHandler {
 		$this->validate();
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($request->getUserVar('id'));
+		$journal =& $journalDao->getById($request->getUserVar('id'));
 
 		if ($journal != null) {
 			$direction = $request->getUserVar('d');
@@ -164,7 +164,7 @@ class AdminJournalHandler extends AdminHandler {
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
-					$prevJournal = $journalDao->getJournal($prevId);
+					$prevJournal = $journalDao->getById($prevId);
 					$prevSeq = $prevJournal->getSequence();
 				}
 

@@ -504,7 +504,7 @@ class MetsExportDom {
 		$filePath  = MetsExportDom::getPublicFilePath($imageFile , '/public/', $journal);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($article->getJournalId());
+		$journal =& $journalDao->getById($article->getJournalId());
 
 		$chkmd5return = md5_file($filePath);
 		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getId());

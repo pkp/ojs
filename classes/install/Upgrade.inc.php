@@ -89,7 +89,7 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$journalId = $row['journal_id'];
-			$journal =& $journalDao->getJournal($journalId);
+			$journal =& $journalDao->getById($journalId);
 			$rt = new JournalRT($journalId);
 			$rt->setEnabled(true); // No toggle in prior OJS; assume true
 			$rt->setVersion($row['version_id']);

@@ -79,7 +79,7 @@ class IndexHandler extends Handler {
 		} else {
 			$site =& Request::getSite();
 
-			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getRedirect())) != null) {
+			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
 				$request->redirect($journal->getPath());
 			}
 

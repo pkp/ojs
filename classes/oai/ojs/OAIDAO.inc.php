@@ -322,7 +322,7 @@ class OAIDAO extends DAO {
 	 */
 	function &getJournal($journalId) {
 		if (!isset($this->journalCache[$journalId])) {
-			$this->journalCache[$journalId] =& $this->journalDao->getJournal($journalId);
+			$this->journalCache[$journalId] =& $this->journalDao->getById($journalId);
 		}
 		return $this->journalCache[$journalId];
 	}
@@ -495,7 +495,7 @@ class OAIDAO extends DAO {
 	 */
 	function &getJournalSets($journalId, $offset, $limit, &$total) {
 		if (isset($journalId)) {
-			$journals = array($this->journalDao->getJournal($journalId));
+			$journals = array($this->journalDao->getById($journalId));
 		} else {
 			$journals =& $this->journalDao->getJournals();
 			$journals =& $journals->toArray();

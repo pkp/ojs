@@ -79,7 +79,7 @@ class CounterHandler extends Handler {
 		$i=0;
 
 		foreach ($journalIds as $journalId) {
-			$journal =& $journalDao->getJournal($journalId);
+			$journal =& $journalDao->getById($journalId);
 			if (!$journal) continue;
 			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
 
@@ -296,7 +296,7 @@ class CounterHandler extends Handler {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalIds = $counterReportDao->getJournalIds();
 		foreach ($journalIds as $journalId) {
-			$journal =& $journalDao->getJournal($journalId);
+			$journal =& $journalDao->getById($journalId);
 			if (!$journal) continue;
 			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
 			$cols = array(

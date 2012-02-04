@@ -56,7 +56,7 @@ class JournalSiteSettingsForm extends Form {
 	function initData() {
 		if (isset($this->journalId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($this->journalId);
+			$journal =& $journalDao->getById($this->journalId);
 
 			if ($journal != null) {
 				$this->_data = array(
@@ -86,7 +86,7 @@ class JournalSiteSettingsForm extends Form {
 
 		if (isset($this->journalId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournal($this->journalId);
+			$journal =& $journalDao->getById($this->journalId);
 			$this->setData('oldPath', $journal->getPath());
 		}
 	}
@@ -106,7 +106,7 @@ class JournalSiteSettingsForm extends Form {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->journalId)) {
-			$journal =& $journalDao->getJournal($this->journalId);
+			$journal =& $journalDao->getById($this->journalId);
 		}
 
 		if (!isset($journal)) {
