@@ -16,8 +16,13 @@
 import('lib.pkp.classes.payment.QueuedPayment');
 
 class OJSQueuedPayment extends QueuedPayment {
+	/** @var $journalId int journal ID this payment applies to */
 	var $journalId;
+
+	/** @var $type int PAYMENT_TYPE_... */
 	var $type;
+
+	/** @var $requestUrl string URL associated with this payment */
 	var $requestUrl;
 
 	/**
@@ -31,28 +36,38 @@ class OJSQueuedPayment extends QueuedPayment {
 	/**
 	 * Set the journal ID of the payment.
 	 * @param $journalId int
+	 * @return $journalId int New journal ID
 	 */
 	function setJournalId($journalId) {
-		$this->journalId = $journalId;
+		return $this->journalId = $journalId;
 	}
 
+	/**
+	 * Set the type for this payment (PAYMENT_TYPE_...)
+	 * @param $type int PAYMENT_TYPE_...
+	 * @return int New payment type
+	 */
 	function setType($type) {
-		$this->type = $type;
+		return $this->type = $type;
 	}
 
+	/**
+	 * Get the type of this payment (PAYMENT_TYPE_...)
+	 * @return int PAYMENT_TYPE_...
+	 */
 	function getType() {
 		return $this->type;
 	}
 
 	/**
 	 * Returns the name of the QueuedPayment.
-	 * Pulled from Journal Settings if present, or from locale file otherwise.
-	 * For subscriptions, pulls subscription type name.
+	 * Pulled from Journal Settings if present, or from locale file
+	 * otherwise. For subscriptions, pulls subscription type name.
 	 * @return string
 	 */
 	function getName() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($this->getJournalId());
+		$journal =& $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
@@ -124,6 +139,9 @@ class OJSQueuedPayment extends QueuedPayment {
 
 				// Otherwise, generic gift name
 				return __('payment.type.gift');
+			default:
+				// Invalid payment type
+				assert(false);
 		}
 	}
 
@@ -135,7 +153,7 @@ class OJSQueuedPayment extends QueuedPayment {
 	 */
 	function getDescription() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournal($this->getJournalId());
+		$journal =& $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
@@ -217,13 +235,25 @@ class OJSQueuedPayment extends QueuedPayment {
 
 				// Otherwise, generic gift name
 				return __('payment.type.gift');
+			default:
+				// Invalid payment type
+				assert(false);
 		}
 	}
 
+	/**
+	 * Set the request URL.
+	 * @param $url string
+	 * @return string New URL
+	 */
 	function setRequestUrl($url) {
-		$this->requestUrl = $url;
+		return $this->requestUrl = $url;
 	}
 
+	/**
+	 * Get the request URL.
+	 * @return string
+	 */
 	function getRequestUrl() {
 		return $this->requestUrl;
 	}

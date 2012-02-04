@@ -12,8 +12,6 @@
  * Common actions for payment management functions. 
  */
 
-// $Id$
-
 class OJSPaymentAction {
 	/**
 	 * Display Payments Settings Form (main payments page)

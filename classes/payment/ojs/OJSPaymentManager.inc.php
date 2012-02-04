@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/payment/ojs/PaymentManager.inc.php
+ * @file classes/payment/ojs/OJSPaymentManager.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -26,9 +26,13 @@ define('PAYMENT_TYPE_FASTTRACK',		0x000000006);
 define('PAYMENT_TYPE_PUBLICATION',		0x000000007);
 define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008);
 define('PAYMENT_TYPE_PURCHASE_ISSUE',		0x000000009);
-define('PAYMENT_TYPE_GIFT',		0x000000010);
+define('PAYMENT_TYPE_GIFT',			0x000000010);
 
 class OJSPaymentManager extends PaymentManager {
+	/**
+	 * Get an instance of the payment manager.
+	 * @return OJSPaymentManager
+	 */
 	function &getManager() {
 		static $manager;
 		if (!isset($manager)) {
@@ -37,11 +41,25 @@ class OJSPaymentManager extends PaymentManager {
 		return $manager;
 	}
 
+	/**
+	 * Determine whether the payment system is configured.
+	 * @return boolean true iff configured
+	 */
 	function isConfigured() {
 		$journal =& Request::getJournal();
 		return parent::isConfigured() && $journal->getSetting('journalPaymentsEnabled');
 	}
 
+	/**
+	 * Create a queued payment.
+	 * @param $journalId int ID of journal payment applies under
+	 * @param $type int PAYMENT_TYPE_...
+	 * @param $userId int ID of user responsible for payment
+	 * @param $assocId int ID of associated entity
+	 * @param $amount numeric Amount of currency $currencyCode
+	 * @param $currencyCode string optional ISO 4217 currency code
+	 * @return QueuedPayment
+	 */
 	function &createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
@@ -81,13 +99,20 @@ class OJSPaymentManager extends PaymentManager {
 				$payment->setRequestUrl(Request::url(null, 'gifts', 'thankYou'));
 				break;
 			default:
-				// something went wrong. crud.
+				// Invalid payment type
+				assert(false);
 				break;
 		}
 
 		return $payment;
 	}
 
+	/**
+	 * Create a completed payment from a queued payment.
+	 * @param $queuedPayment QueuedPayment Payment to complete.
+	 * @param $payMethod string Name of payment plugin used.
+	 * @return OJSCompletedPayment
+	 */
 	function &createCompletedPayment($queuedPayment, $payMethod) {
 		import('classes.payment.ojs.OJSCompletedPayment');
 		$payment = new OJSCompletedPayment();
@@ -102,61 +127,109 @@ class OJSPaymentManager extends PaymentManager {
 		return $payment;
 	}
 
+	/**
+	 * Determine whether donations are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function donationEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');
 	}
 
+	/**
+	 * Determine whether submission fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function submissionEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;
 	}
 
+	/**
+	 * Determine whether fast track fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function fastTrackEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('fastTrackFeeEnabled') && $journal->getSetting('fastTrackFee') > 0;
 	}
 
+	/**
+	 * Determine whether publication fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function publicationEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
 	}
 
+	/**
+	 * Determine whether publication fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function membershipEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;
 	}
 
+	/**
+	 * Determine whether article purchase fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function purchaseArticleEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
 	}
 
+	/**
+	 * Determine whether issue purchase fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function purchaseIssueEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseIssueFeeEnabled') && $journal->getSetting('purchaseIssueFee') > 0;
 	}
 
+	/**
+	 * Determine whether PDF-only article purchase fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function onlyPdfEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');
 	}
 
+	/**
+	 * Determine whether subscription fees are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function acceptSubscriptionPayments() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');
 	}
 
+	/**
+	 * Determine whether gift payments are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function acceptGiftPayments() {
 		$journal =& Request::getJournal();
 		return $this->acceptGiftSubscriptionPayments();
 	}
 
+	/**
+	 * Determine whether gift subscription payments are enabled.
+	 * @return boolean true iff this fee is enabled.
+	 */
 	function acceptGiftSubscriptionPayments() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('acceptGiftSubscriptionPayments');
 	}
 
+	/**
+	 * Get the payment plugin.
+	 * @return PaymentPlugin
+	 */
 	function &getPaymentPlugin() {
 		$journal =& Request::getJournal();
 		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
@@ -168,6 +241,12 @@ class OJSPaymentManager extends PaymentManager {
 		return $paymentMethodPlugin;
 	}
 
+	/**
+	 * Fulfill a queued payment.
+	 * @param $queuedPayment QueuedPayment
+	 * @param $payMethodPluginName string Name of payment plugin.
+	 * @return mixed Dependent on payment type.
+	 */
 	function fulfillQueuedPayment(&$queuedPayment, $payMethodPluginName = null) {
 		$returner = false;
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
@@ -280,7 +359,7 @@ class OJSPaymentManager extends PaymentManager {
 
 				$journalDao =& DAORegistry::getDAO('JournalDAO');
 				$journalId = $gift->getAssocId();
-				$journal =& $journalDao->getJournal($journalId);
+				$journal =& $journalDao->getById($journalId);
 				if (!$journal) return false;
 
 				// Check if user account corresponding to recipient email exists in the system
@@ -398,6 +477,9 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_PUBLICATION:
 				$returner = true;
+			default:
+				// Invalid payment type
+				assert(false);
 		}
 		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPayment =& $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
