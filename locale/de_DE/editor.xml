@@ -16,7 +16,8 @@
 	<message key="editor.article.selectReviewForm">Wählen Sie ein Begutachtungsformular</message>
 	<message key="editor.article.clearReviewForm">Begutachtungsformular zurücksetzen</message>
 	<message key="editor.home">Startseite der Redakteurin/des Redakteurs</message>
-	<message key="editor.article.confirmChangeReviewForm">Das Ändern des Begutachtungsformulars wird die Antworten entfernen...</message>
+	<message key="editor.article.confirmChangeReviewForm">Achtung: Das Ändern des Begutachtungsformulars wird alle Antworten beeinflussen, die Gutachter/innen bei der Benutzung dieses Formulars eingegeben haben. Sind Sie sicher, dass Sie fortfahren möchten?</message>
+	<message key="editor.reassign">Wieder zuweisen</message>
 	<message key="editor.submissionsAndPublishing">Beiträge und Veröffentlichungen</message>
 	<message key="editor.submissionQueue">Liste der Beiträge</message>
 	<message key="editor.submissionArchive">Beitragsarchiv</message>
