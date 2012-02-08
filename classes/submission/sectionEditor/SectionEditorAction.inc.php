@@ -104,6 +104,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setReviewerId($reviewerId);
 			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
 			$reviewAssignment->setRound($round);
+			$reviewAssignment->setDateDue(SectionEditorAction::getReviewDueDate());
 
 			// Assign review form automatically if needed
 			$journalId = $sectionEditorSubmission->getJournalId();
@@ -122,11 +123,6 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($sectionEditorSubmission->getArticleId(), $reviewerId, $round);
-
-			$journal =& Request::getJournal();
-			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$settings =& $settingsDao->getJournalSettings($journal->getId());
-			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getId(), null, $settings['numWeeksPerReview'], false);
 
 			// Add log
 			import('classes.article.log.ArticleLog');
@@ -542,6 +538,35 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Returns a formatted review due date
+	 * @param $dueDate string
+	 * @param $numWeeks int
+	 * @return string
+	 */
+	function getReviewDueDate($dueDate = null, $numWeeks = null) {
+		$today = getDate();
+		$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
+		if ($dueDate) {
+			$dueDateParts = explode('-', $dueDate);
+
+			// Ensure that the specified due date is today or after today's date.
+			if ($todayTimestamp <= strtotime($dueDate)) {
+				return date('Y-m-d H:i:s', mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0]));
+			} else {
+				return date('Y-m-d H:i:s', $todayTimestamp);
+			}
+		} elseif ($numWeeks) {
+			return date('Y-m-d H:i:s', $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60));
+		} else {
+			$journal =& Request::getJournal();
+			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$numWeeks =& $settingsDao->getSetting($journal->getId(), 'numWeeksPerReview');
+			if (!isset($numWeeks) || (int) $numWeeks < 0) $numWeeks = 0;
+			return date('Y-m-d H:i:s', $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60));
+		}
+	}
+
+	/**
 	 * Sets the due date for a review assignment.
 	 * @param $articleId int
 	 * @param $reviewId int
@@ -559,23 +584,8 @@ class SectionEditorAction extends Action {
 		if (!isset($reviewer)) return false;
 
 		if ($reviewAssignment->getSubmissionId() == $articleId && !HookRegistry::call('SectionEditorAction::setDueDate', array(&$reviewAssignment, &$reviewer, &$dueDate, &$numWeeks))) {
-			$today = getDate();
-			$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
-			if ($dueDate != null) {
-				$dueDateParts = explode('-', $dueDate);
-
-				// Ensure that the specified due date is today or after today's date.
-				if ($todayTimestamp <= strtotime($dueDate)) {
-					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0])));
-				} else {
-					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', $todayTimestamp));
-				}
-			} else {
-				// Add the equivilant of $numWeeks weeks, measured in seconds, to $todaysTimestamp.
-				$newDueDateTimestamp = $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60);
-
-				$reviewAssignment->setDateDue(date('Y-m-d H:i:s', $newDueDateTimestamp));
-			}
+			$dueDate = SectionEditorAction::getReviewDueDate($dueDate, $numWeeks);
+			$reviewAssignment->setDateDue($dueDate);
 
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
