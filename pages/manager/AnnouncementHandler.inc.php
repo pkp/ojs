@@ -64,7 +64,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * @param $request PKPRequest
 	 * @param $rangeInfo object optional
 	 */
-	function &_getAnnouncementTypes($request, $rangeInfo = null) {
+	function &_getAnnouncementTypes(&$request, $rangeInfo = null) {
 		$journal =& $request->getJournal();
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
 		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
@@ -99,7 +99,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * @param $typeId int
 	 * return bool
 	 */
-	function _announcementTypeIsValid($request, $typeId) {
+	function _announcementTypeIsValid(&$request, $typeId) {
 		$journal =& $request->getJournal();
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
 		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journal->getId()) || $typeId == null);
