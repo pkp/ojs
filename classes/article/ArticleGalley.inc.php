@@ -170,7 +170,7 @@ class ArticleGalley extends ArticleFile {
 		}
 		return $this->getId();
 	}
-	
+
 	/**
 	 * Set remote URL of the galley.
 	 * @param $remoteURL string
@@ -185,7 +185,7 @@ class ArticleGalley extends ArticleFile {
 	 */
 	function getRemoteURL() {
 		return $this->getData('remoteURL');
-	}	
+	}
 }
 
 ?>

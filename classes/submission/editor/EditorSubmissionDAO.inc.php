@@ -332,10 +332,10 @@ class EditorSubmissionDAO extends DAO {
 	 * FIXME Move this into somewhere common (SubmissionDAO?) as this is used in several classes.
 	 */
 	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
-		$first_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
-		$first_middle_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
-		$last_comma_first = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name');
-		$last_comma_first_middle = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
+		$first_last = $this->getDataSource()->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
+		$first_middle_last = $this->getDataSource()->Concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
+		$last_comma_first = $this->getDataSource()->Concat($prefix.'last_name', '\', \'', $prefix.'first_name');
+		$last_comma_first_middle = $this->getDataSource()->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
 		if ($searchMatch === 'is') {
 			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 		} elseif ($searchMatch === 'contains') {

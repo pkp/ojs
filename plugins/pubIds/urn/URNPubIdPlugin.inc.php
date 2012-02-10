@@ -3,7 +3,7 @@
 /**
  * @file plugins/pubIds/urn/URNPubIdPlugin.inc.php
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class URNPubIdPlugin
@@ -40,14 +40,14 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.pubIds.urn.displayName');
+		return __('plugins.pubIds.urn.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.pubIds.urn.description');
+		return __('plugins.pubIds.urn.description');
 	}
 
 	/**
@@ -279,73 +279,16 @@ class URNPubIdPlugin extends PubIdPlugin {
 			$newURNWithoutCheckNo = substr($newURN, 0, -1);
 			$newURNWithCheckNo = $newURNWithoutCheckNo . $this->_calculateCheckNo($newURNWithoutCheckNo);
 			if ($newURN != $newURNWithCheckNo) {
-				$errorMsg = AppLocale::translate('plugins.pubIds.urn.form.checkNoRequired');
+				$errorMsg = __('plugins.pubIds.urn.form.checkNoRequired');
 				return false;
 			}
 		}
 		if(!$this->checkDuplicate($newURN, $pubObject, $journalId)) {
-			$errorMsg = AppLocale::translate('plugins.pubIds.urn.form.customIdentifierNotUnique');
+			$errorMsg = __('plugins.pubIds.urn.form.customIdentifierNotUnique');
 			return false;
 		}
 		return true;
 	}
-
-	/**
-	 * @see PubIdPlugin::checkDuplicate()
-	 */
-	/*
-	function checkDuplicate($newURN, &$pubObject, $journalId) {
-		// Check all objects of the journal whether they have the same URN.
-		// This also includes URNs that are not generated yet.
-		// We have to check "real" URNs rather than only the URN suffixes
-		// as a URN with the given suffix may exist (e.g. through import)
-		// even if the suffix itself is not in the database.
-		$typesToCheck = array('Issue', 'Article', 'ArticleGalley', 'SuppFile');
-		foreach($typesToCheck as $pubObjectType) {
-			switch($pubObjectType) {
-				case 'Issue':
-					$issueDao =& DAORegistry::getDAO('IssueDAO');
-					$objectsToCheck =& $issueDao->getIssues($journalId);
-					break;
-
-				case 'Article':
-					$articleDao =& DAORegistry::getDAO('ArticleDAO');
-					$objectsToCheck =& $articleDao->getArticlesByJournalId($journalId);
-					break;
-
-				case 'ArticleGalley':
-					$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
-					break;
-
-				case 'SuppFile':
-					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-					$objectsToCheck =& $suppFileDao->getSuppFilesByJournalId($journalId);
-					break;
-			}
-
-			$excludedId = (is_a($pubObject, $pubObjectType) ? $pubObject->getId() : null);
-			while ($objectToCheck =& $objectsToCheck->next()) {
-				// The publication object for which the new URN
-				// should be admissible is to be ignored. Otherwise
-				// we might get false positives by checking against
-				// a URN that we're about to change anyway.
-				if ($objectToCheck->getId() == $excludedId) continue;
-
-				// Check for ID clashes.
-				$existingURN = $this->getPubId($objectToCheck, true);
-				if ($newURN == $existingURN) {
-					return false;
-				}
-				unset($objectToCheck);
-			}
-			unset($objectsToCheck);
-		}
-		// We did not find any ID collision, so go ahead.
-		return true;
-	}
-	*/
-
 
 	//
 	// Private helper methods

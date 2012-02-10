@@ -61,11 +61,11 @@ class PiwikPlugin extends GenericPlugin {
 	}
 
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.piwik.displayName');
+		return __('plugins.generic.piwik.displayName');
 	}
 
 	function getDescription() {
-		return Locale::translate('plugins.generic.piwik.description');
+		return __('plugins.generic.piwik.description');
 	}
 
 	/**

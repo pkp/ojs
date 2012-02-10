@@ -371,10 +371,10 @@ class SectionEditorSubmissionDAO extends DAO {
 				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+				$first_last = $this->getDataSource()->Concat('aa.first_name', '\' \'', 'aa.last_name');
+				$first_middle_last = $this->getDataSource()->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
+				$last_comma_first = $this->getDataSource()->Concat('aa.last_name', '\', \'', 'aa.first_name');
+				$last_comma_first_middle = $this->getDataSource()->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
 
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
@@ -388,10 +388,10 @@ class SectionEditorSubmissionDAO extends DAO {
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 				break;
 			case SUBMISSION_FIELD_EDITOR:
-				$first_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.last_name');
-				$first_middle_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
-				$last_comma_first = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
+				$first_last = $this->getDataSource()->Concat('ed.first_name', '\' \'', 'ed.last_name');
+				$first_middle_last = $this->getDataSource()->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
+				$last_comma_first = $this->getDataSource()->Concat('ed.last_name', '\', \'', 'ed.first_name');
+				$last_comma_first_middle = $this->getDataSource()->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(ed.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 				} elseif ($searchMatch === 'contains') {

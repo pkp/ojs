@@ -106,7 +106,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		// Files
-		
+
 		// Information for Layout table access
 		$copyeditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		$copyeditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
@@ -176,10 +176,10 @@ class CopyeditorSubmissionDAO extends DAO {
 				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+				$first_last = $this->getDataSource()->Concat('aa.first_name', '\' \'', 'aa.last_name');
+				$first_middle_last = $this->getDataSource()->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
+				$last_comma_first = $this->getDataSource()->Concat('aa.last_name', '\', \'', 'aa.first_name');
+				$last_comma_first_middle = $this->getDataSource()->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
 
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
@@ -193,10 +193,10 @@ class CopyeditorSubmissionDAO extends DAO {
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
 				break;
 			case SUBMISSION_FIELD_EDITOR:
-				$first_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.last_name');
-				$first_middle_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
-				$last_comma_first = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
+				$first_last = $this->getDataSource()->Concat('ed.first_name', '\' \'', 'ed.last_name');
+				$first_middle_last = $this->getDataSource()->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
+				$last_comma_first = $this->getDataSource()->Concat('ed.last_name', '\', \'', 'ed.first_name');
+				$last_comma_first_middle = $this->getDataSource()->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
 				if ($searchMatch === 'is') {
 					$searchSql = " AND (LOWER(ed.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 				} elseif ($searchMatch === 'contains') {
@@ -305,7 +305,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				LEFT JOIN signoffs scf ON (a.article_id = scf.assoc_id AND scf.assoc_type = ? AND scf.symbolic = ?)
 				LEFT JOIN signoffs sci ON (a.article_id = sci.assoc_id AND sci.assoc_type = ? AND sci.symbolic = ?)
 			WHERE	a.journal_id = ? AND sci.user_id = ? AND sci.date_notified IS NOT NULL';
-					
+
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
 
 		while (!$result->EOF) {
@@ -328,7 +328,7 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string

@@ -242,7 +242,7 @@ class ArticleSearchIndex {
 		$searchDao->update('DELETE FROM article_search_objects');
 		$searchDao->update('DELETE FROM article_search_keyword_list');
 		$searchDao->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
-		$searchDao->_dataSource->CacheFlush();
+		$searchDao->getDataSource()->CacheFlush();
 		if ($log) echo "done\n";
 
 		// Build index

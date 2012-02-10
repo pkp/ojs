@@ -3,7 +3,7 @@
 /**
  * @file plugins/pubIds/doi/DoiSettingsForm.inc.php
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DoiSettingsForm
@@ -38,7 +38,7 @@ class DoiSettingsForm extends Form {
 	 * Get the plugin.
 	 * @return DoiPubIdPlugin
 	 */
-	function &_getPlugIn() {
+	function &_getPlugin() {
 		return $this->_plugin;
 	}
 

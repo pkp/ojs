@@ -4,12 +4,11 @@
 <!--
   * 2.4.0_idupgrade_articles2.xml
   *
-  * Copyright (c) 2003-2011 John Willinsky
+  * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 2.4.0 Database update XML file; Migrates public IDs to settings tables and drops temporary table.
   *
-  * $Id$
   -->
 
 <data>

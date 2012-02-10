@@ -3,7 +3,7 @@
 /**
  * @file plugins/pubIds/doi/DoiPubIdPlugin.inc.php
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DoiPubIdPlugin
@@ -40,14 +40,14 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.pubIds.doi.displayName');
+		return __('plugins.pubIds.doi.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.pubIds.doi.description');
+		return __('plugins.pubIds.doi.description');
 	}
 
 	/**
@@ -280,7 +280,7 @@ class DoiPubIdPlugin extends PubIdPlugin {
 		if($this->checkDuplicate($newDoi, $pubObject, $journalId)) {
 			return true;
 		} else {
-			$errorMsg = AppLocale::translate('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
+			$errorMsg = __('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
 			return false;
 		}
 	}

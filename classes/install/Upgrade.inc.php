@@ -466,7 +466,7 @@ class Upgrade extends Installer {
 	 */
 	function dropAllIndexes() {
 		$siteDao =& DAORegistry::getDAO('SiteDAO');
-		$dict = NewDataDictionary($siteDao->_dataSource);
+		$dict = NewDataDictionary($siteDao->getDataSource());
 		$dropIndexSql = array();
 
 		// This is a list of tables that were used in 2.1.1 (i.e.
