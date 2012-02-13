@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying ArticleComment objects.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleComment');
 
 class ArticleCommentDAO extends DAO {

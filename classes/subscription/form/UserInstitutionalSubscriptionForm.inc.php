@@ -16,8 +16,6 @@
  * @brief Form class for user purchase of institutional subscription.
  */
 
-// $Id$
-
 import('lib.pkp.classes.form.Form');
 
 class UserInstitutionalSubscriptionForm extends Form {

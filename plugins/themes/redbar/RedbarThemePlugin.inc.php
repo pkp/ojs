@@ -12,9 +12,6 @@
  * @brief "Redbar" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class RedbarThemePlugin extends ThemePlugin {

@@ -12,9 +12,6 @@
  * @brief MLA citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class MlaCitationPlugin extends CitationPlugin {

@@ -12,9 +12,6 @@
  * @brief User plugin DOM functions for export
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 define('USERS_DTD_URL', 'http://pkp.sfu.ca/ojs/dtds/users.dtd');

@@ -12,9 +12,6 @@
  * @brief Class to add content to the article search index.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.search.SearchFileParser');
 import('lib.pkp.classes.search.SearchHTMLParser');
 import('lib.pkp.classes.search.SearchHelperParser');

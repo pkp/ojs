@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ClassicRedThemePlugin.inc.php');
 
 return new ClassicRedThemePlugin();

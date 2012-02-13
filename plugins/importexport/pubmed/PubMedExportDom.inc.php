@@ -12,9 +12,6 @@
  * @brief PubMed XML export plugin DOM functions
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 define('PUBMED_DTD_URL', 'http://www.ncbi.nlm.nih.gov:80/entrez/query/static/PubMed.dtd');

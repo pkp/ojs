@@ -12,8 +12,6 @@
  * @brief Handle requests for journal management functions. 
  */
 
-// $Id$
-
 import('classes.handler.Handler');
 import('pages.manager.ManagerHandler');
 

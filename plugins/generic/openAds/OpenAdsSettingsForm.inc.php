@@ -12,9 +12,6 @@
  * @brief Form for journal managers to modify Article XML Galley plugin settings
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class OpenAdsSettingsForm extends Form {

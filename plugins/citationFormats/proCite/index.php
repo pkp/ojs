@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ProCiteCitationPlugin.inc.php');
 
 return new ProCiteCitationPlugin();

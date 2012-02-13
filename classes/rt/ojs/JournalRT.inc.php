@@ -16,9 +16,6 @@
  * @brief OJS-specific Reading Tools end-user interface.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.rt.RT');
 import('classes.rt.ojs.RTDAO');
 

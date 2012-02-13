@@ -12,9 +12,6 @@
  * @brief Operations for retrieving and modifying ExternalFeed objects.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.db.DAO');
 
 class ExternalFeedDAO extends DAO {

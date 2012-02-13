@@ -19,9 +19,6 @@
  * (based on where the request is directed).
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.oai.OAI');
 import('classes.oai.ojs.OAIDAO');
 

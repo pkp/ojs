@@ -12,9 +12,6 @@
  * @brief SWORD deposit plugin class
  */
 
-// $Id$
-
-
 define('SWORD_DEPOSIT_TYPE_AUTOMATIC',		1);
 define('SWORD_DEPOSIT_TYPE_OPTIONAL_SELECTION',	2);
 define('SWORD_DEPOSIT_TYPE_OPTIONAL_FIXED',	3);

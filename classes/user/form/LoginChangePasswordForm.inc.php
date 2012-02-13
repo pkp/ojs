@@ -12,9 +12,6 @@
  * @brief Form to change a user's password in order to login.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class LoginChangePasswordForm extends Form {

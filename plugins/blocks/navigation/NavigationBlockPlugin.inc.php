@@ -12,9 +12,6 @@
  * @brief Class for navigation block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class NavigationBlockPlugin extends BlockPlugin {

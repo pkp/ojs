@@ -12,9 +12,6 @@
  * @brief DOAJ import/export plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 import('classes.plugins.ImportExportPlugin');

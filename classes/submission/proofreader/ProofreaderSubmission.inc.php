@@ -17,9 +17,6 @@
  * @brief Describes a proofreader's view of a submission
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 class ProofreaderSubmission extends Article {

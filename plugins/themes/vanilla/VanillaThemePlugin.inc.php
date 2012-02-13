@@ -12,9 +12,6 @@
  * @brief "Vanilla" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class VanillaThemePlugin extends ThemePlugin {

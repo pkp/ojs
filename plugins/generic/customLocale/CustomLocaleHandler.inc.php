@@ -12,9 +12,6 @@
  * @brief This handles requests for the customLocale plugin.
  */
 
-// $Id$
-
-
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
 import('classes.handler.Handler');

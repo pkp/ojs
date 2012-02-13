@@ -16,9 +16,6 @@
  *
  */
 
-// $Id$
-
-
 switch ($op) {
 	case 'index':
 	case 'thankYou':

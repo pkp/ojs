@@ -13,9 +13,6 @@
  * @brief Supplementary file class.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleFile');
 
 class SuppFile extends ArticleFile {

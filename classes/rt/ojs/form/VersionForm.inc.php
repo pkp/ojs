@@ -13,9 +13,6 @@
  * @brief Form to change metadata information for an RT version.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class VersionForm extends Form {

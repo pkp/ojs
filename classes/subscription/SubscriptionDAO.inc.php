@@ -13,9 +13,6 @@
  * @brief Abstract class for retrieving and modifying subscriptions.
  */
 
-// $Id$
-
-
 import('classes.subscription.Subscription');
 import('classes.subscription.SubscriptionType');
 

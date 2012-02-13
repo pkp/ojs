@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('AbntCitationPlugin.inc.php');
 
 return new AbntCitationPlugin();

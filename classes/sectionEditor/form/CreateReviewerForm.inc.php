@@ -16,9 +16,6 @@
  * @brief Form for section editors to create reviewers.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class CreateReviewerForm extends Form {

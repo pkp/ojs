@@ -12,8 +12,6 @@
  * @brief Handle requests for proofreader submission functions.
  */
 
-// $Id$
-
 import('pages.proofreader.ProofreaderHandler');
 
 class SubmissionProofreadHandler extends ProofreaderHandler {

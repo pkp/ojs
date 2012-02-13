@@ -12,9 +12,6 @@
  * @brief Class for related items block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class RelatedItemsBlockPlugin extends BlockPlugin {

@@ -12,9 +12,6 @@
  * @brief Abstract class for paymethod plugins
  */
 
-// $Id$
-
-
 import('classes.plugins.Plugin');
 
 class PaymethodPlugin extends Plugin {

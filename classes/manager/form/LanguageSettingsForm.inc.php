@@ -12,9 +12,6 @@
  * @brief Form for modifying journal language settings.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class LanguageSettingsForm extends Form {

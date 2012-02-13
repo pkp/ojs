@@ -13,9 +13,6 @@
  * @brief Form for journal managers to create/edit groups.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 import('lib.pkp.classes.group.Group');
 

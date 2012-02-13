@@ -13,9 +13,6 @@
  * @brief OJS extension of PKPNoteDAO
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.note.PKPNoteDAO');
 import('classes.note.Note');
 

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('MetsGatewayPlugin.inc.php');
 
 return new METSGatewayPlugin();

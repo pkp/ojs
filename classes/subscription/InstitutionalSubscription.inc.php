@@ -17,8 +17,6 @@
  * @brief Basic class describing an institutional subscription.
  */
 
-// $Id$
-
 import('classes.subscription.Subscription');
 
 define('SUBSCRIPTION_IP_RANGE_RANGE', '-');

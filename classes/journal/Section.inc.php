@@ -13,9 +13,6 @@
  * @brief Describes basic section properties.
  */
 
-// $Id$
-
-
 class Section extends DataObject {
 
 	/**

@@ -12,9 +12,6 @@
  * @brief Operations for retrieving and modifying users' journal notification status.
  */
 
-// $Id$
-
-
 class NotificationStatusDAO extends DAO {
 	function &getJournalNotifications($userId) {
 		$returner = array();

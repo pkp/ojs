@@ -8,9 +8,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ShibAuthPlugin.inc.php');
 
 return new ShibAuthPlugin();

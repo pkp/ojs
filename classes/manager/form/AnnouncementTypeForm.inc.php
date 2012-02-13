@@ -13,8 +13,6 @@
  * @brief Form for journal managers to create/edit announcement types.
  */
 
-// $Id$
-
 import('lib.pkp.classes.manager.form.PKPAnnouncementTypeForm');
 
 class AnnouncementTypeForm extends PKPAnnouncementTypeForm {

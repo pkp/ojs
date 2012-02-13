@@ -12,9 +12,6 @@
  * @brief Web Feeds plugin class
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class WebFeedPlugin extends GenericPlugin {

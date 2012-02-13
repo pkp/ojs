@@ -13,8 +13,6 @@
  *
  */
 
-//$Id$
-
 import('classes.plugins.PaymethodPlugin');
 
 class ManualPaymentPlugin extends PaymethodPlugin {

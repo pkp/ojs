@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Referral objects.
  */
 
-// $Id$
-
-
 class ReferralDAO extends DAO {
 	/**
 	 * Retrieve an referral by referral ID.

@@ -16,9 +16,6 @@
  * @brief LayoutEditorAction class.
  */
 
-// $Id$
-
-
 import('classes.submission.common.Action');
 
 class LayoutEditorAction extends Action {

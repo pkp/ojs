@@ -13,9 +13,6 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleFile');
 
 class ArticleGalley extends ArticleFile {

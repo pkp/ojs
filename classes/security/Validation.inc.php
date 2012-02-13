@@ -12,9 +12,6 @@
  * @brief Class providing user validation/authentication operations.
  */
 
-// $Id$
-
-
 import('classes.security.Role');
 
 class Validation {

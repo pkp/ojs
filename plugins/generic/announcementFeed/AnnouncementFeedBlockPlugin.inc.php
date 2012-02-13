@@ -12,9 +12,6 @@
  * @brief Class for block component of announcement feed plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin {

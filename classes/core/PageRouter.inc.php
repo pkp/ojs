@@ -12,9 +12,6 @@
  * @brief Class providing OJS-specific page routing.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.core.PKPPageRouter');
 
 class PageRouter extends PKPPageRouter {

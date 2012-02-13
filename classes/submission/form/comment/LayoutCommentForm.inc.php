@@ -12,9 +12,6 @@
  * @brief LayoutComment form.
  */
 
-// $Id$
-
-
 import('classes.submission.form.comment.CommentForm');
 
 class LayoutCommentForm extends CommentForm {

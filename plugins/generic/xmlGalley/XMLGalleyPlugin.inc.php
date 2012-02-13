@@ -12,9 +12,6 @@
  * @brief XML Galley Plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class XMLGalleyPlugin extends GenericPlugin {

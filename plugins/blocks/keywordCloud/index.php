@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('KeywordCloudBlockPlugin.inc.php');
 
 return new KeywordCloudBlockPlugin();

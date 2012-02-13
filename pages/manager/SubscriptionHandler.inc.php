@@ -12,8 +12,6 @@
  * Handle requests for subscription management functions.
  */
 
-// $Id$
-
 import('pages.manager.ManagerHandler');
 
 class SubscriptionHandler extends ManagerHandler {

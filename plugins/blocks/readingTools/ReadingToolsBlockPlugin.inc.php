@@ -12,9 +12,6 @@
  * @brief Class for reading tools block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ReadingToolsBlockPlugin extends BlockPlugin {

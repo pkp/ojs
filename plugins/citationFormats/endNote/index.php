@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('EndNoteCitationPlugin.inc.php');
 
 return new EndNoteCitationPlugin();

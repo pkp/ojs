@@ -12,8 +12,6 @@
  * @brief Handle requests for changing journal language settings.
  */
 
-// $Id$
-
 import('pages.manager.ManagerHandler');
 
 class JournalLanguagesHandler extends ManagerHandler {

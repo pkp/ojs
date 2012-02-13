@@ -12,9 +12,6 @@
  * @brief Erudit english DTD article export plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ImportExportPlugin');
 
 import('lib.pkp.classes.xml.XMLCustomWriter');

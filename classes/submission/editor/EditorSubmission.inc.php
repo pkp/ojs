@@ -13,9 +13,6 @@
  * @brief EditorSubmission class.
  */
 
-// $Id$
-
-
 import('classes.submission.sectionEditor.SectionEditorSubmission');
 
 class EditorSubmission extends SectionEditorSubmission {

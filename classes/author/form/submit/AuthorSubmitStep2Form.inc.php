@@ -12,9 +12,6 @@
  * @brief Form for Step 2 of author article submission.
  */
 
-// $Id$
-
-
 import('classes.author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep2Form extends AuthorSubmitForm {

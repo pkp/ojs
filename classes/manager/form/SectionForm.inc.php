@@ -12,9 +12,6 @@
  * @brief Form for creating and modifying journal sections.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class SectionForm extends Form {

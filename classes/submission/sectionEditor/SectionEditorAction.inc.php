@@ -12,9 +12,6 @@
  * @brief SectionEditorAction class.
  */
 
-// $Id$
-
-
 import('classes.submission.common.Action');
 
 class SectionEditorAction extends Action {

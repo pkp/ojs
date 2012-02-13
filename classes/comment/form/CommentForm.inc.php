@@ -17,9 +17,6 @@
  * @brief Form to change metadata information for an RT comment.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class CommentForm extends Form {

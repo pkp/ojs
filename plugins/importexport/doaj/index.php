@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('DOAJPlugin.inc.php');
 
 return new DOAJPlugin();

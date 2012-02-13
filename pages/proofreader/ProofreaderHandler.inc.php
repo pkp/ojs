@@ -12,9 +12,6 @@
  * @brief Handle requests for proofreader functions. 
  */
 
-// $Id$
-
-
 import('classes.submission.proofreader.ProofreaderAction');
 import('classes.handler.Handler');
 

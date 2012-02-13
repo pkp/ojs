@@ -12,9 +12,6 @@
  * @brief Class for block component of web feed plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class WebFeedBlockPlugin extends BlockPlugin {

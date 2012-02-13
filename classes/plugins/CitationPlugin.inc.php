@@ -12,9 +12,6 @@
  * @brief Abstract class for citation plugins
  */
 
-// $Id$
-
-
 import('classes.plugins.Plugin');
 
 class CitationPlugin extends Plugin {

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('TurabianCitationPlugin.inc.php');
 
 return new TurabianCitationPlugin();

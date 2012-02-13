@@ -12,9 +12,6 @@
  * @brief Handle OAI protocol requests. 
  */
 
-// $Id$
-
-
 define('SESSION_DISABLE_INIT', 1); // FIXME?
 
 import('classes.oai.ojs.JournalOAI');

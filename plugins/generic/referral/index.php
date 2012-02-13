@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ReferralPlugin.inc.php');
 
 return new ReferralPlugin();

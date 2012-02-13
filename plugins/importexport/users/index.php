@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('UserImportExportPlugin.inc.php');
 
 return new UserImportExportPlugin();

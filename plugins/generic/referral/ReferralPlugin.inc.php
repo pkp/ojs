@@ -12,9 +12,6 @@
  * @brief Referral plugin to track and maintain potential references to published articles
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ReferralPlugin extends GenericPlugin {

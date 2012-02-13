@@ -12,9 +12,6 @@
  * @brief Native import/export plugin DOM functions for import
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class NativeImportDom {

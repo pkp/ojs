@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('HelpBlockPlugin.inc.php');
 
 return new HelpBlockPlugin();

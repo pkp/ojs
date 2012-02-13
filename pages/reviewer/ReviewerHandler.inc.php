@@ -12,9 +12,6 @@
  * @brief Handle requests for reviewer functions. 
  */
 
-// $Id$
-
-
 import('classes.submission.reviewer.ReviewerAction');
 import('classes.handler.Handler');
 

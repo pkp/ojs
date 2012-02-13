@@ -12,9 +12,6 @@
  * @brief Class for DAO relating sections to editors.
  */
 
-// $Id$
-
-
 class SectionEditorsDAO extends DAO {
 	/**
 	 * Insert a new section editor.

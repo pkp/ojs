@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('GoogleAnalyticsPlugin.inc.php');
 
 return new GoogleAnalyticsPlugin();

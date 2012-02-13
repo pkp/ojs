@@ -13,9 +13,6 @@
  * @brief Form to edit site settings.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.admin.form.PKPSiteSettingsForm');
 
 class SiteSettingsForm extends PKPSiteSettingsForm {

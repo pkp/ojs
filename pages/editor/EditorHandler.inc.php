@@ -12,9 +12,6 @@
  * @brief Handle requests for editor functions.
  */
 
-// $Id$
-
-
 import('pages.sectionEditor.SectionEditorHandler');
 
 define('EDITOR_SECTION_HOME', 0);

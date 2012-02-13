@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('CbeCitationPlugin.inc.php');
 
 return new CbeCitationPlugin();

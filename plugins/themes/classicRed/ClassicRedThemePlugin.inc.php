@@ -12,9 +12,6 @@
  * @brief "ClassicRed" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class ClassicRedThemePlugin extends ThemePlugin {

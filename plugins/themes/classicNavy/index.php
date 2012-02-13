@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ClassicNavyThemePlugin.inc.php');
 
 return new ClassicNavyThemePlugin();

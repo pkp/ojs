@@ -12,9 +12,6 @@
  * @brief CLI tool to output the SQL statements corresponding to an XML database schema.
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('lib.pkp.classes.cliTool.XmlToSqlTool');

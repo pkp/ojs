@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying CopyeditorSubmission objects.
  */
 
-// $Id$
-
-
 import('classes.submission.copyeditor.CopyeditorSubmission');
 
 class CopyeditorSubmissionDAO extends DAO {

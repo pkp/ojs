@@ -13,9 +13,6 @@
  * @brief Class for OJS Note.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleFile');
 import('lib.pkp.classes.note.PKPNote');
 

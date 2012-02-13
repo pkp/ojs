@@ -12,9 +12,6 @@
  * @brief Supplementary file author submission form.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class AuthorSubmitSuppFileForm extends Form {

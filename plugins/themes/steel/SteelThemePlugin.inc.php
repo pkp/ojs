@@ -12,9 +12,6 @@
  * @brief "Steel" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class SteelThemePlugin extends ThemePlugin {

@@ -17,8 +17,6 @@
  * @brief Basic class describing an individual (non-institutional) subscription.
  */
 
-// $Id$
-
 import('classes.subscription.Subscription');
 
 class IndividualSubscription extends Subscription {

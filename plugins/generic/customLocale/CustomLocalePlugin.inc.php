@@ -11,9 +11,6 @@
  * @brief This plugin enables customization of locale strings.
  */
 
-// $Id$
-
-
 define('CUSTOM_LOCALE_DIR', 'customLocale');
 import('lib.pkp.classes.plugins.GenericPlugin');
 

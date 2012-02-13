@@ -14,9 +14,6 @@
  * 
  */
 
-// $Id$
-
-
 class EditAssignment extends DataObject {
 
 	/**

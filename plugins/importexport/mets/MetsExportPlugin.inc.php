@@ -12,9 +12,6 @@
  * @brief METS/MODS XML metadata export plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ImportExportPlugin');
 
 class METSExportPlugin extends ImportExportPlugin {

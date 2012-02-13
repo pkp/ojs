@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('FontSizeBlockPlugin.inc.php');
 
 return new FontSizeBlockPlugin();

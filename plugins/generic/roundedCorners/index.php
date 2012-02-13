@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('RoundedCornersPlugin.inc.php');
 
 return new RoundedCornersPlugin();

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('DesertThemePlugin.inc.php');
 
 return new DesertThemePlugin();

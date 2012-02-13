@@ -12,9 +12,6 @@
  * @brief RefWorks citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class RefWorksCitationPlugin extends CitationPlugin {

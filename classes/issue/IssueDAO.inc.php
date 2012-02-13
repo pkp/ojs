@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Issue objects.
  */
 
-// $Id$
-
-
 import ('classes.issue.Issue');
 
 class IssueDAO extends DAO {

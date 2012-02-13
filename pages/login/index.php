@@ -15,9 +15,6 @@
  * @ingroup pages_login
  */
 
-// $Id$
-
-
 switch ($op) {
 	case 'index':
 	case 'implicitAuthLogin':

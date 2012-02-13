@@ -12,9 +12,6 @@
  * @brief Class for block component of external feed plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('PubMedExportPlugin.inc.php');
 
 return new PubMedExportPlugin();

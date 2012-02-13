@@ -13,8 +13,6 @@
  * @brief Review report plugin
  */
 
-//$Id$
-
 import('classes.plugins.ReportPlugin');
 
 class ReviewReportPlugin extends ReportPlugin {

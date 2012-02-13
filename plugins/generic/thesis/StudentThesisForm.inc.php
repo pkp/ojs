@@ -12,9 +12,6 @@
  * @brief Form for students to submit thesis abstract.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class StudentThesisForm extends Form {

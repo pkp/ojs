@@ -15,9 +15,6 @@
  * @brief Wrapper for "classic brown" theme plugin.
  */
 
-// $Id$
-
-
 require_once('ClassicBrownThemePlugin.inc.php');
 
 return new ClassicBrownThemePlugin();

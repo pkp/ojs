@@ -12,9 +12,6 @@
  * @brief This handles requests for the translator plugin.
  */
 
-// $Id$
-
-
 require_once('TranslatorAction.inc.php');
 import('classes.handler.Handler');
 

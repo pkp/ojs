@@ -13,9 +13,6 @@
  * @brief OAI metadata format class -- MARC.
  */
 
-// $Id$
-
-
 class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 	/**
 	 * @see OAIMetadataFormat#toXml

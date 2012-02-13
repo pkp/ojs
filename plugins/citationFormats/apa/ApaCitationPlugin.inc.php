@@ -12,9 +12,6 @@
  * @brief APA citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class ApaCitationPlugin extends CitationPlugin {

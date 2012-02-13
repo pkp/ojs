@@ -12,9 +12,6 @@
  * @brief Handle site index requests. 
  */
 
-// $Id$
-
-
 import('classes.search.ArticleSearch');
 import('classes.handler.Handler');
 

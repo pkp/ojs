@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('CoinsPlugin.inc.php');
 
 return new CoinsPlugin();

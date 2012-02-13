@@ -12,8 +12,6 @@
  * @brief Handle requests for statistics functions. 
  */
 
-// $Id$
-
 import('pages.manager.ManagerHandler');
 
 class StatisticsHandler extends ManagerHandler {

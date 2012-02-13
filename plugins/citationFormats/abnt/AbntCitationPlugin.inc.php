@@ -12,9 +12,6 @@
  * @brief ABNT citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class AbntCitationPlugin extends CitationPlugin {

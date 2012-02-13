@@ -13,9 +13,6 @@
  * @brief Class for DAO relating editors to articles.
  */
 
-// $Id$
-
-
 import('classes.submission.editAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {

@@ -13,9 +13,6 @@
  *
  */
 
-// $Id$
-
-
 import('classes.plugins.GatewayPlugin');
 
 class ThesisFeedGatewayPlugin extends GatewayPlugin {

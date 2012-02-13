@@ -13,9 +13,6 @@
  * @brief DAO operations for the OJS Reading Tools interface.
  */
 
-// $Id$
-
-
 import('classes.rt.ojs.JournalRT');
 
 class RTDAO extends DAO {

@@ -12,9 +12,6 @@
  * @brief BibTeX citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class BibtexCitationPlugin extends CitationPlugin {

@@ -15,9 +15,6 @@
  * FIXME: NEAR; precedence w/o parens?; stemming; weighted counting
  */
 
-// $Id$
-
-
 // Search types
 define('ARTICLE_SEARCH_AUTHOR',			0x00000001);
 define('ARTICLE_SEARCH_TITLE',			0x00000002);

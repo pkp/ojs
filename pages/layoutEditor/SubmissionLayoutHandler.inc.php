@@ -12,8 +12,6 @@
  * @brief Handle requests related to submission layout editing.
  */
 
-// $Id$
-
 import('pages.layoutEditor.LayoutEditorHandler');
 
 class SubmissionLayoutHandler extends LayoutEditorHandler {

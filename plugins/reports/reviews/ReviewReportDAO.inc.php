@@ -13,9 +13,6 @@
  * @brief Review report DAO
  */
 
-//$Id$
-
-
 import('classes.article.ArticleComment');
 import('lib.pkp.classes.db.DBRowIterator');
 

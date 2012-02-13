@@ -12,9 +12,6 @@
  * @brief Handle requests for editor functions. 
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class AboutHandler extends Handler {

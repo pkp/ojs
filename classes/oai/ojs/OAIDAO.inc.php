@@ -13,9 +13,6 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.oai.OAI');
 import('classes.issue.Issue');
 

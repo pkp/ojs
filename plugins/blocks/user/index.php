@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('UserBlockPlugin.inc.php');
 
 return new UserBlockPlugin();

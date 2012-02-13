@@ -13,8 +13,6 @@
  * @brief Operations for retrieving and modifying IndividualSubscription objects.
  */
 
-// $Id$
-
 import('classes.subscription.SubscriptionDAO');
 import('classes.subscription.IndividualSubscription');
 

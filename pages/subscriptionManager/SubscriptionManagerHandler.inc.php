@@ -12,9 +12,6 @@
  * @brief Handle requests for subscription management functions.
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class SubscriptionManagerHandler extends Handler {

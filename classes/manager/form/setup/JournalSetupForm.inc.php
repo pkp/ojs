@@ -16,9 +16,6 @@
  * @brief Base class for journal setup forms.
  */
 
-// $Id$
-
-
 import('classes.manager.form.setup.JournalSetupForm');
 import('lib.pkp.classes.form.Form');
 

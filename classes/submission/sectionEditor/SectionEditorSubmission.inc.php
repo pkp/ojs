@@ -13,9 +13,6 @@
  * @brief SectionEditorSubmission class.
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 class SectionEditorSubmission extends Article {

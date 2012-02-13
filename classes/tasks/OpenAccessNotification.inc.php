@@ -16,9 +16,6 @@
  * @brief Class to perform automated email notifications when an issue becomes open access.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
 class OpenAccessNotification extends ScheduledTask {

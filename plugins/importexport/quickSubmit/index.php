@@ -15,8 +15,6 @@
  * @ingroup plugins_importexport_quickSubmit
  */
 
-//$Id$
-
 require_once('QuickSubmitPlugin.inc.php');
 
 return new QuickSubmitPlugin();

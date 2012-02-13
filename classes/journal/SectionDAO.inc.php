@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Section objects.
  */
 
-// $Id$
-
-
 import ('classes.journal.Section');
 
 class SectionDAO extends DAO {

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('RedbarThemePlugin.inc.php');
 
 return new RedbarThemePlugin();

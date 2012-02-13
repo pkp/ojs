@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('UncommonThemePlugin.inc.php');
 
 return new UncommonThemePlugin();

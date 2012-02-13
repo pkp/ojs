@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('RefManCitationPlugin.inc.php');
 
 return new RefManCitationPlugin();

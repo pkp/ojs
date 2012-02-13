@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ClassicGreenThemePlugin.inc.php');
 
 return new ClassicGreenThemePlugin();

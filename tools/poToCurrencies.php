@@ -13,9 +13,6 @@
  * supported by the PKP suite.
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 define('PO_TO_CSV_TOOL', '/usr/bin/po2csv');

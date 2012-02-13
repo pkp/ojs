@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying LayoutEditorSubmission objects.
  */
 
-// $Id$
-
-
 import('classes.submission.layoutEditor.LayoutEditorSubmission');
 
 class LayoutEditorSubmissionDAO extends DAO {

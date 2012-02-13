@@ -12,9 +12,6 @@
  * @brief Comment form.
  */
 
-// $Id$
-
-
 import('classes.submission.form.comment.CommentForm');
 
 class PeerReviewCommentForm extends CommentForm {

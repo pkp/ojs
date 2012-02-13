@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ThesisPlugin.inc.php');
 
 return new ThesisPlugin();

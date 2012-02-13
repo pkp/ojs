@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('AuthorBiosBlockPlugin.inc.php');
 
 return new AuthorBiosBlockPlugin();

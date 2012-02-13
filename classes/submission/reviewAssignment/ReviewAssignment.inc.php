@@ -13,9 +13,6 @@
  * @brief Describes review assignment properties.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.submission.reviewAssignment.PKPReviewAssignment');
 
 class ReviewAssignment extends PKPReviewAssignment {

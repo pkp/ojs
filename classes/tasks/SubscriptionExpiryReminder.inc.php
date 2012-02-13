@@ -12,9 +12,6 @@
  * @brief Class to perform automated reminders for reviewers.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
 class SubscriptionExpiryReminder extends ScheduledTask {

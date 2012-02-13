@@ -12,9 +12,6 @@
  * @brief EditorDecisionComment form.
  */
 
-// $Id$
-
-
 import('classes.submission.form.comment.CommentForm');
 
 class EditorDecisionCommentForm extends CommentForm {

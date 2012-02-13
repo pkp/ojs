@@ -13,9 +13,6 @@
  * @brief OAI metadata format class -- RFC 1807.
  */
 
-// $Id$
-
-
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	/**
 	 * @see OAIMetadataFormat#toXml

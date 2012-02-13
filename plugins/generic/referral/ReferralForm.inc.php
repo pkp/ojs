@@ -13,9 +13,6 @@
  * @brief Form for authors to create/edit referrals.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class ReferralForm extends Form {

@@ -12,15 +12,12 @@
  * @brief Basic class describing a thesis.
  */
 
-// $Id$
-
-
 define('THESIS_STATUS_INACTIVE',			0x01);
 define('THESIS_STATUS_ACTIVE',				0x02);
 define('THESIS_DEGREE_MASTERS',				0x01);
 define('THESIS_DEGREE_DOCTORATE',			0x02);
-define('THESIS_APPROVED_YEAR_OFFSET_PAST',	'-10');
-define('THESIS_APPROVED_DATE_DEFAULT_DAY',	'1');
+define('THESIS_APPROVED_YEAR_OFFSET_PAST',		'-10');
+define('THESIS_APPROVED_DATE_DEFAULT_DAY',		'1');
 
 
 class Thesis extends DataObject {

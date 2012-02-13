@@ -12,9 +12,6 @@
  * @brief Form for Step 2 of journal setup.
  */
 
-// $Id$
-
-
 import('classes.manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep2Form extends JournalSetupForm {

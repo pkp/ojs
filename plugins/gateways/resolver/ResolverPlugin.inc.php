@@ -12,9 +12,6 @@
  * @brief Simple resolver gateway plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.GatewayPlugin');
 
 class ResolverPlugin extends GatewayPlugin {

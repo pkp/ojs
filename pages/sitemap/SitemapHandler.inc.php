@@ -12,9 +12,6 @@
  * @brief Produce a sitemap in XML format for submitting to search engines. 
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 import('classes.handler.Handler');
 

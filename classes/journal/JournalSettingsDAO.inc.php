@@ -12,9 +12,6 @@
  * @brief Operations for retrieving and modifying journal settings.
  */
 
-// $Id$
-
-
 class JournalSettingsDAO extends DAO {
 	function &_getCache($journalId) {
 		static $settingCache;

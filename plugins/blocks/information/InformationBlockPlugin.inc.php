@@ -12,9 +12,6 @@
  * @brief Class for information block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class InformationBlockPlugin extends BlockPlugin {

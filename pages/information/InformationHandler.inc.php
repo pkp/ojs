@@ -12,9 +12,6 @@
  * @brief Display journal information.
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class InformationHandler extends Handler {

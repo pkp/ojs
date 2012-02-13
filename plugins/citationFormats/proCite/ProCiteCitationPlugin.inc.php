@@ -12,9 +12,6 @@
  * @brief ProCite citation format plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.CitationPlugin');
 
 class ProCiteCitationPlugin extends CitationPlugin {

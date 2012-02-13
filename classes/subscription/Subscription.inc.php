@@ -17,9 +17,6 @@
  * @brief Basic class describing a subscription.
  */
 
-// $Id$
-
-
 define('SUBSCRIPTION_STATUS_ACTIVE', 					0x01);
 define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 		0x02);
 define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 			0x03);

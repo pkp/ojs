@@ -12,9 +12,6 @@
  * @brief "Lilac" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class LilacThemePlugin extends ThemePlugin {

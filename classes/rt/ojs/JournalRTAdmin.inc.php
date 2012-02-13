@@ -12,9 +12,6 @@
  * @brief OJS-specific Reading Tools administration interface.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.rt.RTAdmin');
 import('classes.rt.ojs.RTDAO');
 

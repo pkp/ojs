@@ -12,9 +12,6 @@
  * @brief This handles requests for the referral plugin.
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class ReferralHandler extends Handler {

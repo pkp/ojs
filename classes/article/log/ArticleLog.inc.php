@@ -16,9 +16,6 @@
  * @brief Static class for adding / accessing article log entries.
  */
 
-// $Id$
-
-
 import('classes.article.log.ArticleEventLogEntry');
 import('classes.article.log.ArticleEmailLogEntry');
 

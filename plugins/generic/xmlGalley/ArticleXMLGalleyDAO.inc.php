@@ -14,9 +14,6 @@
  * to override the default methods; this is prime for refactoring!
  */
 
-// $Id$
-
-
 import('classes.article.ArticleGalleyDAO');
 
 

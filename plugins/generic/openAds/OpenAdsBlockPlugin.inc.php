@@ -12,9 +12,6 @@
  * @brief OpenAds plugin class, block component
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class OpenAdsBlockPlugin extends BlockPlugin {

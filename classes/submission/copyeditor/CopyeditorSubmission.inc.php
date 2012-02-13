@@ -13,9 +13,6 @@
  * @brief CopyeditorSubmission class.
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 class CopyeditorSubmission extends Article {

@@ -12,9 +12,6 @@
  * @brief Handle requests for layout editor functions. 
  */
 
-// $Id$
-
-
 import('classes.submission.layoutEditor.LayoutEditorAction');
 import('classes.handler.Handler');
 

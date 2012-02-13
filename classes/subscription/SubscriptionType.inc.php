@@ -13,9 +13,6 @@
  * @brief Basic class describing a subscription type.
  */
 
-// $Id$
-
-
 /**
  * Subscription type formats
  */

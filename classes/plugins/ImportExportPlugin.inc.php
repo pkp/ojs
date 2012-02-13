@@ -12,9 +12,6 @@
  * @brief Abstract class for import/export plugins
  */
 
-// $Id$
-
-
 import('classes.plugins.Plugin');
 
 class ImportExportPlugin extends Plugin {

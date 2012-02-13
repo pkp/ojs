@@ -12,9 +12,6 @@
  * @brief Handle requests for journal author functions. 
  */
 
-// $Id$
-
-
 import('classes.submission.author.AuthorAction');
 import('classes.handler.Handler');
 

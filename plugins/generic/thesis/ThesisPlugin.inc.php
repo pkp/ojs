@@ -12,9 +12,6 @@
  * @brief Thesis abstracts plugin class
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ThesisPlugin extends GenericPlugin {

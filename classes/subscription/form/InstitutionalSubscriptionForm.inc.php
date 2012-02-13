@@ -16,8 +16,6 @@
  * @brief Form class for institutional subscription create/edits.
  */
 
-// $Id$
-
 import('classes.subscription.form.SubscriptionForm');
 
 class InstitutionalSubscriptionForm extends SubscriptionForm {

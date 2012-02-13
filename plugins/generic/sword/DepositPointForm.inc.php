@@ -12,9 +12,6 @@
  * @brief Form for journal managers to modify SWORD deposit points
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class DepositPointForm extends Form {

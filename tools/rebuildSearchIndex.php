@@ -12,9 +12,6 @@
  * @brief CLI tool to rebuild the article keyword search database.
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('classes.search.ArticleSearchIndex');

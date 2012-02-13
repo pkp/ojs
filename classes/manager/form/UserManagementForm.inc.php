@@ -12,9 +12,6 @@
  * @brief Form for journal managers to edit user profiles.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class UserManagementForm extends Form {

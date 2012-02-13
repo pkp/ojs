@@ -12,9 +12,6 @@
  * @brief Form for site administrator to edit basic journal settings.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.db.DBDataXMLParser');
 import('lib.pkp.classes.form.Form');
 

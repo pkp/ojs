@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 switch ($op) {
 	//
 	// Assignment Tracking

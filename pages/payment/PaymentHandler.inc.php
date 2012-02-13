@@ -12,9 +12,6 @@
  * @brief Handle requests for payment functions.
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class PaymentHandler extends Handler {

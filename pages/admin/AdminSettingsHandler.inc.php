@@ -11,7 +11,6 @@
  *
  * @brief Handle requests for changing site admin settings.
  *
- * $Id$
  */
 
 import('pages.admin.AdminHandler');

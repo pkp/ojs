@@ -13,9 +13,6 @@
  * @brief Class for ArticleNote.
  */
 
-// $Id$
-
-
 import('classes.note.Note');
 
 class ArticleNote extends Note {

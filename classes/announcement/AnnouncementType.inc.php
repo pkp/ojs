@@ -13,8 +13,6 @@
  * @brief Basic class describing an announcement type.
  */
 
-// $Id$
-
 import('lib.pkp.classes.announcement.PKPAnnouncementType');
 
 class AnnouncementType extends PKPAnnouncementType {

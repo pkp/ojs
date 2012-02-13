@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Author objects.
  */
 
-// $Id$
-
-
 import('classes.article.Author');
 import('classes.article.Article');
 import('lib.pkp.classes.submission.PKPAuthorDAO');

@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying SuppFile objects.
  */
 
-// $Id$
-
-
 import('classes.article.SuppFile');
 
 class SuppFileDAO extends DAO {

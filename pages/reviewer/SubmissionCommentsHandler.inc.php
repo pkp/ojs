@@ -12,9 +12,6 @@
  * @brief Handle requests for submission comments.
  */
 
-// $Id$
-
-
 import('pages.reviewer.SubmissionReviewHandler');
 
 class SubmissionCommentsHandler extends ReviewerHandler {

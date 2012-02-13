@@ -12,9 +12,6 @@
  * @brief Handle Reading Tools requests.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.rt.RT');
 
 import('classes.rt.ojs.RTDAO');

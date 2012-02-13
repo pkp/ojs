@@ -13,9 +13,6 @@
  * @brief Published article class.
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 // Access status

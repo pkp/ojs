@@ -13,9 +13,6 @@
  *
  */
 
-// $Id$
-
-
 import('classes.rt.ojs.RTDAO');
 import('classes.rt.ojs.JournalRT');
 import('classes.handler.Handler');

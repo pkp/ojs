@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('BibtexCitationPlugin.inc.php');
 
 return new BibtexCitationPlugin();

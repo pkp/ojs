@@ -12,9 +12,6 @@
  * @brief Form for system upgrades.
  */
 
-// $Id$
-
-
 import('classes.install.Upgrade');
 import('lib.pkp.classes.form.Form');
 

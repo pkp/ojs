@@ -12,9 +12,6 @@
  * @brief Form for journal managers to modify phpMyVisites plugin settings
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class PhpMyVisitesSettingsForm extends Form {

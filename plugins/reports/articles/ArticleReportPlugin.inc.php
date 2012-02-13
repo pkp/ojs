@@ -12,9 +12,6 @@
  * @brief Article report plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ReportPlugin');
 
 class ArticleReportPlugin extends ReportPlugin {

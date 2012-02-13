@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('VanillaThemePlugin.inc.php');
 
 return new VanillaThemePlugin();

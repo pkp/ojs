@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('RefWorksCitationPlugin.inc.php');
 
 return new RefWorksCitationPlugin();

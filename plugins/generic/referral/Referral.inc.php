@@ -13,9 +13,6 @@
  * @brief Basic class describing a referral.
  */
 
-// $Id$
-
-
 define('REFERRAL_STATUS_NEW',		0x00000001);
 define('REFERRAL_STATUS_ACCEPT',	0x00000002);
 define('REFERRAL_STATUS_DECLINE',	0x00000003);

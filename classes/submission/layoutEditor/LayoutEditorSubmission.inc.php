@@ -17,9 +17,6 @@
  * @brief Describes a layout editor's view of a submission
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 class LayoutEditorSubmission extends Article {

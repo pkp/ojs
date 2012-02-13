@@ -12,9 +12,6 @@
  * @brief Operations for retrieving and modifying Thesis objects.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.db.DAO');
 
 /* These constants are used for user-selectable search fields. */

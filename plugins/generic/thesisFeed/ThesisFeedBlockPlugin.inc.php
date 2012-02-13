@@ -12,9 +12,6 @@
  * @brief Class for block component of thesis feed plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ThesisFeedBlockPlugin extends BlockPlugin {

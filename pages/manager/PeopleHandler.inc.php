@@ -12,9 +12,6 @@
  * @brief Handle requests for people management functions.
  */
 
-// $Id$
-
-
 import('pages.manager.ManagerHandler');
 
 class PeopleHandler extends ManagerHandler {

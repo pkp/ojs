@@ -15,8 +15,6 @@
  *
  */
 
-// $Id$
-
 switch ($op) {
 	case 'view':
 	case 'viewPDFInterstitial':

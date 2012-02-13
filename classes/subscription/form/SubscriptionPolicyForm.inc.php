@@ -12,9 +12,6 @@
  * @brief Form for managers to setup subscription policies.
  */
 
-// $Id$
-
-
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '0');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '24');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN', '1');

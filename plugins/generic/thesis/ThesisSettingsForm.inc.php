@@ -12,9 +12,6 @@
  * @brief Form for journal managers to modify Thesis Abstract plugin settings
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class ThesisSettingsForm extends Form {

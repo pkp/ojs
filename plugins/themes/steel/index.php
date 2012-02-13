@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('SteelThemePlugin.inc.php');
 
 return new SteelThemePlugin();

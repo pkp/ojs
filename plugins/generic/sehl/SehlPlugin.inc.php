@@ -12,9 +12,6 @@
  * @brief Search Engine HighLighting plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {

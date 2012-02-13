@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying AuthorSubmission objects.
  */
 
-// $Id$
-
-
 import('classes.submission.author.AuthorSubmission');
 
 class AuthorSubmissionDAO extends DAO {

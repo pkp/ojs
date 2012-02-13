@@ -13,9 +13,6 @@
  * @brief AuthorSubmission class.
  */
 
-// $Id$
-
-
 import('classes.article.Article');
 
 class AuthorSubmission extends Article {

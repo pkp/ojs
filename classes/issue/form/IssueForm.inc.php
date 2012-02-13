@@ -17,9 +17,6 @@
  * @brief Form to create or edit an issue
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 import('classes.issue.Issue'); // Bring in constants
 

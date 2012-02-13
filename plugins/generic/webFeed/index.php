@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('WebFeedPlugin.inc.php');
 
 return new WebFeedPlugin(); 

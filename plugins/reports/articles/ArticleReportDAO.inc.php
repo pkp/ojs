@@ -12,9 +12,6 @@
  * @brief Article report DAO
  */
 
-// $Id$
-
-
 import('classes.submission.common.Action');
 import('lib.pkp.classes.db.DBRowIterator');
 

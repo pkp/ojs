@@ -12,9 +12,6 @@
  * @brief "ClassicNavy" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class ClassicNavyThemePlugin extends ThemePlugin {

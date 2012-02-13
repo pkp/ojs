@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ExternalFeedPlugin.inc.php');
 
 return new ExternalFeedPlugin();

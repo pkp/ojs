@@ -17,9 +17,6 @@
  * @brief Article galley editing form.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class ArticleGalleyForm extends Form {

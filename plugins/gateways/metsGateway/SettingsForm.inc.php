@@ -12,9 +12,6 @@
  * @brief Form for METS gateway plugin settings
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form {

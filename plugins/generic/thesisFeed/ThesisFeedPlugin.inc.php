@@ -12,9 +12,6 @@
  * @brief Thesis Feed plugin class
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ThesisFeedPlugin extends GenericPlugin {

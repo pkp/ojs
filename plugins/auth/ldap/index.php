@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('LDAPAuthPlugin.inc.php');
 
 return new LDAPAuthPlugin();

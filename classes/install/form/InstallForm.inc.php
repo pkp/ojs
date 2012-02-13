@@ -17,9 +17,6 @@
  * @brief Form for system installation.
  */
 
-// $Id$
-
-
 import('classes.install.Install');
 import('lib.pkp.classes.site.VersionCheck');
 import('lib.pkp.classes.form.Form');

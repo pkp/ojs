@@ -12,9 +12,6 @@
  * @brief "Night" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class NightThemePlugin extends ThemePlugin {

@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying ArticleNote objects.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleNote');
 import('classes.note.NoteDAO');
 

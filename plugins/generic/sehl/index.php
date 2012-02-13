@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('SehlPlugin.inc.php');
 
 return new SehlPlugin();

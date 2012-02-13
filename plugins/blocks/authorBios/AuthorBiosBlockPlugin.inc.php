@@ -12,9 +12,6 @@
  * @brief Class for author bios block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class AuthorBiosBlockPlugin extends BlockPlugin {

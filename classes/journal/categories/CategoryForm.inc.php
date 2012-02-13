@@ -13,9 +13,6 @@
  * @brief Form for site admins to create/edit categories.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class CategoryForm extends Form {

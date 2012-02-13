@@ -12,9 +12,6 @@
  * @brief Article XML galley model object
  */
 
-// $Id$
-
-
 import('classes.article.ArticleHTMLGalley');
 import('classes.article.SuppFileDAO');
 

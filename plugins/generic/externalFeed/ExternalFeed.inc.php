@@ -12,10 +12,8 @@
  * @brief Basic class describing an external feed.
  */
 
-// $Id$
-
 define('EXTERNAL_FEED_DISPLAY_BLOCK_NONE',		0);
-define('EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE',	1);
+define('EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE',		1);
 define('EXTERNAL_FEED_DISPLAY_BLOCK_ALL',		2);
 
 

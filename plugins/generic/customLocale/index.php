@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('CustomLocalePlugin.inc.php');
 
 return new CustomLocalePlugin(); 

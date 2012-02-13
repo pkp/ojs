@@ -12,9 +12,6 @@
  * @brief CLI tool for installing OJS.
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('lib.pkp.classes.cliTool.InstallTool');

@@ -13,9 +13,6 @@
  * @brief Describes user roles within the system and the associated permissions.
  */
 
-// $Id$
-
-
 /** ID codes for all user roles */
 define('ROLE_ID_SITE_ADMIN',		0x00000001);
 define('ROLE_ID_JOURNAL_MANAGER',	0x00000010);

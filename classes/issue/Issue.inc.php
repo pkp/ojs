@@ -17,9 +17,6 @@
  * @brief Class for Issue.
  */
 
-// $Id$
-
-
 define('ISSUE_ACCESS_OPEN', 1);
 define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 

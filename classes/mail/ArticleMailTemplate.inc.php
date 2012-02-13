@@ -14,9 +14,6 @@
  * This allows for article-specific functionality like logging, etc.
  */
 
-// $Id$
-
-
 import('classes.mail.MailTemplate');
 import('classes.article.log.ArticleEmailLogEntry'); // Bring in log constants
 

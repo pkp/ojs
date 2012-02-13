@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying EditorSubmission objects.
  */
 
-// $Id$
-
-
 import('classes.submission.editor.EditorSubmission');
 
 // Bring in editor decision constants

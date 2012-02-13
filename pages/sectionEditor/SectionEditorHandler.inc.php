@@ -12,9 +12,6 @@
  * @brief Handle requests for section editor functions. 
  */
 
-// $Id$
-
-
 // Filter section
 define('FILTER_SECTION_ALL', 0);
 

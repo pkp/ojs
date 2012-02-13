@@ -17,9 +17,6 @@
  *
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class DonationsHandler extends Handler {

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('AnnouncementFeedPlugin.inc.php');
 
 return new AnnouncementFeedPlugin(); 

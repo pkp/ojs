@@ -12,9 +12,6 @@
  * @brief CrossRef/MEDLINE XML metadata export plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ImportExportPlugin');
 
 class CrossRefExportPlugin extends ImportExportPlugin {

@@ -12,9 +12,6 @@
  * @brief MetsExportDom export plugin DOM functions for export
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class MetsExportDom {

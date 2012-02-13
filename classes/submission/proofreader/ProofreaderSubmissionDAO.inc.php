@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying ProofreaderSubmission objects.
  */
 
-// $Id$
-
-
 import('classes.submission.proofreader.ProofreaderSubmission');
 
 class ProofreaderSubmissionDAO extends DAO {

@@ -13,8 +13,6 @@
  * @brief Operations for retrieving and modifying InstitutionalSubscription objects.
  */
 
-// $Id$
-
 import('classes.subscription.SubscriptionDAO');
 import('classes.subscription.InstitutionalSubscription');
 

@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 switch ($op) {
 	case 'index':
 		define('HANDLER_CLASS', 'OAIHandler');

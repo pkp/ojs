@@ -12,9 +12,6 @@
  * @brief Class for "developed by" block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class DevelopedByBlockPlugin extends BlockPlugin {

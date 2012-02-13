@@ -12,9 +12,6 @@
  * @brief CLI tool to delete submissions
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('classes.file.ArticleFileManager');

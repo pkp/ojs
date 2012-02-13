@@ -12,9 +12,6 @@
  * @brief Class for user block plugin
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class UserBlockPlugin extends BlockPlugin {

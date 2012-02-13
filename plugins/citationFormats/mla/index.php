@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('MlaCitationPlugin.inc.php');
 
 return new MlaCitationPlugin();

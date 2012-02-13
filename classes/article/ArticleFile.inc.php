@@ -13,9 +13,6 @@
  * @brief Article file class.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.submission.SubmissionFile');
 
 /* File type IDs */

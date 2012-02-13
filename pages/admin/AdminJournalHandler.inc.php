@@ -12,8 +12,6 @@
  * @brief Handle requests for journal management in site administration.
  */
 
-// $Id$
-
 import('pages.admin.AdminHandler');
 
 class AdminJournalHandler extends AdminHandler {

@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying ArticleGalley/ArticleHTMLGalley objects.
  */
 
-// $Id$
-
-
 import('classes.article.ArticleGalley');
 import('classes.article.ArticleHTMLGalley');
 

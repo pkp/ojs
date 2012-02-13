@@ -12,9 +12,6 @@
  * @brief Handle external gateway requests. 
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class GatewayHandler extends Handler {

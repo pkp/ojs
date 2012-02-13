@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('EruditExportPlugin.inc.php');
 
 return new EruditExportPlugin();

@@ -11,9 +11,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('OAIMetadataFormatPlugin_RFC1807.inc.php');
 require_once('OAIMetadataFormat_RFC1807.inc.php');
 

@@ -12,9 +12,6 @@
  * @brief PubMed/MEDLINE XML metadata export plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ImportExportPlugin');
 
 class PubMedExportPlugin extends ImportExportPlugin {

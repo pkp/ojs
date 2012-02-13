@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('NightThemePlugin.inc.php');
 
 return new NightThemePlugin();

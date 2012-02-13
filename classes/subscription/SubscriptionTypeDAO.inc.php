@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying SubscriptionType objects.
  */
 
-// $Id$
-
-
 import('classes.subscription.SubscriptionType');
 
 class SubscriptionTypeDAO extends DAO {

@@ -12,8 +12,6 @@
  * @brief Handle requests for author article submission.
  */
 
-// $Id$
-
 import('pages.author.AuthorHandler');
 
 class SubmitHandler extends AuthorHandler {

@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying user settings.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.user.PKPUserSettingsDAO');
 
 class UserSettingsDAO extends PKPUserSettingsDAO {

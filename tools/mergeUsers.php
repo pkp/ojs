@@ -12,9 +12,6 @@
  * @brief CLI tool for merging two OJS 2 user accounts.
  */
 
-// $Id$
-
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 class mergeUsers extends CommandLineTool {

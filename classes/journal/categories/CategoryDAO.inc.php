@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Category objects
  */
 
-//$Id$
-
-
 import('lib.pkp.classes.controlledVocab.ControlledVocabDAO');
 
 define('CATEGORY_SYMBOLIC', 'category');

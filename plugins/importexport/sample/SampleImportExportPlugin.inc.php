@@ -12,9 +12,6 @@
  * @brief Sample import/export plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ImportExportPlugin');
 
 class SampleImportExportPlugin extends ImportExportPlugin {

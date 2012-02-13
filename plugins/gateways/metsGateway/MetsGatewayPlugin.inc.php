@@ -12,9 +12,6 @@
  * @brief A plugin to allow exposure of Journals in METS format for web service access
  */
 
-// $Id$
-
-
 import('classes.plugins.GatewayPlugin');
 
 import('lib.pkp.classes.xml.XMLCustomWriter');

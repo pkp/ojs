@@ -12,9 +12,6 @@
  * @brief "Desert" theme plugin
  */
 
-// $Id$
-
-
 import('classes.plugins.ThemePlugin');
 
 class DesertThemePlugin extends ThemePlugin {

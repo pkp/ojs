@@ -12,9 +12,6 @@
  * @brief Form to perform an author's SWORD deposit(s)
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class AuthorDepositForm extends Form {

@@ -12,9 +12,6 @@
  * @brief Form to allow login to an external DuraCloud service.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class DuraCloudLoginForm extends Form {

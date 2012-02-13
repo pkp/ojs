@@ -15,9 +15,6 @@
  * sites/systems.
  */
 
-// $Id$
-
-
 switch ($op) {
 	case 'plugin':
 		define('HANDLER_CLASS', 'PaymentHandler');

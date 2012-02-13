@@ -15,8 +15,6 @@
  * @ingroup plugins_reports_reviews
  */
 
-//$Id$
-
 require_once('ReviewReportPlugin.inc.php');
 
 return new ReviewReportPlugin();

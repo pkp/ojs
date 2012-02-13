@@ -13,9 +13,6 @@
  * @brief DAO class for article search index.
  */
 
-// $Id$
-
-
 import('classes.search.ArticleSearch');
 
 class ArticleSearchDAO extends DAO {

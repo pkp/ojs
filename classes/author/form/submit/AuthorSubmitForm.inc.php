@@ -16,9 +16,6 @@
  * @brief Base class for journal author submit forms.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class AuthorSubmitForm extends Form {

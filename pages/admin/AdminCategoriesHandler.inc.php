@@ -11,7 +11,6 @@
  *
  * @brief Handle requests for changing admin's category list. 
  *
- * $Id$
  */
 
 import('pages.admin.AdminHandler');

@@ -12,9 +12,6 @@
  * @brief Handle requests for author SWORD deposits
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class SwordHandler extends Handler {

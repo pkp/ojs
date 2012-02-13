@@ -12,9 +12,6 @@
  * @brief Handle requests for public thesis abstract functions. 
  */
 
-// $Id$
-
-
 import('classes.handler.Handler');
 
 class ThesisHandler extends Handler {

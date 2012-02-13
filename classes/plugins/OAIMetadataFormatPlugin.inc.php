@@ -12,9 +12,6 @@
  * @brief Abstract class for OAI Metadata format plugins
  */
 
-// $Id$
-
-
 import('classes.plugins.Plugin');
 import('lib.pkp.classes.oai.OAIStruct');
 

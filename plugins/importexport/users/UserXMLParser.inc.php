@@ -13,9 +13,6 @@
  * See dbscripts/xml/dtd/users.dtd for the XML schema used.
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.xml.XMLParser');
 
 class UserXMLParser {

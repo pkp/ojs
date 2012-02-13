@@ -15,9 +15,6 @@
  *
  */
 
-// $Id$
-
-
 require_once('ApaCitationPlugin.inc.php');
 
 return new ApaCitationPlugin();

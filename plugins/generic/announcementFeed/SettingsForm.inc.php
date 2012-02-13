@@ -12,9 +12,6 @@
  * @brief Form for journal managers to modify announcement feed plugin settings
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form {

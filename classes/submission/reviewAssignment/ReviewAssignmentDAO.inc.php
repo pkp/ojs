@@ -13,9 +13,6 @@
  * @brief Class for DAO relating reviewers to articles.
  */
 
-// $Id$
-
-
 import('classes.submission.reviewAssignment.ReviewAssignment');
 import('lib.pkp.classes.submission.reviewAssignment.PKPReviewAssignmentDAO');
 

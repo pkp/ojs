@@ -12,9 +12,6 @@
  * @brief Annoucement Feed plugin class
  */
 
-// $Id$
-
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class AnnouncementFeedPlugin extends GenericPlugin {

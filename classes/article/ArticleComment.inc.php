@@ -12,9 +12,6 @@
  * @brief Class for ArticleComment.
  */
 
-// $Id$
-
-
 /** Comment associative types. All types must be defined here. */
 define('COMMENT_TYPE_PEER_REVIEW', 0x01);
 define('COMMENT_TYPE_EDITOR_DECISION', 0x02);

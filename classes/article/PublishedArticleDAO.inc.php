@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying PublishedArticle objects.
  */
 
-// $Id$
-
-
 import('classes.article.PublishedArticle');
 
 class PublishedArticleDAO extends DAO {

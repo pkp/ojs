@@ -12,9 +12,6 @@
  * @brief AuthorAction class.
  */
 
-// $Id$
-
-
 import('classes.submission.common.Action');
 
 class AuthorAction extends Action {

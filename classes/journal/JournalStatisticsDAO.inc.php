@@ -12,9 +12,6 @@
  * @brief Operations for retrieving journal statistics.
  */
 
-// $Id$
-
-
 define('REPORT_TYPE_JOURNAL',	0x00001);
 define('REPORT_TYPE_EDITOR',	0x00002);
 define('REPORT_TYPE_REVIEWER',	0x00003);

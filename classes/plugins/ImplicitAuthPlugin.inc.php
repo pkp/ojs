@@ -14,9 +14,6 @@
  * Contributed by Dan Galewsky, University of Texas
  */
 
-// $Id$
-
-
 import('classes.plugins.Plugin');
 
 class ImplicitAuthPlugin extends Plugin {

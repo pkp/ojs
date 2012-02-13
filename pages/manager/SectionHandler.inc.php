@@ -12,8 +12,6 @@
  * @brief Handle requests for section management functions.
  */
 
-// $Id$
-
 import('pages.manager.ManagerHandler');
 
 class SectionHandler extends ManagerHandler {

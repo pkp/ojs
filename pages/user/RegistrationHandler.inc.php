@@ -12,8 +12,6 @@
  * @brief Handle requests for user registration. 
  */
 
-// $Id$
-
 import('pages.user.UserHandler');
 
 class RegistrationHandler extends UserHandler {

@@ -12,8 +12,6 @@
  * Common actions for subscription management functions. 
  */
 
-// $Id$
-
 class SubscriptionAction {
 	/**
 	 * Display subscriptions summary page for the current journal.
