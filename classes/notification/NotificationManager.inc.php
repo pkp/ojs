@@ -203,9 +203,6 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.userComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return __('notification.type.issuePublished');
-			case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
-				assert($notification->getAssocType() == ASSOC_TYPE_ANNOUNCEMENT);
-				return __('notification.type.newAnnouncement');
 			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
 				return __('gifts.giftRedeemed');
 			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
