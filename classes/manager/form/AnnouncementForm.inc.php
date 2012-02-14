@@ -23,12 +23,11 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 * Constructor
 	 * @param announcementId int leave as default for new announcement
 	 */
-	function AnnouncementForm($announcementId = null) {
-		parent::PKPAnnouncementForm($announcementId);
-		$journal =& Request::getJournal();
+	function AnnouncementForm($journalId, $announcementId = null) {
+		parent::PKPAnnouncementForm($journalId, $announcementId);
 
 		// If provided, announcement type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'optional', 'manager.announcements.form.typeIdValid', create_function('$typeId, $journalId', '$announcementTypeDao =& DAORegistry::getDAO(\'AnnouncementTypeDAO\'); return $announcementTypeDao->announcementTypeExistsByTypeId($typeId, ASSOC_TYPE_JOURNAL, $journalId);'), array($journal->getId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'optional', 'manager.announcements.form.typeIdValid', create_function('$typeId, $journalId', '$announcementTypeDao =& DAORegistry::getDAO(\'AnnouncementTypeDAO\'); return $announcementTypeDao->announcementTypeExistsByTypeId($typeId, ASSOC_TYPE_JOURNAL, $journalId);'), array($journalId)));
 	}
 
 	/**
@@ -41,8 +40,8 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	}
 
 	function _getAnnouncementTypesAssocId() {
-		$journal =& Request::getJournal();
-		return array(ASSOC_TYPE_JOURNAL, $journal->getId());
+		$journalId = $this->getContextId();
+		return array(ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -50,9 +49,9 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 * @param Announcement the announcement to be modified
 	 */
 	function _setAnnouncementAssocId(&$announcement) {
-		$journal =& Request::getJournal();
+		$journalId = $this->getContextId();
 		$announcement->setAssocType(ASSOC_TYPE_JOURNAL);
-		$announcement->setAssocId($journal->getId());
+		$announcement->setAssocId($journalId);
 	}
 
 	/**
@@ -61,8 +60,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 */
 	function execute(&$request) {
 		$announcement = parent::execute();
-		$journal =& $request->getJournal();
-		$journalId = $journal->getId();
+		$journalId = $this->getContextId();
 
 		// Send a notification to associated users
 		import('classes.notification.NotificationManager');
