@@ -47,14 +47,27 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	}
 
 	/**
+	 * @see PKPAnnouncementHandler::getContextId()
+	 */
+	function getContextId(&$request) {
+		$journal =& $request->getJournal();
+		if ($journal) {
+			return $journal->getId();
+		} else {
+			return null;
+		}
+
+	}
+
+	/**
 	 * @see PKPAnnouncementHandler::_getAnnouncements
 	 * @param $request PKPRequest
 	 * @param $rangeInfo Object optional
 	 */
 	function &_getAnnouncements($request, $rangeInfo = null) {
-		$journal =& $request->getJournal();
+		$journalId = $this->getContextId($request);
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
+		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 
 		return $announcements;
 	}
@@ -65,9 +78,9 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * @param $rangeInfo object optional
 	 */
 	function &_getAnnouncementTypes(&$request, $rangeInfo = null) {
-		$journal =& $request->getJournal();
+		$journalId = $this->getContextId($request);
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
+		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 
 		return $announcements;
 	}
@@ -84,10 +97,10 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
 		$announcement =& $announcementDao->getAnnouncement($announcementId);
 
-		$journal =& $request->getJournal();
-		if ( $announcement && $journal
+		$journalId = $this->getContextId($request);
+		if ( $announcement && $journalId
 			&& $announcement->getAssocType() == ASSOC_TYPE_JOURNAL
-			&& $announcement->getAssocId() == $journal->getId())
+			&& $announcement->getAssocId() == $journalId)
 				return true;
 
 		return false;
@@ -100,9 +113,9 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * return bool
 	 */
 	function _announcementTypeIsValid(&$request, $typeId) {
-		$journal =& $request->getJournal();
+		$journalId = $this->getContextId($request);
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journal->getId()) || $typeId == null);
+		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journalId) || $typeId == null);
 	}
 }
 
