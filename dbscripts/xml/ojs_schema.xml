@@ -672,7 +672,7 @@
 	  *
 	  -->
 	<table name="published_articles">
-		<field name="pub_id" type="I8">
+		<field name="published_article_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>

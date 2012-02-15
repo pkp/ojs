@@ -33,15 +33,15 @@ class PublishedArticle extends Article {
 	 * @return int
 	 */
 	function getPublishedArticleId() {
-		return $this->getData('pubId');
+		return $this->getData('publishedArticleId');
 	}
 
 	/**
 	 * Set ID of published article.
-	 * @param $pubId int
+	 * @param $publishedArticleId int
 	 */
-	function setPublishedArticleId($pubId) {
-		return $this->setData('pubId', $pubId);
+	function setPublishedArticleId($publishedArticleId) {
+		return $this->setData('publishedArticleId', $publishedArticleId);
 	}
 
 	/**
