@@ -30,7 +30,7 @@
 	</sql>
 	<!-- Bug #5490: port authors into pkp-lib -->
 	<sql>
+		<rename table="article_authors" column="article_id" to="submission_id" />
 		<rename table="article_authors" to="authors" />
-		<rename table="authors" column="article_id" to="submission_id" />
 	</sql>
 </data>

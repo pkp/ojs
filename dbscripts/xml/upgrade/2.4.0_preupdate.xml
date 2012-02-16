@@ -15,8 +15,8 @@
 	<!-- Bug #6021: port logs to pkp-lib -->
 	<sql>
 		<!-- article_email_log -->
+		<rename table="article_email_log" column="article_id" to="assoc_id" />
 		<rename table="article_email_log" to="email_log" />
-		<rename table="email_log" column="article_id" to="assoc_id" />
 	</sql>
 
 	<!-- Bug #6128: Change paper_files 'type' column to 'file_stage' -->
