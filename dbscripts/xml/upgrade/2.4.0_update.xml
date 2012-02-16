@@ -47,4 +47,22 @@
 		<!-- Migrate article_email_log contents to email_log -->
 		<query>UPDATE email_log SET assoc_type = 257</query><!-- ASSOC_TYPE_ARTICLE -->
 	</sql>
+	
+	<sql>
+		<!--
+			Enable the new DOI plug-in for all journals that have a DOI prefix set. (Setting a prefix was the prior method to enable DOIs.)
+			
+			NB: We maintain idempotency by left-joining to the plugin settings table and only inserting the
+			new value if there is no existing value for this journal, plugin and setting.  
+		-->
+		<query>INSERT INTO plugin_settings (plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', js.journal_id, 'enabled', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enabled' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
+		<query>INSERT INTO plugin_settings (plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', js.journal_id, 'enableArticleDoi', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enableArticleDoi' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
+		
+		<!-- Copy all existing DOI configuration from the journal settings table to the plugin settings table. -->
+		<query>INSERT INTO plugin_settings(plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', journal_id, setting_name, setting_value, setting_type FROM journal_settings WHERE setting_name IN ('doiPrefix', 'doiSuffix')</query>
+		<query>INSERT INTO plugin_settings(plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', journal_id, 'doiArticleSuffixPattern', setting_value, setting_type FROM journal_settings WHERE setting_name = 'doiSuffixPattern'</query>
+		
+		<!-- Delete all existing DOI configuration from the journal settings table. -->
+		<query>DELETE FROM journal_settings WHERE setting_name IN ('doiPrefix', 'doiSuffix', 'doiSuffixPattern')</query>
+	</sql>
 </data>

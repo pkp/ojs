@@ -17,6 +17,7 @@
 		  - Migrate public IDs to settings tables.
 		  -->
 		<query>INSERT INTO issue_galleys (galley_id, locale, issue_id, file_id, label, seq, views) SELECT galley_id, locale, issue_id, file_id, label, seq, views FROM issue_galleys_old</query>
+		<query driver="postgres7">SELECT SETVAL('issue_galleys_galley_id_seq', (SELECT MAX(galley_id) FROM issue_galleys)+1)</query>
 		<query>INSERT INTO issue_galley_settings (galley_id, setting_name, setting_value, setting_type, locale) SELECT galley_id, 'pub-id::publisher-id', public_galley_id, 'string', '' FROM issue_galleys_old</query>
 		<query>DROP TABLE issue_galleys_old</query>
 	</sql>
