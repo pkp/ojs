@@ -29,13 +29,24 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::SectionEditorHandler();
 	}
 
+	/**
+	 * Get the operation name for the page the user is coming from
+	 * (persisted via URL parameters for some operations)
+	 * @param $default The default value to use if none specified via URL
+	 * @return string
+	 */
 	function _getFrom($default = 'submissionEditing') {
 		$from = Request::getUserVar('from');
 		if (!in_array($from, array('submission', 'submissionEditing'))) return $default;
 		return $from;
 	}
 
-	function submission($args) {
+	/**
+	 * View the submission page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function submission($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
 		$journal =& Request::getJournal();
@@ -95,7 +106,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
 			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
@@ -118,10 +129,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
 
-	function submissionRegrets($args) {
+	/**
+	 * View the submission regrets page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function submissionRegrets($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'review');
 
@@ -258,6 +274,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 	}
 
+	/**
+	 * View the submission editing page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function submissionEditing($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -303,7 +324,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
@@ -2436,10 +2457,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}
 
-	/**
-	 * Payments
-	 */
+	//
+	// Payments
+	//
 
+	/**
+	 * Waive a submission fee.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function waiveSubmissionFee($args, $request) {
 		$articleId = (int) array_shift($args);
 		$markAsPaid = $request->getUserVar('markAsPaid');
@@ -2447,7 +2473,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$submission =& $this->submission;
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
 
@@ -2467,16 +2493,21 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submission', array($articleId));
 	}
 
-	function waiveFastTrackFee($args) {
+	/**
+	 * Waive the fast track fee.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function waiveFastTrackFee($args, &$request) {
 		$articleId = (int) array_shift($args);
-		$markAsPaid = Request::getUserVar('markAsPaid');
+		$markAsPaid = $request->getUserVar('markAsPaid');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
-		$user =& Request::getUser();
+		$paymentManager = new OJSPaymentManager($request);
+		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),
@@ -2491,21 +2522,26 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Since this is a waiver, fulfill the payment immediately
 		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
-		Request::redirect(null, null, 'submission', array($articleId));
+		$request->redirect(null, null, 'submission', array($articleId));
 	}
 
-	function waivePublicationFee($args) {
+	/**
+	 * Waive the publication fee.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function waivePublicationFee($args, $request) {
 		$articleId = (int) array_shift($args);
-		$markAsPaid = Request::getUserVar('markAsPaid');
-		$sendToScheduling = Request::getUserVar('sendToScheduling')?true:false;
+		$markAsPaid = $request->getUserVar('markAsPaid');
+		$sendToScheduling = $request->getUserVar('sendToScheduling')?true:false;
 
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
-		$user =& Request::getUser();
+		$paymentManager = new OJSPaymentManager($request);
+		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),
@@ -2521,10 +2557,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Since this is a waiver, fulfill the payment immediately
 		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 
-		if ( $sendToScheduling ) {
-			Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
+		if ($sendToScheduling) {
+			$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 		} else {
-			Request::redirect(null, null, 'submission', array($articleId));
+			$request->redirect(null, null, 'submission', array($articleId));
 		}
 	}
 

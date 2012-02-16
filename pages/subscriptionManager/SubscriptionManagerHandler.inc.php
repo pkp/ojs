@@ -295,24 +295,28 @@ class SubscriptionManagerHandler extends Handler {
 
 	/**
 	 * Display subscription policies for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function subscriptionPolicies() {
+	function subscriptionPolicies($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::subscriptionPolicies();
+		SubscriptionAction::subscriptionPolicies($args, $request);
 	}
 
 	/**
 	 * Save subscription policies for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function saveSubscriptionPolicies($args = array()) {
+	function saveSubscriptionPolicies($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::saveSubscriptionPolicies($args);
+		SubscriptionAction::saveSubscriptionPolicies($args, $request);
 	}
 
 	/**

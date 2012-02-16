@@ -5,7 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for manual payment settings.
- *
  *}
 	<tr>
 		<td colspan="2"><h4>{translate key="plugins.paymethod.manual.settings"}</h4></td>

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * plugins/paymethod/paypal/locale/pt_PT/emailTemplateData.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
-  * $Id$
   -->
 <email_texts locale="pt_PT">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">

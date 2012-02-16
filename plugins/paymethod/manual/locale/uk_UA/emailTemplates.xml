@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplates.xml
+  * plugins/paymethod/manual/locale/uk_UA/emailTemplates.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -10,7 +10,6 @@
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
-  * $Id$
   -->
 <email_texts locale="uk_UA">
        <email_text key="MANUAL_PAYMENT_NOTIFICATION">

@@ -30,15 +30,11 @@ define('PAYMENT_TYPE_GIFT',			0x000000010);
 
 class OJSPaymentManager extends PaymentManager {
 	/**
-	 * Get an instance of the payment manager.
-	 * @return OJSPaymentManager
+	 * Constructor
+	 * @param $request PKPRequest
 	 */
-	function &getManager() {
-		static $manager;
-		if (!isset($manager)) {
-			$manager = new OJSPaymentManager();
-		}
-		return $manager;
+	function OJSPaymentManager(&$request) {
+		parent::PaymentManager($request);
 	}
 
 	/**
@@ -46,7 +42,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return parent::isConfigured() && $journal->getSetting('journalPaymentsEnabled');
 	}
 
@@ -69,20 +65,20 @@ class OJSPaymentManager extends PaymentManager {
 
 	 	switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId));
+				$payment->setRequestUrl($this->request->url(null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				$payment->setRequestUrl(Request::url(null, 'issue', 'view', $assocId));
+				$payment->setRequestUrl($this->request->url(null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
-				$payment->setRequestUrl(Request::url(null, 'user'));
+				$payment->setRequestUrl($this->request->url(null, 'user'));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl(Request::url(null, 'user', 'subscriptions'));
+				$payment->setRequestUrl($this->request->url(null, 'user', 'subscriptions'));
 				break;
 			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl(Request::url(null, 'donations', 'thankYou'));
+				$payment->setRequestUrl($this->request->url(null, 'donations', 'thankYou'));
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
@@ -90,13 +86,13 @@ class OJSPaymentManager extends PaymentManager {
 				$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 				$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($assocId);
 				if ($authorSubmission->getSubmissionProgress()!=0) {
-					$payment->setRequestUrl(Request::url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
+					$payment->setRequestUrl($this->request->url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
 				} else {
-					$payment->setRequestUrl(Request::url(null, 'author'));
+					$payment->setRequestUrl($this->request->url(null, 'author'));
 				}
 				break;
 			case PAYMENT_TYPE_GIFT:
-				$payment->setRequestUrl(Request::url(null, 'gifts', 'thankYou'));
+				$payment->setRequestUrl($this->request->url(null, 'gifts', 'thankYou'));
 				break;
 			default:
 				// Invalid payment type
@@ -132,7 +128,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function donationEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');
 	}
 
@@ -141,7 +137,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function submissionEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;
 	}
 
@@ -150,7 +146,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function fastTrackEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('fastTrackFeeEnabled') && $journal->getSetting('fastTrackFee') > 0;
 	}
 
@@ -159,7 +155,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function publicationEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
 	}
 
@@ -168,7 +164,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function membershipEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;
 	}
 
@@ -177,7 +173,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseArticleEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
 	}
 
@@ -186,7 +182,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseIssueEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('purchaseIssueFeeEnabled') && $journal->getSetting('purchaseIssueFee') > 0;
 	}
 
@@ -195,7 +191,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function onlyPdfEnabled() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');
 	}
 
@@ -204,7 +200,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function acceptSubscriptionPayments() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');
 	}
 
@@ -213,7 +209,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function acceptGiftPayments() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->acceptGiftSubscriptionPayments();
 	}
 
@@ -222,7 +218,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function acceptGiftSubscriptionPayments() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		return $this->isConfigured() && $journal->getSetting('acceptGiftSubscriptionPayments');
 	}
 
@@ -231,7 +227,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return PaymentPlugin
 	 */
 	function &getPaymentPlugin() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
@@ -451,7 +447,7 @@ class OJSPaymentManager extends PaymentManager {
 					'recipientFirstName' => $recipientFirstName,
 					'buyerFullName' => $buyerFullName,
 					'giftDetails' => $giftDetails,
-					'giftUrl' => Request::url($journal->getPath(), 'user', 'gifts'),
+					'giftUrl' => $request->url($journal->getPath(), 'user', 'gifts'),
 					'username' => $user->getUsername(),
 					'giftContactSignature' => $giftContactSignature
 				);

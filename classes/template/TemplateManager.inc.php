@@ -115,7 +115,7 @@ class TemplateManager extends PKPTemplateManager {
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager =& OJSPaymentManager::getManager();
+				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));

@@ -24,8 +24,10 @@ class UserHandler extends Handler {
 
 	/**
 	 * Display user index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index() {
+	function index($args, &$request) {
 		$this->validate();
 
 		$sessionManager =& SessionManager::getManager();
@@ -33,13 +35,13 @@ class UserHandler extends Handler {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$templateMgr->assign('helpTopicId', 'user.userHome');
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 
 		$setupIncomplete = array();
@@ -89,7 +91,7 @@ class UserHandler extends Handler {
 			$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 
 			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
+			$paymentManager = new OJSPaymentManager($request);
 			$acceptGiftPayments = $paymentManager->acceptGiftPayments();
 			$templateMgr->assign('acceptGiftPayments', $acceptGiftPayments);
 			$membershipEnabled = $paymentManager->membershipEnabled();
@@ -114,22 +116,24 @@ class UserHandler extends Handler {
 
 	/**
 	 * Display user gifts page
-	 **/
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function gifts($args, $request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
 
 		// Ensure gift payments are enabled
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
-		if (!$acceptGiftPayments) Request::redirect(null, 'user');
+		if (!$acceptGiftPayments) $request->redirect(null, 'user');
 
 		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 
 		// Get user's redeemed and unreedemed gift subscriptions
@@ -141,7 +145,7 @@ class UserHandler extends Handler {
 			$userId
 		);
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
@@ -154,23 +158,25 @@ class UserHandler extends Handler {
 
 	/**
 	 * User redeems a gift
-	 **/
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function redeemGift($args, $request) {
 		$this->validate();
 
-		if (empty($args)) Request::redirect(null, 'user');
+		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
 
 		// Ensure gift payments are enabled
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
-		if (!$acceptGiftPayments) Request::redirect(null, 'user');
+		if (!$acceptGiftPayments) $request->redirect(null, 'user');
 
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 		$giftId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -218,22 +224,23 @@ class UserHandler extends Handler {
 
 	/**
 	 * Display subscriptions page
-	 **/
-	function subscriptions() {
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function subscriptions($args, &$request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
-		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION)
-			Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
+		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		$journalId = $journal->getId();
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$individualSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, false);
 		$institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true);
-		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) Request::redirect(null, 'user');
+		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) $request->redirect(null, 'user');
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 
 		// Subscriptions contact and additional information
@@ -255,10 +262,10 @@ class UserHandler extends Handler {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->assign('subscriptionName', $subscriptionName);
@@ -378,12 +385,14 @@ class UserHandler extends Handler {
 
 	/**
 	 * Become a given role.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function become($args) {
+	function become($args, &$request) {
 		parent::validate(true);
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 
 		switch (array_shift($args)) {
 			case 'author':
@@ -397,7 +406,7 @@ class UserHandler extends Handler {
 				$deniedKey = 'user.noRoles.regReviewerClosed';
 				break;
 			default:
-				Request::redirect(null, null, 'index');
+				$request->redirect(null, null, 'index');
 		}
 
 		if ($journal->getSetting($setting)) {
@@ -408,7 +417,7 @@ class UserHandler extends Handler {
 
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roleDao->insertRole($role);
-			Request::redirectUrl(Request::getUserVar('source'));
+			$request->redirectUrl($request->getUserVar('source'));
 		} else {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('message', $deniedKey);
@@ -424,7 +433,7 @@ class UserHandler extends Handler {
 	function authorizationDenied($args, &$request) {
 		$this->validate(true);
 		$authorizationMessage = htmlentities($request->getUserVar('message'));
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('message', $authorizationMessage);
@@ -445,14 +454,15 @@ class UserHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate(&$request, $subclass = false) {
 		parent::setupTemplate();
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_MANAGER);
 		$templateMgr =& TemplateManager::getManager();
 		if ($subclass) {
-			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
+			$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user')));
 		}
 	}
 
@@ -478,8 +488,10 @@ class UserHandler extends Handler {
 	/**
 	 * View the public user profile for a user, specified by user ID,
 	 * if that user should be exposed for public view.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function viewPublicProfile($args) {
+	function viewPublicProfile($args, &$request) {
 		$this->validate(false);
 		$templateMgr =& TemplateManager::getManager();
 		$userId = (int) array_shift($args);
@@ -494,7 +506,7 @@ class UserHandler extends Handler {
 			$accountIsVisible = true;
 		}
 
-		if(!$accountIsVisible) Request::redirect(null, 'index');
+		if(!$accountIsVisible) $request->redirect(null, 'index');
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getUser($userId);
@@ -507,23 +519,27 @@ class UserHandler extends Handler {
 	//
 	// Payments
 	//
-	function purchaseSubscription($args) {
+	/**
+	 * Purchase a subscription.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function purchaseSubscription($args, &$request) {
 		$this->validate();
 
-		if (empty($args)) Request::redirect(null, 'user');
+		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
-			Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate(true);
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -545,7 +561,7 @@ class UserHandler extends Handler {
 		if (isset($subscriptionId)) {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
-				Request::redirect(null, 'user');
+				$request->redirect(null, 'user');
 			}
 
 			// Ensure subscription can be updated
@@ -558,23 +574,23 @@ class UserHandler extends Handler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
+			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
 			if ($institutional) {
-				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $userId, $subscriptionId);
 			} else {
-				$subscriptionForm = new UserIndividualSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($request, $userId, $subscriptionId);
 			}
 
 		} else {
 			if ($institutional) {
-				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $userId);
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
-					Request::redirect(null, 'user');
+					$request->redirect(null, 'user');
 				}
-				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($request, $userId);
 			}
 		}
 
@@ -582,23 +598,27 @@ class UserHandler extends Handler {
 		$subscriptionForm->display();
 	}
 
-	function payPurchaseSubscription($args) {
+	/**
+	 * Pay for a subscription purchase.
+ 	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function payPurchaseSubscription($args, &$request) {
 		$this->validate();
 
-		if (empty($args)) Request::redirect(null, 'user');
+		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
-			Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate(true);
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -620,7 +640,7 @@ class UserHandler extends Handler {
 		if (isset($subscriptionId)) {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) {
-				Request::redirect(null, 'user');
+				$request->redirect(null, 'user');
 			}
 
 			// Ensure subscription can be updated
@@ -633,36 +653,36 @@ class UserHandler extends Handler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
+			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
 			if ($institutional) {
-				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $userId, $subscriptionId);
 			} else {
-				$subscriptionForm = new UserIndividualSubscriptionForm($userId, $subscriptionId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($request, $userId, $subscriptionId);
 			}
 
 		} else {
 			if ($institutional) {
-				$subscriptionForm = new UserInstitutionalSubscriptionForm($userId);
+				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $userId);
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($userId, $journalId)) {
-					Request::redirect(null, 'user');
+					$request->redirect(null, 'user');
 				}
-				$subscriptionForm = new UserIndividualSubscriptionForm($userId);
+				$subscriptionForm = new UserIndividualSubscriptionForm($request, $userId);
 			}
 		}
 
 		$subscriptionForm->readInputData();
 
 		// Check for any special cases before trying to save
-		if (Request::getUserVar('addIpRange')) {
+		if ($request->getUserVar('addIpRange')) {
 			$editData = true;
 			$ipRanges = $subscriptionForm->getData('ipRanges');
 			$ipRanges[] = '';
 			$subscriptionForm->setData('ipRanges', $ipRanges);
 
-		} else if (($delIpRange = Request::getUserVar('delIpRange')) && count($delIpRange) == 1) {
+		} else if (($delIpRange = $request->getUserVar('delIpRange')) && count($delIpRange) == 1) {
 			$editData = true;
 			list($delIpRange) = array_keys($delIpRange);
 			$delIpRange = (int) $delIpRange;
@@ -682,23 +702,27 @@ class UserHandler extends Handler {
 		}
 	}
 
-	function completePurchaseSubscription($args) {
+	/**
+	 * Complete the purchase subscription process.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function completePurchaseSubscription($args, &$request) {
 		$this->validate();
 
-		if (count($args) != 2) Request::redirect(null, 'user');
+		if (count($args) != 2) $request->redirect(null, 'user');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
-			Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate(true);
-		$user =& Request::getUser();
+		$this->setupTemplate($request, true);
+		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -711,14 +735,14 @@ class UserHandler extends Handler {
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'user');
 
 		$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
-		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
+		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -729,23 +753,27 @@ class UserHandler extends Handler {
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
 
-	function payRenewSubscription($args) {
+	/**
+	 * Pay the "renew subscription" fee.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function payRenewSubscription($args, &$request) {
 		$this->validate();
 
-		if (count($args) != 2) Request::redirect(null, 'user');
+		if (count($args) != 2) $request->redirect(null, 'user');
 
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'user');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
-			Request::redirect(null, 'user');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'user');
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'user');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate(true);
-		$user =& Request::getUser();
+		$this->setupTemplate($request, true);
+		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -758,11 +786,11 @@ class UserHandler extends Handler {
 			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) Request::redirect(null, 'user');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'user');
 
 		$subscription =& $subscriptionDao->getSubscription($subscriptionId);
 
-		if ($subscription->isNonExpiring()) Request::redirect(null, 'user');
+		if ($subscription->isNonExpiring()) $request->redirect(null, 'user');
 
 		import('classes.subscription.Subscription');
 		$subscriptionStatus = $subscription->getStatus();
@@ -772,7 +800,7 @@ class UserHandler extends Handler {
 			SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 		);
 
-		if (!in_array($subscriptionStatus, $validStatus)) Request::redirect(null, 'user');
+		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -783,15 +811,20 @@ class UserHandler extends Handler {
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
 
-	function payMembership($args) {
+	/**
+	 * Pay for a membership.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function payMembership($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

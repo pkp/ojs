@@ -42,17 +42,18 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, $request) {
+		$journal =& $request->getJournal();
 		$journalId = ($journal)?$journal->getId():null;
 		if (!$journal) return '';
 
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			return '';
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$userId = ($user)?$user->getId():null;
 		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
@@ -64,19 +65,19 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 
 		// If no individual subscription or if not valid, check for institutional subscription
 		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
-			$IP = Request::getRemoteAddr();
+			$ip = $request->getRemoteAddr();
 			$domain = Request::getRemoteDomain();
 			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $journalId);
+			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journalId);
 			if ($subscriptionId) {
 				$institutionalSubscription =& $subscriptionDao->getSubscription($subscriptionId);
 				$templateMgr->assign_by_ref('institutionalSubscription', $institutionalSubscription);
-				$templateMgr->assign('userIP', $IP);
+				$templateMgr->assign('userIP', $ip);
 			}
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
 			$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
@@ -86,7 +87,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

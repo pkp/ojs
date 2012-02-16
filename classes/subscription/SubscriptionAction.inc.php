@@ -529,8 +529,10 @@ class SubscriptionAction {
 
 	/**
 	 * Display subscription policies for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function subscriptionPolicies() {
+	function subscriptionPolicies($args, &$request) {
 		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$templateMgr =& TemplateManager::getManager();
@@ -541,7 +543,7 @@ class SubscriptionAction {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
@@ -555,8 +557,10 @@ class SubscriptionAction {
 
 	/**
 	 * Save subscription policies for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function saveSubscriptionPolicies($args = array()) {
+	function saveSubscriptionPolicies($args, &$request) {
 		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
@@ -570,7 +574,7 @@ class SubscriptionAction {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());				
 
 		if ($subscriptionPolicyForm->validate()) {

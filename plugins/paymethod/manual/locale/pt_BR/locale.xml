@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/manual/locale/pt_BR/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.paymethod.manual.displayName">Controle de pagamento manual</message>

@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/ja_JP/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ja_JP locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.paymethod.paypal.displayName">PayPalによる料金支払い</message>

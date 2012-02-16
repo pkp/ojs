@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ca_ES (Català) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.paymethod.paypal.displayName">Pagament de la quota amb PayPal</message>

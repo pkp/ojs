@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/fr_CA/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.paymethod.paypal.displayName">Paiement des frais par Paypal</message>

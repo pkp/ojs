@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/hr_HR/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (hrvatski) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.paymethod.paypal.displayName">Uplata naknada putem PayPal-a</message>

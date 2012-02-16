@@ -2,14 +2,12 @@
 <!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
 
 <!--
-  * schema.xml
+  * plugins/paymethod/paypal/schema.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * PayPal plugin schema in XML.
-  *
-  * $Id$
   -->
 
 <schema version="0.2">

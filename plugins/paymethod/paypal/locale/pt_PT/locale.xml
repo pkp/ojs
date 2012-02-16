@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/pt_PT/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.paymethod.paypal.displayName">Plugin de Pagamento via Paypal</message>

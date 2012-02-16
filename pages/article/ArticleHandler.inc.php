@@ -128,7 +128,7 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
 			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
+			$paymentManager = new OJSPaymentManager($request);
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
@@ -478,7 +478,7 @@ class ArticleHandler extends Handler {
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,
 					import('classes.payment.ojs.OJSPaymentManager');
-					$paymentManager =& OJSPaymentManager::getManager();
+					$paymentManager = new OJSPaymentManager($request);
 
 					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {
 						/* if only pdf files are being restricted, then approve all non-pdf galleys

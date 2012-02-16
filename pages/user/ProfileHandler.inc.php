@@ -24,10 +24,12 @@ class ProfileHandler extends UserHandler {
 
 	/**
 	 * Display form to edit user's profile.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function profile($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.user.form.ProfileForm');
 
@@ -42,10 +44,12 @@ class ProfileHandler extends UserHandler {
 
 	/**
 	 * Validate and save changes to user's profile.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function saveProfile() {
+	function saveProfile($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$dataModified = false;
 
 		import('classes.user.form.ProfileForm');
@@ -53,19 +57,19 @@ class ProfileHandler extends UserHandler {
 		$profileForm = new ProfileForm();
 		$profileForm->readInputData();
 
-		if (Request::getUserVar('uploadProfileImage')) {
+		if ($request->getUserVar('uploadProfileImage')) {
 			if (!$profileForm->uploadProfileImage()) {
 				$profileForm->addError('profileImage', __('user.profile.form.profileImageInvalid'));
 			}
 			$dataModified = true;
-		} else if (Request::getUserVar('deleteProfileImage')) {
+		} else if ($request->getUserVar('deleteProfileImage')) {
 			$profileForm->deleteProfileImage();
 			$dataModified = true;
 		}
 
 		if (!$dataModified && $profileForm->validate()) {
 			$profileForm->execute();
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 
 		} else {
 			$profileForm->display();
@@ -74,10 +78,12 @@ class ProfileHandler extends UserHandler {
 
 	/**
 	 * Display form to change user's password.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function changePassword() {
+	function changePassword($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.user.form.ChangePasswordForm');
 
@@ -92,8 +98,10 @@ class ProfileHandler extends UserHandler {
 
 	/**
 	 * Save user's new password.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function savePassword() {
+	function savePassword($args, &$request) {
 		$this->validate();
 
 		import('classes.user.form.ChangePasswordForm');
@@ -105,16 +113,15 @@ class ProfileHandler extends UserHandler {
 		}
 		$passwordForm->readInputData();
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		if ($passwordForm->validate()) {
 			$passwordForm->execute();
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 
 		} else {
 			$passwordForm->display();
 		}
 	}
-
 }
 
 ?>

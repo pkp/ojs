@@ -12,8 +12,6 @@
  *
  * @ingroup plugins
  * @brief Wrapper for PayPal plugin.
- *
- *
  */
  
 require_once('PayPalPlugin.inc.php'); 

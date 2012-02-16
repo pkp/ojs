@@ -21,46 +21,50 @@ import('classes.handler.Handler');
 class GiftsHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function GiftsHandler() {
 		parent::Handler();
 	}
 
 	/**
 	 * Display payment form for buying a gift subscription
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */	
 	function purchaseGiftSubscription($args, $request) {
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'index');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'index');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'index');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate();
 
 		import('classes.subscription.form.GiftIndividualSubscriptionForm');
-		$giftSubscriptionForm = new GiftIndividualSubscriptionForm();
+		$giftSubscriptionForm = new GiftIndividualSubscriptionForm($request);
 		$giftSubscriptionForm->initData();
 		$giftSubscriptionForm->display();
 	}
 
 	/**
 	 * Process payment form for buying a gift subscription
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function payPurchaseGiftSubscription($args, $request) {
-		$journal =& Request::getJournal();
-		if (!$journal) Request::redirect(null, 'index');
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect(null, 'index');
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
-		if (!$acceptSubscriptionPayments) Request::redirect(null, 'index');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate();
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		// If buyer is logged in, save buyer user id as part of gift details
 		if ($user) {
@@ -82,14 +86,16 @@ class GiftsHandler extends Handler {
 
 	/**
 	 * Display generic thank you message following payment
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function thankYou($args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$templateMgr->assign(array(
-			'currentUrl' => Request::url(null, null, 'gifts'),
+			'currentUrl' => $request->url(null, null, 'gifts'),
 			'pageTitle' => 'gifts.thankYou',
 			'journalName' => $journal->getLocalizedTitle(),
 			'message' => 'gifts.thankYouMessage'

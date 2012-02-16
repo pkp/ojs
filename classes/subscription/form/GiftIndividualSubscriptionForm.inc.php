@@ -19,6 +19,8 @@
 import('lib.pkp.classes.form.Form');
 
 class GiftIndividualSubscriptionForm extends Form {
+	/** @var $request PKPRequest */
+	var $request;
 
 	/** @var userId int the buyer associated with the gift purchase */
 	var $buyerUserId;
@@ -30,12 +32,12 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Constructor
 	 * @param buyerUserId int
 	 */
-	function GiftIndividualSubscriptionForm($buyerUserId = null) {
+	function GiftIndividualSubscriptionForm($request, $buyerUserId = null) {
 		parent::Form('subscription/giftIndividualSubscriptionForm.tpl');
 
 		$this->buyerUserId = isset($buyerUserId) ? (int) $buyerUserId : null;
-
-		$journal =& Request::getJournal();
+		$this->request =& $request;
+		$journal =& $this->request->getJournal();
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -82,7 +84,7 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);
@@ -115,13 +117,13 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Queue payment and save gift details.
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		$journalId = $journal->getId();
 
 		// Create new gift and save details
 		import('classes.gift.Gift');
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($this->request);
 		$paymentPlugin =& $paymentManager->getPaymentPlugin();
 
 		$gift = new Gift();

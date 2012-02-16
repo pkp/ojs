@@ -340,7 +340,7 @@ class NotificationManager extends PKPNotificationManager {
 		if (!$journal) return array();
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 
 		$settings = array('subscriptionsEnabled' => $paymentManager->acceptSubscriptionPayments(),
 				'allowRegReviewer' => $journal->getSetting('allowRegReviewer'),

@@ -19,7 +19,7 @@ class PaymethodPlugin extends Plugin {
 	 * Constructor
 	 */
 	function PaymethodPlugin() {
-		parent::plugin();
+		parent::Plugin();
 	}
 
 	/**
@@ -62,10 +62,21 @@ class PaymethodPlugin extends Plugin {
 		return parent::getTemplatePath() . 'templates' . DIRECTORY_SEPARATOR ;
 	}
 
-	function displayPaymentForm($queuedPaymentId, $key, &$queuedPayment) {
+	/**
+	 * Display the payment form.
+	 * @param $queuedPaymentId int
+	 * @param $key string
+	 * @param $queuedPayment QueuedPayment
+	 * @param $request PKPRequest
+	 */
+	function displayPaymentForm($queuedPaymentId, $key, &$queuedPayment, $request) {
 		assert(false); // Should always be overridden
 	}
 
+	/**
+	 * Determine whether or not the payment plugin is configured for use.
+	 * @return boolean
+	 */
 	function isConfigured() {
 		return false; // Abstract; should be implemented in subclasses
 	}
@@ -74,6 +85,8 @@ class PaymethodPlugin extends Plugin {
 	 * This is a hook wrapper that is responsible for calling
 	 * displayPaymentSettingsForm. Subclasses should override
 	 * displayPaymentSettingsForm as necessary.
+	 * @param $hookName string
+	 * @param $args array
 	 */
 	function _smartyDisplayPaymentSettingsForm($hookName, $args) {
 		$params =& $args[0];
@@ -86,10 +99,19 @@ class PaymethodPlugin extends Plugin {
 		return false;
 	}
 
+	/**
+	 * Display the payment settings form.
+	 * @param $params array
+	 * @param $smarty Smarty
+	 */
 	function displayPaymentSettingsForm(&$params, &$smarty) {
 		return $smarty->fetch($this->getTemplatePath() . 'settingsForm.tpl');
 	}
 
+	/**
+	 * Fetch the settings form field names.
+	 * @return array
+	 */
 	function getSettingsFormFieldNames() {
 		return array(); // Subclasses should override
 	}
@@ -97,10 +119,12 @@ class PaymethodPlugin extends Plugin {
 	/**
 	 * Handle an incoming request from a user callback or an external
 	 * payment processing system.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function handle($args) {
+	function handle($args, &$request) {
 		// Subclass should override.
-		Request::redirect(null, null, 'index');
+		$request->redirect(null, null, 'index');
 	}
 }
 

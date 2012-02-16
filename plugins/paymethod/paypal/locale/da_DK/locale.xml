@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/da_DK/locale.xml
   *
   * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dutch) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="da_DK" full_name="Dutch">
 	<message key="plugins.paymethod.paypal.displayName">PayPal gebyrbetaling</message>

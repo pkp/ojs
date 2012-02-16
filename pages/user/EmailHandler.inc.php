@@ -21,11 +21,16 @@ class EmailHandler extends UserHandler {
 	function EmailHandler() {
 		parent::UserHandler();
 	}
-	
-	function email($args, $request) {
+
+	/**
+	 * Display a "send email" template or send an email.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function email($args, &$request) {
 		$this->validate();
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$templateMgr =& TemplateManager::getManager();
 

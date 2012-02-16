@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/manual/locale/no_NO/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the no_NO (Norwegian) locale.
-  *
-  * $Id: locale.xml,v 1.4 2009/08/17 23:38:36 asmecher Exp $
- -->
+  -->
  
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.paymethod.manual.displayName">Manuell betaling av gebyr</message>

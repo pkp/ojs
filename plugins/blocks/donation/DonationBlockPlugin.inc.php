@@ -66,14 +66,17 @@ class DonationBlockPlugin extends BlockPlugin {
 		return __('plugins.block.user.description');
 	}
 
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	/**
+	 * @see BlockPlugin::getContents
+	 */
+	function getContents(&$templateMgr, $request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$templateMgr->assign('donationEnabled', $paymentManager->donationEnabled());
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

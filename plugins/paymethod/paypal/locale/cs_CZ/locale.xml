@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/cs_CZ/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the cs_CZ (Czech) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.paymethod.paypal.displayName">Platba poplatku přes PayPal</message>

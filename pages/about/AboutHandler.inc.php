@@ -24,17 +24,19 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display about index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index() {
+	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
 		$templateMgr =& TemplateManager::getManager();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalPath = Request::getRequestedJournalPath();
+		$journalPath = $request->getRequestedJournalPath();
 
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
-			$journal =& Request::getJournal();
+			$journal =& $request->getJournal();
 
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getId()));
@@ -52,7 +54,7 @@ class AboutHandler extends Handler {
 			
 			// Hide membership if the payment method is not configured
 			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
+			$paymentManager = new OJSPaymentManager($request);
 			$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
@@ -62,7 +64,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('helpTopicId', 'user.about');
 			$templateMgr->display('about/index.tpl');
 		} else {
-			$site =& Request::getSite();
+			$site =& $request->getSite();
 			$about = $site->getLocalizedAbout();
 			$templateMgr->assign('about', $about);
 
@@ -330,8 +332,10 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display subscriptions page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function subscriptions() {
+	function subscriptions($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
@@ -340,7 +344,7 @@ class AboutHandler extends Handler {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
 		$subscriptionName =& $journalSettingsDao->getSetting($journalId, 'subscriptionName');
@@ -353,7 +357,7 @@ class AboutHandler extends Handler {
 		$institutionalSubscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 
 		$templateMgr =& TemplateManager::getManager();
@@ -372,8 +376,10 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display subscriptions page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function memberships() {
+	function memberships($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
@@ -382,7 +388,7 @@ class AboutHandler extends Handler {
 		$journalId = $journal->getId();
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 
 		$membershipEnabled = $paymentManager->membershipEnabled();
 
@@ -401,7 +407,7 @@ class AboutHandler extends Handler {
 			$templateMgr->display('about/memberships.tpl');
 			return;
 		}		
-		Request::redirect(null, 'about');
+		$request->redirect(null, 'about');
 	}
 
 	/**

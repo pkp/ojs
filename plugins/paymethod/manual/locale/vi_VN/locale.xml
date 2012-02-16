@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/manual/locale/vi_VN/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the vi_VN (Tiếng Việt) locale.
-  *
-  * $Id$
- -->
+  -->
  
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.paymethod.manual.displayName">Manual Fee Payment</message>

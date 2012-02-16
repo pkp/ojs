@@ -12,7 +12,6 @@
  *
  * @ingroup plugins_paymethod_manual
  * @brief Wrapper for manual payment plugin.
- *
  */
 
 require_once('ManualPaymentPlugin.inc.php');

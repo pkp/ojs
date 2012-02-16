@@ -17,27 +17,29 @@ import('classes.handler.Handler');
 class PaymentHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function PaymentHandler() {
 		parent::Handler();
 	}
 		 
 	/**
 	 * Pass request to plugin.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function plugin($args) {
+	function plugin($args, &$request) {
 		$paymentMethodPlugins =& PluginRegistry::loadCategory('paymethod');
 		$paymentMethodPluginName = array_shift($args);
 		if (empty($paymentMethodPluginName) || !isset($paymentMethodPlugins[$paymentMethodPluginName])) {
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
 		}
 
 		$paymentMethodPlugin =& $paymentMethodPlugins[$paymentMethodPluginName];
 		if (!$paymentMethodPlugin->isConfigured()) {
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
 		}
 
-		$paymentMethodPlugin->handle($args);
+		$paymentMethodPlugin->handle($args, $request);
 	}
 }
 

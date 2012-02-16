@@ -27,6 +27,8 @@ class AuthorHandler extends Handler {
 
 	/**
 	 * Display journal author index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
 		$this->validate();
@@ -81,7 +83,7 @@ class AuthorHandler extends Handler {
 
 		// assign payment 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 
 		if ( $paymentManager->isConfigured() ) {		
 			$templateMgr->assign('submissionEnabled', $paymentManager->submissionEnabled());

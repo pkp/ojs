@@ -325,7 +325,7 @@ class IssueHandler extends Handler {
 				if (!$subscribedUser) {
 					// Check if payments are enabled,
 					import('classes.payment.ojs.OJSPaymentManager');
-					$paymentManager =& OJSPaymentManager::getManager();
+					$paymentManager = new OJSPaymentManager($request);
 
 					if ($paymentManager->purchaseIssueEnabled() || $paymentManager->membershipEnabled() ) {
 						// If only pdf files are being restricted, then approve all non-pdf galleys
@@ -477,7 +477,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
 			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
+			$paymentManager = new OJSPaymentManager($request);
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}

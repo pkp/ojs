@@ -68,6 +68,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 	/**
 	 * Display a summary of the status of an author's submission.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function submission($args, $request) {
 		$journal =& $request->getJournal();
@@ -113,7 +115,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
 			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
@@ -573,7 +575,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$journal =& $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
@@ -595,7 +597,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$journal =& $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
@@ -617,7 +619,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$journal =& $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($request);
 		$user =& $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));

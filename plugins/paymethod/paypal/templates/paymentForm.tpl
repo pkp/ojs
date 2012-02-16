@@ -1,11 +1,10 @@
 {**
- * paymentForm.tpl
+ * plugins/paymethod/paypal/templates/paymentForm.tpl
  *
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for submitting a PayPal payment
- *
  *}
 {strip}
 {assign var="pageTitle" value="plugins.paymethod.paypal"}

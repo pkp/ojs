@@ -19,6 +19,8 @@
 import('lib.pkp.classes.form.Form');
 
 class UserInstitutionalSubscriptionForm extends Form {
+	/** @var $request PKPRequest */
+	var $request;
 
 	/** @var userId int the user associated with the subscription */
 	var $userId;
@@ -31,14 +33,17 @@ class UserInstitutionalSubscriptionForm extends Form {
 
 	/**
 	 * Constructor
-	 * @param userId int
-	 * @param subscriptionId int
+	 * @param $request PKPRequest
+	 * @param $userId int
+	 * @param $subscriptionId int
 	 */
-	function UserInstitutionalSubscriptionForm($userId = null, $subscriptionId = null) {
+	function UserInstitutionalSubscriptionForm($request, $userId = null, $subscriptionId = null) {
 		parent::Form('subscription/userInstitutionalSubscriptionForm.tpl');
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
+		$this->request =& $request;
+
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
 		if (isset($subscriptionId)) {
@@ -48,7 +53,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 			}
 		}
 
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -153,7 +158,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 * Create institutional subscription. 
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal =& $this->request->getJournal();
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -175,7 +180,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager =& OJSPaymentManager::getManager();
+		$paymentManager = new OJSPaymentManager($this->request);
 		$paymentPlugin =& $paymentManager->getPaymentPlugin();
 		
 		if ($paymentPlugin->getName() == 'ManualPayment') {

@@ -2,15 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/paymethod/paypal/locale/no_NO/locale.xml
   *
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
-  *
-  * $Id: locale.xml,v 1.10 2009/08/17 23:38:36 asmecher Exp $
- -->
+  -->
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.paymethod.paypal.displayName">Betaling med PayPal</message>
