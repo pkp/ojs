@@ -407,7 +407,7 @@ class SuppFileDAO extends DAO {
 	 * 'other::something' if not part of the official NLM list
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @param $pubId string
-	 * @param $suppId int A supplemental file ID to exempt from the test
+	 * @param $suppId int An ID to be excluded from the search.
 	 * @param $journalId int
 	 * @return boolean
 	 */

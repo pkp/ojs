@@ -13,7 +13,7 @@
  */
 
 
-import('plugins.importexport.datacite.classes.DoiExportPlugin');
+import('plugins.importexport.datacite.classes.DOIExportPlugin');
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -22,13 +22,13 @@ define('DATACITE_API_URL', 'https://mds.datacite.org/');
 // Test DOI prefix
 define('DATACITE_API_TESTPREFIX', '10.5072');
 
-class DataciteExportPlugin extends DoiExportPlugin {
+class DataciteExportPlugin extends DOIExportPlugin {
 
 	//
 	// Constructor
 	//
 	function DataciteExportPlugin() {
-		parent::DoiExportPlugin();
+		parent::DOIExportPlugin();
 	}
 
 
@@ -58,24 +58,24 @@ class DataciteExportPlugin extends DoiExportPlugin {
 
 
 	//
-	// Implement template methods from DoiExportPlugin
+	// Implement template methods from DOIExportPlugin
 	//
 	/**
-	 * @see DoiExportPlugin::getPluginId()
+	 * @see DOIExportPlugin::getPluginId()
 	 */
 	function getPluginId() {
 		return 'datacite';
 	}
 
 	/**
-	 * @see DoiExportPlugin::getSettingsFormClassName()
+	 * @see DOIExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'DataciteSettingsForm';
 	}
 
 	/**
-	 * @see DoiExportPlugin::getAllObjectTypes()
+	 * @see DOIExportPlugin::getAllObjectTypes()
 	 */
 	function getAllObjectTypes() {
 		$objectTypes = parent::getAllObjectTypes();
@@ -84,7 +84,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::displayAllUnregisteredObjects()
+	 * @see DOIExportPlugin::displayAllUnregisteredObjects()
 	 */
 	function displayAllUnregisteredObjects(&$templateMgr, &$journal) {
 		// Prepare information specific to this plug-in.
@@ -93,7 +93,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::getObjectName()
+	 * @see DOIExportPlugin::getObjectName()
 	 */
 	function getObjectName($exportType) {
 		if ($exportType == DOI_EXPORT_SUPPFILES) {
@@ -104,7 +104,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::displaySuppFileList()
+	 * @see DOIExportPlugin::displaySuppFileList()
 	 */
 	function displaySuppFileList(&$templateMgr, &$journal) {
 		$this->setBreadcrumbs(array(), true);
@@ -143,7 +143,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::generateExportFiles()
+	 * @see DOIExportPlugin::generateExportFiles()
 	 */
 	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
 		// Additional locale file.
@@ -176,7 +176,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::registerDoi()
+	 * @see DOIExportPlugin::registerDoi()
 	 */
 	function registerDoi(&$request, &$journal, &$objects, $file) {
 		// DataCite should always export exactly
@@ -201,7 +201,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 
 		// Set up basic authentication.
 		$username = $this->getSetting($journal->getId(), 'username');
-		$password = base64_decode($this->getSetting($journal->getId(), 'password'));
+		$password = $this->getSetting($journal->getId(), 'password');
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
 
@@ -255,7 +255,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::getDaoName()
+	 * @see DOIExportPlugin::getDaoName()
 	 */
 	function getDaoName($exportType) {
 		if ($exportType == DOI_EXPORT_SUPPFILES) {
@@ -266,7 +266,7 @@ class DataciteExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::getObjectNotFoundErrorKey()
+	 * @see DOIExportPlugin::getObjectNotFoundErrorKey()
 	 */
 	function getObjectNotFoundErrorKey($exportType) {
 		if ($exportType == DOI_EXPORT_SUPPFILES) {

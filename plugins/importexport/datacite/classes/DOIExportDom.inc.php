@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/importexport/.../classes/DoiExportDom.inc.php
+ * @file plugins/importexport/.../classes/DOIExportDom.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiExportDom
+ * @class DOIExportDom
  * @ingroup plugins_importexport_..._classes
  *
  * @brief Onix for DOI (O4DOI) XML export format implementation.
@@ -20,7 +20,7 @@ define('DOI_EXPORT_FILETYPE_HTML', 'HTML');
 define('DOI_EXPORT_FILETYPE_XML', 'XML');
 define('DOI_EXPORT_FILETYPE_PS', 'PostScript');
 
-class DoiExportDom {
+class DOIExportDom {
 
 	//
 	// Public properties
@@ -80,7 +80,7 @@ class DoiExportDom {
 		return ($request->getUserVar('testMode') == '1');
 	}
 
-	/** @var DoiExportPlugin */
+	/** @var DOIExportPlugin */
 	var $_plugin;
 
 	/**
@@ -125,11 +125,11 @@ class DoiExportDom {
 	/**
 	 * Constructor
 	 * @param $request Request
-	 * @param $plugin DoiExportPlugin
+	 * @param $plugin DOIExportPlugin
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
-	function DoiExportDom(&$request, &$plugin, &$journal, &$objectCache) {
+	function DOIExportDom(&$request, &$plugin, &$journal, &$objectCache) {
 		// Configure the DOM.
 		$this->_doc =& XMLCustomWriter::createDocument();
 		$this->_request =& $request;
@@ -149,7 +149,7 @@ class DoiExportDom {
 	 * containing all given objects for export or it returns a boolean
 	 * 'false' to indicate an error.
 	 *
-	 * If one or more errors occur then DoiExportDom::getErrors()
+	 * If one or more errors occur then DOIExportDom::getErrors()
 	 * will return localized error details for display by the client.
 	 *
 	 * @param $objects array An array of issues, articles or galleys. The
@@ -436,7 +436,6 @@ class DoiExportDom {
 			$subjectSchemeTitle = $journal->getLocalizedSetting('metaSubjectClassTitle');
 		}
 		$subjectSchemeUrl = $journal->getSetting('metaSubjectClassUrl', $primaryObjectLocale);
-		if ($subjectSchemeUrl == 'http://') $subjectSchemeUrl = '';
 		if (empty($subjectSchemeUrl)) {
 			$subjectSchemeUrl = $journal->getLocalizedSetting('metaSubjectClassUrl');
 		}

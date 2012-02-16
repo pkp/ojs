@@ -43,13 +43,13 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var=noObjects value="true"}
+			{assign var=noObjects value=true}
 			{foreach from=$issues item=issue}
 				{if $issue->getPubId('doi')}
-					{assign var=noObjects value="false"}
+					{assign var=noObjects value=false}
 					<tr valign="top">
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}" checked="checked" /></td>
-						<td>{translate key="issue.issue"}</td>
+						<td>{fieldLabel name="issueId[]" key="issue.issue"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 						<td>&mdash;</td>
 						<td>&mdash;</td>
@@ -62,11 +62,11 @@
 			{foreach from=$articles item=articleData}
 				{assign var=article value=$articleData.article}
 				{if $article->getPubId('doi')}
-					{assign var=noObjects value="false"}
+					{assign var=noObjects value=false}
 					{assign var=issue value=$articleData.issue}
 					<tr valign="top">
 						<td><input type="checkbox" name="articleId[]" value="{$article->getId()}" checked="checked" /></td>
-						<td>{translate key="article.article"}</td>
+						<td>{fieldLabel name="articleId[]" key="article.article"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 						<td><a href="{url page="article" op="view" path=$article->getId()}" class="action">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
 						<td>{$article->getAuthorString()|escape}</td>
@@ -79,13 +79,13 @@
 			{foreach from=$galleys item=galleyData name=galleys}
 				{assign var=galley value=$galleyData.galley}
 				{if $galley->getPubId('doi')}
-					{assign var=noObjects value="false"}
+					{assign var=noObjects value=false}
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
 					{assign var=issue value=$galleyData.issue}
 					<tr valign="top">
 						<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}" checked="checked" /></td>
-						<td>{translate key="submission.galley"}</td>
+						<td>{fieldLabel name="galleyId[]" key="submission.galley"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 						<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>
 						<td>{$article->getAuthorString()|escape}</td>
@@ -95,7 +95,7 @@
 					</tr>
 				{/if}
 			{/foreach}
-			{if $noObjects == "true"}
+			{if $noObjects}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noUnregistered"}</td>
 				</tr>
@@ -105,7 +105,7 @@
 			{/if}
 		</table>
 		<p>
-			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
 			{if $hasCredentials}
 				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
 				&nbsp;

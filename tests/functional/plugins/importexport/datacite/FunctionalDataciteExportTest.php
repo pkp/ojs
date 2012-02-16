@@ -59,7 +59,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 		$this->defaultPluginSettings = array(
 			'username' => self::TEST_ACCOUNT,
-			'password' => base64_encode($this->dcPassword)
+			'password' => $this->dcPassword
 		);
 
 		parent::setUp('10.5072');

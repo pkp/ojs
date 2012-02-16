@@ -15,6 +15,9 @@
  * it doesn't support multipart SOAP messages.
  */
 
+
+import('lib.pkp.classes.xml.XMLNode');
+
 define('MEDRA_WS_ENDPOINT_DEV', 'https://medra.dev.cineca.it/servlet/ws/medraWS');
 define('MEDRA_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/medraWS');
 define('MEDRA_WS_RESPONSE_OK', 200);
@@ -58,6 +61,7 @@ class MedraWebservice {
 	 * mEDRA viewMetadata operation
 	 */
 	function viewMetadata($doi) {
+		$doi = $this->_escapeXmlEntities($doi);
 		$arg = "<med:doi>$doi</med:doi>";
 		return $this->_doRequest('viewMetadata', $arg);
 	}
@@ -181,5 +185,13 @@ class MedraWebservice {
 	 */
 	function _getContentId($prefix) {
 		return $prefix . md5(uniqid()) . '@medra.org';
+	}
+
+	/**
+	 * Escape XML entities.
+	 * @param $string string
+	 */
+	function _escapeXmlEntities($string) {
+		return XMLNode::xmlentities($string);
 	}
 }

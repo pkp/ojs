@@ -23,6 +23,8 @@
 		and registering associated metadata. If you do not have your own username and
 		password you'll still be able to export into the DataCite XML format but you
 		cannot register your DOIs with DataCite from within OJS.
+		Please note that the password will be saved as plain text, i.e. not encrypted, due
+		to the DataCite registration service requirements.
 	]]></message>
 
 	<message key="plugins.importexport.datacite.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the DataCite export plug-in before using it for the first time.]]></message>

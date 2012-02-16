@@ -26,13 +26,13 @@
 				<td width="80%" class="value">
 					<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.explainDois"}</span><br />
 					<input type="checkbox" name="enableIssueDoi" id="enableIssueDoi" value="1"{if $enableIssueDoi} checked="checked"{/if} />
-					<label for="enableIssueDoi">{translate key="plugins.pubIds.doi.manager.settings.enableIssueDoi"}</label><br />
+					{fieldLabel name="enableIssueDoi" key="plugins.pubIds.doi.manager.settings.enableIssueDoi"}<br />
 					<input type="checkbox" name="enableArticleDoi" id="enableArticleDoi" value="1"{if $enableArticleDoi} checked="checked"{/if} />
-					<label for="enableArticleDoi">{translate key="plugins.pubIds.doi.manager.settings.enableArticleDoi"}</label><br />
+					{fieldLabel name="enableArticleDoi" key="plugins.pubIds.doi.manager.settings.enableArticleDoi"}<br />
 					<input type="checkbox" name="enableGalleyDoi" id="enableGalleyDoi" value="1"{if $enableGalleyDoi} checked="checked"{/if} />
-					<label for="enableGalleyDoi">{translate key="plugins.pubIds.doi.manager.settings.enableGalleyDoi"}</label><br />
+					{fieldLabel name="enableGalleyDoi" key="plugins.pubIds.doi.manager.settings.enableGalleyDoi"}<br />
 					<input type="checkbox" name="enableSuppFileDoi" id="enableSuppFileDoi" value="1"{if $enableSuppFileDoi} checked="checked"{/if} />
-					<label for="enableSuppFileDoi">{translate key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi"}</label><br />
+					{fieldLabel name="enableSuppFileDoi" key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi"}<br />
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
@@ -63,28 +63,28 @@
 							<td>&nbsp;</td>
 							<td>
 								<input type="text" name="doiIssueSuffixPattern" value="{$doiIssueSuffixPattern|escape}" size="15" maxlength="50" id="doiIssueSuffixPattern" class="textField" />
-								<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"}</span>
+								{fieldLabel name="doiIssueSuffixPattern" key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"}
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
 							<td>
 								<input type="text" name="doiArticleSuffixPattern" value="{$doiArticleSuffixPattern|escape}" size="15" maxlength="50" id="doiArticleSuffixPattern" class="textField" />
-								<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles"}</span>
+								{fieldLabel name="doiArticleSuffixPattern" key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles"}
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
 							<td>
 								<input type="text" name="doiGalleySuffixPattern" value="{$doiGalleySuffixPattern|escape}" size="15" maxlength="50" id="doiGalleySuffixPattern" class="textField" />
-								<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys"}</span>
+								{fieldLabel name="doiGalleySuffixPattern" key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys"}
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
 							<td>
 								<input type="text" name="doiSuppFileSuffixPattern" value="{$doiSuppFileSuffixPattern|escape}" size="15" maxlength="50" id="doiSuppFileSuffixPattern" class="textField" />
-								<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles"}</span>
+								{fieldLabel name="doiSuppFileSuffixPattern" key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles"}
 							</td>
 						</tr>
 						<tr>

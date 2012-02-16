@@ -13,9 +13,9 @@
  */
 
 
-import('plugins.importexport.medra.classes.form.DoiExportSettingsForm');
+import('plugins.importexport.medra.classes.form.DOIExportSettingsForm');
 
-class MedraSettingsForm extends DoiExportSettingsForm {
+class MedraSettingsForm extends DOIExportSettingsForm {
 
 	//
 	// Constructor
@@ -27,7 +27,7 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 	 */
 	function MedraSettingsForm(&$plugin, $journalId) {
 		// Configure the object.
-		parent::DoiExportSettingsForm($plugin, $journalId);
+		parent::DOIExportSettingsForm($plugin, $journalId);
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidator($this, 'registrantName', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.importexport.medra.settings.form.registrantNameRequired'));
@@ -64,10 +64,10 @@ class MedraSettingsForm extends DoiExportSettingsForm {
 
 
 	//
-	// Implement template methods from DoiExportSettingsForm
+	// Implement template methods from DOIExportSettingsForm
 	//
 	/**
-	 * @see DoiExportSettingsForm::getFormFields()
+	 * @see DOIExportSettingsForm::getFormFields()
 	 */
 	function getFormFields() {
 		return array(

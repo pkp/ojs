@@ -13,7 +13,7 @@
  */
 
 
-import('plugins.importexport.medra.classes.DoiExportDom');
+import('plugins.importexport.medra.classes.DOIExportDom');
 
 // XML attributes
 define('O4DOI_XMLNS' , 'http://www.editeur.org/onix/DOIMetadata/2.0');
@@ -81,7 +81,7 @@ define('O4DOI_RELATION_IS_A_MANIFESTATION_OF', '90');
 // mEDRA test prefix.
 define('MEDRA_WS_TESTPREFIX', '1749');
 
-class O4DOIExportDom extends DoiExportDom {
+class O4DOIExportDom extends DOIExportDom {
 
 	//
 	// Private properties
@@ -193,7 +193,7 @@ class O4DOIExportDom extends DoiExportDom {
 	/**
 	 * Constructor
 	 * @param $request Request
-	 * @param $plugin DoiExportPlugin
+	 * @param $plugin DOIExportPlugin
 	 * @param $schema string One of the O4DOI_* schema constants.
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
@@ -202,7 +202,7 @@ class O4DOIExportDom extends DoiExportDom {
 	 */
 	function O4DOIExportDom(&$request, &$plugin, $schema, &$journal, &$objectCache, $exportIssuesAs) {
 		// Configure the DOM.
-		parent::DoiExportDom($request, $plugin, $journal, $objectCache);
+		parent::DOIExportDom($request, $plugin, $journal, $objectCache);
 		$this->_schema = $schema;
 		$this->_schemaInfo = $this->_setSchemaInfo($this->_getSchema());
 		$this->_exportIssuesAs = $exportIssuesAs;
@@ -213,7 +213,7 @@ class O4DOIExportDom extends DoiExportDom {
 	// Public methods
 	//
 	/**
-	 * @see DoiExportDom::generate()
+	 * @see DOIExportDom::generate()
 	 */
 	function &generate(&$objects) {
 		$falseVar = false;
@@ -239,24 +239,24 @@ class O4DOIExportDom extends DoiExportDom {
 
 
 	//
-	// Implement protected template methods from DoiExportDom
+	// Implement protected template methods from DOIExportDom
 	//
 	/**
-	 * @see DoiExportDom::getRootElementName()
+	 * @see DOIExportDom::getRootElementName()
 	 */
 	function getRootElementName() {
 		return $this->_getSchemaInfo('rootElementName');
 	}
 
 	/**
-	 * @see DoiExportDom::getNamespace()
+	 * @see DOIExportDom::getNamespace()
 	 */
 	function getNamespace() {
 		return O4DOI_XMLNS;
 	}
 
 	/**
-	 * @see DoiExportDom::getXmlSchemaLocation()
+	 * @see DOIExportDom::getXmlSchemaLocation()
 	 */
 	function getXmlSchemaLocation() {
 		if ($this->getTestMode()) {

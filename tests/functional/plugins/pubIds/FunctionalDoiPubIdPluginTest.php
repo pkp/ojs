@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file tests/functional/plugins/pubIds/FunctionalDoiPubIdPluginTest.inc.php
+ * @file tests/functional/plugins/pubIds/FunctionalDOIPubIdPluginTest.inc.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class FunctionalDoiPubIdPluginTest
+ * @class FunctionalDOIPubIdPluginTest
  * @ingroup tests_functional_plugins_pubIds
  *
  * @brief Test DOI PubId plug-in.
@@ -24,7 +24,7 @@
 
 import('lib.pkp.tests.WebTestCase');
 
-class FunctionalDoiPubIdPluginTest extends WebTestCase {
+class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	private
 		$pages,
 		$objectTypes = array('Article', 'Issue', 'Galley', 'SuppFile'); // order is significant!
@@ -60,7 +60,7 @@ class FunctionalDoiPubIdPluginTest extends WebTestCase {
 
 			// DOI plug-in settings
 			'settings' => array(
-				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/DoiPubIdPlugin/settings',
+				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/DOIPubIdPlugin/settings',
 				'doiPrefix' => 'id=doiPrefix',
 				'reassignDOIs' => 'name=clearPubIds',
 				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
@@ -430,7 +430,7 @@ class FunctionalDoiPubIdPluginTest extends WebTestCase {
 		// This test is not about testing the settings GUI so
 		// configure DOIs via the database which is faster.
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
-		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		$doiPlugin->updateSetting(1, 'doiSuffix', 'publisherId');
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var journalDao JournalDAO */
 		$journal = $journalDao->getJournal(1);

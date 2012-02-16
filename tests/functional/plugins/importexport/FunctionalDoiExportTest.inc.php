@@ -75,7 +75,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Store initial DOI settings.
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
-		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		$this->initialDoiSettings = array(
 			'enabled' => $doiPlugin->getSetting(1, 'enabled'),
 			'doiPrefix' => $doiPlugin->getSetting(1, 'doiPrefix'),
@@ -113,7 +113,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Restore initial DOI configuration.
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
-		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		foreach($this->initialDoiSettings as $settingName => $settingValue) {
 			$doiPlugin->updateSetting(1, $settingName, $settingValue);
 		}
@@ -358,9 +358,9 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$this->clickAndWait('//a[@href="'.$this->pages['all'].'"]');
 		// Check whether the list of unregistered objects is there including
 		// at least an issue, an article and several galleys.
-		$objectTypeColumn = '//div[@id="allUnregistered"]//tr/td[2]';
+		$objectTypeColumn = '//div[@id="allUnregistered"]//tr/td[2]/label';
 		foreach($expectedObjectCaptions as $expectedObjectCaption) {
-			$this->assertElementPresent($objectTypeColumn . '[text()="' . $expectedObjectCaption . '"]');
+			$this->assertElementPresent($objectTypeColumn . '[normalize-space(text())="' .$expectedObjectCaption .'"]');
 		}
 		// Check whether we have an export (register) button.
 		$this->assertElementPresent('css=input.button[name="export"]');
@@ -408,7 +408,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Configure custom DOIs.
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
-		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		$doiPlugin->updateSetting(1, 'doiSuffix', 'customId');
 
 		// Delete all existing DOIs.
@@ -521,7 +521,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	protected function testConfigurationError($exportPages) {
 		$this->logIn();
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds');
-		$doiPlugin = $pubIdPlugins['DoiPubIdPlugin'];
+		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		$noDoiError = 'specify a valid DOI prefix';
 
 		// Disable the DOI plug-in.

@@ -42,10 +42,10 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var="noIssues" value="true"}
+			{assign var="noIssues" value=true}
 			{iterate from=issues item=issue}
 				{if $issue->getPubId('doi')}
-					{assign var="noIssues" value="false"}
+					{assign var="noIssues" value=false}
 					{if $issue->getData('medra::registeredDoi')}
 						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
 						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
@@ -60,10 +60,10 @@
 						<td>{$issue->getNumArticles()|escape}</td>
 						<td align="right"><nobr>
 							{if $hasCredentials}
-								<a href="{plugin_url path="registerIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
-								{if $issue->getData('medra::registeredDoi')}<a href="{plugin_url path="resetIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
+								<a href="{plugin_url path="registerIssue"|to_array:$issue->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+								{if $issue->getData('medra::registeredDoi')}<a href="{plugin_url path="resetIssue"|to_array:$issue->getId() params=$testMode}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
 							{/if}
-							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 						</nobr></td>
 					</tr>
 					<tr>
@@ -71,7 +71,7 @@
 					</tr>
 				{/if}
 			{/iterate}
-			{if $noIssues == "true"}
+			{if $noIssues}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noIssues"}</td>
 				</tr>
@@ -86,7 +86,7 @@
 			{/if}
 		</table>
 		<p>
-			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
 			{if $hasCredentials}
 				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
 				&nbsp;

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/importexport/.../classes/form/DoiExportSettingsForm.inc.php
+ * @file plugins/importexport/.../classes/form/DOIExportSettingsForm.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiExportSettingsForm
+ * @class DOIExportSettingsForm
  * @ingroup plugins_importexport_..._classes_form
  *
  * @brief Form base class for journal managers to setup DOI export plug-ins.
@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class DoiExportSettingsForm extends Form {
+class DOIExportSettingsForm extends Form {
 
 	//
 	// Protected properties
@@ -51,7 +51,7 @@ class DoiExportSettingsForm extends Form {
 	 * @param $plugin DoiExportPlugin
 	 * @param $journalId integer
 	 */
-	function DoiExportSettingsForm(&$plugin, $journalId) {
+	function DOIExportSettingsForm(&$plugin, $journalId) {
 		// Configure the object.
 		parent::Form($plugin->getTemplatePath() . 'settings.tpl');
 		$this->_journalId = $journalId;
@@ -70,12 +70,6 @@ class DoiExportSettingsForm extends Form {
 	 */
 	function getData($key) {
 		$value = parent::getData($key);
-		if ($key == 'password') {
-			// Unfortunately there is no password vault in OJS that
-			// would allow us to save encrypted passwords so we just
-			// scramble it a bit.
-			$value = base64_encode($value);
-		}
 		return $value;
 	}
 
@@ -117,10 +111,6 @@ class DoiExportSettingsForm extends Form {
 	function getSetting($settingName) {
 		$plugin =& $this->getPlugIn();
 		$settingValue = $plugin->getSetting($this->getJournalId(), $settingName);
-		if ($settingName == 'password') {
-			// See comment in self::getData() about PW scrambling.
-			$settingValue = base64_decode($settingValue);
-		}
 		return $settingValue;
 	}
 

@@ -9,7 +9,7 @@
  * @class SectionEditorHandler
  * @ingroup pages_sectionEditor
  *
- * @brief Handle requests for section editor functions. 
+ * @brief Handle requests for section editor functions.
  */
 
 // Filter section
@@ -24,13 +24,13 @@ class SectionEditorHandler extends Handler {
 	 **/
 	function SectionEditorHandler() {
 		parent::Handler();
-		
+
 		$this->addCheck(new HandlerValidatorJournal($this));
 		// FIXME This is kind of evil
 		$page = Request::getRequestedPage();
-		if ( $page == 'sectionEditor' )  
+		if ( $page == 'sectionEditor' )
 			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SECTION_EDITOR)));
-		elseif ( $page == 'editor' ) 		
+		elseif ( $page == 'editor' )
 			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_EDITOR)));
 
 	}
@@ -38,7 +38,7 @@ class SectionEditorHandler extends Handler {
 	/**
 	 * Display section editor index page.
 	 */
-	function index($args) {
+	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
@@ -64,7 +64,7 @@ class SectionEditorHandler extends Handler {
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
-		
+
 		$sort = Request::getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
 		$sortDirection = Request::getUserVar('sortDirection');
@@ -96,7 +96,7 @@ class SectionEditorHandler extends Handler {
 			if ($filterSection == null) {
 				$filterSection = FILTER_SECTION_ALL;
 				$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
-			}	
+			}
 		}
 
 		$submissions =& $sectionEditorSubmissionDao->$functionName(

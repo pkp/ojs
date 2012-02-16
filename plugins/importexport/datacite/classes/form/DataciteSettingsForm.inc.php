@@ -13,9 +13,9 @@
  */
 
 
-import('plugins.importexport.datacite.classes.form.DoiExportSettingsForm');
+import('plugins.importexport.datacite.classes.form.DOIExportSettingsForm');
 
-class DataciteSettingsForm extends DoiExportSettingsForm {
+class DataciteSettingsForm extends DOIExportSettingsForm {
 
 	//
 	// Constructor
@@ -27,7 +27,7 @@ class DataciteSettingsForm extends DoiExportSettingsForm {
 	 */
 	function DataciteSettingsForm(&$plugin, $journalId) {
 		// Configure the object.
-		parent::DoiExportSettingsForm($plugin, $journalId);
+		parent::DOIExportSettingsForm($plugin, $journalId);
 
 		// Add form validation checks.
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
@@ -36,10 +36,10 @@ class DataciteSettingsForm extends DoiExportSettingsForm {
 
 
 	//
-	// Implement template methods from DoiExportSettingsForm
+	// Implement template methods from DOIExportSettingsForm
 	//
 	/**
-	 * @see DoiExportSettingsForm::getFormFields()
+	 * @see DOIExportSettingsForm::getFormFields()
 	 */
 	function getFormFields() {
 		return array(

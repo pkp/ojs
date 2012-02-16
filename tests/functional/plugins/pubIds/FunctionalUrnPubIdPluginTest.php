@@ -29,7 +29,7 @@
  *   SO THAT I can persistently use them.
  *
  * FIXME-BB: I think there is quite a bit of duplicate code between this class
- * and the FunctionalDoiPubIdPluginTest which can be resolved by creating a common
+ * and the FunctionalDOIPubIdPluginTest which can be resolved by creating a common
  * subclass for both or moving common code to a helper class.
  */
 

@@ -424,7 +424,7 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if (!empty($pubId)) {
-			$publishedArticles =& $this->getPublishedArticlesBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
+			$publishedArticles =& $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
 			if (!empty($publishedArticles)) {
 				assert(count($publishedArticles) == 1);
 				$publishedArticle =& $publishedArticles[0];
@@ -440,7 +440,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $journalId int optional
 	 * @return array The articles identified by setting.
 	 */
-	function &getPublishedArticlesBySetting($settingName, $settingValue, $journalId = null) {
+	function &getBySetting($settingName, $settingValue, $journalId = null) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 

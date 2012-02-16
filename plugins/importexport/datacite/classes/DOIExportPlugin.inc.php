@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/importexport/.../classes/DoiExportPlugin.inc.php
+ * @file plugins/importexport/.../classes/DOIExportPlugin.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiExportPlugin
+ * @class DOIExportPlugin
  * @ingroup plugins_importexport_..._classes
  *
  * @brief Base class for DOI export/registration plugins.
@@ -36,7 +36,7 @@ define('DOI_EXPORT_CONFIGERROR_SETTINGS', 0x02);
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGDOI', 'registeredDoi');
 
-class DoiExportPlugin extends ImportExportPlugin {
+class DOIExportPlugin extends ImportExportPlugin {
 
 	//
 	// Protected Properties
@@ -64,7 +64,7 @@ class DoiExportPlugin extends ImportExportPlugin {
 	//
 	// Constructor
 	//
-	function DoiExportPlugin() {
+	function DOIExportPlugin() {
 		parent::ImportExportPlugin();
 	}
 
@@ -122,6 +122,15 @@ class DoiExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * @see ImportExportPlugin::display()
+	 *
+	 * This supports the following actions:
+	 * - index: the plug-ins home page
+	 * - all, issues, articles, galleys, suppFiles: lists with exportable objects
+	 * - exportIssue, exportArticle, exportGalley, exportSuppFile: export a single object
+	 * - exportIssues, exportArticles, exportGalleys, exportSuppFiles: export several objects at a time
+	 * - registerIssue, registerArticle, registerGalley, registerSuppFile: register a single object
+	 * - registerIssues, registerArticles, registerGalleys, registerSuppFiles: register several objects at a time
+	 * - resetIssue, resetArticle, resetGalley, resetSuppFile: reset an object to "unregistered" state.
 	 */
 	function display(&$args, &$request) {
 		parent::display($args, $request);
@@ -239,7 +248,7 @@ class DoiExportPlugin extends ImportExportPlugin {
 				$templateMgr =& TemplateManager::getManager();
 
 				// Test mode.
-				$templateMgr->assign('testMode', $this->isTestMode($request));
+				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
 
 				// Export without account.
 				$username = $this->getSetting($journal->getId(), 'username');
@@ -887,8 +896,8 @@ class DoiExportPlugin extends ImportExportPlugin {
 		// 1) missing DOI prefix
 		$doiPrefix = null;
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		if (isset($pubIdPlugins['DoiPubIdPlugin'])) {
-			$doiPrefix = $pubIdPlugins['DoiPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
+		if (isset($pubIdPlugins['DOIPubIdPlugin'])) {
+			$doiPrefix = $pubIdPlugins['DOIPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
 		}
 		if (empty($doiPrefix)) {
 			$configurationErrors[] = DOI_EXPORT_CONFIGERROR_DOIPREFIX;
@@ -1036,7 +1045,7 @@ class DoiExportPlugin extends ImportExportPlugin {
 	function &_getUnregisteredArticles(&$journal) {
 		// Retrieve all published articles that have not yet been registered.
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$articles = $publishedArticleDao->getPublishedArticlesBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
+		$articles = $publishedArticleDao->getBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
 
 		// Retrieve issues for articles.
 		$articleData = array();
@@ -1078,7 +1087,7 @@ class DoiExportPlugin extends ImportExportPlugin {
 
 		// Add the galley language.
 		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
-		$galleyData['language'] =& $languageDao->getLanguageByCode(substr($galley->getLocale(), 0, 2));
+		$galleyData['language'] =& $languageDao->getLanguageByCode(AppLocale::getIso1FromLocale($galley->getLocale()));
 
 		// Add the galley itself.
 		$galleyData['galley'] =& $galley;
@@ -1301,13 +1310,13 @@ class DoiExportPlugin extends ImportExportPlugin {
 	/**
 	 * Instantiate the settings form.
 	 * @param $journal Journal
-	 * @return DoiExportSettingsForm
+	 * @return DOIExportSettingsForm
 	 */
 	function &_instantiateSettingsForm(&$journal) {
 		$settingsFormClassName = $this->getSettingsFormClassName();
 		$this->import('classes.form.' . $settingsFormClassName);
 		$settingsForm = new $settingsFormClassName($this, $journal->getId());
-		assert(is_a($settingsForm, 'DoiExportSettingsForm'));
+		assert(is_a($settingsForm, 'DOIExportSettingsForm'));
 		return $settingsForm;
 	}
 

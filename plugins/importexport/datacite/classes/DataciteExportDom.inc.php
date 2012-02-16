@@ -13,7 +13,7 @@
  */
 
 
-import('plugins.importexport.datacite.classes.DoiExportDom');
+import('plugins.importexport.datacite.classes.DOIExportDom');
 
 // XML attributes
 define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-2.2');
@@ -50,7 +50,7 @@ define('DATACITE_DESCTYPE_SERIESINFO', 'SeriesInformation');
 define('DATACITE_DESCTYPE_TOC', 'TableOfContents');
 define('DATACITE_DESCTYPE_OTHER', 'Other');
 
-class DataciteExportDom extends DoiExportDom {
+class DataciteExportDom extends DOIExportDom {
 
 	//
 	// Constructor
@@ -58,13 +58,13 @@ class DataciteExportDom extends DoiExportDom {
 	/**
 	 * Constructor
 	 * @param $request Request
-	 * @param $plugin DoiExportPlugin
+	 * @param $plugin DOIExportPlugin
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
 	function DataciteExportDom(&$request, &$plugin, &$journal, &$objectCache) {
 		// Configure the DOM.
-		parent::DoiExportDom($request, $plugin, $journal, $objectCache);
+		parent::DOIExportDom($request, $plugin, $journal, $objectCache);
 	}
 
 
@@ -72,7 +72,7 @@ class DataciteExportDom extends DoiExportDom {
 	// Public methods
 	//
 	/**
-	 * @see DoiExportDom::generate()
+	 * @see DOIExportDom::generate()
 	 */
 	function &generate(&$object) {
 		$falseVar = false;
@@ -177,31 +177,31 @@ class DataciteExportDom extends DoiExportDom {
 
 
 	//
-	// Implementation of template methods from DoiExportDom
+	// Implementation of template methods from DOIExportDom
 	//
 	/**
-	 * @see DoiExportDom::getRootElementName()
+	 * @see DOIExportDom::getRootElementName()
 	 */
 	function getRootElementName() {
 		return 'resource';
 	}
 
 	/**
-	 * @see DoiExportDom::getNamespace()
+	 * @see DOIExportDom::getNamespace()
 	 */
 	function getNamespace() {
 		return DATACITE_XMLNS;
 	}
 
 	/**
-	 * @see DoiExportDom::getXmlSchemaLocation()
+	 * @see DOIExportDom::getXmlSchemaLocation()
 	 */
 	function getXmlSchemaLocation() {
 		return DATACITE_XSI_SCHEMALOCATION;
 	}
 
 	/**
-	 * @see DoiExportDom::retrievePublicationObjects()
+	 * @see DOIExportDom::retrievePublicationObjects()
 	 */
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
@@ -237,7 +237,7 @@ class DataciteExportDom extends DoiExportDom {
 	}
 
 	/**
-	 * @see DoiExportDom::getPrimaryObjectLocale()
+	 * @see DOIExportDom::getPrimaryObjectLocale()
 	 * @param $suppFile SuppFile
 	 */
 	function getPrimaryObjectLocale(&$article, &$galley, &$suppFile) {

@@ -231,10 +231,10 @@ class SubscriptionDAO extends DAO {
 	 * @return string
 	 */
 	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
-		$first_last = $this->getDataSource()->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
-		$first_middle_last = $this->getDataSource()->Concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
-		$last_comma_first = $this->getDataSource()->Concat($prefix.'last_name', '\', \'', $prefix.'first_name');
-		$last_comma_first_middle = $this->getDataSource()->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
+		$first_last = $this->concat($prefix.'first_name', '\' \'', $prefix.'last_name');
+		$first_middle_last = $this->concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
+		$last_comma_first = $this->concat($prefix.'last_name', '\', \'', $prefix.'first_name');
+		$last_comma_first_middle = $this->concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
 		if ($searchMatch === 'is') {
 			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 		} elseif ($searchMatch === 'contains') {

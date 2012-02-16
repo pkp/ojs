@@ -14,8 +14,8 @@
  * @brief Wrapper for DOI plugin.
  *
  */
-require_once('DoiPubIdPlugin.inc.php');
+require_once('DOIPubIdPlugin.inc.php');
 
-return new DoiPubIdPlugin();
+return new DOIPubIdPlugin();
 
 ?>

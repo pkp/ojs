@@ -20,6 +20,8 @@
 		to receive a username and password. If you do not have your own username and
 		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
 		but you cannot register your DOIs with mEDRA from within OJS. 
+		Please note that the password will be saved as plain text, i.e. not encrypted, due
+		to the mEDRA registration service requirements.
 	]]></message>
 
 	<message key="plugins.importexport.medra.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the mEDRA export plug-in before using it for the first time.]]></message>

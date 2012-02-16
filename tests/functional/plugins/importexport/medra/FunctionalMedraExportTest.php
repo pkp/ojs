@@ -54,7 +54,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 		$this->defaultPluginSettings = array(
 			'username' => self::TEST_ACCOUNT,
-			'password' => base64_encode($medraPassword),
+			'password' => $medraPassword,
 			'registrantName' => 'Registrant',
 			'fromCompany' => 'From Company',
 			'fromName' => 'From Person',

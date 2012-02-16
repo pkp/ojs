@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/pubIds/doi/DoiPubIdPlugin.inc.php
+ * @file plugins/pubIds/doi/DOIPubIdPlugin.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiPubIdPlugin
+ * @class DOIPubIdPlugin
  * @ingroup plugins_pubIds_doi
  *
  * @brief DOI plugin class
@@ -15,7 +15,7 @@
 
 import('classes.plugins.PubIdPlugin');
 
-class DoiPubIdPlugin extends PubIdPlugin {
+class DOIPubIdPlugin extends PubIdPlugin {
 
 	//
 	// Implement template methods from PKPPlugin.
@@ -33,7 +33,7 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	 * @see PKPPlugin::getName()
 	 */
 	function getName() {
-		return 'DoiPubIdPlugin';
+		return 'DOIPubIdPlugin';
 	}
 
 	/**
@@ -121,7 +121,22 @@ class DoiPubIdPlugin extends PubIdPlugin {
 				if (is_a($pubObject, 'PublishedArticle') && !is_a($pubObject, 'PublishedArticle')) {
 					$doiSuffix = null;
 				} else {
-					$doiSuffix = (string) call_user_func_array(array($pubObject, "getBest${pubObjectType}Id"), array(&$journal));
+					switch($pubObjectType) {
+						case 'Issue':
+							$doiSuffix = (string) $pubObject->getBestIssueId($journal);
+							break;
+						case 'Article':
+							$doiSuffix = (string) $pubObject->getBestArticleId($journal);
+							break;
+						case 'Galley':
+							$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
+							break;
+						case 'SuppFile':
+							$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
+							break;
+						default:
+							assert(false);
+					}
 					// When the suffix equals the object's ID then
 					// require an object-specific pre-fix to be sure that
 					// the suffix is unique.
@@ -233,7 +248,7 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getResolvingURL()
 	 */
 	function getResolvingURL($pubId) {
-		return 'http://dx.doi.org/'.$pubId;
+		return 'http://dx.doi.org/'.urlencode($pubId);
 	}
 
 	/**
@@ -261,7 +276,7 @@ class DoiPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getSettingsFormName()
 	 */
 	function getSettingsFormName() {
-		return 'classes.form.DoiSettingsForm';
+		return 'classes.form.DOISettingsForm';
 	}
 
 	/**

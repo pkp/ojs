@@ -60,8 +60,8 @@ class ArticleDAO extends DAO {
 	 * @return array
 	 */
 	function getAdditionalFieldNames() {
-		// FIXME: Get the following parameter from a DOI PID-plug-ins via hook.
 		$additionalFields = parent::getAdditionalFieldNames();
+		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
 		return $additionalFields;
 	}
@@ -569,7 +569,7 @@ class ArticleDAO extends DAO {
 	 * 'other::something' if not part of the official NLM list
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @param $pubId string
-	 * @param $articleId int
+	 * @param $articleId int An ID to be excluded from the search.
 	 * @param $journalId int
 	 * @return boolean
 	 */

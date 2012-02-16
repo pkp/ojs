@@ -54,6 +54,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		);
 
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorLocaleURL($this, 'metaSubjectClassUrl', 'optional', 'manager.setup.subjectClassificationURLValid'));
 	}
 
 	/**

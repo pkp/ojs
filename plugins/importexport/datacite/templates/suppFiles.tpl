@@ -42,11 +42,11 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var="noSuppFiles" value="true"}
+			{assign var="noSuppFiles" value=true}
 			{iterate from=suppFiles item=suppFileData}
 				{assign var=suppFile value=$suppFileData.suppFile}
 				{if $suppFile->getPubId('doi')}
-					{assign var="noSuppFiles" value="false"}
+					{assign var="noSuppFiles" value=false}
 					{assign var=article value=$suppFileData.article}
 					{assign var=issue value=$suppFileData.issue}
 					{if $suppFile->getData('datacite::registeredDoi')}
@@ -63,9 +63,9 @@
 						<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
 						<td align="right"><nobr>
 							{if $hasCredentials}
-								<a href="{plugin_url path="registerSuppFile"|to_array:$suppFile->getId()}{if $testMode}?testMode=1{/if}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+								<a href="{plugin_url path="registerSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 							{/if}
-							<a href="{plugin_url path="exportSuppFile"|to_array:$suppFile->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							<a href="{plugin_url path="exportSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 						</nobr></td>
 					</tr>
 					<tr>
@@ -73,7 +73,7 @@
 					</tr>
 				{/if}
 			{/iterate}
-			{if $noSuppFiles == "true"}
+			{if $noSuppFiles}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.datacite.export.noSuppFiles"}</td>
 				</tr>
@@ -88,7 +88,7 @@
 			{/if}
 		</table>
 		<p>
-			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
 			{if $hasCredentials}
 				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
 				&nbsp;

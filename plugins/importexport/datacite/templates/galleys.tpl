@@ -42,11 +42,11 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var="noGalleys" value="true"}
+			{assign var="noGalleys" value=true}
 			{iterate from=galleys item=galleyData}
 				{assign var=galley value=$galleyData.galley}
 				{if $galley->getPubId('doi')}
-					{assign var="noGalleys" value="false"}
+					{assign var="noGalleys" value=false}
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
 					{assign var=issue value=$galleyData.issue}
@@ -64,9 +64,9 @@
 						<td>{$article->getAuthorString()|escape}</td>
 						<td align="right"><nobr>
 							{if $hasCredentials}
-								<a href="{plugin_url path="registerGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+								<a href="{plugin_url path="registerGalley"|to_array:$galley->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 							{/if}
-							<a href="{plugin_url path="exportGalley"|to_array:$galley->getId()}{if $testMode}?testMode=1{/if}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+							<a href="{plugin_url path="exportGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 						</nobr></td>
 					</tr>
 					<tr>
@@ -74,7 +74,7 @@
 					</tr>
 				{/if}
 			{/iterate}
-			{if $noGalleys == "true"}
+			{if $noGalleys}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noGalleys"}</td>
 				</tr>
@@ -89,7 +89,7 @@
 			{/if}
 		</table>
 		<p>
-			{if $testMode}<input type="hidden" name="testMode" value="1" />{/if}
+			{if !empty($testMode)}<input type="hidden" name="testMode" value="1" />{/if}
 			{if $hasCredentials}
 				<input type="submit" name="register" value="{translate key="plugins.importexport.common.register"}" title="{translate key="plugins.importexport.common.registerDescription.multi"}" class="button defaultButton"/>
 				&nbsp;

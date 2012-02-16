@@ -109,8 +109,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs();
 				$doiPrefix = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-				if (isset($pubIdPlugins['DoiPubIdPlugin'])) {
-					$doiPrefix = $pubIdPlugins['DoiPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
+				if (isset($pubIdPlugins['DOIPubIdPlugin'])) {
+					$doiPrefix = $pubIdPlugins['DOIPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
 				}
 				$templateMgr->assign('doiPrefix', $doiPrefix);
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');

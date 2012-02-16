@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file plugins/pubIds/doi/DoiSettingsForm.inc.php
+ * @file plugins/pubIds/doi/DOISettingsForm.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class DoiSettingsForm
+ * @class DOISettingsForm
  * @ingroup plugins_pubIds_doi
  *
  * @brief Form for journal managers to setup DOI plugin
@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class DoiSettingsForm extends Form {
+class DOISettingsForm extends Form {
 
 	//
 	// Private properties
@@ -31,12 +31,12 @@ class DoiSettingsForm extends Form {
 		return $this->_journalId;
 	}
 
-	/** @var DoiPubIdPlugin */
+	/** @var DOIPubIdPlugin */
 	var $_plugin;
 
 	/**
 	 * Get the plugin.
-	 * @return DoiPubIdPlugin
+	 * @return DOIPubIdPlugin
 	 */
 	function &_getPlugin() {
 		return $this->_plugin;
@@ -48,10 +48,10 @@ class DoiSettingsForm extends Form {
 	//
 	/**
 	 * Constructor
-	 * @param $plugin DoiPubIdPlugin
+	 * @param $plugin DOIPubIdPlugin
 	 * @param $journalId integer
 	 */
-	function DoiSettingsForm(&$plugin, $journalId) {
+	function DOISettingsForm(&$plugin, $journalId) {
 		$this->_journalId = $journalId;
 		$this->_plugin =& $plugin;
 
@@ -59,6 +59,10 @@ class DoiSettingsForm extends Form {
 
 		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableArticleDoi\') || $form->getData(\'enableGalleyDoi\') || $form->getData(\'enableSuppFileDoi\');'), array(&$this)));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9][0-9][0-9][0-9][0-9]?$/'));
+		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', create_function('$doiIssueSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableIssueDoi\')) return $doiIssueSuffixPattern != \'\';return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiArticleSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired', create_function('$doiArticleSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableArticleDoi\')) return $doiArticleSuffixPattern != \'\';return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiGalleySuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired', create_function('$doiGalleySuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableGalleyDoi\')) return $doiGalleySuffixPattern != \'\';return true;'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiSuppFileSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired', create_function('$doiSuppFileSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableSuppFileDoi\')) return $doiSuppFileSuffixPattern != \'\';return true;'), array(&$this)));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -82,32 +86,6 @@ class DoiSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array_keys($this->_getFormFields()));
-	}
-
-	/**
-	 * @see Form::validate()
-	 */
-	function validate() {
-		if ($this->getData('doiSuffix') == 'pattern') {
-			// When individual DOI patterns are enabled then we have
-			// to check for every object that we want to generate
-			// DOIs for whether a pattern has really been entered.
-			foreach(array('Issue', 'Article', 'Galley', 'SuppFile') as $objectType) {
-				if ($this->getData("enable${objectType}Doi")) {
-					$this->addCheck(
-						new FormValidator(
-							$this, "doi${objectType}SuffixPattern", 'required',
-							// NB: We cannot use translation parameters here...
-							// FormValidator won't let us. So we use one key per
-							// object type.
-							"plugins.pubIds.doi.manager.settings.doi${objectType}SuffixPatternRequired"
-						)
-					);
-				}
-			}
-		}
-
-		return parent::validate();
 	}
 
 	/**

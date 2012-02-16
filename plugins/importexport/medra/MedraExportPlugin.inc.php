@@ -13,7 +13,7 @@
  */
 
 
-import('plugins.importexport.medra.classes.DoiExportPlugin');
+import('plugins.importexport.medra.classes.DOIExportPlugin');
 
 // O4DOI schemas.
 define('O4DOI_ISSUE_AS_WORK', 0x01);
@@ -21,13 +21,13 @@ define('O4DOI_ISSUE_AS_MANIFESTATION', 0x02);
 define('O4DOI_ARTICLE_AS_WORK', 0x03);
 define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 
-class MedraExportPlugin extends DoiExportPlugin {
+class MedraExportPlugin extends DOIExportPlugin {
 
 	//
 	// Constructor
 	//
 	function MedraExportPlugin() {
-		parent::DoiExportPlugin();
+		parent::DOIExportPlugin();
 	}
 
 
@@ -57,24 +57,24 @@ class MedraExportPlugin extends DoiExportPlugin {
 
 
 	//
-	// Implement template methods from DoiExportPlugin
+	// Implement template methods from DOIExportPlugin
 	//
 	/**
-	 * @see DoiExportPlugin::getPluginId()
+	 * @see DOIExportPlugin::getPluginId()
 	 */
 	function getPluginId() {
 		return 'medra';
 	}
 
 	/**
-	 * @see DoiExportPlugin::getSettingsFormClassName()
+	 * @see DOIExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'MedraSettingsForm';
 	}
 
 	/**
-	 * @see DoiExportPlugin::generateExportFiles()
+	 * @see DOIExportPlugin::generateExportFiles()
 	 */
 	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
 		assert(count($objects) >= 1);
@@ -101,7 +101,7 @@ class MedraExportPlugin extends DoiExportPlugin {
 	}
 
 	/**
-	 * @see DoiExportPlugin::registerDoi()
+	 * @see DOIExportPlugin::registerDoi()
 	 */
 	function registerDoi(&$request, &$journal, &$objects, $file) {
 		// Use a different endpoint for testing and
@@ -111,7 +111,7 @@ class MedraExportPlugin extends DoiExportPlugin {
 
 		// Get credentials.
 		$username = $this->getSetting($journal->getId(), 'username');
-		$password = base64_decode($this->getSetting($journal->getId(), 'password'));
+		$password = $this->getSetting($journal->getId(), 'password');
 
 		// Retrieve the XML.
 		assert(is_readable($file));
