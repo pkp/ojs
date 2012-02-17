@@ -181,7 +181,7 @@ class ArticleSearch {
 		}
 
 		$mergedResults = array();
-		$articleSearchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$articleSearchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $articleSearchDao ArticleSearchDAO */
 		$results =& $articleSearchDao->getPhraseResults(
 			$journal,
 			$phrase,

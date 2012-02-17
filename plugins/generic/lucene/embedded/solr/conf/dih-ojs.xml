@@ -1,0 +1,201 @@
+<dataConfig>
+  <dataSource name="http-post" type="ContentStreamDataSource" connectionTimeout="300000" readTimeout="400000" />
+  <dataSource name="field" type="FieldReaderDataSource" />
+  <dataSource name="file" type="BinFileDataSource" basePath="/home/fgrandel/Development/fub/ojs/plugins/generic/lucene/embedded/testdata/files/journals/1/articles/" />
+
+  <script><![CDATA[
+    function transformArticle(row, context) {
+      // Variable for spellchecker output.
+      var spellSource = '';
+
+      // Add localized fields.
+      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverageGeo', 'coverageChron', 'coverageSample'];
+      for (i=0, len=locFields.length; i<len; i++) {
+        var valueList = 'etl_' + locFields[i] + 'List';
+        var localeList = 'etl_' + locFields[i] + 'List_locales';
+
+        var values = row.get(valueList);
+        if (values == null) continue;
+        var locales = row.get(localeList);
+        for(var j=0, locs=values.size(); j<locs; j++) {
+          row.put(locFields[i] + '_' + locales.get(j), values.get(j));
+          spellSource += String(values.get(j)) + ' ';
+        }
+
+        row.remove(valueList);
+        row.remove(localeList);
+      }
+
+      // Add spellchecker output to the document.
+      row.put('default_spell', String(spellSource));
+
+      // Prepare the galley XML.
+      var galleyXml = row.get('etl_galley_xml');
+      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
+      row.put('etl_galley_xml', String(galleyXml));
+
+      // Prepare the supp file XML.
+      var suppFileXml = row.get('etl_suppFile_xml');
+      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
+      row.put('etl_suppFile_xml', String(suppFileXml));
+
+      return row;
+    }
+
+    function transformFile(row, context) {
+      // Interpret MIME type.
+      var mimetype = String(row.get('etl_file_mimetype'));
+
+      switch(mimetype) {
+        case 'application/pdf':
+          row.put('etl_file_mimetype', 'pdf');
+          break;
+
+        case 'text/html':
+          row.put('etl_file_mimetype', 'html');
+          break;
+
+        default:
+          // Unsupported MIME type: do not index the galley.
+          row.remove('etl_file_name');
+          row.remove('etl_file_locale');
+          row.remove('etl_file_mimetype');
+          row.put('$skipRow', 'true');
+      }
+
+      return row;
+    }
+
+    function transformFullText(row, context) {
+      var entityName = context.getParentContext().getResolvedEntityAttribute('name');
+      var locale = context.resolve(entityName + '.etl_file_locale');
+      var mimetype = context.resolve(entityName + '.etl_file_mimetype');
+
+      // Analyze unknown locales with a generic analyzer.
+      if (locale == 'unknown') locale = 'txt';
+
+      // Construct the dynamic field name.
+      var fieldName = entityName + '_full_text_' + mimetype + '_' + locale;
+
+      // Deal with multiple entries for the same mimetype/locale.
+      var fullText = row.get(fieldName);
+      if (fullText == null) fullText = '';
+      fullText = String(fullText) + String(row.get('text'));
+      row.put(fieldName, fullText);
+
+      // Add full text to spellchecker dictionary.
+      var spellCheck = row.get('default_spell');
+      if (spellCheck == null) spellCheck = '';
+      spellCheck += String(row.get('text')) + ' ';
+      row.put('default_spell', spellCheck);
+
+      row.remove('text');
+      return row;
+    }
+  ]]></script>
+
+  <document>
+    <entity name="article"
+            dataSource="http-post"
+            processor="XPathEntityProcessor"
+            forEach="/articleList/article"
+            transformer="script:transformArticle,LogTransformer"
+            logTemplate="Indexing article ${article.article_id}." logLevel="info"
+            stream="false"
+            onError="continue" >
+
+      <!-- ID fields -->
+      <field column="article_id" xpath="/articleList/article/@id" />
+      <field column="inst_id" xpath="/articleList/article/@instId" />
+      <field column="journal_id" xpath="/articleList/article/@journalId" />
+
+      <!-- Authors -->
+      <field column="authors_s" xpath="/articleList/article/authorList/author" multiValued="true" />
+
+      <!-- Titles -->
+      <field column="etl_titleList" xpath="/articleList/article/titleList/title" multiValued="true" />
+      <field column="etl_titleList_locales" xpath="/articleList/article/titleList/title/@locale" multiValued="true" />
+
+      <!-- Abstracts -->
+      <field column="etl_abstractList" xpath="/articleList/article/abstractList/abstract" multiValued="true" />
+      <field column="etl_abstractList_locales" xpath="/articleList/article/abstractList/abstract/@locale" multiValued="true" />
+
+      <!-- Disciplines -->
+      <field column="etl_disciplineList" xpath="/articleList/article/disciplineList/discipline" multiValued="true" />
+      <field column="etl_disciplineList_locales" xpath="/articleList/article/disciplineList/discipline/@locale" multiValued="true" />
+
+      <!-- Subjects -->
+      <field column="etl_subjectList" xpath="/articleList/article/subjectList/subject" multiValued="true" />
+      <field column="etl_subjectList_locales" xpath="/articleList/article/subjectList/subject/@locale" multiValued="true" />
+
+      <!-- Types -->
+      <field column="etl_typeList" xpath="/articleList/article/typeList/type" multiValued="true" />
+      <field column="etl_typeList_locales" xpath="/articleList/article/typeList/type/@locale" multiValued="true" />
+
+      <!-- CoverageGeo -->
+      <field column="etl_coverageGeoList" xpath="/articleList/article/coverageGeoList/coverageGeo" multiValued="true" />
+      <field column="etl_coverageGeoList_locales" xpath="/articleList/article/coverageGeoList/coverageGeo/@locale" multiValued="true" />
+
+      <!-- CoverageChron -->
+      <field column="etl_coverageChronList" xpath="/articleList/article/coverageChronList/coverageChron" multiValued="true" />
+      <field column="etl_coverageChronList_locales" xpath="/articleList/article/coverageChronList/coverageChron/@locale" multiValued="true" />
+
+      <!-- CoverageSample -->
+      <field column="etl_coverageSampleList" xpath="/articleList/article/coverageSampleList/coverageSample" multiValued="true" />
+      <field column="etl_coverageSampleList_locales" xpath="/articleList/article/coverageSampleList/coverageSample/@locale" multiValued="true" />
+
+      <!-- Publication Date -->
+      <field column="publication_date_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
+
+      <!-- Galleys -->
+      <field column="etl_galley_xml" xpath="/articleList/article/galley-xml" multiValued="false" />
+      <entity name="galley"
+              dataSource="field"
+              dataField="article.etl_galley_xml"
+              processor="XPathEntityProcessor"
+              forEach="/galleyList/galley"
+              transformer="script:transformFile"
+              stream="false"
+              onError="continue" >
+
+        <field column="etl_file_name" xpath="/galleyList/galley/@fileName" multiValued="false" />
+        <field column="etl_file_locale" xpath="/galleyList/galley/@locale" multiValued="false" />
+        <field column="etl_file_mimetype" xpath="/galleyList/galley/@mimetype" multiValued="false" />
+
+        <entity name="galley_file"
+                dataSource="file"
+                processor="TikaEntityProcessor"
+                url="${article.article_id}/public/${galley.etl_file_name}"
+                transformer="script:transformFullText"
+                format="text" >
+          <field column="text" />
+        </entity>
+      </entity>
+
+      <!-- Supplementary Files -->
+      <field column="etl_suppFile_xml" xpath="/articleList/article/suppFile-xml" multiValued="false" default="" />
+      <entity name="suppFile"
+              dataSource="field"
+              dataField="article.etl_suppFile_xml"
+              processor="XPathEntityProcessor"
+              forEach="/suppFileList/suppFile"
+              transformer="script:transformFile"
+              stream="false"
+              onError="continue" >
+
+        <field column="etl_file_name" xpath="/suppFileList/suppFile/@fileName" multiValued="false" />
+        <field column="etl_file_locale" xpath="/suppFileList/suppFile/@locale" multiValued="false" />
+        <field column="etl_file_mimetype" xpath="/suppFileList/suppFile/@mimetype" multiValued="false" />
+
+        <entity name="suppFile_file"
+                dataSource="file"
+                processor="TikaEntityProcessor"
+                url="${article.article_id}/supp/${suppFile.etl_file_name}"
+                transformer="script:transformFullText"
+                format="text" >
+          <field column="text" />
+        </entity>
+      </entity>
+    </entity>
+  </document>
+</dataConfig>
