@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file PiwikPlugin.inc.php
+ * @file plugins/generic/piwik/PiwikPlugin.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,7 +12,6 @@
  * @brief Piwik plugin class
  */
 
-// $Id: PiwikPlugin.inc.php,v 0.9 2010/08/12 luiz_borges Exp $
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 

@@ -6,7 +6,6 @@
  *
  * RSS feed template
  *
- * $Id$
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <rdf:RDF

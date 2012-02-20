@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE issues SYSTEM "native.dtd">
 <!--
-  * sample.xml
+  * plugins/importexport/native/sample.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Sample import document for the OJS 2.x native XML import/export format.
   *
-  * $Id$
   -->
 <issues>
 	<issue published="true" current="false" identification="title">

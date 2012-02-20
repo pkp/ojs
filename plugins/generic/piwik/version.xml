@@ -2,14 +2,13 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * version.xml
+  * plugins/generic/piwik/version.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
   *
-  * $Id: version.xml,v 0.9 2010/08/13 luiz_borges Exp $
   -->
 <version>
 	<application>piwik</application>

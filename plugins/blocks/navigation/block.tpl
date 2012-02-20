@@ -6,12 +6,11 @@
  *
  * Common site sidebar menu -- navigation links.
  *
- * $Id$
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
-	
+
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
 	<form method="post" action="{url page="search" op="results"}">
 	<table>
@@ -28,9 +27,9 @@
 	</tr>
 	</table>
 	</form>
-	
+
 	<br />
-	
+
 	{if $currentJournal}
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>

@@ -6,7 +6,6 @@
  *
  * List of component locales to edit for a particular locale
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="plugins.generic.translator.locale" locale=$locale}

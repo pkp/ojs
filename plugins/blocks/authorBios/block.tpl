@@ -6,7 +6,6 @@
  *
  * Keyword cloud block plugin
  *
- * $Id$
  *}
 
 <div class="block" id="sidebarRTAuthorBios">

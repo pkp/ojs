@@ -6,7 +6,6 @@
  *
  * Google Analytics urchin.js (legacy) page tag.
  *
- * $Id$
  *}
 <!-- Google Analytics -->
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

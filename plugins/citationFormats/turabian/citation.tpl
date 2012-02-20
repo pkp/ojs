@@ -6,7 +6,6 @@
  *
  * Article reading tools -- Capture Citation
  *
- * $Id$
  *}
 <div class="separator"></div>
 

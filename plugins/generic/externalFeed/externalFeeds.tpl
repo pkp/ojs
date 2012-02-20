@@ -6,7 +6,6 @@
  *
  * Display list of external feeds in plugin management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.externalFeed.manager.feeds"}

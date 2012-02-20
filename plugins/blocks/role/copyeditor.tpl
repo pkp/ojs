@@ -6,7 +6,6 @@
  *
  * Copyeditor navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarCopyeditor">
 	<span class="blockTitle">{translate key="user.role.copyeditor"}</span>

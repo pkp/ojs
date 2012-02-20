@@ -6,7 +6,6 @@
  *
  * Keyword cloud block plugin
  *
- * $Id$
  *}
 
 {if $journalRt && $journalRt->getEnabled()}

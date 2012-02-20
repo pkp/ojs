@@ -1,12 +1,11 @@
 <!--
-  * native.dtd
+  * plugins/importexport/native/native.dtd
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DTD for native XML import/export.
   *
-  * $Id$
   -->
 
 <!--

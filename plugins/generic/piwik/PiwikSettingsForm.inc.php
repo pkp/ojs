@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file PiwikSettingsForm.inc.php
+ * @file plugins/generic/piwik/PiwikSettingsForm.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -11,8 +11,6 @@
  *
  * @brief Form for journal managers to modify piwik plugin settings
  */
-
-// $Id: PiwikSettingsForm.inc.php,v 0.9 2010/08/12 luiz_borges Exp $
 
 
 import('form.Form');
@@ -61,7 +59,7 @@ class PiwikSettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$plugin = &$this->plugin;

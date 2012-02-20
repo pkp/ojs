@@ -6,7 +6,6 @@
  *
  * Referral listing for readers
  *
- * $Id$
  *}
 
 <div class="separator"></div>

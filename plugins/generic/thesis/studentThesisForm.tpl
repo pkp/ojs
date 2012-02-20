@@ -6,7 +6,6 @@
  *
  * Form for student thesis abstract submission.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.thesis.submit"}

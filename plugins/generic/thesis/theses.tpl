@@ -6,7 +6,6 @@
  *
  * Display list of thesis abstracts in plugin management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.thesis.manager.theses"}

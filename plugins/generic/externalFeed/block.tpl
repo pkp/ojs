@@ -6,7 +6,6 @@
  *
  * External feed plugin navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarExternalFeed">
 	{foreach from=$externalFeeds item=externalFeed}

@@ -6,7 +6,6 @@
  *
  * Section Editor navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarSectionEditor">
 	<span class="blockTitle">{translate key="user.role.sectionEditor"}</span>

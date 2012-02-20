@@ -12,8 +12,6 @@
  * @brief Integrate OpenAds ad manager with OJS.
  */
 
-// $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
-
 define ('AD_ORIENTATION_LEFT',		1);
 define ('AD_ORIENTATION_RIGHT',		2);
 define ('AD_ORIENTATION_CENTRE',	3);

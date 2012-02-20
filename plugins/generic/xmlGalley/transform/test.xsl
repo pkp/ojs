@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
 
 <!--
-  * test.xsl
+  * plugins/generic/xmlGalley/transform/test.xsl
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Test XSL stylesheet for external XSLT using the XML Galleys plugin.
   *
-  * $Id$
   -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">

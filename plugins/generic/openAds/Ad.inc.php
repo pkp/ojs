@@ -12,8 +12,6 @@
  * @brief Abstract an OpenAds ad.
  */
 
-// $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
-
 define('AD_TYPE_CONTENT', 1);
 define('AD_TYPE_SIDEBAR', 2);
 define('AD_TYPE_MASTHEAD', 3);

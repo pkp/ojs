@@ -6,7 +6,6 @@
  *
  * Reviewer navigation sidebar.
  *
- * $Id$
  *}
 {* Note that if the user has come in via an access key, the submission counts won't
    be available as the user isn't actually logged in. Therefore we must check to

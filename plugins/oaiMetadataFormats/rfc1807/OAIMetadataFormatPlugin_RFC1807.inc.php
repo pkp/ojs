@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/OAIMetadata/marc/OAIMetadataFormatPlugin_RFC1807.inc.php
+ * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

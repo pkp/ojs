@@ -6,7 +6,6 @@
  *
  * External feed plugin settings
  *
- * $Id$
  *}
 {assign var="pageTitle" value="plugins.generic.externalFeed.manager.settings"}
 {include file="common/header.tpl"}

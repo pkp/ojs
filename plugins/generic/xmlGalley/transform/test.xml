@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  * test.xml
+  * plugins/generic/xmlGalley/transform/test.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Test XML file for external XSLT using the XML Galleys plugin.
   *
-  * $Id$
   -->
 
 <root>

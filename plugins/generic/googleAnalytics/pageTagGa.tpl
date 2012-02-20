@@ -6,7 +6,6 @@
  *
  * Google Analytics ga.js page tag.
  *
- * $Id$
  *}
 <!-- Google Analytics -->
 <script type="text/javascript">

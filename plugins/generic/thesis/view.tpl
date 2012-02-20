@@ -4,9 +4,8 @@
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v1. For full terms see the file docs/COPYING.
  *
- * View thesis abstract. 
+ * View thesis abstract.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitleTranslated" value=$thesis->getStudentLastName()}

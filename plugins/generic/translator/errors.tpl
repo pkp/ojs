@@ -6,7 +6,6 @@
  *
  * Error list for a checked locale
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.translator.errors"}

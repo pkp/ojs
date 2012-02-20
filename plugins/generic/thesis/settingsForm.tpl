@@ -6,7 +6,6 @@
  *
  * Thesis abstracts plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.thesis.manager.settings"}

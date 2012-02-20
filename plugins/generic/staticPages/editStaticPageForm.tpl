@@ -6,7 +6,6 @@
  *
  * Form for editing a Static Page
  *
- * $Id$
  *}
 {if $staticPageId}
 	{assign var="pageTitle" value="plugins.generic.staticPages.editStaticPage"}

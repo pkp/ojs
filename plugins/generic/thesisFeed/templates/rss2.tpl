@@ -6,7 +6,6 @@
  *
  * RSS 2 feed template
  *
- * $Id$
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <rss version="2.0">

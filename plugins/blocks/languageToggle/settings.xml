@@ -2,14 +2,13 @@
 <!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
 
 <!--
-  * settings.xml
+  * plugins/blocks/languageToggle/settings.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Default plugin settings.
   *
-  * $Id$
   -->
 
 <plugin_settings>

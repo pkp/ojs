@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_sword
  */
- 
+
 /**
  * @file plugins/generic/sword/index.php
  *
@@ -14,8 +14,6 @@
  * @brief Wrapper for sword deposit plugin.
  *
  */
-
-// $Id: index.php,v 1.10 2010/01/21 18:52:12 asmecher Exp $
 
 
 require_once('SwordPlugin.inc.php');

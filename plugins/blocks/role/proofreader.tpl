@@ -6,7 +6,6 @@
  *
  * Proofreader navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarProofreader">
 	<span class="blockTitle">{translate key="user.role.proofreader"}</span>

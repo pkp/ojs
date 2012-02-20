@@ -6,7 +6,6 @@
  *
  * Article reading tools -- Capture Citation CBE format
  *
- * $Id$
  *}
 <div class="separator"></div>
 

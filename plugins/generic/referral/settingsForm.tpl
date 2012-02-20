@@ -6,7 +6,6 @@
  *
  * Referral plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.referral.settings"}

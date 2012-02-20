@@ -6,7 +6,6 @@
  *
  * Common site sidebar menu -- information links.
  *
- * $Id$
  *}
 {if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 <div class="block" id="sidebarInformation">

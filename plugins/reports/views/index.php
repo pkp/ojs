@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_reports_views
  */
- 
+
 /**
  * @file plugins/reports/views/index.php
  *
@@ -14,8 +14,6 @@
  * @brief Wrapper for view report plugin.
  *
  */
-
-// $Id: index.php,v 1.2 2008/07/01 01:16:14 asmecher Exp $
 
 
 require_once(dirname(__FILE__) . '/ViewReportPlugin.inc.php');

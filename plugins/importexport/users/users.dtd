@@ -1,12 +1,11 @@
 <!--
-  * users.dtd
+  * plugins/importexport/users/users.dtd
   *
   * DTD for user information.
   * Used by the user import/export functionality.
   *
   * Usernames and passwords are optional and will be generated automatically if omitted.
   *
-  * $Id$
   -->
 
 <!ELEMENT users (user*)>

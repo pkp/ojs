@@ -6,7 +6,6 @@
  *
  * Edit a specific locale file.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="plugins.generic.translator.locale" locale=$locale}

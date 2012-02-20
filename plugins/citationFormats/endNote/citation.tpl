@@ -6,7 +6,6 @@
  *
  * EndNote citation format generator
  *
- * $Id$
  *}
 {if $galleyId}
 	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}

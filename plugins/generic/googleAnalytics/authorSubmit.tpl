@@ -6,7 +6,6 @@
  *
  * Google Analytics author submission account information
  *
- * $Id$
  *}
 <!-- Google Analytics -->
 <tr valign="top">

@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_piwik
  */
- 
+
 /**
  * @file plugins/generic/piwik/index.php
  *
@@ -14,8 +14,6 @@
  * @brief Wrapper for Piwik plugin.
  *
  */
-
-// $Id: index.php,v 1.5 2008/07/01 01:16:13 asmecher Exp $
 
 
 require_once('PiwikPlugin.inc.php');

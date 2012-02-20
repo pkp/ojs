@@ -6,7 +6,6 @@
  *
  * Metadata elements for thesis abstracts.
  *
- * $Id$
  *}
 	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 	<link rel="schema.ETDMS" href="http://www.ndltd.org/standards/metadata/etdms/1.0/etdms.xsd" />
@@ -34,7 +33,7 @@
 	<meta name="DC.Publisher" content="{$journal->getLocalizedTitle()|escape}"/>
 	<meta name="DC.Date" scheme="ISO8601" content="{$thesis->getDateApproved()|date_format:"%Y-%m-%d"}"/>
 	<meta name="DC.Type" content="Electronic Thesis or Dissertation"/>
-	<meta name="DC.Format" scheme="IMT" content="text/html"/>		
+	<meta name="DC.Format" scheme="IMT" content="text/html"/>
 	<meta name="DC.Identifier" content="{url op="view" path=$thesis->getId()}"/>
 {if $thesis->getUrl()}
 	<meta name="DC.Source" content="{$thesis->getUrl()|escape}"/>

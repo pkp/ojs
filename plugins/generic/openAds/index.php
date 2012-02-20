@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_openAds
  */
- 
+
 /**
  * @file plugins/generic/openAds/index.php
  *
@@ -15,7 +15,6 @@
  *
  */
 
-// $Id: index.php,v 1.0 2006/10/20 12:27pm
 
 require_once('OpenAdsPlugin.inc.php');
 

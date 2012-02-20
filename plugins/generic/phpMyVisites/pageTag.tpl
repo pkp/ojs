@@ -6,7 +6,6 @@
  *
  * phpMyVisites page tag.
  *
- * $Id$
  *}
 <!-- phpMyVisites -->
 <script type="text/javascript">

@@ -6,7 +6,6 @@
  *
  * phpMyVisites plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.phpmv.manager.phpmvSettings"}

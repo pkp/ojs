@@ -6,7 +6,6 @@
  *
  * List of operations this plugin can perform
  *
- * $Id: index.tpl,v 1.13 2010/01/21 18:52:12 asmecher Exp $
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.sword.displayName"}

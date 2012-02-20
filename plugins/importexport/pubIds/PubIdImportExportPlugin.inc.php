@@ -45,14 +45,14 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	 * @see ImportExportPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return AppLocale::translate('plugins.importexport.pubIds.displayName');
+		return __('plugins.importexport.pubIds.displayName');
 	}
 
 	/**
 	 * @see ImportExportPlugin::getDescription()
 	 */
 	function getDescription() {
-		return AppLocale::translate('plugins.importexport.pubIds.description');
+		return __('plugins.importexport.pubIds.description');
 	}
 
 	/**
@@ -132,6 +132,12 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
+	/**
+	 * Export public identifiers of one or more issues.
+	 * @param $journal object
+	 * @param $issues array
+	 * @param $outputFile xml file containing the exported public identifiers
+	 */
 	function exportPubIdsForIssues(&$journal, &$issues, $outputFile = null) {
 		$doc =& XMLCustomWriter::createDocument('pubIds', PID_DTD_URL, PID_DTD_URL);
 		$pubIdsNode =& XMLCustomWriter::createElement($doc, 'pubIds');
@@ -169,6 +175,14 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		return true;
 	}
 
+	/**
+	 * Import public identifier.
+	 * @param $journal object
+	 * @param $pubIdNode XMLNode
+	 * @param $pubId array describing the successfully imported public identifier
+	 * @param $errors array
+	 * @param $isCommandLine boolean
+	 */
 	function importPubId(&$journal, &$pubIdNode, &$pubId, &$errors, $isCommandLine) {
 		$errors = array();
 		$pubId = null;
@@ -224,6 +238,14 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
+	/**
+	 * Import public identifiers.
+	 * @param $journal object
+	 * @param $pubIdNodes array all pubId nodes of the xml document
+	 * @param $errors array
+	 * @param $pubIds array successfully imported pubIds
+	 * @param $isCommandLine boolean
+	 */
 	function importPubIds(&$journal, &$pubIdNodes, &$pubIds, &$errors, $isCommandLine) {
 		$errors = array();
 		$pubIds = array();
@@ -234,16 +256,33 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
+	/**
+	 * Get the tree structure of the xml document.
+	 * @param $fileName string full path to the XML file
+	 * @return object tree structure representing the document
+	 */
 	function &getDocument($fileName) {
 		$parser = new XMLParser();
 		$returner =& $parser->parse($fileName);
 		return $returner;
 	}
 
+	/**
+	 * Get the name of the root node of the xml document.
+	 * @return string
+	 */
 	function getRootNodeName(&$doc) {
 		return $doc->name;
 	}
 
+	/**
+	 * Handle import of public identifiers described in the xml document.
+	 * @param $context array
+	 * @param $doc DOMDocument
+	 * @param $errors array
+	 * @param $pubIds array successfully imported pubIds
+	 * @param $isCommandLine boolean
+	 */
 	function handleImport(&$context, &$doc, &$errors, &$pubIds, $isCommandLine) {
 		$errors = array();
 		$pubIds = array();
@@ -287,6 +326,11 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
+	/**
+	 * Check if this is a relative path to the xml docuemnt
+	 * that describes public identifiers to be imported.
+	 * @param $url string path to the xml file
+	 */
 	function isRelativePath($url) {
 		// FIXME This is not very comprehensive, but will work for now.
 		if ($this->isAllowedMethod($url)) return false;

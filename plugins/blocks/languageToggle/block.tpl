@@ -6,7 +6,6 @@
  *
  * Common site sidebar menu -- language toggle.
  *
- * $Id$
  *}
 {if $enableLanguageToggle}
 <div class="block" id="sidebarLanguageToggle">

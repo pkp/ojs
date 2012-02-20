@@ -6,7 +6,6 @@
  *
  * XML galley plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.xmlGalley.displayName"}

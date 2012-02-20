@@ -1,14 +1,13 @@
 {**
- * settingsForm.tpl
+ * plugins/generic/piwik/settingsForm.tpl
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Piwik plugin settings
  *
- * $Id: settingsForm.tpl,v 0.9 2010/08/12 luiz_borges Exp $
  *}
- 
+
 {assign var="pageTitle" value="plugins.generic.piwik.manager.piwikSettings"}
 {include file="common/header.tpl"}
 

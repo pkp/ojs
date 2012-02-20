@@ -6,7 +6,6 @@
  *
  * LayoutEditor navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarLayoutEditor">
 	<span class="blockTitle">{translate key="user.role.layoutEditor"}</span>

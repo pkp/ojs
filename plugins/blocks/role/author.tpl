@@ -6,7 +6,6 @@
  *
  * Author navigation sidebar.
  *
- * $Id$
  *}
 <div class="block" id="sidebarAuthor">
 	<span class="blockTitle">{translate key="user.role.author"}</span>

@@ -6,7 +6,6 @@
  *
  * SWORD plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.generic.sword.displayName"}

@@ -12,7 +12,6 @@
  * @brief Abstracts the OpenAds link.
  */
 
-// $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
 
 class OpenAdsConnection {
 	/** @var $installPath string Path to config file */

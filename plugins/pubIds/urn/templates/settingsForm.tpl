@@ -26,13 +26,13 @@
 		<td width="80%" class="value">
 			{translate key="plugins.pubIds.urn.manager.settings.URNsForJournalContent"}<br />
 			<input type="checkbox" name="enableIssueURN" id="enableIssueURN" value="1"{if $enableIssueURN} checked="checked"{/if} />
-			<label for="enableIssueURN">{translate key="plugins.pubIds.urn.manager.settings.enableIssueURN"}</label><br />
+			{fieldLabel name="enableIssueURN" key="plugins.pubIds.urn.manager.settings.enableIssueURN"}<br />
 			<input type="checkbox" name="enableArticleURN" id="enableArticleURN" value="1"{if $enableArticleURN} checked="checked"{/if} />
-			<label for="enableArticleURN">{translate key="plugins.pubIds.urn.manager.settings.enableArticleURN"}</label><br />
+			{fieldLabel name="enableArticleURN" key="plugins.pubIds.urn.manager.settings.enableArticleURN"}<br />
 			<input type="checkbox" name="enableGalleyURN" id="enableGalleyURN" value="1"{if $enableGalleyURN} checked="checked"{/if} />
-			<label for="enableGalleyURN">{translate key="plugins.pubIds.urn.manager.settings.enableGalleyURN"}</label><br />
+			{fieldLabel name="enableGalleyURN" key="plugins.pubIds.urn.manager.settings.enableGalleyURN"}<br />
 			<input type="checkbox" name="enableSuppFileURN" id="enableSuppFileURN" value="1"{if $enableSuppFileURN} checked="checked"{/if} />
-			<label for="enableSuppFileURN">{translate key="plugins.pubIds.urn.manager.settings.enableSuppFileURN"}</label><br />
+			{fieldLabel name="enableSuppFileURN" key="plugins.pubIds.urn.manager.settings.enableSuppFileURN"}<br />
 		</td>
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>

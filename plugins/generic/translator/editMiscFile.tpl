@@ -6,7 +6,6 @@
  *
  * Misc. file editor dialog
  *
- * $Id$
  *}
 {strip}
 {translate|escape|assign:"pageTitleTranslated" key="plugins.generic.translator.file.edit" filename=$filename}

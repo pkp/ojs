@@ -6,7 +6,6 @@
  *
  * LDAP authentication source settings.
  *
- * $Id$
  *}
 <br />
 <div id="ldapSettings">

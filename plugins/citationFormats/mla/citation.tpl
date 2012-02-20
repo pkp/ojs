@@ -6,7 +6,6 @@
  *
  * Article reading tools -- Capture Citation MLA format
  *
- * $Id$
  *}
 <div class="separator"></div>
 

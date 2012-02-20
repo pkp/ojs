@@ -6,7 +6,6 @@
  *
  * Referral form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitle" value="$referralTitle"}

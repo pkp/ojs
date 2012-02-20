@@ -12,8 +12,6 @@
  * @brief View report plugin
  */
 
-// $Id: ViewReportPlugin.inc.php,v 1.3.2.2 2008/10/28 22:23:05 mcrider Exp $
-
 
 import('classes.plugins.ReportPlugin');
 

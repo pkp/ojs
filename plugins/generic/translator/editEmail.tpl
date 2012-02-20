@@ -6,7 +6,6 @@
  *
  * Email editor dialog
  *
- * $Id$
  *}
 {strip}
 {translate|escape|assign:"pageTitleTranslated" key="plugins.generic.translator.email.edit" emailKey=$emailKey}

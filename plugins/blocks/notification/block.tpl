@@ -6,7 +6,6 @@
  *
  * Common site sidebar menu -- "Notification" block.
  *
- * $Id$
  *}
  {if $currentJournal}
 <div class="block" id="notification">

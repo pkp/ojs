@@ -6,7 +6,6 @@
  *
  * Common site sidebar menu -- font size selector.
  *
- * $Id$
  *}
 <div class="block" id="sidebarFontSize" style="margin-bottom: 4px;">
 	<span class="blockTitle">{translate key="plugins.block.fontSize.title"}</span>

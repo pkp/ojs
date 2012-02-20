@@ -6,7 +6,6 @@
  *
  * External feed form under plugin management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitle" value="$feedTitle"}
