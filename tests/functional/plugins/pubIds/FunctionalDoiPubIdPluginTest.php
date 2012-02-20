@@ -433,7 +433,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		$doiPlugin = $pubIdPlugins['DOIPubIdPlugin'];
 		$doiPlugin->updateSetting(1, 'doiSuffix', 'publisherId');
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
+		$journal = $journalDao->getById(1);
 		foreach($this->objectTypes as $objectType) {
 			$journal->updateSetting('enablePublic' . $objectType . 'Id', true);
 		}

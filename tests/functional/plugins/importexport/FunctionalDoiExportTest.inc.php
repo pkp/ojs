@@ -67,7 +67,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Store initial journal configuration.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
+		$journal = $journalDao->getById(1);
 		$this->initialJournalSettings = array(
 			'publisherInstitution' => $journal->getSetting('publisherInstitution'),
 			'supportEmail' => $journal->getSetting('supportEmail')
@@ -106,7 +106,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Restoring the tables alone will not update the settings cache
 		// so we have to do this manually.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
+		$journal = $journalDao->getById(1);
 		foreach($this->initialJournalSettings as $settingName => $settingValue) {
 			$journal->updateSetting($settingName, $settingValue);
 		}
@@ -140,7 +140,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Test whether a missing publisher is being replaced
 		// with the journal name.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal = $journalDao->getJournal(1);
+		$journal = $journalDao->getById(1);
 		$journal->updateSetting('publisherInstitution', '');
 		$this->expectJournalNameAsPublisher = true;
 	}
