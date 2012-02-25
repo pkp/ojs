@@ -215,7 +215,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				$value = array(
 					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
-					'dateUploaded' => date("Y-m-d g:i:s")
+					'dateUploaded' => Core::getCurrentDate()
 				);
 
 				$settingsDao->updateSetting($journal->getId(), $settingName, $value, 'object');
