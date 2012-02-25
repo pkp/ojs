@@ -92,7 +92,7 @@ class ExternalFeedSettingsForm extends Form {
 				$value = array(
 					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
-					'dateUploaded' => date("Y-m-d g:i:s")
+					'dateUploaded' => Core::getCurrentDate()
 				);
 
 				$plugin->updateSetting($journalId, $settingName, $value, 'object');
