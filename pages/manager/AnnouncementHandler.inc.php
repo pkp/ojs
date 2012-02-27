@@ -67,7 +67,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function &_getAnnouncements($request, $rangeInfo = null) {
 		$journalId = $this->getContextId($request);
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$announcements =& $announcementDao->getAnnouncementsByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
+		$announcements =& $announcementDao->getByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 
 		return $announcements;
 	}
@@ -80,7 +80,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function &_getAnnouncementTypes(&$request, $rangeInfo = null) {
 		$journalId = $this->getContextId($request);
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		$announcements =& $announcementTypeDao->getAnnouncementTypesByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
+		$announcements =& $announcementTypeDao->getByAssoc(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 
 		return $announcements;
 	}
@@ -95,7 +95,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 		if ($announcementId == null) return true;
 
 		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
-		$announcement =& $announcementDao->getAnnouncement($announcementId);
+		$announcement =& $announcementDao->getById($announcementId);
 
 		$journalId = $this->getContextId($request);
 		if ( $announcement && $journalId
@@ -115,7 +115,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function _announcementTypeIsValid(&$request, $typeId) {
 		$journalId = $this->getContextId($request);
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		return (($typeId != null && $announcementTypeDao->getAnnouncementTypeAssocId($typeId) == $journalId) || $typeId == null);
+		return (($typeId != null && $announcementTypeDao->getByAssoc($typeId) == $journalId) || $typeId == null);
 	}
 }
 

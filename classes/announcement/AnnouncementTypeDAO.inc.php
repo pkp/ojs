@@ -17,7 +17,19 @@ import('classes.announcement.AnnouncementType');
 import('lib.pkp.classes.announcement.PKPAnnouncementTypeDAO');
 
 class AnnouncementTypeDAO extends PKPAnnouncementTypeDAO {
+	/**
+	 * Constructor
+	 */
+	function AnnouncementTypeDAO() {
+		parent::PKPAnnouncementTypeDAO();
+	}
 
+	/**
+	 * @see PKPAnnouncementTypeDAO::newDataObject
+	 */
+	function newDataObject() {
+		return new AnnouncementType();
+	}
 }
 
 ?>
