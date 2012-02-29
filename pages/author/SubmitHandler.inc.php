@@ -32,7 +32,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function submit($args, $request) {
 		$step = (int) array_shift($args);
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($request, $articleId, $step, 'author.submit.authorSubmitLoginMessage');
@@ -195,7 +195,7 @@ class SubmitHandler extends AuthorHandler {
 	 * Create new supplementary file with a uploaded file.
 	 */
 	function submitUploadSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($request, $articleId, 4);
@@ -215,7 +215,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to edit
 	 */
 	function submitSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
@@ -239,7 +239,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
 	 */
 	function saveSubmitSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
@@ -313,7 +313,7 @@ class SubmitHandler extends AuthorHandler {
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
 
-		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
+		if ($step !== false && ($step < 1 || $step > 5 || (!$articleId && $step != 1))) {
 			$request->redirect(null, null, 'submit', array(1));
 		}
 
