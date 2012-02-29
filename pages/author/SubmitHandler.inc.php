@@ -34,7 +34,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function submit($args, $request) {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId, $step, 'author.submit.authorSubmitLoginMessage');
@@ -60,7 +60,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function saveSubmit($args, &$request) {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId, $step);
@@ -198,7 +198,7 @@ class SubmitHandler extends AuthorHandler {
 	 * Create new supplementary file with a uploaded file.
 	 */
 	function submitUploadSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
 		$this->validate($articleId, 4);
@@ -218,7 +218,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to edit
 	 */
 	function submitSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
@@ -242,7 +242,7 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
 	 */
 	function saveSubmitSuppFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		$journal =& $request->getJournal();
 
@@ -256,7 +256,7 @@ class SubmitHandler extends AuthorHandler {
 
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+			$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 		} else {
 			$submitForm->display();
 		}
@@ -265,11 +265,12 @@ class SubmitHandler extends AuthorHandler {
 	/**
 	 * Delete a supplementary file.
 	 * @param $args array, the first parameter is the supplementary file to delete
+	 * @param $request PKPRequest
 	 */
-	function deleteSubmitSuppFile($args) {
+	function deleteSubmitSuppFile($args, &$request) {
 		import('classes.file.ArticleFileManager');
 
-		$articleId = Request::getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
 		$this->validate($articleId, 4);
@@ -285,23 +286,28 @@ class SubmitHandler extends AuthorHandler {
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
 
-		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+		$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
-	function expediteSubmission() {
-		$articleId = (int) Request::getUserVar('articleId');
+	/**
+	 * Expedite a submission through the editing process.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function expediteSubmission($args, &$request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$article =& $this->article;
 
 		// The author must also be an editor to perform this task.
 		if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
 			import('classes.submission.editor.EditorAction');
 			EditorAction::expediteSubmission($article);
-			Request::redirect(null, 'editor', 'submissionEditing', array($article->getId()));
+			$request->redirect(null, 'editor', 'submissionEditing', array($article->getId()));
 		}
 
-		Request::redirect(null, null, 'track');
+		$request->redirect(null, null, 'track');
 	}
 
 	/**
@@ -316,14 +322,14 @@ class SubmitHandler extends AuthorHandler {
 		$user =& Request::getUser();
 		$journal =& Request::getJournal();
 
-		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
+		if ($step !== false && ($step < 1 || $step > 5 || (!$articleId && $step != 1))) {
 			Request::redirect(null, null, 'submit', array(1));
 		}
 
 		$article = null;
 
 		// Check that article exists for this journal and user and that submission is incomplete
-		if (isset($articleId)) {
+		if ($articleId) {
 			$article =& $articleDao->getArticle((int) $articleId);
 			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
 				Request::redirect(null, null, 'submit');
