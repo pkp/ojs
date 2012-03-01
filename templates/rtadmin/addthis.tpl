@@ -27,7 +27,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingUserName">{translate key="rt.admin.sharing.userNameLabel"}</label></td>
-		<td><input type="text" name="sharingUserName" id="sharingUserName" value="{$sharingUserName}"/></td>
+		<td><input type="text" name="sharingUserName" id="sharingUserName" value="{$sharingUserName|escape}"/></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingButtonStyle">{translate key="rt.admin.sharing.buttonStyleLabel"}</label></td>
@@ -46,11 +46,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="sharingBrand">{translate key="rt.admin.sharing.brandLabel"}</label></td>
-		<td width="80%"><input type="text" name="sharingBrand" id="sharingBrand" value="{$sharingBrand}"/></td>
+		<td width="80%"><input type="text" name="sharingBrand" id="sharingBrand" value="{$sharingBrand|escape}"/></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingDropDown">{translate key="rt.admin.sharing.dropDownLabel"}</label></td>
-		<td><textarea rows="4" cols="20" name="sharingDropDown" id="sharingDropDown">{$sharingDropDown}</textarea></td>
+		<td><textarea rows="4" cols="20" name="sharingDropDown" id="sharingDropDown">{$sharingDropDown|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingLanguage">{translate key="rt.admin.sharing.languageLabel"}</label></td>
@@ -64,11 +64,11 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingLogoBackground">{translate key="rt.admin.sharing.logoBackgroundLabel"}</label></td>
-		<td><input type="text" name="sharingLogoBackground" id="sharingLogoBackground" value="{$sharingLogoBackground}"/></td>
+		<td><input type="text" name="sharingLogoBackground" id="sharingLogoBackground" value="{$sharingLogoBackground|escape}"/></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="sharingLogoColor">{translate key="rt.admin.sharing.logoColorLabel"}</label></td>
-		<td><input type="text" name="sharingLogoColor" id="sharingLogoColor" value="{$sharingLogoColor}"/></td>
+		<td><input type="text" name="sharingLogoColor" id="sharingLogoColor" value="{$sharingLogoColor|escape}"/></td>
 	</tr>
 </table>
 
