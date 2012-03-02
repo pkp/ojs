@@ -56,10 +56,9 @@
 			<li>{$checklistItem.content|nl2br}</li>	
 		{/foreach}
 	</ol>
+	<div class="separator">&nbsp;</div>
+	</div>
 {/if}{* $submissionChecklist *}
-
-<div class="separator">&nbsp;</div>
-</div>
 
 {if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
 <div id="copyrightNotice"><h3>{translate key="about.copyrightNotice"}</h3>
