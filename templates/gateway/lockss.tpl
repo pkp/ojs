@@ -7,7 +7,6 @@
  * LOCKSS Publisher Manifest gateway page.
  * NOTE: This page is not localized in order to provide a consistent interface to LOCKSS across all OJS installations. It is not meant to be accessed by humans.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitleTranslated" value="LOCKSS Publisher Manifest"}
@@ -45,7 +44,7 @@
 
 <ul>
 	<li><a href="{url page="about"}">About the Journal</a></li>
-	<li><a href="{url page="about" op="submission"}">Submission Guidelines</a></li>
+	<li><a href="{url page="about" op="submissions"}">Submission Guidelines</a></li>
 	<li><a href="{url page="about" op="contact"}">Contact Information</a></li>
 </ul>
 
