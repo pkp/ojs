@@ -189,7 +189,7 @@
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.setup.aboutItemContent">Inhalt</message>
-	<message key="manager.setup.addAboutItem">Eine "Über uns"-Eingabe einfügen</message>
+	<message key="manager.setup.addAboutItem">Über-uns-Abschnitt hinzufügen</message>
 	<message key="manager.setup.addChecklistItem">Der Checkliste einen Punkt hinzufügen</message>
 	<message key="manager.setup.addContributor">Unterstützende Organisation hinzufügen</message>
 	<message key="manager.setup.addItem">Einen Punkt hinzufügen</message>
@@ -368,8 +368,8 @@
 	<message key="manager.setup.managingTheJournal">4. Schritt: Die Zeitschrift verwalten</message>
 	<message key="manager.setup.navigationBar">Navigationsleiste</message>
 	<message key="manager.setup.navigationBarDescription">Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu.</message>
-	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.beispiel.com"), keine relative URL (z.B."/leitung/layout")</message>
-	<message key="manager.setup.navItemIsLiteral">Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. "Einrichtung der Zeitschrift") und nicht aus einem Verortungshinweis (z.B." zeitschrift.einrichtung")</message>
+	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
+	<message key="manager.setup.navItemIsLiteral">Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. "Einrichtung der Zeitschrift") und nicht aus einem Lokalisierungsschlüssel (z.B. "manager.setup")</message>
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
 	<message key="manager.setup.note">Anmerkung</message>
