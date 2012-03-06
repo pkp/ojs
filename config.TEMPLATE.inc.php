@@ -227,7 +227,7 @@ encryption = md5
 ; e.g. <img src|alt> to allow "src" and "alt" attributes. Unspecified
 ; attributes will be stripped. For PHP below 5.0.5 attributes may not be
 ; specified in this way.
-allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img src|alt> <sup> <sub> <br> <p>"
+allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img src|alt> <sup> <sub> <br> <p>"
 
 ; Prevent VIM from attempting to highlight the rest of the config file
 ; with unclosed tags:
