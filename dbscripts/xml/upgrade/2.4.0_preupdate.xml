@@ -14,6 +14,17 @@
 <data>
 	<!-- Bug #6128: Change paper_files 'type' column to 'file_stage' -->
 	<sql>
+		<!-- First, change all strings to their integer equivalents -->
+		<query>UPDATE article_files SET type = 1 WHERE type = 'submission/original'</query><!-- ARTICLE_FILE_SUBMISSION -->
+		<query>UPDATE article_files SET type = 2 WHERE type = 'submission/review'</query><!-- ARTICLE_FILE_REVIEW -->
+		<query>UPDATE article_files SET type = 3 WHERE type = 'submission/editor'</query><!-- ARTICLE_FILE_EDITOR -->
+		<query>UPDATE article_files SET type = 4 WHERE type = 'submission/copyedit'</query><!-- ARTICLE_FILE_COPYEDIT -->
+		<query>UPDATE article_files SET type = 5 WHERE type = 'submission/layout'</query><!-- ARTICLE_FILE_LAYOUT -->
+		<query>UPDATE article_files SET type = 6 WHERE type = 'supp'</query><!-- ARTICLE_FILE_SUPP -->
+		<query>UPDATE article_files SET type = 7 WHERE type = 'public'</query><!-- ARTICLE_FILE_PUBLIC -->
+		<query>UPDATE article_files SET type = 8 WHERE type = 'note'</query><!-- ARTICLE_FILE_NOTE -->
+		<query>UPDATE article_files SET type = 9 WHERE type = 'attachment'</query><!-- ARTICLE_FILE_ATTACHMENT -->
+		<!-- Then, rename the column -->
 		<rename table="article_files" column="type" to="file_stage" />
 	</sql>
 </data>
