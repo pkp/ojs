@@ -167,6 +167,9 @@
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
 
+	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
+	<data file="dbscripts/xml/indexes.xml" />
+
 	<!--
 	  - The following tasks from older versions use DAO-level queries
 	  - and need the DAOs to function properly in order to work.

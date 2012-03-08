@@ -15,5 +15,12 @@
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
 		<rename table="article_supplementary_files" to="article_supp_files_old" />
+
+		<query driver="postgres7">
+			DROP INDEX article_supplementary_files_file_id
+		</query>
+		<query driver="postgres7">
+			DROP INDEX article_supplementary_files_article_id
+		</query>
 	</sql>
 </data>

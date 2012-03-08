@@ -15,5 +15,9 @@
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
 		<rename table="issues" to="issues_old" />
-	</sql>
+	
+		<query driver="postgres7">
+			DROP INDEX issues_journal_id
+		</query>
+	</sql>	
 </data>

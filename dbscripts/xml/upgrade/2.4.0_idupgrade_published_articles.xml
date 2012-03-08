@@ -15,5 +15,12 @@
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
 		<rename table="published_articles" to="published_articles_old" />
+
+		<query driver="postgres7">
+			DROP INDEX published_articles_article_id
+		</query>
+		<query driver="postgres7">
+			DROP INDEX published_articles_issue_id
+		</query>
 	</sql>
 </data>

@@ -363,15 +363,6 @@
 			<col>setting_name</col>
 			<UNIQUE />
 		</index>
-		<index name="issue_settings_name_value" platform="mysql">
-			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
-			<col>setting_name(50)</col>
-			<col>setting_value(150)</col>
-		</index>
-		<index name="issue_settings_name_value" platform="postgres7">
-			<col>setting_name</col>
-			<col>setting_value</col>
-		</index>
 	</table>
 
 	<!--
@@ -655,15 +646,6 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
-		<index name="article_settings_name_value" platform="mysql">
-			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
-			<col>setting_name(50)</col>
-			<col>setting_value(150)</col>
-		</index>
-		<index name="article_settings_name_value" platform="postgres7">
-			<col>setting_name</col>
-			<col>setting_value</col>
-		</index>
 	</table>
 
 	<!--
@@ -823,15 +805,6 @@
 			<col>setting_name</col>
 			<UNIQUE/>
 		</index>
-		<index name="article_supp_file_settings_name_value" platform="mysql">
-			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
-			<col>setting_name(50)</col>
-			<col>setting_value(150)</col>
-		</index>
-		<index name="article_supp_file_settings_name_value" platform="postgres7">
-			<col>setting_name</col>
-			<col>setting_value</col>
-		</index>
 	</table>
 
 	<!--
@@ -972,15 +945,6 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
-		</index>
-		<index name="article_galley_settings_name_value" platform="mysql">
-			<!-- We need a partial index for MySQL otherwise the generated index statement will fail for TEXT columns -->
-			<col>setting_name(50)</col>
-			<col>setting_value(150)</col>
-		</index>
-		<index name="article_galley_settings_name_value" platform="postgres7">
-			<col>setting_name</col>
-			<col>setting_value</col>
 		</index>
 	</table>
 
