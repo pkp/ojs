@@ -132,7 +132,8 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate.xml" condition="return $installer->columnExists('article_email_log', 'log_id');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate.xml" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_emaillog.xml" condition="return $installer->columnExists('article_email_log', 'log_id');" />
 	</upgrade>
 
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">

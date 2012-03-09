@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.4.0_preupdate.xml
+  * 2.4.0_preupdate_emaillog.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,8 +12,10 @@
   -->
 
 <data>
-	<!-- Bug #6128: Change paper_files 'type' column to 'file_stage' -->
+	<!-- Bug #6021: port logs to pkp-lib -->
 	<sql>
-		<rename table="article_files" column="type" to="file_stage" />
+		<!-- article_email_log -->
+		<rename table="article_email_log" column="article_id" to="assoc_id" />
+		<rename table="article_email_log" to="email_log" />
 	</sql>
 </data>
