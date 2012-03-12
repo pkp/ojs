@@ -44,11 +44,11 @@
 	This <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" rel="dc:type">work</span> is licensed under a <a target="_new" rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.
 {/if}
 
+{call_hook name="Templates::Article::Footer::PageFooter"}
 {if $pageFooter}
 <br /><br />
 {$pageFooter}
 {/if}
-{call_hook name="Templates::Article::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
 </div><!-- body -->
