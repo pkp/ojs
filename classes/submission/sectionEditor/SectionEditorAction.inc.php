@@ -2067,7 +2067,7 @@ class SectionEditorAction extends Action {
 										}
 										$body .= "\n";
 									} else {
-										$body .= "\t" . String::html2text($reviewFormResponse->getValue()) . "\n\n";
+										$body .= "\t" . $reviewFormResponse->getValue() . "\n\n";
 									}
 								}
 							}
