@@ -13,9 +13,7 @@
 <email_texts locale="pt_BR">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Solicitação de atualização de senha</subject>
-		<body>{$userFullName},
-
-Recebemos uma solicitação para atualizar sua senha de acesso à revista {$siteTitle}.
+		<body>Recebemos uma solicitação para atualizar sua senha de acesso à revista {$siteTitle}.
 
 Caso não tenha feito a solicitação, ignore esta mensagem, para não alterar sua senha.
 
@@ -28,9 +26,7 @@ Atualizar senha: {$url}
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Senha atualizada</subject>
-		<body>{$userFullName},
-
-Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.
+		<body>Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login e a senha, uma vez que serão necessários para todas as atividades relacionadas ao sistema.
 
 Seu login: {$username}
 Sua nova senha: {$password}
@@ -1007,7 +1003,7 @@ URL: {$subscriptionUrl}</body>
 		<description>Esta mensagem notifica o Editor Gerente que uma assinatura institucional foi renovada online. Oferece informações sobre a assinatura e um link para acesso rápido à mesma.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Edição de sitação</subject>
+		<subject>Edição de citação</subject>
 		<body>{$authorFirstName},
 
 Solicitamos verificar ou encaminhar a citação correta para a seguinte referência do seu artigo, {$articleTitle}:
