@@ -6,12 +6,13 @@
  *
  * About the Journal index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.editorialTeam"}
 {include file="common/header.tpl"}
 {/strip}
+
+{call_hook name="Templates::About::EditorialTeam::Information"}
 
 {foreach from=$groups item=group}
 <div id="group">
