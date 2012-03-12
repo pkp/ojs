@@ -52,7 +52,7 @@ OJS release:
 5. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it):
 
-	cd lib/pkp
+    cd lib/pkp
     git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
     git push --tags
     cd ../..
