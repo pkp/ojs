@@ -412,7 +412,7 @@ class ArticleHandler extends Handler {
 	 * Validation
 	 * @see lib/pkp/classes/handler/PKPHandler#validate()
 	 * @param $request Request
-	 * @param $articleId integer
+	 * @param $articleId string
 	 * @param $galleyId int or string
 	 */
 	function validate(&$request, $articleId, $galleyId = null) {
@@ -457,7 +457,7 @@ class ArticleHandler extends Handler {
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $articleId);
+			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -470,7 +470,7 @@ class ArticleHandler extends Handler {
 			     (isset($galleyId) && $galleyId) ) {
 
 				// Subscription Access
-				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $articleId);
+				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,
@@ -483,9 +483,9 @@ class ArticleHandler extends Handler {
 						if ( $paymentManager->onlyPdfEnabled() ) {
 							$galleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
 							if ($journal->getSetting('enablePublicGalleyId')) {
-								$galley =& $galleyDAO->getGalleyByBestGalleyId($galleyId, $articleId);
+								$galley =& $galleyDAO->getGalleyByBestGalleyId($galleyId, $publishedArticle->getId());
 							} else {
-								$galley =& $galleyDAO->getGalley($galleyId, $articleId);
+								$galley =& $galleyDAO->getGalley($galleyId, $publishedArticle->getId());
 							}
 							if ( $galley && !$galley->isPdfGalley() ) {
 								$this->journal =& $journal;
@@ -503,14 +503,14 @@ class ArticleHandler extends Handler {
 						 * and just let them access the article */
 						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ( $completedPaymentDAO->hasPaidPurchaseArticle($userId, $articleId)
+						if ( $completedPaymentDAO->hasPaidPurchaseArticle($userId, $publishedArticle->getId())
 							|| (!is_null($dateEndMembership) && $dateEndMembership > time()) ) {
 							$this->journal =& $journal;
 							$this->issue =& $issue;
 							$this->article =& $publishedArticle;
 							return true;
 						} else {
-							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $articleId, $journal->getSetting('purchaseArticleFee'));
+							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 							$templateMgr =& TemplateManager::getManager();

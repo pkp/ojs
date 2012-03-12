@@ -286,13 +286,13 @@ class PublishedArticle extends Article {
 				// %i - issue number
 				$suffixPattern = String::regexp_replace('/%i/', $issue->getNumber(), $suffixPattern);
 				// %a - article id
-				$suffixPattern = String::regexp_replace('/%a/', $this->getArticleId(), $suffixPattern);
+				$suffixPattern = String::regexp_replace('/%a/', $this->getId(), $suffixPattern);
 				// %p - page number
 				$suffixPattern = String::regexp_replace('/%p/', $this->getPages(), $suffixPattern);
 				$doi = $doiPrefix . '/' . $suffixPattern;
 				break;
 			default:
-				$doi = $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
+				$doi = $doiPrefix . '/' . String::strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getId();
 		}
 
 		if (!$preview) {
