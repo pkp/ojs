@@ -41,11 +41,11 @@
 {translate key="common.ccLicense"}
 {/if}
 
+{call_hook name="Templates::Article::Footer::PageFooter"}
 {if $pageFooter}
 <br /><br />
 {$pageFooter}
 {/if}
-{call_hook name="Templates::Article::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
 </div><!-- body -->
