@@ -383,6 +383,9 @@ captcha_on_register = on
 ; Whether or not to use Captcha on user comments
 captcha_on_comments = on
 
+; Whether or not to use Captcha on notification mailing list registration
+captcha_on_mailinglist = on
+
 ; Font location for font to use in Captcha images
 font_location = /usr/share/fonts/truetype/freefont/FreeSerif.ttf
 
