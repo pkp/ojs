@@ -13,6 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
+{call_hook name="Templates::About::EditorialTeam::Information"}
+
 {foreach from=$groups item=group}
 <div id="group">
 	<h4>{$group->getLocalizedTitle()}</h4>
