@@ -13,7 +13,9 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<div>{$journalDescription}</div>
+{if $journalDescription}
+	<div>{$journalDescription}</div>
+{/if}
 
 {call_hook name="Templates::Index::journal"}
 
