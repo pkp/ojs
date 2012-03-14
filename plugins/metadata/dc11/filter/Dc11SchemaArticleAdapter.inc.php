@@ -128,12 +128,17 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Type
+		$driverType = 'info:eu-repo/semantics/article';
+		$dc11Description->addStatement('dc:type', $driverType, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		$types = $section->getIdentifyType(null);
 		$types = array_merge_recursive(
 			empty($types)?array(AppLocale::getLocale() => __('rt.metadata.pkp.peerReviewed')):$types,
 			(array) $article->getType(null)
 		);
 		$this->_addLocalizedElements($dc11Description, 'dc:type', $types);
+		$driverVersion = 'info:eu-repo/semantics/publishedVersion';
+		$dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+
 
 		// Format
 		if (is_a($article, 'PublishedArticle')) {
@@ -206,19 +211,23 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIssueId = $pubIdPlugin->getPubId($issue)) {
-				$dc11Description->addStatement('dc:source', $pubIssueId);
+				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+				unset($pubIssueId);
 			}
 			if ($pubArticleId = $pubIdPlugin->getPubId($article)) {
 				$dc11Description->addStatement('dc:identifier', $pubArticleId);
+				unset($pubArticleId);
 			}
 			foreach ($galleys as $galley) {
 				if ($pubGalleyId = $pubIdPlugin->getPubId($galley)) {
 					$dc11Description->addStatement('dc:relation', $pubGalleyId);
+					unset($pubGalleyId);
 				}
 			}
 			foreach ($suppFiles as $suppFile) {
 				if ($pubSuppFileId = $pubIdPlugin->getPubId($suppFile)) {
 					$dc11Description->addStatement('dc:relation', $pubSuppFileId);
+					unset($pubSuppFileId);
 				}
 			}
 		}
