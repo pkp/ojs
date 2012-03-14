@@ -1014,7 +1014,7 @@ class Upgrade extends Installer {
 		unset($result);
 
 		// Remove the obsolete interest data
-		$interestDao->update('DELETE FROM controlled_vocabs WHERE symbolic = ?', array('interest'));
+		$interestDao->update('DELETE FROM controlled_vocabs WHERE symbolic = ?  AND assoc_type > 0', array('interest'));
 
 		return true;
 	}
