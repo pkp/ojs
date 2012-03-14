@@ -965,13 +965,22 @@ class Upgrade extends Installer {
 		unset($idempotenceCheck);
 
 		// Get all interests for all users
-		$result =& $interestDao->retrieve('SELECT cves.setting_value as interest_keyword, cv.assoc_id as user_id
-											FROM controlled_vocabs cv
-											LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
-											LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
-											WHERE cv.symbolic = ?', array('interest'));
+		$result =& $interestDao->retrieve(
+			'SELECT DISTINCT cves.setting_value as interest_keyword,
+				cv.assoc_id as user_id
+			FROM	controlled_vocabs cv
+				LEFT JOIN controlled_vocab_entries cve ON (cve.controlled_vocab_id = cv.controlled_vocab_id)
+				LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = cve.controlled_vocab_entry_id)
+			WHERE	cv.symbolic = ?',
+			array('interest')
+		);
 
-		$oldEntries =& $interestDao->retrieve('SELECT controlled_vocab_entry_id FROM controlled_vocab_entry_settings cves WHERE cves.setting_name = ?', array('interest'));
+		$oldEntries =& $interestDao->retrieve(
+			'SELECT	controlled_vocab_entry_id
+			FROM	controlled_vocab_entry_settings cves
+			WHERE	cves.setting_name = ?',
+			array('interest')
+		);
 		while (!$oldEntries->EOF) {
 			$row = $oldEntries->GetRowAssoc(false);
 			$controlledVocabEntryId = (int) $row['controlled_vocab_entry_id'];
