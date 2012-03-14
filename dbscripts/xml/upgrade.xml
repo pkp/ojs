@@ -272,6 +272,7 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.3.6.9">
 		<code function="migrateReviewingInterests2" />
 		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
+		<data file="registry/citationAssistantData.xml" />
 		<code function="removeAuthorRevisedFilesFromSignoffs" />
 		<note file="docs/release-notes/README-2.3.7" />
 	</upgrade>
