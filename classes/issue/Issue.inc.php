@@ -671,6 +671,7 @@ class Issue extends DataObject {
 			$showTitle = 0;
 		}
 
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$volLabel = __('issue.vol');
 		$numLabel = __('issue.no');
 
