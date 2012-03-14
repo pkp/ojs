@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * registry/controlledVocabMetadata.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Implement controlled vocab meta-data properties (and the respective validation).
+  -->
+<data>
+	<sql>
+		<!-- Deleting existing entries for idempotence. This will change the IDs of vocab entries which
+		     could be a problem if referring data exists. We assume that this is an upgrade from a version
+		     that doesn't know these vocabs at all so there should be no depending data. If this becomes
+		     a problem we can use ALTER TABLE AUTO_INCREMENT = ... -->
+		<query driver="mysql">
+			DELETE FROM cv, cve, cves
+			USING controlled_vocabs cv
+			LEFT JOIN controlled_vocab_entries cve ON cv.controlled_vocab_id = cve.controlled_vocab_id
+			LEFT JOIN controlled_vocab_entry_settings cves ON cve.controlled_vocab_entry_id = cves.controlled_vocab_entry_id
+			WHERE cv.symbolic IN ('nlm30-publication-types', 'openurl10-journal-genres', 'openurl10-book-genres')
+		</query>
+		<query driver="postgres7">
+			CREATE TEMPORARY TABLE t_cve_delete AS
+			SELECT controlled_vocab_entry_id
+			FROM controlled_vocabs cv
+			INNER JOIN controlled_vocab_entries cve ON cv.controlled_vocab_id = cve.controlled_vocab_id
+			WHERE cv.symbolic IN ('nlm30-publication-types', 'openurl10-journal-genres', 'openurl10-book-genres');
+		</query>
+		<query driver="postgres7">
+			DELETE FROM controlled_vocab_entry_settings
+			WHERE controlled_vocab_entry_id IN (SELECT * FROM t_cve_delete);
+		</query>
+		<query driver="postgres7">
+			DELETE FROM controlled_vocab_entries
+			WHERE controlled_vocab_entry_id IN (SELECT * FROM t_cve_delete);
+		</query>
+		<query driver="postgres7">
+			DELETE FROM controlled_vocabs
+			WHERE symbolic IN ('nlm30-publication-types', 'openurl10-journal-genres', 'openurl10-book-genres');
+		</query>
+		<query driver="postgres7">
+			DROP TABLE t_cve_delete;
+		</query>
+
+		<!-- publication-types -->
+		<query>INSERT INTO controlled_vocabs (symbolic, assoc_type, assoc_id) VALUES ('nlm30-publication-types', 0, 0)</query>
+		<query driver="mysql">SET @vocab_id = LAST_INSERT_ID()</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'journal', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'journal', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 1)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 1)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'book', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'book', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 2)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 2)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'conf-proc', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'conf-proc', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 3)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 3)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'thesis', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'thesis', 'string')</query>
+
+		<!-- openurl 1.0 genres (journal) -->
+		<query>INSERT INTO controlled_vocabs (symbolic, assoc_type, assoc_id) VALUES ('openurl10-journal-genres', 0, 0)</query>
+		<query driver="mysql">SET @vocab_id = LAST_INSERT_ID()</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'journal', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'journal', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'issue', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'issue', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'article', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'article', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'proceeding', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'proceeding', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'conference', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'conference', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'preprint', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'preprint', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'unknown', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'unknown', 'string')</query>
+
+		<!-- openurl 1.0 genres (book) -->
+		<query>INSERT INTO controlled_vocabs (symbolic, assoc_type, assoc_id) VALUES ('openurl10-book-genres', 0, 0)</query>
+		<query driver="mysql">SET @vocab_id = LAST_INSERT_ID()</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'book', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'book', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'bookitem', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'bookitem', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'conference', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'conference', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'proceeding', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'proceeding', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'report', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'report', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'document', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'document', 'string')</query>
+
+		<query driver="mysql">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (@vocab_id, 0)</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
+		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'unknown', 'string')</query>
+		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'unknown', 'string')</query>
+	</sql>
+</data>
