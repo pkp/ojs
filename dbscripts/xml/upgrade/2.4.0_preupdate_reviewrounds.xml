@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_preupdate_reviewrounds.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 database updates XML file, run prior to schema sync.
+  *
+  -->
+
+<data>
+	<sql>
+		<query driver="mysql">
+			ALTER TABLE review_rounds ADD review_round_id BIGINT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY;
+		</query>
+		<query driver="postgres7">
+			CREATE SEQUENCE review_rounds_review_round_id_seq;
+			ALTER TABLE review_rounds ADD review_round_id BIGINT(20) UNIQUE;
+			ALTER TABLE review_rounds ALTER COLUMN review_round_id SET DEFAULT NEXTVAL('review_rounds_review_round_id_seq');
+			UPDATE review_rounds SET review_round_id = NEXTVAL('review_rounds_review_round_id_seq');
+		</query>
+	</sql>
+</data>
