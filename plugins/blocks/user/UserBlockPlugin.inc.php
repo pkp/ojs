@@ -18,7 +18,7 @@ class UserBlockPlugin extends BlockPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
 		}
 		return $success;
 	}
