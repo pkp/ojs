@@ -29,7 +29,6 @@ Bug Fixes
 	#6730# Missing update schema file
 	#6733# Prevent disabled journals from being exposed via OAI
 	#6734# Italian translation needs correction
-	#6752# iBrowser fail using pt_br language
 	#6753# XML sitemap including disabled journals
 	#6762# display all galleys in TOC and abstract view
 	#6765# Simplify / correct galley search index creation
@@ -72,6 +71,7 @@ Bug Fixes
 	#6948# PostgreSQL error when saving entry in Books For Review plugin
 	#6949# wrong automatic reminder e-mails language
 	#6965# Error in citation plugins with multibyte characters in author names
+	#6970# dependency on mysql (also if using postgres)
 	#6995# Fix es_ES typos
 	#6997# Article template depends on $publishedArticle, which isn't always available
 	#7000# Reviewing interests overhaul
