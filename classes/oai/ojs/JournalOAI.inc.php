@@ -121,14 +121,14 @@ class JournalOAI extends OAI {
 		}
 
 		$info->sampleIdentifier = $this->articleIdToIdentifier(1);
-		$info->earliestDatestamp = $this->dao->getEarliestDatestamp($this->journalId);
+		$info->earliestDatestamp = $this->dao->getEarliestDatestamp(array($this->journalId));
 
 		$info->toolkitTitle = 'Open Journal Systems';
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$currentVersion =& $versionDao->getCurrentVersion();
 		$info->toolkitVersion = $currentVersion->getVersionString();
 		$info->toolkitURL = 'http://pkp.sfu.ca/ojs/';
-		
+
 		return $info;
 	}
 
@@ -146,7 +146,7 @@ class JournalOAI extends OAI {
 		$recordExists = false;
 		$articleId = $this->identifierToArticleId($identifier);
 		if ($articleId) {
-			$recordExists = $this->dao->recordExists($articleId, $this->journalId);
+			$recordExists = $this->dao->recordExists($articleId, array($this->journalId));
 		}
 		return $recordExists;
 	}
@@ -157,7 +157,7 @@ class JournalOAI extends OAI {
 	function &record($identifier) {
 		$articleId = $this->identifierToArticleId($identifier);
 		if ($articleId) {
-			$record =& $this->dao->getRecord($articleId, $this->journalId);
+			$record =& $this->dao->getRecord($articleId, array($this->journalId));
 		}
 		if (!isset($record)) {
 			$record = false;
@@ -177,7 +177,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getRecords($journalId, $sectionId, $from, $until, $set, $offset, $limit, $total);
+			$records =& $this->dao->getRecords(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
@@ -194,7 +194,7 @@ class JournalOAI extends OAI {
 			} else {
 				$journalId = $this->journalId;
 			}
-			$records =& $this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $set, $offset, $limit, $total);
+			$records =& $this->dao->getIdentifiers(array($journalId, $sectionId), $from, $until, $set, $offset, $limit, $total);
 		}
 		return $records;
 	}
