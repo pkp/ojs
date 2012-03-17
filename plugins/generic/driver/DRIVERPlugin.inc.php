@@ -34,16 +34,16 @@ class DRIVERPlugin extends GenericPlugin {
 			$this->import('DRIVERDAO');
 			$driverDao = new DRIVERDAO();
 			DAORegistry::registerDAO('DRIVERDAO', $driverDao);
-						
+
 			// Add DRIVER set to OAI results
 			HookRegistry::register('OAIDAO::getJournalSets', array($this, 'sets'));
 			HookRegistry::register('JournalOAI::records', array($this, 'records'));
 			HookRegistry::register('JournalOAI::identifiers', array($this, 'identifiers'));
 			HookRegistry::register('OAIDAO::_returnRecordFromRow', array($this, 'changeRecord'));
 			HookRegistry::register('OAIDAO::_returnIdentifierFromRow', array($this, 'changeIdentifier'));
-			
+
 			// consider DRIVER article in article tombstones
-			HookRegistry::register('ArticleTombstoneManager::insertArticleTombstone', array($this, 'insertDRIVERArticleTombstone'));			
+			HookRegistry::register('ArticleTombstoneManager::insertArticleTombstone', array($this, 'insertDRIVERArticleTombstone'));
 		}
 		return $success;
 	}
@@ -54,12 +54,12 @@ class DRIVERPlugin extends GenericPlugin {
 
 	function getDescription() {
 		return __('plugins.generic.driver.description');
-	}	
-		
+	}
+
 	/*
 	 * OAI interface
 	 */
-	
+
 	/**
 	 * Add DRIVER set
 	 */
@@ -81,7 +81,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$limit = $params[5];
 		$total = $params[6];
 		$records =& $params[7];
-		
+
 		$records = array();
 		if (isset($set) && $set == 'driver') {
 			$journalId = $journalOAI->journalId;
@@ -89,10 +89,10 @@ class DRIVERPlugin extends GenericPlugin {
 			$driverDao->setOAI($journalOAI);
 			$records = $driverDao->getDRIVERRecords($journalId, $from, $until, $offset, $limit, $total);
 			return true;
-		} 		
+		}
 		return false;
-	}	
-	
+	}
+
 	/**
 	 * Change OAI identifier to consider the DRIVER set
 	 */
@@ -105,7 +105,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$limit = $params[5];
 		$total = $params[6];
 		$records =& $params[7];
-		
+
 		$records = array();
 		if (isset($set) && $set == 'driver') {
 			$journalId = $journalOAI->journalId;
@@ -115,8 +115,8 @@ class DRIVERPlugin extends GenericPlugin {
 			return true;
 		}
 		return false;
-	}	
-		
+	}
+
 	/**
 	 * Change OAI record to consider the DRIVER set
 	 */
@@ -127,7 +127,7 @@ class DRIVERPlugin extends GenericPlugin {
 		if ($this->isDRIVERRecord($row)) {
 			$record->sets[] = 'driver';
 		}
-		return false;	
+		return false;
 	}
 
 	/**
@@ -136,13 +136,13 @@ class DRIVERPlugin extends GenericPlugin {
 	function changeIdentifier($hookName, $params) {
 		$record =& $params[0];
 		$row = $params[1];
-		
+
 		if ($this->isDRIVERRecord($row)) {
 			$record->sets[] = 'driver';
 		}
-		return false;	
+		return false;
 	}
-	
+
 	/**
 	 * Consider the DRIVER article in the article tombstone
 	 */
@@ -153,9 +153,9 @@ class DRIVERPlugin extends GenericPlugin {
 			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
 			$articleTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}
-		return false;	
+		return false;
 	}
-	
+
 	/**
 	 * Check if it's a DRIVER record.
 	 * @param $row array of database fields
@@ -171,7 +171,7 @@ class DRIVERPlugin extends GenericPlugin {
 			$journal = $journalDao->getById($row['journal_id']);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($row['article_id']);
 			$issue = $issueDao->getIssueById($article->getIssueId());
-		
+
 			// is open access
 			$status = '';
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
@@ -187,16 +187,16 @@ class DRIVERPlugin extends GenericPlugin {
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == NULL) {
 						$status = DRIVER_ACCESS_CLOSED;
 					}
-				} 
+				}
 			}
 			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
-				
+
 			if ($status == DRIVER_ACCESS_EMBARGOED && date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))) {
 				$status = DRIVER_ACCESS_DELAYED;
-			}		
-	
+			}
+
 			// is there a full text
 			$galleys =& $article->getGalleys();
 			if (!empty($galleys)) {
@@ -208,8 +208,8 @@ class DRIVERPlugin extends GenericPlugin {
 			return $articleTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
 		}
 	}
-	
- 
+
+
 	/**
 	 * Check if it's a DRIVER article.
 	 * @param $row ...
@@ -223,7 +223,7 @@ class DRIVERPlugin extends GenericPlugin {
 			$journal = $journalDao->getById($journalId);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 			$issue = $issueDao->getIssueById($article->getIssueId());
-		
+
 			// is open access
 			$status = '';
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
@@ -239,16 +239,16 @@ class DRIVERPlugin extends GenericPlugin {
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == NULL) {
 						$status = DRIVER_ACCESS_CLOSED;
 					}
-				} 
+				}
 			}
 			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
-				
+
 			if ($status == DRIVER_ACCESS_EMBARGOED && date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))) {
 				$status = DRIVER_ACCESS_DELAYED;
-			}		
-	
+			}
+
 			// is there a full text
 			$galleys =& $article->getGalleys();
 			if (!empty($galleys)) {
@@ -256,6 +256,6 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 			return false;
 	}
-	
+
 }
 ?>

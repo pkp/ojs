@@ -16,7 +16,7 @@ import('classes.oai.ojs.OAIDAO');
 
 
 class DRIVERDAO extends OAIDAO {
-	
+
  	/**
 	 * Constructor.
 	 */
@@ -53,13 +53,13 @@ class DRIVERDAO extends OAIDAO {
 		if (isset($journalId)) {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
-	
+
 		$result =& $this->retrieve(
 			'SELECT	COALESCE(at.date_deleted, a.last_modified) AS last_modified,
 					COALESCE(a.article_id, at.article_id) AS article_id,
 					COALESCE(j.journal_id, at.journal_id) AS journal_id,
 					COALESCE(at.section_id, s.section_id) AS section_id,
-					i.issue_id, 
+					i.issue_id,
 					at.tombstone_id,
 					at.set_spec,
 					at.oai_identifier
@@ -95,7 +95,7 @@ class DRIVERDAO extends OAIDAO {
 
 		return $records;
 	}
-	
+
 	/**
 	 * Return set of OAI identifiers matching specified parameters.
 	 * @param $journalId int
@@ -113,13 +113,13 @@ class DRIVERDAO extends OAIDAO {
 		if (isset($journalId)) {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
-	
+
 		$result =& $this->retrieve(
 			'SELECT	COALESCE(at.date_deleted, a.last_modified) AS last_modified,
 					COALESCE(a.article_id, at.article_id) AS article_id,
 					COALESCE(j.journal_id, at.journal_id) AS journal_id,
 					COALESCE(at.section_id, s.section_id) AS section_id,
-					i.issue_id, 
+					i.issue_id,
 					at.tombstone_id,
 					at.set_spec,
 					at.oai_identifier
@@ -155,7 +155,7 @@ class DRIVERDAO extends OAIDAO {
 
 		return $records;
 	}
-		
+
 }
 
 ?>

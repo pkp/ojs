@@ -16,7 +16,7 @@ import('classes.oai.ojs.OAIDAO');
 
 
 class OpenAIREDAO extends OAIDAO {
-	
+
  	/**
 	 * Constructor.
 	 */
@@ -64,7 +64,7 @@ class OpenAIREDAO extends OAIDAO {
 					COALESCE(a.article_id, at.article_id) AS article_id,
 					COALESCE(j.journal_id, at.journal_id) AS journal_id,
 					COALESCE(at.section_id, s.section_id) AS section_id,
-					i.issue_id, 
+					i.issue_id,
 					at.tombstone_id,
 					at.set_spec
 			FROM mutex m
@@ -96,7 +96,7 @@ class OpenAIREDAO extends OAIDAO {
 
 		return $records;
 	}
-	
+
 	/**
 	 * Return set of OAI identifiers matching specified parameters.
 	 * @param $journalId int
@@ -125,7 +125,7 @@ class OpenAIREDAO extends OAIDAO {
 					COALESCE(a.article_id, at.article_id) AS article_id,
 					COALESCE(j.journal_id, at.journal_id) AS journal_id,
 					COALESCE(at.section_id, s.section_id) AS section_id,
-					i.issue_id, 
+					i.issue_id,
 					at.tombstone_id,
 					at.set_spec
 			FROM mutex m
@@ -173,12 +173,12 @@ class OpenAIREDAO extends OAIDAO {
 			$returner = (isset($result->fields[0]) && $result->fields[0] == 1) ? true : false;
 			$result->Close();
 			unset($result);
-			
-			return $returner;		
+
+			return $returner;
 		} else {
 			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
 			return $articleTombstoneSettingsDao->getSetting($row['tombstone_id'], 'openaire');
-		}		
+		}
 	}
 
 	/**
@@ -196,10 +196,10 @@ class OpenAIREDAO extends OAIDAO {
 		$result->Close();
 		unset($result);
 
-		return $returner;		
+		return $returner;
 	}
 
-	
+
 }
 
 ?>
