@@ -30,7 +30,7 @@ class ArticleTombstoneDAO extends DAO {
 	function newDataObject() {
 		return new ArticleTombstone();
 	}
-	
+
 	/**
 	 * Retrieve ArticleTombstone by id
 	 * @param $tombstoneId int
@@ -40,7 +40,7 @@ class ArticleTombstoneDAO extends DAO {
 		$params = array((int) $tombstoneId);
 		if ($journalId !== null) $params[] = (int) $journalId;
 		$result =& $this->retrieve(
-			'SELECT * FROM article_tombstones WHERE tombstone_id = ?' 
+			'SELECT * FROM article_tombstones WHERE tombstone_id = ?'
 			. ($journalId !== null ? ' AND journal_id = ?' : ''),
 			$params
 		);
@@ -60,7 +60,7 @@ class ArticleTombstoneDAO extends DAO {
 	 */
 	function &getByArticleId($articleId) {
 		$result =& $this->retrieve(
-			'SELECT * FROM article_tombstones WHERE article_id = ?', (int) $articleId
+			'SELECT * FROM article_tombstones WHERE submission_id = ?', (int) $articleId
 		);
 
 		$articleTombstone =& $this->_fromRow($result->GetRowAssoc(false));
@@ -70,7 +70,7 @@ class ArticleTombstoneDAO extends DAO {
 
 		return $articleTombstone;
 	}
-	
+
 	/**
 	 * Creates and returns an article tombstone object from a row
 	 * @param $row array
@@ -80,18 +80,18 @@ class ArticleTombstoneDAO extends DAO {
 		$articleTombstone = $this->newDataObject();
 		$articleTombstone->setId($row['tombstone_id']);
 		$articleTombstone->setJournalId($row['journal_id']);
-		$articleTombstone->setArticleId($row['article_id']);
+		$articleTombstone->setSubmissionId($row['submission_id']);
 		$articleTombstone->setDateDeleted($this->datetimeFromDB($row['date_deleted']));
 		$articleTombstone->setSectionId($row['section_id']);
 		$articleTombstone->setSetSpec($row['set_spec']);
 		$articleTombstone->setSetName($row['set_name']);
 		$articleTombstone->setOAIIdentifier($row['oai_identifier']);
-				
+
 		HookRegistry::call('ArticleTombstoneDAO::_fromRow', array(&$articleTombstone, &$row));
 
 		return $articleTombstone;
 	}
-	
+
 	/**
 	 * Inserts a new article tombstone into article_tombstones table
 	 * @param ArticleTombstone object
@@ -100,14 +100,14 @@ class ArticleTombstoneDAO extends DAO {
 	function insertObject(&$articleTombstone) {
 		$this->update(
 			sprintf('INSERT INTO article_tombstones
-				(journal_id, article_id, date_deleted, section_id, set_spec, set_name, oai_identifier)
+				(journal_id, submission_id, date_deleted, section_id, set_spec, set_name, oai_identifier)
 				VALUES
 				(?, ?, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB(date('Y-m-d H:i:s'))
 			),
 			array(
 				(int) $articleTombstone->getJournalId(),
-				(int) $articleTombstone->getArticleId(),
+				(int) $articleTombstone->getSubmissionId(),
 				(int) $articleTombstone->getSectionId(),
 				$articleTombstone->getSetSpec(),
 				$articleTombstone->getSetName(),
@@ -128,7 +128,7 @@ class ArticleTombstoneDAO extends DAO {
 		$returner = $this->update(
 			sprintf('UPDATE	article_tombstones SET
 					journal_id = ?,
-					article_id = ?,
+					submission_id = ?,
 					date_deleted = %s,
 					section_id = ?,
 					set_spec = ?,
@@ -139,7 +139,7 @@ class ArticleTombstoneDAO extends DAO {
 			),
 			array(
 				(int) $articleTombstone->getJournalId(),
-				(int) $articleTombstone->getArticleId(),
+				(int) $articleTombstone->getSubmissionId(),
 				(int) $articleTombstone->getSectionId(),
 				$articleTombstone->getSetSpec(),
 				$articleTombstone->getSetName(),
@@ -158,16 +158,16 @@ class ArticleTombstoneDAO extends DAO {
 	function deleteById($tombstoneId, $journalId = null) {
 		$params = array((int) $tombstoneId);
 		if (isset($journalId)) $params[] = (int) $journalId;
-		
+
 		$this->update('DELETE FROM article_tombstones WHERE tombstone_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
-			$params		
+			$params
 		);
 		if ($this->getAffectedRows()) {
 			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
 			return $articleTombstoneSettingsDao->deleteSettings($tombstoneId);
 		}
 		return false;
-	}	
+	}
 
 	/**
 	 * Delete ArticleTombstone by article id
@@ -177,8 +177,8 @@ class ArticleTombstoneDAO extends DAO {
 	function deleteByArticleId($articleId) {
 		$articleTombstone =& $this->getByArticleId($articleId);
 		return $this->deleteById($articleTombstone->getId());
-	}	
-	
+	}
+
 	/**
 	 * Retrieve all sets for article tombstones of a journal.
 	 * @return array('setSpec' => setName)
@@ -201,7 +201,7 @@ class ArticleTombstoneDAO extends DAO {
 
 		return $returner;
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted article tombstone
 	 * @return int

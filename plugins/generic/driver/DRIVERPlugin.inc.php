@@ -149,7 +149,7 @@ class DRIVERPlugin extends GenericPlugin {
 	function insertDRIVERArticleTombstone($hookName, $params) {
 		$articleTombstone =& $params[0];
 
-		if ($this->isDRIVERArticle($articleTombstone->getJournalId(), $articleTombstone->getArticleId())) {
+		if ($this->isDRIVERArticle($articleTombstone->getJournalId(), $articleTombstone->getSubmissionId())) {
 			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
 			$articleTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}

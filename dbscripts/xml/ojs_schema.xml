@@ -497,7 +497,7 @@
             <KEY />
             <AUTOINCREMENT />
         </field>
-        <field name="article_id" type="I8">
+        <field name="submission_id" type="I8">
             <NOTNULL />
         </field>
         <field name="date_deleted" type="T">
@@ -522,8 +522,8 @@
 		<index name="article_tombstones_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="article_tombstones_article_id">
-			<col>article_id</col>
+		<index name="article_tombstones_submission_id">
+			<col>submission_id</col>
 		</index>
 	</table>
 

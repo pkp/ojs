@@ -180,7 +180,7 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function getRecordSelectStatement() {
 		return 'SELECT	COALESCE(at.date_deleted, a.last_modified) AS last_modified,
-			COALESCE(a.article_id, at.article_id) AS article_id,
+			COALESCE(a.article_id, at.submission_id) AS article_id,
 			COALESCE(j.journal_id, at.journal_id) AS journal_id,
 			COALESCE(at.section_id, s.section_id) AS section_id,
 			i.issue_id,
@@ -199,14 +199,14 @@ class OAIDAO extends PKPOAIDAO {
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
-			LEFT JOIN article_tombstones at ON (m.i = 1' . (isset($articleId) ? ' AND at.article_id = ?' : '') . (isset($journalId) ? ' AND at.journal_id = ?' : '') . (isset($sectionId) && $sectionId != 0 ? ' AND at.section_id = ?' : '') . (isset($set) ? ' AND at.set_spec = ?' : '') .')';
+			LEFT JOIN article_tombstones at ON (m.i = 1' . (isset($articleId) ? ' AND at.submission_id = ?' : '') . (isset($journalId) ? ' AND at.journal_id = ?' : '') . (isset($sectionId) && $sectionId != 0 ? ' AND at.section_id = ?' : '') . (isset($set) ? ' AND at.set_spec = ?' : '') .')';
 	}
 
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getAccessibleRecordWhereClause()
 	 */
 	function getAccessibleRecordWhereClause() {
-		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR at.article_id IS NOT NULL)';
+		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR at.submission_id IS NOT NULL)';
 	}
 
 	/**
