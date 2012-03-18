@@ -14,13 +14,14 @@
  */
 
 import ('classes.article.ArticleTombstone');
+import ('lib.pkp.classes.submission.SubmissionTombstoneDAO');
 
-class ArticleTombstoneDAO extends DAO {
+class ArticleTombstoneDAO extends SubmissionTombstoneDAO {
 	/**
 	 * Constructor.
 	 */
 	function ArticleTombstoneDAO() {
-		parent::DAO();
+		parent::SubmissionTombstoneDAO();
 	}
 
 	/**
@@ -32,60 +33,21 @@ class ArticleTombstoneDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve ArticleTombstone by id
+	 * @see lib/pkp/classes/submission/SubmissionTombstoneDAO::getById()
 	 * @param $tombstoneId int
-	 * @return ArticleTombstone object
+	 * @param $journalId int
 	 */
 	function &getById($tombstoneId, $journalId = null) {
-		$params = array((int) $tombstoneId);
-		if ($journalId !== null) $params[] = (int) $journalId;
-		$result =& $this->retrieve(
-			'SELECT * FROM article_tombstones WHERE tombstone_id = ?'
-			. ($journalId !== null ? ' AND journal_id = ?' : ''),
-			$params
-		);
-
-		$articleTombstone =& $this->_fromRow($result->GetRowAssoc(false));
-
-		$result->Close();
-		unset($result);
-
-		return $articleTombstone;
+		return parent::getById($tombstoneId, $journalId, 'journal_id');
 	}
 
 	/**
-	 * Retrieve ArticleTombstone by article id
-	 * @param $articleId int
-	 * @return ArticleTombstone object
-	 */
-	function &getByArticleId($articleId) {
-		$result =& $this->retrieve(
-			'SELECT * FROM article_tombstones WHERE submission_id = ?', (int) $articleId
-		);
-
-		$articleTombstone =& $this->_fromRow($result->GetRowAssoc(false));
-
-		$result->Close();
-		unset($result);
-
-		return $articleTombstone;
-	}
-
-	/**
-	 * Creates and returns an article tombstone object from a row
-	 * @param $row array
-	 * @return ArticleTombstone object
+	 * @see lib/pkp/classes/submission/SubmissionTombstoneDAO::_fromRow()
 	 */
 	function &_fromRow($row) {
-		$articleTombstone = $this->newDataObject();
-		$articleTombstone->setId($row['tombstone_id']);
+		$articleTombstone =& parent::_fromRow($row);
 		$articleTombstone->setJournalId($row['journal_id']);
-		$articleTombstone->setSubmissionId($row['submission_id']);
-		$articleTombstone->setDateDeleted($this->datetimeFromDB($row['date_deleted']));
 		$articleTombstone->setSectionId($row['section_id']);
-		$articleTombstone->setSetSpec($row['set_spec']);
-		$articleTombstone->setSetName($row['set_name']);
-		$articleTombstone->setOAIIdentifier($row['oai_identifier']);
 
 		HookRegistry::call('ArticleTombstoneDAO::_fromRow', array(&$articleTombstone, &$row));
 
@@ -93,13 +55,13 @@ class ArticleTombstoneDAO extends DAO {
 	}
 
 	/**
-	 * Inserts a new article tombstone into article_tombstones table
-	 * @param ArticleTombstone object
-	 * @return int ArticleTombstone Id
+	 * Inserts a new submission tombstone into submission_tombstones table.
+	 * @param $submissionTombstone SubmissionTombstone
+	 * @return int Submission tombstone id.
 	 */
 	function insertObject(&$articleTombstone) {
 		$this->update(
-			sprintf('INSERT INTO article_tombstones
+			sprintf('INSERT INTO submission_tombstones
 				(journal_id, submission_id, date_deleted, section_id, set_spec, set_name, oai_identifier)
 				VALUES
 				(?, ?, %s, ?, ?, ?, ?)',
@@ -116,17 +78,18 @@ class ArticleTombstoneDAO extends DAO {
 		);
 
 		$articleTombstone->setId($this->getInsertTombstoneId());
+
 		return $articleTombstone->getId();
 	}
 
 	/**
-	 * Update an article tombstone in the article_tombstones table
-	 * @param ArticleTombstone object
-	 * @return int ArticleTombstone Id
+	 * Update a submission tombstone in the submission_tombstones table
+	 * @param SubmissionTombstone object
+	 * @return int SubmissionTombstone Id
 	 */
 	function updateObject(&$articleTombstone) {
 		$returner = $this->update(
-			sprintf('UPDATE	article_tombstones SET
+			sprintf('UPDATE	submission_tombstones SET
 					journal_id = ?,
 					submission_id = ?,
 					date_deleted = %s,
@@ -147,67 +110,25 @@ class ArticleTombstoneDAO extends DAO {
 				(int) $articleTombstone->getId()
 			)
 		);
+
 		return $returner;
 	}
 
 	/**
-	 * Delete ArticleTombstone by tombstone id
+	 * @see lib/pkp/classes/submission/SubmissionTombstoneDAO::deleteById()
 	 * @param $tombstoneId int
-	 * @return boolean
+	 * @param $journalId int
 	 */
 	function deleteById($tombstoneId, $journalId = null) {
-		$params = array((int) $tombstoneId);
-		if (isset($journalId)) $params[] = (int) $journalId;
-
-		$this->update('DELETE FROM article_tombstones WHERE tombstone_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
-			$params
-		);
-		if ($this->getAffectedRows()) {
-			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
-			return $articleTombstoneSettingsDao->deleteSettings($tombstoneId);
-		}
-		return false;
+		return parent::deleteById($tombstoneId, $journalId, 'journal_id');
 	}
 
 	/**
-	 * Delete ArticleTombstone by article id
-	 * @param $articleId int
-	 * @return boolean
-	 */
-	function deleteByArticleId($articleId) {
-		$articleTombstone =& $this->getByArticleId($articleId);
-		return $this->deleteById($articleTombstone->getId());
-	}
-
-	/**
-	 * Retrieve all sets for article tombstones of a journal.
-	 * @return array('setSpec' => setName)
+	 * @see lib/pkp/classes/submission/SubmissionTombstoneDAO::getSets()
+	 * @param $journalId int
 	 */
 	function &getSets($journalId) {
-		$returner = array();
-
-		$result =& $this->retrieve(
-			'SELECT DISTINCT set_spec, set_name FROM article_tombstones WHERE journal_id = ?',
-			(int) $journalId
-		);
-
-		while (!$result->EOF) {
-			$returner[$result->fields[0]] = $result->fields[1];
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-
-	/**
-	 * Get the ID of the last inserted article tombstone
-	 * @return int
-	 */
-	function getInsertTombstoneId() {
-		return $this->getInsertId('article_tombstones', 'tombstone_id');
+		return parent::getSets($journalId, 'journal_id');
 	}
 }
 

@@ -1389,13 +1389,13 @@ class SectionEditorAction extends Action {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
 			if ($issue->getPublished()) {
-				// Insert article tombstone 
+				// Insert article tombstone
 				import('classes.article.ArticleTombstoneManager');
 				$articleTombstoneManager = new ArticleTombstoneManager();
 				$articleTombstoneManager->insertArticleTombstone($publishedArticle, $journal);
 			}
 		}
-				
+
 		$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
 		$sectionEditorSubmission->stampStatusModified();
 
@@ -1426,13 +1426,13 @@ class SectionEditorAction extends Action {
 			if ($issue->getPublished()) {
 				// delete article tombstone
 				$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-				$articleTombstoneDao->deleteByArticleId($sectionEditorSubmission->getId());
+				$articleTombstoneDao->deleteBySubmissionId($sectionEditorSubmission->getId());
 			}
 		} else {
 			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		}
 		unset($publishedArticle);
-		
+
 		$sectionEditorSubmission->stampStatusModified();
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);

@@ -1313,13 +1313,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
-					
+
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
 		if (!$suppFile) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
-		
+
 		$this->setupTemplate(true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
@@ -1659,13 +1659,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-			
+
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 		if (!$galley) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
-		
+
 		$this->setupTemplate(true, $articleId, 'editing');
 
 		import('classes.submission.form.ArticleGalleyForm');
@@ -2372,14 +2372,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (!$issue || !$issue->getPublished()) {
 				$fromIssue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $journal->getId());
 				if ($fromIssue->getPublished()) {
-					// Insert article tombstone 
+					// Insert article tombstone
 					import('classes.article.ArticleTombstoneManager');
 					$articleTombstoneManager = new ArticleTombstoneManager();
 					$articleTombstoneManager->insertArticleTombstone($submission, $journal);
 				}
 			}
 		}
-		
+
 		if ($issue) {
 			// Schedule against an issue.
 			if ($publishedArticle) {
@@ -2424,7 +2424,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submission->setStatus(STATUS_PUBLISHED);
 			// delete article tombstone
 			$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-			$articleTombstoneDao->deleteByArticleId($submission->getId());
+			$articleTombstoneDao->deleteBySubmissionId($submission->getId());
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
 		}

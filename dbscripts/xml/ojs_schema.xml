@@ -489,10 +489,10 @@
 
 	<!--
       *
-      * TABLE article_tombstones
+      * TABLE submission_tombstones
       *
       -->
-    <table name="article_tombstones">
+    <table name="submission_tombstones">
         <field name="tombstone_id" type="I8">
             <KEY />
             <AUTOINCREMENT />
@@ -519,10 +519,10 @@
             <NOTNULL />
         </field>
         <descr>Archived, removed from TOC, unscheduled or uplublished journal articles.</descr>
-		<index name="article_tombstones_journal_id">
+		<index name="submission_tombstones_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="article_tombstones_submission_id">
+		<index name="submission_tombstones_submission_id">
 			<col>submission_id</col>
 		</index>
 	</table>

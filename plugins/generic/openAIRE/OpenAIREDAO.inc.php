@@ -60,23 +60,23 @@ class OpenAIREDAO extends OAIDAO {
 					pa.views,
 					pa.access_status,
 					pa.public_article_id,
-					COALESCE(at.date_deleted, a.last_modified) AS last_modified,
-					COALESCE(a.article_id, at.article_id) AS article_id,
-					COALESCE(j.journal_id, at.journal_id) AS journal_id,
-					COALESCE(at.section_id, s.section_id) AS section_id,
+					COALESCE(st.date_deleted, a.last_modified) AS last_modified,
+					COALESCE(a.article_id, st.submission_id) AS article_id,
+					COALESCE(j.journal_id, st.journal_id) AS journal_id,
+					COALESCE(st.section_id, s.section_id) AS section_id,
 					i.issue_id,
-					at.tombstone_id,
-					at.set_spec
+					st.tombstone_id,
+					st.set_spec
 			FROM mutex m
 			LEFT JOIN published_articles pa ON (m.i=0)
 			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
-			LEFT JOIN article_tombstones at ON (m.i = 1' . (isset($journalId) ? ' AND at.journal_id = ?' : '') .')
-			WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR at.article_id IS NOT NULL)'
-				. (isset($from) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted >= '. $this->datetimeToDB($from) .') OR (at.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
-				. (isset($until) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted <= ' .$this->datetimeToDB($until) .') OR (at.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : ''),
+			LEFT JOIN submission_tombstones st ON (m.i = 1' . (isset($journalId) ? ' AND st.journal_id = ?' : '') .')
+			WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR st.submission_id IS NOT NULL)'
+				. (isset($from) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted >= '. $this->datetimeToDB($from) .') OR (st.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
+				. (isset($until) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted <= ' .$this->datetimeToDB($until) .') OR (st.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : ''),
 			$params
 		);
 
@@ -121,23 +121,23 @@ class OpenAIREDAO extends OAIDAO {
 					pa.views,
 					pa.access_status,
 					pa.public_article_id,
-					COALESCE(at.date_deleted, a.last_modified) AS last_modified,
-					COALESCE(a.article_id, at.article_id) AS article_id,
-					COALESCE(j.journal_id, at.journal_id) AS journal_id,
-					COALESCE(at.section_id, s.section_id) AS section_id,
+					COALESCE(st.date_deleted, a.last_modified) AS last_modified,
+					COALESCE(a.article_id, st.submission_id) AS article_id,
+					COALESCE(j.journal_id, st.journal_id) AS journal_id,
+					COALESCE(st.section_id, s.section_id) AS section_id,
 					i.issue_id,
-					at.tombstone_id,
-					at.set_spec
+					st.tombstone_id,
+					st.set_spec
 			FROM mutex m
 			LEFT JOIN published_articles pa ON (m.i=0)
 			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
-			LEFT JOIN article_tombstones at ON (m.i = 1' . (isset($journalId) ? ' AND at.journal_id = ?' : '') .')
-			WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR at.article_id IS NOT NULL)'
-				. (isset($from) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted >= '. $this->datetimeToDB($from) .') OR (at.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
-				. (isset($until) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted <= ' .$this->datetimeToDB($until) .') OR (at.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : ''),
+			LEFT JOIN submission_tombstones st ON (m.i = 1' . (isset($journalId) ? ' AND st.journal_id = ?' : '') .')
+			WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR st.submission_id IS NOT NULL)'
+				. (isset($from) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted >= '. $this->datetimeToDB($from) .') OR (st.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
+				. (isset($until) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted <= ' .$this->datetimeToDB($until) .') OR (st.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : ''),
 			$params
 		);
 

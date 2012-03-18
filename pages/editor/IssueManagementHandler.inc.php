@@ -86,15 +86,15 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId);
 		$issue =& $this->issue;
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
-		
+
 		$journal =& $request->getJournal();
-		
+
 		// remove all published articles and return original articles to editing queue
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
-			// Insert article tombstone if the issue is published 
+			// Insert article tombstone if the issue is published
 			import('classes.article.ArticleTombstoneManager');
 			$articleTombstoneManager = new ArticleTombstoneManager();
 			foreach ($publishedArticles as $article) {
@@ -619,7 +619,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$articles = $publishedArticleDao->getPublishedArticles($issueId);
 
-		// insert article tombstone, if an article is removed from a published issue 
+		// insert article tombstone, if an article is removed from a published issue
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -851,7 +851,7 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				// delete article tombstone
 				$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-				$articleTombstoneDao->deleteByArticleId($article->getId());
+				$articleTombstoneDao->deleteBySubmissionId($article->getId());
 				unset($article);
 			}
 		}
@@ -931,7 +931,7 @@ class IssueManagementHandler extends EditorHandler {
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
-		foreach ($publishedArticles as $article) {				
+		foreach ($publishedArticles as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
 		}
 		$request->redirect(null, null, 'futureIssues');

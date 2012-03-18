@@ -54,7 +54,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getEarliestDatestamp()
 	 */
 	function getEarliestDatestamp($setIds = array()) {
-		return parent::getEarliestDatestamp('SELECT	MIN(COALESCE(at.date_deleted, a.last_modified))', $setIds);
+		return parent::getEarliestDatestamp('SELECT	MIN(COALESCE(st.date_deleted, a.last_modified))', $setIds);
 	}
 
 	/**
@@ -179,14 +179,14 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getRecordSelectStatement()
 	 */
 	function getRecordSelectStatement() {
-		return 'SELECT	COALESCE(at.date_deleted, a.last_modified) AS last_modified,
-			COALESCE(a.article_id, at.submission_id) AS article_id,
-			COALESCE(j.journal_id, at.journal_id) AS journal_id,
-			COALESCE(at.section_id, s.section_id) AS section_id,
+		return 'SELECT	COALESCE(st.date_deleted, a.last_modified) AS last_modified,
+			COALESCE(a.article_id, st.submission_id) AS article_id,
+			COALESCE(j.journal_id, st.journal_id) AS journal_id,
+			COALESCE(st.section_id, s.section_id) AS section_id,
 			i.issue_id,
-			at.tombstone_id,
-			at.set_spec,
-			at.oai_identifier';
+			st.tombstone_id,
+			st.set_spec,
+			st.oai_identifier';
 	}
 
 	/**
@@ -199,22 +199,22 @@ class OAIDAO extends PKPOAIDAO {
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
-			LEFT JOIN article_tombstones at ON (m.i = 1' . (isset($articleId) ? ' AND at.submission_id = ?' : '') . (isset($journalId) ? ' AND at.journal_id = ?' : '') . (isset($sectionId) && $sectionId != 0 ? ' AND at.section_id = ?' : '') . (isset($set) ? ' AND at.set_spec = ?' : '') .')';
+			LEFT JOIN submission_tombstones st ON (m.i = 1' . (isset($articleId) ? ' AND st.submission_id = ?' : '') . (isset($journalId) ? ' AND st.journal_id = ?' : '') . (isset($sectionId) && $sectionId != 0 ? ' AND st.section_id = ?' : '') . (isset($set) ? ' AND st.set_spec = ?' : '') .')';
 	}
 
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getAccessibleRecordWhereClause()
 	 */
 	function getAccessibleRecordWhereClause() {
-		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR at.submission_id IS NOT NULL)';
+		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR st.submission_id IS NOT NULL)';
 	}
 
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getDateRangeWhereClause()
 	 */
 	function getDateRangeWhereClause($from, $until) {
-		return (isset($from) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted >= '. $this->datetimeToDB($from) .') OR (at.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
-			. (isset($until) ? ' AND ((at.date_deleted IS NOT NULL AND at.date_deleted <= ' .$this->datetimeToDB($until) .') OR (at.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : '')
+		return (isset($from) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted >= '. $this->datetimeToDB($from) .') OR (st.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
+			. (isset($until) ? ' AND ((st.date_deleted IS NOT NULL AND st.date_deleted <= ' .$this->datetimeToDB($until) .') OR (st.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : '')
 			. ' ORDER BY journal_id';
 	}
 

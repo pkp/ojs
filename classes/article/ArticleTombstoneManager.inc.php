@@ -26,7 +26,7 @@ class ArticleTombstoneManager {
 
 		$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
 		// delete article tombstone -- to ensure that there aren't more than one tombstone for this article
-		$articleTombstoneDao->deleteByArticleId($article->getId());
+		$articleTombstoneDao->deleteBySubmissionId($article->getId());
 		// insert article tombstone
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$setSpec = urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev());
