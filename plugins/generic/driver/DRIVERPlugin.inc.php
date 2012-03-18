@@ -150,8 +150,8 @@ class DRIVERPlugin extends GenericPlugin {
 		$articleTombstone =& $params[0];
 
 		if ($this->isDRIVERArticle($articleTombstone->getJournalId(), $articleTombstone->getSubmissionId())) {
-			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
-			$articleTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
+			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			$submissionTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}
 		return false;
 	}
@@ -204,8 +204,8 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 			return false;
 		} else {
-			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
-			return $articleTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
+			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			return $submissionTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
 		}
 	}
 

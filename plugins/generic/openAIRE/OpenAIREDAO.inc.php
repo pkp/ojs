@@ -176,8 +176,8 @@ class OpenAIREDAO extends OAIDAO {
 
 			return $returner;
 		} else {
-			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
-			return $articleTombstoneSettingsDao->getSetting($row['tombstone_id'], 'openaire');
+			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			return $submissionTombstoneSettingsDao->getSetting($row['tombstone_id'], 'openaire');
 		}
 	}
 

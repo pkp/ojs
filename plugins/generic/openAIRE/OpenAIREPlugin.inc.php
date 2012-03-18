@@ -343,8 +343,8 @@ class OpenAIREPlugin extends GenericPlugin {
 
 		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
 		if ($openAIREDao->isOpenAIREArticle($articleTombstone->getSubmissionId())) {
-			$articleTombstoneSettingsDao =& DAORegistry::getDAO('ArticleTombstoneSettingsDAO');
-			$articleTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'openaire', true, 'bool');
+			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			$submissionTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'openaire', true, 'bool');
 		}
 		return false;
 	}

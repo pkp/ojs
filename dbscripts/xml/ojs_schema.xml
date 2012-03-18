@@ -529,39 +529,6 @@
 
 	<!--
 	  *
-	  * TABLE article_tombstone_settings
-	  *
-	  -->
-	<table name="article_tombstone_settings">
-		<field name="tombstone_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="locale" type="C2" size="5">
-			<NOTNULL/>
-			<DEFAULT VALUE=""/>
-		</field>
-		<field name="setting_name" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C2" size="6">
-			<NOTNULL/>
-			<descr>(bool|int|float|string|object)</descr>
-		</field>
-		<descr>Article tombstone settings.</descr>
-		<index name="article_tombstone_settings_tombstone_id">
-			<col>tombstone_id</col>
-		</index>
-		<index name="article_tombstone_settings_pkey">
-			<col>tombstone_id</col>
-			<col>locale</col>
-			<col>setting_name</col>
-			<UNIQUE />
-		</index>
-	</table>
-
-	<!--
-	  *
 	  * TABLE articles
 	  *
 	  -->
