@@ -18,7 +18,7 @@
 		</query>
 		<query driver="postgres7">
 			CREATE SEQUENCE review_rounds_review_round_id_seq;
-			ALTER TABLE review_rounds ADD review_round_id BIGINT(20) UNIQUE;
+			ALTER TABLE review_rounds ADD review_round_id INT UNIQUE;
 			ALTER TABLE review_rounds ALTER COLUMN review_round_id SET DEFAULT NEXTVAL('review_rounds_review_round_id_seq');
 			UPDATE review_rounds SET review_round_id = NEXTVAL('review_rounds_review_round_id_seq');
 		</query>
