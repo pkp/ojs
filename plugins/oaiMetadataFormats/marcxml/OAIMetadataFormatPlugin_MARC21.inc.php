@@ -13,7 +13,7 @@
  * @brief marc21 metadata format plugin for OAI.
  */
 
-import('classes.plugins.OAIMetadataFormatPlugin');
+import('lib.pkp.classes.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin {
 	/**

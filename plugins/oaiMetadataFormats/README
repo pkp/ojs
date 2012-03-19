@@ -22,7 +22,7 @@ return new OAIFormatPlugin_<format>();
 ~B~ skeleton ***********************************************
 
 <?php
-import('classes.plugins.OAIMetadataFormatPlugin');
+import('lib.pkp.classes.plugins.OAIMetadataFormatPlugin');
 class OAIMetadataFormatPlugin_DC extends OAIMetadataFormatPlugin
 {
 	function getName();
