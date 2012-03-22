@@ -146,5 +146,26 @@
 		<query driver="postgres7">INSERT INTO controlled_vocab_entries (controlled_vocab_id, seq) VALUES (CURRVAL('controlled_vocabs_controlled_vocab_id_seq'), 0)</query>
 		<query driver="mysql">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (LAST_INSERT_ID(), '', 'name', 'unknown', 'string')</query>
 		<query driver="postgres7">INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) VALUES (CURRVAL('controlled_vocab_entries_controlled_vocab_entry_id_seq'), '', 'name', 'unknown', 'string')</query>
-	</sql>
+
+		<!-- Default configuration. Sets up the three parsing services that do not require additional
+			 tools, and the two lookup services that do not require registration. -->
+		<query>INSERT INTO filters (filter_id, context_id, display_name, class_name, input_type, output_type, seq) VALUES (23, 1, 'FreeCite', 'lib.pkp.classes.citation.parser.freecite.FreeciteRawCitationNlmCitationSchemaFilter', 'primitive::string', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 0)</query>
+		<query>INSERT INTO filters (filter_id, context_id, display_name, class_name, input_type, output_type, seq) VALUES (24, 1, 'ParsCit', 'lib.pkp.classes.citation.parser.parscit.ParscitRawCitationNlmCitationSchemaFilter', 'primitive::string', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 0)</query>
+		<query>INSERT INTO filters (filter_id, context_id, display_name, class_name, input_type, output_type, seq) VALUES (26, 1, 'RegEx', 'lib.pkp.classes.citation.parser.regex.RegexRawCitationNlmCitationSchemaFilter', 'primitive::string', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 0)</query>
+		<query>INSERT INTO filters (filter_id, context_id, display_name, class_name, input_type, output_type, seq) VALUES (28, 1, 'PubMed', 'lib.pkp.classes.citation.lookup.pubmed.PubmedNlmCitationSchemaFilter', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 0)</query>
+		<query>INSERT INTO filters (filter_id, context_id, display_name, class_name, input_type, output_type, seq) VALUES (29, 1, 'WorldCat', 'lib.pkp.classes.citation.lookup.worldcat.WorldcatNlmCitationSchemaFilter', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 'metadata::lib.pkp.classes.metadata.nlm.NlmCitationSchema(CITATION)', 0)</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (23, 'isOptional', 0, 'bool')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (24, 'isOptional', 0, 'bool')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (26, 'isOptional', 0, 'bool')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'isOptional', 0, 'bool')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'isOptional', 0, 'bool')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (23, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (24, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (26, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'email', '', 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'apikey', '', 'string')</query>
+		
+		</sql>
 </data>
