@@ -850,8 +850,8 @@ class IssueManagementHandler extends EditorHandler {
 					$articleDao->updateArticle($article);
 				}
 				// delete article tombstone
-				$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-				$articleTombstoneDao->deleteBySubmissionId($article->getId());
+				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+				$tombstoneDao->deleteByDataObjectId($article->getId());
 				unset($article);
 			}
 		}

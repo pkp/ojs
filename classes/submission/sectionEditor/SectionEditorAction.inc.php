@@ -1425,8 +1425,8 @@ class SectionEditorAction extends Action {
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
 			if ($issue->getPublished()) {
 				// delete article tombstone
-				$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-				$articleTombstoneDao->deleteBySubmissionId($sectionEditorSubmission->getId());
+				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+				$tombstoneDao->deleteByDataObjectId($sectionEditorSubmission->getId());
 			}
 		} else {
 			$sectionEditorSubmission->setStatus(STATUS_QUEUED);

@@ -2423,8 +2423,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
 			// delete article tombstone
-			$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
-			$articleTombstoneDao->deleteBySubmissionId($submission->getId());
+			$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+			$tombstoneDao->deleteByDataObjectId($submission->getId());
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
 		}

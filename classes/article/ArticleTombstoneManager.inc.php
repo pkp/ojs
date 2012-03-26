@@ -24,23 +24,26 @@ class ArticleTombstoneManager {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId());
 
-		$articleTombstoneDao =& DAORegistry::getDAO('ArticleTombstoneDAO');
+		$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
 		// delete article tombstone -- to ensure that there aren't more than one tombstone for this article
-		$articleTombstoneDao->deleteBySubmissionId($article->getId());
+		$tombstoneDao->deleteByDataObjectId($article->getId());
 		// insert article tombstone
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$setSpec = urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev());
 		$oaiIdentifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $article->getId();
+		$OAISetObjectsIds = array(
+			ASSOC_TYPE_JOURNAL => $journal->getId(),
+			ASSOC_TYPE_SECTION => $section->getId(),
+		);
 
-		$articleTombstone = $articleTombstoneDao->newDataObject();
-		$articleTombstone->setJournalId($article->getJournalId());
-		$articleTombstone->setSubmissionId($article->getId());
+		$articleTombstone = $tombstoneDao->newDataObject();
+		$articleTombstone->setDataObjectId($article->getId());
 		$articleTombstone->stampDateDeleted();
-		$articleTombstone->setSectionId($article->getSectionId());
 		$articleTombstone->setSetSpec($setSpec);
 		$articleTombstone->setSetName($section->getLocalizedTitle());
 		$articleTombstone->setOAIIdentifier($oaiIdentifier);
-		$tombstoneId = $articleTombstoneDao->insertObject($articleTombstone);
+		$articleTombstone->setOAISetObjectsIds($OAISetObjectsIds);
+		$tombstoneId = $tombstoneDao->insertObject($articleTombstone);
 
 		if (HookRegistry::call('ArticleTombstoneManager::insertArticleTombstone', array(&$articleTombstone, &$article, &$journal))) return;
 	}

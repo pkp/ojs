@@ -22,6 +22,7 @@ define('PHP_REQUIRED_VERSION', '4.2.0');
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
 define('ASSOC_TYPE_ARTICLE',		0x0000101);
 define('ASSOC_TYPE_ANNOUNCEMENT',	0x0000102);
+define('ASSOC_TYPE_SECTION',		0x0000103);
 
 define('CONTEXT_JOURNAL', 1);
 
@@ -85,7 +86,6 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleNoteDAO' => 'classes.article.ArticleNoteDAO', // DEPRECATED
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
-			'ArticleTombstoneDAO' => 'classes.article.ArticleTombstoneDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
 			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
