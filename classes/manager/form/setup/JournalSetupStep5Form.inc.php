@@ -38,6 +38,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'itemsPerPage' => 'int',
 				'numPageLinks' => 'int',
 				'journalTheme' => 'string',
+				'journalThumbnailAltText' => 'string',
 				'homeHeaderTitleImageAltText' => 'string',
 				'homeHeaderLogoImageAltText' => 'string',
 				'homepageImageAltText' => 'string',
@@ -52,7 +53,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'journalFavicon', 'additionalHomeContent', 'description', 'navItems', 'homeHeaderTitleImageAltText', 'homeHeaderLogoImageAltText', 'homepageImageAltText', 'pageHeaderTitleImageAltText', 'pageHeaderLogoImageAltText');
+		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'journalFavicon', 'additionalHomeContent', 'description', 'navItems', 'homeHeaderTitleImageAltText', 'homeHeaderLogoImageAltText', 'journalThumbnailAltText', 'homepageImageAltText', 'pageHeaderTitleImageAltText', 'pageHeaderLogoImageAltText');
 
 	}
 
@@ -75,6 +76,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$templateMgr->assign(array(
 			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),
 			'homeHeaderLogoImage'=> $journal->getSetting('homeHeaderLogoImage'),
+			'journalThumbnail'=> $journal->getSetting('journalThumbnail'),
 			'pageHeaderTitleImage' => $journal->getSetting('pageHeaderTitleImage'),
 			'pageHeaderLogoImage' => $journal->getSetting('pageHeaderLogoImage'),
 			'homepageImage' => $journal->getSetting('homepageImage'),

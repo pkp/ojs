@@ -168,6 +168,34 @@ function prepBlockFields() {
 </table>
 {/if}
 </div>
+
+<div id="journalThumbnail">
+<h4>{translate key="manager.setup.journalThumbnail"}</h4>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="manager.setup.useThumbnail"}</td>
+		<td width="80%" class="value"><input type="file" name="journalThumbnail" class="uploadField" /> <input type="submit" name="uploadJournalThumbnail" value="{translate key="common.upload"}" class="button" /></td>
+	</tr>
+</table>
+
+{if $journalThumbnail[$formLocale]}
+{translate key="common.fileName"}: {$journalThumbnail[$formLocale].name|escape} {$journalThumbnail[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalThumbnail" value="{translate key="common.delete"}" class="button" />
+<br />
+<img src="{$publicFilesDir}/{$journalThumbnail[$formLocale].uploadName|escape:"url"}" width="{$journalThumbnail[$formLocale].width|escape}" height="{$journalThumbnail[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.journalThumbnail.altText"}" />
+<br />
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="journalThumbnailAltText" key="common.altText"}</td>
+		<td width="80%" class="value"><input type="text" name="journalThumbnailAltText[{$formLocale|escape}]" value="{$journalThumbnailAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
+		</tr>
+</table>
+{/if}
+</div>
 </div>
 <div class="separator"></div>
 

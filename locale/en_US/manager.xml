@@ -334,6 +334,7 @@
 	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
 	<message key="manager.setup.journalTheme">Journal Theme</message>
+	<message key="manager.setup.journalThumbnail">Journal thumbnail</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.layoutAndGalleys">Layout Editors</message>
@@ -480,6 +481,7 @@
 	<message key="manager.setup.useCopyeditors">A Copyeditor will be assigned to work with each submission.</message>
 	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
 	<message key="manager.setup.useImageLogo">Logo image</message>
+	<message key="manager.setup.useThumbnail">Thumbnail</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.useLayoutEditors">A Layout Editor will be assigned to prepare the HTML, PDF, etc., files for electronic publication.</message>
