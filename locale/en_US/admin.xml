@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (English) locale.
   *
-  * $Id$
   -->
 
 <locale name="en_US" full_name = "English">
@@ -20,6 +19,11 @@
 	<message key="admin.settings.usePaging">For sites with many journals, break the list of journals up into several pages.</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
+    <message key="admin.settings.journalsList">Journal elements</message>
+    <message key="admin.settings.journalsList.description">Please choose the journal elements that will be displayed for each journal at the site page.</message>
+    <message key="admin.settings.journalsList.showThumbnail">Journal thumbnail</message>
+    <message key="admin.settings.journalsList.showTitle">Journal title</message>
+    <message key="admin.settings.journalsList.showDescription">Journal description</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
 	<message key="admin.locale.maybeIncomplete">Marked locales may be incomplete.</message>

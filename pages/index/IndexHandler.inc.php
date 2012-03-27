@@ -103,6 +103,7 @@ class IndexHandler extends Handler {
 				$searchInitial
 			);
 			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->assign_by_ref('site', $site);
 
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 

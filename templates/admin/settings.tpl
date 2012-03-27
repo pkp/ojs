@@ -95,8 +95,8 @@
 		<td colspan="2" class="value"><input type="text" id="minPasswordLength" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 	</tr>
 	<tr>
-		<td width="20%" class="label"><label for="journalTheme">{translate key="admin.settings.siteTheme"}</label></td>
-		<td width="80%" class="value">
+		<td class="label"><label for="journalTheme">{translate key="admin.settings.siteTheme"}</label></td>
+		<td colspan="2" class="value">
 			<select name="siteTheme" class="selectMenu" id="theme"{if empty($themes)} disabled="disabled"{/if}>
 				<option value="">{translate key="common.none"}</option>
 				{foreach from=$themes key=path item=themePlugin}
@@ -106,7 +106,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="admin.settings.siteStyleSheet"}</td>
+		<td class="label">{translate key="admin.settings.siteStyleSheet"}</td>
 		<td colspan="2" width="80%" class="value">
 			<input type="file" name="siteStyleSheet" class="uploadField" /> <input type="submit" name="uploadSiteStyleSheet" value="{translate key="common.upload"}" class="button" />
 			{if $siteStyleFileExists}
@@ -125,6 +125,18 @@
 		<td class="value" colspan="2">
 			<input type="checkbox" id="usePaging" name="usePaging" {if $usePaging}checked="checked" {/if}/>
 			{fieldLabel name="usePaging" key="admin.settings.usePaging"}
+		</td>
+	</tr>
+    <tr valign="top">
+    	<td class="label">{translate key="admin.settings.journalsList"}</td>
+		<td colspan="2" class="value">
+			{translate key="admin.settings.journalsList.description"}<br />
+			<input type="checkbox" name="showThumbnail" id="showThumbnail" value="1"{if $showThumbnail} checked="checked"{/if} />
+			{fieldLabel name="showThumbnail" key="admin.settings.journalsList.showThumbnail"}<br />
+			<input type="checkbox" name="showTitle" id="showTitle" value="1"{if $showTitle} checked="checked"{/if} />
+			{fieldLabel name="showTitle" key="admin.settings.journalsList.showTitle"}<br />
+			<input type="checkbox" name="showDescription" id="showDescription" value="1"{if $showDescription} checked="checked"{/if} />
+			{fieldLabel name="showDescription" key="admin.settings.journalsList.showDescription"}<br />
 		</td>
 	</tr>
 </table>
