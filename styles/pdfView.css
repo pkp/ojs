@@ -13,6 +13,14 @@
 	padding: 1px 0px 1px 1px;
 }
 
+#pluginMissing{
+	font-size: 1.4em;
+	padding: 10px;
+}
+#pluginMissing a {
+	text-decoration: underline;
+}
+
 #inlinePdf {
 	width:99%;
 	height:99%;
@@ -26,6 +34,18 @@
 	left: 20px;
 	top: 7px;
 	z-index: 1002;
+}
+
+#pdfDownloadLinkContainer {
+	text-align: right;
+	padding: 5px;
+}
+
+a.pdf {
+	background: transparent url(../lib/pkp/templates/images/structure/page_white_acrobat.png) no-repeat scroll 0 2px !important;
+	padding: 3px 0 3px 23px;
+	font-size: 1.2em;
+	text-transform: none;
 }
 
 .black_overlay{
