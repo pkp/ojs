@@ -31,7 +31,7 @@ class OJSCompletedPayment extends Payment {
 	 * Constructor
 	 */
 	function OJSCompletedPayment() {
-		// FIXME: Does not call parent constructor
+		parent::Payment();
 	}
 
 	/**

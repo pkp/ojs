@@ -14,15 +14,22 @@
  *
  */
 
+import('classes.payment.ojs.OJSCompletedPayment');
+
 class OJSCompletedPaymentDAO extends DAO {
 	/**
 	 * Retrieve a ComplatedPayment by its ID.
-	 * @param $subscriptionId int
-	 * @return Subscription
+	 * @param $completedPaymentId int
+	 * @param $journalId int optional
+	 * @return CompletedPayment
 	 */
-	function &getCompletedPayment($completedPaymentId) {
+	function &getCompletedPayment($completedPaymentId, $journalId = null) {
+		$params = array((int) $completedPaymentId);
+		if ($journalId) $params[] = (int) $journalId;
+
 		$result =& $this->retrieve(
-			'SELECT * FROM completed_payments WHERE completed_payment_id = ?', (int) $completedPaymentId
+			'SELECT * FROM completed_payments WHERE completed_payment_id = ?' . ($journalId?' AND journal_id = ?':''),
+			$params
 		);
 
 		$returner = null;
@@ -69,9 +76,9 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PURCHASE_ARTICLE payment matching the journal and article IDs
-	 * @param int $journalId
-	 * @param int $articleId
+	 * Look for a completed PURCHASE_ARTICLE payment matching the article ID
+	 * @param $userId int
+	 * @param $articleId int
 	 */
 	function hasPaidPurchaseArticle ($userId, $articleId) {
 		$result =& $this->retrieve(
@@ -266,7 +273,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	/**
 	 * Retrieve an array of payments for a particular journal ID.
 	 * @param $journalId int
-	 * @return object DAOResultFactory containing matching Theses
+	 * @return object DAOResultFactory containing matching payments
 	 */
 	function &getPaymentsByJournalId($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
@@ -293,8 +300,6 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function &_returnPaymentFromRow(&$row) {
-		import('classes.payment.ojs.OJSCompletedPayment');
-
 		$payment = $this->newDataObject();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));
 		$payment->setPaymentId($row['completed_payment_id']);
