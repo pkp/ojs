@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -312,17 +311,6 @@ class OJSCompletedPayment extends Payment {
 	 */
 	function isSubscription() {
 		return ($this->type == PAYMENT_TYPE_RENEW_SUBSCRIPTION || $this->type == PAYMENT_TYPE_PURCHASE_SUBSCRIPTION);
-	}
-
-	/**
-	 * Get the username from the userId in the payment
-	 * @return String
-	 */
-	function getUsername() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUser($userId);
-		if (!$user) return false;
-		return $user->getUsername();
 	}
 
 	/**
