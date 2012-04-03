@@ -519,7 +519,6 @@ class ArticleHandler extends Handler {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
-							$templateMgr =& TemplateManager::getManager();
 							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 							exit;
 						}
