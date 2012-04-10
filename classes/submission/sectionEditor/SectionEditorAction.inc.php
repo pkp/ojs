@@ -1839,7 +1839,7 @@ class SectionEditorAction extends Action {
 			// Send a notification to associated users
 			import('lib.pkp.classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-			$notificationUsers = $article->getAssociatedUserIds();
+			$notificationUsers = $article->getAssociatedUserIds(false, false);
 			foreach ($notificationUsers as $userRole) {
 				$url = Request::url(null, $userRole['role'], 'submissionReview', $article->getId(), null, 'peerReview');
 				$notificationManager->createNotification(
