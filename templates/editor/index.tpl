@@ -149,10 +149,20 @@ function sortSearch(heading, direction) {
 <h3>{translate key="editor.navigation.issues"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li>&#187; <a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
-	<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-	<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{* 20111201 BLH Hide 'Create Issue' link for UEE *}
+	{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+		<li>&#187; <a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+	{/if}
+	{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
+	{*<li>&#187; <a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>*}
+	{* 20111201 BLH Diplay 'Published Content' & 'Unpublished Content' for UCLA Encyclopedia of Egyptology*}
+	{if $journalPath == 'nelc_uee'}
+		<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+		<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+	{else}
+		<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{/if}
 	{call_hook name="Templates::Editor::Index::Issues"}
 </ul>
 </div>

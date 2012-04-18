@@ -71,6 +71,7 @@ class FilesHandler extends ManagerHandler {
 			$templateMgr->assign('currentDir', $currentDir);
 			$templateMgr->assign('parentDir', $parentDir);
 			$templateMgr->assign('helpTopicId','journal.managementPages.fileBrowser');
+			$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20120214 BLH Added
 			$templateMgr->display('manager/files/index.tpl');
 		}
 	}

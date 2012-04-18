@@ -77,6 +77,12 @@ class IndexHandler extends Handler {
 			}
 			$templateMgr->display('index/journal.tpl');
 		} else {
+		
+			Request::redirect(null, 'user');
+			
+			/** 20110826 BLH 	
+				Change default behavior of site index to go to user home page if no journal is set (rather than going to site home page). ***/
+			/************
 			$site =& Request::getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getJournal($site->getRedirect())) != null) {
@@ -89,6 +95,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');
+			***********/
 		}
 	}
 }

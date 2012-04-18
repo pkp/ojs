@@ -14,6 +14,9 @@
  * @ingroup submission_layoutEditor_LayoutEditorAction
  *
  * @brief LayoutEditorAction class.
+ *
+ * CHANGELOG:
+ *	20110808	BLH	Add copyLayoutToGalleyAsPdf function
  */
 
 // $Id$
@@ -221,6 +224,18 @@ class LayoutEditorAction extends Action {
 			$layoutSignoff->setFileId($layoutFileId);
 			$signoffDao->updateObject($layoutSignoff);
 		}
+	}
+	
+	/**
+	 * Copy the layout version of an article to galley format as PDF.
+	 * @param $submission object
+	 */
+	function copyLayoutToGalleyAsPdf($submission) {
+		import('classes.file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($submission->getArticleId()); 
+		$layoutFile = $submission->getFileBySignoffType('SIGNOFF_LAYOUT');
+		$layoutFileId = $layoutFile->getFileId();
+		$galleyFileId = $articleFileManager->copyToGalleyFileAsPdf($layoutFileId);
 	}
 
 	//

@@ -41,6 +41,7 @@ switch ($op) {
 	case 'submission':
 	case 'submissionEditing':
 	case 'completeAssignment':
+	case 'copyLayoutToGalleyAsPdf':
 	case 'uploadLayoutFile':
 	case 'editGalley':
 	case 'saveGalley':

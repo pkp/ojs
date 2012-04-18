@@ -1,16 +1,20 @@
 <?php
 
 /**
- * @file classes/submission/sectionEditor/SectionEditorAction.inc.php
- *
- * Copyright (c) 2003-2011 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @class SectionEditorAction
- * @ingroup submission
- *
- * @brief SectionEditorAction class.
- */
+* @file classes/submission/sectionEditor/SectionEditorAction.inc.php
+*
+* Copyright (c) 2003-2011 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @class SectionEditorAction
+* @ingroup submission
+*
+* @brief SectionEditorAction class.
+*
+* CHANGELOG:
+*	20110726	BLH	Added UploadReviewVersionNoAuthorInfo() function.
+*	20110729	BLH Added copyLayoutToGalleyAsPdf function.
+*/
 
 // $Id$
 
@@ -1217,6 +1221,30 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Upload the review version of an article, safe for blind peer review (no identifying metadata).
+	 * @param $sectionEditorSubmission object
+	 */
+	function uploadReviewVersionNoAuthorInfo($sectionEditorSubmission) {
+		import('classes.file.ArticleFileManager');
+		
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
+		$sourceFileId = $sectionEditorSubmission->getReviewFileId();
+		$reviewFileId = $articleFileManager->copyToReviewFileAsPdf($sourceFileId, $sectionEditorSubmission->getReviewRevision(), $sourceFileId);
+		// Increment the review revision.
+		$sectionEditorSubmission->setReviewRevision($sectionEditorSubmission->getReviewRevision()+1);	
+		$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
+		
+		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
+			$sectionEditorSubmission->setReviewFileId($reviewFileId);
+			$sectionEditorSubmission->setEditorFileId($editorFileId);
+			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
+		
+		return $reviewFileId;
+	}
+
+	/**
 	 * Upload the post-review version of an article.
 	 * @param $sectionEditorSubmission object
 	 */
@@ -1588,6 +1616,11 @@ class SectionEditorAction extends Action {
 			return false;
 		}
 		return true;
+	}
+	
+	function copyLayoutToGalleyAsPdf($submission) {
+		import('classes.submission.layoutEditor.LayoutEditorAction');
+		LayoutEditorAction::copyLayoutToGalleyAsPdf($submission);
 	}
 
 	/**

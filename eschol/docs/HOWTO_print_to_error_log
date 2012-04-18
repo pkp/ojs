@@ -1,0 +1,8 @@
+When debugging OJS code it can be handy to insert print statements
+that send debugging test to the error log. Here are some examples:
+
+error_log("This is a message to the error log");
+
+error_log("The variable foo has value $foo");
+
+error_log("Complex expression value is: " . $foo->func())

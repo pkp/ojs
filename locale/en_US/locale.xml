@@ -10,6 +10,13 @@
   * Localization strings for the en_US (U.S. English) locale.
   *
   * $Id$
+  *
+  * 20110725	BLH	Added item message key="reviewer.article.replaceReviewWithPdf"
+  * 20110802	BLH Added section "User Roles as Functions"
+  *	20110804	BLH Added item message key="reviewer.article.convertFileToPdfPleaseWait" 
+  *					Added item message key="submission.layout.generatePdfPleaseWait"
+  * 20121818    MCH Added section "Extra eScholarship Authorization"
+  *
   -->
  
 <locale name="en_US" full_name="U.S. English">
@@ -154,15 +161,23 @@
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.changeSection">Change to</message>
 	<message key="submission.sent">Sent</message>
+	<message key="submission.sentToCopyediting">Sent to Copyediting</message>
 	<message key="submission.editorDecision">Editor Decision</message>
 	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.notifyAuthor">Notify Author</message>
+	<message key="submission.notifyAuthorSendEmail">Send email to author regarding editorial decision.</message>
 	<message key="submission.notifyEditor">Notify Editor</message>
-	<message key="submission.editorAuthorRecord">Editor/Author Email Record</message>
+	<message key="submission.editorAuthorRecord">Email/Comments Record</message>
+	<message key="submission.lastEditorAuthorEmail">Last Email and/or Comment</message>
+	<message key="submission.noEditorAuthorEmails">No emails have been sent regarding this decision.</message>
+	<message key="submission.selectVersionForCopyediting">Select an article version from below and Send to Copyediting:</message>
+	<message key="submission.selectVersionForResubmit">Select an article version from below and Resubmit for peer review:</message>
+	<message key="submission.currentArticleVersions">Current article versions:</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.editorVersion">Editor Version</message>
+	<message key="submission.UploadNewEditorVersion">Upload new Editor Version</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
 	<message key="submission.authorVersion">Author Version</message>
 	<message key="submission.copyediting">Copyediting</message>
@@ -212,6 +227,17 @@
 	<message key="user.noRoles.submitArticleRegClosed">Submit an Article: Author registration is currently disabled.</message>
 	<message key="user.noRoles.regReviewer">Register as a Reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Register as a Reviewer: Reviewer registration is currently disabled.</message>
+	
+	<!-- User Roles as Functions -->
+	<message key="user.rolefunction.manager">Configure Journal</message>
+	<message key="user.rolefunction.editor">Manage All Submissions</message>
+	<message key="user.rolefunction.sectionEditor">Manage Section</message>
+	<message key="user.rolefunction.layoutEditor">Edit Submissions' Layout</message>
+	<message key="user.rolefunction.copyeditor">Copyedit Submissions</message>
+	<message key="user.rolefunction.proofreader">Proofread Submissions</message>
+	<message key="user.rolefunction.author">Submit or Revise Manuscript</message>
+	<message key="user.rolefunction.subscriptionManager">Manage Subscriptions</message>
+	<message key="user.rolefunction.reviewer">Respond to Review Request</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Journal Manager</message>
@@ -242,6 +268,7 @@
 	<message key="issue.year">Year</message>
 	<message key="issue.noIssues">No Issues</message>
 	<message key="issue.toc">Table of Contents</message>
+	<message key="issue.previewAndPublish">Preview &amp; Publish Issue</message>
 	<message key="issue.abstract">Abstract</message>
 	<message key="issue.coverPage.altText">Cover Page</message>
 
@@ -543,7 +570,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="sectionEditor.regrets.regret">Regret</message>
 	<message key="sectionEditor.regrets.result">Result</message>
 	<message key="sectionEditor.review.enrollReviewer">Enroll an Existing User As Reviewer</message>
-	<message key="sectionEditor.review.createReviewer">Create New Reviewer</message>
+	<message key="sectionEditor.review.createReviewer">Enroll New Reviewer</message><!-- 20110822 BLH Updated to better reflect functionality -->
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -593,19 +620,24 @@ Active is how many reviews are currently being considered or underway.]]></messa
         <message key="reviewer.article.reviewSteps">Review Steps</message>
         <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
-        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
-        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
-        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
-        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+        <message key="reviewer.article.notifyEditorA"><![CDATA[<strong>Notify the submission's editor</strong>]]></message>
+        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review by clicking the appropriate icon below.</message>
+        <message key="reviewer.article.consultGuidelines"><![CDATA[If you are going to do the review, <strong>consult the "Reviewer Guidelines" section</strong> at the bottom of this page.]]></message>
+        <message key="reviewer.article.downloadSubmission"><![CDATA[Click on the file names below to <strong>download and review the files</strong> associated with this submission.]]></message>
+        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have <strong>competing interests</strong> with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
 	<message key="reviewer.competingInterests">Competing Interests</message>
-        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
-        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
-        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+        <message key="reviewer.article.enterReviewA"><![CDATA[Click on icon to <strong>enter (or paste) your review</strong> of this submission.]]></message>
+        <message key="reviewer.article.uploadFile"><![CDATA[You can <strong>upload additional files</strong> for the editor and/or author to consult (optional).]]></message>
+        <message key="reviewer.article.selectRecommendation"><![CDATA[<strong>Select a recommendation.</strong><br /><em>You must enter a review or upload a file before selecting a recommendation.</em>]]></message>
+	<message key="reviewer.article.submitReviewInstructions"><![CDATA[Click the button below to submit the review to complete the process.]]></message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 	<message key="reviewer.article.ensuringBlindReview">Ensuring a Blind Review</message>
-
+	<message key="reviewer.article.convertFileToPdf.button">Convert File to PDF</message>
+	<message key="reviewer.article.convertFileToPdf.info">PDF file will be stripped of identifying metadata, i.e. author name.</message>
+	<message key="reviewer.article.convertFileToPdf.msword"><![CDATA[<blockquote><strong>Please note</strong>: Conversion may not work for .doc files created with an old version of Microsoft Word.<br />If the Generate PDF button doesn't work for you, try one of the following:<ul><li>Download the document and use 3rd-party software (such as Adobe Acrobat) to create a PDF, then upload the PDF.</li><li>Download the document and re-save it with a newer version of Microsoft Word, then upload the newly saved document and try the Generate PDF button again.</li></ul></blockquote>]]></message>
+	<message key="reviewer.article.convertFileToPdfPleaseWait">PDF conversion may take a moment. After clicking the OK button below, please wait for the page to refresh before continuing.</message>
+	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
 	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
@@ -665,7 +697,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.layout.layoutComments">Layout Comments</message>
 	<message key="submission.layout.instructions">Layout Instructions</message>
 	<message key="submission.layout.referenceLinking">Reference Linking</message>
-	
+	<message key="submission.layout.generatePdf">Generate PDF</message>
+	<message key="submission.layout.generatePdf.info">Generated PDF will be added as a Galley Format document &amp; Layout marked complete.</message>
+	<message key="submission.layout.generatePdfPleaseWait">PDF conversion may take a moment. After clicking the OK button below, please wait for the page to refresh before continuing.</message>
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
@@ -1119,6 +1153,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.authorization.sectionAssignment">You are trying to access an article that is not part of your section.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Invalid copyeditor submission or no copyeditor submission requested!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Invalid section editor submission or no section editor submission requested!</message>
+        <!-- Extra eScholarship Authorization -->
+	<message key="user.authorization.roleValidatorFailure">You appear to have entered a link for our submission management system, but you do not have sufficient privileges to view the content of this page. Please contact the journal editor for assistance.</message>
+	<message key="user.authorization.journalValidatorFailure">The link you've entered appears invalid. Please check your link and try again. (If you've copied this link from an email, make sure it does not contain any spaces or line breaks.) If you continue to experience difficulty, <![CDATA[<a href="http://escholarship.org/help_contact.html">contact eScholarship support</a>]]>.</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

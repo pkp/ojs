@@ -121,7 +121,7 @@ function confirmSubmissionCheck() {
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td>
-		{translate key="submission.response"}&nbsp;&nbsp;&nbsp;&nbsp;
+		{translate key="submission.response"}{literal}:{/literal}&nbsp;
 		{if not $confirmedStatus}
 			{url|assign:"acceptUrl" op="confirmReview" reviewId=$reviewId}
 			{url|assign:"declineUrl" op="confirmReview" reviewId=$reviewId declineReview=1}
@@ -326,8 +326,8 @@ function confirmSubmissionCheck() {
 	<td>
 		<table class="data" width="100%">
 			<tr valign="top">
-				<td class="label" width="30%">{translate key="submission.recommendation"}</td>
-				<td class="value" width="70%">
+				<td class="label" width="20%">{translate key="submission.recommendation"}</td>
+				<td class="value" width="80%">
 				{if $submission->getRecommendation() !== null && $submission->getRecommendation() !== ''}
 					{assign var="recommendation" value=$submission->getRecommendation()}
 					<strong>{translate key=$reviewerRecommendationOptions.$recommendation}</strong>&nbsp;&nbsp;
@@ -337,14 +337,24 @@ function confirmSubmissionCheck() {
 					<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
-					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
-					</form>					
 				{/if}
 				</td>		
 			</tr>
 		</table>
 	</td>
+</tr>
+<tr valign="top">
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td>
+		<span class="instruct">{translate key="reviewer.article.submitReviewInstructions"}</span>
+	</td>	
+</tr>
+<tr valign="top">
+	<td>&nbsp;</td>
+	<td>
+		<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
+		</form>
+	</td>	
 </tr>
 </table>
 </div>

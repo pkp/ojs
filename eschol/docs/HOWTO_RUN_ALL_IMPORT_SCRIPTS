@@ -1,0 +1,105 @@
+How to run all of BH's data import scripts (bepress to OJS):
+
+[Kirk does his import stuff first...]
+Now start running BH's stuff:
+
+-------------------------------------------------------------------------------------------
+1) Check for articles that don't have any content files. E.g.:
+
+	https://www.pivotaltracker.com/projects/62141?story_id=19483595
+	
+-------------------------------------------------------------------------------------------
+
+2) Fix bad characters in data by following instructions in:
+	
+	/apps/subi/apache/htdocs/ojs/eschol/docs/HOWTO_fix_unicode.txt
+
+-------------------------------------------------------------------------------------------
+
+3) Link authors and users by following instructions in:
+	
+	/apps/subi/apache/htdocs/ojs/eschol/docs/HOWTO_link_authors_users.txt
+
+-------------------------------------------------------------------------------------------
+
+4) If necessary, update data directory & list of journals you are running the scripts for in:
+
+	/apps/subi/apache/htdocs/ojs/eschol/utilities/import_set_parameters.php
+	
+	If doing locally, don't forget to hg commit and push to prod!
+
+-------------------------------------------------------------------------------------------
+
+5) Update DB connection if necessary in:
+
+	/apps/subi/apache/htdocs/ojs/eschol/utilities/ojs_db_connect.php
+
+	If doing locally, don't forget to hg commit and push to prod!
+	
+-------------------------------------------------------------------------------------------
+
+6) Now run the scripts in this order:
+
+	cd /apps/subi/apache/htdocs/ojs/eschol/utilities
+	
+	CHANGE RANGE OF JOURNAL IDs if necessary
+	php -f article_user_id_update.php						# update article submitter IDs
+															# sets articles.user_id to first author
+															# (articles are imported with user_id = 1)
+															# should update this script to set submitter ID to person assoc w event_history 'Initial Submission'
+	
+	php -f article_editor_assignment_import.php				# assign editors
+															# from event_history.tsv files
+															# event = 'Editor assigned'
+															# creates edit_assignments records
+															# creates roles records
+	
+	php -f reviewer_report_import.php						# imports reviewers & assignments
+															# from reviewer_report.tsv
+															# creates review_assignments records
+															# ***some scripts below rely on this having been run successfully!***
+															# query db for review_assignments where declined = 1 and date_completed IS NOT NULL
+															
+	php -f fix_usernames.php								# fix names of users created by previous script (if necessary)
+													
+	php -f article_history_and_status_import.php			# import article history & status
+															# from event_history.tsv & revision_history.tsv
+															# updates articles.status - declined, archived, queued
+															# creates article_event_log records
+															# ***some scripts below rely on this having been run successfully!***											
+	
+	php -f article_versions_import.php						# import article versions
+															# these are text.* files
+															# original, review, and editor versions
+															# creates article_files records in DB
+															# UPLOADS files to /apps/subi/ojs/files/
+													
+	php -f review_import.php								# import reviewers' reviews of articles
+															# from review-* files
+															# creates article_comments records
+															# creates article_files records
+															# (type 'submission/review')
+															# updates review_assignments.reviewer_file_id
+															# UPLOADS txt & pdf files to /apps/subi/ojs/files/
+
+	php -f reviewer_recommendation_import.php				# import reviewer recommendations for articles
+															# from reviews.tsv
+															# recommendations: Revisions Required, Decline, etc
+															# update review_assignments.recommendation field
+															# update article_event_log.assoc_type & assoc_id
+													
+	php -f article_editor_decision_import.php				# imports editor decisions on articles
+															# from article_event_log files
+															# from decision-[n].txt files
+															# Accept Submission, Decline Submission, etc.
+															# creates edit_decisions records
+															# creates article_email_log records
+															# creates article_comments records
+	
+	php -f mailreceived_import.php							# imports email history for articles
+															# from mail_received files
+															# creates article_email_log records
+										
+													
+													
+													

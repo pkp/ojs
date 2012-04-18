@@ -16,9 +16,18 @@
 
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
 	<ul class="menu">
-		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+		{* 20111201 BLH Hide 'Create Issue' link for UEE *}
+		{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+			<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+		{/if}
+        {* 20111201 BLH Diplay 'Unpublished Content' & 'Published Content' for UCLA Encyclopedia of Egyptology*}
+        {if $journalPath == 'nelc_uee'}
+        	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+        	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+        {else}
+        	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+        	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+        {/if}
 	</ul>
 {/if}
 <br />

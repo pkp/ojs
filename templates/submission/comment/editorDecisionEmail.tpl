@@ -65,7 +65,12 @@ function deleteAttachment(fileId) {
 	<td class="label" width="20%">{fieldLabel name="to" key="email.to"}</td>
 	<td width="80%" class="value">
 		{foreach from=$to item=toAddress}
-			<input type="text" name="to[]" id="to" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			{*<input type="text" name="to[]" id="to" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>*}
+			<input type="text" name="to[]" id="to" value="{if $toAddress.name != '' && $toAddress.email != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			{if $toAddress.name != '' && $toAddress.email == ''}
+				{translate|assign:"noEmailMsg" key="author.email.main.missing" authorName=$toAddress.name}
+				<span class="formError">{$noEmailMsg}</span><br />				
+			{/if}
 		{foreachelse}
 			<input type="text" name="to[]" id="to" size="40" maxlength="120" class="textField" />
 		{/foreach}
@@ -79,7 +84,11 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="cc" key="email.cc"}</td>
 	<td class="value">
 		{foreach from=$cc item=ccAddress}
-			<input type="text" name="cc[]" id="cc" value="{if $ccAddress.name != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="cc[]" id="cc" value="{if $ccAddress.name != '' && $ccAddress.email != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" />
+			{if $ccAddress.name != '' && $ccAddress.email == ''}
+				{translate|assign:"noEmailMsg" key="author.email.cc.missing" authorName=$ccAddress.name}
+				<span class="formError">{$noEmailMsg}</span><br />
+			{/if}
 		{foreachelse}
 			<input type="text" name="cc[]" id="cc" size="40" maxlength="120" class="textField" />
 		{/foreach}

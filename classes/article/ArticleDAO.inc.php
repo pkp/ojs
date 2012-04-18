@@ -46,11 +46,14 @@ class ArticleDAO extends DAO {
 	/**
 	 * Get a list of field names for which data is localized.
 	 * @return array
+	 * EXPERIMENTAL IMPORT CODE
+	 * Added additional fields: 'eschol_acknowledgements', 'eschol_bpid', 'eschol_buyLink', 'eschol_comments', 'eschol_customCitation', 'eschol_source', 'eschol_dateSubmitted', 'eschol_lpage', 'eschol_fpage', 'eschol_ark', 'eschol_articleid', 'eschol_submission_path'
 	 */
 	function getLocaleFieldNames() {
 		return array(
 			'title', 'cleanTitle', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor'
+            ,'eschol_acknowledgements', 'eschol_bpid', 'eschol_buyLink', 'eschol_comments', 'eschol_customCitation', 'eschol_source', 'eschol_dateSubmitted', 'eschol_lpage', 'eschol_fpage', 'eschol_ark', 'eschol_articleid', 'eschol_submission_path'
 		);
 	}
 

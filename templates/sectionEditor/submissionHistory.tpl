@@ -47,11 +47,15 @@
 {/literal}
 
 <ul class="menu">
-	<li><a href="{url op="submission" path=$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	{if $canReview}<li><a href="{url op="submissionReview" path=$submission->getArticleId()}">{translate key="submission.review"}</a></li>{/if}
-	{if $canEdit}<li><a href="{url op="submissionEditing" path=$submission->getArticleId()}">{translate key="submission.editing"}</a></li>{/if}
+	<li><a href="{url op="submission" path=$submission->getArticleId()}">{literal}1. {/literal}{translate key="submission.summary"}</a></li>
+	{if $canReview}<li><a href="{url op="submissionReview" path=$submission->getArticleId()}">{literal}2. {/literal}{translate key="submission.review"}</a></li>{/if}
+	{if $canEdit}<li><a href="{url op="submissionEditing" path=$submission->getArticleId()}">{literal}3. {/literal}{translate key="submission.editing"}</a></li>{/if}
+	&nbsp;&nbsp;{literal}|{/literal}&nbsp;&nbsp;
 	<li class="current"><a href="{url op="submissionHistory" path=$submission->getArticleId()}">{translate key="submission.history"}</a></li>
+	{* 20110829 BLH display REFERENCES link only if this is enabled for the journal *}
+	{if $currentJournal->getSetting('metaCitations')}
 	<li><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>
+	{/if}
 </ul>
 
 <ul class="menu">
@@ -77,7 +81,8 @@
 	<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
 {iterate from=eventLogEntries item=logEntry}
 	<tr valign="top">
-		<td>{$logEntry->getDateLogged()|date_format:$dateFormatShort}</td>
+		{*<td>{$logEntry->getDateLogged()|date_format:$dateFormatMedium}</td>*}
+		<td>{$logEntry->getDateLogged()|date_format:"%d %b %Y %T"}</td>
 		<td>{$logEntry->getLogLevel()|escape}</td>
 		<td>
 			{assign var=emailString value=$logEntry->getUserFullName()|concat:" <":$logEntry->getUserEmail():">"}
@@ -126,7 +131,7 @@
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 {iterate from=emailLogEntries item=logEntry}
 	<tr valign="top">
-		<td>{$logEntry->getDateSent()|date_format:$dateFormatShort}</td>
+		<td>{$logEntry->getDateSent()|date_format:$dateFormatLong}</td>
 		<td>{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 		<td>{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
 		<td>{$logEntry->getSubject()|truncate:60:"..."|escape}</td>
@@ -171,7 +176,7 @@
 		// -->
 	</script>
 	<tr valign="top">
-		<td>{$note->getDateCreated()|date_format:$dateFormatShort}</td>
+		<td>{$note->getDateCreated()|date_format:"%d %b %Y %T"}</td>
 		<td><a class="action" href="javascript:toggleNote({$note->getId()})">{$note->getTitle()|escape}</a><div style="display: none" id="{$note->getId()}" name="{$note->getId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
 		<td>{if $note->getFileId()}<a class="action" href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$note->getFileId()}">{$note->getOriginalFileName()|escape}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{url op="submissionNotes" path=$submission->getArticleId()|to_array:"edit":$note->getId()}" class="action">{translate key="common.view"}</a>&nbsp;|&nbsp;<a href="{url op="removeSubmissionNote" articleId=$submission->getArticleId() noteId=$note->getId() fileId=$note->getFileId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>

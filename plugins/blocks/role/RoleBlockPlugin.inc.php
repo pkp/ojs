@@ -87,6 +87,7 @@ class RoleBlockPlugin extends BlockPlugin {
 				$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
 				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 				$templateMgr->assign('submissionsCount', $submissionsCount);
+				$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111201 BLH Added
 				return 'editor.tpl';
 			case 'sectionEditor':
 				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');

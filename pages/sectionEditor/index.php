@@ -13,6 +13,10 @@
  * @ingroup pages_sectionEditor
  * @brief Handle requests for section editor functions.
  *
+ * CHANGELOG:
+ *		20110725	BLH	Add case 'uploadReviewVersionNoAuthorInfo'
+ *		20110725	BLH Add case 'copyLayoutToGalleyAsPdf'
+ *
  */
 
 // $Id$
@@ -61,6 +65,7 @@ switch ($op) {
 	case 'thankFinalCopyedit':
 	case 'selectCopyeditRevisions':
 	case 'uploadReviewVersion':
+	case 'uploadReviewVersionNoAuthorInfo':
 	case 'uploadCopyeditVersion':
 	case 'completeCopyedit':
 	case 'completeFinalCopyedit':
@@ -84,6 +89,7 @@ switch ($op) {
 	case 'assignLayoutEditor':
 	case 'notifyLayoutEditor':
 	case 'thankLayoutEditor':
+	case 'copyLayoutToGalleyAsPdf':
 	case 'uploadGalley':
 	case 'editGalley':
 	case 'saveGalley':
@@ -169,6 +175,32 @@ switch ($op) {
 	case 'instructions':
 		define('HANDLER_CLASS', 'SectionEditorHandler');
 		import('pages.sectionEditor.SectionEditorHandler');
+		break;
+	//
+	// Issue
+	//
+	case 'futureIssues':
+	case 'backIssues':
+	case 'removeIssue':
+	case 'createIssue':
+	case 'saveIssue':
+	case 'issueData':
+	case 'editIssue':
+	case 'removeIssueCoverPage':
+	case 'removeStyleFile':
+	case 'issueToc':
+	case 'updateIssueToc':
+	case 'setCurrentIssue':
+	case 'moveIssue':
+	case 'resetIssueOrder':
+	case 'moveSectionToc':
+	case 'resetSectionOrder':
+	case 'moveArticleToc':
+	case 'publishIssue':
+	case 'unpublishIssue':
+	case 'notifyUsers':
+		define('HANDLER_CLASS', 'IssueManagementHandler');
+		import('pages.editor.IssueManagementHandler');
 		break;
 }
 

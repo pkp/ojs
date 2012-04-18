@@ -75,7 +75,8 @@ class ArticleEmailLogDAO extends DAO {
 		}
 
 		$result =& $this->retrieveRange(
-			'SELECT * FROM article_email_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
+			//'SELECT * FROM article_email_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
+			'SELECT * FROM article_email_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY date_sent DESC',
 			$params, $rangeInfo
 		);
 

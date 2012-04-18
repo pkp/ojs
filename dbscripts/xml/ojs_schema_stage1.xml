@@ -128,7 +128,7 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
-		<field name="username" type="C2" size="32">
+		<field name="username" type="C2" size="90">
 			<NOTNULL/>
 		</field>
 		<field name="password" type="C2" size="40">

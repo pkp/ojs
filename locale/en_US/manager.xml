@@ -8,6 +8,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (English) locale.
+  *
+  *	CHANGELOG
+  *		20110807	BLH	Changed value of manager.setup from "Setup" to "5-Step Journal Setup"
   -->
 
 <locale name="en_US" full_name = "English">
@@ -76,10 +79,10 @@
 	<message key="manager.payment.records">Records</message>
 	<message key="manager.payments">Payments</message>
 	<message key="manager.payment.userName">Payment ID</message>
-	<message key="manager.people.allEnrolledUsers">Users Enrolled in this Journal</message>
+	<message key="manager.people.allEnrolledUsers">Show Users Enrolled in this Journal</message>
 	<message key="manager.people.allJournals">All Journals</message>
 	<message key="manager.people.allSiteUsers">Enroll a User from this Site in this Journal</message>
-	<message key="manager.people.showNoRole">Show users with no role</message>
+	<message key="manager.people.showNoRole">Show Users with No Role</message>
 	<message key="manager.people.allUsers">All Enrolled Users</message>
 	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select a template</message>
@@ -180,7 +183,7 @@
 	<message key="manager.sections.unassigned">Available Section Editors</message>
 	<message key="manager.sections.wordCount">Word Count</message>
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit): </message>
-	<message key="manager.setup">Setup</message>
+	<message key="manager.setup">5-Step Journal Setup</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>

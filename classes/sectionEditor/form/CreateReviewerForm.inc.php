@@ -14,6 +14,8 @@
  * @ingroup sectionEditor_form
  *
  * @brief Form for section editors to create reviewers.
+ *
+ * 
  */
 
 // $Id$
@@ -36,15 +38,17 @@ class CreateReviewerForm extends Form {
 		$this->articleId = $articleId;
 
 		// Validation checks for this form
+		// 20111005 BLH Had to modify checks to reflect changed functionality (now using email address as username). Same as ojs/classes/manager/form/UserManagementForm.inc.php!
 		$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(null, true), true));
-		$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
+		//$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
+		$this->addCheck(new FormValidatorEmail($this, 'username', 'required', 'user.profile.form.emailRequired')); //using email as username
+		//$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(null, true), true));
 		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
-		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(null, true), true));
-
+		
 		// Provide a default for sendNotify: If we're using one-click
 		// reviewer access or email-based reviews, it's not necessary;
 		// otherwise, it should default to on.

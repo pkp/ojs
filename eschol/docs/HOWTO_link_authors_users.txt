@@ -1,0 +1,90 @@
+================================
+KH runs article import processes
+================================
+<KH does stuff>
+
+================================================================================
+Begin this task: check authors table schema to make sure it has user_id field.
+================================================================================
+gomysql # get to a mysql prompt
+DESCRIBE authors;
+
+====================================================
+If authors.user_id field doesn't exist, add add it.
+====================================================
+ALTER TABLE authors ADD user_id bigint(20) AFTER author_id;
+
+==============================================================================
+Get a count of authors with no email address. Check that numbers add up right.
+Make sure that 1+2=3. If not then something weird is going on.
+==============================================================================
+SELECT count(*) from authors where email = '' OR email IS NULL;
+SELECT count(*) from authors where email !='' AND email IS NOT NULL;
+SELECT count(*) from authors;
+
+==========================================================================================
+Optional (visual sanity check):
+- Run this query to see matches between authors and users based on last_name, first_name.
+- Authors without email addresses will appear at the top of the output.
+==========================================================================================
+SELECT users.user_id 'users.user_id', users.email 'users.email', authors.email 'authors.email', authors.last_name, authors.first_name
+FROM authors
+LEFT JOIN users ON (authors.email = users.email)
+ORDER BY authors.email;
+
+==================================================
+Populate authors.user_id based on email address
+==================================================
+UPDATE authors, users
+SET authors.user_id = users.user_id
+WHERE authors.email = users.email;
+
+==================================================
+Do a second pass based on name
+==================================================
+# get range of articles for this journal
+select article_id from articles where journal_id = 40 order by article_id;
+
+UPDATE authors, users
+SET authors.user_id = users.user_id
+WHERE authors.submission_id >=7721 AND authors.submission_id <= 7963
+AND trim(authors.last_name) = trim(users.last_name) AND trim(authors.middle_name) = trim(users.middle_name) AND trim(authors.first_name) = trim(users.first_name)
+AND authors.user_id IS NULL;
+
+## query might take a little while to run, be patient
+
+=============================================================================================
+Check to see that authors.user_id field got populated properly
+- unaffected authors records will appear at the top
+- (this step is probably not necessary)
+=============================================================================================
+
+SELECT users.user_id 'users.user_id', authors.user_id 'authors.user_id', users.email 'users.email', users.last_name, users.middle_name, users.first_name, authors.email 'authors.email', authors.last_name, authors.middle_name, authors.first_name
+FROM authors
+LEFT JOIN users ON (authors.last_name = users.last_name AND authors.first_name = users.first_name)
+ORDER BY authors.user_id, authors.email, users.email;
+
+## query might take a little while to run, be patient
+
+=============================================================================================
+Check for anomalies where authors.user_id is populated but couldn't get a match
+=============================================================================================
+SELECT authors.author_id, users.user_id 'users.user_id', authors.user_id 'authors.user_id', users.email 'users.email', users.last_name, users.middle_name, users.first_name, authors.email 'authors.email', authors.last_name, authors.middle_name, authors.first_name
+FROM authors
+LEFT JOIN users ON (authors.last_name = users.last_name AND authors.first_name = users.first_name)
+WHERE authors.user_id IS NULL AND authors.email IS NOT NULL and authors.email != '' AND users.user_id IS NOT NULL
+ORDER BY authors.user_id, authors.email, users.email;
+
+=====================================================================================
+Fix:
+=====================================================================================
+UPDATE authors, users set authors.user_id = [users.user_id] where author_id = [authors.author_id];
+
+
+
+
+
+
+
+
+	

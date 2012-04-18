@@ -1,28 +1,21 @@
 {**
  * viewPage.tpl
  *
- * Copyright (c) 2003-2011 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * MH 2012-01-01:
  *
- * View issue: This adds the header and footer code to view.tpl.
- *
- * $Id$
+ * For eScholarship journals, we don't want to show the OJS-generated front-end page,
+ * but rather redirect to our front-end on escholarship.org. So this little redirect
+ * page replaces the normal issue page.
  *}
-{strip}
-{if $issue && !$issue->getPublished()}
-	{translate|assign:"previewText" key="editor.issues.preview"}
-	{assign var="pageTitleTranslated" value="$issueHeadingTitle $previewText"}
-{else}
-	{assign var="pageTitleTranslated" value=$issueHeadingTitle}
-{/if}
-{if $issue && $issue->getShowTitle() && $issue->getLocalizedTitle() && ($issueHeadingTitle != $issue->getLocalizedTitle())}
-	{* If the title is specified and should be displayed then show it as a subheading *}
-	{assign var="pageSubtitleTranslated" value=$issue->getLocalizedTitle()}
-{/if}
-{include file="common/header.tpl"}
-{/strip}
 
-{include file="issue/view.tpl"}
-
-{include file="common/footer.tpl"}
+{* 
+ *}
+<html>
+  <head>
+    <title>eScholarship redirect</title>
+    <meta http-equiv="REFRESH" content="0;url=http://escholarship.org/uc/search?entity={$currentJournal->getPath()};volume={$issue->getVolume()};issue={$issue->getNumber()}"></meta>
+  </head>
+  <body>
+  </body>
+</html>
 

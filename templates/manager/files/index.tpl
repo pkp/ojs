@@ -42,19 +42,22 @@
 		{assign var=filePath value=$file.name}
 	{/if}
 	{assign var=filePath value=$filePath|escape}
+	{* 20120214 BLH Hide articles and issues dirs from non-site-admin users *}
+	{if $isSiteAdmin || ($file.name != 'articles' && $file.name != 'issues')}
 	<tr valign="top">
 		<td>{if $file.isDir}{icon name="folder"}{else}{icon name="letter"}{/if}</td>
 		<td><a href="{url op="files" path=$filePath|explode:"/"}">{$file.name}</a></td>
 		<td>{$file.mimetype|escape|default:"&mdash;"}</td>
 		<td>{$file.mtime|escape|date_format:$datetimeFormatShort}</td>
 		<td>{$file.size|escape|default:"&mdash;"}</td>
-		<td align="right" class="nowrap">
+		<td align="right" class="nowrap"> 
 			{if !$file.isDir}
 				<a href="{url op="files" path=$filePath|explode:"/" download=1}" class="action">{translate key="common.download"}</a>&nbsp;|
 			{/if}
 			<a href="{url op="fileDelete" path=$filePath|explode:"/"}" onclick="return confirm('{translate|escape:"jsparam" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 		</td>
 	</tr>
+	{/if}
 	<tr>
 		<td colspan="6" class="{if $smarty.foreach.files.last}end{/if}separator">&nbsp;</td>
 	</tr>

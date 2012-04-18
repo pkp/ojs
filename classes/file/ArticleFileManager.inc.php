@@ -22,6 +22,13 @@
  * [article id]/submission/layout
  * [article id]/supp
  * [article id]/attachment
+ *
+ * CHANGELOG:
+ *	20110727	BLH	Add copyToReviewFileAsPdf(), convertFileToPdf(), copyToGalleyFileAsPdf() functions. 
+ *					Not entirely happy but no time to fuss. See FIXME notes.
+ *	20110804	BLH	Strip off old file extension before adding ".pdf" extension to converted file in convertFileToPdf function.
+ *					When copying layout file to galley as PDF, also populate "date complete" value for layout file.
+ *
  */
 
 
@@ -214,7 +221,7 @@ class ArticleFileManager extends FileManager {
 		return $articleFile;
 	}
 
-	/**
+	/*
 	 * Read a file's contents.
 	 * @param $output boolean output the file's contents instead of returning a string
 	 * @return boolean
@@ -230,6 +237,24 @@ class ArticleFileManager extends FileManager {
 
 		} else {
 			return false;
+		}
+	}
+
+	/*
+	 * Return the full path to a file (useful when inserting references to giant files into an
+	 * export document, instead of the actual file data).
+	 */
+	function getFullPath($fileId, $revision = null) {
+		$articleFile =& $this->getFile($fileId, $revision);
+
+		if (isset($articleFile)) {
+			$fileType = $articleFile->getFileType();
+			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
+
+			return $filePath;
+
+		} else {
+			return null;
 		}
 	}
 
@@ -308,6 +333,23 @@ class ArticleFileManager extends FileManager {
 	function copyToReviewFile($fileId, $revision = null, $destFileId = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
 	}
+	
+	/**
+	 * Copies an existing file to create a review file, PDF version.
+	 * @param $originalFileId int the file id of the original file.
+	 * @param $originalRevision int the revision of the original file.
+	 * @param $destFileId int the file id of the current review file
+	 * @return int the file id of the new file.
+	 */
+	function copyToReviewFileAsPdf($fileId, $revision = null, $destFileId = null) {
+		import('lib.pkp.classes.file.FileManager');
+		
+		$newFileId = $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
+		$newRevision = $revision + 1;
+		$pdfFileId = $this->convertFileToPdf($newFileId, $newRevision, 0);
+		//FIXME delete extra file from server created by copyAndRenameFile
+		return $pdfFileId;
+	}
 
 	/**
 	 * Copies an existing file to create an editor decision file.
@@ -338,6 +380,107 @@ class ArticleFileManager extends FileManager {
 	 */
 	function copyToLayoutFile($fileId, $revision = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_LAYOUT);
+	}
+
+	/**
+	 * Copies an existing layout file to create a galley file, PDF format.
+	 * @param $fileId int the file id of the layout file.
+	 * @param $revision int the revision of the layout file.
+	 * @return int the file id of the new file.
+	 */	
+	function copyToGalleyFileAsPdf($layoutFileId) {
+		$newFileId = $this->copyAndRenameFile($layoutFileId, null, ARTICLE_FILE_PUBLIC, null);
+		$pdfFileId = $this->convertFileToPdf($newFileId, null, 1);
+		//FIXME delete extra file from server created by copyAndRenameFile
+		
+		//MARK LAYOUT FILE AS 'COMPLETE'
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		//$userDao =& DAORegistry::getDAO('UserDAO');
+		//$journal =& Request::getJournal();
+
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->articleId);
+		if ($layoutSignoff->getDateCompleted() != null) {
+			return $pdfFileId;
+		}
+		
+		//import('classes.mail.ArticleMailTemplate');
+		//$email = new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
+		
+		//$editAssignments =& $submission->getEditAssignments();
+		//if (empty($editAssignments)) return;
+		
+		$layoutSignoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($layoutSignoff);
+		/**
+		// Add log entry
+		$user =& Request::getUser();
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
+		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $submission->getArticleId()));
+		**/
+		return $pdfFileId;
+	}
+	
+	/**
+	 * Creates a PDF version of a file.
+	 * @param $originalFileId int the file id of the original file.
+	 * @param $originalRevision int the revision of the original file.
+	 * @param $destFileId int the file id of the current review file
+	 * @return int the file id of the new file.
+	 */
+	function convertFileToPdf($fileId, $revision = null, $isGalley = 0) {
+		import('classes.article.ArticleGalley');
+		
+		$LiveDocxUsername = Config::getVar('livedocx', 'username');
+		$LiveDocxPassword = Config::getVar('livedocx', 'password');
+		
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFile = $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
+		
+		$origFileName = $articleFile->getFilename();
+		$origFilePath = $articleFile->getFilePath();
+		//FIXME should generate new filename and path dynamically based on type, version etc.
+		$origExt = strchr($origFileName, '.');
+		$pdfFileName = substr($origFileName,0,strrpos($origFileName,$origExt)) . '.pdf';
+		$pdfFilepath = substr($origFilePath,0,strrpos($origFilePath,$origExt)) . '.pdf';
+		//$pdfFileName = $origFileName . '.pdf';
+		//$pdfFilepath = $origFilePath . '.pdf';
+		
+		//FIX ME should first check that file exists on current file system, error out if not 
+		//create PDF file
+		//code below cloned from http://www.phplivedocx.org/2009/02/06/convert-doc-to-pdf-in-php/
+		//author Jonathan Maron
+		include('Zend/Service/LiveDocx/MailMerge.php'); //need to add these files to OJS install
+		include('Zend/Service/LiveDocx/Exception.php'); //also need to check for LiveDocX install
+		$mailMerge = new Zend_Service_LiveDocx_MailMerge();
+		$mailMerge->setUsername($LiveDocxUsername)
+           		  ->setPassword($LiveDocxPassword);
+		$mailMerge->setLocalTemplate($origFilePath);
+		$mailMerge->assign('dummyFieldName', 'dummyFieldValue'); // necessary as of LiveDocx 1.2
+		$mailMerge->createDocument();
+		$document = $mailMerge->retrieveDocument('pdf');
+		file_put_contents($pdfFilepath, $document);
+		unset($mailMerge);
+		
+		//update the database with the info for the PDF file
+		if($isGalley) {
+			$galley = new ArticleGalley();
+			$galley->setArticleId($articleFile->getArticleId());
+			$galley->setFileId($articleFile->getFileId());	
+			$galley->setLocale('en_US'); //FIXME ?
+			$galley->setLabel('PDF');
+			// Insert new galley
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao->insertGalley($galley);		
+		} 
+		
+		$articleFile->setFilename($pdfFileName);
+		$articleFile->setOriginalFileName($origFileName);
+		$articleFile->setFileType('application/pdf');
+		$articleFileDao->updateArticleFile($articleFile);
+		
+		return $articleFile->getFileId();
+
 	}
 
 	/**

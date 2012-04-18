@@ -22,7 +22,7 @@
 
 {include file="author/$pageToDisplay.tpl"}
 <div id="submitStart">
-<h4>{translate key="author.submit.startHereTitle"}</h4>
+<h3>{translate key="author.submit.startHereTitle"}</h3>{* 20110829 BLH Increased heading weight from h4 to h3 *}
 {url|assign:"submitUrl" op="submit"}
 {translate submitUrl=$submitUrl key="author.submit.startHereLink"}<br />
 </div>

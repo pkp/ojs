@@ -10,6 +10,9 @@
  * @ingroup submission
  *
  * @brief AuthorAction class.
+ *
+ * CHANGELOG:
+ *	20110728	BLH	Add designateEditorVersion() function.
  */
 
 // $Id$
@@ -51,6 +54,31 @@ class AuthorAction extends Action {
 
 				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 				$sectionEditorSubmissionDao->createReviewRound($authorSubmission->getId(), 1, 1);
+			}
+		}
+	}
+	
+	/**
+	 * Designates the original file as the editor version.
+	 * @param $authorSubmission object
+	 * @param $designate boolean
+	 */
+	function designateEditorVersion($authorSubmission, $designate = false) {
+		import('classes.file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($authorSubmission->getId());
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+
+		if ($designate && !HookRegistry::call('AuthorAction::designateEditorVersion', array(&$authorSubmission))) {
+			$submissionFile =& $authorSubmission->getSubmissionFile();
+			if ($submissionFile) {
+				$editorFileId = $articleFileManager->copyToEditorFile($submissionFile->getFileId());
+
+				$authorSubmission->setEditorFileId($editorFileId);
+
+				$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+
+				//$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				//$sectionEditorSubmissionDao->createEditorRound($authorSubmission->getId(), 1, 1);
 			}
 		}
 	}

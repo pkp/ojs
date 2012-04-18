@@ -16,10 +16,13 @@
 <div id="submissionComplete">
 <p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getLocalizedTitle()}</p>
 
+{** 20111019 BLH Remove submission expedite functionality **}
+{**
 {if $canExpedite}
 	{url|assign:"expediteUrl" op="expediteSubmission" articleId=$articleId}
 	{translate key="author.submit.expedite" expediteUrl=$expediteUrl}
 {/if}
+**}
 {if $paymentButtonsTemplate }
 	{include file=$paymentButtonsTemplate orientation="vertical"}
 {/if}

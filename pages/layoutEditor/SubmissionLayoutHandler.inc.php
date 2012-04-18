@@ -91,6 +91,21 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		LayoutEditorAction::viewMetadata($submission, $journal);
 	}
+	
+	/**
+	 * Copy layout version to galley as PDF and mark as complete.
+	 */		
+	function copyLayoutToGalleyAsPdf($articleId) {
+				
+		$articleId = Request::getUserVar('articleId');	
+		$this->setupTemplate(true, $articleId, 'editing');
+		$submissionLayoutHandler = new SubmissionLayoutHandler();
+		$submissionLayoutHandler->validate($articleId);		
+		$submission =& $submissionLayoutHandler->submission;
+		LayoutEditorAction::copyLayoutToGalleyAsPdf($submission);
+		LayoutEditorAction::completeLayoutEditing($submission, Request::getUserVar('send'));
+		Request::redirect(null, null, 'submission', $articleId);
+	}
 
 	/**
 	 * Mark assignment as complete.
@@ -106,7 +121,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
-
 
 	//
 	// Galley Management

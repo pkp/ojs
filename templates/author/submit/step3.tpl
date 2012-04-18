@@ -91,8 +91,12 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-email" key="user.email"}</td>{* 20120123 BLH do not mark email field required *}
+	<td width="80%" class="value">
+		<input type="text" class="textField" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" />
+		<br />
+		<span class="instruct">{translate key="user.email.warning"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
@@ -214,6 +218,7 @@ function moveAuthor(dir, authorIndex) {
 	<td width="20%" class="label">{if $section->getAbstractsNotRequired()==0}{fieldLabel name="abstract" key="article.abstract" required="true"}{else}{fieldLabel name="abstract" key="article.abstract"}{/if}</td>
 	<td width="80%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 </tr>
+
 </table>
 </div>
 
@@ -347,9 +352,13 @@ function moveAuthor(dir, authorIndex) {
 <p>{translate key="author.submit.submissionSupportingAgenciesDescription"}</p>
 
 <table width="100%" class="data">
-<tr valign="top">
+{*<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" /></td>
+</tr>*}
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
+	<td width="80%" class="value"><textarea name="sponsor[{$formLocale|escape}]" class="textArea" id="sponsor" rows="5" cols="40"></textarea></td>
 </tr>
 </table>
 </div>

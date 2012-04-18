@@ -31,9 +31,18 @@ $(document).ready(function() {
 
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
 	<ul class="menu">
-		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+		{* 20111201 BLH Hide 'Create Issue' link for UEE *}
+		{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+			<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+		{/if}	
+        {* 20111201 BLH Diplay 'Unpublished Content' & 'Published Content' for UCLA Encyclopedia of Egyptology*}
+        {if $journalPath == 'nelc_uee'}
+        	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+        	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+        {else}
+        	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+        	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+        {/if}
 	</ul>
 {/if}
 
@@ -56,7 +65,13 @@ $(document).ready(function() {
 <h3>{translate key="issue.toc"}</h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
-<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
+{if $unpublished}
+	{assign var="updateCheckKey" value="editor.issues.saveChanges"}
+{else}
+	{assign var="updateCheckKey" value="editor.issues.saveAndPublishChanges"}
+{/if}
+
+<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="$updateCheckKey"}')">
 
 {assign var=numCols value=5}
 {if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}{assign var=numCols value=$numCols+1}{/if}
@@ -77,8 +92,8 @@ $(document).ready(function() {
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
 		{if $enablePublicArticleId}<td width="7%">{translate key="editor.issues.publicId"}</td>{/if}
 		{if $enablePageNumber}<td width="7%">{translate key="editor.issues.pages"}</td>{/if}
-		<td width="5%">{translate key="common.remove"}</td>
-		<td width="5%">{translate key="editor.issues.proofed"}</td>
+		{if $unpublished || $isSiteAdmin}<td width="5%">{translate key="common.remove"}</td>{/if} {* BLH 20111021 For unpublished issues, hide for all but site admin *}
+		<td width="10%">{translate key="editor.issues.proofed"}</td>
 	</tr>
 	<tr>
 		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
@@ -96,7 +111,8 @@ $(document).ready(function() {
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
+		{*<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>*}
+		<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()}{if !$isLayoutEditor}</a>{/if}</td>{* 20111214 BLH Remove formatting - it was replacing entire title with "...". Will fix properly later. *}
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
@@ -104,7 +120,7 @@ $(document).ready(function() {
 		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
 		{/if}
 		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
-		<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPubId()}" /></td>
+		{if $unpublished || $isSiteAdmin}<td><input type="checkbox" name="remove[{$article->getId()}]" value="{$article->getPubId()}" /></td>{/if} {* BLH 20111021 For unpublished issues, hide for all but site admin *}
 		<td>
 			{if in_array($article->getId(), $proofedArticleIds)}
 				{icon name="checked"}
@@ -121,15 +137,31 @@ $(document).ready(function() {
 <div class="separator"></div>
 {/foreach}
 
-<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
-{if $unpublished && !$isLayoutEditor}
-	{* Unpublished; give the option to publish it. *}
-	<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
-{elseif !$isLayoutEditor}
-	{* Published; give the option to unpublish it. *}
-	<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />
-{/if}
 
+{if $unpublished}
+	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
+{else}
+	<input type="submit" value="{translate key="editor.issues.saveAndPublishIssue"}" class="button defaultButton" />
+{/if}
+{* BLH 20110926 Do not display publish/unpublish buttons in sandbox (stage) environment *}
+{* BLH 20111027 Do not allow non-siteAdmins to publish issues with title 'Unpublished' *}
+{* BLH 20111130 Do not display publish/unpublish buttons for Pacific Review of Ethnomusicology *}
+{* BLH 20111130 Do display publish/unpublish buttons on stage for site admins only *}
+{if !$escholInStage || ($escholInStage && $isSiteAdmin)}
+	{if $journalPath != 'ethnomusic_pre' || ($journalPath == 'ethnomusic_pre' && $isSiteAdmin)}
+		{if !$isLayoutEditor}
+			{if $unpublished && ($issueTitle != 'Unpublished' || ($issueTitle == 'Unpublished' && $isSiteAdmin))}
+				{* Unpublished; give the option to publish it. *}
+				<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
+			{/if}
+			{if $published}
+				{* Published; give the option to unpublish it. *}
+				{* BLH 20111021 Hide 'unpublish' button for all users except siteAdmin *}
+				{if $isSiteAdmin}<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />{/if}
+			{/if}
+		{/if}
+	{/if}
+{/if}
 </form>
 
 {/if}

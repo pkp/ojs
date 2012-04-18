@@ -154,7 +154,8 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
-
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		
 		$templateMgr->display('sectionEditor/index.tpl');
 	}
 

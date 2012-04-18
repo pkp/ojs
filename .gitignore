@@ -1,4 +1,5 @@
 config.inc.php
+config.inc.php.*
 build
 temp
 files

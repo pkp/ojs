@@ -1,0 +1,30 @@
+How to blow away the OJS database (and files) on dev, and replace them
+with the database (and files) from prod:
+
+1. First, back up the production database to Mercurial. 
+
+   NOTE: this no longer backs up files since they're so big as to be
+   unmanageable in Mercurial. It only backs up the db.
+
+   a. Log in to the 'subi' role on submit prod.
+   b. cd ~/apache/htdocs/ojs/eschol/utilities
+   c. ./backup.sh
+      (this dumps the database to ~/ojs/db_backup, then checks in the
+      dump and public/ files in ~/ojs to Mercurial.)
+
+2. Clean dev
+   a. Log in to the 'subi' role on submit-dev
+   b. monit stop apache
+   c. find ~/apache/htdocs/ojs/cache -name '*.php' | xargs rm		# this clears the OJS cache
+
+3. Update dev from prod
+   a. cd ~
+   b. rsync -av --delete submit.escholarship.org:ojs/ ojs/
+      (This will make the dev ~/ojs directory exactly equal to the prod directory,
+       including the .hg directory for Mercurial.
+       It will blow away any extraneous files and directories, so if you want any of 
+       these be sure to move them elsewhere.)
+   d. gomysql < ojs/db_backup/ojs_db_dump.sql     # this recreates all tables
+   e. monit start apache
+   f. (now test)
+

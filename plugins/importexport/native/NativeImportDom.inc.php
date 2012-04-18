@@ -677,6 +677,59 @@ class NativeImportDom {
 			}
 			$article->setAbstract($node->getValue(), $locale);
 		}
+		
+        // EXPERIMENTAL IMPORT CODE
+        
+		for ($index=0; ($node = $articleNode->getChildByName('acknowledgements', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholAcknowledgements($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('bpid', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholBpid($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('buyLink', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholBuylink($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('comments', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholComments($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('cutstomCitation', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholCustomcitation($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('source', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholSource($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('date_submitted', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholDatesubmitted($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('fpage', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholFpage($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('lpage', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholLpage($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('ark', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholARK($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('articleid', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholArticleId($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $articleNode->getChildByName('submission-path', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$article->setEscholSubmissionPath($node->getValue(), $locale);
+		}
+		
+		// END EXPERIMENTAL IMPORT CODE
 
 		if (($indexingNode = $articleNode->getChildByName('indexing'))) {			
 			for ($index=0; ($node = $indexingNode->getChildByName('discipline', $index)); $index++) {
@@ -872,13 +925,19 @@ class NativeImportDom {
 		$hasErrors = false;
 		$galleyCount = 0;
 		for ($index=0; $index < count($articleNode->children); $index++) {
-			$node =& $articleNode->children[$index];
+			/* WARNING WARNING WARNING
+			   Setting $node below to a reference ends up leaving it pointed to the very
+			   last child. Then following code innocently will end up reassigning that
+			   child instead of the local variable. Hence, we're renaming $node to be
+			   $nodeRef.
+			*/
+			$nodeRef =& $articleNode->children[$index];
 
-			if ($node->getName() == 'htmlgalley') $isHtml = true;
-			elseif ($node->getName() == 'galley') $isHtml = false;
+			if ($nodeRef->getName() == 'htmlgalley') $isHtml = true;
+			elseif ($nodeRef->getName() == 'galley') $isHtml = false;
 			else continue;
 			
-			if (!NativeImportDom::handleGalleyNode($journal, $node, $issue, $section, $article, $galleyErrors, $isCommandLine, $isHtml, $galleyCount, $articleFileManager)) {
+			if (!NativeImportDom::handleGalleyNode($journal, $nodeRef, $issue, $section, $article, $galleyErrors, $isCommandLine, $isHtml, $galleyCount, $articleFileManager)) {
 				$errors = array_merge($errors, $galleyErrors);
 				$hasErrors = true;
 			}
@@ -914,6 +973,16 @@ class NativeImportDom {
 		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
 		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
 		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
+		// EXPERIMENTAL IMPORT CODE
+		for ($index=0; ($node = $authorNode->getChildByName('suffix', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$author->setEscholSuffix($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $authorNode->getChildByName('organization', $index)); $index++) {
+		    $locale = $journalPrimaryLocale;
+			$author->setEscholOrganization($node->getValue(), $locale);
+		}
+		// END EXPERIMENTAL IMPORT CODE
 		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
 			if ($locale == '') {

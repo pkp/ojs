@@ -13,6 +13,10 @@
  * @ingroup pages_manager
  * @brief Handle requests for journal management functions. 
  *
+ * CHANGELOG:
+ *	20110809	BLH	Add case 'checkUsername'.
+ *	20110816	BLH Add case 'enrollExistingUser'.
+ *
  */
 
 // $Id$
@@ -41,6 +45,7 @@ switch ($op) {
 	case 'enrollSync':
 	case 'createUser':
 	case 'suggestUsername':
+	case 'checkUsername':
 	case 'mergeUsers':
 	case 'disableUser':
 	case 'enableUser':
@@ -48,6 +53,7 @@ switch ($op) {
 	case 'editUser':
 	case 'updateUser':
 	case 'userProfile':
+	case 'enrollExistingUser':
 		define('HANDLER_CLASS', 'PeopleHandler');
 		import('pages.manager.PeopleHandler');
 		break;

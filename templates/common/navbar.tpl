@@ -9,21 +9,37 @@
  *}
 <div id="navbar">
 	<ul class="menu">
-		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
-		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
+		{* 20110824 BLH comment out HOME menu item link b/c we aren't using this. *}
+		{*<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>*}
+		
 
 		{if $isUserLoggedIn}
-			<li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li>
+			{* 20110825 BLH Added 'My Journals' link *}
+			{if $hasOtherJournals}
+				<li id="myJournals"><a href="{url journal="index" page="user"}">{translate key="navigation.myJournals"}</a></li>
+			{/if}
+			{* 20110825 BLH Replace confusing 'User Home' link with 'Journal Home' link. *}
+			{* <li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li> *}
+			{if $currentJournal}
+				{assign var="currentJournalPath" value=$currentJournal->getpath()}
+				<li id="userHome"><a href="{url journal=$currentJournalPath page="user"}">{translate key="navigation.journalHome" currentJournalPath=$currentJournalPath}</a></li>
+			{/if}
 		{else}
 			<li id="login"><a href="{url page="login"}">{translate key="navigation.login"}</a></li>
 			{if !$hideRegisterLink}
 				<li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
 			{/if}
 		{/if}{* $isUserLoggedIn *}
-
+		
+		{* 20110824 BLH moved ABOUT link - makes more sense in this order *}
+		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
+		
+		{* 20110915 BLH remove "SEARCH" from top navbar *}
+		{*
 		{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 			<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
 		{/if}
+		*}
 
 		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 			<li id="current"><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>

@@ -1,0 +1,32 @@
+================================================================================
+Task OJS 6.1: "Send to Copyediting" button appears above required version selection. No inline helptext to clarify next steps, and no error generated when "Send to Copyediting" is clicked without selecting a version.__TODO put the button under the choices and add text
+================================================================================
+
+This task refers this step in the manuscript submission workflow:
+	http://submit-dev.escholarship.org/ojs/index.php/datasphere/editor/submissionReview/751
+
+How to figure out what code to look at to modify a particular page:
+	
+	http://pkp.sfu.ca/ojs/docs/technicalreference/2.1/designOverviewRequestHandling.html
+	
+The code file trail:
+	
+	ojs/pages/editor/index.php
+		- look for case 'submissionReview'
+	
+	ojs/pages/sectionEditor/SubmissionEditHandler.inc.php
+		- look for function 'submissionReview()' and see what template (.tpl) it displays
+		
+	ojs/templates/sectionEditor/submissionReview.tpl
+		- in this case, this template include several other templates
+		
+	ojs/templates/sectionEditor/submission/editorDecision.tpl
+		- we have reached our destination!
+		
+
+		
+		
+	
+
+
+

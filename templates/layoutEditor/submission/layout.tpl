@@ -7,7 +7,23 @@
  * Subtemplate defining the layout editor's layout editing table.
  *
  * $Id$
+ * 
+ *	CHANGELOG
+ *		20110805	BLH	Add "Generate PDF" button to convert Layout Version to Galley Format as PDF.
+ *						FIXME Why are there 5 copies of layout.tpl??!! Need to consolidate code!
  *}
+ 
+{literal}
+<script type="text/javascript">
+	
+	function hideGeneratePdfButton() {
+		$("#generatePdf").hide();
+		$("#generatePdf").hide();
+		alert("{/literal}{translate key="submission.layout.generatePdfPleaseWait"}{literal}");
+	}
+</script>
+{/literal}
+
 {assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
 {assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 {assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
@@ -58,6 +74,19 @@
 		</td>
 		<td>&nbsp;</td>
 	</tr>
+	{assign var=layoutFileType value=$layoutFile->getFileType()}
+	{if $layoutFile and $layoutFileType != 'application/pdf' and !$layoutSignoff->getDateCompleted()}
+	<tr valign="top">
+		<td colspan="6">
+			<form method="post" action="{url op="copyLayoutToGalleyAsPdf"}" enctype="multipart/form-data">
+				<input type="hidden" name="articleId" value="{$submission->getId()}" />
+				<input type="submit" id="generatePdf" value="{translate key="submission.layout.generatePdf"}" onclick="hideGeneratePdfButton()" class="button" />
+				{translate key="submission.layout.generatePdf.info"}<br />
+				{translate key="reviewer.article.convertFileToPdf.msword"}
+			</form>
+		</td>
+	</tr>
+	{/if}
 	<tr>
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>

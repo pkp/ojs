@@ -92,8 +92,12 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-email" key="user.email"}</td>{* 20120123 BLH Remove required=true *}
+		<td class="value">
+			<input type="text" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" />
+			<br />
+			<span class="instruct">{translate key="user.email.warning"}</span>		
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
@@ -381,7 +385,8 @@ function moveAuthor(dir, authorIndex) {
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsor" key="submission.agencies"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" class="textField" />
+			{*<input type="text" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" class="textField" />*}
+			<textarea name="sponsor[{$formLocale|escape}]" id="sponsor" rows="5" cols="40" class="textArea">{$sponsor[$formLocale]|escape}</textarea>
 		</td>
 	</tr>
 </table>

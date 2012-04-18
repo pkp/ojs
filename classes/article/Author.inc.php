@@ -75,6 +75,34 @@ class Author extends PKPAuthor {
 	function setCompetingInterests($competingInterests, $locale) {
 		return $this->setData('competingInterests', $competingInterests, $locale);
 	}
+
+	// 20111020 BLH Begin Add	
+	/**
+	 * Get author suffix (added for eScholarship).
+	 * @return string
+	 */
+	function getEscholSuffix() {
+		return $this->getData('eschol_suffix');
+	}
+	
+	/**
+	 * Get author organization (added for eScholarship).
+	 * @return string
+	 */
+	function getEscholOrganization() {
+		return $this->getData('eschol_organization');
+	}	
+	// 20111020 BLH End Add
+	
+    // EXPERIMENTAL IMPORT CODE
+	function setEscholSuffix($suffix, $locale) {
+		return $this->setData('eschol_suffix', $suffix, $locale);
+	}
+	function setEscholOrganization($organization, $locale) {
+		return $this->setData('eschol_organization', $organization, $locale);
+	}
+	// END EXPERIMENTAL IMPORT CODE
+	
 }
 
 ?>

@@ -21,7 +21,7 @@
 				<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>
 			{/if}
 			<li><a href="{url page="user" op="profile"}">{translate key="plugins.block.user.myProfile"}</a></li>
-			<li><a href="{url page="login" op="signOut"}">{translate key="plugins.block.user.logout"}</a></li>
+			<li><a href="/subi/logout">{translate key="plugins.block.user.logout"}</a></li>
 			{if $userSession->getSessionVar('signedInAs')}
 				<li><a href="{url page="login" op="signOutAsUser"}">{translate key="plugins.block.user.signOutAsUser"}</a></li>
 			{/if}

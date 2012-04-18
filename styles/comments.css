@@ -10,15 +10,15 @@
  */
 
 #headerTitle {
-	width: 550px;
+	width: 550px; 
 }
 
 #body {
-	width: 550px;
+	width: 680px; // 20110927 BLH widened. (was 550px)
 }
 
 #main {
-	width: 530px;
+	width: 660px; // 20110927 BLH widened. (was 530px)
 	margin-left: 10px;
 	margin-right: 10px;
 }

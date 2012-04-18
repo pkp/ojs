@@ -22,8 +22,12 @@ class LoginHandler extends PKPLoginHandler {
 	 */
 	function signInAsUser($args) {
 		$this->addCheck(new HandlerValidatorJournal($this));
+		/** BEGIN MOD TO GIVE ONLY ADMINS PERMISSION. BLH. 28 APRIL 2011 **/
 		// only managers and admins have permission
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+		//$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+		// only admins have permission as of 28 APRIL 2011 MOD
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN)));
+		/** END MOD **/
 		$this->validate();
 
 		if (isset($args[0]) && !empty($args[0])) {
@@ -114,6 +118,21 @@ class LoginHandler extends PKPLoginHandler {
 	function setupTemplate() {
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER));
 		parent::setupTemplate();
+                /* MH 2011-09-06: 
+                   We always need the login page to go to Subi instead. 
+                   The exception is when we're doing local development or on a branch,
+                   in which case a special URL parameter "subi=no" will allow the
+                   OJS login page to work.
+                */
+                $session =& Request::getSession();
+                if (Request::getUserVar("subi") == "no")
+                  $session->setSessionVar("subi", "no");
+                if (!($session->getSessionVar("subi") == "no")) {
+                  if (Request::getQueryString())
+                    Request::redirectUrl("/subi/login?" . Request::getQueryString());
+                  else
+                    Request::redirectUrl("/subi/login");
+                }
 	}
 }
 

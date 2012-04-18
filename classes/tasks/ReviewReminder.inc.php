@@ -56,14 +56,17 @@ class ReviewReminder extends ScheduledTask {
 			$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
 			$urlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getId(), $reviewId, $keyLifetime);
 		}
-		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewId, $urlParams);
+		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewId, $urlParams);	
 
+		//20111104 BLH Changing URL to point to subi password reset page.
+		$passwordResetUrl = 'http://submit.escholarship.org/subi/forgotPassword';
+		
 		// Format the review due date
 		$reviewDueDate = strtotime($reviewAssignment->getDateDue());
 		$dateFormatShort = Config::getVar('general', 'date_format_short');
 		if ($reviewDueDate == -1) $reviewDueDate = $dateFormatShort; // Default to something human-readable if no date specified
 		else $reviewDueDate = strftime($dateFormatShort, $reviewDueDate);
-
+		
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
 			'reviewerUsername' => $reviewer->getUsername(),
@@ -72,17 +75,17 @@ class ReviewReminder extends ScheduledTask {
 			'reviewDueDate' => $reviewDueDate,
 			'weekLaterDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime('+1 week')),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle(),
-			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
+			//'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId()))),
+			'passwordResetUrl' => $passwordResetUrl,
 			'submissionReviewUrl' => $submissionReviewUrl
 		);
 		$email->assignParams($paramArray);
-
+		
 		$email->send();
 
 		$reviewAssignment->setDateReminded(Core::getCurrentDate());
 		$reviewAssignment->setReminderWasAutomatic(1);
 		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-
 	}
 
 	function execute() {
@@ -114,6 +117,10 @@ class ReviewReminder extends ScheduledTask {
 
 			// $article, $journal, $...ReminderEnabled, $...ReminderDays, and $reviewAssignment
 			// are initialized by this point.
+			
+			// 20111026 BLH Cleaned up and refined code. Needed to fix bugs and make sure emails weren't sent for 
+			// 				articles entered in bepress rather than OJS.
+			/***
 			$shouldRemind = false;
 			if ($inviteReminderEnabled==1 && $reviewAssignment->getDateConfirmed() == null) {
 				$checkDate = strtotime($reviewAssignment->getDateNotified());
@@ -121,7 +128,8 @@ class ReviewReminder extends ScheduledTask {
 					$shouldRemind = true;
 				}
 			}
-			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
+			//if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
+			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() !== null) { // 20111026 BLH changed '!=' to '!=='
 				$checkDate = strtotime($reviewAssignment->getDateDue());
 				if (time() - $checkDate > 60 * 60 * 24 * $submitReminderDays) {
 					$shouldRemind = true;
@@ -130,6 +138,39 @@ class ReviewReminder extends ScheduledTask {
 
 			if ($reviewAssignment->getDateReminded() !== null) {
 				$shouldRemind = false;
+			}
+			***/
+			
+			$shouldRemind = 0;
+			$inviteReminderDaysInt = 60 * 60 * 24 * $inviteReminderDays;
+			$submitReminderDaysInt = 60 * 60 * 24 * $submitReminderDays;
+			$journalId = $journal->getJournalId();
+			
+			//////////
+			// 2011-11-03 BLH For eSchol only: Get values for determining whether or not reminder was already sent in EdiKit
+			//////////
+			$escholTransitionDate = '2011-09-12 00:00:00'; // transition #1, default
+			if($journalId >= 4 && $journalId <= 21) {
+				$escholTransitionDate = '2011-10-10 00:00:00'; // transition #2
+			} elseif($journalId >= 22) {
+				$escholTransitionDate = '2011-11-14 00:00:00'; // transition #3
+			}
+			$escholTransitionDate = strtotime($escholTransitionDate);
+			
+			if($reviewAssignment->getDateReminded() == '' && $reviewAssignment->getDateDue() != '') {			
+				if($inviteReminderEnabled && $reviewAssignment->getDateConfirmed() == '') {
+					$checkDate = strtotime($reviewAssignment->getDateNotified());
+					if ((time() - $checkDate > $inviteReminderDaysInt) && ($escholTransitionDate - $checkDate <= $inviteReminderDaysInt)) {
+						$shouldRemind = 1;		
+					}
+				}
+				
+				if($submitReminderEnabled && $reviewAssignment->getDateDue() != '') {
+					$checkDate = strtotime($reviewAssignment->getDateDue());
+					if ((time() - $checkDate > $submitReminderDaysInt) && ($escholTransitionDate - $checkDate <= $submitReminderDaysInt)) {
+						$shouldRemind = 1;
+					}					
+				}
 			}
 
 			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);

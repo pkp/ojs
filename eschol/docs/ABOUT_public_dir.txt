@@ -1,0 +1,14 @@
+Since these journal-specific logo files and css need to be directly web-
+accessible, OJS requires them to be somewhere in the apache directory 
+structure, as opposed to uploaded documents and other files which are mediated 
+by OJS and thus can (and should) be somewhere not web-accessible.
+
+So what I did is move ~/apache/ojs/public/journals to ~/ojs/public/journals, 
+and left behind a symlink for Apache to follow. This way they're alongside the 
+rest of the files that are stored in ~/ojs/files and thus become part of the 
+Mercurial-tracked files, and thus become part of the transfer when we sync dev.
+
+Does that make sense? I know it's confusing with the two ojs directories. Think 
+of ~/apache/htdocs/ojs as the OJS code, and ~/ojs as the user files. This 
+change takes some user files that were breaking that rule and puts them where 
+they belong.

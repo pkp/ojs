@@ -10,6 +10,10 @@
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.backIssues"}
+{* 20111201 BLH Display "Published Content" as page title for UCLA Encyclopedia of Egyptology *}
+{if $journalPath == 'nelc_uee'}
+	{assign var="pageTitle" value="editor.issues.publishedContent"}
+{/if}
 {assign var="page" value=$rangeInfo->getPage()}
 {url|assign:"currentUrl" page="editor" op="backIssues"}
 {include file="common/header.tpl"}
@@ -22,9 +26,18 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 </script>
 
 <ul class="menu">
-        <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-        <li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-        <li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{* 20111201 BLH Hide 'Create Issue' link for UEE *}
+	{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+	{/if}	
+	{* 20111201 BLH Diplay 'Published Content' & 'Unpublished Content' for UCLA Encyclopedia of Egyptology*}
+	{if $journalPath == 'nelc_uee'}
+		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+		<li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+	{else}
+		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{/if}
 </ul>
 
 <br/>
@@ -44,7 +57,9 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 		<td width="15%">{translate key="editor.issues.published"}</td>
 		<td width="15%">{translate key="editor.issues.numArticles"}</td>
 		<td width="5%">{translate key="common.order"}</td>
-		<td width="5%" align="right">{translate key="common.action"}</td>
+		{if $isSiteAdmin}
+		<td width="5%" align="right">{translate key="common.action"}</td>{* 20111026 BLH Removed for non-siteAdmins - shouldn't be able to delete back issues *}
+		{/if}
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -56,7 +71,10 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 		<td class="drag">{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 		<td class="drag">{$issue->getNumArticles()|escape}</td>
 		<td><a href="{url op="moveIssue" d=u id=$issue->getId() issuesPage=$page }">&uarr;</a>	<a href="{url op="moveIssue" d=d id=$issue->getId() issuesPage=$page }">&darr;</a></td>
+		{* 20111026 BLH Removed for non-siteAdmins - shouldn't be able to delete back issues *}
+		{if $isSiteAdmin}
 		<td align="right"><a href="{url op="removeIssue" path=$issue->getId() issuesPage=$page }" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		{/if}
 	</tr>
 {/iterate}
 	<tr>

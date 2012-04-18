@@ -7,7 +7,23 @@
  * Subtemplate defining the layout editing table.
  *
  * $Id$
+ *
+ * CHANGELOG:
+ *	20110729	BLH	Add "Generate PDF" button, which will generate a PDF version of the existing Layout Version and add it as the Galley Version.
+ *	20110803 	BLH When user clicks "Generate PDF" button, make sure they can't click it a 2nd time.
  *}
+
+{literal}
+<script type="text/javascript">
+	
+	function hideGeneratePdfButton() {
+		$("#generatePdf").hide();
+		$("#generatePdf").hide();
+		alert("{/literal}{translate key="submission.layout.generatePdfPleaseWait"}{literal}");
+	}
+</script>
+{/literal}
+
 {assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 {assign var=layoutFile value=$submission->getFileBySignoffType('SIGNOFF_LAYOUT')}
 {assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
@@ -95,6 +111,24 @@
 			{/if}
 		</td>
 	</tr>
+	{* 
+	* 20110825 BLH 	Added if conditional. Was causing fatal error in case where no layout file exists.
+	*}
+	{if $layoutFile}
+	{assign var=layoutFileType value=$layoutFile->getFileType()}
+	{/if}
+	{if $layoutFile and $layoutFileType != 'application/pdf' and !$layoutSignoff->getDateCompleted()}
+	<tr valign="top">
+		<td colspan="6">
+			<form method="post" action="{url op="copyLayoutToGalleyAsPdf"}" enctype="multipart/form-data">
+				<input type="hidden" name="articleId" value="{$submission->getId()}" />
+				<input type="submit" id="generatePdf" value="{translate key="submission.layout.generatePdf"}" onclick="hideGeneratePdfButton()" class="button" />
+				{translate key="submission.layout.generatePdf.info"}<br />
+				{translate key="reviewer.article.convertFileToPdf.msword"}
+			</form>
+		</td>
+	</tr>
+	{/if}
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>

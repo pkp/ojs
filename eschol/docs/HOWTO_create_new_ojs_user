@@ -1,0 +1,42 @@
+-----------------------------------------------
+login to ojs db and insert a new users record
+-----------------------------------------------
+
+gomysql
+
+mysql> insert into users set username = '[email]', email = '[same_email]', first_name = '[firstname]', last_name = '[last_name];
+
+---------------------------------------------------
+  Now get the ID for the new user you just created:
+---------------------------------------------------
+
+mysql> select * from users where username = 'help@escholarship.org';
+
+--------------------------------------------
+Now assign that user the appropriate roles:
+--------------------------------------------
+
+mysql> insert into roles set journal_id = [journal_id], user_id = [user_id], role_id = [role_id];
+
+Role IDs are:
+	1 = admin
+	16 = journal manager
+	256 = editor
+
+--------------------------------------------
+To get journal ID(s):
+--------------------------------------------
+
+mysql> select journal_id, path from journals;
+
+-------------------------------------------------	
+How to give user Site Admin role:
+-------------------------------------------------
+
+Use this command (journal ID is 0 and role_id is 1):
+
+mysql> insert into roles set journal_id = 0, user_id = [user_id], role_id = 1;
+
+------------------------------------------------------------------------------------------------------------------
+User will need to set password by using 'forgot your password?' link at https://submit.escholarship.org/subi/login
+------------------------------------------------------------------------------------------------------------------

@@ -7,6 +7,10 @@
  * User profile form under journal management.
  *
  * $Id$
+ *
+ *	20110803	BLH	Make changes related to updated Enroll New User functionality. 
+ *					Note: I had to also have to make changes in templates/sectionEditor/createReviewerForm.tpl
+ *					
  *}
 {strip}
 {url|assign:"currentUrl" op="people" path="all"}
@@ -17,6 +21,10 @@
 {literal}
 <script type="text/javascript">
 	$(document).ready(function(){
+	
+		$("#existingUserInfo").hide();
+		$("#existingUserEnrollmentDone").hide();
+	
 		$("#interestsTextOnly").hide();
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
@@ -29,6 +37,15 @@
 	});
 </script>
 {/literal}
+
+{literal}
+<script type="text/javascript">
+<!--
+
+// -->
+</script>
+{/literal}
+
 
 {if not $userId}
 {assign var="passwordRequired" value="true"}
@@ -75,6 +92,95 @@
 		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.userForm.firstName.value)).replace('REPLACE2', escape(document.userForm.lastName.value)), null, 'get');
 	}
 
+	function checkUsername() {
+		var req = makeAsyncRequest();
+		
+		req.onreadystatechange = function() {
+			if (req.readyState == 4) {
+ 				var userArray= req.responseText;
+ 		 				
+				//if user exists, replace form with basic info for that user.
+				if(userArray != 0) {
+					userArray = $.parseJSON(userArray);
+					var userId = userArray.userId;
+					var username = userArray.username;
+					var email = userArray.email;
+					var fullName = userArray.fullName;
+					var affiliation = userArray.affiliation;
+					var enrollAs = userArray.enrollAs;
+					var interests = userArray.interests;
+					
+					document.existingUserForm.existingUserId.value = userId;
+					$("#existingUsername").text(username);
+					$("#existingEmail").text(email);
+					$("#existingFullName").text(fullName);
+					$("#existingAffiliation").text(affiliation);
+					$("#existingInterests").text(interests);
+					//FIXME if user has selected an "Enroll user as" choice on previous page, select it here also.
+					//FIXME if user already exists in a particular role in this journal, don't show "no role"
+					
+					$("#existingUserEnrollmentMsg").html("");
+					$("#userFormContent").hide();
+					$("#existingUserInfo").show();
+				}
+			}
+		}
+		
+		sendAsyncRequest(req, '{/literal}{url op="checkUsername" username="REPLACE1" enrollAs="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.userForm.username.value)).replace('REPLACE2', escape(document.userForm.enrollAs.value)), null, 'get');
+
+	}
+	
+	function displayUserForm() {
+		var username = "";
+		document.userForm.username.value = username;
+		$("#existingUserInfo").hide();
+		$("#existingUserEnrollmentDone").hide();
+		$("#userFormContent").show();		
+	}
+	
+	function enrollExistingUser(enrollAnother) {
+		var req = makeAsyncRequest();
+ 
+		req.onreadystatechange = function() {
+			if (req.readyState == 4) {
+ 				var enrollmentArray = req.responseText;
+
+				//if success
+				if(enrollmentArray != 0) {
+					enrollmentArray = $.parseJSON(enrollmentArray);
+					var userId = enrollmentArray.userId;
+					var rolePath = enrollmentArray.rolePath;
+					var roleId = enrollmentArray.roleId;
+					var journalId = enrollmentArray.journalId;
+					var userFullName = enrollmentArray.userFullName; 
+					var enrollAnother = enrollmentArray.enrollAnother;
+					var interests = enrollmentArray.interests;
+					
+					//FIXME add support for locale-sensitive language translation - get this from server
+					var existingUserEnrollmentMsg = '<p><span class="errorText">The user ' + userFullName + ' was successfully enrolled in your journal '; 
+					if(roleId != null) {
+						existingUserEnrollmentMsg += "as " + rolePath;
+					} else {
+						existingUserEnrollmentMsg += " with no role";
+					}
+					existingUserEnrollmentMsg += ".</p>";
+					document.userForm.username.value = "";
+					$("#existingUserEnrollmentMsg").html(existingUserEnrollmentMsg);
+					$("#existingUserInfo").hide();
+					$("#existingUserEnrollmentDone").show();
+				} else {
+					//FIXME display an error message!
+				}
+			}
+		}		
+		sendAsyncRequest(req, '{/literal}{url op="enrollExistingUser" userId="REPLACE1" enrollAs="REPLACE2" enrollAnother="REPLACE3" escape=false}{literal}'.replace('REPLACE1', escape(document.existingUserForm.existingUserId.value)).replace('REPLACE2', escape(document.existingUserForm.enrollAs.value)).replace('REPLACE3', escape(enrollAnother)), null, 'get');
+		
+	}
+	
+	function copyUsernameToEmail() {
+		document.userForm.email.value = document.userForm.username.value;
+	}
+	
 // -->
 </script>
 {/literal}
@@ -86,7 +192,59 @@
 
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
 
+<div id="existingUserInfo">
+	<div id="existingUserMsg">
+		{** FIXME add locale translation support **}
+		<p>A user account already exists for the Email Address you provided. See the information below.</p> 
+		<p>If you would like to enroll this user in your journal, select the appropriate role from the list and click 'Enroll'. If not, please click 'Go Back without Enrolling This User'
+		and try entering a different Email Address.</p>
+	</div>
+	<form name="existingUserForm">
+		<input type="hidden" name="existingUserId" id="existingUserId" />
+		<table width="100%" class="data">
+			<tr>
+				<td class="label" width="20%">{fieldLabel key="user.username"}</td>
+				<td class="value" id="existingUsername"></td>
+			</tr>		
+			<tr>
+				<td class="label" width="20%">Full Name</td>
+				<td class="value" id="existingFullName"></td>
+			</tr>
+			<tr>
+				<td class="label" width="20%">{fieldLabel name="affiliation" key="user.affiliation"}</td>
+				<td class="value" id="existingAffiliation"></td>
+			</tr>
+			<tr>
+				<td class="label" width="20%">{fieldLabel for="interests" key="user.interests"}</td>
+				<td class="value" id="existingInterests"></td>
+			</tr>
+			<tr valign="top">
+				<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
+				<td class="value">
+					<select name="enrollAs[]" id="enrollAs" multiple="multiple" size="11" class="selectMenu">
+					{html_options_translate options=$roleOptions selected=$enrollAs}
+					</select>
+					<br />
+					<span class="instruct">{translate key="manager.people.enrollUserAsDescription"}</span>
+				</td>
+			</tr>
+		</table>
+		<br />
+		<input type="button" name="enroll" id="enroll" class="button defaultButton" value="Enroll" onclick="enrollExistingUser(0)" />
+		<input type="button" class="button" value="Go Back without Enrolling This User" onclick="displayUserForm()" />
+	</form>
+</div>
+
+<div id="existingUserEnrollmentDone">
+	<div id="existingUserEnrollmentMsg"></div>
+	<p>
+		<input type="button" value="OK" class="button defaultButton" onclick="{if $source == ''}history.go(-1);{else}document.location='{$source|escape:"jsparam"}';{/if}" />
+		<input type="button" class="button" value="Enroll Another" onclick="displayUserForm()" />
+	</p>
+</div>
+
 <form name="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
+<div id="userFormContent">
 <input type="hidden" name="source" value="{$source|escape}" />
 {if $userId}
 <input type="hidden" name="userId" value="{$userId|escape}" />
@@ -101,10 +259,42 @@
 		<td width="80%" class="value">
 			{url|assign:"userFormUrl" page="manager" op="editUser" path=$userId escape=false}
 			{form_language_chooser form="userForm" url=$userFormUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}
+	{if not $userId}
+	<tr valign="top">
+		<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
+		<td class="value">
+			<input type="text" name="username" id="username" value="{$username|escape}" size="30" maxlength="90" class="textField" onblur="checkUsername()" />
+			<br />
+			<span class="instruct">{translate key="user.register.usernameDescription"}</span>
+			<!--<span class="instruct">{translate key="user.register.usernameRestriction"}</span>-->
+		</td>
+	</tr>	
+	<tr valign="top">
+		<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
+		<td class="value">
+			<select name="enrollAs[]" id="enrollAs" multiple="multiple" size="11" class="selectMenu">
+			{html_options_translate options=$roleOptions selected=$enrollAs}
+			</select>
+			<br />
+			<span class="instruct">{translate key="manager.people.enrollUserAsDescription"}</span>
+		</td>
+	</tr>
+	{else}
+	<tr valign="top">
+		<td class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
+		<td class="value"><strong>{$username|escape}</strong></td>
+	</tr>
+	{/if}
+	{**
+	<tr valign="top">
+		<td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>
+		<td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	**}
+	<input type="hidden" name="email" id="email" value="{$email|escape}" />
 	<tr valign="top">
 		<td class="label">{fieldLabel name="salutation" key="user.salutation"}</td>
 		<td class="value"><input type="text" name="salutation" id="salutation" value="{$salutation|escape}" size="20" maxlength="40" class="textField" /></td>
@@ -122,6 +312,11 @@
 		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="suffix" key="user.suffix"}</td>
+		<td class="value"><input type="text" name="suffix" id="suffix" value="{$suffix|escape}" size="10" maxlength="40" class="textField" /></td>
+	</tr>
+	{**
+	<tr valign="top">
 		<td class="label">{fieldLabel suppressId="true" name="gender" key="user.gender"}</td>
 		<td class="value">
 			<select name="gender" id="gender" size="1" class="selectMenu">
@@ -129,35 +324,11 @@
 			</select>
 		</td>
 	</tr>
+	**}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
 		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 	</tr>
-	{if not $userId}
-	<tr valign="top">
-		<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
-		<td class="value">
-			<select name="enrollAs[]" id="enrollAs" multiple="multiple" size="11" class="selectMenu">
-			{html_options_translate options=$roleOptions selected=$enrollAs}
-			</select>
-			<br />
-			<span class="instruct">{translate key="manager.people.enrollUserAsDescription"}</span>
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
-		<td class="value">
-			<input type="text" name="username" id="username" value="{$username|escape}" size="20" maxlength="32" class="textField" />&nbsp;&nbsp;<input type="button" class="button" value="{translate key="common.suggest"}" onclick="generateUsername()" />
-			<br />
-			<span class="instruct">{translate key="user.register.usernameRestriction"}</span>
-		</td>
-	</tr>
-	{else}
-	<tr valign="top">
-		<td class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
-		<td class="value"><strong>{$username|escape}</strong></td>
-	</tr>
-	{/if}
 	{if $authSourceOptions}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authId" key="manager.people.authSource"}</td>
@@ -214,10 +385,6 @@
 		<td class="value"><textarea name="signature[{$formLocale|escape}]" id="signature" rows="5" cols="40" class="textArea">{$signature[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>
-		<td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr valign="top">
 		<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
 		<td class="value"><input type="text" name="userUrl" id="userUrl" value="{$userUrl|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
@@ -268,10 +435,14 @@
 	{/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $source == ''}history.go(-1);{else}document.location='{$source|escape:"jsparam"}';{/if}" /></p>
+<p>
+	{assign var="onclick" value='onclick="copyUsernameToEmail()"'}
+	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" {$onclick} /> 
+	{if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" {$onclick} /> {/if}
+	<input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $source == ''}history.go(-1);{else}document.location='{$source|escape:"jsparam"}';{/if}" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
+</div>
 </form>
 
 {if $generatePassword}

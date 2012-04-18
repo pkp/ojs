@@ -7,7 +7,22 @@
  * Subtemplate defining the peer review table.
  *
  * $Id$
+ *
+ * CHANGELOG:
+ * 20110725	BLH	Add "create PDF" button next to "Ensuring a Blind Review" link.
+ * 20110803 BLH When user clicks "Convert File to PDF", make sure they can't click it a 2nd time.
  *}
+ 
+{literal}
+<script type="text/javascript">
+	
+	function hideConvertToPdfButton() {
+		$("#convertReviewToPdf").hide();
+		alert("{/literal}{translate key="reviewer.article.convertFileToPdfPleaseWait"}{literal}");
+	}
+</script>
+{/literal}
+
 <div id="submission">
 <h3>{translate key="article.submission"}</h3>
 
@@ -53,12 +68,30 @@
 		{if $reviewFile}
 			<td width="80%" class="value">
 				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
-				{$reviewFile->getDateModified()|date_format:$dateFormatShort}{if $currentJournal->getSetting('showEnsuringLink')}&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>{/if}
+				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+				{if $currentJournal->getSetting('showEnsuringLink')}
+					&nbsp;&nbsp;
+					<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
+				{/if}
+				{assign var=reviewFileType value=$reviewFile->getFileType()}
 			</td>
 		{else}
 			<td width="80%" class="nodata">{translate key="common.none"}</td>
 		{/if}
 	</tr>
+	{if $reviewFile && $reviewFileType != 'application/pdf' && $reviewFileType != 'pdf'}
+	<tr valign="top">
+		<td class="label" width="20%"></td>
+		<td width="80%" class="value">
+			<form method="post" action="{url op="uploadReviewVersionNoAuthorInfo"}" enctype="multipart/form-data">
+				<input type="hidden" name="articleId" value="{$submission->getId()}" />
+				<input type="submit" name="submit" id="convertReviewToPdf" value="{translate key="reviewer.article.convertFileToPdf.button}" onclick="hideConvertToPdfButton()" class="button" />
+				{translate key="reviewer.article.convertFileToPdf.info"}<br/>
+				{translate key="reviewer.article.convertFileToPdf.msword"}
+			</form>
+		</td>
+	</tr>
+	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>

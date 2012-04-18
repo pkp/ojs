@@ -10,6 +10,7 @@
  * @ingroup security
  *
  * @brief Class providing user validation/authentication operations.
+ *
  */
 
 // $Id$
@@ -142,6 +143,13 @@ class Validation {
 	function redirectLogin($message = null) {
 		$args = array();
 
+		// MH 2012-01-25: If there is already a 'source' parameter because we're
+		// handling an authorization failure, pass it on rather than replacing it.
+		$source = Request::getUserVar('source');
+		if (isset($source) && !empty($source)) {
+			$args['source'] = $source;
+		}
+		else 
 		if (isset($_SERVER['REQUEST_URI'])) {
 			$args['source'] = $_SERVER['REQUEST_URI'];
 		}

@@ -10,6 +10,9 @@
   * Localization strings for the en_US (English) locale.
   *
   * $Id$
+  *
+  *	CHANGELOG	
+  *		20110802	BLH	Change value of message key="editor.issues.proofed"
   -->
 
 <locale name="en_US" full_name = "English">
@@ -31,7 +34,7 @@
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.submissionReview.emailWillArchive">This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Notification email not yet sent to author.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.notifyUsers.allUsers">All users associated with this conference ({$count} users)</message>
@@ -47,7 +50,9 @@
 	<message key="editor.editorAdministration">Editor Administration</message>
 	<message key="editor.issues.createIssue">Create Issue</message>
 	<message key="editor.issues.backIssues">Back Issues</message>
+	<message key="editor.issues.publishedContent">Published Content</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
+	<message key="editor.issues.unpublishedContent">Unpublished Content</message>
 	<message key="editor.issues.currentIssue">Current Issue</message>
 	<message key="editor.issues.numArticles">Items</message>
 	<message key="editor.issues.noArticles">No items are currently scheduled for this issue.</message>
@@ -70,7 +75,7 @@
 	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">Remove</message>
-	<message key="editor.issues.proofed">Proofed</message>
+	<message key="editor.issues.proofed">Proofed and Approved By Author</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page image?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.styleFile">Stylesheet</message>
@@ -91,9 +96,11 @@
 	<message key="editor.issues.resetSectionOrder"><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></message>
 	<message key="editor.issues.issueData">Issue Data</message>
 	<message key="editor.issues.saveChanges">Save changes to table of contents?</message>
+	<message key="editor.issues.saveAndPublishChanges">Save and publish changes to table of contents?</message>
 	<message key="editor.issues.default">Default</message>
 	<message key="editor.issues.order">Order</message>
 	<message key="editor.issues.publicId">Public Id</message>
+	<message key="editor.issues.saveAndPublishIssue">Save Changes and Publish</message>
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.unpublishIssue">Unpublish Issue</message>
 	<message key="editor.issues.previewIssue">Preview Issue</message>
@@ -106,8 +113,10 @@
 	<message key="editor.issues.pages">Pages</message>
 	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
+	<message key="editor.navigation.unpublishedContent">Unpublished Content</message>
 	<message key="editor.navigation.createIssue">Create Issue</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
+	<message key="editor.navigation.publishedContent">Published Content</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>
 	<message key="editor.article.showSuppFile">Present file to reviewers</message>
@@ -130,10 +139,10 @@
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.uploadReviewForReviewer">Upload review</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>
-	<message key="editor.article.decision">Decision</message>
+	<message key="editor.article.decision">Decisions Recorded</message>
 	<message key="editor.article.noEditorSelected">No editor selected.</message>
 	<message key="editor.article.recordDecision">Record Decision</message>
-	<message key="editor.article.cannotRecord">Section editor not yet recorded.</message>
+	<message key="editor.article.cannotRecord">Section editor not yet assigned.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
 	<message key="editor.article.designateDueDateDescription">Enter the date or number of weeks for the new due date.</message>
@@ -162,7 +171,7 @@
 	<message key="editor.article.assignSectionEditor">Add Section Editor</message>
 	<message key="editor.article.assignEditor">Add Editor</message>
 	<message key="editor.article.selectEditor">Select {$roleName}</message>
-	<message key="editor.article.selectDecision">Select decision</message>
+	<message key="editor.article.selectDecision">Record New Decision</message>
 	<message key="editor.article.decision.accept">Accept Submission</message>
 	<message key="editor.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>

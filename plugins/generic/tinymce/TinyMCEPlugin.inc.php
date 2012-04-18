@@ -88,6 +88,7 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
+						//$fields[] = 'sponsor';
 						break;
 				}
 				break;
@@ -283,6 +284,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				for ($i=0; $i<$count; $i++) {
 					$fields[] = "authors-$i-biography";
 					$fields[] = "authors-$i-competingInterests";
+					//$fields[] = "sponsor";
 				}
 				$fields[] = 'abstract';
 				break;
@@ -346,7 +348,13 @@ class TinyMCEPlugin extends GenericPlugin {
 			foreach ($allLocales as $key => $locale) {
 				$localeList[] = String::substr($key, 0, 2);
 			}
-
+			
+			//
+			// 20120319 BLH Removing references to 'iBrowser' to fix security vulnerability. 
+			// 				Leaving code here because we ultimately want to replace iBrowser with JBImages
+			//				See https://www.pivotaltracker.com/story/show/26663875
+			//
+			/***
 			$tinymceScript = '
 			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
@@ -371,6 +379,36 @@ class TinyMCEPlugin extends GenericPlugin {
 					apply_source_formatting : false,
 					theme : "advanced",
 					theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,ibrowser",
+					theme_advanced_buttons2 : "",
+					theme_advanced_buttons3 : ""
+				});
+			</script>';
+			***/
+			
+			$tinymceScript = '
+			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
+			<script language="javascript" type="text/javascript">
+				tinyMCE_GZ.init({
+					relative_urls : "false",
+					plugins : "paste,fullscreen",
+					themes : "advanced",
+					languages : "' . join(',', $localeList) . '",
+					disk_cache : true
+				});
+			</script>
+			<script language="javascript" type="text/javascript">
+				tinyMCE.init({
+					entity_encoding : "raw",
+					plugins : "paste,fullscreen",
+					mode : "exact",
+					language : "' . String::substr(Locale::getLocale(), 0, 2) . '",
+					elements : "' . $enableFields . '",
+					relative_urls : false,
+					forced_root_block : false,
+					paste_auto_cleanup_on_paste : true,
+					apply_source_formatting : false,
+					theme : "advanced",
+					theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen",
 					theme_advanced_buttons2 : "",
 					theme_advanced_buttons3 : ""
 				});

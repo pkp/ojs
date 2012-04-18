@@ -1,0 +1,7 @@
+How to fix double-unicode encoding in OJS user or author names:
+
+- You can recognize this by the tell-tale "Ã" characters
+- Run eschol/utilities/fix_unicode.py
+- It will create an SQL script, tmp_fix.sql.
+- It will also give you instructions how to run that script if you approve
+  of the changes.

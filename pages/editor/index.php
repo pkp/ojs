@@ -13,6 +13,9 @@
  * @ingroup pages_editor
  * @brief Handle requests for editor functions.
  *
+ * CHANGELOG:
+ *		20110725	BLH	Add case 'uploadReviewVersionNoAuthorInfo'
+ *		20110729	BLH Add case 'copyLayoutToGalleyAsPdf'
  */
 
 // $Id$
@@ -23,6 +26,8 @@ switch ($op) {
 	//
 	case 'enrollSearch':
 	case 'createReviewer':
+	case 'checkUsername':
+	case 'enrollExistingUser':
 	case 'suggestUsername':
 	case 'enroll':
 	case 'submission':
@@ -61,6 +66,7 @@ switch ($op) {
 	case 'thankFinalCopyedit':
 	case 'selectCopyeditRevisions':
 	case 'uploadReviewVersion':
+	case 'uploadReviewVersionNoAuthorInfo':
 	case 'uploadCopyeditVersion':
 	case 'completeCopyedit':
 	case 'completeFinalCopyedit':
@@ -84,6 +90,7 @@ switch ($op) {
 	case 'assignLayoutEditor':
 	case 'notifyLayoutEditor':
 	case 'thankLayoutEditor':
+	case 'copyLayoutToGalleyAsPdf':
 	case 'uploadGalley':
 	case 'editGalley':
 	case 'saveGalley':

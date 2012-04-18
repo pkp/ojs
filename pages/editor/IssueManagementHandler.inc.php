@@ -40,6 +40,8 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}
 
@@ -77,6 +79,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
@@ -132,7 +136,9 @@ class IssueManagementHandler extends EditorHandler {
 		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
-
+		
+		$journal =& Request::getJournal(); // 20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
 			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 		} else {
@@ -144,6 +150,8 @@ class IssueManagementHandler extends EditorHandler {
 		} else {
 			$issueForm->initData();
 		}
+		$journal =& Request::getJournal(); // 20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 		$issueForm->display();
 	}
 
@@ -171,6 +179,8 @@ class IssueManagementHandler extends EditorHandler {
 			import('classes.issue.IssueAction');
 			$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
+			$journal =& Request::getJournal(); // 20111201 BLH added
+			$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 			$issueForm->display();
 		}
 	}
@@ -206,6 +216,9 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
 		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$journal =& Request::getJournal(); // 20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111201 BLH AddedJ	
 		$issueForm->display();
 	}
 
@@ -242,7 +255,10 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
-
+		$journal =& Request::getJournal(); // 20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111201 BLH Added
+		
 		$issueForm->display();
 	}
 
@@ -308,6 +324,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111130 BLH added
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -322,6 +339,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished', !$issue->getPublished());
 		$templateMgr->assign('issueAccess', $issue->getAccessStatus());
+		$templateMgr->assign('issueTitle', $issue->getIssueTitle()); // 20111027 BLH Added
 
 		// get issue sections and articles
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -371,7 +389,21 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr->addJavaScript('lib/pkp/js/jquery.tablednd_0_5.js');
 		$templateMgr->addJavaScript('lib/pkp/js/tablednd.js');
-
+		
+		//BLH 20110926 Add template variable to indicate whether or not we are in stage environment
+		$escholBaseUrl =& Config::getVar('general','base_url');
+		$templateMgr->assign('escholBaseUrl',$escholBaseUrl);
+		if(substr($escholBaseUrl,0,17) == "http://submit-stg") {
+			$templateMgr->assign('escholInStage', 1);
+		} else {
+			$templateMgr->assign('escholInStage', 0);
+		}
+		//END BLH 20110929 mod
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //BLH 201110 Added
+		$journal =& Request::getJournal(); // 20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111201 BLH Added
+		
 		$templateMgr->display('editor/issues/issueToc.tpl');
 	}
 
@@ -429,7 +461,14 @@ class IssueManagementHandler extends EditorHandler {
 			}
 			$articleDao->updateArticle($article);
 		}
-
+		
+		//if issue is published, re-export to eScholarship front-end
+		$issue =& $this->issue;
+		if($issue->getPublished()) {
+			$journal =& Request::getJournal();	
+			$this->publishIssueToEschol($journal,$issue);
+		}
+		
 		Request::redirect(null, null, 'issueToc', $issueId);
 	}
 
@@ -671,10 +710,52 @@ class IssueManagementHandler extends EditorHandler {
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
 			)
 		);
-
+		
+		//export issue to eScholarship front-end
+		$this->publishIssueToEschol($journal,$issue);
+		
 		Request::redirect(null, null, 'issueToc', $issue->getId());
 	}
-
+	
+	/**
+	 * Export issue to eScholarship front-end
+	 */
+	function publishIssueToEschol($journal, $issue) {
+		//
+		//CREATE XML
+		//
+		import('lib.pkp.classes.xml.XMLCustomWriter');
+                // MH 2012-02-03: Took away DTD parameters to createDocument(), for two reasons:
+                // (1) something about the DTD was causing subi's ojsConvert.py to blow up, and
+                // (2) we no longer obey the DTD anyway because we changed lots of export things.
+		$doc =& XMLCustomWriter::createDocument();
+		import('plugins.importexport.native.NativeExportDom');
+		$issueNode =& NativeExportDom::generateIssueDom($doc, $journal, $issue);
+		XMLCustomWriter::appendChild($doc, $issueNode);
+		
+		//
+		//OUTPUT XML TO FILE SYSTEM
+		//
+		$outputFile = '/apps/subi/tmp/' . 'ojsExportIssue' . $issue->getId() . '.xml';
+		if (($h = fopen($outputFile, 'wb'))===false) return false;
+		fwrite($h, XMLCustomWriter::getXML($doc));
+		fclose($h);
+		
+		//
+		// CONVERT XML TO ESCHOL FORMAT
+		//
+		// run script. if it ran OK (return 0) then proceed happily. if it errored (return not 0), then cause an error!
+		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
+		return true;
+		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
+		//if(!$returnValue) {
+			//system("rm $outputFile");
+			//return true;
+		//} else {
+			//return false;
+		//}
+	}
+	 
 	/**
 	 * Unpublish a previously-published issue
 	 */
@@ -759,7 +840,7 @@ class IssueManagementHandler extends EditorHandler {
 				$templateMgr->assign_by_ref('issue', $issue);
 				$templateMgr->assign('body', $email->getBody());
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
-
+				
 				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
 
 				// Stamp the "users notified" date.
@@ -806,6 +887,7 @@ class IssueManagementHandler extends EditorHandler {
 					'allAuthorsCount' => $authorCount,
 					'allIndividualSubscribersCount' => $individualSubscriptionDao->getSubscribedUserCount($journal->getId()),
 					'allInstitutionalSubscribersCount' => $institutionalSubscriptionDao->getSubscribedUserCount($journal->getId()),
+					'journalPath' => $journal->getPath() //20111201 BLH Added
 				)
 			);
 		}

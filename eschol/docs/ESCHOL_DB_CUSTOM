@@ -1,0 +1,24 @@
+--- Schema Customizations ---
+
+	users.user_id field type changed from varchar(20) to varchar(90)
+
+--- Data Customizations ---
+
+	NOTE: All of data customizations are tracked in the appropriate XML files, which
+	are read by the OJS installation process and populate the OJS db accordingly.
+	
+	JOURNAL SETTINGS
+	
+		Need to make sure these get into the appropriate XML: ojs/registry/journalSettings.xml
+		
+	EMAIL TEMPLATES
+		
+		Make sure customizations are put int ojs/registry/emailTemplates.xml
+			
+	PLUGIN SETTINGS
+	
+		These are taken care of by the intallation process. Just make sure that the correct values
+		are set in:
+		
+			ojs/plugins/[plugin_group]/[plugin_name]/settings.xml (multiple files)
+	

@@ -1,0 +1,12 @@
+How to clean out the OJS database, in preparation for first import:
+
+First, this script will wipe the database and run the OJS install tool:
+
+  cd /apps/subi/apache/htdocs/ojs/eschol/utilities
+  ./initdb.sh
+
+Then this will import the very few customizations that are in the database
+(as opposed to in the schema files used by the installer, or php files):
+
+  gomysql < ./dev_cust.sql
+

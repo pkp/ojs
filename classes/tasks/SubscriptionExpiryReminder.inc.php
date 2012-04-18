@@ -228,7 +228,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	function execute() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getEnabledJournals();
-
+		
 		$todayDate = array(
 						'year' => date('Y'),
 						'month' => date('n'),

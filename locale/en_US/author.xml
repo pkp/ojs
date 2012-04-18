@@ -69,13 +69,17 @@
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionIndexingDescription">Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>
+	{*<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>*} {* 20120307 BLH Changed wording to reflect eSchol use *}
+	<message key="author.submit.submissionSupportingAgencies">Acknowledgements</message>
+	{*<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>*} {* 20120307 BLH Changed wording to reflect eSchol use *}
+	<message key="author.submit.submissionSupportingAgenciesDescription">Please enter footnote/acknowledgements here and not in body of the manuscript. Your footnote will not display on the cover page until the manuscript has been accepted for publication.</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
 	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
-	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
+	<!--<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>-->
+	<message key="author.submit.form.authorRequiredFields">The first name and last name of each author is required.</message>
+	<message key="author.submit.form.corporateNameRequired">Corporate author name is required.</message>
 	<message key="author.submit.form.titleRequired">Please enter the title of your article.</message>
 	<message key="author.submit.form.abstractRequired">Please enter the abstract of your article.</message>
 	<message key="author.submit.form.wordCountAlert">You have exceeded the maximum word limit for abstracts in this section's track.</message>
@@ -127,4 +131,6 @@
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>
 	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
+	<message key="author.email.main.missing">Principal contact {$authorName} has no email address on file. A valid email address must be entered in the 'To' field.</message>
+	<message key="author.email.cc.missing">Author {$authorName} has no email address on file and will therefore not be cc'ed unless one is entered here.</message>
 </locale>

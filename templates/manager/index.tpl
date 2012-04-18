@@ -7,6 +7,9 @@
  * Journal management index.
  *
  * $Id$
+ *
+ *	CHANGELOG
+ *		20110817	BLH	Changed the order of some menu items. Removed "enrollSearch" link for all site users.
  *}
 {strip}
 {assign var="pageTitle" value="manager.journalManagement"}
@@ -19,21 +22,30 @@
 	{if $announcementsEnabled}
 		<li>&#187; <a href="{url op="announcements"}">{translate key="manager.announcements"}</a></li>
 	{/if}
+	<li>&#187; <a href="{url op="setup"}">{translate key="manager.setup"}</a></li>
 	<li>&#187; <a href="{url op="files"}">{translate key="manager.filesBrowser"}</a></li>
 	<li>&#187; <a href="{url op="sections"}">{translate key="section.sections"}</a></li>
 	<li>&#187; <a href="{url op="reviewForms"}">{translate key="manager.reviewForms"}</a></li>
 	<li>&#187; <a href="{url op="languages"}">{translate key="common.languages"}</a></li>
-	<li>&#187; <a href="{url op="groups"}">{translate key="manager.groups"}</a></li>
-	<li>&#187; <a href="{url op="emails"}">{translate key="manager.emails"}</a></li>
-	<li>&#187; <a href="{url page="rtadmin"}">{translate key="manager.readingTools"}</a></li>
-	<li>&#187; <a href="{url op="setup"}">{translate key="manager.setup"}</a></li>
-	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
-	<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
-	{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
-		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
+	{* 20110830 BLH Display 'Masthead' link only if user is Site Admin *}
+	{if $isSiteAdmin}
+		<li>&#187; <a href="{url op="groups"}">{translate key="manager.groups"}</a></li>
 	{/if}
-	<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>
+	<li>&#187; <a href="{url op="emails"}">{translate key="manager.emails"}</a></li>
+	{* 20110830 BLH Display following links only if user is Site Admin *}
+	{if $isSiteAdmin}
+		<li>&#187; <a href="{url page="rtadmin"}">{translate key="manager.readingTools"}</a></li>
+		<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
+		<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
+		{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
+			<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
+		{/if}
+		<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>
+	{/if}
+	{* 20120214 BLH Display following link only if user is Site Admin *}
+        {if $isSiteAdmin}
 	<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>
+	{/if}
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 </div>
@@ -42,11 +54,17 @@
 
 <ul class="plain">
 	<li>&#187; <a href="{url op="people" path="all"}">{translate key="manager.people.allEnrolledUsers"}</a></li>
-	<li>&#187; <a href="{url op="enrollSearch"}">{translate key="manager.people.allSiteUsers"}</a></li>
+	{**<li>&#187; <a href="{url op="enrollSearch"}">{translate key="manager.people.allSiteUsers"}</a></li>**}
+        {* 20120214 BLH Display following link only if user is Site Admin *}
+        {if $isSiteAdmin}
 	<li>&#187; <a href="{url op="showNoRole"}">{translate key="manager.people.showNoRole"}</a></li>
+	{/if}
 	{url|assign:"managementUrl" page="manager"}
 	<li>&#187; <a href="{url op="createUser" source=$managementUrl}">{translate key="manager.people.createUser"}</a></li>
-	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>
+	{* 20110830 BLH Display 'Merge Users' link only if user is Site Admin *}
+	{if $isSiteAdmin}
+		<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>
+	{/if}
 	{call_hook name="Templates::Manager::Index::Users"}
 </ul>
 </div>

@@ -74,7 +74,11 @@ function confirmForgottenUpload() {
 
 <div class="separator"></div>
 
-<p><input type="submit" onclick="return confirmForgottenUpload()" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" /></p>
+<p>
+	<input type="submit" onclick="return confirmForgottenUpload()" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> 
+	<input type="submit" onclick="return confirmForgottenUpload()" value="{translate key="common.skipAndContinue"}" class="button" />
+	<input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" />
+</p>
 
 </form>
 

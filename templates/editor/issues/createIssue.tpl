@@ -18,8 +18,14 @@
 
 <ul class="menu">
 	<li class="current"><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-	<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{* 20111201 BLH Diplay 'Unpublished Content' & 'Published Content' for UCLA Encyclopedia of Egyptology*}
+	{if $journalPath == 'nelc_uee'}
+		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+		<li><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+	{else}
+		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	{/if}
 </ul>
 
 <br />

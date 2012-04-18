@@ -40,8 +40,9 @@ class ManagerHandler extends Handler {
 		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));
 		$session =& Request::getSession();
 		$session->unsetSessionVar('enrolmentReferrer');
-
+	
 		$templateMgr->assign('helpTopicId','journal.index');
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin());
 		$templateMgr->display('manager/index.tpl');
 	}
 

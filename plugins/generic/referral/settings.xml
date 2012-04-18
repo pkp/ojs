@@ -15,7 +15,7 @@
 <plugin_settings>
 	<setting type="bool">
 		<name>enabled</name>
-		<value>true</value>
+		<value>0</value><!-- 20110830 BLH changed default enabled value to false -->
 	</setting>
 	<setting type="string">
 		<name>exclusions</name>

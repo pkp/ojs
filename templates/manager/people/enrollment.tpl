@@ -7,6 +7,10 @@
  * List enrolled users.
  *
  * $Id$
+ *
+ * CHANGELOG
+ *	20110817	BLH	Remove "ENROLL AN EXISTING USER" link from bottom of page.
+ *
  *}
 {strip}
 {assign var="pageTitle" value="manager.people.enrollment"}
@@ -138,12 +142,20 @@ function confirmAndPrompt(userId) {
 			{/if}
 			<a href="{url op="editUser" path=$user->getId()}" class="action">{translate key="common.edit"}</a>
 			{if $thisUser->getId() != $user->getId()}
+{* BEGIN MOD TO REMOVE 'LOGIN AS' LINK *}
+{* 20110919 BLH Re-enabled "log in as" link for site admins only *}
+				{if $isSiteAdmin}
 				|&nbsp;<a href="{url page="login" op="signInAsUser" path=$user->getId()}" class="action">{translate key="manager.people.signInAs"}</a>
+				{/if}
+{* END MOD TO REMOVE 'LOGIN AS' LINK *}
 				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
-				{if $user->getDisabled()}
-					|&nbsp;<a href="{url op="enableUser" path=$user->getId()}" class="action">{translate key="manager.people.enable"}</a>
-				{else}
-					|&nbsp;<a href="javascript:confirmAndPrompt({$user->getId()})" class="action">{translate key="manager.people.disable"}</a>
+				{* 20120227 BLH Remove enable/disable links for non-siteAdmins *}
+				{if $isSiteAdmin}
+					{if $user->getDisabled()}
+						|&nbsp;<a href="{url op="enableUser" path=$user->getId()}" class="action">{translate key="manager.people.enable"}</a>
+					{else}
+						|&nbsp;<a href="javascript:confirmAndPrompt({$user->getId()})" class="action">{translate key="manager.people.disable"}</a>
+					{/if}
 				{/if}
 			{/if}
 		</td>
@@ -173,8 +185,13 @@ function confirmAndPrompt(userId) {
 </div>
 </form>
 
-<a href="{url op="enrollSearch" path=$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> |
+{**<a href="{url op="enrollSearch" path=$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> |**}
 {url|assign:"enrollmentUrl" path=$roleSymbolic searchInitial=$searchInitial searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth searchInitial=$searchInitial}
-<a href="{if $roleId}{url op="createUser" roleId=$roleId source=$enrollmentUrl}{else}{url op="createUser" source=$enrollmentUrl}{/if}" class="action">{translate key="manager.people.createUser"}</a> | <a href="{url op="enrollSyncSelect" path=$rolePath}" class="action">{translate key="manager.people.enrollSync"}</a>
+<a href="{if $roleId}{url op="createUser" roleId=$roleId source=$enrollmentUrl}{else}{url op="createUser" source=$enrollmentUrl}{/if}" class="action">{translate key="manager.people.createUser"}</a> 
+{* 20110926 BLH Show 'Sync Enrollment' link for admins only *}
+{if $isSiteAdmin}
+| <a href="{url op="enrollSyncSelect" path=$rolePath}" class="action">{translate key="manager.people.enrollSync"}</a>
+{/if}
+
 {include file="common/footer.tpl"}
 

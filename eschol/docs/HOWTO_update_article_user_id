@@ -1,0 +1,23 @@
+The article import currently assigns user_id = 1 to all articles. 
+This script fixes this by assigning the primary author's user ID to each articles record where possible.
+
+**IMPORTANT** Be sure that the process described in ojs/eschol/docs/HOW_link_authors_users has been
+run before doing this!
+
+To run the script:
+
+cd /apps/subi/apache/htdocs/ojs/eschol/utilities/
+php -f article_user_id_update.php
+
+
+
+	
+
+
+	
+	
+
+
+
+
+

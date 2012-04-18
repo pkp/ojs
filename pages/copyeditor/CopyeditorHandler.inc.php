@@ -99,6 +99,7 @@ class CopyeditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.submissions');
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 		$templateMgr->display('copyeditor/index.tpl');
 	}
 

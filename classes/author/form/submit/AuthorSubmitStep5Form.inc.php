@@ -10,6 +10,9 @@
  * @ingroup author_form_submit
  *
  * @brief Form for Step 5 of author article submission.
+ *
+ * CHANGELOG:
+ *	20110728	BLH	in execute(), add call to designate article as editor version by default.
  */
 
 // $Id$
@@ -146,9 +149,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$articleDao->updateArticle($article);
 
 		// Designate this as the review version by default.
+		// Also designate as editor version by default.
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
 		AuthorAction::designateReviewVersion($authorSubmission, true);
+		AuthorAction::designateEditorVersion($authorSubmission, true);
 		unset($authorSubmission);
 
 		$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());

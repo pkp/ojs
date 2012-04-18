@@ -1,0 +1,2 @@
+INSERT INTO `site_settings` VALUES ('pageHeaderTitleImage','en_US','a:6:{s:16:\"originalFilename\";s:16:\"escholarship.gif\";s:5:\"width\";i:259;s:6:\"height\";i:79;s:10:\"uploadName\";s:30:\"pageHeaderTitleImage_en_US.gif\";s:12:\"dateUploaded\";s:19:\"2011-07-20 11:29:49\";s:7:\"altText\";s:12:\"eScholarship\";}','object');
+INSERT INTO `site_settings` VALUES ('pageHeaderTitleType','en_US','1','string');

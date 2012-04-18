@@ -10,6 +10,10 @@
  * @ingroup pages_manager
  *
  * @brief Handle requests for people management functions.
+ *
+ * CHANGELOG:
+ *	20110809	BLH	Add function checkUsername().
+ *	20110816	BLH Add function enrollExistingUser().
  */
 
 // $Id$
@@ -148,16 +152,22 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->assign('sort', $sort);
-
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); // 20110919 BLH Added
+		
 		$session =& Request::getSession();
 		$session->setSessionVar('enrolmentReferrer', Request::getRequestedArgs());
-
+		
+		
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
 
 	/**
 	 * Search for users to enroll in a specific role.
 	 * @param $args array first parameter is the selected role ID
+         * 
+         * 5 May 2011. BLH. Modified to display users that are registered with current journal only.
+         *                  CDL needs to maintain journal separation, i.e., journal managers should
+         *                  not be able to see other journal's users and data.
 	 */
 	function enrollSearch($args) {
 		$this->validate();
@@ -194,6 +204,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $sort);
+		//$users =& $roleDao->getUsersByJournalId($journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort); //MOD BLH 5 May 2011
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -255,7 +266,7 @@ class PeopleHandler extends ManagerHandler {
 	function enroll($args) {
 		$this->validate();
 		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
-
+		
 		// Get a list of users to enroll -- either from the
 		// submitted array 'users', or the single user ID in
 		// 'userId'
@@ -283,6 +294,49 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		Request::redirect(null, null, 'people', (empty($rolePath) ? null : $rolePath . 's'));
+	}
+
+	/**
+	 * Enroll an existing OJS user in a given role
+	 * (Poor-man's AJAX.)
+	 */	
+	function enrollExistingUser() {
+		$this->validate();
+
+		$userId = Request::getUserVar('userId');
+		$rolePath = Request::getUserVar('enrollAs');
+		$enrollAnother = Request::getUserVar('enrollAnother') == 1 ? 1 : 0;
+		
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		$journalId = $journal->getId();
+		
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleId = $roleDao->getRoleIdFromPath($rolePath); //returns null by default		
+		
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userFullName =& $userDao->getUserFullName($userId);
+		
+		$enrollment = 0;
+		if ($userId > 0 && $userId != "" && !is_null($userId) && $rolePath != 'admin') {
+			if (!$roleDao->roleExists($journalId, $userId, $roleId) && !is_null($roleId)) {
+				$role = new Role();
+				$role->setJournalId($journalId);
+				$role->setUserId($userId);
+				$role->setRoleId($roleId);
+
+				$roleDao->insertRole($role);
+
+				$enrollment = array("userId" => $role->getUserId(), "rolePath" => $rolePath, "roleId" => $role->getRoleId($roleId), "journalId" => $role->getJournalId(), "userFullName" => $userFullName, "enrollAnother" => $enrollAnother);				
+			} else {
+				//if role record already exists, or rolePath is "no role", then just send back the parameters without creating a record.
+				//FIXME should really display info for user, i.e., this user already enrolled in your journal in role x, y, z.
+				$enrollment = array("userId" => $userId, "rolePath" => $rolePath, "roleId" => $roleId, "journalId" => $journalId, "userFullName" => $userFullName, "enrollAnother" => $enrollAnother);
+			}
+			$enrollment = json_encode($enrollment);					
+		} //FIXME else need error: no userId! or user is trying to set role to Admin...
+		
+		echo $enrollment;	
 	}
 
 	/**
@@ -379,6 +433,47 @@ class PeopleHandler extends ManagerHandler {
 			Request::getUserVar('lastName')
 		);
 		echo $suggestion;
+	}
+	
+	/**
+	 * Check that the supplied username/email isn't aleady in use by the system. (Poor-man's AJAX.)
+	 */
+	function checkUsername() {
+		$this->validate();
+		$username = Request::getUserVar('username');
+		$enrollAs = Request::getUserVar('enrollAs');
+		$userId = "";
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$usernameExists = ($userDao->userExistsByUsername($username) ? true : false);
+		if($usernameExists) {
+			$user = ($userDao->getUserByUsername($username));
+			$userId = $user->getId();
+			$username = $user->getUsername();
+			$email = $user->getEmail();
+			$fullName = $user->getFirstName() . ' ' . $user->getMiddleName() . ' ' . $user->getLastName();
+			//FIXME looking up affiliation for locale-sensitivity is complicated...Leaving this until later. -BLH Aug 15 2011
+			/**
+			$locales = array_values($user->getLocales()); //returns an array
+			if (count($locales) > 0) {
+		 		$locale = $locales[0];
+		 	} else {
+		 		$locale = "en_US";
+		 	}
+		 	**/
+		 	$locale = "en_US";
+			$affiliation = $user->getAffiliation($locale);
+			$interests = $user->getInterests();
+			//$userAlreadyEnrolled = $journal->seeIfUserIsEnrolled;
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getJournalByPath(Request::getRequestedJournalPath());
+			//$userAlreadyEnrolled = $journal->
+			
+			$userData = array("userId" => $userId, "username" => $username, "email" => $email, "fullName" => $fullName, "affiliation" => $affiliation, "interests" => $interests, "enrollAs" => $enrollAs);
+			$userData = json_encode($userData);
+		} else {
+			$userData = 0;
+		}
+		echo $userData;
 	}
 
 	/**

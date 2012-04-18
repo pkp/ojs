@@ -148,6 +148,8 @@ class EditorHandler extends SectionEditorHandler {
 		$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111201 BLH Added
 		$templateMgr->display('editor/index.tpl');
 	}
 

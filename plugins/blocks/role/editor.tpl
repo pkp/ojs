@@ -22,9 +22,19 @@
 	
 	<span class="blockSubtitle">{translate key="editor.navigation.issues"}</span>
 	<ul>
-		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li><a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
-		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+		{* 20111201 BLH Don't display 'Create Issue' for UEE *}
+		{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+			<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+		{/if}
+		{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
+		{*<li><a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>*}
+        {* 20111201 BLH Display 'Published Content' & 'Unpublished Content for UCLA Encyclopedia of Egyptology *}
+        {if $journalPath == 'nelc_uee'}
+        	<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
+        	<li><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
+        {else}
+        	<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+        	<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+        {/if}		
 	</ul>
 </div>

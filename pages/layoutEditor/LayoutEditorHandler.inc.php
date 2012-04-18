@@ -37,6 +37,10 @@ class LayoutEditorHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
+		
+		$journal =& Request::getJournal(); //20111201 BLH added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
+		
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 
@@ -129,6 +133,7 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
 	
@@ -166,6 +171,7 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added
 		$templateMgr->display('layoutEditor/backIssues.tpl');
 	}
 

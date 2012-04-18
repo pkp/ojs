@@ -7,9 +7,24 @@
  * User index.
  *
  * $Id$
+ *
+ * CHANGELOG
+ * 	2011-07-05 	BLH	Overwrite label values for menu items under each journal to display functionality rather than user roles.
+ *					Since labels are hardcoded, these will always be in English even when locale settings are non-English.
+ *					This should be redone using locale files eventually.
+ * 	2011-07-19	BLH	Finish updating rest of menu items.
+ * 	2011-08-02	BLH	Redo menu item values properly using locale file/template key. Make minor wording corrections at same time.		
  *}
 {strip}
-{assign var="pageTitle" value="user.userHome"}
+{* 20110825 BLH Assign translated value of [Journal] Home to page title. This also appears as breadcrumb. *}
+{* {assign var="pageTitle" value="user.userHome"} *}
+{if $currentJournal}
+	{assign var="currentJournalPath" value=$currentJournal->getpath()}
+	{translate|assign:"pageTitleTranslated" key="navigation.journalHome" currentJournalPath=$currentJournalPath}
+	{assign var="pageTitleTranslated" value=$pageTitleTranslated|capitalize:true}
+{else}
+	{translate|assign:"pageTitleTranslated" key="navigation.myJournals"}
+{/if}
 {include file="common/header.tpl"}
 {/strip}
 
@@ -20,7 +35,8 @@
 {/if}
 
 <div id="myJournals">
-{if !$currentJournal}<h3>{translate key="user.myJournals"}</h3>{/if}
+{* 20110826 BLH Remove heading - it's redundant *}
+{* {if !$currentJournal}<h3>{translate key="user.myJournals"}</h3>{/if} *}
 
 {foreach from=$userJournals item=journal}
 	<div id="journal-{$journal->getPath()|escape}">
@@ -32,7 +48,7 @@
 	<table width="100%" class="info">
 		{if $isValid.JournalManager.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="manager"}">{translate key="user.role.manager"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="manager"}">{translate key="user.rolefunction.manager"}</a></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -41,7 +57,7 @@
 		{/if}
 		{if $isValid.SubscriptionManager.$journalId}
 			<tr>
-				<td width="20%" colspan="5">&#187; <a href="{url journal=$journalPath page="subscriptionManager"}">{translate key="user.role.subscriptionManager"}</a></td>
+				<td width="20%" colspan="5">&#187; <a href="{url journal=$journalPath page="subscriptionManager"}">{translate key="user.rolefunction.subscriptionManager"}</a></td>
 			</tr>
 		{/if}
 		{if $isValid.Editor.$journalId || $isValid.SectionEditor.$journalId || $isValid.LayoutEditor.$journalId || $isValid.Copyeditor.$journalId || $isValid.Proofreader.$journalId}
@@ -50,7 +66,7 @@
 		{if $isValid.Editor.$journalId}
 			<tr>
 				{assign var="editorSubmissionsCount" value=$submissionsCount.Editor.$journalId}
-				<td>&#187; <a href="{url journal=$journalPath page="editor"}">{translate key="user.role.editor"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="editor"}">{translate key="user.rolefunction.editor"}</a></td>
 				<td>{if $editorSubmissionsCount[0]}
 						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsUnassigned"}">{$editorSubmissionsCount[0]} {translate key="common.queue.short.submissionsUnassigned"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsUnassigned"}</span>{/if}
@@ -63,13 +79,20 @@
 						<a href="{url journal=$journalPath page="editor" op="submissions" path="submissionsInEditing"}">{$editorSubmissionsCount[2]} {translate key="common.queue.short.submissionsInEditing"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.submissionsInEditing"}</span>{/if}
 				</td>
-				<td align="right">[<a href="{url journal=$journalPath page="editor" op="createIssue"}">{translate key="editor.issues.createIssue"}</a>] [<a href="{url journal=$journalPath page="editor" op="notifyUsers"}">{translate key="editor.notifyUsers"}</a>]</td>
+				{* 20111201 BLH Don't display 'Create Issue' Link for UEE *}
+				<td align="right">
+				{if $journalPath != 'nelc_uee' || $isSiteAdmin}
+					[<a href="{url journal=$journalPath page="editor" op="createIssue"}">{translate key="editor.issues.createIssue"}</a>] 
+				{/if}
+				{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
+				{*[<a href="{url journal=$journalPath page="editor" op="notifyUsers"}">{translate key="editor.notifyUsers"}</a>]*}
+				</td>
 			</tr>
 		{/if}
 		{if $isValid.SectionEditor.$journalId}
 			{assign var="sectionEditorSubmissionsCount" value=$submissionsCount.SectionEditor.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="sectionEditor"}">{translate key="user.role.sectionEditor"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="sectionEditor"}">{translate key="user.rolefunction.sectionEditor"}</a></td>
 				<td></td>
 				<td>{if $sectionEditorSubmissionsCount[0]}
 						<a href="{url journal=$journalPath page="sectionEditor" op="index" path="submissionsInReview"}">{$sectionEditorSubmissionsCount[0]} {translate key="common.queue.short.submissionsInReview"}</a>
@@ -85,7 +108,7 @@
 		{if $isValid.LayoutEditor.$journalId}
 			{assign var="layoutEditorSubmissionsCount" value=$submissionsCount.LayoutEditor.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="layoutEditor"}">{translate key="user.role.layoutEditor"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="layoutEditor"}">{translate key="user.rolefunction.layoutEditor"}</a></td>
 				<td></td>
 				<td></td>
 				<td>{if $layoutEditorSubmissionsCount[0]}
@@ -98,7 +121,7 @@
 		{if $isValid.Copyeditor.$journalId}
 			{assign var="copyeditorSubmissionsCount" value=$submissionsCount.Copyeditor.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="copyeditor"}">{translate key="user.role.copyeditor"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="copyeditor"}">{translate key="user.rolefunction.copyeditor"}</a></td>
 				<td></td>
 				<td></td>
 				<td>{if $copyeditorSubmissionsCount[0]}
@@ -111,7 +134,7 @@
 		{if $isValid.Proofreader.$journalId}
 			{assign var="proofreaderSubmissionsCount" value=$submissionsCount.Proofreader.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="proofreader"}">{translate key="user.role.proofreader"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="proofreader"}">{translate key="user.rolefunction.proofreader"}</a></td>
 				<td></td>
 				<td></td>
 				<td>{if $proofreaderSubmissionsCount[0]}
@@ -127,7 +150,7 @@
 		{if $isValid.Author.$journalId}
 			{assign var="authorSubmissionsCount" value=$submissionsCount.Author.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="author"}">{translate key="user.role.author"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="author"}">{translate key="user.rolefunction.author"}</a></td>
 				<td></td>
 				<td></td>
 				<td>{if $authorSubmissionsCount[0]}
@@ -140,7 +163,7 @@
 		{if $isValid.Reviewer.$journalId}
 			{assign var="reviewerSubmissionsCount" value=$submissionsCount.Reviewer.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="reviewer"}">{translate key="user.role.reviewer"}</a></td>
+				<td>&#187; <a href="{url journal=$journalPath page="reviewer"}">{translate key="user.rolefunction.reviewer"}</a></td>
 				<td></td>
 				<td></td>
 				<td>{if $reviewerSubmissionsCount[0]}
@@ -216,7 +239,7 @@
 			<li>&#187; <a href="{url page="user" op="subscriptions"}">{translate key="user.manageMySubscriptions"}</a></li>
 		{/if}
 	{/if}
-	<li>&#187; <a href="{url page="user" op="profile"}">{translate key="user.editMyProfile"}</a></li>
+        <li>&#187; <a href="{url page="user" op="profile"}">{translate key="user.editMyProfile"}</a></li>
 
 	{if !$implicitAuth}
 		<li>&#187; <a href="{url page="user" op="changePassword"}">{translate key="user.changeMyPassword"}</a></li>
@@ -232,7 +255,7 @@
 		{/if}{* $journalPaymentsEnabled && $membershipEnabled *}
 	{/if}{* $userJournal *}
 
-	<li>&#187; <a href="{url page="login" op="signOut"}">{translate key="user.logOut"}</a></li>
+	<li>&#187; <a href="/subi/logout">{translate key="user.logOut"}</a></li>
 	{call_hook name="Templates::User::Index::MyAccount"}
 </ul>
 </div>
