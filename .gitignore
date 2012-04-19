@@ -7,3 +7,4 @@ files
 .project
 .buildpath
 .settings
+ojs_db_connect.php
