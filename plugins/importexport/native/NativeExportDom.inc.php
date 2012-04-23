@@ -164,6 +164,8 @@ class NativeExportDom {
 			XMLCustomWriter::setAttribute($idNode, 'type', 'doi');
 		}
 
+		XMLCustomWriter::setAttribute($root, 'hideAuthor', $article->getHideAuthor()?'true':'false');
+
                 /* --- JOURNAL FIELDS --- */
 
                 XMLCustomWriter::createChildWithText($doc, $root, 'journal_id', $journal->getPath(), false);
