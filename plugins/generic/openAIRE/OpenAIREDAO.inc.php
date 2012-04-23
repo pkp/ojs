@@ -54,7 +54,7 @@ class OpenAIREDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 		$result =& $this->retrieve(
-			'SELECT	pa.pub_id,
+			'SELECT	pa.published_article_id,
 					pa.date_published,
 					pa.seq,
 					pa.views,
@@ -114,7 +114,7 @@ class OpenAIREDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 		$result =& $this->retrieve(
-			'SELECT	pa.pub_id,
+			'SELECT	pa.published_article_id,
 					pa.date_published,
 					pa.seq,
 					pa.views,

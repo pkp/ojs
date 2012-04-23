@@ -45,7 +45,7 @@ class JournalStatisticsDAO extends DAO {
 		$sql =	'SELECT	a.article_id,
 				a.date_submitted,
 				pa.date_published,
-				pa.pub_id,
+				pa.published_article_id,
 				d.decision,
 				a.status
 			FROM	articles a
@@ -89,7 +89,7 @@ class JournalStatisticsDAO extends DAO {
 				$articleIds[] = $row['article_id'];
 				$returner['numSubmissions']++;
 
-				if (!empty($row['pub_id']) && $row['status'] == STATUS_PUBLISHED) {
+				if (!empty($row['published_article_id']) && $row['status'] == STATUS_PUBLISHED) {
 					$returner['numPublishedSubmissions']++;
 				}
 
