@@ -444,10 +444,10 @@ class Upgrade extends Installer {
 	function migrateUserSettings() {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 
-		$result =& $userSettingsDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
+		$result =& $userSettingsDao->retrieve('SELECT u.user_id, u.setting_name, u.setting_value, u.setting_type, s.primary_locale FROM user_settings_old u, site s');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, assoc_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], (int) $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
+			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, assoc_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], (int) $row['journal_id'], $row['setting_value'], $row['setting_type'], $row['primary_locale']));
 			$result->MoveNext();
 		}
 		$result->Close();
