@@ -232,8 +232,8 @@ class CrossRefExportDom {
 			XMLCustomWriter::setAttribute($authorNode, 'sequence', 'additional');
 		}
 
-		XMLCustomWriter::createChildWithText($doc, $authorNode, 'given_name', ucfirst($author->getFirstName()).(($author->getMiddleName())?' '.ucfirst($author->getMiddleName()):''));
-		XMLCustomWriter::createChildWithText($doc, $authorNode, 'surname', ucfirst($author->getLastName()));
+		XMLCustomWriter::createChildWithText($doc, $authorNode, 'given_name', ucfirst($author->getLocalizedFirstName()).(($author->getLocalizedMiddleName())?' '.ucfirst($author->getLocalizedMiddleName()):''));
+		XMLCustomWriter::createChildWithText($doc, $authorNode, 'surname', ucfirst($author->getLocalizedLastName()));
 
 		return $authorNode;
 	}

@@ -131,6 +131,12 @@ class ProofreaderSubmissionDAO extends DAO {
 		$locale = AppLocale::getLocale();
 
 		$params = array(
+			$primaryLocale, 'firstName',
+			$locale, 'firstName',
+			$primaryLocale, 'middleName',
+			$locale, 'middleName',
+			$primaryLocale, 'lastName',
+			$locale, 'lastName',
 			'title', // Section title
 			$primaryLocale,
 			'title',
@@ -142,13 +148,13 @@ class ProofreaderSubmissionDAO extends DAO {
 			'cleanTitle', // Article title
 			'cleanTitle',
 			$locale,
-			ASSOC_TYPE_ARTICLE, 
+			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_COPYEDITING_FINAL',
-			ASSOC_TYPE_ARTICLE, 
+			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_LAYOUT',
-			ASSOC_TYPE_ARTICLE, 
+			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_PROOFREADING_PROOFREADER',
-			ASSOC_TYPE_ARTICLE, 
+			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_COPYEDITING_INITIAL',
 			$proofreaderId
 		);
@@ -174,18 +180,18 @@ class ProofreaderSubmissionDAO extends DAO {
 				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+				$first_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslln.setting_value');
+				$first_middle_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslmn.setting_value', '\' \'', 'aslln.setting_value');
+				$last_comma_first = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value');
+				$last_comma_first_middle = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value', '\' \'', 'aslmn.setting_value');
 
 				if ($searchMatch === 'is') {
-					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 				} elseif ($searchMatch === 'contains') {
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = '%' . $search . '%';
 				} else { // $searchMatch === 'startsWith'
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = $search . '%';
 				}
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
@@ -247,12 +253,17 @@ class ProofreaderSubmissionDAO extends DAO {
 				spr.date_notified AS date_assigned,
 				spr.date_completed AS date_completed,
 				SUBSTRING(COALESCE(atl.setting_value, atpl.setting_value) FROM 1 FOR 255) AS submission_title,
-				aap.last_name AS author_name,
+				aslln.setting_value AS author_name,
 				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
 				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev
 			FROM	articles a
 				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
-				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -274,7 +285,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		if ($active) {
 			$sql .= ' AND spr.date_completed IS NULL';
 		} else {
-			$sql .= ' AND spr.date_completed IS NOT NULL';		
+			$sql .= ' AND spr.date_completed IS NOT NULL';
 		}
 
 		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''), $params, $rangeInfo);
@@ -293,13 +304,13 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT 
-					spp.date_completed 
-				FROM 
-					articles a 
+		$sql = 'SELECT
+					spp.date_completed
+				FROM
+					articles a
 					LEFT JOIN signoffs spp ON (a.article_id = spp.assoc_id AND spp.assoc_type = ? AND spp.symbolic = ?)
-					LEFT JOIN sections s ON s.section_id = a.section_id 
-				WHERE 
+					LEFT JOIN sections s ON s.section_id = a.section_id
+				WHERE
 					spp.user_id = ? AND a.journal_id = ? AND spp.date_notified IS NOT NULL';
 
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
@@ -315,7 +326,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string

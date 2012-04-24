@@ -902,7 +902,6 @@ class Upgrade extends Installer {
 		return true;
 	}
 
-
 	/**
 	 * For 2.3.7 Upgrade -- Remove author revised file upload IDs erroneously added to copyedit signoff
 	 */
@@ -929,6 +928,49 @@ class Upgrade extends Installer {
 
 			$result->MoveNext();
 		}
+
+		return true;
+	}
+
+	/**
+	 * For 2.4.0 Upgrade -- Localize Author names
+	 */
+	function migrateAuthorNames() {
+		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+
+		$result =& $authorDao->retrieve('SELECT aa.author_id, aa.first_name, aa.middle_name, aa.last_name, j.primary_locale FROM authors aa JOIN articles a ON (a.article_id = aa.submission_id) JOIN journals j ON (j.journal_id = a.journal_id)');
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$locale = $row['primary_locale'];
+
+			$keyFields = array('setting_name', 'locale', 'author_id');
+
+			$authorSetting = array(
+				'author_id' => $row['autor_id'],
+				'setting_name' => 'firstName',
+				'setting_value' => $row['first_name'],
+				'setting_type' => 'string',
+				'locale' => $locale
+			);
+
+			// Add author first name to settings table
+			$this->replace('author_settings', $authorSetting, $keyFields);
+
+			// Add middle name
+			$authorSetting['setting_name'] = 'middleName';
+			$authorSetting['setting_value'] = $row['middle_name'];
+			$this->replace('author_settings', $authorSetting, $keyFields);
+
+			// Add last name
+			$authorSetting['setting_name'] = 'lastName';
+			$authorSetting['setting_value'] = $row['last_name'];
+			$this->replace('author_settings', $authorSetting, $keyFields);
+
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
 
 		return true;
 	}

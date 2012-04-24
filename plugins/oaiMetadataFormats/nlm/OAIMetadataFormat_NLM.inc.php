@@ -106,8 +106,8 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			$response .=
 				"\t\t\t\t<contrib " . ($author->getPrimaryContact()?'corresp="yes" ':'') . "contrib-type=\"author\">\n" .
 				"\t\t\t\t\t<name name-style=\"western\">\n" .
-				"\t\t\t\t\t\t<surname>" . htmlspecialchars(Core::cleanVar($author->getLastName())) . "</surname>\n" .
-				"\t\t\t\t\t\t<given-names>" . htmlspecialchars(Core::cleanVar($author->getFirstName()) . (($s = $author->getMiddleName()) != ''?" $s":'')) . "</given-names>\n" .
+				"\t\t\t\t\t\t<surname>" . htmlspecialchars(Core::cleanVar($author->getLocalizedLastName())) . "</surname>\n" .
+				"\t\t\t\t\t\t<given-names>" . htmlspecialchars(Core::cleanVar($author->getLocalizedFirstName()) . (($s = $author->getLocalizedMiddleName()) != ''?" $s":'')) . "</given-names>\n" .
 				"\t\t\t\t\t</name>\n" .
 				(($s = $author->getLocalizedAffiliation()) != ''?"\t\t\t\t\t<aff>" . htmlspecialchars(Core::cleanVar($s)) . "</aff>\n":'') .
 				"\t\t\t\t\t<email>" . htmlspecialchars(Core::cleanVar($author->getEmail())) . "</email>\n" .

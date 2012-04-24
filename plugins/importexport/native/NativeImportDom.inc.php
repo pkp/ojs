@@ -909,9 +909,36 @@ class NativeImportDom {
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
 		$author = new Author();
-		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
-		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
-		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
+		for ($index=0; ($node = $authorNode->getChildByName('firstname', $index)); $index++) {
+			$locale = $node->getAttribute('locale');
+			if ($locale == '') {
+				$locale = $journalPrimaryLocale;
+			} elseif (!in_array($locale, $journalSupportedLocales)) {
+				$errors[] = array('plugins.importexport.native.import.error.articleAuthorFirstnameLocaleUnsupported', array('articleTitle' => $article->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				return false;
+			}
+			$author->setFirstName($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $authorNode->getChildByName('middlename', $index)); $index++) {
+			$locale = $node->getAttribute('locale');
+			if ($locale == '') {
+				$locale = $journalPrimaryLocale;
+			} elseif (!in_array($locale, $journalSupportedLocales)) {
+				$errors[] = array('plugins.importexport.native.import.error.articleAuthorMiddlenameLocaleUnsupported', array('articleTitle' => $article->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				return false;
+			}
+			$author->setMiddleName($node->getValue(), $locale);
+		}
+		for ($index=0; ($node = $authorNode->getChildByName('lastname', $index)); $index++) {
+			$locale = $node->getAttribute('locale');
+			if ($locale == '') {
+				$locale = $journalPrimaryLocale;
+			} elseif (!in_array($locale, $journalSupportedLocales)) {
+				$errors[] = array('plugins.importexport.native.import.error.articleAuthorLastnameLocaleUnsupported', array('articleTitle' => $article->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				return false;
+			}
+			$author->setLastName($node->getValue(), $locale);
+		}
 		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
 			if ($locale == '') {

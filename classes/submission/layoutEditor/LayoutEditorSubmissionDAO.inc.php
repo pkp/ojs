@@ -107,7 +107,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$submission->setEditAssignments($editAssignments->toArray());
 
-		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row)); 
+		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row));
 
 		return $submission;
 	}
@@ -129,6 +129,12 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$params = array(
+			$primaryLocale, 'firstName',
+			$locale, 'firstName',
+			$primaryLocale, 'middleName',
+			$locale, 'middleName',
+			$primaryLocale, 'lastName',
+			$locale, 'lastName',
 			'title', // Section title
 			$primaryLocale,
 			'title',
@@ -172,18 +178,18 @@ class LayoutEditorSubmissionDAO extends DAO {
 				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+				$first_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslln.setting_value');
+				$first_middle_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslmn.setting_value', '\' \'', 'aslln.setting_value');
+				$last_comma_first = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value');
+				$last_comma_first_middle = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value', '\' \'', 'aslmn.setting_value');
 
 				if ($searchMatch === 'is') {
-					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 				} elseif ($searchMatch === 'contains') {
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = '%' . $search . '%';
 				} else { // $searchMatch === 'startsWith'
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = $search . '%';
 				}
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
@@ -245,13 +251,18 @@ class LayoutEditorSubmissionDAO extends DAO {
 				a.*,
 				sle.date_notified AS notified_date,
 				sle.date_completed AS completed_date,
-				aap.last_name AS author_name,
+				aslln.setting_value AS author_name,
 				SUBSTRING(COALESCE(atl.setting_value, atpl.setting_value) FROM 1 FOR 255) AS submission_title,
 				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
 				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev
 			FROM	articles a
-				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
-				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
+				LEFT JOIN authors aap ON (aa.submission_id = a.article_id)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -271,7 +282,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 				sle.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND a.status = ' . STATUS_QUEUED . ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)'; 
+			$sql .= ' AND a.status = ' . STATUS_QUEUED . ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)';
 		} else {
 			$sql .= ' AND a.status <> ' . STATUS_QUEUED . ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
 		}
@@ -296,15 +307,15 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT	
+		$sql = 'SELECT
 					sl.date_completed AS le_date_completed,
 					spl.date_completed AS pr_date_completed
-				FROM	
+				FROM
 					articles a
 					LEFT JOIN signoffs sl ON (a.article_id = sl.assoc_id AND sl.assoc_type = ? AND sl.symbolic = ?)
 					LEFT JOIN signoffs spl ON (a.article_id = spl.assoc_id AND spl.assoc_type = ? AND spl.symbolic = ?)
 					LEFT JOIN sections s ON (s.section_id = a.section_id)
-				WHERE	
+				WHERE
 					sl.user_id = ? AND a.journal_id = ? AND sl.date_notified IS NOT NULL';
 
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
@@ -322,7 +333,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	function getProofedArticlesByIssueId($issueId) {
 		$articleIds = array();
 
@@ -342,8 +353,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		return $articleIds;
 	}
-	
-		
+
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string
@@ -357,7 +368,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			case 'authors': return 'author_name';
 			case 'title': return 'submission_title';
 			case 'dateCompleted': return 'completed_date';
-			case 'status': return 'a.status';			
+			case 'status': return 'a.status';
 			default: return null;
 		}
 	}

@@ -94,21 +94,27 @@ class ArticleReportDAO extends DAO {
 		$index = 1;
 		while ($article =& $articles->next()) {
 			$result =& $this->retrieve(
-				'SELECT	aa.first_name AS fname,
-					aa.middle_name AS mname,
-					aa.last_name AS lname,
-					aa.email AS email,
+				'SELECT	aa.email AS email,
 					aa.country AS country,
 					aa.url AS url,
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography,
-					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation
+					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation,
+					COALESCE(aaasfnl.setting_value, aaasfn.setting_value) AS fname,
+					COALESCE(aaasmnl.setting_value, aaasmn.setting_value) AS mname,
+					COALESCE(aaaslnl.setting_value, aaasln.setting_value) AS lname
 				FROM	authors aa
 					LEFT JOIN articles a ON (aa.submission_id = a.article_id)
 					LEFT JOIN author_settings aas ON (aa.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
 					LEFT JOIN author_settings aasl ON (aa.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 					LEFT JOIN author_settings aaas ON (aa.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = ?)
 					LEFT JOIN author_settings aaasl ON (aa.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
-				WHERE
+					LEFT JOIN author_settings aaasfn ON (aa.author_id = aaasfn.author_id AND aaasfn.setting_name = ? AND aaasfn.locale = ?)
+					LEFT JOIN author_settings aaasfnl ON (aa.author_id = aaasfnl.author_id AND aaasfnl.setting_name = ? AND aaasfnl.locale = ?)
+					LEFT JOIN author_settings aaasmn ON (aa.author_id = aaasmn.author_id AND aaasmn.setting_name = ? AND aaasmn.locale = ?)
+					LEFT JOIN author_settings aaasmnl ON (aa.author_id = aaasmnl.author_id AND aaasmnl.setting_name = ? AND aaasmnl.locale = ?)
+					LEFT JOIN author_settings aaasln ON (aa.author_id = aaasln.author_id AND aaasln.setting_name = ? AND aaasln.locale = ?)
+					LEFT JOIN author_settings aaaslnl ON (aa.author_id = aaaslnl.author_id AND aaaslnl.setting_name = ? AND aaaslnl.locale = ?)
+					WHERE
 					a.journal_id = ? AND
 					aa.submission_id = ?',
 				array(
@@ -119,6 +125,18 @@ class ArticleReportDAO extends DAO {
 					'affiliation',
 					$primaryLocale,
 					'affiliation',
+					$locale,
+					'firstName',
+					$primaryLocale,
+					'firstName',
+					$locale,
+					'middleName',
+					$primaryLocale,
+					'middleName',
+					$locale,
+					'lastName',
+					$primaryLocale,
+					'lastName',
 					$locale,
 					$journalId,
 					$article->getId()

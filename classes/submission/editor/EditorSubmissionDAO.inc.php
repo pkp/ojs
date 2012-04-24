@@ -182,6 +182,8 @@ class EditorSubmissionDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$params = array(
+			'lastName', $locale,
+			'lastName', $primaryLocale,
 			ASSOC_TYPE_ARTICLE,
 			'SIGNOFF_COPYEDITING_FINAL',
 			ASSOC_TYPE_ARTICLE,
@@ -280,12 +282,13 @@ class EditorSubmissionDAO extends DAO {
 				spr.date_completed as proofread_completed,
 				sle.date_completed as layout_completed,
 				SUBSTR(COALESCE(atl.setting_value, atpl.setting_value) FROM 1 FOR 255) AS submission_title,
-				aap.last_name AS author_name,
+				SUBSTR(COALESCE(aslln.setting_value, asplln.setting_value) FROM 1 FOR 255) AS author_name,
 				SUBSTR(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
-				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
 				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
+				LEFT JOIN author_settings aslln ON (aap.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
+				LEFT JOIN author_settings asplln ON (aap.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)

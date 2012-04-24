@@ -315,10 +315,25 @@ class NativeExportDom {
 		$root =& XMLCustomWriter::createElement($doc, 'author');
 		if ($author->getPrimaryContact()) XMLCustomWriter::setAttribute($root, 'primary_contact', 'true');
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'firstname', $author->getFirstName());
-		XMLCustomWriter::createChildWithText($doc, $root, 'middlename', $author->getMiddleName(), false);
-		XMLCustomWriter::createChildWithText($doc, $root, 'lastname', $author->getLastName());
 
+		$firstnames = $author->getFirstName(null);
+		if (is_array($firstnames)) foreach ($firstnames as $locale => $firstname) {
+			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'firstname', $firstname, false);
+			XMLCustomWriter::setAttribute($n, 'locale', $locale);
+			unset($n);
+		}
+		$middlenames = $author->getMiddleName(null);
+		if (is_array($middlenames)) foreach ($middlenames as $locale => $middlename) {
+			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'middlename', $middlename, false);
+			XMLCustomWriter::setAttribute($n, 'locale', $locale);
+			unset($n);
+		}
+		$lastnames = $author->getLastName(null);
+		if (is_array($lastnames)) foreach ($lastnames as $locale => $lastname) {
+			$n =& XMLCustomWriter::createChildWithText($doc, $root, 'lastname', $lastname, false);
+			XMLCustomWriter::setAttribute($n, 'locale', $locale);
+			unset($n);
+		}
 		$affiliations = $author->getAffiliation(null);
 		if (is_array($affiliations)) foreach ($affiliations as $locale => $affiliation) {
 			$affiliationNode =& XMLCustomWriter::createChildWithText($doc, $root, 'affiliation', $affiliation, false);

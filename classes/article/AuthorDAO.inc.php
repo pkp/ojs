@@ -13,9 +13,6 @@
  * @brief Operations for retrieving and modifying Author objects.
  */
 
-// $Id$
-
-
 import('classes.article.Author');
 import('classes.article.Article');
 import('lib.pkp.classes.submission.PKPAuthorDAO');
@@ -42,9 +39,8 @@ class AuthorDAO extends PKPAuthorDAO {
 		$publishedArticles = array();
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$params = array(
-			'affiliation',
-			$firstName, $middleName, $lastName,
-			$affiliation, $country
+			'affiliation','firstName', 'middleName', 'lastName',
+			$firstName, $middleName, $lastName, $affiliation, $country
 		);
 		if ($journalId !== null) $params[] = (int) $journalId;
 
@@ -54,10 +50,13 @@ class AuthorDAO extends PKPAuthorDAO {
 			FROM	authors aa
 				LEFT JOIN articles a ON (aa.submission_id = a.article_id)
 				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ?)
-			WHERE	aa.first_name = ?
-				AND a.status = ' . STATUS_PUBLISHED . '
-				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
-				AND aa.last_name = ?
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ?)
+			WHERE a.status = ' . STATUS_PUBLISHED . '
+				AND aslfn.setting_value = ?
+				AND (aslmn.setting_value = ?' . (empty($middleName)?' OR aslmn.setting_value IS NULL':'') . ')
+				AND aslln.setting_value = ?
 				AND (asl.setting_value = ?' . (empty($affiliation)?' OR asl.setting_value IS NULL':'') . ')
 				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
 				($journalId!==null?(' AND a.journal_id = ?'):''),
@@ -96,13 +95,19 @@ class AuthorDAO extends PKPAuthorDAO {
 		$authors = array();
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
-			'affiliation', AppLocale::getLocale()
+			'affiliation', AppLocale::getLocale(),
+			'firstName', AppLocale::getPrimaryLocale(),
+			'firstName', AppLocale::getLocale(),
+			'middleName', AppLocale::getPrimaryLocale(),
+			'middleName', AppLocale::getLocale(),
+			'lastName', AppLocale::getPrimaryLocale(),
+			'lastName', AppLocale::getLocale()
 		);
 
 		if (isset($journalId)) $params[] = $journalId;
 		if (isset($initial)) {
 			$params[] = String::strtolower($initial) . '%';
-			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
+			$initialSql = ' AND LOWER(aslln.setting_value) LIKE LOWER(?)';
 		} else {
 			$initialSql = '';
 		}
@@ -115,9 +120,12 @@ class AuthorDAO extends PKPAuthorDAO {
 				' . ($includeEmail?'aa.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
 				0 AS primary_contact,
 				0 AS seq,
-				aa.first_name,
-				aa.middle_name,
-				aa.last_name,
+				SUBSTRING(COALESCE(aslfn.setting_value, asplfn.setting_value) FROM 1 FOR 255) as first_name_l,
+				SUBSTRING(asplfn.setting_value FROM 1 FOR 255) as first_name_pl,
+				SUBSTRING(COALESCE(aslmn.setting_value, asplmn.setting_value) FROM 1 FOR 255) as middle_name_l,
+				SUBSTRING(asplmn.setting_value FROM 1 FOR 255) as middle_name_pl,
+				SUBSTRING(COALESCE(aslln.setting_value, asplln.setting_value) FROM 1 FOR 255) as last_name_l,
+				SUBSTRING(asplln.setting_value FROM 1 FOR 255) as last_name_pl,
 				SUBSTRING(asl.setting_value FROM 1 FOR 255) AS affiliation_l,
 				asl.locale,
 				SUBSTRING(aspl.setting_value FROM 1 FOR 255) AS affiliation_pl,
@@ -126,6 +134,12 @@ class AuthorDAO extends PKPAuthorDAO {
 			FROM	authors aa
 				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 				LEFT JOIN articles a ON (a.article_id = aa.submission_id)
 				LEFT JOIN published_articles pa ON (pa.article_id = a.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
@@ -134,9 +148,9 @@ class AuthorDAO extends PKPAuthorDAO {
 				(isset($journalId)?'a.journal_id = ? AND ':'') . '
 				pa.article_id = a.article_id AND
 				a.status = ' . STATUS_PUBLISHED . ' AND
-				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
+				(asplln.setting_value IS NOT NULL AND asplln.setting_value <> \'\')' .
 				$initialSql . '
-			ORDER BY aa.last_name, aa.first_name',
+			ORDER BY last_name_l, first_name_l',
 			$params,
 			$rangeInfo
 		);
@@ -160,14 +174,11 @@ class AuthorDAO extends PKPAuthorDAO {
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO authors
-				(submission_id, first_name, middle_name, last_name, country, email, url, primary_contact, seq)
+				(submission_id, country, email, url, primary_contact, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				$author->getSubmissionId(),
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
@@ -189,19 +200,13 @@ class AuthorDAO extends PKPAuthorDAO {
 	function updateAuthor(&$author) {
 		$returner = $this->update(
 			'UPDATE authors
-			SET	first_name = ?,
-				middle_name = ?,
-				last_name = ?,
-				country = ?,
+			SET	country = ?,
 				email = ?,
 				url = ?,
 				primary_contact = ?,
 				seq = ?
 			WHERE	author_id = ?',
 			array(
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),

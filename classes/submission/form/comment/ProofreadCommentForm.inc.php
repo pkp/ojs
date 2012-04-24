@@ -35,7 +35,7 @@ class ProofreadCommentForm extends CommentForm {
 		$templateMgr->assign('pageTitle', 'submission.comments.corrections');
 		$templateMgr->assign('commentAction', 'postProofreadComment');
 		$templateMgr->assign('commentType', 'proofread');
-		$templateMgr->assign('hiddenFormParams', 
+		$templateMgr->assign('hiddenFormParams',
 			array(
 				'articleId' => $this->article->getId()
 			)
@@ -65,7 +65,7 @@ class ProofreadCommentForm extends CommentForm {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();	
+		$journal =& Request::getJournal();
 
 		// Create list of recipients:
 		$recipients = array();

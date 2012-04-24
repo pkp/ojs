@@ -165,9 +165,9 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$user =& $this->request->getUser();
 			$author = new Author();
 			$author->setSubmissionId($this->articleId);
-			$author->setFirstName($user->getFirstName());
-			$author->setMiddleName($user->getMiddleName());
-			$author->setLastName($user->getLastName());
+			$author->setFirstName($user->getFirstName(), $this->getData('locale'));
+			$author->setMiddleName($user->getMiddleName(), $this->getData('locale'));
+			$author->setLastName($user->getLastName(), $this->getData('locale'));
 			$author->setAffiliation($user->getAffiliation(null), null);
 			$author->setCountry($user->getCountry());
 			$author->setEmail($user->getEmail());

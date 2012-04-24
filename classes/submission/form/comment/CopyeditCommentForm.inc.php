@@ -38,7 +38,7 @@ class CopyeditCommentForm extends CommentForm {
 		$templateMgr->assign('pageTitle', 'submission.comments.copyeditComments');
 		$templateMgr->assign('commentAction', 'postCopyeditComment');
 		$templateMgr->assign('commentType', 'copyedit');
-		$templateMgr->assign('hiddenFormParams', 
+		$templateMgr->assign('hiddenFormParams',
 			array(
 				'articleId' => $article->getId()
 			)

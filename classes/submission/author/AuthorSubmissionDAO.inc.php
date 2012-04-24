@@ -171,13 +171,22 @@ class AuthorSubmissionDAO extends DAO {
 		$locale = AppLocale::getLocale();
 		$result =& $this->retrieveRange(
 			'SELECT	a.*,
+				aslfn.setting_value as first_name,
+				aslmn.setting_value as middle_name,
+				aslln.setting_value as last_name,
 				COALESCE(atl.setting_value, atpl.setting_value) AS submission_title,
-				aa.last_name AS author_name,
+				aslln.setting_value AS author_name,
 				(SELECT SUM(g.views) FROM article_galleys g WHERE (g.article_id = a.article_id AND g.locale = ?)) AS galley_views,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
 				LEFT JOIN authors aa ON (aa.submission_id = a.article_id AND aa.primary_contact = 1)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
@@ -186,9 +195,15 @@ class AuthorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	a.user_id = ? AND a.journal_id = ? AND ' .
-			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')) . 
+			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')) .
 			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			array(
+				'firstName', $primaryLocale,
+				'firstName', $locale,
+				'middleName', $primaryLocale,
+				'middleName', $locale,
+				'lastName', $primaryLocale,
+				'lastName', $locale,
 				$locale,
 				'cleanTitle',
 				'cleanTitle',
@@ -278,7 +293,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string

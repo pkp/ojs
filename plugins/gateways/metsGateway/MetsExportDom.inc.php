@@ -576,9 +576,9 @@ class MetsExportDom {
 	function &generateAuthorDom(&$doc, $author) {
 		$presenterNode =& XMLCustomWriter::createElement($doc, 'mods:name');
 		XMLCustomWriter::setAttribute($presenterNode, 'type', 'personal');
-		$fNameNode =&XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $author->getFirstName().' '.$author->getMiddleName());
+		$fNameNode =&XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $author->getLocalizedFirstName().' '.$author->getLocalizedMiddleName());
 		XMLCustomWriter::setAttribute($fNameNode, 'type', 'given');
-		$lNameNode =&XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $author->getLastName());
+		$lNameNode =&XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $author->getLocalizedLastName());
 		XMLCustomWriter::setAttribute($lNameNode, 'type', 'family');
 		$role =& XMLCustomWriter::createElement($doc, 'mods:role');
 		$roleTerm =&XMLCustomWriter::createChildWithText($doc, $role, 'mods:roleTerm', 'author');

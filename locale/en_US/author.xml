@@ -75,6 +75,8 @@
 	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
+	<message key="author.submit.form.authorFirstNameRequired">The first name of each author in the primary locale is required.</message>
+	<message key="author.submit.form.authorLastNameRequired">The last name of each author in the primary locale is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="author.submit.form.titleRequired">Please enter the title of your article.</message>
 	<message key="author.submit.form.abstractRequired">Please enter the abstract of your article.</message>

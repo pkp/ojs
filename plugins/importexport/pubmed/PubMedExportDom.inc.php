@@ -189,9 +189,9 @@ class PubMedExportDom {
 	function &generateAuthorDom(&$doc, &$author) {
 		$root =& XMLCustomWriter::createElement($doc, 'Author');
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'FirstName', ucfirst($author->getFirstName()));
-		XMLCustomWriter::createChildWithText($doc, $root, 'MiddleName', ucfirst($author->getMiddleName()), false);
-		XMLCustomWriter::createChildWithText($doc, $root, 'LastName', ucfirst($author->getLastName()));
+		XMLCustomWriter::createChildWithText($doc, $root, 'FirstName', ucfirst($author->getLocalizedFirstName()));
+		XMLCustomWriter::createChildWithText($doc, $root, 'MiddleName', ucfirst($author->getLocalizedMiddleName()), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'LastName', ucfirst($author->getLocalizedLastName()));
 
 		if ($author->getPrimaryContact()) {
 			XMLCustomWriter::createChildWithText($doc, $root, 'Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail(), false);

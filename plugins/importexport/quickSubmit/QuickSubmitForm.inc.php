@@ -35,7 +35,8 @@ class QuickSubmitForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'destination', 'required', 'plugins.importexport.quickSubmit.issueRequired', create_function('$destination, $form', 'return $destination == \'queue\'? true : ($form->getData(\'issueId\') > 0);'), array(&$this)));
-		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorFirstNameRequired', create_function('$firstName, $requiredLocale', 'return !empty($firstName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('firstName')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorLastNameRequired', create_function('$lastName, $requiredLocale', 'return !empty($lastName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('lastName')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.emailRequired', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
@@ -227,9 +228,15 @@ class QuickSubmitForm extends Form {
 
 			if ($author != null) {
 				$author->setSubmissionId($articleId);
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
+				if (array_key_exists('firstName', $authors[$i])) {
+					$author->setFirstName($authors[$i]['firstName'], null);
+				}
+				if (array_key_exists('middleName', $authors[$i])) {
+					$author->setMiddleName($authors[$i]['middleName'], null);
+				}
+				if (array_key_exists('lastName', $authors[$i])) {
+					$author->setLastName($authors[$i]['lastName'], null);
+				}
 				if (array_key_exists('affiliation', $authors[$i])) {
 					$author->setAffiliation($authors[$i]['affiliation'], null);
 				}

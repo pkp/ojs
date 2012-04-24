@@ -109,7 +109,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		// Files
-		
+
 		// Information for Layout table access
 		$copyeditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		$copyeditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
@@ -135,6 +135,12 @@ class CopyeditorSubmissionDAO extends DAO {
 		$locale = AppLocale::getLocale();
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$params = array(
+			$primaryLocale, 'firstName',
+			$locale, 'firstName',
+			$primaryLocale, 'middleName',
+			$locale, 'middleName',
+			$primaryLocale, 'lastName',
+			$locale, 'lastName',
 			'title', // Section title
 			$primaryLocale,
 			'title',
@@ -179,18 +185,18 @@ class CopyeditorSubmissionDAO extends DAO {
 				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+				$first_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslln.setting_valuee');
+				$first_middle_last = $this->_dataSource->Concat('aslfn.setting_value', '\' \'', 'aslmn.setting_value', '\' \'', 'aslln.setting_value');
+				$last_comma_first = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value');
+				$last_comma_first_middle = $this->_dataSource->Concat('aslln.setting_value', '\', \'', 'aslfn.setting_value', '\' \'', 'aslmn.setting_valuee');
 
 				if ($searchMatch === 'is') {
-					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
 				} elseif ($searchMatch === 'contains') {
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = '%' . $search . '%';
 				} else { // $searchMatch === 'startsWith'
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$searchSql = " AND (LOWER(aslln.setting_value) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
 					$search = $search . '%';
 				}
 				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
@@ -253,7 +259,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				scpi.date_notified AS date_assigned,
 				scpf.date_completed AS date_completed,
 				SUBSTRING(COALESCE(atl.setting_value, atpl.setting_value) FROM 1 FOR 255) AS submission_title,
-				aap.last_name AS author_name,
+				aslln.setting_value AS author_name,
 				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
 				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev
 			FROM	articles a
@@ -261,6 +267,12 @@ class CopyeditorSubmissionDAO extends DAO {
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
 				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
 				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -308,7 +320,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				LEFT JOIN signoffs scf ON (a.article_id = scf.assoc_id AND scf.assoc_type = ? AND scf.symbolic = ?)
 				LEFT JOIN signoffs sci ON (a.article_id = sci.assoc_id AND sci.assoc_type = ? AND sci.symbolic = ?)
 			WHERE	a.journal_id = ? AND sci.user_id = ? AND sci.date_notified IS NOT NULL';
-					
+
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
 
 		while (!$result->EOF) {
@@ -331,7 +343,7 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string

@@ -217,15 +217,15 @@ function updateAbstractRequired() {
 			<table width="100%" class="data">
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][firstName]" id="authors-{$authorIndex|escape}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][firstName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-firstName" value="{$author.firstName[$formLocale]|escape}" size="20" maxlength="40" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-middleName" key="user.middleName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][middleName]" id="authors-{$authorIndex|escape}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][middleName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-middleName" value="{$author.middleName[$formLocale]|escape}" size="20" maxlength="40" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-lastName" required="true" key="user.lastName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][lastName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName[$formLocale]|escape}" size="20" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
@@ -282,15 +282,15 @@ function updateAbstractRequired() {
 			<table width="100%" class="data">
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-firstName" required="true" key="user.firstName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][firstName]" id="authors-0-firstName" size="20" maxlength="40" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][firstName][{$formLocale|escape}]" id="authors-0-firstName" size="20" maxlength="40" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-middleName" key="user.middleName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][middleName]" id="authors-0-middleName" size="20" maxlength="40" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][middleName][{$formLocale|escape}]" id="authors-0-middleName" size="20" maxlength="40" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-lastName" required="true" key="user.lastName"}</td>
-				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][lastName]" id="authors-0-lastName" size="20" maxlength="90" /></td>
+				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][lastName][{$formLocale|escape}]" id="authors-0-lastName" size="20" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>

@@ -25,10 +25,12 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
-		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorFirstNameRequired', create_function('$firstName, $requiredLocale', 'return !empty($firstName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('firstName')));
+		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorLastNameRequired', create_function('$lastName, $requiredLocale', 'return !empty($lastName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('lastName')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
+
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getSection($article->getSectionId());
@@ -70,9 +72,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 					$this->_data['authors'],
 					array(
 						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
+						'firstName' => $authors[$i]->getFirstName(null),
+						'middleName' => $authors[$i]->getMiddleName(null),
+						'lastName' => $authors[$i]->getLastName(null),
 						'affiliation' => $authors[$i]->getAffiliation(null),
 						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
@@ -196,9 +198,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 			if ($author != null) {
 				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
+				$author->setFirstName($authors[$i]['firstName'], null);
+				$author->setMiddleName($authors[$i]['middleName'], null);
+				$author->setLastName($authors[$i]['lastName'], null);
 				$author->setAffiliation($authors[$i]['affiliation'], null);
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
@@ -211,7 +213,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				$author->setSequence($authors[$i]['seq']);
 
 				HookRegistry::call('Author::Form::Submit::AuthorSubmitStep3Form::Execute', array(&$author, &$authors[$i]));
-				
+
 				if ($isExistingAuthor) {
 					$authorDao->updateAuthor($author);
 				} else {

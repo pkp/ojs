@@ -81,7 +81,8 @@ class MetadataForm extends Form {
 				))
 			);
 			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
-			$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
+			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorFirstNameRequired', create_function('$firstName, $requiredLocale', 'return !empty($firstName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('firstName')));
+			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorLastNameRequired', create_function('$lastName, $requiredLocale', 'return !empty($lastName[$requiredLocale]);'), array($this->getRequiredLocale()), false, array('lastName')));
 			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		} else {
@@ -145,9 +146,9 @@ class MetadataForm extends Form {
 					$this->_data['authors'],
 					array(
 						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
+						'firstName' => $authors[$i]->getFirstName(null), // Localized
+						'middleName' => $authors[$i]->getMiddleName(null), // Localized
+						'lastName' => $authors[$i]->getLastName(null), // Localized
 						'affiliation' => $authors[$i]->getAffiliation(null), // Localized
 						'country' => $authors[$i]->getCountry(),
 						'countryLocalized' => $authors[$i]->getCountryLocalized(),
@@ -377,9 +378,9 @@ class MetadataForm extends Form {
 
 			if ($author != null) {
 				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
+				$author->setFirstName($authors[$i]['firstName'], null); // Localized
+				$author->setMiddleName($authors[$i]['middleName'], null); // Localized
+				$author->setLastName($authors[$i]['lastName'], null); // Localized
 				$author->setAffiliation($authors[$i]['affiliation'], null); // Localized
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
@@ -392,7 +393,7 @@ class MetadataForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				HookRegistry::call('Submission::Form::MetadataForm::Execute', array(&$author, &$authors[$i]));
-				
+
 				if ($isExistingAuthor) {
 					$authorDao->updateAuthor($author);
 				} else {

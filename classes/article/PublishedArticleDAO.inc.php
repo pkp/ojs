@@ -629,7 +629,7 @@ class PublishedArticleDAO extends DAO {
 
 		return $articleIds;
 	}
-	
+
 	/**
 	 * creates and returns a published article object from a row, including all supp files etc.
 	 * @param $row array
@@ -831,15 +831,33 @@ class PublishedArticleDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	aa.*,
 				aspl.setting_value AS affiliation_pl,
-				asl.setting_value AS affiliation_l
+				asl.setting_value AS affiliation_l,
+				aslfn.setting_value as first_name_l,
+				asplfn.setting_value as first_name_pl,
+				aslmn.setting_value as middle_name_l,
+				asplmn.setting_value as middle_name_pl,
+				aslln.setting_value as last_name_l,
+				asplln.setting_value as last_name_pl
 			FROM	authors aa
 				LEFT JOIN published_articles pa ON (pa.article_id = aa.submission_id)
 				LEFT JOIN author_settings aspl ON (aspl.author_id = aa.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN author_settings asplfn ON (aa.author_id = asplfn.author_id AND asplfn.setting_name = ? AND asplfn.locale = ?)
+				LEFT JOIN author_settings aslfn ON (aa.author_id = aslfn.author_id AND aslfn.setting_name = ? AND aslfn.locale = ?)
+				LEFT JOIN author_settings asplmn ON (aa.author_id = asplmn.author_id AND asplmn.setting_name = ? AND asplmn.locale = ?)
+				LEFT JOIN author_settings aslmn ON (aa.author_id = aslmn.author_id AND aslmn.setting_name = ? AND aslmn.locale = ?)
+				LEFT JOIN author_settings asplln ON (aa.author_id = asplln.author_id AND asplln.setting_name = ? AND asplln.locale = ?)
+				LEFT JOIN author_settings aslln ON (aa.author_id = aslln.author_id AND aslln.setting_name = ? AND aslln.locale = ?)
 			WHERE	pa.issue_id = ? ORDER BY pa.issue_id',
 			array(
 				'affiliation', $primaryLocale,
 				'affiliation', $locale,
+				'firstName', $primaryLocale,
+				'firstName', $locale,
+				'middleName', $primaryLocale,
+				'middleName', $locale,
+				'lastName', $primaryLocale,
+				'lastName', $locale,
 				(int) $issueId
 			)
 		);
@@ -849,9 +867,12 @@ class PublishedArticleDAO extends DAO {
 			$author = new Author();
 			$author->setId($row['author_id']);
 			$author->setSubmissionId($row['article_id']);
-			$author->setFirstName($row['first_name']);
-			$author->setMiddleName($row['middle_name']);
-			$author->setLastName($row['last_name']);
+			$author->setFirstName($row['first_name_pl'], $primaryLocale);
+			$author->setFirstName($row['first_name_l'], $locale);
+			$author->setMiddleName($row['middle_name_pl'], $primaryLocale);
+			$author->setMiddleName($row['middle_name_l'], $locale);
+			$author->setLastName($row['last_name_pl'], $primaryLocale);
+			$author->setLastName($row['last_name_l'], $locale);
 			$author->setAffiliation($row['affiliation_pl'], $primaryLocale);
 			$author->setAffiliation($row['affiliation_l'], $locale);
 			$author->setEmail($row['email']);

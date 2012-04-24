@@ -17,9 +17,7 @@ Content-Transfer-Encoding: quoted-printable
 
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}
-
 {/foreach}
-
 
 {/foreach}
 {literal}{$templateSignature}{/literal}

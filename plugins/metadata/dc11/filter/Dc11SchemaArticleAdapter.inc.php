@@ -120,7 +120,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:contributor', $contributors);
 
-		
+
 		// Date
 		if (is_a($article, 'PublishedArticle')) {
 			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
@@ -180,8 +180,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 					$dc11Description->addStatement('dc:language', AppLocale::getIso3FromLocale($galleyLocale));
 				}
 			}
-		} 
-		
+		}
+
 		// Relation
 		if (is_a($article, 'PublishedArticle')) {
 			// full texts URLs
@@ -192,7 +192,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				$dc11Description->addStatement('dc:relation', $relation);
 				unset($relation);
 			}
-			// supp files URLs			
+			// supp files URLs
 			foreach ($article->getSuppFiles() as $suppFile) {
 				$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
 				$dc11Description->addStatement('dc:relation', $relation);
