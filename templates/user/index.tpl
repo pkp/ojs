@@ -17,10 +17,11 @@
  *}
 {strip}
 {* 20110825 BLH Assign translated value of [Journal] Home to page title. This also appears as breadcrumb. *}
+{* 20120423 LS Changing [Journal] Home to Journal Initials*} 
 {* {assign var="pageTitle" value="user.userHome"} *}
 {if $currentJournal}
-	{assign var="currentJournalPath" value=$currentJournal->getpath()}
-	{translate|assign:"pageTitleTranslated" key="navigation.journalHome" currentJournalPath=$currentJournalPath}
+	{assign var="currentJournalInitials" value=$currentJournal->getJournalInitials()}
+	{translate|assign:"pageTitleTranslated" key="navigation.journalInitials" currentJournalInitials=$currentJournalInitials}
 	{assign var="pageTitleTranslated" value=$pageTitleTranslated|capitalize:true}
 {else}
 	{translate|assign:"pageTitleTranslated" key="navigation.myJournals"}

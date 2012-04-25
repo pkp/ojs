@@ -19,10 +19,13 @@
 				<li id="myJournals"><a href="{url journal="index" page="user"}">{translate key="navigation.myJournals"}</a></li>
 			{/if}
 			{* 20110825 BLH Replace confusing 'User Home' link with 'Journal Home' link. *}
+			{* 20120424 LS Changing this to be Journal Initials*}
 			{* <li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li> *}
 			{if $currentJournal}
-				{assign var="currentJournalPath" value=$currentJournal->getpath()}
-				<li id="userHome"><a href="{url journal=$currentJournalPath page="user"}">{translate key="navigation.journalHome" currentJournalPath=$currentJournalPath}</a></li>
+				{* old way{assign var="currentJournalPath" value=$currentJournal->getpath()}*}
+				{assign var="currentJournalPath" value=$currentJournal->getPath()}
+				{assign var="currentJournalInitials" value=$currentJournal->getJournalInitials()}
+				<li id="userHome"><a href="{url journal=$currentJournalPath page="user"}">{translate key="navigation.journalInitials" currentJournalInitials=$currentJournalInitials}</a></li>
 			{/if}
 		{else}
 			<li id="login"><a href="{url page="login"}">{translate key="navigation.login"}</a></li>
