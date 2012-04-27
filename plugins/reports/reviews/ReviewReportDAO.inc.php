@@ -44,13 +44,15 @@ class ReviewReportDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT r.round AS round,
-				COALESCE(asl.setting_value, aspl.setting_value) AS article,
-				a.article_id AS articleId,
+				COALESCE(asl.setting_value, aspl.setting_value) AS article,				
+				a.article_id AS articleId,				
+				a.status AS articlestatus, 
 				u.user_id AS reviewerId,
 				u.username AS reviewer,
 				u.first_name AS firstName,
 				u.middle_name AS middleName,
 				u.last_name AS lastName,
+				(usl.setting_value AS affiliation,
 				r.date_assigned AS dateAssigned,
 				r.date_notified AS dateNotified,
 				r.date_confirmed AS dateConfirmed,
@@ -64,13 +66,15 @@ class ReviewReportDAO extends DAO {
 				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
 				LEFT JOIN article_settings aspl ON (a.article_id=aspl.article_id AND aspl.locale=a.locale AND aspl.setting_name=?),
 				users u
-			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ?
+				LEFT JOIN user_settings usl ON (u.user_id=usl.user_id)
+			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ? and usl.setting_name= ?
 			ORDER BY article',
 			array(
 				$locale, // Article title
 				'title',
 				'title',
-				$journalId
+				$journalId,
+				'affiliation'
 			)
 		);
 		$reviewsReturner = new DBRowIterator($result);
