@@ -302,7 +302,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				'title',
 				$locale,
 				'abbrev',
-				$primarylocale,
+				$primaryLocale,
 				'abbrev',
 				$locale,
 				$journalId,
