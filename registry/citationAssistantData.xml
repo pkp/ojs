@@ -159,11 +159,11 @@
 		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (26, 'isOptional', 0, 'bool')</query>
 		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'isOptional', 0, 'bool')</query>
 		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'isOptional', 0, 'bool')</query>
-		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (23, 'phpVersionMin', 5.0.0, 'string')</query>
-		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (24, 'phpVersionMin', 5.0.0, 'string')</query>
-		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (26, 'phpVersionMin', 5.0.0, 'string')</query>
-		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'phpVersionMin', 5.0.0, 'string')</query>
-		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'phpVersionMin', 5.0.0, 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (23, 'phpVersionMin', '5.0.0', 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (24, 'phpVersionMin', '5.0.0', 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (26, 'phpVersionMin', '5.0.0', 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'phpVersionMin', '5.0.0', 'string')</query>
+		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'phpVersionMin', '5.0.0', 'string')</query>
 		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (28, 'email', '', 'string')</query>
 		<query>INSERT INTO filter_settings (filter_id, setting_name, setting_value, setting_type) VALUES (29, 'apikey', '', 'string')</query>
 		
