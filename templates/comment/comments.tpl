@@ -119,7 +119,7 @@
 {translate|assign:"readMore" key="comments.readMore"}
 {url|assign:"moreUrl" op="view" path=$articleId|to_array:$galleyId:$childId}
 {assign var=moreLink value="<a href=\"$moreUrl\">$readMore</a>"}
-<p>{$child->getBody()|strip_unsafe_html|nl2br|truncate:300:"... $moreLink"}</p>
+<p>{$child->getBody()|strip_tags|nl2br|truncate:300:"... $moreLink"}</p>
 
 {assign var=grandChildren value=$child->getChildren()}
 {if $grandChildren}<ul>{/if}

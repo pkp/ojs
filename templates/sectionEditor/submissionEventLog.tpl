@@ -54,7 +54,7 @@
 		<td>
 			{translate key=$logEntry->getEventTitle()}
 			<br />
-			{$logEntry->getTranslatedMessage()|strip_unsafe_html|truncate:60:"..."|escape}
+			{$logEntry->getTranslatedMessage()|strip_tags|truncate:60:"..."|escape}
 		</td>
 		<td align="right"><a href="{url op="submissionEventLog" path=$submission->getId()|to_array:$logEntry->getId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;|&nbsp;<a href="{url op="clearSubmissionEventLog" path=$submission->getId()|to_array:$logEntry->getId()}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
