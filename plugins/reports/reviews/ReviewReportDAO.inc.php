@@ -52,7 +52,7 @@ class ReviewReportDAO extends DAO {
 				u.first_name AS firstName,
 				u.middle_name AS middleName,
 				u.last_name AS lastName,
-				(usl.setting_value AS affiliation,
+				usl.setting_value AS affiliation,
 				r.date_assigned AS dateAssigned,
 				r.date_notified AS dateNotified,
 				r.date_confirmed AS dateConfirmed,
