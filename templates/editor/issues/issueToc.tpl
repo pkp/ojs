@@ -36,8 +36,8 @@ $(document).ready(function() {
 			<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
 		{/if}	
         {* 20111201 BLH Diplay 'Unpublished Content' & 'Published Content' for UCLA Encyclopedia of Egyptology*}
+		{* 20120502 LS Display only 'Published Content' for UEE *}
         {if $journalPath == 'nelc_uee'}
-        	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.unpublishedContent"}</a></li>
         	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.publishedContent"}</a></li>
         {else}
         	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>

@@ -269,6 +269,8 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('filterEditor', $filterEditor);
 		$templateMgr->assign('filterSection', $filterSection);
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20120502 LS Added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20120502 LS Added
 
 		// Set search parameters
 		foreach ($this->getSearchFormDuplicateParameters() as $param)
