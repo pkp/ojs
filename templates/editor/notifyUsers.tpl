@@ -101,7 +101,7 @@
 		<label for="includeToc">{translate key="editor.notifyUsers.includeToc"}</label>&nbsp;
 		<select name="issue" id="issue" class="selectMenu">
 			{iterate from=issues item=issue}
-				<option {if $issue->getCurrent()}checked {/if}value="{$issue->getId()}">{$issue->getIssueIdentification()|strip_tags|escape}</option>
+				<option {if $issue->getCurrent()}checked {/if}value="{$issue->getId()}">{$issue->getIssueIdentification()|strip_tags|truncate:40:"..."|escape}</option>
 			{/iterate}
 		</select>
 	</td>
