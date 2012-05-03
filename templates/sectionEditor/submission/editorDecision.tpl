@@ -31,7 +31,7 @@
 		{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
 			{if $decisionKey neq 0} | {/if}
 			{assign var="decision" value=$editorDecision.decision}
-			{translate key=$editorDecisionOptions.$decision}&nbsp;&nbsp;{$editorDecision.dateDecided|date_format:$dateFormatShort}
+			{translate key=$editorDecisionOptions.$decision}&nbsp;&nbsp;{if $editorDecision.dateDecided != 0}{$editorDecision.dateDecided|date_format:$dateFormatShort}{/if}
 		{foreachelse}
 			{translate key="common.none"}
 		{/foreach}
