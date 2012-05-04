@@ -46,7 +46,7 @@ class ReviewReportDAO extends DAO {
 			'SELECT r.round AS round,
 				COALESCE(asl.setting_value, aspl.setting_value) AS article,				
 				a.article_id AS articleId,				
-				a.status AS articlestatus, 
+				CASE a.status WHEN "4" THEN "Rejected" WHEN "3" THEN "Published" WHEN "1" THEN "Pending" WHEN "0" THEN "Archived" ELSE "No Match" END AS articlestatus,
 				u.user_id AS reviewerId,
 				u.username AS reviewer,
 				u.first_name AS firstName,
