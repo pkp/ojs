@@ -149,6 +149,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 					'uploadName' => $uploadName,
 					'width' => $width,
 					'height' => $height,
+					'mimeType' => $fileManager->getUploadedFileType($settingName),
 					'dateUploaded' => Core::getCurrentDate()
 				);
 
