@@ -18,7 +18,7 @@
 		<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
 	{/if}
 
-	{if $displayFavicon}<link rel="icon" href="{$faviconDir}/{$displayFavicon.uploadName|escape:"url"}" type="{$faviconType}" />{/if}
+	{if $displayFavicon}<link rel="icon" href="{$faviconDir}/{$displayFavicon.uploadName|escape:"url"}" type="{$displayFavicon.mimeType|escape}" />{/if}
 
 	{include file="article/dublincore.tpl"}
 	{include file="article/googlescholar.tpl"}
