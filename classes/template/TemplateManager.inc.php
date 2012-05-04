@@ -84,8 +84,14 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderLogo', $journal->getLocalizedPageHeaderLogo());
 				$this->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('pageHeaderLogoImageAltText'));
-				$this->assign('displayFavicon', $journal->getLocalizedFavicon());
-				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
+
+				$displayFavicon = $journal->getLocalizedFavicon();
+				$this->assign('displayFavicon', $displayFavicon);
+				if ($displayFavicon) {
+					$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
+					$this->assign('faviconType', String::mime_content_type($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $displayFavicon['uploadName']));
+				}
+
 				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
