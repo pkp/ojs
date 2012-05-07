@@ -148,7 +148,7 @@ class SearchHandler extends Handler {
 		} else {
 			// Show the author index
 			$searchInitial = $request->getUserVar('searchInitial');
-			$rangeInfo = Handler::getRangeInfo('authors');
+			$rangeInfo = $this->getRangeInfo('authors');
 
 			$authors =& $authorDao->getAuthorsAlphabetizedByJournal(
 				isset($journal)?$journal->getId():null,
@@ -177,7 +177,7 @@ class SearchHandler extends Handler {
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = $this->getRangeInfo('search');
 
 		$articleIds =& $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);
@@ -260,7 +260,7 @@ class SearchHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = $this->getRangeInfo('search');
 
 		$searchJournalId = $request->getUserVar('searchJournal');
 		if (!empty($searchJournalId)) {
@@ -295,7 +295,7 @@ class SearchHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$rangeInfo = Handler::getRangeInfo('search');
+		$rangeInfo = $this->getRangeInfo('search');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$searchJournalId = $request->getUserVar('searchJournal');
