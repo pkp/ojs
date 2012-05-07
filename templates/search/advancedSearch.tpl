@@ -17,7 +17,7 @@
 {literal}
 <!--
 function ensureKeyword() {
-	var searchForm = document.getElementById('search');
+	var searchForm = document.getElementById('searchForm');
 	var allBlank = searchForm.query.value == '';
 
 	if (allBlank) {allBlank = searchForm.author.value == '';}
@@ -48,7 +48,7 @@ function ensureKeyword() {
 {assign var="dateTo" value="--"}
 {/if}
 <div id="advancedSearch">
-<form method="post" id="search" action="{url op="advancedResults"}">
+<form method="post" id="searchForm" action="{url op="advancedResults"}">
 
 <table class="data" width="100%">
 <tr valign="top">
@@ -124,7 +124,7 @@ function ensureKeyword() {
 
 <script type="text/javascript">
 <!--
-	document.getElementById('search').query.focus();
+	document.getElementById('searchForm').query.focus();
 // -->
 </script>
 </form>
