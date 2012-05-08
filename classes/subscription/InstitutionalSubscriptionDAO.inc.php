@@ -880,7 +880,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 					// Convert CIDR IP to IP range
 					} else {
-						list($curIPString, $cidrBits) = explode('/', trim($curIPString));
+						list($cidrIPString, $cidrBits) = explode('/', trim($curIPString));
 
 						if ($cidrBits == 0) {
 							$cidrMask = 0;
@@ -888,10 +888,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 							$cidrMask = (0xffffffff << (32 - $cidrBits));
 						}
 
-						$ipStart = sprintf('%u', ip2long($curIPString) & $cidrMask);
+						$ipStart = sprintf('%u', ip2long($cidrIPString) & $cidrMask);
 
 						if ($cidrBits != 32) {
-							$ipEnd = sprintf('%u', ip2long($curIPString) | (~$cidrMask & 0xffffffff));
+							$ipEnd = sprintf('%u', ip2long($cidrIPString) | (~$cidrMask & 0xffffffff));
 						}
 					}
 
