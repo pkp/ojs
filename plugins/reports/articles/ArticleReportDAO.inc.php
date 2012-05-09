@@ -34,15 +34,19 @@ class ArticleReportDAO extends DAO {
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
 				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
 				a.status AS status,
-				a.language AS language
+				a.language AS language,
+				a.date_submitted AS submission_date,
+				p.date_published AS publication_date
 			FROM	articles a
+				LEFT JOIN published_articles p ON p.article_id=a.article_id			
 				LEFT JOIN article_settings aspl1 ON (aspl1.article_id=a.article_id AND aspl1.setting_name = ? AND aspl1.locale = a.locale)
 				LEFT JOIN article_settings asl1 ON (asl1.article_id=a.article_id AND asl1.setting_name = ? AND asl1.locale = ?)
 				LEFT JOIN article_settings aspl2 ON (aspl2.article_id=a.article_id AND aspl2.setting_name = ? AND aspl2.locale = a.locale)
 				LEFT JOIN article_settings asl2 ON (asl2.article_id=a.article_id AND asl2.setting_name = ? AND asl2.locale = ?)
 				LEFT JOIN section_settings spl ON (spl.section_id=a.section_id AND spl.setting_name = ? AND spl.locale = ?)
 				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
-			WHERE	a.journal_id = ?
+
+			WHERE	a.journal_id = ? 
 			ORDER BY a.article_id',
 			array(
 				'title', // Article title

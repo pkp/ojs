@@ -104,7 +104,9 @@ class ArticleReportPlugin extends ReportPlugin {
 			'section_title' => Locale::translate('section.title'),
 			'language' => Locale::translate('common.language'),
 			'editor_decision' => Locale::translate('submission.editorDecision'),
-			'status' => Locale::translate('common.status')
+			'status' => Locale::translate('common.status'),
+			'submission_date' =>Locale::translate('article.submissionDate'),
+			'publication_date' =>Locale::translate('article.publicationDate')
 		));
 
 		$fp = fopen('php://output', 'wt');
