@@ -43,6 +43,7 @@ class ManagerHandler extends Handler {
 	
 		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin());
+		$templateMgr->assign('journalPath',$journal->getPath());
 		$templateMgr->display('manager/index.tpl');
 	}
 

@@ -12,7 +12,13 @@
    implementation of reader statistics in the About page.          *}
 <div id="statistics">
 <h3>{translate key="manager.statistics.statistics"}</h3>
-<p>{translate key="manager.statistics.statistics.description"}</p>
+{*<p>{translate key="manager.statistics.statistics.description"}</p> *}
+<p>{translate key="manager.statistics.statistics.eScholdescription"}</p>
+
+<p><strong>Usage Statistics:</strong> <a href="http://www.escholarship.org/stats/unit/{$journalPath}.html" target="_blank">HTML</a>  &nbsp;&nbsp;<a href="http://www.escholarship.org/stats/unit/{$journalPath}.xls" target="_blank">Excel</a><br />
+</p>
+
+{if $isSiteAdmin}
 <div id="selectSections">
 <p>{translate key="manager.statistics.statistics.selectSections"}</p>
 <form action="{url op="saveStatisticsSections"}" method="post">
@@ -106,4 +112,5 @@
 <input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>
 </form>
 </div>
+{/if}
 

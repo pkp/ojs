@@ -23,11 +23,19 @@
 
 <div id="reports">
 <h3>{translate key="manager.statistics.reports"}</h3>
-<p>{translate key="manager.statistics.reports.description"}</p>
+<p>{translate key="manager.statistics.reports.escholDescription"}</p>
 
 <ul class="plain">
 {foreach from=$reportPlugins key=key item=plugin}
-	<li>&#187; <a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
+{* 20120509 LS only displaying subscription and view templates for site manager*}
+   {if $plugin->getDisplayName() == 'Subscriptions Report' || $plugin->getDisplayName() == 'View Report'}
+       {if  $isSiteAdmin}
+	       <li>&#187; <a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
+		{/if}
+    {else}
+	    <li>&#187; <a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
+	{/if}
+	
 {/foreach}
 </ul>
 </div>

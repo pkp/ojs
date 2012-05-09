@@ -34,6 +34,7 @@ class StatisticsHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
+		
 
 		$statisticsYear = Request::getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
@@ -73,6 +74,10 @@ class StatisticsHandler extends ManagerHandler {
 
 		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
+		
+		//adding in calls to get journalID
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added		
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getId(), null, $toDate);
@@ -88,6 +93,7 @@ class StatisticsHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.statsAndReports');
 
 		$templateMgr->display('manager/statistics/index.tpl');
+
 	}
 
 	function saveStatisticsSections() {
@@ -151,6 +157,10 @@ class StatisticsHandler extends ManagerHandler {
 
 		$plugin =& $reportPlugins[$pluginName];
 		$plugin->display($args);
+		
+		
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20111026 BLH Added
+		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
 	}
 }
 

@@ -10,8 +10,7 @@
  *}
 <div id="statistics">
 <h3>{translate key="manager.statistics.reports"}</h3>
-<p>{translate key="manager.statistics.reports.description"}</p>
-
+<p>{translate key="manager.statistics.reports.escholDescription"}</p>
 <form method="post" action="{url op="reportGenerator"}">
 <table width="100%" class="data">
 	<tr valign="top">
@@ -36,4 +35,5 @@
 <input type="submit" class="button defaultButton" value="{translate key="manager.statistics.reports.generate"}"/>
 
 </form>
+
 </div>
