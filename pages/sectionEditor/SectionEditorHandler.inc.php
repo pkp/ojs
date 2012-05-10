@@ -31,6 +31,7 @@ class SectionEditorHandler extends Handler {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		// FIXME This is kind of evil
 		$page = Request::getRequestedPage();
+		
 		if ( $page == 'sectionEditor' )  
 			$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SECTION_EDITOR)));
 		elseif ( $page == 'editor' ) 		
@@ -48,6 +49,7 @@ class SectionEditorHandler extends Handler {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 		$user =& Request::getUser();
+		$isSectionEditor = Validation::isSectionEditor();
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
@@ -114,7 +116,8 @@ class SectionEditorHandler extends Handler {
 			$toDate,
 			$rangeInfo,
 			$sort,
-			$sortDirection
+			$sortDirection,
+			$isSectionEditor
 		);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -124,6 +127,7 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('filterSection', $filterSection);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 
 		// Set search parameters
 		$duplicateParameters = array(
@@ -155,7 +159,6 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->assign('journalPath',$journal->getPath()); // 20111201 BLH added
-		
 		$templateMgr->display('sectionEditor/index.tpl');
 	}
 
@@ -168,6 +171,7 @@ class SectionEditorHandler extends Handler {
 		Locale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_MANAGER));
 		$templateMgr =& TemplateManager::getManager();
 		$isEditor = Validation::isEditor();
+		$isSectionEditor = Validation::isSectionEditor();
 
 		if (Request::getRequestedPage() == 'editor') {
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
@@ -187,6 +191,7 @@ class SectionEditorHandler extends Handler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 	}
 
 	/**

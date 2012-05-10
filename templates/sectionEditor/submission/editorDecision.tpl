@@ -10,13 +10,31 @@
  *}
 <div id="editorDecision">
 {* 2011-11-09 BLH Custom message for eSchol journal WestJEM only *}
-{if $journalPath=='uciem_westjem'}
-	<h2>{literal}Once your editor notes are uploaded, please email Rex Chang at <a href="mailto:editor@westjem.org">editor@westjem.org</a> to confirm that your comments have been received. *DO NOT* register a decision. This section is reserved for our decision editors. Thank you.{/literal}</h2>
+{* 2012-05-08 LS Custom page for eSchol journal WestJEM only *}
+{if (($journalPath=='uciem_westjem') && ($isEditor != 1))}
+	<h3>{translate key="submission.submissionEditorDecision"}</h3>
+	{else}
+	<h3>{translate key="submission.editorDecision"}</h3>
 {/if}
-<h3>{translate key="submission.editorDecision"}</h3>
 
 <table id="table1" width="100%" class="data">
-<tr>
+{if (($journalPath=='uciem_westjem') &&  ($isEditor != 1))}
+  <tr>
+  	<td valign="middle">{translate key="submission.submissionEditorInstructionsWestJEM"}</td>
+  </tr>
+  <tr>
+  	<td valign="middle">
+	<ol>
+		<li>Click the "Add New Note" link on the <a href="{url op="submissionNotes" path=$submission->getArticleId()}">{translate key="submission.history.submissionNotes"}</a> page and submit your decision.</li>
+		<li><strong>Email Rex Chang at <a href="mailto:editor@westjem.org">editor@westjem.org</a></strong> to confirm that your comments have been received.</li>
+	 </ol>
+	</td>
+  </tr>
+  <tr>
+   	<td valign="middle">{translate key="submission.submissionEditorInstructionsWestJEMclose"}</td>
+</tr>
+{else}
+   <tr>
 	<td class="label" width="20%" valign="middle">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%" class="value" valign="top">
 		<form method="post" action="{url op="recordDecision"}">
@@ -29,6 +47,7 @@
 		</form>
 	</td>
 </tr>
+
 <tr valign="top">
 	<td class="label">{translate key="editor.article.decision"}</td>
 	<td class="value">
@@ -41,6 +60,7 @@
 		{/foreach}
 	</td>
 </tr>
+
 <tr valign="top">
 	<td class="label">{translate key="submission.notifyAuthor"}</td>
 	<td class="value">
@@ -55,6 +75,8 @@
 		{/if}
 		&nbsp;{translate key="submission.notifyAuthorSendEmail"}
 	<td>
+</tr>
+	
 <tr valign="top">
 	<td class="label">{translate key="submission.editorAuthorRecord"}</td>
 	<td class="value">
@@ -68,7 +90,9 @@
 		{/if}
 	</td>
 </tr>
+{/if}
 </table>
+
 
 <form method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$submission->getId()}" />

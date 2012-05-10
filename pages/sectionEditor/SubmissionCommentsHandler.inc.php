@@ -64,6 +64,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		if (SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment)) {
 			SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
 		}
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 
 	}
 
@@ -80,6 +81,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$submissionEditHandler->validate($articleId);
 		$submission =& $submissionEditHandler->submission;
 		SectionEditorAction::viewEditorDecisionComments($submission);
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 
 	}
 
@@ -101,6 +103,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		if (SectionEditorAction::postEditorDecisionComment($submission, $emailComment)) {
 			SectionEditorAction::viewEditorDecisionComments($submission);
 		}
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 
 	}
 
@@ -320,6 +323,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
 			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**

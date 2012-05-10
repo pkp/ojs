@@ -45,6 +45,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
+		$isSectionEditor = Validation::isSectionEditor();
 
 		// FIXME? For comments.readerComments under Status and
 		// author.submit.selectPrincipalContact under Metadata
@@ -76,13 +77,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));
 		if ($enableComments) {
 			import('classes.article.Article');
 			$templateMgr->assign('commentsStatus', $submission->getCommentsStatus());
-			$templateMgr->assign_by_ref('commentsStatusOptions', Article::getCommentsStatusOptions());
+			$templateMgr->assign_by_ref('commentsStatusOptions', Article::getCommentsStatusOptions());			
 		}
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -129,6 +131,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'review');
+		$isSectionEditor = Validation::isSectionEditor();
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
@@ -164,6 +167,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
 		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 	}
 
 	function submissionReview($args) {
@@ -172,6 +176,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
+		$isSectionEditor = Validation::isSectionEditor();
+		$isEditor = Validation::isEditor();
 
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
 
@@ -262,7 +268,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('journalPath', $journal->getPath()); // 2011-11-09 BLH Added
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
+		$templateMgr->assign('isEditor',$isEditor); //20120508 LS Added
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
+
 	}
 
 	function submissionEditing($args) {
@@ -275,6 +284,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$useCopyeditors = $journal->getSetting('useCopyeditors');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		$useProofreaders = $journal->getSetting('useProofreaders');
+		$isSectionEditor = Validation::isSectionEditor();
 
 		// check if submission is accepted
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -307,6 +317,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -353,6 +364,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**
@@ -374,6 +386,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Render the view.
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	function changeSection() {
@@ -386,13 +399,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::changeSection($submission, $sectionId);
 
 		Request::redirect(null, null, 'submission', $articleId);
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	function recordDecision() {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
-
+		$isSectionEditor = Validation::isSectionEditor();//20120508 LS Added
+        $templateMgr =& TemplateManager::getManager(); //20120508 LS Added
 		$decision = Request::getUserVar('decision');
 
 		switch ($decision) {
@@ -405,6 +420,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		Request::redirect(null, null, 'submissionReview', $articleId);
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 	}
 
 	//
@@ -482,6 +498,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('sort', $sort);
 			$templateMgr->assign('sortDirection', $sortDirection);
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
+			//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 		}
 	}
 
@@ -515,7 +532,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 			$createReviewerForm->display($args, $request);
 		}
-
+       //$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**
@@ -900,6 +917,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
 			$templateMgr->display('sectionEditor/reviewerRecommendation.tpl');
+			//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 		}
 	}
 
@@ -1096,10 +1114,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
-
+        $isSectionEditor = Validation::isSectionEditor();
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		$redirectTarget = 'submissionReview';
+		$templateMgr =& TemplateManager::getManager();
 
 		// If the Upload button was pressed.
 		$submit = Request::getUserVar('submit');
@@ -1134,6 +1153,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		Request::redirect(null, null, $redirectTarget, $articleId);
+		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 	}
 
 	//
@@ -1525,6 +1545,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		SectionEditorAction::updateCommentsStatus($submission, Request::getUserVar('commentsStatus'));
 		Request::redirect(null, null, 'submission', $articleId);
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	//
@@ -1944,6 +1965,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$eventLogEntries =& ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
+			//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 		}
 	}
 
@@ -1969,6 +1991,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		$templateMgr->display('sectionEditor/submissionEventLog.tpl');
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**
@@ -2028,6 +2051,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 		}
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**
@@ -2052,6 +2076,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
+		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
 	/**
