@@ -1084,7 +1084,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<message key="rt.metadata.pkp.primaryAuthor">Name der Autorin/des Autors, Institution, Land</message>
 	<message key="rt.metadata.pkp.peerReviewed">Begutachter Beitrag</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier (DOI)</message>
 
 
 
