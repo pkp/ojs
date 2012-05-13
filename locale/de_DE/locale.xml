@@ -696,9 +696,9 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.register.readerDescription">Sie werden per E-Mail über neue Ausgaben der Zeitschrift informiert.</message>
 	<message key="user.register.openAccessNotificationDescription">Sie werden per E-Mail benachrichtigt, wenn eine Ausgabe der Zeitschrift frei zugänglich gemacht wird. </message>
 	<message key="user.register.authorDescription">Sie können Beiträge bei der Zeitschrift einreichen</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit zum Peer Review eingereichter Beiträge.</message>
-	<message key="user.register.reviewerDescription">Sie sind bereit zum Peer Review eingereichter Beiträge. Bitte Forschungs- und Interessengebiete angeben.</message>
-	<message key="user.register.reviewerInterests">Angabe von Begutachtungsinteressen (Wissenschaftsbereiche und Forschungsmethoden):</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
+	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
+	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 
 	<!-- Abonnements -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
