@@ -21,7 +21,7 @@
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
     <message key="admin.settings.journalsList">Zeitschriftenelemente</message>
     <message key="admin.settings.journalsList.description">Bitte wählen Sie die Zeitschriftenelemente, die für jede Zeitschrift auf der Gesamtwebsite angezeigt werden sollen.</message>
-    <message key="admin.settings.journalsList.showThumbnail">Bild der Zeitschrift</message>
+    <message key="admin.settings.journalsList.showThumbnail">Vorschaubild der Zeitschrift</message>
     <message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
     <message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
