@@ -113,6 +113,7 @@
 	<message key="manager.plugins.wrongName">Die version.xml in dem hochgeladenen Plug-In enthält einen Plug-In-Namen, der nicht zu dem Namen des aktualisierten Plug-Ins passt.</message>
 	<message key="manager.plugins.pleaseInstall">Plug-In nicht verfügbar. Bitte wählen Sie installieren</message>
 	<message key="manager.plugins.pleaseUpgrade">Das Plug-In existiert bereits, ist aber neuer als die installierte Version. Bitte wählen Sie Upgrade</message>
+	<message key="manager.plugins.settings">Einstellungen</message>
 	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer  "config.inc.php".</message>
 	<message key="manager.plugins.upgrade">Upgrade Plug-In</message>
 	<message key="manager.plugins.upgradeDescription">Dieses Formular ermöglicht ein Upgrade für ein Plug-In. Bitte stellen Sie sicher, das das Plug-In als .tar.gz-Datei komprimiert ist.</message>
@@ -246,16 +247,6 @@
 	<message key="manager.setup.disciplineExamples">(z.B. Geschichte; Erziehungswissenschaften; Soziologie; Psychologie; Kulturwissenschaften; Jura)</message>
 	<message key="manager.setup.disciplineProvideExamples">Geben Sie Beispiele für die relevanten Fachgebiete der Zeitschrift an</message>
 	<message key="manager.setup.displayCurrentIssue">Fügen Sie das Inhaltsverzeichnis (falls vorhanden) der aktuellen Ausgabe ein.</message>
-	<message key="manager.setup.doiPrefix">DOI-Präfix</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Das DOI (Digital Object Identifier) Präfix wird von <a href="http://www.crossref.org" target="_new">CrossRef</a> vergeben und hat das Format 10.xxxx (z.B. 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">DOI-Suffix</message>
-	<message key="manager.setup.doiSuffixDefault">Nutzen Sie die Standardeinstellung (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %a für den OJS-Artikel-ID und %p für die Seitenzahl.</message>
-	<message key="manager.setup.doiSuffixPattern.example">vol%viss%ipp%p würde z-B. einen DOI 10.1234/vol3iss2pp230 erzeugen</message>
-	<message key="manager.setup.doiSuffixDescription">Ein DOI-Suffix kann jede beliebige Form haben, muss aber für jede veröffentlichte Einheit eindeutig sein.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4 zugelassen werden).</message>
-	<message key="manager.setup.doiReassign">DOI neu zuweisen</message>
-	<message key="manager.setup.doiReassign.description">Wenn Sie Ihre DOI-Konfiguration ändern, werden bereits zugewiesene DOI nicht betroffen sein. Sobald die DOI-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden DOI zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
 	<message key="manager.setup.editorDecision">Redaktionsentscheidung</message>
 	<message key="manager.setup.editorialMembers">Unter "Komiteemitglieder" können die Namen der Mitglieder des Redakteur/innen- und/oder Begutachtungsgremiums eingegeben werden. Dies kann zu jedem Zeitpunkt erfolgen.</message>
 	<message key="manager.setup.editorialProcess1">Ein/e oder mehrere Redakteur/innen sind ohne festgelegte Funktionen für die grundlegenden Schritte bei der redaktionellen Bearbeitung zuständig.</message>
