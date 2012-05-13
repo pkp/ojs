@@ -344,6 +344,7 @@
 	<message key="manager.setup.journalSetupUpdated">Die Konfiguration Ihrer Zeitschrift wurde aktualisiert.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Das Format des Zeitschriften-Style Sheets ist ungültig. Das gültige Format ist .css.</message>
 	<message key="manager.setup.journalTheme">Zeitschriften-Designvorlage</message>
+	<message key="manager.setup.journalThumbnail">Bild der Zeitschrift</message>
 	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
 	<message key="manager.setup.labelName">Seitenbenennung</message>
 	<message key="manager.setup.layoutAndGalleys">Layouter/innen</message>
@@ -489,6 +490,7 @@
 	<message key="manager.setup.useCopyeditors">Jeder Beitrag wird einer Lektorin/einem Lektor zugeteilt.</message>
 	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion/ein Herausgeber/innen- und Gutachter/innengremium.</message>
 	<message key="manager.setup.useImageLogo">Logo-Grafik</message>
+	<message key="manager.setup.useThumbnail">Bild</message>
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
 	<message key="manager.setup.useLayoutEditors">Ein/e Layouter/in wird damit beauftragt, die HTML-, PDF- oder sonstigen Dateien für die elektronische Publikation vorzubereiten.</message>
