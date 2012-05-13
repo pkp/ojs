@@ -284,7 +284,6 @@
 	<message key="manager.setup.form.journalInitialsRequired">Das Kürzel der Zeitschrift ist erforderlich.</message>
 	<message key="manager.setup.form.journalTitleRequired">Der Titel der Zeitschrift ist erforderlich.</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Die Zahl der Gutachter/innen pro Beitrag wird benötigt.</message>
-	<message key="manager.setup.form.doiPrefixPattern">Das DOI.M pattern must be in the form 10.xxxx.</message>
 	<message key="manager.setup.form.supportEmailRequired">Die E-Mail-Adresse des Kontakts bei technischen Fragen ist erforderlich.</message>
 	<message key="manager.setup.form.supportNameRequired">Der Name des Kontakts bei technischen Fragen ist erforderlich</message>
 	<message key="manager.setup.frequencyOfPublication">Beginn und Erscheinungsfrequenz </message>
@@ -460,6 +459,7 @@
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
 	<message key="manager.setup.subjectClassification">Schlagwortsystematik</message>
 	<message key="manager.setup.subjectClassificationExamples">(z.B. Mathematics Subject Classification; Library of Congress Classification)</message>
+	<message key="manager.setup.subjectClassificationURLValid">Bitte geben Sie eine gültige URL an (inklusive http://).</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>
 	<message key="manager.setup.subjectProvideExamples">Geben Sie als Hilfestellung für die Autor/innen Beispiele für Schlagworte oder Themen an</message>
