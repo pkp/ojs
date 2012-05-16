@@ -19,11 +19,11 @@
 	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
-    <message key="admin.settings.journalsList">Zeitschriftenelemente</message>
-    <message key="admin.settings.journalsList.description">Bitte wählen Sie die Zeitschriftenelemente, die für jede Zeitschrift auf der Gesamtwebsite angezeigt werden sollen.</message>
-    <message key="admin.settings.journalsList.showThumbnail">Vorschaubild der Zeitschrift</message>
-    <message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
-    <message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
+	<message key="admin.settings.journalsList">Zeitschriftenelemente</message>
+	<message key="admin.settings.journalsList.description">Bitte wählen Sie die Zeitschriftenelemente, die für jede Zeitschrift auf der Gesamtwebsite angezeigt werden sollen.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Vorschaubild der Zeitschrift</message>
+	<message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
+	<message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
 	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
