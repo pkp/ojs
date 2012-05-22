@@ -377,13 +377,15 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	<!-- Verwaltung Zahlungen -->
 
 	<!-- Allgemeine Informationen: Plug-Ins -->
-	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen OJS, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
+	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
 	<message key="plugins.categories.citationFormats.description">Plug-Ins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
-	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
+	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
 	<message key="plugins.categories.implicitAuth">Plug-Ins zur impliziten Authentifizierung</message>
 	<message key="plugins.categories.implicitAuth.description">Plug-Ins zur impliziten Authentifizierung stellen Mittel zur Verfügung, um Nutzer/innen anhand ihrer HTTP-Header zu authentifizieren.</message>
 	<message key="plugins.categories.oaiMetadataFormats">Plug-In für OAI-Metadaten-Format</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Diese Format-Plug-Ins beziehen sich auf Metadaten für die OAI-Kommunikation</message>
+	<message key="plugins.categories.pubIds">Plug-Ins für öffentliche Kennungen</message>
+	<message key="plugins.categories.pubIds.description">Diese Plug-Ins liefern Unterstützung für öffentliche Kennungen (public identifiers).</message>
 
 	<!-- Dateinavigator -->
 
@@ -694,9 +696,9 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.register.readerDescription">Sie werden per E-Mail über neue Ausgaben der Zeitschrift informiert.</message>
 	<message key="user.register.openAccessNotificationDescription">Sie werden per E-Mail benachrichtigt, wenn eine Ausgabe der Zeitschrift frei zugänglich gemacht wird. </message>
 	<message key="user.register.authorDescription">Sie können Beiträge bei der Zeitschrift einreichen</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit zum Peer Review eingereichter Beiträge.</message>
-	<message key="user.register.reviewerDescription">Sie sind bereit zum Peer Review eingereichter Beiträge. Bitte Forschungs- und Interessengebiete angeben.</message>
-	<message key="user.register.reviewerInterests">Angabe von Begutachtungsinteressen (Wissenschaftsbereiche und Forschungsmethoden):</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
+	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
+	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 
 	<!-- Abonnements -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -761,7 +763,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<!-- Einschubseite für PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Diese PDF-Datei herunterladen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternativ können Sie die PDF-Datei direkt auf Ihren Computer laden, von wo aus sie in einem PDF-Leseprogramm geöffnet werden kann. Um die PDF-Datei zu laden, klicken Sie auf den Download-Link unten.</p><p>Falls Sie mehr Informationen über das Drucken, Speichern und Arbeiten von und mit PDF-Dateien erhalten möchten, bietet Highwire Press hilfreiche <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Falls Sie mehr Informationen über das Drucken, Speichern und Arbeiten von und mit PDF-Dateien erhalten möchten, bietet Highwire Press hilfreiche <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Alternativ können Sie die PDF-Datei direkt auf Ihren Computer laden, von wo aus sie in einem PDF-Leseprogramm geöffnet werden kann. Um die PDF-Datei herunterzuladen, klicken Sie auf den Download-Link unten.</p>]]></message>
 
 
 	<!-- Einschubseite für Fahnen, die weder PDF noch HTML sind -->
@@ -1082,7 +1084,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<message key="rt.metadata.pkp.primaryAuthor">Name der Autorin/des Autors, Institution, Land</message>
 	<message key="rt.metadata.pkp.peerReviewed">Begutachter Beitrag</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier (DOI)</message>
 
 
 

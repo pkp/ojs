@@ -26,6 +26,7 @@
 	<message key="editor.allSections">Alle Rubriken</message>
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
+	<message key="editor.publicIdentificationExists">Die Ausgabenkennzeichnung  '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
 	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag im Archiv</message>
 	<message key="editor.submissionArchive.saveChanges">Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>
@@ -65,7 +66,6 @@
 	<message key="editor.issues.accessStatus">Zugangsstatus</message>
 	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
 	<message key="editor.issues.enableOpenAccessDate">Verzögerten freien Zugang aktivieren</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Die Ausgabenkennzeichnung existiert bereits.</message>
 	<message key="editor.issues.coverPage">Titelbild</message>
 	<message key="editor.issues.coverPageInstructions">(Gültige Formate: .gif, .jpg und .png )</message>
 	<message key="editor.issues.uploaded">Hochgeladen</message>
@@ -144,7 +144,7 @@
 	<message key="editor.article.decision">Entscheidung</message>
 	<message key="editor.article.noEditorSelected">Kein/e Redakteur/in ausgewählt.</message>
 	<message key="editor.article.recordDecision">Entscheidung protokollieren</message>
-	<message key="editor.article.cannotRecord">Bisher wurde kein/e Rubrikredakteur/in festgelegt. </message>
+	<message key="editor.article.cannotRecord">Bisher kein/e Rubrikredakteur/in festgelegt, oder es ist keine Begutachtungsfassung vorhanden. </message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Gutachter/innen, denen die Autor/innenversion zugeht</message>
 	<message key="editor.article.designateDueDate">Abgabetermin festlegen</message>
 	<message key="editor.article.designateDueDateDescription">Geben Sie ein Datum oder eine Anzahl von Wochen für den neuen Abgabetermin ein.</message>
