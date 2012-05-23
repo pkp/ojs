@@ -34,6 +34,7 @@ class EditorSubmissionDAO extends DAO {
 	function EditorSubmissionDAO() {
 		parent::DAO();
 		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$this->userDao =& DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
@@ -101,6 +102,11 @@ class EditorSubmissionDAO extends DAO {
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+		}
+
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$editorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
+			$editorSubmission->setAuthorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['revised_file_id'], $i), $i);
 		}
 
 		// Review Rounds
