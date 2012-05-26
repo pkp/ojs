@@ -14,5 +14,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.zohoViewer.name">Zoho embedded viewer Plugin</message>
-	<message key="plugins.generic.zohoViewer.description"><![CDATA[This plugin uses the <a href="https://vewer.zoho.com">Zoho Viewer</a> service to embed PDFs on the article view page.]]></message>
+	<message key="plugins.generic.zohoViewer.description"><![CDATA[This plugin uses the <a href="https://viewer.zoho.com">Zoho Viewer</a> service to embed PDFs on the article view page.]]></message>
 </locale>
