@@ -395,16 +395,16 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Return boolean indicating if author should be hidden in issue ToC.
-	 * @return boolean
+	 * Return option selection indicating if author should be hidden in issue ToC.
+	 * @return int
 	 */
 	function getHideAuthor() {
 		return $this->getData('hideAuthor');
 	}
 
 	/**
-	 * Set if author should be hidden in issue ToC.
-	 * @param $hideAuthor boolean
+	 * Set option selection indicating if author should be hidden in issue ToC.
+	 * @param $hideAuthor int
 	 */
 	function setHideAuthor($hideAuthor) {
 		return $this->setData('hideAuthor', $hideAuthor);
