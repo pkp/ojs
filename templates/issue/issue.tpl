@@ -63,7 +63,7 @@
 </tr>
 <tr>
 	<td class="tocAuthors">
-		{if (!$section.hideAuthor && $article->getHideAuthor() == 0) || $article->getHideAuthor() == 2}
+		{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 			{foreach from=$article->getAuthors() item=author name=authorList}
 				{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
