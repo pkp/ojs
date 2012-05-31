@@ -16,7 +16,7 @@
  */
 
 
-require_mock_env('lib/pkp/tests/mock');
+require_mock_env('env1');
 
 import('lib.pkp.tests.PKPTestCase');
 import('classes.sword.OJSSwordDeposit');
