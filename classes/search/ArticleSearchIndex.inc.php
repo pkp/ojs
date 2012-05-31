@@ -29,7 +29,7 @@ class ArticleSearchIndex {
 	 * @param $text string
 	 * @param $position int
 	 */
-	function indexObjectKeywords($objectId, $text, &$position) {
+	function _indexObjectKeywords($objectId, $text, &$position) {
 		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 		$keywords =& ArticleSearchIndex::filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
@@ -46,11 +46,11 @@ class ArticleSearchIndex {
 	 * @param $text string
 	 * @param $assocId int optional
 	 */
-	function updateTextIndex($articleId, $type, $text, $assocId = null) {
+	function _updateTextIndex($articleId, $type, $text, $assocId = null) {
 		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
-		ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
+		ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
 	}
 
 	/**
@@ -75,7 +75,7 @@ class ArticleSearchIndex {
 
 				$position = 0;
 				while(($text = $parser->read()) !== false) {
-					ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
+					ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
 				}
 				$parser->close();
 			}
@@ -89,7 +89,7 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function deleteTextIndex($articleId, $type = null, $assocId = null) {
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 		return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
 	}
 
@@ -101,7 +101,7 @@ class ArticleSearchIndex {
 	 */
 	function &filterKeywords($text, $allowWildcards = false) {
 		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords =& ArticleSearchIndex::loadStopwords();
+		$stopwords =& ArticleSearchIndex::_loadStopwords();
 
 		// Join multiple lines into a single string
 		if (is_array($text)) $text = join("\n", $text);
@@ -134,7 +134,7 @@ class ArticleSearchIndex {
 	 * FIXME Should this be locale-specific?
 	 * @return array with stopwords as keys
 	 */
-	function &loadStopwords() {
+	function &_loadStopwords() {
 		static $searchStopwords;
 
 		if (!isset($searchStopwords)) {
@@ -171,14 +171,14 @@ class ArticleSearchIndex {
 
 		// Update search index
 		$articleId = $article->getId();
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
 
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
+		ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
 		// FIXME Index sponsors too?
 	}
 
@@ -189,7 +189,7 @@ class ArticleSearchIndex {
 	function indexSuppFileMetadata(&$suppFile) {
 		// Update search index
 		$articleId = $suppFile->getArticleId();
-		ArticleSearchIndex::updateTextIndex(
+		ArticleSearchIndex::_updateTextIndex(
 			$articleId,
 			ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
 			array_merge(
@@ -237,13 +237,7 @@ class ArticleSearchIndex {
 		// Clear index
 		if ($log) echo 'Clearing index ... ';
 		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-		// FIXME Abstract into ArticleSearchDAO?
-		$searchDao->update('DELETE FROM article_search_object_keywords');
-		$searchDao->update('DELETE FROM article_search_objects');
-		$searchDao->update('DELETE FROM article_search_keyword_list');
-		$searchDao->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
-		$dataSource = $searchDao->getDataSource();
-		$dataSource->CacheFlush();
+		$searchDao->clearIndex();
 		if ($log) echo "done\n";
 
 		// Build index
