@@ -96,7 +96,7 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
-	function &_getMergedArray(&$journal, &$keywords, $publishedFrom, $publishedTo, &$resultCount) {
+	function &_getMergedArray(&$journal, &$keywords, $publishedFrom, $publishedTo) {
 		$resultsPerKeyword = Config::getVar('search', 'results_per_keyword');
 		$resultCacheHours = Config::getVar('search', 'result_cache_hours');
 		if (!is_numeric($resultsPerKeyword)) $resultsPerKeyword = 100;
@@ -113,7 +113,6 @@ class ArticleSearch {
 		}
 		$mergedResults =& ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 
-		$resultCount = count($mergedResults);
 		return $mergedResults;
 	}
 
@@ -207,7 +206,8 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
-	function &_getSparseArray(&$mergedResults, $resultCount) {
+	function &_getSparseArray(&$mergedResults) {
+		$resultCount = count($mergedResults);
 		$results = array();
 		$i = 0;
 		foreach ($mergedResults as $articleId => $count) {
@@ -299,12 +299,21 @@ class ArticleSearch {
 	 * @param $rangeInfo Information on the range of results to return
 	 */
 	function &retrieveResults(&$journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
-		// Fetch all the results from all the keywords into one array
-		// (mergedResults), where mergedResults[article_id]
-		// = sum of all the occurences for all keywords associated with
-		// that article ID.
-		// resultCount contains the sum of result counts for all keywords.
-		$mergedResults =& ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo, $resultCount);
+		// Check whether a search plug-in jumps in to provide ranked search results.
+		$mergedResults =& HookRegistry::call(
+			'ArticleSearch::retrieveResults',
+			array(&$journal, &$keywords, $publishedFrom, $publishedTo)
+		);
+
+		// If no search plug-in is activated then use the
+		// default database search implementation.
+		if (!$mergedResults) {
+			// Fetch all the results from all the keywords into one array
+			// (mergedResults), where mergedResults[article_id]
+			// = sum of all the occurences for all keywords associated with
+			// that article ID.
+			$mergedResults =& ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo);
+		}
 
 		// Convert mergedResults into an array (frequencyIndicator =>
 		// $articleId).
@@ -312,7 +321,7 @@ class ArticleSearch {
 		// where higher is better, indicating the quality of the match.
 		// It is generated here in such a manner that matches with
 		// identical frequency do not collide.
-		$results =& ArticleSearch::_getSparseArray($mergedResults, $resultCount);
+		$results =& ArticleSearch::_getSparseArray($mergedResults);
 
 		$totalResults = count($results);
 
