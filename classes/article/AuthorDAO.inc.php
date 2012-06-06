@@ -123,14 +123,10 @@ class AuthorDAO extends PKPAuthorDAO {
 			FROM	authors aa
 				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
-				LEFT JOIN articles a ON (a.article_id = aa.submission_id)
-				LEFT JOIN published_articles pa ON (pa.article_id = a.article_id)
-				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
-			WHERE	i.published = 1 AND
-				aa.submission_id = a.article_id AND ' .
-				(isset($journalId)?'a.journal_id = ? AND ':'') . '
-				pa.article_id = a.article_id AND
-				a.status = ' . STATUS_PUBLISHED . ' AND
+				JOIN articles a ON (a.article_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
+				JOIN published_articles pa ON (pa.article_id = a.article_id)
+				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
+			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
