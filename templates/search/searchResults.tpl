@@ -17,11 +17,11 @@
 {literal}
 <!--
 function ensureKeyword() {
-	if (document.getElementById('search').query.value == '') {
+	if (document.getElementById('searchForm').query.value == '') {
 		alert({/literal}'{translate|escape:"jsparam" key="search.noKeywordError"}'{literal});
 		return false;
 	}
-	document.getElementById('search').submit();
+	document.getElementById('searchForm').submit();
 	return true;
 }
 // -->
@@ -31,7 +31,7 @@ function ensureKeyword() {
 <br/>
 
 {if $basicQuery}
-	<form method="post" id="search" action="{url op="results"}">
+	<form method="post" id="searchForm" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/>
