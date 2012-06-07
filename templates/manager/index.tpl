@@ -12,6 +12,11 @@
 {assign var="pageTitle" value="manager.journalManagement"}
 {include file="common/header.tpl"}
 {/strip}
+
+{if $newVersionAvailable}
+<div class="warningMessage">{translate key="site.upgradeAvailable.manager" currentVersion=$currentVersion latestVersion=$latestVersion siteAdminName=$siteAdmin->getFullName() siteAdminEmail=$siteAdmin->getEmail()}</div>
+{/if}
+
 <div id="managementPages">
 <h3>{translate key="manager.managementPages"}</h3>
 

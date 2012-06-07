@@ -33,6 +33,26 @@ class ManagerHandler extends Handler {
 		$this->setupTemplate();
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
+
+		// Display a warning message if there is a new version of OJS available
+		$newVersionAvailable = false;
+		if (Config::getVar('general', 'show_upgrade_warning')) {
+			import('lib.pkp.classes.site.VersionCheck');
+			if($latestVersion = VersionCheck::checkIfNewVersionExists()) {
+				$newVersionAvailable = true;
+				$templateMgr->assign('latestVersion', $latestVersion);
+				$currentVersion =& VersionCheck::getCurrentDBVersion();
+				$templateMgr->assign('currentVersion', $currentVersion->getVersionString());
+				
+				// Get contact information for site administrator
+				$roleDao =& DAORegistry::getDAO('RoleDAO');
+				$siteAdmins =& $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
+				$templateMgr->assign_by_ref('siteAdmin', $siteAdmins->next());
+			}
+		}
+
+
+		$templateMgr->assign('newVersionAvailable', $newVersionAvailable);
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 		$templateMgr->assign('publishingMode', $journal->getSetting('publishingMode'));
 		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));

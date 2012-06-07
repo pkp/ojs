@@ -12,6 +12,11 @@
 {assign var="pageTitle" value="admin.siteAdmin"}
 {include file="common/header.tpl"}
 {/strip}
+
+{if $newVersionAvailable}
+<div class="warningMessage">{translate key="site.upgradeAvailable.admin" currentVersion=$currentVersion latestVersion=$latestVersion}</div>
+{/if}
+
 <div id="siteManagement">
 <h3>{translate key="admin.siteManagement"}</h3>
 

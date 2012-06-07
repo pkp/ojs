@@ -93,6 +93,9 @@ enable_cdn = On
 ; and 10. The more your connection bandwidth allows the better.
 citation_checking_max_processes = 3
 
+; Display a message on the site admin and journal manager user home pages if there is an upgrade available
+show_upgrade_warning = On
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
