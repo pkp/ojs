@@ -42,8 +42,10 @@ class UserAction {
 		}
 
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$newUser =& $userDao->getUser($newUserId);
 		foreach ($commentDao->getByUserId($oldUserId) as $comment) {
-			$comment->setUserId($newUserId);
+			$comment->setUser($newUser);
 			$commentDao->updateComment($comment);
 			unset($comment);
 		}
@@ -153,7 +155,6 @@ class UserAction {
 
 		// Transfer old user's roles
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$roles =& $roleDao->getRolesByUserId($oldUserId);
 		foreach ($roles as $role) {
