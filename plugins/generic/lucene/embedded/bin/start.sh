@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Identify our plug-in base directory.
-PLUGIN_DIR=`dirname "$0"`
-PLUGIN_DIR=`readlink -f "$PLUGIN_DIR/../.."`
+# Source common variables.
+source ./script-startup
 
-# OJS directories
-OJS_DIR=`readlink -f "$PLUGIN_DIR/../../.."`
-OJS_FILES=`grep '^[[:space:]]*files_dir[[:space:]]*=' "$OJS_DIR/config.inc.php" | sed 's/^[[:space:]]*files_dir[[:space:]]*=\s*//;s/\s*$//'`
-if [ ! \( -d "$OJS_FILES" -a -w "$OJS_FILES" \) ]; then
-  echo "We did not find the location of the OJS files directory or the files directory is not writable."
-  exit 1
+# Check whether solr is already running.
+if [ -e $SOLR_PIDFILE ]; then
+  SOLR_PID=`cat $SOLR_PIDFILE`
+  if [ ! -z "$SOLR_PID" -a -e "/proc/$SOLR_PID" ]; then
+    echo "Solr is already running!"
+    exit 1
+  fi
 fi
 
 # The deployment directory
@@ -51,4 +51,10 @@ if [ -z "$TMP" ]; then
 fi
 JAVA_OPTIONS="$JAVA_OPTIONS -Djava.io.tmpdir=$TMP"
 
-java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF
+java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF &>>$OJS_FILES/lucene/solr-java.log &
+
+# Remember the PID of the process we just started.
+SOLR_PID=$!
+echo $SOLR_PID>$SOLR_PIDFILE
+
+echo "Started solr."
