@@ -19,8 +19,10 @@ import('plugins.generic.lucene.SolrWebService');
 import('plugins.generic.lucene.EmbeddedServer');
 
 class SolrWebServiceTest extends PKPTestCase {
+
 	/** @var SolrWebService */
 	private $solrWebService;
+
 
 	//
 	// Implementing protected template methods from PKPTestCase
@@ -42,16 +44,38 @@ class SolrWebServiceTest extends PKPTestCase {
 	/**
 	 * @covers SolrWebService
 	 */
+	public function testRetrieveResults() {
+		$embeddedServer = new EmbeddedServer();
+		$this->_startServer($embeddedServer);
+		$testSearch = array(
+			'author_s' => 'Mruck',
+			'galley_full_text' => 'qualitative research',
+			'title' => 'current'
+		);
+		$scoredResults = $this->solrWebService->retrieveResults($testSearch);
+		self::assertTrue(is_array($scoredResults) && !empty($scoredResults));
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testGetAvailableFields() {
+		$embeddedServer = new EmbeddedServer();
+		$this->_startServer($embeddedServer);
+		$this->solrWebService->flushFieldCache();
+		// Only check one exemplary key to make sure that we got something useful back.
+		self::assertArrayHasKey('title', $this->solrWebService->getAvailableFields());
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
 	public function testGetServerStatus() {
 		// Make sure the server has been started.
 		$embeddedServer = new EmbeddedServer();
-		if (!$embeddedServer->isRunning()) {
-			$embeddedServer->start();
-		}
-		do {
-			sleep(1);
-			$result = $this->solrWebService->getServerStatus();
-		} while ($result['status'] != SOLR_STATUS_ONLINE);
+		$result = $this->_startServer($embeddedServer);
+
+		// Test the status message.
 		self::assertEquals(
 			array(
 				'status' => SOLR_STATUS_ONLINE,
@@ -60,7 +84,7 @@ class SolrWebServiceTest extends PKPTestCase {
 			$result
 		);
 
-		// Stop the server, then test again.
+		// Stop the server, then test the status again.
 		$embeddedServer->stop();
 		while($embeddedServer->isRunning()) sleep(1);
 		self::assertEquals(
@@ -70,6 +94,26 @@ class SolrWebServiceTest extends PKPTestCase {
 			),
 			$this->solrWebService->getServerStatus()
 		);
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Start the embedded server.
+	 * @param $embeddedServer EmbeddedServer
+	 * @return $result
+	 */
+	private function _startServer($embeddedServer) {
+		if (!$embeddedServer->isRunning()) {
+			$embeddedServer->start();
+		}
+		do {
+			sleep(1);
+			$result = $this->solrWebService->getServerStatus();
+		} while ($result['status'] != SOLR_STATUS_ONLINE);
+		return $result;
 	}
 }
 ?>

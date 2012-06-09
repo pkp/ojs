@@ -80,7 +80,7 @@
     <lst name="invariants">
       <str name="echoParams">explicit</str>
       <str name="defType">edismax</str>
-      <str name="fl">id,score</str>
+      <str name="fl">article_id,journal_id,inst_id,score</str>
       <int name="rows">20</int>
 
       <str name="hl">on</str>
