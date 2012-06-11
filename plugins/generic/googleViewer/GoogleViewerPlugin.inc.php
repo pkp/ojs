@@ -11,7 +11,7 @@
  * @brief This plugin enables embedding of the google document viewer for PDF display
  */
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class GoogleViewerPlugin extends GenericPlugin {
 	function register($category, $path) {
