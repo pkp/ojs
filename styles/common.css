@@ -320,11 +320,23 @@ pre {
  * Table styles
  */
 
-table.listing tr.highlight {
-	background: yellow;
+.highlightReviewerNotNotified, .highlightCopyediting {
+	background: #EDEBC4;
+}
+.highlightNoDecision, .highlightLayoutEditing {
+	background: #D8E9BD;
+}
+.highlightRevisedCopyUploaded, .higlightProofreading {
+	background: #C6EBE4;
+}
+.highlightReviewerConfirmationOverdue {
+	background: #9DD1E6;
+}
+.highlightReviewerCompletionOverdue {
+	background: #74C5D8;
 }
 
-table.listing tr.fastTracked {
+.fastTracked {
 	background-color: #ABA;
 }
 
