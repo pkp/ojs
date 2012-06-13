@@ -81,44 +81,37 @@ class SolrWebService extends XmlWebService {
 	 *
 	 * @param $search array a raw search query as given by the end user
 	 *  (one query per field).
+	 * @param $fromDate string An ISO 8601 date string or null.
+	 * @param $toDate string An ISO 8601 date string or null.
+	 * @param $defaultOperator string The operator to join search phrases.
 	 *
 	 * @return array An array of search results. The keys are
-	 *  scores (1-9999) and the values are article IDs, journal IDs and
-	 *  intallation IDs. Null if an error occured while querying the server.
+	 *  scores (1-9999) and the values are article IDs. Null if an error
+	 *  occured while querying the server.
 	 */
-	function retrieveResults($search) {
-		$availableFields = $this->getAvailableFields();
-		$fieldNames = $this->_getFieldNames();
-
+	function retrieveResults($search, $fromDate = null, $toDate = null, $defaultOperator = 'AND') {
 		// Expand the search to all locales/formats.
 		$expandedSearch = '';
 		foreach ($search as $field => $query) {
-			$fieldSearch = '';
-			if (isset($availableFields[$field])) {
-				if (in_array($field, $fieldNames['multiformat'])) {
-					foreach($availableFields[$field] as $format => $locales) {
-						foreach($locales as $locale) {
-							if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-							$fieldSearch .= $field . '_' . $format . '_' . $locale . ':(' . $query . ')';
-						}
-					}
-				} else {
-					assert(in_array($field, $fieldNames['localized']));
-					foreach($availableFields[$field] as $locale) {
-						if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-						$fieldSearch .= $field . '_' . $locale . ':(' . $query . ')';
-					}
-				}
+			// Do we expand a specific field or is this a
+			// search on all fields?
+			if (empty($field)) {
+				$fieldSearch = $this->_expandAllFields($query);
 			} else {
-				if(in_array($field, $fieldNames['static'])) {
-					if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-					$fieldSearch .= $field . ':(' . $query . ')';
-				}
+				$fieldSearch = $this->_expandSingleField($field, $query);
 			}
 			if (!empty($fieldSearch)) {
-				if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
+				if (!empty($expandedSearch)) $expandedSearch .= ' ' . $defaultOperator . ' ';
 				$expandedSearch .= '(' . $fieldSearch . ')';
 			}
+		}
+
+		// Add a range search on the publication date.
+		if (!(is_null($fromDate) && is_null($toDate))) {
+			if (is_null($fromDate)) $fromDate = '*';
+			if (is_null($toDate)) $toDate = '*';
+			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
+			$expandedSearch .= 'publication_date_dt:[' . $fromDate . ' TO ' . $toDate . ']';
 		}
 
 		// Execute the search.
@@ -158,8 +151,7 @@ class SolrWebService extends XmlWebService {
 		foreach($results as $result) {
 			assert(isset($result['score']));
 			$score = intval($result['score'] * 10000);
-			unset($result['score']);
-			$scoredResults[$score] = $result;
+			$scoredResults[$score] = $result['article_id'];
 		}
 		return $scoredResults;
 	}
@@ -282,17 +274,10 @@ class SolrWebService extends XmlWebService {
 			// Get the field name.
 			$fieldName = $node->textContent;
 
-			// Identify the field.
-			// 1) Is it a static field?
-			if (in_array($fieldName, $fields['static'])) {
-				// Static fields are "well known", we do not have to cache them.
-				continue;
-			}
-
-			// We got a dynamic field which we have to parse individually.
+			// Split the field name.
 			$fieldNameParts = explode('_', $fieldName);
 
-			// 2) Is it a dynamic multi-format field?
+			// 1) Is it a dynamic multi-format field?
 			foreach($fields['multiformat'] as $multiformatField) {
 				if (strpos($fieldName, $multiformatField) === 0) {
 					// Parse the dynamic field name.
@@ -313,12 +298,17 @@ class SolrWebService extends XmlWebService {
 				}
 			}
 
-			// 3) Is it a dynamic localized field?
-			$localizedField = array_shift($fieldNameParts);
-			assert(in_array($localizedField, $fields['localized']));
-			assert(count($fieldNameParts) == 2);
-			$locale = implode('_', $fieldNameParts);
-			$fieldCache[$localizedField][] = $locale;
+			// 2) Is it a dynamic localized field?
+			foreach($fields['localized'] as $localizedField) {
+				if (strpos($fieldName, $localizedField) === 0) {
+					array_shift($fieldNameParts);
+					assert(count($fieldNameParts) == 2);
+					$locale = implode('_', $fieldNameParts);
+					$fieldCache[$localizedField][] = $locale;
+				}
+			}
+
+			// 3) Static fields are "well-known" and do not have to be cached.
 		}
 
 		$fieldCache = array($id => $fieldCache);
@@ -418,7 +408,7 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Return a list of all fields that may occur in the
+	 * Return a list of all text fields that may occur in the
 	 * index.
 	 *
 	 * @return array
@@ -426,17 +416,71 @@ class SolrWebService extends XmlWebService {
 	function _getFieldNames() {
 		return array(
 			'localized' => array(
-				'title', 'abstract', 'discipline', 'subject', 'type',
-				'coverageGeo', 'coverageChron', 'coverageSample'
+				'title', 'abstract', 'discipline', 'subject',
+				'type', 'coverage'
 			),
 			'multiformat' => array(
 				'galley_full_text', 'suppFile_full_text'
 			),
 			'static' => array(
-				'article_id', 'journal_id', 'inst_id', 'authors_s',
-				'publication_date_dt', 'default_spell'
+				'authors' => 'authors_txt'
 			)
 		);
+	}
+
+	/**
+	 * Expand the given query to all format/locale versions
+	 * of the given field.
+	 * @param $field A field name without any extension.
+	 * @param $query The search phrase to expand.
+	 * @return string The expanded query.
+	 */
+	function _expandSingleField($field, $query) {
+		$availableFields = $this->getAvailableFields();
+		$fieldNames = $this->_getFieldNames();
+
+		$fieldSearch = '';
+		if (isset($availableFields[$field])) {
+			if (in_array($field, $fieldNames['multiformat'])) {
+				foreach($availableFields[$field] as $format => $locales) {
+					foreach($locales as $locale) {
+						if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
+						$fieldSearch .= $field . '_' . $format . '_' . $locale . ':(' . $query . ')';
+					}
+				}
+			} else {
+				assert(in_array($field, $fieldNames['localized']));
+				foreach($availableFields[$field] as $locale) {
+					if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
+					$fieldSearch .= $field . '_' . $locale . ':(' . $query . ')';
+				}
+			}
+		} else {
+			if(isset($fieldNames['static'][$field])) {
+				if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
+				$fieldSearch .= $fieldNames['static'][$field] . ':(' . $query . ')';
+			}
+		}
+		return $fieldSearch;
+	}
+
+	/**
+	 * Expand the given query to all available fields.
+	 * @param $query string
+	 * @return string The expanded query.
+	 */
+	function _expandAllFields($query) {
+		$fieldSearch = '';
+		$fieldNames = $this->_getFieldNames();
+		$allFields = array_merge($fieldNames['localized'], $fieldNames['multiformat'], array_keys($fieldNames['static']));
+		foreach($allFields as $field) {
+			$currentField = $this->_expandSingleField($field, $query);
+			if (!empty($currentField)) {
+				if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
+				$fieldSearch .= $currentField;
+			}
+		}
+		return $fieldSearch;
 	}
 }
 

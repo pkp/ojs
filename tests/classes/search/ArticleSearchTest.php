@@ -25,6 +25,8 @@ define('ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE', 1);
 define('ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
 
 class ArticleSearchTest extends PKPTestCase {
+	/** @var array */
+	private $_retrieveResultsParams;
 
 	//
 	// Implementing protected template methods from PKPTestCase
@@ -74,9 +76,7 @@ class ArticleSearchTest extends PKPTestCase {
 	public function testRetrieveResults() {
 		// Test a simple search with a mock database back-end.
 		$journal = new Journal();
-		$keywords = array(
-			array('+' => array(array('test')), '' => array(), '-' => array())
-		);
+		$keywords = array(null => 'test');
 		$articleSearch = new ArticleSearch();
 		$searchResult = $articleSearch->retrieveResults($journal, $keywords);
 
@@ -94,24 +94,45 @@ class ArticleSearchTest extends PKPTestCase {
 		// Diverting a search to the search plugin hook.
 		HookRegistry::register('ArticleSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
 
-		// Test a simple search with the simulated callback.
-		$journal = new Journal();
-		$keywords = array(
-			array('+' => array(array('test')), '' => array(), '-' => array())
+		$testCases = array(
+			array (null => 'query'), // Simple Search - "All"
+			array ('1' => 'author'), // Simple Search - "Authors"
+			array ('2' => 'title'), // Simple Search - "Title"
+			array (
+				null => 'query',
+				1 => 'author',
+				2 => 'title'
+			), // Advanced Search
 		);
-		$articleSearch = new ArticleSearch();
-		$searchResult = $articleSearch->retrieveResults($journal, $keywords);
 
-		// Test and clear the call history of the hook registry.
-		$calledHooks = HookRegistry::getCalledHooks();
-		self::assertEquals('ArticleSearch::retrieveResults', $calledHooks[0][0]);
+		$testFromDate = date('Y-m-d H:i:s', strtotime('2011-03-15 00:00:00'));
+		$testToDate = date('Y-m-d H:i:s', strtotime('2012-03-15 18:30:00'));
+
+		foreach($testCases as $testCase) {
+			// Test a simple search with the simulated callback.
+			$journal = new Journal();
+			$keywords = $testCase;
+			$articleSearch = new ArticleSearch();
+			$searchResult = $articleSearch->retrieveResults($journal, $keywords, $testFromDate, $testToDate);
+
+			// Check the parameters passed into the callback.
+			$expectedParams = array($journal, $testCase, $testFromDate, $testToDate);
+			self::assertEquals($expectedParams, $this->_retrieveResultsParams);
+
+			// Test and clear the call history of the hook registry.
+			$calledHooks = HookRegistry::getCalledHooks();
+			self::assertEquals('ArticleSearch::retrieveResults', $calledHooks[0][0]);
+			HookRegistry::resetCalledHooks();
+
+			// Test whether the result from the hook is being returned.
+			self::assertInstanceOf('ItemIterator', $searchResult);
+			$firstResult = $searchResult->next();
+			self::assertArrayHasKey('article', $firstResult);
+			self::assertEquals(ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
+		}
+
+		// Remove the test hook.
 		HookRegistry::clear('ArticleSearch::retrieveResults');
-
-		// Test whether the result from the hook is being returned.
-		self::assertInstanceOf('ItemIterator', $searchResult);
-		$firstResult = $searchResult->next();
-		self::assertArrayHasKey('article', $firstResult);
-		self::assertEquals(ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
 	}
 
 
@@ -123,11 +144,14 @@ class ArticleSearchTest extends PKPTestCase {
 	 * @see ArticleSearch::retrieveResults()
 	 */
 	public function callbackRetrieveResults($hook, $params) {
+		// Save the test parameters
+		$this->_retrieveResultsParams = $params;
+
 		// Mock a result set and return it.
-		$mergedResults = array(
-			ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN => 3
+		$results = array(
+			3 => ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN
 		);
-		return $mergedResults;
+		return $results;
 	}
 
 	/**

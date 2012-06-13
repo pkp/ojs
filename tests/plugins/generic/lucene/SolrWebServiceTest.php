@@ -47,12 +47,17 @@ class SolrWebServiceTest extends PKPTestCase {
 	public function testRetrieveResults() {
 		$embeddedServer = new EmbeddedServer();
 		$this->_startServer($embeddedServer);
+
+		// Make a search on specific fields.
 		$testSearch = array(
-			'author_s' => 'Mruck',
+			null => 'qualitative',
+			'authors' => 'Mruck',
 			'galley_full_text' => 'qualitative research',
 			'title' => 'current'
 		);
-		$scoredResults = $this->solrWebService->retrieveResults($testSearch);
+		$fromDate = date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01'));
+		$toDate = null;
+		$scoredResults = $this->solrWebService->retrieveResults($testSearch, $fromDate, $toDate);
 		self::assertTrue(is_array($scoredResults) && !empty($scoredResults));
 	}
 

@@ -37,10 +37,10 @@ class ArticleSearch {
 	 * @param $query
 	 * @return array of the form ('+' => <required>, '' => <optional>, '-' => excluded)
 	 */
-	function parseQuery($query) {
+	function _parseQuery($query) {
 		$count = preg_match_all('/(\+|\-|)("[^"]+"|\(|\)|[^\s\)]+)/', $query, $matches);
 		$pos = 0;
-		$keywords = ArticleSearch::_parseQuery($matches[1], $matches[2], $pos, $count);
+		$keywords = ArticleSearch::_parseQueryInternal($matches[1], $matches[2], $pos, $count);
 		return $keywords;
 	}
 
@@ -48,7 +48,7 @@ class ArticleSearch {
 	 * Query parsing helper routine.
 	 * Returned structure is based on that used by the Search::QueryParser Perl module.
 	 */
-	function _parseQuery($signTokens, $tokens, &$pos, $total) {
+	function _parseQueryInternal($signTokens, $tokens, &$pos, $total) {
 		$return = array('+' => array(), '' => array(), '-' => array());
 		$postBool = $preBool = '';
 
@@ -66,7 +66,7 @@ class ArticleSearch {
 				case ')':
 					return $return;
 				case '(':
-					$token = ArticleSearch::_parseQuery($signTokens, $tokens, $pos, $total);
+					$token = ArticleSearch::_parseQueryInternal($signTokens, $tokens, $pos, $total);
 				default:
 					$postBool = '';
 					if ($pos < $total) {
@@ -300,28 +300,34 @@ class ArticleSearch {
 	 */
 	function &retrieveResults(&$journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
 		// Check whether a search plug-in jumps in to provide ranked search results.
-		$mergedResults =& HookRegistry::call(
+		$results =& HookRegistry::call(
 			'ArticleSearch::retrieveResults',
 			array(&$journal, &$keywords, $publishedFrom, $publishedTo)
 		);
 
-		// If no search plug-in is activated then use the
+		// If no search plug-in is activated or the search
+		// plug-in encountered an error then fall back to the
 		// default database search implementation.
-		if (!$mergedResults) {
+		if (is_null($results)) {
+			// Parse the query.
+			foreach($keywords as $searchType => $query) {
+				$keywords[$searchType] = ArticleSearch::_parseQuery($query);
+			}
+
 			// Fetch all the results from all the keywords into one array
 			// (mergedResults), where mergedResults[article_id]
 			// = sum of all the occurences for all keywords associated with
 			// that article ID.
 			$mergedResults =& ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo);
-		}
 
-		// Convert mergedResults into an array (frequencyIndicator =>
-		// $articleId).
-		// The frequencyIndicator is a synthetically-generated number,
-		// where higher is better, indicating the quality of the match.
-		// It is generated here in such a manner that matches with
-		// identical frequency do not collide.
-		$results =& ArticleSearch::_getSparseArray($mergedResults);
+			// Convert mergedResults into an array (frequencyIndicator =>
+			// $articleId).
+			// The frequencyIndicator is a synthetically-generated number,
+			// where higher is better, indicating the quality of the match.
+			// It is generated here in such a manner that matches with
+			// identical frequency do not collide.
+			$results =& ArticleSearch::_getSparseArray($mergedResults);
+		}
 
 		$totalResults = count($results);
 

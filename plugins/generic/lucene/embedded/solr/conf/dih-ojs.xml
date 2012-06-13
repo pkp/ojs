@@ -9,7 +9,7 @@
       var spellSource = '';
 
       // Add localized fields.
-      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverageGeo', 'coverageChron', 'coverageSample'];
+      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
       for (i=0, len=locFields.length; i<len; i++) {
         var valueList = 'etl_' + locFields[i] + 'List';
         var localeList = 'etl_' + locFields[i] + 'List_locales';
@@ -110,7 +110,7 @@
       <field column="journal_id" xpath="/articleList/article/@journalId" />
 
       <!-- Authors -->
-      <field column="authors_s" xpath="/articleList/article/authorList/author" multiValued="true" />
+      <field column="authors_txt" xpath="/articleList/article/authorList/author" multiValued="true" />
 
       <!-- Titles -->
       <field column="etl_titleList" xpath="/articleList/article/titleList/title" multiValued="true" />
@@ -132,17 +132,9 @@
       <field column="etl_typeList" xpath="/articleList/article/typeList/type" multiValued="true" />
       <field column="etl_typeList_locales" xpath="/articleList/article/typeList/type/@locale" multiValued="true" />
 
-      <!-- CoverageGeo -->
-      <field column="etl_coverageGeoList" xpath="/articleList/article/coverageGeoList/coverageGeo" multiValued="true" />
-      <field column="etl_coverageGeoList_locales" xpath="/articleList/article/coverageGeoList/coverageGeo/@locale" multiValued="true" />
-
-      <!-- CoverageChron -->
-      <field column="etl_coverageChronList" xpath="/articleList/article/coverageChronList/coverageChron" multiValued="true" />
-      <field column="etl_coverageChronList_locales" xpath="/articleList/article/coverageChronList/coverageChron/@locale" multiValued="true" />
-
-      <!-- CoverageSample -->
-      <field column="etl_coverageSampleList" xpath="/articleList/article/coverageSampleList/coverageSample" multiValued="true" />
-      <field column="etl_coverageSampleList_locales" xpath="/articleList/article/coverageSampleList/coverageSample/@locale" multiValued="true" />
+      <!-- Coverage -->
+      <field column="etl_coverageList" xpath="/articleList/article/coverageList/coverage" multiValued="true" />
+      <field column="etl_coverageList_locales" xpath="/articleList/article/coverageList/coverage/@locale" multiValued="true" />
 
       <!-- Publication Date -->
       <field column="publication_date_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
