@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <dataConfig>
   <dataSource name="http-post" type="ContentStreamDataSource" connectionTimeout="300000" readTimeout="400000" />
   <dataSource name="field" type="FieldReaderDataSource" />
-  <dataSource name="file" type="BinFileDataSource" basePath="/home/fgrandel/Development/fub/ojs/plugins/generic/lucene/embedded/testdata/files/journals/1/articles/" />
-
+  <dataSource name="file" type="BinURLDataSource" />
+  
   <script><![CDATA[
     function transformArticle(row, context) {
       // Variable for spellchecker output.
@@ -62,7 +63,6 @@
           row.remove('etl_file_mimetype');
           row.put('$skipRow', 'true');
       }
-
       return row;
     }
 
@@ -157,7 +157,7 @@
         <entity name="galley_file"
                 dataSource="file"
                 processor="TikaEntityProcessor"
-                url="${article.article_id}/public/${galley.etl_file_name}"
+                url="${galley.etl_file_name}"
                 transformer="script:transformFullText"
                 format="text" >
           <field column="text" />
@@ -182,7 +182,7 @@
         <entity name="suppFile_file"
                 dataSource="file"
                 processor="TikaEntityProcessor"
-                url="${article.article_id}/supp/${suppFile.etl_file_name}"
+                url="${suppFile.etl_file_name}"
                 transformer="script:transformFullText"
                 format="text" >
           <field column="text" />

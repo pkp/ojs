@@ -17,6 +17,9 @@
 import('lib.pkp.tests.PKPTestCase');
 import('plugins.generic.lucene.SolrWebService');
 import('plugins.generic.lucene.EmbeddedServer');
+import('classes.article.PublishedArticle');
+import('classes.journal.Journal');
+import('classes.core.PageRouter');
 
 class SolrWebServiceTest extends PKPTestCase {
 
@@ -27,6 +30,17 @@ class SolrWebServiceTest extends PKPTestCase {
 	//
 	// Implementing protected template methods from PKPTestCase
 	//
+	/**
+	 * @see PKPTestCase::getMockedDAOs()
+	 */
+	protected function getMockedDAOs() {
+		$mockedDaos = parent::getMockedDAOs();
+		$mockedDaos += array(
+			'AuthorDAO', 'SuppFileDAO', 'ArticleGalleyDAO'
+		);
+		return $mockedDaos;
+	}
+
 	/**
 	 * @see PKPTestCase::setUp()
 	 */
@@ -50,15 +64,15 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Make a search on specific fields.
 		$testSearch = array(
-			null => 'qualitative',
-			'authors' => 'Mruck',
-			'galley_full_text' => 'qualitative research',
-			'title' => 'current'
+			null => 'pizza',
+			'authors' => 'Author',
+			'galley_full_text' => 'Nutella',
+			'title' => 'Titel'
 		);
 		$fromDate = date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01'));
 		$toDate = null;
 		$scoredResults = $this->solrWebService->retrieveResults($testSearch, $fromDate, $toDate);
-		self::assertTrue(is_array($scoredResults) && !empty($scoredResults));
+		self::assertTrue(is_array($scoredResults) && !empty($scoredResults) && in_array('3', $scoredResults));
 	}
 
 	/**
@@ -84,7 +98,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertEquals(
 			array(
 				'status' => SOLR_STATUS_ONLINE,
-				'message' => 'Index with 1464 documents online.'
+				'message' => 'Index with 1 documents online.'
 			),
 			$result
 		);
@@ -99,6 +113,43 @@ class SolrWebServiceTest extends PKPTestCase {
 			),
 			$this->solrWebService->getServerStatus()
 		);
+
+		// Restart the server.
+		$result = $this->_startServer($embeddedServer);
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testGetArticleXml() {
+		// Generate a test article.
+		$article = $this->_getTestArticle();
+		// Generate a test journal.
+		$journal = new Journal();
+		$journal->setPath('test');
+
+		// Test the transfer XML file.
+		self::assertXmlStringEqualsXmlFile(
+			'tests/plugins/generic/lucene/test-article.xml',
+			$this->solrWebService->_getArticleXml($article, $journal)
+		);
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testIndexArticle() {
+		// Generate a test article.
+		$article = $this->_getTestArticle();
+		$article->setJournalId('1');
+		// Generate a test journal.
+		$journal = new Journal();
+		$journal->setId('1');
+		$journal->setPath('test');
+
+		// Test indexing. The service returns the number of documents that
+		// were successfully processed.
+		self::assertEquals(1, $this->solrWebService->indexArticle($article, $journal));
 	}
 
 
@@ -119,6 +170,145 @@ class SolrWebServiceTest extends PKPTestCase {
 			$result = $this->solrWebService->getServerStatus();
 		} while ($result['status'] != SOLR_STATUS_ONLINE);
 		return $result;
+	}
+
+	/**
+	 * Mock and register a ArticleGalleyDAO as a test
+	 * back end for the SolrWebService class.
+	 */
+	private function _registerMockArticleGalleyDAO() {
+		// Mock an ArticleGalleyDAO.
+		$galleyDAO = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'), array(), '', false);
+
+		// Mock a list of supplementary files.
+		$galley1 = new ArticleGalley();
+		$galley1->setId(4);
+		$galley1->setLocale('de_DE');
+		$galley1->setFileType('application/pdf');
+		$galley1->setFileName('galley1.pdf');
+		$galley2 = new ArticleGalley();
+		$galley2->setId(5);
+		$galley2->setLocale('en_US');
+		$galley2->setFileType('text/html');
+		$galley2->setFileName('galley2.html');
+		$galleys = array($galley1, $galley2);
+
+		// Mock the getGalleysByArticle() method.
+		$galleyDAO->expects($this->any())
+		          ->method('getGalleysByArticle')
+		          ->will($this->returnValue($galleys));
+
+		// Register the mock DAO.
+		DAORegistry::registerDAO('ArticleGalleyDAO', $galleyDAO);
+	}
+
+	/**
+	 * Mock and register a SuppFileDAO as a test
+	 * back end for the SolrWebService class.
+	 */
+	private function _registerMockSuppFileDAO() {
+		// Mock an SuppFileDAO.
+		$suppFileDAO = $this->getMock('SuppFileDAO', array('getSuppFilesByArticle'), array(), '', false);
+
+		// Mock a list of supplementary files.
+		$suppFile1 = new SuppFile();
+		$suppFile1->setId(2);
+		$suppFile1->setLanguage('de');
+		$suppFile1->setFileType('application/pdf');
+		$suppFile1->setFileName('suppFile1.pdf');
+		$suppFile2 = new SuppFile();
+		$suppFile2->setId(3);
+		$suppFile2->setLanguage('tu');
+		$suppFile2->setFileType('text/html');
+		$suppFile2->setFileName('suppFile2.html');
+		$suppFile2->setTitle('Titel', 'de_DE');
+		$suppFile2->setCreator('Autor', 'de_DE');
+		$suppFile2->setSubject('Thema', 'de_DE');
+		$suppFile2->setTypeOther('Sonstiger Typ', 'de_DE');
+		$suppFile2->setDescription('Beschreibung', 'de_DE');
+		$suppFile2->setSource('Quelle', 'de_DE');
+		$suppFiles = array($suppFile1, $suppFile2);
+
+		// Mock the getSuppFilesByArticle() method.
+		$suppFileDAO->expects($this->any())
+		            ->method('getSuppFilesByArticle')
+		            ->will($this->returnValue($suppFiles));
+
+		// Register the mock DAO.
+		DAORegistry::registerDAO('SuppFileDAO', $suppFileDAO);
+	}
+
+	/**
+	 * Mock and register an AuthorDAO as a test
+	 * back end for the SolrWebService class.
+	 */
+	private function _registerMockAuthorDAO() {
+		// Mock an AuthorDAO.
+		$authorDAO = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'), array(), '', false);
+
+		// Mock a list of authors.
+		$author1 = new Author();
+		$author1->setFirstName('First');
+		$author1->setLastName('Author');
+		$author2 = new Author();
+		$author2->setFirstName('Second');
+		$author2->setMiddleName('M.');
+		$author2->setLastName('Name');
+		$authors = array($author1, $author2);
+
+		// Mock the getAuthorsBySubmissionId() method.
+		$authorDAO->expects($this->any())
+		          ->method('getAuthorsBySubmissionId')
+		          ->will($this->returnValue($authors));
+
+		// Register the mock DAO.
+		DAORegistry::registerDAO('AuthorDAO', $authorDAO);
+	}
+
+	/**
+	 * Activate mock DAOs for authors, galleys and supp files
+	 * and return a test article.
+	 *
+	 * @return Article
+	 */
+	private function _getTestArticle() {
+		// Activate the mock DAOs.
+		$this->_registerMockAuthorDAO();
+		$this->_registerMockArticleGalleyDAO();
+		$this->_registerMockSuppFileDAO();
+
+		// We need a router for URL generation.
+		$application =& PKPApplication::getApplication();
+		$_SERVER['REQUEST_METHOD'] = 'GET';
+		$request =& $application->getRequest();
+		$router = new PageRouter();
+		$router->setApplication($application);
+		$request->setRouter($router);
+
+		// Create a test article.
+		$article = new PublishedArticle();
+		$article->setId(3);
+		$article->setJournalId(1);
+		$article->setTitle('Deutscher Titel', 'de_DE');
+		$article->setTitle('English Title', 'en_US');
+		$article->setAbstract('Deutsche Zusammenfassung', 'de_DE');
+		$article->setAbstract('English Abstract', 'en_US');
+		$article->setDiscipline('Sozialwissenschaften', 'de_DE');
+		$article->setDiscipline('Social Sciences', 'en_US');
+		$article->setSubject('Thema', 'de_DE');
+		$article->setSubjectClass('Ein Themengebiet', 'de_DE');
+		$article->setSubject('subject', 'en_US');
+		$article->setSubjectClass('Uma classe de temas', 'pt_BR');
+		$article->setType('Typ', 'de_DE');
+		$article->setType('type', 'en_US');
+		$article->setCoverageGeo('Kaltes Kap', 'de_DE');
+		$article->setCoverageGeo('Cabo Frio', 'pt_BR');
+		$article->setCoverageChron('Sommer 2012', 'de_DE');
+		$article->setCoverageChron('Summer 2012', 'en_US');
+		$article->setCoverageSample('Alles', 'de_DE');
+		$article->setCoverageSample('everything', 'en_US');
+		$article->setDatePublished('2012-03-15 16:45:00');
+		return $article;
 	}
 }
 ?>

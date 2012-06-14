@@ -22,6 +22,7 @@ define('SOLR_STATUS_OFFLINE', 0x02);
 // FIXME: Move to plug-in settings.
 define('SOLR_ADMIN_USER', 'admin');
 define('SOLR_ADMIN_PASSWORD', 'ojsojs');
+define('SOLR_INSTALLATION_ID', 'test-inst');
 
 // The default endpoint for the embedded server.
 define('SOLR_EMBEDDED_SERVER', 'http://localhost:8983/solr/ojs/search');
@@ -162,18 +163,35 @@ class SolrWebService extends XmlWebService {
 	 * In Solr we cannot partially (re-)index an article. We always
 	 * have to refresh the whole document if parts of it change.
 	 *
-	 * @param $articleId integer The article to be (re-)indexed.
+	 * @param $article Article The article to be (re-)indexed.
+	 * @param $journal Journal.
+	 *
+	 * @return integer The number of documents processed or null if
+	 *  an error occured.
 	 */
-	function indexArticle($articleId) {
-		// FIXME: Not yet implemented.
+	function indexArticle(&$article, &$journal) {
+		assert($article->getJournalId() == $journal->getId());
+
+		// Generate the transfer XML for the article and POST it to the web service.
+		$articleXml = $this->_getArticleXml($article, $journal);
+		$url = $this->_getDihUrl() . '?command=full-import';
+		$result = $this->_makeRequest($url, $articleXml, 'POST');
+		if (is_null($result)) return $result;
+
+		// Return the number of documents that were indexed.
+		$nodeList = $result->query('//response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
+		assert($nodeList->length == 1);
+		$resultNode = $nodeList->item(0);
+		assert(is_numeric($resultNode->textContent));
+		return (int)$resultNode->textContent;
 	}
 
 	/**
 	 * Deletes the given article from the Solr index.
 	 *
-	 * @param $articleId integer The article to be deleted.
+	 * @param $article Article The article to be deleted.
 	 */
-	function deleteArticleFromIndex($articleId) {
+	function deleteArticleFromIndex($article) {
 		// FIXME: Not yet implemented.
 	}
 
@@ -375,16 +393,30 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
+	 * Returns the solr DIH endpoint.
+	 *
+	 * @return string
+	 */
+	function _getDihUrl() {
+		$dihUrl = $this->_solrServer . $this->_solrCore . '/dih';
+		return $dihUrl;
+	}
+
+	/**
 	 * Make a request
 	 *
-	 * @param $url string
-	 * @param $params array
+	 * @param $url string The request URL
+	 * @param $params array request parameters
+	 * @param $method string GET or POST
 	 *
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _lastError for more details about the error.
 	 */
-	function &_makeRequest($url, $params = array()) {
-		$webServiceRequest = new WebServiceRequest($url, $params);
+	function &_makeRequest($url, $params = array(), $method = 'GET') {
+		$webServiceRequest = new WebServiceRequest($url, $params, $method);
+		if ($method == 'POST') {
+			$webServiceRequest->setHeader('Content-type', 'text/xml; charset=utf-8');
+		}
 		$response = $this->call($webServiceRequest);
 		$nullValue = null;
 
@@ -481,6 +513,254 @@ class SolrWebService extends XmlWebService {
 			}
 		}
 		return $fieldSearch;
+	}
+
+	/**
+	 * Establish the XML used to communicate with the
+	 * solr indexing engine DIH.
+	 * @param $article Article
+	 * @param $journal Journal
+	 * @return string $xml
+	 */
+	function _getArticleXml(&$article, &$journal) {
+		assert(is_a($article, 'Article'));
+
+		import('lib.pkp.classes.xml.XMLCustomWriter');
+		$articleDoc =& XMLCustomWriter::createDocument();
+
+		// Create the root node.
+		$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
+		XMLCustomWriter::appendChild($articleDoc, $articleList);
+
+		// Create the article node.
+		$articleNode =& XMLCustomWriter::createElement($articleDoc, 'article');
+		XMLCustomWriter::setAttribute($articleNode, 'id', $article->getId());
+		XMLCustomWriter::setAttribute($articleNode, 'journalId', $article->getJournalId());
+		XMLCustomWriter::setAttribute($articleNode, 'instId', SOLR_INSTALLATION_ID);
+		XMLCustomWriter::appendChild($articleList, $articleNode);
+
+		// Add authors.
+		$authors = $article->getAuthors();
+		if (!empty($authors)) {
+			$authorList =& XMLCustomWriter::createElement($articleDoc, 'authorList');
+			foreach ($authors as $author) {
+				XMLCustomWriter::createChildWithText($articleDoc, $authorList, 'author', $author->getFullName());
+			}
+			XMLCustomWriter::appendChild($articleNode, $authorList);
+		}
+
+		// Add titles.
+		$titles = $article->getTitle(null); // return all locales
+		if (!empty($titles)) {
+			$titleList =& XMLCustomWriter::createElement($articleDoc, 'titleList');
+			foreach ($titles as $locale => $title) {
+				$titleNode =& XMLCustomWriter::createChildWithText($articleDoc, $titleList, 'title', $title);
+				XMLCustomWriter::setAttribute($titleNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $titleList);
+		}
+
+		// Add abstracts.
+		$abstracts = $article->getAbstract(null); // return all locales
+		if (!empty($abstracts)) {
+			$abstractList =& XMLCustomWriter::createElement($articleDoc, 'abstractList');
+			foreach ($abstracts as $locale => $abstract) {
+				$abstractNode =& XMLCustomWriter::createChildWithText($articleDoc, $abstractList, 'abstract', $abstract);
+				XMLCustomWriter::setAttribute($abstractNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $abstractList);
+		}
+
+		// Add discipline.
+		$disciplines = $article->getDiscipline(null); // return all locales
+		if (!empty($disciplines)) {
+			$disciplineList =& XMLCustomWriter::createElement($articleDoc, 'disciplineList');
+			foreach ($disciplines as $locale => $discipline) {
+				$disciplineNode =& XMLCustomWriter::createChildWithText($articleDoc, $disciplineList, 'discipline', $discipline);
+				XMLCustomWriter::setAttribute($disciplineNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $disciplineList);
+		}
+
+		// Add subjects and subject classes.
+		$subjectClasses = $article->getSubjectClass(null);
+		$subjects = $article->getSubject(null);
+		if (!empty($subjectClasses) || !empty($subjects)) {
+			$subjectList =& XMLCustomWriter::createElement($articleDoc, 'subjectList');
+			$locales = array_unique(array_merge(array_keys($subjectClasses), array_keys($subjects)));
+			foreach($locales as $locale) {
+				$subject = '';
+				if (isset($subjectClasses[$locale])) $subject .= $subjectClasses[$locale];
+				if (isset($subjects[$locale])) {
+					if (!empty($subject)) $subject .= ' ';
+					$subject .= $subjects[$locale];
+				}
+				$subjectNode =& XMLCustomWriter::createChildWithText($articleDoc, $subjectList, 'subject', $subject);
+				XMLCustomWriter::setAttribute($subjectNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $subjectList);
+		}
+
+		// Add type.
+		$types = $article->getType(null); // return all locales
+		if (!empty($types)) {
+			$typeList =& XMLCustomWriter::createElement($articleDoc, 'typeList');
+			foreach ($types as $locale => $type) {
+				$typeNode =& XMLCustomWriter::createChildWithText($articleDoc, $typeList, 'type', $type);
+				XMLCustomWriter::setAttribute($typeNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $typeList);
+		}
+
+		// Add coverage.
+		$coverageGeo = $article->getCoverageGeo(null);
+		$coverageChron = $article->getCoverageChron(null);
+		$coverageSample = $article->getCoverageSample(null);
+		if (!empty($coverageGeo) || !empty($coverageChron) || !empty($coverageSample)) {
+			$coverageList =& XMLCustomWriter::createElement($articleDoc, 'coverageList');
+			$locales = array_unique(array_merge(array_keys($coverageGeo), array_keys($coverageChron), array_keys($coverageSample)));
+			foreach($locales as $locale) {
+				$coverage = '';
+				if (isset($coverageGeo[$locale])) $coverage .= $coverageGeo[$locale];
+				if (isset($coverageChron[$locale])) {
+					if (!empty($coverage)) $coverage .= ' ';
+					$coverage .= $coverageChron[$locale];
+				}
+				if (isset($coverageSample[$locale])) {
+					if (!empty($coverage)) $coverage .= ' ';
+					$coverage .= $coverageSample[$locale];
+				}
+				$coverageNode =& XMLCustomWriter::createChildWithText($articleDoc, $coverageList, 'coverage', $coverage);
+				XMLCustomWriter::setAttribute($coverageNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $coverageList);
+		}
+
+		// Add publication date.
+		if (is_a($article, 'PublishedArticle')) {
+			$publicationDate = $article->getDatePublished();
+			if (!empty($publicationDate)) {
+				// Transform date.
+				$publicationDate = str_replace(' ', 'T', $publicationDate) . 'Z';
+				$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'publicationDate', $publicationDate);
+			}
+		}
+
+		// We need the request and router to build file URLs.
+		$request =& PKPApplication::getRequest();
+		$router =& $request->getRouter(); /* @var $router PageRouter */
+
+		// Add galley files
+		$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleys =& $fileDao->getGalleysByArticle($article->getId());
+		$galleyList = null;
+		foreach ($galleys as $galley) { /* @var $galley ArticleGalley */
+			$locale = $galley->getLocale();
+			$mimetype = $galley->getFileType();
+			$galleyUrl = $router->url($request, $journal->getPath(), 'article', 'download', array(intval($article->getId()), intval($galley->getId())));
+			if (!empty($locale) && !empty($mimetype) && !empty($galleyUrl)) {
+				if (is_null($galleyList)) {
+					$galleyList =& XMLCustomWriter::createElement($articleDoc, 'galleyList');
+				}
+				$galleyNode =& XMLCustomWriter::createElement($articleDoc, 'galley');
+				XMLCustomWriter::setAttribute($galleyNode, 'locale', $locale);
+				XMLCustomWriter::setAttribute($galleyNode, 'mimetype', $mimetype);
+				XMLCustomWriter::setAttribute($galleyNode, 'fileName', $galleyUrl);
+				XMLCustomWriter::appendChild($galleyList, $galleyNode);
+			}
+		}
+
+		// Wrap the galley XML as CDATA.
+		if (!is_null($galleyList)) {
+			if (is_callable(array($articleDoc, 'saveXml'))) {
+				$galleyXml = $articleDoc->saveXml($galleyList);
+			} else {
+				$galleyXml = $galleyList->toXml();
+			}
+			$galleyOuterNode =& XMLCustomWriter::createElement($articleDoc, 'galley-xml');
+			if (is_callable(array($articleDoc, 'createCDATASection'))) {
+				$cdataNode =& $articleDoc->createCDATASection($galleyXml);
+			} else {
+				$cdataNode = new XMLNode();
+				$cdataNode->setValue('<![CDATA[' . $galleyXml . ']]>');
+			}
+			XMLCustomWriter::appendChild($galleyOuterNode, $cdataNode);
+			XMLCustomWriter::appendChild($articleNode, $galleyOuterNode);
+		}
+
+		// Add supplementary files
+		$fileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFiles =& $fileDao->getSuppFilesByArticle($article->getId());
+		$suppFileList = null;
+		foreach ($suppFiles as $suppFile) { /* @var $suppFile SuppFile */
+			// Try to map the supp-file language to a PKP locale.
+			$locale = null;
+			$language = $suppFile->getLanguage();
+			if (strlen($language) == 2) {
+				$language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
+			}
+			if (strlen($language) == 3) {
+				$locale = AppLocale::getLocaleFrom3LetterIso($language);
+			}
+			if (!AppLocale::isLocaleValid($locale)) {
+				$locale = 'unknown';
+			}
+
+			$mimetype = $suppFile->getFileType();
+			$suppFileUrl = $router->url($request, $journal->getPath(), 'article', 'downloadSuppFile', array(intval($article->getId()), intval($suppFile->getId())));
+
+			if (!empty($locale) && !empty($mimetype) && !empty($suppFileUrl)) {
+				if (is_null($suppFileList)) {
+					$suppFileList =& XMLCustomWriter::createElement($articleDoc, 'suppFileList');
+				}
+				$suppFileNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile');
+				XMLCustomWriter::setAttribute($suppFileNode, 'locale', $locale);
+				XMLCustomWriter::setAttribute($suppFileNode, 'mimetype', $mimetype);
+				XMLCustomWriter::setAttribute($suppFileNode, 'fileName', $suppFileUrl);
+				XMLCustomWriter::appendChild($suppFileList, $suppFileNode);
+
+				// Add supp file meta-data.
+				$suppFileMetadata = array(
+					'title' => $suppFile->getTitle(null),
+					'creator' => $suppFile->getCreator(null),
+					'subject' => $suppFile->getSubject(null),
+					'typeOther' => $suppFile->getTypeOther(null),
+					'description' => $suppFile->getDescription(null),
+					'source' => $suppFile->getSource(null)
+				);
+				foreach($suppFileMetadata as $field => $data) {
+					if (!empty($data)) {
+						foreach($data as $locale => $value) {
+							$suppFileMDNode =& XMLCustomWriter::createChildWithText($articleDoc, $suppFileNode, $field, $value);
+							XMLCustomWriter::setAttribute($suppFileMDNode, 'locale', $locale);
+							XMLCustomWriter::appendChild($suppFileNode, $suppFileMDNode);
+							unset($suppFileMDNode);
+						}
+					}
+				}
+			}
+		}
+
+		// Wrap the suppFile XML as CDATA.
+		if (!is_null($suppFileList)) {
+			if (is_callable(array($articleDoc, 'saveXml'))) {
+				$suppFileXml = $articleDoc->saveXml($suppFileList);
+			} else {
+				$suppFileXml = $suppFileList->toXml();
+			}
+			$suppFileOuterNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile-xml');
+			if (is_callable(array($articleDoc, 'createCDATASection'))) {
+				$cdataNode =& $articleDoc->createCDATASection($suppFileXml);
+			} else {
+				$cdataNode = new XMLNode();
+				$cdataNode->setValue('<![CDATA[' . $suppFileXml . ']]>');
+			}
+			XMLCustomWriter::appendChild($suppFileOuterNode, $cdataNode);
+			XMLCustomWriter::appendChild($articleNode, $suppFileOuterNode);
+		}
+
+		// Return the XML.
+		return XMLCustomWriter::getXml($articleDoc);
 	}
 }
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articleList>
+  <article id="3" journalId="1" instId="test-inst">
+    <authorList>
+      <author>First Author</author>
+      <author>Second M. Name</author>
+    </authorList>
+    <titleList>
+      <title locale="de_DE">Deutscher Titel</title>
+      <title locale="en_US">English Title</title>
+    </titleList>
+    <abstractList>
+      <abstract locale="de_DE">Deutsche Zusammenfassung</abstract>
+      <abstract locale="en_US">English Abstract</abstract>
+    </abstractList>
+    <disciplineList>
+      <discipline locale="de_DE">Sozialwissenschaften</discipline>
+      <discipline locale="en_US">Social Sciences</discipline>
+    </disciplineList>
+    <subjectList>
+      <subject locale="de_DE">Ein Themengebiet Thema</subject>
+      <subject locale="pt_BR">Uma classe de temas</subject>
+      <subject locale="en_US">subject</subject>
+    </subjectList>
+    <typeList>
+      <type locale="de_DE">Typ</type>
+      <type locale="en_US">type</type>
+    </typeList>
+    <coverageList>
+      <coverage locale="de_DE">Kaltes Kap Sommer 2012 Alles</coverage>
+      <coverage locale="pt_BR">Cabo Frio</coverage>
+      <coverage locale="en_US">Summer 2012 everything</coverage>
+    </coverageList>
+    <publicationDate>2012-03-15T16:45:00Z</publicationDate>
+    <galley-xml>
+      <![CDATA[<galleyList><galley locale="de_DE" mimetype="application/pdf" fileName="http://localhost/pkp-ojs/index.php/test/article/download/3/4"/><galley locale="en_US" mimetype="text/html" fileName="http://localhost/pkp-ojs/index.php/test/article/download/3/5"/></galleyList>]]>
+    </galley-xml>
+    <suppFile-xml>
+      <![CDATA[<suppFileList><suppFile locale="de_DE" mimetype="application/pdf" fileName="http://localhost/pkp-ojs/index.php/test/article/downloadSuppFile/3/2"/><suppFile locale="unknown" mimetype="text/html" fileName="http://localhost/pkp-ojs/index.php/test/article/downloadSuppFile/3/3"><title locale="de_DE">Titel</title><creator locale="de_DE">Autor</creator><subject locale="de_DE">Thema</subject><typeOther locale="de_DE">Sonstiger Typ</typeOther><description locale="de_DE">Beschreibung</description><source locale="de_DE">Quelle</source></suppFile></suppFileList>]]>
+    </suppFile-xml>
+  </article>
+</articleList>
