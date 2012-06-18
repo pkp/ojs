@@ -28,6 +28,9 @@
  *					Not entirely happy but no time to fuss. See FIXME notes.
  *	20110804	BLH	Strip off old file extension before adding ".pdf" extension to converted file in convertFileToPdf function.
  *					When copying layout file to galley as PDF, also populate "date complete" value for layout file.
+ *  20120618	MRH	Completed BLH's work on LibreOffice PDF conversion. Also had to fix its version number handling
+ *					(it was just using oldrev+1 instead of the actual rev produced by copyAndRenameFile). And lastly,
+ *					added metadata stripping.
  *
  */
 
@@ -55,6 +58,9 @@ class ArticleFileManager extends FileManager {
 
 	/** @var Article the associated article */
 	var $article;
+
+	/** @var int MRH: the resulting revision number of the last copyAndRenameFile() call. */
+	var $lastRev;
 
 	/**
 	 * Constructor.
@@ -345,7 +351,7 @@ class ArticleFileManager extends FileManager {
 		import('lib.pkp.classes.file.FileManager');
 		
 		$newFileId = $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
-		$newRevision = $revision + 1;
+		$newRevision = $this->lastRev;
 		$pdfFileId = $this->convertFileToPdf($newFileId, $newRevision, 0);
 		//FIXME delete extra file from server created by copyAndRenameFile
 		return $pdfFileId;
@@ -432,6 +438,7 @@ class ArticleFileManager extends FileManager {
 		import('classes.article.ArticleGalley');
 		
 		$libreOffice = Config::getVar('libreoffice', 'path');
+
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		
@@ -453,24 +460,40 @@ class ArticleFileManager extends FileManager {
 
 		//LibreOffice doesn't provide useful return codes, so just do a simple check for the PDF file
 		if(file_exists($pdfFilepath)) {
-			//update the database with the info for the PDF file
-			if($isGalley) {
-				$galley = new ArticleGalley();
-				$galley->setArticleId($articleFile->getArticleId());
-				$galley->setFileId($articleFile->getFileId());	
-				$galley->setLocale('en_US'); //FIXME ?
-				$galley->setLabel('PDF');
-				// Insert new galley
-				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-				$galleyDao->insertGalley($galley);		
-			} 
-		
-			$articleFile->setFilename($pdfFileName);
-			$articleFile->setOriginalFileName($origFileName);
-			$articleFile->setFileType('application/pdf');
-			$articleFileDao->updateArticleFile($articleFile);
-		
-			return $articleFile->getFileId();
+
+			// strip out the PDF metadata for non-galley (e.g. review) PDFs
+			if(!$isGalley) {
+				$stripPdfMeta = "/apps/subi/apache/htdocs/ojs/eschol/utilities/stripPdfMeta.py";
+				$stripCmd = "LD_LIBRARY_PATH=/apps/subi/sw/lib $stripPdfMeta $pdfFilepath >> /apps/subi/ojs/logs/pdf_strip.log";
+				passthru($stripCmd,$return);
+			}
+			else
+				$return = 0;
+
+			if($return == 0) {
+
+				//update the database with the info for the PDF file
+				if($isGalley) {
+					$galley = new ArticleGalley();
+					$galley->setArticleId($articleFile->getArticleId());
+					$galley->setFileId($articleFile->getFileId());	
+					$galley->setLocale('en_US'); //FIXME ?
+					$galley->setLabel('PDF');
+					// Insert new galley
+					$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+					$galleyDao->insertGalley($galley);		
+				} 
+			
+				$articleFile->setFilename($pdfFileName);
+				$articleFile->setOriginalFileName($origFileName);
+				$articleFile->setFileType('application/pdf');
+				$articleFileDao->updateArticleFile($articleFile);
+			
+				return $articleFile->getFileId();
+			}
+			else {
+				error_log("Error: stripCmd '" . $stripCmd . "' returned non-zero code.");
+			}
 		} 
 	}
 
@@ -515,6 +538,8 @@ class ArticleFileManager extends FileManager {
 		} else {
 			$revision = 1;
 		}
+
+                $this->lastRev = $revision;
 
 		$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision, $this->articleId);
 
