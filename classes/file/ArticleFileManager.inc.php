@@ -431,56 +431,47 @@ class ArticleFileManager extends FileManager {
 	function convertFileToPdf($fileId, $revision = null, $isGalley = 0) {
 		import('classes.article.ArticleGalley');
 		
-		$LiveDocxUsername = Config::getVar('livedocx', 'username');
-		$LiveDocxPassword = Config::getVar('livedocx', 'password');
-		
+		$libreOffice = Config::getVar('libreoffice', 'path');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		
 		$origFileName = $articleFile->getFilename();
 		$origFilePath = $articleFile->getFilePath();
-		//FIXME should generate new filename and path dynamically based on type, version etc.
+
 		$origExt = strchr($origFileName, '.');
 		$pdfFileName = substr($origFileName,0,strrpos($origFileName,$origExt)) . '.pdf';
 		$pdfFilepath = substr($origFilePath,0,strrpos($origFilePath,$origExt)) . '.pdf';
-		//$pdfFileName = $origFileName . '.pdf';
-		//$pdfFilepath = $origFilePath . '.pdf';
-		
-		//FIX ME should first check that file exists on current file system, error out if not 
-		//create PDF file
-		//code below cloned from http://www.phplivedocx.org/2009/02/06/convert-doc-to-pdf-in-php/
-		//author Jonathan Maron
-		include('Zend/Service/LiveDocx/MailMerge.php'); //need to add these files to OJS install
-		include('Zend/Service/LiveDocx/Exception.php'); //also need to check for LiveDocX install
-		$mailMerge = new Zend_Service_LiveDocx_MailMerge();
-		$mailMerge->setUsername($LiveDocxUsername)
-           		  ->setPassword($LiveDocxPassword);
-		$mailMerge->setLocalTemplate($origFilePath);
-		$mailMerge->assign('dummyFieldName', 'dummyFieldValue'); // necessary as of LiveDocx 1.2
-		$mailMerge->createDocument();
-		$document = $mailMerge->retrieveDocument('pdf');
-		file_put_contents($pdfFilepath, $document);
-		unset($mailMerge);
-		
-		//update the database with the info for the PDF file
-		if($isGalley) {
-			$galley = new ArticleGalley();
-			$galley->setArticleId($articleFile->getArticleId());
-			$galley->setFileId($articleFile->getFileId());	
-			$galley->setLocale('en_US'); //FIXME ?
-			$galley->setLabel('PDF');
-			// Insert new galley
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-			$galleyDao->insertGalley($galley);		
-		} 
-		
-		$articleFile->setFilename($pdfFileName);
-		$articleFile->setOriginalFileName($origFileName);
-		$articleFile->setFileType('application/pdf');
-		$articleFileDao->updateArticleFile($articleFile);
-		
-		return $articleFile->getFileId();
+		$outdir = substr($origFilePath,0,strrpos($origFilePath,$origFileName));
+	
+        	if(file_exists($pdfFilepath)) {
+                	unlink($pdfFilepath);
+        	}
 
+		//create PDF file
+		$convertCmd = "$libreOffice --headless --convert-to pdf -outdir $outdir $origFilePath >> /apps/subi/ojs/logs/pdf_conversion.log";
+		passthru($convertCmd,$return);
+
+		//LibreOffice doesn't provide useful return codes, so just do a simple check for the PDF file
+		if(file_exists($pdfFilepath)) {
+			//update the database with the info for the PDF file
+			if($isGalley) {
+				$galley = new ArticleGalley();
+				$galley->setArticleId($articleFile->getArticleId());
+				$galley->setFileId($articleFile->getFileId());	
+				$galley->setLocale('en_US'); //FIXME ?
+				$galley->setLabel('PDF');
+				// Insert new galley
+				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$galleyDao->insertGalley($galley);		
+			} 
+		
+			$articleFile->setFilename($pdfFileName);
+			$articleFile->setOriginalFileName($origFileName);
+			$articleFile->setFileType('application/pdf');
+			$articleFileDao->updateArticleFile($articleFile);
+		
+			return $articleFile->getFileId();
+		} 
 	}
 
 	/**
