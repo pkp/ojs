@@ -59,9 +59,6 @@ class ArticleFileManager extends FileManager {
 	/** @var Article the associated article */
 	var $article;
 
-	/** @var int MRH: the resulting revision number of the last copyAndRenameFile() call. */
-	var $lastRev;
-
 	/**
 	 * Constructor.
 	 * Create a manager for handling article file uploads.
@@ -351,7 +348,8 @@ class ArticleFileManager extends FileManager {
 		import('lib.pkp.classes.file.FileManager');
 		
 		$newFileId = $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
-		$newRevision = $this->lastRev;
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+                $newRevision = $articleFileDao->getRevisionNumber($newFileId);
 		$pdfFileId = $this->convertFileToPdf($newFileId, $newRevision, 0);
 		//FIXME delete extra file from server created by copyAndRenameFile
 		return $pdfFileId;
@@ -467,8 +465,9 @@ class ArticleFileManager extends FileManager {
 				$stripCmd = "LD_LIBRARY_PATH=/apps/subi/sw/lib $stripPdfMeta $pdfFilepath >> /apps/subi/ojs/logs/pdf_strip.log";
 				passthru($stripCmd,$return);
 			}
-			else
+			else {
 				$return = 0;
+			}
 
 			if($return == 0) {
 
@@ -538,8 +537,6 @@ class ArticleFileManager extends FileManager {
 		} else {
 			$revision = 1;
 		}
-
-                $this->lastRev = $revision;
 
 		$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision, $this->articleId);
 

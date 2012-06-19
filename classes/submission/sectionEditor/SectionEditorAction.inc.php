@@ -14,6 +14,7 @@
 * CHANGELOG:
 *	20110726	BLH	Added UploadReviewVersionNoAuthorInfo() function.
 *	20110729	BLH Added copyLayoutToGalleyAsPdf function.
+*	20120619	MRH	Fixed review version numbering (was simply incrementing, instead of checking)
 */
 
 // $Id$
@@ -1201,14 +1202,10 @@ class SectionEditorAction extends Action {
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadReviewVersion', array(&$sectionEditorSubmission))) {
-			if ($sectionEditorSubmission->getReviewFileId() != null) {
-				$reviewFileId = $articleFileManager->uploadReviewFile($fileName, $sectionEditorSubmission->getReviewFileId());
-				// Increment the review revision.
-				$sectionEditorSubmission->setReviewRevision($sectionEditorSubmission->getReviewRevision()+1);
-			} else {
-				$reviewFileId = $articleFileManager->uploadReviewFile($fileName);
-				$sectionEditorSubmission->setReviewRevision(1);
-			}
+			// MRH: Previously this code was simply incrementing the revision number, when it really 
+			//      needs to be getting it dynamically from the uploaded file.
+			$reviewFileId = $articleFileManager->uploadReviewFile($fileName, $sectionEditorSubmission->getReviewFileId());
+			$sectionEditorSubmission->setReviewRevision($articleFileManager->getFile($reviewFileId)->getRevision());
 			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		}
 
@@ -1230,8 +1227,9 @@ class SectionEditorAction extends Action {
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sourceFileId = $sectionEditorSubmission->getReviewFileId();
 		$reviewFileId = $articleFileManager->copyToReviewFileAsPdf($sourceFileId, $sectionEditorSubmission->getReviewRevision(), $sourceFileId);
-		// Increment the review revision.
-		$sectionEditorSubmission->setReviewRevision($sectionEditorSubmission->getReviewRevision()+1);	
+		// MRH: Previously this code was simply incrementing the revision number, when it really 
+		//      needs to be getting it dynamically from the uploaded file.
+		$sectionEditorSubmission->setReviewRevision($articleFileManager->getFile($reviewFileId)->getRevision());
 		$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		
 		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
