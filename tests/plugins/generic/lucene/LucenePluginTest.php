@@ -82,19 +82,14 @@ class LucenePluginTest extends PKPTestCase {
 		$fromDate = '2000-01-01 00:00:00';
 
 		$expectedResults = array(
-			array(null => 'test query'),
+			array('all' => 'test query'),
 			array('authors' => 'author'),
 			array('title' => 'title'),
 			array('abstract' => 'abstract'),
-			array(
-				'discipline' => 'index terms',
-				'subject' => 'index terms',
-				'type' => 'index terms',
-				'coverage' => 'index terms'
-			),
+			array('index_terms' => 'index terms'),
 			array('galley_full_text' => 'full text'),
 			array(
-				null => 'test query',
+				'all' => 'test query',
 				'authors' => 'author',
 				'title' => 'title',
 				'discipline' => 'discipline',
@@ -112,21 +107,14 @@ class LucenePluginTest extends PKPTestCase {
 			// Mock a SolrWebService.
 			$webService = $this->getMock('SolrWebService', array('retrieveResults'), array(), '', false);
 
-			// Only the "index term" search uses "OR" as default operator.
-			if (isset($testCase[ARTICLE_SEARCH_INDEX_TERMS])) {
-				$defaultOperator = 'OR';
-			} else {
-				$defaultOperator = 'AND';
-			}
-
 			// Check whether the Lucene plug-in calls the web service
 			// with the right parameters.
 			$webService->expects($this->once())
 			           ->method('retrieveResults')
-			           ->with($this->equalTo($expectedResults[$testNum]),
+			           ->with($this->equalTo($journal),
+			                  $this->equalTo($expectedResults[$testNum]),
 			                  $this->equalTo('2000-01-01T00:00:00Z'),
-			                  $this->equalTo(null),
-			                  $this->equalTo($defaultOperator));
+			                  $this->equalTo(null));
 			$this->lucenePlugin->_solrWebService = $webService;
 
 			// Execute the test.

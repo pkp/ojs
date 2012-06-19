@@ -5,13 +5,51 @@
   <dataSource name="file" type="BinURLDataSource" />
   
   <script><![CDATA[
+    /**
+     * Some fields collect content from various entities.
+     * These fields have to be stored in document rather than
+     * entity context. This function is a helper function to
+     * deal with the intricacies of document-level fields.
+     *
+     * @param Context context
+     * @param String fieldName
+     * @param String textToAppend
+     */
+    function appendToDocField(context, fieldName, textToAppend) {
+      var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
+      if (docFields === null) {
+        docFields = [];
+      }
+      if (docFields.indexOf(fieldName) === -1) {
+        docFields.push(fieldName);
+        context.setSessionAttribute('docFields', docFields, context.SCOPE_DOC);
+        var fieldValue = textToAppend;
+      } else {
+        var fieldValue = context.getSessionAttribute(fieldName, context.SCOPE_DOC);
+        fieldValue += ' ' + textToAppend;
+      }
+      context.setSessionAttribute(fieldName, fieldValue, context.SCOPE_DOC);
+    }
+    
+    /**
+     * Custom transformer for the article entitiy.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
     function transformArticle(row, context) {
-      // Variable for spellchecker output.
-      var spellSource = '';
-
+      // Make IDs unique across installations.
+      var articleId = row.get('article_id');
+      var journalId = row.get('journal_id');
+      var instId = row.get('inst_id');
+      row.put('article_id', instId + '-' + articleId);
+      row.put('journal_id', instId + '-' + journalId);
+      
       // Add localized fields.
       var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
-      for (i=0, len=locFields.length; i<len; i++) {
+      var indexTermFields = ['discipline', 'subject', 'type', 'coverage'];
+      for (var i=0, len=locFields.length; i<len; i++) {
         var valueList = 'etl_' + locFields[i] + 'List';
         var localeList = 'etl_' + locFields[i] + 'List_locales';
 
@@ -19,17 +57,23 @@
         if (values == null) continue;
         var locales = row.get(localeList);
         for(var j=0, locs=values.size(); j<locs; j++) {
-          row.put(locFields[i] + '_' + locales.get(j), values.get(j));
-          spellSource += String(values.get(j)) + ' ';
+          var locale = String(locales.get(j));
+          var value = String(values.get(j));
+          row.put(locFields[i] + '_' + locale, value);
+          // Add all fields to the spelling field.
+          appendToDocField(context, 'default_spell', value);
+          // Add all fields to the "all" field. 
+          appendToDocField(context, 'all_' + locale, value);
+          // Add index term fields to the "index_terms" field.
+          if (indexTermFields.indexOf(locFields[i]) >= 0) {
+            appendToDocField(context, 'index_terms_' + locale, value);
+          }
         }
 
         row.remove(valueList);
         row.remove(localeList);
       }
-
-      // Add spellchecker output to the document.
-      row.put('default_spell', String(spellSource));
-
+      
       // Prepare the galley XML.
       var galleyXml = row.get('etl_galley_xml');
       if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
@@ -43,6 +87,14 @@
       return row;
     }
 
+    /**
+     * Custom transformer for files (galleys and
+     * supplementary files).
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
     function transformFile(row, context) {
       // Interpret MIME type.
       var mimetype = String(row.get('etl_file_mimetype'));
@@ -66,6 +118,13 @@
       return row;
     }
 
+    /**
+     * Custom transformer for full text.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
     function transformFullText(row, context) {
       var entityName = context.getParentContext().getResolvedEntityAttribute('name');
       var locale = context.resolve(entityName + '.etl_file_locale');
@@ -79,19 +138,58 @@
 
       // Deal with multiple entries for the same mimetype/locale.
       var fullText = row.get(fieldName);
-      if (fullText == null) fullText = '';
-      fullText = String(fullText) + String(row.get('text'));
+      if (fullText === null) {
+        fullText = '';
+      } else {
+        fullText = String(fullText) + ' ';
+      }
+      var currentText = String(row.get('text'));
+      fullText += currentText;
       row.put(fieldName, fullText);
 
       // Add full text to spellchecker dictionary.
-      var spellCheck = row.get('default_spell');
-      if (spellCheck == null) spellCheck = '';
-      spellCheck += String(row.get('text')) + ' ';
-      row.put('default_spell', spellCheck);
+      appendToDocField(context, 'default_spell', currentText);
 
+      // Add full text to the "all" field.
+      appendToDocField(context, 'all_' + locale, currentText);
+          
       row.remove('text');
       return row;
     }
+    
+    /**
+     * This function is a custom transformer that will
+     * be called after all other transformers. We use it
+     * to store document-level fields to the document.
+     *
+     * NB: This cannot be done in the other transformers
+     * as only the first row.put() will have effect.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
+    function postProcessArticle(row, context) {
+      var docFieldName, docFieldValue;
+      var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
+      
+      var authors = context.resolve('article.authors_txt');
+      for (var i=0, lenD=docFields.length; i<lenD; i++) {
+        docFieldName = docFields[i];
+        docFieldValue = context.getSessionAttribute(docFieldName, context.SCOPE_DOC);
+        
+        // Add authors to spell check and "all" fields.
+        if (docFieldName == 'default_spell' || docFieldName.indexOf('all_') === 0) {
+          for (var j=0, lenA=authors.size(); j<lenA; j++) {
+            author = String(authors.get(j));
+            docFieldValue += ' ' + author;
+          }
+        }
+        
+        row.put(docFieldName, docFieldValue);
+      }
+      return row;
+    }    
   ]]></script>
 
   <document>
@@ -100,14 +198,14 @@
             processor="XPathEntityProcessor"
             forEach="/articleList/article"
             transformer="script:transformArticle,LogTransformer"
-            logTemplate="Indexing article ${article.article_id}." logLevel="info"
+            logTemplate="Indexing article ${article.inst_id}-${article.journal_id}-${article.article_id}." logLevel="info"
             stream="false"
             onError="continue" >
 
       <!-- ID fields -->
       <field column="article_id" xpath="/articleList/article/@id" />
-      <field column="inst_id" xpath="/articleList/article/@instId" />
       <field column="journal_id" xpath="/articleList/article/@journalId" />
+      <field column="inst_id" xpath="/articleList/article/@instId" />
 
       <!-- Authors -->
       <field column="authors_txt" xpath="/articleList/article/authorList/author" multiValued="true" />
@@ -187,6 +285,13 @@
                 format="text" >
           <field column="text" />
         </entity>
+      </entity>
+      
+      <entity name="articlePostProcessing"
+              dataSource="field"
+              dataField="article.article_id"
+              processor="PlainTextEntityProcessor"
+              transformer="script:postProcessArticle" >
       </entity>
     </entity>
   </document>

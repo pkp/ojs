@@ -80,30 +80,28 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Execute a search against the Solr search server.
 	 *
+	 * @param $journal Journal
 	 * @param $search array a raw search query as given by the end user
 	 *  (one query per field).
 	 * @param $fromDate string An ISO 8601 date string or null.
 	 * @param $toDate string An ISO 8601 date string or null.
-	 * @param $defaultOperator string The operator to join search phrases.
 	 *
 	 * @return array An array of search results. The keys are
 	 *  scores (1-9999) and the values are article IDs. Null if an error
 	 *  occured while querying the server.
 	 */
-	function retrieveResults($search, $fromDate = null, $toDate = null, $defaultOperator = 'AND') {
+	function retrieveResults($journal, $search, $fromDate = null, $toDate = null) {
 		// Expand the search to all locales/formats.
 		$expandedSearch = '';
 		foreach ($search as $field => $query) {
+			if (empty($query)) continue;
+
 			// Do we expand a specific field or is this a
 			// search on all fields?
-			if (empty($field)) {
-				$fieldSearch = $this->_expandAllFields($query);
-			} else {
-				$fieldSearch = $this->_expandSingleField($field, $query);
-			}
+			$fieldSearch = $this->_expandField($field, $query);
 			if (!empty($fieldSearch)) {
-				if (!empty($expandedSearch)) $expandedSearch .= ' ' . $defaultOperator . ' ';
-				$expandedSearch .= '(' . $fieldSearch . ')';
+				if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
+				$expandedSearch .= '( ' . $fieldSearch . ' )';
 			}
 		}
 
@@ -114,6 +112,16 @@ class SolrWebService extends XmlWebService {
 			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
 			$expandedSearch .= 'publication_date_dt:[' . $fromDate . ' TO ' . $toDate . ']';
 		}
+
+		// Add the journal (if set).
+		if (is_a($journal, 'Journal')) {
+			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
+			$expandedSearch .= 'journal_id:' . SOLR_INSTALLATION_ID . '-' . $journal->getId();
+		}
+
+		// Add the installation ID.
+		if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
+		$expandedSearch .= 'inst_id:' . SOLR_INSTALLATION_ID;
 
 		// Execute the search.
 		$url = $this->_getSearchUrl();
@@ -150,9 +158,13 @@ class SolrWebService extends XmlWebService {
 		// results come back ordered by score from the solr server.
 		$scoredResults = array();
 		foreach($results as $result) {
-			assert(isset($result['score']));
+			assert(isset($result['score']) && isset($result['article_id']));
 			$score = intval($result['score'] * 10000);
-			$scoredResults[$score] = $result['article_id'];
+			$articleId = $result['article_id'];
+			if (strpos($articleId, SOLR_INSTALLATION_ID . '-') !== 0) continue;
+			$articleId = substr($articleId, strlen(SOLR_INSTALLATION_ID . '-'));
+			if (!is_numeric($articleId)) continue;
+			$scoredResults[$score] = (int)$articleId;
 		}
 		return $scoredResults;
 	}
@@ -164,7 +176,7 @@ class SolrWebService extends XmlWebService {
 	 * have to refresh the whole document if parts of it change.
 	 *
 	 * @param $article Article The article to be (re-)indexed.
-	 * @param $journal Journal.
+	 * @param $journal Journal
 	 *
 	 * @return integer The number of documents processed or null if
 	 *  an error occured.
@@ -307,14 +319,16 @@ class SolrWebService extends XmlWebService {
 			// Split the field name.
 			$fieldNameParts = explode('_', $fieldName);
 
+			// Identify the locale of the field.
+			$locale = array_pop($fieldNameParts);
+			if ($locale != 'txt') {
+				$locale = array_pop($fieldNameParts) . '_' . $locale;
+			}
+
 			// 1) Is it a dynamic multi-format field?
 			foreach($fields['multiformat'] as $multiformatField) {
 				if (strpos($fieldName, $multiformatField) === 0) {
-					// Parse the dynamic field name.
-					$locale = array_pop($fieldNameParts);
-					if ($locale != 'txt') {
-						$locale = array_pop($fieldNameParts) . '_' . $locale;
-					}
+					// Identify the format of the field.
 					$format = array_pop($fieldNameParts);
 
 					// Add the field to the field cache.
@@ -331,14 +345,9 @@ class SolrWebService extends XmlWebService {
 			// 2) Is it a dynamic localized field?
 			foreach($fields['localized'] as $localizedField) {
 				if (strpos($fieldName, $localizedField) === 0) {
-					array_shift($fieldNameParts);
-					assert(count($fieldNameParts) == 2);
-					$locale = implode('_', $fieldNameParts);
 					$fieldCache[$localizedField][] = $locale;
 				}
 			}
-
-			// 3) Static fields are "well-known" and do not have to be cached.
 		}
 
 		$fieldCache = array($id => $fieldCache);
@@ -471,7 +480,7 @@ class SolrWebService extends XmlWebService {
 		return array(
 			'localized' => array(
 				'title', 'abstract', 'discipline', 'subject',
-				'type', 'coverage'
+				'type', 'coverage', 'all', 'index_terms'
 			),
 			'multiformat' => array(
 				'galley_full_text', 'suppFile_full_text'
@@ -485,11 +494,11 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Expand the given query to all format/locale versions
 	 * of the given field.
-	 * @param $field A field name without any extension.
-	 * @param $query The search phrase to expand.
+	 * @param $field string A field name without any extension.
+	 * @param $query string The search phrase to expand.
 	 * @return string The expanded query.
 	 */
-	function _expandSingleField($field, $query) {
+	function _expandField($field, $query) {
 		$availableFields = $this->getAvailableFields();
 		$fieldNames = $this->_getFieldNames();
 
@@ -513,25 +522,6 @@ class SolrWebService extends XmlWebService {
 			if(isset($fieldNames['static'][$field])) {
 				if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
 				$fieldSearch .= $fieldNames['static'][$field] . ':(' . $query . ')';
-			}
-		}
-		return $fieldSearch;
-	}
-
-	/**
-	 * Expand the given query to all available fields.
-	 * @param $query string
-	 * @return string The expanded query.
-	 */
-	function _expandAllFields($query) {
-		$fieldSearch = '';
-		$fieldNames = $this->_getFieldNames();
-		$allFields = array_merge($fieldNames['localized'], $fieldNames['multiformat'], array_keys($fieldNames['static']));
-		foreach($allFields as $field) {
-			$currentField = $this->_expandSingleField($field, $query);
-			if (!empty($currentField)) {
-				if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-				$fieldSearch .= $currentField;
 			}
 		}
 		return $fieldSearch;

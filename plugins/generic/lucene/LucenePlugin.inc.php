@@ -95,18 +95,8 @@ class LucenePlugin extends GenericPlugin {
 		// Unpack the parameters.
 		list($journal, $search, $fromDate, $toDate) = $params;
 
-		// Index term searches use 'OR' as default operator.
-		if (isset($search[ARTICLE_SEARCH_INDEX_TERMS])) {
-			// An index term search should not appear together
-			// with other search fields.
-			assert(count($search) == 1);
-			$defaultOperator = 'OR';
-		} else {
-			$defaultOperator = 'AND';
-		}
-
 		// Translate the search to the Lucene search fields.
-		$typeBits = array(
+		$searchTypes = array(
 			ARTICLE_SEARCH_AUTHOR => 'authors',
 			ARTICLE_SEARCH_TITLE => 'title',
 			ARTICLE_SEARCH_ABSTRACT => 'abstract',
@@ -115,18 +105,16 @@ class LucenePlugin extends GenericPlugin {
 			ARTICLE_SEARCH_TYPE => 'type',
 			ARTICLE_SEARCH_COVERAGE => 'coverage',
 			ARTICLE_SEARCH_GALLEY_FILE => 'galley_full_text',
-			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFile_full_text'
+			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFile_full_text',
+			ARTICLE_SEARCH_INDEX_TERMS => 'index_terms'
 		);
 		$translatedSearch = array();
 		foreach($search as $type => $query) {
 			if (empty($type)) {
-				$translatedSearch[null] = $query;
+				$translatedSearch['all'] = $query;
 			} else {
-				foreach($typeBits as $typeBit => $field) {
-					if ($typeBit & $type) {
-						$translatedSearch[$field] = $query;
-					}
-				}
+				assert(isset($searchTypes[$type]));
+				$translatedSearch[$searchTypes[$type]] = $query;
 			}
 		}
 
@@ -135,7 +123,8 @@ class LucenePlugin extends GenericPlugin {
 		if (!empty($fromDate)) $fromDate = str_replace(' ', 'T', $fromDate) . 'Z';
 		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $fromDate) . 'Z';
 
-		return $this->_solrWebService->retrieveResults($translatedSearch, $fromDate, $toDate, $defaultOperator);
+		// Call the SOLR web service.
+		return $this->_solrWebService->retrieveResults($journal, $translatedSearch, $fromDate, $toDate);
 	}
 
 
