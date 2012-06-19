@@ -14,16 +14,14 @@
   <directoryFactory name="DirectoryFactory" 
                     class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
 
-  <indexDefaults>
+  <indexConfig>
     <useCompoundFile>false</useCompoundFile>
     <mergeFactor>10</mergeFactor>
     <ramBufferSizeMB>32</ramBufferSizeMB>
     <maxFieldLength>10000</maxFieldLength>
     <writeLockTimeout>1000</writeLockTimeout>
     <lockType>native</lockType>
-  </indexDefaults>
 
-  <mainIndex>
     <unlockOnStartup>false</unlockOnStartup>
     <reopenReaders>true</reopenReaders>
 
@@ -33,7 +31,7 @@
     </deletionPolicy>
 
     <infoStream file="INFOSTREAM.txt">false</infoStream> 
-  </mainIndex>
+  </indexConfig>
 
   <query>
     <maxBooleanClauses>1024</maxBooleanClauses>
