@@ -152,6 +152,15 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertEquals(1, $this->solrWebService->indexArticle($article, $journal));
 	}
 
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testDeleteArticleFromIndex() {
+		$article = new Article();
+		$article->setId(3);
+		self::assertTrue($this->solrWebService->deleteArticleFromIndex($article));
+	}
+
 
 	//
 	// Private helper methods

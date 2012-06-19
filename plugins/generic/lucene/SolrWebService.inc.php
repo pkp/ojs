@@ -190,9 +190,21 @@ class SolrWebService extends XmlWebService {
 	 * Deletes the given article from the Solr index.
 	 *
 	 * @param $article Article The article to be deleted.
+	 *
+	 * @return boolean true if successful, otherwise false.
 	 */
 	function deleteArticleFromIndex($article) {
-		// FIXME: Not yet implemented.
+		// Delete the given article.
+		$url = $this->_getUpdateUrl() . '?commit=true';
+		$xml = '<delete><id>' . SOLR_INSTALLATION_ID . '-' . $article->getId() . '</id></delete>';
+		$result = $this->_makeRequest($url, $xml, 'POST');
+		if (is_null($result)) return false;
+
+		// Check the return status (must be 0).
+		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
+		if($nodeList->length != 1) return false;
+		$resultNode = $nodeList->item(0);
+		if ($resultNode->textContent === '0') return true;
 	}
 
 	/**
@@ -400,6 +412,16 @@ class SolrWebService extends XmlWebService {
 	function _getDihUrl() {
 		$dihUrl = $this->_solrServer . $this->_solrCore . '/dih';
 		return $dihUrl;
+	}
+
+	/**
+	 * Returns the solr update endpoint.
+	 *
+	 * @return string
+	 */
+	function _getUpdateUrl() {
+		$updateUrl = $this->_solrServer . $this->_solrCore . '/update';
+		return $updateUrl;
 	}
 
 	/**

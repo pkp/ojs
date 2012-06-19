@@ -108,6 +108,9 @@
     </lst>
   </requestHandler>
 
+  <!-- XML update request handler (required for deletes) -->
+  <requestHandler name="/update" class="solr.XmlUpdateRequestHandler" />
+
   <!-- Standard solr admin handlers -->
   <requestHandler name="/admin/" class="solr.admin.AdminHandlers" />
 </config>
