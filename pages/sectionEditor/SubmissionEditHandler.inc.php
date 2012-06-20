@@ -836,7 +836,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$recommendation = $request->getUserVar('recommendation');
 
 		if ($recommendation != null) {
-			SectionEditorAction::setReviewerRecommendation($this->article, $reviewId, $recommendation, SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT, $request);
+			SectionEditorAction::setReviewerRecommendation($this->submission, $reviewId, $recommendation, SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT, $request);
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			$this->setupTemplate(true, $articleId, 'review');
