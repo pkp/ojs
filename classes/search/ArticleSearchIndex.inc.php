@@ -234,36 +234,46 @@ class ArticleSearchIndex {
 	 * Rebuild the search index for all journals.
 	 */
 	function rebuildIndex($log = false) {
-		// Clear index
-		if ($log) echo 'Clearing index ... ';
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-		$searchDao->clearIndex();
-		if ($log) echo "done\n";
+		// Check whether a search plug-in jumps in.
+		$result =& HookRegistry::call(
+			'ArticleSearchIndex::rebuildIndex',
+			array($log)
+		);
 
-		// Build index
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		// If no search plug-in is activated then fall back to the
+		// default database search implementation.
+		if ($result === false || is_null($result)) {
+			// Clear index
+			if ($log) echo 'Clearing index ... ';
+			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+			$searchDao->clearIndex();
+			if ($log) echo "done\n";
 
-		$journals =& $journalDao->getJournals();
-		while (!$journals->eof()) {
-			$journal =& $journals->next();
-			$numIndexed = 0;
+			// Build index
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
-			if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
+			$journals =& $journalDao->getJournals();
+			while (!$journals->eof()) {
+				$journal =& $journals->next();
+				$numIndexed = 0;
 
-			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
-			while (!$articles->eof()) {
-				$article =& $articles->next();
-				if ($article->getDateSubmitted()) {
-					ArticleSearchIndex::indexArticleMetadata($article);
-					ArticleSearchIndex::indexArticleFiles($article);
-					$numIndexed++;
+				if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
+
+				$articles =& $articleDao->getArticlesByJournalId($journal->getId());
+				while (!$articles->eof()) {
+					$article =& $articles->next();
+					if ($article->getDateSubmitted()) {
+						ArticleSearchIndex::indexArticleMetadata($article);
+						ArticleSearchIndex::indexArticleFiles($article);
+						$numIndexed++;
+					}
+					unset($article);
 				}
-				unset($article);
-			}
 
-			if ($log) echo $numIndexed, " articles indexed\n";
-			unset($journal);
+				if ($log) echo $numIndexed, " articles indexed\n";
+				unset($journal);
+			}
 		}
 	}
 }

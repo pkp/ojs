@@ -308,7 +308,7 @@ class ArticleSearch {
 		// If no search plug-in is activated or the search
 		// plug-in encountered an error then fall back to the
 		// default database search implementation.
-		if (is_null($results)) {
+		if ($results === false || is_null($results)) {
 			// Parse the query.
 			foreach($keywords as $searchType => $query) {
 				$keywords[$searchType] = ArticleSearch::_parseQuery($query);

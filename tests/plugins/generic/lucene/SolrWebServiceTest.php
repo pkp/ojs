@@ -131,9 +131,10 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal->setPath('test');
 
 		// Test the transfer XML file.
+		$articleDoc = $this->solrWebService->_getArticleXml($article, $journal);
 		self::assertXmlStringEqualsXmlFile(
 			'tests/plugins/generic/lucene/test-article.xml',
-			$this->solrWebService->_getArticleXml($article, $journal)
+			XMLCustomWriter::getXml($articleDoc)
 		);
 	}
 
@@ -157,10 +158,39 @@ class SolrWebServiceTest extends PKPTestCase {
 	/**
 	 * @covers SolrWebService
 	 */
+	public function testIndexJournal() {
+		// We need a router for URL generation.
+		$application =& PKPApplication::getApplication();
+		$_SERVER['REQUEST_METHOD'] = 'GET';
+		$request =& $application->getRequest();
+		$router = new PageRouter();
+		$router->setApplication($application);
+		$request->setRouter($router);
+
+		// Generate a test journal.
+		$journal = new Journal();
+		$journal->setId('1');
+		$journal->setPath('test');
+
+		// Test indexing. The service returns the number of documents that
+		// were successfully processed.
+		self::assertNotNull($this->solrWebService->indexJournal($journal));
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
 	public function testDeleteArticleFromIndex() {
 		$article = new Article();
 		$article->setId(3);
 		self::assertTrue($this->solrWebService->deleteArticleFromIndex($article));
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testDeleteAllArticlesFromIndex() {
+		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
 	}
 
 

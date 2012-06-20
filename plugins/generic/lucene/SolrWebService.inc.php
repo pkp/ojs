@@ -29,6 +29,7 @@ define('SOLR_EMBEDDED_SERVER', 'http://localhost:8983/solr/ojs/search');
 
 import('lib.pkp.classes.webservice.WebServiceRequest');
 import('lib.pkp.classes.webservice.XmlWebService');
+import('lib.pkp.classes.xml.XMLCustomWriter');
 
 class SolrWebService extends XmlWebService {
 
@@ -59,7 +60,6 @@ class SolrWebService extends XmlWebService {
 		parent::XmlWebService();
 
 		// Configure the web service.
-		$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_DOM);
 		$this->setAuthUsername(SOLR_ADMIN_USER);
 		$this->setAuthPassword(SOLR_ADMIN_PASSWORD);
 
@@ -158,12 +158,24 @@ class SolrWebService extends XmlWebService {
 		// results come back ordered by score from the solr server.
 		$scoredResults = array();
 		foreach($results as $result) {
+			// We only need the score and the article ID.
 			assert(isset($result['score']) && isset($result['article_id']));
+
+			// Transform the score into a positive integer between 0 and 9999.
 			$score = intval($result['score'] * 10000);
+
+			// Transform the article ID into an integer.
 			$articleId = $result['article_id'];
 			if (strpos($articleId, SOLR_INSTALLATION_ID . '-') !== 0) continue;
 			$articleId = substr($articleId, strlen(SOLR_INSTALLATION_ID . '-'));
 			if (!is_numeric($articleId)) continue;
+
+			// Avoid loosing results due to duplicate scores.
+			while(isset($scoredResults[$score])) {
+				$score--;
+			}
+
+			// Store the result.
 			$scoredResults[$score] = (int)$articleId;
 		}
 		return $scoredResults;
@@ -185,7 +197,9 @@ class SolrWebService extends XmlWebService {
 		assert($article->getJournalId() == $journal->getId());
 
 		// Generate the transfer XML for the article and POST it to the web service.
-		$articleXml = $this->_getArticleXml($article, $journal);
+		$articleDoc =& $this->_getArticleXml($article, $journal);
+		$articleXml = XMLCustomWriter::getXml($articleDoc);
+
 		$url = $this->_getDihUrl() . '?command=full-import';
 		$result = $this->_makeRequest($url, $articleXml, 'POST');
 		if (is_null($result)) return $result;
@@ -199,6 +213,54 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
+	 * (Re-)indexes the given journal in Solr.
+	 *
+	 * We use asynchronous indexing when re-indexing a journal.
+	 * This means that we transfer all meta-data to the solr
+	 * server at once and the server will then pull full text
+	 * files one-by-one.
+	 *
+	 * This is much faster than synchronous indexing and the
+	 * request returns immediately after preparing and transmitting
+	 * the (relatively small) meta-data package.
+	 *
+	 * @param $journal Journal The journal to be (re-)indexed.
+	 *
+	 * @return integer The number of documents processed or null if
+	 *  an error occured.
+	 */
+	function indexJournal(&$journal) {
+		// Run through all articles of the journal.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articles =& $articleDao->getArticlesByJournalId($journal->getId());
+		$numIndexed = 0;
+		$articleDoc = null;
+		while (!$articles->eof()) {
+			$article =& $articles->next();
+
+			// Add the article to the article list if it has been fully submitted.
+			if ($article->getDateSubmitted()) {
+				$articleDoc =& $this->_getArticleXml($article, $journal, $articleDoc);
+			}
+
+			unset($article);
+			$numIndexed++;
+		}
+
+		// Make an asynchronous POST request with all
+		// articles of the journal.
+		$articleXml = XMLCustomWriter::getXml($articleDoc);
+		$url = $this->_getDihUrl() . '?command=full-import';
+		$result = $this->_makeRequest($url, $articleXml, 'POST', true);
+
+		if ($result == true) {
+			return $numIndexed;
+		} else {
+			return null;
+		}
+	}
+
+	/**
 	 * Deletes the given article from the Solr index.
 	 *
 	 * @param $article Article The article to be deleted.
@@ -206,17 +268,19 @@ class SolrWebService extends XmlWebService {
 	 * @return boolean true if successful, otherwise false.
 	 */
 	function deleteArticleFromIndex($article) {
-		// Delete the given article.
-		$url = $this->_getUpdateUrl() . '?commit=true';
-		$xml = '<delete><id>' . SOLR_INSTALLATION_ID . '-' . $article->getId() . '</id></delete>';
-		$result = $this->_makeRequest($url, $xml, 'POST');
-		if (is_null($result)) return false;
+		$xml = '<id>' . SOLR_INSTALLATION_ID . '-' . $article->getId() . '</id>';
+		return $this->_deleteFromIndex($xml);
+	}
 
-		// Check the return status (must be 0).
-		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
-		if($nodeList->length != 1) return false;
-		$resultNode = $nodeList->item(0);
-		if ($resultNode->textContent === '0') return true;
+	/**
+	 * Deletes all articles of this installation from the Solr index.
+	 *
+	 * @return boolean true if successful, otherwise false.
+	 */
+	function deleteAllArticlesFromIndex() {
+		// Delete all articles of the installation.
+		$xml = '<query>inst_id:' . SOLR_INSTALLATION_ID . '</query>';
+		return $this->_deleteFromIndex($xml);
 	}
 
 	/**
@@ -443,10 +507,16 @@ class SolrWebService extends XmlWebService {
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _lastError for more details about the error.
 	 */
-	function &_makeRequest($url, $params = array(), $method = 'GET') {
+	function &_makeRequest($url, $params = array(), $method = 'GET', $async = false) {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
-			$webServiceRequest->setHeader('Content-type', 'text/xml; charset=utf-8');
+			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');
+		}
+		if ($async) {
+			$webServiceRequest->setAsync($async);
+			$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_STRING);
+		} else {
+			$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_DOM);
 		}
 		$response = $this->call($webServiceRequest);
 		$nullValue = null;
@@ -457,17 +527,22 @@ class SolrWebService extends XmlWebService {
 			return $nullValue;
 		}
 
-		// Did we get a 200OK response?
-		$status = $this->getLastResponseStatus();
-		if ($status !== WEBSERVICE_RESPONSE_OK) {
-			$this->_lastError = $status. ' - ' . $response->saveXML();
-			return $nullValue;
-		}
+		// Return the result.
+		if ($async) {
+			$result = $response;
+		} else {
+			// Did we get a 200OK response?
+			$status = $this->getLastResponseStatus();
+			if ($status !== WEBSERVICE_RESPONSE_OK) {
+				$this->_lastError = $status. ' - ' . $response->saveXML();
+				return $nullValue;
+			}
 
-		// Prepare the XPath object.
-		assert(is_a($response, 'DOMDocument'));
-		$xPath = new DOMXPath($response);
-		return $xPath;
+			// Prepare an XPath object.
+			assert(is_a($response, 'DOMDocument'));
+			$result = new DOMXPath($response);
+		}
+		return $result;
 	}
 
 	/**
@@ -532,19 +607,28 @@ class SolrWebService extends XmlWebService {
 	 * solr indexing engine DIH.
 	 * @param $article Article
 	 * @param $journal Journal
-	 * @return string $xml
+	 * @param $articleDoc DOMDocument|XMLNode
+	 * @return DOMDocument|XMLNode
 	 */
-	function _getArticleXml(&$article, &$journal) {
+	function _getArticleXml(&$article, &$journal, $articleDoc = null) {
 		assert(is_a($article, 'Article'));
 
-		import('lib.pkp.classes.xml.XMLCustomWriter');
-		$articleDoc =& XMLCustomWriter::createDocument();
+		if (is_null($articleDoc)) {
+			// Create the document.
+			$articleDoc =& XMLCustomWriter::createDocument();
 
-		// Create the root node.
-		$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
-		XMLCustomWriter::appendChild($articleDoc, $articleList);
+			// Create the root node.
+			$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
+			XMLCustomWriter::appendChild($articleDoc, $articleList);
+		} else {
+			if (is_a($articleDoc, 'XMLNode')) {
+				$articleList =& $articleDoc->getChildByName('articleList');
+			} else {
+				$articleList =& $articleDoc->documentElement;
+			}
+		}
 
-		// Create the article node.
+		// Create a new article node.
 		$articleNode =& XMLCustomWriter::createElement($articleDoc, 'article');
 		XMLCustomWriter::setAttribute($articleNode, 'id', $article->getId());
 		XMLCustomWriter::setAttribute($articleNode, 'journalId', $article->getJournalId());
@@ -599,6 +683,8 @@ class SolrWebService extends XmlWebService {
 		$subjects = $article->getSubject(null);
 		if (!empty($subjectClasses) || !empty($subjects)) {
 			$subjectList =& XMLCustomWriter::createElement($articleDoc, 'subjectList');
+			if (!is_array($subjectClasses)) $subjectClasses = array();
+			if (!is_array($subjects)) $subjects = array();
 			$locales = array_unique(array_merge(array_keys($subjectClasses), array_keys($subjects)));
 			foreach($locales as $locale) {
 				$subject = '';
@@ -630,6 +716,9 @@ class SolrWebService extends XmlWebService {
 		$coverageSample = $article->getCoverageSample(null);
 		if (!empty($coverageGeo) || !empty($coverageChron) || !empty($coverageSample)) {
 			$coverageList =& XMLCustomWriter::createElement($articleDoc, 'coverageList');
+			if (!is_array($coverageGeo)) $coverageGeo = array();
+			if (!is_array($coverageChron)) $coverageChron = array();
+			if (!is_array($coverageSample)) $coverageSample = array();
 			$locales = array_unique(array_merge(array_keys($coverageGeo), array_keys($coverageChron), array_keys($coverageSample)));
 			foreach($locales as $locale) {
 				$coverage = '';
@@ -772,7 +861,29 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Return the XML.
-		return XMLCustomWriter::getXml($articleDoc);
+		return $articleDoc;
+	}
+
+	/**
+	 * Delete documents from the index (by
+	 * ID or by query).
+	 * @param $xml string The documents to delete.
+	 * @return boolean true, if successful, otherwise false.
+	 */
+	function _deleteFromIndex($xml) {
+		// Add the deletion tags.
+		$xml = '<delete>' . $xml . '</delete>';
+
+		// Post the XML.
+		$url = $this->_getUpdateUrl() . '?commit=true';
+		$result = $this->_makeRequest($url, $xml, 'POST');
+		if (is_null($result)) return false;
+
+		// Check the return status (must be 0).
+		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
+		if($nodeList->length != 1) return false;
+		$resultNode = $nodeList->item(0);
+		if ($resultNode->textContent === '0') return true;
 	}
 }
 

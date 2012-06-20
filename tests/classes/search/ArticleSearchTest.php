@@ -14,11 +14,8 @@
  */
 
 
-require_mock_env('env1');
-
 import('lib.pkp.tests.PKPTestCase');
 import('lib.pkp.classes.core.ArrayItemIterator');
-import('lib.pkp.classes.plugins.HookRegistry'); // This is the HookRegistry from mock env1.
 import('classes.search.ArticleSearch');
 
 define('ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE', 1);
@@ -61,7 +58,7 @@ class ArticleSearchTest extends PKPTestCase {
 	/**
 	 * @see PKPTestCase::tearDown()
 	 */
-	public function tearDown() {
+	protected function tearDown() {
 		HookRegistry::resetCalledHooks();
 		parent::tearDown();
 	}
@@ -74,6 +71,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 * @covers ArticleSearch
 	 */
 	public function testRetrieveResults() {
+		// Make sure that no hook is being called.
+		HookRegistry::clear('ArticleSearch::retrieveResults');
+
 		// Test a simple search with a mock database back-end.
 		$journal = new Journal();
 		$keywords = array(null => 'test');

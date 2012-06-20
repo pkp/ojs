@@ -170,7 +170,31 @@ class LucenePlugin extends GenericPlugin {
 	 * @see ArticleSearchIndex::rebuildIndex()
 	 */
 	function callbackRebuildIndex($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::rebuildIndex');
+
+		// Unpack the parameters.
+		list($log) = $params;
+
+		// Clear index
+		if ($log) echo 'LucenePlugin: Clearing index ... ';
+		$this->_solrWebService->deleteAllArticlesFromIndex();
+		if ($log) echo "done\n";
+
+		// Build index
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals();
+		while (!$journals->eof()) {
+			$journal =& $journals->next();
+			$numIndexed = 0;
+
+			if ($log) echo "LucenePlugin: Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
+
+			$numIndexed = $this->_solrWebService->indexJournal($journal);
+
+			if ($log) echo $numIndexed, " articles indexed\n";
+			unset($journal);
+		}
+		return true;
 	}
 }
 ?>
