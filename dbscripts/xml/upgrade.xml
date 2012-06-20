@@ -299,6 +299,9 @@
 		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
 		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
 		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_ONECLICK" locales="en_US" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_ATTACHED" locales="en_US" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST" locales="en_US" />
 		<!-- ID upgrade -->
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues2.xml" condition="return $installer->tableExists('issues_old');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles2.xml" condition="return $installer->tableExists('articles_old');" />
