@@ -2328,6 +2328,9 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle($reviewAssignment->getSubmissionId());
+
 			// Add log
 			import('classes.article.log.ArticleLog');
 			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
