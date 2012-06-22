@@ -435,8 +435,6 @@ class ArticleFileManager extends FileManager {
 	function convertFileToPdf($fileId, $revision = null, $isGalley = 0) {
 		import('classes.article.ArticleGalley');
 		
-		$libreOffice = Config::getVar('libreoffice', 'path');
-
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		
@@ -448,11 +446,12 @@ class ArticleFileManager extends FileManager {
 		$pdfFilepath = substr($origFilePath,0,strrpos($origFilePath,$origExt)) . '.pdf';
 		$outdir = substr($origFilePath,0,strrpos($origFilePath,$origFileName));
 	
-        	if(file_exists($pdfFilepath)) {
-                	unlink($pdfFilepath);
-        	}
+		if(file_exists($pdfFilepath)) {
+			unlink($pdfFilepath);
+		}
 
 		//create PDF file
+		$libreOffice = "/apps/subi/sw/libreoffice/program/soffice";
 		$convertCmd = "$libreOffice --headless --convert-to pdf -outdir $outdir $origFilePath >> /apps/subi/ojs/logs/pdf_conversion.log";
 		passthru($convertCmd,$return);
 
@@ -493,7 +492,9 @@ class ArticleFileManager extends FileManager {
 			else {
 				error_log("Error: stripCmd '" . $stripCmd . "' returned non-zero code.");
 			}
-		} 
+		} else {
+			error_log("Error: convertCmd '" . $convertCmd . "' did not produce a PDF.");
+		}
 	}
 
 	/**
