@@ -190,8 +190,7 @@ class SolrWebService extends XmlWebService {
 	 * @param $article Article The article to be (re-)indexed.
 	 * @param $journal Journal
 	 *
-	 * @return integer The number of documents processed or null if
-	 *  an error occured.
+	 * @return boolean true, if the indexing succeeded, otherwise false.
 	 */
 	function indexArticle(&$article, &$journal) {
 		assert($article->getJournalId() == $journal->getId());
@@ -202,14 +201,14 @@ class SolrWebService extends XmlWebService {
 
 		$url = $this->_getDihUrl() . '?command=full-import';
 		$result = $this->_makeRequest($url, $articleXml, 'POST');
-		if (is_null($result)) return $result;
+		if (is_null($result)) return false;
 
 		// Return the number of documents that were indexed.
 		$nodeList = $result->query('//response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
 		assert($nodeList->length == 1);
 		$resultNode = $nodeList->item(0);
 		assert(is_numeric($resultNode->textContent));
-		return (int)$resultNode->textContent;
+		return ($resultNode->textContent == '1');
 	}
 
 	/**
@@ -263,12 +262,12 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Deletes the given article from the Solr index.
 	 *
-	 * @param $article Article The article to be deleted.
+	 * @param $articleId integer The ID of the article to be deleted.
 	 *
 	 * @return boolean true if successful, otherwise false.
 	 */
-	function deleteArticleFromIndex($article) {
-		$xml = '<id>' . SOLR_INSTALLATION_ID . '-' . $article->getId() . '</id>';
+	function deleteArticleFromIndex($articleId) {
+		$xml = '<id>' . SOLR_INSTALLATION_ID . '-' . $articleId . '</id>';
 		return $this->_deleteFromIndex($xml);
 	}
 

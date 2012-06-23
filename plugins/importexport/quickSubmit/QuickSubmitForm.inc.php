@@ -299,7 +299,12 @@ class QuickSubmitForm extends Form {
 
 			// Update file search index
 			import('classes.search.ArticleSearchIndex');
-			if (isset($galley)) ArticleSearchIndex::updateFileIndex($galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+			$articleSearchIndex = new ArticleSearchIndex();
+			if (isset($galley)) {
+				$articleSearchIndex->updateFileIndex(
+					$galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId()
+				);
+			}
 		}
 
 
@@ -358,7 +363,8 @@ class QuickSubmitForm extends Form {
 
 		// Index article.
 		import('classes.search.ArticleSearchIndex');
-		ArticleSearchIndex::indexArticleMetadata($article);
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->indexArticleMetadata($article);
 
 		// Import the references list.
 		$citationDao =& DAORegistry::getDAO('CitationDAO');

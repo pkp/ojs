@@ -135,35 +135,66 @@ class LucenePlugin extends GenericPlugin {
 	 * @see ArticleSearchIndex::deleteTextIndex()
 	 */
 	function callbackDeleteTextIndex($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::deleteTextIndex');
+		list($articleId, $type, $assocId) = $params;
+		$success = $this->_indexArticleId($articleId);
+		if (!$success) {
+			// TODO: Return a notification to the user.
+		}
+		return true;
 	}
 
 	/**
 	 * @see ArticleSearchIndex::indexArticleFiles()
 	 */
 	function callbackIndexArticleFiles($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::indexArticleFiles');
+		list($article) = $params; /* @var $article Article */
+		$success = $this->_indexArticle($article);
+		if (!$success) {
+			// TODO: Return a notification to the user.
+		}
+		return true;
 	}
 
 	/**
 	 * @see ArticleSearchIndex::indexArticleMetadata()
 	 */
 	function callbackIndexArticleMetadata($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::indexArticleMetadata');
+		list($article) = $params; /* @var $article Article */
+		$success = $this->_indexArticle($article);
+		if (!$success) {
+			// TODO: Return a notification to the user.
+		}
+		return true;
 	}
 
 	/**
 	 * @see ArticleSearchIndex::indexSuppFileMetadata()
 	 */
 	function callbackIndexSuppFileMetadata($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::indexSuppFileMetadata');
+		list($suppFile) = $params; /* @var $suppFile SuppFile */
+		if (!is_a($suppFile, 'SuppFile')) return true;
+		$success = $this->_indexArticleId($suppFile->getArticleId());
+		if (!$success) {
+			// TODO: Return a notification to the user.
+		}
+		return true;
 	}
 
 	/**
 	 * @see ArticleSearchIndex::updateFileIndex()
 	 */
 	function callbackUpdateFileIndex($hookName, $params) {
-		// FIXME: Not yet implemented.
+		assert($hookName == 'ArticleSearchIndex::updateFileIndex');
+		list($articleId, $type, $fileId) = $params;
+		$success = $this->_indexArticleId($articleId);
+		if (!$success) {
+			// TODO: Return a notification to the user.
+		}
+		return true;
 	}
 
 	/**
@@ -195,6 +226,49 @@ class LucenePlugin extends GenericPlugin {
 			unset($journal);
 		}
 		return true;
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Index a single article.
+	 * @param $article Article
+	 * @return boolean Whether or not the indexing was successful.
+	 */
+	function _indexArticle(&$article) {
+		if(!is_a($article, 'Article')) return false;
+
+		// We need the article's journal to index the article.
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journal =& $journalDao->getJournal($article->getJournalId());
+		if(!is_a($journal, 'Journal')) return false;
+
+		// We cannot re-index article files only. We have
+		// to re-index the whole article.
+		return $this->_solrWebService->indexArticle($article, $journal);
+	}
+
+	/**
+	 * Index a single article when an article ID is given.
+	 * @param $articleId integer
+	 * @return boolean Whether or not the indexing was successful.
+	 */
+	function _indexArticleId($articleId) {
+		if (!is_numeric($articleId)) return false;
+
+		// Retrieve the article object.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$article =& $articleDao->getArticle($articleId);
+		if(!is_a($article, 'Article')) {
+			// The article doesn't seem to exist any more.
+			// Delete remainders from the index.
+			return $this->_solrWebService->deleteArticleFromIndex($articleId);
+		}
+
+		// Re-index the article.
+		return $this->_indexArticle($article);
 	}
 }
 ?>

@@ -82,8 +82,12 @@ class ArticleSearch {
 					$bool = empty($postBool) ? $preBool : $postBool;
 					$preBool = $postBool;
 					if ($bool == 'or') $sign = '';
-					if (is_array($token)) $k = $token;
-					else $k = ArticleSearchIndex::filterKeywords($token, true);
+					if (is_array($token)) {
+						$k = $token;
+					} else {
+						$articleSearchIndex = new ArticleSearchIndex();
+						$k = $articleSearchIndex->filterKeywords($token, true);
+					}
 					if (!empty($k)) $return[$sign][] = $k;
 					$sign = '';
 					break;

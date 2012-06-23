@@ -30,7 +30,8 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * Rebuild the search index for all articles in all journals.
 	 */
 	function execute() {
-		ArticleSearchIndex::rebuildIndex(true);
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->rebuildIndex(true);
 	}
 
 }

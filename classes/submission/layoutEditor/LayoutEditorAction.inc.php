@@ -58,7 +58,8 @@ class LayoutEditorAction extends Action {
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex = new ArticleSearchIndex();
+				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 			if ($galley->isHTMLGalley()) {
 				if ($galley->getStyleFileId()) {
@@ -127,7 +128,8 @@ class LayoutEditorAction extends Action {
 				$articleFileManager = new ArticleFileManager($article->getId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				$articleSearchIndex = new ArticleSearchIndex();
+				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
 		}

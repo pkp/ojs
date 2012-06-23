@@ -150,9 +150,9 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal->setId('1');
 		$journal->setPath('test');
 
-		// Test indexing. The service returns the number of documents that
-		// were successfully processed.
-		self::assertEquals(1, $this->solrWebService->indexArticle($article, $journal));
+		// Test indexing. The service returns true if the article
+		// was successfully processed.
+		self::assertTrue($this->solrWebService->indexArticle($article, $journal));
 	}
 
 	/**
@@ -181,9 +181,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 * @covers SolrWebService
 	 */
 	public function testDeleteArticleFromIndex() {
-		$article = new Article();
-		$article->setId(3);
-		self::assertTrue($this->solrWebService->deleteArticleFromIndex($article));
+		self::assertTrue($this->solrWebService->deleteArticleFromIndex(3));
 	}
 
 	/**

@@ -175,8 +175,9 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		// Update search index
 		import('classes.search.ArticleSearchIndex');
-		ArticleSearchIndex::indexArticleMetadata($article);
-		ArticleSearchIndex::indexArticleFiles($article);
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->indexArticleMetadata($article);
+		$articleSearchIndex->indexArticleFiles($article);
 
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
