@@ -30,7 +30,7 @@
       }
       context.setSessionAttribute(fieldName, fieldValue, context.SCOPE_DOC);
     }
-    
+
     /**
      * Custom transformer for the article entitiy.
      *
@@ -101,19 +101,61 @@
 
       switch(mimetype) {
         case 'application/pdf':
+        case 'application/x-pdf':
           row.put('etl_file_mimetype', 'pdf');
           break;
 
         case 'text/html':
+        case 'application/xhtml+xml':
           row.put('etl_file_mimetype', 'html');
+          break;
+          
+        case 'application/msword':
+        case 'application/vnd.ms-word.document.macroenabled.12':
+        case 'application/vnd.ms-word.template.macroenabled.12':
+        case 'application/vnd.oasis.opendocument.text':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.template':
+        case 'application/vnd.stardivision.writer':
+        case 'application/x-staroffice-template':
+        case 'application/vnd.sun.xml.writer':
+        case 'application/x-vnd.sun.xml.writer':
+        case 'application/vnd.sun.xml.writer.template':
+          row.put('etl_file_mimetype', 'doc');
+          break;
+
+        case 'text/plain':
+          row.put('etl_file_mimetype', 'plain');
+          break;
+
+        case 'application/epub+zip':
+          row.put('etl_file_mimetype', 'epub');
+          break;
+
+        case 'application/postscript':
+          row.put('etl_file_mimetype', 'ps');
+          break;
+
+        case 'application/rtf':
+        case 'text/rtf':
+          row.put('etl_file_mimetype', 'rtf');
+          break;
+
+        case 'application/xml':
+        case 'text/xml':
+          row.put('etl_file_mimetype', 'xml');
+          break;
+
+        case 'application/x-latex':
+          row.put('etl_file_mimetype', 'latex');
+          break;
+
+        case 'application/x-mobipocket-ebook':
+          row.put('etl_file_mimetype', 'mobi');
           break;
 
         default:
-          // Unsupported MIME type: do not index the galley.
-          row.remove('etl_file_name');
-          row.remove('etl_file_locale');
-          row.remove('etl_file_mimetype');
-          row.put('$skipRow', 'true');
+          row.put('etl_file_mimetype', 'other');
       }
       return row;
     }
@@ -156,7 +198,7 @@
       row.remove('text');
       return row;
     }
-    
+
     /**
      * This function is a custom transformer that will
      * be called after all other transformers. We use it
@@ -185,7 +227,7 @@
             docFieldValue += ' ' + author;
           }
         }
-        
+
         row.put(docFieldName, docFieldValue);
       }
       return row;
