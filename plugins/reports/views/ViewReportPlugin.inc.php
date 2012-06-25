@@ -48,8 +48,14 @@ class ViewReportPlugin extends ReportPlugin {
 	function display(&$args) {
 		$journal =& Request::getJournal();
 
-		// FIXME: Localize this.
-		$columns = array("Article ID", "Article Title", "Issue", "Date Published", "Abstract Views", "Total Galley Views");
+		$columns = array(
+			__('plugins.reports.views.articleId'),
+			__('plugins.reports.views.articleTitle'),
+			__('issue.issue'),
+			__('plugins.reports.views.datePublished'),
+			__('plugins.reports.views.abstractViews'),
+			__('plugins.reports.views.galleyViews'),
+		);
 		$galleyLabels = array();
 		$galleyViews = array();
 		$galleyViewTotals = array();
