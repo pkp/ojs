@@ -116,7 +116,13 @@ class ArticleSearchTest extends PKPTestCase {
 			$searchResult = $articleSearch->retrieveResults($journal, $keywords, $testFromDate, $testToDate);
 
 			// Check the parameters passed into the callback.
-			$expectedParams = array($journal, $testCase, $testFromDate, $testToDate);
+			$expectedPage = 1;
+			$expectedItemsPerPage = 20;
+			$expectedTotalResults = 3;
+			$expectedParams = array(
+				$journal, $testCase, $testFromDate, $testToDate,
+				$expectedPage, $expectedItemsPerPage, $expectedTotalResults
+			);
 			self::assertEquals($expectedParams, $this->_retrieveResultsParams);
 
 			// Test and clear the call history of the hook registry.
@@ -125,7 +131,12 @@ class ArticleSearchTest extends PKPTestCase {
 			HookRegistry::resetCalledHooks();
 
 			// Test whether the result from the hook is being returned.
-			self::assertInstanceOf('ItemIterator', $searchResult);
+			self::assertInstanceOf('VirtualArrayIterator', $searchResult);
+
+			// Test the total count.
+			self::assertEquals(3, $searchResult->getCount());
+
+			// Test the search result.
 			$firstResult = $searchResult->next();
 			self::assertArrayHasKey('article', $firstResult);
 			self::assertEquals(ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
@@ -146,6 +157,10 @@ class ArticleSearchTest extends PKPTestCase {
 	public function callbackRetrieveResults($hook, $params) {
 		// Save the test parameters
 		$this->_retrieveResultsParams = $params;
+
+		// Test returning count by-ref.
+		$totalCount =& $params[6];
+		$totalCount = 3;
 
 		// Mock a result set and return it.
 		$results = array(

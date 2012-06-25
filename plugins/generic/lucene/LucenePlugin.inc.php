@@ -93,7 +93,8 @@ class LucenePlugin extends GenericPlugin {
 		assert($hookName == 'ArticleSearch::retrieveResults');
 
 		// Unpack the parameters.
-		list($journal, $search, $fromDate, $toDate) = $params;
+		list($journal, $search, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
+		$totalResults =& $params[6];
 
 		// Translate the search to the Lucene search fields.
 		$searchTypes = array(
@@ -123,8 +124,8 @@ class LucenePlugin extends GenericPlugin {
 		if (!empty($fromDate)) $fromDate = str_replace(' ', 'T', $fromDate) . 'Z';
 		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $fromDate) . 'Z';
 
-		// Call the SOLR web service.
-		return $this->_solrWebService->retrieveResults($journal, $translatedSearch, $fromDate, $toDate);
+		// Call the solr web service.
+		return $this->_solrWebService->retrieveResults($journal, $translatedSearch, $totalResults, $page, $itemsPerPage, $fromDate, $toDate);
 	}
 
 
@@ -263,7 +264,7 @@ class LucenePlugin extends GenericPlugin {
 		$article =& $articleDao->getArticle($articleId);
 		if(!is_a($article, 'Article')) {
 			// The article doesn't seem to exist any more.
-			// Delete remainders from the index.
+			// Delete possible remainders from the index.
 			return $this->_solrWebService->deleteArticleFromIndex($articleId);
 		}
 

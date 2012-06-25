@@ -83,6 +83,10 @@ class SolrWebService extends XmlWebService {
 	 * @param $journal Journal
 	 * @param $search array a raw search query as given by the end user
 	 *  (one query per field).
+	 * @param $totalResults integer An output parameter returning the
+	 *  total number of search results found by the query. This differs
+	 *  from the actual number of returned results as the search can
+	 *  be limited.
 	 * @param $fromDate string An ISO 8601 date string or null.
 	 * @param $toDate string An ISO 8601 date string or null.
 	 *
@@ -90,7 +94,7 @@ class SolrWebService extends XmlWebService {
 	 *  scores (1-9999) and the values are article IDs. Null if an error
 	 *  occured while querying the server.
 	 */
-	function retrieveResults($journal, $search, $fromDate = null, $toDate = null) {
+	function retrieveResults($journal, $search, &$totalResults, $page = 1, $itemsPerPage = 20, $fromDate = null, $toDate = null) {
 		// Expand the search to all locales/formats.
 		$expandedSearch = '';
 		foreach ($search as $field => $query) {
@@ -123,13 +127,28 @@ class SolrWebService extends XmlWebService {
 		if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
 		$expandedSearch .= 'inst_id:' . SOLR_INSTALLATION_ID;
 
+		// Pagination.
+		$start = ($page-1) * $itemsPerPage;
+		$rows = $itemsPerPage;
+
 		// Execute the search.
 		$url = $this->_getSearchUrl();
-		$params = array('q' => $expandedSearch);
+		$params = array(
+			'q' => $expandedSearch,
+			'start' => (int) $start,
+			'rows' => (int) $rows
+		);
 		$response = $this->_makeRequest($url, $params);
 
 		// Did we get a result?
 		if (is_null($response)) return $response;
+
+		// Get the total number of documents found.
+		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
+		assert($nodeList->length == 1);
+		$resultNode = $nodeList->item(0);
+		assert(is_numeric($resultNode->textContent));
+		$totalResults = (int) $resultNode->textContent;
 
 		// Run through all returned documents and read the ID fields.
 		$results = array();
@@ -230,8 +249,8 @@ class SolrWebService extends XmlWebService {
 	 */
 	function indexJournal(&$journal) {
 		// Run through all articles of the journal.
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$articles =& $articleDao->getArticlesByJournalId($journal->getId());
+		$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+		$articles =& $articleDao->getPublishedArticlesByJournalId($journal->getId());
 		$numIndexed = 0;
 		$articleDoc = null;
 		while (!$articles->eof()) {

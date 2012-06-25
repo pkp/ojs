@@ -27,6 +27,8 @@ define('ARTICLE_SEARCH_GALLEY_FILE',		0x00000080);
 define('ARTICLE_SEARCH_SUPPLEMENTARY_FILE',	0x00000100);
 define('ARTICLE_SEARCH_INDEX_TERMS',		0x00000078);
 
+define('ARTICLE_SEARCH_DEFAULT_RESULT_LIMIT', 20);
+
 import('classes.search.ArticleSearchIndex');
 
 class ArticleSearch {
@@ -303,10 +305,20 @@ class ArticleSearch {
 	 * @param $rangeInfo Information on the range of results to return
 	 */
 	function &retrieveResults(&$journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
+		// Pagination
+		if ($rangeInfo && $rangeInfo->isValid()) {
+			$page = $rangeInfo->getPage();
+			$itemsPerPage = $rangeInfo->getCount();
+		} else {
+			$page = 1;
+			$itemsPerPage = ARTICLE_SEARCH_DEFAULT_RESULT_LIMIT;
+		}
+
 		// Check whether a search plug-in jumps in to provide ranked search results.
+		$totalResults = null;
 		$results =& HookRegistry::call(
 			'ArticleSearch::retrieveResults',
-			array(&$journal, &$keywords, $publishedFrom, $publishedTo)
+			array(&$journal, &$keywords, $publishedFrom, $publishedTo, $page, $itemsPerPage, &$totalResults)
 		);
 
 		// If no search plug-in is activated or the search
@@ -331,22 +343,21 @@ class ArticleSearch {
 			// It is generated here in such a manner that matches with
 			// identical frequency do not collide.
 			$results =& ArticleSearch::_getSparseArray($mergedResults);
-		}
+			$totalResults = count($results);
 
-		$totalResults = count($results);
-
-		// Use only the results for the specified page, if specified.
-		if ($rangeInfo && $rangeInfo->isValid()) {
-			$results = array_slice(
-				$results,
-				$rangeInfo->getCount() * ($rangeInfo->getPage()-1),
-				$rangeInfo->getCount()
-			);
-			$page = $rangeInfo->getPage();
-			$itemsPerPage = $rangeInfo->getCount();
-		} else {
-			$page = 1;
-			$itemsPerPage = max($totalResults, 1);
+			// Use only the results for the specified page.
+			$offset = $itemsPerPage * ($page-1);
+			$length = max($totalResults - $offset, 0);
+			$length = min($itemsPerPage, $length);
+			if ($length == 0) {
+				$results = array();
+			} else {
+				$results = array_slice(
+					$results,
+					$offset,
+					$length
+				);
+			}
 		}
 
 		// Take the range of results and retrieve the Article, Journal,

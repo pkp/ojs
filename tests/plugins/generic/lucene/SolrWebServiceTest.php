@@ -67,14 +67,18 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal->setId(1);
 		$testSearch = array(
 			'all' => 'pizza',
-			'authors' => 'Author',
+			'authors' => 'Name',
 			'galley_full_text' => 'Nutella',
-			'title' => 'Titel'
+			'title' => 'Article'
 		);
 		$fromDate = date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01'));
 		$toDate = null;
-		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $fromDate, $toDate);
-		self::assertTrue(is_array($scoredResults) && !empty($scoredResults) && in_array('3', $scoredResults));
+		$totalResults = null;
+		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, $fromDate, $toDate);
+		self::assertTrue(is_int($totalResults), $totalResults > 0);
+		self::assertTrue(is_array($scoredResults));
+		self::assertTrue(!empty($scoredResults));
+		self::assertTrue(in_array('3', $scoredResults));
 	}
 
 	/**
@@ -97,13 +101,8 @@ class SolrWebServiceTest extends PKPTestCase {
 		$result = $this->_startServer($embeddedServer);
 
 		// Test the status message.
-		self::assertEquals(
-			array(
-				'status' => SOLR_STATUS_ONLINE,
-				'message' => 'Index with 1 documents online.'
-			),
-			$result
-		);
+		self::assertEquals(SOLR_STATUS_ONLINE, $result['status']);
+		self::assertRegExp('/Index with [0-9]+ documents online./', $result['message']);
 
 		// Stop the server, then test the status again.
 		$embeddedServer->stop();
@@ -136,6 +135,20 @@ class SolrWebServiceTest extends PKPTestCase {
 			'tests/plugins/generic/lucene/test-article.xml',
 			XMLCustomWriter::getXml($articleDoc)
 		);
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testDeleteArticleFromIndex() {
+		self::assertTrue($this->solrWebService->deleteArticleFromIndex(3));
+	}
+
+	/**
+	 * @covers SolrWebService
+	 */
+	public function testDeleteAllArticlesFromIndex() {
+		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
 	}
 
 	/**
@@ -175,20 +188,6 @@ class SolrWebServiceTest extends PKPTestCase {
 		// Test indexing. The service returns the number of documents that
 		// were successfully processed.
 		self::assertNotNull($this->solrWebService->indexJournal($journal));
-	}
-
-	/**
-	 * @covers SolrWebService
-	 */
-	public function testDeleteArticleFromIndex() {
-		self::assertTrue($this->solrWebService->deleteArticleFromIndex(3));
-	}
-
-	/**
-	 * @covers SolrWebService
-	 */
-	public function testDeleteAllArticlesFromIndex() {
-		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
 	}
 
 

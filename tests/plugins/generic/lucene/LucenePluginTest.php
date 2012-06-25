@@ -102,6 +102,9 @@ class LucenePluginTest extends PKPTestCase {
 		);
 
 		$hook = 'ArticleSearch::retrieveResults';
+		$page = 1;
+		$itemsPerPage = 20;
+		$totalResults = null;
 
 		foreach($testCases as $testNum => $testCase) {
 			// Mock a SolrWebService.
@@ -113,12 +116,15 @@ class LucenePluginTest extends PKPTestCase {
 			           ->method('retrieveResults')
 			           ->with($this->equalTo($journal),
 			                  $this->equalTo($expectedResults[$testNum]),
+			                  $this->equalTo($totalResults),
+			                  $this->equalTo($page),
+			                  $this->equalTo($itemsPerPage),
 			                  $this->equalTo('2000-01-01T00:00:00Z'),
 			                  $this->equalTo(null));
 			$this->lucenePlugin->_solrWebService = $webService;
 
 			// Execute the test.
-			$params = array($journal, $testCase, $fromDate, null);
+			$params = array($journal, $testCase, $fromDate, null, 1, 20, &$totalResults);
 			$this->lucenePlugin->callbackRetrieveResults($hook, $params);
 		}
 	}
