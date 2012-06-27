@@ -16,5 +16,4 @@
 	<message key="plugins.citationFormats.abnt.displayName">Công cụ định dạng trích dẫn ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Công cụ này áp dụng định dạng trích dẫn ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Bắc Mỹ</message>
 </locale>

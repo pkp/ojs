@@ -16,5 +16,4 @@
 	<message key="plugins.citationFormats.abnt.displayName">Connector per al format de citació ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Aquest connector implementa el format de citació ABNT.</message>
-	<message key="plugins.citationFormat.acao.location">Amèrica del Nord</message>
 </locale>

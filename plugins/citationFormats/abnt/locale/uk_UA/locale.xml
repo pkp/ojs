@@ -18,6 +18,5 @@
        <message key="plugins.citationFormats.abnt.displayName">Модуль формату цитат ABNT</message>
        <message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
        <message key="plugins.citationFormats.abnt.description">Цей модуль дозволяє використання формату цитат ABNT.</message>
-       <message key="plugins.citationFormat.abnt.location">Північна Америка</message>
        <message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно за адресою: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Дата доступу: {$retrievedDate}]]></message>
 </locale>

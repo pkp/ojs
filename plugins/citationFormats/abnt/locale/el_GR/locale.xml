@@ -23,6 +23,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Plugin σχήματος παραπομπής ABNT </message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Βόρεια Αμερική</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Διαθέσιμο από: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Ημερομηνία πρόσβασης: {$retrievedDate}]]></message>
 </locale>

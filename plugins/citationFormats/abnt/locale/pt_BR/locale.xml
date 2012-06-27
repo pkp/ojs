@@ -16,6 +16,11 @@
 	<message key="plugins.citationFormats.abnt.displayName">Citação ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Este plugin implementa o formato de citação ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Local de publicação (editar no plugin de tradução o arquivo da citação ABNT)</message>
+	
+	<message key="plugins.citationFormats.abnt.manager.settings">Configurações</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Configurações do formato de citação ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Configurações de campos usados para referências segundo formato ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Local</message>
+	
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponível em: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Acesso em: {$retrievedDate}.]]></message>
 </locale>

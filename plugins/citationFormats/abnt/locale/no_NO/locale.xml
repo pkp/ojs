@@ -16,6 +16,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">Programutvidelse for ABNT siteringsformat</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Denne programutvidelsen implementerer ABNT-siteringsformatet.</message>
-	<message key="plugins.citationFormat.abnt.location">Nord-Amerika</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgjengelig: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Nedlastet dato: {$retrievedDate}]]></message>
 </locale>
