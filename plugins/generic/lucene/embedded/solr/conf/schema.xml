@@ -4,7 +4,7 @@
 <schema name="ojs" version="1.0">
 
   <types>
-    <!-- The StrField type is not analyzed, but indexed/stored verbatim. -->
+    <!-- The StrField type is not analyzed, but indexed/stored verbatim (e.g. for an ID or sort fields). -->
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>
 
     <!-- A Trie based date field for faster date range queries and date faceting. -->
@@ -18,22 +18,21 @@
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory" />
+        <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>
-
-    <!-- Dummy field type for ignored fields -->
-    <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
 
     <!-- Cross-language field -->
     <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>
 
     <!-- English -->
-    <fieldType name="text_en" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+    <fieldType name="text_en" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt"/>
@@ -41,11 +40,12 @@
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>
 
     <!-- German -->
-    <fieldType name="text_de" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+    <fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_de.txt"/>
@@ -53,11 +53,12 @@
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.GermanLightStemFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>
 
     <!-- Spanish -->
-    <fieldType name="text_es" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+    <fieldType name="text_es" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_es.txt"/>
@@ -65,6 +66,7 @@
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.SpanishLightStemFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>
 
@@ -77,6 +79,9 @@
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
     </fieldType>
+
+    <!-- Dummy field type for ignored fields -->
+    <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
 
   </types>
 
