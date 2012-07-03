@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/lucene/EmbeddedServer.inc.php
+ * @file plugins/generic/lucene/classes/EmbeddedServer.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EmbeddedServer
- * @ingroup plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_classes
  *
  * @brief Implements a PHP interface to administer the embedded solr server.
  */
@@ -65,7 +65,7 @@ class EmbeddedServer {
 	 * @return string
 	 */
 	function _getScriptDirectory() {
-		return dirname(__FILE__) . '/embedded/bin/';
+		return dirname(dirname(__FILE__)) . '/embedded/bin/';
 	}
 
 	/**

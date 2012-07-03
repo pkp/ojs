@@ -16,5 +16,21 @@
 		<name>enabled</name>
 		<value>false</value>
 	</setting>
+	<setting type="string">
+		<name>searchEndpoint</name>
+		<value>http://localhost:8983/solr/ojs/search</value>
+	</setting>
+	<setting type="string">
+		<name>username</name>
+		<value>admin</value>
+	</setting>
+	<setting type="string">
+		<name>password</name>
+		<value>please change</value>
+	</setting>
+	<setting type="string">
+		<name>instId</name>
+		<value>localhost</value>
+	</setting>
 </plugin_settings>
 

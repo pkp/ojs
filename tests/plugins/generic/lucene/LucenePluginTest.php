@@ -14,11 +14,13 @@
  */
 
 
+require_mock_env('env1'); // Required for mock app locale.
+
 import('lib.pkp.tests.PKPTestCase');
 import('lib.pkp.classes.core.PKPRouter');
 import('classes.journal.Journal');
 import('plugins.generic.lucene.LucenePlugin');
-import('plugins.generic.lucene.SolrWebService');
+import('plugins.generic.lucene.classes.SolrWebService');
 
 
 class LucenePluginTest extends PKPTestCase {
@@ -56,16 +58,25 @@ class LucenePluginTest extends PKPTestCase {
 	 * @covers LucenePlugin
 	 */
 	public function testCallbackRetrieveResults() {
+		// Configure test translations.
+		AppLocale::setTranslations(
+			array(
+				'search.operator.not' => 'nicht',
+				'search.operator.and' => 'und',
+				'search.operator.or' => 'oder'
+			)
+		);
+
 		// Test data.
 		$journal = new Journal();
 		$testCases = array(
 			// Simple Searches
-			array(null => 'test query'),
+			array(null => 'test und query'),
 			array(ARTICLE_SEARCH_AUTHOR => 'author'),
 			array(ARTICLE_SEARCH_TITLE => 'title'),
 			array(ARTICLE_SEARCH_ABSTRACT => 'abstract'),
-			array(ARTICLE_SEARCH_INDEX_TERMS => 'index terms'),
-			array(ARTICLE_SEARCH_GALLEY_FILE => 'full text'),
+			array(ARTICLE_SEARCH_INDEX_TERMS => 'Nicht index terms'),
+			array(ARTICLE_SEARCH_GALLEY_FILE => 'full ODER text'),
 			// Advanced Search
 			array(
 				null => 'test query',
@@ -82,12 +93,12 @@ class LucenePluginTest extends PKPTestCase {
 		$fromDate = '2000-01-01 00:00:00';
 
 		$expectedResults = array(
-			array('all' => 'test query'),
+			array('all' => 'test AND query'),
 			array('authors' => 'author'),
 			array('title' => 'title'),
 			array('abstract' => 'abstract'),
-			array('index_terms' => 'index terms'),
-			array('galley_full_text' => 'full text'),
+			array('indexTerms' => 'NOT index terms'),
+			array('galleyFullText' => 'full OR text'),
 			array(
 				'all' => 'test query',
 				'authors' => 'author',
@@ -96,8 +107,8 @@ class LucenePluginTest extends PKPTestCase {
 				'subject' => 'subject',
 				'type' => 'type',
 				'coverage' => 'coverage',
-				'galley_full_text' => 'full text',
-				'suppFile_full_text' => 'supplementary files'
+				'galleyFullText' => 'full text',
+				'suppFileFullText' => 'supplementary files'
 			),
 		);
 
@@ -105,6 +116,8 @@ class LucenePluginTest extends PKPTestCase {
 		$page = 1;
 		$itemsPerPage = 20;
 		$totalResults = null;
+		$orderBy = 'score';
+		$orderDir = false;
 
 		foreach($testCases as $testNum => $testCase) {
 			// Mock a SolrWebService.
@@ -120,7 +133,9 @@ class LucenePluginTest extends PKPTestCase {
 			                  $this->equalTo($page),
 			                  $this->equalTo($itemsPerPage),
 			                  $this->equalTo('2000-01-01T00:00:00Z'),
-			                  $this->equalTo(null));
+			                  $this->equalTo(null),
+			                  $this->equalTo($orderBy),
+			                  $this->equalTo($orderDir));
 			$this->lucenePlugin->_solrWebService = $webService;
 
 			// Execute the test.

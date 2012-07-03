@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/lucene/SolrWebService.inc.php
+ * @file plugins/generic/lucene/classes/SolrWebService.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SolrWebService
- * @ingroup plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_classes
  *
  * @brief Implements the communication protocol with the solr search server.
  *
@@ -18,14 +18,6 @@
 
 define('SOLR_STATUS_ONLINE', 0x01);
 define('SOLR_STATUS_OFFLINE', 0x02);
-
-// FIXME: Move to plug-in settings.
-define('SOLR_ADMIN_USER', 'admin');
-define('SOLR_ADMIN_PASSWORD', 'ojsojs');
-define('SOLR_INSTALLATION_ID', 'test-inst');
-
-// The default endpoint for the embedded server.
-define('SOLR_EMBEDDED_SERVER', 'http://localhost:8983/solr/ojs/search');
 
 import('lib.pkp.classes.webservice.WebServiceRequest');
 import('lib.pkp.classes.webservice.XmlWebService');
@@ -42,6 +34,9 @@ class SolrWebService extends XmlWebService {
 	/** @var string The base URL of the solr server without core and search handler. */
 	var $_solrServer;
 
+	/** @var string The unique ID identifying this OJS installation to the solr server. */
+	var $_instId;
+
 	/** @var string A description of the last error that occured when calling the service. */
 	var $_lastError;
 
@@ -54,16 +49,17 @@ class SolrWebService extends XmlWebService {
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
 	 *  as a default.
 	 */
-	function SolrWebService($searchHandler = SOLR_EMBEDDED_SERVER) {
+	function SolrWebService($searchHandler, $username, $password, $instId) {
 		// FIXME: Should we validate the search handler URL?
 
 		parent::XmlWebService();
 
 		// Configure the web service.
-		$this->setAuthUsername(SOLR_ADMIN_USER);
-		$this->setAuthPassword(SOLR_ADMIN_PASSWORD);
+		$this->setAuthUsername($username);
+		$this->setAuthPassword($password);
 
 		// Remove trailing slashes.
+		assert(is_string($searchHandler) && !empty($searchHandler));
 		$searchHandler = rtrim($searchHandler, '/');
 
 		// Parse the search handler URL.
@@ -71,6 +67,10 @@ class SolrWebService extends XmlWebService {
 		$this->_solrSearchHandler = array_pop($searchHandlerParts);
 		$this->_solrCore = array_pop($searchHandlerParts);
 		$this->_solrServer = implode('/', $searchHandlerParts) . '/';
+
+		// Set the installation ID.
+		assert(is_string($instId) && !empty($instId));
+		$this->_instId = $instId;
 	}
 
 
@@ -87,14 +87,22 @@ class SolrWebService extends XmlWebService {
 	 *  total number of search results found by the query. This differs
 	 *  from the actual number of returned results as the search can
 	 *  be limited.
+	 * @param $page integer The result page to display.
+	 * @param $itemsPerPage integer The number of search results on
+	 *  one result page.
 	 * @param $fromDate string An ISO 8601 date string or null.
 	 * @param $toDate string An ISO 8601 date string or null.
+	 * @param $orderBy string An index field (without locale extension) to order by.
+	 * @param $orderDir boolean true for ascending order and false for
+	 *  descending order.
 	 *
 	 * @return array An array of search results. The keys are
 	 *  scores (1-9999) and the values are article IDs. Null if an error
 	 *  occured while querying the server.
 	 */
-	function retrieveResults($journal, $search, &$totalResults, $page = 1, $itemsPerPage = 20, $fromDate = null, $toDate = null) {
+	function retrieveResults($journal, $search, &$totalResults, $page = 1, $itemsPerPage = 20,
+			$fromDate = null, $toDate = null, $orderBy = 'score', $orderDir = false) {
+
 		// Expand the search to all locales/formats.
 		$expandedSearch = '';
 		foreach ($search as $field => $query) {
@@ -114,29 +122,33 @@ class SolrWebService extends XmlWebService {
 			if (is_null($fromDate)) $fromDate = '*';
 			if (is_null($toDate)) $toDate = '*';
 			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-			$expandedSearch .= 'publication_date_dt:[' . $fromDate . ' TO ' . $toDate . ']';
+			$expandedSearch .= 'publicationDate_dt:[' . $fromDate . ' TO ' . $toDate . ']';
 		}
 
 		// Add the journal (if set).
 		if (is_a($journal, 'Journal')) {
 			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-			$expandedSearch .= 'journal_id:' . SOLR_INSTALLATION_ID . '-' . $journal->getId();
+			$expandedSearch .= 'journal_id:' . $this->_instId . '-' . $journal->getId();
 		}
 
 		// Add the installation ID.
 		if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-		$expandedSearch .= 'inst_id:' . SOLR_INSTALLATION_ID;
+		$expandedSearch .= 'inst_id:' . $this->_instId;
 
 		// Pagination.
 		$start = ($page-1) * $itemsPerPage;
 		$rows = $itemsPerPage;
+
+		// Ordering.
+		$sort = $this->_getOrdering($orderBy, $orderDir);
 
 		// Execute the search.
 		$url = $this->_getSearchUrl();
 		$params = array(
 			'q' => $expandedSearch,
 			'start' => (int) $start,
-			'rows' => (int) $rows
+			'rows' => (int) $rows,
+			'sort' => $sort
 		);
 		$response = $this->_makeRequest($url, $params);
 
@@ -176,23 +188,19 @@ class SolrWebService extends XmlWebService {
 		// Re-index by score. There's no need to re-order as the
 		// results come back ordered by score from the solr server.
 		$scoredResults = array();
-		foreach($results as $result) {
-			// We only need the score and the article ID.
-			assert(isset($result['score']) && isset($result['article_id']));
+		foreach($results as $resultIndex => $result) {
+			// We only need the article ID.
+			assert(isset($result['article_id']));
 
-			// Transform the score into a positive integer between 0 and 9999.
-			$score = intval($result['score'] * 10000);
+			// Use the result order to "score" results. This
+			// will do relevance sorting and field sorting.
+			$score = $itemsPerPage - $resultIndex;
 
 			// Transform the article ID into an integer.
 			$articleId = $result['article_id'];
-			if (strpos($articleId, SOLR_INSTALLATION_ID . '-') !== 0) continue;
-			$articleId = substr($articleId, strlen(SOLR_INSTALLATION_ID . '-'));
+			if (strpos($articleId, $this->_instId . '-') !== 0) continue;
+			$articleId = substr($articleId, strlen($this->_instId . '-'));
 			if (!is_numeric($articleId)) continue;
-
-			// Avoid loosing results due to duplicate scores.
-			while(isset($scoredResults[$score])) {
-				$score--;
-			}
 
 			// Store the result.
 			$scoredResults[$score] = (int)$articleId;
@@ -286,7 +294,7 @@ class SolrWebService extends XmlWebService {
 	 * @return boolean true if successful, otherwise false.
 	 */
 	function deleteArticleFromIndex($articleId) {
-		$xml = '<id>' . SOLR_INSTALLATION_ID . '-' . $articleId . '</id>';
+		$xml = '<id>' . $this->_instId . '-' . $articleId . '</id>';
 		return $this->_deleteFromIndex($xml);
 	}
 
@@ -297,7 +305,7 @@ class SolrWebService extends XmlWebService {
 	 */
 	function deleteAllArticlesFromIndex() {
 		// Delete all articles of the installation.
-		$xml = '<query>inst_id:' . SOLR_INSTALLATION_ID . '</query>';
+		$xml = '<query>inst_id:' . $this->_instId . '</query>';
 		return $this->_deleteFromIndex($xml);
 	}
 
@@ -345,12 +353,12 @@ class SolrWebService extends XmlWebService {
 
 	/**
 	 * Returns an array with all (dynamic) fields in the index.
-	 *
+	 * @param $fieldType string Either 'search' or 'sort'.
 	 * @return array
 	 */
-	function getAvailableFields() {
+	function getAvailableFields($fieldType) {
 		$cache =& $this->_getCache();
-		$fieldCache = $cache->get('fields');
+		$fieldCache = $cache->get($fieldType);
 		return $fieldCache;
 	}
 
@@ -369,21 +377,30 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Refresh the cache from the solr server.
 	 * @param $cache FileCache
-	 * @param $id string not used in our case
+	 * @param $id string The field type.
 	 *
 	 * @return array The available field names.
 	 */
 	function _cacheMiss(&$cache, $id) {
-		assert($id == 'fields');
+		assert(in_array($id, array('search', 'sort')));
 
 		// Get the fields that may be found in the index.
-		$fields = $this->_getFieldNames();
+		$fields = $this->_getFieldNames('all');
 
 		// Prepare the cache.
 		$fieldCache = array();
-		foreach(array('localized', 'multiformat') as $fieldType) {
-			foreach($fields[$fieldType] as $fieldName) {
-				$fieldCache[$fieldName] = array();
+		foreach(array('search', 'sort') as $fieldType) {
+			$fieldCache[$fieldType] = array();
+			foreach(array('localized', 'multiformat', 'static') as $fieldSubType) {
+				if ($fieldSubType == 'static') {
+					foreach($fields[$fieldType][$fieldSubType] as $fieldName => $dummy) {
+						$fieldCache[$fieldType][$fieldName] = array();
+					}
+				} else {
+					foreach($fields[$fieldType][$fieldSubType] as $fieldName) {
+						$fieldCache[$fieldType][$fieldName] = array();
+					}
+				}
 			}
 		}
 
@@ -401,38 +418,54 @@ class SolrWebService extends XmlWebService {
 			// Split the field name.
 			$fieldNameParts = explode('_', $fieldName);
 
-			// Identify the locale of the field.
-			$locale = array_pop($fieldNameParts);
+			// Identify the field type.
+			$fieldSuffix = array_pop($fieldNameParts);
+			if (strpos($fieldSuffix, 'sort') !== false) {
+				$fieldType = 'sort';
+				$fieldSuffix = array_pop($fieldNameParts);
+			} else {
+				$fieldType = 'search';
+			}
+
+			// 1) Is this a static field?
+			foreach($fields[$fieldType]['static'] as $staticField => $fullFieldName) {
+				if ($fieldName == $fullFieldName) {
+					$fieldCache[$fieldType][$staticField][] = $fullFieldName;
+					continue 2;
+				}
+			}
+
+			// Localized and multiformat fields have a locale suffix.
+			$locale = $fieldSuffix;
 			if ($locale != 'txt') {
 				$locale = array_pop($fieldNameParts) . '_' . $locale;
 			}
 
-			// 1) Is it a dynamic multi-format field?
-			foreach($fields['multiformat'] as $multiformatField) {
+			// 2) Is this a dynamic localized field?
+			foreach($fields[$fieldType]['localized'] as $localizedField) {
+				if (strpos($fieldName, $localizedField) === 0) {
+					$fieldCache[$fieldType][$localizedField][] = $locale;
+				}
+			}
+
+			// 3) Is this a dynamic multi-format field?
+			foreach($fields[$fieldType]['multiformat'] as $multiformatField) {
 				if (strpos($fieldName, $multiformatField) === 0) {
 					// Identify the format of the field.
 					$format = array_pop($fieldNameParts);
 
 					// Add the field to the field cache.
-					if (!isset($fieldCache[$multiformatField][$format])) {
-						$fieldCache[$multiformatField][$format] = array();
+					if (!isset($fieldCache[$fieldType][$multiformatField][$format])) {
+						$fieldCache[$fieldType][$multiformatField][$format] = array();
 					}
-					$fieldCache[$multiformatField][$format][] = $locale;
+					$fieldCache[$fieldType][$multiformatField][$format][] = $locale;
 
 					// Continue the outer loop.
 					continue 2;
 				}
 			}
-
-			// 2) Is it a dynamic localized field?
-			foreach($fields['localized'] as $localizedField) {
-				if (strpos($fieldName, $localizedField) === 0) {
-					$fieldCache[$localizedField][] = $locale;
-				}
-			}
 		}
 
-		$fieldCache = array($id => $fieldCache);
 		$cache->setEntireCache($fieldCache);
 		return $fieldCache[$id];
 	}
@@ -566,22 +599,43 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Return a list of all text fields that may occur in the
 	 * index.
+	 * @param $fieldType string "search", "sort" or "all"
 	 *
 	 * @return array
 	 */
-	function _getFieldNames() {
-		return array(
-			'localized' => array(
-				'title', 'abstract', 'discipline', 'subject',
-				'type', 'coverage', 'all', 'index_terms'
+	function _getFieldNames($fieldType) {
+		$fieldNames = array(
+			'search' => array(
+				'localized' => array(
+					'title', 'abstract', 'discipline', 'subject',
+					'type', 'coverage', 'all', 'indexTerms'
+				),
+				'multiformat' => array(
+					'galleyFullText', 'suppFileFullText'
+				),
+				'static' => array(
+					'authors' => 'authors_txt',
+					'publicationDate' => 'publicationDate_dt'
+				)
 			),
-			'multiformat' => array(
-				'galley_full_text', 'suppFile_full_text'
-			),
-			'static' => array(
-				'authors' => 'authors_txt'
+			'sort' => array(
+				'localized' => array(
+					'title', 'journalTitle'
+				),
+				'multiformat' => array(),
+				'static' => array(
+					'authors' => 'authors_txtsort',
+					'publicationDate' => 'publicationDate_dtsort',
+					'issuePublicationDate' => 'issuePublicationDate_dtsort'
+				)
 			)
 		);
+		if ($fieldType == 'all') {
+			return $fieldNames;
+		} else {
+			assert(isset($fieldNames[$fieldType]));
+			return $fieldNames[$fieldType];
+		}
 	}
 
 	/**
@@ -592,32 +646,77 @@ class SolrWebService extends XmlWebService {
 	 * @return string The expanded query.
 	 */
 	function _expandField($field, $query) {
-		$availableFields = $this->getAvailableFields();
-		$fieldNames = $this->_getFieldNames();
+		$availableFields = $this->getAvailableFields('search');
+		$fieldNames = $this->_getFieldNames('search');
 
 		$fieldSearch = '';
 		if (isset($availableFields[$field])) {
 			if (in_array($field, $fieldNames['multiformat'])) {
+				// This is a multiformat field.
 				foreach($availableFields[$field] as $format => $locales) {
 					foreach($locales as $locale) {
 						if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
 						$fieldSearch .= $field . '_' . $format . '_' . $locale . ':(' . $query . ')';
 					}
 				}
-			} else {
-				assert(in_array($field, $fieldNames['localized']));
+			} elseif(in_array($field, $fieldNames['localized'])) {
+				// This is a localized field.
 				foreach($availableFields[$field] as $locale) {
 					if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
 					$fieldSearch .= $field . '_' . $locale . ':(' . $query . ')';
 				}
-			}
-		} else {
-			if(isset($fieldNames['static'][$field])) {
-				if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-				$fieldSearch .= $fieldNames['static'][$field] . ':(' . $query . ')';
+			} else {
+				// This must be a static field.
+				assert(isset($fieldNames['static'][$field]));
+				$fieldSearch = $fieldNames['static'][$field] . ':(' . $query . ')';
 			}
 		}
 		return $fieldSearch;
+	}
+
+	/**
+	 * Generate the ordering parameter of a search query.
+	 * @param $field string the field to order by
+	 * @param $direction boolean true for ascending, false for descending
+	 * @return string The ordering to be used (default: descending relevance).
+	 */
+	function _getOrdering($field, $direction) {
+		// Translate the direction.
+		$dirString = ($direction?' asc':' desc');
+
+		// Relevance ordering.
+		if ($field == 'score') {
+			return $field . $dirString;
+		}
+
+		// We order by descending relevance by default.
+		$defaultSort = 'score desc';
+
+		// We have to check whether the sort field is
+		// available in the index.
+		$availableFields = $this->getAvailableFields('sort');
+		if (!isset($availableFields[$field])) return $defaultSort;
+
+		// Retrieve all possible sort fields.
+		$fieldNames = $this->_getFieldNames('sort');
+
+		// Order by a static (non-localized) field.
+		if(isset($fieldNames['static'][$field])) {
+			return $fieldNames['static'][$field] . $dirString . ',' . $defaultSort;
+		}
+
+		// Order by a localized field.
+		if (in_array($field, $fieldNames['localized'])) {
+			// We can only sort if the current locale is indexed.
+			$currentLocale = AppLocale::getLocale();
+			if (in_array($currentLocale, $availableFields[$field])) {
+				// Return the localized sort field name.
+				return $field . '_' . $currentLocale . '_txtsort' . $dirString . ',' . $defaultSort;
+			}
+		}
+
+		// In all other cases return the default ordering.
+		return $defaultSort;
 	}
 
 	/**
@@ -650,15 +749,15 @@ class SolrWebService extends XmlWebService {
 		$articleNode =& XMLCustomWriter::createElement($articleDoc, 'article');
 		XMLCustomWriter::setAttribute($articleNode, 'id', $article->getId());
 		XMLCustomWriter::setAttribute($articleNode, 'journalId', $article->getJournalId());
-		XMLCustomWriter::setAttribute($articleNode, 'instId', SOLR_INSTALLATION_ID);
+		XMLCustomWriter::setAttribute($articleNode, 'instId', $this->_instId);
 		XMLCustomWriter::appendChild($articleList, $articleNode);
 
 		// Add authors.
 		$authors = $article->getAuthors();
 		if (!empty($authors)) {
 			$authorList =& XMLCustomWriter::createElement($articleDoc, 'authorList');
-			foreach ($authors as $author) {
-				XMLCustomWriter::createChildWithText($articleDoc, $authorList, 'author', $author->getFullName());
+			foreach ($authors as $author) { /* @var $author Author */
+				XMLCustomWriter::createChildWithText($articleDoc, $authorList, 'author', $author->getFullName(true));
 			}
 			XMLCustomWriter::appendChild($articleNode, $authorList);
 		}
@@ -755,13 +854,38 @@ class SolrWebService extends XmlWebService {
 			XMLCustomWriter::appendChild($articleNode, $coverageList);
 		}
 
-		// Add publication date.
+		// Add journal titles.
+		$journalTitles = $journal->getTitle(null); // return all locales
+		if (!empty($journalTitles)) {
+			$journalTitleList =& XMLCustomWriter::createElement($articleDoc, 'journalTitleList');
+			foreach ($journalTitles as $locale => $journalTitle) {
+				$journalTitleNode =& XMLCustomWriter::createChildWithText($articleDoc, $journalTitleList, 'journalTitle', $journalTitle);
+				XMLCustomWriter::setAttribute($journalTitleNode, 'locale', $locale);
+			}
+			XMLCustomWriter::appendChild($articleNode, $journalTitleList);
+		}
+
+		// Add publication dates.
 		if (is_a($article, 'PublishedArticle')) {
 			$publicationDate = $article->getDatePublished();
 			if (!empty($publicationDate)) {
-				// Transform date.
+				// Transform and store article publication date.
 				$publicationDate = str_replace(' ', 'T', $publicationDate) . 'Z';
 				$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'publicationDate', $publicationDate);
+			}
+
+			$issueId = $article->getIssueId();
+			if (is_numeric($issueId)) {
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue =& $issueDao->getIssueById($issueId);
+				if (is_a($issue, 'Issue')) {
+					$issuePublicationDate = $issue->getDatePublished();
+					if (!empty($issuePublicationDate)) {
+						// Transform and store issue publication date.
+						$issuePublicationDate = str_replace(' ', 'T', $issuePublicationDate) . 'Z';
+						$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'issuePublicationDate', $issuePublicationDate);
+					}
+				}
 			}
 		}
 

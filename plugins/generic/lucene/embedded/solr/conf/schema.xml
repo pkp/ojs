@@ -8,7 +8,10 @@
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>
 
     <!-- A Trie based date field for faster date range queries and date faceting. -->
-    <fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="6" positionIncrementGap="0"/>
+    <fieldType name="tdate" class="solr.TrieDateField" omitNorms="true" precisionStep="6" positionIncrementGap="0"/>
+
+    <!-- A conventional date field for sorting -->
+    <fieldType name="pdate" class="solr.DateField" sortMissingLast="true"/>
 
     <!-- Keyword fields -->
     <fieldType name="keywords" class="solr.TextField" positionIncrementGap="100">
@@ -112,10 +115,11 @@
     <dynamicField name="*_txt" type="text" indexed="true" stored="false" multiValued="false" />
 
     <!-- Dynamic field definitions for special field types. -->
-    <dynamicField name="*_s" type="string" indexed="true" stored="false" multiValued="false" />
-    <dynamicField name="*_dt" type="date" indexed="true" stored="false" multiValued="false" />
+    <dynamicField name="*_dt" type="tdate" indexed="true" stored="false" multiValued="false" />
+    <dynamicField name="*_txtsort" type="string" indexed="true" stored="false" multiValued="false" />
+    <dynamicField name="*_dtsort" type="pdate" indexed="true" stored="false" multiValued="false" />
 
-    <!-- spelling/auto-suggestion support -->
+    <!-- Spelling and auto-suggestion support -->
     <dynamicField name="*_spell" type="text_spell" indexed="true" stored="false" multiValued="false" />
 
     <!-- Ignore any fields that don't already match an existing

@@ -1,22 +1,24 @@
 <?php
 
 /**
- * @file tests/plugins/generic/lucene/SolrWebServiceTest.inc.php
+ * @file tests/plugins/generic/lucene/classes/SolrWebServiceTest.inc.php
  *
  * Copyright (c) 2000-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SolrWebServiceTest
- * @ingroup tests_plugins_generic_lucene
+ * @ingroup tests_plugins_generic_lucene_classes
  * @see SolrWebService
  *
  * @brief Test class for the SolrWebService class
  */
 
 
+require_mock_env('env1'); // Make sure we're in an en_US environment by using the mock AppLocale.
+
 import('lib.pkp.tests.PKPTestCase');
-import('plugins.generic.lucene.SolrWebService');
-import('plugins.generic.lucene.EmbeddedServer');
+import('plugins.generic.lucene.classes.SolrWebService');
+import('plugins.generic.lucene.classes.EmbeddedServer');
 import('classes.article.PublishedArticle');
 import('classes.journal.Journal');
 import('classes.core.PageRouter');
@@ -36,7 +38,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	protected function getMockedDAOs() {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
-			'AuthorDAO', 'SuppFileDAO', 'ArticleGalleyDAO'
+			'AuthorDAO', 'IssueDAO', 'SuppFileDAO', 'ArticleGalleyDAO'
 		);
 		return $mockedDaos;
 	}
@@ -48,7 +50,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		parent::setUp();
 
 		// Instantiate our web service for testing.
-		$this->solrWebService = new SolrWebService();
+		$this->solrWebService = new SolrWebService('http://localhost:8983/solr/ojs/search', 'admin', 'please change', 'test-inst');
 	}
 
 
@@ -57,6 +59,13 @@ class SolrWebServiceTest extends PKPTestCase {
 	//
 	/**
 	 * @covers SolrWebService
+	 *
+	 * NB: Depends on correct journal indexing
+	 * and must therefore be run after testIndexJournal().
+	 * We run journal indexing as the last test and
+	 * this test as the first test as journal indexing
+	 * is asynchronous. This means that a prior test
+	 * run must be successful for this test to pass.
 	 */
 	public function testRetrieveResults() {
 		$embeddedServer = new EmbeddedServer();
@@ -68,7 +77,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$testSearch = array(
 			'all' => 'pizza',
 			'authors' => 'Name',
-			'galley_full_text' => 'Nutella',
+			'galleyFullText' => 'Nutella',
 			'title' => 'Article'
 		);
 		$fromDate = date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01'));
@@ -79,6 +88,15 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertTrue(is_array($scoredResults));
 		self::assertTrue(!empty($scoredResults));
 		self::assertTrue(in_array('3', $scoredResults));
+
+		// Test result set ordering.
+		$testSearch = array(
+			'title' => '*'
+		);
+		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'authors', 'asc');
+		self::assertEquals(array(3, 1), array_values($scoredResults));
+		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'title', 'desc');
+		self::assertEquals(array(1, 3), array_values($scoredResults));
 	}
 
 	/**
@@ -88,8 +106,17 @@ class SolrWebServiceTest extends PKPTestCase {
 		$embeddedServer = new EmbeddedServer();
 		$this->_startServer($embeddedServer);
 		$this->solrWebService->flushFieldCache();
-		// Only check one exemplary key to make sure that we got something useful back.
-		self::assertArrayHasKey('title', $this->solrWebService->getAvailableFields());
+		// Only a few exemplary keys to make sure that we got something useful back.
+		$searchFields = $this->solrWebService->getAvailableFields('search');
+		foreach(array('authors', 'title', 'galleyFullText') as $fieldName) {
+			self::assertArrayHasKey($fieldName, $searchFields, "The search field $fieldName should exist.");
+			self::assertNotEmpty($searchFields[$fieldName], "The search field $fieldName should not be empty.");
+		}
+		$sortFields = $this->solrWebService->getAvailableFields('sort');
+		foreach(array('authors', 'issuePublicationDate') as $fieldName) {
+			self::assertArrayHasKey($fieldName, $sortFields, "The sort field $fieldName should exist.");
+			self::assertNotEmpty($sortFields[$fieldName], "The sort field $fieldName should not be empty.");
+		}
 	}
 
 	/**
@@ -123,16 +150,14 @@ class SolrWebServiceTest extends PKPTestCase {
 	 * @covers SolrWebService
 	 */
 	public function testGetArticleXml() {
-		// Generate a test article.
+		// Generate test objects.
 		$article = $this->_getTestArticle();
-		// Generate a test journal.
-		$journal = new Journal();
-		$journal->setPath('test');
+		$journal = $this->_getTestJournal();
 
 		// Test the transfer XML file.
 		$articleDoc = $this->solrWebService->_getArticleXml($article, $journal);
 		self::assertXmlStringEqualsXmlFile(
-			'tests/plugins/generic/lucene/test-article.xml',
+			'tests/plugins/generic/lucene/classes/test-article.xml',
 			XMLCustomWriter::getXml($articleDoc)
 		);
 	}
@@ -155,13 +180,9 @@ class SolrWebServiceTest extends PKPTestCase {
 	 * @covers SolrWebService
 	 */
 	public function testIndexArticle() {
-		// Generate a test article.
+		// Generate test objects.
 		$article = $this->_getTestArticle();
-		$article->setJournalId('1');
-		// Generate a test journal.
-		$journal = new Journal();
-		$journal->setId('1');
-		$journal->setPath('test');
+		$journal = $this->_getTestJournal();
 
 		// Test indexing. The service returns true if the article
 		// was successfully processed.
@@ -170,6 +191,10 @@ class SolrWebServiceTest extends PKPTestCase {
 
 	/**
 	 * @covers SolrWebService
+	 *
+	 * NB: We run this test last as journal indexing
+	 * is asynchronous and we don't know when we get
+	 * a consistent index state after this again.
 	 */
 	public function testIndexJournal() {
 		// We need a router for URL generation.
@@ -216,7 +241,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockArticleGalleyDAO() {
 		// Mock an ArticleGalleyDAO.
-		$galleyDAO = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'), array(), '', false);
+		$galleyDao = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'), array(), '', false);
 
 		// Mock a list of supplementary files.
 		$galley1 = new ArticleGalley();
@@ -232,12 +257,12 @@ class SolrWebServiceTest extends PKPTestCase {
 		$galleys = array($galley1, $galley2);
 
 		// Mock the getGalleysByArticle() method.
-		$galleyDAO->expects($this->any())
+		$galleyDao->expects($this->any())
 		          ->method('getGalleysByArticle')
 		          ->will($this->returnValue($galleys));
 
 		// Register the mock DAO.
-		DAORegistry::registerDAO('ArticleGalleyDAO', $galleyDAO);
+		DAORegistry::registerDAO('ArticleGalleyDAO', $galleyDao);
 	}
 
 	/**
@@ -246,7 +271,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockSuppFileDAO() {
 		// Mock an SuppFileDAO.
-		$suppFileDAO = $this->getMock('SuppFileDAO', array('getSuppFilesByArticle'), array(), '', false);
+		$suppFileDao = $this->getMock('SuppFileDAO', array('getSuppFilesByArticle'), array(), '', false);
 
 		// Mock a list of supplementary files.
 		$suppFile1 = new SuppFile();
@@ -268,12 +293,12 @@ class SolrWebServiceTest extends PKPTestCase {
 		$suppFiles = array($suppFile1, $suppFile2);
 
 		// Mock the getSuppFilesByArticle() method.
-		$suppFileDAO->expects($this->any())
+		$suppFileDao->expects($this->any())
 		            ->method('getSuppFilesByArticle')
 		            ->will($this->returnValue($suppFiles));
 
 		// Register the mock DAO.
-		DAORegistry::registerDAO('SuppFileDAO', $suppFileDAO);
+		DAORegistry::registerDAO('SuppFileDAO', $suppFileDao);
 	}
 
 	/**
@@ -282,7 +307,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockAuthorDAO() {
 		// Mock an AuthorDAO.
-		$authorDAO = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'), array(), '', false);
+		$authorDao = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'), array(), '', false);
 
 		// Mock a list of authors.
 		$author1 = new Author();
@@ -295,12 +320,33 @@ class SolrWebServiceTest extends PKPTestCase {
 		$authors = array($author1, $author2);
 
 		// Mock the getAuthorsBySubmissionId() method.
-		$authorDAO->expects($this->any())
+		$authorDao->expects($this->any())
 		          ->method('getAuthorsBySubmissionId')
 		          ->will($this->returnValue($authors));
 
 		// Register the mock DAO.
-		DAORegistry::registerDAO('AuthorDAO', $authorDAO);
+		DAORegistry::registerDAO('AuthorDAO', $authorDao);
+	}
+
+	/**
+	 * Mock and register an IssueDAO as a test
+	 * back end for the SolrWebService class.
+	 */
+	private function _registerMockIssueDAO() {
+		// Mock an IssueDAO.
+		$issueDao = $this->getMock('IssueDAO', array('getIssueById'), array(), '', false);
+
+		// Mock an issue.
+		$issue = new Issue();
+		$issue->setDatePublished('2012-03-15 15:30:00');
+
+		// Mock the getIssueById() method.
+		$issueDao->expects($this->any())
+		         ->method('getIssueById')
+		         ->will($this->returnValue($issue));
+
+		// Register the mock DAO.
+		DAORegistry::registerDAO('IssueDAO', $issueDao);
 	}
 
 	/**
@@ -312,6 +358,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	private function _getTestArticle() {
 		// Activate the mock DAOs.
 		$this->_registerMockAuthorDAO();
+		$this->_registerMockIssueDAO();
 		$this->_registerMockArticleGalleyDAO();
 		$this->_registerMockSuppFileDAO();
 
@@ -327,6 +374,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$article = new PublishedArticle();
 		$article->setId(3);
 		$article->setJournalId(1);
+		$article->setIssueId(1);
 		$article->setTitle('Deutscher Titel', 'de_DE');
 		$article->setTitle('English Title', 'en_US');
 		$article->setAbstract('Deutsche Zusammenfassung', 'de_DE');
@@ -347,6 +395,22 @@ class SolrWebServiceTest extends PKPTestCase {
 		$article->setCoverageSample('everything', 'en_US');
 		$article->setDatePublished('2012-03-15 16:45:00');
 		return $article;
+	}
+
+	/**
+	 * Return a test journal.
+	 *
+	 * @return Journal
+	 */
+	private function _getTestJournal() {
+		// Generate a test journal.
+		$journal = $this->getMock('Journal', array('getTitle'));
+		$journal->setId('1');
+		$journal->setPath('test');
+		$journal->expects($this->any())
+		        ->method('getTitle')
+		        ->will($this->returnValue(array('de_DE' => 'Zeitschrift', 'en_US' => 'Journal')));
+		return $journal;
 	}
 }
 ?>

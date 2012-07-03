@@ -3,7 +3,7 @@
   <dataSource name="http-post" type="ContentStreamDataSource" connectionTimeout="300000" readTimeout="400000" />
   <dataSource name="field" type="FieldReaderDataSource" />
   <dataSource name="file" type="BinURLDataSource" />
-  
+
   <script><![CDATA[
     /**
      * Some fields collect content from various entities.
@@ -45,10 +45,15 @@
       var instId = row.get('inst_id');
       row.put('article_id', instId + '-' + articleId);
       row.put('journal_id', instId + '-' + journalId);
-      
+
       // Add localized fields.
-      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
+      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage', 'journalTitle'];
+
+      // Define how fields are being indexed.
+      var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
       var indexTermFields = ['discipline', 'subject', 'type', 'coverage'];
+      var sortFields = ['title', 'journalTitle'];
+
       for (var i=0, len=locFields.length; i<len; i++) {
         var valueList = 'etl_' + locFields[i] + 'List';
         var localeList = 'etl_' + locFields[i] + 'List_locales';
@@ -59,21 +64,29 @@
         for(var j=0, locs=values.size(); j<locs; j++) {
           var locale = String(locales.get(j));
           var value = String(values.get(j));
-          row.put(locFields[i] + '_' + locale, value);
-          // Add all fields to the spelling field.
+
+          // Index search fields.
+          if (searchFields.indexOf(locFields[i]) >= 0) {
+            row.put(locFields[i] + '_' + locale, value);
+          }
+
+          // Index sort fields.
+          if (sortFields.indexOf(locFields[i]) >= 0) {
+            row.put(locFields[i] + '_' + locale + '_txtsort', value);
+          }
+
+          // Build concatenated fields (spelling, "all" and "index terms").
           appendToDocField(context, 'default_spell', value);
-          // Add all fields to the "all" field. 
           appendToDocField(context, 'all_' + locale, value);
-          // Add index term fields to the "index_terms" field.
           if (indexTermFields.indexOf(locFields[i]) >= 0) {
-            appendToDocField(context, 'index_terms_' + locale, value);
+            appendToDocField(context, 'indexTerms_' + locale, value);
           }
         }
 
         row.remove(valueList);
         row.remove(localeList);
       }
-      
+
       // Prepare the galley XML.
       var galleyXml = row.get('etl_galley_xml');
       if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
@@ -109,7 +122,7 @@
         case 'application/xhtml+xml':
           row.put('etl_file_mimetype', 'html');
           break;
-          
+
         case 'application/msword':
         case 'application/vnd.ms-word.document.macroenabled.12':
         case 'application/vnd.ms-word.template.macroenabled.12':
@@ -176,7 +189,7 @@
       if (locale == 'unknown') locale = 'txt';
 
       // Construct the dynamic field name.
-      var fieldName = entityName + '_full_text_' + mimetype + '_' + locale;
+      var fieldName = entityName + 'FullText_' + mimetype + '_' + locale;
 
       // Deal with multiple entries for the same mimetype/locale.
       var fullText = row.get(fieldName);
@@ -194,7 +207,7 @@
 
       // Add full text to the "all" field.
       appendToDocField(context, 'all_' + locale, currentText);
-          
+
       row.remove('text');
       return row;
     }
@@ -214,16 +227,30 @@
     function postProcessArticle(row, context) {
       var docFieldName, docFieldValue;
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
-      
-      var authors = context.resolve('article.authors_txt');
-      for (var i=0, lenD=docFields.length; i<lenD; i++) {
-        docFieldName = docFields[i];
+
+      // Create the authors sort field.
+      var authors = context.resolve('article.authors_txt'), authorsSort = '';
+      for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
+        if (authorsSort !== '') authorsSort += '; ';
+        authorsSort += String(authors.get(iA));
+      }
+      row.put('authors_txtsort', authorsSort);
+
+      // Create the publication date sort field.
+      var publicationDate = context.resolve('article.publicationDate_dt');
+      if (publicationDate !== null) {
+        row.put('publicationDate_dtsort', publicationDate);
+      }
+
+      // Add document-level fields to the document.
+      for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
+        docFieldName = docFields[iD];
         docFieldValue = context.getSessionAttribute(docFieldName, context.SCOPE_DOC);
-        
+
         // Add authors to spell check and "all" fields.
         if (docFieldName == 'default_spell' || docFieldName.indexOf('all_') === 0) {
-          for (var j=0, lenA=authors.size(); j<lenA; j++) {
-            author = String(authors.get(j));
+          for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
+            var author = String(authors.get(iA));
             docFieldValue += ' ' + author;
           }
         }
@@ -231,7 +258,7 @@
         row.put(docFieldName, docFieldValue);
       }
       return row;
-    }    
+    }
   ]]></script>
 
   <document>
@@ -276,8 +303,15 @@
       <field column="etl_coverageList" xpath="/articleList/article/coverageList/coverage" multiValued="true" />
       <field column="etl_coverageList_locales" xpath="/articleList/article/coverageList/coverage/@locale" multiValued="true" />
 
-      <!-- Publication Date -->
-      <field column="publication_date_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
+      <!-- Journal Titles -->
+      <field column="etl_journalTitleList" xpath="/articleList/article/journalTitleList/journalTitle" multiValued="true" />
+      <field column="etl_journalTitleList_locales" xpath="/articleList/article/journalTitleList/journalTitle/@locale" multiValued="true" />
+
+      <!-- Article Publication Date -->
+      <field column="publicationDate_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
+
+      <!-- Issue Publication Date -->
+      <field column="issuePublicationDate_dtsort" xpath="/articleList/article/issuePublicationDate" multiValued="false" />
 
       <!-- Galleys -->
       <field column="etl_galley_xml" xpath="/articleList/article/galley-xml" multiValued="false" />
@@ -328,7 +362,7 @@
           <field column="text" />
         </entity>
       </entity>
-      
+
       <entity name="articlePostProcessing"
               dataSource="field"
               dataField="article.article_id"

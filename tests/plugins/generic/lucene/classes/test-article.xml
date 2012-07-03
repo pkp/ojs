@@ -2,8 +2,8 @@
 <articleList>
   <article id="3" journalId="1" instId="test-inst">
     <authorList>
-      <author>First Author</author>
-      <author>Second M. Name</author>
+      <author>Author, First</author>
+      <author>Name, Second M.</author>
     </authorList>
     <titleList>
       <title locale="de_DE">Deutscher Titel</title>
@@ -31,7 +31,12 @@
       <coverage locale="pt_BR">Cabo Frio</coverage>
       <coverage locale="en_US">Summer 2012 everything</coverage>
     </coverageList>
+    <journalTitleList>
+      <journalTitle locale="de_DE">Zeitschrift</journalTitle>
+      <journalTitle locale="en_US">Journal</journalTitle>
+    </journalTitleList>
     <publicationDate>2012-03-15T16:45:00Z</publicationDate>
+    <issuePublicationDate>2012-03-15T15:30:00Z</issuePublicationDate>
     <galley-xml>
       <![CDATA[<galleyList><galley locale="de_DE" mimetype="application/pdf" fileName="http://localhost/pkp-ojs/index.php/test/article/download/3/4"/><galley locale="en_US" mimetype="text/html" fileName="http://localhost/pkp-ojs/index.php/test/article/download/3/5"/></galleyList>]]>
     </galley-xml>
