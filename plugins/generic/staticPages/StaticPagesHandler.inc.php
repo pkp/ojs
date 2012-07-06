@@ -24,7 +24,7 @@ class StaticPagesHandler extends Handler {
 		if (count($args) > 0 ) {
 			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER);
 			$journal =& Request::getJournal();
-			$journalId = $journal->getId();
+			$journalId = $journal?$journal->getId():0;
 			$path = $args[0];
 
 			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
