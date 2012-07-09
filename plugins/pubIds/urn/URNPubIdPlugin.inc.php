@@ -118,7 +118,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 					// When the suffix equals the object's ID then
 					// require an object-specific prefix to be sure that the suffix is unique
 					if ($pubObjectType != 'Article' && $urnSuffix === (string) $pubObject->getId()) {
-						$urnSuffix = strtolower($pubObjectType{0}) . $urnSuffix;
+						$urnSuffix = strtolower_codesafe($pubObjectType{0}) . $urnSuffix;
 					}
 					$urn = $urnPrefix . $urnSuffix;
 					if ($this->getSetting($journal->getId(), 'checkNo')) {
@@ -303,7 +303,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 *  the last number of the quotient before the decimal point is the check number.
 	 */
 	function _calculateCheckNo($urn) {
-	    $urnLower = strtolower($urn);
+	    $urnLower = strtolower_codesafe($urn);
 
 	    $conversionTable = array('9' => '41', '8' => '9', '7' => '8', '6' => '7', '5' => '6', '4' => '5', '3' => '4', '2' => '3', '1' => '2', '0' => '1', 'a' => '18', 'b' => '14', 'c' => '19', 'd' => '15', 'e' => '16', 'f' => '21', 'g' => '22', 'h' => '23', 'i' => '24', 'j' => '25', 'k' => '42', 'l' => '26', 'm' => '27', 'n' => '13', 'o' => '28', 'p' => '29', 'q' => '31', 'r' => '12', 's' => '32', 't' => '33', 'u' => '11', 'v' => '34', 'w' => '35', 'x' => '36', 'y' => '37', 'z' => '38', '-' => '39', ':' => '17', '_' => '43', '/' => '45', '.' => '47', '+' => '49');
 

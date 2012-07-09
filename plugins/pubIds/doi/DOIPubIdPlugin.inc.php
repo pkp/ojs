@@ -141,7 +141,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 					// require an object-specific pre-fix to be sure that
 					// the suffix is unique.
 					if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
-						$doiSuffix = strtolower($pubObjectType{0}) . $doiSuffix;
+						$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
 					}
 				}
 				break;

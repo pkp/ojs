@@ -265,7 +265,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 						// check type and extension -- should be text/xml and xsl, respectively
 						$type = $fileManager->getUploadedFileType('customXSL');
 						$fileName = $fileManager->getUploadedFileName('customXSL');
-						$extension = strtolower($fileManager->getExtension($fileName));
+						$extension = strtolower_codesafe($fileManager->getExtension($fileName));
 
 						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml' || $type == 'application/xslt+xml')
 							&& $extension == 'xsl') {

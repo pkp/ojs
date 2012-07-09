@@ -119,7 +119,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 		// The meta-data pages have uniform structure.
 		foreach ($this->objectTypes as $objectType) {
-			$objectType = strtolower($objectType);
+			$objectType = strtolower_codesafe($objectType);
 			$this->pages["metadata-$objectType"] += array(
 				'doi' => '//div[@id="pub-id::doi"]',
 				'doiInput' => '//div[@id="pub-id::doi"]//input',
@@ -476,7 +476,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				// and enter the (duplicate) URL suffix "doitest" and
 				// try to save the form.
 				$targetObjectType = $examples[$objectType];
-				$this->setUrlSuffix(strtolower($targetObjectType), 'doitest');
+				$this->setUrlSuffix(strtolower_codesafe($targetObjectType), 'doitest');
 
 				// Check that the form is being redisplayed with an error.
 				$expectedErrorMessage = "The public identifier 'doitest' already exists";
@@ -491,7 +491,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				} else {
 					// All other target objects are edited in forms and should
 					// produce a form error.
-					$metadataPage = 'metadata-' . strtolower($targetObjectType);
+					$metadataPage = 'metadata-' . strtolower_codesafe($targetObjectType);
 					$this->assertText(
 						str_replace(
 							'%id', "public${targetObjectType}Id",
@@ -501,8 +501,8 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 					);
 				}
 			} catch(Exception $e) {
-				$objectType = strtolower($objectType);
-				$targetObjectType = strtolower($targetObjectType);
+				$objectType = strtolower_codesafe($objectType);
+				$targetObjectType = strtolower_codesafe($targetObjectType);
 				throw $this->improveException($e, "example $objectType / $targetObjectType");
 			}
 		}
@@ -559,7 +559,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 		$existingSuffix = null;
 		foreach ($this->objectTypes as $objectType) {
-			$objectType = strtolower($objectType);
+			$objectType = strtolower_codesafe($objectType);
 
 			// An input field should be present on all meta-data pages
 			// as long as no DOI has been generated.
@@ -888,7 +888,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 */
 	private function checkMetadataPage($objectType, $editable = false, $expectedDoi = null) {
 		try {
-			$objectType = strtolower($objectType);
+			$objectType = strtolower_codesafe($objectType);
 			$metadataPage = "metadata-$objectType";
 			$url = $this->getUrl($metadataPage, 1);
 			$this->verifyLocation('exact:'.$url);

@@ -36,7 +36,7 @@ class PubIdPlugin extends Plugin {
 		if ($success) {
 			// Enable storage of additional fields.
 			foreach($this->_getDAOs() as $daoName) {
-				HookRegistry::register(strtolower($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
+				HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 			}
 		}
 		return $success;

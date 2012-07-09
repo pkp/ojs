@@ -200,7 +200,7 @@ class DOAJExportDom {
 	 * @return string
 	 */
 	function file_ext($filename) {
-		return strtolower(str_replace(".", "", strrchr($filename, ".")));
+		return strtolower_codesafe(str_replace('.', '', strrchr($filename, '.')));
 	}
 
 	/**

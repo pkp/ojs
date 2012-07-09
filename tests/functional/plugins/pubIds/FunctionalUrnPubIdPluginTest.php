@@ -134,7 +134,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 
 		// The meta-data pages have uniform structure.
 		foreach ($this->objectTypes as $objectType) {
-			$objectType = strtolower($objectType);
+			$objectType = strtolower_codesafe($objectType);
 			$this->pages["metadata-$objectType"] += array(
 				'urn' => '//div[@id="pub-id::other::urn"]',
 				'urnInput' => '//div[@id="pub-id::other::urn"]//input[@name="urnSuffix"]',
@@ -495,7 +495,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 
 		$existingSuffix = null;
 		foreach ($this->objectTypes as $objectType) {
-			$objectType = strtolower($objectType);
+			$objectType = strtolower_codesafe($objectType);
 
 			// An input field should be present on all meta-data pages
 			// as long as no URN hasn't been stored.
@@ -757,7 +757,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 */
 	private function checkMetadataPage($objectType, $editable = false, $expectedURN = null) {
 			try {
-				$objectType = strtolower($objectType);
+				$objectType = strtolower_codesafe($objectType);
 				$metadataPage = "metadata-$objectType";
 				$this->verifyLocation('exact:'.$this->getUrl($this->pages[$metadataPage], 1));
 				if (!$this->verified()) {

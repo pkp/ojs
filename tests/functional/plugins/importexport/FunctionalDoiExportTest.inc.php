@@ -850,7 +850,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 			$dao = DAORegistry::getDAO($daoName);
 			if (is_scalar($testIds)) $testIds = array($testIds);
 
-			$hookName = strtolower($daoName) . '::getAdditionalFieldNames';
+			$hookName = strtolower_codesafe($daoName) . '::getAdditionalFieldNames';
 			HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
 			foreach($testIds as $testId) {
 				// Retrieve the test object.

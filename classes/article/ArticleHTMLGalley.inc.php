@@ -108,7 +108,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 			$url = substr($url, 0, $i);
 		}
 		$urlParts = explode('/', $url);
-		if (isset($urlParts[0])) switch(String::strtolower($urlParts[0])) {
+		if (isset($urlParts[0])) switch(strtolower_codesafe($urlParts[0])) {
 			case 'journal':
 				$url = Request::url(
 					isset($urlParts[1]) ?

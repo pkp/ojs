@@ -70,7 +70,7 @@ class UserXMLParser {
 						switch ($attrib->getName()) {
 							case 'username':
 								// Usernames must be lowercase
-								$newUser->setUsername(strtolower($attrib->getValue()));
+								$newUser->setUsername(strtolower_codesafe($attrib->getValue()));
 								break;
 							case 'password':
 								$newUser->setMustChangePassword($attrib->getAttribute('change') == 'true'?1:0);

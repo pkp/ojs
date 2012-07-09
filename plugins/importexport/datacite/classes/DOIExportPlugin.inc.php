@@ -139,7 +139,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
 
-		$op = strtolower(array_shift($args));
+		$op = strtolower_codesafe(array_shift($args));
 
 		// Check whether we deal with a single object or
 		// multiple objects.
@@ -175,7 +175,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		if ($action != 'reset') $targets[] = 'all';
 		$targets[] = 'index';
 		foreach($targets as $target) {
-			if (strpos($op, strtolower($target)) !== false) break;
+			if (strpos($op, strtolower_codesafe($target)) !== false) break;
 		}
 		if ($target == 'index') $action = 'display';
 
@@ -309,7 +309,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 
 		// Command.
-		$command = strtolower(array_shift($args));
+		$command = strtolower_codesafe(array_shift($args));
 		if (!in_array($command, array('export', 'register'))) {
 			$result = false;
 		}
@@ -340,7 +340,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Object type.
 		if (is_array($result) && empty($result)) {
-			$objectType = strtolower(array_shift($args));
+			$objectType = strtolower_codesafe(array_shift($args));
 
 			// Accept both singular and plural forms.
 			if (substr($objectType, -1) == 's') $objectType = substr($objectType, 0, -1);
@@ -813,7 +813,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $daoName string
 	 */
 	function registerDaoHook($daoName) {
-		HookRegistry::register(strtolower($daoName) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
+		HookRegistry::register(strtolower_codesafe($daoName) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
 	}
 
 	/**
