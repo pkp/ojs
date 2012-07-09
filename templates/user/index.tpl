@@ -128,10 +128,14 @@
 			<tr>
 				<td>&#187; <a href="{url journal=$journalPath page="author"}">{translate key="user.role.author"}</a></td>
 				<td></td>
-				<td></td>
 				<td>{if $authorSubmissionsCount[0]}
 						<a href="{url journal=$journalPath page="author"}">{$authorSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
+				</td>
+				{* This is for all non-pending items*}
+				<td>{if $authorSubmissionsCount[1]}
+						<a href="{url journal=$journalPath path="completed" page="author"}">{$authorSubmissionsCount[1]} {translate key="common.queue.short.completed"}</a>
+					{else}<span class="disabled">0 {translate key="common.queue.short.completed"}</span>{/if}
 				</td>
 				<td align="right">[<a href="{url journal=$journalPath page="author" op="submit"}">{translate key="author.submit"}</a>]</td>
 			</tr>
