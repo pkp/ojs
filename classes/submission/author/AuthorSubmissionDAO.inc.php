@@ -251,23 +251,23 @@ class AuthorSubmissionDAO extends DAO {
 	}
 
 	/**
-	 * Get count of active and complete assignments
+	 * Get count of active, rejected, and complete assignments
 	 * @param authorId int
 	 * @param journalId int
 	 */
 	function getSubmissionsCount($authorId, $journalId) {
 		$submissionsCount = array();
-		$submissionsCount[0] = 0;
-		$submissionsCount[1] = 0;
+		$submissionsCount[0] = 0; //pending items
+		$submissionsCount[1] = 0; //all non-pending items
 
 		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
 
 		$result =& $this->retrieve($sql, array($journalId, $authorId));
-
+        //07092012 LS adding in logic to get archived/rejected items
 		while (!$result->EOF) {
 			if ($result->fields['status'] != 1) {
 				$submissionsCount[1] += $result->fields[0];
-			} else {
+			}else {
 				$submissionsCount[0] += $result->fields[0];
 			}
 			$result->moveNext();
@@ -277,7 +277,7 @@ class AuthorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $submissionsCount;
-	}
+	}	
 	
 	/**
 	 * Map a column heading value to a database value for sorting

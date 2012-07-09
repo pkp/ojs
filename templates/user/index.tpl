@@ -148,15 +148,20 @@
 		{if $isValid.Author.$journalId || $isValid.Reviewer.$journalId}
 			<tr><td class="separator" width="100%" colspan="5">&nbsp;</td></tr>
 		{/if}
+		{*  07092012 LS adding logic to provide access to archived items if they exist*}
 		{if $isValid.Author.$journalId}
 			{assign var="authorSubmissionsCount" value=$submissionsCount.Author.$journalId}
 			<tr>
 				<td>&#187; <a href="{url journal=$journalPath page="author"}">{translate key="user.rolefunction.author"}</a></td>
 				<td></td>
-				<td></td>
 				<td>{if $authorSubmissionsCount[0]}
 						<a href="{url journal=$journalPath page="author"}">{$authorSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
+				</td>
+				{* This is for all non-pending items*}
+				<td>{if $authorSubmissionsCount[1]}
+						<a href="{url journal=$journalPath path="completed" page="author"}">{$authorSubmissionsCount[1]} {translate key="common.queue.short.completed"}</a>
+					{else}<span class="disabled">0 {translate key="common.queue.short.completed"}</span>{/if}
 				</td>
 				<td align="right">[<a href="{url journal=$journalPath page="author" op="submit"}">{translate key="author.submit"}</a>]</td>
 			</tr>
