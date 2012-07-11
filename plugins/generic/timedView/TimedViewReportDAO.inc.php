@@ -122,7 +122,7 @@ class TimedViewReportDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function clearLogs($dateClear, $journalId) {
-		return $this->update('DELETE FROM timed_views_log WHERE date < ? AND journal_id = ?', array($dateClear, (int) $journalId));
+		return $this->update(sprintf('DELETE FROM timed_views_log WHERE date < %s AND journal_id = ?', $this->datetimeToDB($dateClear)), (int) $journalId);
 	}
 }
 
