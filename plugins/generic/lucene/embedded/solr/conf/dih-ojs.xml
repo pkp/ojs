@@ -333,7 +333,8 @@
                 processor="TikaEntityProcessor"
                 url="${galley.etl_file_name}"
                 transformer="script:transformFullText"
-                format="text" >
+                format="text"
+                onError="continue" >
           <field column="text" />
         </entity>
       </entity>
@@ -358,7 +359,8 @@
                 processor="TikaEntityProcessor"
                 url="${suppFile.etl_file_name}"
                 transformer="script:transformFullText"
-                format="text" >
+                format="text"
+                onError="continue" >
           <field column="text" />
         </entity>
       </entity>
