@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integrer OJS med phpMyVisites, en gratis og open source web site trafik-analyse applikation. Kræver at phpMyVisites er installeret. Se <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for mere information.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrerer OJS med phpMyVisites, en gratis og open source web site trafik-analyse applikation. Kræver at phpMyVisites er installeret. Se <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for mere information.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Indstillinger</message>

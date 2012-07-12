@@ -124,4 +124,5 @@ De følgende formater accepteres:
 	<message key="plugins.importexport.native.import.success">Import lykkedes</message>
 	<message key="plugins.importexport.native.import.success.description">Importen lykkedes. De importerede elementer er listet fornneden.</message>
 
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Der blev angivet et forfattertilhørsforhold for forfatteren "{$authorFullName}" til artiklen "{$articleTitle}" i nummeret "{$issueTitle}" i en landestandard ("{$locale}"), som denne journal ikke understøtter.</message>
 </locale>

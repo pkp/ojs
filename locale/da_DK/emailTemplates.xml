@@ -629,4 +629,201 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 {$subscriptionContactSignature}</body>
 		<description>Denne e-mail underretter en abonnent om, at vedkommendes abonnement er udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner.</description>
 	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>Ny meddelelse fra {$siteTitle}</subject>
+		<body>Du har modtaget en ny meddelelse fra {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+		<description>Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Ny meddelelse fra {$siteTitle}</subject>
+		<body>Du har modtaget en ny meddelelse fra {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.
+
+{$principalContactSignature}</body>
+		<description>Denne e-mail er blevet sendt til uregistrerede brugere på meddelelses-mailinglisten.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Velkommen til {$siteTitle}-mailinglisten!</subject>
+		<body>Du har bedt om at modtage meddelelser fra {$siteTitle}.
+			
+Klik på dette link for at bekræfte din anmodning og tilføje din e-mail-adresse til mailinglisten: {$confirmLink}
+
+Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.
+
+Din adgangskode til deaktivering af e-mail-meddelelser er: {$password}
+
+{$principalContactSignature}</body>
+		<description>Denne e-mail er blevet sendt til en uregistreret bruger, som har tilmeldt sig meddelelses-mailinglisten.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Dine oplysninger vedrørende meddelelses-mailinglisten for {$siteTitle}</subject>
+		<body>Din nye adgangskode til deaktivering af e-mail-meddelelser er: {$password}
+
+Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink}} og indtaste din e-mail-adresse og adgangskode.
+
+{$principalContactSignature}</body>
+		<description>Denne e-mail bliver sendt til uregistrerede brugere på meddelelses-mailinglisten, når de angiver, at de har glemt deres adgangskode eller ikke kan logge ind. Den indeholder et link, som de kan følge for at nulstille deres adgangskode.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Redaktørbeslutning</subject>
+		<body>{$authorName}:
+
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+
+Vi har besluttet at:
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Redaktørbeslutning</subject>
+		<body>{$authorName}:
+
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+
+Vi har besluttet at:
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Redaktørbeslutning</subject>
+		<body>{$authorName}:
+
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+
+Vi har besluttet at:
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Redaktørbeslutning</subject>
+		<body>{$authorName}:
+
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+
+Vi har besluttet at:
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Køb af abonnement: Individuelt</subject>
+		<body>Der er foretaget et online køb af et individuelt abonnement på {$journalName} med følgende oplysninger.
+
+Abonnementstype:
+{$subscriptionType}
+
+Bruger:
+{$userDetails}
+
+Medlemsoplysninger (hvis angivet):
+{$membership}
+
+Følg dette link, hvis du vil se eller redigere abonnementet.
+
+Link til abonnement: {$subscriptionUrl}</body>
+		<description>Denne e-mail giver abonnementschefen besked om, at der er blevet købt et individuelt abonnement online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det købte abonnement.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Køb af abonnement: Institution</subject>
+		<body>Der er foretaget et online køb af et institutionsabonnement på {$journalName} med følgende oplysninger. For at aktivere dette abonnement skal du anvende det angivne link til abonnementet og sætte abonnementsstatus til "Aktiv".
+
+Abonnementstype:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domæne (hvis angivet):
+{$domain}
+
+IP-områder (hvis angivet):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Medlemsoplysninger (hvis angivet):
+{$membership}
+
+Følg dette link, hvis du vil se eller redigere abonnementet.
+
+Link til abonnement: {$subscriptionUrl}</body>
+		<description></description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Fornyelse af abonnement: Individuelt</subject>
+		<body>Der er foretaget en online fornyelse af et individuelt abonnement på {$journalName}med følgende oplysninger.
+
+Abonnementstype:
+{$subscriptionType}
+
+Bruger:
+{$userDetails}
+
+Medlemsoplysninger (hvis angivet):
+{$membership}
+
+Følg dette link, hvis du vil se eller redigere abonnementet.
+
+Link til abonnement: {$subscriptionUrl}</body>
+		<description>Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Fornyelse af abonnement: Institution</subject>
+		<body>Der er foretaget en online fornyelse af et institutionsabonnement på {$journalName} med følgende oplysninger.
+
+Abonnementstype:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domæne (hvis angivet):
+{$domain}
+
+IP-områder (hvis angivet):
+{$ipRanges}
+
+Kontaktperson:
+{$userDetails}
+
+Medlemsoplysninger (hvis angivet):
+{$membership}
+
+Følg dette link, hvis du vil se eller redigere abonnementet.
+
+Link til abonnement: {$subscriptionUrl}</body>
+		<description>Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Referenceredigering</subject>
+		<body>{$authorFirstName},
+
+Du bedes verificere eller sende os de korrekte oplysninger i forbindelse med følgende reference i din artikel {$articleTitle}:
+
+{$rawCitation}
+
+På forhånd tak!
+
+{$userFirstName}
+Manuskriptredaktør, {$journalName}</body>
+		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
+	</email_text>
 </email_texts>

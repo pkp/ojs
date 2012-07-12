@@ -23,13 +23,13 @@
 	<message key="admin.languages.installNewLocalesInstructions">Vælg yderligere landestandarder, du vil installere understøttelse af i dette system. Landestandarder skal installeres, inden de kan benyttes af tilknyttede tidsskrifter. Se dokumentationen til OJS for at få oplysninger om understøttelse af nye sprog.</message>
 	<message key="admin.languages.downloadLocales">Hent landestandarder</message>
 	<message key="admin.languages.downloadFailed">Overførslen af landestandarden mislykkedes. Fejlen er beskrevet i nedenstående fejlmeddelelse(r).</message>
-	<message key="admin.languages.localeInstalled">Landestandarden &quot;{$locale}&quot; er blevet installeret. </message>
+	<message key="admin.languages.localeInstalled">Landestandarden "{$locale}" er blevet installeret.</message>
 	<message key="admin.languages.download">Hent landestandard</message>
 	<message key="admin.languages.download.cannotOpen">Det er ikke muligt at åbne sprogbeskrivelsen fra PKP-webstedet.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Det er ikke muligt at føje den nye landestandard til landestandardens registreringsdatabasefil, normalt &quot;registry/locales.xml&quot;.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Det er ikke muligt at føje den nye landestandard til landestandardens registreringsdatabasefil, normalt "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS-brugerdatabase</message>
 	<message key="admin.auth.enableSyncProfiles">Aktiver synkronisering af brugerprofil (hvis dette understøttes af denne godkendelses-plug-in). Oplysningerne om brugerprofil opdateres automatisk fra fjernkilden, når en bruger logger på, og de profilændringer (herunder ændringer af adgangskode), der er foretaget i OJS, opdateres automatisk på fjernkilden. Hvis denne indstilling ikke aktiveres, holdes oplysninger om OJS-profiler adskilt fra oplysninger om fjernkildeprofiler.</message>
-	<message key="admin.auth.enableSyncPasswords">Aktiver ændring af brugeradgangskode (hvis dette understøttes af denne godkendelses-plug-in). Hvis denne indstilling aktiveres, kan brugere ændre deres adgangskode i OJS og bruge OJS-funktionen &quot;mistet adgangskode&quot; til at nulstille en glemt adgangskode. Disse funktioner vil ikke være tilgængelige for brugere med denne godkendelseskilde, hvis denne indstilling ikke aktiveres.</message>
+	<message key="admin.auth.enableSyncPasswords">Aktiver ændring af brugeradgangskode (hvis dette understøttes af denne godkendelses-plug-in). Hvis denne indstilling aktiveres, kan brugere ændre deres adgangskode i OJS og bruge OJS-funktionen "mistet adgangskode" til at nulstille en glemt adgangskode. Disse funktioner vil ikke være tilgængelige for brugere med denne godkendelseskilde, hvis denne indstilling ikke aktiveres.</message>
 	<message key="admin.auth.enableCreateUsers">Aktiver oprettelse af bruger (hvis dette understøttes af denne godkendelses-plug-in). De bruger, der oprettes i OJS med denne godkendelseskilde, føjes automatisk til fjerngodkendelseskilden, hvis de ikke allerede findes. Hvis denne kilde er standardgodkendelseskilden, føjes de OJS-konti, der er oprettet via brugerregistrering, også til fjerngodkendelseskilden.</message>
 	<message key="admin.systemVersion">OJS-version</message>
 	<message key="admin.systemConfiguration">OJS-konfiguration</message>
@@ -46,18 +46,7 @@
 	<message key="admin.journals.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Offentliggør dette tidsskrift på webstedet</message>
 	<message key="admin.journals.journalDescription">Tidsskriftsbeskrivelse</message>
-	<message key="admin.journals.importOJS1">Importer fra OJS 1</message>
-	<message key="admin.journals.importOJS1.success">Import af tidsskrift gennemført.</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Rediger overflyttet tidsskrift</message>
-	<message key="admin.journals.importOJS1.redirect.desc">For at redirecte OJS 1 URL's til OJS 2 URL's skal følgende PHP filer oprettes ved at bruge fil-indholdet forneden. De korresponderende filer kan så placeres i OJS 1 filsystem-stien, eller, for installationer med enkeltstående tidsskrifter, i OJS 2 filsystem-stien.</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1root">Placer i den gamle OJS 1 filsystem-sti (f.eks. /var/www/ojs1).</message>
-	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Placer i den gamle OJS 1 filsystem-sti (f.eks. /var/www/ojs1), eller for installationer med enkeltstående tidsskrifter i den nye OJS 2 filsystem-sti (f.eks. /var/www/ojs2).</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Nogle brugerkonti indeholdt modstridende oplysninger. OJS 1.x tillader, at flere brugerkonti deler den samme e-mail-adresse, men det gør OJS 2.x ikke. På listen nedenfor har den konto, der er angivet som nummer to, fået tildelt en midlertidig e-mail-konto. Disse skal rettes manuelt enten ved at tildele en anden e-mail-konto eller ved at flette konti.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) og {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">Se dokumentet UPGRADE, der følger med OJS, for at få detaljerede oplysninger om overflytning af data fra OJS 1 til OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. &quot;ojs&quot;).</message>
-	<message key="admin.journal.importPath">Sti til OJS 1</message>
-	<message key="admin.journal.importPathInstructions">Fuld lokal filsystemsti til OJS 1-installationen (f.eks. &quot;/var/www/ojs&quot;).</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnementer</message>
 	<message key="admin.journals.transcode">Omsæt kode for artikelmetadata fra ISO8859-1</message>
 	<message key="admin.journals.redirect">Gererer kode for at mappe OJS 1 URL's til OJS 2 URL's</message>
@@ -70,4 +59,5 @@
 	<message key="admin.mergeUsers.allUsers">Alle tilmeldte brugere</message>
 	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet &quot;{$oldUsername}&quot; til kontoen med brugernavnet &quot;{$newUsername}&quot;? Kontoen med brugernavnet &quot;{$oldUsername}&quot; vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
+	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
 </locale>

@@ -67,4 +67,8 @@
 	<message key="plugins.generic.translator.deleteKey">Slet denne nøgle</message>
 	<message key="plugins.generic.translator.deleteEmail">Slet denne e-mail</message>
 	<message key="plugins.generic.translator.saveBeforeContinuing">Husk at gem ændringer, som du har foretaget på denne side før du fortsætter - ellers går de tabt. Ønsker du at fortsætte? Hvs ja, går alle ændringer, som ikke er gemt, tabt.</message>
+	<message key="plugins.generic.translator.tarMissing">Dette plugins eksportfunktion er blevet deaktiveret, fordi den konfigurerede tar-binærkode ikke kan findes i dette system. Sørg for, at tar-programmet er installeret på din computer, og konfigurer derefter stien til tar-binærkoden i config.inc.php's [cli]-sektionen!</message>
+	<message key="plugins.generic.translator.localeKey.description">Indtast en fuldstændig landestandardnøgle, der skal søges efter.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Denne landestandardfil er ikke skrivbar på serveren. Dine ændringer vil ikke blive gemt.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Disse landestandardfiler er ikke skrivbare på serveren. Dine ændringer vil ikke blive gemt.</message>
 </locale>
