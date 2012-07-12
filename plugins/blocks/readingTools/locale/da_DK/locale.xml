@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.block.readingTools.displayName">Læseværktøjsgruppe</message>
 	<message key="plugins.block.readingTools.description">Dette plugin fremviser en ramme indeholdende læseværktøjer fra sidemenuen ’læseværktøjer’</message>
 	<message key="plugins.block.readingTools.title">Læseværktøjer</message>
