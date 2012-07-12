@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
@@ -12,7 +12,7 @@
   * $Id: locale.xml,v 1.1 2008/06/12 00:29:31 asmecher Exp $
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.reports.views.displayName">Se rapport</message>
 	<message key="plugins.reports.views.description">Dette plugin genererer en CSV-rapport om antal læsere for hver enkelt artikel.</message>
 </locale>

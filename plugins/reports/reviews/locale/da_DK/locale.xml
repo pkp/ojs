@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.reports.reviews.displayName">Bedømmerrapport</message>
 	<message key="plugins.reports.reviews.description">Dette plugin genererer en CSV-rapport indeholdende en oversigt over tidsskriftets bedømmelsesoverdragelser.</message>
 	<message key="plugins.reports.reviews.round">Gang</message>

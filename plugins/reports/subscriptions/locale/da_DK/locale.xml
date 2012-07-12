@@ -11,7 +11,7 @@
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.reports.subscriptions.displayName">Abonnementsrapport</message>
 	<message key="plugins.reports.subscriptions.description">Dette plugin genererer en CSV-rapport med en liste over abonnementer med tilhørende informationer.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Institutionens postadresse</message>

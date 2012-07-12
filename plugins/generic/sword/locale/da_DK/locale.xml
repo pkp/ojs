@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2010 John Willinsky
+  * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
@@ -12,7 +12,7 @@
   * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.generic.sword.displayName">SWORD plugin</message>
 	<message key="plugins.generic.sword.description">Gør det muligt for tidsskriftschefen og (eventuelt) forfatterne at deponere artikler via SWARD protokollen</message>
 	<message key="plugins.generic.sword.enabled">SWARD plugin’et er blevet aktiveret.</message>
