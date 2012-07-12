@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.relatedItems.displayName">Related Items Block</message>
+	<message key="plugins.block.relatedItems.description">Dette plugin fremviser relaterede artikler  i sidemenuen under læseværktøjer.</message>
+	<message key="plugins.block.relatedItems.title">Relaterede artikler</message>
+	<message key="plugins.block.relatedItems.hide">Skjul</message>
+	<message key="plugins.block.relatedItems.show">Vis alle</message>
+</locale>

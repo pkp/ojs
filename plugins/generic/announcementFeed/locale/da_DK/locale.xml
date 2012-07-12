@@ -13,16 +13,16 @@
   -->
  
 <locale name="da_DK" full_name="Dutch">
-	<message key="plugins.generic.announcementfeed.displayName">Annonceringsfeed plugin</message>
-	<message key="plugins.generic.announcementfeed.description">Dette plugin genererer RSS/Atom web syndication feeds til annonceringer i tidsskriftet.</message>
+	<message key="plugins.generic.announcementfeed.displayName">Meddelelsesfeed plugin</message>
+	<message key="plugins.generic.announcementfeed.description">Dette plugin genererer RSS/Atom web syndication feeds til meddelelser i tidsskriftet.</message>
 
 	<message key="plugins.generic.announcementfeed.settings">Indstillinger</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Vis feed links på alle sider i tidsskriftet.</message>
-	<message key="plugins.generic.announcementfeed.settings.homepage">Vis kun feed links på hjemmeside og annonceringssiden.</message>
-	<message key="plugins.generic.announcementfeed.settings.announcement">Vis kun feed links på annonceringssiden.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Vis kun feed links på hjemmeside og meddelelsessiden.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Vis kun feed links på meddelelsessiden.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Begræns feed til</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">seneste annonceringer.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Indtast et positivt naturligt antal for seneste annonceringer.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">seneste meddelelser.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Indtast et positivt naturligt antal for seneste meddelelser.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>

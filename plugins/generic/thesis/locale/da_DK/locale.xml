@@ -16,12 +16,12 @@
 
 	<!-- Thesis Abstract Management -->
 	<message key="plugins.generic.thesis.manager.settings">Indstillinger</message>
-	<message key="plugins.generic.thesis.manager.theses">Abstracts for afhandlinger</message>
+	<message key="plugins.generic.thesis.manager.theses">Afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.manager.status">Status</message>
 	<message key="plugins.generic.thesis.manager.status.inactive">Inaktiv</message>
 	<message key="plugins.generic.thesis.manager.status.active">Aktiv</message>
 	<message key="plugins.generic.thesis.manager.degree">Grad</message>
-	<message key="plugins.generic.thesis.manager.degree.masters">Master's</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">Kandidat</message>
 	<message key="plugins.generic.thesis.manager.degree.doctorate">Doktor</message>
 	<message key="plugins.generic.thesis.manager.dateApproved">Godkendelsesdato</message>
 	<message key="plugins.generic.thesis.manager.studentName">Studenternavn</message>
@@ -33,15 +33,15 @@
 	<message key="plugins.generic.thesis.manager.department">Afdeling</message>
 	<message key="plugins.generic.thesis.manager.university">Universitet</message>
 	<message key="plugins.generic.thesis.manager.abstract">Abstract</message>
-	<message key="plugins.generic.thesis.manager.confirmDelete">Er du sikker på, at du vil slette dette abstract permanent?</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">Er du sikker på, at du vil slette dette resumé permanent?</message>
 	<message key="plugins.generic.thesis.manager.noneCreated">Intet afhandlingsabstract</message>
 	<message key="plugins.generic.thesis.manager.noResults">Ingen resultater</message>
-	<message key="plugins.generic.thesis.manager.create">Opret ny afhandlingsabstract</message>
+	<message key="plugins.generic.thesis.manager.create">Opret ny afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.manager.createTitle">Opret</message>
-	<message key="plugins.generic.thesis.manager.edit">Rediger afhandlingsabstract</message>
+	<message key="plugins.generic.thesis.manager.edit">Rediger afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.manager.editTitle">Rediger</message>
 	<message key="plugins.generic.thesis.manager.form.status">Status</message>
-	<message key="plugins.generic.thesis.manager.form.statusRequired">Der kræves et afhandlingsabstract</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">Der kræves et afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.manager.form.statusValid">Vælg en gyldig status</message>
 	<message key="plugins.generic.thesis.manager.form.degree">Grad</message>
 	<message key="plugins.generic.thesis.manager.form.degreeRequired">En afhandlingsgrad kræves</message>
@@ -60,7 +60,7 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">En titel for afhandlingen er påkrævet.</message>
 	<message key="plugins.generic.thesis.manager.form.comment">Kommentarer</message>
 	<message key="plugins.generic.thesis.manager.form.author">Forfatter og supervision</message>
-	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publicer studentens e-mail</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publicér studentens e-mail</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Hvis valgt, vil studentens e-mail blive publiceret sammen med abstract for afhandlingen.</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">Studentens biografiske oplysninger</message>
 	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Indsæt en blank linie for at adskille afsnittene. Placer teksten mellem &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, og &lt;u&gt;&lt;/u&gt; tags for fed, kursiv og understregning respektive (dvs. dette &lt;i&gt;ord&lt;/i&gt; vil blive kursiveret.)]]></message>
@@ -98,7 +98,7 @@
 	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Gem og opret en ny</message>
 
 	<!-- Thesis Abstract Settings Management -->
-	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Med dette plugin aktiveret, kan studerende indsende deres afhandlingsabstract til tidsskriftet online.</p><p>Ved indsendelse adviseres afhandlingens supervisor automatisk via e-mail om indsendelsen og spørges om at bekræfte rigtigheden i den indsendte information ved at sende en e-mail til den ansvarlige for afhandlingsabstracts, som er angivet forneden. Denne skal være tidsskriftsansvarlig. Når en sådan bekræftelse er modtaget, kan den ansvarlige for afhandlingsabstracts aktivere indsendelsen ved at redigerer dens korresponderende data og ændre status fra 'inaktiv' til 'aktiv'. Det pågældende afhandlingsabstract vil så blive tilgængeligt for tidsskriftets læsere.</p>]]></message>
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Med dette plugin aktiveret, kan studerende indsende deres afhandlingsabstract til tidsskriftet online.</p><p>Ved indsendelse adviseres afhandlingens supervisor automatisk via e-mail om indsendelsen og anmodes om at bekræfte rigtigheden i den indsendte information ved at sende en e-mail til den ansvarlige for afhandlingsresuméerne, som er angivet forneden. Denne skal være tidsskriftsansvarlig. Når en sådan bekræftelse er modtaget, kan den ansvarlige for afhandlingsresuméerne aktivere indsendelsen ved at redigerer dens korresponderende data og ændre status fra 'inaktiv' til 'aktiv'. Det pågældende afhandlingsresumé vil så blive tilgængeligt for tidsskriftets læsere.</p>]]></message>
 	<message key="plugins.generic.thesis.settings.thesisContact">Ansvarlig for afhandlingsabstracts</message>
 	<message key="plugins.generic.thesis.settings.submissions">Indsendelser</message>
 	<message key="plugins.generic.thesis.settings.uploadCode">Brug den følgende upload kode for upload fra afdelinger:</message>
@@ -115,23 +115,23 @@
 	<message key="plugins.generic.thesis.settings.order.titleAsc">Titel (stigende)</message>
 	<message key="plugins.generic.thesis.settings.order.titleDesc">Titel (faldende)</message>
 	<message key="plugins.generic.thesis.settings.thesisIntroduction">Indledende bemærkning</message>
-	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">En indledende bemærkning, som vises øverst på siden med afhandlingsabstractet.</message>
-	<message key="plugins.generic.thesis.settings.thesisNameRequired">En kontaktperson for afhandlingsabstracts skal angives.</message>
-	<message key="plugins.generic.thesis.settings.thesisEmailRequired">En kontaktperson for afhandlingsabstracts skal angives.</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">En indledende bemærkning, som vises øverst på siden med afhandlingsresuméet.</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">En kontaktperson for afhandlingsresuméet skal angives.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">En kontaktperson for afhandlingsresuméet skal angives.</message>
 	<message key="plugins.generic.thesis.settings.thesisOrderValid">Angiv en gyldig publiceringsrækkefølge.</message>
 
 	<!-- Thesis Abstracts -->
-	<message key="plugins.generic.thesis.displayName">Afhandlingsabstracts</message>
-	<message key="plugins.generic.thesis.description">Godkend og publicer afhandlingsabstracts.</message>
-	<message key="plugins.generic.thesis.searchLink">Søg i afhandlingsabstracts</message>
-	<message key="plugins.generic.thesis.theses">Afhandlingsabstracts</message>
-	<message key="plugins.generic.thesis.headerLink">Afhandlings Abstracts</message>
+	<message key="plugins.generic.thesis.displayName">Afhandlingsresuméer</message>
+	<message key="plugins.generic.thesis.description">Godkend og publicer afhandlingsresuméer.</message>
+	<message key="plugins.generic.thesis.searchLink">Søg i afhandlingsresuméer</message>
+	<message key="plugins.generic.thesis.theses">Afhandlingsresuméer</message>
+	<message key="plugins.generic.thesis.headerLink">Afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.submit">Indsend afhandlingsabstracts</message>
-	<message key="plugins.generic.thesis.submitLink">Indsend afhandlingsabstracts</message>
+	<message key="plugins.generic.thesis.submitLink">Indsend afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.submitButton">Indsend</message>
-	<message key="plugins.generic.thesis.view">Abstract</message>
-	<message key="plugins.generic.thesis.viewTitle">Abstract</message>
-	<message key="plugins.generic.thesis.noneExist">Ingen afhandlingsabstracts</message>
+	<message key="plugins.generic.thesis.view">Resumé</message>
+	<message key="plugins.generic.thesis.viewTitle">Resumé</message>
+	<message key="plugins.generic.thesis.noneExist">Ingen afhandlingsresumé</message>
 	<message key="plugins.generic.thesis.noResults">Ingen resultater</message>
 	<message key="plugins.generic.thesis.title">Titel</message>
 	<message key="plugins.generic.thesis.keyword">Nøgleord</message>
@@ -139,8 +139,8 @@
 	<message key="plugins.generic.thesis.studentLastName">Efternavn</message>
 	<message key="plugins.generic.thesis.department">Afdeling</message>
 	<message key="plugins.generic.thesis.university">Universitet</message>
-	<message key="plugins.generic.thesis.abstract">Abstract</message>
-	<message key="plugins.generic.thesis.fullText">Fultekst (eksternt site)</message>
+	<message key="plugins.generic.thesis.abstract">Resumé</message>
+	<message key="plugins.generic.thesis.fullText">Fuldtekst (eksternt site)</message>
 	<message key="plugins.generic.thesis.studentFullNameLast">{$efterNavn}, {$forNavn}{$mellemrum}{$mellemNavn}</message>
 	<message key="plugins.generic.thesis.studentFullName">{$forNavn} {$mellemNavn}{$mellemrum}{$efterNavn}</message>
 	<message key="plugins.generic.thesis.supervisorFullNameLast">{$efterNavn}, {$forNavn}{$mellemrum}{$mellemNavn}</message>
@@ -181,7 +181,7 @@
 	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Yderligere sprogkoder</a>.]]></message>
 	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Angiv den fuldstændig URL, inklusive http:// eller ftp:// i begyndelsen.</message>
 	<message key="plugins.generic.thesis.form.abstract">Abstract</message>
-	<message key="plugins.generic.thesis.form.abstractRequired">Et afhandlingsabstract er påkrævet.</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">Et afhandlingsresumé er påkrævet.</message>
 	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Indsæt en blank linie for at adsklle afsnit. Placer teksten mellem &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, og &lt;u&gt;&lt;/u&gt; tags til fed, kursiv og understreget respektive (dvs. dette &lt;i&gt;ord&lt;/i&gt; vil blive kursiveret).]]></message>
 	<message key="plugins.generic.thesis.form.url">URL</message>
 	<message key="plugins.generic.thesis.form.urlInstructions">Hvis denne afhandling er publiceret online. Inkluder http:// eller ftp:// i begyndelsen (dvs. http://www.sfu.ca/path/to/thesis.pdf).</message>
@@ -195,7 +195,7 @@
 	<message key="plugins.generic.thesis.form.studentEmail">Studentens e-mail</message>
 	<message key="plugins.generic.thesis.form.studentEmailValid">Angiv en gyldig e-mail for studenten</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublish">Publicer studentens e-mail</message>
-	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Hvis angivet vil studentens e-mail blive publiceret sammen med afhandlingsabstractet.</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Hvis angivet vil studentens e-mail blive publiceret sammen med afhandlingsresuméet.</message>
 	<message key="plugins.generic.thesis.form.supervisorFirstName">Supervisors fornavn</message>
 	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Supervisors fornavn er påkrævet.</message>
 	<message key="plugins.generic.thesis.form.supervisorLastName">Supervisors efternavn</message>

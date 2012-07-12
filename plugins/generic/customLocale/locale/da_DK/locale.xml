@@ -31,4 +31,5 @@
 	<message key="plugins.generic.customLocale.file.edit">Redigering {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Standardtekst</message>
 	<message key="plugins.generic.customLocale.file.custom">Selvvalgt tekst</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Indtast en fulstændig landekodenøgle, der skal søges efter.</message>
 </locale>

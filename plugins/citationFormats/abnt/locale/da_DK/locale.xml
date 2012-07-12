@@ -16,5 +16,6 @@
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citeringsformat plugin</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Dette plugin implementerer ABNT citeringsformatet.</message>
-	<message key="plugins.citationFormat.acao.location">Nordamerika</message>
+	<message key="plugins.citationFormat.abnt.location">Danmark</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgængelig: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Åbnet, dato: {$retrievedDate}]]></message>
 </locale>

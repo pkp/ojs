@@ -113,4 +113,18 @@
 	<message key="author.article.copyeditedFile">Manuskriptredigeret fil</message>
 	<message key="author.article.authorRevisedFile">Forfatterfil</message>
 	<message key="author.submit.authorSubmitLoginMessage">Der kræves en brugerkonto for at kunne fremsende et manuskript til dette tidsskrift. Dette gør det muligt for vores redaktører at registrere dine manuskripter og kontakte dig, når dit manuskripts status ændrer sig, eller hvis du skal angive yderligere oplysninger.</message>
+	<message key="author.submit.step2">Trin 2. Upload af indleveret manuskript</message>
+	<message key="author.submit.step3">Trin 3. Indtastning af metadata for det indleverede manuskript</message>
+	<message key="author.submit.upload">2. Upload indleveret manuskript</message>
+	<message key="author.submit.metadata">3. Indtast metadata</message>
+	<message key="author.submit.mustEnterWaiverReason">Hvis du ønsker at melde fra, skal du angive en årsag i det dertil hørende felt.</message>
+	<message key="author.submissions.queuedReviewSubsequent">I bedømmelsesrunde {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>
+	<message key="author.submissions.queuedEditingCopyedit">Under redigering: Manuskriptredigering påkrævet</message>
+	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlæsning påkrævet</message>
+	<message key="author.submit.submissionLocale">Indleveringssprog</message>
+	<message key="author.submit.submissionLocaleDescription">Dette tidsskrift accepterer indleverede manuskripter på en række sprog. Vælg det primære sprog for indleveringen i rullemenuen.</message>
+	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
+	<message key="author.submit.reorder">Genbestil forfatternavn</message>
+	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for abstrakter i denne sektion.</message>
 </locale>

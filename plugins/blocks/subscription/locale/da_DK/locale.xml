@@ -18,6 +18,7 @@
 	<message key="plugins.block.subscription.blockTitle">Subskription</message>
 	<message key="plugins.block.subscription.expires">Udløber</message>
 	<message key="plugins.block.subscription.providedBy">Adgang givet af:</message>
-	<message key="plugins.block.subscription.providedByInstitution">Adgang givet af din institution</message>
 	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP:</message>
+	<message key="plugins.block.subscription.about">Abonnementer</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Log ind for at bekræfte abonnement</message>
 </locale>

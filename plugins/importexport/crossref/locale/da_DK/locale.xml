@@ -14,13 +14,13 @@
  
 <locale name="da_DK" full_name="Dutch">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
-	<message key="plugins.importexport.crossref.description">Exporter artikel metadata i CrossRef XML format.</message>
+	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
 	
-	<message key="plugins.importexport.crossref.export">Exporter data</message>
-	<message key="plugins.importexport.crossref.export.issues">Exporter numre</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Vælg et nummer til at eksport</message>
-	<message key="plugins.importexport.crossref.export.articles">Eksporter artikler</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Vælg artikler til eksport</message>
+	<message key="plugins.importexport.crossref.export">Eksporter data</message>
+	<message key="plugins.importexport.crossref.export.issues">Eksporter numre</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Vælg et nummer til eksport.</message>
+	<message key="plugins.importexport.crossref.export.articles">Eksportér artikler</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Vælg artikler til eksport.</message>
 	
 	<message key="plugins.importexport.crossref.cliUsage">Brug: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...

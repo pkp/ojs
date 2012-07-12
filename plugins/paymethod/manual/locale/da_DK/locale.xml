@@ -22,4 +22,7 @@
 	
 	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Gebyr</message>	
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Send meddelelse om betaling</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Meddelelse om betaling</message>
+	<message key="plugins.paymethod.manual.notificationSent">Meddelelse om betaling sendt</message>
 </locale>
