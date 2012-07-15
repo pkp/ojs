@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * plugins/generic/counter/counter_monthly_log_1_2.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * third version of the counter_monthly_log with article and user information
+  -->
+
+<data>
+
+    <!-- add new columns to counter_monthly_log  -->
+    <sql>
+        <query driver="mysql">
+            ALTER TABLE counter_monthly_log add user_id bigint(20)
+        </query>
+
+    </sql>
+
+    <sql>
+        <query driver="mysql">
+            ALTER TABLE counter_monthly_log add article_id bigint(20) NOT NULL default 0
+        </query>
+    </sql>
+
+
+    <!-- create index -->
+    <sql>
+        <query driver="mysql">
+            alter table counter_monthly_log drop index counter_monthly_log_key
+        </query>
+    </sql>
+
+    <sql>
+
+        <query driver="mysql">
+            alter table counter_monthly_log add unique index counter_monthly_log_key
+            (year,month,journal_id,article_id,user_id)
+        </query>
+
+    </sql>
+
+    <sql>
+
+        <query driver="mysql">
+            alter table counter_monthly_log add index counter_monthly_log_alt1
+            (user_id,year,month,journal_id)
+        </query>
+
+    </sql>
+
+    <sql>
+
+        <query driver="mysql">
+            alter table counter_monthly_log add index counter_monthly_log_alt2
+            (article_id,year,month,journal_id)
+        </query>
+
+    </sql>
+
+</data>

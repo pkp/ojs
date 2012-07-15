@@ -9,7 +9,7 @@
   * Installation descriptor file.
   -->
 
-<install version="1.1.0">
-	<!-- COUNTER schema -->
-	<schema file="plugins/generic/counter/schema.xml" />
+<install version="1.2.0">
+  <!-- COUNTER schema -->
+  <schema file="plugins/generic/counter/schema.xml" />
 </install>

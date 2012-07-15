@@ -28,4 +28,27 @@
 	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total for all journals</message>
+    <message key="plugins.generic.counter.2a.title">Journal Report 2 (R2): Article access by Journal, Month and User</message>
+    <message key="plugins.generic.counter.2a.title1">Journal Report 2 (R2)</message>
+    <message key="plugins.generic.counter.2a.title2">Number of Articles Accessed by Journal, Month and User (Year {$year})</message>
+    <message key="plugins.generic.counter.2a.dateRun">Date run:</message>
+    <message key="plugins.generic.counter.2a.journal">Journal</message>
+    <message key="plugins.generic.counter.2a.username">Username</message>
+    <message key="plugins.generic.counter.2a.subscriber">Subscriber</message>
+    <message key="plugins.generic.counter.2a.subscriptionId">Subscription Id</message>
+    <message key="plugins.generic.counter.2a.total">Total Viewings</message>
+    <message key="plugins.generic.counter.3a.title">Journal Report 3 (R2): Most Viewed Articles</message>
+    <message key="plugins.generic.counter.3a.title1">Journal Report 3 (R2)</message>
+    <message key="plugins.generic.counter.3a.title2">Number of Viewings per Article by Journal (Year {$year})</message>
+    <message key="plugins.generic.counter.3a.dateRun">Date run:</message>
+    <message key="plugins.generic.counter.3a.journal">Journal</message>
+    <message key="plugins.generic.counter.3a.article">Article Title</message>
+    <message key="plugins.generic.counter.3a.total">Total Viewings</message>
+    <!-- User Statistics-->
+    <message key="plugins.generic.user.counter">COUNTER User Statistics</message>
+    <message key="plugins.generic.user.counter.monthly">COUNTER User Statistics - Monthly Breakdown for Journal</message>
+    <message key="plugins.generic.user.counter.yearly">COUNTER User Statistics - Yearly Breakdown for Journal</message>
+    <message key="plugins.generic.user.numberArticlesPerMonth">Article Viewings</message>
+    <message key="plugins.generic.user.mostViewed">Most Viewed Articles</message>
+    <message key="plugins.generic.user.mycounter">View COUNTER Statistics</message>
 </locale>
