@@ -184,7 +184,7 @@ class IssueGalleyDAO extends DAO {
 	 */
 	function &getGalleyByBestGalleyId($galleyId, $issueId) {
 		if ($galleyId != '') $galley =& $this->getGalleyByPubId('publisher-id', $galleyId, $issueId);
-		if (!isset($galley) && ctype_digit($galleyId)) $galley =& $this->getGalley((int) $galleyId, $issueId);
+		if (!isset($galley) && ctype_digit("$galleyId")) $galley =& $this->getGalley((int) $galleyId, $issueId);
 		return $galley;
 	}
 
