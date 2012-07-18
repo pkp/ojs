@@ -323,7 +323,9 @@ class SuppFileDAO extends DAO {
 	 */
 	function &getSuppFileByBestSuppFileId($articleId, $suppId) {
 		$suppFile =& $this->getSuppFileByPublicSuppFileId($suppId, $articleId);
-		if (!isset($suppFile)) $suppFile =& $this->getSuppFile((int) $suppId, $articleId);
+		if (!isset($suppFile) && ctype_digit("$suppId")) {
+			$suppFile =& $this->getSuppFile((int) $suppId, $articleId);
+		}
 		return $suppFile;
 	}
 

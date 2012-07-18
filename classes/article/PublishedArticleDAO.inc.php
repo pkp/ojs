@@ -526,7 +526,9 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
 		$article =& $this->getPublishedArticleByPublicArticleId((int) $journalId, $articleId, $useCache);
-		if (!isset($article)) $article =& $this->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, $useCache);
+		if (!isset($article) && ctype_digit("$articleId")) {
+			$article =& $this->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, $useCache);
+		}
 		return $article;
 	}
 
