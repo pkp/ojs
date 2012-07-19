@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/classes/sword/FunctionalSwordDepositTest.php
+ * @file tests/functional/plugins/generic/sword/FunctionalSwordDepositTest.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -26,9 +26,7 @@ import('lib.pkp.classes.core.PKPRequest');
 class FunctionalSwordDepositTest extends PKPTestCase {
 
 	/**
-	 * Override this method if you want to backup/restore
-	 * registry entries before/after the test.
-	 * @return array A list of registry keys to backup and restore.
+	 * @see PKPTestCase::getMockedRegistryKeys()
 	 */
 	protected function getMockedRegistryKeys() {
 		return array('request');
