@@ -16,6 +16,8 @@
      * @param String textToAppend
      */
     function appendToDocField(context, fieldName, textToAppend) {
+      if (textToAppend === null) return;
+
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
       if (docFields === null) {
         docFields = [];

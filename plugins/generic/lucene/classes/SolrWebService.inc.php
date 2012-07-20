@@ -226,7 +226,7 @@ class SolrWebService extends XmlWebService {
 		$articleDoc =& $this->_getArticleXml($article, $journal);
 		$articleXml = XMLCustomWriter::getXml($articleDoc);
 
-		$url = $this->_getDihUrl() . '?command=full-import';
+		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
 		$result = $this->_makeRequest($url, $articleXml, 'POST');
 		if (is_null($result)) return false;
 
@@ -276,7 +276,7 @@ class SolrWebService extends XmlWebService {
 		// Make an asynchronous POST request with all
 		// articles of the journal.
 		$articleXml = XMLCustomWriter::getXml($articleDoc);
-		$url = $this->_getDihUrl() . '?command=full-import';
+		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
 		$result = $this->_makeRequest($url, $articleXml, 'POST', true);
 
 		if ($result == true) {
