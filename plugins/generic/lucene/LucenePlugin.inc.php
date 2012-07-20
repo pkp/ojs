@@ -203,7 +203,7 @@ class LucenePlugin extends GenericPlugin {
 		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $fromDate) . 'Z';
 
 		// Get the ordering criteria.
-		list($orderBy, $orderDir) = $this->_getResultSetOrdering();
+		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
 		$orderDir = ($orderDir == 'asc' ? true : false);
 
 		// Call the solr web service.
@@ -322,18 +322,22 @@ class LucenePlugin extends GenericPlugin {
 		$template = $params[1];
 		if ($template != 'search/searchResults.tpl') return false;
 
+		// Get request and context.
+		$request =& PKPApplication::getRequest();
+		$journal =& $request->getContext();
+
 		// Assign our private stylesheet.
 		$templateMgr =& $params[0];
-		$templateMgr->addStylesheet(Request::getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
+		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
 
 		// Result set ordering options.
-		$orderByOptions = $this->_getResultSetOrderingOptions();
+		$orderByOptions = $this->_getResultSetOrderingOptions($journal);
 		$templateMgr->assign('luceneOrderByOptions', $orderByOptions);
 		$orderDirOptions = $this->_getResultSetOrderingDirectionOptions();
 		$templateMgr->assign('luceneOrderDirOptions', $orderDirOptions);
 
 		// Result set ordering selection.
-		list($orderBy, $orderDir) = $this->_getResultSetOrdering();
+		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
 		$templateMgr->assign('orderBy', $orderBy);
 		$templateMgr->assign('orderDir', $orderDir);
 
@@ -419,17 +423,24 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Return the available options for result
 	 * set ordering.
+	 * @param $journal Journal
 	 * @return array
 	 */
-	function _getResultSetOrderingOptions() {
-		return array(
+	function _getResultSetOrderingOptions($journal) {
+		$resultSetOrderingOptions = array(
 			'score' => __('plugins.generic.lucene.results.orderBy.relevance'),
 			'authors' => __('plugins.generic.lucene.results.orderBy.author'),
 			'issuePublicationDate' => __('plugins.generic.lucene.results.orderBy.issue'),
 			'publicationDate' => __('plugins.generic.lucene.results.orderBy.date'),
-			'journalTitle' => __('plugins.generic.lucene.results.orderBy.journal'),
 			'title' => __('plugins.generic.lucene.results.orderBy.article')
 		);
+
+		// Only show the "journal title" option if we have several journals.
+		if (!is_a($journal, 'Journal')) {
+			$resultSetOrderingOptions['journalTitle'] = __('plugins.generic.lucene.results.orderBy.journal');
+		}
+
+		return $resultSetOrderingOptions;
 	}
 
 	/**
@@ -447,17 +458,18 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Return the currently selected result
 	 * set ordering option (default: descending relevance).
+	 * @param $journal Journal
 	 * @return array An array with the order field as the
 	 *  first entry and the order direction as the second
 	 *  entry.
 	 */
-	function _getResultSetOrdering() {
+	function _getResultSetOrdering($journal) {
 		// Retrieve the request.
 		$request =& Application::getRequest();
 
 		// Order field.
 		$orderBy = $request->getUserVar('orderBy');
-		$orderByOptions = $this->_getResultSetOrderingOptions();
+		$orderByOptions = $this->_getResultSetOrderingOptions($journal);
 		if (is_null($orderBy) || !in_array($orderBy, array_keys($orderByOptions))) {
 			$orderBy = 'score';
 		}
