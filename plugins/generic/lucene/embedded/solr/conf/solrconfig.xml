@@ -77,7 +77,7 @@
   <requestHandler name="/search" class="solr.StandardRequestHandler" default="true">
     <lst name="invariants">
       <str name="echoParams">explicit</str>
-      <str name="defType">edismax</str>
+      <str name="defType">lucene</str>
       <str name="fl">article_id,journal_id,inst_id,score</str>
 
       <str name="hl">on</str>

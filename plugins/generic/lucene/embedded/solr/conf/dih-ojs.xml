@@ -268,7 +268,7 @@
             dataSource="http-post"
             processor="XPathEntityProcessor"
             forEach="/articleList/article"
-            transformer="script:transformArticle,LogTransformer"
+            transformer="HTMLStripTransformer,script:transformArticle,LogTransformer"
             logTemplate="Indexing article ${article.inst_id}-${article.journal_id}-${article.article_id}." logLevel="info"
             stream="false"
             onError="continue" >
@@ -286,7 +286,7 @@
       <field column="etl_titleList_locales" xpath="/articleList/article/titleList/title/@locale" multiValued="true" />
 
       <!-- Abstracts -->
-      <field column="etl_abstractList" xpath="/articleList/article/abstractList/abstract" multiValued="true" />
+      <field column="etl_abstractList" xpath="/articleList/article/abstractList/abstract" multiValued="true" stripHTML="true" />
       <field column="etl_abstractList_locales" xpath="/articleList/article/abstractList/abstract/@locale" multiValued="true" />
 
       <!-- Disciplines -->
