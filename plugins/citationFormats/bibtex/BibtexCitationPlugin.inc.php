@@ -19,7 +19,8 @@ class BibtexCitationPlugin extends CitationPlugin {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 
-		$templateMgr =& TemplateManager::getManager();
+		$request =& PKPApplication::getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_modifier('bibtex_escape', array(&$this, 'bibtexEscape'));
 
 		return $success;

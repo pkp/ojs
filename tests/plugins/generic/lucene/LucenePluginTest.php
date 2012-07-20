@@ -14,7 +14,7 @@
  */
 
 
-require_mock_env('env1'); // Required for mock app locale.
+require_mock_env('env2'); // Required for mock app locale.
 
 import('lib.pkp.tests.PKPTestCase');
 import('lib.pkp.classes.core.PKPRouter');
@@ -32,6 +32,13 @@ class LucenePluginTest extends PKPTestCase {
 	//
 	// Implementing protected template methods from PKPTestCase
 	//
+	/**
+	 * @see PKPTestCase::getMockedRegistryKeys()
+	 */
+	protected function getMockedRegistryKeys() {
+		return array('request');
+	}
+
 	/**
 	 * @see PKPTestCase::setUp()
 	 */

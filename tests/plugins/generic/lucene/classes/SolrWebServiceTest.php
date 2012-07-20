@@ -14,7 +14,7 @@
  */
 
 
-require_mock_env('env1'); // Make sure we're in an en_US environment by using the mock AppLocale.
+require_mock_env('env2'); // Make sure we're in an en_US environment by using the mock AppLocale.
 
 import('lib.pkp.tests.PKPTestCase');
 import('plugins.generic.lucene.classes.SolrWebService');
@@ -41,6 +41,13 @@ class SolrWebServiceTest extends PKPTestCase {
 			'AuthorDAO', 'IssueDAO', 'SuppFileDAO', 'ArticleGalleyDAO'
 		);
 		return $mockedDaos;
+	}
+
+	/**
+	 * @see PKPTestCase::getMockedRegistryKeys()
+	 */
+	protected function getMockedRegistryKeys() {
+		return array('request');
 	}
 
 	/**
@@ -73,10 +80,10 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Make a search on specific fields.
 		$journal = new Journal();
-		$journal->setId(1);
+		$journal->setId(2);
 		$testSearch = array(
 			'all' => 'pizza',
-			'authors' => 'Name',
+			'authors' => 'Author',
 			'galleyFullText' => 'Nutella',
 			'title' => 'Article'
 		);
@@ -94,9 +101,9 @@ class SolrWebServiceTest extends PKPTestCase {
 			'title' => '*'
 		);
 		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'authors', 'asc');
-		self::assertEquals(array(3, 1), array_values($scoredResults));
+		self::assertEquals(array(4, 3), array_values($scoredResults));
 		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'title', 'desc');
-		self::assertEquals(array(1, 3), array_values($scoredResults));
+		self::assertEquals(array(3, 4), array_values($scoredResults));
 	}
 
 	/**
@@ -207,8 +214,8 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Generate a test journal.
 		$journal = new Journal();
-		$journal->setId('1');
-		$journal->setPath('test');
+		$journal->setId('2');
+		$journal->setPath('lucene-test');
 
 		// Test indexing. The service returns the number of documents that
 		// were successfully processed.
@@ -373,7 +380,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		// Create a test article.
 		$article = new PublishedArticle();
 		$article->setId(3);
-		$article->setJournalId(1);
+		$article->setJournalId(2);
 		$article->setIssueId(1);
 		$article->setTitle('Deutscher Titel', 'de_DE');
 		$article->setTitle('English Title', 'en_US');
@@ -405,8 +412,8 @@ class SolrWebServiceTest extends PKPTestCase {
 	private function _getTestJournal() {
 		// Generate a test journal.
 		$journal = $this->getMock('Journal', array('getTitle'));
-		$journal->setId('1');
-		$journal->setPath('test');
+		$journal->setId('2');
+		$journal->setPath('lucene-test');
 		$journal->expects($this->any())
 		        ->method('getTitle')
 		        ->will($this->returnValue(array('de_DE' => 'Zeitschrift', 'en_US' => 'Journal')));
