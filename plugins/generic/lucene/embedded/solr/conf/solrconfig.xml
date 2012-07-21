@@ -81,13 +81,13 @@
       <str name="fl">article_id,journal_id,inst_id,score</str>
 
       <str name="hl">on</str>
-      <str name="hl.fl">galley_full_text_*</str>
+      <str name="hl.fl">galleyFullText_*</str>
 
       <str name="facet">on</str>
       <str name="facet.limit">10</str>
-      <str name="facet.range">publication_date_dt</str>
+      <str name="facet.range">publicationDate_dt</str>
       <str name="facet.range.start">NOW/YEAR-50YEARS</str>
-      <str name="facet.range.end">NOW/YEAR</str>
+      <str name="facet.range.end">NOW</str>
       <str name="facet.range.gap">+1YEAR</str>
       <str name="facet.range.other">all</str>
 

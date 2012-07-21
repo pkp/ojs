@@ -214,7 +214,7 @@ class SolrWebService extends XmlWebService {
 	 * In Solr we cannot partially (re-)index an article. We always
 	 * have to refresh the whole document if parts of it change.
 	 *
-	 * @param $article Article The article to be (re-)indexed.
+	 * @param $article PublishedArticle The article to be (re-)indexed.
 	 * @param $journal Journal
 	 *
 	 * @return boolean true, if the indexing succeeded, otherwise false.
@@ -722,13 +722,13 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Establish the XML used to communicate with the
 	 * solr indexing engine DIH.
-	 * @param $article Article
+	 * @param $article PublishedArticle
 	 * @param $journal Journal
 	 * @param $articleDoc DOMDocument|XMLNode
 	 * @return DOMDocument|XMLNode
 	 */
 	function _getArticleXml(&$article, &$journal, $articleDoc = null) {
-		assert(is_a($article, 'Article'));
+		assert(is_a($article, 'PublishedArticle'));
 
 		if (is_null($articleDoc)) {
 			// Create the document.
@@ -866,25 +866,23 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add publication dates.
-		if (is_a($article, 'PublishedArticle')) {
-			$publicationDate = $article->getDatePublished();
-			if (!empty($publicationDate)) {
-				// Transform and store article publication date.
-				$publicationDate = str_replace(' ', 'T', $publicationDate) . 'Z';
-				$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'publicationDate', $publicationDate);
-			}
+		$publicationDate = $article->getDatePublished();
+		if (!empty($publicationDate)) {
+			// Transform and store article publication date.
+			$publicationDate = str_replace(' ', 'T', $publicationDate) . 'Z';
+			$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'publicationDate', $publicationDate);
+		}
 
-			$issueId = $article->getIssueId();
-			if (is_numeric($issueId)) {
-				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue =& $issueDao->getIssueById($issueId);
-				if (is_a($issue, 'Issue')) {
-					$issuePublicationDate = $issue->getDatePublished();
-					if (!empty($issuePublicationDate)) {
-						// Transform and store issue publication date.
-						$issuePublicationDate = str_replace(' ', 'T', $issuePublicationDate) . 'Z';
-						$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'issuePublicationDate', $issuePublicationDate);
-					}
+		$issueId = $article->getIssueId();
+		if (is_numeric($issueId)) {
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue =& $issueDao->getIssueById($issueId);
+			if (is_a($issue, 'Issue')) {
+				$issuePublicationDate = $issue->getDatePublished();
+				if (!empty($issuePublicationDate)) {
+					// Transform and store issue publication date.
+					$issuePublicationDate = str_replace(' ', 'T', $issuePublicationDate) . 'Z';
+					$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'issuePublicationDate', $issuePublicationDate);
 				}
 			}
 		}

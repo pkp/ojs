@@ -200,7 +200,7 @@ class LucenePlugin extends GenericPlugin {
 		// Transform the date format. Lucene does not accept localized ISO-8601 dates
 		// so we cannot use date('c',...).
 		if (!empty($fromDate)) $fromDate = str_replace(' ', 'T', $fromDate) . 'Z';
-		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $fromDate) . 'Z';
+		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $toDate) . 'Z';
 
 		// Get the ordering criteria.
 		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
@@ -366,14 +366,29 @@ class LucenePlugin extends GenericPlugin {
 	function _indexArticle(&$article) {
 		if(!is_a($article, 'Article')) return false;
 
+		// If the article object is not of type PublishedArticle
+		// then try to upgrade the object.
+		if (is_a($article, 'PublishedArticle')) {
+			$publishedArticle =& $article;
+		} else {
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+		}
+
+		if(!is_a($publishedArticle, 'PublishedArticle')) {
+			// The article is no longer public. Delete possible
+			// remainders from the index.
+			return $this->_solrWebService->deleteArticleFromIndex($article->getId());
+		}
+
 		// We need the article's journal to index the article.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal =& $journalDao->getJournal($article->getJournalId());
+		$journal =& $journalDao->getJournal($publishedArticle->getJournalId());
 		if(!is_a($journal, 'Journal')) return false;
 
 		// We cannot re-index article files only. We have
 		// to re-index the whole article.
-		return $this->_solrWebService->indexArticle($article, $journal);
+		return $this->_solrWebService->indexArticle($publishedArticle, $journal);
 	}
 
 	/**
@@ -385,16 +400,18 @@ class LucenePlugin extends GenericPlugin {
 		if (!is_numeric($articleId)) return false;
 
 		// Retrieve the article object.
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article =& $articleDao->getArticle($articleId);
-		if(!is_a($article, 'Article')) {
-			// The article doesn't seem to exist any more.
-			// Delete possible remainders from the index.
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		if(!is_a($publishedArticle, 'PublishedArticle')) {
+			// The article doesn't exist any more
+			// or is no longer public. Delete possible
+			// remainders from the index.
 			return $this->_solrWebService->deleteArticleFromIndex($articleId);
 		}
 
 		// Re-index the article.
-		return $this->_indexArticle($article);
+		return $this->_indexArticle($publishedArticle);
 	}
 
 	/**
