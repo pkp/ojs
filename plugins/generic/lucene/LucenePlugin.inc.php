@@ -197,11 +197,6 @@ class LucenePlugin extends GenericPlugin {
 			}
 		}
 
-		// Transform the date format. Lucene does not accept localized ISO-8601 dates
-		// so we cannot use date('c',...).
-		if (!empty($fromDate)) $fromDate = str_replace(' ', 'T', $fromDate) . 'Z';
-		if (!empty($toDate)) $toDate = str_replace(' ', 'T', $toDate) . 'Z';
-
 		// Get the ordering criteria.
 		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
 		$orderDir = ($orderDir == 'asc' ? true : false);

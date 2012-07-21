@@ -118,9 +118,17 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add a range search on the publication date.
-		if (!(is_null($fromDate) && is_null($toDate))) {
-			if (is_null($fromDate)) $fromDate = '*';
-			if (is_null($toDate)) $toDate = '*';
+		if (!(empty($fromDate) && empty($toDate))) {
+			if (empty($fromDate)) {
+				$fromDate = '*';
+			} else {
+				$fromDate = $this->_convertDate($fromDate);
+			}
+			if (empty($toDate)) {
+				$toDate = '*';
+			} else {
+				$toDate = $this->_convertDate($toDate);
+			}
 			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
 			$expandedSearch .= 'publicationDate_dt:[' . $fromDate . ' TO ' . $toDate . ']';
 		}
@@ -869,7 +877,7 @@ class SolrWebService extends XmlWebService {
 		$publicationDate = $article->getDatePublished();
 		if (!empty($publicationDate)) {
 			// Transform and store article publication date.
-			$publicationDate = str_replace(' ', 'T', $publicationDate) . 'Z';
+			$publicationDate = $this->_convertDate($publicationDate);
 			$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'publicationDate', $publicationDate);
 		}
 
@@ -881,7 +889,7 @@ class SolrWebService extends XmlWebService {
 				$issuePublicationDate = $issue->getDatePublished();
 				if (!empty($issuePublicationDate)) {
 					// Transform and store issue publication date.
-					$issuePublicationDate = str_replace(' ', 'T', $issuePublicationDate) . 'Z';
+					$issuePublicationDate = $this->_convertDate($issuePublicationDate);
 					$dateNode =& XMLCustomWriter::createChildWithText($articleDoc, $articleNode, 'issuePublicationDate', $issuePublicationDate);
 				}
 			}
@@ -1024,6 +1032,37 @@ class SolrWebService extends XmlWebService {
 		if($nodeList->length != 1) return false;
 		$resultNode = $nodeList->item(0);
 		if ($resultNode->textContent === '0') return true;
+	}
+
+	/**
+	 * Convert a date from local time (unix timestamp
+	 * or ISO date string) to UTC time as understood
+	 * by solr.
+	 *
+	 * NB: Using intermediate unix timestamps can be
+	 * a problem in older PHP versions, especially on
+	 * Windows where negative timestamps are not supported.
+	 *
+	 * As Solr requires PHP5 that should not be a big
+	 * problem in practice, except for electronic
+	 * publications that go back until earlier than 1901.
+	 * It does not seem probable that such a situation
+	 * could realistically arise with OJS.
+	 *
+	 * @param $timestamp int|string Unix timestamp or local ISO time.
+	 * @return string ISO UTC timestamp
+	 */
+	function _convertDate($timestamp) {
+		if (is_numeric($timestamp)) {
+			// Assume that this is a unix timestamp.
+			$timestamp = (integer) $timestamp;
+		} else {
+			// Assume that this is an ISO timestamp.
+			$timestamp = strtotime($timestamp);
+		}
+
+		// Convert to UTC as understood by solr.
+		return gmdate('Y-m-d\TH:i:s\Z', $timestamp);
 	}
 }
 
