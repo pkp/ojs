@@ -2546,12 +2546,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		}
 
+		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = new ArticleSearchIndex();
+
 		if ($issue) {
+
 			// Schedule against an issue.
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
+
+				// Re-index the published article metadata.
+				$articleSearchIndex->indexArticleMetadata($publishedArticle);
 			} else {
 				$publishedArticle = new PublishedArticle();
 				$publishedArticle->setId($submission->getId());
@@ -2572,15 +2579,24 @@ class SubmissionEditHandler extends SectionEditorHandler {
 						$sectionDao->resequenceCustomSectionOrders($issueId);
 					}
 				}
+
+				// Index the published article metadata and files for the first time.
+				$articleSearchIndex->indexArticleMetadata($publishedArticle);
+				$articleSearchIndex->indexArticleFiles($publishedArticle);
 			}
+
 		} else {
 			if ($publishedArticle) {
 				// This was published elsewhere; make sure we don't
 				// mess up sequencing information.
 				$issueId = $publishedArticle->getIssueId();
 				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+
+				// Delete the article from the search index.
+				$articleSearchIndex->deleteTextIndex($articleId);
 			}
 		}
+
 		// Resequence the articles.
 		$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
@@ -2619,6 +2635,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$datePublished = $request->getUserDateVar('datePublished');
 			$publishedArticle->setDatePublished($datePublished);
 			$publishedArticleDao->updatePublishedArticle($publishedArticle);
+
+			// Re-index the published article metadata.
+			import('classes.search.ArticleSearchIndex');
+			$articleSearchIndex = new ArticleSearchIndex();
+			$articleSearchIndex->indexArticleMetadata($publishedArticle);
 		}
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}

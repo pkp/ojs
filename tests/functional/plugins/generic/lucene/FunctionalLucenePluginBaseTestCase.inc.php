@@ -168,16 +168,17 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 		$editingPage = $editorBasePath . 'submissionEditing/' . $articleId;
 		$this->verifyAndOpen($editingPage);
 
-		// Assign the article to issue id 2 (which is
-		// "Vol 1" of the lucene-test journal.
 		$issueId = $this->getSelectedValue('issueId');
 		if (!is_numeric($issueId) || $issueId < 0) {
+			// Assign the article to issue id 2 (which is
+			// "Vol 1" of the lucene-test journal). This will
+			// implicitly publish the article.
 			$this->select('issueId', 'value=2');
 			$this->clickAndWait('//div[@id="scheduling"]//tr[1]//input[@type="submit"]');
+		} else {
+			// (Re-)Publish the article with the current date.
+			$this->clickAndWait('//div[@id="scheduling"]//tr[2]//input[@type="submit"]');
 		}
-
-		// Publish the article with the current date.
-		$this->clickAndWait('//div[@id="scheduling"]//tr[2]//input[@type="submit"]');
 	}
 }
 ?>
