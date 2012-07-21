@@ -35,6 +35,18 @@ class FunctionalLucenePluginRankingTest extends FunctionalLucenePluginBaseTestCa
 	 *
 	 * @group current
 	 */
+	public function testPagination() {
+		// NB: The following code has been used to generate
+		// test articles for ranking.
+		//
+		//  for($a = 1; $a <= 30; $a ++) {
+		//  	$articleId = $this->submitArticle("Ranking Test Article $a");
+		//  	$this->publishArticle($articleId);
+		//  }
+		//
+		// We keep those articles in the testserver dump, so we do not
+		// have to re-generate them for every test.
+	}
 
 	/**
 	 * SCENARIO OUTLINE: Result ordering
