@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file tests/functional/plugins/lucene/FunctionalLucenePluginTest.php
+ * @file tests/functional/plugins/lucene/FunctionalLucenePluginSearchTest.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class FunctionalLucenePluginTest
+ * @class FunctionalLucenePluginSearchTest
  * @ingroup tests_functional_plugins_generic_lucene
  * @see LucenePlugin
  *
@@ -15,11 +15,9 @@
  */
 
 
-import('lib.pkp.tests.WebTestCase');
+import('tests.functional.plugins.generic.lucene.FunctionalLucenePluginBaseTestCase');
 
-class FunctionalLucenePluginTest extends WebTestCase {
-
-	private $simpleSearchForm = '//form[@id="simpleSearchForm"]//';
+class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCase {
 
 	/**
 	 * SCENARIO: Search across all journals of an installation
@@ -94,7 +92,7 @@ class FunctionalLucenePluginTest extends WebTestCase {
 			list($searchField, $keyword, $id) = $example;
 
 			// Execute a simple search.
-			$this->_simpleSearch($keyword, $id, $searchField);
+			$this->simpleSearch($keyword, $id, $searchField);
 		}
 	}
 
@@ -145,25 +143,29 @@ class FunctionalLucenePluginTest extends WebTestCase {
 			// Read the example.
 			list($searchField, $keyword, $id) = $example;
 
-			// Open the "lucene-test" journal search page.
-			$this->verifyAndOpen($searchPage);
+			try {
+				// Open the "lucene-test" journal search page.
+				$this->verifyAndOpen($searchPage);
 
-			// Enter the keyword into the advanced search field.
-			if ($searchField == 'date') {
-				$this->type('advancedQuery', 'test');
-				$this->select('dateToDay', 'value=20');
-				$this->select('dateToMonth', 'value=07');
-				$this->select('dateToYear', 'value=2012');
-			} else {
-				$this->type($searchField, $keyword);
+				// Enter the keyword into the advanced search field.
+				if ($searchField == 'date') {
+					$this->type('advancedQuery', 'test');
+					$this->select('dateToDay', 'value=20');
+					$this->select('dateToMonth', 'value=07');
+					$this->select('dateToYear', 'value=2012');
+				} else {
+					$this->type($searchField, $keyword);
+				}
+
+				// Click the "Search" button.
+				$this->clickAndWait('css=.defaultButton');
+
+				// Check whether the result set contains the
+				// sample article.
+				$this->assertElementPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
+			} catch(Exception $e) {
+				throw $this->improveException($e, "example $searchField: $keyword");
 			}
-
-			// Click the "Search" button.
-			$this->clickAndWait('css=.defaultButton');
-
-			// Check whether the result set contains the
-			// sample article.
-			$this->assertElementPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
 		}
 	}
 
@@ -244,7 +246,7 @@ class FunctionalLucenePluginTest extends WebTestCase {
 			}
 
 			// Execute a simple search.
-			$this->_simpleSearch($searchPhrase, $ids, ARTICLE_SEARCH_TITLE, $notIds, $locale);
+			$this->simpleSearch($searchPhrase, $ids, ARTICLE_SEARCH_TITLE, $notIds, $locale);
 		}
 	}
 
@@ -273,192 +275,7 @@ class FunctionalLucenePluginTest extends WebTestCase {
 		$examples = array('chicken', 'Hühnchen');
 		foreach ($examples as $keyword) {
 			// Execute a simple search.
-			$this->_simpleSearch($keyword, 5, ARTICLE_SEARCH_TITLE);
-		}
-	}
-
-
-	/**
-	 * SCENARIO: Pagination: page links
-	 *   GIVEN I have executed a search that returns more than
-	 *         25 articles in its result set
-	 *     AND I am looking at the result page
-	 *    THEN I see a set of paging links below the result set
-	 *
-	 * SCENARIO: Pagination: turn page
-	 *   GIVEN I have executed a search that returns more than
-	 *         25 articles in its result set
-	 *     AND I am looking at the result page
-	 *    WHEN I click on one of the paging links below the result set
-	 *    THEN I will see a different page of the same result list
-	 */
-
-	/**
-	 * SCENARIO OUTLINE: Result ordering
-	 *   GIVEN I am looking at a result page
-	 *    WHEN I select {order criterium} and {order direction}
-	 *    THEN I will see a different result list re-ordered by the
-	 *         changed criterium and in the given direction.
-	 *
-	 * EXAMPLES:
-	 *   order criterium  | order direction
-	 *   ==================================
-	 *   relevance        | descending
-	 *   author           | ascending
-	 *   issue date       | ascending
-	 *   issue date       | descending
-	 *   publication date | descending
-	 *   journal title    | ascending
-	 *   journal title    | descending
-	 *   article title    | ascending
-	 */
-
-	/**
-	 * SCENARIO OUTLINE: Document upload: supported galley formats
-	 *   GIVEN I am looking at the galley upload page
-	 *    WHEN I upload a galley in {document format}
-	 *    THEN the document is immediately available in the index.
-	 *
-	 * EXAMPLES:
-	 *   document format
-	 *   ===============
-	 *   plain text
-	 *   HTML
-	 *   PDF
-	 *   PS
-	 *   Microsoft Word
-	 */
-
-	/**
-	 * SCENARIO: Change document (push): publication
-	 *   GIVEN An article contains the word "noodles" in its title
-	 *     BUT is not currently published
-	 *     AND the article does not currently appear in the search
-	 *         result list for "noodles" in its title
-	 *    WHEN I publish the article
-	 *    THEN I will immediately see it appear in the result list
-	 *         of a title search for "noodles".
-	 *
-	 * SCENARIO: Change document (push): unpublish article
-	 *   GIVEN An article contains the word "noodles" in its title
-	 *     AND is currently published
-	 *     AND the article currently appears in the search
-	 *         result list for "noodles" in its title
-	 *    WHEN I unpublish the article
-	 *    THEN I will immediately see it disappear from the result list
-	 *         of a title search for "noodles".
-	 *
-	 * SCENARIO: Change document (push): meta-data
-	 *   GIVEN An article does not contain the word "noodles" in its title
-	 *     AND it does not appear in a title search for the word "noodles"
-	 *    WHEN I change its title to contain the word "noodles"
-	 *    THEN I will immediately see the article appear in the
-	 *         result list of a title search for the word "noodles".
-	 *
-	 * SCENARIO: Change document (push): add galley
-	 *     see document upload test cases above.
-	 *
-	 * SCENARIO: Change document (push): delete galley
-	 *   GIVEN An article galley contains a word not contained in
-	 *         any other galley of the article, say "noodles"
-	 *     AND the article appears in the full-text search result
-	 *         list for "noodles"
-	 *    WHEN I delete this galley from the article
-	 *    THEN I will immediately see the article disappear from the
-	 *         "noodles" full-text search result list.
-	 *
-	 * SCENARIO: Change document (push): add supplementary file
-	 *   GIVEN None of an article's supplementary files contains the
-	 *         word "noodles"
-	 *     AND a supplementary file search for the word "noodles" gives
-	 *         no result
-	 *    WHEN I add a supplementary file that contains the word "noodles"
-	 *         to the article
-	 *    THEN I will immediately see the article appear in the
-	 *         "noodles" supplementary file search result list.
-	 *
-	 * SCENARIO: Change document (push): delete supplementary file
-	 *   GIVEN An article's supplementary file contains a word not contained in
-	 *         any other supplementary file of the article, say "noodles".
-	 *     AND the article appears in the supplementary file search result
-	 *         list for "noodles"
-	 *    WHEN I delete this supplementary file from the article
-	 *    THEN I will immediately see the article disappear from the
-	 *         "noodles" supplementary file search result list.
-	 */
-
-	/**
-	 * SCENARIO: Plug-in de-activated + solr server switched off
-	 *   GIVEN The lucene plug-in is de-activated
-	 *     AND the solr server is switched off
-	 *    WHEN I execute a search
-	 *    THEN I will see search results served by the OJS standard
-	 *         search implementation.
-	 *
-	 * SCENARIO: Plug-in activated + solr server switched off
-	 *   GIVEN The lucene plug-in is de-activated
-	 *     AND the solr server is switched off
-	 *    WHEN I activate the lucene plug-in
-	 *     AND I execute a search
-	 *    THEN I will see an error message informing that the
-	 *         solr server is not functioning.
-	 *
-	 * SCENARIO: Plug-in activated + solr server switched on
-	 *   GIVEN The lucene plug-in is activated
-	 *     AND the solr server is switched off
-	 *    WHEN I switch on the solr server
-	 *     AND I execute a search
-	 *    THEN I will see search results served by the solr server.
-	 */
-
-	/**
-	 * Execute a simple search.
-	 *
-	 * @param $searchPhrase string
-	 * @param $articles integer|array
-	 * @param $searchField
-	 * @param $notArticles integer|array
-	 * @param $locale string
-	 */
-	private function _simpleSearch($searchPhrase, $articles, $searchField = '""', $notArticles = array(), $locale = 'en_US') {
-		// Translate scalars to arrays.
-		if (!is_array($articles)) $articles = array($articles);
-		if (!is_array($notArticles)) $notArticles = array($notArticles);
-
-		try {
-			// Open the "lucene-test" journal home page.
-			$testJournal = $this->baseUrl . '/index.php/lucene-test';
-			$this->verifyAndOpen($testJournal);
-
-			// Select the locale.
-			$selectedValues = $this->getSelectedValues('name=locale');
-			if (!in_array($locale, $selectedValues)) {
-					$this->select('name=locale', 'value=' . $locale);
-					$this->waitForLocation($testJournal);
-			}
-
-			// Enter the search phrase into the simple search field.
-			$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchPhrase);
-
-			// Select the search field.
-			$this->select('name=searchField', 'value=' . $searchField);
-
-			// Click the "Search" button.
-			$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');
-
-			// Check whether the result set contains the
-			// sample articles.
-			foreach($articles as $id) {
-				$this->assertElementPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
-			}
-
-			// Make sure that the result set does not contain
-			// the articles in the "not article" list.
-			foreach($notArticles as $id) {
-				$this->assertElementNotPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
-			}
-		} catch(Exception $e) {
-			throw $this->improveException($e, "example $searchPhrase ($locale)");
+			$this->simpleSearch($keyword, 5, ARTICLE_SEARCH_TITLE);
 		}
 	}
 }
