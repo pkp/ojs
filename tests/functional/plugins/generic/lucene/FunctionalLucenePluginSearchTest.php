@@ -33,25 +33,17 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	 *         both journals in the result set.
 	 */
 	public function testSearchAcrossJournals() {
-		// Open the test installation's home page.
+		// Execute a search across journals.
 		// The test installation contains at least
 		// two journals with articles that contain
 		// the word "test" in their title.
-		$homePage = $this->baseUrl . '/index.php';
-		$this->verifyAndOpen($homePage);
-
-		// Enter the word "test" into the simple search box.
-		$this->type($this->simpleSearchForm . 'input[@id="query"]', 'test');
-
-		// Click the "Search" button.
-		$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');
+		$this->simpleSearchAcrossJournals('test');
 
 		// Make sure that the search result contains articles
 		// from both test journals.
 		$this->assertElementPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test")]');
 		$this->assertElementPresent('//table[@class="listing"]//a[contains(@href, "index.php/test")]');
 	}
-
 
 	/**
 	 * SCENARIO OUTLINE: Simple search
@@ -92,7 +84,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 			list($searchField, $keyword, $id) = $example;
 
 			// Execute a simple search.
-			$this->simpleSearch($keyword, $id, $searchField);
+			$this->simpleSearch($keyword, $searchField, $id);
 		}
 	}
 
@@ -246,7 +238,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 			}
 
 			// Execute a simple search.
-			$this->simpleSearch($searchPhrase, $ids, ARTICLE_SEARCH_TITLE, $notIds, $locale);
+			$this->simpleSearch($searchPhrase, ARTICLE_SEARCH_TITLE, $ids, $notIds, $locale);
 		}
 	}
 
@@ -275,7 +267,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 		$examples = array('chicken', 'Hühnchen');
 		foreach ($examples as $keyword) {
 			// Execute a simple search.
-			$this->simpleSearch($keyword, 5, ARTICLE_SEARCH_TITLE);
+			$this->simpleSearch($keyword, ARTICLE_SEARCH_TITLE, 5);
 		}
 	}
 }

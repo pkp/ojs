@@ -29,12 +29,12 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 * Execute a simple search.
 	 *
 	 * @param $searchPhrase string
-	 * @param $articles integer|array
 	 * @param $searchField
+	 * @param $articles integer|array
 	 * @param $notArticles integer|array
 	 * @param $locale string
 	 */
-	protected function simpleSearch($searchPhrase, $articles, $searchField = '""', $notArticles = array(), $locale = 'en_US') {
+	protected function simpleSearch($searchPhrase, $searchField = '""', $articles = array(), $notArticles = array(), $locale = 'en_US') {
 		// Translate scalars to arrays.
 		if (!is_array($articles)) $articles = array($articles);
 		if (!is_array($notArticles)) $notArticles = array($notArticles);
@@ -74,6 +74,23 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 		} catch(Exception $e) {
 			throw $this->improveException($e, "example $searchPhrase ($locale)");
 		}
+	}
+
+	/**
+	 * Execute a simple search across journals.
+	 *
+	 * @param $searchTerm string
+	 */
+	protected function simpleSearchAcrossJournals($searchTerm) {
+		// Open the test installation's home page.
+		$homePage = $this->baseUrl . '/index.php';
+		$this->verifyAndOpen($homePage);
+
+		// Enter the search term into the simple search box.
+		$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchTerm);
+
+		// Click the "Search" button.
+		$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');
 	}
 
 	/**
