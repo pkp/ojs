@@ -41,7 +41,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$articleFileManager->deleteArticleTree();
 
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$articleDao->deleteArticleById($args[0]);
+			$articleDao->deleteArticleById($articleId);
 		}
 
 		$request->redirect(null, null, 'index');
