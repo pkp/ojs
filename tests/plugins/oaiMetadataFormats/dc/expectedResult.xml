@@ -14,13 +14,15 @@
 	<dc:publisher xml:lang="en-US">journal-publisher</dc:publisher>
 	<dc:contributor xml:lang="en-US">article-sponsor</dc:contributor>
 	<dc:date>2010-11-05</dc:date>
+	<dc:type>info:eu-repo/semantics/article</dc:type>
+	<dc:type>info:eu-repo/semantics/publishedVersion</dc:type>
 	<dc:type xml:lang="en-US">section-identify-type</dc:type>
 	<dc:type xml:lang="en-US">art-type</dc:type>
 	<dc:format>galley-filetype</dc:format>
 	<dc:identifier>article-view-9</dc:identifier>
 	<dc:identifier>article-doi</dc:identifier>
 	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
-	<dc:source xml:lang="en-US">issue-doi</dc:source>
+	<dc:source>issue-doi</dc:source>
 	<dc:language>en_US</dc:language>
 	<dc:relation>article-view-9-98</dc:relation>
 	<dc:relation>article-downloadSuppFile-9-97</dc:relation>
