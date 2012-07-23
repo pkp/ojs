@@ -92,7 +92,7 @@ class ArticleLog {
 			$user =& $request->getUser();
 			$entry->setSenderId($user == null ? 0 : $user->getId());
 			$entry->setIPAddress($request->getRemoteAddr());
-		}
+		} else $entry->setSenderId(0);
 
 		$entry->setDateSent(Core::getCurrentDate());
 
