@@ -678,7 +678,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
-	function remindReviewer($args, $params) {
+	function remindReviewer($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;

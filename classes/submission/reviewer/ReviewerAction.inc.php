@@ -58,6 +58,8 @@ class ReviewerAction extends Action {
 					$email->send($request);
 				}
 
+				$reviewAssignment->setDateReminded(null);
+				$reviewAssignment->setReminderWasAutomatic(null);
 				$reviewAssignment->setDeclined($decline);
 				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 				$reviewAssignment->stampModified();

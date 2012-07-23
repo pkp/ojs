@@ -2345,6 +2345,8 @@ class SectionEditorAction extends Action {
 		// Only confirm the review for the reviewer if
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
+			$reviewAssignment->setDateReminded(null);
+			$reviewAssignment->setReminderWasAutomatic(null);
 			$reviewAssignment->setDeclined($accept?0:1);
 			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 			$reviewAssignment->stampModified();
