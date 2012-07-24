@@ -115,7 +115,7 @@ class LucenePluginTest extends PKPTestCase {
 				'type' => 'type',
 				'coverage' => 'coverage',
 				'galleyFullText' => 'full text',
-				'suppFileFullText' => 'supplementary files'
+				'suppFiles' => 'supplementary files'
 			),
 		);
 

@@ -171,7 +171,7 @@ class LucenePlugin extends GenericPlugin {
 			ARTICLE_SEARCH_TYPE => 'type',
 			ARTICLE_SEARCH_COVERAGE => 'coverage',
 			ARTICLE_SEARCH_GALLEY_FILE => 'galleyFullText',
-			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFileFullText',
+			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFiles',
 			ARTICLE_SEARCH_INDEX_TERMS => 'indexTerms'
 		);
 

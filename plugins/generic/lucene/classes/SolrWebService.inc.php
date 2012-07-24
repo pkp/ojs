@@ -594,10 +594,10 @@ class SolrWebService extends XmlWebService {
 			'search' => array(
 				'localized' => array(
 					'title', 'abstract', 'discipline', 'subject',
-					'type', 'coverage', 'all', 'indexTerms'
+					'type', 'coverage', 'all', 'indexTerms', 'suppFiles'
 				),
 				'multiformat' => array(
-					'galleyFullText', 'suppFileFullText'
+					'galleyFullText'
 				),
 				'static' => array(
 					'authors' => 'authors_txt',
@@ -953,12 +953,14 @@ class SolrWebService extends XmlWebService {
 				);
 				foreach($suppFileMetadata as $field => $data) {
 					if (!empty($data)) {
+						$suppFileMDListNode =& XMLCustomWriter::createElement($articleDoc, $field . 'List');
 						foreach($data as $locale => $value) {
-							$suppFileMDNode =& XMLCustomWriter::createChildWithText($articleDoc, $suppFileNode, $field, $value);
+							$suppFileMDNode =& XMLCustomWriter::createChildWithText($articleDoc, $suppFileMDListNode, $field, $value);
 							XMLCustomWriter::setAttribute($suppFileMDNode, 'locale', $locale);
-							XMLCustomWriter::appendChild($suppFileNode, $suppFileMDNode);
 							unset($suppFileMDNode);
 						}
+						XMLCustomWriter::appendChild($suppFileNode, $suppFileMDListNode);
+						unset($suppFileMDListNode);
 					}
 				}
 			}
