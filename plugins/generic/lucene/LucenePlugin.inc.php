@@ -362,8 +362,9 @@ class LucenePlugin extends GenericPlugin {
 		if(!is_a($article, 'Article')) return false;
 
 		// If the article object is not of type PublishedArticle
-		// then try to upgrade the object.
-		if (is_a($article, 'PublishedArticle')) {
+		// or if it is not a fully populated published article
+		// then upgrade/populate the object.
+		if (is_a($article, 'PublishedArticle') && is_numeric($article->getJournalId())) {
 			$publishedArticle =& $article;
 		} else {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */

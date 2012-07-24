@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/functional/plugins/lucene/FunctionalLucenePluginBaseTestCase.inc.php
+ * @file tests/functional/plugins/generic/lucene/FunctionalLucenePluginBaseTestCase.inc.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -23,7 +23,7 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 
 
 	//
-	// Private helper methods
+	// Protected helper methods
 	//
 	/**
 	 * Execute a simple search.
@@ -34,7 +34,7 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 * @param $notArticles integer|array
 	 * @param $locale string
 	 */
-	protected function simpleSearch($searchPhrase, $searchField = '""', $articles = array(), $notArticles = array(), $locale = 'en_US') {
+	protected function simpleSearch($searchPhrase, $searchField = '', $articles = array(), $notArticles = array(), $locale = 'en_US') {
 		// Translate scalars to arrays.
 		if (!is_array($articles)) $articles = array($articles);
 		if (!is_array($notArticles)) $notArticles = array($notArticles);

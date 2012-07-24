@@ -139,7 +139,7 @@ class LucenePluginTest extends PKPTestCase {
 			                  $this->equalTo($totalResults),
 			                  $this->equalTo($page),
 			                  $this->equalTo($itemsPerPage),
-			                  $this->equalTo('2000-01-01T00:00:00Z'),
+			                  $this->equalTo('2000-01-01 00:00:00'),
 			                  $this->equalTo(null),
 			                  $this->equalTo($orderBy),
 			                  $this->equalTo($orderDir));

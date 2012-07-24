@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataConfig>
-  <dataSource name="http-post" type="ContentStreamDataSource" connectionTimeout="300000" readTimeout="400000" />
+  <dataSource name="http-post" type="ContentStreamDataSource" />
   <dataSource name="field" type="FieldReaderDataSource" />
   <dataSource name="file" type="BinURLDataSource" />
 
@@ -17,6 +17,9 @@
      */
     function appendToDocField(context, fieldName, textToAppend) {
       if (textToAppend === null) return;
+
+      textToAppend = textToAppend.trim();
+      if (textToAppend === '') return;
 
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
       if (docFields === null) {
@@ -110,99 +113,25 @@
      * @param Context context
      * @returns Map The transformed row.
      */
-    function transformFile(row, context) {
-      // Interpret MIME type.
-      var mimetype = String(row.get('etl_file_mimetype'));
-
-      switch(mimetype) {
-        case 'application/pdf':
-        case 'application/x-pdf':
-          row.put('etl_file_mimetype', 'pdf');
-          break;
-
-        case 'text/html':
-        case 'application/xhtml+xml':
-          row.put('etl_file_mimetype', 'html');
-          break;
-
-        case 'application/msword':
-        case 'application/vnd.ms-word.document.macroenabled.12':
-        case 'application/vnd.ms-word.template.macroenabled.12':
-        case 'application/vnd.oasis.opendocument.text':
-        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
-        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.template':
-        case 'application/vnd.stardivision.writer':
-        case 'application/x-staroffice-template':
-        case 'application/vnd.sun.xml.writer':
-        case 'application/x-vnd.sun.xml.writer':
-        case 'application/vnd.sun.xml.writer.template':
-          row.put('etl_file_mimetype', 'doc');
-          break;
-
-        case 'text/plain':
-          row.put('etl_file_mimetype', 'plain');
-          break;
-
-        case 'application/epub+zip':
-          row.put('etl_file_mimetype', 'epub');
-          break;
-
-        case 'application/postscript':
-          row.put('etl_file_mimetype', 'ps');
-          break;
-
-        case 'application/rtf':
-        case 'text/rtf':
-          row.put('etl_file_mimetype', 'rtf');
-          break;
-
-        case 'application/xml':
-        case 'text/xml':
-          row.put('etl_file_mimetype', 'xml');
-          break;
-
-        case 'application/x-latex':
-          row.put('etl_file_mimetype', 'latex');
-          break;
-
-        case 'application/x-mobipocket-ebook':
-          row.put('etl_file_mimetype', 'mobi');
-          break;
-
-        default:
-          row.put('etl_file_mimetype', 'other');
-      }
-      return row;
-    }
-
-    /**
-     * Custom transformer for full text.
-     *
-     * @param Map row
-     * @param Context context
-     * @returns Map The transformed row.
-     */
     function transformFullText(row, context) {
       var entityName = context.getParentContext().getResolvedEntityAttribute('name');
       var locale = context.resolve(entityName + '.etl_file_locale');
-      var mimetype = context.resolve(entityName + '.etl_file_mimetype');
 
       // Analyze unknown locales with a generic analyzer.
       if (locale == 'unknown') locale = 'txt';
 
       // Construct the dynamic field name.
-      var fieldName = entityName + 'FullText_' + mimetype + '_' + locale;
-
-      // Deal with multiple entries for the same mimetype/locale.
-      var fullText = row.get(fieldName);
-      if (fullText === null) {
-        fullText = '';
+      if (entityName == 'galley') {
+        // Get the document format.
+        var docType = resolveMimetype(String(row.get('Content-Type')));
+        var fieldName = 'galleyFullText_' + docType + '_' + locale;
       } else {
-        fullText = String(fullText) + ' ';
+        var fieldName = 'suppFiles_' + locale;
       }
+
+      // Add full text.
       var currentText = String(row.get('text'));
-      fullText += currentText;
-      row.put(fieldName, fullText);
+      appendToDocField(context, fieldName, currentText);
 
       // Add full text to spellchecker dictionary.
       appendToDocField(context, 'default_spell', currentText);
@@ -212,6 +141,67 @@
 
       row.remove('text');
       return row;
+    }
+
+    /**
+     * Resolve the mime type to the internal
+     * document type.
+     *
+     * @param String mimetype
+     * @returns String The internal document type
+     */
+    function resolveMimetype(mimetype) {
+      // Remove mimetype options.
+      mimetype = mimetype.replace(/;.*$/, '');
+
+      // Determine the internal mime type.
+      switch(mimetype) {
+        case 'application/pdf':
+        case 'application/x-pdf':
+          mimetype = 'pdf';
+          break;
+
+        case 'text/html':
+        case 'application/xhtml+xml':
+          mimetype = 'html';
+          break;
+
+        case 'application/msword':
+        case 'application/vnd.oasis.opendocument.text':
+        case 'application/vnd.ms-word.document.macroenabled.12':
+        case 'application/vnd.ms-word.template.macroenabled.12':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.template':
+        case 'application/vnd.stardivision.writer':
+        case 'application/x-staroffice-template':
+        case 'application/vnd.sun.xml.writer':
+        case 'application/x-vnd.sun.xml.writer':
+        case 'application/vnd.sun.xml.writer.template':
+          mimetype = 'doc';
+          break;
+
+        case 'text/plain':
+          mimetype = 'plain';
+          break;
+
+        case 'application/epub+zip':
+          mimetype = 'epub';
+          break;
+
+        case 'application/rtf':
+        case 'text/rtf':
+          mimetype = 'rtf';
+          break;
+
+        case 'application/xml':
+        case 'text/xml':
+          mimetype = 'xml';
+          break;
+
+        default:
+          mimetype = 'other';
+      }
+      return mimetype;
     }
 
     /**
@@ -322,14 +312,14 @@
               dataField="article.etl_galley_xml"
               processor="XPathEntityProcessor"
               forEach="/galleyList/galley"
-              transformer="script:transformFile"
               stream="false"
               onError="continue" >
 
+        <!-- File Data -->
         <field column="etl_file_name" xpath="/galleyList/galley/@fileName" multiValued="false" />
         <field column="etl_file_locale" xpath="/galleyList/galley/@locale" multiValued="false" />
-        <field column="etl_file_mimetype" xpath="/galleyList/galley/@mimetype" multiValued="false" />
 
+        <!-- Full Text -->
         <entity name="galley_file"
                 dataSource="file"
                 processor="TikaEntityProcessor"
@@ -337,6 +327,7 @@
                 transformer="script:transformFullText"
                 format="text"
                 onError="continue" >
+          <field column="Content-Type" meta="true" />
           <field column="text" />
         </entity>
       </entity>
@@ -352,9 +343,9 @@
               stream="false"
               onError="continue" >
 
+        <!-- File Data -->
         <field column="etl_file_name" xpath="/suppFileList/suppFile/@fileName" multiValued="false" />
         <field column="etl_file_locale" xpath="/suppFileList/suppFile/@locale" multiValued="false" />
-        <field column="etl_file_mimetype" xpath="/suppFileList/suppFile/@mimetype" multiValued="false" />
 
         <entity name="suppFile_file"
                 dataSource="file"
@@ -363,6 +354,7 @@
                 transformer="script:transformFullText"
                 format="text"
                 onError="continue" >
+          <field column="Content-Type" meta="true" />
           <field column="text" />
         </entity>
       </entity>

@@ -238,25 +238,13 @@ class SolrWebService extends XmlWebService {
 		$result = $this->_makeRequest($url, $articleXml, 'POST');
 		if (is_null($result)) return false;
 
-		// Return the number of documents that were indexed.
-		$nodeList = $result->query('//response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
-		assert($nodeList->length == 1);
-		$resultNode = $nodeList->item(0);
-		assert(is_numeric($resultNode->textContent));
-		return ($resultNode->textContent == '1');
+		// Check whether the document was successfully indexed.
+		$docsProcessed = $this->_getDocumentsProcessed($result);
+		return ($docsProcessed == 1);
 	}
 
 	/**
 	 * (Re-)indexes the given journal in Solr.
-	 *
-	 * We use asynchronous indexing when re-indexing a journal.
-	 * This means that we transfer all meta-data to the solr
-	 * server at once and the server will then pull full text
-	 * files one-by-one.
-	 *
-	 * This is much faster than synchronous indexing and the
-	 * request returns immediately after preparing and transmitting
-	 * the (relatively small) meta-data package.
 	 *
 	 * @param $journal Journal The journal to be (re-)indexed.
 	 *
@@ -281,16 +269,15 @@ class SolrWebService extends XmlWebService {
 			$numIndexed++;
 		}
 
-		// Make an asynchronous POST request with all
-		// articles of the journal.
+		// Make an POST request with all articles of the journal.
 		$articleXml = XMLCustomWriter::getXml($articleDoc);
 		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
-		$result = $this->_makeRequest($url, $articleXml, 'POST', true);
+		$result = $this->_makeRequest($url, $articleXml, 'POST');
 
-		if ($result == true) {
-			return $numIndexed;
-		} else {
+		if (is_null($result)) {
 			return null;
+		} else {
+			return $this->_getDocumentsProcessed($result);
 		}
 	}
 
@@ -566,17 +553,12 @@ class SolrWebService extends XmlWebService {
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _lastError for more details about the error.
 	 */
-	function &_makeRequest($url, $params = array(), $method = 'GET', $async = false) {
+	function &_makeRequest($url, $params = array(), $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
 			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');
 		}
-		if ($async) {
-			$webServiceRequest->setAsync($async);
-			$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_STRING);
-		} else {
-			$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_DOM);
-		}
+		$this->setReturnType(XSL_TRANSFORMER_DOCTYPE_DOM);
 		$response = $this->call($webServiceRequest);
 		$nullValue = null;
 
@@ -587,20 +569,16 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Return the result.
-		if ($async) {
-			$result = $response;
-		} else {
-			// Did we get a 200OK response?
-			$status = $this->getLastResponseStatus();
-			if ($status !== WEBSERVICE_RESPONSE_OK) {
-				$this->_lastError = $status. ' - ' . $response->saveXML();
-				return $nullValue;
-			}
-
-			// Prepare an XPath object.
-			assert(is_a($response, 'DOMDocument'));
-			$result = new DOMXPath($response);
+		// Did we get a 200OK response?
+		$status = $this->getLastResponseStatus();
+		if ($status !== WEBSERVICE_RESPONSE_OK) {
+			$this->_lastError = $status. ' - ' . $response->saveXML();
+			return $nullValue;
 		}
+
+		// Prepare an XPath object.
+		assert(is_a($response, 'DOMDocument'));
+		$result = new DOMXPath($response);
 		return $result;
 	}
 
@@ -905,15 +883,13 @@ class SolrWebService extends XmlWebService {
 		$galleyList = null;
 		foreach ($galleys as $galley) { /* @var $galley ArticleGalley */
 			$locale = $galley->getLocale();
-			$mimetype = $galley->getFileType();
 			$galleyUrl = $router->url($request, $journal->getPath(), 'article', 'download', array(intval($article->getId()), intval($galley->getId())));
-			if (!empty($locale) && !empty($mimetype) && !empty($galleyUrl)) {
+			if (!empty($locale) && !empty($galleyUrl)) {
 				if (is_null($galleyList)) {
 					$galleyList =& XMLCustomWriter::createElement($articleDoc, 'galleyList');
 				}
 				$galleyNode =& XMLCustomWriter::createElement($articleDoc, 'galley');
 				XMLCustomWriter::setAttribute($galleyNode, 'locale', $locale);
-				XMLCustomWriter::setAttribute($galleyNode, 'mimetype', $mimetype);
 				XMLCustomWriter::setAttribute($galleyNode, 'fileName', $galleyUrl);
 				XMLCustomWriter::appendChild($galleyList, $galleyNode);
 			}
@@ -955,16 +931,14 @@ class SolrWebService extends XmlWebService {
 				$locale = 'unknown';
 			}
 
-			$mimetype = $suppFile->getFileType();
 			$suppFileUrl = $router->url($request, $journal->getPath(), 'article', 'downloadSuppFile', array(intval($article->getId()), intval($suppFile->getId())));
 
-			if (!empty($locale) && !empty($mimetype) && !empty($suppFileUrl)) {
+			if (!empty($locale) && !empty($suppFileUrl)) {
 				if (is_null($suppFileList)) {
 					$suppFileList =& XMLCustomWriter::createElement($articleDoc, 'suppFileList');
 				}
 				$suppFileNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile');
 				XMLCustomWriter::setAttribute($suppFileNode, 'locale', $locale);
-				XMLCustomWriter::setAttribute($suppFileNode, 'mimetype', $mimetype);
 				XMLCustomWriter::setAttribute($suppFileNode, 'fileName', $suppFileUrl);
 				XMLCustomWriter::appendChild($suppFileList, $suppFileNode);
 
@@ -1063,6 +1037,21 @@ class SolrWebService extends XmlWebService {
 
 		// Convert to UTC as understood by solr.
 		return gmdate('Y-m-d\TH:i:s\Z', $timestamp);
+	}
+
+	/**
+	 * Retrieve the number of indexed documents
+	 * from a DIH response XML
+	 * @param $result DOMXPath
+	 * @return integer
+	 */
+	function _getDocumentsProcessed($result) {
+		// Return the number of documents that were indexed.
+		$nodeList = $result->query('//response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
+		assert($nodeList->length == 1);
+		$resultNode = $nodeList->item(0);
+		assert(is_numeric($resultNode->textContent));
+		return (integer)$resultNode->textContent;
 	}
 }
 

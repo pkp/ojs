@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/functional/plugins/lucene/FunctionalLucenePluginRankingTest.php
+ * @file tests/functional/plugins/generic/lucene/FunctionalLucenePluginRankingTest.php
  *
  * Copyright (c) 2000-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -101,8 +101,6 @@ class FunctionalLucenePluginRankingTest extends FunctionalLucenePluginBaseTestCa
 	 *    WHEN I am doing a multi-journal search
 	 *    THEN I can order the result set by journal
 	 *         title.
-	 *
-	 * @group current
 	 */
 	function testResultOrdering() {
 		// Test ordering of a single-journal search.

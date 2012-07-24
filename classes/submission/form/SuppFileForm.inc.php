@@ -237,9 +237,6 @@ class SuppFileForm extends Form {
 				$articleSearchIndex->updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			}
 
-			// Index metadata
-			$articleSearchIndex->indexSuppFileMetadata($this->suppFile);
-
 			// Update existing supplementary file
 			$this->setSuppFileData($this->suppFile);
 			if ($this->getData('remoteURL')) {
@@ -270,6 +267,10 @@ class SuppFileForm extends Form {
 			$suppFileDao->insertSuppFile($this->suppFile);
 			$this->suppFileId = $this->suppFile->getId();
 		}
+
+		// Index updated metadata.
+		$articleSearchIndex->indexSuppFileMetadata($this->suppFile);
+
 		return $this->suppFileId;
 	}
 

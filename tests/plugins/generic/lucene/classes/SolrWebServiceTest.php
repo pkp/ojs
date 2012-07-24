@@ -98,7 +98,7 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Test result set ordering.
 		$testSearch = array(
-			'title' => '*'
+			'title' => 'lucene test'
 		);
 		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'authors', 'asc');
 		self::assertEquals(array(4, 3), array_values($scoredResults));
@@ -199,9 +199,9 @@ class SolrWebServiceTest extends PKPTestCase {
 	/**
 	 * @covers SolrWebService
 	 *
-	 * NB: We run this test last as journal indexing
-	 * is asynchronous and we don't know when we get
-	 * a consistent index state after this again.
+	 * NB: We run this test last so that we get
+	 * consistent test data in the index after
+	 * deleting in the prior tests.
 	 */
 	public function testIndexJournal() {
 		// We need a router for URL generation.
@@ -214,12 +214,15 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Generate a test journal.
 		$journal = new Journal();
-		$journal->setId('2');
-		$journal->setPath('lucene-test');
 
 		// Test indexing. The service returns the number of documents that
 		// were successfully processed.
-		self::assertNotNull($this->solrWebService->indexJournal($journal));
+		$journal->setId('1');
+		$journal->setPath('test');
+		self::assertGreaterThan(0, $this->solrWebService->indexJournal($journal));
+		$journal->setId('2');
+		$journal->setPath('lucene-test');
+		self::assertGreaterThan(1, $this->solrWebService->indexJournal($journal));
 	}
 
 

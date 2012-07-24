@@ -35,10 +35,10 @@
       <journalTitle locale="de_DE">Zeitschrift</journalTitle>
       <journalTitle locale="en_US">Journal</journalTitle>
     </journalTitleList>
-    <publicationDate>2012-03-15T16:45:00Z</publicationDate>
-    <issuePublicationDate>2012-03-15T15:30:00Z</issuePublicationDate>
+    <publicationDate>2012-03-15T19:45:00Z</publicationDate>
+    <issuePublicationDate>2012-03-15T18:30:00Z</issuePublicationDate>
     <galley-xml>
-      <![CDATA[<galleyList><galley locale="de_DE" mimetype="application/pdf" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/download/3/4"/><galley locale="en_US" mimetype="text/html" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/download/3/5"/></galleyList>]]>
+      <![CDATA[<galleyList><galley locale="de_DE" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/download/3/4"/><galley locale="en_US" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/download/3/5"/></galleyList>]]>
     </galley-xml>
     <suppFile-xml>
       <![CDATA[<suppFileList><suppFile locale="de_DE" mimetype="application/pdf" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/2"/><suppFile locale="unknown" mimetype="text/html" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/3"><title locale="de_DE">Titel</title><creator locale="de_DE">Autor</creator><subject locale="de_DE">Thema</subject><typeOther locale="de_DE">Sonstiger Typ</typeOther><description locale="de_DE">Beschreibung</description><source locale="de_DE">Quelle</source></suppFile></suppFileList>]]>

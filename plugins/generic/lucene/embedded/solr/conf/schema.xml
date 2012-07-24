@@ -143,7 +143,7 @@
     -->
   <uniqueKey>article_id</uniqueKey>
 
-  <!-- field for the QueryParser to use when an explicit fieldname is absent -->
+  <!-- Field for the QueryParser to use when an explicit fieldname is absent -->
   <defaultSearchField>article_id</defaultSearchField>
 
   <!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
