@@ -119,11 +119,11 @@
     <field name="article_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <dynamicField name="*_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
 
-    <!-- OJS locale support. -->
+    <!-- OJS locale support. We are using stored field for more efficient highlighting (and easier debugging). -->
     <dynamicField name="*_en_US" type="text_en" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_de_DE" type="text_de" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_es_ES" type="text_es" indexed="true"  stored="true" multiValued="false" />
-    <dynamicField name="*_txt" type="text" indexed="true" stored="false" multiValued="false" />
+    <dynamicField name="*_txt" type="text" indexed="true" stored="true" multiValued="false" />
 
     <!-- Dynamic field definitions for special field types. -->
     <dynamicField name="*_dt" type="tdate" indexed="true" stored="false" multiValued="false" />

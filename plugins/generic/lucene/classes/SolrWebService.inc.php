@@ -365,6 +365,34 @@ class SolrWebService extends XmlWebService {
 		$cache->flush();
 	}
 
+	/**
+	 * Retrieve a document directly from the index
+	 * (for testing/debugging purposes).
+	 *
+	 * @param $articleId
+	 *
+	 * @return array The document fields.
+	 */
+	function getArticleFromIndex($articleId) {
+		// Make a request to the luke request handler.
+		$url = $this->_getCoreAdminUrl() . 'luke';
+		$params = array('id' => $this->_instId . '-' . $articleId);
+		$response = $this->_makeRequest($url, $params);
+		if (!is_a($response, 'DOMXPath')) return false;
+
+		// Retrieve all fields from the response.
+		$doc = array();
+		$nodeList = $response->query('//response/lst[@name="doc"]/doc[@name="solr"]/str');
+		foreach ($nodeList as $node) {
+			// Get the field name.
+			$fieldName = $node->attributes->getNamedItem('name')->value;
+			$fieldValue = $node->textContent;
+			$doc[$fieldName] = $fieldValue;
+		}
+
+		return $doc;
+	}
+
 
 	//
 	// Implement cache functions.

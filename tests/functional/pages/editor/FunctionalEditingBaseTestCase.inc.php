@@ -1,0 +1,271 @@
+<?php
+
+/**
+ * @file tests/functional/pages/editor/FunctionalEditingBaseTestCase.inc.php
+ *
+ * Copyright (c) 2000-2011 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class FunctionalLucenePluginBaseTestCase
+ * @ingroup tests_functional_pages_editor
+ * @see SubmissionEditHandler
+ *
+ * @brief Integration/Functional test for the OJS editing
+ * process (base class with common functionality).
+ */
+
+
+import('lib.pkp.tests.WebTestCase');
+import('classes.file.ArticleFileManager');
+
+class FunctionalEditingBaseTestCase extends WebTestCase {
+
+	protected $editorBasePath;
+
+
+	//
+	// Implement protected template methods from WebTestCase
+	//
+	/**
+	 * @see WebTestCase::getAffectedTables()
+	 */
+	protected function getAffectedTables() {
+		return array(
+			'articles', 'article_settings', 'article_files',
+			'article_galleys', 'article_galley_settings',
+			'article_supplementary_files', 'article_supp_file_settings',
+			'authors', 'author_settings', 'edit_assignments',
+			'event_log', 'event_log_settings', 'issues',
+			'published_articles', 'signoffs', 'notifications',
+			'sessions'
+		);
+	}
+
+	/**
+	 * @see WebTestCase::setUp()
+	 */
+	protected function setUp() {
+		parent::setUp();
+		$this->editorBasePath = $this->baseUrl . '/index.php/lucene-test/editor/';
+	}
+
+
+	//
+	// Protected helper methods
+	//
+	/**
+	 * Submit a new test article.
+	 * @param $title string
+	 * @return integer the id of the new article
+	 */
+	protected function submitArticle($title) {
+		// We need to be logged in to submit an article.
+		$this->logIn();
+		$submissionPage = $this->baseUrl . '/index.php/lucene-test/author/submit/';
+
+		//
+		// First submission page.
+		//
+		$this->verifyAndOpen($submissionPage . '1');
+
+		// Accept submission conditions.
+		$checkboxId = 1;
+		while ($this->isElementPresent("checklist-$checkboxId")) {
+			$this->check("checklist-$checkboxId");
+			$checkboxId++;
+		}
+
+		// Submit first submission page.
+		$this->clickAndWait('css=input.defaultButton');
+
+		//
+		// Second submission page.
+		//
+		$this->waitForLocation($submissionPage . '2');
+
+		// We should now have the article ID in the URL.
+		$url = $this->getLocation();
+		$matches = null;
+		String::regexp_match_get('/articleId=([0-9]+)/', $url, $matches);
+		self::assertTrue(count($matches) == 2);
+		$articleId = $matches[1];
+		self::assertTrue(is_numeric($articleId));
+		$articleId = (integer)$articleId;
+
+		// Submit the second submission page.
+		$this->clickAndWait('css=input.defaultButton');
+		$this->chooseOkOnNextConfirmation();
+
+		//
+		// Third submission page.
+		//
+		$this->waitForLocation($submissionPage . '3');
+
+		// Fill in article metadata.
+		$this->type('authors-0-firstName', 'Arthur');
+		$this->type('authors-0-lastName', 'McAutomatic');
+		$this->type('title', $title);
+		$this->type('dom=document.getElementById("abstract_ifr").contentDocument.body', $title . ' abstract'); // TinyMCE hack.
+
+		// Submit metadata.
+		$this->clickAndWait('css=input.defaultButton');
+
+		//
+		// Fourth and fifth submission page.
+		//
+		$this->waitForLocation($submissionPage . '4');
+		// Do not upload any supplementary file and continue.
+		$this->clickAndWait('css=input.defaultButton');
+		$this->waitForLocation($submissionPage . '5');
+		// Confirm the submission.
+		$this->clickAndWait('css=input.defaultButton');
+
+		return $articleId;
+	}
+
+	/**
+	 * Publish the given article
+	 * @param $articleId integer
+	 */
+	protected function publishArticle($articleId) {
+		// Editing an article requires us to be logged in.
+		$this->logIn();
+
+		// Go to the summary page of the article.
+		$summaryPage = $this->editorBasePath . 'submission/' . $articleId;
+		$this->verifyAndOpen($summaryPage);
+
+		// If no editor is assigned: Add ourselves as an editor.
+		if ($this->isElementPresent('link=Add Self')) {
+			$this->clickAndWait('link=Add Self');
+		}
+
+		// Go to the editing page of the article
+		$editingPage = $this->editorBasePath . 'submissionEditing/' . $articleId;
+		$this->verifyAndOpen($editingPage);
+
+		$issueId = $this->getSelectedValue('issueId');
+		if (!is_numeric($issueId) || $issueId < 0) {
+			// Assign the article to issue id 2 (which is
+			// "Vol 1" of the lucene-test journal). This will
+			// implicitly publish the article.
+			$this->select('issueId', 'value=2');
+			$this->clickAndWait('//div[@id="scheduling"]//tr[1]//input[@type="submit"]');
+		} else {
+			// (Re-)Publish the article with the current date.
+			$this->clickAndWait('//div[@id="scheduling"]//tr[2]//input[@type="submit"]');
+		}
+	}
+
+	/**
+	 * Unpublish the given article
+	 * @param $articleId integer
+	 */
+	protected function unpublishArticle($articleId) {
+		// Editing an article requires us to be logged in.
+		$this->logIn();
+
+		// Go to the editing page of the article
+		$editingPage = $this->editorBasePath . 'submissionEditing/' . $articleId;
+		$this->verifyAndOpen($editingPage);
+
+		$issueId = $this->getSelectedValue('issueId');
+		if (is_numeric($issueId) && $issueId > 0) {
+			// Select "To be assigned"
+			$this->select('issueId', 'value=');
+			$this->clickAndWait('//div[@id="scheduling"]//tr[1]//input[@type="submit"]');
+		}
+	}
+
+	/**
+	 * Edit the meta-data of an article.
+	 * @param $articleId integer
+	 * @param $newTitle string
+	 */
+	protected function editMetadata($articleId, $newTitle) {
+		// Editing an article requires us to be logged in.
+		$this->logIn();
+
+		// Go to the meta-data editing page.
+		$metadataForm = $this->editorBasePath . 'viewMetadata/' . $articleId;
+		$this->verifyAndOpen($metadataForm);
+
+		// Input the new title.
+		$this->type('title', $newTitle);
+
+		// Save the meta-data.
+		$this->clickAndWait('css=input.defaultButton');
+	}
+
+	/**
+	 * Upload the given file as a galley.
+	 * @param $articleId integer
+	 * @param $galleyFile string
+	 * @param $fileLabel string
+	 */
+	protected function uploadGalley($articleId, $galleyFile, $fileLabel) {
+		// Open the editing page.
+		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $articleId;
+		$this->verifyAndOpen($submissionEditingPage);
+
+		// Select galley upload radio option.
+		$this->click('layoutFileTypeGalley');
+
+		// Set the galley file.
+		$this->attachFile('name=layoutFile', "file://$galleyFile");
+
+		// Click the upload button.
+		$this->clickAndWait('css=#layout form input.button');
+		$this->waitForLocation('index.php/lucene-test/editor/editGalley');
+
+		// Type the file label.
+		$this->type('name=label', strtoupper($fileLabel));
+
+		// Save the galley.
+		$this->clickAndWait('css=input.defaultButton');
+	}
+
+	/**
+	 * Upload the given file as a supplementary file.
+	 * @param $articleId integer
+	 * @param $suppFile string
+	 * @param $title string
+	 */
+	protected function uploadSuppFile($articleId, $suppFile, $title) {
+		// Open the editing page.
+		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $articleId;
+		$this->verifyAndOpen($submissionEditingPage);
+
+		// Select supp file upload radio option.
+		$this->click('layoutFileTypeSupp');
+
+		// Set the supp file.
+		$this->attachFile('name=layoutFile', "file://$suppFile");
+
+		// Click the upload button.
+		$this->clickAndWait('css=#layout form input.button');
+		$this->waitForLocation('index.php/lucene-test/editor/editSuppFile');
+
+		// Type the file label.
+		$this->type('title', $title);
+
+		// Set a language.
+		$this->type('language', 'en');
+
+		// Save the file.
+		$this->clickAndWait('css=input.defaultButton');
+	}
+
+	/**
+	 * Delete the given article
+	 * @param $articleId integer
+	 */
+	protected function deleteArticle($articleId) {
+		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager->deleteArticleTree();
+
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao->deleteArticleById($articleId);
+	}
+}
+?>
