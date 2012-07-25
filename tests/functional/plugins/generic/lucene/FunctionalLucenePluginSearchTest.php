@@ -186,19 +186,19 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	 *         but {not article}.
 	 *
 	 * EXAMPLES:
-	 *   GUI locale | search phrase                | article | not article
-	 *   =================================================================
-	 *   en_US      | chicken wings                | A       | B, C, D       // implicit AND
-	 *   en_US      | chicken AND wings            | A       | B, C, D       // explicit conjunction
-	 *   en_US      | chicken OR wings             | A, B, C | D             // disjunction
-	 *   en_US      | chicken NOT wings            | B       | A, C, D       // negation
-	 *   en_US      | ((wings OR egg) NOT chicken) | C, D    | A, B          // bracketed search phrase
-	 *   en_US      | chicken NICHT wings          |         | A, B, C, D    // search syntax localization
-	 *   de_DE      | chicken NICHT wings          | B       | A, C, D       //      - " -
-	 *   en_US      | "chicken wings"              |         | A, B, C, D    // phrase search
-	 *   en_US      | "chicken have wings"         | A       | B, C, D       //      - " -
-	 *   en_US      | chicken*                     | A, B, D | C             // wildcard search
-	 *   en_US      | ChiCkeN Wings                | A       | B, C, D       // case insensitive search
+	 *   GUI locale | search phrase                 | article | not article
+	 *   ==================================================================
+	 *   en_US      | chicken wings                 | A       | B, C, D       // implicit AND
+	 *   en_US      | chicken AND wings             | A       | B, C, D       // explicit conjunction
+	 *   en_US      | chicken OR wings              | A, B, C | D             // disjunction
+	 *   en_US      | chicken NOT wings             | B       | A, C, D       // negation
+	 *   en_US      | ((wings OR eggs) NOT chicken) | C, D    | A, B          // bracketed search phrase
+	 *   en_US      | chicken NICHT wings           |         | A, B, C, D    // search syntax localization
+	 *   de_DE      | chicken NICHT wings           | B       | A, C, D       //      - " -
+	 *   en_US      | "chicken wings"               |         | A, B, C, D    // phrase search
+	 *   en_US      | "chicken have wings"          | A       | B, C, D       //      - " -
+	 *   en_US      | chicken*                      | A, B, D | C             // wildcard search
+	 *   en_US      | ChiCkeN Wings                 | A       | B, C, D       // case insensitive search
 	 */
 	public function testSearchSyntax() {
 		// Set up the examples.
@@ -207,7 +207,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 			array('en_US', 'chicken AND wings', 'A', 'BCD'),
 			array('en_US', 'chicken OR wings', 'ABC', 'D'),
 			array('en_US', 'chicken NOT wings', 'B', 'ACD'),
-			array('en_US', '((wings OR egg) NOT chicken)', 'CD', 'AB'),
+			array('en_US', '((wings OR eggs) NOT chicken)', 'CD', 'AB'),
 			array('en_US', 'chicken NICHT wings', '', 'ABCD'),
 			array('de_DE', 'chicken NICHT wings', 'B', 'ACD'),
 			array('en_US', '"chicken wings"', '', 'ABCD'),
