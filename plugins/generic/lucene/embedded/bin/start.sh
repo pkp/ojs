@@ -51,7 +51,7 @@ if [ -z "$TMP" ]; then
 fi
 JAVA_OPTIONS="$JAVA_OPTIONS -Djava.io.tmpdir=$TMP"
 
-java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF &>>$OJS_FILES/lucene/solr-java.log &
+java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF >>$OJS_FILES/lucene/solr-java.log 2>&1 &
 
 # Remember the PID of the process we just started.
 SOLR_PID=$!

@@ -47,9 +47,12 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 			// Select the locale.
 			$selectedValue = $this->getSelectedValue('name=locale');
 			if ($selectedValue != $locale) {
-					$this->select('name=locale', 'value=' . $locale);
-					$this->waitForLocation($testJournal);
+				$this->selectAndWait('name=locale', 'value=' . $locale);
 			}
+
+			// Hack to work around timing problems in phpunit 3.4...
+			$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="query"]');
+			$this->waitForElementPresent('name=searchField');
 
 			// Enter the search phrase into the simple search field.
 			$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchPhrase);

@@ -94,7 +94,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 
 		// Submit the second submission page.
 		$this->clickAndWait('css=input.defaultButton');
-		$this->chooseOkOnNextConfirmation();
+		$this->waitForConfirmation('Are you sure you wish to continue');
 
 		//
 		// Third submission page.
@@ -105,7 +105,14 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->type('authors-0-firstName', 'Arthur');
 		$this->type('authors-0-lastName', 'McAutomatic');
 		$this->type('title', $title);
-		$this->type('dom=document.getElementById("abstract_ifr").contentDocument.body', $title . ' abstract'); // TinyMCE hack.
+		$mceEditor = 'dom=document.getElementById("abstract_ifr").contentDocument.body';
+		$this->verifyElementPresent($mceEditor);
+		if ($this->verified()) {
+			$this->type('dom=document.getElementById("abstract_ifr").contentDocument.body', $title . ' abstract'); // TinyMCE hack.
+		} else {
+			$this->type('abstract', $title . ' abstract');
+		}
+
 
 		// Submit metadata.
 		$this->clickAndWait('css=input.defaultButton');

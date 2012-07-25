@@ -236,6 +236,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $this->_articleId;
 		$this->verifyAndOpen($submissionEditingPage);
 		$this->clickAndWait('//a[contains(@href, "deleteGalley")]');
+		$this->waitForConfirmation('Are you sure');
 
 		// Check that the galley is no longer indexed.
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
@@ -257,6 +258,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $this->_articleId;
 		$this->verifyAndOpen($submissionEditingPage);
 		$this->clickAndWait('//a[contains(@href, "deleteSuppFile")]');
+		$this->waitForConfirmation('Are you sure');
 
 		// Check that the supp file is no longer indexed.
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);

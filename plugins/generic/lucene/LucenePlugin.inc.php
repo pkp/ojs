@@ -297,13 +297,18 @@ class LucenePlugin extends GenericPlugin {
 		$journals =& $journalDao->getJournals();
 		while (!$journals->eof()) {
 			$journal =& $journals->next();
-			$numIndexed = 0;
 
 			if ($log) echo "LucenePlugin: Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
-
 			$numIndexed = $this->_solrWebService->indexJournal($journal);
-
-			if ($log) echo $numIndexed, " articles indexed\n";
+			if (is_null($numIndexed)) {
+				if ($log) {
+					echo "error\n";
+				} else {
+					// TODO: Return a notification to the user.
+				}
+			} else {
+				if ($log) echo "$numIndexed article(s) indexed\n";
+			}
 			unset($journal);
 		}
 		return true;
