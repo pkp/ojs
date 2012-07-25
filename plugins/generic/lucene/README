@@ -1,0 +1,366 @@
+Welcome to the OJS Lucene/Solr Plug-In
+--------------------------------------
+
+This README file contains important information with respect to the correct and
+secure installation of the OJS Lucene/Solr plug-in. Please make sure you read it
+in full before enabling the plug-in.
+
+While most of the code of this plug-in is published under the usual OJS license
+terms, some configuration file code is based on files from the solr and jetty
+distributions. These projects are governed by the Apache License 2.0. We
+therefore included a copy of this license in the root directory of this plug-in,
+see LICENSE-APACHE-2.0.txt.
+
+For more details please visit the jetty and solr web sites:
+- <http://www.eclipse.org/jetty/>
+- <https://lucene.apache.org/solr/>
+
+
+Should I use the Lucene/Solr Plug-In?
+-------------------------------------
+
+The first decision to take is whether to use the plug-in at all. The main
+advantages of the plug-in's search implementation over the default OJS search
+are:
+
+- Support for multi-lingual search. The plug-in provides language-aware
+  stemming of search phrases. You can define language-specific stopword and
+  synonym lists. And languages like Chinese, Japanese or Corean will be
+  supported. 
+
+- Additional search features: The plug-in provides additional search features
+  like result set ordering and improved ranking. You'll also be able to use all
+  features of the Lucene query parser, see the Lucene documentation for details.
+
+- Faster indexing: The plug-in uses the Tika document parser in the background
+  which is extremely fast. You'll recognize the difference when adding galleys
+  to an article or when having to rebuild the index.
+  
+- Additional document formats: The Tika document parser is able to convert a
+  large number of documents. Most notably it supports ePub format which is not
+  otherwise supported by the default OJS search implementation. You'll find a
+  current list of all supported document formats on the Tika website.
+  
+Caution: The default OJS search installation supports parsing of PostScript
+documents. If you have articles that contain information in PostScript documents
+and you do not use any alternative galley format that can be understood by Tika
+then please do not use this plug-in. Tika is not able to parse PostScript
+documents.
+
+
+Decisions to take before enabling the Plug-In
+---------------------------------------------
+
+This plug-in is an adapter between OJS and the solr search server. It requires a
+working solr server somewhere on your network.
+
+You should have a basic understanding of how the solr search server works before
+taking a deployment decision. It is in no way necessary to understand solr
+internals but it would be useful to understand solr's basic architecture and
+how it interoperates with applications.
+
+This plug-in can be deployed in two quite different ways:
+1) with an embedded solr server
+2) with a remote solr server
+
+In embedded server mode, the solr search server will run on the same server as
+OJS itself. If you have only a single OJS installation on your server then
+embedded server mode is almost certainly what you want. It will be very easy to
+install and configure and you don't have to worry about any solr configuration
+as we provide a default configuration that should work for you unchanged.
+
+If you have multiple OJS installations on a single server then you still
+may run in embedded server mode but please make sure that you only start a
+single embedded solr instance per server. To do so you should choose one of your
+OJS installations and always run the start/stop scripts (see below) from just
+that installation. If you follow the installation procedure for the embedded
+server below for just one installation then you're on the right track.
+
+If you are a larger OJS provider and you have many OJS installations on one or
+several servers then central server mode is probably better suited to your
+needs. In central server mode you'll be able to install a single solr instance
+somewhere on your network and use it for all your OJS installations. This will
+make your deployment much easier to monitor and administer.
+
+If you deploy in central server mode then you'll have to understand solr a bit
+better. You'll have to be able to install a running solr instance with one or
+more cores on your own. You can still use our solr schema.xml and data import
+configuration file unchanged and you'll probably have to make minimal or no
+changes to our default solrconfig.xml and solr.xml configuration files. But you
+should be able to understand the solrconfig.xml and solr.xml and check whether
+it suits your specific needs. You should also be able to set up a firewall and
+write a web server configuration as solr itself comes with no security checks at
+all.
+
+If you deploy in central server mode you'll also have to decide which journals
+you want to collocate. You have to keep in mind that you only can search across
+OJS installations if you collocate articles from various installations in one
+core. On the other hand you should not collocate documents from various
+installations if you don't want to search across these documents. Collocating
+documents can have negative effects on ranking and may require additional
+maintenance effort (e.g. when having to rebuild an index from scratch after
+some solr server downtime, etc.). So please make sure you know which OJS
+installations should be bundled in which core before you start deploying your
+solr server.
+
+As a final preliminary step you'll have to make sure that your server meets the
+necessary installation requirements to install solr. This is the OJS server if
+you decide to deploy in embedded server mode or the central search server if you
+deploy in central server mode:
+
+- Operating System: Any operating system that supports J2SE 1.5 or greater
+  (this includes all recent versions of Linux and Windows).
+
+- Disk Space: The disk your solr server will reside on should have at least
+  150 MB of free disk space for the solr/jetty installation files. The disc your
+  index will reside on should have enough free disk to accommodate at least
+  twice the space occupied by all your galleys and supplementary files in the
+  files folders of your OJS installations. In embedded mode the index will be
+  installed into the "files" directory of your OJS installation. So this
+  directory should reside on a disk with sufficient free space. 
+
+- RAM: Memory requirements depend a lot on the size of your index. If you have
+  several GB of article galley files and you want best search performance then
+  you'll need a few GB of RAM for the solr server and for the operating system's
+  file cache, too. Smaller installations require much less memory, though. Try
+  starting the embedded server with default settings and only get back to it if
+  you experience performance problems. In most cases, default settings will
+  probably work for you. If the Java VM runs out of memory then augment the
+  corresponding memory parameters in the start script (embedded/bin/start.sh).
+  If that doesn't help and you see a lot of swapping occur on your machine then
+  you'll probably have to install more physical RAM.
+
+- PHP configuration: The minimum PHP version for this plug-in is 5.0.0. The
+  plug-in relies on the PHP curl. Please activate it before enabling the
+  plug-in.
+
+
+Embedded Server Mode: Installation and Configuration
+----------------------------------------------------
+
+As we do not want to unnecessarily blow up our default OJS distribution and want
+to make sure that you always install the latest release of solr, we do not
+distribute the solr/jetty java binaries with this plug-in. You'll have to
+download and install them before you can use the plug-in. The following
+paragraphs will explain how to do this. This will transform your OJS server into
+a solr search server.
+
+1) secure your server (IMPORTANT):
+   While we tried to make sure that our solr configuration be secure by default,
+   solr has NOT been designed to be directly exposed to the internet. Please
+   make sure that you have a firewall in place that denies public access to IP
+   port 8983. If for some reason you do not have a firewall in place right now,
+   then make sure you change the default solr admin password immediately:
+   
+   - Edit plugins/generic/lucene/embedded/etc/realm.properties
+   
+   - Change the line "admin: ojsojs,content_updater,admin" to
+     "admin: xxxxxxx,content_updater,admin" where xxxxxxx is to be replaced with
+     a password you choose.
+
+2) install java:
+   You'll need a working installation of the Java 2 Platform, Standard Edition
+   (J2SE) Runtime Environment, Version 1.5 or higher. If you are on Linux then
+   install a J2SE compliant Java package. If you are on Windows you may get the
+   latest J2SE version from http://java.com/en/download/index.jsp.
+
+3) Download the Jetty and solr binaries:
+
+   - Jetty: Get the latest Jetty 6 binary from http://dist.codehaus.org/jetty/
+     and unzip it into plugins/generic/lucene/lib in your OJS application
+     directory.
+
+     If you are on Linux this would be something like:
+        #> cd plugins/generic/lucene/lib
+        #> wget http://dist.codehaus.org/jetty/jetty-6.1.26/jetty-6.1.26.zip
+        #> unzip jetty-6.1.26.zip
+
+     (You may have to install the unzip tool first...)
+
+     This should create a folder jetty-6.1.26 in your lib directory. If you are
+     on Linux then please create a symlink pointing to this directory:
+        #> ln -s jetty-6.1.26.zip jetty
+
+     If you are on Windows then download and unzip the file to the lib folder
+     using your favorite browser and zip tool. Then rename the jetty folder to
+     "jetty".
+
+   - solr: Get the latest solr binary from an Apache download mirror and unzip
+     it into plugins/generic/lucene/lib in your OJS application directory.
+
+     If you are on Linux this would be something like:
+        #> cd plugins/generic/lucene/lib
+        #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.0/
+                                                        apache-solr-3.6.0.zip
+        #> unzip apache-solr-3.6.0.zip
+
+     This should create a folder apache-solr-3.5.0 in your lib directory. If you
+     are on Linux then please create a symlink pointing to this directory:
+        #> ln -s apache-solr-3.5.0 solr
+
+     On Windows download and unzip the file to the lib folder. Then rename the
+     solr folder to "solr".
+
+4) Try starting the solr server for the first time:
+   Go to the directory plugins/generic/lucene/embedded/bin and execute the
+   start script there. On Linux this would be:
+       #> cd plugins/generic/lucene/embedded/bin
+       #> ./start.sh
+       
+   You should receive the message "Solr started." and executing:
+       #> ps -ef | grep solr
+   you should see the java process of your running solr instance.
+   
+5) Now open up your web browser and log into your OJS journal manager account.
+
+   Go to "Journal Manager -> System Plugins -> Generic Plugins" and enable the
+   "Lucene Search Plugin".
+   
+   In embedded mode you do not have to configure anything in the plug-in unless
+   you changed the password in step 1).
+   
+   In this case go to the plug-ins setting page and configure the password
+   accordingly.
+   
+6) Build your lucene index:
+
+   Back to the command line go to the tools directory and execute the script to
+   rebuild your index:
+      #> cd tools
+      #> php rebuildSearchIndex.php
+      
+   You should see output similar to this:
+      # LucenePlugin: Clearing index ... done
+      # LucenePlugin: Indexing "lucene-test" ... 412 articles indexed
+      # LucenePlugin: Indexing "test" ... 536 articles indexed
+   
+   Please make sure that the output really includes the "LucenePlugin" string.
+   Otherwise your plug-in was not correctly activated.
+   
+7) Execute some searches
+
+   Go to your OJS web frontend and test whether searching with solr works as
+   expected.
+   
+
+Central Server Mode: Installation and Configuration
+----------------------------------------------------
+
+Solr can be installed and deployed in many different ways and there is no one
+best deployment for large OJS providers. You'll have to understand solr
+sufficiently well to be able to install and configure a solr server before you
+should try to use it with OJS.
+
+We assume that you have this prior knowledge and will only describe the steps
+specific to the OJS Lucene/solr plug-in:
+
+1) Please decide which journals you would like to collocate in which cores and
+   make a list of required cores.
+
+2) Install jetty and solr binaries without configuring anything yet. You can
+   always use the embedded installation from the plug-in as a guideline but
+   you'll have to make your own choices with respect to the directory structure
+   and integration of solr/jetty with your operating system. If you already use
+   tomcat on your server you can deploy solr without having to install jetty.
+   Your OS distribution may also provide installation packages for solr and
+   jetty, so use your own judgement to establish a basic installation adequate
+   to your server environemnt. 
+   
+3) As a configuration baseline you can copy the files in "plugins/generic/
+   lucene/embedded/etc" and "plugins/generic/lucene/embedded/solr" to the
+   corresponding places in your jetty and solr installation, respectively.
+   
+   You'll probably have to change paths and security configuration in jetty.xml,
+   webdefault.xml and solrconfig.xml.
+   
+   In most cases you can leave dih-ojs.xml and schema.xml unchanged. You may
+   want to have a look at the analysis and query chains in schema.xml if you
+   have specific analysis requirements. Be careful, though, not to change any
+   field definitions as this may have unexpected effects and break the OJS/solr
+   indexing protocol unless you also edit dih-ojs.xml.
+   
+   Sooner or later you'll probably want to edit the stopword lists and you may
+   want to insert synonym lists or exchange the stemmers.
+
+   In any case you'll have to look at the solr core configuration in solr.xml
+   and you'll have to configure the corresponding search handlers in
+   solrconfig.xml.
+   
+   You may also want to change the BASIC authentication password in
+   realm.properties. But please do not rely on BASIC authentication alone to
+   secure your solr server.
+   
+   The start and stop scripts can be adapted to work in your environment.
+   If you are using OS packages then these packages probably already provide
+   init scripts so that you do not need start/stop scripts at all.
+   
+4) Once you have a working solr configuration you'll have to enable the solr
+   plug-in in all OJS installations that you want to connect to your solr
+   server. To do so, open up your web browser and log into your OJS journal
+   manager account.
+
+   Go to "Journal Manager -> System Plugins -> Generic Plugins" and enable the
+   "Lucene Search Plugin".
+   
+5) Go to the plug-in's setting page and enter the URL of the search handler
+   corresponding to the core that you want to index the journal handler. These
+   are the search handlers you configured in solrconfig.xml.
+   
+   Do not forget to change the BASIC HTTP authentication credentials if you
+   changed them for your solr server.
+   
+   Finally you'll have to enter an installation ID that is unique within the
+   core that you'll index that OJS installation in. If you index journals from
+   three different OJS installations in one core then you'll need three
+   distinct installation IDs.
+   
+6) Build your lucene index:
+
+   For each installation separately you'll have to drop to the command line,
+   go to the tools directory and execute the script to rebuild your index for
+   that installation:
+      #> cd tools
+      #> php rebuildSearchIndex.php
+      
+   You should see output similar to this:
+      # LucenePlugin: Clearing index ... done
+      # LucenePlugin: Indexing "lucene-test" ... 412 articles indexed
+      # LucenePlugin: Indexing "test" ... 536 articles indexed
+   
+   Please make sure that the output really includes the "LucenePlugin" string.
+   Otherwise your plug-in was not correctly activated.
+   
+7) Execute some searches
+
+   Go to the OJS web frontend of each installation and test whether searching
+   with solr works as expected.
+
+
+Rebuilding your index
+---------------------
+
+Under rare circumstances it may happen that your index becomes outdated or
+corrupt.
+
+If, for example, your solr server is offline while editors make changes to a
+journal then your solr index will be out of sync afterwards.
+
+It also very rarely happens that solr encounters an error while updating its
+index. In that case you'll find an error message in your solr log. In the
+embedded scenario this log can be found in "files/lucene/solr-java.log".
+
+In these cases you'll have to rebuild your search index so that searches can
+be reliably executed again.
+
+To do so please go to the command line, change to the OJS tools directory and
+execute the script to rebuild the index. On Linux this would be something like:
+   #> cd tools
+   #> php rebuildSearchIndex.php
+   
+
+What else do I have to do to keep my index up to date?
+------------------------------------------------------
+
+Once correctly installed and running, the Solr/Lucene plug-in does not require
+any further maintenance. Just monitor performance and resource usage of the solr
+server as you would for any other process.

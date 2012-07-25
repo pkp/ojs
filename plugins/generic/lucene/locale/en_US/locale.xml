@@ -16,7 +16,7 @@
 	<message key="plugins.generic.lucene.settings">Settings</message>
 	<message key="plugins.generic.lucene.settings.description"><![CDATA[
 		<p>The Lucene plug-in acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.</p>
-		<p><b>Please make sure you read the plug-in's README file (plugins/generic/lucene/README.txt) before you try to change the default configuration.</b></p>
+		<p><b>Please make sure you read the plug-in's README file (plugins/generic/lucene/README) before you try to change the default configuration.</b></p>
 		<p>If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.</p>
 	]]></message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
