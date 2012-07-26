@@ -48,9 +48,7 @@ class EmbeddedServerTest extends PKPTestCase {
 		    // If the server is running we stop it, then start it.
 
 			// Stop the server.
-			self::assertTrue($this->embeddedServer->stop());
-			// Give the server time to actually go down.
-			while($this->embeddedServer->isRunning()) sleep(1);
+			self::assertTrue($this->embeddedServer->stopAndWait());
 
 			// Restart the server.
 			self::assertTrue($this->embeddedServer->start());

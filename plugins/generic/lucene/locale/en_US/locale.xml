@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Apache Lucene search plugin localization strings for the en_US (U.S. English) locale.
+  * OJS solr/lucene search plugin localization strings for the en_US (U.S. English) locale.
   -->
  
 <locale name="en_US" full_name="U.S. English">
@@ -42,4 +42,8 @@
 	<message key="plugins.generic.lucene.results.orderBy.article">Article Title</message>
 	<message key="plugins.generic.lucene.results.orderDir.asc">Ascending</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Descending</message>
+	
+	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
+	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
 </locale>

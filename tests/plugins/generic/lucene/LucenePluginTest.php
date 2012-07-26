@@ -16,17 +16,30 @@
 
 require_mock_env('env2'); // Required for mock app locale.
 
-import('lib.pkp.tests.PKPTestCase');
+import('lib.pkp.tests.DatabaseTestCase');
 import('lib.pkp.classes.core.PKPRouter');
+import('classes.article.Article');
 import('classes.journal.Journal');
 import('plugins.generic.lucene.LucenePlugin');
 import('plugins.generic.lucene.classes.SolrWebService');
+import('plugins.generic.lucene.classes.EmbeddedServer');
 
 
-class LucenePluginTest extends PKPTestCase {
+class LucenePluginTest extends DatabaseTestCase {
 
 	/** @var LucenePlugin */
 	private $lucenePlugin;
+
+
+	//
+	// Implementing protected template methods from DatabaseTestCase
+	//
+	/**
+	 * @see DatabaseTestCase::getAffectedTables()
+	 */
+	protected function getAffectedTables() {
+		return array('plugin_settings');
+	}
 
 
 	//
@@ -50,7 +63,10 @@ class LucenePluginTest extends PKPTestCase {
 		$_SERVER['REQUEST_METHOD'] = 'GET';
 		$request =& $application->getRequest();
 		if (is_null($request->getRouter())) {
-			$router = new PKPRouter();
+			$router = $this->getMock('PKPRouter', array('url'));
+			$router->expects($this->any())
+			       ->method('url')
+			       ->will($this->returnValue('http://test-url'));
 			$request->setRouter($router);
 		}
 		PluginRegistry::loadCategory('generic', true, 0);
@@ -123,6 +139,7 @@ class LucenePluginTest extends PKPTestCase {
 		$page = 1;
 		$itemsPerPage = 20;
 		$totalResults = null;
+		$error = null;
 		$orderBy = 'score';
 		$orderDir = false;
 
@@ -144,11 +161,78 @@ class LucenePluginTest extends PKPTestCase {
 			                  $this->equalTo($orderBy),
 			                  $this->equalTo($orderDir));
 			$this->lucenePlugin->_solrWebService = $webService;
+			unset($webService);
 
 			// Execute the test.
-			$params = array($journal, $testCase, $fromDate, null, 1, 20, &$totalResults);
+			$params = array($journal, $testCase, $fromDate, null, 1, 20, &$totalResults, &$error);
 			$this->lucenePlugin->callbackRetrieveResults($hook, $params);
 		}
+
+		// Test an error condition.
+		$webService = $this->getMock('SolrWebService', array('retrieveResults', 'getServiceMessage'), array(), '', false);
+		$webService->expects($this->once())
+		           ->method('retrieveResults')
+		           ->will($this->returnValue(null));
+		$webService->expects($this->any())
+		           ->method('getServiceMessage')
+		           ->will($this->returnValue('some error message'));
+		$this->lucenePlugin->_solrWebService = $webService;
+		$params = array($journal, array(null => 'test'), null, null, 1, 20, &$totalResults, &$error);
+		$this->assertEquals(array(), $this->lucenePlugin->callbackRetrieveResults($hook, $params));
+		$this->assertEquals('some error message', $error);
+	}
+
+	/**
+	 * @covers LucenePlugin
+	 */
+	public function testArticleIndexingProblem() {
+		// Make sure the embedded server is switched off.
+		$embeddedServer = new EmbeddedServer();
+		$this->assertTrue($embeddedServer->stopAndWait());
+
+		// Mock email templates.
+		$article = new Article();
+		$article->setId(3);
+		$article->setTitle('test article', 'en_US');
+		$journal = new Journal();
+		$journal->setId(2);
+		$constructorArgs = array(
+			$article,
+			'LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION',
+			null, null, $journal, true, true
+		);
+		import('classes.mail.ArticleMailTemplate');
+		$articleMail = $this->getMock('ArticleMailTemplate', array('send'), $constructorArgs); /* @var $articleMail ArticleMailTemplate */
+		$articleMail->expects($this->exactly(2))
+		            ->method('send')
+		            ->will($this->returnValue(true));
+		$this->lucenePlugin->setMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION', $articleMail);
+
+		// Reset the time of the last sent email.
+		$this->lucenePlugin->updateSetting(0, 'lastEmailTimestamp', 0);
+
+		// Trying to delete a document without the server running
+		// should trigger an email to the tech contact.
+		$params = array($articleId = 3, $type = null, $assocId = null);
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+
+		// Check the mail.
+		$this->assertEquals('[] Article Indexing Error', $articleMail->getSubject());
+		$this->assertContains('An indexing error occurred while indexing the article "test article" in the journal "lucene-test".', $articleMail->getBody());
+		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $articleMail->getRecipientString());
+		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $articleMail->getFromString());
+
+		// Call again to make sure that a second mail is not being sent.
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+
+		// Simulate that the last email is more than three hours ago.
+		$this->lucenePlugin->updateSetting(0, 'lastEmailTimestamp', time() - 60 * 60 * 4);
+
+		// This should trigger another email (see send() call count above).
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+
+		// Restart the embedded server.
+		$this->assertTrue($embeddedServer->start());
 	}
 }
 ?>

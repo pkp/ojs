@@ -37,8 +37,8 @@ class SolrWebService extends XmlWebService {
 	/** @var string The unique ID identifying this OJS installation to the solr server. */
 	var $_instId;
 
-	/** @var string A description of the last error that occured when calling the service. */
-	var $_lastError;
+	/** @var string A description of the last error or message that occured when calling the service. */
+	var $_serviceMessage = '';
 
 	/** @var FileCache A cache containing the available search fields. */
 	var $_fieldCache;
@@ -50,8 +50,6 @@ class SolrWebService extends XmlWebService {
 	 *  as a default.
 	 */
 	function SolrWebService($searchHandler, $username, $password, $instId) {
-		// FIXME: Should we validate the search handler URL?
-
 		parent::XmlWebService();
 
 		// Configure the web service.
@@ -71,6 +69,18 @@ class SolrWebService extends XmlWebService {
 		// Set the installation ID.
 		assert(is_string($instId) && !empty($instId));
 		$this->_instId = $instId;
+	}
+
+
+	//
+	// Getters and Setters
+	//
+	/**
+	 * Get the last service message.
+	 * @return string
+	 */
+	function getServiceMessage() {
+		return $this->_serviceMessage;
 	}
 
 
@@ -320,10 +330,7 @@ class SolrWebService extends XmlWebService {
 
 		// Did we get a response at all?
 		if (is_null($response)) {
-			return array(
-				'status' => SOLR_STATUS_OFFLINE,
-				'message' => $this->_lastError
-			);
+			return SOLR_STATUS_OFFLINE;
 		}
 
 		// Is the core online?
@@ -332,18 +339,12 @@ class SolrWebService extends XmlWebService {
 
 		// Check whether the core is active.
 		if ($nodeList->length != 1) {
-			return array(
-				'status' => SOLR_STATUS_OFFLINE,
-				'message' => 'The requested core "' . $this->_solrCore . '" was not found on the solr server. Is it online?' // FIXME: Translate.
-			);
+			$this->_serviceMessage = __('plugins.generic.lucene.error.coreNotFound', array('core' => $this->_solrCore));
+			return SOLR_STATUS_OFFLINE;
 		}
 
-		$result = array(
-			'status' => SOLR_STATUS_ONLINE,
-			'message' => 'Index with ' . $nodeList->item(0)->textContent . ' documents online.'
-		);
-
-		return $result;
+		$this->_serviceMessage = __('plugins.generic.lucene.message.indexOnline', array('numDocs' => $nodeList->item(0)->textContent));
+		return SOLR_STATUS_ONLINE;
 	}
 
 	/**
@@ -579,7 +580,7 @@ class SolrWebService extends XmlWebService {
 	 * @param $method string GET or POST
 	 *
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
-	 *  See _lastError for more details about the error.
+	 *  See _serviceMessage for more details about the error.
 	 */
 	function &_makeRequest($url, $params = array(), $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
@@ -592,7 +593,7 @@ class SolrWebService extends XmlWebService {
 
 		// Did we get a response at all?
 		if (!$response) {
-			$this->_lastError = 'Solr server not reachable. Is the solr server running? Does the configured search handler point to the right URL?'; // FIXME: Translate.
+			$this->_serviceMessage = __('plugins.generic.lucene.error.searchServiceOffline');
 			return $nullValue;
 		}
 
@@ -600,7 +601,7 @@ class SolrWebService extends XmlWebService {
 		// Did we get a 200OK response?
 		$status = $this->getLastResponseStatus();
 		if ($status !== WEBSERVICE_RESPONSE_OK) {
-			$this->_lastError = $status. ' - ' . $response->saveXML();
+			$this->_serviceMessage = $status. ' - ' . $response->saveXML();
 			return $nullValue;
 		}
 

@@ -32,5 +32,9 @@
 		<name>instId</name>
 		<value>localhost</value>
 	</setting>
+	<setting type="int">
+		<name>lastEmailTimestamp</name>
+		<value>0</value>
+	</setting>
 </plugin_settings>
 

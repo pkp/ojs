@@ -22,11 +22,53 @@ class LucenePlugin extends GenericPlugin {
 	/** @var SolrWebService */
 	var $_solrWebService;
 
+	/** @var array */
+	var $_mailTemplates = array();
+
+
 	//
 	// Constructor
 	//
 	function LucenePlugin() {
 		parent::GenericPlugin();
+	}
+
+
+	//
+	// Getters and Setters
+	//
+	/**
+	 * Set an alternative article mailer implementation.
+	 *
+	 * NB: Required to override the mailer
+	 * implementation for testing.
+	 *
+	 * @param $emailKey string
+	 * @param $mailTemplate MailTemplate
+	 */
+	function setMailTemplate($emailKey, &$mailTemplate) {
+		$this->_mailTemplates[$emailKey] =& $mailTemplate;
+	}
+
+	/**
+	 * Instantiate a MailTemplate
+	 *
+	 * @param $emailKey string
+	 * @param $journal Journal
+	 * @param $article Article
+	 */
+	function &getMailTemplate($emailKey, &$journal, $article = null) {
+		if (!isset($this->_mailTemplates[$emailKey])) {
+			if (is_a($article, 'Article')) {
+				import('classes.mail.ArticleMailTemplate');
+				$mailTemplate = new ArticleMailTemplate($article, $emailKey, null, null, $journal, true, true);
+			} else {
+				import('classes.mail.MailTemplate');
+				$mailTemplate = new MailTemplate($emailKey, null, null, $journal, true, true);
+			}
+			$this->_mailTemplates[$emailKey] =& $mailTemplate;
+		}
+		return $this->_mailTemplates[$emailKey];
 	}
 
 
@@ -82,6 +124,20 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function getInstallSitePluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * @see PKPPlugin::getInstallEmailTemplatesFile()
+	 */
+	function getInstallEmailTemplatesFile() {
+		return ($this->getPluginPath() . '/emailTemplates.xml');
+	}
+
+	/**
+	 * @see PKPPlugin::getInstallEmailTemplateDataFile()
+	 */
+	function getInstallEmailTemplateDataFile() {
+		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
 	}
 
 	/**
@@ -159,7 +215,8 @@ class LucenePlugin extends GenericPlugin {
 
 		// Unpack the parameters.
 		list($journal, $search, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
-		$totalResults =& $params[6];
+		$totalResults =& $params[6]; // need to use reference
+		$error =& $params[7]; // need to use reference
 
 		// Translate the search to the Lucene search fields.
 		$searchTypes = array(
@@ -202,10 +259,16 @@ class LucenePlugin extends GenericPlugin {
 		$orderDir = ($orderDir == 'asc' ? true : false);
 
 		// Call the solr web service.
-		return $this->_solrWebService->retrieveResults(
+		$result =& $this->_solrWebService->retrieveResults(
 			$journal, $translatedSearch, $totalResults, $page, $itemsPerPage,
 			$fromDate, $toDate, $orderBy, $orderDir
 		);
+		if (is_null($result)) {
+			$result = array();
+			$error = $this->_solrWebService->getServiceMessage();
+			$this->_informTechAdmin(null, $journal, false);
+		}
+		return $result;
 	}
 
 
@@ -220,7 +283,7 @@ class LucenePlugin extends GenericPlugin {
 		list($articleId, $type, $assocId) = $params;
 		$success = $this->_indexArticleId($articleId);
 		if (!$success) {
-			// TODO: Return a notification to the user.
+			$this->_informTechAdmin($articleId);
 		}
 		return true;
 	}
@@ -233,7 +296,7 @@ class LucenePlugin extends GenericPlugin {
 		list($article) = $params; /* @var $article Article */
 		$success = $this->_indexArticle($article);
 		if (!$success) {
-			// TODO: Return a notification to the user.
+			$this->_informTechAdmin($article->getId());
 		}
 		return true;
 	}
@@ -246,7 +309,7 @@ class LucenePlugin extends GenericPlugin {
 		list($article) = $params; /* @var $article Article */
 		$success = $this->_indexArticle($article);
 		if (!$success) {
-			// TODO: Return a notification to the user.
+			$this->_informTechAdmin($article->getId());
 		}
 		return true;
 	}
@@ -260,7 +323,7 @@ class LucenePlugin extends GenericPlugin {
 		if (!is_a($suppFile, 'SuppFile')) return true;
 		$success = $this->_indexArticleId($suppFile->getArticleId());
 		if (!$success) {
-			// TODO: Return a notification to the user.
+			$this->_informTechAdmin($suppFile->getArticleId());
 		}
 		return true;
 	}
@@ -273,7 +336,7 @@ class LucenePlugin extends GenericPlugin {
 		list($articleId, $type, $fileId) = $params;
 		$success = $this->_indexArticleId($articleId);
 		if (!$success) {
-			// TODO: Return a notification to the user.
+			$this->_informTechAdmin($articleId);
 		}
 		return true;
 	}
@@ -300,16 +363,18 @@ class LucenePlugin extends GenericPlugin {
 
 			if ($log) echo "LucenePlugin: Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
 			$numIndexed = $this->_solrWebService->indexJournal($journal);
+			unset($journal);
+
 			if (is_null($numIndexed)) {
 				if ($log) {
 					echo "error\n";
 				} else {
-					// TODO: Return a notification to the user.
+					$this->_informTechAdmin(null, $journal);
 				}
+				return false;
 			} else {
 				if ($log) echo "$numIndexed article(s) indexed\n";
 			}
-			unset($journal);
 		}
 		return true;
 	}
@@ -384,7 +449,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// We need the article's journal to index the article.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal =& $journalDao->getJournal($publishedArticle->getJournalId());
+		$journal =& $journalDao->getById($publishedArticle->getJournalId());
 		if(!is_a($journal, 'Journal')) return false;
 
 		// We cannot re-index article files only. We have
@@ -504,6 +569,63 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		return array($orderBy, $orderDir);
+	}
+
+	/**
+	 * Send an email to the tech admin of the
+	 * journal warning that an indexing error
+	 * has occured.
+	 * @param $articleId integer
+	 * @param $journal Journal
+	 * @param $isIndexingProblem boolean True, if this is a problem with an
+	 *  index update, otherwise indicates a problem during a search request.
+	 */
+	function _informTechAdmin($articleId, $journal = null, $isIndexingProblem = true) {
+		// Avoid spam.
+		$lastEmailTimstamp = (integer)$this->getSetting(0, 'lastEmailTimestamp');
+		$threeHours = 60 * 60 * 3;
+		$now = time();
+		if ($now - $lastEmailTimstamp < $threeHours) return;
+		$this->updateSetting(0, 'lastEmailTimestamp', $now);
+
+		// Retrieve the article.
+		$article = null;
+		if (is_numeric($articleId)) {
+			$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+			$article =& $articleDao->getArticle($articleId);
+		}
+
+		// Retrieve the article's journal
+		if (is_a($article, 'Article')) {
+			// This must be an article indexing problem.
+			assert($isIndexingProblem);
+
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journal =& $journalDao->getById($article->getJournalId());
+
+			// Instantiate an article mail template.
+			$mail =& $this->getMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION', $journal, $article);
+		} else {
+			// Instantiate a mail template.
+			if ($isIndexingProblem) {
+				// This must be a journal indexing problem.
+				assert(is_a($journal, 'Journal'));
+				$mail =& $this->getMailTemplate('LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION', $journal);
+			} else {
+				$mail =& $this->getMailTemplate('LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION', $journal);
+			}
+		}
+
+		// Assign parameters.
+		$request =& PKPApplication::getRequest();
+		$site =& $request->getSite();
+		$mail->assignParams(array('siteName' => $site->getLocalizedTitle()));
+
+		// Send to the site's tech contact.
+		$mail->addRecipient($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
+
+		// Send the mail.
+		$mail->send($request);
 	}
 }
 ?>

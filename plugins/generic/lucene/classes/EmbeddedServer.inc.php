@@ -28,6 +28,11 @@ class EmbeddedServer {
 	/**
 	 * Start the embedded server.
 	 *
+	 * NB: The web service can take quite a bit longer than the
+	 * process to start. So if you want to be sure you should
+	 * instantiate SolrWebService and wait until it's status is
+	 * SOLR_STATUS_ONLINE.
+	 *
 	 * @return boolean true if the server started, otherwise false.
 	 */
 	function start() {
@@ -43,6 +48,24 @@ class EmbeddedServer {
 	function stop() {
 		// Run the stop command.
 		return $this->_runScript('stop.sh');
+	}
+
+	/**
+	 * Stop the embedded server and wait until it actually exited.
+	 *
+	 * @return boolean true if the server stopped, otherwise false.
+	 */
+	function stopAndWait() {
+		$running = $this->isRunning();
+		if ($running) {
+			// Stop the server.
+			$success = $this->stop();
+			if (!$success) return false;
+
+			// Give the server time to actually go down.
+			while($this->isRunning()) sleep(1);
+		}
+		return true;
 	}
 
 	/**

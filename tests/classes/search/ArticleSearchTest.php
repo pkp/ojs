@@ -13,6 +13,7 @@
  * @brief Test class for the ArticleSearch class
  */
 
+require_mock_env('env1');
 
 import('lib.pkp.tests.PKPTestCase');
 import('lib.pkp.classes.core.ArrayItemIterator');
@@ -78,13 +79,15 @@ class ArticleSearchTest extends PKPTestCase {
 		$journal = new Journal();
 		$keywords = array(null => 'test');
 		$articleSearch = new ArticleSearch();
-		$searchResult = $articleSearch->retrieveResults($journal, $keywords);
+		$error = '';
+		$searchResult = $articleSearch->retrieveResults($journal, $keywords, $error);
 
 		// Test whether the result from the mocked DAOs is being returned.
 		self::assertInstanceOf('ItemIterator', $searchResult);
 		$firstResult = $searchResult->next();
 		self::assertArrayHasKey('article', $firstResult);
 		self::assertEquals(ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
+		self::assertEquals('', $error);
 	}
 
 	/**
@@ -107,21 +110,24 @@ class ArticleSearchTest extends PKPTestCase {
 
 		$testFromDate = date('Y-m-d H:i:s', strtotime('2011-03-15 00:00:00'));
 		$testToDate = date('Y-m-d H:i:s', strtotime('2012-03-15 18:30:00'));
+		$error = '';
 
 		foreach($testCases as $testCase) {
 			// Test a simple search with the simulated callback.
 			$journal = new Journal();
 			$keywords = $testCase;
 			$articleSearch = new ArticleSearch();
-			$searchResult = $articleSearch->retrieveResults($journal, $keywords, $testFromDate, $testToDate);
+			$searchResult = $articleSearch->retrieveResults($journal, $keywords, $error, $testFromDate, $testToDate);
 
 			// Check the parameters passed into the callback.
 			$expectedPage = 1;
 			$expectedItemsPerPage = 20;
 			$expectedTotalResults = 3;
+			$expectedError = '';
 			$expectedParams = array(
 				$journal, $testCase, $testFromDate, $testToDate,
-				$expectedPage, $expectedItemsPerPage, $expectedTotalResults
+				$expectedPage, $expectedItemsPerPage, $expectedTotalResults,
+				$expectedError
 			);
 			self::assertEquals($expectedParams, $this->_retrieveResultsParams);
 
@@ -140,6 +146,7 @@ class ArticleSearchTest extends PKPTestCase {
 			$firstResult = $searchResult->next();
 			self::assertArrayHasKey('article', $firstResult);
 			self::assertEquals(ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
+			self::assertEquals('', $error);
 		}
 
 		// Remove the test hook.

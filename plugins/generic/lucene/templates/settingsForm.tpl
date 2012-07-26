@@ -23,7 +23,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="searchEndpoint" required="true" key="plugins.generic.lucene.settings.searchEndpoint"}</td>
-		<td width="80%" class="value"><input type="text" name="searchEndpoint" id="searchEndpoint" value="{$searchEndpoint|escape}" size="45" maxlength="25" class="textField" />
+		<td width="80%" class="value"><input type="text" name="searchEndpoint" id="searchEndpoint" value="{$searchEndpoint|escape}" size="45" maxlength="255" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.searchEndpointInstructions"}</span>
 		</td>
@@ -37,7 +37,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="password" required="true" key="plugins.generic.lucene.settings.password"}</td>
-		<td width="80%" class="value"><input type="text" name="password" id="password" value="{$password|escape}" size="15" maxlength="25" class="textField" />
+		<td width="80%" class="value"><input type="password" name="password" id="password" value="{$password|escape}" size="15" maxlength="25" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.passwordInstructions"}</span>
 		</td>

@@ -227,8 +227,12 @@ class ArticleSearch {
 	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
+	 *
 	 * Note that this function is also called externally to fetch
 	 * results for the title index, and possibly elsewhere.
+	 *
+	 * @return array An array with the articles, published articles,
+	 *  issue, journal, section and the issue availability.
 	 */
 	function &formatResults(&$results) {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
@@ -300,11 +304,16 @@ class ArticleSearch {
 	 * $keywords[null] = array('Matches', 'All', 'Fields');
 	 * @param $journal object The journal to search
 	 * @param $keywords array List of keywords
+	 * @param $error string a reference to a variable that will
+	 *  contain an error message if the search service produces
+	 *  an error.
 	 * @param $publishedFrom object Search-from date
 	 * @param $publishedTo object Search-to date
 	 * @param $rangeInfo Information on the range of results to return
+	 * @return VirtualArrayIterator An iterator with one entry per retrieved
+	 *  article containing the article, published article, issue, journal, etc.
 	 */
-	function &retrieveResults(&$journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
+	function &retrieveResults(&$journal, &$keywords, &$error, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
 		// Pagination
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$page = $rangeInfo->getPage();
@@ -318,13 +327,12 @@ class ArticleSearch {
 		$totalResults = null;
 		$results =& HookRegistry::call(
 			'ArticleSearch::retrieveResults',
-			array(&$journal, &$keywords, $publishedFrom, $publishedTo, $page, $itemsPerPage, &$totalResults)
+			array(&$journal, &$keywords, $publishedFrom, $publishedTo, $page, $itemsPerPage, &$totalResults, &$error)
 		);
 
-		// If no search plug-in is activated or the search
-		// plug-in encountered an error then fall back to the
+		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
-		if ($results === false || is_null($results)) {
+		if ($results === false) {
 			// Parse the query.
 			foreach($keywords as $searchType => $query) {
 				$keywords[$searchType] = ArticleSearch::_parseQuery($query);

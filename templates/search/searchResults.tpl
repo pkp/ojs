@@ -117,7 +117,13 @@ function ensureKeyword() {
 {/iterate}
 {if $results->wasEmpty()}
 <tr>
-<td colspan="{$numCols|escape}" class="nodata">{translate key="search.noResults"}</td>
+	<td colspan="{$numCols|escape}" class="nodata">
+		{if $error}
+			{$error|escape}
+		{else}
+			{translate key="search.noResults"}
+		{/if}
+	</td>
 </tr>
 <tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
 {else}

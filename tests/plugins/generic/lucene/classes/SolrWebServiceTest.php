@@ -136,18 +136,13 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Test the status message.
 		self::assertEquals(SOLR_STATUS_ONLINE, $result['status']);
-		self::assertRegExp('/Index with [0-9]+ documents online./', $result['message']);
+		self::assertEquals('##plugins.generic.lucene.message.indexOnline##', $result['message']);
 
 		// Stop the server, then test the status again.
 		$embeddedServer->stop();
 		while($embeddedServer->isRunning()) sleep(1);
-		self::assertEquals(
-			array(
-				'status' => SOLR_STATUS_OFFLINE,
-				'message' => 'Solr server not reachable. Is the solr server running? Does the configured search handler point to the right URL?'
-			),
-			$this->solrWebService->getServerStatus()
-		);
+		self::assertEquals(SOLR_STATUS_OFFLINE, $this->solrWebService->getServerStatus());
+		self::assertEquals('##plugins.generic.lucene.error.searchServiceOffline##', $this->solrWebService->getServiceMessage());
 
 		// Restart the server.
 		$result = $this->_startServer($embeddedServer);
@@ -241,8 +236,11 @@ class SolrWebServiceTest extends PKPTestCase {
 		do {
 			sleep(1);
 			$result = $this->solrWebService->getServerStatus();
-		} while ($result['status'] != SOLR_STATUS_ONLINE);
-		return $result;
+		} while ($result != SOLR_STATUS_ONLINE);
+		return array(
+			'status' => $result,
+			'message' => $this->solrWebService->getServiceMessage()
+		);
 	}
 
 	/**
