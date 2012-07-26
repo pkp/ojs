@@ -112,7 +112,7 @@
 	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Дані про вибірку дослідження у статті "{$articleTitle}" у випуску "{$issueTitle}" представлені з локалізацією "{$locale}", що не підтримується цим журналом.</message>
 	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Дані про спонсора у статті "{$articleTitle}" у випуску "{$issueTitle}" представлені з локалізацією "{$locale}", що не підтримується цим журналом.</message>
 
-	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Дані про конфлікт інтересів для автора "{$authorFullName}" у статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Дані про конфлікт інтересів для автора "{$authorFullName}" у статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Біограпфічна довідка для автора "{$authorFullName}" у статті "{$articleTitle}" у випуску "{$issueTitle}" представлена у локалізації "{$locale}", що не підтримується цим журналом.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Дані про місце роботи автора "{$authorFullName}" у статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</message>
 
