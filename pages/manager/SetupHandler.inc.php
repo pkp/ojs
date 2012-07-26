@@ -190,7 +190,7 @@ class SetupHandler extends ManagerHandler {
 
 				case 4:
 					$router =& $request->getRouter();
-					$journal =& $router->getContext(&$request);
+					$journal =& $router->getContext($request);
 					$templates = $journal->getSetting('templates');
 					import('classes.file.JournalFileManager');
 					$journalFileManager = new JournalFileManager($journal);
