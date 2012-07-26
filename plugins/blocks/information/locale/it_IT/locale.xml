@@ -14,6 +14,6 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.block.information.displayName">Modulo di informazioni</message>
-	<message key="plugins.block.information.description">Questo plugin inserisce nel menu laterale il link a informazioni sulla rivista.</message>
+	<message key="plugins.block.information.description">Questo plugin inserisce nella barra laterale i link a informazioni sulla rivista.</message>
 	<message key="plugins.block.information.link">Informazioni</message>
 </locale>

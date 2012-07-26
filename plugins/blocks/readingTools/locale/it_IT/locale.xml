@@ -12,15 +12,15 @@
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.block.readingTools.displayName">Strumenti di lettura</message>
-	<message key="plugins.block.readingTools.description">Questo plugin mostra nella sidebar un blocco contenente gli strumenti di lettura.</message>
+	<message key="plugins.block.readingTools.description">Questo plugin mostra nella barra laterale un blocco contenente gli strumenti di lettura.</message>
 	<message key="plugins.block.readingTools.title">Strumenti di lettura</message>
 	<message key="plugins.block.readingTools.aboutTheAuthor">Informazioni sull'autore</message>
 	<message key="plugins.block.readingTools.aboutTheAuthors">Informazioni sugli autori</message>
 	<message key="plugins.block.readingTools.articleTools">Strumenti per l'articolo</message>
 	<message key="plugins.block.readingTools.emailThisArticle">Invia questo articolo per email</message>
-	<message key="plugins.block.readingTools.loginRequired">E' necessario il login</message>
+	<message key="plugins.block.readingTools.loginRequired">È necessario autenticarsi</message>
 	<message key="plugins.block.readingTools.printThisArticle">Stampa questo articolo</message>
 	<message key="plugins.block.readingTools.postComment">Invia un commento</message>
 </locale>

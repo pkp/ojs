@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2009 Andrea Marchitelli - CILEA
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT (Italian) locale.
+  *
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.gateways.iPhoneGateway.displayName">Plugin per il gateway iPhone</message>
+	<message key="plugins.gateways.iPhoneGateway.description"><![CDATA[Questo plugin espone in XML i dati della rivista per permettere la comunicazione con app per iPhone . <strong>N.B. Abilitare questo plugin espone a rischi di sicurezza, perché fornisce liberamente accesso alla rivista in formato XML.</strong>]]></message>
+	<message key="plugins.gateways.iPhoneGateway.errors.errorMessage">Impossibile esportare i dati della rivista. Il plugin iPhone Gateway plugin deve essere abilitato e bisogna inserire nella URL l'id della rivista che si vuole esportare.</message>
+</locale>

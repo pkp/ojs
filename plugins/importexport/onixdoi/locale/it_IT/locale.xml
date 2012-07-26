@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id: locale.xml,v 1.3.2.1 2009/04/08 19:43:21 asmecher Exp $
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.onixdoi.displayName">Onix XML Export Plugin</message>
+	<message key="plugins.importexport.onixdoi.description">Esporta i metadati degli articoli in formato xml Onix.</message>
+	
+	<message key="plugins.importexport.onixdoi.export">Esporta i dati</message>
+	<message key="plugins.importexport.onixdoi.export.issues">Esporta il fascicolo</message>
+	<message key="plugins.importexport.onixdoi.export.selectIssue">Seleziona i fascicoli da esportare.</message>
+	<message key="plugins.importexport.onixdoi.export.articles">Esporta Articoli</message>
+	<message key="plugins.importexport.onixdoi.export.selectArticle">Seleziona gli articoli da esportare.</message>
+	<message key="plugins.importexport.onixdoi.articles.date">Data di pubblicazione</message>
+	<message key="plugins.importexport.onixdoi.articles.number">N. di articoli</message>
+		<message key="plugins.importexport.onixdoi.cliUsage"><![CDATA[Uso: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.onixdoi.cliError">ERRORE:</message>
+
+	<message key="plugins.importexport.onixdoi.export.error.issueNotFound">Non esiste corrispondenza per lo specifico ID di fasciolo "{$issueId}".</message>
+	<message key="plugins.importexport.onixdoi.export.error.articleNotFound">Non esiste corrispondenza per lo specifico ID di articolo "{$articleId}".</message>
+
+	<message key="plugins.importexport.onixdoi.errors.noDOIprefix">Per usare questo plugin, nel setup del journal deve essere specificato un prefisso DOI valido.</message>
+</locale>

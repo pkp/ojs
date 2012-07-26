@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.OAIMetadata.marc.displayName">MARC Metadata Format</message>
 	<message key="plugins.OAIMetadata.marc.description">Struttura i metadati in maniera confacente al formato MARC.</message>
 </locale>

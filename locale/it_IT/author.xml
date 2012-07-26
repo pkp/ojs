@@ -34,31 +34,31 @@
 	<message key="author.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
 	<message key="author.submit.notAccepting">In questo momento la rivista non accetta nessuna proposta.</message>
 	<message key="author.submit.requestWaiver">Richiedi un'esenzione</message>
-	<message key="author.submit.qualityForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questo articolo.</message>
+	<message key="author.submit.qualityForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta.</message>
 	<message key="author.submit.addReasonsForWaiver">Utilizza la casella di commento sotto per specificare i motivi della richiesta di esonero dal pagamento.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Invia la versione corretta</message>
 	<message key="author.submissions.proofreadingCorrections">Correzioni sulle bozze</message>
-	<message key="author.submissions.confirmDelete">Siete sicuri di voler rimuovere questa submission incompleta?</message>
+	<message key="author.submissions.confirmDelete">Sei sicuro di cancellare questa proposta incompleta?</message>
 	<message key="author.submissions.viewStatus">Vedi lo stato</message>
 	<message key="author.submissions.noSubmissions">Nessuna proposta.</message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stai incontrando difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza.]]></message>
 	<message key="author.submit.journalSection">Sezione della rivista</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Seleziona la sezione appropriata per questa  proposta (Vedi Policy delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Scegli la sezione più adatta alla tua proposta (Vedi le politiche delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
 	<message key="author.submit.selectSection">Scegli una sezione...</message>
-	<message key="author.submit.submissionChecklist">Controllo della proposta</message>
+	<message key="author.submit.submissionChecklist">Lista di controllo della proposta</message>
 	<message key="author.submit.submissionChecklistDescription">Gli autori, prima di passare alla fase successiva, devono indicare con una spunta se la loro proposta risponde a ognuno dei requisiti indicati.</message>
 	<message key="author.submit.verifyChecklist">Assicurati di aver spuntato tutte le voci della lista prima di continuare</message>
 	<message key="author.submit.copyrightNoticeAgree">Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devi accettare i termini della nota di Copyright prima di continuare.</message>
 	<message key="author.submit.commentsForEditor">Commenti per l'Editor</message>
 	<message key="author.submit.comments">Inserisci il testo (opzionale)</message>
-	<message key="author.submit.form.sectionRequired">Seleziona la sezione appropriata per il tuo contributo.</message>
+	<message key="author.submit.form.sectionRequired">Devi scegliere la sezione per il tuo contributo.</message>
 	<message key="author.submit.privacyStatement">Tutela della privacy</message>
 	<message key="author.submit.reorderInstructions">Ordina gli autori nel modo in cui vuoi che appaiano sulla pubblicazione.</message>
 	<message key="author.submit.selectPrincipalContact">Contatto di corrispondenza con la redazione.</message>
 	<message key="author.submit.addAuthor">Aggiungi un autore</message>
 	<message key="author.submit.deleteAuthor">Cancella autore</message>
-	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la submission; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
+	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la proposta; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Organizzazioni di supporto</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Indica le organizzazioni che hanno finanziato o supportato il lavoro presentato.</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche del campione della ricerca.</message>
@@ -69,16 +69,16 @@
 	<message key="author.submit.form.titleRequired">Inserisci il titolo del contributo.</message>
 	<message key="author.submit.form.abstractRequired">Inserisci l'abstract del contributo.</message>
 	<message key="author.submit.submissionFile">File del contributo</message>
-	<message key="author.submit.uploadSubmissionFile">Invia il file del contributo</message>
+	<message key="author.submit.uploadSubmissionFile">Carica il file del contributo</message>
 	<message key="author.submit.replaceSubmissionFile">Sostituisci il file del contributo</message>
 	<message key="author.submit.noSubmissionFile">Non hai caricato alcun file.</message>
 	<message key="author.submit.noSubmissionConfirm">Sei sicuro di voler continuare senza caricare il file del contributo?</message>
 	<message key="author.submit.supplementaryFilesInstructions">Questo passo facoltativo permette di aggiungere ulteriori file a una proposta. I file, che possono essere in qualsiasi formato, potrebbero includere (a) strumenti di ricerca, (b) un insieme di dati, che rispettino i termini dell'etica di ricerca e di studio della rivista (c) risorse che altrimenti non sarebbero disponibili ai lettori, (d) immagini e tabelle che non possono essere integrate nel testo stesso, o altri materiali che si aggiungono al lavoro.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Clicca Salva per caricare il file (in seguito si potranno caricare file aggiuntivi).</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Clicca Salva per caricare il file (in seguito si potranno caricare file supplementari).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Sei sicuro di voler continuare senza caricare il file aggiuntivo che hai scelto?</message>
 	<message key="author.submit.noSupplementaryFiles">Non è stato aggiunto nessun file supplementare per questa proposta.</message>
 	<message key="author.submit.backToSupplementaryFiles">Torna ai file supplementari</message>
-	<message key="author.submit.confirmDeleteSuppFile">Siete sicuri di voler cancellare questo file supplementare?</message>
+	<message key="author.submit.confirmDeleteSuppFile">Sei sicuro di voler cancellare questo file supplementare?</message>
 	<message key="author.submit.uploadSuppFile">Carica un  file aggiuntivo</message>
 	<message key="author.submit.addSupplementaryFile">Inserisci un file aggiuntivo</message>
 	<message key="author.submit.editSupplementaryFile">Modifica un file aggiuntivo</message>
@@ -106,25 +106,25 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">Inserisci una descrizione.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Esiste già l'identificazione del file pubblico supplementare.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identificatore pubblico del file supplementare</message>
-	<message key="author.submit.confirmationDescription">Per inviare il tuo lavoro a {$journalTitle} clicca "Completa la proposta". L'autore che hai indicato per la corrispondenza con la Redazione riceverà una notifica via email e potrà controllare, effettuando il log in al sito web della rivista, lo stato della proposta nel processo editoriale. Grazie per il tuo interessamento a pubblicare con {$journalTitle}</message>
+	<message key="author.submit.confirmationDescription">Per inviare il tuo lavoro a {$journalTitle} clicca  il tasto "Completa la proposta". L'autore che hai indicato per la corrispondenza con la Redazione riceverà una notifica via email e potrà controllare, effettuando il log in al sito web della rivista, lo stato di avanzamento della proposta nel processo editoriale. Grazie per il tuo interessamento a pubblicare con {$journalTitle}</message>
 	<message key="author.submit.noFiles">Non hai caricato alcun file per questa proposta.</message>
 	<message key="author.submit.filesSummary">Riepilogo dei file</message>
 	<message key="author.submit.finishSubmission">Completa la proposta</message>
 	<message key="author.submit.submissionComplete">Invio della proposta completato. Grazie per l'interesse che dimostri nel voler pubblicare su {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Se questa submission &#x00E8; in un formato pronto per la pubblicazione senza ulteriori processi di review, edit, o layout, pu&#x00F2; essere messa direttamente nel'ultima fase della coda di editing <a href="{$expediteUrl}" class="action">Cliccando qui</a>. (Nota: solo gli editor hanno questa possibilit&#x00E0; per le loro submission.)]]></message>
+	<message key="author.submit.expedite"><![CDATA[Se questa proposta &#x00E8; in un formato pronto per la pubblicazione senza ulteriori processi di revisione, editing, o impaginazione, pu&#x00F2; essere messa direttamente nel'ultima fase della coda di lavorazione <a href="{$expediteUrl}" class="action">Cliccando qui</a>. (Nota: solo gli editor hanno questa possibilit&#x00E0; per i loro contributi.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Carica la versione dell'autore</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">File dell'autore</message>
 	<message key="author.submit.authorSubmitLoginMessage">E' necessario un account utente per inviare proposte a questa rivista. Questo permette ai nostri editor di seguire le tue submission e contattarti quando lo stato della tua proposta cambia, o se sono necessarie ulteriori informazioni da parte tua.</message>
-	<message key="author.submissions.queuedReviewSubsequent">In revisione: {$round} tornata</message>
-	<message key="author.submissions.queuedReviewRevisions">In revisione: Richieste revisioni</message>
-	<message key="author.submissions.queuedEditingCopyedit">In Editing: Richiesto copyediting</message>
-	<message key="author.submissions.queuedEditingProofread">In Editing: Richiesta correzione di bozze</message>
+	<message key="author.submissions.queuedReviewSubsequent">In revisione: {$round} round</message>
+	<message key="author.submissions.queuedReviewRevisions">In revisione: Richieste modifiche</message>
+	<message key="author.submissions.queuedEditingCopyedit">In lavorazione: Richiesto copyediting</message>
+	<message key="author.submissions.queuedEditingProofread">In lavorazione: Richiesta correzione di bozze</message>
 	<message key="author.submit.howToSubmit"><![CDATA[Sei in difficolt&#224;? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza ({$supportPhone}).]]></message>
 	<message key="author.submit.reorder">Riordina i nomi degli autori</message>
 	<message key="author.submit.form.wordCountAlert">Hai superato il numero massimo di parole previsto per l'abstract degli articoli da pubblicare in questa sezione.</message>
 	<message key="author.submit.mustEnterWaiverReason">Se stai chiedendo un esonero, devi indicarne il motivo.</message>
-	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
-	<message key="author.submit.submissionLocale">Lingua della submission</message>
-	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta submission in diverse lingue. Seleziona la lingua della submission dal men&#249; a tendina.]]></message>
+	<message key="author.submit.form.localeRequired">Seleziona laa lingua per la proposta.</message>
+	<message key="author.submit.submissionLocale">Lingua della proposta</message>
+	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta contributi in diverse lingue. Seleziona la lingua della proposta dal men&#249; a tendina.]]></message>
 </locale>

@@ -14,7 +14,7 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.block.user.displayName">Modulo dell'utente</message>
-	<message key="plugins.block.user.description">Questo plugin inserisce nel menu laterale gli strumenti per l'account dell'utente (es. login, logout, link al profilo, ecc).</message>
+	<message key="plugins.block.user.description">Questo plugin inserisce nella barra laterale strumenti di gestione dell'account dell'utente (es. login, logout, link al profilo, ecc).</message>
 	<message key="plugins.block.user.loggedInAs">Benvenuto,</message>
 	<message key="plugins.block.user.myJournals">Le mie riviste</message>
 	<message key="plugins.block.user.myProfile">Il mio profilo</message>

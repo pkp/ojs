@@ -12,7 +12,7 @@
   * $Id: locale.xml,v 1.2 2009/10/14 04:06:09 michael Exp $
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Feed esterni</message>

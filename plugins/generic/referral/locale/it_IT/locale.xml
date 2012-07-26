@@ -12,7 +12,7 @@
   * $Id: locale.xml,v 1.4 2009/04/08 19:54:42 asmecher Exp $
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.referral.name">Referral</message>
 	<message key="plugins.generic.referral.description">Questo plugin tiene traccia delle URL che referenziano l'articolo (cioè, da quale URL esterna arrivano i lettori), permettendo agli autori di mantenete e potenzialmente pubblicare una lista delle URL che citano un articolo</message>
 	<message key="plugins.generic.referral.editReferral">Modifica il Refback</message>
