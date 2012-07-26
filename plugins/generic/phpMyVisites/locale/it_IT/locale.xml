@@ -28,5 +28,5 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Codice del profilo del sito</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[In phpMyVisites, clica su Administration->Modify site. Il numero del profilo del sito è visualizzato dopo il nome del profilo del tuo sito.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Inserisci il codice del profilo del sito.</message>
-
+	<message key="plugins.generic.phpmv.about.world.year">Visite al sito della rivista per anno</message>
 </locale>

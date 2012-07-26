@@ -13,6 +13,6 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 Metadata Format</message>
-	<message key="plugins.OAIMetadata.marcxml.description">Struttura i metadati in maniera confacente al formato MARC21.</message>
+	<message key="plugins.oaiMetadata.dc.displayName">DC Metadata Format</message>
+	<message key="plugins.oaiMetadata.dc.description">Struttura i metadati in maniera confacente al formato DC.</message>
 </locale>

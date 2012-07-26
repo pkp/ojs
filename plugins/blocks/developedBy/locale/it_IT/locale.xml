@@ -14,5 +14,5 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.block.developedBy.displayName">Modulo "Sviluppato da"</message>
-	<message key="plugins.block.developedBy.description">Questo plugin fornisce un link "Sviluppato da" nel menu laterale.</message>
+	<message key="plugins.block.developedBy.description">Questo plugin crea un link "Sviluppato da" nel menu laterale.</message>
 </locale>

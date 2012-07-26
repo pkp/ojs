@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata Format</message>
 	<message key="plugins.oaiMetadata.nlm.description">Struttura i metadati secondo il formato NLM Journal Article</message>
 </locale>

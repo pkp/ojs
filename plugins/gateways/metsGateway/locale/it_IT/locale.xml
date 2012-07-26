@@ -21,6 +21,6 @@
 	<message key="plugins.gateways.metsGateway.settings.FContent">Utilizza la codifica base64 per il contenuto</message>
 	<message key="plugins.gateways.metsGateway.settings.FLocat">Utilizza l'URL del bitstream per il contenuto</message>
 	<message key="plugins.gateways.metsGateway.settings.organization">METS:attributo dell'organizzazione dell'elemento agente</message>
-	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Livello PREMIS di preservazione</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Livello di conservazione PREMIS</message>
 	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Esporta file supplementari</message>
 </locale>

@@ -15,6 +15,6 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin di autenticazione Shibolet</message>
+	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin di autenticazione Shibbolet</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Questo plugin è esteso a tutto il sito e viene abilitato nel file di configurazione di OJS.</message>
 </locale>
