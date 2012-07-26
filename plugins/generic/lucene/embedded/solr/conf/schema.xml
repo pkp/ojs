@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- TODO: OJS copyright remark -->
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin index schema default configuration.
+  * 
+  * NB: You may customize the index/query analyzer chains. Do not change the field
+  * configuration, though, as this will probably break the OJS/solr indexing or
+  * search protocol.
+  -->
 
 <schema name="ojs" version="1.0">
 

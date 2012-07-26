@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * dih-ojs.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin DataImportHandler default configuration.
+  * 
+  * NB: Independently of your deployment mode (embedded or central) you should
+  * not have to change this configuration file. Be aware that changes may break
+  * the OJS/solr communication protocol.
+  -->
 <dataConfig>
   <dataSource name="http-post" type="ContentStreamDataSource" />
   <dataSource name="field" type="FieldReaderDataSource" />

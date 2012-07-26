@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  * solrconfig.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin index solr default configuration.
+  * 
+  * NB: You may add and/or customize search handlers, index configuration, data
+  * directory. See detailed comments below.
+  -->
 
 <config>
   <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
@@ -10,6 +21,7 @@
   <lib dir="../dist/" regex="apache-solr-dataimporthandler-(extras-|)\d.*\.jar" />
   <lib dir="../contrib/extraction/lib" />
 
+  <!-- Default index configuration. You may customize these settings if required. -->
   <dataDir>${solr.data.dir:}</dataDir>
   <directoryFactory name="DirectoryFactory" 
                     class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
@@ -61,7 +73,7 @@
     <httpCaching never304="true" />
   </requestDispatcher>
 
-  <!-- OJS solr alternative spelling suggestion component -->
+  <!-- OJS solr alternative spelling suggestion component. Please do not change. -->
   <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
     <str name="queryAnalyzerFieldType">text_spell</str>
 
@@ -73,7 +85,13 @@
     </lst>
   </searchComponent>
 
-  <!-- OJS solr search interface -->
+  <!--
+  	Default OJS solr search interface.
+  	
+  	NB: You can customize this search interface, e.g. to improve ranking. But
+  	please be aware that some changes (e.g. removing/changing search components)
+  	can break the OJS/solr communication protocol.
+   -->
   <requestHandler name="/search" class="solr.StandardRequestHandler" default="true">
     <lst name="invariants">
       <str name="echoParams">explicit</str>
@@ -98,16 +116,16 @@
     </arr>
   </requestHandler>
 
-  <!-- OJS DataImportHandler request handler -->
+  <!-- OJS DataImportHandler request handler. Please do not change. -->
   <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">
     <lst name="defaults">
       <str name="config">dih-ojs.xml</str>
     </lst>
   </requestHandler>
 
-  <!-- XML update request handler (required for deletes) -->
+  <!-- XML update request handler. This is required for deletes, please do not change. -->
   <requestHandler name="/update" class="solr.XmlUpdateRequestHandler" />
 
-  <!-- Standard solr admin handlers -->
+  <!-- Standard solr admin handlers. Please do not change. -->
   <requestHandler name="/admin/" class="solr.admin.AdminHandlers" />
 </config>

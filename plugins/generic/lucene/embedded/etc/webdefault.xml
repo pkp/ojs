@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  * webdefault.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Parts of this file were reused from the solr example application and are
+  * goverened by the Apache License Version 2.0. See LICENSE-APACHE-2.0.txt in
+  * the plugin's root directory.
+  *
+  * OJS solr/lucene search plugin jetty default configuration.
+  * 
+  * NB: You may have to customize this file for a secure central server
+  * deployment.
+  -->
 
 <!-- ===================================================================== -->
 <!-- This file contains the default descriptor for web applications.       -->
