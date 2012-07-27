@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
 	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
-	<message key="author.submit.qualityForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>
+	<message key="author.submit.qualifyForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>
 	<message key="author.submit.addReasonsForWaiver">Veuillez utiliser la boîte de commentaires ci-dessous pour expliquer pourquoi vous devriez être exempté des frais.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Télécharger le fichier révisé</message>
 	<message key="author.submissions.proofreadingCorrections">Corrections d'épreuve</message>

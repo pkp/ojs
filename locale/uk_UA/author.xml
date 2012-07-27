@@ -36,7 +36,7 @@
        <message key="author.submit.cancelSubmission">Ви можете завершити це подання пізніше, вибравши його у списку "Активні подання" на своїй домашній сторінці.</message>
        <message key="author.submit.notAccepting">Цей журнал в даний час не приймає рукописів від авторів.</message>
        <message key="author.submit.requestWaiver">Запит виключення</message>
-       <message key="author.submit.qualityForWaiver">Будь ласка, розгляньте можливість зробити виключення та не вимагати плату за публікацію цієї статті</message>
+       <message key="author.submit.qualifyForWaiver">Будь ласка, розгляньте можливість зробити виключення та не вимагати плату за публікацію цієї статті</message>
        <message key="author.submit.addReasonsForWaiver">Будь ласка, у полі коментарів нижче зазначте причини, чому плата не повинна стягуватися.</message>
        <message key="author.submit.mustEnterWaiverReason">Якщо Ви просите про виключення, необхідно вказати причину.</message>
        <message key="author.submissions.queuedReviewSubsequent">Проходить {$round} раунд рецензування</message>

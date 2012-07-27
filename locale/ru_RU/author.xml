@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав "Статьи в процессе Отправки" на своей домашней странице.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статей.</message>
 	<message key="author.submit.requestWaiver">Запросить Исключение</message>
-	<message key="author.submit.qualityForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить Плату за Отправку для этой статьи</message>
+	<message key="author.submit.qualifyForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить Плату за Отправку для этой статьи</message>
 	<message key="author.submit.addReasonsForWaiver">Пожалуйста используйте поле комментариев ниже для указания причин, почему плата должна быть отменена.</message>
 	<message key="author.submit.mustEnterWaiverReason">Если Вы просите отменить плату за отправку, необходимо указать причину.</message>
 	<message key="author.submissions.queuedReviewSubsequent">Рецензируется: ({$round} раунд)</message>

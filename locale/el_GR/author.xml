@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
 	<message key="author.submit.notAccepting">Το συγκεκριμένο περιοδικό δεν αποδέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>
-	<message key="author.submit.qualityForWaiver">Παρακαλούμε εξετάστε την περίπτωση παράβλεψης της Εισφοράς του Συγγραφέα για την υποβολή αυτού του άρθρου</message>
+	<message key="author.submit.qualifyForWaiver">Παρακαλούμε εξετάστε την περίπτωση παράβλεψης της Εισφοράς του Συγγραφέα για την υποβολή αυτού του άρθρου</message>
 	<message key="author.submit.addReasonsForWaiver">Σας παρακαλούμε χρησιμοποιήστε το κουτί σχολίων παρακάτω για να προσδιορίσετε τους λόγους για τους οποίους αιτήστε την παράβλεση καταβολής της εισφοράς συγγραφέα για την συγκεκριμένη υποβολή.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Φόρτωση έκδοσης με Επιμελημένο Κείμενο</message>
 	<message key="author.submissions.proofreadingCorrections">Διορθώσεις επιμελητή τυπογραφικών δοκιμίων</message>

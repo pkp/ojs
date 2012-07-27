@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>
-	<message key="author.submit.qualityForWaiver">请考虑免除这个文章的投稿费</message>
+	<message key="author.submit.qualifyForWaiver">请考虑免除这个文章的投稿费</message>
 	<message key="author.submit.addReasonsForWaiver">请使用下面的评论中表示，为何要免除费用..</message>
 	<message key="author.submit.mustEnterWaiverReason">如果需要申请赦免费用，您必须在提供的空间里输入您的理由.</message>
 	<message key="author.submissions.queuedReviewSubsequent">审稿回合： {$round}</message>

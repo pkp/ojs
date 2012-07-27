@@ -35,7 +35,7 @@
 	<message key="author.submit.cancelSubmission">Poţi încheia această propunere mai târziu prin selectarea propunerilor active din pagina autorului.</message>
 	<message key="author.submit.notAccepting">Această revistă nu acceptă propuneri în acest moment.</message>
 	<message key="author.submit.requestWaiver">Solicită derogare</message>
-	<message key="author.submit.qualityForWaiver">Vă rog să luați în considerare derogarea de la taxare pentru propunerea de articol</message>
+	<message key="author.submit.qualifyForWaiver">Vă rog să luați în considerare derogarea de la taxare pentru propunerea de articol</message>
 	<message key="author.submit.addReasonsForWaiver">Folosiţi căsuţa de comentarii de mai jos pentru a indica de ce trebuie cerută derogarea de la taxe.</message>
 	<message key="author.submit.mustEnterWaiverReason">Dacă solicitați o derogare, trebuie să motivați în spațiul dedicat.</message>
 	<message key="author.submissions.queuedReviewSubsequent">În runda de evaluare {$round}</message>

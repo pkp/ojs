@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
-	<message key="author.submit.qualityForWaiver">Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung.</message>
+	<message key="author.submit.qualifyForWaiver">Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung.</message>
 	<message key="author.submit.addReasonsForWaiver">Nutzen Sie bitte das nachfolgende Kommentarfeld, um zu erklären, warum von einer Gebühr abgesehen werden soll.</message>
 	<message key="author.submit.mustEnterWaiverReason">Geben Sie bitte an, warum Sie einen Nachlass gewährt haben wollen.</message>
 	<message key="author.submissions.queuedReviewSubsequent">In Begutachtungsrunde {$round}</message>

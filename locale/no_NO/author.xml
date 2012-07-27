@@ -108,7 +108,7 @@
 	<message key="author.competingInterests"><![CDATA[Interessekonflikter <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Retningslinjer for erklæring om interessekonflikter</a>]]></message>
 	<message key="author.submit.startHereTitle">Start innsending av et nytt manuskript</message>
 	<message key="author.submit.requestWaiver">Be om gebyrfritak</message>
-	<message key="author.submit.qualityForWaiver">Vennligst vurder å gi gebyrfritak for dette manuskriptet</message>
+	<message key="author.submit.qualifyForWaiver">Vennligst vurder å gi gebyrfritak for dette manuskriptet</message>
 	<message key="author.submit.addReasonsForWaiver">Vennligst oppgi hvorfor du ber om gebyrfritak i kommentarboksen nedenfor.</message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Trenger du hjelp? Kontakt <a href="mailto:{$supportEmail}">{$supportName}</a>]]></message>
 	<message key="author.submit.form.abstractRequired">Vennligst skriv inn sammendraget til artikkelen din.</message>

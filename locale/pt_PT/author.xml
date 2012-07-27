@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída numa data posterior, clicando em Submissões Activas nas opções da página do Autor.</message>
 	<message key="author.submit.notAccepting">Neste momento esta revista não aceita submissões.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
-	<message key="author.submit.qualityForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
+	<message key="author.submit.qualifyForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
 	<message key="author.submit.addReasonsForWaiver">Indique no campo de comentários a motivação para a isenção de taxa</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Transferir cópia editada</message>
 	<message key="author.submissions.proofreadingCorrections">Correcções da Leitura de Prova</message>

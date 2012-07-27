@@ -30,7 +30,7 @@
 	<message key="author.submit.cancelSubmission">Du kan fuldføre dette manuskript på et senere tidspunkt ved at vælge Aktive manuskripter på startsiden for forfattere.</message>
 	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke manuskripter på nuværende tidspunkt.</message>
 	<message key="author.submit.requestWaiver">Anmod om afkald</message>
-	<message key="author.submit.qualityForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>
+	<message key="author.submit.qualifyForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>
 	<message key="author.submit.addReasonsForWaiver">Angiv, hvorfor der skal gives afkald på gebyrer, i kommentarfeltet nedenfor.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Overfør manuskriptredigeret version</message>
 	<message key="author.submissions.proofreadingCorrections">Korrekturrettelser</message>

@@ -30,7 +30,7 @@
 	<message key="author.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
 	<message key="author.submit.notAccepting">Tento časopis aktuálně nepřijímá příspěvky.</message>
 	<message key="author.submit.requestWaiver">Požádat o prominutí</message>
-	<message key="author.submit.qualityForWaiver">Prosím, zvažte prominutí platby Poplatku za zaslání příspěvku pro tento článek</message>
+	<message key="author.submit.qualifyForWaiver">Prosím, zvažte prominutí platby Poplatku za zaslání příspěvku pro tento článek</message>
 	<message key="author.submit.addReasonsForWaiver">Použijte prosím níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Nahrát redigovanou verzi</message>
 	<message key="author.submissions.proofreadingCorrections">Korekturní opravy</message>

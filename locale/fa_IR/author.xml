@@ -31,7 +31,7 @@
 	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
 	<message key="author.submit.notAccepting">این مجله در حال حاضر ساب میشن نمی پذیرد</message>
 	<message key="author.submit.requestWaiver">درخواست تخفیف</message>
-	<message key="author.submit.qualityForWaiver">لطفا درخواست تخفیف برای این مقاله را در نظر بگیرید</message>
+	<message key="author.submit.qualifyForWaiver">لطفا درخواست تخفیف برای این مقاله را در نظر بگیرید</message>
 	<message key="author.submit.addReasonsForWaiver">لطفا در قسمت زیر توضیح دهید که چرا میبایست به شما تخفیف دهیم</message>
 	<message key="author.submissions.uploadCopyeditedVersion">آپلود نسخه ویرایش شده</message>
 	<message key="author.submissions.proofreadingCorrections">اصلاحات پک نهائی</message>

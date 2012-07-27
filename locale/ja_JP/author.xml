@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。</message>
 	<message key="author.submit.notAccepting">この雑誌は現在投稿を受け付けていません。</message>
 	<message key="author.submit.requestWaiver">免除依頼</message>
-	<message key="author.submit.qualityForWaiver">この論文に対する論文投稿料の免除を検討してください。</message>
+	<message key="author.submit.qualifyForWaiver">この論文に対する論文投稿料の免除を検討してください。</message>
 	<message key="author.submit.addReasonsForWaiver">投稿料免除が必要な理由を下のコメントボックスに入力してください。</message>
 	<message key="author.submissions.uploadCopyeditedVersion">コピーエディタ版のアップロード</message>
 	<message key="author.submissions.proofreadingCorrections">校正による修正</message>

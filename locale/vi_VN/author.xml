@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Tác giả có thể hoàn thành việc nộp bài viết vào thời gian khác bằng cách lựa chọn mục Các bài đang nộp dở trong trang dành cho Tác giả.</message>
 	<message key="author.submit.notAccepting">Tạp chí này hiện thời không nhận bài nộp.</message>
 	<message key="author.submit.requestWaiver">Đề nghị miễn thu phí</message>
-	<message key="author.submit.qualityForWaiver">Vui lòng xem xét miễn Phí Nộp bài cho bài viết này</message>
+	<message key="author.submit.qualifyForWaiver">Vui lòng xem xét miễn Phí Nộp bài cho bài viết này</message>
 	<message key="author.submit.addReasonsForWaiver">Sử dụng ô dưới đây để giải thích tại sao nên miễn thu phí.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Tải lên bản thảo đã sửa</message>
 	<message key="author.submissions.proofreadingCorrections">Sửa lỗi</message>

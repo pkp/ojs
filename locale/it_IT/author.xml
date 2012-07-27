@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
 	<message key="author.submit.notAccepting">In questo momento la rivista non accetta nessuna proposta.</message>
 	<message key="author.submit.requestWaiver">Richiedi un'esenzione</message>
-	<message key="author.submit.qualityForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta.</message>
+	<message key="author.submit.qualifyForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta.</message>
 	<message key="author.submit.addReasonsForWaiver">Utilizza la casella di commento sotto per specificare i motivi della richiesta di esonero dal pagamento.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Invia la versione corretta</message>
 	<message key="author.submissions.proofreadingCorrections">Correzioni sulle bozze</message>

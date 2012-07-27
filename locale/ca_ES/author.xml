@@ -34,7 +34,7 @@
 	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant seleccionant Trameses actives a la pàgina inicial de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Aquesta revista no accepta trameses actualment.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>
-	<message key="author.submit.qualityForWaiver">Tingueu en compte que podeu sol·licitar l’exempció de la tarifa per a la tramesa d’aquest article.</message>
+	<message key="author.submit.qualifyForWaiver">Tingueu en compte que podeu sol·licitar l’exempció de la tarifa per a la tramesa d’aquest article.</message>
 	<message key="author.submit.addReasonsForWaiver">Utilitzeu el quadre de comentaris següent per a indicar per què sol·liciteu l’exempció de la tarifa.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Penja la versió corregida</message>
 	<message key="author.submissions.proofreadingCorrections">Correccions de proves</message>
