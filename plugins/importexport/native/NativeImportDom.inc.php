@@ -912,9 +912,9 @@ class NativeImportDom {
 		$journalPrimaryLocale = $journal->getPrimaryLocale();
 
 		$author = new Author();
-		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
+		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName((string)$node->getValue());
 		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
-		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
+		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName((string)$node->getValue());
 		$author->setSequence($authorIndex+1); // 1-based
 		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
@@ -927,7 +927,7 @@ class NativeImportDom {
 			$author->setAffiliation($node->getValue(), $locale);
 		}
 		if (($node = $authorNode->getChildByName('country'))) $author->setCountry($node->getValue());
-		if (($node = $authorNode->getChildByName('email'))) $author->setEmail($node->getValue());
+		if (($node = $authorNode->getChildByName('email'))) $author->setEmail((string)$node->getValue());
 		if (($node = $authorNode->getChildByName('url'))) $author->setUrl($node->getValue());
 		for ($index=0; ($node = $authorNode->getChildByName('competing_interests', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
