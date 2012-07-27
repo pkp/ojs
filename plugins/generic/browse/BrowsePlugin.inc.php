@@ -75,11 +75,12 @@ class BrowsePlugin extends GenericPlugin {
 
 		$journal =& $smarty->get_template_vars('currentJournal');
 
+		$templateMgr =& TemplateManager::getManager();
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {
-			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '"}">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
+			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '"}">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
 		}
 		if ($this->getSetting($journal->getId(), 'enableBrowseByIdentifyTypes')) {
-			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page' => 'browseSearch', 'op'=>'identifyTypes'), $smarty).'"}">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.browse.search.identifyTypes'), $smarty) . '</a></li>';
+			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page' => 'browseSearch', 'op'=>'identifyTypes'), $smarty).'"}">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.browse.search.identifyTypes'), $smarty) . '</a></li>';
 		}
 		return false;
 	}
