@@ -361,19 +361,19 @@ class LucenePlugin extends GenericPlugin {
 		while (!$journals->eof()) {
 			$journal =& $journals->next();
 
-			if ($log) echo "LucenePlugin: Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
-			$numIndexed = $this->_solrWebService->indexJournal($journal);
+			if ($log) echo 'LucenePlugin: Indexing "', $journal->getLocalizedTitle(), '" ';
+			$numIndexed = $this->_solrWebService->indexJournal($journal, $log);
 			unset($journal);
 
 			if (is_null($numIndexed)) {
 				if ($log) {
-					echo "error\n";
+					echo " error\n";
 				} else {
 					$this->_informTechAdmin(null, $journal);
 				}
 				return false;
 			} else {
-				if ($log) echo "$numIndexed article(s) indexed\n";
+				if ($log) echo " $numIndexed article(s) indexed\n";
 			}
 		}
 		return true;

@@ -257,38 +257,67 @@ class SolrWebService extends XmlWebService {
 	 * (Re-)indexes the given journal in Solr.
 	 *
 	 * @param $journal Journal The journal to be (re-)indexed.
+	 * @param $log boolean Whether to log indexing progress.
 	 *
 	 * @return integer The number of documents processed or null if
 	 *  an error occured.
 	 */
-	function indexJournal(&$journal) {
-		// Run through all articles of the journal.
+	function indexJournal(&$journal, $log=false) {
+		// Initialize local variables.
 		$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-		$articles =& $articleDao->getPublishedArticlesByJournalId($journal->getId());
 		$numIndexed = 0;
-		$articleDoc = null;
-		while (!$articles->eof()) {
-			$article =& $articles->next();
 
-			// Add the article to the article list if it has been fully submitted.
-			if ($article->getDateSubmitted()) {
-				$articleDoc =& $this->_getArticleXml($article, $journal, $articleDoc);
+		// To keep memory usage as low as possible we
+		// commit batches of 200 articles. Batches should
+		// not be too small, either, as this will considerably
+		// increase overall DB access time.
+		import('lib.pkp.classes.db.DBResultRange');
+		$batch = 1;
+		$batchSize = 200;
+		$continue = true;
+		while ($continue) {
+			// Retrieve the next batch.
+			$range = new DBResultRange($batchSize, $batch);
+			$articles =& $articleDao->getPublishedArticlesByJournalId($journal->getId(), $range);
+			unset($range);
+
+			// Is this our last batch?
+			$continue = !$articles->atLastPage();
+
+			// Run through all articles of the batch.
+			$articleDoc = null;
+			while (!$articles->eof()) {
+				$article =& $articles->next();
+
+				// Add the article to the article list if it has been published.
+				if ($article->getDatePublished()) {
+					$articleDoc =& $this->_getArticleXml($article, $journal, $articleDoc);
+				}
+				unset($article);
 			}
+			unset($articles);
 
-			unset($article);
-			$numIndexed++;
+			// Make a POST request with all articles in this batch.
+			$articleXml = XMLCustomWriter::getXml($articleDoc);
+			unset($articleDoc);
+			$url = $this->_getDihUrl() . '?command=full-import&clean=false';
+			$result = $this->_makeRequest($url, $articleXml, 'POST');
+			unset($articleXml);
+
+			// Retrieve the number of successfully indexed articles.
+			if (is_null($result)) {
+				return null;
+			} else {
+				$numIndexed += $this->_getDocumentsProcessed($result);
+				if ($log) echo '.';
+			}
+			unset($result);
+
+			// Do the next batch.
+			$batch++;
 		}
 
-		// Make an POST request with all articles of the journal.
-		$articleXml = XMLCustomWriter::getXml($articleDoc);
-		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
-		$result = $this->_makeRequest($url, $articleXml, 'POST');
-
-		if (is_null($result)) {
-			return null;
-		} else {
-			return $this->_getDocumentsProcessed($result);
-		}
+		return $numIndexed;
 	}
 
 	/**
@@ -742,7 +771,7 @@ class SolrWebService extends XmlWebService {
 	 * @param $articleDoc DOMDocument|XMLNode
 	 * @return DOMDocument|XMLNode
 	 */
-	function _getArticleXml(&$article, &$journal, $articleDoc = null) {
+	function &_getArticleXml(&$article, &$journal, $articleDoc = null) {
 		assert(is_a($article, 'PublishedArticle'));
 
 		if (is_null($articleDoc)) {
