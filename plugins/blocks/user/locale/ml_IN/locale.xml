@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ml_IN (Malayalam) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ml_IN" full_name = "Malayalam">
+	<message key="plugins.block.user.displayName">യൂസര്‍ ബ്ലോക്ക്</message>
+	<message key="plugins.block.user.description">ഈ പ്ലഗിന്‍ യൂസര്‍ അക്കൗണ്ട് ടൂള്‍സ് ലഭ്യമാക്കുന്നു  (ഉദാ. ലോഗിന്‍, ലോഗൗട്ട്, പ്രൊഫൈല്‍ ലിങ്ക്, മുതലായവ).</message>
+	<message key="plugins.block.user.loggedInAs">താങ്കള്‍ ലോഗിന്‍ ചെയ്തിരിക്കുന്നത്...</message>
+	<message key="plugins.block.user.myJournals">എന്റെ ജര്‍ണലുകള്‍</message>
+	<message key="plugins.block.user.myProfile">എന്റെ പ്രൊഫൈല്‍</message>
+	<message key="plugins.block.user.logout">ലോഗൗട്ട്</message>
+	<message key="plugins.block.user.signOutAsUser">യൂസറായി ലോഗൗട്ട് ചെയ്യുക</message>
+	<message key="plugins.block.user.rememberMe">എന്നെ ഓര്‍മ്മിച്ചിരിക്കുക</message>
+</locale>
