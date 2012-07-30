@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in sr_SR.
+  *
+  * $Id$
+  -->
+ 
+<locale name="sr_SR" full_name="Serbian">
+	<message key="plugins.citationFormats.mla.displayName">MLA format citata</message>
+	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
+	<message key="plugins.citationFormats.mla.description">Ovaj dodatak implementira MLA format citata.</message>
+	<message key="plugins.citationFormats.mla.noPages">n. pag.</message>	
+</locale>

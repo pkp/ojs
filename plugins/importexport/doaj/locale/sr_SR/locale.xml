@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Serbian) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="sr_SR" full_name="Serbian">
+	<message key="plugins.importexport.doaj.displayName">DOAJ dodatak za izvoz</message>
+	<message key="plugins.importexport.doaj.description">Izvoz časopisa za DOAJ i obezbeđivanje informacija o časopisu za uključivanje</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Izvezi podatke časopisa u DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Izvezi časopis</message>
+	<message key="plugins.importexport.doaj.export.contact">Kontaktiraj DOAJ za uključivanje</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Izvezi podatke o članku u XML za arhiviranje u DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Da bi vaš časopis ušao u razmatranje u DOAJ popunite ovaj poluautomatski popunjen formular najbolje što možete.</message>
+
+</locale>
