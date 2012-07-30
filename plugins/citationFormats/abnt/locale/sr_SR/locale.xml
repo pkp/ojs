@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in sr_SR.
+  *
+  * $Id$
+  -->
+ 
+<locale name="sr_SR" full_name="Serbian">
+	<message key="plugins.citationFormats.abnt.displayName">ABNT format citata</message>
+	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
+	<message key="plugins.citationFormats.abnt.description">Ovaj dodatak implementira ABNT format citata.</message>
+	<message key="plugins.citationFormat.abnt.location">Severna Amerika</message>
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Dostupno na: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Datum pristupa: {$retrievedDate}]]></message>
+</locale>
