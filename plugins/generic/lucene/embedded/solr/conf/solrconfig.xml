@@ -98,7 +98,7 @@
       <str name="defType">lucene</str>
       <str name="fl">article_id,journal_id,inst_id,score</str>
 
-      <str name="hl">on</str>
+      <str name="hl">off</str>
       <str name="hl.fl">galleyFullText_*</str>
 
       <str name="facet">on</str>

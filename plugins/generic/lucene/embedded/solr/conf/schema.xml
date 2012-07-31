@@ -49,7 +49,7 @@
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt"/>
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0"/>
+        <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="1" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
@@ -63,7 +63,7 @@
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_de.txt"/>
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0"/>
+        <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="1" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.GermanLightStemFilterFactory"/>
@@ -77,7 +77,7 @@
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_es.txt"/>
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0"/>
+        <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="1" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.SpanishLightStemFilterFactory"/>

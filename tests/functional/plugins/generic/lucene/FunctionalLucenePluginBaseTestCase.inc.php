@@ -30,18 +30,22 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 *
 	 * @param $searchPhrase string
 	 * @param $searchField
-	 * @param $articles integer|array
-	 * @param $notArticles integer|array
+	 * @param $articles integer|array a list of article
+	 *  ids that must appear in the result set
+	 * @param $notArticles integer|array a list of article
+	 *  ids that must not appear in the result. Can be '*'
+	 *  to exclude any additional result.
 	 * @param $locale string
+	 * @param $journal string the context path of the journal to test
 	 */
-	protected function simpleSearch($searchPhrase, $searchField = '', $articles = array(), $notArticles = array(), $locale = 'en_US') {
+	protected function simpleSearch($searchPhrase, $searchField = '', $articles = array(), $notArticles = array(), $locale = 'en_US', $journal = 'lucene-test') {
 		// Translate scalars to arrays.
 		if (!is_array($articles)) $articles = array($articles);
-		if (!is_array($notArticles)) $notArticles = array($notArticles);
+		if ($notArticles !== '*' && !is_array($notArticles)) $notArticles = array($notArticles);
 
 		try {
 			// Open the "lucene-test" journal home page.
-			$testJournal = $this->baseUrl . '/index.php/lucene-test';
+			$testJournal = $this->baseUrl . '/index.php/' . $journal;
 			$this->verifyAndOpen($testJournal);
 
 			// Select the locale.
@@ -71,8 +75,12 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 
 			// Make sure that the result set does not contain
 			// the articles in the "not article" list.
-			foreach($notArticles as $id) {
-				$this->assertElementNotPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
+			if ($notArticles === '*') {
+
+			} else {
+				foreach($notArticles as $id) {
+					$this->assertElementNotPresent('//table[@class="listing"]//a[contains(@href, "index.php/lucene-test/article/view/' . $id . '")]');
+				}
 			}
 		} catch(Exception $e) {
 			throw $this->improveException($e, "example $searchPhrase ($locale)");
