@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Interface de Usuario - Ferramentas de Lectura
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="gl_ES" title="Ferramentas de Lectura" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[<p>As revistas que utilizan este sistema poden proporcionar unha serie de Ferramentas de Lectura que acompañen os artigos publicados nas outras Sección da Revista. A intención das Ferramentas de Lectura é asistir tanto ao experto como a lectores principantes  na construcción dun contexto de interpretación, avaliación e uso da investigación que están a ler. Os conxuntos de Ferramentas de Lectura foron desenvolvidas para un grande rango de disciplinas académicas, entre as que pode seleccionar o Administrador, e deste xeito  editalas e actualizalas para axudar a millorar o espazo de lectura da revista. As Ferramentas de Lectura tamén lle permiten aos Lectores xunguirse aos foros pertinentes e contactar co autor ou compartir un artigo con outro Lector.</p><p><i>Cómo traballan as Ferramentas de Lectura?</i>. As Ferramentas de Lectura están deseñadas para proporcionar contexto ao artigo que acompañan. A Ferramentas abren nun cadro no explorador do usuario á dereita do artigo que se está a ler. Primeiro, as Ferramentas proporcionan aos Lectores acceso á información de indexación do artigo, a versión de impresión e a declaración bibliográfica do autor. As Ferramentas habilitan aos Lectores para poder realizar buscas de palabras no artigo (premendo duás veces sobre calquera palabra na versión de HTML do artigo) e para enviar correos electrónicos ao autor ou a outro Lector. As Ferramentas están deseñadas tamén para tomar as palabras claves do artigo e alimentalas nos motores de busca de bases de dados de acceso libre e outros recursos agrupados en categorías como Estudos de Investigación, Outros Traballos do Autor, Prensa e Medios de Difusión, Páxinas Web do Goberno, etc., isto depende do conxunto de Ferramentas que se seleccionen. Os Lectores tamén teñen acceso aos antecedentes de información de cada recurso seleccionado. As Ferramentas proporcionan múltiples opcións ou bases de dados para consultar en cada categoría, sexan Estudos, Medios de Difusión ou Aprendizaxe, permitindo asín que os Lectores poidan aprender máis sobre cada base de dados o proporcionar unha ligazón á páxina Sobre dese recurso. (O Administrador da Revista pode editar ou eliminar os recursos existentes e mesmo engadir outros novos.)</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Páxinas de Administración - Seccións 
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000005" locale="gl_ES" title="Seccións da Revista" toc="journal/toc/000001" key="journal.managementPages.sections">
+	<section>
+		<![CDATA[<p>O Administrador da Revista ten competencia para crear  diferentes seccións dentro da revista, usualmente, baixo a administración da revista. De xeito habitual, unha revista pode incluir seccións como Artigos, Críticas de libros, Notas de investigación, Aplicacións Clínicas, Comentarios, Editorial, etc.</p><p>se se deciden usar Editores de Sección, o Administrador da Revista pode designar Editores de Sección que se encarguen de supervisar o proceso editorial daquelas entregas que chegaron á Sección. (O editor asigna entregas no{help_topic key="editorial.editorsRole.submissions.unassigned" text="Unassigned"} liña de entregas a un dos Editores da Sección designada como parte do proceso editorial).</p><p>Pódense presentar Seccións en diferentes formatos ou deseños de diagramación dentro da Revista. A táboa de contidos, que arranxa eo Editor para cada número, está dividida dentro das Seccións creadas, porén,se non hai contido para unha Sección en particular nun determinado exemplar, a sección non aparecerá na táboa de contidos.</p><p><i>Creando unha política de Sección</i>. na  configuración da sección, o administrador da revista debe achegar unha breve declaración de intencións a Sección, que estará dispoñíbel para os autores e os lectores en Sobre a revista, baixo as políticas da  Sección . A declaración debe describir o alcance da Sección e o tipo de entregas que desexa receber. Taménn debe incluir información sobre se as entregas á sección son revisadas e indexadas, se a Sección é aberta ou se está restrinxida a un convite para publicar traballos (ou a Editores), a extensión desexada para os artigoos, etc.</p><p><i>Indexando os contidos dunha Sección</i>. Os artigo dunha sección deben ser indexados Items se contribuen ao contido literario da revista (que non sería o caso, por exemplo, con unha sección adicada a anuncios ou conferencias de traballo). A opción de indexar habilitará os autores para que insiran  metadados relevantes para a indexación dos artigos que achegan. Estes metadados estarán dispoñíbeis para procurar motores de busca que se adhiran ao protocolo do indexador de metadados da Iniciativa de Arquivos Libres e a outros servizos de indexación, unha vez que se publicou o artigo. Engadiranse os autores dos artigos indexados na sección na listaxe de autores na páxina de busca xunto coas ferramentas de lectura seleccionadas para esta revista polo Administrador da Revista.</p><p><i>Habilitando ou Deshabilitando resumos</i>. algunhas seccións , como a crítica de libros, non  precisarán resumos; esta opción  permítelle ao administrador da revista deshabilitar os resumos para esta sección. Cando os resumos están deshabilitados, non poderán ser solicitados durante o proceso de entrega do artigo, ou visualizado na táboa de contidos.</p><p><i>Configurando a identificación dun artigo</i>. Cando se presentan os metadados os visualizadores ou sistemas externos (ex. a través do indexador OAI), a tipoloxía de artigo terá que ser identificada. Por exemplo, un artigo pode estar revisado por expertos, sen referencias, un artugi  convidado, etc.</p><p><i>Restrinxindo os contidos dunha Sección</i>. A caixa de restriccións debe ser verificada para as seccións da revista (asín, Editoriais ou Entrevistas) que no están abertas a entregas de autores sen restricción. As entregas restrinxidas deben vir dos editores ou por convite. Unha sección deste tipo só pode ser entregada a autores que tamén estén rexistrados como editores ou editores da sección.</p><p><i>Ocultando o título da sección na tábo de contidos</i>. Pode que se desexe solicitar entregas para unha sección e/ou organizar artigos publicados en una sección ocultando o nome da sección cando se lle presenta aos lectores.</p><p><i>Sobre</i>. Pode que desexe eliminar información sobre esta sección que aparece en sobre a 
+Revista. Isto é funcional se, por exemplo, ten unha sección da revista que só se actualiza ás veces , ou unha sección de erros.</p>]]>
+	</section>
+</topic>

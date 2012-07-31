@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor Resumo de Envíos - Metadados de Envíos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="gl_ES" title="Submission Metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>Os metadado que serán usados para indexar o envío na publicación van ser inseridos polo Autor, e poden ser editados polo Editor da Sección, así como poloo Autor e o Corrector de textos durante o Proceso de Edición.</p>]]>	
+	</section>
+</topic>

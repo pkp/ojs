@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Editor da Sección Índice - Edición - Corrección de Textos
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000027" locale="gl_ES" title="Corrección de Textos" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Unha vez seleccionado o  Editor de Corrección de Textos e informado por correo electrónico solicitandolle que comece o proceso, o Editor de Corrección de textos traballará directamente no envío, marcando os cambios propostos de acordo coas instruccións de Corrección de Textos da Revista. No Paso 1, Corrección de Textos Inicial, o Editor de Corrección de Textos corrixirá o envío e cargará a versión inicial de corrección de textos, o arquivo editado será enviado ao Paso 2, Corrección do Texto feita polo Autor. O Editor de Corrección de Textos enviará entón un correo electrónico "Completo" ao Autor, cunha copia para o Editor da Sección, solicitando que se encete o Paso 2. Logo que o Autor teña revisado os cambios, respostado calquera preguntas, e cargado o arquivo no Paso 2, o Editor de Corrección de Textos creará unha versión en limpo e fin da corrección de textos no Paso 3, Corrección de Textos Final. Esta versión final da corrección de textos é enviada a Diagramación, onde fungirá como la Versión de Diagramación. Antes de que eo Editor de Diagramación comece a traballar na preparación de Galeradas baseadas nesta versión, poida que o Editor da Sección desexe revisala de novo para asegurarse que cumpre coss estándares e instruccións da revista.</p><p><i>Preguntas do Editor na Corrección de Textos</i>. Na Corrección de Textos inicial, o Editor de Corrección de Textos pode precisar facerlle Preguntas ao Editor (verbo do estilo da revista, por exemplo). Estas preguntas hanse poder atopar no correo electrónico enviado ao Autor e ao Editor da Sección despois de rematar o Paso 1. O Editor da Sección debe revisar as Preguntas do Editor premendo no  nome do arquivo no Paso 2, e enviado un correo electrónico coa súas respuestas directamente ao Editor de Corrección de Textos (premendo sobre o icono de correo electrónico baixo Solicitude). Isto evitará que se cargue unha versión do archivo sobre as respuestas do Autor á corrección de textos inicial do envío.</p><p><i>Opcións de Corrección de Textos</i>. En caso necesario (por exemplo, se o Editor da Sección está no rol de Editor de Corrección de Textos) o Editor da Sección pode cargar unha versión do envío para cada unha das etapas de Corrección de Textos. Débese ter coidado de non sobrescribir unha versión que fora cargada polo Editor de Corrección de Textos ou polo Autor.</p>]]>	
+	</section>
+</topic>

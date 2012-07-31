@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Corrector de Textos - Envíos
+  *
+  * Translated By Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="gl_ES" title="Envíos" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Cando o Corrector de Textos inicie sesión e prema sobre a ligazón de Editor de Corrección de Textos na páxina principal do usuario, chegará aos Envíos en ringleira. Nesta fileira aparece a listaxe daqueles traballos que solicitaron seren corrixidos. Tamén se obtén acceso a aqueles envíos que se xa se remataron, a través da ligazón Arquivo.</p><p>Para acceder á páxina de Corrección de Textos dun envío en particular, o Corrector de Textos debe premer no  título do traballo que aparece na listaxe de Envíos Activos.</p>]]>	
+	</section>
+</topic>

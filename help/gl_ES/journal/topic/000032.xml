@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Administrador de Subscricións 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000032" locale="gl_ES" title="Administrador de Subscricións" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>O administrador de Subscricións administra as subscricións da revista e os tipos de subscricións.</p><p>Podes atopar máis información sobre a administración das subscricións en  {help_topic key="journal.managementPages.subscriptions" text="here"}.</p>]]>
+	</section>
+</topic>

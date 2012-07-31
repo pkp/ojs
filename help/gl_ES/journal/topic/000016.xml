@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Editor
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="gl_ES" title="Editor" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>O editor supervisa todo o proceso editorial e de publicación. O Editor traballa co administrador da revista, para establecer políticas e procedimientos para a revista, que son inseridos na {help_topic key="journal.managementPages.setup" text="Setup"}. No proceso editorial, o Editor asigna entregas aos editores da sección para que os supervise durante a revisión e edición da entrega. O editor vixia o proceso de entrega e asiste cando se presentan dificultades. Unha vez que se completa a revisión, é acostumado que o editor supervise a entrega durante o {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} proceso (incluindo a correción de textos, a diagramación, e a correción de probas e galerada) ainda que nalgunas revistas isto segue  a ser responsabilidade do editor da sección a cargo do proceso de {help_topic key="editorial.sectionEditorsRole.review" text="Review"}. Do mesmo xeito o editor programa entregas para  a súa publicación, arranxa a táboa de contidos e publica o número como parte do {help_topic key="publishing.index" text="Publishing Process"}. O Editor pode restaurar as entregas arquivadas nas listaxes activas de En Revisión ou En Edición, asín como é descrito en {help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}.</p>]]>	
+	</section>
+</topic>

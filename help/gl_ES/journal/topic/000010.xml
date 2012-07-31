@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Administración de páxinas - Explorador de arquivos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="gl_ES" title="Explorador de Arquivos" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>O explorador de arquivos permítelle aos administradores da revista percorrer e xestionar a xerarquía dos arquivos cargados para a revista (incluindo todos aqueles cargados a través da administración de entregas). Os arquivos poden ser vistos, trasladados, e removidos do mesmo xeito en que se interactúa coo sistema do arquivo local.</p><p>Repara que a intención disto é facilitar a administración e a cotió non será preciso utilizalos na administración diaria da revista. A información das entregas está conservada como unha combinación de arquivos e rexistros de base de dados; a eliminación dos arquivos de entrega no explorador de arquivos non os eliminará dos rexistros da base de datos asociada.</p>]]>
+	</section>
+</topic>

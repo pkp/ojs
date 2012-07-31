@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contidos da Introdución a OJS. 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="intro/toc/000000" locale="gl_ES" title="Introdución a OJS" parent_topic="intro/topic/000000">
+	<topic id="intro/topic/000001" title="FAQ" />
+	<breadcrumb url="intro/topic/000000" title="Introdución a OJS" />
+</toc>

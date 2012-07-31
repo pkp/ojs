@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Lector
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="gl_ES" title="Lector" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Os lectores están compostos tanto polos usuarios subscritos a revistas que precisan subscrición como polos usuarios que escollen rexistrarse en revistas de acceso aberto (ben sexa de acceso abierto inmediato, ben acceso aberto despois dun periodo de tempo á publicación inicial do contido da revista). Os lectores rexistrados reciben unha notificación por correo electrónico cada vez que se publica un número da revista, este correo inclue a táboa de contidos dese número en particular. Cando os autores se rexistran persoalmente nas revistas preséntaselles a opción de rexistrarse tamén como lectores.</p><p>Podes achar máis información sobre o rexistro na revista en {help_topic key="user.registerAndProfile" text="here"}.</p> ]]>	
+	</section>
+</topic>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contido  Principal de Axuda. 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="gl_ES" title="OJS axuda" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="Introdución a OJS" />
+	<topic id="site/topic/000000" title="Administración do Sitio" />
+	<topic id="journal/topic/000000" title="Administración da Revista" />
+	<topic id="submission/topic/000000" title="Proceso de Envío" />
+	<topic id="editorial/topic/000000" title="Proceso Editorial" />
+	<topic id="publishing/topic/000000" title="Proceso de Publicación" />
+	<topic id="user/topic/000000" title="Páxina Web da Revista" />
+</toc>

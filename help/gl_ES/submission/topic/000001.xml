@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo d docs/COPYING.
+  *
+  * Proceso de Envíos do Autor - Guías do Autor 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000001" locale="gl_ES" title="Guías do Autor" toc="submission/toc/000000" key="submission.authorGuidelines">
+	<section>
+		<![CDATA[<p>A revista fornece un conxunto de Pautas do Autor en Sobre a Revista que informa sobre os estándares bibliográficos e de formato usados pola revista. Os aspectos que non se ejemplifican nas Pautas, poden ser buscados polos Autores nos artigos publicados pola revista, para ver como son administrados outros tipos de materiais pola revista.</p>]]>	
+	</section>
+</topic>

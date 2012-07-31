@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contidos da Administración da Revista - Páxinas de Administración - Ferramentas de Lectura.
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="gl_ES" title="Ferramentas de Lectura" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Opcións da Ferramenta de Lectura" />
+	<topic id="journal/topic/000027" title="Conxunto de Artigos relacionados" />
+	<topic id="journal/topic/000028" title="Contextos" />
+
+	<breadcrumb url="journal/topic/000000" title="Administración da Revista" />
+	<breadcrumb url="journal/topic/000001" title="Páxinas de Administración" />
+	<breadcrumb url="journal/topic/000009" title="Ferramentas de Lectura" />
+</toc>

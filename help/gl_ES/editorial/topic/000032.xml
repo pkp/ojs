@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Autor Índice - Envíos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="gl_ES" title="Envíos" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Cando se inicia sesión na revista e se escolle a a función Autor en páxina principal do Usuario, condúcese ao Autor aos Envíos Activos en fila. Esta páxina crea unha listaxe dos envíos que están en proceso editorial. O Autor tamén pode acceder a envíos feitos anteriormente á revista baixo a ligazón Arquivos, e pode enviar un novo envío para que sexa considerado premendo na ligazón pertinente baixo Iniciar un Novo Envío.</p><p>Se a revista acepta pagamentos en liña, o Autor pode facer pagamentos específicos de envío nesta páxina. Se a revista o precisar, existen ligazóns para pagar a remuneración dos envíos que permiten axilizar os trámites, para cada artigo, baixo o campo Estado. Premendo neles conducirase ao Autor a unha páxina de Pagamento de Remuneración manual ou á páxina de pagamento de PayPal, onde se pode completar a transacción que se precisar. Máis información sobre o proceso de pagamento pódese atopar en {help_topic key="journal.managementPages.payments" text="here"}.</p><p>Máis información sobre o proceso de Envío pódese atopar en {help_topic key="submission.index" text="here"}.</p>]]>	
+	</section>
+</topic>

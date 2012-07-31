@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Proceso de Publicación - Crear Edición
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="gls_ES" title="Crear Edición" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[<p>Antes de utilizar a páxina de programación do Editor (ver páxina de Edición de envíos) para programar envíos nun número para a súa publicación, o Editor debe utilizar o botón Crear Número para ter a certeza de que existe un número ao que se lle poidan engadir envíos. O número debe ser identificado cos números pertinentes e/ou título, dependendo da opción seleccionada na Configuración (por exemplo, Vol. 2, No 5, 2008).  Mentres o sistema inducirá ao Editor en Crear Número a utilizar o próximo número cada vez que se crea un número, o Editor pode omitir estas configuracións e inserir un novo conxunto de números ou un ano diferente. Existe tamén a opción de engadirlle un título aos números, que aparecerá sobre a Táboa de Contidos, e pode ser utilizado, por exemplo, para números especiais da revista.</p><p<i>Control de Subscrición</i>. Se o Administrador da Revista habilita o control de subscrición para a revista (dispoñíbel baixo Configuración da Revista Paso 4.1), o Editor ten a opción de habilitar o control de subscrición en base a cada número. Mudar o Estado de Acceso a Subscrición permitirá que só os usuarios e institucións subscritas teñan acceso ao material, en cambio cando se cambia o Estado de Acceso a Acceso Libre permitirá que o contido do número esté dispoñíbel para todos os usuarios. Ademáis, se o Estado de Acceso é cambiado para Subscrición, o Editor pode proporcionar unha data de Acceso Libre na que o contido da revista poida estar dispoñíbel para todos os usuarios.</p><p><i>Creando unha portada</i>. Tamén existe a opción de cargar unha imaxe para a portada da revista, coo formato de ficheiro .jpg, .png o .gif. Pódese acceder a este arquivo na Táboa de Contido, onde aparecerá  na listaxe como Páxina de Portada ou Capa. Aparecerá na páxina principal da revista mentres o número esté Actual, e poderá ser premida para chegar á Táboa de Contidos dese número. Unha vez que o número sexa arquivado, a portada permanecerá dispoñíbel co número a través da Táboa de Contidos.</p><p><i>Números Actuais, Futuros e Anteriores</i>. O número Actual é o último número da revista publicado. Os Números Futuros son aqueles nos que o Editor programa envíos e que serán publicados próximamente. Pode acontecer que o Editor desexe asegurarse de que sempre hai dous ou tres series activas, números sen publicar, e que permitan a programación de envíos nalgúns números, por exemplo, por razóns de balanzo. Os números Anteriores son aqueles números que xa no nson Actuais e que xa foron publicados.</p>]]>
+	</section>
+</topic>

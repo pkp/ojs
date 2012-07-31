@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Administración do Sitio - Administración da Páxina 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="gl_ES" title="Administración do Sitio Web" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>OJS está deseñado para ser un sistema de moitas revistas, o Administrador do Sitio é responsabel de realizar a configuración dos distintos niveis da revista e de crear novas revistas que sexan almacenadas nun só espazo web. Os sitios da revista son totalmente independentes, agás as contas de usuarios; mentres que un usuario pode participar en calquera combinación de roles e revistas, o mesmo enderezo de correo electrónico e nome de usuario hanse referir ao mesmo usuario sen ter en conta a revista.</p>]]>
+	</section>
+	
+	<section title="Propiedades do Sitio">
+		<![CDATA[<p> O Administrador do Sitio insire Información Básica que será aplicabel a todas as revistas acumuladas polo sitio, incluindo o título do sitio, a súa descrición e a información de contacto.</p>   <p><em>Redirección a unha Revista.</em> Esta configuración pode ser utilizada para asegurarse que todas as solicitudes sexan redirixidas a unha páxina Web dunha revista en particular. Normalmente esta configuración emprégase cando un sitio armacena unha só revista.</p>]]>
+	</section>
+	
+	<section title="Revistas recebidas">
+		<![CDATA[<p>Xa que OJS permite que se xeren calquera número de usuarios e distintas páxinas Web de revistas, pódense crear novas revistas e administralas en calquera momento. Cada revista creada pode ser accedida a través dun URL único baseado nun camiño inserido polo Administrador do Sitio. As revistas que están actualmente no proceso de instalación e de configuración poden estar ocultas do sitio principal até que estén preparadas para seren activadas.</p>]]>
+	</section>
+	
+	<section title="Idiomas">
+		<![CDATA[<p>OJS está deseñado para ser un sistema multilingüe, permitíndolle ás revistas que fornezan a información nunha grande variedade de idiomas nun só sitio. O Administrador do Sitio pode especificar o idioma predeterminado no sitio e instalar locais complementares na medida en que esten dispostos, para facelos disponíbeis noutros idiomas para o uso das revistas.</p>
+		<p>Os paquetes complementares de idiomas normalmente están dispoñíbeis para seren descargados dende a páxina Web de Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank"> </a> na medida en que se receben as traducións achegadas polos usuarios do sistema. Estes paquetes poden ser instalados dentro dun sistema de OJS existente para que estén dispoñíbeis á revista.</p>]]>
+	</section>
+	
+	<section title="Autentificación das Fontes">
+		<![CDATA[<p>OJS autentifica, por defecto, aos usuarios en contraposición coa súa base de dados interna. Porén, é posibel, usar outros métodos de autenticación como LDAP. Outras fontes de autenticación adicionais son implementadas como plugins de OJS; diríxete á documentación enviada con cada plugin para obter os pormenores.</p>]]>
+	</section>
+</topic>

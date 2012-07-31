@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Autor Edición - Corrección de Texto 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000035" locale="gl_ES" title="Corección de Texto" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>O Corrector de Textos corrixe o envío traballando directamente sobre o arquivo electrónico do envío, con suxestións para millorar o fluxo da linguaxe e a comunicación de significados, e con cambios feitos para asegurar que o envío se adira ao estilo e formato da revista (especialmente ao formato bibliográfico). O Corrector de Textos carga a versión corrixida do envío no Paso 1 e envíalle un correo electrónico ao Autore ao Editor da Sección sinalándolles que a corrección inicial do texto foi completada. O Autor pode acceder a esta versión no Paso 1 da Corrección de Textos premendo sobre o nome do arquivo, e gardando o arquivo na computadora para abrilo máis adiante.</p><p><i>Revisión do Autor da Corrección de Textos</i>. O Autor revisa todos os cambios propostos polo Corrector de Textos e pode engadir máiss suxestións ou mudanzas no envío de acordo cas instruccións de Corrección de Textos seguidas por esta revista. (Esta é a derradeira oportunidade para facer cambios, xa que na Corrección de Probas só se poden arranxar cambios de erros de escrita e de formato.) O Autor debe responder tamén calquera pregunta que lle faga o Corrector de Textos (por exemplo, números de páxinas perdidas, etc.); estas preguntas pódense achar premendo no icono a carón dos Comentarios da Corrección de Textos. Cando remate, o Autor debe gardar o arquivo na computadora e cargalo no Paso 2 da Corrección de Textos, acción que permitirá que o arquivo esté dispoñíble para o Corrector de Textos.</p><p><i>Revisión dos Metadados</i>. O Autor debe, tamén, revisar os Metadados do envío na procura de erros e omisións. Os metadados empregaranse  para indexar o envío na publicación e asistirán, dependendo de como este indexado, ao  lectores para atopar o artigo.</p> <p>Para rematar, o Autor debe premer no icono de correo electrónico baixo Completo para notificar ao Corrector de Textos e ao Editor da Sección que este Paso xa foi  completado.</p>]]>	
+	</section>
+</topic>

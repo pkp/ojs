@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Páxinas Administrativas - Ferramentas de Lectura - Versións
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="gl_ES" title="Conxunto de Artigos Relacionados" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[<p>Os administradores da revista poden editar, engadir, e revisar calquera das disciplinas e áreas baseadas nos conxuntos de Ferramentas de Lectura. Estas ferramentas empregan base de dados que foi seleccionadas polo seu relevo e fácil acceso por todos os lectores. É preciso que o addministrador da revista poida mudar ou mesmo eliminar as listaxes, xa que a ubicación e os URLs destas bases de dados mudan. As Ferramentas están agrupadas en categorías (exemplo, Estudos relacionados, Disertacións, etc.), cun número de base de dados en cada un.<p><i>Validar Ferramentas de Lectura</i>. Esta característica revisará a validez das URLs de busca que son utilizados por cada base de dados para atopar  artigos que sexan relevantes para o artigo que acompañan as ferramentas (isto faise utilizando os termos de indexación do autor). Se o URL es inválido, o administrador da revista pode arranxar as configuracións atopando o novo URL, pedíndolle axuda a outra persoa ou eliminando a base de dados do conxunto de ferramentas de lectura.Unha vez que esta característica se executa en cada base de dados, precísase algo de tempo para completarse e o resultado amosará unha declaración para cada base de dados, dando fe da súa validez ou explicando a razón do problema.</p><p><i>Metadados para cada conxunto de ferramentas de lectura</i>. Os metadados para cada conxunto de ferramentas proporcionan o título de das ferramentas e unha breve descrición que permite ao administrador da revista modificar a organización das ferramentas e crear novos conxuntos.</p><p><i>Contextos para o Conxunto</i>. Cada conxunto de ferramentas consiste en varias agrupacións, ou contextos, de base de dados (exemplo, Estudos Relacionados, Foros en liña, etc.) con cada contexto composto por un número de base de dados relevantes. Estas base de dados poden ser creadas, editadas ou eliminadas. As agrupacións tamén poden ser reordenadas.</p><p><i>Exportar os Dados</i>. Se o administrador da revista desenvolve ferramentas de lectura suplementares, pódense exportar ao proxecto de coñecimiento público utilizado por outras revistas en campos relacionados.</p>]]>
+	</section>
+</topic>

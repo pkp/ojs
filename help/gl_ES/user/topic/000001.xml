@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Interface de Usuario - Páxina de Inicio
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="gl_ES" title="Página de Inicio" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>Existen dúas páxinas de inicio "Principais": unha para Open Journal System, ou Páxina Principal do Sitio; e unha Páxina Principal da revista. Ambas páxinas principais abranxen case a mesma información, ainda que difieren nalgunhas cousas.</p>]]>	
+	</section>
+
+	<section title="Páxina de Inicio Principal do Sitio">
+		<![CDATA[<p>Ao acceder á Páxina Principal do Sitio fornecerase a descrición do sitio e unha listaxe das revistas residentes do sitio. Dende aquí podes acceder á Páxina Principal da revista, acceder aos números actuais dispoñibeis e tamén podes rexistrarte na revista. As características de navegación da Páxina Principal do Sitio son as seguintes:</p><p><b>Barra de Navegación Superior</b></p><p><i>Inicio</i> e <i>Sobre</i> informan sobre o sitio (a diferencia dunha revista individual).</p><p><i>Iniciar Sesión</i> permiteche crear un perfil de usuario, se ainda non o fixeches. Ver {help_topic key="user.registerAndProfile" text="Rexistro e Perfil"}. A ligazón  de Iniciar Sesión será substituida por unha ligazón de Páxina Principal do Usuario unha vez que se rexistre e inicie sesión. Ver {help_topic key="user.userHome" text="Páxina de Inicio do Usuario"}.</p><p><i>Rexistrarse</i> permítelle engadir unha revista á súa Páxina Principal de Usuario.</p><p><i>Procurar</i> permítelle  realizar buscas en todo o sitio oun nunha só revista.  Ver {help_topic key="user.searchAndBrowse" text="Procurar e Explorar"}.</p><p><b>Barra de Navegación Dereita</b></p><p>A ligazón de <i>Open Journal Systems</i> conducirate á  páxina Web do Proxecto de Coñecimento Público e outros software relacionados.</p><p>A ligazón de <i>Axuda da Revista</i> fornecerache axuda en cada contexto.</p><p>O formulario baixo cabezallo de <i>Usuario</i> permitirá iniciar sesión, se tes un nome de usuario e un contrasinal.  Despois de iniciar sesión chegarás á Páxina Principal de Usuario. Unha vez que inicies sesión, atoparás ligazón baixo <i>Usuarios</i> unhalista de revistas nas que terás que rexistrar o teu perfil; e para pechar sesión.</p><p><i>Idioma</i> permítech escoller un idioma suportado por OJS.</p><p>O campo de busca baixo <i>Contido da Revista</i> permíteche buscar no sitio a través de distintas alternativas. Para unha procura máis inclusiva, preme sobre a ligazón Procurar na barra de navegación superior.</p> <p><i>Fonte</i> permíteche modificar o tamaño da fonte no sitio do máis pequeno ao grande, ou vice-versa.</p>]]>
+</section>
+
+<section title="Páxina de Inicio da Revista">
+		<![CDATA[<p>A páxina principal para unha revista é aquela que é vista cando se preme sobre <i>Ver Revista</i> o <i>Número Actual</i> baixo o nome da revista dende a páxina principal, ou cando se preme sobre o nome da revista dende a <i>Páxina do Usuario</i>. A Páxina Principal da Revista divídese da seguinte maneira:</p><p><b>Barra de Navegación Superior</b></p><p><i>Inicio</i> y <i>Sobre</i> que fornecen información sobre a revista.</p><p><i>Iniciar Sesión</i> e <i>Rexistrarse</i> funcionan como a descrita anteriormente ainda que redirixen ao usuario á página principal da revista, no canto da páxina principal do sitio.</p><p><i>Páxina do Usuario</i> aparece unha vez que inicias sesión, e mostra a páxina principal do usuario. Esta páxina proporciona ligazóns para administrar os seus roles na revista e a súa conta.</p> <p><i>Procurar</i> dalle  compridas opcións de busca, porén utilízase para buscar só na revista que esta ver actualmente.</p> <p><i>Actual</i> mostra a táboa de contidos do número actual da revista, se está dispoñibel.</p> <p><i>Arquivos</i> visualiza os nomes dos números publicados anteriormente, se están dispoñibeis.  Ao premer sobre o nome dun número publicado anteriormente amosarase a súa  táboa de contidos.</p><p>Unha ligazón de <i>Anuncios</i> aparece na barra de navegación superior, se o Administrador da Revista habilitou os anuncios. Premendo sobre esta ligazón permitirache acceder á páxina de anuncios.</p><p><b>Barra de Navegación Dereita</b></p><p>A ligazón de <i>Open Journal Systems</i>  conducirate á páxina principal de Proxecto de Coñecimiento Público, que ofrece recursos para Open Journals Systems e outros software relacionados.</p><p>A ligazón da<i>Axuda da Revista</i> axudarache en cada contexto.</p><p>O formulario baixo o cabezallo <i>Usuario</i> permitirache iniciar sesión, se tes un nome de usuario e un contrasinal.  Despois de Iniciar Sesión chegarás á Páxina Principal do Usuario. Unha vez que inicies sesión, haberá ligazóns baixo <i>Usuarios</i> a unha lista de revistas nas que terás que rexistrar o teu perfil; e para pechar sesión.</p><p><i>Idioma</i> permíteche escoller un idioma suportado por OJS.</p><p>O campo de procura baixo <i>Contido da Revista</i> permíteche buscar no contido da revista a través de distintas alternativas. Para unha procura máis inclusiva, preme sobre a ligazón  Procurar na barra de navegación superior.</p> <p><i>Fonte</i> permítiche modificar o tamaño da fonte no sitio do máis pequeno ao grande, ou vice-versa.</p><p>Tamén hai información para os Autores, Lectores e Bibliotecarios na listaxe da barra de navegación dereita.</p>]]>
+
+</section>
+</topic>

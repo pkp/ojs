@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Interface de Usuario - Procurar e Explorar
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="gl_ES" title="Procurar e Explorar" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>O contido da revista pode ser buscado por autor, título, resumo e termos de indexación. O contido do texto completo pode ser buscado tanto nos formatos de HTML  como nos de PDF. Outra alternativa é  usar a ligazón de Explorar na marxe dereita da páxina, os lectores poden explorar os contidos da revista por número, autor e título. Tamén se poden explorar outras revistas publicadas a través da instalación de Open Journal System.</p>]]>
+	</section>
+</topic>

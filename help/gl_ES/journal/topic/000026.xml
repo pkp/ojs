@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Páxinas Administrativas - Ferramentas de Lectura - Propiedades
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="gl_ES" title="Opcións de Ferramentas de Lectura" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>O administardor da revista pode seleccionar un ou toda as ligazóns xenéricas opcionais como facendo parte dun conxunto de Ferramentas que aparecerán nun cadro á dereita de todos os artigos na sección da revista que estén indexados  como parte do conxunto de ferramentas (exemplo, Artigos e non anuncios de conferencia). O administrador da revista tamén pode seleccionar unha disciplina ou unha área baseada no conxunto de Herramentas de Lectura, amosadas como artigos relacionados a seren visualizados. O administrador da revista pode examinar, editar, eliminar ou engadir ás ferramentas en cada un dos conxuntos de artigos relacionados ao ir ós conxuntos de artigos relacionados, en Ferramentas de Lectura.</p><p> O mesmo conxunto de ferramentas de lectura aparece con cada artigo nas seccións indexadas da revista. Porén, as ferramentas de lectura usan os termos de indexación fornecidos polo autor, para asegurar que os materiais encontrados na base de dados sexan relevantes. O administrador da revista pode cambiar as ferramentas de lectura seleccionadas en calquera intre.</p>]]>
+	</section>
+</topic>

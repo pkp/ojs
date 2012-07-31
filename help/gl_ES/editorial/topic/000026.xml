@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor Índice - Revisión - Decisión del Editor 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000026" locale="gl_ES" title="Decisión del Editor" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Entregadas todas as revisións, o Editor da Sección debe tomar unha decisión sobre o envío.</p><p><i>Rexistrando a Decisión</i>. O Editor da Sección selecciona unha Decisión entre Aceptar Envío, Precisa Revisións, Reenviar para Revisión, Rexeitar Envío.</p><p>O Editor da Sección debe explicar os motivos da súa decisión ao Autor na Correspondencia Editor/Autor (xa que o Autor non pode ver a Decisión rexistrada polo Editor). Da mesma forma, o Editor da Sección pode  cargar unha versión do envío, posiblemente con suxestións ou comentarios. Finalmente, o Editor da Sección debe enviar un correo electrónico ao Autor usando o ícono de correo electrónico Notificar ao Autor baixo a Decisión do Editor. Os Comentarios do Revisor poden ser importados a este correo electrónico premendo sobre Importar Revisións feitas por Expertos acima da liña asunto do correo electrónico. Por favor repara que os comentarios apuntados polo Revisor como único editor non son importados.</p><p>O editor da Sección pode tomar unha decisión inicial (Precisa Revisións), e unha vez que esté satisfeito coa Versión do Autor cargada polo Autor, pode tomar unha segunda decisión como Aceptar.</p><p>Se o Editor da Sección selecciona Aceptar, entón o próximo paso é designar unha versión do envío entre as versións do Editor e do Autor para que sexa enviada á página de Corrección de textos e de Edición. A Versión predeterminada do Editor é simplesmente a Versión de Revisión, e o Editor da Sección pode realizar cambios nesta versión; por exemplo, restablecendo o nome do autor; e cargándoa como axeitada para ir á Corrección de Textos.</p><p>Se o Editor da Sección selecciona Rexeitar, o envío moverase á listaxe de Arquivos, co su estado rexistrado como Rexeitado.</p><p><i>Reenviar para Revisión</i>.O Editor da Sección pode encetar unha segunda rolda de revisións para un envío seleccionando como Decisión Reenviar para Revisión. Entón, o Editor da Sección envía un correo electrónico ao Autor (xa que o Autor non pode ver a Decisión) e achega unha explicación sobre qué necesita facer o autor co envío antes de reenvialo a revisión. Cando o Autor reenvía unha versión para revisión, esta aparece baixo Versión do Autor e o Editor da Sección pode designala para reenvío. Entón esta versión convírtese na Versión de Revisión para a Rolda 2 (e deberá ser de novo revisada anónimamente, e se se precisar,  cargada mais unha vez baixo a Versión de Revisión). Os Revisores da Rolda 1 seguirán estando aí, porén as súas revisións e recomendacións serán removidas e colocadas baixo "Arrependimentos, Cancelacións, e Primeiras Roldas deste Envío." O Editor da Sección pode activar a solicitude para cada un dos Revisores da Rolda 1 premendo sobre o ícono de correo electrónico baixo Solicitude, e o Editor da Sección pode usar o botón Borrar Revisor e seleccionar outro Revisor para a Rolda 2. La Correspondencia do Editor/Autor para a Rolda 1 tamén deberá ser colocada baixo "Arrependimentos, Cancelacións, & Roldas Previas" dese Envío, aí o Editor pode revisala cando o precisar.</p>]]>	
+	</section>
+</topic>

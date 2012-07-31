@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Táboa de Contidos  do Proceso de Publicación. 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="gl_ES" title="Proceso de Publicación" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Crear Edición" />
+	<topic id="publishing/topic/000002" title="Horario de Envíos" />
+	<topic id="publishing/topic/000003" title="Táboa de contidos" />
+	<topic id="publishing/topic/000004" title="Publicar" />
+	<breadcrumb url="publishing/topic/000000" title="Proceso de Publicación" />
+</toc>

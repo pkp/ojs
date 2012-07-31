@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. por algunha razón docs/COPYING.
+  *
+  * Proceso de envíos do Autor - Indexación e Metadados 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000003" locale="gl_ES" title="Indexación e Metadados" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[<p>Este sistema de revista facilita que os Autores participen na indexación dos envíos á revista. O sistema tamén xera algúns dos elementos de indexación e de metadados (como o título da revista, a data, URL, etc.). Os metadados, o dados sobre os dados, equivalen a unha serie de termos que describen o documento ou os dados a amosar, polo tanto o uso comparabel dos termos de indexación levan ao mesmo resultado. A revista emprega un protocolo de metadados para indexar envíos que foi desenvolvido e mantido pola Iniciativa de Arquivos Libres (OAI) que atrae, de maneira decisiva, á Iniciativa de Metadados de Dublin Core.O Protocolo de Indexación de Metadados de OAI é un estándar emergente para investigación, que habilita aos motores de busca de OAI para crear índices de investigación baseados en recursos de todo o mundo. Porén, os contidos da revista tamén están dispoñíbeis  a través de Google e outros estándares, motores de busca da World Wide Web.</p><p><i>Elementos dos Metadados</i>. Dublin Core consiste en 15 elementos de metadados que son empregados para identificar e describer os documentos. Os elementos abranxen termos de indexación tradicionais para identificar documentos, como Autor, Título, Descripción (Resumo), Tema, permitindo deste xeito  unha indexación máis detallada ou granular incluindo elementos  como  Tipo, Cobertura, e Patrocinador. O Administrador da Revista e o Editor da revista seleccionaron que  metadatos son pertinentes para esta revista, e proporcionaron exemplos para cada un, baseados no alcance e o enfoque de la revista, para guiar aos Autores.</p><p>Ao inserir un Resumo, pódese utilizar HTML limitado para realizar formatos máis complexos.</p><p><i>Avantaxes da indexación</i>. Anímase aos  Autores a completar a indexación dos seus envíos no Paso 2 do Proceso de Envío, e terán deste modo a oportunidade de revisar os metadados como parte do proceso editorial. Os metadados serán revisados tamén como parte do paso de Corrección de textos. Os metadados para esta revista serán "indexados" por un número de motores de búscas adicados á investigación que crean, de feito, unha guía ou índice de investigación. Os traballos que estén ben indexados serán atopados con máis facilidade polas persoas que os precisen e terán máis oportunidade de seren citados.Mália non limitarse o número de termos cos que se indexa o traballo, anímase aos Autores a pensar sobre cómo está posicionado o seu traballo e cómo pode ser atopado  por medio desta indexación detallada.</p>]]>	
+	</section>
+</topic>

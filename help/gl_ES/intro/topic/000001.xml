@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Preguntas Frecuentes "FAQ"
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="gl_ES" title="Preguntas frecuentes" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+<li><a href="#section1"> Cómo podo dispor dunha revista con OJS?</a></li>  
+<li><a href="#section2"> Onde podo atopar asistencia técnica, informar de erros, e suxerir milloras para o uso de OJS?</a></li>
+<li><a href="#section3"> Que teño que facer para traducir OJS a outro idioma?</a></li>  
+<li><a href="#section4"> Por qué hai autores que reciben unha mensaxe que di que " neste intre, a revista non está aceptando envíos"?</a></li>  
+<li><a href="#section5"> Que teño que facer se desexo dar acceso a manuscritos que están baixo revisión o na etapa de "pre-impresión", é dicir, antes de seren publicados pola revista?</a></li>  
+<li><a href="#section6">Cómo podo  dar a coñecer  a miña  revista na Web?</a></li>  
+<li><a href="#section7">Cómo podo presentar na revista un rexistro do historial das persoas que traballaron na sú equipa editorial?</a></li>  
+<li><a href="#section8">Cómo podo permitir aoslectores que empecen sesión como revisores para a revista?</a></li>  
+<li><a href="#section9">Cómo podo atopar revisores adicionais para un envío feito á revista, alén da listaxe de revisores dispoñibles actualmente?</a></li>  
+<li><a href="#section10">Cales son as diferentes posibilidades de poder publicar na revista en formato de acceso libre, liberando o contido da revista para os lectores?</a></li> 
+</ol>
+]]>	
+	</section>
+	<section title="1. Como empezo unha revista con OJS?">
+		<![CDATA[
+<ol type="a">  
+<li><a href="http://pkp.sfu.ca/ojs_download" target="_blank">Descarga</a> OJS e instala o software, seguindo as instruccións o guión, nun servidor Web que cumpra cos requerimentos do software.</li>  
+<li>Usa o nome de usuario de administración e o contrasinal xerado na instalación de OJS para iniciar sesión.</li>  
+<li>Crea unha revista nova sob Revistas Presentadas.</li>  
+<li>O Administrador do sitio será rexistrado automáticamente como Administrador da Revista, da nova revista, mas se for necesario, crea un novo usuario (ou usuarios) no rol de Administrador da Revista</li>  
+<li>Entón, o Administrador da Revista terá que ir á Configuración pasando polos cinco pasos (ainda que non necesariamente por todos á vez), o resultado ha ser unha páxina Web axeitada para receber envíos, administrar o proceso editorial e publicar a revista en líña.</li>  
+<li>Consulta <a href="http://pkp.sfu.ca/files/OJSinanHour.pdf" target="_blank">OJS nunha Hora </a> para máis información sobre cómo comezar a emprgar OJS.</li> 
+</ol>
+]]>
+	</section>
+	<section title="2. Onde podo atopar suporte técnico, enviar incidencias de erros, e propor milloras no uso de OJS?">
+		<![CDATA[
+<p>O Proxecto de Coñecimiento Público opera un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Foro de Asistencia</a> con máis de un milleiro de comentarios entre os cales se poden procurar respostas, ademáis de facer preguntas. Por exemplo, pódense buscar mensaxes de erro, para chegar ás solucións propostas a problemas coñecidos. Se isto falla, os usuarios poden enviar preguntas a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. As achegas de incidencias de erros deberán ser enviadas a través de PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+]]>
+	</section>
+	<section title="3. Cómo debo proceder para traducir OJS noutro idioma?">
+		<![CDATA[
+<p>Hai Instruccións nos archivos docs/README incluidos na descarga de OJS. Información sobre problemas comúns de tradución pódese  atopar tamén en <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Foro de Asistencia de PKP</a>.</p>
+]]>
+	</section>
+	<section title='4. Por qué os autores reciben a mensaxe "neste intre a revista non acepta envíos" ? >
+		<![CDATA[
+<p>Se o Administrador da Revista seleccionou a opción da sección etiquetada como "Os Artigos só poden ser enviados polos Editores e os Editores da Sección" para todas as secciones creadas, entón só os Editores e os Editores da Sección poderán enviar. Alternativamente, se todas as seccións foron eliminadas, poderáselles  presentar aos autores esta mensaxe.</p>
+]]>
+	</section>
+	<section title='5. Qué podemos facer se queremos ofrecer acceso a manuscritos que están en proceso de revisión ou no estado "pre-print" antes de que este sexa publicado na revista?'>
+		<![CDATA[
+<p> Os Editores teñen dúas opcións para ofrecer "accesos de pre-impresión." Poden crear unha sección de pre-impresión, na cal se podan engadir  os artigos  que están aprobados para o seguinte número e que aínda non están preparados  para a súa publicación. Os artigos de pre-impresión son engadidos na táboa de contidos do número actual. Unha vez que o novo número está pronto para ser publicado, o editor elimina os artigos dos números anteriores e trasládaos ao novo número. Alternativamente, os editores poden usar o URL para "Ver Proba" dun envío da etapa de maquetación, na páxina de Edición do artigo, para crear unha versión de pre-impresión. Esa URL fornecerá acceso á "vista preliminar" do artigo (a usuarios con privilexio de lectura) antes da súa publicación nun número da revista. No entanto, PKP fará un seguimento sobre o interese que xera esta característica e poderá considerar a creación dun proceso formal para iso.</p>
+]]>
+	</section>
+	<section title="6. Cómo podo facer a miña revista visibel na Web?">
+		<![CDATA[
+<p>A túa revista axiña comezará a aparecer nos resultados de Google e noutros motores de busca importantes, mas podes seguir outros vieiros. Asegúrate de rexistrar a revista no Indizador de PKP no Paso 3 da Configuración,  permitirá ca túa revista sexa incluida nos índices da Iniciativa de Arquivos Libres, incluindo o <a href="http://pkp.sfu.ca/harvester/" target="_blank">Indizador de PKP</a> e <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Se a túa revista é de acceso libre, fala co bibliotecario da túa universidade sobre cómo pode listar a revista coas revistas electrónicas da biblioteca e sobre cómo pode contactar conoutras bibliotecas de investigación a través dunha listaxe de servizo de bibliotecas. Comproba se podes empregar a páxina Web ou unha listaxe de servizos das asociacións profesionais pertinentes para anunciar o "chamado a entrega de ensaios" ou para o lanzamento oficial da revista. Finalmente, na Configuración baixo Seguridade e Accesos (2.7), o Administrador da Revista debe permitir ós usuarios que se rexistren como lectores para que se lles poda notificar regularmente sobre novos números.</p>
+]]>
+	</section>
+	<section title="7. Cómo pode a revista levar un rexistro do historial dos integrantes da súa equipa editorial?">
+		<![CDATA[
+<p>O Administrador da Revista pode inserir esta información seguindo a ligazón Cabezallo na Administración da Revista. Alternativamente, o Administrador da Revista pode crear unha páxina de "Historial do Equipo Editorial " como un novo artigo en Sobre a Revista (punto 2.5 na Configuración). Nesa páxina,  poderás rexistrar o nome, o título da editorial e os anos de participación deses  membros ao equipo editorial.</p>
+]]>
+	</section>
+	<section title="8. Cómo podo habilitar que lectores poden acceder como revisores da revista?">
+		<![CDATA[
+<p>Na Configuración baixo Acceso e Seguridade (4.1), o Administrador da Revista pode habilitar lectores para que empecen sesión como Revisores, así como Lectores e/ou Autores. Entón, os Revisores aparecerán entre aqueles revisores que o Editor da Sección pode seleccionar e convidar para que revisen envíos. Na Configuración 5.7, o Administrador da Revista pode engadir unha nota "Para os Lectores" sobre o interese da revista de dispor de lectores que sirvan como Revisores da revista. Do mesmo xeito, a revista pode pedirlle aos usuarios que se rexistren como Lectores para poder identificar cantos lectores regulares existen e notificarlles calquera noticia sobre a revista.</p>
+]]>
+	</section>
+	<section title="9. Cómo podo atopar revisores suplementares para un envio á revista, fora da listaxe  de revisores habituais?">
+		<![CDATA[
+<p>Existen un número de técnicas que poden ser empregadas. Unha vez que se identifica a un revisor potencial co seu nome, pódese utilizar  o seu correo electrónico e a súa afiliación para identificalo, usando unha busca do nome.</p> <ol type="a">  <li>Usa a bibliografía do ensaio a ser revisado para identificar persoas axeitadas, e entón emprega o seu nome completo en Google para atopar a súa institución e s o seu correo electrónico.</li>  <li>Usa buscas booleanas en Google, baseandote  nas palabras clave de autor (por exemplo, globalización + pesca + "Somalia") para identificar materiais en liña e persoas que están a traballar na mesma temática.</li>  <li>Baseándote en como o autor identificou o tema do ensaio (ver Metadados no Resumo do Envío), envía preguntas aos colegas para conseguir colegas con experiencia nas áreas identificadas.</li>  <li>Visita outras revistas en liña sobre este campo para identificar autores que podan servir como revisores dun ensaio especifico que  precise ser revisado.</li> </ol>
+]]>
+	</section>
+	<section title="10. Cales son as diferentes formas nas que unha revista pode publicar nun formato de acceso aberto, liberando o contido da revista para os seus lectores?">
+		<![CDATA[
+<p>Podes consultar o artigo de John Willinsky <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> na Revista de Posgrao de Medicina. A Fundación Soros preparou, tamén, unha <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guía de Publicacións de Acceso Libre e Sociedades Especializadas</a> que é "unha guía creada para axudar a sociedades especializadas &mdash; e pequenos publicadores &mdash; a avaliar as opcións dispoñibles para o futuro dos programas de publicación da túa revista." <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, a Coalición de Publicacións Especializadas e de Recursos Académicos, fornece tamén un número de recursos relacionados con publicaciones de acceso libre.</p>
+]]>
+	</section>
+</topic>

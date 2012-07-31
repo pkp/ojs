@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000040.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Editor de Diagramación - Diagramación
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000040" locale="gl_ES" title="Diagramación" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+	<section>
+		<![CDATA[<p>A Versión de Diagramación do envío vai ser preparada polo Editor de Corrección de Textos de acordo cos estándares da revista. O Editor de Diagramación encargarase de cambiar o envío ao formato de arquivo axeitado, e do estilo de distribución da revista. O Editor de Diagramación precisará utilizar outros software para preparar os arquivos HTML, PDF, Postscript, etc.(por exemplo, Dreamweaver, Front Page, Acrobat). O Administrador da Revista pode elaborar un conxunto de Instruccións de Diagramación dispoñíbeis para os Editores de Diagramación, para axudalos a formatar correctamente os arquivos para a súa publicación.</p><p><i>Cargando as galeradas</i>. Cando o Editor de Diagramación carga un arquivo ao Formato Galerada, o sistema  identificará o tipo de arquivo baseado no seu sufixo (por exemplo, PDF, HTML), tamén fornecerá información sobre o tamaño do arquivo e o seu nome orixinal. Esta etiqueta, que aparecerá na Táboa de Contido da revista estará asociada ao artigo publicado, informará aos lectores que tipo de formato de publicación do arquivo está dispoñíbel. O Editor de Maquetación tamén ten a opción de etiquetar manualmente o arquivo. O Editor de Diagramación pode cargar máis dun formato de arquivo á Galerada, eliminar arquivos que xa foron cargados, e editar información como, por exemplo, o nome do arquivo. Cando se cargan arquivos HTML, as imaxes e as follas de estilo tamén deben ser cargadas co arquivo .htm ou .html.</p><p><i>Arquivos Complementares</i>. Se o Autor cargou Arquivos Complementares, estes xa han de estar colocados e deben ser publicados na revista no seu formato orixinal, agás a revista teña unha política especial en canto á preparación destes arquivos (por exemplo para Figuras ou ilustracións). Mesmo se a política é publicalos no seu formato orixinal, o Editor de Diagramación pode consultar os arquivos para asegurarse que son lexibles e para ver se poden cambiarse para adaptarense millor aos estándares e ao estilo da revista. Os Arquivos Complementares poden ser creados, modificados, sobrescritos e eliminados polo Editor de Diagramación (tamén polo Autor, se é necesario debido a aspectos do formato de arquivo).</p>]]>	
+	</section>
+</topic>

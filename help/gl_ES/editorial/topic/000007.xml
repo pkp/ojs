@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor da Sección Índice - Edición 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000007" locale="gl_ES" title="Editing" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
+	<section>
+		<![CDATA[<p>O editor da sección supervisa a correción de probas, a diagramación e a correción dos textos seleccionados e asignados a membros do equipo editorial para que se encarguen do envío en cada etapa, asegurándose que cada envío avance no proceso segundo o previsto. O proceso comenza cando o Editor da Sección selecciona ao Corrector de textos e solicita a correción do envío. Pode acontecer que o editor da sección desexe seleccionar ao mesmo tempo ao editor de diagramación e ao corrector de probas (dependendo de cantas desas funcións sexan empregadas pola revista), ou pode ser que o editor da sección agarde até que remate a etapa precedente. Para substituir aos editores seleccionados, o editor da sección debe premer sobre {translate key="common.select"} e asignar a unha nova persoa que poida substituir á persoa asignada anteriormente. A etapa de Edición se completa cando o envío rematou a etapa de correción de probas, neste  punto do proceso o editor da sección programa o envío para a súa publicación.</p><p><i>Envíos en diagramación que precisan máis correciónss</i>. O editor pode realizar máis correcions ao texto na versión de diagramación e enviarlla ao corrector de probas (quen se callar desexe contactar co Autor). Unha vez se rematan as correcións do texto e o envío volte ao Editor, quen pode cargar o arquivo na Versión de diagramación.</p><p><i>Cambiando unha galerada despois da programación dun envio</i>.Unha vez que o envío é enviado a programación, a páxina de edición (xunto cas súas páginas de resumo, revisión e Historial) é enviado ós arquivos. O editor pode pedirlle ao editor de diagramación, quen terá acceso a través dos archivos, mudar as galeradas e volvelo a cargar de novo. Isto pode acontecer após a publicación do envío. A novo galerada cargada aparecerá como a versión publicada, porén é necesariorio ser cuidadoso cando se cambian as galerada deste xeito, para poder preservar a integridade do proceso de publicación da revista, para acadar isto o editor pode achegar unha nota que rexistre loos cambios do artigo publicado.</p><p>Para información máis detallada sobre o proceso de diagramación véxase {help_topic key="editorial.sectionEditorsRole.editing.copyediting" text="Copyediting"}.</p><p>ey="editorial.sectionEditorsRole.editing.layout" text="Layout"}.</p><p>Para información máis detallada sobre a correción de probas e a programación véxase {help_topic key="editorial.sectionEditorsRole.editing.proofreading" text="Proofreading"}.</p>]]>	
+	</section>
+</topic>

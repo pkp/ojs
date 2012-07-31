@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Administración de páxinas - Idiomas 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="gl_ES" title="Idiomas" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<sectio
+		<![CDATA[<p>Este sistema pode suportar revistas multilíngues, asín como revistas nun idioma diferente  do Inglés. Aqueles idiomas que o administrador do sitio forneceu están nunha listaxe baixo Idiomas na administración da revista, e poden ser seleccionados para seren usados na páxina da revista. Se seleccionas máis dun idioma baixo escenarios suportados, os visitantes do sitio poderán mudar de idioma a través do menú desdobrabel na barra de navegación. Os usuarios tamén poderán inserir  formularios de información en calquera idioma habilitado.</p>]]>	
+	</section>
+</topic>

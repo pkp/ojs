@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contidos da Administración da Revista - Páxinas de Administración. 
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="gl_ES" title="Páxinas de Administración" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="Anuncios" />
+	<topic id="journal/topic/000010" title="Explorador de Arquivos" />
+	<topic id="journal/topic/000005" title="Seccións da Revista" />
+	<topic id="journal/topic/000007" title="Idiomas" />
+	<topic id="journal/topic/000029" title="cabeceira" />
+	<topic id="journal/topic/000035" title="Pagamentos" />
+	<topic id="journal/topic/000006" title="Correos Electrónicos preparados" />
+	<topic id="journal/topic/000009" title="Ferramentas de Lectura" />
+	<topic id="journal/topic/000004" title="Configuración" />
+	<topic id="journal/topic/000008" title="Estatísticas e incidencias" />
+	<topic id="journal/topic/000025" title="Subscricións" />
+	<topic id="journal/topic/000030" title="Plugins do Sistema" />
+	<topic id="journal/topic/000031" title="Importar/Exportar Dados" />
+
+	<breadcrumb url="journal/topic/000000" title="Administración da Revista" />
+	<breadcrumb url="journal/topic/000001" title="Páxinas de Administración" />
+</toc>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Autor Índice de Revisión - Revisión feita por Expertos
+  *
+  * Translated by  Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000034" locale="gl_ES" title="Decisión do Editor" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Unha vez que o proceso de revisión rematou, o Editor da Sección toma unha decisión e informa desta ao Autor a través  dun correo electrónico de notificación. Esta Decisión é rexistrada tamén na Correspondencia do Editor/Autor na páxina de Revisión do Autor. Se o  Editor da Sección solicita máis revisións antes de tomar a decisión final, o Autor pode cargar unha versión revisada do envío nesta páxina, asín tamén pode cargar Arquivos Complementares revisados ou adicionais (reflectindo conxuntos de dados, instrumentos de investigación, documentos de referencia, etc.). O Editor da Sección tamén pode cargar e presentar versións do envío e outros documentos para que sexan consultados polo Autor. (Para consultar arquivos cargados, o Autor pode premer no nome do arquivo ligado co Arquivo Cargado, e asní abrir o arquivo ou gardalo na computadora para abrilo máis adiante.)</p><p> Se o envío é aceitado, procederá á etapa {help_topic key="editorial.editorsRole.submissions.inEditing" text="Editing"} do proceso editorial.</p><p><i>Reenviar para Revisión</i>. Se a decisión do Editor da Sección é que o envío sexa revisado e logo reenviado a unha revisión feita por expertos, o Autor debe sinalar primeiro se está de acordo en realizar as revisións, empregando a Correspondencia Editor/Autor. Entón, cando as revisións foron completadas, o Autor cargará a versión para unha segunda rolda de revisións. O Editor da Sección enviará esta versión aos mesmos Revisores ou a Revisores novos, e informará ao Autor canto teña unha decisión seguindo o mesmo proceso da revisión inicial.</p>]]>	
+	</section>
+</topic>

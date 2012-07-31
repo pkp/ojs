@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Corrector de Probas Índice 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="gl_ES" title="Función do Corrector de Probas" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>O Corrector de probas recibe un correo electrónico do Editor da Sección solicitándolle ao corrector que complete unha serie, ou series, de correcciónss de probas. Cómprelle entón ao  Corrector de probas aceptar ou refugar esta responsabilidade; se o Corrector de probas acepta, poderá iniciar sesión e encetar o proceso de corrección de probas dende a súa páxina principal de usuario.</p>]]>	
+	</section>
+</topic>

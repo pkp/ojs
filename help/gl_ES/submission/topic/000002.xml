@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo d docs/COPYING.
+  *
+  * Proceso de Envíos do Autor - Requerimentos de Envíos 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="gl_ES" title="Requerimentos de Envíos" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>Para poder asegurar que os envíos realizados á revista foron preparados correctamente e teñen o formato axeitado para seren procesados, o Administrador da Revista e o Editor desenvolveron un conxunto de Requerimentos de Envío que deben ser cumpridos polo Autor antes de poder proceder ao Paso 2 do Proceso de Envío do Autor. Se por algunha razón o Autor non pode cumprir algún dos Requerimentos, poderá seleccionar o Requerimento e inserir unha explicación nos Comentarios para o Editor.</p>]]>	
+	</section>
+</topic>

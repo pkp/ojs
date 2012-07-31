@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Páxinas Administrativas - Ferramentas de Lectura - Contextos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="gl_ES" title="Contextos" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[<p>Cada conxunto de Artigos relacionados está conformado por ferramentas individuaiss (exempo, Estudos Relacionados, Foros en Liña, etc.) cada ferramenta consiste nun número de base de dados relevantes e agrupados nun contexto. Estas bases de dados, e os contextos nos que están organizadas, poden ser creadas, editadas ou eliminadas.</p><p><i>Metadados para Artigos nun Contexto</i>. O administrador da revista pode alterar o título da ferramenta. Tamén da unha opción que permite determinar se as palabras clave , o nome do autor (exempo, para uso noutros traballos do autor), ou os termos de indexación xeográfica poidan ser usados para a procura da base de dados. Outra opción, utilizada para definir termos, permítelle ao lector seleccionar o termo de busca facendo dobre clic sobre calquera palabra no texto que está a ler na revista. Os administradores da revista poden utilizar estas opcións para construir as súas  próprias ferramentas de lectura.</p><p><i>Editar buscas para cada ferramenta</i>. A través das buscas o administrador da revista pode editar ou eliminar o URL para cada base de dados nunha ferramenta, e reordenar as bases de dados que aparecen na ferramenta. Fornécese por cada base de datos un URL que lle permite ao lector aprender máis sobre a base de dados, e un URL que permite facer busca. Estos dos tipos de búsqueda pueden ser establecidos para OBTENER búsqueda, y si esto no funciona con la base de datos, también está soportada la búsqueda ANUNCIAR.</p>]]>
+	</section>
+	<section title="OBTER busca">
+		<![CDATA[<p>Para as procuras OBTER inicia unha busca e revisa o URL resultante Ex., en Google, unha procura para "FOOBAR" devolve o URL</p><p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p><p>Substitue o termo  de busca, FOOBAR, coaa variabel&#123;$formKeywords&#125;. Cando OJS atope esta variabel, a substituirá polo valor pertinente dende os metadados do artigo. Isto devólvenos un URL de busca de</p><p><samp class="code">http://www.google.ca/search?hl=en&q=&#123;$formKeywords&#125;&meta=</samp></p><p>para o RT. Porén, xa que o outros parámetros non son necesarios para este caso, podemos empregar un URL simplificado de</p><p><samp class="code">http://www.google.ca/search?q=&#123;$formKeywords&#125;</samp></p><p>para o RT.</p>]]>
+	</section>
+	<section title="Buscas ANUNCIAR">
+		<![CDATA[<p>Para os formularios ANUNCIAR, o proceso é máis complexo. Máis unha vez, ao realizar a busca no Google, poderás ver as fontes das páxinas, e notarás  <samp class="code">&lt;form action="/search" ...&gt;</samp>, que nos devolve unha base de inicio do URL<samp class="code">http://www.google.com/search</samp>. Despois poderás revisar cada un dos <samp class="code">&lt;input ...&gt;</samp> and<samp class="code">&lt;select ... &gt;</samp> elementos no formulario, e engadilos como <samp class="code">name=value</samp> pares separados por<samp class="code">&</samp> ao final do URL. O elemento que especifica a caixa de texto que acepta textos inseridos por usuarios (no caso de Google, chamado<samp class="code">q</samp>),  debes ter outra vez un valor de &#123;$formKeywords&#125;, que será substituido polo valor pertinente.</p><p> Un xeito máis doado de ANUNCIAR formularios é copiar a fonte do HTML a un arquivo, e cambialo <samp class="code">method=post</samp> to<samp class="code">method=get</samp> no formulario do campo pertinente,  e mudar o valor do <samp class="code">action=</samp>  formulario para facer un URL completo, ex.,<samp class="code">http://www.google.com/search</samp> en lugar de  <samp class="code">/search</samp>. Posteriormente, podes ver o arquivo de HTML modificado no teu explorador e utilizar o método OBTER previo, para construir o  URL.</p><p> En caso de que o método anterior non funcione, debido a que algúns motores de busca non suportan a buscas OBTER, podees inserir un formulario de dados de ANUNCIAR no campo de "buscar dados de anunciar" Se o exemplo dado anteriormente precisa que os dados sexan anunciados, insire <samp class="code">http://www.google.com/search</samp> para o URL de busca e <samp class="code">q=&#123;$formKeywords&#125;</samp> para os dados de anunciar .</p><p>Asegúrate de comprobar que os URLs funcionan correctamente, isto pódelo facer substituíndo &#123;$formKeywords&#125; cun termo no URL e probando se este mostra os resultados de busca agardados. Nota que non sempre é posibel executar isto cos formularios de ANUNCIAR, xa que  depende do sitio. Para os URLs que non teñen motores de busca axeitados, existe a posibilidade de utilizar Google e restrinxir por sitio. Podes utilizar unha busca como<samp class="code">site:mysite.com FOOBAR</samp> en Google para pescudar o termo "FOOBAR" só dentro de mysite.com. Isto utilízase nos RTs actuais para diferentes sitios.</p>]]>
+	</section>
+</topic>

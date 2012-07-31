@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función Editor Envíos - Non asignados 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="gl_ES" title="Non asignado" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Todo envío feito á revista ingresa no proceso  de envíos non asignados do Editor. Para asignar un envío nesta listaxe a un Editor da Sección, o Editor preme no  título do envío. Esta acción leva ao Editor á páxina de envío pertinente, onde o Editor da Sección é asignado. Cando un envío é asignado a un Editor da Sección  móvese da ringleira de envíos Non asignados para a ringleira de Revisión.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contido do Proceso Editorial  - Función do Corrector de Textos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000012" locale="gl_ES" title="Función do Corrector de Textos" parent_topic="editorial/topic/000012">
+	<topic id="editorial/topic/000037" title="Envios" />
+	<topic id="editorial/topic/000038" title="Edición de Textos" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000012" title="Función do Corrector de Probas" />
+</toc>

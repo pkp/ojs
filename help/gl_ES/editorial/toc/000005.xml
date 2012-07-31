@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contido do Proceso Editorial - Función do Editor da Sección - Envios
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000005" locale="gl_ES" title="Envios" parent_topic="editorial/topic/000005">
+	<topic id="editorial/topic/000021" title="En Revisión" />
+	<topic id="editorial/topic/000022" title="En Edición" />
+	<topic id="editorial/topic/000023" title="Arquivos" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000004" title="Función do Editor da Sección" />
+	<breadcrumb url="editorial/topic/000005" title="Envíos" />
+</toc>
