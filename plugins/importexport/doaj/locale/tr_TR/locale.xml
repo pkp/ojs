@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.doaj.displayName">DOAJ İhraç Eklentisi</message>
+	<message key="plugins.importexport.doaj.description">DOAJ için Dergi ihracı ve dergi içerik bilgisi desteği.</message>
+
+	
+	<message key="plugins.importexport.doaj.export">DOAJ İçin Dergi Verisi İhracı</message>
+	<message key="plugins.importexport.doaj.export.journal">Dergi İhracı</message>
+	<message key="plugins.importexport.doaj.export.contact">Ekleme için DOAJ İletişimi</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">XML olarak DOAJ arşivlemesi için makale ihraç bilgisi</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ içinde derginizin dikkate alınması için lütfen kısmen doldurulan bu form tamamlayınız.</message>
+
+</locale>

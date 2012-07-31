@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
+	<message key="plugins.importexport.crossref.description">Makale metadatasını çapraz referans XML formatında ihraç et.</message>
+	
+	<message key="plugins.importexport.crossref.export">Veri ihracı</message>
+	<message key="plugins.importexport.crossref.export.issues">Sayı İracı</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">İhraç için bir sayı seçiniz.</message>
+	<message key="plugins.importexport.crossref.export.articles">Makale ihracı</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">İhraç için makale seçiniz.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Kullanım: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">HATA:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">"{$issueId}" özel sayı ID'si ile herhangi bir sayı eşlenmedi.</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">"{$articleId}" özel makale ID'si ile herhangi bir makale eşlenmedi.</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Bu eklentinin kullanımı için Dergi Ayarlarında geçerli bir DOI ön eki belirtilmelidir.</message>
+</locale>

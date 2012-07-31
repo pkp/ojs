@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.block.subscription.displayName">Abone Bloğu</message>
+	<message key="plugins.block.subscription.description">This plugin provides sidebar subscription information.</message>
+	<message key="plugins.block.subscription.blockTitle">Abone</message>
+	<message key="plugins.block.subscription.expires">Sona Eriyor</message>
+	<message key="plugins.block.subscription.providedBy">Erişimi destekleyen</message>
+	<message key="plugins.block.subscription.comingFromIP">From</message>
+	<message key="plugins.block.subscription.about">Aboneler</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Login to verify subscription</message>
+</locale>
