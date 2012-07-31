@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<toc id="editorial/toc/000000" xlocale="tr_TR" title="Derleme Süreci" parent_topic="editorial/topic/000000">
+<toc id="editorial/toc/000000" locale="tr_TR" title="Derleme Süreci" parent_topic="editorial/topic/000000">
 	<topic id="editorial/topic/000001" title="Editörün Rolü" />
 	<topic id="editorial/topic/000004" title="Bölüm Editörünün Rolü" />
 	<topic id="editorial/topic/000008" title="Hakemin Rolü" />
