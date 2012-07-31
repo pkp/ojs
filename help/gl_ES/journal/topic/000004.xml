@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Páxinas Administrativas - Configuración 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="gl_ES" title="Configuración" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>O Administrador da Revista configura a revista, logo de ter instalado o sistema nun servidor Web, pasando por cinco paso: preenchendo as planillas econfigurando a administración da revista. A configuración non ten porque ser realizada de inmediato: pódense preencher e gardar as planillas; despois, o Administrador da Revista pode voltar á configuración e completar a tarefa ou ben realizar cambios en calquera intre.</p><p>A configuración está dispoñíbel para o Administrador da Revista na páxina de Administarción da Revista, e contén o seu próprio conxunto de textos de Axuda achegando cada unha das planillas. A configuración da páxina Web da Revista precisará decisións e textos para os seguintes artigos,entre outros, poden prepararse con anterioridade coo asesoramento dos Editores ou engadirse  máis adiante.</p><ul><li>Contacto principal para a revista</li><li>Contacto Técnico</li><li>Declaración de obxectivos e alcance da Revista</li><li>Seccións e política da Revista</li><li>Pautas para o Autor</li><li>Requerimentos de entrega para os autores</li><li>Indexar elementos e exemplos acaídos</li><li>Política de revisión feita por expertos</li><li>Pautas do revisor</li><li>Política de Dereitos de Autor</li><li>Política de acceso libre</li><li>Xunta Editorial/Xunta de Revisión</li><li>Políticas de Subscrición</li><li>Uso de editores de diagramación, editores de corrección de textos, e/ou correctores de probas</li></ul>]]>
+	</section>
+</topic>

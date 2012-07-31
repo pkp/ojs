@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo ddocs/COPYING.
+  *
+  * Táboa de Contidos del Proceso de Envíos do Autor. 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="submission/toc/000000" locale="gl_ES" title="Proceso de Envíos" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Guías do Autor" />
+	<topic id="submission/topic/000002" title="Requerimentos dos Envíos" />
+	<topic id="submission/topic/000003" title="Indexación e Metadados" />
+	<topic id="submission/topic/000004" title="Arquivos suplementares" />
+	<breadcrumb url="submission/topic/000000" title="Proceso de Envíos" />
+</toc>

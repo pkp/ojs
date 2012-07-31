@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor Resumo de Envíos - Adiministración de Envíos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000019" locale="gl_ES" title="Edministración de Envíos" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p>Varios aspectos da administración do envío poden ser implementados dende a páxina do resumo do envío.</p><p><i>Envío</i><br />Baixo Envío, o Editor pode enviarlle correos electrónicos ao Autor; revisar o arquivo de envío orixinal e os archivos suplementares; asegurarse que o envío está na sección correcta da revista e revisar os comentarios do Autor.</p><p>Antes de asignar un Editor da Sección para que administre a Revisión do envío, o Editor debe premer sobre o nome de arquivo do envío para abrir o arquivo e asegurarse que o texto que aí aparece aí é axeitado para a revisión feita pola revista, ademáis debe asegurarse que o envío está na sección correcta da revista.</p><p><i>Remuneración do Autor</i><br />Se a revista acepta pagamentos en liña, o Editor poderá fixar a Remuneración do Autor como recebido ou exento. Os honorarios que están fixados aquí como recibido/exento aparecerán tambén nos rexistros de pagamento da revista.</p><p><i>Editores</i><br />Para que o envío poida proceder á etapa de Revisión o editor debe asignar un Editor da Sección da listaxe de usuarios inscritos para supervisar o proceso de revisión. Se a revista non utiliza os Editores da Sección, o Editor pode premer "Engadirse", e supervisar personalmente o proceso de revisión. Aos Editores de Sección Múltiples pódeselles asignar un envío, e que realicen tamén tarefas de revisión ou o proceso de edición, ou as dúas. Esta acción enviaralle ao Editor da Sección un correo electrónico automático cunha notificación sobre a asignación.</p><p><i>Estado</i><br />A páxina de Resumo do Envío encárgase de facer  un seguimento do progreso do envío durante todo o proceso de revisión, edición e publicación. Se nalgún intre o envío é considerado como non axeitado para a revista, pode ser arquivado aquí.</p><p>Se o envío definitivamente non é axeitado para a revista , o Editor pode premer a ligazón Envío de arquivo, para enviar un correo electrónico ao autor informándo que o envío non será enviado a revisión. Uha vez enviado o  correo electrónico o envío será arquivado. O Editor de Sección asignado tamén pode executar esta acción.</p>]]>	
+	</section>
+</topic>

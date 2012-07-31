@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Anuncios 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000034" locale="gl_ES" title="Anuncios" toc="journal/toc/000001" key="journal.managementPages.announcements">
+	<section>
+		<![CDATA[<p>OJS habilita ao administrador da revista para que poida colocar anuncios que estén dispoñíbeis para os lectores que visitan a páxina. Os anuncios enviados aparecerán na páxina de anuncios e, opcionalmente, na páxina principal da revista.</p><p><i>Desdobrando o módulo de anuncios</i>. O administrador da revista debe indicar no paso 4.4 da configuración, que a revista publicará anuncios, Ademáis, debe indicar se os anuncios deben ser visualizados ou non na páxina principal da revista. Tamén se pode proporcionar un texto introductorio que apareza na parte superior da páxina de anuncios.</p><p><i>Creando Anuncios</i>. O administrador da revista pode crear un anuncio seleccionando o tipo de anuncio (se é necesario), indicando un título para o anuncio e fornecendo unha descrición breve e unha completa do anuncio. O texto de descrición breve é visibel para os lesctores como un resumo do anuncio, porén o texto de descrición completa é visibel para os lectores cando deciden escoller o anuncio para ler os detalles completos. Tamén se pode especificar unha data do fin da vixencia ou vencimento opcional. Os anuncios que incluen unha data de vencimento non poderán ser visibeis para os lectores unha vez que pase a data.</p>]]>
+	</section>
+
+</topic>

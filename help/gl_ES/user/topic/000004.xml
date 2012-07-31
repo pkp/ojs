@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Interface de Usuario - Actual e Arquivos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="gl_ES" title="Actual e Arquivos" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Os números da revista están dispoñíbeis como un número actual ou edición, e como un conxunto de arquivos de números anteriores. O Administrador da Revista pode traer á páxina Web desta  revista números previos da revista que foron publicados antes de utilizar este sistema, para que formen parte dos Arquivos que están dispoñíbeis para os lectores na páxina Web da revista.</p>]]>	
+	</section>
+</topic>

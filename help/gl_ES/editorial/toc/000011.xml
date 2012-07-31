@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contido do Proceso Editorial  - Función do Autor - Edición
+  *
+  * Translated by  Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000011" locale="gl_ES" title="Edición" parent_topic="editorial/topic/000011">
+	<topic id="editorial/topic/000035" title="Correción de Textos" />
+	<topic id="editorial/topic/000036" title="Correción de Pruebas" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000009" title="Función do Autor" />
+	<breadcrumb url="editorial/topic/000011" title="Edición" />
+</toc>

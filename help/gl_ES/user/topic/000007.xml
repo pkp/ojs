@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Interface de Usuario - Páxina de Inicio do Usuario
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="gl_ES" title="Páxina de Inicio do Usuario" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>Unha vez que o usuario iniciou a sesión, aparecerá unha ligazón á Páxina de inicio do Usuario na barra de navegación superior. Premer sobre esta ligazón permitirá que  visualizar distintas informacións que dependen do que esté a facer o usuario, por exemplo explorando unha revista específica ou o sitio en xeral.</p>]]>	
+	</section>
+
+<section title="Información da Páxina de Inicio do Usuario a Nivel da Páxina Principal do Sitio">
+		<![CDATA[<p>Se o usuario iniciou sesión e está a explorar a páxina principal do sitio, hase visualizar a información a seguir:</p>
+
+<p><i>As miñas revistas</i>. O usuario atopará todas as revistas nas que esté rexistrado, xunto coas ligazóns aos roles dispoñíbeis (Autor, Editor, etc.) en cada revista. Se o usuario é tamén o Administrador do Sitio existirán tamén ligazóns ás páxinas de administración.</p><p><i>A miña Conta</i>.O usuario achará ligazóns para realizar cambios nas contas, incluindo as opcións de rexitrarse con outras revistas; editar o perfil de usuario; mudar o contrasinala do usuario e pechar a sesión.</p>]]>
+
+</section>
+
+<section title="Información da Páxina de inicio do Usuario a Nivel da Revista">
+		<![CDATA[<p>Se o usuario iniciou sesión e está explorando unha revista específica, só aparecerá a información relacionada coa revista que se está a ver. Ademáis, baixo <i>A Miña Conta</i> substitúese a ligazón de rexistrarse con outras revistas pola ligazón "Amostrar a Miñas Revistas" (que conduce ao usuario de volta á Páxina Principal de Usuario do Sitio).]]>
+
+</section>
+
+</topic>
+

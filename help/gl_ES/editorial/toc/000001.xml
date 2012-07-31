@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contidos do Proceso Editorial - Función do Editor 
+  *
+  * Translated by Juan Arias: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000001" locale="gl_ES" title="Función do Editor" parent_topic="editorial/topic/000001">
+	<topic id="editorial/topic/000002" title="Envios" />
+	<topic id="editorial/topic/000003" title="Resumo de Envios" />
+	<topic id="editorial/topic/000044" title="Asegurar unha Revisión cega por expertos" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000001" title="Función do Editor" />
+</toc>

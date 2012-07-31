@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Páxinas Administrativas - Importar/Exportar
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="gl_ES" title="Importar/Exportar Dados" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>A característica de Importar/Exportar Dados, dispoñíbel na administración da revista, permítelle ao administrador da revista inserir e extraer dados dende OJS.</p><p> Importar/Exportar dados desenvolveuse utilizando plugins, cada formato ou tipo de dados está provisto dun plugin diferente. Para máis información, diríxete á documentación de cada plugin, que se atopa no directorio de plugin de OJS.</p><p>Con OJS envíanse cinco plugins de Importar/Exportar , e están ilustrados a seguir.</p><p>A función Importar/Exportar tamén está dispoñíbel como unha ferramenta de comandos; Para máis información véxase tools/importExport.php </p>]]>
+	</section>
+	<section title="Plugin de Usuarios XML">
+			<![CDATA[<p>O plugin de usuarios XML pode usarse para importar e exportar usuarios e os sus roles e funcións. Para máis información véxase  XML DTD en "plugins/importexport/users/users.dtd" </p>]]>
+	</section>
+	<section title="Erudit Article Export Plugin">
+			<![CDATA[<p>El Erudit Article Export Plugin implementa exportacións de artigos individuais para a indexación do texto completo utilizando Erudit's XML DTD. Para máis información véxase <a href="http://www.erudit.org">http://www.erudit.org</a> </p>]]>
+	</section>
+	<section title="Artigos &amp; Publicacións Plugin XML">
+			<![CDATA[<p>Os artigos &amp; Publicacións Plugin XML é o método primario para agrupar, importar e exportar. Pode utilizarse para importar e exportar artigos múltiples, publicacións individuais e publicacións múltiples,  incluindo os metadados globais. Para máis información  deste plugin, véxase o XML DTD en "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="Plugin PubMed XML Export">
+			<![CDATA[<p>O Plugin PubMed XML Export proporciona un plugin de Importar/Exportar para xerar información bibliográfica para os artigos na publicación actual no formato editorial XML de dados estándar PubMed para indexar en NLM PubMed/MEDLINE. Para máis informació do formato XML e os requerimentos de dados en: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Pode achar máis información sobre este plugin en "plugins/importexport/pubmed".</p>]]>
+	</section>
+	<section title="Plugin Crossref XML Export">
+			<![CDATA[<p>O Plugin Crossref XML Export proporciona un plugin de Importar/Exportar para xerar os metadados de información dos artigos e publicacións para a súa indexación en CrossRef.  Detalles sobre o formato XML e requerimentos de dados estan dispoñíbeis en: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Puede encontrar más información sobre este plugin en "plugins/importexport/crossref".</p>]]>
+	</section>
+</topic>

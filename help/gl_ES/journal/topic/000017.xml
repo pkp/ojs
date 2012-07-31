@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Editor da Sección
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="gl_ES" title="Editor da Sección" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>O editor da Sección administra a revisión e a edición das entregas aos que foi asignado. Nalgúns casos, un editor da sección que está asignado para supervisar entregas durante o{help_topic key="editorial.sectionEditorsRole.review" text="Review"} proceso, tamén será responsabel da supervisión da entrega para que sexa aceptado durante o {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} proceso (é dicir, durante a correción de textos, a diagramación, e a correción de probas). Porén, é costume que os editores da sección só traballen no proceso de Revisión, e un editor en función de editor da sección supervise as entregas durante o proceso de edición. A revista terá unha política que explique como serán divididas as tarefas.</p>]]>	
+	</section>
+</topic>

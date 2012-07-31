@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contidos da Administración da Revista - Funcións. 
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="gl_ES" title="Funcións" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Administrador da Revista" />
+	<topic id="journal/topic/000016" title="Editor" />
+	<topic id="journal/topic/000017" title="Editor da Sección" />
+	<topic id="journal/topic/000019" title="Corrector de Probas" />
+	<topic id="journal/topic/000018" title="Editor de Diagramación" />
+	<topic id="journal/topic/000020" title="Corrector de Probas" />
+	<topic id="journal/topic/000021" title="Revisor" />
+	<topic id="journal/topic/000022" title="Autor" />
+	<topic id="journal/topic/000023" title="Lector" />
+	<topic id="journal/topic/000032" title="Administrador das subscricións" />
+
+	<breadcrumb url="journal/topic/000000" title="Administrador da Revista" />
+	<breadcrumb url="journal/topic/000003" title="Funcións" />
+</toc>

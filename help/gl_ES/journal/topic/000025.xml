@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Subscricións 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="gl_ES" title="Subscricións" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>OJS suporta revistas por subscrición porque fornece un compoñente de administración de subscricións e a súa protección de contrasinal correspondente para o contido en liña da revista. As subscripcións poden administrarse por usuarios individuais, organizacións ou institucións. Unha revista por subscrición tamén pode fornecer acceso libre aos seus números previstos a través dun formulario de adiamento de acceso libre. Na administración do número, o editor autoriza o libre acceso ós lectores do contido dun número ou artigos individuais dende cero até 24 meses após a súa publicación inicial e a disponibilidade desta para os seus subscritores.</p></p><p> Os administradores, Editores, Editores de Sección, Editores de diagramación, Editores de Correción de Textos e Correctores de Probas da revista poden acceder a ela como se estiveran subscritos.</p><p><i>Desdobrando o módulo de Subscrición</i>. O administrador da revista debe informar na configuración, 4.1 Acceso e Seguridade, propiedades, a revista estará utilizando este sistema para administrar as súas subscricións e que alguén, rexistrado como administrador da revista ou administardor de subscricións, vai ser designado para administrar esta característica.</p>]]>	
+	</section>
+	
+	<section title="Tipos de Subscricións">
+		<![CDATA[<p><i>Establecendo os Tipos de Subscricións</i>. O primeir paso na configuración da administración de subscricións é designar os tipos de subscricións que ofrece a revista. É usual que as  revistas ofrezan tarifas, por exemplo, para subscricións individuais e institucionais. Algunhas revistas teñen ofertas especiais para membros dunha organización ou para estudantes. OJS suportará a administración de impresión e/ou subscricións en liña.Pódese crear máis dun tipo de subscricións para abranxer periodos de tempo máis longos (12 meses, 36 meses).</p><p><i> Opcións para Tipos de Subscricións</i>. Para subscricións "institucionais", emprega a opción  "validada a través dun dominio ou  autenticación do IP", xa que a todos os mebros da institución, que veñen do seu dominio asociado ou enderezo IP, háselles permitir o acceso sen contrasinal. De xeito similar, a opción "membros dunha organización" debe ser utilizada para la subscrición de usuario, sexa de balde ou cun desconto para os membros.  Usa a opción "visibel ao público" para que apareza o tipo de subscrición e as súas tarifas en Subscricións en Sobre a Revista. Mália seren visibeis a maioria dos tipos de subscricións  en Sobre a Revista, os tipos creados para consideracións internas, subscricións do personal, e para propósitos de administración, por exemplo, non aparecerán na páxina Sobre a Revista.</p>]]>
+	</section>
+
+	<section title="Subscricións">
+		<![CDATA[<p><i>Creando Subscricións</i>. Para subscritores individuais, o administrador da revista (ou o de Subscrición) debe rexistrar ao subscritor como lector, se ainda non se rexistrou, e logo na páxina de Crear Subscricións debe inserir o tipo e a data para a Subscrición. Sobre gardar esta información , háselle enviar ao subscritor un correo co nome de usuario, que servirá para todo o contido que publica a revista atéa que o usuario sexa eliminado da listaxe de subscricións polo administrador da revista.</p><p><i>Subscricións Institucionais e de Organizacións</i>. Para subscricións Institucionais, é preciso que a persoa de contacto coa institución esté rexistrada como lector , e posteriormente seleccionada polo administrador da revista (ou o de subscricións) na páxina de Crear Subscricións. A persona de contacto terá que achegar o dominio da institución ou dos enderezo de IP, que son utilizado para validar a conta, evitando que os usuarios individuais necesiten tener contas de usuario para acceder ao contido por subscrición. A Organizacións con listaxe de usuarios poden importar estas listaxes ao sistema, a través da función Importar Usuarios na Administración da Revista.</p>]]>
+	</section>
+
+	<section title="Políticas de Subscrición">
+		<![CDATA[<p>A través das Políticas de Subscrición, O administrador da revista pode inserir a información de contacto do administrador de subscrición, que aparecerá en Sobre a Revista (canda os tipos de subscrición e remuneración que xa se atopa aí); establecer recordatorios de data de vencimento da subscrición; establecer opcións de acceso libre; e definir a política de arquivado feita por un autor, que tamén aparecerá en Sobre a Revista.</p>]]>
+	</section>
+
+</topic>

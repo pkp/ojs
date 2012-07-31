@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Administrador da Revista 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="gl_ES" title="Administrador da Revista" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>O administrador da revista é responsabel de xestionar o sistema de publicación. Isto non implica nengún tipo de abelencia técnica mas implica o preenchimento das planillas e cargar os arquivos. O administrador da revista fai a {help_topic key="journal.managementPages.setup" text="Setup"} para a revista, e rexistra aos editores, editores da sección, Copyeditors, Editores de diagramación, os editores de correción de textos, os correctores de probas e os revisores. Alternativamente, os nomes e os correos dos revisores, se xa existen noutra base de dados, poden importarse ao sistema, a través da función Importar persoas baixo {help_topic key="journal.managementPages.importExport" text="Import/Export Data"}. O administrador da revista tamén ten acceso ao sistema de administración doutras revistas, e pode crear novas seccións para a revista, editar o conxunto de correos defectuosos que usa o sistema, xestionar as {help_topic key="journal.managementPages.readingTools" text="Reading Tools"} que están dispoñibeis con esta revista, e supervisar as {help_topic key="journal.managementPages.statsAndReports" text="Journal Statistics"} que pode xerar o sistema.</p><p>Repara que ainda que aparentemente a función do administrador da revista, nunha función para unha só revista, en xeral os administradores das revistas poden ser considerados como usuarios confiables no sistema e por iso, ten a capacidade de asumir as identidades doutros usuarios que poden estar inscritos noutras revistas.</p>]]>
+	</section>
+</topic>

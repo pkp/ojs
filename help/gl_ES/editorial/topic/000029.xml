@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Editor da Sección Índice - Edición - Correción de Probas
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="gl_ES" title="Correción de Probas" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Despois que o Editor da Sección sexa notificado da culminación das galeradas, escollerá ao Corrector de Probas, se aínda non o fixo. Entón, o Editor da Sección enviaralle un  correo electrónico de solicitude ao Autor para comezar o proceso de Corrección de Probas. O Autor, logo de completar a revisión das galeradas e os Arquivo Complementares, se é que os hai, enviaralle un correo electrónico ao Corrector de Proebas, con unha copia para o Editor da Sección. Calquera erro de escrita ou de formato serán anotados polo Autor e polo Corrector de Probas no Cadro de Texto de Correccións durante este proceso, xa que nen o Autor nen o Corrector de Probas poden modificar as galeradas. O Corrector de Probas, após completar a revisión das galeradas e dos Arquivos Complementares, se é que os hai, informará ao Editor de Diagramación  e enviará unha copia ao Editor da Sección. O Editor de Diagramación procederá a corrixir as galeradas e os Arquivos Complementares, se  é que os hai. Para rematar, o Editor de Diagramación notificará ao Editor da Sección que o envío está pronto para ser programado para a súa publicación. Nese momento, o Editor da Sección pode volver a revisar os arquivos se o quiser, e se está satisfeito pode programar o envío para a súa publicación escollendo un número baixo Programando, e premendo sobre "{translate key="common.record"}". Deste modo o envío inserirase en {help_topic key="publishing.index" text="Publishing Process"}.</p><p>Repara que o Editor pode programar o envío para a súa publicación en calquera momento do proceso de edición; esta información estará dispoñibel para os Editores de Diagramación e os Correctores de Probas, a estes háselles permitr tamén ver a vista previa do número antes da súa publicación.</p>]]>
+	</section>
+</topic>

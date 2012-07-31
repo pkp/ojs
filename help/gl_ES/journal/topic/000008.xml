@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Administración de páxinas- Estatísticas & Informes
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="gl_ES" title="Estatísticas e Informes" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>As estatísticas e os informes fornecen ao administrador da revista a posibilidade de extraer información sobre a historia do uso da revista de dúas maneiras. Primeiro, en Estatísticas, están dispoñíbeis as estatísticas de cada ano para un resumo rápido dos dados das entregas, prácticas editoriais, e usuarios. Segundo, o administrador da revista pode xerar  un informe sobre un rango específico de datas.</p><p>Existen catro tipos de informes dispoñíbeis:<ul>
+			<li><strong>Informe da revista</strong>: Informes sobre todas as entregas da revista nun período determinado.</li>
+			<li><strong>Informe del editor</strong>: Informes sobre entregas, agrupadas por editor.</li>
+			<li><strong>Informe de revisión</strong>: Informes sobre entregas, agrupadas por revisores.</li>
+			<li><strong>Informe de sección</strong>: Informes sobre entregas, agrupados por sección.</li>
+		</ul>Estes Informes xéranse no formato e valores separados por comas (CSV) e pódense abrir usando unha aplicación de folla de cálculo.]]>
+	</section>
+</topic>

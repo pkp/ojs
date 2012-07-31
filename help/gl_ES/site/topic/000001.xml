@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Administración do Sitio - Instalación 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="gl_ES" title="Instalación" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>Open Journal Systems é unha aplicación de código aberto que pode ser descargada de balde e instalada case en calquera computadora ou servidor.</p>]]>	
+	</section>
+	
+	<section title="Licensia">
+		<![CDATA[<p>OJS é distribuido baixo os termos da<a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU Licencia Pública General</a>. A descarga de OJS inclue unha copia dos termos da licencia de redistribución do código de OJS na súa forma orixinal ou modificada.</p>]]>
+	</section>
+	
+	<section title="Requerimentos">
+		<![CDATA[<p>Recoméndase que o servidor cumpra cos seguintes requerimentos:</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including
+	  PostgreSQL 8.x)</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6+</li>
+			<li>Sistema Operador: calquera sistema operativo que suporte o Software, abranxendo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, and <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>Actualmente OJS só foi probado en MySQL e PostgreSQL, porén outros sistemas de administración de base de dados son suportados por <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Os informes de Compatibilidade e/ou parches de código para DBMSs son sempre benvidos.</p>
+		]]>
+	</section>
+	
+	<section title="Descargar">
+		<![CDATA[<p>OJS Pode descargarse dende a páxina Web do proxecto de coñecimento público <a href="http://pkp.sfu.ca/ojs/" target="_blank">web site</a>.</p>]]>
+	</section>
+	
+	<section title="Instalación">
+		<![CDATA[<p>OJS inclue un guión baseado nunha Web de instalación que guía ao administrador do sistema durante o proceso de instalación. Está dispoñíbel tamén unha ferramenta alternativa de instalación de líña de comando.</p>
+		<ol>
+			<li>
+				Descarga o arquivo OJS.
+			</li>
+			<li>
+				Descomprima o arquivo de OJS no teu servidor de Web e dispono na ubicación desexada na árbore de documentos Web:<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				Fai os seguintes arquivos e directorios escribibles(ej., usando chown ou chmod):<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				Abre o explorador Web até a ubicación da súa instalación de OJS ex., http://www.mydomain.com/myjournal/) e sigue as instruccións na pantalla para completar a instalación. Olla docs/README para máis información sobre o proceso de instalación.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

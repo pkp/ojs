@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor da Sección Índice - Revisión - Versión de Revisión 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000024" locale="gl_ES" title="Versión de Revisión" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p>A primeira tarefa que debe realizar o Editor da Sección para cada envío é verificar se a versión orixinal do texto pode servir como a versión de revisión ou se a copia revisada precisa ser cargada. Para ve o  arquivo orixinal, o Editor da Sección preme sobre o nome do arquivo que está a carón da versión de revisión</i>. Véxanse as instrucciones para {help_topic key="editorial.sectionEditorsRole.review.blindPeerReview" text="Ensuring a Blind Peer Review"}.O Editor da Sección pode consultar tamén a páxina de envío para revisar se os arquivos suplementares poden ser compartidos cos Revisores. Se o autor desexa entregar arquivos aos Revisores, estes serán revisados; o Editor de Sección pode deseleccionalos se no son idóneos para compartir.</p><p><i>Establecendo a Versión de Revisión do envío</i>. O Editor de Sección establece que Versión de Revisión verán os Revisores, ao (a) seleccionar a Versión Orixinal, se é axeitada, o (b) cargando unha versión máis axeitada. Editor da Sección pode escoller arranxar problemas menores do arquivo orixinal, utilizando un procesador de palabras para facer os  cambios, gardando o arquivo no escritorio e logo cargando o arquivo, empregando os botónss Explorar/Cargar na Versión de Revisión.</p><p><i>Envío que non están ben preparados</i>. Se o Autor fallou en asegurarse de que o envío se xunte ás disposicións para o autor da revista, incluindo que o envío acepte unha revisión cega, o Editor da Sección pode escoller notificar ao autor que e envío necesita ser reenviado. Entón, o autor pode reenviar unha versión millorada ao editor a travé de correo electrónico, e este último pode cargala como a Versión de Revisión. O Editor da Sección pode decidir simplesmente que o envío non é apto para a revista e notificarlle ao autor sobre esta decisión. Indo á páxina de envío e premendo sobre "{translate key="editor.article.archiveSubmission"}" que envía o envío aos Arquivos.</p>]]>	
+	</section>
+</topic>

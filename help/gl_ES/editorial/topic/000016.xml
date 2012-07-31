@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor Envíos - En Revisión 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000016" locale="gl_ES" title="En Revisión" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Os envíos nesta ringleira están suxeitos a revisión e á decisión  do Editor da Sección de aceptar ou refugar o envío. A extensión do proceso de revisión está definida na Política de Revisión da revista (por exemplo, Está sujeita toda Sección da revista á Revisión feita por Expertos? Cantos Revisores expertos existen por envío?). Cando o Editor da Sección ou o Editor preme sobre o título dun envío na ringleira de Revisión, son levados para a páxina de Revisión do envío. Se o Editor da Sección acepta un envío, este envío moverase para a ringleira de Edición, porén se rexeita o envío moverase aos Arquivos.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Autor Edición - Correción de Probas
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="gl_ES" title="Correción de Probas" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>O Autor debe corrixir as galeradas do envío, que son as versións en HTML, PDF e/o Postscript que aparecerán na edición en liña da revista. Para ver os arquivos, o Autor debe premer sobre cada un dos Formatos de Proba (e non sobre dos nomes do arquivo) para ver o envío en cada un dos formatos en que será publicado. Na etapa de Corrección de Probas, só se realizarán correccións de escrita e de formato, e estás só poden ser realizadas polo Editor de Diagramación.</p> <p>É obvio que se se emprega máis dun formato de arquivo, o Autor debe revisar só un na procura de erros de deletreo, porén debe revisar todos os outros na procura de problemas de formato. O Autor deberá seguir as Instruccións de Corrección de Probas cando esté a rexistrar as correccións no Cadro de Texto de Correccións. O Autor deberá revisar tamén calquera Arquivo Complementar que acompañe o envío publicado. Estes arquivos hanse presentar no seu formato orixinal, portanto poden ser modificados e cargados de novo. O título destes arquivos tamén poden ser modificados utilizando a función de Editar. Calquera cambio nestes arquivos debe ser anotado no Cadro de Textos de Correccións.</p>]]>	
+	</section>
+</topic>

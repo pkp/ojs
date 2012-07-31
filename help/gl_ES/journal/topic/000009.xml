@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Administración de páxinas - Ferramentas de Lectura
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000009" locale="gl_ES" title="Ferramentas de Lectura" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>O administrador da revista pode seleccionar un conxunto de ferramentas de lectura que aparecerán nun cadro á dereita de todos os artigos nas seccións da revista que estén indexados (por exemplo, os artigos e os anuncios de conferencias). as ferramentas de lectura van ser deseñadas para asistir a lectores novatos y experimentados, proveyéndolos con un contexto rico en materiales relacionados los artículos, seleccionados de una gran variedad de recursos de acceso libre pertinentes. Las herramientas utilizan la palabra clave de un autor para buscar automaticamente en la bse de datos pertinente de acceso, materiales relacionados con la búsqueda, son presentados al lector en otra ventana. Los lectores tienen una variedad de herramientas, y dentro de cada una de ellas hay una variedad de base de datos, en conjunto con accesos a información sobre la base de datos.</p><p>En las opciones de herramientas de lectura, el administrador de la revista puede seleccionar herrameintas generales de los artículos de la revista, tales como "Sobre el autor", "¿Como citar artículos?" e "Imprimir el artículo", y también puede seleccionar entre un número de herramientas relacionadas al artículos (ej., Humanidades, Educación, Física, etc.), que proveerán recursos relacionados a un área especifica o a una disciplina. El administrador de la revista puede editar o eliminar las herramientas existentes relacionadas a los artículos y también agregar nuevas herramientas. Vea también {help_topic key="user.readingTools" text="Reading Tools"} en la página Web de la revista.</p>]]>
+	</section>
+</topic>

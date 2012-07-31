@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Funcións - Editor de Corrección de Textos 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  * $Id$
+  -->
+
+<topic id="journal/topic/000019" locale="gl_ES" title="Editor de Corrección de Textos" toc="journal/toc/000003" key="journal.roles.copyeditor">
+	<section>
+		<![CDATA[<p>El editor de correción de textos edita as entregas para millorar a súa claridade e gramática, traballa cos autores para asegurar que todo esté ben disposto , asegúrase que as referancias bibliográficas e o estilo do texto concorden coa revista, e crea unha copia editada e en limpo para o editor de Diagramación; esta copia é convertida polo editor de Diagramción en galeradas que estarán no formato de publicación da revista. Algunhas revistas teñen un editor ou un editor da sección cumprindo esta función.</p><p>Podes achar máis información en {help_topic key="editorial.copyeditorsRole" text="here"}.</p>]]>	
+	</section>
+</topic>

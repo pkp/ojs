@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Garantir unha Revisión Cega feita por Expertos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="gl_ES" title="Garantir unha Revisión Cega feita por Expertos" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Para garantir a integridade da revisión cega do envío feita por expertos para esta revista, compre  esforzarse para evitar que a identidade dos autores e dos revisores sexa coñecida por eles. Isto envolve aos autores, editores e revisores (que cargan documentos como parte da súa revisión) que revisan se os pasos  a seguir foron executados para o texto e as propiedades do arquivo: <ol><li>Os autores do documento eliminaron os seus nomes do texto, utilizando "Autor" e ano nas referencias e nas notas a rodapé, en vez do nome do autor, o título do artigo, etc.</li> <li>Cos documentos de Microsoft Office, a identidade do autor debe ser eliminada tamén das propiedades do arquivo (ver baixo Arquivo en Word), premendo sobre o seguinte, comezando por Arquivo no menú principal da aplicación Microsoft: Arquivo &gt; Gardar Como &gt; Ferramentas (ou Opcións nunha Mac) &gt; Seguridade &gt; Eliminar información persoal das propiedades do arquivo ao gardar &gt; Gardar.</li> <li>Cos PDFs, o nome do autor tamén debe ser eliminado  das Propiedades do Documento localizadas baixo Arquivo no menú principal de Adobe Acrobat</ol></p>]]>
+	</section>
+</topic>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Táboa de Contido do Proceso Editorial - Función do Editor de Diagramación
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000013" locale="gl_ES" title="Función do Editor de Diagramción" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Envios" />
+	<topic id="editorial/topic/000040" title="Diagramación" />
+	<topic id="editorial/topic/000041" title="Correción de Probas" />
+
+	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
+	<breadcrumb url="editorial/topic/000013" title="Función do Editor de Diagramción" />
+</toc>

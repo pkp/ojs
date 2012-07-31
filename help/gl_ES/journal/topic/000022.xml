@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Roles - Autor 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="gl_ES" title="Autor" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Os autores poden rexistrar e enviar directamente artigos á revista a través  da páxina Web da revista. Ao autor pideselle cargar o artigo e fornecer os metadatos ou a información de indexación do artigo. (Os metadados milloran a capacidade de busca para a investigación en liña e para a revista.) O autor pode cargar arquivos suplementares, no formulario de conxuntos de dados, instrumentos de investigación, ou textos fonte que han enriquecer o artigo, así como atribuir a formas máis abertas e rexas de investigación e bolsa. O autor pode facerlle un seguimento á entrega durante o proceso editorial; asín como participar na corrección de dados e probas de entregas aceptadas para a súa publicación; ao iniciar sesión na páxina Web da revista.</p><p>Podes achar máis información en {help_topic key="editorial.authorsRole" text="here"}.</p>]]>	
+	</section>
+</topic>

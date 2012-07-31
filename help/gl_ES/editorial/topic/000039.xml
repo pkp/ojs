@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol del Editor de Diagramación - Envíos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="gl_ES" title="Envíos" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Cando o Editor de Diagramación inicia sesión, accederá á súa Páxina Principal de Usuario. Esta páxina inclue unha ligazón á páxina de Envío Activos do Editor de Diagramación, unha ligazón de Arquivos aos envíos completados anteriormente, e outra ligazón para ver a Táboa de Contidos dos próximos números da revista, se estiver dispoñibel.</p><p><i>Envíos Activos</i><br />Premer sobre a ligazón Activo da Páxina Principal do Usuario conducirá ao Editor de Diagramación á páxina de Envíos Activos. Esta fileira presenta unha listaxe daqueles traballos que solicitaron seren diagramados. O proceso de diagramación pode encetarse premendo no título dun envío que esté na listaxe.</p><p><i>Archivos</i><br />Premer na ligazón Arquivos da Páxina Principal do Usuario conducirá ao Editor de Diagramación á páxina de Arquivos. Nesta fileira atópanse aqueles traballos que completaron o proceso de diagramación e que xa foron publicados.</p><p><i>Números</i><br />Premer na ligazón Próximos Números da Páxina Principal de Usuario conducirá ao Editor de Diagramación á listaxe de próximos números da revista (que ainda non foron publicados). Isto halle permitir ao Editor de Diagramación probar o número coma un todo.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Táboa de Contidos da Interface de Usuario. 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="gl_ES" title="Páxina Web da Revista" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Páxina de Inicio" />
+	<topic id="user/topic/000002" title="Sobre a Revista" />
+	<topic id="user/topic/000007" title="Páxina de inicio do Usuario" />
+	<topic id="user/topic/000003" title="Rexistro &amp; Perfil" />
+	<topic id="user/topic/000004" title="Actual &amp; Arquivos" />
+	<topic id="user/topic/000005" title="Procurar &amp; Explorar" />
+	<topic id="user/topic/000006" title="Ferramentas de Lectura" />
+
+	<breadcrumb url="user/topic/000000" title="Páxina Web da Revista" />
+</toc>

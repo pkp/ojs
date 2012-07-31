@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Función do Editor Índice de Envíos 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="gl_ES" title="Envíos" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p> Todos os envíos feitos á revista pódense atopar nunha das catro ringleiras da páxina de envío, esta posición depende da parte de proceso no que se atopen. Os Editores teñen acceso a todos os envíos feitos á revista, en cambio o Editor da Sección só ten acceso a aqueles envíos que lle foron asignados.</p>]]>	
+	</section>
+</topic>

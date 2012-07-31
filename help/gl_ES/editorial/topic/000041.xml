@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Editor de Diagramación - Correción de Probas
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="gl_ES" title="Correción de Probas" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>O Autor e o Corrector de Probas poden probar os arquivos en  varios formatos para buscar erros de escrita e de formato. Rexistraranse as correcciones necesarias no cadro de texto de Corrección, seguindo as instruccións de Corrección de Probas. Unha vez que o Corrector de Probas envía ao Editor de Diagramación un correo electrónico notificando que a corrección de probas foi completada, o Editor de Diagramación volverá aos Formatos de Proba en Diagramación e executará os cambios que se precisen, eliminado os arquivos corrixidos e cargando as versións correctas. Ao rematar esta tarefa, poida que o Editor de Diagramación desexe engadir comentarios eno Cadro de texto de Corrección (por exemplo, explicando as razóns dun cambio), antes de premer no icono de correo electrónico baixo Completo que o conducirá a un correo electrónico que notificará ao Editor da Sección que o envío está preparado para ser programado para a súa publicación.</p>]]>	
+	</section>
+</topic>

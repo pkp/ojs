@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Administración principal da Revista
+  *
+  *Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="gl_ES" title="Administración da Revista" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>O administrador da revista supervisa todos os aspectos da Administración da Revista, co asesoramento dos editores, incluindo a instalación e a configuración do sistema da revista, rexistrando usuarios nas distintas funcións que se precisan para xestionar as revistas, creando as diferentes Seccións da revista, e outras tarefas administrativas.</p>]]>	
+	</section>
+</topic>

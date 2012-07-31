@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Índice do Proceso Editorial  
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000000" locale="gl_ES" title="Proceso Editorial" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>O proceso Editorial para un envío á revista consiste nunha revisión cega,  conforme ao criterio de expertos, seguida pola decisión do editor da sección, que pode decidir aceptar ou  recusar o envío. Se o envío é aceptado a etapa de revisión do proceso editorial, este ha de pasar pola etapa de edición que consiste na correción do texto, na correción de probas e na diagramación dos textos. A continuación, prográmase o envío para a súa publicación nun número da revista. O proceso editorial depende de como foi organizada a revista e pode ser producido por un só un editor ou por un equipo de Editores, editores da sección, correctores de textos, correctores de probas, e Editores de diagramación.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Autor Índice de Revisión - Revisión feita por Expertos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="gl_ES" title="Revisión feita por Expertos" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Son rexistradas nesta páxina varias datas, incluindo a data na que o editor solicitou Revisores, as datas nas que se encetou a Revisión, e as datas nas que cada Revisor rematou a Revisión. O Autor pode consultar a Política de Revisión en {help_topic key="user.about" text="About the Journal"} para aprender máis sobre cómo revisa a revista os envíos. Os Revisores poden cargar arquivos que pueden ser consultados polo Autor, abranxendo versións do envío con notas. (Para consultar arquivos cargados, o Autor pode premer no nome do arquivo ligado co Arquivo Cargado, e asín consultar o arquivo ou gardalo na súa computadora para abrilo máis adiante.)</p>]]>	
+	</section>
+</topic>

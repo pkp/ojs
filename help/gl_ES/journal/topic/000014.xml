@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Usuarios - Correos de Usuarios
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="gl_ES" title="Correo de Usuarios" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>O administrador da revista pode enviar correos a todos os usuarios ou a un sub-conxunto deles. Repara en que a todos os lectores se lles envía unha notificación de correo electrónico cando se publica un número da revista, este correo contén unha copia da táboa de contidos dese número ou no caso de que sexa contínuo {help_topic key="publishing.index" text="publishing"}, co título e o autor da entrega. A revista tamén ten unha política de privacidade, inserida na configuración e dispoñíbel en Sobre a Revista, que describe como se respeita a privacidade  dos usuarios rexistrados nesta revista.</p>]]>	
+	</section>
+</topic>

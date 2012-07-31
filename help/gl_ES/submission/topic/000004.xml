@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. por algunha razón docs/COPYING.
+  *
+  * Proceso de Envíos do autor - Arquivos Complementares 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000004" locale="gl_ES" title="Arquivos complementares" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		<![CDATA[<p>O Autor pode cargar os Arquivos complementares no Paso 4 do Proceso de Envío. A intención dos Arquivos complementares é que atinxan conxuntos de dados de investigación, instrumentos de investigación, textos fonte ou outros materiais que en outros contextos conformarían un apéndice do envío ainda que aquí poden ser tratados como documentos separados que teñenn valor de seu. Ademáis, o Autor indexará Arquivos complementares independentemente do envío, habilitando deste xeito os Arquivos para que formen parte dun índice mái longo e permitir que sexan atopados  por persoas que buscan este tipo de artigos.</p><p><i>Formatos de Arquivos complementares</i>. Os Arquivos complementares tamén son cargados no seu formato orixinal e para os que non existen restriccións  e permanecerán nese formato, a diferencia do resto do envío que debe estar nun formato estándar de manuscrito e que será transformado ao formato de publicación estándar. Isto significa que os conxuntos de dados que están dispoñíbeis nas follas de cálculo ou nas demostracións en flash poden ser cargados e preservados nese formato; isto pode ocasionar algunhas dificultades para os lectores. Os Autores deben ter isto en conta, unha maneira pode consistir en explicar na descrición dos Arquivos Suplementares onde se pode descargar un software libre para abrir e ler ou Arquivo Suplementares.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Administración de Páxinas - Grupos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="gl_ES" title="Cabezallo" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Existen dous métodos que son utilizados polo Administrador da Revista para definir el Cabezallo da Revista, que aparecen na páxina do Equipo Editorial en Sobre a Revista: usando roles editoriais asignados, e creando títulos de equipos editoriais personalizados.</p>]]>
+	</section>
+	<section title="Xerando o Equipo editorial Usando roles e funcións editoriais asignadas">
+		<![CDATA[<p>Cando se selecciona esta opción, a información do Equipo Editorial en Sobre a Revista é xerada automáticamente utilizando as funcións editoriais definidas nas páxinas do Administrador da Revista. Os usuarios rexistrados como Editores, Editores de Sección, Editores de Diagramación, Editores de Corrección de Textos, e Correctores de Probas deberan ser inseridos nunha listaxe..</p>]]>
+	</section>
+	<section title="Xerando o equipo editorial Usando títulos personalizados para o equipo editorial">
+		<![CDATA[<p>Se un Administrador da Revista desexa ter máis control sobre a información presentada en páxina do Equipo Editorial en Sobre a Revista, pode habilitar esta opción dende a páxina de Cabezallo (ver Administración da Revista). Cando esta opción está habilitada, creanse varios títulos baixo a páxina de Cabezallo que se empregará para xerar información publica do Equipo Editorial así como información sobre outras persoas relacionadas coa revista, se así se quiser.</p><p>Para crear títulos personalizados,o Administrador da Revista debe premer sobre Crear Título de Posición (por exemplo, Editor en Xefe, Editores de Sección, Xunta Editorial, etc.), e decidir se o título aparecerá baixo o Equipo Editorial en Sobre a Revista, ou só baixo Persoas en Sobre a Revista. O Administrador da Revista pode arranxar a disposición de visualización dos Títulos Editoriais na páxina principal de Cabezallo, utilizando as frechas de arriba e abaixo, e  pode editar e eliminar os títulos se o considerar necesario.</p><p>Para ver, engadir e remover membros a un título específico, o Administrador da Revista debe premer sobre a ligazón de Filiación ao lado do nome do título. Isto mostrará a listaxe de usuarios actuais dese título en particular. O Administrador da Revista pode arranxar a orden da listaxe de membros e, pode eliminar membros se o considerar necesario. Para engadir un novo asociado, o Administrador da Revista debe premer sobre Engadir Membro, e poderá inscribir un usuario dende a listaxe de membros da revista.</p>]]>
+	</section>
+</topic>

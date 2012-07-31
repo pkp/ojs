@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Índice da Páxina de Axuda
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="gl_ES" title="OJS Axuda" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>O documento de Axuda para o Open Journal Systems (OJS) est-a deseñado para asistir aos usuarios no proceso de lectura, envío, edición, e publicación de artigos en revistas especializadas ou de interés xeral. La intención é que tamén sirva sirva como un manual para OJS que describa o alcance e os  traballoos deste software de administración de revistas. O documento Axuda tamén achega consellos editoriais sobre prácticas de xornalismo comúns na publicación especializada. Ademáis deste documento de axuda, os usuarios  teñen acceso persoal de asistencia técnica desta, baixo Contacto.</p><p> Xa que OJS utiliza títulos de publicación designados para cada función ou proceso, dende o Administrador da Revista que se encarga da configuración da revista até o autor que se encarga dasa probas de correción e galeradas. Cada punto tratado na axuda refirese á función que debe ser desenvolvida  en cada tarefa. Baseandose no mesmo principio, o acceso a este documento está determinado pola persoa que está  traballar dentro do sistema. A axuda é específica ao contexto; unha persoa se encarga de algo dependendo do rol en OJS  (un revisor tamén pode ser un autor e un administrador da revista e de igual maneira un editor). Tamén depende en que parte de OJS está a traballar unha persoa para determinar a axuda. O rol e a ubicación determina que temas de Axuda aparecerán, porén,os usuarios poden explorar dende aí, temas relacionados para comprender calquera aspecto do sistema.</p><p><i>Procurar</i> No recanto superior dereito de cada páxina de axuda, hai unha ligazón de "Procurar". Ao inserir unha palabra chave,  obterás unha listaxe de artigos de axuda relacionados coa túa busca. Estes artigos incluen unha descrición breve e unha ligazón ao artigo.</p><p><i>Táboa de Contidos</i> Ao premer sobre esta ligazón obterás unha táboa de contidos de axuda dispoñíbel.</p><p><i>Subir un nivel</i> Ao premer sobre esta ligazón subirás un nivel na xerarquía de axuda. Por exemplo, se estabas a ver o "Explorador de Arquivos", o nivel superior será  "Administración de Páxinas".</p>]]>
+</section>
+</topic>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distribuido por GNU GPL v2. Para completar a información  cómpre ver o arquivo  docs/COPYING.
+  *
+  * Páxinas Administrativas - Plugins do Sistema
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000030" locale="gl_ES" title="Plugins do Sistema" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>A páxina de plugins do sistema permite ao administrador da revista ver a listaxe de plugins instalados en OJS e realizar calquera tarefa administrativa dispoñíbel por cada plugin. Para máis información, diríxete á documentación que acompaña a cada plugin,e  que se atopa dentro do directorio de plugin de OJS (/path/to/install/plugins).</p>]]>
+	</section>
+</topic>

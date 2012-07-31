@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Rol do Corrector de Textos - Correción de Textos
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="gl_ES" title="Correción de Textos" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+		<![CDATA[<p>O proceso de corrección de textos está dividido en tres pasos, que implican ao Editor de Corrección de Textos e ao Autor. Ademáis, o Editor de Corrección de Textos pode editar os metadados do artigo en calquera momento, premendo sobre Revisión de Metadados.</p><p><i>Paso 1</i><br />No primeir paso, o Editor de Corrección de Textos preme sobre o nome do arquivo para descargar o documento do envío e abrilo. Entón, o Editor de Corrección de Textos corrixe directamente sobre o texto do documento, seguindo os estándares acordados pola revista para a corrección de textos. (Estes poden ser personalizados polo Administrador da Revista no Paso 4.5 da Configuración.)</p><p>A máis disto, o Editor de Corrección de Textos podelle facer seguimento a calquera dos cambios e correccións propostos, e tamén a  calquera pregunta feita ao Autor e/ou Editor da Sección, premendo no icono Comentarios do Editor de Corrección de Textos.  Cando o Editor de Corrección de Textos culmina a corrección de textos inicial, garda o arquivo na computadora e cárgao para o paso seguinte, que é a Corrección de Textos feita polo Autor.</p><p>Unha vez que o arquivo corrixido é cargado, o Editor de Corrección de Textos preme sobre o icono de correo electrónico baixo Completo para o Paso 1. Esta acción conducirao a un correo electrónico para o Autor e o Editor, no que se lles informa que o Paso 1 foi rematado. O Editor de Corrección de Textos debe indicar no correo electrónico se existen preguntas do Autor e/ou do Editor para que sexan consideradas polo Editor da Sección.</p><p><i>Paso 2</i><br />O autor pode encetar sesión e acceder ao artigo dende a Fileira do Envío (atopada baixo a Páxina Principal do Usuario). O Autor descarga e abre a versión de corrección de textos dende o Paso 1 e revisa a corrección de textos,  responde directamente no arquivo calquer pregunta que se lle faga. O Autor garda o arquivo e cárgao no Paso 2, que fornece o arquivo para o Editor de Corrección de Textos realizar a corrección final.O Editor da Sección responderá calquera pregunta feita polo Editor a través dun correo electrónico para asegurarse que o Autor e o Editor da Sección non carguen versións do arquivo sobre outras versións. O Autor envía un correo electrónico completo ao Editor de Corrección de Textos e ao Editor da Sección, iniciando, asín, o terceiro paso. Para máis información sobre o proceso de Corrección de Textos, ver {help_topic key="editorial.authorsRole.editing.copyediting" text="Author's Role: Copyediting"}.</p><p><i>Paso 3</i><br />O Editor de Corrección de Textos descarga e abre o arquivo de Corrección de Textos no Paso 2 e crea unha versión en limpo (eliminado todas as pegadas do proceso de corrección de textos), baseado nas respostas do Autor e do Editor da Sección. Esta versión está preparada para que o Editor de Diagramación a insira na versión publicada do envío. O Editor de Corrección de Textos garda unha copia en limpo no Paso 3, que posteriormente hase convertir na Versión de Diagramación. Entón, o Editor de Corrección emprega o icono de correo electrónico baixo Completo para notificar ao Editor de Diagramación e ao Editor da Sección que a corrección de texto do envío xa foi completada.</p>]]>	
+	</section>
+</topic>

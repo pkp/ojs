@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo ddocs/COPYING.
+  *
+  * Administración do Sitio - Funcións da Administración 
+  *
+  * Translated by Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000003" locale="gl_ES" title="Funcións Administrativas" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>Existen varias funcións administrativas disponíbeis na área de administración do sitio. Estas funcións deben ser empregadas con coidado, xa que o seu uso indebido pode levar a resultados inesperados.</p>]]>
+	</section>
+
+	<section title="Información do Sistema">
+		<![CDATA[<p>Información xeral sobre o servidor e a historia desta versión de OJS (abranxendo actualizacións anteriores). Proporciónase tamén unha interface baseada en Web para modificar a configuración de OJS.</p>]]>
+	</section>
+
+	<section title="Sesións de Usuarios expiradas">
+		<![CDATA[<p>Limpa todas as sesións de usuarios activos no sistema, solicitándolle a cada usuario que está actualmente no sistema que inicie unha sesión nova.</p>]]>
+	</section>
+
+	<section title="Limpar Dados Guardados">
+		<![CDATA[<p>Limpa todos os dados gardados, incluindo a información local, o módulo de axuda, e o módulo de busca.</p>]]>
+	</section>
+
+	<section title="Limpar Planillas Gardadas">
+		<![CDATA[<p>Limpa todas as versións gardadas das planillas de HTML. Esta función pode ser útil para forzar ás planillas a recargarse logo de personalizalas.</p>]]>
+	</section>
+
+	<section title="Fusión de Usuarios">
+		<![CDATA[<p>A funcionalidade de Unir Usuarios permítelle ao Administrador do Sitio unir dous usuarios nunha só conta, transferindo as asignacións de edición, os envíos, e outros numerosos rexistros dende unha conta a outra, eliminando efectivamente a primeira conta.</p>
+		<p>Esta funcionalidade de Unir Usuarios diferénciase da opción de Unir Usuarios dispoñíbel para o Administrador da Revista. A segunda limítase a xunguir contas de usuarios dentro dunha revista en particular, mentres que a primeira permítelle ao Administrador do Sitio unir contas de usuarios, mesmo entre varias revistas.</p>
+		<p>Transfirense os elementos a seguir:
+			<ul>
+				<li>Autoría do Artigo</li>
+				<li>Comentarios Públicos sobre os Artigos</li>
+				<li>Notas do Artigoo</li>
+				<li>Asignacións e decisións do Editor</li>
+				<li>Revisión de Asignacións</li>
+				<li>Asignacións do editor de Diagramación</li>
+				<li>Asignacións do corrector de Probas</li>
+				<li>Correo Electrónico do artigo e entradas de inicio de sesión do evento</li>
+				<li>Claves de acceso do Revisor</li>
+				<li>Roles</li>
+			</ul>
+		Tranfírense os elementos <strong>no</strong> a seguir:
+			<ul>
+				<li>Sesións</li>
+				<li>Subscricións</li>
+				<li>Estado de Notificación (ex. se o usuario se rexistrou para receber notificacións sobre noticias da revista)</li>
+				<li>Afiliacións do Equipo Editorial</li>
+				<li>Estado do editor da Sección nas seccións</li>
+				<li>Información do Perfil de Usuario (ex. Nome, Apelido, etc.)</li>
+			</ul>
+		</p>
+		<p>Esta funcionalidade debe ser empregada con coidado, xa que non é reversibel e abranxe a transferencia de rexistros dun usuario a outro.</p>]]>
+	</section>
+</topic>

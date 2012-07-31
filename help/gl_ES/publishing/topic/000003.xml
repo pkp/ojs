@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. Para completar a información  cómpre ver o arquivo docs/COPYING.
+  *
+  * Proceso de Publicación - Táboa de Contidos
+  *
+  * Translated Gabriel Beceiro: gbeceiro@gmail.com
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="gl_ES" title="Táboa de Contidos" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Unha vez programado o envío, este aparecerá na Táboa de Contidos dese número baixo o cabezallo da súa Sección. Se non existen envíos nunha Sección, esa Sección non aparecerá na Táboa de Contidos. O Editor pode reordenar as Seccións, e reordenar os envíos dentro dunna Sección.</p><p>Ademáis, se o Administrador dunha Revista habilitou o control de subscrición, o Editor pode mudar as normas de acceso (de subscrición ou de acceso libre) de acordo cunha política de nivel por artigo.</p>]]>	
+	</section>
+</topic>
