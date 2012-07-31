@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML İhraç Eklentisi</message>
+	<message key="plugins.importexport.pubmed.description">MEDLINE'da indekleme için makale metadtalarını PubMed XML formatında İhracı.</message>
+	
+	<message key="plugins.importexport.pubmed.export">Veri İhracı</message>
+	<message key="plugins.importexport.pubmed.export.issues">Sayı İhracı</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">İhraç için bir sayı seçiniz.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Makale İhracı</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">İhraç için bir makale seçiniz.</message>
+	
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Kullanım: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.pubmed.cliError">HATA:</message>
+
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">"{$issueId}" özel sayı ID'si ile herhangi bir sayı eşolenmedi.</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">"{$articleId}" özel makale numarası ile herhangi bir makale eşlenmedi.</message>
+
+
+</locale>

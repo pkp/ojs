@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -14,13 +14,20 @@
 
 <locale name="tr_TR" full_name = "Türkiye Türkçesi">
 	<message key="admin.hostedJournals">Yayınlanan Dergiler</message>
-	<message key="admin.settings.journalRedirect">Dergiye yönlendir</message>
+	<message key="admin.settings.journalRedirect">Dergiye Yönlendir</message>
 	<message key="admin.settings.journalRedirectInstructions">Siteye girişler, doğrudan derginin ana sayfasına yönlendirilecektir. Özellikle tek dergi tutuluyor ise yararlıdır.</message>
 	<message key="admin.settings.noJournalRedirect">Yönlendirme yapma</message>
 	<message key="admin.languages.primaryLocaleInstructions">Site ve sitedeki dergiler için ön tanımlı dil olacaktır.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sitede desteklenecek dilleri seçiniz. Seçilen diller sitede sunulan tüm dergiler için kullanılabilir olacaktır ve özel dergi sayfaları dışında, seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucunun hizmetine sunulacaktır. Eğer birden çok dil seçilmez ise, dil seçim aracı gösterilmeyecektir ve dergiler için genişletilmiş dil olanakları çalışmayacaktır.</message>
+	<message key="admin.locale.maybeIncomplete">İşaretlenmiş olanlar tamamlanmamış olabilir.</message>
 	<message key="admin.languages.confirmUninstall">Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca bu dili kullanan dergilerde sorun olabilir..</message>
 	<message key="admin.languages.installNewLocalesInstructions">Sisteme eklemek üzere yeni bir dil seçiniz. Sitedeki dergiler kullanmaya başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda ADS belgelerinde daha fazla bilgi bulabilirsiniz.</message>
+	<message key="admin.languages.downloadLocales">Yerele İndir</message>
+	<message key="admin.languages.downloadFailed">Yerele indirme başarısız. Aşağıdaki hata mesaj(lar)ı aşağıda belirtilmiştir.</message>
+	<message key="admin.languages.localeInstalled">"{$locale}" yerele yüklendi.</message>
+	<message key="admin.languages.download">Yerele İndir</message>
+	<message key="admin.languages.download.cannotOpen">PKP web sitesinden dil tanımlayıcısı açılamıyor.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Yerel kayıt dosyasına yeni yerel eklenemiyor, tipik "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">ADS kullanıcı veri tabanı</message>
 	<message key="admin.auth.enableSyncProfiles">Kullanıcı profili senkronizasyonunu etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Kullanıcı bilgileri (şifre dahil) değiştiğinde diğer sistemden veya ADS'den otomatik güncelleme yapılacaktır. Bu seçenek etkinleştirilmez ise diğer sistem kaynaklarından ayrı ADS kullanıcı bilgisi tutulur.</message>
 	<message key="admin.auth.enableSyncPasswords">Kullanıcı şifre değişimini etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Bu seçeneği etkinleştirme kullanıcıların ADS içinde şifre değiştirebilmelerini ve ADS'nin "kayıp şifre" yeteneğini kullanabilmelerini sağlar. Bu işlev etkinleştirilmez ise, yetkilendirme kaynağı ADS olmayan kullanıcılar anılan işlevleri kullanamazlar.</message>
@@ -40,16 +47,17 @@
 	<message key="admin.journals.form.pathExists">Seçilen yol bir başka dergi tarafından kullanılmaktadır.</message>
 	<message key="admin.journals.enableJournalInstructions">Bu derginin sitede açık olarak görülebilir olmasını sağlayın.</message>
 	<message key="admin.journals.journalDescription">Dergi tanımı</message>
-	<message key="admin.journals.importOJS1">ADS 1'den dahil edin</message>
-	<message key="admin.journals.importOJS1.editMigratedJournal">Taşınan dergileri düzenle</message>
-	<message key="admin.journals.importOJS1.conflict.desc">Bazı kullanıcı hesaplarında çakişma var. ADS 1.x aynı e-posta adresi ile birden çok kullanıcıya izin verir, ancak ADS 2.x her kullanıcının ayrı bir e-posta adresi olmasını ister. Aşağıdaki listede verilen ikinci kullanıcı hesapları için geçici bir e-posta adresi oluşturulmuştur. Bu adresler elle düzeltilmeli ve başka bir e-posta hesabı ile değiştirilmelidir.</message>
-	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) ve  {$secondUsername} ({$secondName})</message>
-	<message key="admin.journals.importOJS1Instructions">ADS 1'den ADS 2'ye bilgi aktarımı üzerine ayrıntılı bilgi için ADS ile dağıtılan YÜKSELTME belgesine bakınız.</message>
-	<message key="admin.journal.pathImportInstructions">Var olan dergi yolu veya oluşturulacak yol(ör., "ojs").</message>
-	<message key="admin.journal.importPath">ADS 1 yolu</message>
-	<message key="admin.journal.importPathInstructions">ADS 1 kurulumu için yerel dosya sistemi yolunu tamamlayın (Ör., "/var/www/ojs").</message>
-	<message key="admin.journals.importSubscriptions">Abonelikleri Kabul et</message>
+	<message key="admin.journal.pathImportInstructions">Varolan dergi yolu veya dergi yolu oluşturmak (Ör., "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Üyelik Verisi Al</message>
 	<message key="admin.journals.transcode">Metadataları ISO8859-1 kodlamasından transfer et</message>
+	<message key="admin.journals.redirect">ADS 1 URL'sinden ADS 2 URL'sine harita için kod oluştur.</message>
 	<message key="admin.journals.form.importPathRequired">Kabul yolu gerekli.</message>
 	<message key="admin.journals.importErrors">Kabul işlemi başarısız oldu </message>
+	<message key="admin.mergeUsers">Üyeleri Birleştir</message>
+	<message key="admin.mergeUsers.mergeUser">Üye Birleştir</message>
+	<message key="admin.mergeUsers.into.description">Nitelikli eski kullanıcılardan yazarlık, düzeltme atamaları vb. için bir kullanıcı seçiniz.</message>
+	<message key="admin.mergeUsers.from.description">Bir hesabı başka bir hesap ile birleştirmek için bir kullanıcı (veya birkaç) seçiniz. Örneğin bir kişi birden fazla hesaba sahip olduğunda silinecek hesap(lar) öce seçilir ve birleştir komutundan sonra birleştirilecek hesap seçilerek onay verilir. İlk seçilen hesaplarla bağlantılı gönderiler, atamalar gibi her türlü işlem ve yetki birleştirilen hesaba aktarılır.</message>
+	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
+	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Olmayan Kayıtlı Kullanıcılar.</message>
 </locale>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name = "Turkish">
+	<message key="plugins.generic.referral.name">Referral Plugin</message>
+	<message key="plugins.generic.referral.description">The Referral Plugin tracks incoming refback URLs to articles (i.e. when a reader follows an external link to an article), allowing Authors to maintain and potentially publish an automatically-updated list of refbacks to an article.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Edit Refback</message>
+	<message key="plugins.generic.referral.createReferral">Create Refback</message>
+	<message key="plugins.generic.referral.referrals">Refbacks</message>
+	<message key="plugins.generic.referral.count">Hits</message>
+	<message key="plugins.generic.referral.dateAdded">Date Added</message>
+	<message key="plugins.generic.referral.all">All</message>
+	<message key="plugins.generic.referral.all.empty">There are currently no refbacks.</message>
+	<message key="plugins.generic.referral.status.new">New</message>
+	<message key="plugins.generic.referral.status.new.empty">There are currently no new refbacks.</message>
+	<message key="plugins.generic.referral.status.accept">Published</message>
+	<message key="plugins.generic.referral.status.accept.empty">There are currently no published refbacks.</message>
+	<message key="plugins.generic.referral.status.decline">Ignored</message>
+	<message key="plugins.generic.referral.status.decline.empty">There are currently no ignored refbacks.</message>
+	<message key="plugins.generic.referral.confirmDelete">Are you sure you wish to delete this refback?</message>
+	<message key="plugins.generic.referral.nameRequired">A refback title is required.</message>
+	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
+	<message key="plugins.generic.referral.settings">Referral Plugin Settings</message>
+	<message key="plugins.generic.referral.settings.description">The Referral Plugin captures URLs that link to articles published within this journal so that they can be curated by the author and optionally published. This form allows the Journal Manager to control how these links are captured.</message>
+	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Enter a list of regular expression patterns, one per line, to be treated as exclusions for referral logging. This can be used to prevent search engine requests from cluttering the list of referrals. For more information on regular expressions, see <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+</locale>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -26,6 +26,27 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
+	<!-- review froms start -->
+
+	<!-- common -->
+
+	<!-- Journal Management -->
+
+
+
+
+
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">Değerlendirme Formu</message>
+	<message key="submission.reviewFormResponse">Değerlendirme formu yanıtı</message>
+
+
+	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>	
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurunuz.</message>	
+	
+	<!-- review forms end -->
+
 	<!--
 	 *
 	 * COMMON - This section contains the most frequently-used words
@@ -33,8 +54,14 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
-
+	<message key="common.openJournalSystems">AÇIK DERGİ SİSTEMLERİ</message>
+	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
+	<message key="common.payment">Ödeme</message>
+	<message key="common.payments">Ödemeler</message>
+	<message key="common.pageHeader.altText">Sayfa Üst Başlığı</message>
+	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
+	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa İmajı</message>
+	
 	<!-- Common Form Messages -->
 	
 	<!-- Common Email Messages -->
@@ -44,27 +71,28 @@
 	<!-- Common Error Messages -->
 	
 	<!-- Navigation -->
-	<message key="navigation.journalHelp">Dergi Yardımı</message>
-	<message key="navigation.archives">Arşivler</message>
-	<message key="navigation.current">Güncel</message>
+	<message key="navigation.journalHelp">DERGİ YARDIMI</message>
+	<message key="navigation.archives">ARŞİV</message>
+	<message key="navigation.current">SON SAYI</message>
 	<message key="navigation.otherJournals">Diğer Dergiler</message>
 	<message key="navigation.browseByIssue">Sayılara Göre</message>
-	<message key="navigation.browseByAuthor">Yazara Göre</message>
-	<message key="navigation.infoForAuthors">Yazarlar için</message>
-	<message key="navigation.infoForLibrarians">Kütüphaneciler için</message>
-	<message key="navigation.infoForAuthors.long">Yazarlar için bilgi</message>
-	<message key="navigation.infoForLibrarians.long">Kütüphaneciler için bilgi</message>
+	<message key="navigation.browseByAuthor">Yazarlara Göre</message>
+	<message key="navigation.infoForAuthors">Yazarlar İçin</message>
+	<message key="navigation.infoForLibrarians">Kütüphaneciler İçin</message>
+	<message key="navigation.competingInterestGuidelines">Çıkar Çelişkisi Rehberi</message>
+	<message key="navigation.infoForAuthors.long">Yazarlar İçin Bilgi</message>
+	<message key="navigation.infoForLibrarians.long">Kütüphaneciler İçin Bilgi</message>
 	
 	<!-- Article Queues -->
-	<message key="common.queue.long.submissionsUnassigned">Karşılanmamış</message>
-	<message key="common.queue.short.submissionsUnassigned">Yeni başvuru</message>
-	<message key="common.queue.long.submissionsInEditing">Öneri editörde</message>
-	<message key="common.queue.short.submissionsInEditing">Editörde</message>
-	<message key="common.queue.long.submissionsInReview">Öneri hakemlerde</message>
-	<message key="common.queue.short.submissionsInReview">Hakemlerde</message>
-	<message key="common.queue.long.submissionsArchives">Arşiv</message>
-	<message key="common.queue.short.submissionsArchives">Arşiv</message>
-	<message key="common.queue.long.active">Etkin öneri</message>
+	<message key="common.queue.long.submissionsUnassigned">Yeni Başvurular</message>
+	<message key="common.queue.short.submissionsUnassigned">Yeni Başvurular</message>
+	<message key="common.queue.long.submissionsInEditing">Değerlendirmesi Sonuçlananlar</message>
+	<message key="common.queue.short.submissionsInEditing">Sonuçlananlar</message>
+	<message key="common.queue.long.submissionsInReview">Hakemlik Sürecindekiler</message>
+	<message key="common.queue.short.submissionsInReview">Hakemdekiler</message>
+	<message key="common.queue.long.submissionsArchives">Arşivlenenler</message>
+	<message key="common.queue.short.submissionsArchives">Arşivlenenler</message>
+	<message key="common.queue.long.active">Etkin Öneri</message>
 	<message key="common.queue.short.active">Etkin</message>
 	<message key="common.queue.long.completed">Arşivde</message>
 	<message key="common.queue.short.completed">Arşiv</message>
@@ -78,47 +106,56 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Bölüm</message>
-	<message key="section.sections">Bölümler</message>
+	<message key="section.sections">Dergi Bölümleri</message>
 	<message key="section.title">Bölüm başlığı</message>
 	<message key="section.abbreviation">Kısaltma</message>
 	<message key="section.abbreviation.example">(Örneğin, Makaleler=MAK)</message>
-	<message key="section.default.title">Makaleler</message>
-	<message key="section.default.abbrev">MAK</message>
-	<message key="section.default.policy"></message>
-
+	
 	<!-- Common Article Terms -->
+	<message key="article.article">Makale</message>
 	<message key="article.articles">Makaleler</message>
 	<message key="article.submissionId">Başvuru kimliği</message>
 	<message key="article.title">Başlık</message>
 	<message key="article.authors">Yazarlar</message>
 	<message key="article.indexingInformation">İndeks bilgisi</message>
-	<message key="article.metadata">Meta veri</message>
+	<message key="article.metadata">Üst veri</message>
 	<message key="article.journalSection">Dergi Bölümü</message>
 	<message key="article.file">Dosya</message>
 	<message key="article.suppFile">Ek Dosya</message>
-	<message key="article.suppFiles">Ek Dosya(lar)</message>
+	<message key="article.suppFiles">Ek Dosya(lar):</message>
 	<message key="article.suppFilesAbbrev">Ek Dosyalar</message>
 	<message key="article.discipline">Akademik Bölüm ve Alt-Bölümler</message>
-	<message key="article.subjectClassification">Konu Sınıflaması</message>
+	<message key="article.subjectClassification">Konu Sınıflaması (ekonomi, finans, işletme konularındaki makaleler için)</message>
 	<message key="article.subject">Anahtar Kelimeler</message>
 	<message key="article.coverage">İçerik</message>
 	<message key="article.coverageGeo">Jeospasyal içerik</message>
 	<message key="article.coverageChron">Kronolojik veya tarihsel içerik</message>
 	<message key="article.coverageSample"> Araştırma örneklem karakteristikleri</message>
-	<message key="article.type">Tip, metod veya yaklaşım</message>
-	<message key="article.language">Dil</message>
+	<message key="article.type">Tür, yöntem veya yaklaşım</message>
+	<message key="article.language">Makale Dili</message>
 	<message key="article.sectionEditor">B.E.</message>
 	<message key="article.commentsToEditor">Yazar yorumları</message>
 	<message key="article.submission">Başvuru</message>
 	<message key="article.submissions">Başvurular</message>
-	<message key="article.abstract">Özet</message>
 	<message key="article.details">Ayrıntılar</message>
-
+	<message key="article.abstract">Özet</message>
+	<message key="article.coverPage.altText">Kapak Resmi</message>
+	<message key="article.accessLogoOpen.altText">Açık Erişim</message>
+	<message key="article.accessLogoRestricted.altText">Sınırlandırılmış Erişim</message>
+	<message key="article.comments.sectionDefault">Varsayılan</message>
+	<message key="article.comments.disable">Pasif Yap</message>
+	<message key="article.comments.enable">Etkinleştir</message>
+	<message key="article.fontSize">Font Büyüklüğü</message>
+	<message key="article.fontSize.small.altText">Küçük</message>
+	<message key="article.fontSize.medium.altText">Orta</message>
+	<message key="article.fontSize.large.altText">Büyük</message>
+	
 	<!-- Submission Tracking - Common -->
-	<message key="submission.submissionEditing">Başvuru izgisi</message>
+	<message key="submission.submissionEditing">Başvuru dizgisi</message>
 	<message key="submission.changeSection">Değişiklik yap</message>
+	<message key="submission.sent">Gönder</message>
 	<message key="submission.editorDecision">Editör Kararı</message>
-	<message key="submission.round">&amp;nbsp;{$round} tur</message>
+	<message key="submission.round">&amp;nbsp;{$round}. Tur</message>
 	<message key="submission.editorReview">Editör Değerlendirmesi</message>
 	<message key="submission.notifyAuthor">Yazarı Bilgilendir</message>
 	<message key="submission.notifyEditor">Editörü Bilgilendir</message>
@@ -128,17 +165,16 @@
 	<message key="submission.editorVersion">Editör Versiyonu</message>
 	<message key="submission.authorsRevisedVersion">Yazar tarafından düzeltilmiş versiyonu</message>
 	<message key="submission.authorVersion">Yazar versiyonu</message>
-	<message key="submission.copyediting">Sayfa düzeni</message>
-	<message key="submission.copyedit">Sayfa düzenlemesi</message>
-	<message key="submission.proofreading">Prova Dizgi düzeltme</message>
+	<message key="submission.copyediting">Sayfa Düzeni</message>
+	<message key="submission.copyedit">Sayfa Düzenleme</message>
+	<message key="submission.proofreading">Prova Dizgi Düzeltme</message>
 	<message key="submission.scheduling">Yayın Bekliyor</message>
 	<message key="submission.scheduledIn">{$issueName} sayısında yayınlanacak.</message>
 	<message key="submission.scheduledIn.tba">(Bildirilecek)</message>
-	
-	<message key="submissions.sec">Seç</message>
+	<message key="submissions.sec">Böl.</message>
 	<message key="submissions.step1">Adım 1</message>
 	<message key="submissions.step3">Adım 3</message>
-	<message key="submissions.queuedReview">Değerlendirme için beklemede</message>
+	<message key="submissions.queuedReview">Değerlendirmede</message>
 	<message key="submissions.scheduled">Yayın programında</message>
 	<message key="submissions.published">Yayınlanmış</message>
 	<message key="submissions.initial">Öncelikli</message>
@@ -163,11 +199,19 @@
 	<message key="journal.journals">Dergiler</message>
 	<message key="journal.path">Yol</message>
 	<message key="journal.journal">Dergi</message>
+	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Dergilerimi Göster</message>
 	<message key="user.registerForOtherJournals">Diğer dergiler için başvur</message>
 	<message key="user.myJournals">Dergilerim</message>
+	<message key="user.manageMySubscriptions">Aboneliklerimi Yönet</message>
+	<message key="user.noRoles.chooseJournal">Hesabınız şu halde herhangi bir dergide aktif değil. Lütfen bir dergi seçiniz:</message>
+	<message key="user.noRoles.noRolesForJournal">Bu dergide hesabınız aktif değil ve herhangi bir yetkilendirmeniz yoktur. Lütfen aşağıdaki seçenklerden birini seçiniz:</message>
+	<message key="user.noRoles.submitArticle">Bir Öneri Gönder</message>
+	<message key="user.noRoles.submitArticleRegClosed">Bir makale gönder: Yazar kaydı şu halde aktif değil.</message>
+	<message key="user.noRoles.regReviewer">Hakem olarak kayıt ol</message>
+	<message key="user.noRoles.regReviewerClosed">Hakem olarak kayıt ol: Hakem kaydı şu halde aktif değil.</message>
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Dergi Yöneticisi</message>
@@ -190,7 +234,7 @@
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Sayı</message>
 	<message key="issue.issues">Sayılar</message>
-	<message key="issue.title">Başlık</message>
+	<message key="issue.title">BAŞLIK</message>
 	<message key="issue.volume">Cilt</message>
 	<message key="issue.number">Sayı</message>
 	<message key="issue.vol">Cilt</message>
@@ -199,6 +243,32 @@
 	<message key="issue.noIssues">Sayı yok</message>
 	<message key="issue.toc">İçindekiler</message>
 	<message key="issue.abstract">Özet</message>
+	<message key="issue.coverPage.altText">Kapak Sayfası</message>
+
+<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Para Birimi</message>
+	<message key="subscriptionTypes.year">Yıl</message>
+	<message key="subscriptionTypes.years">Yıllar</message>
+	<message key="subscriptionTypes.month">Ay</message>
+	<message key="subscriptionTypes.months">Aylar</message>
+	<message key="subscriptionTypes.nonExpiring">Süresiz</message>
+	<message key="subscriptionTypes.format">Biçim</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Basılı</message>
+	<message key="subscriptionTypes.format.printOnline">Basılı ve Online</message>
+	
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Pasif</message>
+	<message key="subscriptions.status">Durumu</message>
+	<message key="subscriptions.status.active">Aktif</message>
+	<message key="subscriptions.status.needsInformation">Bilgi gerekli</message>
+	<message key="subscriptions.status.needsApproval">Onaylama gerekli</message>
+	<message key="subscriptions.status.awaitingManualPayment">Manuel Ödeme Bekleniyor</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Online Ödeme Bekleniyor</message>
+	<message key="subscriptions.status.other">Diğer, notlara bakınız</message>
+	<message key="subscriptions.individualDescription">Bireysel abonelik içeriğe erişmek için giriş yapılmasını gerektirir.</message>
+	<message key="subscriptions.institutionalDescription">Kurumsal abonelik giriş yapılmasını gerektirmez. Kurumsal abone kullanıcıları alan ve/veya IP adresi kontrollü olarak içeriğe erişebilirler.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Not:</strong>Online kurumsal aboneliklerde abonelik aktivasyonundan önce alan ve IP aralığının onaylanması gerkir.]]></message>
 
 	<!--
 	 *
@@ -256,6 +326,11 @@
 	-->
 
 	<!-- Reader article view -->
+	<message key="reader.subscribersOnly">Sadece Aboneler</message>
+	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>  
+	<message key="reader.openAccess">Açık Erişim</message>
+	<message key="reader.subscriptionAccess">Abonelik erişimi</message>
+	<message key="reader.subscriptionOrFeeAccess">Abonelik veya Erişim Ücreti</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Makale hakkında Yorumlar</message>
@@ -263,7 +338,7 @@
 
 	<!-- Site Administration -->
 
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Sitedeki tüm dergilerin dağıtılmış araştırma veritabanı olan Public Knowledge Project kapsamında dizine girmesi için site adresini <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kaydedin</a>. Proje ile daha fazla bilgi için <a href="http://pkp.sfu.ca/harvester/" target="_blank">projenin veri madencisine</a> bakabilirsiniz. Bu araç, dergide yayınlanan her yazı için meta veriyi toplayıp, <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> kapsamında taranacak biçimde veri tabanına ekler.
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Sitedeki tüm dergilerin dağıtılmış araştırma veritabanı olan Public Knowledge Project kapsamında dizine girmesi için site adresini <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kaydedin</a>. Proje ile daha fazla bilgi için <a href="http://pkp.sfu.ca/harvester/" target="_blank">projenin veri madencisine</a> bakabilirsiniz. Bu araç, dergide yayınlanan her yazı için meta veriyi toplayıp, <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Metaveri Harmanlama için Açık Erişim Girişimi Protokolü</a> kapsamında taranacak biçimde veri tabanına ekler.
 <br /><br />
 Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <strong>Site URL</strong> alanına <span class="highlight">{$siteUrl}</span> ve <strong>Base URL for OAI Archive</strong> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.
 <br /><br />
@@ -272,6 +347,13 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	
 	
 	<!-- Languages -->
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>ADS dışında bir yetkilendirme kaynağını birincil olarak kullanmak aşağıdaki olaylara yol açar:</p>
 <ul>
@@ -279,45 +361,49 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 </ul>]]></message>
 	
 	<!-- System Information -->
+	<message key="admin.editSystemConfigInstructions"><![CDATA[Bu formu sisteminizin yapılanmasını değiştirmek için kullanınız (<tt>config.inc.php</tt> dosyası). Yeni yapılanmanızı saklamak için Save tuşuna basınız, veya güncellenmiş yapılanmayı basitçe görüntülemek ve mevcut yapılanmanızı korumak için "display" tuşuna basınız.
+<br /><br />
+<span class="formError">Uyarı: Bu ayarları değiştirmek sitenizi erişilemez bir duruma getirebilir (Sisteminizin yapılanmasının elle onarılması gerekebilir). Ne yaptığınızı tam olarak bilmeden herhangi bir değişiklik yapmamanız şiddetle tavsiye edilir.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>Sistem otomatik olarak yapılanma dosyasının üzerine yazamaz. Yapılanma değişikliklerini uygulayabilmek için <tt>config.inc.php</tt> yi uygun bir yazı düzenleyicide açmak ve içeriğini aşağıdaki yazı alanında belirtilen içerikle değiştirmeniz gerekir. </p>]]></message>
 
+	<!-- Site Administrator Merge Users -->	
 	
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abone Yönetimi</message>
-	
+	<message key="subscriptionManager.individualSubscriptions">Bireysel Abonelik</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Kurumsal abonelik</message>
+	<message key="subscriptionManager.subscriptionTypes">Abonelik Türleri</message>
+
 	<!-- Journal Management -->
-
+	
 	<!-- Statistics & Reports -->
-
-	<message key="manager.statistics.reports.dateFrom">Burdan</message>
-	<message key="manager.statistics.reports.dateTo">Buraya</message>
-	<message key="manager.statistics.reports.type.journal">Dergi raporu</message>
-	<message key="manager.statistics.reports.type.editor">Editör raporu</message>
-	<message key="manager.statistics.reports.type.reviewer">Hakem raporu</message>
-	<message key="manager.statistics.reports.type.section">Bölüm raporu</message>
-	<message key="manager.statistics.reports.generate">Rapor oluştur</message>
-	<message key="manager.statistics.reports.status">Durum (Kabul, red  edilmiş, diğer)</message>
-	<message key="manager.statistics.reports.dateDecided">Karar tarihi</message>
-	<message key="manager.statistics.reports.author">Yazar #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Kurumu #{$num}</message>
-	<message key="manager.statistics.reports.country">Ülke #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Hakem #{$num}</message>
-	<message key="manager.statistics.reports.editor">Editör #{$num}</message>
-	<message key="manager.statistics.reports.score">Puan #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Puan</message>
-	<message key="manager.statistics.reports.recommendation">Öneri #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Karar için geçen süre</message>
-	<message key="manager.statistics.reports.daysToPublication">Yayın için geçen süre</message>
-	<message key="manager.statistics.reports.reportType">Rapor Tipi</message>
-
 
 
 	<!-- Plugin Management -->
+	
+	<!-- Payment Management -->
+
+
+		
+
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Genel eklentiler ADS'ne diğer eklenti sınıflarına girmeyen biçimde özellikler eklerler.</message>
-	<message key="plugins.categories.auth.description">Yetkilendirme Eklentileri kullanıcı girişinin başka kaynaklar tarafından kontrol edilmesini sağlarlar, LDAP sunucuları gibi.</message>
+	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
+
+
+	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+
+
+	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
+
+	<message key="plugins.categories.implicitAuth">Örtük Kimlik Eklentileri</message>
+	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
+
+
+	<message key="plugins.categories.oaiMetadataFormats">OAI Üstveri Eklentileri</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
+
 
 
 
@@ -330,29 +416,44 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 
 	<!-- Setup Step 2 -->
 
-
-
-
+	<message key="manager.setup.reviewProcessEmailDescription">Editors send
+	Reviewers the request to review with the submission attached to the email. Reviewers email editors their assent (or regrets), as well as the review and recommendation. Editors enter Reviewers' assent (or regrets), as well as the review and recommendation on the submission's Review page, to record the review process.</message>
 
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Açık Erişim Dergi Sistemleri destekler:<a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) Dergi için güvenli ve kalıcı arşiv sistemi. LOCKSS Stanford University Library'de geliştirilmiş, kütüphanelerin düzenli olarak toplanan kayıtlı dergilerin web sitelerinden yeni yayınlanmış içerikleri ve arşivlemeyi koruyan açık kaynak kodlu bir yazılımdır. Her arşiv devamlı olarak diğer kütüphane belleklerine karşı veriyi korur, ve eğer bozulur veya kaybolursa diğer önbellek veya dergi onarım için kullanılır.
 <br /><br />
-Açık DErgi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
+Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Bu Telif Hakkı notu "Dergi Hakkında" bölümünde görünecektir. Telif Hakkı seçenekleri : Yazarlar ilk yayın hakkı dergide olacak biçimde çalışmalarının  telif hakkını elllerinde bulundurabilirler. 
-	Alternatif olarak,  açık erişimli arşivlere gönderme ve ticari olmayan kullanıma haklarını ellerinde tutarak, dergiye telif hakkını devrederler. Ek olarak, esnek telif hakkı lisansı örnekleri için <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> sayfalarına  başvurulabilir.]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
 Sınıflama Sistemi Başlığı]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Araştırmalar için açık bilgi dizini oluşturan Halka Açık Bilgi Projesinde (Public Knowledge Project PKP) derginizin içeriğine ulaşılmasını istiyorsanız  <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">bu linki kullanarak derginizin adresini kaydediniz</a> Daha fazla bilgi için  <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP arama sayfasına bakınız</a>. Bu araç araştırma siteleri ile bağlangıya girerek, doğru ve ortak araştırmalar için veri toplar. Bu dergideki her bir indekslenen öğeden de yardımcı verileri toplayarak <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> PKP Veri madenciliği </a> veritabanına ekler.
+<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Derginin içeriğini uluslararası erişimi olan veritabanlarında indeklenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veritabanlarına katkıda bulunmak</a> için linki ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
-Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak indekslenecek ve dergi için özel bir kayıt gerekmeyecektir.
-<br /><br />
-Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <strong>Site URL</strong> alanına <span class="highlight">{$siteUrl}</span> ve <strong>Base URL for OAI Archive</strong> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.]]></message>
-
+Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak indekslenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>
+	<message key="manager.setup.citations">Alıntı İşaretleme Yardımcısını Etkinleştirme</message>
+	
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Basamaklar: Başvuru Kuyruğu &gt; Başvuru Değerlendirilmesi &gt; Yazıların Düzenlenmesi &gt; Yayın bekleme kuyruğu &gt; İçindekiler.<br /><br />
 Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model seçin. (Yönetici editör, bölüm editörü atamak için Dergi Yönetimindeki Editörler bölümüne gidiniz.)]]></message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
+
+
 
 
 		
@@ -360,11 +461,8 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
-	
+		
 	<!-- Section Management -->
-
-	<message key="manager.sections.abstractsDisabled">Özet gerekmez.</message>
 
 	<!-- Import/Export -->
 
@@ -372,10 +470,10 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 
 
 
-	<!-- People Management -->
+<!-- People Management -->
 	<message key="manager.people.confirmDisable">Kullanıcı yetersiz bırakılsın mı? Bu kullanıcının sisteme girişini engelleyecektir.
 
-Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsiniz.</message>
+Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsiniz</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Üzgünüz, bu kullanıcı üzerinde idari hakkınız yoktur. Bunun sebebi:
 		<ul>
 			<li>Kullanıcı site yöneticisidir</li>
@@ -388,7 +486,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	
 	<!-- Email Management -->
 
-
 	<!-- Subscription Policy Management -->
 
 	<!-- Subscription Type Management -->
@@ -400,7 +497,10 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<!-- Announcements Management -->
 
 	<!-- Editor -->
-
+<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<li>İşaretli öğeler editör işlemi beklemektedir.</li>
+	<li>"Son tarih" hakemler değerlendirmeyi kabul edince doldurulur; hakemlere verilen değerlendirme süresinin hafta sayısını listeler ve (-) ile belirtilenler gecikmiş hafta sayısıdır.</li>
+</ol>]]></message>
 
 	<!-- Editor Index Page -->
 
@@ -414,12 +514,15 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[İsim hakemin profiline bağlantıdır.<br/>
-Puanlar 5 (Çok iyi) üzerindendir.<br/>
-Gün, bir değerlendirmeyi ortalama kaç günde tamamladığını gösterir.<br />
-Sonuncu, son değerlendirmeyi kabul ettiği tarihi gösterir,<br/>
+Puanlar 5 (çok iyi) üzerindendir.<br/>
+Günler, bir değerlendirmeyi ortalama kaç günde tamamladığını gösterir.<br />
+En Son, son değerlendirmeyi kabul ettiği tarihi gösterir,<br/>
 artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmiştir.]]></message>
 
 
+	
+	
+	
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktif Editöryal Atamalar</message>
@@ -431,14 +534,15 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="sectionEditor.proofreader.confirmRenotify">Bu bildirimle, düzeltmen atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">İtirazlar</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Hakem itirazları, İptaller &amp; Önceki basamaklar</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Hakem itirazları, İptaller &amp; Önceki Basamaklar</message>
 	<message key="sectionEditor.regrets">İtirazlar</message>
-	<message key="sectionEditor.regrets.link">İtirazlar, İptaller &amp; Önceki basamakları gör</message>
+	<message key="sectionEditor.regrets.link">İtiraz, İptal ve Önceki Basamaklar</message>
 	<message key="sectionEditor.regrets.reviewRound">Hakem değerlendirmesi, Tur {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editör görüşü, Tur {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Hakem itirazları &amp; İptaller</message>
 	<message key="sectionEditor.regrets.regret">İtiraz</message>
 	<message key="sectionEditor.regrets.result">Sonuç</message>
+	<message key="sectionEditor.review.enrollReviewer">Kullaniciyi Hakem Olarak Kaydet</message>
 	<message key="sectionEditor.review.createReviewer">Yeni hakem oluştur</message>
 
 	<!-- Layout Editor -->
@@ -446,9 +550,10 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="layoutEditor.completedEditorialAssignments">Tamamlanmış editöryal atamalar</message>
 	<message key="layoutEditor.noActiveAssignments">Aktif Editöryal atamaları yok.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Sayfa Düzenli düzenlemesi atamaları</message>
-	<message key="layoutEditor.galley.uploadGalleyFormat">Galley biçimini yükle</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Dizgi tablsı biçimini yükle</message>
 	<message key="layoutEditor.galley.replaceGalley">Dosyayı değiştir</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Ek dosya yükle</message>
+	<message key="submission.layout.imageInvalid">Hatalı resim formatı. Geçerli formatlar .gif, .jpg, ve .png.</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Değerlendirme bekleyen makaleler</message>
@@ -460,6 +565,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.notifyTheEditor">Editörü bilgilendir</message>
 	<message key="reviewer.article.canDoReview">Değerlendirmeyi yapacağım</message>
 	<message key="reviewer.article.cannotDoReview">Değerlendirmeyi yapamayacağım</message>
+	<message key="reviewer.article.restrictedFileAccess">Submission will be made available, if and when reviewer agrees to undertake review</message>
 	<message key="reviewer.article.submissionEditor">Başvuru Editörü</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Hakem yorumlarını buraya yazınız ya da yapıştırınız</message>
 	<message key="reviewer.article.editorToEnter">Editörün girmesi için</message>
@@ -469,34 +575,37 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.recommendation">Öneri</message>
 	<message key="reviewer.article.submitReview">Değerlendirmeyi Editöre gönder</message>
 	<message key="reviewer.article.reviewerComments">Yorumlar</message>
-	<message key="reviewer.article.uploadedFile">Yüklenmiş dosyalar</message>	
+	<message key="reviewer.article.uploadedFile">Yüklenmiş dosyalar:</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Hakem tarafından yüklenen sürüm</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Dosyayla ilgili editör için açıklama yazacaksanız, kendi disk sürücünüze kaydedin, Araştır/Yükle seçeneğini kullanın.)</message>
 	<message key="reviewer.article.schedule.request">Editörün isteği</message>
 	<message key="reviewer.article.schedule.response">Sizin cevabınız</message>
 	<message key="reviewer.article.schedule.submitted">Değerlendirme gönderildi</message>
 	<message key="reviewer.article.schedule.due">Değerlendirme süresi</message>
-	<message key="reviewer.article.decision.accept">Makale başvurusunu kabul et</message>
-	<message key="reviewer.article.decision.pendingRevisions">Düzeltme gerekli</message>
-	<message key="reviewer.article.decision.resubmitHere">Değerlendirme için yeniden başvuru</message>
-	<message key="reviewer.article.decision.resubmitElsewhere">Başka bir yere yeniden başvuru</message>
-	<message key="reviewer.article.decision.decline">Makale başvurusunu reddet</message>
-	<message key="reviewer.article.decision.seeComments">Yorumları gör</message>
-	<message key="reviewer.article.schedule">Zaman çizelgesi</message>
-	<message key="reviewer.article.submissionToBeReviewed">Değerlendirilecek başvurular</message>
-	<message key="reviewer.article.reviewSchedule">Değerlendirme zamanlaması</message>
-	<message key="reviewer.article.reviewSteps">Basamakları kontrol et</message>
+	<message key="reviewer.article.decision.accept">Yayımlanması uygundur</message>
+	<message key="reviewer.article.decision.pendingRevisions">Düzeltmeler yapıldıktan sonra yayımlanabilir</message>
+	<message key="reviewer.article.decision.resubmitHere">Düzeltmelerden sonra incelenmesi gerekir</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Yayımlanmaması daha uygundur</message>
+	<message key="reviewer.article.decision.decline">Yayımlanamaz</message>
+	<message key="reviewer.article.decision.seeComments">Başka bir hakeme gönderiniz</message>
+	<message key="reviewer.article.schedule">Zaman Çizelgesi</message>
+	<message key="reviewer.article.submissionToBeReviewed">Değerlendirilecek Başvurular</message>
+	<message key="reviewer.article.reviewSchedule">Değerlendirme Zamanlaması</message>
+	<message key="reviewer.article.reviewSteps">Değerlendirme Basamakları</message>
 	<message key="reviewer.article.reviewerGuidelines">Hakem kılavuzu</message>
-	<message key="reviewer.article.notifyEditorA">Başvurunun editörünü bilgilendir: </message>
-	<message key="reviewer.article.notifyEditorB">Lütfen değerlendirmeyi kabul edip, etmediğinizi bildiriniz.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
+	<message key="reviewer.article.notifyEditorA">Başvurunun editörünü bilgilendirmek için</message>
+	<message key="reviewer.article.notifyEditorB">lütfen değerlendirmeyi kabul edip-etmediğinizi simgeye tıklayarak, otomatik olarak oluşturulacak e-mektup aracılığıyla bildiriniz.</message>
 	<message key="reviewer.article.consultGuidelines">Değerlendirmeyi yapacaksanız, aşağıdaki Hakem Kılavuzuna başvurunuz.</message>
-	<message key="reviewer.article.downloadSubmission">İndirmek için dosya isimlerine tıklayarak bu başvuruyla ilgili dosyaları değerlendiriniz (ekrandan ya da yazdırarak).</message>
-	<message key="reviewer.article.enterReviewA">Bu başvuruyla ilgili görüşlerinizi form aracılığı ile editöre iletmek için simgeye tıklayınız.</message>
-	<message key="reviewer.article.uploadFile">Ek olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren bir dosya da yükleyebilirsiniz.</message>
-	<message key="reviewer.article.selectRecommendation">Başvuru için önerinizi belirleyip değerlendirmenin tamamlanması için editöre gönderiniz. Değerlendirmeyi editöre göndermek için, ya 3. şıkta bağlantısı verilen değerlendirme formunu doldurmanız, ya da 4. şık yolu ile önerilerinizi içeren bir dosya göndermelisiniz gerekir.</message>
+	<message key="reviewer.article.downloadSubmission">Değerlendirilmek üzere tarafınıza sunulan makaleyi ve varsa eklerini görüntülemek veya yazdırmak için dosya ismine tıklayınız. Değrlendirmenizi ekrandan yapabileceğiniz gibi bilgisayarınıza kaydederek veya çıktısını alarak da yapabilirsiniz. Dosyayı indirmeyi ya da yazdırmayı tercih ettiyseniz, isterseniz sistemden çıkış yapabilirsiniz. Değerlendirmeniz bittiğinde sisteme yeniden giriş yaparak işlem sürecine bir sonraki adımdan itibaren devem edebilirsiniz.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Competing Interests</message>
+	<message key="reviewer.article.enterReviewA">Makaleyle ilgili görüş ve yorumlarınızı editöre iletmek için simgeye tıklayarak açılacak değerlendirme formuna yazarak gönderebilirsiniz.</message>
+		<message key="reviewer.article.uploadFile">İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya da yükleyebilirsiniz.</message>
+	<message key="reviewer.article.selectRecommendation">Değerlendirmenizi editöre göndermek için ya 3. seçenekte bağlantısı verilen simğeye tıklayarak açılacak değerlendirme formu doldurmanız ya da 4. seçenek yolu ile önerilerinizi içeren bir dosya yüklemeniz gerekmektedir. Bu seçenkelerden birini kullandıktan sonra Hakem Kararı seçeneği aktif hale gelecektir. Makale ile ilgili değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanını seçerek kaydediniz.</message>
 	<message key="reviewer.article.mustSelectDecision">Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor.</message>
-	<message key="reviewer.article.confirmDecision">Bir kere kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız. Devam etmek istiyor musunuz?</message>
-	<message key="reviewer.article.ensuringBlindReview">Yazar bağımsız değerlendirme garanti edilir</message>
+	<message key="reviewer.article.confirmDecision">Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?</message>
+	<message key="reviewer.article.ensuringBlindReview">Yazara kör hakemlik garanti edilir</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">S/D'ye dosya</message>
@@ -510,7 +619,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Author -->
 
 
-
 	<!-- Article Submission Step 1 -->
 	
 	
@@ -521,13 +629,12 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 <p>Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.</p>
 
 <ol>
-<li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat'a (ya da Dosya Seç) tıklayınız. </li>
+<li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat/Browse'a  tıklayınız. </li>
 <li>Başvuru dosyanızın yerini belirleyip işaretleyiniz.</li>
-<li>Dosya seçimi penceresinde Aç'a tıklayınız, bu işlem dosya adını sayfa üzerine yerleştirecektir. </li>
-<li>Sayfadaki yükle düğmesini tıklatarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>
+<li>Dosya seçimi penceresinde Aç/Open'a tıklayınız, bu işlem dosya yolunu sayfa üzerine yerleştirecektir. </li>
+<li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>
 <li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>
 </ol>]]></message>
-
 	<!-- Article Submission Step 4 -->
 	
 	<!-- Article Submission Step 4a: Supplementary Files -->
@@ -537,7 +644,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Değerlendirme sürümü hazırlanmadan istek e-postası gönderilemez.</message>
 
-
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Dosya, sayfa düzeni için Editör kararı ile seçilmeden, istek e-postası gönderilemez.</message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">Dosya sayfa düzeni için yüklenmeden istek e-postası gönderilemez.</message>
@@ -546,21 +652,24 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="submission.copyedit.editorAuthorReview">Yazar sayfa düzeni </message>
 	<message key="submission.copyedit.finalCopyedit">Son sayfa düzeni </message>
 	<message key="submission.copyedit.copyeditVersion">S/D Sürümü</message>
-	<message key="submission.copyedit.selectCopyeditor">Sayfa Düzenleyici ata </message>
+	<message key="submission.copyedit.selectCopyeditor">Sayfa Düzenleyici Ata </message>
 	<message key="submission.copyedit.useFile">Dosya kullan</message>
 	<message key="submission.copyedit.copyeditComments">Sayfa düzeni yorumları</message>
 	<message key="submission.copyedit.instructions">Sayfa düzeni yönergesi</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.layout.publicGalleyId">Yerel dizigi tablası belirleyicisi</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Yerel dizigi tablası kimliği zaten var.</message>
+	<message key="submission.layout.noLayoutFile">None (Upload final copyedit version as Layout Version prior to sending request)</message>
 	<message key="submission.layout.assignLayoutEditor">Mizanpaj editörü ata </message>
 	<message key="submission.layout.replaceLayoutEditor">Mizanpaj editörünü değiştir </message>
 	<message key="submission.layout.layoutComments">Mizanpaj yorumları</message>
 	<message key="submission.layout.instructions">Mizanpaj yönergesi </message>
-	
+	<message key="submission.layout.referenceLinking">Referans Linkleme</message>
+
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Dizgiprovası yorumları</message>
-	<message key="submission.archiveSubmission">Başvuruyu arşivle</message>
 	<message key="submission.proofread.corrections">Dizgi provası düzeltmeleri </message>
 	<message key="submission.proofread.instructions">Dizgi provası yönergesi </message>
 
@@ -569,7 +678,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="submission.logType.article">Makale</message>
 	<message key="submission.logType.author">yazar </message>
 	<message key="submission.logType.editor">Editör</message>
-	<message key="submission.logType.review">Değerlendirme</message>
+	<message key="submission.logType.review">Görüş ve yorumlarınızı yazmak için simgeye tıklayınız: </message>
 	<message key="submission.logType.copyedit">Sayfa düzeni</message>
 	<message key="submission.logType.layout">Mizanpaj</message>
 	<message key="submission.logType.proofread">Dizgi provası</message>
@@ -593,17 +702,16 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Kullanıcı değil misiniz? Buradan başvuru yapabilirsiniz</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Güvenlik nedenlerinden dolayı, sistem mevcut şifrenizi değil başka yenilenmiş bir şifreyi e-posta aracılığı ile size gönderecektir. <br /><br />Şifrenizin yenilenmesi için lütfen e-posta adresinizi aşağıya giriniz. Bu e-posta adresine bir doğrulama mesajı gönderilecektir.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Güvenlik nedenlerinden dolayı, sistem mevcut şifrenizin yerine yeni bir şifreyi e-posta aracılığı ile size gönderecektir. <br /><br />Şifrenizin yenilenmesi için lütfen e-posta adresinizi aşağıya giriniz. Bu e-posta adresine bir doğrulama mesajı gönderilecektir.]]></message>
 	
 	<!-- Profile -->
-	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Şifreyi tekrarlayınız </message>
 	<message key="user.register.selectJournal">Kayıt için bir dergi seçiniz</message>
 	<message key="user.register.noJournals">Bu sitede kayıt olabileceğiniz bir dergi yok.</message>
 	<message key="user.register.privacyStatement">Özellik ifadesi</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Burayı tıklayın</a> Bu sitede bu veya başka bir dergiye halihazırda kayıtlı iseniz.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Burayı tıklayın</a> Eğer siz halihazırda kayıtlı  iseniz<strong>veya değilseniz</strong> Bu sitede bu veya başka bir dergiye]]></message>
+	<message key="user.register.alreadyRegisteredOtherJournal">Bu site üzerinde herhangi bir dergiye kayıtlı iseniz <![CDATA[<a href="{$registerUrl}">buraya tıklayınız</a>]]>.</message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[Sitede bu veya başka bir dergiye halihazırda kayıtlı iseniz <strong>veya değilseniz</strong> <a href="{$registerUrl}">burayı tıklayın</a> ]]>.</message>
 	<message key="user.register.loginToRegister">Dergiye kaydolmak için mevcut kullanıcı adı ve şifrenizi giriniz.</message>
 	<message key="user.register.registrationDisabled">Bu dergi şu anda kullanıcı kayıtlarını kabul etmemektedir.</message>
 	<message key="user.register.form.passwordLengthTooShort">Girdiğiniz şifre yeterince uzun değildir.</message>
@@ -613,28 +721,71 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="user.register.authorDescription">Hazırlanmış yazılar dergiye gönderilebilir.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Dergiye gönderilen yazıların değerlendirilmesini yapmak için istekli olma-??? olmamamı -.</message>
 	<message key="user.register.reviewerDescription">Dergiye gönderilen yazıların değerlendirilmesini yapmak için istekli olma. İlgi alanlarınızı tanımlayın (bağımsız alanlar ve araştırma yöntemleri).</message>
+	<message key="user.register.reviewerInterests">İlgi / uzmanlık alanlarınız (Uzmanlık alanı terimlerini açılır menüden seçiniz):</message>
+<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">Aboneliklerim</message>
+	<message key="user.subscriptions.subscriptionStatus">Abonelik Durumu</message>
+	<message key="user.subscriptions.statusInformation">Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription.</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Description</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Additional information is needed before the subscription can be activated</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Subscription must be reviewed before it can be activated</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manual payment has been initiated but not yet received</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">An online payment has been initiated but canceled or not completed</message>
+	<message key="user.subscriptions.individualSubscriptions">Bireysel Abonelik</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Kurumsal Abonelik</message>
+	<message key="user.subscriptions.renew">Yenile</message>
+	<message key="user.subscriptions.purchase">Satın Alma</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Yeni Abonelik (Satın Alma)</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Bireysle Abonelik (Satın Alma)</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Kurumsal Abonelik (Satın Alma)</message>
+	<message key="user.subscriptions.expires">Sona Eriyor</message>
+	<message key="user.subscriptions.expired">Sona Erdi</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Mevcut Abonelik Türlerini  Görüntüle</message>
+	<message key="user.subscriptions.form.typeId">Abonelik Türü</message>
+	<message key="user.subscriptions.form.membership">Üyelik</message>
+	<message key="user.subscriptions.form.membershipRequired">Seçilmiş abonelik türleri üyelik bilgisi gerektirir.</message>
+	<message key="user.subscriptions.form.typeIdValid">Lütfen geçerli bir abonelik türü seçiniz.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Bu kullanıcı hesabı hali hazırda bireysel abonedir.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Membership information if required for the selected subscription type.</message>
+	<message key="user.subscriptions.form.institutionName">Kurum adı</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Kurum adı gerekli.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Gönderi adresi</message>
+	<message key="user.subscriptions.form.domain">Alan</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[If a domain is entered here, IP ranges are optional.<br />Geçerli alan isimleri (ör. kutuphane.dogus.edu.tr).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">The selected subscription type requires a domain and/or an IP range for subscription authentication.</message>
+	<message key="user.subscriptions.form.domainValid">Lütfen geçerli bir alan adı giriniz.</message>
+	<message key="user.subscriptions.form.ipRange">IP aralığı</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Lütfen geçerli bir IP adresi giriniz.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Sil</message>
+	<message key="user.subscriptions.form.addIpRange">Ekle</message>
+
 
 	<!-- Search -->
-	<message key="search.browseAuthorIndex">Yazar indeksini tarayın</message>
-	<message key="search.searchFor">Makalelerde ara</message>
+	<message key="search.browseAuthorIndex">Yazar İndeksi</message>
+	<message key="search.searchFor">Makalelerde Ara</message>
 	<message key="search.author">Yazarlar</message>
 	<message key="search.withinJournal">İçinde</message>
 	<message key="search.allJournals">Tüm Dergiler</message>
-	<message key="search.authorIndex">Yazar indeksini tarayın</message>
+	<message key="search.authorIndex">Yazar İndeksi</message>
 	<message key="search.authorDetails">Yazar Detayları±</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
-<li>Araştırma terimleri olgudan bağımsızdır</li>
-<li>Sık kullanılan kelimeler ihmal edilmiştir</li>
-<li>Hata nedeniyle sadece içeren makaleler <em>hepsi</em> araştırılan sözcükler uygun değil (i.e., <strong>ve</strong> belirtildi)</li>
-<li>Birden fazla kelime ile birleştirin <strong>veya</strong> her iki sözcüğü içeren makaleleri bulmak için; ör., <em>eğitim veya araştırma</em></li>
-<li>Daha kompleks sorular için parantez kullanın; ör., <em>arşiv ((dergi veya konferans) Tez değil)</em></li>
+	<message key="search.syntaxInstructions"><![CDATA[Arama İpuçları: <ul>
+<li>Arama terimlerinde küçük ve büyük harf farkı yoktur.</li>
+<li>Sık kullanılan kelimeler göz ardı edilmiştir.</li>
+<li>Arama sonucunda sadece sorgudaki tüm terimleri içeren makaleler listelenir.</li>
+<li>İki sözcüğü içeren makaleleri bulmak için kelimeleri <strong>veya</strong> ile birleştirin; ör., <em>eğitim veya araştırma</em></li>
+<li>Daha kompleks sorgular için parantez kullanın; ör., arşiv ((işletme VEYA yönetim) siyasi değil)</li>
 <li>Doğru deyimi araştırmak için tırnak işareti içinde kullanın; ör., <em>"erişime açık yayın"</em></li>
-<li>Bir kelimeyi hariç tutmak için önüne işaret koyun  <strong>-</strong> veya <strong>değil</strong>;örneğin. <em>bilgisayarla çalışan - politika</em> veya <em> politika</em></li>
-<li>Kullanın <strong>*</strong> bir kelime içinde ardışık karakterleri ifade etmek için özel sembol kullanın örneğin, <em>sosyo* ahlak</em> içeren dökümanlara uyacak "sosyolojik" veya "sosyal"</li>
+<li>Bir kelimeyi hariç tutmak için önüne  <strong>-</strong> işaret koyun; ör. <em>bilgisayarla çalışan - politika</em></li>
+<li>Bir kelime içinde ardışık karakterleri ifade etmek için <strong>*</strong> sembolünü kullanın; ör., <em>Türk*</em> = "Türkiye", "Türkler", "Türklerin" vb. terimlerinin bulunmasını sağlar</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Taşınabilir döküman formatı (PDF)</message>
+	<message key="article.pdf.download">İndir</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 	
 	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
 	<message key="article.nonpdf.title">Makale indirme </message>
@@ -652,35 +803,38 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="current.noCurrentIssueDesc">Bu dergi daha hiç bir sayı yayınlamadı.</message>
 
 	<!-- Archive index -->
-	<message key="archive.archives">Arşivler</message>
+	<message key="archive.archives">Arşiv</message>
 	<message key="archive.browse">Eski sayılara bak</message>
 	<message key="archive.issueUnavailable">Sayı ulaşılamaz</message>
 	
 	<!-- About The Journal -->
 	<message key="about.statistics">İstatistikler</message>
-	<message key="about.journalContact">Dergi iletişimi için </message>
+	<message key="about.journalContact">Dergi İletişimi İçin </message>
 	<message key="about.aboutTheJournal">Dergi Hakkında</message>
-	<message key="about.editorialTeam">Editörler</message>
+	<message key="about.history">Dergi Tarihçesi</message>
+	<message key="about.editorialTeam">Kişiler ve Kurullar</message>
 	<message key="about.editorialTeam.biography">Öz geçmiş</message>
-	<message key="about.editorialPolicies">Editöryal Politikalar</message>
-	<message key="about.focusAndScope">Odak ve kapsam</message>
+	<message key="about.editorialPolicies">Yayın Politikası</message>
+	<message key="about.focusAndScope">Odak ve Kapsam</message>
 	<message key="about.sectionPolicies">Bölüm Politikaları</message>
 	<message key="about.submissions">Yazı Gönderme</message>
 	<message key="about.sponsors">Destekçiler</message>
 	<message key="about.contributors">Destek Kaynağı</message>
-	<message key="about.onlineSubmissions">Siteden yazı gönderme</message>
+	<message key="about.onlineSubmissions">Siteden Yazı Gönderme</message>
 	<message key="about.onlineSubmissions.haveAccount">{$journalTitle} için bir kullanıcı kaydınız var mı?</message>
-	<message key="about.onlineSubmissions.login">Girişe Gidiniz</message>
+	<message key="about.onlineSubmissions.login">GİRİŞE GİDİNİZ</message>
 	<message key="about.onlineSubmissions.needAccount">Kullanıcı kaydına gereksiniminiz var mı?</message>
-	<message key="about.onlineSubmissions.registration">Kayıt sayfasına gidin</message>
+	<message key="about.onlineSubmissions.registration">KAYIT SAYFASINA GİDİNİZ</message>
 	<message key="about.onlineSubmissions.registrationRequired">Site aracılığı ile yazı göndermek ve yazıyı izlemek için bir kullanıcı kaydı yaptırmanız gerekmektedir.</message>
-	<message key="about.authorGuidelines">Yazarlar için rehber</message>
-	<message key="about.submissionPreparationChecklist">Başvuru için Kontrol Listesi</message>
+	<message key="about.authorGuidelines">Yazar Rehberi</message>
+	<message key="about.submissionPreparationChecklist">Başvuru Kontrol Listesi</message>
 	<message key="about.submissionPreparationChecklist.description">Başvuru sürecünde yazarlar başvurularının aşağıdaki listedeki tüm maddelere uyduğunu kontrol etmelidirler, bu rehbere uymayan başvurular yazarlara geri döndürülecektir.</message>
-	<message key="about.copyrightNotice">Telif Hakkı Konusunda</message>
+	<message key="about.copyrightNotice">Telif Hakkı Düzenlemesi</message>
 	<message key="about.privacyStatement">Gizlilik Beyanı</message>
-	<message key="about.peerReviewProcess">Hakem değerlendirme süreci</message>
-	<message key="about.publicationFrequency">Yayın sıklığı</message>
+	<message key="about.authorFees">Yazar Ücreti</message>
+	<message key="about.authorFeesMessage">This journal charges the following author fees.</message>
+	<message key="about.peerReviewProcess">Hakem Rehberi</message>
+	<message key="about.publicationFrequency">Yayın Sıklığı</message>
 	<message key="about.openAccessPolicy">Açık Erişim Politikası</message>
 	<message key="about.delayedOpenAccess">Geciktirilmiş Açık Erişim</message>
 	<message key="about.delayedOpenAccessDescription1">Bu derginin içeriği açık olarak erişilebilirdir</message>
@@ -688,19 +842,68 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="about.authorSelfArchive">Yazar kişisel arşivlemesi</message>
 	<message key="about.archiving">Arşivleme</message>
 	<message key="about.subscriptions">Abonelik</message>
-	<message key="about.subscriptionsContact">Abonelik için iletişim</message>
-	<message key="about.availableSubscriptionTypes">Abonelik tipleri</message>
+	<message key="about.subscriptions.individual">Bireysel Abonelik</message>
+	<message key="about.subscriptions.institutional">Kurumsal Abonelik</message>
+	<message key="about.subscriptionsContact">Abonelik İçin İletişim</message>
+	<message key="about.subscriptionTypes.name">İsim</message>
+	<message key="about.subscriptionTypes.format">Format</message>
+	<message key="about.subscriptionTypes.duration">Süresi</message>
+	<message key="about.subscriptionTypes.cost">Tutar</message>
+	<message key="about.availableSubscriptionTypes">Abonelik Tipleri</message>
+	<message key="about.memberships">Üyelikler</message>
 	<message key="about.journalSponsorship">Dergi Destekleme</message>
-	<message key="about.aboutThisPublishingSystem">Bu yayınlama sistemi hakkında</message>
+	<message key="about.aboutThisPublishingSystem">ADS (OJS) Hakkında</message>
+	<message key="about.aboutThisPublishingSystem.altText">ADS Editörlük ve Yayımcılık Süreci</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Bu dergi açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılımı {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> tarafından geliştirilmiştir ve geliştirilmesi sürdürülmekte ve (GNU General Public License) lisansı ile dağıtılmaktadır.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Bu site açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems OJS) yazılımı {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> tarafından geliştirilmiştir ve geliştirilmesi sürdürülmekte ve (GNU General Public License) lisansı ile bedava dağıtılmaktadır.]]></message>	
-
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Açık Dergi Sistemleri Yardımı</message>
 	<message key="help.ojsHelpAbbrev">ADS Yardımı</message>	
+	<message key="help.searchReturnResults">Arama Sonuçlarına Dön</message>
 	
+	<!-- Donations -->
+	<message key="donations.thankYou">Teşekkürler</message>
+	<message key="donations.thankYouMessage">Yaptığınız katkı için çok teşekkür ederiz.</message>
+	
+	<!-- Payments -->
+	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
+	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
+	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
+	
+	<message key="payment.paid">Ödeme</message>
+	<message key="payment.payNow">Şimdi Öde</message>
+	<message key="payment.waive">Vazgeç</message>
+	<message key="payment.alreadyPaid">Ödenmiş</message>
+	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
+	<message key="payment.paymentReceived">Ödeme Alınıd</message>
+	<message key="payment.paymentSent">Ödeme zaten gönderildi</message>
+	<message key="payment.authorFees">Yazar ücretleri</message>
+	<message key="payment.type.submission">Gönderi ücretleri</message>
+	<message key="payment.type.publication">Yayın ücreti</message>
+	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
+	<message key="payment.type.membership">Bireysel abonelik ücreti</message>
+	<message key="payment.type.purchaseArticle">Makale ücreti</message>
+	<message key="payment.type.subscription">Abonelik ücreti</message>
+	<message key="payment.type.donation">Bağış</message>
+	
+	<message key="payment.donation.makeDonation">Bir Bağışta Bulun</message>
+	
+	<message key="payment.submission.paySubmission">Gönderi ücreti ödeme</message>
+	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
+	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
+	<message key="payment.publication.payPublication">Pay to Publish</message>
+	<message key="payment.publication.publicationPaid">Yayın ücreti ödendi</message>
+	
+	<message key="payment.membership.buyMembership">Biresyel abonelik satın alma</message>
+	<message key="payment.membership.renewMembership">Bireysel abonelik yenileme</message>	
+	<message key="payment.membership.ends">Bitiyor</message>
+
+	<message key="payment.subscription.purchase">Abonelik</message>
+	<message key="payment.subscription.renew">Abonelik yenile</message>
+	<message key="payment.subscription.expires">Sona eriyor</message>	
+
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">ADS Yüklenmesi</message>
 	<message key="installer.ojsUpgrade">ADS Güncellenmesi</message>
@@ -757,18 +960,26 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="installer.localeInstructions">Bu sistemi kullanmak için birincil dil. Eğer burada belirtilmemiş diller konusunda destek istiyorsanız lütfen ADS belgelerine bakın.</message>
 	<message key="installer.additionalLocalesInstructions">Bu sistemi desteklemek için ekli herhangi bir dili seçin. Bu diller, bu sitede yer verilen dergiler tarafından kullanıma hazır olacaktır. Başka diller site yönetim arayüzünden herhangi bir zamanda yüklenebilir.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Yüklenen dosyaların tutulacağı bir dizinin tam erişim yolunu yazınız. Bu dizin doğrudan web ulaşımına açık olmayabilir. <strong>Lütfen yükleme öncesi bu dizinin var olduğundan ve yazılabilir olduğundan emin olun.</strong> İşletim sistemi Windows ise örnekteki gibi bölü kullanın, örneğin "C:/myjournal/files".]]></message>
-	<message key="installer.installOJS">Açık Dergi Sistemlerini yükle </message>
-	<message key="installer.upgradeOJS">Açık Dergi Sistemleri yazılımını güncelle</message>
+	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
+	<message key="installer.installApplication">Açık Dergi Sistemlerini yükle </message>
+	<message key="installer.upgradeApplication">Açık Dergi Sistemleri yazılımını güncelle</message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Dikkat:</strong>Eğer yükleme, veritabanının yüklenmesi yoluyla başarısız olmuşsa veritabanını yeniden yüklemeyi denemeden önce ADS veritabanını veya veritabanı tablolarını indirmeniz gerekebilir.  ]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>Yükleyici konfigürasyon dosyasını otomatik olarak yazamaz. Sistemi kullanmayı denemeden önce lütfen açınız. <tt>config.inc.php</tt>aşağıdakine uygun bir metin editöründe ve içeriklerini aşağıdaki metin alanının içerikleri ile değiştirin.</p>]]></message>
-<message key="installer.installerSQLStatements">Yükleme için SQL açıklamaları</message>
+	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuel yükleme </h4>
+<p>ADS veritabanı şemasını ve ilk verileri oluşturmak için gerekli SQL açıklamaları aşağıda gösterilmiştir. Sistemin, bu açıklamalar manuel olarak yürürlüğe konulana kadar kullanılamayacağına dikkat edin. Aynı zamanda <tt>config.inc.php</tt> dosyasını manuel olarak konfigüre etmeniz gerekecektir.]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>ADS yüklemesi başarıyla tamamlandı.</p>
 <p>Sistemi kullanmaya başlamak için bir önceki sayfada girilen kullanıcı adı ve şifre ile <a href="{$loginUrl}">kullanıcı girişi </a> yapınız.</p>
-<p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek isterseniz, <strong>lütfen <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
+<p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek isterseniz, <strong>lütfen 
+<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>ADS'nin sürüm {$version}  güncellenmesi başarıyla tamamlandı.</p>
 <p> config.inc.php Konfigürasyon dosyanızdaki ayarlamayı ''yüklendi'' ayarına getirmeyi unutmayın <em>On</em>.</p>
 <p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek için üye olmadınız ise,  <strong>lütfen <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
+
+
+
+
+
 
 
 	<!-- Article Logs -->
@@ -787,10 +998,13 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="log.review.resubmit">{$articleId} ile tanımlı başvurun yeniden değerlendirmeye gönderildi.</message>
 	<message key="log.review.reviewDeclined">{$reviewerName} {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesinde makaleyi reddetti.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesinde makaleyi kabul etti.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti.</message>
 	<message key="log.review.reviewFileByProxy">Editör, {$userName}, {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesi sonucunda {$reviewerName} adına bir değerlendirme dosyası yükledi.</message>
 	<message key="log.review.reviewerFile">Bir hakem değerlendirme dosyası yüklenmiş.</message>
-
+	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
+	
+	
 	<message key="log.copyedit.initiate">{$articleId} ile tanımlı başvurunun sayfa düzeni {$copyeditorName} tarafından kabul edilmiştir.</message>
 	<message key="log.copyedit.copyeditFileSet">Ön tanımlı sayfa düzeni dosyası seçilmiştir.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} {$articleId} ile tanımlı başvurunun ilk sayfa düzenini tamamlamıştır.</message>
@@ -812,253 +1026,100 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 
 	<message key="log.proofread.assign">{$assignerName} {$articleId} ile tanımlı başvuru için düzeltmen olarak {$proofreaderName} öneriyor has assigned .</message>
 	<message key="log.proofread.complete">{$proofreaderName} {$articleId} ile tanımlı başvuruyu yayın için gönderdi.</message>
+	
 	<message key="log.imported">{$userName} {$articleId} ile tanımlı başvuruyu sisteme gönderdi.</message>
 
 	<!-- Reading Tools entries -->
 
+
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Okuma Araçları Ayarları</message>
-	<message key="rt.admin.rtEnable">Bu dergi için okuma araçlarını etkinleştirmek için Okuma Araçları Ayarlarına gidiniz.</message>
+	
 	<message key="rt.admin.settings.description">Okuma araçları indekslenen dergi bölümlerinde yayınlanan yazının yanında okuyucuya gösterilir. Yayınlanan yazı ile ilişkili bir dizi isteğe bağlı araçtan oluşurlar ve aşağıda listelenmişlerdir.</message>
 	<message key="rt.admin.settings.enableReadingTools">Dergini seçilen bölümleri için okuma araçlarını etkinleştir.</message>
 	<message key="rt.admin.settings.relatedItems">Alan</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Her alan için ilişkili yazılar setini görmek, düzeltmek veya silmek için  <a href="{$relatedItemsLink}" class="action">İlişkili Yazılar Seti</a> bağlantısına bakınız.]]></message>
+
 	<message key="rt.admin.options">Dergi Yazısı Araçları</message>
 	<message key="rt.admin.relatedItems">İlişkili Yazılar Aracı</message>
 
+	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and logged in to post, with anonymity not permitted.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and logged in to post, with anonymity permitted.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
+
+	
 	<!-- RT Versions -->
 	
 	<!-- RT Contexts -->
 
 	<!-- RT Searches -->
-<message key="rt.admin.searches.edit.editSearch">Aramayı Düzenle</message>
-<message key="rt.admin.searches.confirmDelete">Bu aramayı silmek istediğinizden emin misiniz?</message>
-<message key="rt.admin.searches.createSearch">Arama oluşturun</message>
-
-<message key="rt.admin.validateUrls">Okuma Araçları için bağlantıların geçerliğini kontrol et </message>
-<message key="rt.admin.validateUrls.description"><![CDATA[Aranan sitelerdeki olası geçersiz bağlantılar aşağıda listelenmiştir.<br/>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Aranan sitelerdeki olası geçersiz bağlantılar aşağıda listelenmiştir.<br/>
 Bu test %100 doğru sonuç veremediği için, geçersiz bağlantıları, kontrol ederek doğrulamanız gerekmektedir.<br/>
 Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladır.]]></message>
-<message key="rt.admin.validateUrls.validate">Geçerliliğini kontrol et </message>
-<message key="rt.admin.validateUrls.urlIsInvalid">{$url} bağlantısı geçerli değildir.</message>
-<message key="rt.admin.validateUrls.ok">Tamam</message>
-<message key="rt.admin.validateUrls.complete">Değerlendirme tamamlanmıştır</message>
+
 
 	<!-- RT Entities -->
-<message key="rt.version">Sürüm</message>
-<message key="rt.versions">Sürümler</message>
-<message key="rt.version.title">Başlık </message>
-<message key="rt.version.locale">Yer</message>
-<message key="rt.version.key">Anahtar</message>
-<message key="rt.version.description">Tanımlama </message>
 
-<message key="rt.context">Bağlam </message>
-<message key="rt.contexts">Bağlamlar </message>
-<message key="rt.context.title">Başlık</message>
-<message key="rt.context.abbrev">Kısaltma </message>
-<message key="rt.context.description">Tanımlama </message>
-<message key="rt.context.order">Sıralama </message>
 
-<message key="rt.search">Arama </message>
-<message key="rt.searches">Aramalar </message>
-<message key="rt.search.title">Başlık </message>
-<message key="rt.search.url">Bağlantı</message>
-<message key="rt.search.order">Sıralama </message>
-<message key="rt.search.description">Tanımlama </message>
-<message key="rt.search.searchUrl">Bağlantı ara </message>
-<message key="rt.search.searchPost">Veri gönder </message>
-<message key="rt.search.suggest">Kaynak öner</message>
 
-<message key="rt.authorBio">Yazarın biyografisini görünüz </message>
 
-<message key="rt.viewMetadata">Dizin bilgilerini görüntüle </message>
-<message key="rt.metadata.dublinCore">Dublin esası </message>
-<message key="rt.metadata.pkpItem">PKP Metadata Items</message>
-<message key="rt.metadata.forThisDocument">Bu belgenin meta-verileri </message>
-<message key="rt.metadata.dublinCore.title">Başlık </message>
-<message key="rt.metadata.dublinCore.primaryAuthor">Yaratan </message>
-<message key="rt.metadata.dublinCore.subject">Konu </message>
-<message key="rt.metadata.dublinCore.description">Tanımlama </message>
-<message key="rt.metadata.dublinCore.publisher">Yayımcı </message>
-<message key="rt.metadata.dublinCore.contributor">Katkıda bulunan </message>
-<message key="rt.metadata.dublinCore.date">Tarih </message>
-<message key="rt.metadata.dublinCore.type">Tip </message>
-<message key="rt.metadata.dublinCore.format">Biçim (format) </message>
-<message key="rt.metadata.dublinCore.identifier">Tanımlayıcı </message>
-<message key="rt.metadata.dublinCore.source">Kaynak </message>
-<message key="rt.metadata.dublinCore.language">Dil </message>
-<message key="rt.metadata.dublinCore.relation">İlişki </message>
-<message key="rt.metadata.dublinCore.coverage">Kapsam </message>
-<message key="rt.metadata.dublinCore.rights">Haklar </message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">Yaratan </message>
 
-<message key="rt.metadata.pkp.title">Belgenin başlığı </message>
-<message key="rt.metadata.pkp.primaryAuthor">Yazarın adı, çalıştığı yer </message>
-<message key="rt.metadata.pkp.discipline">Bilim dalı(ları)</message>
-<message key="rt.metadata.pkp.subject">Konu(lar)</message>
-<message key="rt.metadata.pkp.subjectClass">Konu sınıflandırması </message>
-<message key="rt.metadata.pkp.abstract">Özet </message>
-<message key="rt.metadata.pkp.publisher">Organize eden acente ve yeri </message>
-<message key="rt.metadata.pkp.sponsors">Sponsor(lar)</message>
-<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
-<message key="rt.metadata.pkp.type">Tip (yaz?)</message>
-<message key="rt.metadata.pkp.genre">Durum &amp; genre</message>
-<message key="rt.metadata.pkp.peerReviewed">Meslekdaş görüşünden geçmiş makale </message>
-<message key="rt.metadata.pkp.format">Dosya formatı </message>
-<message key="rt.metadata.pkp.uri">Evrensel kaynak göstergesi </message>
-<message key="rt.metadata.pkp.source">Dergi/konferans başlığı; cilt, no.,(yıl) </message>
-<message key="rt.metadata.pkp.language">İngilizce=en </message>
-<message key="rt.metadata.pkp.suppFiles">Ek dosyalar </message>
-<message key="rt.metadata.pkp.coverage">Coğrafik yer, kronolojik dönem, araştırma örneklemi (cins, yaş,vs) </message>
-<message key="rt.metadata.pkp.copyright">Telif hakkı ve izinler </message>
+	<message key="rt.metadata.pkp.primaryAuthor">Yazarın adı, çalıştığı yer</message>
+	<message key="rt.metadata.pkp.peerReviewed">Değerlendirmeden geçmiş makale</message>
+	<message key="rt.metadata.pkp.doi">Dijital Nesne Tanımlayıcı</message>
 
-<message key="rt.suppFiles">Ek dosyalar</message>
-<message key="rt.suppFiles.viewMetadata">Dizinleme Meta-verileri</message>
-<message key="rt.suppFiles.download">İndir (yükle) </message>
 
-<message key="rt.captureCite">Nasıl kaynak gösteririm</message>
-<message key="rt.captureCite.online">Bağlantıda </message>
 
-<message key="rt.printVersion">Baskıya uygun biçim</message>
-<message key="rt.lookUp">Bir sözğün anlamı</message>
-<message key="rt.colleague">Meslekdaşına bildir</message>
-<message key="rt.addComment">Yazıya yorum yap</message>
-<message key="rt.emailAuthor">Yazara e-posta gönder </message>
-<message key="rt.beNotifiedWhen">...olduğu zaman bilgilendirilmek istersen </message>
 
-<message key="rt.relatedItems">İlişkili yazılar</message>
-<message key="rt.thisJournal">Dergide ara</message>
 
-<message key="rt.email.sent">Mesajınız gönderilmiştir</message>
-<message key="rt.email.needLogin"><![CDATA[* <a target="_parent" href="{$loginUrl}">kullanıcı</a> olmanızı gerektirir]]></message>
+	<message key="rt.beNotifiedWhen">...olduğu zaman bilgilendirilmek istersen</message>
 
-<message key="rt.context.searchTerms">Arama Terimleri</message>
-<message key="rt.context.termToDefine">Tanımlanacak sözcük</message>
-<message key="rt.context.searchDescription"> Arama terimleri yazar(lar) tarafından seçilmiştir ve okuyucu tarafından değiştirilebilir. Araştırılan kaynak hakkında daha fazla bilgi edinmek istiyorsanız, "bilgi" sembolünün üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
-<message key="rt.context.defineTermsDescription">Yazı HTML formunda ise, herhangi bir sözcüğün üzerine çift tıklarsanız "tanımlanacak kelime" kutusunda belirecektir. PDF biçimindeki yazılarda ilgili sözcüğü kopyalayıp, kutu içine yapıştırmanız gerekir. Daha sonra kelimenin tanımlamasını bulabilmek için "arama" işlevini kullanınız. Aramanın yapıldığı site hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynak, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladığı için seçilmiştir. </message>
-<message key="rt.context.authorTermsDescription"> Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
-<message key="rt.context.citesContextDescription">Eğer makaleler Google Scholar dizininde yer alır ise, mkalenin yanında "Kim tarafından kaynak gösterildi" bağlantısı yer alır. Google Scholar tüm listeyi yazar ve başlık ile verir. Eğer yalnızca araştırma laboratuarları tarafından ulaşılabilen kaynaklara ulaşmak isterseniz, Scholar Özelliklerine girip, çalıştığınız yer için kitaplık bağlantılarını etkinleştirmelisiniz.</message>
+	<message key="rt.thisJournal">Dergide Ara</message>
+	
 
-<message key="rt.context.and">VE</message>
+		<message key="rt.context.authorTermsDescription"> Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
+
+	
+	
+<!-- Notification Types -->
+	<message key="notification.mailListDescription">Dergi içeriği ile ilgili bildirimlerin e-posta adresinize gelmesini istiyorsanız e-posta adresinizi kayıt ediniz.</message>
+	<message key="notification.notificationsPublicDescription">Bu sayfa, yeni sayı veya duyurular gibi dergi ile ilgili önemli güncellemeleri gösterir. RSS beslemeleri (sağdaki resimlere tıklayarak) ya da <![CDATA[  <a href="{$emailUrl}">e-posta yoluyla</a>]]> bu bildirimlere abone olabilirsiniz.</message>
+	<message key="notification.type.articleSubmitted">"{$param}" başlıklı bir makale gönderildi..</message>
+	<message key="notification.type.copyeditComment">Sayfa düzenleyici "{$param}" başlıklı makale için yorum yaptı.</message>
+	<message key="notification.type.editing">Düzenleme durumları</message>
+	<message key="notification.type.editorDecisionComment">"{$param}" başlıklı makale için editör karar yorumu yaptı.</message>
+	<message key="notification.type.galleyModified">"{$param}" başlıklı makale için galeride güncellendi.</message>
+	<message key="notification.type.issuePublished">Yeni bir sayı yayımlandı.</message>
+	<message key="notification.type.layoutComment">"{$param}" başlıklı makalenin sayfa düzenleyicisi yorum yaptı.</message>
+	<message key="notification.type.metadataModified">"{$param}" başlıklı makalenin künye verisi güncellendi.</message>
+	<message key="notification.type.newAnnouncement">Yeni duyuru oluşturuldu.</message>	
+	<message key="notification.type.proofreadComment">"{$param}" başlıklı makalenin imla kontrolünü yapan bir yorum yaptı.</message>
+	<message key="notification.type.reviewerComment">"{$param}" başlıklı makale için hakem yorum yaptı.</message>
+	<message key="notification.type.reviewerFormComment"> "{$param}" başlıklı makale için değerlendirme formu gönderildi.</message>
+	<message key="notification.type.reviewing">Değerlendirme Durumları</message>
+	<message key="notification.type.site">Site Durumları</message>
+	<message key="notification.type.submissionComment">"{$param}" başlıklı makale için editör yorum yaptı.</message>
+	<message key="notification.type.submissions">Gönderi Durumları</message>
+	<message key="notification.type.suppFileModified">"{$param}" adlı makalenin ek dosya/dosyaları güncelllendi.</message>
+	<message key="notification.type.userComment">"{$param}" başlıklı makale için bir okuyucu yorum yaptı.</message>
 
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.
 	 *
 	-->
+	<!-- Authorization -->
+		<message key="user.authorization.copyeditorAssignmentMissing">Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız.</message>
+	<message key="user.authorization.noJournal">Kaynakta dergi yok!</message>
+	<message key="user.authorization.sectionAssignment">Bir makaleye erişmeyi deniyorsunuz. Erişmeye çalıştığınız makale sizin bölümünüzde değil.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Invalid copyeditor submission or no copyeditor submission requested!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Invalid section editor submission or no section editor submission requested!</message>
+	
 	<!-- Icons: Default "alt" text -->
 	
 	<!-- Debug messages -->
-
-	<!--
-	 *
-	 * DEFAULT - Default settings for setup items.
-	 *
-	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished"> Gönderilen yazı daha önceden yayınlanmamış, ya da başka bir dergiye değerlendirilmek üzere sunulmamıştır. (Yazara Öneriler bölümünde bir açıklama sunulmuştur)</message>
-	<message key="default.journalSettings.checklist.fileFormat"> Yazı dosyası OpenOffice, Microsoft Word, RTF, veya WordPerfect doküman dosya biçimindedir.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance"> Metin tek satırlı, 12 fontlu, altı  çizilme yerine italik olarak vurgulanmış (URL adresleri dışında) ve tüm şekil, resim ve tablolar sonda olmaktansa metin içinde uygun noktalara yerleştirilmiştir. Baskı için, resimlerin kaliteli kopyalarını ek dosya olrak gönderiniz. Gönderilen dosyanın boyutu çok fazla olur ise, sistem almayabilir. Böyle durumlarda yazıyı bölüp, diğer bölümleri ek dosya olarak tek, tek gönderebilirsiniz.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Stil ve kitaplık uygulamaları için gereksinimler, Dergi hakkında bölümündeki <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Yazarlara Notlar</a>, sayfasında görülebilir.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Yazınızı hakem değerlendirmesi yapılan bir dergi bölümüne gönderiyor iseniz, yazarlardan bağımsız değerlendirme sağlanması için yapmanız gerekenleri  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">görmek için burayı tıklatınız</a>) Yardım sayfasındaki önerilere tam olarak uyunuz.]]></message>
-
-	<message key="default.journalSettings.privacyStatement"> Bu dergi sitesindeki isimler ve elektronik posta adresleri bu derginin belirtilen amaçları doğrultusunda kullanılacaktır ve diğer amaçlar veya başka bir bölüm için kullanılmaycaktır.</message>
-	<message key="default.journalSettings.openAccessPolicy">Bu dergi yayınlanma ile birlikte açık erişimi sağlama politikasını benimsemiştir. Açık erişimin bilginin global değişimini arttırarak insanlık için yararlı sonuçlar doğuracaktır.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Yazarlar bu dergide yayınlanan yazılarını kişisel veya kurumsal web sitelerinde, dergiye kütüphanecilik kurallarına uyan bağlantı vererek açık olarak yayınlayabilirler..</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Sayfa düzenleme evresi makalenin şekli, sözcükleri, gramer yapısı, açıklığı ve akıcılığını geliştirmek için amaçlanmıştır. Bir diğer evrede de yalnızca yazın ve şekil düzeltmeleri yapılacağından bu yazar için yazıda yapabileceği son değişiklikler için son şans olmaktadır. 
- 
-
-Sayfa düzenlemesi yapılacak dosya Word veya .rtf dosyası biçimindedir. Böylece belge kolayca biçimlendirilir.
-Buradaki açıklamalar iki yöntemi önerir. Birincisi MSWord programının Değişiklikleri İzle olanağını kullanmaktır. Ancak bu yol seçildiğinde yazar, editör ve dizgicilerin programa ulaşım olanağının olması gerekir.
-İkinci sistem ise, yazılım bağımsızdır ve Harward Educational Review yönteminden izin alınarak buraya alınmıştır.
-Dergi editörü bu açıklamaları düzenleyip, kendi koşullarına daha uygun biçime getirebilir.
-
-<h4> Sayfa düzenlemesi Düzeltme sistemleri</h4>
-
-<strong>1. Microsoft Değişiklikleri İzle özelliği ile </strong>
-
-Menü çubuğundaki araçlar sekmesinde "Değişiklikleri İzle" etkinleştirilerek, kopya dizgisini yapan kişi değişiklikler yapar. Eklediği metinler veya sildiği metinler farklı renk ile gösterilir.
-Değiştirilen belge editöre sunulmak üzere sisteme yüklenir.
-Editör değişiklikleri inceleyip, yazarin görüşüne sunabilir.
-
-Editör ve yazar uygun gördükleri değişiklikleri normal biçime getirirler ve 
-ek düzeltmeleri var ise, Değişiklikleri İzle özelliği ile farklı renklerde olmak üzere, 
-metine eklerler.
-Metinde köşeli parantez içinde sorular var ise yazar mutlaka bu soruların yanıtını ilgili köşeli parantez içine yazmalıdır.
-Sayfa düzenleme ekibinden gelen sorular makalenin doğru dizilmesi için önemlidir.
-
-Yazar ve editör ile değişikliklerde uyuşulunca, son Sayfa düzenleme işlemi gerçekleştirilir.
-Bu işlemden sonra yazı görüntü açısından tamamlanıp, basılacak hale gelmek üzere yönlendirilir.
-Bu basamakta da yazar ve editörlerin görüşü alınacaktır.
-
-
-<strong>2. Harward Educational Review yöntemi</strong>
-
-<strong> Yazıda elektronik değişiklikler yapmak için talimatlar</strong>
-
-Yazının elektronik kopyasında değişiklik yapılır iken, aşağıdaki yöntemleri kullanınız.
-
-<strong> Önerilen değişikliklere yanıt verme</strong>
-&nbsp; Önerilen değişiklikleri kabul ediyorsanız, ilgili metni kalın fontlardan, normal fonta değiştiriniz.
-&nbsp; Önerilen değişiklikleri kabul etmiyorsanız, 
-orjinal metni yeniden girip, <strong>kalın font</strong> yaparak işaretleyiniz.
-
-<strong> Ekleme ve çıkarımlar yapma</strong>
-&nbsp; Eklemelerinizi <strong>metni kalın font</strong> yaparak işaretleyiniz
-&nbsp; Silinecek metni yandaki gibi köşeli parantez ve kalın font ile işaretleyiniz: <strong>[silinecek metin]</strong>
-&nbsp; Eğer bir cümle veya daha fazlasını siliyorsanız, lütfen ilgili alana bir not ekleyiniz.
-Örneğin : <strong>[iki cümleyi siliyorum. silinecek metin]</strong>
-
-<strong>Yazarin önerilerine yanıt verme</strong>
-&nbsp; Yazarın yaptığı değişiklikleri değiştirmeyiniz. Kesinlikle silmeyiniz.
-&nbsp; Yazarın önerilerinin sonuna verdiğiniz kararı <strong>Yorum</strong> işareti ile ekleyiniz.
-Örneğin:<strong>[Yazar notu..... Yorum: silmek istedikleriniz silinecek. ]</strong>
-
-<strong> Yorum yapma </strong>
-&nbsp; Esaslı değişiklikler veya organizasyonel değişiklikleri açıklamak için yorumları kullanınız &nbsp; e.g., <strong>[Yorum: Üsteki paragrafın 5 yerine 7. olması daha uygun olacak]</strong>
-&nbsp; Not: Eğer sayfa numaraları söz konusu ise, size basılarak gelen kopyadaki sayfa numaralarını kullanınız.
-Elektronik işlemler sırasında sayfa numaraları değişebilir...
-
-<h4> Elektronik düzeenleme için bir örnek</h4>
-
-<strong> Orijinal "yazı" dosyası</strong>
-
-Orjinal makalenizde yapısal veya biçimsel dramatik değişiklikler yaparken, lütfen birlikte çalıştığınız kişilerin görüşlerini alınız. Değişilikleri tamamladığınızde dosya adını değiştiriniz (YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
-
-<strong> Eleştiri ve önerilerle yazara geri gönderilen yazı</strong>
-
-Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce
-<strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
-Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
-(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
-değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
-
-<strong> ONA yollanan revize edilmiş yazı</strong>
-
-Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce
-<strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
-<strong> Lütfen aşağıdaki kurallara uymadaki yetersizliğin yazınızın basılmasında 
-ciddi gecikmelere neden olabileceğini unutmayınız.</strong>
-
-Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
-(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
-değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
-Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler kalsın veya işaret edilsin 
-Örneğin [Yorum: Önerinize cevaben bir cümle ekledim.]</strong>
-
-<strong>Notlar:</strong>
-&bull; Koyu yazılan metinlerin normale çevrilmesi, o paragraftaki değişikliklerin kabulünü gösterir.
-&bull; Yeni cümlleler eklendi ise, koyu renk karakterler ile işaret edilirler.
-&bull; [silinen sözcükler] Köşeli parantez içine alınmış metin tümü ile silinecek metindir
-&bull; Köşeli parantez içinde YORUM: biçiminde başlayan ifadeler editöre görüş bildirmeki için kullanılır]]></message>
-
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi anasayfasının üst kısmında yer alan <a href="{$indexUrl}/{$journalPath}/user/register">Kayıt Ol</a> bağlantısından bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href="{$indexUrl}/{$journalPath}/about">Dergi Hakkında</a> bağlantısında dergi yayın politikası ve <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Yazarlara bilgiler </a> kısımlarına ulaşabilirsiniz. Yazarların dergiye makale göndermeden önce <a href="{$indexUrl}/{$journalPath}/user/register">register</a> kayır işlemini gerçekleştirmeleri gerekmektedir. Bu işlem kolaylıkla <a href="{$indexUrl}/index/login">Siteye Giriş</a> bağlantısından 5 basamakta yapılabilir.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Kitaplıklara, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir.Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href="http://pkp.sfu.ca">Public Knowledge Project</a>. Bağlantısından elde edilebilir.]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Bu dergi, iştirak eden kütüphanelerin dağıtılan arşivleme sistemi yaratması amaçlı, kütüphanelerin koruma ve restorasyon amaçlı kalıcı arşivler yaratmasına izin vermek için LOCKSS sistemi kullanmaktadır. <a href="http://lockss.org/"> LOCKSS sistemi konusunda daha fazla bilgi almak isterseniz.</a>]]></message>
-
-
+	<message key="debug.notes.currencyListLoad">"{$filename}" XML dosyasından para birimi listesi yüklendi</message>
+	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
 </locale>

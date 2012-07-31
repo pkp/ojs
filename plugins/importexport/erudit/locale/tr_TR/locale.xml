@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -13,15 +13,15 @@
   -->
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
-	<message key="plugins.importexport.erudit.displayName">Erudit Makale Dışarı Verme Eklentisi</message>
-	<message key="plugins.importexport.erudit.description">Makaleleri İngiliz Erudit DTD sistemi ile sistemden vermek için kullanılır</message>
+	<message key="plugins.importexport.erudit.displayName">Erudit Makale İhraç Eklentisi</message>
+	<message key="plugins.importexport.erudit.description">Makaleleri İngiliz Erudit DTD sistemi ile sistemden ihraç etmek için kullanılır</message>
 
 	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Kullanımı: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
 ]]></message>
-	<message key="plugins.importexport.erudit.export">Dışarı Veri Ver</message>
-	<message key="plugins.importexport.erudit.export.issues">Sayının tüm verisini dışarı ver</message>
-	<message key="plugins.importexport.erudit.export.sections">Tüm bölüm verisini  dışarı ver</message>
-	<message key="plugins.importexport.erudit.export.articles">Makale Verisini dışarı ver</message>
+	<message key="plugins.importexport.erudit.export">İhraç et</message>
+	<message key="plugins.importexport.erudit.export.issues">Sayının tüm verisini ihraç et</message>
+	<message key="plugins.importexport.erudit.export.sections">Tüm bölüm verisini ihraç et</message>
+	<message key="plugins.importexport.erudit.export.articles">Makale verisini ihraç et</message>
 
 	<message key="plugins.importexport.erudit.selectIssue">Sayıyı Seçin</message>
 	<message key="plugins.importexport.erudit.selectArticle">Makaleyi Seçin</message>
