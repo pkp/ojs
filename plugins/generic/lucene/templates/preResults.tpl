@@ -17,26 +17,28 @@
 			{html_options options=$luceneOrderDirOptions selected=$orderDir}
 		</select>
 		&nbsp;
+
 		<script type="text/javascript">
 			// Get references to the required elements.
 			var $orderBySelect = $('#content #luceneSearchOrder');
 			var $orderDirSelect = $('#content #luceneSearchDirection');
-			var $searchForm = $('#content #searchForm');
 
 			function luceneReorder(useDefaultOrderDir) {ldelim}
-				// Copy the order criteria over into the form.
-				// We do it this way so that we do not have to
-				// create a new template hook just to inject
-				// this bit of code into the form.
-				$searchForm.find('input[name="orderBy"]').val($orderBySelect.val());
+				var reorderUrl = '{strip}
+						{if $basicQuery}
+							{url query=$basicQuery searchField=$searchField escape=false}
+						{else}
+							{url query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear escape=false}
+						{/if}
+					{/strip}';
+				var orderBy = $orderBySelect.val();
 				if (useDefaultOrderDir) {ldelim}
-					$searchForm.find('input[name="orderDir"]').val('');
+					var orderDir = '';
 				{rdelim} else {ldelim}
-					$searchForm.find('input[name="orderDir"]').val($orderDirSelect.val());
+					var orderDir = $orderDirSelect.val();
 				{rdelim}
-
-				// Resubmit the search form with the new order criteria:
-				$searchForm.submit();
+				reorderUrl += '&orderBy=' + orderBy + '&orderDir=' + orderDir;
+				window.location = reorderUrl;
 			{rdelim}
 
 			$orderBySelect.change(function() {ldelim} luceneReorder(true); {rdelim});

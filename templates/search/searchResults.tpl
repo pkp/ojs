@@ -34,8 +34,6 @@ function ensureKeyword() {
 	<form id="searchForm" method="post" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
-		<input type="hidden" name="orderBy" value="{$orderBy|escape}"/>
-		<input type="hidden" name="orderDir" value="{$orderDir|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/
 	</form>
 	<br />
@@ -57,8 +55,6 @@ function ensureKeyword() {
 		<input type="hidden" name="dateToMonth" value="{$dateToMonth|escape}"/>
 		<input type="hidden" name="dateToDay" value="{$dateToDay|escape}"/>
 		<input type="hidden" name="dateToYear" value="{$dateToYear|escape}"/>
-		<input type="hidden" name="orderBy" value="{$orderBy|escape}"/>
-		<input type="hidden" name="orderDir" value="{$orderDir|escape}"/>
 	</form>
 	<a href="javascript:document.getElementById('searchForm').submit()" class="action">{translate key="search.reviseSearch"}</a><br />
 {/if}
