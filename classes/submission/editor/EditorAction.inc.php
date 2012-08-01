@@ -37,7 +37,7 @@ class EditorAction extends SectionEditorAction {
 		$journal =& $request->getJournal();
 
 		$editorSubmission =& $editorSubmissionDao->getEditorSubmission($articleId);
-		$sectionEditor =& $userDao->getUser($sectionEditorId);
+		$sectionEditor =& $userDao->getById($sectionEditorId);
 		if (!isset($sectionEditor)) return true;
 
 		import('classes.mail.ArticleMailTemplate');

@@ -573,7 +573,7 @@ class Article extends Submission {
 			return $returner;
 		}
 
-		$user =& $userDao->getUser($signoff->getUserId());
+		$user =& $userDao->getById($signoff->getUserId());
 		return $user;
 	}
 

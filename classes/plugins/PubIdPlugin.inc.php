@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file classes/plugins/PidPlugin.inc.php
+ * @file classes/plugins/PubIdPlugin.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PidPlugin
+ * @class PubIdPlugin
  * @ingroup plugins
  *
  * @brief Abstract class for public identifiers plugins

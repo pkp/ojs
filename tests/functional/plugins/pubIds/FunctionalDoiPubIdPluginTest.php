@@ -37,8 +37,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		return array(
 			'journal_settings', 'plugin_settings', 'issues', 'issue_settings',
 			'published_articles', 'articles', 'article_settings',
-			'article_galleys', 'article_galley_settings',
-			'article_supplementary_files', 'article_supp_file_settings'
+			'article_files', 'article_galleys', 'article_galley_settings',
+			'article_supplementary_files', 'article_supp_file_settings',
+			'event_log', 'event_log_settings', 'notifications', 'sessions'
 		);
 	}
 
@@ -677,10 +678,10 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		parent::onNotSuccessfulTest($e);
 	}
 
-	/*
-	 * Private helper methods
-	 */
 
+	//
+	// Private helper methods
+	//
 	/**
 	 * Return the url of the given page with the article ID
 	 * correctly inserted.
@@ -699,10 +700,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * Open the settings page
 	 */
 	private function openSettingsPage() {
-		$this->verifyLocation('exact:'.$this->getUrl('settings'));
-		if (!$this->verified()) {
-			$this->open($this->getUrl('settings'));
-		}
+		$this->verifyAndOpen($this->getUrl('settings'));
 	}
 
 	/**
@@ -832,10 +830,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 */
 	private function checkDoiDisplay($objectType, $expectedDoi) {
 		$url = $this->getUrl($objectType, 1);
-		$this->verifyLocation('exact:'.$url);
-		if (!$this->verified()) {
-			$this->open($url);
-		}
+		$this->verifyAndOpen($url);
 		try {
 			if ($expectedDoi === false) {
 				$visibleElement = $this->pages[$objectType]['visible'];
@@ -890,11 +885,8 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		try {
 			$objectType = strtolower_codesafe($objectType);
 			$metadataPage = "metadata-$objectType";
-			$url = $this->getUrl($metadataPage, 1);
-			$this->verifyLocation('exact:'.$url);
-			if (!$this->verified()) {
-				$this->open($url);
-			}
+			$url = $this->getUrl($metadataPage, $objectId);
+			$this->verifyAndOpen($url);
 			if ($editable) {
 				$this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
 			} else {

@@ -193,7 +193,11 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getRecordJoinClause()
 	 */
 	function getRecordJoinClause($articleId = null, $setIds = array(), $set = null) {
-		list($journalId, $sectionId) = $setIds;
+		if (isset($setIds[1])) {
+			list($journalId, $sectionId) = $setIds;
+		} else {
+			list($journalId) = $setIds;
+		}
 		return 'LEFT JOIN published_articles pa ON (m.i=0' . (isset($articleId) ? ' AND pa.article_id = ?' : '') . ')
 			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') . (isset($sectionId) ? ' AND a.section_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)

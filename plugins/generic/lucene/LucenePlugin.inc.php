@@ -177,6 +177,7 @@ class LucenePlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$this->import('classes.form.LuceneSettingsForm');
 				$form = new LuceneSettingsForm($this);
 				if (Request::getUserVar('save')) {
