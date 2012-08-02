@@ -36,7 +36,7 @@ class QuickSubmitForm extends Form {
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.emailRequired', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
-
+        $this->addCheck(new FormValidatorCustom($this, 'fileType', 'required', 'plugins.importexport.quickSubmit.pdfRequired', create_function('$fileType', 'return $fileType == \'pdf\';')));
 	}
 
 	/**

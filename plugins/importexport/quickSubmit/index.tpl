@@ -175,9 +175,9 @@ function updateAbstractRequired() {
 		<tr>
 			<td width="30%" class="label">
 				{if $submissionFile}
-					{fieldLabel name="submissionFile" key="author.submit.replaceSubmissionFile"}
+					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFile"}
 				{else}
-					{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}
+					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFile"}
 				{/if}
 			</td>
 			<td width="70%" class="value">
