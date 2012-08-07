@@ -143,6 +143,12 @@
           // Concatenate all meta-data.
           var fieldName = 'suppFiles_' + locale;
           appendToDocField(context, fieldName, value);
+
+	      // Add full text to spellchecker dictionary.
+	      appendToDocField(context, 'default_spell', value);
+	
+	      // Add full text to the "all" field.
+	      appendToDocField(context, 'all_' + locale, value);
         }
 
         row.remove(valueList);
