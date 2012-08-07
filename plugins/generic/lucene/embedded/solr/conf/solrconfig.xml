@@ -95,21 +95,20 @@
   <requestHandler name="/search" class="solr.StandardRequestHandler" default="true">
     <lst name="invariants">
       <str name="echoParams">explicit</str>
-      <str name="defType">lucene</str>
       <str name="fl">article_id,journal_id,inst_id,score</str>
-
-      <str name="hl">off</str>
       <str name="hl.fl">galleyFullText_*</str>
-
-      <str name="facet">on</str>
       <str name="facet.limit">10</str>
       <str name="facet.range">publicationDate_dt</str>
       <str name="facet.range.start">NOW/YEAR-50YEARS</str>
       <str name="facet.range.end">NOW</str>
       <str name="facet.range.gap">+1YEAR</str>
       <str name="facet.range.other">all</str>
-
-      <str name="spellcheck">on</str>
+    </lst>
+    <lst name="defaults">
+      <str name="defType">lucene</str>
+      <str name="facet">off</str>
+      <str name="hl">off</str>
+      <str name="spellcheck">off</str>
     </lst>
     <arr name="last-components">
       <str>spellcheck</str>
