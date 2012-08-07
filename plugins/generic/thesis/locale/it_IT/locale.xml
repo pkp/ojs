@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/it_IT/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -10,7 +10,6 @@
   * Thesis abstracts plugin localization strings for the it_IT locale.
   * Contributed by AePIC Team CILEA.
   *
-  * $Id: locale.xml,v 1.11 2009/08/14 18:41:22 jmacgreg Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">
@@ -81,7 +80,7 @@
 
 	<!-- Thesis Abstracts -->
 	<message key="plugins.generic.thesis.theses">Tesi</message>
-	<message key="plugins.generic.thesis.headerLink"><![CDATA[Tesi]]></message>
+	<message key="plugins.generic.thesis.headerLink">Tesi</message>
 	<message key="plugins.generic.thesis.submit">Invia un abstract</message>
 	<message key="plugins.generic.thesis.submitLink">Invia un abstract</message>
 	<message key="plugins.generic.thesis.submitButton">Invia</message>
@@ -89,7 +88,7 @@
 	<message key="plugins.generic.thesis.viewTitle">Abstract</message>
 	<message key="plugins.generic.thesis.noneExist">Nessun abstract di tesi</message>
 	<message key="plugins.generic.thesis.abstract">Abstract</message>
-	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
 	<message key="plugins.generic.thesis.form.introduction">Dopo la compilazione del seguente modulo, al supervisore della tesi verrà chiesto di verificare l'accuratezza delle informazioni fornite. Dopo tale verifica l'abstract verrà pubblicato.</message>
 	<message key="plugins.generic.thesis.form.status">Stato</message>
 	<message key="plugins.generic.thesis.form.statusValid">Inserire uno stato valido.</message>

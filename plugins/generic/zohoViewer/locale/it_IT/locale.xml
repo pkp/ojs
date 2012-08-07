@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  *
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.zohoViewer.name">Plugin per il visualizzatore Zoho</message>
+	<message key="plugins.generic.zohoViewer.description"><![CDATA[Questo plugin utilizza il <a href='https://vewer.zoho.com'>Visualizzatore Zoho </a> per incorporare il PDF nella pagina di ciascun articolo.]]></message>
+</locale>

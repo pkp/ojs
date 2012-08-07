@@ -16,7 +16,7 @@
 	<message key="editor.article.reviewForms">Moduli di revisione</message>
 	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
 	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
-	<message key="editor.article.confirmChangeReviewForm">Modifcare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
+	<message key="editor.article.confirmChangeReviewForm">Modificare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
 	<message key="editor.home">Cruscotto dell'editor</message>
 	<message key="editor.submissionsAndPublishing">Proposte e pubblicazioni</message>
 	<message key="editor.submissionQueue">Coda delle proposte</message>
@@ -60,7 +60,6 @@
 	<message key="editor.issues.accessStatus">Tipo di accesso</message>
 	<message key="editor.issues.accessDate">Data di fine embargo</message>
 	<message key="editor.issues.invalidAccessDate">Data di accesso non valida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Identificativo pubblico del fascicolo già esistente.</message>
 	<message key="editor.issues.coverPage">Immagine di copertina</message>
 	<message key="editor.issues.coverPageInstructions">(formati validi: .gif, .jpg, o .png )</message>
 	<message key="editor.issues.uploaded">File</message>
@@ -209,4 +208,5 @@
 	<message key="editor.notifyUsers.allAuthors">Tutti gli autori ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tutti gli abbonati persona ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tutti gli abbonati enti ({$count} utenti)</message>
+	<message key="editor.reassign">Riassegna</message>
 </locale>

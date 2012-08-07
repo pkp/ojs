@@ -9,7 +9,6 @@
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id: manager.xml,v 1.6 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name = "Italiano">
@@ -42,7 +41,7 @@
 	<message key="manager.payment.details">Dettagli</message>
 	<message key="manager.payment.editSubscription">Modifica l'abbonamento</message>
 	<message key="manager.payment.enable">Abilita</message>
-	<message key="manager.payment.feePaymentOptions">Opzioni di pagamento della quota</message>
+	<message key="manager.payment.feePaymentOptions">Opzioni per quote e tariffe</message>
 	<message key="manager.payment.form.numeric">Tutti i costi devono essere valori numerici positivi (sono permessi i decimali)</message>
 	<message key="manager.payment.generalFees">Quote generali</message>
 	<message key="manager.payment.generalFeesDescription">La quota associativa comparirà nella pagina delle informazioni sulla rivista (sotto (Politiche) e il link alle donazioni apparirà nel menu laterale.</message>
@@ -82,7 +81,7 @@
 	<message key="manager.people.emailUsers.selectTemplate">Seleziona un modello</message>
 	<message key="manager.people.enrollExistingUser">Iscrivi un utente esistente</message>
 	<message key="manager.people.enrollSyncJournal">Con la rivista</message>
-	<message key="manager.people.mergeUsers.from.description">Seleziona un l'account di un utente per fonderlo con un altro. L'account che hai selezionato per primo verrà cancellato e ogni submission o qualsiasi altra attività in corso e ruolo attivo verranno attribuiti all'account che sceglierai poi.</message>
+	<message key="manager.people.mergeUsers.from.description">Seleziona l'account di un utente per fonderlo con un altro. L'account che hai selezionato per primo verrà cancellato e ogni submission o qualsiasi altra attività in corso e ruolo attivo verranno attribuiti all'account che sceglierai poi.</message>
 	<message key="manager.people.mergeUsers.into.description">Seleziona un utente a cui attribuire le attività in corso per il precedente utente.</message>
 	<message key="manager.people.roleEnrollment">{$role} Iscrizione</message>
 	<message key="manager.people.syncUserDescription">La sincronizzazione iscriverà tutti gli utenti inseriti nel ruolo e nella rivista specificati, all'interno dello stesso ruolo in questa rivista. Questa funzione permette a un insieme comune di utenti  (es. revisori) di essere sincronizzati tra due o più riviste.</message>
@@ -204,8 +203,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.disciplineExamples">(Es. Storia; Pedagogia; Sociologia; Psicologia; Antropologia; Giurisprudenza)</message>
 	<message key="manager.setup.disciplineProvideExamples">Fornisci esempi di discipline accademiche rilevanti per questa rivista</message>
 	<message key="manager.setup.displayCurrentIssue">Mostra il sommario del fascicolo corrente (se disponibile).</message>
-	<message key="manager.setup.doiPrefix">Prefisso DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Il prefisso DOI (Digital Object Identifier) viene assegnato da <a href="http://www.medra.org/it/index.htm" target="_new">mEDRA</a> ed &#x00E8; in formato 10.xxxx (e.g. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisione dell'editor</message>
 	<message key="manager.setup.editorialMembers">Vai ai membri del consiglio ed aggiungi uno o più membri al consiglio editoriale o a quello di review. Questo può essere fatto in qualsiasi momento del ciclo di vita della rivista.</message>
 	<message key="manager.setup.editorialProcess1">Uno o più editor gestiranno le fasi principali, senza bisogno di nessun ruolo definito.</message>
@@ -370,7 +367,9 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.reviewerDatabaseLink">Banca dati di revisori potenziali</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Aggiungi alla pagina Seleziona il revisore un link a una banca dati rilevante di letteratura che può essere consultata dai potenziali revisori e che sia aperta ai curatori senza il pagamento di abbonamenti.</message>
 	<message key="manager.setup.reviewGuidelines"></message>
-	<message key="manager.setup.reviewGuidelinesDescription">Linee guida per la revisione delle proposte forniscono ai revisori i criteri per giudicare la qualità di una submission e la relativa possibilità di pubblicazione all'interno della rivista, così come qualsiasi tipo informazioni particolare per preparare una review valida ed efficiente.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Linee guida per la revisione delle proposte forniscono ai revisori i criteri per giudicare la qualità di una proposta e la relativa possibilità di pubblicazione all'interno della rivista, così come qualsiasi tipo informazioni particolare per preparare una revisione valida e utile.
+
+Al momento di concludere una revisione, ai revisori vengono presentate due box, la prima "per l'autore e per l'editor" e la seconda solamente "per l'editor". In alternativa, l'amministratore della rivista può creare <a href="{$reviewFormsUrl}" class="action">moduli per la peer review</a>. In ogni caso, gli editor potranno includere i commenti dei revisoti nella corrispondenza con gli autori.]]></message>
 	<message key="manager.setup.reviewOptions">Opzioni di revisione</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Le email automatiche di sollecito (disponibili nelle email di default di OJS) possono essere inviate ai revisori in due punti (mentre l'editor puù sempre inviare email direttamente al revisore)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Nota:</strong> Per attivare queste opzioni, l'amministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. COnfigurazioni aggiuntive del server possono essere richieste per supportare questa funzione (che potrebbe non essere possibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
@@ -415,8 +414,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.subjectExamples">(Es., Fotosintesi; Buchi neri; Teorie bayesiane; Semiotica)</message>
 	<message key="manager.setup.subjectKeywordTopic">Parole chiave</message>
 	<message key="manager.setup.subjectProvideExamples">Fornisci degli esempi di parole chiave o argomenti come guida per gli autori</message>
-	<message key="manager.setup.submissionEmailLogging">Mantieni un log di tutte le email relative a una submission nella sua pagina dello storico.</message>
-	<message key="manager.setup.submissionEventLogging">Mantieni un log di tutte le azioni eseguite su una submmission nella sua pagina dello storico.</message>
 	<message key="manager.setup.submissionGuidelines">Linee guida per l'invio di una proposta</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checklist per la preparazione dell'invio di una proposta</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Nell'effettuare una submission alla rivista gli autori dovrebbero prima controllare le varie voci della Checklist prima di procedere oltre. Questa checklist è presente nelle Linee guida per gli autori, nella sezione About. Questa lista può essere modificata qui di seguito, ma tutte le voci della lista dovranno essere spuntate dall'autore per proseguire con la submission.</message>
@@ -563,10 +560,10 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionTypes.duration">Durata</message>
 	<message key="manager.subscriptionTypes.edit">Modifica il tipo di abbonamento</message>
 	<message key="manager.subscriptionTypes.editTitle">Modifica</message>
-	<message key="manager.subscriptionTypes.form.cost">Prezzo</message>
-	<message key="manager.subscriptionTypes.form.costInstructions">Inserisci una cifra numerica (es. 40 o 40.00). Non inserire nessun carattere non numerico, come ad esempio "€".</message>
-	<message key="manager.subscriptionTypes.form.costNumeric">Il prezzo deve essere un numero intero positivo.</message>
-	<message key="manager.subscriptionTypes.form.costRequired">Inserire il prezzo.</message>
+	<message key="manager.subscriptionTypes.form.cost">Costo</message>
+	<message key="manager.subscriptionTypes.form.costInstructions">Inserisci un numero (es. 40 o 40.00). Non inserire nessun carattere non numerico, come ad esempio "€".</message>
+	<message key="manager.subscriptionTypes.form.costNumeric">Il costo dell'abbonamento deve essere un numero intero positivo.</message>
+	<message key="manager.subscriptionTypes.form.costRequired">Inserire il costo.</message>
 	<message key="manager.subscriptionTypes.form.currency">Valuta</message>
 	<message key="manager.subscriptionTypes.form.currencyRequired">Inserire  la valuta.</message>
 	<message key="manager.subscriptionTypes.form.currencyValid">Inserire una valuta valida.</message>
@@ -582,8 +579,8 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Utilizzare le caselle di selezione presenti.</message>
 	<message key="manager.subscriptionTypes.form.membership">Gli abbonati devono essere membri di un'associazione o di un'organizzazione.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Utilizzare le caselle di selezione presenti.</message>
-	<message key="manager.subscriptionTypes.form.public">Questo tipo di sottoscrizione non sarà visible pubblicamente nella pagina degli abbonamenti.</message>
-	<message key="manager.subscriptionTypes.form.publicValid">Si prega di usare la checkbox.</message>
+	<message key="manager.subscriptionTypes.form.public">Questo tipo di abbonamento non sarà visibile nella pagina degli abbonamenti.</message>
+	<message key="manager.subscriptionTypes.form.publicValid">Usare la checkbox.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Salva e crea un altro.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Nome</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Un tipo di abbonamento con questo nome è già presente.</message>
@@ -620,9 +617,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.sections.wordCount">Conteggio delle parole</message>
 	<message key="manager.sections.wordCountInstructions">Limita la lunghezza degli abstract per gli articoli di questa sezione (0 per illimitate)</message>
 	<message key="manager.setup.history">Storia del periodico</message>
-	<message key="manager.setup.doiSuffix">Suffisso DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Utilizza il pattern di default (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.form.doiPrefixPattern">Il prefisso DOI deve essere nel formato 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Favicon della rivista</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Notifiche di pagamenti manuali</message>
 	<message key="manager.subscriptions.renew">Rinnova</message>
@@ -662,9 +656,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptions.selectUser">Seleziona un utente</message>
 	<message key="manager.subscriptions.contact">Nome del contatto</message>
 	<message key="manager.subscriptions.institutionName">Nome dell'ente</message>
-	<message key="manager.setup.doiSuffixPattern.example">Per esempio,  vol%viss%ipp%p crea un DOI analogo a 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription"><![CDATA[Un suffisso DOI pu&#242; assumere qualsiasi forma, ma deve essere univoco nel sistema.]]></message>
-	<message key="manager.setup.doiSuffixPublisherId">Usa gli "Identificatori personalizzati" per oggetti pubblicati come suffissi DOI (deve essere abilitato al punto 4 del Setup).</message>
 	<message key="manager.setup.journalFaviconDescription">Aggiungi una favicon alla rivista, da mostrare sulla barra degli indirizzi degli utenti che visitano il sito.</message>
 	<message key="manager.setup.publisherNoteDescription">Questo testo apparirà sotto l'intestazione "Editore" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
 	<message key="manager.setup.sponsorNoteDescription">Questo testo apparirà sotto l'intestazione "Sponsor" e sopra il nome/URL dell'editore, nel sttore "Sponsorship" della pagina "Informazioni sulla rivista".</message>
@@ -675,18 +666,25 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>N.B. </strong>Gli abbonamenti istituzionali acquistati online richiedono l'approvazione del dominio/IP da parte del responsabile degli abbonamenti.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>N.B. </strong>Per abilitare queste opzioni, l'amministratore della rivista deve abilitare il modulo dei pagamenti online, che comprende i pagamenti per gli abbonamenti, sotto Tariffe di lettura.]]></message>
 	<message key="manager.subscriptions.form.typeRequired">Bisogna creare un tipo di abbonamento prima di poter creare nuovi abbonamenti.</message>
-	<message key="manager.setup.doiSuffixPattern">Utilizza il pattern inserito sotto per generare i suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %a per l'ID di un articolo in OJS e %p per il numero di pagina.</message>
 	<message key="manager.subscriptions.selectContact">Seleziona il contatto per gli abbonamenti</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Le informazioni sul copyright inserite sotto compariranno tra le informazioni della rivista e nei metadati di ciascun articolo pubblicato. Sebbene una rivista sia libera di determinare forma e sostanza del copyright agreement con i suoi autori, il Public Knowledge Project suggerisce l'uso di una licenza <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> license. A tal fine, fornisce <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">un esempio</a> che puo essere copiato e incollato nello spazio qui sotto per le riviste che (a) offrono open access, (b) offrono delayed open access, or (c) non offrono open access.]]></message>
 	<message key="manager.setup.contributorNoteDescription"><![CDATA[Questo testo comparir&#224; sotto l'intestazione "Fonti di finanziamento"  e sopra la lista di nomi e URL delle organizzazioni che supportano la rivista, nella sezione "sponsorship" nella pagina "Informazioni sulla rivista".]]></message>
 	<message key="manager.setup.historyDescription"><![CDATA[Questo testo compare nella pagina delle informazioni sulla rivista e pu&#242; essere utilizzato per descrivere cambiamenti nel titolo, nel comitato editoriale, o altri cambiamenti rilevanti nella storia del periodico.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Messaggi automatici di notifica possono essere inviati al Gestore degli abbonamenti al completamento di pagamenti per abbonamenti online.</message>
 	<message key="manager.language.submissions">Proposte</message>
-	<message key="manager.setup.doiReassign">Riassegna i DOI</message>
 	<message key="manager.plugins.versionFileInvalid">Il file version.xml nella directory del plugin contiene dati non validi.</message>
-	<message key="manager.setup.doiReassign.description">Se modifichi la configurazione dei DOI, i DOI che sono già stati assegnati non verranno modificati. Una volta salvata la nuova configurazione, usa questo bottone per cancellare tutti i DOI esistenti, in maniera tale che le nuove impostazioni abbiano effetto anche su quelli già pubblicati.</message>
 	<message key="manager.plugins.invalidPluginArchive">Il file del plugin caricato non contiene una cartella che corrisponde al nome del plugin.</message>
 	<message key="manager.plugins.tarCommandNotFound">Il comando tar non è disponibile. Configuralo in "config.inc.php".</message>
 	<message key="manager.reviewFormElements.included">Incluso nel messaggio all'autore</message>
 	<message key="manager.groups.publishEmails">Pubblica l'indirizzo email dei membri</message>
+	<message key="manager.setup.journalThumbnail">Anteprima della rivista</message>
+	<message key="manager.setup.useThumbnail">Anteprima</message>
+	<message key="manager.setup.categories">Categorie</message>
+	<message key="manager.payment.options.purchaseIssueFee">Acquista il fascicolo</message>
+	<message key="manager.plugins.settings">Impostazioni</message>
+	<message key="manager.sections.alertDelete">Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene.</message>
+	<message key="manager.setup.subjectClassificationURLValid">Inserisci una URL valida (includi http://).</message>
+	<message key="manager.payment.giftFees">Tariffe per i regali</message>
+	<message key="manager.payment.giftFeesDescription">Un link ad abbonamenti-dono apparirà nella pagina degli abbonamenti e come componente del blocco abbonamenti nella barra laterale</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Attivare i pagamenti per abbonamenti-dono, permettendo ai lettori della rivista di acquistare abbonamenti-dono per altri lettori.</message>
 </locale>

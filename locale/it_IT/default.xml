@@ -160,4 +160,5 @@ Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre
 	<message key="default.journalSettings.membershipFee">Iscrizione</message>
 	<message key="default.journalSettings.donationFee">Donazioni alla rivista</message>
 	<message key="section.default.policy"></message>
+	<message key="default.journalSettings.purchaseIssueFee">Acquista il fascicolo</message>
 </locale>

@@ -10,7 +10,6 @@
   * Localization strings for the it_IT (Italian) locale.
   * Contributed by Andrea Marchitelli.
   *
-  * $Id: locale.xml,v 1.46 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name="Italian">
@@ -110,9 +109,6 @@
 	<message key="article.submissions">Proposte</message>
 	<message key="article.abstract">Abstract</message>
 	<message key="article.details">Dettagli</message>
-	<message key="article.identifiers">Identificatori</message>
-	<message key="article.nbn">NBN</message>
-
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Lavorazione della proposta</message>
 	<message key="submission.changeSection">Cambia</message>
@@ -204,12 +200,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Livello</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Avviso</message>
-	<message key="submission.event.logLevel.warning">Avvertimento</message>
-	<message key="submission.event.logLevel.error">Errore</message>
-
 	<message key="submission.event.general.defaultEvent">Evento di Submission</message>
 	<message key="submission.event.general.articleSubmitted">Articolo Inviato</message>
 	<message key="submission.event.general.issueScheduled">Contributo inserito nella programmazione del fascicolo corrente</message>
@@ -255,7 +245,7 @@
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Commenti su questo articolo</message>
-	<message key="comments.authenticated">{$userName}</message>
+	<message key="comments.authenticated"><![CDATA[da <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
 
@@ -275,9 +265,6 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Utilizzate questa form per modificare le configurazioni del vostro sistema (il file <tt>config.inc.php</tt>). Fate click su "Salva" per memorizzare la nuova configurazione, o "Visualizza" per mostrare la versione aggiornata della configurazione, senza effettuare nessuna modifica.
-	<br /><br />
-<span class="formError">Avvertimento: la modifica di queste impostazioni pu&#x00F2; potenzialmente rendere il sistema inaccessibile (con la conseguenza di dover sistemare manualmente il file di configurazione). Si consiglia fortemente di non effettuare nessuna modifica a meno che non sappiate esattamente quello che state facendo.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTA!</div>
 <p>Il sistema non &#x00E8; riuscito a sovrascrivere il file di configurazione. Per effettuare delle modifiche &#x00E8; necessario aprire il file <tt>config.inc.php</tt> con un editor di testo e sostituirne il contenuto con il testo della form sottostante.</p>]]></message>
 
@@ -403,7 +390,7 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="sectionEditor.noneAssigned">Nessuna submission assegnata.</message>
 	<message key="sectionEditor.copyedit.confirmRenotify">Un'altra notifica a questo copyeditor farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.author.confirmRenotify">Un'altra notifica a questo autore farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
-	<message key="sectionEditor.layout.confirmRenotify">Un'altra notifica a questo editor di layout farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
+	<message key="sectionEditor.layout.confirmRenotify">Un'altra notifica a questo editor di layout farà ricominciare da capo l'incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Un'altra notifica a questo correttore di bozze farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Ripensamenti</message>
@@ -684,48 +671,44 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Installazione di OJS</message>
 	<message key="installer.ojsUpgrade">Aggiornamento OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<p>Grazie per utilizzare <strong>Open Journal Systems {$version}</strong> del Public Knowledge Project. Prima di proseguire, leggete il file di <a href="{$baseUrl}/docs/README">README</a> incluso con il software. Per maggiore informazioni sul Public Knowledge Project ed i suoi progetti, visitate il <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. Per segnalazioni di bug o domande al supporto tecnico su Open Journal Systems scrivete a <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, oppure visitate il servizio online di <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">segnalazione bug</a>.</p>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versione {$version}</h4>
 
-<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> file incluso con il programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare <a href="http://pkp.sfu.ca/" target="_blank">il sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Grazie per aver scaricato <strong>Open Journal Systems</strong> del Public Knowledge Project. Prima di procedere, leggi il file <a href="{$baseUrl}/docs/README">README</a> incluso in questo software. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti software, visita il <a href="http://pkp.sfu.ca/" target="_blank">sito web del PKP</a>. Se hai trovato un bug o hai richieste tecniche su Open Journal Systems, utilizza il <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum</a> o visita il <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a> del PKP. Sebbene il forum sia il metodo preferito di contatto, puoi anche inviare una mail al team PKP a<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
-<h4>Aggiornamento</h4>
+<h4>Upgrade</h4>
 
-<p>Se sta aggiornando una installazione esistente di OJS 2.x, <a href="{$upgradeUrl}">clicca qui</a> per procedere.</p>
+<p>Se stai aggiornando una istallazione preesistente di OJS 2.x, <a href="{$upgradeUrl}">clicca qui</a> per procedere.</p>
 
-<h4>Requisiti di sistema raccomandati</h4>
+<h4>Requisiti di sistema suggeriti</h4>
 
 <ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (incluso PHP 5.x)</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluso MySQL 4.x) o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
-	<li>Sistemi operativi: qualsiasi sistema operativo che supporti i software necessari, tra cui <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluso PHP 5.x); versione PHP attualmente in uso: {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluso MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluso PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x o Microsoft IIS 6</li>
+	<li>Sistema operativo: Qualsiasi sistema operativo che supporti i software indicati sopra, compresi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
-<p>Dal momento che PKP non dispone delle risorse necessarie per verificare tutte le possibili combinazioni di programmi e sistemi operativi, non vengono date garanzie di funzionamento o supporto.</p>
+<p>PKP non ha le risorse per testare qualsiasi combinazione possibile di versioni di software e piattaforme,, quindi non vengono fornite garanzie di corretto funzionamento o di supporto.</p>
 
-<p>Eventuali modifiche a queste impostazioni possono essere effettuate dopo l'installazione, tramite il file <tt>config.inc.php</tt> nella directory di base di OJS, oppure utilizzando l'interfaccia web di amministrazione del sito.</p>
+<p>Possono essere apportati cambiamenti a queste impostazioni modificando il  file <tt>config.inc.php</tt> nella directory base di OJS, o usando l'interfaccia di amministrazione del sito.</p>
 
 <h4>Database supportati</h4>
 
-<p>OJS &#x00E8; stato testato con MySQL e PostgreSQL, anche se altri database management systems supportati da <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> potrebbero funzionare (totalmente o parzialmente). Al team di sviluppo di OJS possono essere inviati sia rapporti di compatibilit&#x00E0; sia patch di codice riguardanti eventuali DBMS alternativi.</p>
+<p>OJS è stato testato solo su MySQL e PostgreSQL, sebbene altri DBMS supportati da <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> possano, almeno in parte, funzionare. Report di compatibilità e/o patch per DBMS alternativi possono essere inviate al team OJS.</p>
 
-<h4>Fase pre-installazione</h4>
+<h4>Passaggi pre-installazione</h4>
 
-<p>1. I seguenti file e directories (e i loro contenuti) devono essere impostate a scrivibili:</p>
+<p>1. I seguenti file e directory (e il loro contenuto) devono essere scrivibili:</p>
 <ul>
-	<li><tt>config.inc.php</tt> &#x00E8; scrivibile (opzionale): {$writable_config}</li>
-	<li><tt>public/</tt> &#x00E8; scrivibile: {$writable_public}</li>
-	<li><tt>cache/</tt> &#x00E8; scrivibile: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> &#x00E8; scrivibile: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> &#x00E8; scrivibile: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> &#x00E8; scrivibile: {$writable_db_cache}</li>
+	<li><tt>config.inc.php</tt> è scrivibile (optional): {$writable_config}</li>
+	<li><tt>public/</tt> è scrivibile: {$writable_public}</li>
+	<li><tt>cache/</tt> è scrivibile: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> è scrivibile: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> è scrivibile: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> è scrivibile: {$writable_db_cache}</li>
 </ul>
 
-<p>2. Deve essere creata una directory per memorizzare i file caricati  e impostata scrivibile (vedi "Configurazioni dei file" sotto).</p>
-
-<h4>Installazione manuale</h4>
-
-<p>Selezionate <strong>Installazione Manuale</strong> per visualizzare le istruzioni SQL necessarie per creare la struttura del database di OJS e i dati iniziali, in modo che l'installazione del database possa essere effettuata manualmente. Questa opzione &#x00E8; utile per il debug relativo ai problemi d'installazione, in particolare per le piattaforme non supportate. Da notare che questa opzione non crea n&#x00E9; il database n&#x00E9; le relative tabelle, sebbene nel file di configurazione verranno scritte le impostazioni del database fornite.</p>]]></message>
+<p>2. Deve essere creata e resa scrivibile una directory per contenere i file caricati (v. Impostazioni del file sotto).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versione {$version}</h4>
 
 <p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> e <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
@@ -740,8 +723,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Attenzione:</strong> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>Il programma d'installazione non &#x00E8; riuscito a sovrascrivere il file di configurazione. Prima di utilizzare OJS, apite il file <tt>config.inc.php</tt> con un editor di testo e sostituitene il contenuto con quello del campo sottostante..</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Installazione manuale</h4>
-<p>Le istruzioni SQL per la creazione dello schema del database di OJS e dei dati iniziali sono visualizzati di seguito. OJS non potr&#x00E0; essere utilizzato fino a quando queste istruzioni non saranno eseguite manualmente. Sar&#x00E0; anche necessario configurare manualmente il file <tt>config.inc.php</tt> configuration file.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>L'installazione di OJS &#x00E8; stata completata con successo.</p>
 <p>Per utilizzare OJS effettuate il <a href="{$loginUrl}">login</a> utilizzando lo username e la password inseriti nella pagina precedente.</p>
 <p>Se desideri ricevere news e aggiornamenti, <strong>si prega di registrarsi a <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Se hai domande o commenti, si prega di visitare <a href="http://pkp.sfu.ca/support/forum" target="_new">il forum di supporto</a>.</p>]]></message>
@@ -912,12 +893,11 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.publication.publicationPaid">Quota di pubblicazione pagata</message>
 	<message key="payment.subscription.renew">Rinnova l'abbonamento</message>
 	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a una banca dati SQL permemorizzare i suoi dat. Vedi i requisiti di sistema sopra per un elenco delle banche dati supportate. Nei campi sotto, fornisci le impostazioni per connetterti alla banca dati.</message>
-	<message key="log.editor.decision">Una decisione del curatore ({$decision}) per l'articolo {$articleId} è stata registrata da {$articleId}</message>
+	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$articleId} è stata registrata da {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e loggati per inviare, con possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti possono non registrarsi per inviare, con possibilità di anonimato.</message>
-	<message key="rt.metadata.pkp.doi">Identificatore dell'oggetto digitale</message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Per abilitare i lettori a localizzare versioni online del lavoro citato da un autore, sono disponibili le seguenti opzioni.</p>
 
 <ol>
@@ -992,9 +972,9 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="subscriptions.inactive">Inattivo</message>
 	<message key="subscriptions.status">Status</message>
 	<message key="subscriptions.status.active">Attivo</message>
-	<message key="subscriptions.status.needsInformation">Informazioni necessarie</message>
-	<message key="subscriptions.status.needsApproval">Approvazione necessarie</message>
-	<message key="subscriptions.status.awaitingManualPayment">In attesa di pagamento manuale</message>
+	<message key="subscriptions.status.needsInformation">Informazioni mancanti</message>
+	<message key="subscriptions.status.needsApproval">Da approvare</message>
+	<message key="subscriptions.status.awaitingManualPayment">In attesa di pagamento offline</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">In attesa di pagamento online</message>
 	<message key="subscriptions.status.other">Altro, vedi le note</message>
 	<message key="subscriptions.individualDescription">L'abbonamento individuale richiede una login per accedere ai contenuti riservati.</message>
@@ -1052,25 +1032,25 @@ Titolo dello schema di classificazione]]></message>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Le linee guida per la revisione indicano ai revisori i criteri per giudicare una submission e possono includere ulteriori istruzioni per la redazione di una revisione efficace e utile. Nel condurre la revisione, ai revisono vengono presentate due box per l'inserimento di testi liberi, il primo "per l'autore e per l'editor", il secondo "per l'editor". In alternativa, l'amministratore &#242; creare un modulo per la revisione. In ogni caso, gli editor avranno la possibilit&#224; di includere le revisioni nella corrispondenza con gli autori.]]></message>
 	<message key="notification.mailListDescription"><![CDATA[Inserisci il tuo indirizzo email per ricevere notifiche delle novit&#224; della rivista.]]></message>
-	<message key="notification.type.articleSubmitted"><![CDATA[&#200; stato proposto un nuovo articolo, "{$param}"]]></message>
-	<message key="notification.type.copyeditComment">Un copyeditor ha lasciato un commento su  "{$param}".</message>
+	<message key="notification.type.articleSubmitted"><![CDATA[&#200; stato proposto un nuovo articolo, "{$title}"]]></message>
+	<message key="notification.type.copyeditComment">Un copyeditor ha lasciato un commento su  "{$title}".</message>
 	<message key="notification.type.editing">Eventi modificati</message>
-	<message key="notification.type.editorDecisionComment"><![CDATA[La decisione dell'editor su  "{$param}" &#232; stata commentata.]]></message>
-	<message key="notification.type.galleyModified"><![CDATA[La gabbia di "{$param}" &#232; stata modificata.]]></message>
+	<message key="notification.type.editorDecisionComment"><![CDATA[La decisione dell'editor su  "{$title}" &#232; stata commentata.]]></message>
+	<message key="notification.type.galleyModified"><![CDATA[La gabbia di "{$title}" &#232; stata modificata.]]></message>
 	<message key="notification.type.issuePublished"><![CDATA[&#200; stato pubblicato un nuovo fascicolo.]]></message>
-	<message key="notification.type.layoutComment"><![CDATA[&#200; stato commentato il layout di "{$param}".]]></message>
-	<message key="notification.type.metadataModified">I metadati di "{$param}" sono stati modificati</message>
+	<message key="notification.type.layoutComment"><![CDATA[&#200; stato commentato il layout di "{$title}".]]></message>
+	<message key="notification.type.metadataModified">I metadati di "{$title}" sono stati modificati.</message>
 	<message key="notification.type.newAnnouncement"><![CDATA[&#200; stato pubblicato un nuovo avviso.]]></message>
-	<message key="notification.type.proofreadComment">Il correttore di bozze ha commentato "{$param}".</message>
-	<message key="notification.type.reviewerComment">Un revisore ha commentato "{$param}".</message>
-	<message key="notification.type.reviewerFormComment"><![CDATA[&#200; stato completato un modulo di revisione per "{$param}".]]></message>
+	<message key="notification.type.proofreadComment">Il correttore di bozze ha commentato "{$title}".</message>
+	<message key="notification.type.reviewerComment">Un revisore ha commentato "{$title}".</message>
+	<message key="notification.type.reviewerFormComment"><![CDATA[&#200; stato completato un modulo di revisione per "{$title}"]]></message>
 	<message key="notification.type.site">Eventi del sito</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Questa pagina mostra aggiornamenti importanti alla rivista, come avvisi o nuovi fascicoli. Puoi ricevere queste notifiche anche attraverso feed RSS (cliccando sulle immagini a destra o <a href="{$emailUrl}">viaemail.</a>]]></message>
 	<message key="notification.type.reviewing">Eventi legati alle revisioni</message>
-	<message key="notification.type.submissionComment">Un editor ha commentato  "{$param}".</message>
+	<message key="notification.type.submissionComment">Un editor ha commentato  "{$title}".</message>
 	<message key="notification.type.submissions">Eventi legati alle submission</message>
-	<message key="notification.type.suppFileModified"><![CDATA[&#200; stato modificato un file supplementare di  "{$param}".]]></message>
-	<message key="notification.type.userComment">Un lettore ha commentato  "{$param}".</message>
+	<message key="notification.type.suppFileModified"><![CDATA[&#200; stato modificato un file supplementare di  "{$title}".]]></message>
+	<message key="notification.type.userComment">Un lettore ha commentato  "{$title}"</message>
 	<message key="user.subscriptions.subscriptionStatus">Stato dell'abbonamento</message>
 	<message key="user.subscriptions.status">Stato</message>
 	<message key="user.subscriptions.statusDescription">Descrizione</message>
@@ -1088,5 +1068,51 @@ Titolo dello schema di classificazione]]></message>
 	<message key="user.authorization.sectionAssignment">Stai cercando di accedere a un articolo che non appartiene alla tua sezione.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Invio del copyeditor non valido o nessun invio richiesto!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Invio del section editor non valido o nessun invio richiesto!</message>
+	<message key="navigation.categories">Categorie</message>
+	<message key="navigation.categories.browse">Naviga</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Gli elementi evidenziati richiedono un intervento dell'editor, di questo tenore:
+		<ul>]]></message>
+	<message key="issue.fullIssue">Fascicolo completo</message>
+	<message key="issue.nonpdf.title">Scarica fascicolo</message>
+	<message key="issue.viewIssue">Vedi il fascicolo</message>
+	<message key="issue.viewIssueDescription">Vedi o scarica l'intero fascicolo</message>
+	<message key="site.noJournals">Non ci sono riviste disponibili.</message>
+	<message key="gifts.buyer">Da</message>
+	<message key="gifts.buyerDescription">Chi fa il regalo?</message>
+	<message key="gifts.recipient">A</message>
+	<message key="gifts.recipientDescription">Per chi è il regalo?</message>
+	<message key="gifts.thankYou">Grazie</message>
+	<message key="gifts.thankYouMessage">Hai completato la procedura d'acquisto del regalo. Riceverai una copia del messaggio di posta inviato al destinatario quando verrà effettuato il pagamento.</message>
+	<message key="gifts.gift">Regalo</message>
+	<message key="gifts.noteTitle">Titolo</message>
+	<message key="gifts.noteTitleRequired">Inserisci un titolo per il messaggio personalizzato.</message>
+	<message key="gifts.noteRequired">Inserisci un messaggio personalizzato.</message>
+	<message key="gifts.localeRequired">Scegli la lingua del messaggio personalizzato.</message>
+	<message key="gifts.myGifts">I miei regali</message>
+	<message key="gifts.manageMyGifts">Gestisci i regali</message>
+	<message key="gifts.status.notRedeemed">Disponibile</message>
+	<message key="payment.type.gift">Regalo</message>
+	<message key="plugins.categories.pubIds">Plugin degli identificatori pubblici</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">regala un abbonamento</message>
+	<message key="plugins.categories.pubIds.description">Questi plugin permettono la gestione di identificatori pubblici</message>
+	<message key="gifts.details">Dettagli del regalo</message>
+	<message key="gifts.note">Note sul regalo</message>
+	<message key="gifts.redeemGift">Riscatta il regalo</message>
+	<message key="gifts.status.redeemed">Riscattato</message>
+	<message key="gifts.status.redeemGift">Riscatta il regalo</message>
+	<message key="gifts.subscriptions">Abbonamenti</message>
+	<message key="gifts.purchaseGiftSubscription">Regala un abbonamento</message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Il tuo server attualmente consente il caricamento di file di grandezza massima di: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="gifts.detailsDescription">Seleziona il regalo qui sotto e aggiungi un messaggio personalizzato che verrà inviato per email al destinatario (riceverai copia del messaggio).</message>
+	<message key="gifts.noSubscriptions">Nessun abbonamento regalo</message>
+	<message key="gifts.giftRedeemed">Il regalo è stato riscattato con successo.</message>
+	<message key="gifts.noGiftToRedeem">Questo regalo non è riscattabile.</message>
+	<message key="gifts.giftAlreadyRedeemed">Questo regalo è stato già riscattato.</message>
+	<message key="gifts.giftNotValid">Questo regalo non è valido e non può essere riscattato.</message>
+	<message key="gifts.subscriptionFormIntroduction">Compila il modulo sottostante. Le informazioni di contatto fornite, insieme alle altre note sul dono, verranno usate per contattare il destinatario e informarlo dell'abbonamento dono (riceverai anche tu copia di questa email).</message>
+	<message key="gifts.subscriptionsDescription">Un abbonamento-dono riscattato qui sostituirà il tuo abbonamento esistente (se ne hai già uno). L'abbonamento inizierà alla data di riscatto e sarà valido per la durata prevista da quel tipo di abbonamento</message>
+	<message key="gifts.giftSubscriptionsAvailable">Disponibile un abbonamento-dono. I doni possono essere riscossi in qualsiasi momento dal destinatario e sono un ottimo modo di sostenere la rivista.</message>
 </locale>
 

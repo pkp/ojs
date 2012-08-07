@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  *
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.reports.subscriptions.displayName">Report degli abbonamenti</message>
+	<message key="plugins.reports.subscriptions.description">Questo plugin crea un report CSV contenente la lista degli abbonamenti e le relative informazioni</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Indirizzo email dell'istituzione</message>
+	<message key="plugins.reports.subscriptions.ipRanges">Range di IP</message>
+</locale>

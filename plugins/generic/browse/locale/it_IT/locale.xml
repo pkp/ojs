@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/browse/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings for the it_IT locale.
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Naviga</message>
+	<message key="plugins.generic.browse.description">Questo plugin consente la navigazione per sezioni</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Impostazioni</message>
+	<message key="plugins.generic.browse.manager.settings.description">Seleziona tra le seguenti possibilità aggiuntive di navigazione:</message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Impostazioni di navigazione</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Navigazione</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Scegli gli oggetti attraverso i quali sarà possibile navigare</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Per sezione</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Per tipo</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Sezioni escluse</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Scegli le sezioni da escludere.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Tipi esclusi</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Scegli i tipi da escludere</message>
+
+	<message key="plugins.generic.browse.search.sections">Per sezioni</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Naviga l'indice della sezione</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Dettagli della sezione</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Per tipo</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Naviga l'indice per tipo</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Dettagli del tipo</message>
+
+</locale>
