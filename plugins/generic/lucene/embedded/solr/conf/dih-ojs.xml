@@ -85,18 +85,17 @@
           // Index search fields.
           if (searchFields.indexOf(locFields[i]) >= 0) {
             row.put(locFields[i] + '_' + locale, value);
+            // Build concatenated fields (spelling, "all" and "index terms").
+            appendToDocField(context, 'default_spell', value);
+            appendToDocField(context, 'all_' + locale, value);
+            if (indexTermFields.indexOf(locFields[i]) >= 0) {
+              appendToDocField(context, 'indexTerms_' + locale, value);
+            }
           }
 
           // Index sort fields.
           if (sortFields.indexOf(locFields[i]) >= 0) {
             row.put(locFields[i] + '_' + locale + '_txtsort', value);
-          }
-
-          // Build concatenated fields (spelling, "all" and "index terms").
-          appendToDocField(context, 'default_spell', value);
-          appendToDocField(context, 'all_' + locale, value);
-          if (indexTermFields.indexOf(locFields[i]) >= 0) {
-            appendToDocField(context, 'indexTerms_' + locale, value);
           }
         }
 
