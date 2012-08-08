@@ -58,6 +58,6 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">article</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">galley</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplementary file</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
 </locale>
