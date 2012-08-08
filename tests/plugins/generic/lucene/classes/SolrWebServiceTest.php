@@ -402,6 +402,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$article->setCoverageSample('Alles', 'de_DE');
 		$article->setCoverageSample('everything', 'en_US');
 		$article->setDatePublished('2012-03-15 16:45:00');
+		$article->setLocale('de_DE');
 		return $article;
 	}
 
@@ -412,13 +413,39 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _getTestJournal() {
 		// Generate a test journal.
-		$journal = $this->getMock('Journal', array('getTitle'));
+		$journal = $this->getMock('Journal', array('getSetting'));
 		$journal->setId('2');
 		$journal->setPath('lucene-test');
+		$journal->setData(
+			'supportedLocales',
+			array(
+				'en_US' => 'English',
+				'de_DE' => 'German',
+				'fr_FR' => 'French'
+			)
+		);
 		$journal->expects($this->any())
-		        ->method('getTitle')
-		        ->will($this->returnValue(array('de_DE' => 'Zeitschrift', 'en_US' => 'Journal')));
+		        ->method('getSetting')
+		        ->will($this->returnCallback(array($this, 'journalGetSettingCallback')));
 		return $journal;
+	}
+
+	/**
+	 * A callback mocking the Journal::getSetting() method.
+	 * @param $name string
+	 * @param $locale string
+	 * @return string
+	 */
+	public function &journalGetSettingCallback($name, $locale) {
+		$titleValues = array(
+			'de_DE' => 'Zeitschrift',
+			'en_US' => 'Journal'
+		);
+		if ($name == 'title' && isset($titleValues[$locale])) {
+			return $titleValues[$locale];
+		}
+		$nullVar = null;
+		return $nullVar;
 	}
 }
 ?>

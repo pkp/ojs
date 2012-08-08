@@ -806,16 +806,34 @@ class SolrWebService extends XmlWebService {
 			XMLCustomWriter::appendChild($articleNode, $authorList);
 		}
 
+		// We need the request to retrieve locales and build URLs.
+		$request =& PKPApplication::getRequest();
+
+		// Get all supported locales.
+		$site =& $request->getSite();
+		$supportedLocales = $site->getSupportedLocales() + array_keys($journal->getSupportedLocaleNames());
+		assert(!empty($supportedLocales));
+
 		// Add titles.
-		$titles = $article->getTitle(null); // return all locales
-		if (!empty($titles)) {
-			$titleList =& XMLCustomWriter::createElement($articleDoc, 'titleList');
-			foreach ($titles as $locale => $title) {
-				$titleNode =& XMLCustomWriter::createChildWithText($articleDoc, $titleList, 'title', $title);
+		$titleList =& XMLCustomWriter::createElement($articleDoc, 'titleList');
+		// Titles are used for sorting, we therefore need
+		// them in all supported locales.
+		assert(!empty($supportedLocales));
+		foreach($supportedLocales as $locale) {
+			$localizedTitle = $article->getLocalizedTitle($locale);
+			if (!is_null($localizedTitle)) {
+				// Add the localized title.
+				$titleNode =& XMLCustomWriter::createChildWithText($articleDoc, $titleList, 'title', $localizedTitle);
 				XMLCustomWriter::setAttribute($titleNode, 'locale', $locale);
+
+				// If the title does not exist in the given locale
+				// then use the localized title for sorting only.
+				$title = $article->getTitle($locale);
+				$sortOnly = (empty($title) ? 'true' : 'false');
+				XMLCustomWriter::setAttribute($titleNode, 'sortOnly', $sortOnly);
 			}
-			XMLCustomWriter::appendChild($articleNode, $titleList);
 		}
+		XMLCustomWriter::appendChild($articleNode, $titleList);
 
 		// Add abstracts.
 		$abstracts = $article->getAbstract(null); // return all locales
@@ -899,15 +917,24 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add journal titles.
-		$journalTitles = $journal->getTitle(null); // return all locales
-		if (!empty($journalTitles)) {
-			$journalTitleList =& XMLCustomWriter::createElement($articleDoc, 'journalTitleList');
-			foreach ($journalTitles as $locale => $journalTitle) {
-				$journalTitleNode =& XMLCustomWriter::createChildWithText($articleDoc, $journalTitleList, 'journalTitle', $journalTitle);
+		$journalTitleList =& XMLCustomWriter::createElement($articleDoc, 'journalTitleList');
+		// Journal titles are used for sorting, we therefore need
+		// them in all supported locales.
+		foreach($supportedLocales as $locale) {
+			$localizedTitle = $journal->getLocalizedTitle($locale);
+			if (!is_null($localizedTitle)) {
+				// Add the localized title.
+				$journalTitleNode =& XMLCustomWriter::createChildWithText($articleDoc, $journalTitleList, 'journalTitle', $localizedTitle);
 				XMLCustomWriter::setAttribute($journalTitleNode, 'locale', $locale);
+
+				// If the title does not exist in the given locale
+				// then use the localized title for sorting only.
+				$journalTitle = $journal->getTitle($locale);
+				$sortOnly = (empty($journalTitle) ? 'true' : 'false');
+				XMLCustomWriter::setAttribute($journalTitleNode, 'sortOnly', $sortOnly);
 			}
-			XMLCustomWriter::appendChild($articleNode, $journalTitleList);
 		}
+		XMLCustomWriter::appendChild($articleNode, $journalTitleList);
 
 		// Add publication dates.
 		$publicationDate = $article->getDatePublished();
@@ -931,8 +958,7 @@ class SolrWebService extends XmlWebService {
 			}
 		}
 
-		// We need the request and router to build file URLs.
-		$request =& PKPApplication::getRequest();
+		// We need the router to build file URLs.
 		$router =& $request->getRouter(); /* @var $router PageRouter */
 
 		// Add galley files

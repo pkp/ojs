@@ -37,7 +37,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 		// The test installation contains at least
 		// two journals with articles that contain
 		// the word "test" in their title.
-		$this->simpleSearchAcrossJournals('test');
+		$this->simpleSearchAcrossJournals('test NOT ranking');
 
 		// Make sure that the search result contains articles
 		// from both test journals.

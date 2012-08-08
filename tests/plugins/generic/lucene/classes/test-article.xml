@@ -6,8 +6,9 @@
       <author>Name, Second M.</author>
     </authorList>
     <titleList>
-      <title locale="de_DE">Deutscher Titel</title>
-      <title locale="en_US">English Title</title>
+      <title locale="de_DE" sortOnly="false">Deutscher Titel</title>
+      <title locale="en_US" sortOnly="false">English Title</title>
+      <title locale="fr_FR" sortOnly="true">Deutscher Titel</title>
     </titleList>
     <abstractList>
       <abstract locale="de_DE">Deutsche Zusammenfassung</abstract>
@@ -32,8 +33,9 @@
       <coverage locale="en_US">Summer 2012 everything</coverage>
     </coverageList>
     <journalTitleList>
-      <journalTitle locale="de_DE">Zeitschrift</journalTitle>
-      <journalTitle locale="en_US">Journal</journalTitle>
+      <journalTitle locale="de_DE" sortOnly="false">Zeitschrift</journalTitle>
+      <journalTitle locale="en_US" sortOnly="false">Journal</journalTitle>
+      <journalTitle locale="fr_FR" sortOnly="true">Journal</journalTitle>
     </journalTitleList>
     <publicationDate>2012-03-15T19:45:00Z</publicationDate>
     <issuePublicationDate>2012-03-15T18:30:00Z</issuePublicationDate>

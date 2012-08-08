@@ -72,35 +72,54 @@
       var sortFields = ['title', 'journalTitle'];
 
       for (var i=0, len=locFields.length; i<len; i++) {
-        var valueList = 'etl_' + locFields[i] + 'List';
-        var localeList = 'etl_' + locFields[i] + 'List_locales';
+        var fieldName = locFields[i];
 
+        // Get the value list.
+        var valueList = 'etl_' + fieldName + 'List';
         var values = row.get(valueList);
         if (values == null) continue;
+        row.remove(valueList);
+
+        // Get the locale list.
+        var localeList = 'etl_' + fieldName + 'List_locales';
         var locales = row.get(localeList);
-        for(var j=0, locs=values.size(); j<locs; j++) {
+        row.remove(localeList);
+
+        // Some values may be for sorting only.
+        var sortOnlyFlags = null;
+        var sortOnlyList = 'etl_' + fieldName + 'List_sortOnly';
+        if (row.containsKey(sortOnlyList)) {
+          sortOnlyFlags = row.get(sortOnlyList);
+          row.remove(sortOnlyList);
+        } 
+
+        // Run through all values.
+        for(var j=0, numValues=values.size(); j<numValues; j++) {
           var locale = String(locales.get(j));
           var value = String(values.get(j));
 
+          // Is this value for sorting only?
+          var sortOnly = 'false';
+          if (sortOnlyFlags !== null) {
+            sortOnly = String(sortOnlyFlags.get(j))
+          }
+
           // Index search fields.
-          if (searchFields.indexOf(locFields[i]) >= 0) {
-            row.put(locFields[i] + '_' + locale, value);
+          if (searchFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
+            row.put(fieldName + '_' + locale, value);
             // Build concatenated fields (spelling, "all" and "index terms").
             appendToDocField(context, 'default_spell', value);
             appendToDocField(context, 'all_' + locale, value);
-            if (indexTermFields.indexOf(locFields[i]) >= 0) {
+            if (indexTermFields.indexOf(fieldName) >= 0) {
               appendToDocField(context, 'indexTerms_' + locale, value);
             }
           }
 
           // Index sort fields.
-          if (sortFields.indexOf(locFields[i]) >= 0) {
-            row.put(locFields[i] + '_' + locale + '_txtsort', value);
+          if (sortFields.indexOf(fieldName) >= 0) {
+            row.put(fieldName + '_' + locale + '_txtsort', value);
           }
         }
-
-        row.remove(valueList);
-        row.remove(localeList);
       }
 
       // Prepare the galley XML.
@@ -129,19 +148,19 @@
 
       // Run through all supp file fields and concatenate them.
       for (var i=0, len=locFields.length; i<len; i++) {
-        var valueList = 'etl_file_' + locFields[i] + 'List';
-        var localeList = 'etl_file_' + locFields[i] + 'List_locales';
+        var fieldName = locFields[i];
+        var valueList = 'etl_file_' + fieldName + 'List';
+        var localeList = 'etl_file_' + fieldName + 'List_locales';
 
         var values = row.get(valueList);
         if (values == null) continue;
         var locales = row.get(localeList);
-        for(var j=0, locs=values.size(); j<locs; j++) {
+        for(var j=0, numValues=values.size(); j<numValues; j++) {
           var locale = String(locales.get(j));
           var value = String(values.get(j));
 
           // Concatenate all meta-data.
-          var fieldName = 'suppFiles_' + locale;
-          appendToDocField(context, fieldName, value);
+          appendToDocField(context, 'suppFiles_' + locale, value);
 
 	      // Add full text to spellchecker dictionary.
 	      appendToDocField(context, 'default_spell', value);
@@ -325,6 +344,7 @@
       <!-- Titles -->
       <field column="etl_titleList" xpath="/articleList/article/titleList/title" multiValued="true" />
       <field column="etl_titleList_locales" xpath="/articleList/article/titleList/title/@locale" multiValued="true" />
+      <field column="etl_titleList_sortOnly" xpath="/articleList/article/titleList/title/@sortOnly" multiValued="true" />
 
       <!-- Abstracts -->
       <field column="etl_abstractList" xpath="/articleList/article/abstractList/abstract" multiValued="true" stripHTML="true" />
@@ -349,6 +369,7 @@
       <!-- Journal Titles -->
       <field column="etl_journalTitleList" xpath="/articleList/article/journalTitleList/journalTitle" multiValued="true" />
       <field column="etl_journalTitleList_locales" xpath="/articleList/article/journalTitleList/journalTitle/@locale" multiValued="true" />
+      <field column="etl_journalTitleList_sortOnly" xpath="/articleList/article/journalTitleList/journalTitle/@sortOnly" multiValued="true" />
 
       <!-- Article Publication Date -->
       <field column="publicationDate_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
