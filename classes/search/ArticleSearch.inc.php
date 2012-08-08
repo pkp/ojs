@@ -281,6 +281,9 @@ class ArticleSearch {
 					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
 
+				// Only display articles from published issues.
+				if (!$issueCache[$issueId]->getPublished()) continue;
+
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
 					'article' => &$article,
