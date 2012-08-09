@@ -975,7 +975,9 @@ class IssueManagementHandler extends EditorHandler {
 		$email = new MassMail('PUBLISH_NOTIFY');
 
 		if ($request->getUserVar('send') && !$email->hasErrors()) {
-			$email->addRecipient($user->getEmail(), $user->getFullName());
+			if($request->getUserVar('ccSelf')) {
+				$email->addRecipient($user->getEmail(), $user->getFullName());
+			}
 
 			switch ($request->getUserVar('whichUsers')) {
 				case 'allIndividualSubscribers':
@@ -1083,7 +1085,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if (!isset($journal)) Validation::redirectLogin();
 
-		if ($issueId !== null) {
+		if (!empty($issueId)) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 
