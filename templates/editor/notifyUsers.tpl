@@ -79,7 +79,7 @@
 {/if}{* publishingMode is PUBLISHING_MODE_SUBSCRIPTION *}
 {if $senderEmail}
 	<tr valign="top">
-		<td><input type="checkbox" name="bccSender" value="1"{if $bccSender} checked{/if}/></td>
+		<td><input type="checkbox" name="ccSelf" /></td>
 		<td class="label">
 			{translate key="email.bccSender" address=$senderEmail|escape}
 		</td>

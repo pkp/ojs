@@ -719,7 +719,9 @@ class IssueManagementHandler extends EditorHandler {
 		$email = new MassMail('PUBLISH_NOTIFY');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
-			$email->addRecipient($user->getEmail(), $user->getFullName());
+			if(Request::getUserVar('ccSelf')) {
+				$email->addRecipient($user->getEmail(), $user->getFullName());
+			}
 
 			switch (Request::getUserVar('whichUsers')) {
 				case 'allIndividualSubscribers':
