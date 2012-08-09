@@ -159,8 +159,13 @@ class PayPalPlugin extends PaymethodPlugin {
 
 		// Just in case we need to contact someone
 		import('classes.mail.MailTemplate');
-		$contactName = $journal->getSetting('contactName');
-		$contactEmail = $journal->getSetting('contactEmail');
+		// Prefer technical support contact
+		$contactName = $journal->getSetting('supportName');
+		$contactEmail = $journal->getSetting('supportEmail');
+		if (!$contactEmail) { // Fall back on primary contact
+			$contactName = $journal->getSetting('contactName');
+			$contactEmail = $journal->getSetting('contactEmail');
+		}
 		$mail = new MailTemplate('PAYPAL_INVESTIGATE_PAYMENT');
 		$mail->setFrom($contactEmail, $contactName);
 		$mail->addRecipient($contactEmail, $contactName);
