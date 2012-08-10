@@ -203,6 +203,95 @@ class SectionEditorHandler extends Handler {
 			Request::redirect(null, null, 'index');
 		}
 	}
+
+	//
+	// Validation
+	//
+
+	/**
+	 * Validate that the user is the assigned section editor for
+	 * the article, or is a managing editor.
+	 * Redirects to sectionEditor index page if validation fails.
+	 * @param $articleId int Optional article ID to validate, or null for none
+	 * @param $access int Optional name of access level required -- see SECTION_EDITOR_ACCESS_... constants
+	 */
+	function validate($articleId = null, $access = null) {
+		parent::validate();
+		$isValid = true;
+
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+
+		if ($articleId !== null) {
+			$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+			if ($sectionEditorSubmission == null) {
+				$isValid = false;
+
+			} else if ($sectionEditorSubmission->getJournalId() != $journal->getId()) {
+				$isValid = false;
+
+			} else if ($sectionEditorSubmission->getDateSubmitted() == null) {
+				$isValid = false;
+
+			} else {
+				$templateMgr =& TemplateManager::getManager();
+
+				if (Validation::isEditor()) {
+					// Make canReview and canEdit available to templates.
+					// Since this user is an editor, both are available.
+					$templateMgr->assign('canReview', true);
+					$templateMgr->assign('canEdit', true);
+				} else {
+					// If this user isn't the submission's editor, they don't have access.
+					$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+					$wasFound = false;
+					foreach ($editAssignments as $editAssignment) {
+						if ($editAssignment->getEditorId() == $user->getId()) {
+							$templateMgr->assign('canReview', $editAssignment->getCanReview());
+							$templateMgr->assign('canEdit', $editAssignment->getCanEdit());
+							switch ($access) {
+								case SECTION_EDITOR_ACCESS_EDIT:
+									if ($editAssignment->getCanEdit()) {
+										$wasFound = true;
+									}
+									break;
+								case SECTION_EDITOR_ACCESS_REVIEW:
+									if ($editAssignment->getCanReview()) {
+										$wasFound = true;
+									}
+									break;
+
+								default:
+									$wasFound = true;
+							}
+							break;
+						}
+					}
+
+					if (!$wasFound) $isValid = false;
+				}
+			}
+
+			if (!$isValid) {
+				return Request::redirect(null, Request::getRequestedPage());
+			}
+
+			// If necessary, note the current date and time as the "underway" date/time
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+			foreach ($editAssignments as $editAssignment) {
+				if ($editAssignment->getEditorId() == $user->getId() && $editAssignment->getDateUnderway() === null) {
+					$editAssignment->setDateUnderway(Core::getCurrentDate());
+					$editAssignmentDao->updateEditAssignment($editAssignment);
+				}
+			}
+
+			$this->submission =& $sectionEditorSubmission;
+			return true;
+		}
+	}
 }
 
 ?>

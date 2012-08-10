@@ -47,9 +47,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function submission($args, &$request) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = (int) array_shift($args);
 		$this->validate($articleId);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
 		// FIXME? For comments.readerComments under Status and
@@ -58,7 +58,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->setupTemplate(true, $articleId);
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
@@ -135,7 +135,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function submissionRegrets($args, &$request) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = (int) array_shift($args);
 		$this->validate($articleId);
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
@@ -177,7 +177,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
 	}
 
-	function submissionReview($args) {
+	/**
+	 * View the submission review page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function submissionReview($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$journal =& Request::getJournal();
@@ -339,9 +344,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * View submission history
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function submissionHistory($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+	function submissionHistory($args, &$request) {
+		$articleId = (int) array_shift($args);
 		$this->validate($articleId);
 		$this->setupTemplate(true, $articleId);
 
@@ -393,16 +400,21 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
 	}
 
-	function changeSection() {
-		$articleId = Request::getUserVar('articleId');
+	/**
+	 * Change an article's section.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function changeSection($args, &$request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$submission =& $this->submission;
 
-		$sectionId = Request::getUserVar('sectionId');
+		$sectionId = $request->getUserVar('sectionId');
 
 		SectionEditorAction::changeSection($submission, $sectionId);
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 	/**
@@ -433,7 +445,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	// Peer Review
 	//
 
-	function selectReviewer($args, $request) {
+	/**
+	 * Select a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function selectReviewer($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$reviewerId = (int) array_shift($args);
 
@@ -476,7 +493,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$rangeInfo =& Handler::getRangeInfo('reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection); /* @var $reviewers DAOResultFactory */
 
-			$journal = Request::getJournal();
+			$journal = $request->getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
 			$templateMgr =& TemplateManager::getManager();
@@ -511,6 +528,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * Create a new user as a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function createReviewer($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
@@ -526,7 +545,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if ($createReviewerForm->validate()) {
 				// Create a user and enroll them as a reviewer.
 				$newUserId = $createReviewerForm->execute();
-				Request::redirect(null, null, 'selectReviewer', array($articleId, $newUserId));
+				$request->redirect(null, null, 'selectReviewer', array($articleId, $newUserId));
 			} else {
 				$createReviewerForm->display($args, $request);
 			}
@@ -539,26 +558,29 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 			$createReviewerForm->display($args, $request);
 		}
-
 	}
 
 	/**
 	 * Get a suggested username, making sure it's not
 	 * already used by the system. (Poor-man's AJAX.)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function suggestUsername() {
+	function suggestUsername($args, &$request) {
 		parent::validate();
 		$suggestion = Validation::suggestUsername(
-			Request::getUserVar('firstName'),
-			Request::getUserVar('lastName')
+			$request->getUserVar('firstName'),
+			$request->getUserVar('lastName')
 		);
 		echo $suggestion;
 	}
 
 	/**
 	 * Search for users to enroll as reviewers.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function enrollSearch($args) {
+	function enrollSearch($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.enrollment, manager.people.enroll
@@ -567,7 +589,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		$rangeInfo = Handler::getRangeInfo('users');
 		$templateMgr =& TemplateManager::getManager();
@@ -575,11 +597,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$searchType = null;
 		$searchMatch = null;
-		$search = $searchQuery = Request::getUserVar('search');
-		$searchInitial = Request::getUserVar('searchInitial');
+		$search = $searchQuery = $request->getUserVar('search');
+		$searchInitial = $request->getUserVar('searchInitial');
 		if (!empty($search)) {
-			$searchType = Request::getUserVar('searchField');
-			$searchMatch = Request::getUserVar('searchMatch');
+			$searchType = $request->getUserVar('searchField');
+			$searchMatch = $request->getUserVar('searchMatch');
 
 		} elseif (!empty($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
@@ -593,7 +615,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
-		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
+		$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(
@@ -611,17 +633,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
 	}
 
-	function enroll($args) {
+	/**
+	 * Enroll a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function enroll($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
-		$users = Request::getUserVar('users');
-		if (!is_array($users) && Request::getUserVar('userId') != null) $users = array(Request::getUserVar('userId'));
+		$users = $request->getUserVar('users');
+		if (!is_array($users) && $request->getUserVar('userId') != null) $users = array($request->getUserVar('userId'));
 
 		// Enroll reviewer
 		for ($i=0; $i<count($users); $i++) {
@@ -634,9 +661,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$roleDao->insertRole($role);
 			}
 		}
-		Request::redirect(null, null, 'selectReviewer', $articleId);
+		$request->redirect(null, null, 'selectReviewer', $articleId);
 	}
 
+	/**
+	 * Notify an assigned reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function notifyReviewer($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -652,6 +684,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
+	/**
+	 * Clear an assigned review.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function clearReview($args, $request) {
 		$articleId = (int) array_shift($args);
 		$reviewId = (int) array_shift($args);
@@ -663,6 +700,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
+	/**
+	 * Cancel a review.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function cancelReview($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -678,6 +720,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
+	/**
+	 * Remind a reviewer.
+	 * @param $args aray
+	 * @param $request PKPRequest
+	 */
 	function remindReviewer($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -705,21 +752,26 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 			$round = $submission->getCurrentRound();
 
-			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignment($articleId, $userId, $submission->getCurrentRound()); /* @var $reviewAssignment ReviewAssignment */
 			if($reviewAssignment && !$reviewAssignment->getDateCompleted() && $reviewAssignment->getDeclined()) {
-					$reviewAssignment->setDeclined(false);
-					$reviewAssignment->setDateAssigned(Core::getCurrentDate());
-					$reviewAssignment->setDateNotified(null);
-					$reviewAssignment->setDateConfirmed(null);
-					$reviewAssignment->setRound($submission->getCurrentRound());
+				$reviewAssignment->setDeclined(false);
+				$reviewAssignment->setDateAssigned(Core::getCurrentDate());
+				$reviewAssignment->setDateNotified(null);
+				$reviewAssignment->setDateConfirmed(null);
+				$reviewAssignment->setRound($submission->getCurrentRound());
 
-					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			}
 			$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function thankReviewer($args, $request) {
+	/**
+	 * Thank a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function thankReviewer($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
@@ -734,7 +786,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
-	function rateReviewer($args, $request) {
+	/**
+	 * Rate a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function rateReviewer($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$reviewId = (int) $request->getUserVar('reviewId');
 		$quality = (int) $request->getUserVar('quality');
@@ -747,7 +804,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function confirmReviewForReviewer($args, $request) {
+	/**
+	 * Confirm a review for a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function confirmReviewForReviewer($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$reviewId = (int) array_shift($args);
 
@@ -759,7 +821,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function uploadReviewForReviewer($args, $request) {
+	/**
+	 * Upload a review on behalf of a reviewer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function uploadReviewForReviewer($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
@@ -770,22 +837,32 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function makeReviewerFileViewable() {
-		$articleId = Request::getUserVar('articleId');
+	/**
+	 * Make a reviewer file viewable to the author.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function makeReviewerFileViewable($args, &$request) {
+		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
 
-		$reviewId = Request::getUserVar('reviewId');
-		$fileId = Request::getUserVar('fileId');
-		$revision = Request::getUserVar('revision');
-		$viewable = Request::getUserVar('viewable');
+		$reviewId = $request->getUserVar('reviewId');
+		$fileId = $request->getUserVar('fileId');
+		$revision = $request->getUserVar('revision');
+		$viewable = $request->getUserVar('viewable');
 
 		SectionEditorAction::makeReviewerFileViewable($articleId, $reviewId, $fileId, $revision, $viewable);
 
-		Request::redirect(null, null, 'submissionReview', $articleId);
+		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function setDueDate($args, $request) {
+	/**
+	 * Set the review due date.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function setDueDate($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$reviewId = (int) array_shift($args);
 
@@ -826,7 +903,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
-	function enterReviewerRecommendation($args, $request) {
+	/**
+	 * Enter a reviewer recommendation on behalf of a reviewer
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function enterReviewerRecommendation($args, &$request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
@@ -856,13 +938,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Display a user's profile.
 	 * @param $args array first parameter is the ID or username of the user to display
+	 * @param $request PKPRequest
 	 */
-	function userProfile($args) {
+	function userProfile($args, &$request) {
 		parent::validate();
 		$this->setupTemplate(true);
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('currentUrl', Request::url(null, Request::getRequestedPage()));
+		$templateMgr->assign('currentUrl', $request->url(null, $request->getRequestedPage()));
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;
@@ -881,8 +964,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('common/error.tpl');
 
 		} else {
-			$site =& Request::getSite();
-			$journal =& Request::getJournal();
+			$site =& $request->getSite();
+			$journal =& $request->getJournal();
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$country = null;
@@ -900,7 +983,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
-	function viewMetadata($args, $request) {
+	/**
+	 * View article metadata.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function viewMetadata($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 
@@ -912,6 +1000,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::viewMetadata($submission, $journal);
 	}
 
+	/**
+	 * Save modified metadata.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function saveMetadata($args, &$request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
@@ -926,6 +1019,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * Remove cover page from article
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function removeArticleCoverPage($args, &$request) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
@@ -978,8 +1073,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/**
 	 * Clear a review form, i.e. remove review form assignment to the review.
 	 * @param $args array ($articleId, $reviewId)
+	 * @param $request PKPRequest
 	 */
-	function clearReviewForm($args) {
+	function clearReviewForm($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$reviewId = isset($args[1]) ? (int) $args[1] : null;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -987,14 +1083,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		SectionEditorAction::clearReviewForm($submission, $reviewId);
 
-		Request::redirect(null, null, 'submissionReview', $articleId);
+		$request->redirect(null, null, 'submissionReview', $articleId);
 	}
 
 	/**
 	 * Select a review form
 	 * @param $args array ($articleId, $reviewId, $reviewFormId)
+	 * @param $request PKPRequest
 	 */
-	function selectReviewForm($args) {
+	function selectReviewForm($args, &$request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
@@ -1004,9 +1101,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($reviewFormId != null) {
 			SectionEditorAction::addReviewForm($submission, $reviewId, $reviewFormId);
-			Request::redirect(null, null, 'submissionReview', $articleId);
+			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
-			$journal =& Request::getJournal();
+			$journal =& $request->getJournal();
 			$rangeInfo =& Handler::getRangeInfo('reviewForms');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
@@ -2563,93 +2660,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submission', array($articleId));
 		}
 	}
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the assigned section editor for
-	 * the article, or is a managing editor.
-	 * Redirects to sectionEditor index page if validation fails.
-	 * @param $articleId int Article ID to validate
-	 * @param $access int Optional name of access level required -- see SECTION_EDITOR_ACCESS_... constants
-	 */
-	function validate($articleId, $access = null) {
-		parent::validate();
-		$isValid = true;
-
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
-
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
-		if ($sectionEditorSubmission == null) {
-			$isValid = false;
-
-		} else if ($sectionEditorSubmission->getJournalId() != $journal->getId()) {
-			$isValid = false;
-
-		} else if ($sectionEditorSubmission->getDateSubmitted() == null) {
-			$isValid = false;
-
-		} else {
-			$templateMgr =& TemplateManager::getManager();
-
-			if (Validation::isEditor()) {
-				// Make canReview and canEdit available to templates.
-				// Since this user is an editor, both are available.
-				$templateMgr->assign('canReview', true);
-				$templateMgr->assign('canEdit', true);
-			} else {
-				// If this user isn't the submission's editor, they don't have access.
-				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
-				$wasFound = false;
-				foreach ($editAssignments as $editAssignment) {
-					if ($editAssignment->getEditorId() == $user->getId()) {
-						$templateMgr->assign('canReview', $editAssignment->getCanReview());
-						$templateMgr->assign('canEdit', $editAssignment->getCanEdit());
-						switch ($access) {
-							case SECTION_EDITOR_ACCESS_EDIT:
-								if ($editAssignment->getCanEdit()) {
-									$wasFound = true;
-								}
-								break;
-							case SECTION_EDITOR_ACCESS_REVIEW:
-								if ($editAssignment->getCanReview()) {
-									$wasFound = true;
-								}
-								break;
-
-							default:
-								$wasFound = true;
-						}
-						break;
-					}
-				}
-
-				if (!$wasFound) $isValid = false;
-			}
-		}
-
-		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		// If necessary, note the current date and time as the "underway" date/time
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
-		foreach ($editAssignments as $editAssignment) {
-			if ($editAssignment->getEditorId() == $user->getId() && $editAssignment->getDateUnderway() === null) {
-				$editAssignment->setDateUnderway(Core::getCurrentDate());
-				$editAssignmentDao->updateEditAssignment($editAssignment);
-			}
-		}
-
-		$this->submission =& $sectionEditorSubmission;
-		return true;
-	}
-
 }
+
 ?>
