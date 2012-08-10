@@ -382,58 +382,6 @@ td.notificationFunction {
 	margin-top: 5%;
 }
 
-/* Font Sizer */
-
-.smallFont {
-	outline: none; /*for making it look nice in FF */
-	background: url(../lib/pkp/templates/images/icons/font-down.png);
-	text-indent: -9999px;
-	display: block;
-	float: left;
-	width: 20px;
-	height: 23px;
-	margin-right: 4px;
-	margin-left: 8px;
-}
-
-a.smallFont:hover {
-	background: url(../lib/pkp/templates/images/icons/font-down.png);
-	color: none;
-}
-
-.defaultFont {
-	/*if you want to hide the default font button, use display:none */
-	background: url(../lib/pkp/templates/images/icons/font-default.png);
-	text-indent: -9999px;
-	outline: none;
-	display: block;
-	float: left;
-	width: 20px;
-	height: 23px;
-	margin-right: 4px;
-
-}
-
-a.defaultFont:hover {
-	background: url(../lib/pkp/templates/images/icons/font-default.png);
-	color: none;
-}
-
-.largeFont {
-	background: url(../lib/pkp/templates/images/icons/font-up.png);
-	outline: none;
-	text-indent: -9999px;
-	display: block;
-	float: left;
-	width: 20px;
-	height: 23px;
-}
-
-a.largeFont:hover {
-	background: url(../lib/pkp/templates/images/icons/font-up.png);
-	color: none;
-}
-
 #journalListPageInfo {
 	float: right;
 }

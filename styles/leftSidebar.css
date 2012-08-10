@@ -41,7 +41,7 @@
 	overflow: hidden;
 }
 
-// Set main on non-IE browsers to have a 10% margin
+/* Set main on non-IE browsers to have a 10% margin */
 *html #main {
 	margin-right: 5%;
 } 
