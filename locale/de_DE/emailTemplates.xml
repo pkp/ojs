@@ -37,7 +37,7 @@ Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte
 		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen auf der Benachrichtigungs-Mailingliste gesendet.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Willkommen zu der  {$siteTitle}-Mailingliste!</subject>
+		<subject>Willkommen zu der {$siteTitle}-Mailingliste!</subject>
 		<body>Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.
 
 Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}
@@ -513,7 +513,7 @@ Mit bestem Dank für Ihre Bemühungen um meinen Beitrag,
 vielen Dank für die Durchsicht der Korrekturversion Ihres Manuskripts "{$articleTitle}" für {$journalName}. Wir freuen uns auf die Veröffentlichung dieses Beitrags.
 
 {$editorialContactSignature}</body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die  Autorin/den Autor einer Einreichung gesendet, um ihr/ihm zu bestätigen, dass das Korrekturlektorat durch die/den Autor/in abgeschlossen ist und um ihr/ihm für die Mitwirkung zu danken.</description>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um ihr/ihm zu bestätigen, dass das Korrekturlektorat durch die/den Autor/in abgeschlossen ist und um ihr/ihm für die Mitwirkung zu danken.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Bitte um letzte Durchsicht</subject>

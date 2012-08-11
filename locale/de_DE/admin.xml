@@ -41,7 +41,7 @@
 	<message key="admin.auth.enableCreateUsers">Die Einrichtung eines Benutzer/innen-Profils ermöglichen, falls diese Funktion durch dieses Programm (authentication plug-in) unterstützt wird. Benutzer/innen-Profile, die im OJS mit Hilfe dieser Authentifizierungsquelle eingerichtet werden, werden automatisch auch der Quelldatei hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Sollte diese Quelldatei die Standardauthentifizierungsquelle sein, werden auch die OJS-Konten, die bei der Registrierung von Benutzer/innen entstehen, der Authentifizierungsquelle hinzugefügt.</message>
 	<message key="admin.systemVersion">OJS-Version</message>
 	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei  <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
 	<message key="admin.journals.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>

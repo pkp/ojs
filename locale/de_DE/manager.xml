@@ -54,7 +54,7 @@
 	<message key="manager.payment.noPayments">Keine Zahlungen</message>
 	<message key="manager.payment.notFound">Nicht gefunden</message>
 	<message key="manager.payment.options">Optionen</message>
-	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden  Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Hier werden Zahlungen für Geschenkabonnements aktiviert, um Zeitschriftenleser/innen in die Lage zu versetzen, Geschenkabonnements für andere Leser/innen zu kaufen.</message>
 	<message key="manager.payment.options.donationFee">Spenden an die Zeitschrift</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
@@ -72,7 +72,7 @@
 	<message key="manager.payment.options.waiverPolicy">Richtlinien zum Verzicht auf Gebühren</message>
 	<message key="manager.payment.paymentId">Zahlungs-ID</message>
 	<message key="manager.payment.paymentMethod">Zahlungsmethode</message>
-	<message key="manager.payment.paymentMethod.description">Sie können hier jede der  aufgeführten Zahlungsmethoden konfigurieren.</message>
+	<message key="manager.payment.paymentMethod.description">Sie können hier jede der aufgeführten Zahlungsmethoden konfigurieren.</message>
 	<message key="manager.payment.paymentMethods">Zahlungsmethoden</message>
 	<message key="manager.payment.paymentType">Zahlungsart</message>
 	<message key="manager.payment.readerFees">Leser/innen-Gebühren</message>
@@ -114,7 +114,7 @@
 	<message key="manager.plugins.pleaseInstall">Plug-In nicht verfügbar. Bitte wählen Sie installieren</message>
 	<message key="manager.plugins.pleaseUpgrade">Das Plug-In existiert bereits, ist aber neuer als die installierte Version. Bitte wählen Sie Upgrade</message>
 	<message key="manager.plugins.settings">Einstellungen</message>
-	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer  "config.inc.php".</message>
+	<message key="manager.plugins.tarCommandNotFound">Der tar-Befehl ist nicht verfügbar. Bitte konfigurieren Sie ihn in Ihrer "config.inc.php".</message>
 	<message key="manager.plugins.upgrade">Upgrade Plug-In</message>
 	<message key="manager.plugins.upgradeDescription">Dieses Formular ermöglicht ein Upgrade für ein Plug-In. Bitte stellen Sie sicher, das das Plug-In als .tar.gz-Datei komprimiert ist.</message>
 	<message key="manager.plugins.upgradeFailed">Upgrade gescheitert</message>
@@ -213,7 +213,7 @@
 	<message key="manager.setup.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliografische und Formatstandards für die Autor/innen (z.B. <em>Publication Manual of the American Psychological Association</em>, 5. Auflage 2001). Beispiele der wichtigsten Zitationsstandards für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu infrage kommenden Zusatzdateien (z.B. Datensätze, Forschungsinstrumente, Grafiken usw.), die Autor/innen zu ihren Beiträgen hochladen sollten, wenn das Interesse der Leser/innen auf diese Weise gefördert wird.]]></message>
 	<message key="manager.setup.competingInterests">Interessenkonflikte</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich  bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Richtlinien für die Formulierung einer Erklärung zu Interessenkonflikten</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
@@ -294,7 +294,7 @@
 	<message key="manager.setup.guidelines">Richtlinien</message>
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
 	<message key="manager.setup.homepageImage">Startseitengrafik </message>
-	<message key="manager.setup.homepageImageDescription">Fügen Sie in die  Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
+	<message key="manager.setup.homepageImageDescription">Fügen Sie in die Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
 	<message key="manager.setup.includeCreativeCommons">Für Zeitschriften, die sofortigen oder verzögerten freien Zugang (Open Access) zu ihren Inhalten anbieten: Fügen Sie allen Beiträgen eine Creative-Commons-Lizenz zum entsprechenden Beitrag bei.</message>
 	<message key="manager.setup.information">Informationen</message>
 	<message key="manager.setup.information.description">Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter "Informationen" in der Seitenleiste.</message>
@@ -306,7 +306,7 @@
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen (einschließlich der elektronischen) zugeordnet ist. Die Verwaltung obliegt einem weltweiten Netzwerk nationaler Einrichtungen, das von einem internationalen Zentrum in Paris koordiniert und durch die UNESCO und die französische Regierung unterstützt wird. Eine Nummer erhalten Sie auf der <a href="http://www.issn.org" target="_new">ISSN-Website</a>. Sie kann jederzeit beantragt werden.]]></message>
 	<message key="manager.setup.issuePerVolume">Ausgaben pro Band</message>
-	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite  hinzugefügt werden</message>
+	<message key="manager.setup.itemsDescription">Es können jederzeit Einträge in die Navigationsleiste (Standard: "Startseite", "Über uns", "Benutzer/innen") am Kopf der Seite hinzugefügt werden</message>
 	<message key="manager.setup.itemsPerPage">Einträge pro Seite </message>
 	<message key="manager.setup.journalAbbreviation">Abkürzung des Zeitschriftennamens</message>
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
@@ -318,7 +318,7 @@
 	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Kopfzeile der Startseite der Zeitschrift</message>
-	<message key="manager.setup.journalHomepageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als  .gif-, .jpg- oder .png-Dateien) können für die Startseite hochgeladen werden (ansonsten erscheint eine Textversion).</message>
+	<message key="manager.setup.journalHomepageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien) können für die Startseite hochgeladen werden (ansonsten erscheint eine Textversion).</message>
 	<message key="manager.setup.journalHomepageHeader">Kopfzeile der Startseite </message>
 	<message key="manager.setup.journalInitials">Kürzel der Zeitschrift</message>
 	<message key="manager.setup.journalLayout">Zeitschriftenlayout</message>
@@ -328,7 +328,7 @@
 	<message key="manager.setup.journalPageFooter">Fußzeile der Zeitschrift </message>
 	<message key="manager.setup.journalPageFooterDescription">Dies ist der Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende Textfeld (z.B. einen weiteren Navigationbalken, einen Zähler usw. einfügen). Die Fußzeile erscheint auf allen Seiten der Zeitschrift.</message>
 	<message key="manager.setup.journalPageHeader">Kopfzeile der Seite</message>
-	<message key="manager.setup.journalPageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als  .gif-, .jpg- oder .png-Dateien - eventuell eine kleinere Version der Grafiken auf der Startseite) können als Kopfzeile auf die Seiten der Zeitschrift hochgeladen werden (sonst erscheint eine Textversion).</message>
+	<message key="manager.setup.journalPageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien - eventuell eine kleinere Version der Grafiken auf der Startseite) können als Kopfzeile auf die Seiten der Zeitschrift hochgeladen werden (sonst erscheint eine Textversion).</message>
 	<message key="manager.setup.journalPolicies">2. Schritt: Zeitschriftenrichtlinien und Publikationsprozess</message>
 	<message key="manager.setup.journalSetup">Einrichten der Zeitschrift</message>
 	<message key="manager.setup.journalSetupUpdated">Die Konfiguration Ihrer Zeitschrift wurde aktualisiert.</message>
@@ -454,7 +454,7 @@
 	<message key="manager.setup.showGalleyLinksDescription">Links auf die Fahne immer anzeigen und beschränkten Zugang kennzeichnen.</message>
 	<message key="manager.setup.siteAccess">Zusätzliche Beschränkungen des Zugriffs auf Seiten und Artikel</message>
 	<message key="manager.setup.sponsors">Finanzielle Unterstützung</message>
-	<message key="manager.setup.sponsorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Finanzielle Unterstützung" und über der Liste der Sponsor/innen-Namen und -URLs  unter "Unterstützung" auf der "Über uns"-Seite.</message>
+	<message key="manager.setup.sponsorNoteDescription">Dieser Text erscheint unterhalb der Überschrift "Finanzielle Unterstützung" und über der Liste der Sponsor/innen-Namen und -URLs unter "Unterstützung" auf der "Über uns"-Seite.</message>
 	<message key="manager.setup.sponsorsDescription">Die Namen derjenigen Organisationen (z.B. wissenschaftliche Vereinigungen, Fakultäten, Arbeitszusammenhänge usw.), die die Zeitschrift finanziell unterstützen, erscheinen unter "Über uns". Eine Danksagung kann beigefügt werden.</message>
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
 	<message key="manager.setup.subjectClassification">Schlagwortsystematik</message>
@@ -524,7 +524,7 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Die folgenden Richtlinien zu verzögertem Open Access erscheinen im "Über uns" unter "Zur Zeitschrift".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Bitte ankreuzen</message>
 	<message key="manager.subscriptionPolicies.expiry">Ende des Abonnements</message>
-	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten  verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>
+	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Volles Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
@@ -554,7 +554,7 @@
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Abonnementverwalter/innen per E-Mail über den Online-Erwerb von institutionellen Abonnements informieren (empfohlen).</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines individuellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines institutionellen Abonnements informieren.</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der  Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter iunter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open-Access-Optionen für Abonnement-Zeitschriften</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Zeitschriften mit Abonnement können "verzögerten Open Access" und/oder "Selbstarchivierung durch die/den Autor/in" anbieten und damit die Leser/innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, heraufsetzen.</message>
