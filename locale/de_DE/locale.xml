@@ -997,6 +997,9 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 <p>Bitte vergessen Sie nicht, die "installed"-Einstellung in Ihrer config.inc.php-Konfigurationsdatei wieder zurück auf <em>On</em> zu setzen.</p>
 <p>Wenn Sie sich noch nicht registriert haben und in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten, <strong>registrieren Sie sich bitte auf <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Wenn Sie Fragen oder Kommentare haben, besuchen Sie bitte das <a href="http://pkp.sfu.ca/support/forum" target="_new">Support-Forum</a>.</p>]]></message>
 
+	<!-- Warnungen zum Upgrade -->
+	<message key="site.upgradeAvailable.admin"><![CDATA[Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuelleste Version ist OJS {$latestVersion}. Bitte gehen Sie zu <a href="http://pkp.sfu.ca/ojs_download" target="_new">dieser Seite</a>, um die aktuelle Version herunterzuladen und um Informationen zum Upgrade einzusehen.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuellste Version ist OJS {$latestVersion}. Bitte benachrichtigen Sie Ihre/n Website-Administrator/in ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>), um sie/ihn über dieses neue Release zu informieren. Mehr Informationen können <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a> gefunden werden.]]></message>
 
 	<!-- Protokolle - Beiträge -->
 	<message key="log.author.submitted">{$authorName} hat einen neuen Beitrag eingereicht, ID {$submissionId}.</message>
