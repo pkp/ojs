@@ -477,9 +477,28 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<!-- Mitteilungsverwaltung -->
 
 	<!-- Redaktion -->
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Hervorgehobene Einträge verweisen darauf, dass eine Aktion seitens der Redakteur/innen erforderlich ist.</li>
-	<li>"Fällig" erscheint, wenn ein Gutachter/eine Gutachterin den Begutachtungsauftrag akzeptiert hat; es wird die Zahl der Wochen bis zum Abgabezeitpunkt des Reviews angezeigt oder (-) Wochen, wenn das Gutachten überfällig ist.</li>
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
+	<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Redakteur/in erforderlich ist, gekennzeichnet wie folgt:
+		<ul>
+			<li class="highlightReviewerNotNotified">Ein/e Gutachter/in ist zugewiesen worden, aber noch nicht per E-Mail benachrichtigt worden.</li>
+			<li class="highlightNoDecision">Alle Gutachter/innen haben ihre Kommentare eingereicht, aber es ist noch keine Entscheidung protokolliert worden.</li>
+			<li class="highlightRevisedCopyUploaded">Autor/in hat ein überarbeitetes Manuskript hochgeladen.</li>
+			<li class="highlightReviewerConfirmationOverdue">Gutachter/in hat die Begutachtungsanfrage noch nicht beantwortet, die Frist ist abgelaufen.</li>
+			<li class="highlightReviewerCompletionOverdue">Gutachter/in hat die Begutachtung noch nicht abgeschlossen, die Frist ist abgelaufen.</li>
+		</ul>
+	</li>
+	<li>"Fällig" wird ausgefüllt, wenn ein/e Gutachter/in die Begutachtungsaufgabe übernimmt; die Spalte nennt die Anzahl der Wochen, bis ein Gutachten fällig ist oder (-) die Anzahl der Wochen, die ein Gutachten überfällig ist.</li>
+</ol>]]></message>
+	<message key="editor.submissionEditing.notes">
+	<![CDATA[<ol>
+	<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Gutachter/in erforderlich ist, gekennzeichnet wie folgt:
+		<ul>
+			<li class="highlightCopyediting">Eine Aktion in der Lektoratsphase ist erforderlich.</li>
+			<li class="highlightLayoutEditing">Eine Aktion in der Layoutphase ist erforderlich.</li>
+			<li class="higlightProofreading">Eine Aktion in der Korrekturphase ist erforderlich.</li>
+		</ul>
+	</li>
 </ol>]]></message>
 
 	<!-- Startseite Redakteur/innen -->
