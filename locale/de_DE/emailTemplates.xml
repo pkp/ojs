@@ -117,7 +117,7 @@ Danke für das andauernde Interesse an unserer Arbeit,
 		<description>Diese E-Mail wird an registrierte Benutzer/innen mittels des "Benutzer/innen benachrichtigen"-Links auf der persönlichen Startseite einer Redakteurin/eines Redakteurs gesendet. Sie benachrichtigt Benutzer/innen über eine neue Ausgabe und lädt sie ein, die Zeitschrift unter einer angegebenen URL aufzusuchen.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
+		<subject>Bitte um Archivierung von {$journalName}</subject>
 		<body>Sehr geehrte/r [Bibliotheksleiter/in],
 
 {$journalName} &lt;{$journalUrl}&gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.
@@ -207,7 +207,7 @@ Vielen Dank,
 
 aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}", das zur Publikation in {$journalName} eingereicht worden ist. Weiter unten finden Sie eine Kurzfassung des Beitrags. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe.
 
-Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Webseite ist {$journalUrl}
+Loggen Sie sich bitte bis zum {$weekLaterDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Webseite ist {$journalUrl}.
 
 Das Gutachten wäre fällig am {$reviewDueDate}.
 
@@ -269,6 +269,83 @@ Richtlinien für Gutachter/innen
 {$reviewGuidelines}
 </body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, um darum zu bitten, dass sie/er die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie enthält die Einreichung als E-Mail-Anhang. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Begutachtungsverfahren über E-Mail-Anhänge ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+diese E-Mail betrifft das Manuskript "{$articleTitle}", das bei {$journalName} in der Begutachtung ist.
+
+Nach der Begutachtung der früheren Fassung des Manuskripts haben die Autor/innen nun eine überarbeitete Fassung ihres Artikels eingereicht. Wir würden uns freuen, wenn Sie bei der Beurteilung helfen könnten.
+
+Bitte loggen Sie sich auf der Website der Zeitschrift bis zum {$weekLaterDate} ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Adresse ist {$journalUrl}.
+
+Das Gutachten selbst wäre fällig am {$reviewDueDate}.
+
+Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (das Ihnen dann zusammen mit Ihrem Benutzer/innennamen per E-Mail zugesandt wird). {$passwordResetUrl}
+
+URL des Beitrags: {$submissionReviewUrl}
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+diese E-Mail betrifft das Manuskript "{$articleTitle}", das bei {$journalName} in der Begutachtung ist.
+
+Nach der Begutachtung der früheren Fassung des Manuskripts haben die Autor/innen nun eine überarbeitete Fassung ihres Artikels eingereicht. Wir würden uns freuen, wenn Sie bei der Beurteilung helfen könnten.
+
+Bitte loggen Sie sich auf der Website der Zeitschrift bis zum {$weekLaterDate} ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können auch Ihr Gutachten und Ihre Empfehlung dort abgeben.
+
+Das Gutachten selbst wäre fällig zum {$reviewDueDate}.
+
+URL des Beitrags: {$submissionReviewUrl}
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Bitte um ein Gutachten</subject>
+		<body>{$reviewerName},
+
+diese E-Mail betrifft das Manuskript "{$articleTitle}", das bei {$journalName} in der Begutachtung ist.
+
+Nach der Begutachtung der früheren Fassung des Manuskripts haben die Autor/innen nun eine überarbeitete Fassung ihres Artikels eingereicht. Wir würden uns freuen, wenn Sie bei der Beurteilung helfen könnten.
+
+Die Begutachtungsrichtlinien dieser Zeitschrift sind unten angehängt, und der Beitrag selber ist dieser E-Mail beigefügt. Ihr Gutachten zu diesem Beitrag sollte zusammen mit Ihrer Empfehlung mir per E-Mail bis zum {$reviewDueDate} zugehen.
+
+Bitte teilen Sie uns in einer E-Mail bis zum {$weekLaterDate} mit, ob Sie das Gutachten übernehmen können.
+
+In der Hoffnung auf eine positive Antwort,
+
+{$editorialContactSignature}
+
+
+Begutachtungsrichtlinien
+
+{$reviewGuidelines}
+</body>
+		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie enthält die Einreichung als E-Mail-Anhang. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Begutachtungsverfahren über E-Mail-Anhänge ausgewählt worden ist. (Ansonsten siehe  REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Rücknahme einer Bitte um ein Gutachten</subject>
@@ -504,7 +581,7 @@ ich habe nun die lektorierte Fassung meines Manuskripts "{$articleTitle}" für {
 
 Mit bestem Dank für Ihre Bemühungen um meinen Beitrag,
 {$authorName}</body>
-		<description>This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</description>
+		<description>Diese E-Mail wird von der/dem Autor/in an den/die Rubrikredakteur/in gesendet, um über den Abschluss des Lektoratsschrittes durch den/die Autor/in zu informieren.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
 		<subject>Eingangsbestätigung für die durchgesehene Korrekturversion</subject>
@@ -745,7 +822,7 @@ Wir danken für Ihr Interesse an unserer Arbeit,
 Ihr Abonnement für {$journalName} läuft demnächst aus.
 
 {$subscriptionType}
-Expiry date: {$expiryDate}
+Ablaufdatum: {$expiryDate}
 
 Um den künftigen Zugang zu dieser Zeitschrift zu gewährleisten, gehen Sie bitte zur Website der Zeitschrift und erneuern Sie Ihr Abonnement. Sie können sich mit Ihrem Benutzer/innennamen "{$username}" in das System einloggen.
 
