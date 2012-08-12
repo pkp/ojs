@@ -31,5 +31,5 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Keine Ausgabe passt zu der angegebenen Kennzeichnung "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag passt zu der angegebenen Kennzeichnung "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Zur Verwendung dieses Plug-Ins muss ein gültiger DOI-Präfix in der Zeitschriftenverwaltung angegeben werden.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Um dieses Plug-In zu verwenden, gehen Sie bitte zur Plug-In-Kategorie "Öffentliche Kennungen". Aktivieren und konfigurieren Sie das DOI-Plug-In und geben Sie dort einen gültigen DOI-Präfix an.</message>
 </locale>
