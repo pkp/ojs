@@ -477,9 +477,9 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Announcements Management -->
 
 	<!-- Editor -->
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<message key="editor.submissionReview.notes">
 	<![CDATA[<ol>
-	<li>Highlighted items indicate action is required by editor, labelled as follows:
+	<li>Highlighted items indicate action is required by an editor, labelled as follows:
 		<ul>
 			<li class="highlightReviewerNotNotified">A Reviewer has been assigned but not notified by email</li>
 			<li class="highlightNoDecision">All Reviewers have returned with their comments, but no decision is recorded</li>
@@ -490,7 +490,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	</li>
 	<li>"Due" is filled in when reviewer accepts request to review; it displays number of weeks to review's due date or (-) weeks that it is overdue.</li>
 </ol>]]></message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<message key="editor.submissionEditing.notes">
 	<![CDATA[<ol>
 	<li>Highlighted items indicate action is required by an editor, labelled as follows:
 		<ul>
