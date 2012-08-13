@@ -20,14 +20,14 @@
 function invokeGoogleScholar() {
 	var googleScholarForm = document.getElementById('googleScholar');
 
-	googleScholarForm.as_q.value = document.inputForm.title.value;
-	googleScholarForm.as_sauthors.value = document.inputForm.author.value;
+	googleScholarForm.as_q.value = document.getElementById('inputForm').title.value;
+	googleScholarForm.as_sauthors.value = document.getElementById('inputForm').author.value;
 	googleScholarForm.submit();
 }
 
 function invokeWLA() {
 	var wlaForm = document.getElementById('wla');
-	wlaForm.q.value = document.inputForm.title.value + " " + document.inputForm.author.value;
+	wlaForm.q.value = document.getElementById('inputForm').title.value + " " + document.getElementById('inputForm').author.value;
 	wlaForm.submit();
 }
 

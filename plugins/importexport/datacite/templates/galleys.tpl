@@ -14,7 +14,7 @@
 
 <script type="text/javascript">{literal}
 	function toggleChecked() {
-		var elements = document.galleys.elements;
+		var elements = document.getElementById('galleys').elements;
 		for (var i=0; i < elements.length; i++) {
 			if (elements[i].name == 'galleyId[]') {
 				elements[i].checked = !elements[i].checked;
@@ -26,7 +26,7 @@
 <br/>
 
 <div id="galleys">
-	<form action="{plugin_url path="exportGalleys"}" method="post" name="galleys">
+	<form action="{plugin_url path="exportGalleys"}" method="post" id="galleys">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

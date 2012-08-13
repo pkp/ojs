@@ -14,7 +14,7 @@
 
 <script type="text/javascript">{literal}
 	function toggleChecked() {
-		var elements = document.exportAll.elements;
+		var elements = document.getElementById('exportAll').elements;
 		for (var i=0; i < elements.length; i++) {
 			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]') {
 				elements[i].checked = !elements[i].checked;
@@ -27,7 +27,7 @@
 
 <div id="allUnregistered">
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
-	<form action="{plugin_url path="exportAll"}" method="post" name="exportAll">
+	<form action="{plugin_url path="exportAll"}" method="post" id="exportAll">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
