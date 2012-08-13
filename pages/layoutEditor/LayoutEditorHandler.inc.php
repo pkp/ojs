@@ -18,17 +18,20 @@ import('classes.handler.Handler');
 class LayoutEditorHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function LayoutEditorHandler() {
 		parent::Handler();
 		
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));		
 	}
+
 	/**
 	 * Display layout editor index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index() {
+	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
@@ -39,13 +42,15 @@ class LayoutEditorHandler extends Handler {
 
 	/**
 	 * Display layout editor submissions page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function submissions($args) {
+	function submissions($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
@@ -58,22 +63,22 @@ class LayoutEditorHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		// Get the user's search conditions, if any
-		$searchField = Request::getUserVar('searchField');
-		$dateSearchField = Request::getUserVar('dateSearchField');
-		$searchMatch = Request::getUserVar('searchMatch');
-		$search = Request::getUserVar('search');
+		$searchField = $request->getUserVar('searchField');
+		$dateSearchField = $request->getUserVar('dateSearchField');
+		$searchMatch = $request->getUserVar('searchMatch');
+		$search = $request->getUserVar('search');
 
-		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
-		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -88,7 +93,7 @@ class LayoutEditorHandler extends Handler {
 			'dateSearchField'
 		);
 		foreach ($duplicateParameters as $param)
-			$templateMgr->assign($param, Request::getUserVar($param));
+			$templateMgr->assign($param, $request->getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
@@ -116,14 +121,16 @@ class LayoutEditorHandler extends Handler {
 
 	/**
 	 * Display Future Isshes page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function futureIssues() {
+	function futureIssues($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo('issues');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -132,18 +139,20 @@ class LayoutEditorHandler extends Handler {
 	
 	/**
 	 * Displays the listings of back (published) issues
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function backIssues() {
+	function backIssues($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$rangeInfo = Handler::getRangeInfo('issues');
-		$sort = Request::getUserVar('sort');
+		$rangeInfo = $this->getRangeInfo('issues');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
@@ -170,6 +179,8 @@ class LayoutEditorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $articleId int optional
+	 * @param $parentPage string optional
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		parent::setupTemplate();
@@ -189,12 +200,13 @@ class LayoutEditorHandler extends Handler {
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], array('layout', 'proof', 'referenceLinking'))) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		}
 	}
 }

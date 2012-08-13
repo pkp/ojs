@@ -20,19 +20,21 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionCommentsHandler() {
 		parent::LayoutEditorHandler();
 	}
 	
 	/**
 	 * View layout comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function viewLayoutComments($args) {
+	function viewLayoutComments($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$articleId = $args[0];
+		$articleId = (int) array_shift($args);
 
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
@@ -43,6 +45,8 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 	/**
 	 * Post layout comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postLayoutComment($args, $request) {
 		$this->validate();
@@ -63,22 +67,25 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 	/**
 	 * View proofread comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function viewProofreadComments($args) {
+	function viewProofreadComments($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$articleId = $args[0];
+		$articleId = (int) array_shift($args);
 
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::viewProofreadComments($submission);
-
 	}
 
 	/**
 	 * Post proofread comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postProofreadComment($args, $request) {
 		$this->validate();
@@ -100,10 +107,12 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 	/**
 	 * Edit comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function editComment($args) {
-		$articleId = $args[0];
-		$commentId = $args[1];
+	function editComment($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();
@@ -153,10 +162,12 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 	/**
 	 * Delete comment.
+	 * @param $args array
+	 * @param $request object
 	 */
-	function deleteComment($args) {
-		$articleId = $args[0];
-		$commentId = $args[1];
+	function deleteComment($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate();
@@ -172,9 +183,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(null, null, 'viewLayoutComments', $articleId);
+			$request->redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(null, null, 'viewProofreadComments', $articleId);
+			$request->redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
 }

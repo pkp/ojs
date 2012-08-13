@@ -23,7 +23,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionLayoutHandler() {
 		parent::LayoutEditorHandler();
 	}
@@ -35,10 +35,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * View an assigned submission's layout editing page.
 	 * @param $args array ($articleId)
+	 * @param $request PKPRequest
 	 */
-	function submission($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$journal =& Request::getJournal();
+	function submission($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$journal =& $request->getJournal();
 
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
@@ -51,8 +52,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 
-		if ($layoutSignoff->getDateNotified() != null && $layoutSignoff->getDateUnderway() == null)
-		{
+		if ($layoutSignoff->getDateNotified() != null && $layoutSignoff->getDateUnderway() == null) {
 			// Set underway date
 			$layoutSignoff->setDateUnderway(Core::getCurrentDate());
 			$signoffDao->updateObject($layoutSignoff);
@@ -79,6 +79,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 
+	/**
+	 * View submission metadata.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
@@ -92,9 +97,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 	/**
 	 * Mark assignment as complete.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function completeAssignment($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$this->setupTemplate(true, $articleId, 'editing');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
@@ -112,9 +119,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 	/**
 	 * Create a new layout file (layout version, galley, or supp file) with the uploaded file.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function uploadLayoutFile($args, $request) {
-		$articleId = $request->getUserVar('articleId');
+		$articleId = (int) $request->getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
@@ -150,10 +159,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Edit a galley.
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function editGalley($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+	function editGalley($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
@@ -178,7 +188,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 			if (!isset($galley)) {
-				Request::redirect(null, null, 'submission', $articleId);
+				$request->redirect(null, null, 'submission', $articleId);
 			}
 
 			$templateMgr =& TemplateManager::getManager();
@@ -194,8 +204,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @param $request Request
 	 */
 	function saveGalley($args, $request) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$this->setupTemplate(true, $articleId, 'editing');
@@ -221,15 +231,15 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				);
 			}
 
-			if (Request::getUserVar('uploadImage')) {
+			if ($request->getUserVar('uploadImage')) {
 				$submitForm->uploadImage();
-				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
-			} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
+				$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
+			} else if(($deleteImage = $request->getUserVar('deleteImage')) && count($deleteImage) == 1) {
 				list($imageId) = array_keys($deleteImage);
 				$submitForm->deleteImage($imageId);
-				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+				$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
 			}
-			Request::redirect(null, null, 'submission', $articleId);
+			$request->redirect(null, null, 'submission', $articleId);
 		} else {
 			$submitForm->display();
 		}
@@ -238,40 +248,44 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Delete a galley file.
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function deleteGalley($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+	function deleteGalley($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::deleteGalley($submission, $galleyId);
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 	/**
 	 * Change the sequence order of a galley.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function orderGalley() {
-		$articleId = Request::getUserVar('articleId');
+	function orderGalley($args, &$request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
-		LayoutEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderGalley($submission, $request->getUserVar('galleyId'), $request->getUserVar('d'));
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 	/**
 	 * Proof / "preview" a galley.
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalley($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+	function proofGalley($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
@@ -284,10 +298,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Proof galley (shows frame header).
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalleyTop($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+	function proofGalleyTop($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
@@ -301,10 +316,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Proof galley (outputs file contents).
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalleyFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+	function proofGalleyFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 
@@ -318,12 +334,11 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
 						$articleId, $galleyId, $styleFile->getFileId()
 					)));
 				}
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
-
 			} else {
 				// View non-HTML file inline
 				$this->viewFile(array($articleId, $galley->getFileId()));
@@ -334,18 +349,19 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Delete an article image.
 	 * @param $args array ($articleId, $fileId)
+	 * @param $request PKPRequest
 	 */
-	function deleteArticleImage($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-		$revisionId = isset($args[3]) ? (int) $args[3] : 0;
+	function deleteArticleImage($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revisionId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 		LayoutEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
 
-		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+		$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 
 
@@ -357,6 +373,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Edit a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
+	 * @param $request PKPRequest
 	 */
 	function editSuppFile($args, $request) {
 		$articleId = (int) array_shift($args);
@@ -441,31 +458,34 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Delete a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
+	 * @param $request PKPRequest
 	 */
-	function deleteSuppFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+	function deleteSuppFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$suppFileId = (int) array_shift($args);
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::deleteSuppFile($submission, $suppFileId);
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 	/**
 	 * Change the sequence order of a supplementary file.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function orderSuppFile() {
-		$articleId = Request::getUserVar('articleId');
+	function orderSuppFile($args, &$request) {
+		$articleId = (int) $request->getUserVar('articleId');
 		$submissionLayoutHandler = new SubmissionLayoutHandler();
 		$submissionLayoutHandler->validate($articleId);
 		$submission =& $submissionLayoutHandler->submission;
 
-		LayoutEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderSuppFile($submission, $request->getUserVar('suppFileId'), $request->getUserVar('d'));
 
-		Request::redirect(null, null, 'submission', $articleId);
+		$request->redirect(null, null, 'submission', $articleId);
 	}
 
 
@@ -476,36 +496,38 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	/**
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
+	 * @param $request PKPRequest
 	 */
-	function downloadFile($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? $args[1] : 0;
-		$revision = isset($args[2]) ? $args[2] : null;
+	function downloadFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = array_shift($args); // Can be null
 
 		if($this->validate($articleId)) {
 			$journal =& $this->journal;
 			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
-			Request::redirect(null, null, 'submission', $articleId);
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
 	/**
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $fileId, [$revision])
+	 * @param $request PKPRequest
 	 */
-	function viewFile($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? $args[1] : 0;
-		$revision = isset($args[2]) ? $args[2] : null;
+	function viewFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = array_shift($args); // Can be null
 
 		if($this->validate($articleId)) {
 			$journal =& $this->journal;
 			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(null, null, 'submission', $articleId);
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -597,14 +619,19 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			&& $layoutEditorProofreadSignoff->getDateCompleted() == null));
 	}
 
-	function downloadLayoutTemplate($args) {
+	/**
+	 * Download a layout template.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function downloadLayoutTemplate($args, &$request) {
 		parent::validate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$templates = $journal->getSetting('templates');
 		import('classes.file.JournalFileManager');
 		$journalFileManager = new JournalFileManager($journal);
 		$templateId = (int) array_shift($args);
-		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, 'layoutEditor');
+		if ($templateId >= count($templates) || $templateId < 0) $request->redirect(null, 'layoutEditor');
 		$template =& $templates[$templateId];
 
 		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);
