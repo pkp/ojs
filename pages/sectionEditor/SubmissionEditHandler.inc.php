@@ -19,12 +19,9 @@ define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);
 import('pages.sectionEditor.SectionEditorHandler');
 
 class SubmissionEditHandler extends SectionEditorHandler {
-	/** submission associated with the request **/
-	var $submission;
-
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionEditHandler() {
 		parent::SectionEditorHandler();
 	}

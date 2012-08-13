@@ -19,9 +19,12 @@ import('classes.submission.sectionEditor.SectionEditorAction');
 import('classes.handler.Handler');
 
 class SectionEditorHandler extends Handler {
+	/** submission associated with the request **/
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SectionEditorHandler() {
 		parent::Handler();
 

@@ -9,46 +9,51 @@
  * @class ProofreaderHandler
  * @ingroup pages_proofreader
  *
- * @brief Handle requests for proofreader functions. 
+ * @brief Handle requests for proofreader functions.
  */
 
 import('classes.submission.proofreader.ProofreaderAction');
 import('classes.handler.Handler');
 
 class ProofreaderHandler extends Handler {
+	/** submission associated with the request **/
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function ProofreaderHandler() {
 		parent::Handler();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_PROOFREADER)));		
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_PROOFREADER)));
 	}
 
 	/**
 	 * Display proofreader index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index($args) {
-		$this->validate();
+	function index($args, &$request) {
+		$this->validate($request);
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
 
 		// Get the user's search conditions, if any
-		$searchField = Request::getUserVar('searchField');
-		$dateSearchField = Request::getUserVar('dateSearchField');
-		$searchMatch = Request::getUserVar('searchMatch');
-		$search = Request::getUserVar('search');
+		$searchField = $request->getUserVar('searchField');
+		$dateSearchField = $request->getUserVar('dateSearchField');
+		$searchMatch = $request->getUserVar('searchMatch');
+		$search = $request->getUserVar('search');
 
-		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
-		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -60,12 +65,12 @@ class ProofreaderHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
- 
+
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
@@ -78,7 +83,7 @@ class ProofreaderHandler extends Handler {
 			'dateSearchField'
 		);
 		foreach ($duplicateParameters as $param)
-			$templateMgr->assign($param, Request::getUserVar($param));
+			$templateMgr->assign($param, $request->getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
@@ -125,13 +130,50 @@ class ProofreaderHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $requet PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		$this->setupTemplate();
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('proof'))) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		}
+	}
+
+	/**
+	 * Validate that the user is the assigned proofreader for the submission,
+	 * if a submission ID is specified.
+	 * Redirects to proofreader index page if validation fails.
+	 * @param $articleId int optional
+	 */
+	function validate(&$request, $articleId = null) {
+		parent::validate();
+
+		if ($articleId !== null) {
+			$isValid = false;
+
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
+
+			$proofreaderDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$submission =& $proofreaderDao->getSubmission($articleId, $journal->getId());
+
+			if (isset($submission)) {
+				$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+				if ($proofSignoff->getUserId() == $user->getId()) {
+					$isValid = true;
+				}
+			}
+
+			if (!$isValid) {
+				$request->redirect(null, $request->getRequestedPage());
+			}
+
+			$this->submission =& $submission;
+		}
+
+		return true;
 	}
 }
 
