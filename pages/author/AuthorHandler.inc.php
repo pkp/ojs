@@ -18,7 +18,7 @@ import('classes.handler.Handler');
 class AuthorHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AuthorHandler() {
 		parent::Handler();
 
@@ -134,9 +134,10 @@ class AuthorHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
 			$request->redirect(null, null, 'index');

@@ -27,6 +27,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * View editor decision comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewEditorDecisionComments($args, $request) {
 		$this->validate();
@@ -43,6 +45,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * View copyedit comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewCopyeditComments($args, $request) {
 		$this->validate();
@@ -82,6 +86,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * View proofread comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewProofreadComments($args, $request) {
 		$this->validate();
@@ -120,6 +126,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * View layout comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewLayoutComments($args, $request) {
 		$this->validate();
@@ -136,6 +144,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * Post layout comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postLayoutComment($args, $request) {
 		$this->validate();
@@ -156,6 +166,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * Email an editor decision comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function emailEditorDecisionComment($args, $request) {
 		$this->setupTemplate($request, true);
@@ -172,6 +184,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * Edit comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function editComment($args, $request) {
 		$articleId = (int) array_shift($args);
@@ -242,6 +256,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 	/**
 	 * Delete comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function deleteComment($args, $request) {
 		$articleId = (int) array_shift($args);
