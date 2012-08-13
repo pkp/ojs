@@ -16,9 +16,15 @@ import('classes.submission.reviewer.ReviewerAction');
 import('classes.handler.Handler');
 
 class ReviewerHandler extends Handler {
+	/** user associated with the request **/
+	var $user;
+
+	/** submission associated with the request **/
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function ReviewerHandler() {
 		parent::Handler();
 
@@ -30,7 +36,7 @@ class ReviewerHandler extends Handler {
 	 * Display reviewer index page.
 	 */
 	function index($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
@@ -150,6 +156,51 @@ class ReviewerHandler extends Handler {
 			$pageHierarchy[] = array(Request::url(null, 'reviewer', 'submission', $reviewId), "#$articleId", true);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
+	}
+
+	//
+	// Validation
+	//
+
+	/**
+	 * Validate that the user is an assigned reviewer for
+	 * the article.
+	 * Redirects to reviewer index page if validation fails.
+	 * @param $request PKPRequest
+	 * @param $reviewId int optional
+	 */
+	function validate($request, $reviewId = null) {
+		if ($reviewId !== null) {
+			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
+
+			$isValid = true;
+			$newKey = $request->getUserVar('key');
+
+			$reviewerSubmission =& $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
+			if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getId()) {
+				$isValid = false;
+			} elseif ($user && empty($newKey)) {
+				if ($reviewerSubmission->getReviewerId() != $user->getId()) {
+					$isValid = false;
+				}
+			} else {
+				$user =& SubmissionReviewHandler::validateAccessKey($request, $reviewerSubmission->getReviewerId(), $reviewId, $newKey);
+				if (!$user) $isValid = false;
+			}
+
+			if (!$isValid) {
+				$request->redirect(null, $request->getRequestedPage());
+			}
+
+			$this->submission =& $reviewerSubmission;
+			$this->user =& $user;
+			return true;
+		}
+
+		parent::validate();
 	}
 }
 
