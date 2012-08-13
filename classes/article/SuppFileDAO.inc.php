@@ -75,17 +75,17 @@ class SuppFileDAO extends DAO {
 		$params = array($settingName);
 
 		$sql = 'SELECT s.*, af.file_name, af.original_file_name, af.file_type, af.file_size, af.date_uploaded, af.date_modified
-		        FROM	article_supplementary_files s
-		        	LEFT JOIN article_files af ON s.file_id = af.file_id
-		        	INNER JOIN articles a ON a.article_id = s.article_id
-		        	LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
+			FROM	article_supplementary_files s
+				LEFT JOIN article_files af ON s.file_id = af.file_id
+				INNER JOIN articles a ON a.article_id = s.article_id
+				LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id AND sfs.setting_name = ?
-			        WHERE	(sfs.setting_value IS NULL OR sfs.setting_value = "")';
+				WHERE	(sfs.setting_value IS NULL OR sfs.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
-			        WHERE	sfs.setting_name = ? AND sfs.setting_value = ?';
+				WHERE	sfs.setting_name = ? AND sfs.setting_value = ?';
 		}
 		if ($articleId) {
 			$params[] = (int) $articleId;

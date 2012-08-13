@@ -113,14 +113,14 @@ class IssueDAO extends DAO {
 	function &getIssuesBySetting($settingName, $settingValue, $journalId = null) {
 		$params = array($settingName);
 		$sql = 'SELECT	i.*
-		        FROM	issues i ';
+			FROM	issues i ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN issue_settings ist ON i.issue_id = ist.issue_id AND ist.setting_name = ?
-			        WHERE	(ist.setting_value IS NULL OR ist.setting_value = "")';
+				WHERE	(ist.setting_value IS NULL OR ist.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
-			        WHERE	ist.setting_name = ? AND ist.setting_value = ?';
+				WHERE	ist.setting_name = ? AND ist.setting_value = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;

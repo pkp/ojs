@@ -457,23 +457,23 @@ class PublishedArticleDAO extends DAO {
 		);
 
 		$sql = 'SELECT	pa.*,
-		        	a.*,
-		        	COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-		        	COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-		        FROM	published_articles pa
-		        	INNER JOIN articles a ON pa.article_id = a.article_id
-		        	LEFT JOIN sections s ON s.section_id = a.section_id
-		        	LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-		        	LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-		        	LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-		        	LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa
+				INNER JOIN articles a ON pa.article_id = a.article_id
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
-			        WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
+				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
-			        WHERE	ast.setting_name = ? AND ast.setting_value = ?';
+				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;

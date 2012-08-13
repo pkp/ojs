@@ -123,18 +123,18 @@ class ArticleGalleyDAO extends DAO {
 		$params = array($settingName);
 
 		$sql = 'SELECT	g.*,
-		        	af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
-		        FROM	article_galleys g
-		        	LEFT JOIN article_files af ON (g.file_id = af.file_id)
-		        	INNER JOIN articles a ON a.article_id = g.article_id
-		        	LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
+				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+			FROM	article_galleys g
+				LEFT JOIN article_files af ON (g.file_id = af.file_id)
+				INNER JOIN articles a ON a.article_id = g.article_id
+				LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
-			        WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
+				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
-			        WHERE	gs.setting_name = ? AND gs.setting_value = ?';
+				WHERE	gs.setting_name = ? AND gs.setting_value = ?';
 		}
 		if ($articleId) {
 			$params[] = (int) $articleId;
