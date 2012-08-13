@@ -31,16 +31,11 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewLayoutComments($args, &$request) {
-		$this->validate();
+		$articleId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
 
-		$articleId = (int) array_shift($args);
-
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-		LayoutEditorAction::viewLayoutComments($submission);
-
+		LayoutEditorAction::viewLayoutComments($this->submission);
 	}
 
 	/**
@@ -49,19 +44,15 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function postLayoutComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-		if (LayoutEditorAction::postLayoutComment($submission, $emailComment, $request)) {
-			LayoutEditorAction::viewLayoutComments($submission);
+		if (LayoutEditorAction::postLayoutComment($this->submission, $emailComment, $request)) {
+			LayoutEditorAction::viewLayoutComments($this->submission);
 		}
 	}
 
@@ -71,15 +62,11 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewProofreadComments($args, &$request) {
-		$this->validate();
+		$articleId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
 
-		$articleId = (int) array_shift($args);
-
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-		LayoutEditorAction::viewProofreadComments($submission);
+		LayoutEditorAction::viewProofreadComments($this->submission);
 	}
 
 	/**
@@ -88,19 +75,16 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function postProofreadComment($args, $request) {
-		$this->validate();
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
 
-		$articleId = (int) $request->getUserVar('articleId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-		if (LayoutEditorAction::postProofreadComment($submission, $emailComment, $request)) {
-			LayoutEditorAction::viewProofreadComments($submission);
+		if (LayoutEditorAction::postProofreadComment($this->submission, $emailComment, $request)) {
+			LayoutEditorAction::viewProofreadComments($this->submission);
 		}
 
 	}
@@ -115,17 +99,10 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-		
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-
-		LayoutEditorAction::editComment($submission, $comment);
-
+		LayoutEditorAction::editComment($this->submission, $this->comment);
 	}
 
 	/**
@@ -138,24 +115,18 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$commentId = (int) $request->getUserVar('commentId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-		
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-
-		LayoutEditorAction::saveComment($submission, $comment, $emailComment, $request);
+		LayoutEditorAction::saveComment($this->submission, $this->comment, $emailComment, $request);
 
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
 			$request->redirect(null, null, 'viewLayoutComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
 			$request->redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
@@ -170,21 +141,15 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-		
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true);
-
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
 
 		LayoutEditorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
 			$request->redirect(null, null, 'viewLayoutComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
 			$request->redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}

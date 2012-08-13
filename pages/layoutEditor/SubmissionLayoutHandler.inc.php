@@ -15,12 +15,6 @@
 import('pages.layoutEditor.LayoutEditorHandler');
 
 class SubmissionLayoutHandler extends LayoutEditorHandler {
-	/** journal associated with the request **/
-	var $journal;
-
-	/** submission associated with the request **/
-	var $submission;
-
 	/**
 	 * Constructor
 	 */
@@ -504,7 +498,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = array_shift($args); // Can be null
 
 		if($this->validate($articleId)) {
-			$journal =& $this->journal;
+			$journal =& $request->getJournal();
 			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
@@ -523,7 +517,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = array_shift($args); // Can be null
 
 		if($this->validate($articleId)) {
-			$journal =& $this->journal;
+			$journal =& $request->getJournal();
 			$submission =& $this->submission;
 		}
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
@@ -557,67 +551,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		}
 	}
 
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the assigned layout editor for the submission.
-	 * Redirects to layoutEditor index page if validation fails.
-	 * @param $articleId int the submission being edited
-	 * @param $checkEdit boolean check if editor has editing permissions
-	 */
-	function validate($articleId, $checkEdit = false) {
-		parent::validate();
-
-		$isValid = false;
-
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
-
-		$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submission =& $layoutDao->getSubmission($articleId, $journal->getId());
-
-		if (isset($submission)) {
-			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-			if (!isset($layoutSignoff)) $isValid = false;
-			elseif ($layoutSignoff->getUserId() == $user->getId()) {
-				if ($checkEdit) {
-					$isValid = $this->_layoutEditingEnabled($submission);
-				} else {
-					$isValid = true;
-				}
-			}
-		}
-
-		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		$this->journal =& $journal;
-		$this->submission =& $submission;
-		return true;
-	}
-
-	/**
-	 * Check if a layout editor is allowed to make changes to the submission.
-	 * This is allowed if there is an outstanding galley creation or layout editor
-	 * proofreading request.
-	 * @param $submission LayoutEditorSubmission
-	 * @return boolean true if layout editor can modify the submission
-	 */
-	function _layoutEditingEnabled(&$submission) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$layoutEditorProofreadSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
-
-		return(($layoutSignoff->getDateNotified() != null
-			&& $layoutSignoff->getDateCompleted() == null)
-		|| ($layoutEditorProofreadSignoff->getDateNotified() != null
-			&& $layoutEditorProofreadSignoff->getDateCompleted() == null));
-	}
 
 	/**
 	 * Download a layout template.

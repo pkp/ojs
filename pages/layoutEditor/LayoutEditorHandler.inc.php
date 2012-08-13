@@ -16,6 +16,9 @@ import('classes.submission.layoutEditor.LayoutEditorAction');
 import('classes.handler.Handler');
 
 class LayoutEditorHandler extends Handler {
+	/** submission associated with the request **/
+	var $submission;
+
 	/**
 	 * Constructor
 	 */
@@ -32,7 +35,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate();
 
 		$templateMgr =& TemplateManager::getManager();
@@ -46,7 +49,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function submissions($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate(true);
 
 		$journal =& $request->getJournal();
@@ -125,7 +128,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function futureIssues($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate(true);
 
 		$journal =& $request->getJournal();
@@ -143,7 +146,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function backIssues($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate(true);
 
 		$journal =& $request->getJournal();
@@ -208,6 +211,70 @@ class LayoutEditorHandler extends Handler {
 		if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], array('layout', 'proof', 'referenceLinking'))) {
 			$request->redirect(null, $request->getRequestedPage());
 		}
+	}
+
+
+	//
+	// Validation
+	//
+
+
+	/**
+	 * Validate that the user is the assigned layout editor for the submission.
+	 * Redirects to layoutEditor index page if validation fails.
+	 * @param $request PKPRequest
+	 * @param $articleId int optional the submission being edited
+	 * @param $checkEdit boolean check if editor has editing permissions
+	 */
+	function validate($request, $articleId = null, $checkEdit = false) {
+		parent::validate();
+
+		if ($articleId !== null) {
+			$isValid = false;
+
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
+
+			$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$submission =& $layoutDao->getSubmission($articleId, $journal->getId());
+
+			if (isset($submission)) {
+				$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+				if (!isset($layoutSignoff)) $isValid = false;
+				elseif ($layoutSignoff->getUserId() == $user->getId()) {
+					if ($checkEdit) {
+						$isValid = $this->_layoutEditingEnabled($submission);
+					} else {
+						$isValid = true;
+					}
+				}
+			}
+
+			if (!$isValid) {
+				$request->redirect(null, $request->getRequestedPage());
+			}
+
+			$this->submission =& $submission;
+		}
+	}
+
+	/**
+	 * Check if a layout editor is allowed to make changes to the submission.
+	 * This is allowed if there is an outstanding galley creation or layout editor
+	 * proofreading request.
+	 * @param $submission LayoutEditorSubmission
+	 * @return boolean true if layout editor can modify the submission
+	 */
+	function _layoutEditingEnabled(&$submission) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$layoutEditorProofreadSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
+
+		return(($layoutSignoff->getDateNotified() != null
+			&& $layoutSignoff->getDateCompleted() == null)
+		|| ($layoutEditorProofreadSignoff->getDateNotified() != null
+			&& $layoutEditorProofreadSignoff->getDateCompleted() == null));
 	}
 }
 
