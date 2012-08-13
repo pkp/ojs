@@ -40,26 +40,28 @@ class SectionEditorHandler extends Handler {
 
 	/**
 	 * Display section editor index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 
 		// Get the user's search conditions, if any
-		$searchField = Request::getUserVar('searchField');
-		$dateSearchField = Request::getUserVar('dateSearchField');
-		$searchMatch = Request::getUserVar('searchMatch');
-		$search = Request::getUserVar('search');
+		$searchField = $request->getUserVar('searchField');
+		$dateSearchField = $request->getUserVar('dateSearchField');
+		$searchMatch = $request->getUserVar('searchMatch');
+		$search = $request->getUserVar('search');
 
-		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
-		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -68,9 +70,9 @@ class SectionEditorHandler extends Handler {
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		$filterSectionOptions = array(
 			FILTER_SECTION_ALL => AppLocale::Translate('editor.allSections')
@@ -91,7 +93,7 @@ class SectionEditorHandler extends Handler {
 				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
-		$filterSection = Request::getUserVar('filterSection');
+		$filterSection = $request->getUserVar('filterSection');
 		if ($filterSection != '' && array_key_exists($filterSection, $filterSectionOptions)) {
 			$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
 		} else {
@@ -139,7 +141,7 @@ class SectionEditorHandler extends Handler {
 			'dateSearchField'
 		);
 		foreach ($duplicateParameters as $param)
-			$templateMgr->assign($param, Request::getUserVar($param));
+			$templateMgr->assign($param, $request->getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
@@ -168,6 +170,9 @@ class SectionEditorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $articleId int optional
+	 * @param $parentPage string optional
+	 * @param $showSidebar boolean optional
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate();
@@ -197,13 +202,14 @@ class SectionEditorHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof', 'referenceLinking'))) {
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
 		}
 	}
 
