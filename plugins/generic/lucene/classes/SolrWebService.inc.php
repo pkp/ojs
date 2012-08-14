@@ -22,6 +22,7 @@ define('SOLR_STATUS_OFFLINE', 0x02);
 import('lib.pkp.classes.webservice.WebServiceRequest');
 import('lib.pkp.classes.webservice.XmlWebService');
 import('lib.pkp.classes.xml.XMLCustomWriter');
+import('plugins.generic.lucene.classes.SolrSearchRequest');
 
 class SolrWebService extends XmlWebService {
 
@@ -90,44 +91,32 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Execute a search against the Solr search server.
 	 *
-	 * @param $journal Journal
-	 * @param $search array a raw search query as given by the end user
-	 *  (one query per field).
+	 * @param $searchRequest SolrSearchRequest
 	 * @param $totalResults integer An output parameter returning the
 	 *  total number of search results found by the query. This differs
 	 *  from the actual number of returned results as the search can
 	 *  be limited.
-	 * @param $page integer The result page to display.
-	 * @param $itemsPerPage integer The number of search results on
-	 *  one result page.
-	 * @param $fromDate string An ISO 8601 date string or null.
-	 * @param $toDate string An ISO 8601 date string or null.
-	 * @param $orderBy string An index field (without locale extension) to order by.
-	 * @param $orderDir boolean true for ascending order and false for
-	 *  descending order.
 	 *
 	 * @return array An array of search results. The keys are
 	 *  scores (1-9999) and the values are article IDs. Null if an error
 	 *  occured while querying the server.
 	 */
-	function retrieveResults($journal, $search, &$totalResults, $page = 1, $itemsPerPage = 20,
-			$fromDate = null, $toDate = null, $orderBy = 'score', $orderDir = false) {
+	function retrieveResults(&$searchRequest, &$totalResults) {
+		// Initialize the search request parameters.
+		$params = array();
 
-		// Expand the search to all locales/formats.
-		$expandedSearch = '';
-		foreach ($search as $field => $query) {
-			if (empty($query)) continue;
+		// Construct a sub query for every field search phrase.
+		foreach ($searchRequest->getQuery() as $fieldList => $searchPhrase) {
+			// Ignore empty search phrases.
+			if (empty($fieldList) || empty($searchPhrase)) continue;
 
-			// Do we expand a specific field or is this a
-			// search on all fields?
-			$fieldSearch = $this->_expandField($field, $query);
-			if (!empty($fieldSearch)) {
-				if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-				$expandedSearch .= '( ' . $fieldSearch . ' )';
-			}
+			// Construct the sub-query and add it to the search query and params.
+			$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
 		}
 
 		// Add a range search on the publication date.
+		$fromDate = $searchRequest->getFromDate();
+		$toDate = $searchRequest->getToDate();
 		if (!(empty($fromDate) && empty($toDate))) {
 			if (empty($fromDate)) {
 				$fromDate = '*';
@@ -139,35 +128,28 @@ class SolrWebService extends XmlWebService {
 			} else {
 				$toDate = $this->_convertDate($toDate);
 			}
-			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-			$expandedSearch .= 'publicationDate_dt:[' . $fromDate . ' TO ' . $toDate . ']';
+			$params['q'] .= " +publicationDate_dt:[$fromDate TO $toDate]";
 		}
 
 		// Add the journal (if set).
+		$journal =& $searchRequest->getJournal();
 		if (is_a($journal, 'Journal')) {
-			if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-			$expandedSearch .= 'journal_id:' . $this->_instId . '-' . $journal->getId();
+			$params['q'] .= ' +journal_id:"' . $this->_instId . '-' . $journal->getId() . '"';
 		}
 
 		// Add the installation ID.
-		if (!empty($expandedSearch)) $expandedSearch .= ' AND ';
-		$expandedSearch .= 'inst_id:' . $this->_instId;
+		$params['q'] .= ' +inst_id:"' . $this->_instId . '"';
 
 		// Pagination.
-		$start = ($page-1) * $itemsPerPage;
-		$rows = $itemsPerPage;
+		$itemsPerPage = $searchRequest->getItemsPerPage();
+		$params['start'] = ($searchRequest->getPage() - 1) * $itemsPerPage;
+		$params['rows'] = $itemsPerPage;
 
 		// Ordering.
-		$sort = $this->_getOrdering($orderBy, $orderDir);
+		$params['sort'] = $this->_getOrdering($searchRequest->getOrderBy(), $searchRequest->getOrderDir());
 
-		// Execute the search.
+		// Make the search request.
 		$url = $this->_getSearchUrl();
-		$params = array(
-			'q' => $expandedSearch,
-			'start' => (int) $start,
-			'rows' => (int) $rows,
-			'sort' => $sort
-		);
 		$response = $this->_makeRequest($url, $params);
 
 		// Did we get a result?
@@ -203,8 +185,8 @@ class SolrWebService extends XmlWebService {
 			$results[] = $currentDoc;
 		}
 
-		// Re-index by score. There's no need to re-order as the
-		// results come back ordered by score from the solr server.
+		// Re-index the result set. There's no need to re-order as the
+		// results come back ordered from the solr server.
 		$scoredResults = array();
 		foreach($results as $resultIndex => $result) {
 			// We only need the article ID.
@@ -683,39 +665,35 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Expand the given query to all format/locale versions
-	 * of the given field.
+	 * Identify all format/locale versions of the given field.
 	 * @param $field string A field name without any extension.
-	 * @param $query string The search phrase to expand.
-	 * @return string The expanded query.
+	 * @return array A list of index fields.
 	 */
-	function _expandField($field, $query) {
+	function _getLocalesAndFormats($field) {
 		$availableFields = $this->getAvailableFields('search');
 		$fieldNames = $this->_getFieldNames('search');
 
-		$fieldSearch = '';
+		$indexFields = array();
 		if (isset($availableFields[$field])) {
 			if (in_array($field, $fieldNames['multiformat'])) {
 				// This is a multiformat field.
 				foreach($availableFields[$field] as $format => $locales) {
 					foreach($locales as $locale) {
-						if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-						$fieldSearch .= $field . '_' . $format . '_' . $locale . ':(' . $query . ')';
+						$indexFields[] = $field . '_' . $format . '_' . $locale;
 					}
 				}
 			} elseif(in_array($field, $fieldNames['localized'])) {
 				// This is a localized field.
 				foreach($availableFields[$field] as $locale) {
-					if (!empty($fieldSearch)) $fieldSearch .= ' OR ';
-					$fieldSearch .= $field . '_' . $locale . ':(' . $query . ')';
+					$indexFields[] = $field . '_' . $locale;
 				}
 			} else {
 				// This must be a static field.
 				assert(isset($fieldNames['static'][$field]));
-				$fieldSearch = $fieldNames['static'][$field] . ':(' . $query . ')';
+				$indexFields[] = $fieldNames['static'][$field];
 			}
 		}
-		return $fieldSearch;
+		return $indexFields;
 	}
 
 	/**
@@ -1138,6 +1116,60 @@ class SolrWebService extends XmlWebService {
 		$resultNode = $nodeList->item(0);
 		assert(is_numeric($resultNode->textContent));
 		return (integer)$resultNode->textContent;
+	}
+
+	/**
+	 * Add a subquery to the search query and query parameters.
+	 *
+	 * @param $fieldList string A list of fields to be queried, separated by '|'.
+	 * @param $searchPhrase string The search phrase to be added.
+	 * @param $params array The existing query parameters.
+	 */
+	function _addSubquery($fieldList, $searchPhrase, $params) {
+		// Get the list of fields to be queried.
+		$fields = explode('|', $fieldList);
+
+		// Expand the field list to all locales and formats.
+		$expandedFields = array();
+		foreach($fields as $field) {
+			$expandedFields = array_merge($expandedFields, $this->_getLocalesAndFormats($field));
+		}
+		$fieldList = implode(' ', $expandedFields);
+
+		// Determine a query parameter name for this field list.
+		if (count($fields) == 1) {
+			// If we have a single field in the field list then
+			// use the field name as alias.
+			$fieldAlias = array_pop($fields);
+		} else {
+			// Use a generic name for multi-field searches.
+			$fieldAlias = 'multi';
+		}
+		$fieldAlias = "q.$fieldAlias";
+
+		// Make sure that the alias is unique.
+		$fieldSuffix = '';
+		while (isset($params[$fieldAlias . $fieldSuffix])) {
+			if (empty($fieldSuffix)) $fieldSuffix = 1;
+			$fieldSuffix ++;
+		}
+		$fieldAlias = $fieldAlias . $fieldSuffix;
+
+		// Construct a subquery.
+		// NB: mm=1 is equivalent to implicit OR
+		// This deviates from previous OJS practice, please see
+		// http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Query_Parser
+		// for the rationale of this change.
+		$subQuery = "+_query_:\"{!edismax mm=1 qf='$fieldList' v=\$$fieldAlias}\"";
+
+		// Add the subquery to the query parameters.
+		if (isset($params['q'])) {
+			$params['q'] .= ' ' . $subQuery;
+		} else {
+			$params['q'] = $subQuery;
+		}
+		$params[$fieldAlias] = $searchPhrase;
+		return $params;
 	}
 }
 

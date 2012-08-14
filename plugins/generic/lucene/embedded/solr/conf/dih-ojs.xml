@@ -68,7 +68,6 @@
 
       // Define how fields are being indexed.
       var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
-      var indexTermFields = ['discipline', 'subject', 'type', 'coverage'];
       var sortFields = ['title', 'journalTitle'];
 
       for (var i=0, len=locFields.length; i<len; i++) {
@@ -107,12 +106,8 @@
           // Index search fields.
           if (searchFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
             row.put(fieldName + '_' + locale, value);
-            // Build concatenated fields (spelling, "all" and "index terms").
+            // Build concatenated spelling field.
             appendToDocField(context, 'default_spell', value);
-            appendToDocField(context, 'all_' + locale, value);
-            if (indexTermFields.indexOf(fieldName) >= 0) {
-              appendToDocField(context, 'indexTerms_' + locale, value);
-            }
           }
 
           // Index sort fields.
@@ -138,6 +133,7 @@
       }
       row.put('authors_txt', authorsConcat);
       row.put('authors_txtsort', authorsConcat);
+      appendToDocField(context, 'default_spell', authorsConcat);
 
       // Create the publication date sort field.
       // We could use a copy field instruction in the schema file
@@ -190,9 +186,6 @@
 
 	      // Add full text to spellchecker dictionary.
 	      appendToDocField(context, 'default_spell', value);
-	
-	      // Add full text to the "all" field.
-	      appendToDocField(context, 'all_' + locale, value);
         }
 
         row.remove(valueList);
@@ -231,9 +224,6 @@
 
       // Add full text to spellchecker dictionary.
       appendToDocField(context, 'default_spell', currentText);
-
-      // Add full text to the "all" field.
-      appendToDocField(context, 'all_' + locale, currentText);
 
       row.remove('text');
       return row;
@@ -323,15 +313,6 @@
       for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
         docFieldName = docFields[iD];
         docFieldValue = context.getSessionAttribute(docFieldName, context.SCOPE_DOC);
-
-        // Add authors to spell check and "all" fields.
-        // We have to do this at this late stage to be sure that
-        // we add the authors to all locales as authors themselves
-        // are the only non-localized search field.
-        if (docFieldName == 'default_spell' || docFieldName.indexOf('all_') === 0) {
-            docFieldValue += ' ' + authors;
-        }
-
         row.put(docFieldName, docFieldValue);
       }
       return row;

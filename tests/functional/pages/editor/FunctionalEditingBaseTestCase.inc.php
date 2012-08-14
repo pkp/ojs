@@ -108,14 +108,16 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->type('authors-0-firstName', 'Arthur');
 		$this->type('authors-0-lastName', 'McAutomatic');
 		$this->type('title', $title);
-		$mceEditor = 'dom=document.getElementById("abstract_ifr").contentDocument.body';
-		$this->verifyElementPresent($mceEditor);
+		$this->verifyElementPresent('id=abstract_ifr');
 		if ($this->verified()) {
-			$this->type('dom=document.getElementById("abstract_ifr").contentDocument.body', $title . ' abstract'); // TinyMCE hack.
+			// TinyMCE hack.
+			$jsScript = "selenium.browserbot.getCurrentWindow().document".
+			            ".getElementById('abstract_ifr').contentDocument.body.innerHTML = ".
+			            "'$title abstract'";
+			$this->getEval($jsScript);
 		} else {
 			$this->type('abstract', $title . ' abstract');
 		}
-
 
 		// Submit metadata.
 		$this->clickAndWait('css=input.defaultButton');

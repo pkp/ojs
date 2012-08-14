@@ -188,32 +188,33 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	 * EXAMPLES:
 	 *   GUI locale | search phrase                 | article | not article
 	 *   ==================================================================
-	 *   en_US      | chicken wings                 | A       | B, C, D       // implicit AND
+	 *   en_US      | chicken wings                 | A, B, C | D             // implicit OR (This deviates from the original requirements, see
+	 *                                                                        // http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Query_Parser.)
 	 *   en_US      | chicken AND wings             | A       | B, C, D       // explicit conjunction
 	 *   en_US      | chicken OR wings              | A, B, C | D             // disjunction
 	 *   en_US      | chicken NOT wings             | B       | A, C, D       // negation
 	 *   en_US      | ((wings OR eggs) NOT chicken) | C, D    | A, B          // bracketed search phrase
-	 *   en_US      | chicken NICHT wings           |         | A, B, C, D    // search syntax localization
+	 *   en_US      | chicken NICHT wings           | A, B, C | D             // search syntax localization
 	 *   de_DE      | chicken NICHT wings           | B       | A, C, D       //      - " -
 	 *   en_US      | "chicken wings"               |         | A, B, C, D    // phrase search
 	 *   en_US      | "chicken have wings"          | A       | B, C, D       //      - " -
 	 *   en_US      | chicken*                      | A, B, D | C             // wildcard search
-	 *   en_US      | ChiCkeN Wings                 | A       | B, C, D       // case insensitive search
+	 *   en_US      | ChiCkeN Wings                 | A, B, C | D             // case insensitive search
 	 */
 	public function testSearchSyntax() {
 		// Set up the examples.
 		$examples = array(
-			array('en_US', 'chicken wings', 'A', 'BCD'),
+			array('en_US', 'chicken wings', 'ABC', 'D'),
 			array('en_US', 'chicken AND wings', 'A', 'BCD'),
 			array('en_US', 'chicken OR wings', 'ABC', 'D'),
 			array('en_US', 'chicken NOT wings', 'B', 'ACD'),
 			array('en_US', '((wings OR eggs) NOT chicken)', 'CD', 'AB'),
-			array('en_US', 'chicken NICHT wings', '', 'ABCD'),
+			array('en_US', 'chicken NICHT wings', 'ABC', 'D'),
 			array('de_DE', 'chicken NICHT wings', 'B', 'ACD'),
 			array('en_US', '"chicken wings"', '', 'ABCD'),
 			array('en_US', '"chicken have wings"', 'A', 'BCD'),
 			array('en_US', 'chicken*', 'ABD', 'C'),
-			array('en_US', 'ChiCkeN Wings', 'A', 'BCD')
+			array('en_US', 'ChiCkeN Wings', 'ABC', 'D')
 		);
 
 		// Assign article letters to ids.

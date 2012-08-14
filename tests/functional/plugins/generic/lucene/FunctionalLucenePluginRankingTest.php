@@ -105,15 +105,17 @@ class FunctionalLucenePluginRankingTest extends FunctionalLucenePluginBaseTestCa
 	function testResultOrdering() {
 		// Test ordering of a single-journal search.
 		$singleJournalExamples = array(
-			array('luceneSearchOrder', 'score', 5), // Default: descending
-			array('luceneSearchDirection', 'asc', 4),
+			array('luceneSearchOrder', 'score', 4), // Default: descending
+			array('luceneSearchDirection', 'asc', 3),
 			array('luceneSearchOrder', 'authors', 4), // Default: ascending
 			array('luceneSearchDirection', 'desc', 5),
 			array('luceneSearchOrder', 'publicationDate', 5), // Default: descending
 			array('luceneSearchOrder', 'title', 5), // Default: ascending
 			array('luceneSearchDirection', 'desc', 4)
 		);
-		$this->simpleSearch('chicken AND (wings OR feet)');
+		// Execute a query that produces a different score for all
+		// articles in the result set.
+		$this->simpleSearch('+chicken +(wings feet) 2');
 		foreach($singleJournalExamples as $example) {
 			$this->_checkResultOrderingExample($example);
 		}

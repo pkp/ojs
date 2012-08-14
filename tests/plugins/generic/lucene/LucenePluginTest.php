@@ -91,7 +91,6 @@ class LucenePluginTest extends DatabaseTestCase {
 		);
 
 		// Test data.
-		$journal = new Journal();
 		$testCases = array(
 			// Simple Searches
 			array(null => 'test und query'),
@@ -113,17 +112,16 @@ class LucenePluginTest extends DatabaseTestCase {
 				ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'supplementary files'
 			)
 		);
-		$fromDate = '2000-01-01 00:00:00';
 
 		$expectedResults = array(
-			array('all' => 'test AND query'),
+			array('title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test AND query'),
 			array('authors' => 'author'),
 			array('title' => 'title'),
 			array('abstract' => 'abstract'),
-			array('indexTerms' => 'NOT index terms'),
+			array('discipline|subject|type|coverage' => 'NOT index terms'),
 			array('galleyFullText' => 'full OR text'),
 			array(
-				'all' => 'test query',
+				'title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test query',
 				'authors' => 'author',
 				'title' => 'title',
 				'discipline' => 'discipline',
@@ -135,15 +133,20 @@ class LucenePluginTest extends DatabaseTestCase {
 			),
 		);
 
+		$journal = new Journal();
+		$fromDate = '2000-01-01 00:00:00';
+
 		$hook = 'ArticleSearch::retrieveResults';
-		$page = 1;
-		$itemsPerPage = 20;
 		$totalResults = null;
 		$error = null;
-		$orderBy = 'score';
-		$orderDir = false;
 
 		foreach($testCases as $testNum => $testCase) {
+			// Build the expected search request.
+			$searchRequest = new SolrSearchRequest();
+			$searchRequest->setJournal($journal);
+			$searchRequest->setFromDate($fromDate);
+			$searchRequest->setQuery($expectedResults[$testNum]);
+
 			// Mock a SolrWebService.
 			$webService = $this->getMock('SolrWebService', array('retrieveResults'), array(), '', false);
 
@@ -151,20 +154,13 @@ class LucenePluginTest extends DatabaseTestCase {
 			// with the right parameters.
 			$webService->expects($this->once())
 			           ->method('retrieveResults')
-			           ->with($this->equalTo($journal),
-			                  $this->equalTo($expectedResults[$testNum]),
-			                  $this->equalTo($totalResults),
-			                  $this->equalTo($page),
-			                  $this->equalTo($itemsPerPage),
-			                  $this->equalTo('2000-01-01 00:00:00'),
-			                  $this->equalTo(null),
-			                  $this->equalTo($orderBy),
-			                  $this->equalTo($orderDir));
+			           ->with($this->equalTo($searchRequest),
+			                  $this->equalTo($totalResults));
 			$this->lucenePlugin->_solrWebService = $webService;
-			unset($webService);
+			unset($webService, $searchRequest);
 
 			// Execute the test.
-			$params = array($journal, $testCase, $fromDate, null, 1, 20, &$totalResults, &$error);
+			$params = array($journal, $testCase, $fromDate, null, 1, 25, &$totalResults, &$error);
 			$this->lucenePlugin->callbackRetrieveResults($hook, $params);
 		}
 
@@ -177,7 +173,7 @@ class LucenePluginTest extends DatabaseTestCase {
 		           ->method('getServiceMessage')
 		           ->will($this->returnValue('some error message'));
 		$this->lucenePlugin->_solrWebService = $webService;
-		$params = array($journal, array(null => 'test'), null, null, 1, 20, &$totalResults, &$error);
+		$params = array($journal, array(null => 'test'), null, null, 1, 25, &$totalResults, &$error);
 		$this->assertEquals(array(), $this->lucenePlugin->callbackRetrieveResults($hook, $params));
 		$this->assertEquals('some error message', $error);
 	}

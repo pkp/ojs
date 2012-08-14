@@ -78,31 +78,39 @@ class SolrWebServiceTest extends PKPTestCase {
 		$embeddedServer = new EmbeddedServer();
 		$this->_startServer($embeddedServer);
 
+		// Make sure that the journal is properly indexed.
+		$this->_indexTestJournals();
+
 		// Make a search on specific fields.
+		$searchRequest = new SolrSearchRequest();
 		$journal = new Journal();
 		$journal->setId(2);
-		$testSearch = array(
-			'all' => 'pizza',
-			'authors' => 'Author',
-			'galleyFullText' => 'Nutella',
-			'title' => 'Article'
+		$searchRequest->setJournal($journal);
+		$searchRequest->setQuery(
+			array(
+				'suppFiles' => 'pizza',
+				'authors' => 'Author',
+				'galleyFullText' => 'Nutella',
+				'title' => 'Article'
+			)
 		);
-		$fromDate = date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01'));
-		$toDate = null;
+		$searchRequest->setFromDate(date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01')));
 		$totalResults = null;
-		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, $fromDate, $toDate);
+		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		self::assertTrue(is_int($totalResults), $totalResults > 0);
 		self::assertTrue(is_array($scoredResults));
 		self::assertTrue(!empty($scoredResults));
 		self::assertTrue(in_array('3', $scoredResults));
 
-		// Test result set ordering.
-		$testSearch = array(
-			'title' => 'lucene test'
-		);
-		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'authors', 'asc');
+		// Test result set ordering via simple (default field) search.
+		$searchRequest->setQuery(array('title' => 'lucene'));
+		$searchRequest->setOrderBy('authors');
+		$searchRequest->setOrderDir('asc');
+		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		self::assertEquals(array(4, 3), array_values($scoredResults));
-		$scoredResults = $this->solrWebService->retrieveResults($journal, $testSearch, $totalResults, 1, 20, null, null, 'title', 'desc');
+		$searchRequest->setOrderBy('title');
+		$searchRequest->setOrderDir('desc');
+		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		self::assertEquals(array(3, 4), array_values($scoredResults));
 	}
 
@@ -174,13 +182,6 @@ class SolrWebServiceTest extends PKPTestCase {
 	/**
 	 * @covers SolrWebService
 	 */
-	public function testDeleteAllArticlesFromIndex() {
-		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
-	}
-
-	/**
-	 * @covers SolrWebService
-	 */
 	public function testIndexArticle() {
 		// Generate test objects.
 		$article = $this->_getTestArticle();
@@ -193,31 +194,12 @@ class SolrWebServiceTest extends PKPTestCase {
 
 	/**
 	 * @covers SolrWebService
-	 *
-	 * NB: We run this test last so that we get
-	 * consistent test data in the index after
-	 * deleting in the prior tests.
 	 */
-	public function testIndexJournal() {
-		// We need a router for URL generation.
-		$application =& PKPApplication::getApplication();
-		$_SERVER['REQUEST_METHOD'] = 'GET';
-		$request =& $application->getRequest();
-		$router = new PageRouter();
-		$router->setApplication($application);
-		$request->setRouter($router);
+	public function testDeleteAllArticlesFromIndex() {
+		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
 
-		// Generate a test journal.
-		$journal = new Journal();
-
-		// Test indexing. The service returns the number of documents that
-		// were successfully processed.
-		$journal->setId('1');
-		$journal->setPath('test');
-		self::assertGreaterThan(0, $this->solrWebService->indexJournal($journal));
-		$journal->setId('2');
-		$journal->setPath('lucene-test');
-		self::assertGreaterThan(1, $this->solrWebService->indexJournal($journal));
+		// Rebuild the index.
+		$this->_indexTestJournals();
 	}
 
 
@@ -446,6 +428,31 @@ class SolrWebServiceTest extends PKPTestCase {
 		}
 		$nullVar = null;
 		return $nullVar;
+	}
+
+	/**
+	 * Index the test journal (and test that this actually works).
+	 */
+	private function _indexTestJournals() {
+		// We need a router for URL generation.
+		$application =& PKPApplication::getApplication();
+		$_SERVER['REQUEST_METHOD'] = 'GET';
+		$request =& $application->getRequest();
+		$router = new PageRouter();
+		$router->setApplication($application);
+		$request->setRouter($router);
+
+		// Generate a test journal.
+		$journal = new Journal();
+
+		// Test indexing. The service returns the number of documents that
+		// were successfully processed.
+		$journal->setId('1');
+		$journal->setPath('test');
+		self::assertGreaterThan(0, $this->solrWebService->indexJournal($journal));
+		$journal->setId('2');
+		$journal->setPath('lucene-test');
+		self::assertGreaterThan(1, $this->solrWebService->indexJournal($journal));
 	}
 }
 ?>

@@ -215,55 +215,62 @@ class LucenePlugin extends GenericPlugin {
 		assert($hookName == 'ArticleSearch::retrieveResults');
 
 		// Unpack the parameters.
-		list($journal, $search, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
+		list($journal, $query, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
 		$totalResults =& $params[6]; // need to use reference
 		$error =& $params[7]; // need to use reference
 
-		// Translate the search to the Lucene search fields.
-		$searchTypes = array(
-			ARTICLE_SEARCH_AUTHOR => 'authors',
+		// Instantiate a search request.
+		$searchRequest = new SolrSearchRequest();
+		$searchRequest->setJournal($journal);
+		$searchRequest->setFromDate($fromDate);
+		$searchRequest->setToDate($toDate);
+		$searchRequest->setPage($page);
+		$searchRequest->setItemsPerPage($itemsPerPage);
+
+		// Initialize a mapping of OJS search fields to Lucene search fields.
+		$indexFieldMap = array(
 			ARTICLE_SEARCH_TITLE => 'title',
 			ARTICLE_SEARCH_ABSTRACT => 'abstract',
+			ARTICLE_SEARCH_AUTHOR => 'authors',
 			ARTICLE_SEARCH_DISCIPLINE => 'discipline',
 			ARTICLE_SEARCH_SUBJECT => 'subject',
 			ARTICLE_SEARCH_TYPE => 'type',
 			ARTICLE_SEARCH_COVERAGE => 'coverage',
 			ARTICLE_SEARCH_GALLEY_FILE => 'galleyFullText',
-			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFiles',
-			ARTICLE_SEARCH_INDEX_TERMS => 'indexTerms'
+			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFiles'
 		);
 
-		// Search keywords.
-		$searchKeywords = array(
-			String::strtolower(__('search.operator.not')) => 'NOT',
-			String::strtolower(__('search.operator.and')) => 'AND',
-			String::strtolower(__('search.operator.or')) => 'OR'
-		);
+		// We query fields with search phrases.
+		foreach($query as $searchField => $searchPhrase) {
+			// Translate query keywords.
+			$searchPhrase = $this->_translateSearchPhrase($searchPhrase);
 
-		$translatedSearch = array();
-		foreach($search as $type => $query) {
-			// Translate search keywords.
-			foreach($searchKeywords as $searchKeyword => $translation) {
-				$query = String::regexp_replace("/(^|\s)$searchKeyword(\s|$)/i", "\\1$translation\\2", $query);
-			}
-			// Translate the search key.
-			if (empty($type)) {
-				$translatedSearch['all'] = $query;
+			// Translate the search field from OJS to solr nomenclature.
+			if (empty($searchField)) {
+				// An empty search field means "all fields".
+				$solrFields = array_values($indexFieldMap);
 			} else {
-				assert(isset($searchTypes[$type]));
-				$translatedSearch[$searchTypes[$type]] = $query;
+				$solrFields = array();
+				foreach($indexFieldMap as $ojsField => $solrField) {
+					// The search field is a bitmap which may stand for
+					// several actual index fields (e.g. the index terms
+					// field).
+					if ($searchField & $ojsField) {
+						$solrFields[] = $solrField;
+					}
+				}
 			}
+			$solrFieldString = implode('|', $solrFields);
+			$searchRequest->addQueryFieldPhrase($solrFieldString, $searchPhrase);
 		}
 
 		// Get the ordering criteria.
 		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
-		$orderDir = ($orderDir == 'asc' ? true : false);
+		$searchRequest->setOrderBy($orderBy);
+		$searchRequest->setOrderDir($orderDir == 'asc' ? true : false);
 
 		// Call the solr web service.
-		$result =& $this->_solrWebService->retrieveResults(
-			$journal, $translatedSearch, $totalResults, $page, $itemsPerPage,
-			$fromDate, $toDate, $orderBy, $orderDir
-		);
+		$result =& $this->_solrWebService->retrieveResults($searchRequest, $totalResults);
 		if (is_null($result)) {
 			$result = array();
 			$error = $this->_solrWebService->getServiceMessage();
@@ -627,6 +634,31 @@ class LucenePlugin extends GenericPlugin {
 
 		// Send the mail.
 		$mail->send($request);
+	}
+
+	/**
+	 * Translate query keywords.
+	 * @param $searchPhrase string
+	 * @return The translated search phrase.
+	 */
+	function _translateSearchPhrase($searchPhrase) {
+		static $queryKeywords;
+
+		if (is_null($queryKeywords)) {
+			// Query keywords.
+			$queryKeywords = array(
+				String::strtolower(__('search.operator.not')) => 'NOT',
+				String::strtolower(__('search.operator.and')) => 'AND',
+				String::strtolower(__('search.operator.or')) => 'OR'
+			);
+		}
+
+		// Translate the search phrase.
+		foreach($queryKeywords as $queryKeyword => $translation) {
+			$searchPhrase = String::regexp_replace("/(^|\s)$queryKeyword(\s|$)/i", "\\1$translation\\2", $searchPhrase);
+		}
+
+		return $searchPhrase;
 	}
 }
 ?>
