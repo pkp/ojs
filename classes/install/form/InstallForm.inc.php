@@ -133,10 +133,10 @@ class InstallForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$cwd = getcwd();
+		$docRoot = $_SERVER['DOCUMENT_ROOT'];
 		if (Core::isWindows()) {
 			// Replace backslashes with slashes for the default files directory.
-			$cwd = str_replace('\\', '/', $cwd);
+			$docRoot = str_replace('\\', '/', $docRoot);
 		}
 
 		$this->_data = array(
@@ -146,7 +146,7 @@ class InstallForm extends Form {
 			'connectionCharset' => '',
 			'databaseCharset' => '',
 			'encryption' => 'md5',
-			'filesDir' =>  $cwd . '/files',
+			'filesDir' =>  dirname(dirname($docRoot)) . '/files',
 			'skipFilesDir' =>  0,
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
