@@ -1993,7 +1993,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function orderSuppFile($args, &$request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
-		SectionEditorAction::orderSuppFile($this->submission, $request->getUserVar('suppFileId'), $request->::getUserVar('d'));
+		SectionEditorAction::orderSuppFile($this->submission, $request->getUserVar('suppFileId'), $request->getUserVar('d'));
 		$request->redirect(null, null, 'submissionEditing', $articleId);
 	}
 
