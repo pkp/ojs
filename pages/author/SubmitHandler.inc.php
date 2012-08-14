@@ -144,7 +144,7 @@ class SubmitHandler extends AuthorHandler {
 
 				case 4:
 					if ($request->getUserVar('submitUploadSuppFile')) {
-						SubmitHandler::submitUploadSuppFile(array(), $request);
+						$this->submitUploadSuppFile(array(), $request);
 						return;
 					}
 					break;

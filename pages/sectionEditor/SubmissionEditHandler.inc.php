@@ -360,14 +360,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Event log
 		$eventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
-		$rangeInfo =& Handler::getRangeInfo('eventLogEntries');
+		$rangeInfo =& $this->getRangeInfo('eventLogEntries');
 		$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		unset($rangeInfo);
 
 		// Email log
 		$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
-		$rangeInfo =& Handler::getRangeInfo('emailLogEntries');
+		$rangeInfo =& $this->getRangeInfo('emailLogEntries');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		unset($rangeInfo);
@@ -487,7 +487,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo =& Handler::getRangeInfo('reviewers');
+			$rangeInfo =& $this->getRangeInfo('reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection); /* @var $reviewers DAOResultFactory */
 
 			$journal = $request->getJournal();
@@ -588,7 +588,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$user =& $request->getUser();
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo('users');
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
 
@@ -1102,7 +1102,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			$journal =& $request->getJournal();
-			$rangeInfo =& Handler::getRangeInfo('reviewForms');
+			$rangeInfo =& $this->getRangeInfo('reviewForms');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -2185,7 +2185,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId, 'history');
 		$submission =& $this->submission;
 
-		$rangeInfo =& Handler::getRangeInfo('submissionNotes');
+		$rangeInfo =& $this->getRangeInfo('submissionNotes');
 		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
 		// submission note edit

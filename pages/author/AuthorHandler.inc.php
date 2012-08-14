@@ -40,7 +40,7 @@ class AuthorHandler extends Handler {
 		$journal =& $request->getJournal();
 
 		$user =& $request->getUser();
-		$rangeInfo =& Handler::getRangeInfo('submissions');
+		$rangeInfo =& $this->getRangeInfo('submissions');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = array_shift($args);

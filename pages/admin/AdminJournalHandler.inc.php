@@ -29,7 +29,7 @@ class AdminJournalHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$rangeInfo = Handler::getRangeInfo('journals');
+		$rangeInfo = $this->getRangeInfo('journals');
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(false, $rangeInfo);

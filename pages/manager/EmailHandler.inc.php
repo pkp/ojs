@@ -29,7 +29,7 @@ class EmailHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$rangeInfo = Handler::getRangeInfo('emails');
+		$rangeInfo = $this->getRangeInfo('emails');
 
 		$journal =& Request::getJournal();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
@@ -45,21 +45,27 @@ class EmailHandler extends ManagerHandler {
 		$templateMgr->display('manager/emails/emails.tpl');
 	}
 
-	function createEmail($args = array()) {
-		EmailHandler::editEmail($args);
+	/**
+	 * Create an empty email template.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function createEmail($args, &$request) {
+		$this->editEmail($args, $request);
 	}
 
 	/**
 	 * Display form to create/edit an email.
-	 * @param $args array optional, if set the first parameter is the key of the email template to edit
+	 * @param $args array if set the first parameter is the key of the email template to edit
+	 * @param $request PKPRequest
 	 */
-	function editEmail($args = array()) {
+	function editEmail($args, &$request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'emails'), 'manager.emails'));
+		$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'emails'), 'manager.emails'));
 
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
 

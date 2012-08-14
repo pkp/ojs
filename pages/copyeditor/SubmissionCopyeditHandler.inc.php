@@ -217,7 +217,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 			} else {
 				// View non-HTML file inline
-				SubmissionCopyeditHandler::viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}

@@ -589,12 +589,14 @@ class AboutHandler extends Handler {
 		$templateMgr->display('about/statistics.tpl');
 	}
 
+	/**
+	 * @see StatisticsHandler::_getPublicStatisticsNames()
+	 */
 	function _getPublicStatisticsNames() {
 		import ('pages.manager.ManagerHandler');
 		import ('pages.manager.StatisticsHandler');
 		return StatisticsHandler::_getPublicStatisticsNames();
 	}
-
 }
 
 ?>

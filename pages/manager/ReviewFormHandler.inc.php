@@ -18,20 +18,22 @@ import('pages.manager.ManagerHandler');
 class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function ReviewFormHandler() {
 		parent::ManagerHandler();
 	}
 
 	/**
 	 * Display a list of review forms within the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function reviewForms() {
+	function reviewForms($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
-		$rangeInfo =& Handler::getRangeInfo('reviewForms');
+		$journal =& $request->getJournal();
+		$rangeInfo =& $this->getRangeInfo('reviewForms');
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms =& $reviewFormDao->getByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -331,7 +333,7 @@ class ReviewFormHandler extends ManagerHandler {
 			Request::redirect(null, null, 'reviewForms');
 		}
 
-		$rangeInfo =& Handler::getRangeInfo('reviewFormElements');
+		$rangeInfo =& $this->getRangeInfo('reviewFormElements');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElementsByReviewForm($reviewFormId, $rangeInfo);
 

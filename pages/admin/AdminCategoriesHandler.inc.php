@@ -36,7 +36,7 @@ class AdminCategoriesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$rangeInfo =& Handler::getRangeInfo('categories');
+		$rangeInfo =& $this->getRangeInfo('categories');
 
 		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
 		$categoryEntryDao =& $categoryDao->getEntryDAO();

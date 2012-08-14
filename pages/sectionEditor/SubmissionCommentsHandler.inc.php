@@ -222,7 +222,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$this->setupTemplate(true);
 		if (SectionEditorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
 			if ($request->getUserVar('blindCcReviewers')) {
-				SubmissionCommentsHandler::blindCcReviewsToReviewers($args, $request);
+				$this->blindCcReviewsToReviewers($args, $request);
 			} else {
 				$request->redirect(null, null, 'submissionReview', array($articleId));
 			}

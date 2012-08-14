@@ -579,7 +579,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			} else {
 				// View non-HTML file inline
-				TrackSubmissionHandler::viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}

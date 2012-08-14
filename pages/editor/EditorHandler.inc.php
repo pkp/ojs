@@ -63,7 +63,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// If a search was performed, get the necessary info.
 		if (array_shift($args) == 'search') {
-			$rangeInfo = Handler::getRangeInfo('submissions');
+			$rangeInfo = $this->getRangeInfo('submissions');
 
 			// Get the user's search conditions, if any
 			$searchField = $request->getUserVar('searchField');
@@ -197,7 +197,7 @@ class EditorHandler extends SectionEditorHandler {
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 
 		switch($page) {
 			case 'submissionsUnassigned':
@@ -438,7 +438,7 @@ class EditorHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo =& Handler::getRangeInfo('editors');
+			$rangeInfo =& $this->getRangeInfo('editors');
 			$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
 
 			if (isset($args[0]) && $args[0] === 'editor') {

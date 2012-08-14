@@ -85,7 +85,7 @@ class IndexHandler extends Handler {
 
 			// If we're using paging, fetch the parameters
 			$usePaging = $site->getSetting('usePaging');
-			if ($usePaging) $rangeInfo =& Handler::getRangeInfo('journals');
+			if ($usePaging) $rangeInfo =& $this->getRangeInfo('journals');
 			else $rangeInfo = null;
 			$templateMgr->assign('usePaging', $usePaging);
 

@@ -68,7 +68,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo('users');
 
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
@@ -188,7 +188,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo('users');
 
 		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $sort);
 
@@ -235,7 +235,7 @@ class PeopleHandler extends ManagerHandler {
 
 		parent::setupTemplate(true);
 
-		$rangeInfo = PKPHandler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo('users');
 
 		$users =& $userDao->getUsersWithNoRole(true, $rangeInfo);
 
@@ -360,9 +360,11 @@ class PeopleHandler extends ManagerHandler {
 
 	/**
 	 * Display form to create a new user.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function createUser($args, &$request) {
-		PeopleHandler::editUser($args, $request);
+		$this->editUser($args, $request);
 	}
 
 	/**
@@ -496,7 +498,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo('users');
 
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo, $sort);
