@@ -94,6 +94,7 @@ class LucenePlugin extends GenericPlugin {
 			// Register callbacks (view-level).
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
+			HookRegistry::register('Templates::Search::SearchResults::SyntaxInstructions', array($this, 'callbackTemplateSyntaxInstructions'));
 
 			// Instantiate the web service.
 			$searchHandler = $this->getSetting(0, 'searchEndpoint');
@@ -424,6 +425,15 @@ class LucenePlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
+		return false;
+	}
+
+	/**
+	 * @see templates/search/searchResults.tpl
+	 */
+	function callbackTemplateSyntaxInstructions($hookName, $params) {
+		$output =& $params[2];
+		$output .= __('plugins.generic.lucene.results.syntaxInstructions');
 		return false;
 	}
 

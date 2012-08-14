@@ -42,6 +42,17 @@
 	<message key="plugins.generic.lucene.results.orderBy.article">Article Title</message>
 	<message key="plugins.generic.lucene.results.orderDir.asc">Ascending</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Descending</message>
+
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Search tips: <ul>
+<li>Search terms are case-insensitive</li>
+<li>Common words are ignored</li>
+<li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>
+<li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
+<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>
+<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
+<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
+<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci*</em> would match documents containing "sociological" or "societal"</li>
+</ul>]]></message>
 	
 	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
 	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the solr server. Is it online?</message>
