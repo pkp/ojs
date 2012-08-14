@@ -35,9 +35,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId);
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
@@ -81,12 +80,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId, 'summary');
-
-		LayoutEditorAction::viewMetadata($submission, $journal);
+		LayoutEditorAction::viewMetadata($this->submission, $journal);
 	}
 
 	/**
@@ -97,11 +93,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function completeAssignment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->setupTemplate(true, $articleId, 'editing');
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-
-		if (LayoutEditorAction::completeLayoutEditing($submission, $request->getUserVar('send'), $request)) {
+		$this->validate($request, $articleId);
+		if (LayoutEditorAction::completeLayoutEditing($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
@@ -118,9 +111,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function uploadLayoutFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 
 		switch ($request->getUserVar('layoutFileType')) {
 			case 'submission':
@@ -158,9 +150,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function editGalley($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -200,8 +191,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function saveGalley($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId, 'editing');
 
 		import('classes.submission.form.ArticleGalleyForm');
@@ -247,9 +237,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function deleteGalley($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 
 		LayoutEditorAction::deleteGalley($submission, $galleyId);
 
@@ -263,9 +252,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function orderGalley($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 
 		LayoutEditorAction::orderGalley($submission, $request->getUserVar('galleyId'), $request->getUserVar('d'));
 
@@ -280,8 +268,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalley($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -297,8 +284,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalleyTop($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -315,8 +301,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function proofGalleyFile($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
@@ -350,10 +335,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revisionId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-		LayoutEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
+		$this->validate($request, $articleId);
+		LayoutEditorAction::deleteArticleImage($this->submission, $fileId, $revisionId);
 
 		$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
@@ -374,9 +357,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -414,9 +396,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function saveSuppFile($args, $request) {
 		$articleId = $request->getUserVar('articleId');
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
+		$this->validate($request, $articleId);
+		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'editing');
 
 		$suppFileId = (int) array_shift($args);
@@ -457,12 +438,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function deleteSuppFile($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$suppFileId = (int) array_shift($args);
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-
-		LayoutEditorAction::deleteSuppFile($submission, $suppFileId);
-
+		$this->validate($request, $articleId);
+		LayoutEditorAction::deleteSuppFile($this->submission, $suppFileId);
 		$request->redirect(null, null, 'submission', $articleId);
 	}
 
@@ -473,12 +450,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function orderSuppFile($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$submissionLayoutHandler = new SubmissionLayoutHandler();
-		$submissionLayoutHandler->validate($articleId);
-		$submission =& $submissionLayoutHandler->submission;
-
-		LayoutEditorAction::orderSuppFile($submission, $request->getUserVar('suppFileId'), $request->getUserVar('d'));
-
+		$this->validate($request, $articleId);
+		LayoutEditorAction::orderSuppFile($this->submission, $request->getUserVar('suppFileId'), $request->getUserVar('d'));
 		$request->redirect(null, null, 'submission', $articleId);
 	}
 
@@ -497,7 +470,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // Can be null
 
-		if($this->validate($articleId)) {
+		if($this->validate($request, $articleId)) {
 			$journal =& $request->getJournal();
 			$submission =& $this->submission;
 		}
@@ -516,7 +489,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // Can be null
 
-		if($this->validate($articleId)) {
+		if($this->validate($request, $articleId)) {
 			$journal =& $request->getJournal();
 			$submission =& $this->submission;
 		}
@@ -537,7 +510,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function layoutEditorProofreadingComplete($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
-		list($journal, $submission) = $this->validate($articleId);
+		list($journal, $submission) = $this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId);
 
 		$send = false;
@@ -558,7 +531,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function downloadLayoutTemplate($args, &$request) {
-		parent::validate();
+		parent::validate($request);
 		$journal =& $request->getJournal();
 		$templates = $journal->getSetting('templates');
 		import('classes.file.JournalFileManager');
