@@ -38,8 +38,10 @@
     <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
         <filter class="solr.ReversedWildcardFilterFactory" />
       </analyzer>
     </fieldType>

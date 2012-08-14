@@ -122,6 +122,32 @@
         }
       }
 
+      // Create the author search and sort field.
+      var authors = row.get('etl_authorList');
+      row.remove('etl_authorList');
+
+      // We concatenate authors into a single string. We could use a multiValue-field
+      // to search authors but we prefer to keep our schema simple (one less field
+      // type necessary). 
+      var authorsConcat = '';
+      for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
+        if (authorsConcat !== '') {
+          authorsConcat += '; ';
+        }
+        authorsConcat += String(authors.get(iA));
+      }
+      row.put('authors_txt', authorsConcat);
+      row.put('authors_txtsort', authorsConcat);
+
+      // Create the publication date sort field.
+      // We could use a copy field instruction in the schema file
+      // for this but we prefer to keep this code close to where all
+      // other import transformations take place.
+      var publicationDate = row.get('publicationDate_dt');
+      if (publicationDate !== null) {
+        row.put('publicationDate_dtsort', publicationDate);
+      }
+
       // Prepare the galley XML.
       var galleyXml = row.get('etl_galley_xml');
       if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
@@ -290,19 +316,8 @@
       var docFieldName, docFieldValue;
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
 
-      // Create the authors sort field.
-      var authors = context.resolve('article.authors_txt'), authorsSort = '';
-      for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
-        if (authorsSort !== '') authorsSort += '; ';
-        authorsSort += String(authors.get(iA));
-      }
-      row.put('authors_txtsort', authorsSort);
-
-      // Create the publication date sort field.
-      var publicationDate = context.resolve('article.publicationDate_dt');
-      if (publicationDate !== null) {
-        row.put('publicationDate_dtsort', publicationDate);
-      }
+      // Retrieve the authors field.
+      var authors = context.resolve('article.authors_txt');
 
       // Add document-level fields to the document.
       for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
@@ -310,11 +325,11 @@
         docFieldValue = context.getSessionAttribute(docFieldName, context.SCOPE_DOC);
 
         // Add authors to spell check and "all" fields.
+        // We have to do this at this late stage to be sure that
+        // we add the authors to all locales as authors themselves
+        // are the only non-localized search field.
         if (docFieldName == 'default_spell' || docFieldName.indexOf('all_') === 0) {
-          for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
-            var author = String(authors.get(iA));
-            docFieldValue += ' ' + author;
-          }
+            docFieldValue += ' ' + authors;
         }
 
         row.put(docFieldName, docFieldValue);
@@ -339,7 +354,7 @@
       <field column="inst_id" xpath="/articleList/article/@instId" />
 
       <!-- Authors -->
-      <field column="authors_txt" xpath="/articleList/article/authorList/author" multiValued="true" />
+      <field column="etl_authorList" xpath="/articleList/article/authorList/author" multiValued="true" />
 
       <!-- Titles -->
       <field column="etl_titleList" xpath="/articleList/article/titleList/title" multiValued="true" />
