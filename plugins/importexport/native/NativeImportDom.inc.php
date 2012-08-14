@@ -785,7 +785,7 @@ class NativeImportDom {
 
 		/* --- Handle authors --- */
 		for ($index = 0; ($node = $articleNode->getChildByName('author', $index)); $index++) {
-			if (!NativeImportDom::handleAuthorNode($journal, $node, $issue, $section, $article, $authorErrors)) {
+			if (!NativeImportDom::handleAuthorNode($journal, $node, $issue, $section, $article, $authorErrors, $index)) {
 				$errors = array_merge($errors, $authorErrors);
 				$hasErrors = true;
 			}
@@ -895,7 +895,17 @@ class NativeImportDom {
 		return true;
 	}
 
-	function handleAuthorNode(&$journal, &$authorNode, &$issue, &$section, &$article, &$errors) {
+	/**
+	 * Handle an author node (i.e. convert an author from DOM to DAO).
+	 * @param $journal Journal
+	 * @param $authorNode DOMElement
+	 * @param $issue Issue
+	 * @param $section Section
+	 * @param $article Article
+	 * @param $errors array
+	 * @param $authorIndex int 0 for first author, 1 for second, ...
+	 */
+	function handleAuthorNode(&$journal, &$authorNode, &$issue, &$section, &$article, &$errors, $authorIndex) {
 		$errors = array();
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
@@ -905,6 +915,7 @@ class NativeImportDom {
 		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
 		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
 		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
+		$author->setSequence($authorIndex+1); // 1-based
 		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
 			if ($locale == '') {
