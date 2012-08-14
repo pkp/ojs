@@ -31,16 +31,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewEditorDecisionComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) array_shift($args);
-
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		AuthorAction::viewEditorDecisionComments($authorSubmission);
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
+		AuthorAction::viewEditorDecisionComments($this->submission);
 	}
 
 	/**
@@ -49,16 +43,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewCopyeditComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) array_shift($args);
-
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		AuthorAction::viewCopyeditComments($authorSubmission);
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
+		AuthorAction::viewCopyeditComments($this->submission);
 	}
 
 	/**
@@ -67,20 +55,15 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request object
 	 */
 	function postCopyeditComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		if (AuthorAction::postCopyeditComment($authorSubmission, $emailComment, $request)) {
-			AuthorAction::viewCopyeditComments($authorSubmission);
+		if (AuthorAction::postCopyeditComment($this->submission, $emailComment, $request)) {
+			AuthorAction::viewCopyeditComments($this->submission);
 		}
 	}
 
@@ -90,15 +73,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewProofreadComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) array_shift($args);
-
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-		AuthorAction::viewProofreadComments($authorSubmission);
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
+		AuthorAction::viewProofreadComments($this->submission);
 	}
 
 	/**
@@ -107,20 +85,15 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request object
 	 */
 	function postProofreadComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		if (AuthorAction::postProofreadComment($authorSubmission, $emailComment, $request)) {
-			AuthorAction::viewProofreadComments($authorSubmission);
+		if (AuthorAction::postProofreadComment($this->submission, $emailComment, $request)) {
+			AuthorAction::viewProofreadComments($this->submission);
 		}
 	}
 
@@ -130,15 +103,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function viewLayoutComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) array_shift($args);
-
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-		AuthorAction::viewLayoutComments($authorSubmission);
+		$this->validate($requset, $articleId);
+		$this->setupTemplate($request, true);
+		AuthorAction::viewLayoutComments($this->submission);
 
 	}
 
@@ -148,19 +116,15 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function postLayoutComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request, true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($args, $articleId);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-		if (AuthorAction::postLayoutComment($authorSubmission, $emailComment, $request)) {
-			AuthorAction::viewLayoutComments($authorSubmission);
+		if (AuthorAction::postLayoutComment($this->submission, $emailComment, $request)) {
+			AuthorAction::viewLayoutComments($this->submission);
 		}
 	}
 
@@ -170,14 +134,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function emailEditorDecisionComment($args, $request) {
-		$this->setupTemplate($request, true);
-				
 		$articleId = (int) $request->getUserVar('articleId');
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		if (AuthorAction::emailEditorDecisionComment($authorSubmission, $request->getUserVar('send'), $request)) {
+		$this->setupTemplate($request, true);
+		$this->validate($request, $articleId);
+		if (AuthorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submissionReview', array($articleId));
 		}
 	}
@@ -192,21 +152,13 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$commentId = array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
-		
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-		
-		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
 			$request->redirect(null, $request->getRequestedPage());
 		}
-
-		AuthorAction::editComment($authorSubmission, $comment);
+		AuthorAction::editComment($this->submission, $this->comment);
 	}
 
 	/**
@@ -219,37 +171,31 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$commentId = (int) $request->getUserVar('commentId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-		
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 				
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
-
-		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
 			$request->redirect(null, $request->getRequestedPage());
 		}
 
-		AuthorAction::saveComment($authorSubmission, $comment, $emailComment, $request);
+		AuthorAction::saveComment($this->submission, $this->comment, $emailComment, $request);
 
 		// refresh the comment
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			$request->redirect(null, null, 'viewEditorDecisionComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
 			$request->redirect(null, null, 'viewCopyeditComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
 			$request->redirect(null, null, 'viewLayoutComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
 			$request->redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
@@ -264,24 +210,19 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-		
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
-		$trackSubmissionHandler = new TrackSubmissionHandler();
-		$trackSubmissionHandler->validate($request, $articleId);
-		$authorSubmission =& $trackSubmissionHandler->submission;
 		AuthorAction::deleteComment($commentId);
 
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+		if ($this->comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			$request->redirect(null, null, 'viewEditorDecisionComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
 			$request->redirect(null, null, 'viewCopyeditComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
 			$request->redirect(null, null, 'viewLayoutComments', $articleId);
-		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
+		} else if ($this->comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
 			$request->redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}

@@ -673,47 +673,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 	}
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the author for the article.
-	 * Redirects to author index page if validation fails.
-	 * @param $request PKPRequest
-	 * @param $articleId int
-	 */
-	function validate($request, $articleId) {
-		parent::validate();
-
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
-
-		$isValid = true;
-
-		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
-
-		if ($authorSubmission == null) {
-			$isValid = false;
-		} else if ($authorSubmission->getJournalId() != $journal->getId()) {
-			$isValid = false;
-		} else {
-			if ($authorSubmission->getUserId() != $user->getId()) {
-				$isValid = false;
-			}
-		}
-
-		if (!$isValid) {
-			$request->redirect(null, $request->getRequestedPage());
-		}
-
-		$this->journal =& $journal;
-		$this->submission =& $authorSubmission;
-		return true;
-	}
 }
 
 ?>
