@@ -16,9 +16,12 @@ import('classes.submission.copyeditor.CopyeditorAction');
 import('classes.handler.Handler');
 
 class CopyeditorHandler extends Handler {
+	/** submission associated with the request, if any **/
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function CopyeditorHandler() {	
 		parent::Handler();
 		$this->addCheck(new HandlerValidatorJournal($this));
@@ -27,27 +30,29 @@ class CopyeditorHandler extends Handler {
 
 	/**
 	 * Display copyeditor index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index($args) {
-		$this->validate();
+	function index($args, &$request) {
+		$this->validate($request);
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
 
 		// Get the user's search conditions, if any
-		$searchField = Request::getUserVar('searchField');
-		$dateSearchField = Request::getUserVar('dateSearchField');
-		$searchMatch = Request::getUserVar('searchMatch');
-		$search = Request::getUserVar('search');
+		$searchField = $request->getUserVar('searchField');
+		$dateSearchField = $request->getUserVar('dateSearchField');
+		$searchMatch = $request->getUserVar('searchMatch');
+		$search = $request->getUserVar('search');
 
-		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
-		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -59,9 +64,9 @@ class CopyeditorHandler extends Handler {
 				$active = true;
 		}
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
@@ -77,7 +82,7 @@ class CopyeditorHandler extends Handler {
 			'dateSearchField'
 		);
 		foreach ($duplicateParameters as $param)
-			$templateMgr->assign($param, Request::getUserVar($param));
+			$templateMgr->assign($param, $request->getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
@@ -124,13 +129,52 @@ class CopyeditorHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
+		}
+	}
+
+	/**
+	 * Validate that the user is the assigned copyeditor for
+	 * the article, if specified. Validate user role.
+	 * @param $request PKPRequest
+	 * @param $articleId int optional
+	 */
+	function validate($request, $articleId = null) {
+		parent::validate();
+
+		if ($articleId !== null) {
+			$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
+
+			$isValid = true;
+
+			$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getId());
+
+			if ($copyeditorSubmission == null) {
+				$isValid = false;
+			} else {
+				if ($copyeditorSubmission->getJournalId() != $journal->getId()) {
+					$isValid = false;
+				} else {
+					if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
+						$isValid = false;
+					}
+				}
+			}
+
+			if (!$isValid) {
+				$request->redirect(null, $request->getRequestedPage());
+			}
+
+			$this->submission =& $copyeditorSubmission;
 		}
 	}
 }
