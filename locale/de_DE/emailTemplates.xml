@@ -255,7 +255,7 @@ In der Hoffnung auf eine positive Antwort,
 		<subject>Bitte um ein Gutachten</subject>
 		<body>{$reviewerName},
 
-aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}", das zur Publikation in {$journalName} eingereicht worden ist. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe. Die Richtlinien für die Begutachtung sind angefügt, ebenso der Beitrag, um den es geht. Ihr Gutachten und Ihre Empfehlung sollten gegebenenfalls bis zum {$reviewDueDate} per E-Mail bei uns eingehen.
+aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript "{$articleTitle}". Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe. Die Richtlinien für die Begutachtung sind angefügt, ebenso der Beitrag, um den es geht. Ihr Gutachten und Ihre Empfehlung sollten gegebenenfalls bis zum {$reviewDueDate} per E-Mail bei uns eingehen.
 
 Bitte benachrichtigen Sie uns bis zum {$weekLaterDate} per E-Mail, ob Sie das Gutachten übernehmen können.
 
