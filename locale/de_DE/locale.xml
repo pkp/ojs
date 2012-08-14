@@ -193,7 +193,7 @@
 	<!-- Anmerkungen zu Einreichungen -->
 
 	<!-- Allgemeine Begriffe: Zeitschrift -->
-	<message key="journal.currentIssue">Letzte Ausgabe</message>
+	<message key="journal.currentIssue">Aktuelle Ausgabe</message>
 	<message key="journal.journals">Zeitschriften</message>
 	<message key="journal.path">Zugangspfad</message>
 	<message key="journal.journal">Zeitschrift</message>
