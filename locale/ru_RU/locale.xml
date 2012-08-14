@@ -376,7 +376,7 @@ Setting up LOCKSS support for Slavica Journals does not need to take place until
 
 
 
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Journal will use a subject classification system available on the web.<br />
 Title of classification system]]></message>
 
 

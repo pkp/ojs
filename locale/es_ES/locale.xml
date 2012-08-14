@@ -1025,7 +1025,7 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="payment.fastTrack.payFastTrack">Pagar Revisión Rápida</message>
 	<message key="payment.fastTrack.inFastTrack">En Revisión Rápida</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página muestra actualizaciones importantes asociados a esta revista, como nuevos números o anuncios. Puedes suscribirte a estas notificaciones a través de nuestro RSS (haciendo clic en la imagen de la derecha), o  <a href="{$emailUrl}">a través de correo electrónico.</a>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La revista utilizará un sistema de clasificación de tema disponible en la web. <br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revista utilizará un sistema de clasificación de tema disponible en la web. <br />
 Título del sistema de clasificación]]></message>
 	<message key="submission.layout.noLayoutFile">Ninguno (Antes de mandar la petición, subir versión final del corrector a modo de versión de maquetación)</message>
 	<message key="payment.alreadyPaidMessage">Selecciona esta caja si ya has enviado tu pago a la revista para terminar el proceso de presentación. La presentación no será revisada hasta recibir el pago. Haz clic donde pone PAGAR AHORA para ver las intrucciones de pago.</message>

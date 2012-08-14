@@ -314,7 +314,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
 Tên của hệ thống phân loại]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Để nội dung của tạp chí này được đưa vào chỉ mục trong một hệ thống các CSDL nghiên cứu rải rác trên toàn cầu, hãy <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">đăng ký</a> đường dẫn URL của tạp chí với <a href="http://pkp.sfu.ca/harvester/" target="_blank">công cụ gặt hái</a> siêu dữ liệu của dự án Public Knowledge Project. Công cụ này thu thập dữ liệu mô tả (siêu dữ liệu) từ mỗi một bài viết được lập chỉ mục trên tạp chí này, cho phép tìm kiếm chính xác và đồng loạt trên các website phục vụ nghiên cứu tuân theo <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Giao thức Open Archives Initiative về gặt hái siêu dữ liệu</a>.
 <br /><br />

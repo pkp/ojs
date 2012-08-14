@@ -267,7 +267,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   </message>
   <!-- Setup Step 3 -->
   <message key="manager.setup.subjectClassificationDescription">
-    <![CDATA[[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
+    <![CDATA[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
 分類システムの名称]]>
   </message>
   <message key="manager.setup.registerJournalForIndexingDescription">

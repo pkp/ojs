@@ -381,7 +381,7 @@
 	<message key="manager.setup.sponsorsDescription">Namn på organisationer (ex. forskningsorganisationer, avdelningar inom universitet etc.) som stöttar tidskriften finns tillgängligt under Om tidskriften. Här kan även inkluderas ett tack från utgivare.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem steg mot en tidskriftshemsida</message>
 	<message key="manager.setup.subjectClassification">Ämnesklassificering</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidskriften använder ett klassificeringssystem som finns tillgängligt online: <br /> Title på klassifikationssystem]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(T.ex., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(T.ex., Fotosyntes; Svarta hål; Zenons paradoxer)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>

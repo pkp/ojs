@@ -484,7 +484,7 @@ Autorii care publică în această revistă să fie de acord cu următoarele con
 
 
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Revista va folosi un sistem de clasificare al disciplinelor existent pe web.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Revista va folosi un sistem de clasificare al disciplinelor existent pe web.<br />
 Titlul sistemului de clasificare]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pentru a avea indexat conţinutul acestei reviste într-un sistem de baze de date pentru cercetare distribuite global, citiți <a href="http://www.oaister.org/dataproviders.html" target="_blank">pașii care sunt necesari pentru a deveni un contribuitor de date</a> și înregistrați revista în registrul oficial pentru <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Arhive Deschise</a>. Pentru a vă înregistra este necesar URL-ul de bază al depozitului: <span class="highlight">{$oaiUrl}</span>. Apoi, puteți înregistra revista proprie în <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registrul OAI al UIUC</a> și în <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 
