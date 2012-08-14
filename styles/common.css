@@ -382,6 +382,30 @@ td.notificationFunction {
 	margin-top: 5%;
 }
 
+/* Font Sizer */
+#sizer a {
+	outline: none;
+	text-indent: -9999px;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 23px;
+	margin-right: 4px;
+	margin-left: 8px;
+}
+
+.pkp_controllers_fontController_smallFont, .pkp_controllers_fontController_smallFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-down.png);
+}
+
+.pkp_controllers_fontController_defaultFont, .pkp_controllers_fontController_defaultFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-default.png);
+}
+
+.pkp_controllers_fontController_largeFont, .pkp_controllers_fontController_largeFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-up.png);
+}
+
 #journalListPageInfo {
 	float: right;
 }
