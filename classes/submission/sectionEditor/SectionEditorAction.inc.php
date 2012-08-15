@@ -1084,8 +1084,7 @@ class SectionEditorAction extends Action {
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionCopyeditingUrl' => $request->url(null, 'author', 'submission', $sectionEditorSubmission->getId())
-
+					'submissionCopyeditingUrl' => $request->url(null, 'author', 'submissionEditing', $sectionEditorSubmission->getId())
 				);
 				$email->assignParams($paramArray);
 			}
