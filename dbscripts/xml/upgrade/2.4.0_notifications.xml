@@ -15,6 +15,14 @@
 	<!-- Bug #6792: Notification overhaul -->
 	<sql>
 		<rename table="notifications" to="notifications_old" />
-		<rename table="notification_settings" to="notification_settings_old" />
+		<query driver="mysql">
+			RENAME TABLE notification_settings TO notification_settings_old
+		</query>
+		<query driver="postgres7">
+			SELECT setting_id, setting_name, setting_value, user_id, product, context INTO notification_settings_old FROM notification_settings
+		</query>
+		<query driver="postgres7">
+			DROP TABLE notification_settings
+		</query>
 	</sql>
 </data>
