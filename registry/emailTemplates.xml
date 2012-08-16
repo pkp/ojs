@@ -7,8 +7,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Email templates XML file.
-  *
-  * $Id$
   -->
 <emails>
 	<email key="NOTIFICATION" can_edit="1" can_disable="0"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  * scheduledTasks.xml
+  * registry/scheduledTasks.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -21,8 +21,6 @@
   * 	<descr>Send reviewer reminder emails, once per hour.</descr>
   * 	<frequency minute="0"/>
   * </task>
-  *
-  * $Id$
   -->
 
 <!DOCTYPE scheduled_tasks SYSTEM "../lib/pkp/dtd/scheduledTasks.dtd">
