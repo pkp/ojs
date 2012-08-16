@@ -2079,13 +2079,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($logId) {
 			$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
-			$logEntry =& $logDao->getById($logId, $articleId);
+			$logEntry =& $logDao->getById($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		}
 
 		if (isset($logEntry)) {
 			$templateMgr->assign_by_ref('logEntry', $logEntry);
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
-
 		} else {
 			$rangeInfo =& $this->getRangeInfo('emailLogEntries');
 

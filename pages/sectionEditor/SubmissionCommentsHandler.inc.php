@@ -94,24 +94,6 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	}
 
 	/**
-	 * Blind CC the reviews to reviewers.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function blindCcReviewsToReviewers($args, $request) {
-		$articleId = $request->getUserVar('articleId');
-		$this->validate($articleId);
-
-		$send = $request->getUserVar('send')?true:false;
-		$inhibitExistingEmail = $request->getUserVar('blindCcReviewers')?true:false;
-
-		if (!$send) $this->setupTemplate(true, $articleId, 'editing');
-		if (SectionEditorAction::blindCcReviewsToReviewers($this->submission, $send, $inhibitExistingEmail, $request)) {
-			$request->redirect(null, null, 'submissionReview', $articleId);
-		}
-	}
-
-	/**
 	 * View copyedit comments.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -222,10 +204,25 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$this->setupTemplate(true);
 		if (SectionEditorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
 			if ($request->getUserVar('blindCcReviewers')) {
-				$this->blindCcReviewsToReviewers($args, $request);
+				$request->redirect(null, null, 'bccEditorDecisionCommentToReviewers', null, array('articleId' => $articleId));
 			} else {
 				$request->redirect(null, null, 'submissionReview', array($articleId));
 			}
+		}
+	}
+
+	/**
+	 * Blind CC the editor decision email to reviewers.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function bccEditorDecisionCommentToReviewers($args, $request) {
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($articleId);
+
+		$this->setupTemplate(true);
+		if (SectionEditorAction::bccEditorDecisionCommentToReviewers($this->submission, $request->getUserVar('send'), $request)) {
+			$request->redirect(null, null, 'submissionReview', array($articleId));
 		}
 	}
 

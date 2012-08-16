@@ -2118,44 +2118,38 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
-	 * Blind CC the reviews to reviewers.
+	 * Blind CC the editor decision email to reviewers.
 	 * @param $article object
 	 * @param $send boolean
-	 * @param $inhibitExistingEmail boolean
 	 * @return boolean true iff ready for redirect
 	 */
-	function blindCcReviewsToReviewers($article, $send, $inhibitExistingEmail, $request) {
-		$commentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$journal =& $request->getJournal();
-
-		$comments =& $commentDao->getArticleComments($article->getId(), COMMENT_TYPE_EDITOR_DECISION);
-		$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($article->getId(), $article->getCurrentRound());
-
-		$commentsText = "";
-		foreach ($comments as $comment) {
-			$commentsText .= String::html2text($comment->getComments()) . "\n\n";
-		}
-
-		$user =& $request->getUser();
+	function bccEditorDecisionCommentToReviewers($article, $send, $request) {
 		import('classes.mail.ArticleMailTemplate');
-		$email = new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS', null, null, null, true, true);
+		$email = new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
 
-		if ($send && !$email->hasErrors() && !$inhibitExistingEmail) {
-			HookRegistry::call('SectionEditorAction::blindCcReviewsToReviewers', array(&$article, &$reviewAssignments, &$email));
+		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('SectionEditorAction::bccEditorDecisionCommentToReviewers', array(&$article, &$reviewAssignments, &$email));
 			$email->send($request);
 			return true;
 		} else {
-			if ($inhibitExistingEmail || !$request->getUserVar('continued')) {
+			if (!$request->getUserVar('continued')) {
+				$userDao =& DAORegistry::getDAO('UserDAO');
+				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+				$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($article->getId(), $article->getCurrentRound());
 				$email->clearRecipients();
 				foreach ($reviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 						$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
-
 						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
 					}
 				}
+
+				$commentsText = "";
+				if ($article->getMostRecentEditorDecisionComment()) {
+					$comment = $article->getMostRecentEditorDecisionComment();
+					$commentsText = String::html2text($comment->getComments()) . "\n\n";
+				}
+				$user =& $request->getUser();
 
 				$paramArray = array(
 					'comments' => $commentsText,
@@ -2164,7 +2158,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 
-			$email->displayEditForm($request->url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getId()));
+			$email->displayEditForm($request->url(null, null, 'bccEditorDecisionCommentToReviewers', 'send'), array('articleId' => $article->getId()));
 			return false;
 		}
 	}

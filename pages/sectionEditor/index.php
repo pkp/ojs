@@ -147,7 +147,7 @@ switch ($op) {
 	case 'viewPeerReviewComments':
 	case 'postPeerReviewComment':
 	case 'viewEditorDecisionComments':
-	case 'blindCcReviewsToReviewers':
+	case 'bccEditorDecisionCommentToReviewers':
 	case 'postEditorDecisionComment':
 	case 'viewCopyeditComments':
 	case 'postCopyeditComment':
