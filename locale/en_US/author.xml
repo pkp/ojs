@@ -7,12 +7,10 @@
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (English) locale.
-  *
-  * $Id$
+  * Localization strings.
   -->
 
-<locale name="en_US" full_name = "English">
+<locale name="en_US" full_name="U.S. English">
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Active Submissions</message>
 	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>

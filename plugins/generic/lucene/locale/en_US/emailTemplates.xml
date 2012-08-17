@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * emailTemplates.xml
+  * @file plugins/generic/lucene/locale/en_US/emailTemplates.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
   -->
+
 <email_texts locale="en_US">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Article Indexing Error</subject>

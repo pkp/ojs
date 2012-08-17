@@ -2,16 +2,14 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * @file plugins/implicitAuth/shibboleth/locale/en_US/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings
   *
   * Contributed by Dan Galewsky, University of Texas
-  *
-  * $Id$
   -->
  
 <locale name="en_US" full_name="U.S. English">
