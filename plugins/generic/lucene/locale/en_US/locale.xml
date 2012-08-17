@@ -12,11 +12,11 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
-	<message key="plugins.generic.lucene.description">The Lucene plugin provides improved search result relevance, faceted search, "more-like-this" functionality and more.</message>
+	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 	<message key="plugins.generic.lucene.settings">Settings</message>
 	<message key="plugins.generic.lucene.settings.description"><![CDATA[
-		<p>The Lucene plug-in acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.</p>
-		<p><b>Please make sure you read the plug-in's README file (plugins/generic/lucene/README) before you try to change the default configuration.</b></p>
+		<p>The Lucene plugin acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.</p>
+		<p><strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong></p>
 		<p>If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.</p>
 	]]></message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
@@ -47,11 +47,11 @@
 <li>Search terms are case-insensitive</li>
 <li>Common words are ignored</li>
 <li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>
+<li>Make sure that a word exists in an article by prefixing it with <strong>+</strong>; e.g., <em>+journal +access scholarly academic</em></li>
 <li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
-<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>
+<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g., <em>online -politics</em> or <em>online NOT politics</em></li>
 <li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
 <li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
-<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci*</em> would match documents containing "sociological" or "societal"</li>
 </ul>]]></message>
 	
 	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
