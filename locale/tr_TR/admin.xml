@@ -60,4 +60,23 @@
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Olmayan Kayıtlı Kullanıcılar.</message>
+	<message key="admin.settings.useAlphalist">For sites with many journals, show an alphalist on the homepage allowing for quick alphabetical navigation between journals.</message>
+	<message key="admin.settings.journalsList.description">Please choose the journal elements that will be displayed for each journal at the site page.</message>
+	<message key="admin.categories.enable.description">The Site Administrator may choose to define a set of categories here to help organize large sets of journals. Journal Managers may then choose several of these categories for each journal, and readers can browse journal collections by category.</message>
+	<message key="admin.categories.editTitle">Kategori Düzenle</message>
+	<message key="admin.categories.createTitle">Kategori Oluştur</message>
+	<message key="admin.categories.name">Ad</message>
+	<message key="admin.settings.options">Seçenekler</message>
+	<message key="admin.settings.usePaging">Birçok dergi olan siteler için, dergilerin listesi birkaç sayfa kadar bölünürler.</message>
+	<message key="admin.settings.journalsList">Dergi elemanları</message>
+	<message key="admin.settings.journalsList.showThumbnail">Dergi Görseli (Küçük)</message>
+	<message key="admin.settings.journalsList.showTitle">Dergi başlığı</message>
+	<message key="admin.settings.journalsList.showDescription">Dergi tanımı</message>
+	<message key="admin.categories">Kategoriler</message>
+	<message key="admin.categories.disableCategories">Kategorilerde dergileri düzenlemeyiniz.</message>
+	<message key="admin.categories.enableCategories">Kategorilerde dergileri düzenlemek için Dergi Yöneticisine izin ver.</message>
+	<message key="admin.categories.create">Yeni bir kategori oluştur.</message>
+	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
+	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
+	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
 </locale>

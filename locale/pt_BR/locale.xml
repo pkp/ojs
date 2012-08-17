@@ -191,12 +191,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nível</message>
-	<message key="submission.event.logLevel.info">Informação</message>
-	<message key="submission.event.logLevel.notice">Aviso</message>
-	<message key="submission.event.logLevel.warning">Advertência</message>
-	<message key="submission.event.logLevel.error">Erro</message>
-	
 	<message key="submission.event.general.defaultEvent">Evento da submissão</message>
 	<message key="submission.event.general.articleSubmitted">Artigo submetido</message>
 	<message key="submission.event.general.issueScheduled">Submissão enviada à fila de agendamento</message>
@@ -544,7 +538,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Profile -->
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repetir senha</message>
 	<message key="user.register.selectJournal">Escolha em qual revista realizar o cadastro</message>
 	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
@@ -663,7 +656,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 <h4>Requisitos Básicos</h4>
 
 <ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (incluindo PHP 5.x)</li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluindo PHP 5.x). Sua versão atual do PHP é {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluindo MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluindo PosgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ou >= 2.0.4x ou Microsoft IIS 6</li>
 	<li>Sistema Operacional: Qualquer sistema operacional que suporte o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
@@ -883,7 +876,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.authenticated">Usuários devem estar cadastrados e logados para comentar, sem permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Usuários devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar cadastrado para comentar, com permissão de anonimato.</message>
-	<message key="rt.metadata.pkp.doi">Identificador de Objeto Digital (DOI)</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do arquivo XML</message>
 	<message key="debug.notes.helpMappingLoad">Foi recarregado o arquivo XML de mapeamento da ajuda {$filename} buscando por {$id}.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
@@ -1017,24 +1009,24 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="installer.upgradeApplication">Atualizar o sistema</message>
 	<message key="notification.mailListDescription">Informe seu endereço de e-mail para receber notificações imediatas sobre conteúdo importante recentemente publicado na revista.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página exibe atualizações importantes associadas a este periódico, como lançamento de edições e notícias. Assine as notificações através de canais RSS (clicando nas imagens à direita), ou <a href="{$emailUrl}">por e-mail.</a>]]></message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$param}", foi submetido.</message>
-	<message key="notification.type.copyeditComment">O Editor de Texto fez um comentário sobre ""{$param}".</message>
+	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
+	<message key="notification.type.copyeditComment">O Editor de Texto fez um comentário sobre ""{$title}".</message>
 	<message key="notification.type.editing">Editando eventos</message>
-	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$param}".</message>
-	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$title}".</message>
+	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>
 	<message key="notification.type.issuePublished">Uma nova edição foi publicada.</message>
-	<message key="notification.type.layoutComment">Um comentário foi feito sobre o layout de "{$param}".</message>
-	<message key="notification.type.metadataModified">Os metadados de "{$param}" foram alterados.</message>
+	<message key="notification.type.layoutComment">Um comentário foi feito sobre o layout de "{$title}".</message>
+	<message key="notification.type.metadataModified">Os metadados de "{$title}" foram alterados.</message>
 	<message key="notification.type.newAnnouncement">Uma nova notícia foi publicada.</message>
-	<message key="notification.type.proofreadComment">Um comentário foi feito pelo leitor de provas sobre "{$param}".</message>
-	<message key="notification.type.reviewerComment">Um avaliador fez comentários sobre "{$param}".</message>
-	<message key="notification.type.reviewerFormComment">Um formulário de avaliação sobre "{$param}" foi enviado.</message>
+	<message key="notification.type.proofreadComment">Um comentário foi feito pelo leitor de provas sobre "{$title}".</message>
+	<message key="notification.type.reviewerComment">Um avaliador fez comentários sobre "{$title}".</message>
+	<message key="notification.type.reviewerFormComment">Um formulário de avaliação sobre "{$title}" foi enviado.</message>
 	<message key="notification.type.reviewing">Eventos da Avaliação</message>
 	<message key="notification.type.site">Eventos do Portal</message>
-	<message key="notification.type.submissionComment">Um editor fez comentários sobre "{$param}".</message>
+	<message key="notification.type.submissionComment">Um editor fez comentários sobre "{$title}".</message>
 	<message key="notification.type.submissions">Eventos da Submissão</message>
-	<message key="notification.type.suppFileModified">Arquivo(s) suplementar(es) de "{$param}" foram alterados.</message>
-	<message key="notification.type.userComment">Um leitor comentou sobre "{$param}".</message>
+	<message key="notification.type.suppFileModified">Arquivo(s) suplementar(es) de "{$title}" foram alterados.</message>
+	<message key="notification.type.userComment">Um leitor comentou sobre "{$title}".</message>
 	<message key="navigation.archives">Anteriores</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Um pagamento manual foi iniciado, mas não foi recebido ainda</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Um pagamento online foi iniciado, mas não foi concluído.</message>
@@ -1053,4 +1045,64 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.authorization.sectionAssignment">Está tentando acessar um artigo que não faz parte da sua seção.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Submissão do editor de texto inválida ou nenhuma submissão do editor de texto solicitada!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Submissão do editor de seção inválida ou nenhuma submissão do editor de seção solicitada!</message>
+	<message key="navigation.categories">Categorias</message>
+	<message key="navigation.categories.browse">Navegar</message>
+	<message key="issue.fullIssue">Edição completa</message>
+	<message key="issue.nonpdf.title">Baixar edição</message>
+	<message key="issue.viewIssue">ver edição</message>
+	<message key="issue.viewIssueDescription">Ver ou baixar a edição completa</message>
+	<message key="plugins.categories.pubIds">Plugins de identificação pública</message>
+	<message key="plugins.categories.pubIds.description">Estes plugins implementam suporte para identificadores públicos.</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Itens destacados indicam que ações do editor são requeridas, conforme a seguir:
+		<ul>
+			<li class="highlightCopyediting">Uma ação é requerida no estágio de edição de texto</li>
+			<li class="highlightLayoutEditing">Uma ação é requerida no estágio de edição de layout</li>
+			<li class="higlightProofreading">Uma ação é requerida no estágio de leitura de provas</li>
+		</ul>
+	</li>
+</ol>]]></message>
+	<message key="site.noJournals">Não há publicações disponíveis.</message>
+	<message key="gifts.buyer">Remetente</message>
+	<message key="gifts.buyerDescription">De quem é este presente?</message>
+	<message key="gifts.recipient">Para</message>
+	<message key="gifts.recipientDescription">Para quem é este presente?</message>
+	<message key="gifts.thankYou">Obrigado</message>
+	<message key="gifts.thankYouMessage">A compra do seu presente foi concluída. Será enviada uma cópia da mensagem de presente ao destinatário assim que o pagamento for processado.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Assinatura de presentes</message>
+	<message key="gifts.subscriptionFormIntroduction">Preencha o formulário a seguir. Os dados de contato, assim como o texto sobre o presente, serão usados na mensagem ao destinatário, informando sobre a nova assinatura de presente (uma cópia da mensagem também lhe será enviada).</message>
+	<message key="gifts.details">Detalhes do presente</message>
+	<message key="gifts.detailsDescription">Escolha o presente da lista e inclua uma mensagem personalizada que será enviada ao destinatário (você receberá uma cópia da mensagem).</message>
+	<message key="gifts.gift">Presente</message>
+	<message key="gifts.noteTitle">Título</message>
+	<message key="gifts.note">Nota sobre o presente</message>
+	<message key="gifts.noteTitleRequired">Informe o título de sua mensagem personalizada.</message>
+	<message key="gifts.noteRequired">Informe o texto de sua mensagem personalizada.</message>
+	<message key="gifts.localeRequired">Informe o idioma de sua mensagem personalizada.</message>
+	<message key="gifts.myGifts">Meus presentes</message>
+	<message key="gifts.manageMyGifts">Gerenciar presentes</message>
+	<message key="gifts.redeemGift">Resgatar presente</message>
+	<message key="gifts.status.notRedeemed">Disponível</message>
+	<message key="gifts.status.redeemed">Resgatado</message>
+	<message key="gifts.status.redeemGift">Resgatar presente</message>
+	<message key="gifts.subscriptions">Assinaturas</message>
+	<message key="gifts.subscriptionsDescription">Uma assinatura de presente resgatada aqui substituirá sua assinatura atual (caso possua uma). Assinaturas iniciam na data de resgate e serão válidas pelo período do tipo de assinatura.</message>
+	<message key="gifts.purchaseGiftSubscription">Oferecer uma assinatura de presente</message>
+	<message key="gifts.giftSubscriptionsAvailable">Assinaturas de presentes também estão disponíveis. Elas podem ser resgatadas a qualquer tempo pelo destinatário e são uma forma de apoio à esta publicação.</message>
+	<message key="gifts.noSubscriptions">Sem assinaturas de presente</message>
+	<message key="gifts.giftRedeemed">O presente foi resgatado com sucesso.</message>
+	<message key="gifts.noGiftToRedeem">O presente não está disponível para resgate.</message>
+	<message key="gifts.giftAlreadyRedeemed">O presente já foi resgatado.</message>
+	<message key="gifts.giftNotValid">O presente não é válido e não pode ser resgatado.</message>
+	<message key="gifts.subscriptionTypeNotValid">O tipo de assinatura para este presente não é válido. Entre em contato com o gerente de assinaturas.</message>
+	<message key="gifts.subscriptionNonExpiring">O presente não foi resgatado pois já possui uma assinatura permanente para esta publicação.</message>
+	<message key="payment.loginRequired.forIssue">Aquisição de assinatura ou edição obrigatório para acessar este item. Acesse o sistema para verificar assinaturas, acessar compras anteriores ou adquirir edições.</message>
+	<message key="payment.type.purchaseIssue">Taxa de aquisição de edição</message>
+	<message key="payment.type.gift">Presente</message>
+	<message key="payment.type.gift.subscription">Assinatura</message>
+	<message key="installer.allowFileUploads"><![CDATA[Seu servidor permite envio de arquivos: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Seu servidor permite atualmente envio de arquivos no tamanho máximo de: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para baixar a nova versão e para instruções sobre atualização.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Entre em contato com o Administrador do Sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo deste lançamento. Para maiores informações, acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a>.]]></message>
 </locale>

@@ -138,9 +138,9 @@
 		4. 格式化
 		以「这个最新主题...」开头的段落没有缩排]]</message>
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励为这个杂志读者签署的出版通知服务，Use the <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> link at the top of the homepage for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.]]></message>
+{$期刊名称}
+{$索引Url}/{$期刊路径}</message>
+	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者注册该期刊的出版通知服务。使用在期刊首页顶端的<a href="{$ indexUrl}/{$journalPath}/user/register ">注册</a> 链接。注册后可以使读者通过电子邮件收到该期刊每期的出版内容。该列表也可以允许期刊获取一定程度的支持和读者群。参阅期刊的<a href="{$ indexUrl}/{$journalPath}/关于/提交#隐私声明">隐私声明</a>, 其将确保读者的名称和邮件地址不会用于其它目的。]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[ 
 		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[
@@ -164,4 +164,6 @@
 	<message key="default.journalSettings.membershipFeeDescription">这项费用支付后，您将作为这本期刊的会员，可以在一年内免费阅读这本期刊的所有文章.</message>
 	<message key="default.journalSettings.donationFee">捐赠的期刊</message>
 	<message key="default.journalSettings.donationFeeDescription">对本期刊任何数额的捐赠将感激地接受，您将为编辑提供一个继续提供高质量的杂志给读者的机会.</message>
+	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">支付该项费用后您可以查看、下载和打印该期文章。</message>
 </locale>

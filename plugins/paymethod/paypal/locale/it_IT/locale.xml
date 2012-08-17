@@ -11,7 +11,7 @@
  -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.paymethod.paypal.displayName">Pagamento Paypal</message>
+	<message key="plugins.paymethod.paypal.displayName">Pagamenti con Paypal</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Abilita PayPal</message>
@@ -24,10 +24,10 @@
 
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">Pagamento Paypal</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal abilita gli utenti, iscritti o meno a PayPal, a utilizzare tutte le maggiori carte di credito. L'amministratore dovrà impostare un <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal permette gli utenti, iscritti o meno a PayPal, di utilizzare tutte le maggiori carte di credito. L'amministratore dovrà impostare un <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
 	<message key="plugins.paymethod.paypal.warning">Clicca il bottone 'Continua' qui sotto per accedere al sito PayPal, dove si possono usare carte di credito per pagare le quote (anche senza doversi iscrivere a PayPal). Usa il tasto "Torna al venditore" dopo aver effettuato il pagamento per tornare a questo sito.</message>
 	<message key="plugins.paymethod.paypal.purchase.title">Titolo</message>
-	<message key="plugins.paymethod.paypal.purchase.fee">Quota</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Tariffa</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Descrizione</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Il tuo acquisto è stato cancellato.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Acquisto cancellato</message>

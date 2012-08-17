@@ -687,4 +687,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.payment.giftFees">Tariffe per i regali</message>
 	<message key="manager.payment.giftFeesDescription">Un link ad abbonamenti-dono apparirà nella pagina degli abbonamenti e come componente del blocco abbonamenti nella barra laterale</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Attivare i pagamenti per abbonamenti-dono, permettendo ai lettori della rivista di acquistare abbonamenti-dono per altri lettori.</message>
+	<message key="manager.plugins.wrongCategory">La categoria del plugin caricato non non corrisponde a quella del plugin che stavi aggiornando.</message>
+	<message key="manager.plugins.wrongName">Il file version.xml del plugin caricato contiene un nome che non corrisponde a quello del plugin che stavi aggiornando.</message>
+	<message key="manager.setup.categories.description">Scegli le categorie più appropriate nella lista sottostante. I lettori potranno navigare le riviste ospitate nel sito per categorie.</message>
 </locale>

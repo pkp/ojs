@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Tipo de acesso</message>
 	<message key="editor.issues.accessDate">Data para Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">A data para acesso é inválida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">O identificador público da edição já existe.</message>
 	<message key="editor.issues.coverPage">Capa</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos aceitáveis: .gif, .jpg ou .png )</message>
 	<message key="editor.issues.uploaded">Enviado</message>
@@ -208,4 +207,16 @@
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} usuários)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} usuários)</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para a edição de texto, use o link 'Notificar autor' para informá-lo da decisão e escolher a versão do documento a ser enviada.</message>
+	<message key="editor.reassign">Reatribuir</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outro objeto (edição, artigo, composição final ou arquivo suplementar). Escolha um identificar único dentre os disponíveis em sua publicação.</message>
+	<message key="editor.issues.galleys">Composições finais da edição</message>
+	<message key="editor.issues.galley">Composição final da edição</message>
+	<message key="editor.issues.viewingGalley">Vendo composição final da edição</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar composições com o conteúdo completo da edição.</message>
+	<message key="editor.issues.noneIssueGalleys">Nenhuma composição final de edição publicada.</message>
+	<message key="editor.issues.galleyLabelRequired">O rótulo da composição final de edição é obrigatório.</message>
+	<message key="editor.issues.galleyLocaleRequired">O idioma da composição final de edição é obrigatório.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Identificação pública de composição final de edição já existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
+	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
 </locale>

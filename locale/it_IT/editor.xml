@@ -209,4 +209,15 @@
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tutti gli abbonati persona ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tutti gli abbonati enti ({$count} utenti)</message>
 	<message key="editor.reassign">Riassegna</message>
+	<message key="editor.publicIdentificationExists">L'identificatore pubblico  '{$publicIdentifier}' già esiste per un altro oggetto (fascicoli, articolo o file). Definisci identificatori unici nella rivista.</message>
+	<message key="editor.issues.galleys">Gabbie del fascicolo</message>
+	<message key="editor.issues.galley">Gabbia del fascicolo</message>
+	<message key="editor.issues.viewingGalley">Vedi la bozza del fascicolo</message>
+	<message key="editor.issues.issueGalleysDescription">Pubblica una gabbia contenente l'intero fascicolo</message>
+	<message key="editor.issues.noneIssueGalleys">Non sono state pubblicate gabbie del fascicolo.</message>
+	<message key="editor.issues.galleyLabelRequired">Inserire un'etichetta per la gabbia del fascicolo</message>
+	<message key="editor.issues.galleyLocaleRequired">Inserire la lingua della gabbia del fascicolo</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
+	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
+	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
 </locale>

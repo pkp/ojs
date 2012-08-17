@@ -205,8 +205,6 @@ Exemplo:
 	<message key="manager.setup.disciplineExamples">(Ex.: História; Educação; Sociologia; Psicologia; Direito; Ciência da Informação)</message>
 	<message key="manager.setup.disciplineProvideExamples">Informe exemplos de áreas do conhecimento relevantes para esta revista</message>
 	<message key="manager.setup.displayCurrentIssue">Incluir sumário na edição atual (se disponível).</message>
-	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[O prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisão editorial</message>
 	<message key="manager.setup.editorialMembers">Acesse Membros do Comitê para cadastrar pessoas no Comitê Editorial ou no Conselho Avaliador. Pode ser realizado a qualquer tempo.</message>
 	<message key="manager.setup.editorialProcess1">Um ou mais editores podem tratar os passos básicos sem papéis definidos.</message>
@@ -371,7 +369,7 @@ Exemplo:
 	<message key="manager.setup.reviewerDatabaseLink">Base de dados de avaliadores em potencial</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Inclua na página "Designar avaliador" um link para uma base de dados relevante, na qual possa procurar avaliadores em potencial e seja de acesso livre ou irrestrito, sem assinatura.</message>
 	<message key="manager.setup.reviewGuidelines">Diretrizes para avaliação</message>
-	<message key="manager.setup.reviewGuidelinesDescription">As diretrizes para avaliação proporcionam um guia de critérios essencial para o julgamento da submissão e avaliar se está de acordo com as políticas e conteúdo da revista, assim como instruções especiais para preparar uma crítica eficaz, eficiente e construtiva.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[As diretrizes para avaliação proporcionam um guia de critérios essencial para o julgamento da submissão e avaliar se está de acordo com as políticas e conteúdo da revista, assim como instruções especiais para preparar uma crítica eficaz, eficiente e construtiva. Ao realizar uma avaliação, estão disponíveis aos avaliadores dois campos de texto livre, o primeiro "para o autor e o editor" e o segundo "para o editor". Opcionalmente, o Editor-Gerente pode criar <a href="{$reviewFormsUrl}" class="action">formulários de avaliação</a>. Em qualquer caso, os editores terão a opção de incluir as avaliações aos autores em suas comunicações.]]></message>
 	<message key="manager.setup.reviewOptions">Opções para avaliação</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">E-mails automatizados serão enviados ao avaliador (o editor também pode enviar lembretes ao avaliador)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Aviso:</strong> Para ativar estas opções, o administrador do portal deve habilitar a opção de <tt>scheduled_tasks</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tais funcionalidades (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></message>
@@ -416,8 +414,6 @@ Exemplo:
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor</message>
-	<message key="manager.setup.submissionEmailLogging">Manter log de todos os e-mails enviados relativos à submissão na página Histórico.</message>
-	<message key="manager.setup.submissionEventLogging">Manter log de todas as ações tomadas sobre a submissão na página Histórico.</message>
 	<message key="manager.setup.submissionGuidelines">Diretrizes para submissão</message>
 	<message key="manager.setup.submissionPreparationChecklist">Condições para a submissão</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada condição para a submissão, antes de proceder. A lista de condições também é apresentada em Diretrizes para autores, na página Sobre a revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão.</message>
@@ -625,13 +621,6 @@ Exemplo:
 	<message key="manager.setup.contributorNoteDescription">Este texto será apresentado abaixo de "Contribuidores" e acima da lista de nomes e URLs para organizações que apóiam a revista, sob "Patrocínio da revista" na página "Sobre".</message>
 	<message key="manager.setup.history">Histórico da revista</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na seção "Sobre" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação.</message>
-	<message key="manager.setup.doiSuffix">Suffixo DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Usar padrão (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Use o padrão informado abaixo para gerar sufixos DOI. Use %j para iniciais da revista, %v para o volume, %i para a edição, %a para o código do artigo no sistema e %p para o número da página.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Por exemplo, vl%viss%ipp%p poderia criar um DOI to tipo 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, desde que seja único para cada item publicado.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Usar o "Identificador personalizado" para itens publicados como sufixo DOI (deve estar habilitado no Passo 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar no formato 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Ícone de favoritos</message>
 	<message key="manager.setup.journalFaviconDescription">Incluir um ícone de favoritos (favicon) da revista, a ser exibido na barra de endereço do navegador.</message>
 	<message key="manager.setup.journalFaviconInvalid">Formato de ícone inválido. Formatos aceitos são .ico, .png e .gif.</message>
@@ -687,8 +676,20 @@ Exemplo:
 	<message key="manager.language.submissions">Submissões</message>
 	<message key="manager.plugins.versionFileInvalid">arquivo version.xml no diretório de plugins contém dados inválidos.</message>
 	<message key="manager.reviewFormElements.included">Incluído na mensagem ao autor</message>
-	<message key="manager.setup.doiReassign">Designar DOIs novamente</message>
 	<message key="manager.plugins.invalidPluginArchive">O arquivo de plugin enviado não contém uma pasta correspondente ao nome do plugin.</message>
 	<message key="manager.plugins.tarCommandNotFound">O comando tar não está disponível. Certifique-se de que a ferramenta esteja instalada no servidor e configure-a corretamente no arquivo "config.inc.php"</message>
-	<message key="manager.setup.doiReassign.description">Caso altere suas configurações de DOI, os já designados não serão afetados. Uma vez que a configuração for salva, use este botão para limpar todos os DOIs para que as novas configurações tenham efeito nos artigos existentes.</message>
+	<message key="manager.payment.giftFees">Taxas de presentes</message>
+	<message key="manager.payment.giftFeesDescription">Um link para as assinaturas de presente aparecerá na página Assinaturas, em Sobre a revista e como parte do bloco lateral de assinaturas.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Isto ativará pagamentos para assinaturas de presente, permitindo aos leitores presentearem outros leitores com assinaturas desta publicação.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Adquirir edição</message>
+	<message key="manager.plugins.wrongCategory">O plugin enviado não se encaixa na categoria do plugin atualizado.</message>
+	<message key="manager.plugins.wrongName">O arquivo version.xml do plugin enviado contém um nome de plugin que não se encaixa no nome do plugin atualizado.</message>
+	<message key="manager.plugins.settings">Configurações</message>
+	<message key="manager.sections.confirmDelete">Deseja realmente exluir permanentemente esta seção?</message>
+	<message key="manager.sections.alertDelete">Antes de pode excluir esta seção, é necessário mover os artigos publicados nela para outras seções.</message>
+	<message key="manager.setup.journalThumbnail">Miniatura da publicação</message>
+	<message key="manager.setup.subjectClassificationURLValid">Informe um URL remoto (inclua o protocolo, por exemplo http://)</message>
+	<message key="manager.setup.useThumbnail">Miniatura</message>
+	<message key="manager.setup.categories">Categorias</message>
+	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
 </locale>

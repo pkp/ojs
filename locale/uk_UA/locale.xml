@@ -157,7 +157,7 @@
        <message key="submission.changeSection">Змінити на</message>
        <message key="submission.sent">Надіслано</message>
        <message key="submission.editorDecision">Рішення редактора</message>
-       <message key="submission.round">Раунд&amp;nbsp;{$round}</message>
+       <message key="submission.round"><![CDATA[Раунд&nbsp;{$round}]]></message>
        <message key="submission.editorReview">Відгук редактора</message>
        <message key="submission.notifyAuthor">Повідомити автора</message>
        <message key="submission.notifyEditor">Повідомити редактора</message>
@@ -276,12 +276,6 @@
         * LOG - This section contains entries related to log entries.
         *
        -->
-       <message key="submission.event.logLevel">Рівень</message>
-       <message key="submission.event.logLevel.info">Інфо</message>
-       <message key="submission.event.logLevel.notice">Нотатка</message>
-       <message key="submission.event.logLevel.warning">Увага</message>
-       <message key="submission.event.logLevel.error">Помилка</message>
-       
        <message key="submission.event.general.defaultEvent">Подія з поданням</message>
        <message key="submission.event.general.articleSubmitted">Стаття надіслана</message>
        <message key="submission.event.general.issueScheduled">Подання включене до графіку публікації</message>
@@ -359,9 +353,6 @@
 </ul>]]></message>
        
        <!-- System Information -->
-       <message key="admin.editSystemConfigInstructions"><![CDATA[Використовуйте цю форму для модифікації конфігурації Вашої системи (файлу <tt>config.inc.php</tt>). Натисніть "Записати" для того, щоб записати Вашу нову конфігурацію або "Показати" для того, щоб лише переглянути оновлений файл конфігурації, але не змінювати Вашу існуючу конфігурацію.
-<br /><br />
-<span class="formError">Попередження: Модифікація цих налаштувань потенційно може залишити Ваш сайт у непрацездатному стані (виправляти файл конфігурації потрібно буде вручну). Наполегливо рекомендується вносити будь-які зміни лише якщо Ви абсолютно впевнені у тому, що робите.</span>]]></message>
        <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>УВАГА!</div>
 <p>Система не може автоматично перейменувати файл конфігурації. Для застосування змін у конфігурації Ви повинні відкрити <tt>config.inc.php</tt> у текстовому редакторі та замінити його зміст змістом текстового поля, наведеного нижче.</p>]]></message>
 
@@ -690,7 +681,6 @@
        <message key="user.login.resetPasswordInstructions"><![CDATA[З міркувань безпеки ця система надсилає зареєстрованим користувачам новий пароль, а не існуючий.<br /><br />Для того, щоб скинути пароль та згенерувати новий, нижче вкажіть Вашу адресу email. На цю адресу буде надісланий лист підтвердження.]]></message>
        
        <!-- Registration -->
-       <message key="user.register.repeatPassword">Повторіть пароль</message>
        <message key="user.register.selectJournal">Оберіть журнал, користувачем якого Ви хочете бути</message>
        <message key="user.register.noJournals">На цьому сайті немає журналів, у яких Ви можете зареєструватись.</message>
        <message key="user.register.privacyStatement">Положення про конфіденційність</message>
@@ -952,8 +942,6 @@
        <message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Увага:</strong> Якщо інсталяція була перервана під час створення і налаштування бази даних, може знадобитись скидання існуючої бази даних OJS або окремих таблиць, перш ніж інсталяція зможе продовжитись.]]></message>
        <message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ВАЖЛИВО!</h4>
 <p>Програма інсталяції не здатна самостійно вносити зміни у файл конфігурації. Перш ніж почати використовувати систему, будь ласка, відкрийте файл <tt>config.inc.php</tt> у текстовому редакторі та замініть його зміст на зміст текстових полів, наведений нижче.</p>]]></message>
-       <message key="installer.manualSQLInstructions"><![CDATA[<h4>Ручна інсталяція</h4>
-<p>Нижче наведені декларації SQL, необхідні для створення схеми даних OJS та введення початкових даних. Звертаємо увагу, що система не буде працездатною, поки ці декларації не будуть виконані вручну. Крім того, Вам необхідно вручну налаштувати файл конфігурації <tt>config.inc.php</tt>.</p>]]></message>
        <message key="installer.installationComplete"><![CDATA[<p>Інсталяція OJS завершена успішно.</p>
 <p>Для того, щоб почати використовувати систему <a href="{$loginUrl}">увійдіть на сайт</a> з іменем користувача та паролем, вказаними на попередній сторінці.</p>
 <p>Якщо Ви хочете отримувати новини та оновлення, Ви можете:</p>
@@ -1053,12 +1041,6 @@
 
        <message key="rt.metadata.pkp.primaryAuthor">Ім'я автора, місце роботи, держава</message>
        <message key="rt.metadata.pkp.peerReviewed">Рецензована стаття</message>
-       <message key="rt.metadata.pkp.doi">Цифровий ідентифікатор об'єкту (DOI)</message>
-
-
-
-
-
        <message key="rt.beNotifiedWhen">Сповістити, коли...</message>
 
        <message key="rt.thisJournal">Пошук у цьому журналі</message>
@@ -1070,26 +1052,26 @@
        
        <!-- Notification Types -->
        <message key="notification.mailListDescription">Вкажіть свою адресу email, щоб отримувати миттєві сповіщення про публікацію у цьому журналі нового важливого змісту.</message>
-       <message key="notification.notificationsPublicDescription">На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете передплатити ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як <![CDATA[  <a href="{$emailUrl}">поштову передплату</a>]]>.</message>
+       <message key="notification.notificationsPublicDescription"><![CDATA[На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете передплатити ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як   <a href="{$emailUrl}">поштову передплату</a>.]]></message>
 
-       <message key="notification.type.articleSubmitted">Надіслана нова стаття "{$param}".</message>
-       <message key="notification.type.copyeditComment">Літературний редактор залишив коментар щодо "{$param}".</message>
+       <message key="notification.type.articleSubmitted">Надіслана нова стаття: "{$title}".</message>
+       <message key="notification.type.copyeditComment">Літературний редактор залишив коментар щодо статті"{$title}".</message>
        <message key="notification.type.editing">Події редакційного процесу</message>
-       <message key="notification.type.editorDecisionComment">Залишений коментар на рішення видавця щодо "{$param}".</message>
-       <message key="notification.type.galleyModified">Змінена гранка "{$param}".</message>
+       <message key="notification.type.editorDecisionComment">Залишений коментар на рішення видавця щодо статті"{$title}".</message>
+       <message key="notification.type.galleyModified">Змінена гранка статті "{$title}".</message>
        <message key="notification.type.issuePublished">Опублікований випуск.</message>
-       <message key="notification.type.layoutComment">Залишений коментар щодо гранки "{$param}".</message>
-       <message key="notification.type.metadataModified">Змінені метадані "{$param}".</message>
+       <message key="notification.type.layoutComment">Залишений коментар щодо гранки статті "{$title}".</message>
+       <message key="notification.type.metadataModified">Змінені метадані подання "{$title}".</message>
        <message key="notification.type.newAnnouncement">Створений новий анонс.</message>       
-       <message key="notification.type.proofreadComment">Коректор залишив коментар щодо "{$param}".</message>
-       <message key="notification.type.reviewerComment">Рецензент прокоментував "{$param}".</message>
-       <message key="notification.type.reviewerFormComment">Надіслана форма рецензування для "{$param}".</message>
+       <message key="notification.type.proofreadComment">Коректор залишив коментар щодо подання "{$title}".</message>
+       <message key="notification.type.reviewerComment">Рецензент прокоментував подання "{$title}".</message>
+       <message key="notification.type.reviewerFormComment">Надіслана форма рецензування для подання "{$title}".</message>
        <message key="notification.type.reviewing">Події процесу рецензування</message>
        <message key="notification.type.site">Події сайту</message>
-       <message key="notification.type.submissionComment">Редактор зробив коментар на "{$param}".</message>
+       <message key="notification.type.submissionComment">Редактор зробив коментар на подання "{$title}".</message>
        <message key="notification.type.submissions">Події з рукописами</message>
-       <message key="notification.type.suppFileModified">Змінений супровідний файл "{$param}".</message>
-       <message key="notification.type.userComment">Читач залишив коментар на "{$param}"</message>
+       <message key="notification.type.suppFileModified">Змінений супровідний файл подання "{$title}".</message>
+       <message key="notification.type.userComment">Читач залишив коментар на статтю "{$title}"</message>
 
        <!--
         *
@@ -1108,4 +1090,30 @@
        <!-- Debug messages -->
        <message key="debug.notes.currencyListLoad">З XML-файлу завантажений список валют "{$filename}"</message>
        <message key="debug.notes.helpMappingLoad">Перевантажений файл XML {$filename} довідки у пошуку {$id}.</message>
+	<message key="navigation.categories">Категорії</message>
+	<message key="issue.viewIssue">Дивитися випуск</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Кольором виділені подання, які потребують певної дії від редактора. Застосовуються наступні позначення:
+		<ul>
+			<li class="highlightCopyediting">Необхідна дія на стадії літературного редагування</li>
+			<li class="highlightLayoutEditing">Необхідна дія на стадії верстки</li>
+			<li class="higlightProofreading">Необхідна дія на стадії коректури</li>
+		</ul>
+	</li>
+</ol>]]></message>
+	<message key="gifts.buyer">Від</message>
+	<message key="gifts.buyerDescription">Від кого цей подарунок?</message>
+	<message key="gifts.recipient">Для</message>
+	<message key="gifts.recipientDescription">Для кого цей подарунок?</message>
+	<message key="gifts.thankYou">Дякую</message>
+	<message key="gifts.thankYouMessage">Процес купівлі подарунку завершений. Коли Ваш платіж буде оброблений, Ви отримаєте копію листа з подарунком, надіслану адресату.</message>
+	<message key="gifts.gift">Подарунок</message>
+	<message key="gifts.myGifts">Мої подарунки</message>
+	<message key="gifts.manageMyGifts">Керувати моїми подарунками</message>
+	<message key="gifts.subscriptions">Передплати</message>
+	<message key="payment.type.gift">Подарунок</message>
+	<message key="payment.type.gift.subscription">Передплата</message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[Доступна нова версія OJS! Зараз Ви використовуєте OJS {$currentVersion}. Найновіша версія OJS {$latestVersion}. Будь ласка, завітайте на <a href="http://pkp.sfu.ca/ojs_download" target="_new">цю сторінку</a>, щоб завантажити найновішу версію системи та знайти інструкції щодо оновлення.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Доступна нова версія OJS! Зараз Ви використовуєте OJS {$currentVersion}. Найновіша версія OJS {$latestVersion}. Будь ласка, контактуйте з адміністратором сайту ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>), щоб повідомити йому про це важливе оновлення. Більше інформації можна знайти <a href="http://pkp.sfu.ca/ojs_download" target="_new">тут</a>.]]></message>
 </locale>

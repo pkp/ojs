@@ -208,12 +208,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Niveau</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Opmerking</message>
-	<message key="submission.event.logLevel.warning">Waarschuwing</message>
-	<message key="submission.event.logLevel.error">Fout</message>
-	
 	<message key="submission.event.general.defaultEvent">Inzending</message>
 	<message key="submission.event.general.articleSubmitted">Artikel ingezonden</message>
 	<message key="submission.event.general.issueScheduled">Inzending in nummer-wachtrij geplaatst.</message>
@@ -917,12 +911,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Autheursnaam, affiliatie, land</message>
 	<message key="rt.metadata.pkp.peerReviewed">Peer reviewed artikel</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Bericht als...</message>
 
 	<message key="rt.thisJournal">Doorzoek tijdschrift</message>
@@ -1050,26 +1038,26 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="about.subscriptions.institutional">Institutionele abonnementen</message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[als hier IP reeksen opgegeven worden is het domein optioneel.<br />Geldige waarden zijn een IP adres (bv. 142.58.103.1), IP reeks (bv. 142.58.103.1 - 142.58.103.4), een IP reeks met wildcard '*' (bv. 142.58.*.*), en een IP reeks mets CIDR (e.g. 142.58.100.0/24).]]></message>
 	<message key="notification.mailListDescription">Geef uw e-mail adres op om op de hoogte gesteld te worden van belangrijke nieuwe inhoud van het tijdschrift.</message>
-	<message key="notification.type.editorDecisionComment">Er is een commentaar achtergelaten op de redacteursbeslissing van "{$param}".</message>
-	<message key="notification.type.galleyModified">Een proef van "{$param}" gewijzigd.</message>
+	<message key="notification.type.editorDecisionComment">Er is een commentaar achtergelaten op de redacteursbeslissing van "{$title}".</message>
+	<message key="notification.type.galleyModified">Een proef van "{$title}" gewijzigd.</message>
 	<message key="notification.type.issuePublished">Er is een nieuw nummer gepubliceerd</message>
 	<message key="notification.type.reviewing">Nieuws over reviews</message>
 	<message key="notification.type.site">Nieuws over de site</message>
 	<message key="notification.type.submissions">Nieuws over inzendingen</message>
-	<message key="notification.type.metadataModified">De metadata van "{$param}" is veranderd.</message>
+	<message key="notification.type.metadataModified">De metadata van "{$title}" is veranderd.</message>
 	<message key="notification.type.newAnnouncement">Er is een nieuwe aankondiging gemaakt.</message>
-	<message key="notification.type.reviewerComment">Een reviewer heeft "{$param}" van commentaar voorzien.</message>
-	<message key="notification.type.reviewerFormComment">Er is een reviewformulier ingediend voor "{$param}".</message>
-	<message key="notification.type.submissionComment">Een redacteur heeft "{$param}" van commentaar voorzien.</message>
+	<message key="notification.type.reviewerComment">Een reviewer heeft "{$title}" van commentaar voorzien.</message>
+	<message key="notification.type.reviewerFormComment">Er is een reviewformulier ingediend voor "{$title}".</message>
+	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
-	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$param}", is ingestuurd.</message>
-	<message key="notification.type.copyeditComment">Een tekstredacteur heeft een opmerking gemaakt bij "{$param}" .</message>
+	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$title}", is ingestuurd.</message>
+	<message key="notification.type.copyeditComment">Een tekstredacteur heeft een opmerking gemaakt bij "{$title}" .</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Deze pagina toont belangrijke berichten over dit tijdschrift zoals nieuwe nummers of aankondigingen. U kunt zich op deze berichten abonneren via RSS feeds (door op de afbeeldingen rechts te klikken) of   <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.editing">Redactieberichten</message>
-	<message key="notification.type.layoutComment">Er is een opmerking geplaatst over de layout van ""{$param}.</message>
-	<message key="notification.type.proofreadComment">Een proeflezer heeft een opmerking geplaatst bij "{$param}".</message>
-	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$param}"</message>
-	<message key="notification.type.suppFileModified">Aanvullende bestanden van "{$param}" zijn gewijzigd.</message>
+	<message key="notification.type.layoutComment">Er is een opmerking geplaatst over de layout van ""{$title}.</message>
+	<message key="notification.type.proofreadComment">Een proeflezer heeft een opmerking geplaatst bij "{$title}".</message>
+	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
+	<message key="notification.type.suppFileModified">Aanvullende bestanden van "{$title}" zijn gewijzigd.</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
 	<message key="user.subscriptions.statusDescription">Beschrijving</message>
 	<message key="user.subscriptions.status">Status</message>
@@ -1082,4 +1070,69 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="payment.authorFees">Kosten auteurs</message>
 	<message key="user.register.reviewerInterests">Geef review-interesses (kennisgebieden en onderzoeksmethodes)</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>Het PDF bestand dat u gekozen hebt zal hier geladen worden als uw webbrowser een plugin voor het lezen  van PDF's geïnstalleerd heeft (bijvoorbeeld een recente versie van <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>U kunt het PDF bestand ook direct naar uw computer downloaden en het openen in een PDF-lezer. Om een PDF de downloaden, klik op de download-link hieronder.</p> <p>Als u meer informatie wilt over het afdrukken, bewaren en werken met PDF's, Highwire Press heeft een handige <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href="http://pkp.sfu.ca/ojs_download" target="_new">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a>.]]></message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Geen toegang! U bent niet de tekstredacteur voor dit artikel.</message>
+	<message key="user.authorization.noJournal">Niet in de context van een tijdschrift!</message>
+	<message key="user.authorization.sectionAssignment">U probeert een artikel uit een andere sectie te benaderen</message>
+	<message key="gifts.noSubscriptions">Geen gift-abonnementen</message>
+	<message key="gifts.giftRedeemed">De gift is met succes ingewisseld</message>
+	<message key="gifts.noGiftToRedeem">Deze gift kan niet ingewisseld worden</message>
+	<message key="gifts.giftAlreadyRedeemed">Deze gift is al ingewisseld</message>
+	<message key="gifts.giftNotValid">Deze gift is niet geldig en kan niet ingewisseld worden.</message>
+	<message key="payment.loginRequired.forIssue">Een abonnement of kopen van het nummer is nodig om dit item te kunnen benaderen. Om uw abonnement  te verifiëren, een eerdere aankoop te benaderen of een nummer te kopen, moet u inloggen.</message>
+	<message key="payment.type.purchaseIssue">Prijs voor het kopen van een nummer</message>
+	<message key="payment.type.gift">Gift</message>
+	<message key="payment.type.gift.subscription">Abonnement</message>
+	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="user.authorization.invalidCopyditorSubmission">Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Onjuiste sectieredacteur inzending of geen sectieredacteur inzending gevraagd!</message>
+	<message key="gifts.purchaseGiftSubscription">Schenk een abonnement</message>
+	<message key="gifts.giftSubscriptionsAvailable">U kunt ook een abonnement geven. Giften kunnen op ieder moment ingewisseld worden door de ontvanger en zijn een goede manier om dit tijdschrift te steunen.</message>
+	<message key="gifts.subscriptionTypeNotValid">De abonnementsoort voor deze gift is niet geldig. Neem contact op met de abonnementenbeheerder.</message>
+	<message key="navigation.categories">Categorieën</message>
+	<message key="navigation.categories.browse">Bladeren</message>
+	<message key="issue.fullIssue">Heel nummer</message>
+	<message key="issue.nonpdf.title">Nummer downloaden</message>
+	<message key="issue.viewIssue">Bekijk nummer</message>
+	<message key="issue.viewIssueDescription">Het hele nummer bekijken of downloaden</message>
+	<message key="plugins.categories.pubIds">Plugins voor publieke identificatie</message>
+	<message key="plugins.categories.pubIds.description">Deze plugins leveren ondersteuning voor een publieke identificatie</message>
+	<message key="site.noJournals">Er zijn geen tijdschriften beschikbaar</message>
+	<message key="gifts.buyer">Van</message>
+	<message key="gifts.buyerDescription">Van wie is deze gift?</message>
+	<message key="gifts.recipient">Aan</message>
+	<message key="gifts.recipientDescription">Voor wie is deze gift?</message>
+	<message key="gifts.thankYou">Dank U</message>
+	<message key="gifts.gift">Gift</message>
+	<message key="gifts.noteTitle">Titel</message>
+	<message key="gifts.note">Notitie bij de gift</message>
+	<message key="gifts.noteTitleRequired">Geef een titel voor uw persoonlijke boodschap.</message>
+	<message key="gifts.noteRequired">Geef een persoonlijke boodschap.</message>
+	<message key="gifts.myGifts">Min giften</message>
+	<message key="gifts.manageMyGifts">Beheer mijn giften</message>
+	<message key="gifts.redeemGift">Gift inwisselen</message>
+	<message key="gifts.status.notRedeemed">Beschikbaar</message>
+	<message key="gifts.status.redeemed">Ingewisseld</message>
+	<message key="gifts.status.redeemGift">Gift inwisselen</message>
+	<message key="gifts.subscriptions">Abonnementen</message>
+	<message key="gifts.thankYouMessage">De aankoop van uw gift is voltooid. U ontvangt een kopie van de e-mail aan de ontvanger zodra uw betaling verwerkt is.</message>
+	<message key="gifts.details">Gift details</message>
+	<message key="gifts.localeRequired">Kies een taal voor uw persoonlijke boodschap</message>
+	<message key="gifts.subscriptionNonExpiring">De gift is niet ingewisseld omdat u als een eeuwigdurend abonnement bij dit tijdschrift hebt.</message>
+	<message key="gifts.detailsDescription">Kies hieronder de gift en voeg een persoonlijke boodschap toe. Die wordt per e-mail verstuurd naar de begunstigde. U krijgt een kopie.</message>
+	<message key="gifts.subscriptionsDescription">Als u een gift-abonnement inwisselt vervangt dat uw bestaande abonnement (als u dat heeft). Abonnementen beginnen op de datum van inwisselen en is geldig voor de duur van het abonnementstype.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Geef een abonnement</message>
+	<message key="gifts.subscriptionFormIntroduction">Gelieve het formulier hieronder in te vullen. De contactinformatie wordt met uw gift per e-mail naar de ontvanger gestuurd om ze van de gift op de hoogte te brengen. U krijgt een kopie van deze e-mail.</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Gemarkeerde items hebben de aandacht van een redacteur nodig. De markering is als volgt:
+		<ul>
+			<li class="highlightCopyediting">Er is actie nodig bij de tekstredactie</li>
+			<li class="highlightLayoutEditing">Er is actie nodig bij de eindredactie</li>
+			<li class="higlightProofreading">Er is actie nodig bij het proeflezen</li>
+		</ul>
+	</li>
+</ol>]]></message>
 </locale>

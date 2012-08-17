@@ -57,7 +57,26 @@
 	<message key="admin.mergeUsers.into.description">Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior.</message>
 	<message key="admin.mergeUsers.from.description">Escolha um usuário para mesclar o cadastro com o de outra conta (quando um usuário possui duas contas distintas, em vez de acumular papéis editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os usuários</message>
-	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar o cadastro do usuário "{$oldUsername}" no cadastro do usuário "{$newUsername}"? O cadastro de "{$oldUsername}" será excluído permanentemente. Esta ação é irreversível!</message>
+	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar os "{$oldAccountCount}" cadastro(s) selecionado(s) no cadastro do usuário "{$newUsername}"? Os "{$oldAccountCount}" serão excluídos permanentemente. Esta ação é irreversível!</message>
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
+	<message key="admin.settings.options">Opções</message>
+	<message key="admin.settings.useAlphalist">Para sites com muitas publicações, exibir uma lista alfabética na página inicial, permitindo uma navegação alfabética rápida entre as publicações.</message>
+	<message key="admin.settings.usePaging">Para sites com muitas publicações, quebrar a lista em várias páginas.</message>
+	<message key="admin.settings.journalsList">Elementos da publicação</message>
+	<message key="admin.settings.journalsList.description">Escolha os elementos da publicação que serão exibidos para cada publicação na página do site.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Miniatura da publicação</message>
+	<message key="admin.settings.journalsList.showTitle">Título</message>
+	<message key="admin.settings.journalsList.showDescription">Descrição</message>
+	<message key="admin.categories">Categorias</message>
+	<message key="admin.categories.enable.description">O Administrador do Sistema poderá definir o conjunto de categorias aqui para ajudar a organizar grandes volumes de publicações. Editores-Gerentes poderão então escolher várias dessas categorias para cada publicação, e leitores poderão navegar nas coleções por categoria.</message>
+	<message key="admin.categories.disableCategories">Não organizar publicações em categorias.</message>
+	<message key="admin.categories.enableCategories">Permitir a gerentes organizar publicações em categorias.</message>
+	<message key="admin.categories.editTitle">Editar categoria</message>
+	<message key="admin.categories.createTitle">Criar categoria</message>
+	<message key="admin.categories.create">Criar nova categoria</message>
+	<message key="admin.categories.noneCreated">Nenhuma categoria criada.</message>
+	<message key="admin.categories.confirmDelete">Deseja realmente excluir esta categoria?</message>
+	<message key="admin.categories.name">Nome</message>
+	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
 </locale>

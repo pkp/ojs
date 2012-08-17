@@ -247,12 +247,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Maila</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Berri-ematea</message>
-	<message key="submission.event.logLevel.warning">Abisua</message>
-	<message key="submission.event.logLevel.error">Errorea</message>
-	
 	<message key="submission.event.general.defaultEvent">Bidalketako gertaera</message>
 	<message key="submission.event.general.articleSubmitted">Artikulua bidali</message>
 	<message key="submission.event.general.issueScheduled">Artikulua argitaratzera bidali</message>
@@ -977,12 +971,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 
 	<message key="rt.metadata.pkp.primaryAuthor">Egilearen izena, erakundea, herrialdea</message>
 	<message key="rt.metadata.pkp.peerReviewed">Adituek ebaluatutako artikulua</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier (DOI)</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Jakinarazi....</message>
 
 	<message key="rt.thisJournal">Bilatu aldizkarian</message>

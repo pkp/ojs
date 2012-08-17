@@ -15,8 +15,8 @@
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.sword.displayName">SWORD Plugin</message>
 	<message key="plugins.generic.sword.description">Permette all'amministratore della rivista e (facoltativamente) all'autore di depositare articoli attraverso il protocollo SWORD</message>
-	<message key="plugins.generic.sword.enabled"><![CDATA[Il plugin SWORD &#232; stato abilitato.]]></message>
-	<message key="plugins.generic.sword.disable"><![CDATA[Il plugin SWORD &#232; stato disabilitato.]]></message>
+	<message key="plugins.generic.sword.enabled">Il plugin SWORD è stato abilitato.</message>
+	<message key="plugins.generic.sword.disable">Il plugin SWORD è stato disabilitato.</message>
 	<message key="plugins.generic.sword.settings">Impostazioni</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permetti agli autori di specificare un punto di deposito</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Punti di deposito</message>

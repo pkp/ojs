@@ -13,7 +13,7 @@
 <email_texts locale="it_IT">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Conferma di modifica password</subject>
-		<body><![CDATA[Abbiamo ricevuto la richiesta di modificare la tua password per  {$siteTitle}.
+		<body><![CDATA[Abbiamo ricevuto la richiesta di modificare la tua password per {$siteTitle}.
 
 Se non hai fatto questa richiesta, ignora pure questo messaggio e la password non sar&#224; modificata.
 Se invece hai fatto tu la richiesta e desideri generare una nuova password, clicca sul link qui sotto.
@@ -199,9 +199,9 @@ Abstract
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Richiesta di revisione della proposta</subject>
-		<body>{$reviewerName}:
+		<body>Gentile {$reviewerName}:
 
-Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato  proposto a {$journalName}. L'abstract della submission  è inserito qui sotto. Spero che vorrai prendere in carico questo compito.
+Ti propongo la revisione del manoscritto "{$articleTitle}," che è stato inviato a {$journalName}. L'abstract della proposta è più sotto. Spero che vorrai prendere in carico questo compito.
 
 Ti chiedo quindi di effettuare il log in al sito web della rivista entro il {$weekLaterDate} per indicare se prenderai in carico la revisione o meno. Potrai poi accedere alla submission e inviare il tuo parere.
 
@@ -286,7 +286,7 @@ Ho completato la revisione di "{$articleTitle}" per {$journalName}, e indicato i
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Ringraziamenti per la revisione</subject>
-		<body>{$reviewerName}:
+		<body>Gentile {$reviewerName}:
 
 Grazie per aver completato la revisione della submission, "{$articleTitle}," per {$journalName}.
 
@@ -297,7 +297,7 @@ Apprezziamo il tuo contributo nel mantenere alta la qualità della rivista.
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Promemoria revisione in attesa</subject>
-		<body>{$reviewerName}:
+		<body>Gentile {$reviewerName}:
 
 Ti ricordo la richiesta di revisione della submission, "{$articleTitle}," per {$journalName}. La data di scadenza prevista è {$reviewDueDate}.
 
@@ -629,28 +629,27 @@ pubblicato in {$journalName}, Vol. {$volume}, N. {$number} ({$year}) e disponibi
 		<description>Questo modello  email fornisce ad un utente registrato l'opprtunità di inviare informazioni su un articolo a qualcuno che potrebbe essere interessato. è disponibile via utility di lettura e e deve essere abilitata dall'amministratore della rivista nella pagina di amministrazione delle utility di lettura.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Uscita ad accesso aperto</subject>
-		<body>Gentili lettori,
+		<subject>Nuovo fascicolo disponibile ad accesso aperto</subject>
+		<body>Gentile lettore,
 
-{$journalName} ha appena reso disponibile un numero ad accesso aperto.
+{$journalName} ha appena reso disponibile ad accesso aperto un fascicolo.
 
-Vi invitiamo dunque a visitare il sito web ({$journalUrl}) per trovare articoli e altre risorse di vostro interesse.
+Ti invitiamo dunque a visitare il sito web ({$journalUrl}) per trovare articoli e altre risorse di tuo interesse.
 
 Grazie per l'interesse dimolstrato nei nostri confronti,
 {$editorialContactSignature}</body>
 		<description>Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Avviso di scadenza abbonamento</subject>
-		<body>{$subscriberName}:
+		<subject>Avviso di abbonamento in scadenza</subject>
+		<body>Gentile {$subscriberName}:
 
 Il suo abbonamento a {$journalName} sta per scadere.
 
 {$subscriptionType}
 Data di scadenza: {$expiryDate}
 
-Per continuare ad accedere a questa rivista, si rechi sul sito e rinnovi l'abbonamento.
-Per l'accesso utilizzi la sua username, "{$username}".
+Per continuare ad accedere a questa rivista, si rechi sul sito e rinnovi l'abbonamento. Per l'accesso utilizzi la sua username, "{$username}".
 
 Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 
@@ -658,16 +657,15 @@ Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 		<description>Questa email informa un abbonato della prossima scadenza del suo abbonamento. Fornisce la URL della rivista e le istruzioni per l'accesso.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Abbonamento a scaduto</subject>
-		<body>{$subscriberName}:
+		<subject>Abbonamento scaduto</subject>
+		<body>Gentile {$subscriberName}:
 
 Il suo abbonamento a  {$journalName} è scaduto.
 
 {$subscriptionType}
 Data di scadenza: {$expiryDate}
 
-Per rinnovare l'abbonamento, si rechi sul nostro sito.
-Per l'accesso utilizzi la sua username, "{$username}".
+Per rinnovare l'abbonamento, si rechi sul nostro sito. Per l'accesso utilizzi la sua username, "{$username}".
 
 Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 

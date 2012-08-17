@@ -870,9 +870,9 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 </ol>]]></message>
 	<message key="sectionEditor.review.enrollReviewer">Iscrivi un utente esistente come revisore</message>
 	<message key="submission.layout.imageInvalid">Formato dell'immagine non valido. I formati accettati sono .gif, .jpg, e .png.</message>
-	<message key="reviewer.article.restrictedFileAccess">La submission diventerà disponibile, se e quando il revisore accetterà di prendersi carico della revisione</message>
-	<message key="about.authorFees">Quota parte dell'autore</message>
-	<message key="about.authorFeesMessage">Questa rivista fa pagare le seguenti quote-contributo all'autore.</message>
+	<message key="reviewer.article.restrictedFileAccess">Il manoscritto diventerà disponibile, se e quando il revisore accetterà di prendersi carico della revisione</message>
+	<message key="about.authorFees">Contributi richiesti agli autori</message>
+	<message key="about.authorFeesMessage">Questa rivista richiede agli autori il pagamento dei contributi indicati sotto.</message>
 	<message key="donations.thankYou">Grazie</message>
 	<message key="donations.thankYouMessage">Grazie per aver contribuito. Il tuo aiuto è molto apprezzato</message>
 	<message key="payment.loginRequired">Devi essere autenticato per effettuare un pagamento.</message>
@@ -881,23 +881,23 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.payNow">Paga ora</message>
 	<message key="payment.waive">Esenzione</message>
 	<message key="payment.alreadyPaid">Già pagato</message>
-	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La submission non sarà revisionata fino a quando il pagamento non arriverà. Clicca Paga ora in alto per vedere le istruzioni di pagamento.</message>
+	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La proposta non sarà revisionata fino a quando il pagamento non arriverà. Clicca Paga ora in alto per vedere le istruzioni di pagamento.</message>
 	<message key="payment.paymentReceived">Pagamento ricevuto</message>
 	<message key="payment.paymentSent">Il pagamento è già stato inviato</message>
-	<message key="payment.type.submission">Quota della submission</message>
-	<message key="payment.type.publication">Quota della pubblicazione</message>
-	<message key="payment.type.subscription">Quota di sottoscrizione</message>
+	<message key="payment.type.submission">Contributo per l'invio di una proposta</message>
+	<message key="payment.type.publication">Contributo per la pubblicazione</message>
+	<message key="payment.type.subscription">Tariffa di abbonamento</message>
 	<message key="payment.type.donation">Donazioni</message>
 	<message key="payment.donation.makeDonation">Fai una donazione</message>
 	<message key="payment.publication.payPublication">File per la fase di copyedit</message>
-	<message key="payment.publication.publicationPaid">Quota di pubblicazione pagata</message>
+	<message key="payment.publication.publicationPaid">Contributo per la pubblicazione pagato</message>
 	<message key="payment.subscription.renew">Rinnova l'abbonamento</message>
-	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a una banca dati SQL permemorizzare i suoi dat. Vedi i requisiti di sistema sopra per un elenco delle banche dati supportate. Nei campi sotto, fornisci le impostazioni per connetterti alla banca dati.</message>
+	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a un database SQL per memorizzare i dati. Vedi i requisiti di sistema sopra per un elenco dei DBMS supportati. Nei campi sotto, fornisci le impostazioni per connetterti al DB.</message>
 	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$articleId} è stata registrata da {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e loggati per inviare, con possibilità di anonimato.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti possono non registrarsi per inviare, con possibilità di anonimato.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e autenticati per postare, con possibilità di anonimato.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti possono non registrarsi per postare, con possibilità di anonimato.</message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Per abilitare i lettori a localizzare versioni online del lavoro citato da un autore, sono disponibili le seguenti opzioni.</p>
 
 <ol>
@@ -906,31 +906,31 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 </ol>]]></message>
 	<message key="submission.layout.noLayoutFile">Nessuno (Carica la versione finale di copyedit come versione di layout prima di mandare la richiesta)</message>
 	<message key="submission.layout.referenceLinking">Link ai riferimenti</message>
-	<message key="payment.submission.paySubmission">Paga la quota di submission</message>
+	<message key="payment.submission.paySubmission">Paga il contributo per l'invio di una proposta</message>
 	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
-	<message key="reviewer.competingInterests">Interessi concorrenziali</message>
+	<message key="reviewer.competingInterests">Conflitto di interessi</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Dichiara se o meno hai interessi concorrenziali riguardo a questa ricerca (vedi
 <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
-	<message key="payment.loginRequired.forArticle">E' neccesaria la sottoscrizione  o il pay-per-view per accedere all'articolo. Per verificare la sottoscrizione o pagare la quota, effettua il log in alla rivista.</message>
+	<message key="payment.loginRequired.forArticle">E' neccesario l'abbonamento o il pay-per-view per accedere all'articolo. Per verificare l'abbonamento o pagare la quota, effettua il log in alla rivista.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Per favore riempi i campi obbligatori</message>
-	<message key="common.homePageHeader.altText">Intestazione dell'homepage</message>
-	<message key="common.journalHomepageImage.altText">Immagine dell'intestazione della rivista</message>
+	<message key="common.homePageHeader.altText">Testata dell'homepage</message>
+	<message key="common.journalHomepageImage.altText">Immagine della testata ella rivista</message>
 	<message key="article.coverPage.altText">Immagine di copertina</message>
 	<message key="article.accessLogoOpen.altText">Open Access</message>
 	<message key="article.accessLogoRestricted.altText">Accesso limitato</message>
 	<message key="article.comments.sectionDefault">Default</message>
-	<message key="article.comments.disable">Disattivo</message>
-	<message key="article.comments.enable">Attivo</message>
-	<message key="article.fontSize">Dimensione del font</message>
+	<message key="article.comments.disable">Disattiva</message>
+	<message key="article.comments.enable">Attiva</message>
+	<message key="article.fontSize">Dimensione dei caratteri</message>
 	<message key="article.fontSize.small.altText">Piccolo</message>
 	<message key="article.fontSize.medium.altText">Medio</message>
 	<message key="article.fontSize.large.altText">Grande</message>
 	<message key="user.noRoles.chooseJournal">Il tuo account non è associato a nessuna rivista. Per favore seleziona una rivista:</message>
-	<message key="reviewer.article.enterReviewForm">Cliccare sull'icona per riempire la form di revisione</message>
-	<message key="common.pageHeader.altText">Intestazione della pagina</message>
+	<message key="reviewer.article.enterReviewForm">Cliccare sull'icona per compilare il modulo di revisione</message>
+	<message key="common.pageHeader.altText">Testata della pagina</message>
 	<message key="user.noRoles.noRolesForJournal">Il tuo account non ha ruoli assegnati per questa rivista. Scegli tra le azioni elencate sotto:</message>
-	<message key="user.noRoles.submitArticle">Sottometti una proposta</message>
-	<message key="user.noRoles.submitArticleRegClosed">Sottometti un articolo: la regsitrazione degli autori è attualmente disabilitata</message>
+	<message key="user.noRoles.submitArticle">Invia una proposta</message>
+	<message key="user.noRoles.submitArticleRegClosed">Proponi un articolo: la registrazione degli autori è attualmente disabilitata</message>
 	<message key="user.noRoles.regReviewer">Registrati come revisore</message>
 	<message key="user.noRoles.regReviewerClosed">Registrati come revisore: la registrazione dei revisori è attualmente disabilitata.</message>
 	<message key="issue.coverPage.altText">Copertina</message>
@@ -941,16 +941,16 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione implicita</message>
 	<message key="submission.reviewForm">Modulo di revisione</message>
 	<message key="submission.reviewFormResponse">Risposta del modulo di revisione</message>
-	<message key="plugins.categories.implicitAuth.description">I plugins di autenticazione implicita possono autenticare gli utenti basandosi sugli header http.</message>
+	<message key="plugins.categories.implicitAuth.description">I plugins di autenticazione implicita possono autenticare gli utenti basandosi sulle intestazioni http.</message>
 	<message key="submission.layout.publicGalleyId">Identificativo pubblico</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificativo pubblico già esistente</message>
 	<message key="about.memberships">Membri</message>
-	<message key="payment.type.fastTrack">Quota di revisione rapida</message>
+	<message key="payment.type.fastTrack">Contributo per la revisione rapida</message>
 	<message key="payment.type.membership">Quota di iscrizione individuale</message>
-	<message key="payment.type.purchaseArticle">Quota di acquisto dell'articolo</message>
+	<message key="payment.type.purchaseArticle">Costo dell'articolo</message>
 	<message key="payment.fastTrack.payFastTrack">Pagamento in modalità rapida</message>
 	<message key="payment.fastTrack.inFastTrack">in velocità</message>
-	<message key="payment.membership.buyMembership">Compra l'iscrizione individuale</message>
+	<message key="payment.membership.buyMembership">Acquista l'iscrizione individuale</message>
 	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$articleId} in favore di {$reviewerName}.</message>
 	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
@@ -970,15 +970,15 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="subscriptionTypes.format.print">Print</message>
 	<message key="subscriptionTypes.format.printOnline">Print e Online</message>
 	<message key="subscriptions.inactive">Inattivo</message>
-	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status">Stato</message>
 	<message key="subscriptions.status.active">Attivo</message>
 	<message key="subscriptions.status.needsInformation">Informazioni mancanti</message>
 	<message key="subscriptions.status.needsApproval">Da approvare</message>
 	<message key="subscriptions.status.awaitingManualPayment">In attesa di pagamento offline</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">In attesa di pagamento online</message>
 	<message key="subscriptions.status.other">Altro, vedi le note</message>
-	<message key="subscriptions.individualDescription">L'abbonamento individuale richiede una login per accedere ai contenuti riservati.</message>
-	<message key="subscriptions.institutionalDescription">L'abbonamento istituzionale non richiede login. Viene utilizzato il dominio o gli indirizzi IP dell'utente per accedere ai contenuti riservati.</message>
+	<message key="subscriptions.individualDescription">L'abbonamento individuale necessita di credenziali per accedere ai contenuti riservati.</message>
+	<message key="subscriptions.institutionalDescription">L'abbonamento istituzionale non richiede credenziali. Viene utilizzato il dominio o gli indirizzi IP dell'utente per accedere ai contenuti riservati.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>N.B.</strong> Gli abbonamenti istituzionali acquistati online richiedono l'approvazione del dominio o degli indirizzi IP per essere attivate.]]></message>
 	<message key="subscriptionManager.subscriptionTypes">Tipi di abbonamento</message>
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
@@ -1000,13 +1000,13 @@ Titolo dello schema di classificazione]]></message>
 	<message key="user.subscriptions.form.membership">Membership</message>
 	<message key="user.subscriptions.form.membershipRequired">I tipi di abbonamento selezionati richiedono informazioni sulla membership.</message>
 	<message key="user.subscriptions.form.typeIdValid">Seleziona un tipo di abbonamento valido.</message>
-	<message key="user.subscriptions.form.subscriptionExists"><![CDATA[Questo account ha gi&#224; un abbonamento individuale.]]></message>
+	<message key="user.subscriptions.form.subscriptionExists">Questo account ha già un abbonamento individuale.</message>
 	<message key="user.subscriptions.form.membershipInstructions">Informazioni sulla membership, se richieste dal tipo di abbonamento.</message>
 	<message key="user.subscriptions.form.institutionName">Nome dell'ente</message>
 	<message key="user.subscriptions.form.institutionNameRequired"><![CDATA[&#200; necessario inserire il nome dell'ente]]></message>
 	<message key="user.subscriptions.form.institutionMailingAddress">Indirizzo postale</message>
 	<message key="user.subscriptions.form.domain">Dominio</message>
-	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Se si indica il dominio, il range di IP &#232; facoltativo.<br />Sono validi i nomi di dominio (e.g. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Se si indica il dominio, il range di IP è facoltativo.<br />Sono validi i nomi di dominio (e.g. lib.sfu.ca).]]></message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">I tipi di abbonamento selezionati richiedono l'indicazione di un dominio e/o un range di IP per l'autenticazione.</message>
 	<message key="user.subscriptions.form.domainValid">Inserisci un dominio valido</message>
 	<message key="user.subscriptions.form.ipRange">Range di IP</message>
@@ -1095,7 +1095,7 @@ Titolo dello schema di classificazione]]></message>
 	<message key="gifts.status.notRedeemed">Disponibile</message>
 	<message key="payment.type.gift">Regalo</message>
 	<message key="plugins.categories.pubIds">Plugin degli identificatori pubblici</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">regala un abbonamento</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Regala un abbonamento</message>
 	<message key="plugins.categories.pubIds.description">Questi plugin permettono la gestione di identificatori pubblici</message>
 	<message key="gifts.details">Dettagli del regalo</message>
 	<message key="gifts.note">Note sul regalo</message>
@@ -1114,5 +1114,13 @@ Titolo dello schema di classificazione]]></message>
 	<message key="gifts.subscriptionFormIntroduction">Compila il modulo sottostante. Le informazioni di contatto fornite, insieme alle altre note sul dono, verranno usate per contattare il destinatario e informarlo dell'abbonamento dono (riceverai anche tu copia di questa email).</message>
 	<message key="gifts.subscriptionsDescription">Un abbonamento-dono riscattato qui sostituirà il tuo abbonamento esistente (se ne hai già uno). L'abbonamento inizierà alla data di riscatto e sarà valido per la durata prevista da quel tipo di abbonamento</message>
 	<message key="gifts.giftSubscriptionsAvailable">Disponibile un abbonamento-dono. I doni possono essere riscossi in qualsiasi momento dal destinatario e sono un ottimo modo di sostenere la rivista.</message>
+	<message key="gifts.subscriptionTypeNotValid">Il tipo di abbonamento per questo dono non è valido.  Contatta il gestore degli abbonamenti.</message>
+	<message key="gifts.subscriptionNonExpiring">Questo dono non è stato riscattato poiché hai un abbonamento senza scadenza alla rivista.</message>
+	<message key="payment.loginRequired.forIssue">Abbonamento e acquisto di fascicoli richiedono l'accesso. Per verificare acquisti e abbonamento, accedi alla rivista.</message>
+	<message key="payment.type.purchaseIssue">Quota di acquisto di un fascicolo</message>
+	<message key="payment.type.gift.subscription">Abbonamento</message>
+	<message key="installer.allowFileUploads"><![CDATA[Il tuo server consente il caricamento di file: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[C'è una nuova versione di OJS! Stai utilizzando OJS {$currentVersion}. La versione più recente è OJS {$latestVersion}. Visita <a href="http://pkp.sfu.ca/ojs_download" target="_new">la pagina dei download</a> per scaricare la versione più recente e conoscere le modalità di aggiornamento.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[C'è una nuova versione di OJS! Stai utilizzando OJS {$currentVersion}. La versione più recente è OJS {$latestVersion}. Contatta l'amministratore del sito  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) per informarlo. Maggiori informazioni sono disponibili <a href="http://pkp.sfu.ca/ojs_download" target="_new">qui</a>.]]></message>
 </locale>
 

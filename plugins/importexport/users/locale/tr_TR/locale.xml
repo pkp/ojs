@@ -56,4 +56,6 @@ Examples:
 	<message key="plugins.importexport.users.export.exportAllUsers">Tümünü ver</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Veriler verilmeye hazırlanırken hata oldu</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">"{$fileName}" dosyasına yazamıyorum.</message>
+	<message key="plugins.importexport.users.import.warning">Uyarı</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
 </locale>

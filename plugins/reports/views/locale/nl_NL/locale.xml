@@ -15,4 +15,9 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.views.displayName">Bekijk rapport</message>
 	<message key="plugins.reports.views.description">Deze plugin levert een CSV rapport dat beschrijft hoe ieder artikel gelezen wordt.</message>
+	<message key="plugins.reports.views.articleId">Artikel ID</message>
+	<message key="plugins.reports.views.articleTitle">Artikel titel</message>
+	<message key="plugins.reports.views.datePublished">Publicatiedatum</message>
+	<message key="plugins.reports.views.abstractViews">Abstract bekeken</message>
+	<message key="plugins.reports.views.galleyViews">Totaal proeven bekeken</message>
 </locale>

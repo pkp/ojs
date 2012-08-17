@@ -33,4 +33,6 @@
 	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
 	<message key="plugins.generic.referral.settings">转介插件设置</message>
 	<message key="plugins.generic.referral.excusions">排除</message>
+	<message key="plugins.generic.referral.settings.description">转介插件捕获同该期刊内发表的文章相连接的URL，以此其可以协助作者进行有选择的发表。这种形式允许期刊管理员对如何捕获这些连接进行控制。</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[输入一列常规的表达模式，每行一个，作为转介记录的不予计列。这能够防止搜索引擎从凌乱的转转介列表中请求索引。更多有关常规表达的详情，参阅<a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>。]]></message>
 </locale>

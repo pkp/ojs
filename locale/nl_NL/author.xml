@@ -125,4 +125,6 @@
 	<message key="author.submit.submissionLocale">Taal van de inzending</message>
 	<message key="author.submit.form.localeRequired">Selecteer een taal voor de inzending.</message>
 	<message key="author.submit.submissionLocaleDescription">Dit tijdschrift accepteert inzendingen in verschillende  talen. Kies de taal van de inzending uit het menu hieronder.</message>
+	<message key="author.submit.submissionSupportingAgencies">Bijdragen en ondersteunende instanties</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Noem de instanties (personen, organisaties of diensten) die bijdragen leveren aan de inhoud of de financiering van het werk dat u presenteert in de inzending. Scheid ze met een puntkomma (bijvoorbeeld John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>

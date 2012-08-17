@@ -15,7 +15,7 @@
 		<subject>Richiesta conferma dei dati di una tesi</subject>
 		<body>Questa e-mail è generata automaticamente dal sistema di gestione degli abstract delle tesi di {$journalName}.
 
-Le chiediamo di confermare la correttezza delle informazioni inserite. Una volta ricevuta tale conferma, l'abstract verrà pubblicato sulla versione on-line della rivista.
+Le chiediamo di confermare la correttezza delle informazioni inserite. Una volta ricevuta tale conferma, l'abstract verrà pubblicato nelle pagine web della rivista.
 
 Per confermare i dati, basta rispondere a {$thesisName} ({$thesisEmail}) con una e-mail contenente il testo di questo messaggio, la sua conferma, e ogni richiesta di correzione o chiarimento che riterrà opportuna.
 Generalmente è sufficiente cliccare sul pulsante "Rispondi" del client di posta elettronica.
@@ -36,5 +36,6 @@ Supervisor : {$supervisorName}
 Abstract
 --------
 {$abstract}</body>
+		<description></description>
 	</email_text>
 </email_texts>

@@ -16,6 +16,9 @@
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citation format plugin</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">This plugin implements the ABNT citation format.</message>
-	<message key="plugins.citationFormat.abnt.location">North America</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Available at: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Date accessed: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Yer</message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Ayarlar</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">ABNT atıf biçim eklentisi ayarları</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Ayarlar ABNT'ye göre atıf oluşturmak için kullanılır.</message>
 </locale>

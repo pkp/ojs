@@ -234,14 +234,6 @@
 	<message key="manager.setup.disciplineExamples">(例如，历史、教育、社会、心理学、文化研究、法律)</message>
 	<message key="manager.setup.disciplineProvideExamples">提供这份期刊相关的学科领域作为范例</message>
 	<message key="manager.setup.displayCurrentIssue">.为当期期刊新增一份目录（如果可以的话）</message>
-	<message key="manager.setup.doiPrefix">DOI前缀</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI前缀(Digital Object Identifier 数位物件识别号) 是由 <a href="http://www.crossref.org">CrossRef</a>所指派， 格式为：10.xxxx (例如， 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">DOI后缀</message>
-	<message key="manager.setup.doiSuffixDefault">使用默认模板 (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">使用如下公用DOI后缀模板： %j 表示期刊缩写, %v 表示期刊卷, %i 表示期刊期, %a 表示OJS的文章ID, %p 表示文章页码.</message>
-	<message key="manager.setup.doiSuffixPattern.example">例如, vol%viss%ipp%p 可以创建DOI表示为10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">DOI后缀可以使用任何格式，但是对于每个出版物他必须是唯一的。</message>
-	<message key="manager.setup.doiSuffixPublisherId">为出版项目使用“定制标识”作为DOI后缀（需要在第四步激活）。</message>
 	<message key="manager.setup.editorDecision">编辑决策</message>
 	<message key="manager.setup.editorialMembers">前往「委员会成员」并新增「编辑委员会」以及/或者「审稿委员会」成员。在期刊运作的任何阶段都可以做到这件事情。</message>
 	<message key="manager.setup.editorialProcess1">一个或多个编辑处理这些基本步骤，但并没有特别分配预定的角色。</message>
@@ -279,7 +271,6 @@
 	<message key="manager.setup.form.journalInitialsRequired">需要期刊起首字母名称。</message>
 	<message key="manager.setup.form.journalTitleRequired">需要期刊名称</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">每篇稿件所需审稿人数目。</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI模板必须遵循10.XXXX这样的格式。</message>
 	<message key="manager.setup.form.supportEmailRequired">需要赞助者的电子信箱。</message>
 	<message key="manager.setup.form.supportNameRequired">需要赞助者的姓名。</message>
 	<message key="manager.setup.frequencyOfPublication">创刊时间和出刊频率</message>
@@ -457,8 +448,6 @@
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地图问题、贝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">关键字</message>
 	<message key="manager.setup.subjectProvideExamples">提供关键字或者主旨的范例，以引导作者。</message>
-	<message key="manager.setup.submissionEmailLogging">启用投稿电子邮件记录，这会为所有和一篇稿件相关的电子邮件留下一个记录档(可由每篇稿件的「历史」网页进入)。</message>
-	<message key="manager.setup.submissionEventLogging">启用投稿事件记录，这会为每篇稿件留下一个记录档(可由每篇稿件的「历史」网页进入)。</message>
 	<message key="manager.setup.submissionGuidelines">投稿须知</message>
 	<message key="manager.setup.submissionPreparationChecklist">投稿准备清单</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">在提交一份投稿文章给这个期刊时，作者首先会被要求检查是否完成「投稿准备清单」中的每个项目，才能继续下一步。这份清单也会出现在「期刊介绍」内的「作者须知」栏位中。这份清单能够在下面进行编辑，而所有的项目将会需要作者进行检查后，才能继续他们的投稿流程。</message>
@@ -680,9 +669,22 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立订阅类型</message>
 	<message key="manager.plugins.versionFileInvalid">在插件目录里version.xml含有错误信息</message>
 	<message key="manager.reviewFormElements.included">包括给作者的信息</message>
-	<message key="manager.setup.doiReassign">重新分配DOI识别符</message>
 	<message key="manager.groups.publishEmails">发布成员电子邮件地址</message>
 	<message key="manager.language.submissions">投稿</message>
 	<message key="manager.plugins.invalidPluginArchive">上传插件不包含一个对应插件名的目录。</message>
 	<message key="manager.plugins.tarCommandNotFound">tar命令不可用。请正确配置你的“config.inc.php”。</message>
+	<message key="manager.payment.giftFees">礼品费用</message>
+	<message key="manager.payment.giftFeesDescription">在“有关期刊”中的订购页面上会出现一条礼品订购的链接。这同时也是订购边栏块的一部分。</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">这将激活对礼品订购的款项支付，允许读者为其他读者购买礼品订购服务。</message>
+	<message key="manager.payment.options.purchaseIssueFee">购买事项</message>
+	<message key="manager.plugins.wrongCategory">上传的插件不符合升级插件的范畴。</message>
+	<message key="manager.plugins.wrongName">上传插件中的版本.xml包含同升级插件名称不符的插件名。</message>
+	<message key="manager.plugins.settings">设置</message>
+	<message key="manager.sections.confirmDelete">您确定要永久删除该栏目吗？</message>
+	<message key="manager.sections.alertDelete">在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。</message>
+	<message key="manager.setup.journalThumbnail">期刊缩略图</message>
+	<message key="manager.setup.subjectClassificationURLValid">请提供有效的远程URL (含有 http://)。</message>
+	<message key="manager.setup.useThumbnail">缩略图</message>
+	<message key="manager.setup.categories">分类范畴</message>
+	<message key="manager.setup.categories.description">从上面的设置列表中选择最合适的类别。读者将能够从完整的期刊设置中依靠分类进行浏览。</message>
 </locale>

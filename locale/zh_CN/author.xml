@@ -125,4 +125,6 @@
 	<message key="author.submit.submissionLocale">投稿语言</message>
 	<message key="author.submit.submissionLocaleDescription">本期刊支持多语言投稿。请从下面的下拉菜单中选择投稿的主语言。</message>
 	<message key="author.submit.form.localeRequired">请选择一种提交语言</message>
+	<message key="author.submit.submissionSupportingAgencies">合著者和赞助机构</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">确认对文章内容作出贡献或为提交草稿中的工作提供资金或支持的机构（个人、组织或服务团体）。用分号将其隔开（如John Doe, 地铁大学；硕士大学，计算机科学系）。</message>
 </locale>

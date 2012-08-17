@@ -19,4 +19,8 @@
        <message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
        <message key="plugins.citationFormats.abnt.description">Цей модуль дозволяє використання формату цитат ABNT.</message>
        <message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно за адресою: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Дата доступу: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Налаштування</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Налаштування модуля формату цитат ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Налаштування, потрібні для створення цитат формату ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Розташування</message>
 </locale>

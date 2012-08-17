@@ -125,4 +125,6 @@
 	<message key="author.submit.submissionLocale">Idioma da submissão</message>
 	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
 	<message key="author.submit.submissionLocaleDescription">Este periódico aceita submissões em vários idiomas. Escolha o idioma principal da submissão a partir do menu dropdown a seguir.</message>
+	<message key="author.submit.submissionSupportingAgencies">Contribuidores e Agências de fomento</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identifique agências (pessoas, organizações, ou serviços) que contribuíram para o conteúdo ou ofereceram apoio financeiro ou logístico para o trabalho apresentado nesta submissão. Separe os agentes por ponto-e-vírgula (ex.: Carlos Silva, Universidade Estadual; Universidade Federal do Estado, Departamento de Ciência da Informação).</message>
 </locale>

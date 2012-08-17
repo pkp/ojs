@@ -30,4 +30,6 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">Belirtilen "{$journalPath}" sistemde bulunmayan bir dizin.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">"{$fileName}" dosyasına yazamıyorum.</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">"{$articleId}" tanımı ile makale bulamadım.</message>
+	<message key="plugins.importexport.erudit.unavailable">Mevcut Değil</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">"{$galleyLabel}" adlı özel dizgi etiketi ile dizgi eşleşmedi.</message>
 </locale>

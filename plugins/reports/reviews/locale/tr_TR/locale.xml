@@ -14,14 +14,14 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.reports.reviews.displayName">Değerlendirme Raporu</message>
-	<message key="plugins.reports.reviews.description">Bu eklenti CSV formatında makale değerlendirme atamaları ile ilgili bilgileri içeren bir rapor sağlar.</message>
+	<message key="plugins.reports.reviews.description">Bu eklenti bir dergi için CSV biçiminde değerlendirme atamalarının listesini içeren bir rapor sunar.</message>
 	<message key="plugins.reports.reviews.round">Tur</message>
 	<message key="plugins.reports.reviews.reviewerId">Hakem Numarası</message>
 	<message key="plugins.reports.reviews.reviewer">Hakem</message>
 	<message key="plugins.reports.reviews.dateAssigned">Atama Tarihi</message>
 	<message key="plugins.reports.reviews.dateNotified">Onaylama Tarihi</message>
-	<message key="plugins.reports.reviews.dateConfirmed">Konfirmasyon Tarihi</message>
-	<message key="plugins.reports.reviews.dateCompleted">Tamamlama Tarihi</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Onay Tarihi</message>
+	<message key="plugins.reports.reviews.dateCompleted">Bitirme Tarihi</message>
 	<message key="plugins.reports.reviews.dateReminded">Hatırlatma Tarihi</message>
 </locale>
 

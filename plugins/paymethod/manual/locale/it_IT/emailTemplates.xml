@@ -11,11 +11,12 @@
 <email_texts locale="it_IT">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Notifica di pagamento manuale</subject>
-		<body>Bisogna eseguire un pagamento manuale per  {$journalName}, utente {$userFullName} (username "{$userName}").
+		<body>Bisogna registrare un pagamento offline per  {$journalName}, utente {$userFullName} (username "{$userName}").
 
 Il pagamento riguarda "{$itemName}".
 Il costo è {$itemCost} ({$itemCurrencyCode}).
 
 Questa email è generata automaticamente da Open Journal Systems' Manual Payment plugin.</body>
+		<description></description>
 	</email_text>
 </email_texts>

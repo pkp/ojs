@@ -201,12 +201,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nivå</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Merknad</message>
-	<message key="submission.event.logLevel.warning">Advarsel</message>
-	<message key="submission.event.logLevel.error">Feil</message>
-	
 	<message key="submission.event.general.defaultEvent">Manuskripthendelse</message>
 	<message key="submission.event.general.articleSubmitted">Artikkel innsendt</message>
 	<message key="submission.event.general.issueScheduled">Manuskript sendt til publiseringsplanen</message>
@@ -945,7 +939,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 	<message key="debug.notes.helpMappingLoad">Gjenopplastet XML bidrar til å kartlegge filen {$filename} under søk etter {$id}.</message>
 	<message key="article.article">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>

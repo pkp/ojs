@@ -16,5 +16,5 @@
 	<message key="plugins.citationFormats.refWorks.displayName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description"><![CDATA[Questo plugin implementa il formato di citazioni RefWorks, <a href="http://www.refworks.com/">http://www.refworks.com/</a>]]></message>
-	<message key="plugins.citationFormats.refWorks.export">Esporta a RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.export">Esporta in RefWorks</message>
 </locale>

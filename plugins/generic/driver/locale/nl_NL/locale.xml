@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/driver/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin localization strings
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.driver.displayName">DRIVER</message>
+	<message key="plugins.generic.driver.description">De DRIVER plugin breidt de OAI-PMH interface uit overeenkomstig de DRIVER Guidelines 2.0, waardoor OJS tijdschriften DRIVER compliant worden.</message>
+</locale>

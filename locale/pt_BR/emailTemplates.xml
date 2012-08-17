@@ -229,7 +229,7 @@ Agradecemos sua contribuição, fundamental para garantir a qualidade deste proc
 
 Como parte de suas funções como editor de seção, designamos para seu acompanhamento do processo editorial a submissão "{$articleTitle}" para a revista {$journalName}.
 
-URL da submissão: {$submissionEditingUrl}
+URL da submissão: {$submissionUrl}
 login: {$editorUsername}
 
 Agradecendo desde já a atenção dispensada,
@@ -273,7 +273,7 @@ Resumo
 
 Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
 
-Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, através da URL {$journalUrl}.
+Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações.
 
 O prazo para a entrega da avaliação é {$reviewDueDate}.
 
@@ -440,9 +440,6 @@ Este é um lembrete automático, referente à solicitação de avaliação da su
 
 O prazo para entrega da avaliação era {$reviewDueDate}, e este e-mail foi enviado automaticamente pois o prazo se esgotou.
 Aguardamos o recebimento da avaliação assim que for possível concluí-la.
-
-Caso não possua o login e a senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via e-mail junto com o seu login.
-Criar nova senha: {$passwordResetUrl}.
 
 URL da Submissão: {$submissionReviewUrl}
 
@@ -806,9 +803,7 @@ Atenciosamente,
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Cadastro como avaliador na revista {$journalName}</subject>
-		<body>{$reviewrName},
-
-Devido ao conhecimento excepcional na sua área de atuação, tomamos a liberdade de cadastrá-lo na base de dados de avaliadores da revista {$journalName}.
+		<body>Devido ao conhecimento excepcional na sua área de atuação, tomamos a liberdade de cadastrá-lo na base de dados de avaliadores da revista {$journalName}.
 
 Seu cadastro não significa assumir responsabilidade alguma, apenas permitindo-nos solicitar a avaliação de submissões, de acordo com seus interesses informados no perfil.
 
@@ -857,9 +852,7 @@ Caso não deseje receber mais notificações via e-mail, acesse {$unsubscribeLin
 
 Clique no link a seguir para confirmar sua solicitação e incluir seu e-mail na lista de correio: {$confirmLink}
 
-Caso não deseje mais receber as notificações, acesse {$unsubscribeLink} e informe seu e-mail e senha.
-
-A senha para desabilitar as notificações é: {$password}
+Caso não deseje mais receber as notificações, acesse {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>Esta mensagem é enviada a usuários não cadastrados que acabaram de se registrar no serviço de notificações via lista de correio.</description>
@@ -1015,5 +1008,150 @@ Atenciosamente,
 {$userFirstName}
 Editor de texto, {$journalName}</body>
 		<description>Solicitação ao autor de detalhes sobre referência, enviada pelo editor de texto.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Solicitação de avaliação de artigo - {$journalName}</subject>
+		<body>{$reviewerName}:
+
+Esta mensagem está relacionada ao trabalho "{$articleTitle}," que está em processo de avaliação na publicação {$journalName}.
+
+Seguindo o processo de de avaliação da versão anterior, os autores encaminharam uma versão revisada. Nos seria de grande valia se pudesse ajudar a avaliar essa nova versão.
+
+Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se aceita ou não assumir a avaliação, bem como acessar os dados da submissão e registrar sua avaliação e recomendação. O site da revista é {$journalUrl}
+
+A avaliação deve ser concluída até{$reviewDueDate}.
+
+Caso não possua seu login e senha para acesso, use o link a seguir para criar uma nova senha (que será encaminha via e-mail junto com seu login). {$passwordResetUrl}
+
+URL da submissão: {$submissionReviewUrl}
+
+Agradecendo antecipadamente sua consideração em aceitar esta responsabilidade,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Solicitação de avaliação de artigo - {$journalName}</subject>
+		<body>{$reviewerName}:
+
+Esta mensagem é referente ao trabalho "{$articleTitle}", que está em processo de avaliação na publicação {$journalName}.
+
+Continuando o processo de avaliação da versão anterior do trabalho, os autores enviaram uma versão revisada. Nos seria de grande valia se pudesse ajudara a avaliá-lo.
+
+Para tanto, acesse o sistema da revista até {$weekLaterDate} para indicar se está disponível ou não para assumir a responsabilidade, bem como acessar os dados da submissão e registrar sua avaliação e recomendação.
+
+A avaliação deve ser concluída até {$reviewDueDate}.
+
+URL da Submissão: {$submissionReviewUrl}
+
+Agradecendo desde já a atenção dispensada,
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Solicitação de avaliação de artigo - {$journalName}</subject>
+		<body>Prezada(o) {$reviewerName},
+
+Esta mensagem é referente ao trabalho "{$articleTitle}," em processo de avaliação para a revista {$journalName}.
+
+Seguindo o processo de avaliação do trabalho, os autores encaminharam uma versão atualizada. Acredito que seu conhecimento será fundamental para realizar sua avaliação e espero que considere assumir esta importante responsabilidade.
+
+As Diretrizes para Avaliação estão apensas a e a submissão como anexo a esta mensaagem. Sua avaliação, bem como recomendação, devem ser enviadas para este e-mail até {$reviewDueDate}.
+
+Responda a esta mensagem até {$weekLaterDate} indicando sua disponibilidade ou não para realizar a avaliação.
+
+Agradecendo desde já a atenção dispensada,
+
+{$editorialContactSignature}
+
+
+Diretrizes para Avaliação
+
+{$reviewGuidelines}</body>
+		<description>Esta mensagem é enviada pelo Editor de seção ao avaliador, solicitando a avaliação de uma submissão em uma segunda rodada ou superior. A mensagem inclui a submissão como anexo. Ela é usada quando o processo de avaliação via e-mail é escolhido no Passo 2 de configuração da revista (Caso contrário, veja REVIEW_REQUEST_SUBSEQUENT).</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Prezada(o) {$recipientFirstName},
+
+{$buyerFullName} gostaria de compartilhar um presente com você, oferecido pela publicação {$giftJournalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+Uma mensagem posterior será enviada com dados de acesso e instruções para o resgate do presente.
+
+Esperamos que o presente seja de seu agrado!
+
+{$giftContactSignature}</body>
+		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Resgate de presente: Dados de acesso</subject>
+		<body>Prezada(o) {$recipientFirstName},
+
+{$buyerFullName} gostaria de compartilhar um presente com você, oferecido pela publicação {$giftJournalName}:
+
+{$giftDetails}
+
+
+Para resgatá-lo, acesse {$giftUrl} com as credenciais a seguir:
+
+Login: {$username}
+Senha: {$password}
+
+Após o acesso, você pode alterar sua senha a qualquer tempo.
+
+Esperamos que o presente seja do seu agrado!
+
+{$giftContactSignature}</body>
+		<description>This email notifies a gift recipient of their login details for a new account.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Resgate de presente: Dados de acesso</subject>
+		<body>Prezada(o) {$recipientFirstName},
+
+{$buyerFullName} gostaria de compartilhar com você um presente, oferecido pela publicação {$giftJournalName}:
+
+{$giftDetails}
+
+
+Para resgatá-lo, acesse {$giftUrl} com as seguintes credenciais:
+
+Login: {$username}
+
+Esperamos que o presente seja de seu agrado!
+
+{$giftContactSignature}</body>
+		<description>This email notifies a gift recipient of their login details.</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Envio de versão atualizada</subject>
+		<body>{$editorialContactName},
+
+Uma versão atualizada de "{$articleTitle}" foi enviada pelo autor {$authorName}.
+
+URL da submissão: {$submissionUrl}
+
+{$editorialContactSignature}</body>
+		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
 	</email_text>
 </email_texts>

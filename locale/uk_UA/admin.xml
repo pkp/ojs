@@ -42,7 +42,7 @@
        <message key="admin.journals.confirmDelete">Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?</message>
        <message key="admin.journals.create">Створити журнал</message>
        <message key="admin.journals.createInstructions">Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та розподіліть ролі користувачів.</message>
-       <message key="admin.journals.urlWillBe">URL-адресою журналу буде {$sampleUrl}</message>
+       <message key="admin.journals.urlWillBe">Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}</message>
        <message key="admin.journals.form.titleRequired">Необхідна назва.</message>
        <message key="admin.journals.form.pathRequired">Необхідний шлях.</message>
        <message key="admin.journals.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
@@ -60,6 +60,19 @@
        <message key="admin.mergeUsers.into.description">Оберіть користувача, якому слід передати права попереднього користувача (авторство, редакційні призначення тощо).</message>
        <message key="admin.mergeUsers.from.description">Оберіть користувача, якого потрібно включити до облікового запису іншого користувача (наприклад, якщо одна особа має два облікові записи). Перший визначений обліковий запис буде видалений, а його подання, редакційні призначення і т.і. будуть асоційовані з другим визначеним обліковим записом.</message>
        <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
-       <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете влити обліковий запис користувача "{$oldUsername}" у обліковий запис користувача "{$newUsername}"? Обліковий запис користувача "{$oldUsername}" буде видалений. Це незворотна дія.</message>
+       <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
        <message key="admin.mergerUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
+	<message key="admin.settings.useAlphalist">Відображати на домашній сторінці сайту алфавіт для швидкої навігації між журналами (корисно для сайтів з багатьма журналами).</message>
+	<message key="admin.settings.journalsList.showDescription">Опис журналу</message>
+	<message key="admin.categories">Категорії</message>
+	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>
+	<message key="admin.categories.enableCategories">Заборонити менеджерам журналів організовувати журнали за категоріями.</message>
+	<message key="admin.categories.editTitle">Редагувати категорію</message>
+	<message key="admin.categories.createTitle">Створити категорію</message>
+	<message key="admin.categories.create">Створити нову категорію</message>
+	<message key="admin.categories.noneCreated">Жодних категорій не було створено.</message>
+	<message key="admin.categories.confirmDelete">Ви впевнені, що хочете видалити цю категорію?</message>
+	<message key="admin.categories.enable.description">Щоб полегшити організацію великої номенклатури журналів, адміністратор сайту може обрати тут перелік категорій, за якими будуть організовуватись видання. Після цього, менеджери журналів зможуть обирати для своїх видань відповідні категорії. Таким чином, читачам стане доступна навігація між журналами за категоріями.</message>
+	<message key="admin.categories.name">Назва</message>
+	<message key="admin.categories.nameRequired">Необхідно вказати назву категорії</message>
 </locale>

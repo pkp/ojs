@@ -58,7 +58,6 @@
 	<message key="editor.issues.accessStatus">Sarbidea</message>
 	<message key="editor.issues.accessDate">Sarrera libreko data </message>
 	<message key="editor.issues.invalidAccessDate">Sarrera librea emateko data ez da baliozkoa.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Zenbaki-identifikazio publikoa badago lehendik.</message>
 	<message key="editor.issues.coverPage">Azaleko irudia</message>
 	<message key="editor.issues.coverPageInstructions">(gif, .jpg, edo .png formatuak onartzen dira)</message>
 	<message key="editor.issues.uploaded">Kargatuta</message>

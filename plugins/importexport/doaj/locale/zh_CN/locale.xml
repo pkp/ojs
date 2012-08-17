@@ -21,4 +21,5 @@
 	<message key="plugins.importexport.doaj.export.journal">导出期刊</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">将信息以XML格式导出，以便在DAOJ存档</message>
 	<message key="plugins.importexport.doaj.export.contact">联系DOAJ列入</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">为了使您的期刊能够收录到DOAJ，请将该部分自动生成的表格提交到DOAJ,并尽您所能填写不完整的信息。</message>
 </locale>

@@ -19,7 +19,7 @@
 		per ricevere username e password. Se non hai le credenziali potrai comunque esportare i metadati in ONIX ma non registrare DOI con mEDRA da OJS. 
 		Nota che la password sarà registrata in testo semplice, non crittografata, secondo le indicazioni di mEDRA.]]></message>
 
-	<message key="plugins.importexport.medra.settings.description"><![CDATA[<a href="{$settingsUrl}">Configure</a> il plugin  mEDRA prima del primo utilizzo.]]></message>
+	<message key="plugins.importexport.medra.settings.description"><![CDATA[<a href="{$settingsUrl}">Configura</a> il plugin  mEDRA prima del primo utilizzo.]]></message>
 	
 	<message key="plugins.importexport.medra.settings.form.description">Configura il plugin di export per mEDRA</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>

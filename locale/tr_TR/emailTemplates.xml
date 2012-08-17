@@ -13,7 +13,7 @@
 <email_texts locale="tr_TR">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Şifre Değiştirme Onayı</subject>
-		<body>{$siteTitle} sitesindeki şifrenizi değiştirmek istemişsiniz.
+		<body>{$siteTitle} sitesindeki şifrenizi değiştirmek istediniz.
 
 Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.
 Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.
@@ -87,10 +87,10 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.
 		<description>Bu mesaj sayı açık erişime açıldığında haberdar olmak isteyen okuyuculara gönderilir.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>{$journalName}dergisi arşivleme talebi </subject>
-		<body>Değerli [University Librarian]
+		<subject>{$journalName} arşivleme talebi</subject>
+		<body><![CDATA[Değerli [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
+{$journalName} <{$journalUrl}> dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
 
 [Brief description of journal]
 
@@ -99,7 +99,7 @@ Dergimizin LOCKSS yayınevi bildirgesi internet adresi: {$journalUrl}/gateway/lo
 LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.
 
 Teşekkür ederiz,
-{$principalContactSignature}</body>
+{$principalContactSignature}]]></body>
 		<description>Bu e-posta LOCKSS arşiv yöneticisine bu dergiyi arşivlerine ekleme olanağını hatırlatmayı amaçlar ve derginin LOCKSS yayımcı bildirgesi internet adresini içermektedir.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
@@ -227,23 +227,21 @@ Başvuruya ulaşım için adres: {$submissionReviewUrl}
 		<description>Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda "tek tıklama özelliği" etkinleştirildi ise kullanılır..</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Ekteki makaleyi değerlendirmenizi rica ederiz</subject>
+		<subject>Makale Değerlendirme İsteği</subject>
 		<body>Sayın {$reviewerName},
 
-{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı makaleyi değerlendiremek için en uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyoruz. Yazı e-posta ekinde gönderilmiştir ve dergimizin hakemlerimizden beklentileri aşağıda verilmektedir. Dergimiz için çok değerli olan görüşlerinizden bizi mahrum etmeyeceğinizi umuyorum. Değerlendirme raporunuzun {$reviewDueDate} tarihinde bana gönderilmiş olması gerekmektedir.
+Dergimizde yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı makaleyi değerlendiremek için uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyoruz. Yazı e-posta ekinde gönderilmiştir ve dergimizin hakemlerimizden beklentileri aşağıda verilmiştir. Dergimiz için çok değerli olan görüşlerinizi bizimle paylaşacağınızı umuyoruz. Değerlendirme raporunuzun {$reviewDueDate} tarihine kadar gönderilmiş olması gerekmektedir.
 
-Lütfen değerlendirmeyi kabul edip, etmediğinizi {$weekLaterDate} süresinde e-posta mesajı ile bana bildiriniz.
+Lütfen değerlendirmeyi kabul edip, etmediğinizi {$weekLaterDate} tarihine kadar e-posta mesajı ile bildiriniz.
 
-
-İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.
+Katkılarınız için şimdiden teşekkür ederiz.
 
 {$editorialContactSignature}
 
 
 Değerlendirme Rehberi:
 
-{$reviewGuidelines}
-</body>
+{$reviewGuidelines}</body>
 		<description>Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda e-posta eki ile değerlendirme seçeneği seçili ise kullanılacaktır.</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
@@ -268,7 +266,7 @@ Bu çalışmayı değerlendirmek üzere tarafıma gönderdiğiniz için teşekk�
 		<description>Hakemin değerlendirmeyi kabul ettiğini editöre bildirmek üzere kullandığı mesaj</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>DEĞERLENDİREMEYECEĞİM...</subject>
+		<subject>Değerlendirmeyeceğim</subject>
 		<body>Sayın {$editorialContactName},
 {$journalName}'nde yayımlanması için değerlendirilmek üzere gönderilen "{$articleTitle}" başlıklı makaleyi şu anda değerlendiremeyeceğim. Beni düşündüğünüz için teşekkür ederim, başka bir zaman beni rahatlıkla arayabilirsiniz.
 
@@ -343,8 +341,6 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 
 {$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyorduk, yoğun işleriniz nedeni ile oluşan minik gecikme nedeni ile sistemimiz tarafından bu mesaj tarafınıza otomatik olarak gönderilmişitir. 
 Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
-
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
 
 Makale Erişim Adresi: {$submissionReviewUrl}
 
@@ -652,5 +648,16 @@ Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
 
 {$subscriptionContactSignature}</body>
 		<description>Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır...</description>
+	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>{$siteTitle}: Yeni Bildirim</subject>
+		<body>{$siteTitle} size yeni bir bildirim gönderdi: 
+
+{$notificationContents}
+
+Bağlantı: {$url}
+
+{$principalContactSignature}</body>
+		<description></description>
 	</email_text>
 </email_texts>

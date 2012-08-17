@@ -14,6 +14,10 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.reports.views.displayName">Rapor Göster</message>
-	<message key="plugins.reports.views.description">
-	Bu eklenti CSV formatında her makale için okuyucu belirten bir rapor sunar</message>
+	<message key="plugins.reports.views.description">Bu eklenti CSV formatında her makale için okuyucu belirten bir rapor sunar.</message>
+	<message key="plugins.reports.views.articleId">Makale Sırası</message>
+	<message key="plugins.reports.views.articleTitle">Makale Başlığı</message>
+	<message key="plugins.reports.views.datePublished">Yayın Tarihi</message>
+	<message key="plugins.reports.views.abstractViews">Özet Görüntüleme</message>
+	<message key="plugins.reports.views.galleyViews">Toplam Dizgi Görüntüleme</message>
 </locale>

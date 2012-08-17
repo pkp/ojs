@@ -243,16 +243,6 @@
        <message key="manager.setup.disciplineExamples">(наприклад, Історія; Освіта; Соціологія; Психологія; Культурологія; Правознавство)</message>
        <message key="manager.setup.disciplineProvideExamples">Наведіть приклади академічних дисциплін, відповідних проблематиці цього журналу</message>
        <message key="manager.setup.displayCurrentIssue">Додати сторінку змісту поточного випуску (якщо він наявний).</message>
-       <message key="manager.setup.doiPrefix">Префікс DOI</message>
-       <message key="manager.setup.doiPrefixDescription"><![CDATA[Префікс DOI (Digital Object Identifier) надається <a href="http://www.crossref.org" target="_new">CrossRef</a>, він має формат 10.xxxx (наприклад, 10.1234).]]></message>
-       <message key="manager.setup.doiSuffix">Суфікс DOI</message>
-       <message key="manager.setup.doiSuffixDefault">Використовувати шаблон за замовчуванням (%j.v%vi%i.%a).</message>
-       <message key="manager.setup.doiSuffixPattern">Використовувати шаблон, наведений нижче для генерації суфіксів DOI. Використовуйте %j для ініціалів журналу, %v для номеру тому, %i для номеру випуску, %a для ідентифікатора (ID) статті у OJS та %p для номеру сторінки.</message>
-       <message key="manager.setup.doiSuffixPattern.example">Наприклад, vol%viss%ipp%p може створити DOI типу 10.1234/vol3iss2pp230</message>
-       <message key="manager.setup.doiSuffixDescription">Суфікс DOI може мати будь-яку форму, але він повинен бути унікальним для кожної опублікованої одиниці.</message>
-       <message key="manager.setup.doiSuffixCustomIdentifier">Використовувати для опублікованих одиниць "Власний ідентифікатор" як суфікс DOI (повинно бути дозволено на Кроці 4).</message>
-       <message key="manager.setup.doiReassign">Перепризначити DOI</message>
-        <message key="manager.setup.doiReassign.description">Якщо Ви змінили шаблони ідентифікації DOI, ці зміни не торкнуться тих ідентифікаторів DOI, які вже були призначені для опублікованих об'єктів. Але після того, як нова конфігурація DOI буде збережена, Ви можете натиснути цю кнопку, щоб скинути всі існуючі ідентифікатори DOI. Таким чином, зміни шаблонів ідентифікації будуть застосовані до всіх опублікованих статей журналу.</message>
        <message key="manager.setup.editorDecision">Рішення редактора</message>
        <message key="manager.setup.editorialMembers">Перейти до налаштувань редакційних рад та додати членів редколегії та/або ради рецензентів. Це можна зробити на будь-якому етапі видання журналу.</message>
        <message key="manager.setup.editorialProcess1">Всі основні кроки будуть виконуватись одним або кількома редакторами без додаткового розподілу ролей.</message>
@@ -290,7 +280,6 @@
        <message key="manager.setup.form.journalInitialsRequired">Необхідно вказати ініціали журналу.</message>
        <message key="manager.setup.form.journalTitleRequired">Необхідно вказати назву журналу.</message>
        <message key="manager.setup.form.numReviewersPerSubmission">Необхідно вказати кількість рецензентів подання.</message>
-       <message key="manager.setup.form.doiPrefixPattern">Шаблон DOI має бути у формі 10.xxxx.</message>
        <message key="manager.setup.form.supportEmailRequired">Необхідно вказати email контактної особи з технічних питань.</message>
        <message key="manager.setup.form.supportNameRequired">Необхідно вказати контактну особу з технічних питань.</message>
        <message key="manager.setup.frequencyOfPublication">Стартова точка та періодичність</message>
@@ -468,8 +457,6 @@
        <message key="manager.setup.subjectExamples">(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)</message>
        <message key="manager.setup.subjectKeywordTopic">Ключові слова</message>
        <message key="manager.setup.subjectProvideExamples">Наведіть приклади ключових слів або тематичних рубрик як керівництво для авторів</message>
-       <message key="manager.setup.submissionEmailLogging">Підтримувати журнал всіх листів, надісланих у зв'язку з поданням, на сторінці Історії подання.</message>
-       <message key="manager.setup.submissionEventLogging">Підтримувати журнал всіх маніпуляцій з поданням за сторінці його Історії.</message>
        <message key="manager.setup.submissionGuidelines">Керівництва щодо подань</message>
        <message key="manager.setup.submissionPreparationChecklist">Вимоги до подання</message>
        <message key="manager.setup.submissionPreparationChecklistDescription">Під час подання рукопису до журналу автори не зможуть завершити цей процес, поки вони не підтвердять відповідність рукопису всім встановленим вимогам. Список вимог також з'явиться у розділі "Керівництва для авторів" сторінки "Про журнал". Поданий нижче список вимог можна редагувати, але зауважте, що автор повинен буде підтвердити відповідність рукопису кожному з пунктів вимог, без цього він не зможе завершити процес подання рукопису до журналу.</message>
@@ -689,4 +676,7 @@
        <message key="manager.subscriptionTypes.name">Тип передплати</message>
        <message key="manager.subscriptionTypes.noneCreated">Жодних типів передплати не було створено.</message>
        <message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип передплати створений успішно.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
+	<message key="manager.plugins.settings">Налаштування</message>
+	<message key="manager.setup.categories">Категорії</message>
 </locale>

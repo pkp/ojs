@@ -12,9 +12,9 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">The OpenAIRE plugin adds the projectID element to the article metadata and extends the OAI-PMH interface according to the OpenAIRE Guidelines 1.1, helping OJS journals to become OpenAIRE compliant.</message>
+	<message key="plugins.generic.openAIRE.description">Il plugin OpenAIRE aggiunge l'elemento projectID ai metadati degli articoli ed estende l'interfaccia OAI-PMH in accordo con le OpenAIRE Guidelines 1.1, permettendo alla rivista OJS di divenire compatibile con le specifiche OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
-	<message key="plugins.generic.openAIRE.metadata">OpenAIRE Specific Metadata</message>
-	<message key="plugins.generic.openAIRE.projectID.description">(The projectID equals the Grant Agreement number)</message>
-	<message key="plugins.generic.openAIRE.projectIDValid">Please enter a valid projectID (6 numbers)</message>
+	<message key="plugins.generic.openAIRE.metadata">Metadati specifici per OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.projectID.description">(Il projectID è uguale al numero del Grant Agreement)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Inserisci un projectID valido</message>
 </locale>

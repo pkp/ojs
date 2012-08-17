@@ -156,4 +156,6 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<li>Legg til teksten «CrossRef» på slutten av hver referanse i manusets referanseliste.</li>
 	<li>Gjør den teksten om til en hyperlenke ved å merke den og bruk Words verktøy for innsetting av hyperlenke, og den aktuelle URLen som ble laget under pkt 2.</li>
 	</ol>]]></message>
+	<message key="default.journalSettings.purchaseIssueFee">Kjøp dette nummeret</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Betaling av dette beløpet vil gjøre det mulig for det å lese, laste ned og skrive ut dette nummeret.</message>
 </locale>

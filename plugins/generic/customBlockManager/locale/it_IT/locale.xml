@@ -22,9 +22,9 @@
 	<message key="plugins.generic.customBlockManager.delete">Cancella</message>	
 	<message key="plugins.generic.customBlockManager.addBlock">Aggiungi un blocco</message>	
 	<message key="plugins.generic.customBlock.content">Contenuto</message>
-	<message key="plugins.generic.customBlock.saved"><![CDATA[Il contenuto del blocco &#232; stato salvato.]]></message>
+	<message key="plugins.generic.customBlock.saved">Il contenuto del blocco è stato salvato.</message>
 	<message key="plugins.generic.customBlock.nameSuffix">(blocco personalizzato)</message>
-	<message key="plugins.generic.customBlock.description"><![CDATA[Questo blocco &#232; generato dall'utente.]]></message>
+	<message key="plugins.generic.customBlock.description">Questo è un blocco generato dall'utente.</message>
 	<message key="plugins.generic.customBlock.editContent">Modifica il contenuto della barra laterale</message>
 	<message key="plugins.generic.customBlock.contentRequired"><![CDATA[Inserisci del contenuto. Se vuoi puoi cancellare questo blocco, attraverso il plugin Gestore di blocchi personalizzati o nascondendolo nel <a href="{$setupStep56}">punto 5.6 del setup</a> della rivista.]]></message>
 	<message key="plugins.generic.customBlock.edit">Modifica</message>

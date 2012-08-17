@@ -63,7 +63,6 @@
        <message key="editor.issues.accessStatus">Статус доступу</message>
        <message key="editor.issues.accessDate">Дата відкриття доступу</message>
        <message key="editor.issues.enableOpenAccessDate">Дозволити відтермінований відкритий доступ</message>
-       <message key="editor.issues.issuePublicIdentificationExists">Публічний ідентифікатор випуску вже існує.</message>
        <message key="editor.issues.coverPage">Обкладинка</message>
        <message key="editor.issues.coverPageInstructions">(дозволені формати: .gif, .jpg, або .png)</message>
        <message key="editor.issues.uploaded">Вивантажено</message>
@@ -220,4 +219,7 @@
        <message key="editor.article.removeCoverPage">Видалити зображення обкладинки?</message>
        <message key="editor.article.remove">Видалити</message>
        <message key="editor.issues.invalidAccessDate">Дата відкриття доступу некоректна.</message>
+	<message key="editor.submissionArchive.noSubmissions">У архіві немає подань.</message>
+	<message key="editor.submissionArchive.saveChanges">Зберегти зміни для архівованих подань? Подання, помічені для видалення, будуть остаточно видалені з системи.</message>
+	<message key="editor.submissionArchive.confirmDelete">Ви впевнені, що хочете остаточно видалити це подання?</message>
 </locale>

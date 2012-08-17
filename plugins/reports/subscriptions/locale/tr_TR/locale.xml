@@ -13,7 +13,7 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.reports.subscriptions.displayName">Abonelik Raporu</message>
-	<message key="plugins.reports.subscriptions.description">Bu eklenti CSV formatında abonelik ve bilgi listesini içeren bir rapor sağlar.</message>
+	<message key="plugins.reports.subscriptions.description">Bu eklenti CSV formatında abonelik ve abone bilgi listesini içeren bir rapor sağlar.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Kurum Yazışma Adresi</message>
 	<message key="plugins.reports.subscriptions.ipRanges">IP Aralığı</message>
 </locale>

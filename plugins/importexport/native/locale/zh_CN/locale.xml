@@ -126,4 +126,8 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.success">导入成功</message>
 	<message key="plugins.importexport.native.import.success.description">导入已经成功，导入项目列表如下.</message>
 
+	<message key="plugins.importexport.native.import.error.invalidPubId">导入文件中包含一个无效的数据集 {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">为读者提供该期刊不支持的的作者单位选项 该文章的"{$作者全名}"期目中的  "{$文章标题}"  位置中的{$期目标题}"("{$locale}") 。</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">您导入的文件包含已在数据库中的其他项目中存有的{$pubIdType} '{$pubId}' 数据集。请确保您不再导入ID已经在数据库中存在的项目。</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">您导入的文件包含ID插件无法处理的含有 '{$pubIdType}'ID类型的数据集。请在试图导入该数据集前，安装和/或激活相应的ID插件。</message>
 </locale>

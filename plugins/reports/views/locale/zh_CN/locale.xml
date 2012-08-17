@@ -15,4 +15,9 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.views.displayName">View Report</message>
 	<message key="plugins.reports.views.description">This plugin implements a CSV report describing readership for each article.</message>
+	<message key="plugins.reports.views.articleId">文章标识</message>
+	<message key="plugins.reports.views.articleTitle">文章标题</message>
+	<message key="plugins.reports.views.datePublished">出版日期</message>
+	<message key="plugins.reports.views.abstractViews">摘要浏览</message>
+	<message key="plugins.reports.views.galleyViews">全部格式浏览</message>
 </locale>

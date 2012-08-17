@@ -203,8 +203,6 @@
 	<message key="manager.setup.disciplineExamples">(bv. Geschiedenis; Onderwijs; Sociologie; psychologie; Culturele studies; Rechten)</message>
 	<message key="manager.setup.disciplineProvideExamples">Geef voorbeelden van relevante academische disciplins voor dit tijdschrift</message>
 	<message key="manager.setup.displayCurrentIssue">De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar).</message>
-	<message key="manager.setup.doiPrefix">DOI voorvoegsel</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Het DOI (Digital Object Identifier) voorvoegsel wordt toegekend door <a href="http://www.crossref.org" target="_new">CrossRef</a> en is in het 10.xxxx formaat (bv. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Beslissing redacteur</message>
 	<message key="manager.setup.editorialMembers">Ga naar Teamleden en voeg redactie- en/of beoordelingsteamleden toe. Dit kan op ieder gewenst moment gebeuren.</message>
 	<message key="manager.setup.editorialProcess1">Een of meer redacteuren voeren de stappen uit zonder vooraf bepaalde rollen.</message>
@@ -414,8 +412,6 @@
 	<message key="manager.setup.subjectExamples">(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Sleutelwoorden</message>
 	<message key="manager.setup.subjectProvideExamples">Geef voorbeelden van sleutelwoorden of onderwerpen om auteurs te helpen</message>
-	<message key="manager.setup.submissionEmailLogging">Logboek van alle e-mails bijhouden op de geschiedenispagina van een inzending.</message>
-	<message key="manager.setup.submissionEventLogging">Logboek van alle acties bijhouden op de geschiedenispagina van een inzending.</message>
 	<message key="manager.setup.submissionGuidelines">Richtlijnen voor inzendingen</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checklist voor het voorbereiden van een inzending</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Bij het aanleveren van een inzending voor het tijdschrift wordt aan auteurs gevraagd om eerst ieder punt op de checklist ter voorbereiding van een inzending af te vinken. De checklist wordt ook getoond in bij de auteursrichtlijnen, onder Over dit tijdschrift. De checklist kan hieronder aangepast worden. Alle punten moeten aangevinkt worden voor auteurs verder kunnen gaan met hun inzending.</message>
@@ -645,7 +641,6 @@
 	<message key="manager.plugins.installFailed">Installatie mislukt</message>
 	<message key="manager.plugins.upgradeFailed">Opwaarderen mislukt</message>
 	<message key="manager.sections.wordCount">Aantal woorden</message>
-	<message key="manager.setup.doiSuffix">DOI achtervoegsel</message>
 	<message key="manager.setup.journalFavicon">Favicon van het tijdschrift</message>
 	<message key="manager.plugins.installDescription">Dit formulier maakt het mogelijk om een nieuwe plugin te laden en installeren. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.upgradeDescription">Dit formulier maakt het mogelijk om een plugin op te waarderen. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
@@ -663,12 +658,6 @@
 	<message key="manager.setup.contributorNoteDescription">Deze tekst verschijnt onder de kop "Ondersteunende organisaties"  en boven de lijst met ondersteunende organisaties bij "Sponsors" op de pagina "Over het tijdschrift".</message>
 	<message key="manager.setup.history">Geschiedenis van het tijdschrift</message>
 	<message key="manager.setup.historyDescription">Deze tekst verschijnt in de "Over" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven.</message>
-	<message key="manager.setup.doiSuffixDefault">Gebruik standaardpatroon (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Gebruik het patroon hieronder om DOI achtervoegsels te genereren. Gebruik %j voor de tijdschrift initiaal, %i voor het nummer, %a voor het OJS artikel en %p voor het paginanummer.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Bijvoorbeeld, vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Een DOI achtervoegsel kan iedere vorm aannemen, maar moet uniek zijn voor ieder gepubliceerd item.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Gebruik de "aangepaste identificatie"  van gepubliceerde items als DOI achtervoegsel (moet ingeschakeld worden in stap 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">Het DOI patroon moet de vorm 10.xxxx hebben.</message>
 	<message key="manager.setup.journalFaviconDescription">Voeg een favicon toe aan dit tijdschrift. Dat wordt bij de adresbalk getoond van gebruikers die uw site bezoeken.</message>
 	<message key="manager.setup.journalFaviconInvalid">Onjuist favicon formaat. Geldige formaten zijn .ico, .png en .gif.</message>
 	<message key="manager.setup.noPublishing">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
@@ -678,12 +667,24 @@
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatische e-mailberichten (aan te passen door de tijdschriftbeheerders  bij de OJS voorbereide e-mails) die gestuurd kunnen worden aan de abonnementenbeheerder bij het voltooien van online betalingen van abonnementen.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht worden vereisen goedkeuring van het opgegeven domein en IP reeksen en activatie van het abonnement door de abonnementenbeheerder.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties in te schakelen moet de tijdschriftbeheerder de online betalingen module, inclusief online betalingen voor abonnementen inschakelen bij Kosten voor Lezers.]]></message>
-	<message key="manager.setup.doiReassign.description">As u uw DOI configuratie verandert heeft dat geen invloed op reeds toegekende DOIs. Gebruik deze knop om alle bestaande DOI instellingen te wissen nadat de DOI configuratie is opgeslagen, om de nieuwe instellingen effect te laten hebben op bestaande artikelen.</message>
 	<message key="manager.language.submissions">Inzendingen</message>
 	<message key="manager.plugins.invalidPluginArchive">Het geladen plugin-archief bevat geen map die overeenkomt met de naam van de plugin.</message>
 	<message key="manager.plugins.tarCommandNotFound">Het tar commando is niet beschikbaar. Configureer het correct in uw "config.inc.php".</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml in de map van de plugin bevat ongeldige data.</message>
 	<message key="manager.groups.publishEmails">Publiceer e-mail adressen van abonnees</message>
 	<message key="manager.reviewFormElements.included">Opgenomen in het bericht aan de auteur</message>
-	<message key="manager.setup.doiReassign">DOI's opnieuw toekennen</message>
+	<message key="manager.payment.options.purchaseIssueFee">Koop issue</message>
+	<message key="manager.plugins.settings">Instellingen</message>
+	<message key="manager.sections.confirmDelete">Weet u zeker dat u deze sectie wilt verwijderen?</message>
+	<message key="manager.setup.categories">Categorieën</message>
+	<message key="manager.setup.journalThumbnail">Miniatuur voor het tijdschrift</message>
+	<message key="manager.setup.useThumbnail">Miniatuur</message>
+	<message key="manager.setup.subjectClassificationURLValid">Geef een geldige remote URL (inclusief http://)</message>
+	<message key="manager.payment.giftFeesDescription">Een 'schenk abonnement' link zal getoond worden op de Abonnementen pagina in 'Over dit tijdschrift'  en bij de abonnementen-blok in de sidebarS</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dit activeert betalingen voor het schenken van abonnementen, waarmee lezers abonnementen kunne kopen om aan andere lezers te schenken.</message>
+	<message key="manager.plugins.wrongCategory">De geladen plugin is niet van dezelfde categorie als de op te waarderen plugin.</message>
+	<message key="manager.plugins.wrongName">De version.xml in de geladen plugin bevat een plugin naam die niet overeenkomt met de op te waarderen plugin.</message>
+	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
+	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
+	<message key="manager.payment.giftFees">Gift kosten</message>
 </locale>

@@ -179,4 +179,6 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFee">Dergiye Bağış</message>
 	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi sizin için,  bu sayının indirilmesi ve yazdırılmasını erişilebilir hale getirecektir.</message>
 </locale>

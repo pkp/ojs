@@ -19,4 +19,8 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Dize plugin implementeert het ABNT citatieformaat.</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Beschikbaar op: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Datum gebruik: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Instellingen</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Locatie</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">ABNT citatieformat plugin instellingen</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Instellingen om citaties volgens ABNT te maken.</message>
 </locale>

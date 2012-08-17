@@ -14,14 +14,14 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.paymethod.manual.displayName">Manuel Ücret Ödeme</message>
-	<message key="plugins.paymethod.manual.description">Yönetici kulllanıcı ödemelerini manuel olarak kayıt edecektir(bu yazılım dışında).</message>
+	<message key="plugins.paymethod.manual.description">Yönetici kulllanıcı ödemelerini manuel olarak kayıt edecektir (bu yazılımın dışında).</message>
 	<message key="plugins.paymethod.manual">Manuel Ücret Ödeme</message>
 	<message key="plugins.paymethod.manual.settings">Manuel Ücret Ödeme Ayarları</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Talimatlar</message>
 	<message key="plugins.paymethod.manual.settings.manualInstructions">Kullanıcılar için manuel ücret ödeme talimatları seçimi.</message>
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Ödeme için bildrim gönder</message>
-	<message key="plugins.paymethod.manual.paymentNotification">Ödeme bildirimi</message>
-	<message key="plugins.paymethod.manual.notificationSent">Ödeme bildirimi gönderildi.</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Ödeme Bildirimi</message>
+	<message key="plugins.paymethod.manual.notificationSent">Ödeme bildirimi gönderildi</message>
 	<message key="plugins.paymethod.manual.purchase.title">Başlık</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Ücret</message>
 </locale>

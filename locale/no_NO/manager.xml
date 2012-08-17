@@ -104,8 +104,6 @@
 	<message key="manager.setup.disciplineExamples">(For eks. historie; utdanningsvitenskap; sosiologi; psykologi; kulturstudier; statsvitenskap)</message>
 	<message key="manager.setup.disciplineProvideExamples">Gi eksempler på relevante fagemner for dette tidsskriftet</message>
 	<message key="manager.setup.displayCurrentIssue">Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig).</message>
-	<message key="manager.setup.doiPrefix">DOI prefiks</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) prefiks deles ut av <a href="http://www.crossref.org">CrossRef</a> og er i formatet 10.xxxx (for eks. 10.1234).]]></message>
 	<message key="manager.setup.editorialMembers">Gå til Rådsmedlemmer og legg til redaksjonsråd- og/eller fagfellerådsmedlemmer. Dette kan ordnes når som helst i arbeidsprosessen.</message>
 	<message key="manager.setup.editorialProcess1">En eller flere redaktører håndterer de grunnleggende trinnene uten fordelte roller.</message>
 	<message key="manager.setup.editorialProcess2">Ansvarlig redaktør håndterer manuskriptarbeidskø og innholdsfortegnelse, mens seksjonsredaktører håndterer manuskriptvurdering og manuskriptbehandling.</message>
@@ -294,8 +292,6 @@
 	<message key="manager.setup.subjectExamples">(F.eks. fotosyntese; sorte hull; Gödels teorem; Zenons paradokser)</message>
 	<message key="manager.setup.subjectKeywordTopic">Emneord</message>
 	<message key="manager.setup.subjectProvideExamples">Gi eksempler på relevante nøkkelord eller emneord, til veiledning for forfatterene</message>
-	<message key="manager.setup.submissionEmailLogging">Slå på e-postlogging for manuskripter, som fører logg over alle e-poster som er forbundet med et manuskript (tilgjengelig via hvert manuskripts historikkside).</message>
-	<message key="manager.setup.submissionEventLogging">Slå på hendelseslogging for manuskripter, som fører logg over alle handlinger knyttet til et manuskript (tilgjengelig via hvert manuskripts historikkside).</message>
 	<message key="manager.setup.submissionGuidelines">Retningslinjer for innsending av manuskript</message>
 	<message key="manager.setup.submissionPreparationChecklist">Sjekkliste for klargjøring av manuskript</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ved innsending av manuskript til tidsskriftet, må forfattere først krysse av for hvert element på Sjekkliste for klargjøring av manuskript, før de får gå videre. Sjekklisten vises også i forfatterinstruksen, under 'Om' tidsskriftet. Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses av før forfatteren kan gå videre med innsendingen.</message>
@@ -635,17 +631,10 @@
 	<message key="manager.subscriptionTypes.form.individual">Personlig (brukere kontrolleres ved hjelp av innlogging)</message>
 	<message key="manager.subscriptionTypes.form.options">Valgmuligheter</message>
 	<message key="manager.setup.historyDescription">Denne teksten vil vises i "Om"-avsnittet av tidsskriftets nettsted, og kan benyttes til å beskriver endringer i navn, redaksjon og annet som er relevant for tidsskriftets publiseringshistorie.</message>
-	<message key="manager.setup.doiSuffix">DOI-suffix</message>
-	<message key="manager.setup.doiSuffixDefault">Bruk standardmønsteret (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Bruk mønsteret angitt nedenfor for å lage DOI-suffikser. Bruk %j for tidsskriftsinitialer, %v for volumnummer, %i for utgavenummer, %a for artikkelens ID i OJS, og %p for sidenummer.</message>
 	<message key="manager.sections.wordCountInstructions">Begrens antall ord i abstrakt i denne delen av tidsskriftet til (0 betyr ingen begrensning):</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i "om tidsskriftet" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> lisens. For dette formål finnes det et <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access.]]></message>
 	<message key="manager.setup.contributorNoteDescription">Denne teksten vil vises nedenfor «Andre støttespillere» ovenfor listen med støttespillernes navn/url under «Tidsskriftets sponsorer» på «Om»-siden.</message>
 	<message key="manager.setup.history">Tidsskriftets historie</message>
-	<message key="manager.setup.doiSuffixPattern.example">For eksempel vil vol%viss%ipp%p kunne skape en slik DOI: 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Et DOI-suffiks kan ha mange former, men må være unikt for hver enkelt publisert element.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Bruk «Individuell identifikator» for publiserte elementer som DOI-suffiks (må slås på i steg 4)</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI-mønsteret må være på formen 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Tidsskriftets favicon</message>
 	<message key="manager.setup.journalFaviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
 	<message key="manager.setup.journalFaviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
@@ -678,4 +667,10 @@
 	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="manager.setup.publisherNoteDescription">Denne teksten vil vises under tittelen «Utgiver» og over utgiverens navn/url under «Tidsskriftets sponsorer» på «Om»-siden.</message>
 	<message key="manager.setup.sponsorNoteDescription">Denne teksten vil vises under tittelen «Sponsorer» og over listen over sponsorenes navn/url-er under «Tidsskriftets sponsorer» på «Om»-siden.</message>
+	<message key="manager.setup.categories">Kategorier</message>
+	<message key="manager.setup.categories.description">Velg de mest passende kategorier fra listen. Lesere vil kunne bruke kategori for å navigere i hele tidsskriftutvalget.</message>
+	<message key="manager.sections.confirmDelete">Er du sikker på at du ønsker å slette denne seksjonen for godt?</message>
+	<message key="manager.sections.alertDelete">Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner.</message>
+	<message key="manager.plugins.settings">Innstillinger</message>
+	<message key="manager.setup.subjectClassificationURLValid">Oppgi en gyldig ekstern URL (ta med http://).</message>
 </locale>

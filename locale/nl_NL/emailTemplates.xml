@@ -198,7 +198,7 @@ Dank u voor het overwegen van dit verzoek.
 
 Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
 
-Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
+Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen.
 
 Het review wordt verwacht op {$reviewDueDate}.
 
@@ -731,11 +731,10 @@ Als u deze berichten niet meer wilt ontvangen, ga dan naar {$unsubscribeLink} en
 
 Klik op deze link om uw verzoek te bevestigen en uw e-mail adres toe te voegen aan de lijst: {$confirmLink}
 
-Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.
-
-Uw wachtwoord voor het stopzetten van berichten is: {$password}
+Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsubscribeLink} 
 
 {$principalContactSignature}</body>
+		<description>Deze e-mail wordt verstuurd naar een ongeregistreerde gebruiker die zich zojuist heeft geregistreerd voor notoficatiemails</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redacteursbeslissing</subject>

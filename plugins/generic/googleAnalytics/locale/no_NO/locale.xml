@@ -28,4 +28,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Velg en sporingskode.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Gammel sporingskode (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Ny sporingskode (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">For å følge med på lesingen av publiserte artikler ved bruk av Google Analytics, kan du legge inn et kontonummer her (på formen UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">En eller flere Google Analytics-kontonummer som er lagt inn av innsendende forfattere, er ugyldige.</message>
 </locale>

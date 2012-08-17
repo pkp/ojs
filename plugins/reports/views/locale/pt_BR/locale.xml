@@ -15,4 +15,9 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.views.displayName">Relatório de acessos</message>
 	<message key="plugins.reports.views.description">Este plugin implementa um relatório no formato CSV (planilha eletrônica), descrevendo o acesso a leitura de cada artigo.</message>
+	<message key="plugins.reports.views.articleId">ID do artigo</message>
+	<message key="plugins.reports.views.articleTitle">Título</message>
+	<message key="plugins.reports.views.datePublished">Data de publicação</message>
+	<message key="plugins.reports.views.abstractViews">Acessos ao resumo</message>
+	<message key="plugins.reports.views.galleyViews">Total de acessos às composições</message>
 </locale>

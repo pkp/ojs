@@ -48,7 +48,6 @@
 	<message key="editor.issues.accessStatus">Tilgangsstatus</message>
 	<message key="editor.issues.accessDate">Open Access-dato</message>
 	<message key="editor.issues.invalidAccessDate">Tilgangsdato er ikke gyldig.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Offentlig utgaveidentifikasjon finnes allerede.</message>
 	<message key="editor.issues.coverPage">Forsidebilde</message>
 	<message key="editor.issues.coverPageInstructions">(Tillatte format: .gif, .jpg, eller .png )</message>
 	<message key="editor.issues.uploaded">Opplastet</message>
@@ -203,4 +202,8 @@
 	<message key="editor.article.archiveSubmission">Forkast og arkiver innlevering</message>
 	<message key="editor.issues.unpublishIssue">Trekk tilbake nummeret</message>
 	<message key="editor.issues.confirmUnpublish">Er du sikker på at du ønsker å trekke tilbake dette nummeret?</message>
+	<message key="editor.notifyUsers.allReaders">Lesere ({$count} users)</message>
+	<message key="editor.notifyUsers.allAuthors">Alle publiserte forfattere ({$count} users)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Alle personlige abonnenter ({$count} users)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institusjonelle abonnenter  ({$count} users)</message>
 </locale>

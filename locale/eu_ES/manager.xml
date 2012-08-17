@@ -198,8 +198,6 @@
 	<message key="manager.setup.disciplineExamples">(Adib., Historia; Hezkuntza; Soziologia; Psikologia; Kultura-gaiak; Zuzenbidea)</message>
 	<message key="manager.setup.disciplineProvideExamples">Eman aldizkarian tratatzen diren diziplina akademikoen adibideak</message>
 	<message key="manager.setup.displayCurrentIssue">Gehitu uneko zenbakiaren aurkibidea (baldin badago).</message>
-	<message key="manager.setup.doiPrefix">DOI aurrizkia</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) aurrizkia <a href="http://www.crossref.org" target="_new">CrossRef</a>ek ematen du eta 10.xxxx formatua du (adib. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Editorearen erabakia</message>
 	<message key="manager.setup.editorialMembers">Joan Kontseilukideetara, eta gehitu Kontseilu editorialeko eta/edo Adituen kontseiluko kideak. Aldizkariaren edozein fasetan egin daiteke.</message>
 	<message key="manager.setup.editorialProcess1">Editore batek edo gehiagok egiten dituzte oinarrizko urratsak, funtzio zehatzik izendatu gabe.</message>
@@ -403,8 +401,6 @@
 	<message key="manager.setup.subjectExamples">(Adib., Fotosintesia; Zulo beltzak; Lau koloretako maparen teorema; Bayes-en teorema)</message>
 	<message key="manager.setup.subjectKeywordTopic">Gako-hitzak</message>
 	<message key="manager.setup.subjectProvideExamples">Eman gako-hitzen edo gaien adibideak, egileentzako laguntza gisa</message>
-	<message key="manager.setup.submissionEmailLogging">Mantendu bidalketa bakoitzari buruz bidalitako mezu elektroniko guztien log-fitxategia Historiaren orrian.</message>
-	<message key="manager.setup.submissionEventLogging">Mantendu bidalketa bakoitzarekin egindako ekintza guztien log-fitxategia Historiaren orrian.</message>
 	<message key="manager.setup.submissionGuidelines">Bidalketei buruzko gidalerroak</message>
 	<message key="manager.setup.submissionPreparationChecklist">Bidalketa prestatzeko zerrenda</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Aldizkarira lan bat bidaltzera doazenean, bidali aurretik Bidalketa prestatzeko zerrendako puntu guztiak bete dituztela egiaztatzeko eskatzen zaie egileei. Zerrenda hori Egileentzako gidalerroetan ere azaltzen da, Aldizkariari buruz orrian. Behean edita daiteke zerrenda, baina bertako puntu guztiak markatu beharko dituzte egileek bidalketa egin ahal izateko.</message>
@@ -620,16 +616,7 @@
 	<message key="manager.setup.contributorNoteDescription">Testua “Aldizkariari buruz” orriko “Aldizkariaren babesleak” atalaren azpian agertuko da, “Laguntzaileen iturriak” tituluaren azpian eta erakundeei laguntzen dieten izenen eta urls-en zerrendaren gainean.</message>
 	<message key="manager.setup.history">Aldizkariaren historia</message>
 	<message key="manager.setup.historyDescription">Testua aldizkariaren web orriko “Aldizkariari buruz” atalean agertuko da, eta tituluetan, talde editorialean eta aldizkariaren argitalpen-historian garrantzitsuak diren beste zenbait elementutan egindako aldaketak deskribatzeko erabili daiteke.</message>
-	<message key="manager.setup.doiSuffix">DOI atzizkia</message>
-	<message key="manager.setup.doiSuffixDefault">Erabili lehenetsitako eredua (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Erabili azpian sartutako eredua DOI atzizkiak sortzeko. Erabili %j aldizkariaren inizialetarako, %v bolumenaren zenbakirako, %i gaiaren zenbakirako, %a OJS-ko artikuluaren ID-rako, eta %p orri kopururako.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Adibidez, vol%viss%ipp%p ereduak honelako 10.1234/vol3iss2pp230 DOI-a sor dezake.</message>
-	<message key="manager.setup.doiSuffixDescription">DOI atzizkiak zeinahi forma har dezake, baina bakarra izan behar da argitaratutako elementu bakoitzeko.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Erabili “Identifikatzaile pertsonalizatua” argitaratutako elementuentzat, hala nola DOI atzizkia (4. urratsean gaitu behar da).</message>
-	<message key="manager.setup.doiReassign">Berriz izendatu DOI-ak</message>
-	<message key="manager.setup.doiReassign.description">Zure DOI konfigurazioa aldatuz gero, dagoeneko izendatuta dauden DOIei ez die eragingo. DOI konfigurazioa gorde ondoren, botoi hau erabili extistitzen diren DOI guztiak ezabatzeko; hartara, ezarpen berriek existitzen diren artikuluei eragingo diete.</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Ebaluatzaileak (aurkezpenak ebaluatzeko moduan daudenak)</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI eredua 10.xxxx. inprimakian egon behar du.</message>
 	<message key="manager.setup.frequencyOfPublicationNote">Oharra: utzi elementuen hutsunea aldizkari honekin erabili ez bada, eta editoreek zenbakiak berrezarriko dituzte argitalpen-prozesuan.</message>
 	<message key="manager.setup.journalFavicon">Aldizkariaren Favicon-a</message>
 	<message key="manager.setup.journalFaviconDescription">Gehitu favicon bat aldizkari honentzat, nabigazio-barrarekin batera azaltzeko, erabiltzaileak zure orria bisitatzen ari direnean.</message>

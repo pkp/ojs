@@ -125,4 +125,6 @@
 	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
 	<message key="author.submit.submissionLocale">Lingua della proposta</message>
 	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta contributi in diverse lingue. Seleziona la lingua della proposta dal men&#249; a tendina.]]></message>
+	<message key="author.submit.submissionSupportingAgencies">Agenzie di supporto e finanziamento</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identifica agenzie (una persona, un'organizzazione o un servizio) che contribuiscono al contenuto o provvedono finanziamento o supporto al lavoro presentato in questa proposta. Inseriscili separandoli con punti e virgola (es. John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>

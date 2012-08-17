@@ -29,6 +29,4 @@
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Dentro do Piwik, clique em Configurações -> Websites (Settings -> Websites). O ID do perfil do portal é exibido ao lado do seu nome.></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Informe o ID do perfil do portal.</message>
 
-	<message key="plugins.generic.piwik.enabled">O Plugin Piwik foi habilitado.</message>
-	<message key="plugins.generic.piwik.disabled">O Plugin Piwik foi desabilitado.</message>
 </locale>

@@ -36,4 +36,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Requested authorization ID</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL güvenlik seçenekleri</message>
+	<message key="plugins.auth.ldap.settings.uid.description">The attribute whose value uniquely identifies a user object, such as uid or cn or sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.uid">Hesap adı bağlantısı</message>
 </locale>

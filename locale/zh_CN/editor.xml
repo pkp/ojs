@@ -59,7 +59,6 @@
 	<message key="editor.issues.accessStatus">存取状态</message>
 	<message key="editor.issues.accessDate">开放存取日期</message>
 	<message key="editor.issues.enableOpenAccessDate">激活延迟开放存取</message>
-	<message key="editor.issues.issuePublicIdentificationExists">公共刊期标识已经存在.</message>
 	<message key="editor.issues.coverPage">封面图片</message>
 	<message key="editor.issues.coverPageInstructions">(允许的格式: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">已上传的</message>
@@ -208,4 +207,16 @@
 	<message key="editor.notifyUsers.allAuthors">所有已出版作者（{$count}人）</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">所有的个人订户（{$count}订户）</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">所有的机构订户（{$count}订户）</message>
+	<message key="editor.reassign">重新指派</message>
+	<message key="editor.publicIdentificationExists">公共标识符 '{$publicIdentifier}' 已经在别处（期、文章、校样或附件）存在。请选择您的期刊中独有的标识符。</message>
+	<message key="editor.issues.galleys">期目校样</message>
+	<message key="editor.issues.galley">期目校样</message>
+	<message key="editor.issues.viewingGalley">查看期目校样</message>
+	<message key="editor.issues.issueGalleysDescription">将校样连同全部期目内容一起发表。</message>
+	<message key="editor.issues.noneIssueGalleys">没有期目校样已被发表过。</message>
+	<message key="editor.issues.galleyLabelRequired">要求期目校样标签。</message>
+	<message key="editor.issues.galleyLocaleRequired">要求期目校样位置。</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">公共期目校样确认已经存在。</message>
+	<message key="editor.issues.backToIssueGalleys">返回期目校样。</message>
+	<message key="editor.issues.confirmDeleteGalley">您确定要删除该期目校样吗？</message>
 </locale>
