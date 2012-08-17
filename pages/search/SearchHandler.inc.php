@@ -9,7 +9,7 @@
  * @class SearchHandler
  * @ingroup pages_search
  *
- * @brief Handle site index requests. 
+ * @brief Handle site index requests.
  */
 
 import('classes.search.ArticleSearch');
@@ -65,7 +65,7 @@ class SearchHandler extends Handler {
 			$yearRange = $publishedArticleDao->getArticleYearRange(null);
 		} else {
 			$yearRange = $publishedArticleDao->getArticleYearRange($journal->getId());
-		}	
+		}
 
 		$this->_assignAdvancedSearchParameters($request, $templateMgr, $yearRange);
 
@@ -274,13 +274,15 @@ class SearchHandler extends Handler {
 		if (!is_numeric($searchType)) $searchType = null;
 
 		// Load the keywords array with submitted values
-		$keywords = array($searchType => ArticleSearch::parseQuery($request->getUserVar('query')));
+		$keywords = array($searchType => $request->getUserVar('query'));
 
-		$results =& ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
+		$error = '';
+		$results =& ArticleSearch::retrieveResults($journal, $keywords, $error, null, null, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign_by_ref('results', $results);
+		$templateMgr->assign('error', $error);
 		$templateMgr->assign('basicQuery', $request->getUserVar('query'));
 		$templateMgr->assign('searchField', $request->getUserVar('searchField'));
 		$templateMgr->display('search/searchResults.tpl');
@@ -309,29 +311,31 @@ class SearchHandler extends Handler {
 		}
 
 		// Load the keywords array with submitted values
-		$keywords = array(null => ArticleSearch::parseQuery($request->getUserVar('query')));
-		$keywords[ARTICLE_SEARCH_AUTHOR] = ArticleSearch::parseQuery($request->getUserVar('author'));
-		$keywords[ARTICLE_SEARCH_TITLE] = ArticleSearch::parseQuery($request->getUserVar('title'));
-		$keywords[ARTICLE_SEARCH_DISCIPLINE] = ArticleSearch::parseQuery($request->getUserVar('discipline'));
-		$keywords[ARTICLE_SEARCH_SUBJECT] = ArticleSearch::parseQuery($request->getUserVar('subject'));
-		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearch::parseQuery($request->getUserVar('type'));
-		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearch::parseQuery($request->getUserVar('coverage'));
-		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = ArticleSearch::parseQuery($request->getUserVar('fullText'));
-		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = ArticleSearch::parseQuery($request->getUserVar('supplementaryFiles'));
+		$keywords = array(null => $request->getUserVar('query'));
+		$keywords[ARTICLE_SEARCH_AUTHOR] = $request->getUserVar('author');
+		$keywords[ARTICLE_SEARCH_TITLE] = $request->getUserVar('title');
+		$keywords[ARTICLE_SEARCH_DISCIPLINE] = $request->getUserVar('discipline');
+		$keywords[ARTICLE_SEARCH_SUBJECT] = $request->getUserVar('subject');
+		$keywords[ARTICLE_SEARCH_TYPE] = $request->getUserVar('type');
+		$keywords[ARTICLE_SEARCH_COVERAGE] = $request->getUserVar('coverage');
+		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = $request->getUserVar('fullText');
+		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = $request->getUserVar('supplementaryFiles');
 
 		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$results =& ArticleSearch::retrieveResults($journal, $keywords, $fromDate, $toDate, $rangeInfo);
+		$error = '';
+		$results =& ArticleSearch::retrieveResults($journal, $keywords, $error, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', $results);
+		$templateMgr->assign('error', $error);
 		$this->_assignAdvancedSearchParameters($request, $templateMgr, $yearRange);
 
 		$templateMgr->display('search/searchResults.tpl');
-	}	
+	}
 
 	/**
 	 * Setup common template variables.
@@ -392,7 +396,7 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('dateToMonth', $toMonth);
 		$templateMgr->assign('dateToDay', $toDay);
 		$templateMgr->assign('dateToYear', $toYear);
-		
+
 		$startYear = '-' . (date('Y') - substr($yearRange[1], 0, 4));
 		if (substr($yearRange[0], 0, 4) >= date('Y')) {
 			$endYear = '+' . (substr($yearRange[0], 0, 4) - date('Y'));

@@ -27,213 +27,202 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 	/**
 	 * View peer review comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function viewPeerReviewComments($args) {
-		$this->validate();
+	function viewPeerReviewComments($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$reviewId = (int) array_shift($args);
+
+		$this->validate($articleId);
 		$this->setupTemplate(true);
 
-		$articleId = $args[0];
-		$reviewId = $args[1];
-
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-
-		SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
+		SectionEditorAction::viewPeerReviewComments($this->submission, $reviewId);
 	}
 
 	/**
 	 * Post peer review comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postPeerReviewComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
+		$articleId = (int) $request->getUserVar('articleId');
+		$reviewId = (int) $request->getUserVar('reviewId');
 
-		$articleId = $request->getUserVar('articleId');
-		$reviewId = $request->getUserVar('reviewId');
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		if (SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment, $request)) {
-			SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
+		if (SectionEditorAction::postPeerReviewComment($this->submission, $reviewId, $emailComment, $request)) {
+			SectionEditorAction::viewPeerReviewComments($this->submission, $reviewId);
 		}
 	}
 
 	/**
 	 * View editor decision comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewEditorDecisionComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) array_shift($args);
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		SectionEditorAction::viewEditorDecisionComments($submission);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
+
+		SectionEditorAction::viewEditorDecisionComments($this->submission);
 	}
 
 	/**
 	 * Post peer review comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postEditorDecisionComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($articleId);
 
-		$articleId = $request->getUserVar('articleId');
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		if (SectionEditorAction::postEditorDecisionComment($submission, $emailComment, $request)) {
-			SectionEditorAction::viewEditorDecisionComments($submission);
+		if (SectionEditorAction::postEditorDecisionComment($this->submission, $emailComment, $request)) {
+			SectionEditorAction::viewEditorDecisionComments($this->submission);
 		}
 	}
 
 	/**
 	 * Blind CC the reviews to reviewers.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function blindCcReviewsToReviewers($args, $request) {
 		$articleId = $request->getUserVar('articleId');
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
+		$this->validate($articleId);
 
 		$send = $request->getUserVar('send')?true:false;
 		$inhibitExistingEmail = $request->getUserVar('blindCcReviewers')?true:false;
 
 		if (!$send) $this->setupTemplate(true, $articleId, 'editing');
-		if (SectionEditorAction::blindCcReviewsToReviewers($submission, $send, $inhibitExistingEmail, $request)) {
+		if (SectionEditorAction::blindCcReviewsToReviewers($this->submission, $send, $inhibitExistingEmail, $request)) {
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
 
 	/**
 	 * View copyedit comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewCopyeditComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) array_shift($args);
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		SectionEditorAction::viewCopyeditComments($submission);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
+
+		SectionEditorAction::viewCopyeditComments($this->submission);
 	}
 
 	/**
 	 * Post copyedit comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postCopyeditComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		if (SectionEditorAction::postCopyeditComment($submission, $emailComment, $request)) {
-			SectionEditorAction::viewCopyeditComments($submission);
+		if (SectionEditorAction::postCopyeditComment($this->submission, $emailComment, $request)) {
+			SectionEditorAction::viewCopyeditComments($this->submission);
 		}
 	}
 
 	/**
 	 * View layout comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewLayoutComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) array_shift($args);
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		SectionEditorAction::viewLayoutComments($submission, $request);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
+
+		SectionEditorAction::viewLayoutComments($this->submission, $request);
 	}
 
 	/**
 	 * Post layout comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postLayoutComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
+		$articleId = (int) $request->getUserVar('articleId');
 
-		$articleId = $request->getUserVar('articleId');
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		if (SectionEditorAction::postLayoutComment($submission, $emailComment, $request)) {
-			SectionEditorAction::viewLayoutComments($submission);
+		if (SectionEditorAction::postLayoutComment($this->submission, $emailComment, $request)) {
+			SectionEditorAction::viewLayoutComments($this->submission);
 		}
 	}
 
 	/**
 	 * View proofread comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewProofreadComments($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) array_shift($args);
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		SectionEditorAction::viewProofreadComments($submission);
+		$this->validate($articleId);
+		$this->setupTemplate(true);
+
+		SectionEditorAction::viewProofreadComments($this->submission);
 	}
 
 	/**
 	 * Post proofread comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function postProofreadComment($args, $request) {
-		$this->validate();
-		$this->setupTemplate(true);
-
 		$articleId = (int) $request->getUserVar('articleId');
+
+		$this->validate($articleId);
+		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
-		if (SectionEditorAction::postProofreadComment($submission, $emailComment, $request)) {
-			SectionEditorAction::viewProofreadComments($submission);
+		if (SectionEditorAction::postProofreadComment($this->submission, $emailComment, $request)) {
+			SectionEditorAction::viewProofreadComments($this->submission);
 		}
 	}
 
 	/**
 	 * Email an editor decision comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function emailEditorDecisionComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
+		$this->validate($articleId);
 
 		$this->setupTemplate(true);
-		if (SectionEditorAction::emailEditorDecisionComment($submission, $request->getUserVar('send'), $request)) {
+		if (SectionEditorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
 			if ($request->getUserVar('blindCcReviewers')) {
-				SubmissionCommentsHandler::blindCcReviewsToReviewers($args, $request);
+				$this->blindCcReviewsToReviewers($args, $request);
 			} else {
 				$request->redirect(null, null, 'submissionReview', array($articleId));
 			}
@@ -242,31 +231,31 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 	/**
 	 * Edit comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function editComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
+		$this->validate($articleId);
 		$comment =& $this->comment;
-		
+
 		$this->setupTemplate(true);
-		
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
 			$request->redirect(null, $request->getRequestedPage());
 		}
 
-		SectionEditorAction::editComment($submission, $comment);
+		SectionEditorAction::editComment($this->submission, $comment);
 	}
 
 	/**
 	 * Save comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function saveComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
@@ -276,14 +265,10 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
+		$this->validate($articleId);
 		$comment =& $this->comment;
-		
-		$this->setupTemplate(true);
 
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
+		$this->setupTemplate(true);
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -291,7 +276,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		}
 
 		// Save the comment.
-		SectionEditorAction::saveComment($submission, $comment, $emailComment, $request);
+		SectionEditorAction::saveComment($this->submission, $comment, $emailComment, $request);
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
@@ -312,20 +297,18 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 	/**
 	 * Delete comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function deleteComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
+		$this->validate($articleId);
 		$comment =& $this->comment;
-		
+
 		$this->setupTemplate(true);
-		
-		$submissionEditHandler = new SubmissionEditHandler();
-		$submissionEditHandler->validate($articleId);
-		$submission =& $submissionEditHandler->submission;
 
 		SectionEditorAction::deleteComment($commentId);
 

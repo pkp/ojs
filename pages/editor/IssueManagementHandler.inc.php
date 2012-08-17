@@ -20,13 +20,15 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Constructor
-	 **/
+	 */
 	function IssueManagementHandler() {
 		parent::EditorHandler();
 	}
 
 	/**
 	 * Displays the listings of future (unpublished) issues
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function futureIssues($args, $request) {
 		$this->validate(null, true);
@@ -34,7 +36,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo('issues');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -43,6 +45,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Displays the listings of back (published) issues
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function backIssues($args, $request) {
 		$this->validate();
@@ -51,7 +55,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo('issues');
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -80,6 +84,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Removes an issue
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function removeIssue($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -126,6 +132,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Displays the create issue form
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function createIssue($args, $request) {
 		$this->validate();
@@ -154,6 +162,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Saves the new issue form
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function saveIssue($args, $request) {
 		$this->validate();
@@ -182,6 +192,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Displays the issue data page
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function issueData($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -216,6 +228,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Edit the current issue form
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function editIssue($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -253,6 +267,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Remove cover page from issue
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function removeIssueCoverPage($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -282,6 +298,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Remove style file from issue
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function removeStyleFile($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -303,9 +321,11 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Displays the issue galleys page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function issueGalleys($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$issueId = (int) array_shift($args);
 		$this->validate($issueId, true);
 		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
@@ -327,9 +347,11 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Create a new issue galley with the uploaded file.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function uploadIssueGalley($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$issueId = (int) array_shift($args);
 		$this->validate($issueId, true);
 
 		import('classes.issue.form.IssueGalleyForm');
@@ -346,10 +368,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Edit an issue galley.
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function editIssueGalley($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
@@ -372,10 +395,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Save changes to an issue galley.
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function saveIssueGalley($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
@@ -398,6 +422,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Change the sequence order of an issue galley.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function orderIssueGalley($args, $request) {
 		$issueId = (int) $request->getUserVar('issueId');
@@ -420,10 +446,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Delete an issue galley.
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function deleteIssueGalley($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 
@@ -445,10 +472,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Preview an issue galley.
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function proofIssueGalley($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
@@ -462,10 +490,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Proof issue galley (shows frame header).
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function proofIssueGalleyTop($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
@@ -479,10 +508,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Preview an issue galley (outputs file contents).
 	 * @param $args array ($issueId, $galleyId)
+	 * @param $request PKPRequest
 	 */
 	function proofIssueGalleyFile($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 
@@ -502,10 +532,11 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Download an issue file.
 	 * @param $args array ($issueId, $fileId)
+	 * @param $request PKPRequest
 	 */
 	function downloadIssueFile($args, $request) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$fileId = isset($args[1]) ? (int) $args[1] : 0;
+		$issueId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
 
 		$this->validate($issueId, true);
 
@@ -519,6 +550,7 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Display the table of contents
+	 * @param $request PKPRequest
 	 */
 	function issueToc($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -599,6 +631,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Updates issue table of contents with selected changes and article removals.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function updateIssueToc($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -680,6 +714,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Change the sequence of an issue.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function setCurrentIssue($args, $request) {
 		$issueId = $request->getUserVar('issueId');
@@ -699,6 +735,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Change the sequence of an issue.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function moveIssue($args, $request) {
 		$issueId = (int) $request->getUserVar('id');
@@ -739,6 +777,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Reset issue ordering to defaults.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function resetIssueOrder($args, $request) {
 		$this->validate();
@@ -753,6 +793,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Change the sequence of a section.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function moveSectionToc($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -777,6 +819,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Reset section ordering to section defaults.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function resetSectionOrder($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -791,6 +835,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Change the sequence of the articles.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function moveArticleToc($args, $request) {
 		$this->validate(null, true);
@@ -926,6 +972,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Unpublish a previously-published issue
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function unpublishIssue($args, $request) {
 		$issueId = (int) array_shift($args);
@@ -954,6 +1002,8 @@ class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Allows editors to write emails to users associated with the journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function notifyUsers($args, $request) {
 		$this->validate((int) $request->getUserVar('issue'));
@@ -975,7 +1025,9 @@ class IssueManagementHandler extends EditorHandler {
 		$email = new MassMail('PUBLISH_NOTIFY');
 
 		if ($request->getUserVar('send') && !$email->hasErrors()) {
-			$email->addRecipient($user->getEmail(), $user->getFullName());
+			if($request->getUserVar('ccSelf')) {
+				$email->addRecipient($user->getEmail(), $user->getFullName());
+			}
 
 			switch ($request->getUserVar('whichUsers')) {
 				case 'allIndividualSubscribers':
@@ -1083,7 +1135,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		if (!isset($journal)) Validation::redirectLogin();
 
-		if ($issueId !== null) {
+		if (!empty($issueId)) {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 

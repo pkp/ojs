@@ -144,7 +144,7 @@
 	</upgrade>
 	
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
-		<data file="dbscripts/xml/upgrade/2.4.0_notifications.xml" />
+		<data file="dbscripts/xml/upgrade/2.4.0_notifications.xml" condition="return $installer->columnExists('notification_settings', 'setting_id');" />	
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -283,7 +283,6 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.3.6.9">
 		<code function="migrateReviewingInterests2" />
 		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
-		<data file="registry/citationAssistantData.xml" />
 		<code function="removeAuthorRevisedFilesFromSignoffs" />
 		<note file="docs/release-notes/README-2.3.7" />
 	</upgrade>
@@ -318,7 +317,7 @@
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
 		<code function="migrateNotifications" />
 		<!-- Delete the notification*_old tables now that they have been migrated. -->
-		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" />
+		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
 		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_WELCOME" locales="ca_ES,cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,hr_HR,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
 		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST" locales="ca_ES,cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,hr_HR,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />

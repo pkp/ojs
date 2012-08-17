@@ -116,7 +116,7 @@
 </table>
 </div>
 
-{if ($currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && !$enableDelayedOpenAccess) || ($currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $enableDelayedOpenAccess && $issue->getPublished())}
+{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 <div class="separator"></div>
 <div id="issueAccess">
 <h3>{translate key="editor.issues.access"}</h3>

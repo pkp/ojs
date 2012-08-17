@@ -220,6 +220,8 @@ class SuppFileForm extends Form {
 
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
 
+		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = new ArticleSearchIndex();
 		if (isset($this->suppFile)) {
 			parent::execute();
 
@@ -232,12 +234,8 @@ class SuppFileForm extends Form {
 					$fileId = $articleFileManager->uploadSuppFile($fileName);
 					$this->suppFile->setFileId($fileId);
 				}
-				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				$articleSearchIndex->updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			}
-
-			// Index metadata
-			ArticleSearchIndex::indexSuppFileMetadata($this->suppFile);
 
 			// Update existing supplementary file
 			$this->setSuppFileData($this->suppFile);
@@ -250,8 +248,7 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
-				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				$articleSearchIndex->updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			} else {
 				$fileId = 0;
 			}
@@ -270,6 +267,10 @@ class SuppFileForm extends Form {
 			$suppFileDao->insertSuppFile($this->suppFile);
 			$this->suppFileId = $this->suppFile->getId();
 		}
+
+		// Index updated metadata.
+		$articleSearchIndex->indexSuppFileMetadata($this->suppFile);
+
 		return $this->suppFileId;
 	}
 

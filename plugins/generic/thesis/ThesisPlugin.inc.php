@@ -138,7 +138,8 @@ class ThesisPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '" target="_parent">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
+			$templateMgr = TemplateManager::getManager();
+			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page'=>'thesis'), $smarty) . '" target="_parent">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
 	}
@@ -147,7 +148,8 @@ class ThesisPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<li>&#187; <a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
+			$templateMgr = TemplateManager::getManager();
+			$output .= '<li>&#187; <a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
 		}
 		return false;
 	}
@@ -158,7 +160,8 @@ class ThesisPlugin extends GenericPlugin {
 			$output =& $params[2];
 			$currentJournal = $smarty->get_template_vars('currentJournal');
 			if (!empty($currentJournal)) {
-				$output .= '<a href="' . TemplateManager::smartyUrl(array('page'=>'thesis'), $smarty) . '" class="action">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.thesis.searchLink'), $smarty) . '</a><br /><br />';
+				$templateMgr = TemplateManager::getManager();
+				$output .= '<a href="' . $templateMgr->smartyUrl(array('page'=>'thesis'), $smarty) . '" class="action">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.searchLink'), $smarty) . '</a><br /><br />';
 			}
 		}
 		return false;

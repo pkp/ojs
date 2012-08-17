@@ -173,11 +173,6 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		$sectionEditors = $this->assignEditors($article);
 
-		// Update search index
-		import('classes.search.ArticleSearchIndex');
-		ArticleSearchIndex::indexArticleMetadata($article);
-		ArticleSearchIndex::indexArticleFiles($article);
-
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($article, 'SUBMISSION_ACK', null, null, null, false);

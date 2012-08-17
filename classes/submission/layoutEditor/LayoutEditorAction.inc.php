@@ -58,7 +58,8 @@ class LayoutEditorAction extends Action {
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
 				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex = new ArticleSearchIndex();
+				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 			if ($galley->isHTMLGalley()) {
 				if ($galley->getStyleFileId()) {
@@ -117,19 +118,24 @@ class LayoutEditorAction extends Action {
 	 * @param $suppFileId int
 	 */
 	function deleteSuppFile($article, $suppFileId) {
-		import('classes.file.ArticleFileManager');
-
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-
 		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 		if (isset($suppFile) && !HookRegistry::call('LayoutEditorAction::deleteSuppFile', array(&$article, &$suppFile))) {
 			if ($suppFile->getFileId()) {
+				import('classes.file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($article->getId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
-				import('classes.search.ArticleSearchIndex');
-				ArticleSearchIndex::deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
+
+			// Update the search index after deleting the
+			// supp file so that idempotent search plug-ins
+			// correctly update supp file meta-data.
+			if ($suppFile->getFileId()) {
+				import('classes.search.ArticleSearchIndex');
+				$articleSearchIndex = new ArticleSearchIndex();
+				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+			}
 		}
 	}
 

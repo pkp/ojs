@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  * solrconfig.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin index solr default configuration.
+  * 
+  * NB: You may add and/or customize search handlers, index configuration, data
+  * directory. See detailed comments below.
+  -->
+
+<config>
+  <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
+  
+  <luceneMatchVersion>LUCENE_35</luceneMatchVersion>
+
+  <lib dir="../dist/" regex="apache-solr-velocity-\d.*\.jar" />
+  <lib dir="../contrib/velocity/lib" />
+  <lib dir="../dist/" regex="apache-solr-dataimporthandler-(extras-|)\d.*\.jar" />
+  <lib dir="../contrib/extraction/lib" />
+
+  <!-- Default index configuration. You may customize these settings if required. -->
+  <dataDir>${solr.data.dir:}</dataDir>
+  <directoryFactory name="DirectoryFactory" 
+                    class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
+
+  <indexConfig>
+    <useCompoundFile>false</useCompoundFile>
+    <mergeFactor>10</mergeFactor>
+    <ramBufferSizeMB>32</ramBufferSizeMB>
+    <maxFieldLength>10000</maxFieldLength>
+    <writeLockTimeout>1000</writeLockTimeout>
+    <lockType>native</lockType>
+
+    <unlockOnStartup>false</unlockOnStartup>
+    <reopenReaders>true</reopenReaders>
+
+    <deletionPolicy class="solr.SolrDeletionPolicy">
+      <str name="maxCommitsToKeep">1</str>
+      <str name="maxOptimizedCommitsToKeep">0</str>
+    </deletionPolicy>
+
+    <infoStream file="INFOSTREAM.txt">false</infoStream> 
+  </indexConfig>
+
+  <query>
+    <maxBooleanClauses>1024</maxBooleanClauses>
+    <filterCache class="solr.FastLRUCache"
+                 size="512"
+                 initialSize="512"
+                 autowarmCount="0"/>
+    <queryResultCache class="solr.LRUCache"
+                     size="512"
+                     initialSize="512"
+                     autowarmCount="0"/>
+    <documentCache class="solr.LRUCache"
+                   size="512"
+                   initialSize="512"
+                   autowarmCount="0"/>
+    <enableLazyFieldLoading>true</enableLazyFieldLoading>
+    <queryResultWindowSize>20</queryResultWindowSize>
+    <queryResultMaxDocsCached>200</queryResultMaxDocsCached>
+    <useColdSearcher>false</useColdSearcher>
+    <maxWarmingSearchers>2</maxWarmingSearchers>
+  </query>
+
+  <updateHandler class="solr.DirectUpdateHandler2" />
+
+  <requestDispatcher handleSelect="true" >
+    <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048000" />
+    <httpCaching never304="true" />
+  </requestDispatcher>
+
+  <!-- OJS solr alternative spelling suggestion component. Please do not change. -->
+  <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
+    <str name="queryAnalyzerFieldType">text_spell</str>
+
+    <!-- a spellchecker built from a field of the main index, and written to disk -->
+    <lst name="spellchecker">
+      <str name="name">default</str>
+      <str name="field">default_spell</str>
+      <str name="spellcheckIndexDir">spellchecker</str>
+    </lst>
+  </searchComponent>
+
+  <!--
+  	Default OJS solr search interface.
+  	
+  	NB: You can customize this search interface, e.g. to improve ranking. But
+  	please be aware that some changes (e.g. removing/changing search components)
+  	can break the OJS/solr communication protocol.
+   -->
+  <requestHandler name="/search" class="solr.StandardRequestHandler" default="true">
+    <lst name="invariants">
+      <str name="echoParams">explicit</str>
+      <str name="defType">edismax</str>
+      <str name="fl">article_id,journal_id,inst_id,score</str>
+      <str name="hl.fl">galleyFullText_*</str>
+      <str name="facet.limit">10</str>
+      <str name="facet.range">publicationDate_dt</str>
+      <str name="facet.range.start">NOW/YEAR-50YEARS</str>
+      <str name="facet.range.end">NOW</str>
+      <str name="facet.range.gap">+1YEAR</str>
+      <str name="facet.range.other">all</str>
+    </lst>
+    <lst name="defaults">
+      <str name="hl">off</str>
+      <str name="facet">off</str>
+      <str name="spellcheck">off</str>
+    </lst>
+    <arr name="last-components">
+      <str>spellcheck</str>
+    </arr>
+  </requestHandler>
+
+  <!-- OJS DataImportHandler request handler. Please do not change. -->
+  <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+      <str name="config">dih-ojs.xml</str>
+    </lst>
+  </requestHandler>
+
+  <!-- XML update request handler. This is required for deletes, please do not change. -->
+  <requestHandler name="/update" class="solr.XmlUpdateRequestHandler" />
+
+  <!-- Standard solr admin handlers. Please do not change. -->
+  <requestHandler name="/admin/" class="solr.admin.AdminHandlers" />
+</config>

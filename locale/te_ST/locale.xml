@@ -1965,7 +1965,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Üpgråðè óf ÒJß tó vèrþîóñ {$version} håþ çómplètèð þüççèþþfüllý.</p>
 <p>Ðóñ't fórgèt tó þèt thè "îñþtållèð" þèttîñg îñ ýóür çóñfîg.îñç.php çóñfîgüråtîóñ fîlè båçk tó <em>Òñ</em>.</p>
 <p>Îf ýóü håvèñ't ålrèåðý règîþtèrèð åñð wîþh tó rèçèîvè ñèwþ åñð üpðåtèþ, <strong>plèåþè règîþtèr åt <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.þfü.çå/ójþ/règîþtèr</a>.</strong> Îf ýóü håvè qüèþtîóñþ ór çómmèñtþ, plèåþè vîþît thè <a href="http://pkp.sfu.ca/support/forum" target="_new">þüppórt fórüm</a>.</p>]]></message>
-	<message key="installer.skipFilesDir">Ðó ñót çrèåtè rèqüîrèð þübðîrèçtórîèþ (óñlý üþèfül fór å måñüål îñþtållåtîóñ)</message>
 	<message key="installer.releaseNotes">Rèlèåþè Ñótèþ</message>
 	<message key="installer.checkYes">Ýèþ</message>
 	<message key="installer.checkNo"><![CDATA[<span class="formError">ÑÒ</span>]]></message>

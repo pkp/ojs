@@ -105,9 +105,9 @@ class RTHandler extends ArticleHandler {
 		$searchParams = array();
 		foreach ($context->getSearches() as $search) {
 			$params = array();
-			$searchParams += RTHandler::_getParameterNames($search->getSearchUrl());
+			$searchParams += $this->_getParameterNames($search->getSearchUrl());
 			if ($search->getSearchPost()) {
-				$searchParams += RTHandler::_getParameterNames($search->getSearchPost());
+				$searchParams += $this->_getParameterNames($search->getSearchPost());
 				$postParams = explode('&', $search->getSearchPost());
 				foreach ($postParams as $param) {
 					// Split name and value from each parameter

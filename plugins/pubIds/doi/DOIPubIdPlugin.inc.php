@@ -116,33 +116,28 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$doiSuffixGenerationStrategy = $this->getSetting($journalId, 'doiSuffix');
 		switch ($doiSuffixGenerationStrategy) {
 			case 'publisherId':
-				// FIXME: Find a better solution when we work with Articles rather
-				// than PublishedArticles.
-				if (is_a($pubObject, 'PublishedArticle') && !is_a($pubObject, 'PublishedArticle')) {
-					$doiSuffix = null;
-				} else {
-					switch($pubObjectType) {
-						case 'Issue':
-							$doiSuffix = (string) $pubObject->getBestIssueId($journal);
-							break;
-						case 'Article':
-							$doiSuffix = (string) $pubObject->getBestArticleId($journal);
-							break;
-						case 'Galley':
-							$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
-							break;
-						case 'SuppFile':
-							$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
-							break;
-						default:
-							assert(false);
-					}
-					// When the suffix equals the object's ID then
-					// require an object-specific pre-fix to be sure that
-					// the suffix is unique.
-					if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
-						$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
-					}
+				switch($pubObjectType) {
+					case 'Issue':
+						$doiSuffix = (string) $pubObject->getBestIssueId($journal);
+						break;
+					case 'Article':
+						$doiSuffix = (string) $pubObject->getBestArticleId($journal);
+						break;
+					case 'Galley':
+						$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
+						break;
+					case 'SuppFile':
+						$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
+						break;
+					default:
+						assert(false);
+				}
+
+				// When the suffix equals the object's ID then
+				// require an object-specific prefix to be sure that
+				// the suffix is unique.
+				if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
+					$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
 				}
 				break;
 
@@ -151,10 +146,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				break;
 
 			case 'pattern':
-				if (!$issue) {
-					$doiSuffix = null;
-					break;
-				}
 				$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
 
 				// %j - journal initials
@@ -188,14 +179,12 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				break;
 
 			default:
-				if (!$issue) {
-					$doiSuffix = null;
-					break;
-				}
 				$doiSuffix = String::strtolower($journal->getLocalizedSetting('initials'));
 
 				if ($issue) {
 					$doiSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
+				} else {
+					$doiSuffix .= '.v%vi%i';
 				}
 
 				if ($article) {

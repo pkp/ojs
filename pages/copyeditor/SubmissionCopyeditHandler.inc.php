@@ -18,16 +18,19 @@ import('pages.copyeditor.CopyeditorHandler');
 class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionCopyeditHandler() {
 		parent::CopyeditorHandler();
 	}
-	/** submission associated with the request **/
-	var $submission;
 
+	/**
+	 * Copyeditor's view of a submission.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function submission($args, &$request) {
-		$articleId = $args[0];
-		$this->validate($articleId);
+		$articleId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
 		$router =& $request->getRouter();
 
@@ -53,24 +56,31 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 
+	/**
+	 * Complete a copyedit.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function completeCopyedit($args, $request) {
-		$articleId = $request->getUserVar('articleId');
-		$this->validate($articleId);
-		$submission =& $this->submission;
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId);
 
-		if (CopyeditorAction::completeCopyedit($submission, $request->getUserVar('send'), $request)) {
+		if (CopyeditorAction::completeCopyedit($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
+	/**
+	 * Complete a final copyedit.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function completeFinalCopyedit($args, $request) {
 		$articleId = $request->getUserVar('articleId');
-		$this->validate($articleId);
-		$submission =& $this->submission;
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId);;
-
-		if (CopyeditorAction::completeFinalCopyedit($submission, $request->getUserVar('send'), $request)) {
+		if (CopyeditorAction::completeFinalCopyedit($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
@@ -81,12 +91,10 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $request object
 	 */
 	function uploadCopyeditVersion($args, $request) {
-		$articleId = $request->getUserVar('articleId');
-		$this->validate($articleId);
-		$submission =& $this->submission;
-
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
 		$copyeditStage = $request->getUserVar('copyeditStage');
-		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage, $request);
+		CopyeditorAction::uploadCopyeditVersion($this->submission, $copyeditStage, $request);
 
 		$request->redirect(null, null, 'submission', $articleId);
 	}
@@ -99,15 +107,14 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 */
-	function downloadFile($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? $args[1] : 0;
-		$revision = isset($args[2]) ? $args[2] : null;
+	function downloadFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = array_shift($args); // Can be null
 
-		$this->validate($articleId);
-		$submission =& $this->submission;
-		if (!CopyeditorAction::downloadCopyeditorFile($submission, $fileId, $revision)) {
-			Request::redirect(null, null, 'submission', $articleId);
+		$this->validate($request, $articleId);
+		if (!CopyeditorAction::downloadCopyeditorFile($this->submission, $fileId, $revision)) {
+			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -115,56 +122,15 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 */
-	function viewFile($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? $args[1] : 0;
-		$revision = isset($args[2]) ? $args[2] : null;
+	function viewFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$fileId = (int) array_shift($args);
+		$revision = array_shift($args); // May be null
 
-		$this->validate($articleId);
-		$submission =& $this->submission;
+		$this->validate($request, $articleId);
 		if (!CopyeditorAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(null, null, 'submission', $articleId);
+			$request->redirect(null, null, 'submission', $articleId);
 		}
-	}
-
-	//
-	// Validation
-	//
-
-	/**
-	 * Validate that the user is the assigned copyeditor for
-	 * the article.
-	 * Redirects to copyeditor index page if validation fails.
-	 */
-	function validate($articleId) {
-		parent::validate();
-
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
-
-		$isValid = true;
-
-		$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getId());
-
-		if ($copyeditorSubmission == null) {
-			$isValid = false;
-		} else {
-			if ($copyeditorSubmission->getJournalId() != $journal->getId()) {
-				$isValid = false;
-			} else {
-				if ($copyeditorSubmission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') != $user->getId()) {
-					$isValid = false;
-				}
-			}
-		}
-
-		if (!$isValid) {
-			Request::redirect(null, Request::getRequestedPage());
-		}
-
-		$this->submission =& $copyeditorSubmission;
-		return true;
 	}
 
 	//
@@ -173,10 +139,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 	/**
 	 * Set the author proofreading date completion
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function authorProofreadingComplete($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId);
 
 		$send = $request->getUserVar('send') ? true : false;
@@ -191,11 +159,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Proof / "preview" a galley.
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalley($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($articleId);
+	function proofGalley($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -206,11 +175,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Proof galley (shows frame header).
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalleyTop($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($articleId);
+	function proofGalleyTop($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -222,11 +192,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	/**
 	 * Proof galley (outputs file contents).
 	 * @param $args array ($articleId, $galleyId)
+	 * @param $request PKPRequest
 	 */
-	function proofGalleyFile($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$this->validate($articleId);
+	function proofGalleyFile($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$galleyId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
@@ -238,7 +209,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
 						$articleId, $galleyId, $styleFile->getFileId()
 					)));
 				}
@@ -246,50 +217,57 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 			} else {
 				// View non-HTML file inline
-				SubmissionCopyeditHandler::viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}
 
 	/**
 	 * Metadata functions.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate(true, $articleId, 'editing');
 		CopyeditorAction::viewMetadata($submission, $journal);
 	}
 
+	/**
+	 * Save modified metadata.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function saveMetadata($args, &$request) {
-		$articleId = Request::getUserVar('articleId');
-		$this->validate($articleId);
-		$submission =& $this->submission;
+		$articleId = (int) $request->getUserVar('articleId');
+		$this->validate($request, $articleId);
 		$this->setupTemplate(true, $articleId);
 
-		if (CopyeditorAction::saveMetadata($submission, $request)) {
+		if (CopyeditorAction::saveMetadata($this->submission, $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
 	}
 
 	/**
 	 * Remove cover page from article
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function removeArticleCoverPage($args, &$request) {
-		$articleId = isset($args[0]) ? (int)$args[0] : 0;
-		$this->validate($articleId);
+		$articleId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
-		$formLocale = $args[1];
+		$formLocale = array_shift($args);
 		if (!AppLocale::isLocaleValid($formLocale)) {
 			$request->redirect(null, null, 'viewMetadata', $articleId);
 		}
 
-		$submission =& $this->submission;
 		import('classes.submission.sectionEditor.SectionEditorAction');
-		if (SectionEditorAction::removeArticleCoverPage($submission, $formLocale)) {
+		if (SectionEditorAction::removeArticleCoverPage($this->submission, $formLocale)) {
 			$request->redirect(null, null, 'viewMetadata', $articleId);
 		}
 	}
@@ -305,8 +283,8 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 */
 	function submissionCitations($args, &$request) {
 		// Authorize the request.
-		$articleId = $args[0];
-		$this->validate($articleId);
+		$articleId = (int) array_shift($args);
+		$this->validate($request, $articleId);
 
 		// Prepare the view.
 		$this->setupTemplate(true, $articleId);

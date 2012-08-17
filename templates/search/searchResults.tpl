@@ -31,14 +31,14 @@ function ensureKeyword() {
 <br/>
 
 {if $basicQuery}
-	<form method="post" id="searchForm" action="{url op="results"}">
+	<form id="searchForm" method="post" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
-		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/>
+		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/
 	</form>
 	<br />
 {else}
-	<form id="revise" action="{url op="advanced"}" method="post">
+	<form id="searchForm" action="{url op="advanced"}" method="post">
 		<input type="hidden" name="query" value="{$query|escape}"/>
 		<input type="hidden" name="searchJournal" value="{$searchJournal|escape}"/>
 		<input type="hidden" name="author" value="{$author|escape}"/>
@@ -56,7 +56,7 @@ function ensureKeyword() {
 		<input type="hidden" name="dateToDay" value="{$dateToDay|escape}"/>
 		<input type="hidden" name="dateToYear" value="{$dateToYear|escape}"/>
 	</form>
-	<a href="javascript:document.getElementById('revise').submit()" class="action">{translate key="search.reviseSearch"}</a><br />
+	<a href="javascript:document.getElementById('searchForm').submit()" class="action">{translate key="search.reviseSearch"}</a><br />
 {/if}
 
 {call_hook name="Templates::Search::SearchResults::PreResults"}
@@ -113,22 +113,36 @@ function ensureKeyword() {
 {/iterate}
 {if $results->wasEmpty()}
 <tr>
-<td colspan="{$numCols|escape}" class="nodata">{translate key="search.noResults"}</td>
+	<td colspan="{$numCols|escape}" class="nodata">
+		{if $error}
+			{$error|escape}
+		{else}
+			{translate key="search.noResults"}
+		{/if}
+	</td>
 </tr>
 <tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
 		{if $basicQuery}
-			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$basicQuery searchField=$searchField orderBy=$orderBy orderDir=$orderDir}</td>
 		{else}
-			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</td>
 		{/if}
 	</tr>
 {/if}
 </table>
 
-<p>{translate key="search.syntaxInstructions"}</p>
+{capture assign="syntaxInstructions"}{call_hook name="Templates::Search::SearchResults::SyntaxInstructions"}{/capture}
+<p>
+	{if empty($syntaxInstructions)}
+		{translate key="search.syntaxInstructions"}
+	{else}
+		{* Must be properly escaped in the controller as we potentially get HTML here! *}
+		{$syntaxInstructions}
+	{/if}
+</p>
 </div>
 
 {include file="common/footer.tpl"}

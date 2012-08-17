@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/generic/lucene/settings.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  *
+  -->
+
+<plugin_settings>
+	<setting type="bool">
+		<name>enabled</name>
+		<value>false</value>
+	</setting>
+	<setting type="string">
+		<name>searchEndpoint</name>
+		<value>http://localhost:8983/solr/ojs/search</value>
+	</setting>
+	<setting type="string">
+		<name>username</name>
+		<value>admin</value>
+	</setting>
+	<setting type="string">
+		<name>password</name>
+		<value>please change</value>
+	</setting>
+	<setting type="string">
+		<name>instId</name>
+		<value>localhost</value>
+	</setting>
+	<setting type="int">
+		<name>lastEmailTimestamp</name>
+		<value>0</value>
+	</setting>
+</plugin_settings>
+

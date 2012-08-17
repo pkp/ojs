@@ -42,7 +42,7 @@ class Validation {
 				$valid=true;
 			}
 		} else { // Regular Auth
-			$user =& $userDao->getUserByUsername($username, true);
+			$user =& $userDao->getByUsername($username, true);
 
 			if (!isset($user)) {
 				// User does not exist

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * dih-ojs.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin DataImportHandler default configuration.
+  * 
+  * NB: Independently of your deployment mode (embedded or central) you should
+  * not have to change this configuration file. Be aware that changes may break
+  * the OJS/solr communication protocol.
+  -->
+<dataConfig>
+  <dataSource name="http-post" type="ContentStreamDataSource" />
+  <dataSource name="field" type="FieldReaderDataSource" />
+  <dataSource name="file" type="BinURLDataSource" />
+
+  <script><![CDATA[
+    /**
+     * Some fields collect content from various entities.
+     * These fields have to be stored in document rather than
+     * entity context. This function is a helper function to
+     * deal with the intricacies of document-level fields.
+     *
+     * @param Context context
+     * @param String fieldName
+     * @param String textToAppend
+     */
+    function appendToDocField(context, fieldName, textToAppend) {
+      if (textToAppend === null) return;
+
+      textToAppend = textToAppend.trim();
+      if (textToAppend === '') return;
+
+      var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
+      if (docFields === null) {
+        docFields = [];
+      }
+      if (docFields.indexOf(fieldName) === -1) {
+        docFields.push(fieldName);
+        context.setSessionAttribute('docFields', docFields, context.SCOPE_DOC);
+        var fieldValue = textToAppend;
+      } else {
+        var fieldValue = context.getSessionAttribute(fieldName, context.SCOPE_DOC);
+        fieldValue += ' ' + textToAppend;
+      }
+      context.setSessionAttribute(fieldName, fieldValue, context.SCOPE_DOC);
+    }
+
+    /**
+     * Custom transformer for the article entitiy.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
+    function transformArticle(row, context) {
+      // Make IDs unique across installations.
+      var articleId = row.get('article_id');
+      var journalId = row.get('journal_id');
+      var instId = row.get('inst_id');
+      row.put('article_id', instId + '-' + articleId);
+      row.put('journal_id', instId + '-' + journalId);
+
+      // Add localized fields.
+      var locFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage', 'journalTitle'];
+
+      // Define how fields are being indexed.
+      var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
+      var sortFields = ['title', 'journalTitle'];
+
+      for (var i=0, len=locFields.length; i<len; i++) {
+        var fieldName = locFields[i];
+
+        // Get the value list.
+        var valueList = 'etl_' + fieldName + 'List';
+        var values = row.get(valueList);
+        if (values == null) continue;
+        row.remove(valueList);
+
+        // Get the locale list.
+        var localeList = 'etl_' + fieldName + 'List_locales';
+        var locales = row.get(localeList);
+        row.remove(localeList);
+
+        // Some values may be for sorting only.
+        var sortOnlyFlags = null;
+        var sortOnlyList = 'etl_' + fieldName + 'List_sortOnly';
+        if (row.containsKey(sortOnlyList)) {
+          sortOnlyFlags = row.get(sortOnlyList);
+          row.remove(sortOnlyList);
+        } 
+
+        // Run through all values.
+        for(var j=0, numValues=values.size(); j<numValues; j++) {
+          var locale = String(locales.get(j));
+          var value = String(values.get(j));
+
+          // Is this value for sorting only?
+          var sortOnly = 'false';
+          if (sortOnlyFlags !== null) {
+            sortOnly = String(sortOnlyFlags.get(j))
+          }
+
+          // Index search fields.
+          if (searchFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
+            row.put(fieldName + '_' + locale, value);
+            // Build concatenated spelling field.
+            appendToDocField(context, 'default_spell', value);
+          }
+
+          // Index sort fields.
+          if (sortFields.indexOf(fieldName) >= 0) {
+            row.put(fieldName + '_' + locale + '_txtsort', value);
+          }
+        }
+      }
+
+      // Create the author search and sort field.
+      var authors = row.get('etl_authorList');
+      row.remove('etl_authorList');
+
+      // We concatenate authors into a single string. We could use a multiValue-field
+      // to search authors but we prefer to keep our schema simple (one less field
+      // type necessary). 
+      var authorsConcat = '';
+      for (var iA=0, lenA=authors.size(); iA<lenA; iA++) {
+        if (authorsConcat !== '') {
+          authorsConcat += '; ';
+        }
+        authorsConcat += String(authors.get(iA));
+      }
+      row.put('authors_txt', authorsConcat);
+      row.put('authors_txtsort', authorsConcat);
+      appendToDocField(context, 'default_spell', authorsConcat);
+
+      // Create the publication date sort field.
+      // We could use a copy field instruction in the schema file
+      // for this but we prefer to keep this code close to where all
+      // other import transformations take place.
+      var publicationDate = row.get('publicationDate_dt');
+      if (publicationDate !== null) {
+        row.put('publicationDate_dtsort', publicationDate);
+      }
+
+      // Prepare the galley XML.
+      var galleyXml = row.get('etl_galley_xml');
+      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
+      row.put('etl_galley_xml', String(galleyXml));
+
+      // Prepare the supp file XML.
+      var suppFileXml = row.get('etl_suppFile_xml');
+      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
+      row.put('etl_suppFile_xml', String(suppFileXml));
+
+      return row;
+    }
+
+    /**
+     * Custom transformer for the suppFile entitiy.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
+    function transformSuppFile(row, context) {
+      // List the supplementary file metadata fields.
+      var locFields = ['title', 'creator', 'subject', 'typeOther', 'description', 'source'];
+
+      // Run through all supp file fields and concatenate them.
+      for (var i=0, len=locFields.length; i<len; i++) {
+        var fieldName = locFields[i];
+        var valueList = 'etl_file_' + fieldName + 'List';
+        var localeList = 'etl_file_' + fieldName + 'List_locales';
+
+        var values = row.get(valueList);
+        if (values == null) continue;
+        var locales = row.get(localeList);
+        for(var j=0, numValues=values.size(); j<numValues; j++) {
+          var locale = String(locales.get(j));
+          var value = String(values.get(j));
+
+          // Concatenate all meta-data.
+          appendToDocField(context, 'suppFiles_' + locale, value);
+
+	      // Add full text to spellchecker dictionary.
+	      appendToDocField(context, 'default_spell', value);
+        }
+
+        row.remove(valueList);
+        row.remove(localeList);
+      }
+
+      return row;
+    }
+
+    /**
+     * Custom transformer for full text.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
+    function transformFullText(row, context) {
+      var entityName = context.getParentContext().getResolvedEntityAttribute('name');
+      var locale = context.resolve(entityName + '.etl_file_locale');
+
+      // Analyze unknown locales with a generic analyzer.
+      if (locale == 'unknown') locale = 'txt';
+
+      // Construct the dynamic field name.
+      if (entityName == 'galley') {
+        // Get the document format.
+        var docType = resolveMimetype(String(row.get('Content-Type')));
+        var fieldName = 'galleyFullText_' + docType + '_' + locale;
+      } else {
+        var fieldName = 'suppFiles_' + locale;
+      }
+
+      // Add full text.
+      var currentText = String(row.get('text'));
+      appendToDocField(context, fieldName, currentText);
+
+      // Add full text to spellchecker dictionary.
+      appendToDocField(context, 'default_spell', currentText);
+
+      row.remove('text');
+      return row;
+    }
+
+    /**
+     * Resolve the mime type to the internal
+     * document type.
+     *
+     * @param String mimetype
+     * @returns String The internal document type
+     */
+    function resolveMimetype(mimetype) {
+      // Remove mimetype options.
+      mimetype = mimetype.replace(/;.*$/, '');
+
+      // Determine the internal mime type.
+      switch(mimetype) {
+        case 'application/pdf':
+        case 'application/x-pdf':
+          mimetype = 'pdf';
+          break;
+
+        case 'text/html':
+        case 'application/xhtml+xml':
+          mimetype = 'html';
+          break;
+
+        case 'application/msword':
+        case 'application/vnd.oasis.opendocument.text':
+        case 'application/vnd.ms-word.document.macroenabled.12':
+        case 'application/vnd.ms-word.template.macroenabled.12':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+        case 'application/vnd.openxmlformats-officedocument.wordprocessingml.template':
+        case 'application/vnd.stardivision.writer':
+        case 'application/x-staroffice-template':
+        case 'application/vnd.sun.xml.writer':
+        case 'application/x-vnd.sun.xml.writer':
+        case 'application/vnd.sun.xml.writer.template':
+          mimetype = 'doc';
+          break;
+
+        case 'text/plain':
+          mimetype = 'plain';
+          break;
+
+        case 'application/epub+zip':
+          mimetype = 'epub';
+          break;
+
+        case 'application/rtf':
+        case 'text/rtf':
+          mimetype = 'rtf';
+          break;
+
+        case 'application/xml':
+        case 'text/xml':
+          mimetype = 'xml';
+          break;
+
+        default:
+          mimetype = 'other';
+      }
+      return mimetype;
+    }
+
+    /**
+     * This function is a custom transformer that will
+     * be called after all other transformers. We use it
+     * to store document-level fields to the document.
+     *
+     * NB: This cannot be done in the other transformers
+     * as only the first row.put() will have effect.
+     *
+     * @param Map row
+     * @param Context context
+     * @returns Map The transformed row.
+     */
+    function postProcessArticle(row, context) {
+      var docFieldName, docFieldValue;
+      var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
+
+      // Retrieve the authors field.
+      var authors = context.resolve('article.authors_txt');
+
+      // Add document-level fields to the document.
+      for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
+        docFieldName = docFields[iD];
+        docFieldValue = context.getSessionAttribute(docFieldName, context.SCOPE_DOC);
+        row.put(docFieldName, docFieldValue);
+      }
+      return row;
+    }
+  ]]></script>
+
+  <document>
+    <entity name="article"
+            dataSource="http-post"
+            processor="XPathEntityProcessor"
+            forEach="/articleList/article"
+            transformer="HTMLStripTransformer,script:transformArticle,LogTransformer"
+            logTemplate="Indexing article ${article.inst_id}-${article.journal_id}-${article.article_id}." logLevel="info"
+            stream="false"
+            onError="continue" >
+
+      <!-- ID fields -->
+      <field column="article_id" xpath="/articleList/article/@id" />
+      <field column="journal_id" xpath="/articleList/article/@journalId" />
+      <field column="inst_id" xpath="/articleList/article/@instId" />
+
+      <!-- Authors -->
+      <field column="etl_authorList" xpath="/articleList/article/authorList/author" multiValued="true" />
+
+      <!-- Titles -->
+      <field column="etl_titleList" xpath="/articleList/article/titleList/title" multiValued="true" />
+      <field column="etl_titleList_locales" xpath="/articleList/article/titleList/title/@locale" multiValued="true" />
+      <field column="etl_titleList_sortOnly" xpath="/articleList/article/titleList/title/@sortOnly" multiValued="true" />
+
+      <!-- Abstracts -->
+      <field column="etl_abstractList" xpath="/articleList/article/abstractList/abstract" multiValued="true" stripHTML="true" />
+      <field column="etl_abstractList_locales" xpath="/articleList/article/abstractList/abstract/@locale" multiValued="true" />
+
+      <!-- Disciplines -->
+      <field column="etl_disciplineList" xpath="/articleList/article/disciplineList/discipline" multiValued="true" />
+      <field column="etl_disciplineList_locales" xpath="/articleList/article/disciplineList/discipline/@locale" multiValued="true" />
+
+      <!-- Subjects -->
+      <field column="etl_subjectList" xpath="/articleList/article/subjectList/subject" multiValued="true" />
+      <field column="etl_subjectList_locales" xpath="/articleList/article/subjectList/subject/@locale" multiValued="true" />
+
+      <!-- Types -->
+      <field column="etl_typeList" xpath="/articleList/article/typeList/type" multiValued="true" />
+      <field column="etl_typeList_locales" xpath="/articleList/article/typeList/type/@locale" multiValued="true" />
+
+      <!-- Coverage -->
+      <field column="etl_coverageList" xpath="/articleList/article/coverageList/coverage" multiValued="true" />
+      <field column="etl_coverageList_locales" xpath="/articleList/article/coverageList/coverage/@locale" multiValued="true" />
+
+      <!-- Journal Titles -->
+      <field column="etl_journalTitleList" xpath="/articleList/article/journalTitleList/journalTitle" multiValued="true" />
+      <field column="etl_journalTitleList_locales" xpath="/articleList/article/journalTitleList/journalTitle/@locale" multiValued="true" />
+      <field column="etl_journalTitleList_sortOnly" xpath="/articleList/article/journalTitleList/journalTitle/@sortOnly" multiValued="true" />
+
+      <!-- Article Publication Date -->
+      <field column="publicationDate_dt" xpath="/articleList/article/publicationDate" multiValued="false" />
+
+      <!-- Issue Publication Date -->
+      <field column="issuePublicationDate_dtsort" xpath="/articleList/article/issuePublicationDate" multiValued="false" />
+
+      <!-- Galleys -->
+      <field column="etl_galley_xml" xpath="/articleList/article/galley-xml" multiValued="false" />
+      <entity name="galley"
+              dataSource="field"
+              dataField="article.etl_galley_xml"
+              processor="XPathEntityProcessor"
+              forEach="/galleyList/galley"
+              stream="false"
+              onError="continue" >
+
+        <!-- File Data -->
+        <field column="etl_file_name" xpath="/galleyList/galley/@fileName" multiValued="false" />
+        <field column="etl_file_locale" xpath="/galleyList/galley/@locale" multiValued="false" />
+
+        <!-- Full Text -->
+        <entity name="galley_file"
+                dataSource="file"
+                processor="TikaEntityProcessor"
+                url="${galley.etl_file_name}"
+                transformer="script:transformFullText"
+                format="text"
+                onError="continue" >
+          <field column="Content-Type" meta="true" />
+          <field column="text" />
+        </entity>
+      </entity>
+
+      <!-- Supplementary Files -->
+      <field column="etl_suppFile_xml" xpath="/articleList/article/suppFile-xml" multiValued="false" default="" />
+      <entity name="suppFile"
+              dataSource="field"
+              dataField="article.etl_suppFile_xml"
+              processor="XPathEntityProcessor"
+              forEach="/suppFileList/suppFile"
+              transformer="script:transformSuppFile"
+              stream="false"
+              onError="continue" >
+
+        <!-- File Data -->
+        <field column="etl_file_name" xpath="/suppFileList/suppFile/@fileName" multiValued="false" />
+        <field column="etl_file_locale" xpath="/suppFileList/suppFile/@locale" multiValued="false" />
+
+        <!-- Titles -->
+        <field column="etl_file_titleList" xpath="/suppFileList/suppFile/titleList/title" multiValued="true" />
+        <field column="etl_file_titleList_locales" xpath="/suppFileList/suppFile/titleList/title/@locale" multiValued="true" />
+
+        <!-- Creators -->
+        <field column="etl_file_creatorList" xpath="/suppFileList/suppFile/creatorList/creator" multiValued="true" />
+        <field column="etl_file_creatorList_locales" xpath="/suppFileList/suppFile/creatorList/creator/@locale" multiValued="true" />
+
+        <!-- Subjects -->
+        <field column="etl_file_subjectList" xpath="/suppFileList/suppFile/subjectList/subject" multiValued="true" />
+        <field column="etl_file_subjectList_locales" xpath="/suppFileList/suppFile/subjectList/subject/@locale" multiValued="true" />
+
+        <!-- Other Types -->
+        <field column="etl_file_typeOtherList" xpath="/suppFileList/suppFile/typeOtherList/typeOther" multiValued="true" />
+        <field column="etl_file_typeOtherList_locales" xpath="/suppFileList/suppFile/typeOtherList/typeOther/@locale" multiValued="true" />
+
+        <!-- Descriptions -->
+        <field column="etl_file_descriptionList" xpath="/suppFileList/suppFile/descriptionList/description" multiValued="true" />
+        <field column="etl_file_descriptionList_locales" xpath="/suppFileList/suppFile/descriptionList/description/@locale" multiValued="true" />
+
+        <!-- Sources -->
+        <field column="etl_file_sourceList" xpath="/suppFileList/suppFile/sourceList/source" multiValued="true" />
+        <field column="etl_file_sourceList_locales" xpath="/suppFileList/suppFile/sourceList/source/@locale" multiValued="true" />
+
+        <!-- Full Text -->
+        <entity name="suppFile_file"
+                dataSource="file"
+                processor="TikaEntityProcessor"
+                url="${suppFile.etl_file_name}"
+                transformer="script:transformFullText"
+                format="text"
+                onError="continue" >
+          <field column="text" />
+        </entity>
+      </entity>
+
+      <entity name="articlePostProcessing"
+              dataSource="field"
+              dataField="article.article_id"
+              processor="PlainTextEntityProcessor"
+              transformer="script:postProcessArticle" >
+      </entity>
+    </entity>
+  </document>
+</dataConfig>

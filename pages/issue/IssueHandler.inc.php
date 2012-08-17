@@ -102,6 +102,8 @@ class IssueHandler extends Handler {
 
 	/**
 	 * Display the issue archive listings
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function archive($args, $request) {
 		$this->validate($request);
@@ -109,7 +111,7 @@ class IssueHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = Handler::getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo('issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
 

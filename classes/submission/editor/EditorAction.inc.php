@@ -37,7 +37,7 @@ class EditorAction extends SectionEditorAction {
 		$journal =& $request->getJournal();
 
 		$editorSubmission =& $editorSubmissionDao->getEditorSubmission($articleId);
-		$sectionEditor =& $userDao->getUser($sectionEditorId);
+		$sectionEditor =& $userDao->getById($sectionEditorId);
 		if (!isset($sectionEditor)) return true;
 
 		import('classes.mail.ArticleMailTemplate');
@@ -162,7 +162,8 @@ class EditorAction extends SectionEditorAction {
 
 			// Update file search index
 			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
+			$articleSearchIndex = new ArticleSearchIndex();
+			$articleSearchIndex->updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 		}
 
 		$sectionEditorSubmission->setStatus(STATUS_QUEUED);

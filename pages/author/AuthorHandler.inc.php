@@ -16,9 +16,12 @@ import('classes.submission.author.AuthorAction');
 import('classes.handler.Handler');
 
 class AuthorHandler extends Handler {
+	/** @var $submission AuthorSubmission */
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AuthorHandler() {
 		parent::Handler();
 
@@ -31,13 +34,13 @@ class AuthorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request);
 		
 		$journal =& $request->getJournal();
 
 		$user =& $request->getUser();
-		$rangeInfo =& Handler::getRangeInfo('submissions');
+		$rangeInfo =& $this->getRangeInfo('submissions');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = array_shift($args);
@@ -104,11 +107,43 @@ class AuthorHandler extends Handler {
 	}
 
 	/**
-	 * Validate that user has author permissions in the selected journal.
+	 * Validate that user has author permissions in the selected journal
+	 * and, optionally, for the specified article.
 	 * Redirects to user index page if not properly authenticated.
+	 * @param $request PKPRequest
+	 * @param $articleId int optional
+	 * @param $reason string optional
 	 */
-	function validate($reason = null) {
+	function validate(&$request, $articleId = null, $reason = null) {
 		$this->addCheck(new HandlerValidatorRoles($this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
+
+		if ($articleId !== null) {
+			$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
+
+			$isValid = true;
+
+			$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
+
+			if ($authorSubmission == null) {
+				$isValid = false;
+			} else if ($authorSubmission->getJournalId() != $journal->getId()) {
+				$isValid = false;
+			} else {
+				if ($authorSubmission->getUserId() != $user->getId()) {
+					$isValid = false;
+				}
+			}
+
+			if (!$isValid) {
+				$request->redirect(null, $request->getRequestedPage());
+			}
+
+			$this->submission =& $authorSubmission;
+		}
+
 		return parent::validate();
 	}
 
@@ -134,9 +169,10 @@ class AuthorHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
 			$request->redirect(null, null, 'index');

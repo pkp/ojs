@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  * journalSettings.xml
+  * registry/journalSettings.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Default journal settings.
-  *
-  * $Id$
   -->
 
 <!DOCTYPE journal_settings [

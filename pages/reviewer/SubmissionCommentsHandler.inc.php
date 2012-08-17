@@ -20,53 +20,51 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionCommentsHandler() {
 		parent::ReviewerHandler();
 	}
 
 	/**
 	 * View peer review comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewPeerReviewComments($args, $request) {
-		$articleId = $args[0];
-		$reviewId = $args[1];
+		$articleId = (int) array_shift($args);
+		$reviewId = (int) array_shift($args);
 
-		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($request, $reviewId);
-		$submission =& $submissionReviewHandler->submission;
-		$user =& $submissionReviewHandler->user;
-
+		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
-		ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
-
+		ReviewerAction::viewPeerReviewComments($this->user, $this->submission, $reviewId);
 	}
 
 	/**
 	 * Post peer review comments.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function postPeerReviewComment($args, $request) {
+	function postPeerReviewComment($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($request, $reviewId);
-		$submission =& $submissionReviewHandler->submission;
-		$user =& $submissionReviewHandler->user;
-
+		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
-		if (ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment, $request)) {
-			ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
+
+		if (ReviewerAction::postPeerReviewComment($this->user, $this->submission, $reviewId, $emailComment, $request)) {
+			ReviewerAction::viewPeerReviewComments($this->user, $this->submission, $reviewId);
 		}
 	}
 
 	/**
 	 * Edit comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function editComment($args, $request) {
+	function editComment($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 		if (!$commentId) $commentId = null;
@@ -74,20 +72,13 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-
+		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($request, $reviewId);
-		$submission =& $submissionReviewHandler->submission;
-		$user =& $submissionReviewHandler->user;
-
-		ReviewerAction::editComment($article, $comment, $reviewId);
+		ReviewerAction::editComment($this->article, $this->comment, $reviewId);
 	}
 
 	/**
@@ -101,9 +92,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
-		$comment =& $this->comment;
-
+		$this->validate($request, $reviewId);
 		$this->setupTemplate(true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -112,12 +101,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($request, $reviewId);
-		$submission =& $submissionReviewHandler->submission;
-		$user =& $submissionReviewHandler->user;
-
-		ReviewerAction::saveComment($article, $comment, $emailComment, $request);
+		ReviewerAction::saveComment($article, $this->comment, $emailComment, $request);
 
 		// Refresh the comment
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
@@ -131,6 +115,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 	/**
 	 * Delete comment.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function deleteComment($args, $request) {
 		$articleId = (int) array_shift($args);
@@ -138,21 +124,16 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate();
+		$this->validate($request, $reviewId);
 		$comment =& $this->comment;
 
 		$this->setupTemplate($request, true);
 
-		$submissionReviewHandler = new SubmissionReviewHandler();
-		$submissionReviewHandler->validate($reviewId);
-		$submission =& $submissionReviewHandler->submission;
-		$user =& $submissionReviewHandler->user;
-
-		ReviewerAction::deleteComment($commentId, $user);
+		ReviewerAction::deleteComment($commentId, $this->user);
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			$request->redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
+			$request->redirect(null, null, 'viewPeerReviewComments', array($articleId, $this->comment->getAssocId()));
 		}
 	}
 }

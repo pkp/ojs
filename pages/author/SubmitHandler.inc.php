@@ -20,7 +20,7 @@ class SubmitHandler extends AuthorHandler {
 
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmitHandler() {
 		parent::AuthorHandler();
 	}
@@ -29,6 +29,7 @@ class SubmitHandler extends AuthorHandler {
 	 * Display journal author article submission.
 	 * Displays author index page if a valid step is not specified.
 	 * @param $args array optional, if set the first parameter is the step to display
+	 * @param $request PKPRequest
 	 */
 	function submit($args, $request) {
 		$step = (int) array_shift($args);
@@ -143,7 +144,7 @@ class SubmitHandler extends AuthorHandler {
 
 				case 4:
 					if ($request->getUserVar('submitUploadSuppFile')) {
-						SubmitHandler::submitUploadSuppFile(array(), $request);
+						$this->submitUploadSuppFile(array(), $request);
 						return;
 					}
 					break;
@@ -193,6 +194,8 @@ class SubmitHandler extends AuthorHandler {
 
 	/**
 	 * Create new supplementary file with a uploaded file.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function submitUploadSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
@@ -213,6 +216,7 @@ class SubmitHandler extends AuthorHandler {
 	/**
 	 * Display supplementary file submission form.
 	 * @param $args array optional, if set the first parameter is the supplementary file to edit
+	 * @param $request PKPRequest
 	 */
 	function submitSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
@@ -237,6 +241,7 @@ class SubmitHandler extends AuthorHandler {
 	/**
 	 * Save a supplementary file.
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
+	 * @param $request PKPRequest
 	 */
 	function saveSubmitSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
@@ -262,6 +267,7 @@ class SubmitHandler extends AuthorHandler {
 	/**
 	 * Delete a supplementary file.
 	 * @param $args array, the first parameter is the supplementary file to delete
+	 * @param $request PKPRequest
 	 */
 	function deleteSubmitSuppFile($args, $request) {
 		import('classes.file.ArticleFileManager');
@@ -285,6 +291,12 @@ class SubmitHandler extends AuthorHandler {
 		$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
+	/**
+	 * Expedite a submission -- rush it through the editorial process, for
+	 * users who are both authors and editors.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function expediteSubmission($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);

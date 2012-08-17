@@ -30,9 +30,21 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * Rebuild the search index for all articles in all journals.
 	 */
 	function execute() {
-		ArticleSearchIndex::rebuildIndex(true);
+		HookRegistry::register('Request::getBaseUrl', array(&$this, 'callbackBaseUrl'));
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->rebuildIndex(true);
 	}
 
+	/**
+	 * Callback to patch the base URL which will be required
+	 * when constructing galley/supp file download URLs.
+	 * @see PKPRequest::getBaseUrl()
+	 */
+	function callbackBaseUrl($hookName, $params) {
+		$baseUrl =& $params[0];
+		$baseUrl = Config::getVar('general', 'base_url');
+		return true;
+	}
 }
 
 $tool = new rebuildSearchIndex(isset($argv) ? $argv : array());

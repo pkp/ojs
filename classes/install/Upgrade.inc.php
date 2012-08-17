@@ -43,7 +43,8 @@ class Upgrade extends Installer {
 	 */
 	function rebuildSearchIndex() {
 		import('classes.search.ArticleSearchIndex');
-		ArticleSearchIndex::rebuildIndex();
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->rebuildIndex();
 		return true;
 	}
 

@@ -37,8 +37,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		return array(
 			'journal_settings', 'plugin_settings', 'issues', 'issue_settings',
 			'published_articles', 'articles', 'article_settings',
-			'article_galleys', 'article_galley_settings',
-			'article_supplementary_files', 'article_supp_file_settings'
+			'article_files', 'article_galleys', 'article_galley_settings',
+			'article_supplementary_files', 'article_supp_file_settings',
+			'event_log', 'event_log_settings', 'notifications', 'sessions'
 		);
 	}
 
@@ -271,12 +272,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 */
 	public function testDoiCustomSuffixPattern() {
 		// Configure custom pattern.
-		$customPattern = array(
-			'Issue' => 'jor%j.%Y.vol%v',
-			'Article' => 'jor%j.iss%i.art%a',
-			'Galley' => 'jor%j.art%a.gal%g',
-			'SuppFile' => 'jor%j.art%a.suf%s'
-		);
+		$customPattern = $this->getCustomPatternArray();
 		$this->configureDoi(true, '10.1234', 'doiSuffix', $customPattern);
 
 		// Check the results.
@@ -649,6 +645,68 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 
 	/**
+	 * SCENARIO OUTLINE: Preview DOI of published articles.
+	 *    WHEN I choose {suffix generation method}
+	 *     AND I open the metadata page of an published
+	 *         article that does not yet have a DOI generated
+	 *    THEN I'll see a {DOI preview} without a DOI being
+	 *         generated.
+	 *
+	 * EXAMPLES:
+	 *   suffix generation method | DOI preview
+	 *   =================================================
+	 *   default pattern          | 10.1234/t.v1i1.1
+	 *   custom pattern           | 10.1234/jort.iss1.art1
+	 *   custom url suffix        | 10.1234/custom-url
+	 *
+	 *
+	 * SCENARIO OUTLINE: Preview DOI of unpublished articles.
+	 *    WHEN I choose {suffix generation method}
+	 *     AND I open the metadata page of an unpublished
+	 *         article
+	 *    THEN I'll see a {partial DOI preview} even if the
+	 *         article is not yet published
+	 *     AND a DOI will not be generated.
+	 *
+	 * EXAMPLES:
+	 *   suffix generation method | partial DOI preview
+	 *   ==================================================
+	 *   default pattern          | 10.1234/t.v%vi%i.2
+	 *   custom pattern           | 10.1234/jort.iss%i.art2
+	 *   custom url suffix        | 10.1234/2
+	 */
+	public function testPreviewArticleDoi() {
+		// Our test cases. For performance reasons we test both
+		// scenarios together.
+		$testCases = array(
+			'doiSuffixDefault' => array(1 => '10.1234/t.v1i1.1', 2 => '10.1234/t.v%vi%i.2'),
+			'doiSuffix' =>  array(1 => '10.1234/jort.iss1.art1', 2 => '10.1234/jort.iss%i.art2'),
+			'doiSuffixPublisherId' =>  array(1 => '10.1234/custom-url', 2 => '10.1234/2')
+		);
+
+		// Enable custom URL suffixes.
+		$this->configurePublisherIds(true);
+		$this->setUrlSuffix('article', 'custom-url');
+
+		// Run through all test cases.
+		foreach ($testCases as $suffixGenerationMethod => $expectedPreviews) {
+			// Set the suffix generation method.
+			if ($suffixGenerationMethod == 'doiSuffix') {
+				$customPattern = $this->getCustomPatternArray();
+				$this->configureDoi(true, '10.1234', $suffixGenerationMethod, $customPattern);
+			} else {
+				$this->configureDoi(true, '10.1234', $suffixGenerationMethod);
+			}
+
+			// Check the (partial) DOI prefix.
+			foreach ($expectedPreviews as $articleId => $expectedPreview) {
+				$this->checkMetadataPage('article', false, $expectedPreview, $articleId, true);
+			}
+		}
+	}
+
+
+	/**
 	 * @see PHPUnit_Framework_TestCase::tearDown()
 	 */
 	protected function tearDown() {
@@ -677,10 +735,10 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		parent::onNotSuccessfulTest($e);
 	}
 
-	/*
-	 * Private helper methods
-	 */
 
+	//
+	// Private helper methods
+	//
 	/**
 	 * Return the url of the given page with the article ID
 	 * correctly inserted.
@@ -699,10 +757,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * Open the settings page
 	 */
 	private function openSettingsPage() {
-		$this->verifyLocation('exact:'.$this->getUrl('settings'));
-		if (!$this->verified()) {
-			$this->open($this->getUrl('settings'));
-		}
+		$this->verifyAndOpen($this->getUrl('settings'));
 	}
 
 	/**
@@ -832,10 +887,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 */
 	private function checkDoiDisplay($objectType, $expectedDoi) {
 		$url = $this->getUrl($objectType, 1);
-		$this->verifyLocation('exact:'.$url);
-		if (!$this->verified()) {
-			$this->open($url);
-		}
+		$this->verifyAndOpen($url);
 		try {
 			if ($expectedDoi === false) {
 				$visibleElement = $this->pages[$objectType]['visible'];
@@ -886,20 +938,20 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * @param $editable boolean whether the DOI Suffix field should be editable.
 	 * @param $expectedDoi string
 	 */
-	private function checkMetadataPage($objectType, $editable = false, $expectedDoi = null) {
+	private function checkMetadataPage($objectType, $editable = false, $expectedDoi = null, $objectId = 1, $isPreview = false) {
 		try {
 			$objectType = strtolower_codesafe($objectType);
 			$metadataPage = "metadata-$objectType";
-			$url = $this->getUrl($metadataPage, 1);
-			$this->verifyLocation('exact:'.$url);
-			if (!$this->verified()) {
-				$this->open($url);
-			}
+			$url = $this->getUrl($metadataPage, $objectId);
+			$this->verifyAndOpen($url);
 			if ($editable) {
 				$this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
 			} else {
 				$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
 				$this->assertText($this->pages[$metadataPage]['doi'], $expectedDoi);
+			}
+			if ($isPreview) {
+				$this->assertText($this->pages[$metadataPage]['doi'], 'What you see is a preview');
 			}
 		} catch(Exception $e) {
 			throw $this->improveException($e, $objectType);
@@ -932,6 +984,20 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	private function resetDoiSettings() {
 		$this->openSettingsPage();
 		$this->configureDoi();
+	}
+
+	/**
+	 * Return an array with custom patterns
+	 * for testing.
+	 * @return array
+	 */
+	private function getCustomPatternArray() {
+		return array(
+			'Issue' => 'jor%j.%Y.vol%v',
+			'Article' => 'jor%j.iss%i.art%a',
+			'Galley' => 'jor%j.art%a.gal%g',
+			'SuppFile' => 'jor%j.art%a.suf%s'
+		);
 	}
 }
 ?>

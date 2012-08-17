@@ -538,7 +538,7 @@ class UserHandler extends Handler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
@@ -617,7 +617,7 @@ class UserHandler extends Handler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();

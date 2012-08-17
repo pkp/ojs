@@ -68,7 +68,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			// Append book metadata to book review article
 			HookRegistry::register('Templates::Article::Header::Metadata', array($this, 'displayBookMetadata'));
 
-			// Enable TinyMCE for book for review text fields 
+			// Enable TinyMCE for book for review text fields
 			HookRegistry::register('TinyMCEPlugin::getEnableFields', array($this, 'enableTinyMCE'));
 
 			// If using book for review cover page as article cover page
@@ -181,7 +181,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Allow author to specify book for review during article submission. 
+	 * Allow author to specify book for review during article submission.
 	 */
 	function saveSubmitHandler($hookName, $params) {
 		$article =& $params[1];
@@ -220,7 +220,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Enable editor book for review management. 
+	 * Enable editor book for review management.
 	 */
 	function setupEditorHandler($hookName, $params) {
 		$page =& $params[0];
@@ -230,18 +230,18 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($op) {
 				$editorPages = array(
-					'createBookForReview',	
-					'editBookForReview',	
-					'updateBookForReview',	
-					'deleteBookForReview',	
-					'booksForReview',	
-					'booksForReviewSettings',	
+					'createBookForReview',
+					'editBookForReview',
+					'updateBookForReview',
+					'deleteBookForReview',
+					'booksForReview',
+					'booksForReviewSettings',
 					'selectBookForReviewAuthor',
-					'selectBookForReviewSubmission',	
-					'assignBookForReviewAuthor',	
-					'assignBookForReviewSubmission',	
-					'denyBookForReviewAuthor',	
-					'notifyBookForReviewMailed',	
+					'selectBookForReviewSubmission',
+					'assignBookForReviewAuthor',
+					'assignBookForReviewSubmission',
+					'denyBookForReviewAuthor',
+					'notifyBookForReviewMailed',
 					'removeBookForReviewAuthor',
 					'removeBookForReviewCoverPage'
 				);
@@ -267,8 +267,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($op) {
 				$authorPages = array(
-					'booksForReview',	
-					'requestBookForReview'	
+					'booksForReview',
+					'requestBookForReview'
 				);
 
 				if (in_array($op, $authorPages)) {
@@ -292,8 +292,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($op) {
 				$publicPages = array(
-					'index',	
-					'viewBookForReview'	
+					'index',
+					'viewBookForReview'
 				);
 
 				if (in_array($op, $publicPages)) {
@@ -316,10 +316,10 @@ class BooksForReviewPlugin extends GenericPlugin {
 		$op = Request::getRequestedOp();
 		if ($page == 'editor' && ($op == 'createBookForReview' || $op == 'editBookForReview' || $op == 'updateBookForReview')) {
 			$fields[] = 'description';
-			$fields[] = 'notes';  
+			$fields[] = 'notes';
 		} elseif ($page == 'editor' && $op == 'booksForReviewSettings') {
 			$fields[] = 'additionalInformation';
-		} 
+		}
 		return false;
 	}
 
@@ -341,7 +341,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 				if (!$booksForReview->wasEmpty()) {
 					$smarty->assign('booksForReview', $booksForReview);
-					$output .= $smarty->fetch($this->getTemplatePath() . 'author' . '/' . 'submissionBooksForReview.tpl'); 
+					$output .= $smarty->fetch($this->getTemplatePath() . 'author' . '/' . 'submissionBooksForReview.tpl');
 				}
 			}
 		}
@@ -376,7 +376,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($book) {
 				$smarty->assign('book', $book);
-				$output .= $smarty->fetch($this->getTemplatePath() . 'coverPageIssue.tpl'); 
+				$output .= $smarty->fetch($this->getTemplatePath() . 'coverPageIssue.tpl');
 			} else {
 				return false;
 			}
@@ -418,7 +418,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$smarty->assign('baseCoverPagePath', $baseCoverPagePath);
 				$smarty->assign('locale', AppLocale::getLocale());
 				$smarty->assign('book', $book);
-				$output .= $smarty->fetch($this->getTemplatePath() . 'coverPageAbstract.tpl'); 
+				$output .= $smarty->fetch($this->getTemplatePath() . 'coverPageAbstract.tpl');
 			} else {
 				return false;
 			}
@@ -456,7 +456,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$smarty->assign('book', $book);
 				$citation = trim(trim($smarty->fetch($this->getTemplatePath() . 'citation.tpl')));
 				$smarty->assign('citation', $citation);
-				$output .= $smarty->fetch($this->getTemplatePath() . 'metadata.tpl'); 
+				$output .= $smarty->fetch($this->getTemplatePath() . 'metadata.tpl');
 			} else {
 				return false;
 			}
@@ -471,7 +471,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<li><a href="' . TemplateManager::smartyUrl(array('page'=>'booksForReview'), $smarty) . '" target="_parent">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.headerLink'), $smarty) . '</a></li>';
+			$templateMgr = TemplateManager::getManager();
+			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '" target="_parent">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
 	}
@@ -483,7 +484,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<h3>' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . TemplateManager::smartyUrl(array('op'=>'booksForReview'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</a></li></ul>';
+			$templateMgr = TemplateManager::getManager();
+			$output .= '<h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</a></li></ul>';
 		}
 		return false;
 	}
@@ -504,7 +506,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 				$bookId = $bfrDao->getSubmittedBookForReviewIdByArticle($journalId, $articleId);
 				if ($bookId) {
-					$output = '<p><a href="' . TemplateManager::smartyUrl(array('page'=>'editor', 'op'=>'editBookForReview', 'path'=>$bookId), $smarty) . '" class="action">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.editBookForReviewMetadata'), $smarty) . '</a></p>';
+					$templateMgr = TemplateManager::getManager();
+					$output = '<p><a href="' . $templateMgr->smartyUrl(array('page'=>'editor', 'op'=>'editBookForReview', 'path'=>$bookId), $smarty) . '" class="action">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.editBookForReviewMetadata'), $smarty) . '</a></p>';
 				}
 			}
 		}
@@ -518,7 +521,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$output .= '<br /><div class="separator"></div><h3>' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . TemplateManager::smartyUrl(array('page'=>'author', 'op'=>'booksForReview'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.myBooksForReview'), $smarty) . '</a></li><li>&#187; <a href="' . TemplateManager::smartyUrl(array('page'=>'booksForReview'), $smarty) . '">' . TemplateManager::smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.availableBooksForReview'), $smarty) . '</a></li></ul><br />';
+			$templateMgr = TemplateManager::getManager();
+			$output .= '<br /><div class="separator"></div><h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'author', 'op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.myBooksForReview'), $smarty) . '</a></li><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.availableBooksForReview'), $smarty) . '</a></li></ul><br />';
 		}
 		return false;
 	}

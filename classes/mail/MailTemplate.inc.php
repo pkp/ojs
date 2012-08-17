@@ -87,7 +87,7 @@ class MailTemplate extends PKPMailTemplate {
 		$user =& Request::getUser();
 		if ($user) {
 			$this->setFrom($user->getEmail(), $user->getFullName());
-		} elseif ($journal == null) {
+		} elseif (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
 			$site =& Request::getSite();
 			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 

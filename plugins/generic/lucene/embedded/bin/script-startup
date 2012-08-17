@@ -1,0 +1,23 @@
+# This file initializes common variables.
+# It is not meant to be executed directly
+# but will be sourced by other scripts.
+
+# Identify our plug-in base directory.
+PLUGIN_DIR=`dirname "$0"`
+PLUGIN_DIR=`readlink -f "$PLUGIN_DIR/../.."`
+
+# OJS directories
+OJS_DIR=`readlink -f "$PLUGIN_DIR/../../.."`
+OJS_FILES=`grep '^[[:space:]]*files_dir[[:space:]]*=' "$OJS_DIR/config.inc.php" | sed 's/^[[:space:]]*files_dir[[:space:]]*=\s*//;s/\s*$//'`
+if [ ! \( -d "$OJS_FILES" -a -w "$OJS_FILES" \) ]; then
+  echo "We did not find the location of the OJS files directory or the files directory is not writable."
+  exit 1
+fi
+
+if [ ! -e "$OJS_FILES/lucene" ]; then
+	mkdir "$OJS_FILES/lucene"
+fi
+
+# Set the path to the solr PID file.
+SOLR_PIDFILE="$OJS_FILES/lucene/solr.pid"
+

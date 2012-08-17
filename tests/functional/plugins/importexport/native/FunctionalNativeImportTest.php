@@ -12,7 +12,7 @@
  * @brief Test native OJS import.
  */
 
-require_mock_env('lib/pkp/tests/mock');
+require_mock_env('env1');
 
 import('lib.pkp.classes.core.PKPRouter');
 import('lib.pkp.tests.functional.plugins.importexport.FunctionalImportExportBaseTestCase');

@@ -29,6 +29,8 @@
 				{$storedPubId|escape}
 			{/if}
 		{else}
+			{$pubIdPlugin->getPubId($pubObject, true)|escape} <br />
+			<br />
 			{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
 			{translate key="plugins.pubIds.doi.editor.doiNotYetGenerated" pubObjectType=$translatedObjectType}
 		{/if}

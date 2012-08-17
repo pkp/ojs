@@ -19,9 +19,12 @@ import('classes.submission.sectionEditor.SectionEditorAction');
 import('classes.handler.Handler');
 
 class SectionEditorHandler extends Handler {
+	/** submission associated with the request **/
+	var $submission;
+
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SectionEditorHandler() {
 		parent::Handler();
 
@@ -37,26 +40,28 @@ class SectionEditorHandler extends Handler {
 
 	/**
 	 * Display section editor index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo('submissions');
 
 		// Get the user's search conditions, if any
-		$searchField = Request::getUserVar('searchField');
-		$dateSearchField = Request::getUserVar('dateSearchField');
-		$searchMatch = Request::getUserVar('searchMatch');
-		$search = Request::getUserVar('search');
+		$searchField = $request->getUserVar('searchField');
+		$dateSearchField = $request->getUserVar('dateSearchField');
+		$searchMatch = $request->getUserVar('searchMatch');
+		$search = $request->getUserVar('search');
 
-		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
-		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -65,9 +70,9 @@ class SectionEditorHandler extends Handler {
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
 
-		$sort = Request::getUserVar('sort');
+		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
-		$sortDirection = Request::getUserVar('sortDirection');
+		$sortDirection = $request->getUserVar('sortDirection');
 
 		$filterSectionOptions = array(
 			FILTER_SECTION_ALL => AppLocale::Translate('editor.allSections')
@@ -88,7 +93,7 @@ class SectionEditorHandler extends Handler {
 				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
-		$filterSection = Request::getUserVar('filterSection');
+		$filterSection = $request->getUserVar('filterSection');
 		if ($filterSection != '' && array_key_exists($filterSection, $filterSectionOptions)) {
 			$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
 		} else {
@@ -136,7 +141,7 @@ class SectionEditorHandler extends Handler {
 			'dateSearchField'
 		);
 		foreach ($duplicateParameters as $param)
-			$templateMgr->assign($param, Request::getUserVar($param));
+			$templateMgr->assign($param, $request->getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
@@ -165,6 +170,9 @@ class SectionEditorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $articleId int optional
+	 * @param $parentPage string optional
+	 * @param $showSidebar boolean optional
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate();
@@ -194,13 +202,103 @@ class SectionEditorHandler extends Handler {
 
 	/**
 	 * Display submission management instructions.
-	 * @param $args (type)
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function instructions($args) {
+	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof', 'referenceLinking'))) {
-			Request::redirect(null, null, 'index');
+			$request->redirect(null, null, 'index');
+		}
+	}
+
+	//
+	// Validation
+	//
+
+	/**
+	 * Validate that the user is the assigned section editor for
+	 * the article, or is a managing editor.
+	 * Redirects to sectionEditor index page if validation fails.
+	 * @param $articleId int Optional article ID to validate, or null for none
+	 * @param $access int Optional name of access level required -- see SECTION_EDITOR_ACCESS_... constants
+	 */
+	function validate($articleId = null, $access = null) {
+		parent::validate();
+		$isValid = true;
+
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+
+		if ($articleId !== null) {
+			$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+			if ($sectionEditorSubmission == null) {
+				$isValid = false;
+
+			} else if ($sectionEditorSubmission->getJournalId() != $journal->getId()) {
+				$isValid = false;
+
+			} else if ($sectionEditorSubmission->getDateSubmitted() == null) {
+				$isValid = false;
+
+			} else {
+				$templateMgr =& TemplateManager::getManager();
+
+				if (Validation::isEditor()) {
+					// Make canReview and canEdit available to templates.
+					// Since this user is an editor, both are available.
+					$templateMgr->assign('canReview', true);
+					$templateMgr->assign('canEdit', true);
+				} else {
+					// If this user isn't the submission's editor, they don't have access.
+					$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+					$wasFound = false;
+					foreach ($editAssignments as $editAssignment) {
+						if ($editAssignment->getEditorId() == $user->getId()) {
+							$templateMgr->assign('canReview', $editAssignment->getCanReview());
+							$templateMgr->assign('canEdit', $editAssignment->getCanEdit());
+							switch ($access) {
+								case SECTION_EDITOR_ACCESS_EDIT:
+									if ($editAssignment->getCanEdit()) {
+										$wasFound = true;
+									}
+									break;
+								case SECTION_EDITOR_ACCESS_REVIEW:
+									if ($editAssignment->getCanReview()) {
+										$wasFound = true;
+									}
+									break;
+
+								default:
+									$wasFound = true;
+							}
+							break;
+						}
+					}
+
+					if (!$wasFound) $isValid = false;
+				}
+			}
+
+			if (!$isValid) {
+				return Request::redirect(null, Request::getRequestedPage());
+			}
+
+			// If necessary, note the current date and time as the "underway" date/time
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+			foreach ($editAssignments as $editAssignment) {
+				if ($editAssignment->getEditorId() == $user->getId() && $editAssignment->getDateUnderway() === null) {
+					$editAssignment->setDateUnderway(Core::getCurrentDate());
+					$editAssignmentDao->updateEditAssignment($editAssignment);
+				}
+			}
+
+			$this->submission =& $sectionEditorSubmission;
+			return true;
 		}
 	}
 }
