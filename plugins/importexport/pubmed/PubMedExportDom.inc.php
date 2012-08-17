@@ -124,8 +124,9 @@ class PubMedExportDom {
 		$authorListNode =& XMLCustomWriter::createElement($doc, 'AuthorList');
 		XMLCustomWriter::appendChild($root, $authorListNode);
 
+		$authorIndex = 0;
 		foreach ($article->getAuthors() as $author) {
-			$authorNode =& PubMedExportDom::generateAuthorDom($doc, $author);
+			$authorNode =& PubMedExportDom::generateAuthorDom($doc, $author, $authorIndex++);
 			XMLCustomWriter::appendChild($authorListNode, $authorNode);
 		}
 
@@ -183,14 +184,21 @@ class PubMedExportDom {
 		return $root;
 	}
 
-	function &generateAuthorDom(&$doc, &$author) {
+	/**
+	 * Generate the Author node DOM for the specified author.
+	 * @param $doc DOMDocument
+	 * @param $author PKPAuthor
+	 * @param $authorIndex 0-based index of current author
+	 */
+	function &generateAuthorDom(&$doc, &$author, $authorIndex) {
 		$root =& XMLCustomWriter::createElement($doc, 'Author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'FirstName', ucfirst($author->getFirstName()));
 		XMLCustomWriter::createChildWithText($doc, $root, 'MiddleName', ucfirst($author->getMiddleName()), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'LastName', ucfirst($author->getLastName()));
 
-		if ($author->getPrimaryContact()) {
+		if ($authorIndex == 0) {
+			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
 			XMLCustomWriter::createChildWithText($doc, $root, 'Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail(), false);
 		}
 
