@@ -9,7 +9,6 @@
   *
   * Localization strings for the ml_IN (Malayalam) locale (default journal settings).
   *
-  * $Id$
   -->
  
 <locale name="ml_IN" full_name = "Malayalam">

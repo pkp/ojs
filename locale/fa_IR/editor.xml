@@ -9,7 +9,6 @@
   *
   * Localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale name="fa_IR" full_name = "Persian">
 	<message key="editor.article.reviewForms">فرم های کارشناسی</message>

@@ -8,7 +8,6 @@
   *
   * تنظیمات بومی برای زبان fa_IR (فارسی)
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>

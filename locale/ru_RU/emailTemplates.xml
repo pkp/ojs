@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="ru_RU">
 	<email_text key="PASSWORD_RESET_CONFIRM">

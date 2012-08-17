@@ -9,7 +9,6 @@
   *
   * Localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale name="fa_IR" full_name = "Persian">
 	<message key="manager.emails.confirmResetAll">آیا میخواهید تمام قالبها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در قالب های ایمیل ها از بین خواهد رفت</message>
