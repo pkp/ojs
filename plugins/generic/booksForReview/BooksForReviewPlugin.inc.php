@@ -71,6 +71,9 @@ class BooksForReviewPlugin extends GenericPlugin {
 			// Enable TinyMCE for book for review text fields 
 			HookRegistry::register('TinyMCEPlugin::getEnableFields', array($this, 'enableTinyMCE'));
 
+			// Ensure book for review user assignments are transferred when merging users
+			HookRegistry::register('UserAction::mergeUsers', array($this, 'mergeBooksForReviewAuthors'));
+
 			// If using book for review cover page as article cover page
 			// then include cover page handlers for issue toc and article abstract views
 			if ($coverPageIssue) {
@@ -320,6 +323,27 @@ class BooksForReviewPlugin extends GenericPlugin {
 		} elseif ($page == 'editor' && $op == 'booksForReviewSettings') {
 			$fields[] = 'additionalInformation';
 		} 
+		return false;
+	}
+
+	/**
+	 * Transfer book for review user assignments when merging users.
+	 */
+	function mergeBooksForReviewAuthors($hookName, $params) {
+		$oldUserId =& $params[0];
+		$newUserId =& $params[1];
+
+		$journal =& Request::getJournal();
+
+		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$oldUserBooksForReview =& $bfrDao->getBooksForReviewByAuthor($journal->getId(), $oldUserId);
+
+		while ($bookForReview =& $oldUserBooksForReview->next()) {
+			$bookForReview->setUserId($newUserId);
+			$bfrDao->updateObject($bookForReview);
+			unset($bookForReview);
+		}
+
 		return false;
 	}
 
