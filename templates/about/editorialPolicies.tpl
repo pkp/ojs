@@ -6,7 +6,6 @@
  *
  * About the Journal / Editorial Policies.
  * 
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.editorialPolicies"}

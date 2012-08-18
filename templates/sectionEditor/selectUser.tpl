@@ -6,7 +6,6 @@
  *
  * List a set of users and allow one to be selected.
  *
- * $Id$
  *}
 {strip}
 {include file="common/header.tpl"}

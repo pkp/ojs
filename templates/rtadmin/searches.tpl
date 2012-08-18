@@ -6,7 +6,6 @@
  *
  * RTAdmin search list
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.searches"}

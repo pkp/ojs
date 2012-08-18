@@ -6,7 +6,6 @@
  *
  * About the Journal / Submissions.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.submissions"}

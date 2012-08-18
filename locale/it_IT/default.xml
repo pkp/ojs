@@ -10,7 +10,6 @@
   * Localization strings for the it_IT (Italian) locale.
   * Contributed by Andrea Bollini.
   *
-  * $Id: default.xml,v 1.1 2009/08/04 17:09:35 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italian">

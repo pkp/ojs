@@ -6,7 +6,6 @@
  *
  * Form to create/modify a journal section.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="section.section"}

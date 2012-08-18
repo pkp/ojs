@@ -6,7 +6,6 @@
  *
  * Show the results of importing users.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.users.displayName"}

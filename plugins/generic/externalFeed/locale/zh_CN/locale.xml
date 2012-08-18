@@ -9,7 +9,6 @@
   *
   * External feed plugin localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.1.2.1 2009/10/14 03:46:24 michael Exp $
   -->
  
 <locale name="zh_CN" full_name="China PR">

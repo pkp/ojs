@@ -6,7 +6,6 @@
  *
  * Form to enter comments.
  *
- * $Id$
  *}
 {strip}
 {include file="submission/comment/header.tpl"}

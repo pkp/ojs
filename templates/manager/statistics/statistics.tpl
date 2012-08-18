@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the statistics table.
  *
- * $Id$
  *}
 {* WARNING: This page should be kept roughly synchronized with the
    implementation of reader statistics in the About page.          *}

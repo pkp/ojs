@@ -6,7 +6,6 @@
  *
  * Read-only view of galley information.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.galley"}

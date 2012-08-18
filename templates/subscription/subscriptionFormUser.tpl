@@ -6,7 +6,6 @@
  *
  * Common subscription fields
  *
- * $Id$
  *}
 <tr valign="top">
 	<td>&nbsp;</td>

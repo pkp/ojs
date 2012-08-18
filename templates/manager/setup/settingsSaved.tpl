@@ -6,7 +6,6 @@
  *
  * Show confirmation after saving settings.
  *
- * $Id$
  *}
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="manager/setup/setupHeader.tpl"}

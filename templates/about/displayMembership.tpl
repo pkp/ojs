@@ -6,7 +6,6 @@
  *
  * Display group membership information.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.people"}

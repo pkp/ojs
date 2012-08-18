@@ -6,7 +6,6 @@
  *
  * Display system information.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.systemInformation"}

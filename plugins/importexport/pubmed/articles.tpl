@@ -6,7 +6,6 @@
  *
  * List of articles to potentially export
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.pubmed.export.selectArticle"}

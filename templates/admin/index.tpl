@@ -6,7 +6,6 @@
  *
  * Site administration index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.siteAdmin"}

@@ -9,7 +9,6 @@
   *
   * Localization strings for the sr_SR (Serbian) locale.
   *
-  * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
   -->
 
 <locale name="sr_SR" full_name="Serbian">

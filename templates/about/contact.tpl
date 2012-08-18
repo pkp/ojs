@@ -6,7 +6,6 @@
  *
  * About the Journal / Journal Contact.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.journalContact"}

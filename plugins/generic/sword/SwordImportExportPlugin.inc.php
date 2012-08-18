@@ -12,7 +12,6 @@
  * @brief Sword deposit plugin
  */
 
-// $Id: SwordImportExportPlugin.inc.php,v 1.60 2010/01/27 21:35:04 asmecher Exp $
 
 
 import('classes.plugins.ImportExportPlugin');

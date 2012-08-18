@@ -7,7 +7,6 @@
  * Show a single email log entry.
  *
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.emailLog"}

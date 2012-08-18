@@ -7,7 +7,6 @@
  * Show submission notes page.
  *
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.notes"}

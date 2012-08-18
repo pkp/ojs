@@ -6,7 +6,6 @@
  *
  * Synchronize user enrollment with another journal.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.people.enrollment"}

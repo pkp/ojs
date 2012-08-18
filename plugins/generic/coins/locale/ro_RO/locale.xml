@@ -9,7 +9,6 @@
   *
   * COinS plugin localization strings for the ro_RO (Română) locale.
   *
-  * $Id: locale.xml,v 1.1 2008/05/29 05:27:10 asmecher Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

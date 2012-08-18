@@ -9,7 +9,6 @@
   *
   * Localization strings for the ro_RO (Romanian) locale.
   *
-  * $Id: locale.xml,v 1.0 9:32 PM 8/11/2010 kosson Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

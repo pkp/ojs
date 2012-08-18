@@ -6,7 +6,6 @@
  *
  * List available import/export plugins.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.importExport"}

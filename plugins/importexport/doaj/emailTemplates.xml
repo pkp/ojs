@@ -8,7 +8,6 @@
   *
   * Email templates XML file.
   *
-  * $Id$
   -->
 <emails>
 	<email key="DOAJ_EMAIL_REP" can_edit="1" can_disable="0"/>

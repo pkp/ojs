@@ -6,7 +6,6 @@
  *
  * RTAdmin version editing
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.admin.versions.edit.editVersion"}

@@ -6,7 +6,6 @@
  *
  * Author's submission editing.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.editing" id=$submission->getId()}

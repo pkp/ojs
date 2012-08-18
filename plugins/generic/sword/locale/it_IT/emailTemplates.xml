@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="it_IT">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">

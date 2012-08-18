@@ -6,7 +6,6 @@
  *
  * Reading Tools email template form
  *
- * $Id$
  *}
 {strip}
 {if $op=="emailColleague"}

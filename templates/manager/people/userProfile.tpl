@@ -6,7 +6,6 @@
  *
  * Display user profile.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.people"}

@@ -6,7 +6,6 @@
  *
  * Search form for enrolled users.
  *
- * $Id$
  *
  *}
 {strip}

@@ -11,7 +11,6 @@
   * WARNING: This script is only executed on the condition that the theses
   * table exists. (See dbscripts/xml/upgrade.xml.)
   *
-  * $Id$
   -->
 <data>
 	<!-- Bug #3488: Add RSS feed for thesis abstracts -->

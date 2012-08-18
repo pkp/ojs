@@ -6,7 +6,6 @@
  *
  * Article reading tools -- "finding references" page.
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="rt.findingReferences"}

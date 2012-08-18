@@ -6,7 +6,6 @@
  *
  * About the Journal => History
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.history"}

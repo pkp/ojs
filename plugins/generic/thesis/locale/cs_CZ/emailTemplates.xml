@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="cs_CZ">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">

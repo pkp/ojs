@@ -6,7 +6,6 @@
  *
  * User purchase institutional subscription form
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.subscriptions.purchaseInstitutionalSubscription"}

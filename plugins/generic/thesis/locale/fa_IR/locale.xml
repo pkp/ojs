@@ -8,7 +8,6 @@
   *
   * Thesis abstracts plugin localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 <!--اداره چکیده پایان نامه-->  <message key="plugins.generic.thesis.manager.settings" >تنظیمات</message>

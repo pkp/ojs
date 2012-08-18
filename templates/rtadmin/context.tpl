@@ -6,7 +6,6 @@
  *
  * RTAdmin context editing
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.admin.contexts.edit.editContext"}

@@ -6,7 +6,6 @@
  *
  * Article reading tools -- article metadata page.
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="rt.viewMetadata"}

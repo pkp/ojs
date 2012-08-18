@@ -10,7 +10,6 @@
   * Renames subscription_ip table to allow migration to new subscription structure.
   * This table was introduced in 2.2, so can not be migrated with subscription table.
   *
-  * $Id$
   -->
 
 <data>

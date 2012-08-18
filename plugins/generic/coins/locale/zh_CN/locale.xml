@@ -9,7 +9,6 @@
   *
   * COinS plugin localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.4 2009/04/08 19:54:40 asmecher Exp $
   -->
  
 <locale name="zh_CN" full_name="China">

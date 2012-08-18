@@ -6,7 +6,6 @@
  *
  * Form to edit comments.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.comments.editComment"}

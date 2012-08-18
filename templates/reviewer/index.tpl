@@ -6,7 +6,6 @@
  *
  * Reviewer index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}

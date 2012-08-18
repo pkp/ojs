@@ -6,7 +6,6 @@
  *
  * User index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.userHome"}

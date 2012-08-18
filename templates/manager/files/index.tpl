@@ -6,7 +6,6 @@
  *
  * Files browser.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.filesBrowser"}

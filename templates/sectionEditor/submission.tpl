@@ -6,7 +6,6 @@
  *
  * Submission summary.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.summary" id=$submission->getId()}

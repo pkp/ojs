@@ -6,7 +6,6 @@
  *
  * Display a help topic.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:applicationHelpTranslated key="help.ojsHelp"}

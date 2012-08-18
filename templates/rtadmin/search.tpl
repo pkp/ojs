@@ -6,7 +6,6 @@
  *
  * RTAdmin search editing
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.admin.searches.edit.editSearch"}

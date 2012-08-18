@@ -6,7 +6,6 @@
  *
  * Dublin Core metadata elements for articles.
  *
- * $Id$
  *}
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 

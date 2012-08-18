@@ -66,7 +66,7 @@
 	<message key="manager.payment.options.onlypdf">Eingeschränkter Zugriff nur auf die PDF-Versionen von Artikeln</message>
 	<message key="manager.payment.options.publicationFee">Veröffentlichung von Artikeln</message>
 	<message key="manager.payment.options.purchaseArticleFee">Artikel erwerben</message>
-	<message key="manager.payment.options.purchaseIssueFee">Ausgabe erwerben/message>
+	<message key="manager.payment.options.purchaseIssueFee">Ausgabe erwerben</message>
 	<message key="manager.payment.options.submissionFee">Einreichen von Artikeln</message>
 	<message key="manager.payment.options.text">Beschreibung der Zahlungsmethode</message>
 	<message key="manager.payment.options.waiverPolicy">Richtlinien zum Verzicht auf Gebühren</message>

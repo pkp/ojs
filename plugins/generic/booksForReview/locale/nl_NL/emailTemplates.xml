@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="nl_NL">
 	<email_text key="BFR_REVIEWER_REMOVED">

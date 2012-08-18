@@ -6,7 +6,6 @@
  *
  * Form to edit journal language settings.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.languages"}

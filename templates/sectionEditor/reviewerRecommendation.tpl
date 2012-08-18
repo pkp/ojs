@@ -6,7 +6,6 @@
  *
  * Form to set the due date for a review.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.recommendation"}

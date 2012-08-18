@@ -6,7 +6,6 @@
  *
  * About the Journal / Journal Sponsorship.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.journalSponsorship"}

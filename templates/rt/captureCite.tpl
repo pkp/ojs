@@ -6,7 +6,6 @@
  *
  * Article reading tools -- Capture Citation
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="rt.captureCite"}

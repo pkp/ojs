@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the copyediting table.
  *
- * $Id$
  *}
 <div id="copyedit">
 <h3>{translate key="submission.copyediting"}</h3>

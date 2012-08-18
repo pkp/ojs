@@ -6,7 +6,6 @@
  *
  * Article reading tools -- context view page.
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitleTranslated value=$context->getTitle()|capitalize}

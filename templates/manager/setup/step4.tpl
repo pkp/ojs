@@ -6,7 +6,6 @@
  *
  * Step 4 of journal setup.
  *
- * $Id$
  *}
 {assign var="pageTitle" value="manager.setup.managingTheJournal"}
 {include file="manager/setup/setupHeader.tpl"}

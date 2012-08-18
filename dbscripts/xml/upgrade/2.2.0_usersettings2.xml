@@ -9,7 +9,6 @@
   *
   * 2.2.0 database updates XML file; delete the user_settings_old table.
   *
-  * $Id$
   -->
 
 <data>

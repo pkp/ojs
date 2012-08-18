@@ -6,7 +6,6 @@
  *
  * Display error messages associated with a failed language download.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.languages"}

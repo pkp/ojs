@@ -9,7 +9,6 @@
   *
   * External feed plugin localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.2 2009/10/14 04:06:09 michael Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">

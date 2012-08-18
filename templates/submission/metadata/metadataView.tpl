@@ -6,7 +6,6 @@
  *
  * View (but not edit) metadata of an article. Used by MetadataForm.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.viewMetadata"}

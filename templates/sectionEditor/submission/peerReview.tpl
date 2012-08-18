@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the peer review table.
  *
- * $Id$
  *}
 <div id="submission">
 <h3>{translate key="article.submission"}</h3>

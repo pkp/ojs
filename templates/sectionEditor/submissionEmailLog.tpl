@@ -7,7 +7,6 @@
  * Show submission email log page.
  *
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.emailLog"}

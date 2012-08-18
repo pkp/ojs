@@ -467,7 +467,6 @@ class TranslatorHandler extends Handler {
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="' . $locale . '">
 </email_texts>');

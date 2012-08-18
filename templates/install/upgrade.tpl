@@ -6,7 +6,6 @@
  *
  * Upgrade form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="installer.ojsUpgrade"}

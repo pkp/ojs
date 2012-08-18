@@ -6,7 +6,6 @@
  *
  * Display the statistics & reporting page.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.statistics"}

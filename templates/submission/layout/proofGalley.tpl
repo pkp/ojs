@@ -6,7 +6,6 @@
  *
  * Proof a galley.
  *
- * $Id$
  *}
 {assign var="pageTitle" value="submission.layout.viewingGalley"}
 <?xml version="1.0" encoding="UTF-8"?>

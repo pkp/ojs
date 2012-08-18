@@ -6,7 +6,6 @@
  *
  * Show proofreader's submission archive.
  *
- * $Id$
  *}
 {if !$dateFrom}
 {assign var="dateFrom" value="--"}

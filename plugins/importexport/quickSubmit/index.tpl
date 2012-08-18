@@ -6,7 +6,6 @@
  *
  * Template for one-page submission form
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.quickSubmit.displayName"}

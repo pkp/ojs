@@ -6,7 +6,6 @@
  *
  * About the Journal index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.aboutTheJournal"}

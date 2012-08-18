@@ -9,7 +9,6 @@
   *
   * Thesis abstracts plugin localization strings for the ro_RO (Română) locale.
   * KOSSON FECIT
-  * $Id: locale.xml,v 1.7 2008/06/27 07:34:39 michael Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

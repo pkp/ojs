@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
   -->
 
 <locale name="it_IT" full_name="Italiano">

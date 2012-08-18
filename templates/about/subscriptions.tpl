@@ -6,7 +6,6 @@
  *
  * About the Journal Subscriptions.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.subscriptions"}

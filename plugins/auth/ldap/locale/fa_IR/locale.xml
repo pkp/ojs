@@ -8,7 +8,6 @@
   *
   * LDAP authentication plugin localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.auth.ldap.displayName" >LDAP</message>

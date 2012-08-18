@@ -6,7 +6,6 @@
  *
  * Issue Archive.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="archive.archives"}

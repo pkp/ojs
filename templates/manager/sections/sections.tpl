@@ -6,7 +6,6 @@
  *
  * Display list of sections in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="section.sections"}

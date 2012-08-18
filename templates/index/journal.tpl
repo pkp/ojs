@@ -6,7 +6,6 @@
  *
  * Journal index page.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitleTranslated" value=$siteTitle}

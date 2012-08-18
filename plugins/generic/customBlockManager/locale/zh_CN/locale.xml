@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.3 2009/10/17 18:32:10 rcy Exp $
   -->
  
 <locale name="zh_CN" full_name="China">

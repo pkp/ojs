@@ -6,7 +6,6 @@
  *
  * Site registration.
  *
- * $Id$
  *}
 {strip}
 {include file="common/header.tpl"}

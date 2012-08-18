@@ -6,7 +6,6 @@
  *
  * Display a message indicating that the article was successfuly submitted.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.quickSubmit.success"}

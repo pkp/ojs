@@ -6,7 +6,6 @@
  *
  * Editor submissions page(s).
  *
- * $Id$
  *}
 {strip}
 {strip}

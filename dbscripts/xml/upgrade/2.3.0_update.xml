@@ -9,7 +9,6 @@
   *
   * 2.3.0 database updates XML file.
   *
-  * $Id$
   -->
 <data>
 	<!-- Bug #3861: Add email templates. -->

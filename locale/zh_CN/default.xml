@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (U.S. English) locale (default journal settings).
   *
-  * $Id: default.xml,v 1.2 2009/08/15 00:45:14 asmecher Exp $
   -->
  
 <locale name="zh_CN" full_name="China .PR">

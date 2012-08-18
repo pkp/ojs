@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.1 2008/06/12 00:29:31 asmecher Exp $
   -->
 
 <locale name="en_US" full_name="U.S. English">

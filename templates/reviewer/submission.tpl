@@ -8,7 +8,6 @@
  *
  * FIXME: At "Notify The Editor", fix the date.
  *
- * $Id$
  *}
 {strip}
 {assign var="articleId" value=$submission->getId()}

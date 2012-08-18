@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="en_US">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">

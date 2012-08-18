@@ -6,7 +6,6 @@
  *
  * Public user profile display.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.profile.publicProfile"}

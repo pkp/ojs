@@ -6,7 +6,6 @@
  *
  * Layout editor submissions list.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}

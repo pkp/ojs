@@ -6,7 +6,6 @@
  *
  * Site settings form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.siteSettings"}

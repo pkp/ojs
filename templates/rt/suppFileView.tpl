@@ -6,7 +6,6 @@
  *
  * Read-only view of supplementary file information.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="article.suppFile"}

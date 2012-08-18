@@ -6,7 +6,6 @@
  *
  * Display list of authentication sources in site administration.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.authSources"}

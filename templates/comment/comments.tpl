@@ -6,7 +6,6 @@
  *
  * Display comments on an article.
  *
- * $Id$
  *}
 {strip}
 {if $comment}

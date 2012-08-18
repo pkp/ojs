@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the submission editors table.
  *
- * $Id$
  *}
 <div id="editors">
 <h3>{translate key="user.role.editors"}</h3>

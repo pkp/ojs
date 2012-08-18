@@ -9,7 +9,6 @@
   *
   * Localization strings for the ro_RO (Română) locale.
   * KOSSON FECIT
-  * $Id: locale.xml,v 1.20 2008/06/11 18:55:15 asmecher Exp $
   -->
 
 <locale name="ro_RO" full_name="Română">

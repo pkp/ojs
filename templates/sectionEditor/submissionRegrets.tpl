@@ -7,7 +7,6 @@
  * Show submission regrets/cancels/earlier rounds
  *
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="sectionEditor.regrets.title" articleId=$submission->getId()}

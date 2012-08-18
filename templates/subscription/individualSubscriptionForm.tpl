@@ -6,7 +6,6 @@
  *
  * Individual subscription form under journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitle" value="$subscriptionTitle"}

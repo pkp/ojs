@@ -6,7 +6,6 @@
  *
  * Form to change a user's password in order to login.
  *
- * $Id$
  *}
 {strip}
 {assign var="passwordLengthRestrictionLocaleKey" value="user.register.passwordLengthRestriction"}

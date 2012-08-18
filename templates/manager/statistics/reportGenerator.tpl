@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the report generator.
  *
- * $Id$
  *}
 <div id="statistics">
 <h3>{translate key="manager.statistics.reports"}</h3>

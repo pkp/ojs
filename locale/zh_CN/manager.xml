@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (English) locale.
   *
-  * $Id: manager.xml,v 1.20 2009/08/28 20:29:59 asmecher Exp $
   -->
 
 <locale name="zh_CN" full_name = "China">

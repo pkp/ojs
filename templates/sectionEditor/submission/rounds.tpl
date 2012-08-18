@@ -6,7 +6,6 @@
  *
  * Subtemplate displaying past rounds for a submission.
  *
- * $Id$
  *}
 <div id="rounds">
 <div id="regretsAndCancels">

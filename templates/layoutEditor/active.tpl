@@ -6,7 +6,6 @@
  *
  * Show layout editor's active submissions.
  *
- * $Id$
  *}
 <div id="submissions">
 <table class="listing" width="100%">

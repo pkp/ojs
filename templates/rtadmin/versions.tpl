@@ -6,7 +6,6 @@
  *
  * RTAdmin version list
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.versions"}

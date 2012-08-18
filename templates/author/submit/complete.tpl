@@ -6,7 +6,6 @@
  *
  * The submission process has been completed; notify the author.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="author.track"}

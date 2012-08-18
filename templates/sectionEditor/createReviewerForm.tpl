@@ -6,7 +6,6 @@
  *
  * Form for editors to create reviewers.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="sectionEditor.review.createReviewer"}

@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id: emailTemplates.xml,v 1.4 2009/09/16 19:57:23 asmecher Exp $
   -->
 <email_texts locale="zh_CN">
 	<email_text key="NOTIFICATION">

@@ -8,7 +8,6 @@
   *
   * Localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.generic.counter.description" ><![CDATA[با پلاگین شمارشگر میتوان فعالیت های صورت گرفته بر روی سایت را ذخیره و با فورمات سازگار با <a href="http://www.projectcounter.org/about.html" target="_new">شمارشگر</a>گزارش کرد.]]></message>

@@ -6,7 +6,6 @@
  *
  * Display list of email templates in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.emails"}

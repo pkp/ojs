@@ -9,7 +9,6 @@
   *
   * Piwik plugin localization strings for the pt_BR (Português (Brasil)) locale.
   *
-  * $Id: locale.xml,v 0.9 2010/08/12 luiz_borges Exp $
   -->
  
 <locale name="pt_BR" full_name="Português do Brasil">

@@ -6,7 +6,6 @@
  *
  * Category form under site administration.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageId" value="admin.categories.categoryForm"}

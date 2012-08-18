@@ -8,7 +8,6 @@
   *
   * Google Analytics plugin localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 <!--آنالیز گوگل-->  <message key="plugins.generic.googleAnalytics.displayName" >پلاگین آنالیز گوگل</message>

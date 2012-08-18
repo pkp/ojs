@@ -6,7 +6,6 @@
  *
  * Layout editor index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.role.layoutEditor"}

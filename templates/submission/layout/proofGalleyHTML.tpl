@@ -6,7 +6,6 @@
  *
  * Frame displaying an HTML galley.
  *
- * $Id$
  *}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"

@@ -6,7 +6,6 @@
  *
  * Header for journal setup pages.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitle" value="manager.setup.journalSetup"}

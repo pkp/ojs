@@ -6,7 +6,6 @@
  *
  * Search form for users
  *
- * $Id$
  *
  *}
 {strip}

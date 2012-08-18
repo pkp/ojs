@@ -6,7 +6,6 @@
  *
  * Display article search results.
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="search.searchResults"}

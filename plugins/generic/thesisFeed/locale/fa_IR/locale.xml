@@ -8,7 +8,6 @@
   *
   * Localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale name="fa_IR" full_name="Persian">
 	<message key="plugins.generic.thesisfeed.displayName">پلاکین فید چکیده پایان نامه</message>

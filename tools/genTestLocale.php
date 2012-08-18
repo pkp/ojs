@@ -125,7 +125,6 @@ class genTestLocale extends CommandLineTool {
 					"  *\n" .
 					sprintf("  * Localization strings for the %s (%s) locale.\n", $this->outLocale, DEFAULT_OUT_LOCALE_NAME) .
 					"  *\n" .
-					"  * \$Id\$\n" .
 					"  -->\n\n" .
 					sprintf("<locale name=\"%s\" full_name=\"%s\">\n", $this->outLocale, DEFAULT_OUT_LOCALE_NAME)
 		);

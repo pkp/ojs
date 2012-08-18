@@ -8,7 +8,6 @@
  *
  * TODO: Show the site map.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.siteMap"}

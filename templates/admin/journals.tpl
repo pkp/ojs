@@ -6,7 +6,6 @@
  *
  * Display list of journals in site administration.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="journal.journals"}

@@ -6,7 +6,6 @@
  *
  * Site/journal advanced search form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="navigation.search"}

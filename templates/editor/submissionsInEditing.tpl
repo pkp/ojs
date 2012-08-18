@@ -6,7 +6,6 @@
  *
  * Show editor's submissions in editing.
  *
- * $Id$
  *}
 <div id="submissions">
 <table width="100%" class="listing">

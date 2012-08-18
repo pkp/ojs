@@ -9,7 +9,6 @@
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id: locale.xml,v 1.12 2009/08/15 00:45:15 asmecher Exp $
   -->
  
  <locale name="no_NO" full_name="Norwegian">

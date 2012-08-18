@@ -6,7 +6,6 @@
  *
  * Form to edit payment settings.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.payment.paymentMethods"}

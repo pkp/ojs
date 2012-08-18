@@ -6,7 +6,6 @@
  *
  * User profile form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.profile.editProfile"}

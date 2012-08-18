@@ -6,7 +6,6 @@
  *
  * Copyeditor's submission view.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.editing" id=$submission->getId()}

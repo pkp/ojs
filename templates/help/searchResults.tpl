@@ -6,7 +6,6 @@
  *
  * Show help search results.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:applicationHelpTranslated key="help.ojsHelp"}

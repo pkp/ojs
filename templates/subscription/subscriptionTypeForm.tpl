@@ -6,7 +6,6 @@
  *
  * Subscription type form under journal management.
  *
- * $Id$
  *}
 {strip}
 {if $typeId}

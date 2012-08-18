@@ -6,7 +6,6 @@
  *
  * List enrolled users.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.people.enrollment"}

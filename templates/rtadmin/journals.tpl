@@ -6,7 +6,6 @@
  *
  * RTAdmin journal list
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.readingTools"}

@@ -6,7 +6,6 @@
  *
  * Journal management index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.journalManagement"}

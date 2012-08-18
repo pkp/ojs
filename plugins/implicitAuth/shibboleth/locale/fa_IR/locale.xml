@@ -10,7 +10,6 @@
   *
   * Contributed by Dan Galewsky, University of Texas
   *
-  * $Id$
   -->
 <locale name="fa_IR" full_name="Persian">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>

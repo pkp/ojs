@@ -9,7 +9,6 @@
   *
   * Renames journal_id column in user_settings to assoc_id.
   *
-  * $Id$
   -->
 
 <data>

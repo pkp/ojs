@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the scheduling table.
  *
- * $Id$
  *}
 <div id="scheduling">
 <h3>{translate key="submission.scheduling"}</h3>

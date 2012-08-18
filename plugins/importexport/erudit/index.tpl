@@ -6,7 +6,6 @@
  *
  * List of article galleys to potentially export
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.erudit.selectArticle"}

@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id: emailTemplates.xml,v 1.3 2009/09/04 15:25:47 asmecher Exp $
   -->
 <email_texts locale="no_NO">
 	<email_text key="PASSWORD_RESET_CONFIRM">

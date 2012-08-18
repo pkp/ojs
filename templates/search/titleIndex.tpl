@@ -6,7 +6,6 @@
  *
  * Display published articles by title
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="search.titleIndex"}

@@ -6,7 +6,6 @@
  *
  * Display list of individual subscriptions in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.individualSubscriptions"}

@@ -9,7 +9,6 @@
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   *
-  * $Id: locale.xml,v 1.1 2008/06/12 00:29:31 asmecher Exp $
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">

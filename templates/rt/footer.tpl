@@ -6,7 +6,6 @@
  *
  * Common footer for RT pages.
  *
- * $Id$
  *}
 <br />
 

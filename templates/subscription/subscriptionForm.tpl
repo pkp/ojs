@@ -6,7 +6,6 @@
  *
  * Common subscription fields
  *
- * $Id$
  *}
 
 <script type="text/javascript">

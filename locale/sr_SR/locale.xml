@@ -9,7 +9,6 @@
   *
   * Localization strings for the sr_SR (Serbian/Srpski) locale.
   *
-  * $Id: locale.xml,v 1.484 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
    -->
 <locale name="sr_SR"
@@ -361,21 +360,14 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></mes
 	<message key="reviewer.article.decision.accept">Objaviti bez izmena</message>
 	<message key="reviewer.article.decision.pendingRevisions">Objaviti uz predložene izmene</message>
 	<message key="reviewer.article.decision.resubmitHere">Vratiti na recenziju</message>
-  <message key="reviewer.article.decision.resubmitElsewhere">Predložiti za objavljivanje drugde</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Predložiti za objavljivanje drugde</message>
 	<message key="reviewer.article.decision.decline">Tekst nije za objavljivanje</message>
 	<message key="reviewer.article.decision.seeComments">Pogledajte komentare</message>
 	<message key="reviewer.article.schedule">Napravite raspored</message>
-  <message key="reviewer.article.submissionToBeReviewed">Prilog koji je potrebno recenzirati</message>
-  <message key="reviewer.article.reviewSchedule">Vremenski okvir recenzije</message>
-  <message key="reviewer.article.reviewSteps">Koraci recenzije</message>
-  <message key="reviewer.article.reviewerGuidelines">Smernice za recenzente</message>
-  
-  
-  
-  
-  
-  
-  
+	<message key="reviewer.article.submissionToBeReviewed">Prilog koji je potrebno recenzirati</message>
+	<message key="reviewer.article.reviewSchedule">Vremenski okvir recenzije</message>
+	<message key="reviewer.article.reviewSteps">Koraci recenzije</message>
+	<message key="reviewer.article.reviewerGuidelines">Smernice za recenzente</message>
   
 	<message key="reviewer.article.mustSelectDecision">Nema odabrane preporuke. Da biste predali fajl ili recenziju morate odabrati preporuku.</message>
 	<message key="reviewer.article.confirmDecision">Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promene na ovoj recenziji. Da li ste sigurni da želite da nastavite?</message>
@@ -675,18 +667,10 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 	
 	<message key="rt.admin.settings.addComment">Dodaj komentar (omogućuje čitaocima da ostavljaju komentare na objavljene priloge. Glavni urednik ima mogućnost brisanja komentara).</message>
 
-	<!--  RT Versions  -->	<!--  RT Contexts  -->	<!--  RT Searches  -->	<!--  RT Entities  -->	<message key="rt.metadata.dublinCore.primaryAuthor">Kreator</message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">Kreator</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Autorovo ime, pripadnost, zemlja</message>
 	<message key="rt.metadata.pkp.peerReviewed">Stručno recenzovani članak</message>
-
-
-	
-	
-	
-	
-	
-	
 
 	<message key="rt.beNotifiedWhen">Bićete obavešteni kada...</message>
 
@@ -695,14 +679,7 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.context.authorTermsDescription">Za stavke koje imaju više od jednog autora, ostavite sva imena označena radi pretraživanja sličnih ko-autorskih radova, ili pretražujte jednog po jednog proveravajući samo pojedinačno ime. Da biste naučili više o pretraživanom izvoru, kliknite na O ČASOPISU. Ovi izvori su odabrani zbog svoje relevantnosti i otvorenog (besplatnog) pristupa njegovom celom ili delimičnom sadržaju.</message>
 
-
-	<!-- 
-	 *
-	 * MISC - Entries that do not belong in the other sections.
-	 *
-	 --><!--  Icons: Default "alt" text  -->	<!--  Debug messages  -->	 * DEFAULT - Default settings for setup items.
-	 *
-	 -->	<message key="common.confirmComplete">Da li ste sigurni da želite označiti ovaj zadatak kao završen? Po donošenju ove odluke nećete moći unositi dodatne izmene.</message>
+	<message key="common.confirmComplete">Da li ste sigurni da želite označiti ovaj zadatak kao završen? Po donošenju ove odluke nećete moći unositi dodatne izmene.</message>
 	<message key="common.payment">Plaćanje</message>
 	<message key="common.payments">Plaćanja</message>
 	<message key="navigation.competingInterestGuidelines">Smernice o sukobu interesa</message>

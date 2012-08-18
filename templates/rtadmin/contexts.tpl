@@ -6,7 +6,6 @@
  *
  * RTAdmin context list
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.contexts"}

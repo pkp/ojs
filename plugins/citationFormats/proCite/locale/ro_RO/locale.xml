@@ -9,7 +9,6 @@
   *
   * Localization strings for this citation plugin in ro_RO.
   * KOSSON FECIT
-  * $Id: locale.xml,v 1.2 2008/06/11 18:55:11 asmecher Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

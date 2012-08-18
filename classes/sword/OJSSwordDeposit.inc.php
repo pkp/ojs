@@ -12,9 +12,6 @@
  * @brief Class providing a SWORD deposit wrapper for OJS articles
  */
 
-// $Id: CaptchaManager.inc.php,v 1.7 2010/01/22 20:42:41 asmecher Exp $
-
-
 require_once('./lib/pkp/lib/swordapp/swordappclient.php');
 require_once('./lib/pkp/lib/swordapp/swordappentry.php');
 require_once('./lib/pkp/lib/swordapp/packager_mets_swap.php');

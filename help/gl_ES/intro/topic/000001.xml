@@ -11,7 +11,6 @@
   *
   * Translated by Gabriel Beceiro: gbeceiro@gmail.com
   *
-  * $Id$
   -->
 
 <topic id="intro/topic/000001" locale="gl_ES" title="Preguntas frecuentes" toc="intro/toc/000000" key="intro.faq">
@@ -53,7 +52,7 @@
 <p>Hai Instruccións nos archivos docs/README incluidos na descarga de OJS. Información sobre problemas comúns de tradución pódese  atopar tamén en <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Foro de Asistencia de PKP</a>.</p>
 ]]>
 	</section>
-	<section title='4. Por qué os autores reciben a mensaxe "neste intre a revista non acepta envíos" ? >
+	<section title='4. Por qué os autores reciben a mensaxe "neste intre a revista non acepta envíos"'>
 		<![CDATA[
 <p>Se o Administrador da Revista seleccionou a opción da sección etiquetada como "Os Artigos só poden ser enviados polos Editores e os Editores da Sección" para todas as secciones creadas, entón só os Editores e os Editores da Sección poderán enviar. Alternativamente, se todas as seccións foron eliminadas, poderáselles  presentar aos autores esta mensaxe.</p>
 ]]>

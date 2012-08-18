@@ -6,7 +6,6 @@
  *
  * Metadata elements for articles based on preferred types for Google Scholar
  *
- * $Id$
  *}
 	<meta name="gs_meta_revision" content="1.1" />
 	<meta name="citation_journal_title" content="{$currentJournal->getLocalizedTitle()|strip_tags|escape}"/>

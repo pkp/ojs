@@ -9,7 +9,6 @@
   *
   * LDAP authentication plugin localization strings for the es_ES locale.
   *
-  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">

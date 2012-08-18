@@ -6,7 +6,6 @@
  *
  * Password reset form.
  *
- * $Id$
  *}
 {strip}
 {assign var="registerOp" value="register"}

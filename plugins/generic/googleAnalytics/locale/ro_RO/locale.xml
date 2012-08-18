@@ -9,7 +9,6 @@
   *
   * Google Analytics plugin localization strings for the ro_RO (Română) locale.
   * KOSSON FECIT
-  * $Id: locale.xml,v 1.3 2008/06/11 20:41:39 michael Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

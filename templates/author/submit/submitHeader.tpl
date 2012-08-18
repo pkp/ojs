@@ -6,7 +6,6 @@
  *
  * Header for the article submission pages.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageCrumbTitle" value="author.submit"}

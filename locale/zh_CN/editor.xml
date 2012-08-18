@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (English) locale.
   *
-  * $Id: editor.xml,v 1.7 2009/08/15 00:45:14 asmecher Exp $
   -->
 
 <locale name="zh_CN" full_name = "China .PR">

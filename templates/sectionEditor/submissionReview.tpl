@@ -6,7 +6,6 @@
  *
  * Submission review.
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.review" id=$submission->getId()}{assign var="pageCrumbTitle" value="submission.review"}

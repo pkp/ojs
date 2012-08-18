@@ -8,7 +8,6 @@
   *
   * phpMyVisites plugin localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 <!-- phpMyVisites -->  <message key="plugins.generic.phpmv.displayName" >پلاگین phpMyVisites</message>

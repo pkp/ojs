@@ -6,7 +6,6 @@
  *
  * Step 3 of author article submission.
  *
- * $Id$
  *}
 {assign var="pageTitle" value="author.submit.step3"}
 {include file="author/submit/submitHeader.tpl"}

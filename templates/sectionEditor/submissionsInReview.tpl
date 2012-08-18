@@ -6,7 +6,6 @@
  *
  * Show section editor's submissions in review.
  *
- * $Id$
  *}
 <div id="submissions">
 <table width="100%" class="listing">

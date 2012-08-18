@@ -6,7 +6,6 @@
  *
  * Listings of future (unpublished) issues.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.futureIssues"}

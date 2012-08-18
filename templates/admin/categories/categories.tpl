@@ -6,7 +6,6 @@
  *
  * Display list of categories in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.categories"}

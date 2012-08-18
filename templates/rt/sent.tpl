@@ -6,7 +6,6 @@
  *
  * RT Email Sent page.
  *
- * $Id$
  *}
 {strip}
 {assign var=pageTitle value="email.email"}

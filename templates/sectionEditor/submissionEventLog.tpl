@@ -7,7 +7,6 @@
  * Show submission event log page.
  *
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="submission.eventLog"}

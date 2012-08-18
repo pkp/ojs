@@ -8,7 +8,6 @@
   *
   * Localization strings for this citation plugin in fa_IR.
   *
-  * $Id$
   -->
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.citationFormats.mla.displayName" >پلاگین الگوی مرجع نویسی ام ال آ</message>

@@ -6,7 +6,6 @@
  *
  * Add/edit a supplementary file.
  *
- * $Id$
  *}
 {strip}
 {if $suppFileId}

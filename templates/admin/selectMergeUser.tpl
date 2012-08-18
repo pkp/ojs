@@ -6,7 +6,6 @@
  *
  * List users so the site administrator can choose users to merge.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="admin.mergeUsers"}

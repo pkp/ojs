@@ -9,7 +9,6 @@
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.1 2009/05/27 16:02:16 asmecher Exp $
   -->
  
 <locale name="ro_RO" full_name="Română">

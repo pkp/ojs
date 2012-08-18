@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the proofreader's proofreading table.
  *
- * $Id$
  *}
 {assign var=proofSignoff value=$submission->getSignoff('SIGNOFF_PROOFREADING_PROOFREADER')}
 {assign var=proofreader value=$submission->getUserBySignoffType('SIGNOFF_PROOFREADING_PROOFREADER')}

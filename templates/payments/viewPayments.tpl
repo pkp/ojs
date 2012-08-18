@@ -6,7 +6,6 @@
  *
  * Table to view all past CompletedPayments
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="common.payments"}

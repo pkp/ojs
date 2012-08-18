@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id: emailTemplates.xml,v 1.0 8:43 PM 8/11/2010 kosson Exp $
   -->
 <email_texts locale="ro_RO">
 	<email_text key="DOAJ_EMAIL_REP">

@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the statistics table.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="about.statistics"}

@@ -6,7 +6,6 @@
  *
  * Show layout editor's submission archive.
  *
- * $Id$
  *}
 {if !$dateFrom}
 {assign var="dateFrom" value="--"}

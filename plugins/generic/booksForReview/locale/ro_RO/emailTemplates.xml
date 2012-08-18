@@ -8,7 +8,6 @@
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="ro_RO">
 	<email_text key="BFR_REVIEW_REMINDER">

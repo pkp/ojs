@@ -6,7 +6,6 @@
  *
  * Common footer for comment pages.
  *
- * $Id$
  *}
 </div>
 </div>

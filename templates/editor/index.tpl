@@ -6,7 +6,6 @@
  *
  * Editor index.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="editor.home"}

@@ -6,7 +6,6 @@
  *
  * Setup subscription policies.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.subscriptionPolicies"}

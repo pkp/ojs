@@ -9,7 +9,6 @@
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
-  * $Id: editor.xml,v 1.6 2009/12/08 04:16:20 jmacgreg Exp $
   -->
 
 <locale name="it_IT" full_name = "Italiano">

@@ -6,7 +6,6 @@
  *
  * Basic journal settings under site administration.
  *
- * $Id$
  *}
 {strip}
 {if !$isNewTemplate}

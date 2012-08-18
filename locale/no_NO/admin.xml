@@ -9,7 +9,6 @@
   *
   * Localization strings for the no_NO (Norwegian) locale.
   *
-  * $Id: admin.xml,v 1.3 2009/08/15 00:45:15 asmecher Exp $
   -->
 
 <locale name="no_NO" full_name = "Norwegian">

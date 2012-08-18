@@ -6,7 +6,6 @@
  *
  * List enrolled users so the manager can choose users to merge.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.people.mergeUsers"}

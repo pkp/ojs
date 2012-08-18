@@ -6,7 +6,6 @@
  *
  * Listings of back issues
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.backIssues"}

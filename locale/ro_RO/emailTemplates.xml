@@ -10,7 +10,6 @@
   * Localization strings for the ro_RO (Romanian) locale.
   * Provided by Constantinescu Nicolaie.
   *
-  * $Id: emailTemplates.xml,v 1.0 8:37 PM 8/3/2010 kosson Exp $
   -->
 <email_texts locale="ro_RO">
 	<email_text key="NOTIFICATION">

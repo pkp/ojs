@@ -6,7 +6,6 @@
  *
  * Step 5 of journal setup.
  *
- * $Id$
  *}
 {assign var="pageTitle" value="manager.setup.customizingTheLook"}
 {include file="manager/setup/setupHeader.tpl"}

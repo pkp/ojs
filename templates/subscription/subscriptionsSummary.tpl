@@ -6,7 +6,6 @@
  *
  * Display summary subscriptions page in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.subscriptions.summary"}

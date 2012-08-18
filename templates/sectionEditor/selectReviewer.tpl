@@ -6,7 +6,6 @@
  *
  * List reviewers and give the ability to select a reviewer.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.role.reviewers"}

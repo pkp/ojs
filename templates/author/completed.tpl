@@ -6,7 +6,6 @@
  *
  * Show the details of completed submissions.
  *
- * $Id$
  *}
 <div id="submissions">
 <table class="listing" width="100%">

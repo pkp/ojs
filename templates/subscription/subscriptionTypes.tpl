@@ -6,7 +6,6 @@
  *
  * Display list of subscription types in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.subscriptionTypes"}

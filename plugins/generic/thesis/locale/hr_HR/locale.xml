@@ -8,7 +8,6 @@
   *
   * Thesis abstracts plugin localization strings for the hr_HR (hrvatski) locale.
   *
-  * $Id: locale.xml,v 1.3 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
    -->
 <locale name="hr_HR"

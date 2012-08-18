@@ -9,7 +9,6 @@
   *
   * Piwik plugin localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.2 2008/06/11 18:55:13 asmecher Exp $
   -->
  
 <locale name="it_IT" full_name="Italiano">

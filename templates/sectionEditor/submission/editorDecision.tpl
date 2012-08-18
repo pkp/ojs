@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the editor decision table.
  *
- * $Id$
  *}
 <div id="editorDecision">
 <h3>{translate key="submission.editorDecision"}</h3>

@@ -6,7 +6,6 @@
  *
  * List editors or section editors and give the ability to select one.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value=$roleName|concat:"s"}

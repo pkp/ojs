@@ -6,7 +6,6 @@
  *
  * User subscriptions management page.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.subscriptions.mySubscriptions"}

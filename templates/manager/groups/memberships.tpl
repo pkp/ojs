@@ -6,7 +6,6 @@
  *
  * Display list of groups in journal management.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="manager.groups.membership"}

@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the layout editor's layout editing table.
  *
- * $Id$
  *}
 {assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
 {assign var=layoutSignoff value=$submission->getSignoff('SIGNOFF_LAYOUT')}

@@ -6,7 +6,6 @@
  *
  * Generic email template form
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="email.compose"}

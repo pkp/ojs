@@ -8,7 +8,6 @@
  *
  * ABNT Citation plugin settings
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="plugins.citationFormats.abnt.manager.AbntCitationSettings"}

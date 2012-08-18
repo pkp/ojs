@@ -6,7 +6,6 @@
  *
  * Validate URLs for searches.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="rt.admin.validateUrls"}

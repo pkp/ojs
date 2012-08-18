@@ -6,7 +6,6 @@
  *
  * Show reviewer's submission archive.
  *
- * $Id$
  *}
 <div id="submissions">
 <table class="listing" width="100%">

@@ -6,7 +6,6 @@
  *
  * User registration form.
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="user.register"}

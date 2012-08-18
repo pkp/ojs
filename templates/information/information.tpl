@@ -6,7 +6,6 @@
  *
  * Journal information page.
  *
- * $Id$
  *}
 {strip}
 {include file="common/header.tpl"}

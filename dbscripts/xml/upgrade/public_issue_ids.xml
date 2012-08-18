@@ -10,7 +10,6 @@
   * 2.2.0/2.2.1: Make blank but non-null public issue IDs blank for the sake of
   * preventing index duplicates.
   *
-  * $Id$
   -->
 
 <data>

@@ -6,7 +6,6 @@
  *
  * Form for creation of an issue
  *
- * $Id$
  *}
 {strip}
 {assign var="pageTitle" value="editor.issues.createIssue"}

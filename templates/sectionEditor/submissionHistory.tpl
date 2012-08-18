@@ -7,7 +7,6 @@
  * Show submission history page.
  *
  *
- * $Id$
  *}
 {strip}
 {translate|assign:"pageTitleTranslated" key="submission.page.history" id=$submission->getId()}

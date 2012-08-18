@@ -8,7 +8,6 @@
   *
   * COinS plugin localization strings for the fa_IR (Persian) locale.
   *
-  * $Id$
   -->
 <locale name="fa_IR" full_name="Persian">
 	<message key="plugins.generic.coins.displayName">پلاگین COinS</message>

@@ -6,7 +6,6 @@
  *
  * Subtemplate defining the submission status table.
  *
- * $Id$
  *}
 <div id="status">
 <h3>{translate key="common.status"}</h3>
