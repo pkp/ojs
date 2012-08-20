@@ -123,7 +123,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			'business' => $this->getSetting($journal->getId(), 'selleraccount'),
 			'item_name' => $queuedPayment->getName(),
 			'item_description' => $queuedPayment->getDescription(),  // not a paypal parameter (PayPal uses item_name)
-			'amount' => $queuedPayment->getAmount(),
+			'amount' => sprintf('%.2F', $queuedPayment->getAmount()),
 			'quantity' => 1,
 			'no_note' => 1,
 			'no_shipping' => 1,
