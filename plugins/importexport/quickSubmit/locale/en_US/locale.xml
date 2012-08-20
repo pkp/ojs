@@ -23,8 +23,11 @@
 	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Leave unpublished</message>
 	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Save and Create Another</message>
 	<message key="plugins.importexport.quickSubmit.submissionData">Submission Data</message>	
-	<message key="plugins.importexport.quickSubmit.submissionDescription">Choose the file to be used as the final galley file for this submission.</message>	
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Choose a PDF file to be used as the final galley file for this submission.</message>	
+	<message key="plugins.importexport.quickSubmit.uploadSubmissionFile">Upload submission file (PDF format only)</message>
+	<message key="plugins.importexport.quickSubmit.replaceSubmissionFile">Replace submission file (PDF format only)</message>
 	<message key="plugins.importexport.quickSubmit.submissionRequired">You must upload a file for this submission.</message>	
+	<message key="plugins.importexport.quickSubmit.pdfRequired">The submission file must be a PDF file.</message>
 	<message key="plugins.importexport.quickSubmit.success">Article Added</message>
 	<message key="plugins.importexport.quickSubmit.successDescription">Article creation was successful.</message>
 	<message key="plugins.importexport.quickSubmit.successReturn">Return to QuickSubmit plugin.</message>

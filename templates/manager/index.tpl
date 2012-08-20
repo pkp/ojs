@@ -46,6 +46,7 @@
         {if $isSiteAdmin}
 	<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>
 	{/if}
+	<li>&#187; <a href="manager/importexport/plugin/QuickSubmitPlugin">QuickSubmit Plugin</a></li>
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 </div>

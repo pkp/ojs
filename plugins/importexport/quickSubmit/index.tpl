@@ -149,6 +149,7 @@ function updateAbstractRequired() {
 		<h4>{translate key="author.submit.submissionFile"}</h4>
 		<table class="data" width="100%">
 		{if $submissionFile}
+		<input type="hidden" name="fileType" id="fileType" value="{$submissionFile->getFileType()|escape}" />
 		<tr valign="top">
 			<td width="30%" class="label">{translate key="common.originalFileName"}</td>
 			<td width="70%" class="value">{$submissionFile->getOriginalFileName()|escape}</td>
@@ -156,6 +157,10 @@ function updateAbstractRequired() {
 		<tr valign="top">
 			<td width="30%" class="label">{translate key="common.fileSize"}</td>
 			<td width="70%" class="value">{$submissionFile->getNiceFileSize()}</td>
+		</tr>
+		<tr valign="top">
+			<td width="30%" class="label">File Type</td>
+			<td width="70%" class="value">{$submissionFile->getFileType()|escape}</td>
 		</tr>
 		<tr valign="top">
 			<td width="30%" class="label">{translate key="common.dateUploaded"}</td>
@@ -175,9 +180,9 @@ function updateAbstractRequired() {
 		<tr>
 			<td width="30%" class="label">
 				{if $submissionFile}
-					{fieldLabel name="submissionFile" key="author.submit.replaceSubmissionFile"}
+					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFile"}
 				{else}
-					{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}
+					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFile"}
 				{/if}
 			</td>
 			<td width="70%" class="value">
