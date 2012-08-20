@@ -59,27 +59,30 @@ class ArticleReportDAO extends DAO {
 		$articlesReturner = new DBRowIterator($result);
 
 		$result =& $this->retrieve(
-			'SELECT	MAX(ed.date_decided) AS date,
-				ed.article_id AS article_id
-			FROM	edit_decisions ed,
+			'SELECT	MAX(d.date_decided) AS date_decided,
+				d.article_id AS article_id
+			FROM	edit_decisions d,
 				articles a
 			WHERE	a.journal_id = ? AND
 				a.submission_progress = 0 AND
-				a.article_id = ed.article_id
-			GROUP BY ed.article_id',
-			array($journalId)
+				a.article_id = d.article_id
+			GROUP BY d.article_id',
+			array((int) $journalId)
 		);
 		$decisionDatesIterator = new DBRowIterator($result);
 		$decisionsReturner = array();
 		while ($row =& $decisionDatesIterator->next()) {
 			$result =& $this->retrieve(
-				'SELECT	decision AS decision,
-					article_id AS article_id
-				FROM	edit_decisions
-				WHERE	date_decided = ? AND
-					article_id = ?',
+				'SELECT	d.decision AS decision,
+					d.article_id AS article_id
+				FROM	edit_decisions d,
+					articles a
+				WHERE	d.date_decided = ? AND
+					d.article_id = a.article_id AND
+					a.submission_progress = 0 AND
+					d.article_id = ?',
 				array(
-					$row['date'],
+					$row['date_decided'],
 					$row['article_id']
 				)
 			);
@@ -102,7 +105,7 @@ class ArticleReportDAO extends DAO {
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography,
 					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation
 				FROM	authors aa
-					LEFT JOIN articles a ON (aa.submission_id = a.article_id)
+					JOIN articles a ON (aa.submission_id = a.article_id)
 					LEFT JOIN author_settings aas ON (aa.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
 					LEFT JOIN author_settings aasl ON (aa.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 					LEFT JOIN author_settings aaas ON (aa.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = ?)
