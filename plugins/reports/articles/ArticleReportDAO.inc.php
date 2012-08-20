@@ -39,7 +39,8 @@ class ArticleReportDAO extends DAO {
 				LEFT JOIN article_settings asl2 ON (asl2.article_id=a.article_id AND asl2.setting_name = ? AND asl2.locale = ?)
 				LEFT JOIN section_settings spl ON (spl.section_id=a.section_id AND spl.setting_name = ? AND spl.locale = ?)
 				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
-			WHERE	a.journal_id = ?
+			WHERE	a.journal_id = ? AND
+				a.submission_progress = 0
 			ORDER BY a.article_id',
 			array(
 				'title', // Article title
@@ -63,6 +64,7 @@ class ArticleReportDAO extends DAO {
 			FROM	edit_decisions ed,
 				articles a
 			WHERE	a.journal_id = ? AND
+				a.submission_progress = 0 AND
 				a.article_id = ed.article_id
 			GROUP BY ed.article_id',
 			array($journalId)
@@ -107,6 +109,7 @@ class ArticleReportDAO extends DAO {
 					LEFT JOIN author_settings aaasl ON (aa.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
 				WHERE
 					a.journal_id = ? AND
+					a.submission_progress = 0 AND
 					aa.submission_id = ?',
 				array(
 					'biography',
