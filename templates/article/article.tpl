@@ -23,7 +23,7 @@
 	{/if}
 {else}
 	<div id="topBar">
-		{assign var=galleys value=$article->getGalleys()}
+		{if is_a($article, 'PublishedArticle')}{assign var=galleys value=$article->getGalleys()}{/if}
 		{if $galleys && $subscriptionRequired && $showGalleyLinks}
 			<div id="accessKey">
 				<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
