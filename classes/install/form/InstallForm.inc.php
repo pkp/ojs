@@ -133,11 +133,14 @@ class InstallForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$docRoot = $_SERVER['DOCUMENT_ROOT'];
+		$docRoot = dirname($_SERVER['DOCUMENT_ROOT']);
 		if (Core::isWindows()) {
 			// Replace backslashes with slashes for the default files directory.
 			$docRoot = str_replace('\\', '/', $docRoot);
 		}
+
+		// Add a trailing slash for paths that aren't filesystem root
+		if ($docRoot !== '/') $docRoot .= '/';
 
 		$this->_data = array(
 			'locale' => AppLocale::getLocale(),
@@ -146,7 +149,7 @@ class InstallForm extends Form {
 			'connectionCharset' => '',
 			'databaseCharset' => '',
 			'encryption' => 'md5',
-			'filesDir' =>  dirname(dirname($docRoot)) . '/files',
+			'filesDir' =>  $docRoot . 'files',
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
 			'databaseUsername' => 'ojs',
