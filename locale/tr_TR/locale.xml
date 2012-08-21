@@ -387,7 +387,7 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
 Sınıflama Sistemi Başlığı]]></message>
 <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />

@@ -855,7 +855,7 @@
 	<message key="manager.setup.disciplineProvideExamples">Próvîðè èxåmplèþ óf rèlèvåñt åçåðèmîç ðîþçîplîñèþ fór thîþ jóürñål</message>
 	<message key="manager.setup.disciplineExamples">(É.g., Hîþtórý; Éðüçåtîóñ; ßóçîólógý; Pþýçhólógý; Çültürål ßtüðîèþ; Låw)</message>
 	<message key="manager.setup.subjectClassification">ßübjèçt Çlåþþîfîçåtîóñ</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Jóürñål wîll üþè å þübjèçt çlåþþîfîçåtîóñ þýþtèm åvåîlåblè óñ thè wèb.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Jóürñål wîll üþè å þübjèçt çlåþþîfîçåtîóñ þýþtèm åvåîlåblè óñ thè wèb.<br />
 Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(É.g., Måthèmåtîçþ ßübjèçt Çlåþþîfîçåtîóñ; Lîbrårý óf Çóñgrèþþ Çlåþþîfîçåtîóñ)</message>
 	<message key="manager.setup.subjectKeywordTopic">Kèýwórðþ</message>
