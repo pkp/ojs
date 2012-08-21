@@ -25,6 +25,6 @@ SCENARIO: ranking weight editing and effect
    THEN I'll no longer see the article from the first section
         in the result set
     AND I'll see the article from the second, third and fourth
-        sections in the first, second and third positions, repectively
+        sections in the third, second and first positions, repectively
     AND their ranking scores will be multiplied by the factors
         0.5, 1 and 2 respectively.

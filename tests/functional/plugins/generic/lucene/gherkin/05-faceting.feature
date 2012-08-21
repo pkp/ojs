@@ -8,9 +8,26 @@ SCENARIO: faceting filter navigation
         the articles with ids 1, 3 and 4
    THEN I see a faceting block plugin wich offers the categories
         "Discipline", "Keyword", "Type (method/approach)",
-        "Publication Month" and "Journal"
+        "Coverage", "Publication Month" and "Journal"
     AND I'll see one or more clickable faceting filters
         below each category.
+
+SCENARIO: faceting filter navigation with empty categories
+   WHEN I execute a search that produces results with
+        the article with id 3
+   THEN I see a faceting block plugin wich offers the categories
+        "Discipline", "Keyword", "Type (method/approach)",
+        "Coverage", "Publication Month" and "Journal"
+    BUT the "Keyword", "Type (method/approach)" and "Coverage"
+        categories will be inactive and no faceting filters
+        will be listed below them.
+
+SCENARIO: disabled categories
+  GIVEN I disable one of the keyword categories in the journal
+        setup
+   WHEN I execute a search
+   THEN I see a faceting block plugin which does not show
+        the disabled category.
 
 SCENARIO OUTLINE: facet filter selection
   GIVEN I executed a search containing the articles with {id 1}
@@ -26,12 +43,14 @@ SCENARIO OUTLINE: facet filter selection
 
 EXAMPLES:
   id 1 | id 2 | facet filter
-  =========================================
+  ============================================
   3    | 4    | discipline: "exotic food"
   4    | 3    | keyword: "exotic food"
   4    | 3    | type: "personal experience"
+  4    | 3    | coverage: "21st century"
   3    | 4    | publ. date: "2012-08"
   3    | 1    | journal: "lucene-test"
+  3    | 4    | author: "Authorname Second, A"    // FIXME: Will authors be shown as a list or separately?  
 
 SCENARIO: multiple facet filter selection
   GIVEN I executed a search originally containing the

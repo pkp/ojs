@@ -23,6 +23,13 @@ SCENARIO: re-index one journal (CLI)
    THEN all articles of that journal will be deleted from
         the index and then re-indexed.
 
+SCENARIO: re-index all journals (CLI)
+  GIVEN I am on the command line
+   WHEN I execute the tools/rebuildSearchIndex.php script
+        without parameters
+   THEN all articles of all journals of the installation will
+        be deleted from the index and then re-indexed.
+
 SCENARIO: solr process admin button (solr not running)
   GIVEN I am in an environment that allows execution of solr server
         process management shell scripts from within PHP
