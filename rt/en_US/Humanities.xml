@@ -148,7 +148,7 @@
 		<search>
 			<search_title>WordNet</search_title>
 			<search_description>WordNet, an electronic lexical database, is considered to be the most important resource available to researchers in computational linguistics, text analysis, and many related areas. Its design is inspired by current psycholinguistic and computational theories of human lexical memory. English nouns, verbs, adjectives, and adverbs are organized into synonym sets, each representing one underlying lexicalized concept. Different relations link the synonym sets.</search_description>
-			<url>http://www.cogsci.princeton.edu/~wn/</url>
+			<url>http://wordnet.princeton.edu</url>
 			<search_url>http://wordnet.princeton.edu/perl/webwn?sub=Search+WordNet&amp;o2=&amp;o0=1&amp;o7=&amp;o5=&amp;o1=1&amp;o6=&amp;o4=&amp;o3=&amp;h=&amp;s={$formKeywords}</search_url>
 			
 		</search>
