@@ -354,7 +354,7 @@
 除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[期刊會使用一個可在網路上取得的主題分類系統。<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊會使用一個可在網路上取得的主題分類系統。<br />
 分類系統的標題]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[要將這份期刊中所索引的內容收錄進一個全球性散佈的研究資料系統中，請<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a> 您的期刊網址，進入「開放知識計畫」(Public Knowledge Project ; PKP)的後設資料 <a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a>之中。這個工具會收集這份期刊中每個經索引的項目，使得在支持<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">開放典藏計畫後設資料收集協定(Open Archives Initiative Protocol for Metadata Harvesting)</a>的研究網站之間能夠有準確和豐富的搜尋結果。
 <br /><br />

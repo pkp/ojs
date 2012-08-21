@@ -318,7 +318,7 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektroničke verzije časopisa nije doista pokrenuto, odnosno prvi broj objavljen ili pri izdavanju. Da bi se to učinilo, potrebno je slijediti ova dva koraka:]]></message>
 	
 	<!--  Setup Step 3  --><message key="manager.setup.guidingSubmissions">3. korak: Prijave priloga</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Časopis će koristiti predmetnu klasifikaciju sustava dostupnu na mreži.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Časopis će koristiti predmetnu klasifikaciju sustava dostupnu na mreži.<br />
 Naslov klasifikacijskog sustava]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Kako biste učinili sadržaj ovog časopisa indeksiranim unutar globalno distribuiranog sustava istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrirajte</a> URL vašeg časopisa pri <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga u ovom časopisu, omogućujući precizno i kolektivno pretraživanje istraživačkih stranica koje sudjeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
