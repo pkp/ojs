@@ -106,6 +106,7 @@ class StaticPagesEditForm extends Form {
 			theme_advanced_buttons3_add_before : "tablecontrols,separator",
 			theme_advanced_buttons3_add : "media,separator",
 			theme_advanced_buttons4 : "cut,copy,paste,pastetext,pasteword,separator,styleprops,|,spellchecker,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,print,separator",
+			theme_advanced_disable: "styleselect",
 			theme_advanced_toolbar_location : "top",
 			theme_advanced_toolbar_align : "left",
 			theme_advanced_statusbar_location : "bottom",
