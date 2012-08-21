@@ -31,6 +31,10 @@ function ensureKeyword() {
 
 {if $basicQuery}
 	<form class="pkp_form" id="searchForm" method="post" action="{url op="results"}">
+		{* The following is just a temporary input field to test the JS/AJAX infrastructure. *}
+		{url|assign:queryAutocompleteUrl page="lucene" op="queryAutocomplete"}
+		{fbvElement type="autocomplete" id="acQuery" autocompleteUrl=$queryAutocompleteUrl size=$fbvStyles.size.MEDIUM}
+
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/
