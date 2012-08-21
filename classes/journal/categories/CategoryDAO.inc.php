@@ -18,14 +18,25 @@ import('lib.pkp.classes.controlledVocab.ControlledVocabDAO');
 define('CATEGORY_SYMBOLIC', 'category');
 
 class CategoryDAO extends ControlledVocabDAO {
+	/**
+	 * Build the Category controlled vocabulary.
+	 * @return ControlledVocab
+	 */
 	function build() {
 		return parent::build(CATEGORY_SYMBOLIC, 0, 0);
 	}
 
+	/**
+	 * Get the categories list from database.
+	 * @return array
+	 */
 	function getCategories() {
 		return $this->enumerateBySymbolic(CATEGORY_SYMBOLIC, 0, 0);
 	}
 
+	/**
+	 * Rebuild the cache.
+	 */
 	function rebuildCache() {
 		// Read the full set of categories into an associative array
 		$categoryEntryDao =& $this->getEntryDAO();
@@ -64,17 +75,27 @@ class CategoryDAO extends ControlledVocabDAO {
 		fclose($fp);
 	}
 
+	/**
+	 * Get the cached set of categories, building it if necessary.
+	 * @return array
+	 */
 	function getCache() {
 		// The following line is only for classloading purposes
 		$categoryEntryDao =& $this->getEntryDAO();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
-		// Load and return the cache
-		$contents = file_get_contents($this->getCacheFilename());
+		// Load and return the cache, building it if necessary.
+		$filename = $this->getCacheFilename();
+		if (!file_exists($filename)) $this->rebuildCache();
+		$contents = file_get_contents($filename);
 		if ($contents) return unserialize($contents);
 		return null;
 	}
 
+	/**
+	 * Get the cache filename.
+	 * @return string
+	 */
 	function getCacheFilename() {
 		return 'cache/fc-categories.php';
 	}
