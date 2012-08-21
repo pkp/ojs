@@ -314,7 +314,7 @@
 	</upgrade>
 
 	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
-		<code function="migrateNotifications" />
+		<code function="migrateNotifications" condition="return $installer->tableExists('notifications_old');" />
 		<!-- Delete the notification*_old tables now that they have been migrated. -->
 		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
