@@ -20,18 +20,18 @@
 		<p>If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.</p>
 	]]></message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
-	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the solr search server.</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
 	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>
 	<message key="plugins.generic.lucene.settings.luceneSettings">Lucene Plugin: Solr server settings</message>
 	<message key="plugins.generic.lucene.settings.password">Password</message>
-	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the solr server password.</message>
-	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the solr search server.</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
-	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (solr search server and search handler) you would like to connect to.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
-	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the solr search server (colons are disallowed).</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
 	
 	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
 	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevance</message>
@@ -55,6 +55,6 @@
 </ul>]]></message>
 	
 	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
 </locale>

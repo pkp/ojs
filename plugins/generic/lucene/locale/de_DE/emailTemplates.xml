@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/lucene/locale/de_DE/emailTemplates.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="de_DE">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Artikelindizierungsfehler</subject>
+		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung des Artikels "{$articleTitle}" in der Zeitschrift "{$journalName}".
+
+Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
+		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
+dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Zeitschriftenindizierungsfehler</subject>
+		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung der Zeitschrift  "{$journalName}".
+
+Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
+		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
+dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Fehler des Zeitschriftensuchdienstes</subject>
+		<body>Ein Fehler ist aufgetreten, während jemand versucht hat, die Installation "{$siteName}" zu durchsuchen.
+
+Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
+		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
+dass ein Fehler aufgetreten ist, während versucht wurde, auf den Solr-Suchdienst zuzugreifen.</description>
+	</email_text>
+</email_texts>
