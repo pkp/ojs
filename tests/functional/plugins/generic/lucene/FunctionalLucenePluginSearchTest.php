@@ -71,12 +71,12 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	public function testSimpleSearch() {
 		// Set up the examples.
 		$examples = array(
-			array('', 'Pizza', 3),
-			array(ARTICLE_SEARCH_AUTHOR, 'Author', 3),
-			array(ARTICLE_SEARCH_TITLE, 'Article', 3),
-			array(ARTICLE_SEARCH_ABSTRACT, '"Article 2 Abstract"', 4),
-			array(ARTICLE_SEARCH_INDEX_TERMS, 'Food', 3),
-			array(ARTICLE_SEARCH_GALLEY_FILE, 'Nutella', 3),
+			array('query', 'Pizza', 3),
+			array('authors', 'Author', 3),
+			array('title', 'Article', 3),
+			array('abstract', '"Article 2 Abstract"', 4),
+			array('indexTerms', 'Food', 3),
+			array('galleyFullText', 'Nutella', 3),
 		);
 
 		foreach ($examples as $example) {
@@ -118,11 +118,11 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	public function testAdvancedSearch() {
 		// Set up the examples.
 		$examples = array(
-			array('advancedQuery', 'Mango', 3),
-			array('author', 'Another', 4),
+			array('query', 'Mango', 3),
+			array('authors', 'Another', 4),
 			array('title', 'Lucene Test', 4),
-			array('fullText', 'chicken feet', 3),
-			array('supplementaryFiles', 'Pizza', 3),
+			array('galleyFullText', 'chicken feet', 3),
+			array('suppFiles', 'Pizza', 3),
 			array('date', '--- see code below ---', 4),
 			array('discipline', 'dietary research', 4),
 			array('subject', 'lunchtime', 4),
@@ -141,7 +141,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 
 				// Enter the keyword into the advanced search field.
 				if ($searchField == 'date') {
-					$this->type('advancedQuery', 'test');
+					$this->type('query', 'test');
 					$this->select('dateToDay', 'value=20');
 					$this->select('dateToMonth', 'value=07');
 					$this->select('dateToYear', 'value=2012');
@@ -196,8 +196,8 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 	 *   en_US      | ((wings OR eggs) NOT chicken) | C, D    | A, B          // bracketed search phrase
 	 *   en_US      | chicken NICHT wings           | A, B, C | D             // search syntax localization
 	 *   de_DE      | chicken NICHT wings           | B       | A, C, D       //      - " -
-	 *   en_US      | "chicken wings"               |         | A, B, C, D    // phrase search
-	 *   en_US      | "chicken have wings"          | A       | B, C, D       //      - " -
+	 *   en_US      | "chicken wings"               |         | A, B, C, D    // phrase search and stopword position increment
+	 *   en_US      | "chicken have wings"          | A       | B, C, D       // phrase search
 	 *   en_US      | chicken*                      | A, B, D | C             // wildcard search
 	 *   en_US      | ChiCkeN Wings                 | A, B, C | D             // case insensitive search
 	 */
@@ -239,7 +239,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 			}
 
 			// Execute a simple search.
-			$this->simpleSearch($searchPhrase, ARTICLE_SEARCH_TITLE, $ids, $notIds, $locale);
+			$this->simpleSearch($searchPhrase, 'title', $ids, $notIds, $locale);
 		}
 	}
 
@@ -268,7 +268,7 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 		$examples = array('chicken', 'Hühnchen');
 		foreach ($examples as $keyword) {
 			// Execute a simple search.
-			$this->simpleSearch($keyword, ARTICLE_SEARCH_TITLE, 5);
+			$this->simpleSearch($keyword, 'title', 5);
 		}
 	}
 }

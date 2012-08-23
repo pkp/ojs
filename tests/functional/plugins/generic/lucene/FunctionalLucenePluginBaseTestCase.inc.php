@@ -38,7 +38,7 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 * @param $locale string
 	 * @param $journal string the context path of the journal to test
 	 */
-	protected function simpleSearch($searchPhrase, $searchField = '', $articles = array(), $notArticles = array(), $locale = 'en_US', $journal = 'lucene-test') {
+	protected function simpleSearch($searchPhrase, $searchField = 'query', $articles = array(), $notArticles = array(), $locale = 'en_US', $journal = 'lucene-test') {
 		// Translate scalars to arrays.
 		if (!is_array($articles)) $articles = array($articles);
 		if ($notArticles !== '*' && !is_array($notArticles)) $notArticles = array($notArticles);
@@ -55,11 +55,11 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 			}
 
 			// Hack to work around timing problems in phpunit 3.4...
-			$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="query"]');
+			$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="simpleQuery"]');
 			$this->waitForElementPresent('name=searchField');
 
 			// Enter the search phrase into the simple search field.
-			$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchPhrase);
+			$this->type($this->simpleSearchForm . 'input[@id="simpleQuery"]', $searchPhrase);
 
 			// Select the search field.
 			$this->select('name=searchField', 'value=' . $searchField);
@@ -98,7 +98,7 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 		$this->verifyAndOpen($homePage);
 
 		// Enter the search term into the simple search box.
-		$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchTerm);
+		$this->type($this->simpleSearchForm . 'input[@id="simpleQuery"]', $searchTerm);
 
 		// Click the "Search" button.
 		$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');

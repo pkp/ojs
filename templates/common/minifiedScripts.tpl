@@ -18,6 +18,7 @@
 {* Our own functions (depend on plug-ins) *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/fontController.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
 
 {* Our own classes (depend on plug-ins) *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/Helper.js"></script>
@@ -27,8 +28,13 @@
 {* Generic controllers *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
-<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/grid/GridHandler.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/form/FormHandler.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/grid/GridHandler.js"></script>
+
+{* Specific controllers *}
+<script type="text/javascript" src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
 
 {* Our own plug-in (depends on classes) *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>
