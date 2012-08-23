@@ -229,18 +229,8 @@ class LucenePlugin extends GenericPlugin {
 		$searchRequest->setPage($page);
 		$searchRequest->setItemsPerPage($itemsPerPage);
 
-		// Initialize a mapping of OJS search fields to Lucene search fields.
-		$indexFieldMap = array(
-			ARTICLE_SEARCH_TITLE => 'title',
-			ARTICLE_SEARCH_ABSTRACT => 'abstract',
-			ARTICLE_SEARCH_AUTHOR => 'authors',
-			ARTICLE_SEARCH_DISCIPLINE => 'discipline',
-			ARTICLE_SEARCH_SUBJECT => 'subject',
-			ARTICLE_SEARCH_TYPE => 'type',
-			ARTICLE_SEARCH_COVERAGE => 'coverage',
-			ARTICLE_SEARCH_GALLEY_FILE => 'galleyFullText',
-			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFiles'
-		);
+		// Get a mapping of OJS search fields to Lucene search fields.
+		$indexFieldMap = ArticleSearch::getIndexFieldMap();
 
 		// We query fields with search phrases.
 		foreach($query as $searchField => $searchPhrase) {

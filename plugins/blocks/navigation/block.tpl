@@ -12,10 +12,10 @@
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
-	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="results"}">
+	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
 	<table>
 	<tr>
-		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+		<td><input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" /></td>
 	</tr>
 	<tr>
 		<td><select name="searchField" size="1" class="selectMenu">

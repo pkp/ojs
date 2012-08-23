@@ -25,11 +25,11 @@
 
 			function luceneReorder(useDefaultOrderDir) {ldelim}
 				var reorderUrl = '{strip}
-						{if $basicQuery}
-							{url query=$basicQuery searchField=$searchField escape=false}
-						{else}
-							{url query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear escape=false}
-						{/if}
+						{url query=$query searchJournal=$searchJournal
+							authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles
+							discipline=$discipline subject=$subject type=$type coverage=$coverage
+							dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear
+							dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear escape=false}
 					{/strip}';
 				var orderBy = $orderBySelect.val();
 				if (useDefaultOrderDir) {ldelim}
