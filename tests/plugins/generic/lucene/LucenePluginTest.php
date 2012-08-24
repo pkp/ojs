@@ -79,26 +79,18 @@ class LucenePluginTest extends DatabaseTestCase {
 	//
 	/**
 	 * @covers LucenePlugin
+	 * @covers SolrSearchRequest
 	 */
 	public function testCallbackRetrieveResults() {
-		// Configure test translations.
-		AppLocale::setTranslations(
-			array(
-				'search.operator.not' => 'nicht',
-				'search.operator.and' => 'und',
-				'search.operator.or' => 'oder'
-			)
-		);
-
 		// Test data.
 		$testCases = array(
 			// Simple Searches
-			array(null => 'test und query'),
+			array(null => 'test AND query'),
 			array(ARTICLE_SEARCH_AUTHOR => 'author'),
 			array(ARTICLE_SEARCH_TITLE => 'title'),
 			array(ARTICLE_SEARCH_ABSTRACT => 'abstract'),
 			array(ARTICLE_SEARCH_INDEX_TERMS => 'Nicht index terms'),
-			array(ARTICLE_SEARCH_GALLEY_FILE => 'full ODER text'),
+			array(ARTICLE_SEARCH_GALLEY_FILE => 'full OR text'),
 			// Advanced Search
 			array(
 				null => 'test query',
@@ -114,14 +106,14 @@ class LucenePluginTest extends DatabaseTestCase {
 		);
 
 		$expectedResults = array(
-			array('title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test AND query'),
+			array('authors|title|abstract|galleyFullText|suppFiles|discipline|subject|type|coverage' => 'test AND query'),
 			array('authors' => 'author'),
 			array('title' => 'title'),
 			array('abstract' => 'abstract'),
-			array('discipline|subject|type|coverage' => 'NOT index terms'),
+			array('discipline|subject|type|coverage' => 'Nicht index terms'), // Translation is done in the web service now.
 			array('galleyFullText' => 'full OR text'),
 			array(
-				'title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test query',
+				'authors|title|abstract|galleyFullText|suppFiles|discipline|subject|type|coverage' => 'test query',
 				'authors' => 'author',
 				'title' => 'title',
 				'discipline' => 'discipline',

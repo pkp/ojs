@@ -38,6 +38,14 @@ class LucenePlugin extends GenericPlugin {
 	// Getters and Setters
 	//
 	/**
+	 * Get the solr web service.
+	 * @return SolrWebService
+	 */
+	function &getSolrWebService() {
+		return $this->_solrWebService;
+	}
+
+	/**
 	 * Set an alternative article mailer implementation.
 	 *
 	 * NB: Required to override the mailer
@@ -80,8 +88,15 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+
 		if ($success && $this->getEnabled()) {
+			// This plug-in requires PHP 5.0.
+			if (!checkPhpVersion('5.0.0')) return false;
+
+			// Register callbacks (application-level).
+			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
+
 			// Register callbacks (controller-level).
 			HookRegistry::register('ArticleSearch::retrieveResults', array(&$this, 'callbackRetrieveResults'));
 			HookRegistry::register('ArticleSearchIndex::deleteTextIndex', array(&$this, 'callbackDeleteTextIndex'));
@@ -93,6 +108,9 @@ class LucenePlugin extends GenericPlugin {
 
 			// Register callbacks (view-level).
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
+			if ($this->getSetting(0, 'autosuggest')) {
+				HookRegistry::register('Templates::Search::SearchResults::FilterInput', array($this, 'callbackTemplateFilterInput'));
+			}
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
 			HookRegistry::register('Templates::Search::SearchResults::SyntaxInstructions', array($this, 'callbackTemplateSyntaxInstructions'));
 
@@ -211,13 +229,26 @@ class LucenePlugin extends GenericPlugin {
 	// Public Search API
 	//
 	/**
+	 * @see PKPPageRouter::route()
+	 */
+	function callbackLoadHandler($hookName, $args) {
+		$page =& $args[0];
+		if ($page === 'lucene') {
+			define('HANDLER_CLASS', 'LuceneHandler');
+			define('LUCENE_PLUGIN_NAME', $this->getName());
+			$handlerFile =& $args[2];
+			$handlerFile = $this->getPluginPath() . '/' . 'LuceneHandler.inc.php';
+		}
+	}
+
+	/**
 	 * @see ArticleSearch::retrieveResults()
 	 */
 	function callbackRetrieveResults($hookName, $params) {
 		assert($hookName == 'ArticleSearch::retrieveResults');
 
 		// Unpack the parameters.
-		list($journal, $query, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
+		list($journal, $keywords, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
 		$totalResults =& $params[6]; // need to use reference
 		$error =& $params[7]; // need to use reference
 
@@ -228,33 +259,7 @@ class LucenePlugin extends GenericPlugin {
 		$searchRequest->setToDate($toDate);
 		$searchRequest->setPage($page);
 		$searchRequest->setItemsPerPage($itemsPerPage);
-
-		// Get a mapping of OJS search fields to Lucene search fields.
-		$indexFieldMap = ArticleSearch::getIndexFieldMap();
-
-		// We query fields with search phrases.
-		foreach($query as $searchField => $searchPhrase) {
-			// Translate query keywords.
-			$searchPhrase = $this->_translateSearchPhrase($searchPhrase);
-
-			// Translate the search field from OJS to solr nomenclature.
-			if (empty($searchField)) {
-				// An empty search field means "all fields".
-				$solrFields = array_values($indexFieldMap);
-			} else {
-				$solrFields = array();
-				foreach($indexFieldMap as $ojsField => $solrField) {
-					// The search field is a bitmap which may stand for
-					// several actual index fields (e.g. the index terms
-					// field).
-					if ($searchField & $ojsField) {
-						$solrFields[] = $solrField;
-					}
-				}
-			}
-			$solrFieldString = implode('|', $solrFields);
-			$searchRequest->addQueryFieldPhrase($solrFieldString, $searchPhrase);
-		}
+		$searchRequest->addQueryFromKeywords($keywords);
 
 		// Get the ordering criteria.
 		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
@@ -262,10 +267,11 @@ class LucenePlugin extends GenericPlugin {
 		$searchRequest->setOrderDir($orderDir == 'asc' ? true : false);
 
 		// Call the solr web service.
-		$result =& $this->_solrWebService->retrieveResults($searchRequest, $totalResults);
+		$solrWebService =& $this->getSolrWebService();
+		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
 		if (is_null($result)) {
 			$result = array();
-			$error = $this->_solrWebService->getServiceMessage();
+			$error = $solrWebService->getServiceMessage();
 			$this->_informTechAdmin(null, $journal, false);
 		}
 		return $result;
@@ -346,13 +352,14 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function callbackRebuildIndex($hookName, $params) {
 		assert($hookName == 'ArticleSearchIndex::rebuildIndex');
+		$solrWebService = $this->getSolrWebService();
 
 		// Unpack the parameters.
 		list($log) = $params;
 
 		// Clear index
 		if ($log) echo 'LucenePlugin: Clearing index ... ';
-		$this->_solrWebService->deleteAllArticlesFromIndex();
+		$solrWebService->deleteAllArticlesFromIndex();
 		if ($log) echo "done\n";
 
 		// Build index
@@ -362,7 +369,7 @@ class LucenePlugin extends GenericPlugin {
 			$journal =& $journals->next();
 
 			if ($log) echo 'LucenePlugin: Indexing "', $journal->getLocalizedTitle(), '" ';
-			$numIndexed = $this->_solrWebService->indexJournal($journal, $log);
+			$numIndexed = $solrWebService->indexJournal($journal, $log);
 			unset($journal);
 
 			if (is_null($numIndexed)) {
@@ -385,7 +392,7 @@ class LucenePlugin extends GenericPlugin {
 	function callbackTemplateDisplay($hookName, $params) {
 		// We only plug into the search results list.
 		$template = $params[1];
-		if ($template != 'search/searchResults.tpl') return false;
+		if ($template != 'search/search.tpl') return false;
 
 		// Get request and context.
 		$request =& PKPApplication::getRequest();
@@ -406,6 +413,17 @@ class LucenePlugin extends GenericPlugin {
 		$templateMgr->assign('orderBy', $orderBy);
 		$templateMgr->assign('orderDir', $orderDir);
 
+		return false;
+	}
+
+	/**
+	 * @see templates/search/searchResults.tpl
+	 */
+	function callbackTemplateFilterInput($hookName, $params) {
+		$smarty =& $params[1];
+		$output =& $params[2];
+		$smarty->assign($params[0]);
+		$output .= $smarty->fetch($this->getTemplatePath() . 'filterInput.tpl');
 		return false;
 	}
 
@@ -450,10 +468,11 @@ class LucenePlugin extends GenericPlugin {
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
 		}
 
+		$solrWebService =& $this->getSolrWebService();
 		if(!is_a($publishedArticle, 'PublishedArticle')) {
 			// The article is no longer public. Delete possible
 			// remainders from the index.
-			return $this->_solrWebService->deleteArticleFromIndex($article->getId());
+			return $solrWebService->deleteArticleFromIndex($article->getId());
 		}
 
 		// We need the article's journal to index the article.
@@ -463,7 +482,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// We cannot re-index article files only. We have
 		// to re-index the whole article.
-		return $this->_solrWebService->indexArticle($publishedArticle, $journal);
+		return $solrWebService->indexArticle($publishedArticle, $journal);
 	}
 
 	/**
@@ -482,7 +501,8 @@ class LucenePlugin extends GenericPlugin {
 			// The article doesn't exist any more
 			// or is no longer public. Delete possible
 			// remainders from the index.
-			return $this->_solrWebService->deleteArticleFromIndex($articleId);
+			$solrWebService =& $this->getSolrWebService();
+			return $solrWebService->deleteArticleFromIndex($articleId);
 		}
 
 		// Re-index the article.
@@ -636,31 +656,6 @@ class LucenePlugin extends GenericPlugin {
 
 		// Send the mail.
 		$mail->send($request);
-	}
-
-	/**
-	 * Translate query keywords.
-	 * @param $searchPhrase string
-	 * @return The translated search phrase.
-	 */
-	function _translateSearchPhrase($searchPhrase) {
-		static $queryKeywords;
-
-		if (is_null($queryKeywords)) {
-			// Query keywords.
-			$queryKeywords = array(
-				String::strtolower(__('search.operator.not')) => 'NOT',
-				String::strtolower(__('search.operator.and')) => 'AND',
-				String::strtolower(__('search.operator.or')) => 'OR'
-			);
-		}
-
-		// Translate the search phrase.
-		foreach($queryKeywords as $queryKeyword => $translation) {
-			$searchPhrase = String::regexp_replace("/(^|\s)$queryKeyword(\s|$)/i", "\\1$translation\\2", $searchPhrase);
-		}
-
-		return $searchPhrase;
 	}
 }
 ?>

@@ -64,6 +64,18 @@
     <queryResultMaxDocsCached>200</queryResultMaxDocsCached>
     <useColdSearcher>false</useColdSearcher>
     <maxWarmingSearchers>2</maxWarmingSearchers>
+    <!-- The lines between START and END may be commented out to disable suggester-based autocompletion -->
+    <!-- START -->
+    <listener event="firstSearcher" class="solr.QuerySenderListener">
+      <arr name="queries">
+        <!-- Load the auto-suggestion dictionary on warm up. -->
+        <lst>
+          <str name="qt">/suggest</str>
+          <str name="spellcheck.build">true</str>
+        </lst>
+      </arr>
+    </listener>
+    <!-- END -->
   </query>
 
   <updateHandler class="solr.DirectUpdateHandler2" />
@@ -74,15 +86,108 @@
   </requestDispatcher>
 
   <!-- OJS solr alternative spelling suggestion component. Please do not change. -->
-  <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
+  <searchComponent name="dictionaries" class="solr.SpellCheckComponent">
     <str name="queryAnalyzerFieldType">text_spell</str>
 
     <!-- a spellchecker built from a field of the main index, and written to disk -->
     <lst name="spellchecker">
       <str name="name">default</str>
       <str name="field">default_spell</str>
-      <str name="spellcheckIndexDir">spellchecker</str>
+      <str name="spellcheckIndexDir">./spellchecker</str>
     </lst>
+
+    <!-- The lines between START and END may be commented out to disable suggester-based autocompletion -->
+    <!-- START -->
+    <!-- auto-suggest components -->
+    <lst name="spellchecker">
+      <str name="name">all</str>
+      <str name="field">default_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int><!-- an FST option -->
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">authors</str>
+      <str name="field">authors_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">title</str>
+      <str name="field">title_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">abstract</str>
+      <str name="field">abstract_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">galleyFullText</str>
+      <str name="field">galleyFullText_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">suppFiles</str>
+      <str name="field">suppFiles_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">discipline</str>
+      <str name="field">discipline_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">subject</str>
+      <str name="field">subject_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">type</str>
+      <str name="field">type_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">coverage</str>
+      <str name="field">coverage_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">indexTerms</str>
+      <str name="field">indexTerms_spell</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
+      <int name="weightBuckets">100</int>
+      <float name="threshold">0.005</float>
+    </lst>
+    <!-- END -->
   </searchComponent>
 
   <!--
@@ -111,9 +216,48 @@
       <str name="spellcheck">off</str>
     </lst>
     <arr name="last-components">
-      <str>spellcheck</str>
+      <str>dictionaries</str>
     </arr>
   </requestHandler>
+
+  <!-- Auto-suggest request handler (suggester based):
+         advantage: fast and scalable
+         disadvantage: may propose queries that will not return any document, e.g. terms from other journals  -->
+  <!-- The lines between START and END may be commented out to disable suggester-based autocompletion -->
+  <!-- START -->
+  <requestHandler name="/dictBasedSuggest" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="spellcheck">true</str>
+      <str name="spellcheck.dictionary">all</str>
+      <str name="spellcheck.count">5</str>
+      <str name="spellcheck.onlyMorePopular">true</str><!-- Sort results by popularity (=term frequency). -->
+      <str name="spellcheck.collate">false</str><!-- We build our own query suggestions. -->
+    </lst>
+    <arr name="components">
+      <str>dictionaries</str>
+    </arr>
+  </requestHandler>
+  <!-- END -->
+
+  <!-- Auto-suggest request handler (faceting based)
+         advantage: will only propose queries that actually match documents
+         disadvantage: slower, uses lots of memory, does not scale well -->
+  <!-- The lines between START and END may be commented out to disable faceting-based autocompletion -->
+  <!-- START -->
+  <requestHandler name="/facetBasedSuggest" class="solr.StandardRequestHandler" default="true">
+    <lst name="invariants">
+      <str name="echoParams">none</str>
+      <str name="defType">edismax</str>
+      <str name="rows">0</str>
+      <str name="fl">article_id</str>
+      <str name="facet">on</str>
+      <str name="facet.limit">5</str>
+      <str name="facet.mincount">1</str>
+      <str name="hl">off</str>
+      <str name="spellcheck">off</str>
+    </lst>
+  </requestHandler>
+  <!-- END -->
 
   <!-- OJS DataImportHandler request handler. Please do not change. -->
   <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">

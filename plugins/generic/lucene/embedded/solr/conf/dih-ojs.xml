@@ -68,8 +68,10 @@
 
       // Define how fields are being indexed.
       var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
+      var indexTermsFields = ['discipline', 'subject', 'type', 'coverage'];
       var sortFields = ['title', 'journalTitle'];
 
+      var indexTermsAutoSuggest = '';
       for (var i=0, len=locFields.length; i<len; i++) {
         var fieldName = locFields[i];
 
@@ -93,6 +95,7 @@
         } 
 
         // Run through all values.
+        var autoSuggest = '';
         for(var j=0, numValues=values.size(); j<numValues; j++) {
           var locale = String(locales.get(j));
           var value = String(values.get(j));
@@ -103,11 +106,18 @@
             sortOnly = String(sortOnlyFlags.get(j))
           }
 
-          // Index search fields.
+          // Index search and spelling/auto-suggest fields.
           if (searchFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
             row.put(fieldName + '_' + locale, value);
             // Build concatenated spelling field.
             appendToDocField(context, 'default_spell', value);
+            // Build autoSuggest field.
+            autoSuggest += ' ' + value;
+          }
+
+          // Index terms auto-suggest fields.
+          if (indexTermsFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
+          	indexTermsAutoSuggest += ' ' + value;
           }
 
           // Index sort fields.
@@ -115,7 +125,9 @@
             row.put(fieldName + '_' + locale + '_txtsort', value);
           }
         }
+        row.put(fieldName + '_spell', autoSuggest);
       }
+      row.put('indexTerms_spell', indexTermsAutoSuggest);
 
       // Create the author search and sort field.
       var authors = row.get('etl_authorList');
@@ -134,6 +146,7 @@
       row.put('authors_txt', authorsConcat);
       row.put('authors_txtsort', authorsConcat);
       appendToDocField(context, 'default_spell', authorsConcat);
+      row.put('authors_spell', authorsConcat);
 
       // Create the publication date sort field.
       // We could use a copy field instruction in the schema file
@@ -184,8 +197,9 @@
           // Concatenate all meta-data.
           appendToDocField(context, 'suppFiles_' + locale, value);
 
-	      // Add full text to spellchecker dictionary.
+	      // Add full text to spellchecker and auto-suggest dictionaries.
 	      appendToDocField(context, 'default_spell', value);
+	      appendToDocField(context, 'suppFiles_spell', value);
         }
 
         row.remove(valueList);
@@ -214,16 +228,19 @@
         // Get the document format.
         var docType = resolveMimetype(String(row.get('Content-Type')));
         var fieldName = 'galleyFullText_' + docType + '_' + locale;
+        var autoSuggestFieldName = 'galleyFullText_spell';
       } else {
         var fieldName = 'suppFiles_' + locale;
+        var autoSuggestFieldName = 'suppFiles_spell';
       }
 
       // Add full text.
       var currentText = String(row.get('text'));
       appendToDocField(context, fieldName, currentText);
 
-      // Add full text to spellchecker dictionary.
+      // Add full text to spellchecker and auto-suggest dictionaries.
       appendToDocField(context, 'default_spell', currentText);
+      appendToDocField(context, autoSuggestFieldName, currentText);
 
       row.remove('text');
       return row;
