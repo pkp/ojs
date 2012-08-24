@@ -48,7 +48,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URNs will be assigned to issues.</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URNs will be assigned to articles.</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URNs will be assigned to galleys (e.g. HTML or PDF files).</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URNs will be assigned to supplementary article files.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URNs will be assigned to supplementary files.</message>
 
 	<!-- custom URN suffix for an object -->
 	<message key="plugins.pubIds.urn.metadata">URN Metadata</message>
