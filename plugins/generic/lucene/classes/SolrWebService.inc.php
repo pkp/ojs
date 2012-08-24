@@ -19,10 +19,21 @@
 define('SOLR_STATUS_ONLINE', 0x01);
 define('SOLR_STATUS_OFFLINE', 0x02);
 
+// Autosuggest-type:
+// - suggester-based: fast and scalable, may propose terms that produce no
+//   results, changes to the index will be reflected only after a dictionary
+//   rebuild
+// - faceting-based: slower and does not scale well, uses lots of cache
+//   memory, only makes suggestions that will produce search results, index
+//   changes appear immediately
+define('SOLR_AUTOSUGGEST_SUGGESTER', 0x01);
+define('SOLR_AUTOSUGGEST_FACETING', 0x02);
+
 import('lib.pkp.classes.webservice.WebServiceRequest');
 import('lib.pkp.classes.webservice.XmlWebService');
 import('lib.pkp.classes.xml.XMLCustomWriter');
 import('plugins.generic.lucene.classes.SolrSearchRequest');
+import('classes.search.ArticleSearch');
 
 class SolrWebService extends XmlWebService {
 
@@ -88,126 +99,6 @@ class SolrWebService extends XmlWebService {
 	//
 	// Public API
 	//
-	/**
-	 * Execute a search against the Solr search server.
-	 *
-	 * @param $searchRequest SolrSearchRequest
-	 * @param $totalResults integer An output parameter returning the
-	 *  total number of search results found by the query. This differs
-	 *  from the actual number of returned results as the search can
-	 *  be limited.
-	 *
-	 * @return array An array of search results. The keys are
-	 *  scores (1-9999) and the values are article IDs. Null if an error
-	 *  occured while querying the server.
-	 */
-	function retrieveResults(&$searchRequest, &$totalResults) {
-		// Initialize the search request parameters.
-		$params = array();
-
-		// Construct a sub query for every field search phrase.
-		foreach ($searchRequest->getQuery() as $fieldList => $searchPhrase) {
-			// Ignore empty search phrases.
-			if (empty($fieldList) || empty($searchPhrase)) continue;
-
-			// Construct the sub-query and add it to the search query and params.
-			$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
-		}
-
-		// Add a range search on the publication date.
-		$fromDate = $searchRequest->getFromDate();
-		$toDate = $searchRequest->getToDate();
-		if (!(empty($fromDate) && empty($toDate))) {
-			if (empty($fromDate)) {
-				$fromDate = '*';
-			} else {
-				$fromDate = $this->_convertDate($fromDate);
-			}
-			if (empty($toDate)) {
-				$toDate = '*';
-			} else {
-				$toDate = $this->_convertDate($toDate);
-			}
-			$params['q'] .= " +publicationDate_dt:[$fromDate TO $toDate]";
-		}
-
-		// Add the journal (if set).
-		$journal =& $searchRequest->getJournal();
-		if (is_a($journal, 'Journal')) {
-			$params['q'] .= ' +journal_id:"' . $this->_instId . '-' . $journal->getId() . '"';
-		}
-
-		// Add the installation ID.
-		$params['q'] .= ' +inst_id:"' . $this->_instId . '"';
-
-		// Pagination.
-		$itemsPerPage = $searchRequest->getItemsPerPage();
-		$params['start'] = ($searchRequest->getPage() - 1) * $itemsPerPage;
-		$params['rows'] = $itemsPerPage;
-
-		// Ordering.
-		$params['sort'] = $this->_getOrdering($searchRequest->getOrderBy(), $searchRequest->getOrderDir());
-
-		// Make the search request.
-		$url = $this->_getSearchUrl();
-		$response = $this->_makeRequest($url, $params);
-
-		// Did we get a result?
-		if (is_null($response)) return $response;
-
-		// Get the total number of documents found.
-		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
-		assert($nodeList->length == 1);
-		$resultNode = $nodeList->item(0);
-		assert(is_numeric($resultNode->textContent));
-		$totalResults = (int) $resultNode->textContent;
-
-		// Run through all returned documents and read the ID fields.
-		$results = array();
-		$docs =& $response->query('//response/result/doc');
-		foreach ($docs as $doc) {
-			$currentDoc = array();
-			foreach ($doc->childNodes as $docField) {
-				// Get the document field
-				$docFieldAtts = $docField->attributes;
-				$fieldNameAtt = $docFieldAtts->getNamedItem('name');
-
-				switch($docField->tagName) {
-					case 'float':
-						$currentDoc[$fieldNameAtt->value] = (float)$docField->textContent;
-						break;
-
-					case 'str':
-						$currentDoc[$fieldNameAtt->value] = $docField->textContent;
-						break;
-				}
-			}
-			$results[] = $currentDoc;
-		}
-
-		// Re-index the result set. There's no need to re-order as the
-		// results come back ordered from the solr server.
-		$scoredResults = array();
-		foreach($results as $resultIndex => $result) {
-			// We only need the article ID.
-			assert(isset($result['article_id']));
-
-			// Use the result order to "score" results. This
-			// will do relevance sorting and field sorting.
-			$score = $itemsPerPage - $resultIndex;
-
-			// Transform the article ID into an integer.
-			$articleId = $result['article_id'];
-			if (strpos($articleId, $this->_instId . '-') !== 0) continue;
-			$articleId = substr($articleId, strlen($this->_instId . '-'));
-			if (!is_numeric($articleId)) continue;
-
-			// Store the result.
-			$scoredResults[$score] = (int)$articleId;
-		}
-		return $scoredResults;
-	}
-
 	/**
 	 * (Re-)indexes the given article in Solr.
 	 *
@@ -326,40 +217,141 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Checks the solr server status.
+	 * Execute a search against the Solr search server.
 	 *
-	 * @return integer One of the SOLR_STATUS_* constants.
+	 * @param $searchRequest SolrSearchRequest
+	 * @param $totalResults integer An output parameter returning the
+	 *  total number of search results found by the query. This differs
+	 *  from the actual number of returned results as the search can
+	 *  be limited.
+	 *
+	 * @return array An array of search results. The keys are
+	 *  scores (1-9999) and the values are article IDs. Null if an error
+	 *  occured while querying the server.
 	 */
-	function getServerStatus() {
-		// Make status request.
-		$url = $this->_getAdminUrl() . 'cores';
-		$params = array(
-			'action' => 'STATUS',
-			'core' => $this->_solrCore
-		);
+	function retrieveResults(&$searchRequest, &$totalResults) {
+		// Construct the main query.
+		$params = $this->_getSearchQueryParameters($searchRequest);
+
+		// If we have no filters at all then return an
+		// empty result set.
+		if (!isset($params['q'])) return array();
+
+		// Pagination.
+		$itemsPerPage = $searchRequest->getItemsPerPage();
+		$params['start'] = ($searchRequest->getPage() - 1) * $itemsPerPage;
+		$params['rows'] = $itemsPerPage;
+
+		// Ordering.
+		$params['sort'] = $this->_getOrdering($searchRequest->getOrderBy(), $searchRequest->getOrderDir());
+
+		// Make the search request.
+		$url = $this->_getSearchUrl();
 		$response = $this->_makeRequest($url, $params);
 
-		// Did we get a response at all?
-		if (is_null($response)) {
-			return SOLR_STATUS_OFFLINE;
+		// Did we get a result?
+		if (is_null($response)) return $response;
+
+		// Get the total number of documents found.
+		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
+		assert($nodeList->length == 1);
+		$resultNode = $nodeList->item(0);
+		assert(is_numeric($resultNode->textContent));
+		$totalResults = (int) $resultNode->textContent;
+
+		// Run through all returned documents and read the ID fields.
+		$results = array();
+		$docs =& $response->query('//response/result/doc');
+		foreach ($docs as $doc) {
+			$currentDoc = array();
+			foreach ($doc->childNodes as $docField) {
+				// Get the document field
+				$docFieldAtts = $docField->attributes;
+				$fieldNameAtt = $docFieldAtts->getNamedItem('name');
+
+				switch($docField->tagName) {
+					case 'float':
+						$currentDoc[$fieldNameAtt->value] = (float)$docField->textContent;
+						break;
+
+					case 'str':
+						$currentDoc[$fieldNameAtt->value] = $docField->textContent;
+						break;
+				}
+			}
+			$results[] = $currentDoc;
 		}
 
-		// Is the core online?
-		assert(is_a($response, 'DOMXPath'));
-		$nodeList = $response->query('//response/lst[@name="status"]/lst[@name="ojs"]/lst[@name="index"]/int[@name="numDocs"]');
+		// Re-index the result set. There's no need to re-order as the
+		// results come back ordered from the solr server.
+		$scoredResults = array();
+		foreach($results as $resultIndex => $result) {
+			// We only need the article ID.
+			assert(isset($result['article_id']));
 
-		// Check whether the core is active.
-		if ($nodeList->length != 1) {
-			$this->_serviceMessage = __('plugins.generic.lucene.error.coreNotFound', array('core' => $this->_solrCore));
-			return SOLR_STATUS_OFFLINE;
+			// Use the result order to "score" results. This
+			// will do relevance sorting and field sorting.
+			$score = $itemsPerPage - $resultIndex;
+
+			// Transform the article ID into an integer.
+			$articleId = $result['article_id'];
+			if (strpos($articleId, $this->_instId . '-') !== 0) continue;
+			$articleId = substr($articleId, strlen($this->_instId . '-'));
+			if (!is_numeric($articleId)) continue;
+
+			// Store the result.
+			$scoredResults[$score] = (int)$articleId;
 		}
+		return $scoredResults;
+	}
 
-		$this->_serviceMessage = __('plugins.generic.lucene.message.indexOnline', array('numDocs' => $nodeList->item(0)->textContent));
-		return SOLR_STATUS_ONLINE;
+	/**
+	 * Retrieve auto-suggestions from the solr index
+	 * corresponding to the given user input.
+	 *
+	 * @param $searchRequest SolrSearchRequest Active search filters. Choosing
+	 *  the faceting auto-suggest implementation via $autosuggestType will
+	 *  pre-filter auto-suggestions based on this search request. In case of
+	 *  the suggester component, the search request will simply be ignored.
+	 * @param $fieldName string The field to suggest values for. Values are
+	 *  queried on field level to improve relevance of suggestions.
+	 * @param $userInput string Partial query input. This input will be split
+	 *  split up. Only the last query term will be used to suggest values.
+	 * @param $autosuggestType string One of the SOLR_AUTOSUGGEST_* constants.
+	 *  The faceting implementation is slower but will return more relevant
+	 *  suggestions. The suggestor implementation is faster and scales better
+	 *  in large deployments. It will return terms from a field-specific global
+	 *  dictionary, though, e.g. from different journals.
+	 *
+	 * @return array A list of suggested queries
+	 */
+	function getAutosuggestions($searchRequest, $fieldName, $userInput, $autosuggestType) {
+		// Validate input.
+		$allowedFieldNames = array_values(ArticleSearch::getIndexFieldMap());
+		$allowedFieldNames[] = 'query';
+		$allowedFieldNames[] = 'indexTerms';
+		if (!in_array($fieldName, $allowedFieldNames)) return array();
+
+		// Check the auto-suggest type.
+		$autosuggestTypes = array(SOLR_AUTOSUGGEST_SUGGESTER, SOLR_AUTOSUGGEST_FACETING);
+		if (!in_array($autosuggestType, $autosuggestTypes)) return array();
+
+		// Execute an auto-suggest request.
+		$url = $this->_getAutosuggestUrl($autosuggestType);
+		if ($autosuggestType == SOLR_AUTOSUGGEST_SUGGESTER) {
+			$suggestions = $this->_getSuggesterAutosuggestions($url, $userInput, $fieldName);
+		} else {
+			$suggestions = $this->_getFacetingAutosuggestions($url, $searchRequest, $userInput, $fieldName);
+		}
+		return $suggestions;
 	}
 
 	/**
 	 * Returns an array with all (dynamic) fields in the index.
+	 *
+	 * NB: This is cached data so after an index update we may
+	 * have to flush the index to re-read the current index state.
+	 *
 	 * @param $fieldType string Either 'search' or 'sort'.
 	 * @return array
 	 */
@@ -379,7 +371,7 @@ class SolrWebService extends XmlWebService {
 
 	/**
 	 * Retrieve a document directly from the index
-	 * (for testing/debugging purposes).
+	 * (for testing/debugging purposes only).
 	 *
 	 * @param $articleId
 	 *
@@ -405,12 +397,46 @@ class SolrWebService extends XmlWebService {
 		return $doc;
 	}
 
+	/**
+	 * Checks the solr server status.
+	 *
+	 * @return integer One of the SOLR_STATUS_* constants.
+	 */
+	function getServerStatus() {
+		// Make status request.
+		$url = $this->_getAdminUrl() . 'cores';
+		$params = array(
+			'action' => 'STATUS',
+			'core' => $this->_solrCore
+		);
+		$response = $this->_makeRequest($url, $params);
+
+		// Did we get a response at all?
+		if (is_null($response)) {
+			return SOLR_STATUS_OFFLINE;
+		}
+
+		// Is the core online?
+		assert(is_a($response, 'DOMXPath'));
+		$nodeList = $response->query('//response/lst[@name="status"]/lst[@name="ojs"]/lst[@name="index"]/int[@name="numDocs"]');
+
+		// Check whether the core is active.
+		if ($nodeList->length != 1) {
+			$this->_serviceMessage = __('plugins.generic.lucene.message.coreNotFound', array('core' => $this->_solrCore));
+			return SOLR_STATUS_OFFLINE;
+		}
+
+		$this->_serviceMessage = __('plugins.generic.lucene.message.indexOnline', array('numDocs' => $nodeList->item(0)->textContent));
+		return SOLR_STATUS_ONLINE;
+	}
+
 
 	//
-	// Implement cache functions.
+	// Field cache implementation
 	//
 	/**
 	 * Refresh the cache from the solr server.
+	 *
 	 * @param $cache FileCache
 	 * @param $id string The field type.
 	 *
@@ -455,6 +481,7 @@ class SolrWebService extends XmlWebService {
 
 			// Identify the field type.
 			$fieldSuffix = array_pop($fieldNameParts);
+			if ($fieldSuffix == 'spell') continue;
 			if (strpos($fieldSuffix, 'sort') !== false) {
 				$fieldType = 'sort';
 				$fieldSuffix = array_pop($fieldNameParts);
@@ -532,6 +559,59 @@ class SolrWebService extends XmlWebService {
 	// Private helper methods
 	//
 	/**
+	 * Returns the solr update endpoint.
+	 *
+	 * @return string
+	 */
+	function _getUpdateUrl() {
+		$updateUrl = $this->_solrServer . $this->_solrCore . '/update';
+		return $updateUrl;
+	}
+
+	/**
+	 * Returns the solr DIH endpoint.
+	 *
+	 * @return string
+	 */
+	function _getDihUrl() {
+		$dihUrl = $this->_solrServer . $this->_solrCore . '/dih';
+		return $dihUrl;
+	}
+
+	/**
+	 * Returns the solr search endpoint.
+	 *
+	 * @return string
+	 */
+	function _getSearchUrl() {
+		$searchUrl = $this->_solrServer . $this->_solrCore . '/' . $this->_solrSearchHandler;
+		return $searchUrl;
+	}
+
+	/**
+	 * Returns the solr auto-suggestion endpoint.
+	 * @param $autosuggestType string One of the SOLR_AUTOSUGGEST_* constants
+	 * @return string
+	 */
+	function _getAutosuggestUrl($autosuggestType) {
+		$autosuggestUrl = $this->_solrServer . $this->_solrCore;
+		switch ($autosuggestType) {
+			case SOLR_AUTOSUGGEST_SUGGESTER:
+				$autosuggestUrl .= '/dictBasedSuggest';
+				break;
+
+			case SOLR_AUTOSUGGEST_FACETING:
+				$autosuggestUrl .= '/facetBasedSuggest';
+				break;
+
+			default:
+				$autosuggestUrl = null;
+				assert(false);
+		}
+		return $autosuggestUrl;
+	}
+
+	/**
 	 * Identifies the general solr admin endpoint from the
 	 * search handler URL.
 	 *
@@ -551,36 +631,6 @@ class SolrWebService extends XmlWebService {
 	function _getCoreAdminUrl() {
 		$adminUrl = $this->_solrServer . $this->_solrCore . '/admin/';
 		return $adminUrl;
-	}
-
-	/**
-	 * Returns the solr search endpoint.
-	 *
-	 * @return string
-	 */
-	function _getSearchUrl() {
-		$searchUrl = $this->_solrServer . $this->_solrCore . '/' . $this->_solrSearchHandler;
-		return $searchUrl;
-	}
-
-	/**
-	 * Returns the solr DIH endpoint.
-	 *
-	 * @return string
-	 */
-	function _getDihUrl() {
-		$dihUrl = $this->_solrServer . $this->_solrCore . '/dih';
-		return $dihUrl;
-	}
-
-	/**
-	 * Returns the solr update endpoint.
-	 *
-	 * @return string
-	 */
-	function _getUpdateUrl() {
-		$updateUrl = $this->_solrServer . $this->_solrCore . '/update';
-		return $updateUrl;
 	}
 
 	/**
@@ -604,7 +654,7 @@ class SolrWebService extends XmlWebService {
 
 		// Did we get a response at all?
 		if (!$response) {
-			$this->_serviceMessage = __('plugins.generic.lucene.error.searchServiceOffline');
+			$this->_serviceMessage = __('plugins.generic.lucene.message.searchServiceOffline');
 			return $nullValue;
 		}
 
@@ -634,7 +684,7 @@ class SolrWebService extends XmlWebService {
 			'search' => array(
 				'localized' => array(
 					'title', 'abstract', 'discipline', 'subject',
-					'type', 'coverage', 'all', 'indexTerms', 'suppFiles'
+					'type', 'coverage', 'suppFiles'
 				),
 				'multiformat' => array(
 					'galleyFullText'
@@ -742,7 +792,7 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Establish the XML used to communicate with the
+	 * Generate the XML used to communicate with the
 	 * solr indexing engine DIH.
 	 * @param $article PublishedArticle
 	 * @param $journal Journal
@@ -1051,28 +1101,6 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Delete documents from the index (by
-	 * ID or by query).
-	 * @param $xml string The documents to delete.
-	 * @return boolean true, if successful, otherwise false.
-	 */
-	function _deleteFromIndex($xml) {
-		// Add the deletion tags.
-		$xml = '<delete>' . $xml . '</delete>';
-
-		// Post the XML.
-		$url = $this->_getUpdateUrl() . '?commit=true';
-		$result = $this->_makeRequest($url, $xml, 'POST');
-		if (is_null($result)) return false;
-
-		// Check the return status (must be 0).
-		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
-		if($nodeList->length != 1) return false;
-		$resultNode = $nodeList->item(0);
-		if ($resultNode->textContent === '0') return true;
-	}
-
-	/**
 	 * Convert a date from local time (unix timestamp
 	 * or ISO date string) to UTC time as understood
 	 * by solr.
@@ -1101,6 +1129,28 @@ class SolrWebService extends XmlWebService {
 
 		// Convert to UTC as understood by solr.
 		return gmdate('Y-m-d\TH:i:s\Z', $timestamp);
+	}
+
+	/**
+	 * Delete documents from the index (by
+	 * ID or by query).
+	 * @param $xml string The documents to delete.
+	 * @return boolean true, if successful, otherwise false.
+	 */
+	function _deleteFromIndex($xml) {
+		// Add the deletion tags.
+		$xml = '<delete>' . $xml . '</delete>';
+
+		// Post the XML.
+		$url = $this->_getUpdateUrl() . '?commit=true';
+		$result = $this->_makeRequest($url, $xml, 'POST');
+		if (is_null($result)) return false;
+
+		// Check the return status (must be 0).
+		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
+		if($nodeList->length != 1) return false;
+		$resultNode = $nodeList->item(0);
+		if ($resultNode->textContent === '0') return true;
 	}
 
 	/**
@@ -1170,6 +1220,216 @@ class SolrWebService extends XmlWebService {
 		}
 		$params[$fieldAlias] = $searchPhrase;
 		return $params;
+	}
+
+	/**
+	 * Translate query keywords.
+	 * @param $searchPhrase string
+	 * @return The translated search phrase.
+	 */
+	function _translateSearchPhrase($searchPhrase) {
+		static $queryKeywords;
+
+		if (is_null($queryKeywords)) {
+			// Query keywords.
+			$queryKeywords = array(
+				String::strtolower(__('search.operator.not')) => 'NOT',
+				String::strtolower(__('search.operator.and')) => 'AND',
+				String::strtolower(__('search.operator.or')) => 'OR'
+			);
+		}
+
+		// Translate the search phrase.
+		foreach($queryKeywords as $queryKeyword => $translation) {
+			$searchPhrase = String::regexp_replace("/(^|\s)$queryKeyword(\s|$)/i", "\\1$translation\\2", $searchPhrase);
+		}
+
+		return $searchPhrase;
+	}
+
+	/**
+	 * Create the edismax query parameters from
+	 * a search request.
+	 * @param $searchRequest SolrSearchRequest
+	 * @return array|null A parameter array or null if something
+	 *  went wrong.
+	 */
+	function _getSearchQueryParameters(&$searchRequest) {
+		// Initialize the search request parameters.
+		$params = array();
+
+		// Construct a sub query for every field search phrase.
+		foreach ($searchRequest->getQuery() as $fieldList => $searchPhrase) {
+			// Ignore empty search phrases.
+			if (empty($fieldList) || empty($searchPhrase)) continue;
+
+			// Translate query keywords.
+			$searchPhrase = $this->_translateSearchPhrase($searchPhrase);
+
+			// Construct the sub-query and add it to the search query and params.
+			$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
+		}
+
+		// Add the installation ID as a filter query.
+		$params['fq'] = array('inst_id:"' . $this->_instId . '"');
+
+		// Add a range search on the publication date (if set).
+		$fromDate = $searchRequest->getFromDate();
+		$toDate = $searchRequest->getToDate();
+		if (!(empty($fromDate) && empty($toDate))) {
+			if (empty($fromDate)) {
+				$fromDate = '*';
+			} else {
+				$fromDate = $this->_convertDate($fromDate);
+			}
+			if (empty($toDate)) {
+				$toDate = '*';
+			} else {
+				$toDate = $this->_convertDate($toDate);
+			}
+			// We do not cache this filter as reuse seems improbable.
+			$params['fq'][] = "{!cache=false}publicationDate_dt:[$fromDate TO $toDate]";
+		}
+
+		// Add the journal as a filter query (if set).
+		$journal =& $searchRequest->getJournal();
+		if (is_a($journal, 'Journal')) {
+			$params['fq'][] = 'journal_id:"' . $this->_instId . '-' . $journal->getId() . '"';
+		}
+		return $params;
+	}
+
+	/**
+	 * Retrieve auto-suggestions from the suggester service.
+	 * @param $url string
+	 * @param $userInput string
+	 * @param $fieldName string
+	 * @return array The generated suggestions.
+	 */
+	function _getSuggesterAutosuggestions($url, $userInput, $fieldName) {
+		// Select the dictionary appropriate for the field
+		// the user input is coming from.
+		if ($fieldName == 'query') {
+			$dictionary = 'all';
+		} else {
+			$dictionary = $fieldName;
+		}
+
+		// Generate parameters for the suggester component.
+		$params = array(
+			'q' => $userInput,
+			'spellcheck.dictionary' => $dictionary
+		);
+
+		// Make the request.
+		$response = $this->_makeRequest($url, $params);
+		if (!is_a($response, 'DOMXPath')) return array();
+
+		// Extract suggestions for the last word in the query.
+		$nodeList = $response->query('//lst[@name="suggestions"]/lst[last()]');
+		if ($nodeList->length == 0) return array();
+		$suggestionNode = $nodeList->item(0);
+		foreach($suggestionNode->childNodes as $childNode) {
+			$nodeType = $childNode->attributes->getNamedItem('name')->value;
+			switch($nodeType) {
+				case 'startOffset':
+				case 'endOffset':
+					$$nodeType = ((int)$childNode->textContent);
+					break;
+
+				case 'suggestion':
+					$suggestions = array();
+					foreach($childNode->childNodes as $suggestionNode) {
+						$suggestions[] = $suggestionNode->textContent;
+					}
+					break;
+			}
+		}
+
+		// Check whether the suggestion really concerns the
+		// last word of the user input.
+		if (!(isset($startOffset) && isset($endOffset)
+			&& strlen($userInput) == $endOffset)) return array();
+
+		// Replace the last word in the user input
+		// with the suggestions.
+		foreach($suggestions as &$suggestion) {
+			$suggestion = substr($userInput, 0, $startOffset) . $suggestion;
+		}
+		return $suggestions;
+	}
+
+	/**
+	 * Retrieve auto-suggestions from the faceting service.
+	 * @param $url string
+	 * @param $searchRequest SolrSearchRequest
+	 * @param $userInput string
+	 * @param $fieldName string
+	 * @return array The generated suggestions.
+	 */
+	function _getFacetingAutosuggestions($url, $searchRequest, $userInput, $fieldName) {
+		// Remove special characters from the user input.
+		$searchTerms = strtr($userInput, '"()+-|&!', '        ');
+
+		// Cut off the last search term.
+		$searchTerms = explode(' ', $searchTerms);
+		$facetPrefix = array_pop($searchTerms);
+		if (empty($facetPrefix)) return array();
+
+		// Use the remaining search query to pre-filter
+		// facet results. This may be an invalid query
+		// but edismax will deal gracefully with syntax
+		// errors.
+		$userInput = substr($userInput, 0, -strlen($facetPrefix));
+		switch ($fieldName) {
+			case 'query':
+				// The 'query' filter goes agains all fields.
+				$solrFields = array_values(ArticleSearch::getIndexFieldMap());
+				break;
+
+			case 'indexTerms':
+				// The 'index terms' filter goes against keyword index fields.
+				$solrFields = array('discipline', 'subject', 'type', 'coverage');
+				break;
+
+			default:
+				// All other filters can be used directly.
+				$solrFields = array($fieldName);
+		}
+		$solrFieldString = implode('|', $solrFields);
+		$searchRequest->addQueryFieldPhrase($solrFieldString, $userInput);
+
+		// Construct the main query.
+		$params = $this->_getSearchQueryParameters($searchRequest);
+		if (!isset($params['q'])) {
+			// Use a catch-all query in case we have no limiting
+			// search.
+			$params['q'] = '*:*';
+		}
+		if ($fieldName == 'query') {
+			$params['facet.field'] = 'default_spell';
+		} else {
+			$params['facet.field'] = $fieldName . '_spell';
+		}
+		$params['facet.prefix'] = $facetPrefix;
+
+		// Make the request.
+		$response = $this->_makeRequest($url, $params);
+		if (!is_a($response, 'DOMXPath')) return array();
+
+		// Extract suggestions.
+		$nodeList = $response->query('//lst[@name="facet_fields"]/lst/int/@name');
+		if ($nodeList->length == 0) return array();
+		$suggestions = array();
+		foreach($nodeList as $childNode) {
+			$suggestions[] = $childNode->value;
+		}
+
+		// Add the suggestion to the remaining user input.
+		foreach($suggestions as &$suggestion) {
+			$suggestion = $userInput . $suggestion;
+		}
+		return $suggestions;
 	}
 }
 

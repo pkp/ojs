@@ -211,6 +211,42 @@ class SolrSearchRequest {
 	function setOrderDir($orderDir) {
 		$this->_orderDir = $orderDir;
 	}
+
+
+	//
+	// Public methods
+	//
+	/**
+	 * Configure the search request from a keywords
+	 * array as required by ArticleSearch::retrieveResults()
+	 *
+	 * @param $keywords array See ArticleSearch::retrieveResults()
+	 */
+	function addQueryFromKeywords($keywords) {
+		// Get a mapping of OJS search fields bitmaps to index fields.
+		$indexFieldMap = ArticleSearch::getIndexFieldMap();
+
+		// The keywords list is indexed with a search field bitmap.
+		foreach($keywords as $searchFieldBitmap => $searchPhrase) {
+			// Translate the search field from OJS to solr nomenclature.
+			if (empty($searchFieldBitmap)) {
+				// An empty search field means "all fields".
+				$solrFields = array_values($indexFieldMap);
+			} else {
+				$solrFields = array();
+				foreach($indexFieldMap as $ojsField => $solrField) {
+					// The search field bitmap may stand for
+					// several actual index fields (e.g. the index terms
+					// field).
+					if ($searchFieldBitmap & $ojsField) {
+						$solrFields[] = $solrField;
+					}
+				}
+			}
+			$solrFieldString = implode('|', $solrFields);
+			$this->addQueryFieldPhrase($solrFieldString, $searchPhrase);
+		}
+	}
 }
 
 ?>

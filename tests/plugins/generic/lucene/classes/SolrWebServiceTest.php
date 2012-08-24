@@ -56,6 +56,17 @@ class SolrWebServiceTest extends PKPTestCase {
 	protected function setUp() {
 		parent::setUp();
 
+		// Set translations. This must be done early
+		// as these translations will be saved statically
+		// during the first request.
+		AppLocale::setTranslations(
+			array(
+				'search.operator.not' => 'nicht',
+				'search.operator.and' => 'und',
+				'search.operator.or' => 'oder'
+			)
+		);
+
 		// Instantiate our web service for testing.
 		$this->solrWebService = new SolrWebService('http://localhost:8983/solr/ojs/search', 'admin', 'please change', 'test-inst');
 	}
@@ -65,7 +76,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	// Unit tests
 	//
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::retrieveResults()
 	 *
 	 * NB: Depends on correct journal indexing
 	 * and must therefore be run after testIndexJournal().
@@ -112,10 +123,20 @@ class SolrWebServiceTest extends PKPTestCase {
 		$searchRequest->setOrderDir('desc');
 		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		self::assertEquals(array(3, 4), array_values($scoredResults));
+
+		// Test translation of search terms.
+		// If the word "und" is not correctly translated to "AND" then
+		// the search should return results due to our "implicit OR" strategy.
+		// We confirm that by confirming that the two words without the keyword
+		// will return something.
+		$searchRequest->setQuery(array('galleyFullText' => 'nutella und quatsch'));
+		self::assertEmpty($this->solrWebService->retrieveResults($searchRequest, $totalResults));
+		$searchRequest->setQuery(array('galleyFullText' => 'nutella quatsch'));
+		self::assertNotEmpty($this->solrWebService->retrieveResults($searchRequest, $totalResults));
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::getAvailableFields()
 	 */
 	public function testGetAvailableFields() {
 		$embeddedServer = new EmbeddedServer();
@@ -125,17 +146,17 @@ class SolrWebServiceTest extends PKPTestCase {
 		$searchFields = $this->solrWebService->getAvailableFields('search');
 		foreach(array('authors', 'title', 'galleyFullText') as $fieldName) {
 			self::assertArrayHasKey($fieldName, $searchFields, "The search field $fieldName should exist.");
-			self::assertNotEmpty($searchFields[$fieldName], "The search field $fieldName should not be empty.");
+			self::assertFalse(empty($searchFields[$fieldName]), "The search field $fieldName should not be empty.");
 		}
 		$sortFields = $this->solrWebService->getAvailableFields('sort');
 		foreach(array('authors', 'issuePublicationDate') as $fieldName) {
 			self::assertArrayHasKey($fieldName, $sortFields, "The sort field $fieldName should exist.");
-			self::assertNotEmpty($sortFields[$fieldName], "The sort field $fieldName should not be empty.");
+			self::assertFalse(empty($sortFields[$fieldName]), "The sort field $fieldName should not be empty.");
 		}
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::getServerStatus()
 	 */
 	public function testGetServerStatus() {
 		// Make sure the server has been started.
@@ -150,14 +171,14 @@ class SolrWebServiceTest extends PKPTestCase {
 		$embeddedServer->stop();
 		while($embeddedServer->isRunning()) sleep(1);
 		self::assertEquals(SOLR_STATUS_OFFLINE, $this->solrWebService->getServerStatus());
-		self::assertEquals('##plugins.generic.lucene.error.searchServiceOffline##', $this->solrWebService->getServiceMessage());
+		self::assertEquals('##plugins.generic.lucene.message.searchServiceOffline##', $this->solrWebService->getServiceMessage());
 
 		// Restart the server.
 		$result = $this->_startServer($embeddedServer);
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::_getArticleXml()
 	 */
 	public function testGetArticleXml() {
 		// Generate test objects.
@@ -173,14 +194,14 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::deleteArticleFromIndex()
 	 */
 	public function testDeleteArticleFromIndex() {
 		self::assertTrue($this->solrWebService->deleteArticleFromIndex(3));
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::indexArticle()
 	 */
 	public function testIndexArticle() {
 		// Generate test objects.
@@ -193,13 +214,118 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService
+	 * @covers SolrWebService::deleteAllArticlesFromIndex()
 	 */
 	public function testDeleteAllArticlesFromIndex() {
 		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
 
 		// Rebuild the index.
 		$this->_indexTestJournals();
+	}
+
+	/**
+	 * @covers SolrWebService::getAutosuggestions()
+	 */
+	public function testGetAutosuggestions() {
+		// Fake a search request.
+		$searchRequest = new SolrSearchRequest();
+		$journal = new Journal();
+		$journal->setId(2);
+		$searchRequest->setJournal($journal);
+		$searchRequest->setQuery(
+			array('authors' => 'McAutomatic')
+		);
+
+		// Only the last word should be corrected. This also
+		// checks whether suggestions come from different fields.
+		self::assertEquals(
+			array('chic (AND wings', 'chic (AND wide'),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'query', 'chic (AND wi', SOLR_AUTOSUGGEST_SUGGESTER
+			)
+		);
+
+		// The faceting component will return no suggestions for
+		// the same query as it wouldn't return any results.
+		self::assertEquals(
+			array(),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'query', 'chic (AND wi', SOLR_AUTOSUGGEST_FACETING
+			)
+		);
+
+		// Even when we correct the first word, we'll not get
+		// results due to the fact that there's no such article
+		// with the author given in the search request.
+		self::assertEquals(
+			array(),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'query', 'chicken (AND wi', SOLR_AUTOSUGGEST_FACETING
+			)
+		);
+
+		// We start to get a result from the faceting component
+		// when we enter another author. But the result will only
+		// include suggestions that actually return something.
+		$searchRequest->setQuery(array('authors' => 'Peter Poultry'));
+		self::assertEquals(
+			array('chicken (AND wings'),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'query', 'chicken (AND wi', SOLR_AUTOSUGGEST_FACETING
+			)
+		);
+
+		$searchRequest->setQuery(array());
+		foreach(array(SOLR_AUTOSUGGEST_FACETING, SOLR_AUTOSUGGEST_SUGGESTER) as $autosuggestType) {
+			// When the last word cannot be improved then
+			// return no results.
+			self::assertEquals(
+				array(),
+				$this->solrWebService->getAutosuggestions(
+					$searchRequest, 'query', 'chicken AND dslgkhsi', $autosuggestType
+				)
+			);
+
+			// Check whether results for index term suggestions
+			// come from different sources (but not all sources).
+			// The following search should not return 'lucene' for
+			// example, which would come from a non-index field.
+			self::assertEquals(
+				array('lunch', 'lunchtime'),
+				$this->solrWebService->getAutosuggestions(
+					$searchRequest, 'indexTerms', 'lu', $autosuggestType
+				)
+			);
+		}
+
+		// Check one of the "simple" search fields, e.g. authors.
+		// This also shows that the suggester will propose terms
+		// from other journals. The author "tester" does not appear
+		// in the journal chosen for the search request above.
+		self::assertEquals(
+			array('tester'),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'authors', 'tes', SOLR_AUTOSUGGEST_SUGGESTER
+			)
+		);
+
+		// In the case of the faceting component this should not return
+		// any result as the author comes from a different journal.
+		self::assertEquals(
+			array(),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'authors', 'tes', SOLR_AUTOSUGGEST_FACETING
+			)
+		);
+
+		// This changes when we look for author names that
+		// exist in the journal.
+		self::assertEquals(
+			array('author', 'authorname'),
+			$this->solrWebService->getAutosuggestions(
+				$searchRequest, 'authors', 'au', SOLR_AUTOSUGGEST_FACETING
+			)
+		);
 	}
 
 
