@@ -111,7 +111,7 @@ class ViewReportPlugin extends ReportPlugin {
 		}
 
 		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=report.csv');
+		header('content-disposition: attachment; filename=views-' . date('Ymd') . '.csv');
 		$fp = fopen('php://output', 'wt');
 		fputcsv($fp, array_merge($columns, $galleyLabels));
 
