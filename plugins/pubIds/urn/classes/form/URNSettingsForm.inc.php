@@ -48,6 +48,7 @@ class URNSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'urnGalleySuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired', create_function('$urnGalleySuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableGalleyURN\')) return $urnGalleySuffixPattern != \'\';return true;'), array(&$this)));
 		$this->addCheck(new FormValidatorCustom($this, 'urnSuppFileSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired', create_function('$urnSuppFileSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableSuppFileURN\')) return $urnSuppFileSuffixPattern != \'\';return true;'), array(&$this)));
 		$this->addCheck(new FormValidator($this, 'namespace', 'required', 'plugins.pubIds.urn.manager.settings.form.namespaceRequired'));
+		$this->addCheck(new FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -117,7 +118,8 @@ class URNSettingsForm extends Form {
 			'urnGalleySuffixPattern' => 'string',
 			'urnSuppFileSuffixPattern' => 'string',
 			'checkNo' => 'bool',
-			'namespace' => 'string'
+			'namespace' => 'string',
+			'urnResolver' => 'string'
 		);
 	}
 }

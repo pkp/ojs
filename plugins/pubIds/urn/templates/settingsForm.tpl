@@ -143,6 +143,14 @@
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
 	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="urnResolver" required="true" key="plugins.pubIds.urn.manager.settings.urnResolver"}</td>
+		<td width="80%" class="value"><input type="text" name="urnResolver" value="{$urnResolver|escape}" size="40" maxlength="255" id="urnResolver" class="textField" />
+		<br />
+		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnResolver.description"}</span>
+		</td>
+	</tr>
+	<tr><td colspan="2">&nbsp;</td></tr>
+	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span>

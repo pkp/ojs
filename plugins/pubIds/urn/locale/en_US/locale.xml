@@ -42,6 +42,8 @@
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Choose</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">The persistent identifier namespace usually needed for the registration (e.g. at the Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(e.g. http://nbn-resolving.de/)</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Journal Content</message>
 	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Choose the objects the URNs should be assigned to.</message>
@@ -68,6 +70,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Please enter the URN suffix pattern for galleys.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Please enter the URN suffix pattern for supplementary files.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Please choose a namespace.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Please enter the resolver URL.</message>
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>

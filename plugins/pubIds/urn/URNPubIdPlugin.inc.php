@@ -232,8 +232,9 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($pubId) {
-		return 'http://nbn-resolving.de/'.$pubId;
+	function getResolvingURL($journalId, $pubId) {
+		$resolverURL = $this->getSetting($journalId, 'urnResolver');
+		return $resolverURL . $pubId;
 	}
 
 	/**

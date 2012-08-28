@@ -236,7 +236,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::getResolvingURL()
 	 */
-	function getResolvingURL($pubId) {
+	function getResolvingURL($journalId, $pubId) {
 		return 'http://dx.doi.org/'.urlencode($pubId);
 	}
 
