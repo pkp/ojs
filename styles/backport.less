@@ -1,0 +1,18 @@
+/**
+ * @file styles/backport.less
+ *
+ * Copyright (c) 2003-2012 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Temporary back-porting styles (until all apps are synchronized with OMP)
+ *
+ */
+
+/**
+ * The OOCSS library (included in OMP) removes styling from <li/> lists. It is
+ * assumed elsewhere (e.g. forms) that list items will not by default contain
+ * bullets. Mimic the same behavior here for the Citation Assistant.
+ */
+.pkp_form li {
+	list-style: none;
+}
