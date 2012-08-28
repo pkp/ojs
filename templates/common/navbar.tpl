@@ -9,7 +9,6 @@
  *}
 
 <div id="navbar">
-   <p style="color:red;font-size:95%;" id="message">The University of California Office of the President will undergo a network-wide maintenance from 11:30pm August 25th through 8:00am August 26th. All online services will be unavailable during that time.</p>
 	<ul class="menu">
 		{* 20110824 BLH comment out HOME menu item link b/c we aren't using this. *}
 		{*<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>*}
