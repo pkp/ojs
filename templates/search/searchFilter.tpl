@@ -21,11 +21,11 @@
 	{assign var="isEmptyFilter" value=0}
 {/if}
 {if ($displayIf == "emptyFilter" && $isEmptyFilter) || ($displayIf == "activeFilter" && !$isEmptyFilter)}
-	<tr valign="top">
+	<tr>
 		<td class="label">
 			<label for="{$filterName}">{translate key=$key}</label>
 		</td>
-		<td class="value">
+		<td class="value pkp_form">
 			{if $filterType == "date"}
 				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 				{if $filterName == "dateTo"}
@@ -34,7 +34,12 @@
 					<input type="hidden" name="dateToSecond" value="59" />
 				{/if}
 			{else}
-				<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField" />
+				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
+				{if empty($filterInput)}
+					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
+				{else}
+					{$filterInput}
+				{/if}
 			{/if}
 			{if $displayIf == "activeFilter"}
 				&nbsp;

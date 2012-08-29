@@ -13,19 +13,26 @@
 
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
 	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
-	<table>
-	<tr>
-		<td><input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" /></td>
-	</tr>
-	<tr>
-		<td><select name="searchField" size="1" class="selectMenu">
-			{html_options_translate options=$articleSearchByOptions}
-		</select></td>
-	</tr>
-	<tr>
-		<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
-	</tr>
-	</table>
+		<table id="simpleSearchInput">
+			<tr>
+				<td>
+				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue="" size=15}{/capture}
+				{if empty($filterInput)}
+					<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" />
+				{else}
+					{$filterInput}
+				{/if}
+				</td>
+			</tr>
+			<tr>
+				<td><select id="searchField" name="searchField" size="1" class="selectMenu">
+					{html_options_translate options=$articleSearchByOptions}
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
+			</tr>
+		</table>
 	</form>
 
 	<br />

@@ -11,42 +11,66 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="luceneSettings">
-<div id="description">{translate key="plugins.generic.lucene.settings.description"}</div>
-
-<div class="separator"></div>
-
-<br />
 
 <form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
+<h3>{translate key="plugins.generic.lucene.settings.solrServerSettings"}</h3>
+
+<div id="description"><p>{translate key="plugins.generic.lucene.settings.description"}</p></div>
+<div class="separator"></div>
+<br />
+
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="searchEndpoint" required="true" key="plugins.generic.lucene.settings.searchEndpoint"}</td>
-		<td width="80%" class="value"><input type="text" name="searchEndpoint" id="searchEndpoint" value="{$searchEndpoint|escape}" size="45" maxlength="255" class="textField" />
+		<td class="value"><input type="text" name="searchEndpoint" id="searchEndpoint" value="{$searchEndpoint|escape}" size="45" maxlength="255" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.searchEndpointInstructions"}</span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="username" required="true" key="plugins.generic.lucene.settings.username"}</td>
-		<td width="80%" class="value"><input type="text" name="username" id="username" value="{$username|escape}" size="15" maxlength="25" class="textField" />
+		<td class="label">{fieldLabel name="username" required="true" key="plugins.generic.lucene.settings.username"}</td>
+		<td class="value"><input type="text" name="username" id="username" value="{$username|escape}" size="15" maxlength="25" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.usernameInstructions"}</span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="password" required="true" key="plugins.generic.lucene.settings.password"}</td>
-		<td width="80%" class="value"><input type="password" name="password" id="password" value="{$password|escape}" size="15" maxlength="25" class="textField" />
+		<td class="label">{fieldLabel name="password" required="true" key="plugins.generic.lucene.settings.password"}</td>
+		<td class="value"><input type="password" name="password" id="password" value="{$password|escape}" size="15" maxlength="25" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.passwordInstructions"}</span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="instId" required="true" key="plugins.generic.lucene.settings.instId"}</td>
-		<td width="80%" class="value"><input type="text" name="instId" id="instId" value="{$instId|escape}" size="15" maxlength="25" class="textField" />
+		<td class="label">{fieldLabel name="instId" required="true" key="plugins.generic.lucene.settings.instId"}</td>
+		<td class="value"><input type="text" name="instId" id="instId" value="{$instId|escape}" size="15" maxlength="25" class="textField" />
 			<br />
 			<span class="instruct">{translate key="plugins.generic.lucene.settings.instIdInstructions"}</span>
+		</td>
+	</tr>
+</table>
+
+<br />
+
+<h3>{translate key="plugins.generic.lucene.settings.searchFeatures"}</h3>
+
+<div id="featureDescription"><p>{translate key="plugins.generic.lucene.settings.featureDescription"}</p></div>
+<div class="separator"></div>
+<br />
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label" align="right"><input type="checkbox" name="autosuggest" id="autosuggest" {if $autosuggest}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="autosuggest">{translate key="plugins.generic.lucene.settings.autosuggest"}</label>&nbsp;
+			<select name="autosuggestType" id="autosuggestType" class="selectMenu">
+				{html_options options=$autosuggestTypes selected=$autosuggestType}
+			</select>
+			<br />
+			<br />
+			<span class="instruct">{translate key="plugins.generic.lucene.settings.autosuggestTypeExplanation"}</span>
 		</td>
 	</tr>
 </table>
