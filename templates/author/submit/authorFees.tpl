@@ -35,6 +35,6 @@
 	<br />{$currentJournal->getLocalizedSetting('publicationFeeDescription')|nl2br}</p>	
 {/if}
 {if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}
-	<p>{$currentJournal->getLocalizedSetting('waiverPolicy')}</p>
+	<p>{$currentJournal->getLocalizedSetting('waiverPolicy')|nl2br}</p>
 {/if}
 </div>

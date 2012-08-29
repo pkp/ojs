@@ -162,6 +162,16 @@ class TinyMCEPlugin extends GenericPlugin {
 				}
 				$fields[] = 'abstract';
 				break;
+			case 'manager/payments':
+				$fields[] = 'submissionFeeDescription';
+				$fields[] = 'fastTrackFeeDescription';
+				$fields[] = 'publicationFeeDescription';
+				$fields[] = 'waiverPolicy';
+				$fields[] = 'purchaseIssueFeeDescription';
+				$fields[] = 'purchaseArticleFeeDescription';
+				$fields[] = 'membershipFeeDescription';
+				$fields[] = 'donationFeeDescription';
+				break;
 			case 'user/profile':
 			case 'user/register':
 			case 'user/saveProfile':
