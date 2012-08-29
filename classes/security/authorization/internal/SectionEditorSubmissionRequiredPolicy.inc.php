@@ -12,15 +12,15 @@
  *  editor submission.
  */
 
-import('lib.pkp.classes.security.authorization.SubmissionRequiredPolicy');
+import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
 
-class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
+class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
 	/**
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
 	function SectionEditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
-		parent::SubmissionRequiredPolicy($request, $args, $submissionParameterName, 'user.authorization.invalidSectionEditorSubmission');
+		parent::DataObjectRequiredPolicy($request, $args, $submissionParameterName, 'user.authorization.invalidSectionEditorSubmission');
 	}
 
 	//
@@ -31,7 +31,7 @@ class SectionEditorSubmissionRequiredPolicy extends SubmissionRequiredPolicy {
 	 */
 	function effect() {
 		// Get the submission id.
-		$submissionId = $this->getSubmissionId();
+		$submissionId = $this->getDataObjectId();
 		if ($submissionId === false) return AUTHORIZATION_DENY;
 
 		// Validate the section editor submission id.
