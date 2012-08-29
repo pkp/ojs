@@ -1237,4 +1237,44 @@ a.request_review { background-image:url(../lib/pkp/templates/images/structure/gr
   border-top:1px solid #6aa6d6;
   border-bottom:1px solid #6aa6d6;
 }
-@import url("styles/controllers/modal.less");
+.pkp_controllers_modal_titleBar {
+  height:48px;
+  width:100%;
+  margin-top:10px;
+  margin-right:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #efefef;
+}
+.pkp_controllers_modal_titleBar h2 {
+  margin-left:20px;
+  font-style:italic;
+}
+.pkp_controllers_modal_titleBar .close {
+  float:right;
+  padding-right:10px;
+}
+.xIcon {
+  background-image:url(../lib/pkp/templates/images/structure/modal_close_icon.png);
+  height:23px;
+  width:23px !important;
+  background-repeat:no-repeat;
+  display:block;
+  overflow:hidden;
+  text-indent:-99999px;
+  border:none !important;
+}
+.modal-buttons {
+  margin:0px 0px 15px 0px;
+  padding:0px 20px 0px 20px;
+  overflow:hidden;
+  vertical-align:middle;
+  line-height:30px;
+}
+.ui-dialog .ui-tabs-panel { padding:0px; }
+.ui-widget-overlay {
+  background:#333333 50% 50% repeat-x;
+  opacity:0.8;
+}
+.ui-dialog { background-color:#f7f5f4; }
+.ui-dialog-content { background-color:#ffffff !important; }
+.ui-dialog-buttonpane { border-color:#f7f5f4; }
