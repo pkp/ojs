@@ -26,7 +26,7 @@
 	<message key="editor.allSections">Alle Rubriken</message>
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
-	<message key="editor.publicIdentificationExists">Die Ausgabenkennzeichnung  '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
+	<message key="editor.publicIdentificationExists">Die Ausgabenkennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
 	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag im Archiv</message>
 	<message key="editor.submissionArchive.saveChanges">Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>
@@ -35,14 +35,14 @@
 	<message key="editor.submissionReview.cannotSendToCopyediting">Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Ins Lektorat überweisen</message>
 	<message key="editor.notifyUsers">Benutzer/innen benachrichtigen</message>
-	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift  ({$count} Benutzer/innen) senden</message>
+	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
 	<message key="editor.notifyUsers.allReaders">Alle Leser/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.inProgress">Benutzer/innen werden benachrichtigt…</message>
 	<message key="editor.usersNotified">Benutzer/innen benachrichtigt</message>
-	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift  ({$count} Benutzer/innen) senden</message>
+	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
 	<message key="editor.notifyUsers.interestedUsers">Mitteilung an alle Benutzer/innen senden, die angegeben haben, dass Sie auf dem Laufenden gehalten werden wollen ({$count} Benutzer/innen)</message>
 	<message key="editor.notifyUsers.includeToc">Das Inhaltsverzeichnis dieser Ausgabe anfügen:</message>
 	<message key="editor.editorAdministration">Redaktionsaufgaben</message>
@@ -88,7 +88,7 @@
 	<message key="editor.issues.cover">Titelseite</message>
 	<message key="editor.issues.confirmIssueDelete">Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden Beiträge und alle Zusatzdateien werden endgültig gelöscht. </message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href="{$url}" class="action">Auf den Standard zurücksetzen</a>]]></message>
-	<message key="editor.issues.resetIssueOrder"><![CDATA[Diese Zeitschrift benutzt eine spezielle Ausgabensortierung.  <a href="{$url}" class="action">Standard wiederherstellen</a>]]></message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Diese Zeitschrift benutzt eine spezielle Ausgabensortierung. <a href="{$url}" class="action">Standard wiederherstellen</a>]]></message>
 	<message key="editor.issues.issueData">Daten der Ausgabe</message>
 	<message key="editor.issues.saveChanges">Änderungen im Inhaltsverzeichnis speichern?</message>
 	<message key="editor.issues.default">Standard</message>

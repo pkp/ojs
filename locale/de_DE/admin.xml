@@ -41,7 +41,7 @@
 	<message key="admin.auth.enableCreateUsers">Die Einrichtung eines Benutzer/innen-Profils ermöglichen, falls diese Funktion durch dieses Programm (authentication plug-in) unterstützt wird. Benutzer/innen-Profile, die im OJS mit Hilfe dieser Authentifizierungsquelle eingerichtet werden, werden automatisch auch der Quelldatei hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Sollte diese Quelldatei die Standardauthentifizierungsquelle sein, werden auch die OJS-Konten, die bei der Registrierung von Benutzer/innen entstehen, der Authentifizierungsquelle hinzugefügt.</message>
 	<message key="admin.systemVersion">OJS-Version</message>
 	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei  <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
 	<message key="admin.journals.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
@@ -57,7 +57,7 @@
 	<message key="admin.journal.pathImportInstructions">Existierender oder einzurichtender Zugangspfad zur Zeitschrift (z.B. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Abonnements importieren</message>
 	<message key="admin.journals.transcode">Metadaten des Artikels aus ISO 8859-1 umkodieren</message>
-	<message key="admin.journals.redirect">Code generieren, um OJS1-URLs auf OJS2.ULRs zu mappen</message>
+	<message key="admin.journals.redirect">Code generieren, um OJS-1-URL auf OJS-2-URL zu mappen</message>
 	<message key="admin.journals.form.importPathRequired">Es muss ein Importpfad angegeben werden.</message>
 	<message key="admin.journals.importErrors">Der Import ist fehlgeschlagen.</message>
 	<message key="admin.mergeUsers">Benutzer/innen-Daten zusammenführen</message>
@@ -65,7 +65,7 @@
 	<message key="admin.mergeUsers.into.description">Bitte wählen Sie eine/n Benutzer/in aus, der oder dem Autor/in/innenstatus, Redaktionsaufgaben etc. der vorherigen Benutzerin/des vorherigen Benutzers übertragen werden sollen.</message>
 	<message key="admin.mergeUsers.from.description">Bitte wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Benutzer/innen-Konto zusammengefasst werden sollen (z.B. wenn jemand zwei Benutzer/innen-Zugänge besitzt). Der zuerst ausgewählte Zugang wird gelöscht und seine Beiträge, Aufgaben etc. werden dem zweiten Konto zugeordnet.</message>
 	<message key="admin.mergeUsers.allUsers">Alle registrierten Benutzer/innen</message>
-	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie den Datensatz mit dem Benutzer/innen-Namen "{$oldUsername}" in den Datensatz mit dem Benutzer/innen-Namen "{$newUsername}" übertragen wollen? Der Datensatz mit dem Benutzer/innen-Namen "{$oldUsername}" wird dabei gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</message>
+	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen "{$newUsername}" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
 
 	<!-- Kategorien -->
