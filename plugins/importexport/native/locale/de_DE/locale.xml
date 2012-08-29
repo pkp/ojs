@@ -123,6 +123,10 @@ Folgende Formate sind gültig:
 	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Ein Sponsor von Zusatzdateien ("{$suppFileTitle}") für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Eine Quelle von Zusatzdateien ("{$suppFileTitle}") für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 
+	<message key="plugins.importexport.native.import.error.invalidPubId">Ihre Importdatei enthält einen Datensatz mit ungültigem/ungültiger {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Ihre Importdatei enthält einen Datensatz mit {$pubIdType} '{$pubId}'; diese ID existiert bereits für ein anderes Objekt in der Datenbank. Bitte stellen Sie sicher, dass Sie nie Objekte mit bereits vergebener ID in die Datenbank importieren.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Ihre Importdatei enthält einen Datensatz mit einem Bezeichnertyp '{$pubIdType}', den kein Bezeichner-Plug-In verarbeiten kann. Bitte installieren und/oder aktivieren Sie das entsprechende Bezeichner-Plug-In, bevor Sie versuchen, diesen Datensatz zu importieren.</message>
+
 	<message key="plugins.importexport.native.import.success">Import erfolgreich</message>
 	<message key="plugins.importexport.native.import.success.description">Der Import war erfolgreich. Die erfolgreich importierten Elemente sind unten aufgeführt.</message>
 
