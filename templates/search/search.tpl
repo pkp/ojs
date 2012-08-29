@@ -23,8 +23,14 @@
 			<tr valign="top">
 				<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
 				<td class="value">
-					<input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" />
-					&nbsp;<input type="submit" value="{translate key="common.search"}" class="button defaultButton" />
+					{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
+					{if empty($queryFilter)}
+						<input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" />
+					{else}
+						{$queryFilter}
+					{/if}
+					&nbsp;
+					<input type="submit" value="{translate key="common.search"}" class="button defaultButton" />
 				</td>
 			</tr>
 			{if $siteSearch}

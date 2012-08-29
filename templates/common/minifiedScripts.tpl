@@ -35,6 +35,7 @@
 
 {* Specific controllers *}
 <script type="text/javascript" src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
+<script type="text/javascript" src="{$baseUrl}/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
 
 {* Our own plug-in (depends on classes) *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>

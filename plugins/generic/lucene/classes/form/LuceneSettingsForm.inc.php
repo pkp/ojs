@@ -14,6 +14,7 @@
 
 
 import('lib.pkp.classes.form.Form');
+import('lib.pkp.classes.form.validation.FormValidatorBoolean');
 
 // These are the first few letters of an md5 of '##placeholder##'.
 // FIXME: Any better idea how to prevent a password clash?
@@ -32,11 +33,16 @@ class LuceneSettingsForm extends Form {
 		$this->_plugin =& $plugin;
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
+		// Server configuration.
 		$this->addCheck(new FormValidatorUrl($this, 'searchEndpoint', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.searchEndpointRequired'));
 		// The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
 		$this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.usernameRequired', '/^[^:]+$/'));
 		$this->addCheck(new FormValidator($this, 'password', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.passwordRequired'));
 		$this->addCheck(new FormValidator($this, 'instId', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.instIdRequired'));
+
+		// Search feature configuration.
+		$this->addCheck(new FormValidatorBoolean($this, 'autosuggest', 'plugins.generic.lucene.settings.internalError'));
+		$this->addCheck(new FormValidatorInSet($this, 'autosuggestType', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.internalError', array_keys($this->_getAutosuggestTypes())));
 	}
 
 
@@ -70,6 +76,15 @@ class LuceneSettingsForm extends Form {
 	}
 
 	/**
+	 * @see Form::fetch()
+	 */
+	function fetch(&$request, $template = null, $display = false) {
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->assign('autosuggestTypes', $this->_getAutosuggestTypes());
+		parent::fetch($request, $template, $display);
+	}
+
+	/**
 	 * @see Form::execute()
 	 */
 	function execute() {
@@ -91,7 +106,21 @@ class LuceneSettingsForm extends Form {
 	 * @return array
 	 */
 	function _getFormFields() {
-		return array('searchEndpoint', 'username', 'instId');
+		return array(
+			'searchEndpoint', 'username', 'instId',
+			'autosuggest', 'autosuggestType'
+		);
+	}
+
+	/**
+	 * Return a list of auto-suggest types.
+	 * @return array
+	 */
+	function _getAutosuggestTypes() {
+		return array(
+			SOLR_AUTOSUGGEST_SUGGESTER => __('plugins.generic.lucene.settings.autosuggestTypeSuggester'),
+			SOLR_AUTOSUGGEST_FACETING => __('plugins.generic.lucene.settings.autosuggestTypeFaceting')
+		);
 	}
 }
 

@@ -13,6 +13,31 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.lucene.displayName">Lucene-Suche-Plug-In</message>
 	<message key="plugins.generic.lucene.description">Das Lucene-Suche-Plug-In bietet Unterstützung von Mehrsprachigkeit, verbesserte Relevanz der Suchergebnisse, schnellere Indizierung, bessere Skalierung und mehr.</message>
+	
+	<message key="plugins.generic.lucene.message.searchServiceOffline">Leider ist der OJS-Suchdienst momentan offline. Die/der technische Administrator/in ist über das Problem informiert worden.</message>
+	<message key="plugins.generic.lucene.message.coreNotFound">Der angeforderte Kern '{$core}' wurde nicht auf dem Solr-Server gefunden. Ist er online?</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Index mit {$numDocs} Dokumenten online.</message>
+	
+	<message key="plugins.generic.lucene.results.orderBy">Ergebnisse sortieren nach</message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevanz</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">Autor/in</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">Ausgabe</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">Veröffentlichungsdatum</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">Titel der Zeitschrift</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">Titel des Artikels</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">Aufsteigend</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">Absteigend</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
+<li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
+<li>Häufig auftretende Wörter werden ignoriert.</li>
+<li>Standardmäßig werden alle Artikel aufgelistet, die mindestens <em>einen</em> Suchbegriff der Anfrage enthalten (d.h. <em>ODER</em> ist impliziert).</li>
+<li>Erzwingen Sie, dass ein Wort in einem Artikel existiert, indem Sie dem Wort ein <strong>+</strong> voranstellen; z.B. <em>+journal +access scholarly academic</em>.</li>
+<li>Kombinieren Sie mehrere Wörter mit <em>UND</em>, um Artikel zu finden, die alle Begriffe enthalten; z.B. <em>Bildung UND Forschung</em></li>
+<li>Schließen Sie ein Wort aus, indem Sie ihm ein <strong>-</strong> oder <em>NICHT</em> voranstellen; z.B. <em>online -politics</em> oder <em>online NICHT politics</em></li>
+<li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen; z.B. <em>"open access publishing"</em></li>
+<li>Nutzen Sie Klammern für komplexere Suchanfragen; z.B. <em>Archive ((Zeitschrift UND Konferenz) NICHT Dissertationen)</em></li>
+</ul>]]></message>
+
 	<message key="plugins.generic.lucene.settings">Einstellungen</message>
 	<message key="plugins.generic.lucene.settings.description"><![CDATA[
 		<p>Das Lucene-Suche-Plug-In greift mittels eines Solr-Servers auf den Lucene-Suchindex zu. Diese Konfigurationsseite erlaubt Ihnen, den Zugang zu dem Solr-Server einzustellen.</p>
@@ -32,29 +57,4 @@
 	<message key="plugins.generic.lucene.settings.username">Benutzer/innenname</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">Der Solr-Suchserver benutzt HTTP BASIC authentication. Bitte geben Sie den Benutzer/innennamen an.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Bitte geben Sie einen gültigen Benutzer/innennamen an, um auf den Solr-Suchserver zuzugreifen (Doppelpunkte sind nicht zulässig).</message>
-	
-	<message key="plugins.generic.lucene.results.orderBy">Ergebnisse sortieren nach</message>
-	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevanz</message>
-	<message key="plugins.generic.lucene.results.orderBy.author">Autor/in</message>
-	<message key="plugins.generic.lucene.results.orderBy.issue">Ausgabe</message>
-	<message key="plugins.generic.lucene.results.orderBy.date">Veröffentlichungsdatum</message>
-	<message key="plugins.generic.lucene.results.orderBy.journal">Titel der Zeitschrift</message>
-	<message key="plugins.generic.lucene.results.orderBy.article">Titel des Artikels</message>
-	<message key="plugins.generic.lucene.results.orderDir.asc">Aufsteigend</message>
-	<message key="plugins.generic.lucene.results.orderDir.desc">Absteigend</message>
-
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
-<li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
-<li>Häufig auftretende Wörter werden ignoriert.</li>
-<li>Standardmäßig werden alle Artikel aufgelistet, die mindestens <em>einen</em> Suchbegriff der Anfrage enthalten (d.h. <em>ODER</em> ist impliziert).</li>
-<li>Erzwingen Sie, dass ein Wort in einem Artikel existiert, indem Sie dem Wort ein <strong>+</strong> voranstellen; z.B. <em>+journal +access scholarly academic</em>.</li>
-<li>Kombinieren Sie mehrere Wörter mit <em>UND</em>, um Artikel zu finden, die alle Begriffe enthalten; z.B. <em>Bildung UND Forschung</em></li>
-<li>Schließen Sie ein Wort aus, indem Sie ihm ein <strong>-</strong> oder <em>NICHT</em> voranstellen; z.B. <em>online -politics</em> oder <em>online NICHT politics</em></li>
-<li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen; z.B. <em>"open access publishing"</em></li>
-<li>Nutzen Sie Klammern für komplexere Suchanfragen; z.B. <em>Archive ((Zeitschrift UND Konferenz) NICHT Dissertationen)</em></li>
-</ul>]]></message>
-	
-	<message key="plugins.generic.lucene.error.searchServiceOffline">Leider ist der OJS-Suchdienst momentan offline. Die/der technische Administrator/in ist über das Problem informiert worden.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">Der angeforderte Kern '{$core}' wurde nicht auf dem Solr-Server gefunden. Ist er online?</message>
-	<message key="plugins.generic.lucene.message.indexOnline">Index mit {$numDocs} Dokumenten online.</message>
 </locale>
