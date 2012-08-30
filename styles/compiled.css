@@ -746,6 +746,13 @@ table.pkp_listing td.separator {
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter:alpha(opacity=30);
 }
+.error { color:#990000; }
+span.pkp_form_error {
+  color:#990000;
+  font-weight:bold;
+  font-size:1em;
+}
+.pkp_form_error_list a { color:#990000; }
 .pkp_form .pkp_formArea p {
   margin:0px;
   padding:0px;
@@ -770,13 +777,6 @@ table.pkp_listing td.separator {
   font-weight:bold;
   padding:3px 0 3px 0;
 }
-.pkp_form .error { color:#990000; }
-.pkp_form span.pkp_form_error {
-  color:#990000;
-  font-weight:bold;
-  font-size:1em;
-}
-.pkp_form .pkp_form_error_list a { color:#990000; }
 .pkp_form span.pkp_form_success {
   color:#009900;
   font-weight:bold;

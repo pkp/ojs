@@ -13,12 +13,11 @@
 {/strip}
 
 <ul>
-<li class="pkp_form">
-	<span{if $error} class="pkp_form_error"{/if}>
-		{translate key="notification.$status"}
-	</span>
-</li>
+	<li>
+		<span{if $error} class="pkp_form_error"{/if}>
+			{translate key="notification.$status"}
+		</span>
+	</li>
 <ul>
 
 {include file="common/footer.tpl"}
-
