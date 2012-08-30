@@ -145,7 +145,7 @@ class SearchHandler extends Handler {
 		);
 
 		// Prepare and display the search template.
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign('jsLocaleKeys', array('search.noKeywordError'));

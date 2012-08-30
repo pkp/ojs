@@ -25,7 +25,7 @@
 		<td class="label">
 			<label for="{$filterName}">{translate key=$key}</label>
 		</td>
-		<td class="value pkp_form">
+		<td class="value">
 			{if $filterType == "date"}
 				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 				{if $filterName == "dateTo"}

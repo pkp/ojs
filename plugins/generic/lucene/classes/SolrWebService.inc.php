@@ -250,10 +250,10 @@ class SolrWebService extends XmlWebService {
 		$response = $this->_makeRequest($url, $params);
 
 		// Did we get a result?
-		if (is_null($response)) return $response;
+		if (is_null($response)) return null;
 
 		// Get the total number of documents found.
-		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
+		$nodeList = $response->query('/response/result[@name="response"]/@numFound');
 		assert($nodeList->length == 1);
 		$resultNode = $nodeList->item(0);
 		assert(is_numeric($resultNode->textContent));
@@ -261,7 +261,7 @@ class SolrWebService extends XmlWebService {
 
 		// Run through all returned documents and read the ID fields.
 		$results = array();
-		$docs =& $response->query('//response/result/doc');
+		$docs =& $response->query('/response/result/doc');
 		foreach ($docs as $doc) {
 			$currentDoc = array();
 			foreach ($doc->childNodes as $docField) {
@@ -1349,12 +1349,12 @@ class SolrWebService extends XmlWebService {
 		// Check whether the suggestion really concerns the
 		// last word of the user input.
 		if (!(isset($startOffset) && isset($endOffset)
-			&& strlen($userInput) == $endOffset)) return array();
+			&& String::strlen($userInput) == $endOffset)) return array();
 
 		// Replace the last word in the user input
-		// with the suggestions.
+		// with the suggestions maintaining case.
 		foreach($suggestions as &$suggestion) {
-			$suggestion = substr($userInput, 0, $startOffset) . $suggestion;
+			$suggestion = $userInput . String::substr($suggestion, $endOffset - $startOffset);
 		}
 		return $suggestions;
 	}
@@ -1380,7 +1380,7 @@ class SolrWebService extends XmlWebService {
 		// facet results. This may be an invalid query
 		// but edismax will deal gracefully with syntax
 		// errors.
-		$userInput = substr($userInput, 0, -strlen($facetPrefix));
+		$userInput = String::substr($userInput, 0, -String::strlen($facetPrefix));
 		switch ($fieldName) {
 			case 'query':
 				// The 'query' filter goes agains all fields.
@@ -1411,23 +1411,29 @@ class SolrWebService extends XmlWebService {
 		} else {
 			$params['facet.field'] = $fieldName . '_spell';
 		}
-		$params['facet.prefix'] = $facetPrefix;
+		$facetPrefixLc = String::strtolower($facetPrefix);
+		$params['facet.prefix'] = $facetPrefixLc;
 
 		// Make the request.
 		$response = $this->_makeRequest($url, $params);
 		if (!is_a($response, 'DOMXPath')) return array();
 
-		// Extract suggestions.
+		// Extract term suggestions.
 		$nodeList = $response->query('//lst[@name="facet_fields"]/lst/int/@name');
 		if ($nodeList->length == 0) return array();
-		$suggestions = array();
+		$termSuggestions = array();
 		foreach($nodeList as $childNode) {
-			$suggestions[] = $childNode->value;
+			$termSuggestions[] = $childNode->value;
 		}
 
-		// Add the suggestion to the remaining user input.
-		foreach($suggestions as &$suggestion) {
-			$suggestion = $userInput . $suggestion;
+		// Add the term suggestion to the remaining user input.
+		$suggestions = array();
+		foreach($termSuggestions as $termSuggestion) {
+			// Restore case if possible.
+			if (strpos($termSuggestion, $facetPrefixLc) === 0) {
+				$termSuggestion = $facetPrefix . String::substr($termSuggestion, String::strlen($facetPrefix));
+			}
+			$suggestions[] = $userInput . $termSuggestion;
 		}
 		return $suggestions;
 	}
