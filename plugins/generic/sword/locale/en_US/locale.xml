@@ -14,7 +14,6 @@
 	<message key="plugins.generic.sword.displayName">SWORD Plugin</message>
 	<message key="plugins.generic.sword.description">Allow Journal Managers and (optionally) Authors to deposit articles via the SWORD protocol</message>
 	<message key="plugins.generic.sword.enabled">The SWORD plugin has been enabled.</message>
-	<message key="plugins.generic.sword.disable">The SWORD plugin has been disabled.</message>
 	<message key="plugins.generic.sword.settings">Settings</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Allow the author to specify a deposit point</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Deposit Points</message>
