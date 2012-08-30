@@ -2332,7 +2332,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function notifyAuthorProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -2349,7 +2349,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function thankAuthorProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -2402,7 +2402,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function notifyProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -2419,7 +2419,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function thankProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -2477,7 +2477,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function notifyLayoutEditorProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
@@ -2502,7 +2502,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function thankLayoutEditorProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$send = (int) $request->getUserVar('send');
+		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate(true, $articleId, 'editing');
 
