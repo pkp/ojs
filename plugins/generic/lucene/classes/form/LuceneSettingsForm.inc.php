@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.form.Form');
 
+// These are the first few letters of an md5 of '##placeholder##'.
+// FIXME: Any better idea how to prevent a password clash?
+define('LUCENE_PLUGIN_PASSWORD_PLACEHOLDER', '##5ca39841ab##');
+
 class LuceneSettingsForm extends Form {
 
 	/** @var $plugin LucenePlugin */
@@ -47,6 +51,8 @@ class LuceneSettingsForm extends Form {
 		foreach ($this->_getFormFields() as $fieldName) {
 			$this->setData($fieldName, $plugin->getSetting(0, $fieldName));
 		}
+		// We do not echo back the real password.
+		$this->setData('password', LUCENE_PLUGIN_PASSWORD_PLACEHOLDER);
 	}
 
 	/**
@@ -54,6 +60,13 @@ class LuceneSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars($this->_getFormFields());
+		$request = PKPApplication::getRequest();
+		$password = $request->getUserVar('password');
+		if ($password === LUCENE_PLUGIN_PASSWORD_PLACEHOLDER) {
+			$plugin =& $this->_plugin;
+			$password = $plugin->getSetting(0, 'password');
+		}
+		$this->setData('password', $password);
 	}
 
 	/**
@@ -61,7 +74,9 @@ class LuceneSettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin =& $this->_plugin;
-		foreach($this->_getFormFields() as $formField) {
+		$formFields = $this->_getFormFields();
+		$formFields[] = 'password';
+		foreach($formFields as $formField) {
 			$plugin->updateSetting(0, $formField, $this->getData($formField), 'string');
 		}
 	}
@@ -76,7 +91,7 @@ class LuceneSettingsForm extends Form {
 	 * @return array
 	 */
 	function _getFormFields() {
-		return array('searchEndpoint', 'username', 'password', 'instId');
+		return array('searchEndpoint', 'username', 'instId');
 	}
 }
 
