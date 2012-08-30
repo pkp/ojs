@@ -45,6 +45,14 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 	// Implement template methods from PKPTestCase
 	//
 	/**
+	 * @see PKPTestCase::setUp()
+	 */
+	protected function setUp() {
+		parent::setUp();
+		$this->enableAutocompletion();
+	}
+
+	/**
 	 * @see PKPTestCase::tearDown()
 	 */
 	protected function tearDown() {
@@ -54,6 +62,9 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 	}
 
 
+	//
+	// Tests
+	//
 	/**
 	 * BACKGROUND:
 	 *   GIVEN I enabled the auto-completion feature
@@ -63,7 +74,7 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 		// Enable the search feature.
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'autosuggest', true);
 		// Use the faceting implementation so that our scope tests will work.
-		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'auttosuggestType', SOLR_AUTOSUGGEST_FACETING);
+		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'autosuggestType', SOLR_AUTOSUGGEST_FACETING);
 	}
 
 
@@ -81,17 +92,16 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 	 *   search scope | search field | letters | proposals                     | not in scope
 	 *   =============================================================================================
 	 *   all journals | query        | ar      | article, arthur, are, artikel |
-	 *   lucene-test  | query        | ar      | article, arthur, are          | artikel
+	 *   lucene-test  | query        | Ar      | Article, Arthur, Are          | artikel
 	 *   lucene-test  | authors      | ar      | arthur                        | article, artikel, are
 	 */
 	public function testAutocompletionForSimpleSearch() {
 		$examples = array(
 			array('index', 'query', 'ar', array('article', 'arthur', 'are', 'artikel')),
-			array('lucene-test', 'query', 'ar', array('article', 'arthur', 'are')),
+			array('lucene-test', 'query', 'Ar', array('Article', 'Arthur', 'Are')),
 			array('lucene-test', 'authors', 'ar', array('arthur'))
 		);
 
-		$this->enableAutocompletion();
 		foreach($examples as $example) {
 			// Read the example.
 			list($searchScope, $searchField, $letters, $proposals) = $example;
@@ -130,23 +140,24 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 	 *     AND I'll not see proposals that are {not in scope}.
 	 *
 	 * EXAMPLES:
-	 *   search scope | search field   | letter | proposals            | not in scope
-	 *   ==============================================================================
-	 *   all journals | all categories | te     | test, tester, tests  |
-	 *   lucene-test  | all categories | te     | test, tests          | tester
-	 *   lucene-test  | authors        | au     | author, authorname   |
-	 *   all journals | title          | te     | test, testartikel    |
-	 *   lucene-test  | title          | te     | test                 | testartikel
-	 *   lucene-test  | full text      | nu     | nutella              |
-	 *   lucene-test  | suppl. files   | ma     | mango                |
-	 *   lucene-test  | discipline     | die    | dietary              |
-	 *   all journals | keywords       | t      | topology, time       |
-	 *   all journals | keywords       | to     | topology             | time
-	 *   lucene-test  | keywords       | t      | time                 | topology, test
-	 *   lucene-test  | type           | ex     | experienc            | exotic
-	 *   lucene-test  | coverage       | c      | century              | chicken
+	 *   search scope | search field   | letter | proposals                           | not in scope
+	 *   ===========================================================================================
+	 *   all journals | all categories | te     | test, tester, tests, testen, tester |
+	 *   lucene-test  | all categories | te     | test, tests                         | tester
+	 *   lucene-test  | authors        | au     | author, authorname                  |
+	 *   all journals | title          | te     | test, testartikel                   |
+	 *   lucene-test  | title          | te     | test                                | testartikel
+	 *   lucene-test  | full text      | nu     | nutella                             |
+	 *   lucene-test  | suppl. files   | ma     | mango                               |
+	 *   lucene-test  | discipline     | die    | dietary                             |
+	 *   all journals | keywords       | top    | topology, topologische              |
+	 *   lucene-test  | keywords       | lun    | lunch, lunchtime                    |
+	 *   lucene-test  | type           | ex     | experience                          | exotic
+	 *   lucene-test  | coverage       | ce     | century                             | chicken
 	 */
 	public function testAutocompletionForAdvancedSearch() {
+		// Examples w/o explicit out-of-scope test which will be implicit, see
+		// comment below in the code.
 		$examples = array(
 			array('index', 'query', 'te', array('test', 'tests', 'testartikel', 'testen', 'tester')),
 			array('lucene-test', 'query', 'te', array('test', 'tests')),
@@ -162,7 +173,6 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 			array('lucene-test', 'coverage', 'ce', array('century'))
 		);
 
-		$this->enableAutocompletion();
 		foreach($examples as $example) {
 			// Read the example.
 			list($searchScope, $searchField, $letters, $proposals) = $example;

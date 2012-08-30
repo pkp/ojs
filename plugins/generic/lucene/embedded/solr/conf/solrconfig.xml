@@ -70,7 +70,7 @@
       <arr name="queries">
         <!-- Load the auto-suggestion dictionary on warm up. -->
         <lst>
-          <str name="qt">/suggest</str>
+          <str name="qt">/dictBasedSuggest</str>
           <str name="spellcheck.build">true</str>
         </lst>
       </arr>
@@ -113,7 +113,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
       <str name="name">title</str>
@@ -153,7 +152,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
       <str name="name">subject</str>
@@ -161,7 +159,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
       <str name="name">type</str>
@@ -169,7 +166,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
       <str name="name">coverage</str>
@@ -177,7 +173,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
       <str name="name">indexTerms</str>
@@ -185,7 +180,6 @@
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
       <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
     </lst>
     <!-- END -->
   </searchComponent>
@@ -244,7 +238,7 @@
          disadvantage: slower, uses lots of memory, does not scale well -->
   <!-- The lines between START and END may be commented out to disable faceting-based autocompletion -->
   <!-- START -->
-  <requestHandler name="/facetBasedSuggest" class="solr.StandardRequestHandler" default="true">
+  <requestHandler name="/facetBasedSuggest" class="solr.StandardRequestHandler">
     <lst name="invariants">
       <str name="echoParams">none</str>
       <str name="defType">edismax</str>
