@@ -227,6 +227,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
+		$this->setupTemplate(true, $reviewerSubmission->getId(), $reviewId);
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
