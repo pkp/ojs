@@ -932,7 +932,19 @@ class O4DOIExportDom extends DOIExportDom {
 
 		// Number of pages
 		$pages = $article->getPages();
-		if (!empty($pages)) {
+		if (is_numeric($pages)) {
+			$pages = (int)$pages;
+		} else {
+			// If the field is not numeric then try to parse it (eg. "pp. 3-8").
+			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
+				if (is_numeric($matches[1]) && is_numeric($matches[2])) {
+					$firstPage = (int)$matches[1];
+					$lastPage = (int)$matches[2];
+					$pages = $lastPage - $firstPage + 1;
+				}
+			}
+		}
+		if (is_integer($pages)) {
 			$textItemElement =& XMLCustomWriter::createElement($this->getDoc(), 'TextItem');
 			XMLCustomWriter::createChildWithText($this->getDoc(), $textItemElement, 'NumberOfPages', $pages);
 			XMLCustomWriter::appendChild($contentItemElement, $textItemElement);
