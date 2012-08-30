@@ -33,6 +33,20 @@ class TimedViewPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Get the filename of the ADODB schema for this plugin.
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/' . 'schema.xml';
+	}
+
+	/**
+	 * Hide this plugin from the generic plugin management interface
+	 */
+	function getHideManagement() {
+		return true;
+	}
+
+	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
 	 * @return boolean True if plugin initialized successfully; if false,

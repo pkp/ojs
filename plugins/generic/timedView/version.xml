@@ -10,7 +10,7 @@
   * Plugin version information.
   -->
 <version>
-	<application>timedViews</application>
+	<application>timedView</application>
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
 	<date>2012-06-25</date>
