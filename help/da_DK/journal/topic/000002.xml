@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id: 000002.xml,v 1.9 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000002" locale="da_DK" title="Brugere" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Det er tidsskriftschefens ansvar at administrere brugere i OJS. Dette omfatter oprettelse af brugere, deaktivering af konti, administration af roller osv. Tidsskriftschefen kan søge efter og føje til eksisterende tilmeldinger, ændre profiler, flytte konti og kontakte grupper af brugere.</p>]]>	
+	</section>
+</topic>

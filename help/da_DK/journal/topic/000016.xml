@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id: 000016.xml,v 1.9 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000016" locale="da_DK" title="Redaktør" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>Redaktøren fører tilsyn med hele den redaktionelle proces og hele publiceringsprocessen. I samarbejde med tidsskriftschefen udarbejder redaktøren normalt tidsskriftets politikker og procedurer, som angives under {help_topic key="journal.managementPages.setup" text="Konfiguration"}. I forbindelse med den redaktionelle proces tildeler redaktøren manuskripter til sektionsredaktørerne, som de skal forestå bedømmelsen og redigeringen af. Redaktøren holder øje med manuskriptets forløb og hjælper med eventuelle problemer. Når bedømmelsen er fuldført, fører redaktøren normalt manuskriptet igennem {help_topic key="editorial.sectionEditorsRole.editing" text="redigeringsprocessen"} (herunder manuskriptredigering, layout og korrekturlæsning), selvom dette hos nogle tidsskrifter varetages af den sektionsredaktør, som er ansvarlig for manuskriptets {help_topic key="editorial.sectionEditorsRole.review" text="bedømmelsesproces"}. Redaktøren planlægger også publiceringen af manuskripterne, udarbejder indholdsfortegnelsen og publicerer udgaven som en del af {help_topic key="publishing.index" text="publiceringsprocessen"}. Redaktøren kan gendanne arkiverede manuskripter, så de vises på de aktive lister Under bedømmelse eller Under redigering som beskrevet under {help_topic key="editorial.editorsRole.submissions.archives" text="Arkiver"}.</p>]]>	
+	</section>
+</topic>

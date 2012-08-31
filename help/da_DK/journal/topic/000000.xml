@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * $Id: 000000.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000000" locale="da_DK" title="Administration af tidsskrift" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen er ansvarlig for alle aspekter omkring administrationen af tidsskriftet i samråd med redaktørerne, herunder opsætning og konfiguration af tidsskriftssystemet, registrering af brugere i forskellige roller, der er nødvendige for at kunne drive tidsskriftet, etablering af tidsskriftets forskellige sektioner samt mange andre ledelsesopgaver.</p>]]>	
+	</section>
+</topic>

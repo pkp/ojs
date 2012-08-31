@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id: 000021.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000021" locale="da_DK" title="Bedømmer" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>Bedømmeren er valgt af sektionsredaktøren til at bedømme et manuskript. Bedømmere bliver bedt om at fremsende bedømmelser til tidsskriftets websted (selvom nogle tidsskrifter vælger en politik om e-mail-bedømmelser) og kan overføre vedhæftede filer til brug for redaktøren og forfatteren. Bedømmere kan blive klassificeret af sektionsredaktører. Dette afhænger igen af tidsskriftets politikker.</p><p>Du kan finde flere oplysninger {help_topic key="editorial.reviewersRole" text="her"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Versions
+  *
+  * $Id: 000027.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000027" locale="da_DK" title="Relaterede elementsæt" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[<p>Tidsskriftschefer kan redigere, tilføje til og kontrollere alle fagområde- og områdebaserede sæt læseværktøjer. Disse værktøjer benytter databaser, der er blevet valgt på grund af deres relevans og tilgængelighed for alle læsere. Da placeringen af og URL-adresserne på disse databaser ændrer sig, skal tidsskriftschefen kunne ændre eller endda slette de anførte oplysninger. Værktøjerne er grupperet i kategorier (f.eks. Relaterede studier, Doktorafhandlinger osv.) med en række databaser i hver.<p><i>Validere Læseværktøjer</i>. Denne funktion kan bruges til at kontrollere gyldigheden af de URL-søgeadresser, som bruges til de enkelte databaser, med henblik på at finde elementer, der er relevante for det element, som værktøjerne ledsager (ved hjælp af forfatterens indekseringsord). Hvis URL-adressen er ugyldig, kan tidsskriftschefen rette indstillingerne ved at finde den nye URL-adresse, søge hjælp hos en anden person eller slette databasen fra sættet af læseværktøjer. Da denne funktion køres på hver enkelt database, tager det et stykke tid at fuldføre handlingen, som resulterer i en meddelelse om hver enkelt database med vidensbyrd om databasens gyldighed eller kilden til problemet.</p><p><i>Metadata til hvert læseværktøjssæt</i>. Metadataene til de enkelte værktøjssæt indeholder titlen på værktøjerne samt en kort beskrivelse, der gør det muligt for tidsskriftschefen at ændre organiseringen af værktøjerne eller oprette nye sæt.</p><p><i>Kontekster til sættet</i>. Hvert enkelt værktøjssæt indeholder forskellige grupperinger, eller kontekster, af databaser (f.eks. Relaterede studier, Onlinefora osv.), hvor hver kontekst består af en række relevante databaser. Disse databaser kan oprettes, redigeres eller slettes. Grupperingerne kan også omrokeres.</p><p><i>Eksportere dataene</i>. Hvis tidsskriftschefen udvikler flere læseværktøjer, kan disse eksporteres til Public Knowledge Project, hvor de kan bruges af andre tidsskrifter inden for relaterede områder.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * $Id: 000005.xml,v 1.6 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<toc id="journal/toc/000005" locale="da_DK" title="Læseværktøjer" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Indstillinger for læseværktøjer"/>
+	<topic id="journal/topic/000027" title="Relaterede elementsæt"/>
+	<topic id="journal/topic/000028" title="Kontekst"/>
+
+	<breadcrumb url="journal/topic/000000" title="Administration af tidsskrift"/>
+	<breadcrumb url="journal/topic/000001" title="Administrationssider"/>
+	<breadcrumb url="journal/topic/000009" title="Læseværktøjer"/>
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Editor Decision
+  *
+  * $Id: 000026.xml,v 1.9 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000026" locale="da_Dk" title="Redaktørens beslutning" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Når alle bedømmelserne er modtaget, skal sektionsredaktøren træffe en beslutning med hensyn til manuskriptet.</p><p><i>Registrere beslutningen</i>. Sektionsredaktøren vælger en beslutning blandt Accepter manuskript, Rettelser er påkrævet, Fremsend igen til bedømmelse eller Afvis manuskript.</p><p>Sektionsredaktøren skal redegøre for baggrunden for beslutningen over for forfatteren under Korrespondance mellem redaktør/forfatter (da forfatteren ikke kan se den beslutning, der er registreret af redaktøren). Sektionsredaktøren kan også overføre en version af manuskriptet eventuelt med forslag eller kommentarer. Endelig skal sektionsredaktøren sende en e-mail til forfatteren ved hjælp af e-mail-ikonet Underret forfatter under Redaktørbeslutning. Bedømmerens kommentarer kan importeres til denne e-mail ved at klikke på Importer peer reviews oven over e-mailens emnelinje. Vær opmærksom på, at kommentarer, der af bedømmeren er angivet til kun at være til redaktøren, ikke importeres.</p><p>Sektionsredaktøren kan indledningsvis træffe en beslutning (Rettelser er påkrævet) og efter at have godkendt den forfatterversion, der er overført af forfatteren, træffe en anden beslutning om at acceptere manuskriptet.</p><p>Hvis sektionsredaktøren vælger Accepter, er det næste trin at angive en version af manuskriptet, der skal sendes til Manuskriptredigering på siden Redigering, blandt redaktør- og forfatterversionerne. Standardredaktørversionen er simpelhen bedømmelsesversionen, og sektionsredaktøren kan foretage ændringer af denne version, f.eks. gendanne forfatterens navn, samt overføre den som værende klar til manuskriptredigering.</p><p>Hvis sektionsredaktøren vælger Afvis, flyttes manuskriptet til listen Arkiver, og manuskriptets status registreres som Afvist.</p><p><i>Fremsend igen til bedømmelse</i>. Sektionsredaktøren kan starte endnu en bedømmelsesrunde for et manuskript ved at vælge Fremsend igen til bedømmelse under Beslutning. Sektionsredaktøren sender derefter en e-mail til forfatteren af manuskriptet (da forfatteren ikke kan se beslutningen) med et udkast til, hvad der skal gøres ved manuskriptet, inden det fremsendes igen til bedømmelse. Når forfatteren fremsender en version til bedømmelse for anden gang, vises den under Forfatterversion, og sektionsredaktøren angiver, at den skal fremsendes igen. Den bliver derefter bedømmelsesversionen til runde 2 (og skal igen kontrolleres med henblik på anonymitet, og hvis det er nødvendigt, overføres den igen under Bedømmelsesversion). Bedømmerne fra runde 1 vil stadig være til stede, selvom deres bedømmelser og anbefaliner er blevet ryddet og placeret under "Afslag, annulleringer og tidligere runder af dette manuskript". Sektionsredaktøren kan aktivere forespørgslen til de enkelte bedømmere fra runde 1 ved at klikke på e-mail-ikonet under Forespørgsel. Sektionsredaktøren kan også bruge Ryd bedømmer og vælge en anden bedømmer til runde 2. Korrespondancen fra runde 1 under Korrespondance mellem redaktør/forfatter placeres også under "Afslag, annulleringer og tidligere runder" for dette manuskript, hvor sektionsredaktøren kan få vist den efter behov.</p>]]>	
+	</section>
+</topic>

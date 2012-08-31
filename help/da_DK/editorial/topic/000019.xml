@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Management
+  *
+  * $Id: 000019.xml,v 1.7 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000019" locale="da_DK" title="Administration af manuskript" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p>Det er muligt at foretage mange forskellige handlinger i forbindelse med administration af manuskripter på siden Resumé for et manuskript.</p><p><i>Manuskript</i><br />Under Manuskript kan redaktøren sende en e-mail til forfatteren, bedømme den oprindelige manuskriptfil og supplerende filer, sikre, at manuskriptet befinder sig i den korrekte tidsskriftssektion, samt gennemgå forfatterkommentarer.</p><p>Inden redaktøren beder en sektionsredaktør om at administrere bedømmelsen af manuskriptet, skal redaktøren klikke på manuskriptets filnavn for at åbne filen og sikre, at teksten er velegnet til at blive bedømt af tidsskriftet, og at manuskriptet befinder sig i den rigtige sektion af tidsskriftet.</p><p><i>Forfattergebyrer</i><br />Hvis tidsskriftet accepterer onlinebetalinger, har redaktøren mulighed for at markere, at forfattergebyrerne enten er modtaget, eller at der er givet afkald på dem. Gebyrer, der er markeret således her, vises også i tidsskriftets betalingsposter.</p><p><i>Redaktører</i><br />Inden manuskriptet kan fortsætte til bedømmelsesfasen, skal redaktøren udvælge en sektionsredaktør på en list over tilmeldte brugere, som skal føre tilsyn med bedømmelsesprocessen. Hvis tidsskriftet ikke benytter sektionsredaktører, kan redaktøren klikke på "Tilføj selv" og personligt føre tilsyn med bedømmelsesprocessen. Det er muligt at tildele flere sektionsredaktører til et manuskript, og de kan få til opgave enten at gennemføre bedømmelses- eller redigeringsprocessen eller begge processer. Denne handling sender automatisk en e-mail til sektionsredaktøren med besked om tildelingen.</p><p><i>Status</i><br />På siden Resumé for det pågældende manuskript er det muligt at følge manuskriptets forløb igennem bedømmelses-, redigerings- og publiceringsprocessen. Hvis manuskriptet på et hvilket som helst tidspunkt skulle anses for at være uegnet til tidsskriftet, kan det arkiveres her.</p><p>Hvis manuskriptet tydeligvis ikke er velegnet til tidsskriftet, kan redaktøren klikke på linket Arkiver manuskript, hvorefter der sendes en e-mail til forfatteren med meddelelse om, at manuskriptet ikke vil blive sendt ud til bedømmelse. Når e-mailen er sendt, sendes manuskriptet til arkiverne. Den tildelte sektionsredaktør kan også foretage denne handling.</p>]]>	
+	</section>
+</topic>

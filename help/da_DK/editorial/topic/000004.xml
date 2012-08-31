@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id: 000004.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000004" locale="da_DK" title="Sektionsredaktørens rolle" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>Sektionsredaktører administrerer normalt bedømmelsen af manuskripter og redigeringen af de manuskripter, der accepteres. Afhængigt af tidsskriftets politikker kan en sektionsredaktør, der oprindeligt har fået tildelt et manuskript af en redaktør, dog blive bedt om kun at føre manuskriptet igennem bedømmelsesfasen, hvorefter redaktøren tager over (i rollen som sektionsredaktør), hvis manuskriptet accepteres. Redaktører sender forespørgsler til sektionsredaktører for at høre, om de kan føre et manuskript igennem den redaktionelle proces.</p>]]>	
+	</section>
+</topic>

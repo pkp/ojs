@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - System Plugins
+  *
+  * $Id: 000030.xml,v 1.4 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000030" locale="da_DK" title="System-plug-ins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>På siden System-plug-ins kan tidsskriftschefen få vist en liste over de plug-ins, der er installeret i OJS, samt udføre de administrationsopgaver, som de enkelte plug-ins giver mulighed for. Du kan finde flere oplysninger i dokumentationen til de enkelte plug-ins, som findes i mappen med plug-ins i OJS (/path/to/install/plugins).</p>]]>
+	</section>
+</topic>

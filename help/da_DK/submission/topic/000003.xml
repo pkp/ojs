@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Indexing and Metadata 
+  *
+  * $Id: 000003.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="submission/topic/000003" locale="da_DK" title="Indeksering og metadata" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[<p>I dette tidsskriftssystem deltager forfatteren i indekseringen af manuskripter til tidsskriftet. Selve systemet genererer også nogle af indekseringselementerne eller metadataelementerne (f.eks. tidsskriftstitel, dato, URL-adresse osv.). Metadata, eller data om data, består af en serie af ord, der beskriver det pågældende dokument eller de pågældende data, og på denne måde den sammenlignelig brug af indekseringsord, der gør det samme. Tidsskriftet bruger en metadataprotokol til indeksering af manuskripter, der er udviklet og vedligeholdes af OAI (Open Archives Initiative), som igen trækker på Dublin Core Metadata Initiative. OAI Metadata Harvesting Protocol er udviklingsstandarden inden for forskning, der gør OAI-kompatible søgemaskiner i stand til at oprette forskningsindeks, som er baseret på ressourcer fra hele verden. Men tidsskriftets indhold er også tilgængeligt via Google og andre webbaserede standardsøgemaskiner.</p><p><i>Metadataelementer</i>. Dublin Core består af 15 metadataelementer, der bruges til at identificere og beskrive dokumenter. Elementerne omfatter traditionelle indekseringsord til identificering af dokumenter, f.eks. Forfatter, Titel, Beskrivelse (Resumé) og Emne, der tillader mere detaljeret eller granuløs indeksering ved også at inkludere elementer som Type, Dækning og Sponsor. Tidsskriftschefen og redaktøren af tidsskriftet har udvalgt de metadataelementer, der passer til tidsskriftet, og har som en hjælp til forfattere angivet eksempler på hvert element, der er baseret på tidsskriftets område og fokus.</p><p>Ved angivelse af resuméet kan der anvendes begrænset HTML for at opnå en mere kompleks formatering.</p><p><i>Fordele ved indeksering</i>. Forfattere opfordres til at fuldføre indekseringen af deres manuskript i trin 2 i manuskriptprocessen og har mulighed for at bedømme og revidere metadataene som en del af redigeringsprocessen. Metadataene vil også blive bedømt som en del af manuskriptredigeringstrinnet. Metadataene til dette tidsskrift undergår "harvesting" af en række forskningsdedikerede søgemaskiner, der i realiteten opretter et forskningsindeks eller en forskningsvejledning. Værker, der er velindekseret, vil være meget nemmere at finde af de personer, som har brug for dem, og som med større sandsynlighed vil citere dem. Mens der er begrænsninger på det antal ord, som et værk indekseres efter, opfordres forfattere til at tænke på, hvordan deres værk er positioneret, og hvordan det kan blive fundet i kraft af denne detaljerede indeksering.</p>]]>	
+	</section>
+</topic>

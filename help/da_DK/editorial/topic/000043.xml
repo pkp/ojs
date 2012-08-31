@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000043.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Proofreading
+  *
+  * $Id: 000043.xml,v 1.7 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000043" locale="da_DK" title="Korrekturlæsning" toc="editorial/toc/000014" key="editorial.proofreadersRole.proofreading">
+	<section>
+		<![CDATA[<p>Når korrekturlæseren har klikket på artiklens titel i køen Manuskripter, har vedkommende adgang til layoutsatsskibe og instruktionerne til korrekturlæsning. Korrekturlæseren kan også kommunikere med artiklens primære kontaktperson, redaktøren og layoutredaktøren. I denne fase er det kun typografiske fejl og formateringsfejl, der identificeres. Det er muligt at foretage korrekturlæsning ved at følge disse trin:</p><p><i>Gennemgå instruktionerne til korrekturlæsning.</i>  Korrekturlæseren skal gennemgå tidsskriftets korrekturlæsningsstandarder ved at klikke på "Instruktioner til korrekturlæsning" nederst på korrekturlæsningspanelet.</p><p><i>Få vist korrekturformater.</i> Korrekturlæseren kan få adgang til artikelsatsskibe ved at klikke på "Vis korrektur" ud for hvert satsskibsformat under sektionen Layout og kan få adgang til eventuelle supplerende filer ved at klikke på det tilsvarende link under "Supplerende filer". Artikelsatsskibe er normalt tilgængelige (og publiceres følgeligt) i PDF eller HTML og kan derfor ikke redigeres direkte. Supplerende filer publiceres i deres oprindelige format og kan i nogle tilfælde blive redigeret.</p><p><i>Overveje forfatterens korrekturrettelser.</i>  Korrekturlæseren har stor erfaring med tidsskriftets standarder og skal gennemgå forfatterens korrekturrettelser for at kunne rådgive layoutredaktøren (f.eks. ignorere fundne fejl, der ikke er fejl i henhold til tidsskriftets standarder). Korrekturlæseren kan få vist forfatterens foreslåede rettelser ved at klikke på "Korrekturrettelser".</p><p><i>Angive korrekturrettelser.</i> Korrekturlæseren skal nu klikke på ikonet "Korrekturrettelser" og angive sine detaljerede rettelser som anført i instruktionerne til korrekturlæsning. Når disse rettelser er blevet gemt, er de tilgængelige for layoutredaktøren.</p><p><i>Underrette, at korrekturlæsningen er fuldført.</i> Når korrekturlæsningen er fuldført, skal korrekturlæseren klikke på e-mail-ikonet under "Udfør" og sende følgende e-mail til sektionsredaktøren. Når e-mailen er blevet sendt (eller eventuelt blevet sprunget over i stedet for annulleret), flyttes artiklen fra korrekturlæserens aktive liste under Manuskriptkø til arkivet, og korrekturlæseren kan herefter ikke foretage flere rettelser.</p>]]>	
+	</section>
+</topic>

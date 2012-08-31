@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id: 000018.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000018" locale="da_DK" title="Arkiver" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>Manuskripter i denne kø har været igennem den redaktionelle proces, uanset om de er blevet afvist, er planlagt til at blive publiceret eller er blevet publiceret. Denne kø giver redaktører og den tildelte sektionsredaktør fuld adgang til manuskriptets redaktionelle oversigt (Resumé, Manuskript, Bedømmelse, Redigering og Oversigt).</p><p><i>Sådan gendannes et arkiveret element til den aktive liste</i>. Redaktøren skal gå til arkiverne på redaktørens hjemmesside og finde manuskriptet. Når redaktøren klikker på manuskriptets titel, vises siderne Resumé, Bedømmelse, Redigering og Oversigt for manuskriptet, og på siden Resumé findes et link, "Gendan til aktiv liste", der flytter manuskriptet til listen Under bedømmelse eller til listen Under redigering, afhængigt af hvilken fase manuskriptet befandt sig i, da det blev arkiveret.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id: 000018.xml,v 1.7 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000018" locale="da_DK" title="Layoutredaktør" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>Layoutredaktøren omdanner de redigerede versioner af manuskriptet til satsskibe i bl.a. HTML-, PDF- og PS-format, som tidsskriftet har valgt at bruge til elektronisk publicering. Dette system indeholder ikke software til konvertering af tekstbehandlingsdokumenter til satsskibsformater, og layoutredaktøren bør derfor have adgang til og kunne bruge softwarepakker fra tredjeparter til oprettelse af satsskibe (f.eks. Adobe Acrobat til PDF-filer eller Dreamweaver til HTML-filer), som præsenterer artiklerne på skærmen i et flot formateret og læsbart layout à la videnskabelige tidsskrifter. Layoutredaktøren bør også være opmærksom på dette nye publiceringsmedie (ved at se de layout, der benyttes af andre udgivere af onlinetidsskrifter, f.eks. Highwire Press inden for livsvidenskab eller Project Muse inden for humaniora).</p><p>Du kan finde flere oplysninger {help_topic key="editorial.layoutEditorsRole" text="her"}.</p>]]>	
+	</section>
+</topic>

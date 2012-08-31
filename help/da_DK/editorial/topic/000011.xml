@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id: 000011.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000011" locale="da_DK" title="Redigering" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>Forfatteren bidrager både til redigeringen og korrekturlæsningen af manuskriptet i redigeringsfasen, idet manuskriptet forberedes til elektronisk publicering og/eller trykning.</p>]]>	
+	</section>
+</topic>

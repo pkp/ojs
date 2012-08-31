@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id: 000004.xml,v 1.12 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000004" locale="da_DK" title="Konfiguration" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen konfigurerer tidsskriftet, efter at systemet er installeret på en webserver, ved at gennemgå fem trin, udfylde skabeloner og konfigurere administrationen af tidsskriftet. Det er ikke nødvendigt at foretage hele konfigurationen på én gang: Skabelonerne kan udfyldes og gemmes, og tidsskriftschefen kan derefter på et hvilket som helst tidspunkt vende tilbage til Konfiguration for at fuldføre opgaven eller foretage ændringer.</p><p>Indstillingen Konfiguration er tilgængelig for tidsskriftschefen på siden Administration af tidsskrifter og indeholder sit eget sæt Hjælp-tekster, der er integreret i de enkelte skabeloner. Konfiguration af tidsskriftets websted kræver beslutninger og tekster til følgende elementer, der bl.a. kan forberedes på forhånd i samråd med redaktørerne eller tilføjes på et senere tidspunkt.</p><ul><li>Primær kontaktperson for tidsskriftet</li><li>Teknisk kontaktperson</li><li>Erklæring om tidsskriftets område og fokus</li><li>Tidsskriftssektioner og -politikker</li><li>Retningslinjer for forfattere</li><li>Manuskriptkrav for forfattere</li><li>Indeksering af elementer og relevante eksempler</li><li>Politik for peer review</li><li>Retningslinjer for bedømmere</li><li>Politik om ophavsret</li><li>Politik om Open Access</li><li>Redaktionsudvalg/bedømmelsesudvalg</li><li>Abonnementspolitikker</li><li>Brug af layoutredaktører, manuskriptredaktører og/eller korrekturlæsere</li></ul>]]>
+	</section>
+</topic>

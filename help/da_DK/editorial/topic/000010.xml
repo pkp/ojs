@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+  *
+  * $Id: 000010.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000010" locale="da_DK" title="Bedømmelse" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>Forfatteren kan holde øje med manuskriptets forløb igennem bedømmelsesprocessen samt overføre reviderede versioner, hvis det skulle blive krævet af den sektionsredaktør, som fører tilsyn med bedømmelsesprocessen.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * Site Administration - Installation 
+  *
+  * $Id: 000001.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="site/topic/000001" locale="da_DK" title="Installation" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>Open Journal Systems er et open source-program, der kan hentes gratis og installeres på næsten alle skriveborde eller servercomputere.</p>]]>	
+	</section>
+	
+	<section title="Licens">
+		<![CDATA[<p>OJS distribueres i henhold til vilkårene i <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License</a>. En kopi af licensvilkårene vedrørende redistribution af OJS-kode i oprindelig eller ændret form følger med OJS-overførslen.</p>]]>
+	</section>
+	
+	<section title="Systemkrav">
+		<![CDATA[<p>Det anbefales at anvende et servermiljø, der opfylder følgende krav:</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (herunder 4.x) eller <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (herunder
+	  PostgreSQL 8.x)</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x eller >= 2.0.4x eller Microsoft IIS 6+</li>
+			<li>Operativsystem: Et hvilket som helst operativsystem, der understøtter ovennævnte software, herunder <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> og <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>OJS er indtil videre kun blevet testet på MySQL og PostgreSQL, selvom andre databasestyringssystemer, der understøttes af <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>, muligvis fungerer (delvist eller fuldstændigt). Du er velkommen til at fremsende kompatibilitetsrapporter og/eller kodeprogramrettelser til alternative DBMS'er.</p>
+		]]>
+	</section>
+	
+	<section title="Download">
+		<![CDATA[<p>OJS kan hentes på Public Knowledge Project-<a href="http://pkp.sfu.ca/ojs/" target="_blank">webstedet</a>.</p>]]>
+	</section>
+	
+	<section title="Installation">
+		<![CDATA[<p>OJS indeholder et webbaseret installationsscript, der leder systemadministratoren igennem installationsprocessen. Der findes også et værktøj til installation via kommandolinje.</p>
+		<ol>
+			<li>
+				Hent OJS-arkivet.
+			</li>
+			<li>
+				Dekomprimer OJS-arkivet på webserveren, og placer arkivet på det ønskede sted i webdokumenttræet:<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				Gør følgende filer og mapper skrivbare (dvs. ved hjælp af chown eller chmod):<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				Åbn en webserver på det sted, hvor OJS skal installeres (f.eks. http://www.mydomain.com/myjournal/), og følg instruktionerne på skærmen for at fuldføre installationen. Se docs/README, hvor du kan finde flere oplysninger om installationsprocessen.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

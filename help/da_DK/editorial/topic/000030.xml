@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id: 000030.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000030" locale="da_DK" title="Manuskripter" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Når bedømmeren logger på tidsskriftet, vises siden Brugerstartside. Hvis bedømmeren klikker på rollen Bedømmer (en bedømmer kan være tilmeldt andre roller, f.eks. som forfatter), vises siden Manuskripter. På denne side vises en liste over de manuskripter, som bedømmeren er inviteret til at bedømme eller i øjeblikket er ved at bedømme. Under køen Manuskripter er det også muligt at se, hvilken runde bedømmelsen er, da nogle bedømmelser sendes videre til endnu en bedømmelsesrunde, hvis sektionsredaktøren har besluttet, at manuskriptet skal "fremsendes igen til bedømmelse". På denne side er der også adgang til tidligere de bedømmelser, som bedømmeren har foretaget for tidsskriftet.</p>]]>	
+	</section>
+</topic>

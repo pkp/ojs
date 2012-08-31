@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * Site Administration - Administration Functions 
+  *
+  * $Id: 000003.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="site/topic/000003" locale="da_DK" title="Administrative funktioner" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>I området for administration af webstedet findes der mange administrative funktioner. Disse funktioner skal generelt anvendes med forsigtighed, da forkert anvendelse kan medføre uventede resultater.</p>]]>
+	</section>
+
+	<section title="Systemoplysninger">
+		<![CDATA[<p>Generelle oplysninger om servermiljøet og OJS-versionshistorik (herunder tidligere opgraderinger). En webbaseret grænseflade til ændring af OJS-konfigurationsfilen er også tilgængelig.</p>]]>
+	</section>
+
+	<section title="Lad brugersessioner udløbe">
+		<![CDATA[<p>Rydder alle aktiver brugersessioner i systemet, hvilket kræver, at alle brugere, som på nuværende tidspunkt er logget på, skal logge på systemet igen.</p>]]>
+	</section>
+
+	<section title="Ryd datacache">
+		<![CDATA[<p>Rydder alle cachelagrede data, herunder oplysninger om landestandarder, hjælpcache og søgecache.</p>]]>
+	</section>
+
+	<section title="Ryd skabeloncachen">
+		<![CDATA[<p>Rydder alle cachelagrede versioner af HTML-skabeloner. Denne funktion kan være nyttig, hvis du vil gennemtvinge, at skabeloner genindlæses, efter at der er foretaget tilpasninger.</p>]]>
+	</section>
+
+	<section title="Flet brugere">
+		<![CDATA[<p>Ved hjælp af funktionen Flet brugere kan webstedsadministratoren flette to brugerkonti til én enkelt konto og overføre redigeringsopgaver, manuskripter og mange andre poster fra én konto til en anden samt effektivt slette den første konto.</p>
+		<p>I modsætning til funktionen Flet brugere, der er tilgængelig for tidsskriftschefer, og der er begrænset til fletning af brugerkonti for et bestemt tidsskrift, tillader funktionen Flet brugere under Administration af websted, at webstedsadministratoren fletter to vilkårlige brugerkonti, endda på tværs af forskellige tidsskrifter.</p>
+		<p>Følgende elementer overføres:
+			<ul>
+				<li>Artikelforfatterskab</li>
+				<li>Offentlige kommentarer om artikler</li>
+				<li>Artikelnoter</li>
+				<li>Redaktøropgaver og -beslutninger</li>
+				<li>Bedømmelsesopgaver</li>
+				<li>Layoutredaktøropgaver</li>
+				<li>Korrekturlæseropgaver</li>
+				<li>Artikel-e-mail og hændelseslogposter</li>
+				<li>Bedømmeres adgangsnøgler</li>
+				<li>Roller</li>
+			</ul>
+		Følgende elementer overføres <strong>ikke</strong>:
+			<ul>
+				<li>Sessioner</li>
+				<li>Abonnementer</li>
+				<li>Underretningsstatus (dvs. om brugeren har tilmeldt sig med henblik på at modtage underretninger om tidsskriftsnyheder)</li>
+				<li>Medlemskab af redaktionsgruppe</li>
+				<li>Sektionsredaktørstatus på sektioner</li>
+				<li>Brugerprofiloplysninger (f.eks. fornavn, efternavn osv.)</li>
+			</ul>
+		</p>
+		<p>Denne funktion skal anvendes med forsigtighed, da handlingen ikke kan fortrydes og omfatter overførsel af poster fra én bruger til en anden.</p>
+		<p>Med hensyn til abonnementer sker der følgende ved aktivering af Flet funktionen: Ved individuelle abonnementer overføres den anden abonnents abonnement til den første abonnent, såfremt det er gyldigt, og den første abonnent ikke allerede har et gyldigt abonnement til et givent tidsskrift. Ved institutionsabonnementer overføres alle de abonnementer, hvor den anden abonnent er registreret som kontaktperson, til den første abonnent, som bliver abonnementets nye kontaktperson.</p>]]>
+	</section>
+</topic>

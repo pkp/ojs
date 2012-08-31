@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  * $Id: 000036.xml,v 1.9 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000036" locale="da_DK" title="Korrekturlæsning" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Forfatteren læser korrektur på satsskibene til manuskriptet, som er de versioner i HTML, PDF og/eller Postscript, der vises i onlineudgaven af tidsskriftet. Forfatteren kan få vist disse filer ved at klikke på de enkelte korrekturformater (og ikke filnavnene) for at få vist manuskriptet i alle de formater, som det publiceres i. I korrekturlæsningsfasen foretages der kun typografiske og formateringsmæssige rettelser, og det er kun layoutredaktøren, som kan foretage disse rettelser.</p> <p>Hvis der benyttes mere end ét filformat, kontrollerer forfatteren naturligvis kun ét format med hensyn til stavefejl men dem alle med hensyn til formateringsproblemer. Forfatteren skal følge instruktionerne til korrekturlæsning, når vedkommende registrerer rettelser i tekstboksen Rettelser. Forfatteren skal også gennemgå eventuelle supplerende filer, der skal ledsage det publicerede manuskript. Disse filer vises i deres oprindelige format og kan derfor ændres og overføres igen samt få deres titler ændret ved hjælp af funktionen Rediger. Alle ændringer af disse filer skal noteres i tekstboksen Rettelser.</p>]]>	
+	</section>
+</topic>

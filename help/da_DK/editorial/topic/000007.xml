@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing 
+  *
+  * $Id: 000007.xml,v 1.12 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000007" locale="da_DK" title="Redigering" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
+	<section>
+		<![CDATA[<p>Sektionsredaktøren fører tilsyn med manuskriptredigerings-, layout- og korrekturlæsningsfaserne ved at vælge og give medlemmer af redaktionsgruppen til opgave at føre manuskriptet igennem hver enkelt fase og ved at sikre, at manuskriptet bevæger sig igennem processen i henhold til tidsplanen. Processen begynder, når sektionsredaktøren vælger en manuskriptredaktør og beder vedkommende om at redigere manuskriptet. Sektionsredaktøren kan vælge at udpege layoutredaktøren og korrekturlæseren samtidigt (afhængigt af hvor mange af disse særskilte roller, tidsskriftet benytter) eller vente, indtil den forudgående fase er fuldført.  Hvis sektionsredaktøren vil erstatte de personer, der er valgt, klikker sektionsredaktøren blot på {translate key="common.select"} igen og tildeler en ny person, der erstatter den eksisterende person, der oprindeligt havde fået tildelt opgaven. Redigeringsfasen er fuldført, når manuskriptet har fuldført korrekturlæsningsfasen, hvorefter sektionsredaktøren planlægger publiceringen af manuskriptet.</p><p><i>Manuskripter under bedømmelse, der skal redigeres yderligere</i>. Redaktøren kan vælge, at der skal foretages yderligere manuskriptredigering af layoutversionen, hvis det er nødvendigt, ved at hente layoutversionen og sende den som en vedhæftet fil til manuskriptredaktøren (som også kan kontakte forfatteren). Når denne ekstra manuskriptredigering er fuldført, og manuskriptet er returneret til redaktøren, kan redaktøren overføre filen til layoutversionen.</p><p><i>Ændre et satsskib efter planlægningen af et manuskript</i>. Når manuskriptet er sendt videre til planlægning, sendes siden Redigering (samt de tilknyttede sider Resumé, Bedømmelse og Oversigt) til arkiverne. Redaktøren kan bede layoutredaktøren, som har adgang via Arkiver, om at ændre satsskibene og overføre dem igen. Dette kan finde sted, efter at manuskriptet er blevet publiceret. Det netop overførte satsskib vises som den publicerede version, selvom du skal være utroligt forsigtig med at ændre satsskibene på denne måde for at bevare integriteten i forbindelse med tidsskriftets publiceringsproces, og redaktøren kan vælge at vedhæfte en note, der registrerer ændringerne af det publicerede element.</p><p>Hvis du vil have flere oplysninger om manuskriptredigeringsprocessen, skal du se {help_topic key="editorial.sectionEditorsRole.editing.copyediting" text="Manuskriptredigering"}.</p><p>Hvis du vil have flere oplysninger om layoutprocessen, skal du se {help_topic key="editorial.sectionEditorsRole.editing.layout" text="Layout"}.</p><p>Hvis du vil have flere oplysniner om korrekturlæsning og planlægning, skal du se {help_topic key="editorial.sectionEditorsRole.editing.proofreading" text="Korrekturlæsning"}.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id: 000008.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000008" locale="da_DK" title="Statistikker og rapporter" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>Ved hjælp af funktionen Statistikker og rapporter kan tidsskriftschefen udtrække historiske data om tidsskriftets anvendelse i to formularer. For det første findes der under Statistikker år-for-år-statistikker, som hurtigt giver dig et overblik over manuskripter, redaktionelle fremgangsmåder og brugere. For det andet kan tidsskriftschefen generere én blandt mange typer rapporter på en række specifikke datoer.</p><p>Der findes fire typer rapporter:<ul>
+			<li><strong>Tidsskriftsrapport</strong>: Rapporterer om alle tidsskriftets manuskripter i den givne periode.</li>
+			<li><strong>Redaktørrapport</strong>: Rapporterer om manuskripter, der er grupperet efter redaktør.</li>
+			<li><strong>Bedømmerrapport</strong>: Rapporterer om manuskripter, der er grupperet efter bedømmer.</li>
+			<li><strong>Sektionsrapport</strong>: Rapporterer om manuskripter, der er grupperet efter sektion.</li>
+		</ul>Disse rapporter oprettes i CVS-format (Comma-Separated Values) og skal åbnes ved hjælp af et regnearksprogram.]]>
+	</section>
+</topic>

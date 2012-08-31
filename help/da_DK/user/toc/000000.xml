@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for User Interface. 
+  *
+  * $Id: 000000.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<toc id="user/toc/000000" locale="da_DK" title="Tidsskriftets hjemmeside" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Startside"/>
+	<topic id="user/topic/000002" title="Om"/>
+	<topic id="user/topic/000007" title="Brugerstartside"/>
+	<topic id="user/topic/000003" title="Registrér og profil"/>
+	<topic id="user/topic/000004" title="Aktuel og arkiver"/>
+	<topic id="user/topic/000005" title="Søg og gennemse"/>
+	<topic id="user/topic/000006" title="Læseværktøjer"/>
+
+	<breadcrumb url="user/topic/000000" title="Tidsskrifttets hjemmeside"/>
+</toc>

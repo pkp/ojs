@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * $Id: 000007.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000007" locale="da_DK" title="Sprog" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>Dette system kan understøtte tidsskrifter på flere sprog samt tidsskrifter på andre sprog end engelsk. De sprog, som webstedsadministratoren har gjort tilgængelige for systemet, er angivet under Sprog under Administration af tidsskrifter, og du kan vælge det sprog, der skal benyttes på tidsskriftets websted. Hvis du vælger mere end ét sprog under Understøttede landestandarder, kan besøgende på webstedet skifte mellem sprogene via en rullemenu på navigationslinjen. Derudover kan brugerne angive formularoplysninger på et hvilket som helst aktiveret sprog.</p>]]>	
+	</section>
+</topic>

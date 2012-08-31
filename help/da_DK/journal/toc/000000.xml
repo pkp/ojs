@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Journal Management. 
+  *
+  * $Id: 000000.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<toc id="journal/toc/000000" locale="da_DK" title="Administration af tidsskrift" parent_topic="journal/topic/000000">
+	<topic id="journal/topic/000001" title="Administrationssider"/>
+	<topic id="journal/topic/000002" title="Brugere"/>
+	<topic id="journal/topic/000003" title="Roller"/>
+	<breadcrumb url="journal/topic/000000" title="Administration af tidsskrift"/>
+</toc>

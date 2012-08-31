@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Author Guidelines 
+  *
+  * $Id: 000001.xml,v 1.6 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="submission/topic/000001" locale="da_DK" title="Retningslinjer for forfattere" toc="submission/toc/000000" key="submission.authorGuidelines">
+	<section>
+		<![CDATA[<p>Tidsskriftet har angivet et sæt retningslinjer for forfattere under Om tidsskriftet, som dækker de bibliografiske standarder og andre formateringsstandarder, der benyttes af tidsskriftet. I forbindelse med aspekter, der ikke er omfattet af eksemplerne i retningslinjerne, kan forfattere også gennemse de publicerede artikler i tidsskriftet for at finde ud af, hvordan tidsskriftet håndterer andre typer materiale.</p>]]>	
+	</section>
+</topic>

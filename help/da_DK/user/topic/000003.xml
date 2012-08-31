@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * $Id: 000003.xml,v 1.10 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="user/topic/000003" locale="da_DK" title="Registrér og profil" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>Tidsskriftet benytter et registreringssystem til alle brugere, der er involveret i den redaktionelle proces og i publiceringsprocessen. Tidsskriftets politik for beskyttelse af personlige oplysninger gælder for alle registrerede brugere. Hver enkelt registreret bruger har en profil, som kan redigeres eller tilføjes, efter at brugeren har logget på tidsskriftet. Linket til profilen findes i højre margen under Bruger samt på siden Brugerstartside.</p><p>Der findes en mulighed for at blive opdateret via e-mail for alle brugere, hvilket resulterer i, at brugeren via e-mail underrettes om de nye udgavers indholdsfortegnelse. I forbindelse med tidsskrifter, der findes på mere end ét sprog, kan bedømmere i deres profil angive de sprog, som de kan bedømme manuskripter på.</p>]]>	
+	</section>
+
+	<section title="Hvorfor lade sig registrere?">
+
+<![CDATA[<p>Når du lader dig registrere, opretter systemet en Brugerstartside til dig, som gør det nemmere at få adgang til dine tidsskrifter. Du skal være registreret, hvis du vil fremsende et manuskript til et tidsskrift, eller hvis du vil være medlem af redaktionsgruppen (f.eks. redaktør, bedømmer eller korrekturlæser) for et tidsskrift.</p><p>Nogle tidsskrifter har begrænset adgangen til visse dele af deres websted, medmindre du er registreret.</p>]]>
+</section>
+
+<section title="Beskyttelse af personlige oplysninger">
+<![CDATA[<p>Tidsskriftets politik for beskyttelse af personlige oplysninger gælder for alle registrerede brugere. Du kan finde flere oplysninger om tidsskriftets politik for beskyttelse af personlige oplysninger under Om tidsskriftet.</p>]]>
+</section>
+<section title="Hvordan bliver jeg registreret?">
+<![CDATA[<p>Du kan lade dig registrere ved at klikke på "Log på" eller "Registrer" på webstedets hjemmeside eller på et tidsskrifts hjemmeside. Du kan også bede en tidsskriftschef om at registrere dig. Du kan finde kontaktoplysninger under Om tidsskriftet.</p>]]>
+</section>
+<section title="Profil">
+<![CDATA[<p>Du opretter en profil (herunder et brugernavn og en adgangskode), når du lader dig registrere.  Du kan til enhver tid redigere din profil, når du er logget på.  Linket "Min profil" vises på navigationslinjen til højre under titlen "Bruger". Klik på det pågældende link, hvis du vil have vist din profil. Her kan du ændre dine kontaktoplysninger, bedømmelsesinteresser og roller. Her kan du også administrere e-mail-underretninger for tidsskrifter, du er registreret hos.</p>]]>
+</section>
+
+</topic>

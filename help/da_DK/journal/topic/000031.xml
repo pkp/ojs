@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id: 000031.xml,v 1.5 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000031" locale="da_DK" title="Importér/Eksportér data" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>Ved hjælp af funktionen Importer/eksporter data, der findes under Administration af tidsskrifter, kan tidsskriftschefen overføre data til og udtrække data fra OJS.</p><p>Import og eksport af data implementeres ved hjælp af plug-ins, hvor hvert enkelt dataformat eller hver enkelt datatype leveres af en individuel plug-in. Hvis du vil have flere oplysninger, skal du se dokumentationen til hver enkelt plug-in, der findes i mappen med plug-ins i OJS.</p><p>Der følger fem import/eksport-plug-ins med OJS, som er dokumenteret nedenfor.</p><p>Funktionen Importer/eksporter findes også som et kommandolinjeværktøj. Se tools/importExport.php, hvis du vil have flere oplysninger.</p>]]>
+	</section>
+	<section title="Users XML Plugin">
+			<![CDATA[<p>Users XML Plugin kan bruges til at importere og eksportere brugere og deres roller. Se XML DTD under "plugins/importexport/users/users.dtd", hvis du vil have flere oplysninger.</p>]]>
+	</section>
+	<section title="Erudit Article Export Plugin">
+			<![CDATA[<p>Erudit Article Export Plugin implementerer eksport af en enkelt artikel med henblik på fuldtekstindeksering ved hjælp af Erudits XML DTD. Se <a href="http://www.erudit.org">http://www.erudit.org</a>, hvis du vil have flere oplysninger.</p>]]>
+	</section>
+	<section title="Artikler og numre XML Plugin">
+			<![CDATA[<p>Artikler og numre XML Plugin er den primære metode til bundtvis import og eksport. Den kan bruges til at importere og eksportere en enkelt artikel, flere artikler, en enkelt udgave og flere udgaver, herunder omfattende metadata. Hvis du vil have flere oplysninger om denne plug-in, skal du se XML DTD under "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="PubMed XML Export Plugin">
+			<![CDATA[<p>PubMed XML Export Plugin indeholder en import/eksport-plug-in til generering af bibliografiske oplysninger til artikler i den aktuelle udgave i PubMed-standardforlagsdataformatet XML med henblik på indeksering i NLM PubMed/MEDLINE.  Du kan finde flere oplysninger om XML-formatet samt datakrav på: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Du kan finde flere oplysninger om denne plug-in under "plugins/importexport/pubmed".</p>]]>
+	</section>
+	<section title="Crossref XML Export Plugin">
+			<![CDATA[<p>Crossref XML Export Plugin indeholder en import/eksport-plug-in til generering af metadataoplysninger til artikler og udgaver med henblik på indeksering i CrossRef.  Du kan finde flere oplysninger om XML-formatet samt datakrav på: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Du kan finde flere oplysninger om denne plug-in under "plugins/importexport/crossref".</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Copyediting 
+  *
+  * $Id: 000035.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000035" locale="da_DK" title="Manuskriptredigering" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Manuskriptredaktøren starter med at redigere manuskriptet ved at arbejde direkte i manuskriptets elektroniske fil, hvor vedkommende kommer med forslag til forbedringer af flowet i sproget og betydningsformidling samt fortager ændringer for at sikre, at manuskriptet overholder tidsskriftets stil og format (især dets bibliografiske format). Manuskriptredaktøren overfører det redigerede manuskript i trin 1 og sender en e-mail til forfatteren og sektionsredaktøren, der oplyser dem om, at den første manuskriptredigering er fuldført. Forfatteren kan få adgang til denne version i trin 1 under Manuskriptredigering ved at klikke på filnavnet, gemme filen på computeren og derefter åbne den.</p><p><i>Forfatterens gennemgang af manuskriptredigeringer</i>. Forfatteren gennemgår alle manuskriptredaktørens foreslåede ændringer og kan komme med flere forslag eller ændringer til manuskriptet ved at følge tidsskriftets instruktioner til manuskriptredigering. (Dette er sidste chance for at foretage sådanne ændringer, da det kun er muligt at rette typografiske fejl og formateringsfejl i korrekturlæsningsfasen). Forfatteren skal også svare på eventuelle forfatterforespørgsler (f.eks. manglende sidetal osv.) fra manuskriptredaktøren. Forfatteren kan finde disse ved at klikke på ikonet ud for Kommentarer til manuskriptredigering. Når forfatteren er færdig, gemmes filen på computeren og overføres derefter i trin 2 under Manuskriptredigering, hvorefter filen er tilgængelig for manuskriptredaktøren.</p><p><i>Bedømme metadata</i>. Forfatteren skal også gennemgå manuskriptets metadata med henblik på at finde fejl og udeladelser. Metadataene bruges til at indeksere manuskriptet i forbindelse med publiceringen og gør det lettere for læserne, afhængigt af hvordan det er indekseret, at finde elementet.</p> <p>Til slut klikker forfatteren på e-mail-ikonet under Udfør for at underrette manuskriptredaktøren og sektionsredaktøren om, at dette trin nu er fuldført.</p>]]>	
+	</section>
+</topic>

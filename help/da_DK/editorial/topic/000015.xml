@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id: 000015.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000015" locale="da_DK" title="Ikke-tildelt" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Alle manuskripter, der sendes til tidsskriftet, påbegynder processen i køen Ikke-tildelt for redaktørerne. Redaktøren klikker på et manuskripts titel, hvis et manuskript på denne liste skal tildeles til en sektionsredaktør. Dermed åbnes siden Manuskript, hvor sektionsredaktøren kan tildeles. Når en sektionsredaktør har fået tildelt et manuskript, flyttes det fra køen Ikke-tildelt til køen Under bedømmelse.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Schedule Submissions
+  *
+  * $Id: 000002.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="publishing/topic/000002" locale="da_DK" title="Planlæg manuskriptpublicering" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>På et hvilket som helst tidspunkt i redigeringsprocessen kan sektionsredaktøren planlægge, at et manuskript skal publiceres i en bestemt udgave. Normalt bringer redaktøren manuskriptet i den først tilgængelige udgave, men det kan ske, at en udgave er "fuld" forud for publiceringen, eller at en redaktør ønsker at bringe et manuskript i en senere udgave for at sikre en række emner i hver udgave eller derimod for at samle en serie manuskripter om et enkelt emne.</p><p><i>Fortløbende publicering af manuskripter</i>. Hvis manuskripter publiceres fortløbende, så snart de er klar, planlægger redaktøren i realiteten manuskriptet i den aktuelle udgave, og det publiceres øjeblikkeligt. I slutningen af året for en årgang planlægges publiceringen af det næste manuskript i den nye årgang, hvis indholdsfortegnelse publiceres eller gøres aktuel med dette første manuskript.</p><p>Når et manuskript er blevet planlagt til en bestemt udgave, præsenteres layoutredaktører og korrekturlæsere for navnet på udgaven samt for et link til udgavens indholdsfortegnelse.</p>]]>
+	</section>
+</topic>

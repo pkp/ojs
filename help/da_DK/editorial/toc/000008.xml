@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * table of contents for Editorial Process - Reviewer's Role
+  *
+  * $Id: 000008.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<toc id="editorial/toc/000008" locale="da_DK" title="Bedømmerens rolle" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Manuskripter"/>
+	<topic id="editorial/topic/000031" title="Bedømmelse"/>
+
+	<breadcrumb url="editorial/topic/000000" title="Den redaktionelle proces"/>
+	<breadcrumb url="editorial/topic/000008" title="Bedømmerens rolle"/>
+</toc>

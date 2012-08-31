@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  * $Id: 000012.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000012" locale="da_DK" title="Manuskriptredaktørens rolle" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>Manuskriptredaktøren modtager en e-mail-forespørgsel fra sektionsredaktøren om at foretage redigering af et manuskript, som derefter vises i køen Manuskripter for den pågældende manuskriptredaktør. En manuskriptredaktør, der ikke kan foretage manuskriptredigeringen, svarer blot sektionsredaktøren via e-mail.</p>]]>	
+	</section>
+</topic>

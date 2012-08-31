@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools
+  *
+  * $Id: 000009.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000009" locale="da_DK" title="Læseværktøjer" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen kan vælge et sæt læseværktøjer, der vises i en ramme til højre for alle elementer i de sektioner af tidsskriftet, der er indekseret (f.eks. Artikler og ikke Konferencemeddelelser). Læseværktøjerne er udviklet med henblik på at hjælpe erfarne og let øvede læsere, idet de indeholder et rigt udvalg af relateret materiale fra en lang række forskellige kilder, der hovedsageligt er Open Access-kilder. Værktøjerne benytter en forfatters nøgleord til automatisk at søge i en relevant Open Access-database efter relateret materiale, som præsenteres for læseren i et andet vindue. Læserne har mulighed for at vælge værktøjer og inden for hvert værktøj mulighed for at vælge databaser samt adgang til oplysninger om databasen.</p><p>Under Indstillinger for læseværktøjer kan tidsskriftschefen vælge generelle elementværktøjer for tidsskriftet, f.eks. "Om forfatteren", "Sådan citeres et element" og "Udskriv element". Tidsskriftschefen kan også vælge mellem en række relaterede elementværktøjer (f.eks. Humaniora, Uddannelse, Fysik osv.), som indeholder fagområde- eller områdespecifikke ressourcer. Tidsskriftschefen kan redigere eller slette eksisterende relaterede elementværktøjer samt tilføje nye. Se også {help_topic key="user.readingTools" text="Læseværktøjer"} under Tidsskriftets websted.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  * $Id: 000016.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000016" locale="da_DK" title="Under bedømmelse" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Manuskripter i denne kø skal gennemgå en bedømmelse og en beslutning af sektionsredaktøren om at acceptere eller afvise manuskriptet. Bedømmelsesprocessens omfang er tydeligt forklaret i tidsskriftets bedømmelsespolitik (f.eks.: Er hver eneste sektion af tidsskriftet underlagt peer review? Hvor mange peer reviews foretages der pr. abonnement?). Når en sektionsredaktør eller en redaktør klikker på en manuskripttitel i køen Under bedømmelse, vises siden Bedømmelse for det pågældende manuskript. Hvis sektionsredaktøren accepterer et manuskript, flyttes det til køen Redigering. Hvis manuskriptet afvises, flyttes det til arkiverne.</p>]]>	
+	</section>
+</topic>

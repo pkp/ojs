@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Editing 
+  *
+  * $Id: 000017.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000017" locale="da_DK" title="Under redigering" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Manuskripter i denne kø undergår manuskriptredigering, layout og korrekturlæsning. Når en sektionsredaktør eller en redaktør klikker på en manuskripttitel i køen Under redigering, vises siden Redigering for det pågældende manuskript.</p>]]>	
+	</section>
+</topic>

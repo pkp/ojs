@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * $Id: 000001.xml,v 1.9 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000001" locale="da_DK" title="Administrationssider" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen konfigurerer og tilpasser systemet, så det passer til tidsskriftet via en serie administrationssider. Processen starter med de frem trin under Konfiguration, men omfatter også de sektioner, som skal publiceres, tonen og ordvalget i tidsskriftets standard-e-mails, tidsskriftets tilgængelige sprog, de statistikker, som tidsskriftet publicerer, samt de værktøjer, der er tilgængelige for læserne.</p>]]>	
+	</section>
+</topic>

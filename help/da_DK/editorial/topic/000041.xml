@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * $Id: 000041.xml,v 1.6 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000041" locale="da_DK" title="Korrekturlæsning" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>Forfatteren og korrekturlæseren læser korrektur på filerne i de forskellige formater med henblik på at rette typografiske fejl og formateringsfejl. De registrerer de nødvendige rettelser i tekstboksen Rettelser i henhold til korrekturlæsningsinstruktionerne. Når korrekturlæseren har sendt en e-mail til layoutredaktøren om, at korrekturlæsningen er fuldført, går layoutredaktøren tilbage til korrekturformaterne under Layout og foretager de nødvendige ændringer, sletter de filer, der er rettet, og overfører de redigerede versioner. Når denne opgave er udført, kan layoutredaktøren vælge at tilføje kommentarer i tekstboksen Rettelser (f.eks. forklare en ændring), inden layoutredaktøren klikker på e-mail-ikonet under Udfør, hvilket medfører, at der sendes en e-mail til sektionsredaktøren om, at publiceringen af manuskriptet er klar til at blive planlagt.</p>]]>	
+	</section>
+</topic>

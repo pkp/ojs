@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id: 000029.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000029" locale="da_DK" title="Korrekturlæsning" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Når layoutredaktøren har underettet sektionsredaktøren om, at satsskibene er færdige, vælger sektionsredaktøren en korrekturlæser, hvis det ikke allerede er gjort. Sektionsredaktøren sender derefter en forespørgsels-e-mail til forfatteren og beder forfatteren om at påbegynde korrekturlæsningsprocessen. Når forfatteren er færdig med at gennemgå satsskibene og de eventuelle supplerende filer, sender vedkommende en e-mail til korrekturlæseren om dette, med en kopi til sektionsredaktøren. Eventuelle tryk- og formateringsfejl noteres af forfatteren og korrekturlæseren i tekstboksen Rettelser, da forfattere og korrekturlæsere ikke kan markere i satsskibene. Når korrekturlæseren er færdig med at gennemgå satsskibene og de eventulle supplerende filer, underretter vedkommende layoutredaktøren, med en kopi til sektionsredaktøren, og layoutredaktøren går i gang med at rette satsskibene og eventuelt de supplerende filer. Til slut underretter layoutredaktøren sektionsredaktøren om, at publiceringen af manuskriptet er klar til at blive planlagt. På dette tidspunkt kan sektionsredaktøren vælge at gennemgå filerne igen, og hvis de ser tilfredsstillende ud, kan sektionsredaktøren planlægge publiceringen af manuskriptet ved at vælge et element under Planlægning og trykke på "{translate key="common.record"}". Manuskriptet går derefter videre til {help_topic key="publishing.index" text="publiceringsprocessen"}.</p><p>Vær opmærksom på, at redaktøren på et hvilket som helst tidspunkt i redigeringsprocessen kan planlægge publiceringen af et manuskript. Disse oplysninger gøres tilgængelige for layoutredaktører og korrekturlæsere og giver dem mulighed for at få vist en udskrift af udgaven, inden den publiceres.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Review Version 
+  *
+  * $Id: 000024.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000024" locale="da_DK" title="Bedømmelsesversion" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p>Sektionsredaktørens første opgave i forbindelse med et manuskript er at kontrollere teksten for at konstatere, om den oprindelige version kan fungere som bedømmelsesversion, eller om der skal overføres en revideret kopi. Sektionsredaktøren klikker på filnavnet ud for Bedømmelsesversion for at få vist den oprindelige fil.</p><p><i>Sikre en blind peer review</i>. Se instruktionerne til {help_topic key="editorial.sectionEditorsRole.review.blindPeerReview" text="Sikre en blind peer review"}. Sektionsredaktøren skal også se siden Manuskript for at kontrollere, om de supplerende filer kan deles med bedømmerne. Hvis forfatteren ønsker at præsentere filer for bedømmere, markeres filerne. Sektionsredaktøren kan fjerne markeringen af dem, hvis de ikke egner sig til at blive delt med bedømmere.</p><p><i>Oprette manuskriptets bedømmelsesversion</i>. Sektionsredaktøren vælger den bedømmelsesversion, som bedømmerne får vist, ved at (a) vælge den oprindelige version eller ved at (b) overføre en mere velegnet version. Sektionsredaktøren kan vælge at rette mindre problemer i den oprindelige fil og foretage ændringerne ved hjælp af et tekstbehandlingsprogram, gemme filen på skrivebordet og derefter overføre filen ved hjælp af knapperne Gennemse/Overfør under Bedømmelsesversion./p><p><i>Utilstrækkeligt forberedte manuskripter</i>. Hvis det er tydeligt, at forfatteren ikke har sikret, at manuskriptet overholder tidsskriftets retningslinjer for forfattere, herunder sikret, at manuskriptet understøtter en blindbedømmelse, kan sektionsredaktøren vælge at meddele forfatteren, at manuskriptet skal fremsendes igen. Forfatteren kan derefter fremsende den forbedrede version via e-mail direkte til redaktøren, som dernæst kan overføre den som bedømmelsesversionen. Sektionsredaktøren kan også beslutte, at manuskriptet simpelthen ikke egner sig til tidsskriftet og meddele forfatteren dette. Manuskriptet sendes til arkiverne ved at klikke på "{translate key="editor.article.archiveSubmission"}" på siden Manuskript.</p>]]>	
+	</section>
+</topic>

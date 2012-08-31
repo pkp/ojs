@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id: 000002.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="user/topic/000002" locale="da_DK" title="Om" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Under Om tidsskriftet præsenterer tidsskriftet dets politikker, procedurer og andet relevant materiale med henblik på at gøre tidsskriftets arbejdsgange så gennemsigtige som muligt. Dette materiale kaldes normalt for præliminærsiderne i tidsskrifter. Det er her tidsskriftets potentielle forfattere kan få mere at vide om tidsskriftets område og fokus, dets peer review-politik, hvordan et manuskript skal formateres og forberedes, samt hvordan de sender en artikel til tidsskriftet.</p>]]>	
+	</section>
+</topic>
