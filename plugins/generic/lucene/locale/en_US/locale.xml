@@ -18,6 +18,7 @@
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
 	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
 
+	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
 	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
 	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevance</message>
 	<message key="plugins.generic.lucene.results.orderBy.author">Author</message>
@@ -72,6 +73,7 @@
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternative spelling suggestions</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>

@@ -18,6 +18,7 @@
 	<message key="plugins.generic.lucene.message.coreNotFound">Der angeforderte Kern '{$core}' wurde nicht auf dem Solr-Server gefunden. Ist er online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index mit {$numDocs} Dokumenten online.</message>
 	
+	<message key="plugins.generic.lucene.results.didYouMean">Meinten Sie</message>
 	<message key="plugins.generic.lucene.results.orderBy">Ergebnisse sortieren nach</message>
 	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevanz</message>
 	<message key="plugins.generic.lucene.results.orderBy.author">Autor/in</message>

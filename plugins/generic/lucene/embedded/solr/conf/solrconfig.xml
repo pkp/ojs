@@ -203,11 +203,17 @@
       <str name="facet.range.end">NOW</str>
       <str name="facet.range.gap">+1YEAR</str>
       <str name="facet.range.other">all</str>
+      <str name="spellcheck.dictionary">default</str>
+      <str name="spellcheck.collate">on</str> <!-- Make sure that we always get an alternative spelling suggestion. That's what we actually use. -->
+      <str name="spellcheck.collateExtendedResults">off</str> <!-- We enforce the result format so that we can be sure to understand the result. -->
+      <str name="spellcheck.maxCollations">1</str> <!-- We only display one collation. -->
     </lst>
     <lst name="defaults">
       <str name="hl">off</str>
       <str name="facet">off</str>
       <str name="spellcheck">off</str>
+      <str name="spellcheck.onlyMorePopular">on</str> <!-- Not only make spelling suggestions but also suggest searches that yield more results. -->
+      <str name="spellcheck.maxCollationTries">5</str> <!-- Only return suggestions that actually give a result. -->
     </lst>
     <arr name="last-components">
       <str>dictionaries</str>
