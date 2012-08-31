@@ -50,6 +50,8 @@ class SectionEditorHandler extends Handler {
 		$journalId = $journal->getId();
 		$user =& Request::getUser();
 		$isSectionEditor = Validation::isSectionEditor();
+		$journalContact = $journal->getSetting('supportName');
+		$journalEmail = $journal->getSetting('supportEmail');
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
@@ -117,7 +119,9 @@ class SectionEditorHandler extends Handler {
 			$rangeInfo,
 			$sort,
 			$sortDirection,
-			$isSectionEditor
+			$isSectionEditor,
+			$journalContact,
+			$journalEmail
 		);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -128,6 +132,8 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('journalContact',$journalContact); //20120831 LS Added
+		$templateMgr->assign('journalEmail',$journalEmail); //20120831 LS Added		
 
 		// Set search parameters
 		$duplicateParameters = array(

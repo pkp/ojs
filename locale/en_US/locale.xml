@@ -171,7 +171,7 @@
 	<message key="submission.submissionEditorDecision">Section Editor Decision</message>
 	<message key="submission.submissionEditorInstructionsWestJEM">Once all reviewers have submitted their report, please register your editorial comments:</message>
     <message key="submission.submissionEditorInstructionsWestJEM1">Clicking the HISTORY link near the top of the page (Just above the bold heading "Submission").</message>
-     <message key="submission.submissionEditorInstructionsWestJEM2">On the following page, click the Submission Notes link.</message>
+    <message key="submission.submissionEditorInstructionsWestJEM2">On the following page, click the Submission Notes link.</message>
     <message key="submission.submissionEditorInstructionsWestJEMclose">Please note that final decisions will be made by a decision editor. Thank you.</message>	
 	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Editor Review</message>

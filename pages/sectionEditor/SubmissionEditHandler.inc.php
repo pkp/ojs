@@ -178,6 +178,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId);
 		$isSectionEditor = Validation::isSectionEditor();
 		$isEditor = Validation::isEditor();
+		$journalContact = $journal->getSetting('supportName');
+		$journalEmail = $journal->getSetting('supportEmail');
 
 		Locale::requireComponents(array(LOCALE_COMPONENT_OJS_MANAGER));
 
@@ -270,6 +272,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
 		$templateMgr->assign('isEditor',$isEditor); //20120508 LS Added
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('journalContact',$journalContact); //20120831 LS Added
+		$templateMgr->assign('journalEmail',$journalEmail); //20120831 LS Added			
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 
 	}
