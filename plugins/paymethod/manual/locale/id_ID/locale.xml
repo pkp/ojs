@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="id_ID" full_name="Indonesia">	<message key="plugins.paymethod.manual.displayName"> Pembayaran Biaya Manual </message> 
+	<message key="plugins.paymethod.manual.description"> Manajer secara manual akan mencatat kwitansi dari pembayaran pengguna (di luar perangkat lunak ini).</message>
+	<message key="plugins.paymethod.manual"> Pembayaran Biaya Manual </message> 
+	<message key="plugins.paymethod.manual.settings"> Pengaturan Pembayaran Manual </message> 
+
+<message key="plugins.paymethod.manual.settings.instructions"> Instruksi 
+</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions"> Instruksi Pembayaran untuk metode pembayaran manual pilihan pengguna</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment"> Kirim pemberitahuan dari pembayaran </message> 
+	<message key="plugins.paymethod.manual.paymentNotification"> Pemberitahuan pembayaran </message> 
+	<message key="plugins.paymethod.manual.notificationSent"> Pemberitahuan pembayaran terkirim </message> 
+	<message key="plugins.paymethod.manual.purchase.title"> Judul</message>
+	<message key="plugins.paymethod.manual.purchase.fee"> Biaya</message>
+</locale>

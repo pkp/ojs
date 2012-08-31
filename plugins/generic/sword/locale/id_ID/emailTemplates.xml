@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplates.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="id_ID">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Notifikasi Deposit</subject>
+		<body>Selamat atas diterimanya naskah Anda, "{$articleTitle}", untuk penerbitan di  {$journalName}. Jika Anda memilih, Anda boleh secara otomatis menyimpan naskah Anda di satu repositori atau lebih.  
+
+Pergi ke {$swordDepositUrl} untuk melanjutkan.
+
+Email ini dihasilkan oleh Plugin deposit SWORD Open Journal System.</body>
+		<description>Template email ini digunakan untuk memberitahu penulis poin deposit opsional untuk SWORD deposits.</description>
+	</email_text>
+</email_texts>

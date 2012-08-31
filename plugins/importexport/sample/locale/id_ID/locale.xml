@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="id_ID" full_name="Indonesia">
+	<message key="plugins.importexport.sample.displayName">Contoh Plugin Impor/Ekspor</message>
+	<message key="plugins.importexport.sample.description">Plugin ini menyediakan contoh implementasi untuk digunakan ketika membangun plugin Impor/Ekspor.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Pilih Isu</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Plih isu untuk di ekspor.</message>
+</locale>

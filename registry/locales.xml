@@ -27,6 +27,7 @@
 	<locale key="fr_CA" name="Français" iso639-2b="fre" iso639-3="fra" />
 	<locale key="gl_ES" complete="false" name="Galician" iso639-2b="glg" iso639-3="glg" />
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
+	<locale key="id_ID" name="Indonesian" iso639-2b="ind" iso639-3="ind" />
 	<locale key="it_IT" name="Italiano" iso639-2b="ita" iso639-3="ita" />
 	<locale key="ja_JP" name="日本語" iso639-2b="jpn" iso639-3="jpn" />
 	<locale key="ml_IN" complete="false" name="Malayalam" iso639-2b="mal" iso639-3="mal" />

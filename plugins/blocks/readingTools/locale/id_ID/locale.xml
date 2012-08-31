@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="id_ID" full_name="Indonesia">
+	<message key="plugins.block.readingTools.displayName">Blok Alat Membaca</message>
+	<message key="plugins.block.readingTools.description">Plugin ini menampilkan blok yang berisi alat membaca dalam bagian alat membaca.</message>
+	<message key="plugins.block.readingTools.title">Alat Membaca</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Tentang Penulis</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Tentang Penulis</message>
+	<message key="plugins.block.readingTools.articleTools">Alat Artikel</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Email Artikel ini</message>
+	<message key="plugins.block.readingTools.loginRequired">Login dibutuhkan</message>
+	<message key="plugins.block.readingTools.printThisArticle">Cetak Artikel ini</message>
+	<message key="plugins.block.readingTools.postComment">Kirim Komentar</message>
+</locale>

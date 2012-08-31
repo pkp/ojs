@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="id_ID" full_name="Indonesia">
+	<message key="plugins.citationFormats.endNote.displayName">Plugin format kutipan EndNote</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - EndNote format (Macintosh &amp; Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Plugin ini menerapkan format kutipan EndNote.</message>
+</locale>

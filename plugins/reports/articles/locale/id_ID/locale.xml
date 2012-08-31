@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="id_ID" full_name="Indonesia">
+<message key="plugins.reports.articles.displayName"> Laporan Artikel </message> 
+	<message key="plugins.reports.articles.description"> Plugin ini menerapkan laporan CSV yang berisi daftar artikel dan info mereka.</message> 
+	<message key="plugins.reports.articles.nodecision"> Tidak ada keputusan</message> 
+</locale>
+

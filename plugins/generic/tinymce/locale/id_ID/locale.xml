@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="id_ID" full_name="Indonesia">
+	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area OJS menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area OJS menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor. <strong>TinyMCE sekarang belum diinstal; mohon instal ini di {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.settings">Pengaturan</message>
+</locale>

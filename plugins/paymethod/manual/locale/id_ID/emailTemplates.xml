@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<email_texts locale="id_ID"> 
+	<email_text key="MANUAL_PAYMENT_NOTIFICATION"> 
+		<subject> Pemberitahuan Pembayaran Manual </subject> 
+		<body> Pembayaran manual harus diproses untuk jurnal dan {$journalName} pengguna {$userFullName} (nama pengguna "{$userName}").
+The item being paid for "{$itemName}". 
+Biaya adalah {$itemCost} ({$itemCurrencyCode}). 
+Surat elektronik ini dibuat oleh plugin pembayaran manual IOJS.</body>
+		<description> Email ini digunakan untuk memberitahukan kontak manajer jurnal bahwa pembayaran manual dibutuhkan.</description>
+	</email_text>
+</email_texts>
