@@ -47,7 +47,7 @@
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
 <li>Häufig auftretende Wörter werden ignoriert.</li>
 <li>Standardmäßig werden alle Artikel aufgelistet, die mindestens <em>einen</em> Suchbegriff der Anfrage enthalten (d.h. <em>ODER</em> ist impliziert).</li>
-<li>Erzwingen Sie, dass ein Wort in einem Artikel existiert, in dem Sie dem Wort ein <strong>+</strong> voranstellen; z.B. <em>+journal +access scholarly academic</em>.</li>
+<li>Erzwingen Sie, dass ein Wort in einem Artikel existiert, indem Sie dem Wort ein <strong>+</strong> voranstellen; z.B. <em>+journal +access scholarly academic</em>.</li>
 <li>Kombinieren Sie mehrere Wörter mit <em>UND</em>, um Artikel zu finden, die alle Begriffe enthalten; z.B. <em>Bildung UND Forschung</em></li>
 <li>Schließen Sie ein Wort aus, indem Sie ihm ein <strong>-</strong> oder <em>NICHT</em> voranstellen; z.B. <em>online -politics</em> oder <em>online NICHT politics</em></li>
 <li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen; z.B. <em>"open access publishing"</em></li>

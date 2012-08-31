@@ -42,6 +42,8 @@
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Namensraum</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Auswählen</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Der Namensraum für persistente Bezeichner wird in der Regel für die Registrierung benötigt (z.B. bei der Deutschen Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver-URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(z.B. http://nbn-resolving.de/)</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Zeitschrifteninhalt</message>
 	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Bitte wählen Sie, welchen Objekten URN zugewiesen werden sollen.</message>
@@ -68,6 +70,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Fahnen ein.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Bitte geben Sie das URN-Suffix-Muster für Zusatzdateien ein.</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Bitte wählen Sie einen Namensraum.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Bitte geben Sie die Adresse des Resolvers ein.</message>
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Der angegebene URN-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen URN-Suffix für jedes Element.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Die Prüfziffer fehlt.</message>
