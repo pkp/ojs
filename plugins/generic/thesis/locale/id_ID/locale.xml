@@ -53,7 +53,7 @@
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions"> Jika tercentang, email Siswa/ mahasiswa akan diterbitkan/ ditampilkan dengan abstrak tesis.</message>	<message key="plugins.generic.thesis.manager.form.studentBio">Biografi Mahasiswa </message> 
 	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Selipkan garis kosong untuk memisahkan paragraf. Tempatkan teks antara &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, dan &lt;u&gt;&lt;/u&gt; tag untuk menebalkan, memiringkan, dan menggarisbawahi (yaitu: ini &lt;i&gt;word&lt;/i&gt; akan dimiringkan.)]]></message> 
 	<message key="plugins.generic.thesis.manager.form.indexing"> Pengindeksan </message>  
-	<message key="plugins.generic.thesis.manager.form.indexingDescription"> Pilih istilah yang paling tepat menggambarkan isi tesis mengikuti kategori yang digunakan oleh jurnal. Pisahkan istilah dengan tanda titik koma (istilah1; istilah2; istilah3).</message>.
+	<message key="plugins.generic.thesis.manager.form.indexingDescription"> Pilih istilah yang paling tepat menggambarkan isi tesis mengikuti kategori yang digunakan oleh jurnal. Pisahkan istilah dengan tanda titik koma (istilah1; istilah2; istilah3).</message>
 	<message key="plugins.generic.thesis.manager.form.discipline"> Disiplin Akademik dan Sub-disiplin </message> 
 	<message key="plugins.generic.thesis.manager.form.subjectClass"> Klasifikasi Subjek </message> 
 	<message key="plugins.generic.thesis.manager.form.keyword"> Kata Kunci 

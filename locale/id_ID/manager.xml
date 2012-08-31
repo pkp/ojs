@@ -408,7 +408,7 @@
 	<message key="manager.setup.restrictArticleAccess"> Pengguna harus didaftarkan dan login untuk melihat konten Akses Terbuka.</message>
 	<message key="manager.setup.restrictSiteAccess"> Pengguna harus didaftarkan dan login untuk melihat situs jurnal.</message>	
 <message key="manager.setup.reviewerDatabaseLink"> Potensial Database Reviewer </message>  
-	<message key="manager.setup.reviewerDatabaseLink.desc"> Tambahkan ke halaman Pilih Reviewer sebuah tautan ke database literatur relevan yang dapat dicari oleh Reviewer potensial dan terbuka untuk editor tanpa harus berlangganan.</message>. 
+	<message key="manager.setup.reviewerDatabaseLink.desc"> Tambahkan ke halaman Pilih Reviewer sebuah tautan ke database literatur relevan yang dapat dicari oleh Reviewer potensial dan terbuka untuk editor tanpa harus berlangganan.</message>
 	<message key="manager.setup.reviewGuidelines"> Petunjuk Review</message> 
 	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Memberi petunjuk bagi Reviewer tentang kriteria untuk menilai kepantasan naskah yang akan diterbitkan jurnal, juga instruksi untuk menyiapkan review yang efektif dan berguna. Dalam melakukan review, Reviewer dibagi dalam dua bagian, yang pertama "untuk Penulis dan Editor", dan yang kedua "untuk Editor". Manajer jurnal juga dapat membuat form peer review di bawah <a href="{$reviewFormsUrl}" class="action"> Form Review </a>. Dalam semua kasus, editor mempunyai pilihan memasukkan Reviewer untuk berkorespondensi dengan penulis.]]></message>
 	<message key="manager.setup.reviewOptions">Pilihan Review</message> 
