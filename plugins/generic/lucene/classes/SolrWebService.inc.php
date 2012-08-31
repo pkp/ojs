@@ -225,9 +225,12 @@ class SolrWebService extends XmlWebService {
 	 *  from the actual number of returned results as the search can
 	 *  be limited.
 	 *
-	 * @return array An array of search results. The keys are
-	 *  scores (1-9999) and the values are article IDs. Null if an error
-	 *  occured while querying the server.
+	 * @return array An array of search results. The main keys are result
+	 *  types. These are "scoredResults" and "alternativeSpelling".
+	 *  The keys in the "scoredResults" sub-array are scores (1-9999) and the
+	 *  values are article IDs. The alternative spelling sub-array returns
+	 *  an alternative query string (if any) and the number of hits for this
+	 *  string. Null if an error occured while querying the server.
 	 */
 	function retrieveResults(&$searchRequest, &$totalResults) {
 		// Construct the main query.
@@ -302,7 +305,24 @@ class SolrWebService extends XmlWebService {
 			// Store the result.
 			$scoredResults[$score] = (int)$articleId;
 		}
-		return $scoredResults;
+
+		// Read alternative spelling suggestions (if any).
+		$spellingSuggestion = null;
+		if ($searchRequest->getSpellcheck()) {
+			$alternativeSpellingNodeList =& $response->query('/response/lst[@name="spellcheck"]/lst[@name="suggestions"]/str[@name="collation"]');
+			if ($alternativeSpellingNodeList->length == 1) {
+				$alternativeSpellingNode = $alternativeSpellingNodeList->item(0);
+				$spellingSuggestion = $alternativeSpellingNode->textContent;
+
+				// Translate back to the current language.
+				$spellingSuggestion = $this->_translateSearchPhrase($spellingSuggestion, true);
+			}
+		}
+
+		return array(
+			'scoredResults' => $scoredResults,
+			'spellingSuggestion' => $spellingSuggestion
+		);
 	}
 
 	/**
@@ -747,6 +767,19 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
+	 * Expand the given list of fields.
+	 * @param $fields array
+	 * @return string An expanded field list to be used in edismax's qf parameter.
+	 */
+	function _expandFieldList($fields) {
+		$expandedFields = array();
+		foreach($fields as $field) {
+			$expandedFields = array_merge($expandedFields, $this->_getLocalesAndFormats($field));
+		}
+		return implode(' ', $expandedFields);
+	}
+
+	/**
 	 * Generate the ordering parameter of a search query.
 	 * @param $field string the field to order by
 	 * @param $direction boolean true for ascending, false for descending
@@ -1169,7 +1202,46 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Add a subquery to the search query and query parameters.
+	 * Set the query parameters for a search query.
+	 *
+	 * @param $fieldList string A list of fields to be queried, separated by '|'.
+	 * @param $searchPhrase string The search phrase to be added.
+	 * @param $params array The existing query parameters.
+	 * @param $spellcheck boolean Whether to switch spellchecking on.
+	 */
+	function _setQuery($fieldList, $searchPhrase, $spellcheck = false) {
+		// Expand the field list to all locales and formats.
+		$fieldList = $this->_expandFieldList(explode('|', $fieldList));
+
+		// Add the subquery to the query parameters.
+		$params = array(
+			'defType' => 'edismax',
+			'qf' => $fieldList,
+			// NB: mm=1 is equivalent to implicit OR
+			// This deviates from previous OJS practice, please see
+			// http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Query_Parser
+			// for the rationale of this change.
+			'mm' => '1'
+		);
+
+		// Only set a query if we have one.
+		if (!empty($searchPhrase)) {
+			$params['q'] = $searchPhrase;
+		}
+
+		// Ask for alternative spelling suggestions.
+		if ($spellcheck) {
+			$params['spellcheck'] = 'on';
+		}
+
+		return $params;
+	}
+
+	/**
+	 * Add a subquery to the search query.
+	 *
+	 * NB: subqueries do not support collation (for alternative
+	 * spelling suggestions).
 	 *
 	 * @param $fieldList string A list of fields to be queried, separated by '|'.
 	 * @param $searchPhrase string The search phrase to be added.
@@ -1180,11 +1252,7 @@ class SolrWebService extends XmlWebService {
 		$fields = explode('|', $fieldList);
 
 		// Expand the field list to all locales and formats.
-		$expandedFields = array();
-		foreach($fields as $field) {
-			$expandedFields = array_merge($expandedFields, $this->_getLocalesAndFormats($field));
-		}
-		$fieldList = implode(' ', $expandedFields);
+		$fieldList = $this->_expandFieldList($fields);
 
 		// Determine a query parameter name for this field list.
 		if (count($fields) == 1) {
@@ -1227,21 +1295,27 @@ class SolrWebService extends XmlWebService {
 	 * @param $searchPhrase string
 	 * @return The translated search phrase.
 	 */
-	function _translateSearchPhrase($searchPhrase) {
+	function _translateSearchPhrase($searchPhrase, $backwards = false) {
 		static $queryKeywords;
 
 		if (is_null($queryKeywords)) {
 			// Query keywords.
 			$queryKeywords = array(
-				String::strtolower(__('search.operator.not')) => 'NOT',
-				String::strtolower(__('search.operator.and')) => 'AND',
-				String::strtolower(__('search.operator.or')) => 'OR'
+				String::strtoupper(__('search.operator.not')) => 'NOT',
+				String::strtoupper(__('search.operator.and')) => 'AND',
+				String::strtoupper(__('search.operator.or')) => 'OR'
 			);
 		}
 
+		if ($backwards) {
+			$translationTable = array_flip($queryKeywords);
+		} else {
+			$translationTable = $queryKeywords;
+		}
+
 		// Translate the search phrase.
-		foreach($queryKeywords as $queryKeyword => $translation) {
-			$searchPhrase = String::regexp_replace("/(^|\s)$queryKeyword(\s|$)/i", "\\1$translation\\2", $searchPhrase);
+		foreach($translationTable as $translateFrom => $translateTo) {
+			$searchPhrase = String::regexp_replace("/(^|\s)$translateFrom(\s|$)/i", "\\1$translateTo\\2", $searchPhrase);
 		}
 
 		return $searchPhrase;
@@ -1255,19 +1329,31 @@ class SolrWebService extends XmlWebService {
 	 *  went wrong.
 	 */
 	function _getSearchQueryParameters(&$searchRequest) {
-		// Initialize the search request parameters.
-		$params = array();
-
-		// Construct a sub query for every field search phrase.
-		foreach ($searchRequest->getQuery() as $fieldList => $searchPhrase) {
+		// Pre-filter and translate query phrases.
+		$subQueries = array();
+		foreach($searchRequest->getQuery() as $fieldList => $searchPhrase) {
 			// Ignore empty search phrases.
 			if (empty($fieldList) || empty($searchPhrase)) continue;
 
 			// Translate query keywords.
-			$searchPhrase = $this->_translateSearchPhrase($searchPhrase);
+			$subQueries[$fieldList] = $this->_translateSearchPhrase($searchPhrase);
+		}
 
-			// Construct the sub-query and add it to the search query and params.
-			$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
+		// We differentiate between simple and multi-phrase queries.
+		$subQueryCount = count($subQueries);
+		if ($subQueryCount == 1) {
+			// Use a simplified query that allows us to provide
+			// alternative spelling suggestions.
+			$fieldList = key($subQueries);
+			$searchPhrase = current($subQueries);
+			$params = $this->_setQuery($fieldList, $searchPhrase, $searchRequest->getSpellcheck());
+		} elseif ($subQueryCount > 1) {
+			// Initialize the search request parameters.
+			$params = array();
+			foreach ($subQueries as $fieldList => $searchPhrase) {
+				// Construct the sub-query and add it to the search query and params.
+				$params = $this->_addSubquery($fieldList, $searchPhrase, $params, true);
+			}
 		}
 
 		// Add the installation ID as a filter query.

@@ -68,9 +68,13 @@
 			<select name="autosuggestType" id="autosuggestType" class="selectMenu">
 				{html_options options=$autosuggestTypes selected=$autosuggestType}
 			</select>
-			<br />
-			<br />
-			<span class="instruct">{translate key="plugins.generic.lucene.settings.autosuggestTypeExplanation"}</span>
+			<p class="instruct">{translate key="plugins.generic.lucene.settings.autosuggestTypeExplanation"}</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right"><input type="checkbox" name="spellcheck" id="spellcheck" {if $spellcheck}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="spellcheck">{translate key="plugins.generic.lucene.settings.spellcheck"}</label>&nbsp;
 		</td>
 	</tr>
 </table>

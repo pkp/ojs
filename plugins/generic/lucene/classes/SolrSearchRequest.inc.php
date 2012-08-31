@@ -61,6 +61,11 @@ class SolrSearchRequest {
 	var $_orderDir = false;
 
 	/**
+	 * @var boolean Whether to enable spell checking.
+	 */
+	var $_spellcheck = false;
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -111,6 +116,8 @@ class SolrSearchRequest {
 	 * @param $fieldwiseQuery array
 	 */
 	function addQueryFieldPhrase($field, $searchPhrase) {
+		// Ignore empty search phrases.
+		if (empty($searchPhrase)) return;
 		$this->_query[$field] = $searchPhrase;
 	}
 
@@ -210,6 +217,22 @@ class SolrSearchRequest {
 	 */
 	function setOrderDir($orderDir) {
 		$this->_orderDir = $orderDir;
+	}
+
+	/**
+	 * Is spellchecking enabled?
+	 * @return boolean
+	 */
+	function getSpellcheck() {
+		return $this->_spellcheck;
+	}
+
+	/**
+	 * Set whether spellchecking should be enabled.
+	 * @param $spellcheck boolean
+	 */
+	function setSpellcheck($spellcheck) {
+		$this->_spellcheck = $spellcheck;
 	}
 
 

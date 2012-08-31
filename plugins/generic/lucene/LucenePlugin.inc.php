@@ -25,6 +25,12 @@ class LucenePlugin extends GenericPlugin {
 	/** @var array */
 	var $_mailTemplates = array();
 
+	/** @var string */
+	var $_spellingSuggestion;
+
+	/** @var string */
+	var $_spellingSuggestionField;
+
 
 	//
 	// Constructor
@@ -266,6 +272,10 @@ class LucenePlugin extends GenericPlugin {
 		$searchRequest->setOrderBy($orderBy);
 		$searchRequest->setOrderDir($orderDir == 'asc' ? true : false);
 
+		// Configure alternative spelling suggestions.
+		$spellcheck = (boolean)$this->getSetting(0, 'spellcheck');
+		$searchRequest->setSpellcheck($spellcheck);
+
 		// Call the solr web service.
 		$solrWebService =& $this->getSolrWebService();
 		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
@@ -273,8 +283,42 @@ class LucenePlugin extends GenericPlugin {
 			$result = array();
 			$error = $solrWebService->getServiceMessage();
 			$this->_informTechAdmin(null, $journal, false);
+			return null;
+		} else {
+			if ($spellcheck && isset($result['spellingSuggestion'])) {
+				// Store the spelling suggestion internally. We cannot
+				// route it back through the request as the default
+				// search implementation does not support spelling
+				// suggestions.
+				$this->_spellingSuggestion = $result['spellingSuggestion'];
+
+				// Identify the field for which we got the suggestion.
+				foreach($keywords as $bitmap => $searchPhrase) {
+					if (!empty($searchPhrase)) {
+						switch ($bitmap) {
+							case null:
+								$queryField = 'query';
+								break;
+
+							case ARTICLE_SEARCH_INDEX_TERMS:
+								$queryField = 'indexTerms';
+								break;
+
+							default:
+								$indexFieldMap = ArticleSearch::getIndexFieldMap();
+								assert(isset($indexFieldMap[$bitmap]));
+								$queryField = $indexFieldMap[$bitmap];
+						}
+					}
+				}
+				$this->_spellingSuggestionField = $queryField;
+			}
+			if (isset($result['scoredResults'])) {
+				return $result['scoredResults'];
+			} else {
+				return array();
+			}
 		}
-		return $result;
 	}
 
 
@@ -433,6 +477,13 @@ class LucenePlugin extends GenericPlugin {
 	function callbackTemplatePreResults($hookName, $params) {
 		$smarty =& $params[1];
 		$output =& $params[2];
+		// The spelling suggestion value is set in
+		// LucenePlugin::callbackRetrieveResults(), see there.
+		$smarty->assign('spellingSuggestion', $this->_spellingSuggestion);
+		$smarty->assign(
+			'spellingSuggestionUrlParams',
+			array($this->_spellingSuggestionField => $this->_spellingSuggestion)
+		);
 		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
 		return false;
 	}

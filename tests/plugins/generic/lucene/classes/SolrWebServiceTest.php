@@ -107,8 +107,10 @@ class SolrWebServiceTest extends PKPTestCase {
 		);
 		$searchRequest->setFromDate(date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01')));
 		$totalResults = null;
-		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		self::assertTrue(is_int($totalResults), $totalResults > 0);
+		self::assertTrue(isset($results['scoredResults']));
+		$scoredResults = $results['scoredResults'];
 		self::assertTrue(is_array($scoredResults));
 		self::assertTrue(!empty($scoredResults));
 		self::assertTrue(in_array('3', $scoredResults));
@@ -117,11 +119,13 @@ class SolrWebServiceTest extends PKPTestCase {
 		$searchRequest->setQuery(array('title' => 'lucene'));
 		$searchRequest->setOrderBy('authors');
 		$searchRequest->setOrderDir('asc');
-		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		$scoredResults = (isset($results['scoredResults']) ? $results['scoredResults'] : null);
 		self::assertEquals(array(4, 3), array_values($scoredResults));
 		$searchRequest->setOrderBy('title');
 		$searchRequest->setOrderDir('desc');
-		$scoredResults = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		$scoredResults = (isset($results['scoredResults']) ? $results['scoredResults'] : null);
 		self::assertEquals(array(3, 4), array_values($scoredResults));
 
 		// Test translation of search terms.
@@ -130,9 +134,20 @@ class SolrWebServiceTest extends PKPTestCase {
 		// We confirm that by confirming that the two words without the keyword
 		// will return something.
 		$searchRequest->setQuery(array('galleyFullText' => 'nutella und quatsch'));
-		self::assertEmpty($this->solrWebService->retrieveResults($searchRequest, $totalResults));
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		self::assertTrue(empty($results['scoredResults']));
 		$searchRequest->setQuery(array('galleyFullText' => 'nutella quatsch'));
-		self::assertNotEmpty($this->solrWebService->retrieveResults($searchRequest, $totalResults));
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		self::assertFalse(empty($results['scoredResults']));
+
+		// Test spelling suggestions.
+		$searchRequest->setQuery(array('galleyFullText' => 'Nutela'));
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		self::assertTrue(empty($results['spellingSuggestion']));
+		$searchRequest->setSpellcheck(true);
+		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+		self::assertFalse(empty($results['spellingSuggestion']));
+		self::assertEquals('nutella', $results['spellingSuggestion']);
 	}
 
 	/**

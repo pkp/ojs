@@ -6,8 +6,11 @@
  *
  * A template to be included via Templates::Search::SearchResults::PreResults hook.
  *}
-<div id="lucenePreResults">
-	<p>
+<div id="lucenePreResults" class="plugins_generic_lucene_preResults">
+	{if !empty($spellingSuggestion)}
+		<strong class="plugins_generic_lucene_preResults_spelling">{translate key="plugins.generic.lucene.results.didYouMean"}: <a href="{url op="search" params=$spellingSuggestionUrlParams|escape}">{$spellingSuggestion|escape}</a></strong>
+	{/if}
+	<div id="luceneOrdering" class="plugins_generic_lucene_preResults_ordering">
 		{translate key="plugins.generic.lucene.results.orderBy"}:&nbsp;
 		<select id="luceneSearchOrder" name="luceneOrderBy" class="selectMenu">
 			{html_options options=$luceneOrderByOptions selected=$orderBy}
@@ -44,5 +47,6 @@
 			$orderBySelect.change(function() {ldelim} luceneReorder(true); {rdelim});
 			$orderDirSelect.change(function() {ldelim} luceneReorder(false); {rdelim});
 		</script>
-	</p>
+	</div>
+	<div style="clear: both"> </div>
 </div>
