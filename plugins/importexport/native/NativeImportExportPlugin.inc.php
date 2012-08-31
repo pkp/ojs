@@ -110,6 +110,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			case 'import':
+				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_AUTHOR);
 				import('classes.file.TemporaryFileManager');
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$sectionDao =& DAORegistry::getDAO('SectionDAO');
