@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Journal Management - Users. 
+  *
+  * $Id: 000002.xml,v 1.10 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<toc id="journal/toc/000002" locale="da_DK" title="Brugere" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="Brugere, der er tilmeldt dette tidsskrift"/>
+	<topic id="journal/topic/000012" title="Opret ny bruger"/>
+	<topic id="journal/topic/000033" title="Flet brugere"/>
+
+	<breadcrumb url="journal/topic/000000" title="Administration af tidsskrift"/>
+	<breadcrumb url="journal/topic/000002" title="Brugere"/>
+</toc>

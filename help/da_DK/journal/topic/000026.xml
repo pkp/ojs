@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id: 000026.xml,v 1.7 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000026" locale="da_DK" title="Indstillinger for læseværktøjer" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen kan vælge, at et eller alle generiske, valgfrie links skal vises som en del af værktøjssættet. Det eller de pågældende links vises i en ramme til højre for alle elementer i de sektioner af tidsskriftet, der er indekseret (f.eks. Artikler og ikke Konferencemeddelelser). Tidsskriftschefen kan også vælge et fagområde- eller områdebaseret sæt læseværktøjer, der vises som Relaterede elementer. Tidsskriftschefen kan undersøge, redigere, slette eller tilføje til værktøjerne i de enkelte sæt af relaterede elementer ved at gå til Relaterede elementsæt under Læseværktøjer.</p><p>Det samme sæt læseværktøjer vises sammen med de enkelte elementer i tidsskriftets indekserede sektioner. Dog bruger læseværktøjerne de indekseringsord, som forfatteren har angivet, til at sikre, at materialet, der findes i de angivne databaser, er relevant. Tidsskriftschefen kan til enhver tid ændre de valgte læseværktøjer.</p>]]>
+	</section>
+</topic>

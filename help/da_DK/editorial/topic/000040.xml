@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000040.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Layout
+  *
+  * $Id: 000040.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000040" locale="da_DK" title="Layout" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+	<section>
+		<![CDATA[<p>Layoutversionen af manuskriptet er forberedt af manuskriptredaktøren i henhold til tidsskriftets standarder. Layoutredaktøren opsætter manuskriptet i henhold til tidsskriftets relevante filformater og layouttypografi. Layoutredaktøren benytter software fra tredjeparter til forberedelse af filerne i HTML, PDF, Postscript osv. (f.eks. Dreamweaver, Front Page, Acrobat). Tidsskriftschefen kan stille et sæt layoutinstruktioner til rådighed for layoutredaktører, som kan hjælpe dem med at foretage korrekt formatering af filerne i forbindelse med publicering.</p><p><i>Overføre satsskibe</i>. Når layoutredaktøren overfører en fil til Satsskibsformat, identificeres filtypen normalt på baggrund af dets suffiks (f.eks. PDF, HTML), og der vises oplysninger om filstørrelsen og filens oprindelige navn. Denne etiket, som vises i tidsskriftets indholdsfortegnelse i forbindelse med det publicerede element, fortæller læserne, hvilket filformat det publicerede element findes i. Layoutredaktøren har også mulighed for at mærke filen manuelt. Layoutredaktøren kan overføre mere end én fil i satsskibsformat, slette filer, der er blevet overført, samt redigere oplysninger, f.eks. filnavnet. I forbindelse med overførsel af HTML-filer skal billeder og typografiark også overføres sammen med .htm- eller .html-filen.</p><p><i>Supplerende filer</i>. Hvis forfatteren har overført nogle supplerende filer, vil de allerede være på plads. De skal publiceres i tidsskriftet i deres oprindelige filformat, medmindre tidsskriftet har en speciel politik med hensyn til forberedelsen af dem (som er tilfældet med figurer eller illustrationer). Selvom politikken er at publicere dem i deres oprindelige format, kan layoutredaktøren stadig vælge at kontrollere filerne for at sikre, at de er læsbare, og for at se, om de uden besvær kan bearbejdes, så de i højere grad følger tidsskriftets stil og standarder. Layoutredaktøren kan oprette, ændre, overskrive og slette supplerende filer (det kan forfatteren også, hvis det er nødvendigt pga. aspekter omkring filformatet).</p>]]>	
+	</section>
+</topic>

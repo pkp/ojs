@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id: 000003.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<toc id="journal/toc/000003" locale="da_DK" title="Roller" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Tidsskriftschef"/>
+	<topic id="journal/topic/000016" title="Redaktør"/>
+	<topic id="journal/topic/000017" title="Sektionsredaktør"/>
+	<topic id="journal/topic/000019" title="Manuskriptredaktør"/>
+	<topic id="journal/topic/000018" title="Layoutredaktør"/>
+	<topic id="journal/topic/000020" title="Korrekturlæser"/>
+	<topic id="journal/topic/000021" title="Bedømmer"/>
+	<topic id="journal/topic/000022" title="Forfatter"/>
+	<topic id="journal/topic/000023" title="Læser"/>
+	<topic id="journal/topic/000032" title="Abonnementschef"/>
+
+	<breadcrumb url="journal/topic/000000" title="Administration af tidsskrift"/>
+	<breadcrumb url="journal/topic/000003" title="Roller"/>
+</toc>

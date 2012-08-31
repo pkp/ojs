@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * $Id: 000000.xml,v 1.17 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="index/topic/000000" locale="da_DK" title="Hjælp til OJS" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>Hjælp-dokumentet til OJS (Open Journal Systems) er udviklet med henblik på at hjælpe brugere med at læse, fremsende, redigere og publicere artikler i videnskabelige og generelle interessetidsskrifter. Det har også til hensigt at fungere som en vejledning til OJS, hvor omfanget og anvendelsen af denne tidsskriftsstyringssoftware er beskrevet. Hjælp-dokumentet indeholder også redaktionelle råd vedrørende almindelig tidsskriftspraksis inden for videnskabelig publicering. Udover dette Hjælp-dokument har brugere adgang til tidsskriftets tekniske supportperson, der er angivet under Kontaktperson under Om tidsskriftet.</p><p>Da OJS benytter udvalgte publiceringsroller eller titler for hver enkelt funktion og proces – fra tidsskriftschefen, der er ansvarlig for tidsskriftets opsætning, til forfatteren, der læser korrektur på satsskibene – refererer de enkelte emner, der er beskrevet i Hjælp, til de roller, der skal udføre de enkelte opgaver. Efter samme princip er adgang til dokumentet bestemt af, hvem, der gør hvad og hvor i systemet. Hjælp er kontekstbestemt. De ting, som en person kan se, afhænger af personens rolle. Brugere kan have mere end én rolle i OJS (en bedømmer kan også være forfatter, og en tidsskriftschef kan også være redaktør). De ting, som en person kan se, afhænger også af, hvor i OJS personen arbejder. Rollen og placeringen bestemmer, hvilke Hjælp-emner der vises, selvom brugeren kan søge derfra efter relaterede emner med henblik på at udforske alle aspekter af systemet.</p><p><i>Søg</i> I øverste højre hjørne på hver side i Hjælp findes linket "Søg".  Angiv et nøgleord, hvorefter du vil få vist en liste over tilgængelige Hjælp-emner, en kort beskrivelse af hvert emne og et link til emnet.</p><p><i>Indholdsfortegnelse</i> Hvis du klikker på dette link, vises en indholdsfortegnelse over den tilgængelige Hjælp.</p><p><i>Ét niveau op</i> Hvis du klikker på dette link, går du ét niveau op i Hjælp-hierarkiet.  Hvis du f.eks. kigger på "Filbrowser", vil ét niveau op være "Administrationssider".</p>]]>
+</section>
+</topic>

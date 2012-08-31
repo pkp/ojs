@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * Site Administration - Site Management 
+  *
+  * $Id: 000002.xml,v 1.11 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="site/topic/000002" locale="da_DK" title="Administration af websted" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>OJS er udviklet som et multitidsskriftssystem, og webstedsadministratoren er ansvarlig for at konfigurere indstillinger på webstedsniveau og for at oprette nye tidsskrifter, der skal tilknyttes et enkelt websted. Tidsskrifters websteder er fuldstændigt uafhængige, men undtagelse af brugerkonti. Mens en bruger kan deltage i en hvilken som helst kombination af roller og tidsskrifter, vil den samme e-mail-adresse og det samme brugernavn henvise til den samme bruger uanset tidsskrift.</p>]]>
+	</section>
+	
+	<section title="Indstillinger for websted">
+		<![CDATA[<p>Webstedsadministrationen angiver grundlæggende oplysninger, som gælder for alle de tidsskrifter, der tilknyttes dette websted, herunder titel på og beskrivelse af webstedet samt kontaktoplysninger.</p>
+		<p><em>Omdirigering af tidsskrift.</em> Denne indstilling kan bruges til at sikre, at alle forespørgsler omdirigeres til et bestemt tidsskriftswebsted Denne indstilling anvendes normalt, hvis et websted er vært for et enkelt tidsskrift.</p>]]>
+	</section>
+	
+	<section title="Tilknyttede tidsskrifter">
+		<![CDATA[<p>Da OJS tillader generering af et hvilket som helst antal individuelle og særskilte tidsskriftswebsteder, er det altid muligt at oprette og administrere nye tidsskrifter. Der er adgang til alle oprettede tidsskrifter via en entydig URL-adresse, der er baseret på et stinavn, som webstedsadministratoren har angivet. Tidsskrifter, der er ved at blive oprettet og konfigureret, kan skjules på hovedwebstedet, indtil de er klar til at blive publiceret live.</p>]]>
+	</section>
+	
+	<section title="Sprog">
+		<![CDATA[<p>OJS er udviklet som et flersproget system, der tillader, at tidsskrifter, som understøtter en lang række forskellige sprog, kan tilknyttes et enkelt websted. Webstedsadministratoren kan angive standardsproget på webstedet og installere flere landekoder, når de bliver tilgængelige, og dermed gøre det muligt for tidsskrifter at benytte andre sprog.</p>
+		<p>Du kan normalt hente flere sprogpakker på Open Journal Systems-<a href="http://pkp.sfu.ca/" target="_blank">webstedet</a>, da oversættelser, som brugere har bidraget til, modtages. Disse pakker kan installeres i et eksisterende OJS-system og dermed gøres tilgængelige for tidsskrifter.</p>]]>
+	</section>
+	
+	<section title="Godkendelseskilder">
+		<![CDATA[<p>Som standard godkendes brugere i OJS i henhold til systemets interne database. Det er dog muligt at benytte andre godkendelsesmetoder, f.eks. LDAP. Yderligere godkendelseskilder implementeres som OJS-plug-ins. Se dokumentationen, der fulgte med de enkelte plug-ins, hvis du vil have flere oplysninger.</p>]]>
+	</section>
+</topic>

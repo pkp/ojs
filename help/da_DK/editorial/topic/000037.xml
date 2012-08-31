@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * $Id: 000037.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000037" locale="da_DK" title="Manuskripter" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Når manuskriptredaktøren har logget på og klikket på linket Manuskriptredaktør på siden Brugerstartside, vises køen Manuskripter. I denne kø vises de manuskripter, som manuskriptredaktørerne er blevet bedt om at redigere. Via linket Arkiv er der adgang til de manuskripter, som de tidligere har redigeret.</p><p>Hvis manuskriptredaktøren vil oprette adgang til siden Manuskriptredigering, skal vedkommende klikke på manuskriptets titel, der er vist på listen Aktive manuskripter.</p>]]>	
+	</section>
+</topic>

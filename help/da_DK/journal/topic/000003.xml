@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles Index 
+  *
+  * $Id: 000003.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000003" locale="da_DK" title="Roller" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
+	<section>
+		<![CDATA[<p>Dette tidsskriftssystem benytter en række traditionelle publiceringsroller til udførelse af publiceringsprocessen. En enkelt person kan være registreret i mere end én kapacitet, og tidsskriftet kan f.eks. være drevet af én person, der udfylder alle roller undtagen rollen som bedømmer og forfatter. Mere normalt er det, at en tidsskriftschef også fungerer som redaktør og sektionsredaktør. Bedømmere er ofte registreret som forfattere.</p><p><i>Adgang begrænset efter rolle</i>. Hver enkelt rolle har sit eget adgangsdomæne til den redaktionelle proces og til publiceringsprocessen. Forfattere og bedømmere har f.eks. deres eget område på tidsskriftets websted, og sektionsredaktører har kun tilladelse til at se de manuskripter, som de har fået tildelt. Det betyder i princippet, at der ikke opstår en potentiel konflikt, hvis en sektionsredaktør fremsender en artikel til tidsskriftet med henblik på bedømmelse og muligvis publicering.</p>]]>	
+	</section>
+</topic>

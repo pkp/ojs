@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Site Administration. 
+  *
+  * $Id: 000000.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<toc id="site/toc/000000" locale="da_DK" title="Administration af websted" parent_topic="site/topic/000000">
+	<topic id="site/topic/000001" title="Installation"/>
+	<topic id="site/topic/000002" title="Administration af websted"/>
+	<topic id="site/topic/000003" title="Administrative funktioner"/>
+	<breadcrumb url="site/topic/000000" title="Administration af websted"/>
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  * $Id: 000032.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000032" locale="da_DK" title="Manuskripter" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Når forfatteren logger på tidsskriftet og vælger rollen Forfatter på siden Brugerstartside, vises køen Aktive manuskripter. På denne side findes en liste over de manuskripter, der i øjeblikket befinder sig i den redaktionelle proces. Forfatteren har også adgang til tidligere manuskripter, der er blevet sendt til tidsskriftet, under linket Arkiv og kan fremsende en ny artikel, der skal tages i betragtning til tidsskriftet, ved at klikke på det relevante link under Start et nyt manuskript.</p><p>Hvis tidsskriftet accepterer onlinebetalinger, kan forfatteren foretage manuskriptspecifikke betalinger på denne side. Hvis tidsskriftet kræver det, vises der på denne side under Status links til betaling af manuskriptgebyrer, til Fast Track-manuskripter og til betaling af publiceringsgebyrer, på pr. artikel-basis. Hvis forfatteren klikker på disse links, åbnes enten siden Manuel gebyrbetaling eller siden til PayPal-betaling, hvor den påkrævede transaktion kan fuldføres. Du kan finde flere oplysninger om betalingsprocessen {help_topic key="journal.managementPages.payments" text="her"}.</p><p>Du kan finde flere oplysninger om manuskriptprocessen {help_topic key="submission.index" text="her"}.</p>]]>	
+	</section>
+</topic>

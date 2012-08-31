@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id: 000003.xml,v 1.9 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000003" locale="da_DK" title="Manuskriptresumé" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
+		<![CDATA[<p>Redaktøren bruger siden Resumé for hvert manuskript til at administrere manuskriptfilerne og deres tilknyttede metadata eller indekseringsoplysninger.</p>]]>	
+	</section>
+</topic>

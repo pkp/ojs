@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * $Id: 000039.xml,v 1.8 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000039" locale="da_DK" title="Manuskripter" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Når layoutredaktøren har logget på, har vedkommende adgang til siden Brugerstartside. På denne side findes et link til siden Aktive manuskripter for den pågældende layoutredaktør og linket Arkiver til tidligere fuldførte manuskripter samt et link til visning af kommende udgavers indholdsfortegnelse, hvis de er tilgængelige.</p><p><i>Aktive manuskripter</i><br />Hvis layoutredaktøren klikker på linket Aktiv på siden Brugerstartside, vises siden Aktive manuskripter. I denne kø vises de manuskripter, som layoutredaktørerne er blevet bedt om at lave layout for. Layoutprocessen kan påbegyndes ved at klikke på en angiven manuskripttitel.</p><p><i>Arkiv</i><br />Hvis layoutredaktøren klikker på linket Arkiv på siden Brugerstartside, vises siden Arkiv. I denne kø vises de manuskripter, der har fuldført layoutprocessen og er blevet publiceret.</p><p><i>Udgaver</i><br />Hvis layoutredaktøren klikker på linket Fremtidige udgaver, vises en liste over fremtidige udgaver, der endnu ikke er blevet publiceret. Dette gør det muligt for layoutredaktøren at kontrollere layoutet for en udgave under ét.</p>]]>	
+	</section>
+</topic>

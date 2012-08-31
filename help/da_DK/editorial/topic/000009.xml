@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id: 000009.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000009" locale="da_DK" title="Forfatterens rolle" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p>Forfatteren til et manuskript kan logge på tidsskriftets websted og følge manuskriptets forløb samt deltage i den redaktionelle proces. Hvis der er mere end én forfatter, bliver den forfatter, som fremsender manuskriptet, bedt om at identificere en primær kontaktperson, der bliver den person, som redaktionen korresponderer med, og som har adgang til tidsskriftets websted.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Supplementary Files 
+  *
+  * $Id: 000004.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="submission/topic/000004" locale="da_DK" title="Supplerende filer" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		<![CDATA[<p>Forfatteren kan overføre supplerende filer i trin 4 i manuskriptprocessen. De supplerende filer bør omfatte forskningsdatasæt, forskningsinstrumenter, kildetekster eller andet materiale, der på anden vis kan udgøre et appendiks til manuskriptet, men der berettiger filerne til at blive behandlet som separate dokumenter, da de i sig selv kan være værdifulde. Derudover indekserer forfatteren supplerende filer uafhængigt af manuskriptet, hvilket muliggør, at filerne bliver en del af et større indeks, og at de bliver fundet af de personer, som leder efter disse særlige elementtyper.</p><p><i>Formater for supplerende filer</i>. Supplerende filer overføres også i deres oprindelige filformat, som der ikke findes nogen begrænsninger for, og forbliver i det pågældende format i modsætning til resten af manuskriptet, der skal være i et standardmanuskriptformat, og der vil blive konverteret til et standardpubliceringsformat. Det betyder, at datasæt, der findes i regneark eller flashdemonstrationer, kan overføres og bevares i det pågældende format. Dette kan stille læserne over for udfordringer. Forfattere bliver nødt til at tage højde for dette f.eks. ved i beskrivelsen af de supplerende filer at angive, hvor det er muligt at hente gratis software, som kan bruges til at åbne og få vist de supplerende filer.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * $Id: 000020.xml,v 1.6 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000020" locale="da_DK" title="Manuskriptmetadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>De metadata, der bruges til at indeksere manuskriptet i forbindelse med publiceringen, er blevet angivet af forfatteren og kan redigeres af sektionsredaktøren samt af forfatteren og manuskriptredaktøren under den redaktionelle proces.</p>]]>	
+	</section>
+</topic>

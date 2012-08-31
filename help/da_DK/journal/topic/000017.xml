@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id: 000017.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000017" locale="da_DK" title="Sektionsredaktør" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>Sektionsredaktører administrerer bedømmelsen og redigeringen af de manuskripter, som de har fået tildelt. I nogle tilfælde vil en sektionsredaktør, som har fået til opgave at føre manuskripter igennem {help_topic key="editorial.sectionEditorsRole.review" text="bedømmelsesprocessen"}, også være ansvarlig for at føre de manuskripter, der er blevet accepteret, igennem {help_topic key="editorial.sectionEditorsRole.editing" text="redigeringsprocessen"} (dvs. igennem manuskriptredigering, layout og korrekturlæsning). Dog beskæftiger sektionsredaktører sig ofte kun med bedømmelsesprocessen, og en redaktør, der varetager en rolle som sektionsredaktør, fører manuskripterne igennem redigeringsprocessen. Tidsskriftet vil have en politik om, hvordan opgaverne er fordelt.</p>]]>	
+	</section>
+</topic>

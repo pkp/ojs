@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * table of contents for Editorial Process - Author's Role
+  *
+  * $Id: 000009.xml,v 1.7 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<toc id="editorial/toc/000009" locale="da_DK" title="Forfatterens rolle" parent_topic="editorial/topic/000009">
+	<topic id="editorial/topic/000032" title="Manuskripter"/>
+	<topic id="editorial/topic/000010" title="Bedømmelse"/>
+	<topic id="editorial/topic/000011" title="Redigering"/>
+
+	<breadcrumb url="editorial/topic/000000" title="Den redaktionelle proces"/>
+	<breadcrumb url="editorial/topic/000009" title="Forfatterens rolle"/>
+</toc>

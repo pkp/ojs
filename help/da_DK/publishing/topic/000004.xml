@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id: 000004.xml,v 1.9 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="publishing/topic/000004" locale="da_DK" title="Publicér" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Når det er tid til at publicere en udgave, klikker redaktøren på "{translate key="editor.issues.publishIssue"}" på siden Live-udgave for den udgave, der skal publiceres, dvs. siden med udgavens indholdsfortegnelse. Publicering af en udgave medfører, at udgavens indholdsfortegnelse vises, når læsere klikker på {translate key="navigation.current"}, og udgavens forside, hvis der findes en sådan, vises på tidsskriftets hjemmeside. Den udgave, der tidligere var {translate key="navigation.current"}, overføres til {translate key="navigation.archives"}. Hvis der ikke findes en forside, vises indholdsfortegnelsen på hjemmesiden, medmindre at et billede eller en tekst, der er indlæst af tidsskriftschefen under Konfiguration, lægger beslag på hele hjemmesiden. Publicering af en udgave medfører også, at der sendes en e-mail-meddelelse til alle registrerede læsere, som indeholder udgavens indholdsfortegnelse og et link til tidsskriftets websted.</p>]]>	
+	</section>
+</topic>

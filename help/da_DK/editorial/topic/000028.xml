@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * $Id: 000028.xml,v 1.7 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000028" locale="da_DK" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Når manuskriptredaktøren har oprettet en "ren" kopi i trin 3 under Manuskriptredigering, sendes denne version af manuskriptet til layoutfasen. Når sektionsredaktøren har modtaget en besked om, at manuskriptredigeringen er fuldført, skal vedkommende vælge en layoutredaktør, hvis det ikke allerede er blevet gjort, og anmode layoutredaktøren om at påbegynde arbejdet, ved hjælp af e-mail-ikonet under Anmod om layout. Layoutredaktøren forbereder satsskibe for manuskriptet i alle tidsskriftets publiceringsformater (f.eks. HTML, PDF, PS osv.). De supplerende filer, der forbliver i det oprindelige filformat, de blev fremsendt i, gennemgås af layoutredaktøren og korrekturlæseren for at sikre, at den grundlæggende formatering er på plads, og at filerne er i størst mulige overensstemmelse med tidsskriftets standarder. Når layoutredaktøren har oprettet de første satsskibe, som er filer, der publiceres online, sender layoutredaktøren en e-mail til sektionsredaktøren.</p><p>Vær opmærksom på, at redaktøren til enhver tid under redigeringsprocessen kan planlægge publiceringen af et manuskript. Disse oplysninger vil være tilgængelige for layoutredaktører og korrekturlæsere og giver dem mulighed for at få vist en udskrift af udgaven, inden den publiceres.</p>]]>	
+	</section>
+</topic>

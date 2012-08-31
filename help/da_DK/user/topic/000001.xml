@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  * $Id: 000001.xml,v 1.9 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="user/topic/000001" locale="da_DK" title="Startside" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>Der findes to hovedsider af typen "Startside": én til Open Journal System som helhed betragtet, hovedwebstedets hjemmeside, samt en hjemmeside på tidsskriftsniveau. Begge hjemmesider indeholder mange af de samme oplysninger, men er forskellige på visse punkter.</p>]]>	
+	</section>
+
+	<section title="Hovedwebstedets hjemmeside">
+		<![CDATA[<p>Ved adgang til hovedwebstedets hjemmeside vises en beskrivelse af webstedet som helhed samt en liste over de tidsskrifter, der findes på webstedet. Her kan du få adgang til et tidsskrifts hjemmeside og til alle tilgængelige aktuelle udgaver samt tilmelde dig tidsskriftet. Der findes følgende navigationsfunktioner på hovedwebstedet:</p><p><b>Øverste navigationslinje</b></p><p><i>Startside</i> og <i>Om</i> indeholder oplysninger om webstedet (i modsætning til et individuelt tidsskrift).</p><p><i>Log på</i> gør det muligt for dig at oprette en brugerprofil, hvis du ikke allerede har gjort det. Se {help_topic key="user.registerAndProfile" text="Registrere og profil"}. Linket Log på erstattes af linket Brugerstartside, når du registrerer og logger på. Se {help_topic key="user.userHome" text="Brugerstartside"}.</p><p><i>Registrer</i> gør det muligt for dig at føje et tidsskrift til siden Brugerstartside.</p><p><i>Søg</i> gør det muligt for dig at søge på hele webstedet eller kun i et individuelt tidsskrift.  Se {help_topic key="user.searchAndBrowse" text="Søge og Gennemse"}.</p><p><b>Højre navigationslinje</b></p><p>Hvis du klikker på linket <i>Open Journal Systems</i>, åbnes Public Knowledge Project-webstedet, hvor du kan finde ressourcer til Open Journals Systems og anden relateret software.</p><p>Linket <i>Hjælp til tidsskrift</i> opretter adgang til kontekstafhængig Hjælp.</p><p>Ved hjælp af formularen under overskriften <i>Bruger</i> kan du logge på, hvis du har et brugernavn og en adgangskode.  Når du har logget på, vises siden Brugerstartside. Når du først er logget på, kan du under <i>Bruger</i> finde links til en liste over de tidsskrifter, du er registreret hos, til din profil samt til logoff.</p><p><i>Sprog</i> gør det muligt for dig at vælge et sprog, der understøttes af OJS.</p><p>Ved hjælp af søgefeltet under <i>Tidsskriftsindhold</i> kan du søge på webstedet på en masse grundlæggende måder. Hvis du vil foretage en mere omfattende søgning, skal du klikke på linket Søg på den øverste navigationslinje.</p>	<p>Ved hjælp af <i>Skriftsstørrelse</i> kan du gøre skriftstørrelsen på webstedet mindre eller større.</p>]]>
+</section>
+
+<section title="Tidsskriftets hjemmeside">
+		<![CDATA[<p>Det er et tidsskrifts hjemmeside, du får vist, når du klikker på <i>Vis tidsskrift</i> eller <i>Aktuel udgave</i> under tidsskriftets navn på webstedshjemmesiden, eller når du klikker på et tidsskrifts navn under <i>Brugerstartside</i>. Tidsskriftets hjemmeside består af følgende:</p><p><b>Øverste navigationslinje</b></p><p><i>Startside</i> og <i>Om</i> indeholder oplysninger om det specifikke tidsskrift.</p><p><i>Log på</i> og <i>Registrer</i> fungerer som ovenfor, men omdirigerer til tidsskriftets hjemmeside i stedet for til webstedets hjemmeside.</p><p><i>Brugerstartside</i> vises, når du har logget på, og på siden vises brugerhjemmesiden. Denne side indeholder links til administration af dine tidsskriftsroller og din konto.</p>	<p><i>Søg</i> indeholder omfattende søgekriterier, men bruges til kun at søge i det viste tidsskrift.</p>	<p><i>Aktuel</i> viser indholdsfortegnelsen for den aktuelle udgave af tidsskriftet, hvis den er tilgængelig.</p>	<p><i>Arkiver</i> viser navnene på de tidligere publicerede udgaver, hvis de er tilgængelige.  Hvis du klikker på navnet på en tidligere publiceret udgave, vises udgavens indholdsfortegnelse.</p><p>Linket <i>Meddelelser</i> vises på den øverste navigationslinje, hvis tidsskriftschefen har aktiveret meddelelser. Hvis du klikker på dette link, vises siden Meddelelser.</p><p><b>Højre navigationslinje</b></p><p>Hvis du klikker på linket <i>Open Journal Systems</i>, åbnes Public Knowledge Project-webstedet, hvor du kan finde ressourcer til Open Journals Systems og anden relateret software.</p><p>Linket <i>Hjælp til tidsskrift</i> opretter adgang til kontekstafhængig Hjælp.</p><p>Ved hjælp af formularen under <i>Bruger</i> kan du logge på, hvis du har et brugernavn og en adgangskode.  Når du har logget på, vises siden Brugerstartside. Når du først er logget på, kan du under <i>Bruger</i> finde links til en liste over de tidsskrifter, du er registreret hos, til din profil samt til logoff.</p><p><i>Sprog</i> gør det muligt for dig at vælge et sprog, der understøttes af OJS.</p><p>Ved hjælp af søgefeltet under <i>Tidsskriftsindhold</i> kan du søge i tidsskriftets indhold på en masse grundlæggende måder. Hvis du vil foretage en mere omfattende søgning, skal du klikke på linket Søg på den øverste navigationslinje.</p><p>Ved hjælp af <i>Skriftstørrelse</i> kan du gøre skriftstørrelsen på webstedet mindre eller større.</p><p>Der findes også oplysninger til forfattere, læsere og bibliotekarer på højre navigationslinje.</p>]]>
+
+</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  * $Id: 000000.xml,v 1.12 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="submission/topic/000000" locale="da_DK" title="Manuskriptindlevering" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Tidsskriftet giver forfattere mulighed for at overføre deres manuskript direkte til tidsskriftets websted. Afhængigt af de indstillinger, som tidsskriftschefen har valgt for dette tidsskrift (trin 4.1 under Konfiguration), kan forfattere i forbindelse med registrering som forfatter også registrere sig som bedømmer (bliver anmodet om at fortage peer reviews af andre manuskripter) og/eller som læser (bliver underrettet om indholdsfortegnelsen for den nye udgave af tidsskriftet). Når forfatteren har afsluttet registreringsprocessen, vises siden Brugerstartside, hvor der vises en liste over de forskellige roller, som brugeren har hos dette tidsskrift (f.eks. forfatter, bedømmer osv.). Hvis brugeren klikker på rollen Forfatter, vises siden Manuskripter, hvor der findes en liste over aktuelle og tidligere manuskripter, og hvor brugeren kan starte et nyt manuskript til tidsskriftet. Manuskriptprocessen for forfattere er opdelt i fem trin, og der ydes vejledning til hvert trin. Forfatterne behøver ikke at fuldføre de fem trin i én session, men kan vende tilbage til det, der i manuskripttabellen vil være angivet som "{translate key="submissions.incomplete"}".</p>]]>	
+	</section>
+</topic>

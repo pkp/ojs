@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Create Issue
+  *
+  * $Id: 000001.xml,v 1.10 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="publishing/topic/000001" locale="da_DK" title="Opret udgave" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[<p>Inden redaktøren kan bruge siden Planlægning (se siden Redigering for det pågældende manuskript) til at planlægge manuskripter i en udgave, der skal publiceres, skal redaktøren benytte indstillingen Opret udgave for at sikre, at der findes en udgave, som manuskripterne kan placeres i. Udgaven skal forsynes med de relevante numre og/eller titel, afhængigt af hvilken indstilling der er valgt under Konfiguration (f.eks. Årg. 2, Nr. 5, 2008). Mens systemet under Opret udgave vil bede redaktøren om den næste udgave, hver gang der oprettes en udgave, kan redaktøren tilsidesætte disse indstillinger og angive et nyt sæt numre eller et andet år. I forbindelse med udgaver er det også muligt at tilføje en titel, som vises oven over indholdsfortegnelsen, og som f.eks. kan bruge til specialudgaver af tidsskriftet.</p><p<i>Abonnementsstyring</i>. Hvis tidsskriftschefen har aktiveret abonnementsstyring for tidsskriftet (tilgængelig i trin 4.1 under Konfiguration af tidsskrift), har redaktøren mulighed for at aktivere abonnementsstyring på pr. udgave-basis. Hvis Adgangsstatus ændres til Abonnement, er der kun adgang for abonnenter og institutioner, mens hvis Adgangsstatus ændres til Open Access, vil hele udgavens indhold være åbent tilgængeligt. Hvis Adgangsstatus ændres til Abonnement, kan redaktøren endvidere angive en Open Access-dato, efter hvilken udgavens indhold vil være åbent tilgængeligt.</p><p><i>Oprette en forside</i>. Det er også muligt at overføre en forsideillustration til tidsskriftet i form af en .jpg-, .png- eller .gif-fil. Denne fil er tilgængelig via indholdsfortegnelsen, hvor den står angivet som Forside. Den vises på tidsskriftets hjemmeside, mens tidsskriftsudgaven er aktuel, og hvis der klikkes på den, vises indholdsfortegnelsen for den pågældende udgave. Når udgaven er blevet arkiveret, vil forsiden være tilgængelig med udgaven via indholdsfortegnelsen.</p><p><i>Aktuelle, fremtidige og tidligere udgaver</i>. Den aktuelle udgave er den senest publicerede udgave. Fremtidige udgaver er, hvor redaktøren planlægger manuskripter, der skal publiceres næste gang og i fremtiden. Redaktøren kan sikre, at der altid findes en serie bestående af to eller tre ikke-publicerede live-udgaver, som gør det muligt at planlægge manuskripter over et par udgaver f.eks. med henblik på at opnå en form for balance. Tidligere udgaver er udgaver, der ikke længere er aktuelle, og som allerede har været publiceret.</p>]]>
+	</section>
+</topic>

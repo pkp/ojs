@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id: 000000.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="publishing/topic/000000" locale="da_DK" title="Publiceringsforløb" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>Redaktøren forestår publiceringsprocessen ved at oprette udgaver og/eller årgange for tidsskriftet, planlægge manuskripter til disse udgaver, organisere deres indholdsfortegnelse og til slut publicere udgaven. Tidsskriftet kan publiceres i en række forskellige formater. Det normale mønster er at samle manuskripterne i en udgave, der publiceres kvartalsvist (eller månedsvist eller to gange om året). Nogle elektroniske tidsskrifter foretrækker dog at publicere manuskripter, så snart de er klar, som en del af en årlig årgang, der begynder med årets første manuskript og slutter ved årets udgang, hvor en anden årgang begynder. I denne Hjælp-tekst benyttes ordet udgave, selvom en udgave består af en indholdsfortegnelse, der kan være kendetegnet ved (a) udgave, årgang, år (b) årgang, år (c) år eller (d) titel. Den måde, udgaver kendetegnes på, er en del af tidsskriftets opsætning, som tidsskriftschefen har konfigureret.</p>]]>	
+	</section>
+</topic>

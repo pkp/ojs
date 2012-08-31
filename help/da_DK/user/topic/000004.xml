@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id: 000004.xml,v 1.8 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="user/topic/000004" locale="da_DK" title="Aktuel og Arkiver" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Tidsskriftets udgaver gøres tilgængelige i form af en aktuel udgave eller eksemplar og et sæt arkiver bestående af tidligere udgaver. Tidsskriftschefen kan vælge at vise tidligere tidsskriftsudgaver, der er publiceret før anvendelsen af dette system, på tidsskriftets websted, så de bliver en del af de arkiver, der gøres tilgængelige for læsere på tidsskriftets websted.</p>]]>	
+	</section>
+</topic>

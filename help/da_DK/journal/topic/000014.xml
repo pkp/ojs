@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id: 000014.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000014" locale="da_DK" title="E-mail-brugere" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Tidsskriftschefen kan sende en e-mail til alle brugere eller til et undersæt af dem. Vær opmærksom på, at alle læsere får tilsendt en e-mail, hvor de underrettes om publiceringen af de enkelte udgaver, med en kopi af indholdsfortegnelsen for den pågældende udgave eller i tilfælde af fortløbende {help_topic key="publishing.index" text="publicering"} med titlen på og forfatteren af manuskriptet. Tidsskriftet bør også have en politik for beskyttelse af personlige oplysninger, som angives under Konfiguration og vises under Om tidsskriftet, der beskriver, hvordan beskyttelsen af personlige oplysninger om dette tidsskrifts registrerede brugere respekteres.</p>]]>	
+	</section>
+</topic>

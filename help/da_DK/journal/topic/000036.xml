@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2010 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * Review Forms
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000036" locale="da_DK" title="Review formularer" toc="journal/toc/000001" key="journal.managementPages.reviewForms">
+	<section>
+		<![CDATA[<p>Som udgangspunkt kan bedømmere indsende deres vurdering via en enkel formular med to felter. Et felt med oplysninger, der er til redaktøren alene, samt et felt, der indeholder oplysninger til både redaktøren og forfatteren. Tidsskriftschefen kan ændre dette ved at udforme egne review formularer.</p>
+		<p>Tidsskriftschefen kan forbinde en tidsskriftssektion med en bestemt formular, så denne bliver den obligatoriske formular for den pågældende sektion. Hvis, der findes mere end en aktiv formular kan redaktøren vælge hvilken formular, den enkelte bedømmer skal bruge.</p>
+		
+		<p><strong>Låste review formularer:</strong> Man kan udforme lige så mange formularer, man ønsker. Men der kan kun rettes i den enkelte formulars opbygning så længe formularen ikke har været anvendt. Det vil sige, at i det øjeblik en redaktør har udvalgt en bedømmer til en given artikel og bedt bedømmeren bruge en bestemt formular, bliver formularens opbygning låst. Dette er nødvendigt for at sikre en korrekt registrering af den enkelte bedømmelse. En tidligere anvendt formular kan fjernes fra listen over brugbare formularer, ligesom en formular kan kopieres. Begge emner beskrives nedenunder.</p>]]>	
+	</section>
+	<section title="At oprette en review formular">
+		<![CDATA[<p>For at udarbejde en review formular, skal tidsskriftschefen klikke på Review Formular på siden Administration af tidsskrifter og derefter klikke på Opret review formular i bunden af den fremkomne side. Man skal angive formularens titel og en kort beskrivelse. Når Gem knappen aktiveres sendes tidsskriftschefen videre til review formularens hovedside, hvor den nye formular vil stå opført.</p>]]>
+	</section>
+	<section title="Administration af review formularer">
+		<![CDATA[<p>Tidsskriftschefen vil nu have adgang til en række redaktionelle og administrative værktøjer for hver enkelt formular:</p>
+		
+		<p><strong>Redigér:</strong> Ved at klikke på dette link kan tidsskriftschefen ændre formularens titel og beskrivelse. Tidsskriftschefen kan også udvide antallet af felter i formularen. Dette gøres ved at klikke på linket Formular elementer. På den fremkomne side vælges Opret nyt element hvorved en side, der viser hvilke elementer (tekstfelter, radioknapper, dropdown bokse og afkrydsningsbokse mm.) der evt. allerede er tilføjet, fremkommer. Via linket Opret nyt element nederst på siden kan man tilføje nyt indhold. Når et nyt element er blevet tilføjet, kan tidsskriftschefen tilføje en beskrivelse og kan gøre et givent element obligatorisk for bedømmeren at udfylde. Endeligt kan tidsskriftschefen klikke på Vis formular og se, hvordan formularen ser ud for en bedømmer. Når et element er blevet tilføjet, kan det redigeres eller slettes frem til det øjeblik, det sendes til en bedømmer og bruges første gang. Derefter låses formularen og de enkelte felter.</p>
+			<p><strong>Aktivér/deaktivér:</strong> Når man klikker på linket Aktiver vil det være muligt at vælge formularen som forudvalgt standardformular fra en tidsskriftssektion (dette kan tilføjes under Tidsskriftssektion, der nås fra siden Administration af tidsskrifter), og den kan frit vælges af redaktøren når bedømmeren udvælges. En deaktivering fjerner den som et muligt tilvalg fra disse sider, men formularen slettes ikke.</p>
+			<p><strong>Kopi:</strong> Tidsskiftschefen kan kopiere en formular i sin helhed ved at klikke på Kopier. Tidsskriftschefen kan derefter redigere i formularens titel og i de enkelte elementer.</p>
+			<p>Tidsskriftschefen kan også kopiere alle formular elementer fra en allerede eksisterende formular. For at gøre dette skal tidsskriftschefen klikke på den review formular, der indeholder det ønskede element. Derefter klikker tidsskriftschefen på linket Formular elementer. Efterfølgende vælges de ønskede elementer, ved at afkrydse dem i feltet til venstre – ud for deres navn (eller ved, at klikke på knappen Marker alt for at vælge dem alle). Derefter vælges den review formular som elementerne skal placeres i via drop down menuen der indeholder  listen over alle formularerne. Klik derefter på kopier for at fuldføre overførslen. Bemærk at kopierede elementer kan slettes så længe formularen ikke er låst. Bemærk også at enkelte elementer ikke kan kopieres fra en formular, der er blevet låst.</p> 
+			<p><strong>Vis formular:</strong> Vis formular funktionen gør det muligt for tidsskriftschefen at se formularen, som den vil tage sig ud for en bedømmer.</p>
+			<p><strong>Slet:</strong> Slet funktionen bliver kun vist, hvis formularen ikke er blevet låst. Hvis man klikker på slet, vil tidsskriftschefen blive spurgt om formularen virkelig skal slettes.</p>
+			<p>Review formular siden viser også hvor mange bedømmelser, der er ved at blive gennemført samt hvor mange, der er blevet gennemført, ud for hver review formular.</p>]]>
+	</section>
+</topic>

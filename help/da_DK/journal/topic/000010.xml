@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id: 000010.xml,v 1.10 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000010" locale="da_DK" title="Filbrowser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>Ved hjælp af Filbrowser kan tidsskriftschefer læse og administrere hierarkiet af filer, der er overført til tidsskriftet (herunder alle filer, der er overført via administration af manuskripter). Filer kan vises, slettes og flyttes på samme måde, som hvis der var interaktion med et lokalt filsystem.</p><p>Vær opmærksom på, at dette udelukkende er påtænkt som en administrativ funktion og generelt ikke benyttes i den daglige administration af tidsskriftet. Manuskriptoplysninger opbevares som en kombination af filer og databaseposter. Hvis du sletter manuskriptfiler med Filbrowser, slettes de tilknyttede databaseposter ikke.</p>]]>
+	</section>
+</topic>

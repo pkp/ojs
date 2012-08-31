@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * $Id: 000000.xml,v 1.11 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="user/topic/000000" locale="da_DK" title="Tidsskriftets hjemmeside" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Dette tidsskrift tilbyder brugere en række funktioner, der er udviklet med henblik på at forbedre deres læseoplevelse i forbindelse med forskning og videnskab. Disse funktioner benyttes almindeligvis af onlinetidsskrifter, og kendskab til dem i forbindelse med dette tidsskrift gør, at du lettere kan få fuldt udbytte af andre onlinetidsskrifter. Generelt er funktionerne tilgængelige for alle læsere.</p>]]>	
+	</section>
+</topic>

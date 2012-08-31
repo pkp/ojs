@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Prepared Emails 
+  *
+  * $Id: 000006.xml,v 1.12 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000006" locale="da_DK" title="Forberedte e-mails" toc="journal/toc/000001" key="journal.managementPages.emails">
+	<section>
+		<![CDATA[<p>Tidsskriftet benytter en række forskellige forberedte e-mails til styring af den redaktionelle proces og publiceringsprocessen. De pågældende e-mails er på forhånd alle adresseret til den eller de relevante modtagere (sektionsredaktøren underretter f.eks. manuskriptredaktøren om, at redigeringen af et manuskript kan påbegyndes). Tidsskriftschefen kan redigere standardversioner af disse e-mails (tilgængelige under Forberedte e-mails på siden Administration af tidsskrifter). De pågældende e-mails kan også redigeres af brugeren, inden de sendes. Systemet indsætter automatisk relevante og specifikke oplysninger i e-mailen, inden den præsenteres for brugeren (f.eks. titlen på og et resumé af det pågældende manuskript eller den dato, hvor en bedømmelse skal være afsluttet). E-mailen indeholder også oplysninger om, hvordan e-mailens modtagere kan finde den relevante webside, så de kan påtage sig den opgave, de bliver bedt om.</p>]]>	
+	</section>
+	
+	<section title="At sende e-mails">
+		<![CDATA[<p>I OJS anvendes e-mail til at koordinere den redaktionelle proces og publiceringsprocessen. Der findes standardversioner af alle de forberedte e-mails, som vises, hver gang der klikkes på det relevante e-mail-ikon. Standard-e-mailene kan til enhver tid redigeres af tidsskriftschefen. En e-mail kan også redigeres af afsenderen, inden den sendes. Når du klikker på et e-mail-ikon, indsættes navnet på den påtænkte modtager automatisk samt alle de relevante oplysninger, der skal bruges til den redaktionelle funktion eller publiceringsfunktionen. Afsenderen kan tilføje kommentarer eller yderligere vejledning efter behov. Afsenderen kan ændre modtagerens e-mail-adresse samt navnene på yderligere modtagere, undtagen hvis der er tale om afsendelse af adgangskoder (af sikkerhedsmæssige årsager). Vær opmærksom på, at hvis en modtagers adresse ændres, ændres den e-mail-adresse, som er angivet på listen på siden med modtagerens profil, ikke i dette system. Hvis du vil ændre modtagerens e-mail-adresse permanent i dette system, skal du underrette tidsskriftschefen, som har tilladelse til at foretage sådanne ændringer af brugernes profiler.</p>]]>
+	</section>
+</topic>

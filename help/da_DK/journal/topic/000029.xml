@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id: 000029.xml,v 1.5 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000029" locale="da_DK" title="Kolofon" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Der findes to metoder, som tidsskriftschefen kan benytte til at definere kolofonen for tidsskriftet, som vises på siden Redaktionsgruppe under Om tidsskriftet: Tidsskriftschefen kan bruge tildelte redaktionelle roller og oprette brugerdefinerede redaktionsgruppetitler.</p>]]>
+	</section>
+	<section title="Generér listen over redaktionsgruppen ud fra allerede tildelte roller (Tidsskriftschef, Manuskriptredaktør osv.)">
+		<![CDATA[<p>Hvis denne indstilling vælges, genereres oplysningerne under Redaktionsgruppe under Om tidsskriftet automatisk ved hjælp af de redaktionelle roller, der er angivet på tidsskriftschefens rollesider. Brugere, der er registreret som redaktøer, sektionsredaktører, layoutredaktører, manuskriptredaktører og korrekturlæsere, vil blive angivet.</p>]]>
+	</section>
+	<section title="Generér listen over redaktionsgruppen ud fra brugerdefinerede redaktionelle titler">
+		<![CDATA[<p>Hvis en tidsskriftschef ønsker at have mere kontrol over de oplysninger, der præsenteres på siden Redaktionsgruppe under Om tidsskriftet, kan vedkommende aktivere denne indstilling på siden Kolofon (se Administration af tidsskrifter). Når denne indstilling aktiveres, benyttes de forskellige titler, der er oprettet på siden Kolofon, til at generere offentlige oplysninger om redaktionsgruppen samt oplysninger om andre personer med relation til tidsskriftet, hvis det ønskes.</p><p>Hvis tidsskriftschefen vil oprette en brugerdefineret titel, skal vedkommende klikke på Opret stillingstitel, angive titelnavnet (f.eks. Chefredaktør, Sektionsredaktører, Redaktionsudvalg osv.) og beslutte, om titlen skal vises under Redaktionsgruppe under Om tidsskriftet eller blot under Personer under Om tidsskriftet. Tidsskriftschefen kan arrangere visningsrækkefølgen for redaktionelle titler på hovedsiden Kolofon ved hjælp af pil op og pil ned samt redigere og slette titler, hvis det er nødvendigt.</p><p>Hvis tidsskriftschefen vil have vist, tilføje og fjerne brugere i forbindelse med en bestemt titel, skal tidsskriftschefen klikke på Medlemskab ved siden af titelnavnet. Dermed vises den aktuelle brugerliste for den pågældende titel. Tidsskriftschefen kan arrangere visningsrækkefølgen for angivne medlemmer og slette medlemmer, hvis det er nødvendigt. Hvis tidsskriftschefen vil tilføje et nyt medlem, skal vedkommende klikke på Tilføj medlem og tilmelde en bruger fra listen over tidsskriftsmedlemmer.</p>]]>
+	</section>
+</topic>

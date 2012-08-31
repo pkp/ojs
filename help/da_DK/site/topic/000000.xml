@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * Site Administration Main 
+  *
+  * $Id: 000000.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="site/topic/000000" locale="da_DK" title="Administration af websted" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>Dette tidsskriftsstyrings- og publiceringssystem er udviklet med henblik på at blive installeret og administreret på en lokal webserver. Når systemet er installeret, kan webstedsadministratoren bruge det til at oprette så mange individuelle tidsskrifter, som det er nødvendigt, og til at føre tilsyn med administrationen af alle de oprettede tidsskriftswebsteder.</p>]]>	
+	</section>
+</topic>

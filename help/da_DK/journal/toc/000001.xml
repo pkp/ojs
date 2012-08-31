@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Translation: Niels Erik Frederiksen
+  * table of contents for Journal Management - Management Pages. 
+  *
+  * $Id: 000001.xml,v 1.14 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<toc id="journal/toc/000001" locale="da_DK" title="Administrationssider" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="Meddelelser"/>
+	<topic id="journal/topic/000010" title="Filbrowser"/>
+	<topic id="journal/topic/000005" title="Tidsskriftssektioner"/>
+	<topic id="journal/topic/000007" title="Sprog"/>
+	<topic id="journal/topic/000029" title="Kolofon"/>
+	<topic id="journal/topic/000035" title="Betalinger"/>
+	<topic id="journal/topic/000006" title="Forberedte e-mails"/>
+	<topic id="journal/topic/000009" title="Læseværktøjer"/>
+	<topic id="journal/topic/000004" title="Konfiguration"/>
+	<topic id="journal/topic/000008" title="Statistikker og rapporter"/>
+	<topic id="journal/topic/000025" title="Abonnementer"/>
+	<topic id="journal/topic/000030" title="System-plug-ins"/>
+	<topic id="journal/topic/000031" title="Importér/eksportér data"/>
+
+	<breadcrumb url="journal/topic/000000" title="Administration af tidsskrift"/>
+	<breadcrumb url="journal/topic/000001" title="Administrationssider"/>
+</toc>

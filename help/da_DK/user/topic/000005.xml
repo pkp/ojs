@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id: 000005.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="user/topic/000005" locale="da_DK" title="Søg og gennemse" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Du kan søge i tidsskriftets indhold efter forfatter, titel, resumé og indeksord. Det er muligt at søge i indholdets fulde tekst både i HTML- og PDF-filformater. Ved hjælp af linket Gennemse i sidens højre margen kan læsere gennemse tidsskriftets indhold efter udgave, forfatter og titel. Det er også muligt at gennemse andre tidsskrifter, der publiceres via denne installation af Open Journal Systems.</p>]]>
+	</section>
+</topic>

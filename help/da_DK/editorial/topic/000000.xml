@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  * $Id: 000000.xml,v 1.10 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000000" locale="da_DK" title="Den redaktionelle proces" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>Den redaktionelle proces for et manuskript til tidsskriftet består af en bedømmelse, normalt et blindt peer review, efterfulgt af en sektionsredaktørs beslutning om at acceptere eller afvise manuskriptet. Hvis manuskriptet accepteres i bedømmelsesfasen i den redaktionelle proces, går manuskriptet videre til redigeringsfasen, der består af manuskriptredigering, layout og korrekturlæsning. Derefter planlægges manuskriptets publicering i en udgave af tidsskriftet. Afhængigt af hvordan tidsskriftet er organiseret, kan den redaktionelle proces udføres af en enkelt redaktør eller af en gruppe af redaktører, sektionsredaktører, manuskriptredaktører, layoutredaktører og korrekturlæsere.</p>]]>	
+	</section>
+</topic>

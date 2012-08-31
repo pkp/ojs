@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *Translation: Niels Erik Frederiksen
+  * Management Pages - Merge Users
+  *
+  * $Id: 000033.xml,v 1.5 2007/04/10 20:57:26 asmecher Exp $
+  -->
+
+<topic id="journal/topic/000033" locale="da_DK" title="Flet brugere" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>Ved hjælp af funktionen Flet brugere, der findes under Administration af tidsskrifter under overskriften Brugere, kan tidsskriftschefen flette to brugerkonti til én enkelt konto og overføre redigeringsopgaver, manuskripter og mange andre poster fra én konto til en anden samt effektivt slette den første konto.</p>
+		<p>Følgende elementer overføres:
+			<ul>
+				<li>Artikelforfatterskab</li>
+				<li>Offentlige kommentarer om artikler</li>
+				<li>Artikelnoter</li>
+				<li>Redaktøropgaver og -beslutninger</li>
+				<li>Bedømmelsesopgaver</li>
+				<li>Layoutredaktøropgaver</li>
+				<li>Korrekturlæseropgaver</li>
+				<li>Artikel-e-mail og hændelseslogposter</li>
+				<li>Bedømmeres adgangsnøgler</li>
+				<li>Roller</li>
+			</ul>
+		Følgende elementer overføres <strong>ikke</strong>:
+			<ul>
+				<li>Sessioner</li>
+				<li>Abonnementer</li>
+				<li>Underretningsstatus (dvs. om brugeren har tilmeldt sig med henblik på at modtage underretninger om tidsskriftsnyheder)</li>
+				<li>Medlemskab af redaktionsgruppe</li>
+				<li>Sektionsredaktørstatus på sektioner</li>
+				<li>Brugerprofiloplysninger (f.eks. fornavn, efternavn osv.)</li>
+			</ul>
+		</p>
+		<p>Denne funktion skal anvendes med omhu, da handlingen ikke kan fortrydes og omfatter overførsel af poster fra én bruger til en anden.</p>
+		<p>Med hensyn til abonnementer sker der følgende ved aktivering af Flet funktionen: Ved individuelle abonnementer overføres den anden abonnents abonnement til den første abonnent, såfremt det er gyldigt, og den første abonnent ikke allerede har et gyldigt abonnement til et givent tidsskrift. Ved institutionsabonnementer overføres alle de abonnementer, hvor den anden abonnent er registreret som kontaktperson, til den første abonnent, som bliver abonnementets nye kontaktperson.</p>]]>
+	</section>
+</topic>

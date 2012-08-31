@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+  *
+  * $Id: 000001.xml,v 1.10 2007/12/05 00:44:28 asmecher Exp $
+  -->
+
+<topic id="intro/topic/000001" locale="da_DK" title="FAQ" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Hvordan starter jeg et tidsskrift op med OJS?</a></li>
+	<li><a href="#section2">Hvor kan jeg finde teknisk support, fremsende fejl og foreslå forbedringer til anvendelsen af OJS?</a></li>
+	<li><a href="#section3">Hvordan skal jeg gribe det an, hvis jeg vil oversætte OJS til et andet sprog?</a></li>
+	<li><a href="#section4">Hvorfor modtager forfattere meddelelsen om, at tidsskriftet "ikke accepterer manuskripter på nuværende tidspunkt"?</a></li>
+	<li><a href="#section5">Hvad kan vi gøre, hvis vi vil tillade adgang til manuskripter, der bedømmes, eller der befinder sig i "fasen forud for trykning", inden de publiceres af tidsskriftet?</a></li>
+	<li><a href="#section6">Hvordan kan jeg fortælle om mit tidsskrift på internettet?</a></li>
+	<li><a href="#section7">Hvordan kan tidsskriftet præsentere en oversigt over, hvem der har været medlem af tidsskriftets redaktionsgruppe?</a></li>
+	<li><a href="#section8">Hvordan kan jeg lade læsere tilmelde sig som bedømmere hos tidsskriftet?</a></li>
+	<li><a href="#section9">Hvordan finder jeg flere bedømmere til et manuskript til tidsskriftet ud over de personer, der er angivet på den aktuelle liste over tilgængelige bedømmere?</a></li>
+	<li><a href="#section10">På hvilke forskellige måder kan et tidsskrift publicere i et Open Access-format, der stiller tidsskriftets indhold gratis til rådighed for læsere?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. Hvordan starter jeg et tidsskrift op med OJS?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs_download" target="_blank">Hent</a> OJS, og installer softwaren, idet du følger softwarens installationscript, på en webserver, som opfylder softwarens krav.</li>
+	<li>Log på med det administrationsbrugernavn og den administrationsadgangskode, der blev oprettet under installationen af OJS.</li>
+	<li>Opret et nyt tidsskrift under Tilknyttede tidsskrifter.</li>
+	<li>Webstedadministratoren registreres automatisk som tidsskriftschef for det nye tidsskrift, men hvis det er nødvendigt, kan du oprette en eller flere nye brugere i rollen som tidsskriftschef.</li>
+	<li>Tidsskriftschefen åbner derefter Konfiguration og arbejder sig igennem de fem trin (dog nødvendigvis ikke alle på én gang), hvilket resulterer i et websted, der er klar til at modtage manuskripter, administrere den redaktionelle proces og publicere tidsskriftet online.</li>
+	<li>Se <a href="http://pkp.sfu.ca/files/OJSinanHour.pdf" target="_blank">OJS in an Hour </a>, hvis du vil have flere oplysninger om, hvordan du kommer i gang med OJS.</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. Hvor kan jeg finde teknisk support, fremsende fejl og foreslå forbedringer til anvendelsen af OJS?">
+		<![CDATA[
+<p>Public Knowledge Project driver et <a href="http://pkp.sfu.ca/support/forum/" target="_blank">supportforum</a> med langt over tusinde udvekslinger, hvor det er muligt at søge efter svar og stille spørgsmål. Det er f.eks. muligt at søge efter fejlmeddelelser, der leder dig videre til foreslåede løsninger på kendte problemer. Hvis der ikke gøres brug af dette, kan brugere sende forespørgsler til <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Fremsendelse af fejlrapporter skal ske via PKP's <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+		]]>
+	</section>
+	<section title="3. Hvordan skal jeg gribe det an, hvis jeg vil oversætte OJS til et andet sprog?">
+		<![CDATA[
+<p>Der findes instruktioner i filen docs/README, som følger med OJS-overførslen. Du kan også finde flere oplysninger om oversættelsesproblemer i <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP's supportforum</a>.</p>
+		]]>
+	</section>
+	<section title='4. Hvorfor modtager forfattere meddelelsen om, at tidsskriftet "ikke accepterer manuskripter på nuværende tidspunkt"?'>
+		<![CDATA[
+<p>Hvis tidsskriftschefen har afkrydset sektionsindstillingen "Elementer kan kun fremsendes af redaktører og sektionsredaktører" for alle oprettede sektioner, er det kun redaktører og sektionsredaktører, som kan fremsende elementer. Hvis alle sektioner er blevet slettet, vil forfattere modtage denne meddelelse.</p>
+		]]>
+	</section>
+	<section title='5. Hvad kan vi gøre, hvis vi vil tillade adgang til manuskripter, der bedømmes, eller der befinder sig i "fasen forud for trykning", inden de publiceres af tidsskriftet?'>
+		<![CDATA[
+	<p>Redaktører har to muligheder for at tilbyde "adgang forud for trykning". De kan oprette en forud for trykning-sektion, til hvilken der føjes artikler, som er godkendt til en senere udgave, og som endnu ikke er klar til at blive publiceret. Artiklerne føjes til den aktuelle udgaves indholdsfortegnelse. Når den nye udgave er klar til at blive publiceret, fjerner redaktøren artiklerne fra den tidligere udgave og flytter dem til den nye udgave. Redaktørerne kan også bruge URL-adressen til "Vis korrektur" for et manuskript fra layoutfasen på siden Redigering for den pågældende artikel til at oprette en visning forud for trykning. Den pågældende URL-adresse opretter adgang til artiklen (for priviligerede brugere), inden den publiceres i en udgave af tidsskriftet. I mellemtiden registrerer PKP interesse for denne funktion og overvejer eventuelt at oprette en formel proces for dette.</p>
+		]]>
+	</section>
+	<section title="6. Hvordan kan jeg fortælle om mit tidsskrift på internettet?">
+		<![CDATA[
+<p>Tidsskriftet vil inden længe blive vist på Google og andre store søgemaskiner, men du kan også tage andre skridt. Sørg for at registrere tidsskriftet hos PKP Harvester i trin 3 under Konfiguration, hvilket medfører, at tidsskriftet indekseres i Open Archives Initiative-indeks, herunder <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> og <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Hvis der er Open Access til tidsskriftet, skal du tale med en universitetsbibliotekar om, hvordan tidsskriftet kan blive angivet blandt bibliotekets elektroniske tidsskrifter, og hvordan du kan kontakte en række andre forskningsbiblioteker via en seriel bibliotekarlisteserver. Se, om du kan bruge de relevante akademikerorganisationers websted eller listeserver til at annoncere opfordringen "ring efter papirer" eller lanceringen af tidsskriftet. Under Adgangs- og sikkerhedsindstillinger (2.7) under Konfiguration skal tidsskriftschefen til slut sørge for, at brugere kan registrere sig som læsere, så de regelmæssigt kan underrettes om nye udgaver.</p>
+		]]>
+	</section>
+	<section title="7. Hvordan kan tidsskriftet præsentere en oversigt over, hvem der har været medlem af tidsskriftets redaktionsgruppe?">
+		<![CDATA[
+<p>Tidsskriftschefen kan angive disse oplysninger ved at følge linket Kolofon under Administration af tidsskrifter. Tidsskriftschefen kan også oprette en side med titlen "Oversigt over redaktionsgruppen" som et nyt element under Om tidsskriftet (element 2.5 under Konfiguration). På denne side kan du registrere navnet og den redaktionelle titel på de personer, der er medlem af redaktionsgruppen, samt hvor mange år de har været medlem.</p>
+		]]>
+	</section>
+	<section title="8. Hvordan kan jeg lade læsere tilmelde sig som bedømmere hos tidsskriftet?">
+		<![CDATA[
+<p>Under Adgangs- og sikkerhedsindstillinger (4.1) under Konfiguration kan tidsskriftschefen gøre det muligt for læsere at registrere sig som bedømmere samt som læsere og/eller forfattere. Bedømmerne vises derefter blandt de personer, som sektionsredaktøren kan vælge imellem og invitere til at bedømme manuskripter. Under Konfiguration 5.7 kan tidsskriftschefen føje en note til "Til læsere" om tidsskriftets interesse i, at læsere arbejder som bedømmere for tidsskriftet. Af samme grund kan tidsskriftet opfordre brugere til at tilmelde sig som læsere, så de kan blive underrettet, og så tidsskriftet kan identificere antallet af regelmæssige læsere.</p>
+		]]>
+	</section>
+	<section title="9. Hvordan finder jeg flere bedømmere til et manuskript til tidsskriftet ud over de personer, der er angivet på den aktuelle liste over tilgængelige bedømmere?">
+		<![CDATA[
+<p>Der findes en række teknikker, du kan bruge. Når først en potentiel bedømmer er blevet identificeret ved navn, kan vedkommendes e-mail-adresse og tilhørsforhold fastlægges ved at foretage endnu en søgning på navnet.</p>
+<ol type="a">
+	<li>Brug litteraturfortegnelsen i den artikel, der skal bedømmes, til at identificere egnede personer, og brug derefter deres fulde navn på Google for at finde den institution, de er tilknyttet, og derefter deres e-mail-adresse.</li>
+	<li>Foretag boolske søgninger på Google på baggrund af forfatterens nøgleord (f.eks. postkolonialisme + litteratur + "Sydafrika") for at finde relateret onlinemateriale og personer, der arbejder inden for det samme område.</li>
+	<li>På baggrund af hvordan forfatteren har identificeret artiklens emne (se Metadata under Resumé for det pågældende manuskript), kan du sende forespørgsler til kolleger vedrørende navne på kolleger med ekspertise inden for de angivne områder.</li>
+	<li>Besøg andre onlinetidsskrifter inden for dette felt for at finde forfattere, der kan fungere som bedømmere af en specifik artikel, der mangler en bedømmer.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. På hvilke forskellige måder kan et tidsskrift publicere i et Open Access-format, der stiller tidsskriftets indhold gratis til rådighed for læsere?">
+		<![CDATA[
+<p>Du kan eventuelt læse John Willinskys <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> i tidsskriftet Postgraduate Medicine. Derudover har Soros Foundation udarbejdet vejledningen <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guide to Open Access Publishing and Scholarly Societies</a>, som er en vejledning, der har til hensigt at hjælpe videnskabelige selskaber og små forlag med at få adgang til de tilgængelige muligheder af hensyn til fremtiden for deres programmer til publicering af tidsskrifter". <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, Scholarly Publishing and Academic Resources Coalition, leverer også en række ressourcer med relation til Open Access-publicering.</p>
+		]]>
+	</section>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id: 000044.xml,v 1.4 2007/04/10 20:57:25 asmecher Exp $
+  -->
+
+<topic id="editorial/topic/000044" locale="da_DK" title="Sikring af en blind peer review (blindbedømmelse)" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Med henblik på at sikre integriteten i forbindelse med blind peer review af manuskripter til dette tidsskrift skal der gøres alt for at forhindre, at forfatternes og bedømmernes identiteter afsløres for hinanden. Dette indebærer, at forfatterne, redaktørerne og bedømmerne (der overfører dokumenter som en del af deres bedømmelse) kontrollerer, at følgende trin er udført med hensyn til teksten og filegenskaberne:
+<ol><li>Dokumentets forfattere har slettet deres navne i teksten, og "Forfatter" og år benyttes i referencerne og fodnoterne i stedet for forfatternes navne, artiklens titel osv.</li>
+<li>I forbindelse med Microsoft Office-dokumenter skal forfatteridentifikationen også fjernes fra filens egenskaber (se under Filer i Word) ved at klikke på følgende, idet du starter med Filer i hovedmenuen i Microsoft-programmet: Filer &gt; Gem som &gt; Funktioner (eller Indstillinger i forbindelse med en Mac) &gt; Sikkerhed &gt; Fjern personlige oplysninger fra filens egenskaber, når den gemmes &gt; Gem.</li>
+<li>I forbindelse med PDF'er skal forfatternes navne også fjernes under Dokumentegenskaber, der findes under Filer i hovedmenuen i Adobe Acrobat.</li>
+</ol></p>]]>
+	</section>
+</topic>
