@@ -47,6 +47,7 @@ class AuthorBiosBlockPlugin extends BlockPlugin {
 		// Only show the block for article pages.
 		switch (Request::getRequestedPage() . '/' . Request::getRequestedOp()) {
 			case 'article/view':
+				if (!$templateMgr->get_template_vars('article')) return '';
 				return parent::getContents($templateMgr);
 			default:
 				return '';
