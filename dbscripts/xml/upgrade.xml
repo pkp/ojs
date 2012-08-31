@@ -293,13 +293,16 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
-		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US" />
-		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US" />
-		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US" />
-		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_ONECLICK" locales="en_US" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST_ATTACHED" locales="en_US" />
-		<code function="installEmailTemplate" key="REVIEW_REQUEST" locales="en_US" />
+
+		<!-- Newly introduced email templates -->
+		<code function="installEmailTemplate" key="GIFT_AVAILABLE" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="GIFT_USER_REGISTER" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="GIFT_USER_LOGIN" locales="en_US,de_DE,eu_ES,fa_IR,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+		<code function="installEmailTemplate" key="REVIEW_REQUEST_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
+
 		<!-- ID upgrade -->
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues2.xml" condition="return $installer->tableExists('issues_old');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles2.xml" condition="return $installer->tableExists('articles_old');" />
@@ -307,8 +310,11 @@
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issue_galleys2.xml" condition="return $installer->tableExists('issue_galleys_old');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys2.xml" condition="return $installer->tableExists('article_galleys_old');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files2.xml" condition="return $installer->tableExists('article_supp_files_old');" />
-		<!-- Mutex help table. -->
+
+		<!-- Mutex helper table. -->
 		<data file="lib/pkp/xml/mutexData.xml" />
+
+		<!-- Misc. 2.4.0 updates -->
 		<data file="dbscripts/xml/upgrade/2.4.0_update.xml" />
 		<note file="docs/release-notes/README-2.4.0" />
 	</upgrade>
@@ -318,8 +324,6 @@
 		<!-- Delete the notification*_old tables now that they have been migrated. -->
 		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
-		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_WELCOME" locales="ca_ES,cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,hr_HR,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST" locales="ca_ES,cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,hr_HR,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
