@@ -206,4 +206,16 @@
 	<message key="editor.issues.coverPageCaption">Azaleko irudia</message>
 	<message key="editor.issues.unpublishIssue">Gaia desargitaratu</message>
 	<message key="editor.issues.confirmUnpublish">Ziur al zaude desargitaratu  egin nahi duzula argitaratu dagoen gai hau?</message>
+	<message key="editor.reassign">Berriro esleitu</message>
+	<message key="editor.publicIdentificationExists">'{$publicIdentifier}' identifikatzaile publikoa jadanik erabiltzen da beste helburu batentzat (alea, artikulua, galera proba edo artxibategi osagarri bat). Mesedez, aukeratu identifikatzaile bakarrak zure aldizkariaren barruan.</message>
+	<message key="editor.issues.galleys">Alearen galera probak</message>
+	<message key="editor.issues.galley">Alearen galera proba</message>
+	<message key="editor.issues.viewingGalley">Alearen galera proba aztertzea</message>
+	<message key="editor.issues.issueGalleysDescription">Argitaratu galera probak ale osoko edukiekin.</message>
+	<message key="editor.issues.noneIssueGalleys">Ez dira argitaratu alearen galera probak.</message>
+	<message key="editor.issues.galleyLabelRequired">Beharrezkoa da alearen galera probaren etiketa.</message>
+	<message key="editor.issues.galleyLocaleRequired">Beharrezkoa da alearen galera probaren kokaleku bat.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Jadanik bada ale publikoaren galera probaren identifikazioa.</message>
+	<message key="editor.issues.backToIssueGalleys">Atzera alearen galera probetara</message>
+	<message key="editor.issues.confirmDeleteGalley">Ziur al zaude alearen galera proba hau ezabatu nahi duzula?</message>
 </locale>

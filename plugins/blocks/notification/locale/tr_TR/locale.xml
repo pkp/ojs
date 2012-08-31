@@ -13,5 +13,5 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.block.notification.displayName">"Bildirim" Bloğu</message>
-	<message key="plugins.block.notification.description">Bu eklenti sistem hakkında bildirimleri dörüntüler.</message>
+	<message key="plugins.block.notification.description">Bu eklenti sistem bildirimlerini hakkında bilgi görüntüler.</message>
 </locale>

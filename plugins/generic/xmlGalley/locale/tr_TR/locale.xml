@@ -12,10 +12,10 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.generic.xmlGalley.displayName">XML Galley Plugin</message>
-	<message key="plugins.generic.xmlGalley.description">This plugin generates XHTML galleys from an XML article using XSLT.</message>
+	<message key="plugins.generic.xmlGalley.displayName">XML Dizgi Eklentisi</message>
+	<message key="plugins.generic.xmlGalley.description">Bu eklenti XSLT kullanarak XML makale XHTML dizgileri oluşturur.</message>
 
-	<message key="plugins.generic.xmlGalley.manager.settings">Settings</message>
+	<message key="plugins.generic.xmlGalley.manager.settings">Ayarlar</message>
 
 	<!-- XML Article Galleys Settings Management -->
 	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>With this plugin, article galleys will be automatically rendered from an uploaded XML source file, using a specific XSL stylesheet transformation.</p>]]></message>

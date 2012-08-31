@@ -15,6 +15,5 @@
 	<message key="plugins.citationFormats.abnt.displayName">ABNT format citata</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Ovaj dodatak implementira ABNT format citata.</message>
-	<message key="plugins.citationFormat.abnt.location">Severna Amerika</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Dostupno na: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Datum pristupa: {$retrievedDate}]]></message>
 </locale>

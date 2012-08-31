@@ -202,8 +202,6 @@
 	<message key="manager.setup.disciplineExamples">(F.eks. Historie; Uddannelse; Sociologi; Psykologi; Kulturelle studier; Jura)</message>
 	<message key="manager.setup.disciplineProvideExamples">Angiv eksempler på relevante akademiske fagområder for dette tidsskrift</message>
 	<message key="manager.setup.displayCurrentIssue">Føj indholdsfortegnelsen til den aktuelle udgave (hvis den er tilgængelig).</message>
-	<message key="manager.setup.doiPrefix">DOI-præfiks</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI-præfikset (Digital Object Identifier) tildeles af <a href="http://www.crossref.org" target="_new">CrossRef</a> og er i formatet 10.xxxx (f.eks. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Redaktørbeslutning</message>
 	<message key="manager.setup.editorialMembers">Gå til Udvalgsmedlemmer, og tilføj redaktionsudvalgs- og/eller bedømmelsesudvalgsmedlemmer. Du kan gøre dette på et hvilket som helst tidspunkt under driften af tidsskriftet.</message>
 	<message key="manager.setup.editorialProcess1">En eller flere redaktører håndterer de grundlæggende trin uden anviste roller.</message>
@@ -368,7 +366,8 @@
 	<message key="manager.setup.reviewerDatabaseLink">Database med potentielle bedømmere</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Føj et link til en relevant litteraturdatabase, hvor der kan søges efter potentielle bedømmere, og der er åben for redaktører uden abonnement, til siden Vælg bedømmer.</message>
 	<message key="manager.setup.reviewGuidelines">Retningslinjer for bedømmelser</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Retningslinjer for bedømmelser indeholder kriterier, som bedømmere skal bruge til at vurdere, om et manuskript egner sig til at blive publiceret i tidsskriftet, samt specielle instruktioner til udarbejdelse af en effektiv og konstruktiv bedømmelse.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Retningslinjer for bedømmelser indeholder kriterier, som bedømmere skal bruge til at vurdere, om et manuskript egner sig til at blive publiceret i tidsskriftet, samt specielle instruktioner til udarbejdelse af en effektiv og konstruktiv bedømmelse. Ved bedømmelsen kan bedømmeren skrive kommentarer i to tekstbokse, den første ”til forfatter og redaktør”, den anden ”til redaktør”. Som et alternativ kan Tidsskriftschefen udforme sin egen bedømmelsesformular under <a href="{$reviewFormsUrl}" class="action">Review formular</a>.
+I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommentarerne i kommunikationen med forfatteren.]]></message>
 	<message key="manager.setup.reviewOptions">Bedømmelsesindstillinger</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Det er muligt at sende automatiske e-mail-påmindelser (tilgængelige i OJS-systemets standard-e-mails) til bedømmere på to tidspunkter (redaktøren kan desuden altid sende en e-mail direkte til bedømmeren)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Bemærk!</strong> Hvis du vil aktivere disse indstillinger, skal webstedsadministratoren aktivere indstillingen <tt>scheduled_tasks</tt> i OJS-konfigurationsfilen. Understøttelse af denne funktionalitet (som eventuelt ikke er muligt på alle servere) kan kræve yderligere konfiguration af serveren som angivet i dokumentationen til OJS.]]></message>
@@ -413,8 +412,6 @@
 	<message key="manager.setup.subjectExamples">(F.eks. Fotosyntese; Sorte huller; Firfarveproblemet; Bayesiansk teori)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nøgleord</message>
 	<message key="manager.setup.subjectProvideExamples">Angiv eksempler på nøgleord eller emneområder som en hjælp til forfattere</message>
-	<message key="manager.setup.submissionEmailLogging">Opbevar en logfil over alle de e-mails, der er sendt i forbindelse med et manuskript, på siden Oversigt for manuskriptet.</message>
-	<message key="manager.setup.submissionEventLogging">Opbevar en logfil over alle de handlinger, der er udført i forbindelse med et manuskript, på siden Oversigt for manuskriptet.</message>
 	<message key="manager.setup.submissionGuidelines">Retningslinjer for manuskripter</message>
 	<message key="manager.setup.submissionPreparationChecklist">Tjekliste til forberedelse af manuskript</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Forfattere, der fremsender et manuskript til tidsskriftet, bliver først bedt om at fuldføre hvert enkelt element på Tjekliste til forberedelse af manuskript, inden de fortsætter. Tjeklisten vises også under Retningslinjer for forfattere under Om tidsskriftet. Listen kan redigeres nedenfor, men alle elementer på listen skal afkrydses, inden forfatterne kan fortsætte med deres manuskript.</message>
@@ -625,15 +622,6 @@
 	<message key="manager.setup.contributorNoteDescription">Denne tekst vises under overskriften "Støttekilder" og over listen med navne og url'er til støtteorganisationer under "Tidsskriftsponsorer" på siden "Om".</message>
 	<message key="manager.setup.history">Tidsskrifthistorik</message>
 	<message key="manager.setup.historyDescription">Denne tekst vises i sektionen "Om" på tidsskriftets websted og kan anvendes til at beskrive ændringer i titler, redaktionen og andet, der er relevant for tidsskriftets udgivelseshistorik.</message>
-	<message key="manager.setup.doiSuffix">DOI-suffiks</message>
-	<message key="manager.setup.doiSuffixDefault">Anvend standardformatet (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Brug nedenstående format til at generere DOI-suffikser ud fra.  Anvend %j til tidsskriftinitialer, %v til årgangsnummer, %i til nummeret i årgangen, %a til OJS-artikel-id og %p til sidenummer.</message>
-	<message key="manager.setup.doiSuffixPattern.example">For eksempel ville vol%viss%ipp%p kunne skabe en DOI som 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Et DOI-suffiks kan antage en hvilken som helst form, men det skal være unikt for hvert enkelt udgivet element.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Anvend "Custom Identifier" for udgivne elementer som DOI-suffiks (skal være aktiveret under Trin 4).</message>
-	<message key="manager.setup.doiReassign">Tildel nye DOI'er</message>
-	<message key="manager.setup.doiReassign.description">Hvis du ændrer din DOI-konfiguration, vil DOI'er, som allerede er blevet tildelt, ikke blive påvirket. Når DOI-konfigurationen gemmes, anvender du denne knap til at rydde alle eksisterende DOI'er, således at de nye indstillinger også omfatter eksisterende artikler.</message>
-	<message key="manager.setup.form.doiPrefixPattern">DOI-mønstret skal have formen 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Favicon for tidsskrift</message>
 	<message key="manager.setup.journalFaviconDescription">Tilføj et favicon for dette tidsskrift, som vises ved siden af navigationslinjen, når brugere besøger dit websted.</message>
 	<message key="manager.setup.journalFaviconInvalid">Ugyldigt favicon-format. Tilladte formater er .ico, .png og .gif.</message>

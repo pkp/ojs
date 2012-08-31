@@ -44,7 +44,7 @@
 	<!-- Common Error Messages -->
 
 	<!-- Navigation -->
-	<message key="navigation.journalHelp">Aiuto</message>
+	<message key="navigation.journalHelp">Guida in linea</message>
 	<message key="navigation.archives">Archivio</message>
 	<message key="navigation.current">Corrente</message>
 	<message key="navigation.otherJournals">altre riviste</message>
@@ -983,7 +983,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="subscriptionManager.subscriptionTypes">Tipi di abbonamento</message>
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Questi plugin esprimono il formato dei metadati nelle comunicazioni OAI-PMH</message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La rivista utilizzerà uno schema di classificazione disponibile su Web.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La rivista utilizzerà uno schema di classificazione disponibile su Web.<br />
 Titolo dello schema di classificazione]]></message>
 	<message key="user.subscriptions.mySubscriptions">I miei abbonamenti</message>
 	<message key="user.subscriptions.individualSubscriptions">Abbonamenti individuali</message>

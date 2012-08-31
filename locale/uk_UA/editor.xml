@@ -221,4 +221,16 @@
 	<message key="editor.submissionArchive.noSubmissions">У архіві немає подань.</message>
 	<message key="editor.submissionArchive.saveChanges">Зберегти зміни для архівованих подань? Подання, помічені для видалення, будуть остаточно видалені з системи.</message>
 	<message key="editor.submissionArchive.confirmDelete">Ви впевнені, що хочете остаточно видалити це подання?</message>
+	<message key="editor.issues.galleys">Гранки випуску</message>
+	<message key="editor.issues.galley">Гранка випуску</message>
+	<message key="editor.issues.viewingGalley">Переглядів гранки випуску</message>
+	<message key="editor.issues.issueGalleysDescription">Публікувати гранки з повним змістом випуску</message>
+	<message key="editor.issues.noneIssueGalleys">Жодних гранок випуску не було опубліковано.</message>
+	<message key="editor.issues.galleyLabelRequired">Необхідно вказати мітку гранки випуску.</message>
+	<message key="editor.issues.galleyLocaleRequired">Необхідно вказати локалізацію гранки випуску.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Вказаний ідентифікатор гранки випуску вже існує.</message>
+	<message key="editor.issues.backToIssueGalleys">Повернутися до гранок випуску</message>
+	<message key="editor.issues.confirmDeleteGalley">Ви впевнені, що хочете видалити цю гранку випуску?</message>
+	<message key="editor.publicIdentificationExists">Ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту (випуску, статті, гранки або супровідного файлу). Будь ласка, вкажіть ідентифікатор, унікальний у межах цього журналу.</message>
+	<message key="editor.reassign">Повторно призначити</message>
 </locale>

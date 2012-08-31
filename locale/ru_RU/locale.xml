@@ -257,13 +257,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Уровень</message>
-	<message key="submission.event.logLevel.info">Инфа</message>
-	<message key="submission.event.logLevel.notice">Примеч.</message>
-	<message key="submission.event.logLevel.warning">Внимание</message>
-
-	<message key="submission.event.logLevel.error">Ошибка</message>
-	
 	<message key="submission.event.general.defaultEvent">Действия</message>
 	<message key="submission.event.general.articleSubmitted">Статья прислана</message>
 	<message key="submission.event.general.issueScheduled">Статья запланирована</message>
@@ -368,15 +361,15 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Slavica Journals support the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
-Setting up LOCKSS support for Slavica Journals does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
+Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 	
 	<!-- Setup Step 3 -->
 
 
 
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Journal will use a subject classification system available on the web.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
 Title of classification system]]></message>
 
 
@@ -826,7 +819,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
 
-<p>Thank you for downloading the Public Knowledge Project's <strong>Slavica Journals</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Slavica Journals, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Upgrade</h4>
 
@@ -864,7 +857,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
 	
-<p>Thank you for downloading the Public Knowledge Project's <strong>Slavica Journals</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Slavica Journals, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
 <p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
 
@@ -1015,7 +1008,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="common.homePageHeader.altText">Заголовок Домашней Страницы</message>
 	<message key="common.journalHomepageImage.altText">Картинка на домашней странице Журнала</message>
 	<message key="article.article">Статья</message>
-	<message key="article.citations">Литература</message>
 	<message key="article.coverPage.altText">Изображение на обложке</message>
 	<message key="article.accessLogoOpen.altText">Доступ Открыт</message>
 	<message key="article.accessLogoRestricted.altText">Доступ Закрыт</message>
@@ -1231,7 +1223,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.admin.settings.addComment.authenticated">Пользователи должны войти в систему перед тем как комментировать, анонимность не допускается.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Пользователи должны войти в систему перед тем как комментировать, анонимность допускается.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Пользователи не обязаны входить в систему перед тем как комментировать, анонимность допускается.</message>
-	<message key="rt.metadata.pkp.doi">Цифровой Идентификатор Обьекта</message>
 	<message key="notification.mailListDescription">Введите свой электронный адрес, чтобы получать уведомления о новостях журнала.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[На этой странице показан список новостей этого журнала, таких как выход новых номеров и обьявления. Вы можете получать эти новости в формате RSS (нажав на иконки справа), или <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Представлена новая статья, "{$param}".</message>
@@ -1256,4 +1247,29 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="debug.notes.helpMappingLoad">Перезагружен XML файл подсказки {$filename} в поиске {$id}.</message>
 	<message key="submission.reviewFormResponse">Заполненная Форма Рецензента</message>
 	<message key="navigation.competingInterestGuidelines">Описание Конфликта Интересов</message>
+	<message key="navigation.categories">Категории</message>
+	<message key="issue.fullIssue">Весь выпуск</message>
+	<message key="issue.nonpdf.title">Загрузка выпуска</message>
+	<message key="issue.viewIssue">Смотреть выпуск</message>
+	<message key="issue.viewIssueDescription">Посмотреть или загрузить весь выпуск</message>
+	<message key="plugins.categories.pubIds">Модули публичных идентификаторов</message>
+	<message key="plugins.categories.pubIds.description">Эти модули обеспечивают поддержку публичных идентификаторов.</message>
+	<message key="user.subscriptions.subscriptionStatus">Статус подписки</message>
+	<message key="user.subscriptions.status">Статус</message>
+	<message key="user.subscriptions.statusDescription">Описание</message>
+	<message key="article.pdf.download">Загрузить этот файл PDF</message>
+	<message key="gifts.buyer">От</message>
+	<message key="gifts.buyerDescription">От кого этот подарок?</message>
+	<message key="gifts.recipient">Кому</message>
+	<message key="gifts.recipientDescription">Кому этот подарок?</message>
+	<message key="gifts.thankYou">Спасибо</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Подарочная подписка</message>
+	<message key="gifts.details">Информация о подарке</message>
+	<message key="gifts.gift">Подарок</message>
+	<message key="gifts.myGifts">Мои подарки</message>
+	<message key="gifts.redeemGift">Активировать подарок</message>
+	<message key="gifts.status.redeemGift">Активировать подарок</message>
+	<message key="gifts.subscriptions">Подписки</message>
+	<message key="payment.type.gift">Подарок</message>
+	<message key="payment.type.gift.subscription">Подписка</message>
 </locale>

@@ -41,9 +41,7 @@
 
 请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}
 
-如果您想停止接收邮件通知，请前往{$unsubscribeLink}然后输入您的邮件地址和密码。
-
-您用来禁用电子邮件通知的密码是：{$password}
+如果您想停止接收邮件通知，请前往{$unsubscribeLink}
 
 {$principalContactSignature}</body>
 		<description>这封电子邮件是发送给刚刚从通知邮件列表中注册的未注册用户.</description>
@@ -230,12 +228,12 @@
 		<description>这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项时，才会用到这份消息。(否则请见：REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Article Review Request</subject>
+		<subject>审稿请求</subject>
 		<body>{$reviewerName}:
 
 《{$journalName}》的编辑团队相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这项对我们来说相当重要的工作。
 
-无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：{$journalUrl}
+无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。
 
 请注意审查工作的期限为：{$reviewDueDate}。
 
@@ -256,7 +254,7 @@
 		<subject>邀请您审查稿件</subject>
 		<body>{$reviewerName}:
 
-《{$journalName}》的编辑团队相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。该份期刊的审查指引已经附列如下，而稿件随附在这封电子邮件的附加档案之中。如果您接受这份审查工作，麻烦您在{$reviewDueDate}之前，将您对这份稿件的审查意见书以及编辑建议寄给我们。
+我相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。该份期刊的审查指引已经附列如下，而稿件随附在这封电子邮件的附加档案之中。如果您接受这份审查工作，麻烦您在{$reviewDueDate}之前，将您对这份稿件的审查意见书以及编辑建议寄给我们。
 
 无论您是否接受审查工作与否，都请在{$weekLaterDate}之内回复此封电子邮件给我们，告知我们您是否愿意进行审查工作。
 
@@ -266,8 +264,7 @@
 
 审查指引
 
-{$reviewGuidelines}
-</body>
+{$reviewGuidelines}</body>
 		<description>这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有一份稿件的附加档案。在「期刊设定」之步骤2中选择「电邮附件审查流程」选项时，才会用到这份消息。(否则请见：REVIEW_REQUEST。)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
@@ -328,7 +325,7 @@
 
 稿件网址：{$submissionReviewUrl}
 
-请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。
+请确认您能够完成这个对本期刊作品而言非常重要的审稿任务。我们期盼得到您的回复。
 
 {$editorialContactSignature}</body>
 		<description>这封电子邮件是由区段编辑发出，提醒一位审查人他们的审查工作已经到期。</description>
@@ -425,7 +422,7 @@
 		<description>这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Copyediting Request</subject>
+		<subject>编辑要求</subject>
 		<body>{$copyeditorName}您好：
 
 我想请您为《{$journalName}》担任稿件〈{$articleTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。
@@ -907,5 +904,150 @@ IP范围(可选):
 {$userFirstName}
 Copy-Editor, {$journalName}</body>
 		<description>本邮件允许文字编辑向作者要求参考文献的其他信息</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>文章审稿请求</subject>
+		<body>{$reviewerName}:
+
+This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+
+The review itself is due {$reviewDueDate}.
+
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+
+Submission URL: {$submissionReviewUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>文章审稿请求</subject>
+		<body>{$reviewerName}:
+
+This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+
+The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+
+Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+Review Guidelines
+
+{$reviewGuidelines}</body>
+		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+You will receive a follow-up email that includes login details and instructions for redeeming your gift.
+
+We hope that you enjoy your gift!
+
+{$giftContactSignature}</body>
+		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>稿件审稿要求</subject>
+		<body>{$reviewerName}:
+
+This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
+
+The review itself is due {$reviewDueDate}.
+
+Submission URL: {$submissionReviewUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>兑换你的礼物：登录</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+
+{$giftDetails}
+
+
+To redeem your gift, please login to the journal website at {$giftUrl}
+
+Your username: {$username}
+Your password: {$password}
+
+Once logged in, you can change your password at any time.
+
+We hope that you enjoy your gift!
+
+{$giftContactSignature}</body>
+		<description>此电子邮件通知的礼物收件人的一个新的帐户登录详细信息。</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>兑换你的礼物：登录</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+
+{$giftDetails}
+
+
+To redeem your gift, please login to the journal website at {$giftUrl}
+
+Your username: {$username}
+
+We hope that you enjoy your gift!
+
+{$giftContactSignature}</body>
+		<description>此电子邮件通知的礼物收件人自己的登录信息。</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>修订版上传</subject>
+		<body>{$editorialContactName}:
+
+A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
+
+Submission URL: {$submissionUrl}
+
+{$editorialContactSignature}</body>
+		<description>当作者上传的修订版的一篇文章后，此邮件将被自动发送到指定的编辑</description>
 	</email_text>
 </email_texts>

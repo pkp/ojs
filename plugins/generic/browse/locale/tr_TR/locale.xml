@@ -12,28 +12,28 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<!-- plugin -->
-	<message key="plugins.generic.browse.displayName">Browse</message>
-	<message key="plugins.generic.browse.description">This plugin enables the browsing by sections and/or their identify types.</message>
+	<message key="plugins.generic.browse.displayName">Listeleme</message>
+	<message key="plugins.generic.browse.description">Bu eklenti bölümlere ve/veya onların türlerini belirlemeye göre istelemeyi etkinleştirir.</message>
 
 	<!-- URN manager options, setting -->
-	<message key="plugins.generic.browse.manager.settings">Settings</message>
-	<message key="plugins.generic.browse.manager.settings.description">Please setup the following additional browsing possibilities:</message>
+	<message key="plugins.generic.browse.manager.settings">Ayarlar</message>
+	<message key="plugins.generic.browse.manager.settings.description">Lütfen aşağıdaki ek listeleme olanaklarına göre ayar yapınız:</message>
 
-	<message key="plugins.generic.browse.manager.settings.browseSettings">Browse Settings</message>
-	<message key="plugins.generic.browse.manager.settings.browse">Browse</message>
-	<message key="plugins.generic.browse.manager.settings.browseByObjects">Choose the objects that should be possible to browse by.</message>
-	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">By Section</message>
-	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">By IdentifyType</message>
-	<message key="plugins.generic.browse.manager.settings.excludedSections">Excluded Sections</message>
-	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Choose the sections that shoudn't be considered.</message>
-	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Excluded Identify Types</message>
-	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Choose the identify types that shoudn't be considered.</message>
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Ayarları Listele</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Listele</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Listelemeye uygun olan nesneleri seçiniz.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Bölüme Göre</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Belirlenmiş Türe Göre</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Çıkarılmış Bölümler</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Kabul edilmeyen bölümleri seçin.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Çıkarılmış Belirli Türler</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Kabul edilmeyen belirli türlerini seçin.</message>
 
-	<message key="plugins.generic.browse.search.sections">By Sections</message>
-	<message key="plugins.generic.browse.search.sectionIndex">Browse Section Index</message>
-	<message key="plugins.generic.browse.search.sectionDetails">Section Details</message>
-	<message key="plugins.generic.browse.search.identifyTypes">By Identify Types</message>
-	<message key="plugins.generic.browse.search.identifyTypeIndex">Browse Identify Type Index</message>
-	<message key="plugins.generic.browse.search.identifyTypeDetails">Identify Type Details</message>
+	<message key="plugins.generic.browse.search.sections">Bölümlere Göre</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Bölüm Dizinini Listele</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Bölüm Detayları</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Belirli Türlere Göre</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Belirli Tür Dizinlerini Listele</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Belirli Tür Detayları</message>
 
 </locale>

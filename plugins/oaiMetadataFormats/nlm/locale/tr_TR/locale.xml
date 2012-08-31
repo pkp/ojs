@@ -12,6 +12,6 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata Format</message>
-	<message key="plugins.oaiMetadata.nlm.description">Structures metadata in a way that is consistent with the NLM Journal Article format.</message>
+	<message key="plugins.oaiMetadata.nlm.displayName">NLM Üst Veri Biçimi</message>
+	<message key="plugins.oaiMetadata.nlm.description">Üst veri yapısı bir bakıma NLM Dergi Makalesi biçimi ile  tutarlı olmanın yoludur.</message>
 </locale>

@@ -66,7 +66,6 @@ Da li ste sigurni da želite da nastavite?</message>
 	<message key="editor.issues.accessStatus">Status pristupa</message>
 	<message key="editor.issues.accessDate">Datum otvorenog pristupa</message>
 	<message key="editor.issues.enableOpenAccessDate">Omogući odloženi otvoreni pristup</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Javni identifikator već postoji.</message>
 	<message key="editor.issues.coverPage">Slika naslovnice</message>
 	<message key="editor.issues.coverPageInstructions">(Podržani formati: .gif, .jpg, ili .png )</message>
 	<message key="editor.issues.uploaded">Dodato</message>

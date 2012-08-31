@@ -12,23 +12,23 @@
   -->
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
-	<message key="plugins.generic.customLocale.name">Custom Locale Plugin</message>
-	<message key="plugins.generic.customLocale.description">This plugin enables customization of the default user interface text used by OJS.</message>
+	<message key="plugins.generic.customLocale.name">Özelleştirilmiş Dil Eklentisi</message>
+	<message key="plugins.generic.customLocale.description">Bu eklenti ADS tarafından kullanılan varsayılan kullanıcı arayüzü metnini özelleştirmeyi sağlar.</message>
 
-	<message key="plugins.generic.customLocale.longDescription">This page lists all locales currently installed for the journal.</message>
-	<message key="plugins.generic.customLocale.localeDescription">This page lists all files that are available for the selected locale.</message>
-	<message key="plugins.generic.customLocale.fileDescription">Enter text into corresponding custom text field. Leave custom text field blank if the default OJS text should be used.</message>
-	<message key="plugins.generic.customLocale.localeName">Locale Name</message>
-	<message key="plugins.generic.customLocale.localeKey">Key</message>
-	<message key="plugins.generic.customLocale.localeKey.description">Enter an entire locale key to search for.</message>
-	<message key="plugins.generic.customLocale.localeKeyValue">Value</message>
-	<message key="plugins.generic.customLocale.customize">Customize</message>
-	<message key="plugins.generic.customLocale.availableLocales">Available Locales</message>
+	<message key="plugins.generic.customLocale.longDescription">Bu sayfa şu anda dergi için yüklenen tüm dilleri listeler.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Bu sayfa, seçilen yerel ayarlar için kullanılabilir tüm dosyaları listeler.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Ilgili özel metin alanına metin girin. Varsayılan ADS metininin kullanılması gerekiyorsa özel metin alanını boş bırakın.</message>
+	<message key="plugins.generic.customLocale.localeName">Dil Adı</message>
+	<message key="plugins.generic.customLocale.localeKey">Anahtar</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Aramak için tüm dil anahtarlarını giriniz.</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Değer</message>
+	<message key="plugins.generic.customLocale.customize">Özel</message>
+	<message key="plugins.generic.customLocale.availableLocales">Kullanılabilir Diller</message>
 
-	<message key="plugins.generic.customLocale.locale">{$locale} Locale</message>
-	<message key="plugins.generic.customLocale.localeFiles">Locale Files</message>
-	<message key="plugins.generic.customLocale.file.filename">Filename</message>
-	<message key="plugins.generic.customLocale.file.edit">Editing {$filename}</message>
-	<message key="plugins.generic.customLocale.file.reference">Default Text</message>
-	<message key="plugins.generic.customLocale.file.custom">Custom Text</message>
+	<message key="plugins.generic.customLocale.locale">{$locale} dili</message>
+	<message key="plugins.generic.customLocale.localeFiles">Dil Dosyaları</message>
+	<message key="plugins.generic.customLocale.file.filename">Dosya Adı</message>
+	<message key="plugins.generic.customLocale.file.edit">{$filename} düzenle</message>
+	<message key="plugins.generic.customLocale.file.reference">Varsayılan Metin</message>
+	<message key="plugins.generic.customLocale.file.custom">Özel Metin</message>
 </locale>

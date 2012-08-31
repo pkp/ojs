@@ -13,7 +13,7 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.block.fontSize.displayName">Font Bloğu</message>
-	<message key="plugins.block.fontSize.description">Bu eklenti yantaraf font büyüklüğü seçeneğini sağlar.</message>
+	<message key="plugins.block.fontSize.description">Bu eklenti yan tarafta font büyüklüğü seçeneğini sağlar.</message>
 	<message key="plugins.block.fontSize.title">Font</message>
 	<message key="plugins.block.fontSize.small">Küçük</message>
 	<message key="plugins.block.fontSize.medium">Orta</message>

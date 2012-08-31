@@ -74,4 +74,10 @@
 	<message key="admin.categories.enable.description">Щоб полегшити організацію великої номенклатури журналів, адміністратор сайту може обрати тут перелік категорій, за якими будуть організовуватись видання. Після цього, менеджери журналів зможуть обирати для своїх видань відповідні категорії. Таким чином, читачам стане доступна навігація між журналами за категоріями.</message>
 	<message key="admin.categories.name">Назва</message>
 	<message key="admin.categories.nameRequired">Необхідно вказати назву категорії</message>
+	<message key="admin.settings.journalsList.showTitle">НАзва журналу</message>
+	<message key="admin.settings.options">Налаштування</message>
+	<message key="admin.settings.usePaging">Для сайтів з багатьма журналами, відображати список журналів на кількох сторінках.</message>
+	<message key="admin.settings.journalsList">Елементи журналу</message>
+	<message key="admin.settings.journalsList.description">Будь ласка, оберіть елементи журналу, які відображатимуться для кожного журналу на домашній сторінці сайту.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Мініатюрне зображення журналу</message>
 </locale>

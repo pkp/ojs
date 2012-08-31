@@ -152,4 +152,6 @@ Please follow the following protocol for making electronic revisions to your man
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFee">Donations to journal</message>
 	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Erosi ale bat</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Kuota hau ordaintzeak ale hau bistaratzen, kargatzen eta inprimatzen utziko dizu.</message>
 </locale>

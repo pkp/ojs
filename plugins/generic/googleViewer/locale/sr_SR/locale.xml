@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/googleViewer/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="sr_SR" full_name="Srpski">
+	<message key="plugins.generic.googleViewer.name">Google dokument pregledač</message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Ovaj dodatak koristi <a href="https://docs.google.com/viewer">Google Docs Viewer</a>servis da prikaže PDF-ove.]]></message>
+</locale>

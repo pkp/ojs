@@ -16,4 +16,9 @@
 <locale name="uk_UA" full_name="Ukrainian">
        <message key="plugins.reports.views.displayName">Звіт про перегляди</message>
        <message key="plugins.reports.views.description">Цей модуль дозволяє формувати звіти у форматі CSV з інформацією про читаність кожної статті журналу.</message>
+	<message key="plugins.reports.views.articleId">Ідентифікатор статті</message>
+	<message key="plugins.reports.views.articleTitle">Назва статті</message>
+	<message key="plugins.reports.views.datePublished">Дата публікації</message>
+	<message key="plugins.reports.views.abstractViews">Переглядів антоації</message>
+	<message key="plugins.reports.views.galleyViews">Всього переглядів гранки</message>
 </locale>

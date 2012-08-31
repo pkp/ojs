@@ -45,7 +45,7 @@
 	<message key="admin.journals.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Offentliggør dette tidsskrift på webstedet</message>
 	<message key="admin.journals.journalDescription">Tidsskriftsbeskrivelse</message>
-	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. &quot;ojs&quot;).</message>
+	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnementer</message>
 	<message key="admin.journals.transcode">Omsæt kode for artikelmetadata fra ISO8859-1</message>
 	<message key="admin.journals.redirect">Gererer kode for at mappe OJS 1 URL's til OJS 2 URL's</message>
@@ -56,7 +56,7 @@
 	<message key="admin.mergeUsers.into.description">Vælg en bruger, som skal tilskrives den tidligere brugers forfatterskab, redigeringsopgaver osv.</message>
 	<message key="admin.mergeUsers.from.description">Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en person har to brugerkonti). Den først valgte konto slettes, og dens manuskripter, tildelinger osv. tilskrives den anden konto.</message>
 	<message key="admin.mergeUsers.allUsers">Alle tilmeldte brugere</message>
-	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet &quot;{$oldUsername}&quot; til kontoen med brugernavnet &quot;{$newUsername}&quot;? Kontoen med brugernavnet &quot;{$oldUsername}&quot; vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
+	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
 	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
 </locale>

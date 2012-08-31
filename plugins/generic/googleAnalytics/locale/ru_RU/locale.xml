@@ -28,4 +28,5 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Выберите код, который хотите использовать.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Старый код (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Новый код (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Номер учетной записи Google Analytics</message>
 </locale>

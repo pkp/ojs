@@ -13,8 +13,8 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.block.relatedItems.displayName">İlgili Başlıklar Bloğu</message>
-	<message key="plugins.block.relatedItems.description">Bu eklenti ilgili başlıklar taşıyıcı bloğunun yantarafta görüntülenmesini sağlar.</message>
-	<message key="plugins.block.relatedItems.title">İlgili başlıklar</message>
+	<message key="plugins.block.relatedItems.description">Bu eklenti ilgili başlıklar taşıyıcı bloğunun yan tarafta görüntülenmesini sağlar.</message>
+	<message key="plugins.block.relatedItems.title">İlgili Başlıklar</message>
 	<message key="plugins.block.relatedItems.hide">Sakla</message>
-	<message key="plugins.block.relatedItems.show">Tümünü Göster</message>
+	<message key="plugins.block.relatedItems.show">Tümünü göster</message>
 </locale>

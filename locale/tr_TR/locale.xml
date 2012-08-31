@@ -113,7 +113,7 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Makale</message>
 	<message key="article.articles">Makaleler</message>
-	<message key="article.submissionId">Gönderi ID'si</message>
+	<message key="article.submissionId">Gönderi SN'sı</message>
 	<message key="article.title">Başlık</message>
 	<message key="article.authors">Yazarlar</message>
 	<message key="article.indexingInformation">Dizinleme Bilgisi</message>
@@ -387,7 +387,7 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
 Sınıflama Sistemi Başlığı]]></message>
 <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
@@ -397,13 +397,13 @@ Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz oto
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Basamaklar: Başvuru Kuyruğu &gt; Başvuru Değerlendirilmesi &gt; Yazıların Düzenlenmesi &gt; Yayın bekleme kuyruğu &gt; İçindekiler.<br /><br />
 Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model seçin. (Yönetici editör, bölüm editörü atamak için Dergi Yönetimindeki Editörler bölümüne gidiniz.)]]></message>
-	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Okuyucuların bir yazar tarafından atıf yapılan çevrimiçi bir çalışmanın sürümlerini bulması için aşağıdaki seçenekleri etkinleştirilebilir.</p>
 
 <ol>
-	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
-	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>
+	<li><strong>Okuma Aracı Ekle</strong><p>Dergi yöneticisi yayımlanmış öğelere eşlik eden Okuma Araçları için "Referans Bulma" ekleyebilir. Atıf yapılan çalışmaların referans başlıklarının yapıştırılamsı suretiyle ön seçimli akademik veri tabanında araştırılması için okuyucular etkinleştirilebilir.</p></li>
+	<li><strong>Referanslara Bağlantı Ekle</strong><p>Mizanpajcı aşağıdaki yönergeleri (düzenlenebilir) kullanarak çevrimiçi bulunabilir bir bağlantı ekleyebilir..</p></li>
 </ol>]]></message>
-	<message key="manager.people.noAdministrativeRights"><![CDATA[Üzgünüz, bu kullanıcı üzerinde yönetim hakkınız yoktur. Bunun sebebi:
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Üzgünüz, bu kullanıcı üzerinde idari hakkınız yoktur. Bunun sebebi:
 		<ul>
 			<li>Kullanıcı site yöneticisidir</li>
 			<li>Kullanıcı idare etmediğiniz dergilerde etkindir</li>
@@ -426,11 +426,11 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Aşağıda belirtilen öğeler editör işlemi beklemektedir:
 		<ul>
-			<li class="highlightReviewerNotNotified">A Reviewer has been assigned but not notified by email</li>
-			<li class="highlightNoDecision">All Reviewers have returned with their comments, but no decision is recorded</li>
-			<li class="highlightRevisedCopyUploaded">Author has uploaded a revised manuscript</li>
-			<li class="highlightReviewerConfirmationOverdue">Reviewer is overdue to confirm peer review invitation</li>
-			<li class="highlightReviewerCompletionOverdue">Reviewer is overdue to complete review</li>
+			<li class="highlightReviewerNotNotified">Bir Hakem atanandı ancak e-posta ile bilgilendirilmedi</li>
+			<li class="highlightNoDecision">Tüm hakemler yorumlarını gönderdi, ancak hiçbir karar kaydedilmedi</li>
+			<li class="highlightRevisedCopyUploaded">Yazar gözden geçirilmiş makaleyi yükledi</li>
+			<li class="highlightReviewerConfirmationOverdue">Hakem değerlendirme davetini onaylamak için gecikmiş</li>
+			<li class="highlightReviewerCompletionOverdue">Hakem değerlendirmeyi tamamlamakta gecikmiş</li>
 		</ul>
 	</li>
 	<li>"Son tarih" hakemler değerlendirmeyi kabul edince doldurulur; hakemlere verilen değerlendirme süresinin hafta sayısını listeler ve (-) ile belirtilenler gecikmiş hafta sayısıdır.</li>
@@ -1054,7 +1054,7 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="issue.fullIssue">Tüm sayı</message>
 	<message key="issue.nonpdf.title">Sayı İndir</message>
 	<message key="issue.viewIssue">Sayı Göster</message>
-	<message key="issue.viewIssueDescription">Türm sayıyı göster veya indir</message>
+	<message key="issue.viewIssueDescription">Tüm sayıyı göster veya indir</message>
 	<message key="plugins.categories.pubIds">Genel Belirleyici Eklentiler</message>
 	<message key="plugins.categories.pubIds.description">Bu eklentiler genel belirleyiciler için tamamlama desteği sağlar.</message>
 	<message key="manager.people.confirmDisable">Bu üyeyi pasifleştir. Sisteme giriş yapan üyeyi engelleyecektir.
@@ -1091,4 +1091,35 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="payment.type.gift">Bağış</message>
 	<message key="payment.type.gift.subscription">Abonelik</message>
 	<message key="installer.allowFileUploads"><![CDATA[Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	<message key="manager.setup.reviewProcessEmailDescription">Editörler gönderileri e-posta ekinde değerlendirme için hakemlere gönderirler. Hakemler kabul (veya red) yönündeki görüş ve değerlendirmelerini e-posta ile editörlere bildirirler. Hakemlerin e-posta ekinde gönderdikleri kabul (veya red) yönündeki görüş ve değerlendirmeleri gönderinin değerlendirme sayfasına editörler tarafından işlenir.</message>
+	<message key="gifts.thankYouMessage">Your gift purchase has been completed. You will receive a copy of the gift email sent to the recipient once your payment has been processed.</message>
+	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
+	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
+	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
+	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
+	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
+	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
+	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
 </locale>

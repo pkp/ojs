@@ -672,4 +672,5 @@
 	<message key="manager.sections.alertDelete">Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner.</message>
 	<message key="manager.plugins.settings">Innstillinger</message>
 	<message key="manager.setup.subjectClassificationURLValid">Oppgi en gyldig ekstern URL (ta med http://).</message>
+	<message key="manager.payment.options.purchaseIssueFee">Kjøp nummer</message>
 </locale>

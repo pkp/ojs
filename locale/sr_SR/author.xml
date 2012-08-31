@@ -33,7 +33,6 @@
 	<message key="author.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
 	<message key="author.submit.notAccepting">Časopis trenutno ne prihvata predaje radova.</message>
 	<message key="author.submit.requestWaiver">Zahtevaj oslobađanje</message>
-	<message key="author.submit.qualityForWaiver">Uzmite u obzir oslobađanje od naknade za predaju radova.</message>
 	<message key="author.submit.addReasonsForWaiver">Koristite tekst box ispod da navedete razloge za oslobađanje od naknade.</message>
 	<message key="author.submit.mustEnterWaiverReason">Ukoliko zahtevate oslobađanje, morate navesti razloge.</message>
 	<message key="author.submissions.queuedReviewSubsequent">U recenzentskom krugu {$round}</message>

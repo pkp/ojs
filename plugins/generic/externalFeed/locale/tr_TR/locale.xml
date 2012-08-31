@@ -14,8 +14,8 @@
 <locale name="tr_TR" full_name = "Turkish">
 
 	<!-- External Feed -->
-	<message key="plugins.generic.externalFeed.displayName">External Feeds</message>
-	<message key="plugins.generic.externalFeed.block.displayName">External Feed Block</message>
+	<message key="plugins.generic.externalFeed.displayName">Dış Beslemeler</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Dış Besleme Bloğu</message>
 	<message key="plugins.generic.externalFeed.description">Publish content from external Atom/RSS web syndication feeds. For example, from an external WordPress, Drupal, or OCS install.</message>
 	<message key="plugins.generic.externalFeed.noneExist">No External Feeds</message>
 	<message key="plugins.generic.externalFeed.title">Title</message>

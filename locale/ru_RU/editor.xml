@@ -44,7 +44,6 @@
 	<message key="editor.issues.accessStatus">Доступ</message>
 	<message key="editor.issues.accessDate">В открытом доступе с</message>
 	<message key="editor.issues.invalidAccessDate">Неверная дата выхода в открытый доступ.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Идентификатор выпуска уже существует.</message>
 	<message key="editor.issues.coverPage">Обложка</message>
 	<message key="editor.issues.coverPageInstructions">(форматы: .gif, .jpg, или .png )</message>
 	<message key="editor.issues.uploaded">Загружен</message>
@@ -201,4 +200,12 @@
 	<message key="editor.issues.coverPageDisplay">Отображение</message>
 	<message key="editor.article.display">Отображение</message>
 	<message key="editor.article.coverPageDisplay">Отображение</message>
+	<message key="editor.notifyUsers.allReaders">Все читатели ({$count} пользователей)</message>
+	<message key="editor.notifyUsers.allAuthors">Все опубликованные авторы ({$count} пользователей)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Все индивидуальные подписчики ({$count} пользователей)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Все учреждения-подписчики ({$count} пользователей)</message>
+	<message key="editor.issues.galleys">Гранки выпуска</message>
+	<message key="editor.issues.galley">Гранка выпуска</message>
+	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
+	<message key="editor.issues.issueGalleysDescription">Публиковать гранки с полным содержанием выпуска</message>
 </locale>

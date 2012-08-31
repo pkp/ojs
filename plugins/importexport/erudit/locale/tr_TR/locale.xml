@@ -15,15 +15,14 @@
 	<message key="plugins.importexport.erudit.displayName">Erudit Makale İhraç Eklentisi</message>
 	<message key="plugins.importexport.erudit.description">Makaleleri İngiliz Erudit DTD sistemi ile sistemden ihraç etmek için kullanılır</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Kullanımı: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
-]]></message>
+	<message key="plugins.importexport.erudit.cliUsage">Kullanımı: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]</message>
 	<message key="plugins.importexport.erudit.export">İhraç et</message>
-	<message key="plugins.importexport.erudit.export.issues">Sayının tüm verisini ihraç et</message>
-	<message key="plugins.importexport.erudit.export.sections">Tüm bölüm verisini ihraç et</message>
-	<message key="plugins.importexport.erudit.export.articles">Makale verisini ihraç et</message>
+	<message key="plugins.importexport.erudit.export.issues">Sayıları İhraç Et</message>
+	<message key="plugins.importexport.erudit.export.sections">Bölümleri İihraç Et</message>
+	<message key="plugins.importexport.erudit.export.articles">Makaleleri İhraç Et</message>
 
-	<message key="plugins.importexport.erudit.selectIssue">Sayıyı Seçin</message>
-	<message key="plugins.importexport.erudit.selectArticle">Makaleyi Seçin</message>
+	<message key="plugins.importexport.erudit.selectIssue">Sayıyı Seç</message>
+	<message key="plugins.importexport.erudit.selectArticle">Makale Seç</message>
 
 	<message key="plugins.importexport.erudit.cliError">HATA:</message>
 	<message key="plugins.importexport.erudit.error.unknownJournal">Belirtilen "{$journalPath}" sistemde bulunmayan bir dizin.</message>

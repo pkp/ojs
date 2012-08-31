@@ -13,12 +13,12 @@
  
 <locale name="tr_TR" full_name = "Turkish">
 	<message key="plugins.generic.staticPages.displayName">Sabit Sayflar Eklentisi</message>
-	<message key="plugins.generic.staticPages.description">This plugin allows Static Content Management.</message>
+	<message key="plugins.generic.staticPages.description">Bu eklenti Sabit İçerik Yönetimini sağlar.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Başlık</message>
 	<message key="plugins.generic.staticPages.content">İçerik</message>
 
 	<message key="plugins.generic.staticPages.path">Yol</message>
-	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong>]]></message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>TinyMCE Eklentisi içerik eklemek/düzenlemek için yüklü ve etkinleştirilmiş olmalıdır.</strong>]]></message>
 
 	<message key="plugins.generic.staticPages.editAddContent">İçerik Düzelt/Ekle</message>
 
@@ -26,9 +26,9 @@
 	<message key="plugins.generic.staticPages.addNewPage">Yeni Sayfa Ekle</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Sabit Sayfa Düzelt</message>	
 
-	<message key="plugins.generic.staticPages.settingInstructions">The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.</message>
-	<message key="plugins.generic.staticPages.editInstructions">Use the form below to add/edit page content.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Pages can then be accessed at: {$pagesPath}, where %PATH% is a value you choose. <strong>Note:</strong> No two pages can have the same path.]]></message>
+	<message key="plugins.generic.staticPages.settingInstructions">Aşağıdaki form oluşturduğunuz tüm statik sayfaları gösterir. Sağ taraftaki bağlantıları kullanarak sayfaları düzenleyebilir veya silebilirsiniz.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Sayfa içeriği eklemek/düzeltmek için aşağıdaki formu kullanın.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Sayfalar daha sonra şu adresten ulaşılabilir: {$pagesPath}, %PATH% seçtiğiniz bir değerdir. <strong> Not:</ strong> İki ayrı sayfanın yolu anı olamaz.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Bu yol başka bir sabit sayfa için zaten açık.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Sayfa başarılı bir şekilde kaydedildi.</message>

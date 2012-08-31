@@ -12,12 +12,12 @@
   -->
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
-	<message key="plugins.block.user.displayName">Kullanıcı engelle</message>
-	<message key="plugins.block.user.description">Bu eklenti yantaraf kullanıcı hesabı araçlarını sağlar(ör. giriş, çıkış, profil, vb).</message>
+	<message key="plugins.block.user.displayName">Üye Bloğu</message>
+	<message key="plugins.block.user.description">Bu eklenti yan taraf üye hesabı araçlarını sağlar (Örneğin; giriş, çıkış, profil, vb).</message>
 	<message key="plugins.block.user.loggedInAs">Oturum açan kullanıcı:</message>
 	<message key="plugins.block.user.myJournals">Dergilerim</message>
 	<message key="plugins.block.user.myProfile">Profilim</message>
 	<message key="plugins.block.user.logout">Çıkış</message>
 	<message key="plugins.block.user.signOutAsUser">Kullanıcı Olarak Oturumu Kapat</message>
-	<message key="plugins.block.user.rememberMe">Beni Hatırla</message>
+	<message key="plugins.block.user.rememberMe">Beni hatırla</message>
 </locale>

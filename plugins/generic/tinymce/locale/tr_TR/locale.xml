@@ -13,8 +13,8 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.generic.tinymce.name">TinyMCE Eklentisi</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Bu eklenti OJS yazı alanlarının <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> içerik düzenleyici kullanılarak görüldüğü gibi yazılmasını sağlar.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Bu eklenti OJS yazı alanlarının <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> içerik düzenleyici kullanılarak görüldüğü gibi yazılmasını sağlar. 
+	<message key="plugins.generic.tinymce.description"><![CDATA[Bu eklenti ADS yazı alanlarının <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> içerik düzenleyici kullanılarak görüldüğü gibi yazılmasını sağlar.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Bu eklenti ADS yazı alanlarının <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> içerik düzenleyici kullanılarak görüldüğü gibi yazılmasını sağlar. 
 <strong>TinyMCE henüz yüklenmemiş; lütfen {$tinyMcePath} buradan yükleyin.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Ayarlar</message>

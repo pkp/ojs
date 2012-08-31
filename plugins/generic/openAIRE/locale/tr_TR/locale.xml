@@ -11,10 +11,10 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">The OpenAIRE plugin adds the projectID element to the article metadata and extends the OAI-PMH interface according to the OpenAIRE Guidelines 1.1, helping OJS journals to become OpenAIRE compliant.</message>
-	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
-	<message key="plugins.generic.openAIRE.metadata">OpenAIRE Specific Metadata</message>
-	<message key="plugins.generic.openAIRE.projectID.description">(The projectID equals the Grant Agreement number)</message>
-	<message key="plugins.generic.openAIRE.projectIDValid">Please enter a valid projectID (6 numbers)</message>
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE Eklentisi</message>
+	<message key="plugins.generic.openAIRE.description">OpenAIRE eklentisi makalenin üst verisine proje numarası elemanını ekler ve OpenAIRE uyumlu olması için ADS dergilerine yardımcı OpenAIRE Yönergesi 1.1'e göre OAI-PMH arabirimini genişletir.</message>
+	<message key="plugins.generic.openAIRE.projectID">Proje No</message>
+	<message key="plugins.generic.openAIRE.metadata">OpenAIRE Özel Üst Verisi</message>
+	<message key="plugins.generic.openAIRE.projectID.description">Proje no Hibe Anlaşması numarasına eşittir.</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Lütfen geçerli bir proje numarası giriniz (6 haneli)</message>
 </locale>

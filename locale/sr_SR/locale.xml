@@ -183,13 +183,7 @@
 	 *
 	 * LOG - This section contains entries related to log entries.
 	 *
-	 --><message key="submission.event.logLevel">Nivo</message>
-	<message key="submission.event.logLevel.info">Informacija</message>
-	<message key="submission.event.logLevel.notice">Obaveštenje</message>
-	<message key="submission.event.logLevel.warning">Upozorenje</message>
-	<message key="submission.event.logLevel.error">Greška</message>
-	
-	<message key="submission.event.general.defaultEvent">Dešavanja prilikom predaje</message>
+	 -->	<message key="submission.event.general.defaultEvent">Dešavanja prilikom predaje</message>
 	<message key="submission.event.general.articleSubmitted">Članak predat</message>
 	<message key="submission.event.general.issueScheduled">Rad je stavljen u red čekanja u rasporedu časopisa</message>
 	<message key="submission.event.general.issueAssigned">Rad je dodeljen broju časopisa</message>
@@ -247,10 +241,7 @@ Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom s
  <li>Ako korisnik pokuša registrovati novi korisnički nalog na ovom sajtu sa korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je priložena lozinka ispravna za taj korisnički nalog.</li>
 </ul>]]></message>
 	
-	<!--  System Information  -->	<message key="admin.editSystemConfigInstructions"><![CDATA[Koristite ovaj formular kako biste izmenili konfiguracioni fajl sistema (fajl  <tt>config.inc.php</tt>). Kliknite "sačuvaj" kako biste sačuvali svoju novu konfiguraciju ili "prikaži" da biste jednostavno prikazali ažuriran konfiguracijski fajl, a pri tome ne izmenili već postojeću konfiguraciju. 
-<br /><br />
-<span class="formError">Upozorenje: Menjanje ovih podešavanja može potencijalno onesposobiti sajt za dalji rad (što uključuje ručno ispravljanje vašeg konfiguracionog fajla). Preporučljivo je da ne radite nikakve promene ukoliko ne znate šta tačno radite.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NAPOMENA!</h4>
+	<!--  System Information  -->	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NAPOMENA!</h4>
 <p>Sistem ne može automatski izvršiti prepisivanje konfiguracionog fajla. Da biste izvršili izmene fajl  <tt>config.inc.php</tt> mora imati perm. mod 777.</p>]]></message>
 
 	
@@ -265,7 +256,7 @@ Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom s
 <br /><br />
 Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektronske verzije časopisa nije zaista pokrenuto, odnosno prvi broj objavljen ili u izdavanju. Da bi se to učinilo, potrebno je slediti ova dva koraka:]]></message>
 	
-	<!--  Setup Step 3  -->	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Časopis će koristiti predmetnu klasifikaciju sistema dostupnu na mreži.<br />
+	<!--  Setup Step 3  -->	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Časopis će koristiti predmetnu klasifikaciju sistema dostupnu na mreži.<br />
 Naslov klasifikacionog sistema]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Kako biste učinili sadržaj ovog časopisa indeksiranim unutar globalno distribuisanog sistema istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrujte</a> URL vašeg časopisa na <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga u ovom časopisu, omogućavajući precizno i kolektivno pretraživanje istraživačkih sajtova koji sudeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
@@ -446,8 +437,7 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Unesite u naznačeno polje vašu imejl adresu kako bi Vam bila poslata nova lozinka.<br/><br/>Potvrda će biti poslata na navedeni imejl.]]></message>
 	
 	
-	<!--  Profile  -->	<!--  Registration  --><message key="user.register.repeatPassword">Ponovite lozinku</message>
-	<message key="user.register.selectJournal">Odaberite časopis za koji se želite registrovati</message>
+	<!--  Profile  -->	<!--  Registration  -->	<message key="user.register.selectJournal">Odaberite časopis za koji se želite registrovati</message>
 	<message key="user.register.noJournals">Ne postoje časopisi za koje se možete registrovati na ovom sajtu.</message>
 	<message key="user.register.privacyStatement">Izjava o privatnosti</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovde</a> ako ste se već registrovali.]]></message>
@@ -599,8 +589,6 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Upozorenje:</b> Ako instalacija nije uspela delimično prilikom instalacije baze podataka moraćete izbrisati vašu OJS bazu podataka ili tabele baze podataka pre ponovnog pokušaja instalacije baze podataka.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VAŽNO!</h4>
 <p>Instalacioni program ne može automatski pisati preko konfiguracionog fajla. Pre pokušaja korišćenja sistema, molimo otvorite <tt>config.inc.php</tt> u odgovarajućem editoru teksta i zamenite njegov sadržaj sa sadržajem teksta koji se nalazi u polju ispod.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuelna instalacija</h4>
-<p>SQL izjave za kreiranje sheme OJS baze podataka i inicijalnih podataka su prikazani ispod. Uzmite u obzir za će sistem biti neupotrebljiv sve dok te izjave nisu unešene ručno. Takođe ćete morati ručno konfigurisati fajl <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalacija OJS-a je uspešno dovršena.</p>
 <p>Da biste započeli sa korišćenjem sistema, <a href="{$loginUrl}">prijavite se</a> sa Vašim korisničkim imenom i lozinkom navedenim na prošloj stranici.</p>
 <p>Ako želite da primate vesti i nadogradnje, <strong>molimo da se registrujete na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ako imate pitanja ili komentare, posetite <a href="http://pkp.sfu.ca/support/forum" target="_new">forum podrške</a>.</p>]]></message>
@@ -767,7 +755,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.settings.addComment.authenticated">Anonimni komentari nisu dozvoljeni. Korisnici moraju biti registrovani i prijavljeni da bi mogli ostavljati komentare.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrovani i prijavljeni kako bi ostavili komentar.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dozvoljeni.</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="debug.notes.helpMappingLoad">Ponovno učitana XML help mapping datoteka {$filename} pretražujući za {$id}.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
@@ -877,7 +864,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="notification.type.newAnnouncement">Novo obaveštenje je napravljeno.</message>
 	<message key="notification.type.site">Događaji na sajtu</message>
 	<message key="user.authorization.noJournal">Nema časopisa u kontekstu!</message>
-	<message key="section.default.policy"></message>
 	<message key="manager.setup.reviewProcessEmailDescription">Urednik šalje
 	Recenzentima zahtev sa radom putem imejla. Recenzent obaveštava urednika da li privhvata izradu recenzije i sugestije. Urednik unosi podatke o odluci recenzenta.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Uputstva za recenzente će obezbediti podrebne smernice za odlučivanje da li je rad pogodan za objavljivanje u časopisu kao i posebne instrukcije kako efikasno pripremiti rad za objavljivanje. Recenzentima su date dve mogućnosti, prva "za autora i urednika" i druga "za urednika". Takođe, urednik časopisa nože da napravi forme za recenzije eksperata u okviru formi recenzija. U svakom slučaju, urenici mogu da obezbede korespodenciju recenzenata i autora.</message>

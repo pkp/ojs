@@ -12,7 +12,7 @@
   -->
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
-	<message key="plugins.citationFormats.proCite.displayName">ProCite citation format plugin</message>
-	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - RIS format (Macintosh &amp; Windows)</message>
-	<message key="plugins.citationFormats.proCite.description">This plugin implements the ProCite citation format.</message>
+	<message key="plugins.citationFormats.proCite.displayName">ProCite atıf biçim eklentisi</message>
+	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - RIS biçimi (Macintosh ve Windows)</message>
+	<message key="plugins.citationFormats.proCite.description">Bu eklenti ProCite atıf biçimini uygular.</message>
 </locale>

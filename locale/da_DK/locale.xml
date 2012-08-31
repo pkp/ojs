@@ -207,12 +207,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Niveau</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Meddelelse</message>
-	<message key="submission.event.logLevel.warning">Advarsel</message>
-	<message key="submission.event.logLevel.error">Fejl</message>
-	
 	<message key="submission.event.general.defaultEvent">Manuskripthændelse</message>
 	<message key="submission.event.general.articleSubmitted">Artiklen er fremsendt</message>
 	<message key="submission.event.general.issueScheduled">Manuskriptet er sendt til køen for udgaveplanlægning</message>
@@ -266,7 +260,7 @@
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentarer til denne artikel</message>
-	<message key="comments.authenticated">{$userName}</message>
+	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
 
@@ -292,9 +286,6 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 </ul>]]></message>
 	
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Brug denne formular til at ændre systemkonfigurationen (filen <tt>config.inc.php</tt>). Klik på Gem for at gemme den nye konfiguration eller på "Vis" for kun at få vist den opdaterede konfigurationsfil og ikke ændre den eksisterende konfiguration.
-<br /><br />
-<span class="formError">Advarsel! Ændring af disse indstillinger kan medføre, at det ikke er muligt at oprette adgang til webstedet (hvilket kræver, at konfigurationsfilen rettes manuelt). Det anbefales, at du ikke foretager nogen ændringer, medmindre du præcist ved, hvad du laver.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>BEMÆRK!</div>
 <p>Systemet kunne ikke automatisk overskrive konfigurationsfilen. Hvis du vil aktivere konfigurationsændringerne, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
 
@@ -359,7 +350,7 @@ Forfattere, der publicerer deres værker via dette tidsskrift, accepterer følge
 	 <li>Forfattere kan indgå flere separate kontraktlige aftaler om ikke-eksklusiv distribution af tidsskriftets publicerede version af værket (f.eks. sende det til et institutionslager eller udgive det i en bog), med en anerkendelse af værkets første publicering i nærværende tidsskrift.</li>
 	 <li>Forfattere har ret til og opfordres til at publicere deres værker online (f.eks. i institutionslagre eller på deres websted) forud for og under manuskriptprocessen, da dette kan føre til produktive udvekslinger, samt tidligere og større citater fra publicerede værker (se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidsskriftet bruger et emneklassificeringssystem, der findes på nettet.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet bruger et emneklassificeringssystem, der findes på nettet.<br />
 Titel på klassificeringssystem]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Hvis indholdet af dette tidsskrift skal indekseres i et globalt distribueret system bestående af opslagsdatabaser, skal du <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrere</a> tidsskriftets URL-adresse i værktøjet Public Knowledge Project, der bruges til harvesting af metadata<a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Dette værktøj indsamler metadata fra de enkelte indekserede elementer i dette tidsskrift, hvilket sikrer præcis og kollektiv søgning blandt de opslagswebsteder, der overholder protokollen <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
@@ -825,8 +816,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel!</b> Hvis installationen mislykkedes midt under databaseinstallationen, bliver du muligvis nødt til at opgive OJS-databasen eller databasetabellerne, inden du forsøger at geninstallere databasen.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VIGTIGT!</h4>
 <p>Installationsprogrammet kunne ikke automatisk overskrive konfigurationsfilen. Inden du forsøger at benytte systemet, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuel installation</h4>
-<p>De SQL-sætninger, der skal bruges til oprettelse af OJS-databaseskemaet og de første data, er vist nedenfor. Vær opmærksom på, at systemet ikke kan benyttes, før disse sætninger er blevet udført manuelt. Du skal også konfigurere konfigurationsfilen <tt>config.inc.php</tt> manuelt.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installationen af OJS er fuldført.</p>
 <p>Hvis du vil begynde at benytte systemet, skal du <a href="{$loginUrl}">logge på</a> med det brugernavn og den adgangskode, der blev angivet på den forrige side.</p>
 <p>Hvis du vil modtage nyheder og opdateringer, <strong>skal du registrere dig på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørgsmål eller kommentarer, skal du besøge <a href="http://pkp.sfu.ca/support/forum" target="_new">supportforummet</a>.</p>]]></message>
@@ -921,12 +910,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 
 	<message key="rt.metadata.pkp.primaryAuthor">Forfatters navn, tilhørsforhold, land</message>
 	<message key="rt.metadata.pkp.peerReviewed">Artikel undergået peer review</message>
-	<message key="rt.metadata.pkp.doi">DOI (Digital Object Identifier)</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">Skal underrettes, når...</message>
 
 	<message key="rt.thisJournal">Søg i tidsskrift</message>
@@ -1067,27 +1050,51 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="installer.upgradeApplication">Opgrader Open Journal Systems</message>
 	<message key="notification.mailListDescription">Indtast din e-mail-adresse for at modtage meddelelser om vigtigt nyt indhold, så snart det bliver tilføjet i tidsskriftet.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Denne side viser vigtige opdateringer vedrørende dette tidsskrift, fx nye numre eller meddelelser.  Du kan abonnere på disse meddelelser via RSS feeds (ved at klikke på billederne til højre) eller <a href="{$emailUrl}">via e-mail.</a>]]></message>
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$param}", er blevet indleveret.</message>
-	<message key="notification.type.copyeditComment">En manuskriptredaktør har skrevet en kommentar vedrørende "{$param}".</message>
+	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
+	<message key="notification.type.copyeditComment">En manuskriptredaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
-	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$param}".</message>
-	<message key="notification.type.galleyModified">Der er foretaget en ændring af et satsskib for "{$param}".</message>
+	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
+	<message key="notification.type.galleyModified">Der er foretaget en ændring af et satsskib for "{$title}".</message>
 	<message key="notification.type.issuePublished">Der er blevet udgivet et nummer.</message>
-	<message key="notification.type.layoutComment">Der er blevet skrevet en kommentar vedrørende "{$param}s" layout.</message>
-	<message key="notification.type.metadataModified">"{$param}s" metadata er blevet ændret.</message>
+	<message key="notification.type.layoutComment">Der er blevet skrevet en kommentar vedrørende "{$title}s" layout.</message>
+	<message key="notification.type.metadataModified">"{$title}s" metadata er blevet ændret.</message>
 	<message key="notification.type.newAnnouncement">Der er blevet oprettet en ny meddelelse.</message>
-	<message key="notification.type.proofreadComment">En korrekturlæser har skrevet en kommentar vedrørende "{$param}".</message>
-	<message key="notification.type.reviewerComment">En bedømmer har skrevet en kommentar vedrørende "{$param}".</message>
-	<message key="notification.type.reviewerFormComment">Der er blevet indsendt en bedømmelsesformular vedrørende "{$param}".</message>
+	<message key="notification.type.proofreadComment">En korrekturlæser har skrevet en kommentar vedrørende "{$title}".</message>
+	<message key="notification.type.reviewerComment">En bedømmer har skrevet en kommentar vedrørende "{$title}".</message>
+	<message key="notification.type.reviewerFormComment">Der er blevet indsendt en bedømmelsesformular vedrørende "{$title}".</message>
 	<message key="notification.type.reviewing">Bedømmelseshændelser</message>
 	<message key="notification.type.site">Websted-hændelser</message>
-	<message key="notification.type.submissionComment">En redaktør har skrevet en kommentar vedrørende "{$param}".</message>
+	<message key="notification.type.submissionComment">En redaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.submissions">Indleveringshændelser</message>
-	<message key="notification.type.suppFileModified">"{$param}s" supplerende fil(er) er blevet ændret.</message>
-	<message key="notification.type.userComment">En læser har skrevet en kommentar vedrørende "{$param}".</message>
+	<message key="notification.type.suppFileModified">"{$title}s" supplerende fil(er) er blevet ændret.</message>
+	<message key="notification.type.userComment">En læser har skrevet en kommentar vedrørende "{$title}"</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Adgang nægtet! Du er ikke blevet tildelt rollen som manuskriptredaktør på denne artikel.</message>
 	<message key="user.authorization.noJournal">Intet tidsskrift i denne kontekst!</message>
 	<message key="user.authorization.sectionAssignment">Du forsøger at få adgang til en artikel, som ikke er en del af din sektion.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ugyldig manuskriptredaktør-indlevering eller ingen anmodning om manuskriptredaktør-indlevering!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Ugyldig sektionsredaktør-indlevering eller ingen anmodning om sektionsredaktør-indlevering!</message>
+	<message key="navigation.categories">Kategorier</message>
+	<message key="navigation.categories.browse">Browse</message>
+	<message key="issue.fullIssue">Hele numeret</message>
+	<message key="issue.nonpdf.title">Nummerdownload</message>
+	<message key="issue.viewIssueDescription">Se eller download hele nummeret</message>
+	<message key="plugins.categories.pubIds">Public Identifier plug-in</message>
+	<message key="plugins.categories.pubIds.description">These plugins implement support for a public identifier.</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Markerede punkter indikerer, at der skal foretages en tilretning af en redaktør med betegnelsen:
+		<ul>
+			<li class="highlightCopyediting">Der skal foretagers en tilretning under manuskriptredigering</li>
+			<li class="highlightLayoutEditing">Der skal foretagers en tilretning under layuotredigering</li>
+			<li class="higlightProofreading">Der skal foretagers en tilretning under korrekturlæsning</li>
+		</ul>
+	</li>
+</ol>]]></message>
+	<message key="site.noJournals">Der er ingen tilgængelige tidsskrifter</message>
+	<message key="gifts.buyer">Fra</message>
+	<message key="gifts.buyerDescription">Hvem er gaven fra?</message>
+	<message key="gifts.recipient">Til</message>
+	<message key="gifts.recipientDescription">Hvem er gaven til?</message>
+	<message key="gifts.thankYou">Tak</message>
+	<message key="gifts.thankYouMessage">Dit gavebevis er færdigudfyldt. Du vil modtage en kopi af gave-e-mailen, der er sendt til modtageren, så snart betalingen har fundet sted.</message>
 </locale>

@@ -13,16 +13,16 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.importexport.METSExport.displayName">METS XML İhraç Eklentisi</message>
-	<message key="plugins.importexport.METSExport.description">METS XML Dergi İhracı</message>
+	<message key="plugins.importexport.METSExport.description">METS XML'de Dergilerin İhracı</message>
 	<message key="plugins.importexport.METSExport.settings">Ayarlar</message>
 	<message key="plugins.importexport.METSExport.export">Veri İhracı</message>
-	<message key="plugins.importexport.METSExport.export.issues">Sayı İhracı</message>
+	<message key="plugins.importexport.METSExport.export.issues">Sayıları İhraç Et</message>
 	<message key="plugins.importexport.METSExport.export.selectIssue">İhraç için sayıları seçiniz.</message>
 	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">"{$issueId}" özel sayı ID'si ile herhangi bir sayı eşlenmedi.</message>
 	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Bilinmeyen dergi yolu {$journalPath}</message>
-	<message key="plugins.importexport.METSExport.settings.FContent">Use base64 encoding for content wrapper</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Use URL of the bitstream for content wrapper</message>
-	<message key="plugins.importexport.METSExport.settings.organization">METS:agent element organization attribute</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS preservation Level</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">İçeriği paketleyici base64 kodlaması kullan</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Içeriği paketleyici bitstream URL'si kullan</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS: aracı elemanı organizasyon niteliği</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS koruma düzeyi</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Ek dosya ihracı</message>
 </locale>

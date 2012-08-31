@@ -661,21 +661,10 @@ Klik på dette link for at bekræfte din anmodning og tilføje din e-mail-adress
 
 Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.
 
-Din adgangskode til deaktivering af e-mail-meddelelser er: {$password}
-
 {$principalContactSignature}</body>
 		<description>Denne e-mail er blevet sendt til en uregistreret bruger, som har tilmeldt sig meddelelses-mailinglisten.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Dine oplysninger vedrørende meddelelses-mailinglisten for {$siteTitle}</subject>
-		<body>Din nye adgangskode til deaktivering af e-mail-meddelelser er: {$password}
-
-Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink}} og indtaste din e-mail-adresse og adgangskode.
-
-{$principalContactSignature}</body>
-		<description>Denne e-mail bliver sendt til uregistrerede brugere på meddelelses-mailinglisten, når de angiver, at de har glemt deres adgangskode eller ikke kan logge ind. Den indeholder et link, som de kan følge for at nulstille deres adgangskode.</description>
-	</email_text>
-	<email_text key="EDITOR_DECISION_ACCEPT">
+		<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redaktørbeslutning</subject>
 		<body>{$authorName}:
 

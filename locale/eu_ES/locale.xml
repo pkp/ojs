@@ -393,7 +393,7 @@ Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:
 	 <li>Egileek beste kontratu-hitzarmen osagarri batzuk ere egin ditzakete aldizkarian argitaratutako bertsioaren banaketa ez-esklusiboa egiteko (adib., gordailu instituzional batean jartzeko, edo liburu batean argitaratzeko), betiere aldizkari honetan egindako lanaren hasierako argitalpena aitortuz.</li>
 	 <li>Egileek beren lana Interneten jartzeko baimena dute (adib., gordailu instituzionaletan edo beren webgunean), eta horretara animatzen dira gainera, bidalketa egin aurretik eta bidalketa-prozesuan zehar, elkartruke produktiboak sorraraz ditzakeelako eta lanaren aipamenak lehenago hasiko direlako eta ugariagoak izango direlako (Ikusi <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Sarrera librearen eragina</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Interneten erabilgarri dagoen sistema bat erabiliko du aldizkariak gaika sailkatzeko.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Interneten erabilgarri dagoen sistema bat erabiliko du aldizkariak gaika sailkatzeko.<br />
 Sailkapen-sistemaren titulua]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Aldizkari honen edukia datu-baseetan bilaketak egiteko sistema banatu batean indexatuta edukitzeko, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">erregistratu</a> zuen gunearen URLa Public Knowledge Project-en <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a> metadatu-biltzailean. Tresna horrek aldizkari honetako elementu indexatu guztien metadatuak bilduko ditu, bilaketa zehatzak eta kolektiboak egin ahal izateko <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> protokoloari atxikitako bilaketa-guneen bitartez.
 <br /><br />
@@ -1102,5 +1102,65 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Ataleko editorearen aurkezpena ez da baliozkoa edo ez da kontsultatu Ataleko editorearen aurkezpenik!</message>
+	<message key="gifts.recipientDescription">Norentzat da opari hau?</message>
+	<message key="gifts.thankYou">Mila esker</message>
+	<message key="gifts.details">Opariaren xehetasunak</message>
+	<message key="gifts.gift">Oparia</message>
+	<message key="gifts.myGifts">Nire opariak</message>
+	<message key="gifts.manageMyGifts">Kudeatu nire opariak</message>
+	<message key="gifts.status.notRedeemed">Eskuragarri</message>
+	<message key="navigation.categories">Kategoriak</message>
+	<message key="navigation.categories.browse">Arakatu</message>
+	<message key="issue.fullIssue">Edizio osoa</message>
+	<message key="issue.nonpdf.title">Edizioa jaistea</message>
+	<message key="issue.viewIssue">Ikus edizioa</message>
+	<message key="issue.viewIssueDescription">Ikus edo kargatu edizio osoa</message>
+	<message key="plugins.categories.pubIds">Identifikatzaile publikoaren pluginak</message>
+	<message key="plugins.categories.pubIds.description">Plugin hauek laguntza inplementatzen dute identifikatzaile publiko batentzat</message>
+	<message key="site.noJournals">Ez dago aldizkaririk eskuragarri.</message>
+	<message key="gifts.buyer">Nondik</message>
+	<message key="gifts.buyerDescription">Norentzat da opari hau?</message>
+	<message key="gifts.recipient">Nora</message>
+	<message key="gifts.thankYouMessage">Oparia erosi da. Opariaren hartzaileari bidaltzen zaion mezuaren kopia bat jasoko duzu behin ordainketa prozesatu ondoren.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Doako harpidetza</message>
+	<message key="gifts.subscriptionFormIntroduction">Mesedez, bete beheko inprimakia. Harremanetarako ematen den informazioa, baita zure opariaren oharra ere, erabili egingo dira hartzaileari mezu bat bidaltzeko eta doako harpidetza berria jakinarazteko (mezu horren kopia bat ere jasoko duzu zuk).</message>
+	<message key="gifts.detailsDescription">Mesedez, hautatu beheko oparia eta erantsi hartzaileari bidaliko zaion mezu pertsonalizatu bat (mezu horren kopia bat ere jasoko duzu zuk).</message>
+	<message key="gifts.noteTitle">Titulua</message>
+	<message key="gifts.note">Opariaren oharra</message>
+	<message key="gifts.noteTitleRequired">Mesedez, ipini titulu bat zure mezu pertsonalizatuari.</message>
+	<message key="gifts.noteRequired">Mesedez, idatzi mezu pertsonalizatu bat.</message>
+	<message key="gifts.localeRequired">Mesedez, hautatu hizkuntza bat zure mezu pertsonalizatuarentzat.</message>
+	<message key="gifts.subscriptions">Harpidetzak</message>
+	<message key="payment.type.gift.subscription">Harpidetza</message>
+	<message key="gifts.redeemGift">Trukatu oparia</message>
+	<message key="gifts.status.redeemed">Trukatua</message>
+	<message key="gifts.status.redeemGift">Trukatu oparia</message>
+	<message key="gifts.subscriptionsDescription">Hemen trukatutako opari gisa emandako harpidetzak gaur egun duzun harpidetza ordeztuko du (harpidetzarik baduzu). Harpidetzak truke datatik aurrera hasiko dira, eta harpidetza motak irauten duen artean izango dira baliodunak.</message>
+	<message key="gifts.purchaseGiftSubscription">Eman harpidetza opari gisa</message>
+	<message key="gifts.giftSubscriptionsAvailable">Opari gisa emandako harpidetzak ere eskuragarri daude. Hartzaileak edozein unetan truka ditzake opari gisa emandako harpidetzak, eta aldizkari honi laguntzeko modu ezin hobea da.</message>
+	<message key="gifts.noSubscriptions">Ez dago opari gisa emandako harpidetzarik</message>
+	<message key="gifts.giftRedeemed">Oparia ondo trukatu da.</message>
+	<message key="gifts.noGiftToRedeem">Oparia ez dago trukatzeko eskuragarri.</message>
+	<message key="gifts.giftAlreadyRedeemed">Opari hau trukatu da jadanik.</message>
+	<message key="gifts.giftNotValid">Opari hau ez da baliodouna, eta ezin da trukatu.</message>
+	<message key="gifts.subscriptionTypeNotValid">Opari honetarako harpidetza mota hau ez da balioduna. Mesedez, jarri harremanetan harpidetzaren kudeatzailearekin.</message>
+	<message key="gifts.subscriptionNonExpiring">Oparia ez da trukatu jadanik amaitzen ez den harpidetza egina duzulako aldizkari honekin.</message>
+	<message key="payment.loginRequired.forIssue">Harpidetza edo alearen erosketa eskatzen da itemera sartzeko. Harpidetza egiaztatzeko, sartu aurreko erosketan, edo ale erosketan, hasi aldizkariaren saioa.</message>
+	<message key="payment.type.purchaseIssue">Erosi ale bat</message>
+	<message key="payment.type.gift">Oparia</message>
+	<message key="installer.allowFileUploads"><![CDATA[Zure zerbitzariak fitxategiak gora kargatzen uzten du gaur egun: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Zure zerbitzariak gehienez tamaina hau duten fitxategiak gora kargatzen uzten du gaur egun: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> orrira azken bertsioa kargatzeko eta eguneratzeko argibideak aurkitzeko.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[OJSren bertsio berri bat dago eskuragarri! Une honetan OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, jarri harremanetan zure Webguneko Administratzailearekin ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) bertsio berria atera dela jakinarazteko. Informazio gehiago aurki daiteke hemen: <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<![CDATA[<ol>
+	<li>Azpimarratutako itemek editore batek esku hartzea beharrezkoa dela adierazten dute; honela etikatuta daude:
+		<ul>
+			<li class="highlightCopyediting">Beharrezkoa da esku hartzea berrikuspen fasean</li>
+			<li class="highlightLayoutEditing">Beharrezkoa da esku hartzea edizio diseinuaren fasean</li>
+			<li class="higlightProofreading">Beharrezkoa da esku hartzea zuzenketa fasean</li>
+		</ul>
+	</li>
+</ol>]]></message>
 </locale>
 

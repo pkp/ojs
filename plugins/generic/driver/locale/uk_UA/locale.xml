@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/driver/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DRIVER plugin localization strings
+  -->
+ 
+<locale name="uk_UA" full_name="Ukrainian">
+	<message key="plugins.generic.driver.displayName">DRIVER</message>
+	<message key="plugins.generic.driver.description">Модуль DRIVER дозволяє розширене використання інтерфейсу OAI-PMH відповідно до DRIVER Guidelines 2.0 і забезпечує сумісність журналів OJS зі стандартами європейського сховища DRIVER.</message>
+</locale>

@@ -307,4 +307,5 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.membershipFeeDescription">Оплата позволит Вас стать членом данной ассоциации сроком на один год и со свободным доступом к этому журналу.</message>
 	<message key="default.journalSettings.donationFee">Добровольные пожертвования</message>
 	<message key="default.journalSettings.donationFeeDescription">Мы с благодарностью принимаем пожертвования, которые дадут редакции больше свободы в повышении качества журнала для своих читателей.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Купить выпуск</message>
 </locale>

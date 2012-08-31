@@ -14,4 +14,9 @@
 <locale name="sr_SR" full_name="Serbian">
 	<message key="plugins.reports.views.displayName">Pregledaj izveštaj</message>
 	<message key="plugins.reports.views.description">Ovaj dodatak implementira CVS izveštaj opisujući čitalačku aktivnost za svaki članak.</message>
+	<message key="plugins.reports.views.articleId">ID članka</message>
+	<message key="plugins.reports.views.articleTitle">Naslov članka</message>
+	<message key="plugins.reports.views.datePublished">Datum objavljivanja</message>
+	<message key="plugins.reports.views.abstractViews">Prikaza apstrakta</message>
+	<message key="plugins.reports.views.galleyViews">Ukupno prikaza</message>
 </locale>

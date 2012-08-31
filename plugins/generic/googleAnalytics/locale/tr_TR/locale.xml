@@ -15,20 +15,20 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analitk Eklentisi</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrate OJS with Google Analytics, Google's web site traffic analysis application. Requires that you have already setup a Google Analytics account. Please see the <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for more information.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Google web sayfası trafik analizi uygulaması için ADS ile Google Analitik'i entegre edin. Bu uygulama için bir Google Analitik hesabı gerekir. Daha fazla bilgi için lütfen <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analitik</a> sitesine bakınız.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Ayarlar</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analitik Ayarları</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>With this plugin enabled Google Analytics may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that you have already setup a Google Analytics account. Please see the <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for more information.</p><p>Please note that Google Analytics may require up to 24 hours before statistics are collected and reported. During this period, the 'Check Status' function may not accurately report whether it has detected the required tracking code for the journal.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Bu eklenti etkinleştirildiğinde Google Analytics bu dergi için kullanım ve trafik analizi toplar ve bu derginin web sitesi için kullanılabilir. Bu eklenti bir Google Analytics hesabının kurulu olmasını gerektirdiğini unutmayın. Daha fazla bilgi için <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analitik</a> sitesine bakınız.</p></p> Google Analitik 24 saat kadar istatistikleri toplayıp ve raporladığını lütfen unutmayın. Bu süreçte, 'Durumu Kontrol Et' fonksiyonu doğru bir dergi için gerekli izleme kodu tespit edilip edilmediğini rapor etmeyebilir.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Hesap Numarası</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Within Google Analytics, click on 'Check Status' to view the tracking code for your site. For legacy tracking code, the account number is displayed within the tracking code as: _uacct = "###". For new tracking code, the account number is displayed within the tracking code as: var pageTracker = _gat._getTracker("###"). Enter the text that corresponds to ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Google Analytics içinde, siteniz için izleme kodunu görüntülemek için 'Durumu Kontrol Et' üzerine tıklayın. Eski izleme kodu için, hesap numarası olarak izleme kodu içinde görüntülenir: _uacct = "# # #". Yeni izleme kodu için, hesap numarası olarak izleme kodu içinde görüntülenir: var pageTracker = _gat._getTracker ("# # #"). # # # Karşılık metni girin.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Lütfen bir hesap numarası giriniz.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Kodu izle</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Kullanmak için lütfen bir izleme kodu seçiniz.</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.ga">New tracking code (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Eski izleme kodu (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Yeni izleme kodu (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analitik hesap numarası</message>
-	<message key="plugins.generic.googleAnalytics.authorAccount.description">To track published article readership using Google Analytics, enter an account number here (e.g. UA-xxxxxx-x).</message>
-	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">One or more Google Analytics account numbers entered for submission authors are not valid.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics kullanarak yayımlanmış makale okuyucusunu izlemek için, buraya bir hesap numarası girin (Örneğin; UA-xxxxxx-x) .</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Gönderi yazarı için girilen bir veya birden çok Google Analitik hesap numarası geçerli değil.</message>
 </locale>

@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Adgangsstatus</message>
 	<message key="editor.issues.accessDate">Dato for Open Access</message>
 	<message key="editor.issues.invalidAccessDate">Adgangsdatoen er ikke gyldig.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Offentlig udgaveidentifikation findes allerede.</message>
 	<message key="editor.issues.coverPage">Forsidebillede</message>
 	<message key="editor.issues.coverPageInstructions">(Tilladte formater: .gif, .jpg eller .png )</message>
 	<message key="editor.issues.uploaded">Overført</message>

@@ -18,8 +18,5 @@
 	
 	<message key="plugins.importexport.doaj.export">Экспортировать данные журнала в DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Экспортировать журнал</message>
-	<message key="plugins.importexport.doaj.export.email">Написать представителю DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Экспортировать статьи в XML для архивации в DOAJ</message>
-	<message key="plugins.importexport.doaj.export.emailInfo">Для рассмотрения Вашего журнала в DOAJ, пожалуйста отправьте туда эту частично автоматически заполненную форму, и дополните недостающую информацию наилучшим образом.</message>
-
 </locale>

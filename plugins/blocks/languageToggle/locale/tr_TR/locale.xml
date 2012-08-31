@@ -13,5 +13,5 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.block.languageToggle.displayName">Dil Geçiş Bloğu</message>
-	<message key="plugins.block.languageToggle.description">Bu eklenti yantarafta dil geçiş bloğunu sağlar.</message>
+	<message key="plugins.block.languageToggle.description">Bu eklenti yan tarafta dil geçiş bloğunu sağlar.</message>
 </locale>

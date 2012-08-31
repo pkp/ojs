@@ -12,6 +12,6 @@
   -->
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
-	<message key="plugins.block.role.displayName">Görev-Belirli Blok</message>
-	<message key="plugins.block.role.description">This plugin provides a sidebar block containing role-specific information such as submission counts and quick links for Editors, Authors, etc.</message>
+	<message key="plugins.block.role.displayName">Belirli Görev Bloğu</message>
+	<message key="plugins.block.role.description">Bu eklenti editör, yazar, v.b. için gönderi sayısı ve hızlı bağlantı gibi belirli görev bilgisi içeren bir yan taraf  bloğu sağlar.</message>
 </locale>

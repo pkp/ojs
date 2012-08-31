@@ -482,14 +482,6 @@
 	<message key="manager.setup.history">История журнала</message>
 	<message key="manager.setup.historyDescription">Этот текст появится на странице "О журнале". Его можно использовать для описания хронологии изменения названий журнала, состава редакции и других вех истории журнала.</message>
 	<message key="manager.setup.disableUserRegistration">Менеджер журнала регистрирует всех пользователей, редакторы регистрируют только рецензентов.</message>
-	<message key="manager.setup.doiPrefix">Префикс DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Префикс DOI назначается <a href="http://www.crossref.org" target="_new">CrossRef</a> и имеет вид 10.xxxx (напр. 10.1234).]]></message>
-	<message key="manager.setup.doiSuffix">Суффикс DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Использовать формат по умолчанию  (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Используйте введенный выше формат для генерации суффиксов DOI. В нем %j будет заменено начальными буквами названия журнала, %v номером тома, %i номером выпуску, %a идентификатором статьи в системе OJS и %p номером первой страницы.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Например , vol%viss%ipp%p может произвести DOI типа 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Суффикс DOI может иметь любой формат, но должен быть уникальными для каждой опубликованной статьи.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Использование "собственного идентификатора" для опубликованных статей в качестве суффикса DOI (должно быть включено на Шаге 4).</message>
 	<message key="manager.setup.editorDecision">Редакционное решение</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Примечание:</strong> Для использования этой опции администратор сайта должен включить <tt>allow_envelope_sender</tt> в конфигурационном файле OJS. Могут также потребоваться дополнительные изменения конфигурации сервера (что может быть не возможным на конкретном сервере), как описано в документации OJS.]]></message>
 	<message key="manager.setup.enableAnnouncements">Разрешить менеджерам журнала добавление обьявлений.</message>
@@ -501,7 +493,6 @@
 	<message key="manager.setup.enableUserRegistration.author">Авторы (могут подавать рукописи на рассмотрение)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Читатели (будут получать уведомления; фактически эквивалентно "подписчикам")</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Рецензенты (готовы рецензировать рукописи)</message>
-	<message key="manager.setup.form.doiPrefixPattern">Идентификатор DOI должен иметь вид  10.xxxx.</message>
 	<message key="manager.setup.includeCreativeCommons">Для журналов, предлагающих немедленный или задержанный открытый доступ, включить лицензию Creative Commons во все опубликованные работы.</message>
 	<message key="manager.setup.journalAbbreviation">Сокращенное названия журнала</message>
 	<message key="manager.setup.journalFavicon">Мини-пиктограмма журнала</message>
@@ -552,8 +543,6 @@
 	<message key="manager.setup.showGalleyLinksDescription">Всегда уведомлять об ограниченном доступе к ссылкам на гранки.</message>
 	<message key="manager.setup.siteAccess">Дополнительные ограничения доступа к сайту и статьям</message>
 	<message key="manager.setup.sponsorNoteDescription">Этот текмт появится под заголовком "Спонсоры" и перед списком имен и ссылок спонсоров в разделе "Спонсоры журнала" на странице "О журнале".</message>
-	<message key="manager.setup.submissionEmailLogging">Архивировать все сообщения, отправленные в ходе рассмотрения рукопись на ее странице "История".</message>
-	<message key="manager.setup.submissionEventLogging">Протоколировать все действия на странице "История" каждой рукописи.</message>
 	<message key="manager.setup.subscriptionDescription">Эта функциональность доступна Менеджеру Подписки, которые имеет доступ к модулю подписок, включающему дополнительные возможности открытого доступа, само-архивирования и уведомления.</message>
 	<message key="manager.setup.noPublishing">OJS не будет использоваться для публикации содержимого журнала онлайн.</message>
 	<message key="manager.setup.useCopyeditors">Для работы с каждой рукописью будет назначен Редактор.</message>
@@ -677,4 +666,10 @@
 	<message key="manager.subscriptionTypes.form.individual">Индивидуальная (пользователи проверяются при входе на сайт)</message>
 	<message key="manager.subscriptionTypes.form.options">Опции</message>
 	<message key="manager.subscriptionTypes.form.public"><![CDATA[Не показывать этот тип подписки<br />(напр. в разделе "Подписка" страницы "О Журнале").]]></message>
+	<message key="manager.payment.options.purchaseIssueFee">Купить выпуск</message>
+	<message key="manager.plugins.settings">Настройки</message>
+	<message key="manager.sections.confirmDelete">Вы уверены, что хотите безвозвратно удалить этот раздел?</message>
+	<message key="manager.setup.journalThumbnail">Миниатюра журнала</message>
+	<message key="manager.setup.useThumbnail">Миниатюра</message>
+	<message key="manager.setup.categories">Категории</message>
 </locale>

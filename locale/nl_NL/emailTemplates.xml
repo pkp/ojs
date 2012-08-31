@@ -876,4 +876,148 @@ Dank!
 {$userFirstName}
 Tekstredacteur, {$journalName}</body>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Verzoek tot reviewen van een artikel</subject>
+		<body>{$reviewerName}:
+
+Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+
+Na de review van een vorige versie van hun manuscript hebben de auteurs een gereviseerde versie ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.
+
+Gelieve in te loggen op de website van het tijdschrift vóór {$weekLaterDate} om aan te geven of u deze review wilt doen of niet, alsmede om toegang te krijgen tot de inzending en uw bevindingen en aanbeveling vast te leggen. De website is {$journalUrl}
+
+De revieuw moet gereed zijn op {$reviewDueDate}.
+
+Als u uw gebruikersnaam en wachtwoord niet meer heeft, kunt u deze link gebruiken om uw wachtwoord terug te zetten (dat u met uw gebruikersnaam in een e-mail zult ontvangen). {$passwordResetUrl}
+
+URL van de inzending: {$submissionReviewUrl}
+
+Hartelijk dank voor het overwegen van dit verzoek.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Deze e-mail van de sectieredacteur aan de reviewer vraagt de reviewer een inzending voor een tweede of latere ronde te reviewen. Het bevat informatie over de inzending zoals titel en samenvatting, de uiterste datum voor de review en de gegevens om de inzending te benaderen. Dit bericht wordt gebruikt bij het standaard review proces, zoals gekozen in instellen, stap 2 (zie verder REVIEW_REQUEST_ATTACHED_SUBSEQUENT)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Verzoek tot reviewen van een artikel</subject>
+		<body>{$reviewerName}:
+
+Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+
+Na een review van een eerdere versie van het manuscript hebben de auteurs een gereviseerde versie van hun manuscript ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.
+
+Log in op de website van het tijdschrift vóór {$weekLaterDate} om aan te geven of u de review wilt doen en om de inzending te benaderen en uw review en aanbeveling vast te leggen.
+
+Het review moet binnen zijn op {$reviewDueDate}.
+URL van de inzending: {$submissionReviewUrl}
+
+Dan ku voor het overwegen van dit verzoek.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Deze e-mail van een sectieredacteur aan een reviewer vraagt de reviewer een review van een inzending in een tweede of latere ronde te accepteren of te weigeren. Het bevat informatie over de inzending zoals titel en samenvatting, een verloopdatum en hoe de inzending te vinden. Dit bericht wordt  gebruikt in Stap 2 van het instellen van een tijdschrift als een-klik reviewer toegang is ingeschakeld.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Verzoek tot reviewen van een artikel</subject>
+		<body>{$reviewerName}:
+
+Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+
+Na een review van een eerdere versie van het manuscript hebben de auteurs een gereviseerde versie van hun manuscript ingestuurd. We zouden het op prijs stellen als u wilt helen die te evalueren.
+
+De Review richtlijnen voor dit tijdschrift staan hieronder en de inzending is bijgevoegd bij deze e-mail. Uw review van de inzending en uw aanbeveling, zouden uiterlijk op {$reviewDueDate} naar mij gemaild moeten worden.
+
+Gelieve mij voor {$weekLaterDate} per e-mail te laten weten of u deze review kunt en wilt doen.
+
+Dank u voor het overwegen van dit verzoek.
+
+{$editorialContactSignature}
+
+
+Review richtlijnen
+
+{$reviewGuidelines}</body>
+		<description>Deze e-mail wordt door de sectieredacteur aan een reviewer verstuurd om te vragen of die een review voor de tweede of latere ronde van een inzending wil doen. De inzending wordt als bijlage meegestuurd. Dit bericht wordt gebruikt als het e-mail reviewproces wordt geselecteerd in stap 2 van het instellen. (Zie verder REVIEW_REQUEST_SUBSEQUENT)</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Beste {$recipientFirstName},
+
+{$buyerFullName} zou een u een gift  willen doen op op {$giftJournalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+U zult een volgende e-mail ontvangen met login gegevens en instructies voor het inwisslen van uw gift.
+
+We hopen dat u zult genieten van uw gift!
+
+{$giftContactSignature}</body>
+		<description>deze e-mail bericht de ontvanger van een gift dat de gift is gekocht en beschikbaar is voor inwisselen.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Wissel uw gift in: login gegevens</subject>
+		<body>Beste {$recipientFirstName},
+
+{$buyerFullName} heeft een gift voor u op {$giftJournalName}:
+
+{$giftDetails}
+
+
+Om uw gift in te wisselen kunt u inloggen op de website van het tijdschrift op: {$giftUrl}
+
+Uw gebruikersnaam: {$username}
+Uw wachtwoord: {$password}
+
+Na het inloggen kunt u uw wachtwoord veranderen.
+
+Veel plezier met uw gift!
+
+{$giftContactSignature}</body>
+		<description>Deze e-mail stelt de ontvanger van een gift op de hoogte van de logingegevens van een nieuw account.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Gift inwisselen: login gegevens</subject>
+		<body>Beste {$recipientFirstName},
+
+{$buyerFullName} heeft een gift voor u op {$giftJournalName}:
+
+{$giftDetails}
+
+
+Om uw gift in te wisselen kunt u inloggen op de website van het tijdschrift op {$giftUrl}
+
+Uw gebruikersnaam: {$username}
+
+We wensen u veel plezier met uw gift!
+
+{$giftContactSignature}</body>
+		<description>Deze e-mail bericht de ontvanger van een gift over de login gegevens</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Herziene versie geladen</subject>
+		<body>{$editorialContactName}:
+
+Een herziene versie van "{$articleTitle}" is geladen door de auteur {$authorName}.
+
+URL van de inzending: {$submissionUrl}
+
+{$editorialContactSignature}</body>
+		<description>Deze e-mail wordt automatisch verstuurd naar de redacteur als de auteur een herziene versie van een artikel laadt.</description>
+	</email_text>
 </email_texts>

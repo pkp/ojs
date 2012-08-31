@@ -27,16 +27,16 @@
 	<message key="plugins.generic.externalFeed.manager.settings">Instellingen</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Ga naar <a href="{$setupStep56}" target="_blank">Setup stap 5.6</a> om materiaal uit feeds in de sidebarblokken te tonen.]]></message>
 	<message key="plugins.generic.externalFeed.manager.title">Titel</message>
-	<message key="plugins.generic.externalFeed.manager.displayHomepage">Weergeven op home-pagina</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Weergeven op homepage</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Weergeven op homepage</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Niet weergeven op home-pagina</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Niet weergeven op homepage</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlock">Weergave van het blok</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Alle pagina's</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Een blok op alle pagina's</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Een blok geen enkele pagina</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Homepage</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Blok alleen op de home-pagina</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Alleen op de home-pagina geen blok</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Blok alleen op de homepage</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Alleen op de homepage geen blok</message>
 	<message key="plugins.generic.externalFeed.manager.noneCreated">Geen externe feeds</message>
 	<message key="plugins.generic.externalFeed.manager.create">Maak een nieuwe externe feed</message>
 	<message key="plugins.generic.externalFeed.manager.edit">Bewerk externe feed</message>
@@ -53,13 +53,13 @@
 
 	<!-- External Feed Form-->
 	<message key="plugins.generic.externalFeed.form.title">Titel</message>
-	<message key="plugins.generic.externalFeed.form.titleDescription">De titel voor de home-pagina en/of blok weergave</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">De titel voor de homepage en/of blok weergave</message>
 	<message key="plugins.generic.externalFeed.form.titleRequired">Geef een titel voor deze feed</message>
 	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
 	<message key="plugins.generic.externalFeed.form.feedUrlValid">Geef een geldige feed URL (met de http://)</message>
 	<message key="plugins.generic.externalFeed.form.feedUrlDescription">De URL van de externel Atom/RSS feed (bv. http://pkp.sfu.ca/blog/feed)</message>
 	<message key="plugins.generic.externalFeed.form.display">Weergave</message>
-	<message key="plugins.generic.externalFeed.form.displayHomepage">Weergeven op de home-pagina</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Weergeven op de homepage</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockNone">Niet in blok weergeven</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Alleen in het blok op de homepage weergeven</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockAll">Op alle pagina's in het blok weergeven</message>

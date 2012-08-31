@@ -12,21 +12,21 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.generic.openads.description">The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS. <strong>Please read the README file in plugins/generic/openAds for information on enabling this plugin.</strong>]]></message>
+	<message key="plugins.generic.openads.description">OpenAds Eklentisi, OpenAds sunucusundan ADS içine dinmamik reklamlar eklenmesine olanak tanır.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured">OpenAds Eklentisi, OpenAds sunucusundan ADS içine dinmamik reklamlar eklenmesine olanak tanır. Bu eklentiyi etkinleştirmek için lütfen "plugins/generic/openAds" yolunu takip ederek BENİOKU dosyasını gözden geçiriniz.</message>
 	<message key="plugins.generic.openads">OpenAds Eklentisi</message>
-	<message key="plugins.generic.openads.settings.description">Use this form to select the OpenAds ad zones that will be displayed in OJS for each potential location.</message>
+	<message key="plugins.generic.openads.settings.description">ADS'de gösterilecek her bir potansiyel reklam yerini belirlemek için OpenAds bölgelerini seçerken bu formu kullanınız.</message>
 	<message key="plugins.generic.openads.manager.settings">Ayarlar</message>
 
-	<message key="plugins.generic.openads.error.configFileNotFound">The configuration file, {$filename}, could not be accessed.</message>
-	<message key="plugins.generic.openads.error.missingParameter">At least one of the required OpenAds configuration parameters could not be read from the configuration file. The required parameters are dbhost, dbuser, dbpassword, dbname, url_prefix, and table_prefix.</message>
-	<message key="plugins.generic.openads.error.dbConnectionError">Unable to connect to the OpenAds database.</message>
+	<message key="plugins.generic.openads.error.configFileNotFound">{$filename} adlı konfigürasyon dosyası erişilebilir değil.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Gerekli OpenAds yapılandırma parametreleri en az bir konfigürasyon dosyasını okumak üzere düzenlenmemiştir. Gerekli parametrel; dbhost, dbuser, dbpassword, dbname, url_prefix ve table_prefix'tir.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">OpenAds veri tabanı bağlanılamıyor.</message>
 
-	<message key="plugins.generic.openads.headerAd">Header Ad</message>
-	<message key="plugins.generic.openads.contentAd">Content Ad</message>
-	<message key="plugins.generic.openads.sidebarAd">Sidebar Ad</message>
+	<message key="plugins.generic.openads.headerAd">Başlık Reklamı</message>
+	<message key="plugins.generic.openads.contentAd">İçerik Reklamı</message>
+	<message key="plugins.generic.openads.sidebarAd">Yan Taraf Reklamı</message>
 
-	<message key="plugins.generic.openads.orientation.left">Left</message>
-	<message key="plugins.generic.openads.orientation.centre">Centre</message>
+	<message key="plugins.generic.openads.orientation.left">Sol</message>
+	<message key="plugins.generic.openads.orientation.centre">Orta</message>
 	<message key="plugins.generic.openads.orientation.right">Haklar</message>
 </locale>

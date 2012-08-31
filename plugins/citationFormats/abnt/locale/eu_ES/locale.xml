@@ -16,5 +16,9 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Plugin honek ABNT aipamenen formatua inplementatzen du.</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Hemen dago erabilgarri: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Atzitze-data: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Ezarpenak</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">ABNT aipu euskarriaren plugin ezarpenak</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Erabilitako ezarpenak ABNTren arabera aipuak sortzeko.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Kokalekua</message>
 </locale>
 

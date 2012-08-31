@@ -301,7 +301,7 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Tidsskriftet vil bruke et emneklassifiseringssystem som er tilgjengelig på nettet.<br />
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet vil bruke et emneklassifiseringssystem som er tilgjengelig på nettet.<br />
 Klassifiseringssystemets navn]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class="highlight">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI-registeret</a> og <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />
@@ -1038,5 +1038,29 @@ Authors who publish with this journal agree to the following terms:
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
 	<message key="user.subscriptions.status">Status</message>
 	<message key="user.subscriptions.statusDescription">Beskrivelse</message>
+	<message key="navigation.categories">Kategorier</message>
+	<message key="issue.fullIssue">Hele nummeret</message>
+	<message key="issue.nonpdf.title">Last ned nummeret</message>
+	<message key="issue.viewIssue">Vis nummeret</message>
+	<message key="issue.viewIssueDescription">Vis eller last ned hele nummeret</message>
+	<message key="site.noJournals">Det er ingen tidsskrift tilgjengelig.</message>
+	<message key="gifts.buyer">Fra</message>
+	<message key="gifts.buyerDescription">Hvem er denne gaven fra?</message>
+	<message key="gifts.recipient">Til</message>
+	<message key="gifts.recipientDescription">Hvem er denne gaven til?</message>
+	<message key="gifts.thankYou">Takk</message>
+	<message key="gifts.details">Gavedetaljer</message>
+	<message key="gifts.gift">Gave</message>
+	<message key="gifts.noteTitle">Tittel</message>
+	<message key="gifts.myGifts">Mine gaver</message>
+	<message key="gifts.status.notRedeemed">Tilgjengelig</message>
+	<message key="payment.type.gift">Gave</message>
+	<message key="payment.authorFees">Forfatteravgifter</message>
+	<message key="user.authorization.sectionAssignment">Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon.</message>
+	<message key="user.subscriptions.statusInformation">Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement.</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Det trengs mer informasjon før abonnementet kan aktiviseres.</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Abonnementet må vurderes før det kan aktiviseres.</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betaling er initiert men ennå ikke mottatt</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført</message>
 </locale>
 

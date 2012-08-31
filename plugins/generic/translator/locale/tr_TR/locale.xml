@@ -41,7 +41,7 @@
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">"{$key}" adlı anahtar uzun süredir kullanılmıyor ve "{$filename}" dosyasından kaldırılmıştır.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">"{$filename}" adlı dosyadaki "{$key}" dil anahtarı  referans dil dosyasında kullanılan parametreden farklıdır. Lütfen ilgili alandaki tüm parametreleri bir kez daha kontrol edin. Eşleşmeyen parametre(ler):</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">"{$filename}" adlı dil dosyası kayıp veya okunamıyor.</message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">"{$filename}" adlı e-posta mesajı kayıp veya okunamıyor.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">"{$key}" adlı e-posta mesajı kayıp veya okunamıyor.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">"{$key}" adlı e-posta mesajı uzun süredir kullanılmıyor ve kaldırılabilir.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">"{$key}" adlı e-posta mesajı anahtarı referans dilinde kullanılan parametreden farklıdır. Lütfen alan içeriğindeki ilgili tüm parametreleri yeniden kontrol edin. Eşleşmeyen Parametre(ler):</message>
 

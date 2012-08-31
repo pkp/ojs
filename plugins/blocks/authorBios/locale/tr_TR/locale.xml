@@ -13,7 +13,7 @@
 
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.block.authorBios.displayName">Yazar Biyografi Bloğu</message>
-	<message key="plugins.block.authorBios.description">Bu eklenti yantaraf okuma araçlarında yazar biyografisinin görüntülenmesini sağlar.</message>
+	<message key="plugins.block.authorBios.description">Bu eklenti yan taraf okuma araçlarında yazar biyografisinin görüntülenmesini sağlar.</message>
 	<message key="plugins.block.authorBios.title">Yazarlar Hakkında</message>
 	<message key="plugins.block.authorBios.aboutTheAuthor">Yazar Hakkında</message>
 	<message key="plugins.block.authorBios.aboutTheAuthors">Yazarlar Hakkında</message>

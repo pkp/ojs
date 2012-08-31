@@ -126,4 +126,7 @@ Formatu hauek onartzen dira:
 	<message key="plugins.importexport.native.import.success.description">Inportazioa ondo egin da. Beheko zerrendan daude inportatutako elementuak.</message>
 
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Egile-afiliazio bat eman zaio "{$articleTitle}" artikuluaren "{$authorFullName}"egileari, "{$issueTitle}" gaian, ("{$locale}") localean, baina aldizkari honek ez du babesten.</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">Zure inportazio fitxategiak {$pubIdType} baliogabe bat duen datu multzo bat du: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Zure inportazio fitxategiak beste helburu baterako jadanik datu basean dagoen eta {$pubIdType} '{$pubId}' duen datu multzo bat du. Mesedez, ziur izan inoiz ez dituzula jadanik datu basean dauden IDak dituzten gauzak inportatzen.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Zure inportazio fitxategiak ezein ID-pluginik erabil ezin dezakeen '{$pubIdType}' ID-mota bat duen datu multzo bat du. Mesedez, instalatu edo/eta aktibatu dagokion ID plugina datu multzo hau inportatzen ahalegindu baino lehen.</message>
 </locale>

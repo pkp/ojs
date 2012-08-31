@@ -672,4 +672,18 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Harpidetzak</message>
 	<message key="manager.subscriptionTypes.form.individual">Indibiduala (erabiltzaileak saioa hastearekin balioztatzen dira)</message>
 	<message key="manager.subscriptionTypes.form.options">Aukerak</message>
+	<message key="manager.payment.giftFees">Opari kuotak</message>
+	<message key="manager.payment.giftFeesDescription">Opari gisako harpidetzen esteka agertuko da Harpidetzen orrian, Aldizkariari buruzko atalean, eta alboko barraren multzoko harpidetzen zati gisa.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Honek opari gisako harpidetzak egiteko ordainketak aktibatuko ditu, eta aldizkariaren irakurleei utziko die beste irakurle batzuentzako opari gisako harpidetzak erosten.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Erosi ale bat</message>
+	<message key="manager.plugins.wrongCategory">Gora kargatzeko pluginak ez datoz bat gora kargatzeko pluginaren kategoriarekin.</message>
+	<message key="manager.plugins.wrongName">Gora kargatzeko pluginaren .xml bertsioak eguneratzeko pluginaren izenarekin bat ez datorren plugin izen bat du.</message>
+	<message key="manager.plugins.settings">Ezarpenak</message>
+	<message key="manager.sections.confirmDelete">Ziur al zaude atal hau behin betiko ezabatu nahi duzula?</message>
+	<message key="manager.sections.alertDelete">Atal hau ezabatu aurretik, bertan argitaratutako artikuluak beste atal batzuetara mugitu behar dituzu.</message>
+	<message key="manager.setup.journalThumbnail">Aldizkariaren miniatura</message>
+	<message key="manager.setup.subjectClassificationURLValid">Mesedez, eman urruneko URL baliodun bat (sartu http://)</message>
+	<message key="manager.setup.useThumbnail">Miniatura</message>
+	<message key="manager.setup.categories">Kategoriak</message>
+	<message key="manager.setup.categories.description">Aukeratu kategoria egokienak goian zerrendatutako multzotik. Irakurleek kategoriaren arabera arakatu ahal izango dute aldizkari osotik.</message>
 </locale>

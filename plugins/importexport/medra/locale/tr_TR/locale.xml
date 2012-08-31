@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.medra.displayName">mEDRA İhraç/Kayıt Eklentisi</message>
+	<message key="plugins.importexport.medra.description">mEDRA kayıt ajansı ile DOI (O4DOI) biçimi ve DOI'lere kayıt için Onix'de sayı, makale ve dizgi ihracı.</message>
+</locale>

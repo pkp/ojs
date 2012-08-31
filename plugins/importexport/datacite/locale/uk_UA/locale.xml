@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/datacite/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="uk_UA" full_name="Ukrainian">
+	<message key="plugins.importexport.datacite.displayName">Модуль експорту/реєстрації DataCite</message>
+	<message key="plugins.importexport.datacite.description">Експорт метаданих у формат DataCite або реєстрація метаданих випуску, статті, гранки або супровідного файлу через DataCite.</message>
+
+	<message key="plugins.importexport.datacite.intro"><![CDATA[Якщо Ви хочете зареєструвати DOI через DataCite, будь ласка, контактуйте з агентом, вказаним на <a href="http://datacite.org/contact" target="_blank">веб-сайті DataCite</a>, який вкаже найближчого для Вас члена DataCite, до якого можна звернутись. Коли Ви встановите контакти з членською установою, Ви отримаєте доступ до служби DataCite і зможете реєструвати унікальні ідентифікатори (DOI) та асоційовані з ними метадані. Якщо Ви не маєте власного імені користувача та пароля, Ви все одно матимете можливість експорту у формат DataCite XML, але Ви не зможете реєструвати у DataCite DOI для своїх об'єктів через модуль OJS.
+		Будь ласка, зауважте, що через вимоги реєстраційної служби DataCite Ваш пароль буде зберігатися у системі в текстовому форматі, тобто у незашифрованому вигляді.]]></message>
+
+	<message key="plugins.importexport.datacite.settings.description"><![CDATA[Будь ласка, <a href="{$settingsUrl}">налаштуйте</a> модуль експорту DataCite перед першим використанням.]]></message>
+ 
+	<message key="plugins.importexport.datacite.settings.form.description">Будь ласка, налаштуйте модуль експорту DataCite:</message>
+	<message key="plugins.importexport.datacite.settings.form.username">Ім'я користувача (символ)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Будь ласка, вкажіть ім'я користувача (символ), яке Ви отримали від DataCite. Ім'я користувача не може містити двокрапок.</message>
+ 
+	<message key="plugins.importexport.datacite.export.suppFiles">Експортувати окремі супровідні файли</message>
+	<message key="plugins.importexport.datacite.export.selectSuppFile">Оберіть супровідні файли</message>
+	<message key="plugins.importexport.datacite.export.noSuppFiles">Зараз для жодних супровідних файлів не призначені DOI.</message>
+ 
+	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">Жодний супровідний файл не має визначеного ID: {$param}.</message>
+ 
+	<message key="plugins.importexport.datacite.cliUsage">Використання: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+</locale>

@@ -13,5 +13,5 @@
  
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.generic.coins.displayName">COinS Eklentisi</message>
-	<message key="plugins.generic.coins.description">The COinS plugin adds an OpenURL descriptor to article pages (abstract and HTML) that can be used e.g. for extraction to citation tools.</message>
+	<message key="plugins.generic.coins.description">COinS eklentisi makale sayfalarına (özet ve HTML) OpenURL tanımlayıcı ekler. Örneğin kullanılabilir atıf araçları.</message>
 </locale>

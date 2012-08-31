@@ -14,6 +14,6 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. This is a site-wide plugin and is enabled in the OJS config file.</message>
+	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth Eklentisi</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuth Eklentisi. Bu site çapında bir eklentidir ve ADS konfigürasyon dosyasından etkinleştirilir.</message>
 </locale>

@@ -25,6 +25,6 @@
 	<message key="plugins.importexport.quickSubmit.submissionDescription">Bu gönderi için dizinden kullanılabilir son sürüm dosya  seçiniz.</message>	
 	<message key="plugins.importexport.quickSubmit.submissionRequired">Bu gönderi için bir dosya yüklemelisiniz.</message>	
 	<message key="plugins.importexport.quickSubmit.success">Makale Kaydedildi</message>
-	<message key="plugins.importexport.quickSubmit.successDescription">Makale başarılı bir şekilde oluşturuldu..</message>
-	<message key="plugins.importexport.quickSubmit.successReturn">Hızlı Gönderi eklentisine geri dön.</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Makale başarılı bir şekilde oluşturuldu.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Hızlı Gönderi Eklentisine geri dön.</message>
 </locale>

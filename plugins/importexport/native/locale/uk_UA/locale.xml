@@ -39,8 +39,7 @@
        issue_id [issueId] section_name [name]
 
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
-       issue_id [issueId] section_abbrev [abbrev]
-]]></message>
+       issue_id [issueId] section_abbrev [abbrev]]]></message>
        <message key="plugins.importexport.native.export">Експорт даних</message>
        <message key="plugins.importexport.native.export.issues">Експорт випуску</message>
        <message key="plugins.importexport.native.export.sections">Експорт розділів</message>
@@ -53,7 +52,7 @@
        <message key="plugins.importexport.native.import.articles.description">Файл, що імпортується, містить одну або більше статей. Ви маєте визначити випуск та розділ, куди будуть імпортовані статті; якщо ви не бажаєте імпортувати всі ці дані у єдиний випуск та розділ, ви маєте або розподілити їх між різними файлами XML, або після імпортування перемістити їх до відповідних випусків та розділів.</message>
 
        <message key="plugins.importexport.native.import">Імпорт даних</message>
-       <message key="plugins.importexport.native.import.description">Цей модуль дозволяє імпортування даних з файлів, які відповідають визначенню типу документа native.dtd. У модулі наявна підтримка кореневих вузлів &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, та &amp;lt;issues&amp;gt;.</message>
+       <message key="plugins.importexport.native.import.description"><![CDATA[Цей модуль дозволяє імпортування даних з файлів, які відповідають визначенню типу документа native.dtd. У модулі наявна підтримка кореневих вузлів &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt;, та &lt;issues&gt;.]]></message>
 
        <message key="plugins.importexport.native.import.error">Помилка імпортування</message>
        <message key="plugins.importexport.native.import.error.description">У процесі імпортування виникла принаймні одна помилка. Будь ласка, перевірте, щоб формат імпортованого файлу повністю відповідав специфікації. Помилки імпортування, які мали місце, деталізуються нижче.</message>
@@ -64,8 +63,8 @@
        <message key="plugins.importexport.native.error.unknownJournal">Визначена адреса журналу ("{$journalPath}") не існує.</message>
        <message key="plugins.importexport.native.export.error.couldNotWrite">Не вдається запис до файлу "{$fileName}".</message>
        <message key="plugins.importexport.native.export.error.sectionNotFound">Немає розділів з визначеним специфікатором "{$sectionIdentifier}".</message>
-       <message key="plugins.importexport.native.export.error.issueNotFound">Немає випусків з визначеним issue ID "{$issueId}".</message>
-       <message key="plugins.importexport.native.export.error.articleNotFound">Немає статей з визначеним article ID "{$articleId}".</message>
+       <message key="plugins.importexport.native.export.error.issueNotFound">Немає випусків зі вказаним ідентифікатором випуску "{$issueId}".</message>
+       <message key="plugins.importexport.native.export.error.articleNotFound">Немає статей зі вказаним ідентифікатором статті "{$articleId}".</message>
        <message key="plugins.importexport.native.import.error.unsupportedRoot">Цей модуль не має підтримки кореневого вузла "{$rootName}". Будь ласка, додатково перевірте коректність файлу і спробуйте знову.</message>
 
        <message key="plugins.importexport.native.import.error.titleMissing">Не вказана назва випуску.</message>
@@ -77,7 +76,7 @@
        <message key="plugins.importexport.native.import.error.couldNotWriteFile">Неможливо зберігти локальну копію "{$originalName}".</message>
        <message key="plugins.importexport.native.import.error.illegalUrl">Визначена адреса URL "{$url}" для випуску "{$issueTitle}" некоректна. Веб-орієнтоване імпортування підтримує лише методи http, https, ftp або ftps.</message>
        <message key="plugins.importexport.native.import.error.unknownSuppFileType">Визначений невідомий тип супровідного файлу ("{$suppFileType}").</message>
-       <message key="plugins.importexport.native.import.error.couldNotCopy">Визначена адреса URL "{$url}" не може бути скопійована до локального файлу.</message>
+       <message key="plugins.importexport.native.import.error.couldNotCopy">Вказана адреса URL "{$url}" не може бути скопійована до локального файлу.</message>
        <message key="plugins.importexport.native.import.error.duplicatePublicId">Ідентифікатор public ID імпортованого випуску "{$issueTitle}" вже використовується у іншому випуску ("{$otherIssueTitle}").</message>
        <message key="plugins.importexport.native.import.error.sectionTitleMissing">Не вказана назва розділу для випуску "{$issueTitle}". Будь ласка, додатково перевірте відповідність документу XML відповідному DTD.</message>
        <message key="plugins.importexport.native.import.error.sectionMismatch">Розділ "{$sectionTitle}" випуску "{$issueTitle}" відповідає існуючому у журналі розділу, але вказана абревіатура ("{$sectionAbbrev}") відповідає іншому розділу.</message>
@@ -120,7 +119,7 @@
        <message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Назва супровідного файлу ("{$suppFileTitle}") до статті "{$articleTitle}" у випуску "{$issueTitle}" представлена у локалізації "{$locale}", що не підтримується цим журналом.</message>
        <message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Дані про автора супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</message>
        <message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Ключові слова супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</message>
-       <message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Тип супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" вказаний у локалізац%D</message>
+       <message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Тип супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" вказаний у локалізації "{$locale}", що не підтримується цим журналом.</message>
        <message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Опис супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" представлений у локалізації "{$locale}", що не підтримується цим журналом.</message>
        <message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Видавець супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" вказаний у локалізації "{$locale}", що не підтримується цим журналом.</message>
        <message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Дані про спонсора супровідного файлу "{$suppFileTitle}" до статті "{$articleTitle}" у випуску "{$issueTitle}" представлені у локалізації "{$locale}", що не підтримується цим журналом.</message>
@@ -129,4 +128,7 @@
        <message key="plugins.importexport.native.import.success">Імпорт успішний</message>
        <message key="plugins.importexport.native.import.success.description">Імпорт успішний. Успішно імпортовані обёєкти вказані нижче.</message>
 
+	<message key="plugins.importexport.native.import.error.invalidPubId">Файл, який Ви імпортуєте, місить набір даних з некоректним ідентифікатором {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Файл, який Ви імпортуєте, місить набір даних з ідентифікатором {$pubIdType} '{$pubId}', який вже використовується іншим об'єктом бази даних. Будь ласка, перевірте ID об'єктів, які Ви імпортуєте у базу даних.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Файл, який Ви імпортуєте, місить набір даних з ідентифікатором типу {$pubIdType}, який поки не підтримується системою. Перед тим, як імпортувати цей набір даних, будь ласка, встановіть та/або активуйте відповідний модуль ідентифікації.</message>
 </locale>

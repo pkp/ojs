@@ -12,6 +12,6 @@
   -->
  
 <locale name="tr_TR" full_name = "Turkish">
-	<message key="plugins.generic.roundedcorners.displayName">Rounded Corners</message>
-	<message key="plugins.generic.roundedcorners.description">This Plugin puts a background on each sidebar block and rounds its corners.  Changes can be made to the colours used by editing the CSS stylesheet found in the plugin.</message>
+	<message key="plugins.generic.roundedcorners.displayName">Yuvarlak Köşeler</message>
+	<message key="plugins.generic.roundedcorners.description">Bu eklenti yan taraf blok ve köşelerine bir arka plan koyar. Kullanılan renkler eklentinin CSS biçim sayfasında bulunabilir ve değişiklikler yapılabilir.</message>
 </locale>
