@@ -14,7 +14,7 @@
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal"> Pembayaran biaya PayPal</message>
 	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal memungkinkan para pengguna, baik anggota paypal atau bukan, untuk menggunakan semua kartu kredit utama. Manajer perlu men-setup <a href="http://www.paypal.com" target="_new">Akun Bisnis PayPal </a>.]]></message> 
-<message key="plugins.paymethod.paypal.warning"> Klik tombol lanjutan dibawah untuk menuju ke situs PayPal, dimana kartu kredit dapat digunakan untuk membayar biaya (tanpa harus bergabung dengan paypal). Gunakan tombol eReturn to Merchant’ setelah melakukan pembayaran untuk kembali ke situs ini</message>
+<message key="plugins.paymethod.paypal.warning"> Klik tombol lanjutan dibawah untuk menuju ke situs PayPal, dimana kartu kredit dapat digunakan untuk membayar biaya (tanpa harus bergabung dengan paypal). Gunakan tombol eReturn to Merchanti setelah melakukan pembayaran untuk kembali ke situs ini</message>
 <message key="plugins.paymethod.paypal.purchase.title"> Judul</message>
 <message key="plugins.paymethod.paypal.purchase.fee"> Biaya</message>
 <message key="plugins.paymethod.paypal.purchase.description"> Deskripsi</message>
