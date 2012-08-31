@@ -276,7 +276,7 @@
 	<message key="manager.setup.focusAndScopeDescription">Geben Sie hier eine Beschreibung der Zeitschrift ein, die unter "Über uns" erscheinen soll, und die Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer Beiträge der Zeitschrift näher bringt.</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Konzept</message>
 	<message key="manager.setup.focusScope">Konzept</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>BEISPIEL FÜR HTML-DATEN</strong>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>BEISPIEL FÜR HTML-DATEN</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
 	<message key="manager.setup.form.contactEmailRequired">Die E-Mail-Adresse des Hauptkontakts ist erforderlich.</message>

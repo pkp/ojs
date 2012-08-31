@@ -33,7 +33,7 @@
 
 	<!-- Categories -->
 	<message key="navigation.categories">Kategorien</message>
-	<message key="navigation.categories.browse">Durchsehen</message>
+	<message key="navigation.categories.browse">Durchblättern</message>
 
 	<!-- peer review -->
 	<message key="submission.reviewForm">Begutachtungsformular</message>
@@ -761,12 +761,12 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 
 	<!-- Suche -->
-	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchsehen</message>
+	<message key="search.browseAuthorIndex">Verzeichnis der Autor/innen durchblättern</message>
 	<message key="search.searchFor">Artikel durchsuchen nach</message>
 	<message key="search.author">Autor/in</message>
 	<message key="search.withinJournal">In</message>
 	<message key="search.allJournals">allen Zeitschriften</message>
-	<message key="search.authorIndex">Autor/innenverzeichnis durchsehen</message>
+	<message key="search.authorIndex">Autor/innenverzeichnis durchblättern</message>
 	<message key="search.authorDetails">Nähere Angaben zu den Autor/innen</message>
 	<message key="search.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
@@ -776,7 +776,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 <li>Verwenden Sie Klammern für eine komplexere Suche, z.B. <em>Archiv ((Zeitschrift ODER Vortrag) NICHT Dissertation)</em>.</li>
 <li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen, z.B. <em>"Veröffentlichung mit freiem Zugang"</em>.</li>
 <li>Schließen Sie ein Wort aus, indem Sie ihm <strong>-</strong> oder <em>NICHT</em> voranstellen, z.B. <em>Internetpublikation -Politik</em> oder <em>Internetpublikation NICHT Politik</em>.</li>
-<li>Verwenden Sie <b>*</strong> als Platzhalter für beliebige Zeichenfolgen, z.B. <em>Sozi* Moral</em> listet alle Dokumente, die "soziologisch" oder "sozial" enthalten.</li>
+<li>Verwenden Sie <strong>*</strong> als Platzhalter für beliebige Zeichenfolgen, z.B. <em>Sozi* Moral</em> listet alle Dokumente, die "soziologisch" oder "sozial" enthalten.</li>
 </ul>]]></message>
 
 	<!-- Einschubseite für PDFs -->
@@ -803,7 +803,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 
 	<!-- Index: Archiv -->
 	<message key="archive.archives">Archiv</message>
-	<message key="archive.browse">Ältere Ausgaben durchsehen</message>
+	<message key="archive.browse">Ältere Ausgaben durchblättern</message>
 	<message key="archive.issueUnavailable">Ausgabe nicht verfügbar</message>
 
 	<!-- Über uns -->
@@ -1000,7 +1000,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="installer.databaseSettingsInstructions">OJS benötigt eine SQL-Datenbank zur Speicherung der Daten. Eine Liste der unterstützten Datenbanken können Sie der oben stehenden Liste der Systemanforderungen entnehmen. Bitte geben Sie in den folgenden Feldern die Einstellungen zur Verbindung zur Datenbank ein.</message>
 	<message key="installer.installApplication">Open Journal Systems installieren</message>
 	<message key="installer.upgradeApplication">Open Journal Systems upgraden</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warnung:</strong> Wenn die Datenbank-Installation fehlschlägt, müssen Sie eventuell die OJS-Datenbank bzw. die Datenbank-Tabellen von Hand löschen, bevor Sie eine erneute Installation der Datenbank probieren können.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warnung:</strong> Wenn die Datenbank-Installation fehlschlägt, müssen Sie eventuell die OJS-Datenbank bzw. die Datenbank-Tabellen von Hand löschen, bevor Sie eine erneute Installation der Datenbank probieren können.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>WICHTIG!</h4>
 <p>Die Installationsprozedur konnte die Konfigurationsdatei nicht automatisch überschreiben. Bevor Sie versuchen, das System zu benutzen, öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Die Installation von OJS wurde erfolgreich abgeschlossen.</p>
