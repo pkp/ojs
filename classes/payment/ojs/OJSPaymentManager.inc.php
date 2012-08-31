@@ -473,6 +473,7 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_PUBLICATION:
 				$returner = true;
+				break;
 			default:
 				// Invalid payment type
 				assert(false);
