@@ -281,23 +281,34 @@ class ArticleSearchIndex {
 	}
 
 	/**
-	 * Rebuild the search index for all journals.
+	 * Rebuild the search index for one or all journals.
+	 * @param $log boolean Whether to display status information
+	 *  to stdout.
+	 * @param $journal Journal If given the user wishes to
+	 *  re-index only one journal. Not all search implementations
+	 *  may be able to do so. Most notably: The default SQL
+	 *  implementation does not support journal-specific re-indexing
+	 *  as index data is not partitioned by journal.
 	 */
-	function rebuildIndex($log = false) {
+	function rebuildIndex($log = false, $journal = null) {
 		// Check whether a search plug-in jumps in.
 		$hookResult =& HookRegistry::call(
 			'ArticleSearchIndex::rebuildIndex',
-			array($log)
+			array($log, $journal)
 		);
 
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
+			// Check that no journal was given as we do
+			// not support journal-specific re-indexing.
+			if (is_a($journal, 'Journal')) die(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
+
 			// Clear index
-			if ($log) echo 'Clearing index ... ';
+			if ($log) echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
 			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
 			$searchDao->clearIndex();
-			if ($log) echo "done\n";
+			if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
 			// Build index
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
@@ -308,7 +319,7 @@ class ArticleSearchIndex {
 				$journal =& $journals->next();
 				$numIndexed = 0;
 
-				if ($log) echo "Indexing \"", $journal->getLocalizedTitle(), "\" ... ";
+				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ... ';
 
 				$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 				while (!$articles->eof()) {
@@ -321,7 +332,7 @@ class ArticleSearchIndex {
 					unset($article);
 				}
 
-				if ($log) echo $numIndexed, " articles indexed\n";
+				if ($log) echo __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n";
 				unset($journal);
 			}
 		}

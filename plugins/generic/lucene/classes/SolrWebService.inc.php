@@ -206,13 +206,23 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Deletes all articles of this installation from the Solr index.
+	 * Deletes all articles of a journal or of the
+	 * installation from the Solr index.
 	 *
+	 * @param $journalId integer If given, only articles
+	 *  from this journal will be deleted.
 	 * @return boolean true if successful, otherwise false.
 	 */
-	function deleteAllArticlesFromIndex() {
-		// Delete all articles of the installation.
-		$xml = '<query>inst_id:' . $this->_instId . '</query>';
+	function deleteArticlesFromIndex($journalId = null) {
+		// Delete only articles from one journal if a
+		// journal ID is given.
+		$journalQuery = '';
+		if (is_numeric($journalId)) {
+			$journalQuery = ' AND journal_id:' . $this->_instId . '-' . $journalId;
+		}
+
+		// Delete all articles of the installation (or journal).
+		$xml = '<query>inst_id:' . $this->_instId . $journalQuery . '</query>';
 		return $this->_deleteFromIndex($xml);
 	}
 

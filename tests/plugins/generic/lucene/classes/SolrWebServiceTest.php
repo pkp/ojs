@@ -212,7 +212,9 @@ class SolrWebServiceTest extends PKPTestCase {
 	 * @covers SolrWebService::deleteArticleFromIndex()
 	 */
 	public function testDeleteArticleFromIndex() {
+		$this->articleInIndex(3);
 		self::assertTrue($this->solrWebService->deleteArticleFromIndex(3));
+		$this->articleNotInIndex(3);
 	}
 
 	/**
@@ -229,12 +231,25 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService::deleteAllArticlesFromIndex()
+	 * @covers SolrWebService::deleteArticlesFromIndex()
 	 */
 	public function testDeleteAllArticlesFromIndex() {
-		self::assertTrue($this->solrWebService->deleteAllArticlesFromIndex());
+		// Check that the articles we are deleting are in the index
+		// before we delete them.
+		$this->articleInIndex(1);
+		$this->articleInIndex(9);
 
-		// Rebuild the index.
+		// Delete the articles from one journal.
+		self::assertTrue($this->solrWebService->deleteArticlesFromIndex(2));
+		$this->articleInIndex(1);
+		$this->articleNotInIndex(9);
+
+		// Delete all remaining articles from the index.
+		self::assertTrue($this->solrWebService->deleteArticlesFromIndex());
+		$this->articleNotInIndex(1);
+		$this->articleNotInIndex(9);
+
+		// Clean up the mess and re-build the index. ;-)
 		$this->_indexTestJournals();
 	}
 
@@ -594,6 +609,24 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal->setId('2');
 		$journal->setPath('lucene-test');
 		self::assertGreaterThan(1, $this->solrWebService->indexJournal($journal));
+	}
+
+	/**
+	 * Check that the given article is indexed.
+	 * @param $articleId integer
+	 */
+	private function articleInIndex($articleId) {
+		$article = $this->solrWebService->getArticleFromIndex($articleId);
+		self::assertFalse(empty($article));
+	}
+
+	/**
+	 * Check that the given article is not indexed.
+	 * @param $articleId integer
+	 */
+	private function articleNotInIndex($articleId) {
+		$article = $this->solrWebService->getArticleFromIndex($articleId);
+		self::assertTrue(empty($article));
 	}
 }
 ?>
