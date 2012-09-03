@@ -1,5 +1,18 @@
-Welcome to the OJS Lucene/Solr Plug-In
---------------------------------------
+Contents
+--------
+
+  1) Welcome to the OJS Lucene/Solr Plug-In
+  2) Should I use the Lucene/Solr Plug-In?
+  3) Decisions to take before enabling the Plug-In
+  4) Embedded Server Mode: Installation and Configuration
+  5) Central Server Mode: Installation and Configuration
+  6) Rebuilding your index
+  7) What else do I have to do to keep my index up to date?
+  8) Customizing Solr (additional language, etc.)
+
+
+1 Welcome to the OJS Lucene/Solr Plug-In
+----------------------------------------
 
 This README file contains important information with respect to the correct and
 secure installation of the OJS Lucene/Solr plug-in. Please make sure you read it
@@ -16,8 +29,8 @@ For more details please visit the jetty and solr web sites:
 - <https://lucene.apache.org/solr/>
 
 
-Should I use the Lucene/Solr Plug-In?
--------------------------------------
+2 Should I use the Lucene/Solr Plug-In?
+---------------------------------------
 
 The first decision to take is whether to use the plug-in at all. The main
 advantages of the plug-in's search implementation over the default OJS search
@@ -48,8 +61,8 @@ then please do not use this plug-in. Tika is not able to parse PostScript
 documents.
 
 
-Decisions to take before enabling the Plug-In
----------------------------------------------
+3 Decisions to take before enabling the Plug-In
+-----------------------------------------------
 
 This plug-in is an adapter between OJS and the solr search server. It requires a
 working solr server somewhere on your network.
@@ -135,8 +148,8 @@ deploy in central server mode:
   plug-in.
 
 
-Embedded Server Mode: Installation and Configuration
-----------------------------------------------------
+4 Embedded Server Mode: Installation and Configuration
+------------------------------------------------------
 
 As we do not want to unnecessarily blow up our default OJS distribution and want
 to make sure that you always install the latest release of solr, we do not
@@ -243,8 +256,8 @@ a solr search server.
    expected.
    
 
-Central Server Mode: Installation and Configuration
-----------------------------------------------------
+5 Central Server Mode: Installation and Configuration
+-----------------------------------------------------
 
 Solr can be installed and deployed in many different ways and there is no one
 best deployment for large OJS providers. You'll have to understand solr
@@ -336,8 +349,8 @@ specific to the OJS Lucene/solr plug-in:
    with solr works as expected.
 
 
-Rebuilding your index
----------------------
+6 Rebuilding your index
+-----------------------
 
 Under rare circumstances it may happen that your index becomes outdated or
 corrupt.
@@ -358,9 +371,54 @@ execute the script to rebuild the index. On Linux this would be something like:
    #> php rebuildSearchIndex.php
    
 
-What else do I have to do to keep my index up to date?
-------------------------------------------------------
+7 What else do I have to do to keep my index up to date?
+--------------------------------------------------------
 
 Once correctly installed and running, the Solr/Lucene plug-in does not require
 any further maintenance. Just monitor performance and resource usage of the solr
 server as you would for any other process.
+
+
+8 Customizing Solr (additional language, etc.)
+----------------------------------------------
+
+All configuration files come with inline comments that hint you about what can
+be changed and what you better leave alone so as not to interrupt communication
+between OJS and Solr.
+
+The default configuration already comes equipped with support for all OJS
+languages when Solr/Lucene supports these. Languages that are not directly
+supported by Solr will be treated in a language-agnostic way so that you should
+at least get basic search support.
+
+If you want to customize language support (e.g. remove a stemmer, add stopwords,
+add synonyms, etc.) then you can do so in the schema file (plugins/generic/
+lucene/embedded/solr/conf/schema.xml). Please make sure you understand the Solr
+analysis process first. You may want to read:
+- https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters
+- https://wiki.apache.org/solr/LanguageAnalysis
+
+Our schema works with dynamic types. There is one field type for each language.
+The OJS locale-language assignment is then done with dynamic fields. You find
+both, the type definition and the dynamic field definition in the schema.xml
+file.
+
+Let's take support for German as an example: First the schema.xml file contains
+the type definition:
+
+<!-- German -->
+<fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
+  <analyzer>
+    ...
+  </analyzer>
+</fieldType>
+
+Then, further down the schema.xml file you'll find the dynamic field definition
+that points to the type definition:
+
+<dynamicField name="*_de_DE" type="text_de" ... />
+
+If you want to customize support for your language then you'll just have to
+change the field type definition for your language. To introduce a new locale
+you insert a field type definition and a dynamic field. The default import
+configuration will deal automatically with new languages.
