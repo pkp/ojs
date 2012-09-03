@@ -399,32 +399,38 @@ class LucenePlugin extends GenericPlugin {
 		$solrWebService = $this->getSolrWebService();
 
 		// Unpack the parameters.
-		list($log) = $params;
+		list($log, $journal) = $params;
+
+		// If we got a journal instance then only re-index
+		// articles from that journal.
+		$journalId = (is_a($journal, 'Journal') ? $journal->getId() : null);
 
 		// Clear index
-		if ($log) echo 'LucenePlugin: Clearing index ... ';
-		$solrWebService->deleteAllArticlesFromIndex();
-		if ($log) echo "done\n";
+		if ($log) echo 'LucenePlugin: ' . __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
+		$solrWebService->deleteArticlesFromIndex($journalId);
+		if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
-		// Build index
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals();
-		while (!$journals->eof()) {
-			$journal =& $journals->next();
-
-			if ($log) echo 'LucenePlugin: Indexing "', $journal->getLocalizedTitle(), '" ';
+		// Re-build index, either of a single journal...
+		if (is_a($journal, 'Journal')) {
+			$journals = array($journal);
+		// ...or for all journals.
+		} else {
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalIterator =& $journalDao->getJournals();
+			$journals = $journalIterator->toArray();
+		}
+		foreach($journals as $journal) {
+			if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ';
 			$numIndexed = $solrWebService->indexJournal($journal, $log);
-			unset($journal);
-
 			if (is_null($numIndexed)) {
 				if ($log) {
-					echo " error\n";
+					echo ' ' . __('search.cli.rebuildIndex.error') . "\n";
 				} else {
 					$this->_informTechAdmin(null, $journal);
 				}
 				return false;
 			} else {
-				if ($log) echo " $numIndexed article(s) indexed\n";
+				if ($log) echo ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n";
 			}
 		}
 		return true;
