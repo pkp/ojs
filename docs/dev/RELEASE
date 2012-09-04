@@ -5,7 +5,10 @@ The following steps (subject to change) are typically performed to prepare a new
 OJS release:
 
 
-1. Update version, installation, and upgrade descriptor files:
+1. Ensure that the "complete" flags in registry/locales.xml are accurate
+
+
+2. Update version, installation, and upgrade descriptor files:
 
     dbscripts/xml/version.xml
     dbscripts/xml/install.xml
@@ -32,24 +35,24 @@ OJS release:
     release notes.
 
 
-2. Update release documentation:
+3. Update release documentation:
 
     docs/README
     docs/release-notes/README-<VERSION>
 
 
-3. Generate ChangeLog for the release:
+4. Generate ChangeLog for the release:
 
     see e.g. http://github.com/jwiegley/git-scripts/blob/master/git-changelog
 
 
-4. Copy the current changelog and release notes to docs/:
+5. Copy the current changelog and release notes to docs/:
 
     cp docs/release-notes/ChangeLog-<VERSION> docs/ChangeLog
     cp docs/release-notes/README-<VERSION> docs/RELEASE
 
 
-5. After committing any pending modifications, tag the release in git (both the
+6. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it):
 
 	cd lib/pkp
@@ -60,7 +63,7 @@ OJS codebase and the PKP library to be distributed with it):
     git push --tags
 
 
-6. Build the OJS package and patch files:
+7. Build the OJS package and patch files:
 
     sh tools/buildpkg.sh <VERSION> <TAG>-<BRANCH> <PATCH_DIR>
     
@@ -68,7 +71,7 @@ OJS codebase and the PKP library to be distributed with it):
      packages against which to build patches)
 
 
-7. Place the new package, patches, version descriptor, and Doxygen docs on the
+8. Place the new package, patches, version descriptor, and Doxygen docs on the
    OJS web site:
 
     http://pkp.sfu.ca/ojs/download/
@@ -76,7 +79,7 @@ OJS codebase and the PKP library to be distributed with it):
     http://pkp.sfu.ca/ojs/xml/ojs-version.xml
     http://pkp.sfu.ca/ojs/doxygen
 
-8. Place the release notes, upgrade instructions, and readme on the OJS website:
+9. Place the release notes, upgrade instructions, and readme on the OJS website:
 
 	http://pkp.sfu.ca/ojs/README-<VERSION>
 	http://pkp.sfu.ca/ojs/RELEASE-<VERSION>
