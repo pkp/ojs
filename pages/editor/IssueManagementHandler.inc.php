@@ -146,11 +146,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
-		} else {
-			$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
-		}
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -170,11 +166,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueForm');
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$issueForm = new IssueForm('editor/issues/createIssue.tpl');
-		} else {
-			$issueForm =& new IssueForm('editor/issues/createIssue.tpl');
-		}
+		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
 		$issueForm->readInputData();
 
@@ -207,11 +199,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('classes.issue.form.IssueForm');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$issueForm = new IssueForm('editor/issues/issueData.tpl');
-		} else {
-			$issueForm =& new IssueForm('editor/issues/issueData.tpl');
-		}
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 
 		if ($issueForm->isLocaleResubmit()) {
 			$issueForm->readInputData();
@@ -247,11 +235,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('classes.issue.form.IssueForm');
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$issueForm = new IssueForm('editor/issues/issueData.tpl');
-		} else {
-			$issueForm =& new IssueForm('editor/issues/issueData.tpl');
-		}
+		$issueForm = new IssueForm('editor/issues/issueData.tpl');
 		$issueForm->readInputData();
 
 		if ($issueForm->validate($issue)) {
@@ -355,11 +339,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($issueId, true);
 
 		import('classes.issue.form.IssueGalleyForm');
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$galleyForm = new IssueGalleyForm($issueId);
-		} else {
-			$galleyForm =& new IssueGalleyForm($issueId);
-		}
+		$galleyForm = new IssueGalleyForm($issueId);
 
 		$galleyId = $galleyForm->execute();
 		$request->redirect(null, null, 'editIssueGalley', array($issueId, $galleyId));
@@ -378,11 +358,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueGalleyForm');
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$submitForm = new IssueGalleyForm($issueId, $galleyId);
-		} else {
-			$submitForm =& new IssueGalleyForm($issueId, $galleyId);
-		}
+		$submitForm = new IssueGalleyForm($issueId, $galleyId);
 
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
@@ -405,11 +381,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueGalleyForm');
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$submitForm = new IssueGalleyForm($issueId, $galleyId);
-		} else {
-			$submitForm =& new IssueGalleyForm($issueId, $galleyId);
-		}
+		$submitForm = new IssueGalleyForm($issueId, $galleyId);
 
 		$submitForm->readInputData();
 		if ($submitForm->validate()) {

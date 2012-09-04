@@ -88,34 +88,25 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			$templateMgr->assign('submissionAckEnabled', true);
 		}
 
+		//
 		// Citation editor filter configuration
 		//
-		// 1) Check whether PHP5 is available.
-		if (!checkPhpVersion('5.0.0')) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-			$citationEditorError = 'submission.citations.editor.php5Required';
-		} else {
-			$citationEditorError = null;
-		}
-		$templateMgr->assign('citationEditorError', $citationEditorError);
 
-		if (!$citationEditorError) {
-			// 2) Add the filter grid URLs
-			$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
-			$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
-			$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
-			$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
+		// 1) Add the filter grid URLs
+		$parserFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.ParserFilterGridHandler', 'fetchGrid');
+		$templateMgr->assign('parserFilterGridUrl', $parserFilterGridUrl);
+		$lookupFilterGridUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.filter.LookupFilterGridHandler', 'fetchGrid');
+		$templateMgr->assign('lookupFilterGridUrl', $lookupFilterGridUrl);
 
-			// 3) Create a list of all available citation output filters.
-			$router =& $request->getRouter();
-			$journal =& $router->getContext($request);
-			$filterDao =& DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-			$metaCitationOutputFilterObjects =& $filterDao->getObjectsByGroup('nlm30-element-citation=>plaintext', $journal->getId());
-			foreach($metaCitationOutputFilterObjects as $metaCitationOutputFilterObject) {
-				$metaCitationOutputFilters[$metaCitationOutputFilterObject->getId()] = $metaCitationOutputFilterObject->getDisplayName();
-			}
-			$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
+		// 2) Create a list of all available citation output filters.
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
+		$filterDao =& DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+		$metaCitationOutputFilterObjects =& $filterDao->getObjectsByGroup('nlm30-element-citation=>plaintext', $journal->getId());
+		foreach($metaCitationOutputFilterObjects as $metaCitationOutputFilterObject) {
+			$metaCitationOutputFilters[$metaCitationOutputFilterObject->getId()] = $metaCitationOutputFilterObject->getDisplayName();
 		}
+		$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
 
 		parent::display($request, $dispatcher);
 	}

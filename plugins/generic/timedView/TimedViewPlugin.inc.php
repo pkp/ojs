@@ -58,7 +58,7 @@ class TimedViewPlugin extends GenericPlugin {
 		if($success) {
 			if($this->getEnabled()) {
 				$this->import('TimedViewReportDAO');
-				$timedViewReportDao =& new TimedViewReportDAO();
+				$timedViewReportDao = new TimedViewReportDAO();
 				DAORegistry::registerDAO('TimedViewReportDAO', $timedViewReportDao);
 
 				$this->import('TimedViewReportForm');

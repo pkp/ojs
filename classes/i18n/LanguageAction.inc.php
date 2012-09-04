@@ -41,10 +41,6 @@ class LanguageAction {
 		// Check to see that proc_open is available
 		if (!function_exists('proc_open')) return false;
 
-		// Check to see that we're using at least PHP 4.3 for
-		// stream_set_blocking.
-		if (!checkPhpVersion('4.3.0')) return false;
-
 		// Check to see that tar can be executed
 		$tarExecutable = Config::getVar('cli', 'tar');
 		if (!$tarExecutable) return false;

@@ -314,9 +314,6 @@
 <h3>3.7 {translate key="manager.setup.citationAssistant"}</h3>
 
 <a name="metaCitationEditing"></a>
-{if $citationEditorError}
-	<p>{translate key=$citationEditorError}</p>
-{else}
 	<p>{translate key="manager.setup.metaCitationsDescription"}</p>
 	<table width="100%" class="data">
 		<tr valign="top">
@@ -367,7 +364,6 @@
 			});
 		});
 	</script>{/literal}
-{/if}
 </div>
 
 <div class="separator"></div>

@@ -334,11 +334,7 @@ class SubscriptionManagerHandler extends Handler {
 		import('classes.manager.form.UserManagementForm');
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$userForm = new UserManagementForm();
-		} else {
-			$userForm =& new UserManagementForm();
-		}
+		$userForm = new UserManagementForm();
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
 		} else {
@@ -358,11 +354,7 @@ class SubscriptionManagerHandler extends Handler {
 
 		import('classes.manager.form.UserManagementForm');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$userForm = new UserManagementForm();
-		} else {
-			$userForm =& new UserManagementForm();
-		}
+		$userForm = new UserManagementForm();
 		$userForm->readInputData();
 
 		if ($userForm->validate()) {
@@ -373,11 +365,7 @@ class SubscriptionManagerHandler extends Handler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);
-				if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-					$userForm = new UserManagementForm();
-				} else {
-					$userForm =& new UserManagementForm();
-				}
+				$userForm = new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 

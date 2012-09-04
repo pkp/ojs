@@ -97,7 +97,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 				(!empty($requestedPage)) && $requestedPage != 'index'))
 			) continue;
 
-			$feed =& new SimplePie();
+			$feed = new SimplePie();
 			$feed->set_feed_url($currentFeed->getUrl());
 			$feed->enable_order_by_date(false);
 			$feed->set_cache_location(CacheManager::getFileCachePath());

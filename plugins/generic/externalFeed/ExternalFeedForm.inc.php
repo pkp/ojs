@@ -129,7 +129,7 @@ class ExternalFeedForm extends Form {
 		}
 
 		if (!isset($feed)) {
-			$feed =& new ExternalFeed();
+			$feed = new ExternalFeed();
 		}
 
 		$feed->setJournalId($journalId);
