@@ -14,9 +14,10 @@
 	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
 	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 
+	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
-	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is not enabled. Please enable it in the Lucene plug-in settings.</message>
 
 	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
 	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
@@ -68,6 +69,7 @@
 	<message key="plugins.generic.lucene.settings.password">Password</message>
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
+	<message key="plugins.generic.lucene.settings.pullindexing">Check to enable pull indexing (see README file for more information)</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>

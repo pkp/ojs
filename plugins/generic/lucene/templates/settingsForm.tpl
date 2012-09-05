@@ -77,6 +77,12 @@
 			<label for="spellcheck">{translate key="plugins.generic.lucene.settings.spellcheck"}</label>&nbsp;
 		</td>
 	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right"><input type="checkbox" name="pullindexing" id="pullindexing" {if $pullindexing}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="pullindexing">{translate key="plugins.generic.lucene.settings.pullindexing"}</label>&nbsp;
+		</td>
+	</tr>
 </table>
 
 <br/>

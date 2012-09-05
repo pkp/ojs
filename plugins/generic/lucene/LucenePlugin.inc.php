@@ -103,6 +103,11 @@ class LucenePlugin extends GenericPlugin {
 			// Register callbacks (application-level).
 			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 
+			// Register callbacks (data-access level).
+			if ($this->getSetting(0, 'pullindexing')) {
+				HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackArticleDaoAdditionalFieldNames'));
+			}
+
 			// Register callbacks (controller-level).
 			HookRegistry::register('ArticleSearch::retrieveResults', array(&$this, 'callbackRetrieveResults'));
 			HookRegistry::register('ArticleSearchIndex::deleteTextIndex', array(&$this, 'callbackDeleteTextIndex'));
@@ -245,6 +250,17 @@ class LucenePlugin extends GenericPlugin {
 			$handlerFile =& $args[2];
 			$handlerFile = $this->getPluginPath() . '/' . 'LuceneHandler.inc.php';
 		}
+	}
+
+	/**
+	 * @see DAO::getAdditionalFieldNames()
+	 */
+	function callbackArticleDaoAdditionalFieldNames($hookName, $args) {
+		// Add the indexing state setting to the field names.
+		// This will be used to mark articles as "dirty" or "clean"
+		// when pull-indexing is enabled.
+		$returner =& $args[1];
+		$returner[] = 'indexingState';
 	}
 
 	/**
