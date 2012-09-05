@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.datacite.classes.DOIExportPlugin');
+if (!class_exists('DOIExportPlugin')) { // Bug #7848
+	import('plugins.importexport.datacite.classes.DOIExportPlugin');
+}
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
