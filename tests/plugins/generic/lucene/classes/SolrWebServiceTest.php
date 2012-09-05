@@ -193,7 +193,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService::_getArticleXml()
+	 * @covers SolrWebService::getArticleXml()
 	 */
 	public function testGetArticleXml() {
 		// Generate test objects.
@@ -201,7 +201,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal = $this->_getTestJournal();
 
 		// Test the transfer XML file.
-		$articleDoc = $this->solrWebService->_getArticleXml($article, $journal);
+		$articleDoc = $this->solrWebService->getArticleXml($article, $journal);
 		self::assertXmlStringEqualsXmlFile(
 			'tests/plugins/generic/lucene/classes/test-article.xml',
 			XMLCustomWriter::getXml($articleDoc)

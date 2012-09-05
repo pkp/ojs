@@ -421,11 +421,11 @@ class ArticleHandler extends Handler {
 	 * @param $galleyId int or string
 	 */
 	function validate(&$request, $articleId, $galleyId = null) {
-		$router =& $request->getRouter();
 		parent::validate(null, $request);
 
 		import('classes.issue.IssueAction');
 
+		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
 		$journalId = $journal->getId();
 		$article = $publishedArticle = $issue = null;

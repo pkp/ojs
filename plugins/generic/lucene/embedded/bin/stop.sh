@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Source common variables.
-source ./script-startup
+EXEC_PATH=`dirname $0`
+source "$EXEC_PATH/script-startup"
 
 if [ ! -e $SOLR_PIDFILE ]; then
   echo "Solr PID-file not found. Is Solr stopped? Has the PID-file been deleted?"

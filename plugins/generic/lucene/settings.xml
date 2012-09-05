@@ -54,5 +54,9 @@
 		<name>spellcheck</name>
 		<value>true</value>
 	</setting>
+	<setting type="bool">
+		<name>pullindexing</name>
+		<value>true</value>
+	</setting>
 </plugin_settings>
 

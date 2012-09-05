@@ -29,6 +29,11 @@ define('SOLR_STATUS_OFFLINE', 0x02);
 define('SOLR_AUTOSUGGEST_SUGGESTER', 0x01);
 define('SOLR_AUTOSUGGEST_FACETING', 0x02);
 
+// The max. number of articles that can
+// be indexed in a single batch.
+define('SOLR_INDEXING_BATCHSIZE', 200);
+
+
 import('lib.pkp.classes.webservice.WebServiceRequest');
 import('lib.pkp.classes.webservice.XmlWebService');
 import('lib.pkp.classes.xml.XMLCustomWriter');
@@ -114,7 +119,7 @@ class SolrWebService extends XmlWebService {
 		assert($article->getJournalId() == $journal->getId());
 
 		// Generate the transfer XML for the article and POST it to the web service.
-		$articleDoc =& $this->_getArticleXml($article, $journal);
+		$articleDoc =& $this->getArticleXml($article, $journal);
 		$articleXml = XMLCustomWriter::getXml($articleDoc);
 
 		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
@@ -146,11 +151,10 @@ class SolrWebService extends XmlWebService {
 		// increase overall DB access time.
 		import('lib.pkp.classes.db.DBResultRange');
 		$batch = 1;
-		$batchSize = 200;
 		$continue = true;
 		while ($continue) {
 			// Retrieve the next batch.
-			$range = new DBResultRange($batchSize, $batch);
+			$range = new DBResultRange(SOLR_INDEXING_BATCHSIZE, $batch);
 			$articles =& $articleDao->getPublishedArticlesByJournalId($journal->getId(), $range);
 			unset($range);
 
@@ -164,7 +168,7 @@ class SolrWebService extends XmlWebService {
 
 				// Add the article to the article list if it has been published.
 				if ($article->getDatePublished()) {
-					$articleDoc =& $this->_getArticleXml($article, $journal, $articleDoc);
+					$articleDoc =& $this->getArticleXml($article, $journal, $articleDoc);
 				}
 				unset($article);
 			}
@@ -842,7 +846,7 @@ class SolrWebService extends XmlWebService {
 	 * @param $articleDoc DOMDocument|XMLNode
 	 * @return DOMDocument|XMLNode
 	 */
-	function &_getArticleXml(&$article, &$journal, $articleDoc = null) {
+	function &getArticleXml(&$article, &$journal, $articleDoc = null) {
 		assert(is_a($article, 'PublishedArticle'));
 
 		if (is_null($articleDoc)) {
