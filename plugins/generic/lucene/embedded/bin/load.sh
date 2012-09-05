@@ -95,9 +95,14 @@ for FILENAME in `ls "$PULL_STAGING_DIR"`; do
   ARTICLES_FOUND=`sed 's%<article %\n<article %g' "$FULL_FILENAME" \
       | grep -c '<article '` || true
   
-  ARTICLES_PROCESSED=`curl -s -H 'Content-type:text/xml; charset=utf-8' --data-binary "@$FULL_FILENAME" \
+  if ARTICLES_PROCESSED=`curl -s -H 'Content-type:text/xml; charset=utf-8' --data-binary "@$FULL_FILENAME" \
       "$DIH_ENDPOINT?command=full-import&clean=false" \
       | grep -o '<str name="Total Documents Processed">[0-9]\+</str>' | grep -o '[0-9]\+'`; then
+    true
+  else
+    echo "configured DIH endpoint not available ... terminating"
+    exit 1
+  fi
   echo -n "$ARTICLES_PROCESSED of $ARTICLES_FOUND articles processed ... "
   
   if [ "$ARTICLES_FOUND" = "$ARTICLES_PROCESSED" ]; then
