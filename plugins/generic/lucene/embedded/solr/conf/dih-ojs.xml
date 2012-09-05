@@ -56,10 +56,31 @@
      * @returns Map The transformed row.
      */
     function transformArticle(row, context) {
-      // Make IDs unique across installations.
-      var articleId = row.get('article_id');
-      var journalId = row.get('journal_id');
+      // Prepare the galley and supp file XML. This must be
+      // done before anything else. Otherwise we get an error
+      // later if the fields created here cannot be found by
+      // the entity processor.
+      var galleyXml = row.get('etl_galley_xml');
+      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
+      row.put('etl_galley_xml', String(galleyXml));
+      var suppFileXml = row.get('etl_suppFile_xml');
+      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
+      row.put('etl_suppFile_xml', String(suppFileXml));
+
+      // Check whether this article should actually be
+      // deleted rather than updated (occurs in pull-indexing).
+      // If that's the case then mark the line for deletion
+      // and bypass all further processing.
       var instId = row.get('inst_id');
+      var articleId = row.get('article_id');
+      var loadAction = String(row.get('loadAction'));
+      if (loadAction === String('delete')) {
+        row.put('$deleteDocById', instId + '-' + articleId);
+        return row;
+      }
+
+      // Make IDs unique across installations.
+      var journalId = row.get('journal_id');
       row.put('article_id', instId + '-' + articleId);
       row.put('journal_id', instId + '-' + journalId);
 
@@ -156,16 +177,6 @@
       if (publicationDate !== null) {
         row.put('publicationDate_dtsort', publicationDate);
       }
-
-      // Prepare the galley XML.
-      var galleyXml = row.get('etl_galley_xml');
-      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
-      row.put('etl_galley_xml', String(galleyXml));
-
-      // Prepare the supp file XML.
-      var suppFileXml = row.get('etl_suppFile_xml');
-      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
-      row.put('etl_suppFile_xml', String(suppFileXml));
 
       return row;
     }
@@ -322,9 +333,7 @@
     function postProcessArticle(row, context) {
       var docFieldName, docFieldValue;
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
-
-      // Retrieve the authors field.
-      var authors = context.resolve('article.authors_txt');
+      if (docFields === null) return row;
 
       // Add document-level fields to the document.
       for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
@@ -347,9 +356,10 @@
             onError="continue" >
 
       <!-- ID fields -->
-      <field column="article_id" xpath="/articleList/article/@id" />
-      <field column="journal_id" xpath="/articleList/article/@journalId" />
-      <field column="inst_id" xpath="/articleList/article/@instId" />
+      <field column="article_id" xpath="/articleList/article/@id" multiValued="false" />
+      <field column="journal_id" xpath="/articleList/article/@journalId" multiValued="false" />
+      <field column="inst_id" xpath="/articleList/article/@instId" multiValued="false" />
+      <field column="loadAction" xpath="/articleList/article/@loadAction" multiValued="false" />
 
       <!-- Authors -->
       <field column="etl_authorList" xpath="/articleList/article/authorList/author" multiValued="true" />

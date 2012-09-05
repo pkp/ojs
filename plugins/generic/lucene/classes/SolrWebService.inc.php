@@ -100,6 +100,14 @@ class SolrWebService extends XmlWebService {
 		return $this->_serviceMessage;
 	}
 
+	/**
+	 * Get the installation id.
+	 * @return string
+	 */
+	function getInstId() {
+		return $this->_instId;
+	}
+
 
 	//
 	// Public API

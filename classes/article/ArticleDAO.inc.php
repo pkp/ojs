@@ -132,6 +132,64 @@ class ArticleDAO extends DAO {
 		return $returner;
 	}
 
+
+	/**
+	 * Find articles by querying article settings.
+	 * @param $settingName string
+	 * @param $settingValue mixed
+	 * @param $journalId int optional
+	 * @return array The articles identified by setting.
+	 */
+	function &getBySetting($settingName, $settingValue, $journalId = null) {
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$settingName
+		);
+
+		$sql = 'SELECT a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
+		if (is_null($settingValue)) {
+			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
+				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
+		} else {
+			$params[] = $settingValue;
+			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
+				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
+		}
+		if ($journalId) {
+			$params[] = (int) $journalId;
+			$sql .= ' AND a.journal_id = ?';
+		}
+		$sql .= ' ORDER BY a.journal_id, a.article_id';
+		$result =& $this->retrieve($sql, $params);
+
+		$articles = array();
+		while (!$result->EOF) {
+			$articles[] =& $this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $articles;
+	}
+
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array

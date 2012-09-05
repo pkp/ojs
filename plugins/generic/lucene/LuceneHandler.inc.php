@@ -118,37 +118,49 @@ class LuceneHandler extends Handler {
 		// Get the web service.
 		$solrWebService =& $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
 
+		// Create an empty article list XML.
+		$articleDoc =& XMLCustomWriter::createDocument(); /* @var DOMDocument */
+		$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
+		XMLCustomWriter::appendChild($articleDoc, $articleList);
+
 		// Retrieve all "dirty" articles.
-		// FIXME: I have to do this for articles, not published articles
-		// to make sure that I get previously published but now unpublished
-		// articles, too.
-		$articleDoc = null; /* @var DOMDocument */
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$changedArticles = $publishedArticleDao->getBySetting('indexingState', LUCENE_PLUGIN_INDEXINGSTATE_DIRTY);
+		$changedArticles = $articleDao->getBySetting('indexingState', LUCENE_PLUGIN_INDEXINGSTATE_DIRTY);
 		$hasMore = false;
+		$indexedArticles = 0;
 		foreach($changedArticles as $changedArticle) {
 			// Make sure that we do not exceed the allowed
 			// batch size.
-			if (count($indexedArticles) >= SOLR_INDEXING_BATCHSIZE) {
+			if ($indexedArticles >= SOLR_INDEXING_BATCHSIZE) {
 				$hasMore = true;
 				break;
 			}
 
-			// Check the subscription state of the article.
+			// Try to upgrade the article to a published article.
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($changedArticle->getId());
+			if (is_a($publishedArticle, 'PublishedArticle')) {
+				$changedArticle =& $publishedArticle;
+			}
+
+			// Check the publication state and subscription state of the article.
 			if ($this->_articleAccessAuthorized($request, $changedArticle)) {
-				// Add the article to the article list.
+				// Mark the article for update.
 				$journal =& $this->_getJournal($changedArticle->getJournalId());
 				$articleDoc =& $solrWebService->getArticleXml($changedArticle, $journal, $articleDoc);
 			} else {
-				// FIXME: mark the article for deletion.
+				// Mark the article for deletion.
+				$articleNode =& XMLCustomWriter::createElement($articleDoc, 'article');
+				XMLCustomWriter::setAttribute($articleNode, 'id', $changedArticle->getId());
+				XMLCustomWriter::setAttribute($articleNode, 'journalId', $changedArticle->getJournalId());
+				XMLCustomWriter::setAttribute($articleNode, 'instId', $solrWebService->getInstId());
+				XMLCustomWriter::setAttribute($articleNode, 'loadAction', 'delete');
+				XMLCustomWriter::appendChild($articleList, $articleNode);
 			}
-		}
 
-		if (is_null($articleDoc)) {
-			// No articles need to be indexed. Return an empty article list.
-			$articleDoc =& XMLCustomWriter::createDocument();
-			$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
-			XMLCustomWriter::appendChild($articleDoc, $articleList);
+			// Count the indexed articles so that we can check the number
+			// against the allowed batch size.
+			$indexedArticles++;
 		}
 
 		// Add the "has more" attribute so that the server knows
@@ -164,7 +176,6 @@ class LuceneHandler extends Handler {
 		// our XML, let's mark the articles "clean". The worst that could
 		// happen now is that an article could not be marked clean. This is
 		// not a problem as our indexing process is idempotent.
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		foreach($changedArticles as $changedArticle) {
 			$changedArticle->setData('indexingState', LUCENE_PLUGIN_INDEXINGSTATE_CLEAN);
 			$articleDao->updateLocaleFields($changedArticle);
@@ -229,29 +240,29 @@ class LuceneHandler extends Handler {
 	 * Solr server).
 	 *
 	 * @param $request Request
-	 * @param $publishedArticle PublishedArticle
+	 * @param $article Article
 	 * @return boolean True if authorized, otherwise false.
 	 */
-	function _articleAccessAuthorized(&$request, &$publishedArticle) {
-		// Did we really get a published article?
-		if (!is_a($publishedArticle, 'PublishedArticle')) return false;
+	function _articleAccessAuthorized(&$request, &$article) {
+		// Did we get a published article?
+		if (!is_a($article, 'PublishedArticle')) return false;
 
 		// Get the article's journal.
-		$journal =& $this->_getJournal($publishedArticle->getJournalId());
+		$journal =& $this->_getJournal($article->getJournalId());
 		if (!is_a($journal, 'Journal')) return false;
 
 		// Get the article's issue.
-		$issue =& $this->_getIssue($publishedArticle->getIssueId(), $journal->getId());
+		$issue =& $this->_getIssue($article->getIssueId(), $journal->getId());
 		if (!is_a($issue, 'Issue')) return false;
 
 		// Only index published articles.
-		if (!$issue->getPublished() || $publishedArticle->getStatus() != STATUS_PUBLISHED) return false;
+		if (!$issue->getPublished() || $article->getStatus() != STATUS_PUBLISHED) return false;
 
 		// Make sure the requesting party is authorized to acces the article/issue.
 		import('classes.issue.IssueAction');
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue, $journal);
 		if ($subscriptionRequired) {
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
 			if (!$isSubscribedDomain) return false;
 		}
 
