@@ -30,5 +30,5 @@
 {if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.  
 {elseif $currentJournal->getSetting('printIssn')}ISSN {$currentJournal->getSetting('printIssn')|escape}. {/if}
 {translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|date_format:'%d %b. %Y' url=$articleUrl}
-{if $article->getDOI()}doi:{$article->getDOI()|escape}. {/if}
+{if $article->getPubId('doi')}doi:{$article->getPubId('doi')|escape}. {/if}
 </div>
