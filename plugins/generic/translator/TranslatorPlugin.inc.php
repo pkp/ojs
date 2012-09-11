@@ -31,7 +31,7 @@ class TranslatorPlugin extends GenericPlugin {
 		$op =& $args[1];
 		$sourceFile =& $args[2];
 
-		if ($page === 'translate') {
+		if ($page === 'translate' && in_array($op, array('index', 'edit', 'check', 'export', 'saveLocaleChanges', 'downloadLocaleFile', 'editLocaleFile', 'editMiscFile', 'saveLocaleFile', 'deleteLocaleKey', 'saveMiscFile', 'editEmail', 'createFile', 'deleteEmail', 'saveEmail'))) {
 			$this->import('TranslatorHandler');
 			Registry::set('plugin', $this);
 			define('HANDLER_CLASS', 'TranslatorHandler');

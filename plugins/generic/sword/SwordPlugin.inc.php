@@ -91,11 +91,13 @@ class SwordPlugin extends GenericPlugin {
 	 */
 	function callbackLoadHandler($hookName, $args) {
 		$page =& $args[0];
-		if ($page === 'sword') {
+		$op =& $args[1];
+		$handlerFile =& $args[2];
+
+		if ($page === 'sword' && $op === 'index') {
 			define('HANDLER_CLASS', 'SwordHandler');
 			define('SWORD_PLUGIN_NAME', $this->getName());
-			$handlerFile =& $args[2];
-			$handlerFile = $this->getPluginPath() . '/' . 'SwordHandler.inc.php';
+			$handlerFile = $this->getPluginPath() . '/SwordHandler.inc.php';
 		}
 	}
 

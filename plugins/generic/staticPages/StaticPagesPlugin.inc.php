@@ -63,7 +63,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		$page =& $args[0];
 		$op =& $args[1];
 
-		if ( $page == 'pages' ) {
+		if ($page == 'pages' && in_array($op, array('index', 'view'))) {
 			define('STATIC_PAGES_PLUGIN_NAME', $this->getName()); // Kludge
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');

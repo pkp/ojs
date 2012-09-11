@@ -133,7 +133,7 @@ class CounterPlugin extends GenericPlugin {
 		$sourceFile =& $args[2];
 
 		// If the request is for the log analyzer itself, handle it.
-		if ($page === 'counter') {
+		if ($page === 'counter' && in_array($op, array('index', 'reportXML', 'sushiXML', 'report'))) {
 			$this->import('CounterHandler');
 			Registry::set('plugin', $this);
 			define('HANDLER_CLASS', 'CounterHandler');
