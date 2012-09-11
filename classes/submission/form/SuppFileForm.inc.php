@@ -165,18 +165,16 @@ class SuppFileForm extends Form {
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
 				'publicSuppFileId' => $suppFile->getPubId('publisher-id')
 			);
-
+			// consider the additional field names from the public identifer plugins
+			import('classes.plugins.PubIdPluginHelper');
+			$pubIdPluginHelper = new PubIdPluginHelper();
+			$pubIdPluginHelper->init($this, $suppFile);
 		} else {
 			$this->_data = array(
 				'type' => '',
 				'showReviewers' => 1
 			);
 		}
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->init($this, $suppFile);
-
 		return parent::initData();
 	}
 
