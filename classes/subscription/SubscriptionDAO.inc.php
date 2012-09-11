@@ -318,7 +318,7 @@ class SubscriptionDAO extends DAO {
 		}
 
 		if (!empty($status)) {
-			$searchSql .= ' AND s.status = ' . $status;
+			$searchSql .= ' AND s.status = ' . (int) $status;
 		}
 
 		return $searchSql;
