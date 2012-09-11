@@ -109,15 +109,13 @@ class ArticleGalleyForm extends Form {
 				'publicGalleyId' => $galley->getPubId('publisher-id'),
 				'galleyLocale' => $galley->getLocale()
 			);
-
+			// consider the additional field names from the public identifer plugins
+			import('classes.plugins.PubIdPluginHelper');
+			$pubIdPluginHelper = new PubIdPluginHelper();
+			$pubIdPluginHelper->init($this, $galley);
 		} else {
 			$this->_data = array();
 		}
-		// consider the additional field names from the public identifer plugins
-		import('classes.plugins.PubIdPluginHelper');
-		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->init($this, $galley);
-
 		parent::initData();
 	}
 
