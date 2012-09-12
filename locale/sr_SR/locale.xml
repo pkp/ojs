@@ -816,8 +816,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="subscriptionManager.individualSubscriptions">Individualne pretplate</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institucionalne pretplate</message>
 	<message key="subscriptionManager.subscriptionTypes">Tipovi pretplata</message>
-	<message key="plugins.categories.oaiMetadataFormats">Dodatak OAI formata metapodataka</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Ovaj dodatak prikazuje metapodatke u formatu OAI komunikacije</message>
 	<message key="manager.setup.citations">Omogući Citation Markup pomoćnika</message>
 	<message key="user.subscriptions.mySubscriptions">Moje pretplate</message>
 	<message key="user.subscriptions.subscriptionStatus">Status pretplata</message>

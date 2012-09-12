@@ -765,8 +765,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="subscriptionManager.individualSubscriptions">اشتراکات شخصی</message>
 	<message key="subscriptionManager.institutionalSubscriptions">اشتراکات سازمانی</message>
 	<message key="subscriptionManager.subscriptionTypes">انواع اشتراک</message>
-	<message key="plugins.categories.oaiMetadataFormats">پلاگین فرمات فراداده او ای آی</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">این پلاگین های فرمات، فراداه را در ارتباطات او ای آی بیان میکنند.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">دبیر درخواست کارشناسی را همرا با ساب میشن با ایمیل برای کارشناس میفرستد. کارشناسان موافقت یا عدم موافقت خود را با ایمیل برای دبیر میفرستند و در صورت موافقت حاصل کارشناسی و توصیه نهائی خود را نیز میفرستند. دبیر موافقت یا عدم موافقت کارشناس را شخصا در سایت وارد میکند و پس از دریافت نهائی حاصل کارشناسی از طریق ایمیل، آنرا نیز شخصا وارد سایت میکند.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>
 بیانیه کپی رایت پیشنهادی کراتیو کامانز

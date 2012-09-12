@@ -981,8 +981,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="subscriptions.institutionalDescription">L'abbonamento istituzionale non richiede credenziali. Viene utilizzato il dominio o gli indirizzi IP dell'utente per accedere ai contenuti riservati.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>N.B.</strong> Gli abbonamenti istituzionali acquistati online richiedono l'approvazione del dominio o degli indirizzi IP per essere attivate.]]></message>
 	<message key="subscriptionManager.subscriptionTypes">Tipi di abbonamento</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Questi plugin esprimono il formato dei metadati nelle comunicazioni OAI-PMH</message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La rivista utilizzerà uno schema di classificazione disponibile su Web.<br />
 Titolo dello schema di classificazione]]></message>
 	<message key="user.subscriptions.mySubscriptions">I miei abbonamenti</message>

@@ -1021,8 +1021,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="subscriptionManager.individualSubscriptions">Harpidetza indibidualak</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Harpidetza instituzionalak</message>
 	<message key="subscriptionManager.subscriptionTypes">Harpidetza motak</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadatuen Formatuen Pluginak</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Formatuen plugin horiek metadatuak adierazten dituzte OAI komunikazioetan.</message>
 	<message key="manager.setup.citations">Gaitu Aipuak Markatzeko Laguntzailea</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Ebaluatzaileen Gidalerroak hainbat irizpide eskainiko dizkie ebaluatzaileei, aldizkarian argitaratzeko aurkezpenak duen egokitasunari buruz erabakiak hartzeko, eta zenbait jarraibide berezi izan dituzte ebaluazio eraginkorra eta lagungarria prestatzeko. Ebaluazioa egiteko, ebaluatzaileei bi testu-koadro irekitzen zaizkie: lehenengoa “Egilearentzat eta editorearentzat”; eta, bigarrena, “Editorearentzat”. Osterantzean, aldizkariaren kudeatzaileak adituen ebaluazio-inprimaki bat sor dezake, “Ebaluazio Inprimakiak” atalean. Nolanahi ere, editoreek aukera izango dute ebaluazioak sartzeko egileekin bat datozenean.</message>
 	<message key="user.register.reviewerInterests">Identifikatu interesak ebaluatzen (arlo eta ikerketa-metodo garrantzitsuak):</message>

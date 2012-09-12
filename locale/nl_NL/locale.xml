@@ -989,8 +989,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="subscriptionManager.individualSubscriptions">Individuele abonnementen</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata formaat plugins</message>
-	<message key="subscriptions.individualDescription">Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud.</message>
 	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
 	<message key="manager.setup.citations">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
 	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>

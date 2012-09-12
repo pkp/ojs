@@ -1012,8 +1012,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="payment.loginRequired.forDonation">Ten que estar autenticado para facer unha doazón.</message>
 	<message key="navigation.competingInterestGuidelines">Directrices en conflitos de intereses</message>
 	<message key="plugins.categories.citationFormats.description">Os plugins de formatos de citación fornecen aos usuarios de varios formatos cos que acceder a citas de artigos.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Plugins de Formato de Metadados de OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Estes plugin de formato expresan metadados en comunicacións OAI</message>
 	<message key="payment.membership.ends">Termo</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} non permitiu a rolda {$round} de revisión para a presentación do artigo {$articleId} en nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">Unha decisión ({$decision}) dun editor para o artigo {$articleId} vai ser rexistrada por {$editorName}.</message>

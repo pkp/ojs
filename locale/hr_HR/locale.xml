@@ -11,8 +11,7 @@
   *
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
    -->
-<locale name="hr_HR"
-        full_name="Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<!-- 
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:

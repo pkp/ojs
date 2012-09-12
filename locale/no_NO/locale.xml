@@ -965,8 +965,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="subscriptionManager.individualSubscriptions">Personlige abonnementer</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institusjonelle abonnementer</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
-	<message key="plugins.categories.oaiMetadataFormats">Programtillegg for OAI metadata-format</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Disse format-programtilleggene tilgjengeliggjør metadata i OAI-kommunikasjon.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
 	<message key="manager.setup.citations">Gjør det mulig for forfattere å legge inn en separat formattert liste med referanser som en del av innleveringen.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>

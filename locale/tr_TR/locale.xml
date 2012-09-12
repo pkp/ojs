@@ -380,8 +380,6 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 	<message key="plugins.categories.implicitAuth.description">Örtülü kimlik eklentileri http başlığında kullanıcı temelli kimlik doğrulama için destek uygular.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">OAI Üst Veri Eklentileri</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Bu biçim eklentileri OAI iletişiminde hızlı üst veri sağlar.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
 <br /><br />

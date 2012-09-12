@@ -393,8 +393,6 @@
 	<message key="plugins.categories.implicitAuth.description">隐式身份验证插件执行基于HTTP头的用户验证.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">OAI源数据插件</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">这些格式插件表达OAI通信的元数据.</message>
 
 
  

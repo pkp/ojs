@@ -386,8 +386,6 @@
        <message key="plugins.categories.implicitAuth">Модулі неявної аутентифікації</message>
        <message key="plugins.categories.implicitAuth.description">Модулі неявної аутентифікації дозволяють підтримку аутентифікації користувачів за заголовками http.</message>
        
-       <message key="plugins.categories.oaiMetadataFormats">Модулі форматів метаданих OAI</message>
-       <message key="plugins.categories.oaiMetadataFormats.description">Ці модулі дозволяють генерувати метадані для OAI-комунікації.</message>
 
        <!-- Files Browser -->
 

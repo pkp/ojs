@@ -365,8 +365,6 @@ Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi s
 	<message key="plugins.categories.implicitAuth.description"> Plugin Pengesahan Implisit mengimplementasikan dukungan untuk mengesahkan  dukungan untuk pengguna yang mengesahkan berdasarkan http header.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">Plugin Format Metadata OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Plugin format ini mengekspresikan metadata in komunikasi OAI.</message>
 
 
  

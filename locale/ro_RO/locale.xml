@@ -420,8 +420,6 @@ Trebuie remarcat faptul că interfaţa OAI poate fi deazactivată pentru acest s
 	<message key="plugins.categories.implicitAuth.description">Modulele inițiale de autentificare au implementat suportul pentru autentificarea utilizatorilor bazată pe headerele http.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">Module pentru formatarea metadatelor conform OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Aceste module de formatare oferă metadate în cazul comunicarii de date prin OAI.</message>
 
 
  

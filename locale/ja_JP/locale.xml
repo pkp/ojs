@@ -804,8 +804,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="help.searchReturnResults">検索結果に戻る</message>
 	<message key="payment.type.purchaseArticle">論文購入料金</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAIメタデータフォーマットプラグイン</message>
-	<message key="subscriptionTypes.format.online">オンライン</message>
 	<message key="subscriptionTypes.format.print">冊子</message>
 	<message key="subscriptionTypes.format.printOnline">冊子とオンライン</message>
 	<message key="notification.type.editing">編集イベント</message>

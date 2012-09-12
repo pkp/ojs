@@ -381,19 +381,10 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
 	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
 	<message key="plugins.categories.pubIds">Public Identifier Plugins</message>
 	<message key="plugins.categories.pubIds.description">These plugins implement support for a public identifier.</message>
 
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-
-	<!-- Setup Step 1 -->
-
 	<!-- Setup Step 2 -->
-
 
 	<message key="manager.setup.reviewProcessEmailDescription">Editors send
 	Reviewers the request to review with the submission attached to the email. Reviewers email editors their assent (or regrets), as well as the review and recommendation. Editors enter Reviewers' assent (or regrets), as well as the review and recommendation on the submission's Review page, to record the review process.</message>

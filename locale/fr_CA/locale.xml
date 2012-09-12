@@ -969,8 +969,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="subscriptionManager.individualSubscriptions">Abonnements individuels</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Abonnements institutionnels</message>
 	<message key="subscriptionManager.subscriptionTypes">Types d'abonnement</message>
-	<message key="plugins.categories.oaiMetadataFormats">Plugiciels du format de métadonnées OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Ces plugiciels de format émettent les métadonnées en communications OAI.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Les rédacteurs envoient aux évaluateurs la demande d'évaluation avec la soumission jointe au courriel. Les évaluateurs envoient par courriel leur acceptation (ou refus), ainsi que l'évaluation et la recommandation. Les rédacteurs inscrivent l'acceptation (ou refus) des évaluateurs, ainsi que l'évaluation et la recommandation sur la page d'évaluation de la soumission, afin de consigner le processus d'évaluation.</message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revue utilisera un système de classification sujet disponible sur le Web.<br />
 Titre du système de classification]]></message>

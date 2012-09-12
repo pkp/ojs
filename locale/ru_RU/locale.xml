@@ -1079,8 +1079,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="plugins.categories.generic.description">Системные модули служат для расширения возможностей OJS, не попадающего под другие перечисленные категории.</message>
 	<message key="plugins.categories.implicitAuth">Неявные модули авторизации</message>
 	<message key="plugins.categories.implicitAuth.description">Неявные модули авторизации реализуют поддержку авторизации пользователей на основе заголовков протокола http.</message>
-	<message key="plugins.categories.oaiMetadataFormats">Модули Форматов Метаданных OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Эти модули представляют метеданные при связи с другими архивами.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Редакторы высылают Рецензентам запрос на рецензию по E-mail с копией статьи в приложении. Рецензенты отвечают согласием (или с сожалением отказываются) и своей рецензией с рекоммендацией. Редакторы вводят эти согласие (или отказ),  рецензию и рекоммендацию на странице "Рецензия" рассматриваемой статьи, создавая протокол процесса рецензирования.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предлагаемые уведомления об авторских правах в стиле Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, распространяющих статьи в Открытом Доступе</h4>

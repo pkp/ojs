@@ -401,8 +401,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.implicitAuth.description">എച്ച്ടിടിപി ഹെഡേര്‍സ് അടിസ്ഥാനമാക്കിയുള്ള ആതേന്റിക്കേറ്റിങ്ങ് യൂസര്‍സിനെ അനുക്കൂലിച്ച് കൊണ്ടുള്ള ഇംപ്ലിസിറ്റ് ആതേന്റിക്കേഷന്‍ പ്ലഗിന്‍സ് ഇംപ്ലിമെന്റ് ചെയ്യുന്നു.</message>
 
 
-	<message key="plugins.categories.oaiMetadataFormats">ഒഎഐ മെറ്റാഡാറ്റ ഫോര്‍മാറ്റ് പ്ലഗിന്‍സ്</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">ഈ ഫോര്‍മാറ്റില്‍ ഉള്ള പ്ലഗിന്‍സ് ഒഎഐ കമ്യൂണിക്കേസ്കനില്‍ ഉള്ള മെറ്റാഡാറ്റയെ എക്സ് പ്രസ്സ് ചെയ്യുന്നു.</message>
 
 
  
