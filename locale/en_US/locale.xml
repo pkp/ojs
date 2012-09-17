@@ -997,7 +997,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 <p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
 <p>If you wish to receive news and updates, you can:</p>
 <ol>
-	<li><a href="http://pkp.sfu.ca/node/add/pkp-site-submission" target="_new">Register</a> your journal, conference, or harvester and receive updates on software upgrades, security patches, and more.</li>
+	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Register</a> your journal, conference, or harvester and receive updates on software upgrades, security patches, and more.</li>
 	<li>Join our <a href="http://pkp.sfu.ca/informed" target="_new">discussion list</a> for OJS, OCS, the Harvester, Lemon8-XML, OMP, or all of the above.</li>
 	<li>Subscribe to the <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
 </ol>
