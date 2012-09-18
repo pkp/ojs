@@ -29,33 +29,10 @@ class Author extends PKPAuthor {
 	//
 
 	/**
-	 * Get ID of article.
-	 * @return int
-	 */
-	function getArticleId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getSubmissionId();
-	}
-
-	/**
-	 * Set ID of article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setSubmissionId($articleId);
-	}
-
-	/**
 	 * Get the localized competing interests statement for this author
 	 */
 	function getLocalizedCompetingInterests() {
 		return $this->getLocalizedData('competingInterests');
-	}
-
-	function getAuthorCompetingInterests() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedCompetingInterests();
 	}
 
 	/**

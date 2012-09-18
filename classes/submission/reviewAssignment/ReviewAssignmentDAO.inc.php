@@ -48,50 +48,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	}
 
 	/**
-	 * Retrieve a review assignment by review assignment id.
-	 * @param $reviewId int
-	 * @return ReviewAssignment
-	 */
-	function &getReviewAssignmentById($reviewId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getById($reviewId);
-		return $returner;
-	}
-
-	/**
-	 * Get all review assignments for an article.
-	 * @param $articleId int
-	 * @return array ReviewAssignments
-	 */
-	function &getReviewAssignmentsByArticleId($articleId, $round = null) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getBySubmissionId($articleId, $round);
-		return $returner;
-	}
-
-	/**
-	 * Get all review assignments for a reviewer.
-	 * @param $userId int
-	 * @return array ReviewAssignments
-	 */
-	function &getReviewAssignmentsByUserId($userId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getByUserId($userId);
-		return $returner;
-	}
-
-	/**
-	 * Get all review assignments for a review form.
-	 * @param $reviewFormId int
-	 * @return array ReviewAssignments
-	 */
-	function &getReviewAssignmentsByReviewFormId($reviewFormId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getByReviewFormId($reviewFormId);
-		return $returner;
-	}
-
-	/**
 	 * Get a review file for an article for each round.
 	 * @param $articleId int
 	 * @return array ArticleFiles
@@ -163,16 +119,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		unset($result);
 
 		return $files;
-	}
-
-	/**
-	 * Delete review assignments by article.
-	 * @param $articleId int
-	 * @return boolean
-	 */
-	function deleteReviewAssignmentsByArticle($articleId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->deleteBySubmissionId($articleId);
 	}
 
 	/**

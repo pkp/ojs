@@ -28,24 +28,6 @@ class ReviewAssignment extends PKPReviewAssignment {
 	//
 
 	/**
-	 * Get ID of article.
-	 * @return int
-	 */
-	function getArticleId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getSubmissionId();
-	}
-
-	/**
-	 * Set ID of article.
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setSubmissionId($articleId);
-	}
-
-	/**
 	 * Get an associative array matching reviewer recommendation codes with locale strings.
 	 * (Includes default '' => "Choose One" string.)
 	 * @return array recommendation => localeString
