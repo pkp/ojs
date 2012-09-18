@@ -483,7 +483,7 @@ class OJSPaymentManager extends PaymentManager {
 		$completedPaymentDao->insertCompletedPayment($completedPayment);
 
 		$queuedPaymentDao =& DAORegistry::getDAO('QueuedPaymentDAO');
-		$queuedPaymentDao->deleteQueuedPayment($queuedPayment->getQueuedPaymentId());
+		$queuedPaymentDao->deleteQueuedPayment($queuedPayment->getId());
 
 		return $returner;
 	}
