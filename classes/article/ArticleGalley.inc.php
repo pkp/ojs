@@ -61,24 +61,6 @@ class ArticleGalley extends ArticleFile {
 	//
 
 	/**
-	 * Get ID of galley.
-	 * @return int
-	 */
-	function getGalleyId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of galley.
-	 * @param $galleyId int
-	 */
-	function setGalleyId($galleyId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($galleyId);
-	}
-
-	/**
 	 * Get views count.
 	 * @return int
 	 */
