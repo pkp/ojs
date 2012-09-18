@@ -22,24 +22,6 @@ define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
 class Issue extends DataObject {
 	/**
-	 * get issue id
-	 * @return int
-	 */
-	function getIssueId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * set issue id
-	 * @param $issueId int
-	 */
-	function setIssueId($issueId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($issueId);
-	}
-
-	/**
 	 * get journal id
 	 * @return int
 	 */
@@ -61,11 +43,6 @@ class Issue extends DataObject {
 	 */
 	function getLocalizedTitle() {
 		return $this->getLocalizedData('title');
-	}
-
-	function getIssueTitle() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedTitle();
 	}
 
 	/**
@@ -238,11 +215,6 @@ class Issue extends DataObject {
 		return $this->getLocalizedData('description');
 	}
 
-	function getIssueDescription() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedDescription();
-	}
-
 	/**
 	 * get description
 	 * @param $locale string
@@ -382,11 +354,6 @@ class Issue extends DataObject {
 		return $this->getLocalizedData('fileName');
 	}
 
-	function getIssueFileName() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedFileName();
-	}
-
 	/**
 	 * Get issue cover image file name
 	 * @param $locale string
@@ -411,11 +378,6 @@ class Issue extends DataObject {
 	 */
 	function getLocalizedWidth() {
 		return $this->getLocalizedData('width');
-	}
-
-	function getIssueWidth() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedWidth();
 	}
 
 	/**
@@ -444,11 +406,6 @@ class Issue extends DataObject {
 		return $this->getLocalizedData('height');
 	}
 
-	function getIssueHeight() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedHeight();
-	}
-
 	/**
 	 * get height of cover page image
 	 * @param $locale string
@@ -473,11 +430,6 @@ class Issue extends DataObject {
 	 */
 	function getLocalizedOriginalFileName() {
 		return $this->getLocalizedData('originalFileName');
-	}
-
-	function getIssueOriginalFileName() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedOriginalFileName();
 	}
 
 	/**
@@ -506,11 +458,6 @@ class Issue extends DataObject {
 		return $this->getLocalizedData('coverPageAltText');
 	}
 
-	function getIssueCoverPageAltText() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedCoverPageAltText();
-	}
-
 	/**
 	 * Get issue cover image alternate text
 	 * @param $locale string
@@ -537,11 +484,6 @@ class Issue extends DataObject {
 		return $this->getLocalizedData('coverPageDescription');
 	}
 
-	function getIssueCoverPageDescription() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedCoverPageDescription();
-	}
-
 	/**
 	 * get cover page description
 	 * @param $locale string
@@ -566,11 +508,6 @@ class Issue extends DataObject {
 	 */
 	function getLocalizedShowCoverPage() {
 		return $this->getLocalizedData('showCoverPage');
-	}
-
-	function getIssueShowCoverPage() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedShowCoverPage();
 	}
 
 	/**
