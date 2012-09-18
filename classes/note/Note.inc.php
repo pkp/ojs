@@ -25,60 +25,6 @@ class Note extends PKPNote {
 	}
 
 	/**
-	 * get article note id
-	 * @return int
-	 */
-	function getNoteId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * set article note id
-	 * @param $noteId int
-	 */
-	function setNoteId($noteId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($noteId);
-	}
-
-	/**
-	 * get article id
-	 * @return int
-	 */
-	function getArticleId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getAssocId();
-	}
-
-	/**
-	 * set article id
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setAssocId($articleId);
-	}
-
-	/**
-	 * get note
-	 * @return string
-	 */
-	function getNote() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getContents();
-	}
-
-	/**
-	 * set note
-	 * @param $note string
-	 */
-	function setNote($note) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setContents($note);
-	}
-
-	/**
 	 * get file
 	 * @return string
 	 */
@@ -94,6 +40,10 @@ class Note extends PKPNote {
 		return $this->setData('file', $file);
 	}
 
+	/**
+	 * Get the original filename.
+	 * @return string
+	 */
 	function getOriginalFileName() {
 		$file = $this->getFile();
 		return $file->getOriginalFileName();

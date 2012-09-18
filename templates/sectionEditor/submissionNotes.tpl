@@ -66,7 +66,7 @@
 {if $noteViewType == "edit"}
 <h3>{translate key="submission.notes"}</h3>
 <form name="editNote" method="post" action="{url op="updateSubmissionNote"}" enctype="multipart/form-data">
-	<input type="hidden" name="articleId" value="{$articleNote->getArticleId()}" />
+	<input type="hidden" name="articleId" value="{$articleNote->getAssocId()}" />
 	<input type="hidden" name="noteId" value="{$articleNote->getId()}" />
 	<input type="hidden" name="fileId" value="{$articleNote->getFileId()}" />
 
@@ -81,7 +81,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.note"}</td>
-		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()|strip_unsafe_html|escape}</textarea></td>
+		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea">{$articleNote->getContents()|strip_unsafe_html|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.file"}</td>
@@ -93,7 +93,7 @@
 	</tr>
 </table>
 <br />
-<input type="button" class="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{url op="removeSubmissionNote" articleId=$articleNote->getArticleId() noteId=$articleNote->getId() fileId=$articleNote->getFileId()}', '{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" />&nbsp;<input type="submit" class="button defaultButton" value="{translate key="submission.notes.updateNote"}" />
+<input type="button" class="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{url op="removeSubmissionNote" articleId=$articleNote->getAssocId() noteId=$articleNote->getId() fileId=$articleNote->getFileId()}', '{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" />&nbsp;<input type="submit" class="button defaultButton" value="{translate key="submission.notes.updateNote"}" />
 </form>
 
 {elseif $noteViewType == "add"}
@@ -139,7 +139,7 @@
 			</script>
 			{$note->getDateCreated()|date_format:$dateFormatTrunc}
 		</td>
-		<td><a class="action" href="javascript:toggleNote({$note->getId()})">{$note->getTitle()|escape}</a><div style="display: none" id="note{$note->getId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
+		<td><a class="action" href="javascript:toggleNote({$note->getId()})">{$note->getTitle()|escape}</a><div style="display: none" id="note{$note->getId()}">{$note->getContents()|strip_unsafe_html|nl2br}</div></td>
 		<td>{if $note->getFileId()}<a class="action" href="{url op="downloadFile" path=$submission->getId()|to_array:$note->getFileId()}">{$note->getOriginalFileName()|escape}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{url op="submissionNotes" path=$submission->getId()|to_array:"edit":$note->getId()}" class="action">{translate key="common.view"}</a>&nbsp;|&nbsp;<a href="{url op="removeSubmissionNote" articleId=$submission->getId() noteId=$note->getId() fileId=$note->getFileId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>

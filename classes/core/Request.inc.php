@@ -35,7 +35,6 @@ class Request extends PKPRequest {
 	}
 
 	/**
-	 * Deprecated
 	 * @see PKPPageRouter::getContext()
 	 */
 	function &getJournal() {

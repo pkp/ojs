@@ -31,24 +31,6 @@ class Thesis extends DataObject {
 	//
 
 	/**
-	 * Get the ID of the thesis.
-	 * @return int
-	 */
-	function getThesisId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set the ID of the thesis.
-	 * @param $thesisId int
-	 */
-	function setThesisId($thesisId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($thesisId);
-	}
-
-	/**
 	 * Get the journal ID of the thesis.
 	 * @return int
 	 */

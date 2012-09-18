@@ -100,24 +100,6 @@ class StaticPage extends DataObject {
 	function setPath($path) {
 		return $this->setData('path', $path);
 	}
-
-	/**
-	 * Get ID of page.
-	 * @return int
-	 */
-	function getStaticPageId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of page.
-	 * @param $staticPageId int
-	 */
-	function setStaticPageId($staticPageId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($staticPageId);
-	}
 }
 
 ?>
