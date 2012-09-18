@@ -95,7 +95,7 @@ class EmailTemplateForm extends Form {
 	function readInputData() {
 		$this->readUserVars(array('emailId', 'subject', 'body', 'enabled', 'journalId', 'emailKey'));
 
-		$journalId = $this->journal->getJournalId();
+		$journalId = $this->journal->getId();
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate =& $emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journalId);
 		if (!$emailTemplate) $this->_data['isNewTemplate'] = true;

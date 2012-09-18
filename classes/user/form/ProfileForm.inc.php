@@ -309,10 +309,10 @@ class ProfileForm extends Form {
 
 		foreach ($journals as $thisJournal) {
 			if ($thisJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $thisJournal->getSetting('enableOpenAccessNotification')) {
-				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getJournalId());
-				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getJournalId(), $openAccessNotify);
+				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getId());
+				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getId(), $openAccessNotify);
 				if ($currentlyReceives != $shouldReceive) {
-					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getJournalId());
+					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getId());
 				}
 			}
 		}

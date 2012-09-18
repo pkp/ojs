@@ -73,7 +73,7 @@ class CounterPlugin extends GenericPlugin {
 		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
 
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
-		$counterReportDao->incrementCount($journal->getJournalId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
+		$counterReportDao->incrementCount($journal->getId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
 	}
 
 	/**
