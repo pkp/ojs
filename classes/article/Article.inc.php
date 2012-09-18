@@ -139,13 +139,16 @@ class Article extends Submission {
 		}
 
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
-		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
-				// If we already have an assigned ID, use it.
-				$storedId = $this->getStoredPubId($pubIdType);
-				if (!empty($storedId)) return $storedId;
 
-				return $pubIdPlugin->getPubId($this, $preview);
+		if (is_array($pubIdPlugins)) {
+			foreach ($pubIdPlugins as $pubIdPlugin) {
+				if ($pubIdPlugin->getPubIdType() == $pubIdType) {
+					// If we already have an assigned ID, use it.
+					$storedId = $this->getStoredPubId($pubIdType);
+					if (!empty($storedId)) return $storedId;
+
+					return $pubIdPlugin->getPubId($this, $preview);
+				}
 			}
 		}
 		return null;
