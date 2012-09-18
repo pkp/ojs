@@ -30,11 +30,6 @@ class Section extends DataObject {
 		return $this->getLocalizedData('title');
 	}
 
-	function getSectionTitle() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedTitle();
-	}
-
 	/**
 	 * Get localized abbreviation of journal section.
 	 * @return string
@@ -51,24 +46,6 @@ class Section extends DataObject {
 	//
 	// Get/set methods
 	//
-
-	/**
-	 * Get ID of section.
-	 * @return int
-	 */
-	function getSectionId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of section.
-	 * @param $sectionId int
-	 */
-	function setSectionId($sectionId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($sectionId);
-	}
 
 	/**
 	 * Get ID of journal.
@@ -226,11 +203,6 @@ class Section extends DataObject {
 		return $this->getLocalizedData('identifyType');
 	}
 
-	function getSectionIdentifyType() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedIdentifyType();
-	}
-
 	/**
 	 * Get string identifying type of items in this section.
 	 * @param $locale string
@@ -335,11 +307,6 @@ class Section extends DataObject {
 	 */
 	function getLocalizedPolicy() {
 		return $this->getLocalizedData('policy');
-	}
-
-	function getSectionPolicy() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedPolicy();
 	}
 
 	/**
