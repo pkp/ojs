@@ -38,10 +38,6 @@ class Section extends DataObject {
 		return $this->getLocalizedData('abbrev');
 	}
 
-	function getTrackAbbrev() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedAbbrev();
-	}
 
 	//
 	// Get/set methods
