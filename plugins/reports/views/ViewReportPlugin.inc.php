@@ -72,7 +72,7 @@ class ViewReportPlugin extends ReportPlugin {
 		while ($publishedArticle =& $publishedArticles->next()) {
 			$articleId = $publishedArticle->getId();
 			$issueId = $publishedArticle->getIssueId();
-			$articleTitles[$articleId] = $publishedArticle->getArticleTitle();
+			$articleTitles[$articleId] = $publishedArticle->getLocalizedTitle();
 
 			// Store the abstract view count
 			$abstractViewCounts[$articleId] = $publishedArticle->getViews();

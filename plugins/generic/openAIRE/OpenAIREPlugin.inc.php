@@ -261,7 +261,7 @@ class OpenAIREPlugin extends GenericPlugin {
 
 		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
 		$openAIREDao->setOAI($journalOAI);
-		if ($openAIREDao->isOpenAIREArticle($article->getArticleId())) {
+		if ($openAIREDao->isOpenAIREArticle($article->getId())) {
 
 			// Determine OpenAIRE DC elements values
 			// OpenAIRE DC Relation
