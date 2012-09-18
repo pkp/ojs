@@ -33,25 +33,9 @@ class OJSCompletedPayment extends Payment {
 		parent::Payment();
 	}
 
-	/**
-	 * Get/set methods
-	 */
-
-	/**
-	 * Set the  ID of the payment.
-	 * @param $queuedPaymentId int
-	 */
-	function setCompletedPaymentId($queuedPaymentId) {
-		parent::setPaymentId($queuedPaymentId);
-	}
-
-	/**
-	 * Get the ID of the payment.
-	 * @return int
-	 */
-	function getCompletedPaymentId() {
-		return parent::getPaymentId();
-	}
+	//
+	// Get/set methods
+	//
 
 	/**
 	 * Get the journal ID of the payment.
