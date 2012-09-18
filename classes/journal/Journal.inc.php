@@ -150,11 +150,6 @@ class Journal extends DataObject {
 		return null;
 	}
 
-	function getJournalPageHeaderTitle($home = false) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedPageHeaderTitle($home);
-	}
-
 	/**
 	 * Get "localized" journal page logo (if applicable).
 	 * param $home boolean get homepage logo
@@ -167,11 +162,6 @@ class Journal extends DataObject {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
 		return null;
-	}
-
-	function getJournalPageHeaderLogo($home = false) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedPageHeaderLogo($home);
 	}
 
 	/**
@@ -199,11 +189,6 @@ class Journal extends DataObject {
 		return $this->getLocalizedSetting('title', $preferredLocale);
 	}
 
-	function getJournalTitle() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedTitle();
-	}
-
 	/**
 	 * Get title of journal
 	 * @param $locale string
@@ -219,11 +204,6 @@ class Journal extends DataObject {
 	 */
 	function getLocalizedInitials() {
 		return $this->getLocalizedSetting('initials');
-	}
-
-	function getJournalInitials() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedInitials();
 	}
 
 	/**
@@ -252,24 +232,6 @@ class Journal extends DataObject {
 	}
 
 	/**
-	 * Get ID of journal.
-	 * @return int
-	 */
-	function getJournalId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of journal.
-	 * @param $journalId int
-	 */
-	function setJournalId($journalId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($journalId);
-	}
-
-	/**
 	 * Get the localized description of the journal.
 	 * @return string
 	 */
@@ -277,10 +239,6 @@ class Journal extends DataObject {
 		return $this->getDescription(AppLocale::getLocale());
 	}
 
-	function getJournalDescription() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getLocalizedDescription();
-	}
 	/**
 	 * Get description of journal.
 	 * @param $locale string
