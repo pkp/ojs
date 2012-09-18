@@ -533,7 +533,7 @@ class ArticleHandler extends Handler {
 				}
 			}
 		} else {
-			$request->redirect(null, 'index');
+			$request->redirect(null, 'search');
 		}
 		$this->journal =& $journal;
 		$this->issue =& $issue;
