@@ -40,15 +40,6 @@ class JournalDAO extends DAO {
 	}
 
 	/**
-	 * Deprecated. @see JournalDAO::getById
-	 */
-	function &getJournal($journalId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getById($journalId);
-		return $returner;
-	}
-
-	/**
 	 * Retrieve a journal by path.
 	 * @param $path string
 	 * @return Journal
@@ -278,16 +269,6 @@ class JournalDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all enabled journals
-	 * @return array Journals ordered by sequence
-	 */
-	function &getEnabledJournals($rangeInfo = null) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$returner =& $this->getJournals(true, $rangeInfo);
-		return $returner;
-	}
-
-	/**
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
@@ -302,16 +283,6 @@ class JournalDAO extends DAO {
 		unset($journalIterator);
 
 		return $journals;
-	}
-
-	/**
-	 * Retrieve enabled journal IDs and titles in an associative array
-	 * @return array
-	 */
-	function &getEnabledJournalTitles() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		$titles =& $this->getJournalTitles(true);
-		return $titles;
 	}
 
 	/**

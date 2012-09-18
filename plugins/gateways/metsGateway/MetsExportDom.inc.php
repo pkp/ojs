@@ -691,9 +691,9 @@ class MetsExportDom {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($article->getJournalId());
 		$base_url =& Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/article/downloadSuppFile/'.$file->getArticleId().'/'.$file->getSuppFileId();
+		$url = $base_url.'/index.php/'.$journal->getPath().'/article/downloadSuppFile/'.$file->getArticleId().'/'.$file->getId();
 		return $url;
 	}
-
 }
+
 ?>

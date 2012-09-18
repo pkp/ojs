@@ -43,24 +43,6 @@ class Subscription extends DataObject {
 	//
 
 	/**
-	 * Get the ID of the subscription.
-	 * @return int
-	 */
-	function getSubscriptionId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set the ID of the subscription.
-	 * @param $subscriptionId int
-	 */
-	function setSubscriptionId($subscriptionId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($subscriptionId);
-	}
-
-	/**
 	 * Get the journal ID of the subscription.
 	 * @return int
 	 */

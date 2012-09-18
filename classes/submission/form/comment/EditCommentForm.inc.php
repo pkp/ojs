@@ -63,7 +63,7 @@ class EditCommentForm extends Form {
 	function display($additionalHiddenParams = null) {
 		$hiddenFormParams = array(
 			'articleId' => $this->article->getId(),
-			'commentId' => $this->comment->getCommentId()
+			'commentId' => $this->comment->getId()
 		);
 		if (isset($additionalHiddenParams)) {
 			$hiddenFormParams = array_merge ($hiddenFormParams, $additionalHiddenParams);

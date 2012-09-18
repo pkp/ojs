@@ -29,24 +29,6 @@ class ArticleComment extends DataObject {
 	}
 
 	/**
-	 * get article comment id
-	 * @return int
-	 */
-	function getCommentId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * set article comment id
-	 * @param $commentId int
-	 */
-	function setCommentId($commentId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($commentId);
-	}
-
-	/**
 	 * get comment type
 	 * @return int
 	 */

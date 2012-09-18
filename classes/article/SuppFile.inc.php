@@ -29,24 +29,6 @@ class SuppFile extends ArticleFile {
 	//
 
 	/**
-	 * Get ID of supplementary file.
-	 * @return int
-	 */
-	function getSuppFileId() {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->getId();
-	}
-
-	/**
-	 * Set ID of supplementary file.
-	 * @param $suppFileId int
-	 */
-	function setSuppFileId($suppFileId) {
-		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-		return $this->setId($suppFileId);
-	}
-
-	/**
 	 * Get ID of article.
 	 * @return int
 	 */

@@ -46,11 +46,11 @@ function confirmForgottenUpload() {
 </tr>
 {foreach from=$suppFiles item=file}
 <tr valign="top">
-	<td>{$file->getSuppFileId()}</td>
+	<td>{$file->getId()}</td>
 	<td>{$file->getSuppFileTitle()|escape}</td>
 	<td>{$file->getOriginalFileName()|escape}</td>
 	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
-	<td align="right"><a href="{url op="submitSuppFile" path=$file->getSuppFileId() articleId=$articleId}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubmitSuppFile" path=$file->getSuppFileId() articleId=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
+	<td align="right"><a href="{url op="submitSuppFile" path=$file->getId() articleId=$articleId}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubmitSuppFile" path=$file->getId() articleId=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
 <tr valign="top">
