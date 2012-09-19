@@ -145,7 +145,7 @@ class UserAction {
 
 		// Delete the old user and associated info.
 		$sessionDao =& DAORegistry::getDAO('SessionDAO');
-		$sessionDao->deleteSessionsByUserId($oldUserId);
+		$sessionDao->deleteByUserId($oldUserId);
 		$temporaryFileDao =& DAORegistry::getDAO('TemporaryFileDAO');
 		$temporaryFileDao->deleteTemporaryFilesByUserId($oldUserId);
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
