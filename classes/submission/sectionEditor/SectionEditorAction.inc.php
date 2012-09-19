@@ -2064,7 +2064,7 @@ class SectionEditorAction extends Action {
 						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getId());
 						if($articleComments) {
 							$body .= "------------------------------------------------------\n";
-							$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+							$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getId()]))) . "\n";
 							if (is_array($articleComments)) {
 								foreach ($articleComments as $comment) {
 									// If the comment is viewable by the author, then add the comment.
@@ -2080,7 +2080,7 @@ class SectionEditorAction extends Action {
 							$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 							if(!$articleComments) {
 								$body .= "------------------------------------------------------\n";
-								$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
+								$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getId()]))) . "\n\n";
 							}
 							foreach ($reviewFormElements as $reviewFormElement) if ($reviewFormElement->getIncluded()) {
 								$body .= String::html2text($reviewFormElement->getLocalizedQuestion()) . ": \n";

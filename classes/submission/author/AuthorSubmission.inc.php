@@ -82,7 +82,7 @@ class AuthorSubmission extends Article {
 		$reviewAssignments = array();
 		$found = false;
 		for ($i=0, $count=count($this->reviewAssignments); $i < $count; $i++) {
-			if ($this->reviewAssignments[$i]->getReviewId() == $reviewId) {
+			if ($this->reviewAssignments[$i]->getId() == $reviewId) {
 				$found = true;
 			} else {
 				array_push($reviewAssignments, $this->reviewAssignments[$i]);
