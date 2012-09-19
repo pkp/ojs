@@ -74,7 +74,7 @@ class IndexHandler extends Handler {
 			}
 			$templateMgr->display('index/journal.tpl');
 		} else {
-			$site =& Request::getSite();
+			$site =& $request->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
 				$request->redirect($journal->getPath());
@@ -90,7 +90,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('usePaging', $usePaging);
 
 			// Fetch the alpha list parameters
-			$searchInitial = Request::getUserVar('searchInitial');
+			$searchInitial = $request->getUserVar('searchInitial');
 			$templateMgr->assign('searchInitial', $searchInitial);
 			$templateMgr->assign('useAlphalist', $site->getSetting('useAlphalist'));
 
