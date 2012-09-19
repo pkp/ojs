@@ -144,7 +144,7 @@ class EditorSubmissionDAO extends DAO {
 		$reviewAssignments =& $editorSubmission->getReviewAssignments();
 		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
 			$reviewAssignments[$i]->setArticleId($editorSubmission->getId());
-			$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignments[$i]);
+			$this->reviewAssignmentDao->insertObject($reviewAssignments[$i]);
 		}
 
 		return $editorSubmission->getEditId();

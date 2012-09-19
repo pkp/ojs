@@ -235,7 +235,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Remove deleted review assignments
 		$removedReviewAssignments = $sectionEditorSubmission->getRemovedReviewAssignments();
 		for ($i=0, $count=count($removedReviewAssignments); $i < $count; $i++) {
-			$this->reviewAssignmentDao->deleteReviewAssignmentById($removedReviewAssignments[$i]);
+			$this->reviewAssignmentDao->deleteById($removedReviewAssignments[$i]);
 		}
 
 		// Update article
