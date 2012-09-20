@@ -2221,7 +2221,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 * @param $request PKPRequest
 	 */
-	function downloadFile($args) {
+	function downloadFile($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // May be null
