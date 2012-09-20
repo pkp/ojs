@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.medra.classes.DOIExportPlugin');
+if (!class_exists('DOIExportPlugin')) { // Bug #7848
+	import('plugins.importexport.medra.classes.DOIExportPlugin');
+}
 
 // O4DOI schemas.
 define('O4DOI_ISSUE_AS_WORK', 0x01);
