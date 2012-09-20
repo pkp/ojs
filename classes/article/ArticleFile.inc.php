@@ -44,8 +44,10 @@ class ArticleFile extends SubmissionFile {
 		$article =& $articleDao->getArticle($this->getArticleId());
 		$journalId = $article->getJournalId();
 
+		import('classes.file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($this->getArticleId());
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
-		'/articles/' . $this->getArticleId() . '/' . $this->getFileStage() . '/' . $this->getFileName();
+			'/articles/' . $this->getArticleId() . '/' . $articleFileManager->fileStageToPath($this->getFileStage()) . '/' . $this->getFileName();
 	}
 
 	//
