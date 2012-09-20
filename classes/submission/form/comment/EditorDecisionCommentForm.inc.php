@@ -79,7 +79,7 @@ class EditorDecisionCommentForm extends CommentForm {
 
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add author
-			$user =& $userDao->getUser($this->article->getUserId());
+			$user =& $userDao->getById($this->article->getUserId());
 
 			if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {

@@ -582,7 +582,7 @@ class BooksForReviewEditorHandler extends Handler {
 			if ($status == BFR_STATUS_AVAILABLE) {
 				$userId = (int) $request->getUserVar('userId');
 				$userDao =& DAORegistry::getDAO('UserDAO');
-				$user =& $userDao->getUser($userId);
+				$user =& $userDao->getById($userId);
 				$userName = $user->getFullName();
 				$userEmail = $user->getEmail();
 				$userMailingAddress = $user->getMailingAddress();

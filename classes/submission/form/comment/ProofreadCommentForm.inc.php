@@ -93,7 +93,7 @@ class ProofreadCommentForm extends CommentForm {
 		// Get layout editor
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+			$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
@@ -101,13 +101,13 @@ class ProofreadCommentForm extends CommentForm {
 		// Get proofreader
 		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
-			$proofreader =& $userDao->getUser($proofSignoff->getUserId());
+			$proofreader =& $userDao->getById($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}
 
 		// Get author
-		$author =& $userDao->getUser($this->article->getUserId());
+		$author =& $userDao->getById($this->article->getUserId());
 
 		// Choose who receives this email
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {

@@ -128,7 +128,7 @@ class RegistrationHandler extends UserHandler {
 
 		$journal =& $request->getJournal();
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUserByUsername($username);
+		$user =& $userDao->getByUsername($username);
 		if (!$user) $request->redirect(null, 'login');
 
 		// Checks user & token

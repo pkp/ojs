@@ -157,7 +157,7 @@ class Validation {
 	 */
 	function checkCredentials($username, $password) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUserByUsername($username, false);
+		$user =& $userDao->getByUsername($username, false);
 
 		$valid = false;
 		if (isset($user)) {
@@ -252,7 +252,7 @@ class Validation {
 	 */
 	function generatePasswordResetHash($userId) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		if (($user = $userDao->getUser($userId)) == null) {
+		if (($user = $userDao->getById($userId)) == null) {
 			// No such user
 			return false;
 		}

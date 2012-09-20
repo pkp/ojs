@@ -28,7 +28,7 @@ class ReviewReminder extends ScheduledTask {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$reviewId = $reviewAssignment->getId();
 
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
 		import('classes.mail.ArticleMailTemplate');

@@ -248,7 +248,7 @@ class OJSPaymentManager extends PaymentManager {
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao =& DAORegistry::getDAO('UserDAO');
-				$user =& $userDao->getUser($queuedPayment->getuserId());
+				$user =& $userDao->getById($queuedPayment->getuserId());
 				$userDao->renewMembership($user);
 				$returner = true;
 				break;

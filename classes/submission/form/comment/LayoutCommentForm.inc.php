@@ -76,7 +76,7 @@ class LayoutCommentForm extends CommentForm {
 
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-				$user =& $userDao->getUser($layoutSignoff->getUserId());
+				$user =& $userDao->getById($layoutSignoff->getUserId());
 
 				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}

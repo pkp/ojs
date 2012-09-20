@@ -612,7 +612,7 @@ class SubscriptionAction {
 		if (empty($subscriptionContactEmail)) return false;
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUser($subscription->getUserId());
+		$user =& $userDao->getById($subscription->getUserId());
 
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());

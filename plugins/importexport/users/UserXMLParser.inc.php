@@ -219,7 +219,7 @@ class UserXMLParser {
 
 			if (!$newUsername) {
 				// Check if user already exists
-				$userExists = $userDao->getUserByUsername($user->getUsername(), true);
+				$userExists = $userDao->getByUsername($user->getUsername(), true);
 				if ($userExists != null) {
 					$user->setId($userExists->getId());
 				}

@@ -102,7 +102,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		// Iterate over individual subscriptions and write out each to file
 		$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByJournalId($journalId);
 		while ($subscription =& $individualSubscriptions->next()) {
-			$user =& $userDao->getUser($subscription->getUserId());
+			$user =& $userDao->getById($subscription->getUserId());
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 			foreach ($columns as $index => $junk) {
@@ -188,7 +188,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		// Iterate over institutional subscriptions and write out each to file
 		$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByJournalId($journalId);
 		while ($subscription =& $institutionalSubscriptions->next()) {
-			$user =& $userDao->getUser($subscription->getUserId());
+			$user =& $userDao->getById($subscription->getUserId());
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 			foreach ($columns as $index => $junk) {

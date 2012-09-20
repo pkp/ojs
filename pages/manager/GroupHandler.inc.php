@@ -391,7 +391,7 @@ class GroupHandler extends ManagerHandler {
 
 			if ($userId !== null) {
 				$userDao =& DAORegistry::getDAO('UserDAO');
-				$user =& $userDao->getUser($userId);
+				$user =& $userDao->getById($userId);
 
 				if (!$user) $passedValidation = false;
 				else $this->user =& $user;

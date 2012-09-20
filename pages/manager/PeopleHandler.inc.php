@@ -562,7 +562,7 @@ class PeopleHandler extends ManagerHandler {
 				return $templateMgr->display('common/error.tpl');
 			}
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getUser($userId);
+			$user =& $userDao->getById($userId);
 			if ($user) {
 				$user->setDisabled(1);
 				$user->setDisabledReason(Request::getUserVar('reason'));
@@ -586,7 +586,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if ($userId != null && $userId != $user->getId()) {
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getUser($userId, true);
+			$user =& $userDao->getById($userId, true);
 			if ($user) {
 				$user->setDisabled(0);
 			}
@@ -680,9 +680,9 @@ class PeopleHandler extends ManagerHandler {
 		$userId = isset($args[0]) ? $args[0] : 0;
 		if (is_numeric($userId)) {
 			$userId = (int) $userId;
-			$user = $userDao->getUser($userId);
+			$user = $userDao->getById($userId);
 		} else {
-			$user = $userDao->getUserByUsername($userId);
+			$user = $userDao->getByUsername($userId);
 		}
 
 		if ($user == null) {

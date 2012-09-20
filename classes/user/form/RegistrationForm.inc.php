@@ -215,9 +215,9 @@ class RegistrationForm extends Form {
 				$sessionManager =& SessionManager::getManager();
 				$session =& $sessionManager->getUserSession();
 
-				$user =& $userDao->getUserByUsername($session->getSessionVar('username'));
+				$user =& $userDao->getByUsername($session->getSessionVar('username'));
 			} else {
-				$user =& $userDao->getUserByUsername($this->getData('username'));
+				$user =& $userDao->getByUsername($this->getData('username'));
 			}
 
 			if ($user == null) {

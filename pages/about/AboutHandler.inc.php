@@ -261,7 +261,7 @@ class AboutHandler extends Handler {
 				$roleId = $role->getRoleId();
 				if (in_array($roleId, $acceptableRoles)) {
 					$userDao =& DAORegistry::getDAO('UserDAO');
-					$user =& $userDao->getUser($userId);
+					$user =& $userDao->getById($userId);
 					break;
 				}
 			}

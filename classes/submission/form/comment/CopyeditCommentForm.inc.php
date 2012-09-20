@@ -96,13 +96,13 @@ class CopyeditCommentForm extends CommentForm {
 		// Get copyeditor
 		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
-			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
+			$copyeditor =& $userDao->getById($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}
 
 		// Get author
-		$author =& $userDao->getUser($article->getUserId());
+		$author =& $userDao->getById($article->getUserId());
 
 		// Choose who receives this email
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {

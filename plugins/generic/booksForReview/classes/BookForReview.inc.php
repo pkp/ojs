@@ -147,7 +147,7 @@ class BookForReview extends DataObject {
 	 */
 	function &getUser() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		return $userDao->getUser($this->getData('userId'));
+		return $userDao->getById($this->getData('userId'));
 	}
 
 	/**
@@ -201,7 +201,7 @@ class BookForReview extends DataObject {
 	 */
 	function &getEditor() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		return $userDao->getUser($this->getData('editorId'));
+		return $userDao->getById($this->getData('editorId'));
 	}
 
 	/**

@@ -509,7 +509,7 @@ class UserHandler extends Handler {
 		if(!$accountIsVisible) $request->redirect(null, 'index');
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUser($userId);
+		$user =& $userDao->getById($userId);
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->display('user/publicProfile.tpl');

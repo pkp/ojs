@@ -54,7 +54,7 @@ class LoginChangePasswordForm extends Form {
 	 */
 	function execute() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUserByUsername($this->getData('username'), false);
+		$user =& $userDao->getByUsername($this->getData('username'), false);
 		if ($user != null) {
 			if ($user->getAuthId()) {
 				$authDao =& DAORegistry::getDAO('AuthSourceDAO');

@@ -41,7 +41,7 @@ class ReviewerAction extends Action {
 		$reviewId = $reviewerSubmission->getReviewId();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
 		// Only confirm the review for the reviewer if
@@ -121,7 +121,7 @@ class ReviewerAction extends Action {
 		if (!isset($reviewerRecommendationOptions[$recommendation])) return true;
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewerSubmission->getReviewId());
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
 		// Only record the reviewers recommendation if
@@ -213,7 +213,7 @@ class ReviewerAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 
 			// Add log
 			import('classes.article.log.ArticleLog');

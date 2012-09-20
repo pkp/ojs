@@ -312,7 +312,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		switch ($command) {
 			case 'importIssues':
 				$userName = array_shift($args);
-				$user =& $userDao->getUserByUsername($userName);
+				$user =& $userDao->getByUsername($userName);
 
 				if (!$user) {
 					if ($userName != '') {

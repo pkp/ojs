@@ -34,7 +34,7 @@ class ProofreaderAction extends Action {
 			// Add log entry
 			$user =& Request::getUser();
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$proofreader =& $userDao->getUser($userId);
+			$proofreader =& $userDao->getById($userId);
 			if (!isset($proofreader)) return;
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
@@ -69,7 +69,7 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateNotified';
 				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
 				$setUserId = $sectionEditorSubmission->getUserId();
-				$receiver =& $userDao->getUser($setUserId);
+				$receiver =& $userDao->getById($setUserId);
 				$setUserId = $receiver;
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
@@ -88,7 +88,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_AUTHOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
 				$setDateField = 'setDateAcknowledged';
-				$receiver =& $userDao->getUser($sectionEditorSubmission->getUserId());
+				$receiver =& $userDao->getById($sectionEditorSubmission->getUserId());
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
@@ -110,7 +110,7 @@ class ProofreaderAction extends Action {
 
 				if ($nextSignoff->getUserId() != 0) {
 					$setNextDateField = 'setDateNotified';
-					$proofreader =& $userDao->getUser($nextSignoff->getUserId());
+					$proofreader =& $userDao->getById($nextSignoff->getUserId());
 
 					$receiverName = $proofreader->getFullName();
 					$receiverAddress = $proofreader->getEmail();
@@ -204,7 +204,7 @@ class ProofreaderAction extends Action {
 				foreach ($editAssignments as $editAssignment) {
 					if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
 						if ($receiver === null) {
-							$receiver =& $userDao->getUser($editAssignment->getEditorId());
+							$receiver =& $userDao->getById($editAssignment->getEditorId());
 						} else {
 							$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
 						}

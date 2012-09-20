@@ -838,7 +838,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 
 	function &_returnReviewerUserFromRow(&$row) { // FIXME
-		$user =& $this->userDao->getUser($row['user_id']);
+		$user =& $this->userDao->getById($row['user_id']);
 		$user->review_id = $row['review_id'];
 		$user->declined = $row['declined'];
 

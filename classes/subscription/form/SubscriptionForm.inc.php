@@ -94,7 +94,7 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUser(isset($this->userId)?$this->userId:$this->getData('userId'));
+		$user =& $userDao->getById(isset($this->userId)?$this->userId:$this->getData('userId'));
 
 		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('username', $user->getUsername());
@@ -131,9 +131,9 @@ class SubscriptionForm extends Form {
 
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			if (isset($this->userId)) {
-				$user =& $userDao->getUser($this->userId);
+				$user =& $userDao->getById($this->userId);
 			} else {
-				$user =& $userDao->getUser($subscription->getUserId());
+				$user =& $userDao->getById($subscription->getUserId());
 			}
 
 			$this->_data = array(
@@ -222,7 +222,7 @@ class SubscriptionForm extends Form {
 		$subscription =& $this->subscription;
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUser($this->getData('userId'));
+		$user =& $userDao->getById($this->getData('userId'));
 
 		$subscription->setJournalId($journal->getId());
 		$subscription->setStatus($this->getData('status'));
@@ -265,7 +265,7 @@ class SubscriptionForm extends Form {
 		$journal =& Request::getJournal();
 		$journalName = $journal->getLocalizedTitle();
 		$journalId = $journal->getId();
-		$user =& $userDao->getUser($this->subscription->getUserId());
+		$user =& $userDao->getById($this->subscription->getUserId());
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->subscription->getTypeId());
 
 		$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');

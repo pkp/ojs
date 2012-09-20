@@ -133,7 +133,7 @@ class ReviewerHandler extends Handler {
 
 		if ($accessKey) {
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getUser($accessKey->getUserId(), false);
+			$user =& $userDao->getById($accessKey->getUserId(), false);
 			return $user;
 		}
 

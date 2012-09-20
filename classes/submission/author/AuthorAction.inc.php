@@ -365,7 +365,7 @@ class AuthorAction extends Action {
 		$editAssignments = $authorSubmission->getEditAssignments();
 		$editors = array();
 		foreach ($editAssignments as $editAssignment) {
-			array_push($editors, $userDao->getUser($editAssignment->getEditorId()));
+			array_push($editors, $userDao->getById($editAssignment->getEditorId()));
 		}
 
 		if ($send && !$email->hasErrors()) {

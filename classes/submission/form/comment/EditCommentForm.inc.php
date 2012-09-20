@@ -142,7 +142,7 @@ class EditCommentForm extends Form {
 		// Get proofreader
 		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
-			$proofreader =& $userDao->getUser($proofSignoff->getUserId());
+			$proofreader =& $userDao->getById($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}
@@ -150,7 +150,7 @@ class EditCommentForm extends Form {
 		// Get layout editor
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+			$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
@@ -158,7 +158,7 @@ class EditCommentForm extends Form {
 		// Get copyeditor
 		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
-			$copyeditor =& $userDao->getUser($copySignoff->getUserId());
+			$copyeditor =& $userDao->getById($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}
@@ -167,13 +167,13 @@ class EditCommentForm extends Form {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($this->comment->getAssocId());
 		if ($reviewAssignment != null && $reviewAssignment->getReviewerId() != null) {
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		} else {
 			$reviewer = null;
 		}
 
 		// Get author
-		$author =& $userDao->getUser($this->article->getUserId());
+		$author =& $userDao->getById($this->article->getUserId());
 
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:
