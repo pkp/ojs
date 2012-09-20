@@ -253,7 +253,7 @@ class UserXMLParser {
 			$interests = explode(',', $interests);
 			$interests = array_map('trim', $interests); // Trim leading whitespace
 			if(is_array($interests) && !empty($interests)) {
-				$interestDao->insertInterests($interests, $user->getId());
+				$interestDao->setUserInterests($interests, $user->getId());
 			}
 
 			// Enroll user in specified roles
