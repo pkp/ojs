@@ -236,41 +236,6 @@ class ArticleHandler extends Handler {
 	}
 
 	/**
-	 * Article interstitial page before PDF is shown
-	 * @param $args array
-	 * @param $request Request
-	 * @param $galley ArticleGalley
-	 */
-	function viewPDFInterstitial($args, &$request, $galley = null) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$this->validate($request, $articleId, $galleyId);
-		$journal =& $this->journal;
-		$issue =& $this->issue;
-		$article =& $this->article;
-		$this->setupTemplate();
-
-		if (!$galley) {
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
-			} else {
-				$galley =& $galleyDao->getGalley($galleyId, $article->getId());
-			}
-		}
-
-		if (!$galley) $request->redirect(null, null, 'view', $articleId);
-
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign_by_ref('galley', $galley);
-		$templateMgr->assign_by_ref('article', $article);
-
-		$templateMgr->display('article/pdfInterstitial.tpl');
-	}
-
-	/**
 	 * Article interstitial page before a non-PDF, non-HTML galley is
 	 * downloaded
 	 * @param $args array
