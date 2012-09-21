@@ -163,8 +163,7 @@ class MetsExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'issue');
 		import('classes.config.Config');
-		$base_url = Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/issue/view/'.$issue->getId();
+		$url = Request::url($journal->getPath(), 'issue', 'view', array($issue->getId()));
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $mods, 'mods:identifier', $url);
 		XMLCustomWriter::setAttribute($modsIdentifier, 'type', 'uri');
 		$modsOriginInfo =& XMLCustomWriter::createElement($doc, 'mods:originInfo');
@@ -178,7 +177,7 @@ class MetsExportDom {
 		$modsTitleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getLocalizedTitle());
 		XMLCustomWriter::appendChild($modsRelatedItem, $modsTitleInfo);
-		$url = $base_url.'/index.php/'.$journal->getPath();
+		$url = Request::url($journal->getPath());
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsRelatedItem, 'mods:identifier', $url);
 		XMLCustomWriter::setAttribute($modsIdentifier, 'type', 'uri');
 		$modsPart =& XMLCustomWriter::createElement($doc, 'mods:part');

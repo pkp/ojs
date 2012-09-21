@@ -167,8 +167,7 @@ class MetsExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'issue');
 		import('classes.config.Config');
-		$base_url =& Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/issue/view/'.$issue->getId();
+		$url = Request::url($journal->getPath(), 'issue', 'view', array($issue->getId()));
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $mods, 'mods:identifier', $url);
 		XMLCustomWriter::setAttribute($modsIdentifier, 'type', 'uri');
 		$modsOriginInfo =& XMLCustomWriter::createElement($doc, 'mods:originInfo');
@@ -184,7 +183,7 @@ class MetsExportDom {
 		$modsTitleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getLocalizedTitle());
 		XMLCustomWriter::appendChild($modsRelatedItem, $modsTitleInfo);
-		$url = $base_url.'/index.php/'.$journal->getPath();
+		$url = Request::url($journal->getPath());
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsRelatedItem, 'mods:identifier', $url);
 		XMLCustomWriter::setAttribute($modsIdentifier, 'type', 'uri');
 		$modsPart =& XMLCustomWriter::createElement($doc, 'mods:part');
@@ -670,14 +669,11 @@ class MetsExportDom {
 	 */
 	function getPublicFileUrl(&$file) {
 		import('classes.config.Config');
-		$base_url =& Config::getVar('general','base_url');
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($file->getArticleId());
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($article->getJournalId());
-		$base_url =& Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/article/download/'.$file->getArticleId().'/'.$file->getBestGalleyId($journal);
-		return $url;
+		return Request::url($journal->getPath(), 'article', 'download', array($file->getArticleId(), $file->getBestGalleyId($journal)));
 	}
 
 	/**
@@ -685,14 +681,11 @@ class MetsExportDom {
 	 */
 	function getPublicSuppFileUrl(&$file) {
 		import('classes.config.Config');
-		$base_url =& Config::getVar('general','base_url');
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($file->getArticleId());
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($article->getJournalId());
-		$base_url =& Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/article/downloadSuppFile/'.$file->getArticleId().'/'.$file->getId();
-		return $url;
+		return Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($file->getArticleId(), $file->getId()));
 	}
 }
 
