@@ -47,6 +47,8 @@
 
 	<!-- Bug #3922# No need for the notification_status table (it is encapsulated by the notification table) -->
 	<sql>
+		<query>INSERT INTO notification_subscription_settings (setting_name, setting_value, user_id, context, setting_type)
+		SELECT 'emailed_notification', 268435477, ns.user_id, ns.journal_id, 'int' FROM notification_status ns</query><!-- NOTIFICATION_TYPE_PUBLISHED_ISSUE -->
 		<drop table="notification_status" />
 	</sql>
 
