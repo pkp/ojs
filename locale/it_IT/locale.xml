@@ -881,7 +881,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.payNow">Paga ora</message>
 	<message key="payment.waive">Esenzione</message>
 	<message key="payment.alreadyPaid">Già pagato</message>
-	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La proposta non sarà revisionata fino a quando il pagamento non arriverà. Clicca Paga ora in alto per vedere le istruzioni di pagamento.</message>
+	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La proposta non sarà revisionata fino a quando il pagamento non arriverà. Clicca 'Paga ora' in alto per vedere le istruzioni di pagamento.</message>
 	<message key="payment.paymentReceived">Pagamento ricevuto</message>
 	<message key="payment.paymentSent">Il pagamento è già stato inviato</message>
 	<message key="payment.type.submission">Contributo per l'invio di una proposta</message>
@@ -892,7 +892,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.publication.payPublication">File per la fase di copyedit</message>
 	<message key="payment.publication.publicationPaid">Contributo per la pubblicazione pagato</message>
 	<message key="payment.subscription.renew">Rinnova l'abbonamento</message>
-	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a un database SQL per memorizzare i dati. Vedi i requisiti di sistema sopra per un elenco dei DBMS supportati. Nei campi sotto, fornisci le impostazioni per connetterti al DB.</message>
+	<message key="installer.databaseSettingsInstructions">OJS richiede l'accesso a un database SQL per memorizzare i dati. Vedi i requisiti di sistema sopra per un elenco dei DBMS supportati. Nei campi sotto, fornisci le impostazioni per connetterti al DB.</message>
 	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$articleId} è stata registrata da {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
@@ -953,7 +953,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.membership.buyMembership">Acquista l'iscrizione individuale</message>
 	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$articleId} in favore di {$reviewerName}.</message>
-	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
+	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename} di help ricaricata in cerca di {$id}.</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Articolo</message>
 	<message key="user.manageMySubscriptions">Gestisci i miei abbonamenti</message>

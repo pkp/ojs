@@ -47,7 +47,7 @@
 	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (es. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
-	<message key="admin.journals.transcode">Converti i metadata dell'articolo da ISO8859-1</message>
+	<message key="admin.journals.transcode">Converti i metadati dell'articolo da ISO8859-1</message>
 	<message key="admin.journals.redirect">Genera il codice per mappare le URL di OJS1 verso quelle di OJS2</message>
 	<message key="admin.journals.form.importPathRequired">È richiesto il path dell'importazione.</message>
 	<message key="admin.journals.importErrors">Importazione fallita</message>
@@ -73,9 +73,9 @@
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.enableCategories">Consenti agli amministratori delle riviste di organizzarle in categorie</message>
 	<message key="admin.categories.nameRequired">Inserire il nome di una categoria</message>
-	<message key="admin.settings.journalsList.description">Scegli gli elementi da mostrare per ciascuna rivista nella home page del sito.</message>
+	<message key="admin.settings.journalsList.description">Scegli gli elementi da mostrare nella home page del sito per ciascuna rivista.</message>
 	<message key="admin.settings.journalsList">Elementi della rivista</message>
-	<message key="admin.settings.usePaging">In siti con molte riviste, spezza la lista in diverse pagine.</message>
+	<message key="admin.settings.usePaging">In siti con molte riviste, dividi  la lista in diverse pagine.</message>
 	<message key="admin.settings.useAlphalist">Per siti con molte riviste, mostra una lista alfabetica nella home page del sito per permettere una rapida navigazione tra tutte le riviste ospitate.</message>
 	<message key="admin.categories.enable.description">L'amministratore del sito può definire qui un set di categorie per migliorare l'organizzazione di siti che ospitano molte riviste. Gli amministratori delle riviste possono poi scegliere alcune di queste categorie per ciascuna rivista e i lettori possono navigare attraverso le riviste per categorie.</message>
 </locale>

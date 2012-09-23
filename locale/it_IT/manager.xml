@@ -346,7 +346,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.proofingInstructions">Istruzioni per la correzione delle bozze.</message>
 	<message key="manager.setup.proofingInstructionsDescription">Le istruzioni per la correzione delle bozze saranno rese disponibili ai correttori di bozze, agli autori, ai layout editor e ai section editor durante la fase di Editing delle Submission. Di seguito sono presenti le istruzioni in HTML, che possono essere modificate in qualsiasi momento dall'amministratore (in HTML o in testo semplice).</message>
 	<message key="manager.setup.proofreading">Correttori di bozze</message>
-	<message key="manager.setup.provideRefLinkInstructions">Fornisci ai curatori del layout le istruzioni.</message>
+	<message key="manager.setup.provideRefLinkInstructions">Fornisci le istruzioni ai curatori del layout.</message>
 	<message key="manager.setup.publicationFormat">Elementi della numerazione</message>
 	<message key="manager.setup.publicationFormatDescription">La rivista userà i seguenti elementi per numerare i fascicoli (per ciascun fascicolo sarà comunque possibile fare diversamente)</message>
 	<message key="manager.setup.publicationFormatNumber">Numero</message>
