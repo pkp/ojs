@@ -1652,7 +1652,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * Upload the layout version of the submission file
-	 * @param $args array
 	 * @param $request PKPRequest
 	 */
 	function _uploadLayoutVersion(&$request) {
