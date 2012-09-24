@@ -61,7 +61,7 @@ echo "Done"
 cd ..
 
 echo -n "Creating archive $BUILD.tar.gz ... "
-tar -zcf ../$BUILD.tar.gz $BUILD
+tar -zhcf ../$BUILD.tar.gz $BUILD
 echo "Done"
 
 if [ ! -z "$PATCHDIR" ]; then
