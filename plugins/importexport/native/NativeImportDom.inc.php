@@ -891,8 +891,9 @@ class NativeImportDom {
 		// Index the inserted article.
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->indexArticleMetadata($article);
-		$articleSearchIndex->indexArticleFiles($article);
+		$articleSearchIndex->articleMetadataChanged($article);
+		$articleSearchIndex->articleFilesChanged($article);
+		$articleSearchIndex->articleChangesFinished();
 
 		return true;
 	}
