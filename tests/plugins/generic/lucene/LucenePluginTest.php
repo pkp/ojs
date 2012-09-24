@@ -202,7 +202,7 @@ class LucenePluginTest extends DatabaseTestCase {
 		// Trying to delete a document without the server running
 		// should trigger an email to the tech contact.
 		$params = array($articleId = 3, $type = null, $assocId = null);
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::articleFileDeleted', $params);
 
 		// Check the mail.
 		$this->assertEquals('[] Article Indexing Error', $articleMail->getSubject());
@@ -211,13 +211,13 @@ class LucenePluginTest extends DatabaseTestCase {
 		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $articleMail->getFromString());
 
 		// Call again to make sure that a second mail is not being sent.
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::articleFileDeleted', $params);
 
 		// Simulate that the last email is more than three hours ago.
 		$this->lucenePlugin->updateSetting(0, 'lastEmailTimestamp', time() - 60 * 60 * 4);
 
 		// This should trigger another email (see send() call count above).
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::articleFileDeleted', $params);
 
 		// Restart the embedded server.
 		$this->assertTrue($embeddedServer->start());

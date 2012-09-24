@@ -449,6 +449,11 @@ class ArticleDAO extends DAO {
 		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
 		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
 
+		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->articleDeleted($articleId);
+		$articleSearchIndex->articleChangesFinished();
+
 		$this->flushCache();
 	}
 

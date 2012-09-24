@@ -9,7 +9,7 @@
  * @class ArticleSearchIndex
  * @ingroup search
  *
- * @brief Class to add content to the article search index.
+ * @brief Class to maintain the article search index.
  */
 
 import('lib.pkp.classes.search.SearchFileParser');
@@ -24,156 +24,23 @@ define('SEARCH_KEYWORD_MAX_LENGTH', 40);
 class ArticleSearchIndex {
 
 	/**
-	 * Index a block of text for an object.
-	 * @param $objectId int
-	 * @param $text string
-	 * @param $position int
-	 */
-	function _indexObjectKeywords($objectId, $text, &$position) {
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-		$keywords =& $this->filterKeywords($text);
-		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
-			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
-				$position += 1;
-			}
-		}
-	}
-
-	/**
-	 * Add a block of text to the search index.
-	 * @param $articleId int
-	 * @param $type int
-	 * @param $text string
-	 * @param $assocId int optional
-	 */
-	function _updateTextIndex($articleId, $type, $text, $assocId = null) {
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
-		$position = 0;
-		$this->_indexObjectKeywords($objectId, $text, $position);
-	}
-
-	/**
-	 * Add a file to the search index.
-	 * @param $articleId int
-	 * @param $type int
-	 * @param $fileId int
-	 */
-	function updateFileIndex($articleId, $type, $fileId) {
-		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
-			'ArticleSearchIndex::updateFileIndex',
-			array($articleId, $type, $fileId)
-		);
-
-		// If no search plug-in is activated then fall back to the
-		// default database search implementation.
-		if ($hookResult === false || is_null($hookResult)) {
-			import('classes.file.ArticleFileManager');
-			$fileManager = new ArticleFileManager($articleId);
-			$file =& $fileManager->getFile($fileId);
-
-			if (isset($file)) {
-				$parser =& SearchFileParser::fromFile($file);
-			}
-
-			if (isset($parser)) {
-				if ($parser->open()) {
-					$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
-					$objectId = $searchDao->insertObject($articleId, $type, $fileId);
-
-					$position = 0;
-					while(($text = $parser->read()) !== false) {
-						$this->_indexObjectKeywords($objectId, $text, $position);
-					}
-					$parser->close();
-				}
-			}
-		}
-	}
-
-	/**
-	 * Delete keywords from the search index.
-	 * @param $articleId int
-	 * @param $type int optional
-	 * @param $assocId int optional
-	 */
-	function deleteTextIndex($articleId, $type = null, $assocId = null) {
-		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
-			'ArticleSearchIndex::deleteTextIndex',
-			array($articleId, $type, $assocId)
-		);
-
-		// If no search plug-in is activated then fall back to the
-		// default database search implementation.
-		if ($hookResult === false || is_null($hookResult)) {
-			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
-			return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
-		}
-	}
-
-	/**
-	 * Split a string into a clean array of keywords
-	 * @param $text string
-	 * @param $allowWildcards boolean
-	 * @return array of keywords
-	 */
-	function &filterKeywords($text, $allowWildcards = false) {
-		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords =& $this->_loadStopwords();
-
-		// Join multiple lines into a single string
-		if (is_array($text)) $text = join("\n", $text);
-
-		$cleanText = Core::cleanVar($text);
-
-		// Remove punctuation
-		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
-		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
-		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
-		$cleanText = String::strtolower($cleanText);
-
-		// Split into words
-		$words = String::regexp_split('/\s+/', $cleanText);
-
-		// FIXME Do not perform further filtering for some fields, e.g., author names?
-
-		// Remove stopwords
-		$keywords = array();
-		foreach ($words as $k) {
-			if (!isset($stopwords[$k]) && String::strlen($k) >= $minLength && !is_numeric($k)) {
-				$keywords[] = String::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
-			}
-		}
-		return $keywords;
-	}
-
-	/**
-	 * Return list of stopwords.
-	 * FIXME Should this be locale-specific?
-	 * @return array with stopwords as keys
-	 */
-	function &_loadStopwords() {
-		static $searchStopwords;
-
-		if (!isset($searchStopwords)) {
-			// Load stopwords only once per request (FIXME Cache?)
-			$searchStopwords = array_count_values(array_filter(file(SEARCH_STOPWORDS_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';')));
-			$searchStopwords[''] = 1;
-		}
-
-		return $searchStopwords;
-	}
-
-	/**
-	 * Index article metadata.
+	 * Signal to the indexing back-end that the metadata of an
+	 * article changed.
+	 *
+	 * Push indexing implementations will try to immediately update
+	 * the index to reflect the changes. Pull implementations will
+	 * mark articles as "changed" and let the indexing back-end decide
+	 * the best point in time to actually index the changed data.
+	 *
+	 * @see http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Push_vs._Pull
+	 * for a discussion of push vs. pull indexing.
+	 *
 	 * @param $article Article
 	 */
-	function indexArticleMetadata(&$article) {
+	function articleMetadataChanged(&$article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult =& HookRegistry::call(
-			'ArticleSearchIndex::indexArticleMetadata',
+			'ArticleSearchIndex::articleMetadataChanged',
 			array($article)
 		);
 
@@ -213,13 +80,127 @@ class ArticleSearchIndex {
 	}
 
 	/**
-	 * Index supp file metadata.
-	 * @param $suppFile object
+	 * Signal to the indexing back-end that an article file changed.
+	 *
+	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * comments.
+	 *
+	 * @param $articleId int
+	 * @param $type int
+	 * @param $fileId int
 	 */
-	function indexSuppFileMetadata(&$suppFile) {
+	function articleFileChanged($articleId, $type, $fileId) {
 		// Check whether a search plug-in jumps in.
 		$hookResult =& HookRegistry::call(
-			'ArticleSearchIndex::indexSuppFileMetadata',
+			'ArticleSearchIndex::articleFileChanged',
+			array($articleId, $type, $fileId)
+		);
+
+		// If no search plug-in is activated then fall back to the
+		// default database search implementation.
+		if ($hookResult === false || is_null($hookResult)) {
+			import('classes.file.ArticleFileManager');
+			$fileManager = new ArticleFileManager($articleId);
+			$file =& $fileManager->getFile($fileId);
+
+			if (isset($file)) {
+				$parser =& SearchFileParser::fromFile($file);
+			}
+
+			if (isset($parser)) {
+				if ($parser->open()) {
+					$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+					$objectId = $searchDao->insertObject($articleId, $type, $fileId);
+
+					$position = 0;
+					while(($text = $parser->read()) !== false) {
+						$this->_indexObjectKeywords($objectId, $text, $position);
+					}
+					$parser->close();
+				}
+			}
+		}
+	}
+
+	/**
+	 * Signal to the indexing back-end that all files (supplementary
+	 * and galley) assigned to an article changed and must be re-indexed.
+	 *
+	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * comments.
+	 *
+	 * @param $article Article
+	 */
+	function articleFilesChanged(&$article) {
+		// Check whether a search plug-in jumps in.
+		$hookResult =& HookRegistry::call(
+			'ArticleSearchIndex::articleFilesChanged',
+			array($article)
+		);
+
+		// If no search plug-in is activated then fall back to the
+		// default database search implementation.
+		if ($hookResult === false || is_null($hookResult)) {
+			// Index supplementary files
+			$fileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$files =& $fileDao->getSuppFilesByArticle($article->getId());
+			foreach ($files as $file) {
+				if ($file->getFileId()) {
+					$this->articleFileChanged($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
+				}
+				$this->suppFileMetadataChanged($file);
+			}
+			unset($files);
+
+			// Index galley files
+			$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$files =& $fileDao->getGalleysByArticle($article->getId());
+			foreach ($files as $file) {
+				if ($file->getFileId()) {
+					$this->articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
+				}
+			}
+		}
+	}
+
+	/**
+	 * Signal to the indexing back-end that a file was deleted.
+	 *
+	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * comments.
+	 *
+	 * @param $articleId int
+	 * @param $type int optional
+	 * @param $assocId int optional
+	 */
+	function articleFileDeleted($articleId, $type = null, $assocId = null) {
+		// Check whether a search plug-in jumps in.
+		$hookResult =& HookRegistry::call(
+			'ArticleSearchIndex::articleFileDeleted',
+			array($articleId, $type, $assocId)
+		);
+
+		// If no search plug-in is activated then fall back to the
+		// default database search implementation.
+		if ($hookResult === false || is_null($hookResult)) {
+			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+			return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
+		}
+	}
+
+	/**
+	 * Signal to the indexing back-end that the metadata of
+	 * a supplementary file changed.
+	 *
+	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * comments.
+	 *
+	 * @param $suppFile object
+	 */
+	function suppFileMetadataChanged(&$suppFile) {
+		// Check whether a search plug-in jumps in.
+		$hookResult =& HookRegistry::call(
+			'ArticleSearchIndex::suppFileMetadataChanged',
 			array($suppFile)
 		);
 
@@ -245,39 +226,75 @@ class ArticleSearchIndex {
 	}
 
 	/**
-	 * Index all article files (supplementary and galley).
-	 * @param $article Article
+	 * Signal to the indexing back-end that the metadata of
+	 * a supplementary file changed.
+	 *
+	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * comments.
+	 *
+	 * @param $articleId integer
 	 */
-	function indexArticleFiles(&$article) {
-		// Check whether a search plug-in jumps in.
+	function articleDeleted($articleId) {
+		// Trigger a hook to let the indexing back-end know that
+		// an article was deleted.
 		$hookResult =& HookRegistry::call(
-			'ArticleSearchIndex::indexArticleFiles',
-			array($article)
+			'ArticleSearchIndex::articleDeleted',
+			array($articleId)
 		);
 
-		// If no search plug-in is activated then fall back to the
-		// default database search implementation.
-		if ($hookResult === false || is_null($hookResult)) {
-			// Index supplementary files
-			$fileDao =& DAORegistry::getDAO('SuppFileDAO');
-			$files =& $fileDao->getSuppFilesByArticle($article->getId());
-			foreach ($files as $file) {
-				if ($file->getFileId()) {
-					$this->updateFileIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
-				}
-				$this->indexSuppFileMetadata($file);
-			}
-			unset($files);
+		// The default indexing back-end does nothing when an
+		// article is deleted (FIXME?).
+	}
 
-			// Index galley files
-			$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-			$files =& $fileDao->getGalleysByArticle($article->getId());
-			foreach ($files as $file) {
-				if ($file->getFileId()) {
-					$this->updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
-				}
+	/**
+	 * Let the indexing back-end know that the current transaction
+	 * finished so that the index can be batch-updated.
+	 */
+	function articleChangesFinished() {
+		// Trigger a hook to let the indexing back-end know that
+		// the index may be updated.
+		$hookResult =& HookRegistry::call(
+			'ArticleSearchIndex::articleChangesFinished'
+		);
+
+		// The default indexing back-end works completely synchronously
+		// and will therefore not do anything here.
+	}
+
+	/**
+	 * Split a string into a clean array of keywords
+	 * @param $text string
+	 * @param $allowWildcards boolean
+	 * @return array of keywords
+	 */
+	function &filterKeywords($text, $allowWildcards = false) {
+		$minLength = Config::getVar('search', 'min_word_length');
+		$stopwords =& $this->_loadStopwords();
+
+		// Join multiple lines into a single string
+		if (is_array($text)) $text = join("\n", $text);
+
+		$cleanText = Core::cleanVar($text);
+
+		// Remove punctuation
+		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
+		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
+		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
+		$cleanText = String::strtolower($cleanText);
+
+		// Split into words
+		$words = String::regexp_split('/\s+/', $cleanText);
+
+		// FIXME Do not perform further filtering for some fields, e.g., author names?
+
+		// Remove stopwords
+		$keywords = array();
+		foreach ($words as $k) {
+			if (!isset($stopwords[$k]) && String::strlen($k) >= $minLength && !is_numeric($k)) {
+				$keywords[] = String::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
 			}
 		}
+		return $keywords;
 	}
 
 	/**
@@ -325,8 +342,8 @@ class ArticleSearchIndex {
 				while (!$articles->eof()) {
 					$article =& $articles->next();
 					if ($article->getDateSubmitted()) {
-						$this->indexArticleMetadata($article);
-						$this->indexArticleFiles($article);
+						$this->articleMetadataChanged($article);
+						$this->articleFilesChanged($article);
 						$numIndexed++;
 					}
 					unset($article);
@@ -336,6 +353,57 @@ class ArticleSearchIndex {
 				unset($journal);
 			}
 		}
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Index a block of text for an object.
+	 * @param $objectId int
+	 * @param $text string
+	 * @param $position int
+	 */
+	function _indexObjectKeywords($objectId, $text, &$position) {
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$keywords =& $this->filterKeywords($text);
+		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
+			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
+				$position += 1;
+			}
+		}
+	}
+
+	/**
+	 * Add a block of text to the search index.
+	 * @param $articleId int
+	 * @param $type int
+	 * @param $text string
+	 * @param $assocId int optional
+	 */
+	function _updateTextIndex($articleId, $type, $text, $assocId = null) {
+		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
+		$position = 0;
+		$this->_indexObjectKeywords($objectId, $text, $position);
+	}
+
+	/**
+	 * Return list of stopwords.
+	 * FIXME: Should this be locale-specific?
+	 * @return array with stopwords as keys
+	 */
+	function &_loadStopwords() {
+		static $searchStopwords;
+
+		if (!isset($searchStopwords)) {
+			// Load stopwords only once per request (FIXME: Cache?)
+			$searchStopwords = array_count_values(array_filter(file(SEARCH_STOPWORDS_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';')));
+			$searchStopwords[''] = 1;
+		}
+
+		return $searchStopwords;
 	}
 }
 

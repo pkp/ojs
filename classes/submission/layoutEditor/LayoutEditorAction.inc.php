@@ -59,7 +59,8 @@ class LayoutEditorAction extends Action {
 				$articleFileManager->deleteFile($galley->getFileId());
 				import('classes.search.ArticleSearchIndex');
 				$articleSearchIndex = new ArticleSearchIndex();
-				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex->articleFileDeleted($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex->articleChangesFinished();
 			}
 			if ($galley->isHTMLGalley()) {
 				if ($galley->getStyleFileId()) {
@@ -134,7 +135,8 @@ class LayoutEditorAction extends Action {
 			if ($suppFile->getFileId()) {
 				import('classes.search.ArticleSearchIndex');
 				$articleSearchIndex = new ArticleSearchIndex();
-				$articleSearchIndex->deleteTextIndex($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				$articleSearchIndex->articleFileDeleted($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				$articleSearchIndex->articleChangesFinished();
 			}
 		}
 	}

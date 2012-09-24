@@ -2556,7 +2556,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 				// Re-index the published article metadata.
-				$articleSearchIndex->indexArticleMetadata($publishedArticle);
+				$articleSearchIndex->articleMetadataChanged($publishedArticle);
 			} else {
 				$publishedArticle = $publishedArticleDao->newDataObject();
 				$publishedArticle->setId($submission->getId());
@@ -2579,8 +2579,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				}
 
 				// Index the published article metadata and files for the first time.
-				$articleSearchIndex->indexArticleMetadata($publishedArticle);
-				$articleSearchIndex->indexArticleFiles($publishedArticle);
+				$articleSearchIndex->articleMetadataChanged($publishedArticle);
+				$articleSearchIndex->articleFilesChanged($publishedArticle);
 			}
 
 		} else {
@@ -2591,7 +2591,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 
 				// Delete the article from the search index.
-				$articleSearchIndex->deleteTextIndex($articleId);
+				$articleSearchIndex->articleFileDeleted($articleId);
 			}
 		}
 
@@ -2610,6 +2610,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+		$articleSearchIndex->articleChangesFinished();
 
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}
@@ -2637,7 +2638,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			// Re-index the published article metadata.
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
-			$articleSearchIndex->indexArticleMetadata($publishedArticle);
+			$articleSearchIndex->articleMetadataChanged($publishedArticle);
+			$articleSearchIndex->articleChangesFinished();
 		}
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}

@@ -168,7 +168,8 @@ class ArticleGalleyForm extends Form {
 				// Update file search index
 				import('classes.search.ArticleSearchIndex');
 				$articleSearchIndex = new ArticleSearchIndex();
-				$articleSearchIndex->updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex->articleFileChanged($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
+				$articleSearchIndex->articleChangesFinished();
 			}
 
 			if ($articleFileManager->uploadedFileExists('styleFile')) {
@@ -277,7 +278,8 @@ class ArticleGalleyForm extends Form {
 			// Update file search index
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
-			$articleSearchIndex->updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
+			$articleSearchIndex->articleFileChanged($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
+			$articleSearchIndex->articleChangesFinished();
 		}
 
 		return $this->galleyId;
