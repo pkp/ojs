@@ -295,7 +295,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				// Several objects:
 				// - Export.
 				// We do not actually export as this is being tested elsewhere.
-				$this->assertElementPresent('css=form[name="'.$objectType.'s"][action="'.$this->pages['index'].'/export'.ucfirst($objectType).'s"]');
+				$this->assertElementPresent('css=form[id="'.$objectType.'sForm"][action="'.$this->pages['index'].'/export'.ucfirst($objectType).'s"]');
 				$this->assertElementPresent('css=input[name="'.$objectType.'Id[]"]');
 				$this->assertElementPresent('css=input.button[name="export"]');
 
