@@ -9,7 +9,7 @@
  * @class OJSPaymentAction
  * @ingroup payments
  *
- * Common actions for payment management functions. 
+ * Common actions for payment management functions.
  */
 
 class OJSPaymentAction {
@@ -29,9 +29,9 @@ class OJSPaymentAction {
 		} else {
 			$form->initData();
 		}
-		$form->display();		
+		$form->display();
 	 }
-	 
+
 	 /**
 	  * Execute the form or display it again if there are problems
 	  */
@@ -52,9 +52,9 @@ class OJSPaymentAction {
 			$settingsForm->display();
 			return false;
 		}
-	 }	 
-	 
-	 /** 
+	 }
+
+	 /**
 	  * Display all payments previously made
 	  */
 	 function viewPayments($args) {
@@ -66,17 +66,19 @@ class OJSPaymentAction {
 		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
 		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
+		$templateMgr->assign_by_ref('userDao', $userDao);
 		$templateMgr->assign_by_ref('payments', $payments);
 
 		$templateMgr->display('payments/viewPayments.tpl');
 	 }
 
-	 /** 
-	  * Display a single Completed payment 
+	 /**
+	  * Display a single Completed payment
 	  */
 	 function viewPayment($args) {
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
@@ -106,12 +108,12 @@ class OJSPaymentAction {
 
 		$journal =& Request::getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
-		
+
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
 	}
-	
+
 	/**
 	 * Save changes to payment settings.
 	 */
