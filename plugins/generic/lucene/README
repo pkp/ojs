@@ -382,16 +382,17 @@ Advantages of push configuration:
 
 Advantages of pull configuration:
 
+- Pull processing makes the OJS user interface more responsive as no synchronous
+  indexing will take place. Marking an article for update is as fast as a single
+  database access. This can make a perceivable difference when articles have
+  many galleys or supplementary files attached.
+   
 - Push processing means that editorial activity during daytime will cause update
   load peaks on the solr server exactly while it may also experiences higher
   search volume. This load can be quite erratic and fluctuating in larger system
   environments and therefore difficult to balance. In pull mode indexing
   schedules can be configured and co-ordinated on the server side to balance
   document import load on the central search server and keep it to off-hours.
-
-- Pull guarantees that indexing is resilient against Solr server downtime. In
-  case of service outage, updates can be postponed until the server is back
-  online. A full index rebuild is not required in that case.
 
 - Pull provides a process that makes it easy to restart indexing after client-
   side outage or other indexing problems. All meta-data retrieved from the

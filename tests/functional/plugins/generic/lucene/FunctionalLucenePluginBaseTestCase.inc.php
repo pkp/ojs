@@ -23,6 +23,16 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 
 
 	//
+	// Implement template methods from PKPTestCase
+	//
+	protected function tearDown() {
+		parent::tearDown();
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->_getCache(0, 'luceneplugin')->flush();
+	}
+
+
+	//
 	// Protected helper methods
 	//
 	/**

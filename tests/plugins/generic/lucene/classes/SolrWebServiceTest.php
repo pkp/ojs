@@ -38,7 +38,8 @@ class SolrWebServiceTest extends PKPTestCase {
 	protected function getMockedDAOs() {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
-			'AuthorDAO', 'IssueDAO', 'SuppFileDAO', 'ArticleGalleyDAO'
+			'AuthorDAO', 'IssueDAO', 'JournalDAO',
+			'SuppFileDAO', 'ArticleGalleyDAO'
 		);
 		return $mockedDaos;
 	}
@@ -55,6 +56,19 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	protected function setUp() {
 		parent::setUp();
+
+		// We need a router for URL generation.
+		$application =& PKPApplication::getApplication();
+		$_SERVER['REQUEST_METHOD'] = 'GET';
+		$request =& $application->getRequest();
+		if (!is_a($request->getRouter(), 'PKPRouter')) {
+			$router = new PageRouter();
+			$router->setApplication($application);
+			$request->setRouter($router);
+		}
+
+		// Add the indexing state as setting.
+		HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackAdditionalFieldNames'));
 
 		// Set translations. This must be done early
 		// as these translations will be saved statically
@@ -193,18 +207,23 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService::getArticleXml()
+	 * @covers SolrWebService::getArticleListXml()
 	 */
-	public function testGetArticleXml() {
+	public function testGetArticleListXml() {
 		// Generate test objects.
-		$article = $this->_getTestArticle();
-		$journal = $this->_getTestJournal();
+		$articleToReplace = $this->_getTestArticle();
+		$articleToDelete = new PublishedArticle();
+		$articleToDelete->setId(99);
+		$articleToDelete->setJournalId(2);
+		$articleToDelete->setIssueId(2);
+		$articleToDelete->setStatus(STATUS_DECLINED);
+		$articles = array($articleToReplace, $articleToDelete);
 
 		// Test the transfer XML file.
-		$articleDoc = $this->solrWebService->getArticleXml($article, $journal);
+		$articleXml = $this->solrWebService->_getArticleListXml($articles, 3);
 		self::assertXmlStringEqualsXmlFile(
 			'tests/plugins/generic/lucene/classes/test-article.xml',
-			XMLCustomWriter::getXml($articleDoc)
+			$articleXml
 		);
 	}
 
@@ -218,16 +237,16 @@ class SolrWebServiceTest extends PKPTestCase {
 	}
 
 	/**
-	 * @covers SolrWebService::indexArticle()
+	 * @covers SolrWebService::markArticleChanged()
+	 * @covers SolrWebService::pushChangedArticles()
 	 */
-	public function testIndexArticle() {
-		// Generate test objects.
-		$article = $this->_getTestArticle();
-		$journal = $this->_getTestJournal();
-
+	public function testPushIndexing() {
 		// Test indexing. The service returns true if the article
 		// was successfully processed.
-		self::assertTrue($this->solrWebService->indexArticle($article, $journal));
+		$this->articleNotInIndex(3);
+		$this->solrWebService->markArticleChanged(3);
+		self::assertEquals(1, $this->solrWebService->pushChangedArticles());
+		$this->articleInIndex(3);
 	}
 
 	/**
@@ -485,6 +504,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		// Mock an issue.
 		$issue = new Issue();
 		$issue->setDatePublished('2012-03-15 15:30:00');
+		$issue->setPublished(true);
 
 		// Mock the getIssueById() method.
 		$issueDao->expects($this->any())
@@ -493,6 +513,26 @@ class SolrWebServiceTest extends PKPTestCase {
 
 		// Register the mock DAO.
 		DAORegistry::registerDAO('IssueDAO', $issueDao);
+	}
+
+	/**
+	 * Mock and register an JournalDAO as a test
+	 * back end for the SolrWebService class.
+	 */
+	private function _registerMockJournalDAO() {
+		// Mock a JournalDAO.
+		$journalDao = $this->getMock('JournalDAO', array('getById'), array(), '', false);
+
+		// Mock a journal.
+		$journal = $this->_getTestJournal();
+
+		// Mock the getById() method.
+		$journalDao->expects($this->any())
+		           ->method('getById')
+		           ->will($this->returnValue($journal));
+
+		// Register the mock DAO.
+		DAORegistry::registerDAO('JournalDAO', $journalDao);
 	}
 
 	/**
@@ -505,22 +545,16 @@ class SolrWebServiceTest extends PKPTestCase {
 		// Activate the mock DAOs.
 		$this->_registerMockAuthorDAO();
 		$this->_registerMockIssueDAO();
+		$this->_registerMockJournalDAO();
 		$this->_registerMockArticleGalleyDAO();
 		$this->_registerMockSuppFileDAO();
-
-		// We need a router for URL generation.
-		$application =& PKPApplication::getApplication();
-		$_SERVER['REQUEST_METHOD'] = 'GET';
-		$request =& $application->getRequest();
-		$router = new PageRouter();
-		$router->setApplication($application);
-		$request->setRouter($router);
 
 		// Create a test article.
 		$article = new PublishedArticle();
 		$article->setId(3);
 		$article->setJournalId(2);
-		$article->setIssueId(1);
+		$article->setIssueId(2);
+		$article->setStatus(STATUS_PUBLISHED);
 		$article->setTitle('Deutscher Titel', 'de_DE');
 		$article->setTitle('English Title', 'en_US');
 		$article->setAbstract('Deutsche Zusammenfassung', 'de_DE');
@@ -590,25 +624,11 @@ class SolrWebServiceTest extends PKPTestCase {
 	 * Index the test journal (and test that this actually works).
 	 */
 	private function _indexTestJournals() {
-		// We need a router for URL generation.
-		$application =& PKPApplication::getApplication();
-		$_SERVER['REQUEST_METHOD'] = 'GET';
-		$request =& $application->getRequest();
-		$router = new PageRouter();
-		$router->setApplication($application);
-		$request->setRouter($router);
-
-		// Generate a test journal.
-		$journal = new Journal();
-
 		// Test indexing. The service returns the number of documents that
 		// were successfully processed.
-		$journal->setId('1');
-		$journal->setPath('test');
-		self::assertGreaterThan(0, $this->solrWebService->indexJournal($journal));
-		$journal->setId('2');
-		$journal->setPath('lucene-test');
-		self::assertGreaterThan(1, $this->solrWebService->indexJournal($journal));
+		self::assertGreaterThan(0, $this->solrWebService->markJournalChanged(1));
+		self::assertGreaterThan(1, $this->solrWebService->markJournalChanged(2));
+		self::assertGreaterThan(1, $this->solrWebService->pushChangedArticles());
 	}
 
 	/**
@@ -627,6 +647,14 @@ class SolrWebServiceTest extends PKPTestCase {
 	private function articleNotInIndex($articleId) {
 		$article = $this->solrWebService->getArticleFromIndex($articleId);
 		self::assertTrue(empty($article));
+	}
+
+	/**
+	 * @see DAO::getAdditionalFieldNames()
+	 */
+	function callbackAdditionalFieldNames($hookName, $args) {
+		$returner =& $args[1];
+		$returner[] = 'indexingState';
 	}
 }
 ?>

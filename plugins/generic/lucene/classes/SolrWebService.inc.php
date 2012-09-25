@@ -19,6 +19,10 @@
 define('SOLR_STATUS_ONLINE', 0x01);
 define('SOLR_STATUS_OFFLINE', 0x02);
 
+// Flags used for index maintenance.
+define('SOLR_INDEXINGSTATE_DIRTY', true);
+define('SOLR_INDEXINGSTATE_CLEAN', false);
+
 // Autosuggest-type:
 // - suggester-based: fast and scalable, may propose terms that produce no
 //   results, changes to the index will be reflected only after a dictionary
@@ -31,7 +35,7 @@ define('SOLR_AUTOSUGGEST_FACETING', 0x02);
 
 // The max. number of articles that can
 // be indexed in a single batch.
-define('SOLR_INDEXING_BATCHSIZE', 200);
+define('SOLR_INDEXING_MAX_BATCHSIZE', 200);
 
 
 import('lib.pkp.classes.webservice.WebServiceRequest');
@@ -60,11 +64,22 @@ class SolrWebService extends XmlWebService {
 	/** @var FileCache A cache containing the available search fields. */
 	var $_fieldCache;
 
+	/** @var array A journal cache. */
+	var $_journalCache;
+
+	/** @var array An issue cache. */
+	var $_issueCache;
+
+
 	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
 	 *  as a default.
+	 * @param $username string The HTTP BASIC authentication username.
+	 * @param $password string The corresponding password.
+	 * @param $instId string The unique ID of this OJS installation to partition
+	 *  a shared index.
 	 */
 	function SolrWebService($searchHandler, $username, $password, $instId) {
 		parent::XmlWebService();
@@ -97,15 +112,43 @@ class SolrWebService extends XmlWebService {
 	 * @return string
 	 */
 	function getServiceMessage() {
-		return $this->_serviceMessage;
+		return (string)$this->_serviceMessage;
+	}
+
+
+	/**
+	 * Retrieve a journal (possibly from the cache).
+	 * @param $journalId int
+	 * @return Journal
+	 */
+	function &_getJournal($journalId) {
+		if (isset($this->_journalCache[$journalId])) {
+			$journal =& $this->_journalCache[$journalId];
+		} else {
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journal =& $journalDao->getById($journalId);
+			$this->_journalCache[$journalId] =& $journal;
+		}
+
+		return $journal;
 	}
 
 	/**
-	 * Get the installation id.
-	 * @return string
+	 * Retrieve an issue (possibly from the cache).
+	 * @param $issueId int
+	 * @param $journalId int
+	 * @return Issue
 	 */
-	function getInstId() {
-		return $this->_instId;
+	function &_getIssue($issueId, $journalId) {
+		if (isset($this->_issueCache[$issueId])) {
+			$issue =& $this->_issueCache[$issueId];
+		} else {
+			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue =& $issueDao->getIssueById($issueId, $journalId, true);
+			$this->_issueCache[$issueId] =& $issue;
+		}
+
+		return $issue;
 	}
 
 
@@ -113,96 +156,105 @@ class SolrWebService extends XmlWebService {
 	// Public API
 	//
 	/**
-	 * (Re-)indexes the given article in Solr.
-	 *
-	 * In Solr we cannot partially (re-)index an article. We always
-	 * have to refresh the whole document if parts of it change.
-	 *
-	 * @param $article PublishedArticle The article to be (re-)indexed.
-	 * @param $journal Journal
-	 *
-	 * @return boolean true, if the indexing succeeded, otherwise false.
+	 * Mark a single article "changed" so that the indexing
+	 * back-end will update it during the next batch update.
+	 * @param $articleId Integer
 	 */
-	function indexArticle(&$article, &$journal) {
-		assert($article->getJournalId() == $journal->getId());
+	function markArticleChanged($articleId) {
+		if(!is_numeric($articleId)) {
+			assert(false);
+			return;
+		}
 
-		// Generate the transfer XML for the article and POST it to the web service.
-		$articleDoc =& $this->getArticleXml($article, $journal);
-		$articleXml = XMLCustomWriter::getXml($articleDoc);
-
-		$url = $this->_getDihUrl() . '?command=full-import&clean=false';
-		$result = $this->_makeRequest($url, $articleXml, 'POST');
-		if (is_null($result)) return false;
-
-		// Check whether the document was successfully indexed.
-		$docsProcessed = $this->_getDocumentsProcessed($result);
-		return ($docsProcessed == 1);
+		// Mark the article "changed".
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao->updateSetting(
+			$articleId, 'indexingState', SOLR_INDEXINGSTATE_DIRTY, 'bool'
+		);
 	}
 
 	/**
-	 * (Re-)indexes the given journal in Solr.
-	 *
-	 * @param $journal Journal The journal to be (re-)indexed.
-	 * @param $log boolean Whether to log indexing progress.
-	 *
-	 * @return integer The number of documents processed or null if
-	 *  an error occured.
+	 * Mark the given journal for re-indexing.
+	 * @param $journalId integer The ID of the journal to be (re-)indexed.
+	 * @return integer The number of articles that have been marked.
 	 */
-	function indexJournal(&$journal, $log=false) {
-		// Initialize local variables.
-		$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-		$numIndexed = 0;
-
-		// To keep memory usage as low as possible we
-		// commit batches of 200 articles. Batches should
-		// not be too small, either, as this will considerably
-		// increase overall DB access time.
-		import('lib.pkp.classes.db.DBResultRange');
-		$batch = 1;
-		$continue = true;
-		while ($continue) {
-			// Retrieve the next batch.
-			$range = new DBResultRange(SOLR_INDEXING_BATCHSIZE, $batch);
-			$articles =& $articleDao->getPublishedArticlesByJournalId($journal->getId(), $range);
-			unset($range);
-
-			// Is this our last batch?
-			$continue = !$articles->atLastPage();
-
-			// Run through all articles of the batch.
-			$articleDoc = null;
-			while (!$articles->eof()) {
-				$article =& $articles->next();
-
-				// Add the article to the article list if it has been published.
-				if ($article->getDatePublished()) {
-					$articleDoc =& $this->getArticleXml($article, $journal, $articleDoc);
-				}
-				unset($article);
-			}
-			unset($articles);
-
-			// Make a POST request with all articles in this batch.
-			$articleXml = XMLCustomWriter::getXml($articleDoc);
-			unset($articleDoc);
-			$url = $this->_getDihUrl() . '?command=full-import&clean=false';
-			$result = $this->_makeRequest($url, $articleXml, 'POST');
-			unset($articleXml);
-
-			// Retrieve the number of successfully indexed articles.
-			if (is_null($result)) {
-				return null;
-			} else {
-				$numIndexed += $this->_getDocumentsProcessed($result);
-				if ($log) echo '.';
-			}
-			unset($result);
-
-			// Do the next batch.
-			$batch++;
+	function markJournalChanged($journalId) {
+		if (!is_numeric($journalId)) {
+			assert(false);
+			return;
 		}
 
-		return $numIndexed;
+		// Retrieve all articles of the journal.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articles =& $articleDao->getArticlesByJournalId($journalId);
+
+		// Run through the articles and mark them "changed".
+		while(!$articles->eof()) {
+			$article =& $articles->next();
+			$this->markArticleChanged($article->getId());
+			unset($article);
+		}
+		return $articles->getCount();
+	}
+
+	/**
+	 * (Re-)indexes all changed articles in Solr.
+	 *
+	 * This is the push-indexing implementation of the Solr
+	 * web service.
+	 *
+	 * To control memory usage and response time we
+	 * index articles in batches. Batches should be as
+	 * large as possible to reduce index commit overhead.
+	 *
+	 * @param $batchSize integer The maximum number of articles
+	 *  to be indexed in this run.
+	 * @param $journalId integer If given, restrains index
+	 *  updates to the given journal.
+	 *
+	 * @return integer The number of articles processed or
+	 *  null if an error occured. After an error the method
+	 *  SolrWebService::getServiceMessage() will return details
+	 *  of the error.
+	 */
+	function pushChangedArticles($batchSize = SOLR_INDEXING_MAX_BATCHSIZE, $journalId = null) {
+		// Internally we just execute an indexing transaction with
+		// a push indexing callback.
+		return $this->_indexingTransaction(
+			array($this, '_pushIndexingCallback'), $batchSize, $journalId
+		);
+	}
+
+	/**
+	 * Retrieves a batch of articles in XML format.
+	 *
+	 * This is the pull-indexing implementation of the Solr
+	 * web service.
+	 *
+	 * To control memory usage and response time we
+	 * index articles in batches. Batches should be as
+	 * large as possible to reduce index commit overhead.
+	 *
+	 * @param $sendXmlCallback callback This function will be called
+	 *  with the generated XML. We do not send the XML from here
+	 *  as communication with the requesting counterparty should
+	 *  be done from the controller and not from the back-end.
+	 * @param $batchSize integer The maximum number of articles
+	 *  to be returned.
+	 * @param $journalId integer If given, only returns
+	 *  articles from the given journal.
+	 *
+	 * @return integer The number of articles processed or
+	 *  null if an error occured. After an error the method
+	 *  SolrWebService::getServiceMessage() will return details
+	 *  of the error.
+	 */
+	function pullChangedArticles($pullIndexingCallback, $batchSize = SOLR_INDEXING_MAX_BATCHSIZE, $journalId = null) {
+		// Internally we just execute an indexing transaction with
+		// a pull indexing callback.
+		return $this->_indexingTransaction(
+			$pullIndexingCallback, $batchSize, $journalId
+		);
 	}
 
 	/**
@@ -622,7 +674,6 @@ class SolrWebService extends XmlWebService {
 
 	/**
 	 * Returns the solr search endpoint.
-	 *
 	 * @return string
 	 */
 	function _getSearchUrl() {
@@ -700,17 +751,22 @@ class SolrWebService extends XmlWebService {
 			return $nullValue;
 		}
 
-		// Return the result.
-		// Did we get a 200OK response?
+		// Did we get a "200 - OK" response?
 		$status = $this->getLastResponseStatus();
 		if ($status !== WEBSERVICE_RESPONSE_OK) {
-			$this->_serviceMessage = $status. ' - ' . $response->saveXML();
+			// We show a generic error message to the end user
+			// to avoid information leakage and log the exact error.
+			$application =& PKPApplication::getApplication();
+			error_log($application->getName() . ' - Lucene plugin:' . "\nThe Lucene web service returned a status code $status and the message\n" . $response->saveXML());
+			$this->_serviceMessage = __('plugins.generic.lucene.message.webServiceError');
 			return $nullValue;
 		}
 
 		// Prepare an XPath object.
 		assert(is_a($response, 'DOMDocument'));
 		$result = new DOMXPath($response);
+
+		// Return the result.
 		return $result;
 	}
 
@@ -847,37 +903,185 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
-	 * Generate the XML used to communicate with the
-	 * solr indexing engine DIH.
+	 * This method encapsulates an indexing transaction (pull or push).
+	 * It consists in generating the XML, transferring it to the server
+	 * and marking the transferred articles as "indexed".
+	 *
+	 * @param $sendXmlCallback callback This function will be called
+	 *  with the generated XML.
+	 * @param $batchSize integer The maximum number of articles to
+	 *  be returned.
+	 * @param $journalId integer If given, only retrieves articles
+	 *  for the given journal.
+	 */
+	function _indexingTransaction($sendXmlCallback, $batchSize = SOLR_INDEXING_MAX_BATCHSIZE, $journalId = null) {
+		// Retrieve a batch of "changed" articles.
+		import('lib.pkp.classes.db.DBResultRange');
+		$range = new DBResultRange($batchSize);
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$changedArticlesIterator =& $articleDao->getBySetting(
+			'indexingState', SOLR_INDEXINGSTATE_DIRTY, $journalId, $range
+		);
+		unset($range);
+
+		// Retrieve articles and overall count from the result set.
+		$changedArticles =& $changedArticlesIterator->toArray();
+		$batchCount = count($changedArticles);
+		$totalCount = $changedArticlesIterator->getCount();
+		unset($changedArticlesIterator);
+
+		// Get the XML article list for this batch of articles.
+		$articleXml = $this->_getArticleListXml($changedArticles, $totalCount);
+
+		// Let the specific indexing implementation (pull or push)
+		// transfer the generated XML.
+		$numIndexed = call_user_func_array($sendXmlCallback, array(&$articleXml, $batchCount));
+
+		// Check error conditions.
+		if (!is_numeric($numIndexed)) return null;
+		$numIndexed = (integer)$numIndexed;
+		if ($numIndexed != $batchCount) {
+			$this->_serviceMessage = __(
+				'plugins.generic.lucene.message.indexingIncomplete',
+				array('numIndexed' => $numIndexed, 'batchCount' => $batchCount)
+			);
+			return null;
+		}
+
+		// Now that we are as sure as we can that the counterparty received
+		// our XML, let's mark the changed articles as "updated". This "commits"
+		// the indexing transaction.
+		foreach($changedArticles as $indexedArticle) {
+			$indexedArticle->setData('indexingState', SOLR_INDEXINGSTATE_CLEAN);
+			$articleDao->updateLocaleFields($indexedArticle);
+		}
+
+		return $numIndexed;
+	}
+
+	/**
+	 * Handle push indexing.
+	 *
+	 * This method pushes XML with index changes
+	 * directly to the Solr data import handler for
+	 * immediate processing.
+	 *
+	 * @param $articleXml string The XML with index changes
+	 *  to be pushed to the Solr server.
+	 * @param $batchCount integer The number of articles in
+	 *  the XML list (i.e. the expected number of documents
+	 *  to be indexed).
+	 *
+	 * @return integer The number of articles processed or
+	 *  null if an error occured.
+	 *
+	 *  After an error the method SolrWebService::getServiceMessage()
+	 *  will return details of the error.
+	 */
+	function _pushIndexingCallback(&$articleXml, $batchCount) {
+		if ($batchCount > 0) {
+			// Make a POST request with all articles in this batch.
+			$url = $this->_getDihUrl() . '?command=full-import&clean=false';
+			$result = $this->_makeRequest($url, $articleXml, 'POST');
+			if (is_null($result)) return null;
+
+			// Retrieve the number of successfully indexed articles.
+			return $this->_getDocumentsProcessed($result);
+		} else {
+			// Nothing to update.
+			return 0;
+		}
+	}
+
+	/**
+	 * Retrieve the XML for a batch of articles to be updated.
+	 *
+	 * @param $articles DBResultFactory The articles to be included
+	 *  in the list.
+	 * @param $totalCount integer The overall number of changed articles
+	 *  (not only the current batch).
+	 *
+	 * @return string The XML ready to be consumed by the Solr data
+	 *  import service.
+	 */
+	function _getArticleListXml(&$articles, $totalCount) {
+		// Create the DOM document.
+		$articleDoc =& XMLCustomWriter::createDocument();
+		assert(is_a($articleDoc, 'DOMDocument'));
+
+		// Create the root node.
+		$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
+		XMLCustomWriter::appendChild($articleDoc, $articleList);
+
+		// Run through all articles in the batch and generate an
+		// XML list for them.
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		foreach($articles as $article) {
+			if (!is_a($article, 'PublishedArticle')) {
+				// Try to upgrade the article to a published article.
+				$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+				if (is_a($publishedArticle, 'PublishedArticle')) {
+					unset($article);
+					$article =& $publishedArticle;
+					unset($publishedArticle);
+				}
+			}
+			$journal =& $this->_getJournal($article->getJournalId());
+
+			// Check the publication state and subscription state of the article.
+			if ($this->_isArticleAccessAuthorized($article)) {
+				// Mark the article for update.
+				$this->_addArticleXml($articleDoc, $article, $journal);
+			} else {
+				// Mark the article for deletion.
+				$this->_addArticleXml($articleDoc, $article, $journal, true);
+			}
+			unset($journal, $article);
+		}
+
+		// Add the "has more" attribute so that the server knows
+		// whether more batches may have to be pulled (useful for
+		// pull indexing only).
+		$hasMore = (count($articles) < $totalCount ? 'yes' : 'no');
+		$articleDoc->documentElement->setAttribute('hasMore', $hasMore);
+
+		// Return XML.
+		return XMLCustomWriter::getXml($articleDoc);
+	}
+
+	/**
+	 * Add the metadata XML of a single article to an
+	 * XML article list.
+	 *
+	 * @param $articleDoc DOMDocument
 	 * @param $article PublishedArticle
 	 * @param $journal Journal
-	 * @param $articleDoc DOMDocument|XMLNode
-	 * @return DOMDocument|XMLNode
+	 * @param $markToDelete boolean If true the returned XML
+	 *  will only contain a deletion marker.
 	 */
-	function &getArticleXml(&$article, &$journal, $articleDoc = null) {
-		assert(is_a($article, 'PublishedArticle'));
+	function _addArticleXml(&$articleDoc, &$article, &$journal, $markToDelete = false) {
+		assert(is_a($article, 'Article'));
 
-		if (is_null($articleDoc)) {
-			// Create the document.
-			$articleDoc =& XMLCustomWriter::createDocument();
-
-			// Create the root node.
-			$articleList =& XMLCustomWriter::createElement($articleDoc, 'articleList');
-			XMLCustomWriter::appendChild($articleDoc, $articleList);
-		} else {
-			if (is_a($articleDoc, 'XMLNode')) {
-				$articleList =& $articleDoc->getChildByName('articleList');
-			} else {
-				$articleList =& $articleDoc->documentElement;
-			}
-		}
+		// Get the root node of the list.
+		assert(is_a($articleDoc, 'DOMDocument'));
+		$articleList =& $articleDoc->documentElement;
 
 		// Create a new article node.
 		$articleNode =& XMLCustomWriter::createElement($articleDoc, 'article');
+
+		// Add ID information.
 		XMLCustomWriter::setAttribute($articleNode, 'id', $article->getId());
 		XMLCustomWriter::setAttribute($articleNode, 'journalId', $article->getJournalId());
 		XMLCustomWriter::setAttribute($articleNode, 'instId', $this->_instId);
+
+		// Set the load action.
+		$loadAction = ($markToDelete ? 'delete' : 'replace');
+		XMLCustomWriter::setAttribute($articleNode, 'loadAction', $loadAction);
 		XMLCustomWriter::appendChild($articleList, $articleNode);
+
+		// The XML for an article marked to be deleted contains no metadata.
+		if ($markToDelete) return;
+		assert(is_a($article, 'PublishedArticle'));
 
 		// Add authors.
 		$authors = $article->getAuthors();
@@ -1150,9 +1354,6 @@ class SolrWebService extends XmlWebService {
 			XMLCustomWriter::appendChild($suppFileOuterNode, $cdataNode);
 			XMLCustomWriter::appendChild($articleNode, $suppFileOuterNode);
 		}
-
-		// Return the XML.
-		return $articleDoc;
 	}
 
 	/**
@@ -1544,6 +1745,41 @@ class SolrWebService extends XmlWebService {
 			$suggestions[] = $userInput . $termSuggestion;
 		}
 		return $suggestions;
+	}
+
+	/**
+	 * Check whether access to the given article
+	 * is authorized to the requesting party (i.e. the
+	 * Solr server).
+	 *
+	 * @param $article Article
+	 * @return boolean True if authorized, otherwise false.
+	 */
+	function _isArticleAccessAuthorized(&$article) {
+		// Did we get a published article?
+		if (!is_a($article, 'PublishedArticle')) return false;
+
+		// Get the article's journal.
+		$journal =& $this->_getJournal($article->getJournalId());
+		if (!is_a($journal, 'Journal')) return false;
+
+		// Get the article's issue.
+		$issue =& $this->_getIssue($article->getIssueId(), $journal->getId());
+		if (!is_a($issue, 'Issue')) return false;
+
+		// Only index published articles.
+		if (!$issue->getPublished() || $article->getStatus() != STATUS_PUBLISHED) return false;
+
+		// Make sure the requesting party is authorized to acces the article/issue.
+		import('classes.issue.IssueAction');
+		$subscriptionRequired = IssueAction::subscriptionRequired($issue, $journal);
+		if ($subscriptionRequired) {
+			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
+			if (!$isSubscribedDomain) return false;
+		}
+
+		// All checks passed successfully - allow access.
+		return true;
 	}
 }
 

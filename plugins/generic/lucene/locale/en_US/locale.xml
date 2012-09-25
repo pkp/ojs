@@ -15,10 +15,15 @@
 	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 
 	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Indexed {$numIndexed} out of a batch of {$batchCount}.</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
-	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
 	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is not enabled. Please enable it in the Lucene plug-in settings.</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">The technical administrator of this journal has been informed about the problem.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">The Lucene web service returned an error.</message>
 
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} articles marked for update</message>
+	
 	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
 	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
 	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevance</message>
