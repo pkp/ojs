@@ -1634,10 +1634,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function uploadLayoutFile($args, $request) {
+	function uploadLayoutFile($args, &$request) {
 		$layoutFileType = $request->getUserVar('layoutFileType');
 		if ($layoutFileType == 'submission') {
-			$this->_uploadLayoutVersion();
+			$this->_uploadLayoutVersion($request);
 
 		} else if ($layoutFileType == 'galley') {
 			$this->_uploadGalley('layoutFile', $request);
@@ -1652,10 +1652,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	/**
 	 * Upload the layout version of the submission file
-	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function _uploadLayoutVersion($args, &$request) {
+	function _uploadLayoutVersion(&$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		SectionEditorAction::uploadLayoutVersion($this->submission);
