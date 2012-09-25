@@ -69,17 +69,11 @@ class LucenePlugin extends GenericPlugin {
 	 *
 	 * @param $emailKey string
 	 * @param $journal Journal
-	 * @param $article Article
 	 */
-	function &getMailTemplate($emailKey, &$journal, $article = null) {
+	function &getMailTemplate($emailKey, $journal = null) {
 		if (!isset($this->_mailTemplates[$emailKey])) {
-			if (is_a($article, 'Article')) {
-				import('classes.mail.ArticleMailTemplate');
-				$mailTemplate = new ArticleMailTemplate($article, $emailKey, null, null, $journal, true, true);
-			} else {
-				import('classes.mail.MailTemplate');
-				$mailTemplate = new MailTemplate($emailKey, null, null, $journal, true, true);
-			}
+			import('classes.mail.MailTemplate');
+			$mailTemplate = new MailTemplate($emailKey, null, null, $journal, true, true);
 			$this->_mailTemplates[$emailKey] =& $mailTemplate;
 		}
 		return $this->_mailTemplates[$emailKey];
@@ -104,17 +98,17 @@ class LucenePlugin extends GenericPlugin {
 			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 
 			// Register callbacks (data-access level).
-			if ($this->getSetting(0, 'pullindexing')) {
-				HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackArticleDaoAdditionalFieldNames'));
-			}
+			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackArticleDaoAdditionalFieldNames'));
 
 			// Register callbacks (controller-level).
 			HookRegistry::register('ArticleSearch::retrieveResults', array(&$this, 'callbackRetrieveResults'));
-			HookRegistry::register('ArticleSearchIndex::deleteTextIndex', array(&$this, 'callbackDeleteTextIndex'));
-			HookRegistry::register('ArticleSearchIndex::indexArticleFiles', array(&$this, 'callbackIndexArticleFiles'));
-			HookRegistry::register('ArticleSearchIndex::indexArticleMetadata', array(&$this, 'callbackIndexArticleMetadata'));
-			HookRegistry::register('ArticleSearchIndex::indexSuppFileMetadata', array(&$this, 'callbackIndexSuppFileMetadata'));
-			HookRegistry::register('ArticleSearchIndex::updateFileIndex', array(&$this, 'callbackUpdateFileIndex'));
+			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array(&$this, 'callbackArticleMetadataChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array(&$this, 'callbackArticleFileChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array(&$this, 'callbackArticleFileDeleted'));
+			HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array(&$this, 'callbackArticleFilesChanged'));
+			HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array(&$this, 'callbackSuppFileMetadataChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleDeleted', array(&$this, 'callbackArticleDeleted'));
+			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array(&$this, 'callbackArticleChangesFinished'));
 			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array(&$this, 'callbackRebuildIndex'));
 
 			// Register callbacks (view-level).
@@ -130,6 +124,7 @@ class LucenePlugin extends GenericPlugin {
 			$username = $this->getSetting(0, 'username');
 			$password = $this->getSetting(0, 'password');
 			$instId = $this->getSetting(0, 'instId');
+
 			$this->_solrWebService = new SolrWebService($searchHandler, $username, $password, $instId);
 		}
 		return $success;
@@ -237,21 +232,35 @@ class LucenePlugin extends GenericPlugin {
 
 
 	//
-	// Public Search API
+	// Application level hook implementations.
 	//
 	/**
 	 * @see PKPPageRouter::route()
 	 */
 	function callbackLoadHandler($hookName, $args) {
-		$page =& $args[0];
-		if ($page === 'lucene') {
-			define('HANDLER_CLASS', 'LuceneHandler');
-			define('LUCENE_PLUGIN_NAME', $this->getName());
-			$handlerFile =& $args[2];
-			$handlerFile = $this->getPluginPath() . '/' . 'LuceneHandler.inc.php';
-		}
+		// Check the page.
+		$page = $args[0];
+		if ($page !== 'lucene') return;
+
+		// Check the operation.
+		$op = $args[1];
+		$publicOps = array(
+			'queryAutocomplete',
+			'pullChangedArticles'
+		);
+		if (!in_array($op, $publicOps)) return;
+
+		// Looks as if our handler had been requested.
+		define('HANDLER_CLASS', 'LuceneHandler');
+		define('LUCENE_PLUGIN_NAME', $this->getName());
+		$handlerFile =& $args[2];
+		$handlerFile = $this->getPluginPath() . '/' . 'LuceneHandler.inc.php';
 	}
 
+
+	//
+	// Data-access level hook implementations.
+	//
 	/**
 	 * @see DAO::getAdditionalFieldNames()
 	 */
@@ -263,6 +272,10 @@ class LucenePlugin extends GenericPlugin {
 		$returner[] = 'indexingState';
 	}
 
+
+	//
+	// Controller level hook implementations.
+	//
 	/**
 	 * @see ArticleSearch::retrieveResults()
 	 */
@@ -296,10 +309,10 @@ class LucenePlugin extends GenericPlugin {
 		$solrWebService =& $this->getSolrWebService();
 		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
 		if (is_null($result)) {
-			$result = array();
 			$error = $solrWebService->getServiceMessage();
-			$this->_informTechAdmin(null, $journal, false);
-			return null;
+			$this->_informTechAdmin($error, $journal, true);
+			$error .=  ' ' . __('plugins.generic.lucene.message.techAdminInformed');
+			return array();
 		} else {
 			if ($spellcheck && isset($result['spellingSuggestion'])) {
 				// Store the spelling suggestion internally. We cannot
@@ -337,72 +350,88 @@ class LucenePlugin extends GenericPlugin {
 		}
 	}
 
-
-	//
-	// Public Indexing API
-	//
 	/**
-	 * @see ArticleSearchIndex::deleteTextIndex()
+	 * @see ArticleSearchIndex::articleMetadataChanged()
 	 */
-	function callbackDeleteTextIndex($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::deleteTextIndex');
+	function callbackArticleMetadataChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::articleMetadataChanged');
+		list($article) = $params; /* @var $article Article */
+		$this->_solrWebService->markArticleChanged($article->getId());
+		return true;
+	}
+
+	/**
+	 * @see ArticleSearchIndex::articleFilesChanged()
+	 */
+	function callbackArticleFilesChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::articleFilesChanged');
+		list($article) = $params; /* @var $article Article */
+		$this->_solrWebService->markArticleChanged($article->getId());
+		return true;
+	}
+
+	/**
+	 * @see ArticleSearchIndex::articleFileChanged()
+	 */
+	function callbackArticleFileChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::articleFileChanged');
+		list($articleId, $type, $fileId) = $params;
+		$this->_solrWebService->markArticleChanged($articleId);
+		return true;
+	}
+
+	/**
+	 * @see ArticleSearchIndex::articleFileDeleted()
+	 */
+	function callbackArticleFileDeleted($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::articleFileDeleted');
 		list($articleId, $type, $assocId) = $params;
-		$success = $this->_indexArticleId($articleId);
-		if (!$success) {
-			$this->_informTechAdmin($articleId);
-		}
+		$this->_solrWebService->markArticleChanged($articleId);
 		return true;
 	}
 
 	/**
-	 * @see ArticleSearchIndex::indexArticleFiles()
+	 * @see ArticleSearchIndex::suppFileMetadataChanged()
 	 */
-	function callbackIndexArticleFiles($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::indexArticleFiles');
-		list($article) = $params; /* @var $article Article */
-		$success = $this->_indexArticle($article);
-		if (!$success) {
-			$this->_informTechAdmin($article->getId());
-		}
-		return true;
-	}
-
-	/**
-	 * @see ArticleSearchIndex::indexArticleMetadata()
-	 */
-	function callbackIndexArticleMetadata($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::indexArticleMetadata');
-		list($article) = $params; /* @var $article Article */
-		$success = $this->_indexArticle($article);
-		if (!$success) {
-			$this->_informTechAdmin($article->getId());
-		}
-		return true;
-	}
-
-	/**
-	 * @see ArticleSearchIndex::indexSuppFileMetadata()
-	 */
-	function callbackIndexSuppFileMetadata($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::indexSuppFileMetadata');
+	function callbackSuppFileMetadataChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::suppFileMetadataChanged');
 		list($suppFile) = $params; /* @var $suppFile SuppFile */
 		if (!is_a($suppFile, 'SuppFile')) return true;
-		$success = $this->_indexArticleId($suppFile->getArticleId());
-		if (!$success) {
-			$this->_informTechAdmin($suppFile->getArticleId());
-		}
+		$this->_solrWebService->markArticleChanged($suppFile->getArticleId());
 		return true;
 	}
 
 	/**
-	 * @see ArticleSearchIndex::updateFileIndex()
+	 * @see ArticleSearchIndex::articleDeleted()
 	 */
-	function callbackUpdateFileIndex($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::updateFileIndex');
-		list($articleId, $type, $fileId) = $params;
-		$success = $this->_indexArticleId($articleId);
-		if (!$success) {
-			$this->_informTechAdmin($articleId);
+	function callbackArticleDeleted($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::articleDeleted');
+		list($articleId) = $params;
+		// Deleting an article must always be done synchronously
+		// (even in pull-mode) as we'll no longer have an object
+		// to keep our change information.
+		$this->_solrWebService->deleteArticleFromIndex($articleId);
+		return true;
+	}
+
+	/**
+	 * @see ArticleSearchIndex::articleChangesFinished()
+	 */
+	function callbackArticleChangesFinished($hookName, $params) {
+		// In the case of pull-indexing we ignore this call
+		// and let the Solr server initiate indexing.
+		if ($this->getSetting(0, 'pullindexing')) return true;
+
+		// If the plugin is configured to push changes to the
+		// server then we'll now batch-update all articles that
+		// changed since the last update. We use a batch size of 5
+		// for online index updates to limit the time a request may be
+		// locked in case a race condition with a large index update
+		// occurs.
+		$solrWebService =& $this->getSolrWebService();
+		$result = $solrWebService->pushChangedArticles(5);
+		if (is_null($result)) {
+			$this->_informTechAdmin($solrWebService->getServiceMessage());
 		}
 		return true;
 	}
@@ -419,39 +448,67 @@ class LucenePlugin extends GenericPlugin {
 
 		// If we got a journal instance then only re-index
 		// articles from that journal.
-		$journalId = (is_a($journal, 'Journal') ? $journal->getId() : null);
+		$journalIdOrNull = (is_a($journal, 'Journal') ? $journal->getId() : null);
 
-		// Clear index
+		// Clear index (if the journal id is null then
+		// all journals will be deleted from the index).
 		if ($log) echo 'LucenePlugin: ' . __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
-		$solrWebService->deleteArticlesFromIndex($journalId);
+		$solrWebService->deleteArticlesFromIndex($journalIdOrNull);
 		if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
 		// Re-build index, either of a single journal...
 		if (is_a($journal, 'Journal')) {
 			$journals = array($journal);
+			unset($journal);
 		// ...or for all journals.
 		} else {
 			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journalIterator =& $journalDao->getJournals();
 			$journals = $journalIterator->toArray();
 		}
+
+		// We re-index journal by journal to partition the task a bit
+		// and provide better progress information to the user.
 		foreach($journals as $journal) {
 			if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ';
-			$numIndexed = $solrWebService->indexJournal($journal, $log);
-			if (is_null($numIndexed)) {
-				if ($log) {
-					echo ' ' . __('search.cli.rebuildIndex.error') . "\n";
-				} else {
-					$this->_informTechAdmin(null, $journal);
-				}
-				return false;
+
+			// Mark all articles in the journal for re-indexing.
+			$numMarked = $this->_solrWebService->markJournalChanged($journal->getId());
+
+			// Pull or push?
+			if ($this->getSetting(0, 'pullindexing')) {
+				// When pull-indexing is configured then we leave it up to the
+				// Solr server to decide when the updates will actually be done.
+				if ($log) echo '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . "\n";
 			} else {
+				// In case of push indexing we immediately update the index.
+				$numIndexed = 0;
+				do {
+					// We update the index in batches to reduce max memory usage
+					// and make a few intermediate commits.
+					$articlesInBatch = $solrWebService->pushChangedArticles(SOLR_INDEXING_MAX_BATCHSIZE, $journal->getId());
+					if (is_null($articlesInBatch)) {
+						$error = $solrWebService->getServiceMessage();
+						if ($log) {
+							echo ' ' . __('search.cli.rebuildIndex.error') . (empty($error) ? '' : ": $error") . "\n";
+						} else {
+							$this->_informTechAdmin($error, $journal);
+						}
+						return false;
+					}
+					if ($log) echo '.';
+					$numIndexed += $articlesInBatch;
+				} while ($articlesInBatch == SOLR_INDEXING_MAX_BATCHSIZE);
 				if ($log) echo ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n";
 			}
 		}
 		return true;
 	}
 
+
+	//
+	// View level hook implementations.
+	//
 	/**
 	 * @see TemplateManager::display()
 	 */
@@ -523,65 +580,6 @@ class LucenePlugin extends GenericPlugin {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Index a single article.
-	 * @param $article Article
-	 * @return boolean Whether or not the indexing was successful.
-	 */
-	function _indexArticle(&$article) {
-		if(!is_a($article, 'Article')) return false;
-
-		// If the article object is not of type PublishedArticle
-		// or if it is not a fully populated published article
-		// then upgrade/populate the object.
-		if (is_a($article, 'PublishedArticle') && is_numeric($article->getJournalId())) {
-			$publishedArticle =& $article;
-		} else {
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
-		}
-
-		$solrWebService =& $this->getSolrWebService();
-		if(!is_a($publishedArticle, 'PublishedArticle')) {
-			// The article is no longer public. Delete possible
-			// remainders from the index.
-			return $solrWebService->deleteArticleFromIndex($article->getId());
-		}
-
-		// We need the article's journal to index the article.
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal =& $journalDao->getById($publishedArticle->getJournalId());
-		if(!is_a($journal, 'Journal')) return false;
-
-		// We cannot re-index article files only. We have
-		// to re-index the whole article.
-		return $solrWebService->indexArticle($publishedArticle, $journal);
-	}
-
-	/**
-	 * Index a single article when an article ID is given.
-	 * @param $articleId integer
-	 * @return boolean Whether or not the indexing was successful.
-	 */
-	function _indexArticleId($articleId) {
-		if (!is_numeric($articleId)) return false;
-
-		// Retrieve the article object.
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-
-		if(!is_a($publishedArticle, 'PublishedArticle')) {
-			// The article doesn't exist any more
-			// or is no longer public. Delete possible
-			// remainders from the index.
-			$solrWebService =& $this->getSolrWebService();
-			return $solrWebService->deleteArticleFromIndex($articleId);
-		}
-
-		// Re-index the article.
-		return $this->_indexArticle($publishedArticle);
-	}
-
 	/**
 	 * Set the page's breadcrumbs, given the plugin's tree of items
 	 * to append.
@@ -675,54 +673,55 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Send an email to the tech admin of the
-	 * journal warning that an indexing error
-	 * has occured.
-	 * @param $articleId integer
-	 * @param $journal Journal
-	 * @param $isIndexingProblem boolean True, if this is a problem with an
-	 *  index update, otherwise indicates a problem during a search request.
+	 * Checks whether a minimum amount of time has passed since
+	 * the last email message went out.
+	 *
+	 * @return boolean True if a new email can be sent, false if
+	 *  we better keep silent.
 	 */
-	function _informTechAdmin($articleId, $journal = null, $isIndexingProblem = true) {
+	function _spamCheck() {
 		// Avoid spam.
 		$lastEmailTimstamp = (integer)$this->getSetting(0, 'lastEmailTimestamp');
 		$threeHours = 60 * 60 * 3;
 		$now = time();
-		if ($now - $lastEmailTimstamp < $threeHours) return;
+		if ($now - $lastEmailTimstamp < $threeHours) return false;
 		$this->updateSetting(0, 'lastEmailTimestamp', $now);
+		return true;
+	}
 
-		// Retrieve the article.
-		$article = null;
-		if (is_numeric($articleId)) {
-			$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-			$article =& $articleDao->getArticle($articleId);
-		}
+	/**
+	 * Send an email to the site's tech admin
+	 * warning that an indexing error has occured.
+	 *
+	 * @param $error array An array of article ids.
+	 * @param $journal Journal A journal object.
+	 * @param $isSearchProblem boolean Whether a search problem
+	 *  is being reported.
+	 */
+	function _informTechAdmin($error, $journal = null, $isSearchProblem = false) {
+		if (!$this->_spamCheck()) return;
 
-		// Retrieve the article's journal
-		if (is_a($article, 'Article')) {
-			// This must be an article indexing problem.
-			assert($isIndexingProblem);
-
-			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$journal =& $journalDao->getById($article->getJournalId());
-
-			// Instantiate an article mail template.
-			$mail =& $this->getMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION', $journal, $article);
+		// Is this a search or an indexing problem?
+		if ($isSearchProblem) {
+			assert(is_a($journal, 'Journal'));
+			$mail =& $this->getMailTemplate('LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION', $journal);
 		} else {
-			// Instantiate a mail template.
-			if ($isIndexingProblem) {
+			// Check whether this is journal or article index update problem.
+			if (is_a($journal, 'Journal')) {
 				// This must be a journal indexing problem.
-				assert(is_a($journal, 'Journal'));
 				$mail =& $this->getMailTemplate('LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION', $journal);
 			} else {
-				$mail =& $this->getMailTemplate('LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION', $journal);
+				// Instantiate an article mail template.
+				$mail =& $this->getMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION');
 			}
 		}
 
 		// Assign parameters.
 		$request =& PKPApplication::getRequest();
 		$site =& $request->getSite();
-		$mail->assignParams(array('siteName' => $site->getLocalizedTitle()));
+		$mail->assignParams(
+			array('siteName' => $site->getLocalizedTitle(), 'error' => $error)
+		);
 
 		// Send to the site's tech contact.
 		$mail->addRecipient($site->getLocalizedContactEmail(), $site->getLocalizedContactName());

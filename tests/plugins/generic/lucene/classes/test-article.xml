@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<articleList>
-  <article id="3" journalId="2" instId="test-inst">
+<articleList hasMore="yes">
+  <article id="3" journalId="2" instId="test-inst" loadAction="replace">
     <authorList>
       <author>Author, First</author>
       <author>Name, Second M.</author>
@@ -46,4 +46,5 @@
       <![CDATA[<suppFileList><suppFile locale="de_DE" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/2"/><suppFile locale="unknown" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/3"><titleList><title locale="de_DE">Titel</title></titleList><creatorList><creator locale="de_DE">Autor</creator></creatorList><subjectList><subject locale="de_DE">Thema</subject></subjectList><typeOtherList><typeOther locale="de_DE">Sonstiger Typ</typeOther></typeOtherList><descriptionList><description locale="de_DE">Beschreibung</description></descriptionList><sourceList><source locale="de_DE">Quelle</source></sourceList></suppFile></suppFileList>]]>
     </suppFile-xml>
   </article>
+  <article id="99" journalId="2" instId="test-inst" loadAction="delete"/>
 </articleList>

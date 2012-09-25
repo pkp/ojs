@@ -56,7 +56,7 @@
 	</setting>
 	<setting type="bool">
 		<name>pullindexing</name>
-		<value>true</value>
+		<value>false</value> <!-- Pull indexing is an advanced feature and is therefore switched off by default -->
 	</setting>
 </plugin_settings>
 

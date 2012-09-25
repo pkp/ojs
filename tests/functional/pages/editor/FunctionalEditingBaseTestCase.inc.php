@@ -58,7 +58,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 	 * @param $title string
 	 * @return integer the id of the new article
 	 */
-	protected function submitArticle($title) {
+	protected function submitArticle($title = 'Editing test article') {
 		// We need to be logged in to submit an article.
 		$this->logIn();
 		$submissionPage = $this->baseUrl . '/index.php/lucene-test/author/submit/';
@@ -268,18 +268,6 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 
 		// Save the file.
 		$this->clickAndWait('css=input.defaultButton');
-	}
-
-	/**
-	 * Delete the given article
-	 * @param $articleId integer
-	 */
-	protected function deleteArticle($articleId) {
-		$articleFileManager = new ArticleFileManager($articleId);
-		$articleFileManager->deleteArticleTree();
-
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$articleDao->deleteArticleById($articleId);
 	}
 }
 ?>

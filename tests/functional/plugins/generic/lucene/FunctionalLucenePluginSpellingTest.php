@@ -42,8 +42,6 @@ class FunctionalLucenePluginSpellingTest extends FunctionalLucenePluginBaseTestC
 	protected function setUp() {
 		parent::setUp();
 		$this->enableSpellcheck();
-
-
 	}
 
 	/**
