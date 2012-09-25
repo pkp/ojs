@@ -637,7 +637,7 @@ class NativeImportDom {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
-		$article = new Article();
+		$article = $articleDao->newDataObject();
 		if ($locale = $articleNode->getAttribute('locale')) {
 			$article->setLocale($locale);
 		} else {
@@ -834,7 +834,7 @@ class NativeImportDom {
 		);
 
 		// Insert published article entry.
-		$publishedArticle = new PublishedArticle();
+		$publishedArticle = $publishedArticleDao->newDataObject();
 		$publishedArticle->setId($article->getId());
 		$publishedArticle->setIssueId($issue->getId());
 

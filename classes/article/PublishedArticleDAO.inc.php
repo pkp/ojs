@@ -328,7 +328,7 @@ class PublishedArticleDAO extends DAO {
 		);
 		$row = $result->GetRowAssoc(false);
 
-		$publishedArticle = new PublishedArticle();
+		$publishedArticle = $this->newDataObject();
 		$publishedArticle->setPublishedArticleId($row['published_article_id']);
 		$publishedArticle->setId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -607,13 +607,21 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
+	 * Get a new data object.
+	 * @return PublishedArticle
+	 */
+	function newDataObject() {
+		return new PublishedArticle();
+	}
+
+	/**
 	 * creates and returns a published article object from a row, including all supp files etc.
 	 * @param $row array
 	 * @param $callHooks boolean Whether or not to call hooks
 	 * @return PublishedArticle object
 	 */
 	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
-		$publishedArticle = new PublishedArticle();
+		$publishedArticle = $this->newDataObject();
 		$publishedArticle->setPublishedArticleId($row['published_article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));

@@ -148,7 +148,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$journal =& $this->request->getJournal();
 			$user =& $this->request->getUser();
 
-			$this->article = new Article();
+			$this->article = $articleDao->newDataObject();
 			$this->article->setLocale($this->getData('locale'));
 			$this->article->setUserId($user->getId());
 			$this->article->setJournalId($journal->getId());

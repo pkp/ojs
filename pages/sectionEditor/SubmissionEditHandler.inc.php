@@ -2558,7 +2558,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				// Re-index the published article metadata.
 				$articleSearchIndex->indexArticleMetadata($publishedArticle);
 			} else {
-				$publishedArticle = new PublishedArticle();
+				$publishedArticle = $publishedArticleDao->newDataObject();
 				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished(Core::getCurrentDate());

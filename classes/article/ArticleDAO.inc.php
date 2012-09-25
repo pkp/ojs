@@ -138,9 +138,17 @@ class ArticleDAO extends DAO {
 	 * @return Article
 	 */
 	function &_returnArticleFromRow(&$row) {
-		$article = new Article();
+		$article = $this->newDataObject();
 		$this->_articleFromRow($article, $row);
 		return $article;
+	}
+
+	/**
+	 * Return a new data object.
+	 * @return Article
+	 */
+	function newDataObject() {
+		return new Article();
 	}
 
 	/**

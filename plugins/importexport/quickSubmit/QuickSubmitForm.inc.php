@@ -179,7 +179,7 @@ class QuickSubmitForm extends Form {
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
 
-		$article = new Article();
+		$article = $articleDao->newDataObject();
 		$article->setLocale($journal->getPrimaryLocale()); // FIXME in bug #5543
 		$article->setUserId($user->getId());
 		$article->setJournalId($journal->getId());
@@ -393,7 +393,7 @@ class QuickSubmitForm extends Form {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			} else {
-				$publishedArticle = new PublishedArticle();
+				$publishedArticle = $publishedArticleDao->newDataObject();
 				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished($this->getData('datePublished'));
