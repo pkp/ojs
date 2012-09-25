@@ -95,7 +95,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->register_modifier('mb_upper', array(String, 'strtoupper'));
+		$templateMgr->register_modifier('mb_upper', array('String', 'strtoupper'));
 		return parent::displayCitation($article, $issue, $journal);
 	}
 
