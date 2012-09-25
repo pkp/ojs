@@ -14,7 +14,7 @@
 
 <script type="text/javascript">{literal}
 	function toggleChecked() {
-		var elements = document.getElementById('exportAll').elements;
+		var elements = document.getElementById('exportAllForm').elements;
 		for (var i=0; i < elements.length; i++) {
 			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]' || elements[i].name == 'suppFileId[]') {
 				elements[i].checked = !elements[i].checked;
@@ -26,7 +26,7 @@
 <br/>
 
 <div id="allUnregistered">
-	<form action="{plugin_url path="exportAll"}" method="post" id="exportAll">
+	<form action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

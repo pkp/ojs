@@ -14,7 +14,7 @@
 
 <script type="text/javascript">{literal}
 	function toggleChecked() {
-		var elements = document.suppFiles.elements;
+		var elements = document.getElementById('suppFilesForm').elements;
 		for (var i=0; i < elements.length; i++) {
 			if (elements[i].name == 'suppFileId[]') {
 				elements[i].checked = !elements[i].checked;
@@ -26,7 +26,7 @@
 <br/>
 
 <div id="suppFiles">
-	<form action="{plugin_url path="exportSuppFiles"}" method="post" name="suppFiles">
+	<form action="{plugin_url path="exportSuppFiles"}" method="post" id="suppFilesForm">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
