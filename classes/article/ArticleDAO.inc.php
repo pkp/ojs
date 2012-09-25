@@ -138,9 +138,10 @@ class ArticleDAO extends DAO {
 	 * @param $settingName string
 	 * @param $settingValue mixed
 	 * @param $journalId int optional
+	 * @param $rangeInfo DBResultRange optional
 	 * @return array The articles identified by setting.
 	 */
-	function &getBySetting($settingName, $settingValue, $journalId = null) {
+	function &getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
@@ -178,16 +179,10 @@ class ArticleDAO extends DAO {
 			$sql .= ' AND a.journal_id = ?';
 		}
 		$sql .= ' ORDER BY a.journal_id, a.article_id';
-		$result =& $this->retrieve($sql, $params);
+		$result =& $this->retrieveRange($sql, $params, $rangeInfo);
 
-		$articles = array();
-		while (!$result->EOF) {
-			$articles[] =& $this->_returnArticleFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-
-		return $articles;
+		$returner = new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return $returner;
 	}
 
 	/**
@@ -611,6 +606,62 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
+	 * Add/update an article setting.
+	 * @param $articleId int
+	 * @param $name string
+	 * @param $value mixed
+	 * @param $type string Data type of the setting.
+	 * @param $isLocalized boolean
+	 */
+	function updateSetting($articleId, $name, $value, $type, $isLocalized = false) {
+		// Check and prepare setting data.
+		if ($isLocalized) {
+			if (is_array($value)) {
+				$values =& $value;
+			} else {
+				// We expect localized data to come in as an array.
+				assert(false);
+				return;
+			}
+		} else {
+			// Normalize non-localized data to an array so that
+			// we can treat updates uniformly.
+			$values = array('' => $value);
+		}
+		unset($value);
+
+		// Update setting values.
+		$keyFields = array('setting_name', 'locale', 'article_id');
+		foreach ($values as $locale => $value) {
+			// Locale-specific entries will be deleted when no value exists.
+			// Non-localized settings will always be set.
+			if ($isLocalized) {
+				$this->update(
+					'DELETE FROM article_settings WHERE article_id = ? AND setting_name = ? AND locale = ?',
+					array($articleId, $name, $locale)
+				);
+				if (empty($value)) continue;
+			}
+
+			// Convert the new value to the correct type.
+			$value = $this->convertToDB($value, $type);
+
+			// Update the database.
+			$this->replace('article_settings',
+				array(
+					'article_id' => $articleId,
+					'setting_name' => $name,
+					'setting_value' => $value,
+					'setting_type' => $type,
+					'locale' => $locale
+				),
+				$keyFields
+			);
+		}
+		$this->flushCache();
+	}
+
+	/**
 	 * Change the public ID of an article.
 	 * @param $articleId int
 	 * @param $pubIdType string One of the NLM pub-id-type values or
@@ -619,18 +670,7 @@ class ArticleDAO extends DAO {
 	 * @param $pubId string
 	 */
 	function changePubId($articleId, $pubIdType, $pubId) {
-		$idFields = array(
-			'article_id', 'locale', 'setting_name'
-		);
-		$updateArray = array(
-			'article_id' => $articleId,
-			'locale' => '',
-			'setting_name' => 'pub-id::'.$pubIdType,
-			'setting_type' => 'string',
-			'setting_value' => (string)$pubId
-		);
-		$this->replace('article_settings', $updateArray, $idFields);
-		$this->flushCache();
+		$this->updateSetting($articleId, 'pub-id::'.$pubIdType, $pubId, 'string');
 	}
 
 	/**
