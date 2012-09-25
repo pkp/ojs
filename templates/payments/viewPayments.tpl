@@ -15,7 +15,7 @@
 <ul class="menu">
 	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>
 	<li><a href="{url op="payMethodSettings"}">{translate key="manager.payment.paymentMethods"}</a></li>
-	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payment.records"}</a></li>		
+	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payment.records"}</a></li>
 </ul>
 
 <br />
@@ -49,10 +49,11 @@
 	{/if}
 	<tr valign="top">
 		<td>
+			{assign var=user value=$userDao->getById($payment->getUserId())}
 			{if $isJournalManager}
-				<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$payment->getUsername()|escape|wordwrap:15:" ":true}</a>
+				<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a>
 			{else}
-				{$payment->getUsername()|escape|wordwrap:15:" ":true}
+				{$user->getUsername()|escape|wordwrap:15:" ":true}
 			{/if}
 		</td>
 		<td>
