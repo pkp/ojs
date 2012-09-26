@@ -67,12 +67,11 @@ class AbntSettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$journalId =& Request::getJournal()->getId();
 		$plugin =& $this->plugin;
 
 		$value = $this->getData('location');
 		if (is_array($value)) {
-			$plugin->updateSetting($journalId, 'location', $value, 'object');
+			$plugin->updateSetting($this->journalId, 'location', $value, 'object');
 		}
 	}
 }

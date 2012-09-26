@@ -57,17 +57,18 @@ class TimedViewReportPlugin extends ReportPlugin {
 	 */
 	function setBreadcrumbs() {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			),
 			array(
-				Request::url(null, 'manager', 'statistics'),
+				$request->url(null, 'manager', 'statistics'),
 				'manager.statistics'
 			)
 		);
@@ -86,17 +87,17 @@ class TimedViewReportPlugin extends ReportPlugin {
 			if ($form->validate()) {
 				$form->execute();
 			} else {
-				$form->display();
+				$form->display($request);
 			}
 		} elseif ($request->getUserVar('clearLogs')) {
 			$dateClear = (int) $request->getUserVar('dateClearYear') . '-' . (int) $request->getUserVar('dateClearMonth') . '-' . (int) $request->getUserVar('dateClearDay') . ' 00:00:00';
 			$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
 			$journal =& $request->getJournal();
 			$timedViewReportDao->clearLogs($dateClear, $journal->getId());
-			$form->display();
+			$form->display($request);
 		} else {
 			$form->initData();
-			$form->display();
+			$form->display($request);
 		}
 	}
 }

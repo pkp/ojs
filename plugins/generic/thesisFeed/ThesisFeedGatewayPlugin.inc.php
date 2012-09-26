@@ -69,7 +69,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		$plugin =& $this->getThesisFeedPlugin();
 		return $plugin->getTemplatePath() . 'templates/';
 	}
-	
+
 	/**
 	 * Get whether or not this plugin is enabled. (Should always return true, as the
 	 * parent plugin will take care of loading this one when needed)
@@ -94,7 +94,8 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function fetch($args) {
 		// Make sure we're within a Journal context
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure thesis abstracts and feed plugin are enabled
@@ -120,7 +121,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		);
 		if (!isset($typeMap[$type])) return false;
 
-		// Get limit setting, if any 
+		// Get limit setting, if any
 		$limitRecentItems = $thesisFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
 		$recentItems = (int) $thesisFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
@@ -137,17 +138,17 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		// Get date of most recent thesis
 		$lastDateUpdated = $thesisFeedPlugin->getSetting($journal->getId(), 'dateUpdated');
 		if ($theses->wasEmpty()) {
-			if (empty($lastDateUpdated)) { 
-				$dateUpdated = Core::getCurrentDate(); 
-				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
+			if (empty($lastDateUpdated)) {
+				$dateUpdated = Core::getCurrentDate();
+				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
 			} else {
 				$dateUpdated = $lastDateUpdated;
 			}
 		} else {
 			$mostRecentThesis =& $thesisDao->getMostRecentActiveThesisByJournalId($journalId);
 			$dateUpdated = $mostRecentThesis->getDateSubmitted();
-			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) { 
-				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
+			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
+				$thesisFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
 			}
 		}
 
@@ -156,7 +157,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign('selfUrl', Request::getCompleteUrl()); 
+		$templateMgr->assign('selfUrl', $request->getCompleteUrl());
 		$templateMgr->assign('dateUpdated', $dateUpdated);
 		$templateMgr->assign_by_ref('theses', $theses->toArray());
 		$templateMgr->assign_by_ref('journal', $journal);

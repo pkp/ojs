@@ -45,7 +45,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, $request) {
+	function getContents(&$templateMgr, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = ($journal)?$journal->getId():null;
 		if (!$journal) return '';
@@ -66,7 +66,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		// If no individual subscription or if not valid, check for institutional subscription
 		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
 			$ip = $request->getRemoteAddr();
-			$domain = Request::getRemoteDomain();
+			$domain = $request->getRemoteDomain();
 			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journalId);
 			if ($subscriptionId) {

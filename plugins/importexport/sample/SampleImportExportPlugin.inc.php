@@ -61,7 +61,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 				break;
 			default:
 				// Display a list of issues for export
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
@@ -74,7 +74,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		$this->usage($scriptName);
 	}

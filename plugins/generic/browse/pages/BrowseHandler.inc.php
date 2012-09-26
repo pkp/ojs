@@ -30,7 +30,7 @@ class BrowseHandler extends Handler {
 		$enableBrowseBySections = $browsePlugin->getSetting($journal->getId(), 'enableBrowseBySections');
 		if ($enableBrowseBySections) {
 			if (isset($args[0]) && $args[0] == 'view') {
-				$sectionId = Request::getUserVar('sectionId');
+				$sectionId = $request->getUserVar('sectionId');
 				$sectionDao = &DAORegistry::getDAO('SectionDAO');
 				$section =& $sectionDao->getSection($sectionId);
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -87,7 +87,7 @@ class BrowseHandler extends Handler {
 		$enableBrowseByIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'enableBrowseByIdentifyTypes');
 		if ($enableBrowseByIdentifyTypes) {
 			if (isset($args[0]) && $args[0] == 'view') {
-				$identifyType = Request::getUserVar('identifyType');
+				$identifyType = $request->getUserVar('identifyType');
 				$sectionDao = &DAORegistry::getDAO('SectionDAO');
 				$sectionsIterator =& $sectionDao->getJournalSections($journal->getId());
 				$sections = array();

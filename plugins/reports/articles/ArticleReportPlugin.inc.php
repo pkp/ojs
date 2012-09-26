@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class ArticleReportPlugin
  * @ingroup plugins_reports_article
  *
@@ -50,7 +50,8 @@ class ArticleReportPlugin extends ReportPlugin {
 	}
 
 	function display(&$args) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=articles-' . date('Ymd') . '.csv');
@@ -83,7 +84,7 @@ class ArticleReportPlugin extends ReportPlugin {
 			'title' => __('article.title'),
 			'abstract' => __('article.abstract')
 		);
-			
+
 		for ($a = 1; $a <= $maxAuthors; $a++) {
 			$columns = array_merge($columns, array(
 				'fname' . $a => __('user.firstName') . " (" . __('user.role.author') . " $a)",
@@ -96,7 +97,7 @@ class ArticleReportPlugin extends ReportPlugin {
 				'biography' . $a => __('user.biography') . " (" . __('user.role.author') . " $a)"
 			));
 		}
-			
+
 		$columns = array_merge($columns, array(
 			'section_title' => __('section.title'),
 			'language' => __('common.language'),
@@ -140,10 +141,10 @@ class ArticleReportPlugin extends ReportPlugin {
 			unset($row);
 			$authorIndex++;
 		}
-		
+
 		fclose($fp);
 	}
-	
+
 	/**
 	 * Get the highest author count for any article (to determine how many columns to set)
 	 * @param $authorsIterator DBRowIterator
@@ -156,7 +157,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		}
 		return $maxAuthors;
 	}
-	
+
 	/**
 	 * Flatten an array of author information into one array and append author sequence to each key
 	 * @param $authors array
@@ -167,7 +168,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$seq = 0;
 		foreach($authors as $author) {
 			$seq++;
-			
+
 			$returner['fname' . $seq] = isset($author['fname']) ? $author['fname'] : '';
 			$returner['mname' . $seq] = isset($author['mname']) ? $author['mname'] : '';
 			$returner['lname' . $seq] = isset($author['lname']) ? $author['lname'] : '';

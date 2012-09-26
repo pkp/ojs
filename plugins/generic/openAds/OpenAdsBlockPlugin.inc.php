@@ -75,10 +75,11 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the contents of the CMS plugin TOC.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 
 		// Get the ad settings.

@@ -52,22 +52,23 @@ class ReportPlugin extends Plugin {
 	 */
 	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			),
 			array (
-				Request::url(null, 'manager', 'reports'),
+				$request->url(null, 'manager', 'reports'),
 				'manager.statistics.reports'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'reports', array('plugin', $this->getName())),
+			$request->url(null, 'manager', 'reports', array('plugin', $this->getName())),
 			$this->getDisplayName(),
 			true
 		);
@@ -101,7 +102,8 @@ class ReportPlugin extends Plugin {
 	 */
 	function manage($verb, $args) {
 		if ($verb === 'reports') {
-			Request::redirect(null, 'manager', 'report', $this->getName());
+			$request =& $this->getRequest();
+			$request->redirect(null, 'manager', 'report', $this->getName());
 		}
 		return false;
 	}

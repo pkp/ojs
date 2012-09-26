@@ -79,7 +79,8 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	function deposit($url, $username, $password, $articleId, $depositEditorial, $depositGalleys) {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		$deposit = new OJSSwordDeposit($publishedArticle);
 		$deposit->setMetadata();
@@ -95,15 +96,16 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		parent::display($args);
 		$this->setBreadcrumbs();
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$plugin =& $this->getSwordPlugin();
 
-		$swordUrl = Request::getUserVar('swordUrl');
+		$swordUrl = $request->getUserVar('swordUrl');
 
-		$depositPointKey = Request::getUserVar('depositPoint');
+		$depositPointKey = $request->getUserVar('depositPoint');
 		$depositPoints = $plugin->getSetting($journal->getId(), 'depositPoints');
-		$username = Request::getUserVar('swordUsername');
-		$password = Request::getUserVar('swordPassword');
+		$username = $request->getUserVar('swordUsername');
+		$password = $request->getUserVar('swordPassword');
 
 		if (isset($depositPoints[$depositPointKey])) {
 			$selectedDepositPoint = $depositPoints[$depositPointKey];
@@ -111,15 +113,15 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 			if ($selectedDepositPoint['password'] != '') $password = $selectedDepositPoint['password'];
 		}
 
-		$swordDepositPoint = Request::getUserVar('swordDepositPoint');
-		$depositEditorial = Request::getUserVar('depositEditorial');
-		$depositGalleys = Request::getUserVar('depositGalleys');
+		$swordDepositPoint = $request->getUserVar('swordDepositPoint');
+		$depositEditorial = $request->getUserVar('depositEditorial');
+		$depositGalleys = $request->getUserVar('depositGalleys');
 
 		switch (array_shift($args)) {
 			case 'deposit':
 				$depositIds = array();
 				try {
-					foreach (Request::getUserVar('articleId') as $articleId) {
+					foreach ($request->getUserVar('articleId') as $articleId) {
 						$depositIds[] = $this->deposit(
 							$swordDepositPoint,
 							$username,
@@ -134,7 +136,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 					$templateMgr->assign(array(
 						'pageTitle' => 'plugins.importexport.sword.depositFailed',
 						'messageTranslated' => $e->getMessage(),
-						'backLink' => Request::url(
+						'backLink' => $request->url(
 							null, null, null,
 							array('plugin', $this->getName()),
 							array(
@@ -153,7 +155,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign(array(
 					'pageTitle' => 'plugins.importexport.sword.depositSuccessful',
 					'message' => 'plugins.importexport.sword.depositSuccessfulDescription',
-					'backLink' => Request::url(
+					'backLink' => $request->url(
 						null, null, null,
 						array('plugin', $this->getName()),
 						array(
@@ -169,7 +171,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				return $templateMgr->display('common/message.tpl');
 				break;
 			default:
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
@@ -178,7 +180,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				import('lib.pkp.classes.core.VirtualArrayIterator');
 				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				foreach (array('swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys', 'swordDepositPoint') as $var) {
-					$templateMgr->assign($var, Request::getUserVar($var));
+					$templateMgr->assign($var, $request->getUserVar($var));
 				}
 				$templateMgr->assign('depositPoints', $depositPoints);
 				if (!empty($swordUrl)) {
@@ -201,7 +203,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		die('executeCLI unimplemented');
 	}

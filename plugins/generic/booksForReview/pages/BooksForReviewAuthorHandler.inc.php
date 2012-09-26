@@ -20,7 +20,7 @@ class BooksForReviewAuthorHandler extends Handler {
 	 * Display books for review author listing page.
 	 */
 	function booksForReview($args = array(), &$request) {
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -68,7 +68,7 @@ class BooksForReviewAuthorHandler extends Handler {
 	 * Author requests a book for review.
 	 */
 	function requestBookForReview($args = array(), &$request) {
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'user');
@@ -168,24 +168,25 @@ class BooksForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate(&$request, $subclass = false) {
 		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'author'),
+				$request->url(null, 'author'),
 				'user.role.author'
 			)
 		);
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
+		$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 

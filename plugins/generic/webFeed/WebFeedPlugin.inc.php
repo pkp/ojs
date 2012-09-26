@@ -83,13 +83,13 @@ class WebFeedPlugin extends GenericPlugin {
 	function callbackAddLinks($hookName, $args) {
 		if ($this->getEnabled()) {
 			// Only page requests will be handled
-			$request =& Registry::get('request');
+			$request =& $this->getRequest();
 			if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
 			$templateManager =& $args[0];
 
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
-			$requestedPage = Request::getRequestedPage();
+			$requestedPage = $request->getRequestedPage();
 			if ($currentJournal) {
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getId(), true);
@@ -118,20 +118,21 @@ class WebFeedPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$page =& $args[0];
 			$op =& $args[1];
+			$request =& $this->getRequest();
 
 			if ($page == 'feed') {
 				switch ($op) {
 					case 'atom':
-						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom'));
+						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom'));
 						break;
 					case 'rss':
-						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss'));
+						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss'));
 						break;
 					case 'rss2':
-						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2'));
+						$request->redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2'));
 						break;
 					default:
-						Request::redirect(null, 'index');
+						$request->redirect(null, 'index');
 				}
 			}
 		}
@@ -159,10 +160,11 @@ class WebFeedPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr =& TemplateManager::getManager();
@@ -175,7 +177,7 @@ class WebFeedPlugin extends GenericPlugin {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, 'plugins');
+						$request->redirect(null, null, 'plugins');
 						return false;
 					} else {
 						$form->display();

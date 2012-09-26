@@ -66,14 +66,14 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
 			case 'confirm':
 				$this->import('UserXMLParser');
 				$templateMgr->assign('helpTopicId', 'journal.users.importUsers');
 
-				$sendNotify = (bool) Request::getUserVar('sendNotify');
-				$continueOnError = (bool) Request::getUserVar('continueOnError');
+				$sendNotify = (bool) $request->getUserVar('sendNotify');
+				$continueOnError = (bool) $request->getUserVar('continueOnError');
 
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
@@ -104,45 +104,45 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'import':
 				$this->import('UserXMLParser');
-				$userKeys = Request::getUserVar('userKeys');
+				$userKeys = $request->getUserVar('userKeys');
 				if (!is_array($userKeys)) $userKeys = array();
-				$sendNotify = (bool) Request::getUserVar('sendNotify');
-				$continueOnError = (bool) Request::getUserVar('continueOnError');
+				$sendNotify = (bool) $request->getUserVar('sendNotify');
+				$continueOnError = (bool) $request->getUserVar('continueOnError');
 
 				$users = array();
 				foreach ($userKeys as $i) {
 					$newUser = new ImportedUser();
-					$newUser->setFirstName(Request::getUserVar($i.'_firstName'));
-					$newUser->setMiddleName(Request::getUserVar($i.'_middleName'));
-					$newUser->setLastName(Request::getUserVar($i.'_lastName'));
-					$newUser->setUsername(Request::getUserVar($i.'_username'));
-					$newUser->setEmail(Request::getUserVar($i.'_email'));
+					$newUser->setFirstName($request->getUserVar($i.'_firstName'));
+					$newUser->setMiddleName($request->getUserVar($i.'_middleName'));
+					$newUser->setLastName($request->getUserVar($i.'_lastName'));
+					$newUser->setUsername($request->getUserVar($i.'_username'));
+					$newUser->setEmail($request->getUserVar($i.'_email'));
 
 					$locales = array();
-					if (Request::getUserVar($i.'_locales') != null || is_array(Request::getUserVar($i.'_locales'))) {
-						foreach (Request::getUserVar($i.'_locales') as $locale) {
+					if ($request->getUserVar($i.'_locales') != null || is_array($request->getUserVar($i.'_locales'))) {
+						foreach ($request->getUserVar($i.'_locales') as $locale) {
 							array_push($locales, $locale);
 						}
 					}
 					$newUser->setLocales($locales);
-					$newUser->setSignature(Request::getUserVar($i.'_signature'), null);
-					$newUser->setBiography(Request::getUserVar($i.'_biography'), null);
-					$newUser->setTemporaryInterests(Request::getUserVar($i.'_interests'));
-					$newUser->setGossip(Request::getUserVar($i.'_gossip'), null);
-					$newUser->setCountry(Request::getUserVar($i.'_country'));
-					$newUser->setMailingAddress(Request::getUserVar($i.'_mailingAddress'));
-					$newUser->setFax(Request::getUserVar($i.'_fax'));
-					$newUser->setPhone(Request::getUserVar($i.'_phone'));
-					$newUser->setUrl(Request::getUserVar($i.'_url'));
-					$newUser->setAffiliation(Request::getUserVar($i.'_affiliation'), null);
-					$newUser->setGender(Request::getUserVar($i.'_gender'));
-					$newUser->setInitials(Request::getUserVar($i.'_initials'));
-					$newUser->setSalutation(Request::getUserVar($i.'_salutation'));
-					$newUser->setPassword(Request::getUserVar($i.'_password'));
-					$newUser->setMustChangePassword(Request::getUserVar($i.'_mustChangePassword'));
-					$newUser->setUnencryptedPassword(Request::getUserVar($i.'_unencryptedPassword'));
+					$newUser->setSignature($request->getUserVar($i.'_signature'), null);
+					$newUser->setBiography($request->getUserVar($i.'_biography'), null);
+					$newUser->setTemporaryInterests($request->getUserVar($i.'_interests'));
+					$newUser->setGossip($request->getUserVar($i.'_gossip'), null);
+					$newUser->setCountry($request->getUserVar($i.'_country'));
+					$newUser->setMailingAddress($request->getUserVar($i.'_mailingAddress'));
+					$newUser->setFax($request->getUserVar($i.'_fax'));
+					$newUser->setPhone($request->getUserVar($i.'_phone'));
+					$newUser->setUrl($request->getUserVar($i.'_url'));
+					$newUser->setAffiliation($request->getUserVar($i.'_affiliation'), null);
+					$newUser->setGender($request->getUserVar($i.'_gender'));
+					$newUser->setInitials($request->getUserVar($i.'_initials'));
+					$newUser->setSalutation($request->getUserVar($i.'_salutation'));
+					$newUser->setPassword($request->getUserVar($i.'_password'));
+					$newUser->setMustChangePassword($request->getUserVar($i.'_mustChangePassword'));
+					$newUser->setUnencryptedPassword($request->getUserVar($i.'_unencryptedPassword'));
 
-					$newUserRoles = Request::getUserVar($i.'_roles');
+					$newUserRoles = $request->getUserVar($i.'_roles');
 					if (is_array($newUserRoles) && count($newUserRoles) > 0) {
 						foreach ($newUserRoles as $newUserRole) {
 							if ($newUserRole != '') {
@@ -180,7 +180,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$this->import('UserExportDom');
 				$users = array();
 				$rolePaths = array();
-				foreach (Request::getUserVar('roles') as $rolePath) {
+				foreach ($request->getUserVar('roles') as $rolePath) {
 					$roleId = $roleDao->getRoleIdFromPath($rolePath);
 					$thisRoleUsers =& $roleDao->getUsersByRoleId($roleId, $journal->getId());
 					foreach ($thisRoleUsers->toArray() as $user) {

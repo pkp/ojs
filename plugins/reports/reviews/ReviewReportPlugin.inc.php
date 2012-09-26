@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- * 
+ *
  * @class ReviewReportPlugin
  * @ingroup plugins_reports_review
  * @see ReviewReportDAO
@@ -51,7 +51,8 @@ class ReviewReportPlugin extends ReportPlugin {
 	}
 
 	function display(&$args) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');

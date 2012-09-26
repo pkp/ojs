@@ -83,7 +83,8 @@ class OpenAdsPlugin extends GenericPlugin {
 	}
 
 	function mainOutputFilter($output, &$smarty) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		// Get the ad settings.
 		$headerAdHtml = $contentAdHtml = '';
@@ -142,7 +143,8 @@ class OpenAdsPlugin extends GenericPlugin {
 	 * Output filter to modify the RT sidebar
 	 */
 	function rtOutputFilter($output, &$smarty) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return $output;
 
 		//Get the ad settings.
@@ -189,11 +191,12 @@ class OpenAdsPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$this->import('OpenAdsSettingsForm');
 				$this->import('OpenAdsConnection');
@@ -203,7 +206,7 @@ class OpenAdsPlugin extends GenericPlugin {
 				if (array_shift($args) == 'save') {
 					$form->readInputData();
 					$form->execute();
-					Request::redirect(null, 'manager', 'plugins');
+					$request->redirect(null, 'manager', 'plugins');
 					return false;
 				} else {
 					$form->initData();

@@ -41,14 +41,15 @@ class AuthorBiosBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents(&$templateMgr, &$request) {
 		// Only show the block for article pages.
-		switch (Request::getRequestedPage() . '/' . Request::getRequestedOp()) {
+		switch ($request->getRequestedPage() . '/' . $request->getRequestedOp()) {
 			case 'article/view':
 				if (!$templateMgr->get_template_vars('article')) return '';
-				return parent::getContents($templateMgr);
+				return parent::getContents($templateMgr, $request);
 			default:
 				return '';
 		}

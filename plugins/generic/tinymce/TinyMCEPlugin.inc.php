@@ -65,6 +65,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	 */
 	function getEnableFields(&$templateMgr, $page, $op) {
 		$formLocale = $templateMgr->get_template_vars('formLocale');
+		$request =& $this->getRequest();
 		$fields = array();
 		switch ("$page/$op") {
 			case 'admin/settings':
@@ -79,7 +80,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'author/submit':
 			case 'author/saveSubmit':
-				switch (array_shift(Request::getRequestedArgs())) {
+				switch (array_shift($request->getRequestedArgs())) {
 					case 1: $fields[] = 'commentsToEditor'; break;
 					case 3:
 						$count = max(1, count($templateMgr->get_template_vars('authors')));
@@ -199,7 +200,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'manager/setup':
 			case 'manager/saveSetup':
-				$args = Request::getRequestedArgs();
+				$args = $request->getRequestedArgs();
 				switch (array_shift($args)) {
 					case 1:
 						$fields[] = 'mailingAddress';
@@ -338,13 +339,13 @@ class TinyMCEPlugin extends GenericPlugin {
 	 */
 	function callback($hookName, $args) {
 		// Only pages requests interest us here
-		$request =& Registry::get('request');
+		$request =& $this->getRequest();
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return null;
 
 		$templateManager =& $args[0];
 
-		$page = Request::getRequestedPage();
-		$op = Request::getRequestedOp();
+		$page = $request->getRequestedPage();
+		$op = $request->getRequestedOp();
 		$enableFields = $this->getEnableFields($templateManager, $page, $op);
 
 		if (!empty($enableFields)) {

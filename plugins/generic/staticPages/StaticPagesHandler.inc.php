@@ -16,11 +16,11 @@
 import('classes.handler.Handler');
 
 class StaticPagesHandler extends Handler {
-	function index( $args ) {
+	function index($args) {
 		Request::redirect(null, null, 'view', Request::getRequestedOp());
 	}
 
-	function view ($args) {
+	function view($args) {
 		if (count($args) > 0 ) {
 			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER);
 			$journal =& Request::getJournal();

@@ -87,10 +87,11 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 
 		// If the thesis plugin isn't enabled, don't do anything.
@@ -100,10 +101,10 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 
 		$plugin =& $this->getThesisFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
-		$requestedPage = Request::getRequestedPage();
+		$requestedPage = $request->getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) {
-			return parent::getContents($templateMgr);
+			return parent::getContents($templateMgr, $request);
 		} else {
 			return '';
 		}

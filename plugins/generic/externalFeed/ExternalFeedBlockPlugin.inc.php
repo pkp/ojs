@@ -74,17 +74,18 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 
 		$journalId = $journal->getId();
 		$plugin =& $this->getExternalFeedPlugin();
 		if (!$plugin->getEnabled()) return '';
 
-		$requestedPage = Request::getRequestedPage();
+		$requestedPage = $request->getRequestedPage();
 		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 		$plugin->import('simplepie.SimplePie');
 
@@ -118,7 +119,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		if (!isset($externalFeeds)) return '';
 
 		$templateMgr->assign_by_ref('externalFeeds', $externalFeeds);
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

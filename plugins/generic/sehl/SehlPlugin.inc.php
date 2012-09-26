@@ -20,7 +20,8 @@ class SehlPlugin extends GenericPlugin {
 
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 			$journalId = $journal?$journal->getId():0;
 
 			HookRegistry::register('TemplateManager::display',array(&$this, 'displayTemplateCallback'));
@@ -83,7 +84,8 @@ class SehlPlugin extends GenericPlugin {
 
 		if (empty($this->queryTerms)) return false;
 
-		$templateMgr->addStylesheet(Request::getBaseUrl() . '/' . $this->getPluginPath() . '/sehl.css');
+		$request =& $this->getRequest();
+		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/sehl.css');
 		$templateMgr->register_outputfilter(array(&$this, 'outputFilter'));
 
 

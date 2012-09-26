@@ -90,7 +90,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 				$journalId = $article->getJournalId();
 			}
 			// get the journal
-			$request =& Application::getRequest();
+			$request =& $this->getRequest();
 			$router =& $request->getRouter();
 			$journal =& $router->getContext($request);
 			if (!$journal || $journal->getId() != $journalId) return null;

@@ -100,19 +100,20 @@ class CustomBlockPlugin extends BlockPlugin {
 	function manage($verb, $args) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$request =& $this->getRequest();
 
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$this->import('CustomBlockEditForm');
 		$form = new CustomBlockEditForm($this, $journal->getId());
@@ -126,7 +127,7 @@ class CustomBlockPlugin extends BlockPlugin {
 				return false;
 			case 'edit':
 				$pageCrumbs[] = array(
-					Request::url(null, 'manager', 'plugins'),
+					$request->url(null, 'manager', 'plugins'),
 					__('manager.plugins'),
 					true
 				);
@@ -140,13 +141,13 @@ class CustomBlockPlugin extends BlockPlugin {
 				$form->readInputData();
 				if ($form->validate()) {
 					$form->save();
-					$pageCrumbs[] = array(Request::url(null, 'manager', 'plugins'), 'manager.plugins');
+					$pageCrumbs[] = array($request->url(null, 'manager', 'plugins'), 'manager.plugins');
 					$templateMgr->assign(array(
-						'currentUrl' => Request::url(null, null, null, array($this->getCategory(), $this->getName(), 'edit')),
+						'currentUrl' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'edit')),
 						'pageTitleTranslated' => $this->getDisplayName(),
 						'pageHierarchy' => $pageCrumbs,
 						'message' => 'plugins.generic.customBlock.saved',
-						'backLink' => Request::url(null, 'manager', 'plugins'),
+						'backLink' => $request->url(null, 'manager', 'plugins'),
 						'backLinkLabel' => 'common.continue'
 					));
 					$templateMgr->display('common/message.tpl');
@@ -163,14 +164,15 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the contents of the Block
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 
 		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 
 	}
 

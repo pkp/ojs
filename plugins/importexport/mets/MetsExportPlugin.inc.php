@@ -48,15 +48,15 @@ class METSExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		parent::display($args, $request);
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
 			case 'exportIssues':
-				$issueIds = Request::getUserVar('issueId');
+				$issueIds = $request->getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
 					$issue =& $issueDao->getIssueById($issueId);
-					if (!$issue) Request::redirect();
+					if (!$issue) $request->redirect();
 					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
@@ -64,7 +64,7 @@ class METSExportPlugin extends ImportExportPlugin {
 			case 'exportIssue':
 				$issueId = array_shift($args);
 				$issue =& $issueDao->getIssueById($issueId);
-				if (!$issue) Request::redirect();
+				if (!$issue) $request->redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
 				break;

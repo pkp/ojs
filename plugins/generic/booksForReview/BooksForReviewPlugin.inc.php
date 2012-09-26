@@ -39,7 +39,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$bfrDao = new BookForReviewDAO($this->getName());
 			$returner =& DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
 
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 			if ($journal) {
 				$mode = $this->getSetting($journal->getId(), 'mode');
 				$coverPageIssue = $this->getSetting($journal->getId(), 'coverPageIssue');
@@ -154,18 +155,19 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugin', array('generic', $this->getName(), 'booksForReview')),
+			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'booksForReview')),
 			$this->getDisplayName(),
 			true
 		);
@@ -178,13 +180,14 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function saveSubmitHandler($hookName, $params) {
 		$article =& $params[1];
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 
 		if ($journal && $user) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
-			$bookId = Request::getUserVar('bookForReviewId') == null ? null : (int) Request::getUserVar('bookForReviewId');
+			$bookId = $request->getUserVar('bookForReviewId') == null ? null : (int) $request->getUserVar('bookForReviewId');
 
 			if ($bookId) {
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -305,8 +308,9 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function enableTinyMCE($hookName, $params) {
 		$fields =& $params[1];
-		$page = Request::getRequestedPage();
-		$op = Request::getRequestedOp();
+		$request =& $this->getRequest();
+		$page = $request->getRequestedPage();
+		$op = $request->getRequestedOp();
 		if ($page == 'editor' && ($op == 'createBookForReview' || $op == 'editBookForReview' || $op == 'updateBookForReview')) {
 			$fields[] = 'description';
 			$fields[] = 'notes';
@@ -323,7 +327,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		$oldUserId =& $params[0];
 		$newUserId =& $params[1];
 
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$oldUserBooksForReview =& $bfrDao->getBooksForReviewByAuthor($journal->getId(), $oldUserId);
@@ -345,8 +350,9 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 
-			$journal =& Request::getJournal();
-			$user =& Request::getUser();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
+			$user =& $request->getUser();
 
 			if ($journal && $user) {
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
@@ -370,7 +376,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -406,7 +413,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -427,7 +435,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			if ($book) {
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$baseCoverPagePath = Request::getBaseUrl() . '/';
+				$baseCoverPagePath = $request->getBaseUrl() . '/';
 				$baseCoverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 				$smarty->assign('baseCoverPagePath', $baseCoverPagePath);
 				$smarty->assign('locale', AppLocale::getLocale());
@@ -448,7 +456,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -515,7 +524,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($submission) {
 				$articleId = $submission->getId();
-				$journal =& Request::getJournal();
+				$request =& $this->getRequest();
+				$journal =& $request->getJournal();
 				$journalId = $journal->getId();
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 				$bookId = $bfrDao->getSubmittedBookForReviewIdByArticle($journalId, $articleId);

@@ -45,11 +45,12 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	function callbackLoadCategory($hookName, $args) {
 		$category =& $args[0];
 		$plugins =& $args[1];
+		$request =& $this->getRequest();
 		switch ($category) {
 			case 'blocks':
 				$this->import('CustomBlockPlugin');
 
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 				if (!$journal) return false;
 
 				$blocks = $this->getSetting($journal->getId(), 'blocks');
@@ -92,24 +93,25 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$pageCrumbs = array(
 					array(
-						Request::url(null, 'user'),
+						$request->url(null, 'user'),
 						'navigation.user'
 					),
 					array(
-						Request::url(null, 'manager'),
+						$request->url(null, 'manager'),
 						'user.role.manager'
 					),
 					array(
-						Request::url(null, 'manager', 'plugins'),
+						$request->url(null, 'manager', 'plugins'),
 						__('manager.plugins'),
 						true
 					)
@@ -120,14 +122,14 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$form = new SettingsForm($this, $journal->getId());
 				$form->readInputData();
 
-				if (Request::getUserVar('addBlock')) {
+				if ($request->getUserVar('addBlock')) {
 					// Add a block
 					$editData = true;
 					$blocks = $form->getData('blocks');
 					array_push($blocks, '');
 					$form->_data['blocks'] = $blocks;
 
-				} else if (($delBlock = Request::getUserVar('delBlock')) && count($delBlock) == 1) {
+				} else if (($delBlock = $request->getUserVar('delBlock')) && count($delBlock) == 1) {
 					// Delete an block
 					$editData = true;
 					list($delBlock) = array_keys($delBlock);
@@ -141,7 +143,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					array_splice($blocks, $delBlock, 1);
 					$form->_data['blocks'] = $blocks;
 
-				} else if ( Request::getUserVar('save') ) {
+				} else if ( $request->getUserVar('save') ) {
 					$editData = true;
 					$form->execute();
 				} else {

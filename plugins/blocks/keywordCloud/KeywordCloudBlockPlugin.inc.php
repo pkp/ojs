@@ -58,10 +58,11 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 
 		$cacheManager =& CacheManager::getManager();
 		$cache =& $cacheManager->getFileCache('keywords_' . AppLocale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
@@ -80,7 +81,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		$templateMgr->assign_by_ref('cloudKeywords', $keywords);
 		$templateMgr->assign_by_ref('maxOccurs', $maxOccurs);
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

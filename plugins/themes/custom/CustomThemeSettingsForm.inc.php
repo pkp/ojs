@@ -34,17 +34,17 @@ class CustomThemeSettingsForm extends Form {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 	}
 
-	function display() {
+	function display(&$request) {
 		$templateMgr =& TemplateManager::getManager();
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-		$additionalHeadData .= '<script type="text/javascript" src="' . Request::getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
-		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/plugins/themes/custom/picker.css');
+		$additionalHeadData .= '<script type="text/javascript" src="' . $request->getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
+		$templateMgr->addStyleSheet($request->getBaseUrl() . '/plugins/themes/custom/picker.css');
 		$templateMgr->assign('additionalHeadData', $additionalHeadData);
 		$stylesheetFileLocation = $this->plugin->getPluginPath() . '/' . $this->plugin->getStylesheetFilename();
 		$templateMgr->assign('canSave', is_writable($stylesheetFileLocation));
 		$templateMgr->assign('stylesheetFileLocation', $stylesheetFileLocation);
 
-		return parent::display();
+		return parent::display($request);
 	}
 
 	/**
@@ -70,7 +70,7 @@ class CustomThemeSettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$plugin =& $this->plugin;

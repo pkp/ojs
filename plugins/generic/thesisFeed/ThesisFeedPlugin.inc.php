@@ -77,7 +77,8 @@ class ThesisFeedPlugin extends GenericPlugin {
 			$thesisEnabled = isset($products['thesis'])?$products['thesis']:false;
 
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
-			$requestedPage = Request::getRequestedPage();
+			$request =& $this->getRequest();
+			$requestedPage = $request->getRequestedPage();
 
 			if ( $thesisEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) ) {
 
@@ -116,10 +117,11 @@ class ThesisFeedPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr =& TemplateManager::getManager();
@@ -128,11 +130,11 @@ class ThesisFeedPlugin extends GenericPlugin {
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, 'plugins');
+						$request->redirect(null, null, 'plugins');
 						return false;
 					} else {
 						$form->display();

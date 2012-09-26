@@ -58,20 +58,21 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$this->import('ReferralPluginSettingsForm');
 				$form = new ReferralPluginSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
+						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
 						$this->setBreadCrumbs(true);
@@ -96,18 +97,19 @@ class ReferralPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
+			$request->url(null, 'manager', 'plugins'),
 			'manager.plugins'
 		);
 
@@ -139,13 +141,15 @@ class ReferralPlugin extends GenericPlugin {
 	function handleAuthorTemplateInclude($hookName, $args) {
 		$templateMgr =& $args[0];
 		$params =& $args[1];
+		$request =& $this->getRequest();
+
 		if (!isset($params['smarty_include_tpl_file'])) return false;
 		switch ($params['smarty_include_tpl_file']) {
 			case 'common/footer.tpl':
 				$referralDao =& DAORegistry::getDAO('ReferralDAO');
-				$user =& Request::getUser();
+				$user =& $request->getUser();
 				$rangeInfo =& Handler::getRangeInfo('referrals');
-				$referralFilter = (int) Request::getUserVar('referralFilter');
+				$referralFilter = (int) $request->getUserVar('referralFilter');
 				if ($referralFilter == 0) $referralFilter = null;
 
 				$referrals =& $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
@@ -214,7 +218,8 @@ class ReferralPlugin extends GenericPlugin {
 		$referrer = isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:null;
 
 		// Check if referrer is empty or is the local journal
-		if (empty($referrer) || strpos($referrer, Request::getIndexUrl()) !== false) return false;
+		$request =& $this->getRequest();
+		if (empty($referrer) || strpos($referrer, $request->getIndexUrl()) !== false) return false;
 
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
 		if ($referralDao->referralExistsByUrl($articleId, $referrer)) {

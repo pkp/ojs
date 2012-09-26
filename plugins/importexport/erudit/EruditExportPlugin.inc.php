@@ -54,7 +54,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
 			case 'exportGalley':
 				$articleId = array_shift($args);
@@ -105,7 +105,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 	/**
 	 * Execute export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);

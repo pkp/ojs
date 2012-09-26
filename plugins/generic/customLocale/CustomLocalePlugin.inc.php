@@ -21,7 +21,8 @@ class CustomLocalePlugin extends GenericPlugin {
 				// Add custom locale data for already registered locale files.
 				$locale = AppLocale::getLocale();
 				$localeFiles = AppLocale::getLocaleFiles($locale);
-				$journal = Request::getJournal();
+				$request =& $this->getRequest();
+				$journal = $request->getJournal();
 				$journalId = $journal->getId();
 				$publicFilesDir = Config::getVar('files', 'public_files_dir');
 				$customLocalePathBase = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR;
@@ -48,7 +49,8 @@ class CustomLocalePlugin extends GenericPlugin {
 		$locale =& $args[0];
 		$localeFilename =& $args[1];
 
-		$journal = Request::getJournal();
+		$request =& $this->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
 		$customLocalePath = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $localeFilename;

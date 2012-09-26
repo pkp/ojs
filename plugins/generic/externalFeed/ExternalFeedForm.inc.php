@@ -22,15 +22,19 @@ class ExternalFeedForm extends Form {
 	/** @var $feedId int */
 	var $feedId;
 
+	/** @var $journalId int */
+	var $journalId;
+
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 * @param $journalId int
 	 * @param $feedId int
 	 */
-	function ExternalFeedForm(&$plugin, $feedId) {
+	function ExternalFeedForm(&$plugin, $feedId, $journalId) {
 		$this->plugin =& $plugin;
 		$this->feedId = isset($feedId) ? $feedId : null;
+		$this->journalId = $journalId;
 
 		parent::Form($plugin->getTemplatePath() . 'externalFeedForm.tpl');
 
@@ -43,7 +47,7 @@ class ExternalFeedForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
-	/** 
+	/**
 	* Get the names of fields for which localized data is allowed.
 	* @return array
 	*/
@@ -59,7 +63,7 @@ class ExternalFeedForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('feedId', $this->feedId);
 
-		$plugin =& $this->plugin; 
+		$plugin =& $this->plugin;
 		$plugin->import('ExternalFeed');
 
 		parent::display();
@@ -114,11 +118,9 @@ class ExternalFeedForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
-		$journalId = $journal->getId();
 		$plugin =& $this->plugin;
 
 		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
@@ -132,7 +134,7 @@ class ExternalFeedForm extends Form {
 			$feed = new ExternalFeed();
 		}
 
-		$feed->setJournalId($journalId);
+		$feed->setJournalId($this->journalId);
 		$feed->setUrl($this->getData('feedUrl'));
 		$feed->setTitle($this->getData('title'), null);
 		$feed->setDisplayHomepage($this->getData('displayHomepage') ? 1 : 0);

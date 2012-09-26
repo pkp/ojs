@@ -54,22 +54,23 @@ class ImportExportPlugin extends Plugin {
 	 */
 	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			),
 			array (
-				Request::url(null, 'manager', 'importexport'),
+				$request->url(null, 'manager', 'importexport'),
 				'manager.importExport'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'importexport', array('plugin', $this->getName())),
+			$request->url(null, 'manager', 'importexport', array('plugin', $this->getName())),
 			$this->getDisplayName(),
 			true
 		);
@@ -120,8 +121,9 @@ class ImportExportPlugin extends Plugin {
 	 * Perform management functions
 	 */
 	function manage($verb, $args, $message, $messageParams = null, $request = null) {
+		$request =& $request ? $request : $this->getRequest();
 		if ($verb === 'importexport') {
-			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
+			$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));

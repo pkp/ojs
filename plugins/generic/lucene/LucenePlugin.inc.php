@@ -174,6 +174,7 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
@@ -181,11 +182,11 @@ class LucenePlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$this->import('classes.form.LuceneSettingsForm');
 				$form = new LuceneSettingsForm($this);
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugins', 'generic');
+						$request->redirect(null, 'manager', 'plugins', 'generic');
 						return false;
 					} else {
 						$this->_setBreadCrumbs();
@@ -504,17 +505,18 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function _setBreadcrumbs() {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url('index', 'admin'),
+				$request->url('index', 'admin'),
 				'user.role.siteAdmin'
 			),
 			array(
-				Request::url(null, 'manager', 'plugins'),
+				$request->url(null, 'manager', 'plugins'),
 				'manager.plugins'
 			)
 		);

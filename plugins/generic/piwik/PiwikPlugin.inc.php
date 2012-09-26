@@ -94,18 +94,19 @@ class PiwikPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
+			$request->url(null, 'manager', 'plugins'),
 			'manager.plugins'
 		);
 
@@ -139,7 +140,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getId(), 'enabled');
 	}
@@ -148,7 +150,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -163,7 +166,9 @@ class PiwikPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+
+			$journal =& $request->getJournal();
 			$journalId = $journal->getId();
 			$journalPath = $journal->getPath();
 			$piwikSiteId = $this->getSetting($journalId, 'piwikSiteId');
@@ -193,7 +198,9 @@ class PiwikPlugin extends GenericPlugin {
 	function manage($verb, $args) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+
+		$journal =& $request->getJournal();
 		$returner = true;
 
 		switch ($verb) {
@@ -209,11 +216,11 @@ class PiwikPlugin extends GenericPlugin {
 				if ($this->getEnabled()) {
 					$this->import('PiwikSettingsForm');
 					$form = new PiwikSettingsForm($this, $journal->getId());
-					if (Request::getUserVar('save')) {
+					if ($request->getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
 							$form->execute();
-							Request::redirect(null, 'manager', 'plugin');
+							$request->redirect(null, 'manager', 'plugin');
 						} else {
 							$this->setBreadCrumbs(true);
 							$form->display();
@@ -224,11 +231,11 @@ class PiwikPlugin extends GenericPlugin {
 						$form->display();
 					}
 				} else {
-					Request::redirect(null, 'manager');
+					$request->redirect(null, 'manager');
 				}
 				break;
 			default:
-				Request::redirect(null, 'manager');
+				$request->redirect(null, 'manager');
 		}
 		return $returner;
 	}

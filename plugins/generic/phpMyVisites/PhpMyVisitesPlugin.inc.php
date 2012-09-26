@@ -81,18 +81,19 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
+			$request->url(null, 'manager', 'plugins'),
 			'manager.plugins'
 		);
 
@@ -121,7 +122,8 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 			$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 			if (!empty($currentJournal)) {
-				$journal =& Request::getJournal();
+				$request =& $this->getRequest();
+				$journal =& $request->getJournal();
 				$journalId = $journal->getId();
 				$phpmvSiteId = $this->getSetting($journalId, 'phpmvSiteId');
 				$phpmvUrl = $this->getSetting($journalId, 'phpmvUrl');
@@ -146,21 +148,21 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$this->import('PhpMyVisitesSettingsForm');
 				$form = new PhpMyVisitesSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
+						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
 						$this->setBreadCrumbs(true);

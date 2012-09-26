@@ -41,12 +41,13 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

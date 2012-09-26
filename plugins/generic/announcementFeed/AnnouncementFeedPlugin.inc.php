@@ -69,17 +69,18 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	function callbackAddLinks($hookName, $args) {
 		if ($this->getEnabled()) {
 			$templateManager =& $args[0];
+			$request =& $this->getRequest();
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
-			$requestedPage = Request::getRequestedPage();
+			$requestedPage = $request->getRequestedPage();
 
 			if ( $announcementsEnabled && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) ) {
 
 				// if we have a journal selected, append feed meta-links into the header
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . Request::url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '" />';
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '" />';
 				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/AnnouncementFeedGatewayPlugin/rss" />';
 				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/AnnouncementFeedGatewayPlugin/rss2" />';
 
@@ -111,9 +112,10 @@ class AnnouncementFeedPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -121,17 +123,17 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
 						return false;
 					} else {
-						$form->display();
+						$form->display($request);
 					}
 				} else {
 					$form->initData();
-					$form->display();
+					$form->display($request);
 				}
 				return true;
 			default:

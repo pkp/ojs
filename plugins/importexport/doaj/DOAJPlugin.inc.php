@@ -63,8 +63,8 @@ class DOAJPlugin extends ImportExportPlugin {
 	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
 		parent::display($args, $request);
-		$journal =& Request::getJournal();
-		
+		$journal =& $request->getJournal();
+
 		switch (array_shift($args)) {
 			case 'export':
 				// export an xml file with the journal's information
@@ -88,7 +88,7 @@ class DOAJPlugin extends ImportExportPlugin {
 	function exportJournal(&$journal, $outputFile = null) {
 		$this->import('DOAJExportDom');
 		$doc =& XMLCustomWriter::createDocument();
-		
+
 		$journalNode =& DOAJExportDom::generateJournalDom($doc, $journal);
 		$journalNode->setAttribute('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
 		$journalNode->setAttribute('xsi:noNamespaceSchemaLocation', DOAJ_XSD_URL);
@@ -112,7 +112,8 @@ class DOAJPlugin extends ImportExportPlugin {
 	 * @param $journal object
 	 */
 	function contact(&$journal, $send = false) {
-		$user =& Request::getUser();
+		$request =& $this->getRequest();
+		$user =& $request->getUser();
 
 		$issn = $journal->getSetting('printIssn');
 
@@ -135,7 +136,7 @@ class DOAJPlugin extends ImportExportPlugin {
 		foreach ($paramArray as $name => $value) {
 			$url .= '&' . urlencode($name) . '=' . urlencode($value);
 		}
-		Request::redirectUrl($url);
+		$request->redirectUrl($url);
 	}
 }
 

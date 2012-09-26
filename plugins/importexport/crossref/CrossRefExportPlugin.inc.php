@@ -50,16 +50,16 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		switch (array_shift($args)) {
 			case 'exportIssues':
-				$issueIds = Request::getUserVar('issueId');
+				$issueIds = $request->getUserVar('issueId');
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
 					$issue =& $issueDao->getIssueById($issueId);
-					if (!$issue) Request::redirect();
+					if (!$issue) $request->redirect();
 					$issues[] =& $issue;
 				}
 				$this->exportIssues($journal, $issues);
@@ -67,7 +67,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'exportIssue':
 				$issueId = array_shift($args);
 				$issue =& $issueDao->getIssueById($issueId);
-				if (!$issue) Request::redirect();
+				if (!$issue) $request->redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
 				break;
@@ -77,7 +77,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$this->exportArticles($journal, $result);
 				break;
 			case 'exportArticles':
-				$articleIds = Request::getUserVar('articleId');
+				$articleIds = $request->getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
 				$results =& ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($journal, $results);
@@ -179,7 +179,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$doc =& CrossRefExportDom::generateCrossRefDom();
 		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
 
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		// Create Head Node and all parts inside it
 		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);

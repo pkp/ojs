@@ -65,7 +65,8 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @see PaymentPlugin::isConfigured
 	 */
 	function isConfigured() {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure that all settings form fields have been filled in
@@ -85,7 +86,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$journal =& $request->getJournal();
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 		$templateMgr =& TemplateManager::getManager();
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 
 		$templateMgr->assign('itemName', $queuedPayment->getName());
 		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());

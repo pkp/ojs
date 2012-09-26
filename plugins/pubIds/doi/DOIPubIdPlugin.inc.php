@@ -310,7 +310,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		assert(is_numeric($journalId));
 
 		// Get the journal object from the context (optimized).
-		$request =& Application::getRequest();
+		$request =& $this->getRequest();
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request); /* @var $journal Journal */
 

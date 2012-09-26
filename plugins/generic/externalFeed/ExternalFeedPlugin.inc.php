@@ -168,11 +168,12 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function displayHomepage($hookName, $args) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 
 		if ($this->getEnabled()) {
-			$requestedPage = Request::getRequestedPage();
+			$requestedPage = $request->getRequestedPage();
 
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
@@ -264,6 +265,7 @@ class ExternalFeedPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 
 		AppLocale::requireComponents(
 			LOCALE_COMPONENT_APPLICATION_COMMON,
@@ -272,7 +274,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
 		switch ($verb) {
@@ -286,7 +288,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$externalFeedDao->deleteExternalFeedById($externalFeedId);
 					}
 				}
-				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 				return true;
 			case 'move':
 				$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
@@ -326,7 +328,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
+					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId, $journalId);
 					if ($externalFeedForm->isLocaleResubmit()) {
 						$externalFeedForm->readInputData();
 					} else {
@@ -346,7 +348,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
 
 					$this->import('ExternalFeedForm');
-					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
+					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId, $journalId);
 					$externalFeedForm->readInputData();
 
 					if ($externalFeedForm->validate()) {

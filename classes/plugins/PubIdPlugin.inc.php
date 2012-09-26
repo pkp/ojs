@@ -73,6 +73,7 @@ class PubIdPlugin extends Plugin {
 	 */
 	function manage($verb, $args) {
 		$templateManager =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		if (!$this->getEnabled() && $verb != 'enable') return false;
 		switch ($verb) {
@@ -86,24 +87,24 @@ class PubIdPlugin extends Plugin {
 
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$settingsFormName = $this->getSettingsFormName();
 				$settingsFormNameParts = explode('.', $settingsFormName);
 				$settingsFormClassName = array_pop($settingsFormNameParts);
 				$this->import($settingsFormName);
 				$form = new $settingsFormClassName($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
+						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
 						$this->_setBreadcrumbs();
 						$form->display();
 					}
-				} elseif (Request::getUserVar('clearPubIds')) {
+				} elseif ($request->getUserVar('clearPubIds')) {
 					$form->readInputData();
 					$journalDao =& DAORegistry::getDAO('JournalDAO');
 					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
@@ -392,7 +393,7 @@ class PubIdPlugin extends Plugin {
 	 */
 	function getEnabled($journalId = null) {
 		if (!$journalId) {
-			$request =& Application::getRequest();
+			$request =& $this->getRequest();
 			$router =& $request->getRouter();
 			$journal =& $router->getContext($request);
 
@@ -407,7 +408,8 @@ class PubIdPlugin extends Plugin {
 	 * @param $enabled boolean
 	 */
 	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if ($journal) {
 			$this->updateSetting(
 				$journal->getId(),
@@ -436,17 +438,18 @@ class PubIdPlugin extends Plugin {
 	 */
 	function _setBreadcrumbs() {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			),
 			array(
-				Request::url(null, 'manager', 'plugins'),
+				$request->url(null, 'manager', 'plugins'),
 				'manager.plugins'
 			)
 		);

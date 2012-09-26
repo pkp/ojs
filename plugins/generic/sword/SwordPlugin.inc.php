@@ -59,7 +59,8 @@ class SwordPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
@@ -109,7 +110,7 @@ class SwordPlugin extends GenericPlugin {
 	 */
 	function callbackAuthorDeposits($hookName, $args) {
 		$sectionEditorSubmission =& $args[0];
-		$request =& $args[2];
+		$request =& $this->getRequest();
 
 		// Determine if the most recent decision was an "Accept"
 		$decisions = $sectionEditorSubmission->getDecisions();
@@ -119,7 +120,7 @@ class SwordPlugin extends GenericPlugin {
 		if ($decisionConst != SUBMISSION_EDITOR_DECISION_ACCEPT) return false;
 
 		// The most recent decision was an "Accept"; perform auto deposits.
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$depositPoints = $this->getSetting($journal->getId(), 'depositPoints');
 		import('classes.sword.OJSSwordDeposit');
 
@@ -165,7 +166,7 @@ class SwordPlugin extends GenericPlugin {
 			$mail->assignParams(array(
 				'journalName' => $journal->getLocalizedTitle(),
 				'articleTitle' => $sectionEditorSubmission->getLocalizedTitle(),
-				'swordDepositUrl' => Request::url(
+				'swordDepositUrl' => $request->url(
 					null, 'sword', 'index', $sectionEditorSubmission->getId()
 				)
 			));
@@ -241,7 +242,8 @@ class SwordPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		$returner = true;
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$this->addLocaleData();
 
 		switch ($verb) {
@@ -253,11 +255,11 @@ class SwordPlugin extends GenericPlugin {
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, 'plugins');
+						$request->redirect(null, null, 'plugins');
 					} else {
 						$form->display();
 					}
@@ -288,11 +290,11 @@ class SwordPlugin extends GenericPlugin {
 				$this->import('DepositPointForm');
 				$form = new DepositPointForm($this, $journal->getId(), $depositPointId);
 
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, null, array('generic', $this->getName(), 'settings'));
+						$request->redirect(null, null, null, array('generic', $this->getName(), 'settings'));
 					} else {
 						$form->display();
 					}
@@ -307,7 +309,7 @@ class SwordPlugin extends GenericPlugin {
 				$depositPoints = $this->getSetting($journalId, 'depositPoints');
 				unset($depositPoints[$depositPointId]);
 				$this->updateSetting($journalId, 'depositPoints', $depositPoints);
-				Request::redirect(null, null, null, array('generic', 'SwordPlugin', 'settings'));
+				$request->redirect(null, null, null, array('generic', 'SwordPlugin', 'settings'));
 				break;
 		}
 

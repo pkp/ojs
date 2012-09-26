@@ -75,7 +75,7 @@ class ResolverPlugin extends GatewayPlugin {
 			case 'vnp': // Volume, number, page
 			case 'ynp': // Volume, number, year, page
 				// This can only be used from within a journal context
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 				if (!$journal) break;
 
 				if ($scheme == 'vnp') {
@@ -103,12 +103,12 @@ class ResolverPlugin extends GatewayPlugin {
 					$matches = null;
 					if (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
 						$matchedPage = $matches[1];
-						if ($page == $matchedPage) Request::redirect(null, 'article', 'view', $article->getBestArticleId());
+						if ($page == $matchedPage) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
 					}
 					if (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
 						$matchedPageFrom = $matches[1];
 						$matchedPageTo = $matches[3];
-						if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) Request::redirect(null, 'article', 'view', $article->getBestArticleId());
+						if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
 					}
 					unset($article);
 				}
@@ -131,6 +131,7 @@ class ResolverPlugin extends GatewayPlugin {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$journals =& $journalDao->getJournals(true);
+		$request =& $this->getRequest();
 		header('content-type: text/plain');
 		header('content-disposition: attachment; filename=holdings.txt');
 		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
@@ -161,7 +162,7 @@ class ResolverPlugin extends GatewayPlugin {
 			echo $this->sanitize($endDate===null?'':strftime('%Y-%m-%d', $endDate)) . "\t"; // end_date
 			echo $this->sanitize('') . "\t"; // embargo_months
 			echo $this->sanitize('') . "\t"; // embargo_days
-			echo Request::url($journal->getPath()) . "\t"; // journal_url
+			echo $request->url($journal->getPath()) . "\t"; // journal_url
 			echo $this->sanitize($startVolume) . "\t"; // vol_start
 			echo $this->sanitize($endVolume) . "\t"; // vol_end
 			echo $this->sanitize($startNumber) . "\t"; // iss_start

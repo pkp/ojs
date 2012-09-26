@@ -33,7 +33,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	/**
 	 * Get the Plugin's display name
 	 * @return String
-	 */	
+	 */
 	function getDisplayName() {
 		return __('plugins.paymethod.paypal.displayName');
 	}
@@ -44,7 +44,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.paymethod.paypal.description');
-	}   
+	}
 
 	/**
 	 * Register plugin
@@ -73,7 +73,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	/**
 	 * return if required Curl is installed
 	 * @return bool
-	 */	
+	 */
 	function isCurlInstalled() {
 		return (function_exists('curl_init'));
 	}
@@ -83,7 +83,8 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @return bool
 	 */
 	function isConfigured() {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure CURL support is included.
@@ -129,12 +130,12 @@ class PayPalPlugin extends PaymethodPlugin {
 			'no_note' => 1,
 			'no_shipping' => 1,
 			'currency_code' => $queuedPayment->getCurrencyCode(),
-			'lc' => String::substr(AppLocale::getLocale(), 3), 
+			'lc' => String::substr(AppLocale::getLocale(), 3),
 			'custom' => $queuedPaymentId,
-			'notify_url' => $request->url(null, 'payment', 'plugin', array($this->getName(), 'ipn')),  
+			'notify_url' => $request->url(null, 'payment', 'plugin', array($this->getName(), 'ipn')),
 			'return' => $queuedPayment->getRequestUrl(),
 			'cancel_return' => $request->url(null, 'payment', 'plugin', array($this->getName(), 'cancel')),
-			'first_name' => ($user)?$user->getFirstName():'',  
+			'first_name' => ($user)?$user->getFirstName():'',
 			'last_name' => ($user)?$user->getLastname():'',
 			'item_number' => $queuedPayment->getAssocId(),
 			'cmd' => '_xclick'
@@ -180,7 +181,7 @@ class PayPalPlugin extends PaymethodPlugin {
 				if (get_magic_quotes_gpc()) {
 					foreach ($_POST as $key => $value) $req .= '&' . urlencode(stripslashes($key)) . '=' . urlencode(stripslashes($value));
 				} else {
-					foreach ($_POST as $key => $value) $req .= '&' . urlencode($key) . '=' . urlencode($value);	
+					foreach ($_POST as $key => $value) $req .= '&' . urlencode($key) . '=' . urlencode($value);
 				}
 				// Create POST response
 				$ch = curl_init();
@@ -273,7 +274,7 @@ class PayPalPlugin extends PaymethodPlugin {
 
 							// Fulfill the queued payment.
 							if ($ojsPaymentManager->fulfillQueuedPayment($queuedPayment, $this->getName())) exit();
-							
+
 							// If we're still here, it means the payment couldn't be fulfilled.
 							$mail->assignParams(array(
 								'journalName' => $journal->getLocalizedTitle(),

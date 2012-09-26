@@ -61,7 +61,8 @@ class CounterPlugin extends GenericPlugin {
 		$smarty =& $args[1];
 		$output =& $args[2];
 
-		$output .= '<li>&#187; <a href="' . Request::url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
+		$request =& $this->getRequest();
+		$output .= '<li>&#187; <a href="' . $request->url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
 		return false;
 	}
 
@@ -69,8 +70,9 @@ class CounterPlugin extends GenericPlugin {
 	 * Log a request for an lineable galley (e.g. text file).
 	 */
 	function logRequestInline($hookName, $args) {
-		$journal =& Request::getJournal();
-		if (!$journal || Request::getRequestedPage() != 'article' || Request::getRequestedOp() != 'view') return false;
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
+		if (!$journal || $request->getRequestedPage() != 'article' || $request->getRequestedOp() != 'view') return false;
 
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 		$counterReportDao->incrementCount($journal->getId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
@@ -85,10 +87,11 @@ class CounterPlugin extends GenericPlugin {
 	function logRequest($hookName, $args) {
 		$templateManager =& $args[0];
 		$template =& $args[1];
+		$request =& $this->getRequest();
 
-		$site =& Request::getSite();
-		$journal =& Request::getJournal();
-		$session =& Request::getSession();
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
+		$session =& $request->getSession();
 
 		if (!$journal) return false;
 
@@ -96,7 +99,7 @@ class CounterPlugin extends GenericPlugin {
 		   unfortunately not in a very accessible format:
 		   http://www.projectcounter.org/r3/r3_K.doc
 		*/
-		if (Request::isBot()) return false;
+		if ($request->isBot()) return false;
 
 		// TODO: consider the effect of LOCKSS on COUNTER recording
 
@@ -174,14 +177,15 @@ class CounterPlugin extends GenericPlugin {
  	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'migrate':
 				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 				$counterReportDao->upgradeFromLogFile();
-				Request::redirect('index', 'counter');
+				$request->redirect('index', 'counter');
 				return false;
 			case 'counter':
-				Request::redirect(null, 'counter');
+				$request->redirect(null, 'counter');
 				return false;
 			default:
 				// Unknown management verb

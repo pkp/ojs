@@ -69,7 +69,8 @@ class GatewayPlugin extends Plugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getId(), 'enabled');
 	}
@@ -78,7 +79,8 @@ class GatewayPlugin extends Plugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if ($journal) {
 			$this->updateSetting(
 				$journal->getId(),

@@ -92,20 +92,21 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
+	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
-		$journal =& Request::getJournal();
+	function getContents(&$templateMgr, &$request) {
+		$journal =& $request->getJournal();
 		if (!$journal) return '';
 
 		$plugin =& $this->getWebFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
-		$requestedPage = Request::getRequestedPage();
+		$requestedPage = $request->getRequestedPage();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getId(), true);
 
 		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
-			return parent::getContents($templateMgr);
+			return parent::getContents($templateMgr, $request);
 		} else {
 			return '';
 		}

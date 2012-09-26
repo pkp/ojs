@@ -58,16 +58,17 @@ class METSGatewayPlugin extends GatewayPlugin {
 	function manage($verb, $args) {
 		if (parent::manage($verb, $args)) return true;
 		if (!$this->getEnabled()) return false;
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, null, 'plugins');
+						$request->redirect(null, null, 'plugins');
 					} else {
 						$form->display();
 					}
@@ -136,7 +137,8 @@ class METSGatewayPlugin extends GatewayPlugin {
 	}
 
 	function exportIssues(&$journal, &$issues){
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$this->journalId = $journal->getId();
 
 		$this->import('MetsExportDom');
@@ -173,6 +175,6 @@ class METSGatewayPlugin extends GatewayPlugin {
 		XMLCustomWriter::printXML($doc);
 		return true;
 	}
-	
+
 }
 ?>

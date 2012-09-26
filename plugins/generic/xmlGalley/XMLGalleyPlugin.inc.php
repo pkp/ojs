@@ -84,7 +84,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$galley =& $args[1];
 		$fileId =& $args[2];
 
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() &&
 			$this->getSetting($journal->getId(), 'nlmPDF') == 1) {
@@ -154,7 +155,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 */
 	function setEnabled($enabled) {
 		parent::setEnabled($enabled);
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if ($journal) {
 			// set default XSLT renderer
 			if ($this->getSetting($journal->getId(), 'XSLTrenderer') == "") {
@@ -206,7 +208,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -244,7 +247,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 			case 'settings':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				// if we are updating XSLT settings or switching XSL sheets
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					$form->initData();
 					if ($form->validate()) {
@@ -253,7 +256,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 					$form->display();
 
 				// if we are uploading a custom XSL sheet
-				} elseif (Request::getUserVar('uploadCustomXSL')) {
+				} elseif ($request->getUserVar('uploadCustomXSL')) {
 					$form->readInputData();
 
 					import('classes.file.JournalFileManager');
@@ -292,7 +295,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 					$form->display();
 
 				// if we are deleting an existing custom XSL sheet
-				} elseif (Request::getUserVar('deleteCustomXSL')) {
+				} elseif ($request->getUserVar('deleteCustomXSL')) {
 
 					import('classes.file.JournalFileManager');
 

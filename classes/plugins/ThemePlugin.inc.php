@@ -51,7 +51,8 @@ class ThemePlugin extends Plugin {
 		// Subclasses may override this function.
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/' . $stylesheetFilename;
+			$request =& $this->getRequest();
+			$path = $request->getBaseUrl() . '/' . $this->getPluginPath() . '/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
 		}
 	}

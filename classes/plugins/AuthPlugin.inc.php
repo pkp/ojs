@@ -243,7 +243,8 @@ class AuthPlugin extends Plugin {
 
 	function manage($verb, $args) {
 		if ($verb === 'authSources') {
-			Request::redirect('index', 'admin', 'auth');
+			$request =& $this->getRequest();
+			$request->redirect('index', 'admin', 'auth');
 		}
 		return false;
 	}

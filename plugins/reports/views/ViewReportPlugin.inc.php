@@ -46,7 +46,8 @@ class ViewReportPlugin extends ReportPlugin {
 	}
 
 	function display(&$args) {
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		$columns = array(
 			__('plugins.reports.views.articleId'),

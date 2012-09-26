@@ -110,19 +110,20 @@ class AbntCitationPlugin extends CitationPlugin {
 	 *  otherwise will remain on the same page
 	 */
 	function manage($verb, $args, &$message) {
+		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$this->import('AbntSettingsForm');
 				$form = new AbntSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
+						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
 						$this->setBreadCrumbs(true);
@@ -151,15 +152,16 @@ class AbntCitationPlugin extends CitationPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) {
 			$pageCrumbs[] = array(
-				Request::url(null, 'manager', 'plugins'),
+				$request->url(null, 'manager', 'plugins'),
 				'manager.plugins'
 			);
 		}

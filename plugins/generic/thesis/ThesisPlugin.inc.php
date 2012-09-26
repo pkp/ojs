@@ -93,18 +93,19 @@ class ThesisPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses')),
+			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses')),
 			$this->getDisplayName(),
 			true
 		);
@@ -181,17 +182,18 @@ class ThesisPlugin extends GenericPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_USER);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 
 		switch ($verb) {
 			case 'settings':
 				$this->import('ThesisSettingsForm');
 				$form = new ThesisSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+						$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 						return false;
 					} else {
 						$this->setBreadCrumbs(true);
@@ -213,7 +215,7 @@ class ThesisPlugin extends GenericPlugin {
 						$thesisDao->deleteThesisById($thesisId);
 					}
 				}
-				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+				$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 				return true;
 			case 'create':
 			case 'edit':
@@ -239,12 +241,12 @@ class ThesisPlugin extends GenericPlugin {
 					$templateMgr->assign('journalSettings', $journalSettings);
 					$thesisForm->display();
 				} else {
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+					$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 				}
 				return true;
 			case 'update':
 				$this->import('ThesisForm');
-				$thesisId = Request::getUserVar('thesisId') == null ? null : (int) Request::getUserVar('thesisId');
+				$thesisId = $request->getUserVar('thesisId') == null ? null : (int) $request->getUserVar('thesisId');
 				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
 				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
@@ -255,10 +257,10 @@ class ThesisPlugin extends GenericPlugin {
 					if ($thesisForm->validate()) {
 						$thesisForm->execute();
 
-						if (Request::getUserVar('createAnother')) {
-							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
+						if ($request->getUserVar('createAnother')) {
+							$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
 						} else {
-							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+							$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 						}
 					} else {
 						if ($thesisId == null) {
@@ -275,22 +277,22 @@ class ThesisPlugin extends GenericPlugin {
 						$thesisForm->display();
 					}
 				} else {
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
+					$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 				}
 				return true;
 			default:
 				$this->import('Thesis');
 				$searchField = null;
 				$searchMatch = null;
-				$search = Request::getUserVar('search');
-				$dateFrom = Request::getUserDateVar('dateFrom', 1, 1);
+				$search = $request->getUserVar('search');
+				$dateFrom = $request->getUserDateVar('dateFrom', 1, 1);
 				if ($dateFrom !== null) $dateFrom = date('Y-m-d H:i:s', $dateFrom);
-				$dateTo = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+				$dateTo = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 				if ($dateTo !== null) $dateTo = date('Y-m-d H:i:s', $dateTo);
 
 				if (!empty($search)) {
-					$searchField = Request::getUserVar('searchField');
-					$searchMatch = Request::getUserVar('searchMatch');
+					$searchField = $request->getUserVar('searchField');
+					$searchMatch = $request->getUserVar('searchMatch');
 				}
 
 				$rangeInfo =& Handler::getRangeInfo('theses');
@@ -307,7 +309,7 @@ class ThesisPlugin extends GenericPlugin {
 					'dateToMonth', 'dateToDay', 'dateToYear'
 				);
 				foreach ($duplicateParameters as $param)
-					$templateMgr->assign($param, Request::getUserVar($param));
+					$templateMgr->assign($param, $request->getUserVar($param));
 
 				$templateMgr->assign('dateFrom', $dateFrom);
 				$templateMgr->assign('dateTo', $dateTo);

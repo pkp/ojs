@@ -98,7 +98,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function fetch($args) {
 		// Make sure we're within a Journal context
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure there's a current issue for this journal

@@ -358,7 +358,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		if (is_array($result) && empty($result)) {
 			assert(isset($objectTypes[$objectType]));
 			$exportSpec = array($objectTypes[$objectType] => $args);
-			$request =& Application::getRequest();
+			$request =& $this->getRequest();
 			if ($command == 'export') {
 				$result = $this->exportObjects($request, $exportSpec, $journal, $xmlFile);
 			} else {

@@ -44,8 +44,9 @@ class RoleBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getBlockTemplateFilename() {
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 		if (!$journal || !$user) return null;
 
 		$userId = $user->getId();
@@ -53,8 +54,8 @@ class RoleBlockPlugin extends BlockPlugin {
 
 		$templateMgr =& TemplateManager::getManager();
 
-		switch (Request::getRequestedPage()) {
-			case 'author': switch (Request::getRequestedOp()) {
+		switch ($request->getRequestedPage()) {
+			case 'author': switch ($request->getRequestedOp()) {
 				case 'submit':
 				case 'saveSubmit':
 				case 'submitSuppFile':
@@ -80,7 +81,7 @@ class RoleBlockPlugin extends BlockPlugin {
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'layoutEditor.tpl';
 			case 'editor':
-				if (Request::getRequestedOp() == 'index') return null;
+				if ($request->getRequestedOp() == 'index') return null;
 				$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
 				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 				$templateMgr->assign('submissionsCount', $submissionsCount);

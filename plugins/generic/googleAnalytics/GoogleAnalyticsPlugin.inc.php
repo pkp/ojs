@@ -96,18 +96,19 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $request->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
+			$request->url(null, 'manager', 'plugins'),
 			'manager.plugins'
 		);
 
@@ -145,7 +146,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function metadataExecute($hookName, $params) {
 		$author =& $params[0];
 		$formAuthor =& $params[1];
-		$author->setData('gs', $formAuthor['gs']);				
+		$author->setData('gs', $formAuthor['gs']);
 		return false;
 	}
 
@@ -173,12 +174,13 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 		if (!empty($currentJournal)) {
-			$journal =& Request::getJournal();
+			$request =& $this->getRequest();
+			$journal =& $request->getJournal();
 			$journalId = $journal->getId();
 			$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
 
 			$article = $templateMgr->get_template_vars('article');
-			if (Request::getRequestedPage() == 'article' && $article) {
+			if ($request->getRequestedPage() == 'article' && $article) {
 				$authorAccounts = array();
 				foreach ($article->getAuthors() as $author) {
 					$account = $author->getData('gs');
@@ -214,16 +216,17 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
+				$request =& $this->getRequest();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& Request::getJournal();
+				$journal =& $request->getJournal();
 
 				$this->import('GoogleAnalyticsSettingsForm');
 				$form = new GoogleAnalyticsSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						Request::redirect(null, 'manager', 'plugin');
+						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
 						$this->setBreadCrumbs(true);

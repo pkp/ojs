@@ -61,18 +61,19 @@ class CustomThemePlugin extends ThemePlugin {
 	 */
 	function setBreadcrumbs($isSubclass = false) {
 		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugins'),
+			$request->url(null, 'manager', 'plugins'),
 			'manager.plugins'
 		);
 
@@ -102,7 +103,8 @@ class CustomThemePlugin extends ThemePlugin {
 	function manage($verb) {
 		if ($verb != 'settings') return false;
 
-		$journal =& Request::getJournal();
+		$request =& $this->getRequest();
+		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -110,19 +112,19 @@ class CustomThemePlugin extends ThemePlugin {
 
 		$this->import('CustomThemeSettingsForm');
 		$form = new CustomThemeSettingsForm($this, $journal->getId());
-		if (Request::getUserVar('save')) {
+		if ($request->getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {
 				$form->execute();
-				Request::redirect(null, 'manager', 'plugin', array('themes', 'CustomThemePlugin', 'settings'));
+				$request->redirect(null, 'manager', 'plugin', array('themes', 'CustomThemePlugin', 'settings'));
 			} else {
 				$this->setBreadCrumbs(true);
-				$form->display();
+				$form->display($request);
 			}
 		} else {
 			$this->setBreadCrumbs(true);
 			$form->initData();
-			$form->display();
+			$form->display($request);
 		}
 
 		return true;
