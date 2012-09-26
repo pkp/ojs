@@ -28,6 +28,8 @@
 	<br />
 	{page_info iterator=$results}&nbsp;&nbsp;&nbsp;&nbsp;{page_links anchor="results" iterator=$results name="search"}
 {else}
+	<br />
+	{translate key="search.noResults"}
 {/if}
 </div>
 
