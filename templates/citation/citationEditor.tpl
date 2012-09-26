@@ -67,6 +67,14 @@
 			minBsize:300
 		{rdelim});
 
+		// When a link action is hit, triggering the setCitationPaneData
+		// event, replace the contents of the pane with the results.
+		// This is a work-around until the citation editor is ported to the
+		// JS framework.
+		$('#citationEditor').bind('setCitationPaneData', function(event, data) {ldelim}
+			$('#citationEditorDetailCanvas').replaceWith(data);
+		{rdelim});
+
 		// Main tabs.
 		$mainTabs = $('#citationEditorMainTabs').tabs({ldelim}
 			show: function(e, ui) {ldelim}
@@ -281,4 +289,3 @@
 		</div>
 	</div>
 </div>
-
