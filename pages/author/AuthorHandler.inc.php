@@ -132,7 +132,7 @@ class AuthorHandler extends Handler {
 			} else if ($authorSubmission->getJournalId() != $journal->getId()) {
 				$isValid = false;
 			} else {
-				if ($authorSubmission->getUserId() != $user->getId()) {
+				if (!$user || ($authorSubmission->getUserId() != $user->getId())) {
 					$isValid = false;
 				}
 			}
