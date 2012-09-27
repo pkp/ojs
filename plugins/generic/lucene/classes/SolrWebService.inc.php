@@ -463,14 +463,14 @@ class SolrWebService extends XmlWebService {
 		// Check whether a query will actually return something.
 		// This is an optimization to avoid unnecessary requests
 		// in case they won't return anything interesting.
-		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
+		$nodeList = $response->query('/response/result[@name="response"]/@numFound');
 		if ($nodeList->length != 1) return array();
 		$numFound =& $nodeList->item(0)->textContent;
 		if ($numFound = 0) return array();
 
 		// Retrieve interesting terms from the response.
 		$terms = array();
-		$nodeList = $response->query('//response/arr[@name="interestingTerms"]/str');
+		$nodeList = $response->query('/response/arr[@name="interestingTerms"]/str');
 		foreach ($nodeList as $node) {
 			// Get the field name.
 			$term = $node->textContent;
@@ -521,7 +521,7 @@ class SolrWebService extends XmlWebService {
 
 		// Retrieve all fields from the response.
 		$doc = array();
-		$nodeList = $response->query('//response/lst[@name="doc"]/doc[@name="solr"]/str');
+		$nodeList = $response->query('/response/lst[@name="doc"]/doc[@name="solr"]/str');
 		foreach ($nodeList as $node) {
 			// Get the field name.
 			$fieldName = $node->attributes->getNamedItem('name')->value;
@@ -553,7 +553,7 @@ class SolrWebService extends XmlWebService {
 
 		// Is the core online?
 		assert(is_a($response, 'DOMXPath'));
-		$nodeList = $response->query('//response/lst[@name="status"]/lst[@name="ojs"]/lst[@name="index"]/int[@name="numDocs"]');
+		$nodeList = $response->query('/response/lst[@name="status"]/lst[@name="ojs"]/lst[@name="index"]/int[@name="numDocs"]');
 
 		// Check whether the core is active.
 		if ($nodeList->length != 1) {
@@ -606,7 +606,7 @@ class SolrWebService extends XmlWebService {
 		if (!is_a($response, 'DOMXPath')) return false;
 
 		// Retrieve the field names from the response.
-		$nodeList = $response->query('//response/lst[@name="fields"]/lst/@name');
+		$nodeList = $response->query('/response/lst[@name="fields"]/lst/@name');
 		foreach ($nodeList as $node) {
 			// Get the field name.
 			$fieldName = $node->textContent;
@@ -1455,7 +1455,7 @@ class SolrWebService extends XmlWebService {
 		if (is_null($result)) return false;
 
 		// Check the return status (must be 0).
-		$nodeList = $result->query('//response/lst[@name="responseHeader"]/int[@name="status"]');
+		$nodeList = $result->query('/response/lst[@name="responseHeader"]/int[@name="status"]');
 		if($nodeList->length != 1) return false;
 		$resultNode = $nodeList->item(0);
 		if ($resultNode->textContent === '0') return true;
@@ -1469,7 +1469,7 @@ class SolrWebService extends XmlWebService {
 	 */
 	function _getDocumentsProcessed($result) {
 		// Return the number of documents that were indexed.
-		$nodeList = $result->query('//response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
+		$nodeList = $result->query('/response/lst[@name="statusMessages"]/str[@name="Total Documents Processed"]');
 		assert($nodeList->length == 1);
 		$resultNode = $nodeList->item(0);
 		assert(is_numeric($resultNode->textContent));
