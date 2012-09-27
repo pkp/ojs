@@ -402,6 +402,7 @@ class SolrWebService extends XmlWebService {
 		// Read highlighting results (if any).
 		$highligthedArticles = null;
 		if ($searchRequest->getHighlighting()) {
+			$highligthedArticles = array();
 			$highlightingNodeList =& $response->query('/response/lst[@name="highlighting"]/lst');
 			foreach($highlightingNodeList as $highlightingNode) { /* @var $highlightingNode DOMElement */
 				if ($highlightingNode->hasChildNodes()) {

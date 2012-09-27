@@ -352,12 +352,12 @@ class LucenePlugin extends GenericPlugin {
 				}
 				$this->_spellingSuggestionField = $queryField;
 			}
-			if ($highlighting) {
+			if ($highlighting && isset($result['highlightedArticles'])) {
 				$this->_highlightedArticles = $result['highlightedArticles'];
 			}
 
-			// Return the sored results.
-			if (isset($result['scoredResults'])) {
+			// Return the scored results.
+			if (isset($result['scoredResults']) && !empty($result['scoredResults'])) {
 				return $result['scoredResults'];
 			} else {
 				return array();
@@ -778,7 +778,6 @@ class LucenePlugin extends GenericPlugin {
 
 		// Is this a search or an indexing problem?
 		if ($isSearchProblem) {
-			assert(is_a($journal, 'Journal'));
 			$mail =& $this->getMailTemplate('LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION', $journal);
 		} else {
 			// Check whether this is journal or article index update problem.
