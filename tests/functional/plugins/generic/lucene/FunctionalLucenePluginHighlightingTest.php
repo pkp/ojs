@@ -47,7 +47,7 @@ class FunctionalLucenePluginHighlightingTest extends FunctionalLucenePluginBaseT
 	 *         or full text containing my search keywords
 	 *     AND my search keywords are visually emphasized.
 	 */
-	public function testSimilarDocuments() {
+	public function testHighlighting() {
 		// Enable the "highlighting" feature.
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'highligthing', true);
