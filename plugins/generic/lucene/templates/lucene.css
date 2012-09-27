@@ -16,3 +16,12 @@
 .plugins_generic_lucene_preResults_ordering {
 	float: right;
 }
+
+tr.plugins_generic_lucene_highlighting td {
+	padding-left: 30px;
+}
+
+.plugins_generic_lucene_highlighting em {
+	font-style: normal;
+	font-weight: bold;
+}

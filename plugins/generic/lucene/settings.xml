@@ -62,5 +62,9 @@
 		<name>simdocs</name>
 		<value>true</value>
 	</setting>
+	<setting type="bool">
+		<name>highlighting</name>
+		<value>true</value>
+	</setting>
 </plugin_settings>
 

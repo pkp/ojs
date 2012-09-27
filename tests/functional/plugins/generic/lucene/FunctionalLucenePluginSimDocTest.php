@@ -72,7 +72,9 @@ class FunctionalLucenePluginSimDocTest extends FunctionalLucenePluginBaseTestCas
 
 		// Check that a search for similar articles has been executed.
 		$this->waitForLocation('lucene-test/search/search');
-		$this->assertValue('name=query', 'article test');
+		$this->waitForElementPresent('name=query');
+		$this->assertValue('name=query', 'article');
+		$this->assertValue('name=query', 'test');
 	}
 }
 ?>

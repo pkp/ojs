@@ -66,6 +66,11 @@ class SolrSearchRequest {
 	var $_spellcheck = false;
 
 	/**
+	 * @var boolean Whether to enable highlighting.
+	 */
+	var $_highlighting = false;
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -233,6 +238,22 @@ class SolrSearchRequest {
 	 */
 	function setSpellcheck($spellcheck) {
 		$this->_spellcheck = $spellcheck;
+	}
+
+	/**
+	 * Is highlighting enabled?
+	 * @return boolean
+	 */
+	function getHighlighting() {
+		return $this->_highlighting;
+	}
+
+	/**
+	 * Set whether highlighting should be enabled.
+	 * @param $highlighting boolean
+	 */
+	function setHighlighting($highlighting) {
+		$this->_highlighting = $highlighting;
 	}
 
 
