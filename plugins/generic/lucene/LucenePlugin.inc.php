@@ -31,6 +31,9 @@ class LucenePlugin extends GenericPlugin {
 	/** @var string */
 	var $_spellingSuggestionField;
 
+	/** @var array */
+	var $_highlightedArticles;
+
 
 	//
 	// Constructor
@@ -118,6 +121,7 @@ class LucenePlugin extends GenericPlugin {
 			}
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
 			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleLinks', array($this, 'callbackTemplateAdditionalArticleLinks'));
+			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleInfo', array($this, 'callbackTemplateAdditionalArticleInfo'));
 			HookRegistry::register('Templates::Search::SearchResults::SyntaxInstructions', array($this, 'callbackTemplateSyntaxInstructions'));
 
 			// Instantiate the web service.
@@ -307,6 +311,10 @@ class LucenePlugin extends GenericPlugin {
 		$spellcheck = (boolean)$this->getSetting(0, 'spellcheck');
 		$searchRequest->setSpellcheck($spellcheck);
 
+		// Configure highlighting.
+		$highlighting = (boolean)$this->getSetting(0, 'highlighting');
+		$searchRequest->setHighlighting($highlighting);
+
 		// Call the solr web service.
 		$solrWebService =& $this->getSolrWebService();
 		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
@@ -316,11 +324,11 @@ class LucenePlugin extends GenericPlugin {
 			$error .=  ' ' . __('plugins.generic.lucene.message.techAdminInformed');
 			return array();
 		} else {
+			// Store the spelling suggestion and highlighting info
+			// internally. We cannot route these back through the request
+			// as the default search implementation does not support
+			// these features.
 			if ($spellcheck && isset($result['spellingSuggestion'])) {
-				// Store the spelling suggestion internally. We cannot
-				// route it back through the request as the default
-				// search implementation does not support spelling
-				// suggestions.
 				$this->_spellingSuggestion = $result['spellingSuggestion'];
 
 				// Identify the field for which we got the suggestion.
@@ -344,6 +352,11 @@ class LucenePlugin extends GenericPlugin {
 				}
 				$this->_spellingSuggestionField = $queryField;
 			}
+			if ($highlighting) {
+				$this->_highlightedArticles = $result['highlightedArticles'];
+			}
+
+			// Return the sored results.
 			if (isset($result['scoredResults'])) {
 				return $result['scoredResults'];
 			} else {
@@ -593,11 +606,39 @@ class LucenePlugin extends GenericPlugin {
 			$request, null, 'lucene', 'similarDocuments', null, $urlParams
 		);
 
-		// Return a link to the URL.
+		// Return a link to the URL (a template seems overkill here).
 		$output =& $params[2];
 		$output .= '&nbsp;<a href="' . $simdocsUrl . '" class="file">'
 			. __('plugins.generic.lucene.results.similarDocuments')
 			. '</a>';
+		return false;
+	}
+
+	/**
+	 * @see templates/search/searchResults.tpl
+	 */
+	function callbackTemplateAdditionalArticleInfo($hookName, $params) {
+		// Check whether the "highlighting" feature is enabled.
+		if (!$this->getSetting(0, 'highlighting')) return false;
+
+		// Check and prepare the article parameter.
+		$hookParams = $params[0];
+		if (!(isset($hookParams['articleId']) && is_numeric($hookParams['articleId'])
+			&& isset($hookParams['numCols']))) {
+			return false;
+		}
+		$articleId = $hookParams['articleId'];
+
+		// Check whether we have highlighting info for the given article.
+		if (!isset($this->_highlightedArticles[$articleId])) return false;
+
+		// Return the excerpt (a template seems overkill here).
+		// Escaping should have been taken care of when analyzing the text, so
+		// there should be no XSS risk here (but we need the <em> tag in the
+		// highlighted result).
+		$output =& $params[2];
+		$output .= '<tr class="plugins_generic_lucene_highlighting"><td colspan=' . $hookParams['numCols'] . '>"...&nbsp;'
+			. trim($this->_highlightedArticles[$articleId]) . '&nbsp;..."</td></tr>';
 		return false;
 	}
 

@@ -89,6 +89,12 @@
 			<label for="simdocs">{translate key="plugins.generic.lucene.settings.simdocs"}</label>&nbsp;
 		</td>
 	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right"><input type="checkbox" name="highlighting" id="highlighting" {if $highlighting}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="highlighting">{translate key="plugins.generic.lucene.settings.highlighting"}</label>&nbsp;
+		</td>
+	</tr>
 </table>
 
 <br/>

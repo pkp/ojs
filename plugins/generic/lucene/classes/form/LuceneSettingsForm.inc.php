@@ -41,11 +41,14 @@ class LuceneSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'instId', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.instIdRequired'));
 
 		// Search feature configuration.
-		$this->addCheck(new FormValidatorBoolean($this, 'autosuggest', 'plugins.generic.lucene.settings.internalError'));
 		$this->addCheck(new FormValidatorInSet($this, 'autosuggestType', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.internalError', array_keys($this->_getAutosuggestTypes())));
-		$this->addCheck(new FormValidatorBoolean($this, 'spellcheck', 'plugins.generic.lucene.settings.internalError'));
-		$this->addCheck(new FormValidatorBoolean($this, 'pullindexing', 'plugins.generic.lucene.settings.internalError'));
-		$this->addCheck(new FormValidatorBoolean($this, 'simdocs', 'plugins.generic.lucene.settings.internalError'));
+		$binaryFeatureSwitches = array(
+			'autosuggest', 'spellcheck', 'pullindexing',
+			'simdocs', 'highlighting'
+		);
+		foreach($binaryFeatureSwitches as $binaryFeatureSwitch) {
+			$this->addCheck(new FormValidatorBoolean($this, $binaryFeatureSwitch, 'plugins.generic.lucene.settings.internalError'));
+		}
 	}
 
 
@@ -112,7 +115,7 @@ class LuceneSettingsForm extends Form {
 		return array(
 			'searchEndpoint', 'username', 'instId',
 			'autosuggest', 'autosuggestType', 'spellcheck',
-			'pullindexing', 'simdocs'
+			'pullindexing', 'simdocs', 'highlighting'
 		);
 	}
 

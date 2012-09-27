@@ -163,6 +163,7 @@
 					{/foreach}
 				</td>
 			</tr>
+			{call_hook name="Templates::Search::SearchResults::AdditionalArticleInfo" articleId=$publishedArticle->getId() numCols=$numCols|escape}
 			<tr><td colspan="{$numCols|escape}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
 		{/iterate}
 		{if $results->wasEmpty()}

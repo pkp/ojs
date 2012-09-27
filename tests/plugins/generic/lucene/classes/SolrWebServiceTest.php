@@ -120,14 +120,26 @@ class SolrWebServiceTest extends PKPTestCase {
 			)
 		);
 		$searchRequest->setFromDate(date('Y-m-d\TH:i:s\Z', strtotime('2000-01-01')));
+		$searchRequest->setHighlighting(true);
 		$totalResults = null;
 		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
+
+		// Check search results.
 		self::assertTrue(is_int($totalResults), $totalResults > 0);
 		self::assertTrue(isset($results['scoredResults']));
 		$scoredResults = $results['scoredResults'];
 		self::assertTrue(is_array($scoredResults));
 		self::assertTrue(!empty($scoredResults));
 		self::assertTrue(in_array('3', $scoredResults));
+
+		// Check highlighting results.
+		self::assertTrue(isset($results['highlightedArticles']));
+		$highlightedArticles = $results['highlightedArticles'];
+		self::assertTrue(is_array($highlightedArticles));
+		self::assertTrue(!empty($highlightedArticles));
+		self::assertTrue(isset($highlightedArticles['3']));
+		self::assertContains('Lucene Test <em>Article</em> 1 Abstract', $highlightedArticles['3']);
+		$searchRequest->setHighlighting(false);
 
 		// Test result set ordering via simple (default field) search.
 		$searchRequest->setQuery(array('title' => 'lucene'));

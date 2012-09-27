@@ -322,6 +322,12 @@ class SolrWebService extends XmlWebService {
 		// Ordering.
 		$params['sort'] = $this->_getOrdering($searchRequest->getOrderBy(), $searchRequest->getOrderDir());
 
+		// Highlighting.
+		if ($searchRequest->getHighlighting()) {
+			$params['hl'] = 'on';
+			$params['hl.fl'] = $this->_expandFieldList(array('abstract', 'galleyFullText'));
+		}
+
 		// Make the search request.
 		$url = $this->_getSearchUrl();
 		$response = $this->_makeRequest($url, $params);
@@ -393,9 +399,27 @@ class SolrWebService extends XmlWebService {
 			}
 		}
 
+		// Read highlighting results (if any).
+		$highligthedArticles = null;
+		if ($searchRequest->getHighlighting()) {
+			$highlightingNodeList =& $response->query('/response/lst[@name="highlighting"]/lst');
+			foreach($highlightingNodeList as $highlightingNode) { /* @var $highlightingNode DOMElement */
+				if ($highlightingNode->hasChildNodes()) {
+					$indexArticleId = $highlightingNode->attributes->getNamedItem('name')->nodeValue;
+					$articleIdParts = explode('-', $indexArticleId);
+					$articleId = array_pop($articleIdParts);
+					$excerpt = $highlightingNode->firstChild->firstChild->textContent;
+					if (is_numeric($articleId) && !empty($excerpt)) {
+						$highligthedArticles[$articleId] = $excerpt;
+					}
+				}
+			}
+		}
+
 		return array(
 			'scoredResults' => $scoredResults,
-			'spellingSuggestion' => $spellingSuggestion
+			'spellingSuggestion' => $spellingSuggestion,
+			'highlightedArticles' => $highligthedArticles
 		);
 	}
 
