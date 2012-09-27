@@ -441,6 +441,47 @@ class SolrWebService extends XmlWebService {
 	}
 
 	/**
+	 * Retrieve "interesting terms" from a document to be used in a "similar
+	 * documents" search.
+	 *
+	 * @param $articleId integer The article from which we retrieve "interesting
+	 *  terms".
+	 *
+	 * @return array An array of terms that can be used to execute a search
+	 *  for similar documents.
+	 */
+	function getInterestingTerms($articleId) {
+		// Make a request to the MLT request handler.
+		$url = $this->_getInterestingTermsUrl();
+		$params = array(
+			'q' => $this->_instId . '-' . $articleId,
+			'mlt.fl' => $this->_expandFieldList(array('title', 'abstract'))
+		);
+		$response = $this->_makeRequest($url, $params); /* @var $response DOMXPath */
+		if (!is_a($response, 'DOMXPath')) return null;
+
+		// Check whether a query will actually return something.
+		// This is an optimization to avoid unnecessary requests
+		// in case they won't return anything interesting.
+		$nodeList = $response->query('//response/result[@name="response"]/@numFound');
+		if ($nodeList->length != 1) return array();
+		$numFound =& $nodeList->item(0)->textContent;
+		if ($numFound = 0) return array();
+
+		// Retrieve interesting terms from the response.
+		$terms = array();
+		$nodeList = $response->query('//response/arr[@name="interestingTerms"]/str');
+		foreach ($nodeList as $node) {
+			// Get the field name.
+			$term = $node->textContent;
+			// Filter reverse wildcard terms.
+			if (substr($term,0,3) === '#1;') continue;
+			$terms[] = $term;
+		}
+		return $terms;
+	}
+
+	/**
 	 * Returns an array with all (dynamic) fields in the index.
 	 *
 	 * NB: This is cached data so after an index update we may
@@ -704,6 +745,16 @@ class SolrWebService extends XmlWebService {
 		return $autosuggestUrl;
 	}
 
+
+	/**
+	 * Returns the solr endpoint to retrieve
+	 * "interesting terms" from a given document.
+	 * @return string
+	 */
+	function _getInterestingTermsUrl() {
+		return $this->_solrServer . $this->_solrCore . '/simdocs';
+	}
+
 	/**
 	 * Identifies the general solr admin endpoint from the
 	 * search handler URL.
@@ -847,7 +898,8 @@ class SolrWebService extends XmlWebService {
 	/**
 	 * Expand the given list of fields.
 	 * @param $fields array
-	 * @return string An expanded field list to be used in edismax's qf parameter.
+	 * @return string A space-separated field list (e.g. to
+	 *  be used in edismax's qf parameter).
 	 */
 	function _expandFieldList($fields) {
 		$expandedFields = array();

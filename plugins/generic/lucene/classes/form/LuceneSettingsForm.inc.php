@@ -45,6 +45,7 @@ class LuceneSettingsForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'autosuggestType', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.internalError', array_keys($this->_getAutosuggestTypes())));
 		$this->addCheck(new FormValidatorBoolean($this, 'spellcheck', 'plugins.generic.lucene.settings.internalError'));
 		$this->addCheck(new FormValidatorBoolean($this, 'pullindexing', 'plugins.generic.lucene.settings.internalError'));
+		$this->addCheck(new FormValidatorBoolean($this, 'simdocs', 'plugins.generic.lucene.settings.internalError'));
 	}
 
 
@@ -111,7 +112,7 @@ class LuceneSettingsForm extends Form {
 		return array(
 			'searchEndpoint', 'username', 'instId',
 			'autosuggest', 'autosuggestType', 'spellcheck',
-			'pullindexing'
+			'pullindexing', 'simdocs'
 		);
 	}
 

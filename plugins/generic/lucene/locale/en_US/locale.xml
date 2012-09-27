@@ -34,6 +34,7 @@
 	<message key="plugins.generic.lucene.results.orderBy.article">Article Title</message>
 	<message key="plugins.generic.lucene.results.orderDir.asc">Ascending</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Descending</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">similar documents</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
 		Search tips: <ul>
 			<li>Search terms are case-insensitive</li>
@@ -74,11 +75,12 @@
 	<message key="plugins.generic.lucene.settings.password">Password</message>
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
-	<message key="plugins.generic.lucene.settings.pullindexing">Check to enable pull indexing (see README file for more information)</message>
+	<message key="plugins.generic.lucene.settings.pullindexing">Pull indexing (see README file for more information)</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
+	<message key="plugins.generic.lucene.settings.simdocs">Display a link "similar documents" with every search result.</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
 	<message key="plugins.generic.lucene.settings.spellcheck">Alternative spelling suggestions</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
