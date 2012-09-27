@@ -32,18 +32,8 @@ class FunctionalLucenePluginConfigTest extends FunctionalLucenePluginBaseTestCas
 
 
 	//
-	// Implement template methods from PKPTestCase
+	// Tests
 	//
-	/**
-	 * @see PKPTestCase::tearDown()
-	 */
-	protected function tearDown() {
-		parent::tearDown();
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
-		$pluginSettingsDao->_getCache(0, 'luceneplugin')->flush();
-	}
-
-
 	/**
 	 * SCENARIO: Plug-in disabled + solr server switched off
 	 *   GIVEN The lucene plug-in is de-activated

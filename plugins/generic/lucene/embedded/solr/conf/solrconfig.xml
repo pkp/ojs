@@ -259,6 +259,23 @@
   </requestHandler>
   <!-- END -->
 
+  <!-- Similar documents request handler -->
+  <!-- The lines between START and END may be commented out to disable this feature -->
+  <!-- START -->
+  <requestHandler name="/simdocs" class="solr.MoreLikeThisHandler">
+    <lst name="invariants">
+      <str name="echoParams">explicit</str> <!-- This is for debugging. You may switch it off ("none"). -->
+      <str name="mlt.mintf">2</str>
+      <str name="mlt.mindf">3</str>
+      <str name="mlt.minwl">3</str>
+      <str name="mlt.boost">off</str> <!-- We do not support boosting in our regular interface. We switch it off to produce consistent queries. -->
+      <str name="mlt.interestingTerms">list</str>
+      <str name="mlt.match.include">off</str>
+      <str name="rows">0</str> <!-- We do not use this component to retrieve actual results. -->
+    </lst>
+  </requestHandler>
+  <!-- END -->
+
   <!-- OJS DataImportHandler request handler. Please do not change. -->
   <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">
     <lst name="defaults">

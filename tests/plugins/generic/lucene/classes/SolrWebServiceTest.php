@@ -377,6 +377,17 @@ class SolrWebServiceTest extends PKPTestCase {
 		);
 	}
 
+	/**
+	 * @covers SolrWebService::getInterestingTerms()
+	 */
+	public function testGetInterestingTerms() {
+		$actualTerms = $this->solrWebService->getInterestingTerms(2);
+		self::assertEquals(array(), $actualTerms);
+		$expectedTerms = array('ranking', 'article', 'test');
+		$actualTerms = $this->solrWebService->getInterestingTerms(10);
+		self::assertEquals($expectedTerms, $actualTerms);
+	}
+
 
 	//
 	// Private helper methods

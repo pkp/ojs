@@ -83,6 +83,12 @@
 			<label for="pullindexing">{translate key="plugins.generic.lucene.settings.pullindexing"}</label>&nbsp;
 		</td>
 	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right"><input type="checkbox" name="simdocs" id="simdocs" {if $simdocs}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="simdocs">{translate key="plugins.generic.lucene.settings.simdocs"}</label>&nbsp;
+		</td>
+	</tr>
 </table>
 
 <br/>

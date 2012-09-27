@@ -117,6 +117,7 @@ class LucenePlugin extends GenericPlugin {
 				HookRegistry::register('Templates::Search::SearchResults::FilterInput', array($this, 'callbackTemplateFilterInput'));
 			}
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
+			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleLinks', array($this, 'callbackTemplateAdditionalArticleLinks'));
 			HookRegistry::register('Templates::Search::SearchResults::SyntaxInstructions', array($this, 'callbackTemplateSyntaxInstructions'));
 
 			// Instantiate the web service.
@@ -246,7 +247,8 @@ class LucenePlugin extends GenericPlugin {
 		$op = $args[1];
 		$publicOps = array(
 			'queryAutocomplete',
-			'pullChangedArticles'
+			'pullChangedArticles',
+			'similarDocuments'
 		);
 		if (!in_array($op, $publicOps)) return;
 
@@ -564,6 +566,38 @@ class LucenePlugin extends GenericPlugin {
 			array($this->_spellingSuggestionField => $this->_spellingSuggestion)
 		);
 		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
+		return false;
+	}
+
+	/**
+	 * @see templates/search/searchResults.tpl
+	 */
+	function callbackTemplateAdditionalArticleLinks($hookName, $params) {
+		// Check whether the "similar documents" feature is
+		// enabled.
+		if (!$this->getSetting(0, 'simdocs')) return false;
+
+		// Check and prepare the article parameter.
+		$hookParams = $params[0];
+		if (!(isset($hookParams['articleId']) && is_numeric($hookParams['articleId']))) {
+			return false;
+		}
+		$urlParams = array(
+			'articleId' => $hookParams['articleId']
+		);
+
+		// Create a URL that links to "similar documents".
+		$request =& PKPApplication::getRequest();
+		$router =& $request->getRouter();
+		$simdocsUrl = $router->url(
+			$request, null, 'lucene', 'similarDocuments', null, $urlParams
+		);
+
+		// Return a link to the URL.
+		$output =& $params[2];
+		$output .= '&nbsp;<a href="' . $simdocsUrl . '" class="file">'
+			. __('plugins.generic.lucene.results.similarDocuments')
+			. '</a>';
 		return false;
 	}
 
