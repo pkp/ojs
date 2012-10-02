@@ -24,3 +24,5 @@ Bug Fixes
 	#7936# AbntCitationPlugin.inc.php uses undefined constant String
 	#7937# no or empty identify types shouldn't be considered in browse
 	#7941# Link to article page fails to redirect to login
+	#7943# Request parameter missing from some HelpHandler calls
+	#7912# func_get_args should not be used as a parameter in PHP<5.3
