@@ -10,7 +10,7 @@
   *
   -->
 
-<install version="2.4.0.0">
+<install version="2.4.1.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -324,6 +324,10 @@
 		<!-- Delete the notification*_old tables now that they have been migrated. -->
 		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.4.0.0">
+		<note file="docs/release-notes/README-2.4.1" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
