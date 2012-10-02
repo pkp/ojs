@@ -1349,3 +1349,18 @@ a.request_review { background-image:url(../lib/pkp/templates/images/structure/gr
 .ui-dialog { background-color:#f7f5f4; }
 .ui-dialog-content { background-color:#ffffff !important; }
 .ui-dialog-buttonpane { border-color:#f7f5f4; }
+.button.ui-state-default, .ui-button {
+  background:none !important;
+  background-color:#a0b0a0 !important;
+  color:#fbfbf3 !important;
+  border-color:#a0b0a0 !important;
+  font-weight:normal !important;
+  font-family:Verdana, Arial, Helvetica, sans-serif !important;
+  font-size:11px !important;
+}
+.button.ui-state-hover, .ui-button.ui-state-hover, .button.ui-state-active, .ui-button.ui-state-active {
+  background:none !important;
+  background-color:#fbfbf3 !important;
+  color:#a0b0a0 !important;
+  border-color:#a0b0a0 !important;
+}
