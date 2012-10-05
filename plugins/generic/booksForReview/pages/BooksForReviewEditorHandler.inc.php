@@ -126,7 +126,7 @@ class BooksForReviewEditorHandler extends Handler {
 	 * Create/edit book for review.
 	 */
 	function createBookForReview($args = array(), &$request) {
-		$this->editBookForReview($args, &$request);
+		$this->editBookForReview($args, $request);
 	}
 
 	/**
