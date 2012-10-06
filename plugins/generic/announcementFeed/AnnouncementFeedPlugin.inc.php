@@ -67,9 +67,9 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	}
 
 	function callbackAddLinks($hookName, $args) {
-		if ($this->getEnabled()) {
+		$request =& $this->getRequest();
+		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
 			$templateManager =& $args[0];
-			$request =& $this->getRequest();
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
 			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
