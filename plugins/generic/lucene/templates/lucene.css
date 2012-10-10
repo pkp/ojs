@@ -25,3 +25,8 @@ tr.plugins_generic_lucene_highlighting td {
 	font-style: normal;
 	font-weight: bold;
 }
+
+.plugins_generic_lucene_facets .pkp_controllers_extrasOnDemand .toggleExtras {
+	margin-top: 5px;
+	margin-bottom: 0;
+}

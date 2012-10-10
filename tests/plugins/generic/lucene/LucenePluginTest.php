@@ -132,6 +132,12 @@ class LucenePluginTest extends DatabaseTestCase {
 		$totalResults = null;
 		$error = null;
 
+		$facetCategories = array(
+			'discipline', 'subject', 'type', 'coverage', 'authors'
+			// journal and date should always be missing as we have
+			// active journal and date filters for all tests.
+		);
+
 		foreach($testCases as $testNum => $testCase) {
 			// Build the expected search request.
 			$searchRequest = new SolrSearchRequest();
@@ -139,6 +145,11 @@ class LucenePluginTest extends DatabaseTestCase {
 			$searchRequest->setFromDate($fromDate);
 			$searchRequest->setQuery($expectedResults[$testNum]);
 			$searchRequest->setSpellcheck(true);
+			$searchRequest->setHighlighting(true);
+			// Facets should only be requested for categories that have no
+			// active filter.
+			$expectedFacetCategories = array_values(array_diff($facetCategories, array_keys($expectedResults[$testNum])));
+			$searchRequest->setFacetCategories($expectedFacetCategories);
 
 			// Mock a SolrWebService.
 			$webService = $this->getMock('SolrWebService', array('retrieveResults'), array(), '', false);

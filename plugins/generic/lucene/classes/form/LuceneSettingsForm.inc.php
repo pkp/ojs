@@ -42,10 +42,7 @@ class LuceneSettingsForm extends Form {
 
 		// Search feature configuration.
 		$this->addCheck(new FormValidatorInSet($this, 'autosuggestType', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.internalError', array_keys($this->_getAutosuggestTypes())));
-		$binaryFeatureSwitches = array(
-			'autosuggest', 'spellcheck', 'pullindexing',
-			'simdocs', 'highlighting'
-		);
+		$binaryFeatureSwitches = $this->_getFormFields(true);
 		foreach($binaryFeatureSwitches as $binaryFeatureSwitch) {
 			$this->addCheck(new FormValidatorBoolean($this, $binaryFeatureSwitch, 'plugins.generic.lucene.settings.internalError'));
 		}
@@ -107,16 +104,28 @@ class LuceneSettingsForm extends Form {
 	// Private helper methods
 	//
 	/**
-	 * Return the field names of this form
-	 * and the corresponding default settings.
+	 * Return the field names of this form.
+	 * @param $booleanOnly boolean Return only binary
+	 *  switches.
 	 * @return array
 	 */
-	function _getFormFields() {
-		return array(
-			'searchEndpoint', 'username', 'instId',
-			'autosuggest', 'autosuggestType', 'spellcheck',
-			'pullindexing', 'simdocs', 'highlighting'
+	function _getFormFields($booleanOnly = false) {
+		$booleanFormFields = array(
+			'autosuggest', 'spellcheck', 'pullindexing',
+			'simdocs', 'highlighting', 'facetCategoryDiscipline',
+			'facetCategorySubject', 'facetCategoryType',
+			'facetCategoryCoverage', 'facetCategoryJournalTitle',
+			'facetCategoryAuthors', 'facetCategoryPublicationDate'
 		);
+		$otherFormFields = array(
+			'searchEndpoint', 'username', 'instId',
+			'autosuggestType'
+		);
+		if ($booleanOnly) {
+			return $booleanFormFields;
+		} else {
+			return array_merge($booleanFormFields, $otherFormFields);
+		}
 	}
 
 	/**

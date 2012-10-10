@@ -328,6 +328,46 @@ class SolrWebService extends XmlWebService {
 			$params['hl.fl'] = $this->_expandFieldList(array('abstract', 'galleyFullText'));
 		}
 
+		// Faceting.
+		$facetCategories = $searchRequest->getFacetCategories();
+		if (!empty($facetCategories)) {
+			$params['facet'] = 'on';
+			$params['facet.field'] = array();
+
+			// NB: We only add fields in the current UI locale, i.e.
+			// facets are considered part of the navigation and not
+			// search results.
+			$locale = AppLocale::getLocale();
+
+			// Add facet fields corresponding to the
+			// solicited facet categories.
+			$facetFields = $this->_getFieldNames('facet');
+			$enabledFields = 0;
+			foreach($facetFields['localized'] as $fieldName) {
+				if (in_array($fieldName, $facetCategories)) {
+					$params['facet.field'][] = $fieldName . '_' . $locale . '_facet';
+					$enabledFields++;
+				}
+			}
+			foreach($facetFields['static'] as $categoryName => $fieldName) {
+				if (in_array($categoryName, $facetCategories)) {
+					$params['facet.field'][] = $fieldName;
+					$enabledFields++;
+				}
+			}
+			if (in_array('publicationDate', $facetCategories)) {
+				$params['facet.range'] = 'publicationDate_dt';
+				$params['facet.range.start'] = 'NOW/YEAR-50YEARS';
+				$params['facet.range.end'] = 'NOW';
+				$params['facet.range.gap'] = '+1YEAR';
+				$params['facet.range.other'] = 'all';
+				$enabledFields++;
+			}
+
+			// Did we find all solicited categories?
+			assert($enabledFields == count($facetCategories));
+		}
+
 		// Make the search request.
 		$url = $this->_getSearchUrl();
 		$response = $this->_makeRequest($url, $params);
@@ -417,10 +457,64 @@ class SolrWebService extends XmlWebService {
 			}
 		}
 
+		// Read facets (if any).
+		$facets = null;
+		if (!empty($facetCategories)) {
+			$facets = array();
+
+			// Read field-based facets.
+			$facetsNodeList =& $response->query('/response/lst[@name="facet_counts"]/lst[@name="facet_fields"]/lst');
+			foreach($facetsNodeList as $facetFieldNode) { /* @var $facetFieldNode DOMElement */
+				$facetField = $facetFieldNode->attributes->getNamedItem('name')->nodeValue;
+				$facetFieldParts = explode('_', $facetField);
+				$facetCategory = array_shift($facetFieldParts);
+				$facets[$facetCategory] = array();
+				foreach($facetFieldNode->childNodes as $facetNode) { /* @var $facetNode DOMElement */
+					$facet = $facetNode->attributes->getNamedItem('name')->nodeValue;
+					$facetCount = (integer)$facetNode->textContent;
+					// Only select facets that return results and are more selective than
+					// the current search criteria.
+					if (!empty($facet) && $facetCount > 0 && $facetCount < $totalResults) {
+						$facets[$facetCategory][$facet] = $facetCount;
+					}
+				}
+			}
+
+			// Read range-based facets.
+			$facetsNodeList =& $response->query('/response/lst[@name="facet_counts"]/lst[@name="facet_ranges"]/lst');
+			foreach($facetsNodeList as $facetFieldNode) { /* @var $facetFieldNode DOMElement */
+				$facetField = $facetFieldNode->attributes->getNamedItem('name')->nodeValue;
+				$facetFieldParts = explode('_', $facetField);
+				$facetCategory = array_shift($facetFieldParts);
+				$facets[$facetCategory] = array();
+				foreach($facetFieldNode->childNodes as $rangeInfoNode) { /* @var $rangeInfoNode DOMElement */
+					// Search for the "counts" node in the range info.
+					if($rangeInfoNode->attributes->getNamedItem('name')->nodeValue == 'counts') {
+						// Run through all ranges.
+						foreach($rangeInfoNode->childNodes as $facetNode) { /* @var $facetNode DOMElement */
+							// Retrieve and format the date range facet.
+							$facet = $facetNode->attributes->getNamedItem('name')->nodeValue;
+							$facet = date('Y', strtotime(substr($facet, 0, 10)));
+							$facetCount = (integer)$facetNode->textContent;
+							// Only select ranges that return results and are more selective than
+							// the current search criteria.
+							if ($facetCount > 0 && $facetCount < $totalResults) {
+								$facets[$facetCategory][$facet] = $facetCount;
+							}
+						}
+
+						// We do not need the other children.
+						break;
+					}
+				}
+			}
+		}
+
 		return array(
 			'scoredResults' => $scoredResults,
 			'spellingSuggestion' => $spellingSuggestion,
-			'highlightedArticles' => $highligthedArticles
+			'highlightedArticles' => $highligthedArticles,
+			'facets' => $facets
 		);
 	}
 
@@ -641,7 +735,7 @@ class SolrWebService extends XmlWebService {
 
 			// Identify the field type.
 			$fieldSuffix = array_pop($fieldNameParts);
-			if ($fieldSuffix == 'spell') continue;
+			if (in_array($fieldSuffix, array('spell', 'facet'))) continue;
 			if (strpos($fieldSuffix, 'sort') !== false) {
 				$fieldType = 'sort';
 				$fieldSuffix = array_pop($fieldNameParts);
@@ -877,6 +971,15 @@ class SolrWebService extends XmlWebService {
 					'authors' => 'authors_txtsort',
 					'publicationDate' => 'publicationDate_dtsort',
 					'issuePublicationDate' => 'issuePublicationDate_dtsort'
+				)
+			),
+			'facet' => array(
+				'localized' => array(
+					'discipline', 'subject', 'type', 'coverage', 'journalTitle'
+				),
+				'multiformat' => array(),
+				'static' => array(
+					'authors' => 'authors_facet',
 				)
 			)
 		);
@@ -1267,11 +1370,11 @@ class SolrWebService extends XmlWebService {
 				$coverage = '';
 				if (isset($coverageGeo[$locale])) $coverage .= $coverageGeo[$locale];
 				if (isset($coverageChron[$locale])) {
-					if (!empty($coverage)) $coverage .= ' ';
+					if (!empty($coverage)) $coverage .= '; ';
 					$coverage .= $coverageChron[$locale];
 				}
 				if (isset($coverageSample[$locale])) {
-					if (!empty($coverage)) $coverage .= ' ';
+					if (!empty($coverage)) $coverage .= '; ';
 					$coverage .= $coverageSample[$locale];
 				}
 				$coverageNode =& XMLCustomWriter::createChildWithText($articleDoc, $coverageList, 'coverage', $coverage);

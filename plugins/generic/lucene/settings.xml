@@ -66,5 +66,33 @@
 		<name>highlighting</name>
 		<value>true</value>
 	</setting>
+	<setting type="bool"> <!-- Facet categories can be enabled individually. We therefore need one setting per category. -->
+		<name>facetCategoryDiscipline</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategorySubject</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryType</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryCoverage</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryJournalTitle</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryAuthors</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryPublicationDate</name>
+		<value>true</value>
+	</setting>
 </plugin_settings>
 

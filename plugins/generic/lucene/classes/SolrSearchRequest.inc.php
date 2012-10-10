@@ -71,6 +71,11 @@ class SolrSearchRequest {
 	var $_highlighting = false;
 
 	/**
+	 * @var boolean Enabled facet categories (none by default).
+	 */
+	var $_facetCategories = array();
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -254,6 +259,24 @@ class SolrSearchRequest {
 	 */
 	function setHighlighting($highlighting) {
 		$this->_highlighting = $highlighting;
+	}
+
+	/**
+	 * For which categories should faceting
+	 * be enabled?
+	 * @return array
+	 */
+	function getFacetCategories() {
+		return $this->_facetCategories;
+	}
+
+	/**
+	 * Set the categories for which faceting
+	 * should be enabled.
+	 * @param $facetCategories boolean
+	 */
+	function setFacetCategories($facetCategories) {
+		$this->_facetCategories = $facetCategories;
 	}
 
 
