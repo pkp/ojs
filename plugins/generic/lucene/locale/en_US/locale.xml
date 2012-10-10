@@ -14,6 +14,15 @@
 	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
 	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 
+	<message key="plugins.generic.lucene.faceting.title">refine your search</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Discipline</message>
+	<message key="plugins.generic.lucene.faceting.subject">Keyword</message>
+	<message key="plugins.generic.lucene.faceting.type">Method/Approach</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Coverage</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Journal</message>
+	<message key="plugins.generic.lucene.faceting.authors">Author</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Publication Date</message>
+	
 	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
 	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Indexed {$numIndexed} out of a batch of {$batchCount}.</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
@@ -49,9 +58,9 @@
 	]]></message>
 
 	<message key="plugins.generic.lucene.settings">Settings</message>
-	<message key="plugins.generic.lucene.settings.autosuggest">Auto-suggest</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Auto-Suggest (show a dynamic drop-down with search term suggestions while entering a search query)</message>
 	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[
-		<strong>Check terms for results</strong>: Only suggests terms that will actually produce search results. Suggestions will be
+		<strong>Check terms for results</strong>: Only suggest terms that will actually produce search results. Suggestions will be
 		cross-checked against the current journal and terms already entered into other search fields.<br />
 		<strong>Use global dictionary</strong>: This is faster, consumes less resources on the search server and therefore scales better
 		for large installations. Suggestions may contain irrelevant terms, though, e.g. from other journals or terms that produce no
@@ -64,10 +73,12 @@
 		<strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong>
 		If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.
 	]]></message>
+	<message key="plugins.generic.lucene.settings.faceting">Faceting (display a navigation box with additional filters to refine your search)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
-		The Lucene plugin provides several optional search features. These features are enabled by default but can be disabled and fine-tuned.
+		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
 	]]></message>
-	<message key="plugins.generic.lucene.settings.highlighting">Display a short excerpt of each article's full text containing queried keywords.</message>
+	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
 	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
 	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>
@@ -76,14 +87,14 @@
 	<message key="plugins.generic.lucene.settings.password">Password</message>
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
-	<message key="plugins.generic.lucene.settings.pullindexing">Pull indexing (see README file for more information)</message>
+	<message key="plugins.generic.lucene.settings.pullindexing">Pull indexing (this is an advanced feature, see README file for more information)</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
-	<message key="plugins.generic.lucene.settings.simdocs">Display a link "similar documents" with every search result.</message>
+	<message key="plugins.generic.lucene.settings.simdocs">More-Like-This (display a link "similar documents" for every search result)</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
-	<message key="plugins.generic.lucene.settings.spellcheck">Alternative spelling suggestions</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternative Spelling Suggestions (display alternative search terms)</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>

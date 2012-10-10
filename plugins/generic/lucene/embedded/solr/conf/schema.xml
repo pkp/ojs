@@ -24,16 +24,21 @@
     <!-- A conventional date field for sorting -->
     <fieldType name="pdate" class="solr.DateField" sortMissingLast="true"/>
 
-    <!-- Keyword fields -->
-    <fieldType name="keywords" class="solr.TextField" positionIncrementGap="100">
+    <!-- Faceting fields (you may have to change the tokenization patterns)-->
+	<!-- General faceted field (comma- or semicolon-separated, e.g. discipline, type, subject, etc.) -->
+    <fieldType name="facet" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.ASCIIFoldingFilterFactory"/>
-        <filter class="solr.LowerCaseFilterFactory" />
-        <!--filter class="solr.ReversedWildcardFilterFactory" /--> <!-- see SOLR-3901 -->
+        <tokenizer class="solr.PatternTokenizerFactory" pattern="[,;]\s*"/>
       </analyzer>
     </fieldType>
 
+    <!-- Facet field with semicolon-separated facets (e.g. authors) -->
+    <fieldType name="facet_semicolon_separated" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.PatternTokenizerFactory" pattern=";\s*"/>
+      </analyzer>
+    </fieldType>
+    
     <!-- Cross-language field -->
     <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
@@ -330,7 +335,6 @@
 
     <!-- Dummy field type for ignored fields -->
     <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
-
   </types>
 
   <fields>
@@ -404,6 +408,10 @@
 
     <!-- Spelling and auto-suggest support -->
     <dynamicField name="*_spell" type="text_spell" indexed="true" stored="true" multiValued="false" />
+
+    <!-- Faceting support (if you have special requirements for special fields then you can add your own field types) -->
+    <field name="authors_facet" type="facet_semicolon_separated" indexed="true" multiValued="false" />
+    <dynamicField name="*_facet" type="facet" indexed="true" multiValued="false" />
 
     <!-- Ignore any fields that don't already match an existing
          field name or dynamic field (e.g. unsupported locales). -->

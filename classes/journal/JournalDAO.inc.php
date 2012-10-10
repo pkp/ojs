@@ -188,13 +188,13 @@ class JournalDAO extends DAO {
 
 	/**
 	 * Retrieve all journals.
-	 * @return DAOResultFactory containing matching journals
 	 * @param $enabledOnly boolean True iff only enabled jourals wanted
 	 * @param $rangeInfo object optional
 	 * @param $sortBy JOURNAL_FIELD_... optional sorting parameter
 	 * @param $searchField JOURNAL_FIELD_... optional filter parameter
 	 * @param $searchMatch string 'is', 'contains', 'startsWith' optional
 	 * @param $search string optional
+	 * @return DAOResultFactory containing matching journals
 	 */
 	function &getJournals($enabledOnly = false, $rangeInfo = null, $sortBy = JOURNAL_FIELD_SEQUENCE, $searchField = null, $searchMatch = null, $search = null) {
 		$joinSql = $whereSql = $orderBySql = '';

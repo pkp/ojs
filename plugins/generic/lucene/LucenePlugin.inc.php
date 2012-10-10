@@ -34,10 +34,16 @@ class LucenePlugin extends GenericPlugin {
 	/** @var array */
 	var $_highlightedArticles;
 
+	/** @var array */
+	var $_enabledFacetCategories;
 
-	//
-	// Constructor
-	//
+	/** @var array */
+	var $_facets;
+
+
+	/**
+	 * Constructor
+	 */
 	function LucenePlugin() {
 		parent::GenericPlugin();
 	}
@@ -52,6 +58,15 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function &getSolrWebService() {
 		return $this->_solrWebService;
+	}
+
+	/**
+	 * Facets corresponding to a recent search
+	 * (if any).
+	 * @return boolean
+	 */
+	function getFacets() {
+		return $this->_facets;
 	}
 
 	/**
@@ -98,6 +113,7 @@ class LucenePlugin extends GenericPlugin {
 			if (!checkPhpVersion('5.0.0')) return false;
 
 			// Register callbacks (application-level).
+			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 
 			// Register callbacks (data-access level).
@@ -240,6 +256,32 @@ class LucenePlugin extends GenericPlugin {
 	// Application level hook implementations.
 	//
 	/**
+	 * @see PluginRegistry::loadCategory()
+	 */
+	function callbackLoadCategory($hookName, $args) {
+		// We only contribute to the block plug-in category.
+		$category = $args[0];
+		if ($category != 'blocks') return false;
+
+		// We only contribute a plug-in if at least one
+		// faceting category is enabled.
+		$enabledFacetCategories = $this->_getEnabledFacetCategories();
+		if (empty($enabledFacetCategories)) return false;
+
+		// Instantiate the block plug-in for facets.
+		$this->import('LuceneFacetsBlockPlugin');
+		$luceneFacetsBlockPlugin = new LuceneFacetsBlockPlugin($this->getName());
+
+		// Add the plug-in to the registry.
+		$plugins =& $args[1];
+		$seq = $luceneFacetsBlockPlugin->getSeq();
+		if (!isset($plugins[$seq])) $plugins[$seq] = array();
+		$plugins[$seq][$luceneFacetsBlockPlugin->getPluginPath()] =& $luceneFacetsBlockPlugin;
+
+		return false;
+	}
+
+	/**
 	 * @see PKPPageRouter::route()
 	 */
 	function callbackLoadHandler($hookName, $args) {
@@ -315,6 +357,16 @@ class LucenePlugin extends GenericPlugin {
 		$highlighting = (boolean)$this->getSetting(0, 'highlighting');
 		$searchRequest->setHighlighting($highlighting);
 
+		// Configure faceting.
+		// 1) Faceting will be disabled for filtered search categories.
+		$activeFilters = array_keys($searchRequest->getQuery());
+		if (is_a($journal, 'Journal')) $activeFilters[] = 'journalTitle';
+		if (!empty($fromDate) || !empty($toDate)) $activeFilters[] = 'publicationDate';
+		// 2) Switch faceting on for enabled categories that have no
+		// active filters.
+		$facetCategories = array_values(array_diff($this->_getEnabledFacetCategories(), $activeFilters));
+		$searchRequest->setFacetCategories($facetCategories);
+
 		// Call the solr web service.
 		$solrWebService =& $this->getSolrWebService();
 		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
@@ -324,7 +376,7 @@ class LucenePlugin extends GenericPlugin {
 			$error .=  ' ' . __('plugins.generic.lucene.message.techAdminInformed');
 			return array();
 		} else {
-			// Store the spelling suggestion and highlighting info
+			// Store spelling suggestion, highlighting and faceting info
 			// internally. We cannot route these back through the request
 			// as the default search implementation does not support
 			// these features.
@@ -354,6 +406,9 @@ class LucenePlugin extends GenericPlugin {
 			}
 			if ($highlighting && isset($result['highlightedArticles'])) {
 				$this->_highlightedArticles = $result['highlightedArticles'];
+			}
+			if (!empty($facetCategories) && isset($result['facets'])) {
+				$this->_facets = $result['facets'];
 			}
 
 			// Return the scored results.
@@ -745,6 +800,26 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		return array($orderBy, $orderDir);
+	}
+
+	/**
+	 * Get all currently enabled facet categories.
+	 * @return array
+	 */
+	function _getEnabledFacetCategories() {
+		if (!is_array($this->_enabledFacetCategories)) {
+			$this->_enabledFacetCategories = array();
+			$availableFacetCategories = array(
+				'discipline', 'subject', 'type', 'coverage',
+				'journalTitle', 'authors', 'publicationDate'
+			);
+			foreach($availableFacetCategories as $facetCategory) {
+				if ($this->getSetting(0, 'facetCategory' . ucfirst($facetCategory))) {
+					$this->_enabledFacetCategories[] = $facetCategory;
+				}
+			}
+		}
+		return $this->_enabledFacetCategories;
 	}
 
 	/**

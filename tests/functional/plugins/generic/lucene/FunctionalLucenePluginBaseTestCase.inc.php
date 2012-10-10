@@ -102,10 +102,20 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 *
 	 * @param $searchTerm string
 	 */
-	protected function simpleSearchAcrossJournals($searchTerm) {
+	protected function simpleSearchAcrossJournals($searchTerm, $locale = 'en_US') {
 		// Open the test installation's home page.
 		$homePage = $this->baseUrl . '/index.php';
 		$this->verifyAndOpen($homePage);
+
+		// Select the locale.
+		$selectedValue = $this->getSelectedValue('name=locale');
+		if ($selectedValue != $locale) {
+			$this->selectAndWait('name=locale', 'value=' . $locale);
+		}
+
+		// Hack to work around timing problems in phpunit 3.4...
+		$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="simpleQuery"]');
+		$this->waitForElementPresent('name=searchField');
 
 		// Enter the search term into the simple search box.
 		$this->type($this->simpleSearchForm . 'input[@id="simpleQuery"]', $searchTerm);

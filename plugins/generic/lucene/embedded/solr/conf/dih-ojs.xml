@@ -91,6 +91,7 @@
       var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
       var indexTermsFields = ['discipline', 'subject', 'type', 'coverage'];
       var sortFields = ['title', 'journalTitle'];
+      var facetFields = ['discipline', 'subject', 'type', 'coverage', 'journalTitle'];
 
       var indexTermsAutoSuggest = '';
       for (var i=0, len=locFields.length; i<len; i++) {
@@ -145,6 +146,11 @@
           if (sortFields.indexOf(fieldName) >= 0) {
             row.put(fieldName + '_' + locale + '_txtsort', value);
           }
+
+          // Index facet fields.
+          if (facetFields.indexOf(fieldName) >= 0) {
+            row.put(fieldName + '_' + locale + '_facet', value);
+          }
         }
         row.put(fieldName + '_spell', autoSuggest);
       }
@@ -168,6 +174,7 @@
       row.put('authors_txtsort', authorsConcat);
       appendToDocField(context, 'default_spell', authorsConcat);
       row.put('authors_spell', authorsConcat);
+      row.put('authors_facet', authorsConcat);
 
       // Create the publication date sort field.
       // We could use a copy field instruction in the schema file

@@ -150,9 +150,29 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertEquals(array(4, 3), array_values($scoredResults));
 		$searchRequest->setOrderBy('title');
 		$searchRequest->setOrderDir('desc');
+		$searchRequest->setFacetCategories(
+			array('discipline', 'subject', 'coverage', 'journalTitle', 'authors', 'publicationDate')
+		);
 		$results = $this->solrWebService->retrieveResults($searchRequest, $totalResults);
 		$scoredResults = (isset($results['scoredResults']) ? $results['scoredResults'] : null);
 		self::assertEquals(array(3, 4), array_values($scoredResults));
+
+		// Check faceting results.
+		self::assertTrue(isset($results['facets']));
+		$facets = $results['facets'];
+		self::assertTrue(is_array($facets));
+		$expectedFacets = array(
+			// only facets that return at least one result will be shown.
+			'discipline' => array('Exotic Food' => 1, 'Dietary Research' => 1),
+			'subject' => array('Lunchtime no lunch' => 1),
+			// facets for 'type' were not requested so we shouldn't get a result here
+			'coverage' => array('daily probes' => 1, 'the 21st century' => 1, 'world wide' => 1),
+			'journalTitle' => array(), // This shows that non-selected facets will not be shown.
+			'authors' => array('Author, Some' => 1, 'Authorname, Second A' => 1, 'Author, Another' => 1),
+			'publicationDate' => array('2011' => 1, '2012' => 1) // This shows that range queries work.
+		);
+		self::assertEquals($expectedFacets, $facets);
+		$searchRequest->setFacetCategories(array());
 
 		// Test translation of search terms.
 		// If the word "und" is not correctly translated to "AND" then
