@@ -5,7 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Change password form.
- *
  *}
 {strip}
 {include file="core:user/changePassword.tpl"}
