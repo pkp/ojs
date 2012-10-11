@@ -6,7 +6,6 @@
  *
  * Display confirmation of successful upgrade.
  * If necessary, will also display new config file contents if config file could not be written.
- *
  *}
 {strip}
 {assign var="pageTitle" value="installer.ojsUpgrade"}
