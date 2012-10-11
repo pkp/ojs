@@ -23,19 +23,18 @@ class InformationHandler extends Handler {
 	}
 
 	/**
-	 * Display the information page for the journal..
+	 * Display the information page for the journal.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function index($args) {
+	function index($args, &$request) {
+		$journal =& $request->getJournal();
+		if (!$journal) $request->redirect('index');
+
 		$this->validate();
-		$this->setupTemplate();
-		$journal = Request::getJournal();
+		$this->setupTemplate($journal);
 
-		if ($journal == null) {
-			Request::redirect('index');
-			return;
-		}
-
-		switch(isset($args[0])?$args[0]:null) {
+		switch(array_shift($args)) {
 			case 'readers':
 				$content = $journal->getLocalizedSetting('readerInformation');
 				$pageTitle = 'navigation.infoForReaders.long';
@@ -61,8 +60,7 @@ class InformationHandler extends Handler {
 				$pageTitle = $pageCrumbTitle = 'manager.setup.copyrightNotice';
 				break;
 			default:
-				Request::redirect($journal->getPath());
-				return;
+				$request->redirect($journal->getPath());
 		}
 
 		$templateMgr =& TemplateManager::getManager();
@@ -72,34 +70,34 @@ class InformationHandler extends Handler {
 		$templateMgr->display('information/information.tpl');
 	}
 
-	function readers() {
-		$this->index(array('readers'));
+	function readers($args, &$request) {
+		$this->index(array('readers'), $request);
 	}
 
-	function authors() {
-		$this->index(array('authors'));
+	function authors($args, &$request) {
+		$this->index(array('authors'), $request);
 	}
 
-	function librarians() {
-		$this->index(array('librarians'));
+	function librarians($args, &$request) {
+		$this->index(array('librarians'), $request);
 	}
 
-	function competingInterestGuidelines() {
-		$this->index(array('competingInterestGuidelines'));
+	function competingInterestGuidelines($args, &$request) {
+		$this->index(array('competingInterestGuidelines'), $request);
 	}
 
-	function sampleCopyrightWording() {
-		$this->index(array('sampleCopyrightWording'));
+	function sampleCopyrightWording($args, &$request) {
+		$this->index(array('sampleCopyrightWording'), $request);
 	}
 
 	/**
 	 * Initialize the template.
+	 * @param $journal Journal
 	 */
-	function setupTemplate() {
+	function setupTemplate($journal) {
 		parent::setupTemplate();
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
-		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+		if (!$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 	}
