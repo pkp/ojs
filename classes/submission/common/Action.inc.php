@@ -202,6 +202,8 @@ class Action extends PKPAction {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+
 		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
 			if (!in_array($type, $allowed)) {
 				return false;
