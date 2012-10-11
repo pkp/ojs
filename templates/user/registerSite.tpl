@@ -5,7 +5,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site registration.
- *
  *}
 {strip}
 {include file="common/header.tpl"}
@@ -26,4 +25,3 @@
 {/if}
 </div>
 {include file="common/footer.tpl"}
-
