@@ -83,7 +83,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
+		$plugin =& $this->getWebFeedPlugin();
 		return $plugin->getEnabled(); // Should always be true anyway if this is loaded
 	}
 
