@@ -17,7 +17,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($availableLocales) > 1}
-<form method="post" action="{url op="saveLanguageSettings"}">
+<form class="pkp_form" method="post" action="{url op="saveLanguageSettings"}">
 
 <table class="data" width="100%">
 <tr valign="top">

@@ -11,7 +11,7 @@
 
 <br/>
 
-<form method="post" action="{url path='TimedViewReportPlugin'}">
+<form class="pkp_form" method="post" action="{url path='TimedViewReportPlugin'}">
 	{include file="common/formErrors.tpl"}
 
 	<table class="data" width="100%">
@@ -40,7 +40,7 @@
 <div class="separator"></div>
 
 <h3>{translate key="plugins.generic.timedView.form.clearLogs"}</h3>
-<form method="post" action="{url path='TimedViewReportPlugin'}">
+<form class="pkp_form" method="post" action="{url path='TimedViewReportPlugin'}">
 	<p>{translate key="plugins.generic.timedView.form.clearLogs.description"}</p>
 
 	{html_select_date prefix="dateClear" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}

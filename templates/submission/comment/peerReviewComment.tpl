@@ -67,7 +67,7 @@ window.opener.location.reload();
 <br />
 
 {if not $isLocked}
-<form method="post" action="{url op=$commentAction}">
+<form class="pkp_form" method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />

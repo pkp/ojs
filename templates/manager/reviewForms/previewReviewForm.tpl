@@ -69,7 +69,7 @@
 
 <br/>
 
-<form id="previewReviewForm" method="post" action="{if !$canEdit}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewFormId}{/if}">
+<form class="pkp_form" id="previewReviewForm" method="post" action="{if !$canEdit}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewFormId}{/if}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

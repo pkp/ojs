@@ -28,7 +28,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<form method="post" action="{plugin_url path="theses"}">
+<form class="pkp_form" method="post" action="{plugin_url path="theses"}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

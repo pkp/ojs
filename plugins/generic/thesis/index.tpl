@@ -24,7 +24,7 @@
 <br />
 <br />
 
-<form method="post" action="{url path="thesis"}">
+<form class="pkp_form" method="post" action="{url path="thesis"}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

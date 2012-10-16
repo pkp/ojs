@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form id="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
+<form class="pkp_form" id="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
 <input type="hidden" name="editorAction" value="" />
 <input type="hidden" name="userId" value="" />
 

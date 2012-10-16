@@ -52,7 +52,7 @@
 
 <br/>
 
-<form id="previewReviewForm" method="post" action="{url op="selectReviewForm" path=$articleId|to_array:$reviewId}">
+<form class="pkp_form" id="previewReviewForm" method="post" action="{url op="selectReviewForm" path=$articleId|to_array:$reviewId}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

@@ -16,7 +16,7 @@
 {translate key="plugins.generic.sword.authorDepositDescription" submissionTitle=$article->getLocalizedTitle()}
 
 <div id="depositPoints">
-<form method="post" action="{url path="index" path=$article->getId()|to_array:"save"}">
+<form class="pkp_form" method="post" action="{url path="index" path=$article->getId()|to_array:"save"}">
 
 {include file="common/formErrors.tpl"}
 

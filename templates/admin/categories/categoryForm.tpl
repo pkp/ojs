@@ -14,7 +14,7 @@
 {/strip}
 <div id="categoryFormDiv">
 
-<form id="categoryForm" method="post" action="{url op="updateCategory"}">
+<form class="pkp_form" id="categoryForm" method="post" action="{url op="updateCategory"}">
 {if $category}
 	<input type="hidden" name="categoryId" value="{$category->getId()}"/>
 {/if}

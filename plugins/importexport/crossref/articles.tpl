@@ -31,7 +31,7 @@ function toggleChecked() {
 <br/>
 
 <div id="articles">
-<form action="{plugin_url path="exportArticles"}" method="post" id="articles">
+<form class="pkp_form" action="{plugin_url path="exportArticles"}" method="post" id="articles">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

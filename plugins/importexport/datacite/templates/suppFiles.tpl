@@ -26,7 +26,7 @@
 <br/>
 
 <div id="suppFiles">
-	<form action="{plugin_url path="exportSuppFiles"}" method="post" id="suppFilesForm">
+	<form class="pkp_form" action="{plugin_url path="exportSuppFiles"}" method="post" id="suppFilesForm">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

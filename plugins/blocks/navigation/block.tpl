@@ -12,7 +12,7 @@
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
-	<form id="simpleSearchForm" method="post" action="{url page="search" op="results"}">
+	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="results"}">
 	<table>
 	<tr>
 		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>

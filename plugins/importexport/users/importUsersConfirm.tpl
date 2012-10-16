@@ -13,7 +13,7 @@
 {/strip}
 <div id="importUsersConfirm">
 {translate key="plugins.importexport.users.import.confirmUsers"}:
-<form action="{plugin_url path="import"}" method="post">
+<form class="pkp_form" action="{plugin_url path="import"}" method="post">
 {if $sendNotify}
 	<input type="hidden" name="sendNotify" value="{$sendNotify|escape}" />
 {/if}

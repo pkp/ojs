@@ -29,7 +29,7 @@
 	<p><span class="formSuccess">{translate key="$success"}</span></p>
 {/if}
 
-<form id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
+<form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
 
 <table class="data" width="100%">
 	<tr valign="top">

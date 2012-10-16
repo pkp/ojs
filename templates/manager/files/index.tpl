@@ -67,12 +67,12 @@
 {/foreach}
 </table>
 
-<form method="post" action="{url op="fileUpload" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
+<form class="pkp_form" method="post" action="{url op="fileUpload" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
 	<input type="file" size="20" name="file" class="uploadField" />
 	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
 </form>
 
-<form method="post" action="{url op="fileMakeDir" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
+<form class="pkp_form" method="post" action="{url op="fileMakeDir" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
 	<input type="text" size="20" maxlength="255" name="dirName" class="textField" />
 	<input type="submit" value="{translate key="manager.files.createDir"}" class="button" />
 </form>

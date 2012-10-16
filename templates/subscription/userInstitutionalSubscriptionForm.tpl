@@ -16,9 +16,9 @@
 <br/>
 
 {if $subscriptionId}
-<form method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"|to_array:$subscriptionId}">
+<form class="pkp_form" method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"|to_array:$subscriptionId}">
 {else}
-<form method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"}">
+<form class="pkp_form" method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"}">
 {/if}
 
 {include file="common/formErrors.tpl"}

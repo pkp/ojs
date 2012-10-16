@@ -54,7 +54,7 @@
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
+			<form class="pkp_form" method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="hidden" name="copyeditStage" value="initial" />
 				<input type="file" name="upload"{if not $initialCopyeditSignoff->getDateNotified() or $initialCopyeditSignoff->getDateCompleted()} disabled="disabled"{/if} class="uploadField" />
@@ -114,7 +114,7 @@
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
+			<form class="pkp_form" method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="hidden" name="copyeditStage" value="final" />
 				<input type="file" name="upload"{if not $finalCopyeditSignoff->getDateNotified() or $finalCopyeditSignoff->getDateCompleted()} disabled="disabled"{/if} class="uploadField">

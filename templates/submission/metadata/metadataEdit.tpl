@@ -13,7 +13,7 @@
 
 {url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 
-<form id="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
+<form class="pkp_form" id="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 

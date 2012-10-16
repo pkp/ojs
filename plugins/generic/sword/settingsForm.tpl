@@ -16,7 +16,7 @@
 
 <div class="separator">&nbsp;</div>
 
-<form method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="plugins.generic.sword.settings"}</h3>

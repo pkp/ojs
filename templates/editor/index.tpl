@@ -48,7 +48,7 @@ function sortSearch(heading, direction) {
 {/literal}
 </script>
 
-<form method="post" id="submit" action="{url path="search"}">
+<form class="pkp_form" method="post" id="submit" action="{url path="search"}">
 	{if $section}<input type="hidden" name="section" value="{$section|escape:"quotes"}"/>{/if}
 	<input type="hidden" name="sort" value="id"/>
 	<input type="hidden" name="sortDirection" value="ASC"/>

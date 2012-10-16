@@ -19,7 +19,7 @@
 
 <br/>
 
-<form name="referral" method="post" action="{url op="updateReferral"}">
+<form class="pkp_form" name="referral" method="post" action="{url op="updateReferral"}">
 {if $referralId}
 <input type="hidden" name="referralId" value="{$referralId|escape}" />
 {/if}

@@ -7,13 +7,13 @@
  * Display list of books for review for editor management.
  *
  *}
-<form action="#">
+<form class="pkp_form" action="#">
 <ul class="filter">
 	<li>{translate key="editor.submissions.assignedTo"}: <select name="filterEditor" onchange="location.href='{url|escape path=$returnPage searchField=$searchField searchMatch=$searchMatch search=$search filterEditor="EDITOR" escape=false}'.replace('EDITOR', this.options[this.selectedIndex].value)" size="1" class="selectMenu">{html_options options=$editorOptions selected=$filterEditor}</select></li>
 </ul>
 </form>
 
-<form method="post" action="{url op="booksForReview" path=$returnPage}">
+<form class="pkp_form" method="post" action="{url op="booksForReview" path=$returnPage}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

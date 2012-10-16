@@ -20,7 +20,7 @@
 
 <div class="separator"></div>
 
-<form id="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+<form class="pkp_form" id="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
 {include file="common/formErrors.tpl"}
 {if $articleId}<input type="hidden" name="articleId" value="{$articleId|escape}" />{/if}
 

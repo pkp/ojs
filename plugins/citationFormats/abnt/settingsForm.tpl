@@ -20,7 +20,7 @@
 
 <br />
 
-<form name="setupForm" method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" name="setupForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

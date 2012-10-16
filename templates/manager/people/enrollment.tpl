@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form id="disableUser" method="post" action="{url op="disableUser"}">
+<form class="pkp_form" id="disableUser" method="post" action="{url op="disableUser"}">
 	<input type="hidden" name="reason" value=""/>
 	<input type="hidden" name="userId" value=""/>
 </form>
@@ -43,7 +43,7 @@ function confirmAndPrompt(userId) {
 </script>
 
 <h3>{translate key=$roleName}</h3>
-<form method="post" action="{url path=$roleSymbolic}">
+<form class="pkp_form" method="post" action="{url path=$roleSymbolic}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected="selected" {/if}value="all">{translate key="manager.people.allUsers"}</option>
 		<option {if $roleSymbolic=='managers'}selected="selected" {/if}value="managers">{translate key="user.role.managers"}</option>
@@ -101,7 +101,7 @@ function confirmAndPrompt(userId) {
 <p><a href="{url path="all"}" class="action">{translate key="manager.people.allUsers"}</a></p>
 {/if}
 
-<form id="people" action="{url page="user" op="email"}" method="post">
+<form class="pkp_form" id="people" action="{url page="user" op="email"}" method="post">
 <input type="hidden" name="redirectUrl" value="{url path=$roleSymbolic}"/>
 
 <div id="users">

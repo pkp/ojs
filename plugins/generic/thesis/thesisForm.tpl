@@ -19,7 +19,7 @@
 
 <br/>
 
-<form method="post" action="{plugin_url path="update"}">
+<form class="pkp_form" method="post" action="{plugin_url path="update"}">
 {if $thesisId}
 <input type="hidden" name="thesisId" value="{$thesisId|escape}" />
 {/if}

@@ -26,7 +26,7 @@
 <br/>
 
 <div id="allUnregistered">
-	<form action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
+	<form class="pkp_form" action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

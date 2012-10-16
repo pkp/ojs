@@ -14,7 +14,7 @@
 
 <p>{translate key="notification.settingsDescription"}</p>
 
-<form id="notificationSettings" method="post" action="{url op="saveSettings"}">
+<form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSettings"}">
 
 <!-- Submission events -->
 {foreach from=$notificationSettingCategories item=notificationSettingCategory}

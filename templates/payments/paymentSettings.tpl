@@ -19,7 +19,7 @@
 
 <br />
 
-<form name="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
+<form class="pkp_form" name="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
 {if count($formLocales) > 1}
 <div id="locales">
 <table width="100%" class="data">

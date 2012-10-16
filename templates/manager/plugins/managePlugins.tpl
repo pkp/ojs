@@ -18,7 +18,7 @@
 			<p>{translate key="manager.plugins.installDescription"}</p>
 		{/if}
 
-		<form method="post" action="{url path="installPlugin"}" enctype="multipart/form-data">
+		<form class="pkp_form" method="post" action="{url path="installPlugin"}" enctype="multipart/form-data">
 			{if $error}
 				<span class="formError">{translate key="form.errorsOccurred"}:</span>
 				<ul class="formErrorList">
@@ -64,7 +64,7 @@
 			<p>{translate key="manager.plugins.upgradeDescription"}</p>
 		{/if}
 
-		<form method="post" action="{url path="upgradePlugin"|to_array:$category:$plugin}" enctype="multipart/form-data">
+		<form class="pkp_form" method="post" action="{url path="upgradePlugin"|to_array:$category:$plugin}" enctype="multipart/form-data">
 			{if $error}
 				<span class="formError">{translate key="form.errorsOccurred"}:</span>
 				<ul class="formErrorList">
@@ -116,7 +116,7 @@
 			{/if}
 
 			<br />
-			<form method="post" action="{url path="deletePlugin"|to_array:$category:$plugin}" enctype="multipart/form-data">
+			<form class="pkp_form" method="post" action="{url path="deletePlugin"|to_array:$category:$plugin}" enctype="multipart/form-data">
 				{if $error}
 					<span class="formError">{translate key="form.errorsOccurred"}:</span>
 					<ul class="formErrorList">

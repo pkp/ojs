@@ -31,7 +31,7 @@
 	</tr>
 </table>
 
-<form method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 <div id="submissionSettings">
 <h4>{translate key="plugins.generic.thesis.settings.submissions"}</h4>

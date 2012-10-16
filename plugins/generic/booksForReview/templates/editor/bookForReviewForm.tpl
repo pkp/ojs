@@ -18,7 +18,7 @@
 
 <br/>
 
-<form id="bookForReviewForm" method="post" action="{url op="updateBookForReview"}" enctype="multipart/form-data">
+<form class="pkp_form" id="bookForReviewForm" method="post" action="{url op="updateBookForReview"}" enctype="multipart/form-data">
 {if $bookId}
 <input type="hidden" name="bookId" value="{$bookId|escape}" />
 {/if}

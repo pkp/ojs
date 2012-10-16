@@ -14,7 +14,7 @@
 
 <br />
 <div id="sourceSettings">
-<form method="post" action="{url op="updateAuthSource" path=$authId}">
+<form class="pkp_form" method="post" action="{url op="updateAuthSource" path=$authId}">
 
 <table class="data" width="100%">
 	<tr valign="top">

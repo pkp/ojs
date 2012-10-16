@@ -18,7 +18,7 @@
 
 <h3>{translate key="plugins.generic.announcementfeed.settings"}</h3>
 
-<form method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <script type="text/javascript">

@@ -13,7 +13,7 @@
 {/strip}
 <div id="depositPointSettings">
 
-<form method="post" action="{plugin_url path="editDepositPoint"|to_array:$depositPointId}">
+<form class="pkp_form" method="post" action="{plugin_url path="editDepositPoint"|to_array:$depositPointId}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">

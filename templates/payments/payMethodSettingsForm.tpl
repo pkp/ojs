@@ -33,7 +33,7 @@ function changePaymentMethod() {
 // -->
 </script>
 
-<form method="post" id="paymentSettingsForm" action="{url op="savePayMethodSettings"}">
+<form class="pkp_form" method="post" id="paymentSettingsForm" action="{url op="savePayMethodSettings"}">
 
 <p>{translate key="manager.payment.paymentMethod.description"}</p>
 

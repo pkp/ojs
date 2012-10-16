@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="manager.setup.gettingDownTheDetails"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form id="setupForm" method="post" action="{url op="saveSetup" path="1"}">
+<form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="1"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

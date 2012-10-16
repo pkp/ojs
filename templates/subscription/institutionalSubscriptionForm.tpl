@@ -22,7 +22,7 @@
 
 <br/>
 
-<form method="post" id="subscriptionForm" action="{url op="updateSubscription" path="institutional"}">
+<form class="pkp_form" method="post" id="subscriptionForm" action="{url op="updateSubscription" path="institutional"}">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 {/if}

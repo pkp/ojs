@@ -39,7 +39,7 @@ function updateAbstractRequired() {
 
 <p>{translate key="plugins.importexport.quickSubmit.descriptionLong"}</p>
 
-<form enctype="multipart/form-data" id="submit" method="post" action="{plugin_url path="saveSubmit"}">
+<form class="pkp_form" enctype="multipart/form-data" id="submit" method="post" action="{plugin_url path="saveSubmit"}">
 
 {include file="common/formErrors.tpl"}
 

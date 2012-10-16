@@ -18,7 +18,7 @@
 
 <ul class="plain">
 	<li>
-		<form action="{plugin_url path="exportByRole"}" method="post">
+		<form class="pkp_form" action="{plugin_url path="exportByRole"}" method="post">
 			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
@@ -36,7 +36,7 @@
 <div id="importUsers">
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
-<form action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
+<form class="pkp_form" action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
 
 <p>{translate key="plugins.importexport.users.import.instructions"}</p>
 

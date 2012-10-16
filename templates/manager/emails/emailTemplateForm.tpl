@@ -16,7 +16,7 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="emailTemplateForm">
-<form method="post" action="{url op="updateEmail"}">
+<form class="pkp_form" method="post" action="{url op="updateEmail"}">
 <input type="hidden" name="emailId" value="{$emailId|escape}" />
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
 {if !$isNewTemplate}

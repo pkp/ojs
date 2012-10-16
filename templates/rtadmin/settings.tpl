@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form method="post" action="{url op="saveSettings"}">
+<form class="pkp_form" method="post" action="{url op="saveSettings"}">
 
 <p>{translate key="rt.admin.settings.description"}</p>
 

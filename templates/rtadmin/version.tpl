@@ -21,7 +21,7 @@
 
 <br />
 
-<form action="{if $versionId}{url op="saveVersion" path=$versionId}{else}{url op="createVersion" path="save"}{/if}" method="post">
+<form class="pkp_form" action="{if $versionId}{url op="saveVersion" path=$versionId}{else}{url op="createVersion" path="save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.version.title"}</label></td>

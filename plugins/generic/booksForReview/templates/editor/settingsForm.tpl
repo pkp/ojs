@@ -24,7 +24,7 @@
 
 <br />
 
-<form method="post" id="booksForReviewSettingsForm" action="{url op="booksForReviewSettings"}">
+<form class="pkp_form" method="post" id="booksForReviewSettingsForm" action="{url op="booksForReviewSettings"}">
 {include file="common/formErrors.tpl"}
 
 <script type="text/javascript">

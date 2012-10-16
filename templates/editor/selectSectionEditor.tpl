@@ -14,7 +14,7 @@
 
 <h3>{translate key="editor.article.selectEditor" roleName=$roleName|translate}</h3>
 
-<form id="submit" method="post" action="{url op="assignEditor" path=$rolePath articleId=$articleId}">
+<form class="pkp_form" id="submit" method="post" action="{url op="assignEditor" path=$rolePath articleId=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

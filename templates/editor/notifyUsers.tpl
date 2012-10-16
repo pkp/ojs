@@ -14,7 +14,7 @@
 {/strip}
 
 <div id="notifyUsers">
-<form method="post" action="{$formActionUrl}">
+<form class="pkp_form" method="post" action="{$formActionUrl}">
 <input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}

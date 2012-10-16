@@ -61,7 +61,7 @@
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>
-			<form method="post" action="{url op="uploadReviewVersion"}" enctype="multipart/form-data">
+			<form class="pkp_form" method="post" action="{url op="uploadReviewVersion"}" enctype="multipart/form-data">
 				{translate key="editor.article.uploadReviewVersion"}
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="file" name="upload" class="uploadField" />
@@ -76,7 +76,7 @@
 				{assign var=notFirstSuppFile value=1}
 			{/if}
 			<td width="80%" class="value nowrap">
-				<form method="post" action="{url op="setSuppFileVisibility"}">
+				<form class="pkp_form" method="post" action="{url op="setSuppFileVisibility"}">
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="hidden" name="fileId" value="{$suppFile->getId()}" />
 
@@ -252,7 +252,7 @@
 					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
 					<tr valign="top">
 						<td valign="middle">
-							<form id="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
+							<form class="pkp_form" id="authorView{$reviewAssignment->getId()}" method="post" action="{url op="makeReviewerFileViewable"}">
 								<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 								<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}" />
 								<input type="hidden" name="articleId" value="{$submission->getId()}" />
@@ -280,7 +280,7 @@
 				{if !$reviewAssignment->getDateConfirmed()}
 					<a href="{url op="confirmReviewForReviewer" path=$submission->getId()|to_array:$reviewAssignment->getId() accept=1}" class="action">{translate key="reviewer.article.canDoReview"}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="confirmReviewForReviewer" path=$submission->getId()|to_array:$reviewAssignment->getId() accept=0}" class="action">{translate key="reviewer.article.cannotDoReview"}</a><br />
 				{/if}
-				<form method="post" action="{url op="uploadReviewForReviewer"}" enctype="multipart/form-data">
+				<form class="pkp_form" method="post" action="{url op="uploadReviewForReviewer"}" enctype="multipart/form-data">
 					{translate key="editor.article.uploadReviewForReviewer"}
 					<input type="hidden" name="articleId" value="{$submission->getId()}" />
 					<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}"/>
@@ -298,7 +298,7 @@
 		<tr valign="top">
 			<td class="label">{translate key="editor.article.rateReviewer"}</td>
 			<td>
-			<form method="post" action="{url op="rateReviewer"}">
+			<form class="pkp_form" method="post" action="{url op="rateReviewer"}">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getId()}" />
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<select name="quality" size="1" class="selectMenu">

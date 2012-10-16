@@ -12,7 +12,7 @@
 {include file="submission/comment/header.tpl"}
 {/strip}
 
-<form method="post" action="{url op="saveComment" path=$commentId}">
+<form class="pkp_form" method="post" action="{url op="saveComment" path=$commentId}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />

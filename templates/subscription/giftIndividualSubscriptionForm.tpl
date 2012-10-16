@@ -14,7 +14,7 @@
 
 <br/>
 
-<form method="post" id="subscriptionGiftForm" action="{url op="payPurchaseGiftSubscription"}">
+<form class="pkp_form" method="post" id="subscriptionGiftForm" action="{url op="payPurchaseGiftSubscription"}">
 
 <p>{translate key="gifts.subscriptionFormIntroduction"}</p>
 

@@ -14,7 +14,7 @@
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
 <div id="articleContext">
-<form action="{plugin_url path="import"}" method="post">
+<form class="pkp_form" action="{plugin_url path="import"}" method="post">
 <input type="hidden" name="temporaryFileId" value="{$temporaryFileId|escape}"/>
 
 {translate key="section.section"}&nbsp;&nbsp;

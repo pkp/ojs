@@ -16,7 +16,7 @@
 <div id="metsGatewaySettings">
 <h3>{translate key="plugins.gateways.metsGateway.settings"}</h3>
 
-<form method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">

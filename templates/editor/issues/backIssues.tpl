@@ -76,7 +76,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 {/if}
 </table>
 
-<form action="{url op="setCurrentIssue"}" method="post">
+<form class="pkp_form" action="{url op="setCurrentIssue"}" method="post">
 	{translate key="journal.currentIssue"}&nbsp;&nbsp;
 	<select name="issueId" class="selectMenu">
 		<option value="">{translate key="common.none"}</option>

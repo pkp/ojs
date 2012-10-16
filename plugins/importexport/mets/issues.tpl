@@ -55,7 +55,7 @@ function SubmitIfAnyIsChecked() {
 {/literal}
 </script>
 
-<form action="{plugin_url path="exportIssues"}" method="post" id="issues">
+<form class="pkp_form" action="{plugin_url path="exportIssues"}" method="post" id="issues">
 
 <h3>{translate key="plugins.importexport.METSExport.settings"}</h3>
 

@@ -22,7 +22,7 @@
 
 <br/>
 
-<form id="groupForm" method="post" action="{url op="updateGroup"}">
+<form class="pkp_form" id="groupForm" method="post" action="{url op="updateGroup"}">
 {if $group}
 	<input type="hidden" name="groupId" value="{$group->getId()}"/>
 {/if}

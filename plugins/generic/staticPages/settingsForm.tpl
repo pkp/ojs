@@ -17,7 +17,7 @@
 <br />
 <br />
 
-<form method="post" action="{plugin_url path="edit"}">
+<form class="pkp_form" method="post" action="{plugin_url path="edit"}">
 
 {include file="common/formErrors.tpl"}
 

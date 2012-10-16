@@ -11,7 +11,7 @@
 <h3>{translate key="manager.statistics.reports"}</h3>
 <p>{translate key="manager.statistics.reports.description"}</p>
 
-<form method="post" action="{url op="reportGenerator"}">
+<form class="pkp_form" method="post" action="{url op="reportGenerator"}">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="25%" class="label">{translate key="manager.statistics.reports.reportType"}</td>

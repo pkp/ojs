@@ -19,7 +19,7 @@
 
 <br/>
 
-<form id="externalFeed" method="post" action="{plugin_url path="update"}">
+<form class="pkp_form" id="externalFeed" method="post" action="{plugin_url path="update"}">
 {if $feedId}
 <input type="hidden" name="feedId" value="{$feedId|escape}" />
 {/if}

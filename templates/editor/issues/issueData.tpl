@@ -21,7 +21,7 @@
 {/if}
 <br />
 
-<form action="#">
+<form class="pkp_form" action="#">
 {translate key="issue.issue"}: <select name="issue" class="selectMenu" onchange="if(this.options[this.selectedIndex].value > 0) location.href='{url|escape:"javascript" op="issueToc" path="ISSUE_ID" escape=false}'.replace('ISSUE_ID', this.options[this.selectedIndex].value)" size="1">{html_options options=$issueOptions|truncate:40:"..." selected=$issueId}</select>
 </form>
 
@@ -34,7 +34,7 @@
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 
-<form id="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
+<form class="pkp_form" id="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
 <input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
 <input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
 {if $styleFileName}

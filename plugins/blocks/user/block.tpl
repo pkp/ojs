@@ -29,7 +29,7 @@
 		{if $implicitAuth}
 			<a href="{url page="login" op="implicitAuthLogin"}">Journals Login</a>
 		{else}
-			<form method="post" action="{$userBlockLoginUrl}">
+			<form class="pkp_form" method="post" action="{$userBlockLoginUrl}">
 				<table>
 					<tr>
 						<td><label for="sidebar-username">{translate key="user.username"}</label></td>

@@ -14,7 +14,7 @@
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%" class="value">
-		<form method="post" action="{url op="recordDecision"}">
+		<form class="pkp_form" method="post" action="{url op="recordDecision"}">
 			<input type="hidden" name="articleId" value="{$submission->getId()}" />
 			<select name="decision" size="1" class="selectMenu"{if not $allowRecommendation} disabled="disabled"{/if}>
 				{html_options_translate options=$editorDecisionOptions selected=$lastDecision}
@@ -61,7 +61,7 @@
 </tr>
 </table>
 
-<form method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
+<form class="pkp_form" method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$submission->getId()}" />
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($round)}

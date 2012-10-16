@@ -21,7 +21,7 @@
 
 <br/>
 
-<form id="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
+<form class="pkp_form" id="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
 {if $reviewFormId}
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 {/if}

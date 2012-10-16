@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form id="settings" method="post" action="{url op="saveSettings"}" enctype="multipart/form-data">
+<form class="pkp_form" id="settings" method="post" action="{url op="saveSettings"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">

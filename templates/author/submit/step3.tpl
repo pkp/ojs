@@ -14,7 +14,7 @@
 
 <div class="separator"></div>
 
-<form id="submit" method="post" action="{url op="saveSubmit" path=$submitStep}">
+<form class="pkp_form" id="submit" method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 

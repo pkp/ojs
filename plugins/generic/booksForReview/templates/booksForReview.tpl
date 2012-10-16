@@ -24,7 +24,7 @@
 	<br />
 {/if}
 
-<form method="post" action="{url page="booksForReview}">
+<form class="pkp_form" method="post" action="{url page="booksForReview}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

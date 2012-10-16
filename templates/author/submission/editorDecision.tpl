@@ -72,7 +72,7 @@
 			{translate key="author.article.uploadAuthorVersion"}
 		</td>
 		<td class="value" width="80%">
-			<form method="post" action="{url op="uploadRevisedVersion"}" enctype="multipart/form-data">
+			<form class="pkp_form" method="post" action="{url op="uploadRevisedVersion"}" enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="file" name="upload" class="uploadField" />
 				<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />

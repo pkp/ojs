@@ -19,7 +19,7 @@
 
 <h3>{translate key="plugins.generic.xmlGalley.manager.settings"}</h3>
 
-<form method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 {if $testSuccess}

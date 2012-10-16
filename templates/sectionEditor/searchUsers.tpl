@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form id="submit" method="post" action="{url op="enrollSearch" path=$articleId}">
+<form class="pkp_form" id="submit" method="post" action="{url op="enrollSearch" path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -28,7 +28,7 @@
 <p>{foreach from=$alphaList item=letter}<a href="{url op="enrollSearch" path=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="enrollSearch" path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <div id="users">
-<form action="{url op="enroll" path=$articleId}" method="post">
+<form class="pkp_form" action="{url op="enroll" path=$articleId}" method="post">
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">

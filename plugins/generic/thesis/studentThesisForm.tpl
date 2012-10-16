@@ -17,7 +17,7 @@
 <br/>
 <br/>
 
-<form method="post" action="{url op="save"}">
+<form class="pkp_form" method="post" action="{url op="save"}">
 
 {include file="common/formErrors.tpl"}
 <div id="general">

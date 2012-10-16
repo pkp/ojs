@@ -12,7 +12,7 @@
 {/strip}
 
 <h3>{translate key=$pageSubTitle}</h3>
-<form id="submit" method="post" action="{url op=$actionHandler path=$articleId}">
+<form class="pkp_form" id="submit" method="post" action="{url op=$actionHandler path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

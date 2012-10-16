@@ -26,7 +26,7 @@
 
 <br/>
 
-<form id="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
+<form class="pkp_form" id="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId|escape}" />
 {/if}

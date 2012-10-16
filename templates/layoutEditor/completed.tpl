@@ -29,7 +29,7 @@ function sortSearch(heading, direction) {
 </script>
 
 <div id="search">
-<form method="post" id="submit" action="{url op="submissions" path=$pageToDisplay}">
+<form class="pkp_form" method="post" id="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

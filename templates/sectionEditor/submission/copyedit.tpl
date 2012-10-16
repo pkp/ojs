@@ -213,7 +213,7 @@
 {elseif !$initialCopyeditSignoff->getDateCompleted()}
 {assign var="canUploadCopyedit" value="1"}
 {/if}
-<form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
+<form class="pkp_form" method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 	<input type="hidden" name="articleId" value="{$submission->getId()}" />
 	{translate key="submission.uploadFileTo"}
 	<input type="radio" name="copyeditStage" id="copyeditStageInitial" value="initial" checked="checked" /><label for="copyeditStageInitial">{translate key="navigation.stepNumber" step=1}</label>,

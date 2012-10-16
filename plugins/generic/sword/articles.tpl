@@ -55,7 +55,7 @@ function changeDepositPoint() {
 </script>
 
 <br/>
-<form action="{plugin_url path="deposit"}" method="post" id="articles">
+<form class="pkp_form" action="{plugin_url path="deposit"}" method="post" id="articles">
 
 <div id="settings">
 <table width="100%" class="data">

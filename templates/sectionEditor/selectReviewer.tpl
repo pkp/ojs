@@ -27,7 +27,7 @@ function sortSearch(heading, direction) {
 
 <div id="selectReviewer">
 <h3>{translate key="editor.article.selectReviewer"}</h3>
-<form id="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
+<form class="pkp_form" id="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
 	<input type="hidden" name="sort" value="name"/>
 	<input type="hidden" name="sortDirection" value="ASC"/>
 	<select name="searchField" size="1" class="selectMenu">

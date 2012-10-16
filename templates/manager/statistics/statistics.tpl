@@ -14,7 +14,7 @@
 <p>{translate key="manager.statistics.statistics.description"}</p>
 <div id="selectSections">
 <p>{translate key="manager.statistics.statistics.selectSections"}</p>
-<form action="{url op="saveStatisticsSections"}" method="post">
+<form class="pkp_form" action="{url op="saveStatisticsSections"}" method="post">
 	<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
 		{foreach from=$sections item=section}
 			<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()}</option>
@@ -25,7 +25,7 @@
 </div>
 <br/>
 
-<form action="{url op="savePublicStatisticsList"}" method="post">
+<form class="pkp_form" action="{url op="savePublicStatisticsList"}" method="post">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="25%" class="label"><h4>{translate key="common.year"}</h4></td>

@@ -20,7 +20,7 @@
 <br />
 <br />
 
-<form method="post" name="editStaticPageForm" action="{if $staticPageId}{plugin_url path="save"|to_array:$staticPageId}{else}{plugin_url path="save"}{/if}" >
+<form class="pkp_form" method="post" name="editStaticPageForm" action="{if $staticPageId}{plugin_url path="save"|to_array:$staticPageId}{else}{plugin_url path="save"}{/if}" >
 <input type="hidden" name="edit" value="1" />
 {if $staticPageId}
 	<input type="hidden" name="staticPageId" value="{$staticPageId}" />

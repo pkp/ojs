@@ -30,14 +30,14 @@ function ensureKeyword() {
 <br/>
 
 {if $basicQuery}
-	<form id="searchForm" method="post" action="{url op="results"}">
+	<form class="pkp_form" id="searchForm" method="post" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/
 	</form>
 	<br />
 {else}
-	<form id="searchForm" action="{url op="advanced"}" method="post">
+	<form class="pkp_form" id="searchForm" action="{url op="advanced"}" method="post">
 		<input type="hidden" name="query" value="{$query|escape}"/>
 		<input type="hidden" name="searchJournal" value="{$searchJournal|escape}"/>
 		<input type="hidden" name="author" value="{$author|escape}"/>
