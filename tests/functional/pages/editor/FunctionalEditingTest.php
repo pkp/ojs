@@ -44,6 +44,22 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	// Implement template methods from WebTestCase
 	//
 	/**
+	 * @see WebTestCase::getAffectedTables()
+	 */
+	protected function getAffectedTables() {
+		$affectedTables = parent::getAffectedTables();
+		$affectedTables[] = 'plugin_settings';
+		return $affectedTables;
+	}
+
+	/**
+	 * @see WebTestCase::setUp()
+	 */
+	protected function setUp() {
+		parent::setUp();
+	}
+
+	/**
 	 * @see WebTestCase::tearDown()
 	 */
 	protected function tearDown() {
@@ -79,8 +95,10 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 * PS to PDF conversion later on to close that gap.
 	 */
 	public function testDocumentUpload() {
+		$this->_enablePushProcessing();
+
 		// Create and publish a test article.
-		$this->_articleId = $this->submitArticle('Editing test article');
+		$this->_articleId = $this->submitArticle();
 		$this->publishArticle($this->_articleId);
 
 		$examples = array(
@@ -107,6 +125,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// is much faster and searching itself is sufficiently
 		// tested elsewhere.
 		$indexDocument = $this->_solr->getArticleFromIndex($this->_articleId);
+		$this->assertTrue(is_array($indexDocument));
 		foreach($examples as $example) {
 			switch($example) {
 				case 'doc':
@@ -194,6 +213,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 *         of a title search for "noodles".
 	 */
 	public function testChangeDocument() {
+		$this->_enablePushProcessing();
+
 		// Set a title with "noodles".
 		$articleTitle = 'Noodles are better than rice';
 
@@ -270,6 +291,137 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 
 		// The article should no longer be indexed.
 		$this->assertFalse($this->_solr->getArticleFromIndex($this->_articleId));
+	}
+
+	/**
+	 * SCENARIO: Change document (push): delete article
+	 *   GIVEN An article contains the word "noodles" in its title
+	 *     AND is currently published
+	 *     AND the article currently appears in the search
+	 *         result list for "noodles" in its title
+	 *    WHEN I delete the article
+	 *    THEN I will immediately see it disappear from the result list
+	 *         of a title search for "noodles".
+	 */
+	public function testDeleteDocument() {
+		$this->_enablePushProcessing();
+
+		// Set a title with "noodles".
+		$articleTitle = 'Noodles are better than rice';
+
+		// Submit a test article.
+		$this->_articleId = $this->submitArticle($articleTitle);
+
+		// Publish the article.
+		$this->publishArticle($this->_articleId);
+
+		// Check whether the article has been indexed.
+		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
+		$this->assertTrue(is_array($indexedArticle), 'Publishing an article did not index it.');
+
+		// Delete the article.
+		$deleteArticleCommand = "php ./tools/deleteSubmissions.php $this->_articleId";
+		exec($deleteArticleCommand);
+
+		// The article should no longer be indexed.
+		$this->assertFalse($this->_solr->getArticleFromIndex($this->_articleId), 'Deleting an article did not remove it from the index.');
+	}
+
+	/**
+	 * FEATURE: pull indexing (OJS side only)
+	 *
+	 * BACKGROUND:
+	 *   GIVEN I enabled the pull indexing feature
+	 *
+	 * SCENARIO: publishing or changing an article
+	 *    WHEN I publish or change an article
+	 *     BUT I do not unpublish the article
+	 *    THEN an article setting "dirty" will be set to "1" which
+	 *         indicates that the article must be re-indexed
+	 *     AND the article will appear in the public XML
+	 *         web service for pull-indexing
+	 *     BUT the article will not be marked for deletion.
+	 *
+	 * SCENARIO: unpublishing an article
+	 *    WHEN I unpublish a previously published article
+	 *    THEN an article setting "dirty" will be set to "1" which
+	 *         means that the article must be deleted from the index
+	 *     AND the article will appear in the public XML
+	 *         web service for pull-indexing.
+	 *     AND the article will be marked for deletion.
+	 *
+	 * SCENARIO: pull request
+	 *   WHEN the server receives a pull request
+	 *   THEN all articles appearing in the request will be marked
+	 *        "clean" once the request was successfully transferred to the
+	 *        server side.
+	 *
+	 * For a specification of server side processing and for a full picture
+	 * of pull processing, please see http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Pull_Processing.
+	 */
+	function testPullIndexing() {
+		// Enable pull indexing.
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', true);
+
+		// Publish an article.
+		$this->_articleId = $this->submitArticle();
+		$this->publishArticle($this->_articleId);
+
+		// Check that the article is "dirty".
+		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$article =& $articleDao->getArticle($this->_articleId);
+		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
+
+		// Check that the article appears in the pull indexing
+		// web service and is not marked for deletion.
+		$pullXml = $this->_retrievePullIndexingXml();
+		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
+
+		// Check that the article is now "clean".
+		$article =& $articleDao->getArticle($this->_articleId);
+		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
+
+		// Unpublish the article.
+		$this->unpublishArticle($this->_articleId);
+
+		// Check that the article is "dirty" again.
+		$article =& $articleDao->getArticle($this->_articleId);
+		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
+
+		// Check that the article appears in the pull indexing
+		// web service and is marked for deletion.
+		$pullXml = $this->_retrievePullIndexingXml();
+		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
+
+		// Check that the article is "clean".
+		$article =& $articleDao->getArticle($this->_articleId);
+		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Enable push indexing so that we can
+	 * immediately check indexing success.
+	 */
+	function _enablePushProcessing() {
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', false);
+	}
+
+	/**
+	 * Call the pull indexing web service and return
+	 * the result.
+	 */
+	function _retrievePullIndexingXml() {
+		$curlCh = curl_init ();
+		$pullUrl = $this->baseUrl . '/index.php/index/lucene/pullChangedArticles';
+		curl_setopt($curlCh, CURLOPT_URL, $pullUrl);
+		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
+		return curl_exec($curlCh);
 	}
 }
 ?>

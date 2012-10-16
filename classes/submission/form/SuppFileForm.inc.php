@@ -232,7 +232,7 @@ class SuppFileForm extends Form {
 					$fileId = $articleFileManager->uploadSuppFile($fileName);
 					$this->suppFile->setFileId($fileId);
 				}
-				$articleSearchIndex->updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				$articleSearchIndex->articleFileChanged($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			}
 
 			// Update existing supplementary file
@@ -246,7 +246,7 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
-				$articleSearchIndex->updateFileIndex($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				$articleSearchIndex->articleFileChanged($this->article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			} else {
 				$fileId = 0;
 			}
@@ -267,7 +267,8 @@ class SuppFileForm extends Form {
 		}
 
 		// Index updated metadata.
-		$articleSearchIndex->indexSuppFileMetadata($this->suppFile);
+		$articleSearchIndex->suppFileMetadataChanged($this->suppFile);
+		$articleSearchIndex->articleChangesFinished();
 
 		return $this->suppFileId;
 	}
