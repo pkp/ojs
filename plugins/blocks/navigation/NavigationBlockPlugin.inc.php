@@ -53,12 +53,12 @@ class NavigationBlockPlugin extends BlockPlugin {
 	 */
 	function getContents(&$templateMgr) {
 		$templateMgr->assign('articleSearchByOptions', array(
-			'' => 'search.allFields',
-			ARTICLE_SEARCH_AUTHOR => 'search.author',
-			ARTICLE_SEARCH_TITLE => 'article.title',
-			ARTICLE_SEARCH_ABSTRACT => 'search.abstract',
-			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms',
-			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText'
+			'query' => 'search.allFields',
+			'authors' => 'search.author',
+			'title' => 'article.title',
+			'abstract' => 'search.abstract',
+			'indexTerms' => 'search.indexTerms',
+			'galleyFullText' => 'search.fullText'
 		));
 		return parent::getContents($templateMgr);
 	}

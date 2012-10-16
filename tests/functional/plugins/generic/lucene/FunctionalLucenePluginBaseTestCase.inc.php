@@ -23,6 +23,16 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 
 
 	//
+	// Implement template methods from PKPTestCase
+	//
+	protected function tearDown() {
+		parent::tearDown();
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->_getCache(0, 'luceneplugin')->flush();
+	}
+
+
+	//
 	// Protected helper methods
 	//
 	/**
@@ -38,7 +48,7 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 * @param $locale string
 	 * @param $journal string the context path of the journal to test
 	 */
-	protected function simpleSearch($searchPhrase, $searchField = '', $articles = array(), $notArticles = array(), $locale = 'en_US', $journal = 'lucene-test') {
+	protected function simpleSearch($searchPhrase, $searchField = 'query', $articles = array(), $notArticles = array(), $locale = 'en_US', $journal = 'lucene-test') {
 		// Translate scalars to arrays.
 		if (!is_array($articles)) $articles = array($articles);
 		if ($notArticles !== '*' && !is_array($notArticles)) $notArticles = array($notArticles);
@@ -55,11 +65,11 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 			}
 
 			// Hack to work around timing problems in phpunit 3.4...
-			$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="query"]');
+			$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="simpleQuery"]');
 			$this->waitForElementPresent('name=searchField');
 
 			// Enter the search phrase into the simple search field.
-			$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchPhrase);
+			$this->type($this->simpleSearchForm . 'input[@id="simpleQuery"]', $searchPhrase);
 
 			// Select the search field.
 			$this->select('name=searchField', 'value=' . $searchField);
@@ -92,13 +102,23 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 	 *
 	 * @param $searchTerm string
 	 */
-	protected function simpleSearchAcrossJournals($searchTerm) {
+	protected function simpleSearchAcrossJournals($searchTerm, $locale = 'en_US') {
 		// Open the test installation's home page.
 		$homePage = $this->baseUrl . '/index.php';
 		$this->verifyAndOpen($homePage);
 
+		// Select the locale.
+		$selectedValue = $this->getSelectedValue('name=locale');
+		if ($selectedValue != $locale) {
+			$this->selectAndWait('name=locale', 'value=' . $locale);
+		}
+
+		// Hack to work around timing problems in phpunit 3.4...
+		$this->waitForElementPresent($this->simpleSearchForm . 'input[@id="simpleQuery"]');
+		$this->waitForElementPresent('name=searchField');
+
 		// Enter the search term into the simple search box.
-		$this->type($this->simpleSearchForm . 'input[@id="query"]', $searchTerm);
+		$this->type($this->simpleSearchForm . 'input[@id="simpleQuery"]', $searchTerm);
 
 		// Click the "Search" button.
 		$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');

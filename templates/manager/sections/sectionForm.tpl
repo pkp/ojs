@@ -92,6 +92,7 @@ function checkEditorAssignments() {
 		</select>
 	</td>
 </tr>
+{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 <tr valign="top">
 	<td rowspan="4" class="label">{fieldLabel suppressId="true" key="submission.indexing"}</td>
 	<td class="value">

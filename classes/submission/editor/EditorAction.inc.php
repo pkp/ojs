@@ -126,6 +126,7 @@ class EditorAction extends SectionEditorAction {
 		// 3. Add a galley.
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
 		$galleys =& $sectionEditorSubmission->getGalleys();
+		$articleSearchIndex = null;
 		if (empty($galleys)) {
 			// No galley present -- use copyediting file.
 			import('classes.file.ArticleFileManager');
@@ -163,11 +164,12 @@ class EditorAction extends SectionEditorAction {
 			// Update file search index
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
-			$articleSearchIndex->updateFileIndex($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
+			$articleSearchIndex->articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 		}
 
 		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 	}
 }
 

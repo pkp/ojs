@@ -219,126 +219,125 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 {if $section->getMetaIndexed()==1}
-<div id="indexing">
-	<h3>{translate key="submission.indexing"}</h3>
-	{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
-	<table width="100%" class="data">
-	{if $currentJournal->getSetting('metaDiscipline')}
-	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $currentJournal->getLocalizedSetting('metaDisciplineExamples')}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	{/if}
+	<div id="indexing">
+		<h3>{translate key="submission.indexing"}</h3>
+		{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+		<table width="100%" class="data">
+		{if $currentJournal->getSetting('metaDiscipline')}
+		<tr valign="top">
+			<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		{if $currentJournal->getLocalizedSetting('metaDisciplineExamples')}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		{/if}
 
-	{if $currentJournal->getSetting('metaSubjectClass')}
-	<tr valign="top">
-		<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass[{$formLocale|escape}]" id="subjectClass" value="{$subjectClass[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label"><a href="{$currentJournal->getLocalizedSetting('metaSubjectClassUrl')|escape}" target="_blank">{$currentJournal->getLocalizedSetting('metaSubjectClassTitle')|escape}</a></td>
-	</tr>
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	{/if}
+		{if $currentJournal->getSetting('metaSubjectClass')}
+		<tr valign="top">
+			<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="subjectClass[{$formLocale|escape}]" id="subjectClass" value="{$subjectClass[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		<tr valign="top">
+			<td width="20%" class="label"><a href="{$currentJournal->getLocalizedSetting('metaSubjectClassUrl')|escape}" target="_blank">{$currentJournal->getLocalizedSetting('metaSubjectClassTitle')|escape}</a></td>
+		</tr>
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		{/if}
 
-	{if $currentJournal->getSetting('metaSubject')}
-	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaSubjectExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	{/if}
+		{if $currentJournal->getSetting('metaSubject')}
+		<tr valign="top">
+			<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaSubjectExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		{/if}
 
-	{if $currentJournal->getSetting('metaCoverage')}
-	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo[{$formLocale|escape}]" id="coverageGeo" value="{$coverageGeo[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples')}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageGeoExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageChron[{$formLocale|escape}]" id="coverageChron" value="{$coverageChron[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageChronExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageSample[{$formLocale|escape}]" id="coverageSample" value="{$coverageSample[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	{/if}
+		{if $currentJournal->getSetting('metaCoverage')}
+		<tr valign="top">
+			<td{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo[{$formLocale|escape}]" id="coverageGeo" value="{$coverageGeo[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples')}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageGeoExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr valign="top">
+			<td{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="coverageChron[{$formLocale|escape}]" id="coverageChron" value="{$coverageChron[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageChronExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr valign="top">
+			<td{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="coverageSample[{$formLocale|escape}]" id="coverageSample" value="{$coverageSample[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
+		{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		{/if}
 
-	{if $currentJournal->getSetting('metaType')}
-	<tr valign="top">
-		<td width="20%" {if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="type[{$formLocale|escape}]" id="type" value="{$type[$formLocale]|escape}" size="40" maxlength="255" /></td>
-	</tr>
+		{if $currentJournal->getSetting('metaType')}
+		<tr valign="top">
+			<td width="20%" {if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="type[{$formLocale|escape}]" id="type" value="{$type[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		</tr>
 
-	{if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaTypeExamples')|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	{/if}
+		{if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}
+		<tr valign="top">
+			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaTypeExamples')|escape}</span></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		{/if}
 
-	<tr valign="top">
-		<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
-	</tr>
-	<tr valign="top">
-		<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
-	</tr>
-	</table>
-</div>
-<div class="separator"></div>
-
+		<tr valign="top">
+			<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
+			<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
+		</tr>
+		<tr valign="top">
+			<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
+		</tr>
+		</table>
+	</div>
+	<div class="separator"></div>
 {/if}
 
 <div id="submissionSupportingAgencies">

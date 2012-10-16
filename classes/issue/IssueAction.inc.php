@@ -45,24 +45,29 @@ class IssueAction {
 
 	/**
 	 * Checks if subscription is required for viewing the issue
-	 * @param $issue
+	 * @param $issue Issue
+	 * @param $journal Journal
 	 * @return bool
 	 */
-	function subscriptionRequired(&$issue) {
-		$currentJournal =& Request::getJournal();
+	function subscriptionRequired(&$issue, $journal = null) {
+		// Check the issue.
 		if (!$issue) return false;
-		if (!$currentJournal || $currentJournal->getId() !== $issue->getJournalId()) {
+
+		// Get the journal.
+		if (is_null($journal)) {
+			$journal =& Request::getJournal();
+		}
+		if (!$journal || $journal->getId() !== $issue->getJournalId()) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal =& $journalDao->getById($issue->getJournalId());
-		} else {
-			$journal =& $currentJournal;
 		}
+		if (!$journal) return false;
 
+		// Check subscription state.
 		$result = $journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
 			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN &&
 			(is_null($issue->getOpenAccessDate()) ||
 			strtotime($issue->getOpenAccessDate()) > time());
-
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
 	}

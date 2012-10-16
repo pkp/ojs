@@ -16,6 +16,8 @@
 		<name>enabled</name>
 		<value>false</value>
 	</setting>
+	
+	<!-- Search Handler Configuration -->
 	<setting type="string">
 		<name>searchEndpoint</name>
 		<value>http://localhost:8983/solr/ojs/search</value>
@@ -32,9 +34,69 @@
 		<name>instId</name>
 		<value>localhost</value>
 	</setting>
+	
+	<!-- Email Timestamp to avoid DoS/Spam attacks -->
 	<setting type="int">
 		<name>lastEmailTimestamp</name>
 		<value>0</value>
+	</setting>
+	
+	<!-- Search Features -->
+	<setting type="bool">
+		<name>autosuggest</name>
+		<value>true</value>
+	</setting>
+	<setting type="int">
+		<name>autosuggestType</name>
+		<value>2</value> <!-- Default: Use faceting for auto-suggest. -->
+	</setting>
+	<setting type="bool">
+		<name>spellcheck</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>pullIndexing</name>
+		<value>false</value> <!-- Pull indexing is an advanced feature and is therefore switched off by default -->
+	</setting>
+	<setting type="bool">
+		<name>simdocs</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>highlighting</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool"> <!-- Facet categories can be enabled individually. We therefore need one setting per category. -->
+		<name>facetCategoryDiscipline</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategorySubject</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryType</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryCoverage</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryJournalTitle</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryAuthors</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>facetCategoryPublicationDate</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>customRanking</name>
+		<value>true</value>
 	</setting>
 </plugin_settings>
 

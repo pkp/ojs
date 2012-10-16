@@ -61,6 +61,26 @@ class SolrSearchRequest {
 	var $_orderDir = false;
 
 	/**
+	 * @var boolean Whether to enable spell checking.
+	 */
+	var $_spellcheck = false;
+
+	/**
+	 * @var boolean Whether to enable highlighting.
+	 */
+	var $_highlighting = false;
+
+	/**
+	 * @var boolean Enabled facet categories (none by default).
+	 */
+	var $_facetCategories = array();
+
+	/**
+	 * @var array A field->value->boost factor assignment.
+	 */
+	var $_boostFactors = array();
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -108,9 +128,12 @@ class SolrSearchRequest {
 
 	/**
 	 * Set the search phrase for a field.
-	 * @param $fieldwiseQuery array
+	 * @param $field string
+	 * @param $searchPhrase string
 	 */
 	function addQueryFieldPhrase($field, $searchPhrase) {
+		// Ignore empty search phrases.
+		if (empty($searchPhrase)) return;
 		$this->_query[$field] = $searchPhrase;
 	}
 
@@ -210,6 +233,129 @@ class SolrSearchRequest {
 	 */
 	function setOrderDir($orderDir) {
 		$this->_orderDir = $orderDir;
+	}
+
+	/**
+	 * Is spellchecking enabled?
+	 * @return boolean
+	 */
+	function getSpellcheck() {
+		return $this->_spellcheck;
+	}
+
+	/**
+	 * Set whether spellchecking should be enabled.
+	 * @param $spellcheck boolean
+	 */
+	function setSpellcheck($spellcheck) {
+		$this->_spellcheck = $spellcheck;
+	}
+
+	/**
+	 * Is highlighting enabled?
+	 * @return boolean
+	 */
+	function getHighlighting() {
+		return $this->_highlighting;
+	}
+
+	/**
+	 * Set whether highlighting should be enabled.
+	 * @param $highlighting boolean
+	 */
+	function setHighlighting($highlighting) {
+		$this->_highlighting = $highlighting;
+	}
+
+	/**
+	 * For which categories should faceting
+	 * be enabled?
+	 * @return array
+	 */
+	function getFacetCategories() {
+		return $this->_facetCategories;
+	}
+
+	/**
+	 * Set the categories for which faceting
+	 * should be enabled.
+	 * @param $facetCategories boolean
+	 */
+	function setFacetCategories($facetCategories) {
+		$this->_facetCategories = $facetCategories;
+	}
+
+	/**
+	 * Get boost factors.
+	 * @return array A field -> value -> boost factor assignment
+	 */
+	function getBoostFactors() {
+		return $this->_boostFactors;
+	}
+
+	/**
+	 * Set boost factors.
+	 * @param $boostQuery array A field -> value -> boost factor assignment
+	 */
+	function setBoostFactors($boostFactors) {
+		$this->_boostFactors = $boostFactors;
+	}
+
+	/**
+	 * Set the boost factor for a field/value combination.
+	 * @param $field string
+	 * @param $value string
+	 * @param $boostFactor float
+	 */
+	function addBoostFactor($field, $value, $boostFactor) {
+		// Ignore empty values.
+		if (empty($value)) return;
+
+		// Ignore neutral boost factors.
+		$boostFactor = (float)$boostFactor;
+		if ($boostFactor == 1.0) return;
+
+		// Save the boost factor.
+		if (!isset($this->_boostFactors[$field])) {
+			$this->_boostFactors[$field] = array();
+		}
+		$this->_boostFactors[$field][$value] = $boostFactor;
+	}
+
+
+	//
+	// Public methods
+	//
+	/**
+	 * Configure the search request from a keywords
+	 * array as required by ArticleSearch::retrieveResults()
+	 *
+	 * @param $keywords array See ArticleSearch::retrieveResults()
+	 */
+	function addQueryFromKeywords($keywords) {
+		// Get a mapping of OJS search fields bitmaps to index fields.
+		$indexFieldMap = ArticleSearch::getIndexFieldMap();
+
+		// The keywords list is indexed with a search field bitmap.
+		foreach($keywords as $searchFieldBitmap => $searchPhrase) {
+			// Translate the search field from OJS to solr nomenclature.
+			if (empty($searchFieldBitmap)) {
+				// An empty search field means "all fields".
+				$solrFields = array_values($indexFieldMap);
+			} else {
+				$solrFields = array();
+				foreach($indexFieldMap as $ojsField => $solrField) {
+					// The search field bitmap may stand for
+					// several actual index fields (e.g. the index terms
+					// field).
+					if ($searchFieldBitmap & $ojsField) {
+						$solrFields[] = $solrField;
+					}
+				}
+			}
+			$solrFieldString = implode('|', $solrFields);
+			$this->addQueryFieldPhrase($solrFieldString, $searchPhrase);
+		}
 	}
 }
 

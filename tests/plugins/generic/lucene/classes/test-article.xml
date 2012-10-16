@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<articleList>
-  <article id="3" journalId="2" instId="test-inst">
+<articleList hasMore="yes">
+  <article id="3" sectionId="1" journalId="2" instId="test-inst" loadAction="replace">
     <authorList>
       <author>Author, First</author>
       <author>Name, Second M.</author>
@@ -28,9 +28,9 @@
       <type locale="en_US">type</type>
     </typeList>
     <coverageList>
-      <coverage locale="de_DE">Kaltes Kap Sommer 2012 Alles</coverage>
+      <coverage locale="de_DE">Kaltes Kap; Sommer 2012; Alles</coverage>
       <coverage locale="pt_BR">Cabo Frio</coverage>
-      <coverage locale="en_US">Summer 2012 everything</coverage>
+      <coverage locale="en_US">Summer 2012; everything</coverage>
     </coverageList>
     <journalTitleList>
       <journalTitle locale="de_DE" sortOnly="false">Zeitschrift</journalTitle>
@@ -46,4 +46,5 @@
       <![CDATA[<suppFileList><suppFile locale="de_DE" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/2"/><suppFile locale="unknown" fileName="http://localhost/pkp-ojs/index.php/lucene-test/article/downloadSuppFile/3/3"><titleList><title locale="de_DE">Titel</title></titleList><creatorList><creator locale="de_DE">Autor</creator></creatorList><subjectList><subject locale="de_DE">Thema</subject></subjectList><typeOtherList><typeOther locale="de_DE">Sonstiger Typ</typeOther></typeOtherList><descriptionList><description locale="de_DE">Beschreibung</description></descriptionList><sourceList><source locale="de_DE">Quelle</source></sourceList></suppFile></suppFileList>]]>
     </suppFile-xml>
   </article>
+  <article id="99" sectionId="2" journalId="2" instId="test-inst" loadAction="delete"/>
 </articleList>
