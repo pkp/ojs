@@ -362,7 +362,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	function testPullIndexing() {
 		// Enable pull indexing.
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
-		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullindexing', true);
+		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', true);
 
 		// Publish an article.
 		$this->_articleId = $this->submitArticle();
@@ -376,7 +376,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// Check that the article appears in the pull indexing
 		// web service and is not marked for deletion.
 		$pullXml = $this->_retrievePullIndexingXml();
-		$this->assertContains('article id="39" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
+		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
 
 		// Check that the article is now "clean".
 		$article =& $articleDao->getArticle($this->_articleId);
@@ -392,7 +392,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// Check that the article appears in the pull indexing
 		// web service and is marked for deletion.
 		$pullXml = $this->_retrievePullIndexingXml();
-		$this->assertContains('article id="39" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
+		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
 
 		// Check that the article is "clean".
 		$article =& $articleDao->getArticle($this->_articleId);
@@ -409,7 +409,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 */
 	function _enablePushProcessing() {
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
-		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullindexing', false);
+		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', false);
 	}
 
 	/**

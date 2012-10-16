@@ -69,6 +69,9 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->verifyAndOpen($submissionPage . '1');
 		$this->waitForElementPresent('css=input.defaultButton');
 
+		// Set Section.
+		$this->select('sectionId', 'value=3');
+
 		// Accept submission conditions.
 		$checkboxId = 1;
 		while ($this->isElementPresent("checklist-$checkboxId")) {

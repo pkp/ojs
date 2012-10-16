@@ -364,6 +364,7 @@
 
       <!-- ID fields -->
       <field column="article_id" xpath="/articleList/article/@id" multiValued="false" />
+      <field column="section_id" xpath="/articleList/article/@sectionId" multiValued="false" />
       <field column="journal_id" xpath="/articleList/article/@journalId" multiValued="false" />
       <field column="inst_id" xpath="/articleList/article/@instId" multiValued="false" />
       <field column="loadAction" xpath="/articleList/article/@loadAction" multiValued="false" />

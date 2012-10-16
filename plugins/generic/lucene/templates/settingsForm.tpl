@@ -142,9 +142,15 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label" align="right"><input type="checkbox" name="pullindexing" id="pullindexing" {if $pullindexing}checked="checked" {/if}/></td>
+		<td class="label" align="right"><input type="checkbox" name="customRanking" id="customRanking" {if $customRanking}checked="checked" {/if}/></td>
 		<td class="value">
-			<label for="pullindexing">{translate key="plugins.generic.lucene.settings.pullindexing"}</label>
+			<label for="customRanking">{translate key="plugins.generic.lucene.settings.customRanking"}</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" align="right"><input type="checkbox" name="pullIndexing" id="pullIndexing" {if $pullIndexing}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="pullIndexing">{translate key="plugins.generic.lucene.settings.pullIndexing"}</label>
 		</td>
 	</tr>
 </table>

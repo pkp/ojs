@@ -368,6 +368,22 @@ class SolrWebService extends XmlWebService {
 			assert($enabledFields == count($facetCategories));
 		}
 
+		// Boost factors.
+		$boostFactors = $searchRequest->getBoostFactors();
+		foreach($boostFactors as $field => $valueBoost) {
+			foreach ($valueBoost as $value => $boostFactor) {
+				if ($boostFactor == 0) {
+					// Add a filter query to remove all results.
+					if (!isset($params['fq'])) $params['fq'] = array();
+					$params['fq'][] = "-$field:$value";
+				} elseif ($boostFactor > 0) {
+					// Add a boost function query (only works for numeric fields!).
+					if (!isset($params['boost'])) $params['boost'] = array();
+					$params['boost'][] = "map($field,$value,$value,$boostFactor,1)";
+				}
+			}
+		}
+
 		// Make the search request.
 		$url = $this->_getSearchUrl();
 		$response = $this->_makeRequest($url, $params);
@@ -1251,6 +1267,7 @@ class SolrWebService extends XmlWebService {
 
 		// Add ID information.
 		XMLCustomWriter::setAttribute($articleNode, 'id', $article->getId());
+		XMLCustomWriter::setAttribute($articleNode, 'sectionId', $article->getSectionId());
 		XMLCustomWriter::setAttribute($articleNode, 'journalId', $article->getJournalId());
 		XMLCustomWriter::setAttribute($articleNode, 'instId', $this->_instId);
 

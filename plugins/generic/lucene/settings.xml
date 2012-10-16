@@ -55,7 +55,7 @@
 		<value>true</value>
 	</setting>
 	<setting type="bool">
-		<name>pullindexing</name>
+		<name>pullIndexing</name>
 		<value>false</value> <!-- Pull indexing is an advanced feature and is therefore switched off by default -->
 	</setting>
 	<setting type="bool">
@@ -92,6 +92,10 @@
 	</setting>
 	<setting type="bool">
 		<name>facetCategoryPublicationDate</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>customRanking</name>
 		<value>true</value>
 	</setting>
 </plugin_settings>

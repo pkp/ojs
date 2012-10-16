@@ -15,7 +15,10 @@
 <schema name="ojs" version="1.0">
 
   <types>
-    <!-- The StrField type is not analyzed, but indexed/stored verbatim (e.g. for an ID or sort fields). -->
+    <!-- Numeric fields are used for numeric IDs -->
+    <fieldType name="numId" class="solr.TrieLongField" omitNorms="true" />
+
+    <!-- The StrField type is not analyzed, but indexed/stored verbatim (e.g. for sort fields or textual ID fields). -->
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>
 
     <!-- A Trie based date field for faster date range queries and date faceting. -->
@@ -363,6 +366,7 @@
 
     <!-- Fields containing the unique document ID and other administrative IDs, e.g. a installation-specific GUID, the journal ID and the article ID -->
     <field name="article_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+    <field name="section_id" type="numId" indexed="true" stored="true" required="true" multiValued="false" />
     <dynamicField name="*_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
 
     <!-- OJS locale support. We are using stored field for easier debugging. This can be changed

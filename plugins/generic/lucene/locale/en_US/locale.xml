@@ -68,6 +68,7 @@
 	]]></message>
 	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Check terms for results</message>
 	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Use global dictionary</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Custom Ranking (set individual ranking weights per journal section)</message>
 	<message key="plugins.generic.lucene.settings.description"><![CDATA[
 		The Lucene plugin acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.
 		<strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong>
@@ -87,7 +88,7 @@
 	<message key="plugins.generic.lucene.settings.password">Password</message>
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
-	<message key="plugins.generic.lucene.settings.pullindexing">Pull indexing (this is an advanced feature, see README file for more information)</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull indexing (this is an advanced feature, see README file for more information)</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
@@ -98,4 +99,18 @@
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
+
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Custom Ranking Weight</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">
+		The Lucene/Solr search plugin allows you to adjust the relative weight of articles in the result list
+		of a search query. Setting the ranking weight higher (or lower) does not place articles in this
+		section above (or below) all other articles. But they will rank better (or worse) than they would
+		without the adjustment made. Setting this option to "never show" will completely exclude articles
+		in this section from search results.
+	</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Please select a valid custom ranking weight.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Never Show</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Rank Lower</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Rank Higher</message>
 </locale>

@@ -446,14 +446,12 @@ class ArticleDAO extends DAO {
 
 	/**
 	 * Get all articles for a journal (or all articles in the system).
-	 * @param $userId int
 	 * @param $journalId int
 	 * @return DAOResultFactory containing matching Articles
 	 */
 	function &getArticlesByJournalId($journalId = null) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
-		$articles = array();
 
 		$params = array(
 			'title',

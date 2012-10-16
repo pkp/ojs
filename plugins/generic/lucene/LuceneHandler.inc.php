@@ -109,7 +109,7 @@ class LuceneHandler extends Handler {
 
 		// Die if pull indexing is disabled.
 		$lucenePlugin =& $this->_getLucenePlugin();
-		if (!$lucenePlugin->getSetting(0, 'pullindexing')) die(__('plugins.generic.lucene.message.pullIndexingDisabled'));
+		if (!$lucenePlugin->getSetting(0, 'pullIndexing')) die(__('plugins.generic.lucene.message.pullIndexingDisabled'));
 
 		// Execute the pull indexing transaction.
 		$solrWebService =& $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
