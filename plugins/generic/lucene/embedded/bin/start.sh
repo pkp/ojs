@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Source common variables.
-source ./script-startup
+EXEC_PATH=`dirname $0`
+source "$EXEC_PATH/script-startup"
 
 # Check whether solr is already running.
 if [ -e $SOLR_PIDFILE ]; then

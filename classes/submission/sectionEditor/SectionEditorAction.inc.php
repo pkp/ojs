@@ -1450,6 +1450,7 @@ class SectionEditorAction extends Action {
 		// scheduling queue or the editing queue.
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($sectionEditorSubmission->getId());
+		$articleSearchIndex = null;
 		if ($publishedArticle) {
 			$sectionEditorSubmission->setStatus(STATUS_PUBLISHED);
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -1459,6 +1460,9 @@ class SectionEditorAction extends Action {
 				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
 				$tombstoneDao->deleteByDataObjectId($sectionEditorSubmission->getId());
 			}
+			import('classes.search.ArticleSearchIndex');
+			$articleSearchIndex = new ArticleSearchIndex();
+			$articleSearchIndex->articleMetadataChanged($publishedArticle);
 		} else {
 			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		}
@@ -1467,6 +1471,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission->stampStatusModified();
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
 		// Add log
 		import('classes.article.log.ArticleLog');

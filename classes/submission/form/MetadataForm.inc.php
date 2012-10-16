@@ -434,7 +434,8 @@ class MetadataForm extends Form {
 		// Update search index
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->indexArticleMetadata($article);
+		$articleSearchIndex->articleMetadataChanged($article);
+		$articleSearchIndex->articleChangesFinished();
 
 		// Update references list if it changed.
 		$rawCitationList = $article->getCitations();

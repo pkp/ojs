@@ -56,10 +56,31 @@
      * @returns Map The transformed row.
      */
     function transformArticle(row, context) {
-      // Make IDs unique across installations.
-      var articleId = row.get('article_id');
-      var journalId = row.get('journal_id');
+      // Prepare the galley and supp file XML. This must be
+      // done before anything else. Otherwise we get an error
+      // later if the fields created here cannot be found by
+      // the entity processor.
+      var galleyXml = row.get('etl_galley_xml');
+      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
+      row.put('etl_galley_xml', String(galleyXml));
+      var suppFileXml = row.get('etl_suppFile_xml');
+      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
+      row.put('etl_suppFile_xml', String(suppFileXml));
+
+      // Check whether this article should actually be
+      // deleted rather than updated (occurs in pull-indexing).
+      // If that's the case then mark the line for deletion
+      // and bypass all further processing.
       var instId = row.get('inst_id');
+      var articleId = row.get('article_id');
+      var loadAction = String(row.get('loadAction'));
+      if (loadAction === String('delete')) {
+        row.put('$deleteDocById', instId + '-' + articleId);
+        return row;
+      }
+
+      // Make IDs unique across installations.
+      var journalId = row.get('journal_id');
       row.put('article_id', instId + '-' + articleId);
       row.put('journal_id', instId + '-' + journalId);
 
@@ -68,8 +89,11 @@
 
       // Define how fields are being indexed.
       var searchFields = ['title', 'abstract', 'discipline', 'subject', 'type', 'coverage'];
+      var indexTermsFields = ['discipline', 'subject', 'type', 'coverage'];
       var sortFields = ['title', 'journalTitle'];
+      var facetFields = ['discipline', 'subject', 'type', 'coverage', 'journalTitle'];
 
+      var indexTermsAutoSuggest = '';
       for (var i=0, len=locFields.length; i<len; i++) {
         var fieldName = locFields[i];
 
@@ -93,6 +117,7 @@
         } 
 
         // Run through all values.
+        var autoSuggest = '';
         for(var j=0, numValues=values.size(); j<numValues; j++) {
           var locale = String(locales.get(j));
           var value = String(values.get(j));
@@ -103,19 +128,33 @@
             sortOnly = String(sortOnlyFlags.get(j))
           }
 
-          // Index search fields.
+          // Index search and spelling/auto-suggest fields.
           if (searchFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
             row.put(fieldName + '_' + locale, value);
             // Build concatenated spelling field.
             appendToDocField(context, 'default_spell', value);
+            // Build autoSuggest field.
+            autoSuggest += ' ' + value;
+          }
+
+          // Index terms auto-suggest fields.
+          if (indexTermsFields.indexOf(fieldName) >= 0 && sortOnly === 'false') {
+          	indexTermsAutoSuggest += ' ' + value;
           }
 
           // Index sort fields.
           if (sortFields.indexOf(fieldName) >= 0) {
             row.put(fieldName + '_' + locale + '_txtsort', value);
           }
+
+          // Index facet fields.
+          if (facetFields.indexOf(fieldName) >= 0) {
+            row.put(fieldName + '_' + locale + '_facet', value);
+          }
         }
+        row.put(fieldName + '_spell', autoSuggest);
       }
+      row.put('indexTerms_spell', indexTermsAutoSuggest);
 
       // Create the author search and sort field.
       var authors = row.get('etl_authorList');
@@ -134,6 +173,8 @@
       row.put('authors_txt', authorsConcat);
       row.put('authors_txtsort', authorsConcat);
       appendToDocField(context, 'default_spell', authorsConcat);
+      row.put('authors_spell', authorsConcat);
+      row.put('authors_facet', authorsConcat);
 
       // Create the publication date sort field.
       // We could use a copy field instruction in the schema file
@@ -143,16 +184,6 @@
       if (publicationDate !== null) {
         row.put('publicationDate_dtsort', publicationDate);
       }
-
-      // Prepare the galley XML.
-      var galleyXml = row.get('etl_galley_xml');
-      if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
-      row.put('etl_galley_xml', String(galleyXml));
-
-      // Prepare the supp file XML.
-      var suppFileXml = row.get('etl_suppFile_xml');
-      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
-      row.put('etl_suppFile_xml', String(suppFileXml));
 
       return row;
     }
@@ -184,8 +215,9 @@
           // Concatenate all meta-data.
           appendToDocField(context, 'suppFiles_' + locale, value);
 
-	      // Add full text to spellchecker dictionary.
+	      // Add full text to spellchecker and auto-suggest dictionaries.
 	      appendToDocField(context, 'default_spell', value);
+	      appendToDocField(context, 'suppFiles_spell', value);
         }
 
         row.remove(valueList);
@@ -214,16 +246,19 @@
         // Get the document format.
         var docType = resolveMimetype(String(row.get('Content-Type')));
         var fieldName = 'galleyFullText_' + docType + '_' + locale;
+        var autoSuggestFieldName = 'galleyFullText_spell';
       } else {
         var fieldName = 'suppFiles_' + locale;
+        var autoSuggestFieldName = 'suppFiles_spell';
       }
 
       // Add full text.
       var currentText = String(row.get('text'));
       appendToDocField(context, fieldName, currentText);
 
-      // Add full text to spellchecker dictionary.
+      // Add full text to spellchecker and auto-suggest dictionaries.
       appendToDocField(context, 'default_spell', currentText);
+      appendToDocField(context, autoSuggestFieldName, currentText);
 
       row.remove('text');
       return row;
@@ -305,9 +340,7 @@
     function postProcessArticle(row, context) {
       var docFieldName, docFieldValue;
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
-
-      // Retrieve the authors field.
-      var authors = context.resolve('article.authors_txt');
+      if (docFields === null) return row;
 
       // Add document-level fields to the document.
       for (var iD=0, lenD=docFields.length; iD<lenD; iD++) {
@@ -330,9 +363,11 @@
             onError="continue" >
 
       <!-- ID fields -->
-      <field column="article_id" xpath="/articleList/article/@id" />
-      <field column="journal_id" xpath="/articleList/article/@journalId" />
-      <field column="inst_id" xpath="/articleList/article/@instId" />
+      <field column="article_id" xpath="/articleList/article/@id" multiValued="false" />
+      <field column="section_id" xpath="/articleList/article/@sectionId" multiValued="false" />
+      <field column="journal_id" xpath="/articleList/article/@journalId" multiValued="false" />
+      <field column="inst_id" xpath="/articleList/article/@instId" multiValued="false" />
+      <field column="loadAction" xpath="/articleList/article/@loadAction" multiValued="false" />
 
       <!-- Authors -->
       <field column="etl_authorList" xpath="/articleList/article/authorList/author" multiValued="true" />

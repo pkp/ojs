@@ -301,10 +301,11 @@ class QuickSubmitForm extends Form {
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
 			if (isset($galley)) {
-				$articleSearchIndex->updateFileIndex(
+				$articleSearchIndex->articleFileChanged(
 					$galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId()
 				);
 			}
+			$articleSearchIndex->articleChangesFinished();
 		}
 
 
@@ -361,15 +362,16 @@ class QuickSubmitForm extends Form {
 			$this->scheduleForPublication($articleId, $issueId);
 		}
 
-		// Index article.
-		import('classes.search.ArticleSearchIndex');
-		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->indexArticleMetadata($article);
-
 		// Import the references list.
 		$citationDao =& DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
+
+		// Index article.
+		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->articleMetadataChanged($article);
+		$articleSearchIndex->articleChangesFinished();
 	}
 
 	/**

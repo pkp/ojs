@@ -225,6 +225,90 @@ class ArticleSearch {
 	}
 
 	/**
+	 * Retrieve the search filters from the
+	 * request.
+	 * @param $request Request
+	 * @return array All search filters (empty and active)
+	 */
+	function getSearchFilters(&$request) {
+		$searchFilters = array(
+			'query' => $request->getUserVar('query'),
+			'searchJournal' => $request->getUserVar('searchJournal'),
+			'abstract' => $request->getUserVar('abstract'),
+			'authors' => $request->getUserVar('authors'),
+			'title' => $request->getUserVar('title'),
+			'galleyFullText' => $request->getUserVar('galleyFullText'),
+			'suppFiles' => $request->getUserVar('suppFiles'),
+			'discipline' => $request->getUserVar('discipline'),
+			'subject' => $request->getUserVar('subject'),
+			'type' => $request->getUserVar('type'),
+			'coverage' => $request->getUserVar('coverage'),
+			'indexTerms' => $request->getUserVar('indexTerms')
+		);
+
+		// Is this a simplified query from the navigation
+		// block plugin?
+		$simpleQuery = $request->getUserVar('simpleQuery');
+		if (!empty($simpleQuery)) {
+			// In the case of a simplified query we get the
+			// filter type from a drop-down.
+			$searchType = $request->getUserVar('searchField');
+			if (array_key_exists($searchType, $searchFilters)) {
+				$searchFilters[$searchType] = $simpleQuery;
+			}
+		}
+
+		// Publishing dates.
+		$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
+		$searchFilters['fromDate'] = (is_null($fromDate) ? null : date('Y-m-d H:i:s', $fromDate));
+		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+		$searchFilters['toDate'] = (is_null($toDate) ? null : date('Y-m-d H:i:s', $toDate));
+
+		// Instantiate the journal.
+		$journal =& $request->getJournal();
+		$siteSearch = !((boolean)$journal);
+		if ($siteSearch) {
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			if (!empty($searchFilters['searchJournal'])) {
+				$journal =& $journalDao->getById($searchFilters['searchJournal']);
+			} elseif (array_key_exists('journalTitle', $request->getUserVars())) {
+				$journals =& $journalDao->getJournals(
+					false, null, JOURNAL_FIELD_TITLE,
+					JOURNAL_FIELD_TITLE, 'is', $request->getUserVar('journalTitle')
+				);
+				if ($journals->getCount() == 1) {
+					$journal =& $journals->next();
+				}
+			}
+		}
+		$searchFilters['searchJournal'] =& $journal;
+		$searchFilters['siteSearch'] = $siteSearch;
+
+		return $searchFilters;
+	}
+
+	/**
+	 * Load the keywords array from a given search filter.
+	 * @param $searchFilters array Search filters as returned from
+	 *  ArticleSearch::getSearchFilters()
+	 * @return array Keyword array as required by ArticleSearch::retrieveResults()
+	 */
+	function getKeywordsFromSearchFilters($searchFilters) {
+		$indexFieldMap = ArticleSearch::getIndexFieldMap();
+		$indexFieldMap[ARTICLE_SEARCH_INDEX_TERMS] = 'indexTerms';
+		$keywords = array();
+		if (isset($searchFilters['query'])) {
+			$keywords[null] = $searchFilters['query'];
+		}
+		foreach($indexFieldMap as $bitmap => $searchField) {
+			if (isset($searchFilters[$searchField]) && !empty($searchFilters[$searchField])) {
+				$keywords[$bitmap] = $searchFilters[$searchField];
+			}
+		}
+		return $keywords;
+	}
+
+	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 *
@@ -379,6 +463,20 @@ class ArticleSearch {
 		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$returner = new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
 		return $returner;
+	}
+
+	function getIndexFieldMap() {
+		return array(
+			ARTICLE_SEARCH_AUTHOR => 'authors',
+			ARTICLE_SEARCH_TITLE => 'title',
+			ARTICLE_SEARCH_ABSTRACT => 'abstract',
+			ARTICLE_SEARCH_GALLEY_FILE => 'galleyFullText',
+			ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'suppFiles',
+			ARTICLE_SEARCH_DISCIPLINE => 'discipline',
+			ARTICLE_SEARCH_SUBJECT => 'subject',
+			ARTICLE_SEARCH_TYPE => 'type',
+			ARTICLE_SEARCH_COVERAGE => 'coverage'
+		);
 	}
 }
 

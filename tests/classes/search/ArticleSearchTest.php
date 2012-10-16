@@ -88,6 +88,14 @@ class ArticleSearchTest extends PKPTestCase {
 		self::assertArrayHasKey('article', $firstResult);
 		self::assertEquals(ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
 		self::assertEquals('', $error);
+
+		// Make sure that articles from unpublished issues will
+		// be filtered out.
+		$this->registerMockIssueDAO(false);
+		$this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
+		$keywords = array(null => 'test');
+		$searchResult = $articleSearch->retrieveResults($journal, $keywords, $error);
+		self::assertTrue($searchResult->eof());
 	}
 
 	/**
@@ -260,12 +268,13 @@ class ArticleSearchTest extends PKPTestCase {
 	 * Mock and register an IssueDAO as a test
 	 * back end for the ArticleSearch class.
 	 */
-	private function registerMockIssueDAO() {
+	private function registerMockIssueDAO($published = true) {
 		// Mock an IssueDAO.
 		$issueDAO = $this->getMock('IssueDAO', array('getIssueById'), array(), '', false);
 
 		// Mock an issue.
 		$issue = new Issue();
+		$issue->setPublished($published);
 
 		// Mock the getIssueById() method.
 		$issueDAO->expects($this->any())
