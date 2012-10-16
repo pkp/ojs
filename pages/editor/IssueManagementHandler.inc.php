@@ -898,6 +898,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
+		$articleSearchIndex = null;
 		if (!$issue->getPublished()) {
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
@@ -909,6 +910,11 @@ class IssueManagementHandler extends EditorHandler {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
+					if (!$articleSearchIndex) {
+						import('classes.search.ArticleSearchIndex');
+						$articleSearchIndex = new ArticleSearchIndex();
+					}
+					$articleSearchIndex->articleMetadataChanged($publishedArticle);
 				}
 				// delete article tombstone
 				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
@@ -942,6 +948,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrentIssue($journalId,$issue);
+
+		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
 		// Send a notification to associated users
 		import('classes.notification.NotificationManager');

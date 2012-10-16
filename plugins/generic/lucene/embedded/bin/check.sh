@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Source common variables.
-source ./script-startup
+EXEC_PATH=`dirname $0`
+source "$EXEC_PATH/script-startup"
 
 # If we don't find a PID-file we assume that the server is stopped.
 if [ ! -e $SOLR_PIDFILE ]; then

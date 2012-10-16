@@ -44,6 +44,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$articleDao->deleteArticleById($articleId);
+
+			import('classes.search.ArticleSearchIndex');
+			$articleSearchIndex = new ArticleSearchIndex();
+			$articleSearchIndex->articleDeleted($articleId);
+			$articleSearchIndex->articleChangesFinished();
 		}
 
 		$request->redirect(null, null, 'index');

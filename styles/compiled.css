@@ -1282,3 +1282,11 @@ a.request_review { background-image:url(../lib/pkp/templates/images/structure/gr
 .ui-dialog { background-color:#f7f5f4; }
 .ui-dialog-content { background-color:#ffffff !important; }
 .ui-dialog-buttonpane { border-color:#f7f5f4; }
+.pkp_controllers_extrasOnDemand .ui-icon { float:left; }
+.pkp_controllers_extrasOnDemand .toggleExtras {
+  margin-top:15px;
+  margin-bottom:15px;
+  cursor:pointer;
+  float:left;
+  display:none;
+}

@@ -79,26 +79,18 @@ class LucenePluginTest extends DatabaseTestCase {
 	//
 	/**
 	 * @covers LucenePlugin
+	 * @covers SolrSearchRequest
 	 */
 	public function testCallbackRetrieveResults() {
-		// Configure test translations.
-		AppLocale::setTranslations(
-			array(
-				'search.operator.not' => 'nicht',
-				'search.operator.and' => 'und',
-				'search.operator.or' => 'oder'
-			)
-		);
-
 		// Test data.
 		$testCases = array(
 			// Simple Searches
-			array(null => 'test und query'),
+			array(null => 'test AND query'),
 			array(ARTICLE_SEARCH_AUTHOR => 'author'),
 			array(ARTICLE_SEARCH_TITLE => 'title'),
 			array(ARTICLE_SEARCH_ABSTRACT => 'abstract'),
 			array(ARTICLE_SEARCH_INDEX_TERMS => 'Nicht index terms'),
-			array(ARTICLE_SEARCH_GALLEY_FILE => 'full ODER text'),
+			array(ARTICLE_SEARCH_GALLEY_FILE => 'full OR text'),
 			// Advanced Search
 			array(
 				null => 'test query',
@@ -114,14 +106,14 @@ class LucenePluginTest extends DatabaseTestCase {
 		);
 
 		$expectedResults = array(
-			array('title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test AND query'),
+			array('authors|title|abstract|galleyFullText|suppFiles|discipline|subject|type|coverage' => 'test AND query'),
 			array('authors' => 'author'),
 			array('title' => 'title'),
 			array('abstract' => 'abstract'),
-			array('discipline|subject|type|coverage' => 'NOT index terms'),
+			array('discipline|subject|type|coverage' => 'Nicht index terms'), // Translation is done in the web service now.
 			array('galleyFullText' => 'full OR text'),
 			array(
-				'title|abstract|authors|discipline|subject|type|coverage|galleyFullText|suppFiles' => 'test query',
+				'authors|title|abstract|galleyFullText|suppFiles|discipline|subject|type|coverage' => 'test query',
 				'authors' => 'author',
 				'title' => 'title',
 				'discipline' => 'discipline',
@@ -140,12 +132,24 @@ class LucenePluginTest extends DatabaseTestCase {
 		$totalResults = null;
 		$error = null;
 
+		$facetCategories = array(
+			'discipline', 'subject', 'type', 'coverage', 'authors'
+			// journal and date should always be missing as we have
+			// active journal and date filters for all tests.
+		);
+
 		foreach($testCases as $testNum => $testCase) {
 			// Build the expected search request.
 			$searchRequest = new SolrSearchRequest();
 			$searchRequest->setJournal($journal);
 			$searchRequest->setFromDate($fromDate);
 			$searchRequest->setQuery($expectedResults[$testNum]);
+			$searchRequest->setSpellcheck(true);
+			$searchRequest->setHighlighting(true);
+			// Facets should only be requested for categories that have no
+			// active filter.
+			$expectedFacetCategories = array_values(array_diff($facetCategories, array_keys($expectedResults[$testNum])));
+			$searchRequest->setFacetCategories($expectedFacetCategories);
 
 			// Mock a SolrWebService.
 			$webService = $this->getMock('SolrWebService', array('retrieveResults'), array(), '', false);
@@ -172,10 +176,12 @@ class LucenePluginTest extends DatabaseTestCase {
 		$webService->expects($this->any())
 		           ->method('getServiceMessage')
 		           ->will($this->returnValue('some error message'));
+		$originalWebService = $this->lucenePlugin->_solrWebService;
 		$this->lucenePlugin->_solrWebService = $webService;
 		$params = array($journal, array(null => 'test'), null, null, 1, 25, &$totalResults, &$error);
 		$this->assertEquals(array(), $this->lucenePlugin->callbackRetrieveResults($hook, $params));
-		$this->assertEquals('some error message', $error);
+		$this->assertEquals('some error message ##plugins.generic.lucene.message.techAdminInformed##', $error);
+		$this->lucenePlugin->_solrWebService = $originalWebService;
 	}
 
 	/**
@@ -187,22 +193,16 @@ class LucenePluginTest extends DatabaseTestCase {
 		$this->assertTrue($embeddedServer->stopAndWait());
 
 		// Mock email templates.
-		$article = new Article();
-		$article->setId(3);
-		$article->setTitle('test article', 'en_US');
-		$journal = new Journal();
-		$journal->setId(2);
 		$constructorArgs = array(
-			$article,
 			'LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION',
-			null, null, $journal, true, true
+			null, null, null, true, true
 		);
-		import('classes.mail.ArticleMailTemplate');
-		$articleMail = $this->getMock('ArticleMailTemplate', array('send'), $constructorArgs); /* @var $articleMail ArticleMailTemplate */
-		$articleMail->expects($this->exactly(2))
-		            ->method('send')
-		            ->will($this->returnValue(true));
-		$this->lucenePlugin->setMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION', $articleMail);
+		import('classes.mail.MailTemplate');
+		$techInfoMail = $this->getMock('MailTemplate', array('send'), $constructorArgs); /* @var $techInfoMail MailTemplate */
+		$techInfoMail->expects($this->exactly(2))
+		             ->method('send')
+		             ->will($this->returnValue(true));
+		$this->lucenePlugin->setMailTemplate('LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION', $techInfoMail);
 
 		// Reset the time of the last sent email.
 		$this->lucenePlugin->updateSetting(0, 'lastEmailTimestamp', 0);
@@ -210,22 +210,24 @@ class LucenePluginTest extends DatabaseTestCase {
 		// Trying to delete a document without the server running
 		// should trigger an email to the tech contact.
 		$params = array($articleId = 3, $type = null, $assocId = null);
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackArticleFileDeleted('ArticleSearchIndex::articleFileDeleted', $params);
+		$this->lucenePlugin->callbackArticleChangesFinished('ArticleSearchIndex::articleChangesFinished', array());
 
 		// Check the mail.
-		$this->assertEquals('[] Article Indexing Error', $articleMail->getSubject());
-		$this->assertContains('An indexing error occurred while indexing the article "test article" in the journal "lucene-test".', $articleMail->getBody());
-		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $articleMail->getRecipientString());
-		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $articleMail->getFromString());
+		$this->assertEquals('Article Indexing Error', $techInfoMail->getSubject());
+		$this->assertContains('An indexing error occurred while updating the article index.', $techInfoMail->getBody());
+		$this->assertContains('##plugins.generic.lucene.message.searchServiceOffline##', $techInfoMail->getBody());
+		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $techInfoMail->getRecipientString());
+		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $techInfoMail->getFromString());
 
 		// Call again to make sure that a second mail is not being sent.
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackArticleChangesFinished('ArticleSearchIndex::articleChangesFinished', array());
 
 		// Simulate that the last email is more than three hours ago.
 		$this->lucenePlugin->updateSetting(0, 'lastEmailTimestamp', time() - 60 * 60 * 4);
 
 		// This should trigger another email (see send() call count above).
-		$this->lucenePlugin->callbackDeleteTextIndex('ArticleSearchIndex::deleteTextIndex', $params);
+		$this->lucenePlugin->callbackArticleChangesFinished('ArticleSearchIndex::articleChangesFinished', array());
 
 		// Restart the embedded server.
 		$this->assertTrue($embeddedServer->start());

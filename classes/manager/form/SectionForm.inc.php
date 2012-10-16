@@ -16,8 +16,8 @@ import('lib.pkp.classes.form.Form');
 
 class SectionForm extends Form {
 
-	/** @var $sectionId int The ID of the section being edited */
-	var $sectionId;
+	/** @var $section Section The section being edited */
+	var $section;
 
 	/** @var $includeSectionEditor object Additional section editor to
 	 *       include in assigned list for this section
@@ -42,7 +42,15 @@ class SectionForm extends Form {
 		parent::Form('manager/sections/sectionForm.tpl');
 
 		$journal =& Request::getJournal();
-		$this->sectionId = $sectionId;
+		$journalId = $journal->getId();
+
+		// Retrieve/instantiate section.
+		$section = null;
+		if (is_numeric($sectionId)) {
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$section =& $sectionDao->getSection($sectionId, $journalId);
+		}
+		$this->section =& $section;
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.sections.form.titleRequired'));
@@ -98,7 +106,9 @@ class SectionForm extends Form {
 		$journal =& Request::getJournal();
 		$templateMgr =& TemplateManager::getManager();
 
-		$templateMgr->assign('sectionId', $this->sectionId);
+		$section =& $this->section;
+		$sectionId = (is_a($section, 'Section') ? $section->getId() : null);
+		$templateMgr->assign('sectionId', $sectionId);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 
@@ -119,37 +129,32 @@ class SectionForm extends Form {
 	function initData() {
 		$journal =& Request::getJournal();
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
-		if (isset($this->sectionId)) {
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$section =& $sectionDao->getSection($this->sectionId, $journal->getId());
-
-			if ($section == null) {
-				unset($this->sectionId);
-			} else {
-				$this->_data = array(
-					'title' => $section->getTitle(null), // Localized
-					'abbrev' => $section->getAbbrev(null), // Localized
-					'reviewFormId' => $section->getReviewFormId(),
-					'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
-					'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
-					'abstractsNotRequired' => $section->getAbstractsNotRequired(),
-					'identifyType' => $section->getIdentifyType(null), // Localized
-					'editorRestriction' => $section->getEditorRestricted(),
-					'hideTitle' => $section->getHideTitle(),
-					'hideAuthor' => $section->getHideAuthor(),
-					'hideAbout' => $section->getHideAbout(),
-					'disableComments' => $section->getDisableComments(),
-					'policy' => $section->getPolicy(null), // Localized
-					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $this->sectionId),
-					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getId(), $this->sectionId),
-					'wordCount' => $section->getAbstractWordCount()
-				);
-			}
+		$section =& $this->section;
+		if (is_a($section, 'Section')) {
+			$this->_data = array(
+				'title' => $section->getTitle(null), // Localized
+				'abbrev' => $section->getAbbrev(null), // Localized
+				'reviewFormId' => $section->getReviewFormId(),
+				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
+				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
+				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
+				'identifyType' => $section->getIdentifyType(null), // Localized
+				'editorRestriction' => $section->getEditorRestricted(),
+				'hideTitle' => $section->getHideTitle(),
+				'hideAuthor' => $section->getHideAuthor(),
+				'hideAbout' => $section->getHideAbout(),
+				'disableComments' => $section->getDisableComments(),
+				'policy' => $section->getPolicy(null), // Localized
+				'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $section->getId()),
+				'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getId(), $section->getId()),
+				'wordCount' => $section->getAbstractWordCount()
+			);
 		} else {
 			$this->_data = array(
 				'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getId(), null)
 			);
 		}
+		parent::initData();
 	}
 
 	/**
@@ -157,9 +162,13 @@ class SectionForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('title', 'abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments', 'wordCount'));
+
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
-		if (empty($assignedEditorIds)) $assignedEditorIds = array();
-		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
+		if (empty($assignedEditorIds)) {
+			$assignedEditorIds = array();
+		} elseif (!is_array($assignedEditorIds)) {
+			$assignedEditorIds = array($assignedEditorIds);
+		}
 
 		$assignedEditors = $unassignedEditors = array();
 
@@ -193,13 +202,12 @@ class SectionForm extends Form {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
+		// We get the section DAO early on so that
+		// the section class will be imported.
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 
-		if (isset($this->sectionId)) {
-			$section =& $sectionDao->getSection($this->sectionId, $journalId);
-		}
-
-		if (!isset($section)) {
+		$section =& $this->section;
+		if (!is_a($section, 'Section')) {
 			$section = new Section();
 			$section->setJournalId($journalId);
 			$section->setSequence(REALLY_BIG_NUMBER);
@@ -222,10 +230,11 @@ class SectionForm extends Form {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
+		$section =& parent::execute($section);
+
 		if ($section->getId() != null) {
 			$sectionDao->updateSection($section);
 			$sectionId = $section->getId();
-
 		} else {
 			$sectionId = $sectionDao->insertSection($section);
 			$sectionDao->resequenceSections($journalId);

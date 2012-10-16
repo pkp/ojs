@@ -54,19 +54,19 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testUpdateFileIndexViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::updateFileIndex', array($this, 'callbackUpdateFileIndex'));
+		HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackUpdateFileIndex'));
 
 		// Simulate updating an article file via hook.
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->updateFileIndex(0, 1, 2);
+		$articleSearchIndex->articleFileChanged(0, 1, 2);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::updateFileIndex', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::articleFileChanged', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::updateFileIndex');
+		HookRegistry::clear('ArticleSearchIndex::articleFileChanged');
 	}
 
 	/**
@@ -77,11 +77,11 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		$this->registerMockArticleSearchDAO($this->never(), $this->atLeastOnce());
 
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::deleteTextIndex');
+		HookRegistry::clear('ArticleSearchIndex::articleFileDeleted');
 
 		// Test deleting an article from the index with a mock database back-end.#
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->deleteTextIndex(0);
+		$articleSearchIndex->articleFileDeleted(0);
 	}
 
 	/**
@@ -89,22 +89,22 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testDeleteTextIndexViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::deleteTextIndex', array($this, 'callbackDeleteTextIndex'));
+		HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackDeleteTextIndex'));
 
 		// The search DAO should not be called.
 		$this->registerMockArticleSearchDAO($this->never(), $this->never());
 
 		// Simulate deleting article index via hook.
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->deleteTextIndex(0, 1, 2);
+		$articleSearchIndex->articleFileDeleted(0, 1, 2);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::deleteTextIndex', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::articleFileDeleted', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::deleteTextIndex');
+		HookRegistry::clear('ArticleSearchIndex::articleFileDeleted');
 	}
 
 	/**
@@ -150,7 +150,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexArticleMetadata() {
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::indexArticleMetadata');
+		HookRegistry::clear('ArticleSearchIndex::articleMetadataChanged');
 
 		// Mock an article so that the authors are not
 		// being retrieved from the database.
@@ -161,7 +161,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 
 		// Test indexing an article with a mock environment.
 		$articleSearchIndex = $this->getMockArticleSearchIndex($this->atLeastOnce());
-		$articleSearchIndex->indexArticleMetadata($article);
+		$articleSearchIndex->articleMetadataChanged($article);
 	}
 
 	/**
@@ -169,19 +169,19 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexArticleMetadataViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::indexArticleMetadata', array($this, 'callbackIndexArticleMetadata'));
+		HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackIndexArticleMetadata'));
 
 		// Simulate indexing via hook.
 		$article = new Article();
 		$articleSearchIndex = $this->getMockArticleSearchIndex($this->never());
-		$articleSearchIndex->indexArticleMetadata($article);
+		$articleSearchIndex->articleMetadataChanged($article);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
-		self::assertEquals('ArticleSearchIndex::indexArticleMetadata', $calledHooks[0][0]);
+		self::assertEquals('ArticleSearchIndex::articleMetadataChanged', $calledHooks[0][0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::indexArticleMetadata');
+		HookRegistry::clear('ArticleSearchIndex::articleMetadataChanged');
 	}
 
 	/**
@@ -189,12 +189,12 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexSuppFileMetadata() {
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::indexSuppFileMetadata');
+		HookRegistry::clear('ArticleSearchIndex::suppFileMetadataChanged');
 
 		// Test indexing an article with a mock environment.
 		$suppFile = new SuppFile();
 		$articleSearchIndex = $this->getMockArticleSearchIndex($this->atLeastOnce());
-		$articleSearchIndex->indexSuppFileMetadata($suppFile);
+		$articleSearchIndex->suppFileMetadataChanged($suppFile);
 	}
 
 	/**
@@ -202,19 +202,19 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexSuppFileMetadataViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::indexSuppFileMetadata', array($this, 'callbackIndexSuppFileMetadata'));
+		HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array($this, 'callbackIndexSuppFileMetadata'));
 
 		// Simulate indexing via hook.
 		$suppFile = new SuppFile();
 		$articleSearchIndex = $this->getMockArticleSearchIndex($this->never());
-		$articleSearchIndex->indexSuppFileMetadata($suppFile);
+		$articleSearchIndex->suppFileMetadataChanged($suppFile);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
-		self::assertEquals('ArticleSearchIndex::indexSuppFileMetadata', $calledHooks[0][0]);
+		self::assertEquals('ArticleSearchIndex::suppFileMetadataChanged', $calledHooks[0][0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::indexSuppFileMetadata');
+		HookRegistry::clear('ArticleSearchIndex::suppFileMetadataChanged');
 	}
 
 	/**
@@ -222,13 +222,13 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexArticleFiles() {
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::indexArticleFiles');
+		HookRegistry::clear('ArticleSearchIndex::articleFilesChanged');
 		$this->registerFileDAOs(true);
 
 		// Test indexing an article with a mock environment.
 		$article = new Article();
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->indexArticleFiles($article);
+		$articleSearchIndex->articleFilesChanged($article);
 	}
 
 	/**
@@ -236,7 +236,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testIndexArticleFilesViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::indexArticleFiles', array($this, 'callbackIndexArticleFiles'));
+		HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackIndexArticleFiles'));
 
 		// The file DAOs should not be called.
 		$this->registerFileDAOs(false);
@@ -244,15 +244,15 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		// Simulate indexing via hook.
 		$article = new Article();
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->indexArticleFiles($article);
+		$articleSearchIndex->articleFilesChanged($article);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::indexArticleFiles', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::articleFilesChanged', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::indexArticleFiles');
+		HookRegistry::clear('ArticleSearchIndex::articleFilesChanged');
 	}
 
 
@@ -262,17 +262,17 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "update file index"
 	 * hook.
-	 * @see ArticleSearchIndex::updateFileIndex()
+	 * @see ArticleSearchIndex::articleFileChanged()
 	 */
 	public function callbackUpdateFileIndex($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::updateFileIndex', $hook);
+		self::assertEquals('ArticleSearchIndex::articleFileChanged', $hook);
 
 		list($articleId, $type, $fileId) = $params;
 		self::assertEquals(0, $articleId);
 		self::assertEquals(1, $type);
 		self::assertEquals(2, $fileId);
 
-		// Returning "true" is required so that the default indexArticleMetadata()
+		// Returning "true" is required so that the default articleMetadataChanged()
 		// code won't run.
 		return true;
 	}
@@ -280,17 +280,17 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "delete text index"
 	 * hook.
-	 * @see ArticleSearchIndex::deleteTextIndex()
+	 * @see ArticleSearchIndex::articleFileDeleted()
 	 */
 	public function callbackDeleteTextIndex($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::deleteTextIndex', $hook);
+		self::assertEquals('ArticleSearchIndex::articleFileDeleted', $hook);
 
 		list($articleId, $type, $assocId) = $params;
 		self::assertEquals(0, $articleId);
 		self::assertEquals(1, $type);
 		self::assertEquals(2, $assocId);
 
-		// Returning "true" is required so that the default indexArticleMetadata()
+		// Returning "true" is required so that the default articleMetadataChanged()
 		// code won't run.
 		return true;
 	}
@@ -313,15 +313,15 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "index article metadata"
 	 * hook.
-	 * @see ArticleSearchIndex::indexArticleMetadata()
+	 * @see ArticleSearchIndex::articleMetadataChanged()
 	 */
 	public function callbackIndexArticleMetadata($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::indexArticleMetadata', $hook);
+		self::assertEquals('ArticleSearchIndex::articleMetadataChanged', $hook);
 
 		list($article) = $params;
 		self::assertInstanceOf('Article', $article);
 
-		// Returning "true" is required so that the default indexArticleMetadata()
+		// Returning "true" is required so that the default articleMetadataChanged()
 		// code won't run.
 		return true;
 	}
@@ -329,15 +329,15 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "index supp file metadata"
 	 * hook.
-	 * @see ArticleSearchIndex::indexSuppFileMetadata()
+	 * @see ArticleSearchIndex::suppFileMetadataChanged()
 	 */
 	public function callbackIndexSuppFileMetadata($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::indexSuppFileMetadata', $hook);
+		self::assertEquals('ArticleSearchIndex::suppFileMetadataChanged', $hook);
 
 		list($suppFile) = $params;
 		self::assertInstanceOf('SuppFile', $suppFile);
 
-		// Returning "true" is required so that the default indexArticleMetadata()
+		// Returning "true" is required so that the default articleMetadataChanged()
 		// code won't run.
 		return true;
 	}
@@ -345,15 +345,15 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "index article files"
 	 * hook.
-	 * @see ArticleSearchIndex::indexArticleFiles()
+	 * @see ArticleSearchIndex::articleFilesChanged()
 	 */
 	public function callbackIndexArticleFiles($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::indexArticleFiles', $hook);
+		self::assertEquals('ArticleSearchIndex::articleFilesChanged', $hook);
 
 		list($article) = $params;
 		self::assertInstanceOf('Article', $article);
 
-		// Returning "true" is required so that the default indexArticleMetadata()
+		// Returning "true" is required so that the default articleMetadataChanged()
 		// code won't run.
 		return true;
 	}

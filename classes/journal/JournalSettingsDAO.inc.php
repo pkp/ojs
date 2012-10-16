@@ -73,8 +73,14 @@ class JournalSettingsDAO extends DAO {
 		while (!$result->EOF) {
 			$row =& $result->getRowAssoc(false);
 			$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
-			if ($row['locale'] == '') $journalSettings[$row['setting_name']] = $value;
-			else $journalSettings[$row['setting_name']][$row['locale']] = $value;
+			if ($row['locale'] == '') {
+				$journalSettings[$row['setting_name']] = $value;
+			} else {
+				if (!isset($journalSettings[$row['setting_name']])) {
+					$journalSettings[$row['setting_name']] = array();
+				}
+				$journalSettings[$row['setting_name']][$row['locale']] = $value;
+			}
 			$result->MoveNext();
 		}
 		$result->Close();
