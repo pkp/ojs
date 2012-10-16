@@ -955,6 +955,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId());
 
 		// Paginate articles.
+		$totalArticles = count($articleIds);
 		$rangeInfo = Handler::getRangeInfo('articles');
 		if ($rangeInfo->isValid()) {
 			$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
@@ -968,7 +969,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Instantiate article iterator.
 		import('lib.pkp.classes.core.VirtualArrayIterator');
-		$totalArticles = count($articleIds);
 		$iterator = new VirtualArrayIterator($articleData, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the article template.
