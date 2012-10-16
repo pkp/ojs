@@ -76,6 +76,11 @@ class SolrSearchRequest {
 	var $_facetCategories = array();
 
 	/**
+	 * @var array A field->value->boost factor assignment.
+	 */
+	var $_boostFactors = array();
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -123,7 +128,8 @@ class SolrSearchRequest {
 
 	/**
 	 * Set the search phrase for a field.
-	 * @param $fieldwiseQuery array
+	 * @param $field string
+	 * @param $searchPhrase string
 	 */
 	function addQueryFieldPhrase($field, $searchPhrase) {
 		// Ignore empty search phrases.
@@ -277,6 +283,43 @@ class SolrSearchRequest {
 	 */
 	function setFacetCategories($facetCategories) {
 		$this->_facetCategories = $facetCategories;
+	}
+
+	/**
+	 * Get boost factors.
+	 * @return array A field -> value -> boost factor assignment
+	 */
+	function getBoostFactors() {
+		return $this->_boostFactors;
+	}
+
+	/**
+	 * Set boost factors.
+	 * @param $boostQuery array A field -> value -> boost factor assignment
+	 */
+	function setBoostFactors($boostFactors) {
+		$this->_boostFactors = $boostFactors;
+	}
+
+	/**
+	 * Set the boost factor for a field/value combination.
+	 * @param $field string
+	 * @param $value string
+	 * @param $boostFactor float
+	 */
+	function addBoostFactor($field, $value, $boostFactor) {
+		// Ignore empty values.
+		if (empty($value)) return;
+
+		// Ignore neutral boost factors.
+		$boostFactor = (float)$boostFactor;
+		if ($boostFactor == 1.0) return;
+
+		// Save the boost factor.
+		if (!isset($this->_boostFactors[$field])) {
+			$this->_boostFactors[$field] = array();
+		}
+		$this->_boostFactors[$field][$value] = $boostFactor;
 	}
 
 

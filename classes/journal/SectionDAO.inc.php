@@ -379,6 +379,20 @@ class SectionDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all sections.
+	 * @return DAOResultFactory containing Sections ordered by journal ID and sequence
+	 */
+	function &getSections($rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT * FROM sections ORDER BY journal_id, seq',
+			false, $rangeInfo
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnSectionFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Retrieve all empty (without articles) section ids for a journal.
 	 * @return array
 	 */
@@ -400,7 +414,7 @@ class SectionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array

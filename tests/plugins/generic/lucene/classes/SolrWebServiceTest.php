@@ -248,6 +248,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$articleToDelete->setId(99);
 		$articleToDelete->setJournalId(2);
 		$articleToDelete->setIssueId(2);
+		$articleToDelete->setSectionId(2);
 		$articleToDelete->setStatus(STATUS_DECLINED);
 		$articles = array($articleToReplace, $articleToDelete);
 
@@ -597,6 +598,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$article->setId(3);
 		$article->setJournalId(2);
 		$article->setIssueId(2);
+		$article->setSectionId(1);
 		$article->setStatus(STATUS_PUBLISHED);
 		$article->setTitle('Deutscher Titel', 'de_DE');
 		$article->setTitle('English Title', 'en_US');

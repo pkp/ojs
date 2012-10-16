@@ -16,6 +16,7 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 import('plugins.generic.lucene.classes.SolrWebService');
 
+define('LUCENE_PLUGIN_DEFAULT_RANKING_BOOST', 1.0); // Default: No boost (=weight factor one).
 
 class LucenePlugin extends GenericPlugin {
 
@@ -118,6 +119,10 @@ class LucenePlugin extends GenericPlugin {
 
 			// Register callbacks (data-access level).
 			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackArticleDaoAdditionalFieldNames'));
+			$customRanking = (boolean)$this->getSetting(0, 'customRanking');
+			if ($customRanking) {
+				HookRegistry::register('sectiondao::getAdditionalFieldNames', array(&$this, 'callbackSectionDaoAdditionalFieldNames'));
+			}
 
 			// Register callbacks (controller-level).
 			HookRegistry::register('ArticleSearch::retrieveResults', array(&$this, 'callbackRetrieveResults'));
@@ -130,10 +135,21 @@ class LucenePlugin extends GenericPlugin {
 			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array(&$this, 'callbackArticleChangesFinished'));
 			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array(&$this, 'callbackRebuildIndex'));
 
+			// Register callbacks (forms).
+			if ($customRanking) {
+				HookRegistry::register('sectionform::Constructor', array($this, 'callbackSectionFormConstructor'));
+				HookRegistry::register('sectionform::initdata', array($this, 'callbackSectionFormInitData'));
+				HookRegistry::register('sectionform::readuservars', array($this, 'callbackSectionFormReadUserVars'));
+				HookRegistry::register('sectionform::execute', array($this, 'callbackSectionFormExecute'));
+			}
+
 			// Register callbacks (view-level).
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
 			if ($this->getSetting(0, 'autosuggest')) {
 				HookRegistry::register('Templates::Search::SearchResults::FilterInput', array($this, 'callbackTemplateFilterInput'));
+			}
+			if ($customRanking) {
+				HookRegistry::register('Templates::Manager::Sections::SectionForm::AdditionalMetadata', array($this, 'callbackTemplateSectionFormAdditionalMetadata'));
 			}
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
 			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleLinks', array($this, 'callbackTemplateAdditionalArticleLinks'));
@@ -320,6 +336,17 @@ class LucenePlugin extends GenericPlugin {
 		$returner[] = 'indexingState';
 	}
 
+	/**
+	 * @see DAO::getAdditionalFieldNames()
+	 */
+	function callbackSectionDaoAdditionalFieldNames($hookName, $args) {
+		// Add the custom ranking setting to the field names.
+		// This will be used to adjust the ranking boost of all
+		// articles in a given section.
+		$returner =& $args[1];
+		$returner[] = 'rankingBoost';
+	}
+
 
 	//
 	// Controller level hook implementations.
@@ -366,6 +393,28 @@ class LucenePlugin extends GenericPlugin {
 		// active filters.
 		$facetCategories = array_values(array_diff($this->_getEnabledFacetCategories(), $activeFilters));
 		$searchRequest->setFacetCategories($facetCategories);
+
+		// Configure custom ranking.
+		$customRanking = (boolean)$this->getSetting(0, 'customRanking');
+		if ($customRanking) {
+			$sectionDao =& DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			if (is_a($journal, 'Journal')) {
+				$sections = $sectionDao->getJournalSections($journal->getId());
+			} else {
+				$sections = $sectionDao->getSections();
+			}
+			while (!$sections->eof()) { /* @var $sections DAOResultFactory */
+				$section =& $sections->next();
+				$sectionBoost = (float)$section->getData('rankingBoost');
+				if ($sectionBoost != 1.0) {
+					$searchRequest->addBoostFactor(
+						'section_id', $section->getId(), $sectionBoost
+					);
+				}
+				unset($section);
+			}
+			unset($sections);
+		}
 
 		// Call the solr web service.
 		$solrWebService =& $this->getSolrWebService();
@@ -490,7 +539,7 @@ class LucenePlugin extends GenericPlugin {
 	function callbackArticleChangesFinished($hookName, $params) {
 		// In the case of pull-indexing we ignore this call
 		// and let the Solr server initiate indexing.
-		if ($this->getSetting(0, 'pullindexing')) return true;
+		if ($this->getSetting(0, 'pullIndexing')) return true;
 
 		// If the plugin is configured to push changes to the
 		// server then we'll now batch-update all articles that
@@ -546,7 +595,7 @@ class LucenePlugin extends GenericPlugin {
 			$numMarked = $this->_solrWebService->markJournalChanged($journal->getId());
 
 			// Pull or push?
-			if ($this->getSetting(0, 'pullindexing')) {
+			if ($this->getSetting(0, 'pullIndexing')) {
 				// When pull-indexing is configured then we leave it up to the
 				// Solr server to decide when the updates will actually be done.
 				if ($log) echo '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . "\n";
@@ -573,6 +622,82 @@ class LucenePlugin extends GenericPlugin {
 			}
 		}
 		return true;
+	}
+
+
+	//
+	// Form hook implementations.
+	//
+	/**
+	 * @see Form::Form()
+	 */
+	function callbackSectionFormConstructor($hookName, $params) {
+		// Check whether we got a valid ranking boost option.
+		$acceptedValues = array_keys($this->_getRankingBoostOptions());
+		$form =& $params[0];
+		$form->addCheck(
+			new FormValidatorInSet(
+				$form, 'rankingBoostOption', FORM_VALIDATOR_REQUIRED_VALUE,
+				'plugins.generic.lucene.sectionForm.rankingBoostInvalid',
+				$acceptedValues
+			)
+		);
+		return false;
+	}
+
+	/**
+	 * @see Form::initData()
+	 */
+	function callbackSectionFormInitData($hookName, $params) {
+		$form =& $params[0]; /* @var $form SectionForm */
+
+		// Read the section's ranking boost.
+		$rankingBoost = LUCENE_PLUGIN_DEFAULT_RANKING_BOOST;
+		$section =& $form->section;
+		if (is_a($section, 'Section')) {
+			$rankingBoostSetting = $section->getData('rankingBoost');
+			if (is_numeric($rankingBoostSetting)) $rankingBoost = (float)$rankingBoostSetting;
+		}
+
+		// The ranking boost is a floating-poing multiplication
+		// factor (0, 0.5, 1, 2). Translate this into an integer
+		// option value (0, 1, 2, 4).
+		$rankingBoostOption = (int)($rankingBoost * 2);
+		$rankingBoostOptions = $this->_getRankingBoostOptions();
+		if (!in_array($rankingBoostOption, array_keys($rankingBoostOptions))) {
+			$rankingBoostOption = (int)(LUCENE_PLUGIN_DEFAULT_RANKING_BOOST * 2);
+		}
+		$form->setData('rankingBoostOption', $rankingBoostOption);
+		return false;
+	}
+
+	/**
+	 * @see Form::readUserVars()
+	 */
+	function callbackSectionFormReadUserVars($hookName, $params) {
+		$userVars =& $params[1];
+		$userVars[] = 'rankingBoostOption';
+		return false;
+	}
+
+	/**
+	 * @see Form::execute()
+	 */
+	function callbackSectionFormExecute($hookName, $params) {
+		// Convert the ranking boost option back into a ranking boost factor.
+		$form =& $params[0]; /* @var $form SectionForm */
+		$rankingBoostOption = $form->getData('rankingBoostOption');
+		$rankingBoostOptions = $this->_getRankingBoostOptions();
+		if (in_array($rankingBoostOption, array_keys($rankingBoostOptions))) {
+			$rankingBoost = ((float)$rankingBoostOption)/2;
+		} else {
+			$rankingBoost = LUCENE_PLUGIN_DEFAULT_RANKING_BOOST;
+		}
+
+		// Update the ranking boost of the section.
+		$section =& $params[1]; /* @var $section Section */
+		$section->setData('rankingBoost', $rankingBoost);
+		return false;
 	}
 
 
@@ -703,6 +828,20 @@ class LucenePlugin extends GenericPlugin {
 	function callbackTemplateSyntaxInstructions($hookName, $params) {
 		$output =& $params[2];
 		$output .= __('plugins.generic.lucene.results.syntaxInstructions');
+		return false;
+	}
+
+	/**
+	 * @see templates/manager/sections/sectionForm.tpl
+	 */
+	function callbackTemplateSectionFormAdditionalMetadata($hookName, $params) {
+		// Assign the ranking boost options to the template.
+		$smarty =& $params[1];
+		$smarty->assign('rankingBoostOptions', $this->_getRankingBoostOptions());
+
+		// Render the template.
+		$output =& $params[2];
+		$output .= $smarty->fetch($this->getTemplatePath() . 'additionalSectionMetadata.tpl');
 		return false;
 	}
 
@@ -877,6 +1016,19 @@ class LucenePlugin extends GenericPlugin {
 
 		// Send the mail.
 		$mail->send($request);
+	}
+
+	/**
+	 * Return the available ranking boost options.
+	 * @return array
+	 */
+	function _getRankingBoostOptions() {
+		return array(
+			0 => __('plugins.generic.lucene.sectionForm.ranking.never'),
+			1 => __('plugins.generic.lucene.sectionForm.ranking.low'),
+			2 => __('plugins.generic.lucene.sectionForm.ranking.normal'),
+			4 => __('plugins.generic.lucene.sectionForm.ranking.high')
+		);
 	}
 }
 ?>

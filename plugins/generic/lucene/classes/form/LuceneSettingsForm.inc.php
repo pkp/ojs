@@ -111,11 +111,12 @@ class LuceneSettingsForm extends Form {
 	 */
 	function _getFormFields($booleanOnly = false) {
 		$booleanFormFields = array(
-			'autosuggest', 'spellcheck', 'pullindexing',
+			'autosuggest', 'spellcheck', 'pullIndexing',
 			'simdocs', 'highlighting', 'facetCategoryDiscipline',
 			'facetCategorySubject', 'facetCategoryType',
 			'facetCategoryCoverage', 'facetCategoryJournalTitle',
-			'facetCategoryAuthors', 'facetCategoryPublicationDate'
+			'facetCategoryAuthors', 'facetCategoryPublicationDate',
+			'customRanking'
 		);
 		$otherFormFields = array(
 			'searchEndpoint', 'username', 'instId',
