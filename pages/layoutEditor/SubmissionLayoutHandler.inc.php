@@ -320,7 +320,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 			} else {
 				// View non-HTML file inline
-				$this->viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}

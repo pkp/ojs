@@ -1936,7 +1936,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalleyFile($args) {
+	function proofGalleyFile($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -1959,7 +1959,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			} else {
 				// View non-HTML file inline
-				$this->viewFile(array($articleId, $galley->getFileId()));
+				$this->viewFile(array($articleId, $galley->getFileId()), $request);
 			}
 		}
 	}
