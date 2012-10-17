@@ -1304,6 +1304,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::completeCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
+	
+	/* Completes the author copyediting process when an editor acts by proxy for the author */
+	function completeAuthorCopyedit($args) {
+		$articleId = (int) Request::getUserVar('articleId');
+
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$submission =& $this->submission;
+
+		SectionEditorAction::completeAuthorCopyedit($submission);
+		Request::redirect(null, null, 'submissionEditing', $articleId);
+	}
 
 	function completeFinalCopyedit($args) {
 		$articleId = (int) Request::getUserVar('articleId');

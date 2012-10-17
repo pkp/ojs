@@ -96,6 +96,36 @@ class CopyeditorAction extends Action {
 	}
 
 	/**
+	 * Copyeditor completes author copyedit.
+	 * @param $copyeditorSubmission object
+	 */
+	function completeAuthorCopyedit($copyeditorSubmission) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+
+		if (HookRegistry::call('CopyeditorAction::completeAuthorCopyedit', array(&$copyeditorSubmission))) return;
+
+		$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+		
+		$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getArticleId());
+		$copyeditor = $copyeditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
+		if ($copyeditor) $finalSignoff->setUserId($copyeditor->getId());
+		$finalSignoff->setDateNotified(Core::getCurrentDate());
+		$signoffDao->updateObject($finalSignoff);
+			
+		// Add log entry
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
+		ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.copyedit.authorFile', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+	
+		return true;
+	}
+	
+	/**
 	 * Copyeditor completes final copyedit.
 	 * @param $copyeditorSubmission object
 	 */

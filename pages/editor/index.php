@@ -69,6 +69,7 @@ switch ($op) {
 	case 'uploadReviewVersionNoAuthorInfo':
 	case 'uploadCopyeditVersion':
 	case 'completeCopyedit':
+	case 'completeAuthorCopyedit':
 	case 'completeFinalCopyedit':
 	case 'addSuppFile':
 	case 'setSuppFileVisibility':

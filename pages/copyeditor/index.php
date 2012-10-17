@@ -24,6 +24,7 @@ switch ($op) {
 	//
 	case 'submission':
 	case 'completeCopyedit':
+	case 'completeAuthorCopyedit':
 	case 'completeFinalCopyedit':
 	case 'uploadCopyeditVersion':
 	//

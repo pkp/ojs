@@ -72,13 +72,20 @@
 		<td>{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>{$authorCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>{$authorCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td>{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>
+			{if $authorCopyeditSignoff->getDateCompleted()}
+				{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{else}	
+				{translate|assign:"confirmMessage" key="common.confirmComplete"}
+				<a href="{url op="completeAuthorCopyedit" articleId=$submission->getId()}" class="action" onclick="return confirm('{$confirmMessage}')">{translate key="common.complete"}</a>
+			{/if}
+		</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
-			{if $authorCopyeditSignoff->getDateCompleted() && $editorAuthorCopyeditFile}
+			{if $editorAuthorCopyeditFile}
 				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorCopyeditSignoff->getFileId():$authorCopyeditSignoff->getFileRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}

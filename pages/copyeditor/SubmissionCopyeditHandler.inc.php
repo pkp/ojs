@@ -63,6 +63,17 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
+	
+	function completeAuthorCopyedit($args) {
+		$articleId = Request::getUserVar('articleId');
+		$this->validate($articleId);
+		$submission =& $this->submission;
+		$this->setupTemplate(true, $articleId);
+
+		if (CopyeditorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
+			Request::redirect(null, null, 'submission', $articleId);
+		}
+	}
 
 	function completeFinalCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
