@@ -72,7 +72,7 @@
 		<li>&#187; {translate key="notification.mailList.protectedContent" subscribeUrl=$url}
 	{/if}
 <li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>
-<ul>
+</ul>
 
 </form>
 
