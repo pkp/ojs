@@ -90,18 +90,21 @@ class WebFeedPlugin extends GenericPlugin {
 
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$requestedPage = $request->getRequestedPage();
+			$journalTitle = '';
 			if ($currentJournal) {
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getId(), true);
 				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
+				$journalTitle = $this->sanitize($currentJournal->getLocalizedTitle());
+
 			}
 
 			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss" />';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss2" />';
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" title="' . $journalTitle . '" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
+				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" title="' . $journalTitle . '" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss" />';
+				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" title="' . $journalTitle . '" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss2" />';
 
 				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
 			}
@@ -192,6 +195,15 @@ class WebFeedPlugin extends GenericPlugin {
 				assert(false);
 				return false;
 		}
+	}
+
+	/**
+	 * Clean up the Journal title.
+	 * @param $string
+	 * @return $string
+	 */
+	function sanitize($string) {
+		return htmlspecialchars(strip_tags($string));
 	}
 }
 
