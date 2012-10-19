@@ -934,10 +934,25 @@ class DOIExportPlugin extends ImportExportPlugin {
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$this->registerDaoHook('IssueDAO');
-		$issues =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+
+		// Filter only issues that have a DOI assigned.
+		$issues = array();
+		while ($issue =& $issueIterator->next()) {
+			if ($issue->getPubId('doi')) {
+				$issues[] =& $issue;
+			}
+			unset($issue);
+		}
+		unset($issueIterator);
+
+		// Instantiate issue iterator.
+		import('lib.pkp.classes.core.ArrayItemIterator');
+		$rangeInfo = Handler::getRangeInfo('articles');
+		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the issue template.
-		$templateMgr->assign_by_ref('issues', $issues);
+		$templateMgr->assign_by_ref('issues', $iterator);
 		$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 	}
 
@@ -951,21 +966,32 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Retrieve all published articles.
 		$this->registerDaoHook('PublishedArticleDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId());
+		$articleIterator = $this->getAllPublishedArticles($journal);
+
+		// Filter only articles that have a DOI assigned.
+		$articles = array();
+		while ($article =& $articleIterator->next()) {
+			if ($article->getPubId('doi')) {
+				$articles[] =& $article;
+			}
+			unset($article);
+		}
+		unset($articleIterator);
 
 		// Paginate articles.
-		$totalArticles = count($articleIds);
+		$totalArticles = count($articles);
 		$rangeInfo = Handler::getRangeInfo('articles');
 		if ($rangeInfo->isValid()) {
-			$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+			$articles = array_slice($articles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}
 
 		// Retrieve article data.
 		$articleData = array();
-		foreach($articleIds as $articleId) {
-			$articleData[] =& $this->_prepareArticleDataByArticleId($articleId, $journal);
+		foreach($articles as $article) {
+			$articleData[] =& $this->_prepareArticleData($article, $journal);
+			unset($article);
 		}
+		unset($articles);
 
 		// Instantiate article iterator.
 		import('lib.pkp.classes.core.VirtualArrayIterator');
@@ -985,28 +1011,41 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$this->setBreadcrumbs(array(), true);
 
 		// Retrieve all published articles.
-		$articles = $this->getAllPublishedArticles($journal);
+		$articleIterator = $this->getAllPublishedArticles($journal);
 
 		// Retrieve galley data.
 		$this->registerDaoHook('ArticleGalleyDAO');
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleyData = array();
-		while ($article =& $articles->next()) {
+		$galleys = array();
+		while ($article =& $articleIterator->next()) {
 			// Retrieve galleys for the article.
-			$galleys =& $galleyDao->getGalleysByArticle($article->getId());
-			foreach ($galleys as $galley) {
-				$galleyData[] =& $this->_prepareGalleyData($galley, $journal);
+			$articleGalleys =& $galleyDao->getGalleysByArticle($article->getId());
+
+			// Filter only galleys that have a DOI assigned.
+			foreach ($articleGalleys as $galley) {
+				if ($galley->getPubId('doi')) {
+					$galleys[] =& $galley;
+				}
 				unset($galley);
 			}
-			unset($article);
+			unset($article, $articleGalleys);
 		}
+		unset($articleIterator);
 
 		// Paginate galleys.
-		$totalGalleys = count($galleyData);
+		$totalGalleys = count($galleys);
 		$rangeInfo = Handler::getRangeInfo('galleys');
 		if ($rangeInfo->isValid()) {
-			$galleyData = array_slice($galleyData, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+			$galleys = array_slice($galleys, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}
+
+		// Retrieve galley data.
+		$galleyData = array();
+		foreach($galleys as $galley) {
+			$galleyData[] =& $this->_prepareGalleyData($galley, $journal);
+			unset($galley);
+		}
+		unset($galleys);
 
 		// Instantiate galley iterator.
 		import('lib.pkp.classes.core.VirtualArrayIterator');
@@ -1110,10 +1149,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 		if (!$cache->isCached('articles', $articleId)) {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
-			assert(is_a($article, 'PublishedArticle'));
 			$cache->add($article, $nullVar = null);
 		}
 		if (!$article) $article =& $cache->get('articles', $articleId);
+		assert(is_a($article, 'PublishedArticle'));
 
 		// Prepare and return article data for the article file.
 		return $this->_prepareArticleData($article, $journal);
