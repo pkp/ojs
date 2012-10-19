@@ -42,35 +42,31 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var="noIssues" value=true}
 			{iterate from=issues item=issue}
-				{if $issue->getPubId('doi')}
-					{assign var="noIssues" value=false}
-					{if $issue->getData('datacite::registeredDoi')}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
-					{else}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
-					{/if}
-					<tr valign="top">
-						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
-						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
-						<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
-						<td>{$issue->getNumArticles()|escape}</td>
-						<td align="right"><nobr>
-							{if $hasCredentials}
-								<a href="{plugin_url path="registerIssue"|to_array:$issue->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
-							{/if}
-							<a href="{plugin_url path="exportIssue"|to_array:$issue->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
-						</nobr></td>
-					</tr>
-					<tr>
-						<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
-					</tr>
+				{if $issue->getData('datacite::registeredDoi')}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
+				{else}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
+				<tr valign="top">
+					<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
+					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
+					<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
+					<td>{$issue->getNumArticles()|escape}</td>
+					<td align="right"><nobr>
+						{if $hasCredentials}
+							<a href="{plugin_url path="registerIssue"|to_array:$issue->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+						{/if}
+						<a href="{plugin_url path="exportIssue"|to_array:$issue->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+					</nobr></td>
+				</tr>
+				<tr>
+					<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
+				</tr>
 			{/iterate}
-			{if $noIssues}
+			{if $issues->wasEmpty()}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noIssues"}</td>
 				</tr>
