@@ -421,7 +421,7 @@ class MetadataForm extends Form {
 		}
 
 		// Remove deleted authors
-		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
+		$deletedAuthors = preg_split('/:/', $this->getData('deletedAuthors'), -1,  PREG_SPLIT_NO_EMPTY);
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$authorDao->deleteAuthorById($deletedAuthors[$i], $article->getId());
 		}
