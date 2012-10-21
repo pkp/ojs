@@ -8,6 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
+  * Contributed by Andrea Marchitelli - CINECA
   *
   -->
  
@@ -21,7 +22,7 @@
 	<message key="plugins.generic.announcementfeed.settings.announcement">Mostra i link ai feed solo nella pagina degli avvisi.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limita i feed ai</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">avvisi più recenti.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Per favore inserisci un numero intero positivo per gli avvisi da mostrare nel feed.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Inserisci un numero intero positivo per gli avvisi da mostrare nel feed.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">Logo RSS2</message>

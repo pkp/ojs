@@ -13,7 +13,7 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.lucene.displayName">Plugin per la ricerca con Lucene</message>
-	<message key="plugins.generic.lucene.description">Il plugin per la ricerca con Lucene offre supporto multi-lingue, migliore rilevanza dei risultati di ricerca, indicizzazione più rapida, maggiore scalabilità e altro ancora..</message>
+	<message key="plugins.generic.lucene.description">Il plugin per la ricerca con Lucene offre supporto multi-lingue, migliore rilevanza dei risultati di ricerca, indicizzazione più rapida, maggiore scalabilità e altro ancora.</message>
 
 	<message key="plugins.generic.lucene.faceting.title">raffina la ricerca</message>
 	<message key="plugins.generic.lucene.faceting.discipline">Discipline</message>
