@@ -103,10 +103,9 @@ class RegistrationHandler extends UserHandler {
 
 	/**
 	 * Show error message if user registration is not allowed.
-	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function registrationDisabled($args, &$request) {
+	function registrationDisabled(&$request) {
 		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'user.register');
@@ -161,14 +160,14 @@ class RegistrationHandler extends UserHandler {
 	 * Checks if journal allows user registration.
 	 * @param $request PKPRequest
 	 */	
-	function validate($request) {
+	function validate(&$request) {
 		parent::validate(false);
 		$journal = $request->getJournal();
 		if ($journal != null) {
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			if ($journalSettingsDao->getSetting($journal->getId(), 'disableUserReg')) {
 				// Users cannot register themselves for this journal
-				$this->registrationDisabled();
+				$this->registrationDisabled($request);
 				exit;
 			}
 		}
