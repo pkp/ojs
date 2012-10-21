@@ -8,6 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
+  * Contributed by Andrea Marchitelli - CINECA.
   *
   -->
 
@@ -92,7 +93,7 @@
 	<message key="author.submit.suppFile.sourceText">Testo della fonte</message>
 	<message key="author.submit.suppFile.briefDescription">Breve descrizione</message>
 	<message key="author.submit.suppFile.contributorOrSponsor">Organizzazione finanziatrice o sostenitrice</message>
-	<message key="author.submit.suppFile.availableToPeers">Invia il file ai revisori (senza metadati), in quanto non comprometterà la blind review.</message>
+	<message key="author.submit.suppFile.availableToPeers">Mostra il file ai revisori (senza metadati), in quanto non comprometterà la blind review.</message>
 	<message key="author.submit.suppFile.publisherDescription">Utilizza solo con materiali ufficialmente pubblicati.</message>
 	<message key="author.submit.suppFile.dateDescription">Data di creazione dello strumento o di raccolta dei dati.</message>
 	<message key="author.submit.suppFile.sourceDescription">Nome dello studio o altro punto di partenza.</message>
