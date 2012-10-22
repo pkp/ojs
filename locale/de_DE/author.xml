@@ -48,7 +48,7 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Sind Schwierigkeiten aufgetreten? Kontaktieren Sie <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Zeitschriftenrubrik</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für diesen Beitrag aus (Siehe Rubriken und Richtlinien in <a href="{$aboutUrl}" target="_new">Über uns</a>).]]></message>
-	<message key="author.submit.selectSection">Wählen Sie eine Rubrik aus…</message>
+	<message key="author.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
 	<message key="author.submit.submissionLocale">Beitragssprache</message>
 	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
 	<message key="author.submit.submissionChecklist">Checkliste für Beiträge</message>
