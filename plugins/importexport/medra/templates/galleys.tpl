@@ -43,40 +43,36 @@
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 
-			{assign var="noGalleys" value=true}
 			{iterate from=galleys item=galleyData}
 				{assign var=galley value=$galleyData.galley}
-				{if $galley->getPubId('doi')}
-					{assign var="noGalleys" value=false}
-					{assign var=language value=$galleyData.language}
-					{assign var=article value=$galleyData.article}
-					{assign var=issue value=$galleyData.issue}
-					{if $galley->getData('medra::registeredDoi')}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
-					{else}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
-					{/if}
-					<tr valign="top">
-						<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}"/></td>
-						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
-						<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>
-						<td>{$article->getAuthorString()|escape}</td>
-						<td align="right"><nobr>
-							{if $hasCredentials}
-								<a href="{plugin_url path="registerGalley"|to_array:$galley->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
-								{if $galley->getData('medra::registeredDoi')}<a href="{plugin_url path="resetGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
-							{/if}
-							<a href="{plugin_url path="exportGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
-						</nobr></td>
-					</tr>
-					<tr>
-						<td colspan="5" class="{if $galleys->eof()}end{/if}separator">&nbsp;</td>
-					</tr>
+				{assign var=language value=$galleyData.language}
+				{assign var=article value=$galleyData.article}
+				{assign var=issue value=$galleyData.issue}
+				{if $galley->getData('medra::registeredDoi')}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
+				{else}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
+				<tr valign="top">
+					<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}"/></td>
+					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
+					<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>
+					<td>{$article->getAuthorString()|escape}</td>
+					<td align="right"><nobr>
+						{if $hasCredentials}
+							<a href="{plugin_url path="registerGalley"|to_array:$galley->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							{if $galley->getData('medra::registeredDoi')}<a href="{plugin_url path="resetGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.medra.resetDescription"}" class="action">{translate key="plugins.importexport.medra.reset"}</a>{/if}
+						{/if}
+						<a href="{plugin_url path="exportGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+					</nobr></td>
+				</tr>
+				<tr>
+					<td colspan="5" class="{if $galleys->eof()}end{/if}separator">&nbsp;</td>
+				</tr>
 			{/iterate}
-			{if $noGalleys}
+			{if $galleys->wasEmpty()}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noGalleys"}</td>
 				</tr>

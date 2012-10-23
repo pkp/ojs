@@ -200,7 +200,10 @@ a solr search server.
        and unzip it into plugins/generic/lucene/lib in your OJS application
        directory.
 
-       If you are on Linux this would be something like:
+       We are using version 6.1.26 here as an example but the latest version may
+       be different. Please change the following commands accordingly.
+
+       If you are on Linux execute something like:
           #> cd plugins/generic/lucene/lib
           #> wget http://dist.codehaus.org/jetty/jetty-6.1.26/jetty-6.1.26.zip
           #> unzip jetty-6.1.26.zip
@@ -208,7 +211,8 @@ a solr search server.
        (You may have to install the unzip tool first...)
 
        This should create a folder jetty-6.1.26 in your lib directory. If you
-       are on Linux then please create a symlink pointing to this directory:
+       are on Linux then please create a symlink pointing to this directory,
+       e.g.:
           #> ln -s jetty-6.1.26.zip jetty
 
        If you are on Windows then download and unzip the file to the lib folder
@@ -218,15 +222,19 @@ a solr search server.
      - solr: Get the latest solr binary from an Apache download mirror and unzip
        it into plugins/generic/lucene/lib in your OJS application directory.
 
-       If you are on Linux this would be something like:
+       We are using version 3.6.0 here as an example but the latest version may
+       be different. Please change the following commands accordingly.
+
+       If you are on Linux execute something like:
           #> cd plugins/generic/lucene/lib
           #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.0/
                                                           apache-solr-3.6.0.zip
           #> unzip apache-solr-3.6.0.zip
 
        This should create a folder apache-solr-3.5.0 in your lib directory. If
-       you are on Linux then please create a symlink pointing to this directory:
-          #> ln -s apache-solr-3.5.0 solr
+       you are on Linux then please create a symlink pointing to this directory,
+       e.g.:
+          #> ln -s apache-solr-3.6.0 solr
 
        On Windows download and unzip the file to the lib folder. Then rename the
        solr folder to "solr".
