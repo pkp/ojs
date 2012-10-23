@@ -112,28 +112,41 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$this->setBreadcrumbs(array(), true);
 
 		// Retrieve all published articles.
-		$articles = $this->getAllPublishedArticles($journal);
+		$articleIterator = $this->getAllPublishedArticles($journal);
 
 		// Retrieve supp file data.
 		$this->registerDaoHook('SuppFileDAO');
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-		$suppFileData = array();
-		while ($article =& $articles->next()) {
+		$suppFiles = array();
+		while ($article =& $articleIterator->next()) {
 			// Retrieve supp files for the article.
-			$suppFiles =& $suppFileDao->getSuppFilesByArticle($article->getId());
-			foreach ($suppFiles as $suppFile) {
-				$suppFileData[] =& $this->_prepareSuppFileData($suppFile, $journal);
+			$articleSuppFiles =& $suppFileDao->getSuppFilesByArticle($article->getId());
+
+			// Filter only supp files that have a DOI assigned.
+			foreach ($articleSuppFiles as $suppFile) {
+				if ($suppFile->getPubId('doi')) {
+					$suppFiles[] =& $suppFile;
+				}
 				unset($suppFile);
 			}
-			unset($article);
+			unset($article, $articleSuppFiles);
 		}
+		unset($articleIterator);
 
 		// Paginate supp files.
-		$totalSuppFiles = count($suppFileData);
+		$totalSuppFiles = count($suppFiles);
 		$rangeInfo = Handler::getRangeInfo('suppFiles');
 		if ($rangeInfo->isValid()) {
-			$suppFileData = array_slice($suppFileData, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+			$suppFiles = array_slice($suppFiles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}
+
+		// Retrieve supp file data.
+		$suppFileData = array();
+		foreach($suppFiles as $suppFile) {
+			$suppFileData[] =& $this->_prepareSuppFileData($suppFile, $journal);
+			unset($suppFile);
+		}
+		unset($suppFiles);
 
 		// Instantiate supp file iterator.
 		import('lib.pkp.classes.core.VirtualArrayIterator');

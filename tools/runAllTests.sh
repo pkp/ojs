@@ -10,8 +10,9 @@
 #
 # > rm -r files
 # > tar xzf tests/functional/files.tar.gz
-# > chgrp -R www-data files                                   # exchange www-data for your web server's group
-# > chmod -R g+w files
+# > chown -R testuser:www-data files cache                    # exchange www-data for your web server's group
+#                                                             # and testuser for the user that executes tests.
+# > chmod -R ug+w files cache
 # > rm cache/*.php
 # > mysql -u ... -p... ... <tests/functional/testserver.sql   # exchange ... for your database access data
 #

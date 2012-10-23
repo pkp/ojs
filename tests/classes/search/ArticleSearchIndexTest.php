@@ -119,7 +119,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		HookRegistry::clear('ArticleSearchIndex::rebuildIndex');
 
 		// Test log output.
-		$this->expectOutputString("Clearing index ... done\n");
+		$this->expectOutputString("##search.cli.rebuildIndex.clearingIndex## ... ##search.cli.rebuildIndex.done##\n");
 
 		// Test rebuilding the index with a mock database back-end.
 		$articleSearchIndex = new ArticleSearchIndex();

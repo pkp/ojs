@@ -45,35 +45,32 @@
 			{assign var="noSuppFiles" value=true}
 			{iterate from=suppFiles item=suppFileData}
 				{assign var=suppFile value=$suppFileData.suppFile}
-				{if $suppFile->getPubId('doi')}
-					{assign var="noSuppFiles" value=false}
-					{assign var=article value=$suppFileData.article}
-					{assign var=issue value=$suppFileData.issue}
-					{if $suppFile->getData('datacite::registeredDoi')}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
-					{else}
-						{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
-						{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
-					{/if}
-					<tr valign="top">
-						<td><input type="checkbox" name="suppFileId[]" value="{$suppFile->getId()}"/></td>
-						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
-						<td><a href="{url page="rt" op="suppFileMetadata" path=$article->getId()|to_array:0:$suppFile->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$suppFile->getSuppFileTitle()|cat:')'|strip_unsafe_html}</a></td>
-						<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
-						<td align="right"><nobr>
-							{if $hasCredentials}
-								<a href="{plugin_url path="registerSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
-							{/if}
-							<a href="{plugin_url path="exportSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
-						</nobr></td>
-					</tr>
-					<tr>
-						<td colspan="5" class="{if $suppFiles->eof()}end{/if}separator">&nbsp;</td>
-					</tr>
+				{assign var=article value=$suppFileData.article}
+				{assign var=issue value=$suppFileData.issue}
+				{if $suppFile->getData('datacite::registeredDoi')}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.update"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.updateDescription"}{/capture}
+				{else}
+					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
+					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
+				<tr valign="top">
+					<td><input type="checkbox" name="suppFileId[]" value="{$suppFile->getId()}"/></td>
+					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
+					<td><a href="{url page="rt" op="suppFileMetadata" path=$article->getId()|to_array:0:$suppFile->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$suppFile->getSuppFileTitle()|cat:')'|strip_unsafe_html}</a></td>
+					<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
+					<td align="right"><nobr>
+						{if $hasCredentials}
+							<a href="{plugin_url path="registerSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+						{/if}
+						<a href="{plugin_url path="exportSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+					</nobr></td>
+				</tr>
+				<tr>
+					<td colspan="5" class="{if $suppFiles->eof()}end{/if}separator">&nbsp;</td>
+				</tr>
 			{/iterate}
-			{if $noSuppFiles}
+			{if $suppFiles->wasEmpty()}
 				<tr>
 					<td colspan="5" class="nodata">{translate key="plugins.importexport.datacite.export.noSuppFiles"}</td>
 				</tr>
