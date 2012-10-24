@@ -479,36 +479,42 @@ class O4DOIExportDom extends DOIExportDom {
 		// Proprietary ID
 		XMLCustomWriter::appendChild($objectElement, $this->_idElement($this->_isWork()?'Work':'Product', O4DOI_ID_TYPE_PROPRIETARY, $this->getProprietaryId($journal, $issue, $article, $galley)));
 
+		// Issue/journal locale precedence.
+		$nullVar = null;
+		$journalLocalePrecedence = $this->getObjectLocalePrecedence($nullVar, $nullVar);
+
 		// Serial Publication (mandatory)
-		XMLCustomWriter::appendChild($objectElement, $this->_serialPublicationElement($issue));
+		XMLCustomWriter::appendChild($objectElement, $this->_serialPublicationElement($issue, $journalLocalePrecedence));
 
 		// Journal Issue (mandatory)
-		XMLCustomWriter::appendChild($objectElement, $this->_journalIssueElement($issue));
+		XMLCustomWriter::appendChild($objectElement, $this->_journalIssueElement($issue, $journalLocalePrecedence));
+
+		// Object locale precedence.
+		$objectLocalePrecedence = $this->getObjectLocalePrecedence($article, $galley);
 
 		if ($this->_isArticle()) {
 			assert(!empty($article));
 
 			// Content Item (mandatory for articles)
-			$contentItemElement =& $this->_contentItemElement($article, $galley);
+			$contentItemElement =& $this->_contentItemElement($article, $galley, $objectLocalePrecedence);
 			XMLCustomWriter::appendChild($objectElement, $contentItemElement);
 
 			// For articles, final elements go into the ContentItem element.
-			$finalElemementsContainer =& $contentItemElement;
+			$finalElementsContainer =& $contentItemElement;
 		} else {
 			// For issues, final elements go directly into the message payload element.
-			$finalElemementsContainer =& $objectElement;
+			$finalElementsContainer =& $objectElement;
 		}
 
 		// Object Description
-		foreach ($this->_getExportLanguages($journal) as $locale => $localeName) {
-			if ($this->_isArticle()) {
-				$description = $article->getAbstract($locale);
-			} else {
-				$description = $issue->getDescription($locale);
-			}
-			if (!empty($description)) {
-				XMLCustomWriter::appendChild($finalElemementsContainer, $this->_otherTextElement($locale, $description));
-			}
+		if ($this->_isArticle()) {
+			$descriptions = $article->getAbstract(null);
+		} else {
+			$descriptions = $issue->getDescription(null);
+		}
+		$descriptions = $this->getTranslationsByPrecedence($descriptions, $objectLocalePrecedence);
+		foreach ($descriptions as $locale => $description) {
+			XMLCustomWriter::appendChild($finalElementsContainer, $this->_otherTextElement($locale, $description));
 		}
 
 		if ($this->_isArticle()) {
@@ -536,7 +542,7 @@ class O4DOIExportDom extends DOIExportDom {
 
 			// 2) article-as-work:
 			if ($this->_isWork()) {
-				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedIssueElement);
+				XMLCustomWriter::appendChild($finalElementsContainer, $relatedIssueElement);
 
 				// related products:
 				// - is manifested in articles-as-manifestation
@@ -547,14 +553,14 @@ class O4DOIExportDom extends DOIExportDom {
 					$doi = $this->_getDoi($relatedGalley);
 					if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
 					$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_IS_MANIFESTED_IN, $relatedGalleyIds);
-					XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+					XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 					unset($relatedGalley, $relatedGalleyIds, $relatedArticleElement);
 				}
 
 			// 3) article-as-manifestation:
 			} else {
 				// Include issue-as-work before article-as-work.
-				if ($issueWorkOrProduct == 'Work') XMLCustomWriter::appendChild($finalElemementsContainer, $relatedIssueElement);
+				if ($issueWorkOrProduct == 'Work') XMLCustomWriter::appendChild($finalElementsContainer, $relatedIssueElement);
 
 				// related work:
 				// - is a manifestation of article-as-work
@@ -562,11 +568,11 @@ class O4DOIExportDom extends DOIExportDom {
 				$doi = $this->_getDoi($article);
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_IS_A_MANIFESTATION_OF, $relatedArticleIds);
-				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+				XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 				unset($relatedArticleIds, $relatedArticleElement);
 
 				// Include issue-as-manifestation after article-as-work.
-				if ($issueWorkOrProduct == 'Product') XMLCustomWriter::appendChild($finalElemementsContainer, $relatedIssueElement);
+				if ($issueWorkOrProduct == 'Product') XMLCustomWriter::appendChild($finalElementsContainer, $relatedIssueElement);
 
 				// related products:
 				foreach($galleysByArticle as $relatedGalley) {
@@ -582,7 +588,7 @@ class O4DOIExportDom extends DOIExportDom {
 							$galley->getLabel() != $relatedGalley->getLabel()) {
 
 						$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_IS_A_DIFFERENT_FORM_OF, $relatedGalleyIds);
-						XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+						XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 						unset($relatedArticleElement);
 					}
 
@@ -592,7 +598,7 @@ class O4DOIExportDom extends DOIExportDom {
 							$galley->getLocale() != $relatedGalley->getLocale()) {
 
 						$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_IS_A_LANGUAGE_VERSION_OF, $relatedGalleyIds);
-						XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+						XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 						unset($relatedArticleElement);
 					}
 
@@ -609,7 +615,7 @@ class O4DOIExportDom extends DOIExportDom {
 				$doi = $this->_getDoi($relatedArticle);
 				if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Work', O4DOI_RELATION_INCLUDES, $relatedArticleIds);
-				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+				XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 				unset($relatedArticle, $relatedArticleIds, $relatedArticleElement);
 			}
 
@@ -622,7 +628,7 @@ class O4DOIExportDom extends DOIExportDom {
 				$doi = $this->_getDoi($relatedGalley);
 				if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
 				$relatedArticleElement =& $this->_relationElement('Product', O4DOI_RELATION_INCLUDES, $relatedGalleyIds);
-				XMLCustomWriter::appendChild($finalElemementsContainer, $relatedArticleElement);
+				XMLCustomWriter::appendChild($finalElementsContainer, $relatedArticleElement);
 				unset($relatedGalley, $relatedGalleyIds, $relatedArticleElement);
 			}
 		}
@@ -655,15 +661,16 @@ class O4DOIExportDom extends DOIExportDom {
 	 * Generate O4DOI serial publication.
 	 *
 	 * @param $issue Issue
+	 * @param $journalLocalePrecedence array
 	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_serialPublicationElement(&$issue) {
+	function &_serialPublicationElement(&$issue, $journalLocalePrecedence) {
 		$journal =& $this->getJournal();
 		$serialElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialPublication');
 
 		// Serial Work (mandatory)
-		XMLCustomWriter::appendChild($serialElement, $this->_serialWorkElement());
+		XMLCustomWriter::appendChild($serialElement, $this->_serialWorkElement($journalLocalePrecedence));
 
 		// Electronic Serial Version
 		$onlineIssn = $journal->getSetting('onlineIssn');
@@ -680,25 +687,23 @@ class O4DOIExportDom extends DOIExportDom {
 	/**
 	 * Generate O4DOI serial work.
 	 *
+	 * @param $journalLocalePrecedence array
+	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_serialWorkElement() {
+	function &_serialWorkElement($journalLocalePrecedence) {
 		$journal =& $this->getJournal();
 		$serialWorkElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialWork');
 
 		// Title (mandatory)
-		$foundATitle = false;
-		foreach ($this->_getExportLanguages($journal) as $locale => $localeName) {
-			$localizedTitle = $journal->getTitle($locale);
-			if (!empty($localizedTitle)) {
-				XMLCustomWriter::appendChild($serialWorkElement, $this->_titleElement($locale, $localizedTitle, O4DOI_TITLE_TYPE_FULL));
-				$foundATitle = true;
-			}
+		$journalTitles = $this->getTranslationsByPrecedence($journal->getTitle(null), $journalLocalePrecedence);
+		assert(!empty($journalTitles));
+		foreach($journalTitles as $locale => $journalTitle) {
+			XMLCustomWriter::appendChild($serialWorkElement, $this->_titleElement($locale, $journalTitle, O4DOI_TITLE_TYPE_FULL));
 		}
-		assert($foundATitle);
 
 		// Publisher
-		XMLCustomWriter::appendChild($serialWorkElement, $this->_publisherElement());
+		XMLCustomWriter::appendChild($serialWorkElement, $this->_publisherElement($journalLocalePrecedence));
 
 		// Country of Publication (mandatory)
 		$publicationCountry = $this->getPluginSetting('publicationCountry');
@@ -739,16 +744,18 @@ class O4DOIExportDom extends DOIExportDom {
 	/**
 	 * Create a publisher element.
 	 *
+	 * @param $journalLocalePrecedence array
+	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_publisherElement() {
+	function &_publisherElement($journalLocalePrecedence) {
 		$publisherElement =& XMLCustomWriter::createElement($this->getDoc(), 'Publisher');
 
 		// Publishing role (mandatory)
 		XMLCustomWriter::createChildWithText($this->getDoc(), $publisherElement, 'PublishingRole', O4DOI_PUBLISHING_ROLE_PUBLISHER);
 
 		// Publisher name (mandatory)
-		XMLCustomWriter::createChildWithText($this->getDoc(), $publisherElement, 'PublisherName', $this->getPublisher());
+		XMLCustomWriter::createChildWithText($this->getDoc(), $publisherElement, 'PublisherName', $this->getPublisher($journalLocalePrecedence));
 
 		return $publisherElement;
 	}
@@ -794,10 +801,11 @@ class O4DOIExportDom extends DOIExportDom {
 	 * Create the journal issue element.
 	 *
 	 * @param $issue Issue
+	 * @param $journalLocalePrecedence array
 	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_journalIssueElement(&$issue) {
+	function &_journalIssueElement(&$issue, $journalLocalePrecedence) {
 		$journalIssueElement =& XMLCustomWriter::createElement($this->getDoc(), 'JournalIssue');
 
 		// Volume
@@ -849,12 +857,14 @@ class O4DOIExportDom extends DOIExportDom {
 			}
 
 			// Issue Title (mandatory)
-			$journal =& $this->getJournal();
-			$locale = $journal->getPrimaryLocale();
-			assert(AppLocale::isLocaleValid($locale));
-			$localizedTitle = $issue->getTitle($locale);
+			$localizedTitles = $this->getTranslationsByPrecedence($issue->getTitle(null), $journalLocalePrecedence);
+			// Retrieve the first key/value pair...
+			foreach($localizedTitles as $locale => $localizedTitle) break;
 			if (empty($localizedTitle)) {
-				$localizedTitle = $journal->getTitle($locale);
+				$journal =& $this->getJournal();
+				$localizedTitles = $this->getTranslationsByPrecedence($journal->getTitle(null), $journalLocalePrecedence);
+				// Retrieve the first key/value pair...
+				foreach($localizedTitles as $locale => $localizedTitle) break;
 				assert(!empty($localizedTitle));
 
 				// Hack to make sure that no untranslated title appears:
@@ -919,10 +929,11 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @param $article PublishedArticle
 	 * @param $galley ArticleGalley|null This will only be set in case we're
 	 *  transmitting an article-as-manifestation.
+	 * @param $objectLocalePrecedence array
 	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_contentItemElement(&$article, &$galley) {
+	function &_contentItemElement(&$article, &$galley, $objectLocalePrecedence) {
 		$contentItemElement =& XMLCustomWriter::createElement($this->getDoc(), 'ContentItem');
 
 		// Sequence number
@@ -955,31 +966,22 @@ class O4DOIExportDom extends DOIExportDom {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_extentElement($galley));
 		}
 
-		// Primary locale of the article.
-		$primaryObjectLocale = $this->getPrimaryObjectLocale($article, $galley);
-
 		// Article Title (mandatory)
-		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
-		$foundATitle = false;
-		$journal =& $this->getJournal();
-		foreach ($this->_getExportLanguages($journal) as $locale => $localeName) {
-			$localizedTitle = $article->getTitle($locale);
-			if (!empty($localizedTitle)) {
-				$foundATitle = true;
-				XMLCustomWriter::appendChild($contentItemElement, $this->_titleElement($locale, $localizedTitle, O4DOI_TITLE_TYPE_FULL));
-			}
+		$titles = $this->getTranslationsByPrecedence($article->getTitle(null), $objectLocalePrecedence);
+		assert(!empty($titles));
+		foreach ($titles as $locale => $title) {
+			XMLCustomWriter::appendChild($contentItemElement, $this->_titleElement($locale, $title, O4DOI_TITLE_TYPE_FULL));
 		}
-		assert($foundATitle);
 
 		// Contributors
 		$authors =& $article->getAuthors();
 		assert(!empty($authors));
 		foreach ($authors as $author) {
-			XMLCustomWriter::appendChild($contentItemElement, $this->_contributorElement($author, $primaryObjectLocale));
+			XMLCustomWriter::appendChild($contentItemElement, $this->_contributorElement($author, $objectLocalePrecedence));
 		}
 
 		// Language
-		$languageCode = AppLocale::get3LetterIsoFromLocale($primaryObjectLocale);
+		$languageCode = AppLocale::get3LetterIsoFromLocale($objectLocalePrecedence[0]);
 		assert(!empty($languageCode));
 		$languageElement = XMLCustomWriter::createElement($this->getDoc(), 'Language');
 		XMLCustomWriter::createChildWithText($this->getDoc(), $languageElement, 'LanguageRole', O4DOI_LANGUAGE_ROLE_LANGUAGE_OF_TEXT);
@@ -987,16 +989,13 @@ class O4DOIExportDom extends DOIExportDom {
 		XMLCustomWriter::appendChild($contentItemElement, $languageElement);
 
 		// Article keywords
-		$keywords = $article->getSubject($primaryObjectLocale);
-		if (empty($keywords)) {
-			$keywords = $article->getLocalizedSubject();
-		}
+		$keywords = $this->getPrimaryTranslation($article->getSubject(null), $objectLocalePrecedence);
 		if (!empty($keywords)) {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_subjectElement(O4DOI_SUBJECT_SCHEME_PUBLISHER, $keywords));
 		}
 
 		// Subject class
-		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($article, $primaryObjectLocale);
+		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($article, $objectLocalePrecedence);
 		if (!(empty($subjectSchemeName) || empty($subjectCode))) {
 			XMLCustomWriter::appendChild($contentItemElement, $this->_subjectElement(O4DOI_SUBJECT_SCHEME_PROPRIETARY, $subjectCode, $subjectSchemeName));
 		}
@@ -1008,11 +1007,11 @@ class O4DOIExportDom extends DOIExportDom {
 	 * Create a content item element.
 	 *
 	 * @param $author Author
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 *
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_contributorElement(&$author, $primaryObjectLocale) {
+	function &_contributorElement(&$author, $objectLocalePrecedence) {
 		$contributorElement =& XMLCustomWriter::createElement($this->getDoc(), 'Contributor');
 
 		// Sequence number
@@ -1034,10 +1033,7 @@ class O4DOIExportDom extends DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'PersonNameInverted', $invertedPersonName);
 
 		// Affiliation
-		$affiliation = $author->getAffiliation($primaryObjectLocale);
-		if (empty($affiliation)) {
-			$affiliation = $author->getLocalizedAffiliation();
-		}
+		$affiliation = $this->getPrimaryTranslation($author->getAffiliation(null), $objectLocalePrecedence);
 		if (!empty($affiliation)) {
 			$affiliationElement = XMLCustomWriter::createElement($this->getDoc(), 'ProfessionalAffiliation');
 			XMLCustomWriter::createChildWithText($this->getDoc(), $affiliationElement, 'Affiliation', $affiliation);
@@ -1045,10 +1041,7 @@ class O4DOIExportDom extends DOIExportDom {
 		}
 
 		// Biographical note
-		$bioNote = $author->getBiography($primaryObjectLocale);
-		if (empty($bioNote)) {
-			$bioNote = $author->getLocalizedBiography();
-		}
+		$bioNote = $this->getPrimaryTranslation($author->getBiography(null), $objectLocalePrecedence);
 		if (!empty($bioNote)) {
 			XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'BiographicalNote', $bioNote);
 		}
@@ -1135,21 +1128,6 @@ class O4DOIExportDom extends DOIExportDom {
 		}
 
 		return $relationElement;
-	}
-
-	/**
-	 * Get an ordered list of languages to export.
-	 *
-	 * @param $journal Journal
-	 * @return array A list of locales.
-	 */
-	function _getExportLanguages(&$journal) {
-		static $languages = array();
-		if (empty($languages)) {
-			$languages = $journal->getSupportedFormLocaleNames();
-			ksort($languages);
-		}
-		return $languages;
 	}
 
 	/**
