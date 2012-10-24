@@ -94,14 +94,14 @@ class DataciteExportDom extends DOIExportDom {
 		// Identify an object implementing an ArticleFile (if any).
 		$articleFile = (empty($suppFile) ? $galley : $suppFile);
 
+		// Identify the object locale.
+		$objectLocalePrecedence = $this->getObjectLocalePrecedence($article, $galley, $suppFile);
+
 		// The publisher is required.
 		$publisher = (is_a($object, 'SuppFile') ? $object->getSuppFilePublisher() : null);
 		if (empty($publisher)) {
-			$publisher = $this->getPublisher();
+			$publisher = $this->getPublisher($objectLocalePrecedence);
 		}
-
-		// Identify the object locale.
-		$primaryObjectLocale = $this->getPrimaryObjectLocale($article, $galley, $suppFile);
 
 		// The publication date is required.
 		$publicationDate = (is_a($article, 'PublishedArticle') ? $article->getDatePublished() : null);
@@ -120,10 +120,10 @@ class DataciteExportDom extends DOIExportDom {
 		XMLCustomWriter::appendChild($rootElement, $identifierElement);
 
 		// Creators (mandatory)
-		XMLCustomWriter::appendChild($rootElement, $this->_creatorsElement($object, $primaryObjectLocale, $publisher));
+		XMLCustomWriter::appendChild($rootElement, $this->_creatorsElement($object, $objectLocalePrecedence, $publisher));
 
 		// Title (mandatory)
-		XMLCustomWriter::appendChild($rootElement, $this->_titlesElement($object, $primaryObjectLocale));
+		XMLCustomWriter::appendChild($rootElement, $this->_titlesElement($object, $objectLocalePrecedence));
 
 		// Publisher (mandatory)
 		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'publisher', $publisher);
@@ -133,16 +133,16 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Subjects
 		if (!empty($suppFile)) {
-			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($suppFile, $primaryObjectLocale));
+			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($suppFile, $objectLocalePrecedence));
 		} elseif (!empty($article)) {
-			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($article, $primaryObjectLocale));
+			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($article, $objectLocalePrecedence));
 		}
 
 		// Dates
 		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $articleFile, $suppFile, $publicationDate));
 
 		// Language
-		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($primaryObjectLocale));
+		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($objectLocalePrecedence[0]));
 
 		// Resource Type
 		if (!is_a($object, 'SuppFile')) {
@@ -164,12 +164,11 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
 
 		// Rights
-		$rights = $journal->getSetting('copyrightNotice', $primaryObjectLocale);
-		if (empty($rights)) $rights = $journal->getLocalizedSetting('copyrightNotice');
+		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
 		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', $rights);
 
 		// Descriptions
-		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $primaryObjectLocale, $articlesByIssue);
+		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $objectLocalePrecedence, $articlesByIssue);
 		if ($descriptionsElement) XMLCustomWriter::appendChild($rootElement, $descriptionsElement);
 
 		return $doc;
@@ -237,27 +236,22 @@ class DataciteExportDom extends DOIExportDom {
 	}
 
 	/**
-	 * @see DOIExportDom::getPrimaryObjectLocale()
+	 * @see DOIExportDom::getObjectLocalePrecedence()
 	 * @param $suppFile SuppFile
 	 */
-	function getPrimaryObjectLocale(&$article, &$galley, &$suppFile) {
-		$primaryObjectLocale = null;
+	function getObjectLocalePrecedence(&$article, &$galley, &$suppFile) {
+		$locales = array();
 		if (is_a($suppFile, 'SuppFile')) {
 			// Try to map the supp-file language to a PKP locale.
-			$suppFileLanguage = $suppFile->getLanguage();
-			if (strlen($suppFileLanguage) == 2) {
-				$suppFileLanguage = AppLocale::get3LetterFrom2LetterIsoLanguage($suppFileLanguage);
-			}
-			if (strlen($suppFileLanguage) == 3) {
-				$primaryObjectLocale = AppLocale::getLocaleFrom3LetterIso($suppFileLanguage);
+			$suppFileLocale = $this->translateLanguageToLocale($suppFile->getLanguage());
+			if (!is_null($suppFileLocale)) {
+				$locales[] = $suppFileLocale;
 			}
 		}
-		// If mapping didn't work or we do not have a supp file then
-		// retrieve the locale from the other objects.
-		if (!AppLocale::isLocaleValid($primaryObjectLocale)) {
-			$primaryObjectLocale = parent::getPrimaryObjectLocale($article, $galley);
-		}
-		return $primaryObjectLocale;
+
+		// Retrieve further locales from the other objects.
+		$locales = array_merge($locales, parent::getObjectLocalePrecedence($article, $galley));
+		return $locales;
 	}
 
 
@@ -305,21 +299,18 @@ class DataciteExportDom extends DOIExportDom {
 	/**
 	 * Create the creators element list.
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @param $publisher string
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_creatorsElement(&$object, $primaryObjectLocale, $publisher) {
+	function &_creatorsElement(&$object, $objectLocalePrecedence, $publisher) {
 		$cache =& $this->getCache();
 
 		$creators = array();
 		switch (true) {
 			case is_a($object, 'SuppFile'):
 				// Check whether we have a supp file creator set...
-				$creator = $object->getCreator($primaryObjectLocale);
-				if (empty($creator)) {
-					$creator = $object->getSuppFileCreator();
-				}
+				$creator = $this->getPrimaryTranslation($object->getCreator(null), $objectLocalePrecedence);
 				if (!empty($creator)) {
 					$creators[] = $creator;
 					break;
@@ -369,10 +360,10 @@ class DataciteExportDom extends DOIExportDom {
 	/**
 	 * Create the titles element list.
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_titlesElement(&$object, $primaryObjectLocale) {
+	function &_titlesElement(&$object, $objectLocalePrecedence) {
 		$cache =& $this->getCache();
 
 		// Get an array of localized titles.
@@ -394,23 +385,21 @@ class DataciteExportDom extends DOIExportDom {
 
 			case is_a($object, 'Issue'):
 				$titles = $this->_getIssueInformation($object);
-				$alternativeTitle = $object->getTitle($primaryObjectLocale);
-				if (empty($alternativeTitle)) {
-					$alternativeTitle = $object->getLocalizedTitle();
-				}
+				$alternativeTitle = $this->getPrimaryTranslation($object->getTitle(null), $objectLocalePrecedence);
 				break;
 		}
+
+		// Order titles by locale precedence.
+		$titles = $this->getTranslationsByPrecedence($titles, $objectLocalePrecedence);
 
 		// We expect at least one title.
 		assert(count($titles)>=1);
 
 		$titlesElement =& XMLCustomWriter::createElement($this->getDoc(), 'titles');
 
-		// Start with the primary title.
-		if (isset($titles[$primaryObjectLocale])) {
-			XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($titles[$primaryObjectLocale]));
-			unset($titles[$primaryObjectLocale]);
-		}
+		// Start with the primary object locale.
+		$primaryTitle = array_shift($titles);
+		XMLCustomWriter::appendChild($titlesElement, $this->_titleElement($primaryTitle));
 
 		// Then let the translated titles follow.
 		foreach($titles as $locale => $title) {
@@ -442,30 +431,24 @@ class DataciteExportDom extends DOIExportDom {
 	/**
 	 * Create the subjects element list.
 	 * @param $object PublishedArticle|SuppFile
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_subjectsElement(&$object, $primaryObjectLocale) {
+	function &_subjectsElement(&$object, $objectLocalePrecedence) {
 		$subjectsElement =& XMLCustomWriter::createElement($this->getDoc(), 'subjects');
 		if (is_a($object, 'SuppFile')) {
-			$suppFileSubject = $object->getSubject($primaryObjectLocale);
-			if (empty($suppFileSubject)) {
-				$suppFileSubject = $object->getSuppFileSubject();
-			}
+			$suppFileSubject = $this->getPrimaryTranslation($object->getSubject(null), $objectLocalePrecedence);
 			if (!empty($suppFileSubject)) {
 				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($suppFileSubject));
 			}
 		} else {
 			assert(is_a($object, 'PublishedArticle'));
-			$keywords = $object->getSubject($primaryObjectLocale);
-			if (empty($keywords)) {
-				$keywords = $object->getLocalizedSubject();
-			}
+			$keywords = $this->getPrimaryTranslation($object->getSubject(null), $objectLocalePrecedence);
 			if (!empty($keywords)) {
 				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($keywords));
 			}
 
-			list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($object, $primaryObjectLocale);
+			list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($object, $objectLocalePrecedence);
 			if (!(empty($subjectSchemeName) || empty($subjectCode))) {
 				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($subjectCode, $subjectSchemeName));
 			}
@@ -811,37 +794,34 @@ class DataciteExportDom extends DOIExportDom {
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
 	 * @param $suppFile SuppFile
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @param $articlesByIssue array
 	 * @return XMLNode|DOMImplementation|null Can be null if no descriptions
 	 *  can be identified for the given object.
 	 */
-	function &_descriptionsElement(&$issue, &$article, &$suppFile, $primaryObjectLocale, &$articlesByIssue) {
+	function &_descriptionsElement(&$issue, &$article, &$suppFile, $objectLocalePrecedence, &$articlesByIssue) {
 		$descriptions = array();
 
 		if (isset($article) && !isset($suppFile)) {
 			// Articles and galleys.
-			$articleAbstract = $article->getAbstract($primaryObjectLocale);
-			if (empty($articleAbstract)) $articleAbstract = $article->getLocalizedAbstract();
+			$articleAbstract = $this->getPrimaryTranslation($article->getAbstract(null), $objectLocalePrecedence);
 			if (!empty($articleAbstract)) $descriptions[DATACITE_DESCTYPE_ABSTRACT] = $articleAbstract;
 		}
 
 		if (isset($suppFile)) {
 			// Supp files.
-			$suppFileDesc = $suppFile->getDescription($primaryObjectLocale);
-			if (empty($suppFileDesc)) $suppFileDesc = $suppFile->getSuppFileDescription();
+			$suppFileDesc = $this->getPrimaryTranslation($suppFile->getDescription(null), $objectLocalePrecedence);
 			if (!empty($suppFileDesc)) $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
 		}
 
 		if (isset($article)) {
 			// Articles, galleys and supp files.
-			$descriptions[DATACITE_DESCTYPE_SERIESINFO] = $this->_getIssueInformation($issue, $primaryObjectLocale);
+			$descriptions[DATACITE_DESCTYPE_SERIESINFO] = $this->_getIssueInformation($issue, $objectLocalePrecedence);
 		} else {
 			// Issues.
-			$issueDesc = $issue->getDescription($primaryObjectLocale);
-			if (empty($issueDesc)) $issueDesc = $issue->getLocalizedDescription();
+			$issueDesc = $this->getPrimaryTranslation($issue->getDescription(null), $objectLocalePrecedence);
 			if (!empty($issueDesc)) $descriptions[DATACITE_DESCTYPE_OTHER] = $issueDesc;
-			$descriptions[DATACITE_DESCTYPE_TOC] = $this->_getIssueToc($articlesByIssue, $primaryObjectLocale);
+			$descriptions[DATACITE_DESCTYPE_TOC] = $this->_getIssueToc($articlesByIssue, $objectLocalePrecedence);
 		}
 
 		$descriptionsElement = null;
@@ -861,23 +841,22 @@ class DataciteExportDom extends DOIExportDom {
 	 * Construct an issue title from the journal title
 	 * and the issue identification.
 	 * @param $issue Issue
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @return array|string An array of localized issue titles
 	 *  or a string if a locale has been given.
 	 */
-	function _getIssueInformation(&$issue, $primaryObjectLocale = null) {
+	function _getIssueInformation(&$issue, $objectLocalePrecedence = null) {
 		$issueIdentification = $issue->getIssueIdentification();
 		assert(!empty($issueIdentification));
 
 		$journal =& $this->getJournal();
-		if (is_null($primaryObjectLocale)) {
+		if (is_null($objectLocalePrecedence)) {
 			$issueInfo = array();
 			foreach ($journal->getTitle(null) as $locale => $journalTitle) {
 				$issueInfo[$locale] = "$journalTitle, $issueIdentification";
 			}
 		} else {
-			$issueInfo = $journal->getTitle($primaryObjectLocale);
-			if (empty($issueInfo)) $issueInfo = $journal->getLocalizedTitle();
+			$issueInfo = $this->getPrimaryTranslation($journal->getTitle(null), $objectLocalePrecedence);
 			if (!empty($issueInfo)) {
 				$issueInfo .= ', ';
 			}
@@ -889,14 +868,14 @@ class DataciteExportDom extends DOIExportDom {
 	/**
 	 * Construct a table of content from an article list.
 	 * @param $articlesByIssue
+	 * @param $objectLocalePrecedence array
 	 * @return string
 	 */
-	function _getIssueToc(&$articlesByIssue, $primaryObjectLocale) {
+	function _getIssueToc(&$articlesByIssue, $objectLocalePrecedence) {
 		assert(is_array($articlesByIssue));
 		$toc = '';
 		foreach($articlesByIssue as $articleInIssue) {
-			$currentEntry = $articleInIssue->getTitle($primaryObjectLocale);
-			if (empty($currentEntry)) $currentEntry = $articleInIssue->getLocalizedTitle();
+			$currentEntry = $this->getPrimaryTranslation($articleInIssue->getTitle(null), $objectLocalePrecedence);
 			assert(!empty($currentEntry));
 			$pages = $articleInIssue->getPages();
 			if (!empty($pages)) {
