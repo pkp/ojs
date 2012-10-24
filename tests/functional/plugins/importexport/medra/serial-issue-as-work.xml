@@ -25,13 +25,13 @@
 		</WorkIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="00" language="ger">
-					<TitleType>01</TitleType>
-					<TitleText>test-de</TitleText>
-				</Title>
 				<Title textformat="00" language="eng">
 					<TitleType>01</TitleType>
 					<TitleText>test</TitleText>
+				</Title>
+				<Title textformat="00" language="ger">
+					<TitleType>01</TitleType>
+					<TitleText>test-de</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -77,11 +77,11 @@
 		</JournalIssue>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="00" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
+			<Text textformat="00" language="eng">Issue description</Text>
 		</OtherText>
 		<OtherText>
 			<TextTypeCode>01</TextTypeCode>
-			<Text textformat="00" language="eng">Issue description</Text>
+			<Text textformat="00" language="ger">Dies ist dieselbe Ausgabe in deutsch.</Text>
 		</OtherText>
 		<!-- Includes articles-as-work -->
 		<RelatedWork>
