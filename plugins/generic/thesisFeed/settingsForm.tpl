@@ -18,7 +18,13 @@
 
 <h3>{translate key="plugins.generic.thesisfeed.settings"}</h3>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesisFeedSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesisFeedSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <script type="text/javascript">

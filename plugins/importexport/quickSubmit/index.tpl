@@ -39,6 +39,12 @@ function updateAbstractRequired() {
 
 <p>{translate key="plugins.importexport.quickSubmit.descriptionLong"}</p>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" enctype="multipart/form-data" id="submit" method="post" action="{plugin_url path="saveSubmit"}">
 
 {include file="common/formErrors.tpl"}

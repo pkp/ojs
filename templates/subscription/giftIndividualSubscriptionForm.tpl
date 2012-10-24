@@ -14,6 +14,12 @@
 
 <br/>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#subscriptionGiftForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="subscriptionGiftForm" action="{url op="payPurchaseGiftSubscription"}">
 
 <p>{translate key="gifts.subscriptionFormIntroduction"}</p>

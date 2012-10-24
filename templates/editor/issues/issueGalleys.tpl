@@ -33,7 +33,12 @@
 	<li class="current"><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#issueGalleys').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="issueGalleys" method="post" action="{url op="uploadIssueGalley" path=$issueId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 <div id="issueId">

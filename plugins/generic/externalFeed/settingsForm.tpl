@@ -29,7 +29,13 @@
 	</tr>
 </table>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#externalFeedSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="externalFeedSettingsForm" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 <h4>{translate key="plugins.generic.externalFeed.settings.styleSheet"}</h4>

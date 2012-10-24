@@ -24,6 +24,12 @@ function deleteAttachment(fileId) {
 {/literal}
 </script>
 <div id="genericEmail">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="submit" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 <input type="hidden" name="continued" value="1"/>
 {if $attachmentsEnabled}

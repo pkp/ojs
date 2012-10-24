@@ -14,7 +14,13 @@
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
 <div id="articleContext">
-<form class="pkp_form" action="{plugin_url path="import"}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#articleContextForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="articleContextForm" action="{plugin_url path="import"}" method="post">
 <input type="hidden" name="temporaryFileId" value="{$temporaryFileId|escape}"/>
 
 {translate key="section.section"}&nbsp;&nbsp;
@@ -37,7 +43,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><input {if !$notFirst}checked="checked" {/if}name="issueId" type="radio" value="{$issue->getId()}"/></td>

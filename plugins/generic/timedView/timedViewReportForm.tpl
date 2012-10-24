@@ -11,7 +11,13 @@
 
 <br/>
 
-<form class="pkp_form" method="post" action="{url path='TimedViewReportPlugin'}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reportForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="reportForm" method="post" action="{url path='TimedViewReportPlugin'}">
 	{include file="common/formErrors.tpl"}
 
 	<table class="data" width="100%">
@@ -40,7 +46,13 @@
 <div class="separator"></div>
 
 <h3>{translate key="plugins.generic.timedView.form.clearLogs"}</h3>
-<form class="pkp_form" method="post" action="{url path='TimedViewReportPlugin'}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#clearLogsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="clearLogsForm" method="post" action="{url path='TimedViewReportPlugin'}">
 	<p>{translate key="plugins.generic.timedView.form.clearLogs.description"}</p>
 
 	{html_select_date prefix="dateClear" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}

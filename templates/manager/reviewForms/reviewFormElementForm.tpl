@@ -31,6 +31,12 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 </script>
 
 <br/>
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reviewFormElementForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="reviewFormElementForm" method="post" action="{url op="updateReviewFormElement" anchor="possibleResponses"}">
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>
 	<input type="hidden" name="reviewFormElementId" value="{$reviewFormElementId}"/>

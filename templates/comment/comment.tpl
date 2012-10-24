@@ -39,6 +39,12 @@ function handleAnonymousCheckbox(theBox) {
 {include file="common/formErrors.tpl"}
 {assign var=parentId value=$parentId|default:"0"}
 <div id="commentForm">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">

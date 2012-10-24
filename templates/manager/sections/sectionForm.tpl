@@ -12,7 +12,12 @@
 {assign var="pageCrumbTitle" value="section.section"}
 {include file="common/header.tpl"}
 {/strip}
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#section').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
 <input type="hidden" name="editorAction" value="" />
 <input type="hidden" name="userId" value="" />
@@ -130,7 +135,7 @@ function checkEditorAssignments() {
 <tr valign="top">
 	<td class="label">{fieldLabel key="manager.sections.wordCount"}</td>
 	<td class="value">
-		{fieldLabel name="wordCount" key="manager.sections.wordCountInstructions"}&nbsp;&nbsp;<input type="text" name="wordCount" id="abbrev" value="{$wordCount}" size="10" maxlength="20" class="textField" />
+		{fieldLabel name="wordCount" key="manager.sections.wordCountInstructions"}&nbsp;&nbsp;<input type="text" name="wordCount" id="wordCount" value="{$wordCount}" size="10" maxlength="20" class="textField" />
 	</td>
 </tr>
 <tr valign="top">

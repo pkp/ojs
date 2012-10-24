@@ -16,7 +16,13 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="emailTemplateForm">
-<form class="pkp_form" method="post" action="{url op="updateEmail"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submitForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="submitForm" method="post" action="{url op="updateEmail"}">
 <input type="hidden" name="emailId" value="{$emailId|escape}" />
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
 {if !$isNewTemplate}

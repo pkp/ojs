@@ -61,7 +61,13 @@
 </tr>
 </table>
 
-<form class="pkp_form" method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#editorDecisionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="editorDecisionForm" method="post" action="{url op="editorReview"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$submission->getId()}" />
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($round)}

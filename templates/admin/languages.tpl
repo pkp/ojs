@@ -12,7 +12,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form class="pkp_form" method="post" action="{url op="saveLanguageSettings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#languagesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="languagesForm" method="post" action="{url op="saveLanguageSettings"}">
 <div id="languageSettings">
 <h3>{translate key="admin.languages.languageSettings"}</h3>
 

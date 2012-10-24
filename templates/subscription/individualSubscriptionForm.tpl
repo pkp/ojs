@@ -21,7 +21,12 @@
 {/strip}
 
 <br/>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#subscriptionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="subscriptionForm" action="{url op="updateSubscription" path="individual"}">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />

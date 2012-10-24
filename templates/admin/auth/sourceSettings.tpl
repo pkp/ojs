@@ -14,7 +14,13 @@
 
 <br />
 <div id="sourceSettings">
-<form class="pkp_form" method="post" action="{url op="updateAuthSource" path=$authId}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#sourceSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="sourceSettingsForm" method="post" action="{url op="updateAuthSource" path=$authId}">
 
 <table class="data" width="100%">
 	<tr valign="top">

@@ -12,6 +12,12 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reviewerForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="reviewerForm" action="{url op="createReviewer" path=$articleId|to_array:"create"}">
 
 {include file="common/formErrors.tpl"}

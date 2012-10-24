@@ -11,8 +11,13 @@
 {assign var="pageTitle" value="rt.admin.sharing"}
 {include file="common/header.tpl"}
 {/strip}
-
-<form class="pkp_form" method="post" action='{url op="saveSharingSettings"}'>
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#addThisForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="addThisForm" method="post" action='{url op="saveSharingSettings"}'>
 
 <p>{translate key="rt.admin.sharing.description"}</p>
 
@@ -71,7 +76,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value='{translate key="common.save"}' class="button defaultButton" /> 
+<p><input type="submit" value='{translate key="common.save"}' class="button defaultButton" />
 <input type="button" value='{translate key="common.cancel"}' class="button" onclick="document.location.href='{url page=rtadmin escape=false}'" />
 </p>
 

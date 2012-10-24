@@ -17,6 +17,12 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#suppFile').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="suppFile" method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 <input type="hidden" name="from" value="{$from|escape}" />
@@ -119,7 +125,7 @@
 <div id="supplementaryFileUpload">
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
-<table id="suppFile" class="data">
+<table id="suppFileTable" class="data">
 {if $suppFile && $suppFile->getRemoteURL()}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
@@ -161,7 +167,7 @@
 
 	<br />
 
-	<table id="showReviewers" width="100%" class="data">
+	<table id="showReviewersTable" width="100%" class="data">
 		<tr valign="top">
 			<td class="label">
 				{if $suppFile && $suppFile->getFileId()}

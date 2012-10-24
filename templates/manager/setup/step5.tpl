@@ -89,7 +89,12 @@ function prepBlockFields() {
 // -->
 {/literal}
 </script>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="5"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 

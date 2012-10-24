@@ -19,7 +19,13 @@
 
 <h3>{translate key="plugins.generic.xmlGalley.manager.settings"}</h3>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#xmlGalleySettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="xmlGalleySettingsForm" method="post" action="{plugin_url path="settings"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 {if $testSuccess}

@@ -12,7 +12,13 @@
 
 <table class="data" width="100%">
 {if !$publicationFeeEnabled || $publicationPayment}
-	<form class="pkp_form" action="{url op="scheduleForPublication" path=$submission->getId()}" method="post">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#schedulingForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="schedulingForm" action="{url op="scheduleForPublication" path=$submission->getId()}" method="post">
 		<tr valign="top">
 			<td width="25%" class="label">
 				<label for="issueId">{translate key="editor.article.scheduleForPublication"}</label>
@@ -41,7 +47,13 @@
 		</tr>
 	</form>
 	{if $publishedArticle}
-		<form class="pkp_form" action="{url op="setDatePublished" path=$submission->getId()}" method="post">
+		<script type="text/javascript">
+			$(function() {ldelim}
+				// Attach the form handler.
+				$('#setDatePublishedForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+			{rdelim});
+		</script>
+		<form class="pkp_form" id="setDatePublishedForm" action="{url op="setDatePublished" path=$submission->getId()}" method="post">
 			<tr valign="top">
 				<td width="20%" class="label">
 					<label for="issueId">{translate key="editor.issues.published"}</label>
@@ -70,7 +82,13 @@
 	<tr>
 		<td>{translate key="editor.article.payment.publicationFeeNotPaid"}</td>
 		<td align="right">
-			<form class="pkp_form" action="{url op="waivePublicationFee" path=$submission->getId()}" method="post">
+			<script type="text/javascript">
+				$(function() {ldelim}
+					// Attach the form handler.
+					$('#markAsPaidForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				{rdelim});
+			</script>
+			<form class="pkp_form" id="markAsPaidForm" action="{url op="waivePublicationFee" path=$submission->getId()}" method="post">
 			<input type="hidden" name="markAsPaid" value=1 />
 			<input type="hidden" name="sendToScheduling" value=1 />
 			<input type="submit" value="{translate key="payment.paymentReceived"}" class="button defaultButton" />&nbsp;
@@ -78,11 +96,17 @@
 		</td>
 		{if $isEditor}
 			<td align="left">
-				<form class="pkp_form" action="{url op="waivePublicationFee" path=$submission->getId()}" method="post">
+				<script type="text/javascript">
+					$(function() {ldelim}
+						// Attach the form handler.
+						$('#waiveFeeForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+					{rdelim});
+				</script>
+				<form class="pkp_form" id="waiveFeeForm" action="{url op="waivePublicationFee" path=$submission->getId()}" method="post">
 					<input type="hidden" name="sendToScheduling" value=1 />
 					<input type="submit" value="{translate key="payment.waive"}" class="button defaultButton" />&nbsp;
 				</form>
-			</td>	
+			</td>
 		{/if}
 	</tr>
 {/if}

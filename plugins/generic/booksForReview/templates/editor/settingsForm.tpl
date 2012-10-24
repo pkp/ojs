@@ -24,6 +24,12 @@
 
 <br />
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#booksForReviewSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="booksForReviewSettingsForm" action="{url op="booksForReviewSettings"}">
 {include file="common/formErrors.tpl"}
 

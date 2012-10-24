@@ -13,8 +13,13 @@
 {/strip}
 
 <br />
-
-<form class="pkp_form" method="post" action="{url op="updateAuthSources"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#authSourcesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="authSourcesForm" method="post" action="{url op="updateAuthSources"}">
 
 <div id="sources">
 <table width="100%" class="listing">

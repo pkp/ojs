@@ -15,7 +15,13 @@
 <p>{if !empty($oldUserIds)}{translate key="admin.mergeUsers.into.description"}{else}{translate key="admin.mergeUsers.from.description"}{/if}</p>
 <div id="roles">
 <h3>{translate key=$roleName}</h3>
-<form class="pkp_form" method="post" action="{url path=$roleSymbolic oldUserIds=$oldUserIds}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#mergeUserForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="mergeUserForm" method="post" action="{url path=$roleSymbolic oldUserIds=$oldUserIds}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected="selected" {/if}value="all">{translate key="admin.mergeUsers.allUsers"}</option>
 		<option {if $roleSymbolic=='managers'}selected="selected" {/if}value="managers">{translate key="user.role.managers"}</option>

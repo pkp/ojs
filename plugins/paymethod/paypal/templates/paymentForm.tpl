@@ -13,6 +13,12 @@
 
 <p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 <p>{translate key="plugins.paymethod.paypal.warning"}</p>
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#paypalPaymentForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" action="{$paypalFormUrl}" id="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
 	{include file="common/formErrors.tpl"}
 	{if $params.item_name}

@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Displays the notification settings page and unchecks  
+ * Displays the notification settings page and unchecks
  *
  *}
 {strip}
@@ -28,7 +28,12 @@
 {if $success}
 	<p><span class="formSuccess">{translate key="$success"}</span></p>
 {/if}
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#notificationSettings').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
 
 <table class="data" width="100%">

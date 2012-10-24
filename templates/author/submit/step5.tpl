@@ -11,8 +11,13 @@
 {include file="author/submit/submitHeader.tpl"}
 
 <p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getLocalizedTitle()}</p>
-
-<form class="pkp_form" method="post" action="{url op="saveSubmit" path=$submitStep}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submitForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="submitForm" method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -77,7 +82,7 @@
 					<textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea">{$commentsToEditor|escape}</textarea>
 				</td>
 			</tr>
-		</table> 
+		</table>
 	{/if}
 
 	<div class="separator"></div>

@@ -27,6 +27,12 @@
 
 <div id="articles">
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#articlesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" action="{plugin_url path="exportArticles"}" method="post" id="articlesForm">
 		<table width="100%" class="listing">
 			<tr>

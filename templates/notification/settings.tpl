@@ -13,7 +13,12 @@
 {/strip}
 
 <p>{translate key="notification.settingsDescription"}</p>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#notificationSettings').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSettings"}">
 
 <!-- Submission events -->

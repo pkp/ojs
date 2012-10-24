@@ -20,7 +20,12 @@
 {/if}
 
 <br/>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reviewFormForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="reviewFormForm" method="post" action="{url op="updateReviewForm"}">
 {if $reviewFormId}
 	<input type="hidden" name="reviewFormId" value="{$reviewFormId}"/>

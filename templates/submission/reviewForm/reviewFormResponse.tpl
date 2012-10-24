@@ -26,6 +26,12 @@
 <h3>{$reviewForm->getLocalizedTitle()}</h3>
 <p>{$reviewForm->getLocalizedDescription()}</p>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#saveReviewFormResponse').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="saveReviewFormResponse" method="post" action="{url op="saveReviewFormResponse" path=$reviewId|to_array:$reviewForm->getId()}">
 	{foreach from=$reviewFormElements name=reviewFormElements key=elementId item=reviewFormElement}
 		<p>{$reviewFormElement->getLocalizedQuestion()} {if $reviewFormElement->getRequired() == 1}*{/if}</p>

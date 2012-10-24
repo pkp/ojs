@@ -9,7 +9,13 @@
  *}
 <div id="editors">
 <h3>{translate key="user.role.editors"}</h3>
-<form class="pkp_form" action="{url page="editor" op="setEditorFlags"}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#editorForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="editorForm" action="{url page="editor" op="setEditorFlags"}" method="post">
 <input type="hidden" name="articleId" value="{$submission->getId()}"/>
 <table width="100%" class="listing">
 	<tr class="heading" valign="bottom">

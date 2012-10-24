@@ -19,6 +19,12 @@
 
 <br/>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#externalFeed').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="externalFeed" method="post" action="{plugin_url path="update"}">
 {if $feedId}
 <input type="hidden" name="feedId" value="{$feedId|escape}" />

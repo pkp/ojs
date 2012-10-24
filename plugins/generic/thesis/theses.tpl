@@ -28,7 +28,13 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<form class="pkp_form" method="post" action="{plugin_url path="theses"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesesForm" method="post" action="{plugin_url path="theses"}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

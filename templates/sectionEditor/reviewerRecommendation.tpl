@@ -15,8 +15,13 @@
 <h3>{translate key="editor.article.enterReviewerRecommendation"}</h3>
 
 <br />
-
-<form class="pkp_form" method="post" action="{url op="enterReviewerRecommendation"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#recomendationForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="recommendationForm" method="post" action="{url op="enterReviewerRecommendation"}">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 <input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 <table width="100%" class="data">

@@ -15,12 +15,18 @@
 {/strip}
 <div id="abntCitationSettings">
 <div id="description">{translate key="plugins.citationFormats.abnt.manager.settings.description"}</div>
- 
+
 <div class="separator"></div>
 
 <br />
 
-<form class="pkp_form" name="setupForm" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" name="setupForm" id="setupForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}

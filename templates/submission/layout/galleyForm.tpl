@@ -15,7 +15,13 @@
 
 <br />
 
-<form class="pkp_form" method="post" action="{url op="saveGalley" path=$articleId|to_array:$galleyId}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#galleyForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="galleyForm" method="post" action="{url op="saveGalley" path=$articleId|to_array:$galleyId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 <div id="galleyFileData">
 <p>{translate key="submission.layout.galleyFileData"}</p>

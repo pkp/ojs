@@ -12,7 +12,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<form class="pkp_form" name="submit" method="post" action="{url op="addMembership" path=$group->getId()}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" name="submit" id="submit" method="post" action="{url op="addMembership" path=$group->getId()}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

@@ -16,7 +16,13 @@
 <div id="metsGatewaySettings">
 <h3>{translate key="plugins.gateways.metsGateway.settings"}</h3>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#metsGatewayForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="metsGatewayForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">

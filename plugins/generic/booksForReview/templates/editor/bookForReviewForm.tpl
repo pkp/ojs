@@ -18,6 +18,12 @@
 
 <br/>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#bookForReviewForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="bookForReviewForm" method="post" action="{url op="updateBookForReview"}" enctype="multipart/form-data">
 {if $bookId}
 <input type="hidden" name="bookId" value="{$bookId|escape}" />

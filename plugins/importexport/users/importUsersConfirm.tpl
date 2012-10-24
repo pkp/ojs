@@ -13,7 +13,13 @@
 {/strip}
 <div id="importUsersConfirm">
 {translate key="plugins.importexport.users.import.confirmUsers"}:
-<form class="pkp_form" action="{plugin_url path="import"}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#confirmForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="confirmForm" action="{plugin_url path="import"}" method="post">
 {if $sendNotify}
 	<input type="hidden" name="sendNotify" value="{$sendNotify|escape}" />
 {/if}

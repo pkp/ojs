@@ -14,6 +14,12 @@
 <div id="editEmail">
 <p>{translate key="plugins.generic.translator.email.description"}</p>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#editor').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" action="{url op="saveEmail" path=$locale|to_array:$emailKey}" id="editor">
 <input type="hidden" name="returnToCheck" value="{$returnToCheck|default:0}" />
 <div id="reference">

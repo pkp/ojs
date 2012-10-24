@@ -9,7 +9,12 @@
  *}
 {assign var="pageTitle" value="manager.setup.journalPolicies"}
 {include file="manager/setup/setupHeader.tpl"}
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="2"}">
 {include file="common/formErrors.tpl"}
 

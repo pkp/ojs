@@ -29,7 +29,13 @@ function toggleChecked() {
 <br/>
 
 <div id="issues">
-<form class="pkp_form" action="{plugin_url path="importIssues"}" method="post" id="issues">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#issuesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" action="{plugin_url path="importIssues"}" method="post" id="issuesForm">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

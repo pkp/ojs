@@ -17,7 +17,13 @@
 <br/>
 <br/>
 
-<form class="pkp_form" method="post" action="{url op="save"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesisForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesisForm" method="post" action="{url op="save"}">
 
 {include file="common/formErrors.tpl"}
 <div id="general">

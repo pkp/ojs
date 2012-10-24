@@ -16,7 +16,13 @@
 
 <div class="separator">&nbsp;</div>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#swordSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="swordSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="plugins.generic.sword.settings"}</h3>

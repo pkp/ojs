@@ -78,7 +78,14 @@
 	<tr>
 		<td class="label">{translate key="section.section"}</td>
 		<td class="value">{$submission->getSectionTitle()|escape}</td>
-		<td class="value"><form class="pkp_form" action="{url op="updateSection" path=$submission->getId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
+		<td class="value">
+		<script type="text/javascript">
+			$(function() {ldelim}
+				// Attach the form handler.
+				$('#updateSectionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+			{rdelim});
+		</script>
+		<form class="pkp_form" id="updateSectionForm" action="{url op="updateSection" path=$submission->getId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
 	</tr>
 	{if $submission->getCommentsToEditor()}
 	<tr valign="top">

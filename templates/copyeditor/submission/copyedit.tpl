@@ -54,7 +54,13 @@
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<form class="pkp_form" method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
+			<script type="text/javascript">
+				$(function() {ldelim}
+					// Attach the form handler.
+					$('#uploadCopyeditVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				{rdelim});
+			</script>
+			<form class="pkp_form" id="uploadCopyeditVersionForm" method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getId()}" />
 				<input type="hidden" name="copyeditStage" value="initial" />
 				<input type="file" name="upload"{if not $initialCopyeditSignoff->getDateNotified() or $initialCopyeditSignoff->getDateCompleted()} disabled="disabled"{/if} class="uploadField" />

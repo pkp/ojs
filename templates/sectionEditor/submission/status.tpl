@@ -42,7 +42,14 @@
 	<tr>
 		<td class="label">{translate key="comments.readerComments"}</td>
 		<td class="value">{translate key=$submission->getCommentsStatusString()}</td>
-		<td class="value"><form class="pkp_form" action="{url op="updateCommentsStatus" path=$submission->getId()}" method="post">{translate key="submission.changeComments"} <select name="commentsStatus" size="1" class="selectMenu">{html_options_translate options=$commentsStatusOptions selected=$submission->getCommentsStatus()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
+		<td class="value">
+			<script type="text/javascript">
+				$(function() {ldelim}
+					// Attach the form handler.
+					$('#updateCommentStatusForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				{rdelim});
+			</script>
+			<form class="pkp_form" id="updateCommentStatusForm" action="{url op="updateCommentsStatus" path=$submission->getId()}" method="post">{translate key="submission.changeComments"} <select name="commentsStatus" size="1" class="selectMenu">{html_options_translate options=$commentsStatusOptions selected=$submission->getCommentsStatus()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
 	</tr>
 {/if}
 </table>

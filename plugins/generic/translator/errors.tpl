@@ -19,7 +19,13 @@
 
 <br/>
 
-<form class="pkp_form" action="{url op="saveLocaleChanges" path=$locale}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#errorsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="errorsForm" action="{url op="saveLocaleChanges" path=$locale}" method="post">
 <input type="hidden" name="redirectUrl" value="{url page="translate"}" />
 
 {if $error}

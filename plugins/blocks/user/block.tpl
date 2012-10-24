@@ -29,7 +29,13 @@
 		{if $implicitAuth}
 			<a href="{url page="login" op="implicitAuthLogin"}">Journals Login</a>
 		{else}
-			<form class="pkp_form" method="post" action="{$userBlockLoginUrl}">
+			<script type="text/javascript">
+				$(function() {ldelim}
+					// Attach the form handler.
+					$('#userBlockForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				{rdelim});
+			</script>
+			<form class="pkp_form" id="userBlockForm" method="post" action="{$userBlockLoginUrl}">
 				<table>
 					<tr>
 						<td><label for="sidebar-username">{translate key="user.username"}</label></td>

@@ -18,8 +18,13 @@
 </ul>
 
 <br />
-
-<form class="pkp_form" name="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#paymentSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" name="paymentSettingsForm" id="paymentSettingsForm" method="post" action="{url op="savePaymentSettings"}">
 {if count($formLocales) > 1}
 <div id="locales">
 <table width="100%" class="data">

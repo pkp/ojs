@@ -15,8 +15,13 @@
 <h3>{translate key="editor.article.designateDueDate"}</h3>
 
 <p>{translate key="editor.article.designateDueDateDescription"}</p>
-
-<form class="pkp_form" method="post" action="{url op=$actionHandler path=$articleId|to_array:$reviewId}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#setDueDateForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="setDueDateForm" method="post" action="{url op=$actionHandler path=$articleId|to_array:$reviewId}">
 	<table class="data" width="100%">
 		<tr valign="top">
 			<td class="label" width="20%">{translate key="editor.article.todaysDate"}</td>

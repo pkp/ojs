@@ -55,6 +55,12 @@ function changeDepositPoint() {
 </script>
 
 <br/>
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#articles').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" action="{plugin_url path="deposit"}" method="post" id="articles">
 
 <div id="settings">

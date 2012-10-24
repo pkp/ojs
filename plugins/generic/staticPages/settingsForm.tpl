@@ -17,7 +17,13 @@
 <br />
 <br />
 
-<form class="pkp_form" method="post" action="{plugin_url path="edit"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#staticPagesSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="staticPagesSettingsForm" method="post" action="{plugin_url path="edit"}">
 
 {include file="common/formErrors.tpl"}
 

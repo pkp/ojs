@@ -14,7 +14,13 @@
 {/strip}
 
 <div id="notifyUsers">
-<form class="pkp_form" method="post" action="{$formActionUrl}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#notifyForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="notifyForm" method="post" action="{$formActionUrl}">
 <input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
@@ -41,7 +47,7 @@
 	<br/>
 {/if}
 
-<div id="recipients">
+<div id="recipientsDiv">
 <h3>{translate key="email.recipients"}</h3>
 <table id="recipients" class="data" width="100%">
 <tr valign="top">
@@ -89,7 +95,7 @@
 
 <br/>
 
-<div id="issue">
+<div id="issueContainer">
 <h3>{translate key="issue.issue"}</h3>
 <table class="data" width="100%">
 <tr valign="top">

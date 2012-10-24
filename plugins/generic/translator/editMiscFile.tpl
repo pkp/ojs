@@ -13,6 +13,12 @@
 {/strip}
 
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#editor').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" action="{url op="saveMiscFile" path=$locale|to_array:$filenameEscaped}" id="editor">
 <div id="contact">
 <h3>{translate key="plugins.generic.translator.file.reference"}</h3>

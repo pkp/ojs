@@ -19,7 +19,13 @@
 
 <br/>
 
-<form class="pkp_form" method="post" action="{plugin_url path="update"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesisForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesisForm" method="post" action="{plugin_url path="update"}">
 {if $thesisId}
 <input type="hidden" name="thesisId" value="{$thesisId|escape}" />
 {/if}

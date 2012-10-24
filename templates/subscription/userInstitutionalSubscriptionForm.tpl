@@ -15,6 +15,12 @@
 
 <br/>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#subscriptionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 {if $subscriptionId}
 <form class="pkp_form" method="post" id="subscriptionForm" action="{url op="payPurchaseSubscription" path="institutional"|to_array:$subscriptionId}">
 {else}

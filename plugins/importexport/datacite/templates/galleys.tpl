@@ -26,6 +26,12 @@
 <br/>
 
 <div id="galleys">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#galleysForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" action="{plugin_url path="exportGalleys"}" method="post" id="galleysForm">
 		<table width="100%" class="listing">
 			<tr>

@@ -15,8 +15,13 @@
 <h3>{translate key="manager.people.syncUsers"}</h3>
 
 <p><span class="instruct">{translate key="manager.people.syncUserDescription"}</span></p>
-
-<form class="pkp_form" method="post" action="{url op="enrollSync"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#enrollSyncForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="enrollSyncForm" method="post" action="{url op="enrollSync"}">
 
 <table class="data" width="100%">
 	<tr valign="top">

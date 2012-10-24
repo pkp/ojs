@@ -19,7 +19,13 @@
 	{plugin_url|assign:duracloudLogoutUrl path="signOut"}
 	<p>{translate key="plugins.importexport.duracloud.configuration.configured.description" url=$duracloudUrl escapedUrl=$duracloudUrl|escape username=$duracloudUsername logoutUrl=$duracloudLogoutUrl}</p>
 
-	<form class="pkp_form" action="{plugin_url path="selectSpace"}" method="post">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#selectSpaceForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="selectSpaceForm" action="{plugin_url path="selectSpace"}" method="post">
 		{fieldLabel name=duracloudSpace key="plugins.importexport.duracloud.configuration.space"}&nbsp;&nbsp;
 		<select name="duracloudSpace" id="duracloudSpace" class="selectMenu">
 				<option disabled="disabled" {if $duracloudSpace == ""}selected="selected" {/if}/>
@@ -39,7 +45,13 @@
 	{/if}{* $duracloudSpace is valid *}
 
 {else}{* The plugin has not been configured; display the login form. *}
-	<form class="pkp_form" action="{plugin_url path="signIn"}" method="post">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#duraLoginForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="duraLoginForm" action="{plugin_url path="signIn"}" method="post">
 		{include file="common/formErrors.tpl"}
 		<table width="100%" class="data">
 			<tr valign="top">

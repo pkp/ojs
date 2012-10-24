@@ -19,7 +19,13 @@
 
 <br/>
 
-<form class="pkp_form" name="referral" method="post" action="{url op="updateReferral"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#referral').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" name="referral" id="referral" method="post" action="{url op="updateReferral"}">
 {if $referralId}
 <input type="hidden" name="referralId" value="{$referralId|escape}" />
 {/if}

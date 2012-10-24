@@ -55,6 +55,12 @@ function SubmitIfAnyIsChecked() {
 {/literal}
 </script>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#issues').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" action="{plugin_url path="exportIssues"}" method="post" id="issues">
 
 <h3>{translate key="plugins.importexport.METSExport.settings"}</h3>

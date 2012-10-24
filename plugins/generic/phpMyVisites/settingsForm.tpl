@@ -18,7 +18,13 @@
 
 <br />
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#phpMyVisitesSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="phpMyVisitesSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">

@@ -32,7 +32,12 @@ function changePaymentMethod() {
 	{/literal}
 // -->
 </script>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#paymentSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="paymentSettingsForm" action="{url op="savePayMethodSettings"}">
 
 <p>{translate key="manager.payment.paymentMethod.description"}</p>

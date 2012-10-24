@@ -18,7 +18,13 @@
 
 <ul class="plain">
 	<li>
-		<form class="pkp_form" action="{plugin_url path="exportByRole"}" method="post">
+		<script type="text/javascript">
+			$(function() {ldelim}
+				// Attach the form handler.
+				$('#exportByRoleForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+			{rdelim});
+		</script>
+		<form class="pkp_form" id="exportByRoleForm" action="{plugin_url path="exportByRole"}" method="post">
 			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
@@ -36,7 +42,13 @@
 <div id="importUsers">
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
-<form class="pkp_form" action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#exportUsersForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="exportUsersForm" action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
 
 <p>{translate key="plugins.importexport.users.import.instructions"}</p>
 

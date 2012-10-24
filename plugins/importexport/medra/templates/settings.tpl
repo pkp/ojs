@@ -19,7 +19,13 @@
 
 	<br />
 
-	<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#medraSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="medraSettingsForm" method="post" action="{plugin_url path="settings"}">
 		<table width="100%" class="data">
 			<tr valign="top">
 				<td width="20%" class="label">{fieldLabel name="registrantName" required="true" key="plugins.importexport.medra.settings.form.registrantName"}</td>

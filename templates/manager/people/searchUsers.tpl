@@ -44,6 +44,12 @@ function toggleChecked() {
 </script>
 
 {if not $omitSearch}
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" method="post" id="submit" action="{url op="enrollSearch"}">
 	<input type="hidden" name="roleId" value="{$roleId|escape}"/>
 		<select name="searchField" size="1" class="selectMenu">
@@ -60,7 +66,13 @@ function toggleChecked() {
 	<p>{foreach from=$alphaList item=letter}<a href="{url op="enrollSearch" searchInitial=$letter roleId=$roleId}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="enrollSearch" roleId=$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 {/if}
 
-<form class="pkp_form" id="enroll" onsubmit="return enrollUser(0)" action="{if $roleId}{url op="enroll" path=$roleId}{else}{url op="enroll"}{/if}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#enrollForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="enrollForm" onsubmit="return enrollUser(0)" action="{if $roleId}{url op="enroll" path=$roleId}{else}{url op="enroll"}{/if}" method="post">
 {if !$roleId}
 	<p>
 	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1"  class="selectMenu">

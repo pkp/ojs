@@ -19,7 +19,13 @@
 
 	<br />
 
-	<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#dataciteSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="dataciteSettingsForm" method="post" action="{plugin_url path="settings"}">
 		<table width="100%" class="data">
 			<tr valign="top">
 				<td colspan="2">

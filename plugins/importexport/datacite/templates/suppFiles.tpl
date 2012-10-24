@@ -26,6 +26,12 @@
 <br/>
 
 <div id="suppFiles">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#suppFilesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" action="{plugin_url path="exportSuppFiles"}" method="post" id="suppFilesForm">
 		<table width="100%" class="listing">
 			<tr>

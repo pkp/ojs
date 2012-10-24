@@ -15,7 +15,13 @@
 <p>{if !empty($oldUserIds)}{translate key="manager.people.mergeUsers.into.description"}{else}{translate key="manager.people.mergeUsers.from.description"}{/if}</p>
 <div id="roles">
 <h3>{translate key=$roleName}</h3>
-<form class="pkp_form" method="post" action="{url path=$roleSymbolic oldUserIds=$oldUserIds}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#selectMergeUserForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="selectMergeUserForm" method="post" action="{url path=$roleSymbolic oldUserIds=$oldUserIds}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected="selected" {/if}value="all">{translate key="manager.people.allUsers"}</option>
 		<option {if $roleSymbolic=='managers'}selected="selected" {/if}value="managers">{translate key="user.role.managers"}</option>
@@ -80,7 +86,13 @@
 {else}
 	{* Selecting user(s) to merge; include checkboxes on LHS *}
 	{assign var="numCols" value=5}
-	<form class="pkp_form" method="post" action="{url}">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#oldUserIdsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
+	<form class="pkp_form" id="oldUserIdsForm" method="post" action="{url}">
 {/if}
 <table width="100%" class="listing">
 	<tr>

@@ -12,6 +12,12 @@
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#simpleSearchForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
 		<table id="simpleSearchInput">
 			<tr>

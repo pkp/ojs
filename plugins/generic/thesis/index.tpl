@@ -24,7 +24,13 @@
 <br />
 <br />
 
-<form class="pkp_form" method="post" action="{url path="thesis"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesisIndexForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesisIndexForm" method="post" action="{url path="thesis"}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>

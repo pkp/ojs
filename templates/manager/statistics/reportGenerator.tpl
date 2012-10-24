@@ -10,8 +10,13 @@
 <div id="statistics">
 <h3>{translate key="manager.statistics.reports"}</h3>
 <p>{translate key="manager.statistics.reports.description"}</p>
-
-<form class="pkp_form" method="post" action="{url op="reportGenerator"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reportForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="reportForm" method="post" action="{url op="reportGenerator"}">
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="25%" class="label">{translate key="manager.statistics.reports.reportType"}</td>

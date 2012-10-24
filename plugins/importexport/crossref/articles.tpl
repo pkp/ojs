@@ -17,7 +17,7 @@
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.getElementById('articles').elements;
+	var elements = document.getElementById('articlesForm').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'articleId[]') {
 			elements[i].checked = !elements[i].checked;
@@ -31,7 +31,13 @@ function toggleChecked() {
 <br/>
 
 <div id="articles">
-<form class="pkp_form" action="{plugin_url path="exportArticles"}" method="post" id="articles">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#articlesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" action="{plugin_url path="exportArticles"}" method="post" id="articlesForm">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

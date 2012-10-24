@@ -16,7 +16,13 @@
 {translate key="plugins.generic.sword.authorDepositDescription" submissionTitle=$article->getLocalizedTitle()}
 
 <div id="depositPoints">
-<form class="pkp_form" method="post" action="{url path="index" path=$article->getId()|to_array:"save"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#authorDepositForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="authorDepositForm" method="post" action="{url path="index" path=$article->getId()|to_array:"save"}">
 
 {include file="common/formErrors.tpl"}
 

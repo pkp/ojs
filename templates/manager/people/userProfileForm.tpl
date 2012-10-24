@@ -71,7 +71,12 @@
 {/if}
 
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
-
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#userForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
 <input type="hidden" name="source" value="{$source|escape}" />
 {if $userId}

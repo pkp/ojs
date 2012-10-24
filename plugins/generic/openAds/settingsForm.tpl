@@ -18,7 +18,13 @@
 
 <h3>{translate key="plugins.generic.openads.manager.settings"}</h3>
 
-<form class="pkp_form" method="post" action="{url path="generic"|to_array:$pluginName:"settings":"save"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#openAdsSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="openAdsSettingsForm" method="post" action="{url path="generic"|to_array:$pluginName:"settings":"save"}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">

@@ -17,7 +17,13 @@
 <br />
 <br />
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#customBlockSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="customBlockSettingsForm" method="post" action="{plugin_url path="settings"}">
 
 {include file="common/formErrors.tpl"}
 <br />
@@ -35,7 +41,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 {foreach name=blocks from=$blocks key=blockIndex item=block}
 <tr valign="top">
 	<td width="20%" class="value" align="left"><input type="text" class="textField" name="blocks[{$blockIndex|escape}]" id="blocks-{$blockIndex|escape}" value="{$block}" size="20" maxlength="40" /></td>

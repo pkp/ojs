@@ -53,7 +53,7 @@
 	{/if}{* $user->getLocalizedBiography() *}
 </table>
 
-</div>{* id="mainContent" *}
+</div>{* mainContent *}
 
 {include file="common/footer.tpl"}
 

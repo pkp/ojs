@@ -26,6 +26,12 @@
 <br/>
 
 <div id="allUnregistered">
+	<script type="text/javascript">
+		$(function() {ldelim}
+			// Attach the form handler.
+			$('#exportAllForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		{rdelim});
+	</script>
 	<form class="pkp_form" action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
 		<table width="100%" class="listing">
 			<tr>

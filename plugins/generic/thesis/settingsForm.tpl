@@ -31,7 +31,13 @@
 	</tr>
 </table>
 
-<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#thesisSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="thesisSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 <div id="submissionSettings">
 <h4>{translate key="plugins.generic.thesis.settings.submissions"}</h4>

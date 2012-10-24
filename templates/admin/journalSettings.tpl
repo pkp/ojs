@@ -29,6 +29,12 @@ function doSubmit() {
 {/literal}
 </script>
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#journal').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="journal" method="post" action="{url op="updateJournal"}">
 <input type="hidden" name="submitted" value="0" />
 {if $journalId}

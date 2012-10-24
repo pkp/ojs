@@ -10,6 +10,12 @@
 {assign var="pageTitle" value="plugins.generic.customBlock.editContent"}
 {include file="common/header.tpl"}
 <br />
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#editCustomBlockForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" method="post" id="editCustomBlockForm" action="{plugin_url path="save"}" >
 {include file="common/formErrors.tpl"}
 <table class="data" width="100%">

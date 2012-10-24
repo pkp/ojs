@@ -43,7 +43,7 @@
 		</tr>
 	{/if}
 	</table>
-</div>	
+</div>
 <br/>
 
 <a href="{url op="createVersion"}" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>
@@ -53,7 +53,13 @@
 <br/>
 <br/>
 
-<form class="pkp_form" method="post" action="{url op="importVersion"}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#importVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="importVersionForm" method="post" action="{url op="importVersion"}" enctype="multipart/form-data">
 	<input type="file" class="uploadField" name="versionFile" />
 	<input type="submit" class="button" value="{translate key="rt.admin.versions.importVersion"}" />
 </form>

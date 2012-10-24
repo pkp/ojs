@@ -14,8 +14,13 @@
 <h3>{if $galleyId}{translate key="submission.layout.editGalley"}{else}{translate key="submission.layout.addGalley"}{/if}</h3>
 
 <br />
-
-<form class="pkp_form" method="post" action="{url op="saveIssueGalley" path=$issueId|to_array:$galleyId}" enctype="multipart/form-data">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#issueGalleyForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="saveIssueGalley" path=$issueId|to_array:$galleyId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 <div id="galleyFileData">
 <p>{translate key="submission.layout.galleyFileData"}</p>

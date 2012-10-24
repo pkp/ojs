@@ -21,9 +21,9 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 </script>
 
 <ul class="menu">
-        <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-        <li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-        <li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+	<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+	<li class="current"><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
 <br/>
@@ -75,8 +75,13 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 	</tr>
 {/if}
 </table>
-
-<form class="pkp_form" action="{url op="setCurrentIssue"}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#setCurrentIssueForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="setCurrentIssueForm" action="{url op="setCurrentIssue"}" method="post">
 	{translate key="journal.currentIssue"}&nbsp;&nbsp;
 	<select name="issueId" class="selectMenu">
 		<option value="">{translate key="common.none"}</option>

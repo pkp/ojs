@@ -14,6 +14,12 @@
 {/strip}
 <div id="categoryFormDiv">
 
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#categoryForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
 <form class="pkp_form" id="categoryForm" method="post" action="{url op="updateCategory"}">
 {if $category}
 	<input type="hidden" name="categoryId" value="{$category->getId()}"/>

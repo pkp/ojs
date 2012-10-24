@@ -25,7 +25,7 @@ $(document).ready(function() { setupTableDND("#reviewFormElementsTable",
 {literal}
 <!--
 function toggleChecked() {
-	var elements = document.getElementById('reviewFormElements').elements;
+	var elements = document.getElementById('reviewFormElementsForm').elements;
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].name == 'copy[]') {
 			elements[i].checked = !elements[i].checked;
@@ -45,7 +45,13 @@ function toggleChecked() {
 <br/>
 
 <div id="reviewFormElements">
-<form class="pkp_form" id="reviewFormElements" action="{url op="copyReviewFormElement"}" method="post">
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#reviewFormElementsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" id="reviewFormElementsForm" action="{url op="copyReviewFormElement"}" method="post">
 <table width="100%" class="listing" id="reviewFormElementsTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
