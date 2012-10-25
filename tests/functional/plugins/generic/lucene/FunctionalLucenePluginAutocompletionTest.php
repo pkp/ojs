@@ -270,29 +270,5 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 		// the input box.
 		$this->assertValue($searchBox, 'wings');
 	}
-
-
-	//
-	// Private helper methods
-	//
-	/**
-	 * Types a text into an autocomplete box.
-	 * @param $box string the locator of the box
-	 * @param $letters string the text to type
-	 */
-	private function typeText($box, $letters) {
-		$this->focus($box);
-		$currentContent = '';
-		foreach(str_split($letters) as $letter) {
-			// The following hack makes jQueryUI behave as
-			// if typing in letters manually.
-			$currentContent .= $letter;
-			$this->type($box, $currentContent);
-			$this->typeKeys($box, $letter);
-			usleep(500000);
-		}
-		// Fix one more timing problem on the test server:
-		sleep(1);
-	}
 }
 ?>

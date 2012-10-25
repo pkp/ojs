@@ -313,7 +313,7 @@ class Journal extends DataObject {
 	 * @return mixed
 	 */
 	function &getSetting($name, $locale = null) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
 		$setting =& $journalSettingsDao->getSetting($this->getId(), $name, $locale);
 		return $setting;
 	}
@@ -326,7 +326,7 @@ class Journal extends DataObject {
 	 * @param $isLocalized boolean optional
 	 */
 	function updateSetting($name, $value, $type = null, $isLocalized = false) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
 		return $journalSettingsDao->updateSetting($this->getId(), $name, $value, $type, $isLocalized);
 	}
 }
