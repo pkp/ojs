@@ -274,8 +274,8 @@ allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> 
 ; smtp_port = 25
 
 ; Enable SMTP authentication
-; Supported mechanisms: PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5
-; smtp_auth = PLAIN
+; Supported mechanisms: ssl, tls
+; smtp_auth = ssl
 ; smtp_username = username
 ; smtp_password = password
 

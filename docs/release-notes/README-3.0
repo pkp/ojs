@@ -1,0 +1,17 @@
+OJS 3.0 Release Notes
+CVS tag: ojs-3_0_0-0
+Release date: 
+=================================
+
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+Changed config.inc.php parameters:
+	- mail:smtp_auth: The possible values of this setting have changed from
+		PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5 to ssl or tls (or leave
+		unspecified to disable SMTP authentication). See the phpmailer
+		library's documentation for further details.
