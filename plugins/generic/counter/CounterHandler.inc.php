@@ -256,11 +256,11 @@ class CounterHandler extends Handler {
 		header('content-disposition: attachment; filename=counter-' . date('Ymd') . '.csv');
 
 		$fp = fopen('php://output', 'wt');
-		String::fputcsv($fp, array(__('plugins.generic.counter.1a.title1')));
-		String::fputcsv($fp, array(__('plugins.generic.counter.1a.title2', array('year' => $year))));
-		String::fputcsv($fp, array()); // FIXME: Criteria should be here?
-		String::fputcsv($fp, array(__('plugins.generic.counter.1a.dateRun')));
-		String::fputcsv($fp, array(strftime("%Y-%m-%d")));
+		fputcsv($fp, array(__('plugins.generic.counter.1a.title1')));
+		fputcsv($fp, array(__('plugins.generic.counter.1a.title2', array('year' => $year))));
+		fputcsv($fp, array()); // FIXME: Criteria should be here?
+		fputcsv($fp, array(__('plugins.generic.counter.1a.dateRun')));
+		fputcsv($fp, array(strftime("%Y-%m-%d")));
 
 		$cols = array(
 			'',

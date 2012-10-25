@@ -72,7 +72,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 
 		// Columns for individual subscriptions
 		$columns = array(__('subscriptionManager.individualSubscriptions'));
-		String::fputcsv($fp, array_values($columns));
+		fputcsv($fp, array_values($columns));
 
 		$columnsCommon = array(
 			'subscription_id' => __('common.id'),
@@ -98,7 +98,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array_merge($columnsCommon, $columnsIndividual);
 
 		// Write out individual subscription column headings to file
-		String::fputcsv($fp, array_values($columns));
+		fputcsv($fp, array_values($columns));
 
 		// Iterate over individual subscriptions and write out each to file
 		$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByJournalId($journalId);
@@ -133,13 +133,13 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getReferenceNumber();
 						break;
 					case 'notes':
-						$columns[$index] = $this->_html2text($subscription->getNotes());
+						$columns[$index] = String::html2text($subscription->getNotes());
 						break;
 					case 'name':
 						$columns[$index] = $user->getFullName();
 						break;
 					case 'mailing_address':
-						$columns[$index] = $this->_html2text($user->getMailingAddress());
+						$columns[$index] = String::html2text($user->getMailingAddress());
 						break;
 					case 'country':
 						$columns[$index] = $countryDao->getCountry($user->getCountry());
@@ -158,15 +158,15 @@ class SubscriptionReportPlugin extends ReportPlugin {
 				}
 			}
 
-			String::fputcsv($fp, $columns);
+			fputcsv($fp, $columns);
 		}
 
 		// Columns for institutional subscriptions
 		$columns = array('');
-		String::fputcsv($fp, array_values($columns));
+		fputcsv($fp, array_values($columns));
 
 		$columns = array(__('subscriptionManager.institutionalSubscriptions'));
-		String::fputcsv($fp, array_values($columns));
+		fputcsv($fp, array_values($columns));
 
 		$columnsInstitution = array(
 			'institution_name' => __('manager.subscriptions.institutionName'),
@@ -184,7 +184,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array_merge($columnsCommon, $columnsInstitution);
 
 		// Write out institutional subscription column headings to file
-		String::fputcsv($fp, array_values($columns));
+		fputcsv($fp, array_values($columns));
 
 		// Iterate over institutional subscriptions and write out each to file
 		$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByJournalId($journalId);
@@ -219,13 +219,13 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $subscription->getReferenceNumber();
 						break;
 					case 'notes':
-						$columns[$index] = $this->_html2text($subscription->getNotes());
+						$columns[$index] = String::html2text($subscription->getNotes());
 						break;
 					case 'institution_name':
 						$columns[$index] = $subscription->getInstitutionName();
 						break;
 					case 'institution_mailing_address':
-						$columns[$index] = $this->_html2text($subscription->getInstitutionMailingAddress());
+						$columns[$index] = String::html2text($subscription->getInstitutionMailingAddress());
 						break;
 					case 'domain':
 						$columns[$index] = $subscription->getDomain();
@@ -237,7 +237,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = $user->getFullName();
 						break;
 					case 'mailing_address':
-						$columns[$index] = $this->_html2text($user->getMailingAddress());
+						$columns[$index] = String::html2text($user->getMailingAddress());
 						break;
 					case 'country':
 						$columns[$index] = $countryDao->getCountry($user->getCountry());
@@ -256,24 +256,10 @@ class SubscriptionReportPlugin extends ReportPlugin {
 				}
 			}
 
-			String::fputcsv($fp, $columns);
+			fputcsv($fp, $columns);
 		}
 
 		fclose($fp);
-	}
-
-	/**
-	 * Replace HTML "newline" tags (p, li, br) with line feeds. Strip all other tags.
-	 * @param $html String Input HTML string
-	 * @return String Text with replaced and stripped HTML tags
-	 */
-	function _html2text($html) {
-		$html = String::regexp_replace('/<[\/]?p>/', chr(13) . chr(10), $html);
-		$html = String::regexp_replace('/<li>/', '&bull; ', $html);
-		$html = String::regexp_replace('/<\/li>/', chr(13) . chr(10), $html);
-		$html = String::regexp_replace('/<br[ ]?[\/]?>/', chr(13) . chr(10), $html);
-		$html = String::html2utf(strip_tags($html));
-		return $html;
 	}
 
 	/**

@@ -15,3 +15,6 @@ Changed config.inc.php parameters:
 		PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5 to ssl or tls (or leave
 		unspecified to disable SMTP authentication). See the phpmailer
 		library's documentation for further details.
+	- security:allowed_html: The format of this setting has changed for
+		compatibility with HTMLPurifier's HTML.Allowed setting. See
+		config.TEMPLATE.inc.php for a sensible default.

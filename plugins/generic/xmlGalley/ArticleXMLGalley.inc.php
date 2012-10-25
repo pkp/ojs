@@ -176,8 +176,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		}
 
 		// if client encoding is set to iso-8859-1, transcode string to HTML entities
-		// since we transform all XML in utf8 and can't rely on built-in PHP functions
-		if (LOCALE_ENCODING == "iso-8859-1") $contents =& String::utf2html($contents);
+		if (LOCALE_ENCODING == "iso-8859-1") $contents =& html_entity_decode($contents, ENT_COMPAT, 'UTF-8');
 
 		return $contents;
 	}
