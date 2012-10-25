@@ -80,6 +80,7 @@
 		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
 	]]></message>
 	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
+	<message key="plugins.generic.lucene.settings.instantSearch">Instant search (return search results instantly when a user types a search query - obs: uses considerable server resources)</message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
 	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
 	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>

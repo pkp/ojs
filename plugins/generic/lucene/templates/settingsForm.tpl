@@ -154,6 +154,12 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td class="label" align="right"><input type="checkbox" name="instantSearch" id="instantSearch" {if $instantSearch}checked="checked" {/if}/></td>
+		<td class="value">
+			<label for="instantSearch">{translate key="plugins.generic.lucene.settings.instantSearch"}</label>
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label" align="right"><input type="checkbox" name="pullIndexing" id="pullIndexing" {if $pullIndexing}checked="checked" {/if}/></td>
 		<td class="value">
 			<label for="pullIndexing">{translate key="plugins.generic.lucene.settings.pullIndexing"}</label>

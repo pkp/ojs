@@ -731,6 +731,13 @@ class LucenePlugin extends GenericPlugin {
 		$templateMgr->assign('orderBy', $orderBy);
 		$templateMgr->assign('orderDir', $orderDir);
 
+		// Instant search.
+		if ($this->getSetting(0, 'instantSearch')) {
+			$instantSearch = (boolean)$request->getUserVar('instantSearch');
+			$templateMgr->assign('instantSearch', $instantSearch);
+			$templateMgr->assign('instantSearchEnabled', true);
+		}
+
 		return false;
 	}
 
