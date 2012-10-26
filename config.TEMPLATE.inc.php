@@ -373,8 +373,14 @@ page_links = 10
 
 [captcha]
 
-; Whether or not to enable Captcha features
-captcha = off
+; Whether or not to enable ReCaptcha
+recaptcha = off
+
+; Public key for reCaptcha (see http://www.google.com/recaptcha)
+; recaptcha_public_key = your_public_key
+
+; Private key for reCaptcha (see http://www.google.com/recaptcha)
+; recaptcha_private_key = your_private_key
 
 ; Whether or not to use Captcha on user registration
 captcha_on_register = on
@@ -384,18 +390,6 @@ captcha_on_comments = on
 
 ; Whether or not to use Captcha on notification mailing list registration
 captcha_on_mailinglist = on
-
-; Font location for font to use in Captcha images
-font_location = /usr/share/fonts/truetype/freefont/FreeSerif.ttf
-
-; Whether to use reCaptcha instead of default Captcha
-recaptcha = off
-
-; Public key for reCaptcha (see http://www.google.com/recaptcha)
-; recaptcha_public_key = your_public_key
-
-; Private key for reCaptcha (see http://www.google.com/recaptcha)
-; recaptcha_private_key = your_private_key
 
 
 ;;;;;;;;;;;;;;;;;;;;;

@@ -18,3 +18,6 @@ Changed config.inc.php parameters:
 	- security:allowed_html: The format of this setting has changed for
 		compatibility with HTMLPurifier's HTML.Allowed setting. See
 		config.TEMPLATE.inc.php for a sensible default.
+	- captcha:captcha: This option has been deprecated in favour of
+		ReCaptcha. See config.TEMPLATE.inc.php in the [captcha] section
+		for the replacement configuration options.
