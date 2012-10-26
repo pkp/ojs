@@ -260,11 +260,11 @@ class AuthorSubmissionDAO extends DAO {
 		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
 
 		$result =& $this->retrieve($sql, array($journalId, $authorId));
-
+        //07092012 LS adding in logic to get archived/rejected items
 		while (!$result->EOF) {
 			if ($result->fields['status'] != 1) {
 				$submissionsCount[1] += $result->fields[0];
-			} else {
+			}else {
 				$submissionsCount[0] += $result->fields[0];
 			}
 			$result->moveNext();
@@ -274,7 +274,7 @@ class AuthorSubmissionDAO extends DAO {
 		unset($result);
 
 		return $submissionsCount;
-	}
+	}	
 	
 	/**
 	 * Map a column heading value to a database value for sorting
