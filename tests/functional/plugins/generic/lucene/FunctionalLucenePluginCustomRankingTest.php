@@ -97,7 +97,7 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 		// Execute a search that shows four articles from four
 		// different sections and check that they are presented
 		// in the expected order.
-		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3"^1.1 "article 4")');
+		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3" "article 4")');
 		for ($article = 1, $row = 3; $article <= 4; $article++, $row += 4) {
 			$articleTitle = $this->getTable("css=table.listing.$row.1");
 			self::assertEquals("Ranking Test Article $article", $articleTitle);
@@ -107,7 +107,7 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'customranking', true);
 
 		// Re-execute the same search.
-		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3"^1.1 "article 4")');
+		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3" "article 4")');
 
 		// Check that article 4 no longer is in the table;
 		$this->assertNotText('css=table.listing', 'Ranking Test Article 4');

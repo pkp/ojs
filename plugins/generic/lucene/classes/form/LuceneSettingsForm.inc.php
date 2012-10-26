@@ -14,7 +14,7 @@
 
 
 import('lib.pkp.classes.form.Form');
-import('lib.pkp.classes.form.validation.FormValidatorBoolean');
+import('plugins.generic.lucene.classes.EmbeddedServer');
 
 // These are the first few letters of an md5 of '##placeholder##'.
 // FIXME: Any better idea how to prevent a password clash?
@@ -22,15 +22,19 @@ define('LUCENE_PLUGIN_PASSWORD_PLACEHOLDER', '##5ca39841ab##');
 
 class LuceneSettingsForm extends Form {
 
-	/** @var $plugin LucenePlugin */
+	/** @var $_plugin LucenePlugin */
 	var $_plugin;
+
+	/** @var $_embeddedServer EmbeddedServer */
+	var $_embeddedServer;
 
 	/**
 	 * Constructor
 	 * @param $plugin LucenePlugin
 	 */
-	function LuceneSettingsForm(&$plugin) {
+	function LuceneSettingsForm(&$plugin, &$embeddedServer) {
 		$this->_plugin =& $plugin;
+		$this->_embeddedServer =& $embeddedServer;
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// Server configuration.
@@ -46,6 +50,10 @@ class LuceneSettingsForm extends Form {
 		foreach($binaryFeatureSwitches as $binaryFeatureSwitch) {
 			$this->addCheck(new FormValidatorBoolean($this, $binaryFeatureSwitch, 'plugins.generic.lucene.settings.internalError'));
 		}
+
+		// Index administration.
+		$journalsToReindex = array_keys($this->_getJournalsToReindex());
+		$this->addCheck(new FormValidatorInSet($this, 'journalToReindex', FORM_VALIDATOR_REQUIRED_VALUE, 'plugins.generic.lucene.settings.internalError', $journalsToReindex));
 	}
 
 
@@ -68,8 +76,12 @@ class LuceneSettingsForm extends Form {
 	 * @see Form::readInputData()
 	 */
 	function readInputData() {
+		// Read regular form data.
 		$this->readUserVars($this->_getFormFields());
 		$request = PKPApplication::getRequest();
+
+		// Set the password to the one saved in the DB
+		// if we only got the placehlder from the form.
 		$password = $request->getUserVar('password');
 		if ($password === LUCENE_PLUGIN_PASSWORD_PLACEHOLDER) {
 			$plugin =& $this->_plugin;
@@ -82,8 +94,18 @@ class LuceneSettingsForm extends Form {
 	 * @see Form::fetch()
 	 */
 	function fetch(&$request, $template = null, $display = false) {
+		// Prepare auto-suggest
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('autosuggestTypes', $this->_getAutosuggestTypes());
+
+		// Prepare index rebuild.
+		$templateMgr->assign('journalsToReindex', $this->_getJournalsToReindex());
+
+		// Prepare solr server management.
+		$embeddedServer = $this->_embeddedServer;
+		$templateMgr->assign('serverIsAvailable', $embeddedServer->isAvailable());
+		$templateMgr->assign('serverIsRunning', $embeddedServer->isRunning());
+
 		parent::fetch($request, $template, $display);
 	}
 
@@ -138,6 +160,27 @@ class LuceneSettingsForm extends Form {
 			SOLR_AUTOSUGGEST_SUGGESTER => __('plugins.generic.lucene.settings.autosuggestTypeSuggester'),
 			SOLR_AUTOSUGGEST_FACETING => __('plugins.generic.lucene.settings.autosuggestTypeFaceting')
 		);
+	}
+
+	/**
+	 * Return a list of journals that can be re-indexed
+	 * with a default option "all journals".
+	 * @return array An associative array of journal IDs and names.
+	 */
+	function _getJournalsToReindex() {
+		static $journalsToReindex;
+
+		if (is_null($journalsToReindex)) {
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalsToReindex = array(
+				'' => __('plugins.generic.lucene.settings.indexRebuildAllJournals')
+			);
+			foreach($journalDao->getJournalTitles(true) as $journalId => $journalName) {
+				$journalsToReindex[$journalId] = __('plugins.generic.lucene.settings.indexRebuildJournal', array('journalName' => $journalName));
+			}
+		}
+
+		return $journalsToReindex;
 	}
 }
 
