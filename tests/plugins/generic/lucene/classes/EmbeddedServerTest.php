@@ -39,6 +39,17 @@ class EmbeddedServerTest extends PKPTestCase {
 	// Unit tests
 	//
 	/**
+	 * @covers EmbeddedServer::isAvailable()
+	 * @covers EmbeddedServer::isInstalled()
+	 * @covers EmbeddedServer::_canExecScripts()
+	 */
+	public function testAvailability() {
+		// On the test instance the embedded server should
+		// be available.
+		self::assertTrue($this->embeddedServer->isAvailable());
+	}
+
+	/**
 	 * @covers EmbeddedServer
 	 */
 	public function testStartStopIsRunning() {
@@ -61,9 +72,7 @@ class EmbeddedServerTest extends PKPTestCase {
 			self::assertTrue($this->embeddedServer->isRunning());
 
 			// Stop the server.
-			self::assertTrue($this->embeddedServer->stop());
-			// Give the server time to actually go down.
-			while($this->embeddedServer->isRunning()) sleep(1);
+			self::assertTrue($this->embeddedServer->stopAndWait());
 		}
 	}
 }

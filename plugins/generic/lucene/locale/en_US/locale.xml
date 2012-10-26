@@ -24,7 +24,7 @@
 	<message key="plugins.generic.lucene.faceting.publicationDate">Publication Date</message>
 	
 	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
-	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Indexed {$numIndexed} out of a batch of {$batchCount}.</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Processed {$numProcessed} out of a batch of {$batchCount} ({$numDeleted} deleted documents in this batch).</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
 	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is not enabled. Please enable it in the Lucene plug-in settings.</message>
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline.</message>
@@ -32,6 +32,7 @@
 	<message key="plugins.generic.lucene.message.webServiceError">The Lucene web service returned an error.</message>
 
 	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} articles marked for update</message>
+	<message key="plugins.generic.lucene.rebuildIndex.rebuildDictionaries">Rebuilding dictionaries</message>
 	
 	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
 	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
@@ -80,6 +81,13 @@
 		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
 	]]></message>
 	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
+	<message key="plugins.generic.lucene.settings.indexAdministration">Index Administration</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild">Rebuild index</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild.confirm">Rebuilding the index can take a long time. Are you sure you want to proceed?</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildAllJournals">Rebuild index for all journals</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildDescription">If your Lucene index became outdated or corrupted, you can re-index your data per journal or for all journals of this installation.</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildJournal">Rebuild index for journal "{$journalName}"</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildMessages">Output from the last index rebuild:</message>
 	<message key="plugins.generic.lucene.settings.instantSearch">Instant search (return search results instantly when a user types a search query - obs: uses considerable server resources)</message>
 	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
 	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
@@ -94,9 +102,24 @@
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
+	<message key="plugins.generic.lucene.settings.serverNotAvailable"><![CDATA[
+		You can not currently administer the Sorl server from the web interface.<br/>
+		<br/>
+		Possible reasons are:
+		<ul>
+			<li>You may not have an embedded server installed in this OJS instance (see 'plugins/generic/lucene/README' for details).</li>
+			<li>The installation of your embedded server may be incomplete. Please check that the directories 'plugins/generic/lucene/lib/solr' and 'plugins/generic/lucene/lib/jetty' actually contain (or point to) the solr/jetty installation files.</li>
+			<li>The server administration scripts 'start.sh', 'stop.sh' and 'check.sh' in 'plugins/generic/lucene/embedded/bin' may not be executable. Check the permission flags of these files.</li>
+			<li>An embedded solr process may already be running but under a different OS user. This means that you cannot manipulate the process from within PHP.</li>
+			<li>Your PHP configuration may disallow script execution. Check the 'safe_mode' and 'disabled_function' settings in your php.ini. If you do not have access to your php.ini then you can execute the scripts manually to start/stop the server.</li>
+		</ul>
+	]]></message>
 	<message key="plugins.generic.lucene.settings.simdocs">More-Like-This (display a link "similar documents" for every search result)</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
 	<message key="plugins.generic.lucene.settings.spellcheck">Alternative Spelling Suggestions (display alternative search terms)</message>
+	<message key="plugins.generic.lucene.settings.startStopServer">Solr Server Administration</message>
+	<message key="plugins.generic.lucene.settings.startServer">Start Server</message>
+	<message key="plugins.generic.lucene.settings.stopServer">Stop Server</message>
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>

@@ -188,7 +188,7 @@ class JournalDAO extends DAO {
 
 	/**
 	 * Retrieve all journals.
-	 * @param $enabledOnly boolean True iff only enabled jourals wanted
+	 * @param $enabledOnly boolean True to return enabled journals only
 	 * @param $rangeInfo object optional
 	 * @param $sortBy JOURNAL_FIELD_... optional sorting parameter
 	 * @param $searchField JOURNAL_FIELD_... optional filter parameter

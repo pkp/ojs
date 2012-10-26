@@ -68,10 +68,20 @@
     <!-- START -->
     <listener event="firstSearcher" class="solr.QuerySenderListener">
       <arr name="queries">
+      
         <!-- Load the auto-suggestion dictionary on warm up. -->
         <lst>
           <str name="qt">/dictBasedSuggest</str>
           <str name="spellcheck.build">true</str>
+        </lst>
+        
+        <!-- Rebuild the spellcheck dictionary on warm up. -->
+        <lst>
+        	<str name="qt">/search</str>
+        	<str name="q">dummy</str>
+        	<str name="spellcheck">on</str>
+        	<str name="spellcheck.build">true</str>
+        	<str name="spellcheck.dictionary">default</str>
         </lst>
       </arr>
     </listener>

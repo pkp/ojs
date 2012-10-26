@@ -76,6 +76,7 @@
       var loadAction = String(row.get('loadAction'));
       if (loadAction === String('delete')) {
         row.put('$deleteDocById', instId + '-' + articleId);
+        row.put('$skipDoc', true);
         return row;
       }
 
@@ -357,8 +358,7 @@
             dataSource="http-post"
             processor="XPathEntityProcessor"
             forEach="/articleList/article"
-            transformer="HTMLStripTransformer,script:transformArticle,LogTransformer"
-            logTemplate="Indexing article ${article.inst_id}-${article.journal_id}-${article.article_id}." logLevel="info"
+            transformer="HTMLStripTransformer,script:transformArticle"
             stream="false"
             onError="continue" >
 
@@ -490,7 +490,8 @@
               dataSource="field"
               dataField="article.article_id"
               processor="PlainTextEntityProcessor"
-              transformer="script:postProcessArticle" >
+              transformer="script:postProcessArticle"
+              onError="continue" >
       </entity>
     </entity>
   </document>

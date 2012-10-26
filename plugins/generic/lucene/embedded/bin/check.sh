@@ -20,6 +20,16 @@ fi
 
 # Check the PID to find out whether the server is running.
 if [ -e "/proc/$SOLR_PID" ]; then
+  # Check whether the UID of the process is the one given as
+  # an argument.
+  if [ -n "$1" ]; then
+    # Get the UID of the process.
+    SOLR_UID=`ps --no-heading -o uid $SOLR_PID | sed 's/^ *//'`
+    if [ "$SOLR_UID" -ne "$1" ]; then
+      echo "Server is running under UID $SOLR_UID and not under UID $1 as requested."
+      exit 1
+    fi
+  fi
   echo 'Server is running.'
   exit 0
 else

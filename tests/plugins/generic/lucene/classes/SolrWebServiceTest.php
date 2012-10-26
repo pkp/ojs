@@ -253,11 +253,13 @@ class SolrWebServiceTest extends PKPTestCase {
 		$articles = array($articleToReplace, $articleToDelete);
 
 		// Test the transfer XML file.
-		$articleXml = $this->solrWebService->_getArticleListXml($articles, 3);
+		$deletedCount = null;
+		$articleXml = $this->solrWebService->_getArticleListXml($articles, 3, $deletedCount);
 		self::assertXmlStringEqualsXmlFile(
 			'tests/plugins/generic/lucene/classes/test-article.xml',
 			$articleXml
 		);
+		self::assertEquals(1, $deletedCount);
 	}
 
 	/**
@@ -674,6 +676,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertGreaterThan(0, $this->solrWebService->markJournalChanged(1));
 		self::assertGreaterThan(1, $this->solrWebService->markJournalChanged(2));
 		self::assertGreaterThan(1, $this->solrWebService->pushChangedArticles());
+		$this->solrWebService->rebuildDictionaries();
 	}
 
 	/**
