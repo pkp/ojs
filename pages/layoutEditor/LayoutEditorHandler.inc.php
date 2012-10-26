@@ -256,6 +256,7 @@ class LayoutEditorHandler extends Handler {
 			}
 
 			$this->submission =& $submission;
+			return true;
 		}
 	}
 
