@@ -17,7 +17,7 @@ import('classes.handler.Handler');
 class UserHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function UserHandler() {
 		parent::Handler();
 	}
@@ -464,25 +464,6 @@ class UserHandler extends Handler {
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user')));
 		}
-	}
-
-	//
-	// Captcha
-	//
-
-	function viewCaptcha($args, $request) {
-		$captchaId = (int) array_shift($args);
-		import('lib.pkp.classes.captcha.CaptchaManager');
-		$captchaManager = new CaptchaManager();
-		if ($captchaManager->isEnabled()) {
-			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
-			$captcha =& $captchaDao->getCaptcha($captchaId);
-			if ($captcha) {
-				$captchaManager->generateImage($captcha);
-				exit();
-			}
-		}
-		$request->redirect(null, 'user');
 	}
 
 	/**

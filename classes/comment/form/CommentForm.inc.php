@@ -27,9 +27,6 @@ class CommentForm extends Form {
 	/** @var boolean Whether or not Captcha support is enabled */
 	var $captchaEnabled;
 
-	/** @var boolean whether to use reCaptcha or the default captcha */
-	var $reCaptchaEnabled;
-
 	/** @var int the ID of the article */
 	var $articleId;
 
@@ -53,12 +50,7 @@ class CommentForm extends Form {
 		$commentDao =& DAORegistry::getDAO('CommentDAO');
 		$this->comment =& $commentDao->getById($commentId, $articleId);
 
-		import('lib.pkp.classes.captcha.CaptchaManager');
-		$captchaManager = new CaptchaManager();
-		$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_comments'))?true:false;
-		if ($this->captchaEnabled) {
-			$this->reCaptchaEnabled = Config::getVar('captcha', 'recaptcha')?true:false;
-		}
+		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_comments') && Config::getVar('captcha', 'recaptcha');
 
 		if (isset($this->comment)) {
 			$this->commentId = $commentId;
@@ -69,11 +61,7 @@ class CommentForm extends Form {
 
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'comments.titleRequired'));
 		if ($this->captchaEnabled) {
-			if ($this->reCaptchaEnabled) {
-				$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', 'recaptcha_response_field', Request::getRemoteAddr(), 'common.captchaField.badCaptcha'));
-			} else {
-				$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
-			}
+			$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', 'recaptcha_response_field', Request::getRemoteAddr(), 'common.captchaField.badCaptcha'));
 		}
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -123,23 +111,12 @@ class CommentForm extends Form {
 		}
 
 		if ($this->captchaEnabled) {
-			$templateMgr->assign('reCaptchaEnabled', $this->reCaptchaEnabled);
-			if ($this->reCaptchaEnabled) {
-				import('lib.pkp.lib.recaptcha.recaptchalib');
-				$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
-				$useSSL = Config::getVar('security', 'force_ssl')?true:false;
-				$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
-				$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
-				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
-			} else {
-				import('lib.pkp.classes.captcha.CaptchaManager');
-				$captchaManager = new CaptchaManager();
-				$captcha =& $captchaManager->createCaptcha();
-				if ($captcha) {
-					$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
-					$this->setData('captchaId', $captcha->getId());
-				}
-			}
+			$templateMgr->assign('captchaEnabled', true);
+			import('lib.pkp.lib.recaptcha.recaptchalib');
+			$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
+			$useSSL = Config::getVar('security', 'force_ssl')?true:false;
+			$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
+			$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
 		}
 
 		$templateMgr->assign('parentId', $this->parentId);
@@ -162,13 +139,8 @@ class CommentForm extends Form {
 			'posterEmail'
 		);
 		if ($this->captchaEnabled) {
-			if ($this->reCaptchaEnabled) {
-				$userVars[] = 'recaptcha_challenge_field';
-				$userVars[] = 'recaptcha_response_field';
-			} else {
-				$userVars[] = 'captchaId';
-				$userVars[] = 'captcha';
-			}
+			$userVars[] = 'recaptcha_challenge_field';
+			$userVars[] = 'recaptcha_response_field';
 		}
 
 		$this->readUserVars($userVars);
@@ -217,7 +189,6 @@ class CommentForm extends Form {
 
 		return $this->commentId;
 	}
-
 }
 
 ?>

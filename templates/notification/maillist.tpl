@@ -46,15 +46,12 @@
 		<td class="value" width="45%"><input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	{if $captchaEnabled}
-	<tr>
-		<td class="label" valign="top">{fieldLabel name="captcha" required="true" key="common.captchaField"}</td>
-		<td class="value">
-			<img src="{url page="user" op="viewCaptcha" path=$captchaId}" alt="{translate key="common.captchaField.altText"}" /><br />
-			<span class="instruct">{translate key="common.captchaField.description"}</span><br />
-			<input name="captcha" id="captcha" value="" size="20" maxlength="32" class="textField" />
-			<input type="hidden" name="captchaId" value="{$captchaId|escape:"quoted"}" />
-		</td>
-	</tr>
+		<tr>
+			<td class="label" valign="top">{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField"}</td>
+			<td class="value">
+				{$reCaptchaHtml}
+			</td>
+		</tr>
 	{/if}{* $captchaEnabled *}
 	<tr valign="top">
 		<td width="5%">&nbsp;</td>

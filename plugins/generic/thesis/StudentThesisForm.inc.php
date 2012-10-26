@@ -45,9 +45,7 @@ class StudentThesisForm extends Form {
 			THESIS_DEGREE_DOCTORATE => __('plugins.generic.thesis.manager.degree.doctorate')
 		);
 
-		import('lib.pkp.classes.captcha.CaptchaManager');
-		$captchaManager = new CaptchaManager();
-		$this->captchaEnabled = $captchaManager->isEnabled() ? true : false;
+		$this->captchaEnabled = Config::getVar('captcha', 'recaptcha');
 
 		$this->uploadCodeEnabled = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
 
@@ -56,11 +54,11 @@ class StudentThesisForm extends Form {
 
 		// Captcha support if enabled
 		if ($this->captchaEnabled) {
-			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
+			$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', 'recaptcha_response_field', Request::getRemoteAddr(), 'common.captchaField.badCaptcha'));
 		}
 
 		// Degree is provided and is valid value
-		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeRequired'));	
+		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeRequired'));
 		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeValid', array_keys($this->validDegrees)));
 
 		// Degree Name is provided
@@ -118,13 +116,12 @@ class StudentThesisForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 
 		if ($this->captchaEnabled) {
-			import('lib.pkp.classes.captcha.CaptchaManager');
-			$captchaManager = new CaptchaManager();
-			$captcha =& $captchaManager->createCaptcha();
-			if ($captcha) {
-				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
-				$this->setData('captchaId', $captcha->getId());
-			}
+			import('lib.pkp.lib.recaptcha.recaptchalib');
+			$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
+			$useSSL = Config::getVar('security', 'force_ssl')?true:false;
+			$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
+			$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
+			$templateMgr->assign('captchaEnabled', true);
 		}
 
 		$templateMgr->assign('uploadCodeEnabled', $this->uploadCodeEnabled);
@@ -178,22 +175,21 @@ class StudentThesisForm extends Form {
 		);
 
 		if ($this->captchaEnabled) {
-			$userVars[] = 'captchaId';
-			$userVars[] = 'captcha';
+			$userVars[] = 'recaptcha_challenge_field';
+			$userVars[] = 'recaptcha_response_field';
 		}
 
 		$this->readUserVars($userVars);
-		$this->_data['dateApproved'] = $this->_data['dateApprovedYear'] . '-' . $this->_data['dateApprovedMonth'] . '-' . $this->_data['dateApprovedDay']; 
+		$this->_data['dateApproved'] = $this->_data['dateApprovedYear'] . '-' . $this->_data['dateApprovedMonth'] . '-' . $this->_data['dateApprovedDay'];
 
 		// If a url is provided, ensure it includes a proper prefix (i.e. http:// or ftp://).
 		if (!empty($this->_data['url'])) {
 			$this->addCheck(new FormValidatorCustom($this, 'url', 'required', 'plugins.generic.thesis.form.urlPrefixIncluded', create_function('$url', 'return strpos(trim(strtolower_codesafe($url)), \'http://\') === 0 || strpos(trim(strtolower_codesafe($url)), \'ftp://\') === 0 ? true : false;'), array()));
 		}
-
 	}
 
 	/**
-	 * Save thesis. 
+	 * Save thesis.
 	 */
 	function execute() {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -279,8 +275,8 @@ class StudentThesisForm extends Form {
 				'university' =>	$thesis->getUniversity(),
 				'dateApproved' => $thesis->getDateApproved(),
 				'supervisorName' => $supervisorName,
-				'abstract' => $thesis->getAbstract(),		
-				'thesisContactSignature' => $thesisContactSignature 
+				'abstract' => $thesis->getAbstract(),
+				'thesisContactSignature' => $thesisContactSignature
 			);
 
 			import('classes.mail.MailTemplate');
@@ -291,9 +287,7 @@ class StudentThesisForm extends Form {
 			$mail->addCc($thesis->getStudentEmail(), "\"" . $studentName . "\"");
 			$mail->send();
 		}
-
 	}
-
 }
 
 ?>

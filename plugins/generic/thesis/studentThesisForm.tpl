@@ -29,15 +29,12 @@
 <div id="general">
 <table class="data" width="100%">
 {if $captchaEnabled}
-<tr valign="top">
-	<td class="label" valign="top">{fieldLabel name="captcha" required="true" key="common.captchaField"}</td>
-	<td class="value">
-		<img src="{url op="viewCaptcha" path=$captchaId}" alt="" /><br />
-		<span class="instruct">{translate key="common.captchaField.description"}</span><br />
-		<input name="captcha" id="captcha" value="" size="20" maxlength="32" class="textField" />
-		<input type="hidden" name="captchaId" value="{$captchaId|escape:"quoted"}" />
-	</td>
-</tr>
+	<tr valign="top">
+		<td class="label" valign="top">{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField"}</td>
+		<td class="value">
+			{$reCaptchaHtml}
+		</td>
+	</tr>
 {/if}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="degree" required="true" key="plugins.generic.thesis.form.degree"}</td>

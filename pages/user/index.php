@@ -52,7 +52,6 @@ switch ($op) {
 	case 'setLocale':
 	case 'become':
 	case 'authorizationDenied':
-	case 'viewCaptcha':
 	case 'viewPublicProfile':
 	case 'purchaseSubscription':
 	case 'payPurchaseSubscription':
