@@ -111,10 +111,6 @@
 <br /><br />
 
 <div style="text-align: center; width: 250px; margin: 0 auto">
-	<a href="http://clockss.org/"><img src="http://board.clockss.org/images/clockss_logo_114x110.jpg" style="border: 0;" alt="CLOCKSS" /></a>
-	<br />
-	CLOCKSS system has permission to collect, preserve, and serve this Archival Unit.
-
 	<a href="http://lockss.org/"><img src="{$baseUrl}/templates/images/lockss.gif" style="border: 0;" alt="LOCKSS" /></a>
 	<br />
 	LOCKSS system has permission to collect, preserve, and serve this Archival Unit.
