@@ -123,6 +123,7 @@
 		{if $isValid.Author.$journalId || $isValid.Reviewer.$journalId}
 			<tr><td class="separator" width="100%" colspan="5">&nbsp;</td></tr>
 		{/if}
+		{*  07092012 LS adding logic to provide access to archived items if they exist*}
 		{if $isValid.Author.$journalId}
 			{assign var="authorSubmissionsCount" value=$submissionsCount.Author.$journalId}
 			<tr>
