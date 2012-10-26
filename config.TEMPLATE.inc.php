@@ -377,10 +377,10 @@ page_links = 10
 recaptcha = off
 
 ; Public key for reCaptcha (see http://www.google.com/recaptcha)
-; recaptcha_public_key = your_public_key
+recaptcha_public_key = your_public_key
 
 ; Private key for reCaptcha (see http://www.google.com/recaptcha)
-; recaptcha_private_key = your_private_key
+recaptcha_private_key = your_private_key
 
 ; Whether or not to use Captcha on user registration
 captcha_on_register = on
