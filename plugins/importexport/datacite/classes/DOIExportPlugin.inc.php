@@ -595,7 +595,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function registerObjects(&$request, $exportSpec, &$journal) {
 		// Registering can take a long time.
-		set_time_limit(0);
+		@set_time_limit(0);
 
 		// Get the target directory.
 		$result = $this->_getExportPath();
