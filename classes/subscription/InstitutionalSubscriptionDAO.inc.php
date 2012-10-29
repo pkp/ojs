@@ -546,6 +546,31 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
+	 * Retrieve all institutional subscription contacts.
+	 * @return object DAOResultFactory containing Users
+	 */
+	function &getSubscribedUsers($journalId, $rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT	u.*
+			FROM	subscriptions s,
+				subscription_types st,
+				users u
+			WHERE	s.type_id = st.type_id AND
+				st.institutional = 1 AND
+				s.user_id = u.user_id AND
+				s.journal_id = ?
+			ORDER BY u.last_name ASC, s.subscription_id',
+			array((int) $journalId),
+			$rangeInfo
+		);
+
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
+
+		return $returner;
+	}
+
+	/**
 	 * Retrieve institutional subscriptions matching a particular journal ID.
 	 * @param $journalId int
 	 * @param $status int
