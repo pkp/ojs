@@ -483,11 +483,18 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * Identify published article and issue of the given article file.
 	 * @param $articleFile ArticleFile
 	 * @param $journal Journal
-	 * @return array
+	 * @return array|null An array with the article and issue of the given
+	 *  article file. Null will be returned if one of these objects cannot
+	 *  be identified (e.g. when the article file belongs to an unpublished
+	 *  article).
 	 */
 	function &prepareArticleFileData(&$articleFile, &$journal) {
 		// Prepare and return article data for the article file.
 		$articleData =& $this->_prepareArticleDataByArticleId($articleFile->getArticleId(), $journal);
+		if (!is_array($articleData)) {
+			$nullVar = null;
+			return $nullVar;
+		}
 
 		// Add the article file to the cache.
 		$cache =& $this->getCache();
@@ -1042,8 +1049,14 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve galley data.
 		$galleyData = array();
 		foreach($galleys as $galley) {
-			$galleyData[] =& $this->_prepareGalleyData($galley, $journal);
-			unset($galley);
+			$preparedGalley =& $this->_prepareGalleyData($galley, $journal);
+			// As we select only published articles, we should always
+			// get data back here.
+			assert(is_array($preparedGalley));
+			if (is_array($preparedGalley)) {
+				$galleyData[] =& $preparedGalley;
+			}
+			unset($galley, $preparedGalley);
 		}
 		unset($galleys);
 
@@ -1108,8 +1121,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve issues, articles and language for galleys.
 		$galleyData = array();
 		foreach ($galleys as $galley) {
-			$galleyData[] =& $this->_prepareGalleyData($galley, $journal);
-			unset($galley);
+			$preparedGalley =& $this->_prepareGalleyData($galley, $journal);
+			if (is_array($preparedGalley)) {
+				$galleyData[] =& $preparedGalley;
+			}
+			unset($galley, $preparedGalley);
 		}
 		return $galleyData;
 	}
@@ -1118,11 +1134,18 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * Identify published article, issue and language of the given galley.
 	 * @param $galley ArticleGalley
 	 * @param $journal Journal
-	 * @return array
+	 * @return array|null An array with article, issue and language of
+	 *  the given galley. Null will be returned if one of these objects
+	 *  cannot be identified for the galley (e.g. when the galley belongs
+	 *  to an unpublished article).
 	 */
 	function &_prepareGalleyData(&$galley, &$journal) {
 		// Retrieve article and issue for the galley.
 		$galleyData =& $this->prepareArticleFileData($galley, $journal);
+		if (!is_array($galleyData)) {
+			$nullVar = null;
+			return $nullVar;
+		}
 
 		// Add the galley language.
 		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
@@ -1138,7 +1161,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * Identify published article and issue for the given article id.
 	 * @param $articleId integer
 	 * @param $journal Journal
-	 * @return array
+	 * @return array|null An array with the published article and issue of the
+	 *  given article ID. If a published article cannot be identified (i.e. if
+	 *  the given article ID belongs to an unpublished article) then null will
+	 *  be returned.
 	 */
 	function &_prepareArticleDataByArticleId($articleId, &$journal) {
 		// Get the cache.
@@ -1147,9 +1173,16 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve article if not yet cached.
 		$article = null;
 		if (!$cache->isCached('articles', $articleId)) {
+			$nullVar = null;
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
-			$cache->add($article, $nullVar = null);
+			if (!is_a($article, 'PublishedArticle')) {
+				// It seems that the article ID we got does not belong to a
+				// published article. This may happen if we try to prepare
+				// article data for a galley or supplementary file.
+				return $nullVar;
+			}
+			$cache->add($article, $nullVar);
 		}
 		if (!$article) $article =& $cache->get('articles', $articleId);
 		assert(is_a($article, 'PublishedArticle'));
