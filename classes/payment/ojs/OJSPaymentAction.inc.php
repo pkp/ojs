@@ -90,10 +90,12 @@ class OJSPaymentAction {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
 		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
+		$templateMgr->assign_by_ref('userDao', $userDao);
 		$templateMgr->assign_by_ref('payment', $payment);
 
 		$templateMgr->display('payments/viewPayment.tpl');
