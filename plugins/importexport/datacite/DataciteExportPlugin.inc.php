@@ -143,8 +143,14 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		// Retrieve supp file data.
 		$suppFileData = array();
 		foreach($suppFiles as $suppFile) {
-			$suppFileData[] =& $this->_prepareSuppFileData($suppFile, $journal);
-			unset($suppFile);
+			$preparedSuppFile =& $this->_prepareSuppFileData($suppFile, $journal);
+			// As we select only published articles, we should always
+			// get data back here.
+			assert(is_array($preparedSuppFile));
+			if (is_array($preparedSuppFile)) {
+				$suppFileData[] =& $preparedSuppFile;
+			}
+			unset($suppFile, $preparedSuppFile);
 		}
 		unset($suppFiles);
 
@@ -308,8 +314,11 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		// Retrieve issues and articles for supp files.
 		$suppFileData = array();
 		foreach ($suppFiles as $suppFile) {
-			$suppFileData[] =& $this->_prepareSuppFileData($suppFile, $journal);
-			unset($suppFile);
+			$preparedSuppFile =& $this->_prepareSuppFileData($suppFile, $journal);
+			if (is_array($preparedSuppFile)) {
+				$suppFileData[] =& $preparedSuppFile;
+			}
+			unset($suppFile, $preparedSuppFile);
 		}
 		return $suppFileData;
 	}
@@ -318,11 +327,18 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	 * Identify published article and issue of the given supp file.
 	 * @param $suppFile SuppFile
 	 * @param $journal Journal
-	 * @return array
+	 * @return array|null An array with article and issue of the given
+	 *  suppl file. Null will be returned if one of these objects
+	 *  cannot be identified (e.g. when the supp file belongs
+	 *  to an unpublished article).
 	 */
 	function &_prepareSuppFileData(&$suppFile, &$journal) {
 		// Retrieve article and issue for the supp file.
 		$suppFileData =& $this->prepareArticleFileData($suppFile, $journal);
+		if (!is_array($suppFileData)) {
+			$nullVar = null;
+			return $nullVar;
+		}
 
 		// Add the supp file itself.
 		$suppFileData['suppFile'] =& $suppFile;
