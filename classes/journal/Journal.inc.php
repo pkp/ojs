@@ -22,12 +22,14 @@ define('PUBLISHING_MODE_OPEN', 0);
 define('PUBLISHING_MODE_SUBSCRIPTION', 1);
 define('PUBLISHING_MODE_NONE', 2);
 
-class Journal extends DataObject {
+import('lib.pkp.classes.core.Context');
+
+class Journal extends Context {
 	/**
 	 * Constructor.
 	 */
 	function Journal() {
-		parent::DataObject();
+		parent::Context();
 	}
 
 	/**
@@ -36,72 +38,6 @@ class Journal extends DataObject {
 	 */
 	function getUrl() {
 		return Request::url($this->getPath());
-	}
-
-	/**
-	 * Return the primary locale of this journal.
-	 * @return string
-	 */
-	function getPrimaryLocale() {
-		return $this->getData('primaryLocale');
-	}
-
-	/**
-	 * Set the primary locale of this journal.
-	 * @param $locale string
-	 */
-	function setPrimaryLocale($primaryLocale) {
-		return $this->setData('primaryLocale', $primaryLocale);
-	}
-
-	/**
-	 * Return associative array of all locales supported by the journal.
-	 * These locales are used to provide a language toggle on the journal-specific pages.
-	 * @return array
-	 */
-	function &getSupportedLocaleNames() {
-		$supportedLocales =& $this->getData('supportedLocales');
-
-		if (!isset($supportedLocales)) {
-			$supportedLocales = array();
-			$localeNames =& AppLocale::getAllLocales();
-
-			$locales = $this->getSetting('supportedLocales');
-			if (!isset($locales) || !is_array($locales)) {
-				$locales = array();
-			}
-
-			foreach ($locales as $localeKey) {
-				$supportedLocales[$localeKey] = $localeNames[$localeKey];
-			}
-		}
-
-		return $supportedLocales;
-	}
-
-	/**
-	 * Return associative array of all locales supported by forms of the journal.
-	 * These locales are used to provide a language toggle on the journal-specific pages.
-	 * @return array
-	 */
-	function &getSupportedFormLocaleNames() {
-		$supportedLocales =& $this->getData('supportedFormLocales');
-
-		if (!isset($supportedLocales)) {
-			$supportedLocales = array();
-			$localeNames =& AppLocale::getAllLocales();
-
-			$locales = $this->getSetting('supportedFormLocales');
-			if (!isset($locales) || !is_array($locales)) {
-				$locales = array();
-			}
-
-			foreach ($locales as $localeKey) {
-				$supportedLocales[$localeKey] = $localeNames[$localeKey];
-			}
-		}
-
-		return $supportedLocales;
 	}
 
 	/**
@@ -216,71 +152,6 @@ class Journal extends DataObject {
 	}
 
 	/**
-	 * Get enabled flag of journal
-	 * @return int
-	 */
-	function getEnabled() {
-		return $this->getData('enabled');
-	}
-
-	/**
-	 * Set enabled flag of journal
-	 * @param $enabled int
-	 */
-	function setEnabled($enabled) {
-		return $this->setData('enabled',$enabled);
-	}
-
-	/**
-	 * Get the localized description of the journal.
-	 * @return string
-	 */
-	function getLocalizedDescription() {
-		return $this->getDescription(AppLocale::getLocale());
-	}
-
-	/**
-	 * Get description of journal.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getDescription($locale) {
-		return $this->getSetting('description', $locale);
-	}
-
-	/**
-	 * Get path to journal (in URL).
-	 * @return string
-	 */
-	function getPath() {
-		return $this->getData('path');
-	}
-
-	/**
-	 * Set path to journal (in URL).
-	 * @param $path string
-	 */
-	function setPath($path) {
-		return $this->setData('path', $path);
-	}
-
-	/**
-	 * Get sequence of journal in site table of contents.
-	 * @return float
-	 */
-	function getSequence() {
-		return $this->getData('sequence');
-	}
-
-	/**
-	 * Set sequence of journal in site table of contents.
-	 * @param $sequence float
-	 */
-	function setSequence($sequence) {
-		return $this->setData('sequence', $sequence);
-	}
-
-	/**
 	 * Retrieve array of journal settings.
 	 * @return array
 	 */
@@ -328,6 +199,14 @@ class Journal extends DataObject {
 	function updateSetting($name, $value, $type = null, $isLocalized = false) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		return $journalSettingsDao->updateSetting($this->getId(), $name, $value, $type, $isLocalized);
+	}
+
+	/**
+	 * Get the association type for this context.
+	 * @return int
+	 */
+	function getAssocType() {
+		return ASSOC_TYPE_JOURNAL;
 	}
 }
 

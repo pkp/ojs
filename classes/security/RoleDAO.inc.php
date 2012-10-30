@@ -442,6 +442,16 @@ class RoleDAO extends DAO {
 	}
 
 	/**
+	 * Get role names
+	 * @param $roleId int ROLE_ID_...
+	 * @param $plural boolean
+	 * @return array
+	 */
+	function getRoleNames($roleId, $plural = false) {
+		return array($this->getRoleName($roleId, $plural));
+	}
+
+	/**
 	 * Get the URL path associated with the specified role's operations.
 	 * @param $roleId int
 	 * @return string
