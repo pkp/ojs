@@ -35,6 +35,7 @@
 
 {* Generic controllers *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/UploaderHandler.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/NotificationHandler.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
