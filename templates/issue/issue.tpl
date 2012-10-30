@@ -73,6 +73,7 @@
 	<td class="tocPages">{$article->getPages()|escape}</td>
 </tr>
 </table>
+{call_hook name="Templates::Issue::Issue::Article"}
 {/foreach}
 
 {if !$smarty.foreach.sections.last}
