@@ -27,6 +27,7 @@ class CoinsPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'insertFooter'));
+			HookRegistry::register('Templates::Issue::Issue::Article', array($this, 'insertFooter'));
 		}
 		return $success;
 	}
@@ -95,7 +96,7 @@ class CoinsPlugin extends GenericPlugin {
 			if ($doi = $article->getPubId('doi')) $vars[] = array('rft_id', 'info:doi/' . $doi);
 			if ($article->getPages()) $vars[] = array('rft.pages', $article->getPages());
 			if ($journal->getSetting('printIssn')) $vars[] = array('rft.issn', $journal->getSetting('printIssn'));
-			if ($journal->getSetting('onlineIssn')) $vars[] = array('rft.issn', $journal->getSetting('onlineIssn'));
+			if ($journal->getSetting('onlineIssn')) $vars[] = array('rft.eissn', $journal->getSetting('onlineIssn'));
 
 			$title = '';
 			foreach ($vars as $entries) {
