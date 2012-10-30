@@ -8,6 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
+  * Contributed by Andrea Marchitelli - CINECA.
   *
   -->
 
@@ -107,7 +108,7 @@
 	<message key="manager.reviewFormElements.smalltextfield">Text box per una sola parola</message>
 	<message key="manager.reviewFormElements.textarea">Text box per testi lunghi</message>
 	<message key="manager.reviewFormElements.textfield">Text box su una linea</message>
-	<message key="manager.reviewForms">Modulo di revisione</message>
+	<message key="manager.reviewForms">Moduli per la revisione</message>
 	<message key="manager.reviewForms.completed">Completato</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
 	<message key="manager.reviewForms.create">Crea un modulo di revisione</message>
@@ -159,7 +160,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.additionalContentDescription">Aggiungi delle informazioni ulteriori, in testo semplice o in HTML, che appariranno sotto l'immagine dell'homepage, se presente.</message>
 	<message key="manager.setup.addNavItem">Aggiungi voce</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Aggiungi un nuovo link</message>
-	<message key="manager.setup.addSponsor">Aggiungi un organizzazione di supporto</message>
+	<message key="manager.setup.addSponsor">Aggiungi un'istituzione</message>
 	<message key="manager.setup.alternateHeader">Testata alternativa</message>
 	<message key="manager.setup.alternateHeaderDescription">In alternativa, invece del titolo e del logo, è possibile inserire una versione in HTML della testata, utilizzando il box di testo sottostante. Per non modificare nulla, lascia il box vuoto.</message>
 	<message key="manager.setup.announcements">Avvisi</message>
@@ -177,8 +178,8 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.competingInterests.requireAuthors">Richiedi agli autori di inviare una dichiarazione di assenza di conflitto di interessi durante l'invio della proposta.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Richiedi ai revisori di allegare una dichiarazione di assenza di conflitto di interessi per ogni revisione che invieranno.</message>
 	<message key="manager.setup.contributor">Collaboratori</message>
-	<message key="manager.setup.contributors">Fonti di supporto</message>
-	<message key="manager.setup.contributorsDescription">Ulteriori enti od organizzazioni che forniscono supporto finanziario o di altro tipo compariranno sotto la voce About, con un'eventuale nota informativa.</message>
+	<message key="manager.setup.contributors">Fonti di finanziamento</message>
+	<message key="manager.setup.contributorsDescription">Ulteriori enti od organizzazioni che forniscono supporto finanziario o di altro tipo, i nomi dei quali compariranno nella pagina delle informazioni della rivista, con un'eventuale nota informativa.</message>
 	<message key="manager.setup.copyediting">Copyeditor</message>
 	<message key="manager.setup.copyeditInstructions">Istruzioni per il copyedit</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Le istruzioni per il copyedit saranno rese disponibili ai copyeditor, agli autori e ai section editor nella fase di Editing delle Submission. Di seguito sono presenti una serie di istruzioni in HTML, che possono essere modificate in qualsiasi momento dall'amministratore (in HTML o in testo semplice).</message>
@@ -196,7 +197,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.customTags">Marcatori personalizzati</message>
 	<message key="manager.setup.customTagsDescription">Marcatori HTML personalizzati da inserire nell'header di ogni pagina (ad esempio tag META).</message>
 	<message key="manager.setup.details">Dettagli</message>
-	<message key="manager.setup.details.description">Nome della rivista, ISBN, contatti, sponsor, e motori di ricerca.</message>
+	<message key="manager.setup.details.description">Nome della rivista, ISBN, contatti, sponsor e motori di ricerca.</message>
 	<message key="manager.setup.disableUserRegistration">L'amministratore della rivista registra tutti gli utenti, con i curatori e i curatori di sezione abilitati a registrare solo i revisori.</message>
 	<message key="manager.setup.discipline">Classificazione accademica</message>
 	<message key="manager.setup.disciplineDescription">Utile quando la rivista oltrepassa i confini disciplinari e/o quando gli autori inviano articoli multidisciplinari.</message>
@@ -212,8 +213,8 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.editorialReviewBoardDescription">Le riviste hanno i consigli editoriali per supervisionare la direzione della rivista, partecipare alle riunioni con gli editor, e, grazie alla reputazione dei membri del consiglio, aumentare la reputazione della rivista nel proprio settore. I consigli di review hanno un ruolo simile, ed inoltre guidano il processo di peer-review. I membri del consiglio di review non avranno accesso al sistema di amministrazione di OJS, ma saranno aggiunti alla lista degli utenti in grado di effettuare la peer-review.</message>
 	<message key="manager.setup.emailBounceAddress">Indirizzo per i messaggi respinti</message>
 	<message key="manager.setup.emailBounceAddressDescription">Nel caso l'invio di un messaggio di posta elettronica non dovesse andare a buon fine, verrà inviata una notifica di errore a questo indirizzo.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (la quale potrebbe non essere possibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
-	<message key="manager.setup.emails">Identificazione dell'email</message>
+	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (che potrebbe non essere disponibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
+	<message key="manager.setup.emails">Firma delle email</message>
 	<message key="manager.setup.emailSignature">Firma</message>
 	<message key="manager.setup.emailSignatureDescription">Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista.</message>
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
@@ -305,7 +306,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.look.description">Testata dell'homepage, contenuto, testata della rivista, pie' di pagina, menu di navigazione e fogli di stile.</message>
 	<message key="manager.setup.mailingAddressDescription">La sede fisica della rivista e l'indirizzo postale.</message>
 	<message key="manager.setup.management">Gestione</message>
-	<message key="manager.setup.management.description">Accesso e sicurezza, programmazione, avvisi, copyediting, layout, and proofreading.</message>
+	<message key="manager.setup.management.description">Accesso e sicurezza, programmazione, avvisi, copyediting, impaginazione e correzione di bozze.</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Gestione delle principali fasi editoriali</message>
 	<message key="manager.setup.managingPublishingSetup">Setup della gestione e della pubblicazione</message>
 	<message key="manager.setup.managingTheJournal">Fase 4. Gestire la rivista</message>
@@ -336,7 +337,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
 	<message key="manager.setup.peerReviewPolicy2">Politiche di peer review</message>
 	<message key="manager.setup.policies">Politiche</message>
-	<message key="manager.setup.policies.description">Argomento, peer review, sezioni, privacy, accesso, sicurezza, e altre voci riguardanti gli articoli.</message>
+	<message key="manager.setup.policies.description">Argomento, peer review, sezioni, privacy, accesso, sicurezza e altre voci riguardanti gli articoli.</message>
 	<message key="manager.setup.principalContact">Contatto principale</message>
 	<message key="manager.setup.principalContactDescription">Questa posizione, che può essere considerata come la posizione principale di direzione, gestione o amministrazione, sarà visualizzata nella pagina delle informazioni della rivista, tra i contatti, insieme al contatto per il supporto tecnico.</message>
 	<message key="manager.setup.printIssn">ISSN</message>
@@ -367,9 +368,9 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.reviewerDatabaseLink">Banca dati di revisori potenziali</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Aggiungi alla pagina Seleziona il revisore un link a una banca dati rilevante di letteratura che può essere consultata dai potenziali revisori e che sia aperta ai curatori senza il pagamento di abbonamenti.</message>
 	<message key="manager.setup.reviewGuidelines"></message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Linee guida per la revisione delle proposte forniscono ai revisori i criteri per giudicare la qualità di una proposta e la relativa possibilità di pubblicazione all'interno della rivista, così come qualsiasi tipo informazioni particolare per preparare una revisione valida e utile.
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Le Linee guida per la revisione delle proposte forniscono ai revisori i criteri per giudicare la qualità di una proposta e la relativa possibilità di pubblicazione all'interno della rivista, così come qualsiasi tipo informazioni particolare per preparare una revisione valida e utile.
 
-Al momento di concludere una revisione, ai revisori vengono presentate due box, la prima "per l'autore e per l'editor" e la seconda solamente "per l'editor". In alternativa, l'amministratore della rivista può creare <a href="{$reviewFormsUrl}" class="action">moduli per la peer review</a>. In ogni caso, gli editor potranno includere i commenti dei revisoti nella corrispondenza con gli autori.]]></message>
+Al momento di concludere una revisione, ai revisori vengono presentate due box, la prima "per l'autore e per l'editor" e la seconda solamente "per l'editor". In alternativa, l'amministratore della rivista può creare <a href="{$reviewFormsUrl}" class="action">moduli per la peer review</a>. In ogni caso, gli editor potranno includere i commenti dei revisori nella corrispondenza con gli autori.]]></message>
 	<message key="manager.setup.reviewOptions">Opzioni di revisione</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Le email automatiche di sollecito (disponibili nelle email di default di OJS) possono essere inviate ai revisori in due punti (mentre l'editor puù sempre inviare email direttamente al revisore)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Nota:</strong> Per attivare queste opzioni, l'amministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. COnfigurazioni aggiuntive del server possono essere richieste per supportare questa funzione (che potrebbe non essere possibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
@@ -394,20 +395,20 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supporta due modelli per la gestione del processo di revisione. Il procedimento standard &#x00E8; quello raccomandato, perch&#x00E9; guida i revisori attraverso l'intero processo, assicurando cos&#x00EC; il mantenimento di un registro di revisione per ogni submission, e usufurendo inoltre delle notifiche di sollecito automatiche e delle raccomandazioni standard per le submission (Accetta; Accetta con le revisioni; Invia per la review; Invia altrove; Rifiuta; Vedi i commenti).<br /><br />Seleziona una delle seguenti opzioni:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Processo di review tramite allegati di posta elettronica</message>
 	<message key="manager.setup.reviewProcessStandard">Processo standard di review</message>
-	<message key="manager.setup.reviewProcessStandardDescription">Gli editor invieranno ai revisori scelti un'email con il titolo e l'abstract della submission, insieme all'invito a collegarsi al sito della rivista per effettuare la revisione. I revisori entreranno quindi nel sistema per accettare di effettuare la revisione, fare il download delle submission, inviare i loro commenti, e selezionare una raccomandazione.</message>
+	<message key="manager.setup.reviewProcessStandardDescription">Gli editor inviano ai revisori un'email con il titolo e l'abstract della submission, insieme all'invito a collegarsi al sito della rivista per effettuare la revisione. I revisori entreranno quindi nel sistema per accettare di effettuare la revisione, fare il download delle submission, inviare i loro commenti, e selezionare una raccomandazione.</message>
 	<message key="manager.setup.searchEngineIndexing">SEO (Ottimizzazione per i motori di ricerca)</message>
-	<message key="manager.setup.searchEngineIndexingDescription">Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da punto e virgola).</message>
+	<message key="manager.setup.searchEngineIndexingDescription">Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da virgola).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sezioni ed editor di sezione</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Se non viene aggiunta nessuna sezione, i documenti verranno inviati per default alla sezione Articoli)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[Per creare o modificare le sezioni della rivista (ad esempio: Articoli, Recensioniecc.), andate alla sezione Section Management.<br /><br />Gli autori, nell'inviare gli articoli alla rivista, indicheranno...]]></message>
 	<message key="manager.setup.securitySettings">Impostazioni di accesso e sicurezza</message>
-	<message key="manager.setup.securitySettingsDescription">OJS fornisce un numero di opzioni relative alla sicurezza che può essere usato per restringere l'accesso ai contenuti della rivista e mantiene le informazioni aggiuntive sulle submission per fini di controllo.</message>
+	<message key="manager.setup.securitySettingsDescription">OJS fornisce alcune opzioni relative alla sicurezza che può essere usato per restringere l'accesso ai contenuti della rivista e mantiene un registro di informazioni aggiuntive sulle proposte ricevute, per fini di controllo.</message>
 	<message key="manager.setup.selectEditorDescription">L'editor della rivista che seguirà l'articolo lungo il processo editoriale.</message>
 	<message key="manager.setup.selectSectionDescription">La sezione della rivista cui è destinato l'articolo.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Mostra sempre i link alle bozze e indica l'accesso ristretto.</message>
 	<message key="manager.setup.siteAccess">Restrizioni aggiuntive di accesso al sito e agli articoli</message>
-	<message key="manager.setup.sponsors">Organizzazioni di supporto</message>
-	<message key="manager.setup.sponsorsDescription">Il nome delle organizzazioni (e.g., associazioni di ricerca, dipartimenti universitari, cooperativeecc.) di supporto alla rivista comparirà sotto la voce About, con un'eventuale nota informativa.</message>
+	<message key="manager.setup.sponsors">Sponsor</message>
+	<message key="manager.setup.sponsorsDescription">Il nome delle organizzazioni (es. associazioni scientifiche, dipartimenti universitari, cooperative ecc.) di supporto alla rivista comparirà nella pagina delle informazioni sulla rivista, con un'eventuale nota informativa.</message>
 	<message key="manager.setup.stepsToJournalSite">Cinque passaggi per creare il sito web della rivista</message>
 	<message key="manager.setup.subjectClassification">Classificazione</message>
 	<message key="manager.setup.subjectClassificationExamples">(Es. Classificazione dei soggetti matematici; Classificazione della Library of Congress)</message>
@@ -616,7 +617,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.plugins.upgradeFailed">Aggiornamento fallito</message>
 	<message key="manager.sections.wordCount">Conteggio delle parole</message>
 	<message key="manager.sections.wordCountInstructions">Limita la lunghezza degli abstract per gli articoli di questa sezione (0 per illimitate)</message>
-	<message key="manager.setup.history">Storia del periodico</message>
+	<message key="manager.setup.history">Storia della rivista</message>
 	<message key="manager.setup.journalFavicon">Favicon della rivista</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Notifiche di pagamenti manuali</message>
 	<message key="manager.subscriptions.renew">Rinnova</message>
@@ -641,7 +642,7 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.subscriptionTypes.form.subscriptions">Abbonamenti</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuale (gli utenti sono autenticati con username/password)</message>
 	<message key="manager.subscriptionTypes.form.options">Opzioni</message>
-	<message key="manager.setup.journalFaviconInvalid">Formato non valido. I formati accettati sono .ico, .png, and .gif.</message>
+	<message key="manager.setup.journalFaviconInvalid">Formato non valido. I formati accettati sono .ico, .png, e .gif.</message>
 	<message key="manager.setup.noPublishing">OJS non viene utilizzato per pubblicare on line i contenuti della rivista</message>
 	<message key="manager.individualSubscriptions">Abbonamento individuale</message>
 	<message key="manager.institutionalSubscriptions">Abbonamento istituzionale</message>
