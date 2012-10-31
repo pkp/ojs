@@ -101,11 +101,11 @@ class ThesisFeedPlugin extends GenericPlugin {
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.thesisfeed.settings'));
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
  	/*

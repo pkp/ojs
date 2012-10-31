@@ -185,16 +185,15 @@ class XMLGalleyPlugin extends GenericPlugin {
 		return false;
 	}
 
-
 	/**
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.xmlGalley.manager.settings'));
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
 	/*

@@ -47,8 +47,8 @@ class METSGatewayPlugin extends GatewayPlugin {
 	}
 
 	function getManagementVerbs() {
+		if (!$this->getEnabled()) return array();
 		$verbs = parent::getManagementVerbs();
-		if (!$this->getEnabled()) return $verbs;
 		$verbs[] = array(
 			'settings', __('plugins.gateways.metsGateway.settings')
 		);

@@ -54,11 +54,11 @@ class TranslatorPlugin extends GenericPlugin {
 	}
 
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('translate', __('plugins.generic.translator.translate'));
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
  	/*

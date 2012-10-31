@@ -96,11 +96,11 @@ class CustomLocalePlugin extends GenericPlugin {
 	}
 
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('index', __('plugins.generic.customLocale.customize'));
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
  	/*

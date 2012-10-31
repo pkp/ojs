@@ -154,12 +154,12 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('feeds', __('plugins.generic.externalFeed.manager.feeds'));
 			$verbs[] = array('settings', __('plugins.generic.externalFeed.manager.settings'));
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
 	/**

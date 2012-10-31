@@ -151,7 +151,7 @@ class CounterPlugin extends GenericPlugin {
 	}
 
 	function getManagementVerbs() {
-		$verbs = array();
+		$verbs = parent::getManagementVerbs();
 
 		if ($this->getEnabled()) {
 			$verbs[] = array('counter', __('plugins.generic.counter'));
@@ -164,7 +164,7 @@ class CounterPlugin extends GenericPlugin {
 				$verbs[] = array('migrate', __('plugins.generic.counter.migrate'));
 			}
 		}
-		return parent::getManagementVerbs($verbs);
+		return $verbs;
 	}
 
  	/*
