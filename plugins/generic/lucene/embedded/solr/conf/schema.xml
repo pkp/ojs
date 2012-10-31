@@ -232,6 +232,15 @@
       </analyzer>
     </fieldType>
 
+    <!-- Chinese (simplified): To use this filter, see solr/contrib/analysis-extras/README.txt
+         for instructions on which jars you need to add to solr/lib
+    <fieldType name="text_csimp" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <analyzer class="org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer"/>
+      </analyzer>
+    </fieldType>
+    -->
+
     <!-- Dutch -->
     <fieldType name="text_nl" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
