@@ -32,6 +32,7 @@
     <fieldType name="facet" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.PatternTokenizerFactory" pattern="[,;]\s*"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
 
@@ -39,6 +40,7 @@
     <fieldType name="facet_semicolon_separated" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.PatternTokenizerFactory" pattern=";\s*"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
     
@@ -60,7 +62,7 @@
     <!-- Catalan -->
     <fieldType name="text_ca" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_ca.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -74,7 +76,7 @@
     <!-- Czech -->
     <fieldType name="text_cs" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_cs.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -88,7 +90,7 @@
     <!-- Danish -->
     <fieldType name="text_da" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_da.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -102,7 +104,7 @@
     <!-- German -->
     <fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_de.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -116,7 +118,7 @@
 	<!-- Greek -->
     <fieldType name="text_el" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_el.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.GreekLowerCaseFilterFactory"/>
@@ -129,7 +131,7 @@
     <!-- English -->
     <fieldType name="text_en" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -143,7 +145,7 @@
     <!-- Spanish -->
     <fieldType name="text_es" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_es.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -157,7 +159,7 @@
     <!-- Basque -->
     <fieldType name="text_eu" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_eu.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -171,7 +173,7 @@
     <!-- Persian/Farsi -->
     <fieldType name="text_fa" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_fa.txt" enablePositionIncrements="true"/>
         <filter class="solr.ArabicNormalizationFilterFactory"/>
         <filter class="solr.PersianNormalizationFilterFactory"/>
@@ -182,7 +184,7 @@
     <!-- French -->
     <fieldType name="text_fr" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_fr.txt" enablePositionIncrements="true"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.ElisionFilterFactory"/>
@@ -197,7 +199,7 @@
     <!-- Galician -->
     <fieldType name="text_gl" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_gl.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -211,7 +213,7 @@
     <!-- Italian -->
     <fieldType name="text_it" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_it.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -230,10 +232,19 @@
       </analyzer>
     </fieldType>
 
+    <!-- Chinese (simplified): To use this filter, see solr/contrib/analysis-extras/README.txt
+         for instructions on which jars you need to add to solr/lib
+    <fieldType name="text_csimp" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <analyzer class="org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer"/>
+      </analyzer>
+    </fieldType>
+    -->
+
     <!-- Dutch -->
     <fieldType name="text_nl" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_nl.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -247,7 +258,7 @@
     <!-- Norwegian -->
     <fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_no.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -261,7 +272,7 @@
     <!-- Portuguese -->
     <fieldType name="text_pt" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_pt.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -275,7 +286,7 @@
     <!-- Romanian -->
     <fieldType name="text_ro" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_ro.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -289,7 +300,7 @@
     <!-- Russian -->
     <fieldType name="text_ru" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_ru.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.LowerCaseFilterFactory"/>
@@ -302,7 +313,7 @@
     <!-- Swedish -->
     <fieldType name="text_sv" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_sv.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
@@ -316,7 +327,7 @@
     <!-- Turkish -->
     <fieldType name="text_tr" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_tr.txt" enablePositionIncrements="true"/>
         <filter class="solr.WordDelimiterFilterFactory" splitOnCaseChange="0" catenateWords="1" catenateNumbers="1" />
         <filter class="solr.TurkishLowerCaseFilterFactory"/>

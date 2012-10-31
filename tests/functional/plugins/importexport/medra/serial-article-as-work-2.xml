@@ -25,13 +25,13 @@
 		</WorkIdentifier>
 		<SerialPublication>
 			<SerialWork>
-				<Title textformat="00" language="ger">
-					<TitleType>01</TitleType>
-					<TitleText>test-de</TitleText>
-				</Title>
 				<Title textformat="00" language="eng">
 					<TitleType>01</TitleType>
 					<TitleText>test</TitleText>
+				</Title>
+				<Title textformat="00" language="ger">
+					<TitleType>01</TitleType>
+					<TitleText>test-de</TitleText>
 				</Title>
 				<Publisher>
 					<PublishingRole>01</PublishingRole>
@@ -75,13 +75,13 @@
 			<TextItem>
 				<NumberOfPages>33</NumberOfPages>
 			</TextItem>
-			<Title textformat="00" language="ger">
-				<TitleType>01</TitleType>
-				<TitleText>DOI Testartikel</TitleText>
-			</Title>
 			<Title textformat="00" language="eng">
 				<TitleType>01</TitleType>
 				<TitleText>DOI Test</TitleText>
+			</Title>
+			<Title textformat="00" language="ger">
+				<TitleType>01</TitleType>
+				<TitleText>DOI Testartikel</TitleText>
 			</Title>
 			<Contributor>
 				<SequenceNumber>1</SequenceNumber>
@@ -108,11 +108,11 @@
 			</Subject>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="00" language="ger">Ein Artikel zum Testen von DOIs</Text>
+				<Text textformat="00" language="eng">DOI Test Submission</Text>
 			</OtherText>
 			<OtherText>
 				<TextTypeCode>01</TextTypeCode>
-				<Text textformat="00" language="eng">DOI Test Submission</Text>
+				<Text textformat="00" language="ger">Ein Artikel zum Testen von DOIs</Text>
 			</OtherText>
 			<PublicationDate>20111006</PublicationDate>
 			<!-- Further related works (will only occur when updating an article-as-work): -->
