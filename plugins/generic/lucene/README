@@ -524,6 +524,34 @@ folder 'plugins/generic/lucene/embedded/solr/conf'. You can edit these files
 manually and then restart the solr process. This should be enough to introduce
 the new stopwords.
 
+We use a so-called "bigram" approach by default to index Chinese, Taiwanese or
+Japanese texts. If you have texts in simplified Chinese only you may want to
+try out the following alternative configuration in your schema.xml:
+
+  ...
+  <dynamicField name="*_zh_CN" type="text_csimp" indexed="true"  stored="true"
+      multiValued="false" />
+  ...
+
+To use this filter, see solr/contrib/analysis-extras/README.txt for instructions
+on which jars you need to add to solr/lib. 
+
+Still another approach to indexing Chinese, Korean or Japanese could be the
+following configuration:
+
+  ...
+  <fieldType name="text_cjk" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.LowerCaseTokenizerFactory"/>
+      <filter class="solr.EdgeNGramFilterFactory" minGramSize="1"
+          maxGramSize="2" side="back"/>
+    </analyzer>
+  </fieldType>
+  ...
+
+If you are searching in mixed-language fields (e.g. titles that contain both
+English and Chinese versions of the same text) then searching for words with
+quotes (e.g. '+China +"中国"') may be helpful to avoid false positives.
 
 11) Subscription-Based Publications
 -----------------------------------

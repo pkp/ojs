@@ -53,7 +53,7 @@
 			<li>Make sure that a word exists in an article by prefixing it with <strong>+</strong>; e.g., <em>+journal +access scholarly academic</em></li>
 			<li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
 			<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g., <em>online -politics</em> or <em>online NOT politics</em></li>
-			<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
+			<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>. Hint: Quoting Chinese or Japanese words will help you to find exact word matches in mixed-language fields, e.g. "中国". 
 			<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
 		 </ul>
 	]]></message>
