@@ -166,7 +166,6 @@ releases of OJS.
 Server requirements for full Unicode (UTF-8) support:
 
 	* MySQL >= 4.1.1 or PostgreSQL >= 7.1
-	* PHP >= 4.3.0 compiled with support for the mbstring library
 
 
 Scheduled Tasks
