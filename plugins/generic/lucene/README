@@ -213,7 +213,7 @@ a solr search server.
        This should create a folder jetty-6.1.26 in your lib directory. If you
        are on Linux then please create a symlink pointing to this directory,
        e.g.:
-          #> ln -s jetty-6.1.26.zip jetty
+          #> ln -s jetty-6.1.26 jetty
 
        If you are on Windows then download and unzip the file to the lib folder
        using your favorite browser and zip tool. Then rename the jetty folder to
