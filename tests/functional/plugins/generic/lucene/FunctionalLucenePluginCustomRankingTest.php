@@ -114,7 +114,7 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 
 		// Check that the ranking order of the remaining articles
 		// was reversed.
-		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3"^1.1 "article 4")');
+		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3" "article 4")');
 		for ($article = 3, $row = 3; $article >= 1; $article--, $row += 4) {
 			$articleTitle = $this->getTable("css=table.listing.$row.1");
 			self::assertEquals("Ranking Test Article $article", $articleTitle);
