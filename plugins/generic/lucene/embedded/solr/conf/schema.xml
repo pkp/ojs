@@ -32,6 +32,7 @@
     <fieldType name="facet" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.PatternTokenizerFactory" pattern="[,;]\s*"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
 
@@ -39,6 +40,7 @@
     <fieldType name="facet_semicolon_separated" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.PatternTokenizerFactory" pattern=";\s*"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
     

@@ -144,13 +144,13 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 	 * EXAMPLES:
 	 *   locale | facets
 	 *   =============================================
-	 *   de_DE  | 22A10 Generelle Topologische Gruppen
+	 *   de_DE  | 22A10 generelle gopologische gruppen
 	 *   en_US  | 22A10 general topological groups
 	 */
 	function testOnlyShowFacetsInTheUiLanguage() {
 		$testCases = array(
-			'de_DE' => '22A10 Generelle Topologische Gruppen',
-			'en_US' => '22A10 general topological groups'
+			'de_DE' => '22a10 generelle topologische gruppen',
+			'en_US' => '22a10 general topological groups'
 		);
 
 		foreach($testCases as $locale => $facet) {
@@ -219,23 +219,23 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 	 * EXAMPLES:
 	 *   id 1 | id 2 | facet filter
 	 *   ============================================
-	 *   3    | 4    | discipline: "Exotic Food"
-	 *   1    | 3    | keyword: "22A10 general topological groups"
+	 *   3    | 4    | discipline: "exotic food"
+	 *   1    | 3    | keyword: "22a10 general topological groups"
 	 *   4    | 3    | method/approach: "personal experience"
 	 *   4    | 3    | coverage: "the 21st century"
 	 *   3    | 4    | publication date: "2012"
 	 *   3    | 1    | journal: "lucene-test"
-	 *   3    | 4    | author: "Authorname, Second A"
+	 *   3    | 4    | author: "authorname, second a"
 	 */
 	function testFacetFilterSelection() {
 		$testCases = array(
-			array(3, 4, 'discipline', 'Exotic Food'),
-			array(1, 3, 'subject', '22A10 general topological groups'), // keyword
+			array(3, 4, 'discipline', 'exotic food'),
+			array(1, 3, 'subject', '22a10 general topological groups'), // keyword
 			array(4, 3, 'type', 'personal experience'), // method/approach
 			array(4, 3, 'coverage', 'the 21st century'),
 			array(3, 4, 'publicationDate', '2012'),
 			array(3, 1, 'journalTitle', 'lucene-test'),
-			array(3, 4, 'authors', 'Authorname, Second A')
+			array(3, 4, 'authors', 'authorname, second a')
 		);
 
 		foreach($testCases as $testCase) {
