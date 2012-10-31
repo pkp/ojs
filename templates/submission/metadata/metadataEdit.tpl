@@ -39,35 +39,6 @@ function moveAuthor(dir, authorIndex) {
 </script>
 {/literal}
 
-{if count($formLocales) > 1}
-<div id="locales">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
-			{url|assign:"formUrl" path=$articleId escape=false}
-			{* Maintain localized author info across requests *}
-			{foreach from=$authors key=authorIndex item=author}
-				{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
-					{foreach from=$author.competingInterests key="thisLocale" item="thisCompetingInterests"}
-						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
-					{/foreach}
-				{/if}
-				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
-					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
-				{/foreach}
-				{foreach from=$author.affiliation key="thisLocale" item="thisAffiliation"}
-					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][affiliation][{$thisLocale|escape}]" value="{$thisAffiliation|escape}" />{/if}
-				{/foreach}
-			{/foreach}
-			{form_language_chooser form="metadata" url=$formUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
-</locales>
-{/if}
-
 <div id="authors">
 <h3>{translate key="article.authors"}</h3>
 
@@ -204,6 +175,24 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 {/if}
+
+<p class="pkp_help">{translate key="common.catalogInformation"}</p>
+
+{fbvFormArea id="generalInformation" title="submission.submit.titleAndSummary" class="border"}
+	{fbvFormSection for="title" title="common.prefix" inline="true" size=$fbvStyles.size.SMALL}
+		{fbvElement type="text" multilingual=true id="prefix" value="$prefix" disabled=$readOnly maxlength="32"}
+	{/fbvFormSection}
+	{fbvFormSection for="title" title="common.title" inline="true" size=$fbvStyles.size.LARGE required=true}
+		{fbvElement type="text" multilingual=true name="title" id="title" value=$title disabled=$readOnly maxlength="255" required=true}
+	{/fbvFormSection}
+	{fbvFormSection description="common.prefixAndTitle.tip"}{/fbvFormSection}
+	{fbvFormSection title="common.subtitle" for="subtitle"}
+		{fbvElement type="text" multilingual=true name="subtitle" id="subtitle" value=$subtitle disabled=$readOnly}
+	{/fbvFormSection}
+	{fbvFormSection title="common.abstract" for="abstract" required=true}
+		{fbvElement type="textarea" multilingual=true name="abstract" id="abstract" value=$abstract rich=true disabled=$readOnly}
+	{/fbvFormSection}
+{/fbvFormArea}
 
 <div id="titleAndAbstract">
 <h3>{translate key="submission.titleAndAbstract"}</h3>

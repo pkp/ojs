@@ -327,6 +327,9 @@
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
 	</upgrade>
 
+	<upgrade minversion="2.4.1.0" maxversion="3.0.0.0">
+		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
+	</upgrade>
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

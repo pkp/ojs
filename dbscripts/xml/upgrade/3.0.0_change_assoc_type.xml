@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_change_assoc_type.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0.0 updates for assoc_type XML file.
+  -->
+<data>
+	<!-- synchronize the ASSOC_TYPE_ARTICLE constant to ASSOC_TYPE_SUBMISSION defined in PKPApplication -->
+	<sql>
+		<query>UPDATE controlled_vocabs SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE notifications SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE notes SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE email_log SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE event_log SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE signoffs SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+	</sql>
+</data>
