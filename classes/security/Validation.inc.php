@@ -24,7 +24,7 @@ class Validation {
 	 * @param $remember boolean remember a user's session past the current browser session
 	 * @return User the User associated with the login credentials, or false if the credentials are invalid
 	 */
-	function &login($username, $password, &$reason, $remember = false) {
+	static function &login($username, $password, &$reason, $remember = false) {
 		$implicitAuth = Config::getVar('security', 'implicit_auth');
 
 		$reason = null;
@@ -114,7 +114,7 @@ class Validation {
 	 * Mark the user as logged out in the current session.
 	 * @return boolean
 	 */
-	function logout() {
+	static function logout() {
 		$sessionManager =& SessionManager::getManager();
 		$session =& $sessionManager->getUserSession();
 		$session->unsetSessionVar('userId');
@@ -136,7 +136,7 @@ class Validation {
 	 * Redirect to the login page, appending the current URL as the source.
 	 * @param $message string Optional name of locale key to add to login page
 	 */
-	function redirectLogin($message = null) {
+	static function redirectLogin($message = null) {
 		$args = array();
 
 		if (isset($_SERVER['REQUEST_URI'])) {
@@ -155,7 +155,7 @@ class Validation {
 	 * @param $password string unencrypted password
 	 * @return boolean
 	 */
-	function checkCredentials($username, $password) {
+	static function checkCredentials($username, $password) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getByUsername($username, false);
 
@@ -182,7 +182,7 @@ class Validation {
 	 * @param $journalId optional (e.g., for global site admin role), the ID of the journal
 	 * @return boolean
 	 */
-	function isAuthorized($roleId, $journalId = 0) {
+	static function isAuthorized($roleId, $journalId = 0) {
 		if (!Validation::isLoggedIn()) {
 			return false;
 		}
@@ -210,7 +210,7 @@ class Validation {
 	 * @param $encryption string optional encryption algorithm to use, defaulting to the value from the site configuration
 	 * @return string encrypted password
 	 */
-	function encryptCredentials($username, $password, $encryption = false) {
+	static function encryptCredentials($username, $password, $encryption = false) {
 		$valueToEncrypt = $username . $password;
 
 		if ($encryption == false) {
@@ -234,7 +234,7 @@ class Validation {
 	 * @param $length int the length of the password to generate (default 8)
 	 * @return string
 	 */
-	function generatePassword($length = 8) {
+	static function generatePassword($length = 8) {
 		$letters = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ';
 		$numbers = '23456789';
 
@@ -250,7 +250,7 @@ class Validation {
 	 * @param $userId int
 	 * @return string (boolean false if user is invalid)
 	 */
-	function generatePasswordResetHash($userId) {
+	static function generatePasswordResetHash($userId) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		if (($user = $userDao->getById($userId)) == null) {
 			// No such user
@@ -263,7 +263,7 @@ class Validation {
 	 * Suggest a username given the first and last names.
 	 * @return string
 	 */
-	function suggestUsername($firstName, $lastName) {
+	static function suggestUsername($firstName, $lastName) {
 		$initial = String::substr($firstName, 0, 1);
 
 		$suggestion = String::regexp_replace('/[^a-zA-Z0-9_-]/', '', String::strtolower($initial . $lastName));
@@ -276,7 +276,7 @@ class Validation {
 	 * Check if the user must change their password in order to log in.
 	 * @return boolean
 	 */
-	function isLoggedIn() {
+	static function isLoggedIn() {
 		$sessionManager =& SessionManager::getManager();
 		$session =& $sessionManager->getUserSession();
 
@@ -288,7 +288,7 @@ class Validation {
 	 * Shortcut for checking authorization as site admin.
 	 * @return boolean
 	 */
-	function isSiteAdmin() {
+	static function isSiteAdmin() {
 		return Validation::isAuthorized(ROLE_ID_SITE_ADMIN);
 	}
 
@@ -297,7 +297,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isJournalManager($journalId = -1) {
+	static function isJournalManager($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
 	}
 
@@ -306,7 +306,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isEditor($journalId = -1) {
+	static function isEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_EDITOR, $journalId);
 	}
 
@@ -315,7 +315,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isSectionEditor($journalId = -1) {
+	static function isSectionEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_SECTION_EDITOR, $journalId);
 	}
 
@@ -324,7 +324,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isLayoutEditor($journalId = -1) {
+	static function isLayoutEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_LAYOUT_EDITOR, $journalId);
 	}
 
@@ -333,7 +333,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isReviewer($journalId = -1) {
+	static function isReviewer($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_REVIEWER, $journalId);
 	}
 
@@ -342,7 +342,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isCopyeditor($journalId = -1) {
+	static function isCopyeditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_COPYEDITOR, $journalId);
 	}
 
@@ -351,7 +351,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isProofreader($journalId = -1) {
+	static function isProofreader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_PROOFREADER, $journalId);
 	}
 
@@ -360,7 +360,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isAuthor($journalId = -1) {
+	static function isAuthor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
 	}
 
@@ -369,7 +369,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isReader($journalId = -1) {
+	static function isReader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_READER, $journalId);
 	}
 
@@ -378,7 +378,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isSubscriptionManager($journalId = -1) {
+	static function isSubscriptionManager($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_SUBSCRIPTION_MANAGER, $journalId);
 	}
 
@@ -388,7 +388,7 @@ class Validation {
 	 * @param $userId int
 	 * @return boolean
 	 */
-	function canAdminister($journalId, $userId) {
+	static function canAdminister($journalId, $userId) {
 		if (Validation::isSiteAdmin()) return true;
 		if (!Validation::isJournalManager($journalId)) return false;
 

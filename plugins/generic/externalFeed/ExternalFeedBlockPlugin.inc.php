@@ -77,7 +77,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, &$request) {
+	function getContents(&$templateMgr, $request = null) {
 		$journal =& $request->getJournal();
 		if (!$journal) return '';
 

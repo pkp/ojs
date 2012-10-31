@@ -61,7 +61,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, &$request) {
+	function getContents(&$templateMgr, $request = null) {
 		$journal =& $request->getJournal();
 
 		$cacheManager =& CacheManager::getManager();

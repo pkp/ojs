@@ -44,7 +44,7 @@ class AuthorBiosBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, &$request) {
+	function getContents(&$templateMgr, $request = null) {
 		// Only show the block for article pages.
 		switch ($request->getRequestedPage() . '/' . $request->getRequestedOp()) {
 			case 'article/view':

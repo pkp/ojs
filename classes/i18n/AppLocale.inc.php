@@ -28,7 +28,7 @@ class AppLocale extends PKPLocale {
 	 * Get all supported UI locales for the current context.
 	 * @return array
 	 */
-	function getSupportedLocales() {
+	static function getSupportedLocales() {
 		static $supportedLocales;
 		if (!isset($supportedLocales)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
@@ -47,7 +47,7 @@ class AppLocale extends PKPLocale {
 	 * Get all supported form locales for the current context.
 	 * @return array
 	 */
-	function getSupportedFormLocales() {
+	static function getSupportedFormLocales() {
 		static $supportedFormLocales;
 		if (!isset($supportedFormLocales)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
@@ -67,7 +67,7 @@ class AppLocale extends PKPLocale {
 	 * is "en_US" for U.S. English).
 	 * @return string
 	 */
-	function getLocale() {
+	static function getLocale() {
 		static $currentLocale;
 		if (!isset($currentLocale)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
@@ -126,7 +126,7 @@ class AppLocale extends PKPLocale {
 	 * Get the stack of "important" locales, most important first.
 	 * @return array
 	 */
-	function getLocalePrecedence() {
+	static function getLocalePrecedence() {
 		static $localePrecedence;
 		if (!isset($localePrecedence)) {
 			$localePrecedence = array(AppLocale::getLocale());
@@ -144,7 +144,7 @@ class AppLocale extends PKPLocale {
 	 * Retrieve the primary locale of the current context.
 	 * @return string
 	 */
-	function getPrimaryLocale() {
+	static function getPrimaryLocale() {
 		static $locale;
 		if ($locale) return $locale;
 
@@ -173,7 +173,7 @@ class AppLocale extends PKPLocale {
 	 * @param $locale string
 	 * @return array
 	 */
-	function makeComponentMap($locale) {
+	static function makeComponentMap($locale) {
 		$componentMap = parent::makeComponentMap($locale);
 		$baseDir = "locale/$locale/";
 		$componentMap[LOCALE_COMPONENT_APPLICATION_COMMON] = $baseDir . 'locale.xml';
@@ -183,12 +183,6 @@ class AppLocale extends PKPLocale {
 		$componentMap[LOCALE_COMPONENT_OJS_ADMIN] = $baseDir . 'admin.xml';
 		$componentMap[LOCALE_COMPONENT_OJS_DEFAULT] = $baseDir . 'default.xml';
 		return $componentMap;
-	}
-}
-
-if (!class_exists('Locale')) {
-	class Locale extends AppLocale {
-		// This is used for backwards compatibility (bug #5240)
 	}
 }
 

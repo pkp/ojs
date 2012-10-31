@@ -75,15 +75,6 @@ class FontSizeBlockPlugin extends BlockPlugin {
 	function getDescription() {
 		return __('plugins.block.fontSize.description');
 	}
-
-	/**
-	 * Get the HTML contents for this block.
-	 * @param $templateMgr object
-	 * @return string
-	 */
-	function getContents(&$templateMgr) {
-		return parent::getContents($templateMgr);
-	}
 }
 
 ?>

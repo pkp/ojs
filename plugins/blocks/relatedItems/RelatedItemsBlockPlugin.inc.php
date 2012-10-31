@@ -44,7 +44,7 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, &$request) {
+	function getContents(&$templateMgr, $request = null) {
 		$journal =& $request->getJournal();
 
 		return parent::getContents($templateMgr, $request);
