@@ -73,6 +73,7 @@
           <str name="qt">/dictBasedSuggest</str>
           <str name="spellcheck.build">true</str>
         </lst>
+        <!-- Rebuilding the spellcheck dictionary on warm up is not possible as this will lock solr (solr bug). -->
       </arr>
     </listener>
     <!-- END -->
