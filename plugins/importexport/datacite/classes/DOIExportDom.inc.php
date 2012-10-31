@@ -341,24 +341,129 @@ class DOIExportDom {
 	}
 
 	/**
-	 * Identify the primary locale for this export.
+	 * Identify the locale precedence for this export.
 	 * @param $article PublishedArticle
 	 * @param $galley ArticleGalley
-	 * @return string A valid PKP locale.
+	 * @return array A list of valid PKP locales in descending
+	 *  order of priority.
 	 */
-	function getPrimaryObjectLocale(&$article, &$galley) {
-		if (is_a($galley, 'ArticleGalley')) {
-			$primaryObjectLocale = $galley->getLocale();
+	function getObjectLocalePrecedence(&$article, &$galley) {
+		$locales = array();
+		if (is_a($galley, 'ArticleGalley') && AppLocale::isLocaleValid($galley->getLocale())) {
+			$locales[] = $galley->getLocale();
 		}
-		if (empty($primaryObjectLocale) && is_a($article, 'PublishedArticle')) {
-			$primaryObjectLocale = $article->getLocale();
+		if (is_a($article, 'Submission')) {
+			// First try to translate the article language into a locale.
+			$articleLocale = $this->translateLanguageToLocale($article->getLanguage());
+			if (!is_null($articleLocale)) {
+				$locales[] = $articleLocale;
+			}
+
+			// Use the article locale as fallback only
+			// as this is the primary locale of article meta-data, not
+			// necessarily of the article itself.
+			if(AppLocale::isLocaleValid($article->getLocale())) {
+				$locales[] = $article->getLocale();
+			}
 		}
-		if (empty($primaryObjectLocale)) {
-			$journal =& $this->getJournal();
-			$primaryObjectLocale = $journal->getPrimaryLocale();
+
+		// Use the journal locale as fallback.
+		$journal =& $this->getJournal();
+		$locales[] = $journal->getPrimaryLocale();
+
+		// Use form locales as fallback.
+		$formLocales = array_keys($journal->getSupportedFormLocaleNames());
+		// Sort form locales alphabetically so that
+		// we get a well-defined order.
+		sort($formLocales);
+		foreach($formLocales as $formLocale) {
+			if (!in_array($formLocale, $locales)) $locales[] = $formLocale;
 		}
-		assert(AppLocale::isLocaleValid($primaryObjectLocale));
-		return $primaryObjectLocale;
+
+		assert(!empty($locales));
+		return $locales;
+	}
+
+	/**
+	 * Try to translate an ISO language code to an OJS locale.
+	 * @param $language string 2- or 3-letter ISO language code
+	 * @return string|null An OJS locale or null if no matching
+	 *  locale could be found.
+	 */
+	function translateLanguageToLocale($language) {
+		$locale = null;
+		if (strlen($language) == 2) {
+			$language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
+		}
+		if (strlen($language) == 3) {
+			$language = AppLocale::getLocaleFrom3LetterIso($language);
+		}
+		if (AppLocale::isLocaleValid($language)) {
+			$locale = $language;
+		}
+		return $locale;
+	}
+
+	/**
+	 * Identify the primary translation from an array of
+	 * localized data.
+	 * @param $localizedData array An array of localized
+	 *  data (key: locale, value: localized data).
+	 * @param $localePrecedence array An array of locales
+	 *  by descending priority.
+	 * @return mixed|null The value of the primary locale
+	 *  or null if no primary translation could be found.
+	 */
+	function getPrimaryTranslation($localizedData, $localePrecedence) {
+		// Check whether we have localized data at all.
+		if (!is_array($localizedData) || empty($localizedData)) return null;
+
+		// Try all locales from the precedence list first.
+		foreach($localePrecedence as $locale) {
+			if (isset($localizedData[$locale]) && !empty($localizedData[$locale])) {
+				return $localizedData[$locale];
+			}
+		}
+
+		// As a fallback: use any translation by alphabetical
+		// order of locales.
+		ksort($localizedData);
+		foreach($localizedData as $locale => $value) {
+			if (!empty($value)) return $value;
+		}
+
+		// If we found nothing (how that?) return null.
+		return null;
+	}
+
+	/**
+	 * Re-order localized data by locale precedence.
+	 * @param $localizedData array An array of localized
+	 *  data (key: locale, value: localized data).
+	 * @param $localePrecedence array An array of locales
+	 *  by descending priority.
+	 * @return array Re-ordered localized data.
+	 */
+	function getTranslationsByPrecedence($localizedData, $localePrecedence) {
+		$reorderedLocalizedData = array();
+
+		// Check whether we have localized data at all.
+		if (!is_array($localizedData) || empty($localizedData)) return $reorderedLocalizedData;
+
+		// Order by explicit locale precedence first.
+		foreach($localePrecedence as $locale) {
+			if (isset($localizedData[$locale]) && !empty($localizedData[$locale])) {
+				$reorderedLocalizedData[$locale] = $localizedData[$locale];
+			}
+			unset($localizedData[$locale]);
+		}
+
+		// Order any remaining values alphabetically by locale
+		// and amend the re-ordered array.
+		ksort($localizedData);
+		$reorderedLocalizedData = array_merge($reorderedLocalizedData, $localizedData);
+
+		return $reorderedLocalizedData;
 	}
 
 	/**
@@ -409,15 +514,16 @@ class DOIExportDom {
 
 	/**
 	 * Identify the publisher of the journal.
+	 * @param $localePrecedence array
 	 * @return string
 	 */
-	function getPublisher() {
+	function getPublisher($localePrecedence) {
 		$journal =& $this->getJournal();
 		$publisher = $journal->getSetting('publisherInstitution');
 		if (empty($publisher)) {
 			// Use the journal title if no publisher is set.
 			// This corresponds to the logic implemented for OAI interfaces, too.
-			$publisher = $journal->getLocalizedTitle();
+			$publisher = $this->getPrimaryTranslation($journal->getTitle(null), $localePrecedence);
 		}
 		assert(!empty($publisher));
 		return $publisher;
@@ -426,19 +532,13 @@ class DOIExportDom {
 	/**
 	 * Identify the article subject class and code.
 	 * @param $article PublishedArticle
-	 * @param $primaryObjectLocale string
+	 * @param $objectLocalePrecedence array
 	 * @return array The subject class and code.
 	 */
-	function getSubjectClass(&$article, $primaryObjectLocale) {
+	function getSubjectClass(&$article, $objectLocalePrecedence) {
 		$journal =& $this->getJournal();
-		$subjectSchemeTitle = $journal->getSetting('metaSubjectClassTitle', $primaryObjectLocale);
-		if (empty($subjectSchemeTitle)) {
-			$subjectSchemeTitle = $journal->getLocalizedSetting('metaSubjectClassTitle');
-		}
-		$subjectSchemeUrl = $journal->getSetting('metaSubjectClassUrl', $primaryObjectLocale);
-		if (empty($subjectSchemeUrl)) {
-			$subjectSchemeUrl = $journal->getLocalizedSetting('metaSubjectClassUrl');
-		}
+		$subjectSchemeTitle = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassTitle', null), $objectLocalePrecedence);
+		$subjectSchemeUrl = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassUrl', null), $objectLocalePrecedence);
 		if (empty($subjectSchemeTitle)) {
 			$subjectSchemeName = $subjectSchemeUrl;
 		} else {
@@ -448,10 +548,7 @@ class DOIExportDom {
 				$subjectSchemeName = "$subjectSchemeTitle ($subjectSchemeUrl)";
 			}
 		}
-		$subjectCode = $article->getSubjectClass($primaryObjectLocale);
-		if (empty($subjectCode)) {
-			$subjectCode = $article->getLocalizedSubjectClass();
-		}
+		$subjectCode = $this->getPrimaryTranslation($article->getSubjectClass(null), $objectLocalePrecedence);
 		return array($subjectSchemeName, $subjectCode);
 	}
 

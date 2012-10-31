@@ -73,6 +73,7 @@
           <str name="qt">/dictBasedSuggest</str>
           <str name="spellcheck.build">true</str>
         </lst>
+        <!-- Rebuilding the spellcheck dictionary on warm up is not possible as this will lock solr (solr bug). -->
       </arr>
     </listener>
     <!-- END -->
@@ -265,6 +266,7 @@
       <str name="mlt.mintf">2</str>
       <str name="mlt.mindf">3</str>
       <str name="mlt.minwl">3</str>
+      <str name="mlt.maxqt">5</str>
       <str name="mlt.boost">off</str> <!-- We do not support boosting in our regular interface. We switch it off to produce consistent queries. -->
       <str name="mlt.interestingTerms">list</str>
       <str name="mlt.match.include">off</str>
