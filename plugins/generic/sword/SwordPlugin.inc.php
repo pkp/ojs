@@ -232,15 +232,10 @@ class SwordPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Result status message
-	 * @param $messageParams array Parameters for status message
-	 * @return boolean
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$returner = true;
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();

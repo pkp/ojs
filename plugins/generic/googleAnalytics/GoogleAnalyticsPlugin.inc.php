@@ -202,15 +202,10 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		return false;
 	}
 
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
-	 * @param $message string Result status message
-	 * @param $messageParams array Parameters for the message key
- 	 * @return boolean
- 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+ 	/**
+	 * @see PKPPlugin::manage()
+	 */
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
 		switch ($verb) {

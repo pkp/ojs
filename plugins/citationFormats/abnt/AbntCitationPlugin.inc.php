@@ -81,7 +81,7 @@ class AbntCitationPlugin extends CitationPlugin {
 		return array(
 			array(
 				'settings',
-				Locale::translate('plugins.citationFormats.abnt.manager.settings')
+				__('plugins.citationFormats.abnt.manager.settings')
 			)
 		);
 	}
@@ -99,17 +99,10 @@ class AbntCitationPlugin extends CitationPlugin {
 		return parent::displayCitation($article, $issue, $journal);
 	}
 
-	/**
-	 * Execute a management verb on this plugin
-	 * @param $verb string
-	 * @param $args array
-	 * @param $message string If a message is returned from this by-ref
-	 *  argument then it will be displayed as a notification if (and only
-	 *  if) the method returns false.
-	 * @return boolean will redirect to the plugin category page if false,
-	 *  otherwise will remain on the same page
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':

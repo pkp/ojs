@@ -241,7 +241,10 @@ class AuthPlugin extends Plugin {
 		);
 	}
 
-	function manage($verb, $args) {
+ 	/**
+	 * @see PKPPlugin::manage()
+	 */
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if ($verb === 'authSources') {
 			$request =& $this->getRequest();
 			$request->redirect('index', 'admin', 'auth');

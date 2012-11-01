@@ -1,4 +1,4 @@
- = null<?php
+<?php
 
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedBlockPlugin.inc.php
@@ -17,9 +17,14 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	var $parentPluginName;
 
+	/**
+	 * Constructor
+	 */
 	function AnnouncementFeedBlockPlugin($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
+		parent::BlockPlugin();
 	}
+
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */

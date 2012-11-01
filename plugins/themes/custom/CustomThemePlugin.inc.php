@@ -100,7 +100,10 @@ class CustomThemePlugin extends ThemePlugin {
 		return $smarty->smartyUrl($params, $smarty);
 	}
 
-	function manage($verb) {
+ 	/**
+	 * @see PKPPlugin::manage()
+	 */
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if ($verb != 'settings') return false;
 
 		$request =& $this->getRequest();

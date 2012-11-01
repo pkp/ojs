@@ -29,41 +29,13 @@ class PluginHandler extends ManagerHandler {
 	 * @param $request PKPRequest
 	 */
 	function plugins($args, &$request) {
-		$category = isset($args[0])?$args[0]:null;
-		$categories = PluginRegistry::getCategories();
-
 		$templateMgr =& TemplateManager::getManager();
 		$this->validate();
 
-		if (isset($category) && in_array($category, $categories)) {
-			// The user specified a category of plugins to view;
-			// get the plugins in that category only.
-			$mainPage = false;
-			$plugins =& PluginRegistry::loadCategory($category);
+		$this->setupTemplate(true);
+		$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
+		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, false));
 
-			$this->setupTemplate(false);
-			$templateMgr->assign('pageTitle', 'plugins.categories.' . $category);
-			$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, true));
-		} else {
-			// No plugin specified; display all.
-			$mainPage = true;
-			$plugins = array();
-			foreach ($categories as $category) {
-				$newPlugins =& PluginRegistry::loadCategory($category);
-				if (isset($newPlugins)) {
-					$plugins = array_merge($plugins, PluginRegistry::loadCategory($category));
-				}
-			}
-
-			$this->setupTemplate(true);
-			$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
-			$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, false));
-		}
-
-		$templateMgr->assign_by_ref('plugins', $plugins);
-		$templateMgr->assign_by_ref('categories', $categories);
-		$templateMgr->assign('mainPage', $mainPage);
-		$templateMgr->assign('isSiteAdmin', Validation::isSiteAdmin());
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
 
 		$templateMgr->display('manager/plugins/plugins.tpl');
@@ -84,7 +56,7 @@ class PluginHandler extends ManagerHandler {
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = $messageParams = null;
-		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message, $messageParams, $request)) {
+		if (!isset($plugins[$plugin]) || !$plugins[$plugin]->manage($verb, $args, $message, $messageParams)) {
 			if ($message) {
 				$user =& $request->getUser();
 				import('classes.notification.NotificationManager');

@@ -97,10 +97,10 @@ class ReportPlugin extends Plugin {
 		);
 	}
 
-	/**
-	 * Perform management functions
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if ($verb === 'reports') {
 			$request =& $this->getRequest();
 			$request->redirect(null, 'manager', 'report', $this->getName());

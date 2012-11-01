@@ -183,7 +183,10 @@ class ResolverPlugin extends GatewayPlugin {
 		return $verbs;
 	}
 
-	function manage($verb, $args) {
+ 	/**
+	 * @see PKPPlugin::manage()
+	 */
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		switch ($verb) {
 			case 'exportHoldings':
 				if (Validation::isSiteAdmin() && $this->getEnabled()) {

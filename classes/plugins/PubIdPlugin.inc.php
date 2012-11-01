@@ -50,28 +50,28 @@ class PubIdPlugin extends Plugin {
 			$verbs = array(
 				array(
 					'disable',
-					Locale::translate('manager.plugins.disable')
+					__('manager.plugins.disable')
 				),
 				array(
 					'settings',
-					Locale::translate('manager.plugins.settings')
+					__('manager.plugins.settings')
 				)
 			);
 		} else {
 			$verbs = array(
 				array(
 					'enable',
-					Locale::translate('manager.plugins.enable')
+					__('manager.plugins.enable')
 				)
 			);
 		}
 		return $verbs;
 	}
 
-	/**
+ 	/**
 	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$templateManager =& TemplateManager::getManager();
 		$request =& $this->getRequest();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));

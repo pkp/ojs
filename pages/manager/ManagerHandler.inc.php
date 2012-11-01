@@ -18,7 +18,7 @@ import('pages.manager.ManagerHandler');
 class ManagerHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function ManagerHandler() {
 		parent::Handler();
 		

@@ -21,7 +21,7 @@ class TimedViewPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.timedView.displayName');
+		return __('plugins.generic.timedView.displayName');
 	}
 
 	/**
@@ -29,7 +29,7 @@ class TimedViewPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return Locale::translate('plugins.generic.timedView.description');
+		return __('plugins.generic.timedView.description');
 	}
 
 	/**

@@ -88,10 +88,10 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
-	/**
-	 * Perform management functions
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		$request =& $this->getRequest();
 		switch ($verb) {

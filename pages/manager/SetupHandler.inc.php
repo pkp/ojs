@@ -246,7 +246,7 @@ class SetupHandler extends ManagerHandler {
 						if ($setupForm->uploadImage('journalThumbnail', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('journalThumbnail', Locale::translate('manager.setup.journalThumbnailInvalid'));
+							$setupForm->addError('journalThumbnail', __('manager.setup.journalThumbnailInvalid'));
 						}
 
 					} else if ($request->getUserVar('deleteJournalThumbnail')) {

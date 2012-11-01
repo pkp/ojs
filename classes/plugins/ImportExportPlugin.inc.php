@@ -117,11 +117,11 @@ class ImportExportPlugin extends Plugin {
 		);
 	}
 
-	/**
-	 * Perform management functions
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, $message, $messageParams = null, $request = null) {
-		$request =& $request ? $request : $this->getRequest();
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
+		$request =& $this->getRequest();
 		if ($verb === 'importexport') {
 			$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}

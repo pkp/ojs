@@ -92,10 +92,10 @@ class GatewayPlugin extends Plugin {
 		return false;
 	}
 
-	/**
-	 * Perform management functions
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		switch ($verb) {

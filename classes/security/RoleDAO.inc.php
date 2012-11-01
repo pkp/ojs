@@ -412,7 +412,7 @@ class RoleDAO extends DAO {
 	 * @param $plural boolean get the plural form of the name
 	 * @return string
 	 */
-	function getRoleName($roleId, $plural = false) {
+	static function getRoleName($roleId, $plural = false) {
 		switch ($roleId) {
 			case ROLE_ID_SITE_ADMIN:
 				return 'user.role.siteAdmin' . ($plural ? 's' : '');
@@ -447,7 +447,7 @@ class RoleDAO extends DAO {
 	 * @param $plural boolean
 	 * @return array
 	 */
-	function getRoleNames($roleId, $plural = false) {
+	static function getRoleNames($roleId, $plural = false) {
 		return array($this->getRoleName($roleId, $plural));
 	}
 
@@ -456,7 +456,7 @@ class RoleDAO extends DAO {
 	 * @param $roleId int
 	 * @return string
 	 */
-	function getRolePath($roleId) {
+	static function getRolePath($roleId) {
 		switch ($roleId) {
 			case ROLE_ID_SITE_ADMIN:
 				return 'admin';
@@ -490,7 +490,7 @@ class RoleDAO extends DAO {
 	 * @param $rolePath string
 	 * @return int
 	 */
-	function getRoleIdFromPath($rolePath) {
+	static function getRoleIdFromPath($rolePath) {
 		switch ($rolePath) {
 			case 'admin':
 				return ROLE_ID_SITE_ADMIN;
@@ -524,7 +524,7 @@ class RoleDAO extends DAO {
 	 * @param string
 	 * @return string
 	 */
-	function getSortMapping($heading) {
+	static function getSortMapping($heading) {
 		switch ($heading) {
 			case 'username': return 'u.username';
 			case 'name': return 'u.last_name';
