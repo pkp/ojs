@@ -76,7 +76,7 @@
 	<meta name="DC.Source.ISSN" content="{$issn|strip_tags|escape}"/>
 {/if}
 	{if $issue}<meta name="DC.Source.Issue" content="{$issue->getNumber()|strip_tags|escape}"/>{/if}
-	<meta name="DC.Source.URI" content="{$currentJournal->getUrl()|strip_tags|escape}"/>
+	<meta name="DC.Source.URI" content="{url journal=$currentJournal->getPath()}"/>
 	{if $issue}<meta name="DC.Source.Volume" content="{$issue->getVolume()|strip_tags|escape}"/>{/if}
 {if $article->getSubject(null)}{foreach from=$article->getSubject(null) key=metaLocale item=metaValue}
 	{foreach from=$metaValue|explode:"; " item=dcSubject}

@@ -86,9 +86,9 @@ class ThesisFeedPlugin extends GenericPlugin {
 				// if we have a journal selected, append feed meta-links into the header
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/ThesisFeedGatewayPlugin/atom" />';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/ThesisFeedGatewayPlugin/rss" />';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/ThesisFeedGatewayPlugin/rss2" />';
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('ThesisFeedGatewayPlugin', 'atom')) . '" />';
+				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('ThesisFeedGatewayPlugin', 'rss')) . '" />';
+				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('ThesisFeedGatewayPlugin', 'rss2')) . '" />';
 
 				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
 			}

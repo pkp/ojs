@@ -34,7 +34,7 @@
 		</author>
 	{/if}
 
-	<link rel="alternate" href="{$journal->getUrl()|escape}" />
+	<link rel="alternate" href="{url journal=$journal->getPath()}" />
 	<link rel="self" type="application/atom+xml" href="{url page="feed" op="atom"}" />
 
 	{* optional elements *}

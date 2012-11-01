@@ -12,7 +12,7 @@
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
-		<link>{$journal->getUrl()|escape}</link>
+		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
@@ -21,9 +21,9 @@
 		<description>{$description|escape:"html"|strip}</description>
 
 		{* optional elements *}
-	    {if $journal->getPrimaryLocale()}
-	    <language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
-	    {/if}
+		{if $journal->getPrimaryLocale()}
+			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
+		{/if}
 		<pubDate>{$dateUpdated|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 		<generator>OJS {$ojsVersion|escape}</generator>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>

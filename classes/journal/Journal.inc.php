@@ -33,14 +33,6 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Get the base URL to the journal.
-	 * @return string
-	 */
-	function getUrl() {
-		return Request::url($this->getPath());
-	}
-
-	/**
 	 * Return associative array of all locales supported for the submissions.
 	 * These locales are used to provide a language toggle on the submission setp1 and the galley edit page.
 	 * @return array

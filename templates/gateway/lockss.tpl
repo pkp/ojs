@@ -59,7 +59,7 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">Journal URL</td>
-	<td width="80%" class="value"><a href="{$journal->getUrl()|escape}">{$journal->getUrl()|escape}</a></td>
+	<td width="80%" class="value"><a href="{url journal=$journal->getPath()}">{url journal=$journal->getPath()}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">Title</td>

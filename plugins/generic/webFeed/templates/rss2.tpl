@@ -12,7 +12,7 @@
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
-		<link>{$journal->getUrl()|escape}</link>
+		<link>{url journal=$journal->getPath()}</link>
 
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}

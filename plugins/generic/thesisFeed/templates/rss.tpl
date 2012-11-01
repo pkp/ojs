@@ -14,10 +14,10 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
 
-	<channel rdf:about="{$journal->getUrl()|escape}">
+	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="plugins.generic.thesis.manager.theses"}</title>
-		<link>{$journal->getUrl()|escape}</link>
+		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}

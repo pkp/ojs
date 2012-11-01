@@ -102,9 +102,9 @@ class WebFeedPlugin extends GenericPlugin {
 			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" title="' . $journalTitle . ' (atom+xml)" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" title="' . $journalTitle . ' (rdf+xml)" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss" />';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" title="' . $journalTitle . ' (rss+xml)" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss2" />';
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '" />';
+				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss')) . '" />';
+				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2')) . '" />';
 
 				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
 			}

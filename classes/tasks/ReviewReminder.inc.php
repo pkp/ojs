@@ -66,7 +66,7 @@ class ReviewReminder extends ScheduledTask {
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
 			'reviewerUsername' => $reviewer->getUsername(),
-			'journalUrl' => $journal->getUrl(),
+			'journalUrl' => Request::url($journal->getPath()),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => $reviewDueDate,
 			'weekLaterDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime('+1 week')),
