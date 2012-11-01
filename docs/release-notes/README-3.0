@@ -21,3 +21,5 @@ Changed config.inc.php parameters:
 	- captcha:captcha: This option has been deprecated in favour of
 		ReCaptcha. See config.TEMPLATE.inc.php in the [captcha] section
 		for the replacement configuration options.
+	- debug:show_stats: This option has been removed. Profiling is available
+		in various PHP opcode caches.
