@@ -95,7 +95,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 			case 'selectIssue':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				Locale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+				AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
 				$templateMgr->assign_by_ref('issues', $issues);

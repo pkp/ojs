@@ -374,10 +374,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 		}
 	}
 
-	/**
-	 * @see ImportExportPlugin::manage()
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$request) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		parent::manage($verb, $args, $message, $messageParams, $request);
 
 		switch ($verb) {

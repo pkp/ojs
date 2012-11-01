@@ -230,10 +230,10 @@ class LucenePlugin extends GenericPlugin {
 		return $verbs;
 	}
 
-	/**
-	 * @see GenericPlugin::manage()
+ 	/**
+	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		$request =& $this->getRequest();
 
