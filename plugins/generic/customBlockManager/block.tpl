@@ -7,6 +7,6 @@
  * Sidebar menu -- "Custom" block.
  *
  *}
-<div class="block" id="custom">
+<div class="block custom">
 	{$customBlockContent}
 </div>	
