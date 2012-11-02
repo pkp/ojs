@@ -39,7 +39,9 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'privacyStatement' => 'string',
 				'customAboutItems' => 'object',
 				'enableLockss' => 'bool',
+				'enableClockss' => 'bool',
 				'lockssLicense' => 'string',
+				'clockssLicense' => 'string',
 				'reviewerDatabaseLinks' => 'object',
 				'notifyAllAuthorsOnDecision' => 'bool'
 			)
@@ -53,7 +55,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'privacyStatement', 'customAboutItems', 'lockssLicense');
+		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'privacyStatement', 'customAboutItems', 'lockssLicense', 'clockssLicense');
 	}
 
 	/**

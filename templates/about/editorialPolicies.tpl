@@ -20,7 +20,7 @@
 	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
 	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $currentJournal->getSetting('enableAuthorSelfArchive')}<li>&#187; <a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
 	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $currentJournal->getSetting('enableDelayedOpenAccess')}<li>&#187; <a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}
-	{if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
+	{if $currentJournal->getSetting('enableLockss') || $journalSettings.enableClockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem}
 		{if !empty($customAboutItem.title)}
 			<li>&#187; <a href="{url op="editorialPolicies" anchor=custom-$key}">{$customAboutItem.title|escape}</a></li>
@@ -115,6 +115,15 @@
 {if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}
 <div id="archiving"><h3>{translate key="about.archiving"}</h3>
 <p>{$currentJournal->getLocalizedSetting('lockssLicense')|nl2br}</p>
+{if $currentJournal->getSetting('enableClockss') && $currentJournal->getLocalizedSetting('clockssLicense') != ''}
+<div class="separator">&nbsp;</div>
+<p>{$currentJournal->getLocalizedSetting('clockssLicense')|nl2br}</p>
+{/if}
+<div class="separator">&nbsp;</div>
+</div>
+{else if $currentJournal->getSetting('enableClockss') && $currentJournal->getLocalizedSetting('clockssLicense') != ''}
+<div id="archiving"><h3>{translate key="about.archiving"}</h3>
+<p>{$currentJournal->getLocalizedSetting('clockssLicense')|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
 </div>
