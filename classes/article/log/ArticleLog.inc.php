@@ -32,7 +32,8 @@ class ArticleLog {
 	function logEvent(&$request, &$article, $eventType, $messageKey, $params = array()) {
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
-		return ArticleLog::logEventHeadless($journal, $user->getId(), $article, $eventType, $messageKey, $params);
+		$userId = (isset($user)) ? $user->getId() : 0;
+		return ArticleLog::logEventHeadless($journal, $userId, $article, $eventType, $messageKey, $params);
 	}
 
 	/**
