@@ -430,6 +430,18 @@ the following:
   6) Execute a test search request in OJS.
 
 
+- If your index contains data and you still do not get any search results in OJS
+  then try deleting your cache.
+
+  You can execute:
+
+     #> rm -f cache/*.php
+
+  Alternatively you can delete the cache via OJS' administrator tools.
+
+  Now execute another test search request in OJS.
+
+
 - If the previous steps didn't give you a working search index then have a look
   at the file 'files/lucene/solr-java.log'. This is the log written by the Solr
   server. Sometimes a solution to your problem may be obvious from the error
