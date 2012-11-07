@@ -125,7 +125,7 @@ class NotificationManager extends PKPNotificationManager {
 
 		// Check if user is editor
 		$article =& $articleDao->getArticle($articleId);
-		if(Validation::isEditor($article->getJournalId())) {
+		if($article && Validation::isEditor($article->getJournalId())) {
 			$roles[] = ROLE_ID_EDITOR;
 		}
 
@@ -148,9 +148,7 @@ class NotificationManager extends PKPNotificationManager {
 		if ($userId == $proofSignoff->getUserId()) $roles[] = ROLE_ID_PROOFREADER;
 
 		// Check if user is author
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article =& $articleDao->getArticle($articleId);
-		if ($userId == $article->getUserId()) $roles[] = ROLE_ID_AUTHOR;
+		if ($article && $userId == $article->getUserId()) $roles[] = ROLE_ID_AUTHOR;
 
 		// Check if user is reviewer
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
@@ -250,6 +248,7 @@ class NotificationManager extends PKPNotificationManager {
 		assert(is_numeric($notification->getAssocId()));
 		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$article =& $articleDao->getArticle($notification->getAssocId());
+		if (!$article) return null;
 		return $article->getLocalizedTitle();
 	}
 
