@@ -321,7 +321,7 @@ class NativeExportDom {
 			unset($affiliationNode);
 		}
 		XMLCustomWriter::createChildWithText($doc, $root, 'country', $author->getCountry(), false);
-		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail());
 		XMLCustomWriter::createChildWithText($doc, $root, 'url', $author->getUrl(), false);
 		if (is_array($author->getCompetingInterests(null))) foreach ($author->getCompetingInterests(null) as $locale => $competingInterests) {
 			$competingInterestsNode =& XMLCustomWriter::createChildWithText($doc, $root, 'competing_interests', strip_tags($competingInterests), false);
