@@ -30,7 +30,13 @@
     function appendToDocField(context, fieldName, textToAppend) {
       if (textToAppend === null) return;
 
-      textToAppend = textToAppend.trim();
+      if (String.prototype.trim) {
+        // JS 1.8.1+
+        textToAppend = textToAppend.trim();
+      } else {
+        // JS prior to 1.8.1
+        textToAppend = textToAppend.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+      }
       if (textToAppend === '') return;
 
       var docFields = context.getSessionAttribute('docFields', context.SCOPE_DOC);
@@ -56,6 +62,20 @@
      * @returns Map The transformed row.
      */
     function transformArticle(row, context) {
+      // Hack: In JS prior to version 1.6 we need to fix the
+      // Array prototype to implement the indexOf() method.
+      // We do this here before instantiating the first array.
+      if(!Array.prototype.indexOf) {
+        Array.prototype.indexOf = function(needle) {
+          for(var i = 0; i < this.length; i++) {
+            if(this[i] === needle) {
+              return i;
+            }
+          }
+          return -1;
+       };
+      }
+
       // Prepare the galley and supp file XML. This must be
       // done before anything else. Otherwise we get an error
       // later if the fields created here cannot be found by
