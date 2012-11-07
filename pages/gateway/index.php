@@ -18,6 +18,7 @@
 switch ($op) {
 	case 'index':
 	case 'lockss':
+	case 'clockss':
 	case 'plugin':
 		define('HANDLER_CLASS', 'GatewayHandler');
 		import('pages.gateway.GatewayHandler');

@@ -63,6 +63,8 @@
 		</div>
 	{/if}
 
+	{if $article->getDOI()}<div id="doi">DOI:&nbsp;<a href="http://dx.doi.org/{$article->getDOI()|escape}">http://dx.doi.org/{$article->getDOI()|escape}</a></div>{/if}
+
 	{if $citationFactory->getCount()}
 		<div id="articleCitations">
 		<h4>{translate key="submission.citations"}</h4>
