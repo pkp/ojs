@@ -133,11 +133,32 @@ class MetadataForm extends Form {
 				'coverageChron' => $article->getCoverageChron(null), // Localized
 				'coverageSample' => $article->getCoverageSample(null), // Localized
 				'type' => $article->getType(null), // Localized
+				'source' => $article->getSource(null), // Localized
+				'rights' => $article->getRights(null), // Localized
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null), // Localized
 				'citations' => $article->getCitations(),
-				'hideAuthor' => $article->getHideAuthor()
+				'hideAuthor' => $article->getHideAuthor(),
+				'prefix' => $article->getPrefix(), // Localized
+				'subtitle' => $article->getSubtitle(), // Localized
 			);
+
+			// load the persisted metadata controlled vocabularies
+			$submissionKeywordDao =& DAORegistry::getDAO('SubmissionKeywordDAO');
+			$submissionSubjectDao =& DAORegistry::getDAO('SubmissionSubjectDAO');
+			$submissionDisciplineDao =& DAORegistry::getDAO('SubmissionDisciplineDAO');
+			$submissionAgencyDao =& DAORegistry::getDAO('SubmissionAgencyDAO');
+			$submissionLanguageDao =& DAORegistry::getDAO('SubmissionLanguageDAO');
+
+			// get the supported locale keys
+			$locales = array_keys($this->supportedLocales);
+
+			$this->setData('subjects', $submissionSubjectDao->getSubjects($article->getId(), $locales));
+			$this->setData('keywords', $submissionKeywordDao->getKeywords($article->getId(), $locales));
+			$this->setData('disciplines', $submissionDisciplineDao->getDisciplines($article->getId(), $locales));
+			$this->setData('agencies', $submissionAgencyDao->getAgencies($article->getId(), $locales));
+			$this->setData('languages', $submissionLanguageDao->getLanguages($article->getId(), $locales));
+
 			// consider the additional field names from the public identifer plugins
 			import('classes.plugins.PubIdPluginHelper');
 			$pubIdPluginHelper = new PubIdPluginHelper();
@@ -176,7 +197,7 @@ class MetadataForm extends Form {
 	function getLocaleFieldNames() {
 		return array(
 			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations'
+			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations', 'rights', 'source', 'prefix', 'subtitle',
 		);
 	}
 
@@ -193,7 +214,7 @@ class MetadataForm extends Form {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getId():null);
-		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getId()));
+		$templateMgr->assign('submissionSettings', $settingsDao->getJournalSettings($journal->getId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
@@ -254,7 +275,12 @@ class MetadataForm extends Form {
 				'language',
 				'sponsor',
 				'citations',
-				'hideAuthor'
+				'hideAuthor',
+				'rights',
+				'source',
+				'prefix',
+				'subtitle',
+				'keywords'
 			)
 		);
 		// consider the additional field names from the public identifer plugins
@@ -315,6 +341,8 @@ class MetadataForm extends Form {
 
 		// Update article
 		$article->setTitle($this->getData('title'), null); // Localized
+		$article->setSubtitle($this->getData('subtitle'), null); // Localized
+		$article->setPrefix($this->getData('prefix'), null); // Localized
 
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
@@ -361,15 +389,13 @@ class MetadataForm extends Form {
 		}
 		$article->setHideCoverPageAbstract($hideCoverPageAbstract, null); // Localized
 
-		$article->setDiscipline($this->getData('discipline'), null); // Localized
 		$article->setSubjectClass($this->getData('subjectClass'), null); // Localized
-		$article->setSubject($this->getData('subject'), null); // Localized
 		$article->setCoverageGeo($this->getData('coverageGeo'), null); // Localized
 		$article->setCoverageChron($this->getData('coverageChron'), null); // Localized
 		$article->setCoverageSample($this->getData('coverageSample'), null); // Localized
 		$article->setType($this->getData('type'), null); // Localized
-		$article->setLanguage($this->getData('language')); // Localized
-		$article->setSponsor($this->getData('sponsor'), null); // Localized
+		$article->setSource($this->getData('source'), null); // Localized
+		$article->setRights($this->getData('rights'), null); // Localized
 		$article->setCitations($this->getData('citations'));
 		if ($this->isEditor) {
 			$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
@@ -430,6 +456,41 @@ class MetadataForm extends Form {
 
 		// Save the article
 		$articleDao->updateArticle($article);
+
+		// get the supported locale keys
+		$locales = array_keys($this->supportedLocales);
+
+		// persist the metadata/keyword fields.
+		$submissionKeywordDao =& DAORegistry::getDAO('SubmissionKeywordDAO');
+		$submissionSubjectDao =& DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionDisciplineDao =& DAORegistry::getDAO('SubmissionDisciplineDAO');
+		$submissionAgencyDao =& DAORegistry::getDAO('SubmissionAgencyDAO');
+		$submissionLanguageDao =& DAORegistry::getDAO('SubmissionLanguageDAO');
+
+		$keywords = array();
+		$agencies = array();
+		$disciplines = array();
+		$languages = array();
+		$subjects = array();
+
+		$tagitKeywords = $this->getData('keywords');
+
+		if (is_array($tagitKeywords)) {
+			foreach ($locales as $locale) {
+				$keywords[$locale] = array_key_exists($locale . '-keyword', $tagitKeywords) ? $tagitKeywords[$locale . '-keyword'] : array();
+				$agencies[$locale] = array_key_exists($locale . '-agencies', $tagitKeywords) ? $tagitKeywords[$locale . '-agencies'] : array();
+				$disciplines[$locale] = array_key_exists($locale . '-disciplines', $tagitKeywords) ? $tagitKeywords[$locale . '-disciplines'] : array();
+				$languages[$locale] = array_key_exists($locale . '-languages', $tagitKeywords) ? $tagitKeywords[$locale . '-languages'] : array();
+				$subjects[$locale] = array_key_exists($locale . '-subjects', $tagitKeywords) ?$tagitKeywords[$locale . '-subjects'] : array();
+			}
+		}
+
+		// persist the controlled vocabs
+		$submissionKeywordDao->insertKeywords($keywords, $article->getId());
+		$submissionAgencyDao->insertAgencies($agencies, $article->getId());
+		$submissionDisciplineDao->insertDisciplines($disciplines, $article->getId());
+		$submissionLanguageDao->insertLanguages($languages, $article->getId());
+		$submissionSubjectDao->insertSubjects($subjects, $article->getId());
 
 		// Update search index
 		import('classes.search.ArticleSearchIndex');

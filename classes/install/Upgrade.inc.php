@@ -1028,6 +1028,118 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 3.0.0 upgrade: Convert string-field semi-colon separated metadata to controlled vocabularies.
+	 * @return boolean
+	 */
+	function migrateArticleMetadata() {
+
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+
+		// controlled vocabulary DAOs.
+		$submissionSubjectDao =& DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionDisciplineDao =& DAORegistry::getDAO('SubmissionDisciplineDAO');
+		$submissionAgencyDao =& DAORegistry::getDAO('SubmissionAgencyDAO');
+		$submissionLanguageDao =& DAORegistry::getDAO('SubmissionLanguageDAO');
+		$controlledVocabDao =& DAORegistry::getDAO('ControlledVocabDAO');
+
+		// check to see if there are any existing controlled vocabs for submissionAgency, submissionDiscipline, submissionSubject, or submissionLanguage.
+		// IF there are, this implies that this code has run previously, so return.
+		$vocabTestResult =& $controlledVocabDao->retrieve('SELECT count(*) AS total FROM controlled_vocabs WHERE symbolic = \'submissionAgency\' OR symbolic = \'submissionDiscipline\' OR symbolic = \'submissionSubject\' OR symbolic = \'submissionLanguage\'');
+		$testRow = $vocabTestResult->GetRowAssoc(false);
+		if ($testRow['total'] > 0) return true;
+
+		$journals =& $journalDao->getJournals();
+		while ($journal =& $journals->next()) {
+			// for languages, we depend on the journal locale settings since languages are not localized.
+			// Use Journal locales, or primary if no defined submission locales.
+			$supportedLocales = $journal->getSetting('supportedSubmissionLocales');
+
+			if (empty($supportedLocales)) $supportedLocales = array($journal->getPrimaryLocale());
+			else if (!is_array($supportedLocales)) $supportedLocales = array($supportedLocales);
+
+			$result =& $articleDao->retrieve('SELECT a.article_id FROM articles a WHERE a.journal_id = ?', array((int)$journal->getId()));
+			while (!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				$articleId = (int)$row['article_id'];
+				$settings = array();
+				$settingResult =& $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM article_settings WHERE article_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
+				while (!$settingResult->EOF) {
+					$settingRow = $settingResult->GetRowAssoc(false);
+					$locale = $settingRow['locale'];
+					$settingName = $settingRow['setting_name'];
+					$settingValue = $settingRow['setting_value'];
+					$settings[$settingName][$locale] = $settingValue;
+					$settingResult->MoveNext();
+					unset($locale);
+					unset($settingName);
+					unset($settingValue);
+				}
+				$settingResult->Close();
+				unset($settingResult);
+
+				$languageResult =& $articleDao->retrieve('SELECT language FROM articles WHERE article_id = ?', array((int)$articleId));
+				$languageRow = $languageResult->getRowAssoc(false);
+				// language is NOT localized originally.
+				$language = $languageRow['language'];
+				$languageResult->Close();
+				// test for locales for each field since locales may have been modified since
+				// the article was last edited.
+				$disciplineLocales = array_keys($settings['discipline']);
+				$subjectLocales = array_keys($settings['subject']);
+				$sponsorLocales = array_keys($settings['sponsor']);
+
+				$disciplines = $subjects = $agencies = array();
+
+				if (is_array($disciplineLocales)) {
+					foreach ($disciplineLocales as &$locale) {
+						$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
+					}
+					$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
+				}
+				unset($disciplineLocales);
+
+				if (is_array($subjectLocales)) {
+					foreach ($subjectLocales as &$locale) {
+						$subjects[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
+					}
+					$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
+				}
+				unset($subjectLocales);
+
+				if (is_array($sponsorLocales)) {
+					foreach ($sponsorLocales as &$locale) {
+						// note array name change.  Sponsor -> Agency
+						$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
+					}
+					$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
+				}
+				unset($sponsorLocales);
+
+				$languages = array();
+				foreach ($supportedLocales as &$locale) {
+					$languages[$locale] = preg_split('/\s+/', $language);
+				}
+
+				$submissionLanguageDao->insertLanguages($languages, $articleId, false);
+				unset($disciplines);
+				unset($subjects);
+				unset($agencies);
+				unset($languages);
+				unset($language);
+				unset($settings);
+				$result->MoveNext();
+			}
+			$result->Close();
+			unset($supportedLocales);
+			unset($result);
+			unset($journal);
+		}
+
+		return true;
+	}
 }
 
 ?>

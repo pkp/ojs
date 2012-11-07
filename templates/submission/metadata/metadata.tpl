@@ -16,7 +16,7 @@
 
 <div id="authors">
 <h4>{translate key="article.authors"}</h4>
-	
+
 <table width="100%" class="data">
 	{foreach name=authors from=$submission->getAuthors() item=author}
 	<tr valign="top">
@@ -74,7 +74,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$submission->getLocalizedTitle()|strip_unsafe_html|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLocalizedFullTitle()|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 
 	<tr>
@@ -89,7 +89,7 @@
 
 <div id="indexing">
 <h4>{translate key="submission.indexing"}</h4>
-	
+
 <table width="100%" class="data">
 	{if $currentJournal->getSetting('metaDiscipline')}
 		<tr valign="top">
@@ -159,7 +159,7 @@
 
 <div id="supportingAgencies">
 <h4>{translate key="submission.supportingAgencies"}</h4>
-	
+
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.agencies"}</td>
