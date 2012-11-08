@@ -343,6 +343,8 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
+	<message key="submission.event.copyedit.copyeditAuthorCompleted">Author copyedit completed on behalf of
+ author</message>
 	
 	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
