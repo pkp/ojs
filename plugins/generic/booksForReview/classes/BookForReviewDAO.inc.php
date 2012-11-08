@@ -102,7 +102,7 @@ class BookForReviewDAO extends DAO {
 	 * @param $row array
 	 * @return BookForReview
 	 */
-	function &_returnBookForReviewFromRow(&$row) {
+	function &_returnBookForReviewFromRow($row) {
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 

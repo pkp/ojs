@@ -153,7 +153,7 @@ class SectionDAO extends DAO {
 	 * @param $row array
 	 * @return Section
 	 */
-	function &_returnSectionFromRow(&$row) {
+	function &_returnSectionFromRow($row) {
 		$section = new Section();
 		$section->setId($row['section_id']);
 		$section->setJournalId($row['journal_id']);

@@ -89,7 +89,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return ProofreaderSubmission
 	 */
-	function &_returnSubmissionFromRow(&$row) {
+	function &_returnSubmissionFromRow($row) {
 		$submission = new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));

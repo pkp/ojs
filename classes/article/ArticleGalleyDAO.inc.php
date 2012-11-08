@@ -256,7 +256,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $row array
 	 * @return ArticleGalley
 	 */
-	function &_returnGalleyFromRow(&$row) {
+	function &_returnGalleyFromRow($row) {
 		if ($row['html_galley']) {
 			$galley = new ArticleHTMLGalley();
 

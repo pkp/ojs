@@ -338,7 +338,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $row array
 	 * @return Subscription
 	 */
-	function &_returnSubscriptionFromRow(&$row) {
+	function &_returnSubscriptionFromRow($row) {
 		$subscription = $this->createObject();
 		$subscription->setId($row['subscription_id']);
 		$subscription->setJournalId($row['journal_id']);

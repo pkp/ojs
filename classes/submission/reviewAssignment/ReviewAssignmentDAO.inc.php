@@ -191,7 +191,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 * @param $row array
 	 * @return ReviewAssignment
 	 */
-	function &_fromRow(&$row) {
+	function &_fromRow($row) {
 		$reviewAssignment =& parent::_fromRow($row);
 		$reviewFileId = $this->_getSubmissionReviewFileId($reviewAssignment->getSubmissionId());
 		$reviewAssignment->setReviewFileId($reviewFileId);

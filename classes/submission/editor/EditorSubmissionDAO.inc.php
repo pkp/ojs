@@ -86,7 +86,7 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return EditorSubmission
 	 */
-	function &_returnEditorSubmissionFromRow(&$row) {
+	function &_returnEditorSubmissionFromRow($row) {
 		$editorSubmission = new EditorSubmission();
 
 		// Article attributes

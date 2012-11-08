@@ -299,7 +299,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $row array
 	 * @return CompletedPayment
 	 */
-	function &_returnPaymentFromRow(&$row) {
+	function &_returnPaymentFromRow($row) {
 		$payment = $this->newDataObject();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));
 		$payment->setId($row['completed_payment_id']);

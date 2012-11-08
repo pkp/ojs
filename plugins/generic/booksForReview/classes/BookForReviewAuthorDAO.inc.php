@@ -99,7 +99,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @param $row array
 	 * @return BookForReviewAuthor
 	 */
-	function &_returnAuthorFromRow(&$row) {
+	function &_returnAuthorFromRow($row) {
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReviewAuthor');
 

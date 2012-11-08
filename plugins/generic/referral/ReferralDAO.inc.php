@@ -45,7 +45,7 @@ class ReferralDAO extends DAO {
 	 * @param $row array
 	 * @return Referral
 	 */
-	function &_returnReferralFromRow(&$row) {
+	function &_returnReferralFromRow($row) {
 		$referral = new Referral();
 		$referral->setId($row['referral_id']);
 		$referral->setArticleId($row['article_id']);

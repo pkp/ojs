@@ -838,7 +838,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $row array
 	 * @return InstitutionalSubscription
 	 */
-	function &_returnSubscriptionFromRow(&$row) {
+	function &_returnSubscriptionFromRow($row) {
 		$institutionalSubscription = parent::_returnSubscriptionFromRow($row);
 
 		$institutionalSubscription->setInstitutionName($row['institution_name']);

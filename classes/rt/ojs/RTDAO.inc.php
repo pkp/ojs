@@ -259,7 +259,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTVersion
 	 */
-	function &_returnVersionFromRow(&$row) {
+	function &_returnVersionFromRow($row) {
 		$version = new RTVersion();
 		$version->setVersionId($row['version_id']);
 		$version->setKey($row['version_key']);
@@ -280,7 +280,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTSearch
 	 */
-	function &_returnSearchFromRow(&$row) {
+	function &_returnSearchFromRow($row) {
 		$search = new RTSearch();
 		$search->setSearchId($row['search_id']);
 		$search->setContextId($row['context_id']);
@@ -450,7 +450,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTContext
 	 */
-	function &_returnContextFromRow(&$row) {
+	function &_returnContextFromRow($row) {
 		$context = new RTContext();
 		$context->setContextId($row['context_id']);
 		$context->setVersionId($row['version_id']);

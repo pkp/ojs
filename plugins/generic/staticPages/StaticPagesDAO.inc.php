@@ -104,7 +104,7 @@ class StaticPagesDAO extends DAO {
 		);
 	}
 
-	function &_returnStaticPageFromRow(&$row) {
+	function &_returnStaticPageFromRow($row) {
 		$staticPagesPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$staticPagesPlugin->import('StaticPage');
 

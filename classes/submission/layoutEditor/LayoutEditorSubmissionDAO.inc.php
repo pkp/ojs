@@ -89,7 +89,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return LayoutEditorSubmission
 	 */
-	function &_returnSubmissionFromRow(&$row) {
+	function &_returnSubmissionFromRow($row) {
 		$submission = new LayoutEditorSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 

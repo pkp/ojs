@@ -190,7 +190,7 @@ class ArticleDAO extends DAO {
 	 * @param $row array
 	 * @return Article
 	 */
-	function &_returnArticleFromRow(&$row) {
+	function &_returnArticleFromRow($row) {
 		$article = $this->newDataObject();
 		$this->_articleFromRow($article, $row);
 		return $article;
@@ -209,7 +209,7 @@ class ArticleDAO extends DAO {
 	 * @param $article Article output article
 	 * @param $row array input row
 	 */
-	function _articleFromRow(&$article, &$row) {
+	function _articleFromRow(&$article, $row) {
 		$article->setId($row['article_id']);
 		$article->setLocale($row['locale']);
 		$article->setUserId($row['user_id']);

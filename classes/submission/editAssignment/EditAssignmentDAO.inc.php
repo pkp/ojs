@@ -120,7 +120,7 @@ class EditAssignmentDAO extends DAO {
 	 * @param $row array
 	 * @return EditAssignment
 	 */
-	function &_returnEditAssignmentFromRow(&$row) {
+	function &_returnEditAssignmentFromRow($row) {
 		$editAssignment = new EditAssignment();
 		$editAssignment->setEditId($row['edit_id']);
 		$editAssignment->setArticleId($row['article_id']);

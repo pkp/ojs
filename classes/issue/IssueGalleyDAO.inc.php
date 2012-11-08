@@ -223,7 +223,7 @@ class IssueGalleyDAO extends DAO {
 	 * @param $row array
 	 * @return IssueGalley
 	 */
-	function &_returnGalleyFromRow(&$row) {
+	function &_returnGalleyFromRow($row) {
 		$galley = new IssueGalley();
 
 		$galley->setId($row['galley_id']);

@@ -91,7 +91,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return CopyeditorSubmission
 	 */
-	function &_returnCopyeditorSubmissionFromRow(&$row) {
+	function &_returnCopyeditorSubmissionFromRow($row) {
 		$copyeditorSubmission = new CopyeditorSubmission();
 
 		// Article attributes

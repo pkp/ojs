@@ -188,7 +188,7 @@ class SuppFileDAO extends DAO {
 	 * @param $row array
 	 * @return SuppFile
 	 */
-	function &_returnSuppFileFromRow(&$row) {
+	function &_returnSuppFileFromRow($row) {
 		$suppFile = new SuppFile();
 		$suppFile->setId($row['supp_id']);
 		$suppFile->setRemoteURL($row['remote_url']);

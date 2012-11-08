@@ -225,7 +225,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * @param $row array
 	 * @return ArticleFile
 	 */
-	function &_returnArticleFileFromRow(&$row) {
+	function &_returnArticleFileFromRow($row) {
 		$articleFile = new ArticleFile();
 		$articleFile->setFileId($row['file_id']);
 		$articleFile->setSourceFileId($row['source_file_id']);

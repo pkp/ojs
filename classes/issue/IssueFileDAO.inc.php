@@ -114,7 +114,7 @@ class IssueFileDAO extends PKPFileDAO {
 	 * @param $row array
 	 * @return IssueFile
 	 */
-	function &_returnIssueFileFromRow(&$row) {
+	function &_returnIssueFileFromRow($row) {
 		$issueFile = new IssueFile();
 		$issueFile->setId($row['file_id']);
 		$issueFile->setIssueId($row['issue_id']);

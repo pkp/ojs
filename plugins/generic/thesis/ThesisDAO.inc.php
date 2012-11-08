@@ -117,7 +117,7 @@ class ThesisDAO extends DAO {
 	 * @param $row array
 	 * @return Thesis
 	 */
-	function &_returnThesisFromRow(&$row) {
+	function &_returnThesisFromRow($row) {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 

@@ -103,7 +103,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return SectionEditorSubmission
 	 */
-	function &_returnSectionEditorSubmissionFromRow(&$row) {
+	function &_returnSectionEditorSubmissionFromRow($row) {
 		$sectionEditorSubmission = new SectionEditorSubmission();
 
 		// Article attributes
@@ -837,7 +837,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		return $returner;
 	}
 
-	function &_returnReviewerUserFromRow(&$row) { // FIXME
+	function &_returnReviewerUserFromRow($row) { // FIXME
 		$user =& $this->userDao->getById($row['user_id']);
 		$user->review_id = $row['review_id'];
 		$user->declined = $row['declined'];

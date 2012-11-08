@@ -91,7 +91,7 @@ class AuthorSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return AuthorSubmission
 	 */
-	function &_returnAuthorSubmissionFromRow(&$row) {
+	function &_returnAuthorSubmissionFromRow($row) {
 		$authorSubmission = new AuthorSubmission();
 
 		// Article attributes

@@ -266,7 +266,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $row array
 	 * @return IndividualSubscription
 	 */
-	function &_returnSubscriptionFromRow(&$row) {
+	function &_returnSubscriptionFromRow($row) {
 		$individualSubscription = parent::_returnSubscriptionFromRow($row);
 		HookRegistry::call('IndividualSubscriptionDAO::_returnSubscriptionFromRow', array(&$individualSubscription, &$row));
 

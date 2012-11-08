@@ -179,7 +179,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @param $row array
 	 * @return SubscriptionType
 	 */
-	function &_returnSubscriptionTypeFromRow(&$row) {
+	function &_returnSubscriptionTypeFromRow($row) {
 		$subscriptionType = new SubscriptionType();
 		$subscriptionType->setTypeId($row['type_id']);
 		$subscriptionType->setJournalId($row['journal_id']);

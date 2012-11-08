@@ -95,7 +95,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 * @param $row array
 	 * @return ReviewerSubmission
 	 */
-	function &_returnReviewerSubmissionFromRow(&$row) {
+	function &_returnReviewerSubmissionFromRow($row) {
 		$reviewerSubmission = new ReviewerSubmission();
 
 		// Editor Assignment
