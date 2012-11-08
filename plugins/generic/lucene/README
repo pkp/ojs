@@ -223,19 +223,19 @@ a Solr search server.
      - Solr: Get the latest Solr binary from an Apache download mirror and unzip
        it into plugins/generic/lucene/lib in your OJS application directory.
 
-       We are using version 3.6.0 here as an example but the latest version may
+       We are using version 3.6.1 here as an example but the latest version may
        be different. Please change the following commands accordingly.
 
        If you are on Linux execute something like:
           #> cd plugins/generic/lucene/lib
-          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.0/
-                                                          apache-solr-3.6.0.zip
-          #> unzip apache-solr-3.6.0.zip
+          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.1/
+                                                          apache-solr-3.6.1.zip
+          #> unzip apache-solr-3.6.1.zip
 
        This should create a folder apache-solr-3.5.0 in your lib directory. If
        you are on Linux then please create a symlink pointing to this directory,
        e.g.:
-          #> ln -s apache-solr-3.6.0 solr
+          #> ln -s apache-solr-3.6.1 solr
 
        On Windows download and unzip the file to the lib folder. Then rename the
        Solr folder to "solr".
