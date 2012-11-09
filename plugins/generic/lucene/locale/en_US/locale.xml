@@ -75,6 +75,7 @@
 		<strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong>
 		If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.
 	]]></message>
+	<message key="plugins.generic.lucene.settings.dictionaryRebuild">Rebuild dictionaries</message>
 	<message key="plugins.generic.lucene.settings.faceting">Faceting (display a navigation box with additional filters to refine your search)</message>
 	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
@@ -83,9 +84,9 @@
 	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
 	<message key="plugins.generic.lucene.settings.indexAdministration">Index Administration</message>
 	<message key="plugins.generic.lucene.settings.indexRebuild">Rebuild index</message>
-	<message key="plugins.generic.lucene.settings.indexRebuild.confirm">Rebuilding the index can take a long time. Are you sure you want to proceed?</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild.confirm">Rebuilding the index and/or dictionaries can take a long time. Are you sure you want to proceed?</message>
 	<message key="plugins.generic.lucene.settings.indexRebuildAllJournals">Rebuild index for all journals</message>
-	<message key="plugins.generic.lucene.settings.indexRebuildDescription">If your Lucene index became outdated or corrupted, you can re-index your data per journal or for all journals of this installation.</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildDescription">If your Lucene index became outdated or corrupted, you can re-index your data per journal or for all journals of this installation. Dictionaries must be rebuilt after large index updates when using auto-suggest or alternative spelling suggestions. (See plugins/generic/lucene/README for details and ways to automate these processes.)</message>
 	<message key="plugins.generic.lucene.settings.indexRebuildJournal">Rebuild index for journal "{$journalName}"</message>
 	<message key="plugins.generic.lucene.settings.indexRebuildMessages">Output from the last index rebuild:</message>
 	<message key="plugins.generic.lucene.settings.instantSearch">Instant search (return search results instantly when a user types a search query - obs: uses considerable server resources)</message>

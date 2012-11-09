@@ -9,7 +9,7 @@ Contents
   6)  Central Server Mode: Installation and Configuration
   7)  Installation and Configuration: Troubleshooting
   8)  Push versus Pull Indexing
-  9)  Rebuilding your index
+  9)  Rebuilding your index and/or dictionaries
   10) What else do I have to do to keep my index up to date?
   11) Customizing Solr (additional languages, stopwords, etc.)
   12) Subscription-Based Publications
@@ -266,7 +266,7 @@ a Solr search server.
      Back to the command line go to the tools directory and execute the script
      to rebuild your index:
         #> cd tools
-        #> php rebuildSearchIndex.php
+        #> php rebuildSearchIndex.php -d
 
      You should see output similar to this:
         # LucenePlugin: Clearing index ... done
@@ -360,7 +360,7 @@ specific to the OJS Lucene/Solr plug-in:
      go to the tools directory and execute the script to rebuild your index for
      that installation:
         #> cd tools
-        #> php rebuildSearchIndex.php
+        #> php rebuildSearchIndex.php -d
 
      You should see output similar to this:
         # LucenePlugin: Clearing index ... done
@@ -397,7 +397,7 @@ the following:
 
   4) If your server is running then execute:
 
-     #> php tools/rebuildSearchIndex.php
+     #> php tools/rebuildSearchIndex.php -d
 
   6) Execute a test search request in OJS.
 
@@ -422,7 +422,7 @@ the following:
 
   4) Execute the command:
 
-     #> php tools/rebuildSearchIndex.php
+     #> php tools/rebuildSearchIndex.php -d
 
   5) Check the index again via the URL 'http://localhost:8983/solr/ojs/admin/
      luke'.
@@ -513,30 +513,82 @@ To do so you have to:
 - regularly monitor the staging, reject and archive queues on the Solr server.
 
 
-9 Rebuilding your index
------------------------
+9 Rebuilding your index and/or dictionaries
+-------------------------------------------
 
-Under rare circumstances it may happen that your index becomes outdated or
-corrupt.
+There are two maintenance operations that cannot be fully automated
+out-of-the-box:
 
-If, for example, you are using push indexing and your Solr server is offline
-while editors make changes to a journal then your Solr index will be out of sync
-afterwards.
+1) If you are using search features like "dictionary-based auto-suggestions" or
+   "alternative spelling suggestions", then you have to make sure that the term
+   dictionaries used for these features will be synchronized to the index after
+   larger index updates or, if you like, on regular intervals, e.g. once a day.
+   Updating dictionaries cannot be done automatically after every index update
+   as rebuilding dictionaries can be quite costly.
+   
+2) Under certain circumstances it may happen that your index becomes outdated or
+   corrupt. If, for example, you are using push indexing and your Solr server is
+   offline while editors make changes to a journal then your Solr index will be
+   out of sync afterwards.
 
-It also very rarely happens that Solr encounters an error while updating its
-index. In that case you'll find an error message in your Solr log. In the
-embedded scenario this log can be found in "files/lucene/solr-java.log".
+   It also may happen that Solr encounters an error while updating its index. In
+   that case you'll find an error message in your Solr log. In the embedded
+   deployment scenario this log can be found in "files/lucene/solr-java.log".
 
-If you customize your Solr schema configuration (e.g. to add additional
-languages) then your index needs to be syncronized, too.
+   If you customize your Solr schema configuration (e.g. to add additional
+   languages) then your index needs to be syncronized, too.
+   
+   In these cases you'll have to rebuild your search index so that searches can
+   be reliably executed again.
 
-In these cases you'll have to rebuild your search index so that searches can
-be reliably executed again.
+There are two possibilities to rebuild your index and/or dictionaries:
 
-To do so please go to the command line, change to the OJS tools directory and
-execute the script to rebuild the index. On Linux this would be something like:
-   #> cd tools
-   #> php rebuildSearchIndex.php
+1) On the command line:
+
+   To update your index and dictionaries, execute the 'rebuildSearchIndex'
+   script. This script can be used to automate index maintenance. You may want
+   to create a cronjob for example that rebuilds dictionaries every night. 
+   
+   The script has the following usage pattern:
+   
+     php tools/rebuildSearchIndex.php [options] [journal_path]
+   
+   journal_path:
+   
+     This is an (optional) journal URL path as configured in OJS. Giving a
+     journal path will only re-index articles from that journal. Giving no
+     journal path wil re-index all journals of the installation.
+   
+   The options are:
+   
+     -d     Rebuild dictionaries.
+     -n     Do not re-index any articles. If this option is given together
+            with a journal path then the journal path will be ignored.
+     -h     Display usage information.
+     
+   Examples:
+   
+     To rebuild all journals without rebuilding dictionaries:
+     
+       #> php tools/rebuildSearchIndex.php
+       
+     To rebuild only the dictionaries:
+         
+       #> php tools/rebuildSearchIndex.php -d -n
+
+     To rebuild the dictionaries and all journals of an installation:
+     
+       #> php tools/rebuildSearchIndex.php -d
+       
+     To rebuild the index of a single journal without rebuilding dictionaries:
+     
+       #> php tools/rebuildSearchIndex.php some-journal-path
+       
+       
+2) Through the OJS web page:
+
+   Please go to the Lucene plugin settings page and see the administrative
+   section there. The page has appropriate inline help.
 
 
 10 What else do I have to do to keep my index up to date?

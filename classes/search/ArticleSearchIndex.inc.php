@@ -306,12 +306,13 @@ class ArticleSearchIndex {
 	 *  may be able to do so. Most notably: The default SQL
 	 *  implementation does not support journal-specific re-indexing
 	 *  as index data is not partitioned by journal.
+	 * @param $switches array Optional index administration switches.
 	 */
-	function rebuildIndex($log = false, $journal = null) {
+	function rebuildIndex($log = false, $journal = null, $switches = array()) {
 		// Check whether a search plug-in jumps in.
 		$hookResult =& HookRegistry::call(
 			'ArticleSearchIndex::rebuildIndex',
-			array($log, $journal)
+			array($log, $journal, $switches)
 		);
 
 		// If no search plug-in is activated then fall back to the

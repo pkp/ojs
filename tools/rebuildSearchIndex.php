@@ -23,14 +23,25 @@ class rebuildSearchIndex extends CommandLineTool {
 	 */
 	function usage() {
 		echo "Script to rebuild article search index\n"
-			. "Usage: {$this->scriptName} [journal_path]\n";
+			. "Usage: {$this->scriptName} [options] [journal_path]\n\n"
+			. "options: The standard index implementation does\n"
+			. "         not support any options. For other\n"
+			. "         implementations please see the corresponding\n"
+			. "         plugin documentation (e.g. 'plugins/generic/\n"
+			. "         lucene/README').\n";
 	}
 
 	/**
 	 * Rebuild the search index for all articles in all journals.
 	 */
 	function execute() {
-		// If we have an argument that this must be a journal path.
+		// Check whether we have (optional) switches.
+		$switches = array();
+		while (count($this->argv) && substr($this->argv[0], 0, 1) == '-') {
+			$switches[] = array_shift($this->argv);
+		}
+
+		// If we have another argument that this must be a journal path.
 		$journal = null;
 		if (count($this->argv)) {
 			$journalPath = array_shift($this->argv);
@@ -47,7 +58,7 @@ class rebuildSearchIndex extends CommandLineTool {
 
 		// Let the search implementation re-build the index.
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->rebuildIndex(true, $journal);
+		$articleSearchIndex->rebuildIndex(true, $journal, $switches);
 	}
 
 	/**

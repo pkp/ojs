@@ -284,14 +284,23 @@ class LucenePlugin extends GenericPlugin {
 								if (!is_a($journal, 'Journal')) $journal = null;
 							}
 							if (empty($journalId) || (!empty($journalId) && is_a($journal, 'Journal'))) {
-								// Rebuild the index.
+								// Rebuild index and dictionaries.
 								$messages = null;
-								$this->_rebuildIndex(false, $journal, $messages);
+								$this->_rebuildIndex(false, $journal, true, true, $messages);
 
 								// Transfer indexing output to the form template.
 								$form->setData('rebuildIndexMessages', $messages);
 							}
 						}
+
+					// Dictionary rebuild.
+					} elseif ($request->getUserVar('rebuildDictionaries')) {
+						// Rebuild dictionaries.
+						$journal = null;
+						$this->_rebuildIndex(false, null, false, true, $messages);
+
+						// Transfer indexing output to the form template.
+						$form->setData('rebuildIndexMessages', $messages);
 
 					// Start/Stop solr server.
 					} elseif ($request->getUserVar('stopServer')) {
@@ -612,11 +621,23 @@ class LucenePlugin extends GenericPlugin {
 		assert($hookName == 'ArticleSearchIndex::rebuildIndex');
 
 		// Unpack the parameters.
-		list($log, $journal) = $params;
+		list($log, $journal, $switches) = $params;
+
+		// Check switches.
+		$rebuildIndex = true;
+		$rebuildDictionaries = false;
+		if (is_array($switches)) {
+			if (in_array('-n', $switches)) {
+				$rebuildIndex = false;
+			}
+			if (in_array('-d', $switches)) {
+				$rebuildDictionaries = true;
+			}
+		}
 
 		// Rebuild the index.
 		$messages = null;
-		$this->_rebuildIndex($log, $journal, $messages);
+		$this->_rebuildIndex($log, $journal, $rebuildIndex, $rebuildDictionaries, $messages);
 		return true;
 	}
 
@@ -968,76 +989,83 @@ class LucenePlugin extends GenericPlugin {
 	 * Rebuild the index for all journals or a single journal
 	 * @param $log boolean Whether to write the log to standard output.
 	 * @param $journal Journal If given, only re-index this journal.
+	 * @param $buildIndex boolean Whether to rebuild the journal index.
+	 * @param $buildDictionaries boolean Whether to rebuild dictionaries.
 	 * @param $messages string Return parameter for log message output.
 	 * @return boolean True on success, otherwise false.
 	 */
-	function _rebuildIndex($log, $journal, &$messages) {
+	function _rebuildIndex($log, $journal, $buildIndex, $buildDictionaries, &$messages) {
 		// Rebuilding the index can take a long time.
 		@set_time_limit(0);
-
-		// If we got a journal instance then only re-index
-		// articles from that journal.
-		$journalIdOrNull = (is_a($journal, 'Journal') ? $journal->getId() : null);
-
-		// Clear index (if the journal id is null then
-		// all journals will be deleted from the index).
-		$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.clearingIndex') . ' ... ', $messages);
 		$solrWebService = $this->getSolrWebService();
-		$solrWebService->deleteArticlesFromIndex($journalIdOrNull);
-		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . "\n", $messages);
 
-		// Re-build index, either of a single journal...
-		if (is_a($journal, 'Journal')) {
-			$journals = array($journal);
-			unset($journal);
-		// ...or for all journals.
-		} else {
-			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$journalIterator =& $journalDao->getJournals();
-			$journals = $journalIterator->toArray();
-		}
+		if ($buildIndex) {
+			// If we got a journal instance then only re-index
+			// articles from that journal.
+			$journalIdOrNull = (is_a($journal, 'Journal') ? $journal->getId() : null);
 
-		// We re-index journal by journal to partition the task a bit
-		// and provide better progress information to the user.
-		foreach($journals as $journal) {
-			$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ', $messages);
+			// Clear index (if the journal id is null then
+			// all journals will be deleted from the index).
+			$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.clearingIndex') . ' ... ', $messages);
+			$solrWebService->deleteArticlesFromIndex($journalIdOrNull);
+			$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . "\n", $messages);
 
-			// Mark all articles in the journal for re-indexing.
-			$numMarked = $this->_solrWebService->markJournalChanged($journal->getId());
-
-			// Pull or push?
-			if ($this->getSetting(0, 'pullIndexing')) {
-				// When pull-indexing is configured then we leave it up to the
-				// Solr server to decide when the updates will actually be done.
-				$this->_indexingMessage($log, '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . "\n", $messages);
+			// Re-build index, either of a single journal...
+			if (is_a($journal, 'Journal')) {
+				$journals = array($journal);
+				unset($journal);
+			// ...or for all journals.
 			} else {
-				// In case of push indexing we immediately update the index.
-				$numIndexed = 0;
-				do {
-					// We update the index in batches to reduce max memory usage
-					// and make a few intermediate commits.
-					$articlesInBatch = $solrWebService->pushChangedArticles(SOLR_INDEXING_MAX_BATCHSIZE, $journal->getId());
-					if (is_null($articlesInBatch)) {
-						$error = $solrWebService->getServiceMessage();
-						$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.error') . (empty($error) ? '' : ": $error") . "\n", $messages);
-						if (!$log) {
-							// If logging is switched off then inform the
-							// tech admin with an email (e.g. in the case of
-							// an OJS upgrade).
-							$this->_informTechAdmin($error, $journal);
+				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journalIterator =& $journalDao->getJournals();
+				$journals = $journalIterator->toArray();
+			}
+
+			// We re-index journal by journal to partition the task a bit
+			// and provide better progress information to the user.
+			foreach($journals as $journal) {
+				$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ', $messages);
+
+				// Mark all articles in the journal for re-indexing.
+				$numMarked = $this->_solrWebService->markJournalChanged($journal->getId());
+
+				// Pull or push?
+				if ($this->getSetting(0, 'pullIndexing')) {
+					// When pull-indexing is configured then we leave it up to the
+					// Solr server to decide when the updates will actually be done.
+					$this->_indexingMessage($log, '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . "\n", $messages);
+				} else {
+					// In case of push indexing we immediately update the index.
+					$numIndexed = 0;
+					do {
+						// We update the index in batches to reduce max memory usage
+						// and make a few intermediate commits.
+						$articlesInBatch = $solrWebService->pushChangedArticles(SOLR_INDEXING_MAX_BATCHSIZE, $journal->getId());
+						if (is_null($articlesInBatch)) {
+							$error = $solrWebService->getServiceMessage();
+							$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.error') . (empty($error) ? '' : ": $error") . "\n", $messages);
+							if (!$log) {
+								// If logging is switched off then inform the
+								// tech admin with an email (e.g. in the case of
+								// an OJS upgrade).
+								$this->_informTechAdmin($error, $journal);
+							}
+							return false;
 						}
-						return false;
-					}
-					$this->_indexingMessage($log, '.', $messages);
-					$numIndexed += $articlesInBatch;
-				} while ($articlesInBatch == SOLR_INDEXING_MAX_BATCHSIZE);
-				$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n", $messages);
+						$this->_indexingMessage($log, '.', $messages);
+						$numIndexed += $articlesInBatch;
+					} while ($articlesInBatch == SOLR_INDEXING_MAX_BATCHSIZE);
+					$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n", $messages);
+				}
 			}
 		}
 
-		// Rebuild dictionaries.
-		$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.rebuildDictionaries') . ' ... ', $messages);
-		$solrWebService->rebuildDictionaries();
+		if ($buildDictionaries) {
+			// Rebuild dictionaries.
+			$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.rebuildDictionaries') . ' ... ', $messages);
+			$solrWebService->rebuildDictionaries();
+		}
+
 		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . "\n", $messages);
 
 		return true;

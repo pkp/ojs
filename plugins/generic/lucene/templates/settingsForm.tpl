@@ -204,6 +204,7 @@
 						{rdelim}
 					</script>
 					<input type="submit" name="rebuildIndex" value="{translate key="plugins.generic.lucene.settings.indexRebuild"}" onclick="rebuildIndexClick()" class="action" /><br/>
+					<input type="submit" name="rebuildDictionaries" value="{translate key="plugins.generic.lucene.settings.dictionaryRebuild"}" onclick="rebuildIndexClick()" class="action" /><br/>
 					<br/>
 					{if $rebuildIndexMessages}
 						<div id="rebuildIndexMessage">

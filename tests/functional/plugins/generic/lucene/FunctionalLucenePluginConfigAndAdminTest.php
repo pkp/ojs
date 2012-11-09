@@ -416,7 +416,7 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// Leave default selection and click "Rebuild Index".
 		$this->clickAndWait('name=rebuildIndex');
-		$this->waitForConfirmation('Rebuilding the index can take a long time. Are you sure you want to proceed');
+		$this->waitForConfirmation('can take a long time');
 
 		// Check whether the server confirms the re-indexing
 		// of all journals.
@@ -430,7 +430,7 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// Click "Rebuild Index".
 		$this->clickAndWait('name=rebuildIndex');
-		$this->waitForConfirmation('Rebuilding the index can take a long time. Are you sure you want to proceed');
+		$this->waitForConfirmation('can take a long time');
 
 		// Check whether the server confirms the re-indexing
 		// of all journals.
@@ -440,6 +440,17 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// This time, the second journal must not appear in the indexing output.
 		$this->assertNotText('rebuildIndexMessage', 'Indexing "lucene-test" . * articles indexed');
+
+		// Click "Rebuild Dictionaries".
+		$this->clickAndWait('name=rebuildDictionaries');
+		$this->waitForConfirmation('can take a long time');
+
+		// Check whether the server confirms the re-indexing
+		// of all journals.
+		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Rebuilding dictionaries ... done');
+
+		// This time no indexing should be done.
+		$this->assertNotText('rebuildIndexMessage', 'Indexing');
 	}
 
 	/**
@@ -474,7 +485,7 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 		self::assertEquals(0, $totalResults);
 
 		// Assemble the command line script name.
-		$scriptName = Core::getBaseDir() . '/tools/rebuildSearchIndex.php';
+		$scriptName = Core::getBaseDir() . '/tools/rebuildSearchIndex.php -d';
 
 		// Execute the script for one journal only.
 		$output = null;
@@ -505,12 +516,20 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 			'LucenePlugin: Clearing index \.\.\. done',
 			'LucenePlugin: Indexing "lucene-test" \. [0-9]+ articles indexed',
 			'LucenePlugin: Indexing "test" \. [0-9]+ articles indexed',
-			'LucenePlugin: Rebuilding dictionaries \.\.\. done'
 		);
 		foreach($output as $outputLine) {
 			$expectedRegex = array_shift($expectedOutput);
 			self::assertRegExp("/$expectedRegex/", $outputLine);
 		}
+
+		// Rebuild the dictionaries only
+		$output = null;
+		exec("php $scriptName -d -n", $output);
+
+		// Check the script output.
+		$expectedRegex = 'LucenePlugin: Rebuilding dictionaries \.\.\. done';
+		self::assertEquals(1, count($output));
+		self::assertRegExp("/$expectedRegex/", array_shift($output));
 
 		// Check the index.
 		$solrWebService->retrieveResults($searchRequest, $totalResults);
