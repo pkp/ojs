@@ -33,7 +33,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
-		$rangeInfo =& $this->getRangeInfo('reviewForms');
+		$rangeInfo = $this->getRangeInfo($request, 'reviewForms');
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms =& $reviewFormDao->getByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -333,7 +333,7 @@ class ReviewFormHandler extends ManagerHandler {
 			Request::redirect(null, null, 'reviewForms');
 		}
 
-		$rangeInfo =& $this->getRangeInfo('reviewFormElements');
+		$rangeInfo = $this->getRangeInfo($request, 'reviewFormElements');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElementsByReviewForm($reviewFormId, $rangeInfo);
 

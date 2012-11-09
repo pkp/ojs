@@ -111,7 +111,7 @@ class IssueHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = $this->getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
 

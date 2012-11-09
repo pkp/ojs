@@ -52,7 +52,7 @@ class RoleBlockPlugin extends BlockPlugin {
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		switch ($request->getRequestedPage()) {
 			case 'author': switch ($request->getRequestedOp()) {

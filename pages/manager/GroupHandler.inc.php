@@ -40,7 +40,7 @@ class GroupHandler extends ManagerHandler {
 
 		$journal =& Request::getJournal();
 
-		$rangeInfo =& $this->getRangeInfo('groups');
+		$rangeInfo = $this->getRangeInfo($request, 'groups');
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), null, $rangeInfo);
@@ -200,7 +200,7 @@ class GroupHandler extends ManagerHandler {
 		$this->validate($groupId);
 		$group =& $this->group;
 
-		$rangeInfo =& $this->getRangeInfo('memberships');
+		$rangeInfo = $this->getRangeInfo($request, 'memberships');
 
 		$this->setupTemplate($group, true);
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');

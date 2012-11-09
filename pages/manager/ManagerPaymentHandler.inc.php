@@ -26,31 +26,31 @@ class ManagerPaymentHandler extends ManagerHandler {
 	/**
 	 * Display Settings Form (main payments page)
 	 */
-	 function payments($args) {
+	 function payments($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		OJSPaymentAction::payments($args);
+		OJSPaymentAction::payments($args, $request);
 	 }
 	 
 	 /**
 	  * Execute the form or display it again if there are problems
 	  */
-	 function savePaymentSettings($args) {
+	 function savePaymentSettings($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		$success = OJSPaymentAction::savePaymentSettings($args);
+		$success = OJSPaymentAction::savePaymentSettings($args, $request);
 
 		if ($success) {
  			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, 'payments'),
+				'currentUrl' => $request->url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
 				'message' => 'common.changesSaved',
-				'backLink' => Request::url(null, null, 'payments'),
+				'backLink' => $request->url(null, null, 'payments'),
 				'backLinkLabel' => 'manager.payment.feePaymentOptions'
 			));
 			$templateMgr->display('common/message.tpl');		
@@ -60,53 +60,53 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 /** 
 	  * Display all payments previously made
 	  */
-	 function viewPayments($args) {
+	 function viewPayments($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		OJSPaymentAction::viewPayments($args);
+		OJSPaymentAction::viewPayments($args, $request);
 	 }
 
 	 /** 
 	  * Display a single Completed payment 
 	  */
-	 function viewPayment($args) {
+	 function viewPayment($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		OJSPaymentAction::viewPayment($args);
+		OJSPaymentAction::viewPayment($args, $request);
 	 }
 
 	/**
 	 * Display form to edit program settings.
 	 */
-	function payMethodSettings() {
+	function payMethodSettings($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		OJSPaymentAction::payMethodSettings();
+		OJSPaymentAction::payMethodSettings($request);
 	}
 	
 	/**
 	 * Save changes to payment settings.
 	 */
-	function savePayMethodSettings() {
+	function savePayMethodSettings($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
-		$success = OJSPaymentAction::savePayMethodSettings();
+		$success = OJSPaymentAction::savePayMethodSettings($request);
 
 		if ($success) {
  			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
+				'currentUrl' => $request->url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',
 				'message' => 'common.changesSaved',
-				'backLink' => Request::url(null, null, 'payMethodSettings'),
+				'backLink' => $request->url(null, null, 'payMethodSettings'),
 				'backLinkLabel' => 'manager.payment.paymentMethods'
 			));
 			$templateMgr->display('common/message.tpl');		

@@ -17,7 +17,7 @@ import('pages.admin.AdminHandler');
 class AdminJournalHandler extends AdminHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AdminJournalHandler() {
 		parent::AdminHandler();
 	}
@@ -25,11 +25,11 @@ class AdminJournalHandler extends AdminHandler {
 	/**
 	 * Display a list of the journals hosted on the site.
 	 */
-	function journals() {
+	function journals($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$rangeInfo = $this->getRangeInfo('journals');
+		$rangeInfo = $this->getRangeInfo($request, 'journals');
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(false, $rangeInfo);

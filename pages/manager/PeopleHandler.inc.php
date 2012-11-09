@@ -68,7 +68,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
@@ -188,7 +188,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 
 		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo, $sort);
 
@@ -235,7 +235,7 @@ class PeopleHandler extends ManagerHandler {
 
 		parent::setupTemplate(true);
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 
 		$users =& $userDao->getUsersWithNoRole(true, $rangeInfo);
 
@@ -494,7 +494,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo, $sort);

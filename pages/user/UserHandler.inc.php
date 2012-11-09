@@ -30,13 +30,13 @@ class UserHandler extends Handler {
 	function index($args, &$request) {
 		$this->validate();
 
-		$sessionManager =& SessionManager::getManager();
+		$sessionManager =& SessionManager::getManager($request);
 		$session =& $sessionManager->getUserSession();
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$journal =& $request->getJournal();
 		$templateMgr->assign('helpTopicId', 'user.userHome');
@@ -146,7 +146,7 @@ class UserHandler extends Handler {
 		);
 
 		$this->setupTemplate($request, true);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
 		$templateMgr->assign('journalPath', $journal->getPath());
@@ -266,7 +266,7 @@ class UserHandler extends Handler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
 		$this->setupTemplate($request, true);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
@@ -419,7 +419,7 @@ class UserHandler extends Handler {
 			$roleDao->insertRole($role);
 			$request->redirectUrl($request->getUserVar('source'));
 		} else {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('message', $deniedKey);
 			return $templateMgr->display('common/message.tpl');
 		}
@@ -435,7 +435,7 @@ class UserHandler extends Handler {
 		$authorizationMessage = htmlentities($request->getUserVar('message'));
 		$this->setupTemplate($request, true);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('message', $authorizationMessage);
 		return $templateMgr->display('common/message.tpl');
 	}
@@ -457,10 +457,10 @@ class UserHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate(&$request, $subclass = false) {
-		parent::setupTemplate();
+	function setupTemplate($request = null, $subclass = false) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_MANAGER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user')));
 		}
@@ -474,7 +474,7 @@ class UserHandler extends Handler {
 	 */
 	function viewPublicProfile($args, &$request) {
 		$this->validate(false);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$userId = (int) array_shift($args);
 
 		$accountIsVisible = false;

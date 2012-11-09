@@ -32,7 +32,7 @@ class SectionHandler extends ManagerHandler {
 		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
-		$rangeInfo =& $this->getRangeInfo('sections');
+		$rangeInfo = $this->getRangeInfo($request, 'sections');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getId(), $rangeInfo);
 		$emptySectionIds = $sectionDao->getJournalEmptySectionIds($journal->getId());

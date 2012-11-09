@@ -17,7 +17,7 @@ import('classes.handler.Handler');
 class IndexHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function IndexHandler() {
 		parent::Handler();
 	}
@@ -30,10 +30,10 @@ class IndexHandler extends Handler {
 	 */
 	function index($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$router =& $request->getRouter();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
 		$templateMgr->assign('helpTopicId', 'user.home');
@@ -85,7 +85,7 @@ class IndexHandler extends Handler {
 
 			// If we're using paging, fetch the parameters
 			$usePaging = $site->getSetting('usePaging');
-			if ($usePaging) $rangeInfo =& $this->getRangeInfo('journals');
+			if ($usePaging) $rangeInfo = $this->getRangeInfo($request, 'journals');
 			else $rangeInfo = null;
 			$templateMgr->assign('usePaging', $usePaging);
 

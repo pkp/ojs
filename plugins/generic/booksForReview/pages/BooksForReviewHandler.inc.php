@@ -20,7 +20,7 @@ class BooksForReviewHandler extends Handler {
 	 * Display books for review public index page.
 	 */
 	function index($args = array(), &$request) {
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -37,7 +37,7 @@ class BooksForReviewHandler extends Handler {
 			$searchMatch = $request->getUserVar('searchMatch');
 		}			
 
-		$rangeInfo =& Handler::getRangeInfo('booksForReview');
+		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, BFR_STATUS_AVAILABLE, null, null, $rangeInfo);
 
@@ -78,7 +78,7 @@ class BooksForReviewHandler extends Handler {
 	 * Public view book for review details.
 	 */
 	function viewBookForReview($args = array(), &$request) {
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -134,7 +134,7 @@ class BooksForReviewHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($request, $subclass = false) {
 		$templateMgr =& TemplateManager::getManager();
 
 		if ($subclass) {

@@ -102,7 +102,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportableIssues.tpl');

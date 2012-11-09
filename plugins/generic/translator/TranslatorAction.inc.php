@@ -18,7 +18,7 @@ class TranslatorAction {
 	 * Export the locale files to the browser as a tarball.
 	 * Requires tar for operation (configured in config.inc.php).
 	 */
-	function export($locale) {
+	static function export($locale) {
 		// Construct the tar command
 		$tarBinary = Config::getVar('cli', 'tar');
 		if (empty($tarBinary) || !file_exists($tarBinary)) {
@@ -47,7 +47,7 @@ class TranslatorAction {
 		passthru($command);
 	}
 
-	function getLocaleFiles($locale) {
+	static function getLocaleFiles($locale) {
 		if (!AppLocale::isLocaleValid($locale)) return null;
 
 		$localeFiles = AppLocale::getFilenameComponentMap($locale);
@@ -64,7 +64,7 @@ class TranslatorAction {
 		return $localeFiles;
 	}
 
-	function getMiscLocaleFiles($locale) {
+	static function getMiscLocaleFiles($locale) {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
 		$languageDao =& DAORegistry::getDAO('LanguageDAO');
@@ -75,7 +75,7 @@ class TranslatorAction {
 		);
 	}
 
-	function getEmailFileMap($locale) {
+	static function getEmailFileMap($locale) {
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 		$files = array($emailTemplateDao->getMainEmailTemplatesFilename() => $emailTemplateDao->getMainEmailTemplateDataFilename($locale));
 		$categories = PluginRegistry::getCategories();
@@ -94,7 +94,7 @@ class TranslatorAction {
 		return $files;
 	}
 
-	function getEmailTemplates($locale) {
+	static function getEmailTemplates($locale) {
 		$files = TranslatorAction::getEmailFileMap($locale);
 		$returner = array();
 		foreach ($files as $templateFile => $templateDataFile) {
@@ -115,7 +115,7 @@ class TranslatorAction {
 		return $returner;
 	}
 
-	function isLocaleFile($locale, $filename) {
+	static function isLocaleFile($locale, $filename) {
 		if (in_array($filename, TranslatorAction::getLocaleFiles($locale))) return true;
 		if (in_array($filename, TranslatorAction::getMiscLocaleFiles($locale))) return true;
 		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
@@ -123,7 +123,7 @@ class TranslatorAction {
 		return false;
 	}
 
-	function determineReferenceFilename($locale, $filename) {
+	static function determineReferenceFilename($locale, $filename) {
 		// FIXME: This is ugly.
 		return str_replace($locale, MASTER_LOCALE, $filename);
 	}
@@ -135,7 +135,7 @@ class TranslatorAction {
 	 * @param $referenceLocale string Name of locale to test against
 	 * @return array
 	 */
-	function testLocale($locale, $referenceLocale) {
+	static function testLocale($locale, $referenceLocale) {
 		$localeFileNames = AppLocale::getFilenameComponentMap($locale);
 
 		$errors = array();
@@ -178,7 +178,7 @@ class TranslatorAction {
 	 * @param $referenceLocale string
 	 * @return array List of errors
 	 */
-	function testEmails($locale, $referenceLocale) {
+	static function testEmails($locale, $referenceLocale) {
 		$errors = array(
 		);
 

@@ -115,7 +115,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$form = new StaticPagesSettingsForm($this, $journal->getId());
 
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
-				$form->initData();
+				$form->initData($request);
 				$form->display();
 				return true;
 			case 'edit':

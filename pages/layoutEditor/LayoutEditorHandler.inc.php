@@ -81,7 +81,7 @@ class LayoutEditorHandler extends Handler {
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = $this->getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -133,7 +133,7 @@ class LayoutEditorHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = $this->getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -152,7 +152,7 @@ class LayoutEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$rangeInfo = $this->getRangeInfo('issues');
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = $request->getUserVar('sortDirection');

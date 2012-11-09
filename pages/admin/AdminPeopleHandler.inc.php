@@ -75,7 +75,7 @@ class AdminPeopleHandler extends AdminHandler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, null, $searchType, $search, $searchMatch, $rangeInfo);

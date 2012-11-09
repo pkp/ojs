@@ -290,7 +290,7 @@ class ThesisPlugin extends GenericPlugin {
 					$searchMatch = $request->getUserVar('searchMatch');
 				}
 
-				$rangeInfo =& Handler::getRangeInfo('theses');
+				$rangeInfo =& Handler::getRangeInfo($this->getRequest(), 'theses');
 				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 				$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 

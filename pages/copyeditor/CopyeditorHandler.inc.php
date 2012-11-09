@@ -52,7 +52,7 @@ class CopyeditorHandler extends Handler {
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$rangeInfo = $this->getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {

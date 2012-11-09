@@ -50,7 +50,7 @@ class RTContextHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
-		$rangeInfo = $this->getRangeInfo('contexts');
+		$rangeInfo = $this->getRangeInfo($request, 'contexts');
 
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());

@@ -17,7 +17,7 @@ import('pages.manager.ManagerHandler');
 class SubscriptionHandler extends ManagerHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubscriptionHandler() {
 		parent::ManagerHandler();
 	}
@@ -25,238 +25,208 @@ class SubscriptionHandler extends ManagerHandler {
 	/**
 	 * Display subscriptions summary page for the current journal.
 	 */
-	function subscriptionsSummary() {
+	function subscriptionsSummary($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::subscriptionsSummary();
+		SubscriptionAction::subscriptionsSummary($request);
 	}
 
 	/**
 	 * Display a list of subscriptions for the current journal.
 	 */
-	function subscriptions($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-			} else {
-				$institutional = true;
-			}
+	function subscriptions($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional = false;
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
 		}
 
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::subscriptions($institutional);
+		SubscriptionAction::subscriptions($request, $institutional);
 	}
 
 	/**
 	 * Delete a subscription.
 	 * @param $args array first parameter is the ID of the subscription to delete
 	 */
-	function deleteSubscription($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-				$redirect = 'individual';
-			} else {
-				$institutional = true;
-				$redirect = 'institutional';
-			}
+	function deleteSubscription($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional  = false;
+			$redirect = 'individual';
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
+			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::deleteSubscription($args, $institutional);
+		SubscriptionAction::deleteSubscription($args, $request, $institutional);
 
-		Request::redirect(null, null, 'subscriptions', $redirect);
+		$request->redirect(null, null, 'subscriptions', $redirect);
 	}
 
 	/**
 	 * Renew a subscription.
 	 * @param $args array first parameter is the ID of the subscription to renew
 	 */
-	function renewSubscription($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-				$redirect = 'individual';
-			} else {
-				$institutional = true;
-				$redirect = 'institutional';
-			}
+	function renewSubscription($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional  = false;
+			$redirect = 'individual';
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
+			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::renewSubscription($args, $institutional);
+		SubscriptionAction::renewSubscription($args, $request, $institutional);
 
-		Request::redirect(null, null, 'subscriptions', $redirect);
+		$request->redirect(null, null, 'subscriptions', $redirect);
 	}
 
 	/**
 	 * Display form to edit a subscription.
 	 * @param $args array optional, first parameter is the ID of the subscription to edit
 	 */
-	function editSubscription($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-				$redirect = 'individual';
-			} else {
-				$institutional = true;
-				$redirect = 'institutional';
-			}
+	function editSubscription($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional  = false;
+			$redirect = 'individual';
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
+			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate(true, $institutional);
+		$this->setupTemplate($request, true, $institutional);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		$editSuccess = SubscriptionAction::editSubscription($args, $institutional);
+		$editSuccess = SubscriptionAction::editSubscription($args, $request, $institutional);
 
 		if (!$editSuccess) {
-			Request::redirect(null, null, 'subscriptions', $redirect);
+			$request->redirect(null, null, 'subscriptions', $redirect);
 		}
 	}
 
 	/**
 	 * Display form to create new subscription.
 	 */
-	function createSubscription($args) {
-		$this->editSubscription($args);
+	function createSubscription($args, $request) {
+		$this->editSubscription($args, $request);
 	}
 
 	/**
 	 * Display a list of users from which to choose a subscriber.
 	 */
-	function selectSubscriber($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-				$redirect = 'individual';
-			} else {
-				$institutional = true;
-				$redirect = 'institutional';
-			}
+	function selectSubscriber($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional  = false;
+			$redirect = 'individual';
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
+			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate(true, $institutional);
+		$this->setupTemplate($request, true, $institutional);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::selectSubscriber($args, $institutional);
+		SubscriptionAction::selectSubscriber($args, $request, $institutional);
 	}
 
 	/**
 	 * Save changes to a subscription.
 	 */
-	function updateSubscription($args) {
-		if (isset($args) && !empty($args)) {
-			if ($args[0] == 'individual') {
-				$institutional  = false;
-				$redirect = 'individual';
-			} else {
-				$institutional = true;
-				$redirect = 'institutional';
-			}
+	function updateSubscription($args, $request) {
+		if (array_shift($args) == 'individual') {
+			$institutional  = false;
+			$redirect = 'individual';
 		} else {
-			Request::redirect(null, 'manager');
+			$institutional = true;
+			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate(true, $institutional);
+		$this->setupTemplate($request, true, $institutional);
 
-		array_shift($args);
 		import('classes.subscription.SubscriptionAction');
-		$updateSuccess = SubscriptionAction::updateSubscription($args, $institutional);
+		$updateSuccess = SubscriptionAction::updateSubscription($args, $request, $institutional);
 
-		if ($updateSuccess && Request::getUserVar('createAnother')) {
-			Request::redirect(null, null, 'selectSubscriber', $redirect);
+		if ($updateSuccess && $request->getUserVar('createAnother')) {
+			$request->redirect(null, null, 'selectSubscriber', $redirect);
 		} elseif ($updateSuccess) {
-			Request::redirect(null, null, 'subscriptions', $redirect);
+			$request->redirect(null, null, 'subscriptions', $redirect);
 		}
 	}
 
 	/**
 	 * Display a list of subscription types for the current journal.
 	 */
-	function subscriptionTypes() {
+	function subscriptionTypes($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::subscriptionTypes();
+		SubscriptionAction::subscriptionTypes($request);
 	}
 
 	/**
 	 * Rearrange the order of subscription types.
 	 */
-	function moveSubscriptionType($args) {
+	function moveSubscriptionType($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::moveSubscriptionType($args);
+		SubscriptionAction::moveSubscriptionType($args, $request);
 
-		Request::redirect(null, null, 'subscriptionTypes');
+		$request->redirect(null, null, 'subscriptionTypes');
 	}
 
 	/**
 	 * Delete a subscription type.
 	 * @param $args array first parameter is the ID of the subscription type to delete
 	 */
-	function deleteSubscriptionType($args) {
+	function deleteSubscriptionType($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
-		SubscriptionAction::deleteSubscriptionType($args);
+		SubscriptionAction::deleteSubscriptionType($args, $request);
 
-		Request::redirect(null, null, 'subscriptionTypes');
+		$request->redirect(null, null, 'subscriptionTypes');
 	}
 
 	/**
 	 * Display form to edit a subscription type.
 	 * @param $args array optional, first parameter is the ID of the subscription type to edit
 	 */
-	function editSubscriptionType($args = array()) {
+	function editSubscriptionType($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 		import('classes.subscription.SubscriptionAction');
-		$editSuccess = SubscriptionAction::editSubscriptionType($args);
+		$editSuccess = SubscriptionAction::editSubscriptionType($args, $request);
 
 		if (!$editSuccess) {
-			Request::redirect(null, null, 'subscriptionTypes');
+			$request->redirect(null, null, 'subscriptionTypes');
 		}
 	}
 
@@ -270,20 +240,20 @@ class SubscriptionHandler extends ManagerHandler {
 	/**
 	 * Save changes to a subscription type.
 	 */
-	function updateSubscriptionType() {
+	function updateSubscriptionType($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 		import('classes.subscription.SubscriptionAction');
-		$updateSuccess = SubscriptionAction::updateSubscriptionType();
+		$updateSuccess = SubscriptionAction::updateSubscriptionType($request);
 
-		if ($updateSuccess && Request::getUserVar('createAnother')) {
-			Request::redirect(null, null, 'createSubscriptionType', null, array('subscriptionTypeCreated' => 1));
+		if ($updateSuccess && $request->getUserVar('createAnother')) {
+			$request->redirect(null, null, 'createSubscriptionType', null, array('subscriptionTypeCreated' => 1));
 		} elseif ($updateSuccess) {
-			Request::redirect(null, null, 'subscriptionTypes');
+			$request->redirect(null, null, 'subscriptionTypes');
 		}
 	}
 
@@ -294,7 +264,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function subscriptionPolicies($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::subscriptionPolicies($args, $request);
@@ -307,7 +277,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function saveSubscriptionPolicies($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::saveSubscriptionPolicies($args, $request);
@@ -316,14 +286,14 @@ class SubscriptionHandler extends ManagerHandler {
 	/**
 	 * Setup common template variables.
 	 */
-	function setupTemplate($subclass = false, $institutional = false) {
-		parent::setupTemplate(true);
+	function setupTemplate($request, $subclass = false, $institutional = false) {
+		parent::setupTemplate($request, true);
 		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			if ($institutional) {
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions', 'institutional'), 'manager.institutionalSubscriptions'));
+				$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptions', 'institutional'), 'manager.institutionalSubscriptions'));
 			} else {
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions', 'individual'), 'manager.individualSubscriptions'));
+				$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptions', 'individual'), 'manager.individualSubscriptions'));
 			}
 		}
 	}

@@ -87,7 +87,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -96,7 +96,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());

@@ -71,7 +71,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs();
 				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = Handler::getRangeInfo($this->getRequest(), $this->getRequest(), $this->getRequest(), $this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());

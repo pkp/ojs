@@ -23,7 +23,7 @@ class TemplateManager extends PKPTemplateManager {
 	/**
 	 * Constructor.
 	 * Initialize template engine and assign basic template variables.
-	 * @param $request PKPRequest FIXME: is optional for backwards compatibility only - make mandatory
+	 * @param $request PKPRequest
 	 */
 	function TemplateManager($request = null) {
 		parent::PKPTemplateManager($request);
@@ -159,8 +159,8 @@ class TemplateManager extends PKPTemplateManager {
 				$translatedKey = $help->translate('');
 			}
 
-			if ($params['url'] == "true") {
-				return Request::url(null, 'help', 'view', explode('/', $translatedKey));
+			if ($params['url'] == 'true') {
+				return $this->request->url(null, 'help', 'view', explode('/', $translatedKey));
 			} else {
 				return $translatedKey;
 			}
@@ -180,7 +180,7 @@ class TemplateManager extends PKPTemplateManager {
 		$help =& Help::getHelp();
 		if (isset($params) && !empty($params)) {
 			$translatedKey = isset($params['key']) ? $help->translate($params['key']) : $help->translate('');
-			$link = Request::url(null, 'help', 'view', explode('/', $translatedKey));
+			$link = $this->request->url(null, 'help', 'view', explode('/', $translatedKey));
 			$text = isset($params['text']) ? $params['text'] : '';
 			return "<a href=\"$link\">$text</a>";
 		}
@@ -236,9 +236,9 @@ class TemplateManager extends PKPTemplateManager {
 
 		if ($page>1) {
 			$params[$paramName] = 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;&lt;</a>&nbsp;';
+			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;&lt;</a>&nbsp;';
 			$params[$paramName] = $page - 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;</a>&nbsp;';
+			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;</a>&nbsp;';
 		}
 
 		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
@@ -246,14 +246,14 @@ class TemplateManager extends PKPTemplateManager {
 				$value .= "<strong>$i</strong>&nbsp;";
 			} else {
 				$params[$paramName] = $i;
-				$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>' . $i . '</a>&nbsp;';
+				$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>' . $i . '</a>&nbsp;';
 			}
 		}
 		if ($page < $pageCount) {
 			$params[$paramName] = $page + 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;</a>&nbsp;';
+			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;</a>&nbsp;';
 			$params[$paramName] = $pageCount;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;&gt;</a>&nbsp;';
+			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;&gt;</a>&nbsp;';
 		}
 
 		return $value;

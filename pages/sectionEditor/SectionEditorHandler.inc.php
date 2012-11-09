@@ -51,7 +51,7 @@ class SectionEditorHandler extends Handler {
 		$journalId = $journal->getId();
 		$user =& $request->getUser();
 
-		$rangeInfo = $this->getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
 		// Get the user's search conditions, if any
 		$searchField = $request->getUserVar('searchField');

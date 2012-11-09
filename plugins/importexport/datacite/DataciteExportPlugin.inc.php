@@ -135,7 +135,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
 		// Paginate supp files.
 		$totalSuppFiles = count($suppFiles);
-		$rangeInfo = Handler::getRangeInfo('suppFiles');
+		$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'suppFiles');
 		if ($rangeInfo->isValid()) {
 			$suppFiles = array_slice($suppFiles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}

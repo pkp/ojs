@@ -273,7 +273,7 @@ class PayPalPlugin extends PaymethodPlugin {
 							}
 
 							// Fulfill the queued payment.
-							if ($ojsPaymentManager->fulfillQueuedPayment($queuedPayment, $this->getName())) exit();
+							if ($ojsPaymentManager->fulfillQueuedPayment($request, $queuedPayment, $this->getName())) exit();
 
 							// If we're still here, it means the payment couldn't be fulfilled.
 							$mail->assignParams(array(

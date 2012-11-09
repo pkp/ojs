@@ -19,8 +19,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display books for review listing pages.
 	 */
-	function booksForReview($args = array(), &$request) {
-		$this->setupTemplate();
+	function booksForReview($args, &$request) {
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -91,7 +91,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$editorId = null;
 		}
 
-		$rangeInfo =& Handler::getRangeInfo('booksForReview');
+		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $rangeInfo);
 
@@ -125,15 +125,15 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Create/edit book for review.
 	 */
-	function createBookForReview($args = array(), &$request) {
+	function createBookForReview($args, &$request) {
 		$this->editBookForReview($args, $request);
 	}
 
 	/**
 	 * Create/edit book for review.
 	 */
-	function editBookForReview($args = array(), &$request) {
-		$this->setupTemplate(true);
+	function editBookForReview($args, &$request) {
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -179,8 +179,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Update book for review.
 	 */
-	function updateBookForReview($args = array(), &$request) {
-		$this->setupTemplate(true);
+	function updateBookForReview($args, &$request) {
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -285,8 +285,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Delete book for review.
 	 */
-	function deleteBookForReview($args = array(), &$request) {
-		$this->setupTemplate();
+	function deleteBookForReview($args, &$request) {
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -321,8 +321,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Update book for review settings.
 	 */
-	function booksForReviewSettings($args = array(), &$request) {
-		$this->setupTemplate(true);
+	function booksForReviewSettings($args, &$request) {
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -361,8 +361,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of authors from which to choose a book reviewer.
 	 */
-	function selectBookForReviewAuthor($args = array(), &$request) {
-		$this->setupTemplate(true);
+	function selectBookForReviewAuthor($args, &$request) {
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -402,7 +402,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$search = $searchInitial;
 		}
 
-		$rangeInfo = Handler::getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 		$users =& $roleDao->getUsersByRoleId(ROLE_ID_AUTHOR, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
@@ -431,8 +431,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of submissions from which to choose a book review submission.
 	 */
-	function selectBookForReviewSubmission($args = array(), &$request) {
-		$this->setupTemplate(true);
+	function selectBookForReviewSubmission($args, &$request) {
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -468,7 +468,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		$user =& $request->getUser();
 		$editorId = $user->getId();
-		$rangeInfo = Handler::getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
 		import('lib.pkp.classes.db.DAO');
 		$submissions =& $editorSubmissionDao->getEditorSubmissions(
@@ -505,8 +505,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Assign a book for review submission.
 	 */
-	function assignBookForReviewSubmission($args = array(), &$request) {
-		$this->setupTemplate();
+	function assignBookForReviewSubmission($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
@@ -551,8 +551,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Assign a book for review author.
 	 */
-	function assignBookForReviewAuthor($args = array(), &$request) {
-		$this->setupTemplate();
+	function assignBookForReviewAuthor($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
@@ -665,8 +665,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Deny a book for review request.
 	 */
-	function denyBookForReviewAuthor($args = array(), &$request) {
-		$this->setupTemplate();
+	function denyBookForReviewAuthor($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
@@ -740,8 +740,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Mark a book for review as mailed.
 	 */
-	function notifyBookForReviewMailed($args = array(), &$request) {
-		$this->setupTemplate();
+	function notifyBookForReviewMailed($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
@@ -827,8 +827,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Remove book reviewer and reset book for review.
 	 */
-	function removeBookForReviewAuthor($args = array(), &$request) {
-		$this->setupTemplate();
+	function removeBookForReviewAuthor($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
@@ -907,8 +907,8 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Remove book for review cover page image.
 	 */
-	function removeBookForReviewCoverPage($args = array(), &$request) {
-		$this->setupTemplate();
+	function removeBookForReviewCoverPage($args, &$request) {
+		$this->setupTemplate($request);
 
 		if (empty($args) || count($args) < 2) {
 			$request->redirect(null, 'editor');
@@ -978,9 +978,10 @@ class BooksForReviewEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($request, $subclass = false) {
 		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(

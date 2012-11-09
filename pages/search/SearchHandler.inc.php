@@ -134,7 +134,7 @@ class SearchHandler extends Handler {
 		$keywords = ArticleSearch::getKeywordsFromSearchFilters($searchFilters);
 
 		// Get the range info.
-		$rangeInfo = $this->getRangeInfo('search');
+		$rangeInfo = $this->getRangeInfo($request, 'search');
 
 		// Retrieve results.
 		$error = '';
@@ -231,7 +231,7 @@ class SearchHandler extends Handler {
 		} else {
 			// Show the author index
 			$searchInitial = $request->getUserVar('searchInitial');
-			$rangeInfo = $this->getRangeInfo('authors');
+			$rangeInfo = $this->getRangeInfo($request, 'authors');
 
 			$authors =& $authorDao->getAuthorsAlphabetizedByJournal(
 				isset($journal)?$journal->getId():null,
@@ -260,7 +260,7 @@ class SearchHandler extends Handler {
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$rangeInfo = $this->getRangeInfo('search');
+		$rangeInfo = $this->getRangeInfo($request, 'search');
 
 		$articleIds =& $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);

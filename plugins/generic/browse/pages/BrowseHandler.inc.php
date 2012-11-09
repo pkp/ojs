@@ -36,7 +36,7 @@ class BrowseHandler extends Handler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleIds = $publishedArticleDao->getPublishedArticleIdsBySection($sectionId);
 
-				$rangeInfo = Handler::getRangeInfo('search');
+				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -59,7 +59,7 @@ class BrowseHandler extends Handler {
 				}
 				ksort($sections);
 
-				$rangeInfo = Handler::getRangeInfo('search');
+				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($sections);
 				$sections = array_slice($sections, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sections, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -103,7 +103,7 @@ class BrowseHandler extends Handler {
 					$publishedArticleIds = array_merge($publishedArticleIds, $publishedArticleIdsBySection);
 				}
 
-				$rangeInfo = Handler::getRangeInfo('search');
+				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -125,7 +125,7 @@ class BrowseHandler extends Handler {
 				}
 				sort($sectionidentifyTypes);
 
-				$rangeInfo = Handler::getRangeInfo('search');
+				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($sectionidentifyTypes);
 				$sectionidentifyTypes = array_slice($sectionidentifyTypes, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sectionidentifyTypes, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());

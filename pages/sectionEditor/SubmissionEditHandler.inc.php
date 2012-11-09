@@ -360,14 +360,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// Event log
 		$eventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
-		$rangeInfo =& $this->getRangeInfo('eventLogEntries');
+		$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
 		$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		unset($rangeInfo);
 
 		// Email log
 		$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
-		$rangeInfo =& $this->getRangeInfo('emailLogEntries');
+		$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		unset($rangeInfo);
@@ -487,7 +487,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo =& $this->getRangeInfo('reviewers');
+			$rangeInfo = $this->getRangeInfo($request, 'reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection); /* @var $reviewers DAOResultFactory */
 
 			$journal = $request->getJournal();
@@ -588,7 +588,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$user =& $request->getUser();
 
-		$rangeInfo = $this->getRangeInfo('users');
+		$rangeInfo = $this->getRangeInfo($request, 'users');
 		$templateMgr =& TemplateManager::getManager();
 		$this->setupTemplate(true);
 
@@ -1102,7 +1102,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			$journal =& $request->getJournal();
-			$rangeInfo =& $this->getRangeInfo('reviewForms');
+			$rangeInfo = $this->getRangeInfo($request, 'reviewForms');
 			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -2028,7 +2028,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
 
 		} else {
-			$rangeInfo =& $this->getRangeInfo('eventLogEntries');
+			$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
 			$eventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 			$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
@@ -2085,7 +2085,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('logEntry', $logEntry);
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
 		} else {
-			$rangeInfo =& $this->getRangeInfo('emailLogEntries');
+			$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 
 			$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
 			$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
@@ -2183,7 +2183,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->setupTemplate(true, $articleId, 'history');
 		$submission =& $this->submission;
 
-		$rangeInfo =& $this->getRangeInfo('submissionNotes');
+		$rangeInfo = $this->getRangeInfo($request, 'submissionNotes');
 		$noteDao =& DAORegistry::getDAO('NoteDAO');
 
 		// submission note edit
@@ -2676,7 +2676,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
+		$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		$request->redirect(null, null, 'submission', array($articleId));
 	}
 
@@ -2708,7 +2708,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
+		$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		$request->redirect(null, null, 'submission', array($articleId));
 	}
 
@@ -2742,7 +2742,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
+		$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 
 		if ($sendToScheduling) {
 			$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');

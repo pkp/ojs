@@ -16,12 +16,12 @@ class OJSPaymentAction {
 	/**
 	 * Display Payments Settings Form (main payments page)
 	 */
-	 function payments($args) {
+	function payments($args, $request) {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$form = new PaymentSettingsForm();
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($form->isLocaleResubmit()) {
@@ -30,17 +30,17 @@ class OJSPaymentAction {
 			$form->initData();
 		}
 		$form->display();
-	 }
+	}
 
-	 /**
-	  * Execute the form or display it again if there are problems
-	  */
-	 function savePaymentSettings($args) {
+	/**
+	 * Execute the form or display it again if there are problems
+	 */
+	function savePaymentSettings($args, $request) {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$settingsForm = new PaymentSettingsForm();
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		$settingsForm->readInputData();
@@ -52,16 +52,16 @@ class OJSPaymentAction {
 			$settingsForm->display();
 			return false;
 		}
-	 }
+	}
 
-	 /**
-	  * Display all payments previously made
-	  */
-	 function viewPayments($args) {
-		$rangeInfo =& Handler::getRangeInfo('payments');
+	/**
+	 * Display all payments previously made
+	 */
+	function viewPayments($args, $request) {
+		$rangeInfo =& Handler::getRangeInfo($request, 'payments');
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
@@ -75,18 +75,18 @@ class OJSPaymentAction {
 		$templateMgr->assign_by_ref('payments', $payments);
 
 		$templateMgr->display('payments/viewPayments.tpl');
-	 }
+	}
 
-	 /**
-	  * Display a single Completed payment
-	  */
-	 function viewPayment($args) {
+	/**
+	 * Display a single Completed payment
+	 */
+	function viewPayment($args, $request) {
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPaymentId = $args[0];
 		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
@@ -99,16 +99,16 @@ class OJSPaymentAction {
 		$templateMgr->assign_by_ref('payment', $payment);
 
 		$templateMgr->display('payments/viewPayment.tpl');
-	 }
+	}
 
 	/**
 	 * Display form to edit program settings.
 	 */
-	function payMethodSettings() {
-		$templateMgr =& TemplateManager::getManager();
+	function payMethodSettings($request) {
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
 
 		$settingsForm = new PayMethodSettingsForm();
@@ -119,14 +119,14 @@ class OJSPaymentAction {
 	/**
 	 * Save changes to payment settings.
 	 */
-	function savePayMethodSettings() {
-		$journal =& Request::getJournal();
+	function savePayMethodSettings($request) {
+		$journal =& $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
 
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
- 		$templateMgr =& TemplateManager::getManager();
+ 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($settingsForm->validate()) {

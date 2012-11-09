@@ -356,7 +356,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($journal && $user) {
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
-				$rangeInfo =& Handler::getRangeInfo('booksForReview');
+				$rangeInfo =& Handler::getRangeInfo($request, 'booksForReview');
 				$booksForReview =& $bfrDao->getBooksForReviewAssignedByAuthor($journal->getId(), $user->getId(), $rangeInfo);
 
 				if (!$booksForReview->wasEmpty()) {

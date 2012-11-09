@@ -17,7 +17,7 @@ import('pages.user.UserHandler');
 class ProfileHandler extends UserHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function ProfileHandler() {
 		parent::UserHandler();
 	}
@@ -39,7 +39,7 @@ class ProfileHandler extends UserHandler {
 		} else {
 			$profileForm->initData($args, $request);
 		}
-		$profileForm->display();
+		$profileForm->display($request);
 	}
 
 	/**
@@ -72,7 +72,7 @@ class ProfileHandler extends UserHandler {
 			$request->redirect(null, $request->getRequestedPage());
 
 		} else {
-			$profileForm->display();
+			$profileForm->display($request);
 		}
 	}
 

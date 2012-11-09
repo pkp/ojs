@@ -22,8 +22,8 @@ class ReferralHandler extends Handler {
 		parent::Handler();
 	}
 	
-	function setupTemplate() {
-		parent::setupTemplate();
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager();
 		$pageHierarchy = array(array(Request::url(null, 'referral', 'index'), 'plugins.generic.referral.referrals'));
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
@@ -34,7 +34,7 @@ class ReferralHandler extends Handler {
 		if ($referralId === 0) $referralId = null;
 
 		list($plugin, $referral, $article) = $this->validate($referralId);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$plugin->import('ReferralForm');
 		$templateMgr =& TemplateManager::getManager();
@@ -71,7 +71,7 @@ class ReferralHandler extends Handler {
 				Request::redirect(null, 'author');
 			}
 		}
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$plugin->import('ReferralForm');
 

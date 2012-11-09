@@ -54,7 +54,7 @@ class BooksForReviewAuthorHandler extends Handler {
 				$template = 'booksForReviewRequested.tpl';
 		}
 
-		$rangeInfo =& Handler::getRangeInfo('booksForReview');
+		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, null, null, null, $status, $userId, null, $rangeInfo);
 
@@ -171,7 +171,7 @@ class BooksForReviewAuthorHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate(&$request, $subclass = false) {
+	function setupTemplate($request, $subclass = false) {
 		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(

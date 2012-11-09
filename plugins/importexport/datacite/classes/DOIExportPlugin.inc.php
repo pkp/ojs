@@ -934,7 +934,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$this->registerDaoHook('IssueDAO');
-		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 		// Filter only issues that have a DOI assigned.
 		$issues = array();
@@ -948,7 +948,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Instantiate issue iterator.
 		import('lib.pkp.classes.core.ArrayItemIterator');
-		$rangeInfo = Handler::getRangeInfo('articles');
+		$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the issue template.
@@ -980,7 +980,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Paginate articles.
 		$totalArticles = count($articles);
-		$rangeInfo = Handler::getRangeInfo('articles');
+		$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 		if ($rangeInfo->isValid()) {
 			$articles = array_slice($articles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}
@@ -1034,7 +1034,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Paginate galleys.
 		$totalGalleys = count($galleys);
-		$rangeInfo = Handler::getRangeInfo('galleys');
+		$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'galleys');
 		if ($rangeInfo->isValid()) {
 			$galleys = array_slice($galleys, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		}

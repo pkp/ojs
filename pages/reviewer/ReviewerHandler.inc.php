@@ -42,7 +42,7 @@ class ReviewerHandler extends Handler {
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$rangeInfo = $this->getRangeInfo('submissions');
+		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {

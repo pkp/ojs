@@ -25,15 +25,15 @@ class ThesisHandler extends Handler {
 	/**
 	 * Display thesis index page.
 	 */
-	function index() {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
@@ -45,15 +45,15 @@ class ThesisHandler extends Handler {
 		if ($thesesEnabled) {
 			$searchField = null;
 			$searchMatch = null;
-			$search = Request::getUserVar('search');
+			$search = $request->getUserVar('search');
 
 			if (!empty($search)) {
-				$searchField = Request::getUserVar('searchField');
-				$searchMatch = Request::getUserVar('searchMatch');
+				$searchField = $request->getUserVar('searchField');
+				$searchMatch = $request->getUserVar('searchMatch');
 			}
 
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
-			$rangeInfo =& Handler::getRangeInfo('theses');
+			$rangeInfo = $this->getRangeInfo($request, 'theses');
 			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
 
 			$theses =& $thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
@@ -79,22 +79,22 @@ class ThesisHandler extends Handler {
 
 			$templateMgr->display($thesisPlugin->getTemplatePath() . 'index.tpl');
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 	}
 
 	/**
 	 * Display form to submit a thesis.
 	 */
-	function submit() {
+	function submit($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
@@ -110,7 +110,7 @@ class ThesisHandler extends Handler {
 			$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
 			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
+			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
@@ -119,23 +119,24 @@ class ThesisHandler extends Handler {
 			$thesisForm->display();
 
 		} else {
-				Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 	}
 
 	/**
 	 * Display thesis details.
-	 * @param $args array optional, first parameter is the ID of the thesis to display
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function view($args = array()) {
+	function view($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
@@ -154,31 +155,31 @@ class ThesisHandler extends Handler {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
+			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$thesisMetaCustomHeaders = $templateMgr->fetch($thesisPlugin->getTemplatePath() . 'metadata.tpl');
 			$metaCustomHeaders = $templateMgr->get_template_vars('metaCustomHeaders');
 			$templateMgr->assign('metaCustomHeaders', $metaCustomHeaders . "\n" . $thesisMetaCustomHeaders);
 			$templateMgr->display($thesisPlugin->getTemplatePath() . 'view.tpl');
 			} else {
-				Request::redirect(null, 'thesis');
+				$request->redirect(null, 'thesis');
 			}
 		} else {
-				Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 	}
 
 	/**
 	 * Save submitted thesis.
 	 */
-	function save() {
+	function save($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
 		} else {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', THESIS_PLUGIN_NAME);
@@ -196,7 +197,7 @@ class ThesisHandler extends Handler {
 
 			if ($thesisForm->validate()) {
 				$thesisForm->execute();
-				Request::redirect(null, 'thesis');
+				$request->redirect(null, 'thesis');
 			} else {
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
@@ -207,7 +208,7 @@ class ThesisHandler extends Handler {
 			}
 
 		} else {
-				Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
 		}
 	}
 
@@ -215,11 +216,11 @@ class ThesisHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false) {
+		parent::setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('pageHierachy', array(array(Request::url(null, 'theses'), 'plugins.generic.thesis.theses')));
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->assign('pageHierachy', array(array($request->url(null, 'theses'), 'plugins.generic.thesis.theses')));
 	}
 }
 

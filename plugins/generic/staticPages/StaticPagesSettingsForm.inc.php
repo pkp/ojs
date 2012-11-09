@@ -43,13 +43,13 @@ class StaticPagesSettingsForm extends Form {
 	/**
 	 * Initialize form data from current group group.
 	 */
-	function initData() {
+	function initData($request) {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
 		$staticPagesDao =& DAORegistry::getDAO('StaticPagesDAO');
 
-		$rangeInfo =& Handler::getRangeInfo('staticPages');
+		$rangeInfo =& Handler::getRangeInfo($request, 'staticPages');
 		$staticPages = $staticPagesDao->getStaticPagesByJournalId($journalId);
 		$this->setData('staticPages', $staticPages);
 	}

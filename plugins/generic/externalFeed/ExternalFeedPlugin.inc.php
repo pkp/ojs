@@ -31,7 +31,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
 			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $this->getStyleSheetFile());
+			$request = $this->getRequest();
+			$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
 			// Journal home page display
 			HookRegistry::register('TemplateManager::display', array(&$this, 'displayHomepage'));
@@ -71,7 +72,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Get the filename of the CSS stylesheet for this plugin.
 	 */
 	function getStyleSheetFile() {
-		$journal =& Request::getJournal();
+		$request = $this->getRequest();
+		$journal =& $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
 
@@ -113,16 +115,16 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
-				Request::url(null, 'user'),
+				$this->getRequest()->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				Request::url(null, 'manager'),
+				$this->getRequest()->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			Request::url(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds')),
+			$this->getRequest()->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds')),
 			$this->getDisplayName(),
 			true
 		);
@@ -293,7 +295,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId)) {
 					$feed =& $externalFeedDao->getExternalFeed($externalFeedId);
 
-					$direction = Request::getUserVar('dir');
+					$direction = $this->getRequest()->getUserVar('dir');
 
 					if ($direction != null) {
 						// moving with up or down arrow
@@ -303,7 +305,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());
 					}
 				}
-				Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 				return true;
 			case 'create':
 			case 'edit':
@@ -333,11 +335,11 @@ class ExternalFeedPlugin extends GenericPlugin {
 					$templateMgr->assign('journalSettings', $journalSettings);
 					$externalFeedForm->display();
 				} else {
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+					$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 				}
 				return true;
 			case 'update':
-				$externalFeedId = Request::getUserVar('feedId') == null ? null : (int) Request::getUserVar('feedId');
+				$externalFeedId = $this->getRequest()->getUserVar('feedId') == null ? null : (int) $this->getRequest()->getUserVar('feedId');
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
@@ -349,10 +351,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 					if ($externalFeedForm->validate()) {
 						$externalFeedForm->execute();
 
-						if (Request::getUserVar('createAnother')) {
-							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
+						if ($this->getRequest()->getUserVar('createAnother')) {
+							$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'create'));
 						} else {
-							Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+							$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 						}
 					} else {
 						if ($externalFeedId == null) {
@@ -369,17 +371,17 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$externalFeedForm->display();
 					}
 				} else {
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+					$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
 				}
 				return true;
 			case 'settings':
 				$this->import('ExternalFeedSettingsForm');
 				$form = new ExternalFeedSettingsForm($this, $journal->getId());
-				if (Request::getUserVar('save')) {
-					Request::redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
-				} elseif (Request::getUserVar('uploadStyleSheet')) {
+				if ($this->getRequest()->getUserVar('save')) {
+					$this->getRequest()->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds'));
+				} elseif ($this->getRequest()->getUserVar('uploadStyleSheet')) {
 					$form->uploadStyleSheet();
-				} elseif (Request::getUserVar('deleteStyleSheet')) {
+				} elseif ($this->getRequest()->getUserVar('deleteStyleSheet')) {
 					$form->deleteStyleSheet();
 				}
 				$this->setBreadCrumbs(true);
@@ -389,7 +391,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			case 'feeds':
 			default:
 				$this->import('ExternalFeed');
-				$rangeInfo =& Handler::getRangeInfo('feeds');
+				$rangeInfo =& Handler::getRangeInfo($this->getRequest(), 'feeds');
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);

@@ -42,13 +42,14 @@ class Application extends PKPApplication {
 	 * Scheduled Conference [2]).
 	 * @return int
 	 */
-	static function getContextDepth() {
+	function getContextDepth() {
 		return 1;
 	}
 
-	static function getContextList() {
+	function getContextList() {
 		return array('journal');
 	}
+
 	/**
 	 * Get the symbolic name of this application
 	 * @return string

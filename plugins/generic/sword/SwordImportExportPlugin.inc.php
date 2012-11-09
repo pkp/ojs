@@ -173,7 +173,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 			default:
 				$journal =& $request->getJournal();
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());

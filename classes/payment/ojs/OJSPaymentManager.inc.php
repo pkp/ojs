@@ -239,11 +239,12 @@ class OJSPaymentManager extends PaymentManager {
 
 	/**
 	 * Fulfill a queued payment.
+	 * @param $request PKPRequest
 	 * @param $queuedPayment QueuedPayment
 	 * @param $payMethodPluginName string Name of payment plugin.
 	 * @return mixed Dependent on payment type.
 	 */
-	function fulfillQueuedPayment(&$queuedPayment, $payMethodPluginName = null) {
+	function fulfillQueuedPayment($request, &$queuedPayment, $payMethodPluginName = null) {
 		$returner = false;
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
@@ -284,7 +285,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
 						import('classes.subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
 					}
 				} else {
 					import('classes.subscription.IndividualSubscription');
@@ -298,7 +299,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
 						import('classes.subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INDL');
 					}
 				}
 				$returner = true;
@@ -326,7 +327,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
 						import('classes.subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INSTL');
 					}
 				} else {
 					$individualSubscriptionDao->renewSubscription($subscription);
@@ -335,7 +336,7 @@ class OJSPaymentManager extends PaymentManager {
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 					if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
 						import('classes.subscription.SubscriptionAction');
-						SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDL');
+						SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
 					}
 				}
 				$returner = true;
