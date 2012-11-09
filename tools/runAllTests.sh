@@ -50,6 +50,10 @@
 #      assume such a server to be present on the test machine. Also see
 #      the "Troubleshooting" section there in case your tests fail.
 #
+#      To get a working test environment, you should execute
+#      - ./plugins/generic/lucene/embedded/bin/start.sh
+#      - php tools/rebuildSearchIndex.php -d
+#
 #
 # 4) Don't forget to start your local selenium server before executing functional tests, i.e.:
 #
