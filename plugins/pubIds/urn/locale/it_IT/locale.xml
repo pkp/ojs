@@ -6,6 +6,7 @@
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Contributed by Andrea Marchitelli.
   *
   * URN plugin localization strings
   -->
@@ -43,6 +44,9 @@
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Scegli</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Il namespace dell'identificatore persistente normalmente è necessario per la registrazione (es. con 
  la  Deutsche Nationalbibliothek).</message>
+  	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL del resolver</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(es. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Inserisci la URL del resolver.</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Contenuto della rivista</message>
 	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Scegliere gli oggetti ai quali assegnare gli URN.</message>
