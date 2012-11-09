@@ -33,7 +33,10 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 	 * @see WebTestCase::getAffectedTables()
 	 */
 	protected function getAffectedTables() {
-		return array('plugin_settings');
+		return array(
+			'plugin_settings', 'article_search_keyword_list',
+			'article_search_object_keywords', 'article_search_objects'
+		);
 	}
 
 	/**
