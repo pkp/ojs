@@ -53,6 +53,9 @@
 #      To get a working test environment, you should execute
 #      - ./plugins/generic/lucene/embedded/bin/start.sh
 #      - php tools/rebuildSearchIndex.php -d
+#      - You may have to repeat the chown/chmod commands above
+#        to make sure that new files, created by start.sh will
+#        will have the right permissions.
 #
 #
 # 4) Don't forget to start your local selenium server before executing functional tests, i.e.:
