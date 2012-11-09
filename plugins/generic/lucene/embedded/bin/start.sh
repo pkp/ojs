@@ -18,25 +18,25 @@ DEPLOYMENT_DIR="$PLUGIN_DIR/embedded"
 JAVA_OPTIONS="-Dsolr.deployment=$DEPLOYMENT_DIR"
 
 # Jetty configuration
-#JETTY_CONF="$DEPLOYMENT_DIR/etc/jetty-logging.xml $DEPLOYMENT_DIR/etc/jetty.xml"
 JETTY_CONF="$DEPLOYMENT_DIR/etc/jetty.xml"
+# Use the following line instead if you want extra logging.
+#JETTY_CONF="$DEPLOYMENT_DIR/etc/jetty-logging.xml $DEPLOYMENT_DIR/etc/jetty.xml"
 
 # The Jetty home directory
 JETTY_HOME="$PLUGIN_DIR/lib/jetty"
 JAVA_OPTIONS="$JAVA_OPTIONS -Djetty.home=$JETTY_HOME"
 
-# The Jetty log directory
-JETTY_LOGS="$OJS_FILES/lucene/log"
-if [ ! -d "$JETTY_LOGS" ]; then
-  mkdir -p "$JETTY_LOGS"
-fi
-JAVA_OPTIONS="$JAVA_OPTIONS -Djetty.logs=$JETTY_LOGS"
-
-# solr home
+# Solr home
 SOLR_HOME="$DEPLOYMENT_DIR/solr"
 JAVA_OPTIONS="$JAVA_OPTIONS -Dsolr.solr.home=$SOLR_HOME"
 
-# solr index data directory
+# Files directory
+LUCENE_FILES="$OJS_FILES/lucene"
+if [ ! -d "$LUCENE_FILES" ]; then
+  mkdir -p "$LUCENE_FILES"
+fi
+
+# Solr index data directory
 SOLR_DATA="$OJS_FILES/lucene/data"
 if [ ! -d "$SOLR_DATA" ]; then
   mkdir "$SOLR_DATA"
@@ -44,7 +44,7 @@ fi
 JAVA_OPTIONS="$JAVA_OPTIONS -Dsolr.data.dir=$SOLR_DATA"
 
 # Logging configuration
-JAVA_OPTIONS="$JAVA_OPTIONS -Djava.util.logging.config.file=$DEPLOYMENT_DIR/etc/logging.properties"
+JAVA_OPTIONS="$JAVA_OPTIONS -Djava.util.logging.config.file=$DEPLOYMENT_DIR/etc/logging.properties -Djetty.logs=$LUCENE_FILES"
 
 # The system's temporary directory
 if [ -z "$TMP" ]; then

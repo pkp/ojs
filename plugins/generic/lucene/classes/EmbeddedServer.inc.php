@@ -170,6 +170,15 @@ class EmbeddedServer {
 			if (!is_executable($scriptPath)) return false;
 		}
 
+		// Check whether crucial files are writable.
+		$filesDir = Config::getVar('files', 'files_dir');
+		foreach(array('data', 'solr-java.log', 'solr-php.log', 'solr.pid') as $fileName) {
+			$filePath = "$filesDir/lucene/$fileName";
+			if (file_exists($filePath) && !is_writable($filePath)) {
+				return false;
+			}
+		}
+
 		// Check whether there is an existing solr process, and if so, whether
 		// it is running under the same user id as PHP. Otherwise we cannot
 		// manipulate the process.

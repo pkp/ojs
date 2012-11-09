@@ -17,6 +17,8 @@
  */
 
 
+require_mock_env('env1');
+
 import('tests.functional.plugins.generic.lucene.FunctionalLucenePluginBaseTestCase');
 import('plugins.generic.lucene.classes.EmbeddedServer');
 

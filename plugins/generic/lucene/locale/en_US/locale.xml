@@ -111,6 +111,7 @@
 			<li>You may not have an embedded server installed in this OJS instance (see 'plugins/generic/lucene/README' for details).</li>
 			<li>The installation of your embedded server may be incomplete. Please check that the directories 'plugins/generic/lucene/lib/solr' and 'plugins/generic/lucene/lib/jetty' actually contain (or point to) the solr/jetty installation files.</li>
 			<li>The server administration scripts 'start.sh', 'stop.sh' and 'check.sh' in 'plugins/generic/lucene/embedded/bin' may not be executable. Check the permission flags of these files.</li>
+			<li>The files in 'files/lucene/' may not be writable by your web server's user. Check the permission flags of these files.</li>
 			<li>An embedded solr process may already be running but under a different OS user. This means that you cannot manipulate the process from within PHP.</li>
 			<li>Your PHP configuration may disallow script execution. Check the 'safe_mode' and 'disabled_function' settings in your php.ini. If you do not have access to your php.ini then you can execute the scripts manually to start/stop the server.</li>
 		</ul>
