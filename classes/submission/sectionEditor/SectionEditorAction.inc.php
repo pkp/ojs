@@ -1489,6 +1489,11 @@ class SectionEditorAction extends Action {
 		$submissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission->setSectionId($sectionId); // FIXME validate this ID?
 		$submissionDao->updateSectionEditorSubmission($submission);
+
+		// Reindex the submission (may be required to update section-specific ranking).
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->articleMetadataChanged($submission);
+		$articleSearchIndex->articleChangesFinished();
 	}
 
 	/**
