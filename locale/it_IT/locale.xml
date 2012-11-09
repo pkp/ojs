@@ -853,7 +853,8 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 <p>I pacchetti di localizzazione possono essere scaricati manualmente dal <a href="http://pkp.sfu.ca">sito web del PKP</a>.</p>]]></message>
 	<message key="plugins.categories.citationFormats.description">I plugin dei formati di citazione forniscono agli utenti vari formati con cui visualizzare le citazioni degli articoli.</message>
 	<message key="plugins.categories.oaiMetadataFormats">Plugin dei formati di metatadi OAI</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">Questi plugin regolano il formato dei metadati espressi nelle comunicazioni OAI.</message><message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta di licenza Creative Commons</h3>
+	<message key="plugins.categories.oaiMetadataFormats.description">Questi plugin regolano il formato dei metadati espressi nelle comunicazioni OAI.</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta di licenza Creative Commons</h3>
 <h4>1. Proposta per riviste Open Access</h4>
 Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 <ol type="a">
