@@ -205,6 +205,8 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		}
 		// Select no namespace
 		$this->select('id=namespace', 'label=Choose');
+		// Define no resolver
+		$this->type('id=urnResolver', '');
 
 		// Try to save settings.
 		$this->clickAndWait('css=input.button.defaultButton');
@@ -212,9 +214,11 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$formPrefixError = str_replace('%id', "urnPrefix", $this->pages['settings']['formError']);
 		$formObjectError = str_replace('%id', "enableIssueURN", $this->pages['settings']['formError']);
 		$formNamespaceError = str_replace('%id', "namespace", $this->pages['settings']['formError']);
+		$formResolverError = str_replace('%id', "urnResolver", $this->pages['settings']['formError']);
 		$this->assertElementPresent($formPrefixError);
 		$this->assertElementPresent($formObjectError);
 		$this->assertElementPresent($formNamespaceError);
+		$this->assertElementPresent($formResolverError);
 	}
 
 	/**
@@ -620,7 +624,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * @param $pattern string
 	 */
 	private function configureURN($prefix = 'urn:nbn:de:0000-', $suffixGenerationMethod = 'urnSuffixDefault',
-			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => '', 'SuppFile' => '')) {
+			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => '', 'SuppFile' => ''), $resolver = 'http://nbn-resolving.de/') {
 
 		// Make sure the settings page is open.
 		$this->openSettingsPage();
@@ -634,6 +638,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$this->verifyValue('id='.$suffixGenerationMethod, 'exact:on');
 		$this->verifyChecked('id=checkNo');
 		$this->verifyNotSelectedValue('id=namespace', '');
+		$this->verifyValue('id=urnResolver', 'exact:'.$resolver);
 
 		if (!$this->verified()) {
 			// Enable/Disable URN generation.
@@ -649,6 +654,8 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			$this->check('id=checkNo');
 			// Select no namespace
 			$this->select('id=namespace', 'value=urn:nbn:de');
+			// Configure the resolver.
+			$this->type('id=urnResolver', $resolver);
 			// Configure the suffix patterns.
 			foreach ($pattern as $objectType => $suffixPattern) {
 				$this->type(
