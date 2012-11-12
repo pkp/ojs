@@ -45,6 +45,12 @@
 #
 # 3) Install external dependencies
 #
+#    - If you want to execute ConfigTest you'll have to make local copies
+#      of lib/pkp/tests/config/*.TEMPLATE.* without the "TEMPLATE" extension
+#      (similarly to what you do in a new OJS installation). In most
+#      cases it should be enough to just adapt the database access data in
+#      there.
+#
 #    - See plugins/generic/lucene/README to install the dependencies
 #      required for an embedded Solr server. The Lucene/Solr tests
 #      assume such a server to be present on the test machine. Also see
