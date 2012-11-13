@@ -9,7 +9,7 @@
  * @class SubmissionCommentsHandler
  * @ingroup pages_author
  *
- * @brief Handle requests for submission comments. 
+ * @brief Handle requests for submission comments.
  */
 
 import('pages.author.TrackSubmissionHandler');
@@ -17,7 +17,7 @@ import('pages.author.TrackSubmissionHandler');
 class SubmissionCommentsHandler extends AuthorHandler {
 	/** comment associated with the request **/
 	var $comment;
-	
+
 	/**
 	 * Constructor
 	 **/
@@ -117,7 +117,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 */
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($args, $articleId);
+		$this->validate($request, $args, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -173,7 +173,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
-				
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
