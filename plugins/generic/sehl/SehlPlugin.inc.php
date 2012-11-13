@@ -77,7 +77,7 @@ class SehlPlugin extends GenericPlugin {
 		$queryArray = explode('&', $urlParts['query']);
 		foreach ($queryArray as $var) {
 			$varArray = explode('=', $var);
-			if (in_array($varArray[0], $queryVariableNames)) {
+			if (in_array($varArray[0], $queryVariableNames) && !empty($varArray[1])) {
 				$this->queryTerms += $this->parse_quote_string($varArray[1]);
 			}
 		}
@@ -98,7 +98,7 @@ class SehlPlugin extends GenericPlugin {
 		if ($fromDiv === false) return $output;
 
 		$endOfBodyTagOffset = strpos($fromDiv, '>');
-		$startIndex = strlen($output) - strlen($fromDiv) + $endOfBodyTagOffset;
+		$startIndex = strlen($output) - strlen($fromDiv) + $endOfBodyTagOffset + 1;
 		$scanPart = substr($output, $startIndex);
 
 		foreach ($this->queryTerms as $q) {
