@@ -232,7 +232,7 @@ class ReferralDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertObjectId() {
-		return $this->getInsertId('referrals', 'referral_id');
+		return $this->_getInsertId('referrals', 'referral_id');
 	}
 }
 

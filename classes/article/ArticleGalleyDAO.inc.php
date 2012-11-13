@@ -482,7 +482,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertGalleyId() {
-		return $this->getInsertId('article_galleys', 'galley_id');
+		return $this->_getInsertId('article_galleys', 'galley_id');
 	}
 
 

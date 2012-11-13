@@ -671,7 +671,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertPublishedArticleId() {
-		return $this->getInsertId('published_articles', 'published_article_id');
+		return $this->_getInsertId('published_articles', 'published_article_id');
 	}
 
 	/**

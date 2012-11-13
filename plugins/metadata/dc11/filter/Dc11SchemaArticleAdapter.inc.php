@@ -24,7 +24,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function Dc11SchemaArticleAdapter(&$filterGroup) {
+	function Dc11SchemaArticleAdapter($filterGroup) {
 		parent::MetadataDataObjectAdapter($filterGroup);
 	}
 

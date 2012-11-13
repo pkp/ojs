@@ -488,7 +488,7 @@ class SectionDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertSectionId() {
-		return $this->getInsertId('sections', 'section_id');
+		return $this->_getInsertId('sections', 'section_id');
 	}
 
 	/**

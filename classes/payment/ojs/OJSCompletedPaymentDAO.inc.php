@@ -72,7 +72,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertCompletedPaymentId() {
-		return $this->getInsertId('completed_payments', 'completed_payment_id');
+		return $this->_getInsertId('completed_payments', 'completed_payment_id');
 	}
 
 	/**

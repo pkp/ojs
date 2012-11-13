@@ -737,7 +737,7 @@ class Upgrade extends Installer {
 					sprintf('INSERT INTO controlled_vocabs (symbolic, assoc_type, assoc_id) VALUES (?, ?, ?)'),
 					array('interest', ROLE_ID_REVIEWER, $userId)
 				);
-				$controlledVocabId = $controlledVocabDao->getInsertId('controlled_vocabs', 'controlled_vocab_id');
+				$controlledVocabId = $controlledVocabDao->_getInsertId('controlled_vocabs', 'controlled_vocab_id');
 
 				foreach($interests as $interest) {
 					// Trim unnecessary whitespace
@@ -748,7 +748,7 @@ class Upgrade extends Installer {
 						array($controlledVocabId)
 					);
 
-					$controlledVocabEntryId = $controlledVocabDao->getInsertId('controlled_vocab_entries', 'controlled_vocab_entry_id');
+					$controlledVocabEntryId = $controlledVocabDao->_getInsertId('controlled_vocab_entries', 'controlled_vocab_entry_id');
 
 					$controlledVocabDao->update(
 						sprintf('INSERT INTO controlled_vocab_entry_settings (controlled_vocab_entry_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)'),

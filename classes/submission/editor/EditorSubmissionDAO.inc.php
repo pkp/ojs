@@ -681,7 +681,7 @@ class EditorSubmissionDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertEditId() {
-		return $this->getInsertId('edit_assignments', 'edit_id');
+		return $this->_getInsertId('edit_assignments', 'edit_id');
 	}
 
 	/**

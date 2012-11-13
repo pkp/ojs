@@ -384,7 +384,7 @@ class SuppFileDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertSuppFileId() {
-		return $this->getInsertId('article_supplementary_files', 'supp_id');
+		return $this->_getInsertId('article_supplementary_files', 'supp_id');
 	}
 
 	/**

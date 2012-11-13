@@ -645,7 +645,7 @@ class BookForReviewDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertBookForReviewId() {
-		return $this->getInsertId('books_for_review', 'book_id');
+		return $this->_getInsertId('books_for_review', 'book_id');
 	}
 }
 

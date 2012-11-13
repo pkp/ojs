@@ -191,7 +191,7 @@ class ArticleCommentDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertArticleCommentId() {
-		return $this->getInsertId('article_comments', 'comment_id');
+		return $this->_getInsertId('article_comments', 'comment_id');
 	}
 
 	/**

@@ -228,7 +228,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertAuthorId() {
-		return $this->getInsertId('books_for_review_authors', 'author_id');
+		return $this->_getInsertId('books_for_review_authors', 'author_id');
 	}
 }
 

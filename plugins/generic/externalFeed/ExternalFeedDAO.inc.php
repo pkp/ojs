@@ -254,7 +254,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertExternalFeedId() {
-		return $this->getInsertId('external_feeds', 'feed_id');
+		return $this->_getInsertId('external_feeds', 'feed_id');
 	}
 }
 

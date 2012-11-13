@@ -515,7 +515,7 @@ class ThesisDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertThesisId() {
-		return $this->getInsertId('theses', 'thesis_id');
+		return $this->_getInsertId('theses', 'thesis_id');
 	}
 }
 

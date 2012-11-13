@@ -376,7 +376,7 @@ class IssueDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertIssueId() {
-		return $this->getInsertId('issues', 'issue_id');
+		return $this->_getInsertId('issues', 'issue_id');
 	}
 
 	/**

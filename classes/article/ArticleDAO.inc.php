@@ -745,7 +745,7 @@ class ArticleDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertArticleId() {
-		return $this->getInsertId('articles', 'article_id');
+		return $this->_getInsertId('articles', 'article_id');
 	}
 
 	function flushCache() {

@@ -118,7 +118,7 @@ class StaticPagesDAO extends DAO {
 	}
 
 	function getInsertStaticPageId() {
-		return $this->getInsertId('static_pages', 'static_page_id');
+		return $this->_getInsertId('static_pages', 'static_page_id');
 	}
 
 	/**

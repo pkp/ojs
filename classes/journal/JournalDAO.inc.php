@@ -383,7 +383,7 @@ class JournalDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertJournalId() {
-		return $this->getInsertId('journals', 'journal_id');
+		return $this->_getInsertId('journals', 'journal_id');
 	}
 }
 

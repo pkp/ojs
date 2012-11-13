@@ -442,7 +442,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertSubscriptionTypeId() {
-		return $this->getInsertId('subscription_types', 'type_id');
+		return $this->_getInsertId('subscription_types', 'type_id');
 	}
 
 	/**

@@ -236,7 +236,7 @@ class IssueFileDAO extends PKPFileDAO {
 	 * @return int
 	 */
 	function getInsertIssueFileId() {
-		return $this->getInsertId('issue_files', 'file_id');
+		return $this->_getInsertId('issue_files', 'file_id');
 	}
 }
 

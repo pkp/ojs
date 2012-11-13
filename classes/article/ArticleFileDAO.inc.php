@@ -372,7 +372,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * @return int
 	 */
 	function getInsertArticleFileId() {
-		return $this->getInsertId('article_files', 'file_id');
+		return $this->_getInsertId('article_files', 'file_id');
 	}
 }
 

@@ -37,7 +37,7 @@ class ArticleSearchDAO extends DAO {
 				true,
 				false
 			)) {
-				$keywordId = $this->getInsertId('article_search_keyword_list', 'keyword_id');
+				$keywordId = $this->_getInsertId('article_search_keyword_list', 'keyword_id');
 			} else {
 				$keywordId = null; // Bug #2324
 			}
@@ -171,7 +171,7 @@ class ArticleSearchDAO extends DAO {
 				'INSERT INTO article_search_objects (article_id, type, assoc_id) VALUES (?, ?, ?)',
 				array($articleId, $type, (int) $assocId)
 			);
-			$objectId = $this->getInsertId('article_search_objects', 'object_id');
+			$objectId = $this->_getInsertId('article_search_objects', 'object_id');
 
 		} else {
 			$objectId = $result->fields[0];
