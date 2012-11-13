@@ -40,9 +40,9 @@
 
 		{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
 
-		{foreach from=$navMenuItems item=navItem}
+		{foreach from=$navMenuItems item=navItem key=navItemKey}
 			{if $navItem.url != '' && $navItem.name != ''}
-				<li id="navItem"><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=""}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
+				<li class="navItem" id="navItem-{$navItemKey|escape}"><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=""}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
