@@ -104,7 +104,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 */
 	function viewLayoutComments($args, $request) {
 		$articleId = (int) array_shift($args);
-		$this->validate($requset, $articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 		AuthorAction::viewLayoutComments($this->submission);
 
