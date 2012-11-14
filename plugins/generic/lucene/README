@@ -162,7 +162,10 @@ deploy in central server mode:
 
 - PHP configuration: The minimum PHP version for this plug-in is 5.0.0. The
   plug-in relies on the PHP curl. Please activate it before enabling the
-  plug-in.
+  plug-in. If you have a large OJS installation then rebuilding your index
+  (see the dedicated chapter) may require lots of memory. Please increase
+  the 'memory_limit' in php.ini until you no longer get 'Allowed memory size
+  ... exhausted' errors.
 
 
 5 Embedded Server Mode: Installation and Configuration
@@ -382,6 +385,12 @@ specific to the OJS Lucene/Solr plug-in:
 
 If you have trouble installing or configuring the Solr server then you may try
 the following:
+
+- If you get 'Allowed memory size ... exhausted' errors while doing an index
+  rebuild then you have to increase your 'memory_limit' setting in php.ini.
+  Doing a huge index rebuild may require considerable memory resources. This
+  cannot be fixed easily as it is due to memory leaks in the PHP mysql
+  extension used by OJS.
 
 - Check whether your Solr server is really running:
 
