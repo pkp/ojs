@@ -87,14 +87,15 @@ fi
 # of download. We thereby implement a FIFO queue.
 for FILENAME in `ls "$PULL_STAGING_DIR"`; do
   echo -n "Processing $FILENAME ... "
-  
+
   # Get the full file name.
   FULL_FILENAME="$PULL_STAGING_DIR/$FILENAME"
-  
+
   # Count the number of articles in the file.
   ARTICLES_FOUND=`sed 's%<article %\n<article %g' "$FULL_FILENAME" \
+      | grep -v 'loadAction="delete"' \
       | grep -c '<article '` || true
-  
+
   if ARTICLES_PROCESSED=`curl -s -H 'Content-type:text/xml; charset=utf-8' --data-binary "@$FULL_FILENAME" \
       "$DIH_ENDPOINT?command=full-import&clean=false" \
       | grep -o '<str name="Total Documents Processed">[0-9]\+</str>' | grep -o '[0-9]\+'`; then
@@ -104,7 +105,7 @@ for FILENAME in `ls "$PULL_STAGING_DIR"`; do
     exit 1
   fi
   echo -n "$ARTICLES_PROCESSED of $ARTICLES_FOUND articles processed ... "
-  
+
   if [ "$ARTICLES_FOUND" = "$ARTICLES_PROCESSED" ]; then
     # Move the file to the arquive
     mv "$FULL_FILENAME" "$PULL_ARCHIVE_DIR"

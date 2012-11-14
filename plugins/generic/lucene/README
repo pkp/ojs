@@ -500,7 +500,7 @@ To do so you have to:
 - edit the configuration file ('plugins/generic/lucene/embedded/etc/pull.conf')
   of the pull processing script on the Solr server (see the inline comments
   there),
-- enable pull-processing in all OJS clients,
+- enable pull-processing in the Lucene plugin settings of all OJS clients,
 - schedule the pull download script ('plugins/generic/lucene/embedded/bin/
   pull.sh') on the Solr server, e.g. as a cron job. We recommend scheduling
   this script once or twice a day during off-hours when server load is low.
@@ -508,9 +508,27 @@ To do so you have to:
   load.sh') on the Solr server, e.g. as a cron job. We recommend scheduling
   this script about every 15 minutes. It polls the staging folder and will do
   nothing if no files are staged for load.
-- trigger a full index rebuild on all OJS clients (either on the Lucene plugin
-  settings page or through the 'tools/rebuildSearchIndex.php' script),
 - regularly monitor the staging, reject and archive queues on the Solr server.
+
+To test whether your pull processing configuration works in principle you can
+execute the following actions in order:
+
+1) Make sure that you edited the configuration file and enabled pull-processing
+   in OJS clients as described above.
+
+2) Trigger a full index rebuild on one of your OJS clients (either on the Lucene
+   plugin settings page or through the 'tools/rebuildSearchIndex.php' script).
+
+3) Execute the pull.sh script manually on your Solr server. You should see
+   output confirming that one or more XML files have been staged for loading.
+
+4) Execute the load.sh script manually on your Solr server. You should see
+   output confirming that one or more XML files have been successfully
+   processed and archived.
+
+5) If you get rejected files then check your configuration file and if that
+   doesn't help look at the file files/lucene/solr-java.log for some indication
+   of what could have gone wrong.
 
 
 9 Rebuilding your index and/or dictionaries
