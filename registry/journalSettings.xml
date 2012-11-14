@@ -78,6 +78,10 @@
 		<name>lockssLicense</name>
 		<value>{translate key="default.journalSettings.lockssLicense"}</value>
 	</setting>
+	<setting type="string" locale="1">
+		<name>clockssLicense</name>
+		<value>{translate key="default.journalSettings.clockssLicense"}</value>
+	</setting>
 	<setting type="object" locale="0">
 		<name>supportedLocales</name>
 		<value>

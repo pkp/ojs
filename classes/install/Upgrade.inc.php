@@ -291,6 +291,7 @@ class Upgrade extends Installer {
 			'privacyStatement' => 'privacyStatement',
 			'customAboutItems' => 'customAboutItems',
 			'lockssLicense' => 'lockssLicense',
+			'clockssLicense' => 'clockssLicense',
 			// Setup page 3
 			'authorGuidelines' => 'authorGuidelines',
 			'submissionChecklist' => 'submissionChecklist',
