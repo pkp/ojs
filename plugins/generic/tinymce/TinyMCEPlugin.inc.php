@@ -222,6 +222,7 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "customAboutItems-$i-content";
 						}
 						$fields[] = 'lockssLicense';
+						$fields[] = 'clockssLicense';
 						break;
 					case 3:
 						$fields[] = 'authorGuidelines';

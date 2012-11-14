@@ -232,6 +232,20 @@
 </p>
 </div>
 
+<p>{translate key="manager.setup.clockssDescription"}</p>
+
+<p>{translate key="manager.setup.clockssRegister"}</p>
+
+{url|assign:"clockssUrl" page="gateway" op="clockss"}
+<p><input type="checkbox" name="enableClockss" id="enableClockss" value="1"{if $enableClockss} checked="checked"{/if} /> <label for="enableClockss">{translate key="manager.setup.clockssEnable" clockssUrl=$clockssUrl}</label></p>
+
+<p>
+	<textarea name="clockssLicense[{$formLocale|escape}]" id="clockssLicense" rows="6" cols="60" class="textArea">{$clockssLicense[$formLocale]|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.setup.clockssLicenses"}</span>
+</p>
+</div>
+
 <div class="separator"></div>
 
 <div id="reviewerDatabaseLink">
