@@ -255,10 +255,9 @@ class SolrWebServiceTest extends PKPTestCase {
 		// Test the transfer XML file.
 		$deletedCount = null;
 		$articleXml = $this->solrWebService->_getArticleListXml($articles, 3, $deletedCount);
-		self::assertXmlStringEqualsXmlFile(
-			'tests/plugins/generic/lucene/classes/test-article.xml',
-			$articleXml
-		);
+		$expectedXml = file_get_contents('tests/plugins/generic/lucene/classes/test-article.xml');
+		$expectedXml = str_replace('%%test-url%%', Config::getVar('debug', 'webtest_base_url'), $expectedXml);
+		self::assertXmlStringEqualsXmlString($expectedXml, $articleXml);
 		self::assertEquals(1, $deletedCount);
 	}
 
