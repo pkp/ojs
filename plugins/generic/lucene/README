@@ -275,7 +275,7 @@ a Solr search server.
         # LucenePlugin: Clearing index ... done
         # LucenePlugin: Indexing "lucene-test" ... 412 articles indexed
         # LucenePlugin: Indexing "test" ... 536 articles indexed
-        # LucenePlugin: Rebuilding dictionaries ... done 
+        # LucenePlugin: Rebuilding dictionaries ... done
 
      Please make sure that the output really includes the "LucenePlugin" string.
      Otherwise your plug-in was not correctly activated.
@@ -418,7 +418,7 @@ the following:
   should see an XML that gives details about the index content. The field
   'numDocs' shows how many articles have actually been indexed. And the
   remaining XML can give you an idea whether title, abstract, full text, etc.
-  have been correctly indexed. 
+  have been correctly indexed.
 
   If your index is incomplete then try the following steps:
 
@@ -480,7 +480,7 @@ Advantages of pull configuration:
   indexing will take place. Marking an article for update is as fast as a single
   database access. This can make a perceivable difference when articles have
   many galleys or supplementary files attached.
-   
+
 - Push processing means that editorial activity during daytime will cause update
   load peaks on the Solr server exactly while it may also experiences higher
   search volume. This load can be quite erratic and fluctuating in larger system
@@ -552,7 +552,15 @@ out-of-the-box:
    larger index updates or, if you like, on regular intervals, e.g. once a day.
    Updating dictionaries cannot be done automatically after every index update
    as rebuilding dictionaries can be quite costly.
-   
+
+   If you have a central search index shared between several OJS installations
+   then you only have to make the dictionary update once for all installations
+   from any of the connected OJS clients. Dictionary updates are always global
+   operations.
+
+   Dictionary updates have to be scheduled independently of the index update
+   mode (pull or push).
+
 2) Under certain circumstances it may happen that your index becomes outdated or
    corrupt. If, for example, you are using push indexing and your Solr server is
    offline while editors make changes to a journal then your Solr index will be
@@ -564,7 +572,7 @@ out-of-the-box:
 
    If you customize your Solr schema configuration (e.g. to add additional
    languages) then your index needs to be syncronized, too.
-   
+
    In these cases you'll have to rebuild your search index so that searches can
    be reliably executed again.
 
@@ -574,44 +582,44 @@ There are two possibilities to rebuild your index and/or dictionaries:
 
    To update your index and dictionaries, execute the 'rebuildSearchIndex'
    script. This script can be used to automate index maintenance. You may want
-   to create a cronjob for example that rebuilds dictionaries every night. 
-   
+   to create a cronjob for example that rebuilds dictionaries every night.
+
    The script has the following usage pattern:
-   
+
      php tools/rebuildSearchIndex.php [options] [journal_path]
-   
+
    journal_path:
-   
+
      This is an (optional) journal URL path as configured in OJS. Giving a
      journal path will only re-index articles from that journal. Giving no
      journal path wil re-index all journals of the installation.
-   
+
    The options are:
-   
+
      -d     Rebuild dictionaries.
      -n     Do not re-index any articles. If this option is given together
             with a journal path then the journal path will be ignored.
      -h     Display usage information.
-     
+
    Examples:
-   
+
      To rebuild all journals without rebuilding dictionaries:
-     
+
        #> php tools/rebuildSearchIndex.php
-       
+
      To rebuild only the dictionaries:
-         
+
        #> php tools/rebuildSearchIndex.php -d -n
 
      To rebuild the dictionaries and all journals of an installation:
-     
+
        #> php tools/rebuildSearchIndex.php -d
-       
+
      To rebuild the index of a single journal without rebuilding dictionaries:
-     
+
        #> php tools/rebuildSearchIndex.php some-journal-path
-       
-       
+
+
 2) Through the OJS web page:
 
    Please go to the Lucene plugin settings page and see the administrative
@@ -690,7 +698,7 @@ try out the following alternative configuration in your schema.xml:
   ...
 
 To use this filter, see solr/contrib/analysis-extras/README.txt for instructions
-on which jars you need to add to solr/lib. 
+on which jars you need to add to solr/lib.
 
 Still another approach to indexing Chinese, Korean or Japanese could be the
 following configuration:
