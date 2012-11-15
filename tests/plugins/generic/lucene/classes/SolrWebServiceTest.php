@@ -163,12 +163,12 @@ class SolrWebServiceTest extends PKPTestCase {
 		self::assertTrue(is_array($facets));
 		$expectedFacets = array(
 			// only facets that return at least one result will be shown.
-			'discipline' => array('Exotic Food' => 1, 'Dietary Research' => 1),
-			'subject' => array('Lunchtime no lunch' => 1),
+			'discipline' => array('exotic food' => 1, 'dietary research' => 1),
+			'subject' => array('lunchtime no lunch' => 1),
 			// facets for 'type' were not requested so we shouldn't get a result here
 			'coverage' => array('daily probes' => 1, 'the 21st century' => 1, 'world wide' => 1),
 			'journalTitle' => array(), // This shows that non-selected facets will not be shown.
-			'authors' => array('Author, Some' => 1, 'Authorname, Second A' => 1, 'Author, Another' => 1),
+			'authors' => array('author, some' => 1, 'authorname, second a' => 1, 'author, another' => 1),
 			'publicationDate' => array('2011' => 1, '2012' => 1) // This shows that range queries work.
 		);
 		self::assertEquals($expectedFacets, $facets);
