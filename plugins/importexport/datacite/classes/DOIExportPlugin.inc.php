@@ -378,10 +378,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		parent::manage($verb, $args, $message, $messageParams, $request);
+		parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);
 
 		switch ($verb) {
 			case 'settings':
+				$request =& $this->getRequest();
 				$router =& $request->getRouter();
 				$journal =& $router->getContext($request);
 

@@ -136,7 +136,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *    WHEN I export an object
 	 *    THEN the O4DOI publisher field will be set to the journal name.
 	 */
-	protected function testExpectJournalNameAsPublisher() {
+	public function testExpectJournalNameAsPublisher() {
 		// Test whether a missing publisher is being replaced
 		// with the journal name.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
