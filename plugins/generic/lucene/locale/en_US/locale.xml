@@ -75,7 +75,7 @@
 		If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.
 	]]></message>
 	<message key="plugins.generic.lucene.settings.faceting">Faceting (display a navigation box with additional filters to refine your search)</message>
-	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories (the corresponding metadata must have beeen selected for indexing in journal setup, step 3.4)</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
 		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
 	]]></message>
