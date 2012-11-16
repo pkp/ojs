@@ -1088,36 +1088,45 @@ class Upgrade extends Installer {
 				$languageResult->Close();
 				// test for locales for each field since locales may have been modified since
 				// the article was last edited.
-				$disciplineLocales = array_keys($settings['discipline']);
-				$subjectLocales = array_keys($settings['subject']);
-				$sponsorLocales = array_keys($settings['sponsor']);
 
 				$disciplines = $subjects = $agencies = array();
 
-				if (is_array($disciplineLocales)) {
-					foreach ($disciplineLocales as &$locale) {
-						$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
+				if (array_key_exists('discipline', $settings)) {
+					$disciplineLocales = array_keys($settings['discipline']);
+					if (is_array($disciplineLocales)) {
+						foreach ($disciplineLocales as &$locale) {
+							$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
+						}
+						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
 					}
-					$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
+					unset($disciplineLocales);
+					unset($disciplines);
 				}
-				unset($disciplineLocales);
 
-				if (is_array($subjectLocales)) {
-					foreach ($subjectLocales as &$locale) {
-						$subjects[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
+				if (array_key_exists('subject', $settings)) {
+					$subjectLocales = array_keys($settings['subject']);
+					if (is_array($subjectLocales)) {
+						foreach ($subjectLocales as &$locale) {
+							$subjects[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
+						}
+						$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
 					}
-					$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
+					unset($subjectLocales);
+					unset($subjects);
 				}
-				unset($subjectLocales);
 
-				if (is_array($sponsorLocales)) {
-					foreach ($sponsorLocales as &$locale) {
-						// note array name change.  Sponsor -> Agency
-						$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
+				if (array_key_exists('sponsor', $settings)) {
+					$sponsorLocales = array_keys($settings['sponsor']);
+					if (is_array($sponsorLocales)) {
+						foreach ($sponsorLocales as &$locale) {
+							// note array name change.  Sponsor -> Agency
+							$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
+						}
+						$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
 					}
-					$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
+					unset($sponsorLocales);
+					unset($agencies);
 				}
-				unset($sponsorLocales);
 
 				$languages = array();
 				foreach ($supportedLocales as &$locale) {
@@ -1125,9 +1134,7 @@ class Upgrade extends Installer {
 				}
 
 				$submissionLanguageDao->insertLanguages($languages, $articleId, false);
-				unset($disciplines);
-				unset($subjects);
-				unset($agencies);
+
 				unset($languages);
 				unset($language);
 				unset($settings);
