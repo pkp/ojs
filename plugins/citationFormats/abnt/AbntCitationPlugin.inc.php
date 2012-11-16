@@ -81,7 +81,7 @@ class AbntCitationPlugin extends CitationPlugin {
 		return array(
 			array(
 				'settings',
-				Locale::translate('plugins.citationFormats.abnt.manager.settings')
+				__('plugins.citationFormats.abnt.manager.settings')
 			)
 		);
 	}
