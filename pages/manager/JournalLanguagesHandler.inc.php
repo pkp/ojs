@@ -25,9 +25,9 @@ class JournalLanguagesHandler extends ManagerHandler {
 	/**
 	 * Display form to edit language settings.
 	 */
-	function languages() {
+	function languages($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.manager.form.LanguageSettingsForm');
 
@@ -43,7 +43,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 	 */
 	function saveLanguageSettings($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.manager.form.LanguageSettingsForm');
 
@@ -75,7 +75,7 @@ class JournalLanguagesHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');

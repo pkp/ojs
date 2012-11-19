@@ -47,7 +47,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		$templateMgr->assign('roleOptions', array(

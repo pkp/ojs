@@ -41,7 +41,7 @@ class CustomLocaleHandler extends Handler {
 		$journal = $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'locales');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator($journal->getSupportedLocaleNames(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
@@ -63,7 +63,7 @@ class CustomLocaleHandler extends Handler {
 		}
 		$localeFiles = CustomLocaleAction::getLocaleFiles($locale);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$localeFilesRangeInfo = $this->getRangeInfo($request, 'localeFiles');
 
@@ -93,7 +93,7 @@ class CustomLocaleHandler extends Handler {
 			$request->redirect(null, null, null, $path);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
@@ -207,7 +207,7 @@ class CustomLocaleHandler extends Handler {
 
 	function setupTemplate($request, &$plugin, $subclass = true) {
 		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_function('plugin_url', array($plugin, 'smartyPluginUrl'));
 		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'user.role.manager'));
 		if ($subclass) {

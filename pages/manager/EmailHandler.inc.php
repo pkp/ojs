@@ -25,12 +25,12 @@ class EmailHandler extends ManagerHandler {
 	/**
 	 * Display a list of the emails within the current journal.
 	 */
-	function emails() {
+	function emails($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		$templateMgr->display('manager/emails/emails.tpl');
 	}

@@ -18,7 +18,7 @@ import('classes.handler.Handler');
 class RTAdminHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function RTAdminHandler() {
 		parent::Handler();
 
@@ -30,10 +30,10 @@ class RTAdminHandler extends Handler {
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
 	 */
-	function index() {
+	function index($args, $request) {
 		$this->validate();
-		$journal = Request::getJournal();
-		$user = Request::getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		if ($journal) {
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
@@ -43,8 +43,8 @@ class RTAdminHandler extends Handler {
 
 			// Display the administration menu for this journal.
 
-			$this->setupTemplate();
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request);
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->assign('versionTitle', isset($version)?$version->getTitle():null);
 			$templateMgr->assign('enabled', $rt->getEnabled());
@@ -66,8 +66,8 @@ class RTAdminHandler extends Handler {
 				}
 			}
 
-			$this->setupTemplate();
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request);
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/journals.tpl');
@@ -77,14 +77,14 @@ class RTAdminHandler extends Handler {
 		}
 	}
 
-	function validateUrls($args) {
+	function validateUrls($args, $request) {
 		$this->validate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		if (!$journal) {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 			return;
 		}
 
@@ -103,8 +103,8 @@ class RTAdminHandler extends Handler {
 			$versions = $rtDao->getVersions($journalId);
 		}
 
-		$this->setupTemplate(true, $version);
-		$templateMgr =& TemplateManager::getManager();
+		$this->setupTemplate($request, true, $version);
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign_by_ref('versions', $versions);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
@@ -113,29 +113,30 @@ class RTAdminHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 * @param $version object The current version, if applicable
 	 * @param $context object The current context, if applicable
 	 * @param $search object The current search, if applicable
 	 */
-	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false, $version = null, $context = null, $search = null) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_MANAGER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
-		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'));
+		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'manager.journalManagement'));
 
-		if ($subclass) $pageHierarchy[] = array(Request::url(null, 'rtadmin'), 'rt.readingTools');
+		if ($subclass) $pageHierarchy[] = array($request->url(null, 'rtadmin'), 'rt.readingTools');
 
 		if ($version) {
-			$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'versions'), 'rt.versions');
-			$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editVersion', $version->getVersionId()), $version->getTitle(), true);
+			$pageHierarchy[] = array($request->url(null, 'rtadmin', 'versions'), 'rt.versions');
+			$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editVersion', $version->getVersionId()), $version->getTitle(), true);
 			if ($context) {
-				$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'contexts', $version->getVersionId()), 'rt.contexts');
-				$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editContext', array($version->getVersionId(), $context->getContextId())), $context->getAbbrev(), true);
+				$pageHierarchy[] = array($request->url(null, 'rtadmin', 'contexts', $version->getVersionId()), 'rt.contexts');
+				$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editContext', array($version->getVersionId(), $context->getContextId())), $context->getAbbrev(), true);
 				if ($search) {
-					$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'searches', array($version->getVersionId(), $context->getContextId())), 'rt.searches');
-					$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editSearch', array($version->getVersionId(), $context->getContextId(), $search->getSearchId())), $search->getTitle(), true);
+					$pageHierarchy[] = array($request->url(null, 'rtadmin', 'searches', array($version->getVersionId(), $context->getContextId())), 'rt.searches');
+					$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editSearch', array($version->getVersionId(), $context->getContextId(), $search->getSearchId())), $search->getTitle(), true);
 				}
 			}
 		}

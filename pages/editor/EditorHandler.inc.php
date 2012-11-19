@@ -41,9 +41,9 @@ class EditorHandler extends SectionEditorHandler {
 
 	function index($args, $request) {
 		$this->validate();
-		$this->setupTemplate(EDITOR_SECTION_HOME);
+		$this->setupTemplate($request, EDITOR_SECTION_HOME);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$user =& $request->getUser();
@@ -160,7 +160,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function submissions($args, $request) {
 		$this->validate();
-		$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+		$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -261,7 +261,7 @@ class EditorHandler extends SectionEditorHandler {
 			$sortDirection
 		);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
@@ -414,15 +414,15 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			// FIXME: Prompt for due date.
 			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, $request->getUserVar('send'), $request)) {
-				Request::redirect(null, null, 'submission', $articleId);
+				$request->redirect(null, null, 'submission', $articleId);
 			}
 		} else {
 			// Allow the user to choose a section editor or editor.
-			$this->setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -451,7 +451,7 @@ class EditorHandler extends SectionEditorHandler {
 				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign('roleName', $roleName);
@@ -470,7 +470,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $search);
-			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
+			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 
 			$templateMgr->assign('fieldOptions', array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -491,7 +491,7 @@ class EditorHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 
@@ -517,19 +517,19 @@ class EditorHandler extends SectionEditorHandler {
 	 * Setup common template variables.
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
-	function setupTemplate($level = EDITOR_SECTION_HOME, $articleId = 0, $parentPage = null) {
-		parent::setupTemplate();
+	function setupTemplate($request, $level = EDITOR_SECTION_HOME, $articleId = 0, $parentPage = null) {
+		parent::setupTemplate($request);
 
 		// Layout Editors have access to some Issue Mgmt functions. Make sure we give them
 		// the appropriate breadcrumbs and sidebar.
-		$isLayoutEditor = Request::getRequestedPage() == 'layoutEditor';
+		$isLayoutEditor = $request->getRequestedPage() == 'layoutEditor';
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
-		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
-		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'submissions'), 'article.submissions'));
-		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
+		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'));
+		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'editor'), 'user.role.editor'), array($request->url(null, 'editor', 'submissions'), 'article.submissions'));
+		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array($request->url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');

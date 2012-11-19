@@ -172,7 +172,7 @@ class SubmitHandler extends AuthorHandler {
 					}
 
 					$journal =& $request->getJournal();
-					$templateMgr =& TemplateManager::getManager();
+					$templateMgr =& TemplateManager::getManager($request);
 					$templateMgr->assign_by_ref('journal', $journal);
 					// If this is an editor and there is a
 					// submission file, article can be expedited.

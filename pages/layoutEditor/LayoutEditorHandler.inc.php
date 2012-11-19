@@ -36,9 +36,9 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function index($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
@@ -50,7 +50,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function submissions($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -84,7 +84,7 @@ class LayoutEditorHandler extends Handler {
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -129,12 +129,12 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function futureIssues($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
@@ -147,7 +147,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function backIssues($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -157,7 +157,7 @@ class LayoutEditorHandler extends Handler {
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = $request->getUserVar('sortDirection');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
@@ -185,12 +185,12 @@ class LayoutEditorHandler extends Handler {
 	 * @param $articleId int optional
 	 * @param $parentPage string optional
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
-		$templateMgr =& TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'));
+		$templateMgr =& TemplateManager::getManager($request);
+		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'layoutEditor'), 'user.role.layoutEditor'))
+				: array(array($request->url(null, 'user'), 'navigation.user'));
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
@@ -206,9 +206,9 @@ class LayoutEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function instructions($args, &$request) {
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], array('layout', 'proof', 'referenceLinking'))) {
+		if (!isset($args[0]) || !LayoutEditorAction::instructions($request, $args[0], array('layout', 'proof', 'referenceLinking'))) {
 			$request->redirect(null, $request->getRequestedPage());
 		}
 	}

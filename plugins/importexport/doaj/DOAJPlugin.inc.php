@@ -61,7 +61,7 @@ class DOAJPlugin extends ImportExportPlugin {
 	 * @param $args array
 	 */
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 		$journal =& $request->getJournal();
 

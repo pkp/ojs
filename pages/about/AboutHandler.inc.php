@@ -17,7 +17,7 @@ import('classes.handler.Handler');
 class AboutHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AboutHandler() {
 		parent::Handler();
 	}
@@ -29,9 +29,9 @@ class AboutHandler extends Handler {
 	 */
 	function index($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalPath = $request->getRequestedJournalPath();
 
@@ -77,34 +77,35 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
-		$templateMgr =& TemplateManager::getManager();
-		$journal =& Request::getJournal();
+	function setupTemplate($request, $subclass = false) {
+		parent::setupTemplate($request);
+		$templateMgr =& TemplateManager::getManager($request);
+		$journal =& $request->getJournal();
 		
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
-		if ($subclass) $templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'about'), 'about.aboutTheJournal')));
+		if ($subclass) $templateMgr->assign('pageHierarchy', array(array($request->url(null, 'about'), 'about.aboutTheJournal')));
 	}
 
 	/**
 	 * Display contact page.
 	 */
-	function contact() {
+	function contact($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
@@ -113,13 +114,13 @@ class AboutHandler extends Handler {
 	/**
 	 * Display editorialTeam page.
 	 */
-	function editorialTeam() {
+	function editorialTeam($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
@@ -185,14 +186,15 @@ class AboutHandler extends Handler {
 	/**
 	 * Display group info for a particular group.
 	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function displayMembership($args) {
+	function displayMembership($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$groupId = (int) array_shift($args);
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
@@ -203,7 +205,7 @@ class AboutHandler extends Handler {
 			$group->getAssocType() != ASSOC_TYPE_JOURNAL ||
 			$group->getAssocId() != $journal->getId()
 		) {
-			Request::redirect(null, 'about');
+			$request->redirect(null, 'about');
 		}
 
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
@@ -228,15 +230,15 @@ class AboutHandler extends Handler {
 	 * Display a biography for an editorial team member.
 	 * @param $args array
 	 */
-	function editorialTeamBio($args) {
+	function editorialTeamBio($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$userId = isset($args[0])?(int)$args[0]:0;
 
@@ -290,7 +292,7 @@ class AboutHandler extends Handler {
 			}
 		}
 
-		if (!$user) Request::redirect(null, 'about', 'editorialTeam');
+		if (!$user) $request->redirect(null, 'about', 'editorialTeam');
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		if ($user && $user->getCountry() != '') {
@@ -306,17 +308,17 @@ class AboutHandler extends Handler {
 	/**
 	 * Display editorialPolicies page.
 	 */
-	function editorialPolicies() {
+	function editorialPolicies($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$sections =& $sectionDao->getJournalSections($journal->getId());
 		$sections =& $sections->toArray();
 		$templateMgr->assign_by_ref('sections', $sections);
@@ -338,7 +340,7 @@ class AboutHandler extends Handler {
 	function subscriptions($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journalDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
@@ -360,7 +362,7 @@ class AboutHandler extends Handler {
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
 		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
@@ -382,9 +384,9 @@ class AboutHandler extends Handler {
 	function memberships($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -392,7 +394,7 @@ class AboutHandler extends Handler {
 
 		$membershipEnabled = $paymentManager->membershipEnabled();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('membershipEnabled', $membershipEnabled);		
 		if ( $membershipEnabled ) {
 			$membershipFee  = $journal->getSetting('membershipFee');
@@ -413,15 +415,15 @@ class AboutHandler extends Handler {
 	/**
 	 * Display submissions page.
 	 */
-	function submissions() {
+	function submissions($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$journalDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journalSettings =& $journalDao->getJournalSettings($journal->getId());
 		$submissionChecklist = $journal->getLocalizedSetting('submissionChecklist');
 		if (!empty($submissionChecklist)) {
@@ -437,13 +439,13 @@ class AboutHandler extends Handler {
 	/**
 	 * Display Journal Sponsorship page.
 	 */
-	function journalSponsorship() {
+	function journalSponsorship($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('publisherInstitution', $journal->getSetting('publisherInstitution'));
 		$templateMgr->assign_by_ref('publisherUrl', $journal->getSetting('publisherUrl'));
 		$templateMgr->assign_by_ref('publisherNote', $journal->getLocalizedSetting('publisherNote'));
@@ -457,15 +459,15 @@ class AboutHandler extends Handler {
 	/**
 	 * Display siteMap page.
 	 */
-	function siteMap() {
+	function siteMap($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
-		$user =& Request::getUser();
+		$user =& $request->getUser();
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		if ($user) {
@@ -495,13 +497,13 @@ class AboutHandler extends Handler {
 	/**
 	 * Display journal history.
 	 */
-	function history() {
+	function history($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('history', $journal->getLocalizedSetting('history'));
 		$templateMgr->display('about/history.tpl');
 	}
@@ -509,14 +511,14 @@ class AboutHandler extends Handler {
 	/**
 	 * Display aboutThisPublishingSystem page.
 	 */
-	function aboutThisPublishingSystem() {
+	function aboutThisPublishingSystem($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 
 		foreach (array(AppLocale::getLocale(), $primaryLocale = AppLocale::getPrimaryLocale(), 'en_US') as $locale) {
@@ -533,15 +535,15 @@ class AboutHandler extends Handler {
 	 * WARNING: This implementation should be kept roughly synchronized
 	 * with the reader's statistics view in the About pages.
 	 */
-	function statistics() {
+	function statistics($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId','user.about');
 
-		$statisticsYear = Request::getUserVar('statisticsYear');
+		$statisticsYear = $request->getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
 		$templateMgr->assign('statisticsYear', $statisticsYear);
 

@@ -47,7 +47,7 @@ class AdminCategoriesHandler extends AdminHandler {
 		import('lib.pkp.classes.core.ArrayItemIterator');
 		$categories =& ArrayItemIterator::fromRangeInfo($categoriesArray, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('categories', $categories);
@@ -136,7 +136,7 @@ class AdminCategoriesHandler extends AdminHandler {
 		$this->setupTemplate($request, $this->category, true);
 		import('classes.journal.categories.CategoryForm');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('pageTitle',
 			$this->category === null?
@@ -191,7 +191,7 @@ class AdminCategoriesHandler extends AdminHandler {
 			$request->redirect(null, null, 'categories');
 		} else {
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->append('pageHierarchy', array($request->url(null, 'admin', 'categories'), 'admin.categories'));
 
 			$templateMgr->assign('pageTitle',
@@ -223,9 +223,9 @@ class AdminCategoriesHandler extends AdminHandler {
 	 * @param $category Category optional
 	 * @param $subclass boolean optional
 	 */
-	function setupTemplate($request = null, $category = null, $subclass = false) {
-		parent::setupTemplate(true);
-		$templateMgr =& TemplateManager::getManager();
+	function setupTemplate($request, $category = null, $subclass = false) {
+		parent::setupTemplate($request, true);
+		$templateMgr =& TemplateManager::getManager($request);
 		if ($subclass) {
 			$templateMgr->append('pageHierarchy', array($request->url(null, 'admin', 'categories'), 'admin.categories'));
 		}

@@ -198,9 +198,9 @@ class Action extends PKPAction {
 	 * Display submission management instructions.
 	 * @param $type string the type of instructions (copy, layout, or proof).
 	 */
-	function instructions($type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+	function instructions($request, $type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
 			if (!in_array($type, $allowed)) {

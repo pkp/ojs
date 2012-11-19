@@ -35,7 +35,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$reviewId = (int) array_shift($args);
 
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		ReviewerAction::viewPeerReviewComments($this->user, $this->submission, $reviewId);
 	}
 
@@ -52,7 +52,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		if (ReviewerAction::postPeerReviewComment($this->user, $this->submission, $reviewId, $emailComment, $request)) {
 			ReviewerAction::viewPeerReviewComments($this->user, $this->submission, $reviewId);
@@ -73,7 +73,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
@@ -93,7 +93,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -127,7 +127,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$this->validate($request, $reviewId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request, $request, true);
 
 		ReviewerAction::deleteComment($commentId, $this->user);
 

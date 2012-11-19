@@ -95,7 +95,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('mode', $mode);
 		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
 		$templateMgr->assign('filterEditor', $filterEditor);
@@ -165,7 +165,7 @@ class BooksForReviewEditorHandler extends Handler {
 			// PHP4 Requires explicit instantiation-by-reference
 			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->initData();
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('mode', $mode);
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$templateMgr->assign('returnPage', $returnPage);
@@ -270,7 +270,7 @@ class BooksForReviewEditorHandler extends Handler {
 				$countryDao =& DAORegistry::getDAO('CountryDAO');
 				$countries =& $countryDao->getCountries();
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('mode', $mode);
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$templateMgr->assign('returnPage', $returnPage);
@@ -329,7 +329,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$bfrPlugin->import('classes.form.BooksForReviewSettingsForm');
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
 
@@ -385,7 +385,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		$searchType = null;
@@ -456,7 +456,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$searchField = null;
 		$searchMatch = null;
@@ -982,7 +982,7 @@ class BooksForReviewEditorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),

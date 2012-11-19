@@ -29,12 +29,23 @@ class PluginHandler extends ManagerHandler {
 	 * @param $request PKPRequest
 	 */
 	function plugins($args, &$request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$this->validate();
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$templateMgr->assign('pageTitle', 'manager.plugins.pluginManagement');
-		$templateMgr->assign('pageHierarchy', $this->setBreadcrumbs($request, false));
+		$templateMgr->assign('pageHierarchy', array(
+			array(
+				$request->url(null, 'user'),
+				'navigation.user',
+				false
+			),
+			array(
+				$request->url(null, 'manager'),
+				'manager.journalManagement',
+				false
+			)
+		));
 
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
 
@@ -52,7 +63,7 @@ class PluginHandler extends ManagerHandler {
 		$verb = array_shift($args);
 
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$plugins =& PluginRegistry::loadCategory($category);
 		$message = $messageParams = null;
@@ -65,37 +76,6 @@ class PluginHandler extends ManagerHandler {
 			}
 			$request->redirect(null, null, 'plugins', array($category));
 		}
-	}
-
-	/**
-	 * Set the page's breadcrumbs
-	 * @param $request PKPRequest
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager();
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user',
-				false
-			),
-			array(
-				$request->url(null, 'manager'),
-				'manager.journalManagement',
-				false
-			)
-		);
-
-		if ($subclass) {
-			$pageCrumbs[] = array(
-				$request->url(null, 'manager', 'plugins'),
-				'manager.plugins.pluginManagement',
-				false
-			);
-		}
-
-		return $pageCrumbs;
 	}
 }
 

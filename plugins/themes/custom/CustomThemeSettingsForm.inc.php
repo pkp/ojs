@@ -35,7 +35,7 @@ class CustomThemeSettingsForm extends Form {
 	}
 
 	function display(&$request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 		$additionalHeadData .= '<script type="text/javascript" src="' . $request->getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
 		$templateMgr->addStyleSheet($request->getBaseUrl() . '/plugins/themes/custom/picker.css');

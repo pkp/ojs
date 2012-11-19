@@ -62,7 +62,7 @@ class AuthorSubmitForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->request);
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('submitStep', $this->step);
 

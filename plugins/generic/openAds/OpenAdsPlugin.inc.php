@@ -190,7 +190,7 @@ class OpenAdsPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$journal =& $request->getJournal();
 
 				$this->import('OpenAdsSettingsForm');

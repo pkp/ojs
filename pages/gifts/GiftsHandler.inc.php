@@ -90,7 +90,7 @@ class GiftsHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function thankYou($args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$this->setupTemplate();
 		$journal =& $request->getJournal();
 

@@ -28,11 +28,11 @@ class ManagerHandler extends Handler {
 	/**
 	 * Display journal management index page.
 	 */
-	function index() {
+	function index($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$this->setupTemplate($request);
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		// Display a warning message if there is a new version of OJS available
 		$newVersionAvailable = false;
@@ -56,7 +56,7 @@ class ManagerHandler extends Handler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 		$templateMgr->assign('publishingMode', $journal->getSetting('publishingMode'));
 		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));
-		$session =& Request::getSession();
+		$session =& $request->getSession();
 		$session->unsetSessionVar('enrolmentReferrer');
 
 		$templateMgr->assign('helpTopicId','journal.index');
@@ -66,29 +66,29 @@ class ManagerHandler extends Handler {
 	/**
 	 * Send an email to a user or group of users.
 	 */
-	function email($args) {
+	function email($args, &$request) {
 		$this->validate();
 
-		$this->setupTemplate(true);
-		$templateMgr =& TemplateManager::getManager();
+		$this->setupTemplate($request, true);
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$site =& Request::getSite();
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$site =& $request->getSite();
+		$journal =& $request->getJournal();
+		$user =& $request->getUser();
 
 		import('classes.mail.MailTemplate');
-		$email = new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
+		$email = new MailTemplate($request->getUserVar('template'), $request->getUserVar('locale'));
 
-		if (Request::getUserVar('send') && !$email->hasErrors()) {
+		if ($request->getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		} else {
 			$email->assignParams(); // FIXME Forces default parameters to be assigned (should do this automatically in MailTemplate?)
-			if (!Request::getUserVar('continued')) {
-				if (($groupId = Request::getUserVar('toGroup')) != '') {
+			if (!$request->getUserVar('continued')) {
+				if (($groupId = $request->getUserVar('toGroup')) != '') {
 					// Special case for emailing entire groups:
 					// Check for a group ID and add recipients.
 					$groupDao =& DAORegistry::getDAO('GroupDAO');
@@ -105,7 +105,7 @@ class ManagerHandler extends Handler {
 				}
 				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
 			}
-			$email->displayEditForm(Request::url(null, null, 'email'), array(), 'manager/people/email.tpl');
+			$email->displayEditForm($request->url(null, null, 'email'), array(), 'manager/people/email.tpl');
 		}
 	}
 
@@ -113,13 +113,13 @@ class ManagerHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_ADMIN);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'))
+			$subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'manager.journalManagement'))
+				: array(array($request->url(null, 'user'), 'navigation.user'))
 		);
 	}
 	 

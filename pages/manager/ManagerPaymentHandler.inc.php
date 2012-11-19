@@ -28,7 +28,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	 function payments($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payments($args, $request);
@@ -39,13 +39,13 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function savePaymentSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		$success = OJSPaymentAction::savePaymentSettings($args, $request);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+ 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign(array(
 				'currentUrl' => $request->url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
@@ -62,7 +62,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayments($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayments($args, $request);
@@ -73,7 +73,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayment($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayment($args, $request);
@@ -84,7 +84,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	function payMethodSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payMethodSettings($request);
@@ -95,13 +95,13 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	function savePayMethodSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		$success = OJSPaymentAction::savePayMethodSettings($request);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+ 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign(array(
 				'currentUrl' => $request->url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',

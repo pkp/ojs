@@ -71,7 +71,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			unset($plugin);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign(array(
 			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),

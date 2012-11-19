@@ -58,7 +58,7 @@ class BooksForReviewAuthorHandler extends Handler {
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, null, null, null, $status, $userId, null, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
 		$templateMgr->assign_by_ref('counts', $bfrDao->getStatusCounts($journalId, $userId));
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'author' . '/' . $template);
@@ -172,7 +172,7 @@ class BooksForReviewAuthorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),

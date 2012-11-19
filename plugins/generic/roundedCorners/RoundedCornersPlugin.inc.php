@@ -36,7 +36,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 	}
 
 	function templateManagerCallback($hookName, $args) {
-		$templateMgr =& $args[0]; //TemplateManager::getManager();
+		$templateMgr =& $args[0];
 		$baseUrl = $templateMgr->get_template_vars('baseUrl');
 		$roundedCornerCssUrl = $baseUrl . '/plugins/generic/roundedCorners/roundedcorners.css';
 		$templateMgr->addStyleSheet($roundedCornerCssUrl);

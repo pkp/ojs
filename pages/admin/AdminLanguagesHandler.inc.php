@@ -29,11 +29,11 @@ class AdminLanguagesHandler extends AdminHandler {
 	 */
 	function languages($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$site =& $request->getSite();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('localeNames', AppLocale::getAllLocales());
 		$templateMgr->assign('primaryLocale', $site->getPrimaryLocale());
 		$templateMgr->assign('supportedLocales', $site->getSupportedLocales());
@@ -214,7 +214,7 @@ class AdminLanguagesHandler extends AdminHandler {
 	 */
 	function downloadLocale($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$locale = $request->getUserVar('locale');
 
 		import('classes.i18n.LanguageAction');
@@ -226,7 +226,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			$request->redirect(null, null, 'languages');
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$errors = array();
 		if (!$languageAction->downloadLocale($locale, $errors)) {

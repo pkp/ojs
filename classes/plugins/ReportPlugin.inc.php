@@ -51,8 +51,8 @@ class ReportPlugin extends Plugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -81,7 +81,7 @@ class ReportPlugin extends Plugin {
 	 * @param $args Array The array of arguments the user supplied.
 	 */
 	function display(&$args) {
-		$templateManager =& TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager($this->getRequest());
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}
 

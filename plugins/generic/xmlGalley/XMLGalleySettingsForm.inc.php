@@ -27,7 +27,8 @@ class XMLGalleySettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function XMLGalleySettingsForm(&$plugin, $journalId) {
-		$templateMgr =& TemplateManager::getManager();
+		$request =& $plugin->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
@@ -43,8 +44,9 @@ class XMLGalleySettingsForm extends Form {
 	function initData() {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
+		$request =& $plugin->getRequest();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		// set form variables for available XSLT renderers
 		$xsltPHP5 = ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') );

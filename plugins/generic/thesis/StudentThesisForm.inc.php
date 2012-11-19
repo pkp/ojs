@@ -113,7 +113,7 @@ class StudentThesisForm extends Form {
 	function display() {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($thesisPlugin->getRequest());
 
 		if ($this->captchaEnabled) {
 			import('lib.pkp.lib.recaptcha.recaptchalib');

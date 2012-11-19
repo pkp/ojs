@@ -33,7 +33,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	function viewProofreadComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		ProofreaderAction::viewProofreadComments($this->submission);
 	}
@@ -46,7 +46,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	function postProofreadComment($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -64,7 +64,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	function viewLayoutComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		ProofreaderAction::viewLayoutComments($this->submission);
 	}
@@ -77,7 +77,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -98,7 +98,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		ProofreaderAction::editComment($this->submission, $this->comment);
 	}

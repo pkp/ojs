@@ -29,12 +29,12 @@ class FilesHandler extends ManagerHandler {
 	 */
 	function files($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);

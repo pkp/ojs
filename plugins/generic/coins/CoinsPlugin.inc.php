@@ -56,8 +56,8 @@ class CoinsPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr =& TemplateManager::getManager();
 			$request =& $this->getRequest();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$article = $templateMgr->get_template_vars('article');
 			$journal = $templateMgr->get_template_vars('currentJournal');

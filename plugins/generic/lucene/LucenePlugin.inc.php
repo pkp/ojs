@@ -240,7 +240,7 @@ class LucenePlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'settings':
 				// Prepare the template manager.
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				// Instantiate an embedded server instance.
@@ -878,8 +878,8 @@ class LucenePlugin extends GenericPlugin {
 	 * to append.
 	 */
 	function _setBreadcrumbs() {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),

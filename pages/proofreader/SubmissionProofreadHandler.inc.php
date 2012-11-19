@@ -32,7 +32,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$journal =& $request->getJournal();
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
@@ -42,7 +42,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		ProofreaderAction::proofreadingUnderway($this->submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign_by_ref('authors', $authors);
@@ -71,7 +71,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'proofreader', 'completeProofreader'))) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -87,7 +87,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		ProofreaderAction::viewMetadata($this->submission, $journal);
 	}
@@ -122,7 +122,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -138,7 +138,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -162,7 +162,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(

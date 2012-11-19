@@ -94,7 +94,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @param $journal Journal
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_modifier('mb_upper', array('String', 'strtoupper'));
 		return parent::displayCitation($article, $issue, $journal);
 	}
@@ -106,7 +106,7 @@ class AbntCitationPlugin extends CitationPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& $request->getJournal();
 
@@ -144,8 +144,8 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'manager'),

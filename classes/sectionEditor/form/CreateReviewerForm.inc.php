@@ -59,11 +59,11 @@ class CreateReviewerForm extends Form {
 	 * Display the form.
 	 */
 	function display(&$args, &$request) {
-		$templateMgr =& TemplateManager::getManager();
-		$site =& Request::getSite();
+		$templateMgr =& TemplateManager::getManager($request);
+		$site =& $request->getSite();
 		$templateMgr->assign('articleId', $this->articleId);
 
-		$site =& Request::getSite();
+		$site =& $request->getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());

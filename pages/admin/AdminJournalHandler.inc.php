@@ -27,14 +27,14 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function journals($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$rangeInfo = $this->getRangeInfo($request, 'journals');
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(false, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('journals', $journals);
@@ -45,17 +45,17 @@ class AdminJournalHandler extends AdminHandler {
 	/**
 	 * Display form to create a new journal.
 	 */
-	function createJournal() {
-		$this->editJournal();
+	function createJournal($args, $request) {
+		$this->editJournal($args, $request);
 	}
 
 	/**
 	 * Display form to create/edit a journal.
 	 * @param $args array optional, if set the first parameter is the ID of the journal to edit
 	 */
-	function editJournal($args = array()) {
+	function editJournal($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.admin.form.JournalSiteSettingsForm');
 
@@ -76,7 +76,7 @@ class AdminJournalHandler extends AdminHandler {
 	 */
 	function updateJournal($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		import('classes.admin.form.JournalSiteSettingsForm');
 
@@ -176,8 +176,8 @@ class AdminJournalHandler extends AdminHandler {
 	/**
 	 * Set up the template.
 	 */
-	function setupTemplate() {
-		parent::setupTemplate(true);
+	function setupTemplate($request) {
+		parent::setupTemplate($request, true);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER);
 	}
 }

@@ -45,7 +45,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		// Load the DuraCloud-PHP library.
@@ -59,14 +59,14 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'importIssue':
 				$contentId = array_shift($args);
 				$issue =& $this->importIssue($user, $journal, $contentId);
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('results', array($contentId => $issue));
 				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				return;
 				break;
 			case 'importIssues':
 				$results =& $this->importIssues($user, $journal, $request->getUserVar('contentId'));
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				return;
@@ -82,7 +82,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 					unset($issue);
 				}
 				$results = $this->exportIssues($journal, $issues);
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');
@@ -92,7 +92,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
 				if (!$issue) $request->redirect();
 				$results = array($issue->getId() => $this->exportIssue($journal, $issue));
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign('issues', array($issue->getId() => $issue));
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');

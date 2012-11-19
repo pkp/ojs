@@ -29,17 +29,17 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function sections($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'sections');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getId(), $rangeInfo);
 		$emptySectionIds = $sectionDao->getJournalEmptySectionIds($journal->getId());
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
-		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
+		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('emptySectionIds', $emptySectionIds);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
@@ -62,7 +62,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function editSection($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.manager.form.SectionForm');
 
@@ -82,7 +82,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function updateSection($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.manager.form.SectionForm');
 		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
@@ -172,14 +172,15 @@ class SectionHandler extends ManagerHandler {
 
 	/**
 	 * Configure the template.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean True iff this page is a second level deep in the breadcrumb heirarchy.
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($request, $subclass = false) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
-		parent::setupTemplate(true);
+		parent::setupTemplate($request, true);
 		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'sections'), 'section.sections'));
+			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'sections'), 'section.sections'));
 		}
 	}
 }

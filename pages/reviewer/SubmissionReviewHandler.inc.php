@@ -46,9 +46,9 @@ class SubmissionReviewHandler extends ReviewerHandler {
 			$confirmedStatus = 1;
 		}
 
-		$this->setupTemplate(true, $reviewAssignment->getSubmissionId(), $reviewId);
+		$this->setupTemplate($request, true, $reviewAssignment->getSubmissionId(), $reviewId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -83,7 +83,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$decline = isset($declineReview) ? 1 : 0;
 
@@ -127,7 +127,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		if (!$reviewerSubmission->getCancelled()) {
 			if (ReviewerAction::recordRecommendation($reviewerSubmission, $recommendation, $request->getUserVar('send'), $request)) {
@@ -151,7 +151,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
 
-		$this->setupTemplate(true, $articleId, $reviewId);
+		$this->setupTemplate($request, true, $articleId, $reviewId);
 
 		ReviewerAction::viewMetadata($reviewerSubmission, $journal);
 	}
@@ -165,7 +165,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		ReviewerAction::uploadReviewerVersion($reviewId, $this->submission, $request);
 		$request->redirect(null, null, 'submission', $reviewId);
@@ -227,7 +227,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
-		$this->setupTemplate(true, $reviewerSubmission->getId(), $reviewId);
+		$this->setupTemplate($request, true, $reviewerSubmission->getId(), $reviewId);
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -247,7 +247,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewFormId = (int) array_shift($args);
 
 		$this->validate($request, $reviewId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId, $request)) {
 			$request->redirect(null, null, 'submission', $reviewId);

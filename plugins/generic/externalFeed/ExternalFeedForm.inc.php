@@ -60,10 +60,11 @@ class ExternalFeedForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$plugin =& $this->plugin;
+		$request =& $plugin->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('feedId', $this->feedId);
 
-		$plugin =& $this->plugin;
 		$plugin->import('ExternalFeed');
 
 		parent::display();

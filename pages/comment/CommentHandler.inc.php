@@ -60,7 +60,7 @@ class CommentHandler extends Handler {
 
 		$this->setupTemplate($request, $article, $galleyId, $comment);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		if ($request->getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
 		if ($comment) {
 			$templateMgr->assign_by_ref('comment', $comment);
@@ -227,7 +227,7 @@ class CommentHandler extends Handler {
 	function setupTemplate(&$request, $article, $galleyId, $comment = null) {
 		parent::setupTemplate();
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$journal =& $request->getJournal();
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {

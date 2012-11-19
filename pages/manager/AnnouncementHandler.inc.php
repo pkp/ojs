@@ -29,7 +29,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * @param $request PKPRequest
 	 */
 	function announcements($args, &$request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
 		parent::announcements($args, $request);
 	}
@@ -41,7 +41,7 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	 * @param $request PKPRequest
 	 */
 	function announcementTypes($args, &$request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
 		parent::announcementTypes($args, $request);
 	}

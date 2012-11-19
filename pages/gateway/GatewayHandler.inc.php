@@ -31,7 +31,7 @@ class GatewayHandler extends Handler {
 		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
@@ -116,7 +116,7 @@ class GatewayHandler extends Handler {
 		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableClockss')) {

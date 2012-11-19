@@ -50,7 +50,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');

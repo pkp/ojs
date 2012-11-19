@@ -85,7 +85,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		if (!$this->isConfigured()) return false;
 		$journal =& $request->getJournal();
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$user =& $request->getUser();
 
 		$templateMgr->assign('itemName', $queuedPayment->getName());
@@ -108,7 +108,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 */
 	function handle($args, &$request) {
 		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$user =& $request->getUser();
 		$op = isset($args[0])?$args[0]:null;
 		$queuedPaymentId = isset($args[1])?((int) $args[1]):0;

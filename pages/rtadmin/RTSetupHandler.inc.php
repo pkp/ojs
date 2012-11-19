@@ -22,14 +22,14 @@ class RTSetupHandler extends RTAdminHandler {
 		parent::RTAdminHandler();
 	}
 
-	function settings() {
+	function settings($args, $request) {
 		$this->validate();
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal) {
-			$this->setupTemplate(true);
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request, true);
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
@@ -68,41 +68,41 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
 		} else {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		}
 	}
 
-	function saveSettings() {
+	function saveSettings($args, $request) {
 		$this->validate();
 
 		// Bring in the comments constants.
 		$commentDao =& DAORegistry::getDao('CommentDAO');
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal) {
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
-			if (Request::getUserVar('version')=='') $rt->setVersion(null);
-			else $rt->setVersion(Request::getUserVar('version'));
-			$rt->setEnabled(Request::getUserVar('enabled')==true);
-			$rt->setAbstract(Request::getUserVar('abstract')==true);
-			$rt->setCaptureCite(Request::getUserVar('captureCite')==true);
-			$rt->setViewMetadata(Request::getUserVar('viewMetadata')==true);
-			$rt->setSupplementaryFiles(Request::getUserVar('supplementaryFiles')==true);
-			$rt->setPrinterFriendly(Request::getUserVar('printerFriendly')==true);
-			$rt->setDefineTerms(Request::getUserVar('defineTerms')==true);
-			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
-			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
-			$rt->setFindingReferences(Request::getUserVar('findingReferences')==true);
-			$rt->setViewReviewPolicy(Request::getUserVar('viewReviewPolicy')==true);
+			if ($request->getUserVar('version')=='') $rt->setVersion(null);
+			else $rt->setVersion($request->getUserVar('version'));
+			$rt->setEnabled($request->getUserVar('enabled')==true);
+			$rt->setAbstract($request->getUserVar('abstract')==true);
+			$rt->setCaptureCite($request->getUserVar('captureCite')==true);
+			$rt->setViewMetadata($request->getUserVar('viewMetadata')==true);
+			$rt->setSupplementaryFiles($request->getUserVar('supplementaryFiles')==true);
+			$rt->setPrinterFriendly($request->getUserVar('printerFriendly')==true);
+			$rt->setDefineTerms($request->getUserVar('defineTerms')==true);
+			$rt->setEmailAuthor($request->getUserVar('emailAuthor')==true);
+			$rt->setEmailOthers($request->getUserVar('emailOthers')==true);
+			$rt->setFindingReferences($request->getUserVar('findingReferences')==true);
+			$rt->setViewReviewPolicy($request->getUserVar('viewReviewPolicy')==true);
 
-			$journal->updateSetting('enableComments', Request::getUserVar('enableComments')?Request::getUserVar('enableCommentsMode'):COMMENTS_DISABLED);
+			$journal->updateSetting('enableComments', $request->getUserVar('enableComments')?$request->getUserVar('enableCommentsMode'):COMMENTS_DISABLED);
 
 			$rtDao->updateJournalRT($rt);
 		}
-		Request::redirect(null, Request::getRequestedPage());
+		$request->redirect(null, $request->getRequestedPage());
 	}
 }
 

@@ -60,8 +60,8 @@ class CustomThemePlugin extends ThemePlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -108,7 +108,7 @@ class CustomThemePlugin extends ThemePlugin {
 
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);

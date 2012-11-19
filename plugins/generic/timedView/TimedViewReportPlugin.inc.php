@@ -56,8 +56,8 @@ class TimedViewReportPlugin extends ReportPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs() {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),

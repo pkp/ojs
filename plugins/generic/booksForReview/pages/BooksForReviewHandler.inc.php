@@ -19,7 +19,7 @@ class BooksForReviewHandler extends Handler {
 	/**
 	 * Display books for review public index page.
 	 */
-	function index($args = array(), &$request) {
+	function index($args, &$request) {
 		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
@@ -41,7 +41,7 @@ class BooksForReviewHandler extends Handler {
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, BFR_STATUS_AVAILABLE, null, null, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
 
 		$isAuthor = Validation::isAuthor();
@@ -103,7 +103,7 @@ class BooksForReviewHandler extends Handler {
 				$coverPagePath = $request->getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$templateMgr->assign('locale', AppLocale::getLocale());
 				$templateMgr->assign_by_ref('bookForReview', $book);
@@ -135,13 +135,13 @@ class BooksForReviewHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($subclass) {
 			$templateMgr->append(
 				'pageHierarchy',
 				array(
-					Request::url(null, 'booksForReview'), 
+					$request->url(null, 'booksForReview'), 
 					AppLocale::Translate('plugins.generic.booksForReview.displayName'),
 					true
 				)
@@ -149,7 +149,7 @@ class BooksForReviewHandler extends Handler {
 		}
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
+		$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 

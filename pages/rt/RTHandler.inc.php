@@ -54,7 +54,7 @@ class RTHandler extends ArticleHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
@@ -144,7 +144,7 @@ class RTHandler extends ArticleHandler {
 				break;
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('article', $article);
@@ -184,7 +184,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 
@@ -235,7 +235,7 @@ class RTHandler extends ArticleHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('galley', $galley);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('section', $section);
@@ -286,7 +286,7 @@ class RTHandler extends ArticleHandler {
 		if ($request->getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!$request->getUserVar('continued')) {
@@ -341,7 +341,7 @@ class RTHandler extends ArticleHandler {
 
 			$email->send();
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!$request->getUserVar('continued')) {
@@ -373,7 +373,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
@@ -409,7 +409,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('suppFile', $suppFile);
@@ -445,7 +445,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('journalRt', $journalRt);

@@ -70,7 +70,7 @@ class CopyeditorHandler extends Handler {
 
 		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -110,13 +110,16 @@ class CopyeditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $articleId int
+	 * @param $parentPage string optional
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-		$templateMgr =& TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'copyeditor'), 'user.role.copyeditor'))
+		$templateMgr =& TemplateManager::getManager($request);
+		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'copyeditor'), 'user.role.copyeditor'))
 				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
@@ -135,7 +138,7 @@ class CopyeditorHandler extends Handler {
 	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy'))) {
 			$request->redirect(null, $request->getRequestedPage());
 		}
 	}

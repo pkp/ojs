@@ -30,7 +30,7 @@ class CounterHandler extends Handler {
 	/**
 	 * Display the main log analyzer page.
 	 */
-	function index() {
+	function index($args, &$request) {
 		$this->validate();
 		$this->setupTemplate();
 		$plugin =& $this->plugin;
@@ -38,7 +38,7 @@ class CounterHandler extends Handler {
 		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
 		$years = $counterReportDao->getYears();
 
-		$templateManager =& TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager($request);
 		$templateManager->assign('years', $years);
 		$templateManager->display($plugin->getTemplatePath() . 'index.tpl');
 	}
@@ -107,16 +107,16 @@ class CounterHandler extends Handler {
 
 
 	/**
-	* Counter report in XML
-	*/
-	function reportXML() {
+	 * Counter report in XML
+	 */
+	function reportXML($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
 		$this->setupTemplate(true);
 
-		$templateManager =& TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager($request);
 
-		$year = Request::getUserVar('year');
+		$year = $request->getUserVar('year');
 
 		$begin = "$year-01-01";
 		$end = "$year-12-01";
@@ -128,14 +128,14 @@ class CounterHandler extends Handler {
 
 
 	/**
-	* SUSHI report
-	*/
-	function sushiXML() {
+	 * SUSHI report
+	 */
+	function sushiXML($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
 		$this->setupTemplate(true);
 
-		$templateManager =& TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager($request);
 
 		$SOAPRequest = file_get_contents('php://input');
 
@@ -238,15 +238,15 @@ class CounterHandler extends Handler {
 	}
 
 	/**
-	* Counter report as CSV
-	*/
-	function report() {
+	 * Counter report as CSV
+	 */
+	function report($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
-		$year = Request::getUserVar('year');
+		$journal =& $request->getJournal();
+		$year = $request->getUserVar('year');
 		$begin = "$year-01-01";
 		$end = "$year-12-01";
 

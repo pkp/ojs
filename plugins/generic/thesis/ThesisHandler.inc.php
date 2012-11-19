@@ -59,7 +59,7 @@ class ThesisHandler extends Handler {
 			$theses =& $thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
 			$thesisIntroduction = $thesisPlugin->getSetting($journalId, 'thesisIntroduction');
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('theses', $theses);
 			$templateMgr->assign('thesisIntroduction', $thesisIntroduction);
 			$templateMgr->assign('searchField', $searchField);
@@ -109,7 +109,7 @@ class ThesisHandler extends Handler {
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
@@ -152,7 +152,7 @@ class ThesisHandler extends Handler {
 			if (($thesisId != null) && ($thesisDao->getThesisJournalId($thesisId) == $journalId) && $thesisDao->isThesisActive($thesisId)) {
 			$thesis =& $thesisDao->getThesis($thesisId);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
 			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
@@ -202,7 +202,7 @@ class ThesisHandler extends Handler {
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$thesisForm->display();
 			}

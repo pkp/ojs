@@ -30,8 +30,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$externalFeedDao = new ExternalFeedDAO($this->getName());
 			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
-			$templateMgr =& TemplateManager::getManager();
 			$request = $this->getRequest();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
 			// Journal home page display
@@ -112,19 +112,20 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
-				$this->getRequest()->url(null, 'user'),
+				$request->url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				$this->getRequest()->url(null, 'manager'),
+				$request->url(null, 'manager'),
 				'user.role.manager'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			$this->getRequest()->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds')),
+			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds')),
 			$this->getDisplayName(),
 			true
 		);
@@ -269,7 +270,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			LOCALE_COMPONENT_PKP_MANAGER,
 			LOCALE_COMPONENT_PKP_USER
 		);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();

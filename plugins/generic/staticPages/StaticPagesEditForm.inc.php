@@ -167,12 +167,6 @@ class StaticPagesEditForm extends Form {
 			$staticPagesDao->insertStaticPage($staticPage);
 		}
 	}
-
-	function display() {
-		$templateMgr =& TemplateManager::getManager();
-
-		parent::display();
-	}
-
 }
+
 ?>

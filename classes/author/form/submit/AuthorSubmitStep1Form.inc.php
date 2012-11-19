@@ -39,7 +39,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$journal =& $this->request->getJournal();
 		$user =& $this->request->getUser();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get sections for this journal
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');

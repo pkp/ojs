@@ -154,8 +154,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -494,7 +494,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr = TemplateManager::getManager();
+			$request =& $this->getRequest();
+			$templateMgr = TemplateManager::getManager($request);
 			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '" target="_parent">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
@@ -507,7 +508,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr = TemplateManager::getManager();
+			$request =& $this->getRequest();
+			$templateMgr = TemplateManager::getManager($request);
 			$output .= '<h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</a></li></ul>';
 		}
 		return false;
@@ -530,7 +532,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 				$bookId = $bfrDao->getSubmittedBookForReviewIdByArticle($journalId, $articleId);
 				if ($bookId) {
-					$templateMgr = TemplateManager::getManager();
+					$templateMgr = TemplateManager::getManager($request);
 					$output = '<p><a href="' . $templateMgr->smartyUrl(array('page'=>'editor', 'op'=>'editBookForReview', 'path'=>$bookId), $smarty) . '" class="action">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.editBookForReviewMetadata'), $smarty) . '</a></p>';
 				}
 			}
@@ -545,7 +547,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr = TemplateManager::getManager();
+			$request =& $this->getRequest();
+			$templateMgr = TemplateManager::getManager($request);
 			$output .= '<br /><div class="separator"></div><h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'author', 'op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.myBooksForReview'), $smarty) . '</a></li><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.availableBooksForReview'), $smarty) . '</a></li></ul><br />';
 		}
 		return false;

@@ -245,7 +245,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 				break;
 
 			default: // Display.
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 
 				// Test mode.
 				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());

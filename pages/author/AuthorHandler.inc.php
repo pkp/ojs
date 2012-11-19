@@ -76,7 +76,7 @@ class AuthorHandler extends Handler {
 			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		if (!$active) {
 			// Make view counts available if enabled.
@@ -152,9 +152,9 @@ class AuthorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
-		parent::setupTemplate();
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_PKP_SUBMISSION);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'), array($request->url(null, 'author'), 'article.submissions'))
 			: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'));
@@ -174,7 +174,7 @@ class AuthorHandler extends Handler {
 	 */
 	function instructions($args, &$request) {
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy', 'proof'))) {
 			$request->redirect(null, null, 'index');
 		}
 	}

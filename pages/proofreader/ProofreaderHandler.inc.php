@@ -36,7 +36,7 @@ class ProofreaderHandler extends Handler {
 	 */
 	function index($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -71,7 +71,7 @@ class ProofreaderHandler extends Handler {
 
 		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -113,12 +113,12 @@ class ProofreaderHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
-		$templateMgr =& TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'));
+		$templateMgr =& TemplateManager::getManager($request);
+		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'))
+				: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'));
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
@@ -134,8 +134,8 @@ class ProofreaderHandler extends Handler {
 	 * @param $requet PKPRequest
 	 */
 	function instructions($args, &$request) {
-		$this->setupTemplate();
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('proof'))) {
+		$this->setupTemplate($request);
+		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('proof'))) {
 			$request->redirect(null, $request->getRequestedPage());
 		}
 	}

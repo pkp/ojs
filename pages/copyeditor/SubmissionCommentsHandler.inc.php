@@ -33,7 +33,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	function viewLayoutComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		CopyeditorAction::viewLayoutComments($this->submission);
 	}
 
@@ -45,7 +45,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -63,7 +63,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	function viewCopyeditComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		CopyeditorAction::viewCopyeditComments($this->submission);
 	}
 
@@ -75,7 +75,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	function postCopyeditComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -95,7 +95,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		CopyeditorAction::editComment($this->submission, $this->comment);
 	}
 
@@ -112,7 +112,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -145,7 +145,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		CopyeditorAction::deleteComment($commentId);
 

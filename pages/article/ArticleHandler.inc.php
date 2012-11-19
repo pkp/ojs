@@ -106,7 +106,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('js/relatedItems.js');
 		$templateMgr->addJavaScript('js/inlinePdf.js');
 		$templateMgr->addJavaScript('js/pdfobject.js');
@@ -262,7 +262,7 @@ class ArticleHandler extends Handler {
 
 		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);

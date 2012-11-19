@@ -146,7 +146,7 @@ class SearchHandler extends Handler {
 
 		// Prepare and display the search template.
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign('jsLocaleKeys', array('search.noKeywordError'));
 		$this->_assignSearchFilters($request, $templateMgr, $searchFilters);
@@ -212,7 +212,7 @@ class SearchHandler extends Handler {
 				$request->redirect(null, $request->getRequestedPage());
 			}
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
@@ -239,7 +239,7 @@ class SearchHandler extends Handler {
 				$rangeInfo
 			);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->assign_by_ref('authors', $authors);
@@ -268,7 +268,7 @@ class SearchHandler extends Handler {
 		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
@@ -295,7 +295,7 @@ class SearchHandler extends Handler {
 		// Sort by category name
 		uasort($cache, create_function('$a, $b', '$catA = $a[\'category\']; $catB = $b[\'category\']; return strcasecmp($catA->getLocalizedName(), $catB->getLocalizedName());'));
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('categories', $cache);
 		$templateMgr->display('search/categories.tpl');
 	}
@@ -327,7 +327,7 @@ class SearchHandler extends Handler {
 		// Sort by journal name
 		uasort($journals, create_function('$a, $b', 'return strcasecmp($a->getLocalizedTitle(), $b->getLocalizedTitle());'));
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('category', $category);
 		$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
@@ -342,7 +342,7 @@ class SearchHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false, $op = 'index') {
 		parent::setupTemplate();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 
 		$opMap = array(

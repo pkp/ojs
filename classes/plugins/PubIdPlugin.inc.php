@@ -72,8 +72,8 @@ class PubIdPlugin extends Plugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$templateManager =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateManager =& TemplateManager::getManager($request);
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		if (!$this->getEnabled() && $verb != 'enable') return false;
 		switch ($verb) {
@@ -86,7 +86,6 @@ class PubIdPlugin extends Plugin {
 				return false;
 
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
 				$journal =& $request->getJournal();
 
 				$settingsFormName = $this->getSettingsFormName();
@@ -437,8 +436,8 @@ class PubIdPlugin extends Plugin {
 	 * Set the breadcrumbs, given the plugin's tree of items to append.
 	 */
 	function _setBreadcrumbs() {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),

@@ -93,8 +93,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -196,9 +196,9 @@ class PiwikPlugin extends GenericPlugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 		$journal =& $request->getJournal();
 		$returner = true;

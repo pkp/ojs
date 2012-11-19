@@ -30,7 +30,7 @@ class ReviewFormHandler extends ManagerHandler {
 	 */
 	function reviewForms($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'reviewForms');
@@ -38,7 +38,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewForms =& $reviewFormDao->getByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('reviewForms', $reviewForms);
@@ -51,30 +51,31 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Display form to create a new review form.
 	 */
-	function createReviewForm() {
-		$this->editReviewForm();
+	function createReviewForm($args, &$request) {
+		$this->editReviewForm($args, $request);
 	}
 
 	/**
 	 * Display form to create/edit a review form.
-	 * @param $args array optional, if set the first parameter is the ID of the review form to edit
+	 * @param $args array if set the first parameter is the ID of the review form to edit
+	 * @param $request PKPRequest
 	 */
-	function editReviewForm($args = array()) {
+	function editReviewForm($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
 		$incompleteCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false);
 
 		if ($reviewFormId != null && (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0)) {
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		} else {
-			$this->setupTemplate(true, $reviewForm);
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request, true, $reviewForm);
+			$templateMgr =& TemplateManager::getManager($request);
 
 			if ($reviewFormId == null) {
 				$templateMgr->assign('pageTitle', 'manager.reviewForms.create');
@@ -97,20 +98,20 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Save changes to a review form.
 	 */
-	function updateReviewForm() {
+	function updateReviewForm($args, &$request) {
 		$this->validate();
 
-		$reviewFormId = Request::getUserVar('reviewFormId') === null? null : (int) Request::getUserVar('reviewFormId');
+		$reviewFormId = $request->getUserVar('reviewFormId') === null? null : (int) $request->getUserVar('reviewFormId');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
 		$incompleteCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false);
 		if ($reviewFormId != null && (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0)) {
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		}
-		$this->setupTemplate(true, $reviewForm);
+		$this->setupTemplate($request, true, $reviewForm);
 
 		import('classes.manager.form.ReviewFormForm');
 		$reviewFormForm = new ReviewFormForm($reviewFormId);
@@ -118,9 +119,9 @@ class ReviewFormHandler extends ManagerHandler {
 
 		if ($reviewFormForm->validate()) {
 			$reviewFormForm->execute();
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		} else {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			if ($reviewFormId == null) {
 				$templateMgr->assign('pageTitle', 'manager.reviewForms.create');
@@ -135,31 +136,32 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Preview a review form.
 	 * @param $args array first parameter is the ID of the review form to preview
+	 * @param $request PKPRequest
 	 */
-	function previewReviewForm($args) {
+	function previewReviewForm($args, &$request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 
 		if (!isset($reviewForm)) {
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		}
 
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
 		$incompleteCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false);
 		if ($completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0) {
-			$this->setupTemplate(true);
+			$this->setupTemplate($request, true);
 		} else {
-			$this->setupTemplate(true, $reviewForm);
+			$this->setupTemplate($request, true, $reviewForm);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
 		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
@@ -174,13 +176,14 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Delete a review form.
 	 * @param $args array first parameter is the ID of the review form to delete
+	 * @param $request PKPRequest
 	 */
-	function deleteReviewForm($args) {
+	function deleteReviewForm($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
@@ -198,19 +201,20 @@ class ReviewFormHandler extends ManagerHandler {
 			$reviewFormDao->deleteById($reviewFormId, $journal->getId());
 		}
 
-		Request::redirect(null, null, 'reviewForms');
+		$request->redirect(null, null, 'reviewForms');
 	}
 
 	/**
 	 * Activate a published review form.
 	 * @param $args array first parameter is the ID of the review form to activate
+	 * @param $request PKPRequest
 	 */
-	function activateReviewForm($args) {
+	function activateReviewForm($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
@@ -219,19 +223,20 @@ class ReviewFormHandler extends ManagerHandler {
 			$reviewFormDao->updateObject($reviewForm);
 		}
 
-		Request::redirect(null, null, 'reviewForms');
+		$request->redirect(null, null, 'reviewForms');
 	}
 
 	/**
 	 * Deactivate a published review form.
 	 * @param $args array first parameter is the ID of the review form to deactivate
+	 * @param $request PKPRequest
 	 */
-	function deactivateReviewForm($args) {
+	function deactivateReviewForm($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
@@ -240,18 +245,18 @@ class ReviewFormHandler extends ManagerHandler {
 			$reviewFormDao->updateObject($reviewForm);
 		}
 
-		Request::redirect(null, null, 'reviewForms');
+		$request->redirect(null, null, 'reviewForms');
 	}
 
 	/**
 	 * Copy a published review form.
 	 */
-	function copyReviewForm($args) {
+	function copyReviewForm($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
@@ -272,21 +277,21 @@ class ReviewFormHandler extends ManagerHandler {
 
 		}
 
-		Request::redirect(null, null, 'reviewForms');
+		$request->redirect(null, null, 'reviewForms');
 	}
 
 	/**
 	 * Change the sequence of a review form.
 	 */
-	function moveReviewForm() {
+	function moveReviewForm($args, &$request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm(Request::getUserVar('id'), ASSOC_TYPE_JOURNAL, $journal->getId());
+		$reviewForm =& $reviewFormDao->getReviewForm($request->getUserVar('id'), ASSOC_TYPE_JOURNAL, $journal->getId());
 
 		if (isset($reviewForm)) {
-			$direction = Request::getUserVar('d');
+			$direction = $request->getUserVar('d');
 
 			if ($direction != null) {
 				// moving with up or down arrow
@@ -294,7 +299,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 			} else {
 				// Dragging and dropping
-				$prevId = Request::getUserVar('prevId');
+				$prevId = $request->getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
@@ -311,26 +316,26 @@ class ReviewFormHandler extends ManagerHandler {
 
 		// Moving up or down with the arrows requires a page reload.
 		if ($direction != null) {
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		}
 	}
 
 	/**
 	 * Display a list of the review form elements within a review form.
 	 */
-	function reviewFormElements($args) {
+	function reviewFormElements($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? $args[0] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
 		$incompleteCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false);
 
 		if (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0) {
-			Request::redirect(null, null, 'reviewForms');
+			$request->redirect(null, null, 'reviewForms');
 		}
 
 		$rangeInfo = $this->getRangeInfo($request, 'reviewFormElements');
@@ -339,8 +344,8 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$unusedReviewFormTitles =& $reviewFormDao->getTitlesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), 0);
 
-		$this->setupTemplate(true, $reviewForm);
-		$templateMgr =& TemplateManager::getManager();
+		$this->setupTemplate($request, true, $reviewForm);
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
@@ -357,21 +362,21 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Display form to create a new review form element.
 	 */
-	function createReviewFormElement($args) {
-		$this->editReviewFormElement($args);
+	function createReviewFormElement($args, $request) {
+		$this->editReviewFormElement($args, $request);
 	}
 
 	/**
 	 * Display form to create/edit a review form element.
 	 * @param $args ($reviewFormId, $reviewFormElementId)
 	 */
-	function editReviewFormElement($args) {
+	function editReviewFormElement($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 		$reviewFormElementId = isset($args[1]) ? (int) $args[1] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
@@ -379,11 +384,11 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
 		if (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0 || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
-			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
+			$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
 
-		$this->setupTemplate(true, $reviewForm);
-		$templateMgr =& TemplateManager::getManager();
+		$this->setupTemplate($request, true, $reviewForm);
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($reviewFormElementId == null) {
 			$templateMgr->assign('pageTitle', 'manager.reviewFormElements.create');
@@ -405,21 +410,21 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Save changes to a review form element.
 	 */
-	function updateReviewFormElement() {
+	function updateReviewFormElement($args, $request) {
 		$this->validate();
 
-		$reviewFormId = Request::getUserVar('reviewFormId') === null? null : (int) Request::getUserVar('reviewFormId');
-		$reviewFormElementId = Request::getUserVar('reviewFormElementId') === null? null : (int) Request::getUserVar('reviewFormElementId');
+		$reviewFormId = $request->getUserVar('reviewFormId') === null? null : (int) $request->getUserVar('reviewFormId');
+		$reviewFormElementId = $request->getUserVar('reviewFormElementId') === null? null : (int) $request->getUserVar('reviewFormElementId');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
-		$this->setupTemplate(true, $reviewForm);
+		$this->setupTemplate($request, true, $reviewForm);
 
 		if (!$reviewFormDao->unusedReviewFormExists($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId()) || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
-			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
+			$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
 
 		import('classes.manager.form.ReviewFormElementForm');
@@ -434,7 +439,7 @@ class ReviewFormHandler extends ManagerHandler {
 		}
 		$reviewFormElementForm->setData('possibleResponses', $response);
 
-		if (Request::getUserVar('addResponse')) {
+		if ($request->getUserVar('addResponse')) {
 			// Add a response item
 			$editData = true;
 			$response = $reviewFormElementForm->getData('possibleResponses');
@@ -447,7 +452,7 @@ class ReviewFormHandler extends ManagerHandler {
 			array_push($response[$formLocale], array('order' => $lastOrder+1));
 			$reviewFormElementForm->setData('possibleResponses', $response);
 
-		} else if (($delResponse = Request::getUserVar('delResponse')) && count($delResponse) == 1) {
+		} else if (($delResponse = $request->getUserVar('delResponse')) && count($delResponse) == 1) {
 			// Delete a response item
 			$editData = true;
 			list($delResponse) = array_keys($delResponse);
@@ -460,10 +465,10 @@ class ReviewFormHandler extends ManagerHandler {
 
 		if (!isset($editData) && $reviewFormElementForm->validate()) {
 			$reviewFormElementForm->execute();
-			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
+			$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		} else {
-			$journal =& Request::getJournal();
-			$templateMgr =& TemplateManager::getManager();
+			$journal =& $request->getJournal();
+			$templateMgr =& TemplateManager::getManager($request);
 			if ($reviewFormElementId == null) {
 				$templateMgr->assign('pageTitle', 'manager.reviewFormElements.create');
 			} else {
@@ -478,20 +483,20 @@ class ReviewFormHandler extends ManagerHandler {
 	 * Delete a review form element.
 	 * @param $args array ($reviewFormId, $reviewFormElementId)
 	 */
-	function deleteReviewFormElement($args) {
+	function deleteReviewFormElement($args, $request) {
 		$this->validate();
 
 		$reviewFormId = isset($args[0]) ? (int)$args[0] : null;
 		$reviewFormElementId = isset($args[1]) ? (int) $args[1] : null;
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
 		if ($reviewFormDao->unusedReviewFormExists($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId())) {
 			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElementDao->deleteById($reviewFormElementId);
 		}
-		Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
+		$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
 	}
 
 	/**
@@ -542,13 +547,13 @@ class ReviewFormHandler extends ManagerHandler {
 	/**
 	 * Copy review form elemnts to another review form.
 	 */
-	function copyReviewFormElement() {
+	function copyReviewFormElement($args, $request) {
 		$this->validate();
 
-		$copy = Request::getUserVar('copy');
-		$targetReviewFormId = Request::getUserVar('targetReviewForm');
+		$copy = $request->getUserVar('copy');
+		$targetReviewFormId = $request->getUserVar('targetReviewForm');
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
 		if (is_array($copy) && $reviewFormDao->unusedReviewFormExists($targetReviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId())) {
@@ -565,17 +570,17 @@ class ReviewFormHandler extends ManagerHandler {
 			}
 		}
 
-		Request::redirect(null, null, 'reviewFormElements', array($targetReviewFormId));
+		$request->redirect(null, null, 'reviewFormElements', array($targetReviewFormId));
 	}
 
-	function setupTemplate($subclass = false, $reviewForm = null) {
-		parent::setupTemplate(true);
+	function setupTemplate($request, $subclass = false, $reviewForm = null) {
+		parent::setupTemplate($request, true);
 		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'reviewForms'), 'manager.reviewForms'));
+			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'reviewForms'), 'manager.reviewForms'));
 		}
 		if ($reviewForm) {
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editReviewForm', $reviewForm->getId()), $reviewForm->getLocalizedTitle(), true));
+			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'editReviewForm', $reviewForm->getId()), $reviewForm->getLocalizedTitle(), true));
 		}
 	}
 }

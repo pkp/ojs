@@ -80,8 +80,8 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -118,11 +118,11 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr =& TemplateManager::getManager();
+			$request =& $this->getRequest();
+			$templateMgr =& TemplateManager::getManager($request);
 			$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 			if (!empty($currentJournal)) {
-				$request =& $this->getRequest();
 				$journal =& $request->getJournal();
 				$journalId = $journal->getId();
 				$phpmvSiteId = $this->getSetting($journalId, 'phpmvSiteId');
@@ -146,7 +146,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& $request->getJournal();
 

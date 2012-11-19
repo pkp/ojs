@@ -38,7 +38,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	function display() {
 		$journal =& $this->request->getJournal();
 		$user =& $this->request->getUser();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get article file for this article
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');

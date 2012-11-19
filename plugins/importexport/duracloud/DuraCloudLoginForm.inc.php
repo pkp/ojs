@@ -32,7 +32,7 @@ class DuraCloudLoginForm extends Form {
 	 * Display the form.
 	 */
 	function display(&$plugin) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($plugin->getRequest());
 		if ($plugin->isDuraCloudConfigured()) {
 			// Provide configuration details
 			$templateMgr->assign('isConfigured', true);

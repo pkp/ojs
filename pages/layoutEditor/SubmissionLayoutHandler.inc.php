@@ -37,7 +37,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
 		import('classes.submission.proofreader.ProofreaderAction');
@@ -53,7 +53,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$disableEdit = !$this->_layoutEditingEnabled($submission);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
@@ -81,7 +81,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 		LayoutEditorAction::viewMetadata($this->submission, $journal);
 	}
 
@@ -92,7 +92,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 */
 	function completeAssignment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 		$this->validate($request, $articleId);
 		if (LayoutEditorAction::completeLayoutEditing($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -153,7 +153,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
 
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if ($this->_layoutEditingEnabled($submission)) {
 			import('classes.submission.form.ArticleGalleyForm');
@@ -176,7 +176,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$request->redirect(null, null, 'submission', $articleId);
 			}
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('galley', $galley);
 			$templateMgr->display('submission/layout/galleyView.tpl');
@@ -192,7 +192,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.form.ArticleGalleyForm');
 
@@ -270,7 +270,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -286,7 +286,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -310,7 +310,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
@@ -360,7 +360,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
 
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if ($this->_layoutEditingEnabled($submission)) {
 			import('classes.submission.form.SuppFileForm');
@@ -382,7 +382,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 				$request->redirect(null, null, 'submission', $articleId);
 			}
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign_by_ref('suppFile', $suppFile);
 			$templateMgr->display('submission/suppFile/suppFileView.tpl');
@@ -398,7 +398,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		$suppFileId = (int) array_shift($args);
 		$journal =& $request->getJournal();
@@ -511,7 +511,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		list($journal, $submission) = $this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		$send = false;
 		if (isset($args[0])) {

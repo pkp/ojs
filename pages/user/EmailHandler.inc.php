@@ -32,7 +32,7 @@ class EmailHandler extends UserHandler {
 
 		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');

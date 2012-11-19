@@ -233,8 +233,8 @@ class SubscriptionHandler extends ManagerHandler {
 	/**
 	 * Display form to create new subscription type.
 	 */
-	function createSubscriptionType() {
-		$this->editSubscriptionType();
+	function createSubscriptionType($args, $request) {
+		$this->editSubscriptionType($args, $request);
 	}
 
 	/**

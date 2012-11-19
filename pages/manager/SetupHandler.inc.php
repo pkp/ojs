@@ -30,7 +30,7 @@ class SetupHandler extends ManagerHandler {
 	 */
 	function setup($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -66,7 +66,7 @@ class SetupHandler extends ManagerHandler {
 
 		if ($step >= 1 && $step <= 5) {
 
-			$this->setupTemplate(true);
+			$this->setupTemplate($request, true);
 
 			$formClass = "JournalSetupStep{$step}Form";
 			import("classes.manager.form.setup.$formClass");
@@ -352,7 +352,7 @@ class SetupHandler extends ManagerHandler {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 
 		if ($step >= 1 && $step <= 5) {
-			$this->setupTemplate(true);
+			$this->setupTemplate($request, true);
 
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('setupStep', $step);

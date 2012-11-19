@@ -17,7 +17,7 @@ import('pages.manager.ManagerHandler');
 class StatisticsHandler extends ManagerHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function StatisticsHandler() {
 		parent::ManagerHandler();
 	}
@@ -26,14 +26,14 @@ class StatisticsHandler extends ManagerHandler {
 	 * WARNING: This implementation should be kept roughly synchronized
 	 * with the reader's statistics view in the About pages.
 	 */
-	function statistics() {
+	function statistics($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
-		$statisticsYear = Request::getUserVar('statisticsYear');
+		$statisticsYear = $request->getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
 		$templateMgr->assign('statisticsYear', $statisticsYear);
 
@@ -88,22 +88,22 @@ class StatisticsHandler extends ManagerHandler {
 		$templateMgr->display('manager/statistics/index.tpl');
 	}
 
-	function saveStatisticsSections() {
+	function saveStatisticsSections($args, $request) {
 		// The manager wants to save the list of sections used to
 		// generate statistics.
 
 		$this->validate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
-		$sectionIds = Request::getUserVar('sectionIds');
+		$sectionIds = $request->getUserVar('sectionIds');
 		if (!is_array($sectionIds)) {
 			if (empty($sectionIds)) $sectionIds = array();
 			else $sectionIds = array($sectionIds);
 		}
 
 		$journal->updateSetting('statisticsSectionIds', $sectionIds);
-		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
+		$request->redirect(null, null, 'statistics', null, array('statisticsYear' => $request->getUserVar('statisticsYear')));
 	}
 
 	function _getPublicStatisticsNames() {
@@ -123,28 +123,28 @@ class StatisticsHandler extends ManagerHandler {
 		);
 	}
 
-	function savePublicStatisticsList() {
+	function savePublicStatisticsList($args, $request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 		foreach ($this->_getPublicStatisticsNames() as $name) {
-			$journal->updateSetting($name, Request::getUserVar($name)?true:false);
+			$journal->updateSetting($name, $request->getUserVar($name)?true:false);
 		}
-		$journal->updateSetting('statViews', Request::getUserVar('statViews')?true:false);
-		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
+		$journal->updateSetting('statViews', $request->getUserVar('statViews')?true:false);
+		$request->redirect(null, null, 'statistics', null, array('statisticsYear' => $request->getUserVar('statisticsYear')));
 	}
 
 	function report($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		$pluginName = array_shift($args);
 		$reportPlugins =& PluginRegistry::loadCategory('reports');
 
 		if ($pluginName == '' || !isset($reportPlugins[$pluginName])) {
-			Request::redirect(null, null, 'statistics');
+			$request->redirect(null, null, 'statistics');
 		}
 
 		$plugin =& $reportPlugins[$pluginName];

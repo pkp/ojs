@@ -54,8 +54,8 @@ class QuickSubmitForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->request;
+		$templateMgr =& TemplateManager::getManager($request);
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
 		$formLocale = $this->getFormLocale();

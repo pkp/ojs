@@ -18,7 +18,7 @@ import('pages.admin.AdminHandler');
 class AdminSettingsHandler extends AdminHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AdminSettingsHandler() {
 		parent::AdminHandler();
 	}
@@ -26,9 +26,9 @@ class AdminSettingsHandler extends AdminHandler {
 	/**
 	 * Display form to modify site settings.
 	 */
-	function settings() {
+	function settings($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		import('classes.admin.form.SiteSettingsForm');
 
@@ -48,7 +48,7 @@ class AdminSettingsHandler extends AdminHandler {
 	 */
 	function saveSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 		$site =& $request->getSite();
 
 		import('classes.admin.form.SiteSettingsForm');
@@ -77,7 +77,7 @@ class AdminSettingsHandler extends AdminHandler {
 				$site->updateSetting('pageHeaderTitleImage', $setting, 'object', true);
 
 				// Refresh site header
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
 			}
 		} elseif ($settingsForm->validate()) {

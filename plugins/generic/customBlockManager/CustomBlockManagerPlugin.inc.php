@@ -98,7 +98,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 			case 'settings':
 				$journal =& $request->getJournal();
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$pageCrumbs = array(

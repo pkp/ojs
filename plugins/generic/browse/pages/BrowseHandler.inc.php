@@ -20,7 +20,7 @@ class BrowseHandler extends Handler {
 	/**
 	 * Show list of journal sections.
 	 */
-	function sections($args = array(), &$request) {
+	function sections($args, &$request) {
 		$this->setupTemplate($request, true);
 
 		$router =& $request->getRouter();
@@ -41,7 +41,7 @@ class BrowseHandler extends Handler {
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr = &TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('title', $section->getLocalizedTitle());
 				$templateMgr->assign('sectionId', $sectionId);
@@ -64,7 +64,7 @@ class BrowseHandler extends Handler {
 				$sections = array_slice($sections, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sections, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('enableBrowseBySections', $enableBrowseBySections);
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
@@ -108,7 +108,7 @@ class BrowseHandler extends Handler {
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr = &TemplateManager::getManager();
+				$templateMgr = &TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('title', $identifyType);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
@@ -130,7 +130,7 @@ class BrowseHandler extends Handler {
 				$sectionidentifyTypes = array_slice($sectionidentifyTypes, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sectionidentifyTypes, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
@@ -158,7 +158,7 @@ class BrowseHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate(&$request, $subclass = false, $op = 'index') {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 
 		$opMap = array(

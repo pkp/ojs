@@ -244,7 +244,7 @@ class SwordPlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'settings':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
@@ -276,7 +276,7 @@ class SwordPlugin extends GenericPlugin {
 				break;
 			case 'createDepositPoint':
 			case 'editDepositPoint':
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
 				$depositPointId = array_shift($args);

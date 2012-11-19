@@ -50,7 +50,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get supplementary files for this article
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');

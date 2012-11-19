@@ -24,20 +24,20 @@ class ReferralHandler extends Handler {
 	
 	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager();
-		$pageHierarchy = array(array(Request::url(null, 'referral', 'index'), 'plugins.generic.referral.referrals'));
+		$templateMgr =& TemplateManager::getManager($request);
+		$pageHierarchy = array(array($request->url(null, 'referral', 'index'), 'plugins.generic.referral.referrals'));
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
-	function editReferral($args) {
+	function editReferral($args, $request) {
 		$referralId = (int) array_shift($args);
 		if ($referralId === 0) $referralId = null;
 
-		list($plugin, $referral, $article) = $this->validate($referralId);
+		list($plugin, $referral, $article) = $this->validate($request, $referralId);
 		$this->setupTemplate($request);
 
 		$plugin->import('ReferralForm');
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($referralId == null) {
 			$templateMgr->assign('referralTitle', 'plugins.generic.referral.createReferral');
@@ -57,18 +57,18 @@ class ReferralHandler extends Handler {
 	/**
 	 * Save changes to an announcement type.
 	 */
-	function updateReferral() {
-		$referralId = (int) Request::getUserVar('referralId');
+	function updateReferral($args, $request) {
+		$referralId = (int) $request->getUserVar('referralId');
 		if ($referralId === 0) $referralId = null;
 
-		list($plugin, $referral, $article) = $this->validate($referralId);
+		list($plugin, $referral, $article) = $this->validate($request, $referralId);
 		// If it's an insert, ensure that it's allowed for this article
 		if (!isset($referral)) {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-			$journal =& Request::getJournal();
-			$article =& $publishedArticleDao->getPublishedArticleByArticleId((int) Request::getUserVar('articleId'));
+			$journal =& $request->getJournal();
+			$article =& $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
 			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
-				Request::redirect(null, 'author');
+				$request->redirect(null, 'author');
 			}
 		}
 		$this->setupTemplate($request);
@@ -80,9 +80,9 @@ class ReferralHandler extends Handler {
 
 		if ($referralForm->validate()) {
 			$referralForm->execute();
-			Request::redirect(null, 'author');
+			$request->redirect(null, 'author');
 		} else {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			if ($referralId == null) {
 				$templateMgr->assign('referralTitle', 'plugins.generic.referral.createReferral');
@@ -94,32 +94,32 @@ class ReferralHandler extends Handler {
 		}
 	}	
 
-	function deleteReferral($args) {
+	function deleteReferral($args, $request) {
 		$referralId = (int) array_shift($args);
-		list($plugin, $referral) = $this->validate($referralId);
+		list($plugin, $referral) = $this->validate($request, $referralId);
 
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
 		$referralDao->deleteReferral($referral);
 
-		Request::redirect(null, 'author');
+		$request->redirect(null, 'author');
 	}
 
-	function validate($referralId = null) {
-		parent::validate();
+	function validate($request, $referralId = null) {
+		parent::validate($request);
 		
 		if ($referralId) {
 			$referralDao =& DAORegistry::getDAO('ReferralDAO');
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 			$referral =& $referralDao->getReferral($referralId);
-			if (!$referral) Request::redirect(null, 'index');
+			if (!$referral) $request->redirect(null, 'index');
 
-			$user =& Request::getUser();
-			$journal =& Request::getJournal();
+			$user =& $request->getUser();
+			$journal =& $request->getJournal();
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId($referral->getArticleId());
-			if (!$article || !$journal) Request::redirect(null, 'index');
-			if ($article->getJournalId() != $journal->getId()) Request::redirect(null, 'index');
+			if (!$article || !$journal) $request->redirect(null, 'index');
+			if ($article->getJournalId() != $journal->getId()) $request->redirect(null, 'index');
 			// The article's submitter, journal SE, and journal Editors are allowed.
-			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId())) Request::redirect(null, 'index');
+			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId())) $request->redirect(null, 'index');
 		} else {
 			$referral = $article = null;
 		}

@@ -45,7 +45,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function index($args, &$request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -125,7 +125,7 @@ class SectionEditorHandler extends Handler {
 			$request->redirect(null, null, 'submission', array($submission->getId()));
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 		$templateMgr->assign_by_ref('submissions', $submissions);
@@ -174,10 +174,10 @@ class SectionEditorHandler extends Handler {
 	 * @param $parentPage string optional
 	 * @param $showSidebar boolean optional
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
-		parent::setupTemplate();
+	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_MANAGER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$isEditor = Validation::isEditor();
 
 		if (Request::getRequestedPage() == 'editor') {
@@ -206,9 +206,9 @@ class SectionEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function instructions($args, &$request) {
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof', 'referenceLinking'))) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy', 'proof', 'referenceLinking'))) {
 			$request->redirect(null, null, 'index');
 		}
 	}

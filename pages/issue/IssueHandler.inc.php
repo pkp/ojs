@@ -53,7 +53,7 @@ class IssueHandler extends Handler {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getCurrentIssue($journal->getId(), true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($issue != null) {
 			$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
@@ -85,7 +85,7 @@ class IssueHandler extends Handler {
 		$journal =& $request->getJournal();
 		$issue =& $this->getIssue();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
 		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
@@ -120,7 +120,7 @@ class IssueHandler extends Handler {
 		$coverPagePath = $request->getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', AppLocale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
@@ -151,7 +151,7 @@ class IssueHandler extends Handler {
 		}
 
 		// Display PDF galley inline
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('js/inlinePdf.js');
 		$templateMgr->addJavaScript('js/pdfobject.js');
 		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
@@ -185,7 +185,7 @@ class IssueHandler extends Handler {
 		$issue =& $this->getIssue();
 		$galley =& $this->getGalley();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
@@ -354,7 +354,7 @@ class IssueHandler extends Handler {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issueId, $journal->getSetting('purchaseIssueFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
-							$templateMgr =& TemplateManager::getManager();
+							$templateMgr =& TemplateManager::getManager($request);
 							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 							exit;
 						}
@@ -410,7 +410,7 @@ class IssueHandler extends Handler {
 	function _setupIssueTemplate($request, $issue, $showToc = false) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
 
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);

@@ -59,7 +59,7 @@ class ThesisSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->plugin->getRequest());
 		$templateMgr->assign('validOrder', $this->validOrder);
 		parent::display();
 	}

@@ -20,7 +20,7 @@ import('pages.admin.AdminHandler');
 class AdminFunctionsHandler extends AdminHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AdminFunctionsHandler() {
 		parent::AdminHandler();
 	}
@@ -28,9 +28,9 @@ class AdminFunctionsHandler extends AdminHandler {
 	/**
 	 * Show system information summary.
 	 */
-	function systemInfo() {
+	function systemInfo($args, &$request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$configData =& Config::getData();
 
@@ -49,7 +49,7 @@ class AdminFunctionsHandler extends AdminHandler {
 			'admin.server.dbVersion' => (empty($dbServerInfo['description']) ? $dbServerInfo['version'] : $dbServerInfo['description'])
 		);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('currentVersion', $currentVersion);
 		$templateMgr->assign_by_ref('versionHistory', $versionHistory);
 		$templateMgr->assign_by_ref('configData', $configData);
@@ -74,27 +74,27 @@ class AdminFunctionsHandler extends AdminHandler {
 	/**
 	 * Expire all user sessions (will log out all users currently logged in).
 	 */
-	function expireSessions() {
+	function expireSessions($args, &$request) {
 		$this->validate();
 		$sessionDao =& DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteAllSessions();
-		Request::redirect(null, 'admin');
+		$request->redirect(null, 'admin');
 	}
 
 	/**
 	 * Clear compiled templates.
 	 */
-	function clearTemplateCache() {
+	function clearTemplateCache($args, &$request) {
 		$this->validate();
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->clearTemplateCache();
-		Request::redirect(null, 'admin');
+		$request->redirect(null, 'admin');
 	}
 
 	/**
 	 * Clear the data cache.
 	 */
-	function clearDataCache() {
+	function clearDataCache($args, &$request) {
 		$this->validate();
 
 		// Clear the CacheManager's caches
@@ -106,7 +106,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO'); // As good as any
 		$userDao->flushCache();
 
-		Request::redirect(null, 'admin');
+		$request->redirect(null, 'admin');
 	}
 }
 

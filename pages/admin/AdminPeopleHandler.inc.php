@@ -17,7 +17,7 @@ import('pages.admin.AdminHandler');
 class AdminPeopleHandler extends AdminHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function AdminPeopleHandler() {
 		parent::AdminHandler();
 	}
@@ -25,17 +25,17 @@ class AdminPeopleHandler extends AdminHandler {
 	/**
 	 * Allow the Site Administrator to merge user accounts, including attributed articles etc.
 	 */
-	function mergeUsers($args) {
+	function mergeUsers($args, $request) {
 		$this->validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
-		$oldUserIds = (array) Request::getUserVar('oldUserIds');
-		$newUserId = Request::getUserVar('newUserId');
+		$oldUserIds = (array) $request->getUserVar('oldUserIds');
+		$newUserId = $request->getUserVar('newUserId');
 
 		if (!empty($oldUserIds) && !empty($newUserId)) {
 			// Both user IDs have been selected. Merge the accounts.
@@ -43,17 +43,17 @@ class AdminPeopleHandler extends AdminHandler {
 			foreach ($oldUserIds as $oldUserId) {
 				UserAction::mergeUsers($oldUserId, $newUserId);
 			}
-			Request::redirect(null, 'admin', 'mergeUsers');
+			$request->redirect(null, 'admin', 'mergeUsers');
 		}
 
 		// The administrator must select one or both IDs.
-		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
+		if ($request->getUserVar('roleSymbolic')!=null) $roleSymbolic = $request->getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
 
 		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
-				Request::redirect(null, null, null, 'all');
+				$request->redirect(null, null, null, 'all');
 			}
 			$roleName = $roleDao->getRoleName($roleId, true);
 		} else {
@@ -63,11 +63,11 @@ class AdminPeopleHandler extends AdminHandler {
 
 		$searchType = null;
 		$searchMatch = null;
-		$search = Request::getUserVar('search');
-		$searchInitial = Request::getUserVar('searchInitial');
+		$search = $request->getUserVar('search');
+		$searchInitial = $request->getUserVar('searchInitial');
 		if (!empty($search)) {
-			$searchType = Request::getUserVar('searchField');
-			$searchMatch = Request::getUserVar('searchMatch');
+			$searchType = $request->getUserVar('searchField');
+			$searchMatch = $request->getUserVar('searchMatch');
 
 		} else if (!empty($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
@@ -84,17 +84,17 @@ class AdminPeopleHandler extends AdminHandler {
 			$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 		}
 
-		$templateMgr->assign('currentUrl', Request::url(null, null, 'mergeUsers'));
+		$templateMgr->assign('currentUrl', $request->url(null, null, 'mergeUsers'));
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign_by_ref('thisUser', Request::getUser());
+		$templateMgr->assign_by_ref('thisUser', $request->getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
-		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
+		$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',

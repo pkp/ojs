@@ -35,7 +35,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$router =& $request->getRouter();
 
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		CopyeditorAction::copyeditUnderway($submission, $request);
 
@@ -43,7 +43,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		$metaCitations = $journal->getSetting('metaCitations');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
@@ -64,7 +64,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	function completeCopyedit($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		if (CopyeditorAction::completeCopyedit($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -79,7 +79,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	function completeFinalCopyedit($args, $request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);;
+		$this->setupTemplate($request, true, $articleId);;
 		if (CopyeditorAction::completeFinalCopyedit($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
@@ -145,7 +145,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	function authorProofreadingComplete($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		$send = $request->getUserVar('send') ? true : false;
 
@@ -166,7 +166,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -182,7 +182,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -206,7 +206,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
@@ -233,7 +233,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$this->validate($request, $articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 		CopyeditorAction::viewMetadata($submission, $journal);
 	}
 
@@ -245,7 +245,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	function saveMetadata($args, &$request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		if (CopyeditorAction::saveMetadata($this->submission, $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -287,13 +287,13 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$this->validate($request, $articleId);
 
 		// Prepare the view.
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		// Insert the citation editing assistant into the view.
 		CopyeditorAction::editCitations($request, $this->submission);
 
 		// Render the view.
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->display('copyeditor/submissionCitations.tpl');
 	}
 }

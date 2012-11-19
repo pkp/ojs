@@ -22,10 +22,10 @@ class RTSearchHandler extends RTAdminHandler {
 		parent::RTAdminHandler();
 	}
 
-	function createSearch($args) {
+	function createSearch($args, $request) {
 		$this->validate();
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 
@@ -40,17 +40,17 @@ class RTSearchHandler extends RTAdminHandler {
 		if (isset($args[2]) && $args[2]=='save') {
 			$searchForm->readInputData();
 			$searchForm->execute();
-			Request::redirect(null, null, 'searches', array($versionId, $contextId));
+			$request->redirect(null, null, 'searches', array($versionId, $contextId));
 		} else {
-			$this->setupTemplate(true, $version, $context);
+			$this->setupTemplate($request, true, $version, $context);
 			$searchForm->display();
 		}
 	}
 
-	function searches($args) {
+	function searches($args, $request) {
 		$this->validate();
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'searches');
@@ -62,9 +62,9 @@ class RTSearchHandler extends RTAdminHandler {
 		$context =& $rtDao->getContext($contextId);
 
 		if ($context && $version && $context->getVersionId() == $version->getVersionId()) {
-			$this->setupTemplate(true, $version, $context);
+			$this->setupTemplate($request, true, $version, $context);
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 			$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
@@ -77,15 +77,15 @@ class RTSearchHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/searches.tpl');
 		}
-		else Request::redirect(null, null, 'versions');
+		else $request->redirect(null, null, 'versions');
 	}
 
-	function editSearch($args) {
+	function editSearch($args, $request) {
 		$this->validate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
@@ -95,22 +95,22 @@ class RTSearchHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('classes.rt.ojs.form.SearchForm');
-			$this->setupTemplate(true, $version, $context, $search);
+			$this->setupTemplate($request, true, $version, $context, $search);
 			$searchForm = new SearchForm($searchId, $contextId, $versionId);
 			$searchForm->initData();
 			$searchForm->display();
 		}
-		else Request::redirect(null, null, 'searches', array($versionId, $contextId));
+		else $request->redirect(null, null, 'searches', array($versionId, $contextId));
 
 
 	}
 
-	function deleteSearch($args) {
+	function deleteSearch($args, $request) {
 		$this->validate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
@@ -122,15 +122,15 @@ class RTSearchHandler extends RTAdminHandler {
 			$rtDao->deleteSearch($searchId, $contextId);
 		}
 
-		Request::redirect(null, null, 'searches', array($versionId, $contextId));
+		$request->redirect(null, null, 'searches', array($versionId, $contextId));
 	}
 
-	function saveSearch($args) {
+	function saveSearch($args, $request) {
 		$this->validate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
@@ -145,31 +145,31 @@ class RTSearchHandler extends RTAdminHandler {
 			$searchForm->execute();
 		}
 
-		Request::redirect(null, null, 'searches', array($versionId, $contextId));
+		$request->redirect(null, null, 'searches', array($versionId, $contextId));
 	}
 
-	function moveSearch($args) {
+	function moveSearch($args, $request) {
 		$this->validate();
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
 		$context =& $rtDao->getContext($contextId);
-		$searchId = Request::getUserVar('id');
+		$searchId = $request->getUserVar('id');
 		$search =& $rtDao->getSearch($searchId);
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
-			$direction = Request::getUserVar('dir');
+			$direction = $request->getUserVar('dir');
 			if ($direction != null) {
 				// moving with up or down arrow
 				$isDown = $direction =='d';
 				$search->setOrder($search->getOrder()+($isDown?1.5:-1.5));
 			} else {
 				// drag and drop
-				$prevId = Request::getUserVar('prevId');
+				$prevId = $request->getUserVar('prevId');
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
@@ -187,7 +187,7 @@ class RTSearchHandler extends RTAdminHandler {
 		// In the case of a drag and drop move, the display has been
 		// updated on the client side, so no reload is necessary.
 		if ($direction != null) {
-			Request::redirect(null, null, 'searches', array($versionId, $contextId));
+			$request->redirect(null, null, 'searches', array($versionId, $contextId));
 		}
 	}
 }

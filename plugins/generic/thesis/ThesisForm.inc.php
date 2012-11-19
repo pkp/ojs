@@ -112,7 +112,7 @@ class ThesisForm extends Form {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($thesisPlugin->getRequest());
 		$templateMgr->assign('thesisId', $this->thesisId);
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('validDegrees', $this->validDegrees);

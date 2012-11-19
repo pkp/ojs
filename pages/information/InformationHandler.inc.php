@@ -32,7 +32,7 @@ class InformationHandler extends Handler {
 		if (!$journal) $request->redirect('index');
 
 		$this->validate();
-		$this->setupTemplate($journal);
+		$this->setupTemplate($request, $journal);
 
 		switch(array_shift($args)) {
 			case 'readers':
@@ -63,7 +63,7 @@ class InformationHandler extends Handler {
 				$request->redirect($journal->getPath());
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageCrumbTitle', $pageCrumbTitle);
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('content', $content);
@@ -92,12 +92,13 @@ class InformationHandler extends Handler {
 
 	/**
 	 * Initialize the template.
+	 * @param $request PKPRequest
 	 * @param $journal Journal
 	 */
-	function setupTemplate($journal) {
-		parent::setupTemplate();
+	function setupTemplate($request, $journal) {
+		parent::setupTemplate($request);
 		if (!$journal->getSetting('restrictSiteAccess')) {
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 	}

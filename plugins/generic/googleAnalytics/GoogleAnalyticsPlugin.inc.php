@@ -95,8 +95,8 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $request->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -170,11 +170,11 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	function insertFooter($hookName, $params) {
 		$smarty =& $params[1];
 		$output =& $params[2];
-		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 		if (!empty($currentJournal)) {
-			$request =& $this->getRequest();
 			$journal =& $request->getJournal();
 			$journalId = $journal->getId();
 			$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
@@ -210,8 +210,8 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
 				$request =& $this->getRequest();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& $request->getJournal();
 

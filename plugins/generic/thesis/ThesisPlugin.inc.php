@@ -92,8 +92,8 @@ class ThesisPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr =& TemplateManager::getManager();
 		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 		$pageCrumbs = array(
 			array(
 				$request->url(null, 'user'),
@@ -139,7 +139,7 @@ class ThesisPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr = TemplateManager::getManager();
+			$templateMgr = TemplateManager::getManager($this->getRequest());
 			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page'=>'thesis'), $smarty) . '" target="_parent">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.headerLink'), $smarty) . '</a></li>';
 		}
 		return false;
@@ -149,7 +149,7 @@ class ThesisPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
-			$templateMgr = TemplateManager::getManager();
+			$templateMgr = TemplateManager::getManager($this->getRequest());
 			$output .= '<li>&#187; <a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
 		}
 		return false;
@@ -161,7 +161,7 @@ class ThesisPlugin extends GenericPlugin {
 			$output =& $params[2];
 			$currentJournal = $smarty->get_template_vars('currentJournal');
 			if (!empty($currentJournal)) {
-				$templateMgr = TemplateManager::getManager();
+				$templateMgr = TemplateManager::getManager($this->getRequest());
 				$output .= '<a href="' . $templateMgr->smartyUrl(array('page'=>'thesis'), $smarty) . '" class="action">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.searchLink'), $smarty) . '</a><br /><br />';
 			}
 		}
@@ -175,7 +175,7 @@ class ThesisPlugin extends GenericPlugin {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_USER);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();

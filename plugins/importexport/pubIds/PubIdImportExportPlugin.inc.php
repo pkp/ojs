@@ -66,7 +66,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	 * @see ImportExportPlugin::display()
 	 */
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');

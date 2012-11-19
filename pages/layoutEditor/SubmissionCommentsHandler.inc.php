@@ -33,7 +33,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	function viewLayoutComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		LayoutEditorAction::viewLayoutComments($this->submission);
 	}
@@ -46,7 +46,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -64,7 +64,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	function viewProofreadComments($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		LayoutEditorAction::viewProofreadComments($this->submission);
 	}
@@ -77,7 +77,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	function postProofreadComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -100,7 +100,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		LayoutEditorAction::editComment($this->submission, $this->comment);
 	}
@@ -116,7 +116,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -142,7 +142,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
 		$this->validate($request, $articleId);
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		LayoutEditorAction::deleteComment($commentId);
 

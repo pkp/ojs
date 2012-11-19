@@ -47,7 +47,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 		$this->setBreadcrumbs();
@@ -71,7 +71,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 	 * @param $args array
 	 */
 	function saveSubmit($args, $request) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$this->import('QuickSubmitForm');
 		$form = new QuickSubmitForm($this, $request);

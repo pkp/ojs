@@ -23,12 +23,12 @@ class RTSharingHandler extends RTAdminHandler {
 		parent::RTAdminHandler();
 	}
 
-	function sharingSettings() {
+	function sharingSettings($args, $request) {
 		$this->validate();
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		if ($journal) {
-			$this->setupTemplate(true);
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request, true);
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
@@ -49,33 +49,33 @@ class RTSharingHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.addthisSettings');
 			$templateMgr->display('rtadmin/addthis.tpl');
 		} else {
-			Request::redirect(null, Request::getRequestedPage());
+			$request->redirect(null, $request->getRequestedPage());
 		}
 	}
 
-	function saveSharingSettings() {
+	function saveSharingSettings($args, $request) {
 		$this->validate();
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal) {
 			$rtDao =& DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
-			$rt->setSharingEnabled(Request::getUserVar('sharingEnabled'));
-			$rt->setSharingUserName(Request::getUserVar('sharingUserName'));
-			$rt->setSharingButtonStyle(Request::getUserVar('sharingButtonStyle'));
-			$rt->setSharingDropDownMenu(Request::getUserVar('sharingDropDownMenu'));
-			$rt->setSharingBrand(Request::getUserVar('sharingBrand'));
-			$rt->setSharingDropDown(Request::getUserVar('sharingDropDown'));
-			$rt->setSharingLanguage(Request::getUserVar('sharingLanguage'));
-			$rt->setSharingLogo(Request::getUserVar('sharingLogo'));
-			$rt->setSharingLogoBackground(Request::getUserVar('sharingLogoBackground'));
-			$rt->setSharingLogoColor(Request::getUserVar('sharingLogoColor'));
+			$rt->setSharingEnabled($request->getUserVar('sharingEnabled'));
+			$rt->setSharingUserName($request->getUserVar('sharingUserName'));
+			$rt->setSharingButtonStyle($request->getUserVar('sharingButtonStyle'));
+			$rt->setSharingDropDownMenu($request->getUserVar('sharingDropDownMenu'));
+			$rt->setSharingBrand($request->getUserVar('sharingBrand'));
+			$rt->setSharingDropDown($request->getUserVar('sharingDropDown'));
+			$rt->setSharingLanguage($request->getUserVar('sharingLanguage'));
+			$rt->setSharingLogo($request->getUserVar('sharingLogo'));
+			$rt->setSharingLogoBackground($request->getUserVar('sharingLogoBackground'));
+			$rt->setSharingLogoColor($request->getUserVar('sharingLogoColor'));
 
 			$rtDao->updateJournalRT($rt);
 		}
-		Request::redirect(null, Request::getRequestedPage());
+		$request->redirect(null, $request->getRequestedPage());
 	}
 }
 

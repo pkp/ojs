@@ -66,7 +66,7 @@ class URNSettingsForm extends Form {
 			'urn:nbn' => 'urn:nbn',
 			'urn' => 'urn'
 		);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($this->_plugin->getRequest());
 		$templateMgr->assign('namespaces', $namespaces);
 		parent::display();
 	}

@@ -96,7 +96,7 @@ class GatewayPlugin extends Plugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$templateManager =& TemplateManager::getManager();
+		$templateManager =& TemplateManager::getManager($this->getRequest());
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		switch ($verb) {
 			case 'enable': $this->setEnabled(true); break;

@@ -133,7 +133,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('message', 'plugins.gateways.metsGateway.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');
 		exit;

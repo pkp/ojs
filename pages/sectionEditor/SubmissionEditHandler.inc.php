@@ -53,7 +53,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// author.submit.selectPrincipalContact under Metadata
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR);
 
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		$user =& $request->getUser();
 
@@ -68,7 +68,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$enableComments = $journal->getSetting('enableComments');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
@@ -136,7 +136,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
@@ -154,7 +154,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
@@ -184,7 +184,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$journal =& Request::getJournal();
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER);
 
@@ -243,7 +243,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewFormResponses[$reviewAssignment->getId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getId());
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
@@ -286,7 +286,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		$useCopyeditors = $journal->getSetting('useCopyeditors');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
@@ -298,7 +298,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;
 		$submissionAccepted = ($lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT) ? true : false;
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
@@ -347,9 +347,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionHistory($args, &$request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$submission =& $this->submission;
 		$templateMgr->assign_by_ref('submission', $submission);
 
@@ -387,13 +387,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 
 		// Prepare the view.
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		// Insert the citation editing assistant into the view.
 		SectionEditorAction::editCitations($request, $this->submission);
 
 		// Render the view.
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
 	}
 
@@ -469,7 +469,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			// FIXME: Prompt for due date.
 		} else {
-			$this->setupTemplate(true, $articleId, 'review');
+			$this->setupTemplate($request, true, $articleId, 'review');
 
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -493,7 +493,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$journal = $request->getJournal();
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -535,7 +535,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('classes.sectionEditor.form.CreateReviewerForm');
 		$createReviewerForm = new CreateReviewerForm($articleId);
-		$this->setupTemplate(true, $articleId);
+		$this->setupTemplate($request, true, $articleId);
 
 		if (isset($args[1]) && $args[1] === 'create') {
 			$createReviewerForm->readInputData();
@@ -589,8 +589,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& $request->getUser();
 
 		$rangeInfo = $this->getRangeInfo($request, 'users');
-		$templateMgr =& TemplateManager::getManager();
-		$this->setupTemplate(true);
+		$templateMgr =& TemplateManager::getManager($request);
+		$this->setupTemplate($request, true);
 
 		$searchType = null;
 		$searchMatch = null;
@@ -674,7 +674,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		if (SectionEditorAction::notifyReviewer($submission, $reviewId, $send, $request)) {
 			$request->redirect(null, null, 'submissionReview', $articleId);
@@ -710,7 +710,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		if (SectionEditorAction::cancelReview($submission, $reviewId, $send, $request)) {
 			$request->redirect(null, null, 'submissionReview', $articleId);
@@ -728,7 +728,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$reviewId = (int) $request->getUserVar('reviewId');
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		if (SectionEditorAction::remindReviewer($submission, $reviewId, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submissionReview', $articleId);
@@ -776,7 +776,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		if (SectionEditorAction::thankReviewer($submission, $reviewId, $send, $request)) {
 			$request->redirect(null, null, 'submissionReview', $articleId);
@@ -794,7 +794,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$quality = (int) $request->getUserVar('quality');
 
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$this->setupTemplate(true, $articleId, 'review');
+		$this->setupTemplate($request, true, $articleId, 'review');
 
 		SectionEditorAction::rateReviewer($articleId, $reviewId, $quality, $request);
 
@@ -873,7 +873,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			SectionEditorAction::setDueDate($articleId, $reviewId, $dueDate, $numWeeks, false, $request);
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'review');
+			$this->setupTemplate($request, true, $articleId, 'review');
 			$journal =& $request->getJournal();
 
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -882,7 +882,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$settings =& $settingsDao->getJournalSettings($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			if ($reviewAssignment->getDateDue() != null) {
 				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
@@ -918,9 +918,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			SectionEditorAction::setReviewerRecommendation($this->submission, $reviewId, $recommendation, SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT, $request);
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'review');
+			$this->setupTemplate($request, true, $articleId, 'review');
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
@@ -939,9 +939,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function userProfile($args, &$request) {
 		parent::validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('currentUrl', $request->url(null, $request->getRequestedPage()));
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -992,7 +992,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		SectionEditorAction::viewMetadata($submission, $journal);
 	}
@@ -1007,7 +1007,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		if (SectionEditorAction::saveMetadata($submission, $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -1045,7 +1045,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function previewReviewForm($args, &$request) {
 		parent::validate();
-		$this->setupTemplate(true);
+		$this->setupTemplate($request, true);
 
 		$reviewId = (int) array_shift($args);
 		$reviewFormId = (int) array_shift($args);
@@ -1058,7 +1058,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
 		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
@@ -1108,8 +1108,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
-			$this->setupTemplate(true, $articleId, 'review');
-			$templateMgr =& TemplateManager::getManager();
+			$this->setupTemplate($request, true, $articleId, 'review');
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
@@ -1130,7 +1130,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewId = (int) array_shift($args);
 
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		SectionEditorAction::viewReviewFormResponse($this->submission, $reviewId);
 	}
@@ -1206,7 +1206,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			SectionEditorAction::selectCopyeditor($submission, $userId, $request);
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'editing');
+			$this->setupTemplate($request, true, $articleId, 'editing');
 
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -1227,7 +1227,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getId(), $searchType, $search, $searchMatch);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -1265,7 +1265,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::notifyCopyeditor($submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1294,7 +1294,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::thankCopyeditor($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1310,7 +1310,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::notifyAuthorCopyedit($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1326,7 +1326,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::thankAuthorCopyedit($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1342,7 +1342,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::notifyFinalCopyedit($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1382,7 +1382,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::thankFinalCopyedit($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1426,7 +1426,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
 
@@ -1459,7 +1459,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
 
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		import('classes.submission.form.SuppFileForm');
 		$submitForm = new SuppFileForm($submission, $journal, $suppFileId);
@@ -1500,7 +1500,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveSuppFile($args, $request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 		$submission =& $this->submission;
 
 		$suppFileId = (int) array_shift($args);
@@ -1595,7 +1595,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($articleId);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'summary');
+		$this->setupTemplate($request, true, $articleId, 'summary');
 
 		if (SectionEditorAction::unsuitableSubmission($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submission', $articleId);
@@ -1714,9 +1714,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getId());
 
-			$this->setupTemplate(true, $articleId, 'editing');
+			$this->setupTemplate($request, true, $articleId, 'editing');
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -1756,7 +1756,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 		if (SectionEditorAction::notifyLayoutEditor($this->submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
@@ -1773,7 +1773,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$send = $request->getUserVar('send')?true:false;
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		if (SectionEditorAction::thankLayoutEditor($submission, $send, $request)) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1812,7 +1812,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
 
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.form.ArticleGalleyForm');
 		$submitForm = new ArticleGalleyForm($articleId, $galleyId);
@@ -1833,7 +1833,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 		$submission =& $this->submission;
 
 		import('classes.submission.form.ArticleGalleyForm');
@@ -1905,9 +1905,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -1922,9 +1922,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -1948,7 +1948,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
@@ -2011,9 +2011,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$logId = (int) array_shift($args);
 		$this->validate($articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'history');
+		$this->setupTemplate($request, true, $articleId, 'history');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2065,9 +2065,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->validate($articleId);
 		$submission =& $this->submission;
-		$this->setupTemplate(true, $articleId, 'history');
+		$this->setupTemplate($request, true, $articleId, 'history');
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2180,7 +2180,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$noteId = (int) array_shift($args);
 
 		$this->validate($articleId);
-		$this->setupTemplate(true, $articleId, 'history');
+		$this->setupTemplate($request, true, $articleId, 'history');
 		$submission =& $this->submission;
 
 		$rangeInfo = $this->getRangeInfo($request, 'submissionNotes');
@@ -2191,7 +2191,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$note = $noteDao->getById($noteId);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2273,7 +2273,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			ProofreaderAction::selectProofreader($userId, $submission, $request);
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		} else {
-			$this->setupTemplate(true, $articleId, 'editing');
+			$this->setupTemplate($request, true, $articleId, 'editing');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -2294,7 +2294,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -2333,7 +2333,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $request, $send?'':$request->url(null, null, 'notifyAuthorProofreader'))) {
@@ -2350,7 +2350,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $request, $send?'':$request->url(null, null, 'thankAuthorProofreader'))) {
@@ -2403,7 +2403,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $request, $send?'':$request->url(null, null, 'notifyProofreader'))) {
@@ -2420,7 +2420,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $request, $send?'':$request->url(null, null, 'thankProofreader'))) {
@@ -2478,7 +2478,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
@@ -2503,7 +2503,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$send = $request->getUserVar('send');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$this->setupTemplate(true, $articleId, 'editing');
+		$this->setupTemplate($request, true, $articleId, 'editing');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $request, $send?'':$request->url(null, null, 'thankLayoutEditorProofreader'))) {

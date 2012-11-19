@@ -58,7 +58,8 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * Declare the handler function to process the actual page PATH
 	 */
 	function callbackHandleContent($hookName, $args) {
-		$templateMgr =& TemplateManager::getManager();
+		$request =& $this->getRequest();
+		$templateMgr =& TemplateManager::getManager($request);
 
 		$page =& $args[0];
 		$op =& $args[1];
@@ -92,7 +93,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		$request =& $this->getRequest();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$templateMgr->assign('pagesPath', $request->url(null, 'pages', 'view', 'REPLACEME'));
 
