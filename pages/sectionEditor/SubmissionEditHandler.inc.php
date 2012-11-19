@@ -2325,6 +2325,23 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
+        /**
+         * Editor completes author's proofreading on behalf of author
+         */
+        function editorCompleteAuthor() {
+                $articleId = Request::getUserVar('articleId');
+                $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+                $submission =& $this->submission;
+
+                $signoffDao =& DAORegistry::getDAO('SignoffDAO');
+                $signoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
+                $signoff->setDateCompleted(Core::getCurrentDate());
+                $signoffDao->updateObject($signoff);
+
+
+                Request::redirect(null, null, 'submissionEditing', $articleId);
+        }
+
 	/**
 	 * Thank author for proofreading
 	 */

@@ -129,6 +129,7 @@ switch ($op) {
 	// Proof Assignment Functions
 	case 'selectProofreader':
 	case 'notifyAuthorProofreader':
+	case 'editorCompleteAuthor':
 	case 'thankAuthorProofreader':
 	case 'editorInitiateProofreader':
 	case 'editorCompleteProofreader':
