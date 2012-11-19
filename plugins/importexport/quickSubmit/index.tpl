@@ -219,7 +219,7 @@ function updateAbstractRequired() {
 				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
-				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
+				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-email" key="user.email"}</td>
 				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
@@ -297,7 +297,7 @@ function updateAbstractRequired() {
 				</td>
 			</tr>
 			<tr valign="top">
-				<td width="30%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
+				<td width="30%" class="label">{fieldLabel name="authors-0-email" key="user.email"}</td>
 				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
