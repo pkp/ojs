@@ -448,7 +448,7 @@ class RoleDAO extends DAO {
 	 * @return array
 	 */
 	static function getRoleNames($roleId, $plural = false) {
-		return array($this->getRoleName($roleId, $plural));
+		return array(self::getRoleName($roleId, $plural));
 	}
 
 	/**
