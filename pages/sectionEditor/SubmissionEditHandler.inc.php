@@ -314,7 +314,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);

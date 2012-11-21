@@ -272,6 +272,7 @@ class IssueHandler extends Handler {
 		if (!$issueId) $request->redirect(null, 'index');
 
 		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -311,12 +312,12 @@ class IssueHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished issue galleys,
 		// bypass further validation
-		if (IssueAction::allowedIssuePrePublicationAccess($journal)) return true;
+		if ($issueAction->allowedIssuePrePublicationAccess($journal)) return true;
 
 		// Ensure reader has rights to view the issue galley
 		if ($issue->getPublished()) {
-			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issueId);
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issueId);
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess')) {
@@ -328,7 +329,7 @@ class IssueHandler extends Handler {
 			if (!$isSubscribedDomain && $subscriptionRequired) {
 
 				// Check if user has a valid subscription
-				$subscribedUser = IssueAction::subscribedUser($journal, $issueId);
+				$subscribedUser = $issueAction->subscribedUser($journal, $issueId);
 
 				if (!$subscribedUser) {
 					// Check if payments are enabled,
@@ -453,17 +454,18 @@ class IssueHandler extends Handler {
 
 			// Subscription Access
 			import('classes.issue.IssueAction');
-			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$subscribedUser = IssueAction::subscribedUser($journal);
-			$subscribedDomain = IssueAction::subscribedDomain($journal);
+			$issueAction = new IssueAction();
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$subscribedUser = $issueAction->subscribedUser($journal);
+			$subscribedDomain = $issueAction->subscribedDomain($journal);
 			$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
 
 			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
 				$templateMgr->assign('subscriptionExpiryPartial', true);
 
 				// Partial subscription expiry for issue
-				$partial = IssueAction::subscribedUser($journal, $issue->getId());
-				if (!$partial) IssueAction::subscribedDomain($journal, $issue->getId());
+				$partial = $issueAction->subscribedUser($journal, $issue->getId());
+				if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId());
 				$templateMgr->assign('issueExpiryPartial', $partial);
 
 				// Partial subscription expiry for articles
@@ -472,8 +474,8 @@ class IssueHandler extends Handler {
 
 				$articleExpiryPartial = array();
 				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
-					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+					$partial = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+					if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 				}
 				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);

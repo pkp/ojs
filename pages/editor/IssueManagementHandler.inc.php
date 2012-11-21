@@ -143,7 +143,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
 		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
@@ -176,7 +177,8 @@ class IssueManagementHandler extends EditorHandler {
 		} else {
 			$templateMgr =& TemplateManager::getManager($request);
 			import('classes.issue.IssueAction');
-			$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+			$issueAction = new IssueAction();
+			$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 			$issueForm->display();
 		}
@@ -195,7 +197,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
 		import('classes.issue.form.IssueForm');
 
@@ -232,7 +235,8 @@ class IssueManagementHandler extends EditorHandler {
 		$journalId = $journal->getId();
 
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
 		import('classes.issue.form.IssueForm');
 		$issueForm = new IssueForm('editor/issues/issueData.tpl');
@@ -316,7 +320,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
@@ -592,7 +597,8 @@ class IssueManagementHandler extends EditorHandler {
 		));
 
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');

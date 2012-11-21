@@ -1999,9 +1999,10 @@ class SolrWebService extends XmlWebService {
 
 		// Make sure the requesting party is authorized to acces the article/issue.
 		import('classes.issue.IssueAction');
-		$subscriptionRequired = IssueAction::subscriptionRequired($issue, $journal);
+		$issueAction = new IssueAction();
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		if ($subscriptionRequired) {
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
+			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
 			if (!$isSubscribedDomain) return false;
 		}
 

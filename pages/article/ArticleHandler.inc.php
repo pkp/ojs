@@ -118,12 +118,13 @@ class ArticleHandler extends Handler {
 
 			// The issue may not exist, if this is an editorial user
 			// and scheduling hasn't been completed yet for the article.
+			$issueAction = new IssueAction();
 			if ($issue) {
-				$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+				$templateMgr->assign('subscriptionRequired', $issueAction->subscriptionRequired($issue));
 			}
 
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
+			$templateMgr->assign('subscribedUser', $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
+			$templateMgr->assign('subscribedDomain', $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
 
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
@@ -389,6 +390,7 @@ class ArticleHandler extends Handler {
 		parent::validate(null, $request);
 
 		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
 
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
@@ -414,7 +416,7 @@ class ArticleHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if (($article || $publishedArticle) && (($article && IssueAction::allowedPrePublicationAccess($journal, $article) || ($publishedArticle && IssueAction::allowedPrePublicationAccess($journal, $publishedArticle))))) {
+		if (($article || $publishedArticle) && (($article && $issueAction->allowedPrePublicationAccess($journal, $article) || ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle))))) {
 			$this->journal =& $journal;
 			$this->issue =& $issue;
 			if(isset($publishedArticle)) {
@@ -426,8 +428,8 @@ class ArticleHandler extends Handler {
 
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
-			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -440,7 +442,7 @@ class ArticleHandler extends Handler {
 			     (isset($galleyId) && $galleyId) ) {
 
 				// Subscription Access
-				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+				$subscribedUser = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser)) {
 					// if payment information is enabled,

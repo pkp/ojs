@@ -39,7 +39,7 @@ class ArticleSearchIndex {
 	 */
 	function articleMetadataChanged(&$article) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleMetadataChanged',
 			array($article)
 		);
@@ -91,7 +91,7 @@ class ArticleSearchIndex {
 	 */
 	function articleFileChanged($articleId, $type, $fileId) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleFileChanged',
 			array($articleId, $type, $fileId)
 		);
@@ -133,7 +133,7 @@ class ArticleSearchIndex {
 	 */
 	function articleFilesChanged(&$article) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleFilesChanged',
 			array($article)
 		);
@@ -175,7 +175,7 @@ class ArticleSearchIndex {
 	 */
 	function articleFileDeleted($articleId, $type = null, $assocId = null) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleFileDeleted',
 			array($articleId, $type, $assocId)
 		);
@@ -199,7 +199,7 @@ class ArticleSearchIndex {
 	 */
 	function suppFileMetadataChanged(&$suppFile) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::suppFileMetadataChanged',
 			array($suppFile)
 		);
@@ -237,7 +237,7 @@ class ArticleSearchIndex {
 	function articleDeleted($articleId) {
 		// Trigger a hook to let the indexing back-end know that
 		// an article was deleted.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleDeleted',
 			array($articleId)
 		);
@@ -253,7 +253,7 @@ class ArticleSearchIndex {
 	function articleChangesFinished() {
 		// Trigger a hook to let the indexing back-end know that
 		// the index may be updated.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleChangesFinished'
 		);
 
@@ -310,7 +310,7 @@ class ArticleSearchIndex {
 	 */
 	function rebuildIndex($log = false, $journal = null, $switches = array()) {
 		// Check whether a search plug-in jumps in.
-		$hookResult =& HookRegistry::call(
+		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::rebuildIndex',
 			array($log, $journal, $switches)
 		);

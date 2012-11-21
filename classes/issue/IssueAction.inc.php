@@ -80,7 +80,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function allowedPrePublicationAccess(&$journal, &$article) {
-		if (IssueAction::_roleAllowedPrePublicationAccess($journal)) return true;
+		if ($this->_roleAllowedPrePublicationAccess($journal)) return true;
 
 		$user =& Request::getUser();
 		if ($user && $journal) {
@@ -105,7 +105,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function allowedIssuePrePublicationAccess($journal) {
-		return IssueAction::_roleAllowedPrePublicationAccess($journal);
+		return $this->_roleAllowedPrePublicationAccess($journal);
 	}
 
 	/**
@@ -119,7 +119,7 @@ class IssueAction {
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 		$result = false;
 		if (isset($user) && isset($journal)) {
-			if (IssueAction::allowedPrePublicationAccess($journal, $publishedArticle)) {
+			if ($this->allowedPrePublicationAccess($journal, $publishedArticle)) {
 				 $result = true;
 			} else {
 				$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId());

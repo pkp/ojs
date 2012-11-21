@@ -203,8 +203,9 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// Determine any access limitations. If there are, do not
 		// provide the full-text.
 		import('classes.issue.IssueAction');
-		$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-		$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
+		$issueAction = new IssueAction();
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+		$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

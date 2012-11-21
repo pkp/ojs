@@ -30,7 +30,7 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->search($args, $request);
 	}
 
@@ -127,7 +127,7 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function search($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 
 		// Get and transform active filters.
 		$searchFilters = ArticleSearch::getSearchFilters($request);
@@ -161,7 +161,7 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function authors($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
@@ -196,9 +196,10 @@ class SearchHandler extends Handler {
 
 				if (!isset($issues[$issueId])) {
 					import('classes.issue.IssueAction');
+					import('classes.issue.IssueAction');
 					$issue =& $issueDao->getIssueById($issueId);
 					$issues[$issueId] =& $issue;
-					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
+					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue) && (!$issueAction->subscribedUser($journal, $issueId, $articleId) && !$issueAction->subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {
 					$journals[$journalId] =& $journalDao->getById($journalId);
@@ -253,7 +254,7 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function titles($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
@@ -279,7 +280,7 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function categories($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request);
 
 		$site =& $request->getSite();
@@ -308,7 +309,7 @@ class SearchHandler extends Handler {
 	function category($args, &$request) {
 		$categoryId = (int) array_shift($args);
 
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, true, 'categories');
 
 		$site =& $request->getSite();
@@ -341,7 +342,7 @@ class SearchHandler extends Handler {
 	 * @param $op string Current operation (for breadcrumb construction)
 	 */
 	function setupTemplate($request, $subclass = false, $op = 'index') {
-		parent::setupTemplate();
+		parent::setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 

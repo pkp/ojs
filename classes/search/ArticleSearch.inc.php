@@ -39,10 +39,10 @@ class ArticleSearch {
 	 * @param $query
 	 * @return array of the form ('+' => <required>, '' => <optional>, '-' => excluded)
 	 */
-	function _parseQuery($query) {
+	static function _parseQuery($query) {
 		$count = preg_match_all('/(\+|\-|)("[^"]+"|\(|\)|[^\s\)]+)/', $query, $matches);
 		$pos = 0;
-		$keywords = ArticleSearch::_parseQueryInternal($matches[1], $matches[2], $pos, $count);
+		$keywords = self::_parseQueryInternal($matches[1], $matches[2], $pos, $count);
 		return $keywords;
 	}
 
@@ -50,7 +50,7 @@ class ArticleSearch {
 	 * Query parsing helper routine.
 	 * Returned structure is based on that used by the Search::QueryParser Perl module.
 	 */
-	function _parseQueryInternal($signTokens, $tokens, &$pos, $total) {
+	static function _parseQueryInternal($signTokens, $tokens, &$pos, $total) {
 		$return = array('+' => array(), '' => array(), '-' => array());
 		$postBool = $preBool = '';
 
@@ -68,7 +68,7 @@ class ArticleSearch {
 				case ')':
 					return $return;
 				case '(':
-					$token = ArticleSearch::_parseQueryInternal($signTokens, $tokens, $pos, $total);
+					$token = self::_parseQueryInternal($signTokens, $tokens, $pos, $total);
 				default:
 					$postBool = '';
 					if ($pos < $total) {
@@ -102,7 +102,7 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
-	function &_getMergedArray(&$journal, &$keywords, $publishedFrom, $publishedTo) {
+	static function &_getMergedArray(&$journal, &$keywords, $publishedFrom, $publishedTo) {
 		$resultsPerKeyword = Config::getVar('search', 'results_per_keyword');
 		$resultCacheHours = Config::getVar('search', 'result_cache_hours');
 		if (!is_numeric($resultsPerKeyword)) $resultsPerKeyword = 100;
@@ -117,7 +117,7 @@ class ArticleSearch {
 			if (!empty($keyword['-']))
 				$mergedKeywords['-'][] = array('type' => $type, '+' => array(), '' => $keyword['-'], '-' => array());
 		}
-		$mergedResults =& ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+		$mergedResults =& self::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 
 		return $mergedResults;
 	}
@@ -125,7 +125,7 @@ class ArticleSearch {
 	/**
 	 * Recursive helper for _getMergedArray.
 	 */
-	function &_getMergedKeywordResults(&$journal, &$keyword, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
+	static function &_getMergedKeywordResults(&$journal, &$keyword, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
 		$mergedResults = null;
 
 		if (isset($keyword['type'])) {
@@ -133,7 +133,7 @@ class ArticleSearch {
 		}
 
 		foreach ($keyword['+'] as $phrase) {
-			$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			$results =& self::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			if ($mergedResults === null) {
 				$mergedResults = $results;
 			} else {
@@ -153,7 +153,7 @@ class ArticleSearch {
 
 		if (!empty($mergedResults) || empty($keyword['+'])) {
 			foreach ($keyword[''] as $phrase) {
-				$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				$results =& self::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 				foreach ($results as $articleId => $count) {
 					if (isset($mergedResults[$articleId])) {
 						$mergedResults[$articleId] += $count;
@@ -164,7 +164,7 @@ class ArticleSearch {
 			}
 
 			foreach ($keyword['-'] as $phrase) {
-				$results =& ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				$results =& self::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 				foreach ($results as $articleId => $count) {
 					if (isset($mergedResults[$articleId])) {
 						unset($mergedResults[$articleId]);
@@ -179,9 +179,9 @@ class ArticleSearch {
 	/**
 	 * Recursive helper for _getMergedArray.
 	 */
-	function &_getMergedPhraseResults(&$journal, &$phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
+	static function &_getMergedPhraseResults(&$journal, &$phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
 		if (isset($phrase['+'])) {
-			$mergedResults =& ArticleSearch::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			$mergedResults =& self::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			return $mergedResults;
 		}
 
@@ -212,7 +212,7 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
-	function &_getSparseArray(&$mergedResults) {
+	static function &_getSparseArray(&$mergedResults) {
 		$resultCount = count($mergedResults);
 		$results = array();
 		$i = 0;
@@ -230,7 +230,7 @@ class ArticleSearch {
 	 * @param $request Request
 	 * @return array All search filters (empty and active)
 	 */
-	function getSearchFilters(&$request) {
+	static function getSearchFilters(&$request) {
 		$searchFilters = array(
 			'query' => $request->getUserVar('query'),
 			'searchJournal' => $request->getUserVar('searchJournal'),
@@ -293,8 +293,8 @@ class ArticleSearch {
 	 *  ArticleSearch::getSearchFilters()
 	 * @return array Keyword array as required by ArticleSearch::retrieveResults()
 	 */
-	function getKeywordsFromSearchFilters($searchFilters) {
-		$indexFieldMap = ArticleSearch::getIndexFieldMap();
+	static function getKeywordsFromSearchFilters($searchFilters) {
+		$indexFieldMap = self::getIndexFieldMap();
 		$indexFieldMap[ARTICLE_SEARCH_INDEX_TERMS] = 'indexTerms';
 		$keywords = array();
 		if (isset($searchFilters['query'])) {
@@ -318,7 +318,7 @@ class ArticleSearch {
 	 * @return array An array with the articles, published articles,
 	 *  issue, journal, section and the issue availability.
 	 */
-	function &formatResults(&$results) {
+	static function &formatResults(&$results) {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -362,7 +362,8 @@ class ArticleSearch {
 					$issue =& $issueDao->getIssueById($issueId);
 					$issueCache[$issueId] =& $issue;
 					import('classes.issue.IssueAction');
-					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
+					$issueAction = new IssueAction();
+					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Only display articles from published issues.
@@ -400,7 +401,7 @@ class ArticleSearch {
 	 * @return VirtualArrayIterator An iterator with one entry per retrieved
 	 *  article containing the article, published article, issue, journal, etc.
 	 */
-	function &retrieveResults(&$journal, &$keywords, &$error, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
+	static function &retrieveResults(&$journal, &$keywords, &$error, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
 		// Pagination
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$page = $rangeInfo->getPage();
@@ -412,7 +413,7 @@ class ArticleSearch {
 
 		// Check whether a search plug-in jumps in to provide ranked search results.
 		$totalResults = null;
-		$results =& HookRegistry::call(
+		$results = HookRegistry::call(
 			'ArticleSearch::retrieveResults',
 			array(&$journal, &$keywords, $publishedFrom, $publishedTo, $page, $itemsPerPage, &$totalResults, &$error)
 		);
@@ -422,14 +423,14 @@ class ArticleSearch {
 		if ($results === false) {
 			// Parse the query.
 			foreach($keywords as $searchType => $query) {
-				$keywords[$searchType] = ArticleSearch::_parseQuery($query);
+				$keywords[$searchType] = self::_parseQuery($query);
 			}
 
 			// Fetch all the results from all the keywords into one array
 			// (mergedResults), where mergedResults[article_id]
 			// = sum of all the occurences for all keywords associated with
 			// that article ID.
-			$mergedResults =& ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo);
+			$mergedResults =& self::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo);
 
 			// Convert mergedResults into an array (frequencyIndicator =>
 			// $articleId).
@@ -437,7 +438,7 @@ class ArticleSearch {
 			// where higher is better, indicating the quality of the match.
 			// It is generated here in such a manner that matches with
 			// identical frequency do not collide.
-			$results =& ArticleSearch::_getSparseArray($mergedResults);
+			$results =& self::_getSparseArray($mergedResults);
 			$totalResults = count($results);
 
 			// Use only the results for the specified page.
@@ -457,7 +458,7 @@ class ArticleSearch {
 
 		// Take the range of results and retrieve the Article, Journal,
 		// and associated objects.
-		$results =& ArticleSearch::formatResults($results);
+		$results =& self::formatResults($results);
 
 		// Return the appropriate iterator.
 		import('lib.pkp.classes.core.VirtualArrayIterator');
@@ -465,7 +466,7 @@ class ArticleSearch {
 		return $returner;
 	}
 
-	function getIndexFieldMap() {
+	static function getIndexFieldMap() {
 		return array(
 			ARTICLE_SEARCH_AUTHOR => 'authors',
 			ARTICLE_SEARCH_TITLE => 'title',

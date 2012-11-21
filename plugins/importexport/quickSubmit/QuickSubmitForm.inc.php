@@ -79,7 +79,8 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign_by_ref('countries', $countries);
 
 		import('classes.issue.IssueAction');
-		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$issueAction = new IssueAction();
+		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
 		import('classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
