@@ -52,7 +52,7 @@
 			<li>Erzwingen Sie, dass ein Wort in einem Artikel existiert, indem Sie dem Wort ein <strong>+</strong> voranstellen; z.B. <em>+journal +access scholarly academic</em>.</li>
 			<li>Kombinieren Sie mehrere Wörter mit <em>UND</em>, um Artikel zu finden, die alle Begriffe enthalten; z.B. <em>Bildung UND Forschung</em></li>
 			<li>Schließen Sie ein Wort aus, indem Sie ihm ein <strong>-</strong> oder <em>NICHT</em> voranstellen; z.B. <em>online -politics</em> oder <em>online NICHT politics</em></li>
-			<li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen; z.B. <em>"open access publishing"</em></li>
+			<li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen; z.B. <em>"open access publishing"</em>. Hinweis: Chinesische oder japanische Wörter in Anführungszeichen zu setzen, erlaubt Ihnen das Auffinden genauer Wortübereinstimmungen in gemischtsprachigen Feldern, z.B. "中国".</li>
 			<li>Nutzen Sie Klammern für komplexere Suchanfragen; z.B. <em>Archive ((Zeitschrift UND Konferenz) NICHT Dissertationen)</em></li>
 	</ul>
 	]]></message>
@@ -75,7 +75,7 @@
 		<p>Wenn Sie das eingebettete Szenario hinter einer Firewall, wie es in der README-Datei beschrieben ist, benutzen, können Sie wahrscheinlich alle Parameter der Konfiguration unverändert lassen.</p>
 	]]></message>
 	<message key="plugins.generic.lucene.settings.faceting">Facettierung (eine Box mit zusätzlichen Filter zur Verfeinerung der Suche anzeigen)</message>
-	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Sie können spezifische Kategorien zur Facettierung auswählen</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Sie können spezifische Kategorien zur Facettierung auswählen (die entsprechenden Metadaten müssen im Setup, Schritt 3.4, zur Indizierung ausgewählt worden sein)</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
 		Das Lucene-Suche-Plug-In stellt verschiedene optionale Merkmale der Suche bereit. Die meisten dieser Merkmale sind standardmäßig aktiviert, können aber deaktiviert oder feiner eingestellt werden.
 	]]></message>
