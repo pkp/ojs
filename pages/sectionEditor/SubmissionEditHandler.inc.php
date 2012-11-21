@@ -58,7 +58,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& $request->getUser();
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
+		$journalSettings = $journalSettingsDao->getSettings($journal->getId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
@@ -881,7 +881,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
 			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$settings =& $settingsDao->getJournalSettings($journal->getId());
+			$settings =& $settingsDao->getSettings($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager($request);
 

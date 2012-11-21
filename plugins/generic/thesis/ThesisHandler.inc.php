@@ -107,7 +107,7 @@ class ThesisHandler extends Handler {
 			$thesisPlugin->import('StudentThesisForm');
 			$enableUploadCode = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
@@ -200,7 +200,7 @@ class ThesisHandler extends Handler {
 				$request->redirect(null, 'thesis');
 			} else {
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-				$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+				$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->assign('journalSettings', $journalSettings);

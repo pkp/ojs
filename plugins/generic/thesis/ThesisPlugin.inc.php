@@ -228,7 +228,7 @@ class ThesisPlugin extends GenericPlugin {
 					}
 
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-					$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+					$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 
 					$thesisForm = new ThesisForm($this->getName(), $thesisId);
 					$thesisForm->initData();
@@ -265,7 +265,7 @@ class ThesisPlugin extends GenericPlugin {
 						}
 
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-						$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+						$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);

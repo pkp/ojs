@@ -84,7 +84,7 @@ class AuthorSubmitForm extends Form {
 
 		$journal =& $this->request->getJournal();
 		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getJournalSettings($journal->getId()));
+		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getSettings($journal->getId()));
 
 		parent::display();
 	}

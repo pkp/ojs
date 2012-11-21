@@ -157,7 +157,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$bfrPlugin->import('classes.form.BookForReviewForm');
 
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$countries =& $countryDao->getCountries();
@@ -266,7 +266,7 @@ class BooksForReviewEditorHandler extends Handler {
 				}
 			} else {
 				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-				$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+				$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 				$countryDao =& DAORegistry::getDAO('CountryDAO');
 				$countries =& $countryDao->getCountries();
 

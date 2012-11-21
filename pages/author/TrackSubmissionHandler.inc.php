@@ -89,7 +89,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->setupTemplate($request, true, $articleId);
 
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getId());
+		$journalSettings = $journalSettingsDao->getSettings($journal->getId());
 
 		// Setting the round.
 		$round = (int) array_shift($args);

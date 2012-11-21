@@ -39,7 +39,7 @@ class AboutHandler extends Handler {
 			$journal =& $request->getJournal();
 
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getId()));
+			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getSettings($journal->getId()));
 
 			$customAboutItems =& $journalSettingsDao->getSetting($journal->getId(), 'customAboutItems');
 			if (isset($customAboutItems[AppLocale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[AppLocale::getLocale()]);
@@ -106,7 +106,7 @@ class AboutHandler extends Handler {
 		$journal =& $request->getJournal();
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+		$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
 	}
@@ -424,7 +424,7 @@ class AboutHandler extends Handler {
 		$journal =& $request->getJournal();
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$journalSettings =& $journalDao->getJournalSettings($journal->getId());
+		$journalSettings =& $journalDao->getSettings($journal->getId());
 		$submissionChecklist = $journal->getLocalizedSetting('submissionChecklist');
 		if (!empty($submissionChecklist)) {
 			ksort($submissionChecklist);

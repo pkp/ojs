@@ -144,61 +144,19 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Retrieve array of journal settings.
-	 * @return array
-	 */
-	function &getSettings() {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$settings =& $journalSettingsDao->getJournalSettings($this->getId());
-		return $settings;
-	}
-
-	/**
-	 * Retrieve a localized setting.
-	 * @param $name string
-	 * @param $preferredLocale string
-	 * @return mixed
-	 */
-	function &getLocalizedSetting($name, $preferredLocale = null) {
-		if (is_null($preferredLocale)) $preferredLocale = AppLocale::getLocale();
-		$returner = $this->getSetting($name, $preferredLocale);
-		if ($returner === null) {
-			unset($returner);
-			$returner = $this->getSetting($name, AppLocale::getPrimaryLocale());
-		}
-		return $returner;
-	}
-
-	/**
-	 * Retrieve a journal setting value.
-	 * @param $name string
-	 * @param $locale string
-	 * @return mixed
-	 */
-	function &getSetting($name, $locale = null) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
-		$setting =& $journalSettingsDao->getSetting($this->getId(), $name, $locale);
-		return $setting;
-	}
-
-	/**
-	 * Update a journal setting value.
-	 * @param $name string
-	 * @param $value mixed
-	 * @param $type string optional
-	 * @param $isLocalized boolean optional
-	 */
-	function updateSetting($name, $value, $type = null, $isLocalized = false) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
-		return $journalSettingsDao->updateSetting($this->getId(), $name, $value, $type, $isLocalized);
-	}
-
-	/**
 	 * Get the association type for this context.
 	 * @return int
 	 */
 	function getAssocType() {
 		return ASSOC_TYPE_JOURNAL;
+	}
+
+	/**
+	 * Get the settings DAO for this context object.
+	 * @return DAO
+	 */
+	static function getSettingsDAO() {
+		return DAORegistry::GetDAO('JournalSettingsDAO');
 	}
 }
 

@@ -50,7 +50,7 @@ class JournalSettingsDAO extends DAO {
 	}
 
 	function _cacheMiss(&$cache, $id) {
-		$settings =& $this->getJournalSettings($cache->getCacheId());
+		$settings =& $this->getSettings($cache->getCacheId());
 		if (!isset($settings[$id])) {
 			$cache->setCache($id, null);
 			return null;
@@ -63,7 +63,7 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 * @return array
 	 */
-	function &getJournalSettings($journalId) {
+	function &getSettings($journalId) {
 		$journalSettings = array();
 
 		$result =& $this->retrieve(

@@ -324,7 +324,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 					}
 
 					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-					$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+					$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId, $journalId);
 					if ($externalFeedForm->isLocaleResubmit()) {
@@ -365,7 +365,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 						}
 
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-						$journalSettings =& $journalSettingsDao->getJournalSettings($journalId);
+						$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);

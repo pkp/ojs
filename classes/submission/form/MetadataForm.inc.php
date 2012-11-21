@@ -214,7 +214,7 @@ class MetadataForm extends Form {
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getId():null);
-		$templateMgr->assign('submissionSettings', $settingsDao->getJournalSettings($journal->getId()));
+		$templateMgr->assign('submissionSettings', $settingsDao->getSettings($journal->getId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
