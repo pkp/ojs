@@ -35,15 +35,15 @@ class TemporaryFileManager extends PKPTemporaryFileManager {
 		// Get the file extension, then rename the file.
 		$fileExtension = $this->parseFileExtension($articleFile->getFileName());
 
-		if (!$this->fileExists($this->filesDir, 'dir')) {
+		if (!$this->fileExists($this->getBasePath(), 'dir')) {
 			// Try to create destination directory
-			$this->mkdirtree($this->filesDir);
+			$this->mkdirtree($this->getBasePath());
 		}
 
-		$newFileName = basename(tempnam($this->filesDir, $fileExtension));
+		$newFileName = basename(tempnam($this->getBasePath(), $fileExtension));
 		if (!$newFileName) return false;
 
-		if (copy($articleFile->getFilePath(), $this->filesDir . $newFileName)) {
+		if (copy($articleFile->getFilePath(), $this->getBasePath() . $newFileName)) {
 			$temporaryFileDao =& DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->newDataObject();
 
