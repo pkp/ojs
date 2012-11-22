@@ -8,14 +8,13 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  *
   -->
 
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
 	<message key="admin.settings.options">Optionen</message>
-	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Nabigation zwischen den Zeitschriften zu ermöglichen.</message>
+	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Navigation zwischen den Zeitschriften zu ermöglichen.</message>
 	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
@@ -50,7 +49,7 @@
 	<message key="admin.journals.urlWillBe"><![CDATA[Die URL der Zeitschrift ist {$sampleUrl}]]></message>
 	<message key="admin.journals.form.titleRequired">Ein Titel ist erforderlich.</message>
 	<message key="admin.journals.form.pathRequired">Ein Zugangspfad ist erforderlich.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Der Zugangspfad kann nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
 	<message key="admin.journals.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
 	<message key="admin.journals.enableJournalInstructions">Ermöglichen Sie, dass diese Zeitschrift öffentlich auf der Website auftaucht.</message>
 	<message key="admin.journals.journalDescription">Beschreibung der Zeitschrift </message>
@@ -62,7 +61,7 @@
 	<message key="admin.journals.importErrors">Der Import ist fehlgeschlagen.</message>
 	<message key="admin.mergeUsers">Benutzer/innen-Daten zusammenführen</message>
 	<message key="admin.mergeUsers.mergeUser">Benutzer/innen-Daten zusammenführen</message>
-	<message key="admin.mergeUsers.into.description">Bitte wählen Sie eine/n Benutzer/in aus, der oder dem Autor/in/innenstatus, Redaktionsaufgaben etc. der vorherigen Benutzerin/des vorherigen Benutzers übertragen werden sollen.</message>
+	<message key="admin.mergeUsers.into.description">Bitte wählen Sie eine/n Benutzer/in aus, der oder dem Autor/innenstatus, Redaktionsaufgaben etc. der vorherigen Benutzerin/des vorherigen Benutzers übertragen werden sollen.</message>
 	<message key="admin.mergeUsers.from.description">Bitte wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Benutzer/innen-Konto zusammengefasst werden sollen (z.B. wenn jemand zwei Benutzer/innen-Zugänge besitzt). Der zuerst ausgewählte Zugang wird gelöscht und seine Beiträge, Aufgaben etc. werden dem zweiten Konto zugeordnet.</message>
 	<message key="admin.mergeUsers.allUsers">Alle registrierten Benutzer/innen</message>
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen "{$newUsername}" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden.</message>
