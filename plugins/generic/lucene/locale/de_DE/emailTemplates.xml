@@ -13,7 +13,9 @@
 <email_texts locale="de_DE">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Artikelindizierungsfehler</subject>
-		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung des Artikels "{$articleTitle}" in der Zeitschrift "{$journalName}".
+		<body>Ein Indizierungsfehler ist der Aktualisierung des Artikel-Index aufgetreten.
+
+Die eventuell aufgetretene Fehlermeldung lautete: "{$error}"
 
 Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
@@ -23,6 +25,8 @@ dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 		<subject>Zeitschriftenindizierungsfehler</subject>
 		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung der Zeitschrift  "{$journalName}".
 
+Die eventuell aufgetretene Fehlermeldung lautete: "{$error}"
+
 Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
 dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</description>
@@ -30,6 +34,8 @@ dass ein Fehler während der Zeitschriftenindizierung aufgetreten ist.</descript
 	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
 		<subject>Fehler des Zeitschriftensuchdienstes</subject>
 		<body>Ein Fehler ist aufgetreten, während jemand versucht hat, die Installation "{$siteName}" zu durchsuchen.
+
+Die eventuell aufgetretene Fehlermeldung lautete: "{$error}"
 
 Diese E-Mail wurde durch das Lucene-Suche-Plug-In von Open Journal Systems erzeugt.</body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um den technischen Kontakt einer Zeitschrift darüber zu informieren,
