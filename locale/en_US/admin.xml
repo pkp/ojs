@@ -18,18 +18,24 @@
 	<message key="admin.settings.usePaging">For sites with many journals, break the list of journals up into several pages.</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
-    <message key="admin.settings.journalsList">Journal elements</message>
-    <message key="admin.settings.journalsList.description">Please choose the journal elements that will be displayed for each journal at the site page.</message>
-    <message key="admin.settings.journalsList.showThumbnail">Journal thumbnail</message>
-    <message key="admin.settings.journalsList.showTitle">Journal title</message>
-    <message key="admin.settings.journalsList.showDescription">Journal description</message>
+	<message key="admin.settings.journalsList">Journal elements</message>
+	<message key="admin.settings.journalsList.description">Please choose the journal elements that will be displayed for each journal at the site page.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Journal thumbnail</message>
+	<message key="admin.settings.journalsList.showTitle">Journal title</message>
+	<message key="admin.settings.journalsList.showDescription">Journal description</message>
 	<message key="admin.languages.confirmDisable">Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
 	<message key="admin.locale.maybeIncomplete">Marked locales may be incomplete.</message>
 	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
-	<message key="admin.languages.downloadLocales">Download Locales</message>
 	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
 	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed.</message>
 	<message key="admin.languages.download">Download Locale</message>

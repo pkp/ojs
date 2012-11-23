@@ -339,16 +339,6 @@
 <br /><br />
 Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
 
-
-
-	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
-	<ul>
-		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
-		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
-	</ul>
-<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than OJS has the following effects:</p>
 <ul>
 	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
