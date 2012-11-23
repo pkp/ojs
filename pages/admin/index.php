@@ -40,11 +40,6 @@ switch ($op) {
 	// Languages
 	//
 	case 'languages':
-	case 'saveLanguageSettings':
-	case 'installLocale':
-	case 'uninstallLocale':
-	case 'reloadLocale':
-	case 'downloadLocale':
 		define('HANDLER_CLASS', 'AdminLanguagesHandler');
 		import('pages.admin.AdminLanguagesHandler');
 		break;
