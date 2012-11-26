@@ -96,7 +96,7 @@ class MailTemplate extends PKPMailTemplate {
 		}
 
 		if ($journal && !Request::getUserVar('continued')) {
-			$this->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . $this->getSubject());
+			$this->setSubject('[' . $journal->getLocalizedInitials() . '] ' . $this->getSubject());
 		}
 
 		$this->journal =& $journal;
