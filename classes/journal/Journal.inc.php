@@ -127,23 +127,6 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Get localized initials of journal
-	 * @return string
-	 */
-	function getLocalizedInitials() {
-		return $this->getLocalizedSetting('initials');
-	}
-
-	/**
-	 * Get the initials of the journal.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getInitials($locale) {
-		return $this->getSetting('initials', $locale);
-	}
-
-	/**
 	 * Get the association type for this context.
 	 * @return int
 	 */

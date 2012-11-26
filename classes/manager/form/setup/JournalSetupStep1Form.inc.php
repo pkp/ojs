@@ -23,7 +23,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 			1,
 			array(
 				'title' => 'string',
-				'initials' => 'string',
+				'acronym' => 'string',
 				'abbreviation' => 'string',
 				'printIssn' => 'string',
 				'onlineIssn' => 'string',
@@ -58,7 +58,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.journalTitleRequired'));
-		$this->addCheck(new FormValidatorLocale($this, 'initials', 'required', 'manager.setup.form.journalInitialsRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'acronym', 'required', 'manager.setup.form.journalInitialsRequired'));
 		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
 		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
@@ -70,7 +70,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'initials', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'sponsorNote', 'publisherNote', 'contributorNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
+		return array('title', 'acronym', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'sponsorNote', 'publisherNote', 'contributorNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
 	}
 
 	/**

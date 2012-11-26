@@ -64,7 +64,7 @@ class CrossRefExportDom {
 		$head =& XMLCustomWriter::createElement($doc, 'head');
 
 		// DOI batch ID is a simple tracking ID: initials + timestamp
-		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getLocalizedInitials() . '_' . time());
+		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getLocalizedAcronym() . '_' . time());
 		XMLCustomWriter::createChildWithText($doc, $head, 'timestamp', time());
 
 		$journalId = $journal->getId();

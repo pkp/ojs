@@ -329,6 +329,7 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.0.0">
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
 	</upgrade>
 	<!-- update plugin configuration - should be done as the final upgrade task -->

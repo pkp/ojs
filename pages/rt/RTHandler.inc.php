@@ -293,7 +293,7 @@ class RTHandler extends ArticleHandler {
 				$primaryAuthor = $article->getAuthors();
 				$primaryAuthor = $primaryAuthor[0];
 
-				$email->setSubject('[' . $journal->getLocalizedInitials() . '] ' . strip_tags($article->getLocalizedTitle()));
+				$email->setSubject('[' . $journal->getLocalizedAcronym() . '] ' . strip_tags($article->getLocalizedTitle()));
 				$email->assignParams(array(
 					'articleTitle' => strip_tags($article->getLocalizedTitle()),
 					'volume' => $issue?$issue->getVolume():null,
@@ -345,7 +345,7 @@ class RTHandler extends ArticleHandler {
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!$request->getUserVar('continued')) {
-				$email->setSubject('[' . $journal->getLocalizedInitials() . '] ' . strip_tags($article->getLocalizedTitle()));
+				$email->setSubject('[' . $journal->getLocalizedAcronym() . '] ' . strip_tags($article->getLocalizedTitle()));
 			}
 			$email->displayEditForm($router->url($request, null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
 		}

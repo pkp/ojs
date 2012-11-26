@@ -344,8 +344,8 @@ class UserHandler extends Handler {
 	 * @return boolean True iff setup is incomplete
 	 */
 	function _checkIncompleteSetup($journal) {
-		if($journal->getLocalizedInitials() == "" || $journal->getSetting('contactEmail') == "" ||
-		   $journal->getSetting('contactName') == "" || $journal->getLocalizedSetting('abbreviation') == "") {
+		if($journal->getLocalizedAcronym() == '' || $journal->getSetting('contactEmail') == '' ||
+		   $journal->getSetting('contactName') == '' || $journal->getLocalizedSetting('abbreviation') == '') {
 			return true;
 		} else return false;
 	}

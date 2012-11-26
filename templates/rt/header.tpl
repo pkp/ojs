@@ -68,7 +68,7 @@
 
 <div id="header">
 <div id="headerTitle">
-<h1>{if $currentJournal && $currentJournal->getLocalizedInitials()}{$currentJournal->getLocalizedInitials()}&nbsp;{/if}{translate key="rt.readingTools"}</h1>
+<h1>{if $currentJournal && $currentJournal->getLocalizedAcronym()}{$currentJournal->getLocalizedAcronym()}&nbsp;{/if}{translate key="rt.readingTools"}</h1>
 </div>
 </div>
 
