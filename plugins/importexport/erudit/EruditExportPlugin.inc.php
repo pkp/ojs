@@ -118,7 +118,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$journal =& $journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {

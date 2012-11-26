@@ -60,7 +60,7 @@ class LanguageGridHandler extends PKPLanguageGridHandler {
 	 */
 	function updateContext($context) {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalDao->updateJournal($context);
+		$journalDao->updateObject($context);
 	}
 }
 

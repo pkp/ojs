@@ -44,7 +44,7 @@ class JournalDAO extends DAO {
 	 * @param $path string
 	 * @return Journal
 	 */
-	function &getJournalByPath($path) {
+	function &getByPath($path) {
 		$returner = null;
 		$result =& $this->retrieve(
 			'SELECT * FROM journals WHERE path = ?', $path
@@ -80,7 +80,7 @@ class JournalDAO extends DAO {
 	 * Insert a new journal.
 	 * @param $journal Journal
 	 */
-	function insertJournal(&$journal) {
+	function insertObject(&$journal) {
 		$this->update(
 			'INSERT INTO journals
 				(path, seq, enabled, primary_locale)
@@ -94,7 +94,7 @@ class JournalDAO extends DAO {
 			)
 		);
 
-		$journal->setId($this->getInsertJournalId());
+		$journal->setId($this->getInsertId());
 		return $journal->getId();
 	}
 
@@ -102,7 +102,7 @@ class JournalDAO extends DAO {
 	 * Update an existing journal.
 	 * @param $journal Journal
 	 */
-	function updateJournal(&$journal) {
+	function updateObject(&$journal) {
 		return $this->update(
 			'UPDATE journals
 				SET
@@ -125,17 +125,17 @@ class JournalDAO extends DAO {
 	 * Delete a journal, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journal Journal
 	 */
-	function deleteJournal(&$journal) {
-		return $this->deleteJournalById($journal->getId());
+	function deleteObject(&$journal) {
+		return $this->deleteById($journal->getId());
 	}
 
 	/**
 	 * Delete a journal by ID, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journalId int
 	 */
-	function deleteJournalById($journalId) {
+	function deleteById($journalId) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->deleteSettingsByJournal($journalId);
+		$journalSettingsDao->deleteById($journalId);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteSectionsByJournal($journalId);
@@ -176,13 +176,13 @@ class JournalDAO extends DAO {
 		$groupDao->deleteGroupsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->deleteSettingsByJournalId($journalId);
+		$pluginSettingsDao->deleteById($journalId);
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormDao->deleteByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
 		return $this->update(
-			'DELETE FROM journals WHERE journal_id = ?', $journalId
+			'DELETE FROM journals WHERE journal_id = ?', (int) $journalId
 		);
 	}
 
@@ -272,7 +272,7 @@ class JournalDAO extends DAO {
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
-	function &getJournalTitles($enabledOnly = false) {
+	function &getTitles($enabledOnly = false) {
 		$journals = array();
 
 		$journalIterator =& $this->getJournals($enabledOnly);
@@ -290,7 +290,7 @@ class JournalDAO extends DAO {
 	 * @param $path the path of the journal
 	 * @return boolean
 	 */
-	function journalExistsByPath($path) {
+	function existsByPath($path) {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM journals WHERE path = ?', $path
 		);
@@ -356,7 +356,7 @@ class JournalDAO extends DAO {
 	/**
 	 * Sequentially renumber journals in their sequence order.
 	 */
-	function resequenceJournals() {
+	function resequence() {
 		$result =& $this->retrieve(
 			'SELECT journal_id FROM journals ORDER BY seq'
 		);
@@ -382,7 +382,7 @@ class JournalDAO extends DAO {
 	 * Get the ID of the last inserted journal.
 	 * @return int
 	 */
-	function getInsertJournalId() {
+	function getInsertId() {
 		return $this->_getInsertId('journals', 'journal_id');
 	}
 }

@@ -188,7 +188,7 @@ class PluginSettingsDAO extends DAO {
 	 * Delete all settings for a journal.
 	 * @param $journalId int
 	 */
-	function deleteSettingsByJournalId($journalId) {
+	function deleteById($journalId) {
 		return $this->update(
 			'DELETE FROM plugin_settings WHERE journal_id = ?', $journalId
 		);

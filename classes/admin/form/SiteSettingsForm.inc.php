@@ -28,7 +28,7 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 	 */
 	function display() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournalTitles();
+		$journals =& $journalDao->getTitles();
 		$templateMgr =& TemplateManager::getManager();
 
 		$allThemes =& PluginRegistry::loadCategory('themes');

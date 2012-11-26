@@ -112,7 +112,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		if (isset($args) && !empty($args) && !empty($args[0])) {
 			$journalId = $args[0];
-			if ($journalDao->deleteJournalById($journalId)) {
+			if ($journalDao->deleteById($journalId)) {
 				// Delete journal file tree
 				// FIXME move this somewhere better.
 				import('lib.pkp.classes.file.FileManager');
@@ -161,8 +161,8 @@ class AdminJournalHandler extends AdminHandler {
 				$journal->setSequence($prevSeq + .5);
 			}
 
-			$journalDao->updateJournal($journal);
-			$journalDao->resequenceJournals();
+			$journalDao->updateObject($journal);
+			$journalDao->resequence();
 
 			// Moving up or down with the arrows requires a page reload.
 			// In the case of a drag and drop move, the display has been

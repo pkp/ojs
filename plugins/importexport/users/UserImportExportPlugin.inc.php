@@ -216,7 +216,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$journal =& $journalDao->getJournalByPath($journalPath);
+		$journal =& $journalDao->getByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {

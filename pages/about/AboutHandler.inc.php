@@ -35,7 +35,7 @@ class AboutHandler extends Handler {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalPath = $request->getRequestedJournalPath();
 
-		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
+		if ($journalPath != 'index' && $journalDao->existsByPath($journalPath)) {
 			$journal =& $request->getJournal();
 
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');

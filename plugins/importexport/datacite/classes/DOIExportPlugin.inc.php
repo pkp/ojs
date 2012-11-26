@@ -328,7 +328,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		if (is_array($result)) {
 			$journalPath = array_shift($args);
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getJournalByPath($journalPath);
+			$journal =& $journalDao->getByPath($journalPath);
 			if (!$journal) {
 				if ($journalPath != '') {
 					$result[] = array('plugins.importexport.common.export.error.unknownJournal', $journalPath);

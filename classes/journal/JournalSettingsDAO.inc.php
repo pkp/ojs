@@ -157,12 +157,12 @@ class JournalSettingsDAO extends DAO {
 	 * Delete all settings for a journal.
 	 * @param $journalId int
 	 */
-	function deleteSettingsByJournal($journalId) {
+	function deleteById($journalId) {
 		$cache =& $this->_getCache($journalId);
 		$cache->flush();
 
 		return $this->update(
-				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
+			'DELETE FROM journal_settings WHERE journal_id = ?', (int) $journalId
 		);
 	}
 

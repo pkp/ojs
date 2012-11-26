@@ -166,7 +166,7 @@ class PeopleHandler extends ManagerHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$roleId = (int)(isset($args[0])?$args[0]:$request->getUserVar('roleId'));
-		$journal =& $journalDao->getJournalByPath($request->getRequestedJournalPath());
+		$journal =& $journalDao->getByPath($request->getRequestedJournalPath());
 
 		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
@@ -264,7 +264,7 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getJournalByPath($request->getRequestedJournalPath());
+		$journal =& $journalDao->getByPath($request->getRequestedJournalPath());
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$rolePath = $roleDao->getRolePath($roleId);
 
@@ -321,7 +321,7 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalTitles =& $journalDao->getJournalTitles();
+		$journalTitles =& $journalDao->getTitles();
 
 		$journal =& $request->getJournal();
 		unset($journalTitles[$journal->getId()]);
@@ -707,7 +707,7 @@ class PeopleHandler extends ManagerHandler {
 				// We'll be displaying all roles, so get ready to display
 				// journal names other than the current journal.
 				$journalDao =& DAORegistry::getDAO('JournalDAO');
-				$journalTitles =& $journalDao->getJournalTitles();
+				$journalTitles =& $journalDao->getTitles();
 				$templateMgr->assign_by_ref('journalTitles', $journalTitles);
 			}
 

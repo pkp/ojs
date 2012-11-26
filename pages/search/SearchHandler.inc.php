@@ -116,7 +116,7 @@ class SearchHandler extends Handler {
 		// Assign journal options.
 		if ($searchFilters['siteSearch']) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournalTitles(true);
+			$journals =& $journalDao->getTitles(true);
 			$templateMgr->assign('journalOptions', array('' => AppLocale::Translate('search.allJournals')) + $journals);
 		}
 	}

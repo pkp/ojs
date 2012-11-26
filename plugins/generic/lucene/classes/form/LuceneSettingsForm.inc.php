@@ -175,7 +175,7 @@ class LuceneSettingsForm extends Form {
 			$journalsToReindex = array(
 				'' => __('plugins.generic.lucene.settings.indexRebuildAllJournals')
 			);
-			foreach($journalDao->getJournalTitles(true) as $journalId => $journalName) {
+			foreach($journalDao->getTitles(true) as $journalId => $journalName) {
 				$journalsToReindex[$journalId] = __('plugins.generic.lucene.settings.indexRebuildJournal', array('journalName' => $journalName));
 			}
 		}

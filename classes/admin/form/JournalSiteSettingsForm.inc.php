@@ -33,7 +33,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'journalPath', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'journalPath', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom($this, 'journalPath', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
+		$this->addCheck(new FormValidatorCustom($this, 'journalPath', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->existsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -115,7 +115,7 @@ class JournalSiteSettingsForm extends Form {
 
 		if ($journal->getId() != null) {
 			$isNewJournal = false;
-			$journalDao->updateJournal($journal);
+			$journalDao->updateObject($journal);
 			$section = null;
 		} else {
 			$isNewJournal = true;
@@ -124,8 +124,8 @@ class JournalSiteSettingsForm extends Form {
 			// Give it a default primary locale
 			$journal->setPrimaryLocale ($site->getPrimaryLocale());
 
-			$journalId = $journalDao->insertJournal($journal);
-			$journalDao->resequenceJournals();
+			$journalId = $journalDao->insertObject($journal);
+			$journalDao->resequence();
 
 			// Make the site administrator the journal manager of newly created journals
 			$sessionManager =& SessionManager::getManager();
