@@ -16,7 +16,7 @@
 		<ul>
 		{assign var=notFirstJournal value=1}
 	{/if}
-	<li><a href="{url journal=$journal->getPath() page="user" op="register"}">{$journal->getLocalizedTitle()|escape}</a></li>
+	<li><a href="{url journal=$journal->getPath() page="user" op="register"}">{$journal->getLocalizedName()|escape}</a></li>
 {/iterate}
 {if $journals->wasEmpty()}
 	{translate key="user.register.noJournals"}

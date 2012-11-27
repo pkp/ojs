@@ -13,7 +13,7 @@
 {/strip}
 
 <div id="submissionComplete">
-<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getLocalizedTitle()}</p>
+<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getLocalizedName()}</p>
 
 {if $canExpedite}
 	{url|assign:"expediteUrl" op="expediteSubmission" articleId=$articleId}

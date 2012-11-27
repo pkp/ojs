@@ -88,7 +88,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 
 		$paramArray = array(
 			'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),
-			'journalTitle' => $journal->getLocalizedTitle(),
+			'journalTitle' => $journal->getLocalizedName(),
 			'siteTitle' => $site->getLocalizedTitle(),
 			'currentUrl' => Request::getRequestUrl()
 		);

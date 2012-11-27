@@ -164,7 +164,7 @@ class SwordPlugin extends GenericPlugin {
 			$mail->addRecipient($submittingUser->getEmail(), $submittingUser->getFullName());
 
 			$mail->assignParams(array(
-				'journalName' => $journal->getLocalizedTitle(),
+				'journalName' => $journal->getLocalizedName(),
 				'articleTitle' => $sectionEditorSubmission->getLocalizedTitle(),
 				'swordDepositUrl' => $request->url(
 					null, 'sword', 'index', $sectionEditorSubmission->getId()

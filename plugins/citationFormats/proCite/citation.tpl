@@ -24,7 +24,7 @@ PY  - {$issue->getDatePublished()|date_format:"%Y"}
 PY  - {$issue->getYear()|escape}
 {/if}
 TI  - {$article->getLocalizedTitle()|strip_tags}
-JF  - {$journal->getLocalizedTitle()}{if $issue}; {$issue->getIssueIdentification()|strip_tags}{/if}
+JF  - {$journal->getLocalizedName()}{if $issue}; {$issue->getIssueIdentification()|strip_tags}{/if}
 
 KW  - {$article->getLocalizedSubject()|escape}
 N2  - {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}

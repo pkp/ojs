@@ -1435,7 +1435,7 @@ class SolrWebService extends XmlWebService {
 		// Journal titles are used for sorting, we therefore need
 		// them in all supported locales.
 		foreach($supportedLocales as $locale) {
-			$localizedTitle = $journal->getLocalizedTitle($locale);
+			$localizedTitle = $journal->getLocalizedName($locale);
 			if (!is_null($localizedTitle)) {
 				// Add the localized title.
 				$journalTitleNode =& XMLCustomWriter::createChildWithText($articleDoc, $journalTitleList, 'journalTitle', $localizedTitle);
@@ -1443,7 +1443,7 @@ class SolrWebService extends XmlWebService {
 
 				// If the title does not exist in the given locale
 				// then use the localized title for sorting only.
-				$journalTitle = $journal->getTitle($locale);
+				$journalTitle = $journal->getName($locale);
 				$sortOnly = (empty($journalTitle) ? 'true' : 'false');
 				XMLCustomWriter::setAttribute($journalTitleNode, 'sortOnly', $sortOnly);
 			}

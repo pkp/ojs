@@ -11,7 +11,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{url page="issue" op="feed"}</id>
-	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
+	<title>{$journal->getLocalizedName()|escape:"html"|strip}</title>
 
 	{* Figure out feed updated date *}
 	{assign var=latestDate value=$issue->getDatePublished()}

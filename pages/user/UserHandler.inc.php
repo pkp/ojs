@@ -148,7 +148,7 @@ class UserHandler extends Handler {
 		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager($request);
 
-		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
+		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
 		$templateMgr->assign('journalPath', $journal->getPath());
 		$templateMgr->assign('acceptGiftSubscriptionPayments', $acceptGiftSubscriptionPayments);
 		$templateMgr->assign_by_ref('giftSubscriptions', $giftSubscriptions);
@@ -274,7 +274,7 @@ class UserHandler extends Handler {
 		$templateMgr->assign('subscriptionFax', $subscriptionFax);
 		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
 		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
-		$templateMgr->assign('journalTitle', $journal->getLocalizedTitle());
+		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
 		$templateMgr->assign('journalPath', $journal->getPath());
 		$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
 		$templateMgr->assign('individualSubscriptionTypesExist', $individualSubscriptionTypesExist);

@@ -30,7 +30,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->journalId = isset($journalId) ? (int) $journalId : null;
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.journals.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'journalPath', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'journalPath', 'required', 'admin.journals.form.pathAlphaNumeric'));
 		$this->addCheck(new FormValidatorCustom($this, 'journalPath', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->existsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
@@ -57,7 +57,7 @@ class JournalSiteSettingsForm extends Form {
 
 			if ($journal != null) {
 				$this->_data = array(
-					'title' => $journal->getSetting('title', null), // Localized
+					'name' => $journal->getName(null), // Localized
 					'description' => $journal->getSetting('description', null), // Localized
 					'journalPath' => $journal->getPath(),
 					'enabled' => $journal->getEnabled()
@@ -78,7 +78,7 @@ class JournalSiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'description', 'journalPath', 'enabled'));
+		$this->readUserVars(array('name', 'description', 'journalPath', 'enabled'));
 		$this->setData('enabled', (int)$this->getData('enabled'));
 
 		if (isset($this->journalId)) {
@@ -93,7 +93,7 @@ class JournalSiteSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'description');
+		return array('name', 'description');
 	}
 
 	/**
@@ -150,13 +150,13 @@ class JournalSiteSettingsForm extends Form {
 
 			// Install default journal settings
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-			$titles = $this->getData('title');
+			$names = $this->getData('name');
 			AppLocale::requireComponents(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON);
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('journalPath'),
 				'primaryLocale' => $site->getPrimaryLocale(),
-				'journalName' => $titles[$site->getPrimaryLocale()]
+				'journalName' => $names[$site->getPrimaryLocale()]
 			));
 
 			// Install the default RT versions.
@@ -177,7 +177,7 @@ class JournalSiteSettingsForm extends Form {
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);
 		}
-		$journal->updateSetting('title', $this->getData('title'), 'string', true);
+		$journal->updateSetting('name', $this->getData('name'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
 
 		// Make sure all plugins are loaded for settings preload

@@ -35,7 +35,7 @@
 		</div>
 	{/if}
 	{if $site->getSetting('showTitle')}
-		<h3>{$journal->getLocalizedTitle()|escape}</h3>
+		<h3>{$journal->getLocalizedName()|escape}</h3>
 	{/if}
 	{if $site->getSetting('showDescription')}
 		{if $journal->getLocalizedDescription()}

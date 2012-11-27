@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="author.submit.step5"}
 {include file="author/submit/submitHeader.tpl"}
 
-<p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getLocalizedTitle()}</p>
+<p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getLocalizedName()}</p>
 <script type="text/javascript">
 	$(function() {ldelim}
 		// Attach the form handler.

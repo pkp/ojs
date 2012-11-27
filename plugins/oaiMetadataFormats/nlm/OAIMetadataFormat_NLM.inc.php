@@ -71,10 +71,10 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			"\t<front>\n" .
 			"\t\t<journal-meta>\n" .
 			"\t\t\t<journal-id journal-id-type=\"other\">" . htmlspecialchars(Core::cleanVar(($s = Config::getVar('oai', 'nlm_journal_id'))!=''?$s:$journal->getPath())) . "</journal-id>\n" .
-			"\t\t\t<journal-title>" . htmlspecialchars(Core::cleanVar($journal->getLocalizedTitle())) . "</journal-title>\n";
+			"\t\t\t<journal-title>" . htmlspecialchars(Core::cleanVar($journal->getLocalizedName())) . "</journal-title>\n";
 
 		// Include translated journal titles
-		foreach ($journal->getTitle(null) as $locale => $title) {
+		foreach ($journal->getName(null) as $locale => $title) {
 			if ($locale == $primaryLocale) continue;
 			$response .= "\t\t\t<trans-title xml:lang=\"" . strtoupper(substr($locale, 0, 2)) . "\">" . htmlspecialchars(Core::cleanVar($title)) . "</trans-title>\n";
 		}

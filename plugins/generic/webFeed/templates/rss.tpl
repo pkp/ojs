@@ -16,7 +16,7 @@
 
 	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
-		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
+		<title>{$journal->getLocalizedName()|escape:"html"|strip}</title>
 		<link>{url journal=$journal->getPath()}</link>
 
 		{if $journal->getLocalizedDescription()}
@@ -37,7 +37,7 @@
 			<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip}</dc:language>
 		{/if}
 
-		<prism:publicationName>{$journal->getLocalizedTitle()|escape:"html"|strip}</prism:publicationName>
+		<prism:publicationName>{$journal->getLocalizedName()|escape:"html"|strip}</prism:publicationName>
 
 		{if $journal->getSetting('printIssn')}
 			{assign var="ISSN" value=$journal->getSetting('printIssn')}

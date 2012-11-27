@@ -16,7 +16,7 @@
 
 	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
-		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="plugins.generic.thesis.manager.theses"}</title>
+		<title>{$journal->getLocalizedName()|escape:"html"|strip}: {translate key="plugins.generic.thesis.manager.theses"}</title>
 		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
@@ -57,7 +57,7 @@
 
 		{* optional elements *}
 		<description>{$thesis->getDepartment()|strip|escape:"html"}, {$thesis->getUniversity()|strip|escape:"html"}{$break}{$thesis->getDateApproved()|date_format:"%B, %Y"}{$break}{$break}{if $thesisUrlOpen}{$thesisUrlOpen}{translate key="plugins.generic.thesis.fullText"}{$urlClose}{$break}{$break}{/if}{$thesis->getAbstract()|strip|escape:"html"}</description>
-		<dc:creator>{$journal->getLocalizedTitle()|strip|escape:"html"}</dc:creator>
+		<dc:creator>{$journal->getLocalizedName()|strip|escape:"html"}</dc:creator>
 		<dc:date>{$thesis->getDateSubmitted()|date_format:"%Y-%m-%d"}</dc:date>
 	</item>
 {/foreach}

@@ -57,7 +57,7 @@ class PubMedExportDom {
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		$publisherNode = XMLCustomWriter::createChildWithText($doc, $journalNode, 'PublisherName', $publisherInstitution);
 
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getLocalizedName());
 
 		// check various ISSN fields to create the ISSN tag
 		if ($journal->getSetting('printIssn') != '') $ISSN = $journal->getSetting('printIssn');

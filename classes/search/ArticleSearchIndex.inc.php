@@ -337,7 +337,7 @@ class ArticleSearchIndex {
 				$journal =& $journals->next();
 				$numIndexed = 0;
 
-				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ... ';
+				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
 				$articles =& $articleDao->getArticlesByJournalId($journal->getId());
 				while (!$articles->eof()) {

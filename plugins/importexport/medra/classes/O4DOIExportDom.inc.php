@@ -696,7 +696,7 @@ class O4DOIExportDom extends DOIExportDom {
 		$serialWorkElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialWork');
 
 		// Title (mandatory)
-		$journalTitles = $this->getTranslationsByPrecedence($journal->getTitle(null), $journalLocalePrecedence);
+		$journalTitles = $this->getTranslationsByPrecedence($journal->getName(null), $journalLocalePrecedence);
 		assert(!empty($journalTitles));
 		foreach($journalTitles as $locale => $journalTitle) {
 			XMLCustomWriter::appendChild($serialWorkElement, $this->_titleElement($locale, $journalTitle, O4DOI_TITLE_TYPE_FULL));
@@ -862,7 +862,7 @@ class O4DOIExportDom extends DOIExportDom {
 			foreach($localizedTitles as $locale => $localizedTitle) break;
 			if (empty($localizedTitle)) {
 				$journal =& $this->getJournal();
-				$localizedTitles = $this->getTranslationsByPrecedence($journal->getTitle(null), $journalLocalePrecedence);
+				$localizedTitles = $this->getTranslationsByPrecedence($journal->getName(null), $journalLocalePrecedence);
 				// Retrieve the first key/value pair...
 				foreach($localizedTitles as $locale => $localizedTitle) break;
 				assert(!empty($localizedTitle));

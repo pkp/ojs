@@ -109,24 +109,6 @@ class Journal extends Context {
 	//
 
 	/**
-	 * Get the localized title of the journal.
-	 * @param $preferredLocale string
-	 * @return string
-	 */
-	function getLocalizedTitle($preferredLocale = null) {
-		return $this->getLocalizedSetting('title', $preferredLocale);
-	}
-
-	/**
-	 * Get title of journal
-	 * @param $locale string
-	 * @return string
-	 */
-	function getTitle($locale) {
-		return $this->getSetting('title', $locale);
-	}
-
-	/**
 	 * Get the association type for this context.
 	 * @return int
 	 */

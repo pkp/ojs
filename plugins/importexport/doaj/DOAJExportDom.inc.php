@@ -62,7 +62,7 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisher', $journal->getSetting('publisherInstitution'), false);
 
 		/* --- Journal's title --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'journalTitle', $journal->getLocalizedTitle(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'journalTitle', $journal->getLocalizedName(), false);
 
 		/* --- Identification Numbers --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'issn', $journal->getSetting('printIssn'), false);

@@ -43,7 +43,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		);
 		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
 
-		$publisher = $journal->getLocalizedTitle(); // Default
+		$publisher = $journal->getLocalizedName(); // Default
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publisher = $publisherInstitution;
@@ -56,7 +56,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		}
 
 		// Sources contains journal title, issue ID, and pages
-		$source = $journal->getLocalizedTitle() . '; ' . $issue->getIssueIdentification();
+		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
 		$pages = $article->getPages();
 
 		// Relation

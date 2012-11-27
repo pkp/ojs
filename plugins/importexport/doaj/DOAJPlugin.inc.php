@@ -120,7 +120,7 @@ class DOAJPlugin extends ImportExportPlugin {
 		$paramArray = array(
 			'name' => $user->getFullName(),
 			'email' => $user->getEmail(),
-			'title' => $journal->getLocalizedTitle(),
+			'title' => $journal->getLocalizedName(),
 			'description' => String::html2text($journal->getLocalizedSetting('focusScopeDesc')),
 			'url' => $request->url($journal->getPath()),
 			'charging' => $journal->getSetting('submissionFee') > 0 ? 'Y' : 'N',

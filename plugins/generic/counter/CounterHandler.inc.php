@@ -84,7 +84,7 @@ class CounterHandler extends Handler {
 			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
 
 			$journalsArray[$i]['entries'] = $this->_arrangeEntries($entries, $begin, $end);
-			$journalsArray[$i]['journalTitle'] = $journal->getLocalizedTitle();
+			$journalsArray[$i]['journalTitle'] = $journal->getLocalizedName();
 			$journalsArray[$i]['publisherInstitution'] = $journal->getSetting('publisherInstitution');
 			$journalsArray[$i]['printIssn'] = $journal->getSetting('printIssn');
 			$journalsArray[$i]['onlineIssn'] = $journal->getSetting('onlineIssn');
@@ -300,7 +300,7 @@ class CounterHandler extends Handler {
 			if (!$journal) continue;
 			$entries = $counterReportDao->getMonthlyLogRange($journalId, $begin, $end);
 			$cols = array(
-				$journal->getLocalizedTitle(),
+				$journal->getLocalizedName(),
 				$journal->getSetting('publisherInstitution'),
 				'Open Journal Systems', // Platform
 				$journal->getSetting('printIssn'),

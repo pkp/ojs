@@ -34,7 +34,7 @@
 	{/if}
 	</div>
 
-	<h3>{$journal->getLocalizedTitle()|escape}</h3>
+	<h3>{$journal->getLocalizedName()|escape}</h3>
 	{if $journal->getLocalizedDescription()}
 		<p>{$journal->getLocalizedDescription()|nl2br}</p>
 	{/if}

@@ -67,7 +67,7 @@
 	<meta name="DC.Rights" content="{$currentJournal->getLocalizedSetting('copyrightNotice')|strip_tags|escape}"/>
 {/if}
 {* DC.Rights.accessRights *}
-	<meta name="DC.Source" content="{$currentJournal->getLocalizedTitle()|strip_tags|escape}"/>
+	<meta name="DC.Source" content="{$currentJournal->getLocalizedName()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 {elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
 {elseif $currentJournal->getSetting('issn')}{assign var="issn" value=$currentJournal->getSetting('issn')}

@@ -109,7 +109,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		if (!empty($publisherInstitution)) {
 			$publishers = array($journal->getPrimaryLocale() => $publisherInstitution);
 		} else {
-			$publishers = $journal->getTitle(null); // Default
+			$publishers = $journal->getName(null); // Default
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:publisher', $publishers);
 
@@ -156,7 +156,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Source (journal title, issue id and pages)
-		$sources = $journal->getTitle(null);
+		$sources = $journal->getName(null);
 		$pages = $article->getPages();
 		if (!empty($pages)) $pages = '; ' . $pages;
 		foreach ($sources as $locale => $source) {

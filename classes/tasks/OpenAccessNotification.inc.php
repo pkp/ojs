@@ -38,9 +38,9 @@ class OpenAccessNotification extends ScheduledTask {
 			$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 			$paramArray = array(
-				'journalName' => $journal->getLocalizedTitle(),
+				'journalName' => $journal->getLocalizedName(),
 				'journalUrl' => Request::url($journal->getPath()),
-				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle()
+				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedName()
 			);
 			$email->assignParams($paramArray);
 

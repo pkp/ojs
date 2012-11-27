@@ -16,7 +16,7 @@
 
 	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
-		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getLocalizedName()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
@@ -49,7 +49,7 @@
 		{if $announcement->getLocalizedDescription()}
 		<description>{$announcement->getLocalizedDescription()|strip|escape:"html"}</description>
 		{/if}
-		<dc:creator>{$journal->getLocalizedTitle()|strip|escape:"html"}</dc:creator>
+		<dc:creator>{$journal->getLocalizedName()|strip|escape:"html"}</dc:creator>
 		<dc:date>{$announcement->getDatePosted()|date_format:"%Y-%m-%d"}</dc:date>
 	</item>
 {/foreach}

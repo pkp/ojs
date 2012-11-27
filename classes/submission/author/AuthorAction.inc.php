@@ -133,7 +133,7 @@ class AuthorAction extends Action {
 					'articleTitle' => $authorSubmission->getLocalizedTitle(),
 					'authorName' => $user->getFullName(),
 					'submissionUrl' => $request->url(null, $isEditor?'editor':'sectionEditor', 'submissionReview', $authorSubmission->getId()),
-					'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedTitle()
+					'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getLocalizedName()
 				);
 				$email->assignParams($paramArray);
 				$email->send($request);

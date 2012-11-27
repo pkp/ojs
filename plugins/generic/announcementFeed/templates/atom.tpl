@@ -11,7 +11,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$selfUrl|escape}</id>
-	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+	<title>{$journal->getLocalizedName()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 	<updated>{$dateUpdated|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -39,7 +39,7 @@
 		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
 		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$journal->getLocalizedTitle()|escape:"html"|strip}</name>
+			<name>{$journal->getLocalizedName()|escape:"html"|strip}</name>
         </author>
 		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getId()}" />
         {if $announcement->getLocalizedDescription()}

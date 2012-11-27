@@ -37,8 +37,8 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="title" required="true" key="manager.setup.journalTitle"}</td>
-		<td width="80%" class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="name" required="true" key="manager.setup.journalTitle"}</td>
+		<td width="80%" class="value"><input type="text" name="name[{$formLocale|escape}]" id="name" value="{$name[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="acronym" required="true" key="manager.setup.journalInitials"}</td>

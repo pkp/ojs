@@ -25,7 +25,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		$galleys =& $record->getData('galleys');
 
 		// Publisher
-		$publisher = $journal->getLocalizedTitle(); // Default
+		$publisher = $journal->getLocalizedName(); // Default
 		$publisherInstitution = $journal->getLocalizedSetting('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publisher = $publisherInstitution;

@@ -523,7 +523,7 @@ class DOIExportDom {
 		if (empty($publisher)) {
 			// Use the journal title if no publisher is set.
 			// This corresponds to the logic implemented for OAI interfaces, too.
-			$publisher = $this->getPrimaryTranslation($journal->getTitle(null), $localePrecedence);
+			$publisher = $this->getPrimaryTranslation($journal->getName(null), $localePrecedence);
 		}
 		assert(!empty($publisher));
 		return $publisher;

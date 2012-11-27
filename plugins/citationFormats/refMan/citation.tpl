@@ -20,7 +20,7 @@ AU  - {$author->getFullName(true)|escape}
 PY  - {$article->getDatePublished()|date_format:"%Y/%m/%d/"}
 {/if}
 TI  - {$article->getLocalizedTitle()|strip_tags}
-JF  - {$journal->getLocalizedTitle()|escape}{if $issue}; {$issue->getIssueIdentification()|escape|strip_tags}{/if}
+JF  - {$journal->getLocalizedName()|escape}{if $issue}; {$issue->getIssueIdentification()|escape|strip_tags}{/if}
 
 KW  - {$article->getLocalizedSubject()|replace:';':','|escape}
 N2  - {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}

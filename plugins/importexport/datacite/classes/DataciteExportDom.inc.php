@@ -852,11 +852,11 @@ class DataciteExportDom extends DOIExportDom {
 		$journal =& $this->getJournal();
 		if (is_null($objectLocalePrecedence)) {
 			$issueInfo = array();
-			foreach ($journal->getTitle(null) as $locale => $journalTitle) {
+			foreach ($journal->getName(null) as $locale => $journalTitle) {
 				$issueInfo[$locale] = "$journalTitle, $issueIdentification";
 			}
 		} else {
-			$issueInfo = $this->getPrimaryTranslation($journal->getTitle(null), $objectLocalePrecedence);
+			$issueInfo = $this->getPrimaryTranslation($journal->getName(null), $objectLocalePrecedence);
 			if (!empty($issueInfo)) {
 				$issueInfo .= ', ';
 			}

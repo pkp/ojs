@@ -97,7 +97,7 @@ class GiftsHandler extends Handler {
 		$templateMgr->assign(array(
 			'currentUrl' => $request->url(null, null, 'gifts'),
 			'pageTitle' => 'gifts.thankYou',
-			'journalName' => $journal->getLocalizedTitle(),
+			'journalName' => $journal->getLocalizedName(),
 			'message' => 'gifts.thankYouMessage'
 		));
 		$templateMgr->display('common/message.tpl');

@@ -18,7 +18,7 @@
 
 <ul>
 {iterate from=journals item=journal}
-	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getLocalizedTitle()|escape}</a></li>{/if}
+	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getLocalizedName()|escape}</a></li>{/if}
 {/iterate}
 </ul>
 {else}
@@ -63,7 +63,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">Title</td>
-	<td class="value">{$journal->getLocalizedTitle()|escape}</td>
+	<td class="value">{$journal->getLocalizedName()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">Publisher</td>

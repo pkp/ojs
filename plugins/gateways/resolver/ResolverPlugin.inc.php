@@ -155,7 +155,7 @@ class ResolverPlugin extends GatewayPlugin {
 			}
 			unset($issues);
 
-			echo $this->sanitize($journal->getLocalizedTitle()) . "\t";
+			echo $this->sanitize($journal->getLocalizedName()) . "\t";
 			echo $this->sanitize($journal->getSetting('printIssn')) . "\t";
 			echo $this->sanitize($journal->getSetting('onlineIssn')) . "\t";
 			echo $this->sanitize($startDate===null?'':strftime('%Y-%m-%d', $startDate)) . "\t"; // start_date

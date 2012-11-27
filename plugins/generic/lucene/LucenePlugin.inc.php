@@ -1024,7 +1024,7 @@ class LucenePlugin extends GenericPlugin {
 			// We re-index journal by journal to partition the task a bit
 			// and provide better progress information to the user.
 			foreach($journals as $journal) {
-				$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedTitle())) . ' ', $messages);
+				$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ', $messages);
 
 				// Mark all articles in the journal for re-indexing.
 				$numMarked = $this->_solrWebService->markJournalChanged($journal->getId());

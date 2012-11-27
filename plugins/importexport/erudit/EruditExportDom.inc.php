@@ -45,7 +45,7 @@ class EruditExportDom {
 		$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
 		XMLCustomWriter::appendChild($adminNode, $journalNode);
 		XMLCustomWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getLocalizedName());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getLocalizedAcronym(), false);
 
 		if (!($printIssn = $journal->getSetting('printIssn'))) {

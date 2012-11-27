@@ -422,7 +422,7 @@ class OJSPaymentManager extends PaymentManager {
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, $giftLocale);
 				$giftDetails = $gift->getGiftName($giftLocale);
-				$giftJournalName = $journal->getTitle($giftLocale);
+				$giftJournalName = $journal->getName($giftLocale);
 				$giftContactSignature = $journal->getSetting('contactName');
 
 				import('classes.mail.MailTemplate');

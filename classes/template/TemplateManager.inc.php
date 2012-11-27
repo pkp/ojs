@@ -60,7 +60,7 @@ class TemplateManager extends PKPTemplateManager {
 			if (isset($journal)) {
 
 				$this->assign_by_ref('currentJournal', $journal);
-				$journalTitle = $journal->getLocalizedTitle();
+				$journalTitle = $journal->getLocalizedName();
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
 

@@ -115,7 +115,7 @@ class OAIDAO extends PKPOAIDAO {
 		// FIXME Set descriptions
 		$sets = array();
 		foreach ($journals as $journal) {
-			$title = $journal->getLocalizedTitle();
+			$title = $journal->getLocalizedName();
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 

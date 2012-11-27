@@ -234,15 +234,15 @@ class JournalDAO extends DAO {
 				break;
 		}
 
-		// If we need to join on the journal title (for sort or filter),
+		// If we need to join on the journal name (for sort or filter),
 		// include it.
 		if ($needTitleJoin) {
 			$joinSql .= ' LEFT JOIN journal_settings jspl ON (jspl.setting_name = ? AND jspl.locale = ? AND jspl.journal_id = j.journal_id) LEFT JOIN journal_settings jsl ON (jsl.setting_name = ? AND jsl.locale = ? AND jsl.journal_id = j.journal_id)';
 			$params = array_merge(
 				array(
-					'title',
+					'name',
 					AppLocale::getPrimaryLocale(),
-					'title',
+					'name',
 					AppLocale::getLocale()
 				),
 				$params
@@ -277,7 +277,7 @@ class JournalDAO extends DAO {
 
 		$journalIterator =& $this->getJournals($enabledOnly);
 		while ($journal =& $journalIterator->next()) {
-			$journals[$journal->getId()] = $journal->getLocalizedTitle();
+			$journals[$journal->getId()] = $journal->getLocalizedName();
 			unset($journal);
 		}
 		unset($journalIterator);

@@ -111,7 +111,7 @@ class MailTemplate extends PKPMailTemplate {
 		// Add commonly-used variables to the list
 		if (isset($this->journal)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $this->journal->getLocalizedTitle();
+			$paramArray['journalName'] = $this->journal->getLocalizedName();
 			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
 			$site =& Request::getSite();
