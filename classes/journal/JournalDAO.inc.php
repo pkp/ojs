@@ -13,49 +13,26 @@
  * @brief Operations for retrieving and modifying Journal objects.
  */
 
-import ('classes.journal.Journal');
+import('lib.pkp.classes.core.ContextDAO');
+import('classes.journal.Journal');
 
 define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);
 
-class JournalDAO extends DAO {
+class JournalDAO extends ContextDAO {
 	/**
-	 * Retrieve a journal by ID.
-	 * @param $journalId int
-	 * @return Journal
+	 * Constructor
 	 */
-	function &getById($journalId) {
-		$result =& $this->retrieve(
-			'SELECT * FROM journals WHERE journal_id = ?',
-			(int) $journalId
-		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnJournalFromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		unset($result);
-		return $returner;
+	function JournalDAO() {
+		parent::ContextDAO();
 	}
 
 	/**
-	 * Retrieve a journal by path.
-	 * @param $path string
-	 * @return Journal
+	 * Construct a new Journal.
+	 * @return DataObject
 	 */
-	function &getByPath($path) {
-		$returner = null;
-		$result =& $this->retrieve(
-			'SELECT * FROM journals WHERE path = ?', $path
-		);
-
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnJournalFromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		unset($result);
-		return $returner;
+	function newDataObject() {
+		return new Journal();
 	}
 
 	/**
@@ -63,16 +40,9 @@ class JournalDAO extends DAO {
 	 * @param $row array
 	 * @return Journal
 	 */
-	function &_returnJournalFromRow($row) {
-		$journal = new Journal();
-		$journal->setId($row['journal_id']);
-		$journal->setPath($row['path']);
-		$journal->setSequence($row['seq']);
-		$journal->setEnabled($row['enabled']);
-		$journal->setPrimaryLocale($row['primary_locale']);
-
+	function _fromRow($row) {
+		$journal = parent::_fromRow($row);
 		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
-
 		return $journal;
 	}
 
@@ -119,14 +89,6 @@ class JournalDAO extends DAO {
 				$journal->getId()
 			)
 		);
-	}
-
-	/**
-	 * Delete a journal, INCLUDING ALL DEPENDENT ITEMS.
-	 * @param $journal Journal
-	 */
-	function deleteObject(&$journal) {
-		return $this->deleteById($journal->getId());
 	}
 
 	/**
@@ -181,9 +143,7 @@ class JournalDAO extends DAO {
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormDao->deleteByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
-		return $this->update(
-			'DELETE FROM journals WHERE journal_id = ?', (int) $journalId
-		);
+		parent::deleteById($journalId);
 	}
 
 	/**
@@ -264,7 +224,7 @@ class JournalDAO extends DAO {
 			$params, $rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		$returner = new DAOResultFactory($result, $this, '_fromRow');
 		return $returner;
 	}
 
@@ -283,23 +243,6 @@ class JournalDAO extends DAO {
 		unset($journalIterator);
 
 		return $journals;
-	}
-
-	/**
-	 * Check if a journal exists with a specified path.
-	 * @param $path the path of the journal
-	 * @return boolean
-	 */
-	function existsByPath($path) {
-		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM journals WHERE path = ?', $path
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
 	}
 
 	/**
@@ -353,37 +296,23 @@ class JournalDAO extends DAO {
 		return false;
 	}
 
+	//
+	// Protected methods
+	//
 	/**
-	 * Sequentially renumber journals in their sequence order.
+	 * Get the table name for this context.
+	 * @return string
 	 */
-	function resequence() {
-		$result =& $this->retrieve(
-			'SELECT journal_id FROM journals ORDER BY seq'
-		);
-
-		for ($i=1; !$result->EOF; $i++) {
-			list($journalId) = $result->fields;
-			$this->update(
-				'UPDATE journals SET seq = ? WHERE journal_id = ?',
-				array(
-					$i,
-					$journalId
-				)
-			);
-
-			$result->moveNext();
-		}
-
-		$result->close();
-		unset($result);
+	protected function _getTableName() {
+		return 'journals';
 	}
 
 	/**
-	 * Get the ID of the last inserted journal.
-	 * @return int
+	 * Get the name of the primary key column for this context.
+	 * @return string
 	 */
-	function getInsertId() {
-		return $this->_getInsertId('journals', 'journal_id');
+	protected function _getPrimaryKeyColumn() {
+		return 'journal_id';
 	}
 }
 
