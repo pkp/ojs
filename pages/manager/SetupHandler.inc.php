@@ -29,7 +29,7 @@ class SetupHandler extends ManagerHandler {
 	 * @param $request Request
 	 */
 	function setup($args, &$request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$this->setupTemplate($request, true);
 
 		$step = isset($args[0]) ? (int) $args[0] : 0;
