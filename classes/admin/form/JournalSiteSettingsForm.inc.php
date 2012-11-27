@@ -107,7 +107,7 @@ class JournalSiteSettingsForm extends Form {
 		}
 
 		if (!isset($journal)) {
-			$journal = new Journal();
+			$journal = $journalDao->newDataObject();
 		}
 
 		$journal->setPath($this->getData('journalPath'));
