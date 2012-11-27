@@ -331,6 +331,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
+		<code function="clearDataCache" />
 	</upgrade>
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
