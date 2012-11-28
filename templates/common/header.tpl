@@ -7,7 +7,5 @@
  * Common site header.
  *}
 {strip}
-{translate|assign:"applicationName" key="common.openJournalSystems"}
 {include file="core:common/header.tpl"}
 {/strip}
-
