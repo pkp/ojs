@@ -67,6 +67,7 @@ class TinyMCEPlugin extends GenericPlugin {
 		$formLocale = $templateMgr->get_template_vars('formLocale');
 		$request =& $this->getRequest();
 		$fields = array();
+		$requestedArgs = $request->getRequestedArgs();
 		switch ("$page/$op") {
 			case 'admin/settings':
 			case 'admin/saveSettings':
@@ -80,7 +81,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'author/submit':
 			case 'author/saveSubmit':
-				switch (array_shift($request->getRequestedArgs())) {
+				switch (array_shift($requestedArgs)) {
 					case 1: $fields[] = 'commentsToEditor'; break;
 					case 3:
 						$count = max(1, count($templateMgr->get_template_vars('authors')));
@@ -200,8 +201,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'manager/setup':
 			case 'manager/saveSetup':
-				$args = $request->getRequestedArgs();
-				switch (array_shift($args)) {
+				switch (array_shift($requestedArgs)) {
 					case 1:
 						$fields[] = 'mailingAddress';
 						$fields[] = 'contactMailingAddress';

@@ -42,6 +42,8 @@ class JournalDAO extends ContextDAO {
 	 */
 	function _fromRow($row) {
 		$journal = parent::_fromRow($row);
+		$journal->setPrimaryLocale($row['primary_locale']);
+		$journal->setEnabled($row['enabled']);
 		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
 		return $journal;
 	}
