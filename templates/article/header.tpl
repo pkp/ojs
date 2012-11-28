@@ -24,7 +24,7 @@
 	{include file="article/googlescholar.tpl"}
 	{call_hook name="Templates::Article::Header::Metadata"}
 
-	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" media="all" href="{$baseUrl}/styles/lib.css" />
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/compiled.css" type="text/css" />
