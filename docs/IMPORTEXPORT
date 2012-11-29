@@ -40,7 +40,7 @@ included plugins. For example:
 	  only by the command line tool and should be discarded by the web-
 	  based tool for security reasons;
 	- XML-based import/export plugins should use the XMLReader and XMLWriter
-	  classes to ensure compatibility with PHP4 and PHP5;
+	  classes to ensure compatibility;
 	- etc.
 
 
