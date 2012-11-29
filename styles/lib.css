@@ -1,0 +1,24 @@
+/**
+ * @file styles/lib.css
+ *
+ * Copyright (c) 2003-2012 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief 3rd-Party Imports
+ *
+ * These are excluded from less processing because some of them fail parsing
+ * e.g. due to styling differences; maintaining differently-styled CSS is not
+ * a particularly attractive idea.
+ */
+
+/**
+ * The following libraries are compilable but compiling throws image paths off.
+ */
+
+/* Plupload - http://www.plupload.com/ */
+
+@import url("../lib/pkp/js/lib/plupload/jquery.ui.plupload/css/jquery.ui.plupload.css");
+
+/* JqueryUI - http://jqueryui.com */
+
+@import url("../lib/pkp/styles/lib/jqueryUi/jqueryUi.css");
