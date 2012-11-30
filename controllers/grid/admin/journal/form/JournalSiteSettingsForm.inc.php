@@ -80,7 +80,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section = null;
 		} else {
 			$isNewJournal = true;
-			$site =& Request::getSite();
+			$site =& $request->getSite();
 
 			// Give it a default primary locale
 			$journal->setPrimaryLocale ($site->getPrimaryLocale());
@@ -114,7 +114,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$names = $this->getData('name');
 			AppLocale::requireComponents(LOCALE_COMPONENT_OJS_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON);
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
-				'indexUrl' => Request::getIndexUrl(),
+				'indexUrl' => $request->getIndexUrl(),
 				'journalPath' => $this->getData('path'),
 				'primaryLocale' => $site->getPrimaryLocale(),
 				'journalName' => $names[$site->getPrimaryLocale()]
