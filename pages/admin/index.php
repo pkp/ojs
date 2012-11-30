@@ -28,11 +28,6 @@ switch ($op) {
 	// Journal Management
 	//
 	case 'journals':
-	case 'createJournal':
-	case 'editJournal':
-	case 'updateJournal':
-	case 'deleteJournal':
-	case 'moveJournal':
 		define('HANDLER_CLASS', 'AdminJournalHandler');
 		import('pages.admin.AdminJournalHandler');
 		break;

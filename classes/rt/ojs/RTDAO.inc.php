@@ -176,7 +176,7 @@ class RTDAO extends DAO {
 			array((int) $journalId, $version->key, $version->locale, $version->title, $version->description)
 		);
 
-		$version->versionId = $this->getInsertId('rt_versions', 'version_id');
+		$version->versionId = $this->_getInsertId('rt_versions', 'version_id');
 
 		foreach ($version->contexts as $context) {
 			$context->versionId = $version->versionId;
@@ -367,7 +367,7 @@ class RTDAO extends DAO {
 			)
 		);
 
-		$context->contextId = $this->getInsertId('rt_contexts', 'context_id');
+		$context->contextId = $this->_getInsertId('rt_contexts', 'context_id');
 
 		foreach ($context->searches as $search) {
 			$search->contextId = $context->contextId;
@@ -539,7 +539,7 @@ class RTDAO extends DAO {
 			)
 		);
 
-		$search->searchId = $this->getInsertId('rt_searches', 'search_id');
+		$search->searchId = $this->_getInsertId('rt_searches', 'search_id');
 		return $search->searchId;
 	}
 
