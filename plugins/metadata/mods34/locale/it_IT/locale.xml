@@ -6,11 +6,12 @@
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * COntributed by Andrea Marchitelli
   *
   * Localization strings for the it_IT locale.
   -->
 
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Article Adapter</message>
+	<message key="plugins.metadata.mods34.articleAdapter.displayName">Metadati MODS 3.4</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Estrae/inserisce metadati da/in articoli.</message>
 </locale>
