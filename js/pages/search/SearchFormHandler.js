@@ -38,7 +38,7 @@
 		// Focus the main query field and select all text in it.
 		// NB: We have to check for two inputs to support
 		// the special auto-complete fields.
-		$queryInput = $form.find('input[name="query_input"]');
+		var $queryInput = $form.find('input[name="query_input"]');
 		if ($queryInput.length === 0) {
 			// Auto-complete is switched off.
 			$queryInput = $form.find('input[name="query"]');
@@ -86,8 +86,8 @@
 	 * @param {Event} event The "formChanged" event.
 	 */
 	$.pkp.pages.search.SearchFormHandler.prototype.instantSearch =
-			function(searchForm, event) {
-		var searchHandler;
+			function(formElement, event) {
+		var searchHandler, $form;
 
 		this.formChangesTracked = false;
 
@@ -97,30 +97,30 @@
 		// (or auto-selecting) fast.
 		clearTimeout(this.instantSearchTimeout);
 		this.instantSearchTimeout = setTimeout(
-			this.callbackWrapper(
-				function() {
-					// Only trigger instant search
-					// if we have at least 3 characters
-					// in a field. This avoids irrelevant
-					// search requests.
-					if (this.hasData_(3)) {
-						// Signal an instant search request to the search
-						// handler.
-						this.setInstantSearch_(true);
-						$form = this.getHtmlElement();
-						$.post(
-							$form.attr('action'),
-							$form.serialize(),
-							this.callbackWrapper(
-								this.handleInstantSearchResponse
-							),
-							'html'
-						);
-					}
-				}
-			),
-			500 // Half a second timeout.
-		);
+				this.callbackWrapper(
+						function() {
+							// Only trigger instant search
+							// if we have at least 3 characters
+							// in a field. This avoids irrelevant
+							// search requests.
+							if (this.hasData_(3)) {
+								// Signal an instant search request to the search
+								// handler.
+								this.setInstantSearch_(true);
+								$form = this.getHtmlElement();
+								$.post(
+										$form.attr('action'),
+										$form.serialize(),
+										this.callbackWrapper(
+												this.handleInstantSearchResponse
+										),
+										'html'
+								);
+							}
+						}
+				),
+				500 // Half a second timeout.
+				);
 	};
 
 
@@ -132,13 +132,13 @@
 	 * of a form response.
 	 *
 	 * @param {HTMLElement} formElement The wrapped HTML form.
-	 * @param {String} resultList The HTML returned from the server.
+	 * @param {string} resultList The HTML returned from the server.
 	 */
 	$.pkp.pages.search.SearchFormHandler.prototype.handleInstantSearchResponse =
 			function(formElement, resultList) {
 
 		// Make sure that we actually got table content.
-		if(resultList.trim().substr(0,4) == '<tr>') {
+		if (resultList.trim().substr(0, 4) == '<tr>') {
 			// Replace the results table.
 			$('#results table.listing').html(resultList);
 		}
@@ -174,13 +174,14 @@
 	/**
 	 * Internal method checking whether fields contain data.
 	 *
-	 * @param {integer} minLen The min length of a field entry
+	 * @param {number} minLen The min length of a field entry
 	 *  so that it is considered "non-blank".
 	 * @return {boolean} True if the form contains data.
+	 * @private
 	 */
 	$.pkp.pages.search.SearchFormHandler.prototype.hasData_ =
 			function(minLen) {
-		var $form, hasData, formFields, i, numFields, fieldLength;
+		var $form, hasData = false, formFields, i, numFields, fieldLength;
 
 		$form = this.getHtmlElement();
 
@@ -206,7 +207,8 @@
 	/**
 	 * Method to (create and) set the instant search flag.
 	 *
-	 * @param {boolean} value The value of the instant search flag.
+	 * @param {boolean} flag The value of the instant search flag.
+	 * @private
 	 */
 	$.pkp.pages.search.SearchFormHandler.prototype.setInstantSearch_ =
 			function(flag) {
@@ -217,9 +219,9 @@
 			// Add a hidden input field to signal an
 			// instant search request to the search handler.
 			$instantSearch = $('<input>').attr({
-			    type: 'hidden',
-			    id: 'instantSearch',
-			    name: 'instantSearch'
+				type: 'hidden',
+				id: 'instantSearch',
+				name: 'instantSearch'
 			}).appendTo(this.getHtmlElement());
 		}
 
