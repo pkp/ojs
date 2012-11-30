@@ -143,7 +143,7 @@ class JournalDAO extends ContextDAO {
 		$pluginSettingsDao->deleteById($journalId);
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewFormDao->deleteByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+		$reviewFormDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
 		parent::deleteById($journalId);
 	}
