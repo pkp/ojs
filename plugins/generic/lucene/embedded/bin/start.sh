@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Execute this script on *nix systems to start the solr server. Please read
+# the README file that comes with this plugin first to understand how to install
+# and configure Solr. You'll find usage examples there, too.
+#
+# Usage: start.sh
+
 # Source common variables.
 EXEC_PATH=`dirname $0`
 source "$EXEC_PATH/script-startup"
@@ -30,14 +36,8 @@ JAVA_OPTIONS="$JAVA_OPTIONS -Djetty.home=$JETTY_HOME"
 SOLR_HOME="$DEPLOYMENT_DIR/solr"
 JAVA_OPTIONS="$JAVA_OPTIONS -Dsolr.solr.home=$SOLR_HOME"
 
-# Files directory
-LUCENE_FILES="$OJS_FILES/lucene"
-if [ ! -d "$LUCENE_FILES" ]; then
-  mkdir -p "$LUCENE_FILES"
-fi
-
 # Solr index data directory
-SOLR_DATA="$OJS_FILES/lucene/data"
+SOLR_DATA="$LUCENE_FILES/data"
 if [ ! -d "$SOLR_DATA" ]; then
   mkdir "$SOLR_DATA"
 fi
@@ -52,7 +52,7 @@ if [ -z "$TMP" ]; then
 fi
 JAVA_OPTIONS="$JAVA_OPTIONS -Djava.io.tmpdir=$TMP"
 
-java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF >>$OJS_FILES/lucene/solr-java.log 2>&1 &
+java $JAVA_OPTIONS -jar "$JETTY_HOME/start.jar" $JETTY_CONF >>$LUCENE_FILES/solr-java.log 2>&1 &
 
 # Remember the PID of the process we just started.
 SOLR_PID=$!
