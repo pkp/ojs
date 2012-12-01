@@ -148,6 +148,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		}
 	}
 
+
 	/**
 	 * SCENARIO: Change document (push): publication
 	 *   GIVEN An article contains the word "noodles" in its title
@@ -254,7 +255,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $this->_articleId;
 		$this->verifyAndOpen($submissionEditingPage);
 		$this->clickAndWait('//a[contains(@href, "deleteGalley")]');
-		$this->waitForConfirmation('Are you sure');
+		$this->waitForConfirmation('*Are you sure*');
 
 		// Check that the galley is no longer indexed.
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
@@ -276,7 +277,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $this->_articleId;
 		$this->verifyAndOpen($submissionEditingPage);
 		$this->clickAndWait('//a[contains(@href, "deleteSuppFile")]');
-		$this->waitForConfirmation('Are you sure');
+		$this->waitForConfirmation('*Are you sure*');
 
 		// Check that the supp file is no longer indexed.
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
@@ -289,6 +290,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// The article should no longer be indexed.
 		$this->assertFalse($this->_solr->getArticleFromIndex($this->_articleId));
 	}
+
 
 	/**
 	 * SCENARIO: Change document (push): delete article
@@ -373,7 +375,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// Check that the article appears in the pull indexing
 		// web service and is not marked for deletion.
 		$pullXml = $this->_retrievePullIndexingXml();
-		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
+		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
 
 		// Check that the article is now "clean".
 		$article =& $articleDao->getArticle($this->_articleId);
@@ -389,7 +391,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		// Check that the article appears in the pull indexing
 		// web service and is marked for deletion.
 		$pullXml = $this->_retrievePullIndexingXml();
-		$this->assertContains('article id="39" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
+		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
 
 		// Check that the article is "clean".
 		$article =& $articleDao->getArticle($this->_articleId);

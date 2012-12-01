@@ -68,7 +68,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO: see FunctionalDoiExportTest::testExpectJournalNameAsPublisher()
+	 * SCENARIO: see FunctionalDoiExportTest::doTestExpectJournalNameAsPublisher()
 	 *
 	 * SCENARIO OUTLINE: see FunctionalDoiExportTest::doExportObjectTest().
 	 *
@@ -80,13 +80,13 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	public function testExportSerialIssueAsWork() {
 		$this->removeRegisteredDois('MedraExportPlugin');
 		$this->configurePlugin(array('exportIssuesAs' => O4DOI_ISSUE_AS_WORK));
-		$this->testExpectJournalNameAsPublisher();
+		$this->doTestExpectJournalNameAsPublisher();
 		$this->doExportObjectTest('issue', 1, 'MedraExportPlugin', 'serial-issue-as-work.xml');
 	}
 
 
 	/**
-	 * SCENARIO: see FunctionalDoiExportTest::testExpectJournalNameAsPublisher()
+	 * SCENARIO: see FunctionalDoiExportTest::doTestExpectJournalNameAsPublisher()
 	 */
 	protected function checkThatPublisherIsJournalName($xml) {
 		// Test that the publisher is set to the journal title.

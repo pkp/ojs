@@ -116,7 +116,7 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// Check whether we get an error message.
 		$this->assertElementPresent('css=table.listing td.nodata');
-		$this->assertText('css=table.listing td.nodata', 'the OJS search service is currently offline');
+		$this->assertText('css=table.listing td.nodata', '*the OJS search service is currently offline*');
 
 		// Start the solr server.
 		$this->startSolrServer($embeddedServer);
@@ -421,41 +421,44 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// Leave default selection and click "Rebuild Index".
 		$this->clickAndWait('name=rebuildIndex');
-		$this->waitForConfirmation('can take a long time');
+		$this->waitForConfirmation('*can take a long time*');
+		$messages = $this->getText('rebuildIndexMessage');
 
 		// Check whether the server confirms the re-indexing
 		// of all journals.
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Clearing index ... done');
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Indexing "lucene-test" . * articles indexed');
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Indexing "test" . * articles indexed');
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Rebuilding dictionaries ... done');
+		$this->assertContains('LucenePlugin: Clearing index ... done', $messages);
+		$this->assertRegExp('/LucenePlugin: Indexing "lucene-test" \. [0-9]+ articles indexed/', $messages);
+		$this->assertRegExp('/LucenePlugin: Indexing "test" \. [0-9]+ articles indexed/', $messages);
+		$this->assertContains('LucenePlugin: Rebuilding dictionaries ... done', $messages);
 
 		// Select a single journal from the list.
 		$this->select('journalToReindex', 'value=1');
 
 		// Click "Rebuild Index".
 		$this->clickAndWait('name=rebuildIndex');
-		$this->waitForConfirmation('can take a long time');
+		$this->waitForConfirmation('*can take a long time*');
+		$messages = $this->getText('rebuildIndexMessage');
 
 		// Check whether the server confirms the re-indexing
 		// of all journals.
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Clearing index ... done');
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Indexing "test" . * articles indexed');
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Rebuilding dictionaries ... done');
+		$this->assertContains('LucenePlugin: Clearing index ... done', $messages);
+		$this->assertRegExp('/LucenePlugin: Indexing "test" \. [0-9]+ articles indexed/', $messages);
+		$this->assertContains('LucenePlugin: Rebuilding dictionaries ... done', $messages);
 
 		// This time, the second journal must not appear in the indexing output.
-		$this->assertNotText('rebuildIndexMessage', 'Indexing "lucene-test" . * articles indexed');
+		$this->assertNotContains('"lucene-test"', $messages);
 
 		// Click "Rebuild Dictionaries".
 		$this->clickAndWait('name=rebuildDictionaries');
-		$this->waitForConfirmation('can take a long time');
+		$this->waitForConfirmation('*can take a long time*');
+		$messages = $this->getText('rebuildIndexMessage');
 
 		// Check whether the server confirms the re-indexing
 		// of all journals.
-		$this->assertText('rebuildIndexMessage', 'LucenePlugin: Rebuilding dictionaries ... done');
+		$this->assertContains('LucenePlugin: Rebuilding dictionaries ... done', $messages);
 
 		// This time no indexing should be done.
-		$this->assertNotText('rebuildIndexMessage', 'Indexing');
+		$this->assertNotContains('Indexing', $messages);
 	}
 
 	/**

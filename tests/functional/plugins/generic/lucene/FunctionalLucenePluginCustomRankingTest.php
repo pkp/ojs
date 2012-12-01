@@ -110,7 +110,8 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 		$this->simpleSearch('+ranking +("article 1"^1.5 "article 2"^1.3 "article 3" "article 4")');
 
 		// Check that article 4 no longer is in the table;
-		$this->assertNotText('css=table.listing', 'Ranking Test Article 4');
+		$listing = $this->getText('css=table.listing');
+		$this->assertNotContains('Ranking Test Article 4', $listing);
 
 		// Check that the ranking order of the remaining articles
 		// was reversed.

@@ -85,7 +85,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		//
 		// Second submission page.
 		//
-		$this->waitForLocation($submissionPage . '2');
+		$this->waitForLocation($submissionPage . '2*');
 		$this->waitForElementPresent('css=input.defaultButton');
 
 		// We should now have the article ID in the URL.
@@ -99,12 +99,12 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 
 		// Submit the second submission page.
 		$this->clickAndWait('css=input.defaultButton');
-		$this->waitForConfirmation('Are you sure you wish to continue');
+		$this->waitForConfirmation('*Are you sure you wish to continue*');
 
 		//
 		// Third submission page.
 		//
-		$this->waitForLocation($submissionPage . '3');
+		$this->waitForLocation($submissionPage . '3*');
 		$this->waitForElementPresent('css=input.defaultButton');
 
 		// Fill in article metadata.
@@ -128,11 +128,11 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		//
 		// Fourth and fifth submission page.
 		//
-		$this->waitForLocation($submissionPage . '4');
+		$this->waitForLocation($submissionPage . '4*');
 		$this->waitForElementPresent('css=input.defaultButton');
 		// Do not upload any supplementary file and continue.
 		$this->clickAndWait('css=input.defaultButton');
-		$this->waitForLocation($submissionPage . '5');
+		$this->waitForLocation($submissionPage . '5*');
 		$this->waitForElementPresent('css=input.defaultButton');
 		// Confirm the submission.
 		$this->clickAndWait('css=input.defaultButton');

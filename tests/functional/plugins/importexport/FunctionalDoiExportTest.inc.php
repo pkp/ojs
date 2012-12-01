@@ -136,7 +136,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *    WHEN I export an object
 	 *    THEN the O4DOI publisher field will be set to the journal name.
 	 */
-	public function testExpectJournalNameAsPublisher() {
+	protected function doTestExpectJournalNameAsPublisher() {
 		// Test whether a missing publisher is being replaced
 		// with the journal name.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
@@ -232,7 +232,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *         export pages
 	 *    WHEN the registration was successful
 	 *    THEN I'll be redirected to the plug-in's index page
-	 *     AND I'll see a notification "Registration successful"
+	 *     AND I'll see a notification "Registration successful!"
 	 *     AND the registration button of the registered object(s)
 	 *         will change to "Update".
 	 *
@@ -270,7 +270,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				// redirected to the index page and see a notification
 				// "Registration Successful".
 				$this->setTimeout(120000); // Registering can take a long time.
-				$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
+				$this->waitForElementPresent('css=.ui-pnotify-text');
+				$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
 				$this->setTimeout(30000);
 
 				// Make sure that the button for the registered object now reads "Update"
@@ -303,7 +304,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 				$this->click('css=input.button[value="Select All"]');
 				$this->clickAndWait('css=input.button[name="register"]');
 				$this->setTimeout(120000); // Registering can take a long time.
-				$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
+				$this->waitForElementPresent('css=.ui-pnotify-text');
+				$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
 				$this->setTimeout(30000);
 
 				// Export without registration account:
@@ -342,7 +344,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *    THEN all DOIs of issues, articles and galleys on that list
 	 *         will be automatically registered with the DOI agency as new objects.
 	 *     AND I'll be redirected to the plug-ins home page
-	 *     AND I'll see a notification 'Registration successful'
+	 *     AND I'll see a notification 'Registration successful!'
 	 *     AND the list with unregistered objects will be empty.
 	 *
 	 * SCENARIO: Export without registration account, see self::testRegisterOrExportSpecificObjects()
@@ -386,7 +388,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$this->clickAndWait('css=input.button[name="register"]');
 		$this->setTimeout(30000);
 		$this->waitForLocation('exact:'.$pageUrl);
-		$this->waitForText('css=.ui-pnotify-text', 'Registration successful');
+		$this->waitForElementPresent('css=.ui-pnotify-text');
+		$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
 
 		// Check that all newly registered objects have disappeared
 		// from the list of unregistered objects.
@@ -569,7 +572,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 *        > register test {export object type} {object ids}
 	 *   THEN the given objects will be registered with the
 	 *        registration agency.
-	 *    AND the script will return "Registration successful".
+	 *    AND the script will return "Registration successful!".
 	 *
 	 * EXAMPLES: See sub-classes.
 	 */
@@ -882,7 +885,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Check the error message.
 		if (!is_null($expectedErrorMessage)) {
-			$this->assertText('content', $expectedErrorMessage);
+			$errorMessage = $this->getText('content');
+			$this->assertContains($expectedErrorMessage, $errorMessage);
 		}
 
 		// Make sure that (no) export links are present.

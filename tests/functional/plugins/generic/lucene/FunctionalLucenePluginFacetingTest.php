@@ -158,10 +158,11 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 			$this->simpleSearchAcrossJournals('lucene doi', $locale);
 
 			// Check that the faceting block offers the expected facet (and no other).
-			$this->assertText("css=#luceneFacets.block #subjectCategory a", $facet);
+			$availableFacets = $this->getText("css=#luceneFacets.block #subjectCategory a");
+			$this->assertContains($facet, $availableFacets);
 			foreach($testCases as $otherPossibleFacet) {
 				if ($otherPossibleFacet != $facet) {
-					$this->assertNotText("css=#luceneFacets.block #subjectCategory a", $otherPossibleFacet);
+					$this->assertNotContains($otherPossibleFacet, $availableFacets);
 				}
 			}
 		}

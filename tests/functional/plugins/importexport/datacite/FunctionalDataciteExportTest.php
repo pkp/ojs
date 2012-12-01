@@ -77,13 +77,13 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.    |issue      |1           |DataCite resource|datacite-issue.xml
 	 */
 	public function testExportIssue() {
-		$this->testExpectJournalNameAsPublisher();
+		$this->doTestExpectJournalNameAsPublisher();
 		$this->doExportObjectTest('issue', 1, 'DataciteExportPlugin', 'datacite-issue.xml');
 	}
 
 
 	/**
-	 * SCENARIO: see FunctionalDoiExportTest::testExpectJournalNameAsPublisher()
+	 * SCENARIO: see FunctionalDoiExportTest::doTestExpectJournalNameAsPublisher()
 	 */
 	protected function checkThatPublisherIsJournalName($xml) {
 		// Test that the publisher is set to the journal title.

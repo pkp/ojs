@@ -167,7 +167,7 @@ class FunctionalLucenePluginRankingTest extends FunctionalLucenePluginBaseTestCa
 			// correctly.
 			$this->assertAttribute(
 				'css=table.listing a.file:first-child@href',
-				'/article/view/' . $expectedFirstResult
+				'*/article/view/' . $expectedFirstResult
 			);
 		} catch (Exception $e) {
 			throw $this->improveException($e, "example $luceneSearchOrder - $luceneSearchDirection");

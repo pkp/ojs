@@ -71,10 +71,10 @@ class FunctionalLucenePluginSimDocTest extends FunctionalLucenePluginBaseTestCas
 		$this->clickAndWait('link=similar documents');
 
 		// Check that a search for similar articles has been executed.
-		$this->waitForLocation('lucene-test/search/search');
+		$this->waitForLocation('*lucene-test/search/search*');
 		$this->waitForElementPresent('name=query');
-		$this->assertValue('name=query', 'article');
-		$this->assertValue('name=query', 'test');
+		$this->assertValue('name=query', '*article*');
+		$this->assertValue('name=query', '*test*');
 	}
 }
 ?>

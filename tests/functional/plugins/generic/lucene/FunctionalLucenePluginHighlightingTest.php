@@ -56,13 +56,13 @@ class FunctionalLucenePluginHighlightingTest extends FunctionalLucenePluginBaseT
 		$this->simpleSearch('abstract');
 
 		// Check whether we get highlighting from the abstract.
-		$this->assertText('css=.plugins_generic_lucene_highlighting', 'abstract');
+		$this->assertText('css=.plugins_generic_lucene_highlighting', '*abstract*');
 
 		// Check whether we get highlighting from the full text, too.
 		$this->simpleSearch('nutella');
 		$this->assertText(
 			'css=.plugins_generic_lucene_highlighting',
-			'This is a galley used for solr indexing tests. Keywords in this galley are: nutella.'
+			'"... This is a galley used for solr indexing tests. Keywords in this galley are: nutella. ..."'
 		);
 
 		// Check that the keyword is visually emphasized.
