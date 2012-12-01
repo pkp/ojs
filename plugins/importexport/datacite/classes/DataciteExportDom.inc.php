@@ -133,9 +133,9 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Subjects
 		if (!empty($suppFile)) {
-			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($suppFile, $objectLocalePrecedence));
+			$this->_appendNonMandatoryChild($rootElement, $this->_subjectsElement($suppFile, $objectLocalePrecedence));
 		} elseif (!empty($article)) {
-			XMLCustomWriter::appendChild($rootElement, $this->_subjectsElement($article, $objectLocalePrecedence));
+			$this->_appendNonMandatoryChild($rootElement, $this->_subjectsElement($article, $objectLocalePrecedence));
 		}
 
 		// Dates
@@ -151,10 +151,10 @@ class DataciteExportDom extends DOIExportDom {
 		}
 
 		// Alternate Identifiers
-		XMLCustomWriter::appendChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $articleFile));
+		$this->_appendNonMandatoryChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $articleFile));
 
 		// Related Identifiers
-		XMLCustomWriter::appendChild($rootElement, $this->_relatedIdentifiersElement($object, $articlesByIssue, $galleysByArticle, $suppFilesByArticle, $issue, $article));
+		$this->_appendNonMandatoryChild($rootElement, $this->_relatedIdentifiersElement($object, $articlesByIssue, $galleysByArticle, $suppFilesByArticle, $issue, $article));
 
 		// Sizes
 		$sizesElement =& $this->_sizesElement($object, $article);
@@ -885,6 +885,23 @@ class DataciteExportDom extends DOIExportDom {
 			unset($articleInIssue);
 		}
 		return $toc;
+	}
+
+	/**
+	 * Datacite does not allow empty nodes. So we have to
+	 * check nodes before we add them.
+	 * @param $parentNode XmlNode|DOMElement
+	 * @param $child XmlNode|DOMElement
+	 */
+	function _appendNonMandatoryChild(&$parentNode, &$child) {
+		if (is_a($child, 'XMLNode')) {
+			$childChildren = $child->getChildren();
+			$childEmpty = empty($childChildren);
+		} else {
+			$childEmpty = !$child->hasChildNodes();
+		}
+		if ($childEmpty) return;
+		XMLCustomWriter::appendChild($parentNode, $child);
 	}
 }
 
