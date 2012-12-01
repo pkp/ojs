@@ -965,7 +965,7 @@ class SolrWebService extends XmlWebService {
 			// We show a generic error message to the end user
 			// to avoid information leakage and log the exact error.
 			$application =& PKPApplication::getApplication();
-			error_log($application->getName() . ' - Lucene plugin:' . "\nThe Lucene web service returned a status code $status and the message\n" . $response->saveXML());
+			error_log($application->getName() . ' - Lucene plugin:' . PHP_EOL . "The Lucene web service returned a status code $status and the message" . PHP_EOL . $response->saveXML());
 			$this->_serviceMessage = __('plugins.generic.lucene.message.webServiceError');
 			return $nullValue;
 		}

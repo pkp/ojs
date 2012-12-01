@@ -85,14 +85,14 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @see PKPPlugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
-		return parent::getTemplatePath().'templates/';
+		return parent::getTemplatePath() . 'templates' . DIRECTORY_SEPARATOR;
 	}
 
 	/**
 	 * @see PKPPlugin::getInstallSitePluginSettingsFile()
 	 */
 	function getContextSpecificPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
+		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'settings.xml';
 	}
 
 	/**
@@ -696,24 +696,43 @@ class DOIExportPlugin extends ImportExportPlugin {
 		assert($this->_checkedForTar);
 
 		// GZip compressed result file.
-		$tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
+		$tarCommand = Config::getVar('cli', 'tar');
+
+		// Cygwin compatibility.
+		$cygwin = Config::getVar('cli', 'cygwin');
+		if (is_executable($cygwin)) {
+			$targetPath = cygwinConversion($targetPath);
+			$targetFile = cygwinConversion($targetFile);
+		}
+
+		$tarCommand .= ' -czf ' . escapeshellarg($targetFile);
+
+		if (!Core::isWindows()) {
+			// Do not reveal our webserver user by forcing root as owner.
+			$tarCommand .= ' --owner 0 --group 0';
+		}
 
 		// Do not reveal our internal export path by exporting only relative filenames.
-		$tarCommand .= ' -C ' . escapeshellarg($targetPath);
-
-		// Do not reveal our webserver user by forcing root as owner.
-		$tarCommand .= ' --owner 0 --group 0 --';
+		$tarCommand .= ' -C ' . escapeshellarg($targetPath) . ' --';
 
 		// Add each file individually so that other files in the directory
 		// will not be included.
+		$dirSep = ($cygwin ? '/' : DIRECTORY_SEPARATOR);
 		foreach($sourceFiles as $sourceFile) {
-			assert(dirname($sourceFile) . '/' === $targetPath);
-			if (dirname($sourceFile) . '/' !== $targetPath) continue;
+			if ($cygwin) {
+				$sourceFile = cygwinConversion($sourceFile);
+			}
+			assert(dirname($sourceFile) . $dirSep === $targetPath);
+			if (dirname($sourceFile) . $dirSep !== $targetPath) continue;
 			$tarCommand .= ' ' . escapeshellarg(basename($sourceFile));
 		}
 
 		// Execute the command.
-		exec($tarCommand);
+		if ($cygwin) {
+			$tarCommand = $cygwin . " --login -c '" . $tarCommand . "'";
+		}
+		exec($tarCommand, $dummy, $returnStatus);
+		assert($returnStatus === 0);
 	}
 
 	/**
@@ -847,7 +866,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function cleanTmpfiles($tempdir, $tempfiles) {
 		foreach ($tempfiles as $tempfile) {
-			$tempfilePath = dirname($tempfile) . '/';
+			$tempfilePath = dirname($tempfile) . DIRECTORY_SEPARATOR;
 			assert($tempdir === $tempfilePath);
 			if ($tempdir !== $tempfilePath) continue;
 			unlink($tempfile);
@@ -1268,8 +1287,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 *  an array with an error message.
 	 */
 	function _checkForTar() {
+		// Cygwin has tar by default.
+		$cygwin = Config::getVar('cli', 'cygwin');
 		$tarBinary = Config::getVar('cli', 'tar');
-		if (empty($tarBinary) || !is_executable($tarBinary)) {
+		if ((empty($tarBinary) || !is_executable($tarBinary)) && !is_executable($cygwin)) {
 			$result = array(
 				array('manager.plugins.tarCommandNotFound')
 			);
@@ -1289,7 +1310,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 *  errors if something went wrong.
 	 */
 	function _getExportPath() {
-		$exportPath = Config::getVar('files', 'files_dir') . '/' . $this->getPluginId();
+		$exportPath = Config::getVar('files', 'files_dir') . DIRECTORY_SEPARATOR . $this->getPluginId();
 		if (!file_exists($exportPath)) {
 			$fileManager = new FileManager();
 			$fileManager->mkdir($exportPath);
@@ -1300,7 +1321,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 			);
 			return $errors;
 		}
-		return realpath($exportPath) . '/';
+		return realpath($exportPath) . DIRECTORY_SEPARATOR;
 	}
 
 	/**

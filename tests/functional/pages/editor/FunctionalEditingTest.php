@@ -108,13 +108,10 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 			// Identify the test galley in the sample
 			// document format.
 			try {
-				$testFile = 'tests/functional/pages/editor/test-files/test-article.' . $example;
-				self::assertTrue(file_exists($testFile));
-				$testFile = realpath($testFile);
-
 				// Go to the galley upload page and
 				// upload a galley.
-				$this->uploadGalley($this->_articleId, $testFile, $example);
+				$galleyUri = $this->_getTestFileUri($example);
+				$this->uploadGalley($this->_articleId, $galleyUri, $example);
 			} catch (Exception $e) {
 				throw $this->improveException($e, "example $example");
 			}
@@ -245,8 +242,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertEquals($changedTitle, $indexedArticle['title_en_US'], 'Title not updated in index after metadata update.');
 
 		// Upload a galley.
-		$testFile = realpath('tests/functional/pages/editor/test-files/test-article.pdf');
-		$this->uploadGalley($this->_articleId, $testFile, 'PDF');
+		$fileUri = $this->_getTestFileUri('pdf');
+		$this->uploadGalley($this->_articleId, $fileUri, 'PDF');
 
 		// Check whether the galley has been indexed.
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
@@ -265,7 +262,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertArrayNotHasKey('galleyFullText_pdf_en_US', $indexedArticle, 'Galley not properly deleted from index.');
 
 		// Upload a supplementary file.
-		$this->uploadSuppFile($this->_articleId, $testFile, 'spinach');
+		$this->uploadSuppFile($this->_articleId, $fileUri, 'spinach');
 
 		// Check whether the supplementary file
 		// has been indexed.
@@ -422,6 +419,23 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		curl_setopt($curlCh, CURLOPT_URL, $pullUrl);
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		return curl_exec($curlCh);
+	}
+
+	/**
+	 * Build the test file UI as understood by Selenium.
+	 * @param string $fileFormat The test file format, e.g. "pdf".
+	 * @return string
+	 */
+	private function _getTestFileUri($fileFormat) {
+		$testFile = 'tests/functional/pages/editor/test-files/test-article.' . $fileFormat;
+		self::assertTrue(file_exists($testFile));
+		$testFile = realpath($testFile);
+		if (Core::isWindows()) {
+			$testFile = str_replace(DIRECTORY_SEPARATOR, '/', $testFile);
+			$testFile = String::regexp_replace('%^[A-Z]:/%', '/', $testFile);
+		}
+		$testFile = 'file://' . $testFile;
+		return $testFile;
 	}
 }
 ?>

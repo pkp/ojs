@@ -1008,7 +1008,7 @@ class LucenePlugin extends GenericPlugin {
 			// all journals will be deleted from the index).
 			$this->_indexingMessage($log, 'LucenePlugin: ' . __('search.cli.rebuildIndex.clearingIndex') . ' ... ', $messages);
 			$solrWebService->deleteArticlesFromIndex($journalIdOrNull);
-			$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . "\n", $messages);
+			$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . PHP_EOL, $messages);
 
 			// Re-build index, either of a single journal...
 			if (is_a($journal, 'Journal')) {
@@ -1033,7 +1033,7 @@ class LucenePlugin extends GenericPlugin {
 				if ($this->getSetting(0, 'pullIndexing')) {
 					// When pull-indexing is configured then we leave it up to the
 					// Solr server to decide when the updates will actually be done.
-					$this->_indexingMessage($log, '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . "\n", $messages);
+					$this->_indexingMessage($log, '... ' . __('plugins.generic.lucene.rebuildIndex.pullResult', array('numMarked' => $numMarked)) . PHP_EOL, $messages);
 				} else {
 					// In case of push indexing we immediately update the index.
 					$numIndexed = 0;
@@ -1043,7 +1043,7 @@ class LucenePlugin extends GenericPlugin {
 						$articlesInBatch = $solrWebService->pushChangedArticles(SOLR_INDEXING_MAX_BATCHSIZE, $journal->getId());
 						if (is_null($articlesInBatch)) {
 							$error = $solrWebService->getServiceMessage();
-							$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.error') . (empty($error) ? '' : ": $error") . "\n", $messages);
+							$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.error') . (empty($error) ? '' : ": $error") . PHP_EOL, $messages);
 							if (!$log) {
 								// If logging is switched off then inform the
 								// tech admin with an email (e.g. in the case of
@@ -1055,7 +1055,7 @@ class LucenePlugin extends GenericPlugin {
 						$this->_indexingMessage($log, '.', $messages);
 						$numIndexed += $articlesInBatch;
 					} while ($articlesInBatch == SOLR_INDEXING_MAX_BATCHSIZE);
-					$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n", $messages);
+					$this->_indexingMessage($log, ' ' . __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . PHP_EOL, $messages);
 				}
 			}
 		}
@@ -1066,7 +1066,7 @@ class LucenePlugin extends GenericPlugin {
 			$solrWebService->rebuildDictionaries();
 		}
 
-		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . "\n", $messages);
+		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . PHP_EOL, $messages);
 
 		return true;
 	}

@@ -554,10 +554,19 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 	public function testExecutionEnvironmentCheck() {
 		// Assemble a command line script name.
 		$scriptName = Core::getBaseDir() . '/plugins/generic/lucene/embedded/bin/start.sh';
+		if (Core::isWindows()) {
+			$scriptName = str_replace(array('/', '.sh'), array(DIRECTORY_SEPARATOR, '.bat'), $scriptName);
+		}
 
 		// Change the execution flags of the script.
-		chmod($scriptName, 0664);
-		self::assertFalse(is_executable($scriptName));
+		if (Core::isWindows()) {
+			$targetName = $scriptName . '.bak';
+			rename($scriptName, $targetName);
+			self::assertFalse(is_readable($scriptName));
+		} else {
+			chmod($scriptName, 0664);
+			self::assertFalse(is_executable($scriptName));
+		}
 
 		// Open the lucene plugin settings page.
 		$this->logIn();
@@ -566,13 +575,17 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 		// Check that the explanatory text is shown.
 		$this->waitForElementPresent('serverNotAvailable');
 
-		// Change the execution flag back. (We should
+		// Change the execution flag back/rename back. (We should
 		// probably do this in tearDown() but let's try
 		// to limit the exposure of such a statement to
 		// as little code as possible. We can still change
 		// this if it turns out to produce errors in
 		// practice.)
-		chmod($scriptName, 0775);
+		if (Core::isWindows()) {
+			rename($targetName, $scriptName);
+		} else {
+			chmod($scriptName, 0775);
+		}
 	}
 
 	/**

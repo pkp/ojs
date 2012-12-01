@@ -209,7 +209,7 @@
 					{if $rebuildIndexMessages}
 						<div id="rebuildIndexMessage">
 							<strong>{translate key="plugins.generic.lucene.settings.indexRebuildMessages"}</strong><br/>
-							{$rebuildIndexMessages|escape|replace:"\n":"<br/>"|replace:" ":"&nbsp;"}
+							{$rebuildIndexMessages|escape|replace:$smarty.const.PHP_EOL:"<br/>"|replace:" ":"&nbsp;"}
 						</div>
 					{else}
 						<span class="instruct">{translate key="plugins.generic.lucene.settings.indexRebuildDescription"}</span><br/>

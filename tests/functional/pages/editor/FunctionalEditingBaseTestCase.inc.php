@@ -217,10 +217,10 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 	/**
 	 * Upload the given file as a galley.
 	 * @param $articleId integer
-	 * @param $galleyFile string
+	 * @param $galleyUri string
 	 * @param $fileLabel string
 	 */
-	protected function uploadGalley($articleId, $galleyFile, $fileLabel) {
+	protected function uploadGalley($articleId, $galleyUri, $fileLabel) {
 		// Open the editing page.
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $articleId;
 		$this->verifyAndOpen($submissionEditingPage);
@@ -229,11 +229,11 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->click('layoutFileTypeGalley');
 
 		// Set the galley file.
-		$this->attachFile('name=layoutFile', "file://$galleyFile");
+		$this->attachFile('name=layoutFile', $galleyUri);
 
 		// Click the upload button.
 		$this->clickAndWait('css=#layout form input.button');
-		$this->waitForLocation('index.php/lucene-test/editor/editGalley');
+		$this->waitForLocation('*index.php/lucene-test/editor/editGalley*');
 
 		// Type the file label.
 		$this->type('name=label', strtoupper($fileLabel));
@@ -245,10 +245,10 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 	/**
 	 * Upload the given file as a supplementary file.
 	 * @param $articleId integer
-	 * @param $suppFile string
+	 * @param $suppFileUri string
 	 * @param $title string
 	 */
-	protected function uploadSuppFile($articleId, $suppFile, $title) {
+	protected function uploadSuppFile($articleId, $suppFileUri, $title) {
 		// Open the editing page.
 		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $articleId;
 		$this->verifyAndOpen($submissionEditingPage);
@@ -257,11 +257,11 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->click('layoutFileTypeSupp');
 
 		// Set the supp file.
-		$this->attachFile('name=layoutFile', "file://$suppFile");
+		$this->attachFile('name=layoutFile', $suppFileUri);
 
 		// Click the upload button.
 		$this->clickAndWait('css=#layout form input.button');
-		$this->waitForLocation('index.php/lucene-test/editor/editSuppFile');
+		$this->waitForLocation('*index.php/lucene-test/editor/editSuppFile*');
 
 		// Type the file label.
 		$this->type('title', $title);

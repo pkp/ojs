@@ -32,11 +32,11 @@ class EmbeddedServer {
 	 */
 	function isInstalled() {
 		// Check solr installation.
-		$solrWar = $this->_getPluginDirectory() . '/embedded/webapps/solr.war';
+		$solrWar = $this->_getPluginDirectory() . DIRECTORY_SEPARATOR . 'embedded' . DIRECTORY_SEPARATOR . 'webapps' . DIRECTORY_SEPARATOR . 'solr.war';
 		if (!is_readable($solrWar)) return false;
 
 		// Check jetty installation.
-		$jettyJar = $this->_getPluginDirectory() . '/lib/jetty/start.jar';
+		$jettyJar = $this->_getPluginDirectory() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'jetty' . DIRECTORY_SEPARATOR . 'start.jar';
 		if (!is_readable($jettyJar))	return false;
 
 		return true;
@@ -63,7 +63,7 @@ class EmbeddedServer {
 	 */
 	function start() {
 		// Run the start command.
-		return $this->_runScript('start.sh');
+		return $this->_runScript('start');
 	}
 
 	/**
@@ -73,7 +73,7 @@ class EmbeddedServer {
 	 */
 	function stop() {
 		// Run the stop command.
-		return $this->_runScript('stop.sh');
+		return $this->_runScript('stop');
 	}
 
 	/**
@@ -99,10 +99,10 @@ class EmbeddedServer {
 				$maxWait--;
 			}
 			if ($maxWait == 0) {
-				file_put_contents($logFile, " timeout\n", FILE_APPEND);
+				file_put_contents($logFile, ' timeout' . PHP_EOL, FILE_APPEND);
 				return false;
 			} else {
-				file_put_contents($logFile, "\n", FILE_APPEND);
+				file_put_contents($logFile, PHP_EOL, FILE_APPEND);
 			}
 		}
 		return true;
@@ -114,7 +114,7 @@ class EmbeddedServer {
 	 * @return boolean true, if the server is running, otherwise false.
 	 */
 	function isRunning() {
-		$returnValue = $this->_runScript('check.sh', false);
+		$returnValue = $this->_runScript('check', false);
 		return ($returnValue === true);
 	}
 
@@ -128,7 +128,7 @@ class EmbeddedServer {
 	 * @return string
 	 */
 	function _getScriptDirectory() {
-		return $this->_getPluginDirectory() . '/embedded/bin/';
+		return $this->_getPluginDirectory() . DIRECTORY_SEPARATOR . 'embedded' . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR;
 	}
 
 	/**
@@ -146,7 +146,26 @@ class EmbeddedServer {
 	 * @return string
 	 */
 	function _getLogFileName() {
-		return Config::getVar('files', 'files_dir') . '/lucene/solr-php.log';
+		return Config::getVar('files', 'files_dir') . DIRECTORY_SEPARATOR . 'lucene' . DIRECTORY_SEPARATOR . 'solr-php.log';
+	}
+
+	/**
+	 * Get platform-specific script name with extension.
+	 *
+	 * @param $script string The script name without
+	 *  extension.
+	 *
+	 * @return string script name with platform specific
+	 *  extension.
+	 */
+	function _getScriptPath($script) {
+		$scriptPath = $this->_getScriptDirectory() . $script;
+		if (Core::isWindows()) {
+			$scriptPath .= '.bat';
+		} else {
+			$scriptPath .= '.sh';
+		}
+		return $scriptPath;
 	}
 
 	/**
@@ -166,14 +185,18 @@ class EmbeddedServer {
 		// Check whether the management scripts are executable.
 		$scriptDir = $this->_getScriptDirectory();
 		foreach(array('start', 'stop', 'check') as $script) {
-			$scriptPath = "$scriptDir$script.sh";
-			if (!is_executable($scriptPath)) return false;
+			$scriptPath = $this->_getScriptPath($script);
+			if (Core::isWindows()) {
+				if (!is_readable($scriptPath)) return false;
+			} else {
+				if (!is_executable($scriptPath)) return false;
+			}
 		}
 
 		// Check whether crucial files are writable.
 		$filesDir = Config::getVar('files', 'files_dir');
 		foreach(array('data', 'solr-java.log', 'solr-php.log', 'solr.pid') as $fileName) {
-			$filePath = "$filesDir/lucene/$fileName";
+			$filePath = '$filesDir' . DIRECTORY_SEPARATOR . 'lucene' . DIRECTORY_SEPARATOR . $fileName;
 			if (file_exists($filePath) && !is_writable($filePath)) {
 				return false;
 			}
@@ -184,7 +207,7 @@ class EmbeddedServer {
 		// manipulate the process.
 		if (function_exists('posix_getuid') && $this->isRunning()) {
 			$phpUid = posix_getuid();
-			if (!$this->_runScript('check.sh ' . $phpUid)) return false;
+			if (!$this->_runScript('check', false, $phpUid)) return false;
 		}
 
 		return true;
@@ -193,28 +216,55 @@ class EmbeddedServer {
 	/**
 	 * Run the given script.
 	 *
-	 * @param $command string The script to be executed.
-	 * @param $log boolean Whether to log the script execution.
+	 * @param $script string The script to be executed (without platform
+	 *  specific extension).
+	 * @param $log boolean Whether to log the script execution. Logging is NOT
+	 *  supported on Windows due to locking issues with the log file when
+	 *  being started through 'start /b'.
+	 * @param $parameters string Optional script parameters.
 	 *
 	 * @return boolean true if the command executed successfully, otherwise false.
 	 */
-	function _runScript($command, $log = true) {
+	function _runScript($script, $log = true, $parameters = '') {
 		// Assemble the shell command.
-		$scriptDirectory = $this->_getScriptDirectory();
-		$command = $scriptDirectory . $command;
-		if ($log) {
-			$logFile = $this->_getLogFileName();
-			$command .= " 2>&1 >>'$logFile'";
-		} else {
-			$command .= ' 2>&1 >/dev/null';
+		$command = $this->_getScriptPath($script);
+		if (!empty($parameters)) {
+			$command .= ' ' . $parameters;
 		}
-		$command .= ' </dev/null';
+
+		// Long running background processes cause
+		// locking issues on Windows.
+		$allowLock = true;
+		if (Core::isWindows() && $script === 'start') {
+			$allowLock = false;
+		}
+
+		// Configure logging (not supported on Windows
+		// due to locking issues).
+		if ($allowLock && $log) {
+			$logFile = $this->_getLogFileName();
+			$command .= " 2>&1 >>\"$logFile\"";
+		} else {
+			if (Core::isWindows()) {
+				$command .= ' 2>&1 >NUL';
+			} else {
+				$command .= ' 2>&1 >/dev/null';
+			}
+		}
+		if (Core::isWindows()) {
+			$command .= ' <NUL';
+		} else {
+			$command .= ' </dev/null';
+		}
 
 		// Execute the command.
-		$workingDirectory = getcwd();
-		chdir($scriptDirectory);
-		exec($command, $dummy, $returnStatus);
-		chdir($workingDirectory);
+		if ($allowLock) {
+			exec($command, $dummy, $returnStatus);
+		} else {
+			// Do not lock up PHP on Windows.
+			pclose(popen($command, 'r'));
+			$returnStatus = 0;
+		}
 
 		// Return the result.
 		return ($returnStatus === 0);
