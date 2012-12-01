@@ -86,7 +86,7 @@ function checkEditorAssignments() {
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="policy" key="manager.sections.policy"}</td>
-	<td class="value"><textarea name="policy[{$formLocale|escape}]" rows="4" cols="40" id="policy" class="textArea">{$policy[$formLocale]|escape}</textarea></td>
+	<td class="value"><textarea name="policy[{$formLocale|escape}]" rows="4" cols="40" id="policy" class="textArea richContent">{$policy[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="reviewFormId" key="submission.reviewForm"}</td>

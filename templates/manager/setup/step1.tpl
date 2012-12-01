@@ -63,7 +63,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 		<td width="80%" class="value">
-			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea>
+			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea richContent">{$mailingAddress|escape}</textarea>
 			<br />
 			<span class="instruct">{translate key="manager.setup.mailingAddressDescription"}</span>
 		</td>
@@ -117,7 +117,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contactMailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value"><textarea name="contactMailingAddress[{$formLocale|escape}]" id="contactMailingAddress" rows="3" cols="40" class="textArea">{$contactMailingAddress[$formLocale]|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="contactMailingAddress[{$formLocale|escape}]" id="contactMailingAddress" rows="3" cols="40" class="textArea richContent">{$contactMailingAddress[$formLocale]|escape}</textarea></td>
 	</tr>
 </table>
 </div>
@@ -180,7 +180,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
-			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea">{$publisherNote[$formLocale]|escape}</textarea>
+			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea richContent">{$publisherNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.publisherNoteDescription"}</span>
 			</td>
@@ -205,7 +205,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
-			<textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote[$formLocale]|escape}</textarea>
+			<textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea richContent">{$sponsorNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.sponsorNoteDescription"}</span>
 		</td>
@@ -250,7 +250,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
 		<td width="80%" class="value">
-			<textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote[$formLocale]|escape}</textarea>
+			<textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea richContent">{$contributorNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.contributorNoteDescription"}</span>
 		</td>
@@ -322,7 +322,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="history" key="manager.setup.history"}</td>
 		<td width="80%" class="value">
-			<textarea name="history[{$formLocale|escape}]" id="history" rows="5" cols="40" class="textArea">{$history[$formLocale]|escape}</textarea>
+			<textarea name="history[{$formLocale|escape}]" id="history" rows="5" cols="40" class="textArea richContent">{$history[$formLocale]|escape}</textarea>
 		</td>
 	</tr>
 </table>

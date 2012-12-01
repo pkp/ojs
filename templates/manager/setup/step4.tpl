@@ -68,7 +68,7 @@
 			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
 			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
 			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
+			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea richContent"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
 		</td>
 	</tr>
 	<tr>
@@ -180,7 +180,7 @@ function setRegAllowOpts(form) {
 
 <p>{translate key="manager.setup.publicationScheduleDescription"}</p>
 
-<p><textarea name="pubFreqPolicy[{$formLocale|escape}]" id="pubFreqPolicy" rows="12" cols="60" class="textArea">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
+<p><textarea name="pubFreqPolicy[{$formLocale|escape}]" id="pubFreqPolicy" rows="12" cols="60" class="textArea richContent">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
 </div>
 <div id="publicationFormat">
 <h4>{translate key="manager.setup.publicationFormat"}</h4>
@@ -317,7 +317,7 @@ function setRegAllowOpts(form) {
 
 <p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
 
-<p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
+<p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea richContent">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
 </div><!-- announcementsIntroductionSection -->
 </div><!-- announcementsSection -->
 
@@ -346,7 +346,7 @@ function setRegAllowOpts(form) {
 <p>{translate key="manager.setup.copyeditInstructionsDescription"}</p>
 
 <p>
-	<textarea name="copyeditInstructions[{$formLocale|escape}]" id="copyeditInstructions" rows="12" cols="60" class="textArea">{$copyeditInstructions[$formLocale]|escape}</textarea>
+	<textarea name="copyeditInstructions[{$formLocale|escape}]" id="copyeditInstructions" rows="12" cols="60" class="textArea richContent">{$copyeditInstructions[$formLocale]|escape}</textarea>
 </p>
 </div><!-- copyeditInstructionsSection -->
 
@@ -374,7 +374,7 @@ function setRegAllowOpts(form) {
 <p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
 
 <p>
-	<textarea name="layoutInstructions[{$formLocale|escape}]" id="layoutInstructions" rows="12" cols="60" class="textArea">{$layoutInstructions[$formLocale]|escape}</textarea>
+	<textarea name="layoutInstructions[{$formLocale|escape}]" id="layoutInstructions" rows="12" cols="60" class="textArea richContent">{$layoutInstructions[$formLocale]|escape}</textarea>
 </p>
 </div><!-- layoutInstructionsSection -->
 
@@ -416,7 +416,7 @@ function setRegAllowOpts(form) {
 
 <div id="refLinkInstructionsSection">
 <h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
-<textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
+<textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea richContent">{$refLinkInstructions[$formLocale]|escape}</textarea>
 </div><!-- refLinkInstructionsSection -->
 </div>
 <div class="separator"></div>
@@ -442,7 +442,7 @@ function setRegAllowOpts(form) {
 <p>{translate key="manager.setup.proofingInstructionsDescription"}</p>
 
 <p>
-	<textarea name="proofInstructions[{$formLocale|escape}]" id="proofInstructions" rows="12" cols="60" class="textArea">{$proofInstructions[$formLocale]|escape}</textarea>
+	<textarea name="proofInstructions[{$formLocale|escape}]" id="proofInstructions" rows="12" cols="60" class="textArea richContent">{$proofInstructions[$formLocale]|escape}</textarea>
 </p>
 </div>
 </div>

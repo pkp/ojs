@@ -90,7 +90,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="6" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="6" cols="40" class="textArea richContent">{$subscriptionMailingAddress|escape}</textarea></td>
 	</tr>
 </table>
 </div>
@@ -101,7 +101,7 @@
 <h3>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformation"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"}</p>
 <p>
-	<textarea name="subscriptionAdditionalInformation[{$formLocale|escape}]" id="subscriptionAdditionalInformation" rows="12" cols="60" class="textArea">{$subscriptionAdditionalInformation[$formLocale]|escape}</textarea>
+	<textarea name="subscriptionAdditionalInformation[{$formLocale|escape}]" id="subscriptionAdditionalInformation" rows="12" cols="60" class="textArea richContent">{$subscriptionAdditionalInformation[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>
@@ -234,7 +234,7 @@
 
 	<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
 	<p>
-	<textarea name="delayedOpenAccessPolicy[{$formLocale|escape}]" id="delayedOpenAccessPolicy" rows="12" cols="60" class="textArea">{$delayedOpenAccessPolicy[$formLocale]|escape}</textarea>
+	<textarea name="delayedOpenAccessPolicy[{$formLocale|escape}]" id="delayedOpenAccessPolicy" rows="12" cols="60" class="textArea richContent">{$delayedOpenAccessPolicy[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 	</p>
@@ -245,7 +245,7 @@
 	{fieldLabel name="enableAuthorSelfArchive" key="manager.subscriptionPolicies.authorSelfArchiveDescription"}
 </p>
 <p>
-	<textarea name="authorSelfArchivePolicy[{$formLocale|escape}]" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea">{$authorSelfArchivePolicy[$formLocale]|escape}</textarea>
+	<textarea name="authorSelfArchivePolicy[{$formLocale|escape}]" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea richContent">{$authorSelfArchivePolicy[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>

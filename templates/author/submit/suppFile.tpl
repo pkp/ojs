@@ -59,7 +59,7 @@
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="description" key="author.submit.suppFile.briefDescription"}</td>
-	<td width="80%" class="value"><textarea name="description[{$formLocale|escape}]" class="textArea" id="description" rows="5" cols="60">{$description[$formLocale]|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="description[{$formLocale|escape}]" class="textArea richContent" id="description" rows="5" cols="60">{$description[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="publisher" key="common.publisher"}</td>

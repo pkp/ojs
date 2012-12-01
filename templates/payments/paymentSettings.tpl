@@ -76,7 +76,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="submissionFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="submissionFeeDescription[{$formLocale|escape}]" id="submissionFeeDescription" rows="2" cols="50">{$submissionFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="submissionFeeDescription[{$formLocale|escape}]" id="submissionFeeDescription" rows="2" cols="50">{$submissionFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="fastTrackFeeEnabled" id="fastTrackFeeEnabled" value="1"{if $fastTrackFeeEnabled} checked="checked"{/if} /></td>
@@ -92,7 +92,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="fastTrackFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="fastTrackFeeDescription[{$formLocale|escape}]" id="fastTrackFeeDescription" rows="2" cols="50">{$fastTrackFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="fastTrackFeeDescription[{$formLocale|escape}]" id="fastTrackFeeDescription" rows="2" cols="50">{$fastTrackFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="publicationFeeEnabled" id="publicationFeeEnabled" value="1"{if $publicationFeeEnabled} checked="checked"{/if} /></td>
@@ -108,7 +108,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="publicationFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="publicationFeeDescription[{$formLocale|escape}]" id="publicationFeeDescription" rows="2" cols="50">{$publicationFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="publicationFeeDescription[{$formLocale|escape}]" id="publicationFeeDescription" rows="2" cols="50">{$publicationFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="waiverPolicy" key="manager.payment.options.waiverPolicy"}</td>
@@ -140,7 +140,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="purchaseIssueFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="purchaseIssueFeeDescription[{$formLocale|escape}]" id="purchaseIssueFeeDescription" rows="2" cols="50">{$purchaseIssueFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="purchaseIssueFeeDescription[{$formLocale|escape}]" id="purchaseIssueFeeDescription" rows="2" cols="50">{$purchaseIssueFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="purchaseArticleFeeEnabled" id="purchaseArticleFeeEnabled" value="1"{if $purchaseArticleFeeEnabled} checked="checked"{/if} /></td>
@@ -156,7 +156,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="purchaseArticleFeeDescription[{$formLocale|escape}]" id="purchaseArticleFeeDescription" rows="2" cols="50">{$purchaseArticleFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="purchaseArticleFeeDescription[{$formLocale|escape}]" id="purchaseArticleFeeDescription" rows="2" cols="50">{$purchaseArticleFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="value" width="20%"><input type="checkbox" name="restrictOnlyPdf" id="restrictOnlyPdf" value="1"{if $restrictOnlyPdf} checked="checked"{/if} /></td>
@@ -184,7 +184,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="membershipFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="membershipFeeDescription[{$formLocale|escape}]" id="membershipFeeDescription" rows="2" cols="50">{$membershipFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="membershipFeeDescription[{$formLocale|escape}]" id="membershipFeeDescription" rows="2" cols="50">{$membershipFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="donationFeeEnabled" id="donationFeeEnabled" value="1"{if $donationFeeEnabled} checked="checked"{/if} /></td>
@@ -196,7 +196,7 @@
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="donationFeeDescription" key="manager.payment.options.feeDescription"}</td>
-	<td class="value" width="80%"><textarea class="textArea" name="donationFeeDescription[{$formLocale|escape}]" id="donationFeeDescription" rows="2" cols="50">{$donationFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="value" width="80%"><textarea class="textArea richContent" name="donationFeeDescription[{$formLocale|escape}]" id="donationFeeDescription" rows="2" cols="50">{$donationFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 </table>
 </div>

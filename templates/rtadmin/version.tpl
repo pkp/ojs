@@ -44,7 +44,7 @@
 	<tr valign="top">
 		<td class="label"><label for="description">{translate key="rt.version.description"}</label></td>
 		<td class="value">
-			<textarea class="textArea" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>
+			<textarea class="textArea richContent" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>
 		</td>
 	</tr>
 </table>

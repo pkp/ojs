@@ -129,7 +129,7 @@
 	</tr>
 {/if}
 	<tr valign="top">
-		<td width="100%" class="value"><textarea name="additionalInformation[{$formLocale|escape}]" id="additionalInformation" rows="6" cols="60" class="textArea">{$additionalInformation[$formLocale]|escape}</textarea></td>
+		<td width="100%" class="value"><textarea name="additionalInformation[{$formLocale|escape}]" id="additionalInformation" rows="6" cols="60" class="textArea richContent">{$additionalInformation[$formLocale]|escape}</textarea></td>
 	</tr>
 </table>
 </div>

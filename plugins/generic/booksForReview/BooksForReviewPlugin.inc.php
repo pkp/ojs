@@ -59,9 +59,6 @@ class BooksForReviewPlugin extends GenericPlugin {
 			// Append book metadata to book review article
 			HookRegistry::register('Templates::Article::Header::Metadata', array($this, 'displayBookMetadata'));
 
-			// Enable TinyMCE for book for review text fields
-			HookRegistry::register('TinyMCEPlugin::getEnableFields', array($this, 'enableTinyMCE'));
-
 			// Ensure book for review user assignments are transferred when merging users
 			HookRegistry::register('UserAction::mergeUsers', array($this, 'mergeBooksForReviewAuthors'));
 
@@ -301,23 +298,6 @@ class BooksForReviewPlugin extends GenericPlugin {
 				}
 			}
 		}
-	}
-
-	/**
-	 * Enable TinyMCE support for book for review text fields.
-	 */
-	function enableTinyMCE($hookName, $params) {
-		$fields =& $params[1];
-		$request =& $this->getRequest();
-		$page = $request->getRequestedPage();
-		$op = $request->getRequestedOp();
-		if ($page == 'editor' && ($op == 'createBookForReview' || $op == 'editBookForReview' || $op == 'updateBookForReview')) {
-			$fields[] = 'description';
-			$fields[] = 'notes';
-		} elseif ($page == 'editor' && $op == 'booksForReviewSettings') {
-			$fields[] = 'additionalInformation';
-		}
-		return false;
 	}
 
 	/**

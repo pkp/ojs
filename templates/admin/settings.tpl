@@ -68,7 +68,7 @@
 	{/if}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="intro" key="admin.settings.introduction"}</td>
-		<td colspan="2" class="value"><textarea name="intro[{$formLocale|escape}]" id="intro" cols="40" rows="10" class="textArea">{$intro[$formLocale]|escape}</textarea></td>
+		<td colspan="2" class="value"><textarea name="intro[{$formLocale|escape}]" id="intro" cols="40" rows="10" class="textArea richContent">{$intro[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="redirect" key="admin.settings.journalRedirect"}</td>
@@ -85,7 +85,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="aboutField" key="admin.settings.aboutDescription"}</td>
-		<td colspan="2" class="value"><textarea name="about[{$formLocale|escape}]" id="aboutField" cols="40" rows="10" class="textArea">{$about[$formLocale]|escape}</textarea></td>
+		<td colspan="2" class="value"><textarea name="about[{$formLocale|escape}]" id="aboutField" cols="40" rows="10" class="textArea richContent">{$about[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="contactName" key="admin.settings.contactName" required="true"}</td>

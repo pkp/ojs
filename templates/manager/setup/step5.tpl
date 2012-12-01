@@ -214,7 +214,7 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.journalDescriptionDescription"}</p>
 
-<p><textarea id="description" name="description[{$formLocale|escape}]" rows="3" cols="60" class="textArea">{$description[$formLocale]|escape}</textarea></p>
+<p><textarea id="description" name="description[{$formLocale|escape}]" rows="3" cols="60" class="textArea richContent">{$description[$formLocale]|escape}</textarea></p>
 </div>
 <div id="homepageImage">
 <h4>{translate key="manager.setup.homepageImage"}</h4>
@@ -261,7 +261,7 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.additionalContentDescription"}</p>
 
-<p><textarea name="additionalHomeContent[{$formLocale|escape}]" id="additionalHomeContent" rows="12" cols="60" class="textArea">{$additionalHomeContent[$formLocale]|escape}</textarea></p>
+<p><textarea name="additionalHomeContent[{$formLocale|escape}]" id="additionalHomeContent" rows="12" cols="60" class="textArea richContent">{$additionalHomeContent[$formLocale]|escape}</textarea></p>
 </div>
 </div>
 <div class="separator"></div>
@@ -353,7 +353,7 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.alternateHeaderDescription"}</p>
 
-<p><textarea name="journalPageHeader[{$formLocale|escape}]" id="journalPageHeader" rows="12" cols="60" class="textArea">{$journalPageHeader[$formLocale]|escape}</textarea></p>
+<p><textarea name="journalPageHeader[{$formLocale|escape}]" id="journalPageHeader" rows="12" cols="60" class="textArea richContent">{$journalPageHeader[$formLocale]|escape}</textarea></p>
 </div>
 </div>
 <div class="separator"></div>
@@ -363,7 +363,7 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.journalPageFooterDescription"}</p>
 
-<p><textarea name="journalPageFooter[{$formLocale|escape}]" id="journalPageFooter" rows="12" cols="60" class="textArea">{$journalPageFooter[$formLocale]|escape}</textarea></p>
+<p><textarea name="journalPageFooter[{$formLocale|escape}]" id="journalPageFooter" rows="12" cols="60" class="textArea richContent">{$journalPageFooter[$formLocale]|escape}</textarea></p>
 </div>
 
 <div class="separator"></div>
@@ -528,15 +528,15 @@ function prepBlockFields() {
 
 <div id="infoForReaders"><h4>{translate key="manager.setup.information.forReaders"}</h4>
 
-<p><textarea name="readerInformation[{$formLocale|escape}]" id="readerInformation" rows="12" cols="60" class="textArea">{$readerInformation[$formLocale]|escape}</textarea></p></div>
+<p><textarea name="readerInformation[{$formLocale|escape}]" id="readerInformation" rows="12" cols="60" class="textArea richContent">{$readerInformation[$formLocale]|escape}</textarea></p></div>
 
 <div id="infoForAuth"><h4>{translate key="manager.setup.information.forAuthors"}</h4>
 
-<p><textarea name="authorInformation[{$formLocale|escape}]" id="authorInformation" rows="12" cols="60" class="textArea">{$authorInformation[$formLocale]|escape}</textarea></p></div>
+<p><textarea name="authorInformation[{$formLocale|escape}]" id="authorInformation" rows="12" cols="60" class="textArea richContent">{$authorInformation[$formLocale]|escape}</textarea></p></div>
 
 <div id="infoForLibs"><h4>{translate key="manager.setup.information.forLibrarians"}</h4>
 
-<p><textarea name="librarianInformation[{$formLocale|escape}]" id="librarianInformation" rows="12" cols="60" class="textArea">{$librarianInformation[$formLocale]|escape}</textarea></p></div>
+<p><textarea name="librarianInformation[{$formLocale|escape}]" id="librarianInformation" rows="12" cols="60" class="textArea richContent">{$librarianInformation[$formLocale]|escape}</textarea></p></div>
 </div>
 
 <div class="separator"></div>

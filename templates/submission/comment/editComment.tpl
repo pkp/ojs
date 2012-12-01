@@ -38,7 +38,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" key="submission.comments.comments" required="true"}</td>
-	<td class="value"><textarea name="comments" id="comments" rows="15" cols="50" class="textArea">{$comments}</textarea></td>
+	<td class="value"><textarea name="comments" id="comments" rows="15" cols="50" class="textArea richContent">{$comments}</textarea></td>
 </tr>
 {if $isPeerReviewComment}
 <tr valign="top">

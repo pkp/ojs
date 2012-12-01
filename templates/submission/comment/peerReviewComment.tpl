@@ -91,11 +91,11 @@ window.opener.location.reload();
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="authorComments"}{translate key="submission.comments.forAuthorEditor"}</td>
-	<td class="value"><textarea id="authorComments" name="authorComments" rows="10" cols="50" class="textArea">{$authorComments|escape}</textarea></td>
+	<td class="value"><textarea id="authorComments" name="authorComments" rows="10" cols="50" class="textArea richContent">{$authorComments|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments"}{translate key="submission.comments.forEditor"}</td>
-	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea">{$comments|escape}</textarea></td>
+	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea richContent">{$comments|escape}</textarea></td>
 </tr>
 </table>
 

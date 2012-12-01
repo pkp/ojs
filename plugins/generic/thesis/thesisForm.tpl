@@ -73,7 +73,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="abstract" required="true" key="plugins.generic.thesis.manager.form.abstract"}</td>
-	<td class="value"><textarea name="abstract" id="abstract" cols="40" rows="6" class="textArea" />{$abstract|escape}</textarea>
+	<td class="value"><textarea name="abstract" id="abstract" cols="40" rows="6" class="textArea richContent" />{$abstract|escape}</textarea>
 		<br />
 		<span class="instruct">{translate key="plugins.generic.thesis.manager.form.abstractInstructions"}</span>
 	</td>

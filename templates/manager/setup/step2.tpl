@@ -36,7 +36,7 @@
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
 <p>{translate key="manager.setup.focusAndScopeDescription"}</p>
 <p>
-	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc[$formLocale]|escape}</textarea>
+	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea richContent">{$focusScopeDesc[$formLocale]|escape}</textarea>
 </p>
 </div>
 
@@ -49,7 +49,7 @@
 
 <h4>{translate key="manager.setup.reviewPolicy"}</h4>
 
-<p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy[$formLocale]|escape}</textarea></p>
+<p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea richContent">{$reviewPolicy[$formLocale]|escape}</textarea></p>
 </div>
 <div id="reviewGuidelinesInfo">
 
@@ -58,7 +58,7 @@
 {url|assign:"reviewFormsUrl" op="reviewForms"}
 <p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
 
-<p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
+<p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea richContent">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
 </div>
 <div id="reviewProcess">
 <h4>{translate key="manager.setup.reviewProcess"}</h4>
@@ -167,7 +167,7 @@
 <div id="privacyStatementInfo">
 <h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 
-<p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement[$formLocale]|escape}</textarea></p>
+<p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea richContent">{$privacyStatement[$formLocale]|escape}</textarea></p>
 </div>
 
 <div class="separator"></div>
@@ -186,7 +186,7 @@
 {foreach name=customAboutItems from=$customAboutItems[$formLocale] key=aboutId item=aboutItem}
 	<tr valign="top">
 		<td width="5%" class="label">{fieldLabel name="customAboutItems-$aboutId-title" key="common.title"}</td>
-		<td width="95%" class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][{$aboutId|escape}][title]" id="customAboutItems-{$aboutId|escape}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="95%" class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][{$aboutId|escape}][title]" id="customAboutItems-{$aboutId|escape}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField richContent" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customAboutItems-$aboutId-content" key="manager.setup.aboutItemContent"}</td>
@@ -226,7 +226,7 @@
 <p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>
 
 <p>
-	<textarea name="lockssLicense[{$formLocale|escape}]" id="lockssLicense" rows="6" cols="60" class="textArea">{$lockssLicense[$formLocale]|escape}</textarea>
+	<textarea name="lockssLicense[{$formLocale|escape}]" id="lockssLicense" rows="6" cols="60" class="textArea richContent">{$lockssLicense[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.lockssLicenses"}</span>
 </p>
@@ -240,7 +240,7 @@
 <p><input type="checkbox" name="enableClockss" id="enableClockss" value="1"{if $enableClockss} checked="checked"{/if} /> <label for="enableClockss">{translate key="manager.setup.clockssEnable" clockssUrl=$clockssUrl}</label></p>
 
 <p>
-	<textarea name="clockssLicense[{$formLocale|escape}]" id="clockssLicense" rows="6" cols="60" class="textArea">{$clockssLicense[$formLocale]|escape}</textarea>
+	<textarea name="clockssLicense[{$formLocale|escape}]" id="clockssLicense" rows="6" cols="60" class="textArea richContent">{$clockssLicense[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.clockssLicenses"}</span>
 </p>

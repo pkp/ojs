@@ -58,7 +58,7 @@ function togglePossibleResponses(newValue, multipleResponsesElementTypesString) 
 {/if}
 <tr valign="top">
 	<td class="label">{fieldLabel name="question" required="true" key="manager.reviewFormElements.question"}</td>
-	<td class="value"><textarea name="question[{$formLocale|escape}]" rows="4" cols="40" id="question" class="textArea">{$question[$formLocale]|escape}</textarea></td>
+	<td class="value"><textarea name="question[{$formLocale|escape}]" rows="4" cols="40" id="question" class="textArea richContent">{$question[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

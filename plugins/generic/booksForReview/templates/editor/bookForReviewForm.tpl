@@ -185,7 +185,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="description" key="plugins.generic.booksForReview.editor.form.description"}</td>
-		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" rows="6" cols="60" class="textArea">{$description[$formLocale]|escape}</textarea></td>
+		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" rows="6" cols="60" class="textArea richContent">{$description[$formLocale]|escape}</textarea></td>
 	</tr>
 	{if $bookId}
 		<tr valign="top">
@@ -345,7 +345,7 @@ function moveAuthor(dir, authorIndex) {
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="notes" key="plugins.generic.booksForReview.editor.form.notes"}</td>
-	<td width="80%" class="value"><textarea name="notes" id="notes" cols="60" rows="6" class="textArea">{$notes|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="notes" id="notes" cols="60" rows="6" class="textArea richContent">{$notes|escape}</textarea></td>
 </tr>
 </table>
 </div>

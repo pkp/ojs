@@ -220,7 +220,7 @@ function confirmSubmissionCheck() {
 					{rdelim});
 				</script>
 				<form class="pkp_form" id="saveCompetingInterestsForm" action="{url op="saveCompetingInterests" reviewId=$reviewId}" method="post">
-					<textarea {if $cannotChangeCI}disabled="disabled" {/if}name="competingInterests" class="textArea" id="competingInterests" rows="5" cols="40">{$reviewAssignment->getCompetingInterests()|escape}</textarea><br />
+					<textarea {if $cannotChangeCI}disabled="disabled" {/if}name="competingInterests" class="textArea richContent" id="competingInterests" rows="5" cols="40">{$reviewAssignment->getCompetingInterests()|escape}</textarea><br />
 					<input {if $cannotChangeCI}disabled="disabled" {/if}class="button defaultButton" type="submit" value="{translate key="common.save"}" />
 				</form>
 			{/if}

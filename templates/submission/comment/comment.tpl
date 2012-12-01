@@ -76,7 +76,7 @@ window.opener.location.reload();
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
-	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea">{$comments|escape}</textarea></td>
+	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea richContent">{$comments|escape}</textarea></td>
 </tr>
 </table>
 <p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.close()" /></p>

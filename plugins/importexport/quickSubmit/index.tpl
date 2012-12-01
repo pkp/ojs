@@ -256,12 +256,12 @@ function updateAbstractRequired() {
 			{if $journal->getSetting('requireAuthorCompetingInterests')}
 				<tr valign="top">
 					<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-competingInterests" key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</td>
-					<td width="70%" class="value"><textarea name="authors[{$authorIndex|escape}][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-competingInterests" rows="5" cols="40">{$author.competingInterests[$formLocale]|escape}</textarea></td>
+					<td width="70%" class="value"><textarea name="authors[{$authorIndex|escape}][competingInterests][{$formLocale|escape}]" class="textArea richContent" id="authors-{$authorIndex|escape}-competingInterests" rows="5" cols="40">{$author.competingInterests[$formLocale]|escape}</textarea></td>
 				</tr>
 			{/if}{* requireAuthorCompetingInterests *}
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-				<td width="70%" class="value"><textarea name="authors[{$authorIndex|escape}][biography][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
+				<td width="70%" class="value"><textarea name="authors[{$authorIndex|escape}][biography][{$formLocale|escape}]" class="textArea richContent" id="authors-{$authorIndex|escape}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
 			</tr>
 			{if $smarty.foreach.authors.total > 1}
 			<tr valign="top">
@@ -321,12 +321,12 @@ function updateAbstractRequired() {
 			{if $journal->getSetting('requireAuthorCompetingInterests')}
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-competingInterests" key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</td>
-				<td width="70%" class="value"><textarea name="authors[0][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-0-competingInterests" rows="5" cols="40"></textarea></td>
+				<td width="70%" class="value"><textarea name="authors[0][competingInterests][{$formLocale|escape}]" class="textArea richContent" id="authors-0-competingInterests" rows="5" cols="40"></textarea></td>
 			</tr>
 			{/if}
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-				<td width="70%" class="value"><textarea name="authors[0][biography][{$formLocale|escape}]" class="textArea" id="authors-0-biography" rows="5" cols="40"></textarea></td>
+				<td width="70%" class="value"><textarea name="authors[0][biography][{$formLocale|escape}]" class="textArea richContent" id="authors-0-biography" rows="5" cols="40"></textarea></td>
 			</tr>
 			</table>
 		{/foreach}
@@ -350,7 +350,7 @@ function updateAbstractRequired() {
 				{assign var=abstractRequired value="true"}
 			{/if}
 			<td width="30%" class="label">{fieldLabel name="abstract" key="article.abstract" required=$abstractRequired}<span id="abstractRequiredAsterisk" style="visibility: hidden;">*</div></td>
-			<td width="70%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
+			<td width="70%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea richContent" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 		</tr>
 		</table>
 	</div> <!-- /titleAndAbstract -->

@@ -56,283 +56,6 @@ class TinyMCEPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Given a $page and $op, return a list of field names for which
-	 * the plugin should be used.
-	 * @param $templateMgr object
-	 * @param $page string The requested page
-	 * @param $op string The requested operation
-	 * @return array
-	 */
-	function getEnableFields(&$templateMgr, $page, $op) {
-		$formLocale = $templateMgr->get_template_vars('formLocale');
-		$request =& $this->getRequest();
-		$fields = array();
-		$requestedArgs = $request->getRequestedArgs();
-		switch ("$page/$op") {
-			case 'admin/settings':
-			case 'admin/saveSettings':
-				$fields[] = 'intro';
-				$fields[] = 'aboutField';
-				break;
-			case 'admin/createJournal':
-			case 'admin/updateJournal':
-			case 'admin/editJournal':
-				$fields[] = 'description';
-				break;
-			case 'author/submit':
-			case 'author/saveSubmit':
-				switch (array_shift($requestedArgs)) {
-					case 1: $fields[] = 'commentsToEditor'; break;
-					case 3:
-						$count = max(1, count($templateMgr->get_template_vars('authors')));
-						for ($i=0; $i<$count; $i++) {
-							$fields[] = "authors-$i-biography";
-							$fields[] = "authors-$i-competingInterests";
-						}
-						$fields[] = 'abstract';
-						break;
-				}
-				break;
-			case 'author/submitSuppFile':
-			case 'author/saveSubmitSuppFile':
-				$fields[] = 'description'; break;
-			case 'editor/createIssue':
-			case 'editor/issueData':
-			case 'editor/editIssue':
-				$fields[] = 'description';
-				$fields[] = 'coverPageDescription';
-				break;
-			case 'author/viewCopyeditComments':
-			case 'author/postCopyeditComment':
-			case 'author/viewLayoutComments':
-			case 'author/postLayoutComment':
-			case 'author/viewProofreadComments':
-			case 'author/postProofreadComment':
-			case 'author/editComment':
-			case 'author/saveComment':
-			case 'editor/viewEditorDecisionComments':
-			case 'editor/postEditorDecisionComment':
-			case 'editor/viewCopyeditComments':
-			case 'editor/postCopyeditComment':
-			case 'editor/viewLayoutComments':
-			case 'editor/postLayoutComment':
-			case 'editor/viewProofreadComments':
-			case 'editor/postProofreadComment':
-			case 'editor/editComment':
-			case 'editor/saveComment':
-			case 'sectionEditor/viewEditorDecisionComments':
-			case 'sectionEditor/postEditorDecisionComment':
-			case 'sectionEditor/viewCopyeditComments':
-			case 'sectionEditor/postCopyeditComment':
-			case 'sectionEditor/viewLayoutComments':
-			case 'sectionEditor/postLayoutComment':
-			case 'sectionEditor/viewProofreadComments':
-			case 'sectionEditor/postProofreadComment':
-			case 'sectionEditor/editComment':
-			case 'sectionEditor/saveComment':
-			case 'copyeditor/viewCopyeditComments':
-			case 'copyeditor/postCopyeditComment':
-			case 'copyeditor/viewLayoutComments':
-			case 'copyeditor/postLayoutComment':
-			case 'copyeditor/editComment':
-			case 'copyeditor/saveComment':
-			case 'proofreader/viewLayoutComments':
-			case 'proofreader/postLayoutComment':
-			case 'proofreader/viewProofreadComments':
-			case 'proofreader/postProofreadComment':
-			case 'proofreader/editComment':
-			case 'proofreader/saveComment':
-			case 'layoutEditor/viewLayoutComments':
-			case 'layoutEditor/postLayoutComment':
-			case 'layoutEditor/viewProofreadComments':
-			case 'layoutEditor/postProofreadComment':
-			case 'layoutEditor/editComment':
-			case 'layoutEditor/saveComment':
-				$fields[] = 'comments';
-				break;
-			case 'manager/createAnnouncement':
-			case 'manager/editAnnouncement':
-			case 'manager/updateAnnouncement':
-				$fields[] = 'descriptionShort';
-				$fields[] = 'description';
-				break;
-			case 'manager/importexport':
-				$count = max(1, count($templateMgr->get_template_vars('authors')));
-				for ($i=0; $i<$count; $i++) {
-					$fields[] = "authors-$i-biography";
-					$fields[] = "authors-$i-competingInterests";
-				}
-				$fields[] = 'abstract';
-				break;
-			case 'manager/payments':
-				$fields[] = 'submissionFeeDescription';
-				$fields[] = 'fastTrackFeeDescription';
-				$fields[] = 'publicationFeeDescription';
-				$fields[] = 'waiverPolicy';
-				$fields[] = 'purchaseIssueFeeDescription';
-				$fields[] = 'purchaseArticleFeeDescription';
-				$fields[] = 'membershipFeeDescription';
-				$fields[] = 'donationFeeDescription';
-				break;
-			case 'user/profile':
-			case 'user/register':
-			case 'user/saveProfile':
-			case 'subscriptionManager/createUser':
-			case 'subscriptionManager/updateUser':
-			case 'manager/createUser':
-			case 'manager/updateUser':
-				$fields[] = 'mailingAddress';
-				$fields[] = 'biography';
-				break;
-			case 'manager/editReviewForm':
-			case 'manager/updateReviewForm':
-			case 'manager/createReviewForm':
-				$fields[] = 'description';
-				break;
-			case 'manager/editReviewFormElement':
-			case 'manager/updateReviewFormElement':
-			case 'manager/createReviewFormElement':
-				$fields[] = 'question';
-				break;
-			case 'manager/editSection':
-			case 'manager/updateSection':
-			case 'manager/createSection':
-				$fields[] = 'policy';
-				break;
-			case 'manager/setup':
-			case 'manager/saveSetup':
-				switch (array_shift($requestedArgs)) {
-					case 1:
-						$fields[] = 'mailingAddress';
-						$fields[] = 'contactMailingAddress';
-						$fields[] = 'publisherNote';
-						$fields[] = 'sponsorNote';
-						$fields[] = 'contributorNote';
-						$fields[] = 'history';
-						break;
-					case 2:
-						$fields[] = 'focusScopeDesc';
-						$fields[] = 'reviewPolicy';
-						$fields[] = 'reviewGuidelines';
-						$fields[] = 'privacyStatement';
-						$customAboutItems = $templateMgr->get_template_vars('customAboutItems');
-						$count = max(1, isset($customAboutItems[$formLocale])?count($customAboutItems[$formLocale]):0);
-						for ($i=0; $i<$count; $i++) {
-							// 1 extra in case of new field
-							$fields[] = "customAboutItems-$i-content";
-						}
-						$fields[] = 'lockssLicense';
-						$fields[] = 'clockssLicense';
-						break;
-					case 3:
-						$fields[] = 'authorGuidelines';
-						$submissionChecklist = $templateMgr->get_template_vars('submissionChecklist');
-						$count = max(1, isset($submissionChecklist[$formLocale])?count($submissionChecklist[$formLocale]):0);
-						for ($i=0; $i<$count; $i++) {
-							$fields[] = "submissionChecklist-$i";
-						}
-						$fields[] = 'copyrightNotice';
-						$fields[] = 'competingInterestGuidelines';
-						break;
-					case 4:
-						$fields[] = 'openAccessPolicy';
-						$fields[] = 'pubFreqPolicy';
-						$fields[] = 'announcementsIntroduction';
-						$fields[] = 'copyeditInstructions';
-						$fields[] = 'layoutInstructions';
-						$fields[] = 'refLinkInstructions';
-						$fields[] = 'proofInstructions';
-						break;
-					case 5:
-						$fields[] = 'description';
-						$fields[] = 'additionalHomeContent';
-						$fields[] = 'journalPageHeader';
-						$fields[] = 'journalPageFooter';
-						$fields[] = 'readerInformation';
-						$fields[] = 'librarianInformation';
-						$fields[] = 'authorInformation';
-						break;
-				}
-				break;
-			case 'reviewer/submission': $fields[] = 'competingInterests'; break;
-			case 'reviewer/viewPeerReviewComments':
-			case 'reviewer/postPeerReviewComment':
-			case 'editor/viewPeerReviewComments':
-			case 'editor/postPeerReviewComment':
-			case 'sectionEditor/viewPeerReviewComments':
-			case 'sectionEditor/postPeerReviewComment':
-			case 'reviewer/editComment':
-			case 'reviewer/saveComment':
-				$fields[] = 'authorComments';
-				$fields[] = 'comments';
-				break;
-			case 'rtadmin/editContext':
-			case 'rtadmin/editSearch':
-			case 'rtadmin/editVersion':
-			case 'rtadmin/createContext':
-			case 'rtadmin/createSearch':
-			case 'rtadmin/createVersion':
-				$fields[] = 'description';
-				break;
-			case 'editor/createReviewer':
-			case 'sectionEditor/createReviewer':
-				$fields[] = 'mailingAddress';
-				$fields[] = 'biography';
-				break;
-			case 'editor/submissionNotes':
-			case 'sectionEditor/submissionNotes':
-				$fields[] = 'note';
-				break;
-			case 'author/viewMetadata':
-			case 'sectionEditor/viewMetadata':
-			case 'editor/viewMetadata':
-			case 'author/saveMetadata':
-			case 'sectionEditor/saveMetadata':
-			case 'editor/saveMetadata':
-			case 'copyeditor/viewMetadata':
-			case 'copyeditor/saveMetadata':
-				$count = max(1, count($templateMgr->get_template_vars('authors')));
-				for ($i=0; $i<$count; $i++) {
-					$fields[] = "authors-$i-biography";
-					$fields[] = "authors-$i-competingInterests";
-				}
-				$fields[] = 'abstract';
-				break;
-			case 'sectionEditor/editSuppFile':
-			case 'editor/editSuppFile':
-			case 'sectionEditor/saveSuppFile':
-			case 'editor/saveSuppFile':
-				$fields[] = 'description';
-				break;
-			case 'subscriptionManager/editSubscription':
-			case 'subscriptionManager/createSubscription':
-			case 'subscriptionManager/updateSubscription':
-			case 'manager/editSubscription':
-			case 'manager/createSubscription':
-			case 'manager/updateSubscription':
-				$fields[] = 'notes';
-				break;
-			case 'manager/subscriptionPolicies':
-			case 'manager/saveSubscriptionPolicies':
-			case 'subscriptionManager/subscriptionPolicies':
-			case 'subscriptionManager/saveSubscriptionPolicies':
-				$fields[] = 'subscriptionMailingAddress';
-				$fields[] = 'subscriptionAdditionalInformation';
-				$fields[] = 'delayedOpenAccessPolicy';
-				$fields[] = 'authorSelfArchivePolicy';
-				break;
-			case 'manager/editSubscriptionType':
-			case 'manager/createSubscriptionType':
-			case 'manager/updateSubscriptionType':
-				$fields[] = 'description';
-				break;
-			case 'comment/add': $fields[] = 'commentBody'; break;
-		}
-		HookRegistry::call('TinyMCEPlugin::getEnableFields', array(&$this, &$fields));
-		return $fields;
-	}
-
-	/**
 	 * Hook callback function for TemplateManager::display
 	 * @param $hookName string
 	 * @param $args array
@@ -347,49 +70,45 @@ class TinyMCEPlugin extends GenericPlugin {
 
 		$page = $request->getRequestedPage();
 		$op = $request->getRequestedOp();
-		$enableFields = $this->getEnableFields($templateManager, $page, $op);
 
-		if (!empty($enableFields)) {
-			$baseUrl = $templateManager->get_template_vars('baseUrl');
-			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
-			$enableFields = join(',', $enableFields);
-			$allLocales = AppLocale::getAllLocales();
-			$localeList = array();
-			foreach ($allLocales as $key => $locale) {
-				$localeList[] = String::substr($key, 0, 2);
-			}
-
-			$tinymceScript = '
-			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
-			<script language="javascript" type="text/javascript">
-				tinyMCE_GZ.init({
-					relative_urls : "false",
-					plugins : "paste,jbimages,fullscreen",
-					themes : "advanced",
-					languages : "' . join(',', $localeList) . '",
-					disk_cache : true
-				});
-			</script>
-			<script language="javascript" type="text/javascript">
-				tinyMCE.init({
-					entity_encoding : "raw",
-					plugins : "paste,jbimages,fullscreen",
-					mode : "exact",
-					language : "' . String::substr(AppLocale::getLocale(), 0, 2) . '",
-					elements : "' . $enableFields . '",
-					relative_urls : false,
-					forced_root_block : false,
-					paste_auto_cleanup_on_paste : true,
-					apply_source_formatting : false,
-					theme : "advanced",
-					theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,jbimages",
-					theme_advanced_buttons2 : "",
-					theme_advanced_buttons3 : ""
-				});
-			</script>';
-
-			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinymceScript);
+		$baseUrl = $templateManager->get_template_vars('baseUrl');
+		$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
+		$allLocales = AppLocale::getAllLocales();
+		$localeList = array();
+		foreach ($allLocales as $key => $locale) {
+			$localeList[] = String::substr($key, 0, 2);
 		}
+
+		$tinymceScript = '
+		<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
+		<script language="javascript" type="text/javascript">
+			tinyMCE_GZ.init({
+				relative_urls : "false",
+				plugins : "paste,jbimages,fullscreen",
+				themes : "advanced",
+				languages : "' . join(',', $localeList) . '",
+				disk_cache : true
+			});
+		</script>
+		<script language="javascript" type="text/javascript">
+			tinyMCE.init({
+				entity_encoding : "raw",
+				plugins : "paste,jbimages,fullscreen",
+				mode: "specific_textareas",
+				editor_selector: "richContent",
+				language : "' . String::substr(AppLocale::getLocale(), 0, 2) . '",
+				relative_urls : false,
+				forced_root_block : false,
+				paste_auto_cleanup_on_paste : true,
+				apply_source_formatting : false,
+				theme : "advanced",
+				theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,jbimages",
+				theme_advanced_buttons2 : "",
+				theme_advanced_buttons3 : ""
+			});
+		</script>';
+
+		$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$tinymceScript);
 		return false;
 	}
 

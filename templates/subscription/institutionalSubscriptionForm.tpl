@@ -143,7 +143,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="notes" key="manager.subscriptions.form.notes"}</td>
-	<td width="80%" class="value"><textarea name="notes" id="notes" cols="40" rows="6" class="textArea">{$notes|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="notes" id="notes" cols="40" rows="6" class="textArea richContent">{$notes|escape}</textarea></td>
 </tr>
 </table>
 
