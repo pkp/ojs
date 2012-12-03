@@ -12,15 +12,24 @@
  * @brief Operations for retrieving and modifying journal settings.
  */
 
-class JournalSettingsDAO extends DAO {
+import('lib.pkp.classes.db.SettingsDAO');
+
+class JournalSettingsDAO extends SettingsDAO {
+	/**
+	 * Constructor
+	 */
+	function JournalSettingsDAO() {
+		parent::SettingsDAO();
+	}
+
 	function &_getCache($journalId) {
 		static $settingCache;
 		if (!isset($settingCache)) {
 			$settingCache = array();
 		}
 		if (!isset($settingCache[$journalId])) {
-			$cacheManager =& CacheManager::getManager();
-			$settingCache[$journalId] =& $cacheManager->getFileCache(
+			$cacheManager = CacheManager::getManager();
+			$settingCache[$journalId] = $cacheManager->getFileCache(
 				'journalSettings', $journalId,
 				array($this, '_cacheMiss')
 			);
@@ -36,7 +45,7 @@ class JournalSettingsDAO extends DAO {
 	 * @return mixed
 	 */
 	function &getSetting($journalId, $name, $locale = null) {
-		$cache =& $this->_getCache($journalId);
+		$cache = $this->_getCache($journalId);
 		$returner = $cache->get($name);
 		if ($locale !== null) {
 			if (!isset($returner[$locale]) || !is_array($returner)) {
@@ -50,7 +59,7 @@ class JournalSettingsDAO extends DAO {
 	}
 
 	function _cacheMiss(&$cache, $id) {
-		$settings =& $this->getSettings($cache->getCacheId());
+		$settings = $this->getSettings($cache->getCacheId());
 		if (!isset($settings[$id])) {
 			$cache->setCache($id, null);
 			return null;
@@ -66,7 +75,7 @@ class JournalSettingsDAO extends DAO {
 	function &getSettings($journalId) {
 		$journalSettings = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT setting_name, setting_value, setting_type, locale FROM journal_settings WHERE journal_id = ?', $journalId
 		);
 
@@ -86,7 +95,7 @@ class JournalSettingsDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		$cache =& $this->_getCache($journalId);
+		$cache = $this->_getCache($journalId);
 		$cache->setEntireCache($journalSettings);
 
 		return $journalSettings;
@@ -101,7 +110,7 @@ class JournalSettingsDAO extends DAO {
 	 * @param $isLocalized boolean
 	 */
 	function updateSetting($journalId, $name, $value, $type = null, $isLocalized = false) {
-		$cache =& $this->_getCache($journalId);
+		$cache = $this->_getCache($journalId);
 		$cache->setCache($name, $value);
 
 		$keyFields = array('setting_name', 'locale', 'journal_id');
@@ -140,7 +149,7 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name string
 	 */
 	function deleteSetting($journalId, $name, $locale = null) {
-		$cache =& $this->_getCache($journalId);
+		$cache = $this->_getCache($journalId);
 		$cache->setCache($name, null);
 
 		$params = array($journalId, $name);
@@ -158,96 +167,12 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteById($journalId) {
-		$cache =& $this->_getCache($journalId);
+		$cache = $this->_getCache($journalId);
 		$cache->flush();
 
 		return $this->update(
 			'DELETE FROM journal_settings WHERE journal_id = ?', (int) $journalId
 		);
-	}
-
-	/**
-	 * Used internally by installSettings to perform variable and translation replacements.
-	 * @param $rawInput string contains text including variable and/or translate replacements.
-	 * @param $paramArray array contains variables for replacement
-	 * @returns string
-	 */
-	function _performReplacement($rawInput, $paramArray = array()) {
-		$value = preg_replace_callback('{{translate key="([^"]+)"}}', array(&$this, '_installer_regexp_callback'), $rawInput);
-		foreach ($paramArray as $pKey => $pValue) {
-			$value = str_replace('{$' . $pKey . '}', $pValue, $value);
-		}
-		return $value;
-	}
-
-	/**
-	 * Used internally by installSettings to recursively build nested arrays.
-	 * Deals with translation and variable replacement calls.
-	 * @param $node object XMLNode <array> tag
-	 * @param $paramArray array Parameters to be replaced in key/value contents
-	 */
-	function &_buildObject (&$node, $paramArray = array()) {
-		$value = array();
-		foreach ($node->getChildren() as $element) {
-			$key = $element->getAttribute('key');
-			$childArray =& $element->getChildByName('array');
-			if (isset($childArray)) {
-				$content = $this->_buildObject($childArray, $paramArray);
-			} else {
-				$content = $this->_performReplacement($element->getValue(), $paramArray);
-			}
-			if (!empty($key)) {
-				$key = $this->_performReplacement($key, $paramArray);
-				$value[$key] = $content;
-			} else $value[] = $content;
-		}
-		return $value;
-	}
-
-	/**
-	 * Install journal settings from an XML file.
-	 * @param $journalId int ID of journal for settings to apply to
-	 * @param $filename string Name of XML file to parse and install
-	 * @param $paramArray array Optional parameters for variable replacement in settings
-	 */
-	function installSettings($journalId, $filename, $paramArray = array()) {
-		$xmlParser = new XMLParser();
-		$tree = $xmlParser->parse($filename);
-
-		if (!$tree) {
-			$xmlParser->destroy();
-			return false;
-		}
-
-		foreach ($tree->getChildren() as $setting) {
-			$nameNode =& $setting->getChildByName('name');
-			$valueNode =& $setting->getChildByName('value');
-
-			if (isset($nameNode) && isset($valueNode)) {
-				$type = $setting->getAttribute('type');
-				$isLocaleField = $setting->getAttribute('locale');
-				$name =& $nameNode->getValue();
-
-				if ($type == 'object') {
-					$arrayNode =& $valueNode->getChildByName('array');
-					$value = $this->_buildObject($arrayNode, $paramArray);
-				} else {
-					$value = $this->_performReplacement($valueNode->getValue(), $paramArray);
-				}
-
-				// Replace translate calls with translated content
-				$this->updateSetting(
-					$journalId,
-					$name,
-					$isLocaleField?array(AppLocale::getLocale() => $value):$value,
-					$type,
-					$isLocaleField
-				);
-			}
-		}
-
-		$xmlParser->destroy();
-
 	}
 
 	/**
@@ -278,7 +203,7 @@ class JournalSettingsDAO extends DAO {
 		$value = array();
 		foreach ($node->getChildren() as $element) {
 			$key = $element->getAttribute('key');
-			$childArray =& $element->getChildByName('array');
+			$childArray = $element->getChildByName('array');
 			if (isset($childArray)) {
 				$content = $this->_buildLocalizedObject($childArray, $paramArray, $locale);
 			} else {
@@ -309,19 +234,19 @@ class JournalSettingsDAO extends DAO {
 		}
 
 		foreach ($tree->getChildren() as $setting) {
-			$nameNode =& $setting->getChildByName('name');
-			$valueNode =& $setting->getChildByName('value');
+			$nameNode = $setting->getChildByName('name');
+			$valueNode = $setting->getChildByName('value');
 
 			if (isset($nameNode) && isset($valueNode)) {
 				$type = $setting->getAttribute('type');
 				$isLocaleField = $setting->getAttribute('locale');
-				$name =& $nameNode->getValue();
+				$name = $nameNode->getValue();
 
 				//skip all settings that are not locale fields
 				if (!$isLocaleField) continue;
 
 				if ($type == 'object') {
-					$arrayNode =& $valueNode->getChildByName('array');
+					$arrayNode = $valueNode->getChildByName('array');
 					$value = $this->_buildLocalizedObject($arrayNode, $paramArray, $locale);
 				} else {
 					$value = $this->_performLocalizedReplacement($valueNode->getValue(), $paramArray, $locale);
@@ -340,13 +265,6 @@ class JournalSettingsDAO extends DAO {
 
 		$xmlParser->destroy();
 
-	}
-
-	/**
-	 * Used internally by journal setting installation code to perform translation function.
-	 */
-	function _installer_regexp_callback($matches) {
-		return __($matches[1]);
 	}
 }
 
