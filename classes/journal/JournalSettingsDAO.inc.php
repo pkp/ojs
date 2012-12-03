@@ -22,21 +22,6 @@ class JournalSettingsDAO extends SettingsDAO {
 		parent::SettingsDAO();
 	}
 
-	function &_getCache($journalId) {
-		static $settingCache;
-		if (!isset($settingCache)) {
-			$settingCache = array();
-		}
-		if (!isset($settingCache[$journalId])) {
-			$cacheManager = CacheManager::getManager();
-			$settingCache[$journalId] = $cacheManager->getFileCache(
-				'journalSettings', $journalId,
-				array($this, '_cacheMiss')
-			);
-		}
-		return $settingCache[$journalId];
-	}
-
 	/**
 	 * Get the settings table name.
 	 * @return string
@@ -50,6 +35,13 @@ class JournalSettingsDAO extends SettingsDAO {
 	 */
 	protected function _getPrimaryKeyColumn() {
 		return 'journal_id';
+	}
+
+	/**
+	 * Get the cache name.
+	 */
+	protected function _getCacheName() {
+		return 'journalSettings';
 	}
 }
 
