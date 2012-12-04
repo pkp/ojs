@@ -69,11 +69,16 @@
 #    > java -jar selenium-server.jar -browserSessionReuse
 
 
-export PKP_MOCK_ENV=env1
-phpunit --testdox-text lib/pkp/tests/results/testdox.txt --bootstrap lib/pkp/tests/phpunit-bootstrap.php tests/functional
-phpunit --testdox-text lib/pkp/tests/results/testdox.txt --bootstrap lib/pkp/tests/phpunit-bootstrap.php tests/classes
-phpunit --testdox-text lib/pkp/tests/results/testdox.txt --bootstrap lib/pkp/tests/phpunit-bootstrap.php lib/pkp/tests/classes
+# Identify the tests directory.
+TESTS_DIR=`dirname "$0"`
+TESTS_DIR=`readlink -f "$TESTS_DIR/../lib/pkp/tests"`
 
-export PKP_MOCK_ENV=env2
-phpunit --testdox-text lib/pkp/tests/results/testdox.txt --bootstrap lib/pkp/tests/phpunit-bootstrap.php tests/plugins
-phpunit --testdox-text lib/pkp/tests/results/testdox.txt --bootstrap lib/pkp/tests/phpunit-bootstrap.php lib/pkp/tests/plugins
+# Shortcuts to the test environments.
+TEST_CONF1="--configuration $TESTS_DIR/phpunit-env1.xml"
+TEST_CONF2="--configuration $TESTS_DIR/phpunit-env2.xml"
+
+phpunit $TEST_CONF1 lib/pkp/tests/classes
+phpunit $TEST_CONF2 lib/pkp/tests/plugins
+phpunit $TEST_CONF1 tests/classes
+phpunit $TEST_CONF2 tests/plugins
+phpunit $TEST_CONF1 tests/functional
