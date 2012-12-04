@@ -94,8 +94,6 @@ switch ($op) {
 	// Languages
 	//
 	case 'languages':
-	case 'saveLanguageSettings':
-	case 'reloadLocalizedDefaultSettings':
 		define('HANDLER_CLASS', 'JournalLanguagesHandler');
 		import('pages.manager.JournalLanguagesHandler');
 		break;
@@ -192,21 +190,10 @@ switch ($op) {
 		import('pages.manager.ManagerPaymentHandler');
 		break;
 	//
-	//	announcements
+	// Announcements
 	//
 	case 'announcements':
-	case 'deleteAnnouncement':
-	case 'createAnnouncement':
-	case 'editAnnouncement':
-	case 'updateAnnouncement':
-	//
-	//	announcement Types
-	//
 	case 'announcementTypes':
-	case 'deleteAnnouncementType':
-	case 'createAnnouncementType':
-	case 'editAnnouncementType':
-	case 'updateAnnouncementType':
 		define('HANDLER_CLASS', 'AnnouncementHandler');
 		import('pages.manager.AnnouncementHandler');
 		break;
