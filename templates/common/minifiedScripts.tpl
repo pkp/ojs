@@ -36,6 +36,11 @@
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/Feature.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/OrderItemsFeature.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/OrderGridItemsFeature.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/OrderCategoryGridItemsFeature.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/OrderListbuilderItemsFeature.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/OrderMultipleListsItemsFeature.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/GridCategoryAccordionFeature.js"></script>
+<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/classes/features/PagingFeature.js"></script>
 
 {* Generic controllers *}
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
