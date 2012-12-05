@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.medra.classes.DOIExportDom');
+if (!class_exists('DOIExportDom')) { // Bug #7848
+	import('plugins.importexport.medra.classes.DOIExportDom');
+}
 
 // XML attributes
 define('O4DOI_XMLNS' , 'http://www.editeur.org/onix/DOIMetadata/2.0');

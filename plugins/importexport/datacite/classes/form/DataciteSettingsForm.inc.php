@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.datacite.classes.form.DOIExportSettingsForm');
+if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
+	import('plugins.importexport.datacite.classes.form.DOIExportSettingsForm');
+}
 
 class DataciteSettingsForm extends DOIExportSettingsForm {
 

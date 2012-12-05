@@ -47,7 +47,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 	function &getCache() {
 		if (!is_a($this->_cache, 'PubObjectCache')) {
 			// Instantiate the cache.
-			$this->import('classes.PubObjectCache');
+			if (!class_exists('PubObjectCache')) { // Bug #7848
+				$this->import('classes.PubObjectCache');
+			}
 			$this->_cache = new PubObjectCache();
 		}
 		return $this->_cache;

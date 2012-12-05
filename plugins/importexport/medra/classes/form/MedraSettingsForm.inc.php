@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.medra.classes.form.DOIExportSettingsForm');
+if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
+	import('plugins.importexport.medra.classes.form.DOIExportSettingsForm');
+}
 
 class MedraSettingsForm extends DOIExportSettingsForm {
 

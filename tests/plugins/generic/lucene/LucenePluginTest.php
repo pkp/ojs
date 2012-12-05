@@ -24,7 +24,6 @@ import('plugins.generic.lucene.LucenePlugin');
 import('plugins.generic.lucene.classes.SolrWebService');
 import('plugins.generic.lucene.classes.EmbeddedServer');
 
-
 class LucenePluginTest extends DatabaseTestCase {
 
 	/** @var LucenePlugin */
@@ -217,7 +216,11 @@ class LucenePluginTest extends DatabaseTestCase {
 		$this->assertEquals('Article Indexing Error', $techInfoMail->getSubject());
 		$this->assertContains('An indexing error occurred while updating the article index.', $techInfoMail->getBody());
 		$this->assertContains('##plugins.generic.lucene.message.searchServiceOffline##', $techInfoMail->getBody());
-		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $techInfoMail->getRecipientString());
+		if (Core::isWindows()) {
+			$this->assertEquals('jerico.dev@gmail.com', $techInfoMail->getRecipientString());
+		} else {
+			$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $techInfoMail->getRecipientString());
+		}
 		$this->assertEquals('"Open Journal Systems" <jerico.dev@gmail.com>', $techInfoMail->getFromString());
 
 		// Call again to make sure that a second mail is not being sent.

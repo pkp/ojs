@@ -13,7 +13,9 @@
  */
 
 
-import('plugins.importexport.datacite.classes.DOIExportDom');
+if (!class_exists('DOIExportDom')) { // Bug #7848
+	import('plugins.importexport.datacite.classes.DOIExportDom');
+}
 
 // XML attributes
 define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-2.2');
