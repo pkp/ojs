@@ -177,21 +177,23 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		// Enable DOIs with default settings for all objects.
 		$this->configureDoi(true);
 
-		// There should be no DOI meta-data field for this suffix generation strategy.
-		$this->checkMetadataPages($editable = false);
-
 		// Check whether the expected display formats exist for
 		// the various object types and whether the suffix is
 		// correctly generated according to the default pattern.
 		$expectedDois = array(
-			'issue' => '^10.1234/t.v1i1$',
-			'article' => '^10.1234/t.v1i1.1$',
-			'article-rt-indexing' => '^10.1234/t.v1i1.1$',
-			'article-rt-citations-apa' => 'doi:10.1234/t.v1i1.1$',
-			'galley' => '^10.1234/t.v1i1.1.g1$',
-			'suppfile' => '^10.1234/t.v1i1.1.s1$'
+			'issue' => '10.1234/t.v1i1',
+			'article' => '10.1234/t.v1i1.1',
+			'article-rt-indexing' => '10.1234/t.v1i1.1',
+			'article-rt-citations-apa' => 'doi:10.1234/t.v1i1.1',
+			'galley' => '10.1234/t.v1i1.1.g1',
+			'suppfile' => '10.1234/t.v1i1.1.s1'
 		);
 		foreach ($expectedDois as $objectType => $expectedDoi) {
+		    // There should be no DOI meta-data field for this suffix generation strategy.
+		    if (strpos($objectType, '-rt-') === false) {
+				$this->checkMetadataPage($objectType, $editable = false, $expectedDoi, 1, true);
+		    }
+		    // DOIs should be generated for all object pages automatically.
 			$this->checkDoiDisplay($objectType, $expectedDoi);
 		}
 	}
@@ -283,7 +285,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'suppfile' => '10.1234/jort.art1.suf1'
 		);
 		foreach ($expectedDois as $objectType => $expectedDoi) {
-			$this->checkDoiDisplay($objectType, "^${expectedDoi}$");
+			$this->checkDoiDisplay($objectType, $expectedDoi);
 			$this->checkMetadataPage($objectType, $editable = false, $expectedDoi);
 		}
 	}
@@ -379,7 +381,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		foreach ($testUrlSuffixes as $objectType => $testUrlSuffix) {
 			$this->setUrlSuffix($objectType, $testUrlSuffix);
 			$expectedDoi = "10.1234/${testUrlSuffix}";
-			$this->checkDoiDisplay($objectType, "^${expectedDoi}$");
+			$this->checkDoiDisplay($objectType, $expectedDoi);
 			$this->checkMetadataPage($objectType, $editable = false, $expectedDoi);
 		}
 
@@ -395,7 +397,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		);
 		foreach ($expectedDoisWithoutUrlSuffix as $objectType => $expectedDoi) {
 			$this->setUrlSuffix($objectType, '');
-			$this->checkDoiDisplay($objectType, "^${expectedDoi}$");
+			$this->checkDoiDisplay($objectType, $expectedDoi);
 		}
 
 		// Disable custom URL suffixes.
@@ -475,7 +477,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				$this->setUrlSuffix(strtolower_codesafe($targetObjectType), 'doitest');
 
 				// Check that the form is being redisplayed with an error.
-				$expectedErrorMessage = "The public identifier 'doitest' already exists";
+				$expectedErrorMessage = "The public identifier 'doitest' already exists.*";
 				if ($targetObjectType == 'Article') {
 					// We expect a notification in the case of article
 					// URL suffixes as they are edited in the issue toc
@@ -906,29 +908,19 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 					}
 				}
 			} else {
-				$this->assertText($this->pages[$objectType]['visible'], $expectedDoi);
+				$expectedDoiPattern = "(^|.* )$expectedDoi($| .*)";
+				$this->assertText($this->pages[$objectType]['visible'], $expectedDoiPattern);
 				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
 					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
 						$this->assertAttribute(
 							$this->pages[$objectType][$doiMetaAttribute],
-							$expectedDoi
+							$expectedDoiPattern
 						);
 					}
 				}
 			}
 		} catch(Exception $e) {
 			throw $this->improveException($e, $objectType);
-		}
-	}
-
-	/**
-	 * Check DOI input and display on all metadata pages.
-	 * @param $editable boolean whether the DOI Suffix field should be editable.
-	 * @param $expectedDoi string
-	 */
-	private function checkMetadataPages($editable = false, $expectedDoi = null) {
-		foreach($this->objectTypes as $objectType) {
-			$this->checkMetadataPage($objectType, $editable, $expectedDoi);
 		}
 	}
 
@@ -945,13 +937,14 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			$url = $this->getUrl($metadataPage, $objectId);
 			$this->verifyAndOpen($url);
 			if ($editable) {
-				$this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
+				if (!is_null($expectedDoi)) $this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
 			} else {
 				$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
-				$this->assertText($this->pages[$metadataPage]['doi'], $expectedDoi);
+				if (!is_null($expectedDoi)) $this->assertText($this->pages[$metadataPage]['doi'], "regexp:^DOI $expectedDoi\n");
 			}
 			if ($isPreview) {
-				$this->assertText($this->pages[$metadataPage]['doi'], 'What you see is a preview');
+				$doiPreview = $this->getText($this->pages[$metadataPage]['doi']);
+				$this->assertContains('What you see is a preview', $doiPreview);
 			}
 		} catch(Exception $e) {
 			throw $this->improveException($e, $objectType);
