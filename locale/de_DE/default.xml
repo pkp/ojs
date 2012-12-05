@@ -8,7 +8,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  *
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -137,6 +136,7 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.forAuthors"><![CDATA[Haben Sie Interesse, einen Beitrag bei dieser Zeitschrift einzureichen? Wir möchten Sie auf <a href="{$indexUrl}/{$journalPath}/about">Über uns</a>, wo Sie die Richtlinien der Zeitschrift einsehen können, und auf <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Richtlinien für Autor/innen</a> verweisen. Autor/innen müssen sich <a href="{$indexUrl}/{$journalPath}/user/register">registrieren</a>, bevor Sie einen Beitrag bei der Zeitschrift einreichen können. Falls Sie bereits angemeldet sind, einfach <a href="{$indexUrl}/{$journalPath}/login">einloggen</a> und die "Fünf Schritte zur Einreichung" abarbeiten.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wir ermutigen Forschungsbibliotheken, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Darüber hinaus bietet das Open Source Veröffentlichungssystem dieser Zeitschrift Bibliotheken die Möglichkeit, Zeitschriften, an denen Mitglieder ihrer Fakultät mitarbeiten, online bereitzustellen. Siehe <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Diese Zeitschrift verwendet das LOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href="http://lockss.org/">Mehr...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Diese Zeitschrift verwendet das CLOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href="http://clockss.org/">Mehr...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
