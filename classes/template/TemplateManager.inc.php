@@ -131,10 +131,6 @@ class TemplateManager extends PKPTemplateManager {
 			if (!$site->getRedirect()) {
 				$this->assign('hasOtherJournals', true);
 			}
-
-			// Add java script for notifications
-			$user =& $this->request->getUser();
-			if ($user) $this->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.pnotify.js');
 		}
 	}
 
