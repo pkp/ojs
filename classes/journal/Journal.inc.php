@@ -38,7 +38,7 @@ class Journal extends Context {
 	 * @return array
 	 */
 	function &getSupportedSubmissionLocaleNames() {
-		$supportedLocales =& $this->getData('supportedSubmissionLocales');
+		$supportedLocales =& $this->getData('supportedSubmissionLocaleNames');
 
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
