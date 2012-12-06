@@ -17,7 +17,6 @@
 
 switch ($op) {
 	case 'index':
-	case 'view':
 		define('HANDLER_CLASS', 'AnnouncementHandler');
 		import('pages.announcement.AnnouncementHandler');
 		break;
