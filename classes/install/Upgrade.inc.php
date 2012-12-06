@@ -1056,7 +1056,7 @@ class Upgrade extends Installer {
 		while ($journal =& $journals->next()) {
 			// for languages, we depend on the journal locale settings since languages are not localized.
 			// Use Journal locales, or primary if no defined submission locales.
-			$supportedLocales = $journal->getSetting('supportedSubmissionLocales');
+			$supportedLocales = $journal->getSupportedSubmissionLocales();
 
 			if (empty($supportedLocales)) $supportedLocales = array($journal->getPrimaryLocale());
 			else if (!is_array($supportedLocales)) $supportedLocales = array($supportedLocales);

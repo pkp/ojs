@@ -33,29 +33,6 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Return associative array of all locales supported for the submissions.
-	 * These locales are used to provide a language toggle on the submission setp1 and the galley edit page.
-	 * @return array
-	 */
-	function &getSupportedSubmissionLocaleNames() {
-		$supportedLocales =& $this->getData('supportedSubmissionLocaleNames');
-
-		if (!isset($supportedLocales)) {
-			$supportedLocales = array();
-			$localeNames =& AppLocale::getAllLocales();
-
-			$locales = $this->getSetting('supportedSubmissionLocales');
-			if (empty($locales)) $locales = array($this->getPrimaryLocale());
-
-			foreach ($locales as $localeKey) {
-				$supportedLocales[$localeKey] = $localeNames[$localeKey];
-			}
-		}
-
-		return $supportedLocales;
-	}
-
-	/**
 	 * Get "localized" journal page title (if applicable).
 	 * param $home boolean get homepage title
 	 * @return string

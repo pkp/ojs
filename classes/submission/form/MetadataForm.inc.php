@@ -68,17 +68,11 @@ class MetadataForm extends Form {
 		}
 
 		if ($this->canEdit) {
-			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
-			if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
-
 			parent::Form(
 				'submission/metadata/metadataEdit.tpl',
 				true,
 				$article->getLocale(),
-				array_flip(array_intersect(
-					array_flip(AppLocale::getAllLocales()),
-					$supportedSubmissionLocales
-				))
+				$journal->getSupportedSubmissionLocaleNames()
 			);
 			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
 			$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));

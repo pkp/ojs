@@ -27,9 +27,11 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 
-		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
-		if (!is_array($supportedSubmissionLocales) || count($supportedSubmissionLocales) < 1) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
-		$this->addCheck(new FormValidatorInSet($this, 'locale', 'required', 'author.submit.form.localeRequired', $supportedSubmissionLocales));
+		$this->addCheck(new FormValidatorInSet(
+			$this, 'locale', 'required',
+			'author.submit.form.localeRequired',
+			$journal->getSupportedSubmissionLocales()
+		));
 	}
 
 	/**
@@ -69,17 +71,9 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			}
 		}
 
-		// Provide available submission languages. (Convert the array
-		// of locale symbolic names xx_XX into an associative array
-		// of symbolic names => readable names.)
-		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
-		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
 		$templateMgr->assign(
 			'supportedSubmissionLocaleNames',
-			array_flip(array_intersect(
-				array_flip(AppLocale::getAllLocales()),
-				$supportedSubmissionLocales
-			))
+			$journal->getSupportedSubmissionLocaleNames()
 		);
 
 		parent::display();
@@ -97,10 +91,10 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			);
 		} else {
 			$journal =& $this->request->getJournal();
-			$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
+			$supportedSubmissionLocales = $journal->getSupportedSubmissionLocales();
 			// Try these locales in order until we find one that's
 			// supported to use as a default.
-			$fallbackLocales = array_keys($supportedSubmissionLocales);
+			$fallbackLocales = array_values($supportedSubmissionLocales);
 			$tryLocales = array(
 				$this->getFormLocale(), // Current form locale
 				AppLocale::getLocale(), // Current UI locale

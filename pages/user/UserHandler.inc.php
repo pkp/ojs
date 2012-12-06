@@ -12,14 +12,14 @@
  * @brief Handle requests for user functions.
  */
 
-import('classes.handler.Handler');
+import('lib.pkp.pages.user.PKPUserHandler');
 
-class UserHandler extends Handler {
+class UserHandler extends PKPUserHandler {
 	/**
 	 * Constructor
 	 */
 	function UserHandler() {
-		parent::Handler();
+		parent::PKPUserHandler();
 	}
 
 	/**
@@ -27,7 +27,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 
 		$sessionManager =& SessionManager::getManager($request);
@@ -227,7 +227,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function subscriptions($args, &$request) {
+	function subscriptions($args, $request) {
 		$this->validate();
 
 		$journal =& $request->getJournal();
@@ -351,44 +351,11 @@ class UserHandler extends Handler {
 	}
 
 	/**
-	 * Change the locale for the current user.
-	 * @param $args array first parameter is the new locale
-	 */
-	function setLocale($args, $request) {
-		$setLocale = array_shift($args);
-
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
-		if ($journal != null) {
-			$journalSupportedLocales = $journal->getSetting('supportedLocales');
-			if (!is_array($journalSupportedLocales)) {
-				$journalSupportedLocales = array();
-			}
-		}
-
-		if (AppLocale::isLocaleValid($setLocale) && (!isset($journalSupportedLocales) || in_array($setLocale, $journalSupportedLocales)) && in_array($setLocale, $site->getSupportedLocales())) {
-			$session =& $request->getSession();
-			$session->setSessionVar('currentLocale', $setLocale);
-		}
-
-		if(isset($_SERVER['HTTP_REFERER'])) {
-			$request->redirectUrl($_SERVER['HTTP_REFERER']);
-		}
-
-		$source = $request->getUserVar('source');
-		if (isset($source) && !empty($source)) {
-			$request->redirectUrl($request->getProtocol() . '://' . $request->getServerHost() . $source, false);
-		}
-
-		$request->redirect(null, 'index');
-	}
-
-	/**
 	 * Become a given role.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function become($args, &$request) {
+	function become($args, $request) {
 		parent::validate(true);
 
 		$journal =& $request->getJournal();
@@ -426,21 +393,6 @@ class UserHandler extends Handler {
 	}
 
 	/**
-	 * Display an authorization denied message.
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function authorizationDenied($args, &$request) {
-		$this->validate(true);
-		$authorizationMessage = htmlentities($request->getUserVar('message'));
-		$this->setupTemplate($request, true);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('message', $authorizationMessage);
-		return $templateMgr->display('common/message.tpl');
-	}
-
-	/**
 	 * Validate that user is logged in.
 	 * Redirects to login form if not logged in.
 	 * @param $loginCheck boolean check if user is logged in
@@ -472,7 +424,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewPublicProfile($args, &$request) {
+	function viewPublicProfile($args, $request) {
 		$this->validate(false);
 		$templateMgr =& TemplateManager::getManager($request);
 		$userId = (int) array_shift($args);
@@ -505,7 +457,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function purchaseSubscription($args, &$request) {
+	function purchaseSubscription($args, $request) {
 		$this->validate();
 
 		if (empty($args)) $request->redirect(null, 'user');
@@ -584,7 +536,7 @@ class UserHandler extends Handler {
  	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function payPurchaseSubscription($args, &$request) {
+	function payPurchaseSubscription($args, $request) {
 		$this->validate();
 
 		if (empty($args)) $request->redirect(null, 'user');
@@ -688,7 +640,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function completePurchaseSubscription($args, &$request) {
+	function completePurchaseSubscription($args, $request) {
 		$this->validate();
 
 		if (count($args) != 2) $request->redirect(null, 'user');
@@ -739,7 +691,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function payRenewSubscription($args, &$request) {
+	function payRenewSubscription($args, $request) {
 		$this->validate();
 
 		if (count($args) != 2) $request->redirect(null, 'user');
@@ -797,7 +749,7 @@ class UserHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function payMembership($args, &$request) {
+	function payMembership($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
 

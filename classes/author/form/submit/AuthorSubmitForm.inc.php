@@ -37,19 +37,11 @@ class AuthorSubmitForm extends Form {
 	 * @param $step int
 	 */
 	function AuthorSubmitForm(&$article, $step, &$journal, &$request) {
-		// Provide available submission languages. (Convert the array
-		// of locale symbolic names xx_XX into an associative array
-		// of symbolic names => readable names.)
-		$supportedSubmissionLocales = $journal->getSetting('supportedSubmissionLocales');
-		if (empty($supportedSubmissionLocales)) $supportedSubmissionLocales = array($journal->getPrimaryLocale());
 		parent::Form(
 			sprintf('author/submit/step%d.tpl', $step),
 			true,
 			$article?$article->getLocale():AppLocale::getLocale(),
-			array_flip(array_intersect(
-				array_flip(AppLocale::getAllLocales()),
-				$supportedSubmissionLocales
-			))
+			$journal->getSupportedSubmissionLocaleNames()
 		);
 		$this->addCheck(new FormValidatorPost($this));
 		$this->step = (int) $step;
