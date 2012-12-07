@@ -84,11 +84,11 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$journal =& $request->getJournal();
 			if (isset($journal)) {
-				$locales =& $journal->getSupportedLocaleNames();
+				$locales = $journal->getSupportedLocaleNames();
 
 			} else {
 				$site =& $request->getSite();
-				$locales =& $site->getSupportedLocaleNames();
+				$locales = $site->getSupportedLocaleNames();
 			}
 		} else {
 			$locales =& AppLocale::getAllLocales();
