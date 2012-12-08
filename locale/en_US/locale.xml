@@ -682,11 +682,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.comments.saveAndEmailAuthor">Save and Email Author</message>
 	<message key="submission.comments.saveAndEmailEditor">Save and Email Editor</message>
 
-	<!-- Login -->
-	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the
-current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
-
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
