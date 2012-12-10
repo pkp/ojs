@@ -91,9 +91,9 @@ class AppLocale extends PKPLocale {
 				if (isset($locale)) {
 					// Check if user-specified locale is supported
 					if ($journal != null) {
-						$locales =& $journal->getSupportedLocaleNames();
+						$locales = $journal->getSupportedLocaleNames();
 					} else {
-						$locales =& $site->getSupportedLocaleNames();
+						$locales = $site->getSupportedLocaleNames();
 					}
 
 					if (!in_array($locale, array_keys($locales))) {

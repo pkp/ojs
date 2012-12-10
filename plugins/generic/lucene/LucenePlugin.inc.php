@@ -477,7 +477,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// Call the solr web service.
 		$solrWebService =& $this->getSolrWebService();
-		$result =& $solrWebService->retrieveResults($searchRequest, $totalResults);
+		$result = $solrWebService->retrieveResults($searchRequest, $totalResults);
 		if (is_null($result)) {
 			$error = $solrWebService->getServiceMessage();
 			$this->_informTechAdmin($error, $journal, true);
