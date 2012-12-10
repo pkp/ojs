@@ -126,7 +126,7 @@ class SolrWebService extends XmlWebService {
 			$journal =& $this->_journalCache[$journalId];
 		} else {
 			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$journal =& $journalDao->getById($journalId);
+			$journal = $journalDao->getById($journalId);
 			$this->_journalCache[$journalId] =& $journal;
 		}
 
