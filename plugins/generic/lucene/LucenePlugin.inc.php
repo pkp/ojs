@@ -280,7 +280,7 @@ class LucenePlugin extends GenericPlugin {
 							$journalId = $request->getUserVar('journalToReindex');
 							if (!empty($journalId)) {
 								$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-								$journal =& $journalDao->getById($journalId);
+								$journal = $journalDao->getById($journalId);
 								if (!is_a($journal, 'Journal')) $journal = null;
 							}
 							if (empty($journalId) || (!empty($journalId) && is_a($journal, 'Journal'))) {

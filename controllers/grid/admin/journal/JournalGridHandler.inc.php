@@ -148,7 +148,7 @@ class JournalGridHandler extends ContextGridHandler {
 		// Identify the journal Id.
 		$journalId = $request->getUserVar('rowId');
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($journalId);
+		$journal = $journalDao->getById($journalId);
 
 		if ($journal) {
 			$journalDao->deleteById($journalId);

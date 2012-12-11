@@ -270,7 +270,7 @@ class ArticleSearch {
 		if ($siteSearch) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			if (!empty($searchFilters['searchJournal'])) {
-				$journal =& $journalDao->getById($searchFilters['searchJournal']);
+				$journal = $journalDao->getById($searchFilters['searchJournal']);
 			} elseif (array_key_exists('journalTitle', $request->getUserVars())) {
 				$journals =& $journalDao->getJournals(
 					false, null, JOURNAL_FIELD_TITLE,

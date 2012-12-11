@@ -356,7 +356,7 @@ class OJSPaymentManager extends PaymentManager {
 
 				$journalDao =& DAORegistry::getDAO('JournalDAO');
 				$journalId = $gift->getAssocId();
-				$journal =& $journalDao->getById($journalId);
+				$journal = $journalDao->getById($journalId);
 				if (!$journal) return false;
 
 				// Check if user account corresponding to recipient email exists in the system

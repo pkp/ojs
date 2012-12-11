@@ -318,7 +318,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (!$journal || $journal->getId() != $journalId) {
 			unset($journal);
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($journalId);
+			$journal = $journalDao->getById($journalId);
 		}
 
 		return $journal;

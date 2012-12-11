@@ -366,7 +366,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
-		$journal =& $journalDao->getByPath($journalPath);
+		$journal = $journalDao->getByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {

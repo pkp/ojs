@@ -59,7 +59,7 @@ class IssueAction {
 		}
 		if (!$journal || $journal->getId() !== $issue->getJournalId()) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($issue->getJournalId());
+			$journal = $journalDao->getById($issue->getJournalId());
 		}
 		if (!$journal) return false;
 

@@ -77,7 +77,7 @@ class OJSCompletedPayment extends Payment {
 	 */
 	function getName() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($this->getJournalId());
+		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
@@ -160,7 +160,7 @@ class OJSCompletedPayment extends Payment {
 	 */
 	function getDescription() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($this->getJournalId());
+		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:

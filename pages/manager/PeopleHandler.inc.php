@@ -166,7 +166,7 @@ class PeopleHandler extends ManagerHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$roleId = (int)(isset($args[0])?$args[0]:$request->getUserVar('roleId'));
-		$journal =& $journalDao->getByPath($request->getRequestedJournalPath());
+		$journal = $journalDao->getByPath($request->getRequestedJournalPath());
 
 		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'name';
@@ -264,7 +264,7 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getByPath($request->getRequestedJournalPath());
+		$journal = $journalDao->getByPath($request->getRequestedJournalPath());
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$rolePath = $roleDao->getRolePath($roleId);
 

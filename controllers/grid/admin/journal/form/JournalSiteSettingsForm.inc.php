@@ -35,7 +35,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	function initData() {
 		if (isset($this->contextId)) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($this->contextId);
+			$journal = $journalDao->getById($this->contextId);
 
 			parent::initData($journal);
 		} else {
@@ -51,7 +51,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 
 		if ($this->contextId) {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($this->contextId);
+			$journal = $journalDao->getById($this->contextId);
 			if ($journal) $this->setData('oldPath', $journal->getPath());
 		}
 	}
@@ -64,7 +64,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->contextId)) {
-			$journal =& $journalDao->getById($this->contextId);
+			$journal = $journalDao->getById($this->contextId);
 		}
 
 		if (!isset($journal)) {

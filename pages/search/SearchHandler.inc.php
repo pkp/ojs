@@ -202,7 +202,7 @@ class SearchHandler extends Handler {
 					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue) && (!$issueAction->subscribedUser($journal, $issueId, $articleId) && !$issueAction->subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {
-					$journals[$journalId] =& $journalDao->getById($journalId);
+					$journals[$journalId] = $journalDao->getById($journalId);
 				}
 				if (!isset($sections[$sectionId])) {
 					$sections[$sectionId] =& $sectionDao->getSection($sectionId, $journalId, true);

@@ -67,7 +67,7 @@ class OJSQueuedPayment extends QueuedPayment {
 	 */
 	function getName() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($this->getJournalId());
+		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
@@ -153,7 +153,7 @@ class OJSQueuedPayment extends QueuedPayment {
 	 */
 	function getDescription() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($this->getJournalId());
+		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
