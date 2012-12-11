@@ -18,11 +18,12 @@ import('lib.pkp.tests.functional.oai.FunctionalOaiBaseTestCase');
 class FunctionalOaiNlmTest extends FunctionalOaiBaseTestCase {
 	public function testDoi() {
 		// Configure the web service request
-		$this->webServiceRequest->setParams($params = array(
+		$params = array(
 			'verb' => 'GetRecord',
 			'metadataPrefix' => 'nlm',
 			'identifier' => 'oai:'.Config::getVar('oai', 'repository_id').':article/1'
-		));
+		);
+		$this->webServiceRequest->setParams($params);
 
 		// Check DOI node with XPath.
 		$namespaces = array(

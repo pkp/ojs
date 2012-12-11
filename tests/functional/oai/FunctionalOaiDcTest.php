@@ -37,11 +37,12 @@ class FunctionalOaiDcTest extends FunctionalOaiBaseTestCase {
 	 */
 	public function testDOIAndURN() {
 		// Configure the web service request
-		$this->webServiceRequest->setParams($params = array(
+		$params = array(
 			'verb' => 'GetRecord',
 			'metadataPrefix' => 'oai_dc',
 			'identifier' => 'oai:'.Config::getVar('oai', 'repository_id').':article/1'
-		));
+		);
+		$this->webServiceRequest->setParams($params);
 
 		// Check DOI node with XPath.
 		$namespaces = array(
