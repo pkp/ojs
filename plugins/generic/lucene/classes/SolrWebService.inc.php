@@ -1502,7 +1502,7 @@ class SolrWebService extends XmlWebService {
 			}
 			$galleyOuterNode =& XMLCustomWriter::createElement($articleDoc, 'galley-xml');
 			if (is_callable(array($articleDoc, 'createCDATASection'))) {
-				$cdataNode =& $articleDoc->createCDATASection($galleyXml);
+				$cdataNode = $articleDoc->createCDATASection($galleyXml);
 			} else {
 				$cdataNode = new XMLNode();
 				$cdataNode->setValue('<![CDATA[' . $galleyXml . ']]>');
@@ -1573,7 +1573,7 @@ class SolrWebService extends XmlWebService {
 			}
 			$suppFileOuterNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile-xml');
 			if (is_callable(array($articleDoc, 'createCDATASection'))) {
-				$cdataNode =& $articleDoc->createCDATASection($suppFileXml);
+				$cdataNode = $articleDoc->createCDATASection($suppFileXml);
 			} else {
 				$cdataNode = new XMLNode();
 				$cdataNode->setValue('<![CDATA[' . $suppFileXml . ']]>');
