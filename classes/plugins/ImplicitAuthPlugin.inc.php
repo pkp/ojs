@@ -24,12 +24,14 @@ class ImplicitAuthPlugin extends Plugin {
 	/**
 	 * Authenticate a user based on some external conditions or system.
 	 * Subclasses should implement this method.
-	 * @return object User object for authenticated user, if authentication
-	 * 	was successful; otherwise, the method should not return (i.e.
-	 *	the request should be redirected to login or elsewhere).
+	 * @return boolean
+	 * @param $hookname String
+	 * @param $args array args[0] should be populated upon return with a user
+	 * object for authenticated user, if authentication was successful;
+	 * otherwise, the method should not return (i.e. the request should be
+	 * redirected to login or elsewhere).
 	 */
-
-	function implicitAuth() {
+	function implicitAuth($hookname, $args) {
 		die('ABSTRACT METHOD');
 	}
 }
