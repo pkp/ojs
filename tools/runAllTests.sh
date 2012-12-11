@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#
+# USAGE:
+# runAllTests.sh [options]
+#  -C	Include class tests in lib/pkp.
+#  -P	Include plugin tests in lib/pkp.
+#  -c	Include class tests in application.
+#  -p	Include plugin tests in application.
+#  -f	Include functional tests in application.
+# If no options are specified, then all tests will be executed.
+#
+
 # Before executing tests for the first time please execute the
 # following commands from the main ojs directory to install
 # the default test environment.
@@ -77,8 +88,55 @@ TESTS_DIR=`readlink -f "$TESTS_DIR/../lib/pkp/tests"`
 TEST_CONF1="--configuration $TESTS_DIR/phpunit-env1.xml"
 TEST_CONF2="--configuration $TESTS_DIR/phpunit-env2.xml"
 
-phpunit $TEST_CONF1 lib/pkp/tests/classes
-phpunit $TEST_CONF2 lib/pkp/tests/plugins
-phpunit $TEST_CONF1 tests/classes
-phpunit $TEST_CONF2 tests/plugins
-phpunit $TEST_CONF1 tests/functional
+### Command Line Options ###
+
+# Run all types of tests by default, unless one or more is specified
+DO_ALL=1
+
+# Various types of tests
+DO_PKP_CLASSES=0
+DO_PKP_PLUGINS=0
+DO_APP_CLASSES=0
+DO_APP_PLUGINS=0
+DO_APP_FUNCTIONAL=0
+
+# Parse arguments
+while getopts "CPcpf" opt; do
+	case "$opt" in
+		C)	DO_ALL=0
+			DO_PKP_CLASSES=1
+			;;
+		P)	DO_ALL=0
+			DO_PKP_PLUGINS=1
+			;;
+		c)	DO_ALL=0
+			DO_APP_CLASSES=1
+			;;
+		p)	DO_ALL=0
+			DO_APP_PLUGINS=1
+			;;
+		f)	DO_ALL=0
+			DO_APP_FUNCTIONAL=1
+			;;
+	esac
+done
+
+if [ \( "$DO_ALL" -eq 1 \) -o \( "$DO_PKP_CLASSES" -eq 1 \) ]; then
+	phpunit $TEST_CONF1 lib/pkp/tests/classes
+fi
+
+if [ \( "$DO_ALL" -eq 1 \) -o \( "$DO_PKP_PLUGINS" -eq 1 \) ]; then
+	phpunit $TEST_CONF2 lib/pkp/tests/plugins
+fi
+
+if [ \( "$DO_ALL" -eq 1 \) -o \( "$DO_APP_CLASSES" -eq 1 \) ]; then
+	phpunit $TEST_CONF1 tests/classes
+fi
+
+if [ \( "$DO_ALL" -eq 1 \) -o \( "$DO_APP_PLUGINS" -eq 1 \) ]; then
+	phpunit $TEST_CONF2 tests/plugins
+fi
+
+if [ \( "$DO_ALL" -eq 1 \) -o \( "$DO_APP_FUNCTIONAL" -eq 1 \) ]; then
+	phpunit $TEST_CONF1 tests/functional
+fi
