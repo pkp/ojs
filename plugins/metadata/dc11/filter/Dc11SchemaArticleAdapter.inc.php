@@ -114,7 +114,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:publisher', $publishers);
 
 		// Contributor
-		$contributors = $article->getSponsor(null);
+		$contributors = (array) $article->getSponsor(null);
 		foreach ($contributors as $locale => $contributor) {
 			$contributors[$locale] = array_map('trim', explode(';', $contributor));
 		}
@@ -160,13 +160,18 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$pages = $article->getPages();
 		if (!empty($pages)) $pages = '; ' . $pages;
 		foreach ($sources as $locale => $source) {
-			$sources[$locale] .= '; ';
 			if (is_a($article, 'PublishedArticle')) {
-				$sources[$locale] .= $issue->getIssueIdentification();
+				$sources[$locale] .= '; ' . $issue->getIssueIdentification();
 			}
 			$sources[$locale] .=  $pages;
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
+		if ($issn = $journal->getSetting('onlineIssn')) {
+			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+		}
+		if ($issn = $journal->getSetting('printIssn')) {
+			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+		}
 
 		// Get galleys and supp files.
 		$galleys = array();
@@ -208,7 +213,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
+		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIssueId = $pubIdPlugin->getPubId($issue)) {
 				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
