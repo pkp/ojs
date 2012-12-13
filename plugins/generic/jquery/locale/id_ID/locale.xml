@@ -2,14 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/generic/jquery/locale/id_ID/locale.xml
   *
   * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
   *
-  * $Id: locale.xml,v 1.2 2009/07/06 20:01:47 mcrider Exp $
   -->
  
 <locale name="id_ID" full_name="Indonesia">
