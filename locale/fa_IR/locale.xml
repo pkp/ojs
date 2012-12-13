@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/fa_IR/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
@@ -10,6 +10,7 @@
   * تنظیمات بومی برای زبان fa_IR (فارسی)
   *
   -->
+
 <locale full_name="Farsi" name="fa_IR">
 <!--
 	 * این فایل به چندین قسمت ماژور تقسیم شده است و هر قسمت توسط متن 

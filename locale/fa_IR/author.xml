@@ -10,6 +10,7 @@
   * Localization strings for the fa_IR (Persian) locale.
   *
   -->
+
 <locale name="fa_IR" full_name = "Persian">
 	<message key="author.submit">ساب میشن جدید</message>
 	<message key="author.track">ساب میشن های جاری</message>

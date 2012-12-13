@@ -10,6 +10,7 @@
   * Localization strings for the fa_IR (Persian) locale.
   *
   -->
+
 <locale name="fa_IR" full_name = "Persian">
 	<message key="editor.article.reviewForms">فرم های کارشناسی</message>
 	<message key="editor.article.selectReviewForm">انتخاب فرم کارشناسی</message>

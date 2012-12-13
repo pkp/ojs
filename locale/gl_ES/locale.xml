@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/gl_ES/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -11,8 +11,8 @@
   *
   *
   * locale.xml,v 1.1 2011/09/01 00:00:00 Gabriel Beceiro
-  * Tradución da versión orixinal por Gabriel Beceiro (gbeceiro@gmail.com) - 2011/09/01    
-    -->
+  * Tradución da versión orixinal por Gabriel Beceiro (gbeceiro@gmail.com) - 2011/09/01
+  -->
  
 <locale name="gl_ES" full_name="Galego">
 	<!--

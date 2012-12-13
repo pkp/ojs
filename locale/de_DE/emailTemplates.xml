@@ -2,7 +2,7 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * emailTemplateData.xml
+  * locale/de_DE/emailTemplateData.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

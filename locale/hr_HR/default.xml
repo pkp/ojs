@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!-- 
-  * default.xml
+  * locale/hr_HR/default.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -10,7 +10,8 @@
   * Localization strings for the hr_HR (Croatian/hrvatski) locale.
   *
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-   -->
+  -->
+
 <locale name="hr_HR">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Prijavljeni članak nije prethodno objavljivan niti se nalazi u recenzijskom postupku pri nekom drugom časopisu. U suprotnom, molimo to obrazložiti pod "komentari uredniku".</message>
 	<message key="default.journalSettings.checklist.fileFormat">Datoteka koja sadrži rad je u Microsoft Word ili RTF formatu.</message>

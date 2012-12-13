@@ -10,6 +10,7 @@
   * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="admin.hostedJournals">Revues hébergées</message>
 	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>

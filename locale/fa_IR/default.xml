@@ -1,7 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
 <!--
-  * default.xml
+  * locale/fa_IR/default.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * تحت مجوزGNU GPL v2 منتشرشد. برای دیدن متن کامل فایل docs/COPYING را ببینید.
@@ -9,6 +10,7 @@
   * تنظیمات بومی برای زبان fa_IR (فارسی)
   *
   -->
+
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="default.journalSettings.checklist.fileFormat" >فایل ساب میشن به فرمات OpenOffice, Microsoft Word, RTF, یا WordPerfect میباشد.</message>
 	<message key="default.journalSettings.openAccessPolicy" >این مجله دستیابی فوری به محتوی خود بصورت آزاد دارا میباشد به این امید که پژوهشی که بصورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی میشود</message>
