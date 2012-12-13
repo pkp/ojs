@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale/id_ID/locale.xml
+  * locale/id_ID/admin.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -11,7 +11,8 @@
   -->
 
 <locale name="id_ID" full_name = "Indonesia">
-	<message key="admin.hostedJournals">Host Jurnal</message>	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message> 
+	<message key="admin.hostedJournals">Host Jurnal</message>
+	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message> 
 	<message key="admin.settings.journalRedirectInstructions"> Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini mungkin berguna jika hosting merupakan jurnal tunggal.</message>	
 <message key="admin.settings.noJournalRedirect"> Jangan dialihkan </message> 
 	<message key="admin.languages.primaryLocaleInstructions"> Bahasa Utama ini akan menjadi bahasa default untuk situs dan setiap host jurnal.</message> 

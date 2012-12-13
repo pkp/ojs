@@ -10,6 +10,7 @@
   * Localization strings for the fa_IR (Persian) locale.
   *
   -->
+
 <locale name="fa_IR" full_name = "Persian">
 	<message key="manager.emails.confirmResetAll">آیا میخواهید تمام قالبها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در قالب های ایمیل ها از بین خواهد رفت</message>
 	<message key="manager.files.note">توجه: با مرور گر فایل میتوانید به فایلها یا پوشه های یک مجله  مستقیما دسترسی داشته باشید</message>

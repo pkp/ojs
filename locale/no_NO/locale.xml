@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/no_NO/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -11,7 +11,7 @@
   *
   -->
  
- <locale name="no_NO" full_name="Norwegian">
+<locale name="no_NO" full_name="Norwegian">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:

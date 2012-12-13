@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!-- 
-  * locale.xml
+  * locale/hr_HR/locale.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -10,7 +10,8 @@
   * Localization strings for the hr_HR (Croatian/hrvatski) locale.
   *
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
-   -->
+  -->
+
 <locale name="hr_HR" full_name="Hrvatski">
 	<!-- 
 	 * This file is organized into several major sections, separated

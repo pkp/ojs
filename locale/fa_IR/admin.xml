@@ -10,6 +10,7 @@
   * Localization strings for the fa_IR (Persian) locale.
   *
   -->
+
 <locale name="fa_IR" full_name = "Persian">
 	<message key="admin.hostedJournals">مجلات میزبان</message>
 	<message key="admin.settings.journalRedirect">تغییر جهت دادن به مجله</message>

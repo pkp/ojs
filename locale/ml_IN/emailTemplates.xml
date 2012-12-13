@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
   * locale/ml_IN/emailTemplateData.xml
   *
@@ -9,6 +10,7 @@
   * Localized email templates XML file.
   *
   -->
+
 <email_texts locale="ml_IN">
 	<email_text key="NOTIFICATION">
 		<subject>{$siteTitle}ഇല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
