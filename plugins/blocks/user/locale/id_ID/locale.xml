@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
+<!--
+  * locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
 <locale name="id_ID" full_name="Indonesia">
 	<message key="plugins.block.user.displayName">Blok Pengguna</message>
 	<message key="plugins.block.user.description">Plugin ini menyediakan alat untuk akun pengguna (contoh: login, logout, link profil, dll).</message>
