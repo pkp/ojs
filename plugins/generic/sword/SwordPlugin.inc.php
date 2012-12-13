@@ -34,11 +34,20 @@ class SwordPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Determine whether or not this plugin is supported.
+	 * @return boolean
+	 */
+	function getSupported() {
+		return class_exists('ZipArchive');
+	}
+
+	/**
 	 * Get the description of this plugin
 	 * @return string
 	 */
 	function getDescription() {
-		return __('plugins.generic.sword.description');
+		if ($this->getSupported()) return __('plugins.generic.sword.description');
+		return __('plugins.generic.sword.descriptionUnsupported');
 	}
 
 	function register($category, $path) {
@@ -223,7 +232,7 @@ class SwordPlugin extends GenericPlugin {
 				'settings',
 				__('plugins.generic.sword.settings')
 			);
-		} else {
+		} elseif ($this->getSupported()) {
 			$verbs[] = array(
 				'enable',
 				__('manager.plugins.enable')

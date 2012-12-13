@@ -13,6 +13,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.sword.displayName">SWORD Plugin</message>
 	<message key="plugins.generic.sword.description">Allow Journal Managers and (optionally) Authors to deposit articles via the SWORD protocol</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Allow Journal Managers and (optionally) Authors to deposit articles via the SWORD protocol. Note that this plugin requires the Zip extension, which is currently NOT installed.</message>
 	<message key="plugins.generic.sword.enabled">The SWORD plugin has been enabled.</message>
 	<message key="plugins.generic.sword.settings">Settings</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Allow the author to specify a deposit point</message>
