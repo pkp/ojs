@@ -115,7 +115,8 @@ class AnnouncementHandler extends PKPAnnouncementHandler {
 	function _announcementTypeIsValid(&$request, $typeId) {
 		$journalId = $this->getContextId($request);
 		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
-		return (($typeId != null && $announcementTypeDao->getByAssoc($typeId) == $journalId) || $typeId == null);
+		$announcementType = $announcementTypeDao->getById($typeId);
+		return (($announcementType && $announcementType->getAssocId() == $journalId && $announcementType->getAssocType() == ASSOC_TYPE_JOURNAL) || $typeId == null);
 	}
 }
 
