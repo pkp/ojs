@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
+<!--
+  * locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
 <locale name="id_ID" full_name = "Indonesia">
 	<message key="manager.emails.confirmResetAll"> Apakah Anda yakin Anda ingin mengatur ulang seluruh template email di jurnal ini? Anda akan kehilangan semua penyesuaian yang sudah Anda buat.</message> 
 	<message key="manager.files.note">Catatan: Berkas Penelusuran adalah fitur canggih yang memungkinkan file dan direktori yang terkait dengan jurnal untuk dilihat dan dimanipulasi secara langsung. </message> 
