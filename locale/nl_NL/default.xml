@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * default.xml
+  * locale/nl_NL/default.xml
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale (default journal settings).
+  * Localization strings.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<!-- Section default -->
 	<message key="section.default.title">Artikelen</message>
 	<message key="section.default.abbrev">ART</message>
