@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WHERE TO GET THE DATA FROM:
 //
-$importHome = '/apps/subi/transition/cdltransition.bepress.com/cdlib/';
+$importHome = '/apps/bpress/transition/cdltransition.bepress.com/cdlib/';
 //$importHome= '/Users/bhui/Documents/bepressdata/'; // Barbara's local machine
 //$importHome = '/apps/subi/transition/2011-09-30_transition_data/cdlib/';
 
@@ -22,11 +22,9 @@ $baseUploadDir = '/apps/subi/ojs/files';
 // values in array: journal path, journal prefix, OJS journal ID, chief editor email,editor lname, editor fname, editor mname
 $importParentDir = array();
 //TRANSITION 1 JOURNALS
-/***
 $importParentDir[] = array('uclastat/cts/tise/','uclastat_cts_tise',1,'rgould@stat.ucla.edu', 'Gould', 'Rob','');
 $importParentDir[] = array('ucsbspanport/textoshibridos/','ucsbspanport_textoshibridos',2, 'workman.amber@gmail.com', 'Workman', 'Amber', 'L');
 $importParentDir[] = array('ssha/transmodernity/','ssha_transmodernity',3, 'lopezcalvo@msn.com', 'Lopezcalvo', 'Ignacio', '');
-***/
 //TRANSITION 2 JOURNALS
 //$importParentDir[] = array('???', 'ucsb_soc_jcmrs', 4); //what about this??
 $importParentDir[] = array('irows/cliodynamics/', 'irows_cliodynamics', 5, 'peter.turchin@uconn.edu','Turchin','Peter', '');
