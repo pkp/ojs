@@ -16,18 +16,18 @@
 
 	<channel rdf:about="{$journal->getUrl()|escape}">
 		{* required elements *}
-		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getLocalizedTitle()|strip|escape:"html"}: {translate key="announcement.announcements"}</title>
 		<link>{$journal->getUrl()|escape}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
-		<description>{$description|escape:"html"|strip}</description>
+		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
-		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip}</dc:language>
+		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</dc:language>
 		{/if}
 
 		<items>

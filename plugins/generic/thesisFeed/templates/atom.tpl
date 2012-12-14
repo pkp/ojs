@@ -11,7 +11,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$selfUrl|escape}</id>
-	<title>{$journal->getLocalizedTitle()|escape:"html"|strip}: {translate key="plugins.generic.thesis.manager.theses"}</title>
+	<title>{$journal->getLocalizedTitle()|strip|escape:"html"}: {translate key="plugins.generic.thesis.manager.theses"}</title>
 	<updated>{$dateUpdated|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -43,7 +43,7 @@
 		<title>{$thesis->getTitle()|strip|escape:"html"}</title>
 		<updated>{$thesis->getDateSubmitted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$thesis->getStudentFullName()|escape:"html"|strip}</name>
+			<name>{$thesis->getStudentFullName()|strip|escape:"html"}</name>
         </author>
 		<link rel="alternate" href="{url page="thesis" op="view" path=$thesis->getId()}" />
 

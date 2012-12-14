@@ -11,7 +11,7 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getLocalizedTitle()|escape:"html"|strip}</title>
+		<title>{$journal->getLocalizedTitle()|strip|escape:"html"}</title>
 		<link>{$journal->getUrl()|escape}</link>
 
 		{if $journal->getLocalizedDescription()}
