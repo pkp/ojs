@@ -351,7 +351,7 @@ class IssueForm extends Form {
 		}
 		$issue->setHideCoverPageCover($hideCoverPageCover, null); // Localized
 
-		$issue->setAccessStatus($this->getData('accessStatus'));
+		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
 		else $issue->setOpenAccessDate(null);
 
