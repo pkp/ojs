@@ -183,7 +183,9 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 * @return ReviewAssignment
 	 */
 	function newDataObject() {
-		return new ReviewAssignment();
+		$reviewAssignment = new ReviewAssignment();
+		$reviewAssignment->setStageId(1); // Ensure correct default is used
+		return $reviewAssignment;
 	}
 
 	/**
