@@ -16,7 +16,7 @@
 
 	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
-		<title>{$journal->getLocalizedName()|escape:"html"|strip}</title>
+		<title>{$journal->getLocalizedName()|strip|escape:"html"}</title>
 		<link>{url journal=$journal->getPath()}</link>
 
 		{if $journal->getLocalizedDescription()}
@@ -25,19 +25,19 @@
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
 
-		<description>{$description|escape:"html"|strip}</description>
+		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
 		{assign var="publisherInstitution" value=$journal->getSetting('publisherInstitution')}
 		{if $publisherInstitution}
-			<dc:publisher>{$publisherInstitution|escape:"html"|strip}</dc:publisher>
+			<dc:publisher>{$publisherInstitution|strip|escape:"html"}</dc:publisher>
 		{/if}
 
 		{if $journal->getPrimaryLocale()}
-			<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip}</dc:language>
+			<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</dc:language>
 		{/if}
 
-		<prism:publicationName>{$journal->getLocalizedName()|escape:"html"|strip}</prism:publicationName>
+		<prism:publicationName>{$journal->getLocalizedName()|strip|escape:"html"}</prism:publicationName>
 
 		{if $journal->getSetting('printIssn')}
 			{assign var="ISSN" value=$journal->getSetting('printIssn')}
@@ -50,7 +50,7 @@
 		{/if}
 
 		{if $journal->getLocalizedSetting('copyrightNotice')}
-			<prism:copyright>{$journal->getLocalizedSetting('copyrightNotice')|escape:"html"|strip}</prism:copyright>
+			<prism:copyright>{$journal->getLocalizedSetting('copyrightNotice')|strip|escape:"html"}</prism:copyright>
 		{/if}
 
 		<items>

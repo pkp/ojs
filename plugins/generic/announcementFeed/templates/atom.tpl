@@ -39,7 +39,7 @@
 		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
 		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$journal->getLocalizedName()|escape:"html"|strip}</name>
+			<name>{$journal->getLocalizedName()|strip|escape:"html"}</name>
         </author>
 		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getId()}" />
         {if $announcement->getLocalizedDescription()}

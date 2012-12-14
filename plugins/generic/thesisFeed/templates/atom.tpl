@@ -43,7 +43,7 @@
 		<title>{$thesis->getTitle()|strip|escape:"html"}</title>
 		<updated>{$thesis->getDateSubmitted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$thesis->getStudentFullName()|escape:"html"|strip}</name>
+			<name>{$thesis->getStudentFullName()|strip|escape:"html"}</name>
         </author>
 		<link rel="alternate" href="{url page="thesis" op="view" path=$thesis->getId()}" />
 

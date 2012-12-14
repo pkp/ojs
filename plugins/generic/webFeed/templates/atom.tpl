@@ -27,9 +27,9 @@
 	{* recommended elements *}
 	{if $journal->getSetting('contactName')}
 		<author>
-			<name>{$journal->getSetting('contactName')|escape:"html"|strip}</name>
+			<name>{$journal->getSetting('contactName')|strip|escape:"html"}</name>
 			{if $journal->getSetting('contactEmail')}
-			<email>{$journal->getSetting('contactEmail')|escape:"html"|strip}</email>
+			<email>{$journal->getSetting('contactEmail')|strip|escape:"html"}</email>
 			{/if}
 		</author>
 	{/if}

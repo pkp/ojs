@@ -11,7 +11,7 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getLocalizedName()|escape:"html"|strip}</title>
+		<title>{$journal->getLocalizedName()|strip|escape:"html"}</title>
 		<link>{url journal=$journal->getPath()}</link>
 
 		{if $journal->getLocalizedDescription()}

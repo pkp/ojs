@@ -11,14 +11,14 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getLocalizedName()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getLocalizedName()|strip|escape:"html"}: {translate key="announcement.announcements"}</title>
 		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
-		<description>{$description|escape:"html"|strip}</description>
+		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
