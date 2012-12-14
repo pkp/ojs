@@ -331,6 +331,11 @@
 		<note file="docs/release-notes/README-2.4.1" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.4.0.0">
+		<data file="dbscripts/xml/upgrade/2.4.2_update.xml" />
+		<!-- Pending addition note file="docs/release-notes/README-2.4.2" / -->
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

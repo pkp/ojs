@@ -99,7 +99,7 @@ class SectionEditorAction extends Action {
 		// Only add the reviewer if he has not already
 		// been assigned to review this article.
 		if (!$assigned && isset($reviewer) && !HookRegistry::call('SectionEditorAction::addReviewer', array(&$sectionEditorSubmission, $reviewerId))) {
-			$reviewAssignment = new ReviewAssignment();
+			$reviewAssignment = $reviewAssignmentDao->newDataObject();
 			$reviewAssignment->setReviewerId($reviewerId);
 			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
 			$reviewAssignment->setRound($round);

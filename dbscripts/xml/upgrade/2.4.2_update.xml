@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.2_update.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.2 database updates XML file.
+  -->
+<data>
+	<!-- Bug #6968: Check stage_id constant behavior -->
+	<sql>
+		<query>UPDATE review_assignments SET stage_id=1 WHERE stage_id=0</query>
+	</sql>
+</data>
