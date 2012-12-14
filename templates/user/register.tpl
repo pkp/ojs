@@ -151,7 +151,7 @@
 
 		<tr valign="top">
 			<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
-			<td class="value"><input type="text" id="userUrl" name="userUrl" value="{$userUrl|escape}" size="30" maxlength="90" class="textField" /></td>
+			<td class="value"><input type="text" id="userUrl" name="userUrl" value="{$userUrl|escape}" size="30" maxlength="255" class="textField" /></td>
 		</tr>
 
 		<tr valign="top">
