@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_update.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0.0 general updates.
+  -->
+<data>
+	<!-- Bug #6324: Issue Access Status = 0 -->
+	<sql>
+		<query>UPDATE issues SET access_status=1 WHERE access_status=0;</query>
+	</sql>
+</data>

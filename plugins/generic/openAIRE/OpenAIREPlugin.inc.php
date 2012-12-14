@@ -274,7 +274,7 @@ class OpenAIREPlugin extends GenericPlugin {
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = 'openAccess';
 			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
+				if ($issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = 'openAccess';
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
 					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
