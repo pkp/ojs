@@ -1101,14 +1101,19 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issues = $issueDao->getIssuesBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
 
-		// Cache issues.
+		// Filter and cache issues.
 		$nullVar = null;
 		$cache =& $this->getCache();
+		$issueData = array();
 		foreach ($issues as $issue) {
 			$cache->add($issue, $nullVar);
+			if ($issue->getPublished()) {
+				// Only propose published issues for export.
+				$issueData[] =& $issue;
+			}
 			unset($issue);
 		}
-		return $issues;
+		return $issueData;
 	}
 
 	/**
