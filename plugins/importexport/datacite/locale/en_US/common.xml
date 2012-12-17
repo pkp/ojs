@@ -33,7 +33,7 @@
 	<message key="plugins.importexport.common.export">Export Data</message>
 	<message key="plugins.importexport.common.export.unregistered">Export all unregistered issues, articles and galleys</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Select unregistered Issues, Articles and Galleys</message>
-	<message key="plugins.importexport.common.export.noUnregistered">All issues, articles and galleys have already been registered (or none of them has a DOI assigned).</message>
+	<message key="plugins.importexport.common.export.noUnregistered">All published issues, articles and galleys have already been registered (or none of them has a DOI assigned).</message>
 	<message key="plugins.importexport.common.export.issues">Export specific issues</message>
 	<message key="plugins.importexport.common.export.selectIssue">Select Issues</message>
 	<message key="plugins.importexport.common.export.noIssues">No issues currently have DOIs assigned.</message>
