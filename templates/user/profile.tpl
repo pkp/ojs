@@ -138,8 +138,9 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
 	<td class="value">
+		<span class="interestDescription">{fieldLabel for="interests" key="user.interests.description"}</span><br />
 		<!-- The container which will be processed by tag-it.js as the interests widget -->
-		<ul id="interests"><li></li></ul><span class="interestDescription">{fieldLabel for="interests" key="user.interests.description"}</span><br />
+		<ul id="interests"><li></li></ul>
 		<!-- If Javascript is disabled, this field will be visible -->
 		<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
 			{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|escape}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
