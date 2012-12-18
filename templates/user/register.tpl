@@ -225,7 +225,8 @@
 		{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" id="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> <label for="registerAsReviewer">{translate key="user.role.reviewer"}</label>: {if $existingUser}{translate key="user.register.reviewerDescriptionNoInterests"}{else}{translate key="user.register.reviewerDescription"}{/if}{/if}
 		<br /><div id="reviewerInterestsContainer" style="margin-left:25px;">
 			<label class="desc">{translate key="user.register.reviewerInterests"}</label>
-			<ul id="interests"><li></li></ul><span class="interestDescription">{fieldLabel for="interests" key="user.interests.description"}</span>
+			<span class="interestDescription">{fieldLabel for="interests" key="user.interests.description"}</span>
+			<ul id="interests"><li></li></ul>
 			<textarea name="interests" id="interestsTextOnly" rows="5" cols="40" class="textArea">
 					{foreach name=currentInterests from=$interestsKeywords item=interest}{$interest|escape}{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}
 			</textarea>
