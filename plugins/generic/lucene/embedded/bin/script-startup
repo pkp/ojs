@@ -21,3 +21,10 @@ fi
 
 # Set the path to the solr PID file.
 SOLR_PIDFILE="$OJS_FILES/lucene/solr.pid"
+
+# Try to guess the OJS base URL from its configuration file.
+URL_HOST_PATTERN='((([a-z0-9]([-a-z0-9]*[a-z0-9])?\.)*[a-z]([a-z0-9]+)?\.?)|([0-9]{1,3}(\.[0-9]{1,3}){3}))'
+URL_PORT_PATTERN='(:([0-9]*))?'
+URL_PATH_PATTERN=$'((/(%[0-9a-f]{2}|[-a-z0-9_.!~*\\\'():@\\&=+$,;])*)*/?)?'
+URL_PATTERN="https?://(${URL_HOST_PATTERN}${URL_PORT_PATTERN})${URL_PATH_PATTERN}"
+OJS_BASE_URL=`grep '^\s*base_url' "$OJS_DIR/config.inc.php" | sed $'s/^[^=]*=\s*//;s/[\'"]//g' | egrep -i "$URL_PATTERN"`
