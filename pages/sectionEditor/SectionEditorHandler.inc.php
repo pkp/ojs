@@ -44,7 +44,7 @@ class SectionEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
@@ -221,11 +221,12 @@ class SectionEditorHandler extends Handler {
 	 * Validate that the user is the assigned section editor for
 	 * the article, or is a managing editor.
 	 * Redirects to sectionEditor index page if validation fails.
+	 * @param $request PKPRequest
 	 * @param $articleId int Optional article ID to validate, or null for none
 	 * @param $access int Optional name of access level required -- see SECTION_EDITOR_ACCESS_... constants
 	 */
-	function validate($articleId = null, $access = null) {
-		parent::validate();
+	function validate($request, $articleId = null, $access = null) {
+		parent::validate(null, $request);
 		$isValid = true;
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');

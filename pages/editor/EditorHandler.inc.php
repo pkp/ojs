@@ -40,7 +40,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 
 	function index($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_HOME);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -159,7 +159,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Display editor submission queue pages.
 	 */
 	function submissions($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS);
 
 		$journal =& $request->getJournal();
@@ -340,7 +340,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Set the canEdit / canReview flags for this submission's edit assignments.
 	 */
 	function setEditorFlags($args, $request) {
-		$this->validate();
+		$this->validate($request);
 
 		$journal =& $request->getJournal();
 		$articleId = (int) $request->getUserVar('articleId');
@@ -372,7 +372,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Delete the specified edit assignment.
 	 */
 	function deleteEditAssignment($args, $request) {
-		$this->validate();
+		$this->validate($request);
 
 		$journal =& $request->getJournal();
 		$editId = (int) array_shift($args);
@@ -397,7 +397,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Assigns the selected editor to the submission.
 	 */
 	function assignEditor($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.noneEnrolled
 
 		$journal =& $request->getJournal();
@@ -490,7 +490,7 @@ class EditorHandler extends SectionEditorHandler {
 	function deleteSubmission($args, $request) {
 		$articleId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		parent::setupTemplate($request, true);
 
 		$journal =& $request->getJournal();
