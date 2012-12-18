@@ -26,8 +26,7 @@
 		{if $journalPath != 'nelc_uee' || $isSiteAdmin}
 			<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
 		{/if}
-		{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
-		{*<li><a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>*}
+		<li><a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
         {* 20111201 BLH Display 'Published Content' & 'Unpublished Content for UCLA Encyclopedia of Egyptology *}
 		{* 20120502 LS Display only 'Published Content' for UEE *}
         {if $journalPath == 'nelc_uee'}

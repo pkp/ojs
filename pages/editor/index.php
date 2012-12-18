@@ -47,6 +47,7 @@ switch ($op) {
 	case 'remindReviewer':
 	case 'thankReviewer':
 	case 'rateReviewer':
+	case 'reassignReviewer':
 	case 'confirmReviewForReviewer':
 	case 'uploadReviewForReviewer':
 	case 'enterReviewerRecommendation':
@@ -69,6 +70,7 @@ switch ($op) {
 	case 'uploadReviewVersionNoAuthorInfo':
 	case 'uploadCopyeditVersion':
 	case 'completeCopyedit':
+	case 'completeAuthorCopyedit':
 	case 'completeFinalCopyedit':
 	case 'addSuppFile':
 	case 'setSuppFileVisibility':
@@ -128,6 +130,7 @@ switch ($op) {
 	// Proof Assignment Functions
 	case 'selectProofreader':
 	case 'notifyAuthorProofreader':
+	case 'editorCompleteAuthor':
 	case 'thankAuthorProofreader':
 	case 'editorInitiateProofreader':
 	case 'editorCompleteProofreader':

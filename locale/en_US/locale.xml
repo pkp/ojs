@@ -343,6 +343,8 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
+	<message key="submission.event.copyedit.copyeditAuthorCompleted">Author copyedit completed on behalf of
+ author</message>
 	
 	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
@@ -1057,7 +1059,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
-	<message key="log.copyedit.authorFile">A version of the submission file copyedited by the author has been uploaded.</message>
+	<message key="log.copyedit.authorFile">The author copy edit of the submission has been completed.</message>
 
 	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
 	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>

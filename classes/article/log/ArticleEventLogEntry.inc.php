@@ -84,6 +84,7 @@ define('ARTICLE_LOG_COPYEDIT_FINAL', 		0x50000006);
 define('ARTICLE_LOG_COPYEDIT_SET_FILE',		0x50000007);
 define('ARTICLE_LOG_COPYEDIT_COPYEDIT_FILE',		0x50000008);
 define('ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE',		0x50000009);
+define('ARTICLE_LOG_COPYEDIT_AUTHOR',          0x50000010);
 
 // Proofreader events 				0x60000000
 define('ARTICLE_LOG_PROOFREAD_ASSIGN', 		0x60000001);
@@ -387,6 +388,8 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.copyedit.copyeditFinalCompleted';
 			case ARTICLE_LOG_COPYEDIT_SET_FILE:
 				return 'submission.event.copyedit.copyeditSetFile';
+                        case ARTICLE_LOG_COPYEDIT_AUTHOR:
+                                return 'submission.event.copyedit.copyeditAuthorCompleted';
 
 			// Proofreader events
 			case ARTICLE_LOG_PROOFREAD_ASSIGN:

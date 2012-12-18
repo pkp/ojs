@@ -1345,6 +1345,38 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Editor completes author copyedit (copyeditors disabled).
+	 * @param $sectionEditorSubmission object
+	 */
+	function completeAuthorCopyedit($sectionEditorSubmission) {
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+
+		// This is only allowed if copyeditors are disabled.
+		if ($journal->getSetting('useCopyeditors')) return;
+
+		if (HookRegistry::call('SectionEditorAction::completeAuthorCopyedit', array(&$sectionEditorSubmission))) return;
+
+		$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+		
+		$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getArticleId());
+		$copyeditor = $sectionEditorSubmission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
+		if ($copyeditor) $finalSignoff->setUserId($copyeditor->getId());
+		$finalSignoff->setDateNotified(Core::getCurrentDate());
+		$signoffDao->updateObject($finalSignoff);
+			
+		// Add log entry
+		import('classes.article.log.ArticleLog');
+		import('classes.article.log.ArticleEventLogEntry');
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_AUTHOR, ARTICLE_LOG_TYPE_AUTHOR, $user->getId(), 'log.copyedit.authorFile', Array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
+	}
+	
+
+	/**
 	 * Section editor completes final copyedit (copyeditors disabled).
 	 * @param $sectionEditorSubmission object
 	 */

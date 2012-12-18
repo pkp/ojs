@@ -119,7 +119,13 @@
 				{$authorCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-				{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+				{if $authorCopyeditSignoff->getDateCompleted()}
+					{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+				{elseif !$useCopyeditors}
+					<a href="{url op="completeAuthorCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
+				{else}
+					&mdash;
+				{/if}
 		</td>
 		<td>
 			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $authorCopyeditSignoff->getDateNotified() && !$authorCopyeditSignoff->getDateAcknowledged()}

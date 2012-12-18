@@ -45,7 +45,7 @@
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{url page="editor" op="submission" path=$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url page="editor" op="submission" path=$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|strip_tags|truncate:60:"..."}</a></td>
 		<td align="right" class="nowrap">
 			<a href="{url op="assignBookForReviewSubmission" path=$bookId returnPage=$returnPage articleId=$submission->getArticleId()}" class="action">{translate key="plugins.generic.booksForReview.editor.select"}</a>
 	</td>

@@ -85,8 +85,7 @@
 				{if $journalPath != 'nelc_uee' || $isSiteAdmin}
 					[<a href="{url journal=$journalPath page="editor" op="createIssue"}">{translate key="editor.issues.createIssue"}</a>] 
 				{/if}
-				{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
-				{*[<a href="{url journal=$journalPath page="editor" op="notifyUsers"}">{translate key="editor.notifyUsers"}</a>]*}
+				[<a href="{url journal=$journalPath page="editor" op="notifyUsers"}">{translate key="editor.notifyUsers"}</a>]
 				</td>
 			</tr>
 		{/if}

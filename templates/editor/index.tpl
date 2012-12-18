@@ -104,7 +104,7 @@ function sortSearch(heading, direction) {
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{url op="submission" path=$submission->getArticleId()}" class="action">{$submission->getLocalizedTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url op="submission" path=$submission->getArticleId()}" class="action">{$submission->getLocalizedTitle()|strip_tags|truncate:60:"..."}</a></td>
 		<td align="right">
 			{assign var="status" value=$submission->getSubmissionStatus()}
 			{if $status == STATUS_ARCHIVED}
@@ -153,8 +153,7 @@ function sortSearch(heading, direction) {
 	{if $journalPath != 'nelc_uee' || $isSiteAdmin}
 		<li>&#187; <a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
 	{/if}
-	{* 20120123 BLH Remove 'Notify Users' link until we have implemented Readers functionality *}
-	{*<li>&#187; <a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>*}
+	<li>&#187; <a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
 	{* 20111201 BLH Diplay 'Published Content' & 'Unpublished Content' for UCLA Encyclopedia of Egyptology*}
 	{* 20120502 LS Display only 'Published Content' for UEE *}
 	{if $journalPath == 'nelc_uee'}

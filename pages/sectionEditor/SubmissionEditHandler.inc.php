@@ -790,6 +790,37 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 
+	/*
+	* Reassign a reviewer to the current round of review
+	* @param $args array
+	* @param $request object
+	*/
+	function reassignReviewer($args, $request) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$userId = isset($args[1]) ? (int) $args[1] : 0;
+		
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$round = $submission->getCurrentRound();
+		
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignment($articleId, $userId, $submission->getCurrentRound(), 1); /* @var $reviewAssignment ReviewAssignment */
+		if(!$reviewAssignment) {
+			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignment($articleId, $userId, $submission->getCurrentRound(), 0);
+		}
+		if($reviewAssignment && !$reviewAssignment->getDateCompleted() && $reviewAssignment->getDeclined()) {
+			$reviewAssignment->setDeclined(false);
+			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
+			$reviewAssignment->setDateNotified(null);
+			$reviewAssignment->setDateConfirmed(null);
+			$reviewAssignment->setRound($submission->getCurrentRound());
+			
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		}
+		$request->redirect(null, null, 'submissionReview', $articleId);
+	}
+
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -1306,6 +1337,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		SectionEditorAction::completeCopyedit($submission);
+		Request::redirect(null, null, 'submissionEditing', $articleId);
+	}
+	
+	/* Completes the author copyediting process when an editor acts by proxy for the author */
+	function completeAuthorCopyedit($args) {
+		$articleId = (int) Request::getUserVar('articleId');
+
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$submission =& $this->submission;
+
+		SectionEditorAction::completeAuthorCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
 
@@ -2317,6 +2359,23 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
+
+        /**
+         * Editor completes author's proofreading on behalf of author
+         */
+        function editorCompleteAuthor() {
+                $articleId = Request::getUserVar('articleId');
+                $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+                $submission =& $this->submission;
+
+                $signoffDao =& DAORegistry::getDAO('SignoffDAO');
+                $signoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
+                $signoff->setDateCompleted(Core::getCurrentDate());
+                $signoffDao->updateObject($signoff);
+
+
+                Request::redirect(null, null, 'submissionEditing', $articleId);
+        }
 
 	/**
 	 * Thank author for proofreading

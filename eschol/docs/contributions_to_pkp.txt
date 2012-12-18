@@ -1,0 +1,49 @@
+# These are Barbara's working notes for figuring out what we might want
+# to contribute back from eschol-ojs to the official PKP codebase
+
+## COMMON ANCESTOR BETWEEN eschol_prod and pkp-origin/master: 
+
+    $ git merge-base eschol_prod pkp-origin/master
+    commit 4bd664318e34ac401940d1e52938aac9c42187d3
+    Author: Alec Smecher <alec@smecher.bc.ca>
+    Date:   Fri Oct 1 12:40:56 2010 -0700
+
+        *6015* Fixed email validator problem
+
+(this is also tag ojs-2_3_3-1)
+
+IOW: we diverged (branched) from pkp's codebase at 2.3.3.1
+
+## Changes we have made since diverging
+
+### we did pull in some commits from pkp, bringing us up to 2.3.6 (?)
+
+### Then:
+
+### Possible contributions from period when we used hg for version control:
+Support throughout for multiple journals (bh0227-ojs-remove-disable-button)
+PDF conversion on both Review and Editing pages (bh0725-pdfReviewVersion, bh0727-pdfGalleyVersion)
+Email address lookup on User Enroll form (bh0803-enrollUsers15692071)
+bh08240-ojs-rationalizeHomeLinks
+bh1025-fix-ojs-crontasks, bh1026-fix-ojs-crontasks
+bh1104-ojs-add-metadata-fields (never did finish this)
+bh1215-ojs-ed-decision-order (Change ORDER BY when querying for edit_decisions to date_decided (was edit_decision_id))
+Use email addresses as login (bh0123-ojs-modify-author-email-req)
+Allow for early publication dates (bh0131-ojs-add-pubdate-years)
+bh0201-ojs-fix-author-empty-email-bug -- Display alert message instead of malformed address when author has no email
+bh0221-ojs-enable-email-bounce-addr
+bh0314-ojs-add-sponsor-to-xml-export
+
+
+### Possible contributions since we moved to git: 
+5805321 modified review report
+1b396ac fixed a typo in reviewer report
+a0243ea Added human readable publication status to the review report.
+49b7488	Refined statistics and reporting page in order to display to journal managers. 
+248aceb	added submission and publication dates to articles report.
+a5231b6 (MH checking in) Barbara's changes for PDF conversion using libreoffice. 
+23e4298 Fixed several problems with revision number handling.
+9e2d7ea fixed problems with revision number handling
+71b33ee *3294* Allow editor to mark Step 2 of copyedit process as complete.
+d82d225 *3294* Allow editor to mark Step 2 of copyedit process as complete.[...]
+

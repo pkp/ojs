@@ -21,6 +21,7 @@
 	<message key="editor.article.clearReviewForm">Clear Review Form</message>
 	<message key="editor.home">Editor Home</message>
 	 <message key="editor.article.confirmChangeReviewForm">Warning: Changing the review form will affect any answers reviewers have made using this form. Are you sure you wish to continue?</message>
+	<message key="editor.reassign">Reassign</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
 	<message key="editor.submissionQueue">Submission Queue</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
@@ -142,7 +143,7 @@
 	<message key="editor.article.decision">Decisions Recorded</message>
 	<message key="editor.article.noEditorSelected">No editor selected.</message>
 	<message key="editor.article.recordDecision">Record Decision</message>
-	<message key="editor.article.cannotRecord">Section editor not yet assigned.</message>
+	<message key="editor.article.cannotRecord">Section editor not yet recorded or no review file present.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
 	<message key="editor.article.designateDueDateDescription">Enter the date or number of weeks for the new due date.</message>
