@@ -203,6 +203,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
 		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == null ? true : false;
 
+		// Get editor email(s), excluding the currently logged in user
+                $session =& Request::getSession();
+		$loggedInUser = $session->getUser();
+		$loggedInEmail = $loggedInUser->getEmail();
+		$editorEmails = array();
+		foreach ($editAssignments as $editAssignment) {
+			if ($editAssignment->getEditorEmail() != $loggedInEmail) {
+				$editorEmails[] = $editAssignment->getEditorEmail();
+			}
+		}
+	
 		// Prepare an array to store the 'Notify Reviewer' email logs
 		$notifyReviewerLogs = array();
 		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
@@ -274,6 +285,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 		$templateMgr->assign('journalContact',$journalContact); //20120831 LS Added
 		$templateMgr->assign('journalEmail',$journalEmail); //20120831 LS Added			
+		$templateMgr->assign('editorEmails',$editorEmails);
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 
 	}

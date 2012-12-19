@@ -45,7 +45,9 @@
 					<li>Email the {$journalContact} to confirm that your comments have been received
 						{assign var=emailString value=$journalEmail}
 						{assign var=emailSubject value="Article "|cat:$submission->getArticleId()|cat:"--Comments from Section Editor"}
-						{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$journalEmail|to_array subject=$emailSubject}
+						{foreach from=$editAssignments item=editAssignment}
+						{/foreach}
+						{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$journalEmail|to_array cc=$editorEmails subject=$emailSubject}
 						{icon name="mail" url=$url}
  </li>					
 					
