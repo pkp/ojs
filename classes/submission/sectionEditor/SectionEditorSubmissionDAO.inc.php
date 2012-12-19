@@ -182,7 +182,7 @@ class SectionEditorSubmissionDAO extends DAO {
 								$this->datetimeToDB($editorDecision['dateDecided'])),
 							array($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
 						);
-						$editorDecisions[$key]['editDecisionId'] = $this->getInsertId('edit_decisions', 'edit_decision_id');
+						$editorDecisions[$key]['editDecisionId'] = $this->_getInsertId('edit_decisions', 'edit_decision_id');
 					}
 				}
 			}
