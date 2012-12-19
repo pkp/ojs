@@ -478,7 +478,22 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function getAllPublishedArticles(&$journal) {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$articles = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
+		$articleIterator = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
+
+		// Return articles from published issues only.
+		$articles = array();
+		while ($article = $articleIterator->next()) {
+			// Retrieve issue
+			$issue = $this->_getArticleIssue($article, $journal);
+
+			// Check whether the issue is published.
+			if ($issue->getPublished()) {
+				$articles[] = $article;
+				unset($article);
+			}
+		}
+		unset($articleIterator);
+
 		return $articles;
 	}
 
@@ -995,17 +1010,17 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Retrieve all published articles.
 		$this->registerDaoHook('PublishedArticleDAO');
-		$articleIterator = $this->getAllPublishedArticles($journal);
+		$allArticles = $this->getAllPublishedArticles($journal);
 
 		// Filter only articles that have a DOI assigned.
 		$articles = array();
-		while ($article =& $articleIterator->next()) {
+		foreach($allArticles as $article) {
 			if ($article->getPubId('doi')) {
-				$articles[] =& $article;
+				$articles[] = $article;
 			}
 			unset($article);
 		}
-		unset($articleIterator);
+		unset($allArticles);
 
 		// Paginate articles.
 		$totalArticles = count($articles);
@@ -1017,8 +1032,12 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve article data.
 		$articleData = array();
 		foreach($articles as $article) {
-			$articleData[] =& $this->_prepareArticleData($article, $journal);
-			unset($article);
+			$preparedArticle = $this->_prepareArticleData($article, $journal);
+			// We should always get a prepared article as we've already
+			// filtered non-published articles above.
+			assert(is_array($preparedArticle));
+			$articleData[] = $preparedArticle;
+			unset($article, $preparedArticle);
 		}
 		unset($articles);
 
@@ -1040,13 +1059,13 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$this->setBreadcrumbs(array(), true);
 
 		// Retrieve all published articles.
-		$articleIterator = $this->getAllPublishedArticles($journal);
+		$allArticles = $this->getAllPublishedArticles($journal);
 
 		// Retrieve galley data.
 		$this->registerDaoHook('ArticleGalleyDAO');
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleys = array();
-		while ($article =& $articleIterator->next()) {
+		foreach($allArticles as $article) {
 			// Retrieve galleys for the article.
 			$articleGalleys =& $galleyDao->getGalleysByArticle($article->getId());
 
@@ -1059,7 +1078,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 			}
 			unset($article, $articleGalleys);
 		}
-		unset($articleIterator);
+		unset($allArticles);
 
 		// Paginate galleys.
 		$totalGalleys = count($galleys);
@@ -1129,8 +1148,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve issues for articles.
 		$articleData = array();
 		foreach ($articles as $article) {
-			$articleData[] =& $this->_prepareArticleData($article, $journal);
-			unset($article);
+			$preparedArticle = $this->_prepareArticleData($article, $journal);
+			if (is_array($preparedArticle)) {
+				$articleData[] = $preparedArticle;
+			}
+			unset($article, $preparedArticle);
 		}
 		return $articleData;
 	}
@@ -1222,31 +1244,54 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * Identify the issue of the given article.
 	 * @param $article PublishedArticle
 	 * @param $journal Journal
-	 * @return array
+	 * @return array|null Return prepared article data or
+	 *  null if the article is not from a published issue.
 	 */
 	function &_prepareArticleData(&$article, &$journal) {
-		// Get the cache.
-		$cache =& $this->getCache();
 		$nullVar = null;
 
 		// Add the article to the cache.
+		$cache =& $this->getCache();
 		$cache->add($article, $nullVar);
 
-		// Retrieve issue if not yet cached.
+		// Retrieve the issue.
+		$issue = $this->_getArticleIssue($article, $journal);
+
+		if ($issue->getPublished()) {
+			$articleData = array(
+				'article' => $article,
+				'issue' => $issue
+			);
+			return $articleData;
+		} else {
+			return $nullVar;
+		}
+	}
+
+	/**
+	 * Return the issue of an article.
+	 *
+	 * The issue will be cached if it is not yet cached.
+	 *
+	 * @param $article Article
+	 * @param $journal Journal
+	 *
+	 * @return Issue
+	 */
+	function _getArticleIssue($article, $journal) {
 		$issueId = $article->getIssueId();
+
+		// Retrieve issue if not yet cached.
+		$cache = $this->getCache();
 		if (!$cache->isCached('issues', $issueId)) {
-			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue =& $issueDao->getIssueById($issueId, $journal->getId(), true);
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue = $issueDao->getIssueById($issueId, $journal->getId(), true);
 			assert(is_a($issue, 'Issue'));
 			$cache->add($issue, $nullVar);
 			unset($issue);
 		}
 
-		$articleData = array(
-			'article' => &$article,
-			'issue' => $cache->get('issues', $issueId)
-		);
-		return $articleData;
+		return $cache->get('issues', $issueId);
 	}
 
 	/**
