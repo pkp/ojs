@@ -36,7 +36,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = $this->getRangeInfo($this->getRequest(), 'issues');
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
@@ -55,7 +55,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
-		$rangeInfo = $this->getRangeInfo($this->getRequest(), 'issues');
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
 
 		$templateMgr =& TemplateManager::getManager($request);
 
