@@ -803,38 +803,6 @@ table.pkp_listing td.separator {
   font-size:0.1em;
   line-height:1%;
 }
-.pkp_controllers_fontController_smallFont {
-  background:url(../lib/pkp/templates/images/icons/font-down.png);
-  outline:none;
-  text-indent:-9999px;
-  display:block;
-  float:left;
-  width:20px;
-  height:23px;
-}
-.pkp_controllers_fontController_defaultFont {
-  background:url(../lib/pkp/templates/images/icons/font-default.png);
-  outline:none;
-  text-indent:-9999px;
-  display:block;
-  float:left;
-  width:20px;
-  height:23px;
-}
-.pkp_controllers_fontController_largeFont {
-  background:url(../lib/pkp/templates/images/icons/font-up.png);
-  outline:none;
-  text-indent:-9999px;
-  display:block;
-  float:left;
-  width:20px;
-  height:23px;
-}
-.pkp_controllers_fontController_ldisabled, .pkp_controllers_fontController_sdisabled {
-  opacity:0.3;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter:alpha(opacity=30);
-}
 .error { color:#990000; }
 span.pkp_form_error {
   color:#990000;
