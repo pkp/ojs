@@ -381,18 +381,6 @@ td.notificationFunction {
 	margin-top: 5%;
 }
 
-/* Font Sizer */
-#sizer a {
-	outline: none;
-	text-indent: -9999px;
-	display: block;
-	float: left;
-	width: 20px;
-	height: 23px;
-	margin-right: 4px;
-	margin-left: 8px;
-}
-
 #journalListPageInfo {
 	float: right;
 }

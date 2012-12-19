@@ -27,7 +27,6 @@
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/json/json2.js"></script>
 
 {* Our own functions (depend on plug-ins) *}
-<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/fontController.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
 <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
 
