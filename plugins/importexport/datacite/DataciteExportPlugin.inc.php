@@ -112,13 +112,13 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$this->setBreadcrumbs(array(), true);
 
 		// Retrieve all published articles.
-		$articleIterator = $this->getAllPublishedArticles($journal);
+		$allArticles = $this->getAllPublishedArticles($journal);
 
 		// Retrieve supp file data.
 		$this->registerDaoHook('SuppFileDAO');
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 		$suppFiles = array();
-		while ($article =& $articleIterator->next()) {
+		foreach($allArticles as $article) {
 			// Retrieve supp files for the article.
 			$articleSuppFiles =& $suppFileDao->getSuppFilesByArticle($article->getId());
 
@@ -131,7 +131,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 			}
 			unset($article, $articleSuppFiles);
 		}
-		unset($articleIterator);
+		unset($allArticles);
 
 		// Paginate supp files.
 		$totalSuppFiles = count($suppFiles);
