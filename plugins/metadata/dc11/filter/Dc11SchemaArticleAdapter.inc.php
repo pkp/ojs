@@ -168,9 +168,11 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
 		if ($issn = $journal->getSetting('onlineIssn')) {
 			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+			unset($issn);
 		}
 		if ($issn = $journal->getSetting('printIssn')) {
 			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+			unset($issn);
 		}
 
 		// Get galleys and supp files.
