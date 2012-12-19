@@ -1353,7 +1353,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		foreach ($objectIds as $objectId) {
 			// Retrieve the objects from the DAO.
 			$daoMethodArgs = array($objectId);
-			if ($exportType != DOI_EXPORT_GALLEYS) {
+			if ($exportType != DOI_EXPORT_GALLEYS && $exportType != DOI_EXPORT_SUPPFILES) {
 				$daoMethodArgs[] = $journalId;
 			}
 			$foundObjects =& call_user_func_array($daoMethod, $daoMethodArgs);
