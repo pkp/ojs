@@ -78,6 +78,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
 				$result = array_shift(ArticleSearch::formatResults($articleIds));
+				if (!$result) $request->redirect();
 				$this->exportArticle($journal, $result['issue'], $result['section'], $result['publishedArticle']);
 				break;
 			case 'exportArticles':
@@ -100,7 +101,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				// Display a list of articles for export
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo('articles');
+				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
@@ -149,7 +150,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					// import articles within an appropriate context. If not,
 					// prompt them for the.
 					if (!isset($context['issue']) || !isset($context['section'])) {
-						$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo('issues'));
+						$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 						$templateMgr->assign_by_ref('issues', $issues);
 						$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), false));
 						$templateMgr->assign('temporaryFileId', $temporaryFile->getId());
