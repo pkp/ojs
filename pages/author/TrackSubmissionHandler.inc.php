@@ -512,7 +512,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
-		$send = (int) array_shift($args);
+		$send = array_shift($args);
 
 		import('classes.submission.proofreader.ProofreaderAction');
 
