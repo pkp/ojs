@@ -811,7 +811,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				u.user_id,
 				u.last_name,
 				ar.review_id,
-				ar.declined ' .
+				MAX(ar.declined) ' . // MAX needed for PSQL (bug #6007)
 				($selectQuality ? ', AVG(ac.quality) AS average_quality ' : '') .
 				($selectLatest ? ', MAX(ac.date_notified) AS latest ' : '') .
 				($selectComplete ? ', COUNT(ra.review_id) AS completed ' : '') .
