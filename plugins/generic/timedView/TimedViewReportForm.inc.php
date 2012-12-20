@@ -8,7 +8,7 @@
  * @class TimedViewReportForm
  */
 
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class TimedViewReportForm extends Form {
 

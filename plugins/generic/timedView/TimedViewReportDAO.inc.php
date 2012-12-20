@@ -13,7 +13,7 @@
  */
 
 
-import('submission.common.Action');
+import('classes.submission.common.Action');
 
 class TimedViewReportDAO extends DAO {
 	/**

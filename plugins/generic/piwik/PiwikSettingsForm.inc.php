@@ -12,8 +12,7 @@
  * @brief Form for journal managers to modify piwik plugin settings
  */
 
-
-import('form.Form');
+import('lib.pkp.classes.form.Form');
 
 class PiwikSettingsForm extends Form {
 
