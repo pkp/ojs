@@ -38,7 +38,6 @@ class EditorHandler extends SectionEditorHandler {
 	/**
 	 * Displays the editor role selection page.
 	 */
-
 	function index($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_HOME);

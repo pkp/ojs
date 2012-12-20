@@ -31,7 +31,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function futureIssues($args, $request) {
-		$this->validate(null, true);
+		$this->validate($request, null, true);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		$journal =& $request->getJournal();
@@ -49,7 +49,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function backIssues($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		$journal =& $request->getJournal();
@@ -89,7 +89,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeIssue($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId);
+		$this->validate($request, $issueId);
 		$issue =& $this->issue;
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
@@ -136,7 +136,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function createIssue($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueForm');
@@ -163,7 +163,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function saveIssue($args, $request) {
-		$this->validate();
+		$this->validate($request);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueForm');
@@ -191,7 +191,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueData($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
@@ -224,7 +224,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function editIssue($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
@@ -260,7 +260,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeIssueCoverPage($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		$formLocale = array_shift($args);
 		if (!AppLocale::isLocaleValid($formLocale)) {
@@ -291,7 +291,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeStyleFile($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 
 		import('classes.file.PublicFileManager');
@@ -314,7 +314,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueGalleys($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
@@ -341,7 +341,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function uploadIssueGalley($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		import('classes.issue.form.IssueGalleyForm');
 		$galleyForm = new IssueGalleyForm($issueId);
@@ -359,7 +359,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueGalleyForm');
@@ -382,7 +382,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		import('classes.issue.form.IssueGalleyForm');
@@ -407,7 +407,7 @@ class IssueManagementHandler extends EditorHandler {
 		$galleyId = (int) $request->getUserVar('galleyId');
 		$direction = $request->getUserVar('d');
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $issueId);
@@ -429,7 +429,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $issueId);
@@ -455,7 +455,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -473,7 +473,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -491,7 +491,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $issueId);
@@ -515,7 +515,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		if ($fileId) {
 			import('classes.file.IssueFileManager');
@@ -531,7 +531,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueToc($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
@@ -614,7 +614,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function updateIssueToc($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 
 		$journal =& $request->getJournal();
 
@@ -700,12 +700,12 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if ($issueId) {
-			$this->validate($issueId);
+			$this->validate($request, $issueId);
 			$issue =& $this->issue;
 			$issue->setCurrent(1);
 			$issueDao->updateCurrentIssue($journal->getId(), $issue);
 		} else {
-			$this->validate();
+			$this->validate($request);
 			$issueDao->updateCurrentIssue($journal->getId());
 		}
 		$request->redirect(null, null, 'backIssues');
@@ -718,7 +718,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveIssue($args, $request) {
 		$issueId = (int) $request->getUserVar('id');
-		$this->validate($issueId);
+		$this->validate($request, $issueId);
 		$prevId = (int) $request->getUserVar('prevId');
 		$nextId = (int) $request->getUserVar('nextId');
 		$issue =& $this->issue;
@@ -759,7 +759,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function resetIssueOrder($args, $request) {
-		$this->validate();
+		$this->validate($request);
 
 		$journal =& $request->getJournal();
 
@@ -776,7 +776,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveSectionToc($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 		$journal =& $request->getJournal();
 
@@ -802,7 +802,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function resetSectionOrder($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId, true);
+		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -817,7 +817,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function moveArticleToc($args, $request) {
-		$this->validate(null, true);
+		$this->validate($request, null, true);
 		$pubId = (int) $request->getUserVar('id');
 
 		$journal =& $request->getJournal();
@@ -870,7 +870,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function publishIssue($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId);
+		$this->validate($request, $issueId);
 		$issue =& $this->issue;
 
 		$journal =& $request->getJournal();
@@ -963,7 +963,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function unpublishIssue($args, $request) {
 		$issueId = (int) array_shift($args);
-		$this->validate($issueId);
+		$this->validate($request, $issueId);
 		$issue =& $this->issue;
 
 		$journal =& $request->getJournal();
@@ -992,7 +992,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function notifyUsers($args, $request) {
-		$this->validate((int) $request->getUserVar('issue'));
+		$this->validate($request, (int) $request->getUserVar('issue'));
 		$issue =& $this->issue;
 		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
 
@@ -1114,10 +1114,13 @@ class IssueManagementHandler extends EditorHandler {
 	 * Validate that user is an editor in the selected journal and if the issue id is valid
 	 * Redirects to issue create issue page if not properly authenticated.
 	 * NOTE: As of OJS 2.2, Layout Editors are allowed if specified in args.
+	 * @param $request PKPRequest
+	 * @param $issueId int optional
+	 * @param $allowLayoutEditor boolean optional
 	 */
-	function validate($issueId = null, $allowLayoutEditor = false) {
+	function validate($request, $issueId = null, $allowLayoutEditor = false) {
 		$issue = null;
-		$journal =& Request::getJournal();
+		$journal =& $request->getJournal();
 
 		if (!isset($journal)) Validation::redirectLogin();
 
@@ -1126,7 +1129,7 @@ class IssueManagementHandler extends EditorHandler {
 			$issue = $issueDao->getIssueById($issueId, $journal->getId());
 
 			if (!$issue) {
-				Request::redirect(null, null, 'createIssue');
+				$request->redirect(null, null, 'createIssue');
 			}
 		}
 
