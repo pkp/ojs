@@ -20,7 +20,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SubmissionCommentsHandler() {
 		parent::SectionEditorHandler();
 	}
@@ -30,11 +30,11 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewPeerReviewComments($args, &$request) {
+	function viewPeerReviewComments($args, $request) {
 		$articleId = (int) array_shift($args);
 		$reviewId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		SectionEditorAction::viewPeerReviewComments($this->submission, $reviewId);
@@ -49,7 +49,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$reviewId = (int) $request->getUserVar('reviewId');
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -68,7 +68,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function viewEditorDecisionComments($args, $request) {
 		$articleId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		SectionEditorAction::viewEditorDecisionComments($this->submission);
@@ -81,7 +81,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function postEditorDecisionComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$this->setupTemplate($request, true);
 
@@ -101,7 +101,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function viewCopyeditComments($args, $request) {
 		$articleId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		SectionEditorAction::viewCopyeditComments($this->submission);
@@ -115,7 +115,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function postCopyeditComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -134,7 +134,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function viewLayoutComments($args, $request) {
 		$articleId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		SectionEditorAction::viewLayoutComments($this->submission, $request);
@@ -148,7 +148,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -167,7 +167,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function viewProofreadComments($args, $request) {
 		$articleId = (int) array_shift($args);
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		SectionEditorAction::viewProofreadComments($this->submission);
@@ -181,7 +181,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function postProofreadComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.
@@ -199,7 +199,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function emailEditorDecisionComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$this->setupTemplate($request, true);
 		if (SectionEditorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
@@ -218,7 +218,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function bccEditorDecisionCommentToReviewers($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 
 		$this->setupTemplate($request, true);
 		if (SectionEditorAction::bccEditorDecisionCommentToReviewers($this->submission, $request->getUserVar('send'), $request)) {
@@ -236,7 +236,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
 		$this->setupTemplate($request, true);
@@ -262,7 +262,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
 		$this->setupTemplate($request, true);
@@ -302,7 +302,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$commentId = (int) array_shift($args);
 
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));
-		$this->validate($articleId);
+		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
 		$this->setupTemplate($request, true);
