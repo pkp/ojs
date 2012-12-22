@@ -64,6 +64,26 @@ class DOISettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'doiGalleySuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired', create_function('$doiGalleySuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableGalleyDoi\')) return $doiGalleySuffixPattern != \'\';return true;'), array(&$this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiSuppFileSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired', create_function('$doiSuppFileSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableSuppFileDoi\')) return $doiSuppFileSuffixPattern != \'\';return true;'), array(&$this)));
 		$this->addCheck(new FormValidatorPost($this));
+
+		// for DOI reset requests
+		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+		$application = PKPApplication::getApplication();
+		$request = $application->getRequest();
+		$clearPubIdsLinkAction =
+		new LinkAction(
+			'reassignDOIs',
+			new RemoteActionConfirmationModal(
+				__('plugins.pubIds.doi.manager.settings.doiReassign.confirm'),
+				__('common.delete'),
+				$request->url(null, null, 'plugin', null, array('verb' => 'settings', 'clearPubIds' => true, 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
+				'modal_delete'
+			),
+			__('plugins.pubIds.doi.manager.settings.doiReassign'),
+			'delete'
+		);
+		$this->setData('clearPubIdsLinkAction', $clearPubIdsLinkAction);
+		$this->setData('pluginName', $plugin->getName());
+		$this->setData('doiSettingsHandlerJsUrl', $plugin->getJSFileUrl($request));
 	}
 
 

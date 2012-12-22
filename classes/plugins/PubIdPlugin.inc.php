@@ -79,10 +79,14 @@ class PubIdPlugin extends Plugin {
 		switch ($verb) {
 			case 'enable':
 				$this->setEnabled(true);
+				$message = NOTIFICATION_TYPE_PLUGIN_ENABLED;
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				return false;
 
 			case 'disable':
 				$this->setEnabled(false);
+				$message = NOTIFICATION_TYPE_PLUGIN_DISABLED;
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				return false;
 
 			case 'settings':
@@ -97,25 +101,23 @@ class PubIdPlugin extends Plugin {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
-						$request->redirect(null, 'manager', 'plugin');
+						$message = NOTIFICATION_TYPE_SUCCESS;
 						return false;
 					} else {
-						$this->_setBreadcrumbs();
-						$form->display();
+						$pluginModalContent = $form->fetch($request);
 					}
 				} elseif ($request->getUserVar('clearPubIds')) {
 					$form->readInputData();
 					$journalDao =& DAORegistry::getDAO('JournalDAO');
 					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
-					$this->_setBreadcrumbs();
-					$form->display();
+					$message = NOTIFICATION_TYPE_SUCCESS;
+					return false;
 				} else {
 					$this->_setBreadcrumbs();
 					$form->initData();
-					$form->display();
+					$pluginModalContent = $form->fetch($request);
 				}
-				return true;
-
+				return false;
 			default:
 				// Unknown management verb
 				assert(false);
