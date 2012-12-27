@@ -133,8 +133,8 @@ class MetadataForm extends Form {
 				'sponsor' => $article->getSponsor(null), // Localized
 				'citations' => $article->getCitations(),
 				'hideAuthor' => $article->getHideAuthor(),
-				'prefix' => $article->getPrefix(), // Localized
-				'subtitle' => $article->getSubtitle(), // Localized
+				'prefix' => $article->getPrefix(null), // Localized
+				'subtitle' => $article->getSubtitle(null), // Localized
 			);
 
 			// load the persisted metadata controlled vocabularies
