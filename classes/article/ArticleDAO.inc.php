@@ -371,7 +371,7 @@ class ArticleDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function deleteArticleById($articleId) {
-		$this->authorDao->deleteAuthorsByArticle($articleId);
+		$this->authorDao->deleteAuthorsBySubmission($articleId);
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
