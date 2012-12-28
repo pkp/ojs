@@ -185,26 +185,27 @@ class ReferralDAO extends DAO {
 	 * Retrieve an iterator of referrals for a particular user ID,
 	 * optionally filtering by status.
 	 * @param $userId int
+	 * @param $journalId int
 	 * $param $status int
 	 * @return object DAOResultFactory containing matching Referrals
 	 */
-	function &getReferralsByUserId($userId, $status = null, $rangeInfo = null) {
-		$params = array((int) $userId);
+	function getByUserId($userId, $journalId, $status = null, $rangeInfo = null) {
+		$params = array((int) $userId, (int) $journalId);
 		if ($status !== null) $params[] = (int) $status;
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT	r.*
 			FROM	referrals r,
 				articles a
 			WHERE	r.article_id = a.article_id AND
-				a.user_id = ?' .
+				a.user_id = ? AND
+				a.journal_id = ?' .
 				($status !== null?' AND r.status = ?':'') . '
 			ORDER BY r.date_added',
 			$params,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnReferralFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnReferralFromRow');
 	}
 
 	/**

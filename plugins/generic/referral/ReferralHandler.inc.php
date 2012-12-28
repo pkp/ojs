@@ -106,7 +106,7 @@ class ReferralHandler extends Handler {
 
 	function validate($request, $referralId = null) {
 		parent::validate($request);
-		
+
 		if ($referralId) {
 			$referralDao =& DAORegistry::getDAO('ReferralDAO');
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');

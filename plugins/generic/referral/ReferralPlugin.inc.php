@@ -148,7 +148,8 @@ class ReferralPlugin extends GenericPlugin {
 				if ($referralFilter == 0) $referralFilter = null;
 
 				// Fetch article titles
-				$referrals = $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
+				$journal = $request->getJournal();
+				$referrals = $referralDao->getByUserId($user->getId(), $journal->getId(), $referralFilter, $rangeInfo);
 				$articleDao = DAORegistry::getDAO('ArticleDAO');
 				$articleTitles = $referralsArray = array();
 				while ($referral = $referrals->next()) {
