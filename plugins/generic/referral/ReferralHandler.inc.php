@@ -126,6 +126,29 @@ class ReferralHandler extends Handler {
 		$plugin =& Registry::get('plugin');
 		return array(&$plugin, &$referral, &$article);
 	}
+
+	/**
+	 * Perform a batch action on a set of referrals.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function bulkAction($args, $request) {
+		$referralIds = (array) $request->getUserVar('referralId');
+		$referralDao = DAORegistry::getDAO('ReferralDAO');
+		foreach ($referralIds as $referralId) {
+			list($plugin, $referral, $article) = $this->validate($referralId);
+			if ($request->getUserVar('delete')) {
+				$referralDao->deleteReferral($referral);
+			} else if ($request->getUserVar('accept')) {
+				$referral->setStatus(REFERRAL_STATUS_ACCEPT);
+				$referralDao->updateReferral($referral);
+			} else if ($request->getUserVar('decline')) {
+				$referral->setStatus(REFERRAL_STATUS_DECLINE);
+				$referralDao->updateReferral($referral);
+			}
+		}
+		$request->redirect(null, 'author');
+	}
 }
 
 ?>
