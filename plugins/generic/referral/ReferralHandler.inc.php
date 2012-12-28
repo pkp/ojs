@@ -136,7 +136,7 @@ class ReferralHandler extends Handler {
 		$referralIds = (array) $request->getUserVar('referralId');
 		$referralDao = DAORegistry::getDAO('ReferralDAO');
 		foreach ($referralIds as $referralId) {
-			list($plugin, $referral, $article) = $this->validate($referralId);
+			list($plugin, $referral, $article) = $this->validate($request, $referralId);
 			if ($request->getUserVar('delete')) {
 				$referralDao->deleteReferral($referral);
 			} else if ($request->getUserVar('accept')) {

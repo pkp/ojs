@@ -120,7 +120,7 @@ class ReferralPlugin extends GenericPlugin {
 		$op =& $args[1];
 		$sourceFile =& $args[2];
 
-		if ($page === 'referral' && in_array($op, array('editReferral', 'updateReferral', 'deleteReferral'))) {
+		if ($page === 'referral' && in_array($op, array('editReferral', 'updateReferral', 'deleteReferral', 'bulkAction'))) {
 			$this->import('ReferralHandler');
 			Registry::set('plugin', $this);
 			define('HANDLER_CLASS', 'ReferralHandler');
