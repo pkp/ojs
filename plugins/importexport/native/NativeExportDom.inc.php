@@ -425,6 +425,7 @@ class NativeExportDom {
 		XMLCustomWriter::setAttribute($root, 'type', $suppFileType);
 		XMLCustomWriter::setAttribute($root, 'public_id', $suppFile->getPubId('publisher-id'), false);
 		XMLCustomWriter::setAttribute($root, 'language', $suppFile->getLanguage(), false);
+		XMLCustomWriter::setAttribute($root, 'show_reviewers', $suppFile->getShowReviewers()?'true':'false');
 
 		if (is_array($suppFile->getTitle(null))) foreach ($suppFile->getTitle(null) as $locale => $title) {
 			$titleNode =& XMLCustomWriter::createChildWithText($doc, $root, 'title', $title, false);
