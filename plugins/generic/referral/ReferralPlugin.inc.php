@@ -147,8 +147,21 @@ class ReferralPlugin extends GenericPlugin {
 				$referralFilter = (int) $request->getUserVar('referralFilter');
 				if ($referralFilter == 0) $referralFilter = null;
 
-				$referrals =& $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
+				// Fetch article titles
+				$referrals = $referralDao->getReferralsByUserId($user->getId(), $referralFilter, $rangeInfo);
+				$articleDao = DAORegistry::getDAO('ArticleDAO');
+				$articleTitles = $referralsArray = array();
+				while ($referral = $referrals->next()) {
+					$article = $articleDao->getArticle($referral->getArticleId());
+					if (!$article) continue;
+					$articleTitles[$article->getId()] = $article->getLocalizedTitle();
+					$referralsArray[] = $referral;
+				}
+				// Turn the array back into an interator for display
+				import('lib.pkp.classes.core.VirtualArrayIterator');
+				$referrals = new VirtualArrayIterator($referralsArray, $referrals->getCount(), $referrals->getPage(), $rangeInfo->getCount());
 
+				$templateMgr->assign('articleTitles', $articleTitles);
 				$templateMgr->assign('referrals', $referrals);
 				$templateMgr->assign('referralFilter', $referralFilter);
 				$templateMgr->display($this->getTemplatePath() . 'authorReferrals.tpl', 'text/html', 'ReferralPlugin::addAuthorReferralContent');
