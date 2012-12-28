@@ -1249,6 +1249,7 @@ class NativeImportDom {
 				return false;
 		}
 
+		$suppFile->setShowReviewers($suppNode->getAttribute('show_reviewers')=='true');
 		$suppFile->setLanguage($suppNode->getAttribute('language'));
 		$suppFile->setStoredPubId('publisher-id', $suppNode->getAttribute('public_id'));
 

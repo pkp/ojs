@@ -198,6 +198,7 @@
 	<!ATTLIST supplemental_file
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
 		language CDATA "en"
+		show_reviewers (true|false) "false"
 		public_id CDATA #IMPLIED>
 
 <!ELEMENT creator (#PCDATA)>
