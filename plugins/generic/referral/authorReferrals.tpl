@@ -21,21 +21,24 @@
 
 <div id="referrals">
 <table width="100%" class="listing">
-	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+	<tr><td class="headseparator" colspan="7">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="7%">{translate key="plugins.generic.referral.dateAdded"}</td>
 		<td width="3%">{translate key="plugins.generic.referral.count"}</td>
 		<td>{translate key="common.url"}</td>
+		<td>{translate key="article.article}</td>
 		<td>{translate key="common.title"}</td>
 		<td>{translate key="common.status"}</td>
 		<td width="10%" align="right">{translate key="common.action"}</td>
 	</tr>
-	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+	<tr><td class="headseparator" colspan="7">&nbsp;</td></tr>
 {iterate from=referrals item=referral}
+	{assign var=articleId value=$referral->getArticleId()}
 	<tr valign="top">
 		<td>{$referral->getDateAdded()|date_format:$dateFormatShort}</td>
 		<td>{$referral->getLinkCount()|escape}</td>
 		<td><a href="{$referral->getUrl()|escape}">{$referral->getUrl()|truncate:50|escape}</a></td>
+		<td>{$articleTitles[$articleId]|strip_unsafe_html}</td>
 		<td>{$referral->getReferralName()|truncate:50|escape}</td>
 		<td>{translate key=$referral->getStatusKey()}</td>
 		<td align="right">
@@ -43,12 +46,12 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $referrals->eof()}end{/if}separator">&nbsp;</td>
+		<td colspan="7" class="{if $referrals->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $referrals->wasEmpty()}
 	<tr valign="top">
-		<td colspan="6" class="nodata">
+		<td colspan="7" class="nodata">
 			{if $referralFilter == null}
 				{translate key="plugins.generic.referral.all.empty"}
 			{elseif $referralFilter == $smarty.const.REFERRAL_STATUS_NEW}
@@ -61,12 +64,12 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="endseparator">&nbsp;</td>
+		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$referrals}</td>
-		<td colspan="3" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals referralFilter=$referralFilter}</td>
+		<td colspan="4" align="right">{page_links anchor="referrals" name="referrals" iterator=$referrals referralFilter=$referralFilter}</td>
 	</tr>
 {/if}
 </table>
