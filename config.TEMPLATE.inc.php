@@ -141,7 +141,10 @@ memcache_port = 11211
 ; 2) This caching WILL NOT RESPECT DOMAIN-BASED SUBSCRIPTIONS.
 ; However, for situations like hosting high-volume open access journals, it's
 ; an easy way of decreasing server load.
-
+;
+; When using web_cache, configure a tool to periodically clear out cache files
+; such as CRON. For example, configure it to run the following command:
+; find .../ojs/cache -maxdepth 1 -name wc-\*.html -mtime +1 -exec rm "{}" ";
 web_cache = Off
 web_cache_hours = 1
 
