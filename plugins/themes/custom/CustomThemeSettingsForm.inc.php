@@ -40,8 +40,13 @@ class CustomThemeSettingsForm extends Form {
 		$additionalHeadData .= '<script type="text/javascript" src="' . $request->getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
 		$templateMgr->addStyleSheet($request->getBaseUrl() . '/plugins/themes/custom/picker.css');
 		$templateMgr->assign('additionalHeadData', $additionalHeadData);
-		$stylesheetFileLocation = $this->plugin->getPluginPath() . '/' . $this->plugin->getStylesheetFilename();
-		$templateMgr->assign('canSave', is_writable($stylesheetFileLocation));
+		$stylesheetFileLocation = $this->plugin->getPluginPath() . '/' . $this->plugin->getStylesheetFilename(true);
+
+		$templateMgr->assign(
+			'canSave',
+			$this->plugin->getStylesheetFilename()?is_writable($stylesheetFileLocation):is_writable($this->plugin->getPluginPath() . '/css')
+		);
+
 		$templateMgr->assign('stylesheetFileLocation', $stylesheetFileLocation);
 
 		return parent::display($request);
@@ -74,7 +79,7 @@ class CustomThemeSettingsForm extends Form {
 	 */
 	function execute() {
 		$plugin =& $this->plugin;
-		$journalId = $this->journalId;
+		$journalId = (int) $this->journalId;
 		$css = '';
 
 		// Header and footer colours
@@ -108,7 +113,7 @@ class CustomThemeSettingsForm extends Form {
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
-		$fileManager->writeFile(dirname(__FILE__) . '/custom.css', $css);
+		$fileManager->writeFile($this->plugin->getPluginPath() . '/' . $this->plugin->getStylesheetFilename(true), $css);
 	}
 }
 

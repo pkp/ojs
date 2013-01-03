@@ -24,6 +24,7 @@ class CustomThemePlugin extends ThemePlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
+			HookRegistry::register ('Installer::postInstall', array(&$this, 'checkOldStyleLocation'));
 			$this->addLocaleData();
 			return true;
 		}
@@ -46,8 +47,19 @@ class CustomThemePlugin extends ThemePlugin {
 		return __('plugins.theme.custom.description');
 	}
 
-	function getStylesheetFilename() {
-		return 'custom.css';
+	/**
+	 * Get the stylesheet filename.
+	 * @param $includingNonexistent boolean optional True if the function
+	 * should return a filename even if the file doesn't exist.
+	 */
+	function getStylesheetFilename($includingNonexistent = false) {
+		$journal = $this->getRequest()->getJournal();
+		$journalId = (int) ($journal?$journal->getId():0);
+		$filename = 'css/custom-' . $journalId . '.css';
+		if ($includingNonexistent || file_exists($this->getPluginPath() . '/' . $filename)) {
+			return $filename;
+		}
+		return null;
 	}
 
 	function getManagementVerbs() {
@@ -131,6 +143,59 @@ class CustomThemePlugin extends ThemePlugin {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Callback used to potentially upgrade the location of the CSS file.
+	 *
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function checkOldStyleLocation($hookName, $args) {
+		$installer =& $args[0];
+		$result =& $args[1];
+
+		$sourceFilename = $this->getPluginPath() . '/custom.css';
+
+		// Check that migration needs to occur
+		if (!file_exists($sourceFilename)) {
+			return false;
+		}
+
+		// Check that the target dir exists and is writable
+		$targetDir = $this->getPluginPath() . '/css';
+		if (!is_dir($targetDir)) {
+			if (!mkdir($targetDir)) {
+				$installer->log("WARNING: Could not create \"$targetDir\". You will need to migrate your custom theme plugin stylesheets manually.");
+				return false;
+			}
+		}
+		if (!is_writable($targetDir)) {
+			$installer->log("WARNING: Cannot write to \"$targetDir\". You will need to migrate your custom theme plugin stylesheets manually.");
+			return false;
+		}
+
+		// Duplicate the stylesheet for journals that use this plugin.
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals();
+		$success = true;
+		while ($journal = $journals->next()) {
+			if ($journal->getSetting('journalTheme') == 'custom') {
+				if (!copy($sourceFilename, $targetDir . '/custom-' . ((int) $journal->getId()) . '.css')) {
+					$success = false;
+				}
+			}
+		}
+		if ($success) {
+			if (!unlink($this->getPluginPath() . '/custom.css')) {
+				$installer->log("WARNING: The custom theme plugin custom.css file could not be removed. Please remove " . $sourceFilename . " manually.");
+			}
+		} else {
+			$installer->log("WARNING: One or more custom theme stylesheets could not be migrated.\n");
+		}
+
+		return false;
 	}
 }
 
