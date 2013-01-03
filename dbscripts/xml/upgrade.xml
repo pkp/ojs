@@ -327,7 +327,7 @@
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.0.0.0">
+	<upgrade minversion="2.4.0.0" maxversion="2.9.9.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
