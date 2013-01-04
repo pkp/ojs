@@ -205,6 +205,13 @@ class EditorSubmissionDAO extends DAO {
 			$journalId
 		);
 		$searchSql = '';
+		$distinctSwitch = '';
+		$authorJoin = '';
+		$editorJoin = '';
+		$reviewerJoin = '';
+		$copyEditorJoin = '';
+		$layoutEditorJoin = '';
+		$proofReaderJoin = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_ID:
@@ -225,21 +232,30 @@ class EditorSubmissionDAO extends DAO {
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'aa.', $params);
+				$distinctSwitch = 'DISTINCT';
+				$authorJoin = 'LEFT JOIN authors aa ON (aa.submission_id = a.article_id)';
 				break;
 			case SUBMISSION_FIELD_EDITOR:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'ed.', $params);
+				$editorJoin = 'LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+					LEFT JOIN users ed ON (e.editor_id = ed.user_id)';
 				break;
 			case SUBMISSION_FIELD_REVIEWER:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 're.', $params);
+				$reviewerJoin = 'LEFT JOIN review_assignments r ON (r.submission_id = a.article_id)
+								LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)';
 				break;
 			case SUBMISSION_FIELD_COPYEDITOR:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'ce.', $params);
+				$copyEditorJoin = 'LEFT JOIN users ce ON (scf.user_id = ce.user_id)';
 				break;
 			case SUBMISSION_FIELD_LAYOUTEDITOR:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'le.', $params);
+				$layoutEditorJoin = 'LEFT JOIN users le ON (le.user_id = sle.user_id)';
 				break;
 			case SUBMISSION_FIELD_PROOFREADER:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'pe.', $params);
+				$proofReaderJoin = 'LEFT JOIN users pe ON (pe.user_id = spr.user_id)';
 				break;
 		}
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
@@ -277,7 +293,7 @@ class EditorSubmissionDAO extends DAO {
 				break;
 		}
 
-		$sql = 'SELECT DISTINCT
+		$sql = "SELECT $distinctSwitch
 				a.*,
 				scf.date_completed as copyedit_completed,
 				spr.date_completed as proofread_completed,
@@ -287,19 +303,17 @@ class EditorSubmissionDAO extends DAO {
 				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
-				LEFT JOIN authors aa ON (aa.submission_id = a.article_id)
+				$authorJoin
 				LEFT JOIN authors aap ON (aap.submission_id = a.article_id AND aap.primary_contact = 1)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
-				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+				$editorJoin
 				LEFT JOIN signoffs scf ON (a.article_id = scf.assoc_id AND scf.assoc_type = ? AND scf.symbolic = ?)
-				LEFT JOIN users ce ON (scf.user_id = ce.user_id)
+				$copyEditorJoin
 				LEFT JOIN signoffs spr ON (a.article_id = spr.assoc_id AND spr.assoc_type = ? AND spr.symbolic = ?)
-				LEFT JOIN users pe ON (pe.user_id = spr.user_id)
+				$proofReaderJoin
 				LEFT JOIN signoffs sle ON (a.article_id = sle.assoc_id AND sle.assoc_type = ? AND sle.symbolic = ?)
-				LEFT JOIN users le ON (le.user_id = sle.user_id)
-				LEFT JOIN review_assignments r ON (r.submission_id = a.article_id)
-				LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
+				$layoutEditorJoin
+				$reviewerJoin
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -313,7 +327,7 @@ class EditorSubmissionDAO extends DAO {
 			WHERE	edec2.edit_decision_id IS NULL
 				AND ea2.edit_id IS NULL
 				AND a.journal_id = ?
-				AND a.submission_progress = 0' .
+				AND a.submission_progress = 0" .
 				(!empty($additionalWhereSql)?" AND ($additionalWhereSql)":'');
 
 		if ($sectionId) {
