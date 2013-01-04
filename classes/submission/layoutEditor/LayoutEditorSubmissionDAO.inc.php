@@ -241,9 +241,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 				sle.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND a.status = ' . STATUS_QUEUED . ' AND (sle.date_completed IS NULL OR spr.date_completed IS NULL)';
+			$sql .= ' AND a.status = ' . STATUS_QUEUED;
 		} else {
-			$sql .= ' AND a.status <> ' . STATUS_QUEUED . ' AND (sle.date_completed IS NOT NULL AND spr.date_completed IS NOT NULL)';
+			$sql .= ' AND a.status <> ' . STATUS_QUEUED;
 		}
 
 		$result =& $this->retrieveRange(
@@ -288,8 +288,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submissionsCount[1] = 0;
 
 		$sql = 'SELECT
-					sl.date_completed AS le_date_completed,
-					spl.date_completed AS pr_date_completed
+					a.status
 				FROM
 					articles a
 					LEFT JOIN signoffs sl ON (a.article_id = sl.assoc_id AND sl.assoc_type = ? AND sl.symbolic = ?)
@@ -300,7 +299,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
 		while (!$result->EOF) {
-			if ($result->fields['le_date_completed'] == null || $result->fields['pr_date_completed'] == null) {
+			if ($result->fields['status'] == STATUS_QUEUED) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;

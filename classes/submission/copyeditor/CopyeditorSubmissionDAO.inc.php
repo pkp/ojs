@@ -247,7 +247,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			WHERE
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				scpi.user_id = ? AND
-			(' . ($active?'':'NOT ') . ' (i.date_published IS NULL AND ((scpi.date_notified IS NOT NULL AND scpi.date_completed IS NULL) OR (scpf.date_notified IS NOT NULL AND scpf.date_completed IS NULL)))) ';
+			(' . ($active?'': 'NOT ') . ' (i.date_published IS NULL AND a.status = ' . STATUS_QUEUED . ')) ';
 
 		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
@@ -289,9 +289,9 @@ class CopyeditorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT	sci.date_notified AS initial_notified, sci.date_completed AS initial_completed,
-				scf.date_notified AS final_notified, scf.date_completed AS final_completed,
-				i.date_published
+		$sql = 'SELECT
+				i.date_published,
+				a.status
 			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
@@ -303,13 +303,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
 
 		while (!$result->EOF) {
-			// If an item is not yet published and at least one of the two copyediting phases is in progress, consider it active.
-			if (
-				$result->fields['date_published'] == null && (
-					($result->fields['initial_notified'] != null && $result->fields['initial_completed'] == null) ||
-					($result->fields['final_notified'] != null && $result->fields['final_completed'] == null)
-				)
-			) {
+			if ($result->fields['date_published'] == null && $result->fields['status'] == STATUS_QUEUED) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;

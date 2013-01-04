@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_layoutEditor
  */
- 
+
 /**
  * @file pages/layoutEditor/index.php
  *
@@ -11,13 +11,13 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_layoutEditor
- * @brief Handle requests for layout editor functions. 
+ * @brief Handle requests for layout editor functions.
  *
  */
 
 switch ($op) {
 	//
-	// issue 
+	// issue
 	//
 	case 'issueData':
 	case 'issueToc':
@@ -79,6 +79,7 @@ switch ($op) {
 	case 'futureIssues':
 	case 'backIssues':
 	case 'instructions':
+	case 'completeProofreader':
 		define('HANDLER_CLASS', 'LayoutEditorHandler');
 		import('pages.layoutEditor.LayoutEditorHandler');
 		break;
