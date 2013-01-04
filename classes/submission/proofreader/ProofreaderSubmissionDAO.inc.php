@@ -242,9 +242,9 @@ class ProofreaderSubmissionDAO extends DAO {
 				spr.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .= ' AND spr.date_completed IS NULL';
+			$sql .= ' AND a.status = ' . STATUS_QUEUED;
 		} else {
-			$sql .= ' AND spr.date_completed IS NOT NULL';
+			$sql .= ' AND a.status <> ' . STATUS_QUEUED;
 		}
 
 		$result =& $this->retrieveRange($sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''), $params, $rangeInfo);
@@ -285,7 +285,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submissionsCount[1] = 0;
 
 		$sql = 'SELECT
-					spp.date_completed
+					a.status
 				FROM
 					articles a
 					LEFT JOIN signoffs spp ON (a.article_id = spp.assoc_id AND spp.assoc_type = ? AND spp.symbolic = ?)
@@ -296,7 +296,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
 
 		while (!$result->EOF) {
-			if ($result->fields['date_completed'] == null) {
+			if ($result->fields['status'] == STATUS_QUEUED) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;

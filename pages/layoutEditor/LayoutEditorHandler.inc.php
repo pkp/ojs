@@ -13,6 +13,7 @@
  */
 
 import('classes.submission.layoutEditor.LayoutEditorAction');
+import('classes.submission.proofreader.ProofreaderAction');
 import('classes.handler.Handler');
 
 class LayoutEditorHandler extends Handler {
@@ -177,6 +178,28 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('layoutEditor/backIssues.tpl');
+	}
+
+	/**
+	 * Sets proofreader completion date
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function completeProofreader($args, &$request) {
+		$articleId = (int) $request->getUserVar('articleId');
+
+		$this->validate($request, $articleId);
+		$this->setupTemplate($request, true);
+
+		// set the date notified for this signoff so proofreading can no longer be initiated.
+		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateNotified(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'layoutEditor', 'completeProofreader'))) {
+			$request->redirect(null, null, 'submission', $articleId);
+		}
 	}
 
 	/**

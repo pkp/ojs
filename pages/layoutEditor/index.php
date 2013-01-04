@@ -79,6 +79,7 @@ switch ($op) {
 	case 'futureIssues':
 	case 'backIssues':
 	case 'instructions':
+	case 'completeProofreader':
 		define('HANDLER_CLASS', 'LayoutEditorHandler');
 		import('pages.layoutEditor.LayoutEditorHandler');
 		break;
