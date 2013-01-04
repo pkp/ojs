@@ -5,7 +5,9 @@ The following steps (subject to change) are typically performed to prepare a new
 OJS release:
 
 
-1. Ensure that the "complete" flags in registry/locales.xml are accurate
+1. Ensure that the "complete" flags in registry/locales.xml are accurate. Use
+    the tools/genEmailUpdates.php script to generate email template update
+    SQL for subjects and bodies whose defaults have changed.
 
 
 2. Update version, installation, and upgrade descriptor files:
