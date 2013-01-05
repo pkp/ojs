@@ -66,7 +66,7 @@
 					</li>
 				{/if}{* $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE *}
 				{foreach from=$navMenuItems item=navItem}
-					{if $navItem.url != '' && $navItem.name != ''}<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=""}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>{/if}
+					{if $navItem.url != '' && $navItem.name != ''}<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$baseUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>{/if}
 				{/foreach}
 			</ul>
 		</li>	
