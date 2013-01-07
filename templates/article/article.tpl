@@ -63,19 +63,6 @@
 		</div>
 	{/if}
 
-	{if $citationFactory->getCount()}
-		<div id="articleCitations">
-		<h4>{translate key="submission.citations"}</h4>
-		<br />
-		<div>
-			{iterate from=citationFactory item=citation}
-				<p>{$citation->getRawCitation()|strip_unsafe_html}</p>
-			{/iterate}
-		</div>
-		<br />
-		</div>
-	{/if}
-
 	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain)}
 		{assign var=hasAccess value=1}
 	{else}
@@ -83,7 +70,8 @@
 	{/if}
 
 	{if $galleys}
-		{translate key="reader.fullText"}
+		<div id="articleFullText">
+		<h4>{translate key="reader.fullText"}</h4>
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
@@ -105,6 +93,20 @@
 		{else}
 			&nbsp;<a href="{url page="about" op="subscriptions"}" target="_parent">{translate key="reader.subscribersOnly"}</a>
 		{/if}
+		</div>
+	{/if}
+
+	{if $citationFactory->getCount()}
+		<div id="articleCitations">
+		<h4>{translate key="submission.citations"}</h4>
+		<br />
+		<div>
+			{iterate from=citationFactory item=citation}
+				<p>{$citation->getRawCitation()|strip_unsafe_html}</p>
+			{/iterate}
+		</div>
+		<br />
+		</div>
 	{/if}
 {/if}
 
