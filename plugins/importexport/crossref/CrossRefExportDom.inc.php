@@ -105,7 +105,12 @@ class CrossRefExportDom {
 		$journalMetadataNode =& XMLCustomWriter::createElement($doc, 'journal_metadata');
 
 		/* Full Title of Journal */
-		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getLocalizedName());
+		$journalTitle = $journal->getLocalizedName();
+		// Attempt a fall back, in case the localized name is not set.
+		if ($journalTitle == '') {
+			$journalTitle = $journal->getLocalizedSetting('abbreviation');
+		}
+		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journalTitle);
 
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
 		if ($journal->getLocalizedSetting('abbreviation') != '' ) {
@@ -195,9 +200,18 @@ class CrossRefExportDom {
 
 		/* publisher_item is the article pages */
 		if ($article->getPages() != '') {
-			$publisherItemNode =& XMLCustomWriter::createElement($doc, 'publisher_item');
-			XMLCustomWriter::createChildWithText($doc, $publisherItemNode, 'item_number', $article->getPages());
-			XMLCustomWriter::appendChild($journalArticleNode, $publisherItemNode);
+			$pageNode =& XMLCustomWriter::createElement($doc, 'pages');
+			// extract the first page for the first_page element, store the remaining bits in otherPages,
+			// after removing any preceding non-numerical characters.
+			if (preg_match('/^[^\d]*(\d+)\D*(.*)$/', $article->getPages(), $matches)) {
+				$firstPage = $matches[1];
+				$otherPages = $matches[2];
+				XMLCustomWriter::createChildWithText($doc, $pageNode, 'first_page', $firstPage);
+				if ($otherPages != '') {
+					XMLCustomWriter::createChildWithText($doc, $pageNode, 'other_pages', $otherPages);
+				}
+			}
+			XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
 		}
 
 		// DOI data node
@@ -206,7 +220,9 @@ class CrossRefExportDom {
 
 		/* Component list (supplementary files) */
 		$componentListNode =& CrossRefExportDom::generateComponentListDom($doc, $journal, $article);
-		XMLCustomWriter::appendChild($journalArticleNode, $componentListNode);
+		if ($componentListNode) {
+			XMLCustomWriter::appendChild($journalArticleNode, $componentListNode);
+		}
 
 		return $journalArticleNode;
 	}

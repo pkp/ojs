@@ -180,7 +180,6 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
 
 		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
 
 		// Create Head Node and all parts inside it
 		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);

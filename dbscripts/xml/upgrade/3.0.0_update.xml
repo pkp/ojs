@@ -18,4 +18,8 @@
 	<sql>
 		<query>UPDATE review_assignments SET stage_id=1 WHERE stage_id=0</query>
 	</sql>
+	<!-- Bug #6013: Make published dates for articles consistent -->
+	<sql>
+		<query>UPDATE published_articles SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
+	</sql>
 </data>
