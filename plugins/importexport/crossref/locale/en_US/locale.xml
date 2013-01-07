@@ -30,4 +30,5 @@
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
 
 	<message key="plugins.importexport.crossref.errors.noDOIprefix">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.crossref.articleDatePublishedError">WARNING: An article with article ID of "{$articleId}" has no published date set.  This may lead to invalid XML.</message>
 </locale>
