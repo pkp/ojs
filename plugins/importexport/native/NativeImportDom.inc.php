@@ -223,7 +223,7 @@ class NativeImportDom {
 		if (($value = $issueNode->getAttribute('public_id')) != '') {
 			$anotherIssue = $issueDao->getIssueByPubId('publisher-id', $value, $journal->getId());
 			if ($anotherIssue) {
-				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
+				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicIssueId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
 				$hasErrors = true;
 			} else {
 				$issue->setStoredPubId('publisher-id', $value);
@@ -643,6 +643,16 @@ class NativeImportDom {
 		} else {
 			$article->setLocale($journal->getPrimaryLocale());
 		}
+		if (($value = $articleNode->getAttribute('public_id')) != '') {
+			$anotherArticle = $publishedArticleDao->getPublishedArticleByPubId('publisher-id', $value, $journal->getId());
+			if ($anotherArticle) {
+				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicArticleId', array('articleTitle' => $article->getLocalizedTitle(), 'otherArticleTitle' => $anotherArticle->getLocalizedTitle()));
+				$hasErrors = true;
+			} else {
+				$issue->setStoredPubId('publisher-id', $value);
+			}
+		}
+
 		$article->setJournalId($journal->getId());
 		$article->setUserId($user->getId());
 		$article->setSectionId($section->getId());
@@ -969,6 +979,16 @@ class NativeImportDom {
 		if ($isHtml) $galley = new ArticleHtmlGalley();
 		else $galley = new ArticleGalley();
 
+		if (($value = $galleyNode->getAttribute('public_id')) != '') {
+			$anotherGalley = $galleyDao->getGalleyByPubId('publisher-id', $value, $article->getId());
+			if ($anotherGalley) {
+				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicGalleyId', array('publicId' => $value, 'articleTitle' => $article->getLocalizedTitle()));
+				$hasErrors = true;
+			} else {
+				$galley->setStoredPubId('publisher-id', $value);
+			}
+		}
+
 		$galley->setArticleId($article->getId());
 		$galley->setSequence($galleyCount);
 
@@ -1251,7 +1271,16 @@ class NativeImportDom {
 
 		$suppFile->setShowReviewers($suppNode->getAttribute('show_reviewers')=='true');
 		$suppFile->setLanguage($suppNode->getAttribute('language'));
-		$suppFile->setStoredPubId('publisher-id', $suppNode->getAttribute('public_id'));
+
+		if (($value = $suppNode->getAttribute('public_id')) != '') {
+			$anotherSuppFile = $suppFileDao->getSuppFileByPubId('publisher-id', $value, $article->getId());
+			if ($anotherSuppFile) {
+				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicSuppFileId', array('suppFileTitle' => $suppFile->getLocalizedTitle(), 'otherSuppFileTitle' => $anotherSuppFile->getLocalizedTitle()));
+				$hasErrors = true;
+			} else {
+				$suppFile->setStoredPubId('publisher-id', $value);
+			}
+		}
 
 		if (!($fileNode = $suppNode->getChildByName('file'))) {
 			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));

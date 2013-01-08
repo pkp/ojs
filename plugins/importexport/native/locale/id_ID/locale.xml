@@ -73,7 +73,7 @@ Format di bawah ini diterima:
 	<message key="plugins.importexport.native.import.error.illegalUrl">URL spesifik "{$url}" untuk terbitan "{$issueTitle}" ilegal. Impor yang diserahkan dari Web hanya mendukung metode http, https, ftp, atau ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Tipe file tambahan yang tidak diketahui "{$suppFileType}" ditentukan.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">URL spesifik "{$url}" tidak dapat disalin ke file lokal.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">ID publik yang diberikan untuk terbitan impor "{$issueTitle}" sudah digunakan oleh terbitan lain, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">ID publik yang diberikan untuk terbitan impor "{$issueTitle}" sudah digunakan oleh terbitan lain, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Judul bagian tidak ada untuk terbitan "{$issueTitle}". Pastikan dokumen XML sesuai dengan DTD yang tepat.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch"> "{$sectionTitle}" bagian dari terbitan "{$issueTitle}" cocok dengan bagian jurnal yang ada, tapi singkatan spesifik ("{$sectionAbbrev}") cocok dengan bagian yang berbeda.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Judul artikel tidak ada untuk terbitan  "{$issueTitle}" di bagian "{$sectionTitle}". Pastikan dokumen XML sesuai dengan DTD yang tepat, dan judul telah disediakan untuk locale jurnal.  </message>

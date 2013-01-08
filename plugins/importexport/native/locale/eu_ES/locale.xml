@@ -75,7 +75,7 @@ Formatu hauek onartzen dira:
 	<message key="plugins.importexport.native.import.error.illegalUrl">"{$issueTitle}" zenbakiarentzat adierazitako "{$url}" URLa ez da baliozkoa. Web bidezko inportazioak http, https, ftp, edo ftps metodoak bakarrik onartzen ditu.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">"{$suppFileType}" fitxategi osagarriaren mota ezezaguna zehaztu da.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">"{$url}" URLa ezin izan da kopiatu fitxategi lokalera.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">"{$issueTitle}" zenbakia inportatzeko emandako ID publikoa beste zenbaki honena da: "{$otherIssueTitle}"</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">"{$issueTitle}" zenbakia inportatzeko emandako ID publikoa beste zenbaki honena da: "{$otherIssueTitle}"</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">"{$issueTitle}" zenbakian atal baten titulua falta zen. Ziurtatu XML dokumentua DTD egokiaren arabera eginda dagoela.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch"> "{$issueTitle}" zenbakiko "{$sectionTitle}" titulua aldizkariaren atal baten izena da, baina laburdura ("{$sectionAbbrev}") beste atal batena da.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">"{$issueTitle}" zenbakiko "{$sectionTitle}" ataleko artikulu baten titulua falta zen. Ziurtatu XML dokumentua DTD egokiaren arabera eginda dagoela, eta titulu bat eman dela aldizkariaren hizkuntzan.</message>
