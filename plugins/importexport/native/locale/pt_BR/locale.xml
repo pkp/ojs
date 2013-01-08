@@ -73,7 +73,7 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.illegalUrl">A URL "{$url}" da edição "{$issueTitle}" é ilegal. Importações via Web suportam apenas métodos http, https, ftp, ou ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">O tipo de arquivo suplementar "{$suppFileType}" é desconhecido.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">A URL "{$url}" não pode ser copiada para um arquivo local.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">O ID público para importar a edição "{$issueTitle}" já está em uso pela edição "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">O ID público para importar a edição "{$issueTitle}" já está em uso pela edição "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Um título de seção não foi informado para a edição "{$issueTitle}". Certifique-se que o documento XML esteja em conformidade com a DTD apropriada.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">A seção "{$sectionTitle}" da edição "{$issueTitle}" é compatível com uma revista existente, mas a abreviatura ("{$sectionAbbrev}") é compatível com outra seção.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Um título de artigo não foi informado na edição "{$issueTitle}", seção "{$sectionTitle}". Certifique-se de que o documento XML está em conformidade com a DTD apropriada, e que um título foi informado para o idioma da revista.</message>

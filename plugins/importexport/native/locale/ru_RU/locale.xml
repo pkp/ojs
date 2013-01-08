@@ -68,7 +68,7 @@ XML документа.
 	<message key="plugins.importexport.native.import.error.illegalUrl">Указанный URL "{$url}" выпуска "{$issueTitle}" не поддерживается. Импорт из интернета поддерживает только протоколы http, https, ftp, или ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Неизвестный тип дополнительного файла "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Невозможно скопировать "{$url}" в локальный файл.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Идентификатор, найденный при импорте выпуска "{$issueTitle}" уже используется в другом выпуске "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Идентификатор, найденный при импорте выпуска "{$issueTitle}" уже используется в другом выпуске "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Название секции отсутствует в выпуске "{$issueTitle}". Пожалуйста убедитесь, что XML документ соответствует DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Заголовок секции "{$sectionTitle}" выпуска "{$issueTitle}" совпал с существующей секцией журнала, но указанное сокращение ("{$sectionAbbrev}") совпало с другой секцией.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">В секции  "{$sectionTitle}" выпуска "{$issueTitle}" отсутствует название статьи. Пожалуйста убедитесь, что XML документ соответствует DTD и что название было указано на языке журнала.</message>

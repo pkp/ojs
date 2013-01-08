@@ -73,7 +73,7 @@ Følgende formater blir akseptert:
 	<message key="plugins.importexport.native.import.error.illegalUrl">Angitt URL "{$url}" for nummeret "{$issueTitle}" var ugyldig. Import via nettgrensesnittet støtter bare metodene http, https, ftp, eller ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Den angitte filtypen for tilleggsfil "{$suppFileType}" er ukjent.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Den angitte URL-en "{$url}" kunne ikke kopieres til en lokal fil.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Angitt ID angitt for det importerte nummeret "{$issueTitle}" er allerede i bruk av et annen nummer, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Angitt ID angitt for det importerte nummeret "{$issueTitle}" er allerede i bruk av et annen nummer, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">En seksjonstittel mangler i nummeret "{$issueTitle}". Sjekk at XML-dokumentet stemmer med aktuell DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Seksjonen "{$sectionTitle}" i nummeret "{$issueTitle}" stemmer med en eksisterende seksjon, men angitt forkortelse ("{$sectionAbbrev}") stemmer med en annen seksjon.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">En artikkeltittel mangler i nummeret "{$issueTitle}" i seksjonen "{$sectionTitle}". Sjekk at XML-dokumentet stemmer med aktuell DTD, og at det er oppgitt en tittel i tidsskriftets språk.</message>

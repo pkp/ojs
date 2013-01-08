@@ -75,7 +75,7 @@ De follgende formaten worden geaccepteerd:
 	<message key="plugins.importexport.native.import.error.illegalUrl">De opgegeven URL "{$url}" voor nummer "{$issueTitle}" was fout. Web-import kan alleen met http, https, ftp, or ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Er is een aanvullend bestand van een onbekend type "{$suppFileType}" opgegeven.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">De opgegeven URL "{$url}" kon niet naar een lokaal bestand gekopieerd worden.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Het publieke ID voor het te importeren nummer "{$issueTitle}" is al in gebruik bij een ander nummer, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Het publieke ID voor het te importeren nummer "{$issueTitle}" is al in gebruik bij een ander nummer, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Een sectietitel ontbreekt bij nummer "{$issueTitle}". Verzeker u ervan dat het XML document zich conformeert aan de juiste DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">De sectie "{$sectionTitle}" van nummer "{$issueTitle}" is een geldige tijdschriftsectie , maar de opgegeven afkorting ("{$sectionAbbrev}") is van een andere sectie.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Er ontbreekt een artikel-titel voor het nummer "{$issueTitle}" in sectie "{$sectionTitle}". Verzeker u ervan dat het  XML document zich conformeert aan de juiste DTD, en dat een titel wordt opgegeven in de taal van het tijdschrift.</message>

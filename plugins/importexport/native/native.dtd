@@ -120,6 +120,7 @@
 <!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author*, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
+		locale CDATA #IMPLIED
 		language CDATA "en">
 
 <!ELEMENT author (firstname, middlename?, lastname, affiliation*, country?, email, url?, competing_interests*, biography*)>

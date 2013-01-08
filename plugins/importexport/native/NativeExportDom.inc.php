@@ -144,6 +144,7 @@ class NativeExportDom {
 
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root =& XMLCustomWriter::createElement($doc, 'article');
+		XMLCustomWriter::setAttribute($root, 'locale', $article->getLocale());
 		XMLCustomWriter::setAttribute($root, 'public_id', $article->getPubId('publisher-id'), false);
 		XMLCustomWriter::setAttribute($root, 'language', $article->getLanguage(), false);
 

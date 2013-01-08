@@ -73,7 +73,7 @@ Jsou akceptovány následující formáty:
 	<message key="plugins.importexport.native.import.error.illegalUrl">Uvedená adresa URL "{$url}" pro číslo "{$issueTitle}" nebyla povolená. Imprt pře web podporuje pouze metody http, https, ftp nebo ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Byl uveden neznámý typ doplňkového souboru "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Uvedená adresa URL "{$url}" nemohla být skopírována do místního souboru.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Veřejné ID přidělené importovanému číslu "{$issueTitle}" je již používáno jiným číslem "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Veřejné ID přidělené importovanému číslu "{$issueTitle}" je již používáno jiným číslem "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Název sekce chyběl u čísla "{$issueTitle}". Prosím ujistěte se, že XML dokument je v souladu s odpovídajícím DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Sekce "{$sectionTitle}" čísla "{$issueTitle}" odpovídá existující sekci časopisu, ale uvedená zkratka ("{$sectionAbbrev}") odpovídá jiné sekci.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Chyběl název článku v čísle "{$issueTitle}" v sekci "{$sectionTitle}". Ujistěte se prosím, že XML document je v souladu s odpovídajícím DTD, a že byl uveden název lokalizace časopisu.</message>

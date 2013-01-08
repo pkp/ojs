@@ -75,7 +75,7 @@ Sunt acceptate următoarele formate:
 	<message key="plugins.importexport.native.import.error.illegalUrl">URL-ul specificat "{$url}" pentru acest număr "{$issueTitle}" este ilegal. Importurile prin web suportă doar metodele http, https, ftp, sau ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">A fost specificat un fişier suplimentar de tipul "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">URL-ul "{$url}" specificat nu a putut fi copiat într-un fişier local.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">ID-ul public dat pentru problema importului "{$issueTitle}" este deja utilizat de un alt număr, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">ID-ul public dat pentru problema importului "{$issueTitle}" este deja utilizat de un alt număr, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Lipseşte numele unei secţiuni pentru numărul "{$issueTitle}". Asiguraţi-vă că documentul XML este conform  DTD-ul corect.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Secţiunea "{$sectionTitle}" aparţinând numărului "{$issueTitle}" se potriveşte cu o secţiune a unei reviste existente dar abrevierea specificată ("{$sectionAbbrev}") s-a potrivit cu o altă secţiune.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Lipseşte titlul articolului pentru numărul "{$issueTitle}" din secţiunea "{$sectionTitle}". Asiguraţi-vă că documentul XML este conform cu DTD-ul corect şi că a fost dat titlul pentru localizarea revistei.</message>

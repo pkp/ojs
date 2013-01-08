@@ -74,7 +74,7 @@ I seguenti formati sono accettati:
 	<message key="plugins.importexport.native.import.error.illegalUrl">La URL "{$url}" specificata per l'issue "{$issueTitle}" non è lecita. Le importazioni via web  supportano solo i metodi http, https, ftp, o ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Un tipo di file supplementare "{$suppFileType}" è stato specificato.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">La URL "{$url}" specificata non può essere  copiata in un file locale.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">L'ID dato per l'import dell'issue "{$issueTitle}" è già in uso, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">L'ID dato per l'import dell'issue "{$issueTitle}" è già in uso, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Manca il titolo di una sezione per il fascicolo "{$issueTitle}". Assicurati che il documento XML sia conforme alla DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Il "{$sectionTitle}" della sezione di "{$issueTitle}" è uguale a una sezione di questo journal, ma l'abbreviazione specificata ("{$sectionAbbrev}") si abbina ad un'altra sezione.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Manca il titolo di una rticolo per l'issue "{$issueTitle}" nella sezione "{$sectionTitle}". Assicurati che il documento XML sia conforme alla DTD di aver fornito il titolo della rivista.</message>

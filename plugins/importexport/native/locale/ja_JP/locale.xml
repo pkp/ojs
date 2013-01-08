@@ -72,7 +72,7 @@
 	<message key="plugins.importexport.native.import.error.illegalUrl">巻号 "{$issueTitle}" に指定したURL "{$url}" は不正です。Webを使ったインポートがサポートするのは、httpとhttps、ftp、ftpsだけです。</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">補足ファイルに不明な種別 "{$suppFileType}" が指定されました。</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">指定したURL "{$url}" はローカルファイルにコピーできませんでした。</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">インポートする号 "{$issueTitle}" に指定した公開IDはすでに別の号 "{$otherIssueTitle}" に使用されています。</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">インポートする号 "{$issueTitle}" に指定した公開IDはすでに別の号 "{$otherIssueTitle}" に使用されています。</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">巻号 "{$issueTitle}" のセクションタイトルがありません。XML文書が適当なDTDに準拠していることを確認してください。</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">"{$issueTitle}" 号の "{$sectionTitle}" セクションは既存の雑誌セクションに合致しますが、指定した略称（"{$sectionAbbrev}"）は別のセクションと合致します。</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">号 "{$issueTitle}"、セクション "{$issueTitle}" の論文タイトルがありません。XML文書が適当なDTDに準拠していること、および、雑誌の言語に合ったタイトルが提供されていることを確認してください。</message>

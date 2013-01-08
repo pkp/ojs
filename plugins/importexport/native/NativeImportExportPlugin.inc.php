@@ -325,6 +325,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
+		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');

@@ -75,7 +75,7 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.illegalUrl">为刊期"{$issueTitle}"指定了一个无效的URL： "{$url}" 。WEB提交导入方式只支持 http, https, ftp, 或者ftps方法.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">指定的 "{$suppFileType}" 是未知的附件类型.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">指定的URL"{$url}"不能被复制到本地文件。</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">为导入刊期指定的公共ID已经被其他刊期"{$otherIssueTitle}"使用.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">为导入刊期指定的公共ID已经被其他刊期"{$otherIssueTitle}"使用.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">A section title was missing for the issue "{$issueTitle}". Please ensure that the XML document conforms to the appropriate DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">The "{$sectionTitle}" section of the "{$issueTitle}" issue matched an existing journal section, but the specified abbreviation ("{$sectionAbbrev}") matched a different section.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">An article title was missing for the issue "{$issueTitle}" in the section "{$sectionTitle}". Please ensure that the XML document conforms to the appropriate DTD, and that a title has been supplied for the journal's locale.</message>

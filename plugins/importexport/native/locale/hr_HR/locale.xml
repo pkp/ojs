@@ -74,7 +74,7 @@ Prihvatljivi su sljedeći formati:
 	<message key="plugins.importexport.native.import.error.illegalUrl">Navedeni URL "{$url}" za broj "{$issueTitle}" je bio nedopušten. Uvođenja putem web prijave podržavaju samo http, https, ftp ili ftps metode.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Naveden je nepoznati tip dopunske datoteke "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Navedeni URL "{$url}" ne može se kopirati u lokalnu datoteku.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Javni identifikator dodijeljen za uvođenje broja "{$issueTitle}" već koristi drugi broj, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Javni identifikator dodijeljen za uvođenje broja "{$issueTitle}" već koristi drugi broj, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Nedostajao je naslov rubrike za broj "{$issueTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Rubrika "{$sectionTitle}" broja "{$issueTitle}" pristaje postojećoj rubrici časopisa, ali navedena kratica ("{$sectionAbbrev}") pristaje drugoj rubrici.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Nedostajao je naslov članka za broj "{$issueTitle}" u rubrici "{$sectionTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u, te da je naslov isporučen za lokalitet časopisa.</message>
