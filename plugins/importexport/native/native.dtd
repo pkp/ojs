@@ -188,10 +188,12 @@
 
 <!ELEMENT galley (id*, label, file)>
 	<!ATTLIST galley
+		public_id CDATA #IMPLIED
 		locale CDATA #IMPLIED>
 
 <!ELEMENT htmlgalley (id*, label, file, stylesheet?, image*)>
 	<!ATTLIST htmlgalley
+		public_id CDATA #IMPLIED
 		locale CDATA #IMPLIED>
 
 <!ELEMENT supplemental_file (id*, title+, creator*, subject*, type_other?, description*, publisher*, sponsor*, date_created?, source*, file)>

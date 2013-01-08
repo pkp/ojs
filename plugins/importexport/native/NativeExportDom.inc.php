@@ -144,6 +144,8 @@ class NativeExportDom {
 
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root =& XMLCustomWriter::createElement($doc, 'article');
+		XMLCustomWriter::setAttribute($root, 'public_id', $article->getPubId('publisher-id'), false);
+		XMLCustomWriter::setAttribute($root, 'language', $article->getLanguage(), false);
 
 		NativeExportDom::generatePubId($doc, $root, $article, $issue);
 
@@ -345,7 +347,8 @@ class NativeExportDom {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 
 		$root =& XMLCustomWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
-		if ($root) XMLCustomWriter::setAttribute($root, 'locale', $galley->getLocale());
+		XMLCustomWriter::setAttribute($root, 'locale', $galley->getLocale());
+		XMLCustomWriter::setAttribute($root, 'public_id', $galley->getPubId('publisher-id'), false);
 
 		NativeExportDom::generatePubId($doc, $root, $galley, $issue);
 
