@@ -33,7 +33,7 @@
 			{if not $copyeditingInitialSignoff->getDateCompleted()}
 				{translate key="submissions.step1"}
 			{else}
-				{translate key="submissions.step3"}
+				{translate key="submission.copyedit.initialCopyedit"} {translate key="common.completed"}
 			{/if}
 		</td>
 	</tr>
