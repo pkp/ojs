@@ -22,6 +22,7 @@
 
 {iterate from=submissions item=submission}
 	{assign var="copyeditingInitialSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
+	{assign var="finalCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
 	{assign var="articleId" value=$submission->getId()}
 	<tr valign="top">
 		<td>{$articleId|escape}</td>
@@ -31,9 +32,17 @@
 		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getLocalizedTitle()|strip_tags|truncate:60:"..."}</a></td>
 		<td align="right">
 			{if not $copyeditingInitialSignoff->getDateCompleted()}
-				{translate key="submissions.step1"}
+				{translate key="submission.copyedit.initialCopyedit"}
 			{else}
-				{translate key="submission.copyedit.initialCopyedit"} {translate key="common.completed"}
+				{if $copyeditingInitialSignoff->getDateCompleted() && not $finalCopyeditSignoff->getDateUnderway()}
+					{translate key="submission.copyedit.initialCopyedit"} {translate key="common.completed"}
+				{else}
+					{if $finalCopyeditSignoff->getDateUnderway() and not $finalCopyeditSignoff->getDateCompleted()}
+						{translate key="submission.copyedit.finalCopyedit"}
+					{else}
+						{translate key="submission.copyedit.finalCopyedit"} {translate key="common.completed"}
+					{/if}
+				{/if}
 			{/if}
 		</td>
 	</tr>
