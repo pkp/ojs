@@ -49,6 +49,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'contributors' => 'object',
 				'history' => 'string',
 				'envelopeSender' => 'string',
+				'emailHeader' => 'string',
 				'emailSignature' => 'string',
 				'searchDescription' => 'string',
 				'searchKeywords' => 'string',

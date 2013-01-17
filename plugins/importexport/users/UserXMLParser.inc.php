@@ -192,7 +192,7 @@ class UserXMLParser {
 
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($this->journalId);
-			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+			$mail->setReplyTo(null);
 		}
 
 		for ($i=0, $count=count($this->usersToImport); $i < $count; $i++) {

@@ -640,7 +640,7 @@ class SubscriptionAction {
 
 		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
-		$mail->setFrom($subscriptionContactEmail, $subscriptionContactName);
+		$mail->setReplyTo($subscriptionContactEmail, $subscriptionContactName);
 		$mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));

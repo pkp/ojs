@@ -4,6 +4,7 @@
 Content-Type: text/plain; charset={$defaultCharset|escape}
 Content-Transfer-Encoding: quoted-printable
 
+{literal}{$templateHeader}{/literal}
 {$body}
 
 {$issue->getIssueIdentification()}
@@ -41,6 +42,8 @@ Content-Transfer-Encoding: quoted-printable
 		{/foreach}
 		</head>
 	<body>
+
+	<pre>{literal}{$templateHeader}{/literal}</pre>
 
 	<p>{$body|escape|nl2br}</p>
 
