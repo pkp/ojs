@@ -45,6 +45,59 @@ class ReportPlugin extends Plugin {
 	}
 
 	/**
+	 * Retrieve a range of aggregate, filtered, ordered metric values, i.e.
+	 * a statistics report.
+	 *
+	 * @see <http://pkp.sfu.ca/wiki/index.php/OJSdeStatisticsConcept#Input_and_Output_Formats_.28Aggregation.2C_Filters.2C_Metrics_Data.29>
+	 * for a full specification of the input and output format of this method.
+	 *
+	 * @param $metricType null|integer|array metrics selection
+	 * @param $columns null|integer|array column (aggregation level) selection
+	 * @param $filters null|array report-level filter selection
+	 * @param $orderBy null|array order criteria
+	 * @param $range null|DBResultRange paging specification
+	 *
+	 * @return null|DAOResultFactory The selected data as a simple tabular
+	 *  result set or null if metrics are not supported by this plug-in,
+	 *  the specified report is invalid or cannot be produced or another
+	 *  error occurred.
+	 */
+	function getMetrics($metricType = null, $columns = null, $filters = null, $orderBy = null, $range = null) {
+		return null;
+	}
+
+	/**
+	 * Metric types available from this plug-in.
+	 *
+	 * @return null|array An array of metric identifiers (strings) or null if
+	 *  the plug-in does not support standard metric retrieval.
+	 */
+	function getMetricTypes() {
+		return null;
+	}
+
+	/**
+	 * Public metric type that will be displayed to end users.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|string The metric type or null if the plug-in does not support
+	 *  standard metric retrieval or the metric type was not found.
+	 */
+	function getMetricDisplayType($metricType) {
+		return null;
+	}
+
+	/**
+	 * Full name of the metric type.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|string The full name of the metric type or null if the
+	 *  plug-in does not support standard metric retrieval or the metric type
+	 *  was not found.
+	 */
+	function getMetricFullName($metricType) {
+		return null;
+	}
+
+	/**
 	 * Set the page's breadcrumbs, given the plugin's tree of items
 	 * to append.
 	 * @param $crumbs Array ($url, $name, $isTranslated)
