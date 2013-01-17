@@ -15,33 +15,12 @@
 import('classes.plugins.Plugin');
 
 class ReportPlugin extends Plugin {
+
+	/**
+	 * Constructor
+	 */
 	function ReportPlugin() {
 		parent::Plugin();
-	}
-
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Get the display name of this plugin. This name is displayed on the
-	 * Conference Manager's Reports page, for example.
-	 * @return String
-	 */
-	function getDisplayName() {
-		assert(false); // Should always be overridden
-	}
-
-	/**
-	 * Get a description of the plugin.
-	 */
-	function getDescription() {
-		assert(false); // Should always be overridden
 	}
 
 	/**

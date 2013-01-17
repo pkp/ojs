@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/oas/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.oas.displayName">Open Access Statistics (OA-S)</message>
+	<message key="plugins.generic.oas.description"><![CDATA[The OA-S plugin transforms OJS into a data provider for the <a href="http://www.dini.de/projekte/oa-statistik" target="_new">Open Access Statistics (OA-S) project</a>.]]></message>
+	<message key="plugins.generic.oas.report.displayName">OA-S Reporting</message>
+	<message key="plugins.reports.oas.report.description">This plugin implements reports based on OA-S metrics.</message>
+</locale>

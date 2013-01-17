@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * plugins/generic/oas/schema.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OA-S plugin schema in XML.
+  -->
+
+<schema version="0.2">
+
+  <!--
+   *
+   * TABLE oas_context_objects
+   *
+   -->
+  <table name="oas_context_objects">
+    <field name="timestamp" type="D">
+      <NOTNULL/>
+    </field>
+    <field name="admin_size" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="admin_document_size" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="admin_format" type="C2" size="255">
+      <NOTNULL/>
+    </field>
+    <field name="admin_service" type="C2" size="255">
+      <NOTNULL/>
+    </field>
+    <field name="ref_ids" type="X">
+      <NOTNULL/>
+    </field>
+    <field name="ref_ent_ids" type="X" />
+    <field name="requ_hashed_ip" type="C" size="64">
+      <NOTNULL/>
+    </field>
+    <field name="requ_hashed_c" type="C" size="64">
+      <NOTNULL/>
+    </field>
+    <field name="requ_hostname" type="C2" size="255" />
+    <field name="requ_classification" type="C2" size="14" />
+    <field name="requ_user_agent" type="X" />
+    <descr>OA-S context object table - temporary staging of OA-S usage events</descr>
+  </table>
+</schema>
