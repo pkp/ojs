@@ -223,7 +223,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 	 */
 	function getJournalSetting($settingName) {
 		switch ($settingName) {
-			case 'title':
+			case 'name':
 				return array('en_US' => 'journal-title');
 
 			case 'copyrightNotice':
@@ -238,8 +238,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			case 'enablePublicSuppFileId':
 				return false;
 
+			case 'onlineIssn':
+				return 'onlineIssn';
+
+			case 'printIssn':
+				return null;
+
 			default:
-				self::fail();
+				self::fail('Required journal setting is not necessary for the purpose of this test.');
 		}
 	}
 

@@ -22,6 +22,7 @@
 	<dc:identifier>article-view-9</dc:identifier>
 	<dc:identifier>article-doi</dc:identifier>
 	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
+	<dc:source>onlineIssn</dc:source>
 	<dc:source>issue-doi</dc:source>
 	<dc:language>en_US</dc:language>
 	<dc:relation>article-view-9-98</dc:relation>

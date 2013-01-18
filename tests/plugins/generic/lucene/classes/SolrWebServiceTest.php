@@ -635,7 +635,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$journal->setId('2');
 		$journal->setPath('lucene-test');
 		$journal->setData(
-			'supportedLocales',
+			'supportedLocaleNames',
 			array(
 				'en_US' => 'English',
 				'de_DE' => 'German',
@@ -659,7 +659,7 @@ class SolrWebServiceTest extends PKPTestCase {
 			'de_DE' => 'Zeitschrift',
 			'en_US' => 'Journal'
 		);
-		if ($name == 'title' && isset($titleValues[$locale])) {
+		if ($name == 'name' && isset($titleValues[$locale])) {
 			return $titleValues[$locale];
 		}
 		$nullVar = null;
