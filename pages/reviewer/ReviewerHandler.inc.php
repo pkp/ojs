@@ -9,7 +9,7 @@
  * @class ReviewerHandler
  * @ingroup pages_reviewer
  *
- * @brief Handle requests for reviewer functions. 
+ * @brief Handle requests for reviewer functions.
  */
 
 import('classes.submission.reviewer.ReviewerAction');
@@ -29,7 +29,7 @@ class ReviewerHandler extends Handler {
 		parent::Handler();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)));		
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)));
 	}
 
 	/**
@@ -58,9 +58,9 @@ class ReviewerHandler extends Handler {
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = $request->getUserVar('sortDirection');
 
-		if ($sort == 'decision') {			
+		if ($sort == 'decision') {
 			$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getId(), $active, $rangeInfo);
-		
+
 			// Sort all submissions by status, which is too complex to do in the DB
 			$submissionsArray = $submissions->toArray();
 			$compare = create_function('$s1, $s2', 'return strcmp($s1->getMostRecentDecision(), $s2->getMostRecentDecision());');
@@ -197,7 +197,6 @@ class ReviewerHandler extends Handler {
 
 			$this->submission =& $reviewerSubmission;
 			$this->user =& $user;
-			return true;
 		}
 
 		parent::validate();
