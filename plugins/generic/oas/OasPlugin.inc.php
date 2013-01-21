@@ -15,26 +15,43 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
+// Our own and OA-S classification types.
 define('OAS_PLUGIN_CLASSIFICATION_BOT', 'bot');
 define('OAS_PLUGIN_CLASSIFICATION_ADMIN', 'administrative');
 
+// Maximum time (in minutes) to stage usage events.
+define('OAS_PLUGIN_MAX_STAGING_TIME', '15');
+
+// Time interval (in minutes) between two SALT download attempts.
+define('OAS_PLUGIN_SALT_URL', 'https://oas.sulb.uni-saarland.de/salt/salt_value.txt');
+define('OAS_PLUGIN_SALT_DOWNLOAD_INTERVAL', '15');
+
 class OasPlugin extends GenericPlugin {
 
-	private $_currentEvent = null;
+	/** @var integer */
+	var $_currentEventId;
+
+	/** @var OasEventStagingDAO */
+	var $_oasEventStagingDao;
+
+
 
 	/**
 	 * @see PKPPlugin::register()
 	 */
 	public function register($category, $path) {
 		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+
 		if($success && $this->getEnabled()) {
 			// Hook to register the report plugin.
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 
-			// Hooks to log usage events. TODO: Will be migrated to a separate plug-in, see #8015.
+			// Hooks to log usage events.
 			HookRegistry::register('TemplateManager::display', array($this, 'startUsageEvent'));
 			HookRegistry::register('ArticleHandler::viewFile', array($this, 'startUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'startUsageEvent'));
+			HookRegistry::register('ArticleHandler::downloadSuppFile', array($this, 'startUsageEvent'));
 			HookRegistry::register('IssueHandler::viewFile', array($this, 'startUsageEvent'));
 
 			// Hook triggered after file download finishes.
@@ -75,6 +92,13 @@ class OasPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @see PKPPlugin::getInstallSitePluginSettingsFile()
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
 	 * Register the OA-S report plugin.
 	 * @param $hookName string
 	 * @param $args array
@@ -91,6 +115,48 @@ class OasPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * Automatic plugin maintenance:
+	 * 1) event table maintenance
+	 * 2) salt management
+	 *
+	 * @return string the current or updated SALT value
+	 */
+	function doMaintenance() {
+		$currentTs = time();
+
+		// Event table maintenance.
+		$lastEventTableMaintenanceTs = $this->getSetting(0, 'lastEventTableMaintenanceTs');
+		if (($currentTs - OAS_PLUGIN_MAX_STAGING_TIME * 60) > $lastEventTableMaintenanceTs) {
+			$this->_oasEventStagingDao->clearExpiredEvents();
+		}
+
+		// Salt management.
+		$salt = $this->getSetting(0, 'salt');
+		$saltTs = $this->getSetting(0, 'saltTs');
+		if (empty($salt) || $saltTs == 0 || date('YYYYMM', $saltTs) != date('YYYYMM', $currentTs)) {
+			$lastSaltDownloadTs = $this->getSetting(0, 'lastSaltDownloadTs');
+			if (($currentTs - OAS_PLUGIN_SALT_DOWNLOAD_INTERVAL * 60) > $lastSaltDownloadTs) {
+				import('lib.pkp.classes.webservice.WebService');
+				import('lib.pkp.classes.webservice.WebServiceRequest');
+				$wsReq = new WebServiceRequest(OAS_PLUGIN_SALT_URL);
+				$wsReq->setAccept('text/plain');
+				$ws = new WebService();
+				$ws->setAuthUsername($this->getSetting(0, 'saltApiUsername'));
+				$ws->setAuthPassword($this->getSetting(0, 'saltApiPassword'));
+				$newSalt = $ws->call($wsReq);
+				$this->updateSetting(0, 'lastSaltDownloadTs', $currentTs);
+				if($ws->getLastResponseStatus() == '200' && !empty($newSalt) && $newSalt != $salt) {
+					$this->updateSetting(0, 'saltTs', $currentTs);
+					$this->updateSetting(0, 'salt', $newSalt);
+					$salt = $newSalt;
+				}
+			}
+		}
+
+		return $salt;
+	}
+
+	/**
 	 * Start preparing a usage event.
 	 *
 	 * @param $hookName string
@@ -104,13 +170,16 @@ class OasPlugin extends GenericPlugin {
 		if (!$journal) return false;
 
 		// Prepare request information.
-		$page = $request->getRequestedPage();
-		$op = $request->getRequestedOp();
-		$flushImmediately = false;
+		$downloadSuccess = false;
 		switch ($hookName) {
 
 			// Article abstract, HTML galley and remote galley.
 			case 'TemplateManager::display':
+				// We are only interested in access to the article abstract/galley view page.
+				$page = $request->getRequestedPage();
+				$op = $request->getRequestedOp();
+				if ($page != 'article' || !($op == 'view' || $op == 'articleView')) return false;
+
 				$templateManager = $args[0];
 				$galley = $templateManager->get_template_vars('galley'); /* @var $galley ArticleGalley */
 				$article = $templateManager->get_template_vars('article');
@@ -129,11 +198,9 @@ class OasPlugin extends GenericPlugin {
 					$assocType = ASSOC_TYPE_ARTICLE;
 					$canonicalUrlParams = array($pubObject->getBestArticleId($journal));
 				}
+				// The article and HTML/remote galley pages do not download anything.
+				$downloadSuccess = true;
 				$canonicalUrlOp = 'view';
-
-				// Don't wait for a file download event.
-				$flushImmediately = true;
-
 				break;
 
 			// Article galley (except for HTML and remote galley).
@@ -170,7 +237,7 @@ class OasPlugin extends GenericPlugin {
 		}
 
 		// Timestamp.
-		$time = date('c');
+		$time = Core::getCurrentDate();
 
 		// Actual document size, MIME type.
 		$router = $request->getRouter();
@@ -182,13 +249,6 @@ class OasPlugin extends GenericPlugin {
 			// Files.
 			$docSize = $pubObject->getFileSize();
 			$mimeType = $pubObject->getFileType();
-		}
-
-		// Download success.
-		if ($flushImmediately) {
-			$downloadSuccess = true;
-		} else {
-			$downloadSuccess = false;
 		}
 
 		// Canonical URL.
@@ -203,12 +263,15 @@ class OasPlugin extends GenericPlugin {
 
 		// Public identifiers.
 		$identifiers = array();
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journal->getId());
-		if (is_array($pubIdPlugins)) {
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				$pubId = $pubIdPlugin->getPubId($pubObject);
-				if ($pubId) {
-					$identifiers[$pubIdPlugin->getPubIdType()] = $pubId;
+		if (!is_a($pubObject, 'IssueGalley')) {
+			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journal->getId());
+			if (is_array($pubIdPlugins)) {
+				foreach ($pubIdPlugins as $pubIdPlugin) {
+					if (!$pubIdPlugin->getEnabled()) continue;
+					$pubId = $pubIdPlugin->getPubId($pubObject);
+					if ($pubId) {
+						$identifiers[$pubIdPlugin->getPubIdType()] = $pubId;
+					}
 				}
 			}
 		}
@@ -234,13 +297,15 @@ class OasPlugin extends GenericPlugin {
 
 		// User and roles.
 		$user = $request->getUser();
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$rolesByContext = $roleDao->getByUserIdGroupedByContext($user->getId());
 		$roles = array();
-		foreach (array(CONTEXT_SITE, $journal->getId()) as $context) {
-			if(isset($rolesByContext[$context])) {
-				foreach ($rolesByContext[$context] as $role) {
-					$roles[] = $role->getRoleId();
+		if ($user) {
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$rolesByContext = $roleDao->getByUserIdGroupedByContext($user->getId());
+			foreach (array(CONTEXT_SITE, $journal->getId()) as $context) {
+				if(isset($rolesByContext[$context])) {
+					foreach ($rolesByContext[$context] as $role) {
+						$roles[] = $role->getRoleId();
+					}
 				}
 			}
 		}
@@ -291,11 +356,19 @@ class OasPlugin extends GenericPlugin {
 			'ip', 'host', 'user', 'roles', 'userAgent', 'referrer',
 			'classification'
 		);
-		if ($flushImmediately) {
-			$this->_flushUsageEvent($usageEvent);
-		} else {
-			$this->_currentEvent = $usageEvent;
-		}
+
+		// Prefetch the DAO so that it is available even after download finishes.
+		// (OJS will clear the registry before downloading files.)
+		$this->import('OasEventStagingDAO');
+		$this->_oasEventStagingDao = new OasEventStagingDAO();
+		// We don't really have to register the DAO but let's do it for the sake of consistency.
+		DAORegistry::registerDAO('OasContextObjectDAO', $this->_oasEventStagingDao);
+
+		// Check whether we have outstanding maintenance jobs.
+		$salt = $this->doMaintenance();
+
+		// Stage the usage event.
+		$this->_currentEventId = $this->_oasEventStagingDao->stageUsageEvent($usageEvent, $salt);
 	}
 
 	/**
@@ -305,32 +378,24 @@ class OasPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function endUsageEvent($hookName, $args) {
-		$usageEvent = $this->_currentEvent;
+		// Check whether we got the event DAO (should be the case
+		// if our event flow is correct).
+		assert($this->_oasEventStagingDao);
+		if (!$this->_oasEventStagingDao) return;
+
+		// Check whether the download finished on the
+		// end user's side. (This won't work 100%
+		// reliably if the response is buffered by the
+		// web server but at least it shouldn't produce
+		// false negatives.)
 		if (connection_aborted()) {
-			$usageEvent['downloadSuccess'] = false;
+			$downloadSuccess = false;
 		} else {
-			$usageEvent['downloadSuccess'] = $args[0];
+			$downloadSuccess = $args[0];
 		}
-		$this->_flushUsageEvent($usageEvent);
-	}
 
-	/**
-	 * Log a usage event.
-	 *
-	 * @param unknown $hookName
-	 * @param unknown $args
-	 */
-	function logUsageEvent($hookName, $args) {
-		$usageEvent = $args[0];
-	}
-
-	/**
-	 * Flush a usage event through the event hook.
-	 *
-	 * @param $usageEvent array
-	 */
-	private function _flushUsageEvent($usageEvent) {
-		HookRegistry::call('OasPlugin::usageEvent', array($usageEvent));
+		// Update the usage event.
+		$this->_oasEventStagingDao->setDownloadSuccess($this->_currentEventId, $downloadSuccess);
 	}
 }
 

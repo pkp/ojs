@@ -17,8 +17,12 @@
    * TABLE oas_context_objects
    *
    -->
-  <table name="oas_context_objects">
-    <field name="timestamp" type="D">
+  <table name="oas_event_staging">
+    <field name="event_id" type="I8">
+      <KEY />
+      <AUTOINCREMENT/>
+    </field>
+    <field name="timestamp" type="T">
       <NOTNULL/>
     </field>
     <field name="admin_size" type="I8">
