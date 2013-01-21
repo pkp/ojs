@@ -78,7 +78,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		ReviewerAction::editComment($this->article, $this->comment, $reviewId);
+		ReviewerAction::editComment($article, $this->comment, $reviewId);
 	}
 
 	/**
