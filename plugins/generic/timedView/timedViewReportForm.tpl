@@ -11,7 +11,7 @@
 
 <br/>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#reportForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -20,12 +20,12 @@
 <form class="pkp_form" id="reportForm" method="post" action="{url path='TimedViewReportPlugin'}">
 	{include file="common/formErrors.tpl"}
 
-	<table class="data" width="100%">
-	<tr valign="top">
+	<table class="data">
+	<tr>
 		<td class="label">{fieldLabel name="dateStart" required="true" key="manager.subscriptions.form.dateStart"}</td>
 		<td class="value" id="dateStart">{html_select_date prefix="dateStart" all_extra="class=\"selectMenu\"" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="dateEnd" required="true" key="manager.subscriptions.form.dateEnd"}</td>
 		<td class="value" id="dateEnd">
 			{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}
@@ -46,7 +46,7 @@
 <div class="separator"></div>
 
 <h3>{translate key="plugins.generic.timedView.form.clearLogs"}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#clearLogsForm').pkpHandler('$.pkp.controllers.form.FormHandler');

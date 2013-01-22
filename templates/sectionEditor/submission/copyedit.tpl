@@ -11,27 +11,27 @@
 <h3>{translate key="submission.copyediting"}</h3>
 
 {if $useCopyeditors}
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td width="20%" class="label">{translate key="user.role.copyeditor"}</td>
-		{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}<td width="20%" class="value">{$copyeditor->getFullName()|escape}</td>{/if}
+		<td class="label">{translate key="user.role.copyeditor"}</td>
+		{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}<td class="value">{$copyeditor->getFullName()|escape}</td>{/if}
 		<td class="value"><a href="{url op="selectCopyeditor" path=$submission->getId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></td>
 	</tr>
 </table>
 {/if}
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="28%" colspan="2"><a href="{url op="viewMetadata" path=$submission->getId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
-		<td width="18%" class="heading">{translate key="submission.request"}</td>
-		<td width="18%" class="heading">{translate key="submission.underway"}</td>
-		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
+		<td colspan="2"><a href="{url op="viewMetadata" path=$submission->getId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
+		<td class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
 	<tr>
 		<td width="2%">1.</td>
 		{assign var="initialCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
-		<td width="26%">{translate key="submission.copyedit.initialCopyedit"}</td>
+		<td>{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $initialCopyeditFile}
@@ -213,7 +213,7 @@
 {elseif !$initialCopyeditSignoff->getDateCompleted()}
 {assign var="canUploadCopyedit" value="1"}
 {/if}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#uploadCopyeditVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');

@@ -11,7 +11,7 @@
 {include file="submission/comment/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 // In case this page is the result of a comment submit, reload the parent
@@ -21,14 +21,14 @@ window.opener.location.reload();
 {/literal}
 </script>
 <div id="articleComments">
-<table class="data" width="100%">
+<table class="data">
 {foreach from=$articleComments item=comment}
-<tr valign="top">
-	<td width="25%">
+<tr>
+	<td>
 		<div class="commentRole">{translate key=$comment->getRoleName()}</div>
 		<div class="commentDate">{$comment->getDatePosted()|date_format:$datetimeFormatShort}</div>
 	</td>
-	<td width="75%">
+	<td>
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
 			<div style="float: right"><a href="{url op="editComment" path=$articleId|to_array:$comment->getId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteComment" path=$articleId|to_array:$comment->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
@@ -52,7 +52,7 @@ window.opener.location.reload();
 
 {if not $isLocked}
 <div id="postComment">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#commentForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -69,12 +69,12 @@ window.opener.location.reload();
 <div id="new">
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
-<tr valign="top">
+<table class="data">
+<tr>
 	<td class="label">{fieldLabel name="commentTitle" key="submission.comments.subject"}</td>
 	<td class="value"><input type="text" name="commentTitle" id="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="255" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
 	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea richContent">{$comments|escape}</textarea></td>
 </tr>

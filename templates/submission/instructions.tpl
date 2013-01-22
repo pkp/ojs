@@ -27,7 +27,7 @@
 
 	<!-- Compiled scripts -->
 	{if $useMinifiedJavaScript}
-		<script type="text/javascript" src="{$baseUrl}/js/pkp.min.js"></script>
+		<script src="{$baseUrl}/js/pkp.min.js"></script>
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
@@ -36,7 +36,7 @@
 </head>
 <body>
 {literal}
-<script type="text/javascript">
+<script>
 <!--
 	if (self.blur) { self.focus(); }
 // -->

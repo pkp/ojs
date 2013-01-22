@@ -24,7 +24,7 @@
 <br />
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#thesisIndexForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -44,16 +44,16 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=theses item=thesis}
-	<tr valign="top">
-		<td width="80%">{$thesis->getTitle()|escape}</td>
-		<td width="20%" align="right"><a class="file" href="{url op="view" path=$thesis->getId()}">{translate key="plugins.generic.thesis.view"}</a></td>
+	<tr>
+		<td>{$thesis->getTitle()|escape}</td>
+		<td align="right"><a class="file" href="{url op="view" path=$thesis->getId()}">{translate key="plugins.generic.thesis.view"}</a></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td colspan="2" style="padding-left: 30px;font-style: italic;">{$thesis->getStudentFullName(true)|escape}<br />{$thesis->getDepartment()|escape}, {$thesis->getUniversity()|escape}
 		</td>
 	</tr>

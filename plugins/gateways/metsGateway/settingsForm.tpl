@@ -16,7 +16,7 @@
 <div id="metsGatewaySettings">
 <h3>{translate key="plugins.gateways.metsGateway.settings"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#metsGatewayForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -25,31 +25,31 @@
 <form class="pkp_form" id="metsGatewayForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="30%" class="label" align="right">{fieldLabel name="FLocat" key="plugins.gateways.metsGateway.settings.FLocat"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="FLocat" value="FLocat" {if $contentWrapper eq "FLocat"}checked="checked" {/if}/></td>
+<table class="data">
+	<tr>
+		<td class="label" align="right">{fieldLabel name="FLocat" key="plugins.gateways.metsGateway.settings.FLocat"}</td>
+		<td class="value"><input type="radio" name="contentWrapper" id="FLocat" value="FLocat" {if $contentWrapper eq "FLocat"}checked="checked" {/if}/></td>
 	</tr>
-	<tr valign="top">
-		<td width="30%" class="label" align="right">{fieldLabel name="FContent" key="plugins.gateways.metsGateway.settings.FContent"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="FContent" value="FContent" {if $contentWrapper eq "FContent"}checked="checked" {/if}/></td>
+	<tr>
+		<td class="label" align="right">{fieldLabel name="FContent" key="plugins.gateways.metsGateway.settings.FContent"}</td>
+		<td class="value"><input type="radio" name="contentWrapper" id="FContent" value="FContent" {if $contentWrapper eq "FContent"}checked="checked" {/if}/></td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
 	</tr>
-	<tr valign="top">
-		<td width="30%" class="label" align="right">{fieldLabel name="organization" key="plugins.gateways.metsGateway.settings.organization"}</td>
-		<td width="70%" class="value">
+	<tr>
+		<td class="label" align="right">{fieldLabel name="organization" key="plugins.gateways.metsGateway.settings.organization"}</td>
+		<td class="value">
 		<input type="text" name="organization" id="organization" value="{$organization|escape}" size="50" maxlength="50" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="30%" class="label" align="right">{fieldLabel name="preservationLevel"  key="plugins.gateways.metsGateway.settings.preservationLevel"}</td>
-		<td width="70%" class="value">
+	<tr>
+		<td class="label" align="right">{fieldLabel name="preservationLevel"  key="plugins.gateways.metsGateway.settings.preservationLevel"}</td>
+		<td class="value">
 		<input type="text" name="preservationLevel" id="preservationLevel" value="{$preservationLevel}" size="2" maxlength="1" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="30%" class="label" align="right">{fieldLabel name="exportSuppFiles"  key="plugins.gateways.metsGateway.settings.exportSuppFiles"}</td>
-		<td width="70%" class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" {if $exportSuppFiles eq "on"}checked="checked" {/if}/></td>
+	<tr>
+		<td class="label" align="right">{fieldLabel name="exportSuppFiles"  key="plugins.gateways.metsGateway.settings.exportSuppFiles"}</td>
+		<td class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" {if $exportSuppFiles eq "on"}checked="checked" {/if}/></td>
 	</tr>
 </table>
 

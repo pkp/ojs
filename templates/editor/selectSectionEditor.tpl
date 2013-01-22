@@ -13,7 +13,7 @@
 {/strip}
 
 <h3>{translate key="editor.article.selectEditor" roleName=$roleName|translate}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -34,7 +34,7 @@
 <p>{foreach from=$alphaList item=letter}<a href="{url op="assignEditor" path=$rolePath articleId=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="assignEditor" articleId=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <div id="editors">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr valign="bottom">
 	<td class="heading" width="30%">{translate key="user.name"}</td>
@@ -46,7 +46,7 @@
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=editors item=editor}
 {assign var=editorId value=$editor->getId()}
-<tr valign="top">
+<tr>
 	<td><a class="action" href="{url op="userProfile" path=$editorId}">{$editor->getFullName()|escape}</a></td>
 	<td>
 		{assign var=thisEditorSections value=$editorSections[$editorId]}

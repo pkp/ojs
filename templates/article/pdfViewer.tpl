@@ -14,7 +14,7 @@
 
 {url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal) escape=false}
 {translate|assign:"noPluginText" key='article.pdf.pluginMissing'}
-<script type="text/javascript"><!--{literal}
+<script><!--{literal}
 	$(document).ready(function(){
 		if ($.browser.webkit) { // PDFObject does not correctly work with safari's built-in PDF viewer
 			var embedCode = "<object id='pdfObject' type='application/pdf' data='{/literal}{$pdfUrl|escape:'javascript'}{literal}' width='99%' height='99%'><div id='pluginMissing'>{/literal}{$noPluginText|escape:'javascript'}{literal}</div></object>";

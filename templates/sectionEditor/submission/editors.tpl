@@ -9,7 +9,7 @@
  *}
 <div id="editors">
 <h3>{translate key="user.role.editors"}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editorForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -17,21 +17,21 @@
 </script>
 <form class="pkp_form" id="editorForm" action="{url page="editor" op="setEditorFlags"}" method="post">
 <input type="hidden" name="articleId" value="{$submission->getId()}"/>
-<table width="100%" class="listing">
+<table class="listing">
 	<tr class="heading" valign="bottom">
 		<td width="{if $isEditor}20%{else}25%{/if}">&nbsp;</td>
-		<td width="30%">&nbsp;</td>
-		<td width="10%">{translate key="submission.review"}</td>
-		<td width="10%">{translate key="submission.editing"}</td>
+		<td>&nbsp;</td>
+		<td>{translate key="submission.review"}</td>
+		<td>{translate key="submission.editing"}</td>
 		<td width="{if $isEditor}20%{else}25%{/if}">{translate key="submission.request"}</td>
-		{if $isEditor}<td width="10%">{translate key="common.action"}</td>{/if}
+		{if $isEditor}<td>{translate key="common.action"}</td>{/if}
 	</tr>
 	{assign var=editAssignments value=$submission->getEditAssignments()}
 	{foreach from=$editAssignments item=editAssignment name=editAssignments}
 	{if $editAssignment->getEditorId() == $userId}
 		{assign var=selfAssigned value=1}
 	{/if}
-		<tr valign="top">
+		<tr>
 			<td>{if $editAssignment->getIsEditor()}{translate key="user.role.editor"}{else}{translate key="user.role.sectionEditor"}{/if}</td>
 			<td>
 				{assign var=emailString value=$editAssignment->getEditorFullName()|concat:" <":$editAssignment->getEditorEmail():">"}

@@ -18,7 +18,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#referralSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,10 +27,10 @@
 <form class="pkp_form" id="referralSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="exclusions" key="plugins.generic.referral.excusions"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="exclusions" key="plugins.generic.referral.excusions"}</td>
+		<td class="value">
 			<textarea id="exclusions" name="exclusions" cols="40" rows="5">{$exclusions|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="plugins.generic.referral.exclusions.description"}</span>

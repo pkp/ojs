@@ -13,8 +13,8 @@
 {foreach from=$section.articles item=article}
 	{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
 	
-<table class="tocArticle" width="100%">
-<tr valign="top">
+<table class="tocArticle">
+<tr>
 	{if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
 	<td rowspan="2">
 		<div class="tocArticleCoverImage">

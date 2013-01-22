@@ -7,7 +7,7 @@
  * Show listing of unassigned submissions.
  *}
 <div id="submissions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
@@ -15,15 +15,15 @@
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
 		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_search key="submissions.submit" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="30%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="50%">{sort_search key="article.title" sort="title"}</td>
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	
 	{iterate from=submissions item=submission}
-	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
+	<tr {if $submission->getFastTracked()} class="fastTracked"{/if}>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

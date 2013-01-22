@@ -19,7 +19,7 @@
 <p>{translate key=$howToKeyName supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -49,10 +49,10 @@
 
 <input type="hidden" name="submissionChecklist" value="1" />
 
-<table class="data" width="100%">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-		<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
+		<td class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 	</tr>
 </table>
 
@@ -74,10 +74,10 @@
 	<h3>{translate key="author.submit.submissionLocale"}</h3>
 	<p>{translate key="author.submit.submissionLocaleDescription"}</p>
 
-	<table class="data" width="100%">
-		<tr valign="top">
-			<td width="20%" class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
-			<td width="80%" class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
+	<table class="data">
+		<tr>
+			<td class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
+			<td class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
 		</tr>
 	</table>
 
@@ -86,7 +86,7 @@
 	</div>{* submissionLocale *}
 {/if}{* count($supportedSubmissionLocaleNames) == 1 *}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function checkSubmissionChecklist() {
@@ -121,11 +121,11 @@ function checkSubmissionChecklist() {
 			<div id="checklist">
 			<h3>{translate key="author.submit.submissionChecklist"}</h3>
 			<p>{translate key="author.submit.submissionChecklistDescription"}</p>
-			<table width="100%" class="data">
+			<table class="data">
 		{/if}
-		<tr valign="top">
+		<tr>
 			<td width="5%"><input type="checkbox" id="checklist-{$smarty.foreach.checklist.iteration}" name="checklist[]" value="{$checklistId|escape}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-			<td width="95%"><label for="checklist-{$smarty.foreach.checklist.iteration}">{$checklistItem.content|nl2br}</label></td>
+			<td><label for="checklist-{$smarty.foreach.checklist.iteration}">{$checklistItem.content|nl2br}</label></td>
 		</tr>
 	{/if}
 {/foreach}
@@ -144,10 +144,10 @@ function checkSubmissionChecklist() {
 <p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
 
 {if $journalSettings.copyrightNoticeAgree}
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td width="5%"><input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $articleId || $copyrightNoticeAgree} checked="checked"{/if} /></td>
-		<td width="95%"><label for="copyrightNoticeAgree">{translate key="author.submit.copyrightNoticeAgree"}</label></td>
+		<td><label for="copyrightNoticeAgree">{translate key="author.submit.copyrightNoticeAgree"}</label></td>
 	</tr>
 </table>
 {/if}{* $journalSettings.copyrightNoticeAgree *}
@@ -168,10 +168,10 @@ function checkSubmissionChecklist() {
 <div id="commentsForEditor">
 <h3>{translate key="author.submit.commentsForEditor"}</h3>
 
-<table width="100%" class="data">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
-	<td width="80%" class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea richContent">{$commentsToEditor|escape}</textarea></td>
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
+	<td class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea richContent">{$commentsToEditor|escape}</textarea></td>
 </tr>
 </table>
 </div>{* commentsForEditor *}

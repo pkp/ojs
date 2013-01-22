@@ -16,7 +16,7 @@
 {translate key="plugins.generic.sword.authorDepositDescription" submissionTitle=$article->getLocalizedTitle()}
 
 <div id="depositPoints">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#authorDepositForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -26,18 +26,18 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading">
 		<td width="5%">&nbsp;</td>
 		<td{if !$hasFlexible} colspan="2"{/if}>{translate key="plugins.generic.sword.depositPoints.name"}</td>
 		{if $hasFlexible}
-			<td width="30%">{translate key="plugins.importexport.sword.depositPoint"}</td>
+			<td>{translate key="plugins.importexport.sword.depositPoint"}</td>
 		{/if}{* $hasFlexible *}
 	</tr>
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 {foreach from=$depositPoints item=depositPoint key=depositPointKey name="depositPoints"}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="depositPoint[{$depositPointKey|escape}][enabled]" id="depositPoint-{$depositPointKey|escape}-enabled"></td>
 		{if $depositPoint.type == $smarty.const.SWORD_DEPOSIT_TYPE_OPTIONAL_SELECTION}
 			<td>{fieldLabel name="depositPoint-$depositPointKey-enabled" label=$depositPoint.name}</td>
@@ -59,7 +59,7 @@
 
 {if $allowAuthorSpecify}
 {translate key="plugins.generic.sword.authorCustomDepositDescription" submissionTitle=$article->getLocalizedTitle()}
-<table class="data" width="100%">
+<table class="data">
 	<tr>
 		<td class="label"><label for="authorDepositUrl">{translate key="plugins.importexport.sword.depositUrl"}</label></td>
 		<td class="value"><input type="text" name="authorDepositUrl" id="authorDepositUrl" class="textField" size="40" maxlength="120" value="{$authorDepositUrl|escape}" /></td>

@@ -29,20 +29,20 @@
 	{/if}
 </h4>
 
-<table class="listing" width="100%">
+<table class="listing">
 	{if $user->getLocalizedAffiliation()}
-		<tr valign="top">
-			<td class="label" width="20%">
+		<tr>
+			<td class="label">
 				{translate key="user.affiliation"}
 			</td>
-			<td class="data" width="80%">
+			<td class="data">
 				{$user->getLocalizedAffiliation()|escape|nl2br}
 			</td>
 		</tr>
 	{/if}{* $user->getLocalizedAffiliation() *}
 
 	{if $user->getLocalizedBiography()}
-		<tr valign="top">
+		<tr>
 			<td class="label">
 				{translate key="user.biography"}
 			</td>

@@ -10,26 +10,26 @@
 <div id="copyedit">
 <h3>{translate key="submission.copyedit"}</h3>
 
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td class="label" width="20%">{translate key="user.role.copyeditor"}</td>
-		<td class="value" width="80%">{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}{$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+		<td class="label">{translate key="user.role.copyeditor"}</td>
+		<td class="value">{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}{$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="40%" colspan="2">
+		<td colspan="2">
 			<a class="action" href="{url op="viewMetadata" path=$submission->getId()}">{translate key="submission.reviewMetadata"}</a>
 			{if $metaCitations}<a class="action" href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a>{/if}
 		</td>
-		<td width="20%" class="heading">{translate key="submission.request"}</td>
-		<td width="20%" class="heading">{translate key="submission.underway"}</td>
-		<td width="20%" class="heading">{translate key="submission.complete"}</td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
 	</tr>
 	<tr>
 		<td width="5%">1.</td>
-		<td width="35%">{translate key="submission.copyedit.initialCopyedit"}</td>
+		<td>{translate key="submission.copyedit.initialCopyedit"}</td>
 		{assign var="initialCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
 		<td>{$initialCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>{$initialCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
@@ -54,7 +54,7 @@
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#uploadCopyeditVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -97,9 +97,9 @@
 		<td>3.</td>
 		{assign var="finalCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
 		<td>{translate key="submission.copyedit.finalCopyedit"}</td>
-		<td width="20%">{$finalCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td width="20%">{$finalCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
-		<td width="20%">
+		<td>{$finalCopyeditSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>{$finalCopyeditSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+		<td>
 			{if not $finalCopyeditSignoff->getDateNotified() or $finalCopyeditSignoff->getDateCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}

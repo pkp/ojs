@@ -28,7 +28,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#thesesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -58,22 +58,22 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="10%">{translate key="plugins.generic.thesis.manager.status"}</td>
-		<td width="15%">{translate key="plugins.generic.thesis.manager.dateApproved"}</td>
-		<td width="20%">{translate key="plugins.generic.thesis.manager.studentName"}</td>
-		<td width="40%">{translate key="plugins.generic.thesis.manager.title"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.thesis.manager.status"}</td>
+		<td>{translate key="plugins.generic.thesis.manager.dateApproved"}</td>
+		<td>{translate key="plugins.generic.thesis.manager.studentName"}</td>
+		<td>{translate key="plugins.generic.thesis.manager.title"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=theses item=thesis}
-	<tr valign="top">
+	<tr>
 		<td>{translate key=$thesis->getStatusString()}</td>
 		<td>{$thesis->getDateApproved()|date_format:$dateFormatShort}</td>
 		<td>{$thesis->getStudentFullName()|escape}</td>

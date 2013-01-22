@@ -13,7 +13,7 @@
 {/strip}
 
 <p>{translate key="notification.settingsDescription"}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#notificationSettings').pkpHandler('$.pkp.controllers.form.FormHandler');

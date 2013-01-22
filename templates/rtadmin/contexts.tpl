@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="rt.contexts"}
 {include file="common/header.tpl"}
 {/strip}
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", 
 {/literal}
@@ -29,16 +29,16 @@ $(document).ready(function() { setupTableDND("#dragTable",
 <br />
 
 <div id="contexts">
-<table class="listing" width="100%" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
-	<tr valign="top">
+	<tr>
 		<td class="heading" width="40%">{translate key="rt.context.title"}</td>
 		<td class="heading" width="20%">{translate key="rt.context.abbrev"}</td>
 		<td class="heading" width="40%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=contexts item=context}
-		<tr valign="top" class="data" id=context-{$context->getContextId()}>
+		<tr class="data" id=context-{$context->getContextId()}>
 			<td class="drag">{$context->getTitle()|escape}</td>
 			<td class="drag">{$context->getAbbrev()|escape}</td>
 			<td align="right"><a href="{url op="moveContext" path=$version->getVersionId()|to_array id=$context->getContextId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveContext" path=$version->getVersionId()|to_array id=$context->getContextId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editContext" path=$version->getVersionId()|to_array:$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a>&nbsp;|&nbsp;<a href="{url op="searches" path=$version->getVersionId()|to_array:$context->getContextId()}" class="action">{translate key="rt.searches"}</a>&nbsp;|&nbsp;<a href="{url op="deleteContext" path=$version->getVersionId()|to_array:$context->getContextId()}" onclick="return confirm('{translate|escape:"jsparam" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
@@ -48,7 +48,7 @@ $(document).ready(function() { setupTableDND("#dragTable",
 		{/if}
 	{/iterate}
 	{if $contexts->wasEmpty()}
-		<tr valign="top">
+		<tr>
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>

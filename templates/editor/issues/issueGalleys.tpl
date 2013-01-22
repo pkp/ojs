@@ -33,7 +33,7 @@
 	<li class="current"><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#issueGalleys').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -44,11 +44,11 @@
 <div id="issueId">
 <h3>{translate key="editor.issues.galleys"}</h3>
 <p>{translate key="editor.issues.issueGalleysDescription"}</p>
-<table width="100%" class="data">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{url|assign:"issueUrl" op="issueGalleys" path=$issueId escape=false}
 			{form_language_chooser form="issue" url=$issueUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
@@ -56,7 +56,7 @@
 	</tr>
 {/if}
 </table>
-<table width="100%" class="info">
+<table class="info">
 	<tr>
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
@@ -70,7 +70,7 @@
 	{foreach name=galleys from=$issueGalleys item=galley}
 	<tr>
 		<td width="2%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="26%">{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofIssueGalley" path=$issue->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
+		<td>{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofIssueGalley" path=$issue->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
 		<td><a href="{url op="downloadIssueFile" path=$issue->getId()|to_array:$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a>&nbsp;&nbsp;{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{url op="orderIssueGalley" d=u issueId=$issue->getId() galleyId=$galley->getId()}" class="plain">&uarr;</a> <a href="{url op="orderIssueGalley" d=d issueId=$issue->getId() galleyId=$galley->getId()}" class="plain">&darr;</a></td>
 		<td>

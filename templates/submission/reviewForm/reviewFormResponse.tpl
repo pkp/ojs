@@ -26,7 +26,7 @@
 <h3>{$reviewForm->getLocalizedTitle()}</h3>
 <p>{$reviewForm->getLocalizedDescription()}</p>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#saveReviewFormResponse').pkpHandler('$.pkp.controllers.form.FormHandler');

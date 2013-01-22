@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="rt.searches"}
 {include file="common/header.tpl"}
 {/strip}
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", 
 {/literal}
@@ -30,16 +30,16 @@ $(document).ready(function() { setupTableDND("#dragTable",
 
 <div id="searches">
 
-<table class="listing" width="100%" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
-	<tr valign="top">
+	<tr>
 		<td class="heading" width="50%">{translate key="rt.search.title"}</td>
 		<td class="heading" width="30%">{translate key="rt.search.url"}</td>
 		<td class="heading" width="20%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=searches item=search}
-		<tr valign="top" class="data" id=search-{$search->getSearchId()}>
+		<tr class="data" id=search-{$search->getSearchId()}>
 			<td class="drag">{$search->getTitle()|escape}</td>
 			<td class="drag">{$search->getUrl()|truncate:30|escape}</td>
 			<td align="right"><a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId() id=$search->getSearchId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSearch" path=$version->getVersionId()|to_array:$context->getContextId() id=$search->getSearchId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSearch" path=$version->getVersionId()|to_array:$context->getContextId():$search->getSearchId()}" onclick="return confirm('{translate|escape:"jsparam" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
@@ -49,7 +49,7 @@ $(document).ready(function() { setupTableDND("#dragTable",
 		{/if}
 	{/iterate}
 	{if $searches->wasEmpty()}
-		<tr valign="top">
+		<tr>
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>

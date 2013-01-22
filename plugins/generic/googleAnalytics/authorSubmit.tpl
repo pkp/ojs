@@ -8,7 +8,7 @@
  *
  *}
 <!-- Google Analytics -->
-<tr valign="top">
+<tr>
 	<td class="label">
 		{fieldLabel name="authors-$authorIndex-gs" key="plugins.generic.googleAnalytics.authorAccount"}
 	</td>

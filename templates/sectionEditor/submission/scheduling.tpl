@@ -10,20 +10,20 @@
 <div id="scheduling">
 <h3>{translate key="submission.scheduling"}</h3>
 
-<table class="data" width="100%">
+<table class="data">
 {if !$publicationFeeEnabled || $publicationPayment}
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#schedulingForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 		{rdelim});
 	</script>
 	<form class="pkp_form" id="schedulingForm" action="{url op="scheduleForPublication" path=$submission->getId()}" method="post">
-		<tr valign="top">
-			<td width="25%" class="label">
+		<tr>
+			<td class="label">
 				<label for="issueId">{translate key="editor.article.scheduleForPublication"}</label>
 			</td>
-			<td width="25%" class="value">
+			<td class="value">
 				{if $publishedArticle}
 					{assign var=issueId value=$publishedArticle->getIssueId()}
 				{else}
@@ -34,7 +34,7 @@
 					{html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
 				</select>
 			</td>
-			<td width="50%" class="value">
+			<td class="value">
 				<input type="submit" value="{translate key="common.record"}" class="button defaultButton" />&nbsp;
 				{if $issueId}
 					{if $isEditor}
@@ -47,15 +47,15 @@
 		</tr>
 	</form>
 	{if $publishedArticle}
-		<script type="text/javascript">
+		<script>
 			$(function() {ldelim}
 				// Attach the form handler.
 				$('#setDatePublishedForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 			{rdelim});
 		</script>
 		<form class="pkp_form" id="setDatePublishedForm" action="{url op="setDatePublished" path=$submission->getId()}" method="post">
-			<tr valign="top">
-				<td width="20%" class="label">
+			<tr>
+				<td class="label">
 					<label for="issueId">{translate key="editor.issues.published"}</label>
 				</td>
 				<td class="value">
@@ -82,7 +82,7 @@
 	<tr>
 		<td>{translate key="editor.article.payment.publicationFeeNotPaid"}</td>
 		<td align="right">
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#markAsPaidForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -96,7 +96,7 @@
 		</td>
 		{if $isEditor}
 			<td align="left">
-				<script type="text/javascript">
+				<script>
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#waiveFeeForm').pkpHandler('$.pkp.controllers.form.FormHandler');

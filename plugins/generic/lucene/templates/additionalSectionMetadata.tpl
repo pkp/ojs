@@ -6,7 +6,7 @@
  *
  * A template to be included via Templates::Manager::Sections::SectionForm::AdditionalMetadata hook.
  *}
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="rankingBoost" key="plugins.generic.lucene.sectionForm.rankingBoost"}</td>
 	<td class="value">
 		<span class="instruct">{translate key="plugins.generic.lucene.sectionForm.rankingBoostInstructions"}</span><br />

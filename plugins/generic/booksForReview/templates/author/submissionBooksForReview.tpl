@@ -12,10 +12,10 @@
 <h3>{translate key="plugins.generic.booksForReview.author.booksForReview"}</h3>
 <p>{translate key="plugins.generic.booksForReview.author.submitInstructions"}:</p>
 
-<table width="100%" class="listing">
+<table class="listing">
 {iterate from=booksForReview item=bookForReview}
 	{assign var=bookId value=$bookForReview->getId()}
-	<tr valign="top">
+	<tr>
 		<td><input type="radio" name="bookForReviewId" id="bookForReviewId-{$bookId|escape}" value="{$bookId|escape}" /> <label for="bookForReviewId-{$bookId|escape}">{$bookForReview->getLocalizedTitle()|escape|truncate:100:"..."}</label></td>
 	</tr>
 {/iterate}

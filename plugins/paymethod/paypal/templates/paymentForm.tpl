@@ -13,7 +13,7 @@
 
 <p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 <p>{translate key="plugins.paymethod.paypal.warning"}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#paypalPaymentForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -22,23 +22,23 @@
 <form class="pkp_form" action="{$paypalFormUrl}" id="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
 	{include file="common/formErrors.tpl"}
 	{if $params.item_name}
-	<table class="data" width="100%">
+	<table class="data">
 		<tr>
-			<td class="label" width="20%">{translate key="plugins.paymethod.paypal.purchase.title"}</td>
-			<td class="value" width="80%"><strong>{$params.item_name|escape}</strong></td>
+			<td class="label">{translate key="plugins.paymethod.paypal.purchase.title"}</td>
+			<td class="value"><strong>{$params.item_name|escape}</strong></td>
 		</tr>
 	</table>
 	{/if}
 	{if $params.amount}
-	<table class="data" width="100%">
+	<table class="data">
 		<tr>
-			<td class="label" width="20%">{translate key="plugins.paymethod.paypal.purchase.fee"}</td>
-			<td class="value" width="80%"><strong>{$params.amount|string_format:"%.2f"}{if $params.currency_code} ({$params.currency_code|escape}){/if}</strong></td>
+			<td class="label">{translate key="plugins.paymethod.paypal.purchase.fee"}</td>
+			<td class="value"><strong>{$params.amount|string_format:"%.2f"}{if $params.currency_code} ({$params.currency_code|escape}){/if}</strong></td>
 		</tr>
 	</table>
 	{/if}
 	{if $params.item_description}
-	<table class="data" width="100%">
+	<table class="data">
 		<tr>
 			<td class="label" colspan="2">{$params.item_description|escape|nl2br}</td>
 		</tr>

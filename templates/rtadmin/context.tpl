@@ -20,46 +20,46 @@
 {/if}
 
 <br />
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#contextForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="contextForm" action="{if $contextId}{url op="saveContext" path=$versionId|to_array:$contextId}{else}{url op="createContext" path=$versionId|to_array:"save"}{/if}" method="post">
-<table class="data" width="100%">
-	<tr valign="top">
-		<td class="label" width="20%"><label for="title">{translate key="rt.context.title"}</label></td>
-		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><label for="title">{translate key="rt.context.title"}</label></td>
+		<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="abbrev">{translate key="rt.context.abbrev"}</label></td>
 		<td class="value"><input type="text" class="textField" name="abbrev" id="abbrev" value="{$abbrev|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="description">{translate key="rt.context.description"}</label></td>
 		<td class="value">
 			<textarea class="textArea richContent" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="rt.admin.contexts.options"}</label></td>
 		<td class="value">
-			<table width="100%" class="data">
-				<tr valign="top">
+			<table class="data">
+				<tr>
 					<td width="3%"><input type="checkbox" name="authorTerms" id="authorTerms" {if $authorTerms}checked="checked"{/if} /></td>
 					<td><label for="authorTerms">{translate key="rt.admin.contexts.options.authorTerms"}</label></td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<td width="3%"><input type="checkbox" name="geoTerms" id="geoTerms" {if $geoTerms}checked="checked"{/if} /></td>
 					<td><label for="geoTerms">{translate key="rt.admin.contexts.options.geoTerms"}</label></td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<td><input type="checkbox" name="defineTerms" id="defineTerms" {if $defineTerms}checked="checked"{/if} /></td>
 					{url|assign:"url" page="rtadmin" op="settings"}
 					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" settingsUrl=$url}</label></td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<td><input type="checkbox" name="citedBy" id="citedBy" {if $citedBy}checked="checked"{/if} /></td>
 					{url|assign:"url" page="rtadmin" op="settings"}
 					<td><label for="citedBy">{translate key="rt.admin.contexts.options.citedBy" settingsUrl=$url}</label></td>

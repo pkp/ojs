@@ -19,7 +19,7 @@
 
 <br/>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#errorsForm').pkpHandler('$.pkp.controllers.form.FormHandler');

@@ -21,7 +21,7 @@
 		</select>
 		&nbsp;
 
-		<script type="text/javascript">
+		<script>
 			// Get references to the required elements.
 			var $orderBySelect = $('#content #luceneSearchOrder');
 			var $orderDirSelect = $('#content #luceneSearchDirection');

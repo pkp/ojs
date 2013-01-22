@@ -33,18 +33,18 @@
 <p>{foreach from=$alphaList item=letter}<a href="{if $subscriptionId}{url op="selectSubscriber" path=$redirect searchInitial=$letter subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect searchInitial=$letter}{/if}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{if $subscriptionId}{url op="selectSubscriber" path=$redirect subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path=$redirect}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 	<div id="users">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="25%">{translate key="user.username"}</td>
-	<td width="35%">{translate key="user.name"}</td>
-	<td width="30%">{translate key="user.email"}</td>
-	<td width="10%" align="right"></td>
+	<td>{translate key="user.username"}</td>
+	<td>{translate key="user.name"}</td>
+	<td>{translate key="user.email"}</td>
+	<td align="right"></td>
 </tr>
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
-<tr valign="top">
+<tr>
 	<td>{if $isJournalManager}<a class="action" href="{url page="manager" op="userProfile" path=$userid}">{/if}{$user->getUsername()|escape}{if $isJournalManager}</a>{/if}</td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">

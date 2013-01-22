@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="plugins.generic.customBlock.editContent"}
 {include file="common/header.tpl"}
 <br />
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editCustomBlockForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -18,9 +18,9 @@
 </script>
 <form class="pkp_form" method="post" id="editCustomBlockForm" action="{plugin_url path="save"}" >
 {include file="common/formErrors.tpl"}
-<table class="data" width="100%">
+<table class="data">
 	<tr>
-		<td width="20%" class="label" valign="top">{fieldLabel required="true" name="blockContent" key="plugins.generic.customBlock.content"}</td>
+		<td class="label" valign="top">{fieldLabel required="true" name="blockContent" key="plugins.generic.customBlock.content"}</td>
 		<td>
 		<textarea name="blockContent" cols="30" rows="30">{$blockContent|escape}</textarea>
 		</td>

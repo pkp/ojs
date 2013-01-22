@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -55,7 +55,7 @@ function changeDepositPoint() {
 </script>
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#articles').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -64,10 +64,10 @@ function changeDepositPoint() {
 <form class="pkp_form" action="{plugin_url path="deposit"}" method="post" id="articles">
 
 <div id="settings">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="30%" class="label"><label for="depositPoint">{translate key="plugins.importexport.sword.depositPoint"}</label></td>
-		<td width="70%" class="value">
+<table class="data">
+	<tr>
+		<td class="label"><label for="depositPoint">{translate key="plugins.importexport.sword.depositPoint"}</label></td>
+		<td class="value">
 			<input type="hidden" name="swordUrl" value="" />
 			<select class="selectMenu" name="depositPoint" id="depositPoint" onchange="changeDepositPoint()">
 				{foreach from=$depositPoints key=key item=depositPoint}
@@ -76,22 +76,22 @@ function changeDepositPoint() {
 			</select>&nbsp;<a class="action" href="{url op="plugin" path="generic"|to_array:"SwordPlugin":"settings"}">{translate key="plugins.importexport.sword.depositPoint.addRemove}</a>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="swordUsername">{translate key="user.username"}</label></td>
 		<td class="value"><input type="text" id="swordUsername" name="swordUsername" value="{$swordUsername|escape}" size="20" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="swordPassword">{translate key="user.password"}</label></td>
 		<td class="value"><input type="password" id="swordPassword" name="swordPassword" value="" size="20" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="swordDepositPoint">{translate key="plugins.importexport.sword.depositPoint"}</label></td>
 		<td class="value">
 			{html_options name="swordDepositPoint" options=$swordDepositPoints selected=$swordDepositPoint}
 			<input type="button" onclick="document.getElementById('articles').action='{plugin_url}'; document.getElementById('articles').submit()" value="{translate key="common.refresh"}" />
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td rowspan="2" class="label">
 			{translate key="common.options"}
 		</td>
@@ -100,7 +100,7 @@ function changeDepositPoint() {
 			<label for="depositGalleys">{translate key="plugins.importexport.sword.depositGalleys"}</label>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="value">
 			<input type="checkbox" id="depositEditorial" name="depositEditorial" {if $depositEditorial}checked="checked" {/if}/>
 			<label for="depositEditorial">{translate key="plugins.importexport.sword.depositEditorial"}</label>
@@ -110,15 +110,15 @@ function changeDepositPoint() {
 </div>
 
 <div id="articles">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="30%">{translate key="issue.issue"}</td>
-		<td width="40%">{translate key="article.title"}</td>
-		<td width="25%">{translate key="article.authors"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="article.title"}</td>
+		<td>{translate key="article.authors"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -127,7 +127,7 @@ function changeDepositPoint() {
 	{iterate from=articles item=articleData}
 	{assign var=article value=$articleData.article}
 	{assign var=issue value=$articleData.issue}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="articleId[]" value="{$article->getId()}"/></td>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
@@ -155,7 +155,7 @@ function changeDepositPoint() {
 </form>
 </div>
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 // Initialize form state with current deposit point

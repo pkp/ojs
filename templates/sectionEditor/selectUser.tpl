@@ -12,7 +12,7 @@
 {/strip}
 
 <h3>{translate key=$pageSubTitle}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,20 +33,20 @@
 <p>{foreach from=$alphaList item=letter}<a href="{url op=$actionHandler path=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op=$actionHandler path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <div id="users">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="30%">{translate key="user.name"}</td>
-	<td width="20%">{translate key="submissions.completed}</td>
-	<td width="20%">{translate key="submissions.active"}</td>
-	<td width="20%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="10%">{translate key="common.action"}</td>
+	<td>{translate key="user.name"}</td>
+	<td>{translate key="submissions.completed}</td>
+	<td>{translate key="submissions.active"}</td>
+	<td>{translate key="editor.submissions.lastAssigned"}</td>
+	<td>{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
 {assign var="stats" value=$statistics[$userid]}
-<tr valign="top">
+<tr>
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
 	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td>{if $stats.incomplete}{$stats.incomplete}{else}0{/if}</td>

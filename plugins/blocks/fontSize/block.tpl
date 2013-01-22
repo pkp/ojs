@@ -7,7 +7,7 @@
  * Common site sidebar menu -- font size selector.
  *
  *}
-<script type="text/javascript">
+<script>
         $(function() {ldelim}
 		$('#body').jfontsize({ldelim}
 			btnMinusClasseId: '#jfontsize-minus',

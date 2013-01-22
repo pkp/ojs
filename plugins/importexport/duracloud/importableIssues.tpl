@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -29,22 +29,22 @@ function toggleChecked() {
 <br/>
 
 <div id="issues">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#issuesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" action="{plugin_url path="importIssues"}" method="post" id="issuesForm">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="60%">{translate key="issue.issue"}</td>
-		<td width="15%">{translate key="editor.issues.published"}</td>
-		<td width="15%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.published"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
@@ -52,7 +52,7 @@ function toggleChecked() {
 	</tr>
 
 {foreach name=issues from=$issues key=key item=issue}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="contentId[]" value="{$key|escape}"/></td>
 		<td>{$issue.identification|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue.date_published|date_format:"$dateFormatShort"|default:"&mdash;"}</td>

@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 {/literal}
@@ -34,14 +34,14 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 {/if}
 
 <div id="issues">
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="60%">{translate key="issue.issue"}</td>
-		<td width="15%">{translate key="editor.issues.published"}</td>
-		<td width="15%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.published"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 		<td width="5%">{translate key="common.order"}</td>
 		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
@@ -50,7 +50,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 	</tr>
 
 	{iterate from=issues item=issue}
-	<tr valign="top" class="data" id="issue-{$issue->getId()}">
+	<tr class="data" id="issue-{$issue->getId()}">
 		<td class="drag"><a href="{url op="issueToc" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td class="drag">{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 		<td class="drag">{$issue->getNumArticles()|escape}</td>
@@ -75,7 +75,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 	</tr>
 {/if}
 </table>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#setCurrentIssueForm').pkpHandler('$.pkp.controllers.form.FormHandler');

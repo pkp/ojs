@@ -9,7 +9,7 @@
  *}
 <div class="separator"></div>
 <div id="citation">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#refworksPluginForm').pkpHandler('$.pkp.controllers.form.FormHandler');

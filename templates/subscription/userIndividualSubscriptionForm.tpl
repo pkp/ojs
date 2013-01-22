@@ -15,7 +15,7 @@
 
 <br/>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#subscriptionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -29,22 +29,22 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="typeId" required="true" key="user.subscriptions.form.typeId"}</td>
-	<td width="80%" class="value"><select name="typeId" id="typeId" class="selectMenu">
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="typeId" required="true" key="user.subscriptions.form.typeId"}</td>
+	<td class="value"><select name="typeId" id="typeId" class="selectMenu">
 		{foreach from=$subscriptionTypes item=subscriptionType}
 			<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 		{/foreach}
 	</select></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="membership" key="user.subscriptions.form.membership"}</td>
 	<td class="value">
 		<input type="text" name="membership" value="{$membership|escape}" id="membership" size="30" maxlength="40" class="textField" />
 	</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="user.subscriptions.form.membershipInstructions"}</span></td>
 </tr>

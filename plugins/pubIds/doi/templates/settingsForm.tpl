@@ -8,11 +8,11 @@
  *
  *}
 
-<script type="text/javascript" src="{$doiSettingsHandlerJsUrl}"></script>
+<script src="{$doiSettingsHandlerJsUrl}"></script>
 
 <div id="description">{translate key="plugins.pubIds.doi.manager.settings.description"}</div>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#doiSettingsForm').pkpHandler('$.pkp.plugins.pubIds.doi.js.DOISettingsFormHandler');
@@ -48,7 +48,7 @@
 			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableSuppFileDoi" id="enableSuppFileDoi" checked=$checked maxlength="40" checked=$checked}
 		{/fbvFormSection}
 	{/fbvFormArea}
-		<table width="100%" class="data">
+		<table class="data">
 	{fbvFormArea id="enableDoiSettingsFormArea" class="border" title="plugins.pubIds.doi.manager.settings.doiSettings"}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiPrefixPattern"}</p>

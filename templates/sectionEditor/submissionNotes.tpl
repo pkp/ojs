@@ -15,7 +15,7 @@
 {/strip}
 
 {literal}
-<script type="text/javascript">
+<script>
 <!--
 	var toggleAll = 0;
 	var noteArray = new Array();
@@ -65,7 +65,7 @@
 <div id="submissionNotes">
 {if $noteViewType == "edit"}
 <h3>{translate key="submission.notes"}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editNoteForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -76,26 +76,26 @@
 	<input type="hidden" name="noteId" value="{$articleNote->getId()}" />
 	<input type="hidden" name="fileId" value="{$articleNote->getFileId()}" />
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.dateModified"}</td>
-		<td class="value" width="80%">{$articleNote->getDateModified()|date_format:$datetimeFormatShort}</td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="common.dateModified"}</td>
+		<td class="value">{$articleNote->getDateModified()|date_format:$datetimeFormatShort}</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.title"}</td>
-		<td class="value" width="80%"><input type="text" name="title" id="title" value="{$articleNote->getTitle()|escape}" size="50" maxlength="120" class="textField" /></td>
+	<tr>
+		<td class="label">{translate key="common.title"}</td>
+		<td class="value"><input type="text" name="title" id="title" value="{$articleNote->getTitle()|escape}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.note"}</td>
-		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea richContent">{$articleNote->getContents()|escape}</textarea></td>
+	<tr>
+		<td class="label">{translate key="common.note"}</td>
+		<td class="value"><textarea name="note" id="note" rows="10" cols="50" class="textArea richContent">{$articleNote->getContents()|escape}</textarea></td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.file"}</td>
-		<td class="value" width="80%"><input type="file" id="upload" name="upload" class="uploadField" /></td>
+	<tr>
+		<td class="label">{translate key="common.file"}</td>
+		<td class="value"><input type="file" id="upload" name="upload" class="uploadField" /></td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.uploadedFile"}</td>
-		<td class="value" width="80%">{if $articleNote->getFileId()}<a href="{url op="downloadFile" path=$articleId|to_array:$articleNote->getFileId()}">{$articleNote->getOriginalFileName()|escape}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
+	<tr>
+		<td class="label">{translate key="common.uploadedFile"}</td>
+		<td class="value">{if $articleNote->getFileId()}<a href="{url op="downloadFile" path=$articleId|to_array:$articleNote->getFileId()}">{$articleNote->getOriginalFileName()|escape}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
 	</tr>
 </table>
 <br />
@@ -104,7 +104,7 @@
 
 {elseif $noteViewType == "add"}
 	<h3>{translate key="submission.notes.addNewNote"}</h3>
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#addNoteForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -112,16 +112,16 @@
 	</script>
 	<form class="pkp_form" name="addNote" id="addNoteForm" method="post" action="{url op="addSubmissionNote"}" enctype="multipart/form-data">
 	<input type="hidden" name="articleId" value="{$articleId|escape}" />
-	<table width="100%" class="data">
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="common.title"}</td>
-		<td class="value" width="80%"><input type="text" id="title" name="title" size="50" maxlength="90" class="textField" /></td>
+	<table class="data">
+	<tr>
+		<td class="label">{translate key="common.title"}</td>
+		<td class="value"><input type="text" id="title" name="title" size="50" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.note"}</td>
 		<td class="value"><textarea name="note" id="note" rows="10" cols="50" class="textArea richContent"></textarea></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.file"}</td>
 		<td class="value"><input type="file" name="upload" class="uploadField" /></td>
 	</tr>
@@ -132,19 +132,19 @@
 {else}
 <h3>{translate key="submission.notes"}</h3>
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.date"}</td>
-		<td width="60%">{translate key="common.title"}</td>
-		<td width="25%">{translate key="submission.notes.attachedFile"}</td>
-		<td width="10%" align="right">{translate key="common.action"}</td>
+		<td>{translate key="common.title"}</td>
+		<td>{translate key="submission.notes.attachedFile"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissionNotes item=note}
-	<tr valign="top">
+	<tr>
 		<td>
-			<script type="text/javascript">
+			<script>
 			<!--
 				noteArray.push({$note->getId()});
 			// -->
@@ -155,15 +155,15 @@
 		<td>{if $note->getFileId()}<a class="action" href="{url op="downloadFile" path=$submission->getId()|to_array:$note->getFileId()}">{$note->getOriginalFileName()|escape}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{url op="submissionNotes" path=$submission->getId()|to_array:"edit":$note->getId()}" class="action">{translate key="common.view"}</a>&nbsp;|&nbsp;<a href="{url op="removeSubmissionNote" articleId=$submission->getId() noteId=$note->getId() fileId=$note->getFileId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td colspan="6" class="{if $submissionNotes->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $submissionNotes->wasEmpty()}
-	<tr valign="top">
+	<tr>
 		<td colspan="6" class="nodata">{translate key="submission.notes.noSubmissionNotes"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
 {else}

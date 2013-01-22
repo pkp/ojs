@@ -8,7 +8,7 @@
  *
  *}
 <!-- phpMyVisites -->
-<script type="text/javascript">
+<script>
 <!--
 var a_vars = Array();
 var pagename='';
@@ -17,6 +17,6 @@ var phpmyvisitesSite = "{$phpmvSiteId|escape}";
 var phpmyvisitesURL = "{$phpmvUrl}/phpmyvisites.php";
 //-->
 </script>
-<script language="javascript" src="{$phpmvUrl}/phpmyvisites.js" type="text/javascript"></script>
+<script src="{$phpmvUrl}/phpmyvisites.js"></script>
 <!-- /phpMyVisites -->
 

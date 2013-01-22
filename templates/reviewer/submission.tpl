@@ -17,7 +17,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function confirmSubmissionCheck() {
@@ -33,16 +33,16 @@ function confirmSubmissionCheck() {
 <div id="submissionToBeReviewed">
 <h3>{translate key="reviewer.article.submissionToBeReviewed"}</h3>
 
-<table width="100%" class="data">
-<tr valign="top">
-	<td width="20%" class="label">{translate key="article.title"}</td>
-	<td width="80%" class="value">{$submission->getLocalizedTitle()|strip_unsafe_html}</td>
+<table class="data">
+<tr>
+	<td class="label">{translate key="article.title"}</td>
+	<td class="value">{$submission->getLocalizedTitle()|strip_unsafe_html}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="article.journalSection"}</td>
 	<td class="value">{$submission->getSectionTitle()|escape}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="article.abstract"}</td>
 	<td class="value">{$submission->getLocalizedAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
@@ -50,7 +50,7 @@ function confirmSubmissionCheck() {
 {foreach from=$editAssignments item=editAssignment}
 	{if !$notFirstEditAssignment}
 		{assign var=notFirstEditAssignment value=1}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="reviewer.article.submissionEditor"}</td>
 			<td class="value">
 	{/if}
@@ -70,7 +70,7 @@ function confirmSubmissionCheck() {
 		</td>
 	</tr>
 {/if}
-	<tr valign="top">
+	<tr>
 	       <td class="label">{translate key="submission.metadata"}</td>
 	       <td class="value">
 		       <a href="{url op="viewMetadata" path=$reviewId|to_array:$articleId}" class="action" target="_new">{translate key="submission.viewMetadata"}</a>
@@ -81,20 +81,20 @@ function confirmSubmissionCheck() {
 <div class="separator"></div>
 <div id="reviewSchedule">
 <h3>{translate key="reviewer.article.reviewSchedule"}</h3>
-<table width="100%" class="data">
-<tr valign="top">
-	<td class="label" width="20%">{translate key="reviewer.article.schedule.request"}</td>
-	<td class="value" width="80%">{if $submission->getDateNotified()}{$submission->getDateNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
+<table class="data">
+<tr>
+	<td class="label">{translate key="reviewer.article.schedule.request"}</td>
+	<td class="value">{if $submission->getDateNotified()}{$submission->getDateNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="reviewer.article.schedule.response"}</td>
 	<td class="value">{if $submission->getDateConfirmed()}{$submission->getDateConfirmed()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="reviewer.article.schedule.submitted"}</td>
 	<td class="value">{if $submission->getDateCompleted()}{$submission->getDateCompleted()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="reviewer.article.schedule.due"}</td>
 	<td class="value">{if $submission->getDateDue()}{$submission->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 </tr>
@@ -109,15 +109,15 @@ function confirmSubmissionCheck() {
 
 {assign var="currentStep" value=1}
 
-<table width="100%" class="data">
-<tr valign="top">
+<table class="data">
+<tr>
 	{assign var=editAssignments value=$submission->getEditAssignments}
 	{* FIXME: Should be able to assign primary editorial contact *}
 	{if $editAssignments[0]}{assign var=firstEditAssignment value=$editAssignments[0]}{/if}
 	<td width="3%">{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.notifyEditorA"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()|escape},{/if} {translate key="reviewer.article.notifyEditorB"}</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.notifyEditorA"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()|escape},{/if} {translate key="reviewer.article.notifyEditorB"}</span></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td>
 		{translate key="submission.response"}&nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,7 +145,7 @@ function confirmSubmissionCheck() {
 	<td colspan="2">&nbsp;</td>
 </tr>
 {if $journal->getLocalizedSetting('reviewGuidelines') != ''}
-<tr valign="top">
+<tr>
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.consultGuidelines"}</span></td>
 </tr>
@@ -153,17 +153,17 @@ function confirmSubmissionCheck() {
 	<td colspan="2">&nbsp;</td>
 </tr>
 {/if}
-<tr valign="top">
+<tr>
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.downloadSubmission"}</span></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td>
-		<table width="100%" class="data">
+		<table class="data">
 			{if ($confirmedStatus and not $declined) or not $journal->getSetting('restrictReviewerFileAccess')}
-			<tr valign="top">
-				<td width="30%" class="label">
+			<tr>
+				<td class="label">
 					{translate key="submission.submissionManuscript"}
 				</td>
 				<td class="value" width="70%">
@@ -177,7 +177,7 @@ function confirmSubmissionCheck() {
 					{/if}
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">
 					{translate key="article.suppFiles"}
 				</td>
@@ -205,7 +205,7 @@ function confirmSubmissionCheck() {
 	<td colspan="2">&nbsp;</td>
 </tr>
 {if $currentJournal->getSetting('requireReviewerCompetingInterests')}
-	<tr valign="top">
+	<tr>
 		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 		<td>
 			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
@@ -213,7 +213,7 @@ function confirmSubmissionCheck() {
 			{if not $confirmedStatus or $declined or $submission->getCancelled() or $submission->getRecommendation()}<br/>
 				{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br}
 			{else}
-				<script type="text/javascript">
+				<script>
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#saveCompetingInterestsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -231,11 +231,11 @@ function confirmSubmissionCheck() {
 {/if}{* $currentJournal->getSetting('requireReviewerCompetingInterests') *}
 
 {if $reviewAssignment->getReviewFormId()}
-	<tr valign="top">
+	<tr>
 		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 		<td><span class="instruct">{translate key="reviewer.article.enterReviewForm"}</span></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td>
 			{translate key="submission.reviewForm"}
@@ -250,11 +250,11 @@ function confirmSubmissionCheck() {
 		<td colspan="2">&nbsp;</td>
 	</tr>
 {else}{* $reviewAssignment->getReviewFormId() *}
-	<tr valign="top">
+	<tr>
 		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 		<td><span class="instruct">{translate key="reviewer.article.enterReviewA"}</span></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td>
 			{translate key="submission.logType.review"}
@@ -269,17 +269,17 @@ function confirmSubmissionCheck() {
 		<td colspan="2">&nbsp;</td>
 	</tr>
 {/if}{* $reviewAssignment->getReviewFormId() *}
-<tr valign="top">
+<tr>
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.uploadFile"}</span></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td>
-		<table class="data" width="100%">
+		<table class="data">
 			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
 				{assign var=uploadedFileExists value="1"}
-				<tr valign="top">
+				<tr>
 				<td class="label" width="30%">
 					{if $key eq "0"}
 						{translate key="reviewer.article.uploadedFile"}
@@ -294,7 +294,7 @@ function confirmSubmissionCheck() {
 				</td>
 				</tr>
 			{foreachelse}
-				<tr valign="top">
+				<tr>
 				<td class="label" width="30%">
 					{translate key="reviewer.article.uploadedFile"}
 				</td>
@@ -305,7 +305,7 @@ function confirmSubmissionCheck() {
 			{/foreach}
 		</table>
 		{if $submission->getRecommendation() === null || $submission->getRecommendation() === ''}
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#uploadReviewerVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -328,15 +328,15 @@ function confirmSubmissionCheck() {
 <tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.selectRecommendation"}</span></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td>
-		<table class="data" width="100%">
-			<tr valign="top">
+		<table class="data">
+			<tr>
 				<td class="label" width="30%">{translate key="submission.recommendation"}</td>
 				<td class="value" width="70%">
 				{if $submission->getRecommendation() !== null && $submission->getRecommendation() !== ''}
@@ -344,7 +344,7 @@ function confirmSubmissionCheck() {
 					<strong>{translate key=$reviewerRecommendationOptions.$recommendation}</strong>&nbsp;&nbsp;
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
-					<script type="text/javascript">
+					<script>
 						$(function() {ldelim}
 							// Attach the form handler.
 							$('#recommendation').pkpHandler('$.pkp.controllers.form.FormHandler');

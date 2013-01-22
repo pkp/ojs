@@ -15,21 +15,21 @@
 <div id="layoutEditors">
 <h3>{translate key="submission.layout"}</h3>
 
-<table class="data" width="100%">
+<table class="data">
 	<tr>
-		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
-		<td class="value" width="80%">{$layoutEditor->getFullName()|escape}</td>
+		<td class="label">{translate key="user.role.layoutEditor"}</td>
+		<td class="value">{$layoutEditor->getFullName()|escape}</td>
 	</tr>
 </table>
 </div>
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
-		<td width="18%" class="heading">{translate key="submission.request"}</td>
-		<td width="18%" class="heading">{translate key="submission.underway"}</td>
-		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%">&nbsp;</td>
+		<td colspan="2">{translate key="submission.layout.layoutVersion"}</td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr>
 		<td colspan="2">
@@ -61,15 +61,15 @@
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td width="18%" class="heading">{translate key="common.order"}</td>
-		<td width="18%" class="heading">{translate key="common.action"}</td>
+		<td colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td colspan="2" class="heading">{translate key="common.file"}</td>
+		<td class="heading">{translate key="common.order"}</td>
+		<td class="heading">{translate key="common.action"}</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="23%">{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td>{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td>
 			{if $disableEdit}
@@ -95,15 +95,15 @@
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td width="18%" class="heading">{translate key="common.order"}</td>
-		<td width="18%" class="heading">{translate key="common.action"}</td>
+		<td colspan="2">{translate key="submission.supplementaryFiles"}</td>
+		<td colspan="2" class="heading">{translate key="common.file"}</td>
+		<td class="heading">{translate key="common.order"}</td>
+		<td class="heading">{translate key="common.action"}</td>
 	</tr>
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
-		<td width="23%">{$suppFile->getSuppFileTitle()|escape}</td>
+		<td>{$suppFile->getSuppFileTitle()|escape}</td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 		<td>
 			{if $disableEdit}
@@ -130,7 +130,7 @@
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#uploadLayoutFileForm').pkpHandler('$.pkp.controllers.form.FormHandler');

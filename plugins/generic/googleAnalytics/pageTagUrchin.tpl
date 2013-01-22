@@ -8,9 +8,9 @@
  *
  *}
 <!-- Google Analytics -->
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script src="http://www.google-analytics.com/urchin.js">
 </script>
-<script type="text/javascript">
+<script>
 _uacct = "{$googleAnalyticsSiteId|escape}";
 urchinTracker();
 {foreach from=$gsAuthorAccounts item=gsAuthorAccount}

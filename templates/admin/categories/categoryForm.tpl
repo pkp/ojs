@@ -14,7 +14,7 @@
 {/strip}
 <div id="categoryFormDiv">
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#categoryForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -26,11 +26,11 @@
 {/if}
 
 {include file="common/formErrors.tpl"}
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $category}{url|assign:"categoryFormUrl" op="editCategory" path=$category->getId() escape=false}
 			{else}{url|assign:"categoryFormUrl" op="createCategory" escape=false}
 			{/if}
@@ -39,9 +39,9 @@
 		</td>
 	</tr>
 {/if}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="name" required="true" key="admin.categories.name"}</td>
-	<td width="80%" class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="35" maxlength="80" id="name" class="textField" /></td>
+<tr>
+	<td class="label">{fieldLabel name="name" required="true" key="admin.categories.name"}</td>
+	<td class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="35" maxlength="80" id="name" class="textField" /></td>
 </tr>
 </table>
 

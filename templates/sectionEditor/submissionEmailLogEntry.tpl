@@ -31,16 +31,16 @@
 <div class="separator"></div>
 
 <h3>{translate key="submission.history.submissionEmailLog"}</h3>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="common.id"}</td>
-		<td width="80%" class="value">{$logEntry->getId()}</td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="common.id"}</td>
+		<td class="value">{$logEntry->getId()}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.date"}</td>
 		<td class="value">{$logEntry->getDateSent()|date_format:$datetimeFormatLong}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.sender"}</td>
 		<td class="value">
 			{if $logEntry->getSenderFullName()}
@@ -52,35 +52,35 @@
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.from"}</td>
 		<td class="value">{$logEntry->getFrom()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.to"}</td>
 		<td class="value">{$logEntry->getRecipients()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.cc"}</td>
 		<td class="value">{$logEntry->getCcs()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.bcc"}</td>
 		<td class="value">{$logEntry->getBccs()|escape}</td>
 	</tr>
 	{if !empty($attachments)}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="email.attachments"}</td>
 			<td class="value">{foreach from=$attachments item=attachment}
 				<a href="{url op="downloadFile" path=$attachment->getArticleId()|to_array:$attachment->getFileId()}" class="action">{$attachment->getOriginalFilename()|escape}</a>
 			{/foreach}</td>
 		</tr>
 	{/if}
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.subject"}</td>
 		<td class="value">{$logEntry->getSubject()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="email.body"}</td>
 		<td class="value">{$logEntry->getBody()|escape|nl2br}</td>
 	</tr>

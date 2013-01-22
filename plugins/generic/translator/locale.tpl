@@ -21,11 +21,11 @@
 
 <div id="localeFiles">
 <h3>{translate key="plugins.generic.translator.localeFiles"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="85%">{translate key="plugins.generic.translator.file.filename"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.translator.file.filename"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 
@@ -38,7 +38,7 @@
 	{assign var=fileExists value=0}
 	{assign var=needsAsteriskNote value=1}
 {/if}
-	<tr valign="top">
+	<tr>
 		<td>
 			{if $fileExists}
 				<a href="{url op="downloadLocaleFile" path=$locale|to_array:$filenameEscaped}">{$filename|escape}</a>
@@ -83,11 +83,11 @@
 
 <div id="miscFiles">
 <h3>{translate key="plugins.generic.translator.miscFiles"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="85%">{translate key="plugins.generic.translator.file.filename"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.translator.file.filename"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 
@@ -100,7 +100,7 @@
 	{assign var=fileExists value=0}
 	{assign var=needsAsteriskNote value=1}
 {/if}
-	<tr valign="top">
+	<tr>
 		<td>
 			{if $fileExists}
 				<a href="{url op="downloadLocaleFile" path=$locale|to_array:$filenameEscaped}">{$filename|escape}</a>
@@ -145,17 +145,17 @@
 
 <div id="emails">
 <h3>{translate key="plugins.generic.translator.emails"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="35%">{translate key="manager.emails.emailKey"}</td>
-		<td width="50%">{translate key="plugins.generic.translator.file.filename"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="manager.emails.emailKey"}</td>
+		<td>{translate key="plugins.generic.translator.file.filename"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=emails key=emailKey item=email}
-	<tr valign="top">
+	<tr>
 		<td>{$emailKey|escape}</td>
 		<td>{$email.subject|escape}</td>
 		<td>

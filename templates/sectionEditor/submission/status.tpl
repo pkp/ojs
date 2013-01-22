@@ -9,11 +9,11 @@
 <div id="status">
 <h3>{translate key="common.status"}</h3>
 
-<table width="100%" class="data">
+<table class="data">
 	<tr>
 		{assign var="status" value=$submission->getSubmissionStatus()}
-		<td width="20%" class="label">{translate key="common.status"}</td>
-		<td width="30%" class="value">
+		<td class="label">{translate key="common.status"}</td>
+		<td class="value">
 			{if $status == STATUS_ARCHIVED}{translate key="submissions.archived"}
 			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
 			{elseif $status==STATUS_QUEUED_EDITING}{translate key="submissions.queuedEditing"}
@@ -22,7 +22,7 @@
 			{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 			{/if}
 		</td>
-		<td width="50%" class="value">
+		<td class="value">
 			{if $status != STATUS_ARCHIVED}
 				<a href="{url op="unsuitableSubmission" articleId=$submission->getId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
 			{else}
@@ -43,7 +43,7 @@
 		<td class="label">{translate key="comments.readerComments"}</td>
 		<td class="value">{translate key=$submission->getCommentsStatusString()}</td>
 		<td class="value">
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#updateCommentStatusForm').pkpHandler('$.pkp.controllers.form.FormHandler');

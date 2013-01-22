@@ -8,21 +8,21 @@
  *
  *}
 <div id="submissions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
 		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_search key="submissions.submit" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="20%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="30%">{sort_search key="article.title" sort="title"}</td>
-		<td width="30%">
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
+		<td>
 			{translate key="submission.peerReview"}
-			<table width="100%">
-				<tr valign="top">
-					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
-					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.due"}</td>
-					<td width="34%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
+			<table>
+				<tr>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.due"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
 				</tr>
 			</table>
 		</td>
@@ -34,28 +34,28 @@
 
 	{assign var="articleId" value=$submission->getId()}
 	{assign var="highlightClass" value=$submission->getHighlightClass()}
-	<tr valign="top"{if $highlightClass} class="{$highlightClass|escape}"{/if}>
+	<tr{if $highlightClass} class="{$highlightClass|escape}"{/if}>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submissionReview" path=$submission->getId()}" class="action">{$submission->getLocalizedTitle()|strip_tags|truncate:40:"..."}</a></td>
 		<td>
-		<table width="100%">
+		<table>
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}
 				{foreach from=$reviewAssignments item=assignment name=assignmentList}
 					{if not $assignment->getCancelled() and not $assignment->getDeclined()}
-					<tr valign="top">
-						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateNotified()}{$assignment->getDateNotified()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted() || !$assignment->getDateConfirmed()}&mdash;{else}{$assignment->getWeeksDue()|default:"&mdash;"}{/if}</td>
-						<td width="34%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+					<tr>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateNotified()}{$assignment->getDateNotified()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted() || !$assignment->getDateConfirmed()}&mdash;{else}{$assignment->getWeeksDue()|default:"&mdash;"}{/if}</td>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 					</tr>
 					{/if}
 				{foreachelse}
-					<tr valign="top">
-						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-						<td width="34%" style="padding: 0 0 0 0; font-size:1.0em">&mdash;</td>
+					<tr>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+						<td style="padding: 0 0 0 0; font-size:1.0em">&mdash;</td>
 					</tr>
 				{/foreach}
 			{/foreach}			

@@ -27,7 +27,7 @@
 			{if $individualSubscription->isNonExpiring()}
 				{translate key="subscriptionTypes.nonExpiring"}<br />
 			{else}
-				{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
+				<span class="disabled">{if $individualSubscription->isExpired()}{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}</span><br />
 			{/if}
 		{/if}	
 	{elseif $institutionalSubscription}
@@ -45,7 +45,7 @@
 			{if $individualSubscription->isNonExpiring()}
 				{translate key="subscriptionTypes.nonExpiring"}<br />
 			{else}
-				{if $individualSubscription->isExpired()}<span class="disabled">{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}<br />
+				<span class="disabled">{if $individualSubscription->isExpired()}{translate key="user.subscriptions.expired"}: {else}{translate key="plugins.block.subscription.expires"}: {/if}{$individualSubscription->getDateEnd()|date_format:$dateFormatShort}</span><br />
 			{/if}
 		{/if}		
 	{elseif !$userLoggedIn}

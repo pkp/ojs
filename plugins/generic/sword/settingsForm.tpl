@@ -16,7 +16,7 @@
 
 <div class="separator">&nbsp;</div>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#swordSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,10 +27,10 @@
 
 <h3>{translate key="plugins.generic.sword.settings"}</h3>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="checkbox" name="allowAuthorSpecify" id="allowAuthorSpecify" {if $allowAuthorSpecify}checked="checked" {/if}/></td>
-		<td width="90%" class="value"><label for="allowAuthorSpecify">{translate key="plugins.generic.sword.settings.allowAuthorSpecify"}</label></td>
+<table class="data">
+	<tr>
+		<td class="label" align="right"><input type="checkbox" name="allowAuthorSpecify" id="allowAuthorSpecify" {if $allowAuthorSpecify}checked="checked" {/if}/></td>
+		<td class="value"><label for="allowAuthorSpecify">{translate key="plugins.generic.sword.settings.allowAuthorSpecify"}</label></td>
 	</tr>
 </table>
 
@@ -41,20 +41,20 @@
 <div id="depositPoints">
 <h3>{translate key="plugins.generic.sword.settings.depositPoints"}</h3>
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td>{translate key="plugins.importexport.sword.depositPoint"}</td>
 		<td>{translate key="common.type"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 {foreach name=depositPoints from=$depositPoints key=key item=depositPoint}
-	<tr valign="top">
+	<tr>
 		<td>{$depositPoint.url|escape}</td>
 		<td>
 			{assign var=depositPointType value=$depositPoint.type}
@@ -65,16 +65,16 @@
 		</td>
 	</tr>
 	{if !$smarty.foreach.depositPoints.last}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" class="separator">&nbsp;</td>
 		</tr>
 	{/if}
 {foreachelse}
-	<tr valign="top">
+	<tr>
 		<td colspan="3" class="nodata">{translate key="common.none"}</td>
 	</tr>
 {/foreach}
-	<tr valign="top">
+	<tr>
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
 </table>

@@ -12,31 +12,31 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#searchForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="searchForm" action="{if $searchId}{url op="saveSearch" path=$versionId|to_array:$contextId:$searchId}{else}{url op="createSearch" path=$versionId|to_array:$contextId:"save"}{/if}" method="post">
-<table class="data" width="100%">
-	<tr valign="top">
-		<td class="label" width="20%"><label for="title">{translate key="rt.search.title"}</label></td>
-		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><label for="title">{translate key="rt.search.title"}</label></td>
+		<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="url">{translate key="rt.search.url"}</label></td>
 		<td class="value"><input type="text" class="textField" name="url" id="url" value="{$url|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="searchUrl">{translate key="rt.search.searchUrl"}</label></td>
 		<td class="value"><input type="text" class="textField" name="searchUrl" id="searchUrl" value="{$searchUrl|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="searchPost">{translate key="rt.search.searchPost"}</label></td>
 		<td class="value"><input type="text" class="textField" name="searchPost" id="searchPost" value="{$searchPost|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="description">{translate key="rt.context.description"}</label></td>
 		<td class="value">
 			<textarea class="textArea richContent" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>

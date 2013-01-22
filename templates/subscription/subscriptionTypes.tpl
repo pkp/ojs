@@ -12,7 +12,7 @@
 {assign var="pageId" value="manager.subscriptionTypes"}
 {include file="common/header.tpl"}
 {/strip}
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSubscriptionType"); });
 {/literal}
@@ -30,22 +30,22 @@ $(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSub
 <br />
 
 <div id="subscriptionTypes">
-<table width="100%" class="listing" id="subscriptionTypesTable">
+<table class="listing" id="subscriptionTypesTable">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="manager.subscriptionTypes.name"}</td>
-		<td width="10%">{translate key="manager.subscriptionTypes.subscriptions"}</td>
-		<td width="20%">{translate key="manager.subscriptionTypes.duration"}</td>
-		<td width="15%">{translate key="manager.subscriptionTypes.cost"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="manager.subscriptionTypes.name"}</td>
+		<td>{translate key="manager.subscriptionTypes.subscriptions"}</td>
+		<td>{translate key="manager.subscriptionTypes.duration"}</td>
+		<td>{translate key="manager.subscriptionTypes.cost"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=subscriptionTypes item=subscriptionType}
-	<tr valign="top" id="subtype-{$subscriptionType->getTypeId()}" class="data">
+	<tr id="subtype-{$subscriptionType->getTypeId()}" class="data">
 		<td class="drag">{$subscriptionType->getSubscriptionTypeName()|escape}</td>
 		<td class="drag">{if $subscriptionType->getInstitutional()}{translate key="manager.subscriptionTypes.institutional"}{else}{translate key="manager.subscriptionTypes.individual"}{/if}</td>
 		<td class="drag">{$subscriptionType->getDurationYearsMonths()|escape}</td>

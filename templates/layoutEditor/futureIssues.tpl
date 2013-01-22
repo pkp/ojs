@@ -21,19 +21,19 @@
 <br />
 
 <div id="issues">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="80%">{translate key="issue.issue"}</td>
-		<td width="20%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=issues item=issue}
-	<tr valign="top">
+	<tr>
 		<td><a href="{url op="issueToc" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getNumArticles()|escape}</td>
 	</tr>

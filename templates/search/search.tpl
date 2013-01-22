@@ -15,7 +15,7 @@
 	{/strip}
 
 	<div id="search">
-		<script type="text/javascript">
+		<script>
 			$(function() {ldelim}
 				// Attach the search form handler.
 				$('#searchForm').pkpHandler(
@@ -28,7 +28,7 @@
 		</script>
 		<form method="post" id="searchForm" action="{url op="search"}">
 			<table class="data">
-				<tr valign="top">
+				<tr>
 					<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
 					<td class="value">
 						{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
@@ -42,13 +42,13 @@
 					</td>
 				</tr>
 				{if $siteSearch}
-					<tr valign="top">
+					<tr>
 						<td class="label"><label for="searchJournal">{translate key="search.withinJournal"}</label></td>
 						<td class="value"><select name="searchJournal" id="searchJournal" class="selectMenu">{html_options options=$journalOptions selected=$searchJournal}</select></td>
 					</tr>
 				{/if}
 				{if $hasActiveFilters}
-					<tr valign="top">
+					<tr>
 						<td colspan="2" class="label"><h4>{translate key="search.activeFilters"}</h4></td>
 					</tr>
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="authors" filterValue=$authors key="search.author"}
@@ -70,7 +70,7 @@
 				{capture assign="emptyFilters"}
 					<table class="data">
 						{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText) || empty($suppFiles)}
-							<tr valign="top">
+							<tr>
 								<td colspan="2" class="label"><h4>{translate key="search.searchCategories"}</h4></td>
 							</tr>
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="authors" filterValue=$authors key="search.author"}
@@ -80,14 +80,14 @@
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="suppFiles" filterValue=$suppFiles key="article.suppFiles"}
 						{/if}
 						{if $dateFrom == '--' || $dateTo == '--'}
-							<tr valign="top">
+							<tr>
 								<td colspan="2" class="formSubLabel"><h4>{translate key="search.date"}</h4></td>
 							</tr>
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterType="date" filterName="dateFrom" filterValue=$dateFrom startYear=$startYear endYear=$endYear key="search.dateFrom"}
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterType="date" filterName="dateTo" filterValue=$dateTo startYear=$startYear endYear=$endYear key="search.dateTo"}
 						{/if}
 						{if empty($discipline) || empty($subject) || empty($type) || empty($coverage)}
-							<tr valign="top">
+							<tr>
 								<td colspan="2" class="label"><h4>{translate key="search.indexTerms"}</h4></td>
 							</tr>
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="discipline" filterValue=$discipline key="search.discipline"}
@@ -108,7 +108,7 @@
 	{call_hook name="Templates::Search::SearchResults::PreResults"}
 
 	<div id="results">
-		<table width="100%" class="listing">
+		<table class="listing">
 {/if} {* See "instant search" comment at the top of the file *}
 			{if $currentJournal}
 				{assign var=numCols value=3}
@@ -117,9 +117,9 @@
 			{/if}
 			<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 			<tr class="heading" valign="bottom">
-				{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
+				{if !$currentJournal}<td>{translate key="journal.journal"}</td>{/if}
 				<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
-				<td width="60%" colspan="2">{translate key="article.title"}</td>
+				<td colspan="2">{translate key="article.title"}</td>
 			</tr>
 			<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 
@@ -130,13 +130,13 @@
 				{assign var=issueAvailable value=$result.issueAvailable}
 				{assign var=journal value=$result.journal}
 				{assign var=section value=$result.section}
-				<tr valign="top">
+				<tr>
 					{if !$currentJournal}
 						<td><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedName()|escape}</a></td>
 					{/if}
 					<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
-					<td width="30%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
-					<td width="30%" align="right">
+					<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
+					<td align="right">
 						{if $publishedArticle->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN|| $issueAvailable}
 							{assign var=hasAccess value=1}
 						{else}

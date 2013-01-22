@@ -14,26 +14,26 @@
 <h3>{translate key="submission.proofreading"}</h3>
 
 {if $useProofreaders}
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td class="label" width="20%">{translate key="user.role.proofreader"}</td>
-		<td class="value" width="80%">{if $proofSignoff->getUserId()}{$proofreader->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+		<td class="label">{translate key="user.role.proofreader"}</td>
+		<td class="value">{if $proofSignoff->getUserId()}{$proofreader->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
 {/if}
 
 <a href="{url op="viewMetadata" path=$proofSignoff->getAssocId()}" class="action" target="_new">{translate key="submission.reviewMetadata"}</a>
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="40%" colspan="2">&nbsp;</td>
-		<td width="20%" class="heading">{translate key="submission.request"}</td>
-		<td width="20%" class="heading">{translate key="submission.underway"}</td>
-		<td width="20%" class="heading">{translate key="submission.complete"}</td>
+		<td colspan="2">&nbsp;</td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
 	</tr>
 	<tr>
 		<td width="5%">1.</td>
-		<td width="35%">{translate key="user.role.author"}</td>
+		<td>{translate key="user.role.author"}</td>
 		{assign var="authorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
 		<td>
 			{$authorProofreadSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}

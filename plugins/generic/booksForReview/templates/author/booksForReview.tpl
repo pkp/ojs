@@ -9,23 +9,23 @@
  *}
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="plugins.generic.booksForReview.author.title"}</td>
-		<td width="15%">{translate key="plugins.generic.booksForReview.author.status"}</td>
-		<td width="25%">{translate key="plugins.generic.booksForReview.author.editor"}</td>
-		<td width="10%">{translate key="plugins.generic.booksForReview.author.dueDate"}</td>
-		<td width="10%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.booksForReview.author.title"}</td>
+		<td>{translate key="plugins.generic.booksForReview.author.status"}</td>
+		<td>{translate key="plugins.generic.booksForReview.author.editor"}</td>
+		<td>{translate key="plugins.generic.booksForReview.author.dueDate"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=booksForReview item=bookForReview}
 		{assign var=status value=$bookForReview->getStatus()}
-	<tr valign="top">
+	<tr>
 		<td>{$bookForReview->getLocalizedTitle()|escape|truncate:60:"..."}</td>
 		<td>{translate key=$bookForReview->getStatusString()}</td>
 		{if $bookForReview->getEditorId()}

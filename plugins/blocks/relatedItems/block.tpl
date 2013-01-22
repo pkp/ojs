@@ -10,14 +10,14 @@
 
 {if $journalRt && $journalRt->getEnabled() && $journalRt->getDefineTerms() && $version}
 
-<script type="text/javascript">
+<script>
 	{literal}initRelatedItems();{/literal}
 </script>
 
 
 <div class="block" id="sidebarRTRelatedItems">
 	<span class="blockTitle">{translate key="plugins.block.relatedItems.title"}</span>
-		<table width="100%">
+		<table>
 			<tr>
 				<td valign="top" style="width:26px;">
 					<img src="{$baseUrl}/plugins/blocks/relatedItems/icons/lookupTerms.png" class="articleToolIcon" />

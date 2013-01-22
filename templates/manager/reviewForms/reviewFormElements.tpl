@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="manager.reviewFormElements"}
 {include file="common/header.tpl"}
 {/strip}
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#reviewFormElementsTable",
 {/literal}
@@ -21,7 +21,7 @@ $(document).ready(function() { setupTableDND("#reviewFormElementsTable",
 {/literal}
 </script>
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -45,28 +45,28 @@ function toggleChecked() {
 <br/>
 
 <div id="reviewFormElements">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#reviewFormElementsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="reviewFormElementsForm" action="{url op="copyReviewFormElement"}" method="post">
-<table width="100%" class="listing" id="reviewFormElementsTable">
+<table class="listing" id="reviewFormElementsTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="3%">&nbsp;</td>
-		<td width="77%">{translate key="manager.reviewFormElements.question"}</td>
-		<td width="20%">{translate key="common.action"}</td>
+		<td>{translate key="manager.reviewFormElements.question"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 {iterate from=reviewFormElements item=reviewFormElement name=reviewFormElements}
 {assign var=reviewFormElementExists value=1}
-	<tr valign="top" id="formelt-{$reviewFormElement->getId()}" class="data">
+	<tr id="formelt-{$reviewFormElement->getId()}" class="data">
 		<td><input type="checkbox" name="copy[]" value="{$reviewFormElement->getId()|escape}"/></td>
 		<td class="drag">{$reviewFormElement->getLocalizedQuestion()|truncate:200:"..."}</td>
 		<td class="nowrap">

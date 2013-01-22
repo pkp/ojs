@@ -95,8 +95,8 @@ class StaticPagesEditForm extends Form {
 		import('classes.file.JournalFileManager');
 		$publicFileManager = new PublicFileManager();
 		$tinyMCE_script = '
-		<script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
-		<script language="javascript" type="text/javascript">
+		<script src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
+		<script>
 			tinyMCE.init({
 			mode : "textareas",
 			plugins : "safari,spellchecker,style,layer,table,save,advhr,jbimages,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,pagebreak,jbimages",

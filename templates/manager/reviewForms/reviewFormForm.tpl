@@ -20,7 +20,7 @@
 {/if}
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#reviewFormForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,11 +33,11 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $reviewFormId}{url|assign:"reviewFormFormUrl" op="editReviewForm" path=$reviewFormId escape=false}
 			{else}{url|assign:"reviewFormFormUrl" op="createReviewForm" escape=false}
 			{/if}
@@ -46,11 +46,11 @@
 		</td>
 	</tr>
 {/if}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="title" required="true" key="manager.reviewForms.title"}</td>
-	<td width="80%" class="value"><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" id="title" size="40" maxlength="120" class="textField" /></td>
+<tr>
+	<td class="label">{fieldLabel name="title" required="true" key="manager.reviewForms.title"}</td>
+	<td class="value"><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" id="title" size="40" maxlength="120" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="description" key="manager.reviewForms.description"}</td>
 	<td class="value"><textarea name="description[{$formLocale|escape}]" rows="4" cols="40" id="description" class="textArea richContent">{$description[$formLocale]|escape}</textarea></td>
 </tr>

@@ -8,21 +8,21 @@
  *
  *}
 <div id="submissions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
-		<td width="15%"><span class="disabled"></span><br />{sort_search key="submissions.submitted" sort="submitDate"}</td>
+		<td><span class="disabled"></span><br />{sort_search key="submissions.submitted" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="25%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="30%">{sort_search key="article.title" sort="title"}</td>
-		<td width="20%" align="right">{sort_search key="common.status" sort="status"}</td>
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
+		<td align="right">{sort_search key="common.status" sort="status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getId()}
-	<tr valign="top">
+	<tr>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

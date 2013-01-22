@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -29,22 +29,22 @@ function toggleChecked() {
 <br/>
 
 <div id="articles">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#articlesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" action="{plugin_url path="exportArticles"}" method="post" id="articlesForm">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="25%">{translate key="issue.issue"}</td>
-		<td width="40%">{translate key="article.title"}</td>
-		<td width="25%">{translate key="article.authors"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="article.title"}</td>
+		<td>{translate key="article.authors"}</td>
 		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
@@ -54,7 +54,7 @@ function toggleChecked() {
 	{iterate from=articles item=articleData}
 	{assign var=article value=$articleData.article}
 	{assign var=issue value=$articleData.issue}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="articleId[]" value="{$article->getId()}"/></td>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>

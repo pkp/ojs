@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="plugins.generic.booksForReview.editor.selectSubmission"}
 {include file="common/header.tpl"}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -31,23 +31,23 @@
 
 <a name="submissions"></a>
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="30%">{translate key="article.authors"}</td>
-		<td width="50%">{translate key="article.title"}</td>
-		<td width="10%" align="right"></td>
+		<td>{translate key="article.authors"}</td>
+		<td>{translate key="article.title"}</td>
+		<td align="right"></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 
 {iterate from=submissions item=submission}
-	<tr valign="top">
+	<tr>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>

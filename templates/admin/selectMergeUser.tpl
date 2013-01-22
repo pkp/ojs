@@ -15,7 +15,7 @@
 <p>{if !empty($oldUserIds)}{translate key="admin.mergeUsers.into.description"}{else}{translate key="admin.mergeUsers.from.description"}{/if}</p>
 <div id="roles">
 <h3>{translate key=$roleName}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#mergeUserForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -76,7 +76,7 @@
 	{assign var="numCols" value=5}
        <form class="pkp_form" method="post" action="{url}">
 {/if}
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
 	</tr>
@@ -85,16 +85,16 @@
 			<td width="5%">&nbsp;</td>
 		{/if}
 		<td>{translate key="user.username"}</td>
-		<td width="29%">{translate key="user.name"}</td>
-		<td width="29%">{translate key="user.email"}</td>
-		<td width="15%" align="right">{translate key="common.action"}</td>
+		<td>{translate key="user.name"}</td>
+		<td>{translate key="user.email"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=users item=user}
 	{assign var=userExists value=1}
-	<tr valign="top">
+	<tr>
 		{if empty($oldUserIds)}
 			<td><input type="checkbox" name="oldUserIds[]" value="{$user->getId()|escape}" {if $thisUser->getId() == $user->getId()}disabled="disabled" {/if}/></td>
 		{/if}

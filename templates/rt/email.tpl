@@ -16,7 +16,7 @@
 {include file="rt/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function deleteAttachment(fileId) {
@@ -27,7 +27,7 @@ function deleteAttachment(fileId) {
 {/literal}
 </script>
 <div id="rtEmail">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#emailForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -67,11 +67,11 @@ function deleteAttachment(fileId) {
 	<br/>
 {/if}
 
-<table class="data" width="100%">
+<table class="data">
 {if $addressFieldsEnabled}
-<tr valign="top">
-	<td class="label" width="20%">{fieldLabel name="to" key="email.to"}</td>
-	<td width="80%" class="value">
+<tr>
+	<td class="label">{fieldLabel name="to" key="email.to"}</td>
+	<td class="value">
 		{foreach from=$to item=toAddress}
 			<input type="text" name="to[]" id="to" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
 		{foreachelse}
@@ -83,7 +83,7 @@ function deleteAttachment(fileId) {
 		{/if}
 	</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="cc" key="email.cc"}</td>
 	<td class="value">
 		{foreach from=$cc item=ccAddress}
@@ -97,7 +97,7 @@ function deleteAttachment(fileId) {
 		{/if}
 	</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="bcc" key="email.bcc"}</td>
 	<td class="value">
 		{foreach from=$bcc item=bccAddress}
@@ -111,7 +111,7 @@ function deleteAttachment(fileId) {
 		{/if}
 	</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td></td>
 	<td class="value">
 		<input type="submit" name="blankTo" class="button" value="{translate key="email.addToRecipient"}"/>
@@ -126,10 +126,10 @@ function deleteAttachment(fileId) {
 {/if}{* $addressFieldsEnabled *}
 
 {if $attachmentsEnabled}
-<tr valign="top">
+<tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="email.attachments"}</td>
 	<td class="value">
 		{assign var=attachmentNum value=1}
@@ -147,18 +147,18 @@ function deleteAttachment(fileId) {
 	</td>
 </tr>
 {/if}
-<tr valign="top">
+<tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="email.from"}</td>
 	<td class="value">{$from|escape}</td>
 </tr>
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
-	<td width="80%" class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="50" maxlength="120" class="textField" /></td>
+<tr>
+	<td class="label">{fieldLabel name="subject" key="email.subject"}</td>
+	<td class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="50" maxlength="120" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="body" key="email.body"}</td>
 	<td class="value"><textarea name="body" cols="50" rows="15" class="textArea">{$body|escape}</textarea></td>
 </tr>

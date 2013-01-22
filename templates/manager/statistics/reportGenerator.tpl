@@ -10,23 +10,23 @@
 <div id="statistics">
 <h3>{translate key="manager.statistics.reports"}</h3>
 <p>{translate key="manager.statistics.reports.description"}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#reportForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="reportForm" method="post" action="{url op="reportGenerator"}">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="25%" class="label">{translate key="manager.statistics.reports.reportType"}</td>
-		<td width="75%" class="value"><select name="reportType" id="reportType" class="selectMenu">{html_options_translate options=$reportTypes}</select></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.statistics.reports.reportType"}</td>
+		<td class="value"><select name="reportType" id="reportType" class="selectMenu">{html_options_translate options=$reportTypes}</select></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="search.dateFrom"}</td>
 		<td class="value">{html_select_date prefix="dateFrom" time="--" all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="search.dateTo"}</td>
 		<td class="value">
 			{html_select_date prefix="dateTo" time="--" all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}

@@ -10,7 +10,7 @@
  *   $filterName string
  *   $filterValue string
  *}
-<script type="text/javascript">
+<script>
 	{if $filterName == "simpleQuery"}
 		{url|assign:"autocompleteUrl" page="lucene" op="queryAutocomplete"}
 		{assign var="searchForm" value="simpleSearchForm"}
@@ -30,7 +30,7 @@
 <span id="{$filterName}Autocomplete">
 	<input type="text" id="{$filterName}_input" name="{$filterName}" size="{$size|default:40}" maxlength="255" value="{$filterValue|escape}" class="textField" />
 	<input type="hidden" id="{$filterName}" name="{$filterName}_hidden" value="{$filterValue|escape}" />
-	<script type="text/javascript">
+	<script>
 		{* The following lines guarantee graceful fallback in case
 		   a client does not support JavaScript. We do this here and not
 		   in the handler to better document what's going on. Otherwise

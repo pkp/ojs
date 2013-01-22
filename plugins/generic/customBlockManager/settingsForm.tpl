@@ -17,7 +17,7 @@
 <br />
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#customBlockSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -30,29 +30,29 @@
 
 <input type="hidden" name="deletedBlocks" value="{$deletedBlocks|escape}" />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-	<td width="20%" align="left">{translate key="plugins.generic.customBlockManager.blockName"}</td>
-	<td width="80%" align="left" >{translate key="plugins.generic.customBlockManager.action"}</td>
+	<td align="left">{translate key="plugins.generic.customBlockManager.blockName"}</td>
+	<td align="left" >{translate key="plugins.generic.customBlockManager.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 
 {foreach name=blocks from=$blocks key=blockIndex item=block}
-<tr valign="top">
-	<td width="20%" class="value" align="left"><input type="text" class="textField" name="blocks[{$blockIndex|escape}]" id="blocks-{$blockIndex|escape}" value="{$block}" size="20" maxlength="40" /></td>
+<tr>
+	<td class="value" align="left"><input type="text" class="textField" name="blocks[{$blockIndex|escape}]" id="blocks-{$blockIndex|escape}" value="{$block}" size="20" maxlength="40" /></td>
 	<td  align="left"><input type="submit" name="delBlock[{$blockIndex|escape}]" value="{translate key="plugins.generic.customBlockManager.delete"}" class="button" /></td>
 </tr>
 <tr>
 	<td colspan="4" class="separator">&nbsp;</td>
 </tr>
 {foreachelse}
-<tr valign="top">
-	<td width="20%" class="value" align="right"><input type="text" class="textField" name="blocks[0]" id="blocks-0" size="20" maxlength="40" /></td>
+<tr>
+	<td class="value" align="right"><input type="text" class="textField" name="blocks[0]" id="blocks-0" size="20" maxlength="40" /></td>
 </tr>
 
 {/foreach}

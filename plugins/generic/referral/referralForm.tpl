@@ -19,7 +19,7 @@
 
 <br/>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#referral').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,11 +33,11 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $referralId}{url|assign:"referralUrl" op="editReferral" path=$referralId escape=false}
 			{else}{url|assign:"referralUrl" op="createReferral"}
 			{/if}
@@ -46,19 +46,19 @@
 		</td>
 	</tr>
 {/if}
-<tr valign="top">
-	<td width="20%" class="label">{translate key="article.article"}</td>
-	<td width="80%" class="value"><a target="_new" href="{url page="article" op="view" path=$article->getBestArticleId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
+<tr>
+	<td class="label">{translate key="article.article"}</td>
+	<td class="value"><a target="_new" href="{url page="article" op="view" path=$article->getBestArticleId()}">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="name" required="true" key="common.title"}</td>
 	<td class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="40" id="name" maxlength="80" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="url" required="true" key="common.url"}</td>
 	<td class="value"><input type="text" name="url" id="url" value="{$url|escape}" size="40" maxlength="80" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="status" key="common.status"}</td>
 	<td class="value">
 		<select name="status" id="status" class="selectMenu">

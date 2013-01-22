@@ -17,7 +17,7 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td class="headseparator">&nbsp;</td>
 	</tr>
@@ -29,7 +29,7 @@
 	</tr>
 </table>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#externalFeedSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -42,10 +42,10 @@
 
 <p>{translate key="plugins.generic.externalFeed.settings.stylesheetDescription"}: <a href="{$defaultStyleSheetUrl}" target="_blank">{translate key="plugins.generic.externalFeed.settings.defaultStyleSheet"}</a></p>
 
-<table width="100%" class="data">
-<tr valign="top">
-	<td width="20%" class="label"><label for="externalFeedStyleSheet">{translate key="plugins.generic.externalFeed.settings.useStyleSheet"}</label></td>
-	<td width="80%" class="value"><input type="file" name="externalFeedStyleSheet" id="externalFeedStyleSheet" class="uploadField" /> <input type="submit" name="uploadStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+<tr>
+	<td class="label"><label for="externalFeedStyleSheet">{translate key="plugins.generic.externalFeed.settings.useStyleSheet"}</label></td>
+	<td class="value"><input type="file" name="externalFeedStyleSheet" id="externalFeedStyleSheet" class="uploadField" /> <input type="submit" name="uploadStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
 </tr>
 </table>
 

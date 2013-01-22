@@ -17,7 +17,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#suppFile').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -30,10 +30,10 @@
 
 {if count($formLocales) > 1}
 <div id="locale">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $suppFileId}{url|assign:"formUrl" op="editSuppFile" path=$articleId|to_array:$suppFileId from=$from escape=false}
 			{else}{url|assign:"formUrl" op="addSuppFile" path=$articleId from=$from escape=false}
 			{/if}
@@ -48,34 +48,34 @@
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 <p>{translate key="author.submit.supplementaryFileDataDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="title" required="true" key="common.title"}</td>
-		<td width="80%" class="value"><input type="text" id="title" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="60" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="title" required="true" key="common.title"}</td>
+		<td class="value"><input type="text" id="title" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
 	{if $enablePublicSuppFileId}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publicSuppFileId" key="author.suppFile.publicSuppFileIdentifier"}</td>
-		<td width="80%" class="value"><input type="text" id="publicSuppFileId" name="publicSuppFileId" value="{$publicSuppFileId|escape}" size="20" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="publicSuppFileId" key="author.suppFile.publicSuppFileIdentifier"}</td>
+		<td class="value"><input type="text" id="publicSuppFileId" name="publicSuppFileId" value="{$publicSuppFileId|escape}" size="20" maxlength="255" class="textField" /></td>
 	</tr>
 	{/if}
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
 		<td class="value"><input type="text" id="creator" name="creator[{$formLocale|escape}]" value="{$creator[$formLocale]|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="subject" key="common.subject"}</td>
 		<td class="value"><input type="text" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="type" key="common.type"}</td>
 		<td class="value"><select name="type" size="1" id="type" class="selectMenu">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br />{translate key="author.submit.suppFile.specifyOtherType"}: <input type="text" name="typeOther[{$formLocale|escape}]" value="{$typeOther[$formLocale]|escape}" size="45" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="description" key="author.submit.suppFile.briefDescription"}</td>
 		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" rows="5" cols="60" class="textArea richContent">{$description[$formLocale]|escape}</textarea></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="publisher" key="common.publisher"}</td>
 		<td class="value">
 			<input type="text" name="publisher[{$formLocale|escape}]" id="publisher" value="{$publisher[$formLocale]|escape}" size="60" maxlength="255" class="textField" />
@@ -83,11 +83,11 @@
 			<span class="instruct">{translate key="author.submit.suppFile.publisherDescription"}</span>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="sponsor" key="author.submit.suppFile.contributorOrSponsor"}</td>
 		<td class="value"><input id="sponsor" type="text" name="sponsor[{$formLocale|escape}]" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
 		<td class="value">
 			<input type="text" id="dateCreated" name="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" class="textField" /> {translate key="submission.date.yyyymmdd"}
@@ -95,7 +95,7 @@
 			<span class="instruct">{translate key="author.submit.suppFile.dateDescription"}</span>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="source" key="common.source"}</td>
 		<td class="value">
 			<input type="text" id="source" name="source[{$formLocale|escape}]" value="{$source[$formLocale]|escape}" size="60" maxlength="255" class="textField" />
@@ -103,7 +103,7 @@
 			<span class="instruct">{translate key="author.submit.suppFile.sourceDescription"}</span>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="language" key="common.language"}</td>
 		<td class="value">
 			<input type="text" id="language" name="language" value="{$language|escape}" size="5" maxlength="10" class="textField" />
@@ -127,22 +127,22 @@
 
 <table id="suppFileTable" class="data">
 {if $suppFile && $suppFile->getRemoteURL()}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
-		<td width="80%" class="value"><input type="text" name="remoteURL" id="remoteURL" value="{$suppFile->getRemoteURL()|escape}" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
+		<td class="value"><input type="text" name="remoteURL" id="remoteURL" value="{$suppFile->getRemoteURL()|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 </table>
 {else}
 	{if $suppFile && $suppFile->getFileId()}
-		<tr valign="top">
-			<td width="20%" class="label">{translate key="common.fileName"}</td>
-			<td width="80%" class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
+		<tr>
+			<td class="label">{translate key="common.fileName"}</td>
+			<td class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
 		</tr>
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="common.originalFileName"}</td>
 			<td class="value">{$suppFile->getOriginalFileName()|escape}</td>
 		</tr>
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="common.fileSize"}</td>
 			<td class="value">{$suppFile->getNiceFileSize()}</td>
 		</tr>
@@ -152,14 +152,14 @@
 		</tr>
 	</table>
 
-	<table width="100%"  class="data">
-		<tr valign="top">
+	<table  class="data">
+		<tr>
 			<td width="5%" class="label"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /></td>
-			<td width="95%" class="value"><label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
+			<td class="value"><label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
 		</tr>
 	</table>
 	{else}
-		<tr valign="top">
+		<tr>
 			<td colspan="2" class="nodata">{translate key="author.submit.suppFile.noFile"}</td>
 		</tr>
 	</table>
@@ -167,8 +167,8 @@
 
 	<br />
 
-	<table id="showReviewersTable" width="100%" class="data">
-		<tr valign="top">
+	<table id="showReviewersTable" class="data">
+		<tr>
 			<td class="label">
 				{if $suppFile && $suppFile->getFileId()}
 					{fieldLabel name="uploadSuppFile" key="common.replaceFile"}
@@ -179,7 +179,7 @@
 			<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="author.submit.supplementaryFiles.saveToUpload"}</td>
 		</tr>
 		{if not ($suppFile && $suppFile->getFileId())}
-		<tr valign="top">
+		<tr>
 			<td>&nbsp;</td>
 			<td class="value">
 				<input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} />&nbsp;

@@ -14,7 +14,7 @@
 <div id="editEmail">
 <p>{translate key="plugins.generic.translator.email.description"}</p>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editor').pkpHandler('$.pkp.controllers.form.FormHandler');

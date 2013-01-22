@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">{literal}
+<script>{literal}
 	function toggleChecked() {
 		var elements = document.getElementById('exportAllForm').elements;
 		for (var i=0; i < elements.length; i++) {
@@ -27,23 +27,23 @@
 
 <div id="allUnregistered">
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#exportAllForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 		{rdelim});
 	</script>
 	<form class="pkp_form" action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
-		<table width="100%" class="listing">
+		<table class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 			<tr class="heading" valign="bottom">
 				<td width="5%">&nbsp;</td>
 				<td width="5%">&nbsp;</td>
-				<td width="25%">{translate key="issue.issue"}</td>
-				<td width="40%">{translate key="article.title"}</td>
-				<td width="25%">{translate key="article.authors"}</td>
+				<td>{translate key="issue.issue"}</td>
+				<td>{translate key="article.title"}</td>
+				<td>{translate key="article.authors"}</td>
 			</tr>
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -53,7 +53,7 @@
 			{foreach from=$issues item=issue}
 				{if $issue->getPubId('doi')}
 					{assign var=noObjects value=false}
-					<tr valign="top">
+					<tr>
 						<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}" checked="checked" /></td>
 						<td>{fieldLabel name="issueId[]" key="issue.issue"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
@@ -70,7 +70,7 @@
 				{if $article->getPubId('doi')}
 					{assign var=noObjects value=false}
 					{assign var=issue value=$articleData.issue}
-					<tr valign="top">
+					<tr>
 						<td><input type="checkbox" name="articleId[]" value="{$article->getId()}" checked="checked" /></td>
 						<td>{fieldLabel name="articleId[]" key="article.article"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
@@ -89,7 +89,7 @@
 					{assign var=language value=$galleyData.language}
 					{assign var=article value=$galleyData.article}
 					{assign var=issue value=$galleyData.issue}
-					<tr valign="top">
+					<tr>
 						<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}" checked="checked" /></td>
 						<td>{fieldLabel name="galleyId[]" key="submission.galley"}</td>
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>

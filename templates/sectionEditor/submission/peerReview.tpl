@@ -10,10 +10,10 @@
 <div id="submission">
 <h3>{translate key="article.submission"}</h3>
 
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td width="20%" class="label">{translate key="article.authors"}</td>
-		<td width="80%">
+		<td class="label">{translate key="article.authors"}</td>
+		<td>
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$submission->getAuthorEmails() subject=$submission->getLocalizedTitle() articleId=$submission->getId()}
 			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
@@ -47,21 +47,21 @@
 			{/foreach}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
+	<tr>
+		<td class="label">{translate key="submission.reviewVersion"}</td>
 		{if $reviewFile}
-			<td width="80%" class="value">
+			<td class="value">
 				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$reviewFile->getDateModified()|date_format:$dateFormatShort}{if $currentJournal->getSetting('showEnsuringLink')}&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>{/if}
 			</td>
 		{else}
-			<td width="80%" class="nodata">{translate key="common.none"}</td>
+			<td class="nodata">{translate key="common.none"}</td>
 		{/if}
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<script type="text/javascript">
+		<script>
 			$(function() {ldelim}
 				// Attach the form handler.
 				$('#uploadReviewerVersionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -76,13 +76,13 @@
 		</td>
 	</tr>
 	{foreach from=$suppFiles item=suppFile}
-		<tr valign="top">
+		<tr>
 			{if !$notFirstSuppFile}
 				<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
 				{assign var=notFirstSuppFile value=1}
 			{/if}
-			<td width="80%" class="value nowrap">
-				<script type="text/javascript">
+			<td class="value nowrap">
+				<script>
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#visibilityForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -101,7 +101,7 @@
 			</td>
 		</tr>
 	{foreachelse}
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
 		<td class="nodata">{translate key="common.none"}</td>
 	</tr>
@@ -112,11 +112,11 @@
 </div>
 
 <div id="peerReview">
-<table class="data" width="100%">
+<table class="data">
 	<tr id="reviewersHeader" valign="middle">
-		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
-		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
-		<td width="64%" class="nowrap">
+		<td><h3>{translate key="submission.peerReview"}</h3></td>
+		<td><h4>{translate key="submission.round" round=$round}</h4></td>
+		<td class="nowrap">
 			<a href="{url op="selectReviewer" path=$submission->getId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{url op="submissionRegrets" path=$submission->getId()}" class="action">{translate|escape key="sectionEditor.regrets.link"}</a>
 		</td>
@@ -131,7 +131,7 @@
 	{assign var="reviewIndex" value=$reviewIndexes[$reviewId]}
 	<div class="separator"></div>
 
-	<table class="data" width="100%">
+	<table class="data">
 	<tr class="reviewer">
 		<td class="r1" width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
 		<td class="r2" width="34%"><h4>{$reviewAssignment->getReviewerFullName()|escape}</h4></td>
@@ -145,8 +145,8 @@
 	</tr>
 	</table>
 
-	<table width="100%" class="data">
- 	<tr valign="top">
+	<table class="data">
+ 	<tr>
 		<td class="label">{translate key="submission.reviewForm"}</td>
 		<td>
 		{if $reviewAssignment->getReviewFormId()}
@@ -160,17 +160,17 @@
 		{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">&nbsp;</td>
-		<td width="80%">
-			<table width="100%" class="info">
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td>
+			<table class="info">
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>
 					<td class="heading" width="25%">{translate key="submission.underway"}</td>
 					<td class="heading" width="25%">{translate key="submission.due"}</td>
 					<td class="heading" width="25%">{translate key="submission.acknowledge"}</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<td>
 						{url|assign:"reviewUrl" op="notifyReviewer" reviewId=$reviewAssignment->getId() articleId=$submission->getId()}
 						{if $reviewAssignment->getDateNotified()}
@@ -211,7 +211,7 @@
 	</tr>
 
 	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="reviewer.article.recommendation"}</td>
 			<td>
 				{if $reviewAssignment->getRecommendation() !== null && $reviewAssignment->getRecommendation() !== ''}
@@ -231,13 +231,13 @@
 			</td>
 		</tr>
 		{if $currentJournal->getSetting('requireReviewerCompetingInterests')}
-			<tr valign="top">
+			<tr>
 				<td class="label">{translate key="reviewer.competingInterests"}</td>
 				<td>{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 			</tr>
 		{/if}{* requireReviewerCompetingInterests *}
 		{if $reviewFormResponses[$reviewId]}
-			<tr valign="top">
+			<tr>
 				<td class="label">{translate key="submission.reviewFormResponse"}</td>
 				<td>
 					<a href="javascript:openComments('{url op="viewReviewFormResponse" path=$submission->getId()|to_array:$reviewAssignment->getId()}');" class="icon">{icon name="comment"}</a>
@@ -245,7 +245,7 @@
 			</tr>
 		{/if}
 		{if !$reviewAssignment->getReviewFormId() || $reviewAssignment->getMostRecentPeerReviewComment()}{* Only display comments link if a comment is entered or this is a non-review form review *}
-			<tr valign="top">
+			<tr>
 				<td class="label">{translate key="submission.review"}</td>
 				<td>
 					{if $reviewAssignment->getMostRecentPeerReviewComment()}
@@ -257,14 +257,14 @@
 				</td>
 			</tr>
 		{/if}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="reviewer.article.uploadedFile"}</td>
 			<td>
-				<table width="100%" class="data">
+				<table class="data">
 					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
-					<tr valign="top">
+					<tr>
 						<td valign="middle">
-							<script type="text/javascript">
+							<script>
 								$(function() {ldelim}
 									// Attach the form handler.
 									$('#authorView{$reviewAssignment->getId()}').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -282,7 +282,7 @@
 						</td>
 					</tr>
 					{foreachelse}
-					<tr valign="top">
+					<tr>
 						<td>{translate key="common.none"}</td>
 					</tr>
 					{/foreach}
@@ -292,13 +292,13 @@
 	{/if}
 
 	{if (($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined()}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
 				{if !$reviewAssignment->getDateConfirmed()}
 					<a href="{url op="confirmReviewForReviewer" path=$submission->getId()|to_array:$reviewAssignment->getId() accept=1}" class="action">{translate key="reviewer.article.canDoReview"}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="confirmReviewForReviewer" path=$submission->getId()|to_array:$reviewAssignment->getId() accept=0}" class="action">{translate key="reviewer.article.cannotDoReview"}</a><br />
 				{/if}
-				<script type="text/javascript">
+				<script>
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#uploadReviewForReviewerForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -319,10 +319,10 @@
 	{/if}
 
 	{if $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined() && $rateReviewerOnQuality}
-		<tr valign="top">
+		<tr>
 			<td class="label">{translate key="editor.article.rateReviewer"}</td>
 			<td>
-				<script type="text/javascript">
+				<script>
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#rateReviewerForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -343,7 +343,7 @@
 		</tr>
 	{/if}
 	{if $needsReviewFileNote}
-		<tr valign="top">
+		<tr>
 			<td>&nbsp;</td>
 			<td>
 				{translate key="submission.review.mustUploadFileForReview"}

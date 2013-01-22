@@ -11,7 +11,7 @@
 {include file="author/submit/submitHeader.tpl"}
 
 <p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getLocalizedName()}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submitForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -22,22 +22,22 @@
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="author.submit.filesSummary"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 <tr>
 	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 <tr class="heading" valign="bottom">
-	<td width="10%">{translate key="common.id"}</td>
-	<td width="35%">{translate key="common.originalFileName"}</td>
-	<td width="25%">{translate key="common.type"}</td>
-	<td width="20%" class="nowrap">{translate key="common.fileSize"}</td>
-	<td width="10%" class="nowrap">{translate key="common.dateUploaded"}</td>
+	<td>{translate key="common.id"}</td>
+	<td>{translate key="common.originalFileName"}</td>
+	<td>{translate key="common.type"}</td>
+	<td class="nowrap">{translate key="common.fileSize"}</td>
+	<td class="nowrap">{translate key="common.dateUploaded"}</td>
 </tr>
 <tr>
 	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 {foreach from=$files item=file}
-<tr valign="top">
+<tr>
 	<td>{$file->getFileId()}</td>
 	<td><a class="file" href="{url op="download" path=$articleId|to_array:$file->getFileId()}">{$file->getOriginalFileName()|escape}</a></td>
 	<td>{if ($file->getType() == 'supp')}{translate key="article.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>
@@ -45,7 +45,7 @@
 	<td>{$file->getDateUploaded()|date_format:$dateFormatTrunc}</td>
 </tr>
 {foreachelse}
-<tr valign="top">
+<tr>
 <td colspan="5" class="nodata">{translate key="author.submit.noFiles"}</td>
 </tr>
 {/foreach}
@@ -58,10 +58,10 @@
 	{if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}
 		{if $manualPayment}
 			<h3>{translate key="payment.alreadyPaid"}</h3>
-			<table class="data" width="100%">
-				<tr valign="top">
+			<table class="data">
+				<tr>
 				<td width="5%" align="left"><input type="checkbox" name="paymentSent" value="1" {if $paymentSent}checked="checked"{/if} /></td>
-				<td width="95%">{translate key="payment.paymentSent"}</td>
+				<td>{translate key="payment.paymentSent"}</td>
 				</tr>
 				<tr>
 				<td />
@@ -70,10 +70,10 @@
 			</table>
 		{/if}
 		<h3>{translate key="author.submit.requestWaiver"}</h3>
-		<table class="data" width="100%">
-			<tr valign="top">
+		<table class="data">
+			<tr>
 				<td width="5%" align="left"><input type="checkbox" name="qualifyForWaiver" value="1" {if $qualifyForWaiver}checked="checked"{/if}/></td>
-				<td width="95%">{translate key="author.submit.qualifyForWaiver"}</td>
+				<td>{translate key="author.submit.qualifyForWaiver"}</td>
 			</tr>
 			<tr>
 				<td />

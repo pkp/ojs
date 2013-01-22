@@ -20,7 +20,7 @@
 
 {include file="common/formErrors.tpl"}
 
-<script type="text/javascript">
+<script>
 <!--
 
 {literal}
@@ -32,7 +32,7 @@ function changePaymentMethod() {
 	{/literal}
 // -->
 </script>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#paymentSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -43,8 +43,8 @@ function changePaymentMethod() {
 <p>{translate key="manager.payment.paymentMethod.description"}</p>
 
 
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td class="data" colspan="2">
 			{assign var=pluginIndex value=1}
 			<h4>{translate key="manager.payment.paymentMethods"}</h4>

@@ -16,17 +16,17 @@
 
 <div id="locales">
 <h3>{translate key="plugins.generic.customLocale.availableLocales"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="15%">{translate key="plugins.generic.customLocale.localeKey"}</td>
-		<td width="60%">{translate key="plugins.generic.customLocale.localeName"}</td>
-		<td width="25%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.customLocale.localeKey"}</td>
+		<td>{translate key="plugins.generic.customLocale.localeName"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=locales key=localeKey item=localeName}
-	<tr valign="top">
+	<tr>
 		<td>{$localeKey|escape}</td>
 		<td>{$localeName|escape}</td>
 		<td>

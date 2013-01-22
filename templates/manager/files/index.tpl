@@ -19,17 +19,17 @@
 <p><a href="{url op="files" path=$parentDir|explode:"/"}" class="action">&lt; {translate key="manager.files.parentDir"}</a></p>
 {/if}
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td class="headseparator" colspan="6">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td></td>
-		<td width="25%">{translate key="common.fileName"}</td>
-		<td width="25%">{translate key="common.type"}</td>
-		<td width="25%">{translate key="common.dateModified"}</td>
+		<td>{translate key="common.fileName"}</td>
+		<td>{translate key="common.type"}</td>
+		<td>{translate key="common.dateModified"}</td>
 		<td width="5%">{translate key="common.size"}</td>
-		<td width="20%" align="right">{translate key="common.action"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td class="headseparator" colspan="6">&nbsp;</td>
@@ -41,7 +41,7 @@
 		{assign var=filePath value=$file.name}
 	{/if}
 	{assign var=filePath value=$filePath|escape}
-	<tr valign="top">
+	<tr>
 		<td>{if $file.isDir}{icon name="folder"}{else}{icon name="letter"}{/if}</td>
 		<td><a href="{url op="files" path=$filePath|explode:"/"}">{$file.name}</a></td>
 		<td>{$file.mimetype|escape|default:"&mdash;"}</td>
@@ -67,7 +67,7 @@
 {/foreach}
 </table>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#upload1Form').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -77,7 +77,7 @@
 	<input type="file" size="20" name="file" class="uploadField" />
 	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
 </form>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#upload2Form').pkpHandler('$.pkp.controllers.form.FormHandler');

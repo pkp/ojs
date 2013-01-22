@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="plugins.generic.booksForReview.editor.assignAuthor"}
 {include file="common/header.tpl"}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -31,18 +31,18 @@
 
 <a name="users"></a>
 
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="25%">{translate key="user.username"}</td>
-	<td width="35%">{translate key="user.name"}</td>
-	<td width="30%">{translate key="user.email"}</td>
-	<td width="10%" align="right"></td>
+	<td>{translate key="user.username"}</td>
+	<td>{translate key="user.name"}</td>
+	<td>{translate key="user.email"}</td>
+	<td align="right"></td>
 </tr>
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
-<tr valign="top">
+<tr>
 	<td>{if $isJournalManager}<a class="action" href="{url page="manager" op="userProfile" path=$userid}">{/if}{$user->getUsername()|escape}{if $isJournalManager}</a>{/if}</td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">

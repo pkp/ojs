@@ -22,20 +22,20 @@
 <br/>
 
 <div id="issues">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="80%">{translate key="issue.issue"}</td>
-		<td width="15%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=issues item=issue}
-	<tr valign="top">
+	<tr>
 		<td><a href="{url op="issueToc" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getNumArticles()|escape}</td>
 		<td align="right"><a href="{url op="removeIssue" path=$issue->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>

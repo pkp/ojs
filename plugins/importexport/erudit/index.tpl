@@ -16,15 +16,15 @@
 <br/>
 
 <div id="articles">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="25%">{translate key="issue.issue"}</td>
-		<td width="30%">{translate key="article.title"}</td>
-		<td width="25%">{translate key="article.authors"}</td>
-		<td width="20%">{translate key="submission.galley"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="article.title"}</td>
+		<td>{translate key="article.authors"}</td>
+		<td>{translate key="submission.galley"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -34,7 +34,7 @@
 	{assign var=article value=$articleData.article}
 	{assign var=issue value=$articleData.issue}
 	{assign var=publishedArticle value=$articleData.publishedArticle}
-	<tr valign="top">
+	<tr>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>

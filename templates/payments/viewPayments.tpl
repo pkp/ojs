@@ -20,15 +20,15 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="25%">{translate key="common.user"}</td>
-		<td width="25%">{translate key="manager.payment.paymentType"}</td>
-		<td width="25%">{translate key="manager.payment.timestamp"}</td>
-		<td width="25%">{translate key="manager.payment.action"}</td>
+		<td>{translate key="common.user"}</td>
+		<td>{translate key="manager.payment.paymentType"}</td>
+		<td>{translate key="manager.payment.timestamp"}</td>
+		<td>{translate key="manager.payment.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -47,7 +47,7 @@
 			{assign var=isInstitutional value=false}
 		{/if}
 	{/if}
-	<tr valign="top">
+	<tr>
 		<td>
 			{assign var=user value=$userDao->getById($payment->getUserId())}
 			{if $isJournalManager}

@@ -14,7 +14,7 @@
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
 <div id="articleContext">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#articleContextForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -30,22 +30,22 @@
 &nbsp;
 
 <div id="issues">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="65%">{translate key="issue.issue"}</td>
-		<td width="15%">{translate key="editor.issues.published"}</td>
-		<td width="15%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.published"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 
 	{iterate from=issues item=issue}
-	<tr valign="top">
+	<tr>
 		<td><input {if !$notFirst}checked="checked" {/if}name="issueId" type="radio" value="{$issue->getId()}"/></td>
 		{assign var=notFirst value=1}
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>

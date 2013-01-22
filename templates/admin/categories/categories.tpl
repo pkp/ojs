@@ -13,14 +13,14 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveCategory"); });
 {/literal}
 </script>
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#categoriesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -37,19 +37,19 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveCategory"); });
 
 <div id="categories">
 
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="75%">{translate key="admin.categories.name"}</td>
-		<td width="25%">{translate key="common.action"}</td>
+		<td>{translate key="admin.categories.name"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=categories item=category key=categoryId}
-	<tr valign="top" id="category-{$categoryId|escape}" class="data">
+	<tr id="category-{$categoryId|escape}" class="data">
 		<td class="drag">
 			{$category|escape}
 		</td>

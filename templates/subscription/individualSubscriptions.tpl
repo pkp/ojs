@@ -36,7 +36,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -70,24 +70,24 @@
 <br />
 
 <div id="subscriptions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="30%">{translate key="manager.subscriptions.user"}</td>
-		<td width="25%">{translate key="manager.subscriptions.subscriptionType"}</td>
-		<td width="10%">{translate key="subscriptions.status"}</td>
-		<td width="10%">{translate key="manager.subscriptions.dateStart"}</td>
-		<td width="10%">{translate key="manager.subscriptions.dateEnd"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="manager.subscriptions.user"}</td>
+		<td>{translate key="manager.subscriptions.subscriptionType"}</td>
+		<td>{translate key="subscriptions.status"}</td>
+		<td>{translate key="manager.subscriptions.dateStart"}</td>
+		<td>{translate key="manager.subscriptions.dateEnd"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=subscriptions item=subscription}
 	{assign var=isNonExpiring value=$subscription->isNonExpiring()}
-	<tr valign="top">
+	<tr>
 		<td>
 			{assign var=emailString value=$subscription->getUserFullName()|concat:" <":$subscription->getUserEmail():">"}
 			{url|assign:"redirectUrl" op="subscriptions" path="individual" escape=false}

@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); });
 {/literal}
@@ -21,15 +21,15 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 <p>{translate key="manager.reviewForms.list.description"}</p>
 
 <div id="reviewForms">
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td class="headseparator" colspan="4">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="manager.reviewForms.title"}</td>
-		<td width="20%">{translate key="manager.reviewForms.inReview"}</td>
-		<td width="15%">{translate key="manager.reviewForms.completed"}</td>
-		<td width="25%" align="right">{translate key="common.action"}</td>
+		<td>{translate key="manager.reviewForms.title"}</td>
+		<td>{translate key="manager.reviewForms.inReview"}</td>
+		<td>{translate key="manager.reviewForms.completed"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td class="headseparator" colspan="4">&nbsp;</td>
@@ -41,7 +41,7 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 {else}
 	{assign var=canEdit value=0}
 {/if}
-	<tr valign="top" id="reviewform-{$reviewForm->getId()}" class="data">
+	<tr id="reviewform-{$reviewForm->getId()}" class="data">
 		<td class="drag">{$reviewForm->getLocalizedTitle()|escape}</td>
 		<td class="drag">{$incompleteCounts[$reviewFormId]}</td>
 		<td class="drag">{$completeCounts[$reviewFormId]}</td>

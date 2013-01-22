@@ -13,7 +13,7 @@
 {/strip}
 <div id="importUsersConfirm">
 {translate key="plugins.importexport.users.import.confirmUsers"}:
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#confirmForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -38,24 +38,24 @@
 	</p>
 {/if}
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="10%">{translate key="user.firstName"}</td>
-		<td width="10%">{translate key="user.middleName"}</td>
-		<td width="15%">{translate key="user.lastName"}</td>
-		<td width="15%">{translate key="user.username"}</td>
-		<td width="20%">{translate key="user.email"}</td>
-		<td width="25%">{translate key="user.roles"}</td>
+		<td>{translate key="user.firstName"}</td>
+		<td>{translate key="user.middleName"}</td>
+		<td>{translate key="user.lastName"}</td>
+		<td>{translate key="user.username"}</td>
+		<td>{translate key="user.email"}</td>
+		<td>{translate key="user.roles"}</td>
 	</tr>
 	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 {foreach name=users from=$users item=user key=userKey}
-	<tr valign="top">
+	<tr>
 		<td>
 			<input type="checkbox" name="userKeys[]" value="{$userKey|escape}" checked="checked" />
 			{foreach from=$user->getBiography(null) key=locale item=value}

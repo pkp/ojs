@@ -13,8 +13,8 @@
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($submission->getCurrentRound())}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($submission->getCurrentRound())}
 
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td class="label">{translate key="editor.article.decision"}</td>
 		<td>
 			{if $lastEditorDecision}
@@ -25,11 +25,11 @@
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
+	<tr>
+		<td class="label">
 			{translate key="submission.notifyEditor"}
 		</td>
-		<td class="value" width="80%">
+		<td class="value">
 			{url|assign:"notifyAuthorUrl" op="emailEditorDecisionComment" articleId=$submission->getId()}
 			{icon name="mail" url=$notifyAuthorUrl}
 			&nbsp;&nbsp;&nbsp;&nbsp;
@@ -42,11 +42,11 @@
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
+	<tr>
+		<td class="label">
 			{translate key="submission.editorVersion"}
 		</td>
-		<td class="value" width="80%">
+		<td class="value">
 			{foreach from=$editorFiles item=editorFile key=key}
 				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}<br />
 			{foreachelse}
@@ -54,11 +54,11 @@
 			{/foreach}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
+	<tr>
+		<td class="label">
 			{translate key="submission.authorVersion"}
 		</td>
-		<td class="value" width="80%">
+		<td class="value">
 			{foreach from=$authorFiles item=authorFile key=key}
 				<a href="{url op="downloadFile" path=$submission->getId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$authorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="{url op="deleteArticleFile" path=$submission->getId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="action">{translate key="common.delete"}</a><br />
@@ -67,12 +67,12 @@
 			{/foreach}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
+	<tr>
+		<td class="label">
 			{translate key="author.article.uploadAuthorVersion"}
 		</td>
-		<td class="value" width="80%">
-			<script type="text/javascript">
+		<td class="value">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#editorDecisionUploadForm').pkpHandler('$.pkp.controllers.form.FormHandler');

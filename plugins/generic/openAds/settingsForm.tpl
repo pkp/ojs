@@ -18,7 +18,7 @@
 
 <h3>{translate key="plugins.generic.openads.manager.settings"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#openAdsSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,10 +27,10 @@
 <form class="pkp_form" id="openAdsSettingsForm" method="post" action="{url path="generic"|to_array:$pluginName:"settings":"save"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="headerAdId" key="plugins.generic.openads.headerAd"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="headerAdId" key="plugins.generic.openads.headerAd"}</td>
+		<td class="value">
 			<select name="headerAdId" class="selectMenu" id="headerAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}
@@ -44,9 +44,9 @@
 			</select>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contentAdId" key="plugins.generic.openads.contentAd"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="contentAdId" key="plugins.generic.openads.contentAd"}</td>
+		<td class="value">
 			<select name="contentAdId" class="selectMenu" id="contentAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}
@@ -55,9 +55,9 @@
 			</select>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sidebarAdId" key="plugins.generic.openads.sidebarAd"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="sidebarAdId" key="plugins.generic.openads.sidebarAd"}</td>
+		<td class="value">
 			<select name="sidebarAdId" class="selectMenu" id="sidebarAdId">
 				<option value="0">{translate key="common.disabled"}</option>
 				{foreach from=$ads item=ad}

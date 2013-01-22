@@ -17,7 +17,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() {
 	{/literal}{foreach from=$sections key=sectionKey item=section}{literal}
@@ -55,7 +55,7 @@ $(document).ready(function() {
 <h3>{translate key="issue.toc"}</h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#issueTocForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -71,15 +71,15 @@ $(document).ready(function() {
 {foreach from=$sections key=sectionKey item=section}
 <h4>{$section[1]}{if $section[4]}<a href="{url op="moveSectionToc" path=$issueId d=u newPos=$section[4] sectionId=$section[0]}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $section[5]}<a href="{url op="moveSectionToc" path=$issueId d=d newPos=$section[5] sectionId=$section[0]}" class="plain">&darr;</a>{else}&darr;{/if}</h4>
 
-<table width="100%" class="listing" id="issueToc-{$sectionKey|escape}">
+<table class="listing" id="issueToc-{$sectionKey|escape}">
 	<tr>
 		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="15%">{translate key="article.authors"}</td>
+		<td>{translate key="article.authors"}</td>
 		<td>{translate key="article.title"}</td>
-		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
+		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}<td>{translate key="editor.issues.access"}</td>{/if}
 		{if $enablePublicArticleId}<td width="7%">{translate key="editor.issues.publicId"}</td>{/if}
 		{if $enablePageNumber}<td width="7%">{translate key="editor.issues.pages"}</td>{/if}
 		<td width="5%">{translate key="common.remove"}</td>

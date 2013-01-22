@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">{literal}
+<script>{literal}
 	function toggleChecked() {
 		var elements = document.getElementById('issuesForm').elements;
 		for (var i=0; i < elements.length; i++) {
@@ -26,23 +26,23 @@
 <br/>
 
 <div id="issues">
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#issuesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 		{rdelim});
 	</script>
 	<form class="pkp_form" action="{plugin_url path="exportIssues"}" method="post" id="issuesForm">
-		<table width="100%" class="listing">
+		<table class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 			<tr class="heading" valign="bottom">
 				<td width="5%">&nbsp;</td>
-				<td width="55%">{translate key="issue.issue"}</td>
-				<td width="15%">{translate key="editor.issues.published"}</td>
-				<td width="15%">{translate key="editor.issues.numArticles"}</td>
-				<td width="10%" align="right">{translate key="common.action"}</td>
+				<td>{translate key="issue.issue"}</td>
+				<td>{translate key="editor.issues.published"}</td>
+				<td>{translate key="editor.issues.numArticles"}</td>
+				<td align="right">{translate key="common.action"}</td>
 			</tr>
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -56,7 +56,7 @@
 					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
-				<tr valign="top">
+				<tr>
 					<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
 					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 					<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>

@@ -22,7 +22,7 @@
 
 <h3>{translate key="plugins.importexport.native.import"}</h3>
 <p>{translate key="plugins.importexport.native.import.description"}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#nativeUploadForm').pkpHandler('$.pkp.controllers.form.FormHandler');

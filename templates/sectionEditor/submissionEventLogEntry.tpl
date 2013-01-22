@@ -31,16 +31,16 @@
 <div class="separator"></div>
 <div id="submissionEventLog">
 <h3>{translate key="submission.history.submissionEventLog"}</h3>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="common.id"}</td>
-		<td width="80%" class="value">{$logEntry->getId()}</td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="common.id"}</td>
+		<td class="value">{$logEntry->getId()}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.date"}</td>
 		<td class="value">{$logEntry->getDateLogged()|date_format:$datetimeFormatLong}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.user"}</td>
 		<td class="value">
 			{assign var=emailString value=$logEntry->getUserFullName()|concat:" <":$logEntry->getUserEmail():">"}
@@ -48,7 +48,7 @@
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.event"}</td>
 		<td class="value">
 			<strong>{translate key=$logEntry->getEventTitle()}</strong>

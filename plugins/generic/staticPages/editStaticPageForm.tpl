@@ -20,7 +20,7 @@
 <br />
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editStaticPageForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -34,11 +34,11 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $staticPageId}{plugin_url|assign:"staticPageEditPath" path="edit"|to_array:$staticPageId}
 			{else}{plugin_url|assign:"staticPageEditPath" path="edit"|to_array:$staticPageId}{/if}
 			{form_language_chooser form="editStaticPageForm" path=$staticPageEditPath}
@@ -47,15 +47,15 @@
 	</tr>
 {/if}
 	<tr>
-		<td width="20%" class="label">{fieldLabel required="true" name="pagePath" key="plugins.generic.staticPages.path"}</td>
-		<td width="80%" class="value" ><input type="text" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
+		<td class="label">{fieldLabel required="true" name="pagePath" key="plugins.generic.staticPages.path"}</td>
+		<td class="value" ><input type="text" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
 	</tr>
 	<tr>
-		<td width="20%" class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>
-		<td width="80%" class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>
+		<td class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>
+		<td class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>
 	</tr>
 	<tr>
-		<td width="20%" class="label" valign="top">{fieldLabel required="true" name="content" key="plugins.generic.staticPages.content"}</td>
+		<td class="label" valign="top">{fieldLabel required="true" name="content" key="plugins.generic.staticPages.content"}</td>
 		<td>
 		<textarea name="content[{$formLocale|escape}]" cols="50" rows="30">{$content[$formLocale]|escape}</textarea>
 		</td>

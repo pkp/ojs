@@ -19,7 +19,7 @@
 	{plugin_url|assign:duracloudLogoutUrl path="signOut"}
 	<p>{translate key="plugins.importexport.duracloud.configuration.configured.description" url=$duracloudUrl escapedUrl=$duracloudUrl|escape username=$duracloudUsername logoutUrl=$duracloudLogoutUrl}</p>
 
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#selectSpaceForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -45,7 +45,7 @@
 	{/if}{* $duracloudSpace is valid *}
 
 {else}{* The plugin has not been configured; display the login form. *}
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#duraLoginForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -53,20 +53,20 @@
 	</script>
 	<form class="pkp_form" id="duraLoginForm" action="{plugin_url path="signIn"}" method="post">
 		{include file="common/formErrors.tpl"}
-		<table width="100%" class="data">
-			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel key="common.url" name="duracloudUrl" required=true}</td>
-				<td width="80%" class="value"><input type="text" name="duracloudUrl" id="duracloudUrl" value="{$duracloudUrl|escape}" /></td>
+		<table class="data">
+			<tr>
+				<td class="label">{fieldLabel key="common.url" name="duracloudUrl" required=true}</td>
+				<td class="value"><input type="text" name="duracloudUrl" id="duracloudUrl" value="{$duracloudUrl|escape}" /></td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">{fieldLabel key="user.username" name="duracloudUsername" required=true}</td>
 				<td class="value"><input type="text" name="duracloudUsername" id="duracloudUsername" value="{$duracloudUsername|escape}" /></td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">{fieldLabel key="user.password" name="duracloudPassword" required=true}</td>
 				<td class="value"><input type="password" name="duracloudPassword" id="duracloudPassword" value="" /></td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td colspan="2">
 					<input type="submit" class="button defaultButton" value="{translate key="user.login"}" />
 				</td>

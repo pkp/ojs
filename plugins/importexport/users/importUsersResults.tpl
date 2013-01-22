@@ -13,21 +13,21 @@
 {/strip}
 <div id="importUsersResults">
 {translate key="plugins.importexport.users.import.usersWereImported"}:
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="15%">{translate key="user.username"}</td>
-		<td width="25%">{translate key="user.name"}</td>
-		<td width="30%">{translate key="user.email"}</td>
-		<td width="30%" align="right">{translate key="common.action"}</td>
+		<td>{translate key="user.username"}</td>
+		<td>{translate key="user.name"}</td>
+		<td>{translate key="user.email"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach name=importedUsers from=$importedUsers item=user}
-	<tr valign="top">
+	<tr>
 		<td><a href="{url page="manager" op="userProfile" path=$user->getId()}">{$user->getUsername()|escape}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td>{$user->getEmail()|escape}</td>

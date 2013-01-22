@@ -13,14 +13,14 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 {/literal}
 </script>
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#boardEnabledForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -39,13 +39,13 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 
 <div id="groups">
 
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td colspan="2" width="75%">{translate key="manager.groups.title"}</td>
-		<td width="25%">{translate key="common.action"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
@@ -55,21 +55,21 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 		{if $group->getContext() == GROUP_CONTEXT_EDITORIAL_TEAM}
 			{if $isFirstEditorialTeamEntry}
 				{assign var="isFirstEditorialTeamEntry" value=0}
-    		  <tr valign="top">
+    		  <tr>
  						<td colspan="3">{translate key="manager.groups.context.editorialTeam.short"}</td>
 					</tr>
 					<tr>
 						<td colspan="3" class="separator">&nbsp;</td>
 					</tr>
 			{/if}
-	    <tr valign="top" id=editorialteam-{$group->getId()} class="data">
+	    <tr id=editorialteam-{$group->getId()} class="data">
 			<td class="drag" width="5%">&nbsp;</td>
 			<td class="drag">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{else}
-		  <tr valign="top" id="other-{$group->getId()}" class="data">
+		  <tr id="other-{$group->getId()}" class="data">
 			<td class="drag" colspan="2">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}

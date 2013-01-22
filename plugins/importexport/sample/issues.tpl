@@ -16,14 +16,14 @@
 <br/>
 
 <div id="issues">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="65%">{translate key="issue.issue"}</td>
-		<td width="15%">{translate key="editor.issues.published"}</td>
-		<td width="15%">{translate key="editor.issues.numArticles"}</td>
+		<td>{translate key="issue.issue"}</td>
+		<td>{translate key="editor.issues.published"}</td>
+		<td>{translate key="editor.issues.numArticles"}</td>
 		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
@@ -31,7 +31,7 @@
 	</tr>
 	
 	{iterate from=issues item=issue}
-	<tr valign="top">
+	<tr>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
 		<td>{$issue->getNumArticles()|escape}</td>

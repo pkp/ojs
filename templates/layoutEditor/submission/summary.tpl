@@ -10,10 +10,10 @@
 <div id="submission">
 <h3>{translate key="article.submission"}</h3>
 
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td width="20%" class="label">{translate key="article.authors"}</td>
-		<td width="80%">
+		<td class="label">{translate key="article.authors"}</td>
+		<td>
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$submission->getAuthorEmails() subject=$submission->getLocalizedTitle() articleId=$submission->getId()}
 			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>

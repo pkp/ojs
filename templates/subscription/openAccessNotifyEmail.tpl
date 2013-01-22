@@ -52,7 +52,7 @@ Content-Transfer-Encoding: quoted-printable
 			{if $section.title}<h4>{$section.title|escape}</h4>{/if}
 
 			{foreach from=$section.articles item=article}
-				<table width="100%">
+				<table>
 					<tr>
 						<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
 						<td align="right">

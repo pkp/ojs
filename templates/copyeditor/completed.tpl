@@ -15,7 +15,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function sortSearch(heading, direction) {
@@ -29,7 +29,7 @@ function sortSearch(heading, direction) {
 </script>
 
 <div id="search">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -65,23 +65,23 @@ function sortSearch(heading, direction) {
 </div>
 
 <div id="submissions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
 		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_search key="common.assign" sort="assignDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="25%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="30%">{sort_search key="article.title" sort="title"}</td>
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
 		<td width="5%">{sort_search key="submission.complete" sort="dateCompleted"}</td>
-		<td width="25%" align="right">{sort_search key="common.status" sort="status"}</td>
+		<td align="right">{sort_search key="common.status" sort="status"}</td>
 	</tr>
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getId()}
 	{assign var="initialCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
 	{assign var="finalCopyeditSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
-	<tr valign="top">
+	<tr>
 		<td>{$articleId|escape}</td>
 		<td>{$initialCopyeditSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

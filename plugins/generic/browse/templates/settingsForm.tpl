@@ -19,7 +19,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#browseSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,10 +27,10 @@
 </script>
 <form class="pkp_form" id="browseSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="journalContent" key="plugins.generic.browse.manager.settings.browse"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="journalContent" key="plugins.generic.browse.manager.settings.browse"}</td>
+		<td class="value">
 			{translate key="plugins.generic.browse.manager.settings.browseByObjects"}<br />
 			<input type="checkbox" name="enableBrowseBySections" id="enableBrowseBySections" value="1"{if $enableBrowseBySections} checked="checked"{/if}/>
 			<label for="enableBrowseBySections">{translate key="plugins.generic.browse.manager.settings.enableBrowseBySections"}</label><br />
@@ -39,9 +39,9 @@
 		</td>
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="urnPrefix" key="plugins.generic.browse.manager.settings.excludedSections"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="urnPrefix" key="plugins.generic.browse.manager.settings.excludedSections"}</td>
+		<td class="value">
 			{translate key="plugins.generic.browse.manager.settings.excludedSections.description"}<br />
 			<select name="excludedSections[]" id="excludedSections" class="selectMenu" multiple="multiple" size="5">
 					<option {if in_array('', $excludedSections)}selected="selected" {/if}value=''>{translate key="common.none"}</option>
@@ -52,9 +52,9 @@
 		</td>
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="urnPrefix" key="plugins.generic.browse.manager.settings.excludedIdentifyTypes"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="urnPrefix" key="plugins.generic.browse.manager.settings.excludedIdentifyTypes"}</td>
+		<td class="value">
 			{translate key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description"}<br />
 			<select name="excludedIdentifyTypes[]" id="excludedIdentifyTypes" class="selectMenu" multiple="multiple" size="5">
 					<option {if in_array('', $excludedIdentifyTypes)}selected="selected" {/if}value=''>{translate key="common.none"}</option>

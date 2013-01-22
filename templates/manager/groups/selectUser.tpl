@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,16 +33,16 @@
 <p>{foreach from=$alphaList item=letter}<a href="{url path=$group->getId() searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url path=$group->getId()}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <div id="users">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="80%">{translate key="user.name"}</td>
-	<td width="20%">{translate key="common.action"}</td>
+	<td>{translate key="user.name"}</td>
+	<td>{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
-<tr valign="top">
+<tr>
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
 	<td>
 		<a href="{url op="addMembership" path=$group->getId()|to_array:$user->getId()}" class="action">{translate key="manager.groups.membership.addMember"}</a>

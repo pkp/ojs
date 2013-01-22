@@ -24,7 +24,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#booksForReviewSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,7 +33,7 @@
 <form class="pkp_form" method="post" id="booksForReviewSettingsForm" action="{url op="booksForReviewSettings"}">
 {include file="common/formErrors.tpl"}
 
-<script type="text/javascript">
+<script>
 	{literal}
 	<!--
 		function toggleAllowSetBeforeDueReminder(form) {
@@ -52,14 +52,14 @@
 
 <h4>{translate key="plugins.generic.booksForReview.settings.booksForReviewMode"}</h4>
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="mode" id="mode-1" value="{$smarty.const.BFR_MODE_FULL}" {if $mode eq "1"}checked="checked" {/if}/>&nbsp;</td>
-		<td width="90%" class="value">{translate key="plugins.generic.booksForReview.settings.modeFull"}</td>
+<table class="data">
+	<tr>
+		<td class="label" align="right"><input type="radio" name="mode" id="mode-1" value="{$smarty.const.BFR_MODE_FULL}" {if $mode eq "1"}checked="checked" {/if}/>&nbsp;</td>
+		<td class="value">{translate key="plugins.generic.booksForReview.settings.modeFull"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="mode" id="mode-2" value="{$smarty.const.BFR_MODE_METADATA}" {if $mode eq "2"}checked="checked" {/if}/>&nbsp;</td>
-		<td width="90%" class="value">{translate key="plugins.generic.booksForReview.settings.modeMetadata"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="mode" id="mode-2" value="{$smarty.const.BFR_MODE_METADATA}" {if $mode eq "2"}checked="checked" {/if}/>&nbsp;</td>
+		<td class="value">{translate key="plugins.generic.booksForReview.settings.modeMetadata"}</td>
 	</tr>
 	<tr>
 		<td colspan="2">{translate key="plugins.generic.booksForReview.settings.description"}</td>
@@ -118,9 +118,9 @@
 <div id="booksForReviewadditionalInformation">
 <h4>{translate key="plugins.generic.booksForReview.settings.additionalInformation"}</h4>
 <p>{translate key="plugins.generic.booksForReview.settings.additionalInformationDescription"}</p>
-<table width="100%" class="data">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
+	<tr>
 		<td width="100%" class="value">
 			{url|assign:"settingsUrl" op="booksForReviewSettings"}
 			{form_language_chooser form="booksForReviewSettingsForm" url=$settingsUrl}
@@ -128,7 +128,7 @@
 		</td>
 	</tr>
 {/if}
-	<tr valign="top">
+	<tr>
 		<td width="100%" class="value"><textarea name="additionalInformation[{$formLocale|escape}]" id="additionalInformation" rows="6" cols="60" class="textArea richContent">{$additionalInformation[$formLocale]|escape}</textarea></td>
 	</tr>
 </table>

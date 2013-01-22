@@ -40,8 +40,8 @@
 		{else}
 			{assign var=hasAccess value=0}
 		{/if}
-		<table class="tocArticle" width="100%">
-		<tr valign="top">
+		<table class="tocArticle">
+		<tr>
 			<td class="tocTitle">{translate key="issue.viewIssueDescription"}</td>
 			<td class="tocGalleys">
 			{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}

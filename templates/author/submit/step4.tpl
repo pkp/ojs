@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function confirmForgottenUpload() {
@@ -23,7 +23,7 @@ function confirmForgottenUpload() {
 // -->
 {/literal}
 </script>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submitForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -35,22 +35,22 @@ function confirmForgottenUpload() {
 
 <p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
 
-<table class="listing" width="100%">
+<table class="listing">
 <tr>
 	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 <tr class="heading" valign="bottom">
 	<td width="5%">{translate key="common.id"}</td>
-	<td width="40%">{translate key="common.title"}</td>
-	<td width="25%">{translate key="common.originalFileName"}</td>
-	<td width="15%" class="nowrap">{translate key="common.dateUploaded"}</td>
-	<td width="15%" align="right">{translate key="common.action"}</td>
+	<td>{translate key="common.title"}</td>
+	<td>{translate key="common.originalFileName"}</td>
+	<td class="nowrap">{translate key="common.dateUploaded"}</td>
+	<td align="right">{translate key="common.action"}</td>
 </tr>
 <tr>
 	<td colspan="6" class="headseparator">&nbsp;</td>
 </tr>
 {foreach from=$suppFiles item=file}
-<tr valign="top">
+<tr>
 	<td>{$file->getId()}</td>
 	<td>{$file->getSuppFileTitle()|escape}</td>
 	<td>{$file->getOriginalFileName()|escape}</td>
@@ -58,7 +58,7 @@ function confirmForgottenUpload() {
 	<td align="right"><a href="{url op="submitSuppFile" path=$file->getId() articleId=$articleId}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubmitSuppFile" path=$file->getId() articleId=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
-<tr valign="top">
+<tr>
 	<td colspan="6" class="nodata">{translate key="author.submit.noSupplementaryFiles"}</td>
 </tr>
 {/foreach}
@@ -66,10 +66,10 @@ function confirmForgottenUpload() {
 
 <div class="separator"></div>
 
-<table class="data" width="100%">
+<table class="data">
 <tr>
-	<td width="30%" class="label">{fieldLabel name="uploadSuppFile" key="author.submit.uploadSuppFile"}</td>
-	<td width="70%" class="value">
+	<td class="label">{fieldLabel name="uploadSuppFile" key="author.submit.uploadSuppFile"}</td>
+	<td class="value">
 		<input type="file" name="uploadSuppFile" id="uploadSuppFile"  class="uploadField" /> <input name="submitUploadSuppFile" type="submit" class="button" value="{translate key="common.upload"}" />
 		{if $currentJournal->getSetting('showEnsuringLink')}<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>{/if}
 	</td>

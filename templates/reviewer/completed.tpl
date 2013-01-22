@@ -8,22 +8,22 @@
  *
  *}
 <div id="submissions">
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_heading key="common.id" sort="id"}</td>
-		<td width="10%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_heading key="common.assigned" sort="assignDate"}</td>
-		<td width="10%">{sort_heading key="submissions.sec" sort="section"}</td>
-		<td width="35%">{sort_heading key="article.title" sort="title"}</td>
-		<td width="20%">{sort_heading key="submission.review" sort="review"}</td>
-		<td width="20%">{sort_heading key="submission.editorDecision" sort="decision"}</td>
+		<td><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_heading key="common.assigned" sort="assignDate"}</td>
+		<td>{sort_heading key="submissions.sec" sort="section"}</td>
+		<td>{sort_heading key="article.title" sort="title"}</td>
+		<td>{sort_heading key="submission.review" sort="review"}</td>
+		<td>{sort_heading key="submission.editorDecision" sort="decision"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getId()}
 	{assign var="reviewId" value=$submission->getReviewId()}
 
-	<tr valign="top">
+	<tr>
 		<td>{$articleId|escape}</td>
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

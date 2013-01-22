@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="manager.setup.customizingTheLook"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 
@@ -89,7 +89,7 @@ function prepBlockFields() {
 // -->
 {/literal}
 </script>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -99,10 +99,10 @@ function prepBlockFields() {
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{url|assign:"setupFormUrl" op="setup" path="5" escape=false}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
@@ -117,14 +117,14 @@ function prepBlockFields() {
 <div id="journalTitleAndLogo">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType[{$formLocale|escape}]" id="homeHeaderTitleType-0" value="0"{if not $homeHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
-		<td width="80%" class="value"><input type="text" name="homeHeaderTitle[{$formLocale|escape}]" value="{$homeHeaderTitle[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><input type="radio" name="homeHeaderTitleType[{$formLocale|escape}]" id="homeHeaderTitleType-0" value="0"{if not $homeHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
+		<td class="value"><input type="text" name="homeHeaderTitle[{$formLocale|escape}]" value="{$homeHeaderTitle[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType[{$formLocale|escape}]" id="homeHeaderTitleType-1" value="1"{if $homeHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
-		<td width="80%" class="value"><input type="file" name="homeHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
+	<tr>
+		<td class="label"><input type="radio" name="homeHeaderTitleType[{$formLocale|escape}]" id="homeHeaderTitleType-1" value="1"{if $homeHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
+		<td class="value"><input type="file" name="homeHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -133,12 +133,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$homeHeaderTitleImage[$formLocale].uploadName|escape:"url"}" width="{$homeHeaderTitleImage[$formLocale].width|escape}" height="{$homeHeaderTitleImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.homePageHeader.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="homeHeaderTitleImageAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="homeHeaderTitleImageAltText[{$formLocale|escape}]" value="{$homeHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="homeHeaderTitleImageAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="homeHeaderTitleImageAltText[{$formLocale|escape}]" value="{$homeHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 	</tr>
@@ -148,10 +148,10 @@ function prepBlockFields() {
 <div id="journalLogoImage">
 <h4>{translate key="manager.setup.journalLogo"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="homeHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.useImageLogo"}</td>
+		<td class="value"><input type="file" name="homeHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -160,12 +160,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$homeHeaderLogoImage[$formLocale].uploadName|escape:"url"}" width="{$homeHeaderLogoImage[$formLocale].width|escape}" height="{$homeHeaderLogoImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.homePageHeaderLogo.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="homeHeaderLogoImageAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="homeHeaderLogoImageAltText[{$formLocale|escape}]" value="{$homeHeaderLogoImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="homeHeaderLogoImageAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="homeHeaderLogoImageAltText[{$formLocale|escape}]" value="{$homeHeaderLogoImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 		</tr>
@@ -176,10 +176,10 @@ function prepBlockFields() {
 <div id="journalThumbnail">
 <h4>{translate key="manager.setup.journalThumbnail"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useThumbnail"}</td>
-		<td width="80%" class="value"><input type="file" name="journalThumbnail" class="uploadField" /> <input type="submit" name="uploadJournalThumbnail" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.useThumbnail"}</td>
+		<td class="value"><input type="file" name="journalThumbnail" class="uploadField" /> <input type="submit" name="uploadJournalThumbnail" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -188,12 +188,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$journalThumbnail[$formLocale].uploadName|escape:"url"}" width="{$journalThumbnail[$formLocale].width|escape}" height="{$journalThumbnail[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.journalThumbnail.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="journalThumbnailAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="journalThumbnailAltText[{$formLocale|escape}]" value="{$journalThumbnailAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="journalThumbnailAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="journalThumbnailAltText[{$formLocale|escape}]" value="{$journalThumbnailAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 		</tr>
@@ -221,10 +221,10 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.homepageImageDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.homepageImage"}</td>
-		<td width="80%" class="value"><input type="file" name="homepageImage" class="uploadField" /> <input type="submit" name="uploadHomepageImage" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.homepageImage"}</td>
+		<td class="value"><input type="file" name="homepageImage" class="uploadField" /> <input type="submit" name="uploadHomepageImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -233,12 +233,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$homepageImage[$formLocale].uploadName|escape:"url"}" width="{$homepageImage[$formLocale].width|escape}" height="{$homepageImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.journalHomepageImage.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="homepageImageAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="homepageImageAltText[{$formLocale|escape}]" value="{$homepageImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="homepageImageAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="homepageImageAltText[{$formLocale|escape}]" value="{$homepageImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 		</tr>
@@ -248,10 +248,10 @@ function prepBlockFields() {
 <div id="currentIssue">
 <h4>{translate key="manager.setup.currentIssue"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td width="5%" class="label"><input type="checkbox" name="displayCurrentIssue" id="displayCurrentIssue" value="1" {if $displayCurrentIssue} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="displayCurrentIssue">{translate key="manager.setup.displayCurrentIssue"}</label></td>
+		<td class="value"><label for="displayCurrentIssue">{translate key="manager.setup.displayCurrentIssue"}</label></td>
 	</tr>
 </table>
 </div>
@@ -273,14 +273,14 @@ function prepBlockFields() {
 <div id="pageHeaderTitle">
 <h4>{translate key="manager.setup.journalTitle"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType[{$formLocale|escape}]" id="pageHeaderTitleType-0" value="0"{if not $pageHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
-		<td width="80%" class="value"><input type="text" name="pageHeaderTitle[{$formLocale|escape}]" value="{$pageHeaderTitle[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><input type="radio" name="pageHeaderTitleType[{$formLocale|escape}]" id="pageHeaderTitleType-0" value="0"{if not $pageHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
+		<td class="value"><input type="text" name="pageHeaderTitle[{$formLocale|escape}]" value="{$pageHeaderTitle[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType[{$formLocale|escape}]" id="pageHeaderTitleType-1" value="1"{if $pageHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
-		<td width="80%" class="value"><input type="file" name="pageHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
+	<tr>
+		<td class="label"><input type="radio" name="pageHeaderTitleType[{$formLocale|escape}]" id="pageHeaderTitleType-1" value="1"{if $pageHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
+		<td class="value"><input type="file" name="pageHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -289,12 +289,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$pageHeaderTitleImage[$formLocale].uploadName|escape:"url"}" width="{$pageHeaderTitleImage[$formLocale].width|escape}" height="{$pageHeaderTitleImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.pageHeader.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="pageHeaderTitleImageAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="pageHeaderTitleImageAltText[{$formLocale|escape}]" value="{$pageHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="pageHeaderTitleImageAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="pageHeaderTitleImageAltText[{$formLocale|escape}]" value="{$pageHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 		</tr>
@@ -304,10 +304,10 @@ function prepBlockFields() {
 <div id="journalLogo">
 <h4>{translate key="manager.setup.journalLogo"}</h4>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="pageHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.useImageLogo"}</td>
+		<td class="value"><input type="file" name="pageHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -316,12 +316,12 @@ function prepBlockFields() {
 <br />
 <img src="{$publicFilesDir}/{$pageHeaderLogoImage[$formLocale].uploadName|escape:"url"}" width="{$pageHeaderLogoImage[$formLocale].width|escape}" height="{$pageHeaderLogoImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.pageHeaderLogo.altText"}" />
 <br />
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="pageHeaderLogoImageAltText" key="common.altText"}</td>
-		<td width="80%" class="value"><input type="text" name="pageHeaderLogoImageAltText[{$formLocale|escape}]" value="{$pageHeaderLogoImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="pageHeaderLogoImageAltText" key="common.altText"}</td>
+		<td class="value"><input type="text" name="pageHeaderLogoImageAltText[{$formLocale|escape}]" value="{$pageHeaderLogoImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 		</tr>
@@ -334,10 +334,10 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.journalFaviconDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="journalFavicon" class="uploadField" /> <input type="submit" name="uploadJournalFavicon" value="{translate key="common.upload"}" class="button" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.useImageLogo"}</td>
+		<td class="value"><input type="file" name="journalFavicon" class="uploadField" /> <input type="submit" name="uploadJournalFavicon" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -373,58 +373,58 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.itemsDescription"}</p>
 
-<table width="100%" class="data">
+<table class="data">
 {foreach name=navItems from=$navItems[$formLocale] key=navItemId item=navItem}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName"}</td>
+		<td class="value">
 			<input type="text" name="navItems[{$formLocale|escape}][{$navItemId|escape}][name]" id="navItems-{$navItemId|escape}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="textField" /> <input type="submit" name="delNavItem[{$navItemId|escape}]" value="{translate key="common.delete"}" class="button" />
-			<table width="100%">
-				<tr valign="top">
+			<table>
+				<tr>
 					<td width="5%"><input type="checkbox" name="navItems[{$formLocale|escape}][{$navItemId|escape}][isLiteral]" id="navItems-{$navItemId|escape}-isLiteral" value="1"{if $navItem.isLiteral} checked="checked"{/if} /></td>
-					<td width="95%"><label for="navItems-{$navItemId|escape}-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
+					<td><label for="navItems-{$navItemId|escape}-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-url" key="common.url"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="navItems-$navItemId-url" key="common.url"}</td>
+		<td class="value">
 			<input type="text" name="navItems[{$formLocale|escape}][{$navItemId|escape}][url]" id="navItems-{$navItemId|escape}-url" value="{$navItem.url|escape}" size="60" maxlength="255" class="textField" />
-			<table width="100%">
-				<tr valign="top">
+			<table>
+				<tr>
 					<td width="5%"><input type="checkbox" name="navItems[{$formLocale|escape}][{$navItemId|escape}][isAbsolute]" id="navItems-{$navItemId|escape}-isAbsolute" value="1"{if $navItem.isAbsolute} checked="checked"{/if} /></td>
-					<td width="95%"><label for="navItems-{$navItemId|escape}-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
+					<td><label for="navItems-{$navItemId|escape}-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	{if !$smarty.foreach.navItems.last}
-	<tr valign="top">
+	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 {foreachelse}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems-0-name" key="manager.setup.labelName"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="navItems-0-name" key="manager.setup.labelName"}</td>
+		<td class="value">
 			<input type="text" name="navItems[{$formLocale|escape}][0][name]" id="navItems-0-name" size="30" maxlength="90" class="textField" />
-			<table width="100%">
-				<tr valign="top">
+			<table>
+				<tr>
 					<td width="5%"><input type="checkbox" name="navItems[{$formLocale|escape}][0][isLiteral]" id="navItems-0-isLiteral" value="1" /></td>
-					<td width="95%"><label for="navItems-0-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
+					<td><label for="navItems-0-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems-0-url" key="common.url"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="navItems-0-url" key="common.url"}</td>
+		<td class="value">
 			<input type="text" name="navItems[{$formLocale|escape}][0][url]" id="navItems-0-url" size="60" maxlength="255" class="textField" />
-			<table width="100%">
-				<tr valign="top">
+			<table>
+				<tr>
 					<td width="5%"><input type="checkbox" name="navItems[{$formLocale|escape}][0][isAbsolute]" id="navItems-0-isAbsolute" value="1" /></td>
-					<td width="95%"><label for="navItems-0-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
+					<td><label for="navItems-0-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
 				</tr>
 			</table>
 		</td>
@@ -442,10 +442,10 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.journalLayoutDescription"}</p>
 
-<table width="100%" class="data">
+<table class="data">
 <tr>
-	<td width="20%" class="label"><label for="journalTheme">{translate key="manager.setup.journalTheme"}</label></td>
-	<td width="80%" class="value">
+	<td class="label"><label for="journalTheme">{translate key="manager.setup.journalTheme"}</label></td>
+	<td class="value">
 		<select name="journalTheme" class="selectMenu" id="journalTheme"{if empty($journalThemes)} disabled="disabled"{/if}>
 			<option value="">{translate key="common.none"}</option>
 			{foreach from=$journalThemes key=path item=journalThemePlugin}
@@ -455,8 +455,8 @@ function prepBlockFields() {
 	</td>
 </tr>
 <tr>
-	<td width="20%" class="label"><label for="journalStyleSheet">{translate key="manager.setup.useJournalStyleSheet"}</label></td>
-	<td width="80%" class="value"><input type="file" name="journalStyleSheet" id="journalStyleSheet" class="uploadField" /> <input type="submit" name="uploadJournalStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
+	<td class="label"><label for="journalStyleSheet">{translate key="manager.setup.useJournalStyleSheet"}</label></td>
+	<td class="value"><input type="file" name="journalStyleSheet" id="journalStyleSheet" class="uploadField" /> <input type="submit" name="uploadJournalStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
 </tr>
 </table>
 
@@ -544,14 +544,14 @@ function prepBlockFields() {
 <div id="lists">
 <h3>5.8 {translate key="manager.setup.lists"}</h3>
 <p>{translate key="manager.setup.listsDescription"}</p>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.itemsPerPage"}</td>
-		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" class="textField" value="{$itemsPerPage|escape}" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{translate key="manager.setup.itemsPerPage"}</td>
+		<td class="value"><input type="text" size="3" name="itemsPerPage" class="textField" value="{$itemsPerPage|escape}" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.numPageLinks"}</td>
-		<td width="80%" class="value"><input type="text" size="3" name="numPageLinks" class="textField" value="{$numPageLinks|escape}" /></td>
+	<tr>
+		<td class="label">{translate key="manager.setup.numPageLinks"}</td>
+		<td class="value"><input type="text" size="3" name="numPageLinks" class="textField" value="{$numPageLinks|escape}" /></td>
 	</tr>
 </table>
 </div>

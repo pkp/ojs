@@ -37,7 +37,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function sortSearch(heading, direction) {
@@ -49,7 +49,7 @@ function sortSearch(heading, direction) {
 // -->
 {/literal}
 </script>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');

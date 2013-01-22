@@ -21,7 +21,7 @@
 {/if}
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#groupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,11 +33,11 @@
 {/if}
 
 {include file="common/formErrors.tpl"}
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getId() escape=false}
 			{else}{url|assign:"groupFormUrl" op="createGroup" escape=false}
 			{/if}
@@ -46,21 +46,21 @@
 		</td>
 	</tr>
 {/if}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="title" required="true" key="manager.groups.title"}</td>
-	<td width="80%" class="value"><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="35" maxlength="80" id="title" class="textField" /></td>
+<tr>
+	<td class="label">{fieldLabel name="title" required="true" key="manager.groups.title"}</td>
+	<td class="value"><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="35" maxlength="80" id="title" class="textField" /></td>
 </tr>
 
-<tr valign="top">
-	<td width="20%" class="label">&nbsp;</td>
-	<td width="80%" class="value">
+<tr>
+	<td class="label">&nbsp;</td>
+	<td class="value">
 		<input type="checkbox" name="publishEmail" value="1" {if $publishEmail}checked="checked" {/if} id="publishEmail" />&nbsp;
 		{fieldLabel name="publishEmail" key="manager.groups.publishEmails"}
 	</td>
 </tr>
-<tr valign="top">
-	<td width="20%" class="label">{translate key="common.type"}</td>
-	<td width="80%" class="value">
+<tr>
+	<td class="label">{translate key="common.type"}</td>
+	<td class="value">
 		{foreach from=$groupContextOptions item=groupContextOptionKey key=groupContextOptionValue}
 			<input type="radio" name="context" value="{$groupContextOptionValue|escape}" {if $context == $groupContextOptionValue}checked="checked" {/if} id="context-{$groupContextOptionValue|escape}" />&nbsp;
 			{fieldLabel name="context-"|concat:$groupContextOptionValue key=$groupContextOptionKey}<br />

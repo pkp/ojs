@@ -13,7 +13,7 @@
 {/strip}
 
 <br />
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#authSourcesForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -22,21 +22,21 @@
 <form class="pkp_form" id="authSourcesForm" method="post" action="{url op="updateAuthSources"}">
 
 <div id="sources">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	<tr valign="top" class="heading">
-		<td width="10%">{translate key="common.default"}</td>
-		<td width="30%">{translate key="common.title"}</td>
-		<td width="30%">{translate key="common.plugin"}</td>
-		<td width="30%" align="right">{translate key="common.action"}</td>
+	<tr class="heading">
+		<td>{translate key="common.default"}</td>
+		<td>{translate key="common.title"}</td>
+		<td>{translate key="common.plugin"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=sources item=auth}
-	<tr valign="top">
+	<tr>
 		<td><input type="radio" id="defaultAuthId_{$auth->getAuthId()}" name="defaultAuthId" value="{$auth->getAuthId()}"{if $auth->getDefault()} checked="checked"{assign var="defaultAuthId" value=$auth->getAuthId()}{/if} /></td>
 		<td><label for="defaultAuthId_{$auth->getAuthId()}">{$auth->getTitle()|escape}</label></td>
 		<td>{$auth->getPlugin()}</td>
@@ -59,7 +59,7 @@
 			<td colspan="2" align="right">{page_links anchor="sources" name="sources" iterator=$sources}</td>
 		</tr>
 	{/if}
-	<tr valign="top">
+	<tr>
 		<td><input type="radio" id="defaultAuthId_0" name="defaultAuthId" value="0"{if !$defaultAuthId} checked="checked"{/if} /></td>
 		<td colspan="1"><label for="defaultAuthId_0">{translate key="admin.auth.ojs"}</label></td>
 		<td colspan="2" align="right">

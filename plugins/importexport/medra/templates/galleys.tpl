@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">{literal}
+<script>{literal}
 	function toggleChecked() {
 		var elements = document.getElementById('galleysForm').elements;
 		for (var i=0; i < elements.length; i++) {
@@ -27,22 +27,22 @@
 
 <div id="galleys">
 	<p>{translate key="plugins.importexport.medra.workOrProduct"}</p>
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#galleysForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 		{rdelim});
 	</script>
 	<form class="pkp_form" action="{plugin_url path="exportGalleys"}" method="post" id="galleysForm">
-		<table width="100%" class="listing">
+		<table class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
 			</tr>
 			<tr class="heading" valign="bottom">
 				<td width="5%">&nbsp;</td>
-				<td width="25%">{translate key="issue.issue"}</td>
-				<td width="40%">{translate key="article.title"}</td>
-				<td width="25%">{translate key="article.authors"}</td>
+				<td>{translate key="issue.issue"}</td>
+				<td>{translate key="article.title"}</td>
+				<td>{translate key="article.authors"}</td>
 				<td width="5%" align="right">{translate key="common.action"}</td>
 			</tr>
 			<tr>
@@ -61,7 +61,7 @@
 					{capture assign="updateOrRegister"}{translate key="plugins.importexport.common.register"}{/capture}
 					{capture assign="updateOrRegisterDescription"}{translate key="plugins.importexport.common.registerDescription"}{/capture}
 				{/if}
-				<tr valign="top">
+				<tr>
 					<td><input type="checkbox" name="galleyId[]" value="{$galley->getId()}"/></td>
 					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 					<td><a href="{url page="article" op="view" path=$article->getId()|to_array:$galley->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$galley->getLabel()|cat:', '|cat:$language->getName()|cat:')'|strip_unsafe_html}</a></td>

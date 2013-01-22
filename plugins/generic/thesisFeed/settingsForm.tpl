@@ -18,7 +18,7 @@
 
 <h3>{translate key="plugins.generic.thesisfeed.settings"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#thesisFeedSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,7 +27,7 @@
 <form class="pkp_form" id="thesisFeedSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<script type="text/javascript">
+<script>
 	{literal}
 	<!--
 		function toggleLimitRecentItems(form) {
@@ -37,25 +37,25 @@
 	{/literal}
 </script>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.thesisfeed.settings.all"}</td>
+<table class="data">
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.thesisfeed.settings.all"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.thesisfeed.settings.homepage"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.thesisfeed.settings.homepage"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-thesis" value="thesis" {if $displayPage eq "thesis"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.thesisfeed.settings.thesis"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-thesis" value="thesis" {if $displayPage eq "thesis"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.thesisfeed.settings.thesis"}</td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="checkbox" name="limitRecentItems" id="limitRecentItems" value="1" onclick="toggleLimitRecentItems(this.form)"{if $limitRecentItems} checked="checked"{/if}/></td>
-		<td width="90%" class="value">
+	<tr>
+		<td class="label" align="right"><input type="checkbox" name="limitRecentItems" id="limitRecentItems" value="1" onclick="toggleLimitRecentItems(this.form)"{if $limitRecentItems} checked="checked"{/if}/></td>
+		<td class="value">
 		{translate key="plugins.generic.thesisfeed.settings.recentThesis1"} <input type="text" name="recentItems" id="recentItems" value="{$recentItems|escape}" {if not $limitRecentItems}disabled="disabled"{/if} size="2" maxlength="90" class="textField" />
 		{translate key="plugins.generic.thesisfeed.settings.recentThesis2"}</td>
 	</tr>

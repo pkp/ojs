@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 <!--
 {literal}
 function handleAnonymousCheckbox(theBox) {
@@ -39,24 +39,24 @@ function handleAnonymousCheckbox(theBox) {
 {include file="common/formErrors.tpl"}
 {assign var=parentId value=$parentId|default:"0"}
 <div id="commentForm">
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
-<table class="data" width="100%">
-	<tr valign="top">
-		<td class="label" width="20%"><label for="posterName">{translate key="comments.name"}</label></td>
-		<td class="value" width="80%"><input type="text" class="textField" name="posterName" id="posterName" value="{$posterName|escape}" size="40" maxlength="90" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><label for="posterName">{translate key="comments.name"}</label></td>
+		<td class="value"><input type="text" class="textField" name="posterName" id="posterName" value="{$posterName|escape}" size="40" maxlength="90" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="posterEmail">{translate key="comments.email"}</label></td>
 		<td class="value"><input type="text" class="textField" name="posterEmail" id="posterEmail" value="{$posterEmail|escape}" size="40" maxlength="90" /></td>
 	</tr>
 	{if $isUserLoggedIn && ($enableComments == COMMENTS_ANONYMOUS || $enableComments == COMMENTS_UNAUTHENTICATED)}
-	<tr valign="top">
+	<tr>
 		<td class="label">&nbsp;</td>
 		<td class="value">
 			<input type="checkbox" name="anonymous" id="anonymous" onclick="handleAnonymousCheckbox(this)">
@@ -64,19 +64,19 @@ function handleAnonymousCheckbox(theBox) {
 		</td>
 	</tr>
 	{/if}
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="title">{translate key="comments.title"}</label></td>
 		<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label"><label for="commentBody">{translate key="comments.body"}</label></td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label"><label for="commentBody">{translate key="comments.body"}</label></td>
+		<td class="value">
 			<textarea class="textArea" name="body" id="commentBody" rows="5" cols="60">{$commentBody|escape}</textarea>
 		</td>
 	</tr>
 
 {if $captchaEnabled}
-	<tr valign="top">
+	<tr>
 		<td class="label" valign="top">{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField"}</td>
 		<td class="value">
 			{$reCaptchaHtml}

@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function sortSearch(heading, direction) {
@@ -27,7 +27,7 @@ function sortSearch(heading, direction) {
 
 <div id="selectReviewer">
 <h3>{translate key="editor.article.selectReviewer"}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -52,21 +52,21 @@ function sortSearch(heading, direction) {
 <p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.enrollReviewer"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="createReviewer" path=$articleId}">{translate key="sectionEditor.review.createReviewer"}</a>{foreach from=$reviewerDatabaseLinks item="link"}{if !empty($link.title) && !empty($link.url)}&nbsp;|&nbsp;<a href="{$link.url|escape}" target="_new" class="action">{$link.title|escape}</a>{/if}{/foreach}</p>
 
 <div id="reviewers">
-<table class="listing" width="100%">
+<table class="listing">
 {assign var=numCols value=7}
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+1}
 {/if}
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="20%">{sort_search key="user.name" sort="reviewerName"}</td>
+	<td>{sort_search key="user.name" sort="reviewerName"}</td>
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
 		<td width="7%">{sort_search key="reviewer.averageQuality" sort="quality"}</td>
 	{/if}
 	<td width="7%">{sort_search key="reviewer.completedReviews" sort="done"}</td>
 	<td width="7%">{sort_search key="editor.submissions.averageTime" sort="average"}</td>
-	<td width="13%">{sort_search key="editor.submissions.lastAssigned" sort="latest"}</td>
+	<td>{sort_search key="editor.submissions.lastAssigned" sort="latest"}</td>
 	<td width="5%">{sort_search key="common.active" sort="active"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
@@ -76,7 +76,7 @@ function sortSearch(heading, direction) {
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
-<tr valign="top">
+<tr>
 	<td><a class="action" href="{url op="userProfile" path=$userId}">{$reviewer->getFullName()|escape}</a></td>
 	<td>{$reviewer->getInterestString()|escape}</td>
 	{if $rateReviewerOnQuality}<td>

@@ -21,27 +21,27 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#versionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="versionForm" action="{if $versionId}{url op="saveVersion" path=$versionId}{else}{url op="createVersion" path="save"}{/if}" method="post">
-<table class="data" width="100%">
-	<tr valign="top">
-		<td class="label" width="20%"><label for="title">{translate key="rt.version.title"}</label></td>
-		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
+<table class="data">
+	<tr>
+		<td class="label"><label for="title">{translate key="rt.version.title"}</label></td>
+		<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="key">{translate key="rt.version.key"}</label></td>
 		<td class="value"><input type="text" class="textField" name="key" id="key" value="{$key|escape}" size="60" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="locale">{translate key="rt.version.locale"}</label></td>
 		<td class="value"><input type="text" class="textField" name="locale" id="locale" maxlength="5" size="5" value="{$locale|escape}" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="description">{translate key="rt.version.description"}</label></td>
 		<td class="value">
 			<textarea class="textArea richContent" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>

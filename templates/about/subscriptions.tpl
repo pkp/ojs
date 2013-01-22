@@ -45,21 +45,21 @@
 <div id="availableSubscriptionTypes">
 <h3>{translate key="about.subscriptions.individual"}</h3>
 <p>{translate key="subscriptions.individualDescription"}</p>
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="about.subscriptionTypes.name"}</td>
-		<td width="20%">{translate key="about.subscriptionTypes.format"}</td>
-		<td width="25%">{translate key="about.subscriptionTypes.duration"}</td>
-		<td width="15%">{translate key="about.subscriptionTypes.cost"}</td>
+		<td>{translate key="about.subscriptionTypes.name"}</td>
+		<td>{translate key="about.subscriptionTypes.format"}</td>
+		<td>{translate key="about.subscriptionTypes.duration"}</td>
+		<td>{translate key="about.subscriptionTypes.cost"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=individualSubscriptionTypes item=subscriptionType}
-		<tr valign="top">
+		<tr>
 			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
 			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
@@ -75,21 +75,21 @@
 {if !$institutionalSubscriptionTypes->wasEmpty()}
 <h3>{translate key="about.subscriptions.institutional"}</h3>
 <p>{translate key="subscriptions.institutionalDescription"}</p>
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="about.subscriptionTypes.name"}</td>
-		<td width="20%">{translate key="about.subscriptionTypes.format"}</td>
-		<td width="25%">{translate key="about.subscriptionTypes.duration"}</td>
-		<td width="15%">{translate key="about.subscriptionTypes.cost"}</td>
+		<td>{translate key="about.subscriptionTypes.name"}</td>
+		<td>{translate key="about.subscriptionTypes.format"}</td>
+		<td>{translate key="about.subscriptionTypes.duration"}</td>
+		<td>{translate key="about.subscriptionTypes.cost"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=institutionalSubscriptionTypes item=subscriptionType}
-		<tr valign="top">
+		<tr>
 			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
 			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>

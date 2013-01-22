@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 {/literal}
@@ -21,20 +21,20 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 <br/>
 
 <div id="sections">
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="60%">{translate key="section.title"}</td>
-		<td width="25%">{translate key="section.abbreviation"}</td>
-		<td width="15%" align="right">{translate key="common.action"}</td>
+		<td>{translate key="section.title"}</td>
+		<td>{translate key="section.abbreviation"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 {iterate from=sections item=section name=sections}
-	<tr valign="top" id="section-{$section->getId()}" class="data">
+	<tr id="section-{$section->getId()}" class="data">
 		<td class="drag">{$section->getLocalizedTitle()|escape}</td>
 		<td class="drag">{$section->getLocalizedAbbrev()|escape}</td>
 		<td align="right" class="nowrap">

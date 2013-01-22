@@ -28,7 +28,7 @@
 	{else}<h3>{$journal->getLocalizedName()|escape}</h3>{/if}
 	{assign var="journalId" value=$journal->getId()}
 	{assign var="journalPath" value=$journal->getPath()}
-	<table width="100%" class="info">
+	<table class="info">
 		{if $isValid.JournalManager.$journalId}
 			<tr>
 				<td>&#187; <a href="{url journal=$journalPath page="manager"}">{translate key="user.role.manager"}</a></td>
@@ -40,7 +40,7 @@
 		{/if}
 		{if $isValid.SubscriptionManager.$journalId}
 			<tr>
-				<td width="20%" colspan="5">&#187; <a href="{url journal=$journalPath page="subscriptionManager"}">{translate key="user.role.subscriptionManager"}</a></td>
+				<td colspan="5">&#187; <a href="{url journal=$journalPath page="subscriptionManager"}">{translate key="user.role.subscriptionManager"}</a></td>
 			</tr>
 		{/if}
 		{if $isValid.Editor.$journalId || $isValid.SectionEditor.$journalId || $isValid.LayoutEditor.$journalId || $isValid.Copyeditor.$journalId || $isValid.Proofreader.$journalId}
@@ -155,11 +155,11 @@
 		{/if}
 		{* Add a row to the bottom of each table to ensure all have same width*}
 		<tr>
-			<td width="25%"></td>
-			<td width="12%"></td>
-			<td width="12%"></td>
-			<td width="12%"></td>
-			<td width="39%"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 			
 	</table>

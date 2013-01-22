@@ -13,7 +13,7 @@
 </ul>
 </form>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#booksForReviewForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -40,24 +40,24 @@
 	{assign var=colspan value="4"}
 	{assign var=colspanPage value="2"}
 {/if}
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="{$colspan}" class="headseparator">&nbsp;</td>
 	</tr>
 {if $mode == $smarty.const.BFR_MODE_FULL}
 	<tr class="heading" valign="bottom">
-		<td width="30%">{translate key="plugins.generic.booksForReview.editor.title"}</td>
+		<td>{translate key="plugins.generic.booksForReview.editor.title"}</td>
 		<td width="7%">{translate key="plugins.generic.booksForReview.editor.status"}</td>
-		<td width="25%">{translate key="plugins.generic.booksForReview.editor.bookReviewer"}</td>
-		<td width="15%">{translate key="plugins.generic.booksForReview.editor.dueDate"}</td>
-		<td width="18%" align="right">{translate key="plugins.generic.booksForReview.editor.submission"}</td>
+		<td>{translate key="plugins.generic.booksForReview.editor.bookReviewer"}</td>
+		<td>{translate key="plugins.generic.booksForReview.editor.dueDate"}</td>
+		<td align="right">{translate key="plugins.generic.booksForReview.editor.submission"}</td>
 		<td width="5%" align="right">{translate key="plugins.generic.booksForReview.editor.editor"}</td>
 	</tr>
 {else}
 	<tr class="heading" valign="bottom">
-		<td width="70%">{translate key="plugins.generic.booksForReview.editor.title"}</td>
+		<td>{translate key="plugins.generic.booksForReview.editor.title"}</td>
 		<td width="7%">{translate key="plugins.generic.booksForReview.editor.status"}</td>
-		<td width="18%" align="right">{translate key="plugins.generic.booksForReview.editor.submission"}</td>
+		<td align="right">{translate key="plugins.generic.booksForReview.editor.submission"}</td>
 		<td width="5%" align="right">{translate key="plugins.generic.booksForReview.editor.editor"}</td>
 {/if}
 	<tr>

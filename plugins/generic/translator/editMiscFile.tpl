@@ -13,7 +13,7 @@
 {/strip}
 
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#editor').pkpHandler('$.pkp.controllers.form.FormHandler');

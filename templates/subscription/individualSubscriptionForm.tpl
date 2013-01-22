@@ -21,7 +21,7 @@
 {/strip}
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#subscriptionForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -34,11 +34,11 @@
 
 {include file="common/formErrors.tpl"}
 
-<table class="data" width="100%">
+<table class="data">
 {if count($formLocales) > 1}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{if $subscriptionId}
 				{url|assign:"formUrl" op="editSubscription" path="individual"|to_array:$subscriptionId userId=$userId escape=false}
 			{else}
@@ -53,7 +53,7 @@
 
 {* For new subscriptions, select end date for default subscription type *}
 {if !$subscriptionId}
-	<script type="text/javascript">
+	<script>
 	<!--
 	chooseEndDate();
 	// -->
@@ -65,10 +65,10 @@
 <div class="separator"></div>
 <br />
 
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
-	<td width="80%" class="value">
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
+	<td class="value">
 		{assign var=emailString value="$userFullName <$userEmail>"}
 		{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
 		{$username|escape}&nbsp;&nbsp;{icon name="mail" url=$url}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="individual" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="individual"}{/if}" class="action">{translate key="common.select"}</a>
@@ -82,10 +82,10 @@
 <div class="separator"></div>
 <br />
 
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="notes" key="manager.subscriptions.form.notes"}</td>
-	<td width="80%" class="value"><textarea name="notes" id="notes" cols="40" rows="6" class="textArea richContent">{$notes|escape}</textarea></td>
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="notes" key="manager.subscriptions.form.notes"}</td>
+	<td class="value"><textarea name="notes" id="notes" cols="40" rows="6" class="textArea richContent">{$notes|escape}</textarea></td>
 </tr>
 </table>
 

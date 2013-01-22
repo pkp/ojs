@@ -51,7 +51,7 @@
 {/foreach}
 
 <br/>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#previewReviewForm').pkpHandler('$.pkp.controllers.form.FormHandler');

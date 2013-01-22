@@ -80,8 +80,8 @@ class TinyMCEPlugin extends GenericPlugin {
 		}
 
 		$tinymceScript = '
-		<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
-		<script language="javascript" type="text/javascript">
+		<script src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
+		<script>
 			tinyMCE_GZ.init({
 				relative_urls : "false",
 				plugins : "paste,jbimages,fullscreen",
@@ -90,7 +90,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				disk_cache : true
 			});
 		</script>
-		<script language="javascript" type="text/javascript">
+		<script>
 			tinyMCE.init({
 				entity_encoding : "raw",
 				plugins : "paste,jbimages,fullscreen",

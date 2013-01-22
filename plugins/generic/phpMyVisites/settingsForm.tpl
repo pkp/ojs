@@ -18,7 +18,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#phpMyVisitesSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,15 +27,15 @@
 <form class="pkp_form" id="phpMyVisitesSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="phpmvUrl" required="true" key="plugins.generic.phpmv.manager.settings.phpmvUrl"}</td>
-		<td width="80%" class="value"><input type="text" name="phpmvUrl" id="phpmvUrl" value="{if $phpmvUrl}{$phpmvUrl|escape}{else}http://{/if}" size="30" maxlength="255" class="textField" />
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="phpmvUrl" required="true" key="plugins.generic.phpmv.manager.settings.phpmvUrl"}</td>
+		<td class="value"><input type="text" name="phpmvUrl" id="phpmvUrl" value="{if $phpmvUrl}{$phpmvUrl|escape}{else}http://{/if}" size="30" maxlength="255" class="textField" />
 		<br />
 		<span class="instruct">{translate key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions"}</span>
 	</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="phpmvSiteId" required="true" key="plugins.generic.phpmv.manager.settings.phpmvSiteId"}</td>
 		<td class="value"><input type="text" name="phpmvSiteId" id="phpmvSiteId" value="{$phpmvSiteId|escape}" size="10" maxlength="10" class="textField" />
 		<br />

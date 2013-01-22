@@ -29,7 +29,7 @@
 		{if $implicitAuth}
 			<a href="{url page="login" op="implicitAuthLogin"}">Journals Login</a>
 		{else}
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#userBlockForm').pkpHandler('$.pkp.controllers.form.FormHandler');

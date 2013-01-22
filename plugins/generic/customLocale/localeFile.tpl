@@ -18,7 +18,7 @@
 {foreach from=referenceLocaleContents key=key item=value}<input type="hidden" name="{$key|escape}" value="{$key|escape}"/>{/foreach}
 </form>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#localeSearch').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -33,7 +33,7 @@
 <br />
 <p>{translate key="plugins.generic.customLocale.fileDescription"}</p>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#locale').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -44,17 +44,17 @@
 
 <div id="localeContents">
 <h3>{translate key="plugins.generic.customLocale.file.edit" filename=$filename}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="35%">{translate key="plugins.generic.customLocale.localeKey"}</td>
-		<td width="60%">{translate key="plugins.generic.customLocale.localeKeyValue"}</td>
+		<td>{translate key="plugins.generic.customLocale.localeKey"}</td>
+		<td>{translate key="plugins.generic.customLocale.localeKeyValue"}</td>
 	</tr>
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=referenceLocaleContents key=key item=referenceValue}
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
-	<tr valign="top"{if $key == $searchKey} class="highlight"{/if}>
+	<tr{if $key == $searchKey} class="highlight"{/if}>
 		<td>{$key|escape}</td>
 		<td>
 			<input type="hidden" name="changes[]" value="{$key|escape}" />

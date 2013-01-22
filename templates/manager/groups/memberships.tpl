@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<script type="text/javascript">
+<script>
 {literal}
 $(document).ready(function() { setupTableDND("#dragTable", {/literal}"{url op=moveMembership path=$group->getId()}"{literal}); });
 {/literal}
@@ -27,20 +27,20 @@ $(document).ready(function() { setupTableDND("#dragTable", {/literal}"{url op=mo
 <br/>
 
 <div id="membership">
-<table width="100%" class="listing" id="dragTable">
+<table class="listing" id="dragTable">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="85%">{translate key="user.name"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="user.name"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=memberships item=membership}
 	{assign var=user value=$membership->getUser()}
-	<tr valign="top" class="data" id=membership-{$membership->getUserId()}>
+	<tr class="data" id=membership-{$membership->getUserId()}>
 		<td class="drag">{$user->getFullName()|escape}</td>
 		<td>
 			<a href="{url op="deleteMembership" path=$membership->getGroupId()|to_array:$membership->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveMembership" d=u path=$group->getId() id=$user->getId()}">&uarr;</a>&nbsp;<a href="{url op="moveMembership" d=d path=$group->getId() id=$user->getId()}">&darr;</a>

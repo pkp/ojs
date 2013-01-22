@@ -18,7 +18,7 @@
 	<input type="hidden" name="userId" value=""/>
 </form>
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function confirmAndPrompt(userId) {
@@ -44,7 +44,7 @@ function toggleChecked() {
 </script>
 
 {if not $omitSearch}
-	<script type="text/javascript">
+	<script>
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -66,7 +66,7 @@ function toggleChecked() {
 	<p>{foreach from=$alphaList item=letter}<a href="{url op="enrollSearch" searchInitial=$letter roleId=$roleId}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="enrollSearch" roleId=$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 {/if}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#enrollForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -96,7 +96,7 @@ function toggleChecked() {
 
 	</select>
 	</p>
-	<script type="text/javascript">
+	<script>
 	<!--
 	function enrollUser(userId) {ldelim}
 		var fakeUrl = '{url op="enroll" path="ROLE_ID" userId="USER_ID"}';
@@ -115,20 +115,20 @@ function toggleChecked() {
 {/if}
 
 <div id="users">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="5%">&nbsp;</td>
-	<td width="25%">{sort_heading key="user.username" sort="username"}</td>
-	<td width="30%">{sort_heading key="user.name" sort="name"}</td>
-	<td width="10%">{sort_heading key="user.email" sort="email"}</td>
-	<td width="10%" align="right">{translate key="common.action"}</td>
+	<td>{sort_heading key="user.username" sort="username"}</td>
+	<td>{sort_heading key="user.name" sort="name"}</td>
+	<td>{sort_heading key="user.email" sort="email"}</td>
+	<td align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getId()}
 {assign var="stats" value=$statistics[$userid]}
-<tr valign="top">
+<tr>
 	<td><input type="checkbox" name="users[]" value="{$user->getId()}" /></td>
 	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()|escape}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>

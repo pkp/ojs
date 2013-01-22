@@ -18,7 +18,7 @@
 
 <h3>{translate key="plugins.generic.webfeed.settings"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#webFeedSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,29 +27,29 @@
 <form class="pkp_form" id="webFeedSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.all"}</td>
+<table class="data">
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.webfeed.settings.all"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.homepage"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.webfeed.settings.homepage"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-issue" value="issue" {if $displayPage eq "issue"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.issue"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayPage" id="displayPage-issue" value="issue" {if $displayPage eq "issue"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.webfeed.settings.issue"}</td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayItems" id="displayItems-issue" value="issue" {if $displayItems ne "recent"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.currentIssue"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayItems" id="displayItems-issue" value="issue" {if $displayItems ne "recent"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.webfeed.settings.currentIssue"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayItems" id="displayItems-recent" value="recent" {if $displayItems eq "recent"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">
+	<tr>
+		<td class="label" align="right"><input type="radio" name="displayItems" id="displayItems-recent" value="recent" {if $displayItems eq "recent"}checked="checked" {/if}/></td>
+		<td class="value">
 		<input type="text" name="recentItems" id="recentItems" value="{$recentItems|escape}" size="2" maxlength="90" class="textField" />
 		{translate key="plugins.generic.webfeed.settings.recentArticles"}</td>
 	</tr>

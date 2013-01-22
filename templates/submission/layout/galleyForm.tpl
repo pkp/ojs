@@ -15,7 +15,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#galleyForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -25,24 +25,24 @@
 {include file="common/formErrors.tpl"}
 <div id="galleyFileData">
 <p>{translate key="submission.layout.galleyFileData"}</p>
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="label" required="true" key="submission.layout.galleyLabel"}</td>
-	<td width="80%" class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="label" required="true" key="submission.layout.galleyLabel"}</td>
+	<td class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>
 </tr>
 
 {if $enablePublicGalleyId}
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="publicGalleyId" key="submission.layout.publicGalleyId"}</td>
 		<td class="value"><input type="text" name="publicGalleyId" id="publicGalleyId" value="{$publicGalleyId|escape}" size="20" maxlength="255" class="textField" /></td>
 	</tr>
 {/if}{* $enablePublicGalleyId *}
 
-<tr valign="top">
+<tr>
 	<td class="label">{fieldLabel name="galleyLocale" required="true" key="common.language"}</td>
 	<td class="value">
 		<select name="galleyLocale" id="galleyLocale" class="selectMenu">
@@ -52,33 +52,33 @@
 </tr>
 
 {if $galley->getRemoteURL()}
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="remoteURL" required="true" key="submission.layout.galleyRemoteURL"}</td>
 		<td class="value"><input type="text" name="remoteURL" id="remoteURL" value="{$galley->getRemoteURL()|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 {else}
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.fileName"}</td>
 		<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.originalFileName"}</td>
 		<td class="value">{$galley->getOriginalFileName()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.fileType"}</td>
 		<td class="value">{$galley->getFileType()|escape}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.fileSize"}</td>
 		<td class="value">{$galley->getNiceFileSize()}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{translate key="common.dateUploaded"}</td>
 		<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
 	</tr>
 
-	<tr valign="top">
+	<tr>
 		<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
 		<td class="value">
 			<input type="file" name="galleyFile" id="galleyFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}
@@ -104,21 +104,21 @@
 
 {assign var=styleFile value=$galley->getStyleFile()}
 
-<table class="data" width="100%">
+<table class="data">
 {if $styleFile}
-<tr valign="top">
-	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
+<tr>
+	<td class="label">{translate key="common.fileName"}</td>
+	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="common.fileSize"}</td>
 	<td class="value">{$styleFile->getNiceFileSize()}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td class="label">{translate key="common.dateUploaded"}</td>
 	<td class="value">{$styleFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
-<tr valign="top">
+<tr>
 	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="deleteStyleFile" value="1"{if $deleteStyleFile} checked="checked"{/if} />&nbsp;
@@ -126,15 +126,15 @@
 	</td>
 </tr>
 {else}
-<tr valign="top">
+<tr>
 	<td class="nodata">{translate key="submission.layout.noStyleFile"}</td>
 </tr>
 {/if}
 </table>
 
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="styleFile" key="common.upload"}</td>
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="styleFile" key="common.upload"}</td>
 	<td class="value">
 		<input type="file" name="styleFile" id="styleFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}
 	</td>
@@ -145,18 +145,18 @@
 <div id="galleyImages">
 <h4>{translate key="submission.layout.galleyImages"}</h4>
 
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="25%">{translate key="common.fileName"}</td>
-	<td width="25%">{translate key="common.originalFileName"}</td>
-	<td width="20%">{translate key="common.fileSize"}</td>
-	<td width="20%">{translate key="common.dateUploaded"}</td>
-	<td width="10%" align="right">{translate key="common.action"}</td>
+	<td>{translate key="common.fileName"}</td>
+	<td>{translate key="common.originalFileName"}</td>
+	<td>{translate key="common.fileSize"}</td>
+	<td>{translate key="common.dateUploaded"}</td>
+	<td align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
-<tr valign="top">
+<tr>
 	<td><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
 	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>

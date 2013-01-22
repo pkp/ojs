@@ -28,7 +28,7 @@
 {if $success}
 	<p><span class="formSuccess">{translate key="$success"}</span></p>
 {/if}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#notificationSettings').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -36,12 +36,12 @@
 </script>
 <form class="pkp_form" id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
 
-<table class="data" width="100%">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td class="label" width="5%">{fieldLabel name="email" key="user.email"}</td>
 		<td class="value" width="45%"><input type="text" id="email" name="email" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label" width="5%">{fieldLabel name="confirmEmail" key="user.confirmEmail"}</td>
 		<td class="value" width="45%"><input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="textField" /></td>
 	</tr>
@@ -53,7 +53,7 @@
 			</td>
 		</tr>
 	{/if}{* $captchaEnabled *}
-	<tr valign="top">
+	<tr>
 		<td width="5%">&nbsp;</td>
 		<td><p><input type="submit" value="{translate key="form.submit"}" class="button defaultButton" /></p></td>
 	</tr>

@@ -10,7 +10,7 @@
 
 <div class="separator"></div>
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -34,7 +34,7 @@ function toggleChecked() {
 
 <div id="referrals">
 <form action="{url page="referral" op="bulkAction"}" method="post">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td class="headseparator" colspan="8">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="3%">&nbsp;</td>
@@ -44,12 +44,12 @@ function toggleChecked() {
 		<td>{translate key="article.article}</td>
 		<td>{translate key="common.title"}</td>
 		<td>{translate key="common.status"}</td>
-		<td width="10%" align="right">{translate key="common.action"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td class="headseparator" colspan="8">&nbsp;</td></tr>
 {iterate from=referrals item=referral}
 	{assign var=articleId value=$referral->getArticleId()}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="referralId[]" value="{$referral->getId()}"/></td>
 		<td>{$referral->getDateAdded()|date_format:$dateFormatShort}</td>
 		<td>{$referral->getLinkCount()|escape}</td>
@@ -61,12 +61,12 @@ function toggleChecked() {
 			<a class="action" href="{url page="referral" op="editReferral" path=$referral->getId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getId()}">{translate key="common.delete"}</a>
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td colspan="8" class="{if $referrals->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $referrals->wasEmpty()}
-	<tr valign="top">
+	<tr>
 		<td colspan="8" class="nodata">
 			{if $referralFilter == null}
 				{translate key="plugins.generic.referral.all.empty"}
@@ -79,7 +79,7 @@ function toggleChecked() {
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td colspan="8" class="endseparator">&nbsp;</td>
 	</tr>
 {else}

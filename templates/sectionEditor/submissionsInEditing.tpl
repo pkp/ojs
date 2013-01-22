@@ -8,17 +8,17 @@
  *
  *}
 <div id="submissions">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 	<td width="5%">{sort_search key="common.id" sort="id"}</td>
 		<td width="5%">{sort_search key="submissions.submit" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="20%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="25%">{sort_search key="article.title" sort="title"}</td>
-		<td width="10%">{sort_search key="submission.copyedit" sort="subCopyedit"}</td>
-		<td width="10%">{sort_search key="submission.layout" sort="subLayout"}</td>
-		<td width="10%">{sort_search key="submissions.proof" sort="subProof"}</td>
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
+		<td>{sort_search key="submission.copyedit" sort="subCopyedit"}</td>
+		<td>{sort_search key="submission.layout" sort="subLayout"}</td>
+		<td>{sort_search key="submissions.proof" sort="subProof"}</td>
 	</tr>
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 
@@ -29,7 +29,7 @@
 	{assign var="copyeditorFinalSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_FINAL')}
 	{assign var="articleId" value=$submission->getId()}
 	{assign var="highlightClass" value=$submission->getHighlightClass()}
-	<tr valign="top"{if $highlightClass} class="{$highlightClass|escape}"{/if}>
+	<tr{if $highlightClass} class="{$highlightClass|escape}"{/if}>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

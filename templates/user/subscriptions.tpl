@@ -37,30 +37,30 @@
 {if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 <h3>{translate key="user.subscriptions.subscriptionStatus"}</h3>
 <p>{translate key="user.subscriptions.statusInformation"}</p>
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="30%">{translate key="user.subscriptions.status"}</td>
-		<td width="70%">{translate key="user.subscriptions.statusDescription"}</td>
+		<td>{translate key="user.subscriptions.status"}</td>
+		<td>{translate key="user.subscriptions.statusDescription"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>{translate key="subscriptions.status.needsInformation"}</td>
 		<td>{translate key="user.subscriptions.status.needsInformationDescription"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>{translate key="subscriptions.status.needsApproval"}</td>
 		<td>{translate key="user.subscriptions.status.needsApprovalDescription"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>{translate key="subscriptions.status.awaitingManualPayment"}</td>
 		<td>{translate key="user.subscriptions.status.awaitingManualPaymentDescription"}</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td>{translate key="subscriptions.status.awaitingOnlinePayment"}</td>
 		<td>{translate key="user.subscriptions.status.awaitingOnlinePaymentDescription"}</td>
 	</tr>
@@ -73,12 +73,12 @@
 {if $individualSubscriptionTypesExist}
 	<h3>{translate key="user.subscriptions.individualSubscriptions"}</h3>
 	<p>{translate key="subscriptions.individualDescription"}</p>
-	<table width="100%" class="info">
+	<table class="info">
 	{if $userIndividualSubscription}
-		<tr valign="top">
-			<td width="25%">{$userIndividualSubscription->getSubscriptionTypeName()|escape}</td>
-			<td width="30%">&nbsp;</td>
-			<td width="25%">
+		<tr>
+			<td>{$userIndividualSubscription->getSubscriptionTypeName()|escape}</td>
+			<td>&nbsp;</td>
+			<td>
 			{assign var="subscriptionStatus" value=$userIndividualSubscription->getStatus()}
 			{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
@@ -96,7 +96,7 @@
 				{/if}
 			{/if}
 			</td>
-			<td width="20%" align="right">
+			<td align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 					<a class="action" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
@@ -112,11 +112,11 @@
 			</td>
 		</tr>
 	{elseif $journalPaymentsEnabled && $acceptSubscriptionPayments}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" align="left"><a class="action" href="{url op="purchaseSubscription" path="individual"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td> 
 		</tr>
 	{else}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td> 
 		</tr>
 	{/if}
@@ -126,13 +126,13 @@
 {if $institutionalSubscriptionTypesExist}
 	<h3>{translate key="user.subscriptions.institutionalSubscriptions"}</h3>
 	<p>{translate key="subscriptions.institutionalDescription"}{if $journalPaymentsEnabled && $acceptSubscriptionPayments} {translate key="subscriptions.institutionalOnlinePaymentDescription"}{/if}</p>
-	<table width="100%" class="info">
+	<table class="info">
 	{if $userInstitutionalSubscriptions}
 		{iterate from=userInstitutionalSubscriptions item=userInstitutionalSubscription}
-		<tr valign="top">
-			<td width="25%">{$userInstitutionalSubscription->getSubscriptionTypeName()|escape}</td>
-			<td width="30%">{$userInstitutionalSubscription->getInstitutionName()|escape}</td>
-			<td width="25%">
+		<tr>
+			<td>{$userInstitutionalSubscription->getSubscriptionTypeName()|escape}</td>
+			<td>{$userInstitutionalSubscription->getInstitutionName()|escape}</td>
+			<td>
 			{assign var="subscriptionStatus" value=$userInstitutionalSubscription->getStatus()}
 			{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
@@ -152,7 +152,7 @@
 				{/if}
 			{/if}
 			</td>
-			<td width="20%" align="right">
+			<td align="right">
 			{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
 				{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 					<a class="action" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
@@ -171,11 +171,11 @@
 		{/iterate}
 	{/if}
 	{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" align="left"><a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td> 
 		</tr>
 	{else}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td> 
 		</tr>
 	{/if}

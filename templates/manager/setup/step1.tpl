@@ -9,7 +9,7 @@
  *}
 {assign var="pageTitle" value="manager.setup.gettingDownTheDetails"}
 {include file="manager/setup/setupHeader.tpl"}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -20,10 +20,10 @@
 
 {if count($formLocales) > 1}
 <div id="locales">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{url|assign:"setupFormUrl" op="setup" path="1" escape=false}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
@@ -35,41 +35,41 @@
 <div id="generalInformation">
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="name" required="true" key="manager.setup.journalTitle"}</td>
-		<td width="80%" class="value"><input type="text" name="name[{$formLocale|escape}]" id="name" value="{$name[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="name" required="true" key="manager.setup.journalTitle"}</td>
+		<td class="value"><input type="text" name="name[{$formLocale|escape}]" id="name" value="{$name[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="acronym" required="true" key="manager.setup.journalInitials"}</td>
-		<td width="80%" class="value"><input type="text" name="acronym[{$formLocale|escape}]" id="acronym" value="{$acronym[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="acronym" required="true" key="manager.setup.journalInitials"}</td>
+		<td class="value"><input type="text" name="acronym[{$formLocale|escape}]" id="acronym" value="{$acronym[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="abbreviation" key="manager.setup.journalAbbreviation"}</td>
-		<td width="80%" class="value"><input type="text" name="abbreviation[{$formLocale|escape}]" id="abbreviation" value="{$abbreviation[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="abbreviation" key="manager.setup.journalAbbreviation"}</td>
+		<td class="value"><input type="text" name="abbreviation[{$formLocale|escape}]" id="abbreviation" value="{$abbreviation[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
-		<td width="80%" class="value"><input type="text" name="printIssn" id="printIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
+		<td class="value"><input type="text" name="printIssn" id="printIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="onlineIssn" key="manager.setup.onlineIssn"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="onlineIssn" key="manager.setup.onlineIssn"}</td>
+		<td class="value">
 			<input type="text" name="onlineIssn" id="onlineIssn" value="{$onlineIssn|escape}" size="8" maxlength="16" class="textField" />
 			<br />
 			<span class="instruct">{translate key="manager.setup.issnDescription"}</span>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
+		<td class="value">
 			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea richContent">{$mailingAddress|escape}</textarea>
 			<br />
 			<span class="instruct">{translate key="manager.setup.mailingAddressDescription"}</span>
 		</td>
 	</tr>
 	{if $categoriesEnabled}
-		<tr valign="top">
+		<tr>
 			<td class="label">{fieldLabel name=categories key="manager.setup.categories"}</td>
 			<td class="value">
 				<select id="categories" name="categories[]" class="selectMenu" multiple="multiple">
@@ -90,34 +90,34 @@
 
 <p>{translate key="manager.setup.principalContactDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactName" key="user.name" required="true"}</td>
-		<td width="80%" class="value"><input type="text" name="contactName" id="contactName" value="{$contactName|escape}" size="30" maxlength="60" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="contactName" key="user.name" required="true"}</td>
+		<td class="value"><input type="text" name="contactName" id="contactName" value="{$contactName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactTitle" key="user.title"}</td>
-		<td width="80%" class="value"><input type="text" name="contactTitle[{$formLocale|escape}]" id="contactTitle" value="{$contactTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactTitle" key="user.title"}</td>
+		<td class="value"><input type="text" name="contactTitle[{$formLocale|escape}]" id="contactTitle" value="{$contactTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactAffiliation" key="user.affiliation"}</td>
-		<td width="80%" class="value"><textarea name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" rows="5" cols="40" class="textArea">{$contactAffiliation[$formLocale]|escape}</textarea></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactAffiliation" key="user.affiliation"}</td>
+		<td class="value"><textarea name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" rows="5" cols="40" class="textArea">{$contactAffiliation[$formLocale]|escape}</textarea></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactEmail" key="user.email" required="true"}</td>
-		<td width="80%" class="value"><input type="text" name="contactEmail" id="contactEmail" value="{$contactEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactEmail" key="user.email" required="true"}</td>
+		<td class="value"><input type="text" name="contactEmail" id="contactEmail" value="{$contactEmail|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactPhone" key="user.phone"}</td>
-		<td width="80%" class="value"><input type="text" name="contactPhone" id="contactPhone" value="{$contactPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactPhone" key="user.phone"}</td>
+		<td class="value"><input type="text" name="contactPhone" id="contactPhone" value="{$contactPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactFax" key="user.fax"}</td>
-		<td width="80%" class="value"><input type="text" name="contactFax" id="contactFax" value="{$contactFax|escape}" size="15" maxlength="24" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactFax" key="user.fax"}</td>
+		<td class="value"><input type="text" name="contactFax" id="contactFax" value="{$contactFax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactMailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value"><textarea name="contactMailingAddress[{$formLocale|escape}]" id="contactMailingAddress" rows="3" cols="40" class="textArea richContent">{$contactMailingAddress[$formLocale]|escape}</textarea></td>
+	<tr>
+		<td class="label">{fieldLabel name="contactMailingAddress" key="common.mailingAddress"}</td>
+		<td class="value"><textarea name="contactMailingAddress[{$formLocale|escape}]" id="contactMailingAddress" rows="3" cols="40" class="textArea richContent">{$contactMailingAddress[$formLocale]|escape}</textarea></td>
 	</tr>
 </table>
 </div>
@@ -129,44 +129,44 @@
 
 <p>{translate key="manager.setup.technicalSupportContactDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="supportName" key="user.name" required="true"}</td>
-		<td width="80%" class="value"><input type="text" name="supportName" id="supportName" value="{$supportName|escape}" size="30" maxlength="60" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="supportName" key="user.name" required="true"}</td>
+		<td class="value"><input type="text" name="supportName" id="supportName" value="{$supportName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="supportEmail" key="user.email" required="true"}</td>
-		<td width="80%" class="value"><input type="text" name="supportEmail" id="supportEmail" value="{$supportEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="supportEmail" key="user.email" required="true"}</td>
+		<td class="value"><input type="text" name="supportEmail" id="supportEmail" value="{$supportEmail|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="supportPhone" key="user.phone"}</td>
-		<td width="80%" class="value"><input type="text" name="supportPhone" id="supportPhone" value="{$supportPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="supportPhone" key="user.phone"}</td>
+		<td class="value"><input type="text" name="supportPhone" id="supportPhone" value="{$supportPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 </table>
 </div>
 <div class="separator"></div>
 <div id="setupEmails">
 <h3>1.4 {translate key="manager.setup.emails"}</h3>
-<table width="100%" class="data">
-	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailHeaderDescription"}<br />&nbsp;</td></tr>
-	<tr valign="top">
+<table class="data">
+	<tr><td colspan="2">{translate key="manager.setup.emailHeaderDescription"}<br />&nbsp;</td></tr>
+	<tr>
 		<td class="label">{fieldLabel name="emailHeader" key="manager.setup.emailHeader"}</td>
 		<td class="value">
 			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
 		</td>
 	</tr>
-	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
-	<tr valign="top">
+	<tr><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
+	<tr>
 		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
 		<td class="value">
 			<textarea name="emailSignature" id="emailSignature" rows="3" cols="60" class="textArea">{$emailSignature|escape}</textarea>
 		</td>
 	</tr>
-	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
-	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailBounceAddressDescription"}<br />&nbsp;</td></tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="envelopeSender" key="manager.setup.emailBounceAddress"}</td>
-		<td width="80%" class="value">
+	<tr><td colspan="2">&nbsp;</td></tr>
+	<tr><td colspan="2">{translate key="manager.setup.emailBounceAddressDescription"}<br />&nbsp;</td></tr>
+	<tr>
+		<td class="label">{fieldLabel name="envelopeSender" key="manager.setup.emailBounceAddress"}</td>
+		<td class="value">
 			<input type="text" name="envelopeSender" id="envelopeSender" size="40" maxlength="255" class="textField" {if !$envelopeSenderEnabled}disabled="disabled" value=""{else}value="{$envelopeSender|escape}"{/if} />
 			{if !$envelopeSenderEnabled}
 			<br />
@@ -183,22 +183,22 @@
 
 <p>{translate key="manager.setup.publisherDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
+		<td class="value">
 			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea richContent">{$publisherNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.publisherNoteDescription"}</span>
 			</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisherInstitution" key="manager.setup.institution"}</td>
-		<td width="80%" class="value"><input type="text" name="publisherInstitution" id="publisherInstitution" value="{$publisherInstitution|escape}" size="40" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="publisherInstitution" key="manager.setup.institution"}</td>
+		<td class="value"><input type="text" name="publisherInstitution" id="publisherInstitution" value="{$publisherInstitution|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisherUrl" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="publisherUrl" id="publisherUrl" value="{$publisherUrl|escape}" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="publisherUrl" key="common.url"}</td>
+		<td class="value"><input type="text" name="publisherUrl" id="publisherUrl" value="{$publisherUrl|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 </table>
 </div>
@@ -208,37 +208,37 @@
 
 <p>{translate key="manager.setup.sponsorsDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
+		<td class="value">
 			<textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea richContent">{$sponsorNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.sponsorNoteDescription"}</span>
 		</td>
 	</tr>
 {foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsors-$sponsorId-institution" key="manager.setup.institution"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId|escape}][institution]" id="sponsors-{$sponsorId|escape}-institution" value="{$sponsor.institution|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.sponsors.total > 1} <input type="submit" name="delSponsor[{$sponsorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+	<tr>
+		<td class="label">{fieldLabel name="sponsors-$sponsorId-institution" key="manager.setup.institution"}</td>
+		<td class="value"><input type="text" name="sponsors[{$sponsorId|escape}][institution]" id="sponsors-{$sponsorId|escape}-institution" value="{$sponsor.institution|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.sponsors.total > 1} <input type="submit" name="delSponsor[{$sponsorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsors-$sponsorId-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId|escape}][url]" id="sponsors-{$sponsorId|escape}-url" value="{$sponsor.url|escape}" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="sponsors-$sponsorId-url" key="common.url"}</td>
+		<td class="value"><input type="text" name="sponsors[{$sponsorId|escape}][url]" id="sponsors-{$sponsorId|escape}-url" value="{$sponsor.url|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	{if !$smarty.foreach.sponsors.last}
-	<tr valign="top">
+	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 {foreachelse}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsors-0-institution" key="manager.setup.institution"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[0][institution]" id="sponsors-0-institution" size="40" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="sponsors-0-institution" key="manager.setup.institution"}</td>
+		<td class="value"><input type="text" name="sponsors[0][institution]" id="sponsors-0-institution" size="40" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sponsors-0-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[0][url]" id="sponsors-0-url" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="sponsors-0-url" key="common.url"}</td>
+		<td class="value"><input type="text" name="sponsors[0][url]" id="sponsors-0-url" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 {/foreach}
 </table>
@@ -253,37 +253,37 @@
 
 <p>{translate key="manager.setup.contributorsDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
+		<td class="value">
 			<textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea richContent">{$contributorNote[$formLocale]|escape}</textarea>
 			<br/>
 			<span class="instruct">{translate key="manager.setup.contributorNoteDescription"}</span>
 		</td>
 	</tr>
 {foreach name=contributors from=$contributors key=contributorId item=contributor}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contributors-$contributorId-name" key="manager.setup.contributor"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId|escape}][name]" id="contributors-{$contributorId|escape}-name" value="{$contributor.name|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1} <input type="submit" name="delContributor[{$contributorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+	<tr>
+		<td class="label">{fieldLabel name="contributors-$contributorId-name" key="manager.setup.contributor"}</td>
+		<td class="value"><input type="text" name="contributors[{$contributorId|escape}][name]" id="contributors-{$contributorId|escape}-name" value="{$contributor.name|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1} <input type="submit" name="delContributor[{$contributorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contributors-$contributorId-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId|escape}][url]" id="contributors-{$contributorId|escape}-url" value="{$contributor.url|escape}" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contributors-$contributorId-url" key="common.url"}</td>
+		<td class="value"><input type="text" name="contributors[{$contributorId|escape}][url]" id="contributors-{$contributorId|escape}-url" value="{$contributor.url|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	{if !$smarty.foreach.contributors.last}
-	<tr valign="top">
+	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 {foreachelse}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contributors-0-name" key="manager.setup.contributor"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[0][name]" id="contributors-0-name" size="40" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contributors-0-name" key="manager.setup.contributor"}</td>
+		<td class="value"><input type="text" name="contributors[0][name]" id="contributors-0-name" size="40" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contributors-0-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[0][url]" id="contributors-0-url" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="contributors-0-url" key="common.url"}</td>
+		<td class="value"><input type="text" name="contributors[0][url]" id="contributors-0-url" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 {/foreach}
 </table>
@@ -298,18 +298,18 @@
 
 <p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="searchDescription" key="common.description"}</td>
-		<td width="80%" class="value"><input type="text" name="searchDescription[{$formLocale|escape}]" id="searchDescription" value="{$searchDescription[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="searchDescription" key="common.description"}</td>
+		<td class="value"><input type="text" name="searchDescription[{$formLocale|escape}]" id="searchDescription" value="{$searchDescription[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="searchKeywords" key="common.keywords"}</td>
-		<td width="80%" class="value"><input type="text" name="searchKeywords[{$formLocale|escape}]" id="searchKeywords" value="{$searchKeywords[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="searchKeywords" key="common.keywords"}</td>
+		<td class="value"><input type="text" name="searchKeywords[{$formLocale|escape}]" id="searchKeywords" value="{$searchKeywords[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customHeaders" key="manager.setup.customTags"}</td>
-		<td width="80%" class="value">
+	<tr>
+		<td class="label">{fieldLabel name="customHeaders" key="manager.setup.customTags"}</td>
+		<td class="value">
 			<textarea name="customHeaders[{$formLocale|escape}]" id="customHeaders" rows="3" cols="40" class="textArea">{$customHeaders[$formLocale]|escape}</textarea>
 			<br />
 			<span class="instruct">{translate key="manager.setup.customTagsDescription"}</span>
@@ -325,10 +325,10 @@
 
 <p>{translate key="manager.setup.historyDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="history" key="manager.setup.history"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="history" key="manager.setup.history"}</td>
+		<td class="value">
 			<textarea name="history[{$formLocale|escape}]" id="history" rows="5" cols="40" class="textArea richContent">{$history[$formLocale]|escape}</textarea>
 		</td>
 	</tr>

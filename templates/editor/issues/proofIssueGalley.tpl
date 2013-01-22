@@ -25,7 +25,7 @@
 
 	<!-- Compiled scripts -->
 	{if $useMinifiedJavaScript}
-		<script type="text/javascript" src="{$baseUrl}/js/pkp.min.js"></script>
+		<script src="{$baseUrl}/js/pkp.min.js"></script>
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
@@ -38,7 +38,7 @@
 	<frame src="{$galleyUrl}" frameborder="0" />
 <noframes>
 <body>
-	<table width="100%">
+	<table>
 		<tr>
 			<td align="center">
 				{translate key="common.error.framesRequired" url=$galleyUrl}

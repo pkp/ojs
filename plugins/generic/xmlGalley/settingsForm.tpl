@@ -19,7 +19,7 @@
 
 <h3>{translate key="plugins.generic.xmlGalley.manager.settings"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#xmlGalleySettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -34,39 +34,39 @@
 </p>
 {/if}
 
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td width="100%" class="label" colspan="2"><h4 id="XSLTrenderer">{fieldLabel name="XSLTrenderer" required="true" key="plugins.generic.xmlGalley.settings.renderer"}:</h4></td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP5" value="PHP5" {if !$xsltPHP5}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP5"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.PHP5"}
+	<tr>
+		<td class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP5" value="PHP5" {if !$xsltPHP5}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP5"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.PHP5"}
 		{if !$xsltPHP5}<span class="formError">{translate key="plugins.generic.xmlGalley.settings.notAvailable"}</span>{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP4" value="PHP4" {if !$xsltPHP4}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP4"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.PHP4"}
+	<tr>
+		<td class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP4" value="PHP4" {if !$xsltPHP4}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP4"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.PHP4"}
 		{if !$xsltPHP4}<span class="formError">{translate key="plugins.generic.xmlGalley.settings.notAvailable"}</span>{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-external" value="external" {if $XSLTrenderer eq "external"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.externalXSLT"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-external" value="external" {if $XSLTrenderer eq "external"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.externalXSLT"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.externalXSLTDescription"}</td>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.externalXSLTDescription"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value"><input type="text" name="externalXSLT" id="externalXSLT" value="{$externalXSLT|escape}" size="60" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value"><input type="text" name="externalXSLT" id="externalXSLT" value="{$externalXSLT|escape}" size="60" maxlength="90" class="textField" /></td>
 	</tr>
 
 {if $XSLTrenderer eq "external"}
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value">
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value">
 		<a href="{plugin_url path="test"}">
 			<input type="submit" name="test" class="button defaultButton" value="{translate key="plugins.generic.xmlGalley.settings.externalXSLTTest"}"/>
 		</a>
@@ -78,39 +78,39 @@
 
 <div class="separator">&nbsp;</div>
 
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td width="100%" class="label" colspan="2"><h4 id="XSLstylesheet">{fieldLabel name="XSLstylesheet" required="true" key="plugins.generic.xmlGalley.settings.stylesheet"}:</h4></td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-NLM" value="NLM" {if $XSLstylesheet eq "NLM"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslNLM"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-NLM" value="NLM" {if $XSLstylesheet eq "NLM"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.xslNLM"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="checkbox" name="nlmPDF" id="nlmPDF" value="1"{if $nlmPDF==1} checked="checked"{/if} /></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOP"}</td>
+	<tr>
+		<td class="label" align="right"><input type="checkbox" name="nlmPDF" id="nlmPDF" value="1"{if $nlmPDF==1} checked="checked"{/if} /></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOP"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOPDescription"}</td>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOPDescription"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value"><input type="text" name="externalFOP" id="externalFOP" value="{$externalFOP|escape}" size="60" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value"><input type="text" name="externalFOP" id="externalFOP" value="{$externalFOP|escape}" size="60" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-custom" value="custom" {if $XSLstylesheet eq "custom"}checked="checked" {/if}/></td>
-		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.customXSL"}</td>
+	<tr>
+		<td class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-custom" value="custom" {if $XSLstylesheet eq "custom"}checked="checked" {/if}/></td>
+		<td class="value">{translate key="plugins.generic.xmlGalley.settings.customXSL"}</td>
 	</tr>
-	<tr valign="top">
-		<td width="10%" />
-		<td width="90%" class="value"><input type="file" name="customXSL" class="uploadField" /> <input type="submit" name="uploadCustomXSL" value="{translate key="common.upload"}" class="button" /></td>
+	<tr>
+		<td />
+		<td class="value"><input type="file" name="customXSL" class="uploadField" /> <input type="submit" name="uploadCustomXSL" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 
 {if $customXSL}
-	<tr valign="top">
-		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value">{translate key="common.fileName"}: {$customXSL|escape} <input type="submit" name="deleteCustomXSL" value="{translate key="common.delete"}" class="button" /></td>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="value">{translate key="common.fileName"}: {$customXSL|escape} <input type="submit" name="deleteCustomXSL" value="{translate key="common.delete"}" class="button" /></td>
 	</tr>
 {/if}
 

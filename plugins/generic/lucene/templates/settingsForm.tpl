@@ -12,7 +12,7 @@
 {/strip}
 <div id="luceneSettings">
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#luceneSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -27,29 +27,29 @@
 		<div class="separator"></div>
 		<br />
 
-		<table width="100%" class="data">
-			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="searchEndpoint" required="true" key="plugins.generic.lucene.settings.searchEndpoint"}</td>
+		<table class="data">
+			<tr>
+				<td class="label">{fieldLabel name="searchEndpoint" required="true" key="plugins.generic.lucene.settings.searchEndpoint"}</td>
 				<td class="value"><input type="text" name="searchEndpoint" id="searchEndpoint" value="{$searchEndpoint|escape}" size="45" maxlength="255" class="textField" />
 					<br />
 					<span class="instruct">{translate key="plugins.generic.lucene.settings.searchEndpointInstructions"}</span>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">{fieldLabel name="username" required="true" key="plugins.generic.lucene.settings.username"}</td>
 				<td class="value"><input type="text" name="username" id="username" value="{$username|escape}" size="15" maxlength="25" class="textField" />
 					<br />
 					<span class="instruct">{translate key="plugins.generic.lucene.settings.usernameInstructions"}</span>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">{fieldLabel name="password" required="true" key="plugins.generic.lucene.settings.password"}</td>
 				<td class="value"><input type="password" name="password" id="password" value="{$password|escape}" size="15" maxlength="25" class="textField" />
 					<br />
 					<span class="instruct">{translate key="plugins.generic.lucene.settings.passwordInstructions"}</span>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label">{fieldLabel name="instId" required="true" key="plugins.generic.lucene.settings.instId"}</td>
 				<td class="value"><input type="text" name="instId" id="instId" value="{$instId|escape}" size="15" maxlength="25" class="textField" />
 					<br />
@@ -66,8 +66,8 @@
 		<div class="separator"></div>
 		<br />
 
-		<table width="100%" class="data">
-			<tr valign="top">
+		<table class="data">
+			<tr>
 				<td width="5%" class="label" align="right"><input type="checkbox" name="autosuggest" id="autosuggest" {if $autosuggest}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="autosuggest">{translate key="plugins.generic.lucene.settings.autosuggest"}</label><br/>
@@ -78,14 +78,14 @@
 					<p class="instruct">{translate key="plugins.generic.lucene.settings.autosuggestTypeExplanation"}</p>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="highlighting" id="highlighting" {if $highlighting}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="highlighting">{translate key="plugins.generic.lucene.settings.highlighting"}</label>
 				</td>
 			</tr>
-			<tr valign="top">
-				<script type="text/javascript">{literal}
+			<tr>
+				<script>{literal}
 					$(function() {
 						var $facetingCheckbox = $('#faceting');
 						var facetCategoryClass = '.plugins_generic_lucene_facetCategory';
@@ -135,31 +135,31 @@
 					</p>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="spellcheck" id="spellcheck" {if $spellcheck}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="spellcheck">{translate key="plugins.generic.lucene.settings.spellcheck"}</label>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="simdocs" id="simdocs" {if $simdocs}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="simdocs">{translate key="plugins.generic.lucene.settings.simdocs"}</label>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="customRanking" id="customRanking" {if $customRanking}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="customRanking">{translate key="plugins.generic.lucene.settings.customRanking"}</label>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="instantSearch" id="instantSearch" {if $instantSearch}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="instantSearch">{translate key="plugins.generic.lucene.settings.instantSearch"}</label>
 				</td>
 			</tr>
-			<tr valign="top">
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="pullIndexing" id="pullIndexing" {if $pullIndexing}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="pullIndexing">{translate key="plugins.generic.lucene.settings.pullIndexing"}</label>
@@ -177,7 +177,7 @@
 
 		<a id="indexAdmin"> </a>
 		<h3>{translate key="plugins.generic.lucene.settings.indexAdministration"}</h3>
-		<script type="text/javascript">
+		<script>
 			function jumpToIndexAdminAnchor() {ldelim}
 				$form = $('#luceneSettings form');
 				// Return directly to the rebuild index section.
@@ -189,14 +189,14 @@
 		<div class="separator"></div>
 		<br />
 
-		<table width="100%" class="data">
-			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="rebuildIndex" key="plugins.generic.lucene.settings.indexRebuild"}</td>
+		<table class="data">
+			<tr>
+				<td class="label">{fieldLabel name="rebuildIndex" key="plugins.generic.lucene.settings.indexRebuild"}</td>
 				<td class="value">
 					<select name="journalToReindex" id="journalToReindex" class="selectMenu">
 						{html_options options=$journalsToReindex selected=$journalToReindex}
 					</select>
-					<script type="text/javascript">
+					<script>
 						function rebuildIndexClick() {ldelim}
 							var confirmation = confirm('{translate|escape:"jsparam" key="plugins.generic.lucene.settings.indexRebuild.confirm"}');
 							if (confirmation === true) jumpToIndexAdminAnchor();
@@ -217,8 +217,8 @@
 					<br/>
 				</td>
 			</tr>
-			<tr valign="top">
-				<td width="20%" class="label">{fieldLabel name="startStopServer" key="plugins.generic.lucene.settings.startStopServer"}</td>
+			<tr>
+				<td class="label">{fieldLabel name="startStopServer" key="plugins.generic.lucene.settings.startStopServer"}</td>
 				<td class="value">
 					{if $serverIsAvailable}
 						{if $serverIsRunning}

@@ -10,12 +10,12 @@
 <!-- OpenAIRE -->
 <div id="openAIRE">
 <h3>{translate key="plugins.generic.openAIRE.metadata"}</h3>
-<table width="100%" class="data">
-<tr valign="top">
-	<td rowspan="2" width="20%" class="label">{fieldLabel name="projectID" key="plugins.generic.openAIRE.projectID"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="projectID" id="projectID" value="{$projectID|escape}" size="5" maxlength="10" /></td>
+<table class="data">
+<tr>
+	<td rowspan="2" class="label">{fieldLabel name="projectID" key="plugins.generic.openAIRE.projectID"}</td>
+	<td class="value"><input type="text" class="textField" name="projectID" id="projectID" value="{$projectID|escape}" size="5" maxlength="10" /></td>
 </tr>
-<tr valign="top">
+<tr>
 	<td><span class="instruct">{translate key="plugins.generic.openAIRE.projectID.description"}</span></td>
 </tr>
 </table>

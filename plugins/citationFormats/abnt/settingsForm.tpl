@@ -20,7 +20,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -31,10 +31,10 @@
 
 {if count($formLocales) > 1}
 <div id="locales">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td class="value">
 			{plugin_url|assign:"setupFormUrl" path="settings"}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
@@ -45,10 +45,10 @@
 {/if}
 <br/>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="location" key="plugins.citationFormats.abnt.manager.settings.location"}</td>
-		<td width="80%" class="value"><input type="text" name="location[{$formLocale|escape}]" id="location" value="{$location[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="location" key="plugins.citationFormats.abnt.manager.settings.location"}</td>
+		<td class="value"><input type="text" name="location[{$formLocale|escape}]" id="location" value="{$location[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 </table>
 

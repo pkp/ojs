@@ -35,7 +35,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function sortSearch(heading, direction) {
@@ -47,7 +47,7 @@ function sortSearch(heading, direction) {
 // -->
 {/literal}
 </script>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -85,7 +85,7 @@ function sortSearch(heading, direction) {
 {if $displayResults}
 	<div id="submissions">
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
@@ -93,9 +93,9 @@ function sortSearch(heading, direction) {
 		<td width="5%">{sort_search key="common.id" sort="id"}</td>
 		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_search key="submissions.submit" sort="submitDate"}</td>
 		<td width="5%">{sort_search key="submissions.sec" sort="section"}</td>
-		<td width="30%">{sort_search key="article.authors" sort="authors"}</td>
-		<td width="40%">{sort_search key="article.title" sort="title"}</td>
-		<td width="15%" align="right">{sort_search key="common.status" sort="status"}</td>
+		<td>{sort_search key="article.authors" sort="authors"}</td>
+		<td>{sort_search key="article.title" sort="title"}</td>
+		<td align="right">{sort_search key="common.status" sort="status"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
@@ -104,7 +104,7 @@ function sortSearch(heading, direction) {
 	{iterate from=submissions item=submission}
 	{assign var="highlightClass" value=$submission->getHighlightClass()}
 	{assign var="fastTracked" value=$submission->getFastTracked()}
-	<tr valign="top"{if $highlightClass || $fastTracked} class="{$highlightClass|escape} {if $fastTracked}fastTracked{/if}"{/if}>
+	<tr{if $highlightClass || $fastTracked} class="{$highlightClass|escape} {if $fastTracked}fastTracked{/if}"{/if}>
 		<td>{$submission->getId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

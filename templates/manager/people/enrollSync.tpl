@@ -15,7 +15,7 @@
 <h3>{translate key="manager.people.syncUsers"}</h3>
 
 <p><span class="instruct">{translate key="manager.people.syncUserDescription"}</span></p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#enrollSyncForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -23,10 +23,10 @@
 </script>
 <form class="pkp_form" id="enrollSyncForm" method="post" action="{url op="enrollSync"}">
 
-<table class="data" width="100%">
-	<tr valign="top">
-		<td width="20%" class="label"><label for="rolePath">{translate key="manager.people.enrollSyncRole"}</label></td>
-		<td width="80%" class="value">
+<table class="data">
+	<tr>
+		<td class="label"><label for="rolePath">{translate key="manager.people.enrollSyncRole"}</label></td>
+		<td class="value">
 			{if $rolePath}
 				<input type="hidden" name="rolePath" value="{$rolePath|escape}" />
 				{translate key=$roleName}
@@ -48,7 +48,7 @@
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label"><label for="syncJournal">{translate key="manager.people.enrollSyncJournal"}</label></td>
 		<td class="value">
 			<select name="syncJournal" id="syncJournal" size="1" class="selectMenu">

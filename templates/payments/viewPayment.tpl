@@ -21,18 +21,18 @@
 <br />
 
 {if $payment}
-	<table width="100%" class="listing">
+	<table class="listing">
 		<tr>
 			<td colspan="4" class="headseparator">&nbsp;</td>
 		</tr>
 		<div id="payment">
-		<tr valign="top">
 		<tr>
-			<td width="25%">{translate key="manager.payment.paymentId"}</td>
+		<tr>
+			<td>{translate key="manager.payment.paymentId"}</td>
 			<td>{$payment->getCompletedPaymentId()}</td>
 		</tr>
 		<tr>
-			<td width="25%">{translate key="user.username"}</td>
+			<td>{translate key="user.username"}</td>
 			<td>
 			{assign var=user value=$userDao->getById($payment->getUserId())}
 			{if $isJournalManager}
@@ -43,28 +43,28 @@
 			</td>
 		</tr>
 		<tr>
-			<td width="25%">{translate key="manager.payment.description"}</td>
+			<td>{translate key="manager.payment.description"}</td>
 			<td>{$payment->getName()|escape}</td>
 		</tr>
 		<tr>
-			<td width="25%">{translate key="manager.payment.timestamp"}</td>
+			<td>{translate key="manager.payment.timestamp"}</td>
 			<td class="nowrap">
 			{$payment->getTimestamp()|escape}
 			</td>
 		<tr>
 		<tr>
-			<td width="25%">{translate key="manager.payment.amount"}</td>
+			<td>{translate key="manager.payment.amount"}</td>
 			<td>{$payment->getAmount()|string_format:"%.2f"} ({$payment->getCurrencyCode()|escape})</td>
 		</tr>
 		<tr>
-			<td width="25%">{translate key="manager.payment.paymentMethod"}</td>
+			<td>{translate key="manager.payment.paymentMethod"}</td>
 			<td>{$payment->getPayMethodPluginName()|escape}</td>
 		</tr>
 		<tr>
 			<td colspan="2" class="separator">&nbsp;</td>
 		</tr>
 		<tr>
-			<td width="25%">{translate key="manager.payment.details"}</td>
+			<td>{translate key="manager.payment.details"}</td>
 			<td>
 				{if $payment->getAssocDescription()}
 					({$payment->getAssocId()|escape}) {$payment->getAssocDescription()|escape}</td>

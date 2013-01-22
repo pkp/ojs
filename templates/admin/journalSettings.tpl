@@ -8,7 +8,7 @@
  *
  *}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#journalSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');

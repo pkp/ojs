@@ -21,11 +21,11 @@
 {/if}
 
 <div id="results">
-<table width="100%" class="listing">
+<table class="listing">
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
-	<td width="20%">{translate key="issue.issue"}</td>
+	{if !$currentJournal}<td>{translate key="journal.journal"}</td>{/if}
+	<td>{translate key="issue.issue"}</td>
 	<td width="{if !$currentJournal}60%{else}80%{/if}" colspan="2">{translate key="article.title"}</td>
 </tr>
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
@@ -36,11 +36,11 @@
 {assign var=issue value=$result.issue}
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
-<tr valign="top">
+<tr>
 	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedName()|escape}</a></td>{/if}
 	<td>{if $issueAvailable}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}{if $issueAvailable}</a>{/if}</td>
-	<td width="35%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
-	<td width="25%" align="right">
+	<td>{$article->getLocalizedTitle()|strip_unsafe_html}</td>
+	<td align="right">
 			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $article->getLocalizedAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 		{if $issueAvailable}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}

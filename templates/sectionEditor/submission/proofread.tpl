@@ -14,26 +14,26 @@
 <h3>{translate key="submission.proofreading"}</h3>
 
 {if $useProofreaders}
-<table class="data" width="100%">
+<table class="data">
 	<tr>
-		<td width="20%" class="label">{translate key="user.role.proofreader"}</td>
+		<td class="label">{translate key="user.role.proofreader"}</td>
 		{if $proofSignoff->getUserId()}<td class="value" width="20%">{$proofreader->getFullName()|escape}</td>{/if}
 		<td class="value"><a href="{url op="selectProofreader" path=$submission->getId()}" class="action">{translate key="editor.article.selectProofreader"}</a></td>
 	</tr>
 </table>
 {/if}
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="28%" colspan="2">&nbsp;</td>
-		<td width="18%" class="heading">{translate key="submission.request"}</td>
-		<td width="18%" class="heading">{translate key="submission.underway"}</td>
-		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
+		<td colspan="2">&nbsp;</td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
+		<td class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
 	<tr>
 		<td width="2%">1.</td>
-		<td width="26%">{translate key="user.role.author"}</td>
+		<td>{translate key="user.role.author"}</td>
 		{assign var="authorProofreadSignoff" value=$submission->getSignoff('SIGNOFF_PROOFREADING_AUTHOR')}
 		<td>
 			{url|assign:"url" op="notifyAuthorProofreader" articleId=$submission->getId()}

@@ -28,7 +28,7 @@
 
 	<!-- Compiled scripts -->
 	{if $useMinifiedJavaScript}
-		<script type="text/javascript" src="{$baseUrl}/js/pkp.min.js"></script>
+		<script src="{$baseUrl}/js/pkp.min.js"></script>
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
@@ -65,7 +65,7 @@
 </div>
 </div>
 
-<script type="text/javascript">
+<script>
 <!--
 	window.print();
 // -->

@@ -8,16 +8,16 @@
  *
  *}
 <div id="submissions">
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{sort_heading key="common.id" sort="id"}</td>
 		<td width="5%"><span class="disabled">{translate key="submission.date.mmdd"}</span><br />{sort_heading key="common.assigned" sort="assignDate"}</td>
 		<td width="5%">{sort_heading key="submissions.sec" sort="section"}</td>
-		<td width="30%">{sort_heading key="article.authors" sort="authors"}</td>
-		<td width="30%">{sort_heading key="article.title" sort="title"}</td>
-		<td width="15%" align="right">{sort_heading key="common.status" sort="status"}</td>
-		<td width="10%">&nbsp;</td>
+		<td>{sort_heading key="article.authors" sort="authors"}</td>
+		<td>{sort_heading key="article.title" sort="title"}</td>
+		<td align="right">{sort_heading key="common.status" sort="status"}</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 
@@ -25,7 +25,7 @@
 	{assign var="articleId" value=$submission->getId()}
 	{assign var="layoutSignoff" value=$submission->getSignoff('SIGNOFF_LAYOUT')}
 
-	<tr valign="top">
+	<tr>
 		<td>{$articleId|escape}</td>
 		<td>{$layoutSignoff->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

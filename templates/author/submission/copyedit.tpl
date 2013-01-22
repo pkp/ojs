@@ -11,25 +11,25 @@
 <h3>{translate key="submission.copyediting"}</h3>
 
 {if $useCopyeditors}
-<table class="data" width="100%">
+<table class="data">
 	<tr>
-		<td class="label" width="20%">{translate key="user.role.copyeditor"}</td>
-		<td class="label" width="80%">{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}{$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+		<td class="label">{translate key="user.role.copyeditor"}</td>
+		<td class="label">{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL')}{$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
 	</tr>
 </table>
 {/if}
 
-<table width="100%" class="info">
+<table class="info">
 	<tr>
-		<td width="40%" colspan="2"><a href="{url op="viewMetadata" path=$submission->getId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
-		<td width="20%" class="heading">{translate key="submission.request"}</td>
-		<td width="20%" class="heading">{translate key="submission.underway"}</td>
-		<td width="20%" class="heading">{translate key="submission.complete"}</td>
+		<td colspan="2"><a href="{url op="viewMetadata" path=$submission->getId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>
+		<td class="heading">{translate key="submission.request"}</td>
+		<td class="heading">{translate key="submission.underway"}</td>
+		<td class="heading">{translate key="submission.complete"}</td>
 	</tr>
 	<tr>
-		<td width="5%">1.</td>
+		<td>1.</td>
 		{assign var="copyeditInitialSignoff" value=$submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL')}
-		<td width="35%">{translate key="submission.copyedit.initialCopyedit"}</td>
+		<td>{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>{$copyeditInitialSignoff->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>{$copyeditInitialSignoff->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>{$copyeditInitialSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
@@ -75,7 +75,7 @@
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<script type="text/javascript">
+			<script>
 				$(function() {ldelim}
 					// Attach the form handler.
 					$('#copyeditUploadForm').pkpHandler('$.pkp.controllers.form.FormHandler');

@@ -7,7 +7,7 @@
  * Citation editing assistant.
  *}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		{if $unprocessedCitations !== false}
 			// Activate "Refresh Citation List" button.

@@ -25,7 +25,7 @@
 	</ul>
 {/if}
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#localeSearch').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -37,7 +37,7 @@
 	<input type="submit" class="button defaultButton" onclick="document.getElementById('locale').redirectUrl.value=document.getElementById('localeSearch').action);document.getElementById('locale').submit();return false;" value="{translate key="common.search"}" /> {translate key="plugins.generic.translator.localeKey.description"}
 </form>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#locale').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -48,11 +48,11 @@
 
 <div id="localeContents">
 <h3>{translate key="plugins.generic.translator.file.edit" filename=$filename}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="35%">{translate key="plugins.generic.translator.localeKey"}</td>
-		<td width="60%">{translate key="plugins.generic.translator.localeKeyValue"}</td>
+		<td>{translate key="plugins.generic.translator.localeKey"}</td>
+		<td>{translate key="plugins.generic.translator.localeKeyValue"}</td>
 		<td width="5%">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
@@ -60,10 +60,10 @@
 {iterate from=localeContents key=key item=value}
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 	{* extra row for the key *}
-	<tr valign="top"{if $key == $searchKey} class="highlight"{/if}>
+	<tr{if $key == $searchKey} class="highlight"{/if}>
 		<td colspan="3">{$key|escape}</td>
 	</tr>
-	<tr valign="top"{if $key == $searchKey} class="highlight"{/if}>
+	<tr{if $key == $searchKey} class="highlight"{/if}>
 		{* empty first column where the key used to be *}
 		<td>&nbsp;</td>
 		<td>

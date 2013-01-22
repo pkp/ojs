@@ -18,7 +18,7 @@
 
 <ul class="plain">
 	<li>
-		<script type="text/javascript">
+		<script>
 			$(function() {ldelim}
 				// Attach the form handler.
 				$('#exportByRoleForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -42,7 +42,7 @@
 <div id="importUsers">
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#exportUsersForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -52,10 +52,10 @@
 
 <p>{translate key="plugins.importexport.users.import.instructions"}</p>
 
-<table width="100%" class="data">
+<table class="data">
 	<tr>
-		<td width="20%" class="label">{translate key="plugins.importexport.users.import.dataFile"}</td>
-		<td width="80%" class="value"><input type="file" name="userFile" id="userFile" class="uploadField" /></td>
+		<td class="label">{translate key="plugins.importexport.users.import.dataFile"}</td>
+		<td class="value"><input type="file" name="userFile" id="userFile" class="uploadField" /></td>
 	</tr>
 	<tr>
 		<td colspan="2" class="label"><input type="checkbox" name="sendNotify" id="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /> <label for="sendNotify">{translate key="plugins.importexport.users.import.sendNotify"}</label></td>

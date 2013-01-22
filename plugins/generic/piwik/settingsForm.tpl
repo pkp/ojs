@@ -17,7 +17,7 @@
 
 <br />
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#piwikSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -26,15 +26,15 @@
 <form class="pkp_form" id="piwikSettingsForm" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="piwikUrl" required="true" key="plugins.generic.piwik.manager.settings.piwikUrl"}</td>
-		<td width="80%" class="value"><input type="text" name="piwikUrl" id="piwikUrl" value="{if $piwikUrl}{$piwikUrl|escape}{else}http://{/if}" size="30" maxlength="255" class="textField" />
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="piwikUrl" required="true" key="plugins.generic.piwik.manager.settings.piwikUrl"}</td>
+		<td class="value"><input type="text" name="piwikUrl" id="piwikUrl" value="{if $piwikUrl}{$piwikUrl|escape}{else}http://{/if}" size="30" maxlength="255" class="textField" />
 		<br />
 		<span class="instruct">{translate key="plugins.generic.piwik.manager.settings.piwikUrlInstructions"}</span>
 	</td>
 	</tr>
-	<tr valign="top">
+	<tr>
 		<td class="label">{fieldLabel name="piwikSiteId" required="true" key="plugins.generic.piwik.manager.settings.piwikSiteId"}</td>
 		<td class="value"><input type="text" name="piwikSiteId" id="piwikSiteId" value="{$piwikSiteId|escape}" size="10" maxlength="10" class="textField" />
 		<br />

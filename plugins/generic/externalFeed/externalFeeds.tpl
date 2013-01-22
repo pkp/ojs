@@ -26,28 +26,28 @@
 
 <div id="feeds">
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="plugins.generic.externalFeed.manager.title"}</td>
-		<td width="15%">{translate key="plugins.generic.externalFeed.manager.displayHomepage"}</td>
-		<td width="25%" colspan="2">{translate key="plugins.generic.externalFeed.manager.displayBlock"}
-			<table width="100%" class="nested">
-				<tr valign="top">
-					<td width="50%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="plugins.generic.externalFeed.manager.displayBlockAll"}</td>
-					<td width="50%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="plugins.generic.externalFeed.manager.displayBlockHomepage"}</td>
+		<td>{translate key="plugins.generic.externalFeed.manager.title"}</td>
+		<td>{translate key="plugins.generic.externalFeed.manager.displayHomepage"}</td>
+		<td colspan="2">{translate key="plugins.generic.externalFeed.manager.displayBlock"}
+			<table class="nested">
+				<tr>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="plugins.generic.externalFeed.manager.displayBlockAll"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="plugins.generic.externalFeed.manager.displayBlockHomepage"}</td>
 				</tr>
 			</table>
 		</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=feeds item=feed}
-	<tr valign="top" id="externalFeed-{$feed->getId()|escape}" class="data">
+	<tr id="externalFeed-{$feed->getId()|escape}" class="data">
 		<td class="drag">{$feed->getLocalizedTitle()|escape}</td>
 		<td class="drag">{if $feed->getDisplayHomepage()}<img src="{$baseUrl}/templates/images/icons/checked.gif" alt="{translate key="plugins.generic.externalFeed.manager.displayHomepage.altText"}"/>{else}<img src="{$baseUrl}/templates/images/icons/unchecked.gif" alt="{translate key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText"}"/>{/if}</td>
 		<td class="drag">{if $feed->getDisplayBlock() == $smarty.const.EXTERNAL_FEED_DISPLAY_BLOCK_ALL}<img src="{$baseUrl}/templates/images/icons/checked.gif" alt="{translate key="plugins.generic.externalFeed.manager.displayBlockAll.altText"}"/>{else}<img src="{$baseUrl}/templates/images/icons/unchecked.gif" alt="{translate key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"}"/>{/if}</td>

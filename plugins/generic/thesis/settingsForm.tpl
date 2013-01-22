@@ -19,7 +19,7 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td class="headseparator">&nbsp;</td>
 	</tr>
@@ -31,7 +31,7 @@
 	</tr>
 </table>
 
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#thesisSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -41,7 +41,7 @@
 {include file="common/formErrors.tpl"}
 <div id="submissionSettings">
 <h4>{translate key="plugins.generic.thesis.settings.submissions"}</h4>
-	<script type="text/javascript">
+	<script>
 		{literal}
 		<!--
 			function toggleUploadCode(form) {
@@ -53,8 +53,8 @@
 
 <p>{translate key="plugins.generic.thesis.settings.uploadCodeDescription"}</p>
 
-<table width="100%" class="data">
-<tr valign="top">
+<table class="data">
+<tr>
 	<td class="label"><input type="checkbox" name="enableUploadCode" id="enableUploadCode" value="1" onclick="toggleUploadCode(this.form)"{if $enableUploadCode} checked="checked"{/if} /></td>
 	<td class="value">{fieldLabel name="uploadCode" key="plugins.generic.thesis.settings.uploadCode"} <input type="text" name="uploadCode" id="uploadCode"{if not $enableUploadCode} disabled="disabled"{/if} value="{$uploadCode|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
@@ -64,10 +64,10 @@
 <div id="thesisPublishing">
 <h4>{translate key="plugins.generic.thesis.settings.publishing"}</h4>
 <br/>
-<table width="100%" class="data">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="thesisOrder" required="true" key="plugins.generic.thesis.settings.order"}</td>
-	<td width="80%" class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu">{html_options options=$validOrder selected=$thesisOrder}</select></td>
+<table class="data">
+<tr>
+	<td class="label">{fieldLabel name="thesisOrder" required="true" key="plugins.generic.thesis.settings.order"}</td>
+	<td class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu">{html_options options=$validOrder selected=$thesisOrder}</select></td>
 </tr>
 </table>
 </div>
@@ -75,26 +75,26 @@
 <div id="thesisContact">
 <h4>{translate key="plugins.generic.thesis.settings.thesisContact"}</h4>
 <br/>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="thesisName" required="true" key="user.name"}</td>
-		<td width="80%" class="value"><input type="text" name="thesisName" id="thesisName" value="{$thesisName|escape}" size="30" maxlength="60" class="textField" /></td>
+<table class="data">
+	<tr>
+		<td class="label">{fieldLabel name="thesisName" required="true" key="user.name"}</td>
+		<td class="value"><input type="text" name="thesisName" id="thesisName" value="{$thesisName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="thesisEmail" required="true" key="user.email"}</td>
-		<td width="80%" class="value"><input type="text" name="thesisEmail" id="thesisEmail" value="{$thesisEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="thesisEmail" required="true" key="user.email"}</td>
+		<td class="value"><input type="text" name="thesisEmail" id="thesisEmail" value="{$thesisEmail|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="thesisPhone" key="user.phone"}</td>
-		<td width="80%" class="value"><input type="text" name="thesisPhone" id="thesisPhone" value="{$thesisPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="thesisPhone" key="user.phone"}</td>
+		<td class="value"><input type="text" name="thesisPhone" id="thesisPhone" value="{$thesisPhone|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="thesisFax" key="user.fax"}</td>
-		<td width="80%" class="value"><input type="text" name="thesisFax" id="thesisFax" value="{$thesisFax|escape}" size="15" maxlength="24" class="textField" /></td>
+	<tr>
+		<td class="label">{fieldLabel name="thesisFax" key="user.fax"}</td>
+		<td class="value"><input type="text" name="thesisFax" id="thesisFax" value="{$thesisFax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="thesisMailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value"><textarea name="thesisMailingAddress" id="thesisMailingAddress" rows="3" cols="40" class="textArea">{$thesisMailingAddress|escape}</textarea></td>
+	<tr>
+		<td class="label">{fieldLabel name="thesisMailingAddress" key="common.mailingAddress"}</td>
+		<td class="value"><textarea name="thesisMailingAddress" id="thesisMailingAddress" rows="3" cols="40" class="textArea">{$thesisMailingAddress|escape}</textarea></td>
 	</tr>
 </table>
 </div>
@@ -102,8 +102,8 @@
 <div id="thesisIntroduction">
 <h4>{translate key="plugins.generic.thesis.settings.thesisIntroduction"}</h4>
 <p>{translate key="plugins.generic.thesis.settings.thesisIntroductionDescription"}</p>
-<table width="100%" class="data">
-	<tr valign="top">
+<table class="data">
+	<tr>
 		<td width="100%" class="value"><textarea name="thesisIntroduction" id="thesisIntroduction" rows="5" cols="60" class="textArea">{$thesisIntroduction|escape}</textarea></td>
 	</tr>
 </table>

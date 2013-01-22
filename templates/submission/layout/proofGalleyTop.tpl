@@ -24,7 +24,7 @@
 
 	<!-- Compiled scripts -->
 	{if $useMinifiedJavaScript}
-		<script type="text/javascript" src="{$baseUrl}/js/pkp.min.js"></script>
+		<script src="{$baseUrl}/js/pkp.min.js"></script>
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
@@ -32,7 +32,7 @@
 	{$additionalHeadData}
 </head>
 <body>
-	<table width="100%" height="100%">
+	<table height="100%">
 		<tr>
 			<td align="center">
 				<a href="{url op=$backHandler path=$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>

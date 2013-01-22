@@ -17,7 +17,7 @@
 	<input type="hidden" name="userId" value=""/>
 </form>
 
-<script type="text/javascript">
+<script>
 {literal}
 <!--
 function toggleChecked() {
@@ -43,7 +43,7 @@ function confirmAndPrompt(userId) {
 </script>
 
 <h3>{translate key=$roleName}</h3>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#enrollmentForm').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -106,7 +106,7 @@ function confirmAndPrompt(userId) {
 {else}
 <p><a href="{url path="all"}" class="action">{translate key="manager.people.allUsers"}</a></p>
 {/if}
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#people').pkpHandler('$.pkp.controllers.form.FormHandler');
@@ -116,23 +116,23 @@ function confirmAndPrompt(userId) {
 <input type="hidden" name="redirectUrl" value="{url path=$roleSymbolic}"/>
 
 <div id="users">
-<table width="100%" class="listing">
+<table class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="12%">{sort_heading key="user.username" sort="username"}</td>
-		<td width="20%">{sort_heading key="user.name" sort="name"}</td>
-		<td width="23%">{sort_heading key="user.email" sort="email"}</td>
-		<td width="40%" align="right">{translate key="common.action"}</td>
+		<td>{sort_heading key="user.username" sort="username"}</td>
+		<td>{sort_heading key="user.name" sort="name"}</td>
+		<td>{sort_heading key="user.email" sort="email"}</td>
+		<td align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=users item=user}
 	{assign var=userExists value=1}
-	<tr valign="top">
+	<tr>
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
 		<td><a class="action" href="{url op="userProfile" path=$user->getId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
 		<td>{$user->getFullName()|escape}</td>

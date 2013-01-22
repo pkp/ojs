@@ -21,7 +21,7 @@
 
 <h3>{translate key="plugins.importexport.pubIds.import"}</h3>
 <p>{translate key="plugins.importexport.pubIds.import.description"}</p>
-<script type="text/javascript">
+<script>
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#pubIdsForm').pkpHandler('$.pkp.controllers.form.FormHandler');

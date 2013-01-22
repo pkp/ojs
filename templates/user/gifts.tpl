@@ -18,11 +18,11 @@
 
 <br />
 
-<table width="100%" class="info">
+<table class="info">
 	{iterate from=giftSubscriptions item=gift}
-		<tr valign="top">
-			<td width="65%">{$gift->getGiftName()|escape}</td>
-			<td width="15%">
+		<tr>
+			<td>{$gift->getGiftName()|escape}</td>
+			<td>
 			{assign var="giftStatus" value=$gift->getStatus()}
 			{if $giftStatus == $smarty.const.GIFT_STATUS_NOT_REDEEMED}
 				<span class="disabled">{translate key="gifts.status.notRedeemed"}</span>
@@ -30,7 +30,7 @@
 				<span class="disabled">{translate key="gifts.status.redeemed"}</span>
 			{/if}
 			</td>
-			<td width="20%" align="right">
+			<td align="right">
 				{if $giftStatus == $smarty.const.GIFT_STATUS_NOT_REDEEMED}
 					<a class="action" href="{url op="redeemGift" path=$gift->getId()}">{translate key="gifts.redeemGift"}</a>
 				{elseif $giftStatus == $smarty.const.GIFT_STATUS_REDEEMED}
@@ -40,18 +40,18 @@
 				{/if}
 			</td>
 		</tr>
-		<tr valign="top">
+		<tr>
 			<td colspan="3" class="separator">&nbsp;</td>
 		</tr>
 	{/iterate}
 	{if $giftSubscriptions->wasEmpty()}
-		<tr valign="top">
+		<tr>
 			<td colspan="3" class="separator">&nbsp;</td>
 		</tr>
-		<tr valign="top">
+		<tr>
 			<td colspan="3" class="nodata">{translate key="gifts.noSubscriptions"}</td>
 		</tr>
-		<tr valign="top">
+		<tr>
 			<td colspan="3" class="separator">&nbsp;</td>
 		</tr>
 	{/if}

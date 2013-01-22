@@ -17,11 +17,11 @@
 <div id="localeFiles">
 
 <h3>{translate key="plugins.generic.customLocale.localeFiles"}</h3>
-<table class="listing" width="100%">
+<table class="listing">
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="85%">{translate key="plugins.generic.customLocale.file.filename"}</td>
-		<td width="15%">{translate key="common.action"}</td>
+		<td>{translate key="plugins.generic.customLocale.file.filename"}</td>
+		<td>{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 
@@ -32,7 +32,7 @@
 {else}
 	{assign var=fileExists value=0}
 {/if}
-	<tr valign="top">
+	<tr>
 		<td>
 			{if $fileExists}
 				{$filename|escape}
