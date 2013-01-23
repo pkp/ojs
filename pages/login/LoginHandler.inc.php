@@ -32,7 +32,7 @@ class LoginHandler extends PKPLoginHandler {
 			$journal =& $request->getJournal();
 
 			if (!Validation::canAdminister($journal->getId(), $userId)) {
-				$this->setupTemplate();
+				$this->setupTemplate($request);
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager();
@@ -115,10 +115,11 @@ class LoginHandler extends PKPLoginHandler {
 
 	/**
 	 * Configure the template for display.
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate() {
+	function setupTemplate($request) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
-		parent::setupTemplate();
+		parent::setupTemplate($request);
 	}
 }
 
