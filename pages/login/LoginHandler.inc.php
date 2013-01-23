@@ -9,7 +9,7 @@
  * @class LoginHandler
  * @ingroup pages_login
  *
- * @brief Handle login/logout requests. 
+ * @brief Handle login/logout requests.
  */
 
 
@@ -17,7 +17,7 @@ import('lib.pkp.pages.login.PKPLoginHandler');
 
 class LoginHandler extends PKPLoginHandler {
 	/**
-	 * Sign in as another user. 
+	 * Sign in as another user.
 	 * @param $args array ($userId)
 	 * @param $request PKPRequest
 	 */
@@ -32,7 +32,7 @@ class LoginHandler extends PKPLoginHandler {
 			$journal =& $request->getJournal();
 
 			if (!Validation::canAdminister($journal->getId(), $userId)) {
-				$this->setupTemplate();
+				$this->setupTemplate($request);
 				// We don't have administrative rights
 				// over this user. Display an error.
 				$templateMgr =& TemplateManager::getManager($request);
@@ -104,21 +104,22 @@ class LoginHandler extends PKPLoginHandler {
 	function _setMailFrom($request, &$mail) {
 		$site =& $request->getSite();
 		$journal =& $request->getJournal();
-		
+
 		// Set the sender based on the current context
 		if ($journal && $journal->getSetting('supportEmail')) {
 			$mail->setReplyTo($journal->getSetting('supportEmail'), $journal->getSetting('supportName'));
-		} else { 
+		} else {
 			$mail->setReplyTo($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 		}
 	}
 
 	/**
 	 * Configure the template for display.
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate() {
+	function setupTemplate($request) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
-		parent::setupTemplate();
+		parent::setupTemplate($request);
 	}
 }
 
