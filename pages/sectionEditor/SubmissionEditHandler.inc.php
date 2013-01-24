@@ -52,7 +52,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// FIXME? For comments.readerComments under Status and
 		// author.submit.selectPrincipalContact under Metadata
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_AUTHOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_AUTHOR);
 
 		$this->setupTemplate($request, true, $articleId);
 
@@ -187,7 +187,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -992,7 +992,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 
 		$this->validate($request, $articleId);
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId, 'summary');
 
@@ -1007,7 +1007,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveMetadata($args, $request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId, 'summary');
 

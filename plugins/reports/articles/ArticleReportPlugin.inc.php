@@ -68,7 +68,7 @@ class ArticleReportPlugin extends ReportPlugin {
 			}
 		}
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		import('classes.article.Article');
 		$decisionMessages = array(

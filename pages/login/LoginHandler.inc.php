@@ -118,7 +118,7 @@ class LoginHandler extends PKPLoginHandler {
 	 * @param $request PKPRequest
 	 */
 	function setupTemplate($request) {
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
 		parent::setupTemplate($request);
 	}
 }

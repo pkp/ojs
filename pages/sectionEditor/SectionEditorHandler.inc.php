@@ -176,7 +176,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr =& TemplateManager::getManager($request);
 		$isEditor = Validation::isEditor();
 

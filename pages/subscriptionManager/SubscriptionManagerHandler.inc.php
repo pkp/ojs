@@ -462,7 +462,7 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false, $institutional = false) {
 		parent::setupTemplate($request, true);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement')));
 		if ($subclass) {

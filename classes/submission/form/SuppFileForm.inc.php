@@ -115,7 +115,7 @@ class SuppFileForm extends Form {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
 
 		parent::display();
 	}

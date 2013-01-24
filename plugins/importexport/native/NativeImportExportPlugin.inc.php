@@ -90,7 +90,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
-				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
@@ -111,7 +111,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			case 'import':
-				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_AUTHOR);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_AUTHOR);
 				import('classes.file.TemporaryFileManager');
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$sectionDao =& DAORegistry::getDAO('SectionDAO');

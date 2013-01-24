@@ -231,7 +231,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$articleId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 		$this->validate($request, $articleId);
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId, 'editing');
 		CopyeditorAction::viewMetadata($submission, $journal);

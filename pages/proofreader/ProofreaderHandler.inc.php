@@ -115,7 +115,7 @@ class ProofreaderHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
 		$templateMgr =& TemplateManager::getManager($request);
 		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'))
 				: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'));

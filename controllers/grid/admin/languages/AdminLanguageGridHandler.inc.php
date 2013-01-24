@@ -29,7 +29,7 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	 */
 	function initialize(&$request) {
 		parent::initialize($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_ADMIN);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_ADMIN);
 	}
 
 	/**

@@ -115,7 +115,7 @@ class ManagerHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER, LOCALE_COMPONENT_PKP_ADMIN);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_ADMIN);
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'manager.journalManagement'))

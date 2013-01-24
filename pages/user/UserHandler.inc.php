@@ -411,7 +411,7 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function setupTemplate($request = null, $subclass = false) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR, LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr =& TemplateManager::getManager($request);
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user')));

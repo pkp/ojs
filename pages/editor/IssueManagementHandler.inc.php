@@ -652,7 +652,7 @@ class IssueManagementHandler extends EditorHandler {
 						// to the user.
 						import('classes.notification.NotificationManager');
 						$notificationManager = new NotificationManager();
-						AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+						AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 						$message = 'editor.publicIdentificationExists';
 						$params = array('publicIdentifier' => $publicArticleId);
 						$user =& $request->getUser();

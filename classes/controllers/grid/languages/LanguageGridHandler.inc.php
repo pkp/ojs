@@ -46,7 +46,7 @@ class LanguageGridHandler extends PKPLanguageGridHandler {
 
 		// Load user-related translations.
 		AppLocale::requireComponents(
-			LOCALE_COMPONENT_OJS_MANAGER
+			LOCALE_COMPONENT_APP_MANAGER
 		);
 	}
 

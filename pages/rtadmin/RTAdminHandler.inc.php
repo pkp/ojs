@@ -121,7 +121,7 @@ class RTAdminHandler extends Handler {
 	 */
 	function setupTemplate($request, $subclass = false, $version = null, $context = null, $search = null) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'manager.journalManagement'));
