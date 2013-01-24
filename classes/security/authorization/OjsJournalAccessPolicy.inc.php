@@ -11,16 +11,16 @@
  * @brief Class to control access to OJS' journal setup components
  */
 
-import('classes.security.authorization.internal.JournalPolicy');
+import('lib.pkp.classes.security.authorization.internal.ContextPolicy');
 
-class OjsJournalAccessPolicy extends JournalPolicy {
+class OjsJournalAccessPolicy extends ContextPolicy {
 	/**
 	 * Constructor
 	 * @param $request PKPRequest
 	 * @param $roleAssignments array
 	 */
 	function OjsJournalAccessPolicy(&$request, $roleAssignments) {
-		parent::JournalPolicy($request);
+		parent::ContextPolicy($request);
 
 		// On journal level we don't have role-specific conditions
 		// so we can simply add all role assignments. It's ok if

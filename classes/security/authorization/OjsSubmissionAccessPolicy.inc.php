@@ -11,10 +11,10 @@
  * @brief Class to control access to OJS's submission editing components
  */
 
-import('classes.security.authorization.internal.JournalPolicy');
+import('lib.pkp.classes.security.authorization.internal.ContextPolicy');
 import('lib.pkp.classes.security.authorization.RoleBasedHandlerOperationPolicy');
 
-class OjsSubmissionAccessPolicy extends JournalPolicy {
+class OjsSubmissionAccessPolicy extends ContextPolicy {
 	/**
 	 * Constructor
 	 * @param $request PKPRequest
@@ -23,7 +23,7 @@ class OjsSubmissionAccessPolicy extends JournalPolicy {
 	 * @param $submissionParameterName string
 	 */
 	function OjsSubmissionAccessPolicy(&$request, &$args, $roleAssignments, $submissionParameterName = 'articleId') {
-		parent::JournalPolicy($request);
+		parent::ContextPolicy($request);
 
 		// Create a "permit overrides" policy set that specifies
 		// editor and copyeditor access to submissions.
