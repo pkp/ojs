@@ -266,7 +266,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 
 		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APPLICATION_COMMON,
+			LOCALE_COMPONENT_APP_COMMON,
 			LOCALE_COMPONENT_PKP_MANAGER,
 			LOCALE_COMPONENT_PKP_USER
 		);

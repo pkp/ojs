@@ -239,7 +239,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 				}
 
 			case 'settings':
-				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				// if we are updating XSLT settings or switching XSL sheets
 				if ($request->getUserVar('save')) {
 					$form->readInputData();

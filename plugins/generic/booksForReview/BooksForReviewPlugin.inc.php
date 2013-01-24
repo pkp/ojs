@@ -242,7 +242,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $editorPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewEditorHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
+					AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewEditorHandler.inc.php';
 				}
@@ -267,7 +267,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $authorPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewAuthorHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_AUTHOR);
+					AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_AUTHOR);
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewAuthorHandler.inc.php';
 				}
@@ -292,7 +292,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				if (in_array($op, $publicPages)) {
 					define('HANDLER_CLASS', 'BooksForReviewHandler');
 					define('BOOKS_FOR_REVIEW_PLUGIN_NAME', $this->getName());
-					AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+					AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 					$handlerFile =& $params[2];
 					$handlerFile = $this->getHandlerPath() . 'BooksForReviewHandler.inc.php';
 				}

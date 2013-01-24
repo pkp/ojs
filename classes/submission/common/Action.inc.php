@@ -207,7 +207,7 @@ class Action extends PKPAction {
 				return false;
 			}
 
-			AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 			switch ($type) {
 				case 'copy':
 					$title = 'submission.copyedit.instructions';

@@ -84,7 +84,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function displayPaymentForm($queuedPaymentId, &$queuedPayment, &$request) {
 		if (!$this->isConfigured()) return false;
 		$journal =& $request->getJournal();
-		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr =& TemplateManager::getManager($request);
 		$user =& $request->getUser();
 
@@ -122,7 +122,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		switch ($op) {
 			case 'notify':
 				import('classes.mail.MailTemplate');
-				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 				$contactName = $journal->getSetting('contactName');
 				$contactEmail = $journal->getSetting('contactEmail');
 				$mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');

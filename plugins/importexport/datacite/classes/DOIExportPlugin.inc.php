@@ -308,7 +308,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$result = array();
 
 		// Add additional locale file.
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON));
 
 		// Command.
 		$command = strtolower_codesafe(array_shift($args));

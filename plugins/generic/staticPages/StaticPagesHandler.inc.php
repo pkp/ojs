@@ -22,7 +22,7 @@ class StaticPagesHandler extends Handler {
 
 	function view($args, &$request) {
 		if (count($args) > 0 ) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_PKP_USER);
+			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
 			$journal =& $request->getJournal();
 			$journalId = $journal?$journal->getId():0;
 			$path = $args[0];

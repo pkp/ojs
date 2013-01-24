@@ -150,7 +150,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 				$journal =& $request->getJournal();
 
-				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$this->import('PhpMyVisitesSettingsForm');
 				$form = new PhpMyVisitesSettingsForm($this, $journal->getId());
 				if ($request->getUserVar('save')) {

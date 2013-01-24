@@ -112,7 +112,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			// Install default journal settings
 			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 			$names = $this->getData('name');
-			AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_APPLICATION_COMMON);
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_APP_COMMON);
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => $request->getIndexUrl(),
 				'journalPath' => $this->getData('path'),

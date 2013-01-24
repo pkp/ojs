@@ -37,7 +37,7 @@ class JournalGridHandler extends ContextGridHandler {
 		AppLocale::requireComponents(
 			LOCALE_COMPONENT_APP_ADMIN,
 			LOCALE_COMPONENT_APP_MANAGER,
-			LOCALE_COMPONENT_APPLICATION_COMMON
+			LOCALE_COMPONENT_APP_COMMON
 		);
 
 		parent::initialize($request);

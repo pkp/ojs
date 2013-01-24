@@ -66,7 +66,7 @@ class BackupPlugin extends GenericPlugin {
 		// We've already verified that this is a site admin through
 		// conditional hook registration.
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_ADMIN, LOCALE_COMPONENT_APPLICATION_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_ADMIN, LOCALE_COMPONENT_APP_COMMON);
 		$returnValue = 0;
 		switch ($op) {
 			case 'index':

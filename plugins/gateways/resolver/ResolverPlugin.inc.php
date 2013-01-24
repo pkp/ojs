@@ -117,7 +117,7 @@ class ResolverPlugin extends GatewayPlugin {
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
 		$templateMgr =& TemplateManager::getManager($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');
 		exit;

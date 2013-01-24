@@ -324,7 +324,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				}
 
 				$results =& $this->importIssues($user, $journal, $args);
-				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 				foreach ($results as $id => $result) {
 					echo "	$id: " . ($result?$result->getIssueIdentification():'') . "\n";
 				}
