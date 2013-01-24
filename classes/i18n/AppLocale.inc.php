@@ -13,15 +13,7 @@
  *
  */
 
-
 import('lib.pkp.classes.i18n.PKPLocale');
-
-define('LOCALE_COMPONENT_APP_COMMON',	0x00000101);
-define('LOCALE_COMPONENT_APP_AUTHOR',		0x00000102);
-define('LOCALE_COMPONENT_APP_EDITOR',		0x00000103);
-define('LOCALE_COMPONENT_APP_MANAGER',		0x00000104);
-define('LOCALE_COMPONENT_APP_ADMIN',		0x00000105);
-define('LOCALE_COMPONENT_APP_DEFAULT',		0x00000106);
 
 class AppLocale extends PKPLocale {
 	/**
