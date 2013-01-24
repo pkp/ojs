@@ -41,8 +41,8 @@ class AnnouncementTypeGridHandler extends PKPAnnouncementTypeGridHandler {
 	 * @see GridHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.OjsJournalAccessPolicy');
-		$this->addPolicy(new OjsJournalAccessPolicy($request, $roleAssignments));
+		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
+		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 }
