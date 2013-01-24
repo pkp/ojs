@@ -38,7 +38,7 @@ class PageRouter extends PKPPageRouter {
 			if(count($roles) == 1) {
 				$role = array_shift($roles);
 				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');
-				$request->redirect(null, $role->getRolePath());
+				$request->redirect(null, $role->getPath());
 			} else {
 				$request->redirect(null, 'user');
 			}
@@ -54,7 +54,7 @@ class PageRouter extends PKPPageRouter {
 				$journal = $journalDao->getById($role->getJournalId());
 				if (!isset($journal)) $request->redirect('index', 'user');;
 				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');
-				$request->redirect($journal->getPath(), $role->getRolePath());
+				$request->redirect($journal->getPath(), $role->getPath());
 			} else $request->redirect('index', 'user');
 		}
 	}

@@ -298,7 +298,7 @@ class Validation {
 	 * @return boolean
 	 */
 	static function isJournalManager($journalId = -1) {
-		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
+		return Validation::isAuthorized(ROLE_ID_MANAGER, $journalId);
 	}
 
 	/**

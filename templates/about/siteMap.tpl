@@ -41,7 +41,7 @@
 							{assign var=currentJournalId value=$currentJournal->getId()}
 							{foreach from=$rolesByJournal[$currentJournalId] item=role}
 								{translate|assign:"roleName" key=$role->getRoleName()}
-								<li><a href="{url journal=$currentJournal->getPath() page=$role->getRolePath()}">{$roleName|escape}</a></li>
+								<li><a href="{url journal=$currentJournal->getPath() page=$role->getPath()}">{$roleName|escape}</a></li>
 							{/foreach}
 						</ul>
 					{else}
@@ -69,14 +69,14 @@
 					{if $navItem.url != '' && $navItem.name != ''}<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$baseUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>{/if}
 				{/foreach}
 			</ul>
-		</li>	
+		</li>
 		{if $onlyOneJournal}</ul></li>{/if}
 
 	{/if}
 	</ul>
 </li>
 {if $isSiteAdmin}
-	<li><a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+	<li><a href="{url journal="index" page=$isSiteAdmin->getPath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
 {/if}
 <li><a href="http://pkp.sfu.ca/ojs">{translate key="common.openJournalSystems"}</a></li>
 <li><a href="javascript:openHelp('{url journal="index" page="help"}')">{translate key="help.help"}</a></li>

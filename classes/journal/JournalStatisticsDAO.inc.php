@@ -177,7 +177,7 @@ class JournalStatisticsDAO extends DAO {
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[$roleDao->getRolePath($row['role_id'])] = $row['role_count'];
+			$returner[$roleDao->getPath($row['role_id'])] = $row['role_count'];
 			$result->moveNext();
 		}
 

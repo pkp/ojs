@@ -66,7 +66,9 @@ class ArticleComment extends DataObject {
 	 */
 	function getRoleName() {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$roleName = $roleDao->getRoleName($this->getData('roleId'));
+		$role =& $roleDao->newDataObject();
+		$role->setId($this->getData('roleId'));
+		$roleName = $role->getRoleName();
 
 		return $roleName;
 	}

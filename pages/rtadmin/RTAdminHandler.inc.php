@@ -23,7 +23,7 @@ class RTAdminHandler extends Handler {
 		parent::Handler();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
 	}
 
 	/**
@@ -61,7 +61,7 @@ class RTAdminHandler extends Handler {
 			$allJournals =& $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
-				if ($roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_JOURNAL_MANAGER)) {
+				if ($roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_MANAGER)) {
 					$journals[] = $journal;
 				}
 			}

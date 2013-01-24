@@ -95,7 +95,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 				$role = new Role();
 				$role->setJournalId($journalId);
 				$role->setUserId($userSession->getUserId());
-				$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
+				$role->setRoleId(ROLE_ID_MANAGER);
 
 				$roleDao =& DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);

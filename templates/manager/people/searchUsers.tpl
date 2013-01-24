@@ -77,7 +77,7 @@ function toggleChecked() {
 	<p>
 	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1"  class="selectMenu">
 		<option value=""></option>
-		<option value="{$smarty.const.ROLE_ID_JOURNAL_MANAGER}">{translate key="user.role.manager"}</option>
+		<option value="{$smarty.const.ROLE_ID_MANAGER}">{translate key="user.role.manager"}</option>
 		<option value="{$smarty.const.ROLE_ID_EDITOR}">{translate key="user.role.editor"}</option>
 		<option value="{$smarty.const.ROLE_ID_SECTION_EDITOR}">{translate key="user.role.sectionEditor"}</option>
 		{if $roleSettings.useLayoutEditors}

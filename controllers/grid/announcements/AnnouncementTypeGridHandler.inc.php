@@ -23,7 +23,7 @@ class AnnouncementTypeGridHandler extends PKPAnnouncementTypeGridHandler {
 	function AnnouncementTypeGridHandler() {
 		parent::PKPAnnouncementTypeGridHandler();
 		$this->addRoleAssignment(
-			ROLE_ID_JOURNAL_MANAGER,
+			ROLE_ID_MANAGER,
 			array(
 				'fetchGrid', 'fetchRow',
 				'addAnnouncementType', 'editAnnouncementType',

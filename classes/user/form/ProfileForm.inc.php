@@ -59,7 +59,7 @@ class ProfileForm extends PKPProfileForm {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 			$roleNames = array();
-			foreach ($roles as $role) $roleNames[$role->getRolePath()] = $role->getRoleName();
+			foreach ($roles as $role) $roleNames[$role->getPath()] = $role->getRoleName();
 			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 			$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
 			$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));

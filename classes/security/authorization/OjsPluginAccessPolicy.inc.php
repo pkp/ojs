@@ -32,7 +32,7 @@ class OjsPluginAccessPolicy extends PolicySet {
 		// A valid plugin is required.
 		$this->addPolicy(new PluginRequiredPolicy($request));
 
-		// Press managers and site admin have
+		// Journal managers and site admin have
 		// access to plugins. We'll have to define
 		// differentiated policies for those roles in a policy set.
 		$pluginAccessPolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
@@ -41,11 +41,11 @@ class OjsPluginAccessPolicy extends PolicySet {
 		//
 		// Managerial role
 		//
-		if (isset($roleAssignments[ROLE_ID_JOURNAL_MANAGER])) {
+		if (isset($roleAssignments[ROLE_ID_MANAGER])) {
 			if ($accessMode & ACCESS_MODE_MANAGE) {
-				// Press managers have edit settings access mode...
+				// Journal managers have edit settings access mode...
 				$journalManagerPluginAccessPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
-				$journalManagerPluginAccessPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_JOURNAL_MANAGER, $roleAssignments[ROLE_ID_JOURNAL_MANAGER]));
+				$journalManagerPluginAccessPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_MANAGER, $roleAssignments[ROLE_ID_MANAGER]));
 
 				// ...only to journal level plugins.
 				$journalManagerPluginAccessPolicy->addPolicy(new PluginLevelRequiredPolicy($request, CONTEXT_JOURNAL));

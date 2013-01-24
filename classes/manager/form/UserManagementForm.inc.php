@@ -176,7 +176,9 @@ class UserManagementForm extends Form {
 		if (!isset($this->userId)) {
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roleId = Request::getUserVar('roleId');
-			$roleSymbolic = $roleDao->getRolePath($roleId);
+			$role =& $roleDao->newDataObject();
+			$role->setId($roleId);
+			$roleSymbolic = $role->getPath();
 
 			$this->_data = array(
 				'enrollAs' => array($roleSymbolic)

@@ -70,7 +70,7 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 		$journals =& $journalDao->getJournals();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		$journal =& $request->getJournal();
-		return ($journals->getCount() == 1 && $journal && in_array(ROLE_ID_JOURNAL_MANAGER, $userRoles));
+		return ($journals->getCount() == 1 && $journal && in_array(ROLE_ID_MANAGER, $userRoles));
 	}
 }
 

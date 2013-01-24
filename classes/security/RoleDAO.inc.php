@@ -15,14 +15,25 @@
 
 
 import('classes.security.Role');
+import('lib.pkp.classes.security.PKPRoleDAO');
 
-class RoleDAO extends DAO {
+
+class RoleDAO extends PKPRoleDAO {
 	/**
 	 * Constructor.
 	 */
 	function RoleDAO() {
-		parent::DAO();
+		parent::PKPRoleDAO();
 		$this->userDao =& DAORegistry::getDAO('UserDAO');
+	}
+
+	/**
+	 * Create new data object.
+	 * @return Role
+	 */
+	function &newDataObject() {
+		$dataObject = new Role();
+		return $dataObject;
 	}
 
 	/**
@@ -59,7 +70,7 @@ class RoleDAO extends DAO {
 	 * @return Role
 	 */
 	function &_returnRoleFromRow($row) {
-		$role = new Role();
+		$role = new Role($row['role_id']);
 		$role->setJournalId($row['journal_id']);
 		$role->setUserId($row['user_id']);
 		$role->setRoleId($row['role_id']);
@@ -407,41 +418,6 @@ class RoleDAO extends DAO {
 	}
 
 	/**
-	 * Get the i18n key name associated with the specified role.
-	 * @param $roleId int
-	 * @param $plural boolean get the plural form of the name
-	 * @return string
-	 */
-	static function getRoleName($roleId, $plural = false) {
-		switch ($roleId) {
-			case ROLE_ID_SITE_ADMIN:
-				return 'user.role.siteAdmin' . ($plural ? 's' : '');
-			case ROLE_ID_JOURNAL_MANAGER:
-				return 'user.role.manager' . ($plural ? 's' : '');
-			case ROLE_ID_EDITOR:
-				return 'user.role.editor' . ($plural ? 's' : '');
-			case ROLE_ID_SECTION_EDITOR:
-				return 'user.role.sectionEditor' . ($plural ? 's' : '');
-			case ROLE_ID_LAYOUT_EDITOR:
-				return 'user.role.layoutEditor' . ($plural ? 's' : '');
-			case ROLE_ID_REVIEWER:
-				return 'user.role.reviewer' . ($plural ? 's' : '');
-			case ROLE_ID_COPYEDITOR:
-				return 'user.role.copyeditor' . ($plural ? 's' : '');
-			case ROLE_ID_PROOFREADER:
-				return 'user.role.proofreader' . ($plural ? 's' : '');
-			case ROLE_ID_AUTHOR:
-				return 'user.role.author' . ($plural ? 's' : '');
-			case ROLE_ID_READER:
-				return 'user.role.reader' . ($plural ? 's' : '');
-			case ROLE_ID_SUBSCRIPTION_MANAGER:
-				return 'user.role.subscriptionManager' . ($plural ? 's' : '');
-			default:
-				return '';
-		}
-	}
-
-	/**
 	 * Get role names
 	 * @param $roleId int ROLE_ID_...
 	 * @param $plural boolean
@@ -452,85 +428,26 @@ class RoleDAO extends DAO {
 	}
 
 	/**
-	 * Get the URL path associated with the specified role's operations.
-	 * @param $roleId int
-	 * @return string
-	 */
-	static function getRolePath($roleId) {
-		switch ($roleId) {
-			case ROLE_ID_SITE_ADMIN:
-				return 'admin';
-			case ROLE_ID_JOURNAL_MANAGER:
-				return 'manager';
-			case ROLE_ID_EDITOR:
-				return 'editor';
-			case ROLE_ID_SECTION_EDITOR:
-				return 'sectionEditor';
-			case ROLE_ID_LAYOUT_EDITOR:
-				return 'layoutEditor';
-			case ROLE_ID_REVIEWER:
-				return 'reviewer';
-			case ROLE_ID_COPYEDITOR:
-				return 'copyeditor';
-			case ROLE_ID_PROOFREADER:
-				return 'proofreader';
-			case ROLE_ID_AUTHOR:
-				return 'author';
-			case ROLE_ID_READER:
-				return 'reader';
-			case ROLE_ID_SUBSCRIPTION_MANAGER:
-				return 'subscriptionManager';
-			default:
-				return '';
-		}
-	}
-
-	/**
 	 * Get a role's ID based on its path.
 	 * @param $rolePath string
 	 * @return int
 	 */
-	static function getRoleIdFromPath($rolePath) {
+	function getRoleIdFromPath($rolePath) {
 		switch ($rolePath) {
-			case 'admin':
-				return ROLE_ID_SITE_ADMIN;
-			case 'manager':
-				return ROLE_ID_JOURNAL_MANAGER;
 			case 'editor':
 				return ROLE_ID_EDITOR;
 			case 'sectionEditor':
 				return ROLE_ID_SECTION_EDITOR;
 			case 'layoutEditor':
 				return ROLE_ID_LAYOUT_EDITOR;
-			case 'reviewer':
-				return ROLE_ID_REVIEWER;
 			case 'copyeditor':
 				return ROLE_ID_COPYEDITOR;
 			case 'proofreader':
 				return ROLE_ID_PROOFREADER;
-			case 'author':
-				return ROLE_ID_AUTHOR;
-			case 'reader':
-				return ROLE_ID_READER;
 			case 'subscriptionManager':
 				return ROLE_ID_SUBSCRIPTION_MANAGER;
 			default:
-				return null;
-		}
-	}
-
-	/**
-	 * Map a column heading value to a database value for sorting
-	 * @param string
-	 * @return string
-	 */
-	static function getSortMapping($heading) {
-		switch ($heading) {
-			case 'username': return 'u.username';
-			case 'name': return 'u.last_name';
-			case 'email': return 'u.email';
-			case 'id': return 'u.user_id';
-			default: return null;
+				return parent::getRoleIdFromPath($rolePath);
 		}
 	}
 }

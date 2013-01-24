@@ -21,7 +21,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 */
 	function PreparedEmailsGridHandler() {
 		$this->addRoleAssignment(
-			array(ROLE_ID_JOURNAL_MANAGER),
+			array(ROLE_ID_MANAGER),
 			array('fetchRow', 'fetchGrid', 'addPreparedEmail', 'editPreparedEmail', 'updatePreparedEmail',
 				'resetEmail', 'resetAllEmails', 'disableEmail', 'enableEmail', 'deleteCustomEmail')
 		);

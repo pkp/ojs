@@ -24,7 +24,7 @@ class LoginHandler extends PKPLoginHandler {
 	function signInAsUser($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		// only managers and admins have permission
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
 		$this->validate();
 
 		if (isset($args[0]) && !empty($args[0])) {

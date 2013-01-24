@@ -9,7 +9,7 @@
  * @class SubscriptionAction
  * @ingroup subscriptions
  *
- * Common actions for subscription management functions. 
+ * Common actions for subscription management functions.
  */
 
 class SubscriptionAction {
@@ -517,7 +517,7 @@ class SubscriptionAction {
 				$subscriptionTypeForm->display();
 				return false;
 			}
-		} 
+		}
 	}
 
 	/**
@@ -611,10 +611,13 @@ class SubscriptionAction {
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$role =& $roleDao->newDataObject();
 		if ($roleDao->getJournalUsersRoleCount($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
-			$rolePath = $roleDao->getRolePath(ROLE_ID_SUBSCRIPTION_MANAGER);
+			$role->setId(ROLE_ID_SUBSCRIPTION_MANAGER);
+			$rolePath = $role->getPath();
 		} else {
-			$rolePath = $roleDao->getRolePath(ROLE_ID_JOURNAL_MANAGER);
+			$role->setId(ROLE_ID_MANAGER);
+			$rolePath = $role->getPath();
 		}
 
 		$paramArray = array(

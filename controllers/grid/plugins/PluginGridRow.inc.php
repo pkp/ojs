@@ -39,7 +39,7 @@ class PluginGridRow extends PKPPluginGridRow {
 				return true;
 			}
 		} elseif ($this->_contextLevel & CONTEXT_JOURNAL) {
-			if (in_array(ROLE_ID_JOURNAL_MANAGER, $this->_userRoles)) {
+			if (in_array(ROLE_ID_MANAGER, $this->_userRoles)) {
 				return true;
 			}
 		}

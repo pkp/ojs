@@ -45,7 +45,9 @@ class PeopleHandler extends ManagerHandler {
 			if ($roleId == null) {
 				$request->redirect(null, null, null, 'all');
 			}
-			$roleName = $roleDao->getRoleName($roleId, true);
+			$role =& $roleDao->newDataObject();
+			$role->setId($roleId);
+			$roleName = $role->getRoleName(true);
 
 		} else {
 			$roleId = 0;
@@ -75,7 +77,7 @@ class PeopleHandler extends ManagerHandler {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
-				case ROLE_ID_JOURNAL_MANAGER:
+				case ROLE_ID_MANAGER:
 					$helpTopicId = 'journal.roles.journalManager';
 					break;
 				case ROLE_ID_EDITOR:
@@ -142,7 +144,9 @@ class PeopleHandler extends ManagerHandler {
 		);
 		if ($roleId == ROLE_ID_REVIEWER) $fieldOptions = array_merge(array(USER_FIELD_INTERESTS => 'user.interests'), $fieldOptions);
 		$templateMgr->assign('fieldOptions', $fieldOptions);
-		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$templateMgr->assign('rolePath', $role->getPath());
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->assign('sort', $sort);
@@ -202,7 +206,9 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('roleId', $roleId);
-		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$templateMgr->assign('roleName', $role->getRoleName());
 		$fieldOptions = Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
@@ -266,7 +272,9 @@ class PeopleHandler extends ManagerHandler {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getByPath($request->getRequestedJournalPath());
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$rolePath = $roleDao->getRolePath($roleId);
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$rolePath = $role->getPath();
 
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 			for ($i=0; $i<count($users); $i++) {
@@ -300,7 +308,9 @@ class PeopleHandler extends ManagerHandler {
 			$roleDao->deleteRoleByUserId($userId, $journalId, $roleId);
 		}
 
-		$request->redirect(null, null, 'people', $roleDao->getRolePath($roleId) . 's');
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$request->redirect(null, null, 'people', $role->getPath() . 's');
 	}
 
 	/**
@@ -314,7 +324,9 @@ class PeopleHandler extends ManagerHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath($rolePath);
 		if ($roleId) {
-			$roleName = $roleDao->getRoleName($roleId, true);
+			$role =& $roleDao->newDataObject();
+			$role->setId($roleId);
+			$roleName = $role->getRoleName(true);
 		} else {
 			$rolePath = '';
 			$roleName = '';
@@ -351,13 +363,14 @@ class PeopleHandler extends ManagerHandler {
 			while (!$roles->eof()) {
 				$role =& $roles->next();
 				$role->setJournalId($journal->getId());
-				if ($role->getRolePath() != 'admin' && !$roleDao->userHasRole($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
+				if ($role->getPath() != 'admin' && !$roleDao->userHasRole($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					$roleDao->insertRole($role);
 				}
 			}
 		}
-
-		$request->redirect(null, null, 'people', $roleDao->getRolePath($roleId));
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$request->redirect(null, null, 'people', $role->getPath());
 	}
 
 	/**
@@ -472,7 +485,9 @@ class PeopleHandler extends ManagerHandler {
 			if ($roleId == null) {
 				$request->redirect(null, null, null, 'all');
 			}
-			$roleName = $roleDao->getRoleName($roleId, true);
+			$role =& $roleDao->newDataObject();
+			$role->setId($roleId);
+			$roleName = $role->getRoleName(true);
 		} else {
 			$roleId = 0;
 			$roleName = 'manager.people.allUsers';
@@ -533,7 +548,9 @@ class PeopleHandler extends ManagerHandler {
 		));
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 		$templateMgr->assign('oldUserIds', $oldUserIds);
-		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
+		$role =& $roleDao->newDataObject();
+		$role->setId($roleId);
+		$templateMgr->assign('rolePath', $role->getPath());
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
