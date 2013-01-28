@@ -287,6 +287,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 					// When I reset the object ...
 					$this->clickAndWait($resetButton);
 					$this->waitForLocation('exact:'.$pageUrl);
+					$this->waitForElementPresent($registerButton);
 					// ... then the registration button reads "Register" again ...
 					$this->assertText($registerButton, 'Register');
 					// ... and the "Reset" button should have disappeared.

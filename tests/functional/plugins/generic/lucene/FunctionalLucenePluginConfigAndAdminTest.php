@@ -78,17 +78,20 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 	public function testPluginActivation() {
 		// Locators required for this test.
 		$pluginsPage = $this->baseUrl . '/index.php/lucene-test/manager/plugins/generic';
-		$disableLucene = '//a[contains(@href, "manager/plugin/generic/luceneplugin/disable")]';
-		$enableLucene = '//a[contains(@href, "manager/plugin/generic/luceneplugin/enable")]';
+		$disableLucene = 'xpath=//input[@id="select-cell-luceneplugin-enabled" and @checked]';
+		$enableLucene = 'xpath=//input[@id="select-cell-luceneplugin-enabled" and not(@checked)]';
 
 		// Go to the generic plugins page.
 		$this->logIn();
 		$this->verifyAndOpen($pluginsPage);
 
 		// Make sure that the plugin is disabled.
+		$this->waitForElementPresent('css=tr.elementluceneplugin');
 		$this->verifyElementPresent($disableLucene);
 		if ($this->verified()) {
-			$this->clickAndWait($disableLucene);
+			$this->click($disableLucene);
+			$this->waitForElementPresent('css=div.ui-dialog');
+			$this->click('css=.ui-dialog-buttonset .ui-button');
 		}
 		$this->waitForElementPresent($enableLucene);
 
@@ -108,7 +111,8 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 
 		// Enable the plugin but leave the solr server switched off.
 		$this->verifyAndOpen($pluginsPage);
-		$this->clickAndWait($enableLucene);
+		$this->waitForElementPresent('css=tr.elementluceneplugin');
+		$this->click($enableLucene);
 		$this->waitForElementPresent($disableLucene);
 
 		// Execute a simple search

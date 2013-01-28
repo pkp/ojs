@@ -320,10 +320,13 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 
 		// Delete the article.
 		$deleteArticleCommand = "php ./tools/deleteSubmissions.php $this->_articleId";
-		exec($deleteArticleCommand);
+		$result = exec($deleteArticleCommand);
 
 		// The article should no longer be indexed.
 		$this->assertFalse($this->_solr->getArticleFromIndex($this->_articleId), 'Deleting an article did not remove it from the index.');
+
+		// Clean up the article id.
+		$this->_articleId = null;
 	}
 
 	/**

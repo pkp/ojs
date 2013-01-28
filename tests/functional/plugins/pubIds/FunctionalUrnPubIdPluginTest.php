@@ -74,7 +74,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'settings' => array(
 				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/URNPubIdPlugin/settings',
 				'urnPrefix' => 'id=urnPrefix',
-				'clearURNs' => 'name=clearPubIds',
+				'clearURNs' => 'css=a[id^="urnSettingsForm-reassignURNs-button"]',
 				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
 			),
 
@@ -193,7 +193,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	|
 	 *        | galley    	|
 	 *        | supp file 	|
-	 *
 	 */
 	public function testRequiredFields() {
 		// Define no prefix
@@ -209,7 +208,8 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$this->type('id=urnResolver', '');
 
 		// Try to save settings.
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->submitAjaxForm('urnSettingsForm');
+
 		// Now we should find the error messages
 		$formPrefixError = str_replace('%id', "urnPrefix", $this->pages['settings']['formError']);
 		$formObjectError = str_replace('%id', "enableIssueURN", $this->pages['settings']['formError']);
@@ -226,13 +226,13 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *    GIVEN	I have specified a prefix that is not in the form
 	 *     WHEN	I click on the "Save" button
 	 *     THEN	I see the error message "The URN prefix pattern must be in the form 'urn:<NID>:<NSS>'."
-	 *
 	 */
 	public function testValidPrefix() {
 		// Define wrong prefix
 		$this->type($this->pages['settings']['urnPrefix'], 'asdfg');
 		// Try to save settings.
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->submitAjaxForm('urnSettingsForm');
+
 		// Now we should find the error message
 		$formError = str_replace('%id', "urnPrefix", $this->pages['settings']['formError']);
 		$this->assertElementPresent($formError);
@@ -253,7 +253,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	|
 	 *        | galley    	|
 	 *        | supp file 	|
-	 *
 	 */
 	public function testRequiredCustomSuffixPatterns() {
 		// Select the custom suffix pattern option.
@@ -267,7 +266,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		}
 
 		// Try to save settings.
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->submitAjaxForm('urnSettingsForm');
 
 		// Now we should find error messages for all four object
 		// types.
@@ -339,7 +338,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | galley    	| test.%j.v%vi%i.%a.g%g	| .../article/view/1/1 + DC <meta>, Google <meta>		| urn:nbn:de:0000-test.t.v1i1.1.g14	|
 	 *        | supp file 	| test.%j.v%vi%i.%a.s%s	| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-test.t.v1i1.1.s11	|
 	 *        | supp file 	| test.%j.v%vi%i.%a.s%s	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-test.t.v1i1.1.s11	|
-	 *
 	 */
 	public function testCustomSuffixPattern() {
 		// Configure custom pattern.
@@ -386,7 +384,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | supp file 	| suppfileurl1			| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-suppfileurl16		|
 	 *        | supp file 	| 						| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-s10				|
 	 *        | supp file 	| 						| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-s10				|
-	 *
 	 */
 	public function testCustomPublicURL() {
 		// Enable custom URL suffixes.
@@ -565,9 +562,9 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$this->checkURNDisplay('article', 'urn:nbn:de:0000-t.v1i1.1');
 
 		// Change and save a URN setting without deleting URNs.
-		$this->open($this->getUrl($this->pages['settings']));
+		$this->openSettingsPage();
 		$this->type('id=urnPrefix', 'urn:nbn:de:0001-');
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->submitAjaxForm('urnSettingsForm');
 
 		// Check that the URN didn't change.
 		$this->checkURNDisplay('article', 'urn:nbn:de:0000-t.v1i1.1');
@@ -610,10 +607,10 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * Open the settings page
 	 */
 	private function openSettingsPage() {
-		$this->verifyLocation('exact:'.$this->getUrl($this->pages['settings']));
-		if (!$this->verified()) {
-			$this->open($this->getUrl($this->pages['settings']));
-		}
+		$this->verifyAndOpen($this->baseUrl.'/index.php/test/manager/plugins');
+		$this->waitForElementPresent('css=tr.elementURNPubIdPlugin');
+		$this->click('css=a[id^="component-grid-settings-plugins-settingsplugingrid-category-pubIds-row-URNPubIdPlugin-settings-button"]');
+		$this->waitForElementPresent('css=#urnSettingsForm .button');
 	}
 
 	/**
@@ -664,7 +661,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 				);
 			}
 			// Save settings.
-			$this->clickAndWait('css=input.button.defaultButton');
+			$this->submitAjaxForm('urnSettingsForm');
 
 			// Delete existing URNs.
 			$this->deleteExistingURNs();
@@ -714,9 +711,12 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * Delete all existing URNs.
 	 */
 	private function deleteExistingURNs() {
-		$this->open($this->getUrl($this->pages['settings']));
-		$this->clickAndWait($this->pages['settings']['clearURNs']);
-		$this->getConfirmation();
+		$this->openSettingsPage();
+		$this->click($this->pages['settings']['clearURNs']);
+		$confirmationDivSelector = 'css=div:contains("Are you sure you wish to delete all existing URNs?")';
+		$this->waitForElementPresent($confirmationDivSelector);
+		$this->click($confirmationDivSelector . ' button.ui-button');
+		$this->waitForElementNotPresent($confirmationDivSelector);
 	}
 
 	/**

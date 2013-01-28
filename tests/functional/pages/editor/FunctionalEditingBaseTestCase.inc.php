@@ -208,7 +208,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->verifyAndOpen($metadataForm);
 
 		// Input the new title.
-		$this->type('title', $newTitle);
+		$this->type('css=input[id^=title-en_US]', $newTitle);
 
 		// Save the meta-data.
 		$this->clickAndWait('css=input.defaultButton');
@@ -254,7 +254,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->verifyAndOpen($submissionEditingPage);
 
 		// Select supp file upload radio option.
-		$this->click('layoutFileTypeSupp');
+		$this->click('layoutFileTypeSupp1');
 
 		// Set the supp file.
 		$this->attachFile('name=layoutFile', $suppFileUri);

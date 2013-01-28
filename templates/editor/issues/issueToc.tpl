@@ -55,12 +55,7 @@ $(document).ready(function() {
 <h3>{translate key="issue.toc"}</h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
-<script>
-	$(function() {ldelim}
-		// Attach the form handler.
-		$('#issueTocForm').pkpHandler('$.pkp.controllers.form.FormHandler');
-	{rdelim});
-</script>
+
 <form class="pkp_form" id="issueTocForm" method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
 
 {assign var=numCols value=5}

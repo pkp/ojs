@@ -9,7 +9,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.pubIds.urn.manager.settings.urnSettings"}
-{include file="common/header.tpl"}
 {/strip}
 <div id="urnSettings">
 <div id="description">{translate key="plugins.pubIds.urn.manager.settings.description"}</div>
@@ -21,10 +20,10 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#urnSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#urnSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="urnSettingsForm" method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" id="urnSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="plugin" category="pubIds" plugin=$pluginName verb="settings" save="true"}">
 {include file="common/formErrors.tpl"}
 <table class="data">
 	<tr>
@@ -165,10 +164,15 @@
 		</td>
 	</tr>
 </table>
+{fbvFormArea id="doiSuffixReassignFormArea" class="border" title="plugins.pubIds.urn.manager.settings.clearURNs"}
+	{fbvFormSection}
+		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span><br/>
+		{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="urnSettingsForm"}
+	{/fbvFormSection}
+{/fbvFormArea}
 
-<br/>
 
-<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/><input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
+{fbvFormButtons submitText="common.save"}
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

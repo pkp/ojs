@@ -58,7 +58,7 @@ class URNSettingsForm extends Form {
 	/**
 	 * @see Form::display()
 	 */
-	function display() {
+	function fetch($request) {
 		$namespaces = array(
 			'urn:nbn:de' => 'urn:nbn:de',
 			'urn:nbn:at' => 'urn:nbn:at',
@@ -66,9 +66,27 @@ class URNSettingsForm extends Form {
 			'urn:nbn' => 'urn:nbn',
 			'urn' => 'urn'
 		);
-		$templateMgr =& TemplateManager::getManager($this->_plugin->getRequest());
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('namespaces', $namespaces);
-		parent::display();
+
+		// for DOI reset requests
+		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+		$clearPubIdsLinkAction =
+		new LinkAction(
+			'reassignURNs',
+			new RemoteActionConfirmationModal(
+				__('plugins.pubIds.urn.manager.settings.clearURNs.confirm'),
+				__('common.delete'),
+				$request->url(null, null, 'plugin', null, array('verb' => 'settings', 'clearPubIds' => true, 'plugin' => $this->_plugin->getName(), 'category' => 'pubIds')),
+				'modal_delete'
+			),
+			__('plugins.pubIds.urn.manager.settings.clearURNs'),
+			'delete'
+		);
+
+		$templateMgr->assign('clearPubIdsLinkAction', $clearPubIdsLinkAction);
+
+		return parent::fetch();
 	}
 
 	/**
@@ -81,6 +99,8 @@ class URNSettingsForm extends Form {
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
 			$this->setData($fieldName, $plugin->getSetting($journalId, $fieldName));
 		}
+
+		$this->setData('pluginName', $plugin->getName());
 	}
 
 	/**

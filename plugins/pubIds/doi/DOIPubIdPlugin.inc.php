@@ -66,28 +66,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/DOISettingsFormHandler.js';
 	}
 
-	/**
-	 * Define management link actions for the settings verb.
-	 * @return LinkAction
-	 */
-	function getManagementVerbLinkAction(&$request, $verb) {
-		$router =& $request->getRouter();
-
-		list($verbName, $verbLocalized) = $verb;
-
-		if ($verbName === 'settings') {
-			import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
-			$actionRequest = new AjaxLegacyPluginModal(
-					$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'pubIds')),
-					$this->getDisplayName()
-			);
-			return new LinkAction($verbName, $actionRequest, $verbLocalized, null);
-		}
-
-		return null;
-	}
-
-
 	//
 	// Implement template methods from PubIdPlugin.
 	//

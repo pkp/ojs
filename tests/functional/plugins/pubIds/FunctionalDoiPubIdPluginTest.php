@@ -61,9 +61,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 			// DOI plug-in settings
 			'settings' => array(
-				'url' => $this->baseUrl.'/index.php/test/manager/plugin/pubIds/DOIPubIdPlugin/settings',
-				'doiPrefix' => 'id=doiPrefix',
-				'reassignDOIs' => 'name=clearPubIds',
+				'url' => $this->baseUrl.'/index.php/test/manager/plugins',
+				'doiPrefix' => 'css=input[id^="doiPrefix"]',
+				'reassignDOIs' => 'css=a[id^="doiSettingsForm-reassignDOIs-button"]',
 				'formError' => '//ul[@class="pkp_form_error_list"]//a[@href="#%id"]'
 			),
 
@@ -313,7 +313,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		}
 
 		// Try to save settings.
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->submitAjaxForm('doiSettingsForm');
 
 		// Now we should find error messages for all four object
 		// types.
@@ -329,7 +329,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		// corresponding error message should disappear.
 		foreach ($this->objectTypes as $objectType) {
 			$this->uncheck("id=enable${objectType}Doi");
-			$this->clickAndWait('css=input.button.defaultButton');
+			$this->submitAjaxForm('doiSettingsForm');
 			$this->assertLocation('exact:' . $this->getUrl('settings') . '#formErrors');
 			$formError = str_replace(
 				'%id', "doi${objectType}SuffixPattern",
@@ -632,9 +632,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		$this->checkDoiDisplay('article', '10.1234/t.v1i1.1');
 
 		// Change and save a DOI setting without deleting DOIs.
-		$this->open($this->getUrl('settings'));
-		$this->type('id=doiPrefix', '10.4321');
-		$this->clickAndWait('css=input.button.defaultButton');
+		$this->openSettingsPage();
+		$this->type('css=input[id^="doiPrefix"]', '10.4321');
+		$this->submitAjaxForm('doiSettingsForm');
 
 		// Check that the DOI didn't change.
 		$this->checkDoiDisplay('article', '10.1234/t.v1i1.1');
@@ -760,6 +760,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 */
 	private function openSettingsPage() {
 		$this->verifyAndOpen($this->getUrl('settings'));
+		$this->waitForElementPresent('css=tr.elementDOIPubIdPlugin');
+		$this->click('css=a[id^="component-grid-settings-plugins-settingsplugingrid-category-pubIds-row-DOIPubIdPlugin-settings-button"]');
+		$this->waitForElementPresent('css=#doiSettingsForm .submitFormButton');
 	}
 
 	/**
@@ -805,13 +808,13 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			// Configure the suffix patterns.
 			foreach ($pattern as $objectType => $suffixPattern) {
 				$this->type(
-					"id=doi${objectType}SuffixPattern",
+					'css=input[id^="doi' . $objectType . 'SuffixPattern"]',
 					$suffixPattern
 				);
 			}
 
 			// Save settings.
-			$this->clickAndWait('css=input.button.defaultButton');
+			$this->submitAjaxForm('doiSettingsForm');
 		}
 
 		// Delete existing DOIs.
@@ -822,9 +825,12 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * Delete all existing DOIs.
 	 */
 	private function deleteExistingDois() {
-		$this->open($this->getUrl('settings'));
-		$this->clickAndWait($this->pages['settings']['reassignDOIs']);
-		$this->assertConfirmation('Are you sure you wish to delete all existing DOIs?');
+		$this->openSettingsPage();
+		$this->click($this->pages['settings']['reassignDOIs']);
+		$confirmationDivSelector = 'css=div:contains("Are you sure you wish to delete all existing DOIs?")';
+		$this->waitForElementPresent($confirmationDivSelector);
+		$this->click($confirmationDivSelector . ' button.ui-button');
+		$this->waitForElementNotPresent($confirmationDivSelector);
 	}
 
 	/**
@@ -909,6 +915,10 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				}
 			} else {
 				$expectedDoiPattern = "(^|.* )$expectedDoi($| .*)";
+				$doiText = $this->getText($this->pages[$objectType]['visible']);
+				if ($expectedDoi == '10.1234/t.v1i1.1') {
+					$fata = 'morgana';
+				}
 				$this->assertText($this->pages[$objectType]['visible'], $expectedDoiPattern);
 				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
 					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
@@ -936,15 +946,15 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			$metadataPage = "metadata-$objectType";
 			$url = $this->getUrl($metadataPage, $objectId);
 			$this->verifyAndOpen($url);
+			$doiText = $this->getText($this->pages[$metadataPage]['doi']);
 			if ($editable) {
 				if (!is_null($expectedDoi)) $this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
 			} else {
 				$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
-				if (!is_null($expectedDoi)) $this->assertText($this->pages[$metadataPage]['doi'], "regexp:^DOI $expectedDoi\n");
+				if (!is_null($expectedDoi)) $this->assertContains("DOI $expectedDoi", $doiText);
 			}
 			if ($isPreview) {
-				$doiPreview = $this->getText($this->pages[$metadataPage]['doi']);
-				$this->assertContains('What you see is a preview', $doiPreview);
+				$this->assertContains('What you see is a preview', $doiText);
 			}
 		} catch(Exception $e) {
 			throw $this->improveException($e, $objectType);
