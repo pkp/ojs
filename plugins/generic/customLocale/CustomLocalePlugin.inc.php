@@ -109,23 +109,24 @@ class CustomLocalePlugin extends GenericPlugin {
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
+		$request = $this->getRequest();
 		$this->import('CustomLocaleHandler');
 		$customLocaleHandler = new CustomLocaleHandler($this->getName());
 		switch ($verb) {
 			case 'edit':
-				$customLocaleHandler->edit($args);
+				$customLocaleHandler->edit($args, $request);
 				return true;
 			case 'saveLocaleChanges':
-				$customLocaleHandler->saveLocaleChanges($args);
+				$customLocaleHandler->saveLocaleChanges($args, $request);
 				return true;
 			case 'editLocaleFile':
-				$customLocaleHandler->editLocaleFile($args);
+				$customLocaleHandler->editLocaleFile($args, $request);
 				return true;
 			case 'saveLocaleFile':
-				$customLocaleHandler->saveLocaleFile($args);
+				$customLocaleHandler->saveLocaleFile($args, $request);
 				return true;
 			default:
-				$customLocaleHandler->index();
+				$customLocaleHandler->index($args, $request);
 				return true;
 		}
 	}

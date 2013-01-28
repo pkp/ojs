@@ -34,7 +34,7 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function index($args, &$request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$plugin =& $this->plugin;
 		$this->setupTemplate($request, $plugin, false);
 
@@ -50,7 +50,7 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function edit($args, $request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$plugin =& $this->plugin;
 		$this->setupTemplate($request, $plugin, true);
 
@@ -77,7 +77,7 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function editLocaleFile($args, $request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$plugin =& $this->plugin;
 		$this->setupTemplate($request, $plugin, true);
 
@@ -142,7 +142,7 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function saveLocaleFile($args, $request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$plugin =& $this->plugin;
 		$this->setupTemplate($request, $plugin, true);
 
@@ -217,6 +217,6 @@ class CustomLocaleHandler extends Handler {
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		$templateMgr->assign('helpTopicId', 'plugins.generic.CustomLocalePlugin');
 	}
-
 }
+
 ?>

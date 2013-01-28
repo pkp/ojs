@@ -62,7 +62,7 @@ class PluginHandler extends ManagerHandler {
 		$plugin = array_shift($args);
 		$verb = array_shift($args);
 
-		$this->validate();
+		$this->validate(null, $request);
 		$this->setupTemplate($request, true);
 
 		$plugins =& PluginRegistry::loadCategory($category);
