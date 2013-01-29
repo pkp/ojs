@@ -1141,4 +1141,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
 	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
+
+	<!-- Grid Actions -->
+	<message key="grid.action.createContext">Create a New Journal</message>
 </locale>

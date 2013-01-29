@@ -156,4 +156,12 @@ ________________________________________________________________________</messag
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFee">Donations to journal</message>
 	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
+
+	<!-- Group defaults -->
+	<message key="default.groups.name.manager">Journal manager</message>
+	<message key="default.groups.plural.manager">Journal managers</message>
+	<message key="default.groups.abbrev.manager">JM</message>
+	<message key="default.groups.name.guestEditor">Guest editor</message>
+	<message key="default.groups.plural.guestEditor">Guest editors</message>
+	<message key="default.groups.abbrev.guestEditor">AcqE</message>
 </locale>
