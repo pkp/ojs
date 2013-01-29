@@ -88,6 +88,9 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journalId = $journalDao->insertObject($journal);
 			$journalDao->resequence();
 
+			// load the default user groups and stage assignments.
+			$this->_loadDefaultUserGroups($journalId);
+
 			// Make the site administrator the journal manager of newly created journals
 			$sessionManager =& SessionManager::getManager();
 			$userSession =& $sessionManager->getUserSession();
