@@ -213,7 +213,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		}
 		$url = $this->_getObjectUrl($request, $journal, $object);
 		assert(!empty($url));
-		$payload = "doi=$doi\nurl=$url";
 
 		// Prepare HTTP session.
 		$curlCh = curl_init ();
@@ -230,37 +229,40 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
 		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
-		// Mint a DOI.
-		curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'doi');
-		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: text/plain;charset=UTF-8'));
+		// Transmit meta-data.
+		assert(is_readable($file));
+		$payload = file_get_contents($file);
+		assert($payload !== false && !empty($payload));
+		curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'metadata');
+		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: application/xml;charset=UTF-8'));
 		curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
 
-		$result = array();
+		$result = true;
 		$response = curl_exec($curlCh);
-		if ($response !== false) {
+		if ($response === false) {
+			$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+		} else {
 			$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-			if ($status == DATACITE_API_RESPONSE_OK) {
-				$result = true;
-			} else {
-				$result[] = array('plugins.importexport.common.register.error.mdsError', "$status - $response");
+			if ($status != DATACITE_API_RESPONSE_OK) {
+				$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
 			}
 		}
 
-		// Transmit meta-data.
+		// Mint a DOI.
 		if ($result === true) {
-			assert(is_readable($file));
-			$payload = file_get_contents($file);
-			assert($payload !== false && !empty($payload));
-			curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'metadata');
-			curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: application/xml;charset=UTF-8'));
+			$payload = "doi=$doi\nurl=$url";
+
+			curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'doi');
+			curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: text/plain;charset=UTF-8'));
 			curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
+
 			$response = curl_exec($curlCh);
-			if ($response !== false) {
+			if ($response === false) {
+				$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+			} else {
 				$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
 				if ($status != DATACITE_API_RESPONSE_OK) {
-					$result = array(
-						array('plugins.importexport.common.register.error.mdsError', "$status - $response")
-					);
+					$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
 				}
 			}
 		}
