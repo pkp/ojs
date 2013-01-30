@@ -314,7 +314,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				$result->fields['date_published'] == null && (
 					($result->fields['initial_notified'] != null && $result->fields['initial_completed'] == null) ||
 					($result->fields['final_notified'] != null && $result->fields['final_completed'] == null)
-				)
+				) && ($result->fields['status'] != STATUS_ARCHIVED) && ($result->fields['status'] != STATUS_DECLINED)
 			) {
 				$submissionsCount[0] += 1;
 			} else {
