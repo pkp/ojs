@@ -156,7 +156,8 @@ class TemplateManager extends PKPTemplateManager {
 			}
 
 			if ($params['url'] == 'true') {
-				return $this->request->url(null, 'help', 'view', explode('/', $translatedKey));
+				$dispatcher =& PKPApplication::getDispatcher();
+				return $dispatcher->url($this->request, ROUTE_PAGE, null, 'help', 'view', explode('/', $translatedKey));
 			} else {
 				return $translatedKey;
 			}

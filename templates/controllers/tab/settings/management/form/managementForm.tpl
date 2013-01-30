@@ -1,5 +1,5 @@
 {**
- * templates/manager/setup/step4.tpl
+ * templates/controllers/tab/settings/management/form/managementForm.tpl
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -7,31 +7,18 @@
  * Step 4 of journal setup.
  *
  *}
-{assign var="pageTitle" value="manager.setup.managingTheJournal"}
-{include file="manager/setup/setupHeader.tpl"}
+
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#managementSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
-{include file="common/formErrors.tpl"}
 
-{if count($formLocales) > 1}
-<div id="locales">
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td class="value">
-			{url|assign:"setupFormUrl" op="setup" path="4" escape=false}
-			{form_language_chooser form="setupForm" url=$setupFormUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
-</div><!-- locales -->
-{/if}
+<form class="pkp_form" id="managementSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="management"}" enctype="multipart/form-data">
+
+{include file="controllers/notification/inPlaceNotification.tpl" notificationId="managementFormNotification"}
+{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
 <div id="securitySettings">
 <h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
@@ -39,7 +26,6 @@
 <h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
 <script>
 	{literal}
-	<!--
 		function togglePublishingMode(form) {
 			if (form.publishingMode[0].checked) {
 				// PUBLISHING_MODE_OPEN
@@ -55,7 +41,6 @@
 				form.showGalleyLinks.disabled = true;
 			}
 		}
-	// -->
 	{/literal}
 </script>
 
@@ -107,7 +92,6 @@
 
 <script>
 {literal}
-<!--
 function setRegAllowOpts(form) {
 	if(form.disableUserReg[0].checked) {
 		form.allowRegReader.disabled=false;
@@ -119,7 +103,6 @@ function setRegAllowOpts(form) {
 		form.allowRegReviewer.disabled=true;
 	}
 }
-// -->
 {/literal}
 </script>
 
@@ -289,11 +272,9 @@ function setRegAllowOpts(form) {
 
 	<script>
 		{literal}
-		<!--
 			function toggleEnableAnnouncementsHomepage(form) {
 				form.numAnnouncementsHomepage.disabled = !form.numAnnouncementsHomepage.disabled;
 			}
-		// -->
 		{/literal}
 	</script>
 
@@ -386,7 +367,7 @@ function setRegAllowOpts(form) {
 <table class="data">
 {foreach name=templates from=$templates key=templateId item=template}
 	<tr>
-		<td class="label"><a href="{url op="downloadLayoutTemplate" path=$templateId}" class="action">{$template.filename|escape}</a></td>
+		<td class="label"><a href="{url router=$smarty.const.ROUTE_PAGE op="downloadLayoutTemplate" path=$templateId}" class="action">{$template.filename|escape}</a></td>
 		<td class="value">{$template.title|escape}</td>
 		<td><input type="submit" name="delTemplate[{$templateId|escape}]" value="{translate key="common.delete"}" class="button" /></td>
 {/foreach}
@@ -447,14 +428,8 @@ function setRegAllowOpts(form) {
 </div>
 </div>
 
-<div class="separator"></div>
-
-
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+{if !$wizardMode}
+	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
+{/if}
 
 </form>
-
-{include file="common/footer.tpl"}
-

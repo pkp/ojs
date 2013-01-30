@@ -22,6 +22,7 @@
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.scrollabletab.js"></script>
 
 {* JSON library *}
 <script src="{$baseUrl}/lib/pkp/js/lib/json/json2.js"></script>
@@ -84,6 +85,8 @@
 
 {* Specific controllers *}
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/filter/form/FilterFormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js"></script>
 <script src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
 <script src="{$baseUrl}/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
 

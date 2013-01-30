@@ -1,5 +1,5 @@
 {**
- * templates/manager/setup/step1.tpl
+ * templates/controllers/tab/settings/details/form/detailsForm.tpl
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -7,31 +7,19 @@
  * Step 1 of journal setup.
  *
  *}
-{assign var="pageTitle" value="manager.setup.gettingDownTheDetails"}
-{include file="manager/setup/setupHeader.tpl"}
-<script>
+
+<script type="text/javascript">
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#detailSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="1"}">
-{include file="common/formErrors.tpl"}
 
-{if count($formLocales) > 1}
-<div id="locales">
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td class="value">
-			{url|assign:"setupFormUrl" op="setup" path="1" escape=false}
-			{form_language_chooser form="setupForm" url=$setupFormUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
-</div>
-{/if}
+<form class="pkp_form" id="detailSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="details"}">
+
+{include file="controllers/notification/inPlaceNotification.tpl" notificationId="detailsFormNotification"}
+{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
+
 <div id="generalInformation">
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
 
@@ -334,15 +322,8 @@
 	</tr>
 </table>
 
-
-<div class="separator"></div>
-
-
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+{if !$wizardMode}
+	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
+{/if}
 
 </form>
-
-{include file="common/footer.tpl"}
-

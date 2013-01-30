@@ -1054,47 +1054,6 @@ span.pkp_form_error {
   background-position:99.5% 2px;
   background-image:url(../lib/pkp/templates/images/structure/flags/te_ST.png) !important;
 }
-.ui-widget.ui-pnotify { width:320px !important; }
-div.ui-pnotify-container {
-  background:#c9e3f8;
-  border:1px solid #559abd;
-}
-.notifyError div.ui-pnotify-container, .notifyFormError div.ui-pnotify-container {
-  background:#f8dada;
-  border:1px solid #9a0000;
-}
-.notifyError .ui-pnotify-icon, .notifyFormError .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_error.png); }
-.notifySuccess .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_success.png); }
-.notifyWarning .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_warning.png); }
-.notifyForbidden .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_forbidden.png); }
-.notifyInformation .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_info.png); }
-.notifyHelp .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_help.png); }
-.pkp_notification {
-  margin-top:10px;
-  text-align:left;
-}
-.pkp_notification .notification_block {
-  background-position:7px 5px !important;
-  background-repeat:no-repeat !important;
-  padding:5px 20px 5px 30px;
-  min-height:20px;
-}
-.pkp_notification p {
-  display:inline;
-  padding:0px;
-  font-size:80%;
-}
-.pkp_notification h4 {
-  display:inline;
-  padding-right:0px;
-}
-.pkp_notification .pkp_linkActions { line-height:24px; }
-.pkp_notification .notifySuccess { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_success.png); }
-.pkp_notification .notifyWarning { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_warning.png); }
-.pkp_notification .notifyError, .pkp_notification .notifyFormError { background:#f8dada url(../lib/pkp/templates/images/structure/response_error.png); }
-.pkp_notification .notifyForbidden { background:#f8dada url(../lib/pkp/templates/images/structure/response_forbidden.png); }
-.pkp_notification .notifyInformation { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_info.png); }
-.pkp_notification .notifyHelp { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_help.png); }
 div.pkp_controllers_grid { margin-top:20px; }
 div.pkp_controllers_grid div.actions { margin-top:10px; }
 div.pkp_controllers_grid table {
@@ -1345,6 +1304,63 @@ a.request_review { background-image:url(../lib/pkp/templates/images/structure/gr
   border-top:1px solid #6aa6d6;
   border-bottom:1px solid #6aa6d6;
 }
+div.pkp_controllers_listbuilder thead, div.pkp_controllers_listbuilder tr.gridRow, div.pkp_controllers_listbuilder tr.empty { border-bottom:1px solid #c8c7c7; }
+div.pkp_controllers_listbuilder .gridCellEdit { display:none; }
+div.pkp_controllers_listbuilder .gridRowEdit .gridCellEdit { display:block; }
+div.pkp_controllers_listbuilder .gridRowEdit .gridCellDisplay { display:none; }
+div.pkp_controllers_listbuilder .spinner {
+  background-color:#eaf3f8 !important;
+  background-repeat:no-repeat;
+  background:url(../lib/pkp/templates/images/throbber.gif) no-repeat;
+  background-position:100% 50%;
+  padding:2px 30px 2px 0px;
+}
+div.pkp_controllers_listbuilder .list_wrapper {
+  padding:2px;
+  display:inline-block;
+  vertical-align:top;
+}
+.ui-widget.ui-pnotify { width:320px !important; }
+div.ui-pnotify-container {
+  background:#c9e3f8;
+  border:1px solid #559abd;
+}
+.notifyError div.ui-pnotify-container, .notifyFormError div.ui-pnotify-container {
+  background:#f8dada;
+  border:1px solid #9a0000;
+}
+.notifyError .ui-pnotify-icon, .notifyFormError .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_error.png); }
+.notifySuccess .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_success.png); }
+.notifyWarning .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_warning.png); }
+.notifyForbidden .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_forbidden.png); }
+.notifyInformation .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_info.png); }
+.notifyHelp .ui-pnotify-icon { background-image:url(../lib/pkp/templates/images/structure/response_help.png); }
+.pkp_notification {
+  margin-top:10px;
+  text-align:left;
+}
+.pkp_notification .notification_block {
+  background-position:7px 5px !important;
+  background-repeat:no-repeat !important;
+  padding:5px 20px 5px 30px;
+  min-height:20px;
+}
+.pkp_notification p {
+  display:inline;
+  padding:0px;
+  font-size:80%;
+}
+.pkp_notification h4 {
+  display:inline;
+  padding-right:0px;
+}
+.pkp_notification .pkp_linkActions { line-height:24px; }
+.pkp_notification .notifySuccess { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_success.png); }
+.pkp_notification .notifyWarning { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_warning.png); }
+.pkp_notification .notifyError, .pkp_notification .notifyFormError { background:#f8dada url(../lib/pkp/templates/images/structure/response_error.png); }
+.pkp_notification .notifyForbidden { background:#f8dada url(../lib/pkp/templates/images/structure/response_forbidden.png); }
+.pkp_notification .notifyInformation { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_info.png); }
+.pkp_notification .notifyHelp { background:#c9e3f8 url(../lib/pkp/templates/images/structure/response_help.png); }
 .pkp_controllers_modal_titleBar {
   height:48px;
   width:100%;

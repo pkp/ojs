@@ -1,5 +1,5 @@
 {**
- * templates/manager/setup/step2.tpl
+ * templates/controllers/tab/settings/submissions/form/submissionsForm.tpl
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -7,31 +7,19 @@
  * Step 2 of journal setup.
  *
  *}
-{assign var="pageTitle" value="manager.setup.journalPolicies"}
-{include file="manager/setup/setupHeader.tpl"}
+
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#submissionSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="2"}">
-{include file="common/formErrors.tpl"}
 
-{if count($formLocales) > 1}
-<div id="locales">
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td class="value">
-			{url|assign:"setupFormUrl" op="setup" path="2" escape=false}
-			{form_language_chooser form="setupForm" url=$setupFormUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
-</div>
-{/if}
+<form class="pkp_form" id="submissionSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="submissions"}">
+
+{include file="controllers/notification/inPlaceNotification.tpl" notificationId="submissionsFormNotification"}
+{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
+
 <div id="focusAndScopeDescription">
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
 <p>{translate key="manager.setup.focusAndScopeDescription"}</p>
@@ -55,7 +43,7 @@
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
-{url|assign:"reviewFormsUrl" op="reviewForms"}
+{url|assign:"reviewFormsUrl" router=$smarty.const.ROUTE_PAGE op="reviewForms"}
 <p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
 
 <p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea richContent">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
@@ -96,14 +84,12 @@
 
 	<script>
 		{literal}
-		<!--
 			function toggleAllowSetInviteReminder(form) {
 				form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
 			}
 			function toggleAllowSetSubmitReminder(form) {
 				form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
 			}
-		// -->
 		{/literal}
 	</script>
 
@@ -218,11 +204,11 @@
 
 <p>{translate key="manager.setup.lockssDescription"}</p>
 
-{url|assign:"lockssExistingArchiveUrl" page="manager" op="email" template="LOCKSS_EXISTING_ARCHIVE"}
-{url|assign:"lockssNewArchiveUrl" page="manager" op="email" template="LOCKSS_NEW_ARCHIVE"}
+{url|assign:"lockssExistingArchiveUrl" router=$smarty.const.ROUTE_PAGE page="manager" op="email" template="LOCKSS_EXISTING_ARCHIVE"}
+{url|assign:"lockssNewArchiveUrl" router=$smarty.const.ROUTE_PAGE page="manager" op="email" template="LOCKSS_NEW_ARCHIVE"}
 <p>{translate key="manager.setup.lockssRegister" lockssExistingArchiveUrl=$lockssExistingArchiveUrl lockssNewArchiveUrl=$lockssNewArchiveUrl}</p>
 
-{url|assign:"lockssUrl" page="gateway" op="lockss"}
+{url|assign:"lockssUrl" router=$smarty.const.ROUTE_PAGE page="gateway" op="lockss"}
 <p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>
 
 <p>
@@ -236,7 +222,7 @@
 
 <p>{translate key="manager.setup.clockssRegister"}</p>
 
-{url|assign:"clockssUrl" page="gateway" op="clockss"}
+{url|assign:"clockssUrl" router=$smarty.const.ROUTE_PAGE page="gateway" op="clockss"}
 <p><input type="checkbox" name="enableClockss" id="enableClockss" value="1"{if $enableClockss} checked="checked"{/if} /> <label for="enableClockss">{translate key="manager.setup.clockssEnable" clockssUrl=$clockssUrl}</label></p>
 
 <p>
@@ -280,15 +266,8 @@
 {/foreach}
 </table>
 
-<p><input type="submit" name="addReviewerDatabaseLink" value="{translate key="manager.setup.addReviewerDatabaseLink"}" class="button" /></p>
-</div>
-<div class="separator"></div>
-
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+{if !$wizardMode}
+	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
+{/if}
 
 </form>
-
-{include file="common/footer.tpl"}
-

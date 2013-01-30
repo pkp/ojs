@@ -17,16 +17,6 @@
 
 switch ($op) {
 	//
-	// Setup
-	//
-	case 'setup':
-	case 'saveSetup':
-	case 'setupSaved':
-	case 'downloadLayoutTemplate':
-		define('HANDLER_CLASS', 'SetupHandler');
-		import('pages.manager.SetupHandler');
-		break;
-	//
 	// People Management
 	//
 	case 'people':
@@ -91,13 +81,6 @@ switch ($op) {
 		import('pages.manager.EmailHandler');
 		break;
 	//
-	// Languages
-	//
-	case 'languages':
-		define('HANDLER_CLASS', 'JournalLanguagesHandler');
-		import('pages.manager.JournalLanguagesHandler');
-		break;
-	//
 	// Files Browser
 	//
 	case 'files':
@@ -143,14 +126,6 @@ switch ($op) {
 		import('pages.manager.ImportExportHandler');
 		break;
 	//
-	// Plugin Management
-	//
-	case 'plugins':
-	case 'plugin':
-		define('HANDLER_CLASS', 'PluginHandler');
-		import('pages.manager.PluginHandler');
-		break;
-	//
 	// Group Management
 	//
 	case 'groups':
@@ -188,14 +163,6 @@ switch ($op) {
 	case 'viewPayment':
 		define('HANDLER_CLASS', 'ManagerPaymentHandler');
 		import('pages.manager.ManagerPaymentHandler');
-		break;
-	//
-	// Announcements
-	//
-	case 'announcements':
-	case 'announcementTypes':
-		define('HANDLER_CLASS', 'AnnouncementHandler');
-		import('pages.manager.AnnouncementHandler');
 		break;
 	case 'index':
 	case 'email':

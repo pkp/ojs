@@ -6,31 +6,18 @@
  *
  * Step 3 of journal setup.
  *}
-{assign var="pageTitle" value="manager.setup.guidingSubmissions"}
-{include file="manager/setup/setupHeader.tpl"}
+
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#setupForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#policySettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
-{include file="common/formErrors.tpl"}
 
-{if count($formLocales) > 1}
-<div id="locale">
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td class="value">
-			{url|assign:"setupFormUrl" op="setup" path="3" escape=false}
-			{form_language_chooser form="setupForm" url=$setupFormUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
-</div>
-{/if}
+<form class="pkp_form" id="policySettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="saveFormData" tab="policies"}">
+
+{include file="controllers/notification/inPlaceNotification.tpl" notificationId="policiesFormNotification"}
+{include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
 <div id="authorGuidelinesInfo">
 <h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
@@ -77,7 +64,7 @@
 <div id="authorCopyrightNotice">
 <h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
-{url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
+{url|assign:"sampleCopyrightWordingUrl" router=$smarty.const.ROUTE_PAGE page="information" op="sampleCopyrightWording"}
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
 
 <p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea richContent">{$copyrightNotice[$formLocale]|escape}</textarea></p>
@@ -283,7 +270,7 @@
 <div id="registerJournalForIndexing">
 <h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
-{url|assign:"oaiUrl" page="oai"}
+{url|assign:"oaiUrl" router=$smarty.const.ROUTE_PAGE page="oai"}
 <p>{translate key="manager.setup.registerJournalForIndexingDescription" oaiUrl=$oaiUrl siteUrl=$baseUrl}</p>
 </div>
 
@@ -306,7 +293,7 @@
 	{if !$submissionAckEnabled}
 	<tr>
 		<td>&nbsp;</td>
-		{url|assign:"preparedEmailsUrl" op="emails"}
+		{url|assign:"preparedEmailsUrl" router=$smarty.const.ROUTE_PAGE op="emails"}
 		<td>{translate key="manager.setup.notifications.submissionAckDisabled" preparedEmailsUrl=$preparedEmailsUrl}</td>
 	</tr>
 	{/if}
@@ -371,12 +358,8 @@
 	</script>{/literal}
 </div>
 
-<div class="separator"></div>
-
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+{if !$wizardMode}
+	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
+{/if}
 
 </form>
-
-{include file="common/footer.tpl"}
