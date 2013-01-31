@@ -94,45 +94,6 @@
 	</script>
 
 <p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewTime"}</strong><br/>
-	{translate key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br/>
-	{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnModification"}
-</p>
-
-	<p>
-		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
-		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
-		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite} checked="checked"{/if} />&nbsp;
-		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
-		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
-			{section name="inviteDayOptions" start=3 loop=11}
-			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="selected"{/if}>{$smarty.section.inviteDayOptions.index}</option>
-			{/section}
-		</select>
-		{translate key="manager.setup.reviewOptions.remindForInvite2"}
-		<br/>
-
-		<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
-		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
-		<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit || !$scheduledTasksEnabled} disabled="disabled"{/if}>
-			{section name="submitDayOptions" start=0 loop=11}
-				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="selected"{/if}>{$smarty.section.submitDayOptions.index}</option>
-		{/section}
-		</select>
-		{translate key="manager.setup.reviewOptions.remindForSubmit2"}
-		{if !$scheduledTasksEnabled}
-		<br/>
-		{translate key="manager.setup.reviewOptions.automatedRemindersDisabled"}
-		{/if}
-	</p>
-
-<p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewerRatings"}</strong><br/>
-	<input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} />&nbsp;
-	<label for="rateReviewerOnQuality">{translate key="manager.setup.reviewOptions.onQuality"}</label>
-</p>
-
-<p>
 	<strong>{translate key="manager.setup.reviewOptions.reviewerAccess"}</strong><br/>
 	<input type="checkbox" name="reviewerAccessKeysEnabled" id="reviewerAccessKeysEnabled" value="1"{if $reviewerAccessKeysEnabled} checked="checked"{/if} />&nbsp;
 	<label for="reviewerAccessKeysEnabled">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}</label><br/>
@@ -141,12 +102,6 @@
 	<label for="restrictReviewerFileAccess">{translate key="manager.setup.reviewOptions.restrictReviewerFileAccess"}</label>
 </p>
 
-<p>
-	<strong>{translate key="manager.setup.reviewOptions.blindReview"}</strong><br/>
-	<input type="checkbox" name="showEnsuringLink" id="showEnsuringLink" value="1"{if $showEnsuringLink} checked="checked"{/if} />&nbsp;
-	{get_help_id|assign:"blindReviewHelpId" key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}
-	<label for="showEnsuringLink">{translate key="manager.setup.reviewOptions.showEnsuringLink" blindReviewHelpId=$blindReviewHelpId}</label><br/>
-</p>
 </div>
 </div>
 <div class="separator"></div>
