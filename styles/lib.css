@@ -11,6 +11,12 @@
  * a particularly attractive idea.
  */
 
+/* OOCSS - http://github.com/stubbornella/oocss */
+
+@import url("../lib/pkp/styles/lib/oocss/libraries.css");
+
+@import url("../lib/pkp/styles/lib/oocss/grids.css");
+
 /**
  * The following libraries are compilable but compiling throws image paths off.
  */
