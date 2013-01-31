@@ -51,7 +51,7 @@ class InformationHandler extends Handler {
 				$pageCrumbTitle = 'navigation.infoForLibrarians';
 				break;
 			case 'competingInterestGuidelines':
-				$content = $journal->getLocalizedSetting('competingInterestGuidelines');
+				$content = $journal->getLocalizedSetting('competingInterestsPolicy');
 				$pageTitle = $pageCrumbTitle = 'navigation.competingInterestGuidelines';
 				break;
 			case 'sampleCopyrightWording':

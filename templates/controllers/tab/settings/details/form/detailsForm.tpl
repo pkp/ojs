@@ -83,18 +83,6 @@
 			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
 		</td>
 	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr><td colspan="2">{translate key="manager.setup.emailBounceAddressDescription"}<br />&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="envelopeSender" key="manager.setup.emailBounceAddress"}</td>
-		<td class="value">
-			<input type="text" name="envelopeSender" id="envelopeSender" size="40" maxlength="255" class="textField" {if !$envelopeSenderEnabled}disabled="disabled" value=""{else}value="{$envelopeSender|escape}"{/if} />
-			{if !$envelopeSenderEnabled}
-			<br />
-			<span class="instruct">{translate key="manager.setup.emailBounceAddressDisabled"}</span>
-			{/if}
-		</td>
-	</tr>
 </table>
 </div>
 

@@ -25,7 +25,6 @@ class PoliciesForm extends ContextSettingsForm {
 			'copyrightNoticeAgree' => 'bool',
 			'requireAuthorCompetingInterests' => 'bool',
 			'requireReviewerCompetingInterests' => 'bool',
-			'competingInterestGuidelines' => 'string',
 			'metaDiscipline' => 'bool',
 			'metaDisciplineExamples' => 'string',
 			'metaSubjectClass' => 'bool',
@@ -45,7 +44,7 @@ class PoliciesForm extends ContextSettingsForm {
 			'copySubmissionAckSpecified' => 'bool',
 			'copySubmissionAckAddress' => 'string'
 		);
-		parent::ContextSettingsForm($settings, 'controllers/tab/settings/policies/form/policiesForm.tpl', $wizardMode);
+		parent::ContextSettingsForm($settings, 'controllers/tab/settings/policies/form/policiesOldForm.tpl', $wizardMode);
 
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
 		$this->addCheck(new FormValidatorLocaleURL($this, 'metaSubjectClassUrl', 'optional', 'manager.setup.subjectClassificationURLValid'));
@@ -56,7 +55,7 @@ class PoliciesForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('authorGuidelines', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'competingInterestGuidelines');
+		return array('authorGuidelines', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples');
 	}
 
 	/**

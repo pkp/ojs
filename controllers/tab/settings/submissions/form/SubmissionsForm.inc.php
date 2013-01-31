@@ -20,13 +20,10 @@ class SubmissionsForm extends ContextSettingsForm {
 	 */
 	function SubmissionsForm($wizardMode = false) {
 		$settings = array(
-			'focusScopeDesc' => 'string',
 			'restrictReviewerFileAccess' => 'bool',
 			'reviewerAccessKeysEnabled' => 'bool',
-			'reviewPolicy' => 'string',
 			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
-			'privacyStatement' => 'string',
 			'customAboutItems' => 'object',
 			'enableLockss' => 'bool',
 			'enableClockss' => 'bool',
@@ -45,7 +42,7 @@ class SubmissionsForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'privacyStatement', 'customAboutItems', 'lockssLicense', 'clockssLicense');
+		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'customAboutItems', 'lockssLicense', 'clockssLicense');
 	}
 
 	/**

@@ -20,25 +20,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="submissionsFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="focusAndScopeDescription">
-<h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
-<p>{translate key="manager.setup.focusAndScopeDescription"}</p>
-<p>
-	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea richContent">{$focusScopeDesc[$formLocale]|escape}</textarea>
-</p>
-</div>
-
-<div class="separator"></div>
-
-<div id="peerReviewPolicy">
-<h3>2.2 {translate key="manager.setup.peerReviewPolicy"}</h3>
-<div id="peerReviewDescription">
-<p>{translate key="manager.setup.peerReviewDescription"}</p>
-
-<h4>{translate key="manager.setup.reviewPolicy"}</h4>
-
-<p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea richContent">{$reviewPolicy[$formLocale]|escape}</textarea></p>
-</div>
 <div id="reviewGuidelinesInfo">
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
@@ -103,12 +84,6 @@
 </p>
 
 </div>
-</div>
-<div class="separator"></div>
-<div id="privacyStatementInfo">
-<h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
-
-<p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea richContent">{$privacyStatement[$formLocale]|escape}</textarea></p>
 </div>
 
 <div class="separator"></div>

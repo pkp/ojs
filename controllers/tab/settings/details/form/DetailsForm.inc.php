@@ -32,7 +32,6 @@ class DetailsForm extends ContextSettingsForm {
 			'publisherUrl' => 'string',
 			'publisherNote' => 'string',
 			'history' => 'string',
-			'envelopeSender' => 'string',
 			'emailHeader' => 'string',
 			'searchDescription' => 'string',
 			'searchKeywords' => 'string',

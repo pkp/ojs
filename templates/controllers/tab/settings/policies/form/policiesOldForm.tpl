@@ -22,19 +22,7 @@
 <div id="authorCopyrightNotice">
 <h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
-{url|assign:"sampleCopyrightWordingUrl" router=$smarty.const.ROUTE_PAGE page="information" op="sampleCopyrightWording"}
-<p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
-
-<p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea richContent">{$copyrightNotice[$formLocale]|escape}</textarea></p>
-
 <table class="data">
-	<tr>
-		<td width="5%" class="label">
-			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />
-		</td>
-		<td class="value"><label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
-		</td>
-	</tr>
 	<tr>
 		<td class="label">
 			<input type="checkbox" name="includeCreativeCommons" id="includeCreativeCommons" value="1"{if $includeCreativeCommons} checked="checked"{/if} />
@@ -70,10 +58,6 @@
 		</td>
 	</tr>
 </table>
-
-<h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
-<p><textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="textArea richContent">{$competingInterestGuidelines[$formLocale]|escape}</textarea></p>
-</div>
 
 <div class="separator"></div>
 
