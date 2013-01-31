@@ -34,7 +34,6 @@ class DetailsForm extends ContextSettingsForm {
 			'history' => 'string',
 			'envelopeSender' => 'string',
 			'emailHeader' => 'string',
-			'emailSignature' => 'string',
 			'searchDescription' => 'string',
 			'searchKeywords' => 'string',
 			'customHeaders' => 'string'

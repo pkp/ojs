@@ -83,13 +83,6 @@
 			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
 		</td>
 	</tr>
-	<tr><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
-		<td class="value">
-			<textarea name="emailSignature" id="emailSignature" rows="3" cols="60" class="textArea">{$emailSignature|escape}</textarea>
-		</td>
-	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
 	<tr><td colspan="2">{translate key="manager.setup.emailBounceAddressDescription"}<br />&nbsp;</td></tr>
 	<tr>
