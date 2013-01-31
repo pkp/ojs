@@ -26,7 +26,7 @@
 	<li>&#187; <a href="{url op="reviewForms"}">{translate key="manager.reviewForms"}</a></li>
 	<li>&#187; <a href="{url page="management" op="settings" path="website" anchor="ui-tabs-3"}">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{url op="groups"}">{translate key="manager.groups"}</a></li>
-	<li>&#187; <a href="{url op="emails"}">{translate key="manager.emails"}</a></li>
+	<li>&#187; <a href="{url page="management" op="settings" path="publication" anchor="ui-tabs-2"}">{translate key="manager.emails"}</a></li>
 	<li>&#187; <a href="{url page="rtadmin"}">{translate key="manager.readingTools"}</a></li>
 	<li>&#187; <a href="{url page="management" op="settings" path="journal"}">{translate key="manager.setup"}</a></li>
 	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
