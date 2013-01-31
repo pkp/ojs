@@ -26,6 +26,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 			'policies' => 'controllers.tab.settings.policies.form.PoliciesForm',
 			'submissions' => 'controllers.tab.settings.submissions.form.SubmissionsForm',
 			'management' => 'controllers.tab.settings.management.form.ManagementForm',
+			'guidelines' => 'lib.pkp.controllers.tab.settings.guidelines.form.GuidelinesForm',
 			'affiliationAndSupport' => 'lib.pkp.controllers.tab.settings.affiliation.form.AffiliationForm',
 		));
 	}

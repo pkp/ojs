@@ -20,7 +20,6 @@ class PoliciesForm extends ContextSettingsForm {
 	 */
 	function PoliciesForm($wizardMode = false) {
 		$settings = array(
-			'authorGuidelines' => 'string',
 			'copyrightNotice' => 'string',
 			'includeCreativeCommons' => 'bool',
 			'copyrightNoticeAgree' => 'bool',

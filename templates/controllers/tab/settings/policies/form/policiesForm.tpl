@@ -19,19 +19,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="policiesFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="authorGuidelinesInfo">
-<h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
-
-<p>{translate key="manager.setup.authorGuidelinesDescription"}</p>
-
-<p>
-	<textarea name="authorGuidelines[{$formLocale|escape}]" id="authorGuidelines" rows="12" cols="60" class="textArea richContent">{$authorGuidelines[$formLocale]|escape}</textarea>
-</p>
-
-</div>
-
-<div class="separator"></div>
-
 <div id="authorCopyrightNotice">
 <h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
