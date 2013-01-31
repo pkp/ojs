@@ -44,11 +44,6 @@ class ManagementForm extends ContextSettingsForm {
 			'proofInstructions' => 'string',
 			'publishingMode' => 'int',
 			'showGalleyLinks' => 'bool',
-			'openAccessPolicy' => 'string',
-			'enableAnnouncements' => 'bool',
-			'enableAnnouncementsHomepage' => 'bool',
-			'numAnnouncementsHomepage' => 'int',
-			'announcementsIntroduction' => 'string',
 			'volumePerYear' => 'int',
 			'issuePerVolume' => 'int',
 			'enablePublicIssueId' => 'bool',
@@ -65,7 +60,7 @@ class ManagementForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
+		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions');
 	}
 }
 

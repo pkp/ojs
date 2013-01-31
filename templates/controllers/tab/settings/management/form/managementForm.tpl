@@ -29,15 +29,12 @@
 		function togglePublishingMode(form) {
 			if (form.publishingMode[0].checked) {
 				// PUBLISHING_MODE_OPEN
-				form.openAccessPolicy.disabled = false;
 				form.showGalleyLinks.disabled = true;
 			} else if (form.publishingMode[1].checked) {
 				// PUBLISHING_MODE_SUBSCRIPTION
-				form.openAccessPolicy.disabled = true;
 				form.showGalleyLinks.disabled = false;
 			} else {
 				// PUBLISHING_MODE_NONE
-				form.openAccessPolicy.disabled = true;
 				form.showGalleyLinks.disabled = true;
 			}
 		}
@@ -51,9 +48,6 @@
 		</td>
 		<td class="value">
 			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
-			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
-			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea richContent"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
 		</td>
 	</tr>
 	<tr>
@@ -263,45 +257,6 @@ function setRegAllowOpts(form) {
 </table>
 </div><!-- pageNumberIdentifier -->
 </div><!-- publicIdentifier -->
-<div class="separator"></div>
-
-<div id="announcementsSection">
-<h3>4.4 {translate key="manager.setup.announcements"}</h3>
-
-<p>{translate key="manager.setup.announcementsDescription"}</p>
-
-	<script>
-		{literal}
-			function toggleEnableAnnouncementsHomepage(form) {
-				form.numAnnouncementsHomepage.disabled = !form.numAnnouncementsHomepage.disabled;
-			}
-		{/literal}
-	</script>
-
-<p>
-	<input type="checkbox" name="enableAnnouncements" id="enableAnnouncements" value="1" {if $enableAnnouncements} checked="checked"{/if} />&nbsp;
-	<label for="enableAnnouncements">{translate key="manager.setup.enableAnnouncements"}</label>
-</p>
-
-<p>
-	<input type="checkbox" name="enableAnnouncementsHomepage" id="enableAnnouncementsHomepage" value="1" onclick="toggleEnableAnnouncementsHomepage(this.form)"{if $enableAnnouncementsHomepage} checked="checked"{/if} />&nbsp;
-	<label for="enableAnnouncementsHomepage">{translate key="manager.setup.enableAnnouncementsHomepage1"}</label>
-	<select name="numAnnouncementsHomepage" size="1" class="selectMenu" {if not $enableAnnouncementsHomepage}disabled="disabled"{/if}>
-		{section name="numAnnouncementsHomepageOptions" start=1 loop=11}
-		<option value="{$smarty.section.numAnnouncementsHomepageOptions.index}"{if $numAnnouncementsHomepage eq $smarty.section.numAnnouncementsHomepageOptions.index or ($smarty.section.numAnnouncementsHomepageOptions.index eq 1 and not $numAnnouncementsHomepage)} selected="selected"{/if}>{$smarty.section.numAnnouncementsHomepageOptions.index}</option>
-		{/section}
-	</select>
-	{translate key="manager.setup.enableAnnouncementsHomepage2"}
-</p>
-<div id="announcementsIntroductionSection">
-<h4>{translate key="manager.setup.announcementsIntroduction"}</h4>
-
-<p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
-
-<p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea richContent">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
-</div><!-- announcementsIntroductionSection -->
-</div><!-- announcementsSection -->
-
 <div class="separator"></div>
 
 <div id="copyediting">
