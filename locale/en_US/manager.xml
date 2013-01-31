@@ -158,6 +158,7 @@
 	<message key="manager.sections.wordCount">Word Count</message>
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit): </message>
 	<message key="manager.setup">Setup</message>
+	<message key="manager.setup.sponsors.description">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.appearanceDescription">Various components of the journal appearance can be configured from this page, including header and footer elements, the journal style and theme, and how lists of information are presented to users.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
@@ -200,7 +201,7 @@
 	<message key="manager.setup.competingInterests.guidelines">Guidelines for filing a Competing Interest statement</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
-	<message key="manager.setup.contributor">Contributor</message>
+	<message key="manager.setup.contributors.description">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.contributors">Sources of Support</message>
 	<message key="manager.setup.contributorNoteDescription">This text will appear below the "Sources of Support" heading and above the list of names and urls for supporting organizations under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
