@@ -27,6 +27,7 @@ class SettingsHandler extends ManagementHandler {
 				'index',
 				'settings',
 				'publication',
+				'distribution',
 			)
 		);
 	}
@@ -66,6 +67,9 @@ class SettingsHandler extends ManagementHandler {
 			case 'publication':
 				$this->publication($args, $request);
 				break;
+			case 'distribution':
+				$this->distribution($args, $request);
+				break;
 			default:
 				assert(false);
 		}
@@ -104,6 +108,17 @@ class SettingsHandler extends ManagementHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
 		$templateMgr->display('management/settings/publication.tpl');
+	}
+
+	/**
+	 * Display distribution process page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function distribution($args, &$request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$this->setupTemplate($request);
+		$templateMgr->display('management/settings/distribution.tpl');
 	}
 }
 

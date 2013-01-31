@@ -28,5 +28,10 @@
 	<p>{translate key="manager.settings.publicationDescription"}</p>
 	<a href="{url page="management" op="settings" path="publication"}" class="button defaultButton">{translate key="common.takeMeThere"}</a>
 </div>
+<div class="unit size2of2 lastUnit">
+	<h4>{translate key="navigation.distributionProcess"}</h4>
+	<p>{translate key="manager.settings.distributionDescription"}</p>
+	<a href="{url page="management" op="settings" path="distribution"}" class="button defaultButton">{translate key="common.takeMeThere"}</a>
+</div>
 
 {include file="common/footer.tpl"}

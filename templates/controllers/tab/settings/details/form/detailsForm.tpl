@@ -113,34 +113,6 @@
 </div>
 <div class="separator"></div>
 
-<div id="searchEngineIndexing">
-<h3>1.8 {translate key="manager.setup.searchEngineIndexing"}</h3>
-
-<p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="searchDescription" key="common.description"}</td>
-		<td class="value"><input type="text" name="searchDescription[{$formLocale|escape}]" id="searchDescription" value="{$searchDescription[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="searchKeywords" key="common.keywords"}</td>
-		<td class="value"><input type="text" name="searchKeywords[{$formLocale|escape}]" id="searchKeywords" value="{$searchKeywords[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="customHeaders" key="manager.setup.customTags"}</td>
-		<td class="value">
-			<textarea name="customHeaders[{$formLocale|escape}]" id="customHeaders" rows="3" cols="40" class="textArea">{$customHeaders[$formLocale]|escape}</textarea>
-			<br />
-			<span class="instruct">{translate key="manager.setup.customTagsDescription"}</span>
-		</td>
-	</tr>
-</table>
-</div>
-
-<div class="separator"></div>
-
-
 <h3>1.9 {translate key="manager.setup.history"}</h3>
 
 <p>{translate key="manager.setup.historyDescription"}</p>

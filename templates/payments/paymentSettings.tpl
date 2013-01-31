@@ -48,14 +48,6 @@
 		<td class="label"><input type="checkbox" name="journalPaymentsEnabled" id="journalPaymentsEnabled" value="1"{if $journalPaymentsEnabled} checked="checked"{/if} /></td>
 		<td class="value">{fieldLabel name="journalPaymentsEnabled" key="manager.payment.options.enablePayments"}</td>
 	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="currency" key="manager.payment.currency"}</td>
-		<td class="value"><select name="currency" id="currency" class="selectMenu">{html_options options=$validCurrencies selected=$currency}</select></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>{translate key="manager.payment.currencymessage"}</td>
-	</tr>
 </table>
 </div>
 <div id="authorFees">

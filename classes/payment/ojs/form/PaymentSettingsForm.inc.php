@@ -35,7 +35,6 @@ class PaymentSettingsForm extends Form {
 
 		$this->settings = array(
 			'journalPaymentsEnabled' => 'bool',
-			'currency' => 'string',
 			'submissionFeeEnabled' => 'bool',
 			'submissionFee' => 'float',
 			'submissionFeeName' => 'string',
@@ -75,18 +74,6 @@ class PaymentSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseArticleFee', 'return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseIssueFee', 'return is_numeric($purchaseIssueFee) && $purchaseIssueFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', create_function('$membershipFee', 'return is_numeric($membershipFee) && $membershipFee >= 0;')));
-
-		// grab valid currencies and add Validator
-		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
-		$currencies =& $currencyDao->getCurrencies();
-		$this->validCurrencies = array();
-		while (list(, $currency) = each($currencies)) {
-			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
-		}
-
-		// Currency is provided and is valid value
-		$this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
-		$this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 	}
 
 	/**

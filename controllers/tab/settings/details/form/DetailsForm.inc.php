@@ -32,20 +32,13 @@ class DetailsForm extends ContextSettingsForm {
 			'publisherUrl' => 'string',
 			'publisherNote' => 'string',
 			'history' => 'string',
-			'emailHeader' => 'string',
-			'searchDescription' => 'string',
-			'searchKeywords' => 'string',
-			'customHeaders' => 'string'
+			'emailHeader' => 'string'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/details/form/detailsForm.tpl', $wizardMode);
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.setup.form.journalTitleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'acronym', 'required', 'manager.setup.form.journalInitialsRequired'));
-		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
-		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
-		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
-		$this->addCheck(new FormValidatorEmail($this, 'supportEmail', 'required', 'manager.setup.form.supportEmailRequired'));
 		$this->addCheck(new FormValidatorISSN($this, 'printIssn', 'optional', 'manager.setup.form.issnInvalid'));
 		$this->addCheck(new FormValidatorISSN($this, 'onlineIssn', 'optional', 'manager.setup.form.issnInvalid'));
 	}
@@ -55,7 +48,7 @@ class DetailsForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'acronym', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'publisherNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
+		return array('name', 'acronym', 'abbreviation', 'publisherNote', 'history');
 	}
 
 	/**
