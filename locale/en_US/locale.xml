@@ -212,21 +212,13 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Journal Manager</message>
-	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Section Editor</message>
-	<message key="user.role.layoutEditor">Layout Editor</message>
-	<message key="user.role.copyeditor">Copyeditor</message>
-	<message key="user.role.proofreader">Proofreader</message>
-	<message key="user.role.author">Author</message>
 	<message key="user.role.subscriptionManager">Subscription Manager</message>
 	<message key="user.role.managers">Journal Managers</message>
-	<message key="user.role.editors">Editors</message>
 	<message key="user.role.sectionEditors">Section Editors</message>
-	<message key="user.role.layoutEditors">Layout Editors</message>
-	<message key="user.role.copyeditors">Copyeditors</message>
-	<message key="user.role.proofreaders">Proofreaders</message>
-	<message key="user.role.authors">Authors</message>
 	<message key="user.role.subscriptionManagers">Subscription Managers</message>
+	<message key="user.role.journalAssistant">Journal Assistant</message>
+	<message key="user.role.journalAssistants">Journal Assistants</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>
