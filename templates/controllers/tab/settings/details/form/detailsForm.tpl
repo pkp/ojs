@@ -73,66 +73,6 @@
 
 <div class="separator"></div>
 
-<div id="principalContact">
-<h3>1.2 {translate key="manager.setup.principalContact"}</h3>
-
-<p>{translate key="manager.setup.principalContactDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="contactName" key="user.name" required="true"}</td>
-		<td class="value"><input type="text" name="contactName" id="contactName" value="{$contactName|escape}" size="30" maxlength="60" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactTitle" key="user.title"}</td>
-		<td class="value"><input type="text" name="contactTitle[{$formLocale|escape}]" id="contactTitle" value="{$contactTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactAffiliation" key="user.affiliation"}</td>
-		<td class="value"><textarea name="contactAffiliation[{$formLocale|escape}]" id="contactAffiliation" rows="5" cols="40" class="textArea">{$contactAffiliation[$formLocale]|escape}</textarea></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactEmail" key="user.email" required="true"}</td>
-		<td class="value"><input type="text" name="contactEmail" id="contactEmail" value="{$contactEmail|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactPhone" key="user.phone"}</td>
-		<td class="value"><input type="text" name="contactPhone" id="contactPhone" value="{$contactPhone|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactFax" key="user.fax"}</td>
-		<td class="value"><input type="text" name="contactFax" id="contactFax" value="{$contactFax|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="contactMailingAddress" key="common.mailingAddress"}</td>
-		<td class="value"><textarea name="contactMailingAddress[{$formLocale|escape}]" id="contactMailingAddress" rows="3" cols="40" class="textArea richContent">{$contactMailingAddress[$formLocale]|escape}</textarea></td>
-	</tr>
-</table>
-</div>
-
-<div class="separator"></div>
-
-<div id="technicalSupportContact">
-<h3>1.3 {translate key="manager.setup.technicalSupportContact"}</h3>
-
-<p>{translate key="manager.setup.technicalSupportContactDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="supportName" key="user.name" required="true"}</td>
-		<td class="value"><input type="text" name="supportName" id="supportName" value="{$supportName|escape}" size="30" maxlength="60" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="supportEmail" key="user.email" required="true"}</td>
-		<td class="value"><input type="text" name="supportEmail" id="supportEmail" value="{$supportEmail|escape}" size="30" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="supportPhone" key="user.phone"}</td>
-		<td class="value"><input type="text" name="supportPhone" id="supportPhone" value="{$supportPhone|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-</table>
-</div>
-<div class="separator"></div>
 <div id="setupEmails">
 <h3>1.4 {translate key="manager.setup.emails"}</h3>
 <table class="data">
