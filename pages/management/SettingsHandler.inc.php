@@ -26,6 +26,7 @@ class SettingsHandler extends ManagementHandler {
 			array(
 				'index',
 				'settings',
+				'publication',
 			)
 		);
 	}
@@ -62,6 +63,9 @@ class SettingsHandler extends ManagementHandler {
 			case 'website':
 				$this->website($args, $request);
 				break;
+			case 'publication':
+				$this->publication($args, $request);
+				break;
 			default:
 				assert(false);
 		}
@@ -89,6 +93,17 @@ class SettingsHandler extends ManagementHandler {
 		$journal = $request->getJournal();
 		$templateMgr->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
 		$templateMgr->display('management/settings/website.tpl');
+	}
+
+	/**
+	 * Display publication process page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function publication($args, &$request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$this->setupTemplate($request);
+		$templateMgr->display('management/settings/publication.tpl');
 	}
 }
 

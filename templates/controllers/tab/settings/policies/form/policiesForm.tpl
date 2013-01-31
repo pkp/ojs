@@ -30,35 +30,6 @@
 
 </div>
 
-<div id="submissionPreparationChecklist">
-<h4>{translate key="manager.setup.submissionPreparationChecklist"}</h4>
-
-<p>{translate key="manager.setup.submissionPreparationChecklistDescription"}</p>
-
-{foreach name=checklist from=$submissionChecklist[$formLocale] key=checklistId item=checklistItem}
-	{if !$notFirstChecklistItem}
-		{assign var=notFirstChecklistItem value=1}
-		<table class="data">
-			<tr>
-				<td width="5%">{translate key="common.order"}</td>
-				<td colspan="2">&nbsp;</td>
-			</tr>
-	{/if}
-
-	<tr>
-		<td width="5%" class="label"><input type="text" name="submissionChecklist[{$formLocale|escape}][{$checklistId|escape}][order]" value="{$checklistItem.order|escape}" size="3" maxlength="2" class="textField" /></td>
-		<td class="value"><textarea name="submissionChecklist[{$formLocale|escape}][{$checklistId|escape}][content]" id="submissionChecklist-{$checklistId|escape}" rows="3" cols="40" class="textArea richContent">{$checklistItem.content|escape}</textarea></td>
-		<td width="100%"><input type="submit" name="delChecklist[{$checklistId|escape}]" value="{translate key="common.delete"}" class="button" /></td>
-	</tr>
-{/foreach}
-
-{if $notFirstChecklistItem}
-	</table>
-{/if}
-
-<p><input type="submit" name="addChecklist" value="{translate key="manager.setup.addChecklistItem"}" class="button" /></p>
-</div>
-
 <div class="separator"></div>
 
 <div id="authorCopyrightNotice">
