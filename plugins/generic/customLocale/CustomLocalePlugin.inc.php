@@ -56,7 +56,7 @@ class CustomLocalePlugin extends GenericPlugin {
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 		if ($fileManager->fileExists($customLocalePath)) {
-			AppLocale::registerLocaleFile($locale, $customLocalePath, true);
+			AppLocale::registerLocaleFile($locale, $customLocalePath, false);
 		}
 
 		return true;

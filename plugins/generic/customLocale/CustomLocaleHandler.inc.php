@@ -26,9 +26,6 @@ class CustomLocaleHandler extends Handler {
 	function CustomLocaleHandler($parentPluginName) {
 		parent::Handler();
 
-		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_JOURNAL_MANAGER)));
-
 		$plugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
 		$this->plugin =& $plugin;		
 	}
@@ -206,7 +203,6 @@ class CustomLocaleHandler extends Handler {
 	}
 
 	function setupTemplate(&$plugin, $subclass = true) {
-		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array($plugin, 'smartyPluginUrl'));
 		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'user.role.manager'));
