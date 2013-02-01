@@ -20,15 +20,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="submissionsFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="reviewGuidelinesInfo">
-
-<h4>{translate key="manager.setup.reviewGuidelines"}</h4>
-
-{url|assign:"reviewFormsUrl" router=$smarty.const.ROUTE_PAGE op="reviewForms"}
-<p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
-
-<p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea richContent">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
-</div>
 <div id="reviewProcess">
 <h4>{translate key="manager.setup.reviewProcess"}</h4>
 

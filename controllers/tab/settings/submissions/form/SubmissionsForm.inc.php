@@ -42,7 +42,7 @@ class SubmissionsForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'customAboutItems', 'lockssLicense', 'clockssLicense');
+		return array('focusScopeDesc', 'reviewPolicy', 'customAboutItems', 'lockssLicense', 'clockssLicense');
 	}
 
 	/**
