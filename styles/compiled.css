@@ -1,3 +1,44 @@
+.sf-menu {
+  margin:0;
+  padding:0;
+  list-style:none;
+  line-height:100%;
+}
+.sf-menu * {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.sf-menu ul {
+  position:absolute;
+  top:-999em;
+  width:10em;
+}
+.sf-menu ul li { width:100%; }
+.sf-menu li:hover { visibility:inherit; }
+.sf-menu li {
+  float:left;
+  position:relative;
+}
+.sf-menu a {
+  display:block;
+  position:relative;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+  left:0;
+  top:2.5em;
+  z-index:99;
+}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top:-999em; }
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+  left:10em;
+  top:0;
+}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul { top:-999em; }
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+  left:10em;
+  top:0;
+}
 .ui-pnotify {
   top:18px;
   right:18px;
@@ -67,6 +108,53 @@ html > body .ui-pnotify { position:fixed; }
 .ui-pnotify-history-container .ui-pnotify-history-pulldown {
   display:block;
   margin:0 auto;
+}
+ul.tagit {
+  padding:1px 5px;
+  overflow:auto;
+  margin-left:inherit;
+  margin-right:inherit;
+}
+.hidden { display:none; }
+ul.tagit li {
+  display:block;
+  float:left;
+  margin:2px 5px 2px 0;
+}
+ul.tagit li.tagit-choice {
+  padding:.2em 18px .2em .5em;
+  position:relative;
+  line-height:inherit;
+}
+ul.tagit li.tagit-new { padding:.25em 4px .25em 0; }
+ul.tagit li.tagit-choice a.tagit-label {
+  cursor:pointer;
+  text-decoration:none;
+}
+ul.tagit li.tagit-choice .tagit-close {
+  cursor:pointer;
+  position:absolute;
+  right:.1em;
+  top:50%;
+  margin-top:-8px;
+}
+ul.tagit li.tagit-choice .tagit-close .text-icon { display:none; }
+.ui-autocomplete .ui-menu-item a { font-size:.6em; }
+ul.tagit li.tagit-choice input {
+  display:block;
+  float:left;
+  margin:2px 5px 2px 0;
+}
+ul.tagit input[type="text"] {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  border:none;
+  margin:0;
+  padding:0;
+  width:inherit;
+  background-color:inherit;
+  outline:none;
 }
 .pkp_form li { list-style:none; }
 .composite-ui button { white-space:nowrap; }
