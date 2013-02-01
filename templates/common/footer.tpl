@@ -19,6 +19,6 @@
 		{assign var=pageFooter value="$issnText: $issn"}
 	{/if}
 {/if}
-{include file="core:common/footer.tpl"}
+{include file="core:common/footer-old.tpl"}
 {/strip}
 
