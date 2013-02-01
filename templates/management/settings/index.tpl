@@ -13,7 +13,7 @@
 
 <div class="unit size1of2">
 	<h4>{translate key="manager.setup"}</h4>
-	<p>{translate key="manager.setup.description"}</p>
+	<p>{translate key="manager.settings.journalDescription"}</p>
 	<a href="{url page="management" op="settings" path="journal"}" class="button defaultButton">{translate key="common.takeMeThere"}</a>
 </div>
 <div class="unit size2of2 lastUnit">
