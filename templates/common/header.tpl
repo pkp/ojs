@@ -7,5 +7,5 @@
  * Common site header.
  *}
 {strip}
-{include file="core:common/header.tpl"}
+{include file="core:common/header-old.tpl"}
 {/strip}
