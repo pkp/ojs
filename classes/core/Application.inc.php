@@ -132,7 +132,6 @@ class Application extends PKPApplication {
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
 			'SuppFileDAO' => 'classes.article.SuppFileDAO',
-			'UserGroupDAO' => 'classes.security.UserGroupDAO',
 			'UserGroupAssignmentDAO' => 'lib.pkp.classes.security.UserGroupAssignmentDAO',
 			'UserDAO' => 'classes.user.UserDAO',
 			'UserSettingsDAO' => 'classes.user.UserSettingsDAO'
