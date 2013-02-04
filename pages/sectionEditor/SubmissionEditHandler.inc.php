@@ -286,6 +286,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('journalContact',$journalContact); //20120831 LS Added
 		$templateMgr->assign('journalEmail',$journalEmail); //20120831 LS Added			
 		$templateMgr->assign('editorEmails',$editorEmails);
+                $templateMgr->assign('disableSectionEditorDecisions', $journal->getSetting('disableSectionEditorDecisions'));
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 
 	}

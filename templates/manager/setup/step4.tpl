@@ -333,8 +333,27 @@ function setRegAllowOpts(form) {
 
 <div class="separator"></div>
 
+<div id="sectionEditors">
+<h3>4.5 {translate key="manager.setup.sectionEditors"}</h3>
+
+<p>{translate key="manager.setup.selectOne"}:</p>
+
+<table width="100%" class="data">
+        <tr valign="top">
+                <td width="5%" class="label"><input type="radio" name="disableSectionEditorDecisions" id="disableSectionEditorDecisions-0" value="0"{if !$disableSectionEditorDecisions} checked="checked"{/if} /></td>
+                <td width="95%" class="value"><label for="disableSectionEditorDecisions-0">{translate key="manager.setup.enableSectionEditorDecisions"}</label></td>
+        </tr>
+        <tr valign="top">
+                <td width="5%" class="label"><input type="radio" name="disableSectionEditorDecisions" id="disableSectionEditorDecisions-1" value="1"{if $disableSectionEditorDecisions} checked="checked"{/if} /></td>
+                <td width="95%" class="value"><label for="disableSectionEditorDecisions-1">{translate key="manager.setup.disableSectionEditorDecisions"}</label></td>
+        </tr>
+</table>
+</div>
+
+<div class="separator"></div>
+
 <div id="copyediting">
-<h3>4.5 {translate key="manager.setup.copyediting"}</h3>
+<h3>4.6 {translate key="manager.setup.copyediting"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
 
@@ -363,7 +382,7 @@ function setRegAllowOpts(form) {
 <div class="separator"></div>
 
 <div id="layoutAndGalleys">
-<h3>4.6 {translate key="manager.setup.layoutAndGalleys"}</h3>
+<h3>4.7 {translate key="manager.setup.layoutAndGalleys"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
 
@@ -432,7 +451,7 @@ function setRegAllowOpts(form) {
 <div class="separator"></div>
 
 <div id="proofreading">
-<h3>4.7 {translate key="manager.setup.proofreading"}</h3>
+<h3>4.8 {translate key="manager.setup.proofreading"}</h3>
 
 <p>{translate key="manager.setup.selectOne"}:</p>
 

@@ -9,32 +9,14 @@
  * $Id$
  *}
 <div id="editorDecision">
-{* 2011-11-09 BLH Custom message for eSchol journal WestJEM only *}
-{* 2012-05-08 LS Custom page for eSchol journal WestJEM only *}
-{* 2012-08-31 LS Adding in similar customizations for Frontiers of Biogeography*}
-{if (($journalPath=='uciem_westjem' || $journalPath=='fb' ) && ($isEditor != 1))}
+{if $disableSectionEditorDecisions && $isEditor !=1}
 	<h3>{translate key="submission.submissionEditorDecision"}</h3>
-	{else}
+{else}
 	<h3>{translate key="submission.editorDecision"}</h3>
 {/if}
 
 <table id="table1" width="100%" class="data">
-{if (($journalPath=='uciem_westjem') &&  ($isEditor != 1))}
-  <tr>
-  	<td valign="middle">{translate key="submission.submissionEditorInstructionsWestJEM"}</td>
-  </tr>
-  <tr>
-  	<td valign="middle">
-	<ol>
-		<li>Click the "Add New Note" link on the <a href="{url op="submissionNotes" path=$submission->getArticleId()}">{translate key="submission.history.submissionNotes"}</a> page and submit your decision.</li>
-		<li><strong>Email Rex Chang at <a href="mailto:editor@westjem.org">editor@westjem.org</a></strong> to confirm that your comments have been received.</li>
-	 </ol>
-	</td>
-  </tr>
-  <tr>
-   	<td valign="middle">{translate key="submission.submissionEditorInstructionsWestJEMclose"}</td>
-</tr>
-{elseif (($journalPath=='fb') &&  ($isEditor != 1))}
+{if ($disableSectionEditorDecisions && $isEditor !=1)}
 	<tr>
 		<td valign="middle">{translate key="submission.submissionEditorInstructionsWestJEM"}</td>
 	</tr>
@@ -42,7 +24,7 @@
 		<td valign="middle">
 			<ol>
 				<li>Click the "Add New Note" link on the <a href="{url op="submissionNotes" path=$submission->getArticleId()}">{translate key="submission.history.submissionNotes"}</a> page and submit your decision.</li>	
-					<li>Email the {$journalContact} to confirm that your comments have been received
+					<li>Email {$journalContact} ({$journalEmail}) to confirm that your comments have been received
 						{assign var=emailString value=$journalEmail}
 						{assign var=emailSubject value="Article "|cat:$submission->getArticleId()|cat:"--Comments from Section Editor"}
 						{foreach from=$editAssignments item=editAssignment}

@@ -115,7 +115,7 @@ class ManagerHandler extends Handler {
 	function &retrieveRoleAssignmentPreferences($journalId) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journalId);
-  		$returner = array('useLayoutEditors'=>0,'useCopyeditors'=>0,'useProofreaders'=>0);
+  		$returner = array('disableSectionEditorDecisions'=>0,'useLayoutEditors'=>0,'useCopyeditors'=>0,'useProofreaders'=>0);
 
 		foreach($returner as $specific=>$value) {
 			if(isset($journalSettings[$specific])) {

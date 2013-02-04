@@ -41,6 +41,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'initialNumber' => 'int',
 				'initialYear' => 'int',
 				'pubFreqPolicy' => 'string',
+				'disableSectionEditorDecisions' => 'bool',
 				'useCopyeditors' => 'bool',
 				'copyeditInstructions' => 'string',
 				'useLayoutEditors' => 'bool',
