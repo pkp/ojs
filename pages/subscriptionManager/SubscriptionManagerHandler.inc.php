@@ -25,7 +25,7 @@ class SubscriptionManagerHandler extends Handler {
 	}
 
 	function index($args, $request) {
-		$this->subscriptionsSummary();
+		$this->subscriptionsSummary($args, $request);
 	}
 
 	/**
