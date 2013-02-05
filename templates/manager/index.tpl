@@ -20,22 +20,16 @@
 <h3>{translate key="manager.managementPages"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{url page="management" op="settings" path="website" anchor="ui-tabs-5"}">{translate key="manager.announcements"}</a></li>
 	<li>&#187; <a href="{url op="files"}">{translate key="manager.filesBrowser"}</a></li>
 	<li>&#187; <a href="{url op="sections"}">{translate key="section.sections"}</a></li>
 	<li>&#187; <a href="{url op="reviewForms"}">{translate key="manager.reviewForms"}</a></li>
-	<li>&#187; <a href="{url page="management" op="settings" path="website" anchor="ui-tabs-3"}">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{url op="groups"}">{translate key="manager.groups"}</a></li>
-	<li>&#187; <a href="{url page="management" op="settings" path="publication" anchor="ui-tabs-2"}">{translate key="manager.emails"}</a></li>
 	<li>&#187; <a href="{url page="rtadmin"}">{translate key="manager.readingTools"}</a></li>
-	<li>&#187; <a href="{url page="management" op="settings" path="journal"}">{translate key="manager.setup"}</a></li>
 	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
 	<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
 	{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
 	{/if}
-	<li>&#187; <a href="{url page="management" op="settings" path="website" anchor="ui-tabs-4"}">{translate key="manager.plugins"}</a></li>
-	<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 </div>
@@ -76,4 +70,3 @@
 </ul>
 </div>
 {include file="common/footer.tpl"}
-
