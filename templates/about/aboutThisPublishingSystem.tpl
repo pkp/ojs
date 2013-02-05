@@ -16,9 +16,9 @@
 
 <p id="aboutThisPublishingSystem">
 {if $currentJournal}
-	{translate key="about.aboutOJSJournal" ojsVersion=$ojsVersion}
+	{translate key="about.aboutOJSJournal" ojsVersion=$appVersion}
 {else}
-	{translate key="about.aboutOJSSite" ojsVersion=$ojsVersion}
+	{translate key="about.aboutOJSSite" ojsVersion=$appVersion}
 {/if}
 </p>
 
@@ -27,4 +27,3 @@
 </p>
 
 {include file="common/footer.tpl"}
-

@@ -15,4 +15,3 @@
 {$history}
 
 {include file="common/footer.tpl"}
-

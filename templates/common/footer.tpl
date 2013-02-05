@@ -7,18 +7,6 @@
  * Common site footer.
  *
  *}
-{strip}
-{if $pageFooter==''}
-	{if $currentJournal && $currentJournal->getSetting('onlineIssn')}
-		{assign var=issn value=$currentJournal->getSetting('onlineIssn')}
-	{elseif $currentJournal && $currentJournal->getSetting('printIssn')}
-		{assign var=issn value=$currentJournal->getSetting('printIssn')}
-	{/if}
-	{if $issn}
-		{translate|assign:"issnText" key="journal.issn"}
-		{assign var=pageFooter value="$issnText: $issn"}
-	{/if}
-{/if}
-{include file="core:common/footer-old.tpl"}
-{/strip}
-
+{assign var=brandImage value="templates/images/ojs_brand.png"}
+{assign var=packageKey value="common.openJournalSystems"}
+{include file="core:common/footer.tpl"}

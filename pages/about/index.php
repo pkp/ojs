@@ -16,22 +16,21 @@
  */
 
 switch($op) {
-	case 'index':
+	case 'description':
 	case 'contact':
-	case 'editorialTeam':
-	case 'displayMembership':
-	case 'editorialTeamBio':
-	case 'editorialPolicies':
 	case 'subscriptions':
-	case 'memberships':
+	case 'editorialTeam':
+	case 'editorialPolicies':
 	case 'submissions':
-	case 'journalSponsorship':
-	case 'siteMap':
+	case 'memberships':
+	case 'sponsorship':
 	case 'history':
+		define('HANDLER_CLASS', 'AboutContextHandler');
+		import('pages.about.AboutContextHandler');
+		break;
 	case 'aboutThisPublishingSystem':
-	case 'statistics':
-		define('HANDLER_CLASS', 'AboutHandler');
-		import('pages.about.AboutHandler');
+		define('HANDLER_CLASS', 'AboutSiteHandler');
+		import('pages.about.AboutSiteHandler');
 		break;
 }
 
