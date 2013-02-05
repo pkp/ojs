@@ -23,7 +23,7 @@ define('OAS_PLUGIN_CLASSIFICATION_ADMIN', 'administrative');
 define('OAS_PLUGIN_MAX_STAGING_TIME', '15');
 
 // Time interval (in minutes) between two SALT download attempts.
-define('OAS_PLUGIN_SALT_URL', 'https://oas.sulb.uni-saarland.de/salt/salt_value.txt');
+define('OAS_PLUGIN_SALT_URL', 'http://oas.sulb.uni-saarland.de/salt/salt_value.txt');
 define('OAS_PLUGIN_SALT_DOWNLOAD_INTERVAL', '15');
 
 class OasPlugin extends GenericPlugin {
@@ -34,8 +34,14 @@ class OasPlugin extends GenericPlugin {
 	/** @var OasEventStagingDAO */
 	var $_oasEventStagingDao;
 
+	/** @var boolean */
+	var $_optedOut = false;
 
 
+
+	//
+	// Implement template methods from PKPPlugin.
+	//
 	/**
 	 * @see PKPPlugin::register()
 	 */
@@ -44,21 +50,17 @@ class OasPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 
 		if($success && $this->getEnabled()) {
-			// Hook to register the report plugin.
+			// Register callbacks (application-level).
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
 
-			// Hooks to log usage events.
+			// Register callbacks (controller-level).
 			HookRegistry::register('TemplateManager::display', array($this, 'startUsageEvent'));
 			HookRegistry::register('ArticleHandler::viewFile', array($this, 'startUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'startUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadSuppFile', array($this, 'startUsageEvent'));
 			HookRegistry::register('IssueHandler::viewFile', array($this, 'startUsageEvent'));
-
-			// Hook triggered after file download finishes.
 			HookRegistry::register('FileManager::downloadFileFinished', array($this, 'endUsageEvent'));
-
-			// Log a usage event.
-			HookRegistry::register('OasPlugin::usageEvent', array($this, 'logUsageEvent'));
 		}
 		return $success;
 	}
@@ -99,63 +101,125 @@ class OasPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Register the OA-S report plugin.
-	 * @param $hookName string
-	 * @param $args array
+	 * @see PKPPlugin::getTemplatePath()
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	}
+
+
+	//
+	// Implement template methods from GenericPlugin.
+	//
+	/**
+	 * @see GenericPlugin::getManagementVerbs()
+	 */
+	function getManagementVerbs() {
+		$verbs = parent::getManagementVerbs();
+		if ($this->getEnabled()) {
+			$verbs[] = array('settings', __('plugins.generic.oas.settings'));
+		}
+		return $verbs;
+	}
+
+ 	/**
+	 * @see PKPPlugin::manage()
+	 */
+	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+		$request = $this->getRequest();
+
+		switch ($verb) {
+			case 'settings':
+				// Prepare the template manager.
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+
+				// Instantiate the settings form.
+				$this->import('classes.form.OasSettingsForm');
+				$form = new OasSettingsForm($this);
+
+				if ($request->getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						$request->redirect(null, 'manager', 'plugins', 'generic');
+						return false;
+					} else {
+						$this->_setBreadCrumbs();
+						$form->display($request);
+					}
+				} else {
+					$this->_setBreadCrumbs();
+					$form->initData();
+					$form->display($request);
+				}
+				return true;
+
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
+		}
+	}
+
+
+	//
+	// Application level hook implementations.
+	//
+	/**
+	 * @see PluginRegistry::loadCategory()
 	 */
 	function callbackLoadCategory($hookName, $args) {
-		$category =& $args[0];
-		$plugins =& $args[1];
-		if ($category == 'reports') {
-			$this->import('OasReportPlugin');
-			$reportPlugin = new OasReportPlugin();
-			$plugins[$reportPlugin->getSeq()][$reportPlugin->getPluginPath()] =& $reportPlugin;
+		// Instantiate contributed plugins.
+		$plugin = null;
+		$category = $args[0];
+		switch ($category) {
+			case 'reports':
+				$this->import('OasReportPlugin');
+				$plugin = new OasReportPlugin();
+				break;
+
+			case 'blocks':
+				$this->import('OasOptoutBlockPlugin');
+				$plugin = new OasOptoutBlockPlugin($this->getName());
+				break;
 		}
+
+		// Register contributed plugins (by reference).
+		if ($plugin) {
+			$seq = $plugin->getSeq();
+			$plugins =& $args[1];
+			if (!isset($plugins[$seq])) $plugins[$seq] = array();
+			$plugins[$seq][$plugin->getPluginPath()] = $plugin;
+		}
+
 		return false;
 	}
 
 	/**
-	 * Automatic plugin maintenance:
-	 * 1) event table maintenance
-	 * 2) salt management
-	 *
-	 * @return string the current or updated SALT value
+	 * @see PKPPageRouter::route()
 	 */
-	function doMaintenance() {
-		$currentTs = time();
+	function callbackLoadHandler($hookName, $args) {
+		// Check the page.
+		$page = $args[0];
+		if ($page !== 'oas') return;
 
-		// Event table maintenance.
-		$lastEventTableMaintenanceTs = $this->getSetting(0, 'lastEventTableMaintenanceTs');
-		if (($currentTs - OAS_PLUGIN_MAX_STAGING_TIME * 60) > $lastEventTableMaintenanceTs) {
-			$this->_oasEventStagingDao->clearExpiredEvents();
-		}
+		// Check the operation.
+		$op = $args[1];
+		if ($op != 'privacyInformation') return;
 
-		// Salt management.
-		$salt = $this->getSetting(0, 'salt');
-		$saltTs = $this->getSetting(0, 'saltTs');
-		if (empty($salt) || $saltTs == 0 || date('YYYYMM', $saltTs) != date('YYYYMM', $currentTs)) {
-			$lastSaltDownloadTs = $this->getSetting(0, 'lastSaltDownloadTs');
-			if (($currentTs - OAS_PLUGIN_SALT_DOWNLOAD_INTERVAL * 60) > $lastSaltDownloadTs) {
-				import('lib.pkp.classes.webservice.WebService');
-				import('lib.pkp.classes.webservice.WebServiceRequest');
-				$wsReq = new WebServiceRequest(OAS_PLUGIN_SALT_URL);
-				$wsReq->setAccept('text/plain');
-				$ws = new WebService();
-				$ws->setAuthUsername($this->getSetting(0, 'saltApiUsername'));
-				$ws->setAuthPassword($this->getSetting(0, 'saltApiPassword'));
-				$newSalt = $ws->call($wsReq);
-				$this->updateSetting(0, 'lastSaltDownloadTs', $currentTs);
-				if($ws->getLastResponseStatus() == '200' && !empty($newSalt) && $newSalt != $salt) {
-					$this->updateSetting(0, 'saltTs', $currentTs);
-					$this->updateSetting(0, 'salt', $newSalt);
-					$salt = $newSalt;
-				}
-			}
-		}
-
-		return $salt;
+		// Looks as if our handler had been requested.
+		define('HANDLER_CLASS', 'OasHandler');
+		define('OAS_PLUGIN_NAME', $this->getName());
+		$handlerFile =& $args[2];
+		$handlerFile = $this->getPluginPath() . '/' . 'OasHandler.inc.php';
 	}
 
+
+	//
+	// Controller level hook implementations.
+	//
 	/**
 	 * Start preparing a usage event.
 	 *
@@ -165,8 +229,16 @@ class OasPlugin extends GenericPlugin {
 	function startUsageEvent($hookName, $args) {
 		$request = $this->getRequest();
 
+		// Check (and renew) the statistics opt-out.
+		if ($request->getCookieVar('oas-opt-out')) {
+			// Renew the Opt-Out cookie if present.
+			$request->setCookieVar('oas-opt-out', true, time() + 60*60*24*365);
+			$this->_optedOut = true;
+			return false;
+		}
+
 		// Check whether we are in journal context.
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 
 		// Prepare request information.
@@ -175,14 +247,22 @@ class OasPlugin extends GenericPlugin {
 
 			// Article abstract, HTML galley and remote galley.
 			case 'TemplateManager::display':
-				// We are only interested in access to the article abstract/galley view page.
 				$page = $request->getRequestedPage();
 				$op = $request->getRequestedOp();
+				$templateMgr = $args[0];
+
+				// Display the privacy information whenever we are on
+				// an article or issue page (i.e. whenever usage info
+				// may be collected).
+				if ($page == 'article' || $page == 'issue') {
+					$templateMgr->assign('oasDisplayPrivacyInfo', true);
+				}
+
+				// We are only interested in access to the article abstract/galley view page.
 				if ($page != 'article' || !($op == 'view' || $op == 'articleView')) return false;
 
-				$templateManager = $args[0];
-				$galley = $templateManager->get_template_vars('galley'); /* @var $galley ArticleGalley */
-				$article = $templateManager->get_template_vars('article');
+				$galley = $templateMgr->get_template_vars('galley'); /* @var $galley ArticleGalley */
+				$article = $templateMgr->get_template_vars('article');
 				if ($galley) {
 					if ($galley->isHTMLGalley() || $galley->getRemoteURL()) {
 						$pubObject = $galley;
@@ -299,7 +379,7 @@ class OasPlugin extends GenericPlugin {
 		$user = $request->getUser();
 		$roles = array();
 		if ($user) {
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			$rolesByContext = $roleDao->getByUserIdGroupedByContext($user->getId());
 			foreach (array(CONTEXT_SITE, $journal->getId()) as $context) {
 				if(isset($rolesByContext[$context])) {
@@ -365,7 +445,7 @@ class OasPlugin extends GenericPlugin {
 		DAORegistry::registerDAO('OasContextObjectDAO', $this->_oasEventStagingDao);
 
 		// Check whether we have outstanding maintenance jobs.
-		$salt = $this->doMaintenance();
+		$salt = $this->_doMaintenance();
 
 		// Stage the usage event.
 		$this->_currentEventId = $this->_oasEventStagingDao->stageUsageEvent($usageEvent, $salt);
@@ -378,6 +458,11 @@ class OasPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function endUsageEvent($hookName, $args) {
+		if ($this->_optedOut) {
+			// The user opted out so do not collect any statistics.
+			return false;
+		}
+
 		// Check whether we got the event DAO (should be the case
 		// if our event flow is correct).
 		assert($this->_oasEventStagingDao);
@@ -396,6 +481,82 @@ class OasPlugin extends GenericPlugin {
 
 		// Update the usage event.
 		$this->_oasEventStagingDao->setDownloadSuccess($this->_currentEventId, $downloadSuccess);
+		return false;
+	}
+
+
+	//
+	// Private helper methods
+	//
+	/**
+	 * Automatic plugin maintenance:
+	 * 1) event table maintenance
+	 * 2) salt management
+	 *
+	 * @return string the current or updated SALT value
+	 */
+	function _doMaintenance() {
+		$currentTs = time();
+
+		// Event table maintenance.
+		$lastEventTableMaintenanceTs = $this->getSetting(0, 'lastEventTableMaintenanceTs');
+		if (($currentTs - OAS_PLUGIN_MAX_STAGING_TIME * 60) > $lastEventTableMaintenanceTs) {
+			$this->_oasEventStagingDao->clearExpiredEvents($currentTs - OAS_PLUGIN_MAX_STAGING_TIME * 60);
+			$this->updateSetting(0, 'lastEventTableMaintenanceTs', $currentTs);
+		}
+
+		// Salt management.
+		$salt = $this->getSetting(0, 'salt');
+		$saltTs = $this->getSetting(0, 'saltTs');
+		if (empty($salt) || $saltTs == 0 || date('YYYYMM', $saltTs) != date('YYYYMM', $currentTs)) {
+			$lastSaltDownloadTs = $this->getSetting(0, 'lastSaltDownloadTs');
+			if (($currentTs - OAS_PLUGIN_SALT_DOWNLOAD_INTERVAL * 60) > $lastSaltDownloadTs) {
+				import('lib.pkp.classes.webservice.WebService');
+				import('lib.pkp.classes.webservice.WebServiceRequest');
+				$wsReq = new WebServiceRequest(OAS_PLUGIN_SALT_URL);
+				$wsReq->setAccept('text/plain');
+				$ws = new WebService();
+				$ws->setAuthUsername($this->getSetting(0, 'saltApiUsername'));
+				$ws->setAuthPassword($this->getSetting(0, 'saltApiPassword'));
+				$saltScript = $ws->call($wsReq);
+				$matches = null;
+				String::regexp_match_get("/'([^']+)'/", $saltScript, $matches);
+				$newSalt = null;
+				if (isset($matches[1])) $newSalt = $matches[1];
+				$this->updateSetting(0, 'lastSaltDownloadTs', $currentTs);
+				if($ws->getLastResponseStatus() == '200' && !empty($newSalt) && $newSalt != $salt) {
+					$this->updateSetting(0, 'saltTs', $currentTs);
+					$this->updateSetting(0, 'salt', $newSalt);
+					$salt = $newSalt;
+				}
+			}
+		}
+
+		return $salt;
+	}
+
+	/**
+	 * Set the page's breadcrumbs, given the plugin's tree of items
+	 * to append.
+	 */
+	function _setBreadcrumbs() {
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
+		$pageCrumbs = array(
+			array(
+				$request->url(null, 'user'),
+				'navigation.user'
+			),
+			array(
+				$request->url('index', 'admin'),
+				'user.role.siteAdmin'
+			),
+			array(
+				$request->url(null, 'manager', 'plugins'),
+				'manager.plugins'
+			)
+		);
+		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
 }
 

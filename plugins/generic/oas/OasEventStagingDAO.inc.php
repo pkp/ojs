@@ -21,8 +21,14 @@ class OasEventStagingDAO extends DAO {
 	 *
 	 * @param $usageEvent array
 	 * @param $salt string A SALT value for IP hashing.
+	 *
+	 * @return integer|null The ID of the new database entry or null if something
+	 *  went wrong (e.g. when a valid SALT was not provided).
 	 */
 	function stageUsageEvent($usageEvent, $salt) {
+		// If the salt is empty then we're not allowed to save anything.
+		if (empty($salt)) return null;
+
 		// We currently only use 'administration' classification. TODO: Add more if we actually use them.
 		$validClassifiers = array(
 			OAS_PLUGIN_CLASSIFICATION_ADMIN
@@ -88,9 +94,10 @@ class OasEventStagingDAO extends DAO {
 
 	/**
 	 * Delete usage events older than OAS_PLUGIN_MAX_STAGING_TIME.
+	 * @param $deleteOlderThan integer A Unix timestamp.
 	 */
-	function clearExpiredEvents() {
-		$deleteOlderThan = Core::getCurrentDate(time() - OAS_PLUGIN_MAX_STAGING_TIME * 60);
+	function clearExpiredEvents($deleteOlderThan) {
+		$deleteOlderThan = Core::getCurrentDate($deleteOlderThan);
 		$this->update(
 			sprintf(
 				'DELETE FROM oas_event_staging WHERE timestamp < %s',

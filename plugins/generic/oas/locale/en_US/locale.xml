@@ -15,4 +15,31 @@
 	<message key="plugins.generic.oas.description"><![CDATA[The OA-S plugin transforms OJS into a data provider for the <a href="http://www.dini.de/projekte/oa-statistik" target="_new">Open Access Statistics (OA-S) project</a>.]]></message>
 	<message key="plugins.generic.oas.report.displayName">OA-S Reporting</message>
 	<message key="plugins.reports.oas.report.description">This plugin implements reports based on OA-S metrics.</message>
+	
+	<message key="plugins.generic.oas.optout">Opt Out</message>
+	<message key="plugins.generic.oas.optout.done">You successfully opted out from usage statistics collection. While you see this message no statistics will be collected from your usage of this site.</message>
+	<message key="plugins.generic.oas.optout.title">Privacy Information</message>
+	<message key="plugins.generic.oas.optout.link">Read more...</message>
+	<message key="plugins.generic.oas.optout.shortDesc"><![CDATA[We log anonymous usage statistics. Please read the <a href="{$privacyInfo}">privacy information</a> for details.]]></message>
+	<message key="plugins.generic.oas.optout.cookie">
+		If you click the opt-out button below then your browser will receive an "opt-out cookie" and no statistics information will be collected at all as long as
+		this cookie is present in your browser. The opt-out information will be stored for one year and will be renewed for another year whenever you access OJS. The
+		cookie contains no information that may be used to identify you. Please note that if you are using a different browser or if you delete cookies from your
+		browser then you'll have to opt-out again as we'll not keep any personal information about you on our side to protect your privacy.
+	</message>
+
+	<message key="plugins.generic.oas.settings">Settings</message>
+	<message key="plugins.generic.oas.settings.description"><![CDATA[
+		The OA-S plugin requires access to a SALT server to pseudonimize IP addresses. After registering your OJS installation with the OA-S project you'll
+		receive a username and password from University Library Saarbrücken (SULB). Please enter these login credentials here so that you are able to use the
+		plug-in.
+	]]></message>
+	<message key="plugins.generic.oas.settings.oasSettings">OA-S Plugin: Settings</message>
+	<message key="plugins.generic.oas.settings.saltApiPassword">Password</message>
+	<message key="plugins.generic.oas.settings.saltApiPasswordInstructions">Please enter the corresponding SALT server password.</message>
+	<message key="plugins.generic.oas.settings.saltApiPasswordRequired">Please enter a valid password to authenticate to the SALT server.</message>
+	<message key="plugins.generic.oas.settings.saltServerSettings">SALT server settings</message>
+	<message key="plugins.generic.oas.settings.saltApiUsername">Username</message>
+	<message key="plugins.generic.oas.settings.saltApiUsernameInstructions">Please enter the OA-S SALT server username you received from University Saarbrücken.</message>
+	<message key="plugins.generic.oas.settings.saltApiUsernameRequired">Please enter a valid username to authenticate to the SALT server (colons are disallowed).</message>
 </locale>

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/generic/lucene/LuceneFacetsBlockPlugin.inc.php
+ * @file plugins/generic/oas/OasOptoutBlockPlugin.inc.php
  *
  * Copyright (c) 2003-2012 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class LuceneFacetsBlockPlugin
- * @ingroup plugins_generic_lucene
+ * @class OasOptoutBlockPlugin
+ * @ingroup plugins_generic_oas
  *
- * @brief Lucene plugin, faceting block component
+ * @brief OA-S plugin, opt-out component.
  */
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
-class LuceneFacetsBlockPlugin extends BlockPlugin {
+class OasOptoutBlockPlugin extends BlockPlugin {
 
 	/** @var string */
 	var $_parentPluginName;
@@ -24,7 +24,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * Constructor
 	 * @param $parentPluginName string
 	 */
-	function LuceneFacetsBlockPlugin($parentPluginName) {
+	function OasOptoutBlockPlugin($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
 		parent::BlockPlugin();
 	}
@@ -44,28 +44,28 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see PKPPlugin::getName()
 	 */
 	function getName() {
-		return 'LuceneFacetsBlockPlugin';
+		return 'OasOptoutBlockPlugin';
 	}
 
 	/**
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.generic.lucene');
+		return __('plugins.generic.oas');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.generic.lucene.description');
+		return __('plugins.generic.oas.description');
 	}
 
 	/**
 	 * @see PKPPlugin::getPluginPath()
 	 */
 	function getPluginPath() {
-		$plugin =& $this->_getLucenePlugin();
+		$plugin =& $this->_getPlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -73,7 +73,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see PKPPlugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->_getLucenePlugin();
+		$plugin =& $this->_getPlugin();
 		return $plugin->getTemplatePath();
 	}
 
@@ -84,11 +84,9 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 		// Identify the position of the faceting block.
 		$seq = parent::getSeq();
 
-		// If nothing has been configured then use the first
-		// position. This is ok as we'll only display facets
-		// in a search results context where they have a high
-		// relevance by default.
-		if (!is_numeric($seq)) $seq = 0;
+		// If nothing has been configured then show the privacy
+		// block after all other blocks in the context.
+		if (!is_numeric($seq)) $seq = 99;
 
 		return $seq;
 	}
@@ -101,7 +99,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see LazyLoadPlugin::getEnabled()
 	 */
 	function getEnabled() {
-		$plugin =& $this->_getLucenePlugin();
+		$plugin =& $this->_getPlugin();
 		return $plugin->getEnabled();
 	}
 
@@ -115,11 +113,9 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	function getBlockContext() {
 		$blockContext = parent::getBlockContext();
 
-		// Place the block on the left by default
-		// where navigation will usually be expected
-		// by the user.
+		// Place the block on the right by default.
 		if (!in_array($blockContext, $this->getSupportedContexts())) {
-			$blockContext = BLOCK_CONTEXT_LEFT_SIDEBAR;
+			$blockContext = BLOCK_CONTEXT_RIGHT_SIDEBAR;
 		}
 
 		return $blockContext;
@@ -129,33 +125,17 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see BlockPlugin::getBlockTemplateFilename()
 	 */
 	function getBlockTemplateFilename() {
-		// Return the facets template.
-		return 'facetsBlock.tpl';
+		// Return the opt-out template.
+		return 'optoutBlock.tpl';
 	}
 
 	/**
 	 * @see BlockPlugin::getContents()
 	 */
-	function getContents(&$templateMgr, $request = null) {
-		// Get facets from the parent plug-in.
-		$plugin =& $this->_getLucenePlugin();
-		$facets = $plugin->getFacets();
-
-		// Check whether we got any facets to display.
-		$hasFacets = false;
-		if (is_array($facets)) {
-			foreach($facets as $facetCategory => $facetList) {
-				if (count($facetList) > 0) {
-					$hasFacets = true;
-					break;
-				}
-			}
-		}
-
-		// Do not display the block if we got no facets.
-		if (!$hasFacets) return '';
-
-		$templateMgr->assign('facets', $facets);
+	function getContents(&$templateMgr, $request) {
+		$router = $request->getRouter(); /* @var $router PageRouter */
+		$privacyInfoUrl = $router->url($request, null, 'oas', 'privacyInformation');
+		$templateMgr->assign('privacyInforUrl', $privacyInfoUrl);
 		return parent::getContents($templateMgr, $request);
 	}
 
@@ -164,10 +144,10 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	// Private helper methods
 	//
 	/**
-	 * Get the lucene plugin object
-	 * @return LucenePlugin
+	 * Get the plugin object
+	 * @return OasPlugin
 	 */
-	function &_getLucenePlugin() {
+	function &_getPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', $this->_parentPluginName);
 		return $plugin;
 	}
