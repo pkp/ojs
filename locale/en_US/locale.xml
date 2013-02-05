@@ -24,11 +24,8 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review froms start -->
-
 	<!-- common -->
-
-	<!-- Journal Management -->
+	<message key="context.select">Select a Journal...</message>
 
 	<!-- Categories -->
 	<message key="navigation.categories">Categories</message>
