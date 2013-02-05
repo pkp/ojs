@@ -136,9 +136,6 @@ class JournalDAO extends ContextDAO {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$roleDao->deleteRoleByJournalId($journalId);
 
-		$groupDao =& DAORegistry::getDAO('GroupDAO');
-		$groupDao->deleteGroupsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
-
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteById($journalId);
 

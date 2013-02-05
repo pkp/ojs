@@ -486,8 +486,7 @@ class Upgrade extends Installer {
 			'email_templates_default_data', 'email_templates_data',
 			'article_search_object_keywords',
 			'oai_resumption_tokens', 'subscription_type_settings',
-			'announcement_type_settings', 'announcement_settings',
-			'group_settings', 'group_memberships'
+			'announcement_type_settings', 'announcement_settings'
 		);
 
 		// Assemble a list of indexes to be dropped

@@ -150,8 +150,6 @@ class UserAction {
 		$temporaryFileDao->deleteTemporaryFilesByUserId($oldUserId);
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 		$userSettingsDao->deleteSettings($oldUserId);
-		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
-		$groupMembershipDao->deleteMembershipByUserId($oldUserId);
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsByUserId($oldUserId);
 
