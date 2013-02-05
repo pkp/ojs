@@ -20,7 +20,9 @@
 <h3>{translate key="admin.siteManagement"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{url op="settings"}">{translate key="admin.siteSettings"}</a></li>
+	{if $multipleContexts}
+		<li>&#187; <a href="{url op="settings"}">{translate key="admin.siteSettings"}</a></li>
+	{/if}
 	<li>&#187; <a href="{url op="journals"}">{translate key="admin.hostedJournals"}</a></li>
 	<li>&#187; <a href="{url op="languages"}">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>

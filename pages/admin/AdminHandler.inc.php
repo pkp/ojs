@@ -32,7 +32,7 @@ class AdminHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		// Display a warning message if there is a new version of OJS available
 		$newVersionAvailable = false;
@@ -41,12 +41,14 @@ class AdminHandler extends Handler {
 			if($latestVersion = VersionCheck::checkIfNewVersionExists()) {
 				$newVersionAvailable = true;
 				$templateMgr->assign('latestVersion', $latestVersion);
-				$currentVersion =& VersionCheck::getCurrentDBVersion();
+				$currentVersion = VersionCheck::getCurrentDBVersion();
 				$templateMgr->assign('currentVersion', $currentVersion->getVersionString());
 			}
 		}
 
 		$templateMgr->assign('newVersionAvailable', $newVersionAvailable);
+		$workingContexts = $this->getWorkingContexts($request);
+		$templateMgr->assign('multipleContexts', $workingContexts->getCount() > 0);
 		$templateMgr->assign('helpTopicId', 'site.index');
 		$templateMgr->display('admin/index.tpl');
 	}
@@ -58,11 +60,6 @@ class AdminHandler extends Handler {
 	function setupTemplate($request, $subclass = false) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_ADMIN, LOCALE_COMPONENT_APP_ADMIN, LOCALE_COMPONENT_APP_MANAGER);
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'admin'), 'admin.siteAdmin'))
-				: array(array($request->url(null, 'user'), 'navigation.user'))
-		);
 	}
 }
 

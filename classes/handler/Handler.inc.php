@@ -21,6 +21,23 @@ class Handler extends PKPHandler {
 	function Handler() {
 		parent::PKPHandler();
 	}
+
+	/**
+	 * Get the iterator of working contexts.
+	 * @param $request PKPRequest
+	 * @return ItemIterator
+	 */
+	function getWorkingContexts($request) {
+		// Check for multiple presses.
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+
+		$user = $request->getUser();
+		if (is_a($user, 'User')) {
+			return $journalDao->getAll();
+		} else {
+			return $journalDao->getAll(true); // Enabled only
+		}
+	}
 }
 
 ?>
