@@ -138,7 +138,7 @@ $(document).ready(function() {
 <div class="separator"></div>
 {/foreach}
 
-
+<br/>
 {if $unpublished}
 	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 {else}
@@ -160,6 +160,8 @@ $(document).ready(function() {
 				{* BLH 20111021 Hide 'unpublish' button for all users except siteAdmin *}
 				{if $isSiteAdmin}<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />{/if}
 			{/if}
+			<br/><br/>
+			<strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> 
 		{/if}
 	{/if}
 {/if}
