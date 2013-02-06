@@ -15,7 +15,6 @@
 	<message key="plugins.generic.sword.displayName">Plugin SWORD</message>
 	<message key="plugins.generic.sword.description">Permite aos Editores de Revistas e (opcionalmente) Autores depositar artigos via protocolo SWORD</message>
 	<message key="plugins.generic.sword.enabled">O plugin SWORD foi activado</message>
-	<message key="plugins.generic.sword.disable">O plugin SWORD foi desactivado.</message>
 	<message key="plugins.generic.sword.settings">Configurações</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permitir ao autor especificar um ponto de depósito</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Pontos de Depósito</message>

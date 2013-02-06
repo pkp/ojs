@@ -199,8 +199,6 @@
 	<message key="manager.setup.disciplineExamples">(Ex.: Psicologia; Educação; Sociologia; Neurociências)</message>
 	<message key="manager.setup.disciplineProvideExamples">Forneça exemplos de áreas do conhecimento relevantes para esta revista</message>
 	<message key="manager.setup.displayCurrentIssue">Adicionar sumário na edição actual (se disponível).</message>
-	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Decisão Editorial</message>
 	<message key="manager.setup.editorialMembers">Entre em Membros do Equipa para registar pessoas na Equipa Editorial e/ou Revisor. Pode ser realizado a qualquer tempo.</message>
 	<message key="manager.setup.editorialProcess1">Um ou mais editores podem tratar os passos básicos sem papéis definidos.</message>
@@ -410,8 +408,6 @@
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitectura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Forneça exemplos de palavras-chave ou tópicos para auxiliar o autor</message>
-	<message key="manager.setup.submissionEmailLogging">Manter histórico de todos os e-mails enviados relativos à submissão na página de Histórico.</message>
-	<message key="manager.setup.submissionEventLogging">Manter histórico de todas as acções tomadas sobre a submissão na página Histórico.</message>
 	<message key="manager.setup.submissionGuidelines">Instruções para Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklist">Normas de Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada Item de Verificação nas Normas de Submissão, antes de proceder. A lista de Itens de Verificação também é apresentada em Instruções para Autores, na secção Sobre a Revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão.</message>
@@ -619,13 +615,6 @@
 	<message key="manager.setup.contributorNoteDescription">Este texto será apresentado abaixo de "Contribuidores" e acima da lista de nomes e URLs para organizações contribuidoras, sob "Apoio à revista" na página "Sobre".</message>
 	<message key="manager.setup.history">Histórico da revista</message>
 	<message key="manager.setup.historyDescription">Este texto aparecerá na secção "Sobre" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação.</message>
-	<message key="manager.setup.doiSuffix">Suffixo DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Usar padrão (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Use o padrão fornecido abaixo para gerar sufixos DOI. Use %j para iniciais da revista, %v para o volume, %i para a edição, %a para o código do artigo no sistema e %p para o número da página.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Por exemplo, vl%viss%ipp%p poderia criar um DOI to tipo 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Um sufixo DOI pode possuir qualquer formato, desde que seja único para cada artigo publicado.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Usar o "Identificador Personalizado" para itens publicados como sufixo DOI (deve estar activado no Passo 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">O padrão DOI deve estar no formato 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Favicon da revista</message>
 	<message key="manager.setup.journalFaviconDescription">Adicionar um ícone de favoritos da revista, a ser exibido na barra de endereço do navegador.</message>
 	<message key="manager.setup.journalFaviconInvalid">Formato de favicon inválido. Formatos aceites são .ico, .png e .gif.</message>
@@ -683,6 +672,4 @@
 	<message key="manager.plugins.tarCommandNotFound">O comando tar não está disponível. Por favor, configure-o correctamente no config.inc.php.</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml no directório do plugin contém dados inválidos.</message>
 	<message key="manager.reviewFormElements.included">Incluído na mensagem para o autor</message>
-	<message key="manager.setup.doiReassign">Reatribuir DOI's</message>
-	<message key="manager.setup.doiReassign.description">Se alterar a sua configuração DOI, os DOI's que foram atribuídos não serão afectados. Uma vez guardada a configuração DOI, use o botão para limpar todos os DOI's existentes de modo a que as novas configurações não afectem os artigos existentes.</message>
 </locale>

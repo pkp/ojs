@@ -27,4 +27,5 @@
 	<message key="plugins.generic.customBlock.editContent">Modifier le contenu de l'encadré latéral</message>
 	<message key="plugins.generic.customBlock.contentRequired">Un minimum de contenu est obligatoire. Si vous souhaitez supprimer ce bloc, vous pouvez le faire à l'aide du Plugiciel de gestion de bloc ou en désélectionnant ce bloc à l'Étape 5 de la configuration de la revue.</message>
 	<message key="plugins.generic.customBlock.edit">Modifier</message>
+	<message key="plugins.generic.customBlockManager.description">Ce plugiciel vous permet de personnaliser les encadrés latéraux. Vous pouvez modifier les encadrés par le biais des paramètres de chaque plugiciel que vous créez ici.</message>
 </locale>

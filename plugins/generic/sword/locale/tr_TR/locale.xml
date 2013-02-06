@@ -15,7 +15,6 @@
 	<message key="plugins.generic.sword.displayName">SWORD Eklentisi</message>
 	<message key="plugins.generic.sword.description">Dergi Yöneticileri ve Yazarlar (isteğe bağlı) SWORD protokolü aracılığıyla makaleleri saklayabilirler (depozit).</message>
 	<message key="plugins.generic.sword.enabled">SWORD Eklentisi Etkinleştirildi.</message>
-	<message key="plugins.generic.sword.disable">SWORD Eklentisi Pasifleştirildi.</message>
 	<message key="plugins.generic.sword.settings">Ayarlar</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Allow the author to specify a deposit point</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Deposit Points</message>

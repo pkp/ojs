@@ -73,4 +73,7 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">L'URN attribuito è già utilizzato, sceglierne un altro.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Manca il numero di controllo.</message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL del resolver</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(es. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Inserisci la URL del resolver</message>
 </locale>

@@ -16,4 +16,8 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Ce plugiciel implante le format de référence bibliographique ABNT.</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponible à l'adresse&nbsp;: &gt;<a href="{$url}" target="_new">{$url}</a>&gt;. Date de consultation&nbsp;: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Paramètres</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Paramètres du plugiciel pour le format de citation ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Paramètres utilisés pour la création de citations suivant l'ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Emplacement</message>
 </locale>

@@ -188,12 +188,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nível</message>
-	<message key="submission.event.logLevel.info">Informação</message>
-	<message key="submission.event.logLevel.notice">Aviso</message>
-	<message key="submission.event.logLevel.warning">Advertência</message>
-	<message key="submission.event.logLevel.error">Erro</message>
-	
 	<message key="submission.event.general.defaultEvent">Evento da submissão</message>
 	<message key="submission.event.general.articleSubmitted">Artigo submetido</message>
 	<message key="submission.event.general.issueScheduled">Submissão enviada à fila de espera</message>
@@ -879,7 +873,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.authenticated">Utilizadores devem estar registados e ligados para comentar, sem permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Utilizadores devem estar registados e ligados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar registado para comentar, com permissão de anonimato.</message>
-	<message key="rt.metadata.pkp.doi">Identificador de Objecto Digital (DOI)</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do ficheiro XML</message>
 	<message key="debug.notes.helpMappingLoad">Foi recarregado o ficheiro XML de mapeamento da ajuda {$filename} pesquisando por {$id}.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível transferir idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:

@@ -22,4 +22,34 @@
 	<message key="plugins.generic.lucene.results.orderBy.article">Makale Başlığı</message>
 	<message key="plugins.generic.lucene.results.orderDir.asc">Artan</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Azalan</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[<p>The Lucene plugin acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.</p>
+		<p><strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong></p>
+		<p>If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.</p>]]></message>
+	<message key="plugins.generic.lucene.settings.instId">Tekil Yükleme Numarası</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Lucene Eklentisi: Solr Sunucu Ayarları</message>
+	<message key="plugins.generic.lucene.settings.password">Şifre</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Lütfen Solr sunucu şifresini giriniz.</message>
+	<message key="plugins.generic.lucene.settings.username">Kullanıcı adı</message>
+	<message key="plugins.generic.lucene.results.orderBy">Sonuçları sırala</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Search tips: <ul>
+<li>Search terms are case-insensitive</li>
+<li>Common words are ignored</li>
+<li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>
+<li>Make sure that a word exists in an article by prefixing it with <strong>+</strong>; e.g., <em>+journal +access scholarly academic</em></li>
+<li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
+<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g., <em>online -politics</em> or <em>online NOT politics</em></li>
+<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
+<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
+</ul>]]></message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Solr arama sunucusu otoritesi için lütfen geçerli bir şifre giriniz.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">Arama Sonu URL'si</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
+	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
+	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
 </locale>

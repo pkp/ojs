@@ -56,7 +56,6 @@
 	<message key="editor.issues.accessStatus">Tipo de Acesso</message>
 	<message key="editor.issues.accessDate">Data para Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">A data para acesso é inválida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">O Identificador Público de edição já existe.</message>
 	<message key="editor.issues.coverPage">Capa</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos aceitáveis: .gif, .jpg ou .png )</message>
 	<message key="editor.issues.uploaded">Enviado</message>

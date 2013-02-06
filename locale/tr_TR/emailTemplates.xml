@@ -87,36 +87,35 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.
 		<description>Bu mesaj sayı açık erişime açıldığında haberdar olmak isteyen okuyuculara gönderilir.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>{$journalName} arşivleme talebi</subject>
+		<subject>{$journalName} İçin Arşivleme Talebi</subject>
 		<body><![CDATA[Kıymetli [University Librarian]
 
-{$journalName} <{$journalUrl}> dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
+{$journalName} <{$journalUrl}> adlı yayın için fakülteniz üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi, bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
 
 [Brief description of journal]
 
 Dergimizin LOCKSS yayınevi bildirgesi internet adresi: {$journalUrl}/gateway/lockss
 
-LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.
+LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü üst veriyi sağlamaktan mutluluk duyarız.
 
 Teşekkür ederiz,
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta LOCKSS arşiv yöneticisine bu dergiyi arşivlerine ekleme olanağını hatırlatmayı amaçlar ve derginin LOCKSS yayımcı bildirgesi internet adresini içermektedir.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>{$journalName} dergisi arşivleme talebi </subject>
-		<body>Değerli [University Librarian]
+		<subject>{$journalName} İçin Arşivleme Talebi</subject>
+		<body><![CDATA[Değerli [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
-
+{$journalName} <{$journalUrl}> dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi, bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) ile uyumlu arşiv oluşturmayı hedeflemektedir. 
 
 [Brief description of journal]
 
-LOCKSS programı &lt;http://lockss.org/&gt;, uluslararası bir kütüphane/yayımcı organizasyonu olup bir arşivin yaygın ve güvenilir olarak kullanılmasını sağlayan etkin bir örnektir. Diğer detaylar aşağıda belirtilmiştir. Standart kişisel bilgisayarlarda kullanılabilen yazılım ücretsizdir, sistem kolaylıkla aktif olabilmekte ve çok az bakım gerektirmektedir. 
+LOCKSS programı <http://lockss.org/>, uluslararası bir kütüphane/yayımcı organizasyonu olup bir arşivin yaygın ve güvenilir olarak kullanılmasını sağlayan etkin bir örnektir. Diğer detaylar aşağıda belirtilmiştir. Standart kişisel bilgisayarlarda kullanılabilen yazılım ücretsizdir, sistem kolaylıkla aktif olabilmekte ve çok az bakım gerektirmektedir. 
 
-Derginizin arşivlenebilmesi için sizi LOCKSS topluluğunun üyesi olmaya davet ediyoruz. Böylelikle gerek fakültenizden gerek dünya çapında diğer araştırma birimlerinden çalışmaları toplayabilir ve güvenle saklayabilirsiniz. Bu amaçla bir çalışanınızı görevlendirerek LOCKSS sitesini ziyaret etmesini ve sistem çalışması ile ilgili bilgileri edinmesini sağlayınız. Sizden bu derginin arşiv desteğinin fizibilitesi ile ilgili haber bekliyor olacağım.
+Derginizin arşivlenebilmesi için sizi LOCKSS topluluğunun üyesi olmaya davet ediyoruz. Böylelikle gerek fakültenizden gerek dünya çapında diğer araştırma birimlerinden çalışmaları toplayabilir ve güvenle saklayabilirsiniz. Bu amaçla bir çalışanınızı görevlendirerek LOCKSS sitesini ziyaret etmesini ve sistem çalışması ile ilgili bilgileri edinmesini sağlayınız. Sizden bu derginin arşiv desteğinin fizibilitesi ile ilgili haber bekliyoruz.
 
 Teşekkür ederim
-{$principalContactSignature}</body>
+{$principalContactSignature}]]></body>
 		<description>Bu e-posta alıcının dergisini LOCKSS arşiv sistemine dahil etmeye yönelik önerme içermektedir. LOCKSS çalşıma biçimi ve katılımcı olma ile ilgili bilgiler sağlamaktadır.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
@@ -343,13 +342,9 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 
 {$journalName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyorduk. Yoğun işleriniz nedeni ile oluşan gecikme nedeni ile sistemimiz tarafından bu mesaj tarafınıza otomatik olarak gönderilmişitir. 
 
-Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
-
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
-
 Makale Erişim Adresi: {$submissionReviewUrl}
 
-Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.
+Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
 
 {$editorialContactSignature}</body>
 		<description>Gözden geçirme işlemi için verilen süre geçtiğinde ve hakemler için tek tıklama özelliği açıldığında bu elektronik posta otomatik olarak gönderilir(Derginin Kurulum Bölümü altındaki Gözden Geçirme seçeneklerine bakınız, Adım 2). Zamanlanmış görevler aktif hale getirilmeli ve düzenlenmelidir(alan düzenleme dosyasına bakınız).</description>
@@ -637,18 +632,19 @@ Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
 		<description>Bu mesaj aboneliği biten abonelere gönderilir.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Aboneliğiniz sona erdi - Son anımsatma</subject>
+		<subject>Aboneliğiniz Sona Erdi - Son Hatırlatma</subject>
 		<body>{$subscriberName}:
 
-{$journalName} dergisi abonelik süreniz doldu.
-Bu size gönderdiğimiz son anımsatma olacaktır.
+{$journalName} adlı yayındaki abonelik süreniz dolmuştur.
+
+Bu size gönderdiğimiz son hatırlatmadır.
 
 {$subscriptionType}
 Bitiş tarihi: {$expiryDate}
 
-Aboneliğinizi yenilemek için dergi sitesine giriniz. Sisteme "{$username}" olan kullanıcı adınızı kullanarak girebilirsiniz.
+Aboneliğinizi yenilemek için dergi sitesine giriniz. Sisteme "{$username}" kullanıcı adıyla girebilirsiniz.
 
-Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
+Eğer bir sorununuz olur ise, lütfen bildirebilirsiniz.
 
 {$subscriptionContactSignature}</body>
 		<description>Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır...</description>

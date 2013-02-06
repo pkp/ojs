@@ -1097,4 +1097,22 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="gifts.recipientDescription">Hvem er gaven til?</message>
 	<message key="gifts.thankYou">Tak</message>
 	<message key="gifts.thankYouMessage">Dit gavebevis er færdigudfyldt. Du vil modtage en kopi af gave-e-mailen, der er sendt til modtageren, så snart betalingen har fundet sted.</message>
+	<message key="issue.viewIssue">Se nummer</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Gaveabonnement</message>
+	<message key="gifts.subscriptionFormIntroduction">Udfyld venligst formularen nedenfor. De indleverede kontaktinformationer vil sammen med dit gavebrev blive sendt til modtageren via e-mail med oplysninger om det nye gaveabonnement (du vil også modtage en kopi af denne e-mail).</message>
+	<message key="gifts.details">Gaveoplysninger</message>
+	<message key="gifts.detailsDescription">Vælg gaven nedenfor og inkluder en personlig hilsen. Den vil blive sendt via e-mail til modtageren (du vil modtage en kopi af denne e-mail).</message>
+	<message key="gifts.gift">Gave</message>
+	<message key="gifts.noteTitle">Titel</message>
+	<message key="gifts.note">Gavehilsen</message>
+	<message key="gifts.noteTitleRequired">Indsæt en overskrift til din personlige hilsen.</message>
+	<message key="gifts.noteRequired">Indsæt en personlig hilsen</message>
+	<message key="gifts.localeRequired">Vælg sprog i forbindelse med din personlige hilsen</message>
+	<message key="gifts.myGifts">Mine gaver</message>
+	<message key="gifts.manageMyGifts">Manage My Gifts</message>
+	<message key="gifts.redeemGift">Indløs gave</message>
+	<message key="gifts.status.notRedeemed">Tilgængelig</message>
+	<message key="gifts.status.redeemed">Indløst</message>
+	<message key="gifts.status.redeemGift">Indløs gave</message>
+	<message key="gifts.subscriptions">Abonnementer</message>
 </locale>

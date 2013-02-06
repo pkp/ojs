@@ -108,7 +108,7 @@ Please feel free to contact me if you have any questions or concerns about this 
 		<description>This email is sent by an editor to a book review author when the editor has mailed a copy of the book to the author.</description>
 	</email_text>
 	<email_text key="BFR_REVIEWER_REMOVED">
-		<subject>Book for Review</subject>
+		<subject>Değerlendirme İçin Kitap</subject>
 		<body>Dear {$authorName}:
 
 This email confirms that you have been removed as the book reviewer for {$bookForReviewTitle}, which will be made available to other authors interested in reviewing the book.

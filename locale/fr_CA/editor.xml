@@ -208,4 +208,16 @@
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tous les abonnés institutionnels ({$count} utilisateurs)</message>
+	<message key="editor.reassign">Réassigner</message>
+	<message key="editor.publicIdentificationExists">L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet (numéro, article, épreuves ou fichier complémentaire). Veuillez choisir des identifiants uniques au sein de votre revue.</message>
+	<message key="editor.issues.galleys">Épreuves du numéro</message>
+	<message key="editor.issues.galley">Épreuves du numéro</message>
+	<message key="editor.issues.viewingGalley">Voir les épreuves du numéro</message>
+	<message key="editor.issues.issueGalleysDescription">Publier les épreuves de l'ensemble du numéro.</message>
+	<message key="editor.issues.noneIssueGalleys">Les épreuves du numéro n'ont pas été publiées.</message>
+	<message key="editor.issues.galleyLabelRequired">Veuillez attribuer une étiquette aux épreuves du numéro.</message>
+	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
+	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
+	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
 </locale>

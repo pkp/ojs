@@ -125,4 +125,6 @@
 	<message key="author.submit.submissionLocale">Langue de la soumission</message>
 	<message key="author.submit.submissionLocaleDescription">La revue accepte les soumissions dans plusieurs langues. Choisir la langue principale de la soumission à partir de la liste déroulante ci-dessous.</message>
 	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
+	<message key="author.submit.submissionSupportingAgencies">Contributeurs et institutions commanditaires</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Nommez les institutions (individu, organisation ou service) ayant participé à l'élaboration du contenu, au financement ou à la promotion des travaux présentés (??). Séparez chaque entité d'un point-virgule (ex. : Pierre Gagnon, Université Métropolitaine; Université Master, Département d'informatique).</message>
 </locale>

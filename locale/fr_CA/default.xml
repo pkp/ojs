@@ -153,4 +153,6 @@ Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</
 	<message key="default.journalSettings.membershipFee">Adhésion d'association</message>
 	<message key="default.journalSettings.donationFee">Dons à la revue</message>
 	<message key="section.default.policy"></message>
+	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Le règlement du montant dû vous permettra de voir, de télécharger et d'imprimer ce numéro.</message>
 </locale>
