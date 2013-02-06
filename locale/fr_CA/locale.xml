@@ -291,8 +291,8 @@
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Open Journal Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
 	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
-
-
+	<message key="plugins.categories.pubIds">Plugiciels pour identifiant public</message>
+	<message key="plugins.categories.pubIds.description">Ces plugiciels permettent la mise en place d'un identifiant public.</message>
 
 	<!-- Files Browser -->
 
