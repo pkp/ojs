@@ -41,6 +41,7 @@ class SectionHandler extends ManagerHandler {
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin());
 		$templateMgr->display('manager/sections/sections.tpl');
 	}
 
