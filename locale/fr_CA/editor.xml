@@ -90,6 +90,7 @@
 	<message key="editor.issues.preview">(Prévisualiser)</message>
 	<message key="editor.issues.confirmPublish">Êtes-vous certain de vouloir publier le nouveau numéro?</message>
 	<message key="editor.issues.publicArticleIdExists">Impossible d'enregistrer l'identifiant public pour cet article :</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà.</message>	
 	<message key="editor.issues.noLiveIssues">Aucun numéro en ligne</message>
 	<message key="editor.issues.open">Ouvert</message>
 	<message key="editor.issues.pages">Pages</message>
