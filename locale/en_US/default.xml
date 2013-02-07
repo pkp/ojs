@@ -161,7 +161,16 @@ ________________________________________________________________________</messag
 	<message key="default.groups.name.manager">Journal manager</message>
 	<message key="default.groups.plural.manager">Journal managers</message>
 	<message key="default.groups.abbrev.manager">JM</message>
+	<message key="default.groups.name.editor">Journal editor</message>
+	<message key="default.groups.plural.editor">Journal editors</message>
+	<message key="default.groups.abbrev.editor">JE</message>
 	<message key="default.groups.name.guestEditor">Guest editor</message>
 	<message key="default.groups.plural.guestEditor">Guest editors</message>
 	<message key="default.groups.abbrev.guestEditor">AcqE</message>
+	<message key="default.groups.name.sectionEditor">Section editor</message>
+	<message key="default.groups.plural.sectionEditor">Section editors</message>
+	<message key="default.groups.abbrev.sectionEditor">SecE</message>
+	<message key="default.groups.name.subscriptionManager">Subscription Manager</message>
+	<message key="default.groups.plural.subscriptionManager">Subscription Managers</message>
+	<message key="default.groups.abbrev.subscriptionManager">SubM</message>
 </locale>
