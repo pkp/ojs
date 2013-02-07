@@ -11,18 +11,9 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
+	<message key="manager.website.archiving">Archiving</message>
 	<message key="manager.emails.confirmResetAll">Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</message>
 	<message key="manager.files.note">Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
-	<message key="manager.groups">Masthead</message>
-	<message key="manager.groups.publishEmails">Publish member email addresses</message>
-	<message key="manager.groups.context.editorialTeam">Have title appear under Editorial Team in People section of About the Journal (e.g. Editor)</message>
-	<message key="manager.groups.context.editorialTeam.short">Editorial Team</message>
-	<message key="manager.groups.context.people">Have title appear as its own category under People (e.g. Editorial Board)</message>
-	<message key="manager.groups.create">Create Position Title</message>
-	<message key="manager.groups.disableBoard">OJS lists people in Editorial Team under assigned roles (Journal Manager, Copyeditor, etc.)</message>
-	<message key="manager.groups.enableBoard">The Journal Manager creates titles and adds people under each title.</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Journal:]]></message>
-	<message key="manager.groups.noneCreated">No editorial team positions have been created.</message>
 	<message key="manager.journalManagement">Journal Management</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Submissions</message>
@@ -330,10 +321,10 @@
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">other versions of a LOCKSS license</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://lockss.org/lockss/Libraries" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page. A CLOCKSS license will appear in About the Journal under Archiving:]]></message>
-	<message key="manager.setup.clockssLicenses"><![CDATA[See <a href="http://clockss.org/" target="_blank">other versions of a CLOCKSS license</a>.]]></message>
+	<message key="manager.setup.clockssLicenses"><![CDATA[<a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>

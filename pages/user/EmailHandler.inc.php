@@ -17,7 +17,7 @@ import('pages.user.UserHandler');
 class EmailHandler extends UserHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function EmailHandler() {
 		parent::UserHandler();
 	}
@@ -161,6 +161,9 @@ class EmailHandler extends UserHandler {
 			$userDao->updateObject($user);
 			$request->redirectUrl($redirectUrl);
 		} else {
+			if (!$request->getUserVar('continued')) {
+				$email->assignParams(array());
+			}
 			$email->displayEditForm($request->url(null, null, 'email'), array('redirectUrl' => $request->getUserVar('redirectUrl'), 'articleId' => $articleId), null, array('disableSkipButton' => true, 'articleId' => $articleId));
 		}
 	}

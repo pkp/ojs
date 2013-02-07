@@ -120,41 +120,6 @@
 </div>
 <div class="separator"></div>
 
-<div id="journalArchiving">
-<h3>2.6 {translate key="manager.setup.journalArchiving"}</h3>
-
-<p>{translate key="manager.setup.lockssDescription"}</p>
-
-{url|assign:"lockssExistingArchiveUrl" router=$smarty.const.ROUTE_PAGE page="manager" op="email" template="LOCKSS_EXISTING_ARCHIVE"}
-{url|assign:"lockssNewArchiveUrl" router=$smarty.const.ROUTE_PAGE page="manager" op="email" template="LOCKSS_NEW_ARCHIVE"}
-<p>{translate key="manager.setup.lockssRegister" lockssExistingArchiveUrl=$lockssExistingArchiveUrl lockssNewArchiveUrl=$lockssNewArchiveUrl}</p>
-
-{url|assign:"lockssUrl" router=$smarty.const.ROUTE_PAGE page="gateway" op="lockss"}
-<p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>
-
-<p>
-	<textarea name="lockssLicense[{$formLocale|escape}]" id="lockssLicense" rows="6" cols="60" class="textArea richContent">{$lockssLicense[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.lockssLicenses"}</span>
-</p>
-</div>
-
-<p>{translate key="manager.setup.clockssDescription"}</p>
-
-<p>{translate key="manager.setup.clockssRegister"}</p>
-
-{url|assign:"clockssUrl" router=$smarty.const.ROUTE_PAGE page="gateway" op="clockss"}
-<p><input type="checkbox" name="enableClockss" id="enableClockss" value="1"{if $enableClockss} checked="checked"{/if} /> <label for="enableClockss">{translate key="manager.setup.clockssEnable" clockssUrl=$clockssUrl}</label></p>
-
-<p>
-	<textarea name="clockssLicense[{$formLocale|escape}]" id="clockssLicense" rows="6" cols="60" class="textArea richContent">{$clockssLicense[$formLocale]|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.setup.clockssLicenses"}</span>
-</p>
-</div>
-
-<div class="separator"></div>
-
 <div id="reviewerDatabaseLink">
 <h3>2.7 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
 
