@@ -369,7 +369,7 @@ class ArticleHandler extends Handler {
 			$suppFile =& $suppFileDao->getSuppFile((int) $suppId, $article->getId());
 		}
 
-		if ($article && $suppFile) {
+		if ($article && $suppFile && !HookRegistry::call('ArticleHandler::downloadSuppFile', array(&$article, &$suppFile))) {
 			import('classes.file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getId());
 			if ($suppFile->getRemoteURL()) {

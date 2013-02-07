@@ -44,7 +44,7 @@ class IssueHandler extends Handler {
 	 */
 	function current($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$showToc = isset($args[0]) ? $args[0] : '';
 
@@ -80,7 +80,7 @@ class IssueHandler extends Handler {
 		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$this->validate($request, $issueId);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issue =& $this->getIssue();
@@ -107,7 +107,7 @@ class IssueHandler extends Handler {
 	 */
 	function archive($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -138,7 +138,7 @@ class IssueHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$this->validate($request, $issueId, $galleyId);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issue =& $this->getIssue();
@@ -179,7 +179,7 @@ class IssueHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$this->validate($request, $issueId, $galleyId);
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issue =& $this->getIssue();
@@ -373,8 +373,8 @@ class IssueHandler extends Handler {
 		return true;
 	}
 
-	function setupTemplate() {
-		parent::setupTemplate();
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
 	}
 
