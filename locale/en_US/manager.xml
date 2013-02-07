@@ -342,10 +342,10 @@
 	<message key="manager.setup.noStyleSheetUploaded">No style sheet uploaded.</message>
 	<message key="manager.setup.note">Note</message>
 	<message key="manager.setup.notifications">Notification of Author Submission</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the journal's primary contact, identified in Setup Step 1.</message>
-	<message key="manager.setup.notifications.copySpecifiedAddress">Send a copy to this email address:</message>
-	<message key="manager.setup.notifications.description">On completing the submission process, authors are automatically sent an acknowledgement email (which can be viewed and edited in Prepared Emails). In addition, a copy of the acknowledgement email can be sent as follows:</message>
-	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the SUBMISSION_ACK email in <a class="action" href="{$preparedEmailsUrl}">Prepared Emails</a>.]]></message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the journal's primary contact</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">Send a copy to this email address</message>
+	<message key="manager.setup.notifications.description">On completing the submission process, authors are automatically sent an acknowledgement email (which can be viewed and edited in Emails). In addition, a copy of the acknowledgement email can be sent as follows:</message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">When using the Notify Author email, include the email addresses of all co-authors for multiple-author submissions, and not just the submitting user.</message>
 	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by an Editor or Section Editor assigned to the submission.</message>
 	<message key="manager.setup.noUseLayoutEditors">An Editor or Section Editor assigned to the submission will prepare the HTML, PDF, etc., files.</message>
@@ -511,7 +511,7 @@
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notify subscribers by email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">week(s) before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.expirySelectOne">Select one of the following:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
@@ -522,7 +522,7 @@
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Online Payment Notifications</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notify Subscription Manager by email upon online purchase of an Individual subscription.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notify Subscription Manager by email upon online renewal of an Individual subscription.</message>

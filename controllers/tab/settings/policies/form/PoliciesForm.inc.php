@@ -39,10 +39,7 @@ class PoliciesForm extends ContextSettingsForm {
 			'metaType' => 'bool',
 			'metaTypeExamples' => 'string',
 			'metaCitations' => 'bool',
-			'metaCitationOutputFilterId' => 'int',
-			'copySubmissionAckPrimaryContact' => 'bool',
-			'copySubmissionAckSpecified' => 'bool',
-			'copySubmissionAckAddress' => 'string'
+			'metaCitationOutputFilterId' => 'int'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/policies/form/policiesOldForm.tpl', $wizardMode);
 
@@ -73,12 +70,6 @@ class PoliciesForm extends ContextSettingsForm {
 		$templateMgr->addJavaScript('lib/pkp/js/functions/citation.js');
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/jqueryValidatorI18n.js');
-
-		import('classes.mail.MailTemplate');
-		$mail = new MailTemplate('SUBMISSION_ACK');
-		if ($mail->isEnabled()) {
-			$templateMgr->assign('submissionAckEnabled', true);
-		}
 
 		//
 		// Citation editor filter configuration

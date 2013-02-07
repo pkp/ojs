@@ -209,31 +209,6 @@
 
 <div class="separator"></div>
 
-<div id="notifications">
-<h3>3.6 {translate key="manager.setup.notifications"}</h3>
-
-<p>{translate key="manager.setup.notifications.description"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
-		<td class="value">{fieldLabel name="copySubmissionAckPrimaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
-	</tr>
-	<tr>
-		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/></td>
-		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
-	</tr>
-	{if !$submissionAckEnabled}
-	<tr>
-		<td>&nbsp;</td>
-		{url|assign:"preparedEmailsUrl" router=$smarty.const.ROUTE_PAGE op="emails"}
-		<td>{translate key="manager.setup.notifications.submissionAckDisabled" preparedEmailsUrl=$preparedEmailsUrl}</td>
-	</tr>
-	{/if}
-</table>
-</div>
-
-<div class="separator"></div>
 
 <div id="citationAssistant">
 <h3>3.7 {translate key="manager.setup.citationAssistant"}</h3>
