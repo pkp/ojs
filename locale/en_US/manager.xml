@@ -387,7 +387,7 @@
 	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
-	<message key="manager.setup.registerJournalForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
+	<message key="manager.setup.registerForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
 	<message key="manager.setup.reviewerDatabaseLink">Potential Reviewer Database</message>

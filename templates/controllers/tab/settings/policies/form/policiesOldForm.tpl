@@ -209,15 +209,6 @@
 
 <div class="separator"></div>
 
-<div id="registerJournalForIndexing">
-<h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
-
-{url|assign:"oaiUrl" router=$smarty.const.ROUTE_PAGE page="oai"}
-<p>{translate key="manager.setup.registerJournalForIndexingDescription" oaiUrl=$oaiUrl siteUrl=$baseUrl}</p>
-</div>
-
-<div class="separator"></div>
-
 <div id="notifications">
 <h3>3.6 {translate key="manager.setup.notifications"}</h3>
 
