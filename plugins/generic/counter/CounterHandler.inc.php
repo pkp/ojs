@@ -112,7 +112,7 @@ class CounterHandler extends Handler {
 	function reportXML($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
-		$this->setupTemplate(true);
+		$this->setupTemplate();
 
 		$templateManager =& TemplateManager::getManager($request);
 
@@ -133,7 +133,7 @@ class CounterHandler extends Handler {
 	function sushiXML($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
-		$this->setupTemplate(true);
+		$this->setupTemplate();
 
 		$templateManager =& TemplateManager::getManager($request);
 
@@ -243,7 +243,7 @@ class CounterHandler extends Handler {
 	function report($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
-		$this->setupTemplate(true);
+		$this->setupTemplate();
 
 		$journal =& $request->getJournal();
 		$year = $request->getUserVar('year');
@@ -330,21 +330,6 @@ class CounterHandler extends Handler {
 		$plugin =& Registry::get('plugin');
 		$this->plugin =& $plugin;
 		return true;
-	}
-
-	/**
-	 * Set up common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the heirarchy
-	 */
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate();
-		$templateMgr =& TemplateManager::getManager();
-
-		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
-
-		if ($subclass) $pageHierarchy[] = array(Request::url(null, 'counter'), 'plugins.generic.counter');
-
-		$templateMgr->assign_by_ref('pageHierarchy', $pageHierarchy);
 	}
 }
 

@@ -162,7 +162,7 @@ class SearchHandler extends Handler {
 	 */
 	function authors($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 
@@ -255,7 +255,7 @@ class SearchHandler extends Handler {
 	 */
 	function titles($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 
@@ -310,7 +310,7 @@ class SearchHandler extends Handler {
 		$categoryId = (int) array_shift($args);
 
 		$this->validate($request);
-		$this->setupTemplate($request, true, 'categories');
+		$this->setupTemplate($request);
 
 		$site =& $request->getSite();
 		$journal =& $request->getJournal();
@@ -338,25 +338,11 @@ class SearchHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 * @param $op string Current operation (for breadcrumb construction)
 	 */
-	function setupTemplate($request, $subclass = false, $op = 'index') {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
-
-		$opMap = array(
-			'index' => 'navigation.search',
-			'categories' => 'navigation.categories'
-		);
-
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array($request->url(null, 'search', $op), $opMap[$op]))
-				: array()
-		);
-
-		$journal =& $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}

@@ -22,13 +22,6 @@ class ReferralHandler extends Handler {
 		parent::Handler();
 	}
 	
-	function setupTemplate($request) {
-		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageHierarchy = array(array($request->url(null, 'referral', 'index'), 'plugins.generic.referral.referrals'));
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-	}
-
 	function editReferral($args, $request) {
 		$referralId = (int) array_shift($args);
 		if ($referralId === 0) $referralId = null;

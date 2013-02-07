@@ -97,17 +97,6 @@ class StaticPagesPlugin extends GenericPlugin {
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$templateMgr->assign('pagesPath', $request->url(null, 'pages', 'view', 'REPLACEME'));
 
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-
 		switch ($verb) {
 			case 'settings':
 				$journal =& $request->getJournal();
@@ -115,7 +104,6 @@ class StaticPagesPlugin extends GenericPlugin {
 				$this->import('StaticPagesSettingsForm');
 				$form = new StaticPagesSettingsForm($this, $journal->getId());
 
-				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->initData($request);
 				$form->display();
 				return true;
@@ -135,12 +123,6 @@ class StaticPagesPlugin extends GenericPlugin {
 					$form->initData();
 				}
 
-				$pageCrumbs[] = array(
-					$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'settings')),
-					$this->getDisplayName(),
-					true
-				);
-				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->display();
 				return true;
 			case 'save':
@@ -158,7 +140,6 @@ class StaticPagesPlugin extends GenericPlugin {
 						$templateMgr->assign(array(
 							'currentUrl' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
 							'pageTitle' => 'plugins.generic.staticPages.displayName',
-							'pageHierarchy' => $pageCrumbs,
 							'message' => 'plugins.generic.staticPages.pageSaved',
 							'backLink' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
 							'backLinkLabel' => 'common.continue'
@@ -187,7 +168,6 @@ class StaticPagesPlugin extends GenericPlugin {
 					'backLinkLabel' => 'common.continue'
 				));
 
-				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$templateMgr->display('common/message.tpl');
 				return true;
 			default:

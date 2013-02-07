@@ -35,7 +35,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$reviewId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::viewPeerReviewComments($this->submission, $reviewId);
 	}
@@ -50,7 +50,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -69,7 +69,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::viewEditorDecisionComments($this->submission);
 	}
@@ -83,7 +83,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -102,7 +102,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::viewCopyeditComments($this->submission);
 	}
@@ -116,7 +116,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -135,7 +135,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::viewLayoutComments($this->submission, $request);
 	}
@@ -149,7 +149,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -168,7 +168,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::viewProofreadComments($this->submission);
 	}
@@ -182,7 +182,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
@@ -201,7 +201,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		if (SectionEditorAction::emailEditorDecisionComment($this->submission, $request->getUserVar('send'), $request)) {
 			if ($request->getUserVar('blindCcReviewers')) {
 				$request->redirect(null, null, 'bccEditorDecisionCommentToReviewers', null, array('articleId' => $articleId));
@@ -220,7 +220,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		if (SectionEditorAction::bccEditorDecisionCommentToReviewers($this->submission, $request->getUserVar('send'), $request)) {
 			$request->redirect(null, null, 'submissionReview', array($articleId));
 		}
@@ -239,7 +239,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -265,7 +265,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
@@ -305,7 +305,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		$comment =& $this->comment;
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		SectionEditorAction::deleteComment($commentId);
 

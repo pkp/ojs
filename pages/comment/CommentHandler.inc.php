@@ -58,7 +58,7 @@ class CommentHandler extends Handler {
 		if (!$comment) $comments =& $commentDao->getRootCommentsBySubmissionId($articleId, 1);
 		else $comments =& $comment->getChildren();
 
-		$this->setupTemplate($request, $article, $galleyId, $comment);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		if ($request->getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
@@ -96,7 +96,7 @@ class CommentHandler extends Handler {
 		}
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, $publishedArticle, $galleyId, $parent);
+		$this->setupTemplate($request);
 
 		// Bring in comment constants
 		$enableComments = $journal->getSetting('enableComments');
@@ -225,28 +225,15 @@ class CommentHandler extends Handler {
 	 * @param $galleyId int
 	 * @param $comment Comment
 	 */
-	function setupTemplate(&$request, $article, $galleyId, $comment = null) {
-		parent::setupTemplate();
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER);
-		$templateMgr =& TemplateManager::getManager($request);
-		$journal =& $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
-
-		$pageHierarchy = array(
-			array(
-				$request->url(null, 'article', 'view', array(
-					$article->getBestArticleId($request->getJournal()), $galleyId
-				)),
-				String::stripUnsafeHtml($article->getLocalizedTitle()),
-				true
-			)
-		);
-
-		if ($comment) $pageHierarchy[] = array($request->url(null, 'comment', 'view', array($article->getId(), $galleyId)), 'comments.readerComments');
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }
 

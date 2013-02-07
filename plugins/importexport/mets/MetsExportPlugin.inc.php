@@ -70,7 +70,6 @@ class METSExportPlugin extends ImportExportPlugin {
 				break;
 			case 'issues':
 				// Display a list of issues for export
-				$this->setBreadcrumbs(array(), true);
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
@@ -84,7 +83,6 @@ class METSExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			default:
-				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}

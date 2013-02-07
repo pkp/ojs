@@ -145,7 +145,7 @@ class UserHandler extends PKPUserHandler {
 			$userId
 		);
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
@@ -265,7 +265,7 @@ class UserHandler extends PKPUserHandler {
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->assign('subscriptionName', $subscriptionName);
@@ -407,15 +407,10 @@ class UserHandler extends PKPUserHandler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($request = null, $subclass = false) {
+	function setupTemplate($request = null) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
-		$templateMgr =& TemplateManager::getManager($request);
-		if ($subclass) {
-			$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user')));
-		}
 	}
 
 	/**
@@ -471,7 +466,7 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
@@ -550,7 +545,7 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
@@ -654,7 +649,7 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
@@ -705,7 +700,7 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 		$user =& $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();

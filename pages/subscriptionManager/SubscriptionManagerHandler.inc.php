@@ -225,9 +225,6 @@ class SubscriptionManagerHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->append('pageHierarchy', array($request->url(null, 'subscriptionManager', 'subscriptionTypes'), 'subscriptionManager.subscriptionTypes'));
-
 		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscriptionType($args, $request);
 
@@ -249,9 +246,6 @@ class SubscriptionManagerHandler extends Handler {
 	function updateSubscriptionType($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
-
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->append('pageHierarchy', array($request->url(null, 'subscriptionManager', 'subscriptionTypes'), 'subscriptionManager.subscriptionTypes'));
 
 		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscriptionType($request);
@@ -460,18 +454,9 @@ class SubscriptionManagerHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 */
-	function setupTemplate($request, $subclass = false, $institutional = false) {
-		parent::setupTemplate($request, true);
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement')));
-		if ($subclass) {
-			if ($institutional) {
-				$templateMgr->append('pageHierarchy', array($request->url(null, 'subscriptionManager', 'subscriptions', 'institutional'), 'subscriptionManager.institutionalSubscriptions'));
-			} else {
-				$templateMgr->append('pageHierarchy', array($request->url(null, 'subscriptionManager', 'subscriptions', 'individual'), 'subscriptionManager.individualSubscriptions'));
-			}
-		}
 	}
 }
 

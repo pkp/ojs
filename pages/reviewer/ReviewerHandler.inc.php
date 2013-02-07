@@ -143,19 +143,11 @@ class ReviewerHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $reviewId = 0) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'));
-
-		if ($articleId && $reviewId) {
-			$pageHierarchy[] = array(Request::url(null, 'reviewer', 'submission', $reviewId), "#$articleId", true);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	//

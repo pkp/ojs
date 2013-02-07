@@ -21,7 +21,7 @@ class BrowseHandler extends Handler {
 	 * Show list of journal sections.
 	 */
 	function sections($args, &$request) {
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
@@ -78,7 +78,7 @@ class BrowseHandler extends Handler {
 	 * Show list of journal sections identify types.
 	 */
 	function identifyTypes($args = array(), &$request) {
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
@@ -157,8 +157,8 @@ class BrowseHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate(&$request, $subclass = false, $op = 'index') {
-		$templateMgr =& TemplateManager::getManager($request);
+	function setupTemplate($request, $op = 'index') {
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 
 		$opMap = array(
@@ -166,13 +166,8 @@ class BrowseHandler extends Handler {
 			'categories' => 'navigation.categories'
 		);
 
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array($request->url(null, 'search', $op), $opMap[$op]))
-				: array()
-		);
-
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}

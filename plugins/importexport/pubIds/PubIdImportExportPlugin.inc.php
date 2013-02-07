@@ -94,7 +94,6 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'selectIssue':
 				// Display a list of issues for export
-				$this->setBreadcrumbs(array(), true);
 				AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
@@ -127,7 +126,6 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				return $templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				break;
 			default:
-				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'importExportIndex.tpl');
 		}
 	}

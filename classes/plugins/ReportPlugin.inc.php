@@ -77,38 +77,6 @@ class ReportPlugin extends Plugin {
 	}
 
 	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $crumbs Array ($url, $name, $isTranslated)
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			),
-			array (
-				$request->url(null, 'manager', 'reports'),
-				'manager.statistics.reports'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			$request->url(null, 'manager', 'reports', array('plugin', $this->getName())),
-			$this->getDisplayName(),
-			true
-		);
-
-		$templateMgr->assign('pageHierarchy', array_merge($pageCrumbs, $crumbs));
-	}
-
-	/**
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */

@@ -103,7 +103,7 @@ class RTAdminHandler extends Handler {
 			$versions = $rtDao->getVersions($journalId);
 		}
 
-		$this->setupTemplate($request, true, $version);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign_by_ref('versions', $versions);
@@ -114,33 +114,10 @@ class RTAdminHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 * @param $version object The current version, if applicable
-	 * @param $context object The current context, if applicable
-	 * @param $search object The current search, if applicable
 	 */
-	function setupTemplate($request, $subclass = false, $version = null, $context = null, $search = null) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_MANAGER);
-		$templateMgr =& TemplateManager::getManager($request);
-
-		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'manager.journalManagement'));
-
-		if ($subclass) $pageHierarchy[] = array($request->url(null, 'rtadmin'), 'rt.readingTools');
-
-		if ($version) {
-			$pageHierarchy[] = array($request->url(null, 'rtadmin', 'versions'), 'rt.versions');
-			$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editVersion', $version->getVersionId()), $version->getTitle(), true);
-			if ($context) {
-				$pageHierarchy[] = array($request->url(null, 'rtadmin', 'contexts', $version->getVersionId()), 'rt.contexts');
-				$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editContext', array($version->getVersionId(), $context->getContextId())), $context->getAbbrev(), true);
-				if ($search) {
-					$pageHierarchy[] = array($request->url(null, 'rtadmin', 'searches', array($version->getVersionId(), $context->getContextId())), 'rt.searches');
-					$pageHierarchy[] = array($request->url(null, 'rtadmin', 'editSearch', array($version->getVersionId(), $context->getContextId(), $search->getSearchId())), $search->getTitle(), true);
-				}
-			}
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }
 

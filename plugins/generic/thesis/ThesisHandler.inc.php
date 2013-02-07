@@ -110,7 +110,6 @@ class ThesisHandler extends Handler {
 			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
 
@@ -155,7 +154,6 @@ class ThesisHandler extends Handler {
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$thesisMetaCustomHeaders = $templateMgr->fetch($thesisPlugin->getTemplatePath() . 'metadata.tpl');
 			$metaCustomHeaders = $templateMgr->get_template_vars('metaCustomHeaders');
 			$templateMgr->assign('metaCustomHeaders', $metaCustomHeaders . "\n" . $thesisMetaCustomHeaders);
@@ -210,17 +208,6 @@ class ThesisHandler extends Handler {
 		} else {
 			$request->redirect(null, 'index');
 		}
-	}
-
-	/**
-	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 */
-	function setupTemplate($request, $subclass = false) {
-		parent::setupTemplate($request);
-
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('pageHierachy', array(array($request->url(null, 'theses'), 'plugins.generic.thesis.theses')));
 	}
 }
 

@@ -111,23 +111,10 @@ class CopyeditorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 * @param $articleId int
-	 * @param $parentPage string optional
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'copyeditor'), 'user.role.copyeditor'))
-				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	/**

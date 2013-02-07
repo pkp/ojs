@@ -78,7 +78,7 @@ class BooksForReviewHandler extends Handler {
 	 * Public view book for review details.
 	 */
 	function viewBookForReview($args = array(), &$request) {
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -132,23 +132,10 @@ class BooksForReviewHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager($request);
-
-		if ($subclass) {
-			$templateMgr->append(
-				'pageHierarchy',
-				array(
-					$request->url(null, 'booksForReview'), 
-					AppLocale::Translate('plugins.generic.booksForReview.displayName'),
-					true
-				)
-			);
-		}
-
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+	function setupTemplate($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }

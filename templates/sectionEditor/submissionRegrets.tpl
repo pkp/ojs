@@ -11,7 +11,6 @@
 {strip}
 {translate|assign:"pageTitleTranslated" key="sectionEditor.regrets.title" articleId=$submission->getId()}
 {assign var=pageTitleTranslated value=$pageTitleTranslated|escape}
-{assign var="pageCrumbTitle" value="sectionEditor.regrets.breadcrumb"}
 {include file="common/header.tpl"}
 {/strip}
 

@@ -64,7 +64,6 @@ class IssueHandler extends Handler {
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
@@ -91,7 +90,6 @@ class IssueHandler extends Handler {
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
@@ -162,7 +160,6 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('galleyId', $galleyId);
 
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'view', $issueId), $issue->getIssueIdentification(false, true), true)));
 		$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
 		$templateMgr->assign('locale', AppLocale::getLocale());
 

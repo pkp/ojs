@@ -119,11 +119,9 @@ class AbntCitationPlugin extends CitationPlugin {
 						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
-						$this->setBreadCrumbs(true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(true);
 					if ($form->isLocaleResubmit()) {
 						$form->readInputData();
 					} else {
@@ -136,30 +134,6 @@ class AbntCitationPlugin extends CitationPlugin {
 				// Unknown management verb, delegate to parent
 				return parent::manage($verb, $args, $message);
 		}
-	}
-
-	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) {
-			$pageCrumbs[] = array(
-				$request->url(null, 'manager', 'plugins'),
-				'manager.plugins'
-			);
-		}
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
 
 	/**

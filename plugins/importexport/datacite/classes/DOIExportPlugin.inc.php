@@ -452,7 +452,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $journal Journal
 	 */
 	function displayAllUnregisteredObjects(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs(array(), true);
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		// Prepare and display the template.
@@ -932,8 +931,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $journal Journal
 	 */
 	function _displayPluginHomePage(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs();
-
 		// Check for configuration errors:
 		$configurationErrors = array();
 
@@ -972,8 +969,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $journal Journal
 	 */
 	function _displayIssueList(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs(array(), true);
-
 		// Retrieve all published issues.
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
@@ -1006,8 +1001,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $journal Journal
 	 */
 	function _displayArticleList(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs(array(), true);
-
 		// Retrieve all published articles.
 		$this->registerDaoHook('PublishedArticleDAO');
 		$allArticles = $this->getAllPublishedArticles($journal);
@@ -1056,8 +1049,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $journal Journal
 	 */
 	function _displayGalleyList(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs(array(), true);
-
 		// Retrieve all published articles.
 		$allArticles = $this->getAllPublishedArticles($journal);
 

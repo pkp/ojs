@@ -39,7 +39,6 @@ class SectionHandler extends ManagerHandler {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('emptySectionIds', $emptySectionIds);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
@@ -62,7 +61,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function editSection($args, &$request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.manager.form.SectionForm');
 
@@ -82,7 +81,7 @@ class SectionHandler extends ManagerHandler {
 	 */
 	function updateSection($args, &$request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.manager.form.SectionForm');
 		$sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
@@ -173,15 +172,10 @@ class SectionHandler extends ManagerHandler {
 	/**
 	 * Configure the template.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean True iff this page is a second level deep in the breadcrumb heirarchy.
 	 */
-	function setupTemplate($request, $subclass = false) {
+	function setupTemplate($request) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
-		parent::setupTemplate($request, true);
-		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'sections'), 'section.sections'));
-		}
+		parent::setupTemplate($request);
 	}
 }
 

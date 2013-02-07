@@ -75,7 +75,6 @@ class DOAJPlugin extends ImportExportPlugin {
 				$this->contact($journal);
 				break;
 			default:
-				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}

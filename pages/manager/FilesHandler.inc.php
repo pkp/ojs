@@ -35,7 +35,6 @@ class FilesHandler extends ManagerHandler {
 		$fileManager = new FileManager();
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'manager'), 'manager.journalManagement')));
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = $this->_getRealFilesDir($request, $currentDir);

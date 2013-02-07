@@ -259,7 +259,6 @@ class LucenePlugin extends GenericPlugin {
 						$request->redirect(null, 'manager', 'plugins', 'generic');
 						return false;
 					} else {
-						$this->_setBreadCrumbs();
 						$form->display($request);
 					}
 
@@ -268,7 +267,6 @@ class LucenePlugin extends GenericPlugin {
 					// Re-init data. It should be visible to users
 					// that whatever data they may have entered into
 					// the form was not saved.
-					$this->_setBreadCrumbs();
 					$form->initData();
 
 					// Index rebuild.
@@ -873,30 +871,6 @@ class LucenePlugin extends GenericPlugin {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 */
-	function _setBreadcrumbs() {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url('index', 'admin'),
-				'user.role.siteAdmin'
-			),
-			array(
-				$request->url(null, 'manager', 'plugins'),
-				'manager.plugins'
-			)
-		);
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
 	/**
 	 * Return the available options for result
 	 * set ordering.

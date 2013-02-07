@@ -96,7 +96,6 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 		$request =& $this->getRequest();
 		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
-		$this->setBreadcrumbs();
 		$journal =& $request->getJournal();
 		$plugin =& $this->getSwordPlugin();
 

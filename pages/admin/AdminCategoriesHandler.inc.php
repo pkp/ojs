@@ -133,7 +133,7 @@ class AdminCategoriesHandler extends AdminHandler {
 
 		$this->validate($request, $categoryId);
 
-		$this->setupTemplate($request, $this->category, true);
+		$this->setupTemplate($request);
 		import('classes.journal.categories.CategoryForm');
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -177,7 +177,7 @@ class AdminCategoriesHandler extends AdminHandler {
 			$this->validate($request, $categoryId);
 			$category =& $this->category;
 		}
-		$this->setupTemplate($request, $category);
+		$this->setupTemplate($request);
 
 		import('classes.journal.categories.CategoryForm');
 
@@ -192,7 +192,6 @@ class AdminCategoriesHandler extends AdminHandler {
 		} else {
 
 			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'admin', 'categories'), 'admin.categories'));
 
 			$templateMgr->assign('pageTitle',
 				$category?
@@ -215,23 +214,6 @@ class AdminCategoriesHandler extends AdminHandler {
 		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
 		$siteSettingsDao->updateSetting('categoriesEnabled', $categoriesEnabled);
 		$request->redirect(null, null, 'categories');
-	}
-
-	/**
-	 * Set up the template.
-	 * @param $request PKPRequest
-	 * @param $category Category optional
-	 * @param $subclass boolean optional
-	 */
-	function setupTemplate($request, $category = null, $subclass = false) {
-		parent::setupTemplate($request, true);
-		$templateMgr =& TemplateManager::getManager($request);
-		if ($subclass) {
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'admin', 'categories'), 'admin.categories'));
-		}
-		if ($category) {
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'admin', 'editCategory', $category->getId()), $category->getLocalizedName(), true));
-		}
 	}
 
 	/**

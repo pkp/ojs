@@ -198,7 +198,6 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				echo XMLCustomWriter::getXML($doc);
 				break;
 			default:
-				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}

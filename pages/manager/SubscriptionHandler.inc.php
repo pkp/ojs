@@ -219,9 +219,6 @@ class SubscriptionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
-
 		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscriptionType($args, $request);
 
@@ -243,9 +240,6 @@ class SubscriptionHandler extends ManagerHandler {
 	function updateSubscriptionType($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
-
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscriptionType($request);
@@ -281,21 +275,6 @@ class SubscriptionHandler extends ManagerHandler {
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::saveSubscriptionPolicies($args, $request);
-	}
-
-	/**
-	 * Setup common template variables.
-	 */
-	function setupTemplate($request, $subclass = false, $institutional = false) {
-		parent::setupTemplate($request, true);
-		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager($request);
-			if ($institutional) {
-				$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptions', 'institutional'), 'manager.institutionalSubscriptions'));
-			} else {
-				$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'subscriptions', 'individual'), 'manager.individualSubscriptions'));
-			}
-		}
 	}
 }
 

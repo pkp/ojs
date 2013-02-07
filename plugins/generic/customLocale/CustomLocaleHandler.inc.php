@@ -36,7 +36,7 @@ class CustomLocaleHandler extends Handler {
 	function index($args, &$request) {
 		$this->validate(null, $request);
 		$plugin =& $this->plugin;
-		$this->setupTemplate($request, $plugin, false);
+		$this->setupTemplate($request, $plugin);
 
 		$journal = $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'locales');
@@ -52,7 +52,7 @@ class CustomLocaleHandler extends Handler {
 	function edit($args, $request) {
 		$this->validate(null, $request);
 		$plugin =& $this->plugin;
-		$this->setupTemplate($request, $plugin, true);
+		$this->setupTemplate($request, $plugin);
 
 		$locale = array_shift($args);
 		$file = array_shift($args);
@@ -79,7 +79,7 @@ class CustomLocaleHandler extends Handler {
 	function editLocaleFile($args, $request) {
 		$this->validate(null, $request);
 		$plugin =& $this->plugin;
-		$this->setupTemplate($request, $plugin, true);
+		$this->setupTemplate($request, $plugin);
 
 		$locale = array_shift($args);
 		if (!AppLocale::isLocaleValid($locale)) {
@@ -144,7 +144,7 @@ class CustomLocaleHandler extends Handler {
 	function saveLocaleFile($args, $request) {
 		$this->validate(null, $request);
 		$plugin =& $this->plugin;
-		$this->setupTemplate($request, $plugin, true);
+		$this->setupTemplate($request, $plugin);
 
 		$locale = array_shift($args);
 		if (!AppLocale::isLocaleValid($locale)) {
@@ -205,17 +205,10 @@ class CustomLocaleHandler extends Handler {
 		return str_replace("\r\n", "\n", $value);
 	}
 
-	function setupTemplate($request, &$plugin, $subclass = true) {
+	function setupTemplate($request, $plugin) {
 		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->register_function('plugin_url', array($plugin, 'smartyPluginUrl'));
-		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'manager'), 'user.role.manager'));
-		if ($subclass) {
-			$path = array($plugin->getCategory(), $plugin->getName(), 'index');
-			$pageHierarchy[] = array($request->url(null, null, null, $path), 'plugins.generic.customLocale.name');
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-		$templateMgr->assign('helpTopicId', 'plugins.generic.CustomLocalePlugin');
 	}
 }
 

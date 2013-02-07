@@ -51,7 +51,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function submissions($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -130,7 +130,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function futureIssues($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -148,7 +148,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function backIssues($args, &$request) {
 		$this->validate($request);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -189,7 +189,7 @@ class LayoutEditorHandler extends Handler {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		// set the date notified for this signoff so proofreading can no longer be initiated.
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
@@ -204,23 +204,11 @@ class LayoutEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 * @param $articleId int optional
-	 * @param $parentPage string optional
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'layoutEditor'), 'user.role.layoutEditor'))
-				: array(array($request->url(null, 'user'), 'navigation.user'));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	/**

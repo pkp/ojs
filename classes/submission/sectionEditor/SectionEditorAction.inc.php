@@ -2410,41 +2410,6 @@ class SectionEditorAction extends Action {
 			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
 		}
 	}
-
-	/**
-	 * Helper method for building submission breadcrumb
-	 * @param $articleId
-	 * @param $parentPage name of submission component
-	 * @return array
-	 */
-	function submissionBreadcrumb($articleId, $parentPage, $section) {
-		$breadcrumb = array();
-		if ($articleId) {
-			$breadcrumb[] = array(Request::url(null, $section, 'submission', $articleId), "#$articleId", true);
-		}
-
-		if ($parentPage) {
-			switch($parentPage) {
-				case 'summary':
-					$parent = array(Request::url(null, $section, 'submission', $articleId), 'submission.summary');
-					break;
-				case 'review':
-					$parent = array(Request::url(null, $section, 'submissionReview', $articleId), 'submission.review');
-					break;
-				case 'editing':
-					$parent = array(Request::url(null, $section, 'submissionEditing', $articleId), 'submission.editing');
-					break;
-				case 'history':
-					$parent = array(Request::url(null, $section, 'submissionHistory', $articleId), 'submission.history');
-					break;
-			}
-			if ($section != 'editor' && $section != 'sectionEditor') {
-				$parent[0] = Request::url(null, $section, 'submission', $articleId);
-			}
-			$breadcrumb[] = $parent;
-		}
-		return $breadcrumb;
-	}
 }
 
 ?>

@@ -979,41 +979,11 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				Request::url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				Request::url(null, 'editor'),
-				'user.role.editor'
-			)
-		);
-
-		if ($subclass) {
-			$returnPage = Request::getUserVar('returnPage');
-
-			if ($returnPage != null) {
-				$validPages =& $this->getValidReturnPages();
-				if (!in_array($returnPage, $validPages)) {
-					$returnPage = null;
-				}
-			}
-
-			$pageCrumbs[] = array(
-				Request::url(null, 'editor', 'booksForReview', $returnPage),
-				AppLocale::Translate('plugins.generic.booksForReview.displayName'),
-				true
-			);
-		}
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
+	function setupTemplate($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }
 

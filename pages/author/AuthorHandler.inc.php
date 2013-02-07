@@ -149,22 +149,11 @@ class AuthorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_PKP_SUBMISSION);
-		$templateMgr =& TemplateManager::getManager($request);
-
-		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'), array($request->url(null, 'author'), 'article.submissions'))
-			: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'author'), 'user.role.author'));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	/**

@@ -89,7 +89,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'issues':
 				// Display a list of issues for export
-				$this->setBreadcrumbs(array(), true);
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
 				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
@@ -99,7 +98,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'articles':
 				// Display a list of articles for export
-				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
@@ -170,7 +168,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 				break;
 			default:
-				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}

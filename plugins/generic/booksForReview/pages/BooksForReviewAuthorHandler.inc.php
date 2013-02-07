@@ -165,23 +165,10 @@ class BooksForReviewAuthorHandler extends Handler {
 	/**
 	 * Setup common template variables.
 	 * @param $request PKPRequest
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($request, $subclass = false) {
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'author'),
-				'user.role.author'
-			)
-		);
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+	function setupTemplate($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $bfrPlugin->getStyleSheet());
 	}
 }

@@ -101,23 +101,6 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$templateMgr =& TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
-				$pageCrumbs = array(
-					array(
-						$request->url(null, 'user'),
-						'navigation.user'
-					),
-					array(
-						$request->url(null, 'manager'),
-						'user.role.manager'
-					),
-					array(
-						$request->url(null, 'manager', 'plugins'),
-						__('manager.plugins'),
-						true
-					)
-				);
-				$templateMgr->assign('pageHierarchy', $pageCrumbs);
-
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 				$form->readInputData();

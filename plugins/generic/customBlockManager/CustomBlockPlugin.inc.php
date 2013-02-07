@@ -126,13 +126,6 @@ class CustomBlockPlugin extends BlockPlugin {
 				$this->setEnabled(false);
 				return false;
 			case 'edit':
-				$pageCrumbs[] = array(
-					$request->url(null, 'manager', 'plugins'),
-					__('manager.plugins'),
-					true
-				);
-
-				$templateMgr->assign('pageHierarchy', $pageCrumbs);
 				$form->initData();
 				$form->display();
 				exit;
@@ -141,11 +134,9 @@ class CustomBlockPlugin extends BlockPlugin {
 				$form->readInputData();
 				if ($form->validate()) {
 					$form->save();
-					$pageCrumbs[] = array($request->url(null, 'manager', 'plugins'), 'manager.plugins');
 					$templateMgr->assign(array(
 						'currentUrl' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'edit')),
 						'pageTitleTranslated' => $this->getDisplayName(),
-						'pageHierarchy' => $pageCrumbs,
 						'message' => 'plugins.generic.customBlock.saved',
 						'backLink' => $request->url(null, 'manager', 'plugins'),
 						'backLinkLabel' => 'common.continue'

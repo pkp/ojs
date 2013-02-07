@@ -40,7 +40,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function index($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate($request, EDITOR_SECTION_HOME);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$journal =& $request->getJournal();
@@ -159,7 +159,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function submissions($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -413,7 +413,7 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate($request);
 
 			// FIXME: Prompt for due date.
 			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, $request->getUserVar('send'), $request)) {
@@ -421,7 +421,7 @@ class EditorHandler extends SectionEditorHandler {
 			}
 		} else {
 			// Allow the user to choose a section editor or editor.
-			$this->setupTemplate($request, EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
+			$this->setupTemplate($request);
 
 			$searchType = null;
 			$searchMatch = null;
@@ -490,7 +490,7 @@ class EditorHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
-		parent::setupTemplate($request, true);
+		parent::setupTemplate($request);
 
 		$journal =& $request->getJournal();
 
@@ -510,32 +510,6 @@ class EditorHandler extends SectionEditorHandler {
 		}
 
 		$request->redirect(null, null, 'submissions', 'submissionsArchives');
-	}
-
-	/**
-	 * Setup common template variables.
-	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
-	 */
-	function setupTemplate($request, $level = EDITOR_SECTION_HOME, $articleId = 0, $parentPage = null) {
-		parent::setupTemplate($request);
-
-		// Layout Editors have access to some Issue Mgmt functions. Make sure we give them
-		// the appropriate breadcrumbs and sidebar.
-		$isLayoutEditor = $request->getRequestedPage() == 'layoutEditor';
-
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
-
-		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'));
-		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'editor'), 'user.role.editor'), array($request->url(null, 'editor', 'submissions'), 'article.submissions'));
-		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array($request->url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }
 

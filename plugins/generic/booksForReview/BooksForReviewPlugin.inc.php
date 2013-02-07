@@ -146,33 +146,6 @@ class BooksForReviewPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'booksForReview')),
-			$this->getDisplayName(),
-			true
-		);
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
 	 * Allow author to specify book for review during article submission.
 	 */
 	function saveSubmitHandler($hookName, $params) {

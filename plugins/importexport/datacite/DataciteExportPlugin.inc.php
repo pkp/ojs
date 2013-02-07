@@ -109,8 +109,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	 * @see DOIExportPlugin::displaySuppFileList()
 	 */
 	function displaySuppFileList(&$templateMgr, &$journal) {
-		$this->setBreadcrumbs(array(), true);
-
 		// Retrieve all published articles.
 		$allArticles = $this->getAllPublishedArticles($journal);
 

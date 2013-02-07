@@ -32,7 +32,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function futureIssues($args, $request) {
 		$this->validate($request, null, true);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -50,7 +50,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function backIssues($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -137,7 +137,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function createIssue($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		import('classes.issue.form.IssueForm');
 
@@ -164,7 +164,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function saveIssue($args, $request) {
 		$this->validate($request);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		import('classes.issue.form.IssueForm');
 		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
@@ -193,7 +193,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
@@ -226,7 +226,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
@@ -316,7 +316,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
@@ -360,7 +360,7 @@ class IssueManagementHandler extends EditorHandler {
 		$galleyId = (int) array_shift($args);
 
 		$this->validate($request, $issueId, true);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		import('classes.issue.form.IssueGalleyForm');
 		$submitForm = new IssueGalleyForm($issueId, $galleyId);
@@ -383,7 +383,7 @@ class IssueManagementHandler extends EditorHandler {
 		$galleyId = (int) array_shift($args);
 
 		$this->validate($request, $issueId, true);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		import('classes.issue.form.IssueGalleyForm');
 		$submitForm = new IssueGalleyForm($issueId, $galleyId);
@@ -456,7 +456,7 @@ class IssueManagementHandler extends EditorHandler {
 		$galleyId = (int) array_shift($args);
 
 		$this->validate($request, $issueId, true);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
@@ -474,7 +474,7 @@ class IssueManagementHandler extends EditorHandler {
 		$galleyId = (int) array_shift($args);
 
 		$this->validate($request, $issueId, true);
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
@@ -533,7 +533,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = (int) array_shift($args);
 		$this->validate($request, $issueId, true);
 		$issue =& $this->issue;
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 
@@ -994,7 +994,7 @@ class IssueManagementHandler extends EditorHandler {
 	function notifyUsers($args, $request) {
 		$this->validate($request, (int) $request->getUserVar('issue'));
 		$issue =& $this->issue;
-		$this->setupTemplate($request, EDITOR_SECTION_ISSUES);
+		$this->setupTemplate($request);
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -1148,15 +1148,6 @@ class IssueManagementHandler extends EditorHandler {
 		$this->issue =& $issue;
 		return true;
 	}
-
-	/**
-	 * Setup common template variables.
-	 * @param $level int set to one of EDITOR_SECTION_? defined in EditorHandler.
-	 */
-	function setupTemplate($request, $level) {
-		parent::setupTemplate($request, $level);
-
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('isLayoutEditor', $request->getRequestedPage() == 'layoutEditor');
-	}
 }
+
+?>

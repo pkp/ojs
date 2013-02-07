@@ -87,33 +87,6 @@ class ThesisPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses')),
-			$this->getDisplayName(),
-			true
-		);
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
@@ -191,11 +164,9 @@ class ThesisPlugin extends GenericPlugin {
 						$request->redirect(null, 'manager', 'plugin', array('generic', $this->getName(), 'theses'));
 						return false;
 					} else {
-						$this->setBreadCrumbs(true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(true);
 					$form->initData();
 					$form->display();
 				}
@@ -232,7 +203,6 @@ class ThesisPlugin extends GenericPlugin {
 
 					$thesisForm = new ThesisForm($this->getName(), $thesisId);
 					$thesisForm->initData();
-					$this->setBreadCrumbs(true);
 					$templateMgr->assign('journalSettings', $journalSettings);
 					$thesisForm->display();
 				} else {
@@ -267,7 +237,6 @@ class ThesisPlugin extends GenericPlugin {
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 
-						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
 						$thesisForm->display();
 					}
@@ -295,7 +264,6 @@ class ThesisPlugin extends GenericPlugin {
 				$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 
 				$templateMgr->assign('theses', $theses);
-				$this->setBreadCrumbs();
 
 				// Set search parameters
 				$duplicateParameters = array(

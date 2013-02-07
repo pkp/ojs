@@ -90,32 +90,6 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$request =& $request->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			$request->url(null, 'manager', 'plugins'),
-			'manager.plugins'
-		);
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
@@ -224,11 +198,9 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 						$request->redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
-						$this->setBreadCrumbs(true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(true);
 					$form->initData();
 					$form->display();
 				}

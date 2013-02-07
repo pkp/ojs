@@ -169,35 +169,11 @@ class SectionEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 * @param $articleId int optional
-	 * @param $parentPage string optional
-	 * @param $showSidebar boolean optional
+	 * @param $request PKPRequest
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_MANAGER);
-		$templateMgr =& TemplateManager::getManager($request);
-		$isEditor = Validation::isEditor();
-
-		if (Request::getRequestedPage() == 'editor') {
-			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
-
-		} else {
-			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
-		}
-
-		$roleSymbolic = $isEditor ? 'editor' : 'sectionEditor';
-		$roleKey = $isEditor ? 'user.role.editor' : 'user.role.sectionEditor';
-		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $roleSymbolic), $roleKey), array(Request::url(null, $roleSymbolic), 'article.submissions'))
-			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $roleSymbolic), $roleKey));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, $roleSymbolic);
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	/**

@@ -50,35 +50,8 @@ class TimedViewReportPlugin extends ReportPlugin {
 		return __('plugins.generic.timedView.description');
 	}
 
-	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs() {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			),
-			array(
-				$request->url(null, 'manager', 'statistics'),
-				'manager.statistics'
-			)
-		);
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
 	function display(&$args, $request) {
 		parent::display($args);
-		$this->setBreadcrumbs();
 
 		$form = new TimedViewReportForm($this);
 

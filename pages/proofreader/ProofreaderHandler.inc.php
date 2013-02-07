@@ -111,21 +111,10 @@ class ProofreaderHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($request, $subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageHierarchy = $subclass ? array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'))
-				: array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'proofreader'), 'user.role.proofreader'));
-
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
-		}
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 
 	/**

@@ -107,33 +107,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Set the page's breadcrumbs, given the plugin's tree of items
-	 * to append.
-	 * @param $subclass boolean
-	 */
-	function setBreadcrumbs($isSubclass = false) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$pageCrumbs = array(
-			array(
-				$request->url(null, 'user'),
-				'navigation.user'
-			),
-			array(
-				$request->url(null, 'manager'),
-				'user.role.manager'
-			)
-		);
-		if ($isSubclass) $pageCrumbs[] = array(
-			$request->url(null, 'manager', 'plugin', array('generic', $this->getName(), 'feeds')),
-			$this->getDisplayName(),
-			true
-		);
-
-		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
 	 * Register as a block plugin, even though this is a generic plugin.
 	 * This will allow the plugin to behave as a block plugin, i.e. to
 	 * have layout tasks performed on it.
@@ -332,7 +305,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 					} else {
 						$externalFeedForm->initData();
 					}
-					$this->setBreadCrumbs(true);
 					$templateMgr->assign('journalSettings', $journalSettings);
 					$externalFeedForm->display();
 				} else {
@@ -367,7 +339,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
-						$this->setBreadCrumbs(true);
 						$templateMgr->assign('journalSettings', $journalSettings);
 						$externalFeedForm->display();
 					}
@@ -385,7 +356,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 				} elseif ($this->getRequest()->getUserVar('deleteStyleSheet')) {
 					$form->deleteStyleSheet();
 				}
-				$this->setBreadCrumbs(true);
 				$form->initData();
 				$form->display();
 				return true;
@@ -396,7 +366,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);
-				$this->setBreadCrumbs();
 
 				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
 				return true;

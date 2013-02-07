@@ -36,7 +36,7 @@ class TranslatorHandler extends Handler {
 	function index($args, &$request) {
 		$this->validate();
 		$plugin =& $this->plugin;
-		$this->setupTemplate($request, false);
+		$this->setupTemplate($request);
 
 		$rangeInfo = $this->getRangeInfo($request, 'locales');
 
@@ -52,14 +52,10 @@ class TranslatorHandler extends Handler {
 		$templateMgr->display($plugin->getTemplatePath() . 'index.tpl');
 	}
 
-	function setupTemplate($request, $subclass = true) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_ADMIN, LOCALE_COMPONENT_PKP_MANAGER);
-		$pageHierarchy = array(array($request->url(null, 'user'), 'navigation.user'), array($request->url(null, 'admin'), 'admin.siteAdmin'));
-		if ($subclass) $pageHierarchy[] = array($request->url(null, 'translate'), 'plugins.generic.translator.name');
-		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-		$templateMgr->assign('helpTopicId', 'plugins.generic.TranslatorPlugin');
 	}
 
 	function edit($args, $request) {

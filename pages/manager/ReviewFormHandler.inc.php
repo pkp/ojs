@@ -74,7 +74,7 @@ class ReviewFormHandler extends ManagerHandler {
 		if ($reviewFormId != null && (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0)) {
 			$request->redirect(null, null, 'reviewForms');
 		} else {
-			$this->setupTemplate($request, true, $reviewForm);
+			$this->setupTemplate($request);
 			$templateMgr =& TemplateManager::getManager($request);
 
 			if ($reviewFormId == null) {
@@ -111,7 +111,7 @@ class ReviewFormHandler extends ManagerHandler {
 		if ($reviewFormId != null && (!isset($reviewForm) || $completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0)) {
 			$request->redirect(null, null, 'reviewForms');
 		}
-		$this->setupTemplate($request, true, $reviewForm);
+		$this->setupTemplate($request);
 
 		import('classes.manager.form.ReviewFormForm');
 		$reviewFormForm = new ReviewFormForm($reviewFormId);
@@ -155,11 +155,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$completeCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true);
 		$incompleteCounts = $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false);
-		if ($completeCounts[$reviewFormId] != 0 || $incompleteCounts[$reviewFormId] != 0) {
-			$this->setupTemplate($request, true);
-		} else {
-			$this->setupTemplate($request, true, $reviewForm);
-		}
+		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
 
@@ -344,7 +340,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 		$unusedReviewFormTitles =& $reviewFormDao->getTitlesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), 0);
 
-		$this->setupTemplate($request, true, $reviewForm);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
@@ -387,7 +383,7 @@ class ReviewFormHandler extends ManagerHandler {
 			$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
 		}
 
-		$this->setupTemplate($request, true, $reviewForm);
+		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
 
 		if ($reviewFormElementId == null) {
@@ -421,7 +417,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
-		$this->setupTemplate($request, true, $reviewForm);
+		$this->setupTemplate($request);
 
 		if (!$reviewFormDao->unusedReviewFormExists($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId()) || ($reviewFormElementId != null && !$reviewFormElementDao->reviewFormElementExists($reviewFormElementId, $reviewFormId))) {
 			$request->redirect(null, null, 'reviewFormElements', array($reviewFormId));
@@ -571,17 +567,6 @@ class ReviewFormHandler extends ManagerHandler {
 		}
 
 		$request->redirect(null, null, 'reviewFormElements', array($targetReviewFormId));
-	}
-
-	function setupTemplate($request, $subclass = false, $reviewForm = null) {
-		parent::setupTemplate($request, true);
-		if ($subclass) {
-			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'reviewForms'), 'manager.reviewForms'));
-		}
-		if ($reviewForm) {
-			$templateMgr->append('pageHierarchy', array($request->url(null, 'manager', 'editReviewForm', $reviewForm->getId()), $reviewForm->getLocalizedTitle(), true));
-		}
 	}
 }
 
