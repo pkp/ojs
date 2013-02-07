@@ -163,6 +163,7 @@
 	<schema file="lib/pkp/xml/schema/gifts.xml" />
 	<schema file="lib/pkp/xml/schema/mutex.xml" />
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
+	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -333,6 +334,7 @@
 		<code function="migrateArticleMetadata" />
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" />
 		<code function="clearDataCache" />
+		<code function="migrateUserRoles" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

@@ -1147,6 +1147,169 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 3.0.0 upgrade:  Migrate the static user role structure to
+	 * user groups and stage assignments.
+	 * @return boolean
+	 */
+	function migrateUserRoles() {
+
+		// First, do Admins.
+		$userGroupDao =& DAORegistry::getDAO('UserGroupDAO');
+		// create the admin user group.
+		$userGroupDao->update('INSERT INTO user_groups (user_group_id, context_id, role_id, path, is_default) VALUES (?, ?, ?, ?, ?)', array(1, 0, ROLE_ID_SITE_ADMIN, 'admin', 1));
+		$userResult =& $userGroupDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array(0, ROLE_ID_SITE_ADMIN));
+		while (!$userResult->EOF) {
+			$row =& $userResult->GetRowAssoc(false);
+			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array(1, (int) $row['user_id']));
+			$userResult->MoveNext();
+		}
+
+		// iterate through all journals and assign remaining users to their respective groups.
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals();
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
+
+		while ($journal =& $journals->next()) {
+			// Install default user groups so we can assign users to them.
+			$userGroupDao->installSettings($journal->getId(), 'registry/userGroups.xml');
+
+			// Readers.
+			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_READER);
+			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_READER));
+			while (!$userResult->EOF) {
+				$row =& $userResult->GetRowAssoc(false);
+				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userResult->MoveNext();
+			}
+
+			// Subscription Managers.
+			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER);
+			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER));
+			while (!$userResult->EOF) {
+				$row =& $userResult->GetRowAssoc(false);
+				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userResult->MoveNext();
+			}
+
+			// Managers.
+			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_MANAGER));
+			while (!$userResult->EOF) {
+				$row =& $userResult->GetRowAssoc(false);
+				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userResult->MoveNext();
+			}
+
+			// Authors.
+			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
+			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_AUTHOR));
+			while (!$userResult->EOF) {
+				$row =& $userResult->GetRowAssoc(false);
+				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userResult->MoveNext();
+			}
+
+			// update the user_group_id colun in the authors table.
+			$userGroupDao->update('UPDATE authors SET user_group_id = ?', array((int) $group->getId()));
+
+			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
+			// There should only be one user group with ROLE_ID_REVIEWER in the external review stage.
+			$userGroups =& $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, true, false, ROLE_ID_REVIEWER);
+			while ($group =& $userGroups->next()) {
+				// make sure.
+				if ($group->getRoleId() != ROLE_ID_REVIEWER) continue;
+				$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_REVIEWER));
+				while (!$userResult->EOF) {
+					$row =& $userResult->GetRowAssoc(false);
+					$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+					$userResult->MoveNext();
+				}
+			}
+
+			// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
+			$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
+
+			// Guest editors.
+			$userGroupIds = $userGroupDao->getUserGroupIdsByRoleId(ROLE_ID_GUEST_EDITOR, $journal->getId());
+			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
+			while (!$userResult->EOF) {
+				$row =& $userResult->GetRowAssoc(false);
+				// there should only be one guest editor group id.
+				$userGroupDao->assignUserToGroup($row['user_id'], $userGroupIds[0]);
+				$userResult->MoveNext();
+			}
+
+			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
+			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
+
+			while ($group =& $userGroups->next()) {
+				if ($group->getData('nameLocaleKey') == 'default.groups.name.editor') {
+					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_EDITOR));
+					while (!$userResult->EOF) {
+						$row =& $userResult->GetRowAssoc(false);
+						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+						$userResult->MoveNext();
+					}
+				}
+			}
+
+			// Section Editors.
+			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			while ($group =& $userGroups->next()) {
+				if ($group->getData('nameLocaleKey') == 'default.groups.name.sectionEditor') {
+					$userResult =& $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));
+					while (!$userResult->EOF) {
+						$row =& $userResult->GetRowAssoc(false);
+						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+						$userResult->MoveNext();
+					}
+				}
+			}
+
+			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
+			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group =& $userGroups->next()) {
+				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
+					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_LAYOUT_EDITOR));
+					while (!$userResult->EOF) {
+						$row =& $userResult->GetRowAssoc(false);
+						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+						$userResult->MoveNext();
+					}
+				}
+			}
+
+			// Copyeditors. NOTE:  this involves a role id change from 0x2000 to 0x1001 (old OJS _COPYEDITOR to PKP-lib _ASSISTANT).
+			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group =& $userGroups->next()) {
+				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
+					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_COPYEDITOR));
+					while (!$userResult->EOF) {
+						$row =& $userResult->GetRowAssoc(false);
+						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+						$userResult->MoveNext();
+					}
+				}
+			}
+
+			// Proofreaders. NOTE:  this involves a role id change from 0x3000 to 0x1001 (old OJS _PROOFREADER to PKP-lib _ASSISTANT).
+			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group =& $userGroups->next()) {
+				if ($group->getData('nameLocaleKey') == 'default.groups.name.proofreader') {
+					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_PROOFREADER));
+					while (!$userResult->EOF) {
+						$row =& $userResult->GetRowAssoc(false);
+						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+						$userResult->MoveNext();
+					}
+				}
+			}
+		}
+		return true;
+	}
 }
 
 ?>
