@@ -177,6 +177,13 @@ class Application extends PKPApplication {
 		$help = new Help();
 		return $help;
 	}
+
+	/**
+	 * Get the top-level context DAO.
+	 */
+	static function getContextDAO() {
+		return DAORegistry::getDAO('JournalDAO');
+	}
 }
 
 ?>

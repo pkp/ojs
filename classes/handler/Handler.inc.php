@@ -28,7 +28,7 @@ class Handler extends PKPHandler {
 	 * @return ItemIterator
 	 */
 	function getWorkingContexts($request) {
-		// Check for multiple presses.
+		// Check for multiple journals.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		$user = $request->getUser();
@@ -37,6 +37,68 @@ class Handler extends PKPHandler {
 		} else {
 			return $journalDao->getAll(true); // Enabled only
 		}
+	}
+
+	/**
+	 * Returns a "best-guess" journal, based in the request data, if
+	 * a request needs to have one in its context but may be in a site-level
+	 * context as specified in the URL.
+	 * @param $request Request
+	 * @return mixed Either a Journal or null if none could be determined.
+	 */
+	function getTargetContext($request) {
+		// Get the requested path.
+		$router = $request->getRouter();
+		$requestedPath = $router->getRequestedContextPath($request);
+		$journal = null;
+
+		if ($requestedPath === 'index' || $requestedPath === '') {
+			// No journal requested. Check how many journals the site has.
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journals = $journalDao->getAll();
+			$journalsCount = $journals->getCount();
+			$journal = null;
+			if ($journalsCount === 1) {
+				// Return the unique journal.
+				$journal = $journales->next();
+			}
+			if (!$journal && $journalesCount > 1) {
+				// Decide wich journal to return.
+				$user = $request->getUser();
+				if ($user) {
+					// We have a user (private access).
+					$journal = $this->getFirstUserContext($user, $journales->toArray());
+				}
+				if (!$journal) {
+					// Get the site redirect.
+					$journal = $this->getSiteRedirectContext($request);
+				}
+			}
+		} else {
+			// Return the requested journal.
+			$journal = $router->getContext($request);
+		}
+		if (is_a($journal, 'Journal')) {
+			return $journal;
+		}
+		return null;
+	}
+
+	/**
+	 * Return the journal that is configured in site redirect setting.
+	 * @param $request Request
+	 * @return mixed Either Journal or null
+	 */
+	function getSiteRedirectContext($request) {
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$site = $request->getSite();
+		$journal = null;
+		if ($site) {
+			if($site->getRedirect()) {
+				$journal = $journalDao->getById($site->getRedirect());
+			}
+		}
+		return $journal;
 	}
 }
 

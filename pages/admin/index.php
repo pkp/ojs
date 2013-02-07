@@ -17,26 +17,11 @@
 
 switch ($op) {
 	//
-	// Settings
-	//
-	case 'settings':
-	case 'saveSettings':
-		define('HANDLER_CLASS', 'AdminSettingsHandler');
-		import('pages.admin.AdminSettingsHandler');
-		break;
-	//
 	// Journal Management
 	//
-	case 'journals':
-		define('HANDLER_CLASS', 'AdminJournalHandler');
-		import('pages.admin.AdminJournalHandler');
-		break;
-	//
-	// Languages
-	//
-	case 'languages':
-		define('HANDLER_CLASS', 'AdminLanguagesHandler');
-		import('pages.admin.AdminLanguagesHandler');
+	case 'contexts':
+		define('HANDLER_CLASS', 'PKPAdminContextHandler');
+		import('lib.pkp.pages.admin.PKPAdminContextHandler');
 		break;
 	//
 	// Authentication sources
@@ -54,7 +39,7 @@ switch ($op) {
 	//
 	case 'mergeUsers':
 		define('HANDLER_CLASS', 'AdminPeopleHandler');
-		import('pages.admin.AdminPeopleHandler');
+		import('lib.pkp.pages.admin.AdminPeopleHandler');
 		break;
 	//
 	// Administrative functions
@@ -65,7 +50,7 @@ switch ($op) {
 	case 'clearTemplateCache':
 	case 'clearDataCache':
 		define('HANDLER_CLASS', 'AdminFunctionsHandler');
-		import('pages.admin.AdminFunctionsHandler');
+		import('lib.pkp.pages.admin.AdminFunctionsHandler');
 		break;
 	// Main administration page
 	// Categories
@@ -80,8 +65,10 @@ switch ($op) {
 		import('pages.admin.AdminCategoriesHandler');
 		break;
 	case 'index':
+	case 'settings':
+	case 'saveSettings':
 		define('HANDLER_CLASS', 'AdminHandler');
-		import('pages.admin.AdminHandler');
+		import('lib.pkp.pages.admin.AdminHandler');
 		break;
 }
 
