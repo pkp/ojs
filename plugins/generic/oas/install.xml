@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "../../../lib/pkp/dtd/install.dtd">
+<!--
+  * plugins/generic/oas/install.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Installation descriptor file.
+  -->
+
+<install version="1.0.0">
+	<!-- OA-S schema -->
+	<schema file="plugins/generic/oas/schema.xml" />
+</install>

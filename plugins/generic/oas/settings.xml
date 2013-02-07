@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/generic/oas/settings.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  *
+  -->
+
+<plugin_settings>
+	<setting type="bool">
+		<name>enabled</name>
+		<value>false</value>
+	</setting>
+	
+	<!-- Event table maintenance. -->
+	<setting type="int">
+		<name>lastEventTableMaintenanceTs</name>
+		<value>0</value>
+	</setting>
+	
+	<!-- SALT management. -->
+	<setting type="string">
+		<name>salt</name>
+		<value></value>
+	</setting>
+	<setting type="int">
+		<name>saltTs</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>saltApiUsername</name>
+		<value></value>
+	</setting>
+	<setting type="string">
+		<name>saltApiPassword</name>
+		<value></value>
+	</setting>
+	<setting type="int">
+		<name>lastSaltDownloadTs</name>
+		<value>0</value>
+	</setting>
+</plugin_settings>
+
