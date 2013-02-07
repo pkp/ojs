@@ -360,8 +360,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
 	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-	<message key="plugins.categories.pubIds">Public Identifier Plugins</message>
-	<message key="plugins.categories.pubIds.description">These plugins implement support for a public identifier.</message>
 
 	<!-- Setup Step 2 -->
 
