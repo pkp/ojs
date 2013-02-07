@@ -51,14 +51,14 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.generic.openads');
+		return __('plugins.generic.lucene');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.generic.openads.description');
+		return __('plugins.generic.lucene.description');
 	}
 
 	/**
