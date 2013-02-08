@@ -9,7 +9,7 @@
  * @class LayoutEditorHandler
  * @ingroup pages_layoutEditor
  *
- * @brief Handle requests for layout editor functions. 
+ * @brief Handle requests for layout editor functions.
  */
 
 import('classes.submission.layoutEditor.LayoutEditorAction');
@@ -25,9 +25,9 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function LayoutEditorHandler() {
 		parent::Handler();
-		
+
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));		
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_LAYOUT_EDITOR)));
 	}
 
 	/**
@@ -140,7 +140,7 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
-	
+
 	/**
 	 * Displays the listings of back (published) issues
 	 * @param $args array
@@ -195,6 +195,10 @@ class LayoutEditorHandler extends Handler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateNotified(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateCompleted(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
 
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'layoutEditor', 'completeProofreader'))) {
