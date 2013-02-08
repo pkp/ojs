@@ -299,9 +299,9 @@ class IssueHandler extends Handler {
 		// Get the issue galley
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $issueId);
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $issue->getId());
 		} else {
-			$galley =& $galleyDao->getGalley($galleyId, $issueId);
+			$galley =& $galleyDao->getGalley($galleyId, $issue->getId());
 		}
 
 		// Invalid galley id, redirect to issue page
