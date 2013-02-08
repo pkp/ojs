@@ -420,7 +420,7 @@ Titel des Klassifikationssystems]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in einem weltweiten System von Forschungsdatenbanken indiziert wird, lesen Sie bitte die <a href="http://www.oaister.org/dataproviders.html" target="_blank">Schritte, um Daten zu liefern</a> und registrieren Sie Ihre Zeitschrift bei der offiziellen <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open-Archives-Registrierung</a>. Zum Registrieren benötigen Sie die Basis-URL für Ihr Repositorium: <span class="highlight">{$oaiUrl}</span>. Danach können Sie Ihre Zeitschrift bei der <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> und bei <a href="http://www.oaister.org/" target="_blank">OAIster</a> registrieren.
 <br /><br />
 Beachten Sie bitte, dass Ihre Zeitschrift bereits automatisch indiziert wird, wenn Ihr/e Website-Administrator/in die gesamte Installation bereits bei diesen Diensten registriert hat. In diesem Fall müssen Sie Ihre Zeitschrift nicht gesondert registrieren.]]></message>
-	<message key="manager.setup.citations">Den Zitationsauszeichnungsassistenten aktivieren.</message>
+	<message key="manager.setup.citations.enable">Den Zitationsauszeichnungsassistenten aktivieren.</message>
 
 	<!-- 4. Einrichtungsschritt -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />

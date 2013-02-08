@@ -488,7 +488,7 @@ Titlul sistemului de clasificare]]></message>
 
 <br /><br />
 Trebuie spus că în cazul în care administratorul siteului l-a înregistrat la aceste servicii, revista va fi indexată automat și nu va mai trebui să procedați la încă o înregistrare.]]></message>
-	<message key="manager.setup.citations">Permiteți autorilor să ofere separat o listă formatată de referințe bibliografice (citări) ca parte a procesului de depunere a propunerii.</message>
+	<message key="manager.setup.citations.enable">Permiteți autorilor să ofere separat o listă formatată de referințe bibliografice (citări) ca parte a procesului de depunere a propunerii.</message>
 	
 
 

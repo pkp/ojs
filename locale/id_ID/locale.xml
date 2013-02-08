@@ -414,7 +414,7 @@ Penulis yang menerbitkan dengan jurnal ini setuju pada persyaratan berikut ini:<
 Judul Sistem Klasifikasi]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Untuk mengindeks konten jurnal kedalam sistem terdistribusi global dari database riset, baca <a href="http://www.oaister.org/dataproviders.html" target="_blank">langkah-langkah untuk menjadi kontributor data</a> dan daftarkan jurnal Anda di<a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Pendaftaran Open Archives</a>.  Untuk mendaftar, Anda akan membutuhkan URL untuk repositori:<span class="highlight">{$oaiUrl}</span>. Setelah itu, Anda dapat mendaftarkan jurnal Anda di <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>dan<a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />Perhatikan jika Administrator Situs Anda sudah mendaftarkan situs ini pada layanan ini, jurnal Anda akan diindeks secara otomatis dan Anda tidak perlu mendaftarkan lagi.]]></message>
-	<message key="manager.setup.citations">Memungkinkan Bantuan Koreksi sitiran</message>
+	<message key="manager.setup.citations.enable">Memungkinkan Bantuan Koreksi sitiran</message>
 
 	<!-- Setup Langkah 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Langkah: Antrian Penyerahan &gt; Review Naskah &gt; Pengediatan Naskah &gt; Daftar Isi.<br /><br />

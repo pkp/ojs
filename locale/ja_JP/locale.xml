@@ -872,7 +872,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="subscriptions.status.awaitingManualPayment">手作業による支払い待ち</message>
 	<message key="about.subscriptionTypes.format">フォーマット</message>
 	<message key="about.subscriptionTypes.duration">期間</message>
-	<message key="manager.setup.citations">著者それぞれに投稿プロセスの一部として参考文献（引用）についての整形されたリストを提出可能にする。</message>
+	<message key="manager.setup.citations.enable">著者それぞれに投稿プロセスの一部として参考文献（引用）についての整形されたリストを提出可能にする。</message>
 	<message key="about.history">雑誌の履歴</message>
 	<message key="manager.people.confirmDisable">このユーザを無効にしますか？この処理によってユーザはシステムにログインできなくなります。
 

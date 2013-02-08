@@ -425,7 +425,7 @@
        <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oaister.org/dataproviders.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />
 Зауважте, якщо цей сайт вже зареєстрований адміністратором у цих системах, Ваш журнал буде індексуватись автоматично, окремо реєструвати його непотрібно.]]></message>
-       <message key="manager.setup.citations">Дозволити Помічник розмітки цитат</message>
+       <message key="manager.setup.citations.enable">Дозволити Помічник розмітки цитат</message>
 
        <!-- Setup Step 4 -->
        <message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Кроки: Редакційна черга &gt; Рецензування подання &gt; Редагування подання &gt; Сторінка змісту.<br /><br />

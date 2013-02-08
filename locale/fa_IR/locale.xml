@@ -830,7 +830,7 @@ http://journals.mui.ac.ir/index.php/index/index
 ثبت نام کنید.
 <br /><br />
 البته چنانچه ادمین سایت قبلا کل سایت را در این سرویس ها ثبت کرده باشد، دیگر نیازی به این اقدام ندارید.]]></message>
-	<message key="manager.setup.citations">به عنوان قسمتی از عمل ساب میشن اجازه دهید که نویسنده لیست فرمات شده رفرانس های مقاله را بصورت جداگانه ساب میت کند.</message>
+	<message key="manager.setup.citations.enable">به عنوان قسمتی از عمل ساب میشن اجازه دهید که نویسنده لیست فرمات شده رفرانس های مقاله را بصورت جداگانه ساب میت کند.</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مرحله: نوبت ساب میشن &gt; کارشناسی ساب میشن &gt;  ویرایش ساب میشن &gt; فهرست مقالت.<br /><br />
 انتخال مدلی برای اداره این جوانب روند دبیری. برای انتصاب یک مدیر دبیری و مدیر قسمت به قسمت دبیران در اداره مجله بروید.]]></message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>

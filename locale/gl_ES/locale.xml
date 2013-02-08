@@ -1007,7 +1007,7 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="notification.type.submissionComment">Un editor comentou en "{$param}".</message>
 	<message key="notification.type.submissions">Eventos de Envío</message>
 	<message key="notification.type.userComment">Un lector fixo un comentario en "{$param}"</message>
-	<message key="manager.setup.citations">Permeter aos autores proporcionar por separado unha listaxe formateada de referencias (citas) como parte da súa presentación.</message>
+	<message key="manager.setup.citations.enable">Permeter aos autores proporcionar por separado unha listaxe formateada de referencias (citas) como parte da súa presentación.</message>
 	<message key="payment.loginRequired.forArticle">Precísase unha subscrición ou pagamento do artigo para acceder ao ítem. Para verificar a subscrición, acceder a pagamentos previos, ou mercar o artigo, identifíquese na revista.</message>
 	<message key="payment.loginRequired.forDonation">Ten que estar autenticado para facer unha doazón.</message>
 	<message key="navigation.competingInterestGuidelines">Directrices en conflitos de intereses</message>

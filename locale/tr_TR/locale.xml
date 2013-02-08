@@ -390,7 +390,7 @@ Sınıflama Sistemi Başlığı]]></message>
 <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
 Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak dizinlenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>
-	<message key="manager.setup.citations">Alıntı İşaretleme Yardımcısını Etkinleştir</message>
+	<message key="manager.setup.citations.enable">Alıntı İşaretleme Yardımcısını Etkinleştir</message>
 	
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Basamaklar: Başvuru Kuyruğu &gt; Başvuru Değerlendirilmesi &gt; Yazıların Düzenlenmesi &gt; Yayın bekleme kuyruğu &gt; İçindekiler.<br /><br />

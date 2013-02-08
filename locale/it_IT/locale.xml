@@ -1025,7 +1025,7 @@ Titolo dello schema di classificazione]]></message>
 	<message key="payment.subscription.purchase">Acquista l'abbonamento</message>
 	<message key="installer.installApplication">Installa Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Aggiorna Open Journal Systems</message>
-	<message key="manager.setup.citations">Abilita l'assistente bibliografico</message>
+	<message key="manager.setup.citations.enable">Abilita l'assistente bibliografico</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Gli elementi evidenziati richiedono l'intervento dell'editor.</li>
 	<li>"Scadenza" viene valorizzato quando il revisore accetta l'incarico; mostra il numero di settimane rimaste prima della data di scadenza dell'incarico di revisione oppure (-) le settimane trascorse dalla scadenza.</li>

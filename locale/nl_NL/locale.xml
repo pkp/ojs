@@ -990,7 +990,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
 	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
-	<message key="manager.setup.citations">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
+	<message key="manager.setup.citations.enable">Sta auteurs toe om afzonderlijk een geformatteerde lijst met referenties (citaties) mee te leveren als onderdeel van hun inzending.</message>
 	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>
 	<message key="user.subscriptions.individualSubscriptions">Individueel abonnement</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institutionele abonnementen</message>

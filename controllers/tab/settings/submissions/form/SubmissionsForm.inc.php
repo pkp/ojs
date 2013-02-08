@@ -25,10 +25,6 @@ class SubmissionsForm extends ContextSettingsForm {
 			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
 			'customAboutItems' => 'object',
-			'enableLockss' => 'bool',
-			'enableClockss' => 'bool',
-			'lockssLicense' => 'string',
-			'clockssLicense' => 'string',
 			'reviewerDatabaseLinks' => 'object',
 			'notifyAllAuthorsOnDecision' => 'bool'
 		);

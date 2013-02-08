@@ -997,7 +997,7 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="notification.type.submissionComment">Un editor ha comentado en "{$param}".</message>
 	<message key="notification.type.submissions">Eventos de Envío</message>
 	<message key="notification.type.userComment">Un lector ha hecho un comentario en "{$param}"</message>
-	<message key="manager.setup.citations">Permitir a los autores proporcionar separadamente una lista formateada de referencias (citas) como parte de su presentación.</message>
+	<message key="manager.setup.citations.enable">Permitir a los autores proporcionar separadamente una lista formateada de referencias (citas) como parte de su presentación.</message>
 	<message key="payment.loginRequired.forArticle">Se requiere una suscripción o pago del artículo para acceder al ítem. Para verificar la suscripción, acceder a pagos previos, o comprar el artículo, autentiquese en la revista.</message>
 	<message key="payment.loginRequired.forDonation">Tiene que estar autenticado para hacer una donación.</message>
 	<message key="navigation.competingInterestGuidelines">Directrices en conflictos de intereses</message>

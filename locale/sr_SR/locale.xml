@@ -817,7 +817,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="subscriptionManager.individualSubscriptions">Individualne pretplate</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institucionalne pretplate</message>
 	<message key="subscriptionManager.subscriptionTypes">Tipovi pretplata</message>
-	<message key="manager.setup.citations">Omogući Citation Markup pomoćnika</message>
+	<message key="manager.setup.citations.enable">Omogući Citation Markup pomoćnika</message>
 	<message key="user.subscriptions.mySubscriptions">Moje pretplate</message>
 	<message key="user.subscriptions.subscriptionStatus">Status pretplata</message>
 	<message key="user.subscriptions.status">Status</message>

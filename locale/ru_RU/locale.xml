@@ -1095,7 +1095,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<li>Авторы сохраняют за собой автороские права и предоставляют журналу право первой публикации работы, которая по истечении [УКАЖИТЕ ПЕРИОД ВРЕМЕНИ] после публикации автоматически лицензируется на условиях <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> , которая позволяет другим распространять данную работу с обязательным сохранением ссылок на авторов оригинальной работы и оригинальную публикацию в этом журнале.</li>
 	<li>Авторы имеют право размещать их работу в сети Интернет (например в институтском хранилище или персональном сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению и большему количеству ссылок на данную работу (См. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations">Дать авторам возможность предоставлять специально оформленный список использованной литературы (ссылок) как часть рукописи.</message>
+	<message key="manager.setup.citations.enable">Дать авторам возможность предоставлять специально оформленный список использованной литературы (ссылок) как часть рукописи.</message>
 	<message key="submission.editorAuthorRecord">Запись переписки Редактор/Автор</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Институциональные подписки</message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Чтобы помочь читалелям легко находить в сети использованную автором литературу, есть следующие возможности:</p>
