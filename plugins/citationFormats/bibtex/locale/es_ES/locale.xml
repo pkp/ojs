@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/citationFormats/bibtex/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in es_ES.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.citationFormats.bibtex.displayName">Complemento de Formato de Citas BibTeX.</message>
+	<message key="plugins.citationFormats.bibtex.displayName">Conector de formato de citas BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">Este complemento implementa el formato de citas BibTeX.</message>
-</locale>
+	<message key="plugins.citationFormats.bibtex.description">Este conector ofrece el formato de citas BibTeX.</message>
+</locale> 

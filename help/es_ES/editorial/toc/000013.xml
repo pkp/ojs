@@ -4,20 +4,20 @@
 <!--
   * 000013.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenido para el Proceso Editorial - Rol del Editor de Diagramación
+  * Tabla de contenido para el proceso editorial - Rol del maquetista
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
   *
+  * $Id$
   -->
 
-<toc id="editorial/toc/000013" locale="es_ES" title="Rol del Editor de Diagramción" parent_topic="editorial/topic/000013">
-	<topic id="editorial/topic/000039" title="Envios" />
-	<topic id="editorial/topic/000040" title="Diagramación" />
-	<topic id="editorial/topic/000041" title="Correción de Pruebas" />
+<toc id="editorial/toc/000013" locale="es_ES" title="Rol del maquetista" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Envíos" />
+	<topic id="editorial/topic/000040" title="Maquetación" />
+	<topic id="editorial/topic/000041" title="Corrección de pruebas" />
 
-	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
-	<breadcrumb url="editorial/topic/000013" title="Rol del Editor de Diagramción" />
+	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
+	<breadcrumb url="editorial/topic/000013" title="Rol del maquetista" />
 </toc>

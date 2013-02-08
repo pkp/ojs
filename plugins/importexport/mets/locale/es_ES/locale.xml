@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/importexport/mets/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.METSExport.displayName">Plugin para exportación a METS XML</message>
-	<message key="plugins.importexport.METSExport.description">Exporta revistas en formato METS XML</message>
-	<message key="plugins.importexport.METSExport.settings">Opciones</message>
-	<message key="plugins.importexport.METSExport.export">Exportar Datos</message>
-	<message key="plugins.importexport.METSExport.export.issues">Exportar Números</message>
-	<message key="plugins.importexport.METSExport.export.selectIssue">Seleccione números a exportar</message>
-	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Ningún número fué encontrado con el ID especificado: "{$issueId}".</message>
-	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Enlace de revista desconocido: {$journalPath}</message>
-	<message key="plugins.importexport.METSExport.settings.FContent">Use codificacióon base64 para el envoltorio de contenido (content wrapper)</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Use el URL del bitstream para el envoltorio de contenido (content wrapper)</message>
-	<message key="plugins.importexport.METSExport.settings.organization">METS:agente elemento organización atributo</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivel de conservación PREMIS</message>
-	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar ficheros complementarios</message>
-</locale>
+	<message key="plugins.importexport.METSExport.displayName">Conector de exportación METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Exportar revistas en METS XML.</message>
+	<message key="plugins.importexport.METSExport.settings">Configuración</message>
+	<message key="plugins.importexport.METSExport.export">Exportar datos</message>
+	<message key="plugins.importexport.METSExport.export.issues">Exportar números</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Seleccione los números que desee exportar</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Ruta de revista desconocida {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Utilice una codificación base64 para contenedores de contenido (content wrapper)</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utilice una URL del flujo de bits (bitstream) para contenedores de contenido (content wrapper)</message>
+	<message key="plugins.importexport.METSExport.settings.organization">METS: atributo para la organización de elementos agentes</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivel de preservación PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar archivos complementarios</message>
+</locale> 

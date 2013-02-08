@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/readingTools/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.readingTools.displayName">Bloque de herramientas de lectura</message>
-	<message key="plugins.block.readingTools.description">Este plugin muestra un bloque que contiene herramientas de lectura en la barra lateral de las herramientas de lectura.</message>
+	<message key="plugins.block.readingTools.description">Este conector muestra un bloque con herramientas de lectura en la barra lateral de Herramientas de lectura.</message>
 	<message key="plugins.block.readingTools.title">Herramientas de lectura</message>
-	<message key="plugins.block.readingTools.aboutTheAuthor">Sobre el autor</message>
-	<message key="plugins.block.readingTools.aboutTheAuthors">Sobre los autores</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Acerca del autor/a</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Acerca de los autores/as</message>
 	<message key="plugins.block.readingTools.articleTools">Herramientas del artículo</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Envía por correo este artículo</message>
-	<message key="plugins.block.readingTools.loginRequired">Se requiere entrar</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Enviar este artículo por correo electrónico</message>
+	<message key="plugins.block.readingTools.loginRequired">Inicie sesión</message>
 	<message key="plugins.block.readingTools.printThisArticle">Imprimir este artículo</message>
-	<message key="plugins.block.readingTools.postComment">Enviar un comentario</message>
-</locale>
+	<message key="plugins.block.readingTools.postComment">Publicar un comentario</message>
+</locale> 

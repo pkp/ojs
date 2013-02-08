@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/paymethod/manual/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
-  -->
- 
+  * Localization strings for the es_ES (España) locale.
+  *
+  * $Id$
+ -->
+
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.paymethod.manual.displayName">Pago Manual</message>
-	<message key="plugins.paymethod.manual.description">El gestor registra manualmente el pago de los usuarios (fuera de este software).</message>
-	<message key="plugins.paymethod.manual">Pago Manual</message>
-	<message key="plugins.paymethod.manual.settings">Opciones de Pago Manual</message>
+	<message key="plugins.paymethod.manual.displayName">Pago manual de las cuotas</message>
+	<message key="plugins.paymethod.manual.description">El gestor/a emitirá manualmente un recibo del pago de un usuario/a (fuera de este programa).</message>
+	<message key="plugins.paymethod.manual">Pago manual de las cuotas</message>
+	<message key="plugins.paymethod.manual.settings">Configuración de pagos manuales</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Instrucciones</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrucciones de pago para los usuarios que eligen Pago Manual.</message>
-	
-	<message key="plugins.paymethod.manual.purchase.title">Título</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Tarifa</message>	
-	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Enviar notificación de pago</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrucciones sobre el pago de las cuotas para usuarios/as que elijan el pago manual.</message>
+
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Envíe una notificación de pago</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Notificación de pago</message>
-	<message key="plugins.paymethod.manual.notificationSent">Notificación de pago enviada</message>
-</locale>
+	<message key="plugins.paymethod.manual.notificationSent">Se ha enviado una notificación de pago</message>
+
+	<message key="plugins.paymethod.manual.purchase.title">Título</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Cuota</message>
+</locale> 

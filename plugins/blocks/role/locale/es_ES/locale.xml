@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/role/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.role.displayName">Bloque de Roles</message>
-	<message key="plugins.block.role.description">Este plugin ofrece un bloque en la barra lateral que contiene información de las funciones específicas de roles como el recuento de presentaciones y enlaces rápidos para los Editores, Autores, etc</message>
-</locale>
+	<message key="plugins.block.role.displayName">Bloque específico de roles</message>
+	<message key="plugins.block.role.description">Este conector proporciona un bloque en la barra lateral con información específica para cada rol como, por ejemplo, el número de envíos realizados, enlaces rápidos para editores/as, autores/as, etc.</message>
+</locale> 

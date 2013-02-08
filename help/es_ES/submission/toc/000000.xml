@@ -4,19 +4,18 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenidos del Proceso de Envíos del Autor. 
+  * table of contents for Author Submission Process. 
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<toc id="submission/toc/000000" locale="es_ES" title="Proceso de Envíos" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Guías del Autor" />
-	<topic id="submission/topic/000002" title="Requerimientos de los Envíos" />
-	<topic id="submission/topic/000003" title="Indexación y Metadatos" />
-	<topic id="submission/topic/000004" title="Archivos suplementarios" />
-	<breadcrumb url="submission/topic/000000" title="Proceso de Envíos" />
+<toc id="submission/toc/000000" locale="es_ES" title="Proceso de publicación" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Directrices para el autor/a" />
+	<topic id="submission/topic/000002" title="Requisitos del envío" />
+	<topic id="submission/topic/000003" title="Indexación y metadatos" />
+	<topic id="submission/topic/000004" title="Archivos adicionales" />
+	<breadcrumb url="submission/topic/000000" title="Proceso de envío" />
 </toc>

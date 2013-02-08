@@ -4,19 +4,18 @@
 <!--
   * 000014.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenido para el Proceso Editorial - Rol del Corrector de Pruebas
+  * Tabla de contenido para el proceso editorial - Rol del corrector/a de pruebas
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<toc id="editorial/toc/000014" locale="es_ES" title="Rol del Corrector de Pruebas" parent_topic="editorial/topic/000014">
-	<topic id="editorial/topic/000042" title="Envios" />
-	<topic id="editorial/topic/000043" title="Correción de Pruebas" />
+<toc id="editorial/toc/000014" locale="es_ES" title="Rol del corrector/a de pruebas" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Envíos" />
+	<topic id="editorial/topic/000043" title="Corrección de pruebas" />
 
-	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
-	<breadcrumb url="editorial/topic/000014" title="Rol del Corrector de Pruebas" />
+	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
+	<breadcrumb url="editorial/topic/000014" title="Rol del corrector/a de pruebas" />
 </toc>

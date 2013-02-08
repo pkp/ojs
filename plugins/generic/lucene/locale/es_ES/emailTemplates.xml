@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="es_ES">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Error al indexar un artículo</subject>
+		<body>Ha ocurrido un error de indexación al actualizar el índice del articulo.
+
+El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+
+Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
+		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error indexando un artículo.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Error al indexar una revista</subject>
+		<body>Ha ocurrido un error de indexación indexando la revista "{$journalName}".
+
+El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+
+Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
+		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error indexando una revista.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Error del servicio de búsqueda de la revista</subject>
+		<body>Ha ocurrido un error mientras un usuario/a realizaba una búsqueda en la instalación "{$siteName}".
+
+El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+
+Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
+		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error al intentar acceder al servicio de búsqueda Solr.</description>
+	</email_text>
+</email_texts>

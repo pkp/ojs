@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
-<!--
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
   * 000034.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
-  * Distribuido por GNU GPL v2. Para términos completos vea el archivo docs/COPYING.
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Anuncios 
+  * Announcements 
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<topic id="journal/topic/000034" locale="es_ES" title="Anuncios" toc="journal/toc/000001" key="journal.managementPages.announcements">
+<topic id="journal/topic/000034" locale="es_ES" title="Avisos" toc="journal/toc/000001" key="journal.managementPages.announcements">
 	<section>
-		<![CDATA[<p>OJS habilita al administrador de la revista par que pueda colocar anuncios que estén disponibles para los lectores que visitan la página. Los anuncios enviados aparecerán en la página de anuncios y, opcionalmente, en la página principal de la revista.</p><p><i>Desplegando el módulo de anuncios</i>. El administrador de la revista debe indicar en el paso 4.4 de la configuración, que la revista publicará anuncios, Además, debe indicar si los anuncios deben ser visualizados o no en la página principal de la revista. También se puede proporcionar un texto introductorio que aparezca en la parte superior de la página de anuncios.</p><p><i>Creando Anuncios</i>. El administrador de la revista puede crear un anuncio seleccionando el tipo de anuncio (si es necesario), indicando un título para el anuncio y proporcionando una descripción breve y una completa del anuncio. El texto de descripción breve es visible para los lesctores como un resumen del anuncio, en cambio el texto de descripción completa es visible para los lectores cuando deciden sellecionar el anuncio para leer los detalles completos del mismo. También se puede especificar una fecha de vencimiento opcional. Los anuncios que incluyen una fecha de vencimiento no podrán ser visibles para los lectores una vez que esta fecha pase.</p>]]>
+		<![CDATA[<p>OJS permite al gestor/a de la revista colgar avisos disponibles para los lectores/as que visitan el sitio. Los avisos colgados aparecen en la página Avisos y, de manera opcional, en la página de inicio de la revista.</p><p><em>Instalar el módulo de avisos</em>. El gestor/a de la revista debe indicar en el paso 4.4 de la configuración de la revista que se publicarán avisos. Además, debe establecer si se mostrarán en la página inicial o no. También se puede ofrecer un texto introductorio que aparecerá en la parte superior de la página Avisos.</p><p><em>Crear avisos</em>. Para crear un aviso el gestor/a de la revista selecciona el tipo de aviso, indica un título y facilita una descripción corta y una completa del aviso. La versión corta se muestra a los lectores/as como resumen y la versión completa cuando los lectores/as deciden leer todos los detalles del aviso. También se puede indicar una fecha de vencimiento. Los avisos que la incluyan no podrán visualizarse pasado el plazo.</p>]]>
 	</section>
 
-</topic>
+</topic> 

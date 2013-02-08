@@ -4,30 +4,30 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenidos de la Administración de la Revista - Páginas de Administración. 
+  * table of contents for Journal Management - Management Pages. 
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<toc id="journal/toc/000001" locale="es_ES" title="Páginas de Administración" parent_topic="journal/topic/000001">
-	<topic id="journal/topic/000034" title="Anuncios" />
-	<topic id="journal/topic/000010" title="Explorador de Archivos" />
-	<topic id="journal/topic/000005" title="Secciones de la Revista" />
+<toc id="journal/toc/000001" locale="es_ES" title="Páginas de gestión" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000034" title="Avisos" />
+	<topic id="journal/topic/000010" title="Explorador de archivos" />
+	<topic id="journal/topic/000005" title="Secciones de la revista" />
+	<topic id="journal/topic/000036" title="Formularios de revisión" />
 	<topic id="journal/topic/000007" title="Idiomas" />
-	<topic id="journal/topic/000029" title="Encabezado" />
+	<topic id="journal/topic/000029" title="Cabecera" />
 	<topic id="journal/topic/000035" title="Pagos" />
-	<topic id="journal/topic/000006" title="Correos Electrónicos preparados" />
-	<topic id="journal/topic/000009" title="Herramientas de Lectura" />
+	<topic id="journal/topic/000006" title="Plantillas de correo electrónicos" />
+	<topic id="journal/topic/000009" title="Herramientas de lectura" />
 	<topic id="journal/topic/000004" title="Configuración" />
-	<topic id="journal/topic/000008" title="Estadísticas y Reportes" />
+	<topic id="journal/topic/000008" title="Estadísticas &amp; Informes" />
 	<topic id="journal/topic/000025" title="Suscripciones" />
-	<topic id="journal/topic/000030" title="Plugins del Sistema" />
-	<topic id="journal/topic/000031" title="Importar/Exportar Datos" />
+	<topic id="journal/topic/000030" title="Conectores del sistema" />
+	<topic id="journal/topic/000031" title="Importar/Exportar datos" />
 
-	<breadcrumb url="journal/topic/000000" title="Administración de la Revista" />
-	<breadcrumb url="journal/topic/000001" title="Páginas de Administración" />
+	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
+	<breadcrumb url="journal/topic/000001" title="Páginas de gestión" />
 </toc>

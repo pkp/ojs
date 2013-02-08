@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/reports/articles/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.articles.displayName">Informe de Artículos</message>
-	<message key="plugins.reports.articles.description">Este plugin implementa un informe CSV que contiene una lista de artículos y su información.</message>
-	<message key="plugins.reports.articles.nodecision">Sin Desición</message>
-</locale>
+	<message key="plugins.reports.articles.displayName">Conector de Informe de artículos</message>
+	<message key="plugins.reports.articles.description">Este conector ofrece un informe CSV con una lista de los artículos e información sobre ellos.</message>
+	<message key="plugins.reports.articles.nodecision">Sin decidir</message>
+</locale> 

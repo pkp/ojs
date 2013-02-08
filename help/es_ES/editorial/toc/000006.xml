@@ -4,21 +4,20 @@
 <!--
   * 000006.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenido para el Proceso Editorial - Rol del Editor de la Sección- Revisión
+  * Tabla de contenido para el proceso editorial - Rol del editor/a sección- Revisión
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
 <toc id="editorial/toc/000006" locale="es_ES" title="Revisión" parent_topic="editorial/topic/000006">
-	<topic id="editorial/topic/000024" title="Versión Revisión" />
-	<topic id="editorial/topic/000025" title="Revisión por expertos" />
-	<topic id="editorial/topic/000026" title="Decisión del editor" />
+	<topic id="editorial/topic/000024" title="Versión revisada" />
+	<topic id="editorial/topic/000025" title="Evaluación por pares" />
+	<topic id="editorial/topic/000026" title="Decisión del editor/a" />
 
-	<breadcrumb url="editorial/topic/000000" title="Proceso Editorial" />
-	<breadcrumb url="editorial/topic/000004" title="Rol del Editor de la Sección" />
+	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
+	<breadcrumb url="editorial/topic/000004" title="Rol del editor/a de sección" />
 	<breadcrumb url="editorial/topic/000006" title="Revisión" />
 </toc>

@@ -1,35 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/importexport/pubmed/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
-  * Translated from es_EN by Juan Pablo Alperin (juan@geeky.net) 
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.pubmed.displayName">Plugin de exportación de XML de PubMed</message>
-	<message key="plugins.importexport.pubmed.description">Exportación de la metadata de artículos usando XML de PubMed para Indexación en MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.displayName">Conector de exportación PubMed XML</message>
+	<message key="plugins.importexport.pubmed.description">Exportar los metadatos de un artículo en formato PubMed XML para indexarlos en MEDLINE.</message>
 	
-	<message key="plugins.importexport.pubmed.export">Exportar Datos</message>
-	<message key="plugins.importexport.pubmed.export.issues">Exportar Números</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Seleccione un Número para exportar.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Exportar Artículos</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Seleccione Artículos para exportar.</message>
+	<message key="plugins.importexport.pubmed.export">Exportar datos</message>
+	<message key="plugins.importexport.pubmed.export.issues">Exportar números</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Seleccione el número que desee exportar</message>
+	<message key="plugins.importexport.pubmed.export.articles">Exportar artículos</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Seleccione los artículos que desee exportar.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Usage: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-]]></message>
+	<message key="plugins.importexport.pubmed.cliUsage">Uso: {$scriptName} {$pluginName} [xmlFileName] [journal_path] artículos [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">ERROR:</message>
 
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">No existe ningún número con el ID especificado"{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">No existe ningún artículo con el ID especificado "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada "{$articleId}".</message>
 
 
-</locale>
+</locale> 

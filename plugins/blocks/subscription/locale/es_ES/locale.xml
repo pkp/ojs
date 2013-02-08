@@ -1,23 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/subscription/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.subscription.displayName">Bloque de Suscripción</message>
-	<message key="plugins.block.subscription.description">Este plugin muestra información de la suscripción en la barra lateral.</message>
+	<message key="plugins.block.subscription.displayName">Bloque de suscripciones</message>
+	<message key="plugins.block.subscription.description">Este conector proporciona información sobre las suscripciones en la barra lateral.</message>
 	<message key="plugins.block.subscription.blockTitle">Suscripción</message>
-	<message key="plugins.block.subscription.expires">Expira</message>
-	<message key="plugins.block.subscription.providedBy">Acceso provisto por:</message>
-	<message key="plugins.block.subscription.comingFromIP">Desde la IP:</message>
+	<message key="plugins.block.subscription.expires">Vencimiento</message>
+	<message key="plugins.block.subscription.providedBy">Acceso proporcionado por</message>
+	<message key="plugins.block.subscription.comingFromIP">De</message>
 	<message key="plugins.block.subscription.about">Suscripciones</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Entre en la revista para verificar la suscripción</message>
-</locale>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Iniciar sesión para verificar la suscripción</message>
+</locale> 

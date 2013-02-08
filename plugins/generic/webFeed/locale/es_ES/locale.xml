@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/webFeed/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_ES (Español España) locale.
+  * Localization strings for the es_ES (España) locale.
   *
-  * Traducción de la version original 1.0 por Juan Pablo Alperin (juan@geeky.net) 2006/05/30
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.webfeed.displayName">Plugin Web de fuentes RSS/Atom</message>
-	<message key="plugins.generic.webfeed.description">Este plugin produce canales RSS/Atom para el Número en curso.</message>	
-	<message key="plugins.generic.webfeed.settings">Opciones</message>
-	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos del último número publicado</message>
-	<message key="plugins.generic.webfeed.settings.recentArticles">Elementos más recientes</message>
-	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Indique un valor (número natural) para el número de elementos publicados más recientes</message>
-	<message key="plugins.generic.webfeed.settings.issue">Mostrar enlaces al feed sólo en las páginas interiores.</message>
-	<message key="plugins.generic.webfeed.settings.all">Mostrar enlaces al feed en todas las páginas de la revista.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Mostrar enlaces al feed solamente en la página de inicio y en la página del número.</message>
-	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
-	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
-	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
-</locale>
+	<message key="plugins.generic.webfeed.displayName">Conector de canales web</message>
+	<message key="plugins.generic.webfeed.description">Este conector crea canales de sindicación web RSS/Atom para el número actual.</message>
+
+	<message key="plugins.generic.webfeed.settings">Configuración</message>
+	<message key="plugins.generic.webfeed.settings.issue">Mostrar enlaces de canales web sólo en las páginas del número.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Mostrar enlaces de canales web sólo en la página de inicio y en las páginas del número.</message>
+	<message key="plugins.generic.webfeed.settings.all">Mostrar enlaces de canales web en todas las páginas de la revista.</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos en el número publicado actual.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">elementos publicados más recientes.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Introduzca un número entero positivo para los elementos publicados recientemente.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Logotipo de Atom</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Logotipo de RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">Logotipo de RSS2</message>
+</locale> 

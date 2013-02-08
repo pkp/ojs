@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/coins/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * COinS plugin localization strings for the es_ES (Español (España)) locale.
+  * COinS plugin localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.coins.displayName">Plugin COinS</message>
-	<message key="plugins.generic.coins.description">El plugin COinS añade un descriptor OpenURL a páginas del artículo (resumen y HTML) que puede ser usado por ejemplo para la extracción a herramientas de citaciones.</message>
-</locale>
+	<message key="plugins.generic.coins.displayName">Conector COinS</message>
+	<message key="plugins.generic.coins.description">El conector COinS añade un descriptor OpenURL a las páginas de los artículos (resumen y HTML) que puede servir para la extracción de herramientas de citas, entre otros.</message>
+</locale> 

@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/importexport/doaj/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.doaj.displayName">Plugin de Exportación DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Exporta la Revista para DOAJ y envia por email la información DOAJ representativa de la revista</message>
+	<message key="plugins.importexport.doaj.displayName">Conector de exportación DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre ella para incluirla.</message>
 
 	
-	<message key="plugins.importexport.doaj.export">Exportar Datos de la Revista a DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportar Revista</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportar información del artículo en XML para archivar en DOAJ</message>
-	<message key="plugins.importexport.doaj.export.contact">Contactar con DOAJ para la inclusión</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">Para el examen de su revista en el DOAJ, por favor envíe este formulario parcialmente autocumplimentado al DOAJ, y rellene la información incompleta lo mejor que pueda.</message>
-</locale>
+	<message key="plugins.importexport.doaj.export">Exportar datos de la revista al DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Exportar la revista</message>
+	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para inclusiones</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">exportar la información de un artículo en XML para archivarla en el DOAJ.</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">para que su revista sea considerada en el DOAJ, envíe este formulario parcialmente rellenado al DOAJ completando toda la información posible.</message>
+
+</locale> 

@@ -1,44 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
-<!--
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
   * 000033.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
-  * Distribuido por GNU GPL v2. Para términos completos vea el archivo docs/COPYING.
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Páginas Administrativas - Incorporar Usuarios
+  * Management Pages - Merge Users
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<topic id="journal/topic/000033" locale="es_ES" title="Fusionar Usuarios" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="es_ES" title="Fusionar usuarios/as" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
-		<![CDATA[<p>La característica de fusionar usuarios, disponible en la administración de la revista, bajo el encabezao Usuarios, le permite al administrador de la revista fusionar dos cuentas de usuarios en una sola, transfiriendo las asignaciones de edición, entregas, y otros varios registros de una cuenta a la otra, eliminando efectivamente la primera.</p>
-		<p>Los siguientes artículos son transferidos:
-			<ul>
-				<li>Artículo de autoría</li>
-				<li>Comentarios públicos sobre artículos</li>
-				<li>Notas de Artículos</li>
-				<li>Asignaciones decisiones del editor</li>
-				<li>Revisión de Asignaciones</li>
-				<li>Asignaciones del editor de diagramación</li>
-				<li>Asignaciones del corrector de pruebas</li>
-				<li>Correo electrónico del artículo y entradas de los inicios de sesión</li>
-				<li>Calves de acceso del revisor</li>
-				<li>Roles</li>
-			</ul>
-		Los siguientes artículos son transferidos <strong>not</strong> :
-			<ul>
-				<li>Sesiones</li>
-				<li>Suscripciones</li>
-				<li>Notificación del estado (ej. si el usuario se ha inscrito para recibir notificaciones sobre noticias de la revista)</li>
-				<li>Membresías del equipo editorial</li>
-				<li>Estado del editor de la sección en las sesiones</li>
-				<li>Información del perfil de usuario(ej. nombre, apellido, etc.)</li>
-			</ul>
-		</p>
-		<p>Esta característica debe usarse con precaución, ya que no es reversible e involucra la transferencia de registros de un usuario a otro.</p>]]>
+		<![CDATA[<p>La función Fusionar usuarios/as, disponible en Gestión de la revista, bajo el encabezado de Usuarios/as, permite al gestor/a de la revista combinar dos cuentas de usuario/a en una sola. Se transfieren las tareas de edición, los envíos y muchos otros registros de una cuenta a otra eliminando la primera de ellas.</p><p>Se transfieren los siguientes elementos:</p> <ul> <li>Autoría del artículo</li> <li>Comentarios públicos de artículos</li> <li>Notas de artículo</li> <li>Decisiones y tareas del editor/a</li> <li>Tareas de revisión</li> <li>Tareas del maquetista</li> <li>Tareas del corrector/a de pruebas</li> <li>Correo electrónico del artículo y entradas del registro de eventos</li> <li>Claves de acceso del revisor/a</li> <li>Roles</li> <li>Suscripciones (ver más adelante)</li> </ul> <p><strong>No</strong> se transfieren los siguientes elementos:</p> <ul> <li>Sesiones</li> <li>Estados de notificación (es decir, si un usuario/a se ha inscrito para recibir notificaciones sobre noticias de la revista)</li> <li>Afiliaciones al equipo editorial</li> <li>Estados en una sección del editor/a de sección</li> <li>Información de perfil del usuario/a (nombre, apellidos, etc.)</li> </ul> <p>Esta función debe usarse con cuidado ya que no es reversible e implica la transferencia de los registros de un usuario/a a otro.</p> <p>En lo que se refiere a las suscripciones, la fusión se realiza de la siguiente manera: En el caso de las suscripciones individuales, la suscripción del segundo usuario/a se transfiere al primer usuario sólo si es válida y si el primer usuario/a no dispone ya de una suscripción válida a una determinada revista. En el caso de la suscripciones institucionales, todas las suscripciones en las que el segundo usuario/a figure como persona de contacto se transfieren al primer usuario/a, que se convierte en la nueva persona de contacto.</p>]]>
 	</section>
-</topic>
+</topic> 

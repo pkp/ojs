@@ -1,20 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/implicitAuth/shibboleth/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin ShibAuth</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Este es un plugin para todo el sitio y está habilitado en el fichero de configuración de OJS.
-Plugin de autentificación con Shibboleth.</message>
-</locale>
+	<message key="plugins.implicitAuth.shibboleth.displayName">Conector ShibAuthPlugin</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Este conector está presente en todo el sitio web y está habilitado en el archivo de configuración del OJS.</message>
+</locale> 

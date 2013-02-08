@@ -4,18 +4,17 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenidos de La administración de la Revista. 
+  * table of contents for Journal Management. 
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<toc id="journal/toc/000000" locale="es_ES" title="Administración de la Revista" parent_topic="journal/topic/000000">
-	<topic id="journal/topic/000001" title="Páginas de Administración" />
-	<topic id="journal/topic/000002" title="Usuarios" />
+<toc id="journal/toc/000000" locale="es_ES" title="Gestión de la revista" parent_topic="journal/topic/000000">
+	<topic id="journal/topic/000001" title="Páginas de gestión" />
+	<topic id="journal/topic/000002" title="Usuarios/as" />
 	<topic id="journal/topic/000003" title="Roles" />
-	<breadcrumb url="journal/topic/000000" title="Administración de la Revista" />
+	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
 </toc>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  *
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.backup.name">Conector de copias de seguridad</message>
+	<message key="plugins.generic.backup.description">Este conector genera una copia de de seguridad de la instalación.</message>
+
+	<message key="plugins.generic.backup.link">Descargar copia de seguridad</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Los siguientes enlaces permiten al administrador/a del sitio descargar una copia de seguridad de varios componentes de la instalación. Una copia de seguridad completa contiene <strong>todos</strong> los siguientes componentes. Por favor, consulte la documentación técnica para más información sobre como estos componentes se interrelacionan.</p>]]></message>
+	<message key="plugins.generic.backup.db">Base de datos</message>
+	<message key="plugins.generic.backup.files">Ficheros</message>
+	<message key="plugins.generic.backup.code">Código</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> El volcado de la base de datos no se ha configurado en el fichero config.inc.php. La configuración dependerá del servidor y del tipo de base de datos que se use. Esto debe especificarse en la sección titulada [cli], en la opción de configuración etiquetada como "dump". Para MySQL, se puede utilizar la herramienta mysqldump, p.e.:<br/>
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Se remplazarán las etiquetas "%s" por orden, con:<ol>
+	<li>El nombre del servidor</li>
+	<li>El usuario de base de datos</li>
+	<li>La contraseña del usuario</li>
+	<li>El nombre de la base de datos</li>
+</ol>
+Tenga en cuenta que esto implica especificar la constraseña de la base de datos en la línea de comandos, lo que en rigor supone un riesgo para la seguridad de la misma.<br/><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> La herramienta "tar" no se ha configurado en el fichero config.inc.php. La configuración dependerá del servidor. Esto debe especificarse en la sección titulada [cli], en la opción de configuración etiquetada como "tar", especificando el camino en el que encontrar la utilidad "tar", p.e.:<br/>
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO: </strong>Ha ocurrido un error durante el proceso de copia de seguridad. Habitualmente esto es debio a problemas con los permisos sobre los ficheros.]]></message>
+</locale>

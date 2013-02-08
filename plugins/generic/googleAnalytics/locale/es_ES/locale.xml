@@ -1,35 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/googleAnalytics/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Google Analytics plugin localization strings for the es_ES (Español (España)) locale.
+  * Google Analytics plugin localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 
 	<!-- Google Analytics -->
-	<message key="plugins.generic.googleAnalytics.displayName">Complemento para Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integre OJS con Google Analytics, el sistema de análisis de tráfico web de Google. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.]]></message>
+	<message key="plugins.generic.googleAnalytics.displayName">Conector Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Incorpore al OJS el conector Google Analytics, la aplicación de Google para el análisis del tráfico de un sitio web. Debe tener una cuenta de Google Analytics ya configurada. Vea el <a href="http://www.google.com/analytics/" title="Google Analytics site">sitio de Google Analytics</a> para más información.]]></message>
 
 	<!-- Google Analytics Settings Management -->
-	<message key="plugins.generic.googleAnalytics.manager.settings">Opciones</message>
-	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Opciones de Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Con este complemento activado puede usar Google Analytics para recoger y analizar datos de tráfico web de su revista. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings">Configuración</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Configuración de Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Con este conector activado, Google Analytics puede recoger y analizar el uso y el tráfico del sitio web de esta revista. Este conector requiere una cuenta de Google Analytics ya configurada. Vea el <a href="http://www.google.com/analytics/" title="Google Analytics site">sitio de Google Analytics</a> para más información.</p><p>Puede que Google Analytics necesite hasta 24 horas para recoger y presentar las estadísticas. Durante este periodo, puede que la función "Comprobar estado" no ofrezca un informe preciso sobre la detección del código de seguimiento necesario para la revista.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número de cuenta</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">En Google Analytics, pulse sobre "Check Status" para ver el código de seguimiento de su página. El número de cuenta aparece en el código de seguimiento: _uacct = "###". Introduzca los caracteres que corresponden a ###.</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Por favor, intoduzca un número de cuenta.</message>
-
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">"En Google Analytics, haga clic en "Comprobar estado» para ver el código de seguimiento de su sitio web. Para el código de seguimiento antiguo, se muestra el número de cuenta en el código de seguimiento como: _uacct = "###". Para el código de seguimiento nuevo, se muestra el número de cuenta en el código de seguimiento como: var pageTracker = _gat._getTracker("###"). Introduzca el texto que corresponda a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Introduzca un número de cuenta.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Código de seguimiento</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Por favor seleccione un código de seguimiento a utilizar.</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de seguimiento legado (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Seleccione un código de seguimiento para utilizar.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de seguimiento antiguo (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de seguimiento nuevo (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Número de cuenta de Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Uno o más números de cuenta de Google Analytics introducidos para presentaciones de autores no son válidos.</message>
-	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para realizar el seguimiento del número de lectores del artículo a través de Google Analytics, introduzca un número de cuenta (por ejemplo, UA-xxxxxx-x).</message>
-</locale>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para seguir el número de lectores de un artículo publicado mediante el uso de Google Analytics, introduzca un número de cuenta a continuación (p. ej.: UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Uno o más números de cuenta de Google Analytics introducidos para los autores/as de envío no son válidos.</message>
+</locale> 

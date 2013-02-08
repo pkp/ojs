@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/languageToggle/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.languageToggle.displayName">Bloque de cambios entre lenguajes</message>
-	<message key="plugins.block.languageToggle.description">Este plugin permite cambiar entre lenguajes en la barra lateral.</message>
-</locale>
+	<message key="plugins.block.languageToggle.displayName">Bloque de cambio de idioma</message>
+	<message key="plugins.block.languageToggle.description">Este conector permite cambiar el idioma desde la barra lateral.</message>
+</locale> 

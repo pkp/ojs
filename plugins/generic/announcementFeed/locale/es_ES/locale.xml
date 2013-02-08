@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/announcementFeed/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.announcementfeed.displayName">Plugin de Canal de Anuncios</message>
-	<message key="plugins.generic.announcementfeed.description">Este plugin produce canales RSS/Atom para anuncios de la revista.</message>
-
-	<message key="plugins.generic.announcementfeed.settings">Opciones</message>
-	<message key="plugins.generic.announcementfeed.settings.all">Mostrar enlaces de los canales en todas las páginas de la revista.</message>
-	<message key="plugins.generic.announcementfeed.settings.homepage">Mostrar enlaces de los canales solo en la página de inicio y en la página de anuncios.</message>
-	<message key="plugins.generic.announcementfeed.settings.announcement">Mostrar enlaces de los canales solo en la página de anuncios.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limitar canal a</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">anuncios más recientes.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Por favor introduzca un número entero positivo para anuncios recientes.</message>
-	<message key="plugins.generic.announcementfeed.atom.altText">Logo Atom</message>
-	<message key="plugins.generic.announcementfeed.rss1.altText">Logo RSS1</message>
-	<message key="plugins.generic.announcementfeed.rss2.altText">Logo RSS2</message>
-</locale>
+	<message key="plugins.generic.announcementfeed.displayName">Conector de canal de noticias</message>
+	<message key="plugins.generic.announcementfeed.description">Este conector crea canales de sindicación web RSS/Atom para avisos de revistas.</message>
+	
+	<message key="plugins.generic.announcementfeed.settings">Configuración</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Mostrar enlaces de canales en todas las páginas de la revista.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Mostrar enlaces de canales sólo en la página de inicio y en la página de avisos.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Mostrar enlaces de canales sólo en la página de avisos.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limitar elementos de canales a los</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">avisos más recientes.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Introduzca un número entero positivo para los avisos recientes.</message>
+	<message key="plugins.generic.announcementfeed.atom.altText">Logotipo de Atom</message>
+	<message key="plugins.generic.announcementfeed.rss1.altText">Logotipo de RSS1</message>
+	<message key="plugins.generic.announcementfeed.rss2.altText">Logotipo de RSS2</message>
+</locale> 

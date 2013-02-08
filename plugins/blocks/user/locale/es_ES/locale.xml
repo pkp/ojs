@@ -1,23 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/user/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.user.displayName">Bloque de usuarios</message>
-	<message key="plugins.block.user.description">Este Complemento proporciona una barra lateral con herramientas de cuenta de usuario (e.g. Acceder, Salir, perfil, etc).</message>
-	<message key="plugins.block.user.loggedInAs">Su identificación actual es...</message>
-	<message key="plugins.block.user.myJournals">Mis Revistas</message>
-	<message key="plugins.block.user.myProfile">Mi Perfil</message>
-	<message key="plugins.block.user.logout">Salir</message>
-	<message key="plugins.block.user.signOutAsUser">Cambiar de Usuario</message>
-	<message key="plugins.block.user.rememberMe">Recordar mis datos</message>
-</locale>
+	<message key="plugins.block.user.displayName">Bloque del usuario/a</message>
+	<message key="plugins.block.user.description">Este conector proporciona herramientas de la cuenta del usuario/a en la barra lateral (p. ej.: iniciar y cerrar sesión, enlace al perfil, etc.).</message>
+	<message key="plugins.block.user.loggedInAs">Ha iniciado sesión como</message>
+	<message key="plugins.block.user.myJournals">Mis revistas</message>
+	<message key="plugins.block.user.myProfile">Mi perfil</message>
+	<message key="plugins.block.user.logout">Cerrar sesión</message>
+	<message key="plugins.block.user.signOutAsUser">Cerrar sesión de usuario/a</message>
+	<message key="plugins.block.user.rememberMe">No cerrar sesión</message>
+</locale> 

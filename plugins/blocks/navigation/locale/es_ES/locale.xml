@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/navigation/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.block.navigation.displayName">Bloque de Navegación</message>
-	<message key="plugins.block.navigation.description">Este Complemento proporciona vínculos de navegación en el lateral.</message>
-	<message key="plugins.block.navigation.journalContent">Contenido de la Revista</message>
-</locale>
+	<message key="plugins.block.navigation.displayName">Bloque de navegación</message>
+	<message key="plugins.block.navigation.description">Este conector proporciona enlaces de navegación en la barra lateral.</message>
+	<message key="plugins.block.navigation.journalContent">Contenido de la revista</message>
+</locale> 

@@ -4,20 +4,19 @@
 <!--
   * 000002.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de Contenidos de la Administración de La Revista - Usuarios. 
+  * table of contents for Journal Management - Users. 
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
-  *
+  * $Id$
   -->
 
-<toc id="journal/toc/000002" locale="es_ES" title="Usuarios" parent_topic="journal/topic/000002">
-	<topic id="journal/topic/000011" title="Registro de Usuarios en esta Revista" />
-	<topic id="journal/topic/000012" title="Crear un nuevo Usuario" />
-	<topic id="journal/topic/000033" title="Fusión de Usuarios" />
+<toc id="journal/toc/000002" locale="es_ES" title="Usuarios/as" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="Usuarios/as registrados en esta revista" />
+	<topic id="journal/topic/000012" title="Crear un nuevo usuario/a" />
+	<topic id="journal/topic/000033" title="Fusionar usuarios/as" />
 
-	<breadcrumb url="journal/topic/000000" title="Administración de la Revista" />
-	<breadcrumb url="journal/topic/000002" title="Usuarios" />
+	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
+	<breadcrumb url="journal/topic/000002" title="Usuarios/as" />
 </toc>

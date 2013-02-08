@@ -1,36 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/importexport/crossref/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES locale.
+  * Localization strings for the es_ES (España) locale.
   *
-	*
-	* Traducción de la versión original 1.2 por Juan Pablo Alperin - 2006/06/29
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-		<message key="plugins.importexport.crossref.displayName">Plugin de exportación de XML de CrossRef</message>
-		<message key="plugins.importexport.crossref.description">Exportación de la metadata de artículos usando XML de CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">Conector de exportación CrossRef XML</message>
+	<message key="plugins.importexport.crossref.description">Exportar los metadatos del artículo en formato CrossRef XML.</message>
+	
+	<message key="plugins.importexport.crossref.export">Exportar datos</message>
+	<message key="plugins.importexport.crossref.export.issues">Exportar números</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Seleccione el número que desee exportar</message>
+	<message key="plugins.importexport.crossref.export.articles">Exportar artículos</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Seleccione los artículos que desee exportar</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage">Uso: {$scriptName} {$pluginName} [xmlFileName] [journal_path] artículos [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]</message>
+	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
 
-		<message key="plugins.importexport.crossref.export">Exportar Datos</message>
-		<message key="plugins.importexport.crossref.export.issues">Exportar Números</message>
-		<message key="plugins.importexport.crossref.export.selectIssue">Seleccione un Número para exportar.</message>
-		<message key="plugins.importexport.crossref.export.articles">Exportar Artículos</message>
-		<message key="plugins.importexport.crossref.export.selectArticle">Seleccione Artículos para exportar.</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada "{$articleId}".</message>
 
-		<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
-	{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-	{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-	]]></message>
-		<message key="plugins.importexport.crossref.cliError">ERROR:</message>
-
-		<message key="plugins.importexport.crossref.export.error.issueNotFound">No existe ningún número con el ID especificado"{$issueId}".</message>
-		<message key="plugins.importexport.crossref.export.error.articleNotFound">No existe ningún artículo con el ID especificado "{$articleId}".</message>
-
-		<message key="plugins.importexport.crossref.errors.noDOIprefix">Un prefijo DOI debe ser indicado en las páginas de gestión para poder utilizar este plugin.</message>
-</locale>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Para usar este conector debe especificar un prefijo DOI válido en la instalación de la revista.</message>
+</locale> 

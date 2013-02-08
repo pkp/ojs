@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/thesisFeed/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.thesisfeed.displayName">Plugin Canal de Resumenes de Tesis</message>
-	<message key="plugins.generic.thesisfeed.description">Este plugin produce canales RSS/Atom para los resúmenes de las tesis.</message>
+	<message key="plugins.generic.thesisfeed.displayName">Conector de canal de resúmenes de tesis</message>
+	<message key="plugins.generic.thesisfeed.description">Este conector crea canales de sindicación web RSS/Atom para resúmenes de tesis.</message>
 
-	<message key="plugins.generic.thesisfeed.settings">Opciones</message>
-	<message key="plugins.generic.thesisfeed.settings.all">Mostrar enlaces a los canales en todas las páginas de la revista.</message>
-	<message key="plugins.generic.thesisfeed.settings.homepage">Mostrar enlaces a los canales solo en la página principal y en las páginas de los resúmenes de las tesis.</message>
-	<message key="plugins.generic.thesisfeed.settings.thesis">Mostrar enlaces de los canales solo en las páginas de los resúmenes de las tesis.</message>
-	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limitar canal a</message>
-	<message key="plugins.generic.thesisfeed.settings.recentThesis2">resúmenes de tesis enviadas más recientemente</message>
-	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Por favor ingrese un número entero positivo para el número de resúmenes de tesis.</message>
-	<message key="plugins.generic.thesisfeed.atom.altText">Logo Atom</message>
-	<message key="plugins.generic.thesisfeed.rss1.altText">Logo RSS1</message>
-	<message key="plugins.generic.thesisfeed.rss2.altText">Logo RSS2</message>
-</locale>
+	<message key="plugins.generic.thesisfeed.settings">Configuración</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Mostrar enlaces de canales en todas las páginas de la revista.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Mostrar enlaces de canales sólo en la página de inicio y en la página de resúmenes de tesis.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Mostrar enlaces de canales sólo en la página de resúmenes de tesis.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limitar elementos de canales</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">a los resúmenes de tesis enviados recientemente.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Introduzca un número entero positivo para el número de resúmenes de tesis.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Logotipo de Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Logotipo de RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Logotipo de RSS2</message>
+</locale> 

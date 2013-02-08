@@ -1,31 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/phpMyVisites/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * phpMyVisites plugin localization strings for the es_ES (Español (España)) locale.
+  * phpMyVisites plugin localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 
 	<!-- phpMyVisites -->
-	<message key="plugins.generic.phpmv.displayName">Complemento phpMyVisites</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integra OJS con phpMyVisites, una aplicación gratuita y open source de análisis de tráfico web. Requiere la instalación previa de PhpMyVisites. Vea por favor la página <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> para más información.]]></message>
-
+	<message key="plugins.generic.phpmv.displayName">Conector phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Incorpore al OJS el conector phpMyVisites, una aplicación gratuita de código abierto que analiza la audiencia de sitios web. Se requiere instalar phpMyVisites primero. Vea el <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">sitio phpMyVisites</a> para más información.]]></message>
 	<!-- phpMyVisites Settings Management -->
-	<message key="plugins.generic.phpmv.manager.settings">Opciones</message>
-	<message key="plugins.generic.phpmv.manager.phpmvSettings">Opciones phpMyVisites</message>
-	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Con este Complemento activado phpMyVisites puede recoger y analizar datos de utilización y tráfico de las páginas de la revista. Requiere la instalación previa de PhpMyVisites. Vea por favor la página <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> para más información.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings">Configuración</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Configuración de phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Con este conector activado, phpMyVisites puede recoger y analizar el uso y el tráfico del sitio web de esta revista. Este conector requiere que phpMyVisites ya esté instalado. Vea el <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">sitio phpMyVisites</a> para más información.</p>]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">URL de phpMyVisites</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Dirección (url) de la instalación de phpMyVisites (i.e. http://myserver.net/phpmv).</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Por favor introduzca una dirección url váida. Incluya http:// al comienzo.</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de Perfil del Sitio</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[En phpMyVisites, pulse en Administration->Modify site. El Número de Perfil del Sitio (site profile number) se muestra junto al nombre del perfil del sitio (site profile name).]]></message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Por favor, escriba un número de perfil del sitio.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">URL completa de la instalación de phpMyVisites (p.ej.: http://miservidor.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Introduzca una URL válida. Incluya http:// al principio.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de perfil del sitio</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">En phpMyVisites, haga clic en Gestión-&amp;gt;Modificar el sitio. El número de perfil del sitio se visualiza al lado del nombre de perfil.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Introduzca un número de perfil del sitio.</message>
 
-</locale>
+</locale> 

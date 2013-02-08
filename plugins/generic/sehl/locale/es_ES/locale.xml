@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/sehl/locale/es_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español (España)) locale.
+  * Localization strings for the es_ES (España) locale.
   *
+  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.sehl.name">Complemento SEHL</message>
-	<message key="plugins.generic.sehl.description">Este Complemento implementa la Búsqueda Resaltada (Search Engine HighLighting o SEHL), de forma que cuando un motor de búsqueda devuelve un artículo HTML, las palabras por las que se buscó el artículo aparecen resaltadas.</message>
-</locale>
+	<message key="plugins.generic.sehl.name">Conector SEHL</message>
+	<message key="plugins.generic.sehl.description">Este conector ofrece el Search Engine HighLighting (SEHL), que permite que un buscador localice un artículo en HTML y resalte las palabras clave buscadas.</message>
+</locale> 
