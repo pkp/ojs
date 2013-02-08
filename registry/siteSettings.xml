@@ -35,10 +35,6 @@
 		<value>true</value>
 	</setting>
 	<setting type="string" locale="1">
-		<name>title</name>
-		<value>{translate key="common.openJournalSystems"}</value>
-	</setting>
-	<setting type="string" locale="1">
 		<name>contactName</name>
 		<value>{translate key="common.openJournalSystems"}</value>
 	</setting>
