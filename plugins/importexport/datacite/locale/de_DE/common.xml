@@ -33,7 +33,7 @@
 	<message key="plugins.importexport.common.export">Daten exportieren</message>
 	<message key="plugins.importexport.common.export.unregistered">Exportieren aller unregistrierten Ausgaben, Artikel und Fahnen</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Wählen Sie unregistrierte Ausgaben, Artikel und Fahnen aus</message>
-	<message key="plugins.importexport.common.export.noUnregistered">Alle Ausgaben, Artikel und Fahnen sind bereits registriert (oder haben keinen DOI zugeteilt).</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Alle veröffentlichten Ausgaben, Artikel und Fahnen sind bereits registriert (oder haben keinen DOI zugeteilt).</message>
 	<message key="plugins.importexport.common.export.issues">Ausgewählte Ausgaben exportieren</message>
 	<message key="plugins.importexport.common.export.selectIssue">Ausgaben auswählen</message>
 	<message key="plugins.importexport.common.export.noIssues">Keinen Ausgaben sind momentan DOI zugewiesen.</message>
