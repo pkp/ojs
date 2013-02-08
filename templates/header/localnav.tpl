@@ -66,9 +66,8 @@
 				{$publicMenu}
 			{/if}
 		</ul>
-	{else}{* !$isUserLoggedIn *}
+	{elseif !$notInstalled}{* !$isUserLoggedIn *}
 		<ul class="sf-menu">
-			<li><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
 			<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a>
 			{$publicMenu}
 		</ul>

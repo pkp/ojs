@@ -28,6 +28,10 @@ class Handler extends PKPHandler {
 	 * @return ItemIterator
 	 */
 	function getWorkingContexts($request) {
+		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+			return null;
+		}
+
 		// Check for multiple journals.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 

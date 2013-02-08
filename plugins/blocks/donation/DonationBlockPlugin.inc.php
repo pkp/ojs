@@ -33,16 +33,6 @@ class DonationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the block context. Overrides parent so that the plugin will be
-	 * displayed during install.
-	 * @return int
-	 */
-	function getBlockContext() {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_RIGHT_SIDEBAR;
-		return parent::getBlockContext();
-	}
-
-	/**
 	 * Determine the plugin sequence. Overrides parent so that
 	 * the plugin will be displayed during install.
 	 */
