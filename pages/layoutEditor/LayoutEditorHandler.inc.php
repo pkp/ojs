@@ -197,6 +197,10 @@ class LayoutEditorHandler extends Handler {
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
 
+		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
+		$signoff->setDateCompleted(Core::getCurrentDate());
+		$signoffDao->updateObject($signoff);
+
 		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_COMPLETE', $request, $request->getUserVar('send')?'':$request->url(null, 'layoutEditor', 'completeProofreader'))) {
 			$request->redirect(null, null, 'submission', $articleId);
 		}
