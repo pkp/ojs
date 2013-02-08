@@ -31,8 +31,7 @@ class DetailsForm extends ContextSettingsForm {
 			'publisherInstitution' => 'string',
 			'publisherUrl' => 'string',
 			'publisherNote' => 'string',
-			'history' => 'string',
-			'emailHeader' => 'string'
+			'history' => 'string'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/details/form/detailsForm.tpl', $wizardMode);
 

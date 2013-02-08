@@ -72,21 +72,6 @@
 </div>
 
 <div class="separator"></div>
-
-<div id="setupEmails">
-<h3>1.4 {translate key="manager.setup.emails"}</h3>
-<table class="data">
-	<tr><td colspan="2">{translate key="manager.setup.emailHeaderDescription"}<br />&nbsp;</td></tr>
-	<tr>
-		<td class="label">{fieldLabel name="emailHeader" key="manager.setup.emailHeader"}</td>
-		<td class="value">
-			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
-		</td>
-	</tr>
-</table>
-</div>
-
-<div class="separator"></div>
 <div id="setupPublisher">
 <h3>1.5 {translate key="manager.setup.publisher"}</h3>
 
