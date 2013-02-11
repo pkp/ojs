@@ -118,7 +118,7 @@ class ReviewerSubmissionDAO extends DAO {
 			$reviewerSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
 
-		// Review Assignment 
+		// Review Assignment
 		$reviewerSubmission->setReviewId($row['review_id']);
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
 		$reviewerSubmission->setReviewerFullName($row['first_name'].' '.$row['last_name']);
@@ -221,9 +221,9 @@ class ReviewerSubmissionDAO extends DAO {
 				r.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL)';
+			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL) AND a.status = ' . STATUS_QUEUED;
 		} else {
-			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1)';
+			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1 OR a.status <> ' . STATUS_QUEUED . ')';
 		}
 
 		if ($sortBy) {
@@ -264,7 +264,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT	r.date_completed, r.declined, r.cancelled
+		$sql = 'SELECT	r.date_completed, r.declined, r.cancelled, a.status
 			FROM	articles a
 				LEFT JOIN review_assignments r ON (a.article_id = r.submission_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
@@ -277,7 +277,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$result =& $this->retrieve($sql, array($journalId, $reviewerId));
 
 		while (!$result->EOF) {
-			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1 && $result->fields['cancelled'] != 1) {
+			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1 && $result->fields['cancelled'] != 1 && $result->fields['status'] == STATUS_QUEUED) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;
@@ -325,7 +325,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		return $decisions;
 	}
-	
+
 	/**
 	 * Map a column heading value to a database value for sorting
 	 * @param string
