@@ -336,7 +336,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 
 		if ($editorId) {
-			$searchSql .= ' AND ed.user_id = ?';
+			$searchSql .= ' AND ea.user_id = ?';
 			$params[] = $editorId;
 		}
 
