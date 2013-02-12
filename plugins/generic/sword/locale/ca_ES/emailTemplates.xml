@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="ca_ES">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Notificació de dipòsit</subject>
+		<body>Enhorabona per l'acceptació de la teva presentació, "($ articleTitle)", per a ser publicada a {$journalName}. Si ho desitges, pot dipositar de forma automàtica la teva presentació a un o varis repositoris.
+
+Vagi a {$swordDepositUrl} per a continuar.
+
+Aquest correu electrònic ha estat generat per Open Journal Systems' - Conector SWORD de dipòsits.</body>
+		<description>Aquesta plantilla de correu s'utilitza per a notificar a l'autor de qüestions opcionals en dipòsits de tipus SWORD.</description>
+	</email_text>
+</email_texts>

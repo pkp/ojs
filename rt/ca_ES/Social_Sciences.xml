@@ -15,6 +15,7 @@
   *
   * Reading Tools version: Social Sciences (en_US)
   *
+  * $Id$
   -->
 
 <version id="Social_Sciences" locale="ca_ES">
@@ -42,7 +43,7 @@
 		</search>
 		<search>
 			<search_title>Open Archives Harvester del Public Knowledge Project</search_title>
-			<search_description>L&apos;Open Archives Harvester és un sistema lliure d&apos;indexació de metadades desenvolupat pel Public Knowledge Project, una iniciativa finançada pel govern federal del Canadà que vol promoure i fer més accessible l&apos;àmbit de la recerca. L&apos;OAI Harvester permet crear un índex per a cercar les metadades dels arxius admesos per l&apos;Open Archives Initiative (com ara els llocs web que treballen amb l&apos;Open Journal Systems o amb l&apos;Open Conference Systems).</search_description>
+			<search_description>L&apos;Open Archives Harvester és un sistema lliure d&apos;indexació de metadades desenvolupat pel Public Knowledge Project, una iniciativa finançada pel govern federal del Canadà que vol promoure i fer més accessible l&apos;àmbit de la recerca. L&apos;OAI Harvester permet crear un índex per cercar les metadades dels arxius admesos per l&apos;Open Archives Initiative (com ara els llocs web que treballen amb l&apos;Open Journal Systems o amb l&apos;Open Conference Systems).</search_description>
 			<url>http://pkp.sfu.ca/harvester/</url>
 			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
 			
@@ -182,7 +183,7 @@
 	<context>
 		<context_title>Ressenyes d&apos;obres acadèmiques</context_title>
 		<context_abbrev>Ressenyes d&apos;obres acadèmiques</context_abbrev>
-		<context_description>Feu clic als URL de cerca per a cercar ressenyes d&apos;obres acadèmiques.</context_description>
+		<context_description>Feu clic als URL de cerca per cercar ressenyes d&apos;obres acadèmiques.</context_description>
 
 		<search>
 			<search_title>The Anthropology Review Database (ARD)</search_title>
@@ -699,7 +700,7 @@ A més, el govern canadenc també ha creat una sèrie de portals que recopilen t
 		</search>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
-			<search_description>Aquesta eina de cerca de Vivisimo ofereix resultats agrupats per a una selecció de cerques. Permet fer metacerques a tot el web, o bé utilitzar les diverses pestanyes disponibles per a cercar notícies, imatges o productes mitjançant Bizrate o eBay.</search_description>
+			<search_description>Aquesta eina de cerca de Vivisimo ofereix resultats agrupats per a una selecció de cerques. Permet fer metacerques a tot el web, o bé utilitzar les diverses pestanyes disponibles per cercar notícies, imatges o productes mitjançant Bizrate o eBay.</search_description>
 			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customBlockManager.displayName">Administrador de blocs personalitzats</message>
+	<message key="plugins.generic.customBlockManager.description">Aquest connector permet administrar blocs personalitzats a la barra lateral. Podeu editar els blocs en la configuració de cada connector que es crea aquí.</message>	
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Podeu utilitzar aquest connector per a afegir o suprimir connectors de blocs personalitzats. A continuació, podeu editar el contingut a través dels complements del sistema <a href="{$systemPluginsUrl}">Connectors del sistema</a> (a la secció de connectors de bloc). Per col·locar el connector a la ubicació desitjada a la barra lateral, aneu al <a href="{$setupStep56}">pas d'instal·lació 5.6</a>.]]></message>
+	<message key="plugins.generic.customBlockManager.settings">Configuració</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nom del bloc</message>	
+	<message key="plugins.generic.customBlockManager.action">Acció</message>	
+	<message key="plugins.generic.customBlockManager.delete">Suprimeix</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Afegeix un bloc</message>	
+
+	<message key="plugins.generic.customBlock.content">Contingut</message>
+	<message key="plugins.generic.customBlock.saved">S'ha desat el contingut del bloc.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Connector de blocs personalitzats)</message>
+	<message key="plugins.generic.customBlock.description">Aquest bloc l'ha creat un usuari.</message>
+	<message key="plugins.generic.customBlock.editContent">Edita el contingut de la barra lateral</message>
+	<message key="plugins.generic.customBlock.contentRequired">Introduïu algun contingut. Si desitja suprimir aquest bloc, pot fer-ho amb el connector d'administració de blocs o anul·lant la selecció d'aquest bloc en el pas 5 de la configuració de la revista.</message>
+	<message key="plugins.generic.customBlock.edit">Edita</message>
+</locale>

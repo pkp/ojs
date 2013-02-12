@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.referral.name">Connector Referral</message>
+	<message key="plugins.generic.referral.description">El connector Referral rastreja en els articles l'URL d'enllaços refback entrants (p. ex. quan un lector segueix un enllaç extern a un article) i permet als autors/ores mantenir i publicar una llista actualitzada automàticament dels enllaços refback d'un article.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Edita enllaços refback</message>
+	<message key="plugins.generic.referral.createReferral">Crea enllaços refback</message>
+	<message key="plugins.generic.referral.referrals">Enllaços refback</message>
+	<message key="plugins.generic.referral.count">Visites</message>
+	<message key="plugins.generic.referral.dateAdded">Data de creació</message>
+	<message key="plugins.generic.referral.all">Tots</message>
+	<message key="plugins.generic.referral.all.empty">No hi ha cap enllaç refback.</message>
+	<message key="plugins.generic.referral.status.new">Nous</message>
+	<message key="plugins.generic.referral.status.new.empty">No hi ha enllaços refback nous.</message>
+	<message key="plugins.generic.referral.status.accept">Publicats</message>
+	<message key="plugins.generic.referral.status.accept.empty">No hi ha enllaços refback publicats.</message>
+	<message key="plugins.generic.referral.status.decline">Omesos</message>
+	<message key="plugins.generic.referral.status.decline.empty">No hi ha enllaços refback omesos.</message>
+	<message key="plugins.generic.referral.confirmDelete">Esteu segur/a que voleu suprimir aquest enllaç refback?</message>
+	<message key="plugins.generic.referral.nameRequired">Es requereix un títol per a l'enllaç refback.</message>
+	<message key="plugins.generic.referral.urlRequired">Es requereix un URL per a l'enllaç refback.</message>
+	<message key="plugins.generic.referral.settings">Configuració del connector Referral</message>
+	<message key="plugins.generic.referral.settings.description">El connector Referral captura els URL que enllacen amb els articles publicats en aquesta revista perquè l'autor/a els pugui organitzar i decidir si s'han de publicar o no. Aquest formulari permet que el gestor/a de la revista controli com es capturen aquests enllaços.</message>
+	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduïu una llista de patrons d'expressions regulars, un per línia, a tractar com exclusions per a un registre de referències. Això serveix per evitar que les sol·licituds dels motors de cerca saturin la llista de referències. Per a més informació sobre expressions regulars, vegeu <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new"> http://ca.php.net/manual/és/ref.pcre.php. </ a>/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Publicat</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Estas segur/a que vols publicar els refbacks seleccionats?</message>
+	<message key="plugins.generic.referral.status.declined">Ignorat</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Estas segur/a que vols ignorar els refbacks seleccionats?</message>
+</locale>

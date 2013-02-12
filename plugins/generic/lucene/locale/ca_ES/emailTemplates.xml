@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="ca_ES">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Error a l'indexar un article</subject>
+		<body>Ha aparegut un error d'indexació a l'actualitzar l'índex de l'article.
+
+El missatge d'error generat pel servei web (si existeix) és: "{$error}"
+
+Aquest correu l'ha generat el connector de cerca Lucene de l'Open Jornal System.</body>
+		<description>Aquesta plantilla de correu s'utilitza per a notificar al contacte tècnic
+de la revista en cas d'aparèixer algun error al indexar un article.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Error a l'indexar una revista</subject>
+		<body>Ha aparegut un error d'indexació a l'actualitzar l'índex de la revista  "{$journalName}".
+
+El missatge d'error generat pel servei web (si existeix) és: "{$error}"
+
+Aquest correu l'ha generat el connector de cerca Lucene de l'Open Jornal System.</body>
+		<description>Aquesta plantilla de correu s'utilitza per a notificar al contacte tècnic
+de la revista en cas d'aparèixer algun error al indexar una revista.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Error amb el servei d'indexació</subject>
+		<body>Ha aparegut un error al realitzar una cerca a l'instal·lació "{$siteName}".
+
+El missatge d'error generat pel servei web (si existeix) és: "{$error}"
+
+Aquest correu l'ha generat el connector de cerca Lucene de l'Open Jornal System.</body>
+		<description>Aquesta plantilla de correu s'utilitza per a notificar al contacte tècnic
+de la revista en cas d'aparèixer algun error al accedir al servei de cerca Solr.</description>
+	</email_text>
+</email_texts>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.quickSubmit.addToExisting">Afegeix a un número existent:</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestination">Destí de la tramesa</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Trieu si voleu afegir noves trameses a un nombre existent o si preferiu col·locar-les a la cua d'edició.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">Connector QuickSubmit</message>
+	<message key="plugins.importexport.quickSubmit.description">Connector per a trameses en un sol pas.</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Aquest connector permet afegir ràpidament trameses completes a la cua d'edició o directament a un número.</message>
+	<message key="plugins.importexport.quickSubmit.issueRequired">Seleccioneu un número on afegir l'article.</message>
+	<message key="plugins.importexport.quickSubmit.leaveUnpublished">No publicar per ara</message>
+	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Desa i crea'n una altra</message>
+	<message key="plugins.importexport.quickSubmit.submissionData">Dades de la tramesa</message>	
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Trieu el fitxer que s'usarà com galerada final per aquesta tramesa.</message>	
+	<message key="plugins.importexport.quickSubmit.submissionRequired">Heu de carregar un fitxer per aquesta tramesa.</message>	
+	<message key="plugins.importexport.quickSubmit.success">Article afegit</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">S'ha creat l'article correctament.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Tornar al connector QuickSubmit plugin.</message>
+</locale>

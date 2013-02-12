@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.staticPages.displayName">Connector de pàgines estàtiques</message>
+	<message key="plugins.generic.staticPages.description">Aquest connector permet gestionar el contingut estàtic.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Títol</message>
+	<message key="plugins.generic.staticPages.content">Contingut</message>
+
+	<message key="plugins.generic.staticPages.path">Ruta</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Cal instal·lar i activar el connector TinyMCE per a poder afegir o editar contingut.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Edita/Afegeix coningut</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Afegeix una pàgina estàtica</message>
+	<message key="plugins.generic.staticPages.addNewPage">Afegeix una nova pàgina</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Edita una pàgina estàtica</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">El següent formulari mostra totes les pàgines estàtiques que heu creat. Podeu editar o suprimir les pàgines mitjançant els enllaços situats a la part dreta.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Utilitzeu el formulari que segueix a continuació per a afegir o editar contingut de pàgina.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Es pot accedir a les pàgines a: {$pagesPath}, on  PATH% és un valor per triar. <strong><br />Nota:</strong> Dues pàgines no poden tenir la mateixa ruta.]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Aquesta ruta ja pertany a una altra pàgina estàtica.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">S'ha desat la pàgina correctament.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">S'ha suprimit la pàgina correctament.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">No s'ha creat cap pàgina</message>
+</locale>

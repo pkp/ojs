@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * External feed plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- External Feed -->
+	<message key="plugins.generic.externalFeed.displayName">Canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Bloc de canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.description">Publica contingut de canals de continguts externs d'Atom/RSS. Per exemple, WordPress o Drupal externs o una instal·lació d'OCS.</message>
+	<message key="plugins.generic.externalFeed.noneExist">No hi ha canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.title">Títol</message>
+	<message key="plugins.generic.externalFeed.posted">Publicat</message>
+	<message key="plugins.generic.externalFeed.more">Més...</message>
+
+	<!-- External Feed Management -->
+	<message key="plugins.generic.externalFeed.manager.feeds">Canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.manager.settings">Configuració</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Per visualitzar canals de continguts en blocs de seccions paral·leles, aneu al <a href="{$setupStep56}" target="_blank">pas d'instal·lació 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.title">Títol</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Visualitza la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Visualitza la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">No visualitzis la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Visualitza blocs</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Totes les pàgines</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Blocs en totes les pàgines</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Cap bloc en cap pàgina</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Només blocs a la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Cap bloc a la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.noneCreated">No hi ha canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.manager.create">Crea un nou canal de contingut extern</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Edita els canals de contingut externs</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">Esteu segur/a que voleu eliminar definitivament aquest canal de continguts?</message>
+
+	<!-- External Feed Settings -->
+	<message key="plugins.generic.externalFeed.settings">Configuració</message>
+	<message key="plugins.generic.externalFeed.settings.description">Personalitza la visualització dels ítems de canals de continguts externs.</message>
+	<message key="plugins.generic.externalFeed.settings.styleSheet">Visualització</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Full d'estil de canals de continguts externs</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Es pot substituir el full d'estil per defecte per un de personalitzat per a aquest connector. Aquí es pot veure el full d'estil per defecte</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Full d'estil personalitzat</message>
+
+
+	<!-- External Feed Form-->
+	<message key="plugins.generic.externalFeed.form.title">Títol</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Títol de la visualització de la pàgina d'inici i/o del bloc</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Proporcioneu un títol per a aquest canal de continguts</message>
+	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Proporcioneu una URL de canal de continguts vàlida (incloent-hi http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">La URL del canal de continguts extern d'Atom/RSS (p. ex. http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.display">Visualització</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Visualitza a la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">No visualitzis en un bloc</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Visualitza només en un bloc a la pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Visualitza en un bloc en totes les pàgines</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Limita a</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">ítems de canals de continguts</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Desa i crea'n un altre</message>
+
+</locale>

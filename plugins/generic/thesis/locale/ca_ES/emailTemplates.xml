@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="ca_ES">
+	<email_text key="THESIS_ABSTRACT_CONFIRM">
+		<subject>Enviament de resum de tesis</subject>
+		<body>Aquest correu s'ha generat automàticament pel formulari d'enviament de resums de tesis de la revista {$journalName}.
+
+Si us plau, confirma que la informació enviada és correcte. Un cop rebuda la treva confirmació, el resum es publicarà a l'edició en línia de la revista.
+
+Simplement respon per correu a {$thesisName} ({$thesisEmail}) amb el contingut d'aquest missatge i la teva confirmació, així com qualsevol clarificació o correcció recomanada.
+
+Gràcies.
+
+
+Títol : {$title}
+Autor/a : {$studentName}
+Titulació : {$degree}
+Nom de la titulació: {$degreeName}
+Departament : {$department}
+Universitat : {$university}
+Data d'acceptació : {$dateApproved}
+Supervisor/a : {$supervisorName}
+
+Resum
+--------
+{$abstract}
+
+{$thesisContactSignature}</body>
+		<description>Aquesta plantilla de correu s'utilitzarà per a confirmar una tramesa de resum d'una tesis d'un investigador/a. El correu s'envia al supervisor/a de l'investigador/ora, a qui es demana que confirmi els detalls del resum de tesis enviat.</description>
+	</email_text>
+</email_texts>

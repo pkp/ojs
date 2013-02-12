@@ -15,11 +15,12 @@
   *
   * User Interface - User Home
   *
+  * $Id$
   -->
 
-<topic id="user/topic/000007" locale="ca_ES" title="Pàgina inicial de l'usuari/usuària" toc="user/toc/000000" key="user.userHome">
+<topic id="user/topic/000007" locale="ca_ES" title="Àrea personal" toc="user/toc/000000" key="user.userHome">
 	<section>
-		<![CDATA[<p>Una vegada iniciada la sessió, es mostra l'enllaç «Pàgina inicial de l'usuari/usuària» a la barra de navegació superior. La informació que es mostra en fer clic en aquest enllaç varia segons si l'usuari/usuària està navegant per una revista determinada o si ho fa per tot el lloc web en conjunt.</p>]]>	
+		<![CDATA[<p>Una vegada iniciada la sessió, es mostra l'enllaç «Àrea personal» de l'usuari/ària a la barra de navegació superior. La informació que es mostra en fer clic en aquest enllaç varia segons si l'usuari/usuària està navegant per una revista determinada o si ho fa per tot el lloc web en conjunt.</p>]]>	
 	</section>
 
 <section title="Informació de la pàgina inicial de l'usuari/usuària per al lloc principal">
@@ -28,7 +29,7 @@
 
 </section>
 
-<section title="Informació de la pàgina inicial de l'usuari/usuària per a una revista">
+<section title="Informació de l'àrea personal de l'usuari/ària per a una revista">
 		<![CDATA[<p>Si l'usuari/usuària ha iniciat la sessió i està navegant per una revista determinada, només es mostra informació sobre aquesta revista. A més, a la secció <em>El meu compte</em> l'enllaç per a registrar-se en altres revistes es reemplaça per un enllaç anomenat «Mostra les meves revistes», que porta l'usuari/usuària a la pàgina inicial de l'usuari/usuària del lloc principal .</p>]]>
 
 </section>

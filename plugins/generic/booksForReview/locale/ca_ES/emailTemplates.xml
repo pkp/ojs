@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  * $Id$
+  -->
+<email_texts locale="ca_ES">
+	<email_text key="BFR_REVIEW_REMINDER">
+		<subject>Sol·licitud de Ressenya: Recordatori de la data de venciment</subject>
+    <body>Benvolgut/da {$authorName}:
+
+Aquest és un recordatori de la ressenya del llibre {$bookForReviewTitle} que s'ha de realitzar abans de {$bookForReviewDueDate}.
+
+Per a enviar la teva ressenya del llibre, inicia la sessió al Web de la revista i completa el procés de enviament de revisió en línia. Per a facilitar-te l'accés, a continuació trobaràs un enllaç directe:
+
+URL de la tramesa: {$submissionUrl}
+
+Si us plau, no dubtis a posar-te en contacte amb nosaltres si tens algun alguna pregunta o inquietud sobre aquesta ressenya.
+
+Gràcies per la teva contribució a la revista
+
+{$editorialContactSignature}</body>
+    <description>Aquesta plantilla de correu s'envia autoàmticament a l'autor/a de la ressenya d'un llibre com a recordatori quan la data de venciment s'apropa.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER_LATE">
+		<subject>Ressenya de llibre: Data de venciment</subject>
+    <body>Benvolgut/da {$authorName}:
+
+Aquest és un recordatori de la ressenya del llibre {$bookForReviewTitle} que va vèncer el {$bookForReviewDueDate} però que encara no hem rebut.
+
+Per a enviar la teva ressenya del llibre, inicia la sessió al Web de la revista i completa el procés de enviament de revisió en línia. Per a facilitar-te l'accés, a continuació trobaràs un enllaç directe:
+
+URL de la tramesa: {$submissionUrl}
+
+Si us plau, no dubtis a posar-te en contacte amb nosaltres si tens algun alguna pregunta o inquietud sobre aquesta ressenya.
+
+Gràcies per la teva contribució a la revista
+
+{$editorialContactSignature}</body>
+		<description>Aquesta plantilla de correu s'envia automàticament a l'autor/a de la ressenya d'un llibre com a recordatori de que s'ha complert la data de venciment.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_ASSIGNED">
+		<subject>Ressenya de llibre: Llibre assignat</subject>
+    <body>Benvolgut/da {$authorName}:
+
+Aquest correu confirma que se t'ha assignat la ressenya del llibre {$bookForReviewTitle} que ha de ser entregada abans del {$bookForReviewDueDate}.
+
+Si us plau, confirmeu que l'adreça de correu del vostre perfil d'usuari/ària està al dia. Aquesta adreça s'utilitzarà per a enviar-te una còpia de la petició de revisió.
+
+L'adreça de correu de la que disposem al nostre arxiu és:
+{$authorMailingAddress}
+
+Si l'adreça fos incompleta o ja no està disponible, si us plau utilitza la següent adreça URL per a actualitzar el teu perfil:
+
+{$userProfileUrl}
+
+Per a enviar la teva ressenya, inicia la sessió al Web de la revista i completa el procés d'enviament d'articles en línia amb:
+
+URL: {$submissionUrl}
+
+Si us plau, no dubtis a posar-te en contacte amb nosaltres si tens algun alguna pregunta o inquietud sobre aquesta ressenya.
+
+{$editorialContactSignature}</body>
+		<description>Aquesta plantilla de correu l'envien els editors als autors/es de ressenyes de llibres quan l'editor/a assigna un llibre a un autor/a per a ser revisat.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>Ressenya de llibre</subject>
+    <body>Benvolgut/da {$authorName}:
+
+Malauradament, en aquest moment no puc assignar-te la petició de revisió del llibre {$bookForReviewTitle}.
+
+Espero consideris la revisió d'un altre petició de la nostre llista, ja sigui en aquest moment o en un futur.
+
+{$editorialContactSignature}</body>
+		<description>Aquesta plantilla de correu l'envia un editor/a a l'autor/a interessat quan la petició ja no està disponible per a revisió.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_REQUESTED">
+		<subject>Ressenya de llibre: Sol·licitud</subject>
+		<body>Benvolgut/da {$editorName}:
+
+Estic interessat a escriure la ressenya del llibre {$bookForReviewTitle}.
+
+Si us plau, podries confirmar que el llibre encara es troba disponible per a revisió?
+
+{$authorContactSignature}</body>
+		<description>Aquesta plantilla de correu s'envia a un editor/a quan un l'autor/a està interessat a revisar un llibre de la llista.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>Ressenya de llibre: Llibre enviat</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest missatge confirma que s'ha enviat el llibre {$bookForReviewTitle} a la següent adreça:
+{$authorMailingAddress}
+
+Per a enviar la teva ressenya, inicia la sessió al Web de la revista i completa el procés d'enviament d'articles en línia amb:
+
+URL: {$submissionUrl}
+
+Si us plau, no dubtis a posar-te en contacte amb nosaltres si tens algun alguna pregunta o inquietud sobre aquesta ressenya.
+
+{$editorialContactSignature}</body>
+		<description>Aquesta plantilla de correu l'envia un editor/a a un autor/a de ressenyes quan l'editor/a envia una copia del llibre a un autor/a.</description>
+	</email_text>
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>Ressenya de llibre</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest missatge confirma que has estat retirat de la llista de revisors del llibre {$bookForReviewTitle} i que la revisió la realitzarà un altre autor/a.
+
+Espero consideris la revisió d'un altre petició de la nostre llista, ja sigui en aquest moment o en un futur.
+
+{$editorialContactSignature}</body>
+		<description>Aquesta plantilla de correu l'envia un editor/a a un autor/a de ressenyes quan un llibre ja no està disponible per a revisió.</description>
+	</email_text>
+</email_texts>

@@ -15,7 +15,7 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ca_ES" complete="false" name="Catalan" iso639-2b="cat" iso639-3="cat" />
+	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
 	<locale key="cs_CZ" complete="false" name="Czech" iso639-2b="cze" iso639-3="ces" />
 	<locale key="da_DK" complete="false" name="Danish" iso639-2b="dan" iso639-3="dan" />
 	<locale key="de_DE" name="Deutsch" iso639-2b="ger" iso639-3="deu" />

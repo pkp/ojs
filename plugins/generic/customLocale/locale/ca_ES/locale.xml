@@ -1,18 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/customLocale/locale/ca_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
+  * $Id$
   -->
  
-<locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.customLocale.name">Connector de personalització de la configuració regional</message>
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customLocale.name">Connector de la configuració regional personalitzat</message>
 	<message key="plugins.generic.customLocale.description">Aquest connector permet personalitzar el text de la interfície d'usuari que l'OJS utilitza per defecte.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Aquesta pàgina enumera totes les configuracions regionals que hi ha instal·lades per a la revista.</message>
@@ -20,14 +18,15 @@
 	<message key="plugins.generic.customLocale.fileDescription">Introduïu text en el camp de text personalitzat corresponent. Deixeu en blanc el camp de text personalitzat si voleu utilitzar el text per defecte de l'OJS.</message>
 	<message key="plugins.generic.customLocale.localeName">Nom de la configuració regional</message>
 	<message key="plugins.generic.customLocale.localeKey">Clau</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Introduïu una clau regional sencera que vulgueu buscar.</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Valor</message>
 	<message key="plugins.generic.customLocale.customize">Personalitza</message>
 	<message key="plugins.generic.customLocale.availableLocales">Configuracions regionals disponibles</message>
 
 	<message key="plugins.generic.customLocale.locale">{$locale} Configuració regional</message>
-	<message key="plugins.generic.customLocale.localeFiles">Fitxers de la configuració regional</message>
+	<message key="plugins.generic.customLocale.localeFiles">Fitxers de configuració regional</message>
 	<message key="plugins.generic.customLocale.file.filename">Nom del fitxer</message>
-	<message key="plugins.generic.customLocale.file.edit">S'està editant {$filename}</message>
+	<message key="plugins.generic.customLocale.file.edit">Edició de {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Text per defecte</message>
 	<message key="plugins.generic.customLocale.file.custom">Text personalitzat</message>
-</locale>
+</locale> 

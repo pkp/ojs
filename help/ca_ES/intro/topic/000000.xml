@@ -15,6 +15,7 @@
   *
   * Introduction to OJS Main 
   *
+  * $Id$
   -->
 
 <topic id="intro/topic/000000" locale="ca_ES" title="Introducció a l'OJS" toc="index/toc/000000" subtoc="intro/toc/000000" key="intro.index">
@@ -29,6 +30,6 @@
 <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Suport">
-		<![CDATA[<p>El <a href="http://pkp.sfu.ca/support/forum/" target="_blank">lloc web</a> del PKP posa a la vostra disposició un fòrum de suport i un sistema d'informació d'errors per a problemes tècnics.</p><p>Si teniu cap consulta sobre el treball amb l'OJS o les polítiques d'una revista determinada, poseu-vos en contacte amb l'administrador/a de la revista o amb els contactes de suport, que trobareu enumerats a la pàgina «Quant a la revista».</p>]]>
+		<![CDATA[<p>El <a href="http://pkp.sfu.ca/support/forum/" target="_blank">lloc web</a> del PKP posa a la vostra disposició un fòrum de suport i un sistema d'informació d'errors per a problemes tècnics.</p><p>Si teniu cap consulta sobre el treball amb l'OJS o les polítiques d'una revista determinada, poseu-vos en contacte amb l'administrador/a de la revista o amb els contactes de suport, que trobareu enumerats a la pàgina «Sobre la revista».</p>]]>
 	</section>
 </topic>

@@ -10,11 +10,12 @@
   * La traducció amplia la tasca previament realitzada per a la UOC i l'IEC incorporant les
   * eines de lectura i l’ajuda.
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c)
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Frequently Asked Questions 
   *
+  * $Id$
   -->
 
 <topic id="intro/topic/000001" locale="ca_ES" title="Preguntes més freqüents" toc="intro/toc/000000" key="intro.faq">
@@ -73,7 +74,7 @@
 	</section>
 	<section title="7. Com pot la revista presentar un registre de l'historial de persones que han treballat a l'equip editorial?">
 		<![CDATA[
-<p>L'administrador/a de la revista pot introduir aquesta informació fent clic a l'enllaç «Equip editorial» de la pàgina «Administració de la revista». A més, també pot crear una pàgina d'«historial de l'equip editorial» que s'afegirà com a nou element a la pàgina «Quant a la revista» (element 2.5 de la configuració). En aquesta pàgina és possible registrar el nom, el càrrec editorial i el temps que aquests membres han treballat a l'equip.</p>
+<p>L'administrador/a de la revista pot introduir aquesta informació fent clic a l'enllaç «Equip editorial» de la pàgina «Administració de la revista». A més, també pot crear una pàgina d'«historial de l'equip editorial» que s'afegirà com a nou element a la pàgina «Sobre la revista» (element 2.5 de la configuració). En aquesta pàgina és possible registrar el nom, el càrrec editorial i el temps que aquests membres han treballat a l'equip.</p>
 		]]>
 	</section>
 	<section title="8. Com puc atorgar permisos als lectors/es perquè es donin d'alta com a revisors/es de la revista?">

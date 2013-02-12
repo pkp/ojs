@@ -1,28 +1,26 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/generic/thesisFeed/locale/ca_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
+  * $Id$
   -->
  
-<locale name="ca_ES" full_name="Català">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.thesisfeed.displayName">Connector de canals d'informació per als resums de tesis</message>
 	<message key="plugins.generic.thesisfeed.description">Aquest connector genera canals d'informació RSS/Atom per als resums de tesis.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Configuració</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Mostra enllaços als canals d'informació a totes les pàgines de la revista.</message>
-	<message key="plugins.generic.thesisfeed.settings.homepage">Mostra enllaços als canals d'informació només a la pàgina inicial i a la pàgina de resums de tesis.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Mostra enllaços als canals d'informació només a la pàgina inicial i de la pàgina de resums de tesis.</message>
 	<message key="plugins.generic.thesisfeed.settings.thesis">Mostra enllaços als canals d'informació només a la pàgina de resums de tesis.</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limita els canals d'informació als</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis2">resums de tesis tramesos més recentment.</message>
 	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Introduïu un nombre enter positiu per al nombre de resums de tesis.</message>
-	<message key="plugins.generic.thesisfeed.atom.altText">Logotip d'Atom</message>
-	<message key="plugins.generic.thesisfeed.rss1.altText">Logotip d'RSS1</message>
-	<message key="plugins.generic.thesisfeed.rss2.altText">Logotip d'RSS2</message>
-</locale>
+	<message key="plugins.generic.thesisfeed.atom.altText">Logotip Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Logotip RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Logotip RSS2</message>
+</locale> 

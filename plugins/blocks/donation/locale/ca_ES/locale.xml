@@ -1,17 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/donation/locale/ca_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
+  * $Id$
   -->
  
-<locale name="ca_ES" full_name="Català">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.block.donation.displayName">Bloc de donacions</message>
 	<message key="plugins.block.donation.description">Aquest connector proporciona un enllaç a la barra lateral per a acceptar donacions.</message>
-</locale>
+</locale> 

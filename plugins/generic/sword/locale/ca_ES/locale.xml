@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id: locale.xml,v 1.23 2010/01/21 18:52:13 asmecher Exp $
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sword.displayName">Connector SWORD</message>
+	<message key="plugins.generic.sword.description">Aquest connector permet als administradors/ores de la revista i als autors/ores (opcional) dipositar articles mitjançant el protocol SWORD.</message>
+	<message key="plugins.generic.sword.enabled">S'ha activat el connector SWORD.</message>
+	<message key="plugins.generic.sword.settings">Configuració</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permet a l'autor/a indicar un punt de dipòsit.</message>
+	<message key="plugins.generic.sword.settings.depositPoints">Punts de dipòsit.</message>
+	<message key="plugins.generic.sword.depositPoints.create">Crea un punt de dipòsit.</message>
+	<message key="plugins.generic.sword.depositPoints.edit">Edita un punt de dipòsit.</message>
+	<message key="plugins.generic.sword.depositPoints.type.automatic">Automàtic</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Opcional; Flexible</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fix</message>
+	<message key="plugins.generic.sword.depositPoints.type.manager">Només per a l'administrador/a</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipus de punt de dipòsit:</h4> <p><strong>Automàtic</strong>: El dipòsit es produeix de forma automàtica. S'indica el punt de dipòsit SWORD complet. Ha d'indicar un nom d'usuari/ària i una contrasenya. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Opcional; Flexible</strong>: L'autor/a pot decidir si voleu dipositar o no. L'URL facilitat ofereix un document de servei i l'autor/a pot decidir quin punt de dipòsit concret utilitzar d'aquest document. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Opcional; Fix</strong>: L'autor/a pot decidir si vol dipositar o no. L'URL indica el punt de dipòsit SWORD concret. El dipòsit es produeix després de notificar la confirmació a l'autor/a.<br/> <strong>Només per a l'administrador/a</strong>: Només l'administrador de la revista pot usar aquest punt de dipòsit. L'URL indica un document de servei. L'administrador de la revista realitza el dipòsit manualment utilitzant la interfície d'Importació/Exportació de la gestió de la revista.</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">Si no indica aquí una contrasenya, se us demanarà quan vostè o l'autor/a realitzeu el dipòsit. Aquesta contrasenya serà visible per a tots els administradors/oresde la revista i es guardarà sense encriptar a la base de dades.</message>
+	<message key="plugins.generic.sword.depositPoints.name">Nom</message>
+	<message key="plugins.generic.sword.automaticDepositComplete">L'element "{$itemTitle}" s'ha dipositat automàticament al dipòsit "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.depositComplete">L'element "{$itemTitle}" s'ha dipositat al repositori "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p> Si ho desitja, pot utilitzar el següent formulari per dipositarla seva tramesa "{$submissionTitle}" en un dels dipòsits de la llista. Per a seleccionar en quin repositori desitja dipositar la tramesa, utilitzeu les caselles de verificació situades a la part inferior de la columna esquerra. Cada dipòsit permet triar un punt de dipòsit d'una llista desplegable.</p>]]></message>
+	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p> Si ho desitja, pot indicar un punt de dipòsit compatible amb SWORD en el següent formulari. Per a això, indiqueu un URL, nom d'usuari/ària i contrasenya de SWORD al dipòsit i es dipositarà la tramesa.</p>]]></message>
+
+	<message key="plugins.importexport.sword.displayName">Connector de dipòsit d'importació/exportació SWORD</message>
+	<message key="plugins.importexport.sword.description">Diposita articles en dipòsits remots mitjançant el protocol de dipòsit SWORD.</message>
+	<message key="plugins.importexport.sword.deposit">Dipòsit</message>
+	<message key="plugins.importexport.sword.serviceDocUrl">URL del document de servei</message>
+	<message key="plugins.importexport.sword.depositUrl">URL del punt de dipòsit</message>
+	<message key="plugins.importexport.sword.depositPoint">Punts de dipòsit</message>
+	<message key="plugins.importexport.sword.depositPoint.addRemove">Afegeix/Suprimeix</message>
+	<message key="plugins.importexport.sword.depositGalleys">Diposita galerades</message>
+	<message key="plugins.importexport.sword.depositEditorial">Diposita els arxius d'editorial més recents</message>
+	<message key="plugins.importexport.sword.depositSuccessful">Dipòsit correcte</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">Els elements seleccionats s'han dipositat.</message>
+	<message key="plugins.importexport.sword.depositFailed">Dipòsit erroni</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permetre als gestors de la revista i (opcionalment) als autors dipositar articles mitjançant el protocol SWORD. Tingues en compte que aquest connector requereix l'extensió Zip, la qual NO es troba actualment instal·lada al servidor.</message>
+</locale>

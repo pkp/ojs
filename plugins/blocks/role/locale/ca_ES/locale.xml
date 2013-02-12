@@ -1,17 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
-<!--
-  * plugins/blocks/role/locale/ca_ES/locale.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
+  * $Id$
   -->
  
-<locale name="ca_ES" full_name="Català">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.block.role.displayName">Bloc per a rols</message>
-	<message key="plugins.block.role.description">Aquest connector ofereix un bloc de barra lateral que conté informació específica per als rols, com ara el nombre de trameses o enllaços ràpids per a editors, autors, etc.</message>
-</locale>
+	<message key="plugins.block.role.description">Aquest connector ofereix un bloc a la barra lateral que conté informació específica per als rols, com ara el nombre de trameses o enllaços ràpids per a editors/ores, autors/ores, etc.</message>
+</locale> 

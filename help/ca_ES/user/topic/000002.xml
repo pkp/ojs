@@ -15,10 +15,11 @@
   *
   * User Interface - About
   *
+  * $Id$
   -->
 
-<topic id="user/topic/000002" locale="ca_ES" title="Quant a" toc="user/toc/000000" key="user.about">
+<topic id="user/topic/000002" locale="ca_ES" title="Sobre la revista" toc="user/toc/000000" key="user.about">
 	<section>
-		<![CDATA[<p>La pàgina «Quant a la revista» presenta les polítiques, els procediments i altres dades rellevants de la revista amb l'objectiu d'aportar al màxim de transparència possible a les obres publicades. Aquests són els continguts que habitualment consten a les pàgines preliminars d'una revista. Es recomana als autors/es potencials que consultin aquesta pàgina per a conèixer l'àmbit i la temàtica de la revista, la seva política de revisió de persones expertes i les convencions per a la formatació i preparació de trameses, així com el procediment que cal seguir per a trametre un article a la revista.</p>]]>	
+		<![CDATA[<p>La pàgina «Sobre la revista» presenta les polítiques, els procediments i altres dades rellevants de la revista amb l'objectiu d'aportar al màxim de transparència possible a les obres publicades. Aquests són els continguts que habitualment consten a les pàgines preliminars d'una revista. Es recomana als autors/es potencials que consultin aquesta pàgina per a conèixer l'àmbit i la temàtica de la revista, la seva política de revisió de persones expertes i les convencions per a la formatació i preparació de trameses, així com el procediment que cal seguir per a trametre un article a la revista.</p>]]>	
 	</section>
 </topic>
