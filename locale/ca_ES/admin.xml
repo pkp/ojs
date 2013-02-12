@@ -1,12 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale/en_US/admin.xml
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/admin.xml
   *
   * Copyright (c) 2000-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (English) locale.
-  *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
 
 <locale name="ca_ES" full_name="Català">
