@@ -22,6 +22,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 		parent::ManagerSettingsTabHandler();
 		$this->setPageTabs(array(
 			'details' => 'controllers.tab.settings.details.form.DetailsForm',
+			'masthead' => 'controllers.tab.settings.masthead.form.MastheadForm',
 			'contact' => 'lib.pkp.controllers.tab.settings.contact.form.ContactForm',
 			'policiesold' => 'controllers.tab.settings.policies.form.PoliciesForm',
 			'policies' => 'lib.pkp.controllers.tab.settings.policies.form.PoliciesForm',

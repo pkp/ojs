@@ -24,38 +24,6 @@
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
 
 <table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="name" required="true" key="manager.setup.journalTitle"}</td>
-		<td class="value"><input type="text" name="name[{$formLocale|escape}]" id="name" value="{$name[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="acronym" required="true" key="manager.setup.journalInitials"}</td>
-		<td class="value"><input type="text" name="acronym[{$formLocale|escape}]" id="acronym" value="{$acronym[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="abbreviation" key="manager.setup.journalAbbreviation"}</td>
-		<td class="value"><input type="text" name="abbreviation[{$formLocale|escape}]" id="abbreviation" value="{$abbreviation[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
-		<td class="value"><input type="text" name="printIssn" id="printIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="onlineIssn" key="manager.setup.onlineIssn"}</td>
-		<td class="value">
-			<input type="text" name="onlineIssn" id="onlineIssn" value="{$onlineIssn|escape}" size="8" maxlength="16" class="textField" />
-			<br />
-			<span class="instruct">{translate key="manager.setup.issnDescription"}</span>
-		</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
-		<td class="value">
-			<textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea richContent">{$mailingAddress|escape}</textarea>
-			<br />
-			<span class="instruct">{translate key="manager.setup.mailingAddressDescription"}</span>
-		</td>
-	</tr>
 	{if $categoriesEnabled}
 		<tr>
 			<td class="label">{fieldLabel name=categories key="manager.setup.categories"}</td>

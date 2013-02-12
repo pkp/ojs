@@ -20,14 +20,7 @@ class DetailsForm extends ContextSettingsForm {
 	 */
 	function DetailsForm($wizardMode = false) {
 		$settings = array(
-			'name' => 'string',
-			'acronym' => 'string',
-			'abbreviation' => 'string',
-			'printIssn' => 'string',
-			'onlineIssn' => 'string',
-			'mailingAddress' => 'string',
 			'categories' => 'object',
-			'useEditorialBoard' => 'bool',
 			'publisherInstitution' => 'string',
 			'publisherUrl' => 'string',
 			'publisherNote' => 'string',
@@ -36,10 +29,6 @@ class DetailsForm extends ContextSettingsForm {
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/details/form/detailsForm.tpl', $wizardMode);
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.setup.form.journalTitleRequired'));
-		$this->addCheck(new FormValidatorLocale($this, 'acronym', 'required', 'manager.setup.form.journalInitialsRequired'));
-		$this->addCheck(new FormValidatorISSN($this, 'printIssn', 'optional', 'manager.setup.form.issnInvalid'));
-		$this->addCheck(new FormValidatorISSN($this, 'onlineIssn', 'optional', 'manager.setup.form.issnInvalid'));
 	}
 
 	/**
@@ -47,7 +36,7 @@ class DetailsForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'acronym', 'abbreviation', 'publisherNote', 'history');
+		return array('name', 'publisherNote', 'history');
 	}
 
 	/**
