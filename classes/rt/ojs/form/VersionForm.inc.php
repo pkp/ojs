@@ -72,7 +72,6 @@ class VersionForm extends Form {
 			$templateMgr->assign('versionId', $this->versionId);
 		}
 
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		parent::display();
 	}
 

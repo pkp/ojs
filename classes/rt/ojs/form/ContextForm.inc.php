@@ -77,7 +77,6 @@ class ContextForm extends Form {
 			$templateMgr->assign('contextId', $this->contextId);
 		}
 
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 		parent::display();
 	}
 

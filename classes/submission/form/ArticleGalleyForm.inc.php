@@ -69,7 +69,6 @@ class ArticleGalleyForm extends Form {
 		if (isset($this->galley)) {
 			$templateMgr->assign_by_ref('galley', $this->galley);
 		}
-		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);

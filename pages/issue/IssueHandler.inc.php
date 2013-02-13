@@ -64,7 +64,6 @@ class IssueHandler extends Handler {
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
-		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
@@ -90,7 +89,6 @@ class IssueHandler extends Handler {
 
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
-		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
@@ -122,7 +120,6 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', AppLocale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
-		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}
 

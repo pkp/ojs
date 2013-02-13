@@ -39,7 +39,6 @@ class IssueManagementHandler extends EditorHandler {
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}
 
@@ -77,7 +76,6 @@ class IssueManagementHandler extends EditorHandler {
 		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
@@ -145,7 +143,6 @@ class IssueManagementHandler extends EditorHandler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
-		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
 		$issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
@@ -179,7 +176,6 @@ class IssueManagementHandler extends EditorHandler {
 			import('classes.issue.IssueAction');
 			$issueAction = new IssueAction();
 			$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
-			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 			$issueForm->display();
 		}
 	}
@@ -213,7 +209,6 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$issueForm->display();
 	}
 
@@ -325,7 +320,6 @@ class IssueManagementHandler extends EditorHandler {
 
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign_by_ref('issue', $issue);
 
 		$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
@@ -599,7 +593,6 @@ class IssueManagementHandler extends EditorHandler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
-		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');

@@ -39,7 +39,6 @@ class UserHandler extends PKPUserHandler {
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$journal =& $request->getJournal();
-		$templateMgr->assign('helpTopicId', 'user.userHome');
 
 		$user =& $request->getUser();
 		$userId = $user->getId();

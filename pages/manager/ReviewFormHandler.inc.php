@@ -44,7 +44,6 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('reviewForms', $reviewForms);
 		$templateMgr->assign('completeCounts', $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true));
 		$templateMgr->assign('incompleteCounts', $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false));
-		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/reviewForms.tpl');
 	}
 
@@ -165,7 +164,6 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->assign('completeCounts', $completeCounts);
 		$templateMgr->assign('incompleteCounts', $incompleteCounts);
 		$templateMgr->register_function('form_language_chooser', array('ReviewFormHandler', 'smartyFormLanguageChooser'));
-		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/previewReviewForm.tpl');
 	}
 
@@ -351,7 +349,6 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->assign('reviewFormId', $reviewFormId);
 		import('lib.pkp.classes.reviewForm.ReviewFormElement');
 		$templateMgr->assign_by_ref('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
-		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('manager/reviewForms/reviewFormElements.tpl');
 	}
 

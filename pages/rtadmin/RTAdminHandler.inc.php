@@ -45,7 +45,6 @@ class RTAdminHandler extends Handler {
 
 			$this->setupTemplate($request);
 			$templateMgr =& TemplateManager::getManager($request);
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->assign('versionTitle', isset($version)?$version->getTitle():null);
 			$templateMgr->assign('enabled', $rt->getEnabled());
 
@@ -69,7 +68,6 @@ class RTAdminHandler extends Handler {
 			$this->setupTemplate($request);
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('journals', $journals);
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/journals.tpl');
 		} else {
 			// Not logged in.
@@ -107,7 +105,6 @@ class RTAdminHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign_by_ref('versions', $versions);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 		$templateMgr->display('rtadmin/validate.tpl');
 	}
 

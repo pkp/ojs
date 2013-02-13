@@ -22,7 +22,6 @@ class OJSPaymentAction {
 
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($form->isLocaleResubmit()) {
 			$form->readInputData();
@@ -41,7 +40,6 @@ class OJSPaymentAction {
 
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		$settingsForm->readInputData();
 
@@ -62,7 +60,6 @@ class OJSPaymentAction {
 		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
@@ -87,7 +84,6 @@ class OJSPaymentAction {
 
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -106,7 +102,6 @@ class OJSPaymentAction {
 	 */
 	function payMethodSettings($request) {
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		$journal =& $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
@@ -125,9 +120,6 @@ class OJSPaymentAction {
 
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
-
- 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();

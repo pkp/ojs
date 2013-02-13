@@ -52,7 +52,6 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('metaCitations', $metaCitations);
-		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.copyediting');
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 

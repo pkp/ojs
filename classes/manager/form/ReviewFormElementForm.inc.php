@@ -62,7 +62,6 @@ class ReviewFormElementForm extends Form {
 		$templateMgr->assign('multipleResponsesElementTypesString', ';'.implode(';', ReviewFormElement::getMultipleResponsesElementTypes()).';');
 		import('lib.pkp.classes.reviewForm.ReviewFormElement');
 		$templateMgr->assign_by_ref('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
-		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		parent::display();
 	}
 

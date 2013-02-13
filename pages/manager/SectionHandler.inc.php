@@ -41,7 +41,6 @@ class SectionHandler extends ManagerHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('emptySectionIds', $emptySectionIds);
-		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		$templateMgr->display('manager/sections/sections.tpl');
 	}
 

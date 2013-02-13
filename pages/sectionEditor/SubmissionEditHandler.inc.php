@@ -98,10 +98,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
 		}
 
-		if ($isEditor) {
-			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary');
-		}
-
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
@@ -273,7 +269,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('allowResubmit', $allowResubmit);
 		$templateMgr->assign('allowCopyedit', $allowCopyedit);
 
-		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 	}
 
@@ -337,7 +332,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 		}
 
-		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
 
@@ -516,7 +510,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getId()));
 
-			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->assign('reviewerDatabaseLinks', $journal->getSetting('reviewerDatabaseLinks'));
 			$templateMgr->assign('sort', $sort);
@@ -628,7 +621,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 
-		$templateMgr->assign('helpTopicId', 'journal.roles.index');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
 	}
 
@@ -977,7 +969,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('localeNames', AppLocale::getAllLocales());
-			$templateMgr->assign('helpTopicId', 'journal.roles.index');
 			$templateMgr->display('sectionEditor/userProfile.tpl');
 		}
 	}
@@ -1066,7 +1057,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewId', $reviewId);
 		$templateMgr->assign('articleId', $reviewAssignment->getSubmissionId());
-		//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$templateMgr->display('sectionEditor/previewReviewForm.tpl');
 	}
 
@@ -1117,7 +1107,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('reviewId', $reviewId);
 			$templateMgr->assign('assignedReviewFormId', $reviewAssignment->getReviewFormId());
 			$templateMgr->assign_by_ref('reviewForms', $reviewForms);
-			//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 			$templateMgr->display('sectionEditor/selectReviewForm.tpl');
 		}
 	}
@@ -1250,7 +1239,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			));
 			$templateMgr->assign('articleId', $articleId);
 
-			$templateMgr->assign('helpTopicId', 'journal.roles.copyeditor');
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
@@ -1744,7 +1732,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('statistics', $layoutEditorStatistics);
-			$templateMgr->assign('helpTopicId', 'journal.roles.layoutEditor');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
@@ -2321,7 +2308,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageTitle', 'user.role.proofreaders');
 			$templateMgr->assign('actionHandler', 'selectProofreader');
 
-			$templateMgr->assign('helpTopicId', 'journal.roles.proofreader');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}

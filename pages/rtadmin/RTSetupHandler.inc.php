@@ -65,7 +65,6 @@ class RTSetupHandler extends RTAdminHandler {
 			));
 			$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
 		} else {
 			$request->redirect(null, $request->getRequestedPage());

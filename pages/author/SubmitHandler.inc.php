@@ -180,7 +180,6 @@ class SubmitHandler extends AuthorHandler {
 						$templateMgr->assign('canExpedite', true);
 					}
 					$templateMgr->assign('articleId', $articleId);
-					$templateMgr->assign('helpTopicId','submission.index');
 					$templateMgr->display('author/submit/complete.tpl');
 
 				} else {

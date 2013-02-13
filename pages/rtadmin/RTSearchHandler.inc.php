@@ -74,7 +74,6 @@ class RTSearchHandler extends RTAdminHandler {
 			import('lib.pkp.classes.core.ArrayItemIterator');
 			$templateMgr->assign_by_ref('searches', new ArrayItemIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/searches.tpl');
 		}
 		else $request->redirect(null, null, 'versions');

@@ -150,7 +150,6 @@ class EditorHandler extends SectionEditorHandler {
 
 		$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
-		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 		$templateMgr->display('editor/index.tpl');
 	}
 
@@ -201,20 +200,16 @@ class EditorHandler extends SectionEditorHandler {
 		switch($page) {
 			case 'submissionsUnassigned':
 				$functionName = 'getEditorSubmissionsUnassigned';
-				$helpTopicId = 'editorial.editorsRole.submissions.unassigned';
 				break;
 			case 'submissionsInEditing':
 				$functionName = 'getEditorSubmissionsInEditing';
-				$helpTopicId = 'editorial.editorsRole.submissions.inEditing';
 				break;
 			case 'submissionsArchives':
 				$functionName = 'getEditorSubmissionsArchives';
-				$helpTopicId = 'editorial.editorsRole.submissions.archives';
 				break;
 			default:
 				$page = 'submissionsInReview';
 				$functionName = 'getEditorSubmissionsInReview';
-				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
 		$filterEditor = $request->getUserVar('filterEditor');
@@ -284,7 +279,6 @@ class EditorHandler extends SectionEditorHandler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
-		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('editor/submissions.tpl');
@@ -478,7 +472,6 @@ class EditorHandler extends SectionEditorHandler {
 				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}
 	}

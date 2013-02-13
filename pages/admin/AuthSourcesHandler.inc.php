@@ -43,7 +43,6 @@ class AuthSourcesHandler extends AdminHandler {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('sources', $sources);
 		$templateMgr->assign('pluginOptions', $pluginOptions);
-		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/auth/sources.tpl');
 	}
 

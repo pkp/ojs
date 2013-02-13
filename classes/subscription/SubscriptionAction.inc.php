@@ -49,7 +49,6 @@ class SubscriptionAction {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('individualStatus', $individualStatus);
 		$templateMgr->assign_by_ref('institutionalStatus', $institutionalStatus);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		$templateMgr->display('subscription/subscriptionsSummary.tpl');
 	}
@@ -90,7 +89,6 @@ class SubscriptionAction {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		// Set search parameters
 		foreach (SubscriptionAction::getSearchFormDuplicateParameters() as $param)
@@ -304,7 +302,6 @@ class SubscriptionAction {
 			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 		$templateMgr->assign('subscriptionId', $request->getUserVar('subscriptionId'));
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('redirect', $redirect);
@@ -393,7 +390,6 @@ class SubscriptionAction {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		$templateMgr->display('subscription/subscriptionTypes.tpl');
 	}
@@ -529,7 +525,6 @@ class SubscriptionAction {
 		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);
@@ -560,7 +555,6 @@ class SubscriptionAction {
 		$subscriptionPolicyForm->readInputData();
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);

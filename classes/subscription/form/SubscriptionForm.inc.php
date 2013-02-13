@@ -117,7 +117,6 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign_by_ref('validStatus', $this->validStatus);
 		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);
 		$templateMgr->assign_by_ref('validCountries', $this->validCountries);
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 
 		parent::display();
 	}

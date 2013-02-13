@@ -43,7 +43,6 @@ class AuthSourceSettingsForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('authId', $this->authId);
-		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 
 		if (isset($this->plugin)) {
 			$this->plugin->addLocaleData();

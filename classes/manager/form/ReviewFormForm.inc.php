@@ -51,7 +51,6 @@ class ReviewFormForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('reviewFormId', $this->reviewFormId);
-		$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		parent::display();
 	}
 

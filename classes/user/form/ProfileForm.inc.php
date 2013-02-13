@@ -52,7 +52,6 @@ class ProfileForm extends PKPProfileForm {
 
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('journalNotifications', $journalNotifications);
-		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');
 
 		$journal =& $request->getJournal();
 		if ($journal) {

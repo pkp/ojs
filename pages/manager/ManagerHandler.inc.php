@@ -59,7 +59,6 @@ class ManagerHandler extends Handler {
 		$session =& $request->getSession();
 		$session->unsetSessionVar('enrolmentReferrer');
 
-		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->display('manager/index.tpl');
 	}
 

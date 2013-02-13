@@ -141,8 +141,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 			}
 		}
 
-		$templateMgr->assign('helpTopicId','editorial.authorsRole');
-
 		$initialCopyeditSignoff = $submission->getSignoff('SIGNOFF_COPYEDITING_INITIAL');
 		$templateMgr->assign('canEditMetadata', !$initialCopyeditSignoff->getDateCompleted() && $submission->getStatus() != STATUS_PUBLISHED);
 
@@ -194,7 +192,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('lastEditorDecision', $lastDecision);
 		import('classes.submission.sectionEditor.SectionEditorSubmission');
 		$templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
-		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.review');
 		$templateMgr->display('author/submissionReview.tpl');
 	}
 
@@ -341,7 +338,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('useCopyeditors', $journal->getSetting('useCopyeditors'));
 		$templateMgr->assign('useLayoutEditors', $journal->getSetting('useLayoutEditors'));
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
-		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
 

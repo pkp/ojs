@@ -110,7 +110,6 @@ class SectionForm extends Form {
 		$sectionId = (is_a($section, 'Section') ? $section->getId() : null);
 		$templateMgr->assign('sectionId', $sectionId);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
-		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());

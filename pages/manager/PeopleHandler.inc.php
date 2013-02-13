@@ -77,44 +77,8 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleId) {
 			$users =& $roleDao->getUsersByRoleId($roleId, $journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
 			$templateMgr->assign('roleId', $roleId);
-			switch($roleId) {
-				case ROLE_ID_MANAGER:
-					$helpTopicId = 'journal.roles.journalManager';
-					break;
-				case ROLE_ID_EDITOR:
-					$helpTopicId = 'journal.roles.editor';
-					break;
-				case ROLE_ID_SECTION_EDITOR:
-					$helpTopicId = 'journal.roles.sectionEditor';
-					break;
-				case ROLE_ID_LAYOUT_EDITOR:
-					$helpTopicId = 'journal.roles.layoutEditor';
-					break;
-				case ROLE_ID_REVIEWER:
-					$helpTopicId = 'journal.roles.reviewer';
-					break;
-				case ROLE_ID_COPYEDITOR:
-					$helpTopicId = 'journal.roles.copyeditor';
-					break;
-				case ROLE_ID_PROOFREADER:
-					$helpTopicId = 'journal.roles.proofreader';
-					break;
-				case ROLE_ID_AUTHOR:
-					$helpTopicId = 'journal.roles.author';
-					break;
-				case ROLE_ID_READER:
-					$helpTopicId = 'journal.roles.reader';
-					break;
-				case ROLE_ID_SUBSCRIPTION_MANAGER:
-					$helpTopicId = 'journal.roles.subscriptionManager';
-					break;
-				default:
-					$helpTopicId = 'journal.roles.index';
-					break;
-			}
 		} else {
 			$users =& $roleDao->getUsersByJournalId($journal->getId(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection);
-			$helpTopicId = 'journal.users.allUsers';
 		}
 
 		$templateMgr->assign('currentUrl', $request->url(null, null, 'people', 'all'));
@@ -135,7 +99,6 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getId()) : null);
 		}
-		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$fieldOptions = Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
@@ -222,7 +185,6 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', $request->getUser());
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->assign('sort', $sort);
 
 		$session =& $request->getSession();
@@ -252,7 +214,6 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('omitSearch', true);
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', $request->getUser());
-		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
 
@@ -525,7 +486,6 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('currentUrl', $request->url(null, null, 'people', 'all'));
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.mergeUsers');
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', $request->getUser());
@@ -695,7 +655,6 @@ class PeopleHandler extends ManagerHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('currentUrl', $request->url(null, null, 'people', 'all'));
-		$templateMgr->assign('helpTopicId', 'journal.users.index');
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;

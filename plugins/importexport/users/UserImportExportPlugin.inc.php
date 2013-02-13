@@ -71,7 +71,6 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'confirm':
 				$this->import('UserXMLParser');
-				$templateMgr->assign('helpTopicId', 'journal.users.importUsers');
 
 				$sendNotify = (bool) $request->getUserVar('sendNotify');
 				$continueOnError = (bool) $request->getUserVar('continueOnError');

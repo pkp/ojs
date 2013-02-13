@@ -67,9 +67,6 @@ class UserManagementForm extends Form {
 		if (isset($this->userId)) {
 			$user =& $userDao->getById($this->userId);
 			$templateMgr->assign('username', $user->getUsername());
-			$helpTopicId = 'journal.users.index';
-		} else {
-			$helpTopicId = 'journal.users.createNewUser';
 		}
 
 		$journal =& Request::getJournal();
@@ -114,8 +111,6 @@ class UserManagementForm extends Form {
 
 		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-
-		$templateMgr->assign('helpTopicId', $helpTopicId);
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();

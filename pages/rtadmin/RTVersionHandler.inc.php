@@ -103,7 +103,6 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getId(), $rangeInfo));
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		$templateMgr->display('rtadmin/versions.tpl');
 	}
 

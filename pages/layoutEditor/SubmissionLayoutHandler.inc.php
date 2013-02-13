@@ -58,7 +58,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
 		$templateMgr->assign('templates', $journal->getSetting('templates'));
-		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());

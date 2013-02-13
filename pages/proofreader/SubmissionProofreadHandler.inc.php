@@ -48,7 +48,6 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr->assign_by_ref('authors', $authors);
 		$templateMgr->assign_by_ref('submission', $this->submission);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
-		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($this->submission->getId());

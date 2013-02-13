@@ -83,8 +83,6 @@ class StatisticsHandler extends ManagerHandler {
 		$reportPlugins =& PluginRegistry::loadCategory('reports');
 		$templateMgr->assign_by_ref('reportPlugins', $reportPlugins);
 
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.statsAndReports');
-
 		$templateMgr->display('manager/statistics/index.tpl');
 	}
 

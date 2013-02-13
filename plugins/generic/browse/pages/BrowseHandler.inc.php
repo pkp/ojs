@@ -159,7 +159,6 @@ class BrowseHandler extends Handler {
 	 */
 	function setupTemplate($request, $op = 'index') {
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 
 		$opMap = array(
 			'index' => 'navigation.search',

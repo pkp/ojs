@@ -81,16 +81,13 @@ class SectionEditorHandler extends Handler {
 		switch($page) {
 			case 'submissionsInEditing':
 				$functionName = 'getSectionEditorSubmissionsInEditing';
-				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inEditing';
 				break;
 			case 'submissionsArchives':
 				$functionName = 'getSectionEditorSubmissionsArchives';
-				$helpTopicId = 'editorial.sectionEditorsRole.submissions.archives';
 				break;
 			default:
 				$page = 'submissionsInReview';
 				$functionName = 'getSectionEditorSubmissionsInReview';
-				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
 		$filterSection = $request->getUserVar('filterSection');
@@ -126,7 +123,6 @@ class SectionEditorHandler extends Handler {
 		}
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('filterSection', $filterSection);

@@ -421,7 +421,6 @@ class BooksForReviewEditorHandler extends Handler {
 		));
 
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign('helpTopicId', 'journal.roles.author');
 		$templateMgr->assign('bookId', $bookId);
 		$templateMgr->assign('returnPage', $returnPage);
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
@@ -496,7 +495,6 @@ class BooksForReviewEditorHandler extends Handler {
 		));
 
 		$templateMgr->assign_by_ref('submissions', $submissions);
-		$templateMgr->assign('helpTopicId', 'journal.roles.editor');
 		$templateMgr->assign('bookId', $bookId);
 		$templateMgr->assign('returnPage', $returnPage);
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'editor' . '/' . 'submissions.tpl');

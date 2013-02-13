@@ -55,7 +55,6 @@ class ReferralForm extends Form {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('referralId', $this->referralId);
 		$templateMgr->assign_by_ref('article', $this->article);
-		// $templateMgr->assign('helpTopicId', 'FIXME');
 
 		parent::display();
 	}

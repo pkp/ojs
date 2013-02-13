@@ -131,7 +131,6 @@ class MailTemplate extends PKPMailTemplate {
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.emails');
 
 		parent::displayEditForm($formActionUrl, $hiddenFormParams, $alternateTemplate, $additionalParameters);
 	}

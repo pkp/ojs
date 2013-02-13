@@ -103,7 +103,6 @@ class ProofreaderHandler extends Handler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
-		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('proofreader/index.tpl');

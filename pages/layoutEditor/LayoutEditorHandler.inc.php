@@ -40,7 +40,6 @@ class LayoutEditorHandler extends Handler {
 		$this->setupTemplate($request);
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 
@@ -117,7 +116,6 @@ class LayoutEditorHandler extends Handler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
-		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);
 		$templateMgr->display('layoutEditor/submissions.tpl');
@@ -137,7 +135,6 @@ class LayoutEditorHandler extends Handler {
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
 
@@ -173,7 +170,6 @@ class LayoutEditorHandler extends Handler {
 		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
-		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getId()));
 		$templateMgr->assign('sort', $sort);
 		$templateMgr->assign('sortDirection', $sortDirection);

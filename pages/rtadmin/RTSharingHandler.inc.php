@@ -46,7 +46,6 @@ class RTSharingHandler extends RTAdminHandler {
 			$templateMgr->assign('sharingLogoBackground', $rt->getSharingLogoBackground());
 			$templateMgr->assign('sharingLogoColor', $rt->getSharingLogoColor());
 
-			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.addthisSettings');
 			$templateMgr->display('rtadmin/addthis.tpl');
 		} else {
 			$request->redirect(null, $request->getRequestedPage());

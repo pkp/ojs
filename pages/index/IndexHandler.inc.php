@@ -36,7 +36,6 @@ class IndexHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager($request);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
-		$templateMgr->assign('helpTopicId', 'user.home');
 		$journal =& $router->getContext($request);
 		if ($journal) {
 			// Assign header and content for home page

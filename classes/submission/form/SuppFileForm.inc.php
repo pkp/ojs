@@ -110,7 +110,6 @@ class SuppFileForm extends Form {
 		if (isset($this->suppFile)) {
 			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
-		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
