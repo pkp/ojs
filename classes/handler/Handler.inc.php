@@ -64,7 +64,7 @@ class Handler extends PKPHandler {
 			$journal = null;
 			if ($journalsCount === 1) {
 				// Return the unique journal.
-				$journal = $journales->next();
+				$journal = $journals->next();
 			}
 			if (!$journal && $journalesCount > 1) {
 				// Decide wich journal to return.

@@ -20,34 +20,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Constructor
 	 */
 	function PreparedEmailsGridHandler() {
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER),
-			array('fetchRow', 'fetchGrid', 'addPreparedEmail', 'editPreparedEmail', 'updatePreparedEmail',
-				'resetEmail', 'resetAllEmails', 'disableEmail', 'enableEmail', 'deleteCustomEmail')
-		);
 		parent::PKPPreparedEmailsGridHandler();
-	}
-
-	/**
-	 * @see PKPHandler::authorize()
-	 * @param $request PKPRequest
-	 * @param $args array
-	 * @param $roleAssignments array
-	 */
-	function authorize(&$request, $args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
-		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
-
-	/**
-	 * Get the context (journal) ID.
-	 * @param $request PKPRequest
-	 * @return int Journal ID.
-	 */
-	function getContextId(&$request) {
-		$journal =& $request->getJournal();
-		return $journal->getId();
 	}
 
 	/**
@@ -71,7 +44,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function editPreparedEmail($args, &$request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$emailKey = $request->getUserVar('emailKey');
 
 		import('lib.pkp.controllers.grid.settings.preparedEmails.form.PreparedEmailForm');
@@ -89,7 +62,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function updatePreparedEmail($args, &$request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$emailKey = $request->getUserVar('emailKey');
 
 		import('lib.pkp.controllers.grid.settings.preparedEmails.form.PreparedEmailForm');
@@ -101,7 +74,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 
 			// Create notification.
 			$notificationMgr = new NotificationManager();
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			$notificationMgr->createTrivialNotification($user->getId());
 
 			// Let the calling grid reload itself
@@ -122,9 +95,9 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		if ($emailTemplateDao->templateExistsByKey($emailKey, $journal->getId())) {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getId());
 			return DAO::getDataChangedEvent($emailKey);
@@ -140,8 +113,8 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $request Request
 	 */
 	function resetAllEmails($args, &$request) {
-		$journal =& $request->getJournal();
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
+		$journal = $request->getJournal();
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getId());
 		return DAO::getDataChangedEvent();
 	}
@@ -155,9 +128,9 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($emailKey, $journal->getId());
 
 		if (isset($emailTemplate)) {
@@ -193,9 +166,9 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($emailKey, $journal->getId());
 
 		if (isset($emailTemplate)) {
@@ -223,9 +196,9 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 */
 	function deleteCustomEmail($args, &$request) {
 		$emailKey = $request->getUserVar('emailKey');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getId())) {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getId());
 			return DAO::getDataChangedEvent($emailKey);
