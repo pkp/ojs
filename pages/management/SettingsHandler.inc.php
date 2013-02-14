@@ -70,6 +70,9 @@ class SettingsHandler extends ManagementHandler {
 			case 'distribution':
 				$this->distribution($args, $request);
 				break;
+			case 'access':
+				$this->access($args, $request);
+				break;
 			default:
 				assert(false);
 		}
@@ -119,6 +122,17 @@ class SettingsHandler extends ManagementHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
 		$templateMgr->display('management/settings/distribution.tpl');
+	}
+
+	/**
+	 * Display Access and Security page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function access($args, &$request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$this->setupTemplate($request);
+		$templateMgr->display('management/settings/access.tpl');
 	}
 }
 
