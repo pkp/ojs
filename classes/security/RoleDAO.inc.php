@@ -429,7 +429,7 @@ class RoleDAO extends PKPRoleDAO {
 		$journalRoleNames = array(
 			ROLE_ID_MANAGER => 'user.role.manager',
 			ROLE_ID_EDITOR => 'user.role.editor',
-			ROLE_ID_GUEST_EDITOR => 'user.role.seriesEditor',
+			ROLE_ID_GUEST_EDITOR => 'user.role.guestEditor',
 			ROLE_ID_ASSISTANT => 'user.role.journalAssistant',
 			ROLE_ID_SECTION_EDITOR => 'user.role.sectionEditor',
 			ROLE_ID_COPYEDITOR => 'user.role.copyeditor',
