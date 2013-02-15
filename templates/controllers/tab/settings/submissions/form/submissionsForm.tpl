@@ -118,39 +118,6 @@
 
 <p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
 </div>
-<div class="separator"></div>
-
-<div id="reviewerDatabaseLink">
-<h3>2.7 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
-
-<p>{translate key="manager.setup.reviewerDatabaseLink.desc"}</p>
-
-<table class="data">
-{foreach name=reviewerDatabaseLinks from=$reviewerDatabaseLinks key=reviewerDatabaseLinkId item=reviewerDatabaseLink}
-	<tr>
-		<td width="5%" class="label">{fieldLabel name="reviewerDatabaseLinks-$reviewerDatabaseLinkId-title" key="common.title"}</td>
-		<td class="value"><input type="text" name="reviewerDatabaseLinks[{$reviewerDatabaseLinkId|escape}][title]" id="reviewerDatabaseLinks-{$reviewerDatabaseLinkId|escape}-title" value="{$reviewerDatabaseLink.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.reviewerDatabaseLinks.total > 1} <input type="submit" name="delReviewerDatabaseLink[{$reviewerDatabaseLinkId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="reviewerDatabaseLinks-$reviewerDatabaseLinkId-url" key="common.url"}</td>
-		<td class="value"><input type="text" name="reviewerDatabaseLinks[{$reviewerDatabaseLinkId|escape}][url]" id="reviewerDatabaseLinks-{$reviewerDatabaseLinkId|escape}-url" value="{$reviewerDatabaseLink.url|escape}" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	{if !$smarty.foreach.reviewerDatabaseLinks.last}
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	{/if}
-{foreachelse}
-	<tr>
-		<td class="label">{fieldLabel name="reviewerDatabaseLinks-0-title" key="common.title"}</td>
-		<td class="value"><input type="text" name="reviewerDatabaseLinks[0][title]" id="reviewerDatabaseLinks-0-title" value="" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="reviewerDatabaseLinks-0-url" key="common.url"}</td>
-		<td class="value"><input type="text" name="reviewerDatabaseLinks[0][url]" id="reviewerDatabaseLinks-0-url" value="" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-{/foreach}
-</table>
 
 {if !$wizardMode}
 	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}

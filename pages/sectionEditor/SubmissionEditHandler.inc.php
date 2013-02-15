@@ -511,7 +511,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getId()));
 
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-			$templateMgr->assign('reviewerDatabaseLinks', $journal->getSetting('reviewerDatabaseLinks'));
 			$templateMgr->assign('sort', $sort);
 			$templateMgr->assign('sortDirection', $sortDirection);
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');

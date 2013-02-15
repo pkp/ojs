@@ -25,7 +25,6 @@ class SubmissionsForm extends ContextSettingsForm {
 			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
 			'customAboutItems' => 'object',
-			'reviewerDatabaseLinks' => 'object',
 			'notifyAllAuthorsOnDecision' => 'bool'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/submissions/form/submissionsForm.tpl', $wizardMode);
