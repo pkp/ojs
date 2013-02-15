@@ -55,6 +55,11 @@
 				{fbvElement type="textarea" id="mailingAddress" value=$mailingAddress height=$fbvStyles.height.SHORT}
 			{/fbvFormSection}
 		</div>
+
+		{if $categoriesEnabled}
+			{url|assign:categoriesUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.categories.CategoriesListbuilderHandler" op="fetch"}
+			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
+		{/if}
 	{/fbvFormArea}
 
 	{if !$wizardMode}

@@ -27,16 +27,14 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getTitles();
-		$templateMgr =& TemplateManager::getManager();
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getTitles();
+		$templateMgr = TemplateManager::getManager();
 
-		$allThemes =& PluginRegistry::loadCategory('themes');
+		$allThemes = PluginRegistry::loadCategory('themes');
 		$themes = array();
-		foreach ($allThemes as $key => $junk) {
-			$plugin =& $allThemes[$key]; // by ref
-			$themes[basename($plugin->getPluginPath())] =& $plugin;
-			unset($plugin);
+		foreach ($allThemes as $key => $plugin) {
+			$themes[basename($plugin->getPluginPath())] = $plugin;
 		}
 		$templateMgr->assign('themes', $themes);
 

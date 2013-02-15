@@ -39,22 +39,21 @@ class CategoryDAO extends ControlledVocabDAO {
 	 */
 	function rebuildCache() {
 		// Read the full set of categories into an associative array
-		$categoryEntryDao =& $this->getEntryDAO();
-		$categoryControlledVocab =& $this->build();
-		$categoriesIterator =& $categoryEntryDao->getByControlledVocabId($categoryControlledVocab->getId());
+		$categoryEntryDao = $this->getEntryDAO();
+		$categoryControlledVocab = $this->build();
+		$categoriesIterator = $categoryEntryDao->getByControlledVocabId($categoryControlledVocab->getId());
 		$allCategories = array();
-		while ($category =& $categoriesIterator->next()) {
-			$allCategories[$category->getId()] =& $category;
-			unset($category);
+		while ($category = $categoriesIterator->next()) {
+			$allCategories[$category->getId()] = $category;
 		}
 
 		// Prepare our results array to cache
 		$categories = array();
 
 		// Add each journal's categories to the data structure
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals(true);
-		while ($journal =& $journals->next()) {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals(true);
+		while ($journal = $journals->next()) {
 			$selectedCategories = $journal->getSetting('categories');
 			foreach ((array) $selectedCategories as $categoryId) {
 				if (!isset($allCategories[$categoryId])) continue;
@@ -81,8 +80,8 @@ class CategoryDAO extends ControlledVocabDAO {
 	 */
 	function getCache() {
 		// The following line is only for classloading purposes
-		$categoryEntryDao =& $this->getEntryDAO();
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$categoryEntryDao = $this->getEntryDAO();
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		// Load and return the cache, building it if necessary.
 		$filename = $this->getCacheFilename();

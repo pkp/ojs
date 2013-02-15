@@ -15,6 +15,8 @@
 import('lib.pkp.classes.controllers.tab.settings.form.ContextSettingsForm');
 
 class MastheadForm extends ContextSettingsForm {
+	/** @var $categories array Used to unpack categories listbuilder */
+	var $categories;
 
 	/**
 	 * Constructor.
@@ -29,6 +31,7 @@ class MastheadForm extends ContextSettingsForm {
 			'description' => 'string',
 			'mailingAddress' => 'string',
 			'journalEnabled' => 'bool',
+			'categories' => 'object',
 			'masthead' => 'string'
 		);
 
@@ -74,6 +77,16 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
+	 * @see Form::fetch()
+	 */
+	function fetch(&$request, $params = null) {
+		$site = $request->getSite();
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('categoriesEnabled', $site->getSetting('categoriesEnabled'));
+		return parent::fetch($request, $params);
+	}
+
+	/**
 	 * @see ContextSettingsForm::execute()
 	 * @param $request Request
 	 */
@@ -81,13 +94,45 @@ class MastheadForm extends ContextSettingsForm {
 		$journal = $request->getContext();
 
 		if ($journal->getEnabled() !== $this->getData('journalEnabled')) {
-			$journalDao = DAORegistry::getDAO('PressDAO');
-			$journal->setEnabled($this->getData('pressEnabled'));
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journal->setEnabled($this->getData('journalEnabled'));
 			$journalDao->updateObject($journal);
 		}
 
+		// Save block plugins context positions.
+		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
+		$this->categories = null;
+		ListbuilderHandler::unpack($request, $request->getUserVar('categories'));
+		$this->setData('categories', $this->categories);
+
 		parent::execute($request);
 	}
+
+	/**
+	 * @see ListbuilderHandler::updateEntry
+	 */
+	function updateEntry($request, $rowId, $newRowId) {
+		$this->deleteEntry($request, $rowId);
+		$this->insertEntry($request, $newRowId);
+		return true;
+	}
+
+	/**
+	 * @see ListbuilderHandler::deleteEntry
+	 */
+	function deleteEntry($request, $rowId) {
+		if (isset($this->categories[$rowId['name']])) unset($this->categories[$rowId['name']]);
+		return true;
+	}
+
+	/**
+	 * @see ListbuilderHandler::insertEntry
+	 */
+	function insertEntry($request, $rowId) {
+		$this->categories[$rowId['name']] = true;
+		return true;
+	}
+
 }
 
 ?>

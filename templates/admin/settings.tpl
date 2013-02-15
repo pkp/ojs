@@ -21,7 +21,7 @@
 <div id="settingsTabs">
 	<ul>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="siteSetup"}">{translate key="admin.siteSetup"}</a></li>
-		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="categories"}">{translate key="admin.categories"}</a></li>
+		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.admin.categories.AdminCategoriesTabHandler" op="showTab" tab="categories"}">{translate key="admin.categories"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="languages"}">{translate key="common.languages"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AdminSettingsTabHandler" op="showTab" tab="plugins"}">{translate key="common.plugins"}</a></li>
 	</ul>

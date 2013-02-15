@@ -53,17 +53,6 @@ switch ($op) {
 		import('lib.pkp.pages.admin.AdminFunctionsHandler');
 		break;
 	// Main administration page
-	// Categories
-	case 'categories':
-	case 'createCategory':
-	case 'editCategory':
-	case 'updateCategory':
-	case 'deleteCategory':
-	case 'moveCategory':
-	case 'setCategoriesEnabled':
-		define('HANDLER_CLASS', 'AdminCategoriesHandler');
-		import('pages.admin.AdminCategoriesHandler');
-		break;
 	case 'index':
 	case 'settings':
 	case 'saveSettings':

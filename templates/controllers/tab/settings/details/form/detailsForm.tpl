@@ -20,26 +20,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="detailsFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="generalInformation">
-<h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
-
-<table class="data">
-	{if $categoriesEnabled}
-		<tr>
-			<td class="label">{fieldLabel name=categories key="manager.setup.categories"}</td>
-			<td class="value">
-				<select id="categories" name="categories[]" class="selectMenu" multiple="multiple">
-					{html_options options=$allCategories selected=$categories}
-				</select>
-				<br/>
-				{translate key="manager.setup.categories.description"}
-			</td>
-		</tr>
-	{/if}{* $categoriesEnabled *}
-</table>
-</div>
-
-<div class="separator"></div>
 <div id="setupPublisher">
 <h3>1.5 {translate key="manager.setup.publisher"}</h3>
 
