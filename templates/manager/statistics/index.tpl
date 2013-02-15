@@ -8,7 +8,7 @@
  *
  *}
 {strip}
-{assign var="pageTitle" value="manager.statistics"}
+{assign var="pageTitle" value="navigation.tools.statistics"}
 {include file="common/header.tpl"}
 {/strip}
 

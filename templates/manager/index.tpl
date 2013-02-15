@@ -24,7 +24,6 @@
 	<li>&#187; <a href="{url op="sections"}">{translate key="section.sections"}</a></li>
 	<li>&#187; <a href="{url op="reviewForms"}">{translate key="manager.reviewForms"}</a></li>
 	<li>&#187; <a href="{url page="rtadmin"}">{translate key="manager.readingTools"}</a></li>
-	<li>&#187; <a href="{url op="statistics"}">{translate key="manager.statistics"}</a></li>
 	<li>&#187; <a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
 	{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>

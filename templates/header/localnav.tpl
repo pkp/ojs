@@ -57,6 +57,7 @@
 								<a href="{url page="management" op="tools" path="index"}">{translate key="navigation.tools"}</a>
 								<ul>
 									<li><a href="{url page="manager" op="importexport"}">{translate key="navigation.tools.importExport"}</a></li>
+									<li><a href="{url page="manager" op="statistics"}">{translate key="navigation.tools.statistics"}</a></li>
 								</ul>
 							</li>
 							{/if}

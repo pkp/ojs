@@ -8,13 +8,9 @@
  *
  *}
 {strip}
-{if $siteTitle}
-	{assign var="pageTitleTranslated" value=$siteTitle}
-{/if}
+{assign var="suppressPageTitle" value="true"}
 {include file="common/header.tpl"}
 {/strip}
-
-<br />
 
 {if $intro}{$intro|nl2br}{/if}
 
@@ -52,4 +48,3 @@
 <div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}
 
 {include file="common/footer.tpl"}
-
