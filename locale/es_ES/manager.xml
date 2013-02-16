@@ -7,7 +7,7 @@
   * Localization strings for the es_ES (English) locale.
   -->
 
-<locale name="es_ES" full_name = "English">
+<locale name="es_ES" full_name = "Español">
 	<message key="manager.emails.confirmResetAll">¿Está seguro/a de que desea restablecer todas las plantillas de correo electrónico de la revista? Se perderán todos las personalizaciones que haya realizado.</message>
 	<message key="manager.files.note">Nota: el Explorador de archivos es una función avanzada que permite ver y manipular directamente los archivos y directorios relacionados con una revista.</message>
 	<message key="manager.groups">Cabecera</message>

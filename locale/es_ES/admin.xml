@@ -4,12 +4,10 @@
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (English) locale.
-  *
-  * $Id$
+  * Localization strings for the es_ES (Español) locale.
   -->
 
-<locale name="es_ES" full_name = "English">
+<locale name="es_ES" full_name = "Español">
 	<message key="admin.hostedJournals">Revistas alojadas</message>
 	<message key="admin.settings.journalRedirect">Redirigir revista a</message>
 	<message key="admin.settings.journalRedirectInstructions">Los intentos para acceder al sitio principal se redirigirán a esta revista. Esto resulta útil, por ejemplo, si el sitio sólo aloja una revista.</message>

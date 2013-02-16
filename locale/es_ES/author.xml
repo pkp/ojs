@@ -4,12 +4,10 @@
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (English) locale.
-  *
-  * $Id$
+  * Localization strings for the es_ES (Español) locale.
   -->
 
-<locale name="es_ES" full_name = "English">
+<locale name="es_ES" full_name = "Español">
 	<message key="author.submit">Nuevo envío</message>
 	<message key="author.track">Envíos activos</message>
 	<message key="author.competingInterests"><![CDATA[Conflicto&nbsp;de intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política&nbsp;de CI</a>]]></message>

@@ -4,12 +4,10 @@
   * Copyright (c) 2003-2012 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (English) locale.
-  *
-  * $Id$
+  * Localization strings for the es_ES (Español) locale.
   -->
 
-<locale name="es_ES" full_name = "English">
+<locale name="es_ES" full_name = "Español">
 	<message key="editor.article.reviewForms">Formularios de revisión</message>
 	<message key="editor.article.selectReviewForm">Seleccionar formulario de revisión</message>
 	<message key="editor.article.clearReviewForm">Borrar formulario de revisión</message>
