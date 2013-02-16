@@ -72,10 +72,6 @@
 		<td colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$limitedArticleStatistics.submissionsDecline percentage=$limitedArticleStatistics.submissionsDeclinePercent}</td>
 	</tr>
 	<tr>
-		<td class="label"><input type="checkbox" id="statCountRevise" name="statCountRevise" {if $statCountRevise}checked="checked" {/if}/>&nbsp;&nbsp;<label for="statCountRevise">{translate key="manager.statistics.statistics.count.revise"}</label></td>
-		<td colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$limitedArticleStatistics.submissionsRevise percentage=$limitedArticleStatistics.submissionsRevisePercent}</td>
-	</tr>
-	<tr>
 		<td class="label"><input type="checkbox" id="statDaysPerReview" name="statDaysPerReview" {if $statDaysPerReview}checked="checked" {/if}/>&nbsp;&nbsp;<label for="statDaysPerReview">{translate key="manager.statistics.statistics.daysPerReview"}</label></td>
 		<td colspan="2" class="value">
 			{assign var=daysPerReview value=$reviewerStatistics.daysPerReview}
