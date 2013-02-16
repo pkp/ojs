@@ -48,10 +48,6 @@
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.decline"}</td>
 		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$limitedArticleStatistics.submissionsDecline percentage=$limitedArticleStatistics.submissionsDeclinePercent}</td>
 	</tr>{/if}
-	{if $statCountRevise}<tr valign="top">
-		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.revise"}</td>
-		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$limitedArticleStatistics.submissionsRevise percentage=$limitedArticleStatistics.submissionsRevisePercent}</td>
-	</tr>{/if}
 	{if $statDaysPerReview}<tr valign="top">
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.daysPerReview"}</td>
 		<td colspan="2" class="value">

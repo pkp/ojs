@@ -65,10 +65,8 @@ class JournalStatisticsDAO extends DAO {
 			'numPublishedSubmissions' => 0,
 			'submissionsAccept' => 0,
 			'submissionsDecline' => 0,
-			'submissionsRevise' => 0,
 			'submissionsAcceptPercent' => 0,
 			'submissionsDeclinePercent' => 0,
-			'submissionsRevisePercent' => 0,
 			'daysToPublication' => 0
 		);
 
@@ -108,10 +106,6 @@ class JournalStatisticsDAO extends DAO {
 						$returner['submissionsAccept']++;
 						$returner['numReviewedSubmissions']++;
 						break;
-					case SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
-					case SUBMISSION_EDITOR_DECISION_RESUBMIT:
-						$returner['submissionsRevise']++;
-						break;
 					case SUBMISSION_EDITOR_DECISION_DECLINE:
 						$returner['submissionsDecline']++;
 						$returner['numReviewedSubmissions']++;
@@ -129,7 +123,6 @@ class JournalStatisticsDAO extends DAO {
 		if ($returner['numReviewedSubmissions'] != 0) {
 			$returner['submissionsAcceptPercent'] = round($returner['submissionsAccept'] * 100 / $returner['numReviewedSubmissions']);
 			$returner['submissionsDeclinePercent'] = round($returner['submissionsDecline'] * 100 / $returner['numReviewedSubmissions']);
-			$returner['submissionsRevisePercent'] = round($returner['submissionsRevise'] * 100 / $returner['numReviewedSubmissions']);
 		}
 
 		if ($timeToPublicationCount != 0) {
