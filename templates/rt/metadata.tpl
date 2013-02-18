@@ -148,7 +148,7 @@
 			<td>10.</td>
 			<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 			<td>{$pubIdPlugin->getPubIdFullName()|escape}</td>
-			<td>{$pubId|escape}</a></td>
+			<td><a target="_new" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}</a></td>
 		</tr>
 		<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 	{/if}
