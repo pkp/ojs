@@ -105,8 +105,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$templateMgr->assign_by_ref('issue', $issue);
 		}
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($submission->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
 		$templateMgr->assign_by_ref('section', $section);
 
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);

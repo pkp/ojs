@@ -40,13 +40,13 @@ class BrowseSettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO'); 
-		$sectionsResultFactory =& $sectionDao->getJournalSections($journalId);
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); 
+		$sectionsResultFactory = $sectionDao->getByJournalId($journalId);
 		$sections = array();
 		$identifyTypes = array();
-		while ($section =& $sectionsResultFactory->next()) {
+		while ($section = $sectionsResultFactory->next()) {
 			// consider all section titles
 			$sections[$section->getId()] = $section->getLocalizedTitle();
 			// several sections could have the same identify type => don't duplicate
@@ -54,7 +54,6 @@ class BrowseSettingsForm extends Form {
 			if (!in_array($section->getLocalizedIdentifyType(), $identifyTypes) && $section->getLocalizedIdentifyType() != '') {
 				$identifyTypes[$section->getId()] = $section->getLocalizedIdentifyType();
 			}
-			unset($section);
 		}
 				
 		asort($identifyTypes);
@@ -87,10 +86,10 @@ class BrowseSettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'excludedSections', $this->getData('excludedSections')?$this->getData('excludedSections'):array(), 'object');
 		$excludedIdentifyTypesData = $this->getData('excludedIdentifyTypes');
 		$excludedIdentifyTypes = array();
-		$sectionDao =& DAORegistry::getDAO('SectionDAO'); 
-		$sectionsResultFactory =& $sectionDao->getJournalSections($journalId);
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); 
+		$sectionsResultFactory = $sectionDao->getByJournalId($journalId);
 		// consider all sections for exclusion with an excluded identify type 
-		while ($section =& $sectionsResultFactory->next()) {
+		while ($section = $sectionsResultFactory->next()) {
 			if ($section->getLocalizedIdentifyType() != '' && in_array($section->getLocalizedIdentifyType(), $excludedIdentifyTypesData)) {
 				$excludedIdentifyTypes[] = $section->getId();
 			}

@@ -456,19 +456,18 @@ class LucenePlugin extends GenericPlugin {
 		if ($customRanking) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 			if (is_a($journal, 'Journal')) {
-				$sections = $sectionDao->getJournalSections($journal->getId());
+				$sections = $sectionDao->getByJournalId($journal->getId());
 			} else {
-				$sections = $sectionDao->getSections();
+				$sections = $sectionDao->getAll();
 			}
-			while (!$sections->eof()) { /* @var $sections DAOResultFactory */
-				$section =& $sections->next();
+			while ($section = $sections->next()) { /* @var $sections DAOResultFactory */
+				$section = $sections->next();
 				$sectionBoost = (float)$section->getData('rankingBoost');
 				if ($sectionBoost != 1.0) {
 					$searchRequest->addBoostFactor(
 						'section_id', $section->getId(), $sectionBoost
 					);
 				}
-				unset($section);
 			}
 			unset($sections);
 		}

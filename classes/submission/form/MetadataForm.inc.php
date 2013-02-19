@@ -216,7 +216,7 @@ class MetadataForm extends Form {
 		$templateMgr->assign('countries', $countryDao->getCountries());
 
 		if ($this->article) {
-			$templateMgr->assign_by_ref('section', $sectionDao->getSection($this->article->getSectionId()));
+			$templateMgr->assign('section', $sectionDao->getById($this->article->getSectionId()));
 		}
 
 		if ($this->isEditor) {
@@ -281,8 +281,8 @@ class MetadataForm extends Form {
 		$pubIdPluginHelper = new PubIdPluginHelper();
 		$pubIdPluginHelper->readInputData($this);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($this->article->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->article->getSectionId());
 		if (!$section->getAbstractsNotRequired()) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired', $this->getRequiredLocale()));
 		}
@@ -337,7 +337,7 @@ class MetadataForm extends Form {
 		$article->setSubtitle($this->getData('subtitle'), null); // Localized
 		$article->setPrefix($this->getData('prefix'), null); // Localized
 
-		$section =& $sectionDao->getSection($article->getSectionId());
+		$section = $sectionDao->getById($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 
 		import('classes.file.PublicFileManager');

@@ -30,8 +30,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section = $sectionDao->getSection($article->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($article->getSectionId());
 		$abstractWordCount = $section->getAbstractWordCount();
 		if (isset($abstractWordCount) && $abstractWordCount > 0) {
 			$this->addCheck(new FormValidatorCustom($this, 'abstract', 'required', 'author.submit.form.wordCountAlert', create_function('$abstract, $wordCount', 'foreach ($abstract as $localizedAbstract) {return count(explode(" ",$localizedAbstract)) < $wordCount; }'), array($abstractWordCount)));
@@ -60,7 +60,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				'type' => $article->getType(null), // Localized
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null), // Localized
-				'section' => $sectionDao->getSection($article->getSectionId()),
+				'section' => $sectionDao->getById($article->getSectionId()),
 				'citations' => $article->getCitations()
 			);
 
@@ -115,8 +115,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 		// Load the section. This is used in the step 3 form to
 		// determine whether or not to display indexing options.
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$this->_data['section'] =& $sectionDao->getSection($this->article->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$this->_data['section'] = $sectionDao->getById($this->article->getSectionId());
 
 		if ($this->_data['section']->getAbstractsNotRequired() == 0) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired', $this->getRequiredLocale()));

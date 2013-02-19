@@ -64,8 +64,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($submission->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
 
 		$enableComments = $journal->getSetting('enableComments');
 
@@ -192,8 +192,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sections = $sectionDao->getByJournalId($journal->getId());
 
 		$showPeerReviewOptions = $round == $submission->getCurrentRound() && $submission->getReviewFile() != null ? true : false;
 

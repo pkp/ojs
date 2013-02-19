@@ -31,12 +31,12 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'sections');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getId(), $rangeInfo);
-		$emptySectionIds = $sectionDao->getJournalEmptySectionIds($journal->getId());
-		$templateMgr =& TemplateManager::getManager($request);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sections = $sectionDao->getByJournalId($journal->getId(), $rangeInfo);
+		$emptySectionIds = $sectionDao->getEmptyByJournalId($journal->getId());
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 		$templateMgr->assign_by_ref('sections', $sections);
@@ -135,8 +135,8 @@ class SectionHandler extends ManagerHandler {
 
 		$journal =& $request->getJournal();
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($request->getUserVar('id'), $journal->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($request->getUserVar('id'), $journal->getId());
 
 		if ($section != null) {
 			$direction = $request->getUserVar('d');
@@ -151,7 +151,7 @@ class SectionHandler extends ManagerHandler {
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
-					$prevJournal = $sectionDao->getSection($prevId);
+					$prevJournal = $sectionDao->getById($prevId);
 					$prevSeq = $prevJournal->getSequence();
 				}
 

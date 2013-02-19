@@ -55,9 +55,9 @@ class OJSSwordDeposit {
 		$this->journal = $journalDao->getById($article->getJournalId());
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$this->section =& $sectionDao->getSection($article->getSectionId());
+		$this->section = $sectionDao->getById($article->getSectionId());
 
-		$this->article =& $article;
+		$this->article = $article;
 	}
 
 	/**

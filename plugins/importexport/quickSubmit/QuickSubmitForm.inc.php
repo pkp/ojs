@@ -62,10 +62,10 @@ class QuickSubmitForm extends Form {
 
 		$templateMgr->assign('journal', $journal);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sections =& $sectionDao->getJournalSections($journal->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sections = $sectionDao->getByJournalId($journal->getId());
 		$sectionTitles = $sectionAbstractsRequired = array();
-		while ($section =& $sections->next()) {
+		while ($section = $sections->next()) {
 			$sectionTitles[$section->getId()] = $section->getLocalizedTitle();
 			$sectionAbstractsRequired[(int) $section->getId()] = (int) (!$section->getAbstractsNotRequired());
 			unset($section);
@@ -139,8 +139,8 @@ class QuickSubmitForm extends Form {
 
 		$this->readUserDateVars(array('datePublished'));
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($this->getData('sectionId'));
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->getData('sectionId'));
 		if ($section && !$section->getAbstractsNotRequired()) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
 		}

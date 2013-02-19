@@ -48,7 +48,7 @@ class SectionForm extends Form {
 		$section = null;
 		if (is_numeric($sectionId)) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$section =& $sectionDao->getSection($sectionId, $journalId);
+			$section =& $sectionDao->getById($sectionId, $journalId);
 		}
 		$this->section =& $section;
 

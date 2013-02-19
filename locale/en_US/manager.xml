@@ -147,7 +147,7 @@
 	<message key="manager.section.submissionsToThisSection">Submissions made to this section of the journal</message>
 	<message key="manager.sections.unassigned">Available Section Editors</message>
 	<message key="manager.sections.wordCount">Word Count</message>
-	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit): </message>
+	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit)</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.setup.masthead">Masthead</message>
 	<message key="manager.setup.masthead.description">The Masthead should contain a list of editors, managing directors, and other individuals associated with the journal. Information entered here will appear in About the Journal.</message>

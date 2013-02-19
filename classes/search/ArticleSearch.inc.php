@@ -346,7 +346,7 @@ class ArticleSearch {
 			if ($publishedArticle && $article) {
 				$sectionId = $article->getSectionId();
 				if (!isset($sectionCache[$sectionId])) {
-					$sectionCache[$sectionId] =& $sectionDao->getSection($sectionId);
+					$sectionCache[$sectionId] = $sectionDao->getById($sectionId);
 				}
 
 				// Get the journal, storing in cache if necessary.

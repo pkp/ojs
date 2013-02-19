@@ -88,7 +88,7 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function &getSection($sectionId) {
 		if (!isset($this->sectionCache[$sectionId])) {
-			$this->sectionCache[$sectionId] =& $this->sectionDao->getSection($sectionId);
+			$this->sectionCache[$sectionId] = $this->sectionDao->getById($sectionId);
 		}
 		return $this->sectionCache[$sectionId];
 	}
@@ -122,7 +122,7 @@ class OAIDAO extends PKPOAIDAO {
 			$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
 			$articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
 
-			$sections =& $this->sectionDao->getJournalSections($journal->getId());
+			$sections = $this->sectionDao->getByJournalId($journal->getId());
 			foreach ($sections->toArray() as $section) {
 				if (array_key_exists(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $articleTombstoneSets)) {
 					unset($articleTombstoneSets[urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev())]);

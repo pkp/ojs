@@ -311,8 +311,8 @@ class Article extends Submission {
 			case COMMENTS_ENABLE:
 				return true;
 			case COMMENTS_SECTION_DEFAULT:
-				$sectionDao =& DAORegistry::getDAO('SectionDAO');
-				$section =& $sectionDao->getSection($this->getSectionId(), $this->getJournalId(), true);
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$section = $sectionDao->getById($this->getSectionId(), $this->getJournalId(), true);
 				if ($section->getDisableComments()) {
 					return false;
 				} else {

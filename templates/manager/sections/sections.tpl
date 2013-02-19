@@ -62,5 +62,8 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveSection"); });
 <a class="action" href="{url op="createSection"}">{translate key="manager.sections.create"}</a>
 </div>
 
+{url|assign:sectionsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid"}
+{load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}
+
 {include file="common/footer.tpl"}
 

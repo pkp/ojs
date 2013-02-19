@@ -774,7 +774,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($request->getUserVar('sectionId'), $journal->getId());
+		$section = $sectionDao->getById($request->getUserVar('sectionId'), $journal->getId());
 
 		if ($section != null) {
 			// If issue-specific section ordering isn't yet in place, bring it in.

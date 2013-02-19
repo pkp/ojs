@@ -31,8 +31,8 @@ class BrowseHandler extends Handler {
 		if ($enableBrowseBySections) {
 			if (isset($args[0]) && $args[0] == 'view') {
 				$sectionId = $request->getUserVar('sectionId');
-				$sectionDao = &DAORegistry::getDAO('SectionDAO');
-				$section =& $sectionDao->getSection($sectionId);
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$section = $sectionDao->getById($sectionId);
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleIds = $publishedArticleDao->getPublishedArticleIdsBySection($sectionId);
 
@@ -49,8 +49,8 @@ class BrowseHandler extends Handler {
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
 			} else {
 				$excludedSections = $browsePlugin->getSetting($journal->getId(), 'excludedSections');
-				$sectionDao = &DAORegistry::getDAO('SectionDAO');
-				$sectionsIterator =& $sectionDao->getJournalSections($journal->getId());
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$sectionsIterator = $sectionDao->getByJournalId($journal->getId());
 				$sections = array();
 				while (($section =& $sectionsIterator->next())) {
 					if (!in_array($section->getId(), $excludedSections)) {
@@ -88,12 +88,12 @@ class BrowseHandler extends Handler {
 		if ($enableBrowseByIdentifyTypes) {
 			if (isset($args[0]) && $args[0] == 'view') {
 				$identifyType = $request->getUserVar('identifyType');
-				$sectionDao = &DAORegistry::getDAO('SectionDAO');
-				$sectionsIterator =& $sectionDao->getJournalSections($journal->getId());
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$sectionsIterator = $sectionDao->getByJournalId($journal->getId());
 				$sections = array();
-				while (($section =& $sectionsIterator->next())) {
+				while (($section = $sectionsIterator->next())) {
 					if ($section->getLocalizedIdentifyType() == $identifyType) {
-						$sections[] =& $section;
+						$sections[] = $section;
 					}
 				}
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -115,12 +115,12 @@ class BrowseHandler extends Handler {
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
 			} else {
 				$excludedIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'excludedIdentifyTypes');
-				$sectionDao = &DAORegistry::getDAO('SectionDAO');
-				$sectionsIterator =& $sectionDao->getJournalSections($journal->getId());
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$sectionsIterator = $sectionDao->getByJournalId($journal->getId());
 				$sectionidentifyTypes = array();
-				while (($section =& $sectionsIterator->next())) {
+				while (($section = $sectionsIterator->next())) {
 					if ($section->getLocalizedIdentifyType() && !in_array($section->getId(), $excludedIdentifyTypes) && !in_array($section->getLocalizedIdentifyType(), $sectionidentifyTypes)) {
-						$sectionidentifyTypes[] =& $section->getLocalizedIdentifyType();
+						$sectionidentifyTypes[] = $section->getLocalizedIdentifyType();
 					}
 				}
 				sort($sectionidentifyTypes);

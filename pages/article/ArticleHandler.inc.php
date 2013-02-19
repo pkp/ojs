@@ -60,8 +60,8 @@ class ArticleHandler extends Handler {
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);
 
 		$version = null;
 		if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {

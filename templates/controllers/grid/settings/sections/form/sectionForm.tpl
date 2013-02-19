@@ -1,0 +1,62 @@
+{**
+ * templates/controllers/grid/settings/section/form/sectionForm.tpl
+ *
+ * Copyright (c) 2003-2012 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Section form under journal management.
+ *}
+
+<script type="text/javascript">
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#sectionForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+	{rdelim});
+</script>
+
+<form class="pkp_form" id="sectionForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="updateSection" sectionId=$sectionId}">
+	<input type="hidden" name="sectionId" value="{$sectionId|escape}"/>
+
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
+
+	{fbvFormArea id="sectionInfo"}
+		{fbvFormSection}
+			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title maxlength="80" size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev maxlength="80" size=$fbvStyles.size.SMALL inline=true}
+		{/fbvFormSection}
+
+		{fbvFormSection title="manager.sections.policy" for="policy"}
+			{fbvElement type="textarea" multilingual=true id="policy" value=$policy rich=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
+	{fbvFormArea id="sectionMisc"}
+		{fbvFormSection title="manager.sections.wordCount" for="wordCount" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" multilingual=true id="wordCount" value=$wordCount maxlength="80" label="manager.sections.wordCountInstructions"}
+		{/fbvFormSection}
+
+		{fbvFormSection title="submission.reviewForm" for="reviewFormId" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="select" id="reviewFormId" defaultLabel="manager.reviewForms.noneChosen"|translate defaultValue="" from=$reviewFormOptions selected=$reviewFormId translate=false size=$fbvStyles.size.MEDIUM inline=true}
+		{/fbvFormSection}
+
+		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
+	{/fbvFormArea}
+
+	{fbvFormArea id="indexingInfo" title="submission.indexing" class="border"}
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" id="metaReviewed" checked=$metaReviewed label="manager.sections.submissionReview"}
+			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
+			{fbvElement type="checkbox" id="metaIndexed" checked=$metaIndexed label="manager.sections.submissionIndexing"}
+			{fbvElement type="checkbox" id="editorRestriction" checked=$editorRestriction label="manager.sections.editorRestriction"}
+			{fbvElement type="checkbox" id="hideTitle" checked=$hideTitle label="manager.sections.hideTocTitle"}
+			{fbvElement type="checkbox" id="hideAuthor" checked=$hideAuthor label="manager.sections.hideTocAuthor"}
+			{fbvElement type="checkbox" id="hideAbout" checked=$hideAbout label="manager.sections.hideAbout"}
+		{/fbvFormSection}
+
+		{fbvFormSection for="identifyType" title="manager.sections.identifyType"}
+			{fbvElement type="text" id="identifyType" label="manager.sections.identifyTypeExamples" value=$identifyType multilingual=true size=$fbvStyles.size.MEDIUM}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
+	{fbvFormButtons submitText="common.save"}
+</form>

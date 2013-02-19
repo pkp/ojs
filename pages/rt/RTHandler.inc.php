@@ -51,8 +51,8 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
@@ -232,8 +232,8 @@ class RTHandler extends ArticleHandler {
 			$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
 		}
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId(), $journal->getId(), true);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);
 
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('galley', $galley);

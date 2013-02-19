@@ -21,14 +21,14 @@ class ArticleTombstoneManager {
 	}
 
 	function insertArticleTombstone(&$article, &$journal) {
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$section =& $sectionDao->getSection($article->getSectionId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($article->getSectionId());
 
 		$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
 		// delete article tombstone -- to ensure that there aren't more than one tombstone for this article
 		$tombstoneDao->deleteByDataObjectId($article->getId());
 		// insert article tombstone
-		$section =& $sectionDao->getSection($article->getSectionId());
+		$section = $sectionDao->getById($article->getSectionId());
 		$setSpec = urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev());
 		$oaiIdentifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $article->getId();
 		$OAISetObjectsIds = array(

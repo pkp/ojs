@@ -129,7 +129,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				);
 
 				if (($sectionId = $request->getUserVar('sectionId'))) {
-					$context['section'] = $sectionDao->getSection($sectionId);
+					$context['section'] = $sectionDao->getById($sectionId);
 				}
 
 				if (($issueId = $request->getUserVar('issueId'))) {
@@ -384,7 +384,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 						switch (array_shift($args)) {
 							case 'section_id':
-								$section =& $sectionDao->getSection(($sectionIdentifier = array_shift($args)));
+								$section = $sectionDao->getById(($sectionIdentifier = array_shift($args)));
 								break;
 							case 'section_name':
 								$section =& $sectionDao->getSectionByTitle(($sectionIdentifier = array_shift($args)), $journal->getId());
@@ -440,8 +440,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						}
 						$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $journal->getId());
 
-						$sectionDao =& DAORegistry::getDAO('SectionDAO');
-						$section =& $sectionDao->getSection($publishedArticle->getSectionId());
+						$sectionDao = DAORegistry::getDAO('SectionDAO');
+						$section = $sectionDao->getById($publishedArticle->getSectionId());
 
 						if (!$this->exportArticle($journal, $issue, $section, $publishedArticle, $xmlFile)) {
 							echo __('plugins.importexport.native.cliError') . "\n";
