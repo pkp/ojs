@@ -43,12 +43,14 @@ class PubIdPluginHelper {
 	 * @param $pubObject object An Article, Issue, ArticleGalley or SuppFile
 	 */
 	function init(&$form, &$pubObject) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
-		if (is_array($pubIdPlugins)) {
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				$fieldNames = $pubIdPlugin->getFormFieldNames();
-				foreach ($fieldNames as $fieldName) {
-					$form->setData($fieldName, $pubObject->getData($fieldName));
+		if (isset($pubObject)) {
+			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+			if (is_array($pubIdPlugins)) {
+				foreach ($pubIdPlugins as $pubIdPlugin) {
+					$fieldNames = $pubIdPlugin->getFormFieldNames();
+					foreach ($fieldNames as $fieldName) {
+						$form->setData($fieldName, $pubObject->getData($fieldName));
+					}
 				}
 			}
 		}
