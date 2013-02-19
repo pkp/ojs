@@ -301,7 +301,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			} else {
 				$submissionsCount[1] += 1;
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		return $submissionsCount;

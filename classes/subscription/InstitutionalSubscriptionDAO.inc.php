@@ -408,7 +408,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -440,7 +440,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -477,7 +477,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -509,7 +509,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -856,9 +856,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		$ipRanges = array();
 		while (!$ipResult->EOF) {
-			$ipRow =& $ipResult->GetRowAssoc(false);
+			$ipRow = $ipResult->GetRowAssoc(false);
 			$ipRanges[] = $ipRow['ip_string'];
-			$ipResult->moveNext();
+			$ipResult->MoveNext();
 		}
 
 		$institutionalSubscription->setIPRanges($ipRanges);

@@ -329,29 +329,25 @@ class ArticleSearchIndex {
 			if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
 			// Build index
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
 
-			$journals =& $journalDao->getJournals();
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
+			$journals = $journalDao->getJournals();
+			while ($journal = $journals->next()) {
 				$numIndexed = 0;
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$articles =& $articleDao->getArticlesByJournalId($journal->getId());
-				while (!$articles->eof()) {
-					$article =& $articles->next();
+				$articles = $articleDao->getArticlesByJournalId($journal->getId());
+				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
 						$this->articleMetadataChanged($article);
 						$this->articleFilesChanged($article);
 						$numIndexed++;
 					}
-					unset($article);
 				}
 
 				if ($log) echo __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n";
-				unset($journal);
 			}
 		}
 	}

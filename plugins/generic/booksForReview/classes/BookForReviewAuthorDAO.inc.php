@@ -60,8 +60,8 @@ class BookForReviewAuthorDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$authors[] =& $this->_returnAuthorFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$authors[] = $this->_returnAuthorFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -85,7 +85,7 @@ class BookForReviewAuthorDAO extends DAO {
 
 		while (!$result->EOF) {
 			$authors[] = $result->fields[0];
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -216,11 +216,9 @@ class BookForReviewAuthorDAO extends DAO {
 				)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**

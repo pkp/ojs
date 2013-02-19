@@ -63,12 +63,11 @@ class AuthorDAO extends PKPAuthorDAO {
 
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($row['submission_id']);
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($row['submission_id']);
 			if ($publishedArticle) {
-				$publishedArticles[] =& $publishedArticle;
+				$publishedArticles[] = $publishedArticle;
 			}
-			$result->moveNext();
-			unset($publishedArticle);
+			$result->MoveNext();
 		}
 
 		$result->Close();

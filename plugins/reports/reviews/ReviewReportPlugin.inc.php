@@ -62,7 +62,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		list($commentsIterator, $reviewsIterator) = $reviewReportDao->getReviewReport($journal->getId());
 
 		$comments = array();
-		while ($row =& $commentsIterator->next()) {
+		while ($row = $commentsIterator->next()) {
 			if (isset($comments[$row['article_id']][$row['author_id']])) {
 				$comments[$row['article_id']][$row['author_id']] .= "; " . $row['comments'];
 			} else {
@@ -99,7 +99,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		$fp = fopen('php://output', 'wt');
 		fputcsv($fp, array_values($columns));
 
-		while ($row =& $reviewsIterator->next()) {
+		while ($row = $reviewsIterator->next()) {
 			foreach ($columns as $index => $junk) {
 				if (in_array($index, $yesNoArray)) {
 					$columns[$index] = $yesnoMessages[$row[$index]];
@@ -116,7 +116,6 @@ class ReviewReportPlugin extends ReportPlugin {
 				}
 			}
 			fputcsv($fp, $columns);
-			unset($row);
 		}
 		fclose($fp);
 	}

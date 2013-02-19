@@ -977,11 +977,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Filter only issues that have a DOI assigned.
 		$issues = array();
-		while ($issue =& $issueIterator->next()) {
+		while ($issue = $issueIterator->next()) {
 			if ($issue->getPubId('doi')) {
-				$issues[] =& $issue;
+				$issues[] = $issue;
 			}
-			unset($issue);
 		}
 		unset($issueIterator);
 

@@ -331,8 +331,7 @@ class BookForReviewDAO extends DAO {
 	function deleteBooksForReviewByJournal($journalId) {
 		$books = $this->getBooksForReviewByJournalId($journalId);
 
-		while (!$books->eof()) {
-			$book =& $books->next();
+		while ($book = $books->next()) {
 			$this->deleteBookForReviewById($book->getId());
 		}
 	}

@@ -199,9 +199,9 @@ class ExternalFeedDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteExternalFeedsByJournalId($journalId) {
-		$feeds =& $this->getExternalFeedsByJournalId($journalId);
+		$feeds = $this->getExternalFeedsByJournalId($journalId);
 
-		while ($feed =& $feeds->next()) {
+		while ($feed = $feeds->next()) {
 			$this->deleteExternalFeedById($feed->getId());
 		}
 	}
@@ -242,11 +242,9 @@ class ExternalFeedDAO extends DAO {
 				)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**

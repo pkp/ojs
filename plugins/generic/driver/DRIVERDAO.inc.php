@@ -82,11 +82,11 @@ class DRIVERDAO extends OAIDAO {
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = $result->GetRowAssoc(false);
-			$record =& $this->_returnRecordFromRow($row);
+			$record = $this->_returnRecordFromRow($row);
 			if(in_array('driver', $record->sets)){
-				$records[] =& $record;
+				$records[] = $record;
 			}
-			$result->moveNext();
+			$result->MoveNext();
 			unset($record, $row);
 		}
 
@@ -142,12 +142,11 @@ class DRIVERDAO extends OAIDAO {
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = $result->GetRowAssoc(false);
-			$record =& $this->_returnIdentifierFromRow($row);
+			$record = $this->_returnIdentifierFromRow($row);
 			if(in_array('driver', $record->sets)){
-				$records[] =& $record;
+				$records[] = $record;
 			}
-			$result->moveNext();
-			unset($record, $row);
+			$result->MoveNext();
 		}
 
 		$result->Close();

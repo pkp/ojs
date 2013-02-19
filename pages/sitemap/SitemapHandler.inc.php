@@ -43,19 +43,18 @@ class SitemapHandler extends Handler {
 	 * @return XMLNode
 	 */
 	function _createSitemapIndex() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		
-		$doc =& XMLCustomWriter::createDocument();
-		$root =& XMLCustomWriter::createElement($doc, 'sitemapindex');
+		$doc = XMLCustomWriter::createDocument();
+		$root = XMLCustomWriter::createElement($doc, 'sitemapindex');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
 
-		$journals =& $journalDao->getJournals(true);
-		while ($journal =& $journals->next()) {
+		$journals = $journalDao->getJournals(true);
+		while ($journal = $journals->next()) {
 			$sitemapUrl = Request::url($journal->getPath(), 'sitemap');
-			$sitemap =& XMLCustomWriter::createElement($doc, 'sitemap');
+			$sitemap = XMLCustomWriter::createElement($doc, 'sitemap');
 			XMLCustomWriter::createChildWithText($doc, $sitemap, 'loc', $sitemapUrl, false);
 			XMLCustomWriter::appendChild($root, $sitemap);
-			unset($journal);
 		}
 		
 		XMLCustomWriter::appendChild($doc, $root);
@@ -95,7 +94,7 @@ class SitemapHandler extends Handler {
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'current')));
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
 		$publishedIssues =& $issueDao->getPublishedIssues($journalId);
-		while ($issue =& $publishedIssues->next()) {
+		while ($issue = $publishedIssues->next()) {
 			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getId())));
 			// Articles for issue
 			$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
@@ -108,7 +107,6 @@ class SitemapHandler extends Handler {
 					XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getId(), $galley->getId()))));
 				}
 			}
-			unset($issue);
 		}
 		
 		XMLCustomWriter::appendChild($doc, $root);

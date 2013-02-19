@@ -71,21 +71,18 @@ class ProofreadCommentForm extends CommentForm {
 		// excluding whomever posted the comment.
 
 		// Get editors
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getId());
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments = $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getId());
 		$editorAddresses = array();
-		while (!$editAssignments->eof()) {
-			$editAssignment =& $editAssignments->next();
+		while ($editAssignment = $editAssignments->next()) {
 			if ($editAssignment->getCanEdit()) $editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
-			unset($editAssignment);
 		}
 
 		// If no editors are currently assigned to this article,
 		// send the email to all editors for the journal
 		if (empty($editorAddresses)) {
-			$editors =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
-			while (!$editors->eof()) {
-				$editor =& $editors->next();
+			$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
+			while ($editor = $editors->next()) {
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 			}
 		}

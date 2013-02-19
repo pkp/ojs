@@ -163,8 +163,8 @@ class IssueGalleyDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$galleys[] = $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -397,10 +397,10 @@ class IssueGalleyDAO extends DAO {
 				'UPDATE issue_galleys SET seq = ? WHERE galley_id = ?',
 				array($i, $galleyId)
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
-		$result->close();
+		$result->Close();
 		unset($result);
 	}
 

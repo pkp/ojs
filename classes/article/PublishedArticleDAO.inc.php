@@ -107,8 +107,8 @@ class PublishedArticleDAO extends DAO {
 		$result =& $this->retrieve($sql, $params);
 
 		while (!$result->EOF) {
-			$publishedArticles[] =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$publishedArticles[] = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -234,7 +234,7 @@ class PublishedArticleDAO extends DAO {
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$publishedArticle =& $this->_returnPublishedArticleFromRow($row);
+			$publishedArticle = $this->_returnPublishedArticleFromRow($row);
 			if ($publishedArticle->getSectionId() != $currSectionId) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
@@ -249,7 +249,7 @@ class PublishedArticleDAO extends DAO {
 				}
 			}
 			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -305,9 +305,9 @@ class PublishedArticleDAO extends DAO {
 
 		$currSectionId = 0;
 		while (!$result->EOF) {
-			$publishedArticle =& $this->$func($result->GetRowAssoc(false));
+			$publishedArticle = $this->$func($result->GetRowAssoc(false));
 			$publishedArticles[] = $publishedArticle;
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -484,8 +484,8 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticles = array();
 		while (!$result->EOF) {
-			$publishedArticles[] =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$publishedArticles[] = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 		$result->Close();
 
@@ -544,7 +544,7 @@ class PublishedArticleDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['pub_id'];
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -572,7 +572,7 @@ class PublishedArticleDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['pub_id'];
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -597,7 +597,7 @@ class PublishedArticleDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['article_id'];
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -789,12 +789,9 @@ class PublishedArticleDAO extends DAO {
 				array($i, $publishedArticleId)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
-
+		$result->Close();
 		$this->flushCache();
 	}
 
@@ -824,9 +821,10 @@ class PublishedArticleDAO extends DAO {
 			)
 		);
 
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$author = new Author();
+			$author = $authorDao->newDataObject();
 			$author->setId($row['author_id']);
 			$author->setSubmissionId($row['article_id']);
 			$author->setFirstName($row['first_name']);
@@ -839,7 +837,7 @@ class PublishedArticleDAO extends DAO {
 			$author->setPrimaryContact($row['primary_contact']);
 			$author->setSequence($row['seq']);
 			$authors[] = $author;
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

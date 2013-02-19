@@ -286,10 +286,9 @@ class BooksForReviewPlugin extends GenericPlugin {
 		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
 		$oldUserBooksForReview =& $bfrDao->getBooksForReviewByAuthor($journal->getId(), $oldUserId);
 
-		while ($bookForReview =& $oldUserBooksForReview->next()) {
+		while ($bookForReview = $oldUserBooksForReview->next()) {
 			$bookForReview->setUserId($newUserId);
 			$bfrDao->updateObject($bookForReview);
-			unset($bookForReview);
 		}
 
 		return false;

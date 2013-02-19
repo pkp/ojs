@@ -662,7 +662,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				'decision' => $result->fields['decision'],
 				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
 		$result->Close();
 		unset($result);
@@ -869,8 +869,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$users[] =& $this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
-			$result->moveNext();
+			$users[] = $this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -957,8 +957,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$users[] =& $this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
-			$result->moveNext();
+			$users[] = $this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();

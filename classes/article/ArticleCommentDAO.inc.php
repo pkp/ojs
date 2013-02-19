@@ -43,8 +43,8 @@ class ArticleCommentDAO extends DAO {
 		}
 
 		while (!$result->EOF) {
-			$articleComments[] =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleComments[] = $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -66,8 +66,8 @@ class ArticleCommentDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$articleComments[] =& $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleComments[] = $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();

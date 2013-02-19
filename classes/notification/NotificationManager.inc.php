@@ -126,20 +126,19 @@ class NotificationManager extends PKPNotificationManager {
 		$roles = array();
 
 		// Check if user is editor
-		$article =& $articleDao->getArticle($articleId);
+		$article = $articleDao->getArticle($articleId);
 		if($article && Validation::isEditor($article->getJournalId())) {
 			$roles[] = ROLE_ID_EDITOR;
 		}
 
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO'); /* @var $editAssignmentDao EditAssignmentDAO */
-		$editAssignments =& $editAssignmentDao->getEditingSectionEditorAssignmentsByArticleId($articleId);
-		while ($editAssignment =& $editAssignments->next()) {
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO'); /* @var $editAssignmentDao EditAssignmentDAO */
+		$editAssignments = $editAssignmentDao->getEditingSectionEditorAssignmentsByArticleId($articleId);
+		while ($editAssignment = $editAssignments->next()) {
 			if ($userId == $editAssignment->getEditorId()) $roles[] = ROLE_ID_SECTION_EDITOR;
-			unset($editAssignment);
 		}
 
 		// Check if user is copy/layout editor or proofreader
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO'); /* @var $signoffDao SignoffDAO */
+		$signoffDao = DAORegistry::getDAO('SignoffDAO'); /* @var $signoffDao SignoffDAO */
 		$copyedSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
 		if ($userId == $copyedSignoff->getUserId()) $roles[] = ROLE_ID_COPYEDITOR;
 

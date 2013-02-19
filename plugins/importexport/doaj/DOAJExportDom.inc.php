@@ -21,24 +21,22 @@ class DOAJExportDom {
 	 * @param $journal object Journal to export
 	 */
 	function &generateJournalDom(&$doc, &$journal) {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$pubArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$pubArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		// Records node contains all articles, each called a record
-		$records =& XMLCustomWriter::createElement($doc, 'records');
+		$records = XMLCustomWriter::createElement($doc, 'records');
 
-		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		while ($pubArticle =& $pubArticles->next()) {
-			$issue =& $issueDao->getIssueById($pubArticle->getIssueId());
+		$pubArticles = $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
+		while ($pubArticle = $pubArticles->next()) {
+			$issue = $issueDao->getIssueById($pubArticle->getIssueId());
 			if(!$issue) continue;
 			$section = $sectionDao->getById($pubArticle->getSectionId());
 
-			$articleNode =& DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
+			$articleNode = DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
 
 			XMLCustomWriter::appendChild($records, $articleNode);
-
-			unset($issue, $section, $articleNode);
 		}
 
 		return $records;

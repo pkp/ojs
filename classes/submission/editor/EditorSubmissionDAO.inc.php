@@ -602,7 +602,7 @@ class EditorSubmissionDAO extends DAO {
 
 		while (!$result->EOF) {
 			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $this->datetimeFromDB($result->fields[3]));
-			$result->moveNext();
+			$result->MoveNext();
 		}
 		$result->Close();
 		unset($result);

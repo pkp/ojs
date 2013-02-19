@@ -59,8 +59,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');
 			$email->setBody($templateMgr->fetch('subscription/openAccessNotifyEmail.tpl'));
 
-			while (!$users->eof()) {
-				$user =& $users->next();
+			while ($user = $users->next()) {
 				$email->addBcc($user->getEmail(), $user->getFullName());
 			}
 
@@ -81,16 +80,14 @@ class OpenAccessNotification extends ScheduledTask {
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issues =& $issueDao->getPublishedIssues($journal->getId());
 
-			while (!$issues->eof()) {
-				$issue =& $issues->next();
-
+			while ($issue = $issues->next()) {
 				$accessStatus = $issue->getAccessStatus();
 				$openAccessDate = $issue->getOpenAccessDate();
 
 				if ($accessStatus == ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0,0,0,$curMonth, $curDay, $curYear)) {
 					// Notify all users who have open access notification set for this journal
-					$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-					$users =& $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getId());
+					$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
+					$users = $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getId());
 					$this->sendNotification($users, $journal, $issue);
 				}
 			}
@@ -107,12 +104,9 @@ class OpenAccessNotification extends ScheduledTask {
 			'day' => date('j')
 		);
 
-		while (!$journals->eof()) {
-			$journal =& $journals->next();
-
+		while ($journal = $journals->next()) {
 			// Send notifications based on current date			
 			$this->sendNotifications($journal, $todayDate);
-			unset($journal);
 		}
 
 		// If it is the first day of a month but previous month had only
@@ -131,14 +125,10 @@ class OpenAccessNotification extends ScheduledTask {
 				$curDate['year'] = $todayDate['year'];
 			}
 
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			$journals = $journalDao->getJournals(true);
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month		
 				$this->sendNotifications($journal, $curDate);
-				unset($journal);
 			}
 		}
 
@@ -150,14 +140,10 @@ class OpenAccessNotification extends ScheduledTask {
 			$curDate['month'] = 2;
 			$curDate['year'] = $todayDate['year'];
 
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			$journals = $journalDao->getJournals(true);
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February		
 				$this->sendNotifications($journal, $curDate);
-				unset($journal);
 			}
 
 			// Check if it's a leap year
@@ -165,14 +151,10 @@ class OpenAccessNotification extends ScheduledTask {
 
 				$curDate['day'] = 29;
 
-				$journals =& $journalDao->getJournals(true);
-
-				while (!$journals->eof()) {
-					$journal =& $journals->next();
-
+				$journals = $journalDao->getJournals(true);
+				while ($journal = $journals->next()) {
 					// Send reminders for simulated 29th day of February		
 					$this->sendNotifications($journal, $curDate);
-					unset($journal);
 				}
 			}
 		}

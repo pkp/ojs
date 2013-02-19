@@ -54,22 +54,20 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function designateReviewVersions() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 		import('classes.submission.author.AuthorAction');
 
-		$journals =& $journalDao->getJournals();
-		while ($journal =& $journals->next()) {
-			$articles =& $articleDao->getArticlesByJournalId($journal->getId());
-			while ($article =& $articles->next()) {
+		$journals = $journalDao->getJournals();
+		while ($journal = $journals->next()) {
+			$articles = $articleDao->getArticlesByJournalId($journal->getId());
+			while ($article = $articles->next()) {
 				if (!$article->getReviewFileId() && $article->getSubmissionProgress() == 0) {
-					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
+					$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getId());
 					AuthorAction::designateReviewVersion($authorSubmission, true);
 				}
-				unset($article);
 			}
-			unset($journal);
 		}
 		return true;
 	}
@@ -225,9 +223,8 @@ class Upgrade extends Installer {
 
 		// Get journal IDs for insertion, including 0 for site-level
 		$journalIds = array(0);
-		while ($journal =& $journals->next()) {
+		while ($journal = $journals->next()) {
 			$journalIds[] = $journal->getId();
-			unset($journal);
 		}
 
 		$pluginNames = array(
@@ -696,9 +693,9 @@ class Upgrade extends Installer {
 			'pageHeaderTitleImage' => 'pageHeaderTitleImageAltText',
 			'pageHeaderLogoImage' => 'pageHeaderLogoImageAltText'
 		);
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals();
-		while ($journal =& $journals->next()) {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals();
+		while ($journal = $journals->next()) {
 			foreach ($imageSettings as $imageSettingName => $newSettingName) {
 				$imageSetting = $journal->getSetting($imageSettingName);
 				$newSetting = array();
@@ -709,7 +706,6 @@ class Upgrade extends Installer {
 					$journal->updateSetting($newSettingName, $newSetting, 'string', true);
 				}
 			}
-			unset($journal);
 		}
 		return true;
 	}
@@ -1051,8 +1047,8 @@ class Upgrade extends Installer {
 		$testRow = $vocabTestResult->GetRowAssoc(false);
 		if ($testRow['total'] > 0) return true;
 
-		$journals =& $journalDao->getJournals();
-		while ($journal =& $journals->next()) {
+		$journals = $journalDao->getJournals();
+		while ($journal = $journals->next()) {
 			// for languages, we depend on the journal locale settings since languages are not localized.
 			// Use Journal locales, or primary if no defined submission locales.
 			$supportedLocales = $journal->getSupportedSubmissionLocales();
@@ -1060,12 +1056,12 @@ class Upgrade extends Installer {
 			if (empty($supportedLocales)) $supportedLocales = array($journal->getPrimaryLocale());
 			else if (!is_array($supportedLocales)) $supportedLocales = array($supportedLocales);
 
-			$result =& $articleDao->retrieve('SELECT a.article_id FROM articles a WHERE a.journal_id = ?', array((int)$journal->getId()));
+			$result = $articleDao->retrieve('SELECT a.article_id FROM articles a WHERE a.journal_id = ?', array((int)$journal->getId()));
 			while (!$result->EOF) {
 				$row = $result->GetRowAssoc(false);
 				$articleId = (int)$row['article_id'];
 				$settings = array();
-				$settingResult =& $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM article_settings WHERE article_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
+				$settingResult = $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM article_settings WHERE article_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
 				while (!$settingResult->EOF) {
 					$settingRow = $settingResult->GetRowAssoc(false);
 					$locale = $settingRow['locale'];
@@ -1073,14 +1069,10 @@ class Upgrade extends Installer {
 					$settingValue = $settingRow['setting_value'];
 					$settings[$settingName][$locale] = $settingValue;
 					$settingResult->MoveNext();
-					unset($locale);
-					unset($settingName);
-					unset($settingValue);
 				}
 				$settingResult->Close();
-				unset($settingResult);
 
-				$languageResult =& $articleDao->retrieve('SELECT language FROM articles WHERE article_id = ?', array((int)$articleId));
+				$languageResult = $articleDao->retrieve('SELECT language FROM articles WHERE article_id = ?', array((int)$articleId));
 				$languageRow = $languageResult->getRowAssoc(false);
 				// language is NOT localized originally.
 				$language = $languageRow['language'];
@@ -1167,12 +1159,12 @@ class Upgrade extends Installer {
 		}
 
 		// iterate through all journals and assign remaining users to their respective groups.
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals();
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals();
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
 
-		while ($journal =& $journals->next()) {
+		while ($journal = $journals->next()) {
 			// Install default user groups so we can assign users to them.
 			$userGroupDao->installSettings($journal->getId(), 'registry/userGroups.xml');
 
@@ -1186,28 +1178,28 @@ class Upgrade extends Installer {
 			}
 
 			// Subscription Managers.
-			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER);
-			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER));
+			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER);
+			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER));
 			while (!$userResult->EOF) {
-				$row =& $userResult->GetRowAssoc(false);
+				$row = $userResult->GetRowAssoc(false);
 				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 				$userResult->MoveNext();
 			}
 
 			// Managers.
-			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
-			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_MANAGER));
+			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_MANAGER));
 			while (!$userResult->EOF) {
-				$row =& $userResult->GetRowAssoc(false);
+				$row = $userResult->GetRowAssoc(false);
 				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 				$userResult->MoveNext();
 			}
 
 			// Authors.
-			$group =& $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
-			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_AUTHOR));
+			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
+			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_AUTHOR));
 			while (!$userResult->EOF) {
-				$row =& $userResult->GetRowAssoc(false);
+				$row = $userResult->GetRowAssoc(false);
 				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 				$userResult->MoveNext();
 			}
@@ -1217,13 +1209,13 @@ class Upgrade extends Installer {
 
 			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
 			// There should only be one user group with ROLE_ID_REVIEWER in the external review stage.
-			$userGroups =& $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, true, false, ROLE_ID_REVIEWER);
-			while ($group =& $userGroups->next()) {
+			$userGroups = $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, true, false, ROLE_ID_REVIEWER);
+			while ($group = $userGroups->next()) {
 				// make sure.
 				if ($group->getRoleId() != ROLE_ID_REVIEWER) continue;
-				$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_REVIEWER));
+				$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_REVIEWER));
 				while (!$userResult->EOF) {
-					$row =& $userResult->GetRowAssoc(false);
+					$row = $userResult->GetRowAssoc(false);
 					$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 					$userResult->MoveNext();
 				}
@@ -1234,22 +1226,22 @@ class Upgrade extends Installer {
 
 			// Guest editors.
 			$userGroupIds = $userGroupDao->getUserGroupIdsByRoleId(ROLE_ID_GUEST_EDITOR, $journal->getId());
-			$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
+			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
 			while (!$userResult->EOF) {
-				$row =& $userResult->GetRowAssoc(false);
+				$row = $userResult->GetRowAssoc(false);
 				// there should only be one guest editor group id.
 				$userGroupDao->assignUserToGroup($row['user_id'], $userGroupIds[0]);
 				$userResult->MoveNext();
 			}
 
 			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
-			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
 
-			while ($group =& $userGroups->next()) {
+			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.editor') {
-					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_EDITOR));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_EDITOR));
 					while (!$userResult->EOF) {
-						$row =& $userResult->GetRowAssoc(false);
+						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 						$userResult->MoveNext();
 					}
@@ -1257,12 +1249,12 @@ class Upgrade extends Installer {
 			}
 
 			// Section Editors.
-			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
-			while ($group =& $userGroups->next()) {
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
+			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.sectionEditor') {
-					$userResult =& $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));
+					$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));
 					while (!$userResult->EOF) {
-						$row =& $userResult->GetRowAssoc(false);
+						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 						$userResult->MoveNext();
 					}
@@ -1270,12 +1262,12 @@ class Upgrade extends Installer {
 			}
 
 			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
-			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			while ($group =& $userGroups->next()) {
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
-					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_LAYOUT_EDITOR));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_LAYOUT_EDITOR));
 					while (!$userResult->EOF) {
-						$row =& $userResult->GetRowAssoc(false);
+						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 						$userResult->MoveNext();
 					}
@@ -1283,12 +1275,12 @@ class Upgrade extends Installer {
 			}
 
 			// Copyeditors. NOTE:  this involves a role id change from 0x2000 to 0x1001 (old OJS _COPYEDITOR to PKP-lib _ASSISTANT).
-			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			while ($group =& $userGroups->next()) {
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
-					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_COPYEDITOR));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_COPYEDITOR));
 					while (!$userResult->EOF) {
-						$row =& $userResult->GetRowAssoc(false);
+						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 						$userResult->MoveNext();
 					}
@@ -1296,12 +1288,12 @@ class Upgrade extends Installer {
 			}
 
 			// Proofreaders. NOTE:  this involves a role id change from 0x3000 to 0x1001 (old OJS _PROOFREADER to PKP-lib _ASSISTANT).
-			$userGroups =& $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			while ($group =& $userGroups->next()) {
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.proofreader') {
-					$userResult =& $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_PROOFREADER));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_PROOFREADER));
 					while (!$userResult->EOF) {
-						$row =& $userResult->GetRowAssoc(false);
+						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
 						$userResult->MoveNext();
 					}

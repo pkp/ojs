@@ -247,9 +247,8 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteVersionsByJournal($journalId) {
-		$versions =& RTDAO::getVersions($journalId);
-		while (!$versions->eof()) {
-			$version =& $versions->next();
+		$versions = RTDAO::getVersions($journalId);
+		while ($version = $versions->next()) {
 			$this->deleteVersion($version->getVersionId(), $journalId);
 		}
 	}
@@ -438,11 +437,9 @@ class RTDAO extends DAO {
 				)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**
@@ -607,11 +604,9 @@ class RTDAO extends DAO {
 				)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 }
 

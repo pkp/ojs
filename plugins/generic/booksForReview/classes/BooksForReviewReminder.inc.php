@@ -91,8 +91,7 @@ class BooksForReviewReminder extends ScheduledTask {
 				// Retrieve all books for review that match due date
 				$books =& $bfrDao->getBooksForReviewByDateDue($journalId, $dueDate);
 
-				while (!$books->eof()) {
-					$bookForReview =& $books->next();
+				while ($bookForReview = $books->next()) {
 					$this->sendReminder($bookForReview, $journal, 'BFR_REVIEW_REMINDER');
 				}
 			}
@@ -124,8 +123,7 @@ class BooksForReviewReminder extends ScheduledTask {
 				// Retrieve all books for review that match due date
 				$books =& $bfrDao->getBooksForReviewByDateDue($journalId, $dueDate);
 
-				while (!$books->eof()) {
-					$bookForReview =& $books->next();
+				while ($bookForReview = $books->next()) {
 					$this->sendReminder($bookForReview, $journal, 'BFR_REVIEW_REMINDER_LATE');
 				}
 			}
@@ -136,21 +134,18 @@ class BooksForReviewReminder extends ScheduledTask {
 	 * Run this scheduled task. 
 	 */
 	function execute() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals(true);
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals(true);
 
 		$todayDate = array(
-						'year' => date('Y'),
-						'month' => date('n'),
-						'day' => date('j')
-					);
+			'year' => date('Y'),
+			'month' => date('n'),
+			'day' => date('j')
+		);
 
-		while (!$journals->eof()) {
-			$journal =& $journals->next();
-
+		while ($journal = $journals->next()) {
 			// Send reminders based on current date
 			$this->sendJournalReminders($journal, $todayDate);
-			unset($journal);
 		}
 
 		// If it is the first day of a month but previous month had only 30
@@ -168,14 +163,10 @@ class BooksForReviewReminder extends ScheduledTask {
 				$curDate['year'] = $todayDate['year'];
 			}
 
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			$journals = $journalDao->getJournals(true);
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month
 				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
 			}
 		}
 
@@ -187,14 +178,10 @@ class BooksForReviewReminder extends ScheduledTask {
 			$curDate['month'] = 2;
 			$curDate['year'] = $todayDate['year'];
 
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			$journals = $journalDao->getJournals(true);
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February
 				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
 			}
 
 			// Check if it's a leap year
@@ -202,14 +189,10 @@ class BooksForReviewReminder extends ScheduledTask {
 
 				$curDate['day'] = 29;
 
-				$journals =& $journalDao->getJournals(true);
-
-				while (!$journals->eof()) {
-					$journal =& $journals->next();
-
+				$journals = $journalDao->getJournals(true);
+				while ($journal = $journals->next()) {
 					// Send reminders for simulated 29th day of February
 					$this->sendJournalReminders($journal, $curDate);
-					unset($journal);
 				}
 			}
 		}

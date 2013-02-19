@@ -196,8 +196,7 @@ class ArticleSearch {
 			$resultsPerKeyword,
 			$resultCacheHours
 		);
-		while (!$results->eof()) {
-			$result =& $results->next();
+		while ($resuult = $results->next()) {
 			$articleId = $result['article_id'];
 			if (!isset($mergedResults[$articleId])) {
 				$mergedResults[$articleId] = $result['count'];
@@ -277,11 +276,11 @@ class ArticleSearch {
 					JOURNAL_FIELD_TITLE, 'is', $request->getUserVar('journalTitle')
 				);
 				if ($journals->getCount() == 1) {
-					$journal =& $journals->next();
+					$journal = $journals->next();
 				}
 			}
 		}
-		$searchFilters['searchJournal'] =& $journal;
+		$searchFilters['searchJournal'] = $journal;
 		$searchFilters['siteSearch'] = $siteSearch;
 
 		return $searchFilters;

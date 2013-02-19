@@ -358,10 +358,9 @@ class Article extends Submission {
 		if($editors) {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
-			while ($editAssignment =& $editAssignments->next()) {
+			while ($editAssignment = $editAssignments->next()) {
 				$userId = $editAssignment->getEditorId();
 				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'editor');
-				unset($editAssignment);
 			}
 		}
 

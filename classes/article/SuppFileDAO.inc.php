@@ -100,8 +100,8 @@ class SuppFileDAO extends DAO {
 
 		$suppFiles = array();
 		while (!$result->EOF) {
-			$suppFiles[] =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$suppFiles[] = $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 		$result->Close();
 
@@ -122,8 +122,8 @@ class SuppFileDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$suppFiles[] =& $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$suppFiles[] = $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -354,11 +354,9 @@ class SuppFileDAO extends DAO {
 				'UPDATE article_supplementary_files SET seq = ? WHERE supp_id = ?',
 				array($i, $suppId)
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**
@@ -465,7 +463,7 @@ class SuppFileDAO extends DAO {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		$suppFiles =& $this->getSuppFilesByJournalId($journalId);
-		while ($suppFile =& $suppFiles->next()) {
+		while ($suppFile = $suppFiles->next()) {
 			$this->update(
 				'DELETE FROM article_supp_file_settings WHERE setting_name = ? AND supp_id = ?',
 				array(
@@ -473,7 +471,6 @@ class SuppFileDAO extends DAO {
 					(int)$suppFile->getId()
 				)
 			);
-			unset($suppFile);
 		}
 		$this->flushCache();
 	}

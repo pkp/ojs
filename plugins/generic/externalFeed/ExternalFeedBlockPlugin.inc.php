@@ -89,9 +89,8 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
 		$plugin->import('simplepie.SimplePie');
 
-		$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
-
-		while ($currentFeed =& $feeds->next()) {
+		$feeds = $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
+		while ($currentFeed = $feeds->next()) {
 			$displayBlock = $currentFeed->getDisplayBlock();
 			if (($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_NONE) ||
 				(($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_HOMEPAGE &&

@@ -160,9 +160,8 @@ class LayoutEditorHandler extends Handler {
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
-		while ($issue =& $allIssuesIterator->next()) {
+		while ($issue = $allIssuesIterator->next()) {
 			$issueMap[$issue->getId()] = $issue->getIssueIdentification();
-			unset($issue);
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 

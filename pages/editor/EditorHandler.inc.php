@@ -130,7 +130,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			// If only result is returned from a search, fast-forward to it
 			if ($search && $submissions && $submissions->getCount() == 1) {
-				$submission =& $submissions->next();
+				$submission = $submissions->next();
 				$request->redirect(null, null, 'submission', array($submission->getId()));
 			}
 
@@ -345,7 +345,7 @@ class EditorHandler extends SectionEditorHandler {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 
-			while($editAssignment =& $editAssignments->next()) {
+			while($editAssignment = $editAssignments->next()) {
 				if ($editAssignment->getIsEditor()) continue;
 
 				$canReview = $request->getUserVar('canReview-' . $editAssignment->getEditId()) ? 1 : 0;

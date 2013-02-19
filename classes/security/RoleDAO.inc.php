@@ -123,7 +123,7 @@ class RoleDAO extends PKPRoleDAO {
 		$params = array((int) $userId);
 		if ($journalId !== null) $params[] = (int) $journalId;
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM roles WHERE user_id = ?
 			' . (isset($journalId) ? ' AND journal_id = ?' : '') . '
 			ORDER BY journal_id',
@@ -132,7 +132,7 @@ class RoleDAO extends PKPRoleDAO {
 
 		while (!$result->EOF) {
 			$roles[] = $this->_returnRoleFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

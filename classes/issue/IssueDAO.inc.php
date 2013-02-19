@@ -131,8 +131,8 @@ class IssueDAO extends DAO {
 
 		$issues = array();
 		while (!$result->EOF) {
-			$issues[] =& $this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$issues[] = $this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 		$result->Close();
 
@@ -504,10 +504,9 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteIssuesByJournal($journalId) {
-		$issues =& $this->getIssues($journalId);
-		while (($issue =& $issues->next())) {
+		$issues = $this->getIssues($journalId);
+		while (($issue = $issues->next())) {
 			$this->deleteIssue($issue);
-			unset($issue);
 		}
 	}
 
@@ -673,7 +672,7 @@ class IssueDAO extends DAO {
 
 		for ($i=1; !$result->EOF; $i++) {
 			list($issueId) = $result->fields;
-			$resultB =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
+			$resultB = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
 			if (!$resultB->EOF) {
 				$this->update(
 					'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
@@ -685,11 +684,9 @@ class IssueDAO extends DAO {
 			}
 			$resultB->Close();
 			unset($resultB);
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**
@@ -738,11 +735,10 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function setDefaultCustomIssueOrders($journalId) {
-		$publishedIssues =& $this->getPublishedIssues($journalId);
+		$publishedIssues = $this->getPublishedIssues($journalId);
 		$i=1;
-		while ($issue =& $publishedIssues->next()) {
+		while ($issue = $publishedIssues->next()) {
 			$this->insertCustomIssueOrder($journalId, $issue->getId(), $i);
-			unset($issue);
 			$i++;
 		}
 	}
@@ -798,8 +794,8 @@ class IssueDAO extends DAO {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		// issues
-		$issues =& $this->getIssues($journalId);
-		while ($issue =& $issues->next()) {
+		$issues = $this->getIssues($journalId);
+		while ($issue = $issues->next()) {
 			$this->update(
 				'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
 				array(
@@ -807,7 +803,6 @@ class IssueDAO extends DAO {
 					(int)$issue->getId()
 				)
 			);
-			unset($issue);
 		}
 		$this->flushCache();
 	}

@@ -308,7 +308,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			} else {
 				$submissionsCount[1] += 1;
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

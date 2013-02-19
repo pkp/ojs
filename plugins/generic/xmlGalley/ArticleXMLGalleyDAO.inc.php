@@ -114,7 +114,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 							&& $xmlGalley->isPdfGalley()) || $xmlGalley->isHTMLGalley()) {
 						array_push($galleys, $xmlGalley);
 					} */
-					$result->moveNext();
+					$result->MoveNext();
 				}
 
 				// hide source XML galley; this could be made a plugin setting/checkbox

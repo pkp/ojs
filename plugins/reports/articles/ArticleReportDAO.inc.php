@@ -71,8 +71,8 @@ class ArticleReportDAO extends DAO {
 		);
 		$decisionDatesIterator = new DBRowIterator($result);
 		$decisionsReturner = array();
-		while ($row =& $decisionDatesIterator->next()) {
-			$result =& $this->retrieve(
+		while ($row = $decisionDatesIterator->next()) {
+			$result = $this->retrieve(
 				'SELECT	d.decision AS decision,
 					d.article_id AS article_id
 				FROM	edit_decisions d,
@@ -87,15 +87,14 @@ class ArticleReportDAO extends DAO {
 				)
 			);
 			$decisionsReturner[] = new DBRowIterator($result);
-			unset($result);
 		}
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articles =& $articleDao->getArticlesByJournalId($journalId);
 		$authorsReturner = array();
 		$index = 1;
-		while ($article =& $articles->next()) {
-			$result =& $this->retrieve(
+		while ($article = $articles->next()) {
+			$result = $this->retrieve(
 				'SELECT	aa.first_name AS fname,
 					aa.middle_name AS mname,
 					aa.last_name AS lname,
@@ -128,10 +127,8 @@ class ArticleReportDAO extends DAO {
 				)
 			);
 			$authorIterator = new DBRowIterator($result);
-			$authorsReturner[$article->getId()] =& $authorIterator;
-			unset($authorIterator);
+			$authorsReturner[$article->getId()] = $authorIterator;
 			$index++;
-			unset($article);
 		}
 
 		return array($articlesReturner, $authorsReturner, $decisionsReturner);

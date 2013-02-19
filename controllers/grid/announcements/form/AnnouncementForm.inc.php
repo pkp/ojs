@@ -72,9 +72,8 @@ class AnnouncementForm extends PKPAnnouncementForm {
 		if (!$announcementTypeFactory->wasEmpty()) {
 			$announcementTypeOptions = array(0 => __('common.none'));
 		}
-		while ($announcementType =& $announcementTypeFactory->next()) {
+		while ($announcementType = $announcementTypeFactory->next()) {
 			$announcementTypeOptions[$announcementType->getId()] = $announcementType->getLocalizedTypeName();
-			unset($announcementType);
 		}
 		$templateMgr->assign('announcementTypes', $announcementTypeOptions);
 
@@ -106,10 +105,8 @@ class AnnouncementForm extends PKPAnnouncementForm {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
 		$allUsers = $roleDao->getUsersByJournalId($journalId);
-		while (!$allUsers->eof()) {
-			$user =& $allUsers->next();
+		while ($user = $allUsers->next()) {
 			$notificationUsers[] = array('id' => $user->getId());
-			unset($user);
 		}
 		foreach ($notificationUsers as $userRole) {
 			$notificationManager->createNotification(

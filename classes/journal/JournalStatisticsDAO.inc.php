@@ -113,7 +113,7 @@ class JournalStatisticsDAO extends DAO {
 				}
 			}
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -173,7 +173,7 @@ class JournalStatisticsDAO extends DAO {
 			$role = $roleDao->newDataObject();
 			$role->setId($row['role_id']);
 			$returner[$role->getPath()] = $row['role_count'];
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -214,7 +214,7 @@ class JournalStatisticsDAO extends DAO {
 				'name' => $row['type_name'],
 				'count' => $row['type_count']
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
 		$result->Close();
 		unset($result);
@@ -252,7 +252,7 @@ class JournalStatisticsDAO extends DAO {
 			} else {
 				$returner['numUnpublishedIssues'] = $row['count'];
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -348,7 +348,7 @@ class JournalStatisticsDAO extends DAO {
 					$totalElapsedTime += ($timeCompleted - $timeReviewVersionUploaded);
 				}
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

@@ -500,9 +500,8 @@ class ArticleDAO extends DAO {
 	 */
 	function deleteArticlesByJournalId($journalId) {
 		$articles = $this->getArticlesByJournalId($journalId);
-
-		while (!$articles->eof()) {
-			$article =& $articles->next();
+		while ($article = $articles->next()) {
+			$article = $articles->next();
 			$this->deleteArticleById($article->getId());
 		}
 	}
@@ -727,7 +726,7 @@ class ArticleDAO extends DAO {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		$articles =& $this->getArticlesByJournalId($journalId);
-		while ($article =& $articles->next()) {
+		while ($article = $articles->next()) {
 			$this->update(
 				'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
 				array(
@@ -735,7 +734,6 @@ class ArticleDAO extends DAO {
 					(int)$article->getId()
 				)
 			);
-			unset($article);
 		}
 		$this->flushCache();
 	}

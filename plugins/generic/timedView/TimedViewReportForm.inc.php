@@ -86,12 +86,12 @@ class TimedViewReportForm extends Form {
 		$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
 		$abstractViewCounts =& $timedViewReportDao->getAbstractViewCount($journal->getId(), $this->getData('dateStart'), $this->getData('dateEnd'));
 
-		while ($row =& $abstractViewCounts->next()) {
+		while ($row = $abstractViewCounts->next()) {
 			$galleyViewTotal = 0;
 			$articleId = $row['article_id'];
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 			$issueId = $publishedArticle->getIssueId();
-			$issue =& $issueDao->getIssueById($issueId);
+			$issue = $issueDao->getIssueById($issueId);
 
 			$articleData[$articleId] = array(
 				'id' => $articleId,
@@ -102,10 +102,10 @@ class TimedViewReportForm extends Form {
 			);
 
 			// For each galley, store the label and the count
-			$galleyCounts =& $timedViewReportDao->getGalleyViewCountsForArticle($articleId, $this->getData('dateStart'), $this->getData('dateEnd'));
+			$galleyCounts = $timedViewReportDao->getGalleyViewCountsForArticle($articleId, $this->getData('dateStart'), $this->getData('dateEnd'));
 			$galleyViews[$articleId] = array();
 			$galleyViewTotal = 0;
-			while ($galley =& $galleyCounts->next()) {
+			while ($galley = $galleyCounts->next()) {
 				$label = $galley['label'];
 				$i = array_search($label, $galleyLabels);
 				if ($i === false) {
@@ -123,9 +123,6 @@ class TimedViewReportForm extends Form {
 			}
 
 			$articleData[$articleId]['galleyViews'] = $galleyViewTotal;
-
-			// Clean up
-			unset($row, $galleys);
 		}
 
 		header('content-type: text/comma-separated-values');

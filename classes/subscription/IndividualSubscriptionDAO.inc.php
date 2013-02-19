@@ -332,7 +332,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -364,7 +364,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -401,7 +401,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -433,7 +433,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				if (!$returner) { 
 					break;
 				}
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 

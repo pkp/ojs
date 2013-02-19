@@ -149,8 +149,8 @@ class ArticleGalleyDAO extends DAO {
 
 		$galleys = array();
 		while (!$result->EOF) {
-			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$galleys[] = $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 		$result->Close();
 
@@ -175,8 +175,8 @@ class ArticleGalleyDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$galleys[] =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$galleys[] = $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -452,11 +452,9 @@ class ArticleGalleyDAO extends DAO {
 				'UPDATE article_galleys SET seq = ? WHERE galley_id = ?',
 				array($i, $galleyId)
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
-
-		$result->close();
-		unset($result);
+		$result->Close();
 	}
 
 	/**
@@ -588,7 +586,7 @@ class ArticleGalleyDAO extends DAO {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		$galleys =& $this->getGalleysByJournalId($journalId);
-		while ($galley =& $galleys->next()) {
+		while ($galley = $galleys->next()) {
 			$this->update(
 				'DELETE FROM article_galley_settings WHERE setting_name = ? AND galley_id = ?',
 				array(
@@ -596,7 +594,6 @@ class ArticleGalleyDAO extends DAO {
 					(int)$galley->getId()
 				)
 			);
-			unset($galley);
 		}
 		$this->flushCache();
 	}

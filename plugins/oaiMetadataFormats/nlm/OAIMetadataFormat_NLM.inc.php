@@ -252,21 +252,19 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		if (isset($editorialInfo[$journalId])) return $editorialInfo[$journalId];
 
 		$response = '';
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleMap = array(ROLE_ID_EDITOR => 'editor', ROLE_ID_SECTION_EDITOR> 'secteditor', ROLE_ID_MANAGER => 'jmanager');
 		foreach ($roleMap as $roleId => $roleName) {
-			$users =& $roleDao->getUsersByRoleId($roleId, $journalId);
+			$users = $roleDao->getUsersByRoleId($roleId, $journalId);
 			$isFirst = true;
-			while ($user =& $users->next()) {
+			while ($user = $users->next()) {
 				$response .= "\t\t\t\t<contrib contrib-type=\"$roleName\">\n" .
 					"\t\t\t\t\t<name>\n" .
 					"\t\t\t\t\t\t<surname>" . htmlspecialchars(Core::cleanVar($user->getLastName())) . "</surname>\n" .
 					"\t\t\t\t\t\t<given-names>" . htmlspecialchars(Core::cleanVar($user->getFirstName() . ($user->getMiddleName() != ''?' ' . $user->getMiddleName():''))) . "</given-names>\n" .
 					"\t\t\t\t\t</name>\n" .
 					"\t\t\t\t</contrib>\n";
-				unset($user);
 			}
-			unset($users);
 		}
 		$editorialInfo[$journalId] =& $response;
 		return $response;

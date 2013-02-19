@@ -309,7 +309,7 @@ class PubIdPlugin extends Plugin {
 			}
 
 			$excludedId = (is_a($pubObject, $pubObjectType) ? $pubObject->getId() : null);
-			while ($objectToCheck =& $objectsToCheck->next()) {
+			while ($objectToCheck = $objectsToCheck->next()) {
 				// The publication object for which the new pubId
 				// should be admissible is to be ignored. Otherwise
 				// we might get false positives by checking against
@@ -319,8 +319,6 @@ class PubIdPlugin extends Plugin {
 				// Check for ID clashes.
 				$existingPubId = $this->getPubId($objectToCheck, true);
 				if ($pubId == $existingPubId) return false;
-
-				unset($objectToCheck);
 			}
 
 			unset($objectsToCheck);

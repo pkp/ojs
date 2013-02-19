@@ -52,7 +52,7 @@ class BrowseHandler extends Handler {
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$sectionsIterator = $sectionDao->getByJournalId($journal->getId());
 				$sections = array();
-				while (($section =& $sectionsIterator->next())) {
+				while ($section = $sectionsIterator->next()) {
 					if (!in_array($section->getId(), $excludedSections)) {
 						$sections[$section->getLocalizedTitle()] = $section->getId();
 					}

@@ -118,11 +118,11 @@ class SectionEditorHandler extends Handler {
 
 		// If only result is returned from a search, fast-forward to it
 		if ($search && $submissions && $submissions->getCount() == 1) {
-			$submission =& $submissions->next();
+			$submission = $submissions->next();
 			$request->redirect(null, null, 'submission', array($submission->getId()));
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('filterSection', $filterSection);

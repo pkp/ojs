@@ -92,7 +92,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$issues =& $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
 
 				// Ensure only one issue matched, and fetch it.
-				$issue =& $issues->next();
+				$issue = $issues->next();
 				if (!$issue || $issues->next()) break;
 				unset($issues);
 
@@ -128,19 +128,19 @@ class ResolverPlugin extends GatewayPlugin {
 	}
 
 	function exportHoldings() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$journals =& $journalDao->getJournals(true);
-		$request =& $this->getRequest();
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$journals = $journalDao->getJournals(true);
+		$request = $this->getRequest();
 		header('content-type: text/plain');
 		header('content-disposition: attachment; filename=holdings.txt');
 		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
-		while ($journal =& $journals->next()) {
-			$issues =& $issueDao->getPublishedIssues($journal->getId());
+		while ($journal = $journals->next()) {
+			$issues = $issueDao->getPublishedIssues($journal->getId());
 			$startDate = $endDate = null;
 			$startNumber = $endNumber = null;
 			$startVolume = $endVolume = null;
-			while ($issue =& $issues->next()) {
+			while ($issue = $issues->next()) {
 				$datePublished = $issue->getDatePublished();
 				if ($datePublished !== null) $datePublished = strtotime($datePublished);
 				if ($startDate === null || $startDate > $datePublished) $startDate = $datePublished;
@@ -151,9 +151,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$number = $issue->getNumber();
 				if ($startNumber === null || $startNumber > $number) $startNumber = $number;
 				if ($endNumber === null || $endNumber < $number) $endNumber = $number;
-				unset($issue);
 			}
-			unset($issues);
 
 			echo $this->sanitize($journal->getLocalizedName()) . "\t";
 			echo $this->sanitize($journal->getSetting('printIssn')) . "\t";
@@ -168,7 +166,6 @@ class ResolverPlugin extends GatewayPlugin {
 			echo $this->sanitize($startNumber) . "\t"; // iss_start
 			echo $this->sanitize($endNumber) . "\n"; // iss_end
 
-			unset($journal);
 		}
 	}
 

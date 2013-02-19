@@ -103,13 +103,11 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
+				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
+				while ($subscription = $institutionalSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 			}
@@ -132,13 +130,11 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
+				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
+				while ($subscription = $institutionalSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 			}
@@ -167,13 +163,11 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
+				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
 				}
 
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
+				while ($subscription = $institutionalSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
 				}
 			}
@@ -209,13 +203,11 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
 
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
+				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');
 				}
 
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
+				while ($subscription = $institutionalSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');
 				}
 			}
@@ -223,21 +215,18 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	}
 
 	function execute() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals(true);
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals(true);
 
 		$todayDate = array(
-						'year' => date('Y'),
-						'month' => date('n'),
-						'day' => date('j')
-					);
+			'year' => date('Y'),
+			'month' => date('n'),
+			'day' => date('j')
+		);
 
-		while (!$journals->eof()) {
-			$journal =& $journals->next();
-
+		while ($journal = $journals->next()) {
 			// Send reminders based on current date
 			$this->sendJournalReminders($journal, $todayDate);
-			unset($journal);
 		}
 
 		// If it is the first day of a month but previous month had only
@@ -258,12 +247,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 			$journals =& $journalDao->getJournals(true);
 
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month
 				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
 			}
 		}
 
@@ -277,12 +263,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 			$journals =& $journalDao->getJournals(true);
 
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
+			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February
 				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
 			}
 
 			// Check if it's a leap year
@@ -292,12 +275,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 				$journals =& $journalDao->getJournals(true);
 
-				while (!$journals->eof()) {
-					$journal =& $journals->next();
-
+				while ($journal = $journals->next()) {
 					// Send reminders for simulated 29th day of February
 					$this->sendJournalReminders($journal, $curDate);
-					unset($journal);
 				}
 			}
 		}

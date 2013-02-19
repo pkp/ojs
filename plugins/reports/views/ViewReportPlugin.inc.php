@@ -70,7 +70,7 @@ class ViewReportPlugin extends ReportPlugin {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		while ($publishedArticle =& $publishedArticles->next()) {
+		while ($publishedArticle = $publishedArticles->next()) {
 			$articleId = $publishedArticle->getId();
 			$issueId = $publishedArticle->getIssueId();
 			$articleTitles[$articleId] = $publishedArticle->getLocalizedTitle();
@@ -80,14 +80,14 @@ class ViewReportPlugin extends ReportPlugin {
 			// Make sure we get the issue identification
 			$articleIssueIdentificationMap[$articleId] = $issueId;
 			if (!isset($issueIdentifications[$issueId])) {
-				$issue =& $issueDao->getIssueById($issueId);
+				$issue = $issueDao->getIssueById($issueId);
 				$issueIdentifications[$issueId] = $issue->getIssueIdentification();
 				$issueDatesPublished[$issueId] = $issue->getDatePublished();
 				unset($issue);
 			}
 
 			// For each galley, store the label and the count
-			$galleys =& $publishedArticle->getGalleys();
+			$galleys = $publishedArticle->getGalleys();
 			$galleyViews[$articleId] = array();
 			$galleyViewTotals[$articleId] = 0;
 			foreach ($galleys as $galley) {
@@ -106,9 +106,6 @@ class ViewReportPlugin extends ReportPlugin {
 				$galleyViews[$articleId][$i] = $views;
 				$galleyViewTotals[$articleId] += $views;
 			}
-
-			// Clean up
-			unset($publishedArticle, $galleys);
 		}
 
 		header('content-type: text/comma-separated-values');

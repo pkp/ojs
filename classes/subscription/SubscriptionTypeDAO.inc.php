@@ -346,7 +346,7 @@ class SubscriptionTypeDAO extends DAO {
 			while (!$result->EOF && $returner) {
 				$typeId = $result->fields[0];
 				$returner = $this->deleteSubscriptionTypeById($typeId);
-				$result->moveNext();
+				$result->MoveNext();
 			}
 		}
 
@@ -464,10 +464,10 @@ class SubscriptionTypeDAO extends DAO {
 				)
 			);
 
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
-		$result->close();
+		$result->Close();
 		unset($result);
 	}
 }

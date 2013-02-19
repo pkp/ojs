@@ -37,10 +37,9 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		$keywordMap = array();
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($cache->getCacheId());
-		while ($publishedArticle =& $publishedArticles->next()) {
+		while ($publishedArticle = $publishedArticles->next()) {
 			$keywords = array_map('trim', explode(';', $publishedArticle->getLocalizedSubject()));
 			foreach ($keywords as $keyword) if (!empty($keyword)) $keywordMap[$keyword]++;
-			unset($publishedArticle);
 		}
 		arsort($keywordMap, SORT_NUMERIC);
 

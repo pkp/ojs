@@ -233,14 +233,10 @@ class JournalDAO extends ContextDAO {
 	 */
 	function &getTitles($enabledOnly = false) {
 		$journals = array();
-
-		$journalIterator =& $this->getJournals($enabledOnly);
-		while ($journal =& $journalIterator->next()) {
+		$journalIterator = $this->getJournals($enabledOnly);
+		while ($journal = $journalIterator->next()) {
 			$journals[$journal->getId()] = $journal->getLocalizedName();
-			unset($journal);
 		}
-		unset($journalIterator);
-
 		return $journals;
 	}
 

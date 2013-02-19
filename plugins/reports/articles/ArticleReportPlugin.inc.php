@@ -63,7 +63,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		$decisions = array();
 		foreach ($decisionsIteratorsArray as $decisionsIterator) {
-			while ($row =& $decisionsIterator->next()) {
+			while ($row = $decisionsIterator->next()) {
 				$decisions[$row['article_id']] = $row['decision'];
 			}
 		}
@@ -112,7 +112,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$statusMap =& Article::getStatusMap();
 
 		$authorIndex = 0;
-		while ($row =& $articlesIterator->next()) {
+		while ($row = $articlesIterator->next()) {
 			$authors = $this->mergeAuthors($authorsIterator[$row['article_id']]->toArray());
 
 			foreach ($columns as $index => $junk) {
@@ -138,7 +138,6 @@ class ArticleReportPlugin extends ReportPlugin {
 				}
 			}
 			fputcsv($fp, $columns);
-			unset($row);
 			$authorIndex++;
 		}
 

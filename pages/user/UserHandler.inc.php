@@ -55,19 +55,17 @@ class UserHandler extends PKPUserHandler {
 			$journals =& $journalDao->getJournals();
 
 			// Fetch the user's roles for each journal
-			while ($journal =& $journals->next()) {
+			while ($journal = $journals->next()) {
 				$journalId = $journal->getId();
 
 				// Determine if journal setup is incomplete, to provide a message for JM
 				$setupIncomplete[$journalId] = $this->_checkIncompleteSetup($journal);
 
-				$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+				$roles = $roleDao->getRolesByUserId($userId, $journalId);
 				if (!empty($roles)) {
-					$userJournals[] =& $journal;
+					$userJournals[] = $journal;
 					$this->_getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 				}
-
-				unset($journal);
 			}
 
 			$templateMgr->assign_by_ref('userJournals', $userJournals);

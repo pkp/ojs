@@ -297,14 +297,14 @@ class LayoutEditorSubmissionDAO extends DAO {
 				WHERE
 					sl.user_id = ? AND a.journal_id = ? AND sl.date_notified IS NOT NULL';
 
-		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
+		$result = $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
 		while (!$result->EOF) {
 			if ($result->fields['status'] == STATUS_QUEUED) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

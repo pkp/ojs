@@ -238,7 +238,7 @@ class AuthorSubmissionDAO extends DAO {
 				'decision' => $result->fields['decision'],
 				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -259,7 +259,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status';
 
-		$result =& $this->retrieve($sql, array($journalId, $authorId));
+		$result = $this->retrieve($sql, array($journalId, $authorId));
 
 		while (!$result->EOF) {
 			if ($result->fields['status'] != 1) {
@@ -267,7 +267,7 @@ class AuthorSubmissionDAO extends DAO {
 			} else {
 				$submissionsCount[0] += $result->fields[0];
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

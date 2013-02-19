@@ -97,8 +97,8 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		while (!$result->EOF) {
-			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleFiles[] = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -132,8 +132,8 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		while (!$result->EOF) {
-			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleFiles[] = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -184,8 +184,8 @@ class ArticleFileDAO extends PKPFileDAO {
 		);
 
 		while (!$result->EOF) {
-			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleFiles[] = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -210,8 +210,8 @@ class ArticleFileDAO extends PKPFileDAO {
 		);
 
 		while (!$result->EOF) {
-			$articleFiles[] =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$articleFiles[] = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();

@@ -158,7 +158,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				$output = '<div id="externalFeedsHome">';
 
-				while ($currentFeed =& $feeds->next()) {
+				while ($currentFeed = $feeds->next()) {
 					if (!$currentFeed->getDisplayHomepage()) continue;
 					$feed = new SimplePie();
 					$feed->set_feed_url($currentFeed->getUrl());

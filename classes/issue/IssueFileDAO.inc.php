@@ -93,14 +93,14 @@ class IssueFileDAO extends PKPFileDAO {
 	function &getIssueFilesByIssue($issueId) {
 		$issueFiles = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM issue_files WHERE issue_id = ?',
 			(int) $issueId
 		);
 
 		while (!$result->EOF) {
-			$issueFiles[] =& $this->_returnIssueFileFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+			$issueFiles[] = $this->_returnIssueFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
 		}
 
 		$result->Close();

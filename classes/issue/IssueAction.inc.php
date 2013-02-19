@@ -196,8 +196,7 @@ class IssueAction {
 
 		$issueOptions['-100'] =  '------    ' . __('editor.issues.futureIssues') . '    ------';
 		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
-		while (!$issueIterator->eof()) {
-			$issue =& $issueIterator->next();
+		while ($issue = $issueIterator->next()) {
 			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . __('editor.issues.currentIssue') . '    ------';

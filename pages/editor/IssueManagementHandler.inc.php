@@ -65,9 +65,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
 		$issueMap = array();
-		while ($issue =& $allIssuesIterator->next()) {
+		while ($issue = $allIssuesIterator->next()) {
 			$issueMap[$issue->getId()] = $issue->getIssueIdentification();
-			unset($issue);
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 		$templateMgr->assign('rangeInfo', $rangeInfo);
@@ -110,12 +109,12 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssue($issue);
 		if ($issue->getCurrent()) {
 			$issues = $issueDao->getPublishedIssues($journal->getId());
 			if (!$issues->eof()) {
-				$issue =& $issues->next();
+				$issue = $issues->next();
 				$issue->setCurrent(1);
 				$issueDao->updateIssue($issue);
 			}
@@ -928,10 +927,8 @@ class IssueManagementHandler extends EditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
 		$allUsers = $roleDao->getUsersByJournalId($journalId);
-		while (!$allUsers->eof()) {
-			$user =& $allUsers->next();
+		while ($user = $allUsers->next()) {
 			$notificationUsers[] = array('id' => $user->getId());
-			unset($user);
 		}
 		foreach ($notificationUsers as $userRole) {
 			$notificationManager->createNotification(
@@ -1031,14 +1028,12 @@ class IssueManagementHandler extends EditorHandler {
 			}
 
 			import('lib.pkp.classes.validation.ValidatorEmail');
-			while (!$recipients->eof()) {
-				$recipient =& $recipients->next();
+			while ($recipient = $recipients->next()) {
 				if (preg_match(ValidatorEmail::getRegexp(), $recipient->getEmail())) {
 					$email->addRecipient($recipient->getEmail(), $recipient->getFullName());
 				} else {
 					error_log("Invalid email address: " . $recipient->getEmail());
 				}
-				unset($recipient);
 			}
 
 			if ($request->getUserVar('includeToc')=='1' && isset($issue)) {

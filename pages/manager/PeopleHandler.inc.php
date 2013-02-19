@@ -323,8 +323,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if ((!empty($roleId) || $rolePath == 'all') && !empty($syncJournal)) {
 			$roles =& $roleDao->getRolesByJournalId($syncJournal == 'all' ? null : $syncJournal, $roleId);
-			while (!$roles->eof()) {
-				$role =& $roles->next();
+			while ($role = $roles->next()) {
 				$role->setJournalId($journal->getId());
 				if ($role->getPath() != 'admin' && !$roleDao->userHasRole($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
 					$roleDao->insertRole($role);

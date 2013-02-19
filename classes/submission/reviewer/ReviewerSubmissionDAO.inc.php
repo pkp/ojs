@@ -282,7 +282,7 @@ class ReviewerSubmissionDAO extends DAO {
 			} else {
 				$submissionsCount[1] += 1;
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -317,7 +317,7 @@ class ReviewerSubmissionDAO extends DAO {
 				'decision' => $result->fields['decision'],
 				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();

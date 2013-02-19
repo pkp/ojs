@@ -111,10 +111,10 @@ class SectionForm extends Form {
 		$templateMgr->assign('sectionId', $sectionId);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
+		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
 		$reviewFormOptions = array();
-		while ($reviewForm =& $reviewForms->next()) {
+		while ($reviewForm = $reviewForms->next()) {
 			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 		}
 		$templateMgr->assign_by_ref('reviewFormOptions', $reviewFormOptions);

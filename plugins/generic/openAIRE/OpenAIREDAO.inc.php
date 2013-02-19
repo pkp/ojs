@@ -85,9 +85,9 @@ class OpenAIREDAO extends OAIDAO {
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = $result->GetRowAssoc(false);
 			if ($this->isOpenAIRERecord($row)) {
-				$records[] =& $this->_returnRecordFromRow($row);
+				$records[] = $this->_returnRecordFromRow($row);
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
@@ -145,9 +145,9 @@ class OpenAIREDAO extends OAIDAO {
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = $result->GetRowAssoc(false);
 			if ($this->isOpenAIRERecord($row)) {
-				$records[] =& $this->_returnIdentifierFromRow($row);
+				$records[] = $this->_returnIdentifierFromRow($row);
 			}
-			$result->moveNext();
+			$result->MoveNext();
 		}
 
 		$result->Close();
