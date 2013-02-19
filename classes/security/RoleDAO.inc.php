@@ -24,16 +24,15 @@ class RoleDAO extends PKPRoleDAO {
 	 */
 	function RoleDAO() {
 		parent::PKPRoleDAO();
-		$this->userDao =& DAORegistry::getDAO('UserDAO');
+		$this->userDao = DAORegistry::getDAO('UserDAO');
 	}
 
 	/**
 	 * Create new data object.
 	 * @return Role
 	 */
-	function &newDataObject() {
-		$dataObject = new Role();
-		return $dataObject;
+	function newDataObject() {
+		return new Role();
 	}
 
 	/**

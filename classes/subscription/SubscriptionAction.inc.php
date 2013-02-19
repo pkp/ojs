@@ -604,8 +604,8 @@ class SubscriptionAction {
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$role =& $roleDao->newDataObject();
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$role = $roleDao->newDataObject();
 		if ($roleDao->getJournalUsersRoleCount($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
 			$role->setId(ROLE_ID_SUBSCRIPTION_MANAGER);
 			$rolePath = $role->getPath();

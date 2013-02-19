@@ -104,7 +104,7 @@ class NotificationManager extends PKPNotificationManager {
 		} else {
 			// Return first (most privileged) role
 			$roleId = isset($this->privilegedRoles[$userId][$articleId][0]) ? $this->privilegedRoles[$userId][$articleId][0] : null;
-			$role =& $roleDao->newDataObject();
+			$role = $roleDao->newDataObject();
 			$role->setId($roleId);
 			return $role->getPath();
 		}

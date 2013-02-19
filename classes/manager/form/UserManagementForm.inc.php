@@ -169,9 +169,9 @@ class UserManagementForm extends Form {
 			}
 		}
 		if (!isset($this->userId)) {
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			$roleId = Request::getUserVar('roleId');
-			$role =& $roleDao->newDataObject();
+			$role = $roleDao->newDataObject();
 			$role->setId($roleId);
 			$roleSymbolic = $role->getPath();
 
