@@ -7,6 +7,7 @@
  * Edit DOI meta-data.
  *}
 
+{if $pubObject}
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
 {assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`Doi")}
 {if $enableObjectDoi}
@@ -37,4 +38,5 @@
 		<br />
 	</div>
 	<div class="separator"> </div>
+{/if}
 {/if}

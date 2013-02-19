@@ -7,6 +7,8 @@
  * Edit custom URN suffix for an object (issue, article, galley, supp file)
  *
  *}
+
+{if $pubObject}
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
 {assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`URN")}
 {if $enableObjectURN}
@@ -40,4 +42,4 @@
 	<div class="separator"></div>
 	<!-- /URN -->
 {/if}
-
+{/if}
