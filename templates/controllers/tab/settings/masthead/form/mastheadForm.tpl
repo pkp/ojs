@@ -47,9 +47,15 @@
 			{if $enabled}{assign var="enabled" value="checked"}{/if}
 			{fbvElement type="checkbox" id="journalEnabled" value="1" checked=$enabled label="admin.journals.enableJournalInstructions"}
 		{/fbvFormSection}
+
 		{fbvFormSection label="manager.masthead.title" for="masthead" description="manager.setup.masthead.description"}
 			{fbvElement type="textarea" multilingual=true id="masthead" value=$masthead rich=true height=$fbvStyles.height.SHORT}
 		{/fbvFormSection}
+
+		{fbvFormSection label="manager.setup.history" for="history"}
+			{fbvElement type="textarea" multilingual=true name="history" id="history" value=$history rich=true}
+		{/fbvFormSection}
+
 		<div {if $wizardMode}class="pkp_form_hidden"{/if}>
 			{fbvFormSection label="common.mailingAddress" for="mailingAddress" group=true description="manager.setup.mailingAddressDescription"}
 				{fbvElement type="textarea" id="mailingAddress" value=$mailingAddress height=$fbvStyles.height.SHORT}

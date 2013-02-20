@@ -21,7 +21,6 @@
 </script>
 <div id="journalSettingsTabs">
 	<ul>
-		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="showTab" tab="details"}">{translate key="OLD STEP 1"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="showTab" tab="masthead"}">{translate key="manager.setup.masthead"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="showTab" tab="contact"}">{translate key="about.contact"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="showTab" tab="citations"}">{translate key="manager.setup.citations"}</a></li>
