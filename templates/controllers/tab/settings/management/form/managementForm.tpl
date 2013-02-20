@@ -185,37 +185,6 @@ function setRegAllowOpts(form) {
 	</tr>
 </table>
 </div>
-<div id="frequencyOfPublication">
-<h4>{translate key="manager.setup.frequencyOfPublication"}</h4>
-
-<p>{translate key="manager.setup.frequencyOfPublicationDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="initialNumber" key="issue.number"}</td>
-		<td class="data"><input type="text" name="initialNumber" id="initialNumber" value="{$initialNumber|escape}" size="5" maxlength="8" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="initialVolume" key="issue.volume"}</td>
-		<td class="data"><input type="text" name="initialVolume" id="initialVolume" value="{$initialVolume|escape}" size="5" maxlength="8" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="initialYear" key="issue.year"}</td>
-		<td class="data"><input type="text" name="initialYear" id="initialYear" value="{$initialYear|escape}" size="5" maxlength="8" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="issuePerVolume" key="manager.setup.issuePerVolume"}</td>
-		<td class="data"><input type="text" name="issuePerVolume" id="issuePerVolume" value="{if $issuePerVolume}{$issuePerVolume|escape}{/if}" size="5" maxlength="8" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="volumePerYear" key="manager.setup.volumePerYear"}</td>
-		<td class="data"><input type="text" name="volumePerYear" id="volumePerYear" value="{if $volumePerYear}{$volumePerYear|escape}{/if}" size="5" maxlength="8" class="textField" /></td>
-	</tr>
-</table>
-
-<p>{translate key="manager.setup.frequencyOfPublicationNote"}</p>
-</div>
-</div>
 
 <div class="separator"></div>
 

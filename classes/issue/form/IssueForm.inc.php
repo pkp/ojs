@@ -179,51 +179,6 @@ class IssueForm extends Form {
 			$this->setData('showYear', $showYear);
 			$this->setData('showTitle', $showTitle);
 
-			// set up the default values for volume, number and year
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getLastCreatedIssue($journal->getId());
-
-			if (isset($issue)) {
-				$volumePerYear = $journal->getSetting('volumePerYear');
-				$issuePerVolume = $journal->getSetting('issuePerVolume');
-				$number = $issue->getNumber();
-				$volume = $issue->getVolume();
-				$year = $issue->getYear();
-
-				if ($showVolume && $showNumber && $showYear) {
-					$number++;
-					if ($issuePerVolume && $number > $issuePerVolume) {
-						$number = 1;
-						$volume++;
-						if ($volumePerYear && $volume > $volumePerYear) {
-							$volume = 1;
-							$year++;
-						}
-					}
-				} elseif ($showVolume && $showNumber) {
-					$number++;
-					if ($issuePerVolume && $number > $issuePerVolume) {
-						$number = 1;
-						$volume++;
-					}
-				} elseif ($showVolume && $showYear) {
-					$number = 0;
-					$volume++;
-					if ($volumePerYear && $volume > $volumePerYear) {
-						$volume = 1;
-						$year++;
-					}
-				} elseif ($showYear) {
-					$volume = $number = 0;
-					$year++;
-				} else {
-					$year = $volume = $number = 0;
-				}
-			} else {
-				$volume = $journal->getSetting('initialVolume');
-				$number = $journal->getSetting('initialNumber');
-				$year = $journal->getSetting('initialYear');
-			}
 
 			switch ($journal->getSetting('publishingMode')) {
 				case PUBLISHING_MODE_SUBSCRIPTION:
