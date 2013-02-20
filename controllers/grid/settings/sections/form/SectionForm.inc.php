@@ -161,7 +161,7 @@ class SectionForm extends Form {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		$section =& parent::execute($section);
+		$section = parent::execute($section);
 
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {
