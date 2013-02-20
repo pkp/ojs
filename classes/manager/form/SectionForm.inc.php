@@ -232,7 +232,7 @@ class SectionForm extends Form {
 		$section =& parent::execute($section);
 
 		if ($section->getId() != null) {
-			$sectionDao->updateSection($section);
+			$sectionDao->updateObject($section);
 			$sectionId = $section->getId();
 		} else {
 			$sectionId = $sectionDao->insertSection($section);

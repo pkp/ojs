@@ -228,8 +228,8 @@ class SectionDAO extends DAO {
 	 * Update an existing section.
 	 * @param $section Section
 	 */
-	function updateSection(&$section) {
-		$returner = $this->update(
+	function updateObject($section) {
+		$this->update(
 			'UPDATE sections
 				SET
 					review_form_id = ?,
@@ -260,7 +260,6 @@ class SectionDAO extends DAO {
 			)
 		);
 		$this->updateLocaleFields($section);
-		return $returner;
 	}
 
 	/**

@@ -158,7 +158,7 @@ class SectionHandler extends ManagerHandler {
 				$section->setSequence($prevSeq + .5);
 			}
 
-			$sectionDao->updateSection($section);
+			$sectionDao->updateObject($section);
 			$sectionDao->resequenceSections($journal->getId());
 		}
 
