@@ -159,32 +159,6 @@ function setRegAllowOpts(form) {
 
 <p><textarea name="pubFreqPolicy[{$formLocale|escape}]" id="pubFreqPolicy" rows="12" cols="60" class="textArea richContent">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
 </div>
-<div id="publicationFormat">
-<h4>{translate key="manager.setup.publicationFormat"}</h4>
-
-<p>{translate key="manager.setup.publicationFormatDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatVolume" id="publicationFormatVolume" value="1"{if ($publicationFormatVolume)} checked="checked"{/if} /></td>
-		<td class="value"><label for="publicationFormatVolume">{translate key="manager.setup.publicationFormatVolume"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatNumber" id="publicationFormatNumber" value="1"{if ($publicationFormatNumber)} checked="checked"{/if} /></td>
-		<td class="value"><label for="publicationFormatNumber">{translate key="manager.setup.publicationFormatNumber"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatYear" id="publicationFormatYear" value="1"{if ($publicationFormatYear)} checked="checked"{/if} /></td>
-		<td class="value"><label for="publicationFormatYear">{translate key="manager.setup.publicationFormatYear"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatTitle" id="publicationFormatTitle" value="1"{if ($publicationFormatTitle)} checked="checked"{/if} /></td>
-		<td class="value">
-			<label for="publicationFormatTitle">{translate key="manager.setup.publicationFormatTitle"}</label>
-		</td>
-	</tr>
-</table>
-</div>
 
 <div class="separator"></div>
 

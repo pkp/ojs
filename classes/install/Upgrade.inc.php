@@ -150,45 +150,6 @@ class Upgrade extends Installer {
 		// Drop the old label_format column once all values are migrated.
 		$issueDao->update('ALTER TABLE issues DROP COLUMN label_format');
 
-		// Migrate old publicationFormat journal setting to new journal settings.
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$result =& $journalDao->retrieve('SELECT j.journal_id AS journal_id, js.setting_value FROM journals j LEFT JOIN journal_settings js ON (js.journal_id = j.journal_id AND js.setting_name = ?)', 'publicationFormat');
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$settings = array(
-				'publicationFormatVolume' => false,
-				'publicationFormatNumber' => false,
-				'publicationFormatYear' => false,
-				'publicationFormatTitle' => false
-			);
-			switch ($row['setting_value']) {
-				case 4: // ISSUE_LABEL_TITLE
-					$settings['publicationFormatTitle'] = true;
-					break;
-				case 3: // ISSUE_LABEL_YEAR
-					$settings['publicationFormatYear'] = true;
-					break;
- 				case 2: // ISSUE_LABEL_VOL_YEAR
-					$settings['publicationFormatVolume'] = true;
-					$settings['publicationFormatYear'] = true;
-					break;
-				case 1: // ISSUE_LABEL_NUM_VOL_YEAR
-				default:
-					$settings['publicationFormatVolume'] = true;
-					$settings['publicationFormatNumber'] = true;
-					$settings['publicationFormatYear'] = true;
-			}
-			foreach ($settings as $name => $value) {
-				$journalDao->update('INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)', array($row['journal_id'], $name, $value?1:0, 'bool'));
-			}
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
-
-		$journalDao->update('DELETE FROM journal_settings WHERE setting_name = ?', array('publicationFormat'));
-
 		return true;
 	}
 

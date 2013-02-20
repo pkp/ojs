@@ -169,17 +169,6 @@ class IssueForm extends Form {
 
 		} else {
 			$journal =& Request::getJournal();
-			$showVolume = $journal->getSetting('publicationFormatVolume');
-			$showNumber = $journal->getSetting('publicationFormatNumber');
-			$showYear = $journal->getSetting('publicationFormatYear');
-			$showTitle = $journal->getSetting('publicationFormatTitle');
-
-			$this->setData('showVolume', $showVolume);
-			$this->setData('showNumber', $showNumber);
-			$this->setData('showYear', $showYear);
-			$this->setData('showTitle', $showTitle);
-
-
 			switch ($journal->getSetting('publishingMode')) {
 				case PUBLISHING_MODE_SUBSCRIPTION:
 				case PUBLISHING_MODE_NONE:
@@ -192,10 +181,10 @@ class IssueForm extends Form {
 			}
 
 			$this->_data = array(
-				'showVolume' => $showVolume,
-				'showNumber' => $showNumber,
-				'showYear' => $showYear,
-				'showTitle' => $showTitle,
+				'showVolume' => 1,
+				'showNumber' => 1,
+				'showYear' => 1,
+				'showTitle' => 1,
 				'volume' => $volume,
 				'number' => $number,
 				'year' => $year,
