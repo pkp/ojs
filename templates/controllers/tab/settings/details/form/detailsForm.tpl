@@ -20,32 +20,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="detailsFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="setupPublisher">
-<h3>1.5 {translate key="manager.setup.publisher"}</h3>
-
-<p>{translate key="manager.setup.publisherDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
-		<td class="value">
-			<textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea richContent">{$publisherNote[$formLocale]|escape}</textarea>
-			<br/>
-			<span class="instruct">{translate key="manager.setup.publisherNoteDescription"}</span>
-			</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="publisherInstitution" key="manager.setup.institution"}</td>
-		<td class="value"><input type="text" name="publisherInstitution" id="publisherInstitution" value="{$publisherInstitution|escape}" size="40" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="publisherUrl" key="common.url"}</td>
-		<td class="value"><input type="text" name="publisherUrl" id="publisherUrl" value="{$publisherUrl|escape}" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-</table>
-</div>
-<div class="separator"></div>
-
 <h3>1.9 {translate key="manager.setup.history"}</h3>
 
 <p>{translate key="manager.setup.historyDescription"}</p>

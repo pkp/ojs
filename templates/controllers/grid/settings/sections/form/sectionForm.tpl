@@ -32,7 +32,7 @@
 
 	{fbvFormArea id="sectionMisc"}
 		{fbvFormSection title="manager.sections.wordCount" for="wordCount" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" multilingual=true id="wordCount" value=$wordCount maxlength="80" label="manager.sections.wordCountInstructions"}
+			{fbvElement type="text" id="wordCount" value=$wordCount maxlength="80" label="manager.sections.wordCountInstructions"}
 		{/fbvFormSection}
 
 		{fbvFormSection title="submission.reviewForm" for="reviewFormId" inline=true size=$fbvStyles.size.MEDIUM}
