@@ -1,7 +1,7 @@
 {**
  * plugins/generic/lucene/templates/filterInput.tpl
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * A template to be included via Templates::Search::SearchResults::FilterInput hook.
