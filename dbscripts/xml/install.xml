@@ -9,7 +9,7 @@
   * Installation descriptor file.
   -->
 
-<install version="2.4.1.0">
+<install version="2.4.2.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 

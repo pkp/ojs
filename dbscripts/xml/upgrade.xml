@@ -10,7 +10,7 @@
   *
   -->
 
-<install version="2.4.1.0">
+<install version="2.4.2.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -331,9 +331,9 @@
 		<note file="docs/release-notes/README-2.4.1" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.4.0.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.4.1.0">
 		<data file="dbscripts/xml/upgrade/2.4.2_update.xml" />
-		<!-- Pending addition note file="docs/release-notes/README-2.4.2" / -->
+		<note file="docs/release-notes/README-2.4.2" / -->
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
