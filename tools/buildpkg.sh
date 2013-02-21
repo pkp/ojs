@@ -3,7 +3,7 @@
 #
 # buildpkg.sh
 #
-# Copyright (c) 2003-2012 John Willinsky
+# Copyright (c) 2003-2013 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
@@ -82,7 +82,7 @@ fi
 cd ..
 
 echo -n "Building doxygen documentation... "
-doxygen docs/dev/ojs2.doxygen > /dev/null && cd docs/dev/doxygen && tar czf ../../../${BUILD}-doxygen.tar.gz html && cd ../../..
+doxygen docs/dev/ojs2.doxygen && cd docs/dev/doxygen && tar czf ../../../${BUILD}-doxygen.tar.gz html && cd ../../..
 
 echo "Done"
 

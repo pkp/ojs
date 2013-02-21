@@ -3,12 +3,11 @@
 <!--
   * emailTemplateData.xml
   *
-  * Copyright (c) 2003-2011 John Willinsky
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
   *
-  * $Id$
   -->
 <email_texts locale="ca_ES">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
