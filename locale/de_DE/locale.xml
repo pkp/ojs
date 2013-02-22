@@ -491,7 +491,7 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 </ol>]]></message>
 	<message key="editor.submissionEditing.notes">
 	<![CDATA[<ol>
-	<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Gutachter/in erforderlich ist, gekennzeichnet wie folgt:
+	<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Redakteur/in erforderlich ist, gekennzeichnet wie folgt:
 		<ul>
 			<li class="highlightCopyediting">Eine Aktion in der Lektoratsphase ist erforderlich.</li>
 			<li class="highlightLayoutEditing">Eine Aktion in der Layoutphase ist erforderlich.</li>
