@@ -31,7 +31,7 @@ class AuthorGridHandler extends PKPAuthorGridHandler {
 	function AuthorGridHandler() {
 		parent::PKPAuthorGridHandler();
 		$this->addRoleAssignment(
-				array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_AUTHOR),
+				array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_AUTHOR, ROLE_ID_SECTION_EDITOR),
 				array('fetchGrid', 'fetchRow', 'addAuthor', 'editAuthor',
 				'updateAuthor', 'deleteAuthor'));
 		$this->addRoleAssignment(ROLE_ID_REVIEWER, array('fetchGrid', 'fetchRow'));
