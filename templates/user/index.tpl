@@ -137,7 +137,7 @@
 						<a href="{url journal=$journalPath path="completed" page="author"}">{$authorSubmissionsCount[1]} {translate key="common.queue.short.completed"}</a>
 					{else}<span class="disabled">0 {translate key="common.queue.short.completed"}</span>{/if}
 				</td>
-				<td align="right">[<a href="{url journal=$journalPath page="author" op="submit"}">{translate key="author.submit"}</a>]</td>
+				<td></td>
 			</tr>
 		{/if}
 		{if $isValid.Reviewer.$journalId}

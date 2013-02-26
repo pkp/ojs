@@ -8,7 +8,7 @@
  *
  *}
 {strip}
-{assign var="pageTitleTranslated" value=$siteTitle}
+{assign var="pageTitleTranslated" value=$currentJournal->getLocalizedName()}
 {include file="common/header.tpl"}
 {/strip}
 

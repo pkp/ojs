@@ -31,10 +31,8 @@
 	{if $isUserLoggedIn}
 		<ul class="sf-menu">
 			<li><a href="{url page="user"}">{translate key="navigation.userHome"}</a>
-			{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SERIES_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR), $userRoles)}
-				{* FIXME: Dashboard not yet ported
+			{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR), $userRoles)}
 				<li><a href="{url page="dashboard"}">{translate key="navigation.dashboard"}</a></li>
-				*}
 			{/if}
 			{if $currentJournal}
 				<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a>
@@ -69,7 +67,9 @@
 		</ul>
 	{elseif !$notInstalled}{* !$isUserLoggedIn *}
 		<ul class="sf-menu">
-			<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a>
+			{if $currentJournal}
+				<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+			{/if}
 			{$publicMenu}
 		</ul>
 	{/if}{* $isUserLoggedIn *}

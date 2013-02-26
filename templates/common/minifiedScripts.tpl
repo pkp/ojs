@@ -92,6 +92,7 @@
 <script src="{$baseUrl}/lib/pkp/js/pages/header/ContextSwitcherFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/header/HeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js"></script>
 <script src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
 <script src="{$baseUrl}/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
 
