@@ -1133,7 +1133,7 @@ class NativeImportDom {
 
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 			$pubIdPluginFound = false;
-			foreach ($pubIdPlugins as $pubIdPlugin) {
+			if (is_array($pubIdPlugins)) foreach ($pubIdPlugins as $pubIdPlugin) {
 				if ($pubIdPlugin->getPubIdType() == $pubIdType) {
 					$pubId = $idNode->getValue();
 					$errorParams['pubId'] = $pubId;
