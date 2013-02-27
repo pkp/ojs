@@ -37,7 +37,14 @@ class DOAJExportDom {
 			if(!$issue) continue;
 			$section =& $sectionDao->getSection($pubArticle->getSectionId());
 
-			$articleNode =& DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
+			// get eScholarship ARK
+			$eschol_ark_info = DOAJExportDom::getEscholArk($pubArticle);
+			$eschol_ark = $eschol_ark_info[0];
+			$eschol_fullArk = $eschol_ark_info[1];
+			// don't add article to XML if ARK doesn't exist
+			if(!$eschol_ark) continue;
+
+			$articleNode =& DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle, $eschol_ark, $eschol_fullArk);
 
 			XMLCustomWriter::appendChild($records, $articleNode);
 
@@ -48,6 +55,33 @@ class DOAJExportDom {
 	}
 
 	/**
+	 * Get the eScholarship ARK for an article.
+	 * @param $article object Article
+	 */
+	function getEscholArk($article) {
+                $eschol_ark = '';
+                $eschol_fullArk = '';
+
+                // first try getting ARK from sqlite db
+                $arkdb = new PDO('sqlite:/apps/eschol/erep/xtf/control/db/arks.db');
+                $result = $arkdb->query("select id from arks where source='ojs' and external_id=" . $article->getId());
+                foreach($result as $row) {
+                        $eschol_fullArk = $row['id'];
+                        $eschol_ark = str_replace('ark:13030/qt', '', $eschol_fullArk);
+                }
+
+                // if not found, this article was published before migration to OJS. get ARK from OJS db
+                if ($eschol_fullArk == '') {
+                        if (is_array($article->getEscholARK(null))) foreach ($article->getEscholARK(null) as $locale => $eschol_ark) {
+                                $eschol_fullArk = 'ark:13030/' . $eschol_ark;
+				$eschol_ark = str_replace('qt', '', $eschol_ark);
+                        }
+                }
+
+		return array ($eschol_ark, $eschol_fullArk);
+	}
+
+	/**
 	 * Generate the DOM tree for a given article.
 	 * @param $doc object DOM object
 	 * @param $journal object Journal
@@ -55,7 +89,7 @@ class DOAJExportDom {
 	 * @param $section object Section
 	 * @param $article object Article
 	 */
-	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
+	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article, $eschol_ark, $eschol_fullArk) {
 		$root =& XMLCustomWriter::createElement($doc, 'record');
 
 		/* --- Article Language --- */
@@ -97,7 +131,8 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'doi',  $article->getDoi(), false);
 
 		/* --- Article's publication date, volume, issue, DOI --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPubId(), false);
+		//XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPubId(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId', $eschol_fullArk, false);
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getLocalizedType(), false);
 
@@ -141,7 +176,10 @@ class DOAJExportDom {
 		}
 
 		/* --- FullText URL --- */
-		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
+		$escholUrl = 'http://escholarship.org/uc/item/' . $eschol_ark;
+		//$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
+		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', $escholUrl);
+
 		XMLCustomWriter::setAttribute($fullTextUrl, 'format', 'html');
 
 		/* --- Keywords --- */

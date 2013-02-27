@@ -119,12 +119,15 @@ class DOAJPlugin extends ImportExportPlugin {
 
 		$issn = $journal->getSetting('printIssn');
 
+		// We want to provide DOAJ with the eScholarship URL rather than the OJS front-end URL. Create it here.
+		$url = 'http://escholarship.org/uc/' . $journal->getPath(); 
+
 		$paramArray = array(
 			'name' => $user->getFullName(),
 			'email' => $user->getEmail(),
 			'title' => $journal->getLocalizedTitle(),
 			'description' => String::html2text($journal->getLocalizedSetting('focusScopeDesc')),
-			'url' => $journal->getUrl(),
+			'url' => $url,
 			'charging' => $journal->getSetting('submissionFee') > 0 ? 'Y' : 'N',
 			'issn' => $issn,
 			'eissn' => $journal->getSetting('onlineIssn'),
