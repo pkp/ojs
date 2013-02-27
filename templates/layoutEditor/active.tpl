@@ -43,7 +43,8 @@
 			{url|assign:"url" op="completeProofreader" articleId=$submission->getId()}
 			<td>
 				{translate|assign:"confirmMessage" key="common.confirmComplete"}
-				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
+				{if $proofreaderProofreadSignoff->getDateCompleted()}{assign var="disabled" value="disabled"}{/if}
+				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url disabled=$disabled}
 			</td>
 		{/if}
 	</tr>
