@@ -13,7 +13,7 @@
  * @brief Operations for retrieving and modifying Journal objects.
  */
 
-import('lib.pkp.classes.core.ContextDAO');
+import('lib.pkp.classes.context.ContextDAO');
 import('classes.journal.Journal');
 
 define('JOURNAL_FIELD_TITLE', 1);
