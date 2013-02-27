@@ -91,9 +91,9 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 		return $response->sac_id;
 	}
 
-	function display(&$args) {
+	function display(&$args, $request) {
 		$templateMgr =& TemplateManager::getManager();
-		parent::display($args);
+		parent::display($args, $request);
 		$this->setBreadcrumbs();
 		$journal =& Request::getJournal();
 		$plugin =& $this->getSwordPlugin();
@@ -201,7 +201,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
-	 */ 
+	 */
 	function executeCLI($scriptName, &$args) {
 		die('executeCLI unimplemented');
 	}
