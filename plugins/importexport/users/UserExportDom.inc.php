@@ -65,9 +65,13 @@ class UserExportDom {
 					unset($signatureNode);
 				}
 			}
-			$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $user->getUserInterests(false, true), false);
-			if ($interestsNode) {
-				XMLCustomWriter::setAttribute($interestsNode);
+			import('lib.pkp.classes.user.InterestManager');
+			$interestManager = new InterestManager();
+			$interests = $interestManager->getInterestsForUser($user);
+			if (is_array($interests)) {
+				foreach ($interests as $interest) {
+					XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $interest, false);
+				}
 			}
 			if (is_array($user->getGossip(null))) {
 				foreach($user->getGossip(null) as $locale => $value) {

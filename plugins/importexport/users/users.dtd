@@ -37,8 +37,6 @@
 <!ELEMENT mailing_address (#PCDATA)>
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT interests (#PCDATA)>
-	<!ATTLIST interests
-		locale CDATA #IMPLIED>
 <!ELEMENT gossip (#PCDATA)>
 	<!ATTLIST gossip
 		locale CDATA #IMPLIED>

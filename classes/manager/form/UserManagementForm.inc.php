@@ -65,7 +65,7 @@ class UserManagementForm extends Form {
 		$templateMgr->assign('source', Request::getUserVar('source'));
 		$templateMgr->assign('userId', $this->userId);
 		if (isset($this->userId)) {
-			$user =& $userDao->getUser($this->userId);
+			$user =& $userDao->getById($this->userId);
 			$templateMgr->assign('username', $user->getUsername());
 			$helpTopicId = 'journal.users.index';
 		} else {
@@ -139,7 +139,7 @@ class UserManagementForm extends Form {
 	function initData(&$args, &$request) {
 		if (isset($this->userId)) {
 			$userDao =& DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getUser($this->userId);
+			$user =& $userDao->getById($this->userId);
 
 			import('lib.pkp.classes.user.InterestManager');
 			$interestManager = new InterestManager();
@@ -249,7 +249,7 @@ class UserManagementForm extends Form {
 		$journal =& Request::getJournal();
 
 		if (isset($this->userId)) {
-			$user =& $userDao->getUser($this->userId);
+			$user =& $userDao->getById($this->userId);
 		}
 
 		if (!isset($user)) {
