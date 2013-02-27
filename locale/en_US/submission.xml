@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/en_US/submission.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  -->
+
+<locale name="en_US" full_name = "English">
+	<!-- Submission wizard -->
+	<message key="submission.title">Article Title</message>
+	<message key="submission.title.tip"><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
+	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$journalName}</message>
+</locale>
