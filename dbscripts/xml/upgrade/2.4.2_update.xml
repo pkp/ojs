@@ -18,4 +18,9 @@
 	<sql>
 		<query>UPDATE published_articles SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
 	</sql>
+	
+	<sql>
+		<drop table="submission_tombstones" />
+	</sql>
+	
 </data>

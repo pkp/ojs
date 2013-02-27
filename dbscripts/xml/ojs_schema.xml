@@ -509,46 +509,6 @@
 	</table>
 
 	<!--
-      *
-      * TABLE submission_tombstones
-      *
-      -->
-    <table name="submission_tombstones">
-        <field name="tombstone_id" type="I8">
-            <KEY />
-            <AUTOINCREMENT />
-        </field>
-        <field name="submission_id" type="I8">
-            <NOTNULL />
-        </field>
-        <field name="date_deleted" type="T">
-            <NOTNULL />
-        </field>
-        <field name="journal_id" type="I8">
-            <NOTNULL />
-        </field>
-        <field name="section_id" type="I8">
-            <NOTNULL />
-        </field>
-        <field name="set_spec" type="C2" size="255">
-            <NOTNULL />
-        </field>
-        <field name="set_name" type="C2" size="255">
-            <NOTNULL />
-        </field>
-        <field name="oai_identifier" type="C2" size="255">
-            <NOTNULL />
-        </field>
-        <descr>Archived, removed from TOC, unscheduled or uplublished journal articles.</descr>
-		<index name="submission_tombstones_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="submission_tombstones_submission_id">
-			<col>submission_id</col>
-		</index>
-	</table>
-
-	<!--
 	  *
 	  * TABLE articles
 	  *
