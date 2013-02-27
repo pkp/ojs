@@ -121,7 +121,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 
 				$doc =& $this->getDocument($temporaryFile->getFilePath());
 				@set_time_limit(0);
-				$this->handleImport($context, $doc, $errors, $pubIds, $false);
+				$this->handleImport($context, $doc, $errors, $pubIds, false);
 				$templateMgr->assign_by_ref('errors', $errors);
 				$templateMgr->assign_by_ref('pubIds', $pubIds);
 				return $templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
@@ -194,7 +194,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 
 		$pubIdPluginFound = false;
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
-		foreach ($pubIdPlugins as $pubIdPlugin) {
+		if (is_array($pubIdPlugins))foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
 				$dao =& $pubIdPlugin->getDAO($pubObjectType);
 				switch ($pubObjectType) {
@@ -310,7 +310,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	 */
 	function generatePubId(&$doc, &$node, &$pubObject, $journalId) {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
-		foreach ($pubIdPlugins as $pubIdPlugin) {
+		if (is_array($pubIdPlugins)) foreach ($pubIdPlugins as $pubIdPlugin) {
 			$pubIdType = $pubIdPlugin->getPubIdType();
 			$pubId = $pubObject->getStoredPubId($pubIdType);
 			if ($pubId) {
