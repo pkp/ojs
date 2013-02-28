@@ -42,8 +42,8 @@ class TemplateManager extends PKPTemplateManager {
 			 * installer pages).
 			 */
 
-			$journal =& $router->getContext($this->request);
-			$site =& $this->request->getSite();
+			$context = $router->getContext($this->request);
+			$site = $this->request->getSite();
 
 			$publicFileManager = new PublicFileManager();
 			$siteFilesDir = $this->request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
@@ -57,60 +57,54 @@ class TemplateManager extends PKPTemplateManager {
 
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
-			if (isset($journal)) {
+			if (isset($context)) {
 
-				$this->assign_by_ref('currentJournal', $journal);
-				$journalTitle = $journal->getLocalizedName();
-				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicFilesDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
+				$this->assign_by_ref('currentJournal', $context);
+				$this->assign('siteTitle', $context->getLocalizedName());
+				$this->assign('publicFilesDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 
-				$this->assign('primaryLocale', $journal->getPrimaryLocale());
-				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
+				$this->assign('primaryLocale', $context->getPrimaryLocale());
+				$this->assign('alternateLocales', $context->getSetting('alternateLocales'));
 
-				// Assign additional navigation bar items
-				$navMenuItems =& $journal->getLocalizedSetting('navItems');
-				$this->assign_by_ref('navMenuItems', $navMenuItems);
-
-				// Assign journal page header
-				$this->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $journal->getLocalizedPageHeaderLogo());
-				$this->assign('displayPageHeaderTitleAltText', $journal->getLocalizedSetting('pageHeaderTitleImageAltText'));
-				$this->assign('displayPageHeaderLogoAltText', $journal->getLocalizedSetting('pageHeaderLogoImageAltText'));
-				$this->assign('displayFavicon', $journal->getLocalizedFavicon());
-				$this->assign('faviconDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()));
-				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
-				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
-				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
-				$this->assign('metaCustomHeaders', $journal->getLocalizedSetting('customHeaders'));
-				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
-				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
-				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
+				// Assign page header
+				$this->assign('displayPageHeaderTitle', $context->getLocalizedPageHeaderTitle());
+				$this->assign('displayPageHeaderLogo', $context->getLocalizedPageHeaderLogo());
+				$this->assign('displayPageHeaderTitleAltText', $context->getLocalizedSetting('pageHeaderTitleImageAltText'));
+				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
+				$this->assign('displayFavicon', $context->getLocalizedFavicon());
+				$this->assign('faviconDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
+				$this->assign('alternatePageHeader', $context->getLocalizedSetting('journalPageHeader'));
+				$this->assign('metaSearchDescription', $context->getLocalizedSetting('searchDescription'));
+				$this->assign('metaSearchKeywords', $context->getLocalizedSetting('searchKeywords'));
+				$this->assign('metaCustomHeaders', $context->getLocalizedSetting('customHeaders'));
+				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
+				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
+				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
 				$this->assign(
 					'hideRegisterLink',
-					!$journal->getSetting('allowRegReviewer') &&
-					!$journal->getSetting('allowRegReader') &&
-					!$journal->getSetting('allowRegAuthor')
+					!$context->getSetting('allowRegReviewer') &&
+					!$context->getSetting('allowRegReader') &&
+					!$context->getSetting('allowRegAuthor')
 				);
 
-				// Load and apply theme plugin, if chosen
-				$themePluginPath = $journal->getSetting('journalTheme');
-				if (!empty($themePluginPath)) {
-					// Load and activate the theme
-					$themePlugin =& PluginRegistry::loadPlugin('themes', $themePluginPath);
-					if ($themePlugin) $themePlugin->activate($this);
-				}
-
 				// Assign stylesheets and footer
-				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
-				if ($journalStyleSheet) {
-					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $journalStyleSheet['uploadName']);
+				$contextStyleSheet = $context->getSetting('journalStyleSheet');
+				if ($contextStyleSheet) {
+					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName']);
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($this->request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
-				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));
+				// Include footer links if they have been defined.
+				$footerCategoryDao = DAORegistry::getDAO('FooterCategoryDAO');
+				$footerCategories = $footerCategoryDao->getNotEmptyByContextId($context->getId());
+				$this->assign('footerCategories', $footerCategories->toArray());
+
+				$footerLinkDao = DAORegistry::getDAO('FooterLinkDAO');
+				$this->assign('maxLinks', $footerLinkDao->getLargestCategoryTotalbyContextId($context->getId()));
+				$this->assign('pageFooter', $context->getLocalizedSetting('journalPageFooter'));
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
 				$displayPageHeaderTitle = $site->getLocalizedPageHeaderTitle();
