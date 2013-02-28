@@ -24,20 +24,11 @@ class SubmissionsForm extends ContextSettingsForm {
 			'reviewerAccessKeysEnabled' => 'bool',
 			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
-			'customAboutItems' => 'object',
 			'notifyAllAuthorsOnDecision' => 'bool'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/submissions/form/submissionsForm.tpl', $wizardMode);
 
 		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
-	}
-
-	/**
-	 * Get the list of field names for which localized settings are used.
-	 * @return array
-	 */
-	function getLocaleFieldNames() {
-		return array('focusScopeDesc', 'reviewPolicy', 'customAboutItems', 'lockssLicense', 'clockssLicense');
 	}
 
 	/**

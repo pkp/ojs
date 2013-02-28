@@ -86,39 +86,6 @@
 </div>
 <div class="separator"></div>
 
-<div id="addItemtoAboutJournal">
-<h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
-
-<table class="data">
-{foreach name=customAboutItems from=$customAboutItems[$formLocale] key=aboutId item=aboutItem}
-	<tr>
-		<td width="5%" class="label">{fieldLabel name="customAboutItems-$aboutId-title" key="common.title"}</td>
-		<td class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][{$aboutId|escape}][title]" id="customAboutItems-{$aboutId|escape}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField richContent" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="customAboutItems-$aboutId-content" key="manager.setup.aboutItemContent"}</td>
-		<td class="value"><textarea name="customAboutItems[{$formLocale|escape}][{$aboutId|escape}][content]" id="customAboutItems-{$aboutId|escape}-content" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
-	</tr>
-	{if !$smarty.foreach.customAboutItems.last}
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	{/if}
-{foreachelse}
-	<tr>
-		<td class="label">{fieldLabel name="customAboutItems-0-title" key="common.title"}</td>
-		<td class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][0][title]" id="customAboutItems-0-title" value="" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="customAboutItems-0-content" key="manager.setup.aboutItemContent"}</td>
-		<td class="value"><textarea name="customAboutItems[{$formLocale|escape}][0][content]" id="customAboutItems-0-content" rows="12" cols="40" class="textArea"></textarea></td>
-	</tr>
-{/foreach}
-</table>
-
-<p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
-</div>
-
 {if !$wizardMode}
 	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
 {/if}
