@@ -171,10 +171,12 @@ class LuceneHandler extends Handler {
 	 * @param $batchCount integer The number of articles in
 	 *  the XML list (i.e. the expected number of documents
 	 *  to be indexed).
+	 * @param $numDeleted integer The number of articles in
+	 *  the XML list that are marked for deletion.
 	 *
 	 * @return integer The number of articles processed.
 	 */
-	function pullIndexingCallback($articleXml, $batchCount) {
+	function pullIndexingCallback($articleXml, $batchCount, $numDeleted) {
 		// Flush the XML to the Solr server to make sure it
 		// arrives there before we commit our transaction.
 		echo $articleXml;

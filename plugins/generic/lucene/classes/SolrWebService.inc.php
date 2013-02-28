@@ -1127,19 +1127,20 @@ class SolrWebService extends XmlWebService {
 		unset($changedArticlesIterator);
 
 		// Get the XML article list for this batch of articles.
-		$articleXml = $this->_getArticleListXml($changedArticles, $totalCount);
+		$numDeleted = null;
+		$articleXml = $this->_getArticleListXml($changedArticles, $totalCount, $numDeleted);
 
 		// Let the specific indexing implementation (pull or push)
 		// transfer the generated XML.
-		$numIndexed = call_user_func_array($sendXmlCallback, array(&$articleXml, $batchCount));
+		$numProcessed = call_user_func_array($sendXmlCallback, array(&$articleXml, $batchCount, $numDeleted));
 
 		// Check error conditions.
-		if (!is_numeric($numIndexed)) return null;
-		$numIndexed = (integer)$numIndexed;
-		if ($numIndexed != $batchCount) {
+		if (!is_numeric($numProcessed)) return null;
+		$numProcessed = (integer)$numProcessed;
+		if ($numProcessed != $batchCount) {
 			$this->_serviceMessage = __(
 				'plugins.generic.lucene.message.indexingIncomplete',
-				array('numIndexed' => $numIndexed, 'batchCount' => $batchCount)
+				array('numProcessed' => $numProcessed, 'numDeleted' => $numDeleted, 'batchCount' => $batchCount)
 			);
 			return null;
 		}
@@ -1152,7 +1153,7 @@ class SolrWebService extends XmlWebService {
 			$articleDao->updateLocaleFields($indexedArticle);
 		}
 
-		return $numIndexed;
+		return $numProcessed;
 	}
 
 	/**
@@ -1167,6 +1168,8 @@ class SolrWebService extends XmlWebService {
 	 * @param $batchCount integer The number of articles in
 	 *  the XML list (i.e. the expected number of documents
 	 *  to be indexed).
+	 * @param $numDeleted integer The number of articles in
+	 *  the XML list that are marked for deletion.
 	 *
 	 * @return integer The number of articles processed or
 	 *  null if an error occured.
@@ -1174,7 +1177,7 @@ class SolrWebService extends XmlWebService {
 	 *  After an error the method SolrWebService::getServiceMessage()
 	 *  will return details of the error.
 	 */
-	function _pushIndexingCallback(&$articleXml, $batchCount) {
+	function _pushIndexingCallback(&$articleXml, $batchCount, $numDeleted) {
 		if ($batchCount > 0) {
 			// Make a POST request with all articles in this batch.
 			$url = $this->_getDihUrl() . '?command=full-import&clean=false';
@@ -1182,7 +1185,8 @@ class SolrWebService extends XmlWebService {
 			if (is_null($result)) return null;
 
 			// Retrieve the number of successfully indexed articles.
-			return $this->_getDocumentsProcessed($result);
+			$numProcessed = $this->_getDocumentsProcessed($result) + $numDeleted;
+			return $numProcessed;
 		} else {
 			// Nothing to update.
 			return 0;
@@ -1200,7 +1204,7 @@ class SolrWebService extends XmlWebService {
 	 * @return string The XML ready to be consumed by the Solr data
 	 *  import service.
 	 */
-	function _getArticleListXml(&$articles, $totalCount) {
+	function _getArticleListXml(&$articles, $totalCount, &$numDeleted) {
 		// Create the DOM document.
 		$articleDoc =& XMLCustomWriter::createDocument();
 		assert(is_a($articleDoc, 'DOMDocument'));
@@ -1211,6 +1215,7 @@ class SolrWebService extends XmlWebService {
 
 		// Run through all articles in the batch and generate an
 		// XML list for them.
+		$numDeleted = 0;
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 		foreach($articles as $article) {
 			if (!is_a($article, 'PublishedArticle')) {
@@ -1230,6 +1235,7 @@ class SolrWebService extends XmlWebService {
 				$this->_addArticleXml($articleDoc, $article, $journal);
 			} else {
 				// Mark the article for deletion.
+				$numDeleted++;
 				$this->_addArticleXml($articleDoc, $article, $journal, true);
 			}
 			unset($journal, $article);
