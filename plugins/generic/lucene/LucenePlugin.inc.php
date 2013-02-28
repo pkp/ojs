@@ -612,7 +612,7 @@ class LucenePlugin extends GenericPlugin {
 						} else {
 							$this->_informTechAdmin($error, $journal);
 						}
-						return false;
+						return true;
 					}
 					if ($log) echo '.';
 					$numIndexed += $articlesInBatch;
