@@ -24,11 +24,46 @@ class SubmissionsForm extends ContextSettingsForm {
 			'reviewerAccessKeysEnabled' => 'bool',
 			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
-			'notifyAllAuthorsOnDecision' => 'bool'
+			'notifyAllAuthorsOnDecision' => 'bool',
+			'pubFreqPolicy' => 'string',
+			'useCopyeditors' => 'bool',
+			'copyeditInstructions' => 'string',
+			'useLayoutEditors' => 'bool',
+			'layoutInstructions' => 'string',
+			'provideRefLinkInstructions' => 'bool',
+			'refLinkInstructions' => 'string',
+			'useProofreaders' => 'bool',
+			'proofInstructions' => 'string',
+			'publishingMode' => 'int',
+			'enablePublicIssueId' => 'bool',
+			'enablePublicArticleId' => 'bool',
+			'enablePublicGalleyId' => 'bool',
+			'enablePublicSuppFileId' => 'bool',
+			'enablePageNumber' => 'bool',
+			'copyrightNotice' => 'string',
+			'includeCreativeCommons' => 'bool',
+			'copyrightNoticeAgree' => 'bool',
+			'requireAuthorCompetingInterests' => 'bool',
+			'requireReviewerCompetingInterests' => 'bool',
+			'metaDiscipline' => 'bool',
+			'metaDisciplineExamples' => 'string',
+			'metaSubjectClass' => 'bool',
+			'metaSubjectClassTitle' => 'string',
+			'metaSubjectClassUrl' => 'string',
+			'metaSubject' => 'bool',
+			'metaSubjectExamples' => 'string',
+			'metaCoverage' => 'bool',
+			'metaCoverageGeoExamples' => 'string',
+			'metaCoverageChronExamples' => 'string',
+			'metaCoverageResearchSampleExamples' => 'string',
+			'metaType' => 'bool',
+			'metaTypeExamples' => 'string'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/submissions/form/submissionsForm.tpl', $wizardMode);
 
 		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorLocaleURL($this, 'metaSubjectClassUrl', 'optional', 'manager.setup.subjectClassificationURLValid'));
 	}
 
 	/**
@@ -41,6 +76,14 @@ class SubmissionsForm extends ContextSettingsForm {
 		}
 
 		return parent::fetch($request);
+	}
+
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('authorGuidelines', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions');
 	}
 }
 
