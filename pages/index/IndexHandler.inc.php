@@ -71,6 +71,17 @@ class IndexHandler extends Handler {
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}
 			}
+
+			// Include any social media items that are configured for the press itself.
+			$socialMediaDao =& DAORegistry::getDAO('SocialMediaDAO');
+			$socialMedia =& $socialMediaDao->getEnabledForContextByContextId($journal->getId());
+			$blocks = array();
+			while ($media = $socialMedia->next()) {
+				$media->replaceCodeVars();
+				$blocks[] = $media->getCode();
+			}
+			$templateMgr->assign_by_ref('socialMediaBlocks', $blocks);
+
 			$templateMgr->display('index/journal.tpl');
 		} else {
 			$site =& $request->getSite();
