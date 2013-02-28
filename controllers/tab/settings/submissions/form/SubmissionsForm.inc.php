@@ -67,18 +67,6 @@ class SubmissionsForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * Display the form.
-	 */
-	function fetch($request) {
-		$templateMgr = TemplateManager::getManager($request);
-		if (Config::getVar('general', 'scheduled_tasks')) {
-			$templateMgr->assign('scheduledTasksEnabled', true);
-		}
-
-		return parent::fetch($request);
-	}
-
-	/**
 	 * Get the list of field names for which localized settings are used.
 	 * @return array
 	 */
