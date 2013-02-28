@@ -20,12 +20,6 @@ class ManagementForm extends ContextSettingsForm {
 	 */
 	function ManagementForm($wizardMode = false) {
 		$settings = array(
-			'disableUserReg' => 'bool',
-			'allowRegReader' => 'bool',
-			'allowRegAuthor' => 'bool',
-			'allowRegReviewer' => 'bool',
-			'restrictSiteAccess' => 'bool',
-			'restrictArticleAccess' => 'bool',
 			'pubFreqPolicy' => 'string',
 			'useCopyeditors' => 'bool',
 			'copyeditInstructions' => 'string',
@@ -36,7 +30,6 @@ class ManagementForm extends ContextSettingsForm {
 			'useProofreaders' => 'bool',
 			'proofInstructions' => 'string',
 			'publishingMode' => 'int',
-			'showGalleyLinks' => 'bool',
 			'enablePublicIssueId' => 'bool',
 			'enablePublicArticleId' => 'bool',
 			'enablePublicGalleyId' => 'bool',

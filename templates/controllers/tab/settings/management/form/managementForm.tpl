@@ -24,27 +24,11 @@
 <h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
 <div id="onlineAccessManagement">
 <h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
-<script>
-	{literal}
-		function togglePublishingMode(form) {
-			if (form.publishingMode[0].checked) {
-				// PUBLISHING_MODE_OPEN
-				form.showGalleyLinks.disabled = true;
-			} else if (form.publishingMode[1].checked) {
-				// PUBLISHING_MODE_SUBSCRIPTION
-				form.showGalleyLinks.disabled = false;
-			} else {
-				// PUBLISHING_MODE_NONE
-				form.showGalleyLinks.disabled = true;
-			}
-		}
-	{/literal}
-</script>
 
 <table class="data">
 	<tr>
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />
+			<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />
 		</td>
 		<td class="value">
 			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
@@ -55,17 +39,11 @@
 	</tr>
 	<tr>
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
+			<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
 		</td>
 		<td class="value">
 			<label for="publishingMode-1">{translate key="manager.setup.subscription"}</label>
 			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
-			<table>
-				<tr>
-					<td width="5%"><input type="checkbox" name="showGalleyLinks" id="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /></td>
-					<td><label for="showGalleyLinks">{translate key="manager.setup.showGalleyLinksDescription"}</label></td>
-				</tr>
-			</table>
 		</td>
 	</tr>
 	<tr>
@@ -73,7 +51,7 @@
 	</tr>
 	<tr>
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />
+			<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />
 		</td>
 		<td class="value">
 			<label for="publishingMode-2">{translate key="manager.setup.noPublishing"}</label>
@@ -83,68 +61,6 @@
 
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
 </div><!-- onlineAccessManagement -->
-
-<script>
-{literal}
-function setRegAllowOpts(form) {
-	if(form.disableUserReg[0].checked) {
-		form.allowRegReader.disabled=false;
-		form.allowRegAuthor.disabled=false;
-		form.allowRegReviewer.disabled=false;
-	} else {
-		form.allowRegReader.disabled=true;
-		form.allowRegAuthor.disabled=true;
-		form.allowRegReviewer.disabled=true;
-	}
-}
-{/literal}
-</script>
-
-<div id="siteAccess">
-<h4>{translate key="manager.setup.siteAccess"}</h4>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="restrictSiteAccess" id="restrictSiteAccess" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
-		<td class="value"><label for="restrictSiteAccess">{translate key="manager.setup.restrictSiteAccess"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
-		<td class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
-	</tr>
-</table>
-</div><!-- siteAccess -->
-
-<div id="userRegistration">
-<h4>{translate key="manager.setup.userRegistration"}</h4>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
-		<td class="value">
-			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
-			<table>
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td><label for="allowRegReader">{translate key="manager.setup.enableUserRegistration.reader"}</label></td>
-				</tr>
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if $allowRegAuthor} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td><label for="allowRegAuthor">{translate key="manager.setup.enableUserRegistration.author"}</label></td>
-				</tr>
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if $allowRegReviewer} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td><label for="allowRegReviewer">{translate key="manager.setup.enableUserRegistration.reviewer"}</label></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
-		<td class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
-	</tr>
-</table>
-</div><!-- userRegistration -->
 
 </div><!-- securitySettings -->
 
