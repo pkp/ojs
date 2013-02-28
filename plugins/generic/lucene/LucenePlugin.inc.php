@@ -1023,7 +1023,7 @@ class LucenePlugin extends GenericPlugin {
 								// an OJS upgrade).
 								$this->_informTechAdmin($error, $journal);
 							}
-							return false;
+							return true;
 						}
 						$this->_indexingMessage($log, '.', $messages);
 						$numIndexed += $articlesInBatch;
