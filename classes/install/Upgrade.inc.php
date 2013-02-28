@@ -1210,16 +1210,12 @@ class Upgrade extends Installer {
 			}
 
 			// Section Editors.
-			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
-			while ($group = $userGroups->next()) {
-				if ($group->getData('nameLocaleKey') == 'default.groups.name.sectionEditor') {
-					$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));
-					while (!$userResult->EOF) {
-						$row = $userResult->GetRowAssoc(false);
-						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
-						$userResult->MoveNext();
-					}
-				}
+			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_SECTION_EDITOR);
+			$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));;
+			while (!$userResult->EOF) {
+				$row = $userResult->GetRowAssoc(false);
+				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userResult->MoveNext();
 			}
 
 			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
