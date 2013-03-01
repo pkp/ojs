@@ -20,6 +20,6 @@
 	</sql>
 	<!-- Bug #6013: Make published dates for articles consistent -->
 	<sql>
-		<query>UPDATE published_articles SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
+		<query driver="mysql">UPDATE published_articles SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
 	</sql>
 </data>
