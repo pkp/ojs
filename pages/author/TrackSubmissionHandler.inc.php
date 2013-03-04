@@ -504,7 +504,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($articleId);
 		$this->setupTemplate(true);
 
-		$send = isset($args[0]) && $args[0] == 'send' ? true : false;
+		$send = $request->getUserVar('send');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 
