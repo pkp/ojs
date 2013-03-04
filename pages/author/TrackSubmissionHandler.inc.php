@@ -508,11 +508,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
-		$send = array_shift($args);
+		$send = $request->getUserVar('send');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send?'':$request->url(null, 'author', 'authorProofreadingComplete', 'send'))) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send?'':$request->url(null, 'author', 'authorProofreadingComplete'))) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
