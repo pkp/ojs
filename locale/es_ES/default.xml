@@ -1,12 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> <!--
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> 
+
+<!--
   * default.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale (default journal settings).
+  * Localization strings.
   *
-  * $Id$
   -->
  
 <locale name="es_ES" full_name="Español (España)">

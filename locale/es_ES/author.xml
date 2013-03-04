@@ -1,10 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> <!--
-  * ojs2-devel/locale/es_ES/author.xml
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> 
+
+<!--
+  * locale/es_ES/author.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español) locale.
+  * Localization strings.
   -->
 
 <locale name="es_ES" full_name = "Español">
