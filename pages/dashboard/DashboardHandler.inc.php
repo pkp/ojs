@@ -64,7 +64,7 @@ class DashboardHandler extends Handler {
 		$user = $request->getUser();
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$allContextsUserRoles = $roleDao->getByUserIdGroupedByContext($user->getId());
-		$userRolesThatCanSubmit = array(ROLE_ID_AUTHOR, ROLE_ID_ASSISTANT, ROLE_ID_MANAGER, ROLE_ID_SERIES_EDITOR);
+		$userRolesThatCanSubmit = array(ROLE_ID_AUTHOR, ROLE_ID_ASSISTANT, ROLE_ID_MANAGER, ROLE_ID_SECTION_EDITOR);
 		$accessibleJournals = array();
 		while ($journal = $journals->next()) {
 			if (array_key_exists($journal->getId(), $allContextsUserRoles)) {
