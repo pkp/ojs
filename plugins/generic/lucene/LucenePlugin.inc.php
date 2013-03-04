@@ -404,8 +404,13 @@ class LucenePlugin extends GenericPlugin {
 			}
 			while (!$sections->eof()) { /* @var $sections DAOResultFactory */
 				$section =& $sections->next();
-				$sectionBoost = (float)$section->getData('rankingBoost');
-				if ($sectionBoost != 1.0) {
+				$rankingBoost = $section->getData('rankingBoost');
+				if (isset($rankingBoost)) {
+					$sectionBoost = (float)$rankingBoost;
+				} else {
+					$sectionBoost = LUCENE_PLUGIN_DEFAULT_RANKING_BOOST;
+				}
+				if ($sectionBoost != LUCENE_PLUGIN_DEFAULT_RANKING_BOOST) {
 					$searchRequest->addBoostFactor(
 						'section_id', $section->getId(), $sectionBoost
 					);

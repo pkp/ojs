@@ -313,7 +313,7 @@ class SolrSearchRequest {
 
 		// Ignore neutral boost factors.
 		$boostFactor = (float)$boostFactor;
-		if ($boostFactor == 1.0) return;
+		if ($boostFactor == LUCENE_PLUGIN_DEFAULT_RANKING_BOOST) return;
 
 		// Save the boost factor.
 		if (!isset($this->_boostFactors[$field])) {
