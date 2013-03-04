@@ -15,16 +15,16 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
+	<locale key="ca_ES" name="Català" iso639-2b="cat" iso639-3="cat" />
 	<locale key="cs_CZ" complete="false" name="Czech" iso639-2b="cze" iso639-3="ces" />
-	<locale key="da_DK" complete="false" name="Danish" iso639-2b="dan" iso639-3="dan" />
+	<locale key="da_DK" name="Danish" iso639-2b="dan" iso639-3="dan" />
 	<locale key="de_DE" name="Deutsch" iso639-2b="ger" iso639-3="deu" />
 	<locale key="en_US" name="English" iso639-2b="eng" iso639-3="eng" />
-	<locale key="el_GR" complete="false" name="Greek" iso639-2b="gre" iso639-3="ell" />
-	<locale key="es_ES" complete="false" name="Español" iso639-2b="spa" iso639-3="spa" />
+	<locale key="el_GR" name="Greek" iso639-2b="gre" iso639-3="ell" />
+	<locale key="es_ES" name="Español" iso639-2b="spa" iso639-3="spa" />
 	<locale key="eu_ES" name="Basque" iso639-2b="eus" iso639-3="eus" />
 	<locale key="fa_IR" complete="false" name="Persian" iso639-2b="per" iso639-3="fas" />
-	<locale key="fr_CA" complete="false" name="Français" iso639-2b="fre" iso639-3="fra" />
+	<locale key="fr_CA" name="Français" iso639-2b="fre" iso639-3="fra" />
 	<locale key="gl_ES" complete="false" name="Galician" iso639-2b="glg" iso639-3="glg" />
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
 	<locale key="id_ID" complete="false" name="Indonesian" iso639-2b="ind" iso639-3="ind" />
@@ -39,7 +39,7 @@
 	<locale key="ru_RU" complete="false" name="Russian" iso639-2b="rus" iso639-3="rus" />
 	<locale key="sr_SR" complete="false" name="Serbian" iso639-2b="srp" iso639-3="srp" />
 	<locale key="sv_SE" complete="false" name="Swedish" iso639-2b="swe" iso639-3="swe" />
-	<locale key="tr_TR" complete="false" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
+	<locale key="tr_TR" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
 	<locale key="uk_UA" name="Українська" iso639-2b="ukr" iso639-3="ukr" />	
 	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" iso639-3="vie" />
 	<locale key="zh_CN" name="简体中文" iso639-2b="chi" iso639-3="zho" />
