@@ -11,113 +11,28 @@
   -->
 
 <install version="2.4.0.0">
-	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
-		<!-- Correct null public issue IDs; this caused problems with
-		     2.x -> 2.2.0 upgrades using public issue IDs.-->
-		<data file="dbscripts/xml/upgrade/public_issue_ids.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
-		<!-- 2.0.x to 2.0.2 -->
-		<data file="dbscripts/xml/upgrade/2.0.2_preupdate.xml" />
-	</upgrade>
-
-	<!-- #2424: Make sure currencies are maintained as table is dropped -->
-	<!-- #2291: Migrate issue label column values and settings -->
-	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<!-- 2.0.x to 2.2.0 -->
-		<data file="dbscripts/xml/upgrade/2.2.0_preupdate.xml" />
-		<code function="correctCurrencies" />
-		<code function="migrateIssueLabelAndSettings" />
-		<code function="dropAllIndexes" />
-	</upgrade>
-
-	<!-- #2961: Stage 1 of 2.2 schema upgrade: Do not drop columns yet -->
-	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<schema file="dbscripts/xml/ojs_schema_stage1.xml" />
-	</upgrade>
-
-	<!-- Various tasks for pre-2.2 versions that do not require DAOs -->
-	<upgrade minversion="2.0.0.0" maxversion="2.0.0.0">
-		<!-- 2.0.0 to 2.0.1 -->
-		<data file="dbscripts/xml/upgrade/2.0.1_update.xml" />
-		<note file="docs/release-notes/README-2.0.1" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
-		<!-- 2.0.1 to 2.0.2 -->
-		<data file="dbscripts/xml/upgrade/2.0.2_update.xml" />
-		<note file="docs/release-notes/README-2.0.2" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.0.2.1">
-		<!-- 2.0.2.x (or below) to 2.1.0 -->
-		<data file="dbscripts/xml/upgrade/2.1.0_update.xml" />
-		<note file="docs/release-notes/README-2.1.0" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.1.0.1">
-		<!-- 2.1.0.x (or below) to 2.1.1 -->
-		<data file="dbscripts/xml/upgrade/2.1.1_update.xml" />
-		<note file="docs/release-notes/README-2.1.1" />
-	</upgrade>
-
-	<!-- #2961: Localization overhaul -->
-	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<code function="setJournalPrimaryLocales" />
-		<data file="dbscripts/xml/upgrade/2.2.0_localize.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
-		<!-- Migrate the user_settings table. -->
-		<data file="dbscripts/xml/upgrade/2.2.0_usersettings.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.2.0.0" maxversion="2.2.0.0">
-		<!-- 2.2 to 2.2.1; prior versions will have this table renamed already -->
-		<data file="dbscripts/xml/upgrade/2.2.1_usersettings.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
-		<!-- #4756# Rename journal_id to assoc_id in user_settings -->
-		<data file="dbscripts/xml/upgrade/2.3.0_usersettings.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
-		<!-- 2.x to 2.2.1 -->
-		<data file="dbscripts/xml/upgrade/2.2.1_preupdate.xml" />
-	</upgrade>
-
-	<!-- Create signoffs table before migration occurs -->
-	<schema file="lib/pkp/xml/schema/signoff.xml" />
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
-		<!-- 2.x to 2.3 -->
-		<data file="dbscripts/xml/upgrade/2.3.0_preupdate.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
-		<!-- 2.2.x to 2.3 -->
-		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip.xml" />
+	<upgrade minversion="2.0.0.0" maxversion="2.2.9.9">
+		<note file="docs/UPGRADE-UNSUPPORTED" />
+		<code function="die" />
 	</upgrade>
 
 	<!--
 	  - The 2.3.3 preupdate scripts have been broken into pieces because
 	  - the features they affect were added in different versions of OJS.
 	  -->
-	<upgrade minversion="2.0.0.0" maxversion="2.3.2.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate1.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.2.0.0" maxversion="2.3.2.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate2.xml" /><!-- author_settings -->
 	</upgrade>
 
-	<upgrade minversion="2.2.1.0" maxversion="2.3.2.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate3.xml" /><!-- review_forms -->
 	</upgrade>
 
-	<upgrade minversion="2.2.0.0" maxversion="2.3.3.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
 		<!--
 		  - Not including 2.1.1, where user_settings first became available, because the 2.2.0_usersettings migration process
 		  - has renamed it to user_settings_old by this point.
@@ -125,11 +40,11 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations1.xml" condition="return $installer->columnExists('users', 'affiliation');" />
 	</upgrade>
 
-	<upgrade minversion="2.2.0.0" maxversion="2.3.3.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_article_files.xml" condition="return $installer->columnExists('article_files', 'type');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_emaillog.xml" condition="return $installer->columnExists('article_email_log', 'log_id');" />
@@ -142,7 +57,7 @@
 		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files.xml" condition="return $installer->columnExists('article_supplementary_files', 'public_supp_file_id');" />
 	</upgrade>
 	
-	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
 		<data file="dbscripts/xml/upgrade/2.4.0_notifications.xml" condition="return $installer->columnExists('notification_settings', 'setting_id');" />	
 	</upgrade>
 
@@ -171,129 +86,50 @@
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
 
-	<!--
-	  - The following tasks from older versions use DAO-level queries
-	  - and need the DAOs to function properly in order to work.
-	  -->
-	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
-		<!-- The search index was flushed earlier; rebuild it. -->
-		<code function="rebuildSearchIndex" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.1.0.1">
-		<!-- 2.1.0-1 (or below) to 2.1.1 -->
-		<code function="designateReviewVersions" />
-		<code function="migrateRtSettings" />
-	</upgrade>
-
-	<!-- Complete the 2.2 upgrade -->
-	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<!-- 2.1.1 (or below) to 2.2 -->
-		<data file="dbscripts/xml/upgrade/2.2.0_update.xml" />
-		<code function="localizeJournalSettings" />
-		<code function="migratePublisher" />
-		<code function="installBlockPlugins" />
-		<code function="setGalleyLocales" />
-		<note file="docs/release-notes/README-2.2.0" />
-	</upgrade>
-
-	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
-		<code function="migrateUserSettings" />
-		<!-- Delete the user_settings_old table now that it has been migrated. -->
-		<data file="dbscripts/xml/upgrade/2.2.0_usersettings2.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
-		<!-- Fix bug #3321 (supportedLocales setting maybe missing) -->
-		<code function="ensureSupportedLocales" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
-		<!-- Only execute the upgrade statements if the theses table exists -->
-		<data file="dbscripts/xml/upgrade/2.2.1_update.xml" condition="return $installer->columnExists('theses', 'thesis_id');" />
-
-		<code function="renamePayPerViewSettings" />
-		<code function="clearDataCache" />
-		<note file="docs/release-notes/README-2.2.1" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.2.0">
-		<data file="dbscripts/xml/upgrade/2.2.3_update.xml" />
-		<note file="docs/release-notes/README-2.2.3" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.2.9.0">
-		<code function="separateSubscriptions" />
-		<data file="dbscripts/xml/upgrade/2.3.0_update.xml" />
-		<code function="localizeMoreJournalSettings" />
-		<code function="cleanImageAlts" />
-		<code function="cleanTitles" />
-		<note file="docs/release-notes/README-2.3.0" />
-
-		<!-- Post-2.3.0 additions -->
-		<code function="installEmailTemplate" key="NOTIFICATION" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_WELCOME" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="NOTIFICATION_MAILLIST_PASSWORD" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_ACCEPT" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_REVISIONS" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_RESUBMIT" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_DECLINE" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INDL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="SUBSCRIPTION_PURCHASE_INSTL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INDL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-		<code function="installEmailTemplate" key="SUBSCRIPTION_RENEW_INSTL" locales="cs_CZ,de_DE,el_GR,en_US,es_ES,eu_ES,fa_IR,fr_CA,it_IT,ja_JP,nl_NL,no_NO,pt_BR,pt_PT,ro_RO,ru_RU,zh_CN" />
-	</upgrade>
-
-	<upgrade minversion="2.2.0.0" maxversion="2.2.9.0">
-		<!-- 2.2.x to 2.3 -->
-		<data file="dbscripts/xml/upgrade/2.3.0_subscription_ip2.xml" />
-	</upgrade>
-
-	<upgrade minversion="2.0.0.0" maxversion="2.3.0.0">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.0.0">
 		<note file="docs/release-notes/README-2.3.1" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.1.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.1.9">
 		<note file="docs/release-notes/README-2.3.2" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.2.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.2.9">
 		<code function="installEmailTemplate" key="CITATION_EDITOR_AUTHOR_QUERY" locales="en_US" />
 		<code function="migrateReviewingInterests" />
 		<data file="dbscripts/xml/upgrade/2.3.3_update.xml" />
 		<note file="docs/release-notes/README-2.3.3" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.3.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.3.9">
 		<!-- 2.x to 2.3.4 -->
 		<data file="dbscripts/xml/upgrade/2.3.4_update.xml" />
 		<note file="docs/release-notes/README-2.3.4" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.4.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.4.9">
 		<!-- 2.x to 2.3.5 -->
 		<data file="dbscripts/xml/upgrade/2.3.5_update.xml" />
 		<note file="docs/release-notes/README-2.3.5" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.5.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.5.9">
 		<note file="docs/release-notes/README-2.3.6" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.6.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.6.9">
 		<code function="migrateReviewingInterests2" />
 		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
 		<code function="removeAuthorRevisedFilesFromSignoffs" />
 		<note file="docs/release-notes/README-2.3.7" />
 	</upgrade>
 
-	<upgrade minversion="2.2.3.0" maxversion="2.3.2.0">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.2.0">
 		<!-- COUNTER - counter_monthly_log update.-->
 		<data file="plugins/generic/counter/counter_monthly_log_1_1.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
 
 		<!-- Newly introduced email templates -->
@@ -321,14 +157,14 @@
 		<note file="docs/release-notes/README-2.4.0" />
 	</upgrade>
 
-	<upgrade minversion="2.2.9.0" maxversion="2.3.9.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.3.9.9">
 		<code function="migrateNotifications" condition="return $installer->tableExists('notifications_old');" />
 		<!-- Delete the notification*_old tables now that they have been migrated. -->
 		<data file="dbscripts/xml/upgrade/2.4.0_notifications2.xml" condition="return $installer->tableExists('notification_settings_old');" />
 		<!-- Update the notification emails (we have removed references to mailing list passwords) -->
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="2.9.9.9">
+	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
