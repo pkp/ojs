@@ -81,6 +81,25 @@
 	{url|assign:"oaiUrl" router=$smarty.const.ROUTE_PAGE page="oai"}
 	{url|assign:"siteUrl" router=$smarty.const.ROUTE_PAGE page="index"}
 	<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl=$siteUrl oaiUrl=$oaiUrl}</p>
+	{if count($availableMetricTypes) > 1}
+		<br />
+		<div id="defaultMetricSelection">
+			<h4>{translate key="defaultMetric.title"}</h4>
+			<p>{translate key="admin.settings.defaultMetricDescription"}</p>
+			<table class="data" width="100%">
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="defaultMetricType" key="defaultMetric.availableMetrics"}</td>
+					<td colspan="2" width="80%" class="value">
+						<select name="defaultMetricType" class="selectMenu" id="defaultMetricType">
+							{foreach from=$availableMetricTypes key=metricType item=displayName}
+								<option value="{$metricType|escape}"{if $metricType == $defaultMetricType} selected="selected"{/if}>{$displayName|escape}</option>
+							{/foreach}
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+	{/if} 
 
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 	{fbvFormButtons id="siteSetupFormSubmit" submitText="common.save" hideCancel=true}
