@@ -61,7 +61,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionFile($fileName, $fileId = null, $overwrite = false) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_SUBMISSION, $fileId, $overwrite);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_SUBMISSION, $fileId, $overwrite);
 	}
 
 	/**
@@ -71,7 +71,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadReviewFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_REVIEW, $fileId);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_REVIEW_FILE, $fileId);
 	}
 
 	/**
@@ -81,7 +81,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadEditorDecisionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_EDITOR, $fileId);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_EDITOR, $fileId);
 	}
 
 	/**
@@ -91,7 +91,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadCopyeditFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_COPYEDIT, $fileId);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_COPYEDIT, $fileId);
 	}
 
 	/**
@@ -102,7 +102,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is null if failure
 	 */
 	function uploadLayoutFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_LAYOUT, $fileId, $overwrite);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_LAYOUT, $fileId, $overwrite);
 	}
 
 	/**
@@ -113,7 +113,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**
@@ -124,7 +124,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -135,7 +135,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, ARTICLE_FILE_NOTE, $fileId, $overwrite);
+		return $this->handleUpload($fileName, SUBMISSION_FILE_NOTE, $fileId, $overwrite);
 	}
 
 	/**
@@ -147,7 +147,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function writePublicFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, $contents, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+		return $this->handleWrite($fileName, $contents, $mimeType, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function copyPublicFile($url, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -170,7 +170,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function writeSuppFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, $contents, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+		return $this->handleWrite($fileName, $contents, $mimeType, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**
@@ -181,7 +181,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function copySuppFile($url, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**
@@ -192,7 +192,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function copyAttachmentFile($url, $mimeType, $fileId = null, $overwrite = true, $assocId = null) {
-		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_ATTACHMENT, $fileId, $overwrite, $assocId);
+		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_ATTACHMENT, $fileId, $overwrite, $assocId);
 	}
 
 	/**
@@ -287,7 +287,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function copyToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
+		return $this->copyAndRenameFile($fileId, $revision, SUBMISSION_FILE_REVIEW_FILE, $destFileId);
 	}
 
 	/**
@@ -298,7 +298,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function copyToEditorFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_EDITOR, $destFileId);
+		return $this->copyAndRenameFile($fileId, $revision, SUBMISSION_FILE_EDITOR, $destFileId);
 	}
 
 	/**
@@ -308,7 +308,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function copyToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_COPYEDIT);
+		return $this->copyAndRenameFile($fileId, $revision, SUBMISSION_FILE_COPYEDIT);
 	}
 
 	/**
@@ -318,7 +318,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function copyToLayoutFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_LAYOUT);
+		return $this->copyAndRenameFile($fileId, $revision, SUBMISSION_FILE_LAYOUT);
 	}
 
 	/**
@@ -328,15 +328,15 @@ class ArticleFileManager extends FileManager {
 	 */
 	function fileStageToPath($fileStage) {
 		switch ($fileStage) {
-			case ARTICLE_FILE_PUBLIC: return 'public';
-			case ARTICLE_FILE_SUPP: return 'supp';
-			case ARTICLE_FILE_NOTE: return 'note';
-			case ARTICLE_FILE_REVIEW: return 'submission/review';
-			case ARTICLE_FILE_EDITOR: return 'submission/editor';
-			case ARTICLE_FILE_COPYEDIT: return 'submission/copyedit';
-			case ARTICLE_FILE_LAYOUT: return 'submission/layout';
-			case ARTICLE_FILE_ATTACHMENT: return 'attachment';
-			case ARTICLE_FILE_SUBMISSION: default: return 'submission/original';
+			case SUBMISSION_FILE_PUBLIC: return 'public';
+			case SUBMISSION_FILE_SUPP: return 'supp';
+			case SUBMISSION_FILE_NOTE: return 'note';
+			case SUBMISSION_FILE_REVIEW_FILE: return 'submission/review';
+			case SUBMISSION_FILE_EDITOR: return 'submission/editor';
+			case SUBMISSION_FILE_COPYEDIT: return 'submission/copyedit';
+			case SUBMISSION_FILE_LAYOUT: return 'submission/layout';
+			case SUBMISSION_FILE_ATTACHMENT: return 'attachment';
+			case SUBMISSION_FILE_SUBMISSION: default: return 'submission/original';
 		}
 	}
 
@@ -347,15 +347,15 @@ class ArticleFileManager extends FileManager {
 	 */
 	function fileStageToAbbrev($fileStage) {
 		switch ($fileStage) {
-			case ARTICLE_FILE_PUBLIC: return 'PB';
-			case ARTICLE_FILE_SUPP: return 'SP';
-			case ARTICLE_FILE_NOTE: return 'NT';
-			case ARTICLE_FILE_REVIEW: return 'RV';
-			case ARTICLE_FILE_EDITOR: return 'ED';
-			case ARTICLE_FILE_COPYEDIT: return 'CE';
-			case ARTICLE_FILE_LAYOUT: return 'LE';
-			case ARTICLE_FILE_ATTACHMENT: return 'AT';
-			case ARTICLE_FILE_SUBMISSION: default: return 'SM';
+			case SUBMISSION_FILE_PUBLIC: return 'PB';
+			case SUBMISSION_FILE_SUPP: return 'SP';
+			case SUBMISSION_FILE_NOTE: return 'NT';
+			case SUBMISSION_FILE_REVIEW_FILE: return 'RV';
+			case SUBMISSION_FILE_EDITOR: return 'ED';
+			case SUBMISSION_FILE_COPYEDIT: return 'CE';
+			case SUBMISSION_FILE_LAYOUT: return 'LE';
+			case SUBMISSION_FILE_ATTACHMENT: return 'AT';
+			case SUBMISSION_FILE_SUBMISSION: default: return 'SM';
 		}
 	}
 

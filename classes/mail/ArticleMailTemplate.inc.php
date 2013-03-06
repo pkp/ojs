@@ -129,7 +129,7 @@ class ArticleMailTemplate extends MailTemplate {
 		foreach ($this->getAttachmentFiles() as $attachment) {
 			$articleFileManager->temporaryFileToArticleFile(
 				$attachment,
-				ARTICLE_FILE_ATTACHMENT,
+				SUBMISSION_FILE_ATTACHMENT,
 				$logEntryId
 			);
 		}

@@ -2062,7 +2062,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		import('classes.file.ArticleFileManager');
-		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, ARTICLE_FILE_ATTACHMENT));
+		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, SUBMISSION_FILE_ATTACHMENT));
 
 		if ($logId) {
 			$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
