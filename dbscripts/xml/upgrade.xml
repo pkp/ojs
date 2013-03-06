@@ -13,7 +13,7 @@
 <install version="2.4.0.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.9.9">
 		<note file="docs/UPGRADE-UNSUPPORTED" />
-		<code function="die" />
+		<code function="abort" />
 	</upgrade>
 
 	<!--

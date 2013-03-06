@@ -52,7 +52,7 @@ class Upgrade extends Installer {
 	 * Fail the upgrade.
 	 * @return boolean
 	 */
-	function die() {
+	function abort() {
 		return false;
 	}
 
