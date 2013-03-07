@@ -85,11 +85,11 @@ class ReviewFormResponseForm extends Form {
 	 * Save the response.
 	 */
 	function execute() {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignment =& $reviewAssignmentDao->getById($this->reviewId);
-		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment = $reviewAssignmentDao->getById($this->reviewId);
+		$reviewAssignmentDao->updateObject($reviewAssignment);
 
-		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 
 		$reviewFormResponses = $this->getData('reviewFormResponses');
 		if (is_array($reviewFormResponses)) foreach ($reviewFormResponses as $reviewFormElementId => $reviewFormResponseValue) {

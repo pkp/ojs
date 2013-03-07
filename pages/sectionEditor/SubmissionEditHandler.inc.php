@@ -751,7 +751,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$reviewAssignment->setDateConfirmed(null);
 				$reviewAssignment->setRound($submission->getCurrentRound());
 
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 			}
 			$request->redirect(null, null, 'submissionReview', $articleId);
 	}

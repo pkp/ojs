@@ -189,7 +189,7 @@ class ReviewFormHandler extends ManagerHandler {
 
 			foreach ($reviewAssignments as $reviewAssignment) {
 				$reviewAssignment->setReviewFormId('');
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 			}
 
 			$reviewFormDao->deleteById($reviewFormId, $journal->getId());

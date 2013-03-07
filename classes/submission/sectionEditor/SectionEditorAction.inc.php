@@ -242,7 +242,7 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 				$reviewAssignment->setCancelled(0);
 				$reviewAssignment->stampModified();
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 				return true;
 			} else {
 				if (!$request->getUserVar('continued') || $preventAddressChanges) {
@@ -328,7 +328,7 @@ class SectionEditorAction extends Action {
 					$reviewAssignment->setDateCompleted(Core::getCurrentDate());
 					$reviewAssignment->stampModified();
 
-					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+					$reviewAssignmentDao->updateObject($reviewAssignment);
 
 					// Add log
 					import('classes.article.log.ArticleLog');
@@ -409,7 +409,7 @@ class SectionEditorAction extends Action {
 
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
 			$reviewAssignment->setReminderWasAutomatic(0);
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 			return true;
 		} elseif ($reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
 			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
@@ -488,7 +488,7 @@ class SectionEditorAction extends Action {
 
 				$reviewAssignment->setDateAcknowledged(Core::getCurrentDate());
 				$reviewAssignment->stampModified();
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 			} else {
 				if (!$request->getUserVar('continued')) {
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -534,7 +534,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateRated(Core::getCurrentDate());
 			$reviewAssignment->stampModified();
 
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
 			import('classes.article.log.ArticleLog');
@@ -614,7 +614,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateDue($dueDate);
 
 			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			if ($logEntry) {
 				// Add log
@@ -729,7 +729,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateCompleted($nowDate);
 			$reviewAssignment->stampModified();
 
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
 			import('classes.article.log.ArticleLog');
@@ -755,7 +755,7 @@ class SectionEditorAction extends Action {
 				$reviewFormResponseDao->deleteByReviewId($reviewId);
 			}
 			$reviewAssignment->setReviewFormId(null);
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 		}
 	}
 
@@ -781,7 +781,7 @@ class SectionEditorAction extends Action {
 					$reviewFormResponseDao->deleteByReviewId($reviewId);
 				}
 				$reviewAssignment->setReviewFormId($reviewFormId);
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 			}
 		}
 	}
@@ -2353,7 +2353,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDeclined($accept?0:1);
 			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$article =& $articleDao->getArticle($reviewAssignment->getSubmissionId());
@@ -2403,7 +2403,7 @@ class SectionEditorAction extends Action {
 
 			$reviewAssignment->setReviewerFileId($fileId);
 			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
 			import('classes.article.log.ArticleLog');

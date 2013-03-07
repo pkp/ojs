@@ -63,7 +63,7 @@ class ReviewerAction extends Action {
 				$reviewAssignment->setDeclined($decline);
 				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 				$reviewAssignment->stampModified();
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 
 				// Add log
 				import('classes.article.log.ArticleLog');
@@ -142,7 +142,7 @@ class ReviewerAction extends Action {
 				$reviewAssignment->setRecommendation($recommendation);
 				$reviewAssignment->setDateCompleted(Core::getCurrentDate());
 				$reviewAssignment->stampModified();
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				$reviewAssignmentDao->updateObject($reviewAssignment);
 
 				// Add log
 				import('classes.article.log.ArticleLog');
@@ -210,10 +210,10 @@ class ReviewerAction extends Action {
 		if (isset($fileId) && $fileId != 0) {
 			$reviewAssignment->setReviewerFileId($fileId);
 			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$reviewAssignmentDao->updateObject($reviewAssignment);
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
+			$userDao = DAORegistry::getDAO('UserDAO');
+			$reviewer = $userDao->getById($reviewAssignment->getReviewerId());
 
 			// Add log
 			import('classes.article.log.ArticleLog');
