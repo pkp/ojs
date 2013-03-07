@@ -24,6 +24,9 @@ define('ROLE_ID_PROOFREADER',		0x00003000);
 define('ROLE_ID_SUBSCRIPTION_MANAGER',	0x00200000);
 define('ROLE_ID_GUEST_EDITOR',		0x00000201);
 
+/** Fill in the blanks for roles used in PKP lib */
+define('ROLE_ID_SUB_EDITOR',		ROLE_ID_SECTION_EDITOR);
+
 class Role extends PKPRole {
 
 	/**
