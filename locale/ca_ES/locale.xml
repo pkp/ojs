@@ -201,7 +201,7 @@
 	<message key="journal.currentIssue">Últim número</message>
 	<message key="journal.journals">Revistes</message>
 	<message key="journal.path">Camí</message>
-	<message key="journal.journal">Revista</message>
+	<message key="context.context">Revista</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostra les meves revistes</message>

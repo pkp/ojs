@@ -221,6 +221,7 @@ class ArticleDAO extends DAO {
 		$article->setCitations($row['citations']);
 		$article->setDateSubmitted($this->datetimeFromDB($row['date_submitted']));
 		$article->setDateStatusModified($this->datetimeFromDB($row['date_status_modified']));
+		$article->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$article->setLastModified($this->datetimeFromDB($row['last_modified']));
 		$article->setStatus($row['status']);
 		$article->setSubmissionProgress($row['submission_progress']);

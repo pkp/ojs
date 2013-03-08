@@ -357,7 +357,7 @@
 	<message key="journal.currentIssue">Çürrèñt Îþþüè</message>
 	<message key="journal.journals">Jóürñålþ</message>
 	<message key="journal.path">Påth</message>
-	<message key="journal.journal">Jóürñål</message>
+	<message key="context.context">Jóürñål</message>
 	<message key="user.userHome">Üþèr Hómè</message>
 	<message key="user.showAllJournals">ßhów Mý Jóürñålþ</message>
 	<message key="user.login">Lóg Îñ</message>

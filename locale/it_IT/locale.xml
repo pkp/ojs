@@ -157,7 +157,7 @@
 	<message key="journal.currentIssue">Fascicolo corrente</message>
 	<message key="journal.journals">Riviste</message>
 	<message key="journal.path">Path</message>
-	<message key="journal.journal">Rivista</message>
+	<message key="context.context">Rivista</message>
 
 	<!-- User -->
 	<message key="user.showAllJournals">Mostra le mie riviste</message>

@@ -24,7 +24,7 @@
 <table class="listing">
 <tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	{if !$currentJournal}<td>{translate key="journal.journal"}</td>{/if}
+	{if !$currentJournal}<td>{translate key="context.context"}</td>{/if}
 	<td>{translate key="issue.issue"}</td>
 	<td width="{if !$currentJournal}60%{else}80%{/if}" colspan="2">{translate key="article.title"}</td>
 </tr>

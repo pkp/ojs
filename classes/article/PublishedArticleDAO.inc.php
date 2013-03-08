@@ -323,7 +323,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &getPublishedArticleById($publishedArticleId, $simple = false) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM published_articles WHERE published_article_id = ?', (int) $publishedArticleId
 		);
 		$row = $result->GetRowAssoc(false);
@@ -624,7 +624,6 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle = $this->newDataObject();
 		$publishedArticle->setPublishedArticleId($row['published_article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setAccessStatus($row['access_status']);

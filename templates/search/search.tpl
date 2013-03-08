@@ -117,7 +117,7 @@
 			{/if}
 			<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 			<tr class="heading" valign="bottom">
-				{if !$currentJournal}<td>{translate key="journal.journal"}</td>{/if}
+				{if !$currentJournal}<td>{translate key="context.context"}</td>{/if}
 				<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
 				<td colspan="2">{translate key="article.title"}</td>
 			</tr>

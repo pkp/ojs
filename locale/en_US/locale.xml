@@ -192,7 +192,7 @@
 	<message key="journal.currentIssue">Current Issue</message>
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
-	<message key="journal.journal">Journal</message>
+	<message key="context.context">Journal</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
