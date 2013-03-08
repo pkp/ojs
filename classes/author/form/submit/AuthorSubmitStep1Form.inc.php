@@ -135,12 +135,12 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 				$this->article->stampStatusModified();
 				$this->article->setSubmissionProgress($this->step + 1);
 			}
-			$articleDao->updateArticle($this->article);
+			$articleDao->updateObject($this->article);
 
 		} else {
 			// Insert new article
-			$journal =& $this->request->getJournal();
-			$user =& $this->request->getUser();
+			$journal = $this->request->getJournal();
+			$user = $this->request->getUser();
 
 			$this->article = $articleDao->newDataObject();
 			$this->article->setLocale($this->getData('locale'));
@@ -151,7 +151,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setSubmissionProgress($this->step + 1);
 			$this->article->setLanguage(String::substr($this->article->getLocale(), 0, 2));
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
-			$articleDao->insertArticle($this->article);
+			$articleDao->insertObject($this->article);
 			$this->articleId = $this->article->getId();
 
 			// Set user to initial author

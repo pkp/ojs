@@ -253,7 +253,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setLastModified($sectionEditorSubmission->getLastModified());
 			$article->setCommentsStatus($sectionEditorSubmission->getCommentsStatus());
 
-			$this->articleDao->updateArticle($article);
+			$this->articleDao->updateObject($article);
 		}
 
 	}

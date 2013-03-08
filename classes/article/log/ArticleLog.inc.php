@@ -77,8 +77,8 @@ class ArticleLog {
 	 * @param $request object
 	 */
 	function logEmail($articleId, &$entry, $request = null) {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$journalId = $articleDao->getArticleJournalId($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$journalId = $articleDao->getJournalId($articleId);
 
 		if (!$journalId) {
 			// Invalid article

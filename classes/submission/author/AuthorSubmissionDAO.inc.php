@@ -153,7 +153,7 @@ class AuthorSubmissionDAO extends DAO {
 			$article->setReviewFileId($authorSubmission->getReviewFileId());
 			$article->setEditorFileId($authorSubmission->getEditorFileId());
 
-			$this->articleDao->updateArticle($article);
+			$this->articleDao->updateObject($article);
 		}
 
 	}

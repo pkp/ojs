@@ -417,8 +417,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$submission->setWidth('', $formLocale);
 		$submission->setHeight('', $formLocale);
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$articleDao->updateArticle($submission);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$articleDao->updateObject($submission);
 
 		$request->redirect(null, null, 'viewMetadata', $articleId);
 	}

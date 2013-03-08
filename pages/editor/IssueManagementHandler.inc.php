@@ -104,7 +104,7 @@ class IssueManagementHandler extends EditorHandler {
 				if ($isBackIssue) {
 					$articleTombstoneManager->insertArticleTombstone($article, $journal);
 				}
-				$articleDao->changeArticleStatus($article->getId(),STATUS_QUEUED);
+				$articleDao->changeStatus($article->getId(), STATUS_QUEUED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPublishedArticleId());
 			}
 		}
@@ -676,7 +676,7 @@ class IssueManagementHandler extends EditorHandler {
 				$publishedArticleDao->deletePublishedArticleById($pubId);
 				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
 			}
-			$articleDao->updateArticle($article);
+			$articleDao->updateObject($article);
 		}
 
 		$request->redirect(null, null, 'issueToc', $issueId);
@@ -879,7 +879,7 @@ class IssueManagementHandler extends EditorHandler {
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
-					$articleDao->updateArticle($article);
+					$articleDao->updateObject($article);
 					if (!$articleSearchIndex) {
 						import('classes.search.ArticleSearchIndex');
 						$articleSearchIndex = new ArticleSearchIndex();

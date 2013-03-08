@@ -791,7 +791,7 @@ class NativeImportDom {
 		/* --- Set IDs --- */
 		if (!NativeImportDom::handlePubIds($articleNode, $article, $journal, $issue, $article, $errors)) $hasErrors = true;
 
-		$articleDao->insertArticle($article);
+		$articleDao->insertObject($article);
 		$dependentItems[] = array('article', $article);
 
 		/* --- Handle authors --- */

@@ -78,7 +78,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 
 		if (isset($submissionFileId)) {
 			$this->article->setSubmissionFileId($submissionFileId);
-			return $articleDao->updateArticle($this->article);
+			return $articleDao->updateObject($this->article);
 
 		} else {
 			return false;
@@ -91,13 +91,13 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 */
 	function execute() {
 		// Update article
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $this->article;
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $this->article;
 
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
-			$articleDao->updateArticle($article);
+			$articleDao->updateObject($article);
 		}
 
 		return $this->articleId;

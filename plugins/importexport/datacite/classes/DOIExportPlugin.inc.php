@@ -825,7 +825,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Identify the dao name and update method for the given object.
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateObject'),
-			'Article' => array('ArticleDAO', 'updateArticle'),
+			'Article' => array('ArticleDAO', 'updateObject'),
 			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley'),
 			'SuppFile' => array('SuppFileDAO', 'updateSuppFile')
 		);

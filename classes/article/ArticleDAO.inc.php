@@ -27,7 +27,7 @@ class ArticleDAO extends DAO {
 		return $article;
 	}
 
-	function &_getCache() {
+	function _getCache() {
 		if (!isset($this->cache)) {
 			$cacheManager = CacheManager::getManager();
 			$this->cache = $cacheManager->getObjectCache('articles', 0, array(&$this, '_cacheMiss'));
@@ -70,7 +70,7 @@ class ArticleDAO extends DAO {
 	 * Update the settings for this object
 	 * @param $article object
 	 */
-	function updateLocaleFields(&$article) {
+	function updateLocaleFields($article) {
 		$this->updateDataObjectSettings('article_settings', $article, array(
 			'article_id' => $article->getId()
 		));
@@ -187,7 +187,7 @@ class ArticleDAO extends DAO {
 	 * @param $row array
 	 * @return Article
 	 */
-	function &_returnArticleFromRow($row) {
+	function _returnArticleFromRow($row) {
 		$article = $this->newDataObject();
 		$this->_articleFromRow($article, $row);
 		return $article;
@@ -206,7 +206,7 @@ class ArticleDAO extends DAO {
 	 * @param $article Article output article
 	 * @param $row array input row
 	 */
-	function _articleFromRow(&$article, $row) {
+	function _articleFromRow($article, $row) {
 		$article->setId($row['article_id']);
 		$article->setLocale($row['locale']);
 		$article->setUserId($row['user_id']);
@@ -242,7 +242,7 @@ class ArticleDAO extends DAO {
 	 * Insert a new Article.
 	 * @param $article Article
 	 */
-	function insertArticle(&$article) {
+	function insertObject($article) {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
@@ -289,7 +289,7 @@ class ArticleDAO extends DAO {
 	 * Update an existing article.
 	 * @param $article Article
 	 */
-	function updateArticle(&$article) {
+	function updateObject($article) {
 		$article->stampModified();
 		$this->update(
 			sprintf('UPDATE articles
@@ -401,7 +401,7 @@ class ArticleDAO extends DAO {
 		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs,
 						$proofreadAuthorSignoffs, $proofreadProofreaderSignoffs, $proofreadLayoutSignoffs);
 		foreach ($signoffs as $signoff) {
-			if ( $signoff ) $signoffDao->deleteObject($signoff);
+			$signoffDao->deleteObject($signoff);
 		}
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
@@ -538,60 +538,13 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Get all articles for a user.
-	 * @param $userId int
-	 * @param $journalId int optional
-	 * @return array Articles
-	 */
-	function &getArticlesByUserId($userId, $journalId = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			$userId
-		);
-		if ($journalId) $params[] = $journalId;
-		$articles = array();
-
-		$result = $this->retrieve(
-			'SELECT	a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.user_id = ?' .
-			(isset($journalId)?' AND a.journal_id = ?':''),
-			$params
-		);
-
-		while (!$result->EOF) {
-			$articles[] = $this->_returnArticleFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $articles;
-	}
-
-	/**
 	 * Get the ID of the journal an article is in.
 	 * @param $articleId int
 	 * @return int
 	 */
-	function getArticleJournalId($articleId) {
+	function getJournalId($articleId) {
 		$result = $this->retrieve(
-			'SELECT journal_id FROM articles WHERE article_id = ?', $articleId
+			'SELECT journal_id FROM articles WHERE article_id = ?', (int) $articleId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
@@ -609,7 +562,7 @@ class ArticleDAO extends DAO {
 	function incompleteSubmissionExists($articleId, $userId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT submission_progress FROM articles WHERE article_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
-			array($articleId, $userId, $journalId)
+			array((int) $articleId, (int) $userId, (int) $journalId)
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
@@ -622,9 +575,10 @@ class ArticleDAO extends DAO {
 	 * @param $articleId int
 	 * @param $status int
 	 */
-	function changeArticleStatus($articleId, $status) {
+	function changeStatus($articleId, $status) {
 		$this->update(
-			'UPDATE articles SET status = ? WHERE article_id = ?', array((int) $status, (int) $articleId)
+			'UPDATE articles SET status = ? WHERE article_id = ?',
+			array((int) $status, (int) $articleId)
 		);
 
 		$this->flushCache();
@@ -662,7 +616,7 @@ class ArticleDAO extends DAO {
 			if ($isLocalized) {
 				$this->update(
 					'DELETE FROM article_settings WHERE article_id = ? AND setting_name = ? AND locale = ?',
-					array($articleId, $name, $locale)
+					array((int) $articleId, $name, $locale)
 				);
 				if (empty($value)) continue;
 			}
@@ -732,7 +686,7 @@ class ArticleDAO extends DAO {
 	 */
 	function removeArticlesFromSection($sectionId) {
 		$this->update(
-			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
+			'UPDATE articles SET section_id = null WHERE section_id = ?', (int) $sectionId
 		);
 
 		$this->flushCache();

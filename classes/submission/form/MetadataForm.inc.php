@@ -448,7 +448,7 @@ class MetadataForm extends Form {
 		parent::execute();
 
 		// Save the article
-		$articleDao->updateArticle($article);
+		$articleDao->updateObject($article);
 
 		// get the supported locale keys
 		$locales = array_keys($this->supportedLocales);

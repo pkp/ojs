@@ -39,15 +39,15 @@ class AuthorSubmitStep4Form extends AuthorSubmitForm {
 	 * Save changes to article.
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		// Update article
-		$article =& $this->article;
+		$article = $this->article;
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 		}
-		$articleDao->updateArticle($article);
+		$articleDao->updateObject($article);
 
 		return $this->articleId;
 	}

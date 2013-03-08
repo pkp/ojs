@@ -139,11 +139,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$article->setDateSubmitted(Core::getCurrentDate());
 		$article->setSubmissionProgress(0);
 		$article->stampStatusModified();
-		$articleDao->updateArticle($article);
+		$articleDao->updateObject($article);
 
 		// Designate this as the review version by default.
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getId());
 		AuthorAction::designateReviewVersion($authorSubmission, true);
 		unset($authorSubmission);
 

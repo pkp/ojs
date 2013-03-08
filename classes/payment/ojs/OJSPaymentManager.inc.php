@@ -345,7 +345,7 @@ class OJSPaymentManager extends PaymentManager {
 				$articleDao = DAORegistry::getDAO('ArticleDAO');
 				$article = $articleDao->getById($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
 				$article->setFastTracked(true);
-				$articleDao->updateArticle($article);
+				$articleDao->updateObject($article);
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_GIFT:

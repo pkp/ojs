@@ -531,12 +531,12 @@ class BooksForReviewEditorHandler extends Handler {
 			$articleId = (int) $request->getUserVar('articleId');
 
 			// Ensure article is for this journal and update book for review
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			if ($articleDao->getArticleJournalId($articleId) == $journalId) {
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			if ($articleDao->getJournalId($articleId) == $journalId) {
 				$book->setArticleId($articleId);
 				$book->setStatus(BFR_STATUS_SUBMITTED);
 				$bfrDao->updateObject($book);
-				$user =& $request->getUser();
+				$user = $request->getUser();
 
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();

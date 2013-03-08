@@ -230,7 +230,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		parent::execute();
 
 		// Save the article
-		$articleDao->updateArticle($article);
+		$articleDao->updateObject($article);
 
 		// Update references list if it changed.
 		$citationDao =& DAORegistry::getDAO('CitationDAO');

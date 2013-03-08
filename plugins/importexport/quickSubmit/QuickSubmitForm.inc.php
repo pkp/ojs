@@ -210,7 +210,7 @@ class QuickSubmitForm extends Form {
 		$article->setCommentsStatus(0);
 
 		// Insert the article to get it's ID
-		$articleDao->insertArticle($article);
+		$articleDao->insertObject($article);
 		$articleId = $article->getId();
 
 		// Add authors
@@ -351,7 +351,7 @@ class QuickSubmitForm extends Form {
 		import('classes.author.form.submit.AuthorSubmitForm');
 		AuthorSubmitForm::assignEditors($article);
 
-		$articleDao->updateArticle($article);
+		$articleDao->updateObject($article);
 
 		// Add to end of editing queue
 		import('classes.submission.editor.EditorAction');
