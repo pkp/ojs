@@ -46,8 +46,8 @@ class ArticleFileManager extends FileManager {
 	 */
 	function ArticleFileManager($articleId) {
 		$this->articleId = $articleId;
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->article =& $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->article = $articleDao->getById($articleId);
 		$journalId = $this->article->getJournalId();
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $journalId .  '/articles/' . $articleId . '/';
 

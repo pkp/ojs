@@ -89,8 +89,8 @@ class ArticleReportDAO extends DAO {
 			$decisionsReturner[] = new DBRowIterator($result);
 		}
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$articles =& $articleDao->getArticlesByJournalId($journalId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$articles = $articleDao->getByJournalId($journalId);
 		$authorsReturner = array();
 		$index = 1;
 		while ($article = $articles->next()) {

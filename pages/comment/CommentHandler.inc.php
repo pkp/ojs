@@ -127,8 +127,8 @@ class CommentHandler extends Handler {
 				// Send a notification to associated users
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				$articleDao =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDao->getArticle($articleId);
+				$articleDao = DAORegistry::getDAO('ArticleDAO');
+				$article = $articleDao->getById($articleId);
 				$notificationUsers = $article->getAssociatedUserIds();
 				foreach ($notificationUsers as $userRole) {
 					$notificationManager->createNotification(

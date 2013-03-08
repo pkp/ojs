@@ -657,8 +657,8 @@ class MetsExportDom {
 	 */
 	function getPublicFilePath(&$file, $pathComponent) {
 		$articleId = $file->getArticleId();
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId);
 		$journalId = $article->getJournalId();
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
 		'/articles/' . $file->getArticleId() . '/' . $pathComponent . '/' . $file->getFileName();
@@ -669,9 +669,9 @@ class MetsExportDom {
 	 */
 	function getPublicFileUrl(&$file) {
 		import('classes.config.Config');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($file->getArticleId());
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($file->getArticleId());
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($article->getJournalId());
 		return Request::url($journal->getPath(), 'article', 'download', array($file->getArticleId(), $file->getBestGalleyId($journal)));
 	}
@@ -681,9 +681,9 @@ class MetsExportDom {
 	 */
 	function getPublicSuppFileUrl(&$file) {
 		import('classes.config.Config');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($file->getArticleId());
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($file->getArticleId());
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($article->getJournalId());
 		return Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($file->getArticleId(), $file->getId()));
 	}

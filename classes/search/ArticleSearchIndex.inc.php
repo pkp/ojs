@@ -338,7 +338,7 @@ class ArticleSearchIndex {
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$articles = $articleDao->getArticlesByJournalId($journal->getId());
+				$articles = $articleDao->getByJournalId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
 						$this->articleMetadataChanged($article);

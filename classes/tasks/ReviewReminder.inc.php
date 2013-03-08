@@ -97,7 +97,7 @@ class ReviewReminder extends ScheduledTask {
 			// Fetch the Article and the Journal if necessary.
 			if ($article == null || $article->getId() != $reviewAssignment->getSubmissionId()) {
 				unset($article);
-				$article =& $articleDao->getArticle($reviewAssignment->getSubmissionId());
+				$article = $articleDao->getById($reviewAssignment->getSubmissionId());
 				if ($journal == null || $journal->getId() != $article->getJournalId()) {
 					unset($journal);
 					$journal = $journalDao->getById($article->getJournalId());

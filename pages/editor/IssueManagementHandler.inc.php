@@ -822,8 +822,8 @@ class IssueManagementHandler extends EditorHandler {
 		if (!$publishedArticle) $request->redirect(null, null, 'index');
 
 		$articleId = $publishedArticle->getId();
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($articleId, $journal->getId());
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId, $journal->getId());
 
 		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
 
@@ -875,7 +875,7 @@ class IssueManagementHandler extends EditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
 			foreach ($publishedArticles as $publishedArticle) {
-				$article =& $articleDao->getArticle($publishedArticle->getId());
+				$article = $articleDao->getById($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
@@ -889,7 +889,6 @@ class IssueManagementHandler extends EditorHandler {
 				// delete article tombstone
 				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
 				$tombstoneDao->deleteByDataObjectId($article->getId());
-				unset($article);
 			}
 		}
 

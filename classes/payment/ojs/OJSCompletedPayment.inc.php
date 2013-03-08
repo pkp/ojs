@@ -328,8 +328,8 @@ class OJSCompletedPayment extends Payment {
 			case PAYMENT_TYPE_PUBLICATION:
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				// all the article-related payments should output the article title
-				$articleDao =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDao->getArticle($this->assocId, $this->journalId);
+				$articleDao = DAORegistry::getDAO('ArticleDAO');
+				$article = $articleDao->getById($this->assocId, $this->journalId);
 				if (!$article) return __('manager.payment.notFound');
 				return $article->getLocalizedTitle();
 			case PAYMENT_TYPE_PURCHASE_ISSUE:

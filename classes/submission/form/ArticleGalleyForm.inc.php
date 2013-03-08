@@ -249,8 +249,8 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($this->articleId, $journal->getId());
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById($this->articleId, $journal->getId());
 			$galley->setLocale($article->getLocale());
 
 			if ($enablePublicGalleyId) {

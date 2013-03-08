@@ -186,7 +186,7 @@ class SolrWebService extends XmlWebService {
 
 		// Retrieve all articles of the journal.
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$articles = $articleDao->getArticlesByJournalId($journalId);
+		$articles = $articleDao->getByJournalId($journalId);
 
 		// Run through the articles and mark them "changed".
 		while($article = $articles->next()) {

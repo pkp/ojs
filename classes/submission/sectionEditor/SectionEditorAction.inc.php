@@ -2355,8 +2355,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateObject($reviewAssignment);
 
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($reviewAssignment->getSubmissionId());
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById($reviewAssignment->getSubmissionId());
 
 			// Add log
 			import('classes.article.log.ArticleLog');

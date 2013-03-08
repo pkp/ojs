@@ -204,8 +204,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			// Send a notification to associated users
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($articleId);
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$notificationManager->createNotification(
@@ -413,8 +413,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			// Send a notification to associated users
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($articleId);
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById($articleId);
 			$notificationUsers = $article->getAssociatedUserIds(true, false);
 			foreach ($notificationUsers as $userRole) {
 				$notificationManager->createNotification(

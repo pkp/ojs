@@ -336,8 +336,8 @@ class ReviewerAction extends Action {
 				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 				$articleId = $reviewAssignment->getSubmissionId();
-				$articleDao =& DAORegistry::getDAO('ArticleDAO');
-				$article =& $articleDao->getArticle($articleId);
+				$articleDao = DAORegistry::getDAO('ArticleDAO');
+				$article = $articleDao->getById($articleId);
 				$notificationUsers = $article->getAssociatedUserIds(false, false);
 				foreach ($notificationUsers as $userRole) {
 					$notificationManager->createNotification(

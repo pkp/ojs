@@ -194,19 +194,19 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
-				$dao =& $pubIdPlugin->getDAO($pubObjectType);
+				$dao = $pubIdPlugin->getDAO($pubObjectType);
 				switch ($pubObjectType) {
 					case 'Issue':
-						$pubObject =& $dao->getIssueById($pubObjectId, $journal->getId());
+						$pubObject = $dao->getIssueById($pubObjectId, $journal->getId());
 						break;
 					case 'Article':
-						$pubObject =& $dao->getArticle($pubObjectId, $journal->getId());
+						$pubObject = $dao->getById($pubObjectId, $journal->getId());
 						break;
 					case 'Galley':
-						$pubObject =& $dao->getGalley($pubObjectId);
+						$pubObject = $dao->getGalley($pubObjectId);
 						break;
 					case 'SuppFile':
-						$pubObject =& $dao->getSuppFile($pubObjectId);
+						$pubObject = $dao->getSuppFile($pubObjectId);
 						break;
 					default:
 						$errors[] = array('plugins.importexport.pubIds.import.error.unknownObjectType', array('pubObjectType' => $pubObjectType, 'pubId' => $pubIdValue));

@@ -410,8 +410,8 @@ class ArticleHandler extends Handler {
 		if (isset($publishedArticle)) {
 			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 		} else {
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle((int) $articleId, $journalId, true);
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById((int) $articleId, $journalId, true);
 		}
 
 		// If this is an editorial user who can view unpublished/unscheduled

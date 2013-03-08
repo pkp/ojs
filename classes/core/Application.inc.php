@@ -130,6 +130,7 @@ class Application extends PKPApplication {
 			'SectionEditorSubmissionDAO' => 'classes.submission.sectionEditor.SectionEditorSubmissionDAO',
 			'SignoffDAO' => 'classes.signoff.SignoffDAO',
 			'SocialMediaDAO' => 'classes.journal.SocialMediaDAO',
+			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
 			'SuppFileDAO' => 'classes.article.SuppFileDAO',
@@ -186,6 +187,13 @@ class Application extends PKPApplication {
 	 */
 	static function getContextDAO() {
 		return DAORegistry::getDAO('JournalDAO');
+	}
+
+	/**
+	 * Get the submission DAO.
+	 */
+	static function getSubmissionDAO() {
+		return DAORegistry::getDAO('ArticleDAO');
 	}
 }
 

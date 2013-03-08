@@ -7,9 +7,6 @@
  * Dashboard submissions tab.
  *}
 
-FIXME The associated grids have not yet been implemented. (templates/dashboard/submissions.tpl)
-{*
-
 <!-- Author and editor submissions grid -->
 {if array_intersect(array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_GUEST_EDITOR), $userRoles)}
 	{url|assign:mySubmissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.mySubmissions.MySubmissionsListGridHandler" op="fetchGrid"}
@@ -27,5 +24,3 @@ FIXME The associated grids have not yet been implemented. (templates/dashboard/s
 	{url|assign:assignedSubmissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.assignedSubmissions.AssignedSubmissionsListGridHandler" op="fetchGrid"}
 	{load_url_in_div id="assignedSubmissionsListGridContainer" url="$assignedSubmissionsListGridUrl"}
 {/if}
-
-*}

@@ -125,7 +125,7 @@ class ReferralPlugin extends GenericPlugin {
 				$articleDao = DAORegistry::getDAO('ArticleDAO');
 				$articleTitles = $referralsArray = array();
 				while ($referral = $referrals->next()) {
-					$article = $articleDao->getArticle($referral->getArticleId());
+					$article = $articleDao->getById($referral->getArticleId());
 					if (!$article) continue;
 					$articleTitles[$article->getId()] = $article->getLocalizedTitle();
 					$referralsArray[] = $referral;

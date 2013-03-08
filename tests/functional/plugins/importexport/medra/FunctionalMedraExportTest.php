@@ -166,7 +166,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		$hookName = 'articledao::getAdditionalFieldNames';
 		HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$testObject = $articleDao->getArticle(1);
+		$testObject = $articleDao->getById(1);
 		$testObject->setData('medra::' . DOI_EXPORT_REGDOI, '1749/t.v1i1.1');
 		$articleDao->updateArticle($testObject);
 

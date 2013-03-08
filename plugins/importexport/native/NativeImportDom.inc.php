@@ -1338,7 +1338,7 @@ class NativeImportDom {
 					$issueDao->deleteIssue($object);
 					break;
 				case 'article':
-					$articleDao->deleteArticle($object);
+					$articleDao->deleteObject($object);
 					break;
 				default:
 					fatalError ('cleanupFailure: Unimplemented type');

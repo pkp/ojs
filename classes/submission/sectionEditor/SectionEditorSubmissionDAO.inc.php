@@ -241,7 +241,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Update article
 		if ($sectionEditorSubmission->getId()) {
 
-			$article =& $this->articleDao->getArticle($sectionEditorSubmission->getId());
+			$article = $this->articleDao->getById($sectionEditorSubmission->getId());
 
 			// Only update fields that can actually be edited.
 			$article->setSectionId($sectionEditorSubmission->getSectionId());

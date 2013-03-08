@@ -29,8 +29,8 @@ class ArticleFile extends SubmissionFile {
 	 * @return string
 	 */
 	function getFilePath() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($this->getArticleId());
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($this->getArticleId());
 		$journalId = $article->getJournalId();
 
 		import('classes.file.ArticleFileManager');
@@ -83,8 +83,8 @@ class ArticleFile extends SubmissionFile {
 		}
 
 		// Retrieve the article.
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article =& $articleDao->getArticle($this->getArticleId(), null, true);
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$article = $articleDao->getById($this->getArticleId(), null, true);
 		if (!$article) return null;
 
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $article->getJournalId());

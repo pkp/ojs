@@ -85,9 +85,9 @@ class EmailHandler extends UserHandler {
 			// Determine whether the current user has access
 			// to the article in some form, and if so, use an
 			// ArticleMailTemplate.
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
 
-			$article =& $articleDao->getArticle($articleId);
+			$article = $articleDao->getById($articleId);
 			$hasAccess = false;
 
 			// First, conditions where access is OK.
@@ -121,7 +121,7 @@ class EmailHandler extends UserHandler {
 
 			if ($hasAccess) {
 				import('classes.mail.ArticleMailTemplate');
-				$email = new ArticleMailTemplate($articleDao->getArticle($articleId, $template));
+				$email = new ArticleMailTemplate($articleDao->getById($articleId, $template));
 			}
 		}
 

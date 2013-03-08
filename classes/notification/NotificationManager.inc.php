@@ -126,7 +126,7 @@ class NotificationManager extends PKPNotificationManager {
 		$roles = array();
 
 		// Check if user is editor
-		$article = $articleDao->getArticle($articleId);
+		$article = $articleDao->getById($articleId);
 		if($article && Validation::isEditor($article->getJournalId())) {
 			$roles[] = ROLE_ID_EDITOR;
 		}
@@ -247,8 +247,8 @@ class NotificationManager extends PKPNotificationManager {
 	function _getArticleTitle(&$notification) {
 		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
 		assert(is_numeric($notification->getAssocId()));
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article =& $articleDao->getArticle($notification->getAssocId());
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$article = $articleDao->getById($notification->getAssocId());
 		if (!$article) return null;
 		return $article->getLocalizedTitle();
 	}

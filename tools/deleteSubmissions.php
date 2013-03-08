@@ -50,7 +50,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 
 		foreach($this->parameters as $articleId) {
-			$article =& $articleDao->getArticle($articleId);
+			$article = $articleDao->getById($articleId);
 
 			if(isset($article)) {
 				// remove files first, to prevent orphans
@@ -67,7 +67,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 					}
 				}
 
-				$articleDao->deleteArticleById($articleId);
+				$articleDao->deleteById($articleId);
 				continue;
 			}
 			printf("Error: Skipping $articleId. Unknown submission.\n");

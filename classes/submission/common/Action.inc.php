@@ -16,12 +16,8 @@
  * @brief Application-specific submission actions.
  */
 
-
-/* These constants correspond to editing decision "decision codes". */
-define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
-define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
-define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
-define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
+// Bring in the decision constants.
+import('classes.workflow.EditorDecisionActionsManager');
 
 /* These constants are used as search fields for the various submission lists */
 define('SUBMISSION_FIELD_AUTHOR', 1);

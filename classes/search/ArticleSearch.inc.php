@@ -336,7 +336,7 @@ class ArticleSearch {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
 				$publishedArticleCache[$articleId] =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-				$articleCache[$articleId] =& $articleDao->getArticle($articleId);
+				$articleCache[$articleId] = $articleDao->getById($articleId);
 			}
 			unset($article, $publishedArticle);
 			$article =& $articleCache[$articleId];

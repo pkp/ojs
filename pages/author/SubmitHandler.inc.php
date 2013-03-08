@@ -158,9 +158,9 @@ class SubmitHandler extends AuthorHandler {
 					// Send a notification to associated users
 					import('classes.notification.NotificationManager');
 					$notificationManager = new NotificationManager();
-					$articleDao =& DAORegistry::getDAO('ArticleDAO');
-					$article =& $articleDao->getArticle($articleId);
-					$roleDao =& DAORegistry::getDAO('RoleDAO');
+					$articleDao = DAORegistry::getDAO('ArticleDAO');
+					$article = $articleDao->getById($articleId);
+					$roleDao = DAORegistry::getDAO('RoleDAO');
 					$notificationUsers = array();
 					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 					while ($editor = $editors->next()) {
@@ -331,13 +331,13 @@ class SubmitHandler extends AuthorHandler {
 
 		// Check that article exists for this journal and user and that submission is incomplete
 		if ($articleId) {
-			$article =& $articleDao->getArticle((int) $articleId);
+			$article = $articleDao->getById((int) $articleId);
 			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
 				$request->redirect(null, null, 'submit');
 			}
 		}
 
-		$this->article =& $article;
+		$this->article = $article;
 		return true;
 	}
 }

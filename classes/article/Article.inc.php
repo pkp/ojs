@@ -134,6 +134,22 @@ class Article extends Submission {
 	}
 
 	/**
+	 * Get the context ID.
+	 * @return int
+	 */
+	function getContextId() {
+		return $this->getJournalId();
+	}
+
+	/**
+	 * Set the context ID.
+	 * @param $contextId int
+	 */
+	function setContextId($contextId) {
+		return $this->setJournalId($contextId);
+	}
+
+	/**
 	 * Get ID of article's section.
 	 * @return int
 	 */

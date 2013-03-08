@@ -195,10 +195,27 @@ class ReviewerSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array ReviewerSubmissions
 	 */
-	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+	function getReviewerSubmissionsByReviewerId($reviewerId, $journalId = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
-		$sql = 'SELECT	a.*,
+		$params = array(
+			'cleanTitle', // Article title
+			'cleanTitle',
+			$locale,
+			'title', // Section title
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev', // Section abbreviation
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			(int) $reviewerId
+		);
+		if ($journalId) $params[] = (int) $journalId;
+
+		$result = $this->retrieveRange(
+			'SELECT	a.*,
 				r.*,
 				r2.review_revision,
 				u.first_name, u.last_name,
@@ -216,42 +233,18 @@ class ReviewerSubmissionDAO extends DAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.journal_id = ? AND
-				r.reviewer_id = ? AND
-				r.date_notified IS NOT NULL';
-
-		if ($active) {
-			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL) AND a.status = ' . STATUS_QUEUED;
-		} else {
-			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1 OR a.status <> ' . STATUS_QUEUED . ')';
-		}
-
-		if ($sortBy) {
-			$sql .=  ' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection);
-		}
-
-		$result =& $this->retrieveRange(
-			$sql,
-			array(
-				'cleanTitle', // Article title
-				'cleanTitle',
-				$locale,
-				'title', // Section title
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev', // Section abbreviation
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				$journalId,
-				$reviewerId
-			),
+			WHERE	r.reviewer_id = ? AND
+				' . ($journalId?'a.journal_id = ? AND':'') . '
+				r.date_notified IS NOT NULL
+				' . ($active ?
+					' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL) AND a.status = ' . STATUS_QUEUED :
+					' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1 OR a.status <> ' . STATUS_QUEUED . ')') . '
+				' . ($sortBy?' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection):''),
+			$params,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnReviewerSubmissionFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnReviewerSubmissionFromRow');
 	}
 
 	/**

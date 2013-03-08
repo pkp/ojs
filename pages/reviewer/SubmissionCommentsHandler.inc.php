@@ -75,8 +75,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$this->validate($request, $reviewId);
 		$this->setupTemplate($request, true);
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId);
 
 		ReviewerAction::editComment($article, $this->comment, $reviewId);
 	}
@@ -98,8 +98,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = $request->getUserVar('saveAndEmail') != null ? true : false;
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId);
 
 		ReviewerAction::saveComment($article, $this->comment, $emailComment, $request);
 

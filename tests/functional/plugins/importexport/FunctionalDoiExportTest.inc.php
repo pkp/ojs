@@ -427,7 +427,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$issue->setData('doiSuffix', '');
 		$issueDao->updateIssue($issue);
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getArticle(1, 1);
+		$article = $articleDao->getById(1, 1);
 		$article->setData('doiSuffix', '');
 		$articleDao->updateArticle($article); // Do not use PublishedArticleDAO::updatePublishedArticle() for this, otherwise the ADODB cache flush there may cause a permission error.
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */

@@ -338,8 +338,8 @@ class EditorHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$articleId = (int) $request->getUserVar('articleId');
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId);
 
 		if ($article && $article->getJournalId() === $journal->getId()) {
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
@@ -374,8 +374,8 @@ class EditorHandler extends SectionEditorHandler {
 		$editAssignment =& $editAssignmentDao->getEditAssignment($editId);
 
 		if ($editAssignment) {
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($editAssignment->getArticleId());
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getById($editAssignment->getArticleId());
 
 			if ($article && $article->getJournalId() === $journal->getId()) {
 				$editAssignmentDao->deleteEditAssignmentById($editAssignment->getEditId());
@@ -487,8 +487,8 @@ class EditorHandler extends SectionEditorHandler {
 
 		$journal =& $request->getJournal();
 
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($articleId);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getById($articleId);
 
 		$status = $article->getStatus();
 
@@ -499,7 +499,7 @@ class EditorHandler extends SectionEditorHandler {
 			$articleFileManager->deleteArticleTree();
 
 			// Delete article database entries
-			$articleDao->deleteArticleById($articleId);
+			$articleDao->deleteById($articleId);
 		}
 
 		$request->redirect(null, null, 'submissions', 'submissionsArchives');

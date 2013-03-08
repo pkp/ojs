@@ -433,7 +433,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			// replace it with the modified date in the sample data
 			// so that our tests do not bail.
 			$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-			$article = $articleDao->getArticle(1);
+			$article = $articleDao->getById(1);
 			$modifiedDate = date('Y-m-d', strtotime($article->getLastModified()));
 			$xml = str_replace('<date dateType="Updated">' . $modifiedDate, '<date dateType="Updated">2011-12-09', $xml);
 		}
