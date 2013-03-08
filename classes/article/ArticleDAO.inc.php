@@ -104,16 +104,17 @@ class ArticleDAO extends DAO {
 			$locale,
 			$articleId
 		);
-		$sql = 'SELECT	a.*,
+		$sql = 'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	article_id = ?';
+			WHERE	a.article_id = ?';
 		if ($journalId !== null) {
 			$sql .= ' AND a.journal_id = ?';
 			$params[] = $journalId;
@@ -155,10 +156,11 @@ class ArticleDAO extends DAO {
 			$settingName
 		);
 
-		$sql = 'SELECT a.*,
+		$sql = 'SELECT a.*, pm.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -474,10 +476,11 @@ class ArticleDAO extends DAO {
 		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
-			'SELECT	a.*,
+			'SELECT	a.*, pa.published_articles,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -500,10 +503,11 @@ class ArticleDAO extends DAO {
 		$locale = AppLocale::getLocale();
 
 		$result = $this->retrieve(
-			'SELECT	a.*,
+			'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
