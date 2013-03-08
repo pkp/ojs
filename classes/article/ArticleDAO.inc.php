@@ -739,6 +739,49 @@ class ArticleDAO extends DAO {
 		$cache = $publishedArticleDao->_getPublishedArticleCache();
 		$cache->flush();
 	}
+
+	/**
+	 * Get all unassigned submissions for a context or all contexts
+	 * @param $pressId int optional the ID of the press to query.
+	 * @param $subEditorId int optional the ID of the sub editor
+	 * 	whose section will be included in the results (excluding others).
+	 * @return DAOResultFactory containing matching Submissions
+	 */
+	function getBySubEditorId($journalId = null, $subEditorId = null) {
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
+
+		$params = array(
+			'title', $primaryLocale, // Series title
+			'title', $locale, // Series title
+			'abbrev', $primaryLocale, // Series abbreviation
+			'abbrev', $locale, // Series abbreviation
+			(int) ROLE_ID_MANAGER
+		);
+		if ($subEditorId) $params[] = (int) $subEditorId;
+		if ($pressId) $params[] = (int) $pressId;
+
+		$result = $this->retrieve(
+			'SELECT	a.*, pa.date_published
+			FROM	articles a
+				LEFT JOIN published_articles pa ON a.article_id = pa.article_id
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN stage_assignments sa ON (a.article_id = sa.submission_id)
+				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
+				' . ($subEditorId?' JOIN section_editors se ON (se.press_id = a.journal_id AND se.user_id = ? AND se.section_id = a.section_id)':'') . '
+			WHERE	a.date_submitted IS NOT NULL
+				' . ($pressId?' AND a.journal_id = ?':'') . '
+			GROUP BY a.article_id',
+			$params
+		);
+
+		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+	}
+
 }
 
 ?>
