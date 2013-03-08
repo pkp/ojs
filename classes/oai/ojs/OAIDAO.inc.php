@@ -76,7 +76,7 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function &getIssue($issueId) {
 		if (!isset($this->issueCache[$issueId])) {
-			$this->issueCache[$issueId] =& $this->issueDao->getIssueById($issueId);
+			$this->issueCache[$issueId] = $this->issueDao->getById($issueId);
 		}
 		return $this->issueCache[$issueId];
 	}

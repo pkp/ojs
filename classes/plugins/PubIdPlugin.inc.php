@@ -285,8 +285,8 @@ class PubIdPlugin extends Plugin {
 		foreach($typesToCheck as $pubObjectType) {
 			switch($pubObjectType) {
 				case 'Issue':
-					$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-					$objectsToCheck =& $issueDao->getIssues($journalId);
+					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+					$objectsToCheck = $issueDao->getIssues($journalId);
 					break;
 
 				case 'PublishedArticle':

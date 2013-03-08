@@ -379,16 +379,16 @@ class QuickSubmitForm extends Form {
 	 * Schedule an article for publication in a given issue
 	 */
 	function scheduleForPublication($articleId, $issueId) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
-		$request =& $this->request;
-		$journal =& $request->getJournal();
-		$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+		$request = $this->request;
+		$journal = $request->getJournal();
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		$issue = $issueDao->getById($issueId, $journal->getId());
 
 		if ($issue) {
 			// Schedule against an issue.

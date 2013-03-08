@@ -100,9 +100,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
-			$templateMgr->assign_by_ref('issue', $issue);
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			$templateMgr->assign('issue', $issue);
 		}
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');

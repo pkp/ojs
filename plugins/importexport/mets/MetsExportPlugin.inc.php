@@ -55,15 +55,15 @@ class METSExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId);
+					$issue = $issueDao->getById($issueId);
 					if (!$issue) $request->redirect();
-					$issues[] =& $issue;
+					$issues[] = $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId);
+				$issue = $issueDao->getById($issueId);
 				if (!$issue) $request->redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
@@ -71,15 +71,15 @@ class METSExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
-				$siteDao =& DAORegistry::getDAO('SiteDAO');
+				$siteDao = DAORegistry::getDAO('SiteDAO');
 				$site = $siteDao->getSite();
 				$organization = $site->getLocalizedTitle();
 
-				$templateMgr->assign_by_ref('issues', $issues);
-				$templateMgr->assign_by_ref('organization', $organization);
+				$templateMgr->assign('issues', $issues);
+				$templateMgr->assign('organization', $organization);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			default:

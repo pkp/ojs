@@ -48,12 +48,12 @@ class IssueHandler extends Handler {
 
 		$showToc = isset($args[0]) ? $args[0] : '';
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getId(), true);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getCurrent($journal->getId(), true);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($issue != null) {
 			$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
@@ -276,11 +276,11 @@ class IssueHandler extends Handler {
 		$galley = null;
 
 		// Get the issue
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if ($journal->getSetting('enablePublicIssueId')) {
-			$issue =& $issueDao->getIssueByBestIssueId($issueId, $journalId);
+			$issue = $issueDao->getByBestId($issueId, $journalId);
 		} else {
-			$issue =& $issueDao->getIssueById((int) $issueId, null, true);
+			$issue = $issueDao->getById((int) $issueId, null, true);
 		}
 
 		// Invalid issue id, redirect to current issue

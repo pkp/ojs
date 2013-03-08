@@ -71,7 +71,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('allIssues', $issueMap);
 		$templateMgr->assign('rangeInfo', $rangeInfo);
 
-		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
+		$currentIssue = $issueDao->getCurrent($journal->getId());
 		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 
@@ -116,7 +116,7 @@ class IssueManagementHandler extends EditorHandler {
 			if (!$issues->eof()) {
 				$issue = $issues->next();
 				$issue->setCurrent(1);
-				$issueDao->updateIssue($issue);
+				$issueDao->updateObject($issue);
 			}
 		}
 
@@ -138,7 +138,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('classes.issue.form.IssueForm');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
@@ -272,8 +272,8 @@ class IssueManagementHandler extends EditorHandler {
 		$issue->setWidth('', $formLocale);
 		$issue->setHeight('', $formLocale);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->updateIssue($issue);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateObject($issue);
 
 		$request->redirect(null, null, 'issueData', $issueId);
 	}
@@ -295,8 +295,8 @@ class IssueManagementHandler extends EditorHandler {
 		$issue->setStyleFileName('');
 		$issue->setOriginalStyleFileName('');
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->updateIssue($issue);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateObject($issue);
 
 		$request->redirect(null, null, 'issueData', $issueId);
 	}
@@ -626,8 +626,8 @@ class IssueManagementHandler extends EditorHandler {
 		// insert article tombstone, if an article is removed from a published issue
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
 		foreach($articles as $article) {
 			$articleId = $article->getId();
 			$pubId = $article->getPublishedArticleId();
@@ -688,17 +688,17 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $request PKPRequest
 	 */
 	function setCurrentIssue($args, $request) {
-		$issueId = $request->getUserVar('issueId');
-		$journal =& $request->getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueId = (int) $request->getUserVar('issueId');
+		$journal = $request->getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if ($issueId) {
 			$this->validate($request, $issueId);
-			$issue =& $this->issue;
+			$issue = $this->issue;
 			$issue->setCurrent(1);
-			$issueDao->updateCurrentIssue($journal->getId(), $issue);
+			$issueDao->updateCurrent($journal->getId(), $issue);
 		} else {
 			$this->validate($request);
-			$issueDao->updateCurrentIssue($journal->getId());
+			$issueDao->updateCurrent($journal->getId());
 		}
 		$request->redirect(null, null, 'backIssues');
 	}
@@ -825,7 +825,7 @@ class IssueManagementHandler extends EditorHandler {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getById($articleId, $journal->getId());
 
-		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
+		$issue = $issueDao->getById($publishedArticle->getIssueId());
 
 		if (!$article || !$issue || $publishedArticle->getIssueId() != $issue->getId() || $issue->getJournalId() != $journal->getId()) $request->redirect(null, null, 'index');
 
@@ -915,8 +915,8 @@ class IssueManagementHandler extends EditorHandler {
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
 		}
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->updateCurrentIssue($journalId,$issue);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateCurrent($journalId,$issue);
 
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
@@ -961,8 +961,8 @@ class IssueManagementHandler extends EditorHandler {
 		$issue->setPublished(0);
 		$issue->setDatePublished(null);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->updateIssue($issue);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateObject($issue);
 
 		// insert article tombstones for all articles
 		import('classes.article.ArticleTombstoneManager');
@@ -1036,7 +1036,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 
 			if ($request->getUserVar('includeToc')=='1' && isset($issue)) {
-				$issue = $issueDao->getIssueById($request->getUserVar('issue'));
+				$issue = $issueDao->getById($request->getUserVar('issue'));
 
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
@@ -1050,7 +1050,7 @@ class IssueManagementHandler extends EditorHandler {
 
 				// Stamp the "users notified" date.
 				$issue->setDateNotified(Core::getCurrentDate());
-				$issueDao->updateIssue($issue);
+				$issueDao->updateObject($issue);
 			}
 
 			$callback = array(&$email, 'send');
@@ -1072,7 +1072,7 @@ class IssueManagementHandler extends EditorHandler {
 				));
 			}
 
-			$issuesIterator =& $issueDao->getIssues($journal->getId());
+			$issuesIterator = $issueDao->getIssues($journal->getId());
 
 			$allUsersCount = $roleDao->getJournalUsersCount($journal->getId());
 
@@ -1112,8 +1112,8 @@ class IssueManagementHandler extends EditorHandler {
 		if (!isset($journal)) Validation::redirectLogin();
 
 		if (!empty($issueId)) {
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getIssueById($issueId, $journal->getId());
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($issueId, $journal->getId());
 
 			if (!$issue) {
 				$request->redirect(null, null, 'createIssue');

@@ -92,8 +92,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId());
 			$templateMgr->assign_by_ref('issue', $issue);
 			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
 		}
@@ -2516,12 +2516,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
 
 		if ($publishedArticle) {
 			if (!$issue || !$issue->getPublished()) {
-				$fromIssue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $journal->getId());
+				$fromIssue = $issueDao->getById($publishedArticle->getIssueId(), $journal->getId());
 				if ($fromIssue->getPublished()) {
 					// Insert article tombstone
 					import('classes.article.ArticleTombstoneManager');

@@ -197,8 +197,8 @@ class CommentHandler extends Handler {
 		}
 
 		// Subscription Access
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueByArticleId($articleId);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueByArticleId($articleId);
 
 		if (isset($issue) && isset($article)) {
 			import('classes.issue.IssueAction');

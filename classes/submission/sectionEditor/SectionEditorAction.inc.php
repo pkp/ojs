@@ -1417,8 +1417,8 @@ class SectionEditorAction extends Action {
 		if ($sectionEditorSubmission->getStatus() == STATUS_PUBLISHED) {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($sectionEditorSubmission->getId());
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
 			if ($issue->getPublished()) {
 				// Insert article tombstone
 				import('classes.article.ArticleTombstoneManager');
@@ -1453,8 +1453,8 @@ class SectionEditorAction extends Action {
 		$articleSearchIndex = null;
 		if ($publishedArticle) {
 			$sectionEditorSubmission->setStatus(STATUS_PUBLISHED);
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
 			if ($issue->getPublished()) {
 				// delete article tombstone
 				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');

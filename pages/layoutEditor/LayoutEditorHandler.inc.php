@@ -165,7 +165,7 @@ class LayoutEditorHandler extends Handler {
 		}
 		$templateMgr->assign('allIssues', $issueMap);
 
-		$currentIssue =& $issueDao->getCurrentIssue($journal->getId());
+		$currentIssue = $issueDao->getCurrent($journal->getId());
 		$currentIssueId = $currentIssue?$currentIssue->getId():null;
 		$templateMgr->assign('currentIssueId', $currentIssueId);
 

@@ -80,11 +80,11 @@ class ArticleHTMLGalley extends ArticleGalley {
 		);
 
 		// Perform variable replacement for journal, issue, site info
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueByArticleId($this->getArticleId());
 
-		$journal =& Request::getJournal();
-		$site =& Request::getSite();
+		$journal = Request::getJournal();
+		$site = Request::getSite();
 
 		$paramArray = array(
 			'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),

@@ -30,7 +30,7 @@ class DOAJExportDom {
 
 		$pubArticles = $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
 		while ($pubArticle = $pubArticles->next()) {
-			$issue = $issueDao->getIssueById($pubArticle->getIssueId());
+			$issue = $issueDao->getById($pubArticle->getIssueId());
 			if(!$issue) continue;
 			$section = $sectionDao->getById($pubArticle->getSectionId());
 

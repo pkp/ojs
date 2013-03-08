@@ -45,7 +45,7 @@ class GatewayHandler extends Handler {
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
 				$year = (int)$year;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
@@ -56,12 +56,12 @@ class GatewayHandler extends Handler {
 
 			if (!isset($year)) {
 				$showInfo = true;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
 				);
 				list($year) = $result->fields;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
@@ -74,13 +74,13 @@ class GatewayHandler extends Handler {
 			$prevYear = null;
 			$nextYear = null;
 			if (isset($year)) {
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
 					array($journal->getId(), $year)
 				);
 				list($prevYear) = $result->fields;
 
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
 					array($journal->getId(), $year)
 				);
@@ -130,7 +130,7 @@ class GatewayHandler extends Handler {
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
 				$year = (int)$year;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
@@ -141,12 +141,12 @@ class GatewayHandler extends Handler {
 
 			if (!isset($year)) {
 				$showInfo = true;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
 				);
 				list($year) = $result->fields;
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
@@ -159,13 +159,13 @@ class GatewayHandler extends Handler {
 			$prevYear = null;
 			$nextYear = null;
 			if (isset($year)) {
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
 					array($journal->getId(), $year)
 				);
 				list($prevYear) = $result->fields;
 
-				$result =& $issueDao->retrieve(
+				$result = $issueDao->retrieve(
 					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
 					array($journal->getId(), $year)
 				);

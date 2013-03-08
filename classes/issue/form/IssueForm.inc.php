@@ -126,11 +126,11 @@ class IssueForm extends Form {
 	 * returns issue id that it initialized the page with
 	 */
 	function initData($issueId = null) {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		// retrieve issue by id, if not specified, then select first unpublished issue
 		if (isset($issueId)) {
-			$issue =& $issueDao->getIssueById($issueId);
+			$issue = $issueDao->getById($issueId);
 		}
 
 		if (isset($issue)) {
@@ -236,14 +236,14 @@ class IssueForm extends Form {
 	 * Save issue settings.
 	 */
 	function execute($issueId = 0) {
-		$journal =& Request::getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$journal = Request::getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		if ($issueId) {
-			$issue = $issueDao->getIssueById($issueId);
+			$issue = $issueDao->getById($issueId);
 			$isNewIssue = false;
 		} else {
-			$issue = new Issue();
+			$issue = $issueDao->newDataObject();
 			$isNewIssue = true;
 		}
 		$volume = $this->getData('volume');
@@ -309,12 +309,12 @@ class IssueForm extends Form {
 			$issue->setId($issueId);
 			$this->issue =& $issue;
 			parent::execute();
-			$issueDao->updateIssue($issue);
+			$issueDao->updateObject($issue);
 		} else {
 			$issue->setPublished(0);
 			$issue->setCurrent(0);
 
-			$issueId = $issueDao->insertIssue($issue);
+			$issueId = $issueDao->insertObject($issue);
 			$issue->setId($issueId);
 		}
 
@@ -334,7 +334,7 @@ class IssueForm extends Form {
 			$issue->setWidth($width, $this->getFormLocale());
 			$issue->setHeight($height, $this->getFormLocale());
 
-			$issueDao->updateIssue($issue);
+			$issueDao->updateObject($issue);
 		}
 
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
@@ -344,7 +344,7 @@ class IssueForm extends Form {
 			$publicFileManager->uploadJournalFile($journal->getId(), 'styleFile', $newFileName);
 			$issue->setStyleFileName($newFileName);
 			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($originalFileName, 127));
-			$issueDao->updateIssue($issue);
+			$issueDao->updateObject($issue);
 		}
 
 		return $issueId;

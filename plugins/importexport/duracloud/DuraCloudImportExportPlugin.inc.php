@@ -76,9 +76,9 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+					$issue = $issueDao->getById($issueId, $journal->getId());
 					if (!$issue) $request->redirect();
-					$issues[$issue->getId()] =& $issue;
+					$issues[$issue->getId()] = $issue;
 					unset($issue);
 				}
 				$results = $this->exportIssues($journal, $issues);
@@ -89,7 +89,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				return;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+				$issue = $issueDao->getById($issueId, $journal->getId());
 				if (!$issue) $request->redirect();
 				$results = array($issue->getId() => $this->exportIssue($journal, $issue));
 				$templateMgr =& TemplateManager::getManager($request);
@@ -101,7 +101,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportableIssues.tpl');
@@ -329,9 +329,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'exportIssues':
 				$issues = array();
 				foreach ($args as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
-					$issues[$issue->getId()] =& $issue;
-					unset($issue);
+					$issue = $issueDao->getById($issueId, $journal->getId());
+					$issues[$issue->getId()] = $issue;
 				}
 				$results = $this->exportIssues($journal, $issues);
 				foreach ($results as $id => $result) {

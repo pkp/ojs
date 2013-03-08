@@ -92,8 +92,8 @@ class WebFeedPlugin extends GenericPlugin {
 			$requestedPage = $request->getRequestedPage();
 			$journalTitle = '';
 			if ($currentJournal) {
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getId(), true);
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 				$journalTitle = $this->sanitize($currentJournal->getLocalizedName());
 

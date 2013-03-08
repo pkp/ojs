@@ -89,23 +89,19 @@ class METSGatewayPlugin extends GatewayPlugin {
 	/**
 	 * Handle fetch requests for this plugin.
 	 */
-	function fetch($args, $request)
-	{
+	function fetch($args, $request) {
 		if (!$this->getEnabled()) {
 			return false;
 		}
 
 		if (empty($args)) {
 			$errors = array();
-		}
-		else
-		{
+		} else {
 			$journal =& $request->getJournal();
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issueId = array_shift($args);
-			if (!$issueId)
-			{
-				$issuesResultSet =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+			if (!$issueId) {
+				$issuesResultSet = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 				$issues = array();
 
 				while (!$issuesResultSet->eof())
@@ -115,16 +111,12 @@ class METSGatewayPlugin extends GatewayPlugin {
 				}
 				$this->exportIssues($journal, $issues);
 				return true;
-			}
-			else if ($issueId == 'current')
-			{
+			} else if ($issueId == 'current') {
 				$issues = array();
-				$issues[] =& $issueDao->getCurrentIssue($journal->getId(), true);
-			}
-			else
-			{
+				$issues[] = $issueDao->getCurrent($journal->getId(), true);
+			} else {
 				$issues = array();
-				$issues[] =& $issueDao->getIssueById($issueId, null, true);
+				$issues[] = $issueDao->getById($issueId, null, true);
 			}
 			$this->exportIssues($journal, $issues);
 			return true;

@@ -83,8 +83,8 @@ class NativeImportDom {
 		$issue = null;
 		$hasErrors = false;
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue = new Issue();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->newDataObject();
 		$issue->setJournalId($journal->getId());
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
@@ -221,7 +221,7 @@ class NativeImportDom {
 		}
 
 		if (($value = $issueNode->getAttribute('public_id')) != '') {
-			$anotherIssue = $issueDao->getIssueByPubId('publisher-id', $value, $journal->getId());
+			$anotherIssue = $issueDao->getByPubId('publisher-id', $value, $journal->getId());
 			if ($anotherIssue) {
 				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicIssueId', array('issueTitle' => $issue->getIssueIdentification(), 'otherIssueTitle' => $anotherIssue->getIssueIdentification()));
 				$hasErrors = true;
@@ -258,9 +258,9 @@ class NativeImportDom {
 			return false;
 		} else {
 			if ($issue->getCurrent()) {
-				$issueDao->updateCurrentIssue($journal->getId());
+				$issueDao->updateCurrent($journal->getId());
 			}
-			$issue->setId($issueDao->insertIssue($issue));
+			$issue->setId($issueDao->insertObject($issue));
 			$dependentItems[] = array('issue', $issue);
 		}
 
@@ -293,7 +293,7 @@ class NativeImportDom {
 			return false;
 		}
 
-		$issueDao->updateIssue($issue);
+		$issueDao->updateObject($issue);
 		return true;
 	}
 

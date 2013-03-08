@@ -438,7 +438,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 		// Assign object types to DAO names and methods.
 		$daos = array(
-			'Issue' => array('IssueDAO', 'getIssueById', 'updateIssue'),
+			'Issue' => array('IssueDAO', 'getById', 'updateObject'),
 			'Article' => array('PublishedArticleDAO', 'getPublishedArticleByArticleId', 'updateArticle'),
 			'Galley' => array('ArticleGalleyDAO', 'getGalley', 'updateGalley'),
 			'SuppFile' => array('SuppFileDAO', 'getSuppFile', 'updateSuppFile')

@@ -141,11 +141,11 @@ class SolrWebService extends XmlWebService {
 	 */
 	function &_getIssue($issueId, $journalId) {
 		if (isset($this->_issueCache[$issueId])) {
-			$issue =& $this->_issueCache[$issueId];
+			$issue = $this->_issueCache[$issueId];
 		} else {
-			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue =& $issueDao->getIssueById($issueId, $journalId, true);
-			$this->_issueCache[$issueId] =& $issue;
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue = $issueDao->getById($issueId, $journalId, true);
+			$this->_issueCache[$issueId] = $issue;
 		}
 
 		return $issue;
@@ -1462,7 +1462,7 @@ class SolrWebService extends XmlWebService {
 		$issueId = $article->getIssueId();
 		if (is_numeric($issueId)) {
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue =& $issueDao->getIssueById($issueId);
+			$issue = $issueDao->getById($issueId);
 			if (is_a($issue, 'Issue')) {
 				$issuePublicationDate = $issue->getDatePublished();
 				if (!empty($issuePublicationDate)) {

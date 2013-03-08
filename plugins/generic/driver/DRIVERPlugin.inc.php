@@ -170,7 +170,7 @@ class DRIVERPlugin extends GenericPlugin {
 
 			$journal = $journalDao->getById($row['journal_id']);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($row['article_id']);
-			$issue = $issueDao->getIssueById($article->getIssueId());
+			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access
 			$status = '';
@@ -222,7 +222,7 @@ class DRIVERPlugin extends GenericPlugin {
 
 			$journal = $journalDao->getById($journalId);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-			$issue = $issueDao->getIssueById($article->getIssueId());
+			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access
 			$status = '';

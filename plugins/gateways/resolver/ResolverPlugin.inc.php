@@ -88,8 +88,8 @@ class ResolverPlugin extends GatewayPlugin {
 				$number = array_shift($args);
 				$page = (int) array_shift($args);
 
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
 
 				// Ensure only one issue matched, and fetch it.
 				$issue = $issues->next();

@@ -78,25 +78,24 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+					$issue = $issueDao->getById($issueId, $journal->getId());
 					if (!$issue) $request->redirect();
-					$issues[] =& $issue;
-					unset($issue);
+					$issues[] = $issue;
 				}
 				$this->exportPubIdsForIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+				$issue = $issueDao->getById($issueId, $journal->getId());
 				if (!$issue) $request->redirect();
-				$issues = array(&$issue);
+				$issues = array($issue);
 				$this->exportPubIdsForIssues($journal, $issues);
 				break;
 			case 'selectIssue':
 				// Display a list of issues for export
 				AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'selectIssue.tpl');
 				break;
@@ -197,7 +196,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				$dao = $pubIdPlugin->getDAO($pubObjectType);
 				switch ($pubObjectType) {
 					case 'Issue':
-						$pubObject = $dao->getIssueById($pubObjectId, $journal->getId());
+						$pubObject = $dao->getById($pubObjectId, $journal->getId());
 						break;
 					case 'Article':
 						$pubObject = $dao->getById($pubObjectId, $journal->getId());
@@ -420,7 +419,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				if ($xmlFile != '') switch (array_shift($args)) {
 					case 'issue':
 						$issueId = array_shift($args);
-						$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
+						$issue = $issueDao->getByBestId($issueId, $journal->getId());
 						if ($issue == null) {
 							echo __('plugins.importexport.pubIds.cliError') . "\n";
 							echo __('plugins.importexport.pubIds.cliError.issueNotFound', array('issueId' => $issueId)) . "\n\n";
@@ -435,13 +434,13 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 					case 'issues':
 						$issues = array();
 						while (($issueId = array_shift($args))!==null) {
-							$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
+							$issue = $issueDao->getByBestId($issueId, $journal->getId());
 							if ($issue == null) {
 								echo __('plugins.importexport.pubIds.cliError') . "\n";
 								echo __('plugins.importexport.pubIds.cliError.issueNotFound', array('issueId' => $issueId)) . "\n\n";
 								return;
 							}
-							$issues[] =& $issue;
+							$issues[] = $issue;
 						}
 						if (!$this->exportPubIdsForIssues($journal, array(&$issue), $xmlFile)) {
 							echo __('plugins.importexport.pubIds.cliError') . "\n";

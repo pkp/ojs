@@ -824,7 +824,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	function saveRegisteredDoi(&$object, $registeredDoi) {
 		// Identify the dao name and update method for the given object.
 		$configurations = array(
-			'Issue' => array('IssueDAO', 'updateIssue'),
+			'Issue' => array('IssueDAO', 'updateObject'),
 			'Article' => array('ArticleDAO', 'updateArticle'),
 			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley'),
 			'SuppFile' => array('SuppFileDAO', 'updateSuppFile')
@@ -897,7 +897,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function getDaoName($exportType) {
 		$daoNames = array(
-			DOI_EXPORT_ISSUES => array('IssueDAO', 'getIssueById'),
+			DOI_EXPORT_ISSUES => array('IssueDAO', 'getById'),
 			DOI_EXPORT_ARTICLES => array('PublishedArticleDAO', 'getPublishedArticleByArticleId'),
 			DOI_EXPORT_GALLEYS => array('ArticleGalleyDAO', 'getGalley'),
 		);
@@ -971,9 +971,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 	function _displayIssueList(&$templateMgr, &$journal) {
 		// Retrieve all published issues.
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
-		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$this->registerDaoHook('IssueDAO');
-		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+		$issueIterator = $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 		// Filter only issues that have a DOI assigned.
 		$issues = array();
@@ -1107,8 +1107,8 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function &_getUnregisteredIssues(&$journal) {
 		// Retrieve all issues that have not yet been registered.
-		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issues = $issueDao->getIssuesBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$issues = $issueDao->getBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
 
 		// Filter and cache issues.
 		$nullVar = null;
@@ -1275,7 +1275,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$cache = $this->getCache();
 		if (!$cache->isCached('issues', $issueId)) {
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue = $issueDao->getIssueById($issueId, $journal->getId(), true);
+			$issue = $issueDao->getById($issueId, $journal->getId(), true);
 			assert(is_a($issue, 'Issue'));
 			$cache->add($issue, $nullVar);
 			unset($issue);

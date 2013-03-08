@@ -358,8 +358,8 @@ class ArticleSearch {
 				$issueId = $publishedArticle->getIssueId();
 				if (!isset($issueCache[$issueId])) {
 					unset($issue);
-					$issue =& $issueDao->getIssueById($issueId);
-					$issueCache[$issueId] =& $issue;
+					$issue = $issueDao->getById($issueId);
+					$issueCache[$issueId] = $issue;
 					import('classes.issue.IssueAction');
 					$issueAction = new IssueAction();
 					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);

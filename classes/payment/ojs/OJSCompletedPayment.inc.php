@@ -334,8 +334,8 @@ class OJSCompletedPayment extends Payment {
 				return $article->getLocalizedTitle();
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				// Purchase issue payment should output the issue title
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issue =& $issueDao->getIssueById($this->assocId, $this->journalId);
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getById($this->assocId, $this->journalId);
 				if (!$issue) return __('manager.payment.notFound');
 				return $issue->getIssueIdentification(false, true);
 			case PAYMENT_TYPE_GIFT:

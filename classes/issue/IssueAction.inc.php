@@ -34,8 +34,8 @@ class IssueAction {
 	function smartyPrintIssueId($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			if (isset($params['articleId'])) {
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issue =& $issueDao->getIssueByArticleId($params['articleId']);
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getIssueByArticleId($params['articleId']);
 				if ($issue != null) {
 					return $issue->getIssueIdentification();
 				}
@@ -134,8 +134,8 @@ class IssueAction {
 						$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
 					}
 				} else if (isset($issueId)) {
-					$issueDao =& DAORegistry::getDAO('IssueDAO');
-					$issue =& $issueDao->getIssueById($issueId);
+					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issue = $issueDao->getById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('classes.subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
@@ -168,8 +168,8 @@ class IssueAction {
 						$result = $subscriptionDao->isValidInstitutionalSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
 					}
 				} else if (isset($issueId)) {
-					$issueDao =& DAORegistry::getDAO('IssueDAO');
-					$issue =& $issueDao->getIssueById($issueId);
+					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issue = $issueDao->getById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('classes.subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidInstitutionalSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());

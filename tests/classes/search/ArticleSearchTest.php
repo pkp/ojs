@@ -270,15 +270,15 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockIssueDAO($published = true) {
 		// Mock an IssueDAO.
-		$issueDAO = $this->getMock('IssueDAO', array('getIssueById'), array(), '', false);
+		$issueDAO = $this->getMock('IssueDAO', array('getById'), array(), '', false);
 
 		// Mock an issue.
-		$issue = new Issue();
+		$issue = $issueDao->newDataObject();
 		$issue->setPublished($published);
 
-		// Mock the getIssueById() method.
+		// Mock the getById() method.
 		$issueDAO->expects($this->any())
-		         ->method('getIssueById')
+		         ->method('getById')
 		         ->will($this->returnValue($issue));
 
 		// Register the mock DAO.

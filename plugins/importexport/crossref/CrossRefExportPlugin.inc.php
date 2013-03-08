@@ -58,15 +58,15 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId);
+					$issue = $issueDao->getById($issueId);
 					if (!$issue) $request->redirect();
-					$issues[] =& $issue;
+					$issues[] = $issue;
 				}
 				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId);
+				$issue = $issueDao->getById($issueId);
 				if (!$issue) $request->redirect();
 				$issues = array($issue);
 				$this->exportIssues($journal, $issues);
@@ -85,8 +85,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'issues':
 				// Display a list of issues for export
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issues =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issues = $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
@@ -263,7 +263,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				return;
 			case 'issue':
 				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
+				$issue = $issueDao->getByBestId($issueId, $journal->getId());
 				if ($issue == null) {
 					echo __('plugins.importexport.crossref.cliError') . "\n";
 					echo __('plugins.importexport.crossref.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";

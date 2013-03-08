@@ -196,9 +196,8 @@ class SearchHandler extends Handler {
 
 				if (!isset($issues[$issueId])) {
 					import('classes.issue.IssueAction');
-					import('classes.issue.IssueAction');
-					$issue =& $issueDao->getIssueById($issueId);
-					$issues[$issueId] =& $issue;
+					$issue = $issueDao->getById($issueId);
+					$issues[$issueId] = $issue;
 					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue) && (!$issueAction->subscribedUser($journal, $issueId, $articleId) && !$issueAction->subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {

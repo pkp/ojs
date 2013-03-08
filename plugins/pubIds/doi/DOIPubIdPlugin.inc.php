@@ -111,8 +111,8 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		// Retrieve the issue.
 		if (!is_a($pubObject, 'Issue')) {
 			assert(!is_null($article));
-			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issue = $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
 		}
 		if ($issue && $journalId != $issue->getJournalId()) return null;
 

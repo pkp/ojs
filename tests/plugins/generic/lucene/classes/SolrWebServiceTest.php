@@ -544,16 +544,16 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockIssueDAO() {
 		// Mock an IssueDAO.
-		$issueDao = $this->getMock('IssueDAO', array('getIssueById'), array(), '', false);
+		$issueDao = $this->getMock('IssueDAO', array('getById'), array(), '', false);
 
 		// Mock an issue.
-		$issue = new Issue();
+		$issue = $issueDao->newDataObject();
 		$issue->setDatePublished('2012-03-15 15:30:00');
 		$issue->setPublished(true);
 
-		// Mock the getIssueById() method.
+		// Mock the getById() method.
 		$issueDao->expects($this->any())
-		         ->method('getIssueById')
+		         ->method('getById')
 		         ->will($this->returnValue($issue));
 
 		// Register the mock DAO.

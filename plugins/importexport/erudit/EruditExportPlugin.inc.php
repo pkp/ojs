@@ -62,7 +62,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 				$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 				$galley =& $articleGalleyDao->getGalley($galleyId, $articleId);
-				if ($article && $galley && ($issue =& $issueDao->getIssueById($article->getIssueId(), $journal->getId()))) {
+				if ($article && $galley && ($issue = $issueDao->getById($article->getIssueId(), $journal->getId()))) {
 					$this->exportArticle($journal, $issue, $article, $galley);
 					break;
 				}
@@ -144,7 +144,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			echo __('plugins.importexport.erudit.export.error.galleyNotFound', array('galleyLabel' => $galleyLabel)) . "\n\n";
 			return;
 		}
-		$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
+		$issue = $issueDao->getById($publishedArticle->getIssueId());
 		if (!$this->exportArticle($journal, $issue, $publishedArticle, $galley, $xmlFile)) {
 			echo __('plugins.importexport.erudit.cliError') . "\n";
 			echo __('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";

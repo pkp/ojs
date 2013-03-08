@@ -102,8 +102,8 @@ class URNPubIdPlugin extends PubIdPlugin {
 			// Retrieve the issue
 			if (!is_a($pubObject, 'Issue')) {
 				assert(!is_null($article));
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
 			}
 
 			// Retrieve the URN prefix

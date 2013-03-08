@@ -80,7 +80,7 @@ class ViewReportPlugin extends ReportPlugin {
 			// Make sure we get the issue identification
 			$articleIssueIdentificationMap[$articleId] = $issueId;
 			if (!isset($issueIdentifications[$issueId])) {
-				$issue = $issueDao->getIssueById($issueId);
+				$issue = $issueDao->getById($issueId);
 				$issueIdentifications[$issueId] = $issue->getIssueIdentification();
 				$issueDatesPublished[$issueId] = $issue->getDatePublished();
 				unset($issue);

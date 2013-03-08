@@ -91,7 +91,7 @@ class TimedViewReportForm extends Form {
 			$articleId = $row['article_id'];
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 			$issueId = $publishedArticle->getIssueId();
-			$issue = $issueDao->getIssueById($issueId);
+			$issue = $issueDao->getById($issueId);
 
 			$articleData[$articleId] = array(
 				'id' => $articleId,

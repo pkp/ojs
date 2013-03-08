@@ -423,9 +423,9 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Make sure that no custom suffix is saved for our test objects.
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getIssueById(1, 1);
+		$issue = $issueDao->getById(1, 1);
 		$issue->setData('doiSuffix', '');
-		$issueDao->updateIssue($issue);
+		$issueDao->updateObject($issue);
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$article = $articleDao->getById(1, 1);
 		$article->setData('doiSuffix', '');
@@ -843,7 +843,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	protected function removeRegisteredDois($pluginName) {
 		// Mark all our test objects as "unregistered".
 		$configurations = array(
-			'Issue' => array('IssueDAO', 'updateIssue', 'getIssueById', 1),
+			'Issue' => array('IssueDAO', 'updateObject', 'getById', 1),
 			'Article' => array('ArticleDAO', 'updateArticle', 'getArticle', 1),
 			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley', 'getGalley', array(1,2,3)),
 			'SuppFile' => array('SuppFileDAO', 'updateSuppFile', 'getSuppFile', 1)

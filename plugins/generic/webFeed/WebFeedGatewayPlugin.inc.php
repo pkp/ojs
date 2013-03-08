@@ -103,8 +103,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if (!$journal) return false;
 
 		// Make sure there's a current issue for this journal
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getCurrentIssue($journal->getId(), true);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getCurrent($journal->getId(), true);
 		if (!$issue) return false;
 
 		$webFeedPlugin =& $this->getWebFeedPlugin();

@@ -285,14 +285,14 @@ class DOIExportDom {
 			assert(isset($publicationObjects['article']));
 			$issueId = $publicationObjects['article']->getIssueId();
 			if ($cache->isCached('issues', $issueId)) {
-				$issue =& $cache->get('issues', $issueId);
+				$issue = $cache->get('issues', $issueId);
 			} else {
-				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue =& $issueDao->getIssueById($issueId, $journal->getId());
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue = $issueDao->getById($issueId, $journal->getId());
 				if ($issue) $cache->add($issue, $nullVar);
 			}
 			assert(is_a($issue, 'Issue'));
-			$publicationObjects['issue'] =& $issue;
+			$publicationObjects['issue'] = $issue;
 		}
 
 		return $publicationObjects;

@@ -52,10 +52,10 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($this->submission->getId());
 		if ($publishedArticle) {
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId());
-			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
-			$templateMgr->assign_by_ref('issue', $issue);
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			$templateMgr->assign('publishedArticle', $publishedArticle);
+			$templateMgr->assign('issue', $issue);
 		}
 
 		$templateMgr->display('proofreader/submission.tpl');

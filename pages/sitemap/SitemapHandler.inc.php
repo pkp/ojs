@@ -93,7 +93,7 @@ class SitemapHandler extends Handler {
 		// Issues
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'current')));
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
-		$publishedIssues =& $issueDao->getPublishedIssues($journalId);
+		$publishedIssues = $issueDao->getPublishedIssues($journalId);
 		while ($issue = $publishedIssues->next()) {
 			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getId())));
 			// Articles for issue

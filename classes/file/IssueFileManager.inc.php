@@ -32,8 +32,8 @@ class IssueFileManager extends FileManager {
 	 * @param $issueId int
 	 */
 	function IssueFileManager($issueId) {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueById($issueId);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId);
 		assert($issue);
 
 		$this->setIssueId($issueId);

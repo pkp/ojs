@@ -408,7 +408,7 @@ class ArticleHandler extends Handler {
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
-			$issue =& $issueDao->getIssueById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
+			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 		} else {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
 			$article = $articleDao->getById((int) $articleId, $journalId, true);
