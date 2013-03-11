@@ -101,8 +101,8 @@ class JournalDAO extends ContextDAO {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->deleteById($journalId);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sectionDao->deleteSectionsByJournal($journalId);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao->deleteByJournalId($journalId);
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssuesByJournal($journalId);

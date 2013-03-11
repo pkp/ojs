@@ -41,7 +41,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		if (!isset($issueId) || $issueId != $issue->getId()) {
 			$sectionDao =& DAORegistry::getDAO('SectionDAO');
 			$issueId = $issue->getId();
-			$sections =& $sectionDao->getSectionsForIssue($issueId);
+			$sections = $sectionDao->getByIssueId($issueId);
 			$sectionSeq = array();
 			$i=0;
 			foreach ($sections as $thisSection) {

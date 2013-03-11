@@ -36,8 +36,8 @@ class MetsExportDom {
 		$pDiv =& XMLCustomWriter::createElement($doc, 'METS:div');
 		XMLCustomWriter::setAttribute($pDiv, 'TYPE', 'issue');
 		XMLCustomWriter::setAttribute($pDiv, 'DMDID', 'I-'.$issue->getId());
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sectionArray =& $sectionDao->getSectionsForIssue($issue->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionArray = $sectionDao->getByIssueId($issue->getId());
 		$i = 0;
 		while ($i < sizeof($sectionArray)) {
 			MetsExportDom::generateSectionDiv($doc, $pDiv, $sectionArray[$i], $issue);
@@ -196,8 +196,8 @@ class MetsExportDom {
 		XMLCustomWriter::appendChild($dmdSec, $mdWrap);
 		XMLCustomWriter::appendChild($mdWrap,$xmlData);
 		XMLCustomWriter::appendChild($root, $dmdSec);
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sectionArray =& $sectionDao->getSectionsForIssue($issue->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionArray = $sectionDao->getByIssueId($issue->getId());
 		$i = 0;
 		while ($i < sizeof($sectionArray)) {
 			MetsExportDom::generateSectionDmdSecDom($doc, $root, $sectionArray[$i], $issue, $journal);

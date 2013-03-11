@@ -117,10 +117,10 @@ class SectionHandler extends ManagerHandler {
 		$this->validate();
 
 		if (isset($args) && !empty($args)) {
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$sectionDao->deleteSectionById($args[0], $journal->getId());
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$sectionDao->deleteById($args[0], $journal->getId());
 		}
 		$request->redirect(null, null, 'sections');
 	}

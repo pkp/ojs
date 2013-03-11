@@ -95,11 +95,10 @@ class NativeExportDom {
 			}
 		}
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		foreach ($sectionDao->getSectionsForIssue($issue->getId()) as $section) {
-			$sectionNode =& NativeExportDom::generateSectionDom($doc, $journal, $issue, $section);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		foreach ($sectionDao->getByIssueId($issue->getId()) as $section) {
+			$sectionNode = NativeExportDom::generateSectionDom($doc, $journal, $issue, $section);
 			XMLCustomWriter::appendChild($root, $sectionNode);
-			unset($sectionNode);
 		}
 
 		return $root;

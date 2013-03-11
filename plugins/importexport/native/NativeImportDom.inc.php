@@ -528,7 +528,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionTitle = null;
 		$index = 0;
 		foreach($titles as $locale => $title) {
-			$section = $sectionDao->getSectionByTitle($title, $journal->getId());
+			$section = $sectionDao->getByTitle($title, $journal->getId());
 			if ($section) {
 				$sectionId = $section->getId();
 				if ($foundSectionId) {
@@ -559,7 +559,7 @@ class NativeImportDom {
 		$foundSectionId = $foundSectionAbbrev = null;
 		$index = 0;
 		foreach($abbrevs as $locale => $abbrev) {
-			$abbrevSection = $sectionDao->getSectionByAbbrev($abbrev, $journal->getId());
+			$abbrevSection = $sectionDao->getByAbbrev($abbrev, $journal->getId());
 			if ($abbrevSection) {
 				$sectionId = $abbrevSection->getId();
 				if ($foundSectionId) {
@@ -601,7 +601,7 @@ class NativeImportDom {
 			$section->setSequence(REALLY_BIG_NUMBER);
 			$section->setMetaIndexed(1);
 			$section->setEditorRestricted(1);
-			$section->setId($sectionDao->insertSection($section));
+			$section->setId($sectionDao->insertObject($section));
 			$sectionDao->resequenceSections($journal->getId());
 		}
 

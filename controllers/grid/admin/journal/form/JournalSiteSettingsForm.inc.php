@@ -139,7 +139,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section->setPolicy(__('section.default.policy'), $journal->getPrimaryLocale());
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
-			$sectionDao->insertSection($section);
+			$sectionDao->insertObject($section);
 		}
 		$journal->updateSetting('name', $this->getData('name'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);

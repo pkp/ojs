@@ -70,15 +70,22 @@ class SectionDAO extends DAO {
 	 * @param $locale string optional
 	 * @return Section
 	 */
-	function &getSectionByAbbrev($sectionAbbrev, $journalId, $locale = null) {
-		$sql = 'SELECT s.* FROM sections s, section_settings l WHERE l.section_id = s.section_id AND l.setting_name = ? AND l.setting_value = ? AND s.journal_id = ?';
+	function getByAbbrev($sectionAbbrev, $journalId, $locale = null) {
 		$params = array('abbrev', $sectionAbbrev, (int) $journalId);
 		if ($locale !== null) {
-			$sql .= ' AND l.locale = ?';
 			$params[] = $locale;
 		}
 
-		$result = $this->retrieve($sql, $params);
+		$result = $this->retrieve(
+			'SELECT	s.*
+			FROM	sections s, section_settings l
+			WHERE	l.section_id = s.section_id AND
+				l.setting_name = ? AND
+				l.setting_value = ? AND
+				s.journal_id = ?' .
+				($locale!==null?' AND l.locale = ?':''),
+			$params
+		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -94,42 +101,22 @@ class SectionDAO extends DAO {
 	 * @param $sectionTitle string
 	 * @return Section
 	 */
-	function &getSectionByTitle($sectionTitle, $journalId, $locale = null) {
-		$sql = 'SELECT s.* FROM sections s, section_settings l WHERE l.section_id = s.section_id AND l.setting_name = ? AND l.setting_value = ? AND s.journal_id = ?';
+	function getByTitle($sectionTitle, $journalId, $locale = null) {
 		$params = array('title', $sectionTitle, (int) $journalId);
 		if ($locale !== null) {
-			$sql .= ' AND l.locale = ?';
 			$params[] = $locale;
 		}
 
-		$result = $this->retrieve($sql, $params);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnSectionFromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
-	}
-
-	/**
-	 * Retrieve a section by title and abbrev.
-	 * @param $sectionTitle string
-	 * @param $sectionAbbrev string
-	 * @param $locale string optional
-	 * @return Section
-	 */
-	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId, $locale) {
-		$sql = 'SELECT s.* FROM sections s, section_settings l1, section_settings l2 WHERE l1.section_id = s.section_id AND l2.section_id = s.section_id AND l1.setting_name = ? AND l2.setting_name = ? AND l1.setting_value = ? AND l2.setting_value = ? AND s.journal_id = ?';
-		$params = array('title', 'abbrev', $sectionTitle, $sectionAbbrev, (int) $journalId);
-		if ($locale !== null) {
-			$sql .= ' AND l1.locale = ? AND l2.locale = ?';
-			$params[] = $locale;
-			$params[] = $locale;
-		}
-
-		$result = $this->retrieve($sql, $params);
+		$result = $this->retrieve(
+			'SELECT	s.*
+			FROM	sections s, section_settings l
+			WHERE	l.section_id = s.section_id AND
+				l.setting_name = ? AND
+				l.setting_value = ? AND
+				s.journal_id = ?' .
+				($locale !== null?' AND l.locale = ?':''),
+			$params
+		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -187,7 +174,7 @@ class SectionDAO extends DAO {
 	 * Update the localized fields for this table
 	 * @param $section object
 	 */
-	function updateLocaleFields(&$section) {
+	function updateLocaleFields($section) {
 		$this->updateDataObjectSettings('section_settings', $section, array(
 			'section_id' => $section->getId()
 		));
@@ -197,7 +184,7 @@ class SectionDAO extends DAO {
 	 * Insert a new section.
 	 * @param $section Section
 	 */
-	function insertSection(&$section) {
+	function insertObject($section) {
 		$this->update(
 			'INSERT INTO sections
 				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments, abstract_word_count)
@@ -266,8 +253,8 @@ class SectionDAO extends DAO {
 	 * Delete a section.
 	 * @param $section Section
 	 */
-	function deleteSection(&$section) {
-		return $this->deleteSectionById($section->getId(), $section->getJournalId());
+	function deleteObject($section) {
+		return $this->deleteById($section->getId(), $section->getJournalId());
 	}
 
 	/**
@@ -275,7 +262,7 @@ class SectionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $journalId int optional
 	 */
-	function deleteSectionById($sectionId, $journalId = null) {
+	function deleteById($sectionId, $journalId = null) {
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 
@@ -299,10 +286,10 @@ class SectionDAO extends DAO {
 	 * to be called only when deleting a journal.
 	 * @param $journalId int
 	 */
-	function deleteSectionsByJournal($journalId) {
+	function deleteByJournalId($journalId) {
 		$sections = $this->getByJournalId($journalId);
 		while ($section = $sections->next()) {
-			$this->deleteSection($section);
+			$this->deleteObject($section);
 		}
 	}
 
@@ -339,7 +326,7 @@ class SectionDAO extends DAO {
 	 * the given issue.
 	 * @return array
 	 */
-	function &getSectionsForIssue($issueId) {
+	function getByIssueId($issueId) {
 		$result = $this->retrieve(
 			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq',
 			array((int) $issueId, (int) $issueId)

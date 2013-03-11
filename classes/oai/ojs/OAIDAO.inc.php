@@ -161,7 +161,7 @@ class OAIDAO extends PKPOAIDAO {
 		$sectionId = null;
 
 		if (isset($sectionSpec)) {
-			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getId());
+			$section = $this->sectionDao->getByAbbrev($sectionSpec, $journal->getId());
 			if (isset($section)) {
 				$sectionId = $section->getId();
 			} else {

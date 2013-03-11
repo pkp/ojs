@@ -386,10 +386,10 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 								$section = $sectionDao->getById(($sectionIdentifier = array_shift($args)));
 								break;
 							case 'section_name':
-								$section =& $sectionDao->getSectionByTitle(($sectionIdentifier = array_shift($args)), $journal->getId());
+								$section = $sectionDao->getByTitle(($sectionIdentifier = array_shift($args)), $journal->getId());
 								break;
 							case 'section_abbrev':
-								$section =& $sectionDao->getSectionByAbbrev(($sectionIdentifier = array_shift($args)), $journal->getId());
+								$section = $sectionDao->getByAbbrev(($sectionIdentifier = array_shift($args)), $journal->getId());
 								break;
 							default:
 								return $this->usage($scriptName);
