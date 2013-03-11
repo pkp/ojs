@@ -23,7 +23,7 @@ OJSはGNU一般公衆利用許諾契約書v.2によりライセンスされて�
 推奨するサーバ要件は次のとおりです。
 
 	* PHP 4.2.x以降（PHP 5.xを含む）; Microsoft IIS は PHP 5.xが必要
-	* MySQL 3.23.23以降 (MySQL 4.xを含む) 、または PostgreSQL 7.1以降 
+	* MySQL 4.1 、または PostgreSQL 7.1以降 
           （PostgreSQL 8.xを含む）
 	* Apache 1.3.2x以降 または、2.0.4x以降、または Microsoft IIS 6
 	* OS: Linux, BSD, Solaris, Mac OS X, Windowsなど、上記ソフトウェアを

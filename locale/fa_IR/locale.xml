@@ -471,7 +471,7 @@ http://journals.mui.ac.ir/index.php/index/index
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x شامل PHP 5.x</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 شامل MySQL 4.x یا <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 شامل PostgreSQL 8.x</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 یا <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 شامل PostgreSQL 8.x</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x یا >= 2.0.4x یا Microsoft IIS 6</li>
 	<li>سیستم عامل: هر سیستم عاملی که نرم افزار های فوق را حمایت کند قابل استفاده است. شامل  <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a> میباشد.</li>
 </ul>
