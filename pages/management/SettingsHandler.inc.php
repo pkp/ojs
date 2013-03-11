@@ -110,7 +110,7 @@ class SettingsHandler extends ManagementHandler {
 	function publication($args, &$request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
-		$templateMgr->display('management/settings/publication.tpl');
+		$templateMgr->display('management/settings/workflow.tpl');
 	}
 
 	/**

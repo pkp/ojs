@@ -24,7 +24,7 @@
 <div class="pkp_helpers_clear"></div>
 <div class="separator"></div>
 <div class="unit size1of2">
-	<h4>{translate key="navigation.publicationProcess"}</h4>
+	<h4>{translate key="navigation.workflow"}</h4>
 	<p>{translate key="manager.settings.publicationDescription"}</p>
 	<a href="{url page="management" op="settings" path="publication"}" class="button defaultButton">{translate key="common.takeMeThere"}</a>
 </div>
