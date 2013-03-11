@@ -196,7 +196,6 @@
 	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.history">Journal History</message>
 	<message key="manager.setup.historyDescription">This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</message>
-	<message key="manager.setup.copyediting">Copyeditors</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
 	<message key="manager.setup.copyeditInstructionsDescription">The Copyedit Instructions will be made available to Copyeditors, Authors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
@@ -309,7 +308,6 @@
 	<message key="manager.setup.journalThumbnail">Journal thumbnail</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
 	<message key="manager.setup.labelName">Label name</message>
-	<message key="manager.setup.layoutAndGalleys">Layout Editors</message>
 	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
 	<message key="manager.setup.layoutInstructionsDescription">Layout Instructions can be prepared for the formatting of publishing items in the journal and be entered below in HTML or plain text. They will be made available to  the Layout Editor and Section Editor on the Editing page of each submission. (As each journal may employ its own file formats, bibliographic standards, style sheets, etc., a default set of instructions is not provided.)</message>
 	<message key="manager.setup.layoutTemplates">Layout Templates</message>
@@ -345,9 +343,6 @@
 	<message key="manager.setup.notifications.description">On completing the submission process, authors are automatically sent an acknowledgement email (which can be viewed and edited in Emails). In addition, a copy of the acknowledgement email can be sent as follows:</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">When using the Notify Author email, include the email addresses of all co-authors for multiple-author submissions, and not just the submitting user.</message>
-	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by an Editor or Section Editor assigned to the submission.</message>
-	<message key="manager.setup.noUseLayoutEditors">An Editor or Section Editor assigned to the submission will prepare the HTML, PDF, etc., files.</message>
-	<message key="manager.setup.noUseProofreaders">An Editor or Section Editor assigned to the submission will check the galleys.</message>
 	<message key="manager.setup.numPageLinks">Page links</message>
 	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
@@ -368,7 +363,6 @@
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</message>
-	<message key="manager.setup.proofreading">Proofreaders</message>
 	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
 	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
@@ -441,14 +435,11 @@
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
 	<message key="manager.setup.uniqueIdentifier">Unique Identifier</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</message>
-	<message key="manager.setup.useCopyeditors">A Copyeditor will be assigned to work with each submission.</message>
 	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
 	<message key="manager.setup.useImageLogo">Logo image</message>
 	<message key="manager.setup.useThumbnail">Thumbnail</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
-	<message key="manager.setup.useLayoutEditors">A Layout Editor will be assigned to prepare the HTML, PDF, etc., files for electronic publication.</message>
-	<message key="manager.setup.useProofreaders">A Proofreader will be assigned to check (along with the authors) the galleys prior to publication.</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.statistics.reports">Report Generator</message>

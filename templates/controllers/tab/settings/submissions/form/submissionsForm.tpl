@@ -372,23 +372,6 @@
 </div><!-- publicIdentifier -->
 <div class="separator"></div>
 
-<div id="copyediting">
-<h3>4.5 {translate key="manager.setup.copyediting"}</h3>
-
-<p>{translate key="manager.setup.selectOne"}:</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors-1" value="1"{if $useCopyeditors} checked="checked"{/if} /></td>
-		<td class="value"><label for="useCopyeditors-1">{translate key="manager.setup.useCopyeditors"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors-0" value="0"{if !$useCopyeditors} checked="checked"{/if} /></td>
-		<td class="value"><label for="useCopyeditors-0">{translate key="manager.setup.noUseCopyeditors"}</label></td>
-	</tr>
-</table>
-</div><!-- copyediting -->
-
 <div id="copyeditInstructionsSection">
 <h4>{translate key="manager.setup.copyeditInstructions"}</h4>
 
@@ -400,22 +383,6 @@
 </div><!-- copyeditInstructionsSection -->
 
 <div class="separator"></div>
-
-<div id="layoutAndGalleys">
-<h3>4.6 {translate key="manager.setup.layoutAndGalleys"}</h3>
-
-<p>{translate key="manager.setup.selectOne"}:</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors-1" value="1"{if $useLayoutEditors} checked="checked"{/if} /></td>
-		<td class="value"><label for="useLayoutEditors-1">{translate key="manager.setup.useLayoutEditors"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors-0" value="0"{if !$useLayoutEditors} checked="checked"{/if} /></td>
-		<td class="value"><label for="useLayoutEditors-0">{translate key="manager.setup.noUseLayoutEditors"}</label></td>
-	</tr>
-</table>
 
 <div id="layoutInstructionsSection">
 <h4>{translate key="manager.setup.layoutInstructions"}</h4>
@@ -447,21 +414,6 @@
 </div>
 <div class="separator"></div>
 
-<div id="proofreading">
-<h3>4.7 {translate key="manager.setup.proofreading"}</h3>
-
-<p>{translate key="manager.setup.selectOne"}:</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders-1" value="1"{if $useProofreaders} checked="checked"{/if} /></td>
-		<td class="value"><label for="useProofreaders-1">{translate key="manager.setup.useProofreaders"}</label></td>
-	</tr>
-	<tr>
-		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders-0" value="0"{if !$useProofreaders} checked="checked"{/if} /></td>
-		<td class="value"><label for="useProofreaders-0">{translate key="manager.setup.noUseProofreaders"}</label></td>
-	</tr>
-</table>
 <div id="proofingInstructions">
 <h4>{translate key="manager.setup.proofingInstructions"}</h4>
 
@@ -470,7 +422,6 @@
 <p>
 	<textarea name="proofInstructions[{$formLocale|escape}]" id="proofInstructions" rows="12" cols="60" class="textArea richContent">{$proofInstructions[$formLocale]|escape}</textarea>
 </p>
-</div>
 </div>
 
 {if !$wizardMode}
