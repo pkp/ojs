@@ -45,29 +45,13 @@ class LucenePluginTest extends DatabaseTestCase {
 	// Implementing protected template methods from PKPTestCase
 	//
 	/**
-	 * @see PKPTestCase::getMockedRegistryKeys()
-	 */
-	protected function getMockedRegistryKeys() {
-		return array('request');
-	}
-
-	/**
 	 * @see PKPTestCase::setUp()
 	 */
 	protected function setUp() {
 		parent::setUp();
 
 		// Instantiate the plug-in for testing.
-		$application =& PKPApplication::getApplication();
-		$_SERVER['REQUEST_METHOD'] = 'GET';
-		$request =& $application->getRequest();
-		if (is_null($request->getRouter())) {
-			$router = $this->getMock('PKPRouter', array('url'));
-			$router->expects($this->any())
-			       ->method('url')
-			       ->will($this->returnValue('http://test-url'));
-			$request->setRouter($router);
-		}
+		$this->mockRequest();
 		PluginRegistry::loadCategory('generic', true, 0);
 		$this->lucenePlugin = PluginRegistry::getPlugin('generic', 'luceneplugin');
 	}

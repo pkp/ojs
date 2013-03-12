@@ -316,7 +316,7 @@ class Application extends PKPApplication {
 	 *   null if the given parameter combination is not supported.
 	 */
 	function getMetrics($metricType = null, $columns = array(), $filter = array(), $orderBy = array(), $range = null) {
-		// Check the filter.
+		// Check the parameter format.
 		if (!(is_array($filter) && is_array($orderBy))) return null;
 
 		// Check whether we are in a journal or site context.

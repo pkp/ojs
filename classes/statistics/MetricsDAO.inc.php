@@ -217,7 +217,7 @@ class MetricsDAO extends DAO {
 				// Don't break but go on to retrieve the article.
 
 			case ASSOC_TYPE_ARTICLE:
-				if (!$$isArticleFile) $articleId = $recordToStore['assoc_id'];
+				if (!$isArticleFile) $articleId = $recordToStore['assoc_id'];
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 				$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 				if (is_a($article, 'PublishedArticle')) {
@@ -286,7 +286,6 @@ class MetricsDAO extends DAO {
 			throw new Exception('Cannot load record: invalid metric.');
 		}
 		$recordToStore['metric'] = (int) $record['metric'];
-		if ($recordToStore['metric'] == 0) return;
 
 		// Save the record to the database.
 		$fields = implode(', ', array_keys($recordToStore));
