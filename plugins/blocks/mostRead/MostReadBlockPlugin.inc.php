@@ -57,17 +57,60 @@ class MostReadBlockPlugin extends BlockPlugin {
 		// Specify the metrics report we need for this plugin.
 		// See: http://pkp.sfu.ca/wiki/index.php/OJSdeStatisticsConcept#Input_and_Output_Formats_.28Aggregation.2C_Filters.2C_Metrics_Data.29
 		$metricType = null; // Use the main metric.
-		$columns = STATISTICS_DIMENSION_ASSOC_ID;
-		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY);
+		$columns = STATISTICS_DIMENSION_ARTICLE_ID;
+		$filter = array(
+			STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY,
+			STATISTICS_DIMENSION_JOURNAL_ID => $journal->getId()
+		);
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
 		import('lib.pkp.classes.db.DBResultRange');
 		$range = new DBResultRange(10); // Get the first 10 results only.
+		
+		// Reports will be generated for different time spans.
+		$today = date('Ymd');
+		$oneMonthAgo = date('Ymd', strtotime('-1 month'));
+		$oneYearAgo = date('Ymd', strtotime('-1 year'));
+		$timeSpans = array(
+			'month' => array('from' => $oneMonthAgo, 'to' => $today),
+			'year' => array('from' => $oneYearAgo, 'to' => $today),
+			'ever' => null
+		);
+		
+		// Generate reports.
+		$articleRanking = array();
+		$router = $request->getRouter();
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		foreach ($timeSpans as $timeSpanName => $timeSpan) {
+			if (is_null($timeSpan)) {
+				unset($filter[STATISTICS_DIMENSION_DAY]);
+			} else {
+				$filter[STATISTICS_DIMENSION_DAY] = $timeSpan;
+			}
+			$articleRanking[$timeSpanName] = $journal->getMetrics($metricType, $columns, $filter, $orderBy, $range);
+			
+			// Add article meta-data to the results.
+			foreach ($articleRanking[$timeSpanName] as $articleIndex => &$articleInfo) {
+				$articleInfo['rank'] = $articleIndex + 1;
+				$articleId = $articleInfo['article_id'];
+				$article = $articleDao->getArticle($articleId, $journal->getId(), true); /* @var $article Article */
+				if (!is_a($article, 'Article')) continue;
+				$articleInfo['title'] = $article->getLocalizedTitle();
+				$articleInfo['url'] = $router->url(
+					$request, null, 'article', 'view', array($article->getBestArticleId($journal))
+				);
+			}
+		}
+		$templateMgr->assign('articleRanking', $articleRanking);
 
-		$metricsReport = $journal->getMetrics($metricType, $columns, $filter, $orderBy, $range);
-
-		// Retrieve metadata for the report.
-		// TODO: continue here.
-
+		// Add time span selection.
+		$timeSpans = array(
+			'month' => 'plugins.block.mostRead.previousMonth',
+			'year' => 'plugins.block.mostRead.previousYear',
+			'ever' => 'plugins.block.mostRead.allTimes'
+		);
+		$templateMgr->assign('timeSpans', $timeSpans);
+		$templateMgr->assign('defaultTimeSpan', 'month');
+		
 		return parent::getContents($templateMgr, $request);
 	}
 }

@@ -11,7 +11,11 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.mostRead.displayName">"Most Read Articles" Block</message>
-	<message key="plugins.block.mostRead.description">This plugin provides a list of "most read" articles.</message>
-	<message key="plugins.block.mostRead.title">Most Read Articles</message>
+	<message key="plugins.block.mostRead.displayName">"Most-Read Articles" Block</message>
+	<message key="plugins.block.mostRead.description">This plugin provides a list of "most-read" articles.</message>
+	<message key="plugins.block.mostRead.title">Most-Read Articles</message>
+	
+	<message key="plugins.block.mostRead.previousMonth">Previous Month</message>
+	<message key="plugins.block.mostRead.previousYear">Previous Year</message>
+	<message key="plugins.block.mostRead.allTimes">All Times</message>
 </locale>
