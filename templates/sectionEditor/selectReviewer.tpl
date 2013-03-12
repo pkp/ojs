@@ -79,7 +79,7 @@ function sortSearch(heading, direction) {
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
 <tr valign="top">
-	<td><a class="action" href="{url op="userProfile" path=$userId}">{$reviewer->getFullName()|escape}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$userId|to_array:$articleId}">{$reviewer->getFullName()|escape}</a></td>
 	<td>{$reviewer->getInterests()|urldecode|escape}</td>
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"}

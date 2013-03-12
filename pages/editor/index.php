@@ -83,6 +83,10 @@ switch ($op) {
 	case 'restoreToQueue':
 	case 'updateSection':
 	case 'updateCommentsStatus':
+	// 
+	// Edit reviewer 
+	//
+	case 'editReviewer':
 	//
 	// Layout Editing
 	//

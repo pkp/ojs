@@ -552,6 +552,33 @@ class SubmissionEditHandler extends SectionEditorHandler {
        //$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
 
+        /**
+         * Edit a reviewer's profile.
+         * @param $args array ($userId, $articleId, 'update')
+         */
+        function editReviewer($args, &$request) {
+		$userId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[1]) ? (int) $args[1] : 0;
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		
+		import('classes.sectionEditor.form.EditReviewerForm');	
+		$editReviewerForm = new EditReviewerForm($userId, $articleId);
+		$this->setupTemplate(true, $articleId, 'review');
+
+		if (isset($args[2]) && $args[2] == 'update') {
+			$editReviewerForm->readInputData();
+			if ($editReviewerForm->validate()) {
+				$editReviewerForm->execute();
+				Request::redirect(null, null, 'userProfile', array($userId, $articleId));
+			} else {
+				$editReviewerForm->display($args, $request);
+			}
+		} else {
+			$editReviewerForm->initData($args, $request);
+		}
+		$editReviewerForm->display($args, $request);
+        }
+
 	/**
 	 * Enroll an existing OJS user in a given role
 	 * (Poor-man's AJAX.)
@@ -989,6 +1016,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$user = $userDao->getUserByUsername($userId);
 		}
 
+		$articleId = isset($args[1]) ? $args[1] : 0;
 
 		if ($user == null) {
 			// Non-existent user requested
@@ -1010,6 +1038,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->assign('helpTopicId', 'journal.roles.index');
+			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->display('sectionEditor/userProfile.tpl');
 		}
 	}

@@ -27,6 +27,7 @@ switch ($op) {
 	//
 	case 'enrollSearch':
 	case 'createReviewer':
+	case 'editReviewer':
 	case 'suggestUsername':
 	case 'enroll':
 	case 'submission':
