@@ -19,14 +19,15 @@
 
 
 import('lib.pkp.plugins.metadata.dc11.schema.PKPDc11Schema');
+import('lib.pkp.classes.metadata.MetadataTypeDescription');
 
 class Dc11Schema extends PKPDc11Schema {
 	/**
 	 * Constructor
 	 */
 	function Dc11Schema() {
-		// Configure the MODS schema.
-		parent::PKPDc11Schema(ASSOC_TYPE_ARTICLE);
+		// Configure the DC schema.
+		parent::PKPDc11Schema(array(ASSOC_TYPE_ARTICLE, ASSOC_TYPE_ANY));
 	}
 }
 ?>
