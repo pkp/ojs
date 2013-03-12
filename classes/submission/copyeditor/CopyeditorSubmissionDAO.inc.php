@@ -275,7 +275,6 @@ class CopyeditorSubmissionDAO extends DAO {
 				scpi.user_id = ? AND
 			(' . ($active?'':'NOT ') . ' (i.date_published IS NULL AND a.status != ' . STATUS_ARCHIVED . ' AND a.status != ' . STATUS_DECLINED . ' AND ((scpi.date_notified IS NOT NULL AND scpi.date_completed IS NULL) OR (scpf.date_notified IS NOT NULL AND scpf.date_completed IS NULL)))) ';
 
-		error_log($sql);
 		$result =& $this->retrieveRange(
 			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			count($params)==1?array_shift($params):$params,
@@ -297,7 +296,7 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT	sci.date_notified AS initial_notified, sci.date_completed AS initial_completed,
 				scf.date_notified AS final_notified, scf.date_completed AS final_completed,
-				i.date_published
+				i.date_published, a.status
 			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
