@@ -30,29 +30,28 @@ class ReportPlugin extends Plugin {
 	 * @see <http://pkp.sfu.ca/wiki/index.php/OJSdeStatisticsConcept#Input_and_Output_Formats_.28Aggregation.2C_Filters.2C_Metrics_Data.29>
 	 * for a full specification of the input and output format of this method.
 	 *
-	 * @param $metricType null|integer|array metrics selection
-	 * @param $columns null|integer|array column (aggregation level) selection
-	 * @param $filters null|array report-level filter selection
-	 * @param $orderBy null|array order criteria
+	 * @param $metricType null|string|array metrics selection
+	 * @param $columns string|array column (aggregation level) selection
+	 * @param $filters array report-level filter selection
+	 * @param $orderBy array order criteria
 	 * @param $range null|DBResultRange paging specification
 	 *
-	 * @return null|DAOResultFactory The selected data as a simple tabular
-	 *  result set or null if metrics are not supported by this plug-in,
-	 *  the specified report is invalid or cannot be produced or another
-	 *  error occurred.
+	 * @return null|array The selected data as a simple tabular result set or
+	 *  null if metrics are not supported by this plug-in, the specified report
+	 *  is invalid or cannot be produced or another error occurred.
 	 */
-	function getMetrics($metricType = null, $columns = null, $filters = null, $orderBy = null, $range = null) {
+	function getMetrics($metricType = null, $columns = array(), $filters = array(), $orderBy = array(), $range = null) {
 		return null;
 	}
 
 	/**
 	 * Metric types available from this plug-in.
 	 *
-	 * @return null|array An array of metric identifiers (strings) or null if
-	 *  the plug-in does not support standard metric retrieval.
+	 * @return array An array of metric identifiers (strings) supported by
+	 *   this plugin.
 	 */
 	function getMetricTypes() {
-		return null;
+		return array();
 	}
 
 	/**

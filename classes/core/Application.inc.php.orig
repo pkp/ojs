@@ -212,6 +212,7 @@ class Application extends PKPApplication {
 		return $help;
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Get the top-level context DAO.
 	 */
@@ -237,7 +238,7 @@ class Application extends PKPApplication {
 				WORKFLOW_STAGE_ID_EDITING,
 				WORKFLOW_STAGE_ID_PRODUCTION
 		);
-	}
+=======
 
 
 	//
@@ -451,6 +452,7 @@ class Application extends PKPApplication {
 		}
 
 		return $metricType;
+>>>>>>> 8724d18... [OJS.de - OA-S II - ap 5: metrics API] implement report generator backend
 	}
 }
 
