@@ -20,62 +20,6 @@
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="submissionsFormNotification"}
 {include file="controllers/tab/settings/wizardMode.tpl" wizardMode=$wizardMode}
 
-<div id="reviewProcess">
-<h4>{translate key="manager.setup.reviewProcess"}</h4>
-
-<p>{translate key="manager.setup.reviewProcessDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-0" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="mailSubmissionsToReviewers-0"><strong>{translate key="manager.setup.reviewProcessStandard"}</strong></label>
-			<br />
-			<span class="instruct">{translate key="manager.setup.reviewProcessStandardDescription"}</span>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-1" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="mailSubmissionsToReviewers-1"><strong>{translate key="manager.setup.reviewProcessEmail"}</strong></label>
-			<br />
-			<span class="instruct">{translate key="manager.setup.reviewProcessEmailDescription"}</span>
-		</td>
-	</tr>
-</table>
-</div>
-<div id="reviewOptions">
-<h4>{translate key="manager.setup.reviewOptions"}</h4>
-
-	<script>
-		{literal}
-			function toggleAllowSetInviteReminder(form) {
-				form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
-			}
-			function toggleAllowSetSubmitReminder(form) {
-				form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
-			}
-		{/literal}
-	</script>
-
-<p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewerAccess"}</strong><br/>
-	<input type="checkbox" name="reviewerAccessKeysEnabled" id="reviewerAccessKeysEnabled" value="1"{if $reviewerAccessKeysEnabled} checked="checked"{/if} />&nbsp;
-	<label for="reviewerAccessKeysEnabled">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}</label><br/>
-	<span class="instruct">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</span><br/>
-	<input type="checkbox" name="restrictReviewerFileAccess" id="restrictReviewerFileAccess" value="1"{if $restrictReviewerFileAccess} checked="checked"{/if} />&nbsp;
-	<label for="restrictReviewerFileAccess">{translate key="manager.setup.reviewOptions.restrictReviewerFileAccess"}</label>
-</p>
-
-</div>
-</div>
 
 <div class="separator"></div>
 

@@ -20,9 +20,6 @@ class SubmissionsForm extends ContextSettingsForm {
 	 */
 	function SubmissionsForm($wizardMode = false) {
 		$settings = array(
-			'restrictReviewerFileAccess' => 'bool',
-			'reviewerAccessKeysEnabled' => 'bool',
-			'mailSubmissionsToReviewers' => 'bool',
 			'authorSelectsEditor' => 'bool',
 			'notifyAllAuthorsOnDecision' => 'bool',
 			'pubFreqPolicy' => 'string',
