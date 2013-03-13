@@ -21,7 +21,6 @@ class SubmissionsForm extends ContextSettingsForm {
 	function SubmissionsForm($wizardMode = false) {
 		$settings = array(
 			'authorSelectsEditor' => 'bool',
-			'notifyAllAuthorsOnDecision' => 'bool',
 			'pubFreqPolicy' => 'string',
 			'copyeditInstructions' => 'string',
 			'layoutInstructions' => 'string',

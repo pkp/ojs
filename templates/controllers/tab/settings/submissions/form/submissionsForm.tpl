@@ -23,13 +23,6 @@
 
 <div class="separator"></div>
 
-<div id="editorDecision">
-<h3>2.4 {translate key="manager.setup.editorDecision"}</h3>
-
-<p><input type="checkbox" name="notifyAllAuthorsOnDecision" id="notifyAllAuthorsOnDecision" value="1"{if $notifyAllAuthorsOnDecision} checked="checked"{/if} /> <label for="notifyAllAuthorsOnDecision">{translate key="manager.setup.notifyAllAuthorsOnDecision"}</label></p>
-</div>
-<div class="separator"></div>
-
 <div id="competingInterests">
 <h3>3.3 {translate key="manager.setup.competingInterests"}</h3>
 

@@ -342,7 +342,6 @@
 	<message key="manager.setup.notifications.copySpecifiedAddress">Send a copy to this email address</message>
 	<message key="manager.setup.notifications.description">On completing the submission process, authors are automatically sent an acknowledgement email (which can be viewed and edited in Emails). In addition, a copy of the acknowledgement email can be sent as follows:</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></message>
-	<message key="manager.setup.notifyAllAuthorsOnDecision">When using the Notify Author email, include the email addresses of all co-authors for multiple-author submissions, and not just the submitting user.</message>
 	<message key="manager.setup.numPageLinks">Page links</message>
 	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
