@@ -30,22 +30,6 @@
 </div>
 <div class="separator"></div>
 
-<div id="authorCopyrightNotice">
-<h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
-
-<table class="data">
-	<tr>
-		<td class="label">
-			<input type="checkbox" name="includeCreativeCommons" id="includeCreativeCommons" value="1"{if $includeCreativeCommons} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="includeCreativeCommons">{translate key="manager.setup.includeCreativeCommons"}</label>
-		</td>
-	</tr>
-</table>
-</div>
-<div class="separator"></div>
-
 <div id="competingInterests">
 <h3>3.3 {translate key="manager.setup.competingInterests"}</h3>
 

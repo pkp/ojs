@@ -35,7 +35,6 @@ class SubmissionsForm extends ContextSettingsForm {
 			'enablePublicSuppFileId' => 'bool',
 			'enablePageNumber' => 'bool',
 			'copyrightNotice' => 'string',
-			'includeCreativeCommons' => 'bool',
 			'copyrightNoticeAgree' => 'bool',
 			'requireAuthorCompetingInterests' => 'bool',
 			'requireReviewerCompetingInterests' => 'bool',

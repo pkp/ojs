@@ -57,9 +57,6 @@ class IndexHandler extends Handler {
 				IssueHandler::_setupIssueTemplate($request, $issue);
 			}
 
-			// Display creative commons logo/licence if enabled
-			$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
-
 			$enableAnnouncements = $journal->getSetting('enableAnnouncements');
 			if ($enableAnnouncements) {
 				$enableAnnouncementsHomepage = $journal->getSetting('enableAnnouncementsHomepage');

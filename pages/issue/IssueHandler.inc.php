@@ -62,8 +62,6 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = __('current.noCurrentIssue');
 		}
 
-		// Display creative commons logo/licence if enabled
-		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
@@ -87,8 +85,6 @@ class IssueHandler extends Handler {
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
 		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
-		// Display creative commons logo/licence if enabled
-		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
