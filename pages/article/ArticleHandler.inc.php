@@ -55,7 +55,7 @@ class ArticleHandler extends Handler {
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -250,7 +250,7 @@ class ArticleHandler extends Handler {
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		if (!$galley) {
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
@@ -508,8 +508,8 @@ class ArticleHandler extends Handler {
 		return true;
 	}
 
-	function setupTemplate() {
-		parent::setupTemplate();
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 	}
 }
