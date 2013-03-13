@@ -206,8 +206,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);
-				$author->setEscholSuffix($authors[$i]['escholSuffix'], null);
-				$author->setEscholCorporateName($authors[$i]['escholCorporateName'], null);
+				// following 2 fields are not properly implemented yet
+				//$author->setEscholSuffix($authors[$i]['escholSuffix'], null);
+				//$author->setEscholCorporateName($authors[$i]['escholCorporateName'], null);
 				$author->setAffiliation($authors[$i]['affiliation'], null);
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
