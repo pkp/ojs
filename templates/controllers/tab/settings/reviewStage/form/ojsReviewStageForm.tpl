@@ -14,12 +14,11 @@
 		<p>{translate key="manager.setup.reviewProcessDescription"}</p>
 
 		{fbvFormSection title="manager.setup.reviewProcessStandard" list=true}
-			{if !$mailSubmissionsToReviewers}{assign var="notMailSubmissionsToReviewers" value=1}{/if}
-			{fbvElement type="radio" id="mailSubmissionsToReviewers-0" name="mailSubmissionsToReviewers" value="0" checked=$notMailSubmissionsToReviewers label="manager.setup.reviewProcessStandardDescription"}
+			{fbvElement type="radio" id="mailSubmissionsToReviewers-0" name="mailSubmissionsToReviewers" value="0" checked=$mailSubmissionsToReviewers|compare:false label="manager.setup.reviewProcessStandardDescription"}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.setup.reviewProcessEmail" list=true}
-			{fbvElement type="radio" id="mailSubmissionsToReviewers-1" name="mailSubmissionsToReviewers" value="1" checked=$mailSubmissionsToReviewers label="manager.setup.reviewProcessEmailDescription"}
+			{fbvElement type="radio" id="mailSubmissionsToReviewers-1" name="mailSubmissionsToReviewers" value="1" checked=$mailSubmissionsToReviewers|compare:true label="manager.setup.reviewProcessEmailDescription"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 
