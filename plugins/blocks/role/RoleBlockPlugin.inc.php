@@ -65,39 +65,39 @@ class RoleBlockPlugin extends BlockPlugin {
 					// Block disabled for submission
 					return null;
 				default:
-					$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+					$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 					$submissionsCount = $authorSubmissionDao->getSubmissionsCount($userId, $journalId);
 					$templateMgr->assign('submissionsCount', $submissionsCount);
 					return 'author.tpl';
 			}
 			case 'copyeditor':
-				$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+				$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 				$submissionsCount = $copyeditorSubmissionDao->getSubmissionsCount($userId, $journalId);
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'copyeditor.tpl';
 			case 'layoutEditor':
-				$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+				$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 				$submissionsCount = $layoutEditorSubmissionDao->getSubmissionsCount($userId, $journalId);
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'layoutEditor.tpl';
 			case 'editor':
 				if ($request->getRequestedOp() == 'index') return null;
-				$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+				$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 				$submissionsCount =& $editorSubmissionDao->getEditorSubmissionsCount($journal->getId());
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'editor.tpl';
 			case 'sectionEditor':
-				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 				$submissionsCount =& $sectionEditorSubmissionDao->getSectionEditorSubmissionsCount($userId, $journalId);
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'sectionEditor.tpl';
 			case 'proofreader':
-				$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+				$proofreaderSubmissionDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
 				$submissionsCount = $proofreaderSubmissionDao->getSubmissionsCount($userId, $journalId);
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'proofreader.tpl';
 			case 'reviewer':
-				$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+				$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 				$submissionsCount = $reviewerSubmissionDao->getSubmissionsCount($userId, $journalId);
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 				return 'reviewer.tpl';

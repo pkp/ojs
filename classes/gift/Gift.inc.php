@@ -34,7 +34,7 @@ class Gift extends PKPGift {
 		if (!isset($locale)) $locale = AppLocale::getLocale();
 		switch ($this->getGiftType()){
 			case GIFT_TYPE_SUBSCRIPTION:
-				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getGiftAssocId());
 				if ($subscriptionType) {
 					return __('payment.type.gift', null, $locale) . ' ' . __('payment.type.gift.subscription', null, $locale) . ': ' . $subscriptionType->getName($locale) . ' - ' . $subscriptionType->getDurationYearsMonths($locale);

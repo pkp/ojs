@@ -47,12 +47,12 @@ class CommentHandler extends Handler {
 		$user =& $request->getUser();
 		$userId = isset($user)?$user->getId():null;
 
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$comment =& $commentDao->getById($commentId, $articleId, 2);
 
 		$journal =& $request->getJournal();
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_MANAGER);
 
 		if (!$comment) $comments =& $commentDao->getRootCommentsBySubmissionId($articleId, 1);
@@ -85,9 +85,9 @@ class CommentHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
 		$journal =& $request->getJournal();
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$parent =& $commentDao->getById($parentId, $articleId);
@@ -159,9 +159,9 @@ class CommentHandler extends Handler {
 		$user =& $request->getUser();
 		$userId = isset($user)?$user->getId():null;
 
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		if (!$roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_MANAGER)) {
 			$request->redirect(null, 'index');
 		}
@@ -182,13 +182,13 @@ class CommentHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		// Bring in comment constants
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 
 		$enableComments = $journal->getSetting('enableComments');
 

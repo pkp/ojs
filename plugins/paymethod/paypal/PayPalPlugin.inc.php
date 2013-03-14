@@ -197,7 +197,7 @@ class PayPalPlugin extends PaymethodPlugin {
 				// Check the confirmation response and handle as necessary.
 				if (strcmp($ret, 'VERIFIED') == 0) switch ($paymentStatus) {
 					case 'Completed':
-						$payPalDao =& DAORegistry::getDAO('PayPalDAO');
+						$payPalDao = DAORegistry::getDAO('PayPalDAO');
 						$transactionId = $request->getUserVar('txn_id');
 						if ($payPalDao->transactionExists($transactionId)) {
 							// A duplicate transaction was received; notify someone.
@@ -266,7 +266,7 @@ class PayPalPlugin extends PaymethodPlugin {
 
 							// Update queued amount if amount set by user (e.g. donation)
 							if ($queuedAmount == 0 && $grantedAmount > 0) {
-								$queuedPaymentDao =& DAORegistry::getDAO('QueuedPaymentDAO');
+								$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
 								$queuedPayment->setAmount($grantedAmount);
 								$queuedPayment->setCurrencyCode($grantedCurrency);
 								$queuedPaymentDao->updateQueuedPayment($queuedPaymentId, $queuedPayment);

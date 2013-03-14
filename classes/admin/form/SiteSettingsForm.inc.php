@@ -49,7 +49,7 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 	function initData() {
 		parent::initData();
 
-		$siteDao =& DAORegistry::getDAO('SiteDAO');
+		$siteDao = DAORegistry::getDAO('SiteDAO');
 		$site =& $siteDao->getSite();
 
 		$this->_data['useAlphalist'] = $site->getSetting('useAlphalist');

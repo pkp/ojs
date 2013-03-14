@@ -35,7 +35,7 @@ class CounterHandler extends Handler {
 		$this->setupTemplate();
 		$plugin =& $this->plugin;
 
-		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 		$years = $counterReportDao->getYears();
 
 		$templateManager =& TemplateManager::getManager($request);
@@ -69,9 +69,9 @@ class CounterHandler extends Handler {
 	function _assignTemplateCounterXML($templateManager, $begin, $end='') {
 		$journal =& Request::getJournal();
 		
-		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalIds = $counterReportDao->getJournalIds();
 
 		if ($end == '') $end = $begin;
@@ -91,7 +91,7 @@ class CounterHandler extends Handler {
 			$i++;
 		}
 
-		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
+		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO');
 		$siteTitle = $siteSettingsDao->getSetting('title',AppLocale::getLocale());
 
 		$base_url =& Config::getVar('general','base_url');
@@ -250,7 +250,7 @@ class CounterHandler extends Handler {
 		$begin = "$year-01-01";
 		$end = "$year-12-01";
 
-		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=counter-' . date('Ymd') . '.csv');
@@ -293,7 +293,7 @@ class CounterHandler extends Handler {
 		fputcsv($fp, $cols);
 
 		// Get statistics from the log.
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalIds = $counterReportDao->getJournalIds();
 		foreach ($journalIds as $journalId) {
 			$journal = $journalDao->getById($journalId);

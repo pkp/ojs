@@ -60,11 +60,11 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=subscriptions-' . date('Ymd') . '.csv');

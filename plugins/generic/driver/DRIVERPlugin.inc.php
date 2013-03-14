@@ -85,7 +85,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$records = array();
 		if (isset($set) && $set == 'driver') {
 			$journalId = $journalOAI->journalId;
-			$driverDao =& DAORegistry::getDAO('DRIVERDAO');
+			$driverDao = DAORegistry::getDAO('DRIVERDAO');
 			$driverDao->setOAI($journalOAI);
 			$records = $driverDao->getDRIVERRecords($journalId, $from, $until, $offset, $limit, $total);
 			return true;
@@ -109,7 +109,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$records = array();
 		if (isset($set) && $set == 'driver') {
 			$journalId = $journalOAI->journalId;
-			$driverDao =& DAORegistry::getDAO('DRIVERDAO');
+			$driverDao = DAORegistry::getDAO('DRIVERDAO');
 			$driverDao->setOAI($journalOAI);
 			$records = $driverDao->getDRIVERIdentifiers($journalId, $from, $until, $offset, $limit, $total);
 			return true;
@@ -150,7 +150,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$articleTombstone =& $params[0];
 
 		if ($this->isDRIVERArticle($articleTombstone->getJournalId(), $articleTombstone->getSubmissionId())) {
-			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
 			$submissionTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}
 		return false;
@@ -164,9 +164,9 @@ class DRIVERPlugin extends GenericPlugin {
 	function isDRIVERRecord($row) {
 		// if the article is alive
 		if (!isset($row['tombstone_id'])) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($row['article_id']);
@@ -204,7 +204,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 			return false;
 		} else {
-			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
 			return $submissionTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
 		}
 	}
@@ -216,9 +216,9 @@ class DRIVERPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isDRIVERArticle($journalId, $articleId) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($journalId);
 			$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);

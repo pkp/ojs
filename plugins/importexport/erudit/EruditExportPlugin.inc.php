@@ -50,9 +50,9 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
@@ -69,7 +69,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			default:
 				// Display a list of articles for export
 				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest(), $this->getRequest(), $this->getRequest(), $this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
@@ -111,11 +111,11 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$articleId = array_shift($args);
 		$galleyLabel = array_shift($args);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

@@ -114,7 +114,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
 		// Retrieve supp file data.
 		$this->registerDaoHook('SuppFileDAO');
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 		$suppFiles = array();
 		foreach($allArticles as $article) {
 			// Retrieve supp files for the article.
@@ -308,7 +308,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	 */
 	function &_getUnregisteredSuppFiles(&$journal) {
 		// Retrieve all supp files that have not yet been registered.
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 		$suppFiles = $suppFileDao->getSuppFilesBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, null, $journal->getId());
 
 		// Retrieve issues and articles for supp files.
@@ -362,7 +362,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 			if ($cache->isCached('articles', $articleId)) {
 				$article =& $cache->get('articles', $articleId);
 			} else {
-				$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+				$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
 				$article =& $articleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
 			}
 			assert(is_a($article, 'PublishedArticle'));

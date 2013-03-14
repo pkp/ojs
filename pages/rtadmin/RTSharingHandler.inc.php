@@ -30,7 +30,7 @@ class RTSharingHandler extends RTAdminHandler {
 			$this->setupTemplate($request, true);
 			$templateMgr =& TemplateManager::getManager($request);
 
-			$rtDao =& DAORegistry::getDAO('RTDAO');
+			$rtDao = DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$templateMgr->assign('sharingEnabled', $rt->getSharingEnabled());
@@ -58,7 +58,7 @@ class RTSharingHandler extends RTAdminHandler {
 		$journal = $request->getJournal();
 
 		if ($journal) {
-			$rtDao =& DAORegistry::getDAO('RTDAO');
+			$rtDao = DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$rt->setSharingEnabled($request->getUserVar('sharingEnabled'));

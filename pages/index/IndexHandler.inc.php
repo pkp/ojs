@@ -34,7 +34,7 @@ class IndexHandler extends Handler {
 
 		$router =& $request->getRouter();
 		$templateMgr =& TemplateManager::getManager($request);
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
 		$journal =& $router->getContext($request);
 		if ($journal) {
@@ -62,7 +62,7 @@ class IndexHandler extends Handler {
 				$enableAnnouncementsHomepage = $journal->getSetting('enableAnnouncementsHomepage');
 				if ($enableAnnouncementsHomepage) {
 					$numAnnouncementsHomepage = $journal->getSetting('numAnnouncementsHomepage');
-					$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+					$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 					$announcements =& $announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $numAnnouncementsHomepage);
 					$templateMgr->assign('announcements', $announcements);
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
@@ -70,7 +70,7 @@ class IndexHandler extends Handler {
 			}
 
 			// Include any social media items that are configured for the press itself.
-			$socialMediaDao =& DAORegistry::getDAO('SocialMediaDAO');
+			$socialMediaDao = DAORegistry::getDAO('SocialMediaDAO');
 			$socialMedia =& $socialMediaDao->getEnabledForContextByContextId($journal->getId());
 			$blocks = array();
 			while ($media = $socialMedia->next()) {

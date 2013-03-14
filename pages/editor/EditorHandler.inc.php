@@ -47,8 +47,8 @@ class EditorHandler extends SectionEditorHandler {
 		$journalId = $journal->getId();
 		$user =& $request->getUser();
 
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
 		$templateMgr->assign('sectionOptions', array(0 => AppLocale::Translate('editor.allSections')) + $sections);
@@ -164,8 +164,8 @@ class EditorHandler extends SectionEditorHandler {
 		$journalId = $journal->getId();
 		$user =& $request->getUser();
 
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journalId);
@@ -342,7 +342,7 @@ class EditorHandler extends SectionEditorHandler {
 		$article = $articleDao->getById($articleId);
 
 		if ($article && $article->getJournalId() === $journal->getId()) {
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 
 			while($editAssignment = $editAssignments->next()) {
@@ -370,7 +370,7 @@ class EditorHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$editId = (int) array_shift($args);
 
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignment =& $editAssignmentDao->getEditAssignment($editId);
 
 		if ($editAssignment) {
@@ -396,7 +396,7 @@ class EditorHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$articleId = $request->getUserVar('articleId');
 		$editorId = $request->getUserVar('editorId');
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$isSectionEditor = $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_SECTION_EDITOR);
 		$isEditor = $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_EDITOR);
@@ -432,7 +432,7 @@ class EditorHandler extends SectionEditorHandler {
 			}
 
 			$rangeInfo = $this->getRangeInfo($request, 'editors');
-			$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+			$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 
 			if (isset($args[0]) && $args[0] === 'editor') {
 				$roleName = 'user.role.editor';
@@ -451,10 +451,10 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('rolePath', $rolePath);
 			$templateMgr->assign('articleId', $articleId);
 
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$sectionEditorSections =& $sectionDao->getEditorSections($journal->getId());
 
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editorStatistics = $editAssignmentDao->getEditorStatistics($journal->getId());
 
 			$templateMgr->assign_by_ref('editorSections', $sectionEditorSections);

@@ -37,7 +37,7 @@ class IssueGalleyForm extends Form {
 		$this->setIssueId($issueId);
 
 		if (isset($galleyId) && !empty($galleyId)) {
-			$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 			$galley =& $galleyDao->getGalley($galleyId, $issueId);
 			$this->setGalley($galley);
 		}
@@ -146,7 +146,7 @@ class IssueGalleyForm extends Form {
 	function validate() {
 		// Check if public galley ID is already being used
 		$journal =& Request::getJournal();
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->getGalleyId())) {
@@ -194,7 +194,7 @@ class IssueGalleyForm extends Form {
 	function execute($fileName = null) {
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($this->getIssueId());
-		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
 		$journal =& Request::getJournal();
@@ -264,7 +264,7 @@ class IssueGalleyForm extends Form {
 
 			if ($enablePublicGalleyId) {
 				// Ensure the assigned public id doesn't already exist
-				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;

@@ -31,7 +31,7 @@ class LayoutEditorAction extends Action {
 	 * @param $direction char u = up, d = down
 	 */
 	function orderGalley($article, $galleyId, $direction) {
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 
 		if (isset($galley)) {
@@ -49,7 +49,7 @@ class LayoutEditorAction extends Action {
 	function deleteGalley($article, $galleyId) {
 		import('classes.file.ArticleFileManager');
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 
 		if (isset($galley) && !HookRegistry::call('LayoutEditorAction::deleteGalley', array(&$article, &$galley))) {
@@ -82,7 +82,7 @@ class LayoutEditorAction extends Action {
 	 */
 	function deleteArticleImage($submission, $fileId, $revision) {
 		import('classes.file.ArticleFileManager');
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if (HookRegistry::call('LayoutEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
 		foreach ($submission->getGalleys() as $galley) {
 			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
@@ -103,7 +103,7 @@ class LayoutEditorAction extends Action {
 	 * @param $direction char u = up, d = down
 	 */
 	function orderSuppFile($article, $suppFileId, $direction) {
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 
 		if (isset($suppFile)) {
@@ -119,7 +119,7 @@ class LayoutEditorAction extends Action {
 	 * @param $suppFileId int
 	 */
 	function deleteSuppFile($article, $suppFileId) {
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 		if (isset($suppFile) && !HookRegistry::call('LayoutEditorAction::deleteSuppFile', array(&$article, &$suppFile))) {
 			if ($suppFile->getFileId()) {
@@ -148,8 +148,8 @@ class LayoutEditorAction extends Action {
 	 * @param $request object
 	 */
 	function completeLayoutEditing($submission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
@@ -210,8 +210,8 @@ class LayoutEditorAction extends Action {
 	function uploadLayoutVersion($submission) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getId());
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 
@@ -351,9 +351,9 @@ class LayoutEditorAction extends Action {
 	function downloadFile($article, $fileId, $revision = null) {
 		$canDownload = false;
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$suppDao =& DAORegistry::getDAO('SuppFileDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$suppDao = DAORegistry::getDAO('SuppFileDAO');
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
 		if ($layoutSignoff->getFileId() == $fileId) {

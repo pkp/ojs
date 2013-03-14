@@ -102,7 +102,7 @@ class IssueHandler extends Handler {
 		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
@@ -336,7 +336,7 @@ class IssueHandler extends Handler {
 						}
 
 						// If the issue galley has been purchased, then allow reader access
-						$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
 						if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issueId) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
 							return true;
@@ -380,7 +380,7 @@ class IssueHandler extends Handler {
 		$issue =& $this->getIssue();
 		$galley =& $this->getGalley();
 
-		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		if (!$request->isBot()) $galleyDao->incrementViews($galley->getId());
 
 		if (!HookRegistry::call('IssueHandler::viewFile', array(&$issue, &$galley))) {
@@ -427,12 +427,12 @@ class IssueHandler extends Handler {
 				$showToc = false;
 			} else {
 				// Issue galleys
-				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 				$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
 				$templateMgr->assign_by_ref('issueGalleys', $issueGalleys);
 
 				// Published articles
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 
 				$publicFileManager = new PublicFileManager();
@@ -459,7 +459,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('issueExpiryPartial', $partial);
 
 				// Partial subscription expiry for articles
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
 
 				$articleExpiryPartial = array();

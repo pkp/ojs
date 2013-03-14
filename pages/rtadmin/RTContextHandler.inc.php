@@ -27,7 +27,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$versionId = isset($args[0])?$args[0]:0;
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
@@ -49,7 +49,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'contexts');
 
 		$versionId = isset($args[0])?$args[0]:0;
@@ -75,7 +75,7 @@ class RTContextHandler extends RTAdminHandler {
 	function editContext($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -98,7 +98,7 @@ class RTContextHandler extends RTAdminHandler {
 	function deleteContext($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -116,7 +116,7 @@ class RTContextHandler extends RTAdminHandler {
 	function saveContext($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -137,7 +137,7 @@ class RTContextHandler extends RTAdminHandler {
 	function moveContext($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;

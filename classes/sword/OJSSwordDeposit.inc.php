@@ -51,10 +51,10 @@ class OJSSwordDeposit {
 			'deposit.zip'
 		);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$this->journal = $journalDao->getById($article->getJournalId());
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$this->section = $sectionDao->getById($article->getSectionId());
 
 		$this->article = $article;
@@ -123,7 +123,7 @@ class OJSSwordDeposit {
 		}
 
 		// If that didn't work, try the Editor Version.
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($this->article->getId());
 		$file =& $sectionEditorSubmission->getEditorFile();
 		if ($file) {

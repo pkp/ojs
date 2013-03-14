@@ -38,7 +38,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId);
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		import('classes.submission.proofreader.ProofreaderAction');
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_LAYOUT');
@@ -59,7 +59,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
 		$templateMgr->assign('templates', $journal->getSetting('templates'));
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -168,7 +168,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		} else {
 			// View galley only
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 			if (!isset($galley)) {
@@ -302,7 +302,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('classes.file.ArticleFileManager'); // FIXME
@@ -374,7 +374,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$submitForm->display();
 		} else {
 			// View supplementary file only
-			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 			$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 			if (!isset($suppFile)) {

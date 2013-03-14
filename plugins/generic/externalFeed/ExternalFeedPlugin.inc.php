@@ -152,7 +152,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$requestedPage = $request->getRequestedPage();
 
 			if (empty($requestedPage) || $requestedPage == 'index') {
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 				$this->import('simplepie.SimplePie');
 
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
@@ -252,7 +252,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			case 'delete':
 				if (!empty($args)) {
 					$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
-					$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+					$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
 					// Ensure externalFeed is for this journal
 					if ($externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) {
@@ -263,7 +263,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				return true;
 			case 'move':
 				$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
 				// Ensure externalFeed is valid and for this journal
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId)) {
@@ -284,7 +284,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			case 'create':
 			case 'edit':
 				$externalFeedId = !isset($args) || empty($args) ? null : (int) $args[0];
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
 				// Ensure externalFeed is valid and for this journal
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || ($externalFeedId == null)) {
@@ -296,7 +296,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 						$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');
 					}
 
-					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 					$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 					$externalFeedForm = new ExternalFeedForm($this, $externalFeedId, $journalId);
@@ -313,7 +313,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				return true;
 			case 'update':
 				$externalFeedId = $this->getRequest()->getUserVar('feedId') == null ? null : (int) $this->getRequest()->getUserVar('feedId');
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
 				if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
 
@@ -336,7 +336,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 							$templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.editTitle');
 						}
 
-						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+						$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 						$templateMgr->assign('journalSettings', $journalSettings);
@@ -363,7 +363,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			default:
 				$this->import('ExternalFeed');
 				$rangeInfo =& Handler::getRangeInfo($this->getRequest(), 'feeds');
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);
 

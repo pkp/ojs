@@ -329,7 +329,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Journal.
 		if (is_array($result)) {
 			$journalPath = array_shift($args);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getByPath($journalPath);
 			if (!$journal) {
 				if ($journalPath != '') {
@@ -476,7 +476,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @return DAOResultFactory
 	 */
 	function getAllPublishedArticles(&$journal) {
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 		$articleIterator = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
 
 		// Return articles from published issues only.
@@ -845,7 +845,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// and the field will "stealthily" survive even
 		// when the DAO does not know about it.
 		$this->registerDaoHook($daoName);
-		$dao =& DAORegistry::getDAO($daoName);
+		$dao = DAORegistry::getDAO($daoName);
 		$object->setData($this->getPluginId() . '::' . DOI_EXPORT_REGDOI, $registeredDoi);
 		$dao->$daoMethod($object);
 	}
@@ -1053,7 +1053,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Retrieve galley data.
 		$this->registerDaoHook('ArticleGalleyDAO');
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleys = array();
 		foreach($allArticles as $article) {
 			// Retrieve galleys for the article.
@@ -1132,7 +1132,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function &_getUnregisteredArticles(&$journal) {
 		// Retrieve all published articles that have not yet been registered.
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 		$articles = $publishedArticleDao->getBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, $journal->getId());
 
 		// Retrieve issues for articles.
@@ -1154,7 +1154,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function &_getUnregisteredGalleys(&$journal) {
 		// Retrieve all galleys that have not yet been registered.
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleys = $galleyDao->getGalleysBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, null, $journal->getId());
 
 		// Retrieve issues, articles and language for galleys.
@@ -1187,7 +1187,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		}
 
 		// Add the galley language.
-		$languageDao =& DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
+		$languageDao = DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
 		$galleyData['language'] =& $languageDao->getLanguageByCode(AppLocale::getIso1FromLocale($galley->getLocale()));
 
 		// Add the galley itself.
@@ -1213,7 +1213,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$article = null;
 		if (!$cache->isCached('articles', $articleId)) {
 			$nullVar = null;
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
 			if (!is_a($article, 'PublishedArticle')) {
 				// It seems that the article ID we got does not belong to a
@@ -1381,7 +1381,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Instantiate the correct DAO.
 		list($daoName, $daoMethod) = $this->getDaoName($exportType);
-		$dao =& DAORegistry::getDAO($daoName);
+		$dao = DAORegistry::getDAO($daoName);
 		$daoMethod = array($dao, $daoMethod);
 
 		$objects = array();

@@ -24,7 +24,7 @@ class ProofreaderAction extends Action {
 	 * Select a proofreader for submission
 	 */
 	function selectProofreader($userId, $article, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getId());
 
 		if (!HookRegistry::call('ProofreaderAction::selectProofreader', array(&$userId, &$article))) {
@@ -33,7 +33,7 @@ class ProofreaderAction extends Action {
 
 			// Add log entry
 			$user =& Request::getUser();
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			$proofreader =& $userDao->getById($userId);
 			if (!isset($proofreader)) return;
 			import('classes.article.log.ArticleLog');
@@ -51,10 +51,10 @@ class ProofreaderAction extends Action {
 	 * @return true iff ready for a redirect
 	 */
 	function proofreadEmail($articleId, $mailType, $request, $actionPath = '') {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 		$ccs = array();
@@ -362,7 +362,7 @@ class ProofreaderAction extends Action {
 	 * @param $signoffType int
 	 */
 	function proofreadingUnderway(&$submission, $signoffType) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $submission->getId());
 
 		if (!$signoff->getDateUnderway() && $signoff->getDateNotified() && !HookRegistry::call('ProofreaderAction::proofreadingUnderway', array(&$submission, &$signoffType))) {

@@ -63,7 +63,7 @@ class AuthorSubmitForm extends Form {
 		}
 
 		$journal =& $this->request->getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getSettings($journal->getId()));
 
 		parent::display();
@@ -87,8 +87,8 @@ class AuthorSubmitForm extends Form {
 		$sectionId = $article->getSectionId();
 		$journal =& $this->request->getJournal();
 
-		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $sectionId);
 
 		foreach ($sectionEditors as $sectionEditorEntry) {

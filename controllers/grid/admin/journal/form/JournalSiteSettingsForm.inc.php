@@ -34,7 +34,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	 */
 	function initData() {
 		if (isset($this->contextId)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($this->contextId);
 
 			parent::initData($journal);
@@ -50,7 +50,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		parent::readInputData();
 
 		if ($this->contextId) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($this->contextId);
 			if ($journal) $this->setData('oldPath', $journal->getPath());
 		}
@@ -61,7 +61,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	 * @param $request PKPRequest
 	 */
 	function execute($request) {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->contextId)) {
 			$journal = $journalDao->getById($this->contextId);
@@ -100,7 +100,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 				$role->setUserId($userSession->getUserId());
 				$role->setRoleId(ROLE_ID_MANAGER);
 
-				$roleDao =& DAORegistry::getDAO('RoleDAO');
+				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);
 			}
 
@@ -113,7 +113,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$fileManager->mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
 
 			// Install default journal settings
-			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			$names = $this->getData('name');
 			AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_APP_COMMON);
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
@@ -129,7 +129,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journalRtAdmin->restoreVersions(false);
 
 			// Create a default "Articles" section
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section = new Section();
 			$section->setJournalId($journal->getId());
 			$section->setTitle(__('section.default.title'), $journal->getPrimaryLocale());

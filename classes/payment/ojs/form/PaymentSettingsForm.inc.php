@@ -131,7 +131,7 @@ class PaymentSettingsForm extends Form {
 	 */
 	function save() {
 		$journal =& Request::getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		foreach ($this->_data as $name => $value) {
 			$isLocalized = in_array($name, $this->getLocaleFieldNames());

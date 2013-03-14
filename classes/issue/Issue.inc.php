@@ -685,7 +685,7 @@ class Issue extends DataObject {
 	 * @return int
 	 */
 	function getNumArticles() {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getNumArticles($this->getId());
 	}
 
@@ -699,7 +699,7 @@ class Issue extends DataObject {
 	function getBestIssueId($journal = null) {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($this->getJournalId());
 		}
 

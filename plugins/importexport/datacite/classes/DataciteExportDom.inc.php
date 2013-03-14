@@ -270,7 +270,7 @@ class DataciteExportDom extends DOIExportDom {
 		$cache =& $this->getCache();
 		$articleId = $article->getId();
 		if (!$cache->isCached('suppFilesByArticle', $articleId)) {
-			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+			$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 			$suppFiles =& $suppFileDao->getSuppFilesByArticle($articleId);
 			foreach($suppFiles as $suppFile) {
 				$cache->add($suppFile, $article);
@@ -727,7 +727,7 @@ class DataciteExportDom extends DOIExportDom {
 	function &_sizesElement(&$object, &$article) {
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 				$files =& $issueGalleyDao->getGalleysByIssue($object->getId());
 				break;
 

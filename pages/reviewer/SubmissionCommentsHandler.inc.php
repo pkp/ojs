@@ -104,7 +104,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		ReviewerAction::saveComment($article, $this->comment, $emailComment, $request);
 
 		// Refresh the comment
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page

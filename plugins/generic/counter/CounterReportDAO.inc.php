@@ -171,7 +171,7 @@ class CounterReportDAO extends DAO {
 		$fp = fopen($file, 'r');
 		if (!$fp) return true;
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals();
 		$journalUrlMap = array();
 		while ($journal = $journals->next()) {

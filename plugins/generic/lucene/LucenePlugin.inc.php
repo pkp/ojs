@@ -277,7 +277,7 @@ class LucenePlugin extends GenericPlugin {
 							$journal = null;
 							$journalId = $request->getUserVar('journalToReindex');
 							if (!empty($journalId)) {
-								$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+								$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 								$journal = $journalDao->getById($journalId);
 								if (!is_a($journal, 'Journal')) $journal = null;
 							}
@@ -454,7 +454,7 @@ class LucenePlugin extends GenericPlugin {
 		// Configure custom ranking.
 		$customRanking = (boolean)$this->getSetting(0, 'customRanking');
 		if ($customRanking) {
-			$sectionDao =& DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 			if (is_a($journal, 'Journal')) {
 				$sections = $sectionDao->getByJournalId($journal->getId());
 			} else {
@@ -989,7 +989,7 @@ class LucenePlugin extends GenericPlugin {
 				unset($journal);
 			// ...or for all journals.
 			} else {
-				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 				$journalIterator =& $journalDao->getJournals();
 				$journals = $journalIterator->toArray();
 			}

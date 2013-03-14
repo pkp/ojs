@@ -37,14 +37,14 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function OAIDAO() {
 		parent::PKPOAIDAO();
-		$this->journalDao =& DAORegistry::getDAO('JournalDAO');
-		$this->sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$this->publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$this->articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->issueDao =& DAORegistry::getDAO('IssueDAO');
-		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$this->journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$this->journalDao = DAORegistry::getDAO('JournalDAO');
+		$this->sectionDao = DAORegistry::getDAO('SectionDAO');
+		$this->publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->issueDao = DAORegistry::getDAO('IssueDAO');
+		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		$this->journalCache = array();
 		$this->sectionCache = array();
@@ -119,7 +119,7 @@ class OAIDAO extends PKPOAIDAO {
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 
-			$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+			$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
 			$articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
 
 			$sections = $this->sectionDao->getByJournalId($journal->getId());

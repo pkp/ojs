@@ -66,23 +66,23 @@ class OJSQueuedPayment extends QueuedPayment {
 	 * @return string
 	 */
 	function getName() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
 				} else {
-					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
-				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 				return __('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
@@ -129,7 +129,7 @@ class OJSQueuedPayment extends QueuedPayment {
 					return __('payment.type.publication');
 				}
 			case PAYMENT_TYPE_GIFT:
-				$giftDao =& DAORegistry::getDAO('GiftDAO');
+				$giftDao = DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($this->assocId);
 
 				// Try to return gift details in name
@@ -152,23 +152,23 @@ class OJSQueuedPayment extends QueuedPayment {
 	 * @return string
 	 */
 	function getDescription() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($this->getJournalId());
 
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
 				} else {
-					$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
-				$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 				return $subscriptionType->getSubscriptionTypeDescription();
 			case PAYMENT_TYPE_DONATION:
@@ -214,7 +214,7 @@ class OJSQueuedPayment extends QueuedPayment {
 					return __('payment.type.publication');
 				}
 			case PAYMENT_TYPE_GIFT:
-				$giftDao =& DAORegistry::getDAO('GiftDAO');
+				$giftDao = DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($this->assocId);
 
 				// Try to return gift details in description
@@ -222,7 +222,7 @@ class OJSQueuedPayment extends QueuedPayment {
 					import('classes.gift.Gift');
 
 					if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
-						$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+						$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
 
 						if ($subscriptionType) {

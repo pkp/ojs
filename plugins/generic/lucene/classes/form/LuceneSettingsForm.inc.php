@@ -171,7 +171,7 @@ class LuceneSettingsForm extends Form {
 		static $journalsToReindex;
 
 		if (is_null($journalsToReindex)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journalsToReindex = array(
 				'' => __('plugins.generic.lucene.settings.indexRebuildAllJournals')
 			);

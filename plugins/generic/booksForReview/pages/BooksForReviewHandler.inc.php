@@ -38,7 +38,7 @@ class BooksForReviewHandler extends Handler {
 		}			
 
 		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, BFR_STATUS_AVAILABLE, null, null, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -87,7 +87,7 @@ class BooksForReviewHandler extends Handler {
 
 		$bookId = !isset($args) || empty($args) ? null : (int) $args[0];
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is valid and for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {

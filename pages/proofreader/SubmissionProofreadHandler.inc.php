@@ -36,7 +36,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
-		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
 		$authors = $authorDao->getAuthorsBySubmissionId($articleId);
 
 		ProofreaderAction::proofreadingUnderway($this->submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
@@ -49,7 +49,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr->assign_by_ref('submission', $this->submission);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($this->submission->getId());
 		if ($publishedArticle) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -154,7 +154,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('classes.file.ArticleFileManager'); // FIXME

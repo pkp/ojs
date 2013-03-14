@@ -28,7 +28,7 @@ class PageRouter extends PKPPageRouter {
 	 * @param $request PKPRequest the request to be routed
 	 */
 	function redirectHome(&$request) {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$user = $request->getUser();
 		$userId = $user->getId();
 
@@ -45,7 +45,7 @@ class PageRouter extends PKPPageRouter {
 		} else {
 			// The user is at the site context, check to see if they are
 			// only registered in one place w/ one role
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getJournals();
 			$roles = $roleDao->getRolesByUserId($userId);
 

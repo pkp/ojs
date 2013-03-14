@@ -88,7 +88,7 @@ class GiftDAO extends PKPGiftDAO {
 		$giftSubscriptionTypeId = $gift->getGiftAssocId();
 
 		// Ensure subscription type exists and is for an individual subscription
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$giftSubscriptionType =& $subscriptionTypeDao->getSubscriptionType($giftSubscriptionTypeId);
 
 		if ($giftSubscriptionType) {
@@ -101,7 +101,7 @@ class GiftDAO extends PKPGiftDAO {
 			return GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID;
 		}
 
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$giftNonExpiring = $giftSubscriptionType->getNonExpiring();
 		$insert = false;
 

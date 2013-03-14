@@ -63,9 +63,9 @@ class CopyeditCommentForm extends CommentForm {
 	 */
 	function email() {
 		$article = $this->article;
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 
 		// Create list of recipients:
@@ -75,7 +75,7 @@ class CopyeditCommentForm extends CommentForm {
 		// excluding whomever posted the comment.
 
 		// Get editors
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($article->getId());
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();

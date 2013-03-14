@@ -64,7 +64,7 @@ class ArticleFile extends SubmissionFile {
 	 * @return boolean
 	 */
 	function isInlineable() {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		return $articleFileDao->isInlineable($this);
 	}
 

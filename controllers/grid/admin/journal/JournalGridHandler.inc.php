@@ -66,7 +66,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 */
 	function loadData(&$request) {
 		// Get all journals.
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getAll();
 
 		return $journals->toAssociativeArray();
@@ -147,7 +147,7 @@ class JournalGridHandler extends ContextGridHandler {
 
 		// Identify the journal Id.
 		$journalId = $request->getUserVar('rowId');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($journalId);
 
 		if ($journal) {

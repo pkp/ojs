@@ -74,7 +74,7 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionTitles);
 		$templateMgr->assign('sectionAbstractsRequired', $sectionAbstractsRequired);
 
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
@@ -170,9 +170,9 @@ class QuickSubmitForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$application =& PKPApplication::getApplication();
 		$request =& $this->request;
@@ -289,7 +289,7 @@ class QuickSubmitForm extends Form {
 					}
 				}
 
-				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$galleyDao->insertGalley($galley);
 			}
 
@@ -311,7 +311,7 @@ class QuickSubmitForm extends Form {
 
 
 		// Designate this as the review version by default.
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($articleId);
 		import('classes.submission.author.AuthorAction');
 		AuthorAction::designateReviewVersion($authorSubmission, true);
@@ -364,7 +364,7 @@ class QuickSubmitForm extends Form {
 		}
 
 		// Import the references list.
-		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 

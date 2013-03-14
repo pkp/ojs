@@ -44,7 +44,7 @@ class OpenAccessNotification extends ScheduledTask {
 			);
 			$email->assignParams($paramArray);
 
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
@@ -95,7 +95,7 @@ class OpenAccessNotification extends ScheduledTask {
 	}
 
 	function execute() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(true);
 
 		$todayDate = array(

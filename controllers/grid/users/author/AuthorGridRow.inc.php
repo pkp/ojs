@@ -46,8 +46,8 @@ class AuthorGridRow extends PKPAuthorGridRow {
 		$submission =& $this->getSubmission();
 
 		$user =& $request->getUser();
-		$stageAssignmentDao =& DAORegistry::getDAO('StageAssignmentDAO');
-		$userGroupDao =& DAORegistry::getDAO('UserGroupDAO');
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 
 		$stageAssignments =& $stageAssignmentDao->getBySubmissionAndStageId($submission->getId(), $submission->getStageId(), null, $user->getId());
 		while ($stageAssignment =& $stageAssignments->next()) {

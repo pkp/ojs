@@ -117,7 +117,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 */
 	function uploadImage($settingName, $locale) {
 		$journal =& Request::getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$faviconTypes = array('.ico', '.png', '.gif');
 
 		import('classes.file.PublicFileManager');
@@ -173,7 +173,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 */
 	function deleteImage($settingName, $locale = null) {
 		$journal =& Request::getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getId(), $settingName);
 
 		import('classes.file.PublicFileManager');
@@ -200,7 +200,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 */
 	function uploadStyleSheet($settingName) {
 		$journal =& Request::getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();

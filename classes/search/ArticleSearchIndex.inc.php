@@ -109,7 +109,7 @@ class ArticleSearchIndex {
 
 			if (isset($parser)) {
 				if ($parser->open()) {
-					$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+					$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 					$objectId = $searchDao->insertObject($articleId, $type, $fileId);
 
 					$position = 0;
@@ -142,7 +142,7 @@ class ArticleSearchIndex {
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
 			// Index supplementary files
-			$fileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$fileDao = DAORegistry::getDAO('SuppFileDAO');
 			$files =& $fileDao->getSuppFilesByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
@@ -153,7 +153,7 @@ class ArticleSearchIndex {
 			unset($files);
 
 			// Index galley files
-			$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			$files =& $fileDao->getGalleysByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
@@ -183,7 +183,7 @@ class ArticleSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+			$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 			return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
 		}
 	}
@@ -324,7 +324,7 @@ class ArticleSearchIndex {
 
 			// Clear index
 			if ($log) echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
-			$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+			$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 			$searchDao->clearIndex();
 			if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
@@ -363,7 +363,7 @@ class ArticleSearchIndex {
 	 * @param $position int
 	 */
 	function _indexObjectKeywords($objectId, $text, &$position) {
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$keywords =& $this->filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
@@ -380,7 +380,7 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function _updateTextIndex($articleId, $type, $text, $assocId = null) {
-		$searchDao =& DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
 		$this->_indexObjectKeywords($objectId, $text, $position);

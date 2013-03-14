@@ -70,7 +70,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// meta-data framework. We're using the OAIDAO here because it
 		// contains cached entities and avoids extra database access if this
 		// adapter is called from an OAI context.
-		$oaiDao =& DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
+		$oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
 		$journal =& $oaiDao->getJournal($article->getJournalId());
 		$section =& $oaiDao->getSection($article->getSectionId());
 		if (is_a($article, 'PublishedArticle')) { /* @var $article PublishedArticle */
@@ -142,7 +142,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Format
 		if (is_a($article, 'PublishedArticle')) {
-			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
 			$formats = array();
 			foreach ($galleys as $galley) {
@@ -177,7 +177,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$galleys = array();
 		$suppFiles = array();
 		if (is_a($article, 'PublishedArticle')) {
-			$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 			$galleys =& $articleGalleyDao->getGalleysByArticle($article->getId());
 			$suppFiles =& $article->getSuppFiles();
 		}

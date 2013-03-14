@@ -37,7 +37,7 @@ class IssueForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getLocaleFieldNames();
 	}
 
@@ -87,7 +87,7 @@ class IssueForm extends Form {
 
 		// check if public issue ID has already been used
 		$journal =& Request::getJournal();
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicIssueId = $this->getData('publicIssueId');
 		if ($publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $issueId)) {

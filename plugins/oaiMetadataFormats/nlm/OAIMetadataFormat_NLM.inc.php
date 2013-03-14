@@ -39,7 +39,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		static $issueId;
 		static $sectionSeq;
 		if (!isset($issueId) || $issueId != $issue->getId()) {
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$issueId = $issue->getId();
 			$sections = $sectionDao->getByIssueId($issueId);
 			$sectionSeq = array();
@@ -222,7 +222,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		if (!empty($text)) $response .= "\t<body><p>" . htmlspecialchars(Core::cleanVar(Core::cleanVar($text))) . "</p></body>\n";
 
 		// Add NLM citation info
-		$filterDao =& DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$nlmFilters = $filterDao->getObjectsByGroup('submission=>nlm23-article-xml');
 		assert(count($nlmFilters) == 1);
 		$nlmFilter = array_pop($nlmFilters);

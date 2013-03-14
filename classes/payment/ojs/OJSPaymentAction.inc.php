@@ -57,13 +57,13 @@ class OJSPaymentAction {
 	 */
 	function viewPayments($args, $request) {
 		$rangeInfo =& Handler::getRangeInfo($request, 'payments');
-		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
 		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
@@ -78,15 +78,15 @@ class OJSPaymentAction {
 	 * Display a single Completed payment
 	 */
 	function viewPayment($args, $request) {
-		$paymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPaymentId = $args[0];
 		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
 
 		$journal =& $request->getJournal();
 		$templateMgr =& TemplateManager::getManager($request);
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
 		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);

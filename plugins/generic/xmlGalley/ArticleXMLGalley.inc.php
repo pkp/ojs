@@ -159,7 +159,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		);
 
 		// Replace supplementary file references
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 		if ($suppFiles) {
@@ -215,7 +215,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// Replace supplementary file references
-			$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 			$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 			if ($suppFiles) {

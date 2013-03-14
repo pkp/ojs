@@ -174,7 +174,7 @@ class ThesisPlugin extends GenericPlugin {
 			case 'delete':
 				if (!empty($args)) {
 					$thesisId = (int) $args[0];
-					$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+					$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
 					// Ensure thesis is for this journal
 					if ($thesisDao->getThesisJournalId($thesisId) == $journal->getId()) {
@@ -186,7 +186,7 @@ class ThesisPlugin extends GenericPlugin {
 			case 'create':
 			case 'edit':
 				$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
-				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+				$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
 				// Ensure thesis is valid and for this journal
 				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || ($thesisId == null)) {
@@ -198,7 +198,7 @@ class ThesisPlugin extends GenericPlugin {
 						$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');
 					}
 
-					$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+					$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 					$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 
 					$thesisForm = new ThesisForm($this->getName(), $thesisId);
@@ -212,7 +212,7 @@ class ThesisPlugin extends GenericPlugin {
 			case 'update':
 				$this->import('ThesisForm');
 				$thesisId = $request->getUserVar('thesisId') == null ? null : (int) $request->getUserVar('thesisId');
-				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+				$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
 				if (($thesisId != null && $thesisDao->getThesisJournalId($thesisId) == $journal->getId()) || $thesisId == null) {
 
@@ -234,7 +234,7 @@ class ThesisPlugin extends GenericPlugin {
 							$templateMgr->assign('thesisTitle', 'plugins.generic.thesis.manager.editTitle');
 						}
 
-						$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+						$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 						$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 
 						$templateMgr->assign('journalSettings', $journalSettings);
@@ -260,7 +260,7 @@ class ThesisPlugin extends GenericPlugin {
 				}
 
 				$rangeInfo =& Handler::getRangeInfo($this->getRequest(), 'theses');
-				$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+				$thesisDao = DAORegistry::getDAO('ThesisDAO');
 				$theses =& $thesisDao->getThesesByJournalId($journal->getId(), $searchField, $search, $searchMatch, $dateFrom, $dateTo, null, $rangeInfo);
 
 				$templateMgr->assign('theses', $theses);

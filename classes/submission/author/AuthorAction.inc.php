@@ -35,7 +35,7 @@ class AuthorAction extends Action {
 	function designateReviewVersion($authorSubmission, $designate = false) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($authorSubmission->getId());
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
 			$submissionFile =& $authorSubmission->getSubmissionFile();
@@ -46,7 +46,7 @@ class AuthorAction extends Action {
 
 				$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
-				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 				$sectionEditorSubmissionDao->createReviewRound($authorSubmission->getId(), 1, 1);
 			}
 		}
@@ -62,8 +62,8 @@ class AuthorAction extends Action {
 		import('classes.file.ArticleFileManager');
 
 		$articleFileManager = new ArticleFileManager($article->getId());
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$articleFile =& $articleFileDao->getArticleFile($fileId, $revisionId, $article->getId());
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getId());
@@ -91,7 +91,7 @@ class AuthorAction extends Action {
 	function uploadRevisedVersion($authorSubmission, $request) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($authorSubmission->getId());
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -151,9 +151,9 @@ class AuthorAction extends Action {
 	 * @param $request object
 	 */
 	function completeAuthorCopyedit($authorSubmission, $send, $request) {
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
 		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
@@ -232,8 +232,8 @@ class AuthorAction extends Action {
 	 * Set that the copyedit is underway.
 	 */
 	function copyeditUnderway($authorSubmission) {
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
 		if ($authorSignoff->getDateNotified() != null && $authorSignoff->getDateUnderway() == null) {
@@ -251,9 +251,9 @@ class AuthorAction extends Action {
 	function uploadCopyeditVersion($authorSubmission, $copyeditStage) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($authorSubmission->getId());
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		// Authors cannot upload if the assignment is not active, i.e.
 		// they haven't been notified or the assignment is already complete.
@@ -354,7 +354,7 @@ class AuthorAction extends Action {
 	 * @param $request object
 	 */
 	function emailEditorDecisionComment($authorSubmission, $send, $request) {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -372,7 +372,7 @@ class AuthorAction extends Action {
 			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$email));
 			$email->send($request);
 
-			$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+			$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 			$articleComment = new ArticleComment();
 			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
 			$articleComment->setRoleId(ROLE_ID_AUTHOR);
@@ -522,8 +522,8 @@ class AuthorAction extends Action {
 	 * TODO: Complete list of files author has access to
 	 */
 	function downloadAuthorFile($article, $fileId, $revision = null) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getId());
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
@@ -567,7 +567,7 @@ class AuthorAction extends Action {
 			foreach ($authorSubmission->getReviewAssignments() as $roundReviewAssignments) {
 				foreach ($roundReviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getReviewerFileId() == $fileId) {
-						$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+						$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 						$articleFile =& $articleFileDao->getArticleFile($fileId, $revision);
 
@@ -593,7 +593,7 @@ class AuthorAction extends Action {
 			}
 
 			// Check current review version
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($article->getId());
 			$reviewFile = @$reviewFilesByRound[$article->getCurrentRound()];
 			if ($reviewFile && $fileId == $reviewFile->getFileId()) {

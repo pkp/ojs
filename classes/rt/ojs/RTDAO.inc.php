@@ -57,7 +57,7 @@ class RTDAO extends DAO {
 	}
 
 	function updateJournalRT(&$rt) {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($rt->getJournalId());
 
 		$journal->updateSetting('rtEnabled', $rt->getEnabled(), 'bool');

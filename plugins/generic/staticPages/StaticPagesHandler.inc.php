@@ -30,7 +30,7 @@ class StaticPagesHandler extends Handler {
 			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
 			$templateMgr =& TemplateManager::getManager($request);
 
-			$staticPagesDao =& DAORegistry::getDAO('StaticPagesDAO');
+			$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
 			$staticPage = $staticPagesDao->getStaticPageByPath($journalId, $path);
 
 			if ( !$staticPage ) {

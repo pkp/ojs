@@ -548,7 +548,7 @@ class IssueDAO extends DAO {
 
 		$issue = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
 		}
 

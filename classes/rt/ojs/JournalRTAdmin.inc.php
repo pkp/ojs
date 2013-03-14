@@ -29,7 +29,7 @@ class JournalRTAdmin extends RTAdmin {
 
 	function JournalRTAdmin($journalId) {
 		$this->journalId = $journalId;
-		$this->dao =& DAORegistry::getDAO('RTDAO');
+		$this->dao = DAORegistry::getDAO('RTDAO');
 	}
 
 	function restoreVersions($deleteBeforeLoad = true) {

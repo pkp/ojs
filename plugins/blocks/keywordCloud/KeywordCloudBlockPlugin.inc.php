@@ -35,7 +35,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 
 	function _cacheMiss(&$cache, $id) {
 		$keywordMap = array();
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($cache->getCacheId());
 		while ($publishedArticle = $publishedArticles->next()) {
 			$keywords = array_map('trim', explode(';', $publishedArticle->getLocalizedSubject()));

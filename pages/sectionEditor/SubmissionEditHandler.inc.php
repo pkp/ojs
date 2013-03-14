@@ -58,10 +58,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$user =& $request->getUser();
 
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getSettings($journal->getId());
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -81,7 +81,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));
 		if ($enableComments) {
 			import('classes.article.Article');
@@ -89,7 +89,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('commentsStatusOptions', Article::getCommentsStatusOptions());
 		}
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -103,7 +103,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$paymentManager = new OJSPaymentManager($request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
 			if ( $paymentManager->submissionEnabled() ) {
 				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDao->getSubmissionCompletedPayment ( $journal->getId(), $articleId ));
@@ -135,7 +135,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate($request);
 
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
 		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
 
@@ -143,7 +143,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$editorDecisions = $submission->getDecisions();
 		$numRounds = $submission->getCurrentRound();
 
-		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses = array();
 		if (isset($reviewAssignments[$numRounds-1])) {
 			foreach ($reviewAssignments[$numRounds-1] as $reviewAssignment) {
@@ -185,9 +185,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -212,7 +212,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// Parse the list of email logs and populate the array.
-		$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 		foreach ($emailLogEntries->toArray() as $emailLog) {
 			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
@@ -225,10 +225,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// get journal published review form titles
 		$reviewFormTitles =& $reviewFormDao->getTitlesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), 1);
 
-		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses = array();
 
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormTitles = array();
 
 		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
@@ -305,14 +305,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
 		$templateMgr->assign('isEditor', $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
 
@@ -324,7 +324,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
@@ -350,19 +350,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 
 		// Notes
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 		$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 
 		// Event log
-		$eventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+		$eventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
 		$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		unset($rangeInfo);
 
 		// Email log
-		$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
@@ -456,7 +456,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sortDirection = $request->getUserVar('sortDirection');
 		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		if ($reviewerId) {
 			// Assign reviewer to article
@@ -467,7 +467,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$this->setupTemplate($request);
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -487,7 +487,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo, $sort, $sortDirection); /* @var $reviewers DAOResultFactory */
 
 			$journal = $request->getJournal();
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 
 			$templateMgr =& TemplateManager::getManager($request);
 
@@ -577,7 +577,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.enrollment, manager.people.enroll
 		$submission =& $this->submission;
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
 		$user =& $request->getUser();
@@ -600,7 +600,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$search = $searchInitial;
 		}
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, false, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
@@ -634,7 +634,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
 		$users = $request->getUserVar('users');
@@ -738,11 +738,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
 			$userId = isset($args[1]) ? (int) $args[1] : 0;
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$submission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 			$round = $submission->getCurrentRound();
 
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignment($articleId, $userId, $submission->getCurrentRound()); /* @var $reviewAssignment ReviewAssignment */
 			if($reviewAssignment && !$reviewAssignment->getDateCompleted() && $reviewAssignment->getDeclined()) {
 				$reviewAssignment->setDeclined(false);
@@ -869,10 +869,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$this->setupTemplate($request);
 			$journal =& $request->getJournal();
 
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
-			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			$settings =& $settingsDao->getSettings($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager($request);
@@ -937,7 +937,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('currentUrl', $request->url(null, $request->getRequestedPage()));
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;
 		if (is_numeric($userId)) {
 			$userId = (int) $userId;
@@ -957,7 +957,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$site =& $request->getSite();
 			$journal =& $request->getJournal();
 
-			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$countryDao = DAORegistry::getDAO('CountryDAO');
 			$country = null;
 			if ($user->getCountry() != '') {
 				$country = $countryDao->getCountry($user->getCountry());
@@ -1043,11 +1043,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewFormId = (int) array_shift($args);
 
 		$journal =& $request->getJournal();
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
-		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -1094,9 +1094,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$journal =& $request->getJournal();
 			$rangeInfo = $this->getRangeInfo($request, 'reviewForms');
-			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+			$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 			$this->setupTemplate($request);
@@ -1139,7 +1139,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$redirectTarget = 'submissionReview';
 
@@ -1190,7 +1190,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		if ($roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_COPYEDITOR)) {
 			SectionEditorAction::selectCopyeditor($submission, $userId, $request);
@@ -1198,7 +1198,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$this->setupTemplate($request);
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -1442,7 +1442,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
 
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile =& $suppFileDao->getSuppFile($suppFileId, $articleId);
 		if (!$suppFile) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1471,7 +1471,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$suppFileId = (int) $request->getUserVar('fileId');
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 		if (isset($suppFile) && $suppFile != null) {
@@ -1677,8 +1677,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		if ($editorId && $roleDao->userHasRole($journal->getId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
 			SectionEditorAction::assignLayoutEditor($submission, $editorId, $request);
@@ -1700,7 +1700,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getId(), $searchType, $search, $searchMatch);
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getId());
 
 			$this->setupTemplate($request);
@@ -1794,7 +1794,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 		if (!$galley) {
 			$request->redirect(null, null, 'submissionEditing', $articleId);
@@ -1929,7 +1929,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('classes.file.ArticleFileManager'); // FIXME
@@ -2007,7 +2007,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 
 		if ($logId) {
-			$logDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+			$logDao = DAORegistry::getDAO('ArticleEventLogDAO');
 			$logEntry =& $logDao->getById($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		}
 
@@ -2017,7 +2017,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		} else {
 			$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
-			$eventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+			$eventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
 			$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
@@ -2033,7 +2033,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$logId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$logDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+		$logDao = DAORegistry::getDAO('ArticleEventLogDAO');
 		if ($logId) {
 			$logDao->deleteObject($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		} else {
@@ -2060,12 +2060,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		import('classes.file.ArticleFileManager');
 		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, SUBMISSION_FILE_ATTACHMENT));
 
 		if ($logId) {
-			$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+			$logDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 			$logEntry =& $logDao->getById($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		}
 
@@ -2075,7 +2075,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 
-			$emailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+			$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 			$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
@@ -2092,7 +2092,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$logId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$logDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		if ($logId) {
 			$logDao->deleteObject($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		} else {
@@ -2172,7 +2172,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$rangeInfo = $this->getRangeInfo($request, 'submissionNotes');
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 
 		// submission note edit
 		if ($noteViewType == 'edit') {
@@ -2253,8 +2253,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		if ($userId && $articleId && $roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
 			import('classes.submission.proofreader.ProofreaderAction');
@@ -2279,7 +2279,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getId(), $searchType, $search, $searchMatch);
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getId());
 
 			$templateMgr =& TemplateManager::getManager($request);
@@ -2355,7 +2355,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& $request->getUser();
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		if (!$signoff->getUserId()) {
 			$signoff->setUserId($user->getId());
@@ -2374,7 +2374,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function editorCompleteProofreader($args, $request) {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateCompleted(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
@@ -2425,7 +2425,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$user =& $request->getUser();
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 		if (!$signoff->getUserId()) {
 			$signoff->setUserId($user->getId());
@@ -2448,7 +2448,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateCompleted(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
@@ -2467,7 +2467,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate($request);
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoff->setDateUnderway(null);
@@ -2511,9 +2511,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -2590,7 +2590,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
 			// delete article tombstone
-			$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+			$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
 			$tombstoneDao->deleteByDataObjectId($submission->getId());
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
@@ -2615,7 +2615,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		if ($publishedArticle) {
 			$datePublished = $request->getUserDateVar('datePublished');

@@ -189,7 +189,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$records = array();
 		if (isset($set) && $set == 'ec_fundedresources') {
 			$journalId = $journalOAI->journalId;
-			$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+			$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 			$openAIREDao->setOAI($journalOAI);
 			$records = $openAIREDao->getOpenAIRERecords($journalId, $from, $until, $offset, $limit, $total);
 			return true;
@@ -213,7 +213,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$records = array();
 		if (isset($set) && $set == 'ec_fundedresources') {
 			$journalId = $journalOAI->journalId;
-			$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+			$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 			$openAIREDao->setOAI($journalOAI);
 			$records = $openAIREDao->getOpenAIREIdentifiers($journalId, $from, $until, $offset, $limit, $total);
 			return true;
@@ -228,7 +228,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$record =& $params[0];
 		$row = $params[1];
 
-		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+		$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 		if ($openAIREDao->isOpenAIRERecord($row)) {
 			$record->sets[] = 'ec_fundedresources';
 		}
@@ -242,7 +242,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$record =& $params[0];
 		$row = $params[1];
 
-		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+		$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 		if ($openAIREDao->isOpenAIRERecord($row)) {
 			$record->sets[] = 'ec_fundedresources';
 		}
@@ -259,7 +259,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$issue = $params[3];
 		$dc11Description =& $params[4];
 
-		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+		$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 		$openAIREDao->setOAI($journalOAI);
 		if ($openAIREDao->isOpenAIREArticle($article->getId())) {
 
@@ -341,9 +341,9 @@ class OpenAIREPlugin extends GenericPlugin {
 	function insertOpenAIREArticleTombstone($hookName, $params) {
 		$articleTombstone =& $params[0];
 
-		$openAIREDao =& DAORegistry::getDAO('OpenAIREDAO');
+		$openAIREDao = DAORegistry::getDAO('OpenAIREDAO');
 		if ($openAIREDao->isOpenAIREArticle($articleTombstone->getSubmissionId())) {
-			$submissionTombstoneSettingsDao =& DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
+			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
 			$submissionTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'openaire', true, 'bool');
 		}
 		return false;

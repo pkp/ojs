@@ -70,7 +70,7 @@ class CommentForm extends Form {
 	function display() {
 		$article = $this->article;
 
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$articleComments =& $articleCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
 
 		$templateMgr =& TemplateManager::getManager();
@@ -100,7 +100,7 @@ class CommentForm extends Form {
 	 * Add the comment.
 	 */
 	function execute() {
-		$commentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$article = $this->article;
 
 		// Insert new comment		
@@ -124,7 +124,7 @@ class CommentForm extends Form {
 	 */
 	function email($recipients, $request) {
 		$article = $this->article;
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$journal =& Request::getJournal();
 
 		import('classes.mail.ArticleMailTemplate');

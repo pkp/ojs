@@ -59,9 +59,9 @@ class ProofreadCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();	
 
 		// Create list of recipients:

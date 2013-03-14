@@ -47,7 +47,7 @@ class SectionForm extends Form {
 		// Retrieve/instantiate section.
 		$section = null;
 		if (is_numeric($sectionId)) {
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section =& $sectionDao->getById($sectionId, $journalId);
 		}
 		$this->section =& $section;
@@ -60,7 +60,7 @@ class SectionForm extends Form {
 		$this->includeSectionEditor = $this->omitSectionEditor = null;
 
 		// Get a list of section editors for this journal.
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$this->sectionEditors =& $roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getId());
 		$this->sectionEditors =& $this->sectionEditors->toArray();
 	}
@@ -95,7 +95,7 @@ class SectionForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		return $sectionDao->getLocaleFieldNames();
 	}
 
@@ -127,7 +127,7 @@ class SectionForm extends Form {
 	 */
 	function initData() {
 		$journal =& Request::getJournal();
-		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
 		$section =& $this->section;
 		if (is_a($section, 'Section')) {
 			$this->_data = array(
@@ -203,7 +203,7 @@ class SectionForm extends Form {
 
 		// We get the section DAO early on so that
 		// the section class will be imported.
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$section =& $this->section;
 		if (!is_a($section, 'Section')) {
@@ -243,7 +243,7 @@ class SectionForm extends Form {
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
-		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 		foreach ($this->sectionEditors as $key => $junk) {
 			$sectionEditor =& $this->sectionEditors[$key];

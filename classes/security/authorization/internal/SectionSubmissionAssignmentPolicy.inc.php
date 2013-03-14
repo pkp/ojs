@@ -48,7 +48,7 @@ class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
 		// that they have been explicitly assigned to.
 
 		// 1) Retrieve the edit assignments
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($sectionEditorSubmission->getId());
 		if (!is_a($editAssignments, 'DAOResultFactory')) return AUTHORIZATION_DENY;
 		$editAssignmentsArray =& $editAssignments->toArray();

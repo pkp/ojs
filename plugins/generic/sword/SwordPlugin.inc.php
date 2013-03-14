@@ -201,12 +201,12 @@ class SwordPlugin extends GenericPlugin {
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE:
-				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
+				$notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
 				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
 				$message = __('plugins.generic.sword.depositComplete', $notificationManager->getParamsForCurrentLocale($params));
 				break;
 			case NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE:
-				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
+				$notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
 				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
 				$message = __('plugins.generic.sword.automaticDepositComplete', $notificationManager->getParamsForCurrentLocale($params));
 				break;

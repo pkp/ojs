@@ -54,7 +54,7 @@ class LayoutEditorHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
-		$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -131,7 +131,7 @@ class LayoutEditorHandler extends Handler {
 		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
@@ -148,7 +148,7 @@ class LayoutEditorHandler extends Handler {
 		$this->setupTemplate($request);
 
 		$journal =& $request->getJournal();
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$sort = $request->getUserVar('sort');
@@ -187,7 +187,7 @@ class LayoutEditorHandler extends Handler {
 		$this->setupTemplate($request);
 
 		// set the date notified for this signoff so proofreading can no longer be initiated.
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 		$signoff->setDateNotified(Core::getCurrentDate());
 		$signoffDao->updateObject($signoff);
@@ -245,8 +245,8 @@ class LayoutEditorHandler extends Handler {
 			$journal =& $request->getJournal();
 			$user =& $request->getUser();
 
-			$layoutDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$layoutDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 			$submission =& $layoutDao->getSubmission($articleId, $journal->getId());
 
 			if (isset($submission)) {
@@ -278,7 +278,7 @@ class LayoutEditorHandler extends Handler {
 	 * @return boolean true if layout editor can modify the submission
 	 */
 	function _layoutEditingEnabled(&$submission) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$layoutEditorProofreadSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 

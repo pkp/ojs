@@ -41,7 +41,7 @@ class ReviewerHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
-		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
@@ -131,7 +131,7 @@ class ReviewerHandler extends Handler {
 		);
 
 		if ($accessKey) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			$user =& $userDao->getById($accessKey->getUserId(), false);
 			return $user;
 		}
@@ -162,7 +162,7 @@ class ReviewerHandler extends Handler {
 	 */
 	function validate($request, $reviewId = null) {
 		if ($reviewId !== null) {
-			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 			$journal =& $request->getJournal();
 			$user =& $request->getUser();
 

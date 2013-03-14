@@ -195,7 +195,7 @@ class StudentThesisForm extends Form {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
-		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$thesisDao = DAORegistry::getDAO('ThesisDAO');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 

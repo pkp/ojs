@@ -36,7 +36,7 @@ class SubscriptionTypeForm extends Form {
 			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
 		);
 
-		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
 		$currencies =& $currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {
@@ -82,7 +82,7 @@ class SubscriptionTypeForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getLocaleFieldNames();
 	}
 
@@ -103,7 +103,7 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->typeId)) {
-			$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
 
 			if ($subscriptionType != null) {
@@ -143,7 +143,7 @@ class SubscriptionTypeForm extends Form {
 	 * Save subscription type. 
 	 */
 	function execute() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journal =& Request::getJournal();
 
 		if (isset($this->typeId)) {

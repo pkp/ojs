@@ -35,7 +35,7 @@ class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
 		if ($submissionId === false) return AUTHORIZATION_DENY;
 
 		// Validate the section editor submission id.
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($submissionId);
 		if (!is_a($sectionEditorSubmission, 'SectionEditorSubmission')) return AUTHORIZATION_DENY;
 

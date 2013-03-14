@@ -35,7 +35,7 @@ class RTAdminHandler extends Handler {
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 		if ($journal) {
-			$rtDao =& DAORegistry::getDAO('RTDAO');
+			$rtDao = DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);
 			if (isset($rt)) {
 				$version = $rtDao->getVersion($rt->getVersion(), $journal->getId());
@@ -51,8 +51,8 @@ class RTAdminHandler extends Handler {
 			$templateMgr->display('rtadmin/index.tpl');
 		} elseif ($user) {
 			// Display a list of journals.
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 
 			$journals = array();
 
@@ -78,7 +78,7 @@ class RTAdminHandler extends Handler {
 	function validateUrls($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journal = $request->getJournal();
 
 		if (!$journal) {

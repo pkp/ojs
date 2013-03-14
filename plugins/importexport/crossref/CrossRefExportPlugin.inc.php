@@ -48,7 +48,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
 
@@ -93,7 +93,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				break;
 			case 'articles':
 				// Display a list of articles for export
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest, 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
@@ -187,8 +187,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getByIssueId($issue->getId()) as $section) {
@@ -236,11 +236,11 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

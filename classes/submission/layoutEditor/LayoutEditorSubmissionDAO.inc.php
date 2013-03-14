@@ -30,11 +30,11 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function LayoutEditorSubmissionDAO() {
 		parent::DAO();
 
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 	}
 
 	/**

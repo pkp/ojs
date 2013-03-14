@@ -73,7 +73,7 @@ class SettingsForm extends Form {
 		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 
 		$deletedBlocks = explode(':',$this->getData('deletedBlocks'));
 		foreach ($deletedBlocks as $deletedBlock) {

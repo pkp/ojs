@@ -24,7 +24,7 @@ class NoteDAO extends PKPNoteDAO {
 	 * Constructor
 	 */
 	function NoteDAO() {
-		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		parent::PKPNoteDAO();
 	}
 

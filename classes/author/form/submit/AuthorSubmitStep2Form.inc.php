@@ -53,7 +53,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get supplementary files for this article
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		if ($this->article->getSubmissionFileId() != null) {
 			$templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
 		}
@@ -69,7 +69,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		import('classes.file.ArticleFileManager');
 
 		$articleFileManager = new ArticleFileManager($this->articleId);
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			// upload new submission file, overwriting previous if necessary

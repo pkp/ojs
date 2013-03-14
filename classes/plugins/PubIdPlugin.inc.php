@@ -108,7 +108,7 @@ class PubIdPlugin extends Plugin {
 					}
 				} elseif ($request->getUserVar('clearPubIds')) {
 					$form->readInputData();
-					$journalDao =& DAORegistry::getDAO('JournalDAO');
+					$journalDao = DAORegistry::getDAO('JournalDAO');
 					$journalDao->deleteAllPubIds($journal->getId(), $this->getPubIdType());
 					$message = NOTIFICATION_TYPE_SUCCESS;
 					return false;
@@ -266,7 +266,7 @@ class PubIdPlugin extends Plugin {
 		// FIXME: Hack to ensure that we get a published article if possible.
 		// Remove this when we have migrated getBest...(), etc. to Article.
 		if (is_a($pubObject, 'SectionEditorSubmission')) {
-			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
 			$pubArticle =& $articleDao->getPublishedArticleByArticleId($pubObject->getId());
 			if (is_a($pubArticle, 'PublishedArticle')) {
 				unset($pubObject);
@@ -293,17 +293,17 @@ class PubIdPlugin extends Plugin {
 					// FIXME: We temporarily have to use the published article
 					// DAO here until we've moved pubId-generation to the Article
 					// class.
-					$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+					$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
 					$objectsToCheck =& $articleDao->getPublishedArticlesByJournalId($journalId);
 					break;
 
 				case 'ArticleGalley':
-					$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
 					break;
 
 				case 'SuppFile':
-					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+					$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 					$objectsToCheck =& $suppFileDao->getSuppFilesByJournalId($journalId);
 					break;
 			}

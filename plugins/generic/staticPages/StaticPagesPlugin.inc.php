@@ -157,7 +157,7 @@ class StaticPagesPlugin extends GenericPlugin {
 			case 'delete':
 				$journal =& $request->getJournal();
 				$staticPageId = isset($args[0])?(int) $args[0]:null;
-				$staticPagesDao =& DAORegistry::getDAO('StaticPagesDAO');
+				$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
 				$staticPagesDao->deleteStaticPageById($staticPageId);
 
 				$templateMgr->assign(array(

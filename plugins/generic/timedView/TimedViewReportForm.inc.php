@@ -80,10 +80,10 @@ class TimedViewReportForm extends Form {
 
 		$articleData = $galleyLabels = $galleyViews = array();
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
-		$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
+		$timedViewReportDao = DAORegistry::getDAO('TimedViewReportDAO');
 		$abstractViewCounts =& $timedViewReportDao->getAbstractViewCount($journal->getId(), $this->getData('dateStart'), $this->getData('dateEnd'));
 
 		while ($row = $abstractViewCounts->next()) {

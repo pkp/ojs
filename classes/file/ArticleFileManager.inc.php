@@ -200,7 +200,7 @@ class ArticleFileManager extends FileManager {
 	 * @return ArticleFile
 	 */
 	function &getFile($fileId, $revision = null) {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile =& $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		return $articleFile;
 	}
@@ -230,7 +230,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int number of files removed
 	 */
 	function deleteFile($fileId, $revision = null) {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$files = array();
 		if (isset($revision)) {
@@ -369,7 +369,7 @@ class ArticleFileManager extends FileManager {
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $fileStage, $destFileId = null) {
 		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$fileStage, &$destFileId, &$result))) return $result;
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
@@ -431,7 +431,7 @@ class ArticleFileManager extends FileManager {
 	 * @return object articleFile
 	 */
 	function &generateDummyFile(&$article) {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 		$articleFile->setArticleId($article->getId());
 		$articleFile->setFileName('temp');
@@ -453,7 +453,7 @@ class ArticleFileManager extends FileManager {
 	 * PRIVATE routine to remove all prior revisions of a file.
 	 */
 	function removePriorRevisions($fileId, $revision) {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$revisions = $articleFileDao->getArticleFileRevisions($fileId);
 		if ($revisions) foreach ($revisions as $revisionFile) {
 			if ($revisionFile->getRevision() != $revision) {
@@ -487,7 +487,7 @@ class ArticleFileManager extends FileManager {
 	function handleUpload($fileName, $fileStage, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleUpload', array(&$fileName, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
 		$dir = $this->filesDir . $fileStagePath . '/';
@@ -542,7 +542,7 @@ class ArticleFileManager extends FileManager {
 	function handleWrite($fileName, &$contents, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleWrite', array(&$fileName, &$contents, &$mimeType, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
 		$dir = $this->filesDir . $fileStagePath . '/';
@@ -596,7 +596,7 @@ class ArticleFileManager extends FileManager {
 	function handleCopy($url, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
 		if (HookRegistry::call('ArticleFileManager::handleCopy', array(&$url, &$mimeType, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
 		$dir = $this->filesDir . $fileStagePath . '/';
@@ -647,7 +647,7 @@ class ArticleFileManager extends FileManager {
 	function temporaryFileToArticleFile(&$temporaryFile, $fileStage, $assocId = null) {
 		if (HookRegistry::call('ArticleFileManager::temporaryFileToArticleFile', array(&$temporaryFile, &$fileStage, &$assocId, &$result))) return $result;
 
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
 		$dir = $this->filesDir . $fileStagePath . '/';

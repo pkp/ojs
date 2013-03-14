@@ -98,48 +98,48 @@ class JournalDAO extends ContextDAO {
 	 * @param $journalId int
 	 */
 	function deleteById($journalId) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->deleteById($journalId);
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteByJournalId($journalId);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssuesByJournal($journalId);
 
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journalId);
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$rtDao->deleteVersionsByJournal($journalId);
 
-		$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
-		$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
 
-		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$giftDao = DAORegistry::getDAO('GiftDAO');
 		$giftDao->deleteGiftsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
-		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
-		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
+		$announcementTypeDao = DAORegistry::getDAO('AnnouncementTypeDAO');
 		$announcementTypeDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$articleDao->deleteByJournalId($journalId);
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleDao->deleteRoleByJournalId($journalId);
 
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteById($journalId);
 
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
 		parent::deleteById($journalId);
@@ -250,7 +250,7 @@ class JournalDAO extends ContextDAO {
 	function deleteAllPubIds($journalId, $pubIdType) {
 		$pubObjectDaos = array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO', 'SuppFileDAO');
 		foreach($pubObjectDaos as $daoName) {
-			$dao =& DAORegistry::getDAO($daoName);
+			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);
 			unset($dao);
 		}
@@ -279,7 +279,7 @@ class JournalDAO extends ContextDAO {
 			ASSOC_TYPE_SUPP_FILE => 'SuppFileDAO'
 		);
 		foreach($pubObjectDaos as $daoAssocType => $daoName) {
-			$dao =& DAORegistry::getDAO($daoName);
+			$dao = DAORegistry::getDAO($daoName);
 			if ($assocType == $daoAssocType) {
 				$excludedId = $assocId;
 			} else {

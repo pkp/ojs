@@ -113,7 +113,7 @@ class ReferralPlugin extends GenericPlugin {
 		if (!isset($params['smarty_include_tpl_file'])) return false;
 		switch ($params['smarty_include_tpl_file']) {
 			case 'common/footer.tpl':
-				$referralDao =& DAORegistry::getDAO('ReferralDAO');
+				$referralDao = DAORegistry::getDAO('ReferralDAO');
 				$user =& $request->getUser();
 				$rangeInfo =& Handler::getRangeInfo($request, 'referrals');
 				$referralFilter = (int) $request->getUserVar('referralFilter');
@@ -152,7 +152,7 @@ class ReferralPlugin extends GenericPlugin {
 		if (!isset($params['smarty_include_tpl_file'])) return false;
 		switch ($params['smarty_include_tpl_file']) {
 			case 'article/comments.tpl':
-				$referralDao =& DAORegistry::getDAO('ReferralDAO');
+				$referralDao = DAORegistry::getDAO('ReferralDAO');
 				$article = $templateMgr->get_template_vars('article');
 				$referrals =& $referralDao->getPublishedReferralsForArticle($article->getId());
 
@@ -202,7 +202,7 @@ class ReferralPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		if (empty($referrer) || strpos($referrer, $request->getIndexUrl()) !== false) return false;
 
-		$referralDao =& DAORegistry::getDAO('ReferralDAO');
+		$referralDao = DAORegistry::getDAO('ReferralDAO');
 		if ($referralDao->referralExistsByUrl($articleId, $referrer)) {
 			// It exists -- increment the count
 			$referralDao->incrementReferralCount($article->getId(), $referrer);

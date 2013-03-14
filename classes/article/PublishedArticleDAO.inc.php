@@ -56,10 +56,10 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function PublishedArticleDAO() {
 		parent::DAO();
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 
 	/**

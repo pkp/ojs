@@ -30,15 +30,15 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function CopyeditorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$this->userDao =& DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->userDao = DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**

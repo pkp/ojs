@@ -879,7 +879,7 @@ class O4DOIExportDom extends DOIExportDom {
 
 			// Extent (for issues-as-manifestation only)
 			if (!$this->_exportIssuesAsWork()) {
-				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 				$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
 				if (!empty($issueGalleys)) {
 					foreach($issueGalleys as $issueGalley) {

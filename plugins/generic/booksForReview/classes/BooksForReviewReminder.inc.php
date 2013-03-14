@@ -69,7 +69,7 @@ class BooksForReviewReminder extends ScheduledTask {
 			$returner =& DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
 
 			$journalId = $journal->getId();
-			$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 			$booksForReviewEnabled = $pluginSettingsDao->getSetting($journalId, $bfrPluginName, 'enabled');
 		}
 

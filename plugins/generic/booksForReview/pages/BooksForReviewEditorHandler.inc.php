@@ -92,7 +92,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -150,16 +150,16 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is valid and for this journal
 		if (($bookId != null && $bfrDao->getBookForReviewJournalId($bookId) == $journalId) || ($bookId == null)) {
 			$bfrPlugin->import('classes.form.BookForReviewForm');
 
-			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
-			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$countryDao = DAORegistry::getDAO('CountryDAO');
 			$countries =& $countryDao->getCountries();
 
 			// PHP4 Requires explicit instantiation-by-reference
@@ -198,7 +198,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		if (($bookId != null && $bfrDao->getBookForReviewJournalId($bookId) == $journalId) || $bookId == null) {
 
@@ -265,9 +265,9 @@ class BooksForReviewEditorHandler extends Handler {
 					$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 				}
 			} else {
-				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
-				$countryDao =& DAORegistry::getDAO('CountryDAO');
+				$countryDao = DAORegistry::getDAO('CountryDAO');
 				$countries =& $countryDao->getCountries();
 
 				$templateMgr =& TemplateManager::getManager($request);
@@ -304,7 +304,7 @@ class BooksForReviewEditorHandler extends Handler {
 				}
 			}
 
-			$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+			$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 			// Ensure book for review is for this journal
 			if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -337,7 +337,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$templateMgr->assign_by_ref('counts', $bfrDao->getStatusCounts($journalId));
 		if ($request->getUserVar('save')) {
 			$form->readInputData();
@@ -378,7 +378,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) != $journalId) {
@@ -386,7 +386,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$templateMgr =& TemplateManager::getManager($request);
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$searchType = null;
 		$searchMatch = null;
@@ -447,14 +447,14 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) != $journalId) {
 			$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 		}
 
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 		$templateMgr =& TemplateManager::getManager($request);
 
 		$searchField = null;
@@ -523,7 +523,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -569,7 +569,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -579,7 +579,7 @@ class BooksForReviewEditorHandler extends Handler {
 			// Book was never requested by an author
 			if ($status == BFR_STATUS_AVAILABLE) {
 				$userId = (int) $request->getUserVar('userId');
-				$userDao =& DAORegistry::getDAO('UserDAO');
+				$userDao = DAORegistry::getDAO('UserDAO');
 				$user =& $userDao->getById($userId);
 				$userName = $user->getFullName();
 				$userEmail = $user->getEmail();
@@ -595,7 +595,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 
 			// Ensure user is an author for this journal
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			if ($roleDao->userHasRole($journalId, $userId, ROLE_ID_AUTHOR)) {
 				import('classes.mail.MailTemplate');
 				$email = new MailTemplate('BFR_BOOK_ASSIGNED');
@@ -632,7 +632,7 @@ class BooksForReviewEditorHandler extends Handler {
 						if (empty($userMailingAddress)) {
 							$userMailingAddress = __('plugins.generic.booksForReview.editor.noMailingAddress');
 						} else {
-							$countryDao =& DAORegistry::getDAO('CountryDAO');
+							$countryDao = DAORegistry::getDAO('CountryDAO');
 							$countries =& $countryDao->getCountries();
 							$userCountry = $countries[$userCountryCode];
 							$userMailingAddress .= "\n" . $userCountry;
@@ -683,7 +683,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -758,7 +758,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -797,7 +797,7 @@ class BooksForReviewEditorHandler extends Handler {
 					if (empty($userMailingAddress)) {
 						$userMailingAddress = __('plugins.generic.booksForReview.editor.noMailingAddress');
 					} else {
-						$countryDao =& DAORegistry::getDAO('CountryDAO');
+						$countryDao = DAORegistry::getDAO('CountryDAO');
 						$countries =& $countryDao->getCountries();
 						$userCountry = $countries[$userCountryCode];
 						$userMailingAddress .= "\n" . $userCountry;
@@ -845,7 +845,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -932,7 +932,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {

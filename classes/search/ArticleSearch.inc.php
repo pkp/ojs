@@ -186,7 +186,7 @@ class ArticleSearch {
 		}
 
 		$mergedResults = array();
-		$articleSearchDao =& DAORegistry::getDAO('ArticleSearchDAO'); /* @var $articleSearchDao ArticleSearchDAO */
+		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $articleSearchDao ArticleSearchDAO */
 		$results =& $articleSearchDao->getPhraseResults(
 			$journal,
 			$phrase,
@@ -267,7 +267,7 @@ class ArticleSearch {
 		$journal =& $request->getJournal();
 		$siteSearch = !((boolean)$journal);
 		if ($siteSearch) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			if (!empty($searchFilters['searchJournal'])) {
 				$journal = $journalDao->getById($searchFilters['searchJournal']);
 			} elseif (array_key_exists('journalTitle', $request->getUserVars())) {
@@ -318,11 +318,11 @@ class ArticleSearch {
 	 *  issue, journal, section and the issue availability.
 	 */
 	static function &formatResults(&$results) {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$publishedArticleCache = array();
 		$articleCache = array();

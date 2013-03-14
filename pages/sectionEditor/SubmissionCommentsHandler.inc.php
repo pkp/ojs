@@ -275,7 +275,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// Save the comment.
 		SectionEditorAction::saveComment($this->submission, $comment, $emailComment, $request);
 
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page

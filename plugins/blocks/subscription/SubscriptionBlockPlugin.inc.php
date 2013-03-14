@@ -58,7 +58,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
 		if (isset($userId)) {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			$individualSubscription =& $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
 			$templateMgr->assign_by_ref('individualSubscription', $individualSubscription);
 		}
@@ -67,7 +67,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
 			$ip = $request->getRemoteAddr();
 			$domain = $request->getRemoteDomain();
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journalId);
 			if ($subscriptionId) {
 				$institutionalSubscription =& $subscriptionDao->getSubscription($subscriptionId);

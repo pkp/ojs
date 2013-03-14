@@ -57,7 +57,7 @@ class ArticleHandler extends Handler {
 		$article =& $this->article;
 		$this->setupTemplate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -75,14 +75,14 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$enableComments = $journal->getSetting('enableComments');
 
 		if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
 			$comments =& $commentDao->getRootCommentsBySubmissionId($article->getId());
 		}
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 		} else {
@@ -155,13 +155,13 @@ class ArticleHandler extends Handler {
 			// FIXME: We only display the edited raw citations right now. We also want
 			// to allow for generated citations to be displayed here (including a way for
 			// the reader to choose any of the installed citation styles for output), see #5938.
-			$citationDao =& DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
+			$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 			$citationFactory =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
 			$templateMgr->assign('citationFactory', $citationFactory);
 
 			// Increment the published article's abstract views count
 			if (!$request->isBot()) {
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleDao->incrementViewsByArticleId($article->getId());
 			}
 		} else {
@@ -253,7 +253,7 @@ class ArticleHandler extends Handler {
 		$this->setupTemplate();
 
 		if (!$galley) {
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 			} else {
@@ -297,7 +297,7 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 		} else {
@@ -334,7 +334,7 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 		} else {
@@ -362,7 +362,7 @@ class ArticleHandler extends Handler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		if ($journal->getSetting('enablePublicSuppFileId')) {
 			$suppFile =& $suppFileDao->getSuppFileByBestSuppFileId($suppId, $article->getId());
 		} else {
@@ -399,14 +399,14 @@ class ArticleHandler extends Handler {
 		$user =& $request->getUser();
 		$userId = $user?$user->getId():0;
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		if ($journal->getSetting('enablePublicArticleId')) {
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journalId, $articleId, true);
 		} else {
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, true);
 		}
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 		} else {
@@ -453,7 +453,7 @@ class ArticleHandler extends Handler {
 						/* if only pdf files are being restricted, then approve all non-pdf galleys
 						 * and continue checking if it is a pdf galley */
 						if ( $paymentManager->onlyPdfEnabled() ) {
-							$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+							$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 							if ($journal->getSetting('enablePublicGalleyId')) {
 								$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $publishedArticle->getId());
 							} else {
@@ -473,7 +473,7 @@ class ArticleHandler extends Handler {
 
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
-						$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
 						if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $publishedArticle->getId())
 							|| $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId())

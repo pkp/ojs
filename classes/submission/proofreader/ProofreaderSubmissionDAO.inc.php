@@ -29,11 +29,11 @@ class ProofreaderSubmissionDAO extends DAO {
 	function ProofreaderSubmissionDAO() {
 		parent::DAO();
 
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$this->galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 
 	/**

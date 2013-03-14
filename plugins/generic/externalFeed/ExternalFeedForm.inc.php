@@ -52,7 +52,7 @@ class ExternalFeedForm extends Form {
 	* @return array
 	*/
 	function getLocaleFieldNames() {
-		$feedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+		$feedDao = DAORegistry::getDAO('ExternalFeedDAO');
 		return $feedDao->getLocaleFieldNames();
 	}
 
@@ -75,7 +75,7 @@ class ExternalFeedForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->feedId)) {
-			$feedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+			$feedDao = DAORegistry::getDAO('ExternalFeedDAO');
 			$feed =& $feedDao->getExternalFeed($this->feedId);
 
 			if ($feed != null) {
@@ -124,7 +124,7 @@ class ExternalFeedForm extends Form {
 	function execute() {
 		$plugin =& $this->plugin;
 
-		$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 		$plugin->import('ExternalFeed');
 
 		if (isset($this->feedId)) {

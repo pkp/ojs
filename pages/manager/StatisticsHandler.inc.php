@@ -49,7 +49,7 @@ class StatisticsHandler extends ManagerHandler {
 		$fromDate = mktime(0, 0, 0, 1, 1, $statisticsYear);
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
-		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+		$journalStatisticsDao = DAORegistry::getDAO('JournalStatisticsDAO');
 		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
 

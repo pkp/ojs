@@ -66,7 +66,7 @@ class ResolverPlugin extends GatewayPlugin {
 			case 'doi':
 				$doi = implode('/', $args);
 				$journal =& $request->getJournal();
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 				$article =& $publishedArticleDao->getPublishedArticleByPubId('doi', $doi, $journal?$journal->getId():null);
 				if(is_a($article, 'PublishedArticle')) {
 					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
@@ -96,7 +96,7 @@ class ResolverPlugin extends GatewayPlugin {
 				if (!$issue || $issues->next()) break;
 				unset($issues);
 
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$articles =& $publishedArticleDao->getPublishedArticles($issue->getId());
 				foreach ($articles as $article) {
 					// Look for the correct page in the list of articles.

@@ -305,7 +305,7 @@ class RoleDAO extends PKPRoleDAO {
 	 * @return int
 	 */
 	function getJournalUsersCount($journalId, $roleId = null) {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$params = array((int) $journalId);
 		if ($roleId !== null) $params[] = (int) $roleId;

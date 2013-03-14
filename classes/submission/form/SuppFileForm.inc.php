@@ -40,7 +40,7 @@ class SuppFileForm extends Form {
 		$this->article = $article;
 
 		if (isset($suppFileId) && !empty($suppFileId)) {
-			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 			$this->suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 			if (isset($this->suppFile)) {
 				$this->suppFileId = $suppFileId;
@@ -67,7 +67,7 @@ class SuppFileForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		return $suppFileDao->getLocaleFieldNames();
 	}
 
@@ -124,7 +124,7 @@ class SuppFileForm extends Form {
 	 */
 	function validate() {
 		$journal =& Request::getJournal();
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
 		if ($publicSuppFileId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicSuppFileId, ASSOC_TYPE_SUPP_FILE, $this->suppFileId)) {
@@ -210,7 +210,7 @@ class SuppFileForm extends Form {
 	function execute($fileName = null, $createRemote = false) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->article->getId());
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
 

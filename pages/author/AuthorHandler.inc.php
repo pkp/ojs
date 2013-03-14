@@ -41,7 +41,7 @@ class AuthorHandler extends Handler {
 
 		$user =& $request->getUser();
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
-		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = array_shift($args);
 		switch($page) {
@@ -93,7 +93,7 @@ class AuthorHandler extends Handler {
 			$templateMgr->assign('fastTrackEnabled', $paymentManager->fastTrackEnabled());
 			$templateMgr->assign('publicationEnabled', $paymentManager->publicationEnabled());
 			
-			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDAO = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$templateMgr->assign_by_ref('completedPaymentDAO', $completedPaymentDAO);
 		} 				
 
@@ -117,8 +117,8 @@ class AuthorHandler extends Handler {
 		$this->addCheck(new HandlerValidatorRoles($this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
 
 		if ($articleId !== null) {
-			$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			$journal =& $request->getJournal();
 			$user =& $request->getUser();
 

@@ -44,13 +44,13 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get sections for this journal
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		// If this user is a section editor or an editor, they are
 		// allowed to submit to sections flagged as "editor-only" for
 		// submissions. Otherwise, display only sections they are
 		// allowed to submit to.
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR) || $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_SECTION_EDITOR);
 		$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
 
@@ -59,7 +59,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$paymentManager = new OJSPaymentManager($this->request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$articleId = $this->articleId;
 
 			if ($paymentManager->submissionEnabled()) {
@@ -124,7 +124,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * @return int the article ID
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		if (isset($this->article)) {
 			// Update existing article
@@ -155,7 +155,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->articleId = $this->article->getId();
 
 			// Set user to initial author
-			$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
+			$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 			$user =& $this->request->getUser();
 			$author = new Author();
 			$author->setSubmissionId($this->articleId);

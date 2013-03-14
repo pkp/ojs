@@ -24,8 +24,8 @@ class ReviewReminder extends ScheduledTask {
 	}
 
 	function sendReminder ($reviewAssignment, $article, $journal) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$reviewId = $reviewAssignment->getId();
 
 		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
@@ -88,9 +88,9 @@ class ReviewReminder extends ScheduledTask {
 		$article = null;
 		$journal = null;
 
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		$incompleteAssignments =& $reviewAssignmentDao->getIncompleteReviewAssignments();
 		foreach ($incompleteAssignments as $reviewAssignment) {

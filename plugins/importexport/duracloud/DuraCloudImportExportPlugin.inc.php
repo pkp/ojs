@@ -51,7 +51,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		// Load the DuraCloud-PHP library.
 		require_once('lib/DuraCloud-PHP/DuraCloudPHP.inc.php');
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -100,7 +100,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 			case 'exportableIssues':
 				// Display a list of issues for export
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
@@ -276,11 +276,11 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$spaceId = array_shift($args);
 		$command = array_shift($args);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

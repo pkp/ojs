@@ -44,7 +44,7 @@ class ReferralForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$referralDao =& DAORegistry::getDAO('ReferralDAO');
+		$referralDao = DAORegistry::getDAO('ReferralDAO');
 		return $referralDao->getLocaleFieldNames();
 	}
 
@@ -64,7 +64,7 @@ class ReferralForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->referralId)) {
-			$referralDao =& DAORegistry::getDAO('ReferralDAO');
+			$referralDao = DAORegistry::getDAO('ReferralDAO');
 			$referral =& $referralDao->getReferral($this->referralId);
 
 			if ($referral != null) {
@@ -91,7 +91,7 @@ class ReferralForm extends Form {
 	 * Save referral. 
 	 */
 	function execute() {
-		$referralDao =& DAORegistry::getDAO('ReferralDAO');
+		$referralDao = DAORegistry::getDAO('ReferralDAO');
 
 		if (isset($this->referralId)) {
 			$referral =& $referralDao->getReferral($this->referralId);

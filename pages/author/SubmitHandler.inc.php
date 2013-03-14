@@ -277,7 +277,7 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 		$this->setupTemplate($request, true);
 
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
 
@@ -319,7 +319,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function validate($request, $articleId = null, $step = false, $reason = null) {
 		parent::validate($reason);
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
 

@@ -74,7 +74,7 @@ class CounterPlugin extends GenericPlugin {
 		$journal =& $request->getJournal();
 		if (!$journal || $request->getRequestedPage() != 'article' || $request->getRequestedOp() != 'view') return false;
 
-		$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 		$counterReportDao->incrementCount($journal->getId(), (int) strftime('%Y'), (int) strftime('%m'), false, false);
 	}
 
@@ -122,7 +122,7 @@ class CounterPlugin extends GenericPlugin {
 				if ( $galley->isPdfGalley() && ($lastRequestGap < 30) ) return false;
 				$session->setSessionVar('lastRequest', time());
 
-				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+				$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 				$counterReportDao->incrementCount($article->getJournalId(), (int) strftime('%Y'), (int) strftime('%m'), $galley->isPdfGalley(), $galley->isHTMLGalley());
 				break;
 		}
@@ -159,7 +159,7 @@ class CounterPlugin extends GenericPlugin {
 			$this->import('CounterReportDAO');
 			$counterReportDao = new CounterReportDAO();
 			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
-			$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+			$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 			if (file_exists($counterReportDao->getOldLogFilename())) {
 				$verbs[] = array('migrate', __('plugins.generic.counter.migrate'));
 			}
@@ -175,7 +175,7 @@ class CounterPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'migrate':
-				$counterReportDao =& DAORegistry::getDAO('CounterReportDAO');
+				$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 				$counterReportDao->upgradeFromLogFile();
 				$request->redirect('index', 'counter');
 				return false;

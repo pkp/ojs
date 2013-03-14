@@ -48,7 +48,7 @@ class ArticleLog {
 	function logEventHeadless(&$journal, $userId, &$article, $eventType, $messageKey, $params = array()) {
 
 		// Create a new entry object
-		$articleEventLogDao =& DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
 		$entry = $articleEventLogDao->newDataObject();
 
 		// Set implicit parts of the log entry
@@ -97,7 +97,7 @@ class ArticleLog {
 
 		$entry->setDateSent(Core::getCurrentDate());
 
-		$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$logDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		return $logDao->insertObject($entry);
 	}
 }

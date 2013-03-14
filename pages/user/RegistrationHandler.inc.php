@@ -45,7 +45,7 @@ class RegistrationHandler extends UserHandler {
 			$regForm->display();
 
 		} else {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getJournals(true);
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('source', $request->getUserVar('source'));
@@ -126,7 +126,7 @@ class RegistrationHandler extends UserHandler {
 		$accessKeyCode = array_shift($args);
 
 		$journal =& $request->getJournal();
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getByUsername($username);
 		if (!$user) $request->redirect(null, 'login');
 
@@ -164,7 +164,7 @@ class RegistrationHandler extends UserHandler {
 		parent::validate(false);
 		$journal = $request->getJournal();
 		if ($journal != null) {
-			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			if ($journalSettingsDao->getSetting($journal->getId(), 'disableUserReg')) {
 				// Users cannot register themselves for this journal
 				$this->registrationDisabled($request);

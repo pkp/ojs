@@ -33,7 +33,7 @@ class UserHandler extends PKPUserHandler {
 		$sessionManager =& SessionManager::getManager($request);
 		$session =& $sessionManager->getUserSession();
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
@@ -51,7 +51,7 @@ class UserHandler extends PKPUserHandler {
 			unset($journal);
 
 			// Show roles for all journals
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getJournals();
 
 			// Fetch the user's roles for each journal
@@ -81,7 +81,7 @@ class UserHandler extends PKPUserHandler {
 
 			$this->_getRoleDataForJournal($userId, $journalId, $submissionsCount, $isValid);
 
-			$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionsEnabled = $journal->getSetting('publishingMode') ==  PUBLISHING_MODE_SUBSCRIPTION
 				&& ($subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, false)
 					|| $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
@@ -134,7 +134,7 @@ class UserHandler extends PKPUserHandler {
 		$userId = $user->getId();
 
 		// Get user's redeemed and unreedemed gift subscriptions
-		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$giftDao = DAORegistry::getDAO('GiftDAO');
 		$giftSubscriptions =& $giftDao->getGiftsByTypeAndRecipient(
 			ASSOC_TYPE_JOURNAL,
 			$journalId,
@@ -178,7 +178,7 @@ class UserHandler extends PKPUserHandler {
 		$giftId = isset($args[0]) ? (int) $args[0] : 0;
 
 		// Try to redeem the gift
-		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$giftDao = DAORegistry::getDAO('GiftDAO');
 		$status = $giftDao->redeemGift(
 			ASSOC_TYPE_JOURNAL,
 			$journalId,
@@ -232,7 +232,7 @@ class UserHandler extends PKPUserHandler {
 		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
 		$journalId = $journal->getId();
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$individualSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, false);
 		$institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true);
 		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) $request->redirect(null, 'user');
@@ -249,12 +249,12 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionAdditionalInformation = $journal->getLocalizedSetting('subscriptionAdditionalInformation');
 		// Get subscriptions and options for current journal
 		if ($individualSubscriptionTypesExist) {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			$userIndividualSubscription =& $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$userInstitutionalSubscriptions =& $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
 		}
 
@@ -292,44 +292,44 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function _getRoleDataForJournal($userId, $journalId, &$submissionsCount, &$isValid) {
 		if (Validation::isJournalManager($journalId)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$isValid["JournalManager"][$journalId] = true;
 		}
 		if (Validation::isSubscriptionManager($journalId)) {
 			$isValid["SubscriptionManager"][$journalId] = true;
 		}
 		if (Validation::isAuthor($journalId)) {
-			$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+			$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 			$submissionsCount["Author"][$journalId] = $authorSubmissionDao->getSubmissionsCount($userId, $journalId);
 			$isValid["Author"][$journalId] = true;
 		}
 		if (Validation::isCopyeditor($journalId)) {
-			$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 			$submissionsCount["Copyeditor"][$journalId] = $copyeditorSubmissionDao->getSubmissionsCount($userId, $journalId);
 			$isValid["Copyeditor"][$journalId] = true;
 		}
 		if (Validation::isLayoutEditor($journalId)) {
-			$layoutEditorSubmissionDao =& DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+			$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 			$submissionsCount["LayoutEditor"][$journalId] = $layoutEditorSubmissionDao->getSubmissionsCount($userId, $journalId);
 			$isValid["LayoutEditor"][$journalId] = true;
 		}
 		if (Validation::isEditor($journalId)) {
-			$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+			$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 			$submissionsCount["Editor"][$journalId] = $editorSubmissionDao->getEditorSubmissionsCount($journalId);
 			$isValid["Editor"][$journalId] = true;
 		}
 		if (Validation::isSectionEditor($journalId)) {
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$submissionsCount["SectionEditor"][$journalId] = $sectionEditorSubmissionDao->getSectionEditorSubmissionsCount($userId, $journalId);
 			$isValid["SectionEditor"][$journalId] = true;
 		}
 		if (Validation::isProofreader($journalId)) {
-			$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+			$proofreaderSubmissionDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
 			$submissionsCount["Proofreader"][$journalId] = $proofreaderSubmissionDao->getSubmissionsCount($userId, $journalId);
 			$isValid["Proofreader"][$journalId] = true;
 		}
 		if (Validation::isReviewer($journalId)) {
-			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 			$submissionsCount["Reviewer"][$journalId] = $reviewerSubmissionDao->getSubmissionsCount($userId, $journalId);
 			$isValid["Reviewer"][$journalId] = true;
 		}
@@ -379,7 +379,7 @@ class UserHandler extends PKPUserHandler {
 			$role->setRoleId($roleId);
 			$role->setUserId($user->getId());
 
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			$roleDao->insertRole($role);
 			$request->redirectUrl($request->getUserVar('source'));
 		} else {
@@ -425,7 +425,7 @@ class UserHandler extends PKPUserHandler {
 
 		// Ensure that the user's profile info should be exposed:
 
-		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		$commentDao = DAORegistry::getDAO('CommentDAO');
 		if ($commentDao->attributedCommentsExistForUser($userId)) {
 			// At least one comment is attributed to the user
 			$accountIsVisible = true;
@@ -433,7 +433,7 @@ class UserHandler extends PKPUserHandler {
 
 		if(!$accountIsVisible) $request->redirect(null, 'index');
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getById($userId);
 
 		$templateMgr->assign_by_ref('user', $user);
@@ -476,11 +476,11 @@ class UserHandler extends PKPUserHandler {
 		if ($institutional == 'institutional') {
 			$institutional = true;
 			import('classes.subscription.form.UserInstitutionalSubscriptionForm');
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
 			$institutional = false;
 			import('classes.subscription.form.UserIndividualSubscriptionForm');
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		if (isset($subscriptionId)) {
@@ -555,11 +555,11 @@ class UserHandler extends PKPUserHandler {
 		if ($institutional == 'institutional') {
 			$institutional = true;
 			import('classes.subscription.form.UserInstitutionalSubscriptionForm');
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
 			$institutional = false;
 			import('classes.subscription.form.UserIndividualSubscriptionForm');
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		if (isset($subscriptionId)) {
@@ -655,9 +655,9 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionId = (int) array_shift($args);
 
 		if ($institutional == 'institutional') {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'user');
@@ -669,7 +669,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
@@ -706,9 +706,9 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionId = (int) array_shift($args);
 
 		if ($institutional == 'institutional') {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'user');
@@ -727,7 +727,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());

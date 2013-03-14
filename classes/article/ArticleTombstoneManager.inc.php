@@ -24,7 +24,7 @@ class ArticleTombstoneManager {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($article->getSectionId());
 
-		$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
+		$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
 		// delete article tombstone -- to ensure that there aren't more than one tombstone for this article
 		$tombstoneDao->deleteByDataObjectId($article->getId());
 		// insert article tombstone

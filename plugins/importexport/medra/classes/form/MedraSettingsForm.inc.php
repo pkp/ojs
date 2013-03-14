@@ -93,7 +93,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	 * @return array
 	 */
 	function &_getCountries() {
-		$countryDao =& DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
+		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
 		$countries =& $countryDao->getCountries();
 		return $countries;
 	}

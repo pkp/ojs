@@ -67,8 +67,8 @@ class EditorDecisionCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 
 		// Create list of recipients:

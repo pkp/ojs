@@ -39,7 +39,7 @@ class CopyeditorHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 
 		// Get the user's search conditions, if any
 		$searchField = $request->getUserVar('searchField');
@@ -139,7 +139,7 @@ class CopyeditorHandler extends Handler {
 		parent::validate();
 
 		if ($articleId !== null) {
-			$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 			$journal =& $request->getJournal();
 			$user =& $request->getUser();
 

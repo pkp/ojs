@@ -160,7 +160,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$bookId = $request->getUserVar('bookForReviewId') == null ? null : (int) $request->getUserVar('bookForReviewId');
 
 			if ($bookId) {
-				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+				$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 
 				// Ensure book for review is for this journal
 				if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
@@ -283,7 +283,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$oldUserBooksForReview =& $bfrDao->getBooksForReviewByAuthor($journal->getId(), $oldUserId);
 
 		while ($bookForReview = $oldUserBooksForReview->next()) {
@@ -307,7 +307,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$user =& $request->getUser();
 
 			if ($journal && $user) {
-				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+				$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 				$rangeInfo =& Handler::getRangeInfo($request, 'booksForReview');
 				$booksForReview =& $bfrDao->getBooksForReviewAssignedByAuthor($journal->getId(), $user->getId(), $rangeInfo);
 
@@ -344,7 +344,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				return false;
 			}
 
-			$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+			$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 			$book =& $bfrDao->getSubmittedBookForReviewByArticle($journalId, $articleId);
 
 			if ($book) {
@@ -381,7 +381,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				return false;
 			}
 
-			$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+			$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 			$book =& $bfrDao->getSubmittedBookForReviewByArticle($journalId, $articleId);
 
 			if ($book) {
@@ -424,7 +424,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				return false;
 			}
 
-			$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+			$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 			$book =& $bfrDao->getSubmittedBookForReviewByArticle($journalId, $articleId);
 
 			if ($book) {
@@ -481,7 +481,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 				$request =& $this->getRequest();
 				$journal =& $request->getJournal();
 				$journalId = $journal->getId();
-				$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+				$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 				$bookId = $bfrDao->getSubmittedBookForReviewIdByArticle($journalId, $articleId);
 				if ($bookId) {
 					$templateMgr = TemplateManager::getManager($request);

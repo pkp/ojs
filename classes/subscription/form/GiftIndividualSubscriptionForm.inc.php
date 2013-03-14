@@ -40,7 +40,7 @@ class GiftIndividualSubscriptionForm extends Form {
 		$journal =& $this->request->getJournal();
 		$journalId = $journal->getId();
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
 		$this->subscriptionTypes =& $subscriptionTypes->toArray();
 
@@ -59,7 +59,7 @@ class GiftIndividualSubscriptionForm extends Form {
 		$this->addCheck(new FormValidator($this, 'giftNote', 'required', 'gifts.noteRequired'));
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao =& DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
 
 		// Ensure a locale is provided and valid
 		$this->addCheck(
@@ -151,11 +151,11 @@ class GiftIndividualSubscriptionForm extends Form {
 		$gift->setGiftNoteTitle($this->getData('giftNoteTitle'));
 		$gift->setGiftNote($this->getData('giftNote'));
 
-		$giftDao =& DAORegistry::getDAO('GiftDAO');
+		$giftDao = DAORegistry::getDAO('GiftDAO');
 		$giftId = $giftDao->insertObject($gift);
 
 		// Create new queued payment
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_GIFT, null, $giftId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());

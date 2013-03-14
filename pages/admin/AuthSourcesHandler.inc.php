@@ -31,7 +31,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$authDao = DAORegistry::getDAO('AuthSourceDAO');
 		$sources =& $authDao->getSources();
 
 		$plugins =& PluginRegistry::loadCategory(AUTH_PLUGIN_CATEGORY);
@@ -54,7 +54,7 @@ class AuthSourcesHandler extends AdminHandler {
 	function updateAuthSources($args, &$request) {
 		$this->validate();
 
-		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$authDao = DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->setDefault((int) $request->getUserVar('defaultAuthId'));
 
 		$request->redirect(null, null, 'auth');
@@ -68,7 +68,7 @@ class AuthSourcesHandler extends AdminHandler {
 	function createAuthSource($args, &$request) {
 		$this->validate();
 
-		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$authDao = DAORegistry::getDAO('AuthSourceDAO');
 		$auth = $authDao->newDataObject();
 		$auth->setPlugin($request->getUserVar('plugin'));
 
@@ -118,7 +118,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$this->validate();
 
 		$authId = (int) array_shift($args);
-		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$authDao = DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->deleteObject($authId);
 		$request->redirect(null, null, 'auth');
 	}

@@ -42,7 +42,7 @@ class CopyeditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
 		if (!is_a($user, 'PKPUser')) return AUTHORIZATION_DENY;
 
 		// Validate the article id.
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$copyeditorSubmission =& $copyeditorSubmissionDao->getCopyeditorSubmission($submissionId, $user->getId());
 		if (!is_a($copyeditorSubmission, 'CopyeditorSubmission')) return AUTHORIZATION_DENY;
 

@@ -56,7 +56,7 @@ class UserManagementForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$templateMgr =& TemplateManager::getManager();
 		$site =& Request::getSite();
 
@@ -112,11 +112,11 @@ class UserManagementForm extends Form {
 		$site =& Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+		$authDao = DAORegistry::getDAO('AuthSourceDAO');
 		$authSources =& $authDao->getSources();
 		$authSourceOptions = array();
 		foreach ($authSources->toArray() as $auth) {
@@ -133,7 +133,7 @@ class UserManagementForm extends Form {
 	 */
 	function initData(&$args, &$request) {
 		if (isset($this->userId)) {
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			$user =& $userDao->getById($this->userId);
 
 			import('lib.pkp.classes.user.InterestManager');
@@ -234,7 +234,7 @@ class UserManagementForm extends Form {
 	}
 
 	function getLocaleFieldNames() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		return $userDao->getLocaleFieldNames();
 	}
 
@@ -242,7 +242,7 @@ class UserManagementForm extends Form {
 	 * Register a new user.
 	 */
 	function execute() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 
 		if (isset($this->userId)) {
@@ -284,7 +284,7 @@ class UserManagementForm extends Form {
 		$user->setLocales($locales);
 
 		if ($user->getAuthId()) {
-			$authDao =& DAORegistry::getDAO('AuthSourceDAO');
+			$authDao = DAORegistry::getDAO('AuthSourceDAO');
 			$auth =& $authDao->getPlugin($user->getAuthId());
 		}
 
@@ -333,7 +333,7 @@ class UserManagementForm extends Form {
 			if (!empty($this->_data['enrollAs'])) {
 				foreach ($this->getData('enrollAs') as $roleName) {
 					// Enroll new user into an initial role
-					$roleDao =& DAORegistry::getDAO('RoleDAO');
+					$roleDao = DAORegistry::getDAO('RoleDAO');
 					$roleId = $roleDao->getRoleIdFromPath($roleName);
 					if (!$isManager && $roleId != ROLE_ID_READER) continue;
 					if ($roleId != null) {

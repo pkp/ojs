@@ -103,7 +103,7 @@ class SearchHandler extends Handler {
 		$templateMgr->assign(compact('hasEmptyFilters', 'hasActiveFilters'));
 
 		// Assign the year range.
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$yearRange = $publishedArticleDao->getArticleYearRange($journalId);
 		$startYear = '-' . (date('Y') - substr($yearRange[1], 0, 4));
 		if (substr($yearRange[0], 0, 4) >= date('Y')) {
@@ -115,7 +115,7 @@ class SearchHandler extends Handler {
 
 		// Assign journal options.
 		if ($searchFilters['siteSearch']) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals =& $journalDao->getTitles(true);
 			$templateMgr->assign('journalOptions', array('' => AppLocale::Translate('search.allJournals')) + $journals);
 		}
@@ -166,7 +166,7 @@ class SearchHandler extends Handler {
 
 		$journal =& $request->getJournal();
 
-		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
 
 		if (isset($args[0]) && $args[0] == 'view') {
 			// View a specific author
@@ -184,9 +184,9 @@ class SearchHandler extends Handler {
 			$sections = array();
 			$issuesUnavailable = array();
 
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 
 			foreach ($publishedArticles as $article) {
 				$articleId = $article->getId();
@@ -223,7 +223,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('lastName', $lastName);
 			$templateMgr->assign('affiliation', $affiliation);
 
-			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$countryDao = DAORegistry::getDAO('CountryDAO');
 			$country = $countryDao->getCountry($country);
 			$templateMgr->assign('country', $country);
 
@@ -258,7 +258,7 @@ class SearchHandler extends Handler {
 
 		$journal =& $request->getJournal();
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$rangeInfo = $this->getRangeInfo($request, 'search');
 
@@ -285,7 +285,7 @@ class SearchHandler extends Handler {
 		$site =& $request->getSite();
 		$journal =& $request->getJournal();
 
-		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$cache =& $categoryDao->getCache();
 
 		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache) {
@@ -314,7 +314,7 @@ class SearchHandler extends Handler {
 		$site =& $request->getSite();
 		$journal =& $request->getJournal();
 
-		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
+		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$cache =& $categoryDao->getCache();
 
 		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache || !isset($cache[$categoryId])) {

@@ -35,7 +35,7 @@ class VersionForm extends Form {
 
 		$this->journalId = $journalId;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$this->version =& $rtDao->getVersion($versionId, $journalId);
 
 		if (isset($this->version)) {
@@ -95,7 +95,7 @@ class VersionForm extends Form {
 	 * @return int the version ID
 	 */
 	function execute() {
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$version = $this->version;
 		if (!isset($version)) {

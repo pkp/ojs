@@ -29,7 +29,7 @@ class AuthorSubmitStep4Form extends AuthorSubmitForm {
 		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get supplementary files for this article
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$templateMgr->assign_by_ref('suppFiles', $suppFileDao->getSuppFilesByArticle($this->articleId));
 
 		parent::display();

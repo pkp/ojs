@@ -44,7 +44,7 @@ class BookForReviewForm extends Form {
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		if (!empty($bookId)) {
 			$this->book =& $bfrDao->getBookForReview((int) $bookId);
 		} else {
@@ -64,7 +64,7 @@ class BookForReviewForm extends Form {
 			BFR_AUTHOR_TYPE_EDITED_BY => __('plugins.generic.booksForReview.authorType.editedBy')
 		);
 
-		$languageDao =& DAORegistry::getDAO('LanguageDAO');
+		$languageDao = DAORegistry::getDAO('LanguageDAO');
 		$languages =& $languageDao->getLanguages();
 		$this->validLanguages = array();
 		while (list(, $language) = each($languages)) {
@@ -269,7 +269,7 @@ class BookForReviewForm extends Form {
 		$bfrPlugin->import('classes.BookForReview');
 		$bfrPlugin->import('classes.BookForReviewAuthor');
 
-		$bfrDao =& DAORegistry::getDAO('BookForReviewDAO');
+		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 		$user =& Request::getUser();

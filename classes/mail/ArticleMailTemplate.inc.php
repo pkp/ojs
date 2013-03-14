@@ -106,7 +106,7 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @param $request object
 	 */
 	function log($request = null) {
-		$articleEmailLogDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
+		$articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		$entry = $articleEmailLogDao->newDataObject();
 		$article =& $this->article;
 

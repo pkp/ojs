@@ -100,7 +100,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 			// Get the user dao - so we can look up the user
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 
 			// Get user by auth string
 
@@ -227,7 +227,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		$key = array_search($authStr, $adminlist);
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		// If they are in the list of users who should be admins
 

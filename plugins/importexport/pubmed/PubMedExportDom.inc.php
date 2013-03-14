@@ -45,7 +45,7 @@ class PubMedExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 
 		// register the editor submission DAO for use later
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 
 		/* --- Article --- */
 		$root =& XMLCustomWriter::createElement($doc, 'Article');
@@ -167,7 +167,7 @@ class PubMedExportDom {
 		// check if there is a revised version; if so, generate a revised tag
 		$revisedFileID = $article->getRevisedFileId();
 		if (!empty($revisedFileID)) {
-			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+			$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 			$articleFile =& $articleFileDao->getArticleFile($revisedFileID);
 
 			if ($articleFile) {

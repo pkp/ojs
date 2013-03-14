@@ -34,8 +34,8 @@ class EmailHandler extends UserHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -58,7 +58,7 @@ class EmailHandler extends UserHandler {
 			ROLE_ID_EDITOR,
 			ROLE_ID_SECTION_EDITOR
 		);
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 		if ($journal) {
 			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 			foreach ($roles as $role) {
@@ -94,7 +94,7 @@ class EmailHandler extends UserHandler {
 			// 1. User is submitter
 			if ($article && $article->getUserId() == $user->getId()) $hasAccess = true;
 			// 2. User is section editor of article or full editor
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 			while ($editAssignment = $editAssignments->next()) {
 				if ($editAssignment->getEditorId() === $user->getId()) $hasAccess = true;
@@ -102,7 +102,7 @@ class EmailHandler extends UserHandler {
 			if (Validation::isEditor($journal->getId())) $hasAccess = true;
 
 			// 3. User is reviewer
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			foreach ($reviewAssignmentDao->getBySubmissionId($articleId) as $reviewAssignment) {
 				if ($reviewAssignment->getReviewerId() === $user->getId()) $hasAccess = true;
 			}

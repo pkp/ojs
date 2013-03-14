@@ -40,7 +40,7 @@ class ProofreaderHandler extends Handler {
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
-		$proofreaderSubmissionDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
+		$proofreaderSubmissionDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
 
 		// Get the user's search conditions, if any
 		$searchField = $request->getUserVar('searchField');
@@ -143,8 +143,8 @@ class ProofreaderHandler extends Handler {
 			$journal =& $request->getJournal();
 			$user =& $request->getUser();
 
-			$proofreaderDao =& DAORegistry::getDAO('ProofreaderSubmissionDAO');
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$proofreaderDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 			$submission =& $proofreaderDao->getSubmission($articleId, $journal->getId());
 
 			if (isset($submission)) {

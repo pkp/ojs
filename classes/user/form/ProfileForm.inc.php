@@ -29,10 +29,10 @@ class ProfileForm extends PKPProfileForm {
 	function display($request) {
 		$user =& $request->getUser();
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journals =& $journalDao->getJournals(true);
 		$journals =& $journals->toArray();
@@ -55,7 +55,7 @@ class ProfileForm extends PKPProfileForm {
 
 		$journal =& $request->getJournal();
 		if ($journal) {
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao = DAORegistry::getDAO('RoleDAO');
 			$roles =& $roleDao->getRolesByUserId($user->getId(), $journal->getId());
 			$roleNames = array();
 			foreach ($roles as $role) $roleNames[$role->getPath()] = $role->getRoleName();
@@ -95,8 +95,8 @@ class ProfileForm extends PKPProfileForm {
 	function execute($request) {
 		$user = $request->getUser();
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		// Roles
 		$journal =& Request::getJournal();
@@ -129,7 +129,7 @@ class ProfileForm extends PKPProfileForm {
 
 		$openAccessNotify = Request::getUserVar('openAccessNotify');
 
-		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
 		$journals =& $journalDao->getJournals(true);
 		$journals =& $journals->toArray();
 

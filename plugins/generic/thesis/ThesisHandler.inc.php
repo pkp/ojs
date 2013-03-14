@@ -52,7 +52,7 @@ class ThesisHandler extends Handler {
 				$searchMatch = $request->getUserVar('searchMatch');
 			}
 
-			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+			$thesisDao = DAORegistry::getDAO('ThesisDAO');
 			$rangeInfo = $this->getRangeInfo($request, 'theses');
 			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
 
@@ -106,12 +106,12 @@ class ThesisHandler extends Handler {
 		if ($thesesEnabled) {
 			$thesisPlugin->import('StudentThesisForm');
 			$enableUploadCode = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
-			$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 			$templateMgr =& TemplateManager::getManager($request);
 			$templateMgr->assign('journalSettings', $journalSettings);
-			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+			$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
 			$thesisForm = new StudentThesisForm(THESIS_PLUGIN_NAME);
 			$thesisForm->initData();
@@ -145,7 +145,7 @@ class ThesisHandler extends Handler {
 		}
 
 		$thesisId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
 		if ($thesesEnabled) {
 			if (($thesisId != null) && ($thesisDao->getThesisJournalId($thesisId) == $journalId) && $thesisDao->isThesisActive($thesisId)) {
@@ -187,7 +187,7 @@ class ThesisHandler extends Handler {
 		}
 
 		if ($thesesEnabled) {
-			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+			$thesisDao = DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
 			$thesisForm = new StudentThesisForm(THESIS_PLUGIN_NAME);
@@ -197,7 +197,7 @@ class ThesisHandler extends Handler {
 				$thesisForm->execute();
 				$request->redirect(null, 'thesis');
 			} else {
-				$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 				$templateMgr =& TemplateManager::getManager($request);

@@ -36,9 +36,9 @@ class CopyeditorAction extends Action {
 	 * @param $request object
 	 */
 	function completeCopyedit($copyeditorSubmission, $send, $request) {
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
@@ -102,9 +102,9 @@ class CopyeditorAction extends Action {
 	 * @param $request object
 	 */
 	function completeFinalCopyedit($copyeditorSubmission, $send, $request) {
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 
 		$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
@@ -180,8 +180,8 @@ class CopyeditorAction extends Action {
 	 */
 	function copyeditUnderway(&$copyeditorSubmission, $request) {
 		if (!HookRegistry::call('CopyeditorAction::copyeditUnderway', array(&$copyeditorSubmission))) {
-			$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 			$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
 			$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
@@ -214,9 +214,9 @@ class CopyeditorAction extends Action {
 	 */
 	function uploadCopyeditVersion($copyeditorSubmission, $copyeditStage, $request) {
 		import('classes.file.ArticleFileManager');
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		if($copyeditStage == 'initial') {
 			$signoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
@@ -373,7 +373,7 @@ class CopyeditorAction extends Action {
 	 * @param $revision int
 	 */
 	function downloadCopyeditorFile($copyeditorSubmission, $fileId, $revision = null) {
-		$copyeditorSubmissionDao =& DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 
 		$canDownload = false;
 
@@ -384,8 +384,8 @@ class CopyeditorAction extends Action {
 		// 4) The final copyedit revision
 		// 5) Layout galleys
 		if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL', true) == $fileId) {
-			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 			$currentRevision =& $articleFileDao->getRevisionNumber($fileId);
 
 			if ($revision == null) {
@@ -404,7 +404,7 @@ class CopyeditorAction extends Action {
 				$canDownload = true;
 			}
 		} else if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR', true) == $fileId) {
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
 		 	if($authorSignoff->getDateCompleted() != null) {
 				$canDownload = true;

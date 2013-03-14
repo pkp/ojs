@@ -306,9 +306,9 @@ class SubscriptionTypeDAO extends DAO {
 		$institutional = $this->getSubscriptionTypeInstitutional($typeId);
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 		$returner = $subscriptionDao->deleteSubscriptionsByTypeId($typeId);
 

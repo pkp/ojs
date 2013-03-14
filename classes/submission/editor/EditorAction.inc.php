@@ -29,9 +29,9 @@ class EditorAction extends SectionEditorAction {
 	 * @return boolean true iff ready for redirect
 	 */
 	function assignEditor($articleId, $sectionEditorId, $isEditor, $send, $request) {
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
+		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
@@ -98,7 +98,7 @@ class EditorAction extends SectionEditorAction {
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		import('classes.submission.proofreader.ProofreaderAction');
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
 
 		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
@@ -158,7 +158,7 @@ class EditorAction extends SectionEditorAction {
 				}
 			}
 
-			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			$galleyDao->insertGalley($galley);
 
 			// Update file search index

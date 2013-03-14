@@ -126,7 +126,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		$limitRecentItems = $announcementFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
 		$recentItems = (int) $announcementFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$journalId = $journal->getId();
 		if ($limitRecentItems && $recentItems > 0) {
 			import('lib.pkp.classes.db.DBResultRange');
@@ -153,7 +153,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 			}
 		}
 
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$versionDao = DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
 		$templateMgr =& TemplateManager::getManager($request);

@@ -107,7 +107,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Initialize form data from current subscription policies.
 	 */
 	function initData() {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 
@@ -184,7 +184,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Save subscription policies. 
 	 */
 	function execute() {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 

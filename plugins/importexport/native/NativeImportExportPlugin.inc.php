@@ -53,7 +53,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
@@ -97,7 +97,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'articles':
 				// Display a list of articles for export
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);
@@ -110,8 +110,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'import':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_AUTHOR);
 				import('classes.file.TemporaryFileManager');
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$sectionDao =& DAORegistry::getDAO('SectionDAO');
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$user =& $request->getUser();
 				$temporaryFileManager = new TemporaryFileManager();
 
@@ -323,11 +323,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

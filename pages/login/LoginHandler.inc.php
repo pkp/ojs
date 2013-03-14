@@ -43,7 +43,7 @@ class LoginHandler extends PKPLoginHandler {
 				return $templateMgr->display('common/error.tpl');
 			}
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			$newUser =& $userDao->getById($userId);
 			$session =& $request->getSession();
 
@@ -73,7 +73,7 @@ class LoginHandler extends PKPLoginHandler {
 		if (isset($signedInAs) && !empty($signedInAs)) {
 			$signedInAs = (int)$signedInAs;
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			$oldUser =& $userDao->getById($signedInAs);
 
 			$session->unsetSessionVar('signedInAs');

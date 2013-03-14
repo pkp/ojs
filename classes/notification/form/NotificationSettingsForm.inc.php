@@ -160,7 +160,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			if($this->getData($notificationSetting['emailSettingName'])) $emailSettings[] = $settingId;
 		}
 
-		$notificationSubscriptionSettingsDao =& DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
+		$notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
 		$notificationSubscriptionSettingsDao->updateNotificationSubscriptionSettings('blocked_notification', $blockedNotifications, $userId, $journal->getId());
 		$notificationSubscriptionSettingsDao->updateNotificationSubscriptionSettings('emailed_notification', $emailSettings, $userId, $journal->getId());
 

@@ -479,7 +479,7 @@ class SectionEditorSubmission extends Article {
 	 * @return string
 	 */
 	function getHighlightClass() {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$overdueSeconds = 60 * 60 * 24 * 14; // Two weeks
 
 		// Submissions that are not still queued (i.e. published) are not highlighted.
@@ -610,7 +610,7 @@ class SectionEditorSubmission extends Article {
 			if ($dateLayoutCompleted && !$dateLayoutAcknowledged) return 'highlightLayoutEditing';
 
 			// PROOFREADING
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 			// First round of proofreading
 			$authorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $this->getId());

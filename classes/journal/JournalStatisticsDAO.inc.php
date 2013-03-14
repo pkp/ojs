@@ -142,7 +142,7 @@ class JournalStatisticsDAO extends DAO {
 	 * @return array
 	 */
 	function getUserStatistics($journalId, $dateStart = null, $dateEnd = null) {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		// Get count of total users for this journal
 		$result =& $this->retrieve(

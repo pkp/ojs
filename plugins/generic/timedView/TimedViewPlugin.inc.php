@@ -144,11 +144,11 @@ class TimedViewPlugin extends GenericPlugin {
 		$ip = $request->getRemoteAddr();
 		$userAgent = $request->getUserAgent();
 
-		$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
+		$timedViewReportDao = DAORegistry::getDAO('TimedViewReportDAO');
 		$timedViewReportDao->incrementViewCount($article->getJournalId(), $article->getId(), null, $ip, $userAgent);
 
 		// Also increment view count in the regular location
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->incrementViewsByArticleId($article->getId());
 	}
 
@@ -162,11 +162,11 @@ class TimedViewPlugin extends GenericPlugin {
 		$ip = $request->getRemoteAddr();
 		$userAgent = $request->getUserAgent();
 
-		$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
+		$timedViewReportDao = DAORegistry::getDAO('TimedViewReportDAO');
 		$timedViewReportDao->incrementViewCount($article->getJournalId(), $article->getId(), $galley->getId(), $ip, $userAgent);
 
 		// Also increment view count in the regular location
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galleyDao->incrementViews($galley->getId());
 	}
 }

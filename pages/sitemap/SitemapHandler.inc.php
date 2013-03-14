@@ -66,9 +66,9 @@ class SitemapHandler extends Handler {
 	 * @return XMLNode
 	 */
 	function _createJournalSitemap() {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();

@@ -198,7 +198,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('classes.file.ArticleFileManager'); // FIXME

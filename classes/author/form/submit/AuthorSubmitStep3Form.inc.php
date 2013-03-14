@@ -43,7 +43,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * Initialize form data from current article.
 	 */
 	function initData() {
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		if (isset($this->article)) {
 			$article =& $this->article;
@@ -138,7 +138,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	function display() {
 		$templateMgr =& TemplateManager::getManager($this->request);
 
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
@@ -155,8 +155,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * @return int the article ID
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$authorDao =& DAORegistry::getDAO('AuthorDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
 		$article =& $this->article;
 
 		// Retrieve the previous citation list for comparison.
@@ -233,7 +233,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$articleDao->updateObject($article);
 
 		// Update references list if it changed.
-		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$rawCitationList = $article->getCitations();
 		if ($previousRawCitationList != $rawCitationList) {
 			$citationDao->importCitations($this->request, ASSOC_TYPE_ARTICLE, $article->getId(), $rawCitationList);

@@ -125,7 +125,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		$limitRecentItems = $thesisFeedPlugin->getSetting($journal->getId(), 'limitRecentItems');
 		$recentItems = (int) $thesisFeedPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$thesisDao = DAORegistry::getDAO('ThesisDAO');
 		$journalId = $journal->getId();
 		if ($limitRecentItems && $recentItems > 0) {
 			import('lib.pkp.classes.db.DBResultRange');
@@ -152,7 +152,7 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 			}
 		}
 
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$versionDao = DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
 		$templateMgr =& TemplateManager::getManager($request);

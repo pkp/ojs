@@ -77,7 +77,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function deposit($url, $username, $password, $articleId, $depositEditorial, $depositGalleys) {
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		$request =& $this->getRequest();
 		$journal =& $request->getJournal();
@@ -171,7 +171,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				break;
 			default:
 				$journal =& $request->getJournal();
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
 				$totalArticles = count($articleIds);

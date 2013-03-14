@@ -91,7 +91,7 @@ class NotificationManager extends PKPNotificationManager {
 		// Check if we've already set the roles for this user and article, otherwise fetch them
 		if(!isset($this->privilegedRoles[$userId][$articleId])) $this->privilegedRoles[$userId][$articleId] = $this->_getHighestPrivilegedRolesForArticle($request, $articleId);
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
+		$roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 
 		if(is_array($validRoles)) {
 			// We've specified a list of roles that should be the only roles considered
@@ -120,8 +120,8 @@ class NotificationManager extends PKPNotificationManager {
 	function _getHighestPrivilegedRolesForArticle(&$request, $articleId) {
 		$user =& $request->getUser();
 		$userId = $user->getId();
-		$roleDao =& DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 
 		$roles = array();
 
@@ -152,7 +152,7 @@ class NotificationManager extends PKPNotificationManager {
 		if ($article && $userId == $article->getUserId()) $roles[] = ROLE_ID_AUTHOR;
 
 		// Check if user is reviewer
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
 		$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($articleId);
 		foreach ($reviewAssignments as $reviewAssignment) {
 			if ($userId == $reviewAssignment->getReviewerId()) $roles[] = ROLE_ID_REVIEWER;

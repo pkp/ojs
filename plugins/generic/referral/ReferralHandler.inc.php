@@ -57,7 +57,7 @@ class ReferralHandler extends Handler {
 		list($plugin, $referral, $article) = $this->validate($request, $referralId);
 		// If it's an insert, ensure that it's allowed for this article
 		if (!isset($referral)) {
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$journal =& $request->getJournal();
 			$article =& $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
 			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
@@ -91,7 +91,7 @@ class ReferralHandler extends Handler {
 		$referralId = (int) array_shift($args);
 		list($plugin, $referral) = $this->validate($request, $referralId);
 
-		$referralDao =& DAORegistry::getDAO('ReferralDAO');
+		$referralDao = DAORegistry::getDAO('ReferralDAO');
 		$referralDao->deleteReferral($referral);
 
 		$request->redirect(null, 'author');
@@ -101,8 +101,8 @@ class ReferralHandler extends Handler {
 		parent::validate($request);
 
 		if ($referralId) {
-			$referralDao =& DAORegistry::getDAO('ReferralDAO');
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$referralDao = DAORegistry::getDAO('ReferralDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$referral =& $referralDao->getReferral($referralId);
 			if (!$referral) $request->redirect(null, 'index');
 

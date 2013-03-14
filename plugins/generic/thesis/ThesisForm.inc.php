@@ -126,7 +126,7 @@ class ThesisForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->thesisId)) {
-			$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+			$thesisDao = DAORegistry::getDAO('ThesisDAO');
 			$thesis =& $thesisDao->getThesis($this->thesisId);
 
 			if ($thesis != null) {
@@ -187,7 +187,7 @@ class ThesisForm extends Form {
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
-		$thesisDao =& DAORegistry::getDAO('ThesisDAO');
+		$thesisDao = DAORegistry::getDAO('ThesisDAO');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 

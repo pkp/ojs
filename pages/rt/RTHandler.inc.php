@@ -44,7 +44,7 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getViewMetadata()) {
@@ -84,7 +84,7 @@ class RTHandler extends ArticleHandler {
 		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		$context =& $rtDao->getContext($contextId);
@@ -177,7 +177,7 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getCaptureCite()) {
@@ -218,14 +218,14 @@ class RTHandler extends ArticleHandler {
 
 		$this->setupTemplate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getPrinterFriendly()) {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$galley =& $articleGalleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 		} else {
@@ -272,7 +272,7 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 		$user =& $request->getUser();
 
@@ -322,7 +322,7 @@ class RTHandler extends ArticleHandler {
 		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 		$user =& $request->getUser();
 
@@ -366,7 +366,7 @@ class RTHandler extends ArticleHandler {
 		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles()) {
@@ -399,10 +399,10 @@ class RTHandler extends ArticleHandler {
 		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getId());
 
 		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
@@ -438,7 +438,7 @@ class RTHandler extends ArticleHandler {
 		$journal =& $router->getContext($request);
 		$article =& $this->article;
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || !$journalRt->getFindingReferences()) {

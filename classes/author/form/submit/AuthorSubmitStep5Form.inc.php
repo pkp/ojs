@@ -41,7 +41,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$templateMgr =& TemplateManager::getManager($this->request);
 
 		// Get article file for this article
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles =& $articleFileDao->getArticleFilesByArticle($this->articleId);
 
 		$templateMgr->assign_by_ref('files', $articleFiles);
@@ -52,7 +52,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$paymentManager = new OJSPaymentManager($this->request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$articleId = $this->articleId;
 
 			if ($paymentManager->submissionEnabled()) {
@@ -100,7 +100,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$articleId = $this->articleId;
 			$user =& $this->request->getUser();
 
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			if ($completedPaymentDao->hasPaidSubmission($journalId, $articleId)) {
 				return parent::validate();
 			} elseif ($this->request->getUserVar('qualifyForWaiver') && $this->request->getUserVar('commentsToEditor') != '') {
@@ -123,8 +123,8 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Save changes to article.
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$journal =& $this->request->getJournal();
 		$user =& $this->request->getUser();

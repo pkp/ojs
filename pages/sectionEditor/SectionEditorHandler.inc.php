@@ -64,8 +64,8 @@ class SectionEditorHandler extends Handler {
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections =& $sectionDao->getSectionTitles($journal->getId());
@@ -201,7 +201,7 @@ class SectionEditorHandler extends Handler {
 		parent::validate(null, $request);
 		$isValid = true;
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
@@ -261,7 +261,7 @@ class SectionEditorHandler extends Handler {
 			}
 
 			// If necessary, note the current date and time as the "underway" date/time
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 			foreach ($editAssignments as $editAssignment) {
 				if ($editAssignment->getEditorId() == $user->getId() && $editAssignment->getDateUnderway() === null) {

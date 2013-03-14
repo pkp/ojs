@@ -88,7 +88,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		} else {
 			// Retrieve the published article.
 			assert(is_a($pubObject, 'ArticleFile'));
-			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
 			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), null, true);
 			if (!$article) return null;
 
@@ -325,7 +325,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		// Check whether we still have to retrieve the journal from the database.
 		if (!$journal || $journal->getId() != $journalId) {
 			unset($journal);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($journalId);
 		}
 

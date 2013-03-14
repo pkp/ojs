@@ -45,7 +45,7 @@ class ManagerHandler extends Handler {
 				$templateMgr->assign('currentVersion', $currentVersion->getVersionString());
 				
 				// Get contact information for site administrator
-				$roleDao =& DAORegistry::getDAO('RoleDAO');
+				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$siteAdmins =& $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
 				$templateMgr->assign_by_ref('siteAdmin', $siteAdmins->next());
 			}
@@ -77,7 +77,7 @@ class ManagerHandler extends Handler {
 	 * @return array
 	 */	
 	function &retrieveRoleAssignmentPreferences($journalId) {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getSettings($journalId);
   		$returner = array('useLayoutEditors'=>0,'useCopyeditors'=>0,'useProofreaders'=>0);
 

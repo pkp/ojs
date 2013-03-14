@@ -125,7 +125,7 @@ class SolrWebService extends XmlWebService {
 		if (isset($this->_journalCache[$journalId])) {
 			$journal =& $this->_journalCache[$journalId];
 		} else {
-			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journal = $journalDao->getById($journalId);
 			$this->_journalCache[$journalId] =& $journal;
 		}
@@ -167,7 +167,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Mark the article "changed".
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$articleDao->updateSetting(
 			$articleId, 'indexingState', SOLR_INDEXINGSTATE_DIRTY, 'bool'
 		);
@@ -1134,7 +1134,7 @@ class SolrWebService extends XmlWebService {
 		// Retrieve a batch of "changed" articles.
 		import('lib.pkp.classes.db.DBResultRange');
 		$range = new DBResultRange($batchSize);
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$changedArticlesIterator =& $articleDao->getBySetting(
 			'indexingState', SOLR_INDEXINGSTATE_DIRTY, $journalId, $range
 		);
@@ -1238,7 +1238,7 @@ class SolrWebService extends XmlWebService {
 		// Run through all articles in the batch and generate an
 		// XML list for them.
 		$numDeleted = 0;
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 		foreach($articles as $article) {
 			if (!is_a($article, 'PublishedArticle')) {
 				// Try to upgrade the article to a published article.
@@ -1477,7 +1477,7 @@ class SolrWebService extends XmlWebService {
 		$router =& $request->getRouter(); /* @var $router PageRouter */
 
 		// Add galley files
-		$fileDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galleys =& $fileDao->getGalleysByArticle($article->getId());
 		$galleyList = null;
 		foreach ($galleys as $galley) { /* @var $galley ArticleGalley */
@@ -1513,7 +1513,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add supplementary files
-		$fileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$fileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFiles =& $fileDao->getSuppFilesByArticle($article->getId());
 		$suppFileList = null;
 		foreach ($suppFiles as $suppFile) { /* @var $suppFile SuppFile */

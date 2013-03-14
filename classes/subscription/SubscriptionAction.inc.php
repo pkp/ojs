@@ -20,7 +20,7 @@ class SubscriptionAction {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$statusOptions =& $individualSubscriptionDao->getStatusOptions();
 		$individualStatus = array();
 
@@ -33,7 +33,7 @@ class SubscriptionAction {
 			);
 		}
 
-		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$statusOptions =& $institutionalSubscriptionDao->getStatusOptions();
 		$institutionalStatus = array();
 
@@ -61,11 +61,11 @@ class SubscriptionAction {
 		$rangeInfo =& PKPHandler::getRangeInfo($request, 'subscriptions');
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$templateFile = 'subscription/institutionalSubscriptions.tpl';
 			$fieldOptions = SubscriptionAction::getInstitutionalSearchFieldOptions();
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			$templateFile = 'subscription/individualSubscriptions.tpl';
 			$fieldOptions = SubscriptionAction::getIndividualSearchFieldOptions();
 		}
@@ -168,9 +168,9 @@ class SubscriptionAction {
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		// Ensure subscription is for this journal
@@ -188,9 +188,9 @@ class SubscriptionAction {
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		// Ensure subscription is for this journal
@@ -210,9 +210,9 @@ class SubscriptionAction {
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		// Ensure subscription is valid and for this journal
@@ -267,7 +267,7 @@ class SubscriptionAction {
 			$redirect = 'individual';
 		}
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$searchType = null;
 		$searchMatch = null;
@@ -317,9 +317,9 @@ class SubscriptionAction {
 		$subscriptionId = $request->getUserVar('subscriptionId') == null ? null : (int) $request->getUserVar('subscriptionId');
 
 		if ($institutional) {
-			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		} else {
-			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) || $subscriptionId == null) {
@@ -385,7 +385,7 @@ class SubscriptionAction {
 	function subscriptionTypes($request) {
 		$journal =& $request->getJournal();
 		$rangeInfo =& Handler::getRangeInfo($request, 'subscriptionTypes');
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getId(), $rangeInfo);
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -401,7 +401,7 @@ class SubscriptionAction {
 		$subscriptionTypeId = $request->getUserVar('id');
 		$journal =& $request->getJournal();
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
 
 		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getId()) {
@@ -438,7 +438,7 @@ class SubscriptionAction {
 		$subscriptionTypeId = (int) array_shift($args);
 		$journal =& $request->getJournal();
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		// Ensure subscription type is for this journal
 		if ($subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) {
@@ -453,7 +453,7 @@ class SubscriptionAction {
 	function editSubscriptionType($args, $request) {
 		$journal =& $request->getJournal();
 		$subscriptionTypeId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		// Ensure subscription type is valid and for this journal
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) || $subscriptionTypeId == null) {
@@ -491,7 +491,7 @@ class SubscriptionAction {
 
 		$journal =& $request->getJournal();
 		$subscriptionTypeId = $request->getUserVar('typeId') == null ? null : (int) $request->getUserVar('typeId');
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		if (($subscriptionTypeId != null && $subscriptionTypeDao->getSubscriptionTypeJournalId($subscriptionTypeId) == $journal->getId()) || $subscriptionTypeId == null) {
 
@@ -598,10 +598,10 @@ class SubscriptionAction {
 
 		if (empty($subscriptionContactEmail)) return false;
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getById($subscription->getUserId());
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');

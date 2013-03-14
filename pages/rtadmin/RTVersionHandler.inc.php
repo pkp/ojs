@@ -25,7 +25,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function createVersion($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 
@@ -45,7 +45,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function exportVersion($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -82,7 +82,7 @@ class RTVersionHandler extends RTAdminHandler {
 		// If the journal RT was configured, change its state to
 		// "disabled" because the RT version it was configured for
 		// has now been deleted.
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 		if ($journalRt) {
 			$journalRt->setVersion(null);
@@ -98,7 +98,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'versions');
 
 		$templateMgr =& TemplateManager::getManager($request);
@@ -109,7 +109,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function editVersion($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -128,7 +128,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function deleteVersion($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
@@ -141,7 +141,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function saveVersion($args, $request) {
 		$this->validate();
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;

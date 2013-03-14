@@ -98,7 +98,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 			$errors = array();
 		} else {
 			$journal =& $request->getJournal();
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issueId = array_shift($args);
 			if (!$issueId) {
 				$issuesResultSet = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));

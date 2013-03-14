@@ -90,7 +90,7 @@ class IssueFileManager extends FileManager {
 	 * @return boolean if successful
 	 */
 	function deleteFile($fileId) {
-		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile =& $issueFileDao->getIssueFile($fileId);
 
 		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
@@ -115,7 +115,7 @@ class IssueFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function downloadFile($fileId, $inline = false) {
-		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile =& $issueFileDao->getIssueFile($fileId);
 
 		if ($issueFile) {
@@ -163,7 +163,7 @@ class IssueFileManager extends FileManager {
 		if (HookRegistry::call('IssueFileManager::_handleUpload', array(&$fileName, &$contentType, &$fileId, &$overwrite, &$result))) return $result;
 
 		$issueId = $this->getIssueId();
-		$issueFileDao =& DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 
 		$contentTypePath = $this->contentTypeToPath($contentType);
 		$dir = $this->getFilesDir() . $contentTypePath . '/';

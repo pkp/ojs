@@ -64,7 +64,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 			'subscriptionManager' => 'user.role.subscriptionManager'
 		));
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$journal =& $request->getJournal();
 		set_time_limit(0);
@@ -211,8 +211,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		$journalPath = array_shift($args);
 		$flags =& $args;
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 
@@ -256,7 +256,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'export':
 				$this->import('UserExportDom');
-				$roleDao =& DAORegistry::getDAO('RoleDAO');
+				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$rolePaths = null;
 				if (empty($args)) {
 					$users =& $roleDao->getUsersByJournalId($journal->getId());

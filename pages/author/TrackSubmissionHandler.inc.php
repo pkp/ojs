@@ -88,7 +88,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId);
 
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getSettings($journal->getId());
 
 		// Setting the round.
@@ -97,7 +97,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		$templateMgr =& TemplateManager::getManager($request);
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -126,7 +126,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$paymentManager = new OJSPaymentManager($request);
 		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
 			$templateMgr->assign('authorFees', true);
-			$completedPaymentDao =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 
 			if ($paymentManager->submissionEnabled()) {
 				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDao->getSubmissionCompletedPayment ($journal->getId(), $articleId));
@@ -161,7 +161,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->setupTemplate($request, true, $articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR); // editor.article.decision etc. FIXME?
 
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewModifiedByRound = $reviewAssignmentDao->getLastModifiedByRound($articleId);
 		$reviewEarliestNotificationByRound = $reviewAssignmentDao->getEarliestNotificationByRound($articleId);
 		$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($articleId);
@@ -267,7 +267,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = $request->getUserVar('fileId');
-			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 			$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 			if (isset($suppFile) && $suppFile != null) {
@@ -385,7 +385,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		// If the copy editor has completed copyediting, disallow
 		// the author from changing the metadata.
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission, $request)) {
  			$request->redirect(null, null, 'submission', $articleId);
@@ -562,7 +562,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley =& $galleyDao->getGalley($galleyId, $articleId);
 
 		import('classes.file.ArticleFileManager'); // FIXME

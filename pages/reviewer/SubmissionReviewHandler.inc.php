@@ -35,10 +35,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$user =& $this->user;
 		$submission =& $this->submission;
 
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
-		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 
 		if ($submission->getDateConfirmed() == null) {
 			$confirmedStatus = 0;
@@ -77,7 +77,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewId = (int) $request->getUserVar('reviewId');
 		$declineReview = $request->getUserVar('declineReview');
 
-		$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
@@ -106,7 +106,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewerSubmission =& $this->submission;
 
 		if ($reviewerSubmission->getDateConfirmed() && !$reviewerSubmission->getDeclined() && !$reviewerSubmission->getCancelled() && !$reviewerSubmission->getRecommendation()) {
-			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
 			$reviewerSubmission->setCompetingInterests($request->getUserVar('competingInterests'));
 			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 		}
@@ -228,7 +228,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewerSubmission =& $this->submission;
 		$this->setupTemplate($request, true, $reviewerSubmission->getId(), $reviewId);
 
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$reviewFormId = $reviewAssignment->getReviewFormId();
 		if ($reviewFormId != null) {

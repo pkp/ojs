@@ -44,7 +44,7 @@ class TemporaryFileManager extends PKPTemporaryFileManager {
 		if (!$newFileName) return false;
 
 		if (copy($articleFile->getFilePath(), $this->getBasePath() . $newFileName)) {
-			$temporaryFileDao =& DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->newDataObject();
 
 			$temporaryFile->setUserId($userId);

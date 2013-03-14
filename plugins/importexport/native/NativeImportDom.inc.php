@@ -69,7 +69,7 @@ class NativeImportDom {
 			// There were errors. Delete all the issues we've
 			// successfully created.
 			NativeImportDom::cleanupFailure ($dependentItems);
-			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
 				$issueDao->deleteIssue($issue);
 			}
@@ -457,7 +457,7 @@ class NativeImportDom {
 	}
 
 	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems, $sectionIndex = null) {
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$errors = array();
 
@@ -634,8 +634,8 @@ class NativeImportDom {
 		$errors = array();
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		$article = $articleDao->newDataObject();
 		if ($locale = $articleNode->getAttribute('locale')) {
@@ -804,7 +804,7 @@ class NativeImportDom {
 		if ($hasErrors) return false;
 
 		// Create submission mangement records
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
 		$initialCopyeditSignoff->setUserId(0);
@@ -974,7 +974,7 @@ class NativeImportDom {
 		$errors = array();
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if ($isHtml) $galley = new ArticleHtmlGalley();
 		else $galley = new ArticleGalley();
@@ -1065,7 +1065,7 @@ class NativeImportDom {
 	 * ridiculous.
 	 */
 	function handleHtmlGalleyNodes(&$galleyNode, &$articleFileManager, &$galley, &$errors, &$isCommandLine) {
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		foreach ($galleyNode->children as $node) {
 			$isStylesheet = ($node->getName() == 'stylesheet');
@@ -1162,7 +1162,7 @@ class NativeImportDom {
 		$errors = array();
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 
 		$suppFile = new SuppFile();
 		$suppFile->setArticleId($article->getId());
@@ -1326,8 +1326,8 @@ class NativeImportDom {
 	}
 
 	function cleanupFailure (&$dependentItems) {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		foreach ($dependentItems as $dependentItem) {
 			$type = array_shift($dependentItem);

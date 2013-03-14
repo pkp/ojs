@@ -59,8 +59,8 @@ class LayoutCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& Request::getJournal();
 
 		// Create list of recipients:
@@ -71,7 +71,7 @@ class LayoutCommentForm extends CommentForm {
 
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 			$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getId());
 
 			// Check to ensure that there is a layout editor assigned to this article.
@@ -82,7 +82,7 @@ class LayoutCommentForm extends CommentForm {
 			}
 		} else {
 			// Then add editor
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($this->article->getId());
 			$editorAddresses = array();
 			while ($editAssignment = $editAssignments->next()) {

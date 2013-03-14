@@ -76,7 +76,7 @@ class Article extends Submission {
 	function getBestArticleId($journal = null) {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getById($this->getJournalId());
 		}
 
@@ -362,7 +362,7 @@ class Article extends Submission {
 	 */
 	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
 		$articleId = $this->getId();
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$userIds = array();
 
@@ -372,7 +372,7 @@ class Article extends Submission {
 		}
 
 		if($editors) {
-			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
 			while ($editAssignment = $editAssignments->next()) {
 				$userId = $editAssignment->getEditorId();
@@ -399,7 +399,7 @@ class Article extends Submission {
 		}
 
 		if($reviewers) {
-			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($articleId);
 			foreach ($reviewAssignments as $reviewAssignment) {
 				$userId = $reviewAssignment->getReviewerId();
@@ -417,7 +417,7 @@ class Article extends Submission {
 	 * @return Signoff
 	 */
 	function getSignoff($signoffType) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		return $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 	}
 
@@ -428,8 +428,8 @@ class Article extends Submission {
 	 * @return ArticleFile
 	 */
 	function &getFileBySignoffType($signoffType, $idOnly = false) {
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) {
@@ -452,8 +452,8 @@ class Article extends Submission {
 	 * @return User
 	 */
 	function &getUserBySignoffType($signoffType) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) {
@@ -471,7 +471,7 @@ class Article extends Submission {
 	 * @return int
 	 */
 	function getUserIdBySignoffType($signoffType) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$signoff = $signoffDao->build($signoffType, ASSOC_TYPE_ARTICLE, $this->getId());
 		if (!$signoff) return false;

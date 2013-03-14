@@ -34,7 +34,7 @@ class SectionEditorAction extends Action {
 	 */
 	function changeSection($sectionEditorSubmission, $sectionId) {
 		if (!HookRegistry::call('SectionEditorAction::changeSection', array(&$sectionEditorSubmission, $sectionId))) {
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$sectionEditorSubmission->setSectionId($sectionId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		}
@@ -50,7 +50,7 @@ class SectionEditorAction extends Action {
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		if (empty($editAssignments)) return;
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user =& $request->getUser();
 		$editorDecision = array(
 			'editDecisionId' => null,
@@ -81,9 +81,9 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function addReviewer($sectionEditorSubmission, $reviewerId, $round, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewer =& $userDao->getById($reviewerId);
@@ -107,8 +107,8 @@ class SectionEditorAction extends Action {
 
 			// Assign review form automatically if needed
 			$journalId = $sectionEditorSubmission->getJournalId();
-			$sectionDao =& DAORegistry::getDAO('SectionDAO');
-			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 
 			$sectionId = $sectionEditorSubmission->getSectionId();
 			$section = $sectionDao->getById($sectionId, $journalId);
@@ -136,9 +136,9 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function clearReview($sectionEditorSubmission, $reviewId, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -165,9 +165,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyReviewer($sectionEditorSubmission, $reviewId, $send, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -300,9 +300,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function cancelReview($sectionEditorSubmission, $reviewId, $send, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -363,9 +363,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff no error was encountered
 	 */
 	function remindReviewer($sectionEditorSubmission, $reviewId, $send, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -464,9 +464,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankReviewer($sectionEditorSubmission, $reviewId, $send, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -514,12 +514,12 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function rateReviewer($articleId, $reviewId, $quality, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
@@ -550,8 +550,8 @@ class SectionEditorAction extends Action {
 	 * @param $viewable boolean
 	 */
 	function makeReviewerFileViewable($articleId, $reviewId, $fileId, $revision, $viewable = false) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$articleFile =& $articleFileDao->getArticleFile($fileId, $revision);
@@ -584,7 +584,7 @@ class SectionEditorAction extends Action {
 			return date('Y-m-d H:i:s', $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60));
 		} else {
 			$journal =& Request::getJournal();
-			$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+			$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 			$numWeeks =& $settingsDao->getSetting($journal->getId(), 'numWeeksPerReview');
 			if (!isset($numWeeks) || (int) $numWeeks < 0) $numWeeks = 0;
 			return date('Y-m-d H:i:s', $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60));
@@ -601,8 +601,8 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function setDueDate($articleId, $reviewId, $dueDate, $numWeeks, $logEntry, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -618,7 +618,7 @@ class SectionEditorAction extends Action {
 
 			if ($logEntry) {
 				// Add log
-				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 				$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 				import('classes.article.log.ArticleLog');
 				import('classes.article.log.ArticleEventLogEntry');
@@ -670,8 +670,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function unsuitableSubmission($sectionEditorSubmission, $send, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -712,8 +712,8 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function setReviewerRecommendation($article, $reviewId, $recommendation, $acceptOption, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -743,13 +743,13 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 */
 	function clearReviewForm($sectionEditorSubmission, $reviewId) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::clearReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
 
 		if (isset($reviewAssignment) && $reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
-			$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+			$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 			$responses = $reviewFormResponseDao->getReviewReviewFormResponseValues($reviewId);
 			if (!empty($responses)) {
 				$reviewFormResponseDao->deleteByReviewId($reviewId);
@@ -766,7 +766,7 @@ class SectionEditorAction extends Action {
 	 * @param $reviewFormId int
 	 */
 	function addReviewForm($sectionEditorSubmission, $reviewId, $reviewFormId) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::addReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId, &$reviewFormId))) return $reviewFormId;
@@ -775,7 +775,7 @@ class SectionEditorAction extends Action {
 			// Only add the review form if it has not already
 			// been assigned to the review.
 			if ($reviewAssignment->getReviewFormId() != $reviewFormId) {
-				$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+				$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
 				$responses = $reviewFormResponseDao->getReviewReviewFormResponseValues($reviewId);
 				if (!empty($responses)) {
 					$reviewFormResponseDao->deleteByReviewId($reviewId);
@@ -792,7 +792,7 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 */
 	function viewReviewFormResponse($sectionEditorSubmission, $reviewId) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (HookRegistry::call('SectionEditorAction::viewReviewFormResponse', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
@@ -818,9 +818,9 @@ class SectionEditorAction extends Action {
 	function setCopyeditFile($sectionEditorSubmission, $fileId, $revision, $request) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getId());
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$user =& $request->getUser();
 
 		if (!HookRegistry::call('SectionEditorAction::setCopyeditFile', array(&$sectionEditorSubmission, &$fileId, &$revision))) {
@@ -851,8 +851,8 @@ class SectionEditorAction extends Action {
 	function resubmitFile($sectionEditorSubmission, $fileId, $revision, $request) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getId());
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$user =& $request->getUser();
 
 		if (!HookRegistry::call('SectionEditorAction::resubmitFile', array(&$sectionEditorSubmission, &$fileId, &$revision))) {
@@ -905,9 +905,9 @@ class SectionEditorAction extends Action {
 	 * @param $copyeditorId int
 	 */
 	function selectCopyeditor($sectionEditorSubmission, $copyeditorId, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		// Check to see if the requested copyeditor is not already
@@ -937,8 +937,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyCopyeditor($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -984,12 +984,12 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function initiateCopyedit($sectionEditorSubmission, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user =& $request->getUser();
 
 		// Only allow copyediting to be initiated if a copyedit file exists.
 		if ($sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && !HookRegistry::call('SectionEditorAction::initiateCopyedit', array(&$sectionEditorSubmission))) {
-			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+			$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 			$copyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getId());
 			if (!$copyeditSignoff->getUserId()) {
@@ -1009,8 +1009,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankCopyeditor($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1052,8 +1052,8 @@ class SectionEditorAction extends Action {
 	 * @return true iff ready for redirect
 	 */
 	function notifyAuthorCopyedit($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1102,8 +1102,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankAuthorCopyedit($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1145,8 +1145,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyFinalCopyedit($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1196,8 +1196,8 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankFinalCopyedit($sectionEditorSubmission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1238,7 +1238,7 @@ class SectionEditorAction extends Action {
 	function uploadReviewVersion($sectionEditorSubmission) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getId());
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadReviewVersion', array(&$sectionEditorSubmission))) {
@@ -1269,7 +1269,7 @@ class SectionEditorAction extends Action {
 	function uploadEditorVersion($sectionEditorSubmission, $request) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getId());
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user =& $request->getUser();
 
 		$fileName = 'upload';
@@ -1301,8 +1301,8 @@ class SectionEditorAction extends Action {
 		$articleId = $sectionEditorSubmission->getId();
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($articleId);
-		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		// Perform validity checks.
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
@@ -1345,8 +1345,8 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function completeCopyedit($sectionEditorSubmission, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1370,8 +1370,8 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function completeFinalCopyedit($sectionEditorSubmission, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1408,14 +1408,14 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function archiveSubmission($sectionEditorSubmission, $request) {
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user =& $request->getUser();
 
 		if (HookRegistry::call('SectionEditorAction::archiveSubmission', array(&$sectionEditorSubmission))) return;
 
 		$journal =& $request->getJournal();
 		if ($sectionEditorSubmission->getStatus() == STATUS_PUBLISHED) {
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($sectionEditorSubmission->getId());
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
@@ -1444,11 +1444,11 @@ class SectionEditorAction extends Action {
 	function restoreToQueue($sectionEditorSubmission, $request) {
 		if (HookRegistry::call('SectionEditorAction::restoreToQueue', array(&$sectionEditorSubmission))) return;
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		// Determine which queue to return the article to: the
 		// scheduling queue or the editing queue.
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($sectionEditorSubmission->getId());
 		$articleSearchIndex = null;
 		if ($publishedArticle) {
@@ -1457,7 +1457,7 @@ class SectionEditorAction extends Action {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId());
 			if ($issue->getPublished()) {
 				// delete article tombstone
-				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
+				$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
 				$tombstoneDao->deleteByDataObjectId($sectionEditorSubmission->getId());
 			}
 			import('classes.search.ArticleSearchIndex');
@@ -1486,7 +1486,7 @@ class SectionEditorAction extends Action {
 	function updateSection($submission, $sectionId) {
 		if (HookRegistry::call('SectionEditorAction::updateSection', array(&$submission, &$sectionId))) return;
 
-		$submissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission->setSectionId($sectionId); // FIXME validate this ID?
 		$submissionDao->updateSectionEditorSubmission($submission);
 
@@ -1504,7 +1504,7 @@ class SectionEditorAction extends Action {
 	function updateCommentsStatus($submission, $commentsStatus) {
 		if (HookRegistry::call('SectionEditorAction::updateCommentsStatus', array(&$submission, &$commentsStatus))) return;
 
-		$submissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission->setCommentsStatus($commentsStatus); // FIXME validate this?
 		$submissionDao->updateSectionEditorSubmission($submission);
 	}
@@ -1520,7 +1520,7 @@ class SectionEditorAction extends Action {
 	function uploadLayoutVersion($submission) {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getId());
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 
@@ -1543,8 +1543,8 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function assignLayoutEditor($submission, $editorId, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		if (HookRegistry::call('SectionEditorAction::assignLayoutEditor', array(&$submission, &$editorId))) return;
 
 		import('classes.article.log.ArticleLog');
@@ -1585,9 +1585,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function notifyLayoutEditor($submission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$submissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1633,9 +1633,9 @@ class SectionEditorAction extends Action {
 	 * @return boolean true iff ready for redirect
 	 */
 	function thankLayoutEditor($submission, $send, $request) {
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
-		$submissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
+		$submissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
@@ -1736,7 +1736,7 @@ class SectionEditorAction extends Action {
 	 */
 	function deleteArticleImage($submission, $fileId, $revision) {
 		import('classes.file.ArticleFileManager');
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if (HookRegistry::call('SectionEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
 		foreach ($submission->getGalleys() as $galley) {
 			$images =& $articleGalleyDao->getGalleyImages($galley->getId());
@@ -1758,7 +1758,7 @@ class SectionEditorAction extends Action {
 	function addSubmissionNote($articleId, $request) {
 		import('classes.file.ArticleFileManager');
 
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
 
@@ -1801,7 +1801,7 @@ class SectionEditorAction extends Action {
 			$articleFileManager->deleteFile($fileId);
 		}
 
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 		$noteDao->deleteById($noteId);
 	}
 
@@ -1812,7 +1812,7 @@ class SectionEditorAction extends Action {
 	function updateSubmissionNote($articleId, $request) {
 		import('classes.file.ArticleFileManager');
 
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 
 		$user =& $request->getUser();
 		$journal =& $request->getJournal();
@@ -1858,12 +1858,12 @@ class SectionEditorAction extends Action {
 
 		import('classes.file.ArticleFileManager');
 
-		$noteDao =& DAORegistry::getDAO('NoteDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
 
 		$fileIds = $noteDao->getAllFileIds(ASSOC_TYPE_ARTICLE, $articleId);
 
 		if (!empty($fileIds)) {
-			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+			$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 			$articleFileManager = new ArticleFileManager($articleId);
 
 			foreach ($fileIds as $fileId) {
@@ -1993,9 +1993,9 @@ class SectionEditorAction extends Action {
 	 * @param $request object
 	 */
 	function emailEditorDecisionComment($sectionEditorSubmission, $send, $request) {
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -2057,7 +2057,7 @@ class SectionEditorAction extends Action {
 				));
 				$email->addRecipient($authorEmail, $authorUser->getFullName());
 			} elseif ($request->getUserVar('importPeerReviews')) {
-				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound());
 				$reviewIndexes =& $reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound());
 
@@ -2080,8 +2080,8 @@ class SectionEditorAction extends Action {
 						}
 						if ($reviewFormId = $reviewAssignment->getReviewFormId()) {
 							$reviewId = $reviewAssignment->getId();
-							$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
-							$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+							$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
+							$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 							$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
 							if(!$articleComments) {
 								$body .= "------------------------------------------------------\n";
@@ -2138,8 +2138,8 @@ class SectionEditorAction extends Action {
 			return true;
 		} else {
 			if (!$request->getUserVar('continued')) {
-				$userDao =& DAORegistry::getDAO('UserDAO');
-				$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+				$userDao = DAORegistry::getDAO('UserDAO');
+				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 				$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($article->getId(), $article->getCurrentRound());
 				$email->clearRecipients();
 				foreach ($reviewAssignments as $reviewAssignment) {
@@ -2331,8 +2331,8 @@ class SectionEditorAction extends Action {
 	 * @param $accept boolean True === accept; false === decline
 	 */
 	function confirmReviewForReviewer($reviewId, $accept, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
@@ -2364,8 +2364,8 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 */
 	function uploadReviewForReviewer($reviewId, $article, $request) {
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);

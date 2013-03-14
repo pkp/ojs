@@ -46,7 +46,7 @@ class ReviewFormElementForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 		return $reviewFormElementDao->getLocaleFieldNames();
 	}
 
@@ -71,7 +71,7 @@ class ReviewFormElementForm extends Form {
 	function initData() {
 		if ($this->reviewFormElementId != null) {
 			$journal =& Request::getJournal();
-			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+			$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElement =& $reviewFormElementDao->getReviewFormElement($this->reviewFormElementId);
 
 			if ($reviewFormElement == null) {
@@ -103,7 +103,7 @@ class ReviewFormElementForm extends Form {
 	 * Save review form element.
 	 */
 	function execute() {
-		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 
 		if ($this->reviewFormElementId != null) {
 			$reviewFormElement =& $reviewFormElementDao->getReviewFormElement($this->reviewFormElementId);

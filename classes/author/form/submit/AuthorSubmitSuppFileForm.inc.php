@@ -43,7 +43,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		$this->articleId = $article->getId();
 
 		if (isset($suppFileId) && !empty($suppFileId)) {
-			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+			$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 			$this->suppFile =& $suppFileDao->getSuppFile($suppFileId, $article->getId());
 			if (isset($this->suppFile)) {
 				$this->suppFileId = $suppFileId;
@@ -60,7 +60,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		return $suppFileDao->getLocaleFieldNames();
 	}
 
@@ -157,7 +157,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	function execute() {
 		import('classes.file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 
 		$fileName = 'uploadSuppFile';
 
@@ -167,7 +167,7 @@ class AuthorSubmitSuppFileForm extends Form {
 
 			// Remove old file and upload new, if file is selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
-				$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+				$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 				$suppFileId = $articleFileManager->uploadSuppFile($fileName, $this->suppFile->getFileId(), true);
 				$this->suppFile->setFileId($suppFileId);
 			}

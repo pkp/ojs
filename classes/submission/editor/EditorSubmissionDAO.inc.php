@@ -30,11 +30,11 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function EditorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$this->articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
-		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$this->userDao =& DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->userDao = DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 	}
 
 	/**
@@ -107,7 +107,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 
 		// Review Rounds
-		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
 			$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($editorSubmission->getId(), $i);
 			if (!empty($reviewAssignments)) {

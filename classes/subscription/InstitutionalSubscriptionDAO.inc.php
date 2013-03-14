@@ -564,7 +564,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 
 		return $returner;

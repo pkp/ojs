@@ -46,15 +46,15 @@ class SubscriptionForm extends Form {
 		$this->subscription = null;
 		$this->subscriptionTypes = null;
 
-		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('SubscriptionDAO');
 		$this->validStatus =& $subscriptionDao->getStatusOptions();
 
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$this->validCountries =& $countryDao->getCountries();
 
 		// User is provided and valid
 		$this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', create_function('$userId', '$userDao =& DAORegistry::getDAO(\'UserDAO\'); return $userDao->userExistsById($userId);')));
+		$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', create_function('$userId', '$userDao = DAORegistry::getDAO(\'UserDAO\'); return $userDao->userExistsById($userId);')));
 
 		// User name, country, and url valid
 		$this->addCheck(new FormValidator($this, 'userFirstName', 'required', 'user.profile.form.firstNameRequired'));
@@ -93,7 +93,7 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('yearOffsetPast', SUBSCRIPTION_YEAR_OFFSET_PAST);
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getById(isset($this->userId)?$this->userId:$this->getData('userId'));
 
 		$templateMgr->assign('userId', $user->getId());
@@ -128,7 +128,7 @@ class SubscriptionForm extends Form {
 		if (isset($this->subscription)) {
 			$subscription =& $this->subscription;
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO');
 			if (isset($this->userId)) {
 				$user =& $userDao->getById($this->userId);
 			} else {
@@ -175,7 +175,7 @@ class SubscriptionForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'userEmail', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($this->getData('userId'), true), true));
 
 		// If subscription type requires it, membership is provided
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
 		if ($needMembership) {
@@ -209,7 +209,7 @@ class SubscriptionForm extends Form {
 
 		// If notify email is requested, ensure subscription contact name and email exist.
 		if ($this->_data['notifyEmail'] == 1) {
-			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal =& Request::getJournal(); $journalSettingsDao =& DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
+			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal =& Request::getJournal(); $journalSettingsDao = DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
 		}
 	}
 
@@ -220,7 +220,7 @@ class SubscriptionForm extends Form {
 		$journal =& Request::getJournal();
 		$subscription =& $this->subscription;
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getById($this->getData('userId'));
 
 		$subscription->setJournalId($journal->getId());
@@ -231,7 +231,7 @@ class SubscriptionForm extends Form {
 		$subscription->setReferenceNumber($this->getData('referenceNumber') ? $this->getData('referenceNumber') : null);
 		$subscription->setNotes($this->getData('notes') ? $this->getData('notes') : null);
 
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId'));
 		$subscription->setDateStart($nonExpiring ? null : $this->getData('dateStart'));
 		$subscription->setDateEnd($nonExpiring ? null : $this->getData('dateEnd'));
@@ -257,9 +257,9 @@ class SubscriptionForm extends Form {
 	 * Internal function to prepare notification email
 	 */
 	function &_prepareNotificationEmail($mailTemplateKey) {
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		$journal =& Request::getJournal();
 		$journalName = $journal->getLocalizedTitle();

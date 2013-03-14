@@ -35,7 +35,7 @@ class SwordHandler extends Handler {
 		$articleId = (int) array_shift($args);
 		$save = array_shift($args) == 'save';
 
-		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$article =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		if (	!$article || !$user || !$journal ||

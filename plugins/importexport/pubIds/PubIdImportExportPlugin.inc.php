@@ -69,7 +69,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		$templateMgr =& TemplateManager::getManager($request);
 		parent::display($args, $request);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$journal =& $request->getJournal();
 		switch (array_shift($args)) {
@@ -143,16 +143,16 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		foreach ($issues as $issue) {
 			$this->generatePubId($doc, $pubIdsNode, $issue, $journal->getId());
 
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			foreach ($publishedArticleDao->getPublishedArticles($issue->getId()) as $publishedArticle) {
 				$this->generatePubId($doc, $pubIdsNode, $publishedArticle, $journal->getId());
 
-				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				foreach ($articleGalleyDao->getGalleysByArticle($publishedArticle->getId()) as $articleGalley) {
 					$this->generatePubId($doc, $pubIdsNode, $articleGalley, $journal->getId());
 				}
 
-				$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+				$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 				foreach ($suppFileDao->getSuppFilesByArticle($publishedArticle->getId()) as $suppFile) {
 					$this->generatePubId($doc, $pubIdsNode, $suppFile, $journal->getId());
 				}
@@ -356,12 +356,12 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

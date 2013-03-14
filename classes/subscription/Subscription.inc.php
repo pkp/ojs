@@ -79,7 +79,7 @@ class Subscription extends DataObject {
 	 * @return string 
 	 */
 	function getUserFullName() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		return $userDao->getUserFullName($this->getData('userId'));
 	}
 
@@ -88,7 +88,7 @@ class Subscription extends DataObject {
 	 * @return string 
 	 */
 	function getUserEmail() {
-		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO');
 		return $userDao->getUserEmail($this->getData('userId'));
 	}
 
@@ -113,7 +113,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function getSubscriptionTypeName() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
 	}
 
@@ -122,7 +122,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function getSubscriptionTypeSummaryString() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
 		return $subscriptionType->getSummaryString();
 	}
@@ -132,7 +132,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function getSubscriptionTypeInstitutional() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
 	}
 
@@ -141,7 +141,7 @@ class Subscription extends DataObject {
 	 * @return string
 	 */
 	function isNonExpiring() {
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId')) ? true : false;
 	}
 

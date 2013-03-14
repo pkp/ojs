@@ -35,7 +35,7 @@ class SearchForm extends Form {
 		parent::Form('rtadmin/search.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 		$this->search =& $rtDao->getSearch($searchId);
 
 		$this->contextId = $contextId;
@@ -105,7 +105,7 @@ class SearchForm extends Form {
 	 * @return int the search ID
 	 */
 	function execute() {
-		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$search = $this->search;
 		if (!isset($search)) {

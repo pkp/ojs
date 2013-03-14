@@ -31,7 +31,7 @@ class TranslatorAction {
 
 		$localeFilesList = TranslatorAction::getLocaleFiles($locale);
 		$localeFilesList = array_merge($localeFilesList, TranslatorAction::getMiscLocaleFiles($locale));
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
 		$localeFilesList[] = $emailTemplateDao->getMainEmailTemplateDataFilename($locale);
 		foreach (array_values(TranslatorAction::getEmailFileMap($locale)) as $emailFile) {
 		}
@@ -65,9 +65,9 @@ class TranslatorAction {
 	}
 
 	static function getMiscLocaleFiles($locale) {
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
-		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
-		$languageDao =& DAORegistry::getDAO('LanguageDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$languageDao = DAORegistry::getDAO('LanguageDAO');
 		return array(
 			$countryDao->getFilename($locale),
 			$currencyDao->getCurrencyFilename($locale),
@@ -76,7 +76,7 @@ class TranslatorAction {
 	}
 
 	static function getEmailFileMap($locale) {
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
 		$files = array($emailTemplateDao->getMainEmailTemplatesFilename() => $emailTemplateDao->getMainEmailTemplateDataFilename($locale));
 		$categories = PluginRegistry::getCategories();
 		foreach ($categories as $category) {
@@ -118,7 +118,7 @@ class TranslatorAction {
 	static function isLocaleFile($locale, $filename) {
 		if (in_array($filename, TranslatorAction::getLocaleFiles($locale))) return true;
 		if (in_array($filename, TranslatorAction::getMiscLocaleFiles($locale))) return true;
-		$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
 		if ($filename == $emailTemplateDao->getMainEmailTemplateDataFilename($locale)) return true;
 		return false;
 	}

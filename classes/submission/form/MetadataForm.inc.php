@@ -34,8 +34,8 @@ class MetadataForm extends Form {
 	 * Constructor.
 	 */
 	function MetadataForm($article, $journal) {
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
 		$user =& Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
@@ -138,11 +138,11 @@ class MetadataForm extends Form {
 			);
 
 			// load the persisted metadata controlled vocabularies
-			$submissionKeywordDao =& DAORegistry::getDAO('SubmissionKeywordDAO');
-			$submissionSubjectDao =& DAORegistry::getDAO('SubmissionSubjectDAO');
-			$submissionDisciplineDao =& DAORegistry::getDAO('SubmissionDisciplineDAO');
-			$submissionAgencyDao =& DAORegistry::getDAO('SubmissionAgencyDAO');
-			$submissionLanguageDao =& DAORegistry::getDAO('SubmissionLanguageDAO');
+			$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+			$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+			$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
+			$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
+			$submissionLanguageDao = DAORegistry::getDAO('SubmissionLanguageDAO');
 
 			// get the supported locale keys
 			$locales = array_keys($this->supportedLocales);
@@ -200,9 +200,9 @@ class MetadataForm extends Form {
 	 */
 	function display() {
 		$journal =& Request::getJournal();
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR); // editor.cover.xxx locale keys; FIXME?
 
@@ -212,7 +212,7 @@ class MetadataForm extends Form {
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$templateMgr->assign('countries', $countryDao->getCountries());
 
 		if ($this->article) {
@@ -323,10 +323,10 @@ class MetadataForm extends Form {
 	 * @return int the article ID
 	 */
 	function execute(&$request) {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$authorDao =& DAORegistry::getDAO('AuthorDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$citationDao =& DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 		$article =& $this->article;
 
 		// Retrieve the previous citation list for comparison.
@@ -454,11 +454,11 @@ class MetadataForm extends Form {
 		$locales = array_keys($this->supportedLocales);
 
 		// persist the metadata/keyword fields.
-		$submissionKeywordDao =& DAORegistry::getDAO('SubmissionKeywordDAO');
-		$submissionSubjectDao =& DAORegistry::getDAO('SubmissionSubjectDAO');
-		$submissionDisciplineDao =& DAORegistry::getDAO('SubmissionDisciplineDAO');
-		$submissionAgencyDao =& DAORegistry::getDAO('SubmissionAgencyDAO');
-		$submissionLanguageDao =& DAORegistry::getDAO('SubmissionLanguageDAO');
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
+		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
+		$submissionLanguageDao = DAORegistry::getDAO('SubmissionLanguageDAO');
 
 		$keywords = array();
 		$agencies = array();
