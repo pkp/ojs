@@ -198,17 +198,17 @@ class ArticleCommentDAO extends DAO {
 	 * removes an article comment from article_comments table
 	 * @param ArticleComment object
 	 */
-	function deleteArticleComment($articleComment) {
-		$this->deleteArticleCommentById($articleComment->getId());
+	function deleteObject($articleComment) {
+		$this->deleteById($articleComment->getId());
 	}
 
 	/**
 	 * removes an article note by id
 	 * @param noteId int
 	 */
-	function deleteArticleCommentById($commentId) {
+	function deleteById($commentId) {
 		$this->update(
-			'DELETE FROM article_comments WHERE comment_id = ?', $commentId
+			'DELETE FROM article_comments WHERE comment_id = ?', (int) $commentId
 		);
 	}
 
@@ -216,9 +216,9 @@ class ArticleCommentDAO extends DAO {
 	 * Delete all comments for an article.
 	 * @param $articleId int
 	 */
-	function deleteArticleComments($articleId) {
+	function deleteByArticleId($articleId) {
 		return $this->update(
-			'DELETE FROM article_comments WHERE article_id = ?', $articleId
+			'DELETE FROM article_comments WHERE article_id = ?', (int) $articleId
 		);
 	}
 

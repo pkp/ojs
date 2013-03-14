@@ -166,8 +166,8 @@ class CommentHandler extends Handler {
 			$request->redirect(null, 'index');
 		}
 
-		$comment =& $commentDao->getById($commentId, $articleId, SUBMISSION_COMMENT_RECURSE_ALL);
-		if ($comment)$commentDao->deleteComment($comment);
+		$comment = $commentDao->getById($commentId, $articleId, SUBMISSION_COMMENT_RECURSE_ALL);
+		if ($comment) $commentDao->deleteObject($comment);
 
 		$request->redirect(null, null, 'view', array($articleId, $galleyId), array('refresh' => '1'));
 	}

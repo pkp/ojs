@@ -179,11 +179,11 @@ class CommentForm extends Form {
 		$comment->setParentCommentId($this->parentId);
 
 		if (isset($this->comment)) {
-			$commentDao->updateComment($comment);
+			$commentDao->updateObject($comment);
 		} else {
 			$comment->setSubmissionId($this->articleId);
 			$comment->setChildCommentCount(0);
-			$commentDao->insertComment($comment);
+			$commentDao->insertObject($comment);
 			$this->commentId = $comment->getId();
 		}
 

@@ -48,8 +48,7 @@ class UserAction {
 		$newUser = $userDao->getById($newUserId);
 		foreach ($commentDao->getByUserId($oldUserId) as $comment) {
 			$comment->setUser($newUser);
-			$commentDao->updateComment($comment);
-			unset($comment);
+			$commentDao->updateObject($comment);
 		}
 
 		$noteDao = DAORegistry::getDAO('NoteDAO');

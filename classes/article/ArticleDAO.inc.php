@@ -408,7 +408,7 @@ class ArticleDAO extends DAO {
 		}
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$articleCommentDao->deleteArticleComments($articleId);
+		$articleCommentDao->deleteObject($articleId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteGalleysByArticle($articleId);

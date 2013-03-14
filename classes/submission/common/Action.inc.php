@@ -289,14 +289,14 @@ class Action extends PKPAction {
 	 * @param $user object The user who owns the comment, or null to default to Request::getUser
 	 */
 	function deleteComment($commentId, $user = null) {
-		if ($user == null) $user =& Request::getUser();
+		if ($user == null) $user = Request::getUser();
 
-		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$comment =& $articleCommentDao->getArticleCommentById($commentId);
+		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$comment = $articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment->getAuthorId() == $user->getId()) {
 			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {
-				$articleCommentDao->deleteArticleComment($comment);
+				$articleCommentDao->deleteObject($comment);
 			}
 		}
 	}
