@@ -213,9 +213,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				HookRegistry::call('Author::Form::Submit::AuthorSubmitStep3Form::Execute', array(&$author, &$authors[$i]));
 				
 				if ($isExistingAuthor) {
-					$authorDao->updateAuthor($author);
+					$authorDao->updateObject($author);
 				} else {
-					$authorDao->insertAuthor($author);
+					$authorDao->insertObject($author);
 				}
 			}
 			unset($author);

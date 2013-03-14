@@ -431,9 +431,9 @@ class MetadataForm extends Form {
 				HookRegistry::call('Submission::Form::MetadataForm::Execute', array(&$author, &$authors[$i]));
 
 				if ($isExistingAuthor) {
-					$authorDao->updateAuthor($author);
+					$authorDao->updateObject($author);
 				} else {
-					$authorDao->insertAuthor($author);
+					$authorDao->insertObject($author);
 				}
 				unset($author);
 			}

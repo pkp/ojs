@@ -120,7 +120,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * Insert a new BookForReviewAuthor.
 	 * @param $author BookForReviewAuthor
 	 */	
-	function insertAuthor(&$author) {
+	function insertAuthor($author) {
 		$this->update(
 			'INSERT INTO books_for_review_authors
 				(book_id, first_name, middle_name, last_name, seq)
@@ -143,7 +143,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * Update an existing BookForReviewAuthor.
 	 * @param $author BookForReviewAuthor
 	 */
-	function updateAuthor(&$author) {
+	function updateAuthor($author) {
 		$returner = $this->update(
 			'UPDATE books_for_review_authors
 				SET

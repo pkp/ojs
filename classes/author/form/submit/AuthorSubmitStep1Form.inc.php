@@ -168,7 +168,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setUrl($user->getUrl());
 			$author->setBiography($user->getBiography(null), null);
 			$author->setPrimaryContact(1);
-			$authorDao->insertAuthor($author);
+			$authorDao->insertObject($author);
 		}
 
 		return $this->articleId;
