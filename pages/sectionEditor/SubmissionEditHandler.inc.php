@@ -270,6 +270,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('editorDecisionOptions',SectionEditorSubmission::getEditorDecisionOptions());
 		$templateMgr->assign_by_ref('lastDecision', $lastDecision);
 
+		// need review file extension for determining whether or not to display
+		// PDF conversion button
+		if($submission->getReviewFile()) {
+			$reviewFile = $submission->getReviewFile();
+			$reviewFilename = $reviewFile->getFileName();
+                        $path_parts = pathinfo($reviewFilename);
+                        if($path_parts['extension']) {
+                                $reviewFileExtension = $path_parts['extension'];
+                        } else {
+                                $reviewFileExtension = '';
+                        }
+                        $templateMgr->assign('reviewFileExtension', $reviewFileExtension);	
+		}
+
 		import('classes.submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 		$templateMgr->assign_by_ref('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
@@ -320,6 +334,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 
+		// layout file extension is needed to determine whether or not to display
+		// the PDF conversion button
+		$layoutFile = $submission->getFileBySignoffType('SIGNOFF_LAYOUT');
+		if($layoutFile) {
+			$layoutFilename = $layoutFile->getFileName();
+			$path_parts = pathinfo($layoutFilename);
+			if($path_parts['extension']) {
+				$layoutFileExtension = $path_parts['extension'];
+			} else {
+				$layoutFileExtension = '';
+			}	
+			$templateMgr->assign('layoutFileExtension', $layoutFileExtension);
+		}
+
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$user =& Request::getUser();
 		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
@@ -346,6 +374,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ( $publicationFeeEnabled ) {
 			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 		}
+
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');

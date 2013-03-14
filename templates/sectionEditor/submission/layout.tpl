@@ -117,7 +117,7 @@
 	{if $layoutFile}
 	{assign var=layoutFileType value=$layoutFile->getFileType()}
 	{/if}
-	{if $layoutFile and $layoutFileType != 'application/pdf' and (!$useLayoutEditors or (!$useLayoutEditors and !$layoutSignoff->getDateCompleted()))}
+	{if $layoutFile and $layoutFileType != 'application/pdf' and $layoutFileExtension != 'pdf' and (!$useLayoutEditors or (!$useLayoutEditors and !$layoutSignoff->getDateCompleted()))}
 	<tr valign="top">
 		<td colspan="6">
 			<form method="post" action="{url op="copyLayoutToGalleyAsPdf"}" enctype="multipart/form-data">

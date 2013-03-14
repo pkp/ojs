@@ -79,7 +79,7 @@
 			<td width="80%" class="nodata">{translate key="common.none"}</td>
 		{/if}
 	</tr>
-	{if $reviewFile && $reviewFileType != 'application/pdf' && $reviewFileType != 'pdf'}
+	{if $reviewFile && $reviewFileType != 'application/pdf' && $reviewFileExtension != 'pdf' && $reviewFileType != 'pdf'}
 	<tr valign="top">
 		<td class="label" width="20%"></td>
 		<td width="80%" class="value">
