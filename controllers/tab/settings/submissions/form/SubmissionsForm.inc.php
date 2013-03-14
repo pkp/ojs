@@ -41,7 +41,6 @@ class SubmissionsForm extends ContextSettingsForm {
 			'metaSubjectClass' => 'bool',
 			'metaSubjectClassTitle' => 'string',
 			'metaSubjectClassUrl' => 'string',
-			'metaSubject' => 'bool',
 			'metaSubjectExamples' => 'string',
 			'metaCoverage' => 'bool',
 			'metaCoverageGeoExamples' => 'string',

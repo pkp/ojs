@@ -105,12 +105,6 @@
 	</tr>
 
 	<tr>
-		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
-		<td class="value">
-			<h4>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</h4>
-		</td>
-	</tr>
-	<tr>
 		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.subjectProvideExamples"}:</span>

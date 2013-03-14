@@ -63,10 +63,9 @@
 </table>
 </div>
 
-{if $submissionSettings.metaDiscipline || $submissionSettings.metaSubjectClass || $submissionSettings.metaSubject || $submissionSettings.metaCoverage || $submissionSettings.metaType}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+<p>{translate key="author.submit.submissionIndexingDescription"}</p>
 
 {include file="core:submission/submissionMetadataFormFields.tpl"}
-
 
 <div class="separator"></div>
 

@@ -109,7 +109,6 @@
 			<td colspan="2" class="separator">&nbsp;</td>
 		</tr>
 	{/if}
-	{if $currentJournal->getSetting('metaSubject')}
 		<tr>
 			<td class="label">{translate key="article.subject"}</td>
 			<td class="value">{$submission->getLocalizedSubject()|escape|default:"&mdash;"}</td>
@@ -117,7 +116,6 @@
 		<tr>
 			<td colspan="2" class="separator">&nbsp;</td>
 		</tr>
-	{/if}
 	{if $currentJournal->getSetting('metaCoverage')}
 		<tr>
 			<td class="label">{translate key="article.coverageGeo"}</td>

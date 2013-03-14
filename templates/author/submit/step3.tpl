@@ -226,7 +226,7 @@ function moveAuthor(dir, authorIndex) {
 {if $section->getMetaIndexed()==1}
 	<div id="indexing">
 		<h3>{translate key="submission.indexing"}</h3>
-		{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+		<p>{translate key="author.submit.submissionIndexingDescription"}</p>
 		<table class="data">
 		{if $currentJournal->getSetting('metaDiscipline')}
 		<tr>
@@ -258,7 +258,6 @@ function moveAuthor(dir, authorIndex) {
 		</tr>
 		{/if}
 
-		{if $currentJournal->getSetting('metaSubject')}
 		<tr>
 			<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
 			<td class="value"><input type="text" class="textField" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="40" maxlength="255" /></td>
@@ -267,7 +266,6 @@ function moveAuthor(dir, authorIndex) {
 		<tr>
 			<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaSubjectExamples')|escape}</span></td>
 		</tr>
-		{/if}
 		<tr>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
