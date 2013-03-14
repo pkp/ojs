@@ -8,3 +8,4 @@ files
 .buildpath
 .settings
 ojs_db_connect.php
+eschol/utilities/reports/*.csv
