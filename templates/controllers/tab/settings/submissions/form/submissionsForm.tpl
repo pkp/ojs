@@ -195,52 +195,6 @@
 </table>
 </div>
 
-<div id="securitySettings">
-<h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
-<div id="onlineAccessManagement">
-<h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="publishingMode-1">{translate key="manager.setup.subscription"}</label>
-			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />
-		</td>
-		<td class="value">
-			<label for="publishingMode-2">{translate key="manager.setup.noPublishing"}</label>
-		</td>
-	</tr>
-</table>
-
-<p>{translate key="manager.setup.securitySettingsDescription"}</p>
-</div><!-- onlineAccessManagement -->
-
-</div><!-- securitySettings -->
-
-<div class="separator"></div>
-
 <div id="publicationScheduling">
 <h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>
 <div id="publicationSchedule">

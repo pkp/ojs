@@ -27,7 +27,6 @@ class SubmissionsForm extends ContextSettingsForm {
 			'provideRefLinkInstructions' => 'bool',
 			'refLinkInstructions' => 'string',
 			'proofInstructions' => 'string',
-			'publishingMode' => 'int',
 			'enablePublicIssueId' => 'bool',
 			'enablePublicArticleId' => 'bool',
 			'enablePublicGalleyId' => 'bool',
