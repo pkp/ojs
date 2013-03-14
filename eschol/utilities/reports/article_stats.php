@@ -7,7 +7,7 @@ $outfile = "article_stats.csv";
 
 // open file and write header row
 $f = fopen($outfile, "w");
-fwrite($f, "Journal ID, Journal Name, At least one reviewer, At least one peer reviewer recommendation, Editorial Decision, At least one copyediting file, Proofreading activity, # issues published since 1/1/2012, Date last published, # reviewers enrolled, # editors enrolled, # section editors enrolled\n");
+fwrite($f, "Journal ID, Journal Name, Total # articles submitted, At least one reviewer, At least one peer reviewer recommendation, Editorial Decision, At least one copyediting file, Proofreading activity, # issues published since 1/1/2012, Date last published, # reviewers enrolled, # editors enrolled, # section editors enrolled\n");
 fclose($f);
 
 // get journals
@@ -18,6 +18,7 @@ $journalsResult = runQuery($journalsSql);
 while($journalsRow = mysql_fetch_array($journalsResult)) {
 	$journalId = $journalsRow[0];
 	$journalName = $journalsRow[2];
+	$articlesSubmitted = getTotalArticlesSubmitted($journalId);
 	$hasReviewer = getArticlesWithReviewer($journalId);
 	$hasReviewerRec = getArticlesWithReviewerRec($journalId);
 	$hasEditorialDecision = getArticlesWithEditorialDecision($journalId);
@@ -33,6 +34,7 @@ while($journalsRow = mysql_fetch_array($journalsResult)) {
 	$f = fopen($outfile, "a");
 	fwrite($f, "$journalId,");
 	fwrite($f, '"' . $journalName . '",');
+	fwrite($f, "$articlesSubmitted,");
         fwrite($f, "$hasReviewer,");
         fwrite($f, "$hasReviewerRec,");
         fwrite($f, "$hasEditorialDecision,");
@@ -63,6 +65,11 @@ function getSimpleSqlCount($sql) {
                 $count = $row[0];
         }
         return $count;
+}
+
+function getTotalArticlesSubmitted($journalId) {
+	$sql = "SELECT COUNT(*) FROM articles WHERE journal_id = $journalId";
+	return getSimpleSqlCount($sql);
 }
 
 function getArticlesWithReviewer($journalId) {
