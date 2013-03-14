@@ -83,7 +83,7 @@ class Install extends PKPInstall {
 		$user->setFirstName($user->getUsername());
 		$user->setLastName('');
 		$user->setEmail($this->getParam('adminEmail'));
-		if (!$userDao->insertUser($user)) {
+		if (!$userDao->insertObject($user)) {
 			$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());
 			return false;
 		}

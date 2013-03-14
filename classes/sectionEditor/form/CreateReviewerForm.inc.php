@@ -173,7 +173,7 @@ class CreateReviewerForm extends Form {
 		}
 
 		$user->setDateRegistered(Core::getCurrentDate());
-		$userId = $userDao->insertUser($user);
+		$userId = $userDao->insertObject($user);
 
 		// Insert the user interests
 		$interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');

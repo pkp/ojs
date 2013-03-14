@@ -231,7 +231,7 @@ class UserXMLParser {
 				// Create new user account
 				// If the user's username was specified in the data file and
 				// the username already exists, only the new roles are added for that user
-				if (!$userDao->insertUser($user)) {
+				if (!$userDao->insertObject($user)) {
 					// Failed to add user!
 					$this->errors[] = sprintf('%s: %s (%s)',
 						__('manager.people.importUsers.failedToImportUser'),

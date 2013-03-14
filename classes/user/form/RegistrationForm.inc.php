@@ -245,8 +245,8 @@ class RegistrationForm extends Form {
 				$user->setDisabledReason(__('user.login.accountNotValidated'));
 			}
 
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$userDao->insertUser($user);
+			$userDao = DAORegistry::getDAO('UserDAO');
+			$userDao->insertObject($user);
 			$userId = $user->getId();
 			if (!$userId) {
 				return false;

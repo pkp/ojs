@@ -197,9 +197,8 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		// Now go insert the user in the db
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
-
-		$userDao->insertUser($user);
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao->insertObject($user);
 
 		$userId = $user->getId();
 

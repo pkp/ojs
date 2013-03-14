@@ -396,7 +396,7 @@ class OJSPaymentManager extends PaymentManager {
 					$user->setEmail($recipientEmail);
 					$user->setDateRegistered(Core::getCurrentDate());
 
-					$userDao->insertUser($user);
+					$userDao->insertObject($user);
 					$userId = $user->getId();
 
 					$role = new Role();
