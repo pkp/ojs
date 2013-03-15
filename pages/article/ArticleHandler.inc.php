@@ -106,7 +106,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('js/relatedItems.js');
 		$templateMgr->addJavaScript('js/inlinePdf.js');
 		$templateMgr->addJavaScript('js/pdfobject.js');
