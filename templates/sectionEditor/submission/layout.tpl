@@ -138,7 +138,9 @@
 		<td colspan="2" class="heading">{translate key="common.file"}</td>
 		<td class="heading">{translate key="common.order"}</td>
 		<td class="heading">{translate key="common.action"}</td>
-		<td class="heading">{translate key="submission.views"}</td>
+		{* BLH we aren't using OJS front-end, so don't display # of views *}
+		{* <td class="heading">{translate key="submission.views"}</td> *}
+		<td>&nbsp;</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr bgcolor="#FFFF99">
@@ -149,7 +151,9 @@
 		<td>
 			<a href="{url op="editGalley" path=$submission->getId()|to_array:$galley->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGalley" path=$submission->getId()|to_array:$galley->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>
 		</td>
-		<td>{$galley->getViews()|escape}</td>
+		{* BLH we aren't using OJS front-end, so don't display # of views *}
+		{* <td>{$galley->getViews()|escape}</td> *}
+		<td>&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr bgcolor="#FFFF99">
