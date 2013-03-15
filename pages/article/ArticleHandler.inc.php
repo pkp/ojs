@@ -94,12 +94,12 @@ class ArticleHandler extends Handler {
 				$request->redirectUrl($galley->getRemoteURL());
 			}
 			if ($galley->isInlineable()) {
-				$this->viewFile(
+				return $this->viewFile(
 					array($galley->getArticleId(), $galley->getId()),
 					$request
 				);
 			} else {
-				$this->download(
+				return $this->download(
 					array($galley->getArticleId(), $galley->getId()),
 					$request
 				);
