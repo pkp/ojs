@@ -138,7 +138,12 @@ function confirmSubmissionCheck() {
 				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url=$declineUrl}
 			{/if}
 		{else}
-			{if not $declined}{translate key="submission.accepted"}{else}{translate key="submission.rejected"}{/if}
+			{if $submission->getDateDue()}
+				{assign var=reviewDateDue value=$submission->getDateDue()|date_format:$dateFormatShort}
+			{else}
+				{assign var=reviewDateDue value="tbd"}
+			{/if}
+			{if not $declined}{translate key="reviewer.article.willDoReview" reviewDateDue=$reviewDateDue}{else}{translate key="reviewer.article.willNotDoReview"}{/if}
 		{/if}
 	</td>
 </tr>
