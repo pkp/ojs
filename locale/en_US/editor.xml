@@ -101,7 +101,7 @@
 	<message key="editor.issues.default">Default</message>
 	<message key="editor.issues.order">Order</message>
 	<message key="editor.issues.publicId">Public Id</message>
-	<message key="editor.issues.saveAndPublishIssue">Save Changes and Publish</message>
+	<message key="editor.issues.saveAndPublishIssue">Update Published Issue</message>
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.unpublishIssue">Unpublish Issue</message>
 	<message key="editor.issues.previewIssue">Preview Issue</message>
