@@ -91,12 +91,12 @@ class ArticleHandler extends Handler {
 
 		if ($galley && !$galley->isHtmlGalley() && !$galley->isPdfGalley()) {
 			if ($galley->isInlineable()) {
-				$this->viewFile(
+				return $this->viewFile(
 					array($galley->getArticleId(), $galley->getId()),
 					$request
 				);
 			} else {
-				$this->download(
+				return $this->download(
 					array($galley->getArticleId(), $galley->getId()),
 					$request
 				);
