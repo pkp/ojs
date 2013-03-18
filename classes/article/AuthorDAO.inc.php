@@ -116,8 +116,10 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.middle_name,
 				aa.last_name,
 				CASE WHEN asl.setting_value = \'\' THEN NULL ELSE SUBSTRING(asl.setting_value FROM 1 FOR 255) END AS affiliation_l,
+				asl.locale,
 				CASE WHEN aspl.setting_value = \'\' THEN NULL ELSE SUBSTRING(aspl.setting_value FROM 1 FOR 255) END AS affiliation_pl,
-				CASE WHEN aa.country = \'\' THEN NULL ELSE aa.country END
+				aspl.locale AS primary_locale,
+				CASE WHEN aa.country = \'\' THEN NULL ELSE aa.country END AS country
 			FROM	authors aa
 				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
