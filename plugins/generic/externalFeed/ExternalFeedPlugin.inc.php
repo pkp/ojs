@@ -28,7 +28,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$this->import('ExternalFeedDAO');
 
 			$externalFeedDao = new ExternalFeedDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
+			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
 			$request = $this->getRequest();
 			$templateMgr =& TemplateManager::getManager($request);

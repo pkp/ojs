@@ -34,10 +34,10 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$this->import('classes.BookForReviewAuthorDAO');
 
 			$bfrAuthorDao = new BookForReviewAuthorDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('BookForReviewAuthorDAO', $bfrAuthorDao);
+			DAORegistry::registerDAO('BookForReviewAuthorDAO', $bfrAuthorDao);
 
 			$bfrDao = new BookForReviewDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
+			DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
 
 			$request =& $this->getRequest();
 			$journal =& $request->getJournal();

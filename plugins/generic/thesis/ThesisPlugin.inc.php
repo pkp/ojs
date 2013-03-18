@@ -26,7 +26,7 @@ class ThesisPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			$this->import('ThesisDAO');
 			$thesisDao = new ThesisDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('ThesisDAO', $thesisDao);
+			DAORegistry::registerDAO('ThesisDAO', $thesisDao);
 
 			// Handler for public thesis abstract pages
 			HookRegistry::register('LoadHandler', array($this, 'setupPublicHandler'));

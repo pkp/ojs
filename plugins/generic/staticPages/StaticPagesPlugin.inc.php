@@ -45,7 +45,7 @@ class StaticPagesPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
 				$staticPagesDao = new StaticPagesDAO($this->getName());
-				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
+				DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
 			}

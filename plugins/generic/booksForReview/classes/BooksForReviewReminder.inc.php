@@ -62,11 +62,11 @@ class BooksForReviewReminder extends ScheduledTask {
 
 			// FIXME: Plugin name hard-coded.
 			$bfrAuthorDao = new BookForReviewAuthorDAO('booksforreviewplugin');
-			$returner =& DAORegistry::registerDAO('BookForReviewAuthorDAO', $bfrAuthorDao);
+			DAORegistry::registerDAO('BookForReviewAuthorDAO', $bfrAuthorDao);
 
 			// FIXME: Plugin name hard-coded.
 			$bfrDao = new BookForReviewDAO('booksforreviewplugin');
-			$returner =& DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
+			DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
 
 			$journalId = $journal->getId();
 			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
