@@ -243,7 +243,7 @@ class SubscriptionTypeDAO extends DAO {
 			)
 		);
 
-		$subscriptionType->setTypeId($this->getInsertSubscriptionTypeId());
+		$subscriptionType->setTypeId($this->getInsertId());
 		$this->updateLocaleFields($subscriptionType);
 		return $subscriptionType->getTypeId();
 	}
@@ -441,7 +441,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * Get the ID of the last inserted subscription type.
 	 * @return int
 	 */
-	function getInsertSubscriptionTypeId() {
+	function getInsertId() {
 		return $this->_getInsertId('subscription_types', 'type_id');
 	}
 

@@ -72,7 +72,7 @@ class StaticPagesDAO extends DAO {
 			)
 		);
 
-		$staticPage->setId($this->getInsertStaticPageId());
+		$staticPage->setId($this->getInsertId());
 		$this->updateLocaleFields($staticPage);
 
 		return $staticPage->getId();
@@ -117,7 +117,7 @@ class StaticPagesDAO extends DAO {
 		return $staticPage;
 	}
 
-	function getInsertStaticPageId() {
+	function getInsertId() {
 		return $this->_getInsertId('static_pages', 'static_page_id');
 	}
 

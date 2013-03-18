@@ -138,7 +138,7 @@ class EditorSubmissionDAO extends DAO {
 			)
 		);
 
-		$editorSubmission->setEditId($this->getInsertEditId());
+		$editorSubmission->setEditId($this->getInsertId());
 
 		// Insert review assignments.
 		$reviewAssignments =& $editorSubmission->getReviewAssignments();
@@ -694,7 +694,7 @@ class EditorSubmissionDAO extends DAO {
 	 * Get the ID of the last inserted editor assignment.
 	 * @return int
 	 */
-	function getInsertEditId() {
+	function getInsertId() {
 		return $this->_getInsertId('edit_assignments', 'edit_id');
 	}
 

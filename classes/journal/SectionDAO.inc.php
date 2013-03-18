@@ -206,7 +206,7 @@ class SectionDAO extends DAO {
 			)
 		);
 
-		$section->setId($this->getInsertSectionId());
+		$section->setId($this->getInsertId());
 		$this->updateLocaleFields($section);
 		return $section->getId();
 	}
@@ -455,7 +455,7 @@ class SectionDAO extends DAO {
 	 * Get the ID of the last inserted section.
 	 * @return int
 	 */
-	function getInsertSectionId() {
+	function getInsertId() {
 		return $this->_getInsertId('sections', 'section_id');
 	}
 

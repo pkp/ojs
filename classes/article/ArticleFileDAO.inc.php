@@ -282,7 +282,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		);
 
 		if (!$fileId) {
-			$articleFile->setFileId($this->getInsertArticleFileId());
+			$articleFile->setFileId($this->getInsertId());
 		}
 
 		return $articleFile->getFileId();
@@ -371,7 +371,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * Get the ID of the last inserted article file.
 	 * @return int
 	 */
-	function getInsertArticleFileId() {
+	function getInsertId() {
 		return $this->_getInsertId('article_files', 'file_id');
 	}
 }

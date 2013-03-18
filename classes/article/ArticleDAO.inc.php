@@ -275,7 +275,7 @@ class ArticleDAO extends DAO {
 			)
 		);
 
-		$article->setId($this->getInsertArticleId());
+		$article->setId($this->getInsertId());
 		$this->updateLocaleFields($article);
 
 		// Insert authors for this article
@@ -725,7 +725,7 @@ class ArticleDAO extends DAO {
 	 * Get the ID of the last inserted article.
 	 * @return int
 	 */
-	function getInsertArticleId() {
+	function getInsertId() {
 		return $this->_getInsertId('articles', 'article_id');
 	}
 

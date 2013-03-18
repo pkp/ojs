@@ -135,7 +135,7 @@ class BookForReviewAuthorDAO extends DAO {
 			)
 		);
 
-		$author->setId($this->getInsertAuthorId());
+		$author->setId($this->getInsertId());
 		return $author->getId();
 	}
 
@@ -225,7 +225,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * Get the ID of the last inserted author.
 	 * @return int
 	 */
-	function getInsertAuthorId() {
+	function getInsertId() {
 		return $this->_getInsertId('books_for_review_authors', 'author_id');
 	}
 }

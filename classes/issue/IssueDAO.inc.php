@@ -333,7 +333,7 @@ class IssueDAO extends DAO {
 			)
 		);
 
-		$issue->setId($this->getInsertIssueId());
+		$issue->setId($this->getInsertId());
 
 		$this->updateLocaleFields($issue);
 
@@ -348,7 +348,7 @@ class IssueDAO extends DAO {
 	 * Get the ID of the last inserted issue.
 	 * @return int
 	 */
-	function getInsertIssueId() {
+	function getInsertId() {
 		return $this->_getInsertId('issues', 'issue_id');
 	}
 

@@ -163,7 +163,7 @@ class IssueFileDAO extends PKPFileDAO {
 			$params
 		);
 
-		$issueFile->setId($this->getInsertIssueFileId());
+		$issueFile->setId($this->getInsertId());
 		return $issueFile->getId();
 	}
 
@@ -235,7 +235,7 @@ class IssueFileDAO extends PKPFileDAO {
 	 * Get the ID of the last inserted issue file.
 	 * @return int
 	 */
-	function getInsertIssueFileId() {
+	function getInsertId() {
 		return $this->_getInsertId('issue_files', 'file_id');
 	}
 }

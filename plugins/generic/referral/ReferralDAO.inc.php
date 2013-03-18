@@ -128,7 +128,7 @@ class ReferralDAO extends DAO {
 				(int) $referral->getLinkCount()
 			)
 		);
-		$referral->setId($this->getInsertObjectId());
+		$referral->setId($this->getInsertId());
 		$this->updateLocaleFields($referral);
 		return $referral->getId();
 	}
@@ -232,7 +232,7 @@ class ReferralDAO extends DAO {
 	 * Get the ID of the last inserted referral.
 	 * @return int
 	 */
-	function getInsertObjectId() {
+	function getInsertId() {
 		return $this->_getInsertId('referrals', 'referral_id');
 	}
 }

@@ -161,7 +161,7 @@ class EditAssignmentDAO extends DAO {
 			)
 		);
 
-		$editAssignment->setEditId($this->getInsertEditId());
+		$editAssignment->setEditId($this->getInsertId());
 		return $editAssignment->getEditId();
 	}
 
@@ -217,7 +217,7 @@ class EditAssignmentDAO extends DAO {
 	 * Get the ID of the last inserted edit assignment.
 	 * @return int
 	 */
-	function getInsertEditId() {
+	function getInsertId() {
 		return $this->_getInsertId('edit_assignments', 'edit_id');
 	}
 

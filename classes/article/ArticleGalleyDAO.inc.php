@@ -319,7 +319,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getRemoteURL()
 			)
 		);
-		$galley->setId($this->getInsertGalleyId());
+		$galley->setId($this->getInsertId());
 		$this->updateLocaleFields($galley);
 
 		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getId()));
@@ -479,7 +479,7 @@ class ArticleGalleyDAO extends DAO {
 	 * Get the ID of the last inserted gallery.
 	 * @return int
 	 */
-	function getInsertGalleyId() {
+	function getInsertId() {
 		return $this->_getInsertId('article_galleys', 'galley_id');
 	}
 

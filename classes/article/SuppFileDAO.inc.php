@@ -243,7 +243,7 @@ class SuppFileDAO extends DAO {
 				$suppFile->getSequence()
 			)
 		);
-		$suppFile->setId($this->getInsertSuppFileId());
+		$suppFile->setId($this->getInsertId());
 		$this->updateLocaleFields($suppFile);
 		return $suppFile->getId();
 	}
@@ -381,7 +381,7 @@ class SuppFileDAO extends DAO {
 	 * Get the ID of the last inserted supplementary file.
 	 * @return int
 	 */
-	function getInsertSuppFileId() {
+	function getInsertId() {
 		return $this->_getInsertId('article_supplementary_files', 'supp_id');
 	}
 

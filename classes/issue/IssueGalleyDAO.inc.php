@@ -272,7 +272,7 @@ class IssueGalleyDAO extends DAO {
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getIssueId()) : $galley->getSequence()
 			)
 		);
-		$galley->setId($this->getInsertGalleyId());
+		$galley->setId($this->getInsertId());
 		$this->updateLocaleFields($galley);
 
 		HookRegistry::call('IssueGalleyDAO::insertGalley', array(&$galley, $galley->getId()));
@@ -426,7 +426,7 @@ class IssueGalleyDAO extends DAO {
 	 * Get the ID of the last inserted gallery.
 	 * @return int
 	 */
-	function getInsertGalleyId() {
+	function getInsertId() {
 		return $this->_getInsertId('issue_galleys', 'galley_id');
 	}
 }

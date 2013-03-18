@@ -113,7 +113,7 @@ class ExternalFeedDAO extends DAO {
 				$externalFeed->getRecentItems()
 			)
 		);
-		$externalFeed->setId($this->getInsertExternalFeedId());
+		$externalFeed->setId($this->getInsertId());
 
 		$this->updateLocaleFields($externalFeed);
 
@@ -251,7 +251,7 @@ class ExternalFeedDAO extends DAO {
 	 * Get the ID of the last inserted external feed.
 	 * @return int
 	 */
-	function getInsertExternalFeedId() {
+	function getInsertId() {
 		return $this->_getInsertId('external_feeds', 'feed_id');
 	}
 }

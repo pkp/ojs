@@ -200,7 +200,7 @@ class ThesisDAO extends DAO {
 				$thesis->getLanguage()
 			)
 		);
-		$thesis->setId($this->getInsertThesisId());
+		$thesis->setId($this->getInsertId());
 		return $thesis->getId();
 	}
 
@@ -514,7 +514,7 @@ class ThesisDAO extends DAO {
 	 * Get the ID of the last inserted thesis.
 	 * @return int
 	 */
-	function getInsertThesisId() {
+	function getInsertId() {
 		return $this->_getInsertId('theses', 'thesis_id');
 	}
 }

@@ -196,7 +196,7 @@ class BookForReviewDAO extends DAO {
 				$book->getNotes()
 			)
 		);
-		$book->setId($this->getInsertBookForReviewId());
+		$book->setId($this->getInsertId());
 		$this->updateLocaleFields($book);
 
 		// Insert authors for this book for review
@@ -643,7 +643,7 @@ class BookForReviewDAO extends DAO {
 	 * Get the ID of the last inserted book for review.
 	 * @return int
 	 */
-	function getInsertBookForReviewId() {
+	function getInsertId() {
 		return $this->_getInsertId('books_for_review', 'book_id');
 	}
 }

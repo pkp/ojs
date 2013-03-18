@@ -124,7 +124,7 @@ class SubscriptionDAO extends DAO {
 	 * Function to get the ID of the last inserted subscription.
 	 * @return int
 	 */
-	function getInsertSubscriptionId() {
+	function getInsertId() {
 		return $this->_getInsertId('subscriptions', 'subscription_id');
 	}
 
@@ -379,7 +379,7 @@ class SubscriptionDAO extends DAO {
 			)
 		);
 
-		$subscriptionId = $this->getInsertSubscriptionId();
+		$subscriptionId = $this->getInsertId();
 		$subscription->setId($subscriptionId);
 
 		return $subscriptionId;
