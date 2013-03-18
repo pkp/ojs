@@ -59,13 +59,12 @@ class MostReadBlockPlugin extends BlockPlugin {
 		$metricType = null; // Use the main metric.
 		$columns = STATISTICS_DIMENSION_ARTICLE_ID;
 		$filter = array(
-			STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY,
-			STATISTICS_DIMENSION_JOURNAL_ID => $journal->getId()
+			STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY
 		);
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
 		import('lib.pkp.classes.db.DBResultRange');
 		$range = new DBResultRange(10); // Get the first 10 results only.
-		
+
 		// Reports will be generated for different time spans.
 		$today = date('Ymd');
 		$oneMonthAgo = date('Ymd', strtotime('-1 month'));
@@ -75,7 +74,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 			'year' => array('from' => $oneYearAgo, 'to' => $today),
 			'ever' => null
 		);
-		
+
 		// Generate reports.
 		$articleRanking = array();
 		$router = $request->getRouter();
@@ -87,7 +86,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 				$filter[STATISTICS_DIMENSION_DAY] = $timeSpan;
 			}
 			$articleRanking[$timeSpanName] = $journal->getMetrics($metricType, $columns, $filter, $orderBy, $range);
-			
+
 			// Add article meta-data to the results.
 			foreach ($articleRanking[$timeSpanName] as $articleIndex => &$articleInfo) {
 				$articleInfo['rank'] = $articleIndex + 1;
@@ -110,7 +109,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 		);
 		$templateMgr->assign('timeSpans', $timeSpans);
 		$templateMgr->assign('defaultTimeSpan', 'month');
-		
+
 		return parent::getContents($templateMgr, $request);
 	}
 }
