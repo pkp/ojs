@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 3.0.0_change_assoc_type.xml
+  * dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,11 +12,15 @@
 <data>
 	<!-- synchronize the ASSOC_TYPE_ARTICLE constant to ASSOC_TYPE_SUBMISSION defined in PKPApplication -->
 	<sql>
-		<query>UPDATE controlled_vocabs SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
-		<query>UPDATE notifications SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
-		<query>UPDATE notes SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
-		<query>UPDATE email_log SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
-		<query>UPDATE event_log SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
-		<query>UPDATE signoffs SET assoc_type = '1048585' WHERE assoc_type = '257'</query>
+		<query>UPDATE controlled_vocabs SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+		<query>UPDATE notifications SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+		<query>UPDATE notes SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+		<query>UPDATE email_log SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+		<query>UPDATE event_log SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+		<query>UPDATE signoffs SET assoc_type = 1048585 WHERE assoc_type = 257</query>
+	</sql>
+	<!-- synchronize the ASSOC_TYPE_ANNOUNCEMENT constant change -->
+	<sql>
+		<query>UPDATE notifications SET assoc_type = 522 WHERE assoc_type = 258</query>
 	</sql>
 </data>
