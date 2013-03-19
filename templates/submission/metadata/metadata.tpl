@@ -22,9 +22,18 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
-			{assign var=emailString value=$author->getFullName()|concat:" <":$author->getEmail():">"}
+			{assign var=missingEmail value=0}
+			{if $author->getEmail() == ""}
+				{assign var=missingEmail value=1}
+			{/if}
+			{if $missingEmail}
+				{assign var=emailString value=""}
+			{else}
+				{assign var=emailString value=$author->getFullName()|concat:" <":$author->getEmail():">"}
+			{/if}
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle()|strip_tags articleId=$submission->getId()}
 			{$author->getFullName()|escape} {icon name="mail" url=$url}
+		 	{if $missingEmail}<font color="red">(Note: author has no email address on file.)</font>{/if}	
 		</td>
 	</tr>
 	{if $author->getUrl()}

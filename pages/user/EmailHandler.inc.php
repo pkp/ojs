@@ -145,7 +145,15 @@ class EmailHandler extends UserHandler {
 				$templateMgr->assign('backLink', 'javascript:history.back()');
 				$templateMgr->assign('backLinkLabel', 'email.compose');
 				return $templateMgr->display('common/message.tpl');
+			} elseif (!$recipientCount) {
+				// Error if no recipients
+                                $templateMgr->assign('pageTitle', 'email.compose');
+                                $templateMgr->assign('message', 'email.compose.noToEmail');
+                                $templateMgr->assign('backLink', 'javascript:history.back()');
+                                $templateMgr->assign('backLinkLabel', 'email.compose.backToTemplate');
+                                return $templateMgr->display('common/message.tpl');	
 			}
+
 			$email->send();
 			$redirectUrl = Request::getUserVar('redirectUrl');
 			if (empty($redirectUrl)) $redirectUrl = Request::url(null, 'user');

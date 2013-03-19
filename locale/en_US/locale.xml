@@ -73,7 +73,8 @@
 	<!-- Common Form Messages -->
 	
 	<!-- Common Email Messages -->
-
+	<message key="email.compose.noToEmail">Email has no recipients in the 'To' field. You must enter at least one valid email address.</message>
+	<message key="email.compose.backToTemplate">Go back to email</message>
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->

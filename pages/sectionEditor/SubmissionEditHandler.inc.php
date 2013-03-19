@@ -120,6 +120,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		}
 
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
+
 		$templateMgr->assign('canEditMetadata', true);
 
 		$templateMgr->display('sectionEditor/submission.tpl');
@@ -301,6 +305,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('journalEmail',$journalEmail); //20120831 LS Added			
 		$templateMgr->assign('editorEmails',$editorEmails);
                 $templateMgr->assign('disableSectionEditorDecisions', $journal->getSetting('disableSectionEditorDecisions'));
+
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
+
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 
 	}
@@ -375,6 +384,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getId(), $articleId ));
 		}
 
+		$authorEmails = $this->getAuthorEmails();
+		$templateMgr->assign_by_ref('authorEmails', $authorEmails); 
+		$templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
@@ -409,8 +421,42 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
+
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
+	}
+
+	/**
+	 * Get author emails (added by escholarship)
+	 */
+        function getAuthorEmails() {
+                $submission =& $this->submission;
+                $authors = $submission->getAuthors();
+                $authorEmails = array();
+                foreach ($authors as $a) {
+                        if(trim($a->getEmail()) != "") {
+                                $authorEmails[] = $a->getFullName() . ' <' . $a->getEmail() . '>';
+                        }
+                }
+
+		return $authorEmails;
+        }
+
+	/**
+	 * Determine if author emails are missing added by escholarship
+	 * parameter: $authorEmails (array)
+	 */
+	function getAuthorEmailsMissing($authorEmails) {
+                if(count($authorEmails)) {
+			$authorEmailsMissing = 0;
+                } else {
+                        $authorEmailsMissing = 1;
+                }	
+
+		return $authorEmailsMissing;
 	}
 
 	/**
@@ -2066,6 +2112,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
+
 		if ($logId) {
 			$logDao =& DAORegistry::getDAO('ArticleEventLogDAO');
 			$logEntry =& $logDao->getLogEntry($logId, $articleId);
@@ -2150,6 +2200,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		import('classes.file.ArticleFileManager');
 		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, ARTICLE_FILE_ATTACHMENT));
+
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
 
 		if ($logId) {
 			$logDao =& DAORegistry::getDAO('ArticleEmailLogDAO');
@@ -2301,6 +2355,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submissionNotes =& $noteDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 			$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		}
+
+                $authorEmails = $this->getAuthorEmails();
+                $templateMgr->assign_by_ref('authorEmails', $authorEmails);
+                $templateMgr->assign('authorEmailsMissing', $this->getAuthorEmailsMissing($authorEmails));
 
 		$templateMgr->display('sectionEditor/submissionNotes.tpl');
 	}
