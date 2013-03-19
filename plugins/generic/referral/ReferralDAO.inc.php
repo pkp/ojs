@@ -110,7 +110,7 @@ class ReferralDAO extends DAO {
 	/**
 	 * Insert a new Referral.
 	 * @param $referral Referral
-	 * @return int 
+	 * @return int
 	 */
 	function insertReferral(&$referral) {
 		$this->update(
@@ -164,7 +164,7 @@ class ReferralDAO extends DAO {
 	/**
 	 * Delete a referral.
 	 * deleted.
-	 * @param $referral Referral 
+	 * @param $referral Referral
 	 * @return boolean
 	 */
 	function deleteReferral($referral) {
