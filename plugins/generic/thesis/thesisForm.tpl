@@ -147,12 +147,6 @@
 	<td class="label">{fieldLabel name="discipline" key="plugins.generic.thesis.manager.form.discipline"}</td>
 	<td class="value"><input type="text" name="discipline" value="{$discipline|escape}" size="40" id="discipline" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -175,12 +169,6 @@
 	<td class="label">{fieldLabel name="keyword" key="plugins.generic.thesis.manager.form.keyword"}</td>
 	<td class="value"><input type="text" name="keyword" value="{$keyword|escape}" size="40" id="keyword" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaSubjectExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -189,12 +177,6 @@
 	<td class="label">{fieldLabel name="coverageGeo" key="plugins.generic.thesis.manager.form.coverageGeo"}</td>
 	<td class="value"><input type="text" name="coverageGeo" value="{$coverageGeo|escape}" size="40" id="coverageGeo" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageGeoExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -203,12 +185,6 @@
 	<td class="label">{fieldLabel name="coverageChron" key="plugins.generic.thesis.manager.form.coverageChron"}</td>
 	<td class="value"><input type="text" name="coverageChron" value="{$coverageChron|escape}" size="40" id="coverageChron" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageChronExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -217,12 +193,6 @@
 	<td class="label">{fieldLabel name="coverageSample" key="plugins.generic.thesis.manager.form.coverageSample"}</td>
 	<td class="value"><input type="text" name="coverageSample" value="{$coverageSample|escape}" size="40" id="coverageSample" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -231,12 +201,6 @@
 	<td class="label">{fieldLabel name="method" key="plugins.generic.thesis.manager.form.method"}</td>
 	<td class="value"><input type="text" name="method" value="{$method|escape}" size="40" id="method" maxlength="255" class="textField" /></td>
 </tr>
-{if $currentJournal->getLocalizedSetting('metaTypeExamples')}
-<tr>
-	<td>&nbsp;</td>
-	<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaTypeExamples')|escape}</span></td>
-</tr>
-{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>

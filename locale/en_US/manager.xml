@@ -11,6 +11,7 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
+	<message key="manager.workflow.contentIndexing">Indexing</message>
 	<message key="manager.website.archiving">Archiving</message>
 	<message key="manager.emails.confirmResetAll">Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</message>
 	<message key="manager.files.note">Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
@@ -252,7 +253,7 @@
 	<message key="manager.setup.focusScope">Focus and Scope</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXAMPLE HTML DATA</strong>]]></message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
-	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></message>
 	<message key="manager.setup.form.issnInvalid">The specified ISSN is not valid.</message>
 	<message key="manager.setup.form.contactEmailRequired">The primary contact email is required.</message>
 	<message key="manager.setup.form.contactNameRequired">The primary contact name is required.</message>

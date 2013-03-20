@@ -22,11 +22,7 @@ class SubmissionsForm extends ContextSettingsForm {
 		$settings = array(
 			'authorSelectsEditor' => 'bool',
 			'pubFreqPolicy' => 'string',
-			'copyeditInstructions' => 'string',
-			'layoutInstructions' => 'string',
 			'provideRefLinkInstructions' => 'bool',
-			'refLinkInstructions' => 'string',
-			'proofInstructions' => 'string',
 			'enablePublicIssueId' => 'bool',
 			'enablePublicArticleId' => 'bool',
 			'enablePublicGalleyId' => 'bool',
@@ -36,24 +32,11 @@ class SubmissionsForm extends ContextSettingsForm {
 			'copyrightNoticeAgree' => 'bool',
 			'requireAuthorCompetingInterests' => 'bool',
 			'requireReviewerCompetingInterests' => 'bool',
-			'metaDiscipline' => 'bool',
-			'metaDisciplineExamples' => 'string',
-			'metaSubjectClass' => 'bool',
-			'metaSubjectClassTitle' => 'string',
-			'metaSubjectClassUrl' => 'string',
-			'metaSubjectExamples' => 'string',
-			'metaCoverage' => 'bool',
-			'metaCoverageGeoExamples' => 'string',
-			'metaCoverageChronExamples' => 'string',
-			'metaCoverageResearchSampleExamples' => 'string',
-			'metaType' => 'bool',
-			'metaTypeExamples' => 'string'
 		);
 		parent::ContextSettingsForm($settings, 'controllers/tab/settings/submissions/form/submissionsForm.tpl', $wizardMode);
 
 		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
-		$this->addCheck(new FormValidatorLocaleURL($this, 'metaSubjectClassUrl', 'optional', 'manager.setup.subjectClassificationURLValid'));
 	}
 
 	/**
@@ -61,7 +44,7 @@ class SubmissionsForm extends ContextSettingsForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('authorGuidelines', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions');
+		return array('copyrightNotice', 'pubFreqPolicy');
 	}
 }
 
