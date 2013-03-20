@@ -91,6 +91,9 @@
 		<td colspan="2" align="right">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth dateSearchField=$dateSearchField section=$section sort=$sort sortDirection=$sortDirection}</td>
 	</tr>
 {/if}
+        <tr>
+                <td colspan="7">{translate key="common.queue.sectionEditor.seeMoreSubmissions"}</td>
+        </tr>
 </table>
 </div>
 

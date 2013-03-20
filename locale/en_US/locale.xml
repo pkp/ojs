@@ -105,7 +105,10 @@
 	<message key="common.queue.short.active">Active</message>
 	<message key="common.queue.long.completed">Archive</message>
 	<message key="common.queue.short.completed">Archive</message>
-	
+
+        <message key="common.queue.editor.seeMoreSubmissions"><![CDATA[<strong>Tip:</strong> If you were expecting to see more submissions in this list, try clearing the Assigned To, In Section, and search criteria near the top of the page.]]></message>	
+	<message key="common.queue.sectionEditor.seeMoreSubmissions"><![CDATA[<strong>Tip:</strong> If you were expecting to see more submissions in this list, try clearing the In Section and search criteria near the top of the page.]]></message>
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
