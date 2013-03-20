@@ -108,11 +108,11 @@ class ReferralDAO extends DAO {
 	}
 
 	/**
-	 * Insert a new Referral.
+	 * Insert a new Referral or replace the Referral if it already exists
 	 * @param $referral Referral
 	 * @return int
 	 */
-	function insertReferral(&$referral) {
+	function replaceReferral(&$referral) {
 		$date = trim($this->datetimeToDB($referral->getDateAdded()), "'");
 		$this->replace(
 			'referrals',
