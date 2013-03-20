@@ -113,21 +113,19 @@ class ReferralDAO extends DAO {
 	 * @return int
 	 */
 	function insertReferral(&$referral) {
-		$this->update(
-			sprintf(
-				'INSERT INTO referrals
-					(status, article_id, url, date_added, link_count)
-				VALUES
-					(?, ?, ?, %s, ?)',
-				$this->datetimeToDB($referral->getDateAdded())
-			),
+		$date = trim($this->datetimeToDB($referral->getDateAdded()), "'");
+		$this->replace(
+			'referrals',
 			array(
-				(int) $referral->getStatus(),
-				(int) $referral->getArticleId(),
-				$referral->getUrl(),
-				(int) $referral->getLinkCount()
-			)
+				'status' => (int) $referral->getStatus(),
+				'article_id' => (int) $referral->getArticleId(),
+				'url' => $referral->getUrl(),
+				'date_added' => $date,
+				'link_count' => (int) $referral->getLinkCount(),
+			),
+			array('article_id', 'url')
 		);
+
 		$referral->setId($this->getInsertObjectId());
 		$this->updateLocaleFields($referral);
 		return $referral->getId();
