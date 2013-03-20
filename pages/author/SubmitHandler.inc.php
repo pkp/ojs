@@ -165,7 +165,7 @@ class SubmitHandler extends AuthorHandler {
 					$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
 					while ($editor = $editors->next()) {
 						$notificationManager->createNotification(
-							$request, $editor->getId(), NOTIFICATION_TYPE_ARTICLE_SUBMITTED,
+							$request, $editor->getId(), NOTIFICATION_TYPE_SUBMISSION_SUBMITTED,
 							$article->getJournalId(), ASSOC_TYPE_ARTICLE, $article->getId()
 						);
 					}

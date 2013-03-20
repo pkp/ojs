@@ -44,7 +44,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	 */
 	function _getNotificationSettingsMap() {
 		return array(
-			NOTIFICATION_TYPE_ARTICLE_SUBMITTED => array('settingName' => 'notificationArticleSubmitted',
+			NOTIFICATION_TYPE_SUBMISSION_SUBMITTED => array('settingName' => 'notificationArticleSubmitted',
 				'emailSettingName' => 'emailNotificationArticleSubmitted',
 				'settingKey' => 'notification.type.articleSubmitted'),
 			NOTIFICATION_TYPE_METADATA_MODIFIED => array('settingName' => 'notificationMetadataModified',
@@ -97,7 +97,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	function _getNotificationSettingCategories() {
 		return array(
 			'submissions' => array('categoryKey' => 'notification.type.submissions',
-				'settings' => array(NOTIFICATION_TYPE_ARTICLE_SUBMITTED, NOTIFICATION_TYPE_METADATA_MODIFIED, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED)),
+				'settings' => array(NOTIFICATION_TYPE_SUBMISSION_SUBMITTED, NOTIFICATION_TYPE_METADATA_MODIFIED, NOTIFICATION_TYPE_SUPP_FILE_MODIFIED)),
 			'reviewing' => array('categoryKey' => 'notification.type.reviewing',
 				'settings' => array(NOTIFICATION_TYPE_REVIEWER_COMMENT, NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT, NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT)),
 			'editing' => array('categoryKey' => 'notification.type.editing',

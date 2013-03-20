@@ -40,7 +40,7 @@ class NotificationManager extends PKPNotificationManager {
 		$type = $notification->getType();
 
 		switch ($type) {
-			case NOTIFICATION_TYPE_ARTICLE_SUBMITTED:
+			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				$role = $this->_getCachedRole($request, $notification);
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submission', $notification->getAssocId());
 			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
@@ -176,7 +176,7 @@ class NotificationManager extends PKPNotificationManager {
 		if($message) return $message;
 
 		switch ($type) {
-			case NOTIFICATION_TYPE_ARTICLE_SUBMITTED:
+			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				return __('notification.type.articleSubmitted', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
 				return __('notification.type.suppFileModified', array('title' => $this->_getArticleTitle($notification)));
@@ -289,7 +289,7 @@ class NotificationManager extends PKPNotificationManager {
 	 */
 	function getIconClass(&$notification) {
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_ARTICLE_SUBMITTED:
+			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				return 'notifyIconNewPage';
 			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
 				return 'notifyIconPageAttachment';
