@@ -53,6 +53,25 @@ window.opener.location.reload();
 <br />
 <br />
 
+{* Following help text added by eScholarship (BLH 2013-03-20) *}
+{if $isAuthor}
+<table width="90%" align="center">
+<tr><td style="background: yellow; padding: 15px;">
+<p><strong>Authors, Please Note:</strong></p>
+<p>Peer reviewer feedback can be provided in two ways: as comments typed into a review form
+and/or as uploaded files. Depending on which option(s) reviewers have utilized for this
+manuscript, you may need to do one or both of the following:</p>
+<ol>
+        <li><strong>Comments typed into a review form</strong> can be viewed in the Editor/Author Correspondence thread above. Reviewer comments will be surrounded by dashed lines and usually appear at the end of the decision letter sent to you by the journal editor. <strong>If you do not see reviewer comments above</strong> contact the editor and ask them to re-send your decision letter.</li>
+        <li><strong>Uploaded files</strong> can be viewed by returning to the previous screen (step 2. Review) and clicking on any files that have been made available to you in the Peer Review section.</li>
+</ol>
+<p> More detailed information can be found in <a href="https://vimeo.com/33303895" target="_blank">this help video.</a></p>
+</td></tr>
+</table>
+<br />
+<br />
+{/if}
+
 {if not $isLocked and $isEditor}
 
 <form method="post" action="{url op=$commentAction}">

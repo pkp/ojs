@@ -270,5 +270,21 @@ class SubmissionCommentsHandler extends AuthorHandler {
 			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
+
+        /**
+         * Email editor regarding new article version upload.
+         */
+        function emailEditorRevisionUpload() {
+                $this->setupTemplate(true);
+
+                $articleId = (int) Request::getUserVar('articleId');
+                $trackSubmissionHandler = new TrackSubmissionHandler();
+                $trackSubmissionHandler->validate($articleId);
+                $authorSubmission =& $trackSubmissionHandler->submission;
+
+                if (AuthorAction::emailEditorRevisionUpload($authorSubmission, Request::getUserVar('send'))) {
+                        Request::redirect(null, null, 'submissionReview', array($articleId));
+                }
+        } 
 }
 ?>

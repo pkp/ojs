@@ -15,9 +15,9 @@
 {/strip}
 
 <ul class="menu">
-	<li class="current"><a href="{url op="submission" path=$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	<li><a href="{url op="submissionReview" path=$submission->getArticleId()}">{translate key="submission.review"}</a></li>
-	<li><a href="{url op="submissionEditing" path=$submission->getArticleId()}">{translate key="submission.editing"}</a></li>
+	<li class="current"><a href="{url op="submission" path=$submission->getArticleId()}">{literal}1. {/literal}{translate key="submission.summary"}</a></li>
+	<li><a href="{url op="submissionReview" path=$submission->getArticleId()}">{literal}2. {/literal}{translate key="submission.review"}</a></li>
+	<li><a href="{url op="submissionEditing" path=$submission->getArticleId()}">{literal}3. {/literal}{translate key="submission.editing"}</a></li>
 </ul>
 
 {include file="author/submission/management.tpl"}

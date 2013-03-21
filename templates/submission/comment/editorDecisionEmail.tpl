@@ -149,6 +149,21 @@ function deleteAttachment(fileId) {
 </tr>
 {/if}
 {if $isAnEditor}
+	<tr>
+		<td colspan="100%" style="background: yellow; padding: 15px;">
+			<p><strong>How do I share reviews with authors?</strong></p>
+			<p>Reviewers can provide feedback in two ways: they can upload files and/or they can type
+comments into the review form. Depending on which option(s) reviewers have utilized for
+this manuscript, you may need to do one or both of the following:</p>
+			<ol>
+				<li><strong>To reveal uploaded files</strong> - Return to the previous page and make sure to check the "Let author view file" box next to any file you'd like the author to access. Be sure to click the Record button to save your setting. Authors will be able to view these files by logging into the submission management system and clicking on the file name on the step 2. Review page.<br/>
+			<p style="margin-left: 40px;">example: <img style="vertical-align:middle;" src="{$baseUrl}/templates/images/letAuthorViewFile.png" alt="Let author view file screenshot"></p>
+				</li>
+				<li><strong>To reveal comments typed into the review form</strong> - Click on the green Import Peer Reviews button below. Reviewer comments that were marked "For Author and Editor" will be appended to the decision letter below.</li>
+			</ol>
+			<p>More detailed information can be found in <a href="https://vimeo.com/34042897" target="_blank">this help video</a>.</p>
+		</td>
+	</tr>
 	<tr valign="top">
 		<td colspan="2">&nbsp;</td>
 	</tr>
@@ -174,7 +189,6 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="body" key="email.body"}</td>
 	<td class="value"><textarea name="body" cols="60" rows="15" class="textArea">{$body|escape}</textarea></td>
 </tr>
-
 {if $isAnEditor}
 	<td class="label">&nbsp;</td>
 	<td class="value"><input type="checkbox" name="blindCcReviewers" value="1" id="blindCcReviewers"/>&nbsp;&nbsp;<label for="blindCcReviewers">{translate key="submission.comments.blindCcReviewers"}</label></td>

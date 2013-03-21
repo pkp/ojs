@@ -66,6 +66,25 @@ window.opener.location.reload();
 </div>
 <br />
 <br />
+{* Following help text added by eScholarship (BLH 2013-03-20) *}
+{if $isEditor}
+<table width="90%" align="center">
+<tr><td style="background: yellow; padding: 15px;">
+<p><strong>Editors, Please Note:</strong></p>
+<p>In order for authors to view comments above that are marked "For author and editor" you
+must do the following:</p>
+<ol>
+	<li>Close this window and return to the Review page</li>
+	<li>Register an editorial decision</li>
+	<li>Click the envelope icon next to "Notify Author"</li>
+	<li>Follow the instructions in the yellow box that will appear</li>
+</ol>
+<p> More detailed information can be found in <a href="https://vimeo.com/34042897" target="_blank">this help video.</a></p>
+</td></tr>
+</table>
+<br />
+<br />
+{/if}
 
 {if not $isLocked}
 <form method="post" action="{url op=$commentAction}">

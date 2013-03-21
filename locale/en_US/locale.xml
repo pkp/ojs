@@ -172,6 +172,8 @@
 	<message key="submission.sent">Sent</message>
 	<message key="submission.sentToCopyediting">Sent to Copyediting</message>
 	<message key="submission.editorDecision">Editor Decision</message>
+	<message key="submission.editorDecisionReviewerComments">Editor Decision and Reviewer Comments</message>
+        <message key="submission.reviewerFileVersions">File Versions for Revision Rounds</message>
 	<message key="submission.submissionEditorDecision">Section Editor Decision</message>
 	<message key="submission.submissionEditorInstructionsWestJEM">Once all reviewers have submitted their report, please register your editorial comments:</message>
     <message key="submission.submissionEditorInstructionsWestJEM1">Clicking the HISTORY link near the top of the page (Just above the bold heading "Submission").</message>

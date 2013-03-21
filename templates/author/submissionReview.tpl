@@ -15,9 +15,9 @@
 {/strip}
 
 <ul class="menu">
-	<li><a href="{url op="submission" path=$submission->getId()}">{translate key="submission.summary"}</a></li>
-	<li class="current"><a href="{url op="submissionReview" path=$submission->getId()}">{translate key="submission.review"}</a></li>
-	<li><a href="{url op="submissionEditing" path=$submission->getId()}">{translate key="submission.editing"}</a></li>
+	<li><a href="{url op="submission" path=$submission->getId()}">{literal}1. {/literal}{translate key="submission.summary"}</a></li>
+	<li class="current"><a href="{url op="submissionReview" path=$submission->getId()}">{literal}2. {/literal}{translate key="submission.review"}</a></li>
+	<li><a href="{url op="submissionEditing" path=$submission->getId()}">{literal}1. {/literal}{translate key="submission.editing"}</a></li>
 </ul>
 
 
@@ -25,11 +25,15 @@
 
 <div class="separator"></div>
 
+{include file="author/submission/editorDecision.tpl"}
+
+<div class="separator"></div>
+
 {include file="author/submission/peerReview.tpl"}
 
 <div class="separator"></div>
 
-{include file="author/submission/editorDecision.tpl"}
+{include file="author/submission/fileVersions.tpl"}
 
 {include file="common/footer.tpl"}
 

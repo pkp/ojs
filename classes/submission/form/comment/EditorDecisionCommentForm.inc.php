@@ -44,6 +44,9 @@ class EditorDecisionCommentForm extends CommentForm {
 		$isEditor = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
 		$templateMgr->assign('isEditor', $isEditor);
 
+		$isAuthor = $this->roleId == ROLE_ID_AUTHOR ? true: false;
+		$templateMgr->assign('isAuthor', $isAuthor);
+
 		parent::display();
 	}
 

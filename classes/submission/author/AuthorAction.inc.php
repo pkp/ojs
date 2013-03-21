@@ -407,6 +407,60 @@ class AuthorAction extends Action {
 		}
 	}
 
+        /**
+         * Email editor to notify that new file version has been uploaded.
+         * @param $authorSubmission object
+         * @param $send boolean
+         */
+        function emailEditorRevisionUpload($authorSubmission, $send) {
+                $userDao =& DAORegistry::getDAO('UserDAO');
+                $journal =& Request::getJournal();
+
+                $user =& Request::getUser();
+                import('classes.mail.ArticleMailTemplate');
+                $email = new ArticleMailTemplate($authorSubmission);
+
+                $editAssignments = $authorSubmission->getEditAssignments();
+                $editors = array();
+                foreach ($editAssignments as $editAssignment) {
+                        array_push($editors, $userDao->getUser($editAssignment->getEditorId()));
+                }
+
+                if ($send && !$email->hasErrors()) {
+                        HookRegistry::call('AuthorAction::emailEditorRevisionUpload', array(&$authorSubmission, &$email));
+                        $email->send();
+
+                        $articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+                        $articleComment = new ArticleComment();
+                        $articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+                        $articleComment->setRoleId(ROLE_ID_AUTHOR);
+                        $articleComment->setArticleId($authorSubmission->getId());
+                        $articleComment->setAuthorId($authorSubmission->getUserId());
+                        $articleComment->setCommentTitle($email->getSubject());
+                        $articleComment->setComments($email->getBody());
+                        $articleComment->setDatePosted(Core::getCurrentDate());
+                        $articleComment->setViewable(true);
+                        $articleComment->setAssocId($authorSubmission->getId());
+                        $articleCommentDao->insertArticleComment($articleComment);
+
+                        return true;
+                } else {
+                        if (!Request::getUserVar('continued')) {
+                                $email->setSubject($authorSubmission->getLocalizedTitle());
+                                if (!empty($editors)) {
+                                        foreach ($editors as $editor) {
+                                                $email->addRecipient($editor->getEmail(), $editor->getFullName());
+                                        }
+                                } else {
+                                        $email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+                                }
+                        }
+
+                        $email->displayEditForm(Request::url(null, null, 'emailEditorDecisionComment', 'send'), array('articleId' => $authorSubmission->getId()), 'submission/comment/editorDecisionEmail.tpl');
+
+                        return false;
+                }
+        } 
 	/**
 	 * View copyedit comments.
 	 * @param $article object

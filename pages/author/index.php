@@ -78,6 +78,7 @@ switch ($op) {
 	case 'viewCopyeditComments':
 	case 'postCopyeditComment':
 	case 'emailEditorDecisionComment':
+	case 'emailEditorRevisionUpload':
 	case 'viewProofreadComments':
 	case 'viewLayoutComments':
 	case 'postLayoutComment':

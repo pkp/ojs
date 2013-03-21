@@ -9,7 +9,13 @@
  * $Id$
  *}
 <div id="editorDecision">
-<h3>{translate key="submission.editorDecision"}</h3>
+<br />
+<table width="100%">
+        <tr>
+                <td style="background: yellow; padding: 15px;">Authors: Click the blue speech bubble icon below to access your decision letter and reviewer commments. Additional files may also be available in the Peer Review section below. More detailed information can be found in <a href="https://vimeo.com/33303895" target="_blank">this help video</a>.</td>
+        </tr>
+</table>
+<h3>{translate key="submission.editorDecisionReviewerComments"}</h3>
 
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($submission->getCurrentRound())}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($submission->getCurrentRound())}
@@ -43,43 +49,6 @@
 			{/if}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
-			{translate key="submission.editorVersion"}
-		</td>
-		<td class="value" width="80%">
-			{foreach from=$editorFiles item=editorFile key=key}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}<br />
-			{foreachelse}
-				{translate key="common.none"}
-			{/foreach}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
-			{translate key="submission.authorVersion"}
-		</td>
-		<td class="value" width="80%">
-			{foreach from=$authorFiles item=authorFile key=key}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$authorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="{url op="deleteArticleFile" path=$submission->getArticleId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="action">{translate key="common.delete"}</a><br />
-			{foreachelse}
-				{translate key="common.none"}
-			{/foreach}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">
-			{translate key="author.article.uploadAuthorVersion"}
-		</td>
-		<td class="value" width="80%">
-			<form method="post" action="{url op="uploadRevisedVersion"}" enctype="multipart/form-data">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="file" name="upload" class="uploadField" />
-				<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
-			</form>
-
-		</td>
-	</tr>
+{** 2013-03-20 eSchol (BLH): Moved code for displaying file versions to a separate file: templates/author/submission/fileVersions.tpl so that we can split things up and move them around on the page. Sections were not making sense as was.**}
 </table>
 </div>

@@ -9,6 +9,12 @@
  * $Id$
  *}
 <div id="submission">
+<br/>
+<table width="100%">
+	<tr>
+		<td style="background: yellow; padding: 15px;">Authors: To access peer review and editorial decision information, click on the <strong>2. REVIEW</strong> link above.</td>
+	</tr>
+</table>
 <h3>{translate key="article.submission"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
