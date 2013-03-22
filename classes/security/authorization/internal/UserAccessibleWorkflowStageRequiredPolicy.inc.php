@@ -50,7 +50,7 @@ class UserAccessibleWorkflowStageRequiredPolicy extends PKPUserAccessibleWorkflo
 					// and the requested workflow stage must be assigned to
 					// them in the press settings.
 					import('classes.security.authorization.internal.SectionAssignmentRule');
-					if (SectionAssignmentRule::effect($contextId, $submission->getSeriesId(), $userId) &&
+					if (SectionAssignmentRule::effect($contextId, $submission->getSectionId(), $userId) &&
 					$userGroupDao->userAssignmentExists($contextId, $userId, $stageId)) {
 						$accessibleStageRoles[] = $roleId;
 					}
