@@ -37,7 +37,6 @@
 	<group roleId="0x00010000" stages="1,2,3,4,5" name="default.groups.name.translator" plural="default.groups.plural.translator" abbrev="default.groups.abbrev.translator" />
 
 	<!-- Reviewer Role -->
-	<group roleId="0x00001000" stages="2" name="default.groups.name.internalReviewer" plural="default.groups.plural.internalReviewer" abbrev="default.groups.abbrev.internalReviewer" />
 	<group roleId="0x00001000" stages="3" name="default.groups.name.externalReviewer" plural="default.groups.plural.externalReviewer" abbrev="default.groups.abbrev.externalReviewer" />
 
 	<!-- Reader Role -->
