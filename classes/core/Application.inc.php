@@ -196,6 +196,19 @@ class Application extends PKPApplication {
 	static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
 	}
+
+	/**
+	 * Get the stages used by the application.
+	 */
+	static function getApplicationStages() {
+		// We leave out WORKFLOW_STAGE_ID_PUBLISHED since it technically is not a 'stage'.
+		return array(
+				WORKFLOW_STAGE_ID_SUBMISSION,
+				WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
+				WORKFLOW_STAGE_ID_EDITING,
+				WORKFLOW_STAGE_ID_PRODUCTION
+		);
+	}
 }
 
 ?>
