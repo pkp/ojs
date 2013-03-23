@@ -59,5 +59,8 @@
 {/if}
 </table>
 </div>
-{include file="common/footer.tpl"}
 
+{url|assign:issuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid"}
+{load_url_in_div id="futureIssuesGridContainer" url=$issuesGridUrl}
+
+{include file="common/footer.tpl"}

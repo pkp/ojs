@@ -90,5 +90,8 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveIssue"); });
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton" />
 </form>
 </div>
-{include file="common/footer.tpl"}
 
+{url|assign:issuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid"}
+{load_url_in_div id="backIssuesGridContainer" url=$issuesGridUrl}
+
+{include file="common/footer.tpl"}
