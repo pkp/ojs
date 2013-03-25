@@ -85,7 +85,7 @@ class ReferralHandler extends Handler {
 
 			$referralForm->display();
 		}
-	}	
+	}
 
 	function deleteReferral($args, $request) {
 		$referralId = (int) array_shift($args);

@@ -220,7 +220,7 @@ class ReferralPlugin extends GenericPlugin {
 			$referral->setUrl($referrer);
 			$referral->setStatus(REFERRAL_STATUS_NEW);
 			$referral->setDateAdded(Core::getCurrentDate());
-			$referralDao->insertReferral($referral);
+			$referralDao->replaceReferral($referral);
 		}
 		return false;
 	}
