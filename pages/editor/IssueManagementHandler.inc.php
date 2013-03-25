@@ -80,54 +80,6 @@ class IssueManagementHandler extends EditorHandler {
 	}
 
 	/**
-	 * Removes an issue
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function removeIssue($args, $request) {
-		$issueId = (int) array_shift($args);
-		$this->validate($request, $issueId);
-		$issue =& $this->issue;
-		$isBackIssue = $issue->getPublished() > 0 ? true: false;
-
-		$journal =& $request->getJournal();
-
-		// remove all published articles and return original articles to editing queue
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
-		if (isset($publishedArticles) && !empty($publishedArticles)) {
-			// Insert article tombstone if the issue is published
-			import('classes.article.ArticleTombstoneManager');
-			$articleTombstoneManager = new ArticleTombstoneManager();
-			foreach ($publishedArticles as $article) {
-				if ($isBackIssue) {
-					$articleTombstoneManager->insertArticleTombstone($article, $journal);
-				}
-				$articleDao->changeStatus($article->getId(), STATUS_QUEUED);
-				$publishedArticleDao->deletePublishedArticleById($article->getPublishedArticleId());
-			}
-		}
-
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteIssue($issue);
-		if ($issue->getCurrent()) {
-			$issues = $issueDao->getPublishedIssues($journal->getId());
-			if (!$issues->eof()) {
-				$issue = $issues->next();
-				$issue->setCurrent(1);
-				$issueDao->updateObject($issue);
-			}
-		}
-
-		if ($isBackIssue) {
-			$request->redirect(null, null, 'backIssues');
-		} else {
-			$request->redirect(null, null, 'futureIssues');
-		}
-	}
-
-	/**
 	 * Displays the create issue form
 	 * @param $args array
 	 * @param $request PKPRequest

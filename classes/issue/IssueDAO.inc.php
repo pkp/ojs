@@ -428,7 +428,7 @@ class IssueDAO extends DAO {
 	 * Delete issue. Deletes associated issue galleys, cover pages, and published articles.
 	 * @param $issue object issue
 	 */
-	function deleteIssue($issue) {
+	function deleteObject($issue) {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
@@ -474,10 +474,10 @@ class IssueDAO extends DAO {
 	 * Delete issues by journal id. Deletes dependent entities.
 	 * @param $journalId int
 	 */
-	function deleteIssuesByJournal($journalId) {
+	function deleteByJournalId($journalId) {
 		$issues = $this->getIssues($journalId);
 		while ($issue = $issues->next()) {
-			$this->deleteIssue($issue);
+			$this->deleteObject($issue);
 		}
 	}
 
@@ -710,7 +710,7 @@ class IssueDAO extends DAO {
 			array(
 				(int) $issueId,
 				(int) $journalId,
-				(int) $seq
+				$seq
 			)
 		);
 	}

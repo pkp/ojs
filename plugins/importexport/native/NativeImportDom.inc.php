@@ -71,7 +71,7 @@ class NativeImportDom {
 			NativeImportDom::cleanupFailure ($dependentItems);
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
-				$issueDao->deleteIssue($issue);
+				$issueDao->deleteObject($issue);
 			}
 			return false;
 		}
@@ -1335,7 +1335,7 @@ class NativeImportDom {
 
 			switch ($type) {
 				case 'issue':
-					$issueDao->deleteIssue($object);
+					$issueDao->deleteObject($object);
 					break;
 				case 'article':
 					$articleDao->deleteObject($object);

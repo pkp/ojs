@@ -167,7 +167,6 @@ switch ($op) {
 	//
 	case 'futureIssues':
 	case 'backIssues':
-	case 'removeIssue':
 	case 'createIssue':
 	case 'saveIssue':
 	case 'issueData':

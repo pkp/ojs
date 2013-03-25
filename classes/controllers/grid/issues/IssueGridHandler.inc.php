@@ -13,6 +13,7 @@
  */
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
+import('controllers.grid.issues.IssueGridRow');
 
 class IssueGridHandler extends GridHandler {
 	/**
@@ -22,7 +23,7 @@ class IssueGridHandler extends GridHandler {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 				array(ROLE_ID_EDITOR),
-				array('fetchGrid', 'fetchRow'));
+				array('fetchGrid', 'fetchRow', 'deleteIssue'));
 	}
 
 
@@ -75,6 +76,62 @@ class IssueGridHandler extends GridHandler {
 				$issueGridCellProvider
 			)
 		);
+	}
+
+	/**
+	 * Get the row handler - override the default row handler
+	 * @return IssueGridRow
+	 */
+	function &getRowInstance() {
+		$row = new IssueGridRow();
+		return $row;
+	}
+
+	//
+	// Public operations
+	//
+	/**
+	 * Removes an issue
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function deleteIssue($args, $request) {
+		$issueId = (int) $request->getUserVar('issueId');
+		$journal = $request->getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
+		if (!$issue) fatalError('Invalid issue ID!');
+
+		$isBackIssue = $issue->getPublished() > 0 ? true: false;
+
+		// remove all published articles and return original articles to editing queue
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		if (isset($publishedArticles) && !empty($publishedArticles)) {
+			// Insert article tombstone if the issue is published
+			import('classes.article.ArticleTombstoneManager');
+			$articleTombstoneManager = new ArticleTombstoneManager();
+			foreach ($publishedArticles as $article) {
+				if ($isBackIssue) {
+					$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				}
+				$articleDao->changeStatus($article->getId(), STATUS_QUEUED);
+				$publishedArticleDao->deletePublishedArticleById($article->getPublishedArticleId());
+			}
+		}
+
+		$issueDao->deleteObject($issue);
+		if ($issue->getCurrent()) {
+			$issues = $issueDao->getPublishedIssues($journal->getId());
+			if (!$issues->eof()) {
+				$issue = $issues->next();
+				$issue->setCurrent(1);
+				$issueDao->updateObject($issue);
+			}
+		}
+
+		return DAO::getDataChangedEvent($issueId);
 	}
 }
 
