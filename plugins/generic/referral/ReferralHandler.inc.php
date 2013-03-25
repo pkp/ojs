@@ -21,7 +21,7 @@ class ReferralHandler extends Handler {
 	function ReferralHandler() {
 		parent::Handler();
 	}
-	
+
 	function setupTemplate() {
 		parent::setupTemplate();
 		$templateMgr =& TemplateManager::getManager();
@@ -92,7 +92,7 @@ class ReferralHandler extends Handler {
 
 			$referralForm->display();
 		}
-	}	
+	}
 
 	function deleteReferral($args) {
 		$referralId = (int) array_shift($args);

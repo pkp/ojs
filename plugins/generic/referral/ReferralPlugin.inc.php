@@ -48,10 +48,10 @@ class ReferralPlugin extends GenericPlugin {
 		return parent::getManagementVerbs($verbs);
 	}
 
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
+	/*
+	 * Execute a management verb on this plugin
+	 * @param $verb string
+	 * @param $args array
 	 * @param $message string Result status message
 	 * @param $messageParams array Parameters for the message key
 	 * @return boolean
@@ -248,7 +248,7 @@ class ReferralPlugin extends GenericPlugin {
 			$referral->setUrl($referrer);
 			$referral->setStatus(REFERRAL_STATUS_NEW);
 			$referral->setDateAdded(Core::getCurrentDate());
-			$referralDao->insertReferral($referral);
+			$referralDao->replaceReferral($referral);
 		}
 		return false;
 	}
