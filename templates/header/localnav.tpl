@@ -36,10 +36,13 @@
 			{/if}
 			{if $currentJournal}
 				<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a>
-				{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SERIES_EDITOR), $userRoles)}
+				{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles)}
 					<li>
 						<a href="#">{translate key="navigation.management"}</a>
 						<ul>
+							<li>
+								<a href="{url page="editor" op="issues"}">{translate key="editor.navigation.issues"}</a>
+							</li>
 							{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
 							<li>
 								<a href="{url page="management" op="settings" path="index"}">{translate key="navigation.settings"}</a>

@@ -89,7 +89,7 @@
 	<message key="editor.issues.open">Otvori</message>
 	<message key="editor.issues.pages">Stranice</message>
 	<message key="editor.navigation.futureIssues">Budući brojevi časopisa</message>
-	<message key="editor.navigation.createIssue">Kreiraj broj časopisa</message>
+	<message key="grid.action.addIssue">Kreiraj broj časopisa</message>
 	<message key="editor.navigation.issueArchive">Prošli brojevi časopisa</message>
 	<message key="editor.article.uploadReviewVersion">Revidirana verzija za recenziju</message>
 	<message key="editor.article.showSuppFile">Omogući recenzentima pristup datoteci</message>

@@ -87,7 +87,7 @@
 	<message key="editor.issues.pages">Σελίδες</message>
 	<message key="editor.navigation.issues">Τεύχη</message>
 	<message key="editor.navigation.futureIssues">Μελλοντικά τεύχη</message>
-	<message key="editor.navigation.createIssue">Δημιουργία τεύχους</message>
+	<message key="grid.action.addIssue">Δημιουργία τεύχους</message>
 	<message key="editor.navigation.issueArchive">Παλαιά Τεύχη</message>
 	<message key="editor.article.designateReviewVersion">Καθορισμός του αρχείου προέλευσης ως Έκδοση Αξιολόγησης</message>
 	<message key="editor.article.uploadReviewVersion">Φορτώστε αναθεωρημένη μια έκδοση της αξιολόγησης</message>

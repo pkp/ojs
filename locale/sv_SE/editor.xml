@@ -92,7 +92,7 @@
 	<message key="editor.issues.pages">Sidor</message>
 	<message key="editor.navigation.issues">Nummer</message>
 	<message key="editor.navigation.futureIssues">Kommande nummer</message>
-	<message key="editor.navigation.createIssue">Skapa nummer</message>
+	<message key="grid.action.addIssue">Skapa nummer</message>
 	<message key="editor.navigation.issueArchive">Äldre nummer</message>
 	<message key="editor.article.designateReviewVersion">Registrera originalfilen som granskningsversion</message>
 	<message key="editor.article.uploadReviewVersion">Ladda upp en omarbetad version för granskning.</message>

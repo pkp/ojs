@@ -86,7 +86,7 @@
 	<message key="editor.issues.pages">ページ</message>
 	<message key="editor.navigation.issues">巻号</message>
 	<message key="editor.navigation.futureIssues">出版予定号</message>
-	<message key="editor.navigation.createIssue">巻号作成</message>
+	<message key="grid.action.addIssue">巻号作成</message>
 	<message key="editor.navigation.issueArchive">バックナンバー</message>
 	<message key="editor.article.designateReviewVersion">査読版としてオリジナルファイルを指定</message>
 	<message key="editor.article.uploadReviewVersion">改訂済み査読版のアップロード</message>

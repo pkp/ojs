@@ -27,8 +27,8 @@ class IssueForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function IssueForm($template) {
-		parent::Form($template);
+	function IssueForm() {
+		parent::Form('controllers/grid/issues/form/issueForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -42,11 +42,11 @@ class IssueForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * Fetch the form.
 	 */
-	function display() {
-		$templateMgr =& TemplateManager::getManager();
-		$journal =& Request::getJournal();
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 
 		// set up the accessibility options pulldown
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
@@ -57,16 +57,17 @@ class IssueForm extends Form {
 		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
+
 		// consider public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
-		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-		parent::display();
+		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
+
+		return parent::fetch($request);
 	}
 
 	/**
 	 * Validate the form
 	 */
-	function validate($issue = null) {
+	function validate($request, $issue = null) {
 		$issueId = ($issue?$issue->getId():0);
 
 		if ($this->getData('showVolume')) {
@@ -86,7 +87,7 @@ class IssueForm extends Form {
 		}
 
 		// check if public issue ID has already been used
-		$journal =& Request::getJournal();
+		$journal = $request->getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicIssueId = $this->getData('publicIssueId');
@@ -125,7 +126,7 @@ class IssueForm extends Form {
 	 * Initialize form data from current issue.
 	 * returns issue id that it initialized the page with
 	 */
-	function initData($issueId = null) {
+	function initData($request, $issueId = null) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		// retrieve issue by id, if not specified, then select first unpublished issue
@@ -168,7 +169,7 @@ class IssueForm extends Form {
 			return $issue->getId();
 
 		} else {
-			$journal =& Request::getJournal();
+			$journal = $request->getJournal();
 			switch ($journal->getSetting('publishingMode')) {
 				case PUBLISHING_MODE_SUBSCRIPTION:
 				case PUBLISHING_MODE_NONE:
@@ -185,9 +186,6 @@ class IssueForm extends Form {
 				'showNumber' => 1,
 				'showYear' => 1,
 				'showTitle' => 1,
-				'volume' => $volume,
-				'number' => $number,
-				'year' => $year,
 				'accessStatus' => $accessStatus
 			);
 		}
@@ -235,8 +233,8 @@ class IssueForm extends Form {
 	/**
 	 * Save issue settings.
 	 */
-	function execute($issueId = 0) {
-		$journal = Request::getJournal();
+	function execute($request, $issueId = 0) {
+		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		if ($issueId) {
@@ -321,7 +319,7 @@ class IssueForm extends Form {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
-			$journal = Request::getJournal();
+			$journal = $request->getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			$newFileName = 'cover_issue_' . $issueId . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($type);
@@ -338,7 +336,7 @@ class IssueForm extends Form {
 		}
 
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
-			$journal = Request::getJournal();
+			$journal = $request->getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('styleFile');
 			$newFileName = 'style_' . $issueId . '.css';
 			$publicFileManager->uploadJournalFile($journal->getId(), 'styleFile', $newFileName);
@@ -349,7 +347,6 @@ class IssueForm extends Form {
 
 		return $issueId;
 	}
-
 }
 
 ?>

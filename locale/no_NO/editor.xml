@@ -81,7 +81,7 @@
 	<message key="editor.issues.pages">Sider</message>
 	<message key="editor.navigation.issues">Utgaver</message>
 	<message key="editor.navigation.futureIssues">Framtidige utgaver</message>
-	<message key="editor.navigation.createIssue">Opprett utgave</message>
+	<message key="grid.action.addIssue">Opprett utgave</message>
 	<message key="editor.navigation.issueArchive">Tidligere utgaver</message>
 	<message key="editor.article.designateReviewVersion">Registrer originalfilen som fagvurderingsversjon</message>
 	<message key="editor.article.uploadReviewVersion">Last opp en omarbeidet fagvurderingsversjon</message>

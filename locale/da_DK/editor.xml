@@ -95,7 +95,7 @@
 	<message key="editor.issues.pages">Sider</message>
 	<message key="editor.navigation.issues">Udgaver</message>
 	<message key="editor.navigation.futureIssues">Fremtidige udgaver</message>
-	<message key="editor.navigation.createIssue">Opret udgave</message>
+	<message key="grid.action.addIssue">Opret udgave</message>
 	<message key="editor.navigation.issueArchive">Tidligere udgaver</message>
 	<message key="editor.article.designateReviewVersion">Angiv den oprindelige fil som Bedømmelsesversion</message>
 	<message key="editor.article.uploadReviewVersion">Overfør en revideret bedømmelsesversion</message>

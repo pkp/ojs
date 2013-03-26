@@ -22,14 +22,33 @@ class IssueGridHandler extends GridHandler {
 	function IssueGridHandler() {
 		parent::GridHandler();
 		$this->addRoleAssignment(
-				array(ROLE_ID_EDITOR),
-				array('fetchGrid', 'fetchRow', 'deleteIssue'));
+			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
+			array(
+				'fetchGrid', 'fetchRow',
+				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
+				'issueToc',
+				'issueGalleys',
+				'deleteIssue'
+			)
+		);
 	}
 
 
 	//
 	// Implement template methods from PKPHandler
 	//
+	/**
+	 * @see PKPHandler::authorize()
+	 * @param $request PKPRequest
+	 * @param $args array
+	 * @param $roleAssignments array
+	 */
+	function authorize(&$request, &$args, $roleAssignments) {
+		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
+		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
+		return parent::authorize($request, $args, $roleAssignments);
+	}
+
 	/**
 	 * @see PKPHandler::initialize()
 	 */
@@ -38,9 +57,7 @@ class IssueGridHandler extends GridHandler {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
-		//
 		// Grid columns.
-		//
 		import('controllers.grid.issues.IssueGridCellProvider');
 		$issueGridCellProvider = new IssueGridCellProvider();
 
@@ -91,6 +108,74 @@ class IssueGridHandler extends GridHandler {
 	// Public operations
 	//
 	/**
+	 * An action to add a new issue
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function addIssue($args, $request) {
+		// Calling editIssueData with an empty ID will add
+		// a new issue.
+		return $this->editIssueData($args, $request);
+	}
+
+	/**
+	 * An action to edit a issue
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function editIssue($args, $request) {
+		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+
+		import('controllers.grid.issues.form.IssueForm');
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('issueId', $issueId);
+		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
+		return $json->getString();
+	}
+
+	/**
+	 * An action to edit a issue's identifying data
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function editIssueData($args, $request) {
+		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+
+		import('controllers.grid.issues.form.IssueForm');
+		$issueForm = new IssueForm($issueId);
+		$issueForm->initData($request, $issueId);
+		$json = new JSONMessage(true, $issueForm->fetch($request));
+		return $json->getString();
+	}
+
+	/**
+	 * Update a issue
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function updateIssue($args, $request) {
+		$issueId = $request->getUserVar('issueId');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
+		if (!$issue) fatalError('Invalid issue ID!');
+
+		import('controllers.grid.issues.form.IssueForm');
+		$issueForm = new IssueForm($issueId);
+		$issueForm->readInputData();
+
+		if ($issueForm->validate($request, $issue)) {
+			$issueId = $issueForm->execute($request, $issueId);
+			return DAO::getDataChangedEvent($issueId);
+		} else {
+			$json = new JSONMessage(false);
+			return $json->getString();
+		}
+	}
+
+	/**
 	 * Removes an issue
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -133,6 +218,190 @@ class IssueGridHandler extends GridHandler {
 
 		return DAO::getDataChangedEvent($issueId);
 	}
+
+	/**
+	 * Display the table of contents
+	 * @param $request PKPRequest
+	 */
+	function issueToc($args, $request) {
+		$issueId = (int) $request->getUserVar('issueId');
+		$journal = $request->getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
+		if (!$issue) fatalError('Invalid issue ID!');
+
+		$templateMgr =& TemplateManager::getManager($request);
+
+		$journalId = $journal->getId();
+
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+
+		$enablePublicArticleId = $journalSettingsDao->getSetting($journalId,'enablePublicArticleId');
+		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
+		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
+		$templateMgr->assign('enablePageNumber', $enablePageNumber);
+		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
+
+		$templateMgr->assign('issueId', $issueId);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('unpublished', !$issue->getPublished());
+		$templateMgr->assign('issueAccess', $issue->getAccessStatus());
+
+		// get issue sections and articles
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+
+		$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$proofedArticleIds = $layoutEditorSubmissionDao->getProofedArticlesByIssueId($issueId);
+		$templateMgr->assign('proofedArticleIds', $proofedArticleIds);
+
+		$currSection = 0;
+		$counter = 0;
+		$sections = array();
+		$sectionCount = 0;
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		foreach ($publishedArticles as $article) {
+			$sectionId = $article->getSectionId();
+			if ($currSection != $sectionId) {
+				$lastSectionId = $currSection;
+				$sectionCount++;
+				if ($lastSectionId !== 0) $sections[$lastSectionId][5] = $customSectionOrderingExists?$sectionDao->getCustomSectionOrder($issueId, $sectionId):$sectionCount; // Store next custom order
+				$currSection = $sectionId;
+				$counter++;
+				$sections[$sectionId] = array(
+					$sectionId,
+					$article->getSectionTitle(),
+					array($article),
+					$counter,
+					$customSectionOrderingExists?
+						$sectionDao->getCustomSectionOrder($issueId, $lastSectionId): // Last section custom ordering
+						($sectionCount-1),
+					null // Later populated with next section ordering
+				);
+			} else {
+				$sections[$article->getSectionId()][2][] = $article;
+			}
+		}
+		$templateMgr->assign_by_ref('sections', $sections);
+
+		$templateMgr->assign('accessOptions', array(
+			ARTICLE_ACCESS_ISSUE_DEFAULT => AppLocale::Translate('editor.issues.default'),
+			ARTICLE_ACCESS_OPEN => AppLocale::Translate('editor.issues.open')
+		));
+
+		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
+		return $json->getString();
+	}
+
+	/**
+	 * Updates issue table of contents with selected changes and article removals.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function updateIssueToc($args, $request) {
+		$issueId = (int) array_shift($args);
+		$this->validate($request, $issueId, true);
+
+		$journal =& $request->getJournal();
+
+		$removedPublishedArticles = array();
+
+		$publishedArticles = $request->getUserVar('publishedArticles');
+		$removedArticles = $request->getUserVar('remove');
+		$accessStatus = $request->getUserVar('accessStatus');
+		$pages = $request->getUserVar('pages');
+
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+
+		$articles = $publishedArticleDao->getPublishedArticles($issueId);
+
+		// insert article tombstone, if an article is removed from a published issue
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
+		foreach($articles as $article) {
+			$articleId = $article->getId();
+			$pubId = $article->getPublishedArticleId();
+			if (!isset($removedArticles[$articleId])) {
+				if (isset($pages[$articleId])) {
+					$article->setPages($pages[$articleId]);
+				}
+				if (isset($publishedArticles[$articleId])) {
+					$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+					$publicArticleId = $publishedArticles[$articleId];
+					if ($publicArticleId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicArticleId, ASSOC_TYPE_ARTICLE, $articleId)) {
+						// We are not in a form so we cannot send form errors.
+						// Let's at least send a notification to give some feedback
+						// to the user.
+						import('classes.notification.NotificationManager');
+						$notificationManager = new NotificationManager();
+						AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
+						$message = 'editor.publicIdentificationExists';
+						$params = array('publicIdentifier' => $publicArticleId);
+						$user =& $request->getUser();
+						$notificationManager->createTrivialNotification(
+							$user->getId(), NOTIFICATION_TYPE_ERROR,
+							array('contents' => __($message, $params))
+						);
+						$publicArticleId = '';
+					}
+					$article->setStoredPubId('publisher-id', $publicArticleId);
+				}
+				if (isset($accessStatus[$pubId])) {
+					$publishedArticleDao->updatePublishedArticleField($pubId, 'access_status', $accessStatus[$pubId]);
+				}
+			} else {
+				if ($issue->getPublished()) {
+					$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				}
+				$article->setStatus(STATUS_QUEUED);
+				$article->stampStatusModified();
+
+				// If the article is the only one in the section, delete the section from custom issue ordering
+				$sectionId = $article->getSectionId();
+				$publishedArticleArray =& $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issueId);
+				if (sizeof($publishedArticleArray) == 1) {
+					$sectionDao->deleteCustomSection($issueId, $sectionId);
+				}
+
+				$publishedArticleDao->deletePublishedArticleById($pubId);
+				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
+			}
+			$articleDao->updateObject($article);
+		}
+
+		$request->redirect(null, null, 'issueToc', $issueId);
+	}
+
+	/**
+	 * Displays the issue galleys page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function issueGalleys($args, $request) {
+		$issueId = (int) $request->getUserVar('issueId');
+		$journal = $request->getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($issueId, $journal->getId());
+		if (!$issue) fatalError('Invalid issue ID!');
+
+		$templateMgr = TemplateManager::getManager($request);
+		import('classes.issue.IssueAction');
+		$templateMgr->assign('issueId', $issueId);
+		$templateMgr->assign('unpublished',!$issue->getPublished());
+		$templateMgr->assign_by_ref('issue', $issue);
+
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$templateMgr->assign_by_ref('issueGalleys', $issueGalleyDao->getGalleysByIssue($issue->getId()));
+
+		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
+		return $json->getString();
+	}
+
 }
 
 ?>

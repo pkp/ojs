@@ -116,7 +116,7 @@
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
 	<message key="editor.navigation.issues">Ausgaben</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
-	<message key="editor.navigation.createIssue">Ausgabe erstellen</message>
+	<message key="grid.action.addIssue">Ausgabe erstellen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
 	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>

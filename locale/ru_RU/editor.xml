@@ -72,7 +72,7 @@
 	<message key="editor.issues.pages">Страницы</message>
 	<message key="editor.navigation.issues">Выпуски</message>
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>
-	<message key="editor.navigation.createIssue">Создать выпуск</message>
+	<message key="grid.action.addIssue">Создать выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Отметить оригинальный файл как версию для рецензии</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить отредактированный файл</message>

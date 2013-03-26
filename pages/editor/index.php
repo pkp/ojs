@@ -165,23 +165,7 @@ switch ($op) {
 	//
 	// Issue
 	//
-	case 'futureIssues':
-	case 'backIssues':
-	case 'createIssue':
-	case 'saveIssue':
-	case 'issueData':
-	case 'editIssue':
-	case 'removeIssueCoverPage':
-	case 'removeStyleFile':
-	case 'issueGalleys':
-	case 'uploadIssueGalley':
-	case 'editIssueGalley':
-	case 'saveIssueGalley':
-	case 'orderIssueGalley':
-	case 'deleteIssueGalley':
-	case 'proofIssueGalley':
-	case 'proofIssueGalleyTop':
-	case 'proofIssueGalleyFile':
+	case 'issues':
 	case 'downloadIssueFile':
 	case 'issueToc':
 	case 'updateIssueToc':

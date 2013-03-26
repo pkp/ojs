@@ -94,7 +94,7 @@
 	<message key="editor.issues.pages">صفحات</message>
 	<message key="editor.navigation.issues">شماره های مجله</message>
 	<message key="editor.navigation.futureIssues">ضماره های آتی مجله</message>
-	<message key="editor.navigation.createIssue">ایجاد شماره مجله</message>
+	<message key="grid.action.addIssue">ایجاد شماره مجله</message>
 	<message key="editor.navigation.issueArchive">شماره های گذشته مجله</message>
 	<message key="editor.article.designateReviewVersion">تعیین فایل اصلی به عنوان نسخه کارشناسی</message>
 	<message key="editor.article.uploadReviewVersion">آپلود کردن یک نسخه کارشناسی اصلاح شده</message>

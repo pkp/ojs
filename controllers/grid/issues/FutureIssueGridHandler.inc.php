@@ -30,10 +30,26 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	 * @see PKPHandler::initialize()
 	 */
 	function initialize(&$request, $args) {
-		parent::initialize($request, $args);
-
 		// Basic grid configuration.
 		$this->setTitle('editor.issues.futureIssues');
+
+		parent::initialize($request, $args);
+
+		// Add Create Issue action
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		$this->addAction(
+			new LinkAction(
+				'addIssue',
+				new AjaxModal(
+					$router->url($request, null, null, 'addIssue', null, array('gridId' => $this->getId())),
+					__('grid.action.addIssue'),
+					'modal_manage'
+				),
+				__('grid.action.addIssue'),
+				'add_category'
+			)
+		);
 	}
 
 	/**

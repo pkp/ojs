@@ -6,46 +6,20 @@
  *
  * Form for creation and modification of an issue
  *}
-{strip}
-{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
-{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
-{include file="common/header.tpl"}
-{/strip}
-
-{if !$isLayoutEditor}{* Layout Editors can also access this page. *}
-	<ul class="menu">
-		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
-	</ul>
-{/if}
-<br />
-
-<form class="pkp_form" action="#">
-{translate key="issue.issue"}: <select name="issue" class="selectMenu" onchange="if(this.options[this.selectedIndex].value > 0) location.href='{url|escape:"javascript" op="issueToc" path="ISSUE_ID" escape=false}'.replace('ISSUE_ID', this.options[this.selectedIndex].value)" size="1">{html_options options=$issueOptions|truncate:40:"..." selected=$issueId}</select>
-</form>
-
-<div class="separator"></div>
-
-<ul class="menu">
-	<li><a href="{url op="issueToc" path=$issueId}">{translate key="issue.toc"}</a></li>
-	<li class="current"><a href="{url op="issueData" path=$issueId}">{translate key="editor.issues.issueData"}</a></li>
-	<li><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>
-	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
-</ul>
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#issue').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#issueForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
-<input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
-<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
-{if $styleFileName}
-<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
-<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
-{/if}
+
+<form class="pkp_form" id="issueForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.IssueGridHandler" op="updateIssue" issueId=$issueId}">
+	<input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
+	<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
+	{if $styleFileName}
+		<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
+		<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
+	{/if}
 {include file="common/formErrors.tpl"}
 <div id="issueId">
 <h3>{translate key="editor.issues.identification"}</h3>
@@ -93,7 +67,7 @@
 	<tr>
 		<td class="label">{translate key="common.status"}</td>
 		<td class="value">
-			{if $issue->getPublished()}
+			{if $issue && $issue->getPublished()}
 				{translate key="editor.issues.published"}&nbsp;&nbsp;
 				{* Find good values for starting and ending year options *}
 				{assign var=currentYear value=$smarty.now|date_format:"%Y"}
@@ -111,7 +85,7 @@
 				{translate key="editor.issues.unpublished"}
 			{/if}
 
-			{if $issue->getDateNotified()}
+			{if $issue && $issue->getDateNotified()}
 				<br/>
 				{translate key="editor.usersNotified"}&nbsp;&nbsp;
 				{$issue->getDateNotified()|date_format:$dateFormatShort}
@@ -195,6 +169,3 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
-
-{include file="common/footer.tpl"}
-

@@ -96,7 +96,7 @@
 	<message key="editor.issues.pages">Trang</message>
 	<message key="editor.navigation.issues">Các số tạp chí</message>
 	<message key="editor.navigation.futureIssues">Các số sắp XB</message>
-	<message key="editor.navigation.createIssue">Tạo số tạp chí</message>
+	<message key="grid.action.addIssue">Tạo số tạp chí</message>
 	<message key="editor.navigation.issueArchive">Các số đã xuất bản</message>
 	<message key="editor.article.designateReviewVersion">Chỉ định file gốc làm Phiên bản phản biện</message>
 	<message key="editor.article.uploadReviewVersion">Tải lên một phiên bản phản biện đã hiệu đính</message>

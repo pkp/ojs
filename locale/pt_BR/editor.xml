@@ -94,7 +94,7 @@
 	<message key="editor.issues.pages">Páginas</message>
 	<message key="editor.navigation.issues">Edições</message>
 	<message key="editor.navigation.futureIssues">Edições futuras</message>
-	<message key="editor.navigation.createIssue">Incluir edição</message>
+	<message key="grid.action.addIssue">Incluir edição</message>
 	<message key="editor.navigation.issueArchive">Edições anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como versão para avaliação</message>
 	<message key="editor.article.uploadReviewVersion">Enviar atualização da versão para avaliação</message>

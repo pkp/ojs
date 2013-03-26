@@ -100,7 +100,7 @@
 	<message key="editor.issues.pages">Pagini</message>
 	<message key="editor.navigation.issues">Numere de revistă</message>
 	<message key="editor.navigation.futureIssues">Numere de revistă viitoare</message>
-	<message key="editor.navigation.createIssue">Creează un număr de revistă</message>
+	<message key="grid.action.addIssue">Creează un număr de revistă</message>
 	<message key="editor.navigation.issueArchive">Numere anterioare</message>
 	<message key="editor.article.designateReviewVersion">Desemnează fişierul original ca fiind versiunea de evaluare</message>
 	<message key="editor.article.uploadReviewVersion">Încarcă o versiune de evaluare revizuită</message>

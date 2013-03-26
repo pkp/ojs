@@ -95,7 +95,7 @@
 	<message key="editor.issues.pages">Pàgines</message>
 	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Propers números</message>
-	<message key="editor.navigation.createIssue">Crea el número</message>
+	<message key="grid.action.addIssue">Crea el número</message>
 	<message key="editor.navigation.issueArchive">Números anteriors</message>
 	<message key="editor.article.designateReviewVersion">Designa el fitxer original com a versió de revisió</message>
 	<message key="editor.article.uploadReviewVersion">Penja una versió de revisió revisada</message>

@@ -95,7 +95,7 @@
 	<message key="editor.issues.pages">Stránky</message>
 	<message key="editor.navigation.issues">Čísla</message>
 	<message key="editor.navigation.futureIssues">Budoucí čísla</message>
-	<message key="editor.navigation.createIssue">Vytvořit číslo</message>
+	<message key="grid.action.addIssue">Vytvořit číslo</message>
 	<message key="editor.navigation.issueArchive">Minulá čísla</message>
 	<message key="editor.article.designateReviewVersion">Označit původní soubor za verzi pro recenzi</message>
 	<message key="editor.article.uploadReviewVersion">Nahrát revidovanou verzi pro recenzi</message>

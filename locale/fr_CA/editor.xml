@@ -96,7 +96,7 @@
 	<message key="editor.issues.pages">Pages</message>
 	<message key="editor.navigation.issues">Numéros</message>
 	<message key="editor.navigation.futureIssues">Numéros à venir</message>
-	<message key="editor.navigation.createIssue">Créer un numéro</message>
+	<message key="grid.action.addIssue">Créer un numéro</message>
 	<message key="editor.navigation.issueArchive">Numéros précédents</message>
 	<message key="editor.article.designateReviewVersion">Désigner le fichier original comme le fichier d'évaluation</message>
 	<message key="editor.article.uploadReviewVersion">Télécharger la version d'évaluation révisée</message>

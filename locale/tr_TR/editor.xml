@@ -104,7 +104,7 @@
 	<message key="editor.issues.pages">Sayfalar</message>
 	<message key="editor.navigation.issues">Sayılar</message>
 	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
-	<message key="editor.navigation.createIssue">Sayı Çıkar</message>
+	<message key="grid.action.addIssue">Sayı Çıkar</message>
 	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>
 	<message key="editor.article.designateReviewVersion">Orjinal dosyayı Değerlendirme Sürümü olarak belirle</message>
 	<message key="editor.article.uploadReviewVersion">Düzeltilmiş değerlendirme dosyası yükle</message>
