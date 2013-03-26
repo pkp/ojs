@@ -35,11 +35,11 @@ class IssueRequiredPolicy extends DataObjectRequiredPolicy {
 		$issueId = (int)$this->getDataObjectId();
 		if (!$issueId) return AUTHORIZATION_DENY;
 
-		// Need a valid monograph in request.
+		// Need a valid journal in request.
 		$journal =& $this->getAuthorizedContextObject(ASSOC_TYPE_JOURNAL);
 		if (!is_a($journal, 'Journal')) return AUTHORIZATION_DENY;
 
-		// Make sure the issue belongs to the monograph.
+		// Make sure the issue belongs to the journal.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue =& $issueDao->getById($issueId, $journal->getId());
 		if (!is_a($issue, 'Issue')) return AUTHORIZATION_DENY;
