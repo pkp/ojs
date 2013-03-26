@@ -100,7 +100,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'selectIssue.tpl');
 				break;
 			case 'import':
-				import('classes.file.TemporaryFileManager');
+				import('lib.pkp.classes.file.TemporaryFileManager');
 				$user =& $request->getUser();
 				$temporaryFileManager = new TemporaryFileManager();
 

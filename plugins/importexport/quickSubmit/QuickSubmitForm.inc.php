@@ -82,7 +82,7 @@ class QuickSubmitForm extends Form {
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
-		import('classes.file.TemporaryFileManager');
+		import('lib.pkp.classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 		$tempFileId = $this->getData('tempFileId');
 		if (isset($tempFileId[$formLocale]) && $tempFileId[$formLocale] > 0) {
@@ -152,7 +152,7 @@ class QuickSubmitForm extends Form {
 	 * @return int TemporaryFile ID
 	 */
 	function uploadSubmissionFile($fileName) {
-		import('classes.file.TemporaryFileManager');
+		import('lib.pkp.classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 		$request =& $this->request;
 		$user =& $request->getUser();
@@ -252,7 +252,7 @@ class QuickSubmitForm extends Form {
 		}
 
 		// Add the submission files as galleys
-		import('classes.file.TemporaryFileManager');
+		import('lib.pkp.classes.file.TemporaryFileManager');
 		import('classes.file.ArticleFileManager');
 		$tempFileIds = $this->getData('tempFileId');
 		$temporaryFileManager = new TemporaryFileManager();

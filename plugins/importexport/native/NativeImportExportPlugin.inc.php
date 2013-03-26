@@ -109,7 +109,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'import':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_AUTHOR);
-				import('classes.file.TemporaryFileManager');
+				import('lib.pkp.classes.file.TemporaryFileManager');
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$user =& $request->getUser();

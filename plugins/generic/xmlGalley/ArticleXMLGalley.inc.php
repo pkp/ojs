@@ -232,7 +232,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// create temporary FO file and write the contents
-			import('classes.file.TemporaryFileManager');
+			import('lib.pkp.classes.file.TemporaryFileManager');
 			$temporaryFileManager = new TemporaryFileManager();
 			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getId() . '.fo';
 

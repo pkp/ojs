@@ -277,11 +277,11 @@ class SectionEditorAction extends Action {
 					if ($isEmailBasedReview) {
 						// An email-based review process was selected. Attach
 						// the current review version.
-						import('classes.file.TemporaryFileManager');
+						import('lib.pkp.classes.file.TemporaryFileManager');
 						$temporaryFileManager = new TemporaryFileManager();
 						$reviewVersion =& $sectionEditorSubmission->getReviewFile();
 						if ($reviewVersion) {
-							$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getId());
+							$temporaryFile = $temporaryFileManager->submissionToTemporaryFile($reviewVersion, $user->getId());
 							$email->addPersistAttachment($temporaryFile);
 						}
 					}
