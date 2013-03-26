@@ -88,6 +88,12 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journalId = $journalDao->insertObject($journal);
 			$journalDao->resequence();
 
+			$installedLocales =& $site->getInstalledLocales();
+
+			// Install default genres
+			$genreDao = DAORegistry::getDAO('GenreDAO');
+			$genreDao->installDefaults($journalId, $installedLocales); /* @var $genreDao GenreDAO */
+
 			// load the default user groups and stage assignments.
 			$this->_loadDefaultUserGroups($journalId);
 

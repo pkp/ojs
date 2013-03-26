@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE genres SYSTEM "../lib/pkp/dtd/genres.dtd">
+
+<!--
+  * registry/genres.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default genres XML file.
+  * N.B. The "category" attribute's value can be:
+  *  1 => GENRE_CATEGORY_DOCUMENT
+  * These are defined in lib/pkp/classes/submission/Genre.inc.php.
+  -->
+<genres>
+	<genre key="ARTICLE" sortable="0" category="1" localeKey="default.genres.article"/>
+	<genre key="OTHER" sortable="1" category="1" localeKey="default.genres.other"/>
+</genres>
