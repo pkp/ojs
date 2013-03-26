@@ -46,6 +46,13 @@ class IssueGridHandler extends GridHandler {
 	function authorize(&$request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
+
+		// If a signoff ID was specified, authorize it.
+		if ($request->getUserVar('issueId')) {
+			import('classes.security.authorization.OjsIssueRequiredPolicy');
+			$this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
+		}
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -126,8 +133,6 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function editIssue($args, $request) {
 		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
-
-		import('controllers.grid.issues.form.IssueForm');
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
@@ -157,10 +162,8 @@ class IssueGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function updateIssue($args, $request) {
-		$issueId = $request->getUserVar('issueId');
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($issueId, $journal->getId());
-		if (!$issue) fatalError('Invalid issue ID!');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
 
 		import('controllers.grid.issues.form.IssueForm');
 		$issueForm = new IssueForm($issueId);
@@ -181,11 +184,8 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function deleteIssue($args, $request) {
-		$issueId = (int) $request->getUserVar('issueId');
-		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($issueId, $journal->getId());
-		if (!$issue) fatalError('Invalid issue ID!');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
 
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
@@ -206,6 +206,7 @@ class IssueGridHandler extends GridHandler {
 			}
 		}
 
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteObject($issue);
 		if ($issue->getCurrent()) {
 			$issues = $issueDao->getPublishedIssues($journal->getId());
@@ -224,27 +225,19 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function issueToc($args, $request) {
-		$issueId = (int) $request->getUserVar('issueId');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
+
+		$templateMgr = TemplateManager::getManager($request);
+
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($issueId, $journal->getId());
-		if (!$issue) fatalError('Invalid issue ID!');
-
-		$templateMgr =& TemplateManager::getManager($request);
-
-		$journalId = $journal->getId();
-
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+		$templateMgr->assign('enablePublicArticleId', $journal->getSetting('enablePublicArticleId'));
+		$templateMgr->assign('enablePageNumber', $journal->getSetting('enablePageNumber'));
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-
-		$enablePublicArticleId = $journalSettingsDao->getSetting($journalId,'enablePublicArticleId');
-		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
-		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
-		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
 
 		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('unpublished', !$issue->getPublished());
 		$templateMgr->assign('issueAccess', $issue->getAccessStatus());
 
@@ -300,10 +293,10 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function updateIssueToc($args, $request) {
-		$issueId = (int) array_shift($args);
-		$this->validate($request, $issueId, true);
+		$issue = $request->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getAuthorizedContextObject(ASSOC_TYPE_JOURNAL);
 
 		$removedPublishedArticles = array();
 
@@ -383,11 +376,8 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function issueGalleys($args, $request) {
-		$issueId = (int) $request->getUserVar('issueId');
-		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($issueId, $journal->getId());
-		if (!$issue) fatalError('Invalid issue ID!');
+		$issue = $request->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
 
 		$templateMgr = TemplateManager::getManager($request);
 		import('classes.issue.IssueAction');
@@ -401,7 +391,6 @@ class IssueGridHandler extends GridHandler {
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
 		return $json->getString();
 	}
-
 }
 
 ?>

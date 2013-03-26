@@ -43,7 +43,7 @@ class IssueGridRow extends GridRow {
 					'editIssue',
 					new AjaxModal(
 						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issueId)),
-						__('grid.action.edit'),
+						__('editor.issues.editIssue'),
 						'modal_edit',
 						true),
 					__('grid.action.edit'),
