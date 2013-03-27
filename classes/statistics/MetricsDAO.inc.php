@@ -242,7 +242,7 @@ class MetricsDAO extends DAO {
 				}
 				$issueId = $issueGalley->getIssueId();
 				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue = $issueDao->getIssueById($issueId, null, true);
+				$issue = $issueDao->getById($issueId, null, true);
 				if (!is_a($issue, 'Issue')) {
 					throw new Exception('Cannot load record: issue galley without issue.');
 				}

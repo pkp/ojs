@@ -91,7 +91,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 			foreach ($articleRanking[$timeSpanName] as $articleIndex => &$articleInfo) {
 				$articleInfo['rank'] = $articleIndex + 1;
 				$articleId = $articleInfo['article_id'];
-				$article = $articleDao->getArticle($articleId, $journal->getId(), true); /* @var $article Article */
+				$article = $articleDao->getById($articleId, $journal->getId(), true); /* @var $article Article */
 				if (!is_a($article, 'Article')) continue;
 				$articleInfo['title'] = $article->getLocalizedTitle();
 				$articleInfo['url'] = $router->url(
