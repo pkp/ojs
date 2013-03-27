@@ -27,7 +27,7 @@
 	<message key="plugins.importexport.quickSubmit.uploadSubmissionFile">Upload submission file (PDF format only)</message>
 	<message key="plugins.importexport.quickSubmit.replaceSubmissionFile">Replace submission file (PDF format only)</message>
 	<message key="plugins.importexport.quickSubmit.submissionRequired">You must upload a file for this submission.</message>	
-	<message key="plugins.importexport.quickSubmit.pdfRequired">The submission file must be a PDF file.</message>
+	<message key="plugins.importexport.quickSubmit.pdfRequired">The submission file must be a PDF file. If you attempted to upload a PDF, be sure to click the Upload button after selecting the file.</message>
 	<message key="plugins.importexport.quickSubmit.success">Article Added</message>
 	<message key="plugins.importexport.quickSubmit.successDescription">Article creation was successful.</message>
 	<message key="plugins.importexport.quickSubmit.successReturn">Return to QuickSubmit plugin.</message>
