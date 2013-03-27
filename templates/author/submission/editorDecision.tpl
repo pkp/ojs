@@ -12,7 +12,14 @@
 <br />
 <table width="100%">
         <tr>
-                <td style="background: yellow; padding: 15px;">Authors: Click the blue speech bubble icon below to access your decision letter and reviewer commments. Additional files may also be available in the Peer Review section below. More detailed information can be found in <a href="https://vimeo.com/33303895" target="_blank">this help video</a>.</td>
+                <td style="background: yellow; padding: 15px;">
+			<p>Authors:</p>
+			<ul>
+				<li>Click the blue speech bubble icon below to access your decision letter and reviewer comments. Additional files may also be available in the Peer Review section below.</li>
+				<li> You may upload a revised draft in the File Versions for Revision Rounds section. Be sure to notify the editor when uploading a new version of your manuscript.</li>
+			</ul>
+			<p> More detailed information can be found in <a href="https://vimeo.com/33303895" target="_blank">this help video</a>.</p>
+		</td>
         </tr>
 </table>
 <h3>{translate key="submission.editorDecisionReviewerComments"}</h3>
