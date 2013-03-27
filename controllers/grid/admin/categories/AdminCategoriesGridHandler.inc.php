@@ -76,9 +76,8 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	/**
 	 * @see GridHandler::getRowInstance()
 	 */
-	function &getRowInstance() {
-		$row = new AdminCategoriesGridRow();
-		return $row;
+	function getRowInstance() {
+		return new AdminCategoriesGridRow();
 	}
 
 	/**

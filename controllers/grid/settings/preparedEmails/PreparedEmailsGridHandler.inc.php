@@ -27,9 +27,8 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return PreparedEmailsGridRow
 	 */
-	function &getRowInstance() {
-		$row = new PreparedEmailsGridRow();
-		return $row;
+	function getRowInstance() {
+		return new PreparedEmailsGridRow();
 	}
 
 

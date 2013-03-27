@@ -106,9 +106,8 @@ class IssueGridHandler extends GridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return IssueGridRow
 	 */
-	function &getRowInstance() {
-		$row = new IssueGridRow();
-		return $row;
+	function getRowInstance() {
+		return new IssueGridRow();
 	}
 
 	//

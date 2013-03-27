@@ -54,9 +54,8 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @see GridHandler::getRowInstance()
 	 * @return UserGridRow
 	 */
-	function &getRowInstance() {
-		$row = new JournalGridRow();
-		return $row;
+	function getRowInstance() {
+		return new JournalGridRow();
 	}
 
 	/**

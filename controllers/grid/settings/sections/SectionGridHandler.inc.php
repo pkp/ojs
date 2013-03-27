@@ -116,9 +116,8 @@ class SectionGridHandler extends SetupGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return SectionGridRow
 	 */
-	function &getRowInstance() {
-		$row = new SectionGridRow();
-		return $row;
+	function getRowInstance() {
+		return new SectionGridRow();
 	}
 
 	//
