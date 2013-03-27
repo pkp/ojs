@@ -53,7 +53,10 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td align="right">{if $setupIncomplete.$journalId}[<a href="{url journal=$journalPath page="manager" op="setup" path="1"}">{translate key="manager.setup"}</a>]{/if}</td>
+				<td align="right">
+					{if $setupIncomplete.$journalId}[<a href="{url journal=$journalPath page="manager" op="setup" path="1"}">{translate key="manager.setup"}</a>]{/if}
+					[<a href="{url journal=$journalPath page="manager" op="importexport" path="plugin"|to_array:"QuickSubmitPlugin"}">QuickSubmit</a>]
+				</td>
 			</tr>
 		{/if}
 		{if $isValid.SubscriptionManager.$journalId}
