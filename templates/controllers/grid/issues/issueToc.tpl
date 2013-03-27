@@ -78,6 +78,9 @@
 <div class="separator"></div>
 {/foreach}
 
+{url|assign:issueTocGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId()}
+{load_url_in_div id="issueTocGridContainer" url=$issueTocGridUrl}
+
 <input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 {if $unpublished && !$isLayoutEditor}
 	{* Unpublished; give the option to publish it. *}
