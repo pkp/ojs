@@ -25,7 +25,7 @@ class TocGridHandler extends CategoryGridHandler {
 		parent::CategoryGridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchCategory', 'fetchRow')
+			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence')
 		);
 		$this->publishedArticlesBySectionId = array();
 	}
@@ -78,7 +78,6 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @see GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.OrderCategoryGridItemsFeature');
 		return array(new OrderCategoryGridItemsFeature(ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS));
 	}
 
@@ -130,7 +129,7 @@ class TocGridHandler extends CategoryGridHandler {
 			if (!isset($sections[$sectionId])) {
 				$sections[$sectionId] = $sectionDao->getById($sectionId);
 			}
-			$this->publishedArticlesBySectionId[$sectionId][] = $article;
+			$this->publishedArticlesBySectionId[$sectionId][$article->getId()] = $article;
 		}
 		return $sections;
 	}
@@ -138,17 +137,51 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @see GridHandler::getDataElementSequence()
 	 */
-	function getDataElementSequence($article) {
-		return $article->getSequence();
+	function getDataElementSequence($section) {
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
+		if ($customOrdering === null) { // No custom ordering specified; use default section ordering
+error_log('Section ' . $section->getLocalizedTitle() . ' get custom ordering: ' . $section->getSequence());
+			return $section->getSequence();
+		} else { // Custom ordering specified.
+error_log('Section ' . $section->getLocalizedTitle() . ' get normal ordering: ' . $customOrdering);
+			return $customOrdering;
+		}
 	}
 
 	/**
 	 * @see GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence($request, $articleId, $publishedArticle, $newSequence) {
+	function setDataElementSequence($request, $sectionId, $section, $newSequence) {
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+error_log('Section ' . $section->getLocalizedTitle() . ' set custom ordering: ' . $newSequence);
+		$sectionDao->moveCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
+	}
+
+	/**
+	 * @see GridHandler::getDataElementSequence()
+	 */
+	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
+error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' get ordering: ' . $publishedArticle->getSeq());
+		return $publishedArticle->getSeq();
+	}
+
+	/**
+	 * @see GridHandler::setDataElementSequence()
+	 */
+	function setDataElementInCategorySequence($sectionId, $publishedArticle, $newSequence) {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle->setSequence($newSequence);
-		$publishedArticleDao->updateObject($publishedArticle);
+		if ($sectionId != $publishedArticle->getSectionId()) {
+			$publishedArticle->setSectionId($sectionId);
+error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' jumps to new section');
+		}
+		$publishedArticle->setSeq($newSequence);
+		$publishedArticleDao->updatePublishedArticle($publishedArticle);
+
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' set ordering ' . $newSequence . ' and re-order');
 	}
 }
 
