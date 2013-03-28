@@ -117,6 +117,7 @@ class Application extends PKPApplication {
 			'ArticleCommentDAO' => 'classes.article.ArticleCommentDAO',
 			'ArticleDAO' => 'classes.article.ArticleDAO',
 			'ArticleFileDAO' => 'classes.article.ArticleFileDAO',
+			'ArticleEventLogDAO' => 'classes.log.ArticleEventLogDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
@@ -161,6 +162,8 @@ class Application extends PKPApplication {
 			'SignoffDAO' => 'classes.signoff.SignoffDAO',
 			'SocialMediaDAO' => 'classes.journal.SocialMediaDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
+			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
+			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
 			'SuppFileDAO' => 'classes.article.SuppFileDAO',
@@ -238,7 +241,6 @@ class Application extends PKPApplication {
 				WORKFLOW_STAGE_ID_PRODUCTION
 		);
 	}
-
 
 	//
 	// Statistics API
@@ -451,6 +453,13 @@ class Application extends PKPApplication {
 		}
 
 		return $metricType;
+	}
+
+	/**
+	 * Get the file directory array map used by the application.
+	 */
+	static function getFileDirectories() {
+		return array('context' => '/journals/', 'submission' => '/articles/');
 	}
 }
 
