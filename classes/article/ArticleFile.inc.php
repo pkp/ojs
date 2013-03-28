@@ -24,21 +24,6 @@ class ArticleFile extends SubmissionFile {
 		parent::SubmissionFile();
 	}
 
-	/**
-	 * Return absolute path to the file on the host filesystem.
-	 * @return string
-	 */
-	function getFilePath() {
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getById($this->getArticleId());
-		$journalId = $article->getJournalId();
-
-		import('classes.file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($this->getArticleId());
-		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
-			'/articles/' . $this->getArticleId() . '/' . $articleFileManager->fileStageToPath($this->getFileStage()) . '/' . $this->getFileName();
-	}
-
 	//
 	// Get/set methods
 	//
