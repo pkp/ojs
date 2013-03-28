@@ -31,6 +31,11 @@
 
 <div class="separator"></div>
 
+<!-- Submission upload grid -->
+
+{url|assign:submissionFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.submission.SubmissionWizardFilesGridHandler" op="fetchGrid" submissionId=$articleId}
+{load_url_in_div id="submissionFilesGridDiv" url=$submissionFilesGridUrl}
+
 <div id="submissionFile">
 <h3>{translate key="author.submit.submissionFile"}</h3>
 <table class="data">
