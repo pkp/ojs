@@ -260,7 +260,7 @@ function moveAuthor(dir, authorIndex) {
 
 		{if $currentJournal->getSetting('metaCoverage')}
 		<tr>
-			<td{if width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
+			<td width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
 			<td class="value"><input type="text" class="textField" name="coverageGeo[{$formLocale|escape}]" id="coverageGeo" value="{$coverageGeo[$formLocale]|escape}" size="40" maxlength="255" /></td>
 		</tr>
 		<tr>
