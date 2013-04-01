@@ -70,8 +70,8 @@ class CopyeditorAction extends Action {
 
 
 			// Add log entry
-			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
+			import('classes.log.ArticleLog');
+			ArticleLog::logEvent($request, $copyeditorSubmission, SUBMISSION_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
 
 			return true;
 
@@ -142,9 +142,9 @@ class CopyeditorAction extends Action {
 			}
 
 			// Add log entry
-			import('classes.article.log.ArticleLog');
-			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName()));
+			import('classes.log.ArticleLog');
+			import('classes.log.SubmissionEventLogEntry');
+			ArticleLog::logEvent($request, $copyeditorSubmission, SUBMISSION_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName()));
 
 			return true;
 
@@ -200,8 +200,8 @@ class CopyeditorAction extends Action {
 			if (isset($update)) {
 				// Add log entry
 				$user =& $request->getUser();
-				import('classes.article.log.ArticleLog');
-				ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', array('copyeditorName' => $user->getFullName()));
+				import('classes.log.ArticleLog');
+				ArticleLog::logEvent($request, $copyeditorSubmission, SUBMISSION_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', array('copyeditorName' => $user->getFullName()));
 			}
 		}
 	}
@@ -249,8 +249,8 @@ class CopyeditorAction extends Action {
 			$signoffDao->updateObject($signoff);
 
 			// Add log
-			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDITOR_FILE, 'log.copyedit.copyeditorFile', array('copyeditorName' => $user->getFullName(), 'fileId' => $fileId));
+			import('classes.log.ArticleLog');
+			ArticleLog::logEvent($request, $copyeditorSubmission, SUBMISSION_LOG_COPYEDITOR_FILE, 'log.copyedit.copyeditorFile', array('copyeditorName' => $user->getFullName(), 'fileId' => $fileId));
 		}
 	}
 

@@ -158,8 +158,8 @@ class Action extends PKPAction {
 
 				// Add log entry
 				$user =& $request->getUser();
-				import('classes.article.log.ArticleLog');
-				ArticleLog::logEvent($request, $article, ARTICLE_LOG_METADATA_UPDATE, 'log.editor.metadataModified', array('editorName' => $user->getFullName()));
+				import('classes.log.ArticleLog');
+				ArticleLog::logEvent($request, $article, SUBMISSION_LOG_METADATA_UPDATE, 'log.editor.metadataModified', array('editorName' => $user->getFullName()));
 
 				return true;
 			}

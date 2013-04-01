@@ -835,10 +835,10 @@ class NativeImportDom {
 		$signoffDao->updateObject($layoutProofSignoff);
 
 		// Log the import in the article event log.
-		import('classes.article.log.ArticleLog');
+		import('classes.log.ArticleLog');
 		ArticleLog::logEventHeadless(
 			$journal, $user->getId(), $article,
-			ARTICLE_LOG_ARTICLE_IMPORT,
+			SUBMISSION_LOG_ARTICLE_IMPORT,
 			'log.imported',
 			array('userName' => $user->getFullName(), 'articleId' => $article->getId())
 		);

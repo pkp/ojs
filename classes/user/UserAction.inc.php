@@ -80,7 +80,7 @@ class UserAction {
 
 		$articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
-		$articleEventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		$articleEventLogDao->changeUser($oldUserId, $newUserId);
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');

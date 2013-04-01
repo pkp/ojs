@@ -174,8 +174,8 @@ class LayoutEditorAction extends Action {
 
 			// Add log entry
 			$user =& $request->getUser();
-			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_COMPLETE, 'log.layout.layoutEditComplete', array('editorName' => $user->getFullName()));
+			import('classes.log.ArticleLog');
+			ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_COMPLETE, 'log.layout.layoutEditComplete', array('editorName' => $user->getFullName()));
 
 			return true;
 		} else {

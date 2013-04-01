@@ -206,8 +206,8 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$mail->send($this->request);
 		}
 
-		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($this->request, $article, ARTICLE_LOG_ARTICLE_SUBMIT, 'log.author.submitted', array('authorName' => $user->getFullName()));
+		import('classes.log.ArticleLog');
+		ArticleLog::logEvent($this->request, $article, SUBMISSION_LOG_SUBMISSION_SUBMIT, 'log.author.submitted', array('authorName' => $user->getFullName()));
 
 		return $this->articleId;
 	}

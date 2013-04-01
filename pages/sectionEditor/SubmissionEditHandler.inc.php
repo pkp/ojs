@@ -355,7 +355,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 
 		// Event log
-		$eventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
+		$eventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
 		$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
@@ -2007,7 +2007,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 
 		if ($logId) {
-			$logDao = DAORegistry::getDAO('ArticleEventLogDAO');
+			$logDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 			$logEntry =& $logDao->getById($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		}
 
@@ -2017,7 +2017,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		} else {
 			$rangeInfo = $this->getRangeInfo($request, 'eventLogEntries');
-			$eventLogDao = DAORegistry::getDAO('ArticleEventLogDAO');
+			$eventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 			$eventLogEntries =& $eventLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
@@ -2033,7 +2033,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$logId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$logDao = DAORegistry::getDAO('ArticleEventLogDAO');
+		$logDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		if ($logId) {
 			$logDao->deleteObject($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		} else {

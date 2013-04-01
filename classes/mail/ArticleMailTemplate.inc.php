@@ -118,10 +118,23 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setRecipients($this->getRecipientString());
 		$entry->setCcs($this->getCcString());
 		$entry->setBccs($this->getBccString());
+		$entry->setAssocType(ASSOC_TYPE_SUBMISSION);
+		$entry->setAssocId($article->getId());
+		$entry->setDateSent(Core::getCurrentDate());
+
+		// User data
+		if ($request) {
+			$user =& $request->getUser();
+			$entry->setSenderId($user == null ? 0 : $user->getId());
+			$entry->setIPAddress($request->getRemoteAddr());
+		} else {
+			// No user supplied -- this is e.g. a cron-automated email
+			$entry->setSenderId(0);
+		}
 
 		// Add log entry
-		import('classes.article.log.ArticleLog');
-		$logEntryId = ArticleLog::logEmail($article->getId(), $entry, $request);
+		import('classes.log.ArticleLog');
+		$logEntryId = $articleEmailLogDao->insertObject($entry);
 
 		// Add attachments
 		import('classes.file.ArticleFileManager');
@@ -145,7 +158,7 @@ class ArticleMailTemplate extends MailTemplate {
 		}
 		return $returner;
 	}
-	
+
 	function toAssignedReviewingSectionEditors($articleId) {
 		$returner = array();
 		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
@@ -178,7 +191,7 @@ class ArticleMailTemplate extends MailTemplate {
 		}
 		return $returner;
 	}
-		
+
 	function ccAssignedReviewingSectionEditors($articleId) {
 		$returner = array();
 		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
