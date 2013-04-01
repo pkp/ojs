@@ -78,7 +78,7 @@ class UserAction {
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$signoffDao->transferSignoffs($oldUserId, $newUserId);
 
-		$articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
 		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		$articleEventLogDao->changeUser($oldUserId, $newUserId);

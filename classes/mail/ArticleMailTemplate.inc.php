@@ -15,7 +15,7 @@
  */
 
 import('classes.mail.MailTemplate');
-import('classes.article.log.ArticleEmailLogEntry'); // Bring in log constants
+import('classes.log.SubmissionEmailLogEntry'); // Bring in log constants
 
 class ArticleMailTemplate extends MailTemplate {
 
@@ -106,7 +106,7 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @param $request object
 	 */
 	function log($request = null) {
-		$articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$entry = $articleEmailLogDao->newDataObject();
 		$article =& $this->article;
 

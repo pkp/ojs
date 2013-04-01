@@ -49,7 +49,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$this->articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 	}
 

@@ -212,10 +212,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// Parse the list of email logs and populate the array.
-		$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$emailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 		foreach ($emailLogEntries->toArray() as $emailLog) {
-			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
+			if ($emailLog->getEventType() == SUBMISSION_EMAIL_REVIEW_NOTIFY_REVIEWER) {
 				if (isset($notifyReviewerLogs[$emailLog->getAssocId()]) && is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {
 					array_push($notifyReviewerLogs[$emailLog->getAssocId()], $emailLog);
 				}
@@ -362,7 +362,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		unset($rangeInfo);
 
 		// Email log
-		$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$emailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 		$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
@@ -2065,7 +2065,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, SUBMISSION_FILE_ATTACHMENT));
 
 		if ($logId) {
-			$logDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+			$logDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 			$logEntry =& $logDao->getById($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		}
 
@@ -2075,7 +2075,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$rangeInfo = $this->getRangeInfo($request, 'emailLogEntries');
 
-			$emailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+			$emailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 			$emailLogEntries =& $emailLogDao->getByAssoc(ASSOC_TYPE_ARTICLE, $articleId, $rangeInfo);
 			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
@@ -2092,7 +2092,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$logId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$logDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$logDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		if ($logId) {
 			$logDao->deleteObject($logId, ASSOC_TYPE_ARTICLE, $articleId);
 		} else {

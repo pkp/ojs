@@ -64,7 +64,7 @@ class ProofreaderAction extends Action {
 
 		switch($mailType) {
 			case 'PROOFREAD_AUTHOR_REQUEST':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_AUTHOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
 				$setDateField = 'setDateNotified';
 				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
@@ -85,7 +85,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_AUTHOR_ACK':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_AUTHOR;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_THANK_AUTHOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
 				$setDateField = 'setDateAcknowledged';
 				$receiver =& $userDao->getById($sectionEditorSubmission->getUserId());
@@ -100,7 +100,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_AUTHOR_COMPLETE':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
 				$setDateField = 'setDateCompleted';
 				$getDateField = 'getDateCompleted';
@@ -150,7 +150,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_REQUEST':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateNotified';
 				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
@@ -171,7 +171,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_ACK':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_THANK_PROOFREADER;
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateAcknowledged';
 
@@ -188,7 +188,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_COMPLETE':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
 				$signoffType = 'SIGNOFF_PROOFREADING_PROOFREADER';
 				$setDateField = 'setDateCompleted';
 				$getDateField = 'getDateCompleted';
@@ -229,7 +229,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_LAYOUT_REQUEST':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
 				$setDateField = 'setDateNotified';
 				$nullifyDateFields = array('setDateUnderway', 'setDateCompleted', 'setDateAcknowledged');
@@ -258,7 +258,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_LAYOUT_ACK':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
 				$setDateField = 'setDateAcknowledged';
 
@@ -275,7 +275,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			case 'PROOFREAD_LAYOUT_COMPLETE':
-				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
+				$eventType = SUBMISSION_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$signoffType = 'SIGNOFF_PROOFREADING_LAYOUT';
 				$setDateField = 'setDateCompleted';
 				$getDateField = 'getDateCompleted';
