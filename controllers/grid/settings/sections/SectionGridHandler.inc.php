@@ -23,7 +23,7 @@ class SectionGridHandler extends SetupGridHandler {
 		parent::SetupGridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection')
+			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence')
 		);
 	}
 
@@ -75,9 +75,11 @@ class SectionGridHandler extends SetupGridHandler {
 			$sectionId = $section->getId();
 			$gridData[$sectionId] = array(
 				'title' => $section->getLocalizedTitle(),
-				'editors' => $editorsString
+				'editors' => $editorsString,
+				'seq' => $section->getSequence()
 			);
 		}
+		uasort($gridData, create_function('$a,$b', 'return $b[\'seq\']-$a[\'seq\'];'));
 
 		$this->setGridDataElements($gridData);
 
@@ -113,11 +115,37 @@ class SectionGridHandler extends SetupGridHandler {
 	// Overridden methods from GridHandler
 	//
 	/**
+	 * @see GridHandler::initFeatures()
+	 */
+	function initFeatures($request, $args) {
+		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+		return array(new OrderGridItemsFeature());
+	}
+
+	/**
 	 * Get the row handler - override the default row handler
 	 * @return SectionGridRow
 	 */
 	function getRowInstance() {
 		return new SectionGridRow();
+	}
+
+	/**
+	 * @see GridHandler::getDataElementSequence()
+	 */
+	function getDataElementSequence($row) {
+		return $row['seq'];
+	}
+
+	/**
+	 * @see GridHandler::setDataElementSequence()
+	 */
+	function setDataElementSequence(&$request, $rowId, $gridDataElement, $newSequence) {
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$journal = $request->getJournal();
+		$section = $sectionDao->getById($rowId, $journal->getId());
+		$section->setSequence($newSequence);
+		$sectionDao->updateObject($section);
 	}
 
 	//

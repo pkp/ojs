@@ -17,40 +17,6 @@
 
 switch ($op) {
 	//
-	// People Management
-	//
-	case 'people':
-	case 'showNoRole':
-	case 'enrollSearch':
-	case 'enroll':
-	case 'unEnroll':
-	case 'enrollSyncSelect':
-	case 'enrollSync':
-	case 'createUser':
-	case 'suggestUsername':
-	case 'mergeUsers':
-	case 'disableUser':
-	case 'enableUser':
-	case 'removeUser':
-	case 'editUser':
-	case 'updateUser':
-	case 'userProfile':
-		define('HANDLER_CLASS', 'PeopleHandler');
-		import('pages.manager.PeopleHandler');
-		break;
-	//
-	// Section Management
-	//
-	case 'sections':
-	case 'createSection':
-	case 'editSection':
-	case 'updateSection':
-	case 'deleteSection':
-	case 'moveSection':
-		define('HANDLER_CLASS', 'SectionHandler');
-		import('pages.manager.SectionHandler');
-		break;
-	//
 	// Review Form Management
 	//
 	case 'reviewForms':

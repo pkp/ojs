@@ -100,7 +100,7 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Section</message>
-	<message key="section.sections">Journal Sections</message>
+	<message key="section.sections">Sections</message>
 	<message key="section.title">Section title</message>
 	<message key="section.abbreviation">Abbreviation</message>
 	<message key="section.abbreviation.example">(For example, Articles=ART)</message>

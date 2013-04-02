@@ -26,6 +26,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 			'policies' => 'lib.pkp.controllers.tab.settings.policies.form.PoliciesForm',
 			'citations' => 'controllers.tab.settings.citations.form.CitationsForm',
 			'submissions' => 'controllers.tab.settings.submissions.form.SubmissionsForm',
+			'sections' => 'controllers/tab/settings/journal/sections.tpl',
 			'guidelines' => 'lib.pkp.controllers.tab.settings.guidelines.form.GuidelinesForm',
 			'affiliationAndSupport' => 'lib.pkp.controllers.tab.settings.affiliation.form.AffiliationForm',
 		));
