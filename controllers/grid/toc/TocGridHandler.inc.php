@@ -154,6 +154,9 @@ class TocGridHandler extends CategoryGridHandler {
 	function setDataElementSequence($request, $sectionId, $section, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
+			$sectionDao->setDefaultCustomSectionOrders($issue->getId());
+		}
 		$sectionDao->moveCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
 	}
 
