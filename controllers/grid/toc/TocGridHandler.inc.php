@@ -142,10 +142,8 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
 		if ($customOrdering === null) { // No custom ordering specified; use default section ordering
-error_log('Section ' . $section->getLocalizedTitle() . ' get custom ordering: ' . $section->getSequence());
 			return $section->getSequence();
 		} else { // Custom ordering specified.
-error_log('Section ' . $section->getLocalizedTitle() . ' get normal ordering: ' . $customOrdering);
 			return $customOrdering;
 		}
 	}
@@ -156,7 +154,6 @@ error_log('Section ' . $section->getLocalizedTitle() . ' get normal ordering: ' 
 	function setDataElementSequence($request, $sectionId, $section, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-error_log('Section ' . $section->getLocalizedTitle() . ' set custom ordering: ' . $newSequence);
 		$sectionDao->moveCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
 	}
 
@@ -164,7 +161,6 @@ error_log('Section ' . $section->getLocalizedTitle() . ' set custom ordering: ' 
 	 * @see GridHandler::getDataElementSequence()
 	 */
 	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
-error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' get ordering: ' . $publishedArticle->getSeq());
 		return $publishedArticle->getSeq();
 	}
 
@@ -175,13 +171,11 @@ error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' g
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		if ($sectionId != $publishedArticle->getSectionId()) {
 			$publishedArticle->setSectionId($sectionId);
-error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' jumps to new section');
 		}
 		$publishedArticle->setSeq($newSequence);
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-error_log('Article ' . substr($publishedArticle->getLocalizedTitle(),0,10) . ' set ordering ' . $newSequence . ' and re-order');
 	}
 }
 
