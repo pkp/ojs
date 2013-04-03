@@ -53,9 +53,6 @@ class TocGridHandler extends CategoryGridHandler {
 	function initialize(&$request) {
 		parent::initialize($request);
 
-		// Basic grid configuration.
-		$this->setTitle('issue.toc');
-
 		//
 		// Grid columns.
 		//
