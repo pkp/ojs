@@ -14,56 +14,36 @@
 </script>
 
 <form class="pkp_form" id="issueForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.IssueGridHandler" op="updateIssue" issueId=$issueId}">
-	<input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
-	<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
-	{if $styleFileName}
-		<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
-		<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
-	{/if}
-{include file="common/formErrors.tpl"}
+
+	{fbvFormArea id="identificationArea" class="border" title="editor.issues.identification"}
+		{fbvFormSection}
+			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL}
+			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL}
+			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL}
+			{if $enablePublicIssueId}
+				{fbvElement type="text" label="editor.issues.publicIssueIdentifier" id="publicIssueId" inline=true value=$publicIssueId size=$fbvStyles.size.SMALL}
+			{/if}
+		{/fbvFormSection}
+		{fbvFormSection}
+			{fbvElement type="text" label="issue.title" id="title" value=$title multilingual=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
+	{fbvFormArea id="identificationSelectionArea" class="border" title="editor.issues.issueIdentification"}
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" label="issue.volume" id="showVolume" checked=$showVolume inline=true}
+			{fbvElement type="checkbox" label="issue.number" id="showNumber" checked=$showNumber inline=true}
+			{fbvElement type="checkbox" label="issue.year" id="showYear" checked=$showYear inline=true}
+			{fbvElement type="checkbox" label="issue.title" id="showTitle" checked=$showTitle inline=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
+	{fbvFormArea id="description" title="editor.issues.description"}
+		{fbvElement type="textarea" id="description" value=$description multilingual=true rich=true}
+	{/fbvFormArea}
+
 <div id="issueId">
-<h3>{translate key="editor.issues.identification"}</h3>
 <table class="data">
-{if count($formLocales) > 1}
-	<tr>
-		<td class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td class="value">
-			{url|assign:"issueUrl" op="issueData" path=$issueId escape=false}
-			{form_language_chooser form="issue" url=$issueUrl}
-			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-{/if}
-	<tr>
-		<td class="label">{fieldLabel name="volume" key="issue.volume"}</td>
-		<td class="value"><input type="text" name="volume" id="volume" value="{$volume|escape}" size="5" maxlength="5" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="number" key="issue.number"}</td>
-		<td class="value"><input type="text" name="number" id="number" value="{$number|escape}" size="5" maxlength="10" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="year" key="issue.year"}</td>
-		<td class="value"><input type="text" name="year" id="year" value="{$year|escape}" size="5" maxlength="4" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="labelFormat" key="editor.issues.issueIdentification"}</td>
-		<td class="value"><input type="checkbox" name="showVolume" id="showVolume" value="1"{if $showVolume} checked="checked"{/if} /><label for="showVolume"> {translate key="issue.volume"}</label><br /><input type="checkbox" name="showNumber" id="showNumber" value="1"{if $showNumber} checked="checked"{/if} /><label for="showNumber"> {translate key="issue.number"}</label><br /><input type="checkbox" name="showYear" id="showYear" value="1"{if $showYear} checked="checked"{/if} /><label for="showYear"> {translate key="issue.year"}</label><br /><input type="checkbox" name="showTitle" id="showTitle" value="1"{if $showTitle} checked="checked"{/if} /><label for="showTitle"> {translate key="issue.title"}</label></td>
-	</tr>
-	{if $enablePublicIssueId}
-	<tr>
-		<td class="label">{fieldLabel name="publicIssueId" key="editor.issues.publicIssueIdentifier"}</td>
-		<td class="value"><input type="text" name="publicIssueId" id="publicIssueId" value="{$publicIssueId|escape}" size="20" maxlength="255" class="textField" /></td>
-	</tr>
-	{/if}
-	<tr>
-		<td class="label">{fieldLabel name="title" key="issue.title"}</td>
-		<td class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="description" key="editor.issues.description"}</td>
-		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="5" class="textArea richContent">{$description[$formLocale]|escape}</textarea></td>
-	</tr>
 	<tr>
 		<td class="label">{translate key="common.status"}</td>
 		<td class="value">
@@ -129,6 +109,14 @@
 {call_hook name="Templates::Editor::Issues::IssueData::AdditionalMetadata"}
 
 <div id="issueCover">
+
+<input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
+<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
+{if $styleFileName}
+	<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
+	<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
+{/if}
+
 <h3>{translate key="editor.issues.cover"}</h3>
 <table class="data">
 	<tr>
