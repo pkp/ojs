@@ -375,7 +375,7 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function issueGalleys($args, $request) {
-		$issue = $request->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueId = $issue->getId();
 
 		$templateMgr = TemplateManager::getManager($request);
