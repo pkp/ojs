@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @defgroup issue_form
+ * @defgroup controllers_grid_issues_form
  */
 
 /**
- * @file classes/form/IssueForm.inc.php
+ * @file controllers/grid/issues/form/IssueForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
- * @ingroup issue_form
+ * @ingroup controllers_grid_issues_form
  * @see Issue
  *
  * @brief Form to create or edit an issue
@@ -57,6 +57,7 @@ class IssueForm extends Form {
 		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
+		$templateMgr->assign('issue', $this->issue);
 
 		// consider public identifiers
 		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
