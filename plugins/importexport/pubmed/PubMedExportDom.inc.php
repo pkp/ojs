@@ -23,10 +23,10 @@ class PubMedExportDom {
 	 * Build article XML using DOM elements
 	 * @param $args Parameters to the plugin
 	 *
-	 * The DOM for this XML was developed according to the NLM 
-	 * Standard Publisher Data Format: 
+	 * The DOM for this XML was developed according to the NLM
+	 * Standard Publisher Data Format:
 	 * http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html
-	 */ 
+	 */
 
 	function &generatePubMedDom() {
 		// create the output XML document in DOM with a root node
@@ -82,7 +82,7 @@ class PubMedExportDom {
 //		XMLCustomWriter::createChildWithText($doc, $root, 'Replaces', '');
 
 		/* --- ArticleTitle / VernacularTitle --- */
-		// there is some ambiguity between whether to use 
+		// there is some ambiguity between whether to use
 		// article->getlanguage or journal->getlocale
 		// PubMed requires english titles for ArticleTitle
 		$language = $article->getLanguage();
@@ -99,16 +99,19 @@ class PubMedExportDom {
 		$pages = $article->getPages();
 		if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
 			// simple pagination (eg. "pp. 3- 		8")
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);			
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
-		}elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-			// elocation-id (eg. "e12")
 			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);	
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
+		} elseif (preg_match("/(e[0-9]+)\s*-\s*(e[0-9]+)/i", $pages, $matches)) { // e9 - e14, treated as page ranges
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
+		} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
+			// single elocation-id (eg. "e12")
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);
 		} else {
 			// we need to insert something, so use the best ID possible
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));			
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));			
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));
 		}
 
 		/* --- DOI --- */
@@ -116,7 +119,7 @@ class PubMedExportDom {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
 		}
-		
+
 		/* --- Language --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'Language', strtoupper($article->getLanguage()), false);
 
