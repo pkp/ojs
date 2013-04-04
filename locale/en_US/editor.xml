@@ -119,6 +119,7 @@
 	<message key="editor.navigation.futureIssues">Future Issues</message>
 	<message key="grid.action.addIssue">Create Issue</message>
 	<message key="grid.action.viewIssue">View</message>
+	<message key="grid.action.previewIssue">Preview</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>
