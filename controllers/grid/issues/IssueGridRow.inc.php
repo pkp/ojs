@@ -53,12 +53,12 @@ class IssueGridRow extends GridRow {
 				)
 			);
 
-			import('lib.pkp.classes.linkAction.request.RedirectAction');
+			import('lib.pkp.classes.linkAction.request.OpenWindowAction');
 			$dispatcher = $request->getDispatcher();
 			$this->addAction(
 				new LinkAction(
 					'viewIssue',
-					new RedirectAction(
+					new OpenWindowAction(
 						$dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', array($issueId))
 					),
 					__('grid.action.viewIssue'),
