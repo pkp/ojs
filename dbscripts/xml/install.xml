@@ -36,6 +36,7 @@
 	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 	<schema file="lib/pkp/xml/schema/views.xml" />
+	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
 
 	<!-- PKP data components -->
 	<data file="lib/pkp/xml/mutexData.xml" />
