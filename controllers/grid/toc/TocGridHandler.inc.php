@@ -14,6 +14,7 @@
 
 import('lib.pkp.classes.controllers.grid.CategoryGridHandler');
 import('controllers.grid.toc.TocGridCategoryRow');
+import('controllers.grid.toc.TocGridRow');
 
 class TocGridHandler extends CategoryGridHandler {
 	var $publishedArticlesBySectionId;
@@ -25,7 +26,7 @@ class TocGridHandler extends CategoryGridHandler {
 		parent::CategoryGridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence')
+			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle')
 		);
 		$this->publishedArticlesBySectionId = array();
 	}
@@ -52,6 +53,8 @@ class TocGridHandler extends CategoryGridHandler {
 	 */
 	function initialize(&$request) {
 		parent::initialize($request);
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		//
 		// Grid columns.
@@ -94,6 +97,15 @@ class TocGridHandler extends CategoryGridHandler {
 			parent::getRequestArgs(),
 			array('issueId' => $issue->getId())
 		);
+	}
+
+	/**
+	 * Get the row handler - override the default row handler
+	 * @return TocGridRow
+	 */
+	function getRowInstance() {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		return new TocGridRow($issue->getId());
 	}
 
 	/**
@@ -176,6 +188,46 @@ class TocGridHandler extends CategoryGridHandler {
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+	}
+
+	//
+	// Public handler functions
+	//
+	/**
+	 * Remove an article from the issue.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function removeArticle($args, $request) {
+		$journal = $request->getJournal();
+		$articleId = (int) $request->getUserVar('articleId');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
+		if ($article && $article->getIssueId() == $issue->getId()) {
+			if ($issue->getPublished()) {
+				$articleTombstoneManager->insertArticleTombstone($article, $journal);
+			}
+			$article->setStatus(STATUS_QUEUED);
+			$article->stampStatusModified();
+			// If the article is the only one in the section, delete the section from custom issue ordering
+			$sectionId = $article->getSectionId();
+			$publishedArticleArray = $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issue->getId());
+			if (sizeof($publishedArticleArray) == 1) {
+				$sectionDao->deleteCustomSection($issue->getId(), $sectionId);
+			}
+			$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+			$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issue->getId());
+			return DAO::getDataChangedEvent();
+		}
+
+		// If we've fallen through, it must be a badly-specified article
+		$json = new JSONMessage(false);
+		return $json->getString();
 	}
 }
 

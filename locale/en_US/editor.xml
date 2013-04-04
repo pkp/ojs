@@ -218,6 +218,8 @@
 	<message key="editor.article.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.article.uploaded">Uploaded</message>
 	<message key="editor.article.removeCoverPage">Remove cover image?</message>
+	<message key="grid.action.removeArticle">Remove Article From Issue</message>
 	<message key="editor.article.remove">Remove</message>
+	<message key="editor.article.remove.confirm">Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</message>
 	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
 </locale>
