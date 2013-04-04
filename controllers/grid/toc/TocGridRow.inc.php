@@ -37,9 +37,20 @@ class TocGridRow extends GridRow {
 	function initialize(&$request) {
 		parent::initialize($request);
 
-		// Is this a new row or an existing row?
-		$router = $request->getRouter();
+		$dispatcher = $request->getDispatcher();
+		import('lib.pkp.classes.linkAction.request.RedirectAction');
+		$this->addAction(
+			new LinkAction(
+				'workflow',
+				new RedirectAction(
+					$dispatcher->url($request, ROUTE_PAGE, null, 'workflow', 'access', array($this->getId()))
+				),
+				__('submission.submission'),
+				'information'
+			)
+		);
 
+		$router = $request->getRouter();
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 		$this->addAction(
 			new LinkAction(
