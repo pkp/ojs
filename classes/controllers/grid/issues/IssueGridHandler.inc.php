@@ -26,9 +26,10 @@ class IssueGridHandler extends GridHandler {
 			array(
 				'fetchGrid', 'fetchRow',
 				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
+				'editCover', 'updateCover',
 				'issueToc',
 				'issueGalleys',
-				'deleteIssue'
+				'deleteIssue', 'publishIssue', 'unpublishIssue',
 			)
 		);
 	}
@@ -170,6 +171,45 @@ class IssueGridHandler extends GridHandler {
 
 		if ($issueForm->validate($request, $issue)) {
 			$issueId = $issueForm->execute($request, $issueId);
+			return DAO::getDataChangedEvent($issueId);
+		} else {
+			$json = new JSONMessage(false);
+			return $json->getString();
+		}
+	}
+
+	/**
+	 * An action to edit a issue's cover
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function editCover($args, $request) {
+		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+
+		import('controllers.grid.issues.form.CoverForm');
+		$coverForm = new CoverForm($issueId);
+		$coverForm->initData($request, $issueId);
+		$json = new JSONMessage(true, $coverForm->fetch($request));
+		return $json->getString();
+	}
+
+	/**
+	 * Update an issue cover
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function updateCover($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue?$issue->getId():null;
+
+		import('controllers.grid.issues.form.CoverForm');
+		$coverForm = new CoverForm($issueId);
+		$coverForm->readInputData();
+
+		if ($coverForm->validate($request, $issue)) {
+			$coverForm->execute($request, $issueId);
 			return DAO::getDataChangedEvent($issueId);
 		} else {
 			$json = new JSONMessage(false);
@@ -389,6 +429,131 @@ class IssueGridHandler extends GridHandler {
 
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
 		return $json->getString();
+	}
+
+	/**
+	 * Publish issue
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function publishIssue($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
+
+		$journal = $request->getJournal();
+		$journalId = $journal->getId();
+
+		$articleSearchIndex = null;
+		if (!$issue->getPublished()) {
+			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			foreach ($publishedArticles as $publishedArticle) {
+				$article = $articleDao->getById($publishedArticle->getId());
+				if ($article && $article->getStatus() == STATUS_QUEUED) {
+					$article->setStatus(STATUS_PUBLISHED);
+					$article->stampStatusModified();
+					$articleDao->updateObject($article);
+					if (!$articleSearchIndex) {
+						import('classes.search.ArticleSearchIndex');
+						$articleSearchIndex = new ArticleSearchIndex();
+					}
+					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+				}
+				// delete article tombstone
+				$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
+				$tombstoneDao->deleteByDataObjectId($article->getId());
+			}
+		}
+
+		$issue->setCurrent(1);
+		$issue->setPublished(1);
+		$issue->setDatePublished(Core::getCurrentDate());
+
+		// If subscriptions with delayed open access are enabled then
+		// update open access date according to open access delay policy
+		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getSetting('enableDelayedOpenAccess')) {
+
+			$delayDuration = $journal->getSetting('delayedOpenAccessDuration');
+			$delayYears = (int)floor($delayDuration/12);
+			$delayMonths = (int)fmod($delayDuration,12);
+
+			$curYear = date('Y');
+			$curMonth = date('n');
+			$curDay = date('j');
+
+			$delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth+$delayMonths)/12);
+ 			$delayOpenAccessMonth = (int)fmod($curMonth+$delayMonths,12);
+
+			$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
+			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
+		}
+
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateCurrent($journalId,$issue);
+
+		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
+
+		// Send a notification to associated users
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$notificationUsers = array();
+		$allUsers = $roleDao->getUsersByJournalId($journalId);
+		while ($user = $allUsers->next()) {
+			$notificationUsers[] = array('id' => $user->getId());
+		}
+		foreach ($notificationUsers as $userRole) {
+			$notificationManager->createNotification(
+				$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+				$journalId
+			);
+		}
+		$notificationManager->sendToMailingList($request,
+			$notificationManager->createNotification(
+				$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+				$journalId
+			)
+		);
+
+		$dispatcher = $request->getDispatcher();
+		// FIXME: Find a better way to reload the containing tabs.
+		// Without this, issues don't move between tabs properly.
+		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'issues'));
+	}
+
+	/**
+	 * Unpublish a previously-published issue
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function unpublishIssue($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueId = $issue->getId();
+
+		$journal = $request->getJournal();
+
+		$issue->setCurrent(0);
+		$issue->setPublished(0);
+		$issue->setDatePublished(null);
+
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateObject($issue);
+
+		// insert article tombstones for all articles
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		foreach ($publishedArticles as $article) {
+			$articleTombstoneManager->insertArticleTombstone($article, $journal);
+		}
+
+		$dispatcher = $request->getDispatcher();
+		// FIXME: Find a better way to reload the containing tabs.
+		// Without this, issues don't move between tabs properly.
+		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'issues'));
 	}
 }
 

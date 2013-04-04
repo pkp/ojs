@@ -167,16 +167,7 @@ switch ($op) {
 	//
 	case 'issues':
 	case 'downloadIssueFile':
-	case 'issueToc':
-	case 'updateIssueToc':
 	case 'setCurrentIssue':
-	case 'moveIssue':
-	case 'resetIssueOrder':
-	case 'moveSectionToc':
-	case 'resetSectionOrder':
-	case 'moveArticleToc':
-	case 'publishIssue':
-	case 'unpublishIssue':
 	case 'notifyUsers':
 		define('HANDLER_CLASS', 'IssueManagementHandler');
 		import('pages.editor.IssueManagementHandler');

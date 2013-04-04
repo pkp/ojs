@@ -67,13 +67,44 @@ class IssueGridRow extends GridRow {
 			);
 
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+			if ($issue->getDatePublished()) {
+				$this->addAction(
+					new LinkAction(
+						'unpublish',
+						new RemoteActionConfirmationModal(
+							__('editor.issues.confirmUnpublish'),
+							__('editor.issues.unpublishIssue'),
+							$router->url($request, null, null, 'unpublishIssue', null, array('issueId' => $issueId)),
+							'modal_delete'
+						),
+						__('editor.issues.unpublishIssue'),
+						'delete'
+					)
+				);
+			} else {
+				$this->addAction(
+					new LinkAction(
+						'publish',
+						new RemoteActionConfirmationModal(
+							__('editor.issues.confirmPublish'),
+							__('editor.issues.publishIssue'),
+							$router->url($request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
+							'modal_confirm'
+						),
+						__('editor.issues.publishIssue'),
+						'advance'
+					)
+				);
+			}
+
 			$this->addAction(
 				new LinkAction(
 					'delete',
 					new RemoteActionConfirmationModal(
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
-						$router->url($request, null, null, 'deleteIssue', null, array('issueId' => $issueId)), 'modal_delete'
+						$router->url($request, null, null, 'deleteIssue', null, array('issueId' => $issueId)),
+						'modal_delete'
 					),
 					__('grid.action.delete'),
 					'delete'

@@ -100,17 +100,6 @@ class IssueForm extends Form {
 			$this->addErrorField('publicIssueId');
 		}
 
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-
-		if ($publicFileManager->uploadedFileExists('coverPage')) {
-			$type = $publicFileManager->getUploadedFileType('coverPage');
-			if (!$publicFileManager->getImageExtension($type)) {
-				$this->addError('coverPage', __('editor.issues.invalidCoverPageFormat'));
-				$this->addErrorField('coverPage');
-			}
-		}
-
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
 			$type = $publicFileManager->getUploadedFileType('styleFile');
 			if ($type != 'text/plain' && $type != 'text/css') {
@@ -154,13 +143,6 @@ class IssueForm extends Form {
 				'showNumber' => $issue->getShowNumber(),
 				'showYear' => $issue->getShowYear(),
 				'showTitle' => $issue->getShowTitle(),
-				'fileName' => $issue->getFileName(null), // Localized
-				'originalFileName' => $issue->getOriginalFileName(null), // Localized
-				'coverPageDescription' => $issue->getCoverPageDescription(null), // Localized
-				'coverPageAltText' => $issue->getCoverPageAltText(null), // Localized
-				'showCoverPage' => $issue->getShowCoverPage(null), // Localized
-				'hideCoverPageArchives' => $issue->getHideCoverPageArchives(null), // Localized
-				'hideCoverPageCover' => $issue->getHideCoverPageCover(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
@@ -212,14 +194,6 @@ class IssueForm extends Form {
 			'showNumber',
 			'showYear',
 			'showTitle',
-			'fileName',
-			'originalFileName',
-			'coverPageDescription',
-			'coverPageAltText',
-			'showCoverPage',
-			'hideCoverPageArchives',
-			'hideCoverPageCover',
-			'articles',
 			'styleFileName',
 			'originalStyleFileName'
 		));
@@ -271,31 +245,6 @@ class IssueForm extends Form {
 		$issue->setShowNumber(empty($showNumber) ? 0 : $showNumber);
 		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
 		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
-		$issue->setCoverPageDescription($this->getData('coverPageDescription'), null); // Localized
-		$issue->setCoverPageAltText($this->getData('coverPageAltText'), null); // Localized
-		$showCoverPage = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('showCoverPage'));
-		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
-			if (!array_key_exists($locale, $showCoverPage)) {
-				$showCoverPage[$locale] = 0;
-			}
-		}
-		$issue->setShowCoverPage($showCoverPage, null); // Localized
-
-		$hideCoverPageArchives = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageArchives'));
-		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
-			if (!array_key_exists($locale, $hideCoverPageArchives)) {
-				$hideCoverPageArchives[$locale] = 0;
-			}
-		}
-		$issue->setHideCoverPageArchives($hideCoverPageArchives, null); // Localized
-
-		$hideCoverPageCover = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageCover'));
-		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
-			if (!array_key_exists($locale, $hideCoverPageCover)) {
-				$hideCoverPageCover[$locale] = 0;
-			}
-		}
-		$issue->setHideCoverPageCover($hideCoverPageCover, null); // Localized
 
 		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
@@ -318,25 +267,6 @@ class IssueForm extends Form {
 
 			$issueId = $issueDao->insertObject($issue);
 			$issue->setId($issueId);
-		}
-
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->uploadedFileExists('coverPage')) {
-			$journal = $request->getJournal();
-			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
-			$type = $publicFileManager->getUploadedFileType('coverPage');
-			$newFileName = 'cover_issue_' . $issueId . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($type);
-			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
-			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
-			$issue->setFileName($newFileName, $this->getFormLocale());
-
-			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newFileName);
-			$issue->setWidth($width, $this->getFormLocale());
-			$issue->setHeight($height, $this->getFormLocale());
-
-			$issueDao->updateObject($issue);
 		}
 
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
