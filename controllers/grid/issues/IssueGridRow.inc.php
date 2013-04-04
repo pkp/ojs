@@ -42,7 +42,7 @@ class IssueGridRow extends GridRow {
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
 			$this->addAction(
 				new LinkAction(
-					'editIssue',
+					'edit',
 					new AjaxModal(
 						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issueId)),
 						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
@@ -53,10 +53,23 @@ class IssueGridRow extends GridRow {
 				)
 			);
 
+			import('lib.pkp.classes.linkAction.request.RedirectAction');
+			$dispatcher = $request->getDispatcher();
+			$this->addAction(
+				new LinkAction(
+					'viewIssue',
+					new RedirectAction(
+						$dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', array($issueId))
+					),
+					__('grid.action.viewIssue'),
+					'information'
+				)
+			);
+
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 			$this->addAction(
 				new LinkAction(
-					'deleteIssue',
+					'delete',
 					new RemoteActionConfirmationModal(
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
