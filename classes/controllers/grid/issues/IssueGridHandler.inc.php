@@ -162,7 +162,7 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function updateIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
+		$issueId = $issue?$issue->getId():null;
 
 		import('controllers.grid.issues.form.IssueForm');
 		$issueForm = new IssueForm($issueId);

@@ -35,7 +35,9 @@ class IssueGridRow extends GridRow {
 		// Is this a new row or an existing row?
 		$issueId = $this->getId();
 		if (!empty($issueId) && is_numeric($issueId)) {
-			$router =& $request->getRouter();
+			$issue = $this->getData();
+			assert(is_a($issue, 'Issue'));
+			$router = $request->getRouter();
 
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
 			$this->addAction(
@@ -43,7 +45,7 @@ class IssueGridRow extends GridRow {
 					'editIssue',
 					new AjaxModal(
 						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issueId)),
-						__('editor.issues.editIssue'),
+						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
 						'modal_edit',
 						true),
 					__('grid.action.edit'),

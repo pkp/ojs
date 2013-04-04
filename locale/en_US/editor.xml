@@ -46,7 +46,7 @@
 	<message key="editor.notifyUsers.includeToc">Include the table of contents from this issue:</message>
 	<message key="editor.editorAdministration">Editor Administration</message>
 	<message key="editor.issues.createIssue">Create Issue</message>
-	<message key="editor.issues.editIssue">Edit Issue</message>
+	<message key="editor.issues.editIssue">Issue Management: {$issueIdentification}</message>
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
 	<message key="editor.issues.currentIssue">Current Issue</message>

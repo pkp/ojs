@@ -15,7 +15,7 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="issueForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.IssueGridHandler" op="updateIssue" issueId=$issueId}">
+<form class="pkp_form" id="issueForm" method="post" action="{url op="updateIssue" issueId=$issueId}">
 
 	{fbvFormArea id="identificationArea" class="border" title="editor.issues.identification"}
 		{fbvFormSection}

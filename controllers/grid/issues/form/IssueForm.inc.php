@@ -57,7 +57,10 @@ class IssueForm extends Form {
 		));
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
-		$templateMgr->assign('issue', $this->issue);
+		if ($this->issue) {
+			$templateMgr->assign('issue', $this->issue);
+			$templateMgr->assign('issueId', $this->issue->getId());
+		}
 
 		// consider public identifiers
 		$templateMgr->assign('pubIdPlugins', PluginRegistry::loadCategory('pubIds', true));
