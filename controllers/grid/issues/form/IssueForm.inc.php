@@ -27,9 +27,10 @@ class IssueForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function IssueForm() {
+	function IssueForm($issue = null) {
 		parent::Form('controllers/grid/issues/form/issueForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
+		$this->issue = $issue;
 	}
 
 	/**
@@ -71,9 +72,7 @@ class IssueForm extends Form {
 	/**
 	 * Validate the form
 	 */
-	function validate($request, $issue = null) {
-		$issueId = ($issue?$issue->getId():0);
-
+	function validate($request) {
 		if ($this->getData('showVolume')) {
 			$this->addCheck(new FormValidatorCustom($this, 'volume', 'required', 'editor.issues.volumeRequired', create_function('$volume', 'return ($volume > 0);')));
 		}
@@ -95,14 +94,16 @@ class IssueForm extends Form {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $issueId)) {
+		if ($this->issue && $publicIssueId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicIssueId, ASSOC_TYPE_ISSUE, $this->issue->getId())) {
 			$this->addError('publicIssueId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicIssueId)));
 			$this->addErrorField('publicIssueId');
 		}
 
-		if ($publicFileManager->uploadedFileExists('styleFile')) {
-			$type = $publicFileManager->getUploadedFileType('styleFile');
-			if ($type != 'text/plain' && $type != 'text/css') {
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+			if (!in_array($temporaryFile->getFileType(), array('text/plain', 'text/css'))) {
 				$this->addError('styleFile', __('editor.issues.invalidStyleFormat'));
 			}
 		}
@@ -110,50 +111,39 @@ class IssueForm extends Form {
 		// Verify additional fields from public identifer plug-ins.
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
-		$pubIdPluginHelper->validate($journal->getId(), $this, $issue);
+		$pubIdPluginHelper->validate($journal->getId(), $this, $this->issue);
 
 		return parent::validate();
 	}
 
 	/**
 	 * Initialize form data from current issue.
-	 * returns issue id that it initialized the page with
 	 */
-	function initData($request, $issueId = null) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-
-		// retrieve issue by id, if not specified, then select first unpublished issue
-		if (isset($issueId)) {
-			$issue = $issueDao->getById($issueId);
-		}
-
-		if (isset($issue)) {
-			$this->issue =& $issue;
+	function initData($request) {
+		if (isset($this->issue)) {
 			$this->_data = array(
-				'title' => $issue->getTitle(null), // Localized
-				'volume' => $issue->getVolume(),
-				'number' => $issue->getNumber(),
-				'year' => $issue->getYear(),
-				'datePublished' => $issue->getDatePublished(),
-				'description' => $issue->getDescription(null), // Localized
-				'publicIssueId' => $issue->getPubId('publisher-id'),
-				'accessStatus' => $issue->getAccessStatus(),
-				'openAccessDate' => $issue->getOpenAccessDate(),
-				'showVolume' => $issue->getShowVolume(),
-				'showNumber' => $issue->getShowNumber(),
-				'showYear' => $issue->getShowYear(),
-				'showTitle' => $issue->getShowTitle(),
-				'styleFileName' => $issue->getStyleFileName(),
-				'originalStyleFileName' => $issue->getOriginalStyleFileName()
+				'title' => $this->issue->getTitle(null), // Localized
+				'volume' => $this->issue->getVolume(),
+				'number' => $this->issue->getNumber(),
+				'year' => $this->issue->getYear(),
+				'datePublished' => $this->issue->getDatePublished(),
+				'description' => $this->issue->getDescription(null), // Localized
+				'publicIssueId' => $this->issue->getPubId('publisher-id'),
+				'accessStatus' => $this->issue->getAccessStatus(),
+				'openAccessDate' => $this->issue->getOpenAccessDate(),
+				'showVolume' => $this->issue->getShowVolume(),
+				'showNumber' => $this->issue->getShowNumber(),
+				'showYear' => $this->issue->getShowYear(),
+				'showTitle' => $this->issue->getShowTitle(),
+				'styleFileName' => $this->issue->getStyleFileName(),
+				'originalStyleFileName' => $this->issue->getOriginalStyleFileName()
 			);
 			// consider the additional field names from the public identifer plugins
 			import('classes.plugins.PubIdPluginHelper');
 			$pubIdPluginHelper = new PubIdPluginHelper();
-			$pubIdPluginHelper->init($this, $issue);
+			$pubIdPluginHelper->init($this, $this->issue);
 
 			parent::initData();
-			return $issue->getId();
-
 		} else {
 			$journal = $request->getJournal();
 			switch ($journal->getSetting('publishingMode')) {
@@ -194,8 +184,7 @@ class IssueForm extends Form {
 			'showNumber',
 			'showYear',
 			'showTitle',
-			'styleFileName',
-			'originalStyleFileName'
+			'temporaryFileId'
 		));
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
@@ -210,14 +199,16 @@ class IssueForm extends Form {
 
 	/**
 	 * Save issue settings.
+	 * @param $request PKPRequest
+	 * @return int Issue ID for created/updated issue
 	 */
-	function execute($request, $issueId = 0) {
+	function execute($request) {
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
 
-		if ($issueId) {
-			$issue = $issueDao->getById($issueId);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		if ($this->issue) {
 			$isNewIssue = false;
+			$issue = $this->issue;
 		} else {
 			$issue = $issueDao->newDataObject();
 			$isNewIssue = true;
@@ -225,11 +216,6 @@ class IssueForm extends Form {
 		$volume = $this->getData('volume');
 		$number = $this->getData('number');
 		$year = $this->getData('year');
-
-		$showVolume = $this->getData('showVolume');
-		$showNumber = $this->getData('showNumber');
-		$showYear = $this->getData('showYear');
-		$showTitle = $this->getData('showTitle');
 
 		$issue->setJournalId($journal->getId());
 		$issue->setTitle($this->getData('title'), null); // Localized
@@ -241,10 +227,10 @@ class IssueForm extends Form {
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
 		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
-		$issue->setShowVolume(empty($showVolume) ? 0 : $showVolume);
-		$issue->setShowNumber(empty($showNumber) ? 0 : $showNumber);
-		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
-		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
+		$issue->setShowVolume($this->getData('showVolume'));
+		$issue->setShowNumber($this->getData('showNumber'));
+		$issue->setShowYear($this->getData('showYear'));
+		$issue->setShowTitle($this->getData('showTitle'));
 
 		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
 		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
@@ -256,30 +242,31 @@ class IssueForm extends Form {
 		$pubIdPluginHelper->execute($this, $issue);
 
 		// if issueId is supplied, then update issue otherwise insert a new one
-		if ($issueId) {
-			$issue->setId($issueId);
-			$this->issue =& $issue;
+		if (!$isNewIssue) {
 			parent::execute();
 			$issueDao->updateObject($issue);
 		} else {
 			$issue->setPublished(0);
 			$issue->setCurrent(0);
 
-			$issueId = $issueDao->insertObject($issue);
-			$issue->setId($issueId);
+			$issueDao->insertObject($issue);
 		}
 
-		if ($publicFileManager->uploadedFileExists('styleFile')) {
-			$journal = $request->getJournal();
-			$originalFileName = $publicFileManager->getUploadedFileName('styleFile');
-			$newFileName = 'style_' . $issueId . '.css';
-			$publicFileManager->uploadJournalFile($journal->getId(), 'styleFile', $newFileName);
+		// Copy an uploaded CSS file for the issue, if there is one.
+		// (Must be done after insert for new issues as issue ID is in the filename.)
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$newFileName = 'style_' . $issue->getId() . '.css';
+			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$issue->setStyleFileName($newFileName);
-			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($originalFileName, 127));
+			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($temporaryFile->getOriginalFileName(), 127));
 			$issueDao->updateObject($issue);
 		}
-
-		return $issueId;
 	}
 }
 

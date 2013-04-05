@@ -9,7 +9,16 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#issueForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#issueForm').pkpHandler(
+			'$.pkp.controllers.form.FileUploadFormHandler',
+			{ldelim}
+				$uploader: $('#plupload'),
+				uploaderOptions: {ldelim}
+					uploadUrl: '{url|escape:javascript op="uploadStylesheet"}',
+					baseUrl: '{$baseUrl|escape:javascript}'
+				{rdelim}
+			{rdelim}
+		);
 		$('input[id^="datePublished"]').datepicker({ldelim} dateFormat: 'yy-mm-dd' {rdelim});
 		$('input[id^="openAccessDate"]').datepicker({ldelim} dateFormat: 'yy-mm-dd' {rdelim});
 	{rdelim});
@@ -33,10 +42,10 @@
 
 	{fbvFormArea id="identificationSelectionArea" class="border" title="editor.issues.issueIdentification" size=$fbvStyles.size.SMALL}
 		{fbvFormSection list=true}
-			{fbvElement type="checkbox" label="issue.volume" id="showVolume" checked=$showVolume inline=true}
-			{fbvElement type="checkbox" label="issue.number" id="showNumber" checked=$showNumber inline=true}
-			{fbvElement type="checkbox" label="issue.year" id="showYear" checked=$showYear inline=true}
-			{fbvElement type="checkbox" label="issue.title" id="showTitle" checked=$showTitle inline=true}
+			{fbvElement type="checkbox" label="issue.volume" id="showVolume" checked=$showVolume inline=true value=1}
+			{fbvElement type="checkbox" label="issue.number" id="showNumber" checked=$showNumber inline=true value=1}
+			{fbvElement type="checkbox" label="issue.year" id="showYear" checked=$showYear inline=true value=1}
+			{fbvElement type="checkbox" label="issue.title" id="showTitle" checked=$showTitle inline=true value=1}
 		{/fbvFormSection}
 	{/fbvFormArea}
 
@@ -71,27 +80,22 @@
 		{/fbvFormArea}
 	{/if}
 
-{foreach from=$pubIdPlugins item=pubIdPlugin}
-	{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
-	{include file="$pubIdMetadataFile" pubObject=$issue}
-{/foreach}
+	{fbvFormArea id="file"}
+		{fbvFormSection title="editor.issues.styleFile"}
+			<div id="plupload"></div>
+			{if $styleFileName}
+				{translate key="common.currentStyleSheet"}: <a href="{$publicFilesDir}/{$styleFileName|escape}" target="_blank" alt="{$altTitle|escape}">{$originalStyleFileName|escape}</a>
+			{/if}
+		{/fbvFormSection}
+	{/fbvFormArea}
+	<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 
-{call_hook name="Templates::Editor::Issues::IssueData::AdditionalMetadata"}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+		{include file="$pubIdMetadataFile" pubObject=$issue}
+	{/foreach}
 
-<div id="issueCover">
+	{call_hook name="Templates::Editor::Issues::IssueData::AdditionalMetadata"}
 
-{if $styleFileName}
-	<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
-	<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
-{/if}
-
-<table class="data">
-	<tr>
-		<td class="label">{fieldLabel name="styleFile" key="editor.issues.styleFile"}</td>
-		<td class="value"><input type="file" name="styleFile" id="styleFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $styleFileName}<a href="javascript:openWindow('{$publicFilesDir}/{$styleFileName|escape}');" class="file">{$originalStyleFileName|escape}</a>&nbsp;<a href="{url op="removeStyleFile" path=$issueId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.removeStyleFile"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
-	</tr>
-</table>
-
-{fbvFormButtons submitText="common.save"}
-
+	{fbvFormButtons submitText="common.save"}
 </form>

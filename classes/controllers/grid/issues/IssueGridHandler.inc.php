@@ -26,6 +26,7 @@ class IssueGridHandler extends GridHandler {
 			array(
 				'fetchGrid', 'fetchRow',
 				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
+				'uploadStylesheet',
 				'editCover', 'updateCover',
 				'issueToc',
 				'issueGalleys',
@@ -132,9 +133,9 @@ class IssueGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function editIssue($args, $request) {
-		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('issueId', $issueId);
+		if ($issue) $templateMgr->assign('issueId', $issue->getId());
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
 		return $json->getString();
 	}
@@ -146,12 +147,36 @@ class IssueGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function editIssueData($args, $request) {
-		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		import('controllers.grid.issues.form.IssueForm');
-		$issueForm = new IssueForm($issueId);
-		$issueForm->initData($request, $issueId);
+		$issueForm = new IssueForm($issue);
+		$issueForm->initData($request);
 		$json = new JSONMessage(true, $issueForm->fetch($request));
+		return $json->getString();
+	}
+
+	/**
+	 * An action to upload an issue's stylesheet
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function uploadStylesheet($args, $request) {
+		$user = $request->getUser();
+
+		import('lib.pkp.classes.file.TemporaryFileManager');
+		$temporaryFileManager = new TemporaryFileManager();
+		$temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
+		if ($temporaryFile) {
+			$json = new JSONMessage(true);
+			$json->setAdditionalAttributes(array(
+				'temporaryFileId' => $temporaryFile->getId()
+			));
+		} else {
+			$json = new JSONMessage(false, __('common.uploadFailed'));
+		}
+
 		return $json->getString();
 	}
 
@@ -163,14 +188,13 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function updateIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue?$issue->getId():null;
 
 		import('controllers.grid.issues.form.IssueForm');
-		$issueForm = new IssueForm($issueId);
+		$issueForm = new IssueForm($issue);
 		$issueForm->readInputData();
 
-		if ($issueForm->validate($request, $issue)) {
-			$issueId = $issueForm->execute($request, $issueId);
+		if ($issueForm->validate($request)) {
+			$issueId = $issueForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
 		} else {
 			$json = new JSONMessage(false);
@@ -185,11 +209,11 @@ class IssueGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function editCover($args, $request) {
-		$issueId = isset($args['issueId']) ? $args['issueId'] : null;
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		import('controllers.grid.issues.form.CoverForm');
-		$coverForm = new CoverForm($issueId);
-		$coverForm->initData($request, $issueId);
+		$coverForm = new CoverForm($issue);
+		$coverForm->initData($request);
 		$json = new JSONMessage(true, $coverForm->fetch($request));
 		return $json->getString();
 	}
@@ -202,15 +226,14 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function updateCover($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue?$issue->getId():null;
 
 		import('controllers.grid.issues.form.CoverForm');
-		$coverForm = new CoverForm($issueId);
+		$coverForm = new CoverForm($issue);
 		$coverForm->readInputData();
 
-		if ($coverForm->validate($request, $issue)) {
-			$coverForm->execute($request, $issueId);
-			return DAO::getDataChangedEvent($issueId);
+		if ($coverForm->validate($request)) {
+			$coverForm->execute($request);
+			return DAO::getDataChangedEvent($issue->getId());
 		} else {
 			$json = new JSONMessage(false);
 			return $json->getString();
@@ -324,89 +347,6 @@ class IssueGridHandler extends GridHandler {
 
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
 		return $json->getString();
-	}
-
-	/**
-	 * Updates issue table of contents with selected changes and article removals.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function updateIssueToc($args, $request) {
-		$issue = $request->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
-		$journal = $request->getAuthorizedContextObject(ASSOC_TYPE_JOURNAL);
-
-		$removedPublishedArticles = array();
-
-		$publishedArticles = $request->getUserVar('publishedArticles');
-		$removedArticles = $request->getUserVar('remove');
-		$accessStatus = $request->getUserVar('accessStatus');
-		$pages = $request->getUserVar('pages');
-
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-
-		$articles = $publishedArticleDao->getPublishedArticles($issueId);
-
-		// insert article tombstone, if an article is removed from a published issue
-		import('classes.article.ArticleTombstoneManager');
-		$articleTombstoneManager = new ArticleTombstoneManager();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($issueId, $journal->getId());
-		foreach($articles as $article) {
-			$articleId = $article->getId();
-			$pubId = $article->getPublishedArticleId();
-			if (!isset($removedArticles[$articleId])) {
-				if (isset($pages[$articleId])) {
-					$article->setPages($pages[$articleId]);
-				}
-				if (isset($publishedArticles[$articleId])) {
-					$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-					$publicArticleId = $publishedArticles[$articleId];
-					if ($publicArticleId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicArticleId, ASSOC_TYPE_ARTICLE, $articleId)) {
-						// We are not in a form so we cannot send form errors.
-						// Let's at least send a notification to give some feedback
-						// to the user.
-						import('classes.notification.NotificationManager');
-						$notificationManager = new NotificationManager();
-						AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
-						$message = 'editor.publicIdentificationExists';
-						$params = array('publicIdentifier' => $publicArticleId);
-						$user =& $request->getUser();
-						$notificationManager->createTrivialNotification(
-							$user->getId(), NOTIFICATION_TYPE_ERROR,
-							array('contents' => __($message, $params))
-						);
-						$publicArticleId = '';
-					}
-					$article->setStoredPubId('publisher-id', $publicArticleId);
-				}
-				if (isset($accessStatus[$pubId])) {
-					$publishedArticleDao->updatePublishedArticleField($pubId, 'access_status', $accessStatus[$pubId]);
-				}
-			} else {
-				if ($issue->getPublished()) {
-					$articleTombstoneManager->insertArticleTombstone($article, $journal);
-				}
-				$article->setStatus(STATUS_QUEUED);
-				$article->stampStatusModified();
-
-				// If the article is the only one in the section, delete the section from custom issue ordering
-				$sectionId = $article->getSectionId();
-				$publishedArticleArray =& $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issueId);
-				if (sizeof($publishedArticleArray) == 1) {
-					$sectionDao->deleteCustomSection($issueId, $sectionId);
-				}
-
-				$publishedArticleDao->deletePublishedArticleById($pubId);
-				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
-			}
-			$articleDao->updateObject($article);
-		}
-
-		$request->redirect(null, null, 'issueToc', $issueId);
 	}
 
 	/**
@@ -530,8 +470,6 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function unpublishIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
 		$journal = $request->getJournal();
 
 		$issue->setCurrent(0);
@@ -545,7 +483,7 @@ class IssueGridHandler extends GridHandler {
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		foreach ($publishedArticles as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
 		}

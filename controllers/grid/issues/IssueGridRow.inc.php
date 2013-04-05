@@ -57,7 +57,7 @@ class IssueGridRow extends GridRow {
 			$dispatcher = $request->getDispatcher();
 			$this->addAction(
 				new LinkAction(
-					$issue->getDatePublished?'viewIssue':'previewIssue',
+					$issue->getDatePublished()?'viewIssue':'previewIssue',
 					new OpenWindowAction(
 						$dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', array($issueId))
 					),
