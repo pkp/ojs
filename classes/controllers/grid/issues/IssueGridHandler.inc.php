@@ -26,7 +26,7 @@ class IssueGridHandler extends GridHandler {
 			array(
 				'fetchGrid', 'fetchRow',
 				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
-				'uploadStylesheet',
+				'uploadFile',
 				'editCover', 'updateCover',
 				'issueToc',
 				'issueGalleys',
@@ -157,12 +157,12 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * An action to upload an issue's stylesheet
+	 * An action to upload an issue file. Used for both covers and stylesheets.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function uploadStylesheet($args, $request) {
+	function uploadFile($args, $request) {
 		$user = $request->getUser();
 
 		import('lib.pkp.classes.file.TemporaryFileManager');

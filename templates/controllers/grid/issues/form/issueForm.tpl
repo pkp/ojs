@@ -12,9 +12,9 @@
 		$('#issueForm').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
-				$uploader: $('#plupload'),
+				$uploader: $('#pluploadcss'),
 				uploaderOptions: {ldelim}
-					uploadUrl: '{url|escape:javascript op="uploadStylesheet"}',
+					uploadUrl: '{url|escape:javascript op="uploadFile"}',
 					baseUrl: '{$baseUrl|escape:javascript}'
 				{rdelim}
 			{rdelim}
@@ -82,9 +82,9 @@
 
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.styleFile"}
-			<div id="plupload"></div>
+			<div id="pluploadcss"></div>
 			{if $styleFileName}
-				{translate key="common.currentStyleSheet"}: <a href="{$publicFilesDir}/{$styleFileName|escape}" target="_blank" alt="{$altTitle|escape}">{$originalStyleFileName|escape}</a>
+				{translate key="common.currentStyleSheet"}: <a href="{$publicFilesDir}/{$styleFileName|escape}" target="_blank">{$originalStyleFileName|escape}</a>
 			{/if}
 		{/fbvFormSection}
 	{/fbvFormArea}

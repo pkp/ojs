@@ -26,9 +26,10 @@ class CoverForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function CoverForm() {
+	function CoverForm($issue) {
 		parent::Form('controllers/grid/issues/form/coverForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
+		$this->issue = $issue;
 	}
 
 	/**
@@ -57,15 +58,17 @@ class CoverForm extends Form {
 	/**
 	 * Validate the form
 	 */
-	function validate($request, $issue = null) {
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
+	function validate($request) {
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
-		if ($publicFileManager->uploadedFileExists('coverPage')) {
-			$type = $publicFileManager->getUploadedFileType('coverPage');
-			if (!$publicFileManager->getImageExtension($type)) {
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+error_log($temporaryFile->getFileType());
 				$this->addError('coverPage', __('editor.issues.invalidCoverPageFormat'));
-				$this->addErrorField('coverPage');
 			}
 		}
 
@@ -74,31 +77,19 @@ class CoverForm extends Form {
 
 	/**
 	 * Initialize form data from current issue.
-	 * returns issue id that it initialized the page with
 	 */
-	function initData($request, $issueId = null) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+	function initData($request) {
+		$this->_data = array(
+			'fileName' => $this->issue->getFileName(null), // Localized
+			'originalFileName' => $this->issue->getOriginalFileName(null), // Localized
+			'coverPageDescription' => $this->issue->getCoverPageDescription(null), // Localized
+			'coverPageAltText' => $this->issue->getCoverPageAltText(null), // Localized
+			'showCoverPage' => $this->issue->getShowCoverPage(null), // Localized
+			'hideCoverPageArchives' => $this->issue->getHideCoverPageArchives(null), // Localized
+			'hideCoverPageCover' => $this->issue->getHideCoverPageCover(null), // Localized
+		);
 
-		// retrieve issue by id, if not specified, then select first unpublished issue
-		if (isset($issueId)) {
-			$issue = $issueDao->getById($issueId);
-		}
-
-		if (isset($issue)) {
-			$this->issue = $issue;
-			$this->_data = array(
-				'fileName' => $issue->getFileName(null), // Localized
-				'originalFileName' => $issue->getOriginalFileName(null), // Localized
-				'coverPageDescription' => $issue->getCoverPageDescription(null), // Localized
-				'coverPageAltText' => $issue->getCoverPageAltText(null), // Localized
-				'showCoverPage' => $issue->getShowCoverPage(null), // Localized
-				'hideCoverPageArchives' => $issue->getHideCoverPageArchives(null), // Localized
-				'hideCoverPageCover' => $issue->getHideCoverPageCover(null), // Localized
-			);
-
-			parent::initData();
-			return $issue->getId();
-		}
+		parent::initData();
 	}
 
 	/**
@@ -106,8 +97,7 @@ class CoverForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array(
-			'fileName',
-			'originalFileName',
+			'temporaryFileId',
 			'coverPageDescription',
 			'coverPageAltText',
 			'showCoverPage',
@@ -119,10 +109,8 @@ class CoverForm extends Form {
 	/**
 	 * Save issue settings.
 	 */
-	function execute($request, $issueId = 0) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-
-		$issue = $issueDao->getById($issueId);
+	function execute($request) {
+		$issue = $this->issue;
 		$issue->setCoverPageDescription($this->getData('coverPageDescription'), null); // Localized
 		$issue->setCoverPageAltText($this->getData('coverPageAltText'), null); // Localized
 		$showCoverPage = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('showCoverPage'));
@@ -149,30 +137,27 @@ class CoverForm extends Form {
 		}
 		$issue->setHideCoverPageCover($hideCoverPageCover, null); // Localized
 
-		$this->issue = $issue;
 		parent::execute();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateObject($issue);
 
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->uploadedFileExists('coverPage')) {
+		// Copy an uploaded cover file for the issue, if there is one.
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
-			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
-			$type = $publicFileManager->getUploadedFileType('coverPage');
-			$newFileName = 'cover_issue_' . $issueId . '_' . $this->getFormLocale() . $publicFileManager->getImageExtension($type);
-			$publicFileManager->uploadJournalFile($journal->getId(), 'coverPage', $newFileName);
-			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
+			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$issue->setFileName($newFileName, $this->getFormLocale());
-
-			// Store the image dimensions.
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $newFileName);
-			$issue->setWidth($width, $this->getFormLocale());
-			$issue->setHeight($height, $this->getFormLocale());
-
+			$issue->setOriginalFileName($publicFileManager->truncateFileName($temporaryFile->getOriginalFileName(), 127), $this->getFormLocale());
 			$issueDao->updateObject($issue);
 		}
 
-		return $issueId;
+		return $issue->getId();
 	}
 }
 
