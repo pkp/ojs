@@ -67,7 +67,7 @@ class Handler extends PKPHandler {
 				$journal = $journals->next();
 			}
 			if (!$journal && $journalsCount > 1) {
-				// Decide wich journal to return.
+				// Decide which journal to return.
 				$user = $request->getUser();
 				if ($user) {
 					// We have a user (private access).
