@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridRow
- * @ingroup controllers_grid_settings_issue
+ * @ingroup controllers_grid_issues
  *
  * @brief Handle issue grid row requests.
  */

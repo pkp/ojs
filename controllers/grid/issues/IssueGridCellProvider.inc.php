@@ -9,7 +9,7 @@
  * @class IssueGridCellProvider
  * @ingroup controllers_grid_issues
  *
- * @brief Subclass for the admin sysIssue grid's cell provider
+ * @brief Grid cell provider for the issue management grid
  */
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
