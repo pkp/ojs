@@ -55,8 +55,17 @@
 			{assign var=emailString value=$submitter->getFullName()|concat:" <":$submitter->getEmail():">"}
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle|strip_tags articleId=$submission->getId()}
 			{$submitter->getFullName()|escape} {icon name="mail" url=$url}
+			<a href="{url op="changeSubmitter" path=$submission->getId()}" class="action">Change</a>
 		</td>
 	</tr>
+	<tr>
+		<td colspan="100%" style="padding: 5px;">Note: The <em>submitter</em> is the only author who can interact with this manuscript. Click <a href="{url op="changeSubmitter" path=$submission->getId()}">here</a> for more information.</td>
+	</tr>
+	{if $submittedByProxy}
+	<tr>
+		<td colspan="100%" style="padding: 5px; background: #F0B1A8;">Note: This manuscript was submitted by an editor or journal manager. Use the CHANGE link to give author access to this submission.</td>
+	</tr>
+	{/if}
 	<tr>
 		<td class="label">{translate key="common.dateSubmitted"}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>

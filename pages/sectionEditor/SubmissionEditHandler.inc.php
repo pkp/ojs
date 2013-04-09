@@ -61,6 +61,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->roleExists($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
 
+		// determine if article was submitted by an editor or JM on behalf of author
+		$submittedByProxy = 0;
+		$submitterId = $submission->getUserId();
+		$submitterIsSectionEditor = $roleDao->roleExists($journal->getId(), $submitterId, ROLE_ID_SECTION_EDITOR);
+		$submitterIsEditor = $roleDao->roleExists($journal->getId(), $submitterId, ROLE_ID_EDITOR);
+		$submitterIsJournalManager = $roleDao->roleExists($journal->getId(), $submitterId, ROLE_ID_JOURNAL_MANAGER);
+		if($submitterIsSectionEditor or $submitterIsEditor or $submitterIsJournalManager) {
+			$submittedByProxy = 1;
+		}
+
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$section =& $sectionDao->getSection($submission->getSectionId());
 
@@ -78,6 +88,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('submittedByProxy', $submittedByProxy);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));
@@ -480,6 +491,28 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
 		//$templateMgr->assign('isSectionEditor',Validation::isSectionEditor($journal->getId())); //20120508 LS Added
 	}
+
+	function changeSubmitter($args, $request) {
+                $articleId = (int) array_shift($args);
+                $journal =& $request->getJournal();
+
+                $this->validate($articleId);
+                $submission =& $this->submission;
+                $this->setupTemplate(true, $articleId, 'summary');
+
+                SectionEditorAction::changeSubmitter($submission, $journal);
+	}
+
+        function saveSubmitter($args, &$request) {
+                $articleId = $request->getUserVar('articleId');
+                $this->validate($articleId);
+                $submission =& $this->submission;
+                $this->setupTemplate(true, $articleId, 'summary');
+
+                if (SectionEditorAction::saveSubmitter($submission, $request)) {
+                        $request->redirect(null, null, 'submission', $articleId);
+                }
+        }
 
 	function changeSection() {
 		$articleId = Request::getUserVar('articleId');

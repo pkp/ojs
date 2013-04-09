@@ -19,7 +19,6 @@
  */
 
 // $Id$
-
 switch ($op) {
 	//
 	// Submission Tracking
@@ -36,6 +35,8 @@ switch ($op) {
 	case 'submissionEditing':
 	case 'submissionHistory':
 	case 'submissionCitations':
+	case 'changeSubmitter':
+	case 'saveSubmitter':
 	case 'changeSection':
 	case 'recordDecision':
 	case 'selectReviewer':
@@ -205,6 +206,11 @@ switch ($op) {
 		define('HANDLER_CLASS', 'IssueManagementHandler');
 		import('pages.editor.IssueManagementHandler');
 		break;
+	case 'createUser':
+	case 'updateUser':
+                define('HANDLER_CLASS', 'PeopleHandler');
+                import('pages.manager.PeopleHandler');
+                break;
 	case 'index':
 	case 'submissions':
 	case 'setEditorFlags':

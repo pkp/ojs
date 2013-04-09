@@ -51,6 +51,37 @@ class Action extends PKPAction {
 	// Actions.
 	//
 	/**
+         * Change submitter of an article.
+         * @param $article object
+         */
+        function changeSubmitter($article, $journal) {
+                if (!HookRegistry::call('Action::changeSubmitter', array(&$article, &$journal))) {
+                        import('classes.submission.form.SubmitterForm');
+                        $submitterForm = new SubmitterForm($article, $journal);
+                        if ($submitterForm->isLocaleResubmit()) { $submitterForm->readInputData();
+                        } else {
+                                $submitterForm->initData();
+                        }
+                        $submitterForm->display();
+                }
+        }
+
+	function saveSubmitter($article, &$request) {
+		$router =& $request->getRouter();
+		import('classes.submission.form.SubmitterForm');
+		$journal =& $request->getJournal();
+		$submitterForm = new SubmitterForm($article, $journal);
+		$submitterForm->readInputData();
+
+                if (!$submitterForm->validate()) {
+                	return $submitterForm->display();
+                }
+                $submitterForm->execute($request);
+
+		return true;
+	}
+
+	/**
 	 * View metadata of an article.
 	 * @param $article object
 	 */

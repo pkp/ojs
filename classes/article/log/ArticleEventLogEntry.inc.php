@@ -42,6 +42,7 @@ define('ARTICLE_LOG_ISSUE_SCHEDULE', 		0x10000004);
 define('ARTICLE_LOG_ISSUE_ASSIGN', 		0x10000005);
 define('ARTICLE_LOG_ARTICLE_PUBLISH', 		0x10000006);
 define('ARTICLE_LOG_ARTICLE_IMPORT',		0x10000007);
+define('ARTICLE_LOG_SUBMITTER_UPDATE',		0x10000008);
 
 // Author events 				0x20000000
 define('ARTICLE_LOG_AUTHOR_REVISION', 		0x20000001);
@@ -324,6 +325,8 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.general.issueAssigned';
 			case ARTICLE_LOG_ARTICLE_PUBLISH:
 				return 'submission.event.general.articlePublished';
+			case ARTICLE_LOG_SUBMITTER_UPDATE:
+				return 'submission.event.general.submitterUpdated';
 
 			// Author events
 			case ARTICLE_LOG_AUTHOR_REVISION:

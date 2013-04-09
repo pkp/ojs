@@ -167,6 +167,7 @@
 	<message key="article.fontSize.large.altText">Large</message>
 
 	<!-- Submission Tracking - Common -->
+	<message key="submission.editSubmitter">#{$articleId} Change Submitter</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.changeSection">Change to</message>
 	<message key="submission.sent">Sent</message>
@@ -217,6 +218,7 @@
 	<message key="submissions.editorDecision">Editor Decision</message>
 	<message key="submissions.editorRuling">Editor Ruling</message>
 	<message key="submission.eventLog">Event Log</message>
+	<message key="submission.event.general.submitterUpdated">Article submitter updated.</message>
 
 	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Copyedited</message>
@@ -1075,6 +1077,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$articleId}.</message>
 
 	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
+	<message key="log.editor.submitterModified">The submitter for this article was changed from {$oldSubmitter} to {$newSubmitter} by {$editorName}.</message>
 	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
