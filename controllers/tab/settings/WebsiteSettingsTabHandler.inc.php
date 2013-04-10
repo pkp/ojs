@@ -42,6 +42,19 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		));
 	}
 
+	/**
+	 * @see SettingsTabHandler::showTab
+	 */
+	function showTab($args, &$request) {
+		$workingContexts = $this->getWorkingContexts($request);
+
+		$multipleContexts = false;
+		if ($workingContexts && $workingContexts->getCount() > 1) {
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->assign('multipleContexts', true);
+		}
+		return parent::showTab($args, $request);
+	}
 
 	//
 	// Public methods.
