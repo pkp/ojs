@@ -168,12 +168,12 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId, true);
 
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+		$galley = $galleyDao->getById($galleyId, $issueId);
 
 		if (isset($galley)) {
 			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
-			$galleyDao->updateGalley($galley);
-			$galleyDao->resequenceGalleys($issueId);
+			$galleyDao->updateObject($galley);
+			$galleyDao->resequence($issueId);
 		}
 		$request->redirect(null, null, 'issueGalleys', $issueId);
 	}
@@ -190,7 +190,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId, true);
 
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+		$galley = $galleyDao->getById($galleyId, $issueId);
 
 		if (isset($galley)) {
 			import('classes.file.IssueFileManager');
@@ -199,7 +199,7 @@ class IssueManagementHandler extends EditorHandler {
 			if ($galley->getFileId()) {
 				$issueFileManager->deleteFile($galley->getFileId());
 			}
-			$galleyDao->deleteGalley($galley);
+			$galleyDao->deleteObject($galley);
 		}
 		$request->redirect(null, null, 'issueGalleys', $issueId);
 	}
@@ -252,7 +252,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId, true);
 
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$galley =& $galleyDao->getGalley($galleyId, $issueId);
+		$galley = $galleyDao->getById($galleyId, $issueId);
 
 		if (isset($galley)) {
 			if ($galley->getFileId()) {

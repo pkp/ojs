@@ -728,7 +728,7 @@ class DataciteExportDom extends DOIExportDom {
 		switch (true) {
 			case is_a($object, 'Issue'):
 				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-				$files =& $issueGalleyDao->getGalleysByIssue($object->getId());
+				$files = $issueGalleyDao->getByIssueId($object->getId());
 				break;
 
 			case is_a($object, 'PublishedArticle'):

@@ -21,42 +21,28 @@ import('lib.pkp.classes.form.Form');
 
 class IssueGalleyForm extends Form {
 	/** @var int the ID of the issue */
-	var $_issueId = null;
+	var $_issue = null;
 
 	/** @var IssueGalley current galley */
-	var $_galley = null;
+	var $_issueGalley = null;
 
 	/**
 	 * Constructor.
-	 * @param $issueId int
-	 * @param $galleyId int (optional)
+	 * @param $issue Issue
+	 * @param $issueGalley IssueGalley (optional)
 	 */
-	function IssueGalleyForm($issueId, $galleyId = null) {
-		parent::Form('editor/issues/issueGalleyForm.tpl');
-		$journal =& Request::getJournal();
-		$this->setIssueId($issueId);
+	function IssueGalleyForm($request, $issue, $issueGalley = null) {
+		parent::Form('controllers/grid/issueGalleys/form/issueGalleyForm.tpl');
+		$this->_issue = $issue;
+		$this->_issueGalley = $issueGalley;
 
-		if (isset($galleyId) && !empty($galleyId)) {
-			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-			$galley =& $galleyDao->getGalley($galleyId, $issueId);
-			$this->setGalley($galley);
-		}
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		//
-		// Validation checks for this form
-		//
-
-		// Ensure a label is provided
-		$this->addCheck(
-			new FormValidator(
-				$this,
-				'label',
-				'required',
-				'editor.issues.galleyLabelRequired'
-			)
-		);
+		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+		$this->addCheck(new FormValidatorPost($this));
 
 		// Ensure a locale is provided and valid
+		$journal = $request->getJournal();
 		$this->addCheck(
 			new FormValidator(
 				$this,
@@ -71,85 +57,40 @@ class IssueGalleyForm extends Form {
 			array_keys($journal->getSupportedLocaleNames())
 		);
 
-		// Ensure form was POSTed
-		$this->addCheck(new FormValidatorPost($this));
-	}
-
-	/**
-	 * Get the issue ID.
-	 * @return int
-	 */
-	function getIssueId() {
-		return $this->_issueId;
-	}
-
-	/**
-	 * Set the issue ID.
-	 * @param $issueId int
-	 */
-	function setIssueId($issueId) {
-		$this->_issueId = (int) $issueId;
-	}
-
-	/**
-	 * Get issue galley.
-	 * @return IssueGalley
-	 */
-	function &getGalley() {
-		return $this->_galley;
-	}
-
-	/**
-	 * Set issue galley.
-	 * @param $galley IssueGalley
-	 */
-	function setGalley($galley) {
-		$this->_galley = $galley;
-	}
-
-	/**
-	 * Get the galley ID.
-	 * @return int
-	 */
-	function getGalleyId() {
-		$galley =& $this->getGalley();
-		if ($galley) {
-			return $galley->getId();
-		} else {
-			return null;
-		}
+		if (!$issueGalley) {
+			// A file must be uploaded with a newly-created issue galley.
+			$this->addCheck(new FormValidator($this, 'temporaryFileId', 'required', 'form.fileRequired'));
+		}		
 	}
 
 	/**
 	 * Display the form.
 	 */
-	function display() {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+	function fetch($request) {
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign('issueId', $this->getIssueId());
-		$templateMgr->assign('galleyId', $this->getGalleyId());
+		$templateMgr->assign('issueId', $this->_issue->getId());
+		if ($this->_issueGalley) {
+			$templateMgr->assign('issueGalleyId', $this->_issueGalley->getId());
+			$templateMgr->assign('issueGalley', $this->_issueGalley);
+		}
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
-		$galley =& $this->getGalley();
-		if ($galley) {
-			$templateMgr->assign_by_ref('galley', $galley);
-		}
-
-		parent::display();
+		return parent::fetch($request);
 	}
 
 	/**
 	 * Validate the form
 	 */
-	function validate() {
+	function validate($request) {
 		// Check if public galley ID is already being used
-		$journal =& Request::getJournal();
+		$journal = $request->getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->getGalleyId())) {
+		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null)) {
 			$this->addError('publicGalleyId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
 			$this->addErrorField('publicGalleyId');
 		}
@@ -161,13 +102,11 @@ class IssueGalleyForm extends Form {
 	 * Initialize form data from current galley (if applicable).
 	 */
 	function initData() {
-		$galley =& $this->getGalley();
-
-		if ($galley) {
+		if ($this->_issueGalley) {
 			$this->_data = array(
-				'label' => $galley->getLabel(),
-				'publicGalleyId' => $galley->getPubId('publisher-id'),
-				'galleyLocale' => $galley->getLocale()
+				'label' => $this->_issueGalley->getLabel(),
+				'publicGalleyId' => $this->_issueGalley->getPubId('publisher-id'),
+				'galleyLocale' => $this->_issueGalley->getLocale()
 			);
 		} else {
 			$this->_data = array();
@@ -182,105 +121,104 @@ class IssueGalleyForm extends Form {
 			array(
 				'label',
 				'publicGalleyId',
-				'galleyLocale'
+				'galleyLocale',
+				'temporaryFileId'
 			)
 		);
 	}
 
 	/**
 	 * Save changes to the galley.
+	 * @param $request PKPRequest
 	 * @return int the galley ID
 	 */
-	function execute($fileName = null) {
+	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$issueFileManager = new IssueFileManager($this->getIssueId());
-		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueId = $this->_issueGalley?$this->_issueGalley->getId():null;
+		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
-		$fileName = isset($fileName) ? $fileName : 'galleyFile';
-		$journal =& Request::getJournal();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
-		$galley =& $this->getGalley();
+		$issueGalley = $this->_issueGalley;
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 
-		// Update an existing galley
-		if ($galley) {
-			if ($issueFileManager->uploadedFileExists($fileName)) {
+		// If a temporary file ID was specified (i.e. an upload occurred), get the file for later.
+		$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+		$temporaryFile = $temporaryFileDao->getTemporaryFile($this->getData('temporaryFileId'), $user->getId());
+
+		if ($issueGalley) {
+			// Update an existing galley
+			if ($temporaryFile) {
 				// Galley has a file, delete it before uploading new one
-				if ($galley->getFileId()) {
-					$issueFileManager->deleteFile($galley->getFileId());
+				if ($issueGalley->getFileId()) {
+					$issueFileManager->deleteFile($issueGalley->getFileId());
 				}
 				// Upload new file
-				$fileId = $issueFileManager->uploadPublicFile($fileName);
-				$galley->setFileId($fileId);
+				$fileId = $issueFileManager->fromTemporaryFile($temporaryFile);
+				$issueGalley->setFileId($fileId);
 			}
 
-			$galley->setLabel($this->getData('label'));
+			$issueGalley->setLabel($this->getData('label'));
 			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
+				$issueGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			}
-			$galley->setLocale($this->getData('galleyLocale'));
+			$issueGalley->setLocale($this->getData('galleyLocale'));
 
 			// Update galley in the db
-			$galleyDao->updateGalley($galley);
-
+			$issueGalleyDao->updateObject($issueGalley);
 		} else {
 			// Create a new galley
-			// Upload galley file
-			if ($issueFileManager->uploadedFileExists($fileName)) {
-				$fileType = $issueFileManager->getUploadedFileType($fileName);
-				$fileId = $issueFileManager->uploadPublicFile($fileName);
-			} else {
-				// No galley file uploaded
-				$fileId = 0;
-			}
+			$issueGalleyFile = $issueFileManager->fromTemporaryFile($temporaryFile);
 
-			$galley = new IssueGalley();
-			$galley->setIssueId($this->getIssueId());
-			$galley->setFileId($fileId);
+			$issueGalley = $issueGalleyDao->newDataObject();
+			$issueGalley->setIssueId($this->_issue->getId());
+			$issueGalley->setFileId($issueGalleyFile->getId());
 
 			if ($this->getData('label') == null) {
 				// Generate initial label based on file type
 				$enablePublicGalleyId = $journal->getSetting('enablePublicGalleyId');
 				if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
-						$galley->setLabel('PDF');
-						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'pdf');
+						$issueGalley->setLabel('PDF');
+						if ($enablePublicGalleyId) $issueGalley->setStoredPubId('publisher-id', 'pdf');
 					} else if (strstr($fileType, 'postscript')) {
-						$galley->setLabel('PostScript');
-						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'ps');
+						$issueGalley->setLabel('PostScript');
+						if ($enablePublicGalleyId) $issueGalley->setStoredPubId('publisher-id', 'ps');
 					} else if (strstr($fileType, 'xml')) {
-						$galley->setLabel('XML');
-						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'xml');
+						$issueGalley->setLabel('XML');
+						if ($enablePublicGalleyId) $issueGalley->setStoredPubId('publisher-id', 'xml');
 					}
 				}
 
-				if ($galley->getLabel() == null) {
-					$galley->setLabel(__('common.untitled'));
+				if ($issueGalley->getLabel() == null) {
+					$issueGalley->setLabel(__('common.untitled'));
 				}
 
 			} else {
-				$galley->setLabel($this->getData('label'));
+				$issueGalley->setLabel($this->getData('label'));
 			}
-			$galley->setLocale($this->getData('galleyLocale'));
+			$issueGalley->setLocale($this->getData('galleyLocale'));
 
 			if ($enablePublicGalleyId) {
 				// Ensure the assigned public id doesn't already exist
 				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-				$publicGalleyId = $galley->getPubId('publisher-id');
+				$publicGalleyId = $issueGalley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
 				while ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId . $suffix)) {
 					$suffix = '_'.$i++;
 				}
 
-				$galley->setStoredPubId('publisher-id', $publicGalleyId . $suffix);
+				$issueGalley->setStoredPubId('publisher-id', $publicGalleyId . $suffix);
 			}
 
 			// Insert new galley into the db
-			$galleyDao->insertGalley($galley);
-			$this->setGalley($galley);
+			$issueGalleyDao->insertObject($issueGalley);
+			$this->_issueGalley = $issueGalley;
 		}
 
-		return $this->getGalleyId();
+		return $this->_issueGalley->getId();
 	}
 }
 

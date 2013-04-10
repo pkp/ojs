@@ -55,6 +55,7 @@
 	<message key="editor.issues.confirmDelete">Are you sure you want to permanently delete this issue?</message>
 	<message key="editor.issues.published">Published</message>
 	<message key="editor.issues.unpublished">Unpublished</message>
+	<message key="editor.issues.datePublished">Date Published</message>
 	<message key="editor.issues.volumeRequired">Volume is required and must be a positive, numeric value.</message>
 	<message key="editor.issues.numberRequired">Number is required and must be a positive, numeric value.</message>
 	<message key="editor.issues.yearRequired">Year is required and must be a positive, numeric value.</message>
@@ -120,6 +121,7 @@
 	<message key="grid.action.addIssue">Create Issue</message>
 	<message key="grid.action.viewIssue">View</message>
 	<message key="grid.action.previewIssue">Preview</message>
+	<message key="grid.action.addIssueGalley">Create Issue Galley</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>

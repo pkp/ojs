@@ -60,8 +60,8 @@ class EruditExportPlugin extends ImportExportPlugin {
 				$articleId = array_shift($args);
 				$galleyId = array_shift($args);
 
-				$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-				$galley =& $articleGalleyDao->getGalley($galleyId, $articleId);
+				$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				$galley = $articleGalleyDao->getById($galleyId, $articleId);
 				if ($article && $galley && ($issue = $issueDao->getById($article->getIssueId(), $journal->getId()))) {
 					$this->exportArticle($journal, $issue, $article, $galley);
 					break;

@@ -28,7 +28,7 @@ class IssueFileManager extends FileManager {
 
 	/**
 	 * Constructor.
-	 * Create a manager for handling issue file uploads.
+	 * Create a manager for handling issue files.
 	 * @param $issueId int
 	 */
 	function IssueFileManager($issueId) {
@@ -75,26 +75,16 @@ class IssueFileManager extends FileManager {
 	}
 
 	/**
-	 * Upload a public issue file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @return int file ID
-	 */
-	function uploadPublicFile($fileName, $fileId = null) {
-		return $this->_handleUpload($fileName, ISSUE_FILE_PUBLIC, $fileId);
-	}
-
-	/**
 	 * Delete an issue file by ID.
 	 * @param $fileId int
 	 * @return boolean if successful
 	 */
 	function deleteFile($fileId) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
-		$issueFile =& $issueFileDao->getIssueFile($fileId);
+		$issueFile = $issueFileDao->getById($fileId);
 
 		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
-			$issueFileDao->deleteIssueFileById($fileId);
+			$issueFileDao->deleteById($fileId);
 			return true;
 		}
 
@@ -116,7 +106,7 @@ class IssueFileManager extends FileManager {
 	 */
 	function downloadFile($fileId, $inline = false) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
-		$issueFile =& $issueFileDao->getIssueFile($fileId);
+		$issueFile = $issueFileDao->getById($fileId);
 
 		if ($issueFile) {
 			$fileType = $issueFile->getFileType();
@@ -152,15 +142,13 @@ class IssueFileManager extends FileManager {
 	}
 
 	/**
-	 * PRIVATE routine to upload the file and add it to the database.
-	 * @param $fileName string index into the $_FILES array
+	 * Create an issue galley based on a temporary file.
+	 * @param $temporaryFile TemporaryFile
 	 * @param $contentType int Issue file content type
-	 * @param $fileId int ID of an existing file to update
-	 * @param $overwrite boolean overwrite previous version of the file
 	 * @return int the file ID
 	 */
-	function _handleUpload($fileName, $contentType, $fileId = null, $overwrite = false) {
-		if (HookRegistry::call('IssueFileManager::_handleUpload', array(&$fileName, &$contentType, &$fileId, &$overwrite, &$result))) return $result;
+	function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC) {
+		if (HookRegistry::call('IssueFileManager::fromTemporaryFile', array(&$temporaryFile, &$contentType, &$result))) return $result;
 
 		$issueId = $this->getIssueId();
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
@@ -168,38 +156,33 @@ class IssueFileManager extends FileManager {
 		$contentTypePath = $this->contentTypeToPath($contentType);
 		$dir = $this->getFilesDir() . $contentTypePath . '/';
 
-		$issueFile = new IssueFile();
+		$issueFile = $issueFileDao->newDataObject();
 		$issueFile->setIssueId($issueId);
-		$issueFile->setDateUploaded(Core::getCurrentDate());
+		$issueFile->setDateUploaded($temporaryFile->getDateUploaded());
 		$issueFile->setDateModified(Core::getCurrentDate());
-		$issueFile->setFileName('');
-		$issueFile->setFileType($this->getUploadedFileType($fileName));
-		$issueFile->setFileSize($_FILES[$fileName]['size']);
-		$issueFile->setOriginalFileName($this->truncateFileName($_FILES[$fileName]['name'], 127));
+		$issueFile->setFileName(''); // Blank until we insert to generate a file ID
+		$issueFile->setFileType($temporaryFile->getFileType());
+		$issueFile->setFileSize($temporaryFile->getFileSize());
+		$issueFile->setOriginalFileName($temporaryFile->getOriginalFileName());
 		$issueFile->setContentType($contentType);
 
-		// If this is a new issue file, add it to the db and get it's new file id
-		if (!$fileId) {
-			if (!$issueFileDao->insertIssueFile($issueFile)) return false;
-		} else {
-			$issueFile->setId($fileId);
-		}
+		if (!$issueFileDao->insertObject($issueFile)) return false;
 
-		$extension = $this->parseFileExtension($this->getUploadedFileName($fileName));
+		$extension = $this->parseFileExtension($issueFile->getOriginalFileName());
 		$newFileName = $issueFile->getIssueId().'-'.$issueFile->getId().'-'.$this->contentTypeToAbbrev($contentType).'.'.$extension;
 		$issueFile->setFileName($newFileName);
 
-		// Upload the actual file
-		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
-			// Upload failed. If this is a new file, remove newly added db record.
-			if (!$fileId) $issueFileDao->deleteIssueFileById($issueFile->getId());
+		// Copy the actual file
+		if (!$this->copyFile($temporaryFile->getFilePath(), $dir . $newFileName)) {
+			// Upload failed; remove the new DB record.
+			$issueFileDao->deleteById($issueFile->getId());
 			return false;
 		}
 
 		// Upload succeeded. Update issue file record with new filename.
-		$issueFileDao->updateIssueFile($issueFile);
+		$issueFileDao->updateObject($issueFile);
 
-		return $issueFile->getId();
+		return $issueFile;
 	}
 }
 

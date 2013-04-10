@@ -24,7 +24,8 @@ class IssueGalleyGridHandler extends GridHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'fetchGrid', 'fetchRow'
+				'fetchGrid', 'fetchRow',
+				'add', 'edit', 'upload', 'download', 'update', 'delete'
 			)
 		);
 	}
@@ -56,19 +57,32 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
+	 * @see GridDataProvider::getRequestArgs()
+	 */
+	function getRequestArgs() {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		return array_merge(
+			parent::getRequestArgs(),
+			array('issueId' => $issue->getId())
+		);
+	}
+
+	/**
 	 * @see PKPHandler::initialize()
 	 */
 	function initialize(&$request, $args) {
 		parent::initialize($request, $args);
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		// Add action
 		$router = $request->getRouter();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		$this->addAction(
 			new LinkAction(
-				'addIssueGalley',
+				'add',
 				new AjaxModal(
-					$router->url($request, null, null, 'add', null, array('gridId' => $this->getId())),
+					$router->url($request, null, null, 'add', null, $this->getRequestArgs() + array('gridId' => $this->getId())),
 					__('grid.action.addIssueGalley'),
 					'modal_add'
 				),
@@ -84,13 +98,27 @@ class IssueGalleyGridHandler extends GridHandler {
 		// Issue identification
 		$this->addColumn(
 			new GridColumn(
-				'identification',
-				'issue.issue',
+				'label',
+				'submission.layout.galleyLabel',
 				null,
 				'controllers/grid/gridCell.tpl',
 				$issueGalleyGridCellProvider
 			)
 		);
+
+		// Language, if more than one is supported
+		$journal = $request->getJournal();
+		if (count($journal->getSupportedLocaleNames())>1) {
+			$this->addColumn(
+				new GridColumn(
+					'locale',
+					'common.language',
+					null,
+					'controllers/grid/gridCell.tpl',
+					$issueGalleyGridCellProvider
+				)
+			);
+		}
 	}
 
 	/**
@@ -98,7 +126,8 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @return IssueGalleyGridRow
 	 */
 	function getRowInstance() {
-		return new IssueGalleyGridRow();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		return new IssueGalleyGridRow($issue->getId());
 	}
 
 	//
@@ -109,23 +138,24 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function addIssueGalley($args, $request) {
+	function add($args, $request) {
 		// Calling editIssueData with an empty ID will add
 		// a new issue.
-		return $this->editIssueGalley($args, $request);
+		return $this->edit($args, $request);
 	}
 
 	/**
-	 * An action to edit a issue's identifying data
+	 * An action to edit a issue galley
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function editIssueGalley($args, $request) {
+	function edit($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 
 		import('controllers.grid.issues.form.IssueGalleyForm');
-		$issueGalleyForm = new IssueGalleyForm($issue);
+		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
 		$issueGalleyForm->initData($request);
 		$json = new JSONMessage(true, $issueGalleyForm->fetch($request));
 		return $json->getString();
@@ -137,7 +167,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function uploadFile($args, $request) {
+	function upload($args, $request) {
 		$user = $request->getUser();
 
 		import('lib.pkp.classes.file.TemporaryFileManager');
@@ -156,16 +186,30 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
+	 * An action to download an issue galley
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return string Serialized JSON object
+	 */
+	function download($args, $request) {
+		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+		import('classes.file.IssueFileManager');
+		$issueFileManager = new IssueFileManager($issueId);
+		return $issueFileManager->downloadFile($galley->getFileId());
+	}
+
+	/**
 	 * Update a issue
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function updateIssueGalley($args, $request) {
+	function update($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 
 		import('controllers.grid.issues.form.IssueGalleyForm');
-		$issueGalleyForm = new IssueGalleyForm($issue);
+		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
 		$issueGalleyForm->readInputData();
 
 		if ($issueGalleyForm->validate($request)) {
@@ -183,12 +227,20 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function delete($args, $request) {
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+		$issueGalleyId = $issueGalley->getId();
+		$issueGalleyDao->deleteObject($issueGalley);
+		return DAO::getDataChangedEvent();
+	}
+
+	/**
+	 * @see GridHandler::loadData
+	 */
+	function loadData(&$request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
-		die('FIXME Unimplemented');
-
-		return DAO::getDataChangedEvent($issueId);
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		return $issueGalleyDao->getByIssueId($issue->getId());
 	}
 }
 

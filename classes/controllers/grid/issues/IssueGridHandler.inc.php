@@ -365,7 +365,7 @@ class IssueGridHandler extends GridHandler {
 		$templateMgr->assign_by_ref('issue', $issue);
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$templateMgr->assign_by_ref('issueGalleys', $issueGalleyDao->getGalleysByIssue($issue->getId()));
+		$templateMgr->assign('issueGalleys', $issueGalleyDao->getByIssueId($issue->getId()));
 
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
 		return $json->getString();

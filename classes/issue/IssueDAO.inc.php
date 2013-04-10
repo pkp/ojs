@@ -449,10 +449,10 @@ class IssueDAO extends DAO {
 
 		// Delete published issue galleys and issue files
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$issueGalleyDao->deleteGalleysByIssue($issueId);
+		$issueGalleyDao->deleteByIssueId($issueId);
 
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
-		$issueFileDao->deleteIssueFiles($issueId);
+		$issueFileDao->deleteByIssueId($issueId);
 
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($issueId);

@@ -25,7 +25,7 @@ class IssueFileDAO extends PKPFileDAO {
 	/**
 	 * Constructor.
 	 */
-	function IssueFileDao () {
+	function IssueFileDAO() {
 		parent::DAO();
 	}
 
@@ -51,62 +51,30 @@ class IssueFileDAO extends PKPFileDAO {
 	 * @param $issueId int optional
 	 * @return IssueFile
 	 */
-	function &getIssueFile($fileId, $issueId = null) {
-		if ($fileId === null) {
-			$returner = null;
-			return $returner;
-		}
-
-		if ($issueId != null) {
-			$result =& $this->retrieve(
-				'SELECT f.*
-				FROM issue_files f
-				WHERE f.file_id = ?
-				AND f.issue_id = ?',
-				array((int) $fileId, (int) $issueId)
+	function getById($fileId, $issueId = null) {
+		$params = array((int) $fileId);
+		if ($issueId) $params[] = (int) $issueId;
+		$result = $this->retrieve(
+			'SELECT f.*
+			FROM	issue_files f
+			WHERE	f.file_id = ?
+				' . ($issueId?' AND f.issue_id = ?':''),
+				$params
 			);
-		} else {
-			$result =& $this->retrieve(
-				'SELECT f.*
-				FROM issue_files f
-				WHERE f.file_id = ?',
-				(int) $fileId
-			);
-		}
-
 		$returner = null;
 		if (isset($result) && $result->RecordCount() != 0) {
-			$returner =& $this->_returnIssueFileFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
-
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
 	/**
-	 * Retrieve all issue files for an issue.
-	 * @param $issueId int
-	 * @return array IssueFiles
+	 * Construct a new IssueFile data object.
+	 * @return IssueFile
 	 */
-	function &getIssueFilesByIssue($issueId) {
-		$issueFiles = array();
-
-		$result = $this->retrieve(
-			'SELECT * FROM issue_files WHERE issue_id = ?',
-			(int) $issueId
-		);
-
-		while (!$result->EOF) {
-			$issueFiles[] = $this->_returnIssueFileFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $issueFiles;
+	function newDataObject() {
+		return new IssueFile();
 	}
 
 	/**
@@ -114,8 +82,8 @@ class IssueFileDAO extends PKPFileDAO {
 	 * @param $row array
 	 * @return IssueFile
 	 */
-	function &_returnIssueFileFromRow($row) {
-		$issueFile = new IssueFile();
+	function _fromRow($row) {
+		$issueFile = $this->newDataObject();
 		$issueFile->setId($row['file_id']);
 		$issueFile->setIssueId($row['issue_id']);
 		$issueFile->setFileName($row['file_name']);
@@ -134,16 +102,7 @@ class IssueFileDAO extends PKPFileDAO {
 	 * @param $issueFile IssueFile
 	 * @return int
 	 */
-	function insertIssueFile(&$issueFile) {
-		$params = array(
-			(int) $issueFile->getIssueId(),
-			$issueFile->getFileName(),
-			$issueFile->getFileType(),
-			$issueFile->getFileSize(),
-			$issueFile->getContentType(),
-			$issueFile->getOriginalFileName()
-		);
-
+	function insertObject($issueFile) {
 		$this->update(
 			sprintf(
 				'INSERT INTO issue_files
@@ -160,7 +119,14 @@ class IssueFileDAO extends PKPFileDAO {
 				$this->datetimeToDB($issueFile->getDateUploaded()),
 				$this->datetimeToDB($issueFile->getDateModified())
 			),
-			$params
+			array(
+				(int) $issueFile->getIssueId(),
+				$issueFile->getFileName(),
+				$issueFile->getFileType(),
+				$issueFile->getFileSize(),
+				$issueFile->getContentType(),
+				$issueFile->getOriginalFileName()
+			)
 		);
 
 		$issueFile->setId($this->getInsertId());
@@ -171,7 +137,7 @@ class IssueFileDAO extends PKPFileDAO {
 	 * Update an existing issue file.
 	 * @param $issue IssueFile
 	 */
-	function updateIssueFile(&$issueFile) {
+	function updateObject($issueFile) {
 		$this->update(
 			sprintf('UPDATE issue_files
 				SET
@@ -194,7 +160,7 @@ class IssueFileDAO extends PKPFileDAO {
 				$issueFile->getFileSize(),
 				$issueFile->getContentType(),
 				$issueFile->getOriginalFileName(),
-				$issueFile->getId()
+				(int) $issueFile->getId()
 			)
 		);
 
@@ -206,17 +172,16 @@ class IssueFileDAO extends PKPFileDAO {
 	 * Delete an issue file.
 	 * @param $issue IssueFile
 	 */
-	function deleteIssueFile(&$issueFile) {
-		return $this->deleteIssueFileById($issueFile->getId());
+	function deleteObject($issueFile) {
+		$this->deleteById($issueFile->getId());
 	}
 
 	/**
 	 * Delete an issue file by ID.
 	 * @param $issueId int
-	 * @param $revision int
 	 */
-	function deleteIssueFileById($fileId) {
-		return $this->update(
+	function deleteById($fileId) {
+		$this->update(
 			'DELETE FROM issue_files WHERE file_id = ?', (int) $fileId
 		);
 	}
@@ -225,8 +190,8 @@ class IssueFileDAO extends PKPFileDAO {
 	 * Delete all issue files for an issue.
 	 * @param $issueId int
 	 */
-	function deleteIssueFiles($issueId) {
-		return $this->update(
+	function deleteByIssueId($issueId) {
+		$this->update(
 			'DELETE FROM issue_files WHERE issue_id = ?', (int) $issueId
 		);
 	}

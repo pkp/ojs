@@ -131,9 +131,9 @@ class IssueHandler extends Handler {
 		$this->validate($request, $issueId, $galleyId);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
-		$issue =& $this->getIssue();
-		$galley =& $this->getGalley();
+		$journal = $request->getJournal();
+		$issue = $this->getIssue();
+		$galley = $this->getGalley();
 
 		// Ensure we have PDF galley for inline viewing
 		// Otherwise redirect to download issue galley page
@@ -171,15 +171,15 @@ class IssueHandler extends Handler {
 		$this->validate($request, $issueId, $galleyId);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
-		$issue =& $this->getIssue();
-		$galley =& $this->getGalley();
+		$journal = $request->getJournal();
+		$issue = $this->getIssue();
+		$galley = $this->getGalley();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign_by_ref('galley', $galley);
-		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign('issue', $issue);
 		$templateMgr->display('issue/interstitial.tpl');
 	}
 
@@ -215,7 +215,7 @@ class IssueHandler extends Handler {
 	 * Get the retrieved issue
 	 * @return Issue
 	 */
-	function &getIssue() {
+	function getIssue() {
 		return $this->_issue;
 	}
 
@@ -224,14 +224,14 @@ class IssueHandler extends Handler {
 	 * @param $issue Issue
 	 */
 	function setIssue($issue) {
-		$this->_issue =& $issue;
+		$this->_issue = $issue;
 	}
 
 	/**
 	 * Get the retrieved issue galley
 	 * @return IssueGalley
 	 */
-	function &getGalley() {
+	function getGalley() {
 		return $this->_galley;
 	}
 
@@ -240,7 +240,7 @@ class IssueHandler extends Handler {
 	 * @param $galley IssueGalley
 	 */
 	function setGalley($galley) {
-		$this->_galley =& $galley;
+		$this->_galley = $galley;
 	}
 
 	/**
@@ -290,9 +290,9 @@ class IssueHandler extends Handler {
 		// Get the issue galley
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $issue->getId());
+			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 		} else {
-			$galley = $galleyDao->getGalley($galleyId, $issue->getId());
+			$galley = $galleyDao->getById($galleyId, $issue->getId());
 		}
 
 		// Invalid galley id, redirect to issue page
@@ -376,9 +376,9 @@ class IssueHandler extends Handler {
 	 * @param $inline boolean
 	 */
 	function _showIssueGalley($request, $inline = false) {
-		$journal =& $request->getJournal();
-		$issue =& $this->getIssue();
-		$galley =& $this->getGalley();
+		$journal = $request->getJournal();
+		$issue = $this->getIssue();
+		$galley = $this->getGalley();
 
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		if (!$request->isBot()) $galleyDao->incrementViews($galley->getId());
@@ -428,8 +428,8 @@ class IssueHandler extends Handler {
 			} else {
 				// Issue galleys
 				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-				$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
-				$templateMgr->assign_by_ref('issueGalleys', $issueGalleys);
+				$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
+				$templateMgr->assign('issueGalleys', $issueGalleys);
 
 				// Published articles
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
