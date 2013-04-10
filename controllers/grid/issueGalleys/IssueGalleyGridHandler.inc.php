@@ -24,7 +24,7 @@ class IssueGalleyGridHandler extends GridHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'fetchGrid', 'fetchRow',
+				'fetchGrid', 'fetchRow', 'saveSequence',
 				'add', 'edit', 'upload', 'download', 'update', 'delete'
 			)
 		);
@@ -57,14 +57,39 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
+	 * @see lib/pkp/classes/controllers/grid/GridHandler::getDataElementSequence()
+	 */
+	function getDataElementSequence($issueGalley) {
+		return $issueGalley->getSequence();
+	}
+
+	/**
+	 * @see lib/pkp/classes/controllers/grid/GridHandler::setDataElementSequence()
+	 */
+	function setDataElementSequence(&$request, $rowId, &$issueGalley, $newSequence) {
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+		$issueGalley->setSequence($newSequence);
+		$issueGalleyDao->updateObject($issueGalley);
+	}
+
+	/**
+	 * @see GridHandler::addFeatures()
+	 */
+	function initFeatures($request, $args) {
+		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+		return array(new OrderGridItemsFeature());
+	}
+
+	/**
 	 * @see GridDataProvider::getRequestArgs()
 	 */
 	function getRequestArgs() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		return array_merge(
-			parent::getRequestArgs(),
-			array('issueId' => $issue->getId())
-		);
+		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+		$requestArgs = (array) parent::getRequestArgs();
+		$requestArgs['issueId'] = $issue->getId();
+		if ($issueGalley) $requestArgs['issueGalleyId'] = $issueGalley->getId();
+		return $requestArgs;
 	}
 
 	/**
