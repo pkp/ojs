@@ -154,7 +154,8 @@ class IssueGalleyDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$galleys[] = $this->_fromRow($result->GetRowAssoc(false));
+			$issueGalley = $this->_fromRow($result->GetRowAssoc(false));
+			$galleys[$issueGalley->getId()] = $issueGalley;
 			$result->MoveNext();
 		}
 

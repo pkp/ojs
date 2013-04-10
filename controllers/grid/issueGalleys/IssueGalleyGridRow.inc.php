@@ -49,7 +49,7 @@ class IssueGalleyGridRow extends GridRow {
 				new LinkAction(
 					'edit',
 					new AjaxModal(
-						$router->url($request, null, null, 'editIssueGalley', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
+						$router->url($request, null, null, 'edit', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
 						__('editor.issues.editIssueGalley'),
 						'modal_edit',
 						true),

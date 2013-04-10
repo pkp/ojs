@@ -40,6 +40,7 @@ class IssueGalleyGridCellProvider extends GridCellProvider {
 			case 'locale':
 				$allLocales = AppLocale::getAllLocales();
 				return array('label' => $allLocales[$issueGalley->getLocale()]);
+			case 'publicGalleyId': return array('label' => $issueGalley->getPubId('publisher-id'));
 			default: assert(false); break;
 		}
 	}

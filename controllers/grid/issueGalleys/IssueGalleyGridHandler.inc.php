@@ -119,6 +119,19 @@ class IssueGalleyGridHandler extends GridHandler {
 				)
 			);
 		}
+
+		// Public ID, if enabled
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$this->addColumn(
+				new GridColumn(
+					'publicGalleyId',
+					'submission.layout.publicGalleyId',
+					null,
+					'controllers/grid/gridCell.tpl',
+					$issueGalleyGridCellProvider
+				)
+			);
+		}
 	}
 
 	/**
@@ -192,10 +205,11 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function download($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 		import('classes.file.IssueFileManager');
-		$issueFileManager = new IssueFileManager($issueId);
-		return $issueFileManager->downloadFile($galley->getFileId());
+		$issueFileManager = new IssueFileManager($issue->getId());
+		return $issueFileManager->downloadFile($issueGalley->getFileId());
 	}
 
 	/**

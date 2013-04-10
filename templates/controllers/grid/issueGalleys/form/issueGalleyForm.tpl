@@ -21,13 +21,13 @@
 		);
 	{rdelim});
 </script>
-<form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId galleyId=$galleyId}">
+<form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$galleyId}">
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.galley"}
 			<div id="plupload"></div>
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
-			{if $styleFileName}
-				<a href="{$publicFilesDir}/{$galleystyleFileName|escape}" target="_blank">{$originalFileName|escape}</a>
+			{if $issueGalley}
+				<a href="{url op="download" issueId=$issueId issueGalleyId=$issueGalleyId}" target="_blank">{$issueGalley->getOriginalFileName()|escape}</a>
 			{/if}
 		{/fbvFormSection}
 
