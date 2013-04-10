@@ -43,7 +43,7 @@
 			{fbvElement type="textarea" id="coverPageDescription" value=$coverPageDescription multilingual=true rich=true label="editor.issues.coverPageCaption"}
 		{/fbvFormSection}
 		{fbvFormSection list=true}
-			{fbvElement type="checkbox" id="hideCoverPageArchives" value=1 checked=$hideCoverPageArchives label="editor.issues.coverPageDisplay" inline=true multilingual=true}
+			{fbvElement type="checkbox" id="hideCoverPageArchives" value=1 checked=$hideCoverPageArchives label="editor.issues.hideCoverPageArchives" inline=true multilingual=true}
 			{fbvElement type="checkbox" id="hideCoverPageCover" value=1 checked=$hideCoverPageCover label="editor.issues.hideCoverPageCover" inline=true multilingual=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
