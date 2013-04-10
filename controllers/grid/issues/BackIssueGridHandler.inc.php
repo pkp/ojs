@@ -37,6 +37,23 @@ class BackIssueGridHandler extends IssueGridHandler {
 	}
 
 	/**
+	 * Private function to add central columns to the grid.
+	 * @param $issueGridCellProvider IssueGridCellProvider
+	 */
+	protected function _addCenterColumns($issueGridCellProvider) {
+		// Published state
+		$this->addColumn(
+			new GridColumn(
+				'published',
+				'editor.issues.published',
+				null,
+				'controllers/grid/gridCell.tpl',
+				$issueGridCellProvider
+			)
+		);
+	}
+
+	/**
 	 * @see GridHandler::loadData
 	 */
 	function loadData(&$request, $filter) {

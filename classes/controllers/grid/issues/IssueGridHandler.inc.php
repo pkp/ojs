@@ -81,16 +81,7 @@ class IssueGridHandler extends GridHandler {
 			)
 		);
 
-		// Published state
-		$this->addColumn(
-			new GridColumn(
-				'published',
-				'editor.issues.published',
-				null,
-				'controllers/grid/gridCell.tpl',
-				$issueGridCellProvider
-			)
-		);
+		$this->_addCenterColumns($issueGridCellProvider);
 
 		// Number of articles
 		$this->addColumn(
@@ -102,6 +93,14 @@ class IssueGridHandler extends GridHandler {
 				$issueGridCellProvider
 			)
 		);
+	}
+
+	/**
+	 * Private function to add central columns to the grid.
+	 * May be overridden by subclasses.
+	 * @param $issueGridCellProvider IssueGridCellProvider
+	 */
+	protected function _addCenterColumns($issueGridCellProvider) {
 	}
 
 	/**
