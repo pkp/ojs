@@ -58,8 +58,8 @@ class CustomBlockEditForm extends Form {
 	 */
 	function addTinyMCE() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-		$templateMgr =& TemplateManager::getManager();
+		$plugin = $this->plugin;
+		$templateMgr = TemplateManager::getManager();
 
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');

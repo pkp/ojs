@@ -90,9 +90,9 @@ class URNPubIdPlugin extends PubIdPlugin {
 				$journalId = $article->getJournalId();
 			}
 			// get the journal
-			$request =& $this->getRequest();
-			$router =& $request->getRouter();
-			$journal =& $router->getContext($request);
+			$request = $this->getRequest();
+			$router = $request->getRouter();
+			$journal = $router->getContext($request);
 			if (!$journal || $journal->getId() != $journalId) return null;
 
 			// Check whether URNs are enabled for the given object type

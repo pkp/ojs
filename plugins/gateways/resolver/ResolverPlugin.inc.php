@@ -65,7 +65,7 @@ class ResolverPlugin extends GatewayPlugin {
 		switch ($scheme) {
 			case 'doi':
 				$doi = implode('/', $args);
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 				$article =& $publishedArticleDao->getPublishedArticleByPubId('doi', $doi, $journal?$journal->getId():null);
 				if(is_a($article, 'PublishedArticle')) {
@@ -75,7 +75,7 @@ class ResolverPlugin extends GatewayPlugin {
 			case 'vnp': // Volume, number, page
 			case 'ynp': // Volume, number, year, page
 				// This can only be used from within a journal context
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				if (!$journal) break;
 
 				if ($scheme == 'vnp') {
@@ -116,7 +116,7 @@ class ResolverPlugin extends GatewayPlugin {
 
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');

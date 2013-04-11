@@ -78,7 +78,7 @@ class MedraExportPlugin extends DOIExportPlugin {
 	/**
 	 * @see DOIExportPlugin::generateExportFiles()
 	 */
-	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
+	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
 		assert(count($objects) >= 1);
 
 		// Identify the O4DOI schema to export.
@@ -105,7 +105,7 @@ class MedraExportPlugin extends DOIExportPlugin {
 	/**
 	 * @see DOIExportPlugin::registerDoi()
 	 */
-	function registerDoi(&$request, &$journal, &$objects, $file) {
+	function registerDoi($request, $journal, &$objects, $file) {
 		// Use a different endpoint for testing and
 		// production.
 		$this->import('classes.MedraWebservice');

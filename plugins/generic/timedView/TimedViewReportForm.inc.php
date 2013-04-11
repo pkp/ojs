@@ -44,8 +44,8 @@ class TimedViewReportForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display(&$request) {
-		$templateMgr =& TemplateManager::getManager($request);
+	function display($request) {
+		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
 
 		$templateMgr->assign('yearOffsetPast', TIMED_VIEW_REPORT_YEAR_OFFSET_PAST);
@@ -67,7 +67,7 @@ class TimedViewReportForm extends Form {
 	 * Save subscription.
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		$columns = array(
 			__('plugins.generic.timedView.report.articleId'),

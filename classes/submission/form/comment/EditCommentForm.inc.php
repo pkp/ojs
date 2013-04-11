@@ -41,7 +41,7 @@ class EditCommentForm extends Form {
 		$this->roleId = $comment->getRoleId();
 
 		$this->article = $article;
-		$this->user =& Request::getUser();
+		$this->user = Request::getUser();
 	}
 
 	/**
@@ -69,12 +69,12 @@ class EditCommentForm extends Form {
 			$hiddenFormParams = array_merge ($hiddenFormParams, $additionalHiddenParams);
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		$isPeerReviewComment = $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW;
 		$templateMgr->assign('isPeerReviewComment', $isPeerReviewComment); // FIXME
-		$templateMgr->assign_by_ref('comment', $this->comment);
-		$templateMgr->assign_by_ref('hiddenFormParams', $hiddenFormParams);
+		$templateMgr->assign('comment', $this->comment);
+		$templateMgr->assign('hiddenFormParams', $hiddenFormParams);
 
 		parent::display();
 	}
@@ -116,7 +116,7 @@ class EditCommentForm extends Form {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		$recipients = array();
 
@@ -141,7 +141,7 @@ class EditCommentForm extends Form {
 		// Get proofreader
 		$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($proofSignoff != null && $proofSignoff->getUserId() > 0) {
-			$proofreader =& $userDao->getById($proofSignoff->getUserId());
+			$proofreader = $userDao->getById($proofSignoff->getUserId());
 		} else {
 			$proofreader = null;
 		}
@@ -149,7 +149,7 @@ class EditCommentForm extends Form {
 		// Get layout editor
 		$layoutSignoff = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-			$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
+			$layoutEditor = $userDao->getById($layoutSignoff->getUserId());
 		} else {
 			$layoutEditor = null;
 		}
@@ -157,7 +157,7 @@ class EditCommentForm extends Form {
 		// Get copyeditor
 		$copySignoff = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $this->article->getId());
 		if ($copySignoff != null && $copySignoff->getUserId() > 0) {
-			$copyeditor =& $userDao->getById($copySignoff->getUserId());
+			$copyeditor = $userDao->getById($copySignoff->getUserId());
 		} else {
 			$copyeditor = null;
 		}
@@ -172,7 +172,7 @@ class EditCommentForm extends Form {
 		}
 
 		// Get author
-		$author =& $userDao->getById($this->article->getUserId());
+		$author = $userDao->getById($this->article->getUserId());
 
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:
@@ -290,7 +290,7 @@ class EditCommentForm extends Form {
 	function email($recipients, $request) {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$email->setReplyTo(null);
 
 		foreach ($recipients as $emailAddress => $name) {

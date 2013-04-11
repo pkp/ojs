@@ -23,7 +23,7 @@ class PluginLevelRequiredPolicy extends AuthorizationPolicy {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function PluginLevelRequiredPolicy(&$request, $contextLevel) {
+	function PluginLevelRequiredPolicy($request, $contextLevel) {
 		parent::AuthorizationPolicy();
 		$this->_contextLevel =& $contextLevel;
 	}

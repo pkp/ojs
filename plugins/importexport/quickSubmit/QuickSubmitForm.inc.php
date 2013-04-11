@@ -26,15 +26,15 @@ class QuickSubmitForm extends Form {
 	function QuickSubmitForm(&$plugin, $request) {
 		parent::Form($plugin->getTemplatePath() . 'index.tpl');
 
-		$this->request =& $request;
-		$journal =& $request->getJournal();
+		$this->request = $request;
+		$journal = $request->getJournal();
 
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'tempFileId', 'required', 'plugins.importexport.quickSubmit.submissionRequired', create_function('$tempFileId', 'return $tempFileId > 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getId())));
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'destination', 'required', 'plugins.importexport.quickSubmit.issueRequired', create_function('$destination, $form', 'return $destination == \'queue\'? true : ($form->getData(\'issueId\') > 0);'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom($this, 'destination', 'required', 'plugins.importexport.quickSubmit.issueRequired', create_function('$destination, $form', 'return $destination == \'queue\'? true : ($form->getData(\'issueId\') > 0);'), array($this)));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.emailRequired', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
 		$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
@@ -54,10 +54,10 @@ class QuickSubmitForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$request =& $this->request;
-		$templateMgr =& TemplateManager::getManager($request);
-		$user =& $request->getUser();
-		$journal =& $request->getJournal();
+		$request = $this->request;
+		$templateMgr = TemplateManager::getManager($request);
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 		$formLocale = $this->getFormLocale();
 
 		$templateMgr->assign('journal', $journal);
@@ -154,8 +154,8 @@ class QuickSubmitForm extends Form {
 	function uploadSubmissionFile($fileName) {
 		import('lib.pkp.classes.file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
-		$request =& $this->request;
-		$user =& $request->getUser();
+		$request = $this->request;
+		$user = $request->getUser();
 
 		$temporaryFile = $temporaryFileManager->handleUpload($fileName, $user->getId());
 
@@ -174,11 +174,11 @@ class QuickSubmitForm extends Form {
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		$application =& PKPApplication::getApplication();
-		$request =& $this->request;
-		$user =& $request->getUser();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$application = PKPApplication::getApplication();
+		$request = $this->request;
+		$user = $request->getUser();
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 
 		$article = $articleDao->newDataObject();
 		$article->setLocale($journal->getPrimaryLocale()); // FIXME in bug #5543

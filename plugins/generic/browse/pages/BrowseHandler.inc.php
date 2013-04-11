@@ -20,11 +20,11 @@ class BrowseHandler extends Handler {
 	/**
 	 * Show list of journal sections.
 	 */
-	function sections($args, &$request) {
+	function sections($args, $request) {
 		$this->setupTemplate($request);
 
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 
 		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseBySections = $browsePlugin->getSetting($journal->getId(), 'enableBrowseBySections');
@@ -64,8 +64,8 @@ class BrowseHandler extends Handler {
 				$sections = array_slice($sections, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sections, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->assign_by_ref('results', $results);
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->assign('results', $results);
 				$templateMgr->assign('enableBrowseBySections', $enableBrowseBySections);
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
 			}
@@ -77,11 +77,11 @@ class BrowseHandler extends Handler {
 	/**
 	 * Show list of journal sections identify types.
 	 */
-	function identifyTypes($args = array(), &$request) {
+	function identifyTypes($args = array(), $request) {
 		$this->setupTemplate($request);
 
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 
 		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseByIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'enableBrowseByIdentifyTypes');
@@ -130,8 +130,8 @@ class BrowseHandler extends Handler {
 				$sectionidentifyTypes = array_slice($sectionidentifyTypes, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$results = new VirtualArrayIterator($sectionidentifyTypes, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->assign_by_ref('results', $results);
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->assign('results', $results);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
 			}
@@ -143,11 +143,11 @@ class BrowseHandler extends Handler {
 	/**
 	 * Ensure that we have a journal and the plugin is enabled.
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+	function authorize($request, &$args, $roleAssignments) {
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		if (!isset($journal)) return false;
-		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
+		$browsePlugin = PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		if (!isset($browsePlugin)) return false;
 		if (!$browsePlugin->getEnabled()) return false;
 		return parent::authorize($request, $args, $roleAssignments);

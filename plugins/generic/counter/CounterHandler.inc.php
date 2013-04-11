@@ -30,7 +30,7 @@ class CounterHandler extends Handler {
 	/**
 	 * Display the main log analyzer page.
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 		$plugin =& $this->plugin;
@@ -38,7 +38,7 @@ class CounterHandler extends Handler {
 		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 		$years = $counterReportDao->getYears();
 
-		$templateManager =& TemplateManager::getManager($request);
+		$templateManager = TemplateManager::getManager($request);
 		$templateManager->assign('years', $years);
 		$templateManager->display($plugin->getTemplatePath() . 'index.tpl');
 	}
@@ -67,7 +67,7 @@ class CounterHandler extends Handler {
 	* Internal function to assign information for the Counter part of a report
 	*/
 	function _assignTemplateCounterXML($templateManager, $begin, $end='') {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		
 		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
 
@@ -94,27 +94,23 @@ class CounterHandler extends Handler {
 		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO');
 		$siteTitle = $siteSettingsDao->getSetting('title',AppLocale::getLocale());
 
-		$base_url =& Config::getVar('general','base_url');
-
-		$reqUser =& Request::getUser();
-		$templateManager->assign_by_ref('reqUser', $reqUser);
-
-		$templateManager->assign_by_ref('journalsArray', $journalsArray);
-
+		$reqUser = Request::getUser();
+		$templateManager->assign('reqUser', Request::getUser());
+		$templateManager->assign('journalsArray', $journalsArray);
 		$templateManager->assign('siteTitle', $siteTitle);
-		$templateManager->assign('base_url', $base_url);
+		$templateManager->assign('base_url', Config::getVar('general','base_url'));
 	}
 
 
 	/**
 	 * Counter report in XML
 	 */
-	function reportXML($args, &$request) {
+	function reportXML($args, $request) {
 		$this->validate();
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 		$this->setupTemplate();
 
-		$templateManager =& TemplateManager::getManager($request);
+		$templateManager = TemplateManager::getManager($request);
 
 		$year = $request->getUserVar('year');
 
@@ -130,12 +126,12 @@ class CounterHandler extends Handler {
 	/**
 	 * SUSHI report
 	 */
-	function sushiXML($args, &$request) {
+	function sushiXML($args, $request) {
 		$this->validate();
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 		$this->setupTemplate();
 
-		$templateManager =& TemplateManager::getManager($request);
+		$templateManager = TemplateManager::getManager($request);
 
 		$SOAPRequest = file_get_contents('php://input');
 
@@ -240,12 +236,12 @@ class CounterHandler extends Handler {
 	/**
 	 * Counter report as CSV
 	 */
-	function report($args, &$request) {
+	function report($args, $request) {
 		$this->validate();
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 		$this->setupTemplate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$year = $request->getUserVar('year');
 		$begin = "$year-01-01";
 		$end = "$year-12-01";
@@ -321,14 +317,13 @@ class CounterHandler extends Handler {
 	 */
 	function validate($canRedirect = true) {
 		parent::validate();
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		if (!Validation::isSiteAdmin()) {
 			if ($canRedirect) Validation::redirectLogin();
 			else exit;
 		}
 
-		$plugin =& Registry::get('plugin');
-		$this->plugin =& $plugin;
+		$this->plugin = Registry::get('plugin');
 		return true;
 	}
 }

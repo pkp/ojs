@@ -30,7 +30,7 @@ class ReferralHandler extends Handler {
 		$this->setupTemplate($request);
 
 		$plugin->import('ReferralForm');
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($referralId == null) {
 			$templateMgr->assign('referralTitle', 'plugins.generic.referral.createReferral');
@@ -58,8 +58,8 @@ class ReferralHandler extends Handler {
 		// If it's an insert, ensure that it's allowed for this article
 		if (!isset($referral)) {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$journal =& $request->getJournal();
-			$article =& $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
+			$journal = $request->getJournal();
+			$article = $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
 			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
 				$request->redirect(null, 'author');
 			}
@@ -75,7 +75,7 @@ class ReferralHandler extends Handler {
 			$referralForm->execute();
 			$request->redirect(null, 'author');
 		} else {
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			if ($referralId == null) {
 				$templateMgr->assign('referralTitle', 'plugins.generic.referral.createReferral');
@@ -103,12 +103,12 @@ class ReferralHandler extends Handler {
 		if ($referralId) {
 			$referralDao = DAORegistry::getDAO('ReferralDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$referral =& $referralDao->getReferral($referralId);
+			$referral = $referralDao->getReferral($referralId);
 			if (!$referral) $request->redirect(null, 'index');
 
-			$user =& $request->getUser();
-			$journal =& $request->getJournal();
-			$article =& $publishedArticleDao->getPublishedArticleByArticleId($referral->getArticleId());
+			$user = $request->getUser();
+			$journal = $request->getJournal();
+			$article = $publishedArticleDao->getPublishedArticleByArticleId($referral->getArticleId());
 			if (!$article || !$journal) $request->redirect(null, 'index');
 			if ($article->getJournalId() != $journal->getId()) $request->redirect(null, 'index');
 			// The article's submitter, journal SE, and journal Editors are allowed.

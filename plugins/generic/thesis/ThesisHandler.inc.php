@@ -28,7 +28,7 @@ class ThesisHandler extends Handler {
 	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
@@ -59,7 +59,7 @@ class ThesisHandler extends Handler {
 			$theses =& $thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
 			$thesisIntroduction = $thesisPlugin->getSetting($journalId, 'thesisIntroduction');
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('theses', $theses);
 			$templateMgr->assign('thesisIntroduction', $thesisIntroduction);
 			$templateMgr->assign('searchField', $searchField);
@@ -89,7 +89,7 @@ class ThesisHandler extends Handler {
 	function submit($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
@@ -107,9 +107,9 @@ class ThesisHandler extends Handler {
 			$thesisPlugin->import('StudentThesisForm');
 			$enableUploadCode = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
 			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettings =& $journalSettingsDao->getSettings($journalId);
+			$journalSettings = $journalSettingsDao->getSettings($journalId);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao = DAORegistry::getDAO('ThesisDAO');
 
@@ -130,7 +130,7 @@ class ThesisHandler extends Handler {
 	function view($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
@@ -149,9 +149,9 @@ class ThesisHandler extends Handler {
 
 		if ($thesesEnabled) {
 			if (($thesisId != null) && ($thesisDao->getThesisJournalId($thesisId) == $journalId) && $thesisDao->isThesisActive($thesisId)) {
-			$thesis =& $thesisDao->getThesis($thesisId);
+			$thesis = $thesisDao->getThesis($thesisId);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
 			$thesisMetaCustomHeaders = $templateMgr->fetch($thesisPlugin->getTemplatePath() . 'metadata.tpl');
@@ -172,7 +172,7 @@ class ThesisHandler extends Handler {
 	function save($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal != null) {
 			$journalId = $journal->getId();
@@ -198,9 +198,9 @@ class ThesisHandler extends Handler {
 				$request->redirect(null, 'thesis');
 			} else {
 				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-				$journalSettings =& $journalSettingsDao->getSettings($journalId);
+				$journalSettings = $journalSettingsDao->getSettings($journalId);
 
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$thesisForm->display();
 			}

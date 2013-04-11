@@ -39,14 +39,14 @@ class CopyeditorAction extends Action {
 		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
 		if ($initialSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 
@@ -105,14 +105,14 @@ class CopyeditorAction extends Action {
 		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$finalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
 		if ($finalSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 
@@ -199,7 +199,7 @@ class CopyeditorAction extends Action {
 
 			if (isset($update)) {
 				// Add log entry
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				import('classes.log.ArticleLog');
 				ArticleLog::logEvent($request, $copyeditorSubmission, SUBMISSION_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', array('copyeditorName' => $user->getFullName()));
 			}
@@ -231,7 +231,7 @@ class CopyeditorAction extends Action {
 		else if ($copyeditStage != 'initial' && $copyeditStage != 'final') return;
 
 		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getId());
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {

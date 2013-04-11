@@ -40,7 +40,7 @@ class StaticPagesEditForm extends Form {
 		$this->plugin =& $plugin;
 		$this->staticPageId = isset($staticPageId)? (int) $staticPageId: null;
 
-		$this->addCheck(new FormValidatorCustom($this, 'pagePath', 'required', 'plugins.generic.staticPages.duplicatePath', array(&$this, 'checkForDuplicatePath'), array($journalId, $staticPageId)));
+		$this->addCheck(new FormValidatorCustom($this, 'pagePath', 'required', 'plugins.generic.staticPages.duplicatePath', array($this, 'checkForDuplicatePath'), array($journalId, $staticPageId)));
 		$this->addCheck(new FormValidatorPost($this));
 
 	}
@@ -86,8 +86,8 @@ class StaticPagesEditForm extends Form {
 
 	function addTinyMCE() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-		$templateMgr =& TemplateManager::getManager();
+		$plugin = $this->plugin;
+		$templateMgr = TemplateManager::getManager();
 
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');

@@ -50,7 +50,7 @@ class CommentForm extends Form {
 		$this->roleId = $roleId;
 		$this->assocId = $assocId == null ? $article->getId() : $assocId;
 
-		$this->user =& Request::getUser();
+		$this->user = Request::getUser();
 
 		if ($commentType != COMMENT_TYPE_PEER_REVIEW) $this->addCheck(new FormValidator($this, 'comments', 'required', 'editor.article.commentsRequired'));
 		$this->addCheck(new FormValidatorPost($this));
@@ -60,8 +60,8 @@ class CommentForm extends Form {
 	 * Set the user this comment form is associated with.
 	 * @param $user object
 	 */
-	function setUser(&$user) {
-		$this->user =& $user;
+	function setUser($user) {
+		$this->user = $user;
 	}
 
 	/**
@@ -71,13 +71,12 @@ class CommentForm extends Form {
 		$article = $this->article;
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$articleComments =& $articleCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
+		$articleComments = $articleCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getLocalizedTitle()));
-		$user =& $this->user;
-		$templateMgr->assign('userId', $user->getId());
+		$templateMgr->assign('userId', $this->user->getId());
 		$templateMgr->assign('articleComments', $articleComments);
 
 		parent::display();
@@ -125,7 +124,7 @@ class CommentForm extends Form {
 	function email($recipients, $request) {
 		$article = $this->article;
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');

@@ -22,7 +22,7 @@ class OjsSubmissionAccessPolicy extends ContextPolicy {
 	 * @param $roleAssignments array
 	 * @param $submissionParameterName string
 	 */
-	function OjsSubmissionAccessPolicy(&$request, &$args, $roleAssignments, $submissionParameterName = 'articleId') {
+	function OjsSubmissionAccessPolicy($request, &$args, $roleAssignments, $submissionParameterName = 'articleId') {
 		parent::ContextPolicy($request);
 
 		// Create a "permit overrides" policy set that specifies

@@ -91,15 +91,15 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		// If the thesis plugin isn't enabled, don't do anything.
-		$application =& PKPApplication::getApplication();
-		$products =& $application->getEnabledProducts('plugins.generic');
+		$application = PKPApplication::getApplication();
+		$products = $application->getEnabledProducts('plugins.generic');
 		if (!isset($products['thesis'])) return '';
 
-		$plugin =& $this->getThesisFeedPlugin();
+		$plugin = $this->getThesisFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = $request->getRequestedPage();
 

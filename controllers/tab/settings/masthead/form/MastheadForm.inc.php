@@ -63,7 +63,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * @see ContextSettingsForm::initData.
 	 * @param $request Request
 	 */
-	function initData(&$request) {
+	function initData($request) {
 		parent::initData($request);
 
 		$journal = $request->getContext();
@@ -80,7 +80,7 @@ class MastheadForm extends ContextSettingsForm {
 	/**
 	 * @see Form::fetch()
 	 */
-	function fetch(&$request, $params = null) {
+	function fetch($request, $params = null) {
 		$site = $request->getSite();
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('categoriesEnabled', $site->getSetting('categoriesEnabled'));
@@ -91,7 +91,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * @see ContextSettingsForm::execute()
 	 * @param $request Request
 	 */
-	function execute(&$request) {
+	function execute($request) {
 		$journal = $request->getContext();
 
 		if ($journal->getEnabled() !== $this->getData('journalEnabled')) {

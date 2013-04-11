@@ -98,9 +98,9 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$request =& $this->getRequest();
+		$templateMgr = TemplateManager::getManager();
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+		$request = $this->getRequest();
 
 		$pageCrumbs = array(
 			array(
@@ -113,7 +113,7 @@ class CustomBlockPlugin extends BlockPlugin {
 			)
 		);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->import('CustomBlockEditForm');
 		$form = new CustomBlockEditForm($this, $journal->getId());
@@ -159,7 +159,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));

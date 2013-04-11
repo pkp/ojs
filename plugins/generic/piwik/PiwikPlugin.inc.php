@@ -114,8 +114,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getId(), 'enabled');
 	}
@@ -124,8 +124,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -138,11 +138,11 @@ class PiwikPlugin extends GenericPlugin {
 	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
-			$request =& $this->getRequest();
+			$request = $this->getRequest();
 
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$journalId = $journal->getId();
 			$journalPath = $journal->getPath();
 			$piwikSiteId = $this->getSetting($journalId, 'piwikSiteId');
@@ -170,11 +170,11 @@ class PiwikPlugin extends GenericPlugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$returner = true;
 
 		switch ($verb) {

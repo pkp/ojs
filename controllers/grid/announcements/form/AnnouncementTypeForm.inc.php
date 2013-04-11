@@ -36,7 +36,7 @@ class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	 * @see Form::fetch()
 	 */
 	function fetch($request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('typeId', $this->typeId);
 		return parent::fetch($request, 'controllers/grid/announcements/form/announcementTypeForm.tpl');
 	}

@@ -44,7 +44,7 @@ class SubscriptionTypeForm extends Form {
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		parent::Form('subscription/subscriptionTypeForm.tpl');
 
@@ -90,7 +90,7 @@ class SubscriptionTypeForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('typeId', $this->typeId);
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		$templateMgr->assign('validFormats', $this->validFormats);
@@ -144,7 +144,7 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function execute() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		if (isset($this->typeId)) {
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);

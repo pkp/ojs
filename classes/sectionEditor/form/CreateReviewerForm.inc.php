@@ -29,7 +29,7 @@ class CreateReviewerForm extends Form {
 		parent::Form('sectionEditor/createReviewerForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$this->articleId = $articleId;
 
 		// Validation checks for this form
@@ -45,7 +45,7 @@ class CreateReviewerForm extends Form {
 		// Provide a default for sendNotify: If we're using one-click
 		// reviewer access or email-based reviews, it's not necessary;
 		// otherwise, it should default to on.
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 		$this->setData('sendNotify', ($reviewerAccessKeysEnabled || $isEmailBasedReview)?false:true);
@@ -58,19 +58,17 @@ class CreateReviewerForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display(&$args, &$request) {
-		$templateMgr =& TemplateManager::getManager($request);
-		$site =& $request->getSite();
+	function display(&$args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$site = $request->getSite();
 		$templateMgr->assign('articleId', $this->articleId);
 
-		$site =& $request->getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
 		$countryDao = DAORegistry::getDAO('CountryDAO');
-		$countries =& $countryDao->getCountries();
-		$templateMgr->assign_by_ref('countries', $countries);
+		$templateMgr->assign('countries', $countryDao->getCountries());
 
 		parent::display();
 	}
@@ -144,10 +142,10 @@ class CreateReviewerForm extends Form {
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 
 		$authDao = DAORegistry::getDAO('AuthSourceDAO');
-		$auth =& $authDao->getDefaultPlugin();
+		$auth = $authDao->getDefaultPlugin();
 		$user->setAuthId($auth?$auth->getAuthId():0);
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
 
 		$locales = array();
@@ -182,7 +180,7 @@ class CreateReviewerForm extends Form {
 		$interestManager->setInterestsForUser($user, $interests);
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$role = new Role();
 		$role->setJournalId($journal->getId());
 		$role->setUserId($userId);

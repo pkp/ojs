@@ -73,8 +73,8 @@ class TimedViewPlugin extends GenericPlugin {
 				$this->import('TimedViewReportForm');
 
 				$this->addLocaleData();
-				HookRegistry::register('TemplateManager::display', array(&$this, 'logRequest'));
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('TemplateManager::display', array($this, 'logRequest'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			}
 		}
 		return $success;
@@ -106,15 +106,15 @@ class TimedViewPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function logRequest($hookName, $args) {
-		$templateManager =& $args[0];
+		$templateManager = $args[0];
 		$template =& $args[1];
 
 		// Only page requests will be handled
-		$request =& Registry::get('request');
+		$request = Registry::get('request');
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
+		$site = $request->getSite();
+		$journal = $request->getJournal();
 
 		if (!$this->getEnabled() || !$journal || $request->isBot()) return false;
 

@@ -24,7 +24,7 @@ class ArticleLog extends PkpLog {
 	 * @param $params array optional
 	 * @return object ArticleLogEntry iff the event was logged
 	 */
-	function logEvent(&$request, &$submission, $eventType, $messageKey, $params = array()) {
+	function logEvent($request, $submission, $eventType, $messageKey, $params = array()) {
 		// Create a new entry object
 		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		$entry = $articleEventLogDao->newDataObject();
@@ -33,7 +33,7 @@ class ArticleLog extends PkpLog {
 		$entry->setDateLogged(Core::getCurrentDate());
 		$entry->setIPAddress($request->getRemoteAddr());
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		if ($user) $entry->setUserId($user->getId());
 
 		$entry->setAssocType(ASSOC_TYPE_SUBMISSION);

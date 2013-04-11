@@ -50,12 +50,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		switch (array_shift($args)) {
 			case 'exportIssues':
 				$issueIds = $request->getUserVar('issueId');
@@ -112,7 +112,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				import('lib.pkp.classes.file.TemporaryFileManager');
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				$temporaryFileManager = new TemporaryFileManager();
 
 				if (($existingFileId = $request->getUserVar('temporaryFileId'))) {

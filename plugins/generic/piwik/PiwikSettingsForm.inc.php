@@ -42,7 +42,7 @@ class PiwikSettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin = &$this->plugin;
+		$plugin = $this->plugin;
 
 		$this->_data = array(
 			'piwikUrl' => $plugin->getSetting($journalId, 'piwikUrl'),
@@ -61,7 +61,7 @@ class PiwikSettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$plugin = &$this->plugin;
+		$plugin = $this->plugin;
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'piwikUrl', rtrim($this->getData('piwikUrl'), "/"), 'string');

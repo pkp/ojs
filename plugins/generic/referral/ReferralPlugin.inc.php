@@ -25,8 +25,8 @@ class ReferralPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register ('TemplateManager::display', array(&$this, 'handleTemplateDisplay'));
-				HookRegistry::register ('LoadHandler', array(&$this, 'handleLoadHandler'));
+				HookRegistry::register ('TemplateManager::display', array($this, 'handleTemplateDisplay'));
+				HookRegistry::register ('LoadHandler', array($this, 'handleLoadHandler'));
 				$this->import('Referral');
 				$this->import('ReferralDAO');
 				$referralDao = new ReferralDAO();
@@ -57,9 +57,9 @@ class ReferralPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager();
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& $request->getJournal();
+				$templateMgr = TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$journal = $request->getJournal();
 
 				$this->import('ReferralPluginSettingsForm');
 				$form = new ReferralPluginSettingsForm($this, $journal->getId());
@@ -114,7 +114,7 @@ class ReferralPlugin extends GenericPlugin {
 		switch ($params['smarty_include_tpl_file']) {
 			case 'common/footer.tpl':
 				$referralDao = DAORegistry::getDAO('ReferralDAO');
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				$rangeInfo =& Handler::getRangeInfo($request, 'referrals');
 				$referralFilter = (int) $request->getUserVar('referralFilter');
 				if ($referralFilter == 0) $referralFilter = null;
@@ -172,7 +172,7 @@ class ReferralPlugin extends GenericPlugin {
 
 		switch ($template) {
 			case 'article/article.tpl':
-				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleReaderTemplateInclude'));
+				HookRegistry::register ('TemplateManager::include', array($this, 'handleReaderTemplateInclude'));
 			case 'article/interstitial.tpl':
 			case 'article/pdfInterstitial.tpl':
 				$this->logArticleRequest($templateMgr);
@@ -181,7 +181,7 @@ class ReferralPlugin extends GenericPlugin {
 				// Slightly convoluted: register a hook to
 				// display the administration options at the
 				// end of the normal content
-				HookRegistry::register ('TemplateManager::include', array(&$this, 'handleAuthorTemplateInclude'));
+				HookRegistry::register ('TemplateManager::include', array($this, 'handleAuthorTemplateInclude'));
 				break;
 		}
 		return false;

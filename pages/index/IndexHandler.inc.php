@@ -28,15 +28,15 @@ class IndexHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$router =& $request->getRouter();
-		$templateMgr =& TemplateManager::getManager($request);
+		$router = $request->getRouter();
+		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
-		$journal =& $router->getContext($request);
+		$journal = $router->getContext($request);
 		if ($journal) {
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
@@ -81,7 +81,7 @@ class IndexHandler extends Handler {
 
 			$templateMgr->display('index/journal.tpl');
 		} else {
-			$site =& $request->getSite();
+			$site = $request->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
 				$request->redirect($journal->getPath());
@@ -101,7 +101,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('searchInitial', $searchInitial);
 			$templateMgr->assign('useAlphalist', $site->getSetting('useAlphalist'));
 
-			$journals =& $journalDao->getJournals(
+			$journals = $journalDao->getJournals(
 				true,
 				$rangeInfo,
 				$searchInitial?JOURNAL_FIELD_TITLE:JOURNAL_FIELD_SEQUENCE,

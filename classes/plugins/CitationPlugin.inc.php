@@ -75,12 +75,12 @@ class CitationPlugin extends Plugin {
 	 * @param $issue object
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
-		HookRegistry::register('Template::RT::CaptureCite', array(&$this, 'displayCitationHook'));
-		$templateMgr =& TemplateManager::getManager($this->getRequest());
-		$templateMgr->assign_by_ref('citationPlugin', $this);
-		$templateMgr->assign_by_ref('article', $article);
-		$templateMgr->assign_by_ref('issue', $issue);
-		$templateMgr->assign_by_ref('journal', $journal);
+		HookRegistry::register('Template::RT::CaptureCite', array($this, 'displayCitationHook'));
+		$templateMgr = TemplateManager::getManager($this->getRequest());
+		$templateMgr->assign('citationPlugin', $this);
+		$templateMgr->assign('article', $article);
+		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('journal', $journal);
 		$templateMgr->display('rt/captureCite.tpl');
 	}
 
@@ -92,7 +92,7 @@ class CitationPlugin extends Plugin {
 	 * @param $issue object
 	 */
 	function fetchCitation(&$article, &$issue, &$journal) {
-		$templateMgr =& TemplateManager::getManager($this->getRequest());
+		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->assign_by_ref('citationPlugin', $this);
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('issue', $issue);

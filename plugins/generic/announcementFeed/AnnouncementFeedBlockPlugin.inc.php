@@ -90,7 +90,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		if (!$journal->getSetting('enableAnnouncements')) return '';

@@ -82,16 +82,16 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	function getContents(&$templateMgr, $request = null) {
 		$templateMgr->assign('isPostRequest', $request->isPost());
 		if (!defined('SESSION_DISABLE_INIT')) {
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			if (isset($journal)) {
 				$locales = $journal->getSupportedLocaleNames();
 
 			} else {
-				$site =& $request->getSite();
+				$site = $request->getSite();
 				$locales = $site->getSupportedLocaleNames();
 			}
 		} else {
-			$locales =& AppLocale::getAllLocales();
+			$locales = AppLocale::getAllLocales();
 			$templateMgr->assign('languageToggleNoUser', true);
 		}
 

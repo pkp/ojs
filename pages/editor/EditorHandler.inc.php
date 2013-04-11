@@ -42,15 +42,15 @@ class EditorHandler extends SectionEditorHandler {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$journal =& $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
-		$sections =& $sectionDao->getSectionTitles($journal->getId());
+		$sections = $sectionDao->getSectionTitles($journal->getId());
 		$templateMgr->assign('sectionOptions', array(0 => AppLocale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('fieldOptions', $this->_getSearchFieldOptions());
 		$templateMgr->assign('dateFieldOptions', $this->_getDateFieldOptions());
@@ -160,9 +160,9 @@ class EditorHandler extends SectionEditorHandler {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -255,14 +255,14 @@ class EditorHandler extends SectionEditorHandler {
 			$sortDirection
 		);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('editorOptions', $filterEditorOptions);
 		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 
-		$templateMgr->assign_by_ref('submissions', $submissions);
+		$templateMgr->assign('submissions', $submissions);
 		$templateMgr->assign('filterEditor', $filterEditor);
 		$templateMgr->assign('filterSection', $filterSection);
 
@@ -335,7 +335,7 @@ class EditorHandler extends SectionEditorHandler {
 	function setEditorFlags($args, $request) {
 		$this->validate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
@@ -367,7 +367,7 @@ class EditorHandler extends SectionEditorHandler {
 	function deleteEditAssignment($args, $request) {
 		$this->validate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$editId = (int) array_shift($args);
 
 		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
@@ -393,7 +393,7 @@ class EditorHandler extends SectionEditorHandler {
 		$this->validate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.noneEnrolled
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$articleId = $request->getUserVar('articleId');
 		$editorId = $request->getUserVar('editorId');
 		$roleDao = DAORegistry::getDAO('RoleDAO');
@@ -437,22 +437,22 @@ class EditorHandler extends SectionEditorHandler {
 			if (isset($args[0]) && $args[0] === 'editor') {
 				$roleName = 'user.role.editor';
 				$rolePath = 'editor';
-				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
+				$editors = $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
 			} else {
 				$roleName = 'user.role.sectionEditor';
 				$rolePath = 'sectionEditor';
-				$editors =& $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
+				$editors = $editorSubmissionDao->getUsersNotAssignedToArticle($journal->getId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
-			$templateMgr->assign_by_ref('editors', $editors);
+			$templateMgr->assign('editors', $editors);
 			$templateMgr->assign('roleName', $roleName);
 			$templateMgr->assign('rolePath', $rolePath);
 			$templateMgr->assign('articleId', $articleId);
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$sectionEditorSections =& $sectionDao->getEditorSections($journal->getId());
+			$sectionEditorSections = $sectionDao->getEditorSections($journal->getId());
 
 			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 			$editorStatistics = $editAssignmentDao->getEditorStatistics($journal->getId());
@@ -485,7 +485,7 @@ class EditorHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		parent::setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getById($articleId);

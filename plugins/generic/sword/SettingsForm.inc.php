@@ -57,7 +57,7 @@ class SettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('depositPointTypes', $this->plugin->getTypeMap());
 		return parent::display();
 	}

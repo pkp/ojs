@@ -247,7 +247,7 @@ class Issue extends DataObject {
 			return ($pubId ? $pubId : null);
 		}
 
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIdPlugin->getPubIdType() === $pubIdType) {
 				// If we already have an assigned ID, use it.

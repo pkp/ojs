@@ -48,8 +48,8 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function setUp() {
 		parent::setUp();
-		$application =& PKPApplication::getApplication();
-		$request =& $application->getRequest();
+		$application = PKPApplication::getApplication();
+		$request = $application->getRequest();
 		if (is_null($request->getRouter())) {
 			$router = new PKPRouter();
 			$request->setRouter($router);

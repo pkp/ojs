@@ -24,7 +24,7 @@ class CustomThemePlugin extends ThemePlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			HookRegistry::register ('Installer::postInstall', array(&$this, 'checkOldStyleLocation'));
+			HookRegistry::register ('Installer::postInstall', array($this, 'checkOldStyleLocation'));
 			$this->addLocaleData();
 			return true;
 		}
@@ -92,11 +92,11 @@ class CustomThemePlugin extends ThemePlugin {
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if ($verb != 'settings') return false;
 
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');

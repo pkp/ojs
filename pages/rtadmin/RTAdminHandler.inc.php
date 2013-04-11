@@ -44,7 +44,7 @@ class RTAdminHandler extends Handler {
 			// Display the administration menu for this journal.
 
 			$this->setupTemplate($request);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('versionTitle', isset($version)?$version->getTitle():null);
 			$templateMgr->assign('enabled', $rt->getEnabled());
 
@@ -56,8 +56,8 @@ class RTAdminHandler extends Handler {
 
 			$journals = array();
 
-			$allJournals =& $journalDao->getJournals();
-			$allJournals =& $allJournals->toArray();
+			$allJournals = $journalDao->getJournals();
+			$allJournals = $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
 				if ($roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_MANAGER)) {
@@ -66,7 +66,7 @@ class RTAdminHandler extends Handler {
 			}
 
 			$this->setupTemplate($request);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('rtadmin/journals.tpl');
 		} else {
@@ -102,7 +102,7 @@ class RTAdminHandler extends Handler {
 		}
 
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign_by_ref('versions', $versions);
 		$templateMgr->display('rtadmin/validate.tpl');

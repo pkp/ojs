@@ -28,7 +28,7 @@ class AboutSiteHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function aboutThisPublishingSystem($args, &$request) {
+	function aboutThisPublishingSystem($args, $request) {
 		$versionDao = DAORegistry::getDAO('VersionDAO');
 		$version = $versionDao->getCurrentVersion();
 

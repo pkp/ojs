@@ -19,13 +19,13 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display books for review listing pages.
 	 */
-	function booksForReview($args, &$request) {
+	function booksForReview($args, $request) {
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$mode = $bfrPlugin->getSetting($journalId, 'mode');
 		$bfrPlugin->import('classes.BookForReview');
 		$searchField = null;
@@ -68,7 +68,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 
 		import('pages.editor.EditorHandler');
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$filterEditorOptions = array(
 			FILTER_EDITOR_ALL => AppLocale::Translate('editor.allEditors'),
 			FILTER_EDITOR_ME => AppLocale::Translate('editor.me')
@@ -95,9 +95,9 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('mode', $mode);
-		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
+		$templateMgr->assign('booksForReview', $booksForReview);
 		$templateMgr->assign('filterEditor', $filterEditor);
 		$templateMgr->assign('returnPage', $path);
 
@@ -125,20 +125,20 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Create/edit book for review.
 	 */
-	function createBookForReview($args, &$request) {
+	function createBookForReview($args, $request) {
 		$this->editBookForReview($args, $request);
 	}
 
 	/**
 	 * Create/edit book for review.
 	 */
-	function editBookForReview($args, &$request) {
+	function editBookForReview($args, $request) {
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$mode = $bfrPlugin->getSetting($journalId, 'mode');
 		$bookId = !isset($args) || empty($args) ? null : (int) $args[0];
 		$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
@@ -160,16 +160,15 @@ class BooksForReviewEditorHandler extends Handler {
 			$journalSettings =& $journalSettingsDao->getSettings($journalId);
 
 			$countryDao = DAORegistry::getDAO('CountryDAO');
-			$countries =& $countryDao->getCountries();
+			$countries = $countryDao->getCountries();
 
-			// PHP4 Requires explicit instantiation-by-reference
 			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->initData();
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('mode', $mode);
 			$templateMgr->assign('journalSettings', $journalSettings);
 			$templateMgr->assign('returnPage', $returnPage);
-			$templateMgr->assign_by_ref('countries', $countries);
+			$templateMgr->assign('countries', $countries);
 			$bfrForm->display();
 		} else {
 			$request->redirect(null, 'editor', 'booksForReview', $returnPage);
@@ -179,13 +178,13 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Update book for review.
 	 */
-	function updateBookForReview($args, &$request) {
+	function updateBookForReview($args, $request) {
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$mode = $bfrPlugin->getSetting($journalId, 'mode');
 		$bfrPlugin->import('classes.form.BookForReviewForm');
 		$bookId = $request->getUserVar('bookId') == null ? null : (int) $request->getUserVar('bookId');
@@ -255,7 +254,7 @@ class BooksForReviewEditorHandler extends Handler {
 				} else {
 					$notificationType = NOTIFICATION_TYPE_BOOK_UPDATED;
 				}
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationManager->createTrivialNotification($user->getId(), $notificationType);
@@ -268,13 +267,13 @@ class BooksForReviewEditorHandler extends Handler {
 				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 				$journalSettings =& $journalSettingsDao->getSettings($journal->getId());
 				$countryDao = DAORegistry::getDAO('CountryDAO');
-				$countries =& $countryDao->getCountries();
+				$countries = $countryDao->getCountries();
 
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('mode', $mode);
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$templateMgr->assign('returnPage', $returnPage);
-				$templateMgr->assign_by_ref('countries', $countries);
+				$templateMgr->assign('countries', $countries);
 				$bfrForm->display();
 			}
 		} else {
@@ -285,13 +284,13 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Delete book for review.
 	 */
-	function deleteBookForReview($args, &$request) {
+	function deleteBookForReview($args, $request) {
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		if (!empty($args)) {
 			$bookId = (int) $args[0];
@@ -309,7 +308,7 @@ class BooksForReviewEditorHandler extends Handler {
 			// Ensure book for review is for this journal
 			if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
 				$bfrDao->deleteBookForReviewById($bookId);
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_DELETED);
@@ -321,15 +320,15 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Update book for review settings.
 	 */
-	function booksForReviewSettings($args, &$request) {
+	function booksForReviewSettings($args, $request) {
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$bfrPlugin->import('classes.form.BooksForReviewSettingsForm');
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
 
@@ -343,7 +342,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$form->readInputData();
 			if ($form->validate()) {
 				$form->execute();
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
 				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED);
@@ -361,13 +360,13 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of authors from which to choose a book reviewer.
 	 */
-	function selectBookForReviewAuthor($args, &$request) {
+	function selectBookForReviewAuthor($args, $request) {
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$bookId = (int) $args[0];
 		$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
 
@@ -385,7 +384,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$request->redirect(null, 'editor', 'booksForReview', $returnPage);
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$searchType = null;
@@ -403,7 +402,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$rangeInfo = $this->getRangeInfo($request, 'users');
-		$users =& $roleDao->getUsersByRoleId(ROLE_ID_AUTHOR, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
+		$users = $roleDao->getUsersByRoleId(ROLE_ID_AUTHOR, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -430,13 +429,13 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of submissions from which to choose a book review submission.
 	 */
-	function selectBookForReviewSubmission($args, &$request) {
+	function selectBookForReviewSubmission($args, $request) {
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$bookId = (int) $args[0];
 		$returnPage = $request->getUserVar('returnPage') == null ? null : $request->getUserVar('returnPage');
 
@@ -455,7 +454,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$searchField = null;
 		$searchMatch = null;
@@ -465,7 +464,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$searchMatch = $request->getUserVar('searchMatch');
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$editorId = $user->getId();
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
@@ -503,14 +502,14 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Assign a book for review submission.
 	 */
-	function assignBookForReviewSubmission($args, &$request) {
+	function assignBookForReviewSubmission($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -520,7 +519,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -549,14 +548,14 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Assign a book for review author.
 	 */
-	function assignBookForReviewAuthor($args, &$request) {
+	function assignBookForReviewAuthor($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -566,7 +565,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -615,7 +614,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$bfrDao->updateObject($book);
 
 					$email->send();
-					$user =& $request->getUser();
+					$user = $request->getUser();
 
 					import('classes.notification.NotificationManager');
 					$notificationManager = new NotificationManager();
@@ -663,14 +662,14 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Deny a book for review request.
 	 */
-	function denyBookForReviewAuthor($args, &$request) {
+	function denyBookForReviewAuthor($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -680,7 +679,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -702,7 +701,7 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
-				$user =& $request->getUser();
+				$user = $request->getUser();
 
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -738,14 +737,14 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Mark a book for review as mailed.
 	 */
-	function notifyBookForReviewMailed($args, &$request) {
+	function notifyBookForReviewMailed($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -755,7 +754,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -776,7 +775,7 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
-				$user =& $request->getUser();
+				$user = $request->getUser();
 
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -825,14 +824,14 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Remove book reviewer and reset book for review.
 	 */
-	function removeBookForReviewAuthor($args, &$request) {
+	function removeBookForReviewAuthor($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -842,7 +841,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -869,7 +868,7 @@ class BooksForReviewEditorHandler extends Handler {
 				$bfrDao->updateObject($book);
 
 				$email->send();
-				$user =& $request->getUser();
+				$user = $request->getUser();
 
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -905,7 +904,7 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Remove book for review cover page image.
 	 */
-	function removeBookForReviewCoverPage($args, &$request) {
+	function removeBookForReviewCoverPage($args, $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args) || count($args) < 2) {
@@ -919,7 +918,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$request->redirect(null, 'editor');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$returnPage = $request->getUserVar('returnPage');
 
 		if ($returnPage != null) {
@@ -929,7 +928,7 @@ class BooksForReviewEditorHandler extends Handler {
 			}
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -959,11 +958,11 @@ class BooksForReviewEditorHandler extends Handler {
 	/**
 	 * Ensure that we have a journal, plugin is enabled, and user is editor.
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
-		$journal =& $request->getJournal();
+	function authorize($request, &$args, $roleAssignments) {
+		$journal = $request->getJournal();
 		if (!isset($journal)) return false;
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		if (!isset($bfrPlugin)) return false;
 

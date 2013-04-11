@@ -53,7 +53,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 			}
 		}
 
-		$journal =& $this->request->getJournal();
+		$journal = $this->request->getJournal();
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -96,7 +96,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
 		} else {
@@ -158,7 +158,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 * Create institutional subscription. 
 	 */
 	function execute() {
-		$journal =& $this->request->getJournal();
+		$journal = $this->request->getJournal();
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');

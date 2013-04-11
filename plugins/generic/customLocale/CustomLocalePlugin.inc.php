@@ -37,7 +37,7 @@ class CustomLocalePlugin extends GenericPlugin {
 				}
 
 				// Add custom locale data for all locale files registered after this plugin
-				HookRegistry::register('PKPLocale::registerLocaleFile', array(&$this, 'addCustomLocale'));
+				HookRegistry::register('PKPLocale::registerLocaleFile', array($this, 'addCustomLocale'));
 			}
 
 			return true;

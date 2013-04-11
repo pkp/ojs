@@ -36,21 +36,21 @@ class CommentHandler extends Handler {
 	 * @param $args array
 	 * @param $request object
 	 */
-	function view($args, &$request) {
+	function view($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
 		$this->validate($request, $articleId);
-		$article =& $this->article;
+		$article = $this->article;
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = isset($user)?$user->getId():null;
 
 		$commentDao = DAORegistry::getDAO('CommentDAO');
-		$comment =& $commentDao->getById($commentId, $articleId, 2);
+		$comment = $commentDao->getById($commentId, $articleId, 2);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$isManager = $roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_MANAGER);
@@ -60,7 +60,7 @@ class CommentHandler extends Handler {
 
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		if ($request->getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
 		if ($comment) {
 			$templateMgr->assign_by_ref('comment', $comment);
@@ -84,7 +84,7 @@ class CommentHandler extends Handler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$commentDao = DAORegistry::getDAO('CommentDAO');
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -149,14 +149,14 @@ class CommentHandler extends Handler {
 	 * @params $args array
 	 * @param $request PKPRequest
 	 */
-	function delete($args, &$request) {
+	function delete($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
 		$this->validate($request, $articleId);
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$userId = isset($user)?$user->getId():null;
 
 		$commentDao = DAORegistry::getDAO('CommentDAO');
@@ -177,10 +177,10 @@ class CommentHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @param $articleId int
 	 */
-	function validate(&$request, $articleId) {
+	function validate($request, $articleId) {
 		parent::validate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 

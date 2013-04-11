@@ -90,14 +90,14 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
-			$request =& $this->getRequest();
-			$templateMgr =& TemplateManager::getManager($request);
+			$request = $this->getRequest();
+			$templateMgr = TemplateManager::getManager($request);
 			$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 			if (!empty($currentJournal)) {
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				$journalId = $journal->getId();
 				$phpmvSiteId = $this->getSetting($journalId, 'phpmvSiteId');
 				$phpmvUrl = $this->getSetting($journalId, 'phpmvUrl');
@@ -117,12 +117,12 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& $request->getJournal();
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$journal = $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$this->import('PhpMyVisitesSettingsForm');

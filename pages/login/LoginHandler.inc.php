@@ -21,7 +21,7 @@ class LoginHandler extends PKPLoginHandler {
 	 * @param $args array ($userId)
 	 * @param $request PKPRequest
 	 */
-	function signInAsUser($args, &$request) {
+	function signInAsUser($args, $request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		// only managers and admins have permission
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
@@ -29,13 +29,13 @@ class LoginHandler extends PKPLoginHandler {
 
 		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 
 			if (!Validation::canAdminister($journal->getId(), $userId)) {
 				$this->setupTemplate($request);
 				// We don't have administrative rights
 				// over this user. Display an error.
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
 				$templateMgr->assign('backLink', $request->url(null, null, 'people', 'all'));
@@ -64,7 +64,7 @@ class LoginHandler extends PKPLoginHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function signOutAsUser($args, &$request) {
+	function signOutAsUser($args, $request) {
 		$this->validate();
 
 		$session =& $request->getSession();
@@ -102,8 +102,8 @@ class LoginHandler extends PKPLoginHandler {
 	 * @param $mail MailTemplate
 	 */
 	function _setMailFrom($request, &$mail) {
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
+		$site = $request->getSite();
+		$journal = $request->getJournal();
 
 		// Set the sender based on the current context
 		if ($journal && $journal->getSetting('supportEmail')) {

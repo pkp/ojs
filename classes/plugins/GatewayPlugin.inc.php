@@ -69,8 +69,8 @@ class GatewayPlugin extends Plugin {
 	 * Determine whether or not this plugin is enabled.
 	 */
 	function getEnabled() {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 		return $this->getSetting($journal->getId(), 'enabled');
 	}
@@ -79,8 +79,8 @@ class GatewayPlugin extends Plugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if ($journal) {
 			$this->updateSetting(
 				$journal->getId(),
@@ -96,8 +96,8 @@ class GatewayPlugin extends Plugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$templateManager =& TemplateManager::getManager($this->getRequest());
-		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateManager = TemplateManager::getManager($this->getRequest());
+		$templateManager->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 		switch ($verb) {
 			case 'enable': $this->setEnabled(true); break;
 			case 'disable': $this->setEnabled(false); break;

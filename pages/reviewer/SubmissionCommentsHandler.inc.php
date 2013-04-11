@@ -44,7 +44,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function postPeerReviewComment($args, &$request) {
+	function postPeerReviewComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$reviewId = (int) $request->getUserVar('reviewId');
 
@@ -64,7 +64,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function editComment($args, &$request) {
+	function editComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 		if (!$commentId) $commentId = null;

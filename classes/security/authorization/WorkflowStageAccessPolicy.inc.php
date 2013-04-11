@@ -22,7 +22,7 @@ class WorkflowStageAccessPolicy extends PKPWorkflowStageAccessPolicy {
 	 * @param $submissionParameterName string
 	 * @param $stageId integer One of the WORKFLOW_STAGE_ID_* constants.
 	 */
-	function WorkflowStageAccessPolicy(&$request, &$args, $roleAssignments, $submissionParameterName = 'submissionId', $stageId) {
+	function WorkflowStageAccessPolicy($request, &$args, $roleAssignments, $submissionParameterName = 'submissionId', $stageId) {
 		parent::PKPWorkflowStageAccessPolicy($request, $args, $roleAssignments, $submissionParameterName, $stageId);
 
 		// A workflow stage component can only be called if there's a

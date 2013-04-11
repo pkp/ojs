@@ -31,7 +31,7 @@ class MailTemplate extends PKPMailTemplate {
 		parent::PKPMailTemplate($emailKey, $locale, $enableAttachments, $includeSignature);
 
 		// If a journal wasn't specified, use the current request.
-		if ($journal === null) $journal =& Request::getJournal();
+		if ($journal === null) $journal = Request::getJournal();
 
 		if (isset($this->emailKey)) {
 			$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
@@ -39,7 +39,7 @@ class MailTemplate extends PKPMailTemplate {
 		}
 
 		$userSig = '';
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		if ($user && $includeSignature) {
 			$userSig = $user->getLocalizedSignature();
 			if (!empty($userSig)) $userSig = "\n" . $userSig;
@@ -84,12 +84,12 @@ class MailTemplate extends PKPMailTemplate {
 		}
 
 		// Default "From" to user if available, otherwise site/journal principal contact
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		if ($user) {
 			$this->setReplyTo($user->getEmail(), $user->getFullName());
 		}
 		if (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
-			$site =& Request::getSite();
+			$site = Request::getSite();
 			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
 
 		} else {
@@ -100,7 +100,7 @@ class MailTemplate extends PKPMailTemplate {
 			$this->setSubject('[' . $journal->getLocalizedAcronym() . '] ' . $this->getSubject());
 		}
 
-		$this->journal =& $journal;
+		$this->journal = $journal;
 	}
 
 	/**
@@ -115,7 +115,7 @@ class MailTemplate extends PKPMailTemplate {
 			$paramArray['journalName'] = $this->journal->getLocalizedName();
 			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
-			$site =& Request::getSite();
+			$site = Request::getSite();
 			$paramArray['principalContactSignature'] = $site->getLocalizedContactName();
 		}
 		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::url(Request::getRequestedJournalPath());
@@ -130,7 +130,7 @@ class MailTemplate extends PKPMailTemplate {
 	 * @return void
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		parent::displayEditForm($formActionUrl, $hiddenFormParams, $alternateTemplate, $additionalParameters);
 	}

@@ -20,7 +20,7 @@ class UserAccessibleWorkflowStageRequiredPolicy extends PKPUserAccessibleWorkflo
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function UserAccessibleWorkflowStageRequiredPolicy(&$request) {
+	function UserAccessibleWorkflowStageRequiredPolicy($request) {
 		parent::PKPUserAccessibleWorkflowStageRequiredPolicy($request);
 	}
 

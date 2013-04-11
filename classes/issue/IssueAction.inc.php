@@ -55,7 +55,7 @@ class IssueAction {
 
 		// Get the journal.
 		if (is_null($journal)) {
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 		}
 		if (!$journal || $journal->getId() !== $issue->getJournalId()) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -79,10 +79,10 @@ class IssueAction {
 	 * @param $article object
 	 * @return bool
 	 */
-	function allowedPrePublicationAccess(&$journal, &$article) {
+	function allowedPrePublicationAccess($journal, $article) {
 		if ($this->_roleAllowedPrePublicationAccess($journal)) return true;
 
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
@@ -112,8 +112,8 @@ class IssueAction {
 	 * Checks if user has subscription
 	 * @return bool
 	 */
-	function subscribedUser(&$journal, $issueId = null, $articleId = null) {
-		$user =& Request::getUser();
+	function subscribedUser($journal, $issueId = null, $articleId = null) {
+		$user = Request::getUser();
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
@@ -151,7 +151,7 @@ class IssueAction {
 	 * Checks if remote client domain or ip is allowed
 	 * @return bool
 	 */
-	function subscribedDomain(&$journal, $issueId = null, $articleId = null) {
+	function subscribedDomain($journal, $issueId = null, $articleId = null) {
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$result = false;
 		if (isset($journal)) {
@@ -189,7 +189,7 @@ class IssueAction {
 	function getIssueOptions() {
 		$issueOptions = array();
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -223,7 +223,7 @@ class IssueAction {
 	 */
 	function _roleAllowedPrePublicationAccess($journal) {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();

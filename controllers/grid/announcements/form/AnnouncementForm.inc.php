@@ -56,17 +56,17 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 * @see Form::fetch()
 	 */
 	function fetch($request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('readOnly', $this->isReadOnly());
 		$templateMgr->assign('selectedTypeId', $this->getData('typeId'));
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
-		$announcement =& $announcementDao->getById($this->announcementId);
+		$announcement = $announcementDao->getById($this->announcementId);
 		$templateMgr->assign_by_ref('announcement', $announcement);
 
 		$announcementTypeDao = DAORegistry::getDAO('AnnouncementTypeDAO');
 		list($assocType, $assocId) = $this->_getAnnouncementTypesAssocId();
-		$announcementTypeFactory =& $announcementTypeDao->getByAssoc($assocType, $assocId);
+		$announcementTypeFactory = $announcementTypeDao->getByAssoc($assocType, $assocId);
 
 		$announcementTypeOptions = array();
 		if (!$announcementTypeFactory->wasEmpty()) {
@@ -95,7 +95,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	/**
 	 * @see PKPAnnouncementForm::execute()
 	 */
-	function execute(&$request) {
+	function execute($request) {
 		$announcement = parent::execute();
 		$journalId = $this->getContextId();
 

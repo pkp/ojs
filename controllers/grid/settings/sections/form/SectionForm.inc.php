@@ -130,7 +130,7 @@ class SectionForm extends Form {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function execute($args, &$request) {
+	function execute($args, $request) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$journal = $request->getJournal();
 

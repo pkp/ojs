@@ -98,8 +98,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function fetch($args) {
 		// Make sure we're within a Journal context
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure there's a current issue for this journal
@@ -141,13 +141,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO');
-		$version =& $versionDao->getCurrentVersion();
+		$version = $versionDao->getCurrentVersion();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
-		$templateMgr->assign_by_ref('journal', $journal);
-		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('publishedArticles', $publishedArticles);
+		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('showToc', true);
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);

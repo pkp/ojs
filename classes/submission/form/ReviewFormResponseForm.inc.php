@@ -47,7 +47,7 @@ class ReviewFormResponseForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
@@ -57,9 +57,9 @@ class ReviewFormResponseForm extends Form {
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getById($this->reviewId);
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.reviewFormResponse');
-		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
+		$templateMgr->assign('reviewForm', $reviewForm);
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
 		$templateMgr->assign('reviewId', $this->reviewId);

@@ -832,7 +832,7 @@ class SolrWebService extends XmlWebService {
 			$cacheManager =& CacheManager::getManager();
 			$this->_fieldCache = $cacheManager->getFileCache(
 				'plugins-lucene', 'fieldCache',
-				array(&$this, '_cacheMiss')
+				array($this, '_cacheMiss')
 			);
 
 			// Check to see if the data is outdated (24 hours).
@@ -962,7 +962,7 @@ class SolrWebService extends XmlWebService {
 		if ($status !== WEBSERVICE_RESPONSE_OK) {
 			// We show a generic error message to the end user
 			// to avoid information leakage and log the exact error.
-			$application =& PKPApplication::getApplication();
+			$application = PKPApplication::getApplication();
 			error_log($application->getName() . ' - Lucene plugin:' . PHP_EOL . "The Lucene web service returned a status code $status and the message" . PHP_EOL . $response->saveXML());
 			$this->_serviceMessage = __('plugins.generic.lucene.message.webServiceError');
 			return $nullValue;
@@ -1249,7 +1249,7 @@ class SolrWebService extends XmlWebService {
 					unset($publishedArticle);
 				}
 			}
-			$journal =& $this->_getJournal($article->getJournalId());
+			$journal = $this->_getJournal($article->getJournalId());
 
 			// Check the publication state and subscription state of the article.
 			if ($this->_isArticleAccessAuthorized($article)) {
@@ -1319,10 +1319,10 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// We need the request to retrieve locales and build URLs.
-		$request =& PKPApplication::getRequest();
+		$request = PKPApplication::getRequest();
 
 		// Get all supported locales.
-		$site =& $request->getSite();
+		$site = $request->getSite();
 		$supportedLocales = $site->getSupportedLocales() + array_keys($journal->getSupportedLocaleNames());
 		assert(!empty($supportedLocales));
 
@@ -1474,11 +1474,11 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// We need the router to build file URLs.
-		$router =& $request->getRouter(); /* @var $router PageRouter */
+		$router = $request->getRouter(); /* @var $router PageRouter */
 
 		// Add galley files
 		$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys =& $fileDao->getGalleysByArticle($article->getId());
+		$galleys = $fileDao->getGalleysByArticle($article->getId());
 		$galleyList = null;
 		foreach ($galleys as $galley) { /* @var $galley ArticleGalley */
 			$locale = $galley->getLocale();
@@ -1829,7 +1829,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// Add the journal as a filter query (if set).
-		$journal =& $searchRequest->getJournal();
+		$journal = $searchRequest->getJournal();
 		if (is_a($journal, 'Journal')) {
 			$params['fq'][] = 'journal_id:"' . $this->_instId . '-' . $journal->getId() . '"';
 		}
@@ -1988,11 +1988,11 @@ class SolrWebService extends XmlWebService {
 		if (!is_a($article, 'PublishedArticle')) return false;
 
 		// Get the article's journal.
-		$journal =& $this->_getJournal($article->getJournalId());
+		$journal = $this->_getJournal($article->getJournalId());
 		if (!is_a($journal, 'Journal')) return false;
 
 		// Get the article's issue.
-		$issue =& $this->_getIssue($article->getIssueId(), $journal->getId());
+		$issue = $this->_getIssue($article->getIssueId(), $journal->getId());
 		if (!is_a($issue, 'Issue')) return false;
 
 		// Only index published articles.

@@ -26,7 +26,7 @@ class FontSizeBlockPlugin extends BlockPlugin {
 		else $enabled = parent::getEnabled();
 
 		if ($enabled) {
-			HookRegistry::register('TemplateManager::display', array(&$this, 'displayTemplateCallback'));
+			HookRegistry::register('TemplateManager::display', array($this, 'displayTemplateCallback'));
 		}
 		return $enabled;
 	}

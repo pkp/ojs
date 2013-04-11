@@ -83,8 +83,8 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @return bool
 	 */
 	function isConfigured() {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure CURL support is included.
@@ -114,11 +114,11 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @param $queuedPayment QueuedPayment
 	 * @param $request PKPRequest
 	 */
-	function displayPaymentForm($queuedPaymentId, &$queuedPayment, &$request) {
+	function displayPaymentForm($queuedPaymentId, &$queuedPayment, $request) {
 		if (!$this->isConfigured()) return false;
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		$params = array(
 			'charset' => Config::getVar('i18n', 'client_charset'),
@@ -142,7 +142,7 @@ class PayPalPlugin extends PaymethodPlugin {
 		);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('params', $params);
 		$templateMgr->assign('paypalFormUrl', $this->getSetting($journal->getId(), 'paypalurl'));
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
@@ -154,9 +154,9 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function handle($args, &$request) {
-		$templateMgr =& TemplateManager::getManager($request);
-		$journal =& $request->getJournal();
+	function handle($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$journal = $request->getJournal();
 		if (!$journal) return parent::handle($args, $request);
 
 		// Just in case we need to contact someone

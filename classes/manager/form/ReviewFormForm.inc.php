@@ -49,7 +49,7 @@ class ReviewFormForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('reviewFormId', $this->reviewFormId);
 		parent::display();
 	}
@@ -59,7 +59,7 @@ class ReviewFormForm extends Form {
 	 */
 	function initData() {
 		if ($this->reviewFormId != null) {
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 			$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 
@@ -85,7 +85,7 @@ class ReviewFormForm extends Form {
 	 * Save review form.
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');

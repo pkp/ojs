@@ -25,7 +25,7 @@ class SubmissionFileAccessPolicy extends PKPSubmissionFileAccessPolicy {
 	 * @param $submissionParameterName string the request parameter we expect
 	 *  the submission id in.
 	 */
-	function SubmissionFileAccessPolicy(&$request, $args, $roleAssignments, $mode, $fileIdAndRevision = null, $submissionParameterName = 'submissionId') {
+	function SubmissionFileAccessPolicy($request, $args, $roleAssignments, $mode, $fileIdAndRevision = null, $submissionParameterName = 'submissionId') {
 		parent::PKPSubmissionFileAccessPolicy($request, $args, $roleAssignments, $mode, $fileIdAndRevision, $submissionParameterName);
 
 		$fileAccessPolicy = $this->_baseFileAccessPolicy;

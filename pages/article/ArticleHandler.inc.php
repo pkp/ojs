@@ -33,9 +33,9 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler(&$request) {
+	function ArticleHandler($request) {
 		parent::Handler($request);
-		$router =& $request->getRouter();
+		$router = $request->getRouter();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array($router->getContext($request))));
@@ -46,8 +46,8 @@ class ArticleHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function view($args, &$request) {
-		$router =& $request->getRouter();
+	function view($args, $request) {
+		$router = $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
@@ -106,7 +106,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('js/relatedItems.js');
 		$templateMgr->addJavaScript('js/inlinePdf.js');
 		$templateMgr->addJavaScript('js/pdfobject.js');
@@ -243,7 +243,7 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 * @param $galley ArticleGalley
 	 */
-	function viewDownloadInterstitial($args, &$request, $galley = null) {
+	function viewDownloadInterstitial($args, $request, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$this->validate($request, $articleId, $galleyId);
@@ -263,7 +263,7 @@ class ArticleHandler extends Handler {
 
 		if (!$galley) $request->redirect(null, null, 'view', $articleId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
@@ -277,7 +277,7 @@ class ArticleHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function viewArticle($args, &$request) {
+	function viewArticle($args, $request) {
 		// This function is deprecated since the Reading Tools frameset was removed.
 		return $this->view($args, $request);
 	}
@@ -287,7 +287,7 @@ class ArticleHandler extends Handler {
 	 * @param $args array ($articleId, $galleyId, $fileId [optional])
 	 * @param $request Request
 	 */
-	function viewFile($args, &$request) {
+	function viewFile($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
@@ -326,7 +326,7 @@ class ArticleHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function download($args, &$request) {
+	function download($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$this->validate($request, $articleId, $galleyId);
@@ -354,7 +354,7 @@ class ArticleHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function downloadSuppFile($args, &$request) {
+	function downloadSuppFile($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$suppId = isset($args[1]) ? $args[1] : 0;
 		$this->validate($request, $articleId);
@@ -386,24 +386,24 @@ class ArticleHandler extends Handler {
 	 * @param $articleId string
 	 * @param $galleyId int or string
 	 */
-	function validate(&$request, $articleId, $galleyId = null) {
+	function validate($request, $articleId, $galleyId = null) {
 		parent::validate(null, $request);
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		$journalId = $journal->getId();
 		$article = $publishedArticle = $issue = null;
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user?$user->getId():0;
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journalId, $articleId, true);
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journalId, $articleId, true);
 		} else {
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, true);
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, true);
 		}
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');

@@ -66,7 +66,7 @@ class DepositPointForm extends Form {
 	}
 
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('depositPointId', $this->depositPointId);
 		$templateMgr->assign('depositPointTypes', $this->plugin->getTypeMap());
 		parent::display();

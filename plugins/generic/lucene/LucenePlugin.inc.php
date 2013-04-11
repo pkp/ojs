@@ -114,26 +114,26 @@ class LucenePlugin extends GenericPlugin {
 			if (!checkPhpVersion('5.0.0')) return false;
 
 			// Register callbacks (application-level).
-			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
-			HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
+			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
 
 			// Register callbacks (data-access level).
-			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackArticleDaoAdditionalFieldNames'));
+			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'callbackArticleDaoAdditionalFieldNames'));
 			$customRanking = (boolean)$this->getSetting(0, 'customRanking');
 			if ($customRanking) {
-				HookRegistry::register('sectiondao::getAdditionalFieldNames', array(&$this, 'callbackSectionDaoAdditionalFieldNames'));
+				HookRegistry::register('sectiondao::getAdditionalFieldNames', array($this, 'callbackSectionDaoAdditionalFieldNames'));
 			}
 
 			// Register callbacks (controller-level).
-			HookRegistry::register('ArticleSearch::retrieveResults', array(&$this, 'callbackRetrieveResults'));
-			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array(&$this, 'callbackArticleMetadataChanged'));
-			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array(&$this, 'callbackArticleFileChanged'));
-			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array(&$this, 'callbackArticleFileDeleted'));
-			HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array(&$this, 'callbackArticleFilesChanged'));
-			HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array(&$this, 'callbackSuppFileMetadataChanged'));
-			HookRegistry::register('ArticleSearchIndex::articleDeleted', array(&$this, 'callbackArticleDeleted'));
-			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array(&$this, 'callbackArticleChangesFinished'));
-			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array(&$this, 'callbackRebuildIndex'));
+			HookRegistry::register('ArticleSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
+			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackArticleMetadataChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackArticleFileChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackArticleFileDeleted'));
+			HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackArticleFilesChanged'));
+			HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array($this, 'callbackSuppFileMetadataChanged'));
+			HookRegistry::register('ArticleSearchIndex::articleDeleted', array($this, 'callbackArticleDeleted'));
+			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array($this, 'callbackArticleChangesFinished'));
+			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array($this, 'callbackRebuildIndex'));
 
 			// Register callbacks (forms).
 			if ($customRanking) {
@@ -144,7 +144,7 @@ class LucenePlugin extends GenericPlugin {
 			}
 
 			// Register callbacks (view-level).
-			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackTemplateDisplay'));
 			if ($this->getSetting(0, 'autosuggest')) {
 				HookRegistry::register('Templates::Search::SearchResults::FilterInput', array($this, 'callbackTemplateFilterInput'));
 			}
@@ -240,8 +240,8 @@ class LucenePlugin extends GenericPlugin {
 		switch ($verb) {
 			case 'settings':
 				// Prepare the template manager.
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				// Instantiate an embedded server instance.
 				$this->import('classes.EmbeddedServer');
@@ -727,11 +727,11 @@ class LucenePlugin extends GenericPlugin {
 		if ($template != 'search/search.tpl') return false;
 
 		// Get request and context.
-		$request =& PKPApplication::getRequest();
-		$journal =& $request->getContext();
+		$request = PKPApplication::getRequest();
+		$journal = $request->getContext();
 
 		// Assign our private stylesheet.
-		$templateMgr =& $params[0];
+		$templateMgr = $params[0];
 		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
 
 		// Result set ordering options.
@@ -801,8 +801,8 @@ class LucenePlugin extends GenericPlugin {
 		);
 
 		// Create a URL that links to "similar documents".
-		$request =& PKPApplication::getRequest();
-		$router =& $request->getRouter();
+		$request = PKPApplication::getRequest();
+		$router = $request->getRouter();
 		$simdocsUrl = $router->url(
 			$request, null, 'lucene', 'similarDocuments', null, $urlParams
 		);
@@ -990,7 +990,7 @@ class LucenePlugin extends GenericPlugin {
 			// ...or for all journals.
 			} else {
 				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-				$journalIterator =& $journalDao->getJournals();
+				$journalIterator = $journalDao->getJournals();
 				$journals = $journalIterator->toArray();
 			}
 
@@ -1099,8 +1099,8 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		// Assign parameters.
-		$request =& PKPApplication::getRequest();
-		$site =& $request->getSite();
+		$request = PKPApplication::getRequest();
+		$site = $request->getSite();
 		$mail->assignParams(
 			array('siteName' => $site->getLocalizedTitle(), 'error' => $error)
 		);

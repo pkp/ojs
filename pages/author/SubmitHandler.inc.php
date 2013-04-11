@@ -34,7 +34,7 @@ class SubmitHandler extends AuthorHandler {
 	function submit($args, $request) {
 		$step = (int) array_shift($args);
 		$articleId = (int) $request->getUserVar('articleId');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId, $step, 'author.submit.authorSubmitLoginMessage');
 		$article =& $this->article;
@@ -60,7 +60,7 @@ class SubmitHandler extends AuthorHandler {
 	function saveSubmit($args, $request) {
 		$step = (int) array_shift($args);
 		$articleId = (int) $request->getUserVar('articleId');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId, $step);
 		$this->setupTemplate($request, true);
@@ -170,8 +170,8 @@ class SubmitHandler extends AuthorHandler {
 						);
 					}
 
-					$journal =& $request->getJournal();
-					$templateMgr =& TemplateManager::getManager($request);
+					$journal = $request->getJournal();
+					$templateMgr = TemplateManager::getManager($request);
 					$templateMgr->assign_by_ref('journal', $journal);
 					// If this is an editor and there is a
 					// submission file, article can be expedited.
@@ -197,7 +197,7 @@ class SubmitHandler extends AuthorHandler {
 	 */
 	function submitUploadSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
@@ -219,7 +219,7 @@ class SubmitHandler extends AuthorHandler {
 	function submitSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
@@ -244,7 +244,7 @@ class SubmitHandler extends AuthorHandler {
 	function saveSubmitSuppFile($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId, 4);
 		$article =& $this->article;
@@ -298,7 +298,7 @@ class SubmitHandler extends AuthorHandler {
 	function expediteSubmission($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$article =& $this->article;
 
 		// The author must also be an editor to perform this task.
@@ -320,8 +320,8 @@ class SubmitHandler extends AuthorHandler {
 	function validate($request, $articleId = null, $step = false, $reason = null) {
 		parent::validate($reason);
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$user =& $request->getUser();
-		$journal =& $request->getJournal();
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 
 		if ($step !== false && ($step < 1 || $step > 5 || (!$articleId && $step != 1))) {
 			$request->redirect(null, null, 'submit', array(1));

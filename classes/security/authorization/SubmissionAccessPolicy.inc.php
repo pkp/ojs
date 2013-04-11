@@ -23,7 +23,7 @@ class SubmissionAccessPolicy extends PKPSubmissionAccessPolicy {
 	 * @param $submissionParameterName string the request parameter we
 	 *  expect the submission id in.
 	 */
-	function SubmissionAccessPolicy(&$request, $args, $roleAssignments, $submissionParameterName = 'submissionId') {
+	function SubmissionAccessPolicy($request, $args, $roleAssignments, $submissionParameterName = 'submissionId') {
 		parent::PKPSubmissionAccessPolicy($request, $args, $roleAssignments, $submissionParameterName);
 
 		$submissionAccessPolicy = $this->_baseSubmissionAccessPolicy;

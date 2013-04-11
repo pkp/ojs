@@ -33,7 +33,7 @@ class ContextForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 
 		$rtDao = DAORegistry::getDAO('RTDAO');
-		$this->context =& $rtDao->getContext($contextId);
+		$this->context = $rtDao->getContext($contextId);
 
 		$this->versionId = $versionId;
 
@@ -67,8 +67,8 @@ class ContextForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal = Request::getJournal();
+		$templateMgr = TemplateManager::getManager();
 
 		$templateMgr->assign('versionId', $this->versionId);
 

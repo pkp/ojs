@@ -48,12 +48,12 @@ class OpenAccessNotification extends ScheduledTask {
 			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId());
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr = TemplateManager::getManager();
 			$templateMgr->assign('body', $email->getBody($journal->getPrimaryLocale()));
 			$templateMgr->assign('templateSignature', $journal->getSetting('emailSignature'));
 			$templateMgr->assign('mimeBoundary', $mimeBoundary);
-			$templateMgr->assign_by_ref('issue', $issue);
-			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('publishedArticles', $publishedArticles);
 
 			$email->addHeader('MIME-Version', '1.0');
 			$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');
@@ -96,7 +96,7 @@ class OpenAccessNotification extends ScheduledTask {
 
 	function execute() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals(true);
+		$journals = $journalDao->getJournals(true);
 
 		$todayDate = array(
 			'year' => date('Y'),

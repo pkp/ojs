@@ -26,8 +26,8 @@ class BackupPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 			if ($this->getEnabled() && Validation::isSiteAdmin()) {
-				HookRegistry::register('Templates::Admin::Index::AdminFunctions',array(&$this, 'addLink'));
-				HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
+				HookRegistry::register('Templates::Admin::Index::AdminFunctions',array($this, 'addLink'));
+				HookRegistry::register ('LoadHandler', array($this, 'handleRequest'));
 			}
 			return true;
 		}

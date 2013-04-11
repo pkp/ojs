@@ -24,9 +24,9 @@ class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function SectionSubmissionAssignmentPolicy(&$request) {
+	function SectionSubmissionAssignmentPolicy($request) {
 		parent::AuthorizationPolicy('user.authorization.sectionAssignment');
-		$this->_request =& $request;
+		$this->_request = $request;
 	}
 
 	//
@@ -37,7 +37,7 @@ class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
 	 */
 	function effect() {
 		// Get the user
-		$user =& $this->_request->getUser();
+		$user = $this->_request->getUser();
 		if (!is_a($user, 'PKPUser')) return AUTHORIZATION_DENY;
 
 		// Get the section editor submission.

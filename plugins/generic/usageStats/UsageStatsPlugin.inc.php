@@ -60,7 +60,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	* @see PKPPlugin::getManagementVerbLinkAction()
 	*/
 	function getManagementVerbLinkAction($request, $verb) {
-		$router =& $request->getRouter();
+		$router = $request->getRouter();
 
 		list($verbName, $verbLocalized) = $verb;
 

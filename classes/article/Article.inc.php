@@ -101,7 +101,7 @@ class Article extends Submission {
 			return ($pubId ? $pubId : null);
 		}
 
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $this->getJournalId());
 
 		if (is_array($pubIdPlugins)) {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
@@ -461,8 +461,7 @@ class Article extends Submission {
 			return $returner;
 		}
 
-		$user =& $userDao->getById($signoff->getUserId());
-		return $user;
+		return $userDao->getById($signoff->getUserId());
 	}
 
 	/**

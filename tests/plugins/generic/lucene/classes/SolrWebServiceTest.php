@@ -58,9 +58,9 @@ class SolrWebServiceTest extends PKPTestCase {
 		parent::setUp();
 
 		// We need a router for URL generation.
-		$application =& PKPApplication::getApplication();
+		$application = PKPApplication::getApplication();
 		$_SERVER['REQUEST_METHOD'] = 'GET';
-		$request =& $application->getRequest();
+		$request = $application->getRequest();
 		if (!is_a($request->getRouter(), 'PKPRouter')) {
 			$router = new PageRouter();
 			$router->setApplication($application);
@@ -68,7 +68,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		}
 
 		// Add the indexing state as setting.
-		HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'callbackAdditionalFieldNames'));
+		HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'callbackAdditionalFieldNames'));
 
 		// Set translations. This must be done early
 		// as these translations will be saved statically

@@ -93,9 +93,9 @@ class LuceneSettingsForm extends Form {
 	/**
 	 * @see Form::fetch()
 	 */
-	function fetch(&$request, $template = null, $display = false) {
+	function fetch($request, $template = null, $display = false) {
 		// Prepare auto-suggest
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('autosuggestTypes', $this->_getAutosuggestTypes());
 
 		// Prepare index rebuild.

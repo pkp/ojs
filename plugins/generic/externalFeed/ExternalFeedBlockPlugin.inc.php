@@ -78,7 +78,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		$journalId = $journal->getId();

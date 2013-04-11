@@ -47,7 +47,7 @@ class AdminCategoryForm extends Form {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function initData($args, &$request) {
+	function initData($args, $request) {
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$entryDao = $categoryDao->getEntryDAO();
 
@@ -69,7 +69,7 @@ class AdminCategoryForm extends Form {
 	/**
 	 * Save category.
 	 */
-	function execute($args, &$request) {
+	function execute($args, $request) {
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$entryDao = $categoryDao->getEntryDAO();
 		if ($this->category) {

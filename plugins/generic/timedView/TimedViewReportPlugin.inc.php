@@ -65,7 +65,7 @@ class TimedViewReportPlugin extends ReportPlugin {
 		} elseif ($request->getUserVar('clearLogs')) {
 			$dateClear = (int) $request->getUserVar('dateClearYear') . '-' . (int) $request->getUserVar('dateClearMonth') . '-' . (int) $request->getUserVar('dateClearDay') . ' 00:00:00';
 			$timedViewReportDao = DAORegistry::getDAO('TimedViewReportDAO');
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$timedViewReportDao->clearLogs($dateClear, $journal->getId());
 			$form->display($request);
 		} else {

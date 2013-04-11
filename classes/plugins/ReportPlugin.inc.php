@@ -80,8 +80,8 @@ class ReportPlugin extends Plugin {
 	 * @param $args Array The array of arguments the user supplied.
 	 */
 	function display(&$args) {
-		$templateManager =& TemplateManager::getManager($this->getRequest());
-		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateManager = TemplateManager::getManager($this->getRequest());
+		$templateManager->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 	}
 
 	/**

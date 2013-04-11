@@ -39,7 +39,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$reviewAssignment =& $reviewAssignmentDao->getById($this->reviewId);
 		$reviewLetters =& $reviewAssignmentDao->getReviewIndexesForRound($this->article->getId(), $this->article->getCurrentRound());
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('commentType', 'peerReview');
 		$templateMgr->assign('pageTitle', 'submission.comments.review');
 		$templateMgr->assign('commentAction', 'postPeerReviewComment');

@@ -30,7 +30,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewLayoutComments($args, &$request) {
+	function viewLayoutComments($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
@@ -60,7 +60,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewCopyeditComments($args, &$request) {
+	function viewCopyeditComments($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
@@ -89,7 +89,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function editComment($args, &$request) {
+	function editComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 
@@ -138,7 +138,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function deleteComment($args, &$request) {
+	function deleteComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 		$this->addCheck(new HandlerValidatorSubmissionComment($this, $commentId));

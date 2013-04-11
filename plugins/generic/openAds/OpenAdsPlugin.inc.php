@@ -31,8 +31,8 @@ class OpenAdsPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display', array(&$this, 'mainCallback'));
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('TemplateManager::display', array($this, 'mainCallback'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			}
 
 			return true;
@@ -74,17 +74,17 @@ class OpenAdsPlugin extends GenericPlugin {
 		$smarty =& $args[0];
 		$template =& $args[1];
 		if ($template == 'rt/rt.tpl') {
-			$smarty->register_outputfilter(array(&$this, 'rtOutputFilter'));
+			$smarty->register_outputfilter(array($this, 'rtOutputFilter'));
 		} else {
-			$smarty->register_outputfilter(array(&$this, 'mainOutputFilter'));
+			$smarty->register_outputfilter(array($this, 'mainOutputFilter'));
 		}
 		$this->templateName = $template;
 		return false;
 	}
 
 	function mainOutputFilter($output, &$smarty) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		// Get the ad settings.
 		$headerAdHtml = $contentAdHtml = '';
@@ -142,9 +142,9 @@ class OpenAdsPlugin extends GenericPlugin {
 	/**
 	 * Output filter to modify the RT sidebar
 	 */
-	function rtOutputFilter($output, &$smarty) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+	function rtOutputFilter($output, $smarty) {
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return $output;
 
 		//Get the ad settings.
@@ -190,8 +190,8 @@ class OpenAdsPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager($request);
-				$journal =& $request->getJournal();
+				$templateMgr = TemplateManager::getManager($request);
+				$journal = $request->getJournal();
 
 				$this->import('OpenAdsSettingsForm');
 				$this->import('OpenAdsConnection');

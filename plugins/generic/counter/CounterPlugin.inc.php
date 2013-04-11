@@ -26,11 +26,11 @@ class CounterPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		if ($success && $this->getEnabled()) {
 
-			HookRegistry::register ('Templates::Admin::Index::AdminFunctions', array(&$this, 'displayMenuOption'));
-			HookRegistry::register ('Templates::Manager::Index::ManagementPages', array(&$this, 'displayMenuOption'));
-			HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
-			HookRegistry::register ('TemplateManager::display', array(&$this, 'logRequest'));
-			HookRegistry::register ('FileManager::downloadFile', array(&$this, 'logRequestInline'));
+			HookRegistry::register ('Templates::Admin::Index::AdminFunctions', array($this, 'displayMenuOption'));
+			HookRegistry::register ('Templates::Manager::Index::ManagementPages', array($this, 'displayMenuOption'));
+			HookRegistry::register ('LoadHandler', array($this, 'handleRequest'));
+			HookRegistry::register ('TemplateManager::display', array($this, 'logRequest'));
+			HookRegistry::register ('FileManager::downloadFile', array($this, 'logRequestInline'));
 
 			$this->import('CounterReportDAO');
 			$counterReportDao = new CounterReportDAO();
@@ -70,8 +70,8 @@ class CounterPlugin extends GenericPlugin {
 	 * Log a request for an lineable galley (e.g. text file).
 	 */
 	function logRequestInline($hookName, $args) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal || $request->getRequestedPage() != 'article' || $request->getRequestedOp() != 'view') return false;
 
 		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
@@ -85,12 +85,12 @@ class CounterPlugin extends GenericPlugin {
 	 * the hook is called before execution.
 	 */
 	function logRequest($hookName, $args) {
-		$templateManager =& $args[0];
+		$templateManager = $args[0];
 		$template =& $args[1];
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
+		$site = $request->getSite();
+		$journal = $request->getJournal();
 		$session =& $request->getSession();
 
 		if (!$journal) return false;

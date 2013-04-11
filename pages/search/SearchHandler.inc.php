@@ -29,7 +29,7 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate($request);
 		$this->search($args, $request);
 	}
@@ -41,7 +41,7 @@ class SearchHandler extends Handler {
 	 * @param $templateMgr TemplateManager
 	 * @param $searchFilters array
 	 */
-	function _assignSearchFilters(&$request, &$templateMgr, $searchFilters) {
+	function _assignSearchFilters($request, &$templateMgr, $searchFilters) {
 		// Get the journal id (if any).
 		$journal =& $searchFilters['searchJournal'];
 		$journalId = ($journal ? $journal->getId() : null);
@@ -126,7 +126,7 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function search($args, &$request) {
+	function search($args, $request) {
 		$this->validate($request);
 
 		// Get and transform active filters.
@@ -146,7 +146,7 @@ class SearchHandler extends Handler {
 
 		// Prepare and display the search template.
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign('jsLocaleKeys', array('search.noKeywordError'));
 		$this->_assignSearchFilters($request, $templateMgr, $searchFilters);
@@ -160,11 +160,11 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function authors($args, &$request) {
+	function authors($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$authorDao = DAORegistry::getDAO('AuthorDAO');
 
@@ -212,7 +212,7 @@ class SearchHandler extends Handler {
 				$request->redirect(null, $request->getRequestedPage());
 			}
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
@@ -239,7 +239,7 @@ class SearchHandler extends Handler {
 				$rangeInfo
 			);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
 			$templateMgr->assign_by_ref('authors', $authors);
@@ -252,11 +252,11 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function titles($args, &$request) {
+	function titles($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
@@ -268,7 +268,7 @@ class SearchHandler extends Handler {
 		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
@@ -278,15 +278,15 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function categories($args, &$request) {
+	function categories($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
+		$site = $request->getSite();
+		$journal = $request->getJournal();
 
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
-		$cache =& $categoryDao->getCache();
+		$cache = $categoryDao->getCache();
 
 		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache) {
 			$request->redirect('index');
@@ -295,7 +295,7 @@ class SearchHandler extends Handler {
 		// Sort by category name
 		uasort($cache, create_function('$a, $b', '$catA = $a[\'category\']; $catB = $b[\'category\']; return strcasecmp($catA->getLocalizedName(), $catB->getLocalizedName());'));
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('categories', $cache);
 		$templateMgr->display('search/categories.tpl');
 	}
@@ -305,14 +305,14 @@ class SearchHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function category($args, &$request) {
+	function category($args, $request) {
 		$categoryId = (int) array_shift($args);
 
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$site =& $request->getSite();
-		$journal =& $request->getJournal();
+		$site = $request->getSite();
+		$journal = $request->getJournal();
 
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$cache =& $categoryDao->getCache();
@@ -327,7 +327,7 @@ class SearchHandler extends Handler {
 		// Sort by journal name
 		uasort($journals, create_function('$a, $b', 'return strcasecmp($a->getLocalizedTitle(), $b->getLocalizedTitle());'));
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('category', $category);
 		$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');

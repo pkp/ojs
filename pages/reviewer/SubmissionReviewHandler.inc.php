@@ -28,7 +28,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * @param $request PKPRequest
 	 */
 	function submission($args, $request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$reviewId = (int) array_shift($args);
 
 		$this->validate($request, $reviewId);
@@ -48,7 +48,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		$this->setupTemplate($request, true, $reviewAssignment->getSubmissionId(), $reviewId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -100,7 +100,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function saveCompetingInterests($args, &$request) {
+	function saveCompetingInterests($args, $request) {
 		$reviewId = (int) $request->getUserVar('reviewId');
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;
@@ -145,7 +145,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	function viewMetadata($args, $request) {
 		$reviewId = (int) array_shift($args);
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $reviewId);
 		$reviewerSubmission =& $this->submission;

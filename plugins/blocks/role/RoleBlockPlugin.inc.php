@@ -44,15 +44,15 @@ class RoleBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getBlockTemplateFilename() {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		if (!$journal || !$user) return null;
 
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		switch ($request->getRequestedPage()) {
 			case 'author': switch ($request->getRequestedOp()) {

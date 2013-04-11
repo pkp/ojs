@@ -229,7 +229,7 @@ class ArticleSearch {
 	 * @param $request Request
 	 * @return array All search filters (empty and active)
 	 */
-	static function getSearchFilters(&$request) {
+	static function getSearchFilters($request) {
 		$searchFilters = array(
 			'query' => $request->getUserVar('query'),
 			'searchJournal' => $request->getUserVar('searchJournal'),
@@ -264,14 +264,14 @@ class ArticleSearch {
 		$searchFilters['toDate'] = (is_null($toDate) ? null : date('Y-m-d H:i:s', $toDate));
 
 		// Instantiate the journal.
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$siteSearch = !((boolean)$journal);
 		if ($siteSearch) {
 			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			if (!empty($searchFilters['searchJournal'])) {
 				$journal = $journalDao->getById($searchFilters['searchJournal']);
 			} elseif (array_key_exists('journalTitle', $request->getUserVars())) {
-				$journals =& $journalDao->getJournals(
+				$journals = $journalDao->getJournals(
 					false, null, JOURNAL_FIELD_TITLE,
 					JOURNAL_FIELD_TITLE, 'is', $request->getUserVar('journalTitle')
 				);

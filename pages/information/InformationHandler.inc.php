@@ -27,8 +27,8 @@ class InformationHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
-		$journal =& $request->getJournal();
+	function index($args, $request) {
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect('index');
 
 		$this->validate();
@@ -63,30 +63,30 @@ class InformationHandler extends Handler {
 				$request->redirect($journal->getPath());
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageCrumbTitle', $pageCrumbTitle);
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('content', $content);
 		$templateMgr->display('information/information.tpl');
 	}
 
-	function readers($args, &$request) {
+	function readers($args, $request) {
 		$this->index(array('readers'), $request);
 	}
 
-	function authors($args, &$request) {
+	function authors($args, $request) {
 		$this->index(array('authors'), $request);
 	}
 
-	function librarians($args, &$request) {
+	function librarians($args, $request) {
 		$this->index(array('librarians'), $request);
 	}
 
-	function competingInterestGuidelines($args, &$request) {
+	function competingInterestGuidelines($args, $request) {
 		$this->index(array('competingInterestGuidelines'), $request);
 	}
 
-	function sampleCopyrightWording($args, &$request) {
+	function sampleCopyrightWording($args, $request) {
 		$this->index(array('sampleCopyrightWording'), $request);
 	}
 
@@ -98,7 +98,7 @@ class InformationHandler extends Handler {
 	function setupTemplate($request, $journal) {
 		parent::setupTemplate($request);
 		if (!$journal->getSetting('restrictSiteAccess')) {
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 	}

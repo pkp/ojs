@@ -47,8 +47,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submission($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		// FIXME? For comments.readerComments under Status and
 		// author.submit.selectPrincipalContact under Metadata
@@ -56,7 +56,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$this->setupTemplate($request);
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getSettings($journal->getId());
@@ -69,14 +69,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$enableComments = $journal->getSetting('enableComments');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('section', $section);
-		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('section', $section);
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
@@ -131,8 +131,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionRegrets($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 		$this->setupTemplate($request);
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -151,14 +151,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewAssignments', $reviewAssignments);
 		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
-		$templateMgr->assign_by_ref('cancelsAndRegrets', $cancelsAndRegrets);
-		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign_by_ref('editorDecisions', $editorDecisions);
+		$templateMgr->assign('cancelsAndRegrets', $cancelsAndRegrets);
+		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 
@@ -179,8 +179,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionReview($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$journal =& Request::getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 		$this->setupTemplate($request);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
@@ -240,19 +240,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewFormResponses[$reviewAssignment->getId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getId());
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
-		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
 		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
 		$templateMgr->assign('reviewFormTitles', $reviewFormTitles);
-		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
-		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign_by_ref('copyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign('notifyReviewerLogs', $notifyReviewerLogs);
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign('copyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 		$templateMgr->assign_by_ref('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign_by_ref('editorFile', $submission->getEditorFile());
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
@@ -280,8 +280,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function submissionEditing($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 		$this->setupTemplate($request);
 
 		$useCopyeditors = $journal->getSetting('useCopyeditors');
@@ -294,7 +294,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;
 		$submissionAccepted = ($lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT) ? true : false;
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
@@ -306,7 +306,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$user =& Request::getUser();
+		$user = $request->getUser();
 		$templateMgr->assign('isEditor', $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR));
 
 		import('classes.issue.IssueAction');
@@ -345,7 +345,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$submission =& $this->submission;
 		$templateMgr->assign_by_ref('submission', $submission);
 
@@ -389,7 +389,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::editCitations($request, $this->submission);
 
 		// Render the view.
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('sectionEditor/submissionCitations.tpl');
 	}
 
@@ -448,8 +448,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewerId = (int) array_shift($args);
 
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'reviewerName';
@@ -489,7 +489,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$journal = $request->getJournal();
 			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -575,15 +575,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.people.enrollment, manager.people.enroll
-		$submission =& $this->submission;
+		$submission = $this->submission;
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$rangeInfo = $this->getRangeInfo($request, 'users');
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
 
 		$searchType = null;
@@ -601,7 +601,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, false, $rangeInfo);
+		$users = $userDao->getUsersByField($searchType, $searchMatch, $search, false, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -631,8 +631,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enroll($args, $request) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
@@ -867,15 +867,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			$this->setupTemplate($request);
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 
 			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
 			$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-			$settings =& $settingsDao->getSettings($journal->getId());
+			$settings = $settingsDao->getSettings($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			if ($reviewAssignment->getDateDue() != null) {
 				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
@@ -913,7 +913,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$this->setupTemplate($request);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
@@ -934,7 +934,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::validate($request);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('currentUrl', $request->url(null, $request->getRequestedPage()));
 
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -954,8 +954,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('common/error.tpl');
 
 		} else {
-			$site =& $request->getSite();
-			$journal =& $request->getJournal();
+			$site = $request->getSite();
+			$journal = $request->getJournal();
 
 			$countryDao = DAORegistry::getDAO('CountryDAO');
 			$country = null;
@@ -979,7 +979,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
@@ -1042,7 +1042,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewId = (int) array_shift($args);
 		$reviewFormId = (int) array_shift($args);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
@@ -1050,9 +1050,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
-		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
+		$templateMgr->assign('reviewForm', $reviewForm);
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewId', $reviewId);
 		$templateMgr->assign('articleId', $reviewAssignment->getSubmissionId());
@@ -1092,7 +1092,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			SectionEditorAction::addReviewForm($submission, $reviewId, $reviewFormId);
 			$request->redirect(null, null, 'submissionReview', $articleId);
 		} else {
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$rangeInfo = $this->getRangeInfo($request, 'reviewForms');
 			$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 			$reviewForms =& $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $rangeInfo);
@@ -1100,12 +1100,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 			$this->setupTemplate($request);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
 			$templateMgr->assign('assignedReviewFormId', $reviewAssignment->getReviewFormId());
-			$templateMgr->assign_by_ref('reviewForms', $reviewForms);
+			$templateMgr->assign('reviewForms', $reviewForms);
 			$templateMgr->display('sectionEditor/selectReviewForm.tpl');
 		}
 	}
@@ -1187,8 +1187,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$userId = (int) array_shift($args);
 
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 
@@ -1217,16 +1217,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getId(), $searchType, $search, $searchMatch);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 
-			$templateMgr->assign_by_ref('users', $copyeditors);
+			$templateMgr->assign('users', $copyeditors);
 			$templateMgr->assign('currentUser', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
-			$templateMgr->assign_by_ref('statistics', $copyeditorStatistics);
+			$templateMgr->assign('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'user.role.copyeditors');
 			$templateMgr->assign('actionHandler', 'selectCopyeditor');
@@ -1411,10 +1411,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function addSuppFile($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId);
-		$submission =& $this->submission;
+		$submission = $this->submission;
 		$this->setupTemplate($request);
 
 		import('classes.submission.form.SuppFileForm');
@@ -1437,7 +1437,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function editSuppFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$suppFileId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
@@ -1493,7 +1493,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 
 		$suppFileId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.submission.form.SuppFileForm');
 
@@ -1674,7 +1674,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$editorId = (int) array_shift($args);
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$submission =& $this->submission;
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
@@ -1705,7 +1705,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$this->setupTemplate($request);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
@@ -1717,7 +1717,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign_by_ref('users', $layoutEditors);
+			$templateMgr->assign('users', $layoutEditors);
 
 			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 			if ($layoutSignoff) {
@@ -1781,7 +1781,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
  		$galleyForm = new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName, $request->getUserVar('createRemote'));
 
-		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+		$request->redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 
 	/**
@@ -1895,7 +1895,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -1912,7 +1912,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -1936,10 +1936,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
-				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
-					$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+				if ($galley->isHTMLGalley() && ($styleFile = $galley->getStyleFile())) {
+					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
 						$articleId, $galleyId, $styleFile->getFileId()
 					)));
 				}
@@ -1961,7 +1961,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.submission.form.SuppFileForm');
 
@@ -2001,7 +2001,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2055,7 +2055,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2179,7 +2179,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$note = $noteDao->getById($noteId);
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -2250,8 +2250,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$userId = (int) array_shift($args);
 
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
@@ -2282,12 +2282,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getId());
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
+			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 
 			$templateMgr->assign_by_ref('users', $proofreaders);
 
@@ -2352,7 +2352,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateProofreader($args, $request) {
 		$articleId = $request->getUserVar('articleId');
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
@@ -2422,7 +2422,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateLayoutEditor($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
@@ -2508,8 +2508,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$issueId = (int) $request->getUserVar('issueId');
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -2612,8 +2612,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$issueId = (int) $request->getUserVar('issueId');
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
 
-		$journal =& $request->getJournal();
-		$submission =& $this->submission;
+		$journal = $request->getJournal();
+		$submission = $this->submission;
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
@@ -2648,8 +2648,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submission =& $this->submission;
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
-		$journal =& $request->getJournal();
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),
@@ -2676,12 +2676,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) array_shift($args);
 		$markAsPaid = $request->getUserVar('markAsPaid');
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_EDIT);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$submission =& $this->submission;
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),
@@ -2715,7 +2715,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment(
 			$journal->getId(),

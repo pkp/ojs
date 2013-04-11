@@ -32,7 +32,7 @@ class JournalGridHandler extends ContextGridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		// Load user-related translations.
 		AppLocale::requireComponents(
 			LOCALE_COMPONENT_APP_ADMIN,
@@ -63,7 +63,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @param $request PKPRequest
 	 * @return array Grid data.
 	 */
-	function loadData(&$request) {
+	function loadData($request) {
 		// Get all journals.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getAll();
@@ -74,7 +74,7 @@ class JournalGridHandler extends ContextGridHandler {
 	/**
 	 * @see lib/pkp/classes/controllers/grid/GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence(&$request, $rowId, &$journal, $newSequence) {
+	function setDataElementSequence($request, $rowId, &$journal, $newSequence) {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal->setSequence($newSequence);
 		$journalDao->updateObject($journal);
@@ -90,7 +90,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function editContext($args, &$request) {
+	function editContext($args, $request) {
 
 		// Identify the journal Id.
 		$journalId = $request->getUserVar('rowId');
@@ -124,7 +124,7 @@ class JournalGridHandler extends ContextGridHandler {
 
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			$notificationMgr->createTrivialNotification($user->getId());
 
 			return DAO::getDataChangedEvent($journalId);
@@ -140,9 +140,9 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function deleteContext($args, &$request) {
+	function deleteContext($args, $request) {
 		// Identify the current context.
-		$context =& $request->getContext();
+		$context = $request->getContext();
 
 		// Identify the journal Id.
 		$journalId = $request->getUserVar('rowId');

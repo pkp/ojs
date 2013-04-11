@@ -34,9 +34,9 @@ class WebFeedPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
-				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleShortURL') );
+				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+				HookRegistry::register('LoadHandler', array($this, 'callbackHandleShortURL') );
 			}
 			return true;
 		}
@@ -162,16 +162,16 @@ class WebFeedPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 
-				if (Request::getUserVar('save')) {
+				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();

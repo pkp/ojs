@@ -50,7 +50,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 	 * @see Form::display()
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		// Issue export options.
 		$exportIssueOptions = array(

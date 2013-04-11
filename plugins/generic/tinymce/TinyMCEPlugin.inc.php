@@ -30,7 +30,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->isMCEInstalled() && $this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display',array(&$this, 'callback'));
+				HookRegistry::register('TemplateManager::display',array($this, 'callback'));
 			}
 			return true;
 		}

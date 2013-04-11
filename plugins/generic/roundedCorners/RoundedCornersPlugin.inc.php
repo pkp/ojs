@@ -28,7 +28,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 			if ( $this->getEnabled() ) {
-				HookRegistry::register('TemplateManager::display', array(&$this, 'templateManagerCallback'));
+				HookRegistry::register('TemplateManager::display', array($this, 'templateManagerCallback'));
 			}
 			return true;
 		}

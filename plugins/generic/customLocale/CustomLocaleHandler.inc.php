@@ -29,11 +29,10 @@ class CustomLocaleHandler extends Handler {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
 
-		$plugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
-		$this->plugin =& $plugin;		
+		$this->plugin = PluginRegistry::getPlugin('generic', $parentPluginName);
 	}
 
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate(null, $request);
 		$plugin =& $this->plugin;
 		$this->setupTemplate($request, $plugin);
@@ -41,7 +40,7 @@ class CustomLocaleHandler extends Handler {
 		$journal = $request->getJournal();
 		$rangeInfo = $this->getRangeInfo($request, 'locales');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		import('lib.pkp.classes.core.ArrayItemIterator');
 		$templateMgr->assign('locales', new ArrayItemIterator($journal->getSupportedLocaleNames(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
@@ -63,7 +62,7 @@ class CustomLocaleHandler extends Handler {
 		}
 		$localeFiles = CustomLocaleAction::getLocaleFiles($locale);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$localeFilesRangeInfo = $this->getRangeInfo($request, 'localeFiles');
 
@@ -93,7 +92,7 @@ class CustomLocaleHandler extends Handler {
 			$request->redirect(null, null, null, $path);
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
@@ -158,7 +157,7 @@ class CustomLocaleHandler extends Handler {
 			$request->redirect(null, null, null, $path);
 		}
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$changes = $request->getUserVar('changes');
 		$customFilesDir = Config::getVar('files', 'public_files_dir') . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale;

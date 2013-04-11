@@ -58,7 +58,7 @@ class RTContextHandler extends RTAdminHandler {
 		if ($version) {
 			$this->setupTemplate($request, true, $version);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 			$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
@@ -79,9 +79,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('classes.rt.ojs.form.ContextForm');
@@ -102,9 +102,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$rtDao->deleteContext($contextId, $versionId);
@@ -120,9 +120,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('classes.rt.ojs.form.ContextForm');
@@ -141,9 +141,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = $request->getUserVar('id');
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$direction = $request->getUserVar('dir');
@@ -157,7 +157,7 @@ class RTContextHandler extends RTAdminHandler {
 				if ($prevId == null)
 					$prevSeq = 0;
 				else {
-					$prevContext =& $rtDao->getContext($prevId);
+					$prevContext = $rtDao->getContext($prevId);
 					$prevSeq = $prevContext->getOrder();
 				}
 

@@ -29,12 +29,12 @@ class ImportExportHandler extends ManagerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function importexport($args, &$request) {
+	function importexport($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
 		PluginRegistry::loadCategory(IMPORTEXPORT_PLUGIN_CATEGORY);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if (array_shift($args) === 'plugin') {
 			$pluginName = array_shift($args);

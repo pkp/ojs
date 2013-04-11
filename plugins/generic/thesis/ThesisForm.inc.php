@@ -50,7 +50,7 @@ class ThesisForm extends Form {
 
 		$this->thesisId = isset($thesisId) ? (int) $thesisId : null;
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		parent::Form($thesisPlugin->getTemplatePath() . 'thesisForm.tpl');
 
 
@@ -109,10 +109,10 @@ class ThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$thesisPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
-		$templateMgr =& TemplateManager::getManager($thesisPlugin->getRequest());
+		$templateMgr = TemplateManager::getManager($thesisPlugin->getRequest());
 		$templateMgr->assign('thesisId', $this->thesisId);
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('validDegrees', $this->validDegrees);
@@ -184,11 +184,11 @@ class ThesisForm extends Form {
 	 * Save thesis. 
 	 */
 	function execute() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$thesisPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$thesisDao = DAORegistry::getDAO('ThesisDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		if (isset($this->thesisId)) {

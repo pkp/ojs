@@ -35,7 +35,7 @@ class SectionGridHandler extends SetupGridHandler {
 	 * Configure the grid
 	 * @param $request PKPRequest
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 		$journal = $request->getJournal();
 
@@ -140,7 +140,7 @@ class SectionGridHandler extends SetupGridHandler {
 	/**
 	 * @see GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence(&$request, $rowId, $gridDataElement, $newSequence) {
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$journal = $request->getJournal();
 		$section = $sectionDao->getById($rowId, $journal->getId());

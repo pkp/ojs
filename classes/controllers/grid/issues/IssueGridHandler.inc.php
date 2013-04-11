@@ -45,7 +45,7 @@ class IssueGridHandler extends GridHandler {
 	 * @param $args array
 	 * @param $roleAssignments array
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
 
@@ -61,7 +61,7 @@ class IssueGridHandler extends GridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request, $args) {
+	function initialize($request, $args) {
 		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);

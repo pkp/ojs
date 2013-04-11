@@ -108,8 +108,8 @@ class OAIDAO extends PKPOAIDAO {
 		if (isset($journalId)) {
 			$journals = array($this->journalDao->getById($journalId));
 		} else {
-			$journals =& $this->journalDao->getJournals();
-			$journals =& $journals->toArray();
+			$journals = $this->journalDao->getJournals();
+			$journals = $journals->toArray();
 		}
 
 		// FIXME Set descriptions
@@ -134,7 +134,7 @@ class OAIDAO extends PKPOAIDAO {
 			}
 		}
 
-		HookRegistry::call('OAIDAO::getJournalSets', array(&$this, $journalId, $offset, $limit, $total, &$sets));
+		HookRegistry::call('OAIDAO::getJournalSets', array($this, $journalId, $offset, $limit, $total, &$sets));
 
 		$total = count($sets);
 		$sets = array_slice($sets, $offset, $limit);
@@ -228,8 +228,8 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::setOAIData()
 	 */
 	function &setOAIData(&$record, $row, $isRecord = true) {
-		$journal =& $this->getJournal($row['journal_id']);
-		$section =& $this->getSection($row['section_id']);
+		$journal = $this->getJournal($row['journal_id']);
+		$section = $this->getSection($row['section_id']);
 		$articleId = $row['article_id'];
 
 		$record->identifier = $this->oai->articleIdToIdentifier($articleId);

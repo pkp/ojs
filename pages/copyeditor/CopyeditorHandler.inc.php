@@ -33,12 +33,12 @@ class CopyeditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate();
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 
 		// Get the user's search conditions, if any
@@ -70,9 +70,9 @@ class CopyeditorHandler extends Handler {
 
 		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign_by_ref('submissions', $submissions);
+		$templateMgr->assign('submissions', $submissions);
 
 		// Set search parameters
 		$duplicateParameters = array(
@@ -121,7 +121,7 @@ class CopyeditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function instructions($args, &$request) {
+	function instructions($args, $request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy'))) {
@@ -140,8 +140,8 @@ class CopyeditorHandler extends Handler {
 
 		if ($articleId !== null) {
 			$copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
-			$journal =& $request->getJournal();
-			$user =& $request->getUser();
+			$journal = $request->getJournal();
+			$user = $request->getUser();
 
 			$isValid = true;
 

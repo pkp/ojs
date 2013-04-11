@@ -136,12 +136,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager($this->request);
+		$templateMgr = TemplateManager::getManager($this->request);
 
 		$countryDao = DAORegistry::getDAO('CountryDAO');
-		$countries =& $countryDao->getCountries();
-		$templateMgr->assign_by_ref('countries', $countries);
-
+		$templateMgr->assign_by_ref('countries', $countryDao->getCountries());
 		if ($this->request->getUserVar('addAuthor') || $this->request->getUserVar('delAuthor')  || $this->request->getUserVar('moveAuthor')) {
 			$templateMgr->assign('scrollToAuthor', true);
 		}

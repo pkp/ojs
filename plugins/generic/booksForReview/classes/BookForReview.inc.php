@@ -155,7 +155,7 @@ class BookForReview extends DataObject {
 	 * @return string 
 	 */
 	function getUserFullName() {
-		$user =& $this->getUser();
+		$user = $this->getUser();
 		if ($user) return $user->getFullName(); else return '';
 	}
 
@@ -164,7 +164,7 @@ class BookForReview extends DataObject {
 	 * @return string 
 	 */
 	function getUserEmail() {
-		$user =& $this->getUser();
+		$user = $this->getUser();
 		if ($user) return $user->getEmail(); else return '';
 	}
 
@@ -173,7 +173,7 @@ class BookForReview extends DataObject {
 	 * @return string 
 	 */
 	function getUserMailingAddress() {
-		$user =& $this->getUser();
+		$user = $this->getUser();
 		if ($user) return $user->getMailingAddress(); else return '';
 	}
 
@@ -182,7 +182,7 @@ class BookForReview extends DataObject {
 	 * @return string 
 	 */
 	function getUserCountry() {
-		$user =& $this->getUser();
+		$user = $this->getUser();
 		if ($user) return $user->getCountry(); else return '';
 	}
 
@@ -191,7 +191,7 @@ class BookForReview extends DataObject {
 	 * @return string 
 	 */
 	function getUserContactSignature() {
-		$user =& $this->getUser();
+		$user = $this->getUser();
 		if ($user) return $user->getContactSignature(); else return '';
 	}
 

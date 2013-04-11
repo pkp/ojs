@@ -39,8 +39,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$bfrDao = new BookForReviewDAO($this->getName());
 			DAORegistry::registerDAO('BookForReviewDAO', $bfrDao);
 
-			$request =& $this->getRequest();
-			$journal =& $request->getJournal();
+			$request = $this->getRequest();
+			$journal = $request->getJournal();
 			if ($journal) {
 				$mode = $this->getSetting($journal->getId(), 'mode');
 				$coverPageIssue = $this->getSetting($journal->getId(), 'coverPageIssue');
@@ -150,9 +150,9 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function saveSubmitHandler($hookName, $params) {
 		$article =& $params[1];
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		if ($journal && $user) {
 			$journalId = $journal->getId();
@@ -280,8 +280,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 		$oldUserId =& $params[0];
 		$newUserId =& $params[1];
 
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 		$oldUserBooksForReview =& $bfrDao->getBooksForReviewByAuthor($journal->getId(), $oldUserId);
@@ -299,12 +299,12 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function displayAuthorBooksForReview($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
 
-			$request =& $this->getRequest();
-			$journal =& $request->getJournal();
-			$user =& $request->getUser();
+			$request = $this->getRequest();
+			$journal = $request->getJournal();
+			$user = $request->getUser();
 
 			if ($journal && $user) {
 				$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -325,11 +325,11 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function displayArticleCoverPageIssue($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
 
-			$request =& $this->getRequest();
-			$journal =& $request->getJournal();
+			$request = $this->getRequest();
+			$journal = $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -362,11 +362,11 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function displayArticleCoverPageAbstract($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
 
-			$request =& $this->getRequest();
-			$journal =& $request->getJournal();
+			$request = $this->getRequest();
+			$journal = $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -405,11 +405,11 @@ class BooksForReviewPlugin extends GenericPlugin {
 	 */
 	function displayBookMetadata($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
 
-			$request =& $this->getRequest();
-			$journal =& $request->getJournal();
+			$request = $this->getRequest();
+			$journal = $request->getJournal();
 
 			if ($journal) {
 				$journalId = $journal->getId();
@@ -478,8 +478,8 @@ class BooksForReviewPlugin extends GenericPlugin {
 
 			if ($submission) {
 				$articleId = $submission->getId();
-				$request =& $this->getRequest();
-				$journal =& $request->getJournal();
+				$request = $this->getRequest();
+				$journal = $request->getJournal();
 				$journalId = $journal->getId();
 				$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
 				$bookId = $bfrDao->getSubmittedBookForReviewIdByArticle($journalId, $articleId);

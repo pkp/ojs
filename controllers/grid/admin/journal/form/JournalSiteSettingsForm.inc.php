@@ -26,7 +26,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->existsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
+		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->existsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array($this, DAORegistry::getDAO('JournalDAO'))));
 	}
 
 	/**
@@ -80,7 +80,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section = null;
 		} else {
 			$isNewJournal = true;
-			$site =& $request->getSite();
+			$site = $request->getSite();
 
 			// Give it a default primary locale
 			$journal->setPrimaryLocale ($site->getPrimaryLocale());
@@ -98,8 +98,8 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$this->_loadDefaultUserGroups($journalId);
 
 			// Make the site administrator the journal manager of newly created journals
-			$sessionManager =& SessionManager::getManager();
-			$userSession =& $sessionManager->getUserSession();
+			$sessionManager = SessionManager::getManager();
+			$userSession = $sessionManager->getUserSession();
 			if ($userSession->getUserId() != null && $userSession->getUserId() != 0 && !empty($journalId)) {
 				$role = new Role();
 				$role->setJournalId($journalId);
@@ -153,7 +153,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		// Make sure all plugins are loaded for settings preload
 		PluginRegistry::loadAllPlugins();
 
-		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section, &$isNewJournal));
+		HookRegistry::call('JournalSiteSettingsForm::execute', array($this, $journal, $section, &$isNewJournal));
 	}
 }
 

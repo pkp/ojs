@@ -30,9 +30,9 @@ class RTSearchHandler extends RTAdminHandler {
 		$rtDao = DAORegistry::getDAO('RTDAO');
 
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		import('classes.rt.ojs.form.SearchForm');
 		$searchForm = new SearchForm(null, $contextId, $versionId);
@@ -56,15 +56,15 @@ class RTSearchHandler extends RTAdminHandler {
 		$rangeInfo = $this->getRangeInfo($request, 'searches');
 
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 
 		if ($context && $version && $context->getVersionId() == $version->getVersionId()) {
 			$this->setupTemplate($request, true, $version, $context);
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 			$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
@@ -86,11 +86,11 @@ class RTSearchHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 		$searchId = isset($args[2])?$args[2]:0;
-		$search =& $rtDao->getSearch($searchId);
+		$search = $rtDao->getSearch($searchId);
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('classes.rt.ojs.form.SearchForm');
@@ -111,9 +111,9 @@ class RTSearchHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 		$searchId = isset($args[2])?$args[2]:0;
 		$search =& $rtDao->getSearch($searchId);
 
@@ -131,11 +131,11 @@ class RTSearchHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 		$searchId = isset($args[2])?$args[2]:0;
-		$search =& $rtDao->getSearch($searchId);
+		$search = $rtDao->getSearch($searchId);
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('classes.rt.ojs.form.SearchForm');
@@ -154,9 +154,9 @@ class RTSearchHandler extends RTAdminHandler {
 
 		$journal = $request->getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 		$contextId = isset($args[1])?$args[1]:0;
-		$context =& $rtDao->getContext($contextId);
+		$context = $rtDao->getContext($contextId);
 		$searchId = $request->getUserVar('id');
 		$search =& $rtDao->getSearch($searchId);
 

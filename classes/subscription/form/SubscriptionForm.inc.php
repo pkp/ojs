@@ -80,8 +80,8 @@ class SubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
-		$journal =& Request::getJournal();
+		$templateMgr = TemplateManager::getManager();
+		$journal = Request::getJournal();
 
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
@@ -126,13 +126,13 @@ class SubscriptionForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->subscription)) {
-			$subscription =& $this->subscription;
+			$subscription = $this->subscription;
 
 			$userDao = DAORegistry::getDAO('UserDAO');
 			if (isset($this->userId)) {
-				$user =& $userDao->getById($this->userId);
+				$user = $userDao->getById($this->userId);
 			} else {
-				$user =& $userDao->getById($subscription->getUserId());
+				$user = $userDao->getById($subscription->getUserId());
 			}
 
 			$this->_data = array(
@@ -209,7 +209,7 @@ class SubscriptionForm extends Form {
 
 		// If notify email is requested, ensure subscription contact name and email exist.
 		if ($this->_data['notifyEmail'] == 1) {
-			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal =& Request::getJournal(); $journalSettingsDao = DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
+			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal = Request::getJournal(); $journalSettingsDao = DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
 		}
 	}
 
@@ -217,7 +217,7 @@ class SubscriptionForm extends Form {
 	 * Save subscription.
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$subscription =& $this->subscription;
 
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -261,10 +261,10 @@ class SubscriptionForm extends Form {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalName = $journal->getLocalizedTitle();
 		$journalId = $journal->getId();
-		$user =& $userDao->getById($this->subscription->getUserId());
+		$user = $userDao->getById($this->subscription->getUserId());
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->subscription->getTypeId());
 
 		$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');

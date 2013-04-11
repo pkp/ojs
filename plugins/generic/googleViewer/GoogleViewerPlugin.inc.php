@@ -17,7 +17,7 @@ class GoogleViewerPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::include', array(&$this, '_callback'));
+				HookRegistry::register('TemplateManager::include', array($this, '_callback'));
 			}
 
 			return true;

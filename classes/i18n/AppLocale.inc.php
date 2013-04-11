@@ -25,10 +25,10 @@ class AppLocale extends PKPLocale {
 		if (!isset($supportedLocales)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
 				$supportedLocales = AppLocale::getAllLocales();
-			} elseif (($journal =& self::$request->getJournal())) {
+			} elseif (($journal = self::$request->getJournal())) {
 				$supportedLocales = $journal->getSupportedLocaleNames();
 			} else {
-				$site =& self::$request->getSite();
+				$site = self::$request->getSite();
 				$supportedLocales = $site->getSupportedLocaleNames();
 			}
 		}
@@ -44,10 +44,10 @@ class AppLocale extends PKPLocale {
 		if (!isset($supportedFormLocales)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
 				$supportedFormLocales = AppLocale::getAllLocales();
-			} elseif (($journal =& self::$request->getJournal())) {
+			} elseif (($journal = self::$request->getJournal())) {
 				$supportedFormLocales = $journal->getSupportedFormLocaleNames();
 			} else {
-				$site =& self::$request->getSite();
+				$site = self::$request->getSite();
 				$supportedFormLocales = $site->getSupportedLocaleNames();
 			}
 		}
@@ -69,12 +69,12 @@ class AppLocale extends PKPLocale {
 				$locale = self::$request->getUserVar('setLocale');
 				if (empty($locale) || !in_array($locale, array_keys(AppLocale::getSupportedLocales()))) $locale = self::$request->getCookieVar('currentLocale');
 			} else {
-				$sessionManager =& SessionManager::getManager();
-				$session =& $sessionManager->getUserSession();
+				$sessionManager = SessionManager::getManager();
+				$session = $sessionManager->getUserSession();
 				$locale = $session->getSessionVar('currentLocale');
 
-				$journal =& self::$request->getJournal();
-				$site =& self::$request->getSite();
+				$journal = self::$request->getJournal();
+				$site = self::$request->getSite();
 
 				if (!isset($locale)) {
 					$locale = self::$request->getCookieVar('currentLocale');
@@ -123,10 +123,10 @@ class AppLocale extends PKPLocale {
 		if (!isset($localePrecedence)) {
 			$localePrecedence = array(AppLocale::getLocale());
 
-			$journal =& self::$request->getJournal();
+			$journal = self::$request->getJournal();
 			if ($journal && !in_array($journal->getPrimaryLocale(), $localePrecedence)) $localePrecedence[] = $journal->getPrimaryLocale();
 
-			$site =& self::$request->getSite();
+			$site = self::$request->getSite();
 			if ($site && !in_array($site->getPrimaryLocale(), $localePrecedence)) $localePrecedence[] = $site->getPrimaryLocale();
 		}
 		return $localePrecedence;
@@ -142,14 +142,14 @@ class AppLocale extends PKPLocale {
 
 		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) return $locale = LOCALE_DEFAULT;
 
-		$journal =& self::$request->getJournal();
+		$journal = self::$request->getJournal();
 
 		if (isset($journal)) {
 			$locale = $journal->getPrimaryLocale();
 		}
 
 		if (!isset($locale)) {
-			$site =& self::$request->getSite();
+			$site = self::$request->getSite();
 			$locale = $site->getPrimaryLocale();
 		}
 

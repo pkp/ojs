@@ -28,7 +28,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 			if ( $this->getEnabled() ) {
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			}
 			return true;
 		}
@@ -50,7 +50,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 			case 'blocks':
 				$this->import('CustomBlockPlugin');
 
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				if (!$journal) return false;
 
 				$blocks = $this->getSetting($journal->getId(), 'blocks');
@@ -96,10 +96,10 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());

@@ -19,16 +19,16 @@ class BooksForReviewAuthorHandler extends Handler {
 	/**
 	 * Display books for review author listing page.
 	 */
-	function booksForReview($args = array(), &$request) {
+	function booksForReview($args = array(), $request) {
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 		$bfrPlugin->import('classes.BookForReview');
 		$path = !isset($args) || empty($args) ? null : $args[0];
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 
 		switch($path) {
@@ -56,26 +56,26 @@ class BooksForReviewAuthorHandler extends Handler {
 
 		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
-		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, null, null, null, $status, $userId, null, $rangeInfo);
+		$booksForReview = $bfrDao->getBooksForReviewByJournalId($journalId, null, null, null, $status, $userId, null, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
-		$templateMgr->assign_by_ref('counts', $bfrDao->getStatusCounts($journalId, $userId));
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('booksForReview', $booksForReview);
+		$templateMgr->assign('counts', $bfrDao->getStatusCounts($journalId, $userId));
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'author' . '/' . $template);
 	}
 
 	/**
 	 * Author requests a book for review.
 	 */
-	function requestBookForReview($args = array(), &$request) {
+	function requestBookForReview($args = array(), $request) {
 		$this->setupTemplate($request);
 
 		if (empty($args)) {
 			$request->redirect(null, 'user');
 		}
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-		$journal =& $request->getJournal();
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$bookId = (int) $args[0];
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
@@ -90,13 +90,13 @@ class BooksForReviewAuthorHandler extends Handler {
 			if ($send && !$email->hasErrors()) {
 
 				// Update book for review as requested
-				$book =& $bfrDao->getBookForReview($bookId);
+				$book = $bfrDao->getBookForReview($bookId);
 				$status = $book->getStatus();
 				$bfrPlugin->import('classes.BookForReview');
 
 				// Ensure book for review is avaliable
 				if ($status == BFR_STATUS_AVAILABLE) {
-					$user =& $request->getUser();
+					$user = $request->getUser();
 					$userId = $user->getId();
 
 					$book->setStatus(BFR_STATUS_REQUESTED);
@@ -115,13 +115,13 @@ class BooksForReviewAuthorHandler extends Handler {
 			// Display mail form for author
 			} else {
 				if (!$request->getUserVar('continued')) {
-					$book =& $bfrDao->getBookForReview($bookId);
+					$book = $bfrDao->getBookForReview($bookId);
 					$status = $book->getStatus();
 					$bfrPlugin->import('classes.BookForReview');
 
 					// Ensure book for review is avaliable
 					if ($status == BFR_STATUS_AVAILABLE) {
-						$user =& $request->getUser();
+						$user = $request->getUser();
 						$userId = $user->getId();
 
 						$editorFullName = $book->getEditorFullName();
@@ -147,11 +147,11 @@ class BooksForReviewAuthorHandler extends Handler {
 	/**
 	 * Ensure that we have a journal, plugin is enabled, and user is author.
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
-		$journal =& $request->getJournal();
+	function authorize($request, &$args, $roleAssignments) {
+		$journal = $request->getJournal();
 		if (!isset($journal)) return false;
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		if (!isset($bfrPlugin)) return false;
 

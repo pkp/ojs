@@ -64,7 +64,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
-	function DataciteExportDom(&$request, &$plugin, &$journal, &$objectCache) {
+	function DataciteExportDom($request, $plugin, $journal, $objectCache) {
 		// Configure the DOM.
 		parent::DOIExportDom($request, $plugin, $journal, $objectCache);
 	}
@@ -80,7 +80,7 @@ class DataciteExportDom extends DOIExportDom {
 		$falseVar = false;
 
 		// Declare variables that will contain publication objects.
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$issue = null; /* @var $issue Issue */
 		$article = null; /* @var $article PublishedArticle */
 		$galley = null; /* @var $galley ArticleGalley */
@@ -207,8 +207,8 @@ class DataciteExportDom extends DOIExportDom {
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
 		$nullVar = null;
- 		$journal =& $this->getJournal();
- 		$cache =& $this->getCache();
+ 		$journal = $this->getJournal();
+ 		$cache = $this->getCache();
 
 		// Retrieve basic OJS objects.
 		$publicationObjects = parent::retrievePublicationObjects($object);
@@ -590,7 +590,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_alternateIdentifiersElement(&$object, &$issue, &$article, &$articleFile) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$alternateIdentifiersElement =& XMLCustomWriter::createElement($this->getDoc(), 'alternateIdentifiers');
 
 		// Proprietary ID
@@ -643,8 +643,8 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_relatedIdentifiersElement(&$object, &$articlesByIssue, &$galleysByArticle, &$suppFilesByArticle, &$issue, &$article) {
-		$journal =& $this->getJournal();
-		$relatedIdentifiersElement =& XMLCustomWriter::createElement($this->getDoc(), 'relatedIdentifiers');
+		$journal = $this->getJournal();
+		$relatedIdentifiersElement = XMLCustomWriter::createElement($this->getDoc(), 'relatedIdentifiers');
 
 		switch (true) {
 			case is_a($object, 'Issue'):
@@ -851,7 +851,7 @@ class DataciteExportDom extends DOIExportDom {
 		$issueIdentification = $issue->getIssueIdentification();
 		assert(!empty($issueIdentification));
 
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		if (is_null($objectLocalePrecedence)) {
 			$issueInfo = array();
 			foreach ($journal->getName(null) as $locale => $journalTitle) {

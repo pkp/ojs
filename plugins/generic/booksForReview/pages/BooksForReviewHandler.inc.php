@@ -19,13 +19,13 @@ class BooksForReviewHandler extends Handler {
 	/**
 	 * Display books for review public index page.
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		$bfrPlugin->import('classes.BookForReview');
 		$searchField = null;
@@ -39,10 +39,10 @@ class BooksForReviewHandler extends Handler {
 
 		$rangeInfo = $this->getRangeInfo($request, 'booksForReview');
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
-		$booksForReview =& $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, BFR_STATUS_AVAILABLE, null, null, $rangeInfo);
+		$booksForReview = $bfrDao->getBooksForReviewByJournalId($journalId, $searchField, $search, $searchMatch, BFR_STATUS_AVAILABLE, null, null, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('booksForReview', $booksForReview);
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('booksForReview', $booksForReview);
 
 		$isAuthor = Validation::isAuthor();
 		$templateMgr->assign('isAuthor', $isAuthor);
@@ -61,7 +61,7 @@ class BooksForReviewHandler extends Handler {
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', AppLocale::getLocale());
 
-		$fieldOptions = Array(
+		$fieldOptions = array(
 			BFR_FIELD_TITLE => 'plugins.generic.booksForReview.field.title',
 			BFR_FIELD_PUBLISHER => 'plugins.generic.booksForReview.field.publisher',
 			BFR_FIELD_YEAR => 'plugins.generic.booksForReview.field.year',
@@ -77,13 +77,13 @@ class BooksForReviewHandler extends Handler {
 	/**
 	 * Public view book for review details.
 	 */
-	function viewBookForReview($args = array(), &$request) {
+	function viewBookForReview($args, $request) {
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
 		$bookId = !isset($args) || empty($args) ? null : (int) $args[0];
 
@@ -91,7 +91,7 @@ class BooksForReviewHandler extends Handler {
 
 		// Ensure book for review is valid and for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-			$book =& $bfrDao->getBookForReview($bookId);
+			$book = $bfrDao->getBookForReview($bookId);
 			$bfrPlugin->import('classes.BookForReview');
 
 			// Ensure book is still available
@@ -103,10 +103,10 @@ class BooksForReviewHandler extends Handler {
 				$coverPagePath = $request->getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$templateMgr->assign('locale', AppLocale::getLocale());
-				$templateMgr->assign_by_ref('bookForReview', $book);
+				$templateMgr->assign('bookForReview', $book);
 				$templateMgr->assign('isAuthor', $isAuthor);
 				$templateMgr->display($bfrPlugin->getTemplatePath() . 'bookForReview.tpl');
 			}
@@ -117,8 +117,8 @@ class BooksForReviewHandler extends Handler {
 	/**
 	 * Ensure that we have a selected journal and the plugin is enabled
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
-		$journal =& $request->getJournal();
+	function authorize($request, &$args, $roleAssignments) {
+		$journal = $request->getJournal();
 		if (!isset($journal)) return false;
 
 		$bfrPlugin =& PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);

@@ -23,7 +23,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		// If there ends up being another implicitAuth plugin - then this registration statement
 		// should be removed - so that the other plugin gets called
 
-		HookRegistry::register('ImplicitAuthPlugin::implicitAuth', array(&$this, 'implicitAuth'));
+		HookRegistry::register('ImplicitAuthPlugin::implicitAuth', array($this, 'implicitAuth'));
 
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
@@ -104,7 +104,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 			// Get user by auth string
 
-			$user =& $userDao->getUserByAuthStr($uid, true);
+			$user = $userDao->getUserByAuthStr($uid, true);
 
 			if (isset($user)) {
 				syslog(LOG_ERR, "Found user by uid: " . $uid . " Returning user.");
@@ -123,7 +123,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 			// If we were not succsessful getting user by UIN - see if we can get the user by email.
 			// If we find a user with this email - but with an existing UID - then this is a problem
 
-			$user =& $userDao->getUserByEmail($email);
+			$user = $userDao->getUserByEmail($email);
 
 			if (isset($user)) {
 
@@ -209,7 +209,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		// Go put the user into the session and return it.
 
 		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$session = $sessionManager->getUserSession();
 		$session->setSessionVar('username', $user->getUsername());
 
 		return $user;

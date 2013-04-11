@@ -37,9 +37,9 @@ class AuthorHandler extends Handler {
 		$this->validate($request);
 		$this->setupTemplate($request);
 		
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 
@@ -76,7 +76,7 @@ class AuthorHandler extends Handler {
 			$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		if (!$active) {
 			// Make view counts available if enabled.
@@ -113,14 +113,14 @@ class AuthorHandler extends Handler {
 	 * @param $articleId int optional
 	 * @param $reason string optional
 	 */
-	function validate(&$request, $articleId = null, $reason = null) {
+	function validate($request, $articleId = null, $reason = null) {
 		$this->addCheck(new HandlerValidatorRoles($this, true, $reason, null, array(ROLE_ID_AUTHOR)));		
 
 		if ($articleId !== null) {
 			$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 			$roleDao = DAORegistry::getDAO('RoleDAO');
-			$journal =& $request->getJournal();
-			$user =& $request->getUser();
+			$journal = $request->getJournal();
+			$user = $request->getUser();
 
 			$isValid = true;
 
@@ -160,7 +160,7 @@ class AuthorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function instructions($args, &$request) {
+	function instructions($args, $request) {
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy', 'proof'))) {
 			$request->redirect(null, null, 'index');

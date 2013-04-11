@@ -499,7 +499,7 @@ class NativeExportDom {
 	 * @param $issue Issue
 	 */
 	function generatePubId(&$doc, &$node, &$pubObject, &$issue) {
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $issue->getJournalId());
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $issue->getJournalId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($issue->getPublished()) {
 				$pubId = $pubIdPlugin->getPubId($pubObject);

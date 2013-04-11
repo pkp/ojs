@@ -65,7 +65,7 @@ class UserExportDom {
 					unset($signatureNode);
 				}
 			}
-			$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $user->getUserInterests(false, true), false);
+			$interestsNode = XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $user->getUserInterests(false, true), false);
 			if ($interestsNode) {
 				XMLCustomWriter::setAttribute($interestsNode);
 			}

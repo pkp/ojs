@@ -124,7 +124,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			$canOnlyReview = false;
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		// Remove the notification setting categories that the user will not be receiving (to simplify the form)
 		$notificationSettingCategories = $this->_getNotificationSettingCategories();
@@ -146,10 +146,10 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	 * Save site settings.
 	 * @param $request Request
 	 */
-	function execute(&$request) {
+	function execute($request) {
 		$user = $request->getUser();
 		$userId = $user->getId();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$blockedNotifications = array();
 		$emailSettings = array();

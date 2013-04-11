@@ -38,7 +38,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	/**
 	 * @see PKPHandler::authorize()
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		// Make sure the user can edit the submission in the request.
 		import('classes.security.authorization.OjsSubmissionAccessPolicy');
 		$this->addPolicy(new OjsSubmissionAccessPolicy($request, $args, $roleAssignments, 'assocId'));
@@ -48,7 +48,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request, $args) {
+	function initialize($request, $args) {
 		// Associate the citation editor with the authorized article.
 		$this->setAssocType(ASSOC_TYPE_ARTICLE);
 		$article =& $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
@@ -64,8 +64,8 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	/**
 	 * @see PKPCitationGridHandler::exportCitations()
 	 */
-	function exportCitations($args, &$request) {
-		$dispatcher =& $this->getDispatcher();
+	function exportCitations($args, $request) {
+		$dispatcher = $this->getDispatcher();
 		$articleMetadataUrl = $dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'viewMetadata', $this->getAssocId());
 		$noCitationsFoundMessage = __("submission.citations.editor.pleaseImportCitationsFirst", array('articleMetadataUrl' => $articleMetadataUrl));
 		return parent::exportCitations($args, $request, $noCitationsFoundMessage);

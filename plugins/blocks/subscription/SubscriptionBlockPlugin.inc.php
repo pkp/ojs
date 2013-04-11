@@ -46,14 +46,14 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = ($journal)?$journal->getId():null;
 		if (!$journal) return '';
 
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			return '';
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = ($user)?$user->getId():null;
 		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 

@@ -33,8 +33,8 @@ class EditorAction extends SectionEditorAction {
 		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$user =& $request->getUser();
-		$journal =& $request->getJournal();
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 
 		$editorSubmission =& $editorSubmissionDao->getEditorSubmission($articleId);
 		$sectionEditor =& $userDao->getById($sectionEditorId);
@@ -92,7 +92,7 @@ class EditorAction extends SectionEditorAction {
 	 * @param $article object
 	 */
 	function expediteSubmission($article, $request) {
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		import('classes.submission.editor.EditorAction');
 		import('classes.submission.sectionEditor.SectionEditorAction');

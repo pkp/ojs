@@ -34,9 +34,9 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getNotificationUrl(&$request, &$notification) {
-		$router =& $request->getRouter();
-		$dispatcher =& $router->getDispatcher();
+	function getNotificationUrl($request, $notification) {
+		$router = $request->getRouter();
+		$dispatcher = $router->getDispatcher();
 		$type = $notification->getType();
 
 		switch ($type) {
@@ -83,7 +83,7 @@ class NotificationManager extends PKPNotificationManager {
 		}
 	}
 
-	function _getCachedRole(&$request, &$notification, $validRoles = null) {
+	function _getCachedRole($request, $notification, $validRoles = null) {
 		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
 		$articleId = (int) $notification->getAssocId();
 		$userId = $notification->getUserId();
@@ -117,8 +117,8 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $articleId
 	 * @return array
 	 */
-	function _getHighestPrivilegedRolesForArticle(&$request, $articleId) {
-		$user =& $request->getUser();
+	function _getHighestPrivilegedRolesForArticle($request, $articleId) {
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
@@ -167,7 +167,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getNotificationContents(&$request, &$notification) {
+	function getNotificationContents($request, $notification) {
 		$type = $notification->getType();
 		assert(isset($type));
 
@@ -244,7 +244,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification
 	 * @return string
 	 */
-	function _getArticleTitle(&$notification) {
+	function _getArticleTitle($notification) {
 		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
 		assert(is_numeric($notification->getAssocId()));
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
@@ -258,7 +258,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getStyleClass(&$notification) {
+	function getStyleClass($notification) {
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_BOOK_REQUESTED:
 			case NOTIFICATION_TYPE_BOOK_CREATED:
@@ -287,7 +287,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getIconClass(&$notification) {
+	function getIconClass($notification) {
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				return 'notifyIconNewPage';
@@ -335,7 +335,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * Returns an array of information on the journal's subscription settings
 	 * @return array
 	 */
-	function getSubscriptionSettings(&$request) {
+	function getSubscriptionSettings($request) {
 		$journal = $request->getJournal();
 		if (!$journal) return array();
 

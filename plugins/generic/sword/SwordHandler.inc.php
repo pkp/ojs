@@ -17,7 +17,7 @@ import('classes.handler.Handler');
 class SwordHandler extends Handler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function SwordHandler() {
 		parent::Handler();
 	}
@@ -25,18 +25,18 @@ class SwordHandler extends Handler {
 	/**
 	 * Display index page.
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		$articleId = (int) array_shift($args);
 		$save = array_shift($args) == 'save';
 
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$article =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$article = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		if (	!$article || !$user || !$journal ||
 			$article->getUserId() != $user->getId() ||

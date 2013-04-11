@@ -134,12 +134,12 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * - registerIssues, registerArticles, registerGalleys, registerSuppFiles: register several objects at a time
 	 * - resetIssue, resetArticle, resetGalley, resetSuppFile: reset an object to "unregistered" state.
 	 */
-	function display(&$args, &$request) {
+	function display(&$args, $request) {
 		parent::display($args, $request);
 
 		// Retrieve journal from the request context.
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 
 		$op = strtolower_codesafe(array_shift($args));
 
@@ -247,7 +247,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 				break;
 
 			default: // Display.
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 
 				// Test mode.
 				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
@@ -384,11 +384,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$request =& $this->getRequest();
-				$router =& $request->getRouter();
-				$journal =& $router->getContext($request);
+				$request = $this->getRequest();
+				$router = $request->getRouter();
+				$journal = $router->getContext($request);
 
-				$form =& $this->_instantiateSettingsForm($journal);
+				$form = $this->_instantiateSettingsForm($journal);
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
@@ -532,7 +532,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 *
 	 * @return boolean|array True for success or an array of error messages.
 	 */
-	function exportObjects(&$request, $exportSpec, &$journal, $outputFile = null) {
+	function exportObjects($request, $exportSpec, $journal, $outputFile = null) {
 		// Initialize local variables.
 		$errors = array();
 
@@ -617,7 +617,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 *
 	 * @return boolean|array True for success or an array of error messages.
 	 */
-	function registerObjects(&$request, $exportSpec, &$journal) {
+	function registerObjects($request, $exportSpec, $journal) {
 		// Registering can take a long time.
 		@set_time_limit(0);
 
@@ -698,7 +698,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @return array|boolean Either an array of generated export
 	 *  files together with the contained objects or false if not successful.
 	 */
-	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
+	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
 		assert(false);
 	}
 
@@ -758,7 +758,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $objects array
 	 * @param $file string
 	 */
-	function registerDoi(&$request, &$journal, &$objects, $file) {
+	function registerDoi($request, $journal, &$objects, $file) {
 		fatalError('Not implemented for this plug-in');
 	}
 
@@ -767,7 +767,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $request Request
 	 * @return boolean
 	 */
-	function isTestMode(&$request) {
+	function isTestMode($request) {
 		return ($request->getUserVar('testMode') == '1');
 	}
 
@@ -783,7 +783,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
 	 * @parem $testPrefix string
 	 */
-	function markRegistered(&$request, &$object, $testPrefix) {
+	function markRegistered($request, $object, $testPrefix) {
 		$registeredDoi = $object->getPubId('doi');
 		assert(!empty($registeredDoi));
 		if ($this->isTestMode($request)) {
@@ -856,7 +856,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $daoName string
 	 */
 	function registerDaoHook($daoName) {
-		HookRegistry::register(strtolower_codesafe($daoName) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
+		HookRegistry::register(strtolower_codesafe($daoName) . '::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 	}
 
 	/**
@@ -1294,7 +1294,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @return array A list of generated files together with the
 	 *  objects contained within the file.
 	 */
-	function _generateExportFilesForObjects(&$request, &$journal, $exportSpec, $exportPath, &$errors) {
+	function _generateExportFilesForObjects($request, $journal, $exportSpec, $exportPath, &$errors) {
 		// Run through the export types and generate the corresponding
 		// export files.
 		$exportFiles = array();
@@ -1463,7 +1463,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $notificationType integer One of the NOTIFICATION_TYPE_* constants.
 	 * @param $param string An additional parameter for the message.
 	 */
-	function _sendNotification(&$request, $message, $notificationType, $param = null) {
+	function _sendNotification($request, $message, $notificationType, $param = null) {
 		static $notificationManager = null;
 
 		if (is_null($notificationManager)) {
@@ -1477,7 +1477,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 			$params = null;
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$notificationManager->createTrivialNotification(
 			$user->getId(),
 			$notificationType,

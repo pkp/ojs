@@ -47,7 +47,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		$templateMgr->assign('roleOptions', array(
@@ -66,7 +66,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		set_time_limit(0);
 		switch (array_shift($args)) {
 			case 'confirm':
@@ -167,10 +167,10 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportAll':
 				$this->import('UserExportDom');
-				$users =& $roleDao->getUsersByJournalId($journal->getId());
-				$users =& $users->toArray();
+				$users = $roleDao->getUsersByJournalId($journal->getId());
+				$users = $users->toArray();
 				$userExportDom = new UserExportDom();
-				$doc =& $userExportDom->exportUsers($journal, $users);
+				$doc = $userExportDom->exportUsers($journal, $users);
 				header("Content-Type: application/xml");
 				header("Cache-Control: private");
 				header("Content-Disposition: attachment; filename=\"users.xml\"");
@@ -182,7 +182,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$rolePaths = array();
 				foreach ($request->getUserVar('roles') as $rolePath) {
 					$roleId = $roleDao->getRoleIdFromPath($rolePath);
-					$thisRoleUsers =& $roleDao->getUsersByRoleId($roleId, $journal->getId());
+					$thisRoleUsers = $roleDao->getUsersByRoleId($roleId, $journal->getId());
 					foreach ($thisRoleUsers->toArray() as $user) {
 						$users[$user->getId()] = $user;
 					}
@@ -259,14 +259,14 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$rolePaths = null;
 				if (empty($args)) {
-					$users =& $roleDao->getUsersByJournalId($journal->getId());
-					$users =& $users->toArray();
+					$users = $roleDao->getUsersByJournalId($journal->getId());
+					$users = $users->toArray();
 				} else {
 					$users = array();
 					$rolePaths = array();
 					foreach ($args as $rolePath) {
 						$roleId = $roleDao->getRoleIdFromPath($rolePath);
-						$thisRoleUsers =& $roleDao->getUsersByRoleId($roleId, $journal->getId());
+						$thisRoleUsers = $roleDao->getUsersByRoleId($roleId, $journal->getId());
 						foreach ($thisRoleUsers->toArray() as $user) {
 							$users[$user->getId()] = $user;
 						}

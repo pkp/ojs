@@ -96,7 +96,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			$journalId = $article->getJournalId();
 		}
 
-		$journal =& $this->_getJournal($journalId);
+		$journal = $this->_getJournal($journalId);
 		if (!$journal) return null;
 		$journalId = $journal->getId();
 
@@ -318,9 +318,9 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		assert(is_numeric($journalId));
 
 		// Get the journal object from the context (optimized).
-		$request =& $this->getRequest();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request); /* @var $journal Journal */
+		$request = $this->getRequest();
+		$router = $request->getRouter();
+		$journal = $router->getContext($request); /* @var $journal Journal */
 
 		// Check whether we still have to retrieve the journal from the database.
 		if (!$journal || $journal->getId() != $journalId) {

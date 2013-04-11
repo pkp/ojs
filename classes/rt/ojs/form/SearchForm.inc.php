@@ -69,14 +69,14 @@ class SearchForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal = Request::getJournal();
+		$templateMgr = TemplateManager::getManager();
 
 		$templateMgr->assign('contextId', $this->contextId);
 		$templateMgr->assign('versionId', $this->versionId);
 
 		if (isset($this->search)) {
-			$templateMgr->assign_by_ref('search', $this->search);
+			$templateMgr->assign('search', $this->search);
 			$templateMgr->assign('searchId', $this->searchId);
 		}
 

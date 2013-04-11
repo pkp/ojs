@@ -30,7 +30,7 @@ class ManagementHandler extends Handler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request, $args = null) {
+	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		// Load manager locale components.
@@ -43,7 +43,7 @@ class ManagementHandler extends Handler {
 	 * @param $args array
 	 * @param $roleAssignments array
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
 		return parent::authorize($request, $args, $roleAssignments);

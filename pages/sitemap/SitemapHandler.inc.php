@@ -70,11 +70,11 @@ class SitemapHandler extends Handler {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 		
-		$doc =& XMLCustomWriter::createDocument();
-		$root =& XMLCustomWriter::createElement($doc, 'urlset');
+		$doc = XMLCustomWriter::createDocument();
+		$root = XMLCustomWriter::createElement($doc, 'urlset');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
 		
 		// Journal home

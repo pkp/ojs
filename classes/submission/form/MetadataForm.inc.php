@@ -37,7 +37,7 @@ class MetadataForm extends Form {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
 
 		// If the user is an editor of this article, make the entire form editable.
@@ -199,14 +199,14 @@ class MetadataForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR); // editor.cover.xxx locale keys; FIXME?
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getId():null);
 		$templateMgr->assign('submissionSettings', $settingsDao->getSettings($journal->getId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
@@ -322,7 +322,7 @@ class MetadataForm extends Form {
 	 * @param $request PKPRequest
 	 * @return int the article ID
 	 */
-	function execute(&$request) {
+	function execute($request) {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$authorDao = DAORegistry::getDAO('AuthorDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');

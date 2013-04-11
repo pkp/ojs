@@ -150,7 +150,7 @@ class LayoutEditorAction extends Action {
 	function completeLayoutEditing($submission, $send, $request) {
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($layoutSignoff->getDateCompleted() != null) {
@@ -173,13 +173,13 @@ class LayoutEditorAction extends Action {
 			$signoffDao->updateObject($layoutSignoff);
 
 			// Add log entry
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			import('classes.log.ArticleLog');
 			ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_COMPLETE, 'log.layout.layoutEditComplete', array('editorName' => $user->getFullName()));
 
 			return true;
 		} else {
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			if (!$request->getUserVar('continued')) {
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($submission->getId());
 				$assignedEditors = $email->ccAssignedEditors($submission->getId());

@@ -27,11 +27,11 @@ class RegistrationHandler extends UserHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function register($args, &$request) {
+	function register($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if ($journal != null) {
 			import('classes.user.form.RegistrationForm');
@@ -46,8 +46,8 @@ class RegistrationHandler extends UserHandler {
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournals(true);
-			$templateMgr =& TemplateManager::getManager($request);
+			$journals = $journalDao->getJournals(true);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('source', $request->getUserVar('source'));
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('user/registerSite.tpl');
@@ -59,7 +59,7 @@ class RegistrationHandler extends UserHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function registerUser($args, &$request) {
+	function registerUser($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request, true);
 		import('classes.user.form.RegistrationForm');
@@ -85,7 +85,7 @@ class RegistrationHandler extends UserHandler {
 
 			if ($reason !== null) {
 				$this->setupTemplate($request, true);
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('pageTitle', 'user.login');
 				$templateMgr->assign('errorMsg', $reason==''?'user.login.accountDisabled':'user.login.accountDisabledWithReason');
 				$templateMgr->assign('errorParams', array('reason' => $reason));
@@ -105,9 +105,9 @@ class RegistrationHandler extends UserHandler {
 	 * Show error message if user registration is not allowed.
 	 * @param $request PKPRequest
 	 */
-	function registrationDisabled(&$request) {
+	function registrationDisabled($request) {
 		$this->setupTemplate($request, true);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageTitle', 'user.register');
 		$templateMgr->assign('errorMsg', 'user.register.registrationDisabled');
 		$templateMgr->assign('backLink', $request->url(null, 'login'));
@@ -121,11 +121,11 @@ class RegistrationHandler extends UserHandler {
 	 * @param $request PKPRequest
 	 * @author Marc Bria <marc.bria@uab.es>
 	 */
-	function activateUser($args, &$request) {
+	function activateUser($args, $request) {
 		$username = array_shift($args);
 		$accessKeyCode = array_shift($args);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getByUsername($username);
 		if (!$user) $request->redirect(null, 'login');
@@ -148,7 +148,7 @@ class RegistrationHandler extends UserHandler {
 			$userDao->updateObject($user);
 
 			$this->setupTemplate($request, true);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('message', 'user.login.activated');
 			return $templateMgr->display('common/message.tpl');
 		}
@@ -160,7 +160,7 @@ class RegistrationHandler extends UserHandler {
 	 * Checks if journal allows user registration.
 	 * @param $request PKPRequest
 	 */	
-	function validate(&$request) {
+	function validate($request) {
 		parent::validate(false);
 		$journal = $request->getJournal();
 		if ($journal != null) {

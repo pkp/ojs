@@ -27,7 +27,7 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_ADMIN);
 	}
@@ -37,8 +37,8 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	 * installed journals, based on site locale settings.
 	 * @param $request object
 	 */
-	function _updateContextLocaleSettings(&$request) {
-		$site =& $request->getSite();
+	function _updateContextLocaleSettings($request) {
+		$site = $request->getSite();
 		$siteSupportedLocales = $site->getSupportedLocales();
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -67,9 +67,9 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	 */
 	function _canManage($request) {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals();
+		$journals = $journalDao->getJournals();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		return ($journals->getCount() == 1 && $journal && in_array(ROLE_ID_MANAGER, $userRoles));
 	}
 }

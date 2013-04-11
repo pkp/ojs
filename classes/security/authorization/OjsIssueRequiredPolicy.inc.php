@@ -23,7 +23,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @param $args array request parameters
 	 * @param $operations array
 	 */
-	function OjsIssueRequiredPolicy(&$request, &$args, $operations = null) {
+	function OjsIssueRequiredPolicy($request, &$args, $operations = null) {
 		parent::DataObjectRequiredPolicy($request, $args, 'issueId', 'user.authorization.invalidIssue', $operations);
 		$this->journal = $request->getJournal();
 	}

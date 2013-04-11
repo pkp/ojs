@@ -64,8 +64,8 @@ class VersionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal = Request::getJournal();
+		$templateMgr = TemplateManager::getManager();
 
 		if (isset($this->version)) {
 			$templateMgr->assign_by_ref('version', $this->version);

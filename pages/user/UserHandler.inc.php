@@ -30,17 +30,17 @@ class UserHandler extends PKPUserHandler {
 	function index($args, $request) {
 		$this->validate();
 
-		$sessionManager =& SessionManager::getManager($request);
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager($request);
+		$session = $sessionManager->getUserSession();
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 
 		$setupIncomplete = array();
@@ -52,7 +52,7 @@ class UserHandler extends PKPUserHandler {
 
 			// Show roles for all journals
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournals();
+			$journals = $journalDao->getJournals();
 
 			// Fetch the user's roles for each journal
 			while ($journal = $journals->next()) {
@@ -119,7 +119,7 @@ class UserHandler extends PKPUserHandler {
 	function gifts($args, $request) {
 		$this->validate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 
 		// Ensure gift payments are enabled
@@ -130,7 +130,7 @@ class UserHandler extends PKPUserHandler {
 
 		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 
 		// Get user's redeemed and unreedemed gift subscriptions
@@ -143,7 +143,7 @@ class UserHandler extends PKPUserHandler {
 		);
 
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('journalTitle', $journal->getLocalizedName());
 		$templateMgr->assign('journalPath', $journal->getPath());
@@ -163,7 +163,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 
 		// Ensure gift payments are enabled
@@ -173,7 +173,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$acceptGiftPayments) $request->redirect(null, 'user');
 
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$giftId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -213,7 +213,7 @@ class UserHandler extends PKPUserHandler {
 				$notificationType = NOTIFICATION_TYPE_NO_GIFT_TO_REDEEM;
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$notificationManager->createTrivialNotification($user->getId(), $notificationType);
 		$request->redirect(null, 'user', 'gifts');
@@ -227,7 +227,7 @@ class UserHandler extends PKPUserHandler {
 	function subscriptions($args, $request) {
 		$this->validate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
@@ -237,7 +237,7 @@ class UserHandler extends PKPUserHandler {
 		$institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true);
 		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) $request->redirect(null, 'user');
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 
 		// Subscriptions contact and additional information
@@ -263,7 +263,7 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
 		$this->setupTemplate($request);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
@@ -355,8 +355,8 @@ class UserHandler extends PKPUserHandler {
 	function become($args, $request) {
 		parent::validate(true);
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		switch (array_shift($args)) {
 			case 'author':
@@ -383,7 +383,7 @@ class UserHandler extends PKPUserHandler {
 			$roleDao->insertRole($role);
 			$request->redirectUrl($request->getUserVar('source'));
 		} else {
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('message', $deniedKey);
 			return $templateMgr->display('common/message.tpl');
 		}
@@ -418,7 +418,7 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function viewPublicProfile($args, $request) {
 		$this->validate(false);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$userId = (int) array_shift($args);
 
 		$accountIsVisible = false;
@@ -454,7 +454,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
@@ -464,7 +464,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -533,7 +533,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (empty($args)) $request->redirect(null, 'user');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
@@ -543,7 +543,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -637,7 +637,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (count($args) != 2) $request->redirect(null, 'user');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
@@ -647,7 +647,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -688,7 +688,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (count($args) != 2) $request->redirect(null, 'user');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'user');
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
@@ -698,7 +698,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
 
 		$this->setupTemplate($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$userId = $user->getId();
 		$journalId = $journal->getId();
 
@@ -748,8 +748,8 @@ class UserHandler extends PKPUserHandler {
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

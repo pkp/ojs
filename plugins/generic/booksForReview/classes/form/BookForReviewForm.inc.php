@@ -73,7 +73,7 @@ class BookForReviewForm extends Form {
 
 		$this->validEditions = array_merge( array(0 => ''), range(1,20));
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		parent::Form($bfrPlugin->getTemplatePath() . 'editor' . '/' . 'bookForReviewForm.tpl');
 
 		// Title is provided
@@ -122,7 +122,7 @@ class BookForReviewForm extends Form {
 			$this->_data['dateSubmitted'] = $book->getDateSubmitted(); 
 		}
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('bookForReview', $this->book);
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('validAuthorTypes', $this->validAuthorTypes);
@@ -270,9 +270,9 @@ class BookForReviewForm extends Form {
 		$bfrPlugin->import('classes.BookForReviewAuthor');
 
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
-		$user =& Request::getUser();
+		$user = Request::getUser();
 		$editorId = $user->getId(); 
 
 		if ($this->book == null) {

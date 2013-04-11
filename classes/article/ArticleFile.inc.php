@@ -72,7 +72,7 @@ class ArticleFile extends SubmissionFile {
 		$article = $articleDao->getById($this->getArticleId(), null, true);
 		if (!$article) return null;
 
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $article->getJournalId());
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $article->getJournalId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($pubIdPlugin->getPubIdType() == $pubIdType) {
 				// If we already have an assigned ID, use it.

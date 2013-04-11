@@ -24,7 +24,7 @@ class SectionAssignmentPolicy extends AuthorizationPolicy {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function SectionAssignmentPolicy(&$request) {
+	function SectionAssignmentPolicy($request) {
 		parent::AuthorizationPolicy('user.authorization.seriesAssignment');
 		$this->_request =& $request;
 	}
@@ -37,16 +37,16 @@ class SectionAssignmentPolicy extends AuthorizationPolicy {
 	 */
 	function effect() {
 		// Get the user
-		$user =& $this->_request->getUser();
+		$user = $this->_request->getUser();
 		if (!is_a($user, 'PKPUser')) return AUTHORIZATION_DENY;
 
 		// Get the press
-		$router =& $this->_request->getRouter();
-		$context =& $router->getContext($this->_request);
+		$router = $this->_request->getRouter();
+		$context = $router->getContext($this->_request);
 		if (!is_a($context, 'Journal')) return AUTHORIZATION_DENY;
 
 		// Get the article
-		$article =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$article = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		if (!is_a($article, 'Article')) return AUTHORIZATION_DENY;
 
 		import('classes.security.authorization.internal.SectionAssignmentRule');

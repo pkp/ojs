@@ -78,8 +78,8 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return string
 	 */
-	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+	function getContents($templateMgr, $request = null) {
+		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		// Get the ad settings.

@@ -29,7 +29,7 @@ class StaticPagesPlugin extends GenericPlugin {
 
 	function isTinyMCEInstalled() {
 		// If the thesis plugin isn't enabled, don't do anything.
-		$application =& PKPApplication::getApplication();
+		$application = PKPApplication::getApplication();
 		$products =& $application->getEnabledProducts('plugins.generic');
 		return (isset($products['tinymce']));
 	}
@@ -47,7 +47,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$staticPagesDao = new StaticPagesDAO($this->getName());
 				DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
-				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
+				HookRegistry::register('LoadHandler', array($this, 'callbackHandleContent'));
 			}
 			return true;
 		}
@@ -58,11 +58,11 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * Declare the handler function to process the actual page PATH
 	 */
 	function callbackHandleContent($hookName, $args) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
 
-		$page =& $args[0];
-		$op =& $args[1];
+		$page = $args[0];
+		$op = $args[1];
 
 		if ($page == 'pages' && in_array($op, array('index', 'view'))) {
 			define('STATIC_PAGES_PLUGIN_NAME', $this->getName()); // Kludge
@@ -91,15 +91,15 @@ class StaticPagesPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 		$templateMgr->assign('pagesPath', $request->url(null, 'pages', 'view', 'REPLACEME'));
 
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				$this->import('StaticPagesSettingsForm');
 				$form = new StaticPagesSettingsForm($this, $journal->getId());
@@ -109,7 +109,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				return true;
 			case 'edit':
 			case 'add':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				$this->import('StaticPagesEditForm');
 
@@ -126,7 +126,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$form->display();
 				return true;
 			case 'save':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				$this->import('StaticPagesEditForm');
 
@@ -155,7 +155,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$request->redirect(null, null, 'manager', 'plugins');
 				return false;
 			case 'delete':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				$staticPageId = isset($args[0])?(int) $args[0]:null;
 				$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
 				$staticPagesDao->deleteStaticPageById($staticPageId);

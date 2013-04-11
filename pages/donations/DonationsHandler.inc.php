@@ -32,18 +32,18 @@ class DonationsHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if (!Validation::isLoggedIn()) {
 			Validation::redirectLogin('payment.loginRequired.forDonation');
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_DONATION, $user->getId(), 0, 0);
+		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_DONATION, $user->getId(), 0, 0);
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 	
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
@@ -54,10 +54,10 @@ class DonationsHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function thankYou($args, &$request) {
-		$templateMgr =& TemplateManager::getManager($request);
+	function thankYou($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		
 		$templateMgr->assign(array(
 			'currentUrl' => $request->url(null, null, 'donations'),

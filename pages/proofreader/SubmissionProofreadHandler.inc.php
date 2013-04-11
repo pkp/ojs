@@ -27,9 +27,9 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function submission($args, &$request) {
+	function submission($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId);
@@ -42,7 +42,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		ProofreaderAction::proofreadingUnderway($this->submission, 'SIGNOFF_PROOFREADING_PROOFREADER');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign_by_ref('authors', $authors);
@@ -66,7 +66,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function completeProofreader($args, &$request) {
+	function completeProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
@@ -82,9 +82,9 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewMetadata($args, &$request) {
+	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId, 'summary');
 
@@ -116,12 +116,12 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalley($args, &$request) {
+	function proofGalley($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -132,12 +132,12 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalleyTop($args, &$request) {
+	function proofGalleyTop($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -149,7 +149,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalleyFile($args, &$request) {
+	function proofGalleyFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
@@ -161,7 +161,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
@@ -182,7 +182,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 * @param $request PKPRequest
 	 */
-	function viewFile($args, &$request) {
+	function viewFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // Can be null

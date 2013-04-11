@@ -19,7 +19,7 @@ class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function SectionEditorSubmissionRequiredPolicy(&$request, &$args, $submissionParameterName = 'articleId') {
+	function SectionEditorSubmissionRequiredPolicy($request, &$args, $submissionParameterName = 'articleId') {
 		parent::DataObjectRequiredPolicy($request, $args, $submissionParameterName, 'user.authorization.invalidSectionEditorSubmission');
 	}
 
@@ -41,9 +41,9 @@ class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
 
 		// Check whether the article is actually part of the journal
 		// in the context.
-		$request =& $this->getRequest();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$request = $this->getRequest();
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		if (!is_a($journal, 'Journal')) return AUTHORIZATION_DENY;
 		if ($sectionEditorSubmission->getJournalId() != $journal->getId()) return AUTHORIZATION_DENY;
 

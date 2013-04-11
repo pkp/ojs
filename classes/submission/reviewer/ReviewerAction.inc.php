@@ -74,7 +74,7 @@ class ReviewerAction extends Action {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
 					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
-						$journal =& $request->getJournal();
+						$journal = $request->getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
 					} else {
@@ -152,7 +152,7 @@ class ReviewerAction extends Action {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
 					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getId());
 					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
-						$journal =& Request::getJournal();
+						$journal = Request::getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
 					} else {
@@ -368,7 +368,7 @@ class ReviewerAction extends Action {
 	function downloadReviewerFile($reviewId, $article, $fileId, $revision = null) {
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		$canDownload = false;
 

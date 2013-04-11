@@ -35,11 +35,11 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 
@@ -48,12 +48,12 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function submissions($args, &$request) {
+	function submissions($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
@@ -84,7 +84,7 @@ class LayoutEditorHandler extends Handler {
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
@@ -126,14 +126,14 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function futureIssues($args, &$request) {
+	function futureIssues($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getId(), $rangeInfo));
 		$templateMgr->display('layoutEditor/futureIssues.tpl');
 	}
@@ -143,11 +143,11 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function backIssues($args, &$request) {
+	function backIssues($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
@@ -155,7 +155,7 @@ class LayoutEditorHandler extends Handler {
 		$sort = isset($sort) ? $sort : 'title';
 		$sortDirection = $request->getUserVar('sortDirection');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getId(), $rangeInfo));
 
 		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getId());
@@ -180,7 +180,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function completeProofreader($args, &$request) {
+	function completeProofreader($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 
 		$this->validate($request, $articleId);
@@ -215,7 +215,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args (type)
 	 * @param $request PKPRequest
 	 */
-	function instructions($args, &$request) {
+	function instructions($args, $request) {
 		$this->setupTemplate($request);
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !LayoutEditorAction::instructions($request, $args[0], array('layout', 'proof', 'referenceLinking'))) {
@@ -242,8 +242,8 @@ class LayoutEditorHandler extends Handler {
 		if ($articleId !== null) {
 			$isValid = false;
 
-			$journal =& $request->getJournal();
-			$user =& $request->getUser();
+			$journal = $request->getJournal();
+			$user = $request->getUser();
 
 			$layoutDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 			$signoffDao = DAORegistry::getDAO('SignoffDAO');

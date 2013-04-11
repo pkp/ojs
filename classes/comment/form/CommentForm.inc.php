@@ -97,7 +97,7 @@ class CommentForm extends Form {
 	function display() {
 		$journal = Request::getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		if (isset($this->comment)) {
 			$templateMgr->assign_by_ref('comment', $this->comment);
@@ -151,7 +151,7 @@ class CommentForm extends Form {
 	 * @return int the comment ID
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$enableComments = $journal->getSetting('enableComments');
 
 		$commentDao = DAORegistry::getDAO('CommentDAO');
@@ -161,7 +161,7 @@ class CommentForm extends Form {
 			$comment = $commentDao->newDataObject();
 		}
 
-		$user =& Request::getUser();
+		$user = Request::getUser();
 
 		$comment->setTitle($this->getData('title'));
 		$comment->setBody($this->getData('body'));

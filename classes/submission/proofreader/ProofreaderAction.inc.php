@@ -32,7 +32,7 @@ class ProofreaderAction extends Action {
 			$signoffDao->updateObject($proofSignoff);
 
 			// Add log entry
-			$user =& Request::getUser();
+			$user = Request::getUser();
 			$userDao = DAORegistry::getDAO('UserDAO');
 			$proofreader =& $userDao->getById($userId);
 			if (!isset($proofreader)) return;
@@ -55,8 +55,8 @@ class ProofreaderAction extends Action {
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal = Request::getJournal();
+		$user = Request::getUser();
 		$ccs = array();
 
 		import('classes.mail.ArticleMailTemplate');
@@ -88,7 +88,7 @@ class ProofreaderAction extends Action {
 				$eventType = SUBMISSION_EMAIL_PROOFREAD_THANK_AUTHOR;
 				$signoffType = 'SIGNOFF_PROOFREADING_AUTHOR';
 				$setDateField = 'setDateAcknowledged';
-				$receiver =& $userDao->getById($sectionEditorSubmission->getUserId());
+				$receiver = $userDao->getById($sectionEditorSubmission->getUserId());
 				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
@@ -110,7 +110,7 @@ class ProofreaderAction extends Action {
 
 				if ($nextSignoff->getUserId() != 0) {
 					$setNextDateField = 'setDateNotified';
-					$proofreader =& $userDao->getById($nextSignoff->getUserId());
+					$proofreader = $userDao->getById($nextSignoff->getUserId());
 
 					$receiverName = $proofreader->getFullName();
 					$receiverAddress = $proofreader->getEmail();

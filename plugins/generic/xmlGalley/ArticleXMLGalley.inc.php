@@ -57,7 +57,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$cacheManager =& CacheManager::getManager();
 			$caches[$key] = $cacheManager->getFileCache(
 				'xsltGalley', $key,
-				array(&$this, '_xsltCacheMiss')
+				array($this, '_xsltCacheMiss')
 			);
 
 			// Check to see if the data is outdated
@@ -78,7 +78,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	function _xsltCacheMiss(&$cache) {
 		static $contents;
 		if (!isset($contents)) {
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getId(), 'XSLTrenderer');
@@ -138,7 +138,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		// Replace image references
 		$images =& $this->getImageFiles();
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		if ($images !== null) {
 			foreach ($images as $image) {
@@ -154,7 +154,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		// Perform replacement for ojs://... URLs
 		$contents = String::regexp_replace_callback(
 			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
-			array(&$this, '_handleOjsUrl'),
+			array($this, '_handleOjsUrl'),
 			$contents
 		);
 
@@ -164,7 +164,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 		if ($suppFiles) {
 			foreach ($suppFiles as $supp) {
-				$journal =& Request::getJournal();
+				$journal = Request::getJournal();
 				$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
 
 				$contents = preg_replace(
@@ -219,7 +219,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 			if ($suppFiles) {
-				$journal =& Request::getJournal();
+				$journal = Request::getJournal();
 				foreach ($suppFiles as $supp) {
 					$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
 
@@ -239,7 +239,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$temporaryFileManager->writeFile($tempFoName, $contents);
 
 			// perform %fo and %pdf replacements for fully-qualified shell command
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 			$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 
 			$fopCommand = str_replace(array('%fo', '%pdf'), 
@@ -276,7 +276,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * This function applies an XSLT transform to a given XML source.
 	 * @param $xmlFile pathname to the XML source file (absolute)
 	 * @param $xslFile pathname to the XSL stylesheet (absolute)
-	 * @param (optional) $xsltType type of XSLT renderer to use (PHP4, PHP5, or XSLT shell command)
+	 * @param (optional) $xsltType type of XSLT renderer to use (PHP5, or XSLT shell command)
 	 * @param (optional) $arguments array of param-value pairs to pass to the XSLT  
 	 * @return string
 	 */
@@ -286,7 +286,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		if (!$fileManager->fileExists($xmlFile) || !$fileManager->fileExists($xslFile)) return false;
 
 		// Determine the appropriate XSLT processor for the system
-		if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {
+		if (extension_loaded('xsl') && extension_loaded('dom')) {
 			// PHP5.x with XSL/DOM modules present
 
 			if ( $xsltType == "PHP5"  || $xsltType == "" ) {
@@ -322,21 +322,6 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 				return $contents;
 			}
-		}
-
-		if ( version_compare(PHP_VERSION,'5','<') && extension_loaded('xslt') ) {
-			// PHP4.x with XSLT module present
-
-			if ( $xsltType == "PHP4"  || $xsltType == "" ) {
-				// create the processor
-				$proc = xslt_create();
-
-				// transform the XML document to an XHTML fragment
-				$contents = xslt_process($proc, $xmlFile, $xslFile, null, null, $arguments);
-
-				return $contents;
-			}
-
 		}
 
 		if ( $xsltType != "" ) {

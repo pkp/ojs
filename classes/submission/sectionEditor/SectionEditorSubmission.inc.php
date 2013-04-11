@@ -489,7 +489,7 @@ class SectionEditorSubmission extends Article {
 		$editAssignments = $this->getEditAssignments();
 		if (empty($editAssignments)) return 'highlight';
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		// Sanity check
 		if (!$journal || $journal->getId() != $this->getJournalId()) return null;
 

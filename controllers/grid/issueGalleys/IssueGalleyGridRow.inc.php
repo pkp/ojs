@@ -34,7 +34,7 @@ class IssueGalleyGridRow extends GridRow {
 	 * Configure the grid row
 	 * @param $request PKPRequest
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 
 		// Is this a new row or an existing row?

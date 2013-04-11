@@ -29,7 +29,7 @@ class TemplateManager extends PKPTemplateManager {
 		parent::PKPTemplateManager($request);
 
 		// Retrieve the router
-		$router =& $this->request->getRouter();
+		$router = $this->request->getRouter();
 		assert(is_a($router, 'PKPRouter'));
 
 		// Are we using implicit authentication?

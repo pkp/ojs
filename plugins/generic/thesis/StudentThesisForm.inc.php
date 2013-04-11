@@ -34,7 +34,7 @@ class StudentThesisForm extends Form {
 	 * @param $thesisId int leave as default for new thesis
 	 */
 	function StudentThesisForm($parentPluginName, $thesisId = null) {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 		$this->parentPluginName = $parentPluginName;
 		$thesisPlugin =& PluginRegistry::getPlugin('generic', $parentPluginName);
@@ -111,9 +111,9 @@ class StudentThesisForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$thesisPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
-		$templateMgr =& TemplateManager::getManager($thesisPlugin->getRequest());
+		$templateMgr = TemplateManager::getManager($thesisPlugin->getRequest());
 
 		if ($this->captchaEnabled) {
 			import('lib.pkp.lib.recaptcha.recaptchalib');
@@ -192,11 +192,11 @@ class StudentThesisForm extends Form {
 	 * Save thesis.
 	 */
 	function execute() {
-		$thesisPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$thesisPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$thesisPlugin->import('Thesis');
 
 		$thesisDao = DAORegistry::getDAO('ThesisDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		$thesis = new Thesis();

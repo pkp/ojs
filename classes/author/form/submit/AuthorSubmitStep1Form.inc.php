@@ -38,10 +38,10 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& $this->request->getJournal();
-		$user =& $this->request->getUser();
+		$journal = $this->request->getJournal();
+		$user = $this->request->getUser();
 
-		$templateMgr =& TemplateManager::getManager($this->request);
+		$templateMgr = TemplateManager::getManager($this->request);
 
 		// Get sections for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -90,7 +90,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 				'commentsToEditor' => $this->article->getCommentsToEditor()
 			);
 		} else {
-			$journal =& $this->request->getJournal();
+			$journal = $this->request->getJournal();
 			$supportedSubmissionLocales = $journal->getSupportedSubmissionLocales();
 			// Try these locales in order until we find one that's
 			// supported to use as a default.
@@ -156,7 +156,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
 			// Set user to initial author
 			$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-			$user =& $this->request->getUser();
+			$user = $this->request->getUser();
 			$author = new Author();
 			$author->setSubmissionId($this->articleId);
 			$author->setFirstName($user->getFirstName());

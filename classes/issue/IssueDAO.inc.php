@@ -32,7 +32,7 @@ class IssueDAO extends DAO {
 		if (!isset($this->caches)) $this->caches = array();
 		if (!isset($this->caches[$cacheId])) {
 			$cacheManager = CacheManager::getManager();
-			$this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, array(&$this, '_cacheMiss'));
+			$this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, array($this, '_cacheMiss'));
 		}
 		return $this->caches[$cacheId];
 	}

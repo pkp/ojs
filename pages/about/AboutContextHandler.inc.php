@@ -26,7 +26,7 @@ class AboutContextHandler extends Handler {
 	/**
 	 * @see PKPHandler::authorize()
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		$context = $request->getContext();
 		if (!$context || !$context->getSetting('restrictSiteAccess')) {
 			$templateMgr = TemplateManager::getManager($request);
@@ -92,7 +92,7 @@ class AboutContextHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function subscriptions($args, &$request) {
+	function subscriptions($args, $request) {
 		$journalDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -132,7 +132,7 @@ class AboutContextHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function memberships($args, &$request) {
+	function memberships($args, $request) {
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 

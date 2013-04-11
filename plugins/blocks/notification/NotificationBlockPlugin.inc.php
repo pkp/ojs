@@ -61,8 +61,8 @@ class NotificationBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$user =& $request->getUser();
-		$journal =& $request->getJournal();
+		$user = $request->getUser();
+		$journal = $request->getJournal();
 
 		if ($user && $journal) {
 			$userId = $user->getId();

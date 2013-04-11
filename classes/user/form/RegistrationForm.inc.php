@@ -53,20 +53,20 @@ class RegistrationForm extends Form {
 
 			if ($this->existingUser) {
 				// Existing user -- check login
-				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', 'return Validation::checkCredentials($form->getData(\'username\'), $form->getData(\'password\'));'), array(&$this)));
+				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', 'return Validation::checkCredentials($form->getData(\'username\'), $form->getData(\'password\'));'), array($this)));
 			} else {
 				// New user -- check required profile fields
-				$site =& Request::getSite();
+				$site = Request::getSite();
 
 				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 				$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
 				$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
-				$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+				$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array($this)));
 				$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 				$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 				$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
 				$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
-				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailsDoNotMatch', create_function('$email,$form', 'return $email == $form->getData(\'confirmEmail\');'), array(&$this)));
+				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailsDoNotMatch', create_function('$email,$form', 'return $email == $form->getData(\'confirmEmail\');'), array($this)));
 				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
 				if ($this->captchaEnabled) {
 					$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', 'recaptcha_response_field', Request::getRemoteAddr(), 'common.captchaField.badCaptcha'));
@@ -75,7 +75,7 @@ class RegistrationForm extends Form {
 				$authDao = DAORegistry::getDAO('AuthSourceDAO');
 				$this->defaultAuth =& $authDao->getDefaultPlugin();
 				if (isset($this->defaultAuth)) {
-					$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', create_function('$username,$form,$auth', 'return (!$auth->userExists($username) || $auth->authenticate($username, $form->getData(\'password\')));'), array(&$this, $this->defaultAuth)));
+					$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', create_function('$username,$form,$auth', 'return (!$auth->userExists($username) || $auth->authenticate($username, $form->getData(\'password\')));'), array($this, $this->defaultAuth)));
 				}
 			}
 		}
@@ -87,10 +87,10 @@ class RegistrationForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
-		$site =& Request::getSite();
+		$templateMgr = TemplateManager::getManager();
+		$site = Request::getSite();
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		if ($this->captchaEnabled) {
 			import('lib.pkp.lib.recaptcha.recaptchalib');
@@ -115,7 +115,7 @@ class RegistrationForm extends Form {
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 		$templateMgr->assign('source', Request::getUserVar('source'));
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		parent::display();
@@ -183,12 +183,12 @@ class RegistrationForm extends Form {
 			$userDao = DAORegistry::getDAO('UserDAO');
 
 			if ($this->implicitAuth) { // If we are using implicit auth - then use the session username variable - rather than data from the form
-				$sessionManager =& SessionManager::getManager();
-				$session =& $sessionManager->getUserSession();
+				$sessionManager = SessionManager::getManager();
+				$session = $sessionManager->getUserSession();
 
-				$user =& $userDao->getByUsername($session->getSessionVar('username'));
+				$user = $userDao->getByUsername($session->getSessionVar('username'));
 			} else {
-				$user =& $userDao->getByUsername($this->getData('username'));
+				$user = $userDao->getByUsername($this->getData('username'));
 			}
 
 			if ($user == null) {
@@ -219,7 +219,7 @@ class RegistrationForm extends Form {
 			$user->setDateRegistered(Core::getCurrentDate());
 			$user->setCountry($this->getData('country'));
 
-			$site =& Request::getSite();
+			$site = Request::getSite();
 			$availableLocales = $site->getSupportedLocales();
 
 			$locales = array();
@@ -258,13 +258,13 @@ class RegistrationForm extends Form {
 			$interestManager = new InterestManager();
 			$interestManager->setInterestsForUser($user, $interests);
 
-			$sessionManager =& SessionManager::getManager();
-			$session =& $sessionManager->getUserSession();
+			$sessionManager = SessionManager::getManager();
+			$session = $sessionManager->getUserSession();
 			$session->setSessionVar('username', $user->getUsername());
 
 		}
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 
 		// Roles users are allowed to register themselves in

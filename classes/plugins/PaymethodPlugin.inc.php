@@ -33,7 +33,7 @@ class PaymethodPlugin extends Plugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
-			HookRegistry::register('Template::Manager::Payment::displayPaymentSettingsForm', array(&$this, '_smartyDisplayPaymentSettingsForm'));
+			HookRegistry::register('Template::Manager::Payment::displayPaymentSettingsForm', array($this, '_smartyDisplayPaymentSettingsForm'));
 		}
 		return $success;
 	}
@@ -122,7 +122,7 @@ class PaymethodPlugin extends Plugin {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function handle($args, &$request) {
+	function handle($args, $request) {
 		// Subclass should override.
 		$request->redirect(null, null, 'index');
 	}

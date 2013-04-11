@@ -27,15 +27,15 @@ class CustomThemeSettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function CustomThemeSettingsForm(&$plugin, $journalId) {
+	function CustomThemeSettingsForm($plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+		$this->plugin = $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 	}
 
-	function display(&$request) {
-		$templateMgr =& TemplateManager::getManager($request);
+	function display($request) {
+		$templateMgr = TemplateManager::getManager($request);
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 		$additionalHeadData .= '<script type="text/javascript" src="' . $request->getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
 		$templateMgr->addStyleSheet($request->getBaseUrl() . '/plugins/themes/custom/picker.css');

@@ -31,7 +31,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$userId = isset($userId) ? (int) $userId : null;
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		if (isset($subscriptionId)) {

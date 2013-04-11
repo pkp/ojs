@@ -40,8 +40,8 @@ class PayMethodSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('paymentMethodPlugins', $this->plugins);
+		$templateMgr = TemplateManager::getManager();
+		$templateMgr->assign('paymentMethodPlugins', $this->plugins);
 		parent::display();
 	}
 
@@ -49,7 +49,7 @@ class PayMethodSettingsForm extends Form {
 	 * Initialize form data from current group group.
 	 */
 	function initData() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		// Allow the current selection to supercede the stored value
 		$paymentMethodPluginName = Request::getUserVar('paymentMethodPluginName');
@@ -89,7 +89,7 @@ class PayMethodSettingsForm extends Form {
 	 * Save settings
 	 */
 	function execute() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		// Save the general settings for the form
 		foreach (array('paymentMethodPluginName') as $journalSettingName) {
 			$journal->updateSetting($journalSettingName, $this->getData($journalSettingName));

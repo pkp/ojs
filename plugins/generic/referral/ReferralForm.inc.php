@@ -52,9 +52,9 @@ class ReferralForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('referralId', $this->referralId);
-		$templateMgr->assign_by_ref('article', $this->article);
+		$templateMgr->assign('article', $this->article);
 
 		parent::display();
 	}

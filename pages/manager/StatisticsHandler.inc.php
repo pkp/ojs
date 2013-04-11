@@ -30,8 +30,8 @@ class StatisticsHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		$statisticsYear = $request->getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
@@ -95,7 +95,7 @@ class StatisticsHandler extends ManagerHandler {
 
 		$this->validate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$sectionIds = $request->getUserVar('sectionIds');
 		if (!is_array($sectionIds)) {
@@ -130,7 +130,7 @@ class StatisticsHandler extends ManagerHandler {
 	function savePublicStatisticsList($args, $request) {
 		$this->validate();
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		foreach ($this->_getPublicStatisticsNames() as $name) {
 			$journal->updateSetting($name, $request->getUserVar($name)?true:false);
 		}
@@ -142,7 +142,7 @@ class StatisticsHandler extends ManagerHandler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$pluginName = array_shift($args);
 		$reportPlugins =& PluginRegistry::loadCategory('reports');

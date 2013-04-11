@@ -26,7 +26,7 @@ class OjsPluginAccessPolicy extends PolicySet {
 	 * @param $roleAssignments array
 	 * @param $accessMode int
 	 */
-	function OjsPluginAccessPolicy(&$request, &$args, $roleAssignments, $accessMode = ACCESS_MODE_ADMIN) {
+	function OjsPluginAccessPolicy($request, &$args, $roleAssignments, $accessMode = ACCESS_MODE_ADMIN) {
 		parent::PolicySet();
 
 		// A valid plugin is required.

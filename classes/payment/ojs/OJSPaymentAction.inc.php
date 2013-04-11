@@ -20,8 +20,8 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$form = new PaymentSettingsForm();
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($form->isLocaleResubmit()) {
 			$form->readInputData();
@@ -38,8 +38,8 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$settingsForm = new PaymentSettingsForm();
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		$settingsForm->readInputData();
 
@@ -56,11 +56,11 @@ class OJSPaymentAction {
 	 * Display all payments previously made
 	 */
 	function viewPayments($args, $request) {
-		$rangeInfo =& Handler::getRangeInfo($request, 'payments');
+		$rangeInfo = Handler::getRangeInfo($request, 'payments');
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
-		$payments =& $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
+		$payments = $paymentDao->getPaymentsByJournalId($journal->getId(), $rangeInfo);
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -80,10 +80,10 @@ class OJSPaymentAction {
 	function viewPayment($args, $request) {
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$completedPaymentId = $args[0];
-		$payment =& $paymentDao->getCompletedPayment($completedPaymentId);
+		$payment = $paymentDao->getCompletedPayment($completedPaymentId);
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -101,9 +101,9 @@ class OJSPaymentAction {
 	 * Display form to edit program settings.
 	 */
 	function payMethodSettings($request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
 
 		$settingsForm = new PayMethodSettingsForm();
@@ -115,7 +115,7 @@ class OJSPaymentAction {
 	 * Save changes to payment settings.
 	 */
 	function savePayMethodSettings($request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
 
 		$settingsForm = new PayMethodSettingsForm();

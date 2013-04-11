@@ -65,7 +65,7 @@ class ArticleMailTemplate extends MailTemplate {
 		if (parent::send(false)) {
 			if (!isset($this->skip) || !$this->skip) $this->log($request);
 			if ($request) {
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				if ($user && $this->attachmentsEnabled) $this->_clearAttachments($user->getId());
 			}
 			return true;
@@ -124,7 +124,7 @@ class ArticleMailTemplate extends MailTemplate {
 
 		// User data
 		if ($request) {
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			$entry->setSenderId($user == null ? 0 : $user->getId());
 			$entry->setIPAddress($request->getRemoteAddr());
 		} else {

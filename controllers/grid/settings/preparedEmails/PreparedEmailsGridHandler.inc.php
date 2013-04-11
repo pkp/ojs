@@ -42,7 +42,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function editPreparedEmail($args, &$request) {
+	function editPreparedEmail($args, $request) {
 		$journal = $request->getJournal();
 		$emailKey = $request->getUserVar('emailKey');
 
@@ -60,7 +60,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function updatePreparedEmail($args, &$request) {
+	function updatePreparedEmail($args, $request) {
 		$journal = $request->getJournal();
 		$emailKey = $request->getUserVar('emailKey');
 
@@ -90,7 +90,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $request Request
 	 * @return string a serialized JSON object
 	 */
-	function resetEmail($args, &$request) {
+	function resetEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
@@ -111,7 +111,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function resetAllEmails($args, &$request) {
+	function resetAllEmails($args, $request) {
 		$journal = $request->getJournal();
 		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO'); /* @var $emailTemplateDao EmailTemplateDAO */
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getId());
@@ -123,7 +123,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function disableEmail($args, &$request) {
+	function disableEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
@@ -161,7 +161,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function enableEmail($args, &$request) {
+	function enableEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
 		assert(is_string($emailKey));
 
@@ -193,7 +193,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function deleteCustomEmail($args, &$request) {
+	function deleteCustomEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
 		$journal = $request->getJournal();
 

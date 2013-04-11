@@ -128,7 +128,7 @@ class RTDAO extends DAO {
 	function &_getVersionCache() {
 		if (!isset($this->versionCache)) {
 			$cacheManager =& CacheManager::getManager();
-			$this->versionCache =& $cacheManager->getObjectCache('rtVersions', 0, array(&$this, '_versionCacheMiss'));
+			$this->versionCache =& $cacheManager->getObjectCache('rtVersions', 0, array($this, '_versionCacheMiss'));
 		}
 		return $this->versionCache;
 	}
@@ -267,7 +267,7 @@ class RTDAO extends DAO {
 		$version->setDescription($row['description']);
 
 		if (!HookRegistry::call('RTDAO::_returnVersionFromRow', array(&$version, &$row))) {
-			$contextsIterator =& $this->getContexts($row['version_id']);
+			$contextsIterator = $this->getContexts($row['version_id']);
 			$version->setContexts($contextsIterator->toArray());
 		}
 
@@ -395,7 +395,7 @@ class RTDAO extends DAO {
 	 * @param $versionId int
 	 */
 	function deleteContextsByVersionId($versionId) {
-		$contexts =& $this->getContexts($versionId);
+		$contexts = $this->getContexts($versionId);
 		foreach ($contexts->toArray() as $context) {
 			$this->deleteContext(
 				$context->getContextId(),

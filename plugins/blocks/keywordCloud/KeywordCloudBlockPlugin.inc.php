@@ -61,10 +61,10 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	 * @return $string
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$cacheManager =& CacheManager::getManager();
-		$cache =& $cacheManager->getFileCache('keywords_' . AppLocale::getLocale(), $journal->getId(), array(&$this, '_cacheMiss'));
+		$cacheManager = CacheManager::getManager();
+		$cache = $cacheManager->getFileCache('keywords_' . AppLocale::getLocale(), $journal->getId(), array($this, '_cacheMiss'));
 		// If the cache is older than a couple of days, regenerate it
 		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * KEYWORD_BLOCK_CACHE_DAYS) $cache->flush();
 

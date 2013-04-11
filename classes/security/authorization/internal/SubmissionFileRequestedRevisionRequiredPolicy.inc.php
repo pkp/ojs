@@ -20,7 +20,7 @@ class SubmissionFileRequestedRevisionRequiredPolicy extends PKPSubmissionFileReq
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	function SubmissionFileRequestedRevisionRequiredPolicy(&$request, $fileIdAndRevision = null) {
+	function SubmissionFileRequestedRevisionRequiredPolicy($request, $fileIdAndRevision = null) {
 		parent::PKPSubmissionFileRequestedRevisionRequiredPolicy($request, $fileIdAndRevision);
 	}
 

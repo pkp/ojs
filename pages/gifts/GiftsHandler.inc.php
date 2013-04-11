@@ -32,7 +32,7 @@ class GiftsHandler extends Handler {
 	 * @param $request PKPRequest
 	 */	
 	function purchaseGiftSubscription($args, $request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'index');
 
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -54,7 +54,7 @@ class GiftsHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function payPurchaseGiftSubscription($args, $request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'index');
 
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -64,7 +64,7 @@ class GiftsHandler extends Handler {
 
 		$this->setupTemplate();
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		// If buyer is logged in, save buyer user id as part of gift details
 		if ($user) {
@@ -90,9 +90,9 @@ class GiftsHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function thankYou($args, $request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$templateMgr->assign(array(
 			'currentUrl' => $request->url(null, null, 'gifts'),

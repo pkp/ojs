@@ -27,13 +27,13 @@ class XMLGalleySettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function XMLGalleySettingsForm(&$plugin, $journalId) {
-		$request =& $plugin->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
+		$request = $plugin->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+		$this->plugin = $plugin;
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -43,20 +43,18 @@ class XMLGalleySettingsForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-		$request =& $plugin->getRequest();
+		$plugin = $this->plugin;
+		$request = $plugin->getRequest();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		// set form variables for available XSLT renderers
 		$xsltPHP5 = ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') );
-		$xsltPHP4 = ( version_compare(PHP_VERSION,'5','<') && extension_loaded('xslt') );
 
 		// populate form variables with saved plugin settings
 		$this->setData('xsltPHP5', $xsltPHP5);
-		$this->setData('xsltPHP4', $xsltPHP4);
 
-		if ( !Request::getUserVar('save') ) {
+		if (!$request->getUserVar('save')) {
 			$this->setData('XSLTrenderer', $plugin->getSetting($journalId, 'XSLTrenderer'));
 			$this->setData('externalXSLT', $plugin->getSetting($journalId, 'externalXSLT'));
 			$this->setData('XSLstylesheet', $plugin->getSetting($journalId, 'XSLstylesheet'));

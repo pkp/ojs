@@ -28,11 +28,11 @@ class ManagerHandler extends Handler {
 	/**
 	 * Display journal management index page.
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		// Display a warning message if there is a new version of OJS available
 		$newVersionAvailable = false;
@@ -46,7 +46,7 @@ class ManagerHandler extends Handler {
 				
 				// Get contact information for site administrator
 				$roleDao = DAORegistry::getDAO('RoleDAO');
-				$siteAdmins =& $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
+				$siteAdmins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
 				$templateMgr->assign_by_ref('siteAdmin', $siteAdmins->next());
 			}
 		}

@@ -64,7 +64,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
 				if ($request->getUserVar('save')) {
@@ -97,7 +97,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 		if (empty($args)) {
 			$errors = array();
 		} else {
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issueId = array_shift($args);
 			if (!$issueId) {
@@ -125,20 +125,20 @@ class METSGatewayPlugin extends GatewayPlugin {
 		// Failure.
 		header("HTTP/1.0 500 Internal Server Error");
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('message', 'plugins.gateways.metsGateway.errors.errorMessage');
 		$templateMgr->display('common/message.tpl');
 		exit;
 	}
 
 	function exportIssues(&$journal, &$issues){
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		$this->journalId = $journal->getId();
 
 		$this->import('MetsExportDom');
-		$doc =& XMLCustomWriter::createDocument();
-		$root =& XMLCustomWriter::createElement($doc, 'METS:mets');
+		$doc = XMLCustomWriter::createDocument();
+		$root = XMLCustomWriter::createElement($doc, 'METS:mets');
 		XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xlink', 'http://www.w3.org/TR/xlink');
 		XMLCustomWriter::setAttribute($root, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');

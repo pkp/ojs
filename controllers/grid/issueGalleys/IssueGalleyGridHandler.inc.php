@@ -40,7 +40,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @param $args array
 	 * @param $roleAssignments array
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
 
@@ -66,7 +66,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @see lib/pkp/classes/controllers/grid/GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence(&$request, $rowId, &$issueGalley, $newSequence) {
+	function setDataElementSequence($request, $rowId, &$issueGalley, $newSequence) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issueGalley->setSequence($newSequence);
 		$issueGalleyDao->updateObject($issueGalley);
@@ -95,7 +95,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request, $args) {
+	function initialize($request, $args) {
 		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
@@ -276,7 +276,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @see GridHandler::loadData
 	 */
-	function loadData(&$request, $filter) {
+	function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		return $issueGalleyDao->getByIssueId($issue->getId());

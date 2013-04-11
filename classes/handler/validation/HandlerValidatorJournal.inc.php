@@ -31,8 +31,8 @@ class HandlerValidatorJournal extends HandlerValidator {
 	 * @return boolean
 	 */
 	function isValid() {
-		$request =& Application::getRequest();
-		$journal =& $request->getJournal();
+		$request = Application::getRequest();
+		$journal = $request->getJournal();
 		return ($journal)?true:false;
 	}
 }

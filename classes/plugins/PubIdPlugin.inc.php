@@ -72,9 +72,9 @@ class PubIdPlugin extends Plugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request =& $this->getRequest();
-		$templateManager =& TemplateManager::getManager($request);
-		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$request = $this->getRequest();
+		$templateManager = TemplateManager::getManager($request);
+		$templateManager->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 		if (!$this->getEnabled() && $verb != 'enable') return false;
 		switch ($verb) {
 			case 'enable':
@@ -90,7 +90,7 @@ class PubIdPlugin extends Plugin {
 				return false;
 
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				$settingsFormName = $this->getSettingsFormName();
 				$settingsFormNameParts = explode('.', $settingsFormName);
@@ -235,8 +235,8 @@ class PubIdPlugin extends Plugin {
 	 * Define management link actions for the settings verb.
 	 * @return LinkAction
 	 */
-	function getManagementVerbLinkAction(&$request, $verb) {
-		$router =& $request->getRouter();
+	function getManagementVerbLinkAction($request, $verb) {
+		$router = $request->getRouter();
 
 		list($verbName, $verbLocalized) = $verb;
 
@@ -411,9 +411,9 @@ class PubIdPlugin extends Plugin {
 	 */
 	function getEnabled($journalId = null) {
 		if (!$journalId) {
-			$request =& $this->getRequest();
-			$router =& $request->getRouter();
-			$journal =& $router->getContext($request);
+			$request = $this->getRequest();
+			$router = $request->getRouter();
+			$journal = $router->getContext($request);
 
 			if (!$journal) return false;
 			$journalId = $journal->getid();
@@ -426,8 +426,8 @@ class PubIdPlugin extends Plugin {
 	 * @param $enabled boolean
 	 */
 	function setEnabled($enabled) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if ($journal) {
 			$this->updateSetting(
 				$journal->getId(),

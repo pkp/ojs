@@ -52,8 +52,8 @@ class IssueManagementHandler extends EditorHandler {
 			$request->redirect(null, null, 'issueData', $issueId);
 		}
 
-		$journal =& $request->getJournal();
-		$issue =& $this->issue;
+		$journal = $request->getJournal();
+		$issue = $this->issue;
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -80,7 +80,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $this->issue;
 
 		import('classes.file.PublicFileManager');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$publicFileManager = new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getId(),$issue->getStyleFileName());
 		$issue->setStyleFileName('');
@@ -216,7 +216,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('editor/issues/proofIssueGalley.tpl');
@@ -234,7 +234,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId, true);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('editor/issues/proofIssueGalleyTop.tpl');
@@ -315,8 +315,8 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, $issueId);
 		$prevId = (int) $request->getUserVar('prevId');
 		$nextId = (int) $request->getUserVar('nextId');
-		$issue =& $this->issue;
-		$journal =& $request->getJournal();
+		$issue = $this->issue;
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -355,7 +355,7 @@ class IssueManagementHandler extends EditorHandler {
 	function resetIssueOrder($args, $request) {
 		$this->validate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteCustomIssueOrdering($journal->getId());
@@ -371,8 +371,8 @@ class IssueManagementHandler extends EditorHandler {
 	function moveSectionToc($args, $request) {
 		$issueId = (int) array_shift($args);
 		$this->validate($request, $issueId, true);
-		$issue =& $this->issue;
-		$journal =& $request->getJournal();
+		$issue = $this->issue;
+		$journal = $request->getJournal();
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($request->getUserVar('sectionId'), $journal->getId());
@@ -414,7 +414,7 @@ class IssueManagementHandler extends EditorHandler {
 		$this->validate($request, null, true);
 		$pubId = (int) $request->getUserVar('id');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -474,9 +474,9 @@ class IssueManagementHandler extends EditorHandler {
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$user = $request->getUser();
+		$templateMgr = TemplateManager::getManager($request);
 
 		import('lib.pkp.classes.mail.MassMail');
 		$email = new MassMail('PUBLISH_NOTIFY');
@@ -488,20 +488,20 @@ class IssueManagementHandler extends EditorHandler {
 
 			switch ($request->getUserVar('whichUsers')) {
 				case 'allIndividualSubscribers':
-					$recipients =& $individualSubscriptionDao->getSubscribedUsers($journal->getId());
+					$recipients = $individualSubscriptionDao->getSubscribedUsers($journal->getId());
 					break;
 				case 'allInstitutionalSubscribers':
-					$recipients =& $institutionalSubscriptionDao->getSubscribedUsers($journal->getId());
+					$recipients = $institutionalSubscriptionDao->getSubscribedUsers($journal->getId());
 					break;
 				case 'allAuthors':
-					$recipients =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
+					$recipients = $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
 					break;
 				case 'allUsers':
-					$recipients =& $roleDao->getUsersByJournalId($journal->getId());
+					$recipients = $roleDao->getUsersByJournalId($journal->getId());
 					break;
 				case 'allReaders':
 				default:
-					$recipients =& $roleDao->getUsersByRoleId(
+					$recipients = $roleDao->getUsersByRoleId(
 						ROLE_ID_READER,
 						$journal->getId()
 					);
@@ -589,7 +589,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function validate($request, $issueId = null, $allowLayoutEditor = false) {
 		$issue = null;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		if (!isset($journal)) Validation::redirectLogin();
 

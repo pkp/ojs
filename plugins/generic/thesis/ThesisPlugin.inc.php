@@ -148,10 +148,10 @@ class ThesisPlugin extends GenericPlugin {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_USER);
-		$templateMgr =& TemplateManager::getManager($this->getRequest());
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$templateMgr = TemplateManager::getManager($this->getRequest());
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		switch ($verb) {
 			case 'settings':

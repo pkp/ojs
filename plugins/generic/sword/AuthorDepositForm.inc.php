@@ -35,7 +35,7 @@ class AuthorDepositForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 
 		$depositPoints = $this->_getDepositableDepositPoints();
 		// For the sake of the UI, figure out whether we're dealing with any
@@ -47,7 +47,7 @@ class AuthorDepositForm extends Form {
 			}
 		}
 		$templateMgr->assign('depositPoints', $depositPoints);
-		$templateMgr->assign_by_ref('article', $this->article);
+		$templateMgr->assign('article', $this->article);
 		$templateMgr->assign('hasFlexible', $hasFlexible);
 		$templateMgr->assign('allowAuthorSpecify', $this->swordPlugin->getSetting($this->article->getJournalId(), 'allowAuthorSpecify'));
 		parent::display();
@@ -77,8 +77,8 @@ class AuthorDepositForm extends Form {
 	 * Perform SWORD deposit
 	 * @param $request Request
 	 */
-	function execute(&$request) {
-		$user =& $request->getUser();
+	function execute($request) {
+		$user = $request->getUser();
 		import('classes.sword.OJSSwordDeposit');
 		$deposit = new OJSSwordDeposit($this->article);
 		$deposit->setMetadata();
@@ -118,7 +118,7 @@ class AuthorDepositForm extends Form {
 				$depositPoint['password']
 			);
 
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			$params = array('itemTitle' => $this->article->getLocalizedTitle(), 'repositoryName' => $depositPoint['name']);
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE, $params);
 		}

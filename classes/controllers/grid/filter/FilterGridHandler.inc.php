@@ -36,7 +36,7 @@ class FilterGridHandler extends PKPFilterGridHandler {
 	/**
 	 * @see PKPHandler::authorize()
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		// Make sure the user can change the journal setup.
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));

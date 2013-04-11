@@ -27,18 +27,18 @@ class EmailHandler extends UserHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function email($args, &$request) {
+	function email($args, $request) {
 		$this->validate();
 
 		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		// See if this is the Editor or Manager and an email template has been chosen
 		$template = $request->getUserVar('template');

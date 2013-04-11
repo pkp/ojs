@@ -30,7 +30,7 @@ class ArticleDAO extends DAO {
 	function _getCache() {
 		if (!isset($this->cache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->cache = $cacheManager->getObjectCache('articles', 0, array(&$this, '_cacheMiss'));
+			$this->cache = $cacheManager->getObjectCache('articles', 0, array($this, '_cacheMiss'));
 		}
 		return $this->cache;
 	}

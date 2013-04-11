@@ -60,10 +60,10 @@ class ExternalFeedSettingsForm extends Form {
 	 */
 	function display() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 
 		// Ensure upload file settings are reloaded when the form is displayed.
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('journalStyleSheet', $plugin->getSetting($journalId, 'externalFeedStyleSheet'));
 		$templateMgr->assign('defaultStyleSheetUrl', Request::getBaseUrl() . '/' . $plugin->getDefaultStyleSheetFile());
 

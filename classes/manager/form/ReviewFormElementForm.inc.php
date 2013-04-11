@@ -54,7 +54,7 @@ class ReviewFormElementForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('reviewFormId', $this->reviewFormId);
 		$templateMgr->assign('reviewFormElementId', $this->reviewFormElementId);
 		$templateMgr->assign_by_ref('multipleResponsesElementTypes', ReviewFormElement::getMultipleResponsesElementTypes());
@@ -70,7 +70,7 @@ class ReviewFormElementForm extends Form {
 	 */
 	function initData() {
 		if ($this->reviewFormElementId != null) {
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 			$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElement =& $reviewFormElementDao->getReviewFormElement($this->reviewFormElementId);
 

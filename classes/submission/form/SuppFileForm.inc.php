@@ -75,9 +75,9 @@ class SuppFileForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('enablePublicSuppFileId', $journal->getSetting('enablePublicSuppFileId'));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('articleId', $this->article->getId());
@@ -123,7 +123,7 @@ class SuppFileForm extends Form {
 	 * Validate the form
 	 */
 	function validate() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');

@@ -27,11 +27,11 @@ class AdminLanguagesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request object
 	 */
-	function languages($args, &$request) {
+	function languages($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('admin/languages.tpl');
 	}
 }

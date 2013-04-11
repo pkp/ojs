@@ -27,7 +27,7 @@ class BrowsePlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				// Add new navigation items in the navigation block plugin
-				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array(&$this, 'addNavigationItem'));
+				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array($this, 'addNavigationItem'));
 				// Handler for browse plugin pages
 				HookRegistry::register('LoadHandler', array($this, 'setupBrowseHandler'));
 			}
@@ -70,12 +70,12 @@ class BrowsePlugin extends GenericPlugin {
 	 * Add additional navigation items.
 	 */
 	function addNavigationItem($hookName, $params) {
-		$smarty =& $params[1];
+		$smarty = $params[1];
 		$output =& $params[2];
 
-		$journal =& $smarty->get_template_vars('currentJournal');
+		$journal = $smarty->get_template_vars('currentJournal');
 
-		$templateMgr =& TemplateManager::getManager($this->getRequest());
+		$templateMgr = TemplateManager::getManager($this->getRequest());
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {
 			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
 		}
@@ -131,9 +131,9 @@ class BrowsePlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& $request->getJournal();
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$journal = $request->getJournal();
 
 				$this->import('classes.form.BrowseSettingsForm');
 				$form = new BrowseSettingsForm($this, $journal->getId());

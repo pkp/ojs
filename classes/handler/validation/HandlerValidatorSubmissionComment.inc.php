@@ -35,7 +35,7 @@ class HandlerValidatorSubmissionComment extends HandlerValidator {
 		$isValid = true;
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$user =& Request::getUser();
+		$user = Request::getUser();
 
 		$comment =& $articleCommentDao->getArticleCommentById($this->commentId);
 

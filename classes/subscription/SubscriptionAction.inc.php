@@ -17,7 +17,7 @@ class SubscriptionAction {
 	 * Display subscriptions summary page for the current journal.
 	 */
 	function subscriptionsSummary($request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
@@ -46,7 +46,7 @@ class SubscriptionAction {
 			);
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('individualStatus', $individualStatus);
 		$templateMgr->assign_by_ref('institutionalStatus', $institutionalStatus);
 
@@ -57,7 +57,7 @@ class SubscriptionAction {
 	 * Display a list of subscriptions for the current journal.
 	 */
 	function subscriptions($request, $institutional = false) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$rangeInfo =& PKPHandler::getRangeInfo($request, 'subscriptions');
 
 		if ($institutional) {
@@ -87,7 +87,7 @@ class SubscriptionAction {
 
 		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
 
 		// Set search parameters
@@ -164,7 +164,7 @@ class SubscriptionAction {
 	 * @param $args array first parameter is the ID of the subscription to delete
 	 */
 	function deleteSubscription($args, $request, $institutional = false) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
 		if ($institutional) {
@@ -184,7 +184,7 @@ class SubscriptionAction {
 	 * @param $args array first parameter is the ID of the subscription to renew
 	 */
 	function renewSubscription($args, $request, $institutional = false) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
 		if ($institutional) {
@@ -205,7 +205,7 @@ class SubscriptionAction {
 	 * @param $args array second parameter is the ID of the subscription to edit
 	 */
 	function editSubscription($args, $request, $institutional = false) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$userId = $request->getUserVar('userId') == null ? null : (int) $request->getUserVar('userId');
 		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
 
@@ -217,7 +217,7 @@ class SubscriptionAction {
 
 		// Ensure subscription is valid and for this journal
 		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) || ($subscriptionId == null && $userId)) {
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$subscriptionCreated = $request->getUserVar('subscriptionCreated') == 1 ? 1 : 0;
 			$templateMgr->assign('subscriptionCreated', $subscriptionCreated);
 
@@ -257,7 +257,7 @@ class SubscriptionAction {
 	 * Display a list of users from which to choose a subscriber/subscription contact.
 	 */
 	function selectSubscriber($args, $request, $institutional = false) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($institutional) {
 			$pageTitle = 'manager.subscriptions.selectContact';
@@ -285,7 +285,7 @@ class SubscriptionAction {
 
 		$rangeInfo = Handler::getRangeInfo($request, 'users');
 
-		$users =& $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		$users = $userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -313,7 +313,7 @@ class SubscriptionAction {
 	 * Save changes to a subscription.
 	 */
 	function updateSubscription($args, $request, $institutional = false) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$subscriptionId = $request->getUserVar('subscriptionId') == null ? null : (int) $request->getUserVar('subscriptionId');
 
 		if ($institutional) {
@@ -350,7 +350,7 @@ class SubscriptionAction {
 			}
 
 			if (isset($editData)) {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 
 				if ($subscriptionId == null) {
 					$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.createTitle');
@@ -364,7 +364,7 @@ class SubscriptionAction {
 					$subscriptionForm->execute();
 					return true;
 				} else {
-					$templateMgr =& TemplateManager::getManager($request);
+					$templateMgr = TemplateManager::getManager($request);
 
 					if ($subscriptionId == null) {
 						$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.createTitle');
@@ -383,12 +383,12 @@ class SubscriptionAction {
 	 * Display a list of subscription types for the current journal.
 	 */
 	function subscriptionTypes($request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$rangeInfo =& Handler::getRangeInfo($request, 'subscriptionTypes');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getId(), $rangeInfo);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
 
 		$templateMgr->display('subscription/subscriptionTypes.tpl');
@@ -399,7 +399,7 @@ class SubscriptionAction {
 	 */
 	function moveSubscriptionType($args, $request) {
 		$subscriptionTypeId = $request->getUserVar('id');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
@@ -436,7 +436,7 @@ class SubscriptionAction {
 	 */
 	function deleteSubscriptionType($args, $request) {
 		$subscriptionTypeId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
@@ -451,7 +451,7 @@ class SubscriptionAction {
 	 * @param $args array optional, first parameter is the ID of the subscription type to edit
 	 */
 	function editSubscriptionType($args, $request) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$subscriptionTypeId = !isset($args) || empty($args) ? null : (int) $args[0];
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
@@ -460,7 +460,7 @@ class SubscriptionAction {
 
 			import('classes.subscription.form.SubscriptionTypeForm');
 
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$subscriptionTypeCreated = $request->getUserVar('subscriptionTypeCreated') == 1 ? 1 : 0;
 			$templateMgr->assign('subscriptionTypeCreated', $subscriptionTypeCreated);
 
@@ -489,7 +489,7 @@ class SubscriptionAction {
 	function updateSubscriptionType($request) {
 		import('classes.subscription.form.SubscriptionTypeForm');
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$subscriptionTypeId = $request->getUserVar('typeId') == null ? null : (int) $request->getUserVar('typeId');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
@@ -502,7 +502,7 @@ class SubscriptionAction {
 				$subscriptionTypeForm->execute();
 				return true;
 			} else {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 
 				if ($subscriptionTypeId == null) {
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
@@ -521,10 +521,10 @@ class SubscriptionAction {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function subscriptionPolicies($args, &$request) {
+	function subscriptionPolicies($args, $request) {
 		import('classes.subscription.form.SubscriptionPolicyForm');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);
@@ -548,13 +548,13 @@ class SubscriptionAction {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function saveSubscriptionPolicies($args, &$request) {
+	function saveSubscriptionPolicies($args, $request) {
 		import('classes.subscription.form.SubscriptionPolicyForm');
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);
@@ -586,7 +586,7 @@ class SubscriptionAction {
 
 		if (!in_array($mailTemplateKey, $validKeys)) return false;
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$subscriptionContactName = $journal->getSetting('subscriptionName');
 		$subscriptionContactEmail = $journal->getSetting('subscriptionEmail');
@@ -599,7 +599,7 @@ class SubscriptionAction {
 		if (empty($subscriptionContactEmail)) return false;
 
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getById($subscription->getUserId());
+		$user = $userDao->getById($subscription->getUserId());
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());

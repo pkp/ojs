@@ -36,7 +36,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function ArticleGalleyForm($articleId, $galleyId = null) {
 		parent::Form('submission/layout/galleyForm.tpl');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$this->articleId = $articleId;
 
 		if (isset($galleyId) && !empty($galleyId)) {
@@ -58,8 +58,8 @@ class ArticleGalleyForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal = Request::getJournal();
+		$templateMgr = TemplateManager::getManager();
 
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
@@ -80,7 +80,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function validate() {
 		// check if public galley ID has already been used
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
@@ -148,7 +148,7 @@ class ArticleGalleyForm extends Form {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$fileId = null;
 
 		if (isset($this->galley)) {

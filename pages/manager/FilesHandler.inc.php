@@ -27,14 +27,14 @@ class FilesHandler extends ManagerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function files($args, &$request) {
+	function files($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = $this->_getRealFilesDir($request, $currentDir);
@@ -78,7 +78,7 @@ class FilesHandler extends ManagerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function fileUpload($args, &$request) {
+	function fileUpload($args, $request) {
 		$this->validate();
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);
@@ -99,7 +99,7 @@ class FilesHandler extends ManagerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function fileMakeDir($args, &$request) {
+	function fileMakeDir($args, $request) {
 		$this->validate();
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);
@@ -121,7 +121,7 @@ class FilesHandler extends ManagerHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function fileDelete($args, &$request) {
+	function fileDelete($args, $request) {
 		$this->validate();
 
 		$this->_parseDirArg($args, $currentDir, $parentDir);
@@ -154,7 +154,7 @@ class FilesHandler extends ManagerHandler {
 	}
 
 	function _getRealFilesDir($request, $currentDir) {
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getId() .'/' . $currentDir;
 	}
 

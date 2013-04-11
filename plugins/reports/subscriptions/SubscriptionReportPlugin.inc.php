@@ -57,8 +57,8 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	 * @param $args array Request arguments
 	 */
 	function display(&$args) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$countryDao = DAORegistry::getDAO('CountryDAO');

@@ -41,7 +41,7 @@ class AuthSourceSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('authId', $this->authId);
 
 		if (isset($this->plugin)) {

@@ -51,8 +51,8 @@ class ReviewReportPlugin extends ReportPlugin {
 	}
 
 	function display(&$args) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=reviews-' . date('Ymd') . '.csv');

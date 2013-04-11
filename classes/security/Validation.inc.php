@@ -92,7 +92,7 @@ class Validation {
 			// Regenerate session ID first
 			$sessionManager->regenerateSessionId();
 
-			$session =& $sessionManager->getUserSession();
+			$session = $sessionManager->getUserSession();
 			$session->setSessionVar('userId', $user->getId());
 			$session->setUserId($user->getId());
 			$session->setSessionVar('username', $user->getUsername());
@@ -115,8 +115,8 @@ class Validation {
 	 * @return boolean
 	 */
 	static function logout() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		$session->unsetSessionVar('userId');
 		$session->unsetSessionVar('signedInAs');
 		$session->setUserId(null);
@@ -157,7 +157,7 @@ class Validation {
 	 */
 	static function checkCredentials($username, $password) {
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getByUsername($username, false);
+		$user = $userDao->getByUsername($username, false);
 
 		$valid = false;
 		if (isset($user)) {
@@ -189,13 +189,13 @@ class Validation {
 
 		if ($journalId === -1) {
 			// Get journal ID from request
-			$journal =& Request::getJournal();
+			$journal = Request::getJournal();
 			$journalId = $journal == null ? 0 : $journal->getId();
 		}
 
 		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
-		$user =& $session->getUser();
+		$session = $sessionManager->getUserSession();
+		$user = $session->getUser();
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		return $roleDao->userHasRole($journalId, $user->getId(), $roleId);
@@ -277,8 +277,8 @@ class Validation {
 	 * @return boolean
 	 */
 	static function isLoggedIn() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 
 		$userId = $session->getUserId();
 		return isset($userId) && !empty($userId);

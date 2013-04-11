@@ -23,10 +23,10 @@ class LuceneHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function LuceneHandler(&$request) {
+	function LuceneHandler($request) {
 		parent::Handler();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return !$journal || $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array($journal)));
 	}
 
@@ -40,7 +40,7 @@ class LuceneHandler extends Handler {
 	 * @param $request Request
 	 * @return JSON string
 	 */
-	function queryAutocomplete($args, &$request) {
+	function queryAutocomplete($args, $request) {
 		$this->validate(null, $request);
 
 		// Check whether auto-suggest is enabled.
@@ -94,12 +94,12 @@ class LuceneHandler extends Handler {
 	 * @param $request Request
 	 * @return JSON string
 	 */
-	function pullChangedArticles($args, &$request) {
+	function pullChangedArticles($args, $request) {
 		$this->validate(null, $request);
 
 		// Do not allow access to this operation from journal context.
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$router = $request->getRouter();
+		$journal = $router->getContext($request);
 		if (!is_null($journal)) {
 			// Redirect to the index context. We do this so that providers
 			// can secure a single entry point when providing subscription-only
@@ -126,7 +126,7 @@ class LuceneHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function similarDocuments($args, &$request) {
+	function similarDocuments($args, $request) {
 		$this->validate(null, $request);
 
 		// Retrieve the ID of the article that

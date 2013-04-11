@@ -182,7 +182,7 @@ class SubscriptionManagerHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
@@ -262,7 +262,7 @@ class SubscriptionManagerHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function subscriptionPolicies($args, &$request) {
+	function subscriptionPolicies($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
 
@@ -275,7 +275,7 @@ class SubscriptionManagerHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function saveSubscriptionPolicies($args, &$request) {
+	function saveSubscriptionPolicies($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request);
 
@@ -292,9 +292,9 @@ class SubscriptionManagerHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		import('classes.manager.form.UserManagementForm');
 
@@ -315,7 +315,7 @@ class SubscriptionManagerHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.manager.form.UserManagementForm');
 
@@ -327,7 +327,7 @@ class SubscriptionManagerHandler extends Handler {
 
 			if ($request->getUserVar('createAnother')) {
 				$this->setupTemplate($request, true);
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('currentUrl', $request->url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);
 				$userForm = new UserManagementForm();
@@ -370,7 +370,7 @@ class SubscriptionManagerHandler extends Handler {
 		$success = OJSPaymentAction::savePaymentSettings($args, $request);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager($request);
+ 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
 				'currentUrl' => $request->url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
@@ -426,7 +426,7 @@ class SubscriptionManagerHandler extends Handler {
 		$success = OJSPaymentAction::savePayMethodSettings($request);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager($request);
+ 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
 				'currentUrl' => $request->url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',

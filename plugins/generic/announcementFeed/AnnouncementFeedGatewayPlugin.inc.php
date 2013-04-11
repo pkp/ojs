@@ -99,8 +99,8 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function fetch($args) {
 		// Make sure we're within a Journal context
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure announcements and plugin are enabled
@@ -154,14 +154,14 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO');
-		$version =& $versionDao->getCurrentVersion();
+		$version = $versionDao->getCurrentVersion();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->assign('selfUrl', $request->getCompleteUrl());
 		$templateMgr->assign('dateUpdated', $dateUpdated);
-		$templateMgr->assign_by_ref('announcements', $announcements->toArray());
-		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign('announcements', $announcements->toArray());
+		$templateMgr->assign('journal', $journal);
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

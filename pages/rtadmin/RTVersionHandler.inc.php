@@ -1,4 +1,4 @@
-<?php
+?php
 
 /**
  * @file pages/rtadmin/RTVersionHandler.inc.php
@@ -52,7 +52,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if ($version) {
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign_by_ref('version', $version);
 
 			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
@@ -62,7 +62,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 	function importVersion($args, $request) {
 		$this->validate();
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		$fileField = 'versionFile';
 		if (isset($_FILES[$fileField]['tmp_name']) && is_uploaded_file($_FILES[$fileField]['tmp_name'])) {
@@ -75,7 +75,7 @@ class RTVersionHandler extends RTAdminHandler {
 	function restoreVersions($args, $request) {
 		$this->validate();
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$rtAdmin = new JournalRTAdmin($journal->getId());
 		$rtAdmin->restoreVersions();
 
@@ -101,7 +101,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$rtDao = DAORegistry::getDAO('RTDAO');
 		$rangeInfo = $this->getRangeInfo($request, 'versions');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getId(), $rangeInfo));
 		$templateMgr->display('rtadmin/versions.tpl');
 	}

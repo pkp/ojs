@@ -94,7 +94,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @param $journal Journal
 	 */
 	function displayCitation(&$article, &$issue, &$journal) {
-		$templateMgr =& TemplateManager::getManager($this->getRequest());
+		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_modifier('mb_upper', array('String', 'strtoupper'));
 		return parent::displayCitation($article, $issue, $journal);
 	}
@@ -103,12 +103,12 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @see PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& $request->getJournal();
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$journal = $request->getJournal();
 
 				$this->import('AbntSettingsForm');
 				$form = new AbntSettingsForm($this, $journal->getId());

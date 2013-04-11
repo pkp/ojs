@@ -19,7 +19,7 @@ class TranslatorPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				$this->addHelpData();
-				HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
+				HookRegistry::register ('LoadHandler', array($this, 'handleRequest'));
 			}
 			return true;
 		}

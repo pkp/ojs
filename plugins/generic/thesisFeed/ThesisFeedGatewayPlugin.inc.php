@@ -94,15 +94,15 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function fetch($args) {
 		// Make sure we're within a Journal context
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if (!$journal) return false;
 
 		// Make sure thesis abstracts and feed plugin are enabled
-		$application =& PKPApplication::getApplication();
+		$application = PKPApplication::getApplication();
 		$products = $application->getEnabledProducts('plugins.generic');
 		$thesisEnabled = $products['thesis'];
-		$thesisFeedPlugin =& $this->getThesisFeedPlugin();
+		$thesisFeedPlugin = $this->getThesisFeedPlugin();
 		$thesisFeedPluginEnabled = $thesisFeedPlugin->getEnabled();
 
 		if (!$thesisEnabled || !$thesisFeedPluginEnabled) return false;
@@ -155,12 +155,12 @@ class ThesisFeedGatewayPlugin extends GatewayPlugin {
 		$versionDao = DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->assign('selfUrl', $request->getCompleteUrl());
 		$templateMgr->assign('dateUpdated', $dateUpdated);
-		$templateMgr->assign_by_ref('theses', $theses->toArray());
-		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign('theses', $theses->toArray());
+		$templateMgr->assign('journal', $journal);
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

@@ -71,13 +71,13 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// contains cached entities and avoids extra database access if this
 		// adapter is called from an OAI context.
 		$oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
-		$journal =& $oaiDao->getJournal($article->getJournalId());
-		$section =& $oaiDao->getSection($article->getSectionId());
+		$journal = $oaiDao->getJournal($article->getJournalId());
+		$section = $oaiDao->getSection($article->getSectionId());
 		if (is_a($article, 'PublishedArticle')) { /* @var $article PublishedArticle */
-			$issue =& $oaiDao->getIssue($article->getIssueId());
+			$issue = $oaiDao->getIssue($article->getIssueId());
 		}
 
-		$dc11Description =& $this->instantiateMetadataDescription();
+		$dc11Description = $this->instantiateMetadataDescription();
 
 		// Title
 		$this->_addLocalizedElements($dc11Description, 'dc:title', $article->getTitle(null));
@@ -247,7 +247,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Rights
 		$this->_addLocalizedElements($dc11Description, 'dc:rights', $journal->getSetting('copyrightNotice'));
 
-		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array(&$this, $article, $journal, $issue, &$dc11Description));
+		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, $issue, &$dc11Description));
 
 		return $dc11Description;
 	}

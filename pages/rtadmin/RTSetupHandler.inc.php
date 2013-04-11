@@ -29,7 +29,7 @@ class RTSetupHandler extends RTAdminHandler {
 
 		if ($journal) {
 			$this->setupTemplate($request, true);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$rtDao = DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);

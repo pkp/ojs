@@ -116,7 +116,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 * @param $locale string
 	 */
 	function uploadImage($settingName, $locale) {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$faviconTypes = array('.ico', '.png', '.gif');
 
@@ -172,7 +172,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 * @param $locale string
 	 */
 	function deleteImage($settingName, $locale = null) {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getId(), $settingName);
 
@@ -182,7 +182,7 @@ class AppearanceForm extends ContextSettingsForm {
 			$returner = $settingsDao->deleteSetting($journal->getId(), $settingName, $locale);
 			// Ensure page header is refreshed
 			if ($returner) {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr = TemplateManager::getManager();
 				$templateMgr->assign(array(
 					'displayPageHeaderTitle' => $journal->getLocalizedPageHeaderTitle(),
 					'displayPageHeaderLogo' => $journal->getLocalizedPageHeaderLogo()
@@ -199,7 +199,7 @@ class AppearanceForm extends ContextSettingsForm {
 	 * @param $settingName string setting key associated with the file
 	 */
 	function uploadStyleSheet($settingName) {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		import('classes.file.PublicFileManager');

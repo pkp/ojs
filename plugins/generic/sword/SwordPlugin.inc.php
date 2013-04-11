@@ -52,10 +52,10 @@ class SwordPlugin extends GenericPlugin {
 
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			if ($this->getEnabled()) {
-				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
-				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array(&$this, 'callbackAuthorDeposits'));
+				HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
+				HookRegistry::register('SectionEditorAction::emailEditorDecisionComment', array($this, 'callbackAuthorDeposits'));
 				HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
 			}
 			return true;
@@ -68,8 +68,8 @@ class SwordPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
@@ -129,7 +129,7 @@ class SwordPlugin extends GenericPlugin {
 		if ($decisionConst != SUBMISSION_EDITOR_DECISION_ACCEPT) return false;
 
 		// The most recent decision was an "Accept"; perform auto deposits.
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$depositPoints = $this->getSetting($journal->getId(), 'depositPoints');
 		import('classes.sword.OJSSwordDeposit');
 
@@ -157,13 +157,13 @@ class SwordPlugin extends GenericPlugin {
 			$deposit->cleanup();
 			unset($deposit);
 
-			$user =& $request->getUser();
+			$user = $request->getUser();
 			$params = array('itemTitle' => $sectionEditorSubmission->getLocalizedTitle(), 'repositoryName' => $depositPoint['name']);
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE, $params);
 		}
 
 		if ($sendDepositNotification) {
-			$submittingUser =& $sectionEditorSubmission->getUser();
+			$submittingUser = $sectionEditorSubmission->getUser();
 
 			import('classes.mail.ArticleMailTemplate');
 			$mail = new ArticleMailTemplate($sectionEditorSubmission, 'SWORD_DEPOSIT_NOTIFICATION', null, null, $journal, true, true);
@@ -244,15 +244,15 @@ class SwordPlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$returner = true;
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		$this->addLocaleData();
 
 		switch ($verb) {
 			case 'settings':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());
@@ -283,8 +283,8 @@ class SwordPlugin extends GenericPlugin {
 				break;
 			case 'createDepositPoint':
 			case 'editDepositPoint':
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$depositPointId = array_shift($args);
 				if ($depositPointId == '') $depositPointId = null;

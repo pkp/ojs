@@ -69,11 +69,11 @@ class Action extends PKPAction {
 	 * @param $article object
 	 * @param $request PKPRequest
 	 */
-	function saveMetadata($article, &$request) {
-		$router =& $request->getRouter();
+	function saveMetadata($article, $request) {
+		$router = $request->getRouter();
 		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
 			import('classes.submission.form.MetadataForm');
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$metadataForm = new MetadataForm($article, $journal);
 			$metadataForm->readInputData();
 
@@ -157,7 +157,7 @@ class Action extends PKPAction {
 				}
 
 				// Add log entry
-				$user =& $request->getUser();
+				$user = $request->getUser();
 				import('classes.log.ArticleLog');
 				ArticleLog::logEvent($request, $article, SUBMISSION_LOG_METADATA_UPDATE, 'log.editor.metadataModified', array('editorName' => $user->getFullName()));
 
@@ -195,8 +195,8 @@ class Action extends PKPAction {
 	 * @param $type string the type of instructions (copy, layout, or proof).
 	 */
 	function instructions($request, $type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
 			if (!in_array($type, $allowed)) {

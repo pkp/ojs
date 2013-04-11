@@ -36,7 +36,7 @@ class AuthorSubmitForm extends Form {
 	 * @param $article object
 	 * @param $step int
 	 */
-	function AuthorSubmitForm(&$article, $step, &$journal, &$request) {
+	function AuthorSubmitForm($article, $step, $journal, $request) {
 		parent::Form(
 			sprintf('author/submit/step%d.tpl', $step),
 			true,
@@ -54,7 +54,7 @@ class AuthorSubmitForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager($this->request);
+		$templateMgr = TemplateManager::getManager($this->request);
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('submitStep', $this->step);
 
@@ -62,7 +62,7 @@ class AuthorSubmitForm extends Form {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
 
-		$journal =& $this->request->getJournal();
+		$journal = $this->request->getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getSettings($journal->getId()));
 
@@ -85,7 +85,7 @@ class AuthorSubmitForm extends Form {
 	 */
 	function assignEditors(&$article) {
 		$sectionId = $article->getSectionId();
-		$journal =& $this->request->getJournal();
+		$journal = $this->request->getJournal();
 
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
 		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');

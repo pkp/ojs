@@ -18,8 +18,8 @@ class ThesisFeedPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			}
 			return true;
 		}
@@ -67,13 +67,13 @@ class ThesisFeedPlugin extends GenericPlugin {
 	}
 
 	function callbackAddLinks($hookName, $args) {
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
-			$templateManager =& $args[0];
-			$currentJournal =& $templateManager->get_template_vars('currentJournal');
+			$templateManager = $args[0];
+			$currentJournal = $templateManager->get_template_vars('currentJournal');
 
 			// Determine whether the thesis plugin is enabled
-			$application =& PKPApplication::getApplication();
+			$application = PKPApplication::getApplication();
 			$products = $application->getEnabledProducts('plugins.generic');
 			$thesisEnabled = isset($products['thesis'])?$products['thesis']:false;
 
@@ -117,11 +117,11 @@ class ThesisFeedPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());

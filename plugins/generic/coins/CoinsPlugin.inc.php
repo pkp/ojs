@@ -54,17 +54,17 @@ class CoinsPlugin extends GenericPlugin {
 	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty =& $params[1];
+			$smarty = $params[1];
 			$output =& $params[2];
-			$request =& $this->getRequest();
-			$templateMgr =& TemplateManager::getManager($request);
+			$request = $this->getRequest();
+			$templateMgr = TemplateManager::getManager($request);
 
 			$article = $templateMgr->get_template_vars('article');
 			$journal = $templateMgr->get_template_vars('currentJournal');
 			$issue = $templateMgr->get_template_vars('issue');
 
 			$authors = $article->getAuthors();
-			$firstAuthor =& $authors[0];
+			$firstAuthor = $authors[0];
 
 			$vars = array(
 				array('ctx_ver', 'Z39.88-2004'),

@@ -28,7 +28,7 @@ class RTSharingHandler extends RTAdminHandler {
 		$journal = $request->getJournal();
 		if ($journal) {
 			$this->setupTemplate($request, true);
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$rtDao = DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournal($journal);

@@ -79,8 +79,8 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	function deposit($url, $username, $password, $articleId, $depositEditorial, $depositGalleys) {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		$deposit = new OJSSwordDeposit($publishedArticle);
 		$deposit->setMetadata();
@@ -93,11 +93,11 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
-		$journal =& $request->getJournal();
-		$plugin =& $this->getSwordPlugin();
+		$journal = $request->getJournal();
+		$plugin = $this->getSwordPlugin();
 
 		$swordUrl = $request->getUserVar('swordUrl');
 
@@ -170,7 +170,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				return $templateMgr->display('common/message.tpl');
 				break;
 			default:
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);

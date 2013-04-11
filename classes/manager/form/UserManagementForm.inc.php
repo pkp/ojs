@@ -27,7 +27,7 @@ class UserManagementForm extends Form {
 
 		if (!Validation::isJournalManager()) $userId = null;
 		$this->userId = isset($userId) ? (int) $userId : null;
-		$site =& Request::getSite();
+		$site = Request::getSite();
 
 		// Validation checks for this form
 		if ($userId == null) {
@@ -38,11 +38,11 @@ class UserManagementForm extends Form {
 			if (!Config::getVar('security', 'implicit_auth')) {
 				$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.passwordRequired'));
 				$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
-				$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+				$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array($this)));
 			}
 		} else {
 			$this->addCheck(new FormValidatorLength($this, 'password', 'optional', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
-			$this->addCheck(new FormValidatorCustom($this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+			$this->addCheck(new FormValidatorCustom($this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array($this)));
 		}
 		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
@@ -57,8 +57,8 @@ class UserManagementForm extends Form {
 	 */
 	function display() {
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$templateMgr =& TemplateManager::getManager();
-		$site =& Request::getSite();
+		$templateMgr = TemplateManager::getManager();
+		$site = Request::getSite();
 
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
@@ -69,7 +69,7 @@ class UserManagementForm extends Form {
 			$templateMgr->assign('username', $user->getUsername());
 		}
 
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal == null ? 0 : $journal->getId();
 		import('pages.manager.PeopleHandler');
 		$rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
@@ -109,7 +109,7 @@ class UserManagementForm extends Form {
 		// Send implicitAuth setting down to template
 		$templateMgr->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		$countryDao = DAORegistry::getDAO('CountryDAO');
@@ -131,10 +131,10 @@ class UserManagementForm extends Form {
 	/**
 	 * Initialize form data from current user profile.
 	 */
-	function initData(&$args, &$request) {
+	function initData(&$args, $request) {
 		if (isset($this->userId)) {
 			$userDao = DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getById($this->userId);
+			$user = $userDao->getById($this->userId);
 
 			import('lib.pkp.classes.user.InterestManager');
 			$interestManager = new InterestManager();
@@ -243,7 +243,7 @@ class UserManagementForm extends Form {
 	 */
 	function execute() {
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		if (isset($this->userId)) {
 			$user =& $userDao->getById($this->userId);
@@ -272,7 +272,7 @@ class UserManagementForm extends Form {
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		$user->setAuthId((int) $this->getData('authId'));
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
 
 		$locales = array();

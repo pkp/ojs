@@ -29,7 +29,7 @@ class SectionGridRow extends GridRow {
 	 * Configure the grid row
 	 * @param $request PKPRequest
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 
 		$this->setupTemplate($request);

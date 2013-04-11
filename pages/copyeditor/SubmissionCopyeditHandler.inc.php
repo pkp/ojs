@@ -28,28 +28,28 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function submission($args, &$request) {
+	function submission($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$router =& $request->getRouter();
+		$router = $request->getRouter();
 
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId);
 
 		CopyeditorAction::copyeditUnderway($submission, $request);
 
-		$journal =& $router->getContext($request);
+		$journal = $router->getContext($request);
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		$metaCitations = $journal->getSetting('metaCitations');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
-		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
-		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
-		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign('initialCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
+		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR'));
+		$templateMgr->assign('finalCopyeditFile', $submission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL'));
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('metaCitations', $metaCitations);
 		$templateMgr->display('copyeditor/submission.tpl');
@@ -106,7 +106,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 */
-	function downloadFile($args, &$request) {
+	function downloadFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // Can be null
@@ -121,7 +121,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $fileId, [$revision])
 	 */
-	function viewFile($args, &$request) {
+	function viewFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$fileId = (int) array_shift($args);
 		$revision = array_shift($args); // May be null
@@ -160,12 +160,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalley($args, &$request) {
+	function proofGalley($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -176,12 +176,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalleyTop($args, &$request) {
+	function proofGalleyTop($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
@@ -193,7 +193,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array ($articleId, $galleyId)
 	 * @param $request PKPRequest
 	 */
-	function proofGalleyFile($args, &$request) {
+	function proofGalleyFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$galleyId = (int) array_shift($args);
 		$this->validate($request, $articleId);
@@ -205,7 +205,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
@@ -228,10 +228,10 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 */
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$this->validate($request, $articleId);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
-		$submission =& $this->submission;
+		$submission = $this->submission;
 		$this->setupTemplate($request, true, $articleId, 'editing');
 		CopyeditorAction::viewMetadata($submission, $journal);
 	}
@@ -241,7 +241,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function saveMetadata($args, &$request) {
+	function saveMetadata($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId);
@@ -256,7 +256,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function removeArticleCoverPage($args, &$request) {
+	function removeArticleCoverPage($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 
@@ -280,7 +280,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function submissionCitations($args, &$request) {
+	function submissionCitations($args, $request) {
 		// Authorize the request.
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
@@ -292,7 +292,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		CopyeditorAction::editCitations($request, $this->submission);
 
 		// Render the view.
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('copyeditor/submissionCitations.tpl');
 	}
 }

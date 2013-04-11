@@ -164,7 +164,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	/**
 	 * @see DOIExportPlugin::generateExportFiles()
 	 */
-	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
+	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
 		// Additional locale file.
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 
@@ -197,7 +197,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	/**
 	 * @see DOIExportPlugin::registerDoi()
 	 */
-	function registerDoi(&$request, &$journal, &$objects, $file) {
+	function registerDoi($request, $journal, &$objects, $file) {
 		// DataCite should always export exactly
 		// one object per meta-data file.
 		assert(count($objects) == 1);
@@ -352,18 +352,18 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	 * @param $journal Journal
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
 	 */
-	function _getObjectUrl(&$request, &$journal, &$object) {
-		$router =& $request->getRouter();
+	function _getObjectUrl($request, $journal, $object) {
+		$router = $request->getRouter();
 
 		// Retrieve the article of article files.
 		if (is_a($object, 'ArticleFile')) {
 			$articleId = $object->getArticleId();
 			$cache = $this->getCache();
 			if ($cache->isCached('articles', $articleId)) {
-				$article =& $cache->get('articles', $articleId);
+				$article = $cache->get('articles', $articleId);
 			} else {
 				$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-				$article =& $articleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
+				$article = $articleDao->getPublishedArticleByArticleId($articleId, $journal->getId(), true);
 			}
 			assert(is_a($article, 'PublishedArticle'));
 		}

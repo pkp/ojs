@@ -18,8 +18,8 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
-				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			}
 			return true;
 		}
@@ -110,10 +110,10 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'settings':
-				$journal =& $request->getJournal();
+				$journal = $request->getJournal();
 
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 				$this->import('SettingsForm');
 				$form = new SettingsForm($this, $journal->getId());

@@ -30,7 +30,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 		$journalName = $journal->getLocalizedName();
 		$journalId = $journal->getId();
-		$user =& $userDao->getById($subscription->getUserId());
+		$user = $userDao->getById($subscription->getUserId());
 		if (!isset($user)) return false;
 
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -245,7 +245,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$curDate['year'] = $todayDate['year'];
 			}
 
-			$journals =& $journalDao->getJournals(true);
+			$journals = $journalDao->getJournals(true);
 
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month
@@ -261,7 +261,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curDate['month'] = 2;
 			$curDate['year'] = $todayDate['year'];
 
-			$journals =& $journalDao->getJournals(true);
+			$journals = $journalDao->getJournals(true);
 
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February
@@ -273,7 +273,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 				$curDate['day'] = 29;
 
-				$journals =& $journalDao->getJournals(true);
+				$journals = $journalDao->getJournals(true);
 
 				while ($journal = $journals->next()) {
 					// Send reminders for simulated 29th day of February

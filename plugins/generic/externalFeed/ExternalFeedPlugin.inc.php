@@ -31,14 +31,14 @@ class ExternalFeedPlugin extends GenericPlugin {
 			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
 			$request = $this->getRequest();
-			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet($request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
 			// Journal home page display
-			HookRegistry::register('TemplateManager::display', array(&$this, 'displayHomepage'));
+			HookRegistry::register('TemplateManager::display', array($this, 'displayHomepage'));
 
 			// Register also as a block plugin
-			HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 
 			// Journal Manager link to externalFeed management pages
 			HookRegistry::register('Templates::Manager::Index::ManagementPages', array($this, 'displayManagerLink'));
@@ -73,7 +73,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 */
 	function getStyleSheetFile() {
 		$request = $this->getRequest();
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
 
@@ -144,8 +144,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function displayHomepage($hookName, $args) {
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 
 		if ($this->getEnabled()) {
@@ -243,9 +243,9 @@ class ExternalFeedPlugin extends GenericPlugin {
 			LOCALE_COMPONENT_PKP_MANAGER,
 			LOCALE_COMPONENT_PKP_USER
 		);
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal =& $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		switch ($verb) {

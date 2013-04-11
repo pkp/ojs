@@ -45,7 +45,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
 
 		// Load the DuraCloud-PHP library.
@@ -53,20 +53,20 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		switch (array_shift($args)) {
 			case 'importIssue':
 				$contentId = array_shift($args);
-				$issue =& $this->importIssue($user, $journal, $contentId);
-				$templateMgr =& TemplateManager::getManager($request);
+				$issue = $this->importIssue($user, $journal, $contentId);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', array($contentId => $issue));
 				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				return;
 				break;
 			case 'importIssues':
-				$results =& $this->importIssues($user, $journal, $request->getUserVar('contentId'));
-				$templateMgr =& TemplateManager::getManager($request);
+				$results = $this->importIssues($user, $journal, $request->getUserVar('contentId'));
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				return;
@@ -82,7 +82,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 					unset($issue);
 				}
 				$results = $this->exportIssues($journal, $issues);
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');
@@ -92,7 +92,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$issue = $issueDao->getById($issueId, $journal->getId());
 				if (!$issue) $request->redirect();
 				$results = array($issue->getId() => $this->exportIssue($journal, $issue));
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign('issues', array($issue->getId() => $issue));
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');
@@ -359,8 +359,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @param $password string
 	 */
 	function storeDuraCloudConfiguration($url, $username, $password) {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		$session->setSessionVar('duracloudUrl', $url);
 		$session->setSessionVar('duracloudUsername', $username);
 		$session->setSessionVar('duracloudPassword', $password);
@@ -371,8 +371,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @param $space string
 	 */
 	function setDuraCloudSpace($space) {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		$session->setSessionVar('duracloudSpace', $space);
 	}
 
@@ -389,8 +389,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @return DuraCloudConnection
 	 */
 	function getDuraCloudConnection() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		return new DuraCloudConnection(
 			$session->getSessionVar('duracloudUrl'),
 			$session->getSessionVar('duracloudUsername'),
@@ -403,8 +403,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @return string
 	 */
 	function getDuraCloudUrl() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		return $session->getSessionVar('duracloudUrl');
 	}
 
@@ -413,8 +413,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @return string
 	 */
 	function getDuraCloudUsername() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		return $session->getSessionVar('duracloudUsername');
 	}
 
@@ -423,8 +423,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @return string
 	 */
 	function getDuraCloudSpace() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		return $session->getSessionVar('duracloudSpace');
 	}
 
@@ -433,8 +433,8 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 	 * @return boolean
 	 */
 	function isDuraCloudConfigured() {
-		$sessionManager =& SessionManager::getManager();
-		$session =& $sessionManager->getUserSession();
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
 		return (boolean) $session->getSessionVar('duracloudUrl');
 	}
 

@@ -104,7 +104,7 @@ class PaymentSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		parent::display();
 	}
@@ -113,7 +113,7 @@ class PaymentSettingsForm extends Form {
 	 * Initialize form data from current group group.
 	 */
 	function initData() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		foreach ($this->settings as $settingName => $settingType) {
 			$this->_data[$settingName] = $journal->getSetting($settingName);
 		}
@@ -130,7 +130,7 @@ class PaymentSettingsForm extends Form {
 	 * Save settings
 	 */
 	function save() {
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		foreach ($this->_data as $name => $value) {

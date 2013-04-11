@@ -16,19 +16,19 @@
 import('classes.handler.Handler');
 
 class StaticPagesHandler extends Handler {
-	function index($args, &$request) {
+	function index($args, $request) {
 		$request->redirect(null, null, 'view', $request->getRequestedOp());
 	}
 
-	function view($args, &$request) {
+	function view($args, $request) {
 		if (count($args) > 0 ) {
 			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$journalId = $journal?$journal->getId():0;
 			$path = $args[0];
 
-			$staticPagesPlugin =& PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
-			$templateMgr =& TemplateManager::getManager($request);
+			$staticPagesPlugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
+			$templateMgr = TemplateManager::getManager($request);
 
 			$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
 			$staticPage = $staticPagesDao->getStaticPageByPath($journalId, $path);

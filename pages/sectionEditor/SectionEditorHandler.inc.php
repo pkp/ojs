@@ -43,13 +43,13 @@ class SectionEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$rangeInfo = $this->getRangeInfo($request, 'submissions');
 
@@ -177,7 +177,7 @@ class SectionEditorHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function instructions($args, &$request) {
+	function instructions($args, $request) {
 		$this->setupTemplate($request);
 		import('classes.submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('copy', 'proof', 'referenceLinking'))) {
@@ -202,8 +202,8 @@ class SectionEditorHandler extends Handler {
 		$isValid = true;
 
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		if ($articleId !== null) {
 			$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -218,7 +218,7 @@ class SectionEditorHandler extends Handler {
 				$isValid = false;
 
 			} else {
-				$templateMgr =& TemplateManager::getManager();
+				$templateMgr = TemplateManager::getManager();
 
 				if (Validation::isEditor()) {
 					// Make canReview and canEdit available to templates.

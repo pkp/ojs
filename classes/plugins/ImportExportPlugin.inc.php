@@ -52,8 +52,8 @@ class ImportExportPlugin extends Plugin {
 	 * @param $request Request
 	 */
 	function display(&$args, $request) {
-		$templateManager =& TemplateManager::getManager($request);
-		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateManager = TemplateManager::getManager($request);
+		$templateManager->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 	}
 
 	/**
@@ -93,8 +93,8 @@ class ImportExportPlugin extends Plugin {
 		if ($verb === 'importexport') {
 			$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 		return false;
 	}
 

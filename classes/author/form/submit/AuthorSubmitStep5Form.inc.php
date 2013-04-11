@@ -21,7 +21,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	function AuthorSubmitStep5Form(&$article, &$journal, $request) {
 		parent::AuthorSubmitForm($article, 5, $journal, $request);
 
-		$this->addCheck(new FormValidatorCustom($this, 'qualifyForWaiver', 'optional', 'author.submit.mustEnterWaiverReason', array(&$this, 'checkWaiverReason')));
+		$this->addCheck(new FormValidatorCustom($this, 'qualifyForWaiver', 'optional', 'author.submit.mustEnterWaiverReason', array($this, 'checkWaiverReason')));
 	}
 
 	/**
@@ -36,9 +36,9 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 * Display the form.
 	 */
 	function display() {
-		$journal =& $this->request->getJournal();
-		$user =& $this->request->getUser();
-		$templateMgr =& TemplateManager::getManager($this->request);
+		$journal = $this->request->getJournal();
+		$user = $this->request->getUser();
+		$templateMgr = TemplateManager::getManager($this->request);
 
 		// Get article file for this article
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -95,10 +95,10 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		if ( $paymentManager->submissionEnabled() ) {
 			if (!parent::validate()) return false;
 
-			$journal =& $this->request->getJournal();
+			$journal = $this->request->getJournal();
 			$journalId = $journal->getId();
 			$articleId = $this->articleId;
-			$user =& $this->request->getUser();
+			$user = $this->request->getUser();
 
 			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			if ($completedPaymentDao->hasPaidSubmission($journalId, $articleId)) {
@@ -126,11 +126,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
-		$journal =& $this->request->getJournal();
-		$user =& $this->request->getUser();
+		$journal = $this->request->getJournal();
+		$user = $this->request->getUser();
 
 		// Update article
-		$article =& $this->article;
+		$article = $this->article;
 
 		if ($this->getData('commentsToEditor') != '') {
 			$article->setCommentsToEditor($this->getData('commentsToEditor'));

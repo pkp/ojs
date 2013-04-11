@@ -23,16 +23,16 @@ class XMLGalleyPlugin extends GenericPlugin {
 				DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
 
 				// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
-				HookRegistry::register('ArticleGalleyDAO::getArticleGalleys', array(&$xmlGalleyDao, 'appendXMLGalleys') );
-				HookRegistry::register('ArticleGalleyDAO::insertNewGalley', array(&$xmlGalleyDao, 'insertXMLGalleys') );
-				HookRegistry::register('ArticleGalleyDAO::deleteGalleyById', array(&$xmlGalleyDao, 'deleteXMLGalleys') );
-				HookRegistry::register('ArticleGalleyDAO::incrementGalleyViews', array(&$xmlGalleyDao, 'incrementXMLViews') );
-				HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
-				HookRegistry::register('ArticleGalleyDAO::getNewGalley', array(&$this, 'getXMLGalley') );
+				HookRegistry::register('ArticleGalleyDAO::getArticleGalleys', array($xmlGalleyDao, 'appendXMLGalleys') );
+				HookRegistry::register('ArticleGalleyDAO::insertNewGalley', array($xmlGalleyDao, 'insertXMLGalleys') );
+				HookRegistry::register('ArticleGalleyDAO::deleteGalleyById', array($xmlGalleyDao, 'deleteXMLGalleys') );
+				HookRegistry::register('ArticleGalleyDAO::incrementGalleyViews', array($xmlGalleyDao, 'incrementXMLViews') );
+				HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array($this, 'returnXMLGalley') );
+				HookRegistry::register('ArticleGalleyDAO::getNewGalley', array($this, 'getXMLGalley') );
 
 				// This hook is required in the absence of hooks in the viewFile and download methods
-				HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') );
-				HookRegistry::register( 'ArticleHandler::downloadFile', array(&$this, 'viewXMLGalleyFile') );
+				HookRegistry::register( 'ArticleHandler::viewFile', array($this, 'viewXMLGalleyFile') );
+				HookRegistry::register( 'ArticleHandler::downloadFile', array($this, 'viewXMLGalleyFile') );
 			}
 
 			return true;
@@ -84,8 +84,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$galley =& $args[1];
 		$fileId =& $args[2];
 
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
 		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() &&
 			$this->getSetting($journal->getId(), 'nlmPDF') == 1) {
@@ -155,8 +155,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 	 */
 	function setEnabled($enabled) {
 		parent::setEnabled($enabled);
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 		if ($journal) {
 			// set default XSLT renderer
 			if ($this->getSetting($journal->getId(), 'XSLTrenderer') == "") {
@@ -165,10 +165,6 @@ class XMLGalleyPlugin extends GenericPlugin {
 				if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {
 					// PHP5.x with XSL/DOM modules
 					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'PHP5');
-
-				} elseif ( version_compare(PHP_VERSION,'5','<') && extension_loaded('xslt') ) {
-					// PHP4.x with XSLT module
-					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'PHP4');
 
 				} else {
 					$this->updateSetting($journal->getId(), 'XSLTrenderer', 'external');
@@ -202,11 +198,11 @@ class XMLGalleyPlugin extends GenericPlugin {
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
-		$request =& $this->getRequest();
-		$journal =& $request->getJournal();
+		$request = $this->getRequest();
+		$journal = $request->getJournal();
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
 		$this->import('XMLGalleySettingsForm');
 		$form = new XMLGalleySettingsForm($this, $journal->getId());

@@ -41,7 +41,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		// Replace media file references
 		$images =& $this->getImageFiles();
@@ -75,7 +75,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		// Perform replacement for ojs://... URLs
 		$contents = preg_replace_callback(
 			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
-			array(&$this, '_handleOjsUrl'),
+			array($this, '_handleOjsUrl'),
 			$contents
 		);
 
@@ -174,7 +174,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 				break;
 			case 'public':
 					array_shift($urlParts);
-					$journal =& Request::getJournal();
+					$journal = Request::getJournal();
 					import ('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');

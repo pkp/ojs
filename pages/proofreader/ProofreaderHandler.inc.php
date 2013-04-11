@@ -34,12 +34,12 @@ class ProofreaderHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate($request);
 		$this->setupTemplate($request);
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$proofreaderSubmissionDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
 
 		// Get the user's search conditions, if any
@@ -71,9 +71,9 @@ class ProofreaderHandler extends Handler {
 
 		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign_by_ref('submissions', $submissions);
+		$templateMgr->assign('submissions', $submissions);
 
 		// Set search parameters
 		$duplicateParameters = array(
@@ -121,7 +121,7 @@ class ProofreaderHandler extends Handler {
 	 * @param $args array
 	 * @param $requet PKPRequest
 	 */
-	function instructions($args, &$request) {
+	function instructions($args, $request) {
 		$this->setupTemplate($request);
 		if (!isset($args[0]) || !ProofreaderAction::instructions($request, $args[0], array('proof'))) {
 			$request->redirect(null, $request->getRequestedPage());
@@ -134,14 +134,14 @@ class ProofreaderHandler extends Handler {
 	 * Redirects to proofreader index page if validation fails.
 	 * @param $articleId int optional
 	 */
-	function validate(&$request, $articleId = null) {
+	function validate($request, $articleId = null) {
 		parent::validate();
 
 		if ($articleId !== null) {
 			$isValid = false;
 
-			$journal =& $request->getJournal();
-			$user =& $request->getUser();
+			$journal = $request->getJournal();
+			$user = $request->getUser();
 
 			$proofreaderDao = DAORegistry::getDAO('ProofreaderSubmissionDAO');
 			$signoffDao = DAORegistry::getDAO('SignoffDAO');

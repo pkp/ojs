@@ -61,9 +61,9 @@ class DOAJPlugin extends ImportExportPlugin {
 	 * @param $args array
 	 */
 	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		switch (array_shift($args)) {
 			case 'export':
@@ -110,9 +110,9 @@ class DOAJPlugin extends ImportExportPlugin {
 	 * Auto-fill the DOAJ form.
 	 * @param $journal object
 	 */
-	function contact(&$journal, $send = false) {
-		$request =& $this->getRequest();
-		$user =& $request->getUser();
+	function contact($journal, $send = false) {
+		$request = $this->getRequest();
+		$user = $request->getUser();
 
 		$issn = $journal->getSetting('printIssn');
 

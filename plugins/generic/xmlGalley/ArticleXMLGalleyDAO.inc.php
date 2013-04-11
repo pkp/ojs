@@ -83,7 +83,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		// we have to use this crazy loop because PHP4 can't access objects by reference in foreach()
 		reset($galleys);
 		while (list($key) = each($galleys)) {
-			$galley =&  $galleys[$key];
+			$galley =& $galleys[$key];
 
 			// if the galley is an XML galley, append XML-derived galleys
 			if ($galley->getFileType() == "text/xml") {
@@ -99,7 +99,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				);
 
 				$xmlGalleyPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-				$journal =& Request::getJournal();
+				$journal = Request::getJournal();
 
 				while (!$result->EOF) {
 					$row = $result->GetRowAssoc(false);

@@ -93,7 +93,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('validDuration', $this->validDuration);
 		$templateMgr->assign('validNumMonthsBeforeExpiry', $this->validNumMonthsBeforeExpiry);
 		$templateMgr->assign('validNumWeeksBeforeExpiry', $this->validNumWeeksBeforeExpiry);
@@ -108,7 +108,7 @@ class SubscriptionPolicyForm extends Form {
 	 */
 	function initData() {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		$this->_data = array(
@@ -185,7 +185,7 @@ class SubscriptionPolicyForm extends Form {
 	 */
 	function execute() {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');

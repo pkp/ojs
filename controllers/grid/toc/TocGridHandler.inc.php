@@ -38,7 +38,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @see PKPHandler::authorize()
 	 */
-	function authorize(&$request, &$args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
 		$this->addPolicy(new PkpContextAccessPolicy($request, $roleAssignments));
 
@@ -51,7 +51,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @see PKPHandler::initialize()
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
@@ -125,7 +125,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @see GridHandler::loadData
 	 */
-	function loadData(&$request, $filter) {
+	function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');

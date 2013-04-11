@@ -202,7 +202,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @param $exportIssuesAs Whether issues are exported as work
 	 *  or as manifestation. One of the O4DOI_* schema constants.
 	 */
-	function O4DOIExportDom(&$request, &$plugin, $schema, &$journal, &$objectCache, $exportIssuesAs) {
+	function O4DOIExportDom($request, $plugin, $schema, $journal, $objectCache, $exportIssuesAs) {
 		// Configure the DOM.
 		parent::DOIExportDom($request, $plugin, $journal, $objectCache);
 		$this->_schema = $schema;
@@ -279,8 +279,8 @@ class O4DOIExportDom extends DOIExportDom {
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
 		$nullVar = null;
- 		$journal =& $this->getJournal();
- 		$cache =& $this->getCache();
+ 		$journal = $this->getJournal();
+ 		$cache = $this->getCache();
 
 		// Retrieve basic OJS objects.
 		$publicationObjects = parent::retrievePublicationObjects($object);
@@ -367,8 +367,8 @@ class O4DOIExportDom extends DOIExportDom {
 	 */
 	function &_headerElement() {
 		$falseVar = false;
-		$journal =& $this->getJournal();
-		$headerElement =& XMLCustomWriter::createElement($this->getDoc(), 'Header');
+		$journal = $this->getJournal();
+		$headerElement = XMLCustomWriter::createElement($this->getDoc(), 'Header');
 
 		// Technical Contact
 		$fromCompany = $this->getPluginSetting('fromCompany');
@@ -385,7 +385,7 @@ class O4DOIExportDom extends DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $headerElement, 'SentDate', date('YmdHi'));
 
 		// Message note
-		$app =& PKPApplication::getApplication();
+		$app = PKPApplication::getApplication();
 		$name = $app->getName();
 		$version = $app->getCurrentVersion();
 		$versionString = $version->getVersionString();
@@ -404,7 +404,7 @@ class O4DOIExportDom extends DOIExportDom {
 	function &_objectElement(&$object) {
 		// Initialize local variables.
 		$falseVar = false;
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 
 		// Make sure that the schema and the object combine.
 		assert(is_a($object, $this->_getObjectType()));
@@ -441,8 +441,8 @@ class O4DOIExportDom extends DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOI', $doi);
 
 		// DOI URL (mandatory)
-		$request =& $this->getRequest();
-		$router =& $request->getRouter();
+		$request = $this->getRequest();
+		$router = $request->getRouter();
 		switch ($this->_getSchema()) {
 			case O4DOI_ISSUE_AS_WORK:
 			case O4DOI_ISSUE_AS_MANIFESTATION:
@@ -668,7 +668,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialPublicationElement(&$issue, $journalLocalePrecedence) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$serialElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialPublication');
 
 		// Serial Work (mandatory)
@@ -694,7 +694,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialWorkElement($journalLocalePrecedence) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$serialWorkElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialWork');
 
 		// Title (mandatory)
@@ -771,7 +771,7 @@ class O4DOIExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_serialVersionElement($issn, $productForm) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$serialVersionElement =& XMLCustomWriter::createElement($this->getDoc(), 'SerialVersion');
 
 		// Proprietary Journal Identifier
@@ -863,7 +863,7 @@ class O4DOIExportDom extends DOIExportDom {
 			// Retrieve the first key/value pair...
 			foreach($localizedTitles as $locale => $localizedTitle) break;
 			if (empty($localizedTitle)) {
-				$journal =& $this->getJournal();
+				$journal = $this->getJournal();
 				$localizedTitles = $this->getTranslationsByPrecedence($journal->getName(null), $journalLocalePrecedence);
 				// Retrieve the first key/value pair...
 				foreach($localizedTitles as $locale => $localizedTitle) break;

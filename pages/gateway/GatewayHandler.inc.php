@@ -30,8 +30,8 @@ class GatewayHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
@@ -87,24 +87,24 @@ class GatewayHandler extends Handler {
 				list($nextYear) = $result->fields;
 			}
 
-			$templateMgr->assign_by_ref('journal', $journal);
-			$templateMgr->assign_by_ref('issues', $issues);
+			$templateMgr->assign('journal', $journal);
+			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
 			$templateMgr->assign('showInfo', $showInfo);
 
-			$locales =& $journal->getSupportedLocaleNames();
+			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
-				$localeNames =& AppLocale::getAllLocales();
+				$localeNames = AppLocale::getAllLocales();
 				$primaryLocale = AppLocale::getPrimaryLocale();
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
-			$templateMgr->assign_by_ref('locales', $locales);
+			$templateMgr->assign('locales', $locales);
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournals(true);
+			$journals = $journalDao->getJournals(true);
 			$templateMgr->assign_by_ref('journals', $journals);
 		}
 
@@ -115,8 +115,8 @@ class GatewayHandler extends Handler {
 		$this->validate();
 		$this->setupTemplate();
 
-		$journal =& $request->getJournal();
-		$templateMgr =& TemplateManager::getManager($request);
+		$journal = $request->getJournal();
+		$templateMgr = TemplateManager::getManager($request);
 
 		if ($journal != null) {
 			if (!$journal->getSetting('enableClockss')) {
@@ -189,8 +189,8 @@ class GatewayHandler extends Handler {
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals =& $journalDao->getJournals(true);
-			$templateMgr->assign_by_ref('journals', $journals);
+			$journals = $journalDao->getJournals(true);
+			$templateMgr->assign('journals', $journals);
 		}
 
 		$templateMgr->display('gateway/clockss.tpl');

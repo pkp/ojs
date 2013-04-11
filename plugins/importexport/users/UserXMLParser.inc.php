@@ -57,7 +57,7 @@ class UserXMLParser {
 		$journal = $journalDao->getById($this->journalId);
 		$journalPrimaryLocale = AppLocale::getPrimaryLocale();
 
-		$site =& Request::getSite();
+		$site = Request::getSite();
 		$siteSupportedLocales = $site->getSupportedLocales();
 
 		if ($tree !== false) {

@@ -31,13 +31,13 @@ class OpenAdsSettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function OpenAdsSettingsForm(&$plugin, $openAdsConnection, $journalId) {
-		$templateMgr =& TemplateManager::getManager($plugin->getRequest());
+		$templateMgr = TemplateManager::getManager($plugin->getRequest());
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
-		$this->openAdsConnection =& $openAdsConnection;
+		$this->plugin = $plugin;
+		$this->openAdsConnection = $openAdsConnection;
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -62,7 +62,7 @@ class OpenAdsSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager($this->plugin->getRequest());
+		$templateMgr = TemplateManager::getManager($this->plugin->getRequest());
 
 		$templateMgr->assign('orientationOptions', array(
 			AD_ORIENTATION_LEFT => 'plugins.generic.openads.orientation.left',

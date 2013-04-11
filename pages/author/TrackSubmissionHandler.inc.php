@@ -80,8 +80,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function submission($args, $request) {
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
@@ -95,7 +95,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$round = (int) array_shift($args);
 		if (!$round) $round = $submission->getCurrentRound();
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
@@ -153,7 +153,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function submissionReview($args, $request) {
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
@@ -170,7 +170,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$editorDecisions = $authorSubmission->getDecisions($authorSubmission->getCurrentRound());
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1] : null;
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 
 		$reviewAssignments =& $authorSubmission->getReviewAssignments();
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
@@ -202,7 +202,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function addSuppFile($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$this->validate($request, $articleId);
 		$authorSubmission =& $this->submission;
@@ -230,7 +230,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * @param $args array ($articleId, $suppFileId)
 	 * @param $request PKPRequest
 	 */
-	function editSuppFile($args, &$request) {
+	function editSuppFile($args, $request) {
 		$articleId = (int) array_shift($args);
 		$suppFileId = (int) array_shift($args);
 		$this->validate($request, $articleId);
@@ -241,7 +241,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			import('classes.submission.form.SuppFileForm');
 
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
 
 			if ($submitForm->isLocaleResubmit()) {
@@ -294,7 +294,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			import('classes.submission.form.SuppFileForm');
 
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
 			$submitForm->readInputData();
 
@@ -315,8 +315,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * @param $request PKPRequest
 	 */
 	function submissionEditing($args, $request) {
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$articleId = (int) array_shift($args);
 
 		$this->validate($request, $articleId);
@@ -327,7 +327,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		import('classes.submission.proofreader.ProofreaderAction');
 		ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_AUTHOR');
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
@@ -364,7 +364,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 */
 	function viewMetadata($args, $request) {
 		$articleId = (int) array_shift($args);
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 		$this->validate($request, $articleId);
 		$submission =& $this->submission;
 		$this->setupTemplate($request, true, $articleId, 'summary');
@@ -407,7 +407,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		}
 
 		$submission =& $this->submission;
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -528,7 +528,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
@@ -545,7 +545,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request);
 
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
@@ -569,7 +569,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
-				$templateMgr =& TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('galley', $galley);
 				if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 					$templateMgr->addStyleSheet($request->url(null, 'article', 'viewFile', array(
@@ -617,11 +617,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_SUBMISSION, $user->getId(), $articleId, $journal->getSetting('submissionFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -640,11 +640,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_FASTTRACK, $user->getId(), $articleId, $journal->getSetting('fastTrackFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -663,11 +663,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true, $articleId);
 
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$user =& $request->getUser();
+		$user = $request->getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PUBLICATION, $user->getId(), $articleId, $journal->getSetting('publicationFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

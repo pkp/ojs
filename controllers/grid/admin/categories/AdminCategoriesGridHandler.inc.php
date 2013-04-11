@@ -34,7 +34,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	/**
 	 * @see SetupGridHandler::initialize()
 	 */
-	function initialize(&$request) {
+	function initialize($request) {
 		parent::initialize($request);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_ADMIN);
@@ -102,7 +102,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function addItem($args, &$request) {
+	function addItem($args, $request) {
 		// Calling editItem with an empty row id will add
 		// a new category.
 		return $this->editItem($args, $request);
@@ -114,7 +114,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function editItem($args, &$request) {
+	function editItem($args, $request) {
 		import('controllers.grid.admin.categories.form.AdminCategoryForm');
 		$categoryId = isset($args['rowId']) ? $args['rowId'] : null;
 		$categoryForm = new AdminCategoryForm($categoryId);
@@ -131,7 +131,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function updateItem($args, &$request) {
+	function updateItem($args, $request) {
 		// -> categoryId must be present and valid
 		// -> htmlId must be present and valid
 
@@ -155,7 +155,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
 	 */
-	function deleteItem($args, &$request) {
+	function deleteItem($args, $request) {
 		$rowId = $request->getUserVar('rowId');
 
 		// Get all categories

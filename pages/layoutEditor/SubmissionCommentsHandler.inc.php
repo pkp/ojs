@@ -30,7 +30,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewLayoutComments($args, &$request) {
+	function viewLayoutComments($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
@@ -61,7 +61,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function viewProofreadComments($args, &$request) {
+	function viewProofreadComments($args, $request) {
 		$articleId = (int) array_shift($args);
 		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
@@ -94,7 +94,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function editComment($args, &$request) {
+	function editComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 
@@ -136,7 +136,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	 * @param $args array
 	 * @param $request object
 	 */
-	function deleteComment($args, &$request) {
+	function deleteComment($args, $request) {
 		$articleId = (int) array_shift($args);
 		$commentId = (int) array_shift($args);
 

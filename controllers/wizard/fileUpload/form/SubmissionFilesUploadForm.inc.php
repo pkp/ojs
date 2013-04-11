@@ -28,7 +28,7 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	 * @param $reviewRound ReviewRound
 	 * @param $revisedFileId integer
 	 */
-	function SubmissionFilesUploadForm(&$request, $submissionId, $stageId, $uploaderRoles, $fileStage,
+	function SubmissionFilesUploadForm($request, $submissionId, $stageId, $uploaderRoles, $fileStage,
 			$revisionOnly = false, $reviewRound = null, $revisedFileId = null, $assocType = null, $assocId = null) {
 		parent::PKPSubmissionFilesUploadForm(
 			$request, $submissionId, $stageId, $uploaderRoles, $fileStage, $revisionOnly, $reviewRound, $revisedFileId, $assocType, $assocId
@@ -50,7 +50,7 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	 * @return SubmissionFile
 	 */
 	function _uploadFile($request, $user, $uploaderUserGroupId, $revisedFileId, $fileGenre, $assocType, $assocId) {
-		$context =& $request->getContext();
+		$context = $request->getContext();
 		import('lib.pkp.classes.file.SubmissionFileManager');
 		$articleFileManager = new SubmissionFileManager($context->getId(), $this->getData('submissionId'));
 		$fileStage = $this->getData('fileStage');

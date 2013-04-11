@@ -27,7 +27,7 @@ class AuthSourcesHandler extends AdminHandler {
 	/**
 	 * Display a list of authentication sources.
 	 */
-	function auth($args, &$request) {
+	function auth($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
@@ -40,8 +40,8 @@ class AuthSourcesHandler extends AdminHandler {
 			$pluginOptions[$plugin->getName()] = $plugin->getDisplayName();
 		}
 
-		$templateMgr =& TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('sources', $sources);
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('sources', $sources);
 		$templateMgr->assign('pluginOptions', $pluginOptions);
 		$templateMgr->display('admin/auth/sources.tpl');
 	}
@@ -51,7 +51,7 @@ class AuthSourcesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function updateAuthSources($args, &$request) {
+	function updateAuthSources($args, $request) {
 		$this->validate();
 
 		$authDao = DAORegistry::getDAO('AuthSourceDAO');
@@ -65,7 +65,7 @@ class AuthSourcesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function createAuthSource($args, &$request) {
+	function createAuthSource($args, $request) {
 		$this->validate();
 
 		$authDao = DAORegistry::getDAO('AuthSourceDAO');
@@ -84,7 +84,7 @@ class AuthSourcesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function editAuthSource($args, &$request) {
+	function editAuthSource($args, $request) {
 		$this->validate();
 		$this->setupTemplate($request, true);
 
@@ -99,7 +99,7 @@ class AuthSourcesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function updateAuthSource($args, &$request) {
+	function updateAuthSource($args, $request) {
 		$this->validate();
 
 		import('classes.security.form.AuthSourceSettingsForm');
@@ -114,7 +114,7 @@ class AuthSourcesHandler extends AdminHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function deleteAuthSource($args, &$request) {
+	function deleteAuthSource($args, $request) {
 		$this->validate();
 
 		$authId = (int) array_shift($args);

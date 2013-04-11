@@ -108,8 +108,8 @@ class AuthorAction extends Action {
 
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
-			$user =& $request->getUser();
-			$journal =& $request->getJournal();
+			$user = $request->getUser();
+			$journal = $request->getJournal();
 			import('classes.mail.ArticleMailTemplate');
 			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY');			
 			if ($email->isEnabled()) {
@@ -154,14 +154,14 @@ class AuthorAction extends Action {
 		$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& $request->getJournal();
+		$journal = $request->getJournal();
 
 		$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $authorSubmission->getId());
 		if ($authorSignoff->getDateCompleted() != null) {
 			return true;
 		}
 
-		$user =& $request->getUser();
+		$user = $request->getUser();
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
 
@@ -356,8 +356,8 @@ class AuthorAction extends Action {
 	function emailEditorDecisionComment($authorSubmission, $send, $request) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$journal =& $request->getJournal();
-		$user =& $request->getUser();
+		$journal = $request->getJournal();
+		$user = $request->getUser();
 
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($authorSubmission);

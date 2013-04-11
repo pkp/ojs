@@ -142,14 +142,14 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 	 * Insert Google Analytics page tag to footer
 	 */
 	function insertFooter($hookName, $params) {
-		$smarty =& $params[1];
+		$smarty = $params[1];
 		$output =& $params[2];
-		$request =& $this->getRequest();
-		$templateMgr =& TemplateManager::getManager($request);
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
 		$currentJournal = $templateMgr->get_template_vars('currentJournal');
 
 		if (!empty($currentJournal)) {
-			$journal =& $request->getJournal();
+			$journal = $request->getJournal();
 			$journalId = $journal->getId();
 			$googleAnalyticsSiteId = $this->getSetting($journalId, 'googleAnalyticsSiteId');
 
@@ -184,10 +184,10 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$request =& $this->getRequest();
-				$templateMgr =& TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$journal =& $request->getJournal();
+				$request = $this->getRequest();
+				$templateMgr = TemplateManager::getManager($request);
+				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$journal = $request->getJournal();
 
 				$this->import('GoogleAnalyticsSettingsForm');
 				$form = new GoogleAnalyticsSettingsForm($this, $journal->getId());

@@ -32,7 +32,7 @@ class NotificationsGridCellProvider extends PKPNotificationsGridCellProvider {
 	 * @param $column GridColumn
 	 * @return array
 	 */
-	function getTemplateVarsFromRowColumn(&$row, $column) {
+	function getTemplateVarsFromRowColumn($row, $column) {
 		$notification = $row->getData();
 
 		switch ($column->getId()) {

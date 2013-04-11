@@ -33,7 +33,7 @@ class PublishedArticleDAO extends DAO {
 	function &_getPublishedArticleCache() {
 		if (!isset($this->articleCache)) {
 			$cacheManager =& CacheManager::getManager();
-			$this->articleCache =& $cacheManager->getObjectCache('publishedArticles', 0, array(&$this, '_articleCacheMiss'));
+			$this->articleCache =& $cacheManager->getObjectCache('publishedArticles', 0, array($this, '_articleCacheMiss'));
 		}
 		return $this->articleCache;
 	}
@@ -47,7 +47,7 @@ class PublishedArticleDAO extends DAO {
 	function &_getArticlesInSectionsCache() {
 		if (!isset($this->articlesInSectionsCache)) {
 			$cacheManager =& CacheManager::getManager();
-			$this->articlesInSectionsCache =& $cacheManager->getObjectCache('articlesInSections', 0, array(&$this, '_articlesInSectionsCacheMiss'));
+			$this->articlesInSectionsCache =& $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_articlesInSectionsCacheMiss'));
 		}
 		return $this->articlesInSectionsCache;
 	}

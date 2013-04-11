@@ -28,7 +28,7 @@ class LayoutCommentForm extends CommentForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.comments');
 		$templateMgr->assign('commentAction', 'postLayoutComment');
 		$templateMgr->assign('commentType', 'layout');
@@ -61,7 +61,7 @@ class LayoutCommentForm extends CommentForm {
 	function email() {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$journal =& Request::getJournal();
+		$journal = Request::getJournal();
 
 		// Create list of recipients:
 
@@ -76,7 +76,7 @@ class LayoutCommentForm extends CommentForm {
 
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutSignoff != null && $layoutSignoff->getUserId() > 0) {
-				$user =& $userDao->getById($layoutSignoff->getUserId());
+				$user = $userDao->getById($layoutSignoff->getUserId());
 
 				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}

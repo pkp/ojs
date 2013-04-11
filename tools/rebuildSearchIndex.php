@@ -54,7 +54,7 @@ class rebuildSearchIndex extends CommandLineTool {
 
 		// Register a router hook so that we can construct
 		// useful URLs to journal content.
-		HookRegistry::register('Request::getBaseUrl', array(&$this, 'callbackBaseUrl'));
+		HookRegistry::register('Request::getBaseUrl', array($this, 'callbackBaseUrl'));
 
 		// Let the search implementation re-build the index.
 		$articleSearchIndex = new ArticleSearchIndex();

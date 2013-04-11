@@ -88,8 +88,8 @@ class DOIExportDom {
 	 * @return mixed
 	 */
 	function getPluginSetting($settingName) {
-		$plugin =& $this->_plugin;
-		$journal =& $this->getJournal();
+		$plugin = $this->_plugin;
+		$journal = $this->getJournal();
 		$settingValue = $plugin->getSetting($journal->getId(), $settingName);
 		assert(!empty($settingValue));
 		return $settingValue;
@@ -129,13 +129,13 @@ class DOIExportDom {
 	 * @param $journal Journal
 	 * @param $objectCache PubObjectCache
 	 */
-	function DOIExportDom(&$request, &$plugin, &$journal, &$objectCache) {
+	function DOIExportDom($request, $plugin, $journal, $objectCache) {
 		// Configure the DOM.
-		$this->_doc =& XMLCustomWriter::createDocument();
-		$this->_request =& $request;
-		$this->_plugin =& $plugin;
-		$this->_journal =& $journal;
-		$this->_cache =& $objectCache;
+		$this->_doc = XMLCustomWriter::createDocument();
+		$this->_request = $request;
+		$this->_plugin = $plugin;
+		$this->_journal = $journal;
+		$this->_cache = $objectCache;
 	}
 
 
@@ -244,8 +244,8 @@ class DOIExportDom {
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
 		$nullVar = null;
- 		$journal =& $this->getJournal();
- 		$cache =& $this->getCache();
+ 		$journal = $this->getJournal();
+ 		$cache = $this->getCache();
 
 		// Assign the object itself.
 		$publicationObjects = array();
@@ -368,7 +368,7 @@ class DOIExportDom {
 		}
 
 		// Use the journal locale as fallback.
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$locales[] = $journal->getPrimaryLocale();
 
 		// Use form locales as fallback.
@@ -518,7 +518,7 @@ class DOIExportDom {
 	 * @return string
 	 */
 	function getPublisher($localePrecedence) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$publisher = $journal->getSetting('publisherInstitution');
 		if (empty($publisher)) {
 			// Use the journal title if no publisher is set.
@@ -536,7 +536,7 @@ class DOIExportDom {
 	 * @return array The subject class and code.
 	 */
 	function getSubjectClass(&$article, $objectLocalePrecedence) {
-		$journal =& $this->getJournal();
+		$journal = $this->getJournal();
 		$subjectSchemeTitle = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassTitle', null), $objectLocalePrecedence);
 		$subjectSchemeUrl = $this->getPrimaryTranslation($journal->getSetting('metaSubjectClassUrl', null), $objectLocalePrecedence);
 		if (empty($subjectSchemeTitle)) {

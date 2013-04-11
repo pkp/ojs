@@ -68,7 +68,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('suppFileId', $this->suppFileId);
 		$templateMgr->assign('submitStep', 4);
