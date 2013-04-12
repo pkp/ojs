@@ -56,7 +56,7 @@ class IssueHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 
 		if ($issue != null) {
-			$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
+			$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
 		} else {
 			$issueCrumbTitle = __('current.noCurrentIssue');
 			$issueHeadingTitle = __('current.noCurrentIssue');
