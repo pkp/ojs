@@ -17,10 +17,27 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class UsageStatsPlugin extends GenericPlugin {
 
-
 	//
 	// Implement methods from PKPPlugin.
 	//
+	/**
+	* @see LazyLoadPlugin::register()
+	*/
+	function register($category, $path) {
+		$success = parent::register($category, $path);
+
+		if ($this->getEnabled() && $success) {
+			// Register callbacks.
+			$app =& PKPApplication::getApplication();
+			$version = $app->getCurrentVersion();
+			if ($version->getMajor() < 3) {
+				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
+			}
+		}
+
+		return $success;
+	}
+
 	/**
 	* @see PKPPlugin::getDisplayName()
 	*/
@@ -120,6 +137,40 @@ class UsageStatsPlugin extends GenericPlugin {
 	$verbs[] = array('settings', __('grid.settings'));
 			}
 			return $verbs;
+	}
+
+
+	//
+	// Hook implementations.
+	//
+	/**
+	 * @see PKPPageRouter::route()
+	 * @todo Remove this callback for OJS 3.0. The issue current
+	 * operation should redirect to the view operation in core.
+	 */
+	function callbackLoadHandler($hookName, $args) {
+		// Check the page.
+		$page = $args[0];
+		if ($page !== 'issue') return;
+
+		// Check the operation.
+		$op = $args[1];
+		if ($op !== 'current') return;
+
+		// Check current issue.
+		$request =& Application::getRequest();
+		$journal = $request->getJournal();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getCurrent($journal->getId(), true);
+		if (!$issue) {
+			// Let the default current operation work.
+			return;
+		}
+
+		// Replace the default Issue handler by ours.
+		define('HANDLER_CLASS', 'UsageStatsHandler');
+		$handlerFile =& $args[2];
+		$handlerFile = $this->getPluginPath() . '/' . 'UsageStatsHandler.inc.php';
 	}
 
 }

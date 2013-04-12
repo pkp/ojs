@@ -172,6 +172,8 @@ class UsageStatsLoader extends FileLoader {
 
 	/**
 	 * Get the expected referer from the stats plugin.
+	 * They are grouped by the object type constant that
+	 * they give access to.
 	 * @return array
 	 * @todo The plugin will also need to know the expected referer, so we
 	 * might want to retrieve this from an unique place.
@@ -181,7 +183,10 @@ class UsageStatsLoader extends FileLoader {
 			'/article/view/',
 			'/article/viewArticle/',
 			'/article/viewDownloadInterstitial/',
-			'/article/download/'
+			'/article/download/',
+			ASSOC_TYPE_ISSUE => array(
+			'issue/view'
+			)
 		));
 	}
 
@@ -192,7 +197,7 @@ class UsageStatsLoader extends FileLoader {
 	 * @return array
 	 */
 	private function _getAssocFromReferer($referer) {
-		// Check the referer.
+		// Check the passed referer.
 		$assocId = $assocType = false;
 		$expectedReferer = $this->_getExpectedReferer();
 
@@ -200,9 +205,11 @@ class UsageStatsLoader extends FileLoader {
 		$baseUrl = Config::getVar('general', 'base_url');
 		if (strpos($referer, $baseUrl) !== false) {
 			$refererCheck = false;
+			// It matches the expected ones?
 			foreach ($expectedReferer as $workingAssocType => $workingReferers) {
 				foreach($workingReferers as $workingReferer) {
 					if (strpos($referer, $workingReferer) !== false) {
+						// Expected referer, don't look any futher.
 						$refererCheck = true;
 						break 2;
 					}
@@ -210,6 +217,7 @@ class UsageStatsLoader extends FileLoader {
 			}
 
 			if ($refererCheck) {
+				// Get the assoc id inside the passed referer.
 				$explodedString = explode($workingReferer, $referer);
 				$explodedString = explode('/', $explodedString[1]);
 				$assocId = $explodedString[0];
