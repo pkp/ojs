@@ -18,7 +18,7 @@ import ('classes.journal.Section');
 class SectionDAO extends DAO {
 	var $cache;
 
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		$section = $this->getById($id, null, false);
 		$cache->setCache($id, $section);
 		return $section;

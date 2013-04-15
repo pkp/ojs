@@ -49,7 +49,7 @@ class PluginSettingsDAO extends DAO {
 		return $cache->get($name);
 	}
 
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		$contextParts = explode('-', $cache->getContext());
 		$journalId = array_pop($contextParts);
 		$settings =& $this->getPluginSettings($journalId, $cache->getCacheId());

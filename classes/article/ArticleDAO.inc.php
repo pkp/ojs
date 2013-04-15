@@ -21,7 +21,7 @@ class ArticleDAO extends DAO {
 
 	var $cache;
 
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		$article = $this->getById($id, null, false);
 		$cache->setCache($id, $article);
 		return $article;

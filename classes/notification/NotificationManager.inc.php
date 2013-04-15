@@ -13,7 +13,6 @@
  * @brief Class for Notification Manager.
  */
 
-
 import('lib.pkp.classes.notification.PKPNotificationManager');
 
 class NotificationManager extends PKPNotificationManager {

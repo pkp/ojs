@@ -75,7 +75,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * Re-run the XSLT transformation on a stale (or missing) cache
 	 * @return boolean
 	 */
-	function _xsltCacheMiss(&$cache) {
+	function _xsltCacheMiss($cache) {
 		static $contents;
 		if (!isset($contents)) {
 			$journal = Request::getJournal();

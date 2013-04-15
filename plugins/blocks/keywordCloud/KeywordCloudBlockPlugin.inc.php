@@ -33,7 +33,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		return __('plugins.block.keywordCloud.description');
 	}
 
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		$keywordMap = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($cache->getCacheId());

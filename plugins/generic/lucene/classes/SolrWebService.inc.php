@@ -732,7 +732,7 @@ class SolrWebService extends XmlWebService {
 	 *
 	 * @return array The available field names.
 	 */
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		assert(in_array($id, array('search', 'sort')));
 
 		// Get the fields that may be found in the index.

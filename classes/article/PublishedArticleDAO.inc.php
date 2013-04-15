@@ -24,7 +24,7 @@ class PublishedArticleDAO extends DAO {
 	var $articleCache;
 	var $articlesInSectionsCache;
 
-	function _articleCacheMiss(&$cache, $id) {
+	function _articleCacheMiss($cache, $id) {
 		$publishedArticle =& $this->getPublishedArticleByBestArticleId(null, $id, null);
 		$cache->setCache($id, $publishedArticle);
 		return $publishedArticle;
@@ -38,8 +38,8 @@ class PublishedArticleDAO extends DAO {
 		return $this->articleCache;
 	}
 
-	function _articlesInSectionsCacheMiss(&$cache, $id) {
-		$articlesInSections =& $this->getPublishedArticlesInSections($id, null);
+	function _articlesInSectionsCacheMiss($cache, $id) {
+		$articlesInSections = $this->getPublishedArticlesInSections($id, null);
 		$cache->setCache($id, $articlesInSections);
 		return $articlesInSections;
 	}

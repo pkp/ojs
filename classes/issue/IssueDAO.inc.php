@@ -18,7 +18,7 @@ import ('classes.issue.Issue');
 class IssueDAO extends DAO {
 	var $caches;
 
-	function _cacheMiss(&$cache, $id) {
+	function _cacheMiss($cache, $id) {
 		if ($cache->getCacheId() === 'current') {
 			$issue = $this->getCurrent($id, false);
 		} else {

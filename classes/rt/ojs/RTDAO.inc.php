@@ -118,7 +118,7 @@ class RTDAO extends DAO {
 		return $returner;
 	}
 
-	function _versionCacheMiss(&$cache, $id) {
+	function _versionCacheMiss($cache, $id) {
 		$ids = explode('-', $id);
 		$version =& $this->getVersion($ids[0], $ids[1], false);
 		$cache->setCache($id, $version);
