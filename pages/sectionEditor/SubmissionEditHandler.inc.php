@@ -80,6 +80,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
+		$templateMgr->assign('articleId', $articleId);
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getId()));

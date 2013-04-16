@@ -13,51 +13,8 @@
 {/strip}
 
 {if $canViewAuthors}
-<div id="authors">
-<h3>{translate key="article.authors"}</h3>
-	
-<table class="data">
-	{foreach name=authors from=$authors key=authorIndex item=author}
-	<tr>
-		<td class="label">{translate key="user.name"}</td>
-		<td class="value">
-			{assign var=emailString value=$author.firstName|concat:" ":$author.middleName:" ":$author.lastName:" <":$author.email:">"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl articleId=$articleId}
-			{$author.firstName|escape} {$author.middleName|escape} {$author.lastName|escape} {icon name="mail" url=$url}
-		</td>
-	</tr>
-	<tr>
-		<td class="label">{translate key="user.url"}</td>
-		<td class="value">{$author.url|escape|default:"&mdash;"}</td>
-	</tr>
-	<tr>
-		<td class="label">{translate key="user.affiliation"}</td>
-		<td class="value">{$author.affiliation.$formLocale|escape|nl2br|default:"&mdash;"}</td>
-	</tr>
-	<tr>
-		<td class="label">{translate key="common.country"}</td>
-		<td class="value">{$author.countryLocalized|escape|default:"&mdash;"}</td>
-	</tr>
-	{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
-	<tr>
-		<td class="label">
-			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
-			{translate key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}
-		</td>
-		<td class="value">{$author.competingInterests.$formLocale|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
-	</tr>
-	{/if}
-	<tr>
-		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author.biography.$formLocale|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
-	</tr>
-	{if !$smarty.foreach.authors.last}
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	{/if}
-	{/foreach}
-</table>
+	{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.author.AuthorGridHandler" op="fetchGrid" articleId=$articleId}
+	{load_url_in_div id="authorsGridContainer" url="$authorGridUrl"}
 </div>
 
 <div class="separator"></div>
@@ -103,7 +60,7 @@
 <div class="separator"></div>
 <div id="indexing">
 <h3>{translate key="submission.indexing"}</h3>
-	
+
 <table class="data">
 	{if $currentJournal->getSetting('metaDiscipline')}
 	<tr>
@@ -176,7 +133,7 @@
 
 <div id="supportingAgencies">
 <h3>{translate key="submission.supportingAgencies"}</h3>
-	
+
 <table class="data">
 	<tr>
 		<td class="label">{translate key="submission.agencies"}</td>
