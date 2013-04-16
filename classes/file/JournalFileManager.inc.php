@@ -12,26 +12,20 @@
  * @brief Class defining operations for private journal file management.
  */
 
-import('classes.file.BaseJournalFileManager');
+import('lib.pkp.classes.file.BaseSubmissionFileManager');
 
-class JournalFileManager extends BaseJournalFileManager {
-
-	/** @var string the path to location of the files */
-	var $filesDir;
-
-	/** @var int the ID of the associated journal */
-	var $journalId;
+class JournalFileManager extends BaseSubmissionFileManager {
 
 	/** @var Journal the associated article */
 	var $journal;
 
 	/**
 	 * Constructor.
-	 * @param $pressId int
-	 * @param $monographId int
+	 * @param $journalId int
+	 * @param $articleId int
 	 */
 	function JournalFileManager($journalId, $articleId) {
-		parent::BaseJournalFileManager($journalId, $articleId);
+		parent::BaseSubmissionFileManager($journalId, $articleId);
 	}
 
 	/**
@@ -39,7 +33,7 @@ class JournalFileManager extends BaseJournalFileManager {
 	 * @return string
 	 */
 	function getBasePath() {
-		return parent::getBasePath() . '/journals/' . $this->journalId . '/';
+		return parent::getBasePath() . '/journals/' . $this->contextId . '/';
 	}
 
 	function uploadFile($fileName, $destFileName) {
