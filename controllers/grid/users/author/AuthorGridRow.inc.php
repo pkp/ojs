@@ -42,7 +42,6 @@ class AuthorGridRow extends PKPAuthorGridRow {
 	 * @return boolean
 	 */
 	function allowedToCreateUser($request) {
-		return true;
 		$submission = $this->getSubmission();
 
 		$user = $request->getUser();
