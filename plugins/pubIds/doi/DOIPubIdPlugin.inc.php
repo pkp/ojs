@@ -245,7 +245,12 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getResolvingURL()
 	 */
 	function getResolvingURL($journalId, $pubId) {
-		return 'http://dx.doi.org/'.urlencode($pubId);
+		// See ANSI/NISO Z39.84-2005, Appendix E. (Bug #8190)
+		$separatorIndex = String::strpos($pubId, '/');
+		assert($separatorIndex !== false); // Should contain a slash
+		$prefix = String::substr($pubId, 0, $separatorIndex);
+		$suffix = String::substr($pubId, $separatorIndex+1);
+		return 'http://dx.doi.org/' . $prefix . '/' . urlencode($suffix);
 	}
 
 	/**
