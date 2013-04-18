@@ -49,16 +49,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Проблемы? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (см. список разделов в <a href="{$aboutUrl}" target="_new">Описании</a> Журнала).]]></message>
-	<message key="author.submit.selectSection">Выберите раздел...</message>
-	<message key="author.submit.submissionChecklist">Требования к статье</message>
-	<message key="author.submit.submissionChecklistDescription">Авторы должны подтвердить, что их материал соответствует всем приведенным ниже условиям. Только в этом случае они могут перейти к следующему этапу депонирования статьи (Шаг 2).</message>
+	<message key="submission.submit.selectSection">Выберите раздел...</message>
+	<message key="submission.submit.submissionChecklist">Требования к статье</message>
+	<message key="submission.submit.submissionChecklistDescription">Авторы должны подтвердить, что их материал соответствует всем приведенным ниже условиям. Только в этом случае они могут перейти к следующему этапу депонирования статьи (Шаг 2).</message>
 	<message key="author.submit.verifyChecklist">Отметьте все указанные условия</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями Передачи Прав на Копирование и Распространение материалов этой статьи, которые будут применены кода (и если) статья будет опубликована (ниже можно оставить комментарии для редактора).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Вы должны согласиться с Условиями Передачи Прав перед тем как продолжить.</message>
-	<message key="author.submit.commentsForEditor">Комментарии для Редакторов</message>
+	<message key="submission.submit.coverNote">Комментарии для Редакторов</message>
 	<message key="author.submit.comments">Введите текст (по желанию)</message>
 	<message key="author.submit.form.sectionRequired">Пожалуйста выберите подходящий для этой статьи раздел журнала</message>
-	<message key="author.submit.privacyStatement">Заявление о Конфиденциальности</message>
+	<message key="submission.submit.privacyStatement">Заявление о Конфиденциальности</message>
 	<message key="author.submit.reorderInstructions">Переставьте имена авторов в порядке, как они будут указаны в публикации.</message>
 	<message key="author.submit.reorder">Переставить имена авторов</message>
 	<message key="author.submit.selectPrincipalContact">Лицо (автор) для связи с редактором.</message>

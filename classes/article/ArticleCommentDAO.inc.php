@@ -199,6 +199,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param ArticleComment object
 	 */
 	function deleteObject($articleComment) {
+		assert(is_a($articleComment, 'ArticleComment'));
 		$this->deleteById($articleComment->getId());
 	}
 

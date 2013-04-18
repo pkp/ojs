@@ -39,16 +39,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro asistenci.]]></message>
 	<message key="author.submit.journalSection">Sekce časopisu</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="author.submit.selectSection">Prosím zvolte sekci...</message>
-	<message key="author.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
-	<message key="author.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
+	<message key="submission.submit.selectSection">Prosím zvolte sekci...</message>
+	<message key="submission.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
+	<message key="submission.submit.submissionChecklistDescription">Zaškrtnutím následujících položek potvrďte, že tento příspěvek je připraven pro posouzení tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.verifyChecklist">Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</message>
-	<message key="author.submit.commentsForEditor">Komentář pro editora</message>
+	<message key="submission.submit.coverNote">Komentář pro editora</message>
 	<message key="author.submit.comments">Vložte text (nepovinné)</message>
 	<message key="author.submit.form.sectionRequired">Vyberte prosím vhodnou sekci časopisu pro tento příspěvek.</message>
-	<message key="author.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
+	<message key="submission.submit.privacyStatement">Prohlášení o soukromí pro tento časopis</message>
 	<message key="author.submit.reorderInstructions">Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci.</message>
 	<message key="author.submit.selectPrincipalContact">Hlavní kontakt pro korespondenci s editory.</message>
 	<message key="author.submit.addAuthor">Přidat autora</message>

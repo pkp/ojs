@@ -44,16 +44,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contacto com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
 	<message key="author.submit.journalSection">Secção</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a secção apropriada para a submissão (leia Secções e Políticas em <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
-	<message key="author.submit.selectSection">Escolha uma secção...</message>
-	<message key="author.submit.submissionChecklist">Condições para submissão</message>
-	<message key="author.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de selecção, para prosseguir ao Passo 2 do processo.</message>
+	<message key="submission.submit.selectSection">Escolha uma secção...</message>
+	<message key="submission.submit.submissionChecklist">Condições para submissão</message>
+	<message key="submission.submit.submissionChecklistDescription">Confirme que a submissão está em conformidade com as condições seguintes, marcando as caixas de selecção, para prosseguir ao Passo 2 do processo.</message>
 	<message key="author.submit.verifyChecklist">Todas as condições devem ser satisfeitas antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Os autores concordam com os termos da Declaração de Direitos de Autor, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">É obrigatório aceitar a Declaração de Direitos de Autor para continuar!</message>
-	<message key="author.submit.commentsForEditor">Comentários ao Editor</message>
+	<message key="submission.submit.coverNote">Comentários ao Editor</message>
 	<message key="author.submit.comments">Insira o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Escolha a secção apropriada para a submissão.</message>
-	<message key="author.submit.privacyStatement">Política de Privacidade</message>
+	<message key="submission.submit.privacyStatement">Política de Privacidade</message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos autores na publicação.</message>
 	<message key="author.submit.selectPrincipalContact">Contacto principal para correspondência.</message>
 	<message key="author.submit.addAuthor">Adicionar autor</message>

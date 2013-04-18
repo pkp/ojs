@@ -38,16 +38,16 @@
 	<message key="author.submit.howToSubmit"><![CDATA[Forfattere skal sende inn bidragene til dette tidsskriftet på nettet, gjennom en femtrinns prosess for opplasting av manuskript og annen relevant informasjon (med mulighet for også å laste opp tilleggsfiler, som for eksempel forskningsdata og -instrument). Hvis det oppstår problemer med denne prosessen, vennligst kontakt teknisk kontaktperson (<a href="mailto:{$supportEmail}">{$supportName}</a>) med e-post, eller på telefon {$supportPhone}, for å få hjelp.]]></message>
 	<message key="author.submit.journalSection">Tidsskriftseksjon</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Velg en passende seksjon for dette manuskriptet (Se Seksjoner og Retningslinjer i <a href="{$aboutUrl}">Om</a> tidsskriftet).]]></message>
-	<message key="author.submit.selectSection">Vennligst velg en seksjon ...</message>
-	<message key="author.submit.submissionChecklist">Sjekkliste for klargjøring av manuskript</message>
-	<message key="author.submit.submissionChecklistDescription">Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
+	<message key="submission.submit.selectSection">Vennligst velg en seksjon ...</message>
+	<message key="submission.submit.submissionChecklist">Sjekkliste for klargjøring av manuskript</message>
+	<message key="submission.submit.submissionChecklistDescription">Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.verifyChecklist">Du må sørge for at alle momentene i sjekklisten for klargjøring av manuskript er utført og krysset av, før du går videre.</message>
 	<message key="author.submit.copyrightNoticeAgree">Forfatteren aksepterer med dette at vilkårene i denne erklæringen om copyright gjøres gjeldende for dette manuskriptet, hvis og når det publiseres av dette tidsskriftet (øvrige kommentarer til redaktøren kan legges til nedenfor).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du må bekrefte vilkårene i erklæringen om copyright før du går videre.</message>
-	<message key="author.submit.commentsForEditor">Kommentarer til redaktøren</message>
+	<message key="submission.submit.coverNote">Kommentarer til redaktøren</message>
 	<message key="author.submit.comments">Skriv inn tekst (valgfritt)</message>
 	<message key="author.submit.form.sectionRequired">Vennligst velg en passende tidsskriftseksjon for dette manuskriptet.</message>
-	<message key="author.submit.privacyStatement">Tidsskriftets erklæring om personopplysninger</message>
+	<message key="submission.submit.privacyStatement">Tidsskriftets erklæring om personopplysninger</message>
 	<message key="author.submit.reorderInstructions">Bruk pilene for å endre rekkefølgen forfatternavnene skal vises i.</message>
 	<message key="author.submit.selectPrincipalContact">Hovedkontakt for redaksjonell korrespondanse.</message>
 	<message key="author.submit.addAuthor">Legg til forfatter</message>

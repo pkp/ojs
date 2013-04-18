@@ -43,16 +43,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Secció de la revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu &#171;Seccions i Polítiques&#187; a &#171;<a href="{$aboutUrl}" target="_new">Quant a</a>&#187; la revista).]]></message>
-	<message key="author.submit.selectSection">Seleccioneu una secció...</message>
-	<message key="author.submit.submissionChecklist">Llista de control de la tramesa</message>
-	<message key="author.submit.submissionChecklistDescription">Indiqueu que aquesta tramesa ja és a punt per a ser considerada per aquesta revista marcant els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
+	<message key="submission.submit.selectSection">Seleccioneu una secció...</message>
+	<message key="submission.submit.submissionChecklist">Llista de control de la tramesa</message>
+	<message key="submission.submit.submissionChecklistDescription">Indiqueu que aquesta tramesa ja és a punt per a ser considerada per aquesta revista marcant els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, cal que comproveu que es compleixen tots els punts de la llista de control per a la tramesa.</message>
 	<message key="author.submit.copyrightNoticeAgree">Els autors/es accepten els termes d’aquest avís de drets d’autor, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Heu d’acceptar els termes de l’avís de drets d’autor abans de continuar.</message>
-	<message key="author.submit.commentsForEditor">Comentaris per a l’editor/a</message>
+	<message key="submission.submit.coverNote">Comentaris per a l’editor/a</message>
 	<message key="author.submit.comments">Introduïu text (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Seleccioneu una secció adequada de la revista per a aquesta tramesa.</message>
-	<message key="author.submit.privacyStatement">Declaració de privacitat de la revista</message>
+	<message key="submission.submit.privacyStatement">Declaració de privacitat de la revista</message>
 	<message key="author.submit.reorderInstructions">Reordeneu els autors/es perquè apareguin en l’ordre en què es llistaran a la publicació.</message>
 	<message key="author.submit.selectPrincipalContact">Contacte principal per a la correspondència editorial.</message>
 	<message key="author.submit.addAuthor">Afegeix un autor/a</message>

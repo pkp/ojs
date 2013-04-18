@@ -42,16 +42,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Imate li poteškoća s prijavom priloga? <a href="mailto:{$supportEmail}">{$supportName}</a> vam stoji na raspolaganju.]]></message>
 	<message key="author.submit.journalSection">Rubrika časopisa</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Odaberite prikladnu rubriku za vaš prilog (pogledajte rubrike i uređivačka politika na <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="author.submit.selectSection">Molimo odaberite rubriku...</message>
-	<message key="author.submit.submissionChecklist">Uvjeti za predaju priloga</message>
-	<message key="author.submit.submissionChecklistDescription">Potvrdite da je vaš prilog spreman za ulazak u uređivački postupak time što zadovoljava sljedeće uvjete (komentare uredniku možete priložiti na dnu stranice).</message>
+	<message key="submission.submit.selectSection">Molimo odaberite rubriku...</message>
+	<message key="submission.submit.submissionChecklist">Uvjeti za predaju priloga</message>
+	<message key="submission.submit.submissionChecklistDescription">Potvrdite da je vaš prilog spreman za ulazak u uređivački postupak time što zadovoljava sljedeće uvjete (komentare uredniku možete priložiti na dnu stranice).</message>
 	<message key="author.submit.verifyChecklist">Da biste nastavili s prijavom, morate označiti da vaš rad zadovoljava sve navedene uvijete predaje priloga.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autori su suglasni s time da se navedeni uvjeti primijene i na ovu prijavu ako i kada bude objavljena u časopisu (posebne napomene uredniku možete priložiti na dnu stranice).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Da biste nastavili s prijavom, morate se suglasiti sa uvjetima vezanim uz autorska prava.</message>
-	<message key="author.submit.commentsForEditor">Komentari uredniku</message>
+	<message key="submission.submit.coverNote">Komentari uredniku</message>
 	<message key="author.submit.comments">Unesite tekst</message>
 	<message key="author.submit.form.sectionRequired">Molimo odaberite prikladnu rubriku časopisa za ovu prijavu.</message>
-	<message key="author.submit.privacyStatement">Izjava o privatnosti</message>
+	<message key="submission.submit.privacyStatement">Izjava o privatnosti</message>
 	<message key="author.submit.reorderInstructions">Koristite strelice da biste promijenili redoslijed autora u prijavi. Autori će u izdanju biti navedeni ovim slijedom.</message>
 	<message key="author.submit.selectPrincipalContact">Ovaj je autor glavni kontakt za uredničku korespondenciju.</message>
 	<message key="author.submit.addAuthor">Dodaj autora</message>

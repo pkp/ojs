@@ -404,11 +404,11 @@ class ArticleDAO extends DAO {
 		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs,
 						$proofreadAuthorSignoffs, $proofreadProofreaderSignoffs, $proofreadLayoutSignoffs);
 		foreach ($signoffs as $signoff) {
-			$signoffDao->deleteObject($signoff);
+			if ($signoff) $signoffDao->deleteObject($signoff);
 		}
 
 		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$articleCommentDao->deleteObject($articleId);
+		$articleCommentDao->deleteByArticleId($articleId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteGalleysByArticle($articleId);
@@ -477,7 +477,7 @@ class ArticleDAO extends DAO {
 		if ($journalId !== null) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
-			'SELECT	a.*, pa.published_articles,
+			'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a

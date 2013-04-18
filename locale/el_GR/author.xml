@@ -44,16 +44,16 @@
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Αντιμετωπίζετε δυσκολίες; Επικοινωνήστε με τον/την <a href="mailto:{$supportEmail}">{$supportName}</a> για παροχή βοήθειας.]]></message>
 	<message key="author.submit.journalSection">Ενότητα περιοδικού</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή (συμβουλευτείτε τις σελίδες "Ενότητες και Πολιτικές" στο μενού <a  href="{$aboutUrl}">Σχετικά με</a> το περιοδικό).]]></message>
-	<message key="author.submit.selectSection">Επιλέξτε ενοτήτα...</message>
-	<message key="author.submit.submissionChecklist">Πίνακας ελέγχου υποβολής</message>
-	<message key="author.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (προσθήκη σχολίων προς τον επιμελητή υπάρχουν παρακάτω).</message>
+	<message key="submission.submit.selectSection">Επιλέξτε ενοτήτα...</message>
+	<message key="submission.submit.submissionChecklist">Πίνακας ελέγχου υποβολής</message>
+	<message key="submission.submit.submissionChecklistDescription">Προσδιορίστε εάν η συγκεκριμένη υποβολή είναι έτοιμη για εξέταση από αυτό το περιοδικό ελέγχοντας τα ακόλουθα (προσθήκη σχολίων προς τον επιμελητή υπάρχουν παρακάτω).</message>
 	<message key="author.submit.verifyChecklist">Πρέπει να βεβαιωθείτε ότι όλες οι απαιτήσεις του πίνακα ελέγχου της υποβολής έχουν εκπληρωθεί πριν συνεχίσετε.</message>
 	<message key="author.submit.copyrightNoticeAgree">Οι συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων, που θα εφαρμοστούν στην συγκεκριμένη υποβολή εάν και όταν αυτή δημοσιευτεί από το περιοδικό (προσθήκη σχολίων προς τον επιμελητή μπορούν να προστεθούν παρακάτω).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Πρέπει να συμφωνήσετε με τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων πριν  συνεχίσετε.</message>
-	<message key="author.submit.commentsForEditor">Σχόλια για τον Επιμελητή του Περιοδικού</message>
+	<message key="submission.submit.coverNote">Σχόλια για τον Επιμελητή του Περιοδικού</message>
 	<message key="author.submit.comments">Εισαγωγή κειμένου (προαιρετικό)</message>
 	<message key="author.submit.form.sectionRequired">Παρακαλώ επιλέξτε κατάλληλη ενότητα περιοδικού για τη συγκεκριμένη υποβολή.</message>
-	<message key="author.submit.privacyStatement">Δήλωση απορρήτου περιοδικού</message>
+	<message key="submission.submit.privacyStatement">Δήλωση απορρήτου περιοδικού</message>
 	<message key="author.submit.reorderInstructions">Διαμορφώστε κατάλληλα την σειρά με την οποία τα ονόματα των συγγραφέων θα εμφανίζονται κατά την δημοσίευση του άρθρου.</message>
 	<message key="author.submit.selectPrincipalContact">Κύριος υπεύθυνος επικοινωνίας για την αλληλογραφία με τους επιμελητές.</message>
 	<message key="author.submit.addAuthor">Προσθήκη συγγραφέα</message>
