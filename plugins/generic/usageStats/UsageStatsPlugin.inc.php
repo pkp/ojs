@@ -33,6 +33,12 @@ class UsageStatsPlugin extends GenericPlugin {
 			if ($version->getMajor() < 3) {
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 			}
+
+			// If the plugin will provide the access logs,
+			// register to the usage event hook provider.
+			if ($this->getSetting(0, 'createLogFiles')) {
+				HookRegistry::register('UsageEventPlugin::getUsageEvent', array(&$this, 'logUsageEvent'));
+			}
 		}
 
 		return $success;
@@ -144,6 +150,68 @@ class UsageStatsPlugin extends GenericPlugin {
 	// Hook implementations.
 	//
 	/**
+	 * Log the usage event into a file.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function logUsageEvent($hookName, $args) {
+		$usageEvent = $args[1];
+		$desiredParams = array($usageEvent['ip']);
+
+		if (isset($usageEvent['classification'])) {
+			$desiredParams[] = $usageEvent['classification'];
+		} else {
+			$desiredParams[] = '-';
+		}
+
+		if (isset($usageEvent['user'])) {
+			$desiredParams[] = $usageEvent['user']->getId();
+		} else {
+			$desiredParams[] = '-';
+		}
+
+		$desiredParams = array_merge($desiredParams,
+			array('"' . $usageEvent['time'] . '"', $usageEvent['canonicalUrl'],
+				'"' . $usageEvent['userAgent'] . '"'));
+
+		$usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;
+
+		import('lib.pkp.classes.file.PrivateFileManager');
+		$fileMgr = new PrivateFileManager();
+
+		// Get the current day filename.
+		$filename = 'usage_events_' . date("Ymd") . '.log';
+
+		// Check the plugin file directory.
+		$usageEventFilesPath = realpath($fileMgr->getBasePath()) .
+			DIRECTORY_SEPARATOR . 'usageStats' .
+		 	DIRECTORY_SEPARATOR . 'usageEventLogs';
+		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
+			$success = $fileMgr->mkdirtree($usageEventFilesPath);
+			if (!$success) {
+				// Files directory wrong configuration?
+				assert(false);
+				return false;
+			}
+		}
+
+		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
+		$fp = fopen($filePath, 'ab');
+		if (flock($fp, LOCK_EX)) {
+			fwrite($fp, $usageLogEntry);
+			flock($fp, LOCK_UN);
+		} else {
+			// Couldn't lock the file.
+			assert(false);
+		}
+		fclose($fp);
+
+		return false;
+	}
+
+
+	/**
 	 * @see PKPPageRouter::route()
 	 * @todo Remove this callback for OJS 3.0. The issue current
 	 * operation should redirect to the view operation in core.
@@ -164,7 +232,7 @@ class UsageStatsPlugin extends GenericPlugin {
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 		if (!$issue) {
 			// Let the default current operation work.
-			return;
+			return false;
 		}
 
 		// Replace the default Issue handler by ours.
