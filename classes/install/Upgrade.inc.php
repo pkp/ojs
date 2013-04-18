@@ -707,6 +707,7 @@ class Upgrade extends Installer {
 						));
 			$filesResult->MoveNext();
 		}
+		return true;
 	}
 }
 
