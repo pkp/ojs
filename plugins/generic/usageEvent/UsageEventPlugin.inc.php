@@ -127,6 +127,9 @@ class UsageEventPlugin extends GenericPlugin {
 		$router = $request->getRouter(); /* @var $router PageRouter */
 		$templateMgr = $args[0]; /* @var $templateMgr TemplateManager */
 
+		// We are just interested in page requests.
+		if (!is_a($router, 'PageRouter')) return false;
+
 		// Check whether we are in journal context.
 		$journal = $router->getContext($request);
 		if (!$journal) return false;
@@ -137,11 +140,15 @@ class UsageEventPlugin extends GenericPlugin {
 
 			// Article abstract, HTML galley and remote galley.
 			case 'TemplateManager::display':
-				// We are only interested in access to the article abstract/galley view page.
+				// We are interested in access to the article abstract/galley and issue view page.
 				$page = $router->getRequestedPage($request);
 				$op = $router->getRequestedOp($request);
-				if ($page != 'article' || !($op == 'view' || $op == 'articleView')) return false;
+				$wantedPages = array('article', 'issue');
+				$wantedOps = array('view', 'articleView');
 
+				if (!in_array($page, $wantedPages) || !in_array($op, $wantedOps)) return false;
+
+				$issue = $templateMgr->get_template_vars('issue');
 				$galley = $templateMgr->get_template_vars('galley'); /* @var $galley ArticleGalley */
 				$article = $templateMgr->get_template_vars('article');
 				if ($galley) {
@@ -156,12 +163,19 @@ class UsageEventPlugin extends GenericPlugin {
 						return false;
 					}
 				} else {
-					$pubObject = $article;
-					$assocType = ASSOC_TYPE_ARTICLE;
-					$canonicalUrlParams = array($pubObject->getBestArticleId($journal));
-					$idParams = array('a' . $pubObject->getId());
+					if ($article) {
+						$pubObject = $article;
+						$assocType = ASSOC_TYPE_ARTICLE;
+						$canonicalUrlParams = array($pubObject->getBestArticleId($journal));
+						$idParams = array('a' . $pubObject->getId());
+					} else {
+						$pubObject = $issue;
+						$assocType = ASSOC_TYPE_ISSUE;
+						$canonicalUrlParams = array($pubObject->getBestIssueId($journal));
+						$idParams = array('i' . $pubObject->getId());
+					}
 				}
-				// The article and HTML/remote galley pages do not download anything.
+				// The article, issue and HTML/remote galley pages do not download anything.
 				$downloadSuccess = true;
 				$canonicalUrlOp = 'view';
 				break;
@@ -206,8 +220,8 @@ class UsageEventPlugin extends GenericPlugin {
 		$time = Core::getCurrentDate();
 
 		// Actual document size, MIME type.
-		if ($assocType == ASSOC_TYPE_ARTICLE) {
-			// Article abstract.
+		if ($assocType == ASSOC_TYPE_ARTICLE || $assocType == ASSOC_TYPE_ISSUE) {
+			// Article abstract or issue view page.
 			$docSize = 0;
 			$mimeType = 'text/html';
 		} else {
@@ -217,7 +231,7 @@ class UsageEventPlugin extends GenericPlugin {
 		}
 
 		// Canonical URL.
-		if ($assocType == ASSOC_TYPE_ISSUE_GALLEY) {
+		if ($assocType == ASSOC_TYPE_ISSUE_GALLEY || $assocType == ASSOC_TYPE_ISSUE) {
 			$canonicalUrlPage = 'issue';
 		} else {
 			$canonicalUrlPage = 'article';
