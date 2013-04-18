@@ -1188,7 +1188,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Add the galley language.
 		$languageDao = DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
-		$galleyData['language'] =& $languageDao->getLanguageByCode(AppLocale::getIso1FromLocale($galley->getLocale()));
+		$galleyData['language'] = $languageDao->getLanguageByCode(AppLocale::getIso1FromLocale($galley->getLocale()));
 
 		// Add the galley itself.
 		$galleyData['galley'] =& $galley;

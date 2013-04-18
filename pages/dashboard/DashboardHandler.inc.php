@@ -84,7 +84,7 @@ class DashboardHandler extends Handler {
 			$journals = array();
 			foreach ($accessibleJournals as $journal) {
 				// FIXME when ready for OMP-style submission URLs, change the URL below.
-				$url = $request->url($journal->getPath(), 'author', 'submit');
+				$url = $request->url($journal->getPath(), 'submission');
 				$journals[$url] = $journal->getLocalizedName();
 			}
 			$templateMgr->assign_by_ref('journals', $journals);

@@ -505,7 +505,7 @@ class BookForReview extends DataObject {
 	 */
 	function getLanguageString() {
 		$languageDao = DAORegistry::getDAO('LanguageDAO');
-		$language =& $languageDao->getLanguageByCode($this->getData('language'));
+		$language = $languageDao->getLanguageByCode($this->getData('language'));
 		if ($language) return $language->getName();
 	}
 
