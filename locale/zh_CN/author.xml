@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">步骤4. 上传附件</message>
 	<message key="author.submit.step4a">步骤4a. 添加一个附件</message>
 	<message key="author.submit.step5">步骤5. 确认投稿</message>
-	<message key="author.submit.start">1. 开始</message>
-	<message key="author.submit.upload">2. 上传稿件</message>
-	<message key="author.submit.metadata">3. 输入元数据</message>
-	<message key="author.submit.supplementaryFiles">4. 上传附件</message>
-	<message key="author.submit.confirmation">5. 确认</message>
+	<message key="author.submit.start">开始</message>
+	<message key="author.submit.upload">上传稿件</message>
+	<message key="author.submit.metadata">输入元数据</message>
+	<message key="author.submit.supplementaryFiles">上传附件</message>
+	<message key="author.submit.confirmation">确认</message>
 	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>

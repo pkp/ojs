@@ -23,11 +23,11 @@
 	<message key="author.submit.step4">مرحله چهارم: آپلود فایلهای الحاقی</message>
 	<message key="author.submit.step4a">مرحله چهارم آ: افزودن یک فایل الحاقی</message>
 	<message key="author.submit.step5">مرحله پنجم: تایید ساب میشن</message>
-	<message key="author.submit.start">1. شروع</message>
-	<message key="author.submit.upload">2. آپلود ساب میشن</message>
-	<message key="author.submit.metadata">3. وارد کردن متاداده</message>
-	<message key="author.submit.supplementaryFiles">4. آپلود فایلهای الحاقی</message>
-	<message key="author.submit.confirmation">5. تایید</message>
+	<message key="author.submit.start">شروع</message>
+	<message key="author.submit.upload">آپلود ساب میشن</message>
+	<message key="author.submit.metadata">وارد کردن متاداده</message>
+	<message key="author.submit.supplementaryFiles">آپلود فایلهای الحاقی</message>
+	<message key="author.submit.confirmation">تایید</message>
 	<message key="author.submit.cancelSubmission">میتوانید این ساب میشن را در وقتی دیگر کامل کنید. برای این کار به صفحه خانگی نویسنده رفته و ساب میشن های جاری را انتخاب کنید</message>
 	<message key="author.submit.notAccepting">این مجله در حال حاضر ساب میشن نمی پذیرد</message>
 	<message key="author.submit.requestWaiver">درخواست تخفیف</message>

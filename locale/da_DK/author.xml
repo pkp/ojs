@@ -112,8 +112,8 @@
 	<message key="author.submit.authorSubmitLoginMessage">Der kræves en brugerkonto for at kunne fremsende et manuskript til dette tidsskrift. Dette gør det muligt for vores redaktører at registrere dine manuskripter og kontakte dig, når dit manuskripts status ændrer sig, eller hvis du skal angive yderligere oplysninger.</message>
 	<message key="author.submit.step2">Trin 2. Upload af indleveret manuskript</message>
 	<message key="author.submit.step3">Trin 3. Indtastning af metadata for det indleverede manuskript</message>
-	<message key="author.submit.upload">2. Upload indleveret manuskript</message>
-	<message key="author.submit.metadata">3. Indtast metadata</message>
+	<message key="author.submit.upload">Upload indleveret manuskript</message>
+	<message key="author.submit.metadata">Indtast metadata</message>
 	<message key="author.submit.mustEnterWaiverReason">Hvis du ønsker at melde fra, skal du angive en årsag i det dertil hørende felt.</message>
 	<message key="author.submissions.queuedReviewSubsequent">I bedømmelsesrunde {$round}</message>
 	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>

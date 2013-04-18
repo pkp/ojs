@@ -112,8 +112,8 @@
 	<message key="author.submissions.queuedReviewSubsequent">V recenzním kole {$round}</message>
 	<message key="author.submit.step2">Krok 2. Nahrání příspěvku</message>
 	<message key="author.submit.step3">Krok 3. Vložení metadat příspěvku</message>
-	<message key="author.submit.upload">2. Nahrát příspěvek</message>
-	<message key="author.submit.metadata">3. Vložit metadata</message>
+	<message key="author.submit.upload">Nahrát příspěvek</message>
+	<message key="author.submit.metadata">Vložit metadata</message>
 	<message key="author.submit.mustEnterWaiverReason">Pokud žádáte o prominutí platby, musíte do přílušného místa uvést důvod.</message>
 	<message key="author.submissions.queuedReviewRevisions">V recenzním řízení: Vyžaduje přepracování</message>
 	<message key="author.submissions.queuedEditingCopyedit">Redakční úravy: Vyžádáno redigování</message>

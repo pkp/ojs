@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Paso 4. Subir ficheros complementarios</message>
 	<message key="author.submit.step4a">Paso 4a. Añadir un fichero suplementario</message>
 	<message key="author.submit.step5">Paso 5. Confirmar el envío</message>
-	<message key="author.submit.start">1. Comienzo</message>
-	<message key="author.submit.upload">2. Subir envío</message>
-	<message key="author.submit.metadata">3. Introducir los metadatos</message>
-	<message key="author.submit.supplementaryFiles">4. Subir ficheros complementarios</message>
-	<message key="author.submit.confirmation">5. Confirmación</message>
+	<message key="author.submit.start">Comienzo</message>
+	<message key="author.submit.upload">Subir envío</message>
+	<message key="author.submit.metadata">Introducir los metadatos</message>
+	<message key="author.submit.supplementaryFiles">Subir ficheros complementarios</message>
+	<message key="author.submit.confirmation">Confirmación</message>
 	<message key="author.submit.cancelSubmission">Puede completar este envío más tarde seleccionando Envíos Activos en la home de autor/a.</message>
 	<message key="author.submit.notAccepting">Esta revista no acepta envíos en este momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>

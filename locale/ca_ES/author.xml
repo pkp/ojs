@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">Pas 4. Càrrega de fitxers addicionals</message>
 	<message key="author.submit.step4a">Pas 4a. Inclusió d’un fitxer addicional</message>
 	<message key="author.submit.step5">Pas 5. Confirmació de la tramesa</message>
-	<message key="author.submit.start">1. Inici</message>
-	<message key="author.submit.metadata">2. Introducció de metadades</message>
-	<message key="author.submit.upload">3. Càrrega de la tramesa</message>
-	<message key="author.submit.supplementaryFiles">4. Càrrega de fitxers addicionals</message>
-	<message key="author.submit.confirmation">5. Confirmació</message>
+	<message key="author.submit.start">Inici</message>
+	<message key="author.submit.metadata">Introducció de metadades</message>
+	<message key="author.submit.upload">Càrrega de la tramesa</message>
+	<message key="author.submit.supplementaryFiles">Càrrega de fitxers addicionals</message>
+	<message key="author.submit.confirmation">Confirmació</message>
 	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant seleccionant Trameses actives a la pàgina inicial de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Aquesta revista no accepta trameses actualment.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>

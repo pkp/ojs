@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Шаг 4. Загрузить дополн. файлы</message>
 	<message key="author.submit.step4a">Шаг 4a. Загрузить дополн. файл</message>
 	<message key="author.submit.step5">Шаг 5. Подтверждение</message>
-	<message key="author.submit.start">1. Старт</message>
-	<message key="author.submit.upload">2. Загрузить статью</message>
-	<message key="author.submit.metadata">3. Ввести метаданные</message>
-	<message key="author.submit.supplementaryFiles">4. Загрузить дополн. файлы</message>
-	<message key="author.submit.confirmation">5. Подтверждение</message>
+	<message key="author.submit.start">Старт</message>
+	<message key="author.submit.upload">Загрузить статью</message>
+	<message key="author.submit.metadata">Ввести метаданные</message>
+	<message key="author.submit.supplementaryFiles">Загрузить дополн. файлы</message>
+	<message key="author.submit.confirmation">Подтверждение</message>
 	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав "Статьи в процессе Отправки" на своей домашней странице.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статей.</message>
 	<message key="author.submit.requestWaiver">Запросить Исключение</message>

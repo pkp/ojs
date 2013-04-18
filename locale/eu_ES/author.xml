@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">4. urratsa. Fitxategi osagarriak kargatu</message>
 	<message key="author.submit.step4a">4a. urratsa Fitxategi osagarri bat gehitu</message>
 	<message key="author.submit.step5">5. urratsa. Bidalketa berretsi</message>
-	<message key="author.submit.start">1. Hasi</message>
-	<message key="author.submit.metadata">2. Metadatuak sartu</message>
-	<message key="author.submit.upload">3. Bidalketa kargatu</message>
-	<message key="author.submit.supplementaryFiles">4. Fitxategi osagarriak kargatu</message>
-	<message key="author.submit.confirmation">5. Berretsi</message>
+	<message key="author.submit.start">Hasi</message>
+	<message key="author.submit.metadata">Metadatuak sartu</message>
+	<message key="author.submit.upload">Bidalketa kargatu</message>
+	<message key="author.submit.supplementaryFiles">Fitxategi osagarriak kargatu</message>
+	<message key="author.submit.confirmation">Berretsi</message>
 	<message key="author.submit.cancelSubmission">Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta.</message>
 	<message key="author.submit.notAccepting">Aldizkariak ez du bidalketarik onartzen orain.</message>
 	<message key="author.submit.requestWaiver">Eskatu salbuespena</message>

@@ -18,18 +18,19 @@
 	<message key="author.submit.stepsToSubmit">Lima Langkah Penyerahkan Naskah</message> 
 	<message key="author.submit.startHereTitle">Memulai Penyerahan Naskah Baru</message> 
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik Disini</a> Masuk ke langkah pertama dari lima langkah proses penyerahan naskah.]]></message>	
-<message key="author.submit.step1">Langkah 1. Memulai Penyerahan Naskah</message> 
-<message key="author.submit.step2">Langkah 2. Mengunggah Naskah</message> 
-<message key="author.submit.step3">Langkah 3. Memasukkan Metadata Naskah</message> 
-<message key="author.submit.step4">Langkah 4. Mengunggah File Tambahan</message> 
-<message key="author.submit.step4a"> Langkah 4a. Menambah File Tambahan</message>
-<message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
-<message key="author.submit.start">1. Mulai</message> 
-<message key="author.submit.upload">2. Unggah Naskah</message>
- <message key="author.submit.metadata">3. Masukkan Metadata </message> <message key="author.submit.supplementaryFiles">4. Unggah File Tambahan </message> 
-<message key="author.submit.confirmation">5. Konfirmasi</message>	
-<message key="author.submit.cancelSubmission"> Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
-	<message key="author.submit.notAccepting"> Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
+	<message key="author.submit.step1">Langkah 1. Memulai Penyerahan Naskah</message> 
+	<message key="author.submit.step2">Langkah 2. Mengunggah Naskah</message> 
+	<message key="author.submit.step3">Langkah 3. Memasukkan Metadata Naskah</message> 
+	<message key="author.submit.step4">Langkah 4. Mengunggah File Tambahan</message> 
+	<message key="author.submit.step4a"> Langkah 4a. Menambah File Tambahan</message>
+	<message key="author.submit.step5">Langkah 5. Mengonfirmasi Penyerahan Naskah</message> 
+	<message key="author.submit.start">Mulai</message> 
+	<message key="author.submit.upload">Unggah Naskah</message>
+	<message key="author.submit.metadata">Masukkan Metadata</message>
+	<message key="author.submit.supplementaryFiles">Unggah File Tambahan</message> 
+	<message key="author.submit.confirmation">Konfirmasi</message>	
+	<message key="author.submit.cancelSubmission">Anda dapat melengkapi naskah ini kapan saja dengan memilih Naskah Aktif dari Beranda Penulis.</message> 
+	<message key="author.submit.notAccepting">Jurnal ini tidak menerima penyerahan naskah saat ini.</message>	
 <message key="author.submit.requestWaiver">Permintaan surat pernyataan melepaskan tuntutan</message>
 	<message key="author.submit.qualityForWaiver">Pertimbangkan menghilangkan  Biaya Penyerahan Artikel untuk artikel ini</message> 
 	<message key="author.submit.addReasonsForWaiver">Gunakan kotak komentar di bawah ini untuk mengindikasikan mengapa biaya harus dihilangkan.</message>	

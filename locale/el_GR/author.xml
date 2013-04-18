@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Βήμα 4. Φόρτωση των συμπληρωματικών αρχείων</message>
 	<message key="author.submit.step4a">Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου</message>
 	<message key="author.submit.step5">Βήμα 5. Επιβεβαίωση της υποβολής</message>
-	<message key="author.submit.start">1. Έναρξη</message>
-	<message key="author.submit.upload">2. Φορτώστε την υποβολή</message>
-	<message key="author.submit.metadata">3. Καταχωρίστε τα μεταδεδομένα</message>
-	<message key="author.submit.supplementaryFiles">4. Φορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
-	<message key="author.submit.confirmation">5. Επιβεβαίωση</message>
+	<message key="author.submit.start">Έναρξη</message>
+	<message key="author.submit.upload">Φορτώστε την υποβολή</message>
+	<message key="author.submit.metadata">Καταχωρίστε τα μεταδεδομένα</message>
+	<message key="author.submit.supplementaryFiles">Φορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)</message>
+	<message key="author.submit.confirmation">Επιβεβαίωση</message>
 	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
 	<message key="author.submit.notAccepting">Το συγκεκριμένο περιοδικό δεν αποδέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>

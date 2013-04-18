@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">4. Adım: Ek Belge ve Dosyaların Yüklenmesi</message>
 	<message key="author.submit.step4a">4.1. Adım: Ek Dosya Yükleme</message>
 	<message key="author.submit.step5">5. Adım: Gönderi Onayı</message>
-	<message key="author.submit.start">1. Başla</message>
-	<message key="author.submit.upload">2. Gönderiyi Yükle</message>
-	<message key="author.submit.metadata">3. Üst Veri Gir</message>
-	<message key="author.submit.supplementaryFiles">4. Ek Dosyaları Yükle</message>
-	<message key="author.submit.confirmation">5. Onay</message>
+	<message key="author.submit.start">Başla</message>
+	<message key="author.submit.upload">Gönderiyi Yükle</message>
+	<message key="author.submit.metadata">Üst Veri Gir</message>
+	<message key="author.submit.supplementaryFiles">Ek Dosyaları Yükle</message>
+	<message key="author.submit.confirmation">Onay</message>
 	<message key="author.submit.cancelSubmission">Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz.</message>
 	<message key="author.submit.notAccepting">Dergi şu anda göneri kabul etemiyor.</message>
 	<message key="author.submit.requestWaiver">Vazgeç</message>

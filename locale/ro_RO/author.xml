@@ -26,11 +26,11 @@
 	<message key="author.submit.step4">Pasul 4. Încărcarea fişierelor suplimentare</message>
 	<message key="author.submit.step4a">Pasul 4a. Adaugă un fişier suplimentar</message>
 	<message key="author.submit.step5">Pasul 5. Confirmă  propunerea</message>
-	<message key="author.submit.start">1. Start</message>
-	<message key="author.submit.upload">2. Încarcă propunerea</message>
-	<message key="author.submit.metadata">3. Introdu metadatele</message>
-	<message key="author.submit.supplementaryFiles">4. Încarcă fişierele suplimentare</message>
-	<message key="author.submit.confirmation">5. Confirmare</message>
+	<message key="author.submit.start">Start</message>
+	<message key="author.submit.upload">Încarcă propunerea</message>
+	<message key="author.submit.metadata">Introdu metadatele</message>
+	<message key="author.submit.supplementaryFiles">Încarcă fişierele suplimentare</message>
+	<message key="author.submit.confirmation">Confirmare</message>
 	<message key="author.submit.cancelSubmission">Poţi încheia această propunere mai târziu prin selectarea propunerilor active din pagina autorului.</message>
 	<message key="author.submit.notAccepting">Această revistă nu acceptă propuneri în acest moment.</message>
 	<message key="author.submit.requestWaiver">Solicită derogare</message>

@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">Passo 4. Transferência de documentos suplementares</message>
 	<message key="author.submit.step4a">Passo 4a. Incluir documento suplementar</message>
 	<message key="author.submit.step5">Passo 5. Confirmação da submissão</message>
-	<message key="author.submit.start">1. Início</message>
-	<message key="author.submit.upload">2. Transferência do manuscrito</message>
-	<message key="author.submit.metadata">3. Inclusão de metadados</message>
-	<message key="author.submit.supplementaryFiles">4. Transferência de documentos suplementares</message>
-	<message key="author.submit.confirmation">5. Confirmação</message>
+	<message key="author.submit.start">Início</message>
+	<message key="author.submit.upload">Transferência do manuscrito</message>
+	<message key="author.submit.metadata">Inclusão de metadados</message>
+	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
+	<message key="author.submit.confirmation">Confirmação</message>
 	<message key="author.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>
 	<message key="author.submit.notAccepting">A revista não está aceitando submissões neste momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>

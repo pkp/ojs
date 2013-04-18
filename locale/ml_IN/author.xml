@@ -25,11 +25,11 @@
 	<message key="author.submit.step4">ഘട്ടം 4. അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
 	<message key="author.submit.step4a">ഘട്ടം 4a. അനുബന്ധ ഫയല്‍ ചേര്‍ക്കുക</message>
 	<message key="author.submit.step5">ഘട്ടം 5. സമര്‍പ്പണം സ്ഥിരീകരിക്കുക</message>
-	<message key="author.submit.start">1. ആരംഭിക്കുക</message>
-	<message key="author.submit.upload">2. സമര്‍പ്പണം അപ് ലോഡ് ചെയ്യുക</message>
-	<message key="author.submit.metadata">3. മെറ്റാഡേറ്റ ചേര്‍ക്കുക</message>
-	<message key="author.submit.supplementaryFiles">4. അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
-	<message key="author.submit.confirmation">5. സ്ഥിരീകരണം</message>
+	<message key="author.submit.start">ആരംഭിക്കുക</message>
+	<message key="author.submit.upload">സമര്‍പ്പണം അപ് ലോഡ് ചെയ്യുക</message>
+	<message key="author.submit.metadata">മെറ്റാഡേറ്റ ചേര്‍ക്കുക</message>
+	<message key="author.submit.supplementaryFiles">അനുബന്ധ ഫയലുകള്‍ അപ് ലോഡ് ചെയ്യുക</message>
+	<message key="author.submit.confirmation">സ്ഥിരീകരണം</message>
 	<message key="author.submit.cancelSubmission">ഓതര്‍ ഹോമില്‍ നിന്നും സജീവമായ സമര്‍പ്പണങ്ങള്‍ തിരഞ്ഞെടുത്താല്‍ താങ്കള്‍ക്ക് ഈ സമര്‍പ്പണം പിന്നീട് ഒരു ദിവസം പൂര്‍ണ്ണമാക്കാവുന്നതാണ്.</message>
 	<message key="author.submit.notAccepting">ഈ പ്രസിദ്ധീകരണം സമര്‍പ്പണങ്ങള്‍ ഒന്നും തന്നെ ഈ സമയം സ്വീകരിക്കുന്നതല്ല.</message>
 	<message key="author.submit.requestWaiver">ഇളവിനു വേണ്ടി അപേക്ഷിക്കുക</message>

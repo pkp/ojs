@@ -24,11 +24,11 @@
 	<message key="author.submit.step4">Schritt 4. Zusatzdateien hochladen</message>
 	<message key="author.submit.step4a">Schritt 4a. Zusatzdatei hinzufügen</message>
 	<message key="author.submit.step5">Schritt 5. Einreichung bestätigen</message>
-	<message key="author.submit.start">1. Beginn</message>
-	<message key="author.submit.upload">2. Beitrag hochladen</message>
-	<message key="author.submit.metadata">3. Metadaten eingeben</message>
-	<message key="author.submit.supplementaryFiles">4. Zusatzdateien hochladen</message>
-	<message key="author.submit.confirmation">5. Bestätigung</message>
+	<message key="author.submit.start">Beginn</message>
+	<message key="author.submit.upload">Beitrag hochladen</message>
+	<message key="author.submit.metadata">Metadaten eingeben</message>
+	<message key="author.submit.supplementaryFiles">Zusatzdateien hochladen</message>
+	<message key="author.submit.confirmation">Bestätigung</message>
 	<message key="author.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
