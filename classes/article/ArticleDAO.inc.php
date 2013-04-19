@@ -156,7 +156,7 @@ class ArticleDAO extends DAO {
 			$settingName
 		);
 
-		$sql = 'SELECT a.*, pm.date_published,
+		$sql = 'SELECT a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	articles a
