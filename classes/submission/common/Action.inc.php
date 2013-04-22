@@ -77,64 +77,6 @@ class Action extends PKPAction {
 			$metadataForm = new MetadataForm($article, $journal);
 			$metadataForm->readInputData();
 
-			// Check for any special cases before trying to save
-			if ($request->getUserVar('addAuthor')) {
-				// Add an author
-				$editData = true;
-				$authors = $metadataForm->getData('authors');
-				array_push($authors, array());
-				$metadataForm->setData('authors', $authors);
-
-			} else if (($delAuthor = $request->getUserVar('delAuthor')) && count($delAuthor) == 1) {
-				// Delete an author
-				$editData = true;
-				list($delAuthor) = array_keys($delAuthor);
-				$delAuthor = (int) $delAuthor;
-				$authors = $metadataForm->getData('authors');
-				if (isset($authors[$delAuthor]['authorId']) && !empty($authors[$delAuthor]['authorId'])) {
-					$deletedAuthors = explode(':', $metadataForm->getData('deletedAuthors'));
-					array_push($deletedAuthors, $authors[$delAuthor]['authorId']);
-					$metadataForm->setData('deletedAuthors', join(':', $deletedAuthors));
-				}
-				array_splice($authors, $delAuthor, 1);
-				$metadataForm->setData('authors', $authors);
-
-				if ($metadataForm->getData('primaryContact') == $delAuthor) {
-					$metadataForm->setData('primaryContact', 0);
-				}
-
-			} else if ($request->getUserVar('moveAuthor')) {
-				// Move an author up/down
-				$editData = true;
-				$moveAuthorDir = $request->getUserVar('moveAuthorDir');
-				$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
-				$moveAuthorIndex = (int) $request->getUserVar('moveAuthorIndex');
-				$authors = $metadataForm->getData('authors');
-
-				if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
-					$tmpAuthor = $authors[$moveAuthorIndex];
-					$primaryContact = $metadataForm->getData('primaryContact');
-					if ($moveAuthorDir == 'u') {
-						$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
-						$authors[$moveAuthorIndex - 1] = $tmpAuthor;
-						if ($primaryContact == $moveAuthorIndex) {
-							$metadataForm->setData('primaryContact', $moveAuthorIndex - 1);
-						} else if ($primaryContact == ($moveAuthorIndex - 1)) {
-							$metadataForm->setData('primaryContact', $moveAuthorIndex);
-						}
-					} else {
-						$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
-						$authors[$moveAuthorIndex + 1] = $tmpAuthor;
-						if ($primaryContact == $moveAuthorIndex) {
-							$metadataForm->setData('primaryContact', $moveAuthorIndex + 1);
-						} else if ($primaryContact == ($moveAuthorIndex + 1)) {
-							$metadataForm->setData('primaryContact', $moveAuthorIndex);
-						}
-					}
-				}
-				$metadataForm->setData('authors', $authors);
-			}
-
 			if (isset($editData)) {
 				$metadataForm->display();
 				return false;
@@ -159,6 +101,7 @@ class Action extends PKPAction {
 				// Add log entry
 				$user = $request->getUser();
 				import('classes.log.ArticleLog');
+				import('classes.log.SubmissionEventLogEntry'); // constants
 				ArticleLog::logEvent($request, $article, SUBMISSION_LOG_METADATA_UPDATE, 'log.editor.metadataModified', array('editorName' => $user->getFullName()));
 
 				return true;

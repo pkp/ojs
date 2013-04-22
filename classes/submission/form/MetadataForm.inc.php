@@ -75,9 +75,6 @@ class MetadataForm extends Form {
 				$journal->getSupportedSubmissionLocaleNames()
 			);
 			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
-			$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
-			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
-			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
 		} else {
 			parent::Form('submission/metadata/metadataView.tpl');
 		}
@@ -157,29 +154,6 @@ class MetadataForm extends Form {
 			import('classes.plugins.PubIdPluginHelper');
 			$pubIdPluginHelper = new PubIdPluginHelper();
 			$pubIdPluginHelper->init($this, $article);
-
-			$authors =& $article->getAuthors();
-			for ($i=0, $count=count($authors); $i < $count; $i++) {
-				array_push(
-					$this->_data['authors'],
-					array(
-						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
-						'affiliation' => $authors[$i]->getAffiliation(null), // Localized
-						'country' => $authors[$i]->getCountry(),
-						'countryLocalized' => $authors[$i]->getCountryLocalized(),
-						'email' => $authors[$i]->getEmail(),
-						'url' => $authors[$i]->getUrl(),
-						'competingInterests' => $authors[$i]->getCompetingInterests(null), // Localized
-						'biography' => $authors[$i]->getBiography(null) // Localized
-					)
-				);
-				if ($authors[$i]->getPrimaryContact()) {
-					$this->setData('primaryContact', $i);
-				}
-			}
 		}
 		return parent::initData();
 	}
@@ -287,6 +261,25 @@ class MetadataForm extends Form {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired', $this->getRequiredLocale()));
 		}
 
+		$tagitKeywords = $this->getData('keywords');
+		// get the supported locale keys
+		$locales = array_keys($this->supportedLocales);
+
+		if (is_array($tagitKeywords)) {
+			foreach ($locales as $locale) {
+				$keywords[$locale] = array_key_exists($locale . '-keyword', $tagitKeywords) ? $tagitKeywords[$locale . '-keyword'] : array();
+				$agencies[$locale] = array_key_exists($locale . '-agencies', $tagitKeywords) ? $tagitKeywords[$locale . '-agencies'] : array();
+				$disciplines[$locale] = array_key_exists($locale . '-disciplines', $tagitKeywords) ? $tagitKeywords[$locale . '-disciplines'] : array();
+				$languages[$locale] = array_key_exists($locale . '-languages', $tagitKeywords) ? $tagitKeywords[$locale . '-languages'] : array();
+				$subjects[$locale] = array_key_exists($locale . '-subjects', $tagitKeywords) ?$tagitKeywords[$locale . '-subjects'] : array();
+			}
+
+			$this->setData('subjects', $subjects);
+			$this->setData('submissionKeywords', $keywords);
+			$this->setData('disciplines', $disciplines);
+			$this->setData('agencies', $agencies);
+			$this->setData('languages', $languages);
+		}
 	}
 
 	/**
@@ -398,53 +391,6 @@ class MetadataForm extends Form {
 		$pubIdPluginHelper = new PubIdPluginHelper();
 		$pubIdPluginHelper->execute($this, $article);
 
-		// Update authors
-		$authors = $this->getData('authors');
-		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			if ($authors[$i]['authorId'] > 0) {
-				// Update an existing author
-				$author =& $authorDao->getAuthor($authors[$i]['authorId'], $article->getId());
-				$isExistingAuthor = true;
-
-			} else {
-				// Create a new author
-				$author = new Author();
-				$isExistingAuthor = false;
-			}
-
-			if ($author != null) {
-				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
-				$author->setAffiliation($authors[$i]['affiliation'], null); // Localized
-				$author->setCountry($authors[$i]['country']);
-				$author->setEmail($authors[$i]['email']);
-				$author->setUrl($authors[$i]['url']);
-				if (array_key_exists('competingInterests', $authors[$i])) {
-					$author->setCompetingInterests($authors[$i]['competingInterests'], null); // Localized
-				}
-				$author->setBiography($authors[$i]['biography'], null); // Localized
-				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
-				$author->setSequence($authors[$i]['seq']);
-
-				HookRegistry::call('Submission::Form::MetadataForm::Execute', array(&$author, &$authors[$i]));
-
-				if ($isExistingAuthor) {
-					$authorDao->updateObject($author);
-				} else {
-					$authorDao->insertObject($author);
-				}
-				unset($author);
-			}
-		}
-
-		// Remove deleted authors
-		$deletedAuthors = preg_split('/:/', $this->getData('deletedAuthors'), -1,  PREG_SPLIT_NO_EMPTY);
-		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
-			$authorDao->deleteAuthorById($deletedAuthors[$i], $article->getId());
-		}
-
 		parent::execute();
 
 		// Save the article
@@ -460,30 +406,12 @@ class MetadataForm extends Form {
 		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
 		$submissionLanguageDao = DAORegistry::getDAO('SubmissionLanguageDAO');
 
-		$keywords = array();
-		$agencies = array();
-		$disciplines = array();
-		$languages = array();
-		$subjects = array();
-
-		$tagitKeywords = $this->getData('keywords');
-
-		if (is_array($tagitKeywords)) {
-			foreach ($locales as $locale) {
-				$keywords[$locale] = array_key_exists($locale . '-keyword', $tagitKeywords) ? $tagitKeywords[$locale . '-keyword'] : array();
-				$agencies[$locale] = array_key_exists($locale . '-agencies', $tagitKeywords) ? $tagitKeywords[$locale . '-agencies'] : array();
-				$disciplines[$locale] = array_key_exists($locale . '-disciplines', $tagitKeywords) ? $tagitKeywords[$locale . '-disciplines'] : array();
-				$languages[$locale] = array_key_exists($locale . '-languages', $tagitKeywords) ? $tagitKeywords[$locale . '-languages'] : array();
-				$subjects[$locale] = array_key_exists($locale . '-subjects', $tagitKeywords) ?$tagitKeywords[$locale . '-subjects'] : array();
-			}
-		}
-
 		// persist the controlled vocabs
-		$submissionKeywordDao->insertKeywords($keywords, $article->getId());
-		$submissionAgencyDao->insertAgencies($agencies, $article->getId());
-		$submissionDisciplineDao->insertDisciplines($disciplines, $article->getId());
-		$submissionLanguageDao->insertLanguages($languages, $article->getId());
-		$submissionSubjectDao->insertSubjects($subjects, $article->getId());
+		$submissionKeywordDao->insertKeywords($this->getData('submissionKeywords'), $article->getId());
+		$submissionAgencyDao->insertAgencies($this->getData('agencies'), $article->getId());
+		$submissionDisciplineDao->insertDisciplines($this->getData('disciplines'), $article->getId());
+		$submissionLanguageDao->insertLanguages($this->getData('languages'), $article->getId());
+		$submissionSubjectDao->insertSubjects($this->getData('subjects'), $article->getId());
 
 		// Update search index
 		import('classes.search.ArticleSearchIndex');
