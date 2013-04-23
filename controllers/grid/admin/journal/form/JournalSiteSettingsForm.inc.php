@@ -97,7 +97,11 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			// load the default user groups and stage assignments.
 			$this->_loadDefaultUserGroups($journalId);
 
+			// Put this user in the Manager group.
+			$this->_assignManagerGroup($journalId);
+
 			// Make the site administrator the journal manager of newly created journals
+			// FIXME: Deprecated role-based behavior; remove.
 			$sessionManager = SessionManager::getManager();
 			$userSession = $sessionManager->getUserSession();
 			if ($userSession->getUserId() != null && $userSession->getUserId() != 0 && !empty($journalId)) {

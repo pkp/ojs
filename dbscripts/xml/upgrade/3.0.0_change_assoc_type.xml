@@ -23,4 +23,8 @@
 	<sql>
 		<query>UPDATE notifications SET assoc_type = 522 WHERE assoc_type = 258</query>
 	</sql>
+	<!-- synchronize the NOTIFICATION_TYPE_REVIEWER_COMMENT constant change -->
+	<sql>
+		<query>UPDATE notifications SET type=16777219 WHERE type=16777233</query>
+	</sql>
 </data>
