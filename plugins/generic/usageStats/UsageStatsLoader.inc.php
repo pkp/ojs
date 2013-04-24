@@ -187,6 +187,8 @@ class UsageStatsLoader extends FileLoader {
 				'/article/viewArticle/',
 				'/article/viewDownloadInterstitial/',
 				'/article/download/'),
+			ASSOC_TYPE_SUPP_FILE => array(
+				'/article/downloadSuppFile/'),
 			ASSOC_TYPE_ISSUE => array(
 				'issue/view/',
 				'issue/viewFile/',
@@ -226,11 +228,25 @@ class UsageStatsLoader extends FileLoader {
 				$explodedString = explode($workingReferer, $referer);
 				$assocId = $explodedString[1];
 
+				// Check if we are not dealing with supp files or galleys.
+				$explodedString = explode('/', $assocId);
+				if (!is_null($explodedString[1])) {
+					$assocId = $explodedString[1];
+					// Set the correct assoc type.
+					if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
+						$assocType = ASSOC_TYPE_GALLEY;
+					} elseif ($workingAssocType == ASSOC_TYPE_ISSUE) {
+						$assocType = ASSOC_TYPE_ISSUE_GALLEY;
+					}
+				}
+
 				if (!is_numeric($assocId)) {
 					$assocId = false;
 				}
 
-				$assocType = $workingAssocType;
+				if (!$assocType) {
+					$assocType = $workingAssocType;
+				}
 			}
 		}
 
