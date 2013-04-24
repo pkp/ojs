@@ -1322,13 +1322,13 @@ DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `edit_decisions` (
   `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `article_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
   `round` tinyint(4) NOT NULL,
   `editor_id` bigint(20) NOT NULL,
   `decision` tinyint(4) NOT NULL,
   `date_decided` datetime NOT NULL,
   PRIMARY KEY (`edit_decision_id`),
-  KEY `edit_decisions_article_id` (`article_id`),
+  KEY `edit_decisions_submission_id` (`submission_id`),
   KEY `edit_decisions_editor_id` (`editor_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;

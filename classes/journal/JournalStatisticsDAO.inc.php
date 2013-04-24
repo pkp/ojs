@@ -50,14 +50,14 @@ class JournalStatisticsDAO extends DAO {
 				a.status
 			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-				LEFT JOIN edit_decisions d ON (d.article_id = a.article_id)
+				LEFT JOIN edit_decisions d ON (d.submission_id = a.article_id)
 			WHERE	a.journal_id = ?' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			$sectionSql .
 			' ORDER BY a.article_id, d.date_decided DESC';
 
-		$result =& $this->retrieve($sql, $params);
+		$result = $this->retrieve($sql, $params);
 
 		$returner = array(
 			'numSubmissions' => 0,

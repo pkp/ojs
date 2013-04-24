@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0.0_preupdate.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Database updates XML file (run before schema is reconciled).
+  *
+  -->
+<data>
+	<!-- Bug #8148: Submission process into PKP lib -->
+	<sql>
+		<rename table="edit_decisions" column="article_id" to="submission_id" />
+	</sql>
+</data>

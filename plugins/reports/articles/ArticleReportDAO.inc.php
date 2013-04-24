@@ -60,13 +60,13 @@ class ArticleReportDAO extends DAO {
 
 		$result =& $this->retrieve(
 			'SELECT	MAX(d.date_decided) AS date_decided,
-				d.article_id AS article_id
+				d.submission_id AS article_id
 			FROM	edit_decisions d,
 				articles a
 			WHERE	a.journal_id = ? AND
 				a.submission_progress = 0 AND
-				a.article_id = d.article_id
-			GROUP BY d.article_id',
+				a.article_id = d.submission_id
+			GROUP BY d.submission_id',
 			array((int) $journalId)
 		);
 		$decisionDatesIterator = new DBRowIterator($result);
@@ -74,13 +74,13 @@ class ArticleReportDAO extends DAO {
 		while ($row = $decisionDatesIterator->next()) {
 			$result = $this->retrieve(
 				'SELECT	d.decision AS decision,
-					d.article_id AS article_id
+					d.submission_id AS article_id
 				FROM	edit_decisions d,
 					articles a
 				WHERE	d.date_decided = ? AND
-					d.article_id = a.article_id AND
+					d.submission_id = a.article_id AND
 					a.submission_progress = 0 AND
-					d.article_id = ?',
+					d.submission_id = ?',
 				array(
 					$row['date_decided'],
 					$row['article_id']

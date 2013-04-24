@@ -177,7 +177,7 @@ class SectionEditorSubmissionDAO extends DAO {
 					if ($editorDecision['editDecisionId'] == null) {
 						$this->update(
 							sprintf('INSERT INTO edit_decisions
-								(article_id, round, editor_id, decision, date_decided)
+								(submission_id, round, editor_id, decision, date_decided)
 								VALUES (?, ?, ?, ?, %s)',
 								$this->datetimeToDB($editorDecision['dateDecided'])),
 							array($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
@@ -443,8 +443,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 				LEFT JOIN article_settings atpl ON (atpl.article_id = a.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
-				LEFT JOIN edit_decisions edec ON (a.article_id = edec.article_id)
-				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.article_id AND edec.edit_decision_id < edec2.edit_decision_id)
+				LEFT JOIN edit_decisions edec ON (a.article_id = edec.submission_id)
+				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.submission_id AND edec.edit_decision_id < edec2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND e.editor_id = ?
 				AND a.submission_progress = 0' . (!empty($additionalWhereSql)?" AND ($additionalWhereSql)":'') . '
@@ -575,8 +575,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			'SELECT	COUNT(*) AS review_count
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
-				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.submission_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.submission_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND e.editor_id = ?
 				AND a.submission_progress = 0
@@ -595,8 +595,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			'SELECT	COUNT(*) AS editing_count
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
-				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.submission_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.submission_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND e.editor_id = ?
 				AND a.submission_progress = 0
@@ -620,8 +620,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function deleteDecisionsByArticle($articleId) {
 		return $this->update(
-			'DELETE FROM edit_decisions WHERE article_id = ?',
-			$articleId
+			'DELETE FROM edit_decisions WHERE submission_id = ?',
+			(int) $articleId
 		);
 	}
 
@@ -645,13 +645,13 @@ class SectionEditorSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY edit_decision_id ASC', $articleId
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY edit_decision_id ASC', (int) $articleId
 			);
 		} else {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY edit_decision_id ASC',
-				array($articleId, $round)
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY edit_decision_id ASC',
+				array((int) $articleId, (int) $round)
 			);
 		}
 

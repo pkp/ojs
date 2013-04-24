@@ -293,13 +293,13 @@ class ReviewerSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY date_decided ASC', (int) $articleId
 			);
 		} else {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY date_decided ASC',
-				array($articleId, $round)
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY date_decided ASC',
+				array((int) $articleId, (int) $round)
 			);
 		}
 

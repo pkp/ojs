@@ -845,40 +845,6 @@
 
 	<!--
 	  *
-	  * TABLE edit_decisions
-	  *
-	  -->
-	<table name="edit_decisions">
-		<field name="edit_decision_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="round" type="I1">
-			<NOTNULL/>
-		</field>
-		<field name="editor_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="decision" type="I1">
-			<NOTNULL/>
-		</field>
-		<field name="date_decided" type="T">
-			<NOTNULL/>
-		</field>
-		<descr>Editor decisions.</descr>
-		<index name="edit_decisions_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="edit_decisions_editor_id">
-			<col>editor_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
 	  * TABLE article_galleys
 	  *
 	  -->

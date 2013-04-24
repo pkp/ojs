@@ -322,8 +322,8 @@ class EditorSubmissionDAO extends DAO {
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN edit_assignments ea ON (a.article_id = ea.article_id)
 				LEFT JOIN edit_assignments ea2 ON (a.article_id = ea2.article_id AND ea.edit_id < ea2.edit_id)
-				LEFT JOIN edit_decisions edec ON (a.article_id = edec.article_id)
-				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.article_id AND edec.edit_decision_id < edec2.edit_decision_id)
+				LEFT JOIN edit_decisions edec ON (a.article_id = edec.submission_id)
+				LEFT JOIN edit_decisions edec2 ON (a.article_id = edec2.submission_id AND edec.edit_decision_id < edec2.edit_decision_id)
 			WHERE	edec2.edit_decision_id IS NULL
 				AND ea2.edit_id IS NULL
 				AND a.journal_id = ?
@@ -536,8 +536,8 @@ class EditorSubmissionDAO extends DAO {
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
 				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
-				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.submission_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.submission_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND a.submission_progress = 0
 				AND a.status = ' . STATUS_QUEUED . '
@@ -560,8 +560,8 @@ class EditorSubmissionDAO extends DAO {
 			FROM	articles a
 				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
 				LEFT JOIN edit_assignments e2 ON (a.article_id = e2.article_id AND e.edit_id < e2.edit_id)
-				LEFT JOIN edit_decisions d ON (a.article_id = d.article_id)
-				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.article_id AND d.edit_decision_id < d2.edit_decision_id)
+				LEFT JOIN edit_decisions d ON (a.article_id = d.submission_id)
+				LEFT JOIN edit_decisions d2 ON (a.article_id = d2.submission_id AND d.edit_decision_id < d2.edit_decision_id)
 			WHERE	a.journal_id = ?
 				AND a.submission_progress = 0
 				AND a.status = ' . STATUS_QUEUED . '
@@ -590,13 +590,13 @@ class EditorSubmissionDAO extends DAO {
 		$decisions = array();
 
 		if ($round == null) {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY edit_decision_id ASC', $articleId
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY edit_decision_id ASC', (int) $articleId
 			);
 		} else {
-			$result =& $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY edit_decision_id ASC',
-				array($articleId, $round)
+			$result = $this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY edit_decision_id ASC',
+				array((int) $articleId, (int) $round)
 			);
 		}
 
@@ -605,8 +605,6 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
-
 		return $decisions;
 	}
 
@@ -617,7 +615,7 @@ class EditorSubmissionDAO extends DAO {
 	function transferEditorDecisions($oldUserId, $newUserId) {
 		$this->update(
 			'UPDATE edit_decisions SET editor_id = ? WHERE editor_id = ?',
-			array($newUserId, $oldUserId)
+			array((int) $newUserId, (int) $oldUserId)
 		);
 	}
 
