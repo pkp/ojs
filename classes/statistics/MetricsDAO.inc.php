@@ -249,6 +249,19 @@ class MetricsDAO extends DAO {
 				$journalId = $issue->getJournalId();
 				break;
 
+			case ASSOC_TYPE_ISSUE:
+				$articleId = null;
+				$issueId = $recordToStore['assoc_id'];
+				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getByPubId('publisher-id', $issueId, null, true); /* @var $issue Issue */
+				if (!$issue) {
+					$issue = $issueDao->getById($issueId, null, true);
+				}
+				if (!is_a($issue, 'Issue')) {
+					throw new Exception('Cannot load record: invalid issue id.');
+				}
+				$journalId = $issue->getJournalId();
+				break;
 			default:
 				throw new Exception('Cannot load record: invalid association type.');
 		}
