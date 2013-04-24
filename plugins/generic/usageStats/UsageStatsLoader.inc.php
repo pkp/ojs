@@ -153,18 +153,21 @@ class UsageStatsLoader extends FileLoader {
 	private function _getDataFromLogEntry($entry) {
 		$plugin = $this->_plugin; /* @var $plugin Plugin */
 		if (!$plugin->getSetting(0, 'createLogFiles')) {
+			// User defined regex to parse external log files.
 			$parseRegex = $plugin->getSetting(0, 'accessLogFileParseRegex');
+		} else {
+			// Regex to parse this plugin's log access files.
+			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+)/';
 		}
 
-		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "(\S+).*?" \d+ \d+ "(.*?)" "(.*?)"/';
+		// The default regex will parse only apache log files in combined format.
+		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+.*?" \d+ \d+ "(.*?)"/';
 
 		$returner = array();
 		if (preg_match($parseRegex, $entry, $m)) {
 			$returner['ip'] = $m[1];
 			$returner['date'] = strtotime($m[2]);
-			$returner['method'] = $m[3];
-			$returner['referer'] = $m[4];
-			$returner['browser'] = $m[5];
+			$returner['referer'] = $m[3];
 		}
 
 		return $returner;
@@ -180,14 +183,16 @@ class UsageStatsLoader extends FileLoader {
 	 */
 	private function _getExpectedReferer() {
 		return array(ASSOC_TYPE_ARTICLE => array(
-			'/article/view/',
-			'/article/viewArticle/',
-			'/article/viewDownloadInterstitial/',
-			'/article/download/',
+				'/article/view/',
+				'/article/viewArticle/',
+				'/article/viewDownloadInterstitial/',
+				'/article/download/'),
 			ASSOC_TYPE_ISSUE => array(
-			'issue/view'
-			)
-		));
+				'issue/view/',
+				'issue/viewFile/',
+				'issue/viewDownloadInterstitial/',
+				'issue/download/')
+			);
 	}
 
 	/**
@@ -219,8 +224,7 @@ class UsageStatsLoader extends FileLoader {
 			if ($refererCheck) {
 				// Get the assoc id inside the passed referer.
 				$explodedString = explode($workingReferer, $referer);
-				$explodedString = explode('/', $explodedString[1]);
-				$assocId = $explodedString[0];
+				$assocId = $explodedString[1];
 
 				if (!is_numeric($assocId)) {
 					$assocId = false;
