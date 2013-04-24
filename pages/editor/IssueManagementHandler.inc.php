@@ -1018,12 +1018,12 @@ class IssueManagementHandler extends EditorHandler {
 		$issue =& $this->issue;
 		$this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-		$userDao =& DAORegistry::getDAO('UserDAO');
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$notificationMailListDao =& DAORegistry::getDAO('NotificationMailListDAO'); /* @var $notificationMailListDao NotificationMailListDAO */
 
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
@@ -1069,6 +1069,14 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				unset($recipient);
 			}
+
+			if($request->getUserVar('sendToMailList')) {
+				$mailList = $notificationMailListDao->getMailList($journal->getId());
+				foreach ($mailList as $mailListRecipient) {
+					$email->addRecipient($mailListRecipient);
+				}
+			}
+
 
 			if ($request->getUserVar('includeToc')=='1' && isset($issue)) {
 				$issue = $issueDao->getIssueById($request->getUserVar('issue'));
@@ -1127,6 +1135,7 @@ class IssueManagementHandler extends EditorHandler {
 					'allAuthorsCount' => $authorCount,
 					'allIndividualSubscribersCount' => $individualSubscriptionDao->getSubscribedUserCount($journal->getId()),
 					'allInstitutionalSubscribersCount' => $institutionalSubscriptionDao->getSubscribedUserCount($journal->getId()),
+					'allMailListCount' => count($notificationMailListDao->getMailList($journal->getId()))
 				)
 			);
 		}
