@@ -383,8 +383,10 @@ class ArticleDAO extends DAO {
 		$noteDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmissionDao->deleteDecisionsByArticle($articleId);
 		$sectionEditorSubmissionDao->deleteReviewRoundsByArticle($articleId);
+
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+		$editDecisionDao->deleteDecisionsBySubmission($articleId);
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignmentDao->deleteBySubmissionId($articleId);

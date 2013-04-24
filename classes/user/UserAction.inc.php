@@ -65,8 +65,8 @@ class UserAction {
 			$editAssignmentDao->updateEditAssignment($editAssignment);
 		}
 
-		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
-		$editorSubmissionDao->transferEditorDecisions($oldUserId, $newUserId);
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+		$editDecisionDao->transferEditorDecisions($oldUserId, $newUserId);
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		foreach ($reviewAssignmentDao->getByUserId($oldUserId) as $reviewAssignment) {

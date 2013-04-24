@@ -114,8 +114,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setEditAssignments($editAssignments->toArray());
 
 		// Editor Decisions
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$sectionEditorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+			$sectionEditorSubmission->setDecisions($editDecisionDao->getEditorDecisions($row['article_id'], null, $i), $i);
 		}
 
 		// Comments
@@ -615,17 +616,6 @@ class SectionEditorSubmissionDAO extends DAO {
 	//
 
 	/**
-	 * Delete copyediting assignments by article.
-	 * @param $articleId int
-	 */
-	function deleteDecisionsByArticle($articleId) {
-		return $this->update(
-			'DELETE FROM edit_decisions WHERE submission_id = ?',
-			(int) $articleId
-		);
-	}
-
-	/**
 	 * Delete review rounds article.
 	 * @param $articleId int
 	 */
@@ -634,40 +624,6 @@ class SectionEditorSubmissionDAO extends DAO {
 			'DELETE FROM review_rounds WHERE submission_id = ?',
 			$articleId
 		);
-	}
-
-	/**
-	 * Get the editor decisions for a review round of an article.
-	 * @param $articleId int
-	 * @param $round int
-	 */
-	function getEditorDecisions($articleId, $round = null) {
-		$decisions = array();
-
-		if ($round == null) {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY edit_decision_id ASC', (int) $articleId
-			);
-		} else {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY edit_decision_id ASC',
-				array((int) $articleId, (int) $round)
-			);
-		}
-
-		while (!$result->EOF) {
-			$decisions[] = array(
-				'editDecisionId' => $result->fields['edit_decision_id'],
-				'editorId' => $result->fields['editor_id'],
-				'decision' => $result->fields['decision'],
-				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
-			);
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
-
-		return $decisions;
 	}
 
 	/**

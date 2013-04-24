@@ -46,8 +46,8 @@ class SubmissionFileRequestedRevisionRequiredPolicy extends PKPSubmissionFileReq
 		$reviewRound =& $reviewRoundDao->getBySubmissionFileId($submissionFile->getFileId());
 
 		// Make sure that the last review round editor decision is request revisions.
-		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO'); /* @var $seriesEditorSubmissionDao SeriesEditorSubmissionDAO */
-		$reviewRoundDecisions = $sectionEditorSubmissionDao->getEditorDecisions($submissionFile->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+		$reviewRoundDecisions = $editDecisionDao->getEditorDecisions($submissionFile->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 		if (empty($reviewRoundDecisions)) return AUTHORIZATION_DENY;
 		$lastEditorDecision = array_pop($reviewRoundDecisions);
 		if ($lastEditorDecision['decision'] != SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS) return AUTHORIZATION_DENY;

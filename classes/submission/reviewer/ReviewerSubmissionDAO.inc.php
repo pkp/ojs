@@ -114,8 +114,9 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 
 		// Editor Decisions
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$reviewerSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+			$reviewerSubmission->setDecisions($editDecisionDao->getEditorDecisions($row['article_id'], null, $i), $i);
 		}
 
 		// Review Assignment
@@ -282,41 +283,6 @@ class ReviewerSubmissionDAO extends DAO {
 		unset($result);
 
 		return $submissionsCount;
-	}
-
-	/**
-	 * Get the editor decisions for a review round of an article.
-	 * @param $articleId int
-	 * @param $round int
-	 */
-	function getEditorDecisions($articleId, $round = null) {
-		$decisions = array();
-
-		if ($round == null) {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY date_decided ASC', (int) $articleId
-			);
-		} else {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY date_decided ASC',
-				array((int) $articleId, (int) $round)
-			);
-		}
-
-		while (!$result->EOF) {
-			$decisions[] = array(
-				'editDecisionId' => $result->fields['edit_decision_id'],
-				'editorId' => $result->fields['editor_id'],
-				'decision' => $result->fields['decision'],
-				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
-			);
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $decisions;
 	}
 
 	/**

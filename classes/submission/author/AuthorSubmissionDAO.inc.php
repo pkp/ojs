@@ -98,12 +98,13 @@ class AuthorSubmissionDAO extends DAO {
 		$this->articleDao->_articleFromRow($authorSubmission, $row);
 
 		// Editor Assignment
-		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$editAssignments = $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$authorSubmission->setEditAssignments($editAssignments->toArray());
 
 		// Editor Decisions
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$authorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+			$authorSubmission->setDecisions($editDecisionDao->getEditorDecisions($row['article_id'], null, $i), $i);
 		}
 
 		// Review Assignments
@@ -211,41 +212,6 @@ class AuthorSubmissionDAO extends DAO {
 	//
 	// Miscellaneous
 	//
-
-	/**
-	 * Get the editor decisions for a review round of an article.
-	 * @param $articleId int
-	 * @param $round int
-	 */
-	function getEditorDecisions($articleId, $round = null) {
-		$decisions = array();
-
-		if ($round == null) {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY date_decided ASC', (int) $articleId
-			);
-		} else {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY date_decided ASC',
-				array((int) $articleId, (int) $round)
-			);
-		}
-
-		while (!$result->EOF) {
-			$decisions[] = array(
-				'editDecisionId' => $result->fields['edit_decision_id'],
-				'editorId' => $result->fields['editor_id'],
-				'decision' => $result->fields['decision'],
-				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
-			);
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $decisions;
-	}
 
 	/**
 	 * Get count of active, rejected, and complete assignments

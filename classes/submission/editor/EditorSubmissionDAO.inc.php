@@ -97,8 +97,9 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setEditAssignments($editAssignments->toArray());
 
 		// Editor Decisions
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+			$editorSubmission->setDecisions($editDecisionDao->getEditorDecisions($row['article_id'], null, $i), $i);
 		}
 
 		for ($i = 1; $i <= $row['current_round']; $i++) {
@@ -580,44 +581,6 @@ class EditorSubmissionDAO extends DAO {
 	//
 	// Miscellaneous
 	//
-
-	/**
-	 * Get the editor decisions for a review round of an article.
-	 * @param $articleId int
-	 * @param $round int
-	 */
-	function getEditorDecisions($articleId, $round = null) {
-		$decisions = array();
-
-		if ($round == null) {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? ORDER BY edit_decision_id ASC', (int) $articleId
-			);
-		} else {
-			$result = $this->retrieve(
-				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE submission_id = ? AND round = ? ORDER BY edit_decision_id ASC',
-				array((int) $articleId, (int) $round)
-			);
-		}
-
-		while (!$result->EOF) {
-			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $this->datetimeFromDB($result->fields[3]));
-			$result->MoveNext();
-		}
-		$result->Close();
-		return $decisions;
-	}
-
-	/**
-	 * Get the editor decisions for an editor.
-	 * @param $userId int
-	 */
-	function transferEditorDecisions($oldUserId, $newUserId) {
-		$this->update(
-			'UPDATE edit_decisions SET editor_id = ? WHERE editor_id = ?',
-			array((int) $newUserId, (int) $oldUserId)
-		);
-	}
 
 	/**
 	 * Retrieve a list of all users in the specified role not assigned as editors to the specified article.
