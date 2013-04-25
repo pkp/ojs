@@ -29,7 +29,6 @@ class ReviewerHandler extends Handler {
 		parent::Handler();
 
 		$this->addCheck(new HandlerValidatorJournal($this));
-		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)));
 	}
 
 	/**
@@ -197,8 +196,10 @@ class ReviewerHandler extends Handler {
 
 			$this->submission =& $reviewerSubmission;
 			$this->user =& $user;
+			return true;
 		}
 
+		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_REVIEWER)));
 		parent::validate();
 	}
 }
