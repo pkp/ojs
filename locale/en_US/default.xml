@@ -173,4 +173,10 @@ ________________________________________________________________________</messag
 	<message key="default.groups.name.subscriptionManager">Subscription Manager</message>
 	<message key="default.groups.plural.subscriptionManager">Subscription Managers</message>
 	<message key="default.groups.abbrev.subscriptionManager">SubM</message>
+
+	<!-- Genre Defaults -->
+	<message key="default.genres.article">Article</message>
+	<message key="default.genres.article.designation">##</message>
+	<message key="default.genres.other">Other</message>
+	<message key="default.genres.other.designation">##</message>
 </locale>
