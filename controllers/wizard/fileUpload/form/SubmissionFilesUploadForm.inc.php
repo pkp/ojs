@@ -35,7 +35,6 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 		);
 	}
 
-
 	//
 	// Private helper methods
 	//
@@ -53,11 +52,6 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	function _uploadFile($request, $user, $uploaderUserGroupId, $revisedFileId, $fileGenre, $assocType, $assocId) {
 		$context = $request->getContext();
 		import('lib.pkp.classes.file.SubmissionFileManager');
-
-		// OJS files do not have defined genres during file upload.  Assume all submission files are of type _DOCUMENT.
-		import('lib.pkp.classes.submission.Genre');
-		$fileGenre = GENRE_CATEGORY_DOCUMENT;
-
 		$articleFileManager = new SubmissionFileManager($context->getId(), $this->getData('submissionId'));
 		$fileStage = $this->getData('fileStage');
 		$submissionFile = $articleFileManager->uploadSubmissionFile(
@@ -85,14 +79,6 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 		$localeKey = $revisedFileId ? 'submission.event.revisionUploaded' : 'submission.event.fileUploaded';
 		$assocType = $revisedFileId ? SUBMISSION_LOG_FILE_REVISION_UPLOAD : SUBMISSION_LOG_FILE_UPLOAD;
 		SubmissionFileLog::logEvent($request, $submissionFile, $assocType, $localeKey, array('fileStage' => $fileStage, 'revisedFileId' => $revisedFileId, 'fileId' => $submissionFile->getFileId(), 'fileRevision' => $submissionFile->getRevision(), 'originalFileName' => $submissionFile->getOriginalFileName(), 'submissionId' => $this->getData('submissionId'), 'username' => $user->getUsername()));
-	}
-
-	/**
-	 * Indicates whether or not submission files have genres.
-	 * @return boolean
-	 */
-	function _appHasFileGenres() {
-		return false; // OJS does not have file genres.
 	}
 }
 
