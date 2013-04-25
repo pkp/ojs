@@ -43,7 +43,7 @@
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
-    
+
     <!-- Cross-language field -->
     <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
@@ -347,6 +347,17 @@
       </analyzer>
     </fieldType>
 
+    <!--
+      External field to support ranking by an external fast-changing metric.
+      Values in the external field should vary between 0.5 (half) and 2.0 (double).
+      The default value is 1 (neutral ranking) so that the results for articles
+      without specific ranking data will not destort results (especially for very
+      new articles or in a central server case with inconsistently configured
+      clients).
+    -->
+    <fieldType name="externalFile" keyField="submission_id" defVal="1" stored="false" indexed="false"
+        class="solr.ExternalFileField" valType="pfloat"/>
+
     <!-- Dummy field type for ignored fields -->
     <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
   </types>
@@ -431,6 +442,8 @@
     <!-- Ignore any fields that don't already match an existing
          field name or dynamic field (e.g. unsupported locales). -->
     <dynamicField name="*" type="ignored" multiValued="true" />
+    
+    <field name="usageMetric" type="externalFile" multiValued="false" />
   </fields>
 
   <!-- Field to use to determine and enforce document uniqueness.

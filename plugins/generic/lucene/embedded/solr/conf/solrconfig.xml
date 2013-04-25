@@ -276,6 +276,18 @@
     </lst>
   </requestHandler>
   <!-- END -->
+  
+  <!--
+    Support for commit-free external file fields, see http://stackoverflow.com/questions/12015049/externalfilefield-in-solr-3-6
+    NB:
+      - Committing, e.g. http://localhost:8983/solr/ojs/update?commit=true does NOT work as documented and will not load changed values in the file.
+      - Reloading the configuration works, e.g. http://localhost:8983/solr/admin/cores?action=RELOAD&core=ojs but is hacky and much too heavy an operation.
+      - This may have to be changed when upgrading to Solr 4.1 or later. See http://docs.lucidworks.com/display/solr/Working+with+External+Files+and+Processes#WorkingwithExternalFilesandProcesses-ReloadinganExternalFile
+  -->
+  <!-- The lines between START and END may be commented out to disable this feature -->
+  <!-- START -->
+  <requestHandler name="/reloadExternalFiles" class="org.apache.solr.search.function.FileFloatSource$ReloadCacheRequestHandler" />
+  <!-- END -->
 
   <!-- OJS DataImportHandler request handler. Please do not change. -->
   <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">

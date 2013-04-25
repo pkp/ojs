@@ -377,9 +377,23 @@ class SolrWebService extends XmlWebService {
 				} elseif ($boostFactor > 0) {
 					// Add a boost function query (only works for numeric fields!).
 					if (!isset($params['boost'])) $params['boost'] = array();
+					// The map function takes the following arguments: 1) the field or
+					// function to evaluate, 2) the min value to map, 3) the max value
+					// to map, 4) the target value and 5) an optional default value when
+					// the field or function value is not between min and max.
 					$params['boost'][] = "map($field,$value,$value,$boostFactor,1)";
 				}
 			}
+		}
+
+		// Boost fields. These fields will be used directly to boost internal
+		// ranking values. Values in a boost field should vary between 0.5 (half)
+		// and 2.0 (double).
+		$boostFields = $searchRequest->getBoostFields();
+		foreach($boostFields as $boostField) {
+			if (!isset($params['boost'])) $params['boost'] = array();
+			// Boost fields contain pre-calculated boost values.
+			$params['boost'][] = $boostField;
 		}
 
 		// Make the search request.
@@ -721,6 +735,15 @@ class SolrWebService extends XmlWebService {
 		$this->_makeRequest($url, $params);
 	}
 
+	/**
+	 * Reloads external files.
+	 */
+	function reloadExternalFiles() {
+		// Rebuild the auto-suggest dictionary.
+		$url = $this->_getReloadExternalFilesUrl();
+		$this->_makeRequest($url);
+	}
+
 
 	//
 	// Field cache implementation
@@ -901,6 +924,12 @@ class SolrWebService extends XmlWebService {
 		return $autosuggestUrl;
 	}
 
+	/**
+	 * Returns the solr endpoint to reload external files.
+	 */
+	function _getReloadExternalFilesUrl() {
+		return $this->_solrServer . $this->_solrCore . '/reloadExternalFiles';
+	}
 
 	/**
 	 * Returns the solr endpoint to retrieve

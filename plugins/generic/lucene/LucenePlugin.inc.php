@@ -235,7 +235,7 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
+		$request = $this->getRequest();
 
 		switch ($verb) {
 			case 'settings':
@@ -284,7 +284,7 @@ class LucenePlugin extends GenericPlugin {
 							if (empty($journalId) || (!empty($journalId) && is_a($journal, 'Journal'))) {
 								// Rebuild index and dictionaries.
 								$messages = null;
-								$this->_rebuildIndex(false, $journal, true, true, $messages);
+								$this->_rebuildIndex(false, $journal, true, true, true, $messages);
 
 								// Transfer indexing output to the form template.
 								$form->setData('rebuildIndexMessages', $messages);
@@ -295,10 +295,14 @@ class LucenePlugin extends GenericPlugin {
 					} elseif ($request->getUserVar('rebuildDictionaries')) {
 						// Rebuild dictionaries.
 						$journal = null;
-						$this->_rebuildIndex(false, null, false, true, $messages);
+						$this->_rebuildIndex(false, null, false, true, false, $messages);
 
 						// Transfer indexing output to the form template.
 						$form->setData('rebuildIndexMessages', $messages);
+
+					// Boost File Update.
+					} elseif ($request->getUserVar('updateBoostFile')) {
+						$this->_updateBoostFile();
 
 					// Start/Stop solr server.
 					} elseif ($request->getUserVar('stopServer')) {
@@ -367,9 +371,16 @@ class LucenePlugin extends GenericPlugin {
 		$publicOps = array(
 			'queryAutocomplete',
 			'pullChangedArticles',
-			'similarDocuments'
+			'similarDocuments',
+			'usageMetricBoost'
 		);
 		if (!in_array($op, $publicOps)) return;
+
+		// Get the journal object from the context (optimized).
+		$request = $this->getRequest();
+		$router = $request->getRouter();
+		$journal = $router->getContext($request); /* @var $journal Journal */
+		if ($op == 'usageMetricBoost' && $journal != null) return;
 
 		// Looks as if our handler had been requested.
 		define('HANDLER_CLASS', 'LuceneHandler');
@@ -470,6 +481,15 @@ class LucenePlugin extends GenericPlugin {
 				}
 			}
 			unset($sections);
+		}
+
+		// Configure ranking-by-metric.
+		$rankingByMetric = (boolean)$this->getSetting(0, 'rankingByMetric');
+		if ($rankingByMetric) {
+			// The 'usageMetric' field is an external file field containing
+			// multiplicative boost values calculated from usage metrics and
+			// normalized to values between 0.5 and 2.0.
+			$searchRequest->addBoostField('usageMetric');
 		}
 
 		// Call the solr web service.
@@ -624,6 +644,7 @@ class LucenePlugin extends GenericPlugin {
 		// Check switches.
 		$rebuildIndex = true;
 		$rebuildDictionaries = false;
+		$updateBoostFile = false;
 		if (is_array($switches)) {
 			if (in_array('-n', $switches)) {
 				$rebuildIndex = false;
@@ -631,11 +652,14 @@ class LucenePlugin extends GenericPlugin {
 			if (in_array('-d', $switches)) {
 				$rebuildDictionaries = true;
 			}
+			if (in_array('-b', $switches)) {
+				$updateBoostFile = true;
+			}
 		}
 
 		// Rebuild the index.
 		$messages = null;
-		$this->_rebuildIndex($log, $journal, $rebuildIndex, $rebuildDictionaries, $messages);
+		$this->_rebuildIndex($log, $journal, $rebuildIndex, $rebuildDictionaries, $updateBoostFile, $messages);
 		return true;
 	}
 
@@ -869,6 +893,66 @@ class LucenePlugin extends GenericPlugin {
 
 
 	//
+	// Public methods
+	//
+	/**
+	 * Generate an external boost file from usage statistics data.
+	 * The file will be empty when an error condition is met.
+	 * @param $output boolean|string When true then write to stdout, otherwise
+	 *   interpret the variable as file name and write to the given file.
+	 */
+	function generateBoostFile($output = true) {
+		// Check error conditions:
+		// - the "ranking-by-metric" feature is not enabled
+		// - a "main metric" is not configured
+		$application = PKPApplication::getApplication();
+		$metricType = $application->getDefaultMetricType();
+		if (!$this->getSetting(0, 'rankingByMetric') || empty($metricType)) return;
+
+		// Retrieve a usage report for all articles ordered by the article ID.
+		// Ordering seems to be important, see the remark about pre-sorting the file here:
+		// https://lucene.apache.org/solr/api-3_6_2/org/apache/solr/schema/ExternalFileField.html
+		$column = STATISTICS_DIMENSION_ARTICLE_ID;
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE));
+		$orderBy = array(STATISTICS_DIMENSION_ARTICLE_ID => STATISTICS_ORDER_ASC);
+		$metricReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
+		if (empty($metricReport)) return;
+
+		// Pluck the metric values and find the maximum.
+		$max = max(array_map(create_function('$reportRow', 'return $reportRow["metric"];'), $metricReport));
+		if ($max <= 0) return;
+
+		// Get the Lucene plugin installation ID.
+		$instId = $this->getSetting(0, 'instId');
+
+		$file = null;
+		if (is_string($output)) {
+			// Write the result to a file.
+			$file = fopen($output, 'w');
+			if ($file === false) return;
+		}
+
+		// Normalize and return the metric values.
+		// NB: We do not return values for articles that have no data.
+		foreach ($metricReport as $reportRow) {
+			// The normalization function is: 2 ^ ((2 * metric / max) - 1).
+			// This normalizes the metric symmetrically around half the max value
+			// to values between 0.5 and 2.0, i.e. half the max value is normalized
+			// to 1.0, zero is normalized to 0.5 and the max value becomes 2.0.
+			$record = $instId . '-' . $reportRow['submission_id'] . '=' .
+					round(pow(2, (2 * $reportRow['metric'] / $max) - 1), 5) . PHP_EOL;
+			if (is_null($file)) {
+				echo $record;
+			} else {
+				fwrite($file, $record);
+			}
+		}
+
+		if (!is_null($file)) fclose($file);
+	}
+
+
+	//
 	// Private helper methods
 	//
 	/**
@@ -968,7 +1052,7 @@ class LucenePlugin extends GenericPlugin {
 	 * @param $messages string Return parameter for log message output.
 	 * @return boolean True on success, otherwise false.
 	 */
-	function _rebuildIndex($log, $journal, $buildIndex, $buildDictionaries, &$messages) {
+	function _rebuildIndex($log, $journal, $buildIndex, $buildDictionaries, $updateBoostFile, &$messages) {
 		// Rebuilding the index can take a long time.
 		@set_time_limit(0);
 		$solrWebService = $this->getSolrWebService();
@@ -1038,6 +1122,24 @@ class LucenePlugin extends GenericPlugin {
 			// Rebuild dictionaries.
 			$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.rebuildDictionaries') . ' ... ', $messages);
 			$solrWebService->rebuildDictionaries();
+			if ($updateBoostFile) $this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . PHP_EOL, $messages);
+		}
+
+		// Remove the field cache file as additional fields may be available after re-indexing. If we don't
+		// do this it may seem that indexing didn't work as the cache will only be invalidated after 24 hours.
+		$cacheFile = 'cache/fc-plugins-lucene-fieldCache.php';
+		if (file_exists($cacheFile)) {
+			if (is_writable(dirname($cacheFile))) {
+				unlink($cacheFile);
+			} else {
+				$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.couldNotDeleteFieldCache') . PHP_EOL, $messages);
+			}
+		}
+
+		if ($updateBoostFile) {
+			// Update the boost file.
+			$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.updateBoostFile') . ' ... ', $messages);
+			$this->_updateBoostFile();
 		}
 
 		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . PHP_EOL, $messages);
@@ -1124,6 +1226,41 @@ class LucenePlugin extends GenericPlugin {
 			2 => __('plugins.generic.lucene.sectionForm.ranking.normal'),
 			4 => __('plugins.generic.lucene.sectionForm.ranking.high')
 		);
+	}
+
+	/**
+	 * Generate and update the boost file.
+	 */
+	function _updateBoostFile() {
+		// Make sure that we have an embedded server.
+		if ($this->getSetting(0, 'pullIndexing')) return;
+
+		// Make sure that the ranking-by-metric feature is enabled.
+		if (!$this->getSetting(0, 'rankingByMetric')) return;
+
+		// Construct the file name.
+		$ds = DIRECTORY_SEPARATOR;
+		$fileName = Config::getVar('files', 'files_dir') . "${ds}lucene${ds}data${ds}external_usageMetric";
+
+		// Find the next extension. We cannot write to the existing file
+		// while it is in-use and locked (on Windows).
+		// Solr lets us write a new file and will always use the
+		// (alphabetically) last file. The older file will automatically
+		// be deleted.
+		$lastExtension = 0;
+		foreach (glob($fileName . '.*') as $source) {
+			$existingExtension = (int)pathinfo($source, PATHINFO_EXTENSION);
+			if ($existingExtension > $lastExtension) $lastExtension = $existingExtension;
+		}
+		$newExtension = (string) $lastExtension + 1;
+		$newExtension = str_pad($newExtension, 8, '0', STR_PAD_LEFT);
+
+		// Generate the file.
+		$this->generateBoostFile($fileName . '.' . $newExtension);
+
+		// Make the solr server aware of the boost file.
+		$solr = $this->getSolrWebService();
+		$solr->reloadExternalFiles();
 	}
 }
 ?>

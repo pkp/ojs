@@ -154,6 +154,18 @@
 				</td>
 			</tr>
 			<tr>
+				<td class="label" align="right"><input {if $noMainMetric}disabled="disabled" {/if}type="checkbox" name="rankingByMetric" id="rankingByMetric" {if $rankingByMetric}checked="checked" {/if}/></td>
+				<td class="value">
+					<label for="rankingByMetric">
+						{if $noMainMetric}
+							{translate key="plugins.generic.lucene.settings.rankingByMetricDisabled"}
+						{else}
+							{translate key="plugins.generic.lucene.settings.rankingByMetricEnabled" metricName=$metricName}
+						{/if}
+					</label>
+				</td>
+			</tr>
+			<tr>
 				<td class="label" align="right"><input type="checkbox" name="instantSearch" id="instantSearch" {if $instantSearch}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="instantSearch">{translate key="plugins.generic.lucene.settings.instantSearch"}</label>
@@ -217,6 +229,20 @@
 					<br/>
 				</td>
 			</tr>
+			{if $rankingByMetric}
+				<tr>
+					<td class="label">{fieldLabel name="updateBoostFile" key="plugins.generic.lucene.settings.rankingByMetric"}</td>
+					<td class="value">
+						{if $pullIndexing || !$canWriteBoostFile}
+							<span class="instruct">{translate key="plugins.generic.lucene.settings.updateBoostFileDisabled"}</span>
+						{else}
+							<input type="submit" name="updateBoostFile" value="{translate key="plugins.generic.lucene.settings.updateBoostFile"}" onclick="jumpToIndexAdminAnchor()" class="action" /><br/>
+							<br/>
+							<span class="instruct">{translate key="plugins.generic.lucene.settings.updateBoostFileDescription"}</span><br/>
+						{/if}<br/>
+					</td>
+				</tr>
+			{/if}
 			<tr>
 				<td class="label">{fieldLabel name="startStopServer" key="plugins.generic.lucene.settings.startStopServer"}</td>
 				<td class="value">
@@ -228,7 +254,7 @@
 						{/if}
 					{else}
 						<div id="serverNotAvailable">
-							<br/>{translate key="plugins.generic.lucene.settings.serverNotAvailable"}
+							{translate key="plugins.generic.lucene.settings.serverNotAvailable"}
 						</div>
 					{/if}
 				</td>

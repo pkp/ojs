@@ -196,7 +196,7 @@ class EmbeddedServer {
 		// Check whether crucial files are writable.
 		$filesDir = Config::getVar('files', 'files_dir');
 		foreach(array('data', 'solr-java.log', 'solr-php.log', 'solr.pid') as $fileName) {
-			$filePath = '$filesDir' . DIRECTORY_SEPARATOR . 'lucene' . DIRECTORY_SEPARATOR . $fileName;
+			$filePath = $filesDir . DIRECTORY_SEPARATOR . 'lucene' . DIRECTORY_SEPARATOR . $fileName;
 			if (file_exists($filePath) && !is_writable($filePath)) {
 				return false;
 			}

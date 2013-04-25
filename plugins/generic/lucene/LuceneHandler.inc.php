@@ -25,12 +25,10 @@ class LuceneHandler extends Handler {
 	 */
 	function LuceneHandler($request) {
 		parent::Handler();
-		$router = $request->getRouter();
-		$journal = $router->getContext($request);
 	}
 
 	/**
-	 * @see PKPHandler::authorize()
+  	 * @see PKPHandler::authorize()
 	 * @param $request PKPRequest
 	 * @param $args array
 	 * @param $roleAssignments array
@@ -60,7 +58,7 @@ class LuceneHandler extends Handler {
 
 		// Check whether auto-suggest is enabled.
 		$suggestionList = array();
-		$lucenePlugin =& $this->_getLucenePlugin();
+		$lucenePlugin = $this->_getLucenePlugin();
 		$enabled = (bool)$lucenePlugin->getSetting(0, 'autosuggest');
 		if ($enabled) {
 			// Retrieve search criteria from the user input.
@@ -84,7 +82,7 @@ class LuceneHandler extends Handler {
 			$searchRequest->addQueryFromKeywords($keywords);
 
 			// Get the web service.
-			$solrWebService =& $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
+			$solrWebService = $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
 			$suggestions = $solrWebService->getAutosuggestions(
 				$searchRequest, $autosuggestField, $userInput,
 				(int)$lucenePlugin->getSetting(0, 'autosuggestType')
@@ -124,11 +122,11 @@ class LuceneHandler extends Handler {
 		}
 
 		// Die if pull indexing is disabled.
-		$lucenePlugin =& $this->_getLucenePlugin();
+		$lucenePlugin = $this->_getLucenePlugin();
 		if (!$lucenePlugin->getSetting(0, 'pullIndexing')) die(__('plugins.generic.lucene.message.pullIndexingDisabled'));
 
 		// Execute the pull indexing transaction.
-		$solrWebService =& $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
+		$solrWebService = $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
 		$solrWebService->pullChangedArticles(
 			array($this, 'pullIndexingCallback'), SOLR_INDEXING_MAX_BATCHSIZE
 		);
@@ -152,7 +150,7 @@ class LuceneHandler extends Handler {
 		// Check error conditions.
 		// - The "similar documents" feature is not enabled.
 		// - We got a non-numeric article ID.
-		$lucenePlugin =& $this->_getLucenePlugin();
+		$lucenePlugin = $this->_getLucenePlugin();
 		if (!($lucenePlugin->getSetting(0, 'simdocs')
 				&& is_numeric($articleId))) {
 			$request->redirect(null, 'search');
@@ -160,7 +158,7 @@ class LuceneHandler extends Handler {
 
 		// Identify "interesting" terms of the
 		// given article.
-		$solrWebService =& $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
+		$solrWebService = $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
 		$searchTerms = $solrWebService->getInterestingTerms($articleId);
 		if (empty($searchTerms)) {
 			$request->redirect(null, 'search');
@@ -172,6 +170,26 @@ class LuceneHandler extends Handler {
 			'query' => implode(' ', $searchTerms),
 		);
 		$request->redirect(null, 'search', 'search', null, $searchParams);
+	}
+
+	/**
+	 * If the "ranking-by-metric" feature is enabled then this
+	 * handler returns a file with normalized boost data.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function usageMetricBoost($args, $request) {
+		$this->validate(null, $request);
+
+		// We return a text file.
+		header('Content-type: text/plain');
+
+		// Only allow external report generation in the pull scenario.
+		$lucenePlugin = $this->_getLucenePlugin();
+		if (!$lucenePlugin->getSetting(0, 'pullIndexing')) return;
+
+		// Generate (and output) the report.
+		if (!$lucenePlugin->generateBoostFile());
 	}
 
 

@@ -9,10 +9,11 @@ Contents
   6)  Central Server Mode: Installation and Configuration
   7)  Troubleshooting
   8)  Push versus Pull Indexing
-  9)  Rebuilding your index and/or dictionaries
-  10) What else do I have to do to keep my index up to date?
-  11) Customizing Solr (additional languages, stopwords, etc.)
-  12) Subscription-Based Publications
+  9)  Ranking by Usage Statistics
+  10) Rebuilding your index, usage statistics and/or dictionaries
+  11) What else do I have to do to keep my index up to date?
+  12) Customizing Solr (additional languages, stopwords, etc.)
+  13) Subscription-Based Publications
 
 
 1 Welcome to the OJS Lucene/Solr Plug-In!
@@ -487,7 +488,7 @@ the following:
 
   You can execute:
 
-     #> rm -f cache/*.php
+     #> rm cache/fc-plugins-lucene-fieldCache.php
 
   Alternatively you can delete the cache via OJS' administrator tools.
 
@@ -611,10 +612,83 @@ execute the following actions in order:
    of what could have gone wrong.
 
 
-9 Rebuilding your index and/or dictionaries
--------------------------------------------
+9 Ranking by Usage Statistics
+-----------------------------
 
-There are two maintenance operations that cannot be fully automated
+The Lucene plugin allows you to influence the ranking of articles based on
+arbitrary usage statistics collected via OJS statistics/reporting plugins.
+
+Usage statistics will be used to boost ranking scores with a factor between
+0.5 (half, articles with 0 usage events) and 2.0 (double, article with the
+highest number of usage events). This means that an otherwise highly ranked
+article may be downranked or vice versa. Usage statistics will only be one
+of several factors, though. If you'd like to order search results by usage
+statistics only then use the search order feature on the advanced search
+page instead.
+
+This is an advanced feature and requires some custom configuration. To enable
+it follow these steps:
+
+- Enable and configure any of the OJS reporting plugins that collects usage
+  statistics, e.g. the Open Access Statistics (OA-S) plugin.
+
+- Make sure that you collect some statistics first and test that statistics
+  collection works properly.
+
+- Only if you collect more than one usage metric: Log in to your OJS instance
+  as Administrator. Go to the site settings page and select a "main metric".
+  This option will not be available if have only one statistics plugin enabled
+  and that plugin only provides a single metric. In this case you can leave
+  out this step.
+
+- Only if you set up the plugin with the (default) embedded server configuration:
+  Make sure that both, your web server and your Solr server have write access
+  to the 'files/lucene/data' directory. If you configured the central server
+  scenario then you can leave out this step.
+
+- Log in to your OJS instance as a Journal Manager. Go to the plugin settings
+  page of the Lucene plugin. The "ranking by usage statistics" search feature
+  should now be enabled. If it is not enabled then please check that the other
+  steps have been executed correctly.
+
+- Enable the "ranking by usage statistics" search feature and save the settings.
+
+- Only if you use the embedded server configuration: Go back to the plugin
+  settings page. You should now see an additional button 'Update Ranking Data'
+  in the administration section of this page. Click this button and your
+  ranking should immediately be influenced by statistics data. You'll have to
+  repeat this step whenever you update your statistics, e.g. on a daily or
+  monthly basis. You can automate this step with a cron job, see below.
+
+- Only if you use the central server configuration: You'll have to wait for
+  the pull script to be executed as this will download statistics from your
+  OJS server to the central repository. You can manually execute the pull
+  script once if you like and should then immediately see statistics data
+  influence your ranking.
+
+
+Automate the usage statistics update:
+
+If you configured a central search server then usage statistics update will be
+automatic whenever you execute the pull script. If you use the embedded server
+scenario then you'll have to install a separate cron job.
+
+Configure a cron job that executes as often as you update statistics but usually
+not more frequently than once a day. The cron job should obviously run after
+you update the statistics.
+
+Let the cron job execute the following script:
+
+    #> php tools/rebuildSearchIndex.php -n -b
+
+See the "Rebuilding your index, dictionaries and/or usage statistics" section
+below for further details.
+
+
+10 Rebuilding your index, dictionaries and/or usage statistics
+--------------------------------------------------------------
+
+There are a few maintenance operations that cannot be fully automated
 out-of-the-box:
 
 1) If you are using search features like "dictionary-based auto-suggestions" or
@@ -647,7 +721,11 @@ out-of-the-box:
    In these cases you'll have to rebuild your search index so that searches can
    be reliably executed again.
 
-There are two possibilities to rebuild your index and/or dictionaries:
+3) If you use "ranking by usage statistics" in the embedded server mode then
+   you'll have to update statistics data in Solr whenever the data is updated
+   in OJS.
+
+There are two possibilities to execute these administrative tasks:
 
 1) On the command line:
 
@@ -668,6 +746,7 @@ There are two possibilities to rebuild your index and/or dictionaries:
    The options are:
 
      -d     Rebuild dictionaries.
+     -b     Update usage statistics (see Ranking by Usage Statistics, above).
      -n     Do not re-index any articles. If this option is given together
             with a journal path then the journal path will be ignored.
      -h     Display usage information.
@@ -682,13 +761,23 @@ There are two possibilities to rebuild your index and/or dictionaries:
 
        #> php tools/rebuildSearchIndex.php -d -n
 
-     To rebuild the dictionaries and all journals of an installation:
+     To rebuild the dictionaries, refresh usage statistics and re-index
+     all journals of an installation:
 
-       #> php tools/rebuildSearchIndex.php -d
+       #> php tools/rebuildSearchIndex.php -d -b
 
      To rebuild the index of a single journal without rebuilding dictionaries:
 
        #> php tools/rebuildSearchIndex.php some-journal-path
+
+     To refresh the usage statistics only:
+
+       #> php tools/rebuildSearchIndex.php -b -n
+
+   Automated maintenance:
+
+     Of course you can automate maintenance by installing a cron job, e.g.
+     to regularly update the dictionary and/or usage statistics.
 
 
 2) Through the OJS web page:
@@ -697,7 +786,7 @@ There are two possibilities to rebuild your index and/or dictionaries:
    section there. The page has appropriate inline help.
 
 
-10 What else do I have to do to keep my index up to date?
+11 What else do I have to do to keep my index up to date?
 ---------------------------------------------------------
 
 Once correctly installed and running, the Solr/Lucene plug-in does not require
@@ -705,7 +794,7 @@ any further maintenance. Just monitor performance and resource usage of the Solr
 server as you would for any other process.
 
 
-11 Customizing Solr (additional languages, stopwords, etc.)
+12 Customizing Solr (additional languages, stopwords, etc.)
 -----------------------------------------------------------
 
 All Solr configuration files come with inline comments that hint you about what
@@ -788,7 +877,8 @@ If you are searching in mixed-language fields (e.g. titles that contain both
 English and Chinese versions of the same text) then searching for words with
 quotes (e.g. '+China +"中国"') may be helpful to avoid false positives.
 
-12) Subscription-Based Publications
+
+13 Subscription-Based Publications
 -----------------------------------
 
 In order for the Solr server to gain access to subscription-only content on the

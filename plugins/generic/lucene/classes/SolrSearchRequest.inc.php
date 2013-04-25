@@ -81,6 +81,11 @@ class SolrSearchRequest {
 	var $_boostFactors = array();
 
 	/**
+	 * @var array Fields with multiplicative boost values.
+	 */
+	var $_boostFields = array();
+
+	/**
 	 * Constructor
 	 *
 	 * @param $searchHandler string The search handler URL. We assume the embedded server
@@ -320,6 +325,33 @@ class SolrSearchRequest {
 			$this->_boostFactors[$field] = array();
 		}
 		$this->_boostFactors[$field][$value] = $boostFactor;
+	}
+
+	/**
+	 * Get boost fields.
+	 * @return array A list of fields containing boost factors to be multiplied
+	 *   with the internal ranking score.
+	 */
+	function getBoostFields() {
+		return $this->_boostFields;
+	}
+
+	/**
+	 * Set boost fields.
+	 * @param $boostFields array A list of fields containing boost factors to
+	 *   be multiplied with the internal ranking score.
+	 */
+	function setBoostFields($boostFields) {
+		$this->_boostFields = $boostFields;
+	}
+
+	/**
+	 * A field containing boost factors to be multiplied.
+	 * with the internal ranking score.
+	 * @param $field string
+	 */
+	function addBoostField($field) {
+		$this->_boostFields[] = $field;
 	}
 
 

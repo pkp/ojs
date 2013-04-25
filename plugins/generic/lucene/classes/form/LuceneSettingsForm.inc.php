@@ -94,9 +94,17 @@ class LuceneSettingsForm extends Form {
 	 * @see Form::fetch()
 	 */
 	function fetch($request, $template = null, $display = false) {
-		// Prepare auto-suggest
+		// Prepare auto-suggest.
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('autosuggestTypes', $this->_getAutosuggestTypes());
+
+		// Prepare ranking-by-metric.
+		$metricName = $this->_getDefaultMetric();
+		$templateMgr->assign('metricName', $metricName);
+		$templateMgr->assign('noMainMetric', empty($metricName));
+		$filesDir = Config::getVar('files', 'files_dir');
+		$filePath = $filesDir . DIRECTORY_SEPARATOR . 'lucene' . DIRECTORY_SEPARATOR . 'data';
+		$templateMgr->assign('canWriteBoostFile', is_writable($filePath));
 
 		// Prepare index rebuild.
 		$templateMgr->assign('journalsToReindex', $this->_getJournalsToReindex());
@@ -138,7 +146,7 @@ class LuceneSettingsForm extends Form {
 			'facetCategorySubject', 'facetCategoryType',
 			'facetCategoryCoverage', 'facetCategoryJournalTitle',
 			'facetCategoryAuthors', 'facetCategoryPublicationDate',
-			'customRanking', 'instantSearch'
+			'customRanking', 'instantSearch', 'rankingByMetric'
 		);
 		$otherFormFields = array(
 			'searchEndpoint', 'username', 'instId',
@@ -181,6 +189,19 @@ class LuceneSettingsForm extends Form {
 		}
 
 		return $journalsToReindex;
+	}
+
+	/**
+	 * Return the default metric for the current request context.
+	 * @return null|string a metric identifier or null
+	 */
+	function _getDefaultMetric() {
+		$application = PKPApplication::getApplication();
+		$metricType = $application->getDefaultMetricType();
+		if (empty($metricType)) return null;
+		$metricNames = $application->getMetricTypes(true);
+		if (!isset($metricNames[$metricType])) return null;
+		return $metricNames[$metricType];
 	}
 }
 

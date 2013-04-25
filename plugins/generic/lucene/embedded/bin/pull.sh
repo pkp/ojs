@@ -65,7 +65,18 @@ for PULL_URL in $PULL_URLS; do
   fi
 done
 
+# For the usage statistics update:
+# Identify the next file name (required for compatibility with the corresponding embedded
+# server behavior so that one can switch between the two).
+CURRENT_STAT_FILE=`ls $PULL_LUCENE_INDEX_DIR/external_usageMetric.* 2>/dev/null | sort | tail -n1`
+CURRENT_STAT_EXTENSION=`echo $CURRENT_STAT_FILE | sed -r 's/.*\.0*([1-9][0-9]*)$/\1/'`
+NEXT_STAT_EXTENSION=$((CURRENT_STAT_EXTENSION+1)) # This works even if no prior file was found...
+NEXT_STAT_EXTENSION=`printf %08d $NEXT_STAT_EXTENSION` # Padding to eight numbers.
+NEXT_STAT_FILE="$PULL_LUCENE_INDEX_DIR/external_usageMetric.$NEXT_STAT_EXTENSION"
+UPDATED_STAT_FILE='false'
+
 for PULL_URL in $PULL_URLS; do
+  # Pull and stage article metadata files.
   echo "Accessing '$PULL_URL':"
   TIMESTAMP=`date '+%Y%m%d%H%M%S'`
   PREFIX=`echo $PULL_URL | sed -r 's%^https?://%%;s%/index.php%%;s%[/.:]%-%g'`
@@ -75,10 +86,35 @@ for PULL_URL in $PULL_URLS; do
     SUFFIX=`printf %03d $COUNTER`
     FILENAME="$PULL_STAGING_DIR/$PREFIX-$TIMESTAMP-$SUFFIX.xml"
     curl -s "$PULL_URL/index/lucene/pullChangedArticles" >"$FILENAME"
-    echo " - pulling '$FILENAME'"
+    echo " - Pulling '$FILENAME'."
     HAS_MORE=`cat "$FILENAME" | egrep '<articleList[^>]* hasMore="(yes|no)"' | sed -r 's/^.*hasMore="(yes|no)".*$/\1/'`
     let COUNTER=COUNTER+1
   done
-  echo " - $COUNTER file(s) pulled from '$PULL_URL'"
+  echo " - $COUNTER file(s) pulled from '$PULL_URL'."
+
+  # Update usage statistics.
+  echo " - Checking usage statistics."
+  # Download usage statistics to a temporary file.
+  TEMPFILE=`tempfile`
+  curl -s "$PULL_URL/index/lucene/usageMetricBoost" >$TEMPFILE
+  if [[ -s $TEMPFILE ]]; then
+    if [[ ! -z "$CURRENT_STAT_FILE" ]]; then
+      # Copy the old file to the new location while suppresing all
+      # entries from the same installation.
+      INST_ID=`head -n1 "$TEMPFILE" | sed -r 's/-[0-9]+=[0-9.]+$//'`
+      sed -r "/^$INST_ID-[0-9]+=/d" $CURRENT_STAT_FILE >>$TEMPFILE
+      UPDATED_STAT_FILE='true'
+    fi
+    LC_ALL=C sort $TEMPFILE >$NEXT_STAT_FILE
+    echo " - Updated statistics to '$NEXT_STAT_FILE'."
+  else
+    echo " - No statistics found or statistics disabled."
+  fi
+  rm $TEMPFILE
   echo
 done
+
+if [[ $UPDATED_STAT_FILE = "true" ]]; then
+  # Tell Solr to refresh usage statistics data.
+  curl -s $RELOAD_EXT_FILE_ENDPOINT >/dev/null
+fi

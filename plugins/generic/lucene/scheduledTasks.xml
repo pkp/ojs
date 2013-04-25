@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * @file plugins/generic/oas/scheduledTasks.xml
+  *
+  * Copyright (c) 2003-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OA-S scheduled tasks registry file. To install create a cronjob with
+  * the following command.
+  * #> php tools/runScheduledTask.php plugins/generic/oas/scheduledTasks.xml
+  *
+  * The cronjob should be executed on a daily basis.
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.generic.oas.classes.task.OasFileLoader">
+		<descr>Retrieve OA-S statistics from the OA-S statistics server.</descr>
+		<frequency hour="2"/>
+	</task>
+</scheduled_tasks>
