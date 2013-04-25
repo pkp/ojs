@@ -22,6 +22,7 @@ class PublicationSettingsTabHandler extends ManagerSettingsTabHandler {
 	function PublicationSettingsTabHandler() {
 		parent::ManagerSettingsTabHandler();
 		$this->setPageTabs(array(
+			'genres' => 'controllers/tab/settings/genres.tpl',
 			'submissionStage' => 'lib.pkp.controllers.tab.settings.submissionStage.form.SubmissionStageForm',
 			'contentIndexing' => 'controllers.tab.settings.contentIndexing.form.ContentIndexingForm',
 			'reviewStage' => 'controllers.tab.settings.reviewStage.form.OJSReviewStageForm',

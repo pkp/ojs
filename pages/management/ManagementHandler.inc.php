@@ -34,7 +34,7 @@ class ManagementHandler extends Handler {
 		parent::initialize($request, $args);
 
 		// Load manager locale components.
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_GRID);
 	}
 
 	/**
