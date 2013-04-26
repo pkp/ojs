@@ -17,18 +17,6 @@
 
 switch ($op) {
 	//
-	// Article Submission
-	//
-	case 'submit':
-	case 'saveSubmit':
-	case 'submitSuppFile':
-	case 'saveSubmitSuppFile':
-	case 'deleteSubmitSuppFile':
-	case 'expediteSubmission':
-		define('HANDLER_CLASS', 'SubmitHandler');
-		import('pages.author.SubmitHandler');
-		break;
-	//
 	// Submission Tracking
 	//
 	case 'deleteArticleFile':

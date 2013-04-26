@@ -120,26 +120,6 @@
 				<td align="right"></td>
 			</tr>
 		{/if}
-		{if $isValid.Author.$journalId || $isValid.Reviewer.$journalId}
-			<tr><td class="separator" width="100%" colspan="5">&nbsp;</td></tr>
-		{/if}
-		{if $isValid.Author.$journalId}
-			{assign var="authorSubmissionsCount" value=$submissionsCount.Author.$journalId}
-			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="author"}">{translate key="user.role.author"}</a></td>
-				<td></td>
-				<td>{if $authorSubmissionsCount[0]}
-						<a href="{url journal=$journalPath page="author"}">{$authorSubmissionsCount[0]} {translate key="common.queue.short.active"}</a>
-					{else}<span class="disabled">0 {translate key="common.queue.short.active"}</span>{/if}
-				</td>
-				{* This is for all non-pending items*}
-				<td>{if $authorSubmissionsCount[1]}
-						<a href="{url journal=$journalPath path="completed" page="author"}">{$authorSubmissionsCount[1]} {translate key="common.queue.short.completed"}</a>
-					{else}<span class="disabled">0 {translate key="common.queue.short.completed"}</span>{/if}
-				</td>
-				<td></td>
-			</tr>
-		{/if}
 		{if $isValid.Reviewer.$journalId}
 			{assign var="reviewerSubmissionsCount" value=$submissionsCount.Reviewer.$journalId}
 			<tr>
@@ -174,15 +154,6 @@
 		<div id="noRolesForJournal">
 		<p>{translate key="user.noRoles.noRolesForJournal"}</p>
 		<ul class="plain">
-			<li>
-				&#187;
-				{if $allowRegAuthor}
-					{url|assign:"submitUrl" page="author" op="submit"}
-					<a href="{url op="become" path="author" source=$submitUrl}">{translate key="user.noRoles.submitArticle"}</a>
-				{else}{* $allowRegAuthor *}
-					{translate key="user.noRoles.submitArticleRegClosed"}
-				{/if}{* $allowRegAuthor *}
-			</li>
 			<li>
 				&#187;
 				{if $allowRegReviewer}
