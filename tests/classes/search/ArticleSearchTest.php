@@ -273,7 +273,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$issueDAO = $this->getMock('IssueDAO', array('getById'), array(), '', false);
 
 		// Mock an issue.
-		$issue = $issueDao->newDataObject();
+		$issue = $issueDAO->newDataObject();
 		$issue->setPublished($published);
 
 		// Mock the getById() method.
