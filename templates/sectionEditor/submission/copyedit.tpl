@@ -102,7 +102,7 @@
 		<td>{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
 			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $initialCopyeditSignoff->getDateCompleted()}
-				{url|assign:"url" op="notifyAuthorCopyedit articleId=$submission->getId()}
+				{url|assign:"url" op="notifyAuthorCopyedit" articleId=$submission->getId()}
 				{if $authorCopyeditSignoff->getDateUnderway()}
 					{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 					{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
@@ -122,7 +122,7 @@
 		</td>
 		<td>
 			{if ($submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') || !$useCopyeditors) && $authorCopyeditSignoff->getDateNotified() && !$authorCopyeditSignoff->getDateAcknowledged()}
-				{url|assign:"url" op="thankAuthorCopyedit articleId=$submission->getId()}
+				{url|assign:"url" op="thankAuthorCopyedit" articleId=$submission->getId()}
 				{icon name="mail" url=$url}
 			{else}
 				{icon name="mail" disabled="disable"}
@@ -149,7 +149,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') && $authorCopyeditSignoff->getDateCompleted()}
-					{url|assign:"url" op="notifyFinalCopyedit articleId=$submission->getId()}
+					{url|assign:"url" op="notifyFinalCopyedit" articleId=$submission->getId()}
 					{if $finalCopyeditSignoff->getDateUnderway()}
 						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
@@ -181,7 +181,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getUserIdBySignoffType('SIGNOFF_COPYEDITING_INITIAL') &&  $finalCopyeditSignoff->getDateNotified() && !$finalCopyeditSignoff->getDateAcknowledged()}
-					{url|assign:"url" op="thankFinalCopyedit articleId=$submission->getId()}
+					{url|assign:"url" op="thankFinalCopyedit" articleId=$submission->getId()}
 					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
