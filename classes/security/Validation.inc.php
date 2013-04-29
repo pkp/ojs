@@ -256,7 +256,8 @@ class Validation {
 			// No such user
 			return false;
 		}
-		return substr(md5($user->getId() . $user->getUsername() . $user->getPassword()), 0, 6);
+		$hash = Validation::encryptCredentials($user->getUsername(), $user->getPassword());
+		return substr($hash, 0, 6);
 	}
 
 	/**
