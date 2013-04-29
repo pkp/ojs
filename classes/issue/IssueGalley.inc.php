@@ -48,16 +48,8 @@ class IssueGalley extends IssueFile {
 	 * @return int
 	 */
 	function getViews() {
-		return $this->getData('views');
-	}
-
-	/**
-	 * Set views count.
-	 * NOTE that the views count is NOT stored by the DAO update or insert functions.
-	 * @param $views int
-	 */
-	function setViews($views) {
-		return $this->setData('views', $views);
+		$application = PKPApplication::getApplication();
+		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_ISSUE_GALLEY, $this->getId());
 	}
 
 	/**

@@ -129,7 +129,6 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley->setFileId($galley->getFileId());
 		$articleXMLGalley->setLabel($galley->getLabel());
 		$articleXMLGalley->setSequence($galley->getSequence());
-		$articleXMLGalley->setViews($galley->getViews());
 		$articleXMLGalley->setFileName($galley->getFileName());
 		$articleXMLGalley->setOriginalFileName($galley->getOriginalFileName());
 		$articleXMLGalley->setFileType($galley->getFileType());

@@ -401,7 +401,6 @@ class QuickSubmitForm extends Form {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished($this->getData('datePublished'));
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
-				$publishedArticle->setViews(0);
 				$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);
 
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);

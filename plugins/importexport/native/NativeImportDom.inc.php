@@ -860,7 +860,6 @@ class NativeImportDom {
 		$node = $articleNode->getChildByName('open_access');
 		$publishedArticle->setAccessStatus($node?ARTICLE_ACCESS_OPEN:ARTICLE_ACCESS_ISSUE_DEFAULT);
 		$publishedArticle->setSeq(REALLY_BIG_NUMBER);
-		$publishedArticle->setViews(0);
 
 		$publishedArticle->setPublishedArticleId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 

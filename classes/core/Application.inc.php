@@ -376,6 +376,25 @@ class Application extends PKPApplication {
 		return $report;
 	}
 
+	/**
+	 * Return metric in the primary metric type
+	 * for the passed associated object.
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @return int
+	 */
+	function getPrimaryMetricByAssoc($assocType, $assocId) {
+		$filter = array(
+			STATISTICS_DIMENSION_ASSOC_ID => $assocId,
+			STATISTICS_DIMENSION_ASSOC_TYPE => $assocType);
+		$metric = $this->getMetrics(null, array(), $filter);
+		if (is_array($metric)) {
+			return $metric[0]['metric'];
+		} else {
+			return 0;
+		}
+	}
+
 
 	//
 	// Statistics API: private helper methods.

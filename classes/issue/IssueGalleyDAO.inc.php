@@ -229,7 +229,6 @@ class IssueGalleyDAO extends DAO {
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
-		$galley->setViews($row['views']);
 
 		// IssueFile set methods
 		$galley->setFileName($row['file_name']);
