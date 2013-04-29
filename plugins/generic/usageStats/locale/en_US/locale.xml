@@ -25,4 +25,10 @@
 	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
 	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">OJS usage statistics report</message>
+	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Open Journal System statistics (COUNTER ready)</message>
 </locale>

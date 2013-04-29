@@ -41,6 +41,8 @@ class UsageStatsLoader extends FileLoader {
 		$this->_geoLocationTool = new GeoLocationTool();
 
 		$plugin = PluginRegistry::getPlugin('generic', 'usagestatsplugin');
+		// Load the metric type constant.
+		PluginRegistry::loadCategory('reports');
 		$this->_plugin = $plugin;
 
 		$this->_minTimeBetweenRequests = $plugin->getSetting(0, 'minTimeBetweenRequests');
@@ -267,7 +269,7 @@ class UsageStatsLoader extends FileLoader {
 		$metricsDao->purgeLoadBatch($loadId);
 
 		while ($record = $statsDao->getNextByLoadId($loadId)) {
-			$record['metric_type'] = 'ojs::counter';
+			$record['metric_type'] = OJS_METRIC_TYPE_COUNTER;
 			$metricsDao->insertRecord($record);
 		}
 

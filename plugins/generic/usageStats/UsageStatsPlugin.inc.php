@@ -30,6 +30,9 @@ class UsageStatsPlugin extends GenericPlugin {
 			// Register callbacks.
 			$app =& PKPApplication::getApplication();
 			$version = $app->getCurrentVersion();
+
+			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+
 			if ($version->getMajor() < 3) {
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackLoadHandler'));
 			}
@@ -149,6 +152,29 @@ class UsageStatsPlugin extends GenericPlugin {
 	//
 	// Hook implementations.
 	//
+	/**
+	* @see PluginRegistry::loadCategory()
+	*/
+	function callbackLoadCategory($hookName, $args) {
+		// Instantiate report plugin.
+		$plugin = null;
+		$category = $args[0];
+		if ($category == 'reports') {
+			$this->import('UsageStatsReportPlugin');
+			$plugin = new UsageStatsReportPlugin();
+		}
+
+		// Register report plugin (by reference).
+		if ($plugin) {
+			$seq = $plugin->getSeq();
+			$plugins =& $args[1];
+			if (!isset($plugins[$seq])) $plugins[$seq] = array();
+			$plugins[$seq][$plugin->getPluginPath()] = $plugin;
+		}
+
+		return false;
+	}
+
 	/**
 	 * Log the usage event into a file.
 	 * @param $hookName string
