@@ -390,7 +390,6 @@ class IssueHandler extends Handler {
 		$galley =& $this->getGalley();
 
 		$galleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
-		if (!$request->isBot()) $galleyDao->incrementViews($galley->getId());
 
 		if (!HookRegistry::call('IssueHandler::viewFile', array(&$issue, &$galley))) {
 			import('classes.file.IssueFileManager');

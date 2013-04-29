@@ -388,10 +388,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="views" type="I4">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<descr>Issue galleys.</descr>
 		<index name="issue_galleys_issue_id">
 			<col>issue_id</col>
@@ -630,10 +626,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="views" type="I4">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="access_status" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -862,10 +854,6 @@
 		</field>
 		<field name="style_file_id" type="I8"/>
 		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="views" type="I4">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>

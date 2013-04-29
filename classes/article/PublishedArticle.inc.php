@@ -114,15 +114,8 @@ class PublishedArticle extends Article {
 	 * @return int
 	 */
 	function getViews() {
-		return $this->getData('views');
-	}
-
-	/**
-	 * Set views of the published article.
-	 * @param $views int
-	 */
-	function setViews($views) {
-		return $this->setData('views', $views);
+		$application =& PKPApplication::getApplication();
+		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_ARTICLE, $this->getId());
 	}
 
 	/**
