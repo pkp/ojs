@@ -162,16 +162,6 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		break;
-	//
-	// Issue
-	//
-	case 'issues':
-	case 'downloadIssueFile':
-	case 'setCurrentIssue':
-	case 'notifyUsers':
-		define('HANDLER_CLASS', 'IssueManagementHandler');
-		import('pages.editor.IssueManagementHandler');
-		break;
 	case 'index':
 	case 'submissions':
 	case 'setEditorFlags':

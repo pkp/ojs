@@ -41,7 +41,7 @@
 						<a href="#">{translate key="navigation.management"}</a>
 						<ul>
 							<li>
-								<a href="{url page="editor" op="issues"}">{translate key="editor.navigation.issues"}</a>
+								<a href="{url page="manageIssues"}">{translate key="editor.navigation.issues"}</a>
 							</li>
 							{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
 							<li>

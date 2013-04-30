@@ -1,10 +1,10 @@
 {**
- * templates/management/settings/publication.tpl
+ * templates/manageIssues/issues.tpl
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * The publication process settings page.
+ * The issue management page.
  *}
 {strip}
 {assign var="pageTitle" value="editor.navigation.issues"}

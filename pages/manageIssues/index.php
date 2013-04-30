@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @defgroup pages_manageIssues
+ */
+
+/**
+ * @file pages/manageIssues/index.php
+ *
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pages_editor
+ * @brief Handle requests for issue management functions.
+ *
+ */
+
+switch ($op) {
+	//
+	// Issue
+	//
+	case 'index':
+		define('HANDLER_CLASS', 'ManageIssuesHandler');
+		import('pages.manageIssues.ManageIssuesHandler');
+		break;
+}
+
+?>
