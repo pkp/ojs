@@ -44,13 +44,6 @@ class UsageEventPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see LazyLoadPlugin::getName()
-	 */
-	function getName() {
-		return 'usageEvent';
-	}
-
-	/**
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
