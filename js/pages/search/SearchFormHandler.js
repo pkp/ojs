@@ -16,10 +16,6 @@
 (function($) {
 
 	/** @type {Object} */
-	$.pkp.pages = $.pkp.pages || {};
-
-
-	/** @type {Object} */
 	$.pkp.pages.search = $.pkp.pages.search || {};
 
 
