@@ -38,6 +38,14 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	}
 
 	/**
+	 * @see PKPTestCase::setUp()
+	 */
+	protected function setUp() {
+		parent::setUp();
+		HookRegistry::rememberCalledHooks();
+	}
+
+	/**
 	 * @see PKPTestCase::tearDown()
 	 */
 	protected function tearDown() {
