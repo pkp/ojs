@@ -232,7 +232,8 @@ class UsageStatsLoader extends FileLoader {
 
 				// Check if we are not dealing with supp files or galleys.
 				$explodedString = explode('/', $assocId);
-				if (!is_null($explodedString[1])) {
+				if (isset($explodedString[1]) && !is_null($explodedString[1])) {
+					$parentObjectId = $explodedString[0];
 					$assocId = $explodedString[1];
 					// Set the correct assoc type.
 					if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
@@ -242,17 +243,135 @@ class UsageStatsLoader extends FileLoader {
 					}
 				}
 
-				if (!is_numeric($assocId)) {
-					$assocId = false;
-				}
-
 				if (!$assocType) {
 					$assocType = $workingAssocType;
+				}
+
+				// Get the journal object.
+				$journalPath = explode('index.php/', $referer);
+				$journalPath = explode('/', $journalPath[1]);
+				$journalPath = $journalPath[0];
+				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journal = $journalDao->getByPath($journalPath);
+				if (!is_a($journal, 'Journal')) {
+					return array(false, false);
+				} else {
+					$journalId = $journal->getId();
+				}
+
+				// Get the internal object id (avoiding public ids).
+				switch ($assocType) {
+					case ASSOC_TYPE_ARTICLE:
+						$assocId = $this->_getInternalArticleId($assocId, $journal);
+						break;
+					case ASSOC_TYPE_SUPP_FILE:
+						$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
+						$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+						if ($journal->getSetting('enablePublicSuppFileId')) {
+							$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
+						} else {
+							$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
+						}
+						if (!is_a($suppFile, 'SuppFile')) {
+							$assocId = $suppFile->getId();
+						} else {
+							$assocId = false;
+						}
+						echo('Supp file. File id: ' . $assocId . PHP_EOL);
+						break;
+					case ASSOC_TYPE_GALLEY:
+						$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
+						if (!$articleId) {
+							$assocId = false;
+							break;
+						}
+
+						$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+						if ($journal->getSetting('enablePublicGalleyId')) {
+							$galley =& $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
+						} else {
+							$galley =& $galleyDao->getGalley($assocId, $articleId);
+						}
+						if (is_a($galley, 'ArticleGalley')) {
+							$assocId = $galley->getId();
+						} else {
+							$assocId = false;
+						}
+						break;
+					case ASSOC_TYPE_ISSUE:
+						$assocId = $this->_getInternalIssueId($assocId, $journal);
+						break;
+					case ASSOC_TYPE_ISSUE_GALLEY:
+						$issueId = $this->_getInternalIssueId($parentObjectId, $journal);
+						if (!$issueId) {
+							$assocId = false;
+							break;
+						}
+						$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+						if ($journal->getSetting('enablePublicGalleyId')) {
+							$galley = $galleyDao->getByBestId($assocId, $issueId);
+						} else {
+							$galley = $galleyDao->getById($assocId, $issueId);
+						}
+						if (is_a($galley, 'IssueGalley')) {
+							$assocId = $issue->getId();
+						} else {
+							$assocId = false;
+						}
+						break;
 				}
 			}
 		}
 
 		return array($assocId, $assocType);
+	}
+
+	/**
+	 * Get internal article id.
+	 * @param $id string The id to be used
+	 * to retrieve the object.
+	 * @param $journal Journal The journal
+	 * that the article belongs to.
+	 * @return mixed The internal id if any
+	 * object was found or false.
+	 */
+	private function _getInternalArticleId($id, $journal) {
+		$journalId = $journal->getId();
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		if ($journal->getSetting('enablePublicArticleId')) {
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journalId, $id, true);
+		} else {
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId((int) $id, (int) $journalId, true);
+		}
+		if (is_a($publishedArticle, 'PublishedArticle')) {
+			return $publishedArticle->getId();
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	* Get internal issue id.
+	* @param $id string The id to be used
+	* to retrieve the object.
+	* @param $journal Journal The journal
+	* that the issue belongs to.
+	* @return mixed The internal id if any
+	* object was found or false.
+	*/
+	private function _getInternalIssueId($id, $journal) {
+		$journalId = $journal->getId();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		if ($journal->getSetting('enablePublicIssueId')) {
+			$issue = $issueDao->getByBestId($id, $journalId);
+		} else {
+			$issue = $issueDao->getById((int) $id, null, true);
+		}
+		if (is_a($issue, 'Issue')) {
+			return $issue->getId();
+		} else {
+			return false;
+		}
 	}
 
 	/**

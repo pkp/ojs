@@ -42,10 +42,16 @@ class GeoLocationTool {
 	 */
 	public function getGeoLocation($ip) {
 		$record = geoip_record_by_addr($this->_geoLocationTool, $ip);
+
+		$regionName = null;
+		if(isset($this->_regionName[$record->country_code][$record->region])) {
+			$regionName = $this->_regionName[$record->country_code][$record->region];
+		}
+
 		return array(
 			$record->country_code,
 			$record->city,
-			$this->_regionName[$record->country_code][$record->region]
+			$regionName
 		);
 	}
 }
