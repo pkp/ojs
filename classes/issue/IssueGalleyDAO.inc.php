@@ -123,7 +123,7 @@ class IssueGalleyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		} else {
-			HookRegistry::call('IssueGalleyDAO::getGalleyByPubId', array(&$galleyId, &$issueId, &$returner));
+			HookRegistry::call('IssueGalleyDAO::getByPubId', array(&$galleyId, &$issueId, &$returner));
 		}
 		$result->Close();
 		return $returner;
@@ -172,7 +172,7 @@ class IssueGalleyDAO extends DAO {
 	 * @return galley object
 	 */
 	function getByBestId($galleyId, $issueId) {
-		if ($galleyId != '') $galley =& $this->getGalleyByPubId('publisher-id', $galleyId, $issueId);
+		if ($galleyId != '') $galley =& $this->getByPubId('publisher-id', $galleyId, $issueId);
 		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $issueId);
 		return $galley;
 	}
