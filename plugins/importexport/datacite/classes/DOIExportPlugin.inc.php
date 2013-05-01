@@ -395,11 +395,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 						$form->execute();
 						$request->redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 					} else {
-						$this->setBreadCrumbs(array(), true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(array(), true);
 					$form->initData();
 					$form->display();
 				}
