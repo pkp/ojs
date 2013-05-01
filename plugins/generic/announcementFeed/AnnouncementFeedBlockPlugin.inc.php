@@ -84,10 +84,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the HTML contents for this block.
-	 * @param $templateMgr object
-	 * @param $request PKPRequest
-	 * @return $string
+	 * @see BlockPlugin::getContents
 	 */
 	function getContents(&$templateMgr, $request = null) {
 		$journal = $request->getJournal();

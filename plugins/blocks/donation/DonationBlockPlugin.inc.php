@@ -59,7 +59,7 @@ class DonationBlockPlugin extends BlockPlugin {
 	/**
 	 * @see BlockPlugin::getContents
 	 */
-	function getContents($templateMgr, $request = null) {
+	function getContents(&$templateMgr, $request = null) {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 		import('classes.payment.ojs.OJSPaymentManager');

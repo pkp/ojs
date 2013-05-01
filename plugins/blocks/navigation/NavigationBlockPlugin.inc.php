@@ -47,9 +47,7 @@ class NavigationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the contents for this block.
-	 * @param $templateMgr object
-	 * @return string
+	 * @see BlockPlugin::getContents
 	 */
 	function getContents(&$templateMgr, $request = null) {
 		$templateMgr->assign('articleSearchByOptions', array(

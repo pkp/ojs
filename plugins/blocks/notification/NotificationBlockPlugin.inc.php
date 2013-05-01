@@ -56,9 +56,7 @@ class NotificationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the HTML contents for this block.
-	 * @param $templateMgr object
-	 * @param $request PKPRequest
+	 * @see BlockPlugin::getContents
 	 */
 	function getContents(&$templateMgr, $request = null) {
 		$user = $request->getUser();

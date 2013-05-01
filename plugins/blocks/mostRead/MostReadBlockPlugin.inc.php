@@ -46,7 +46,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 	/**
 	 * @see BlockPlugin::getContents()
 	 */
-	function getContents($templateMgr, $request) {
+	function getContents(&$templateMgr, $request) {
 		// The plugin is only available on journal level.
 		$journal = $request->getJournal();
 		if (!is_a($journal, 'Journal')) {
