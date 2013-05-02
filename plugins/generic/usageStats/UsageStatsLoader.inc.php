@@ -261,45 +261,45 @@ class UsageStatsLoader extends FileLoader {
 
 				// Get the internal object id (avoiding public ids).
 				switch ($assocType) {
-					case ASSOC_TYPE_ARTICLE:
-						$assocId = $this->_getInternalArticleId($assocId, $journal);
-						break;
 					case ASSOC_TYPE_SUPP_FILE:
-						$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
-						$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-						if ($journal->getSetting('enablePublicSuppFileId')) {
-							$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
-						} else {
-							$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
-						}
-						if (!is_a($suppFile, 'SuppFile')) {
-							$assocId = $suppFile->getId();
-						} else {
-							$assocId = false;
-						}
-						echo('Supp file. File id: ' . $assocId . PHP_EOL);
-						break;
 					case ASSOC_TYPE_GALLEY:
 						$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
 						if (!$articleId) {
 							$assocId = false;
 							break;
 						}
+						if ($assocType == ASSOC_TYPE_SUPP_FILE) {
+							$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+							if ($journal->getSetting('enablePublicSuppFileId')) {
+								$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
+							} else {
+								$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
+							}
+							if (is_a($suppFile, 'SuppFile')) {
+								$assocId = $suppFile->getId();
+							} else {
+								$assocId = false;
+							}
+							break;
+						} else {
+							$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+							if ($journal->getSetting('enablePublicGalleyId')) {
+								$galley =& $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
+							} else {
+								$galley =& $galleyDao->getGalley($assocId, $articleId);
+							}
+							if (is_a($galley, 'ArticleGalley')) {
+								$assocId = $galley->getId();
+								break;
+							}
+						}
 
-						$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-						if ($journal->getSetting('enablePublicGalleyId')) {
-							$galley =& $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
-						} else {
-							$galley =& $galleyDao->getGalley($assocId, $articleId);
-						}
-						if (is_a($galley, 'ArticleGalley')) {
-							$assocId = $galley->getId();
-						} else {
-							$assocId = false;
-						}
-						break;
-					case ASSOC_TYPE_ISSUE:
-						$assocId = $this->_getInternalIssueId($assocId, $journal);
+						// Couldn't retrieve galley,
+						// count as article view.
+						$assocType = ASSOC_TYPE_ARTICLE;
+						$assocId = $parentObjectId;
+					case ASSOC_TYPE_ARTICLE:
+						$assocId = $this->_getInternalArticleId($assocId, $journal);
 						break;
 					case ASSOC_TYPE_ISSUE_GALLEY:
 						$issueId = $this->_getInternalIssueId($parentObjectId, $journal);
@@ -315,9 +315,15 @@ class UsageStatsLoader extends FileLoader {
 						}
 						if (is_a($galley, 'IssueGalley')) {
 							$assocId = $issue->getId();
+							break;
 						} else {
-							$assocId = false;
+							// Count as a issue view. Don't break
+							// so the issue case will be handled.
+							$assocType = ASSOC_TYPE_ISSUE;
+							$assocId = $parentObjectId;
 						}
+					case ASSOC_TYPE_ISSUE:
+						$assocId = $this->_getInternalIssueId($assocId, $journal);
 						break;
 				}
 			}
