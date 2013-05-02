@@ -289,7 +289,9 @@ class MetricsDAO extends DAO {
 		}
 
 		// Country is optional.
-		if (isset($record['country_id'])) $recordToStore['country_id'] = (int)$record['country_id'];
+		if (isset($record['country_id'])) $recordToStore['country_id'] = (string)$record['country_id'];
+		if (isset($record['region'])) $recordToStore['region'] = (string)$record['region'];
+		if (isset($record['city'])) $recordToStore['city'] = (string)$record['city'];
 
 		// The metric must be set. If it is 0 we ignore the record.
 		if (!isset($record['metric'])) {
