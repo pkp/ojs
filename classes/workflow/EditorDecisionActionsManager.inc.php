@@ -105,14 +105,14 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => array(
 				'operation' => 'externalReview',
 				'name' => 'externalReview',
-				'title' => 'editor.monograph.decision.sendExternalReview',
+				'title' => 'editor.submission.decision.sendExternalReview',
 				'image' => 'advance',
 				'titleIcon' => 'modal_review',
 			),
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'name' => 'accept',
 				'operation' => 'promote',
-				'title' => 'editor.monograph.decision.accept',
+				'title' => 'editor.submission.decision.accept',
 				'image' => 'promote',
 				'help' => 'editor.review.NotifyAuthorAccept',
 				'titleIcon' => 'accept_submission',
@@ -120,7 +120,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_DECLINE => array(
 				'name' => 'decline',
 				'operation' => 'sendReviews',
-				'title' => 'editor.monograph.decision.decline',
+				'title' => 'editor.submission.decision.decline',
 				'image' => 'decline',
 				'help' => 'editor.review.NotifyAuthorDecline',
 				'titleIcon' => 'decline_submission',
@@ -139,7 +139,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'requestRevisions',
-				'title' => 'editor.monograph.decision.requestRevisions',
+				'title' => 'editor.submission.decision.requestRevisions',
 				'image' => 'revisions',
 				'help' => 'editor.review.NotifyAuthorRevisions',
 				'titleIcon' => 'revisions_required',
@@ -147,7 +147,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_RESUBMIT => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'resubmit',
-				'title' => 'editor.monograph.decision.resubmit',
+				'title' => 'editor.submission.decision.resubmit',
 				'image' => 'resubmit',
 				'help' => 'editor.review.NotifyAuthorResubmit',
 				'titleIcon' => 'please_resubmit',
@@ -155,7 +155,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'operation' => 'promoteInReview',
 				'name' => 'accept',
-				'title' => 'editor.monograph.decision.accept',
+				'title' => 'editor.submission.decision.accept',
 				'image' => 'promote',
 				'help' => 'editor.review.NotifyAuthorAccept',
 				'titleIcon' => 'accept_submission',
@@ -163,7 +163,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_DECLINE => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'decline',
-				'title' => 'editor.monograph.decision.decline',
+				'title' => 'editor.submission.decision.decline',
 				'image' => 'decline',
 				'help' => 'editor.review.NotifyAuthorDecline',
 				'titleIcon' => 'decline_submission',
@@ -182,7 +182,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION => array(
 				'operation' => 'promote',
 				'name' => 'sendToProduction',
-				'title' => 'editor.monograph.decision.sendToProduction',
+				'title' => 'editor.submission.decision.sendToProduction',
 				'image' => 'send_production',
 				'titleIcon' => 'modal_send_to_production',
 			),
