@@ -58,19 +58,19 @@
 						<td style="padding: 0 0 0 0; font-size:1.0em">&mdash;</td>
 					</tr>
 				{/foreach}
-			{/foreach}			
+			{/foreach}
 		</table>
 		</td>
 		<td>
 			{foreach from=$submission->getDecisions() item=decisions}
 				{foreach from=$decisions item=decision name=decisionList}
 					{if $smarty.foreach.decisionList.last}
-						{$decision.dateDecided|date_format:$dateFormatTrunc}				
+						{$decision.dateDecided|date_format:$dateFormatTrunc}
 					{/if}
 				{foreachelse}
 					&mdash;
 				{/foreach}
-			{/foreach}			
+			{/foreach}
 		</td>
 	</tr>
 	<tr>

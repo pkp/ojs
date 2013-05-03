@@ -29,15 +29,15 @@
 }
 
 #main h5 {
-	margin: 0em 1em 0.5em 0em;
-	padding-top: 0em;
+	margin: 0 1em 0.5em 0;
+	padding-top: 0;
 	font-size: 1.3em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
 
 #main h6 {
-	margin: 0.5em 1em 0.5em 0em;
+	margin: 0.5em 1em 0.5em 0;
 	padding: 0;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
@@ -99,14 +99,14 @@ div.rtSeparator {
 	width: 100%;
 	padding: 0;
 	border-bottom: 2px dotted #000;
-	line-height: 0px;
+	line-height: 0;
 }
 
 div.rtSeparatorThin {
 	width: 100%;
-	padding: 5px 0px 5px 0px;
+	padding: 5px 0 5px 0;
 	border-bottom: 1px dotted #000;
-	line-height: 0px;
+	line-height: 0;
 }
 
 div.rtBlock {
@@ -171,7 +171,7 @@ dd {
 }
 
 #sidebarRTRelatedItems ul {
-	padding: 0px;
+	padding: 0;
 }
 
 #sidebarRTRelatedItems li {

@@ -20,7 +20,7 @@
 	<li class="current"><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>
 </ul>
 
-{include file="citation/citationEditor.tpl}
+{include file="citation/citationEditor.tpl"}
 
 {include file="common/footer.tpl"}
 

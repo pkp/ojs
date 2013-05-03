@@ -23,7 +23,7 @@
 #sidebar {
 	float: right;
 	width: 20%;
-	padding: 1em 0em 1em 0em;
+	padding: 1em 0 1em 0;
 	font-size: 0.65em;
 	height: 100%;
 	margin-right: 5%;
@@ -47,7 +47,7 @@ html>body #main {
 } 
 
 #main h4 {
-	margin: 0em 1em 0.5em 0em;
+	margin: 0 1em 0.5em 0;
 	padding-top: 0.5em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
@@ -61,7 +61,7 @@ html>body #main {
 #toc li {
 	list-style-type: none;
 	font-size: 1.2em;
-	padding: 1px 0px 1px 0px;
+	padding: 1px 0;
 }
 
 div.thickSeparator {
@@ -115,10 +115,10 @@ li.current, a.current {
 }
 
 #search li {
-	margin: 10px 0px 10px 0px;
+	margin: 10px 0;
 }
 
 #search p {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
