@@ -37,7 +37,7 @@
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td>{translate key="user.name"}</td>
-	<td>{translate key="submissions.completed}</td>
+	<td>{translate key="submissions.completed"}</td>
 	<td>{translate key="submissions.active"}</td>
 	<td>{translate key="editor.submissions.lastAssigned"}</td>
 	<td>{translate key="common.action"}</td>

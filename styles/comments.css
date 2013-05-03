@@ -29,16 +29,13 @@
 div.commentTitle {
 
 	font-size: 1em;
-	padding: 0;
-	padding-bottom: 5px;
+	padding: 0 0 5px 0;
 	border-bottom: 1px solid #999;
 }
 
 div.comments {
 	font-size: 1em;
-	margin: 0;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin: 5px 0;
 }
 
 div.commentRole {
