@@ -103,6 +103,12 @@
 <script src="{$baseUrl}/lib/pkp/js/pages/header/HeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/pages/workflow/WorkflowHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/pages/workflow/SubmissionHeaderHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/pages/workflow/EditorDecisionsHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/pages/workflow/ProductionHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js"></script>
 <script src="{$baseUrl}/js/pages/search/SearchFormHandler.js"></script>
 <script src="{$baseUrl}/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
 

@@ -18,4 +18,6 @@
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
 	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$journalName}</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
+
+	<message key="submission.catalogEntry">Submission Metadata</message>
 </locale>
