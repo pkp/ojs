@@ -288,7 +288,10 @@ class MetricsDAO extends DAO {
 			throw new Exception('Cannot load record: Missing time dimension.');
 		}
 
-		// Country is optional.
+		// File type is optional.
+		if (isset($record['file_type']) && $record['file_type']) $recordToStore['file_type'] = (int)$record['file_type'];
+
+		// Geolocation is optional.
 		if (isset($record['country_id'])) $recordToStore['country_id'] = (string)$record['country_id'];
 		if (isset($record['region'])) $recordToStore['region'] = (string)$record['region'];
 		if (isset($record['city'])) $recordToStore['city'] = (string)$record['city'];

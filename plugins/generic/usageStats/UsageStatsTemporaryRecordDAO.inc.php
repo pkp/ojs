@@ -36,12 +36,12 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	 * @param $record array
 	 * @return boolean
 	 */
-	function insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $loadId) {
+	function insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $fileType, $loadId) {
 		$this->update(
 				'INSERT INTO usage_stats_temporary_records
-					(assoc_type, assoc_id, day, country_id, region, city, load_id)
+					(assoc_type, assoc_id, day, country_id, region, city, file_type, load_id)
 					VALUES
-					(?, ?, ?, ?, ?, ?, ?)',
+					(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$assocType,
 				$assocId,
@@ -49,6 +49,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 				$countryCode,
 				$region,
 				$cityName,
+				$fileType,
 				$loadId
 			)
 		);
@@ -96,9 +97,9 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	*/
 	function &_getGrouped($loadId) {
 		$result =& $this->retrieve(
-					'SELECT assoc_type, assoc_id, day, country_id, region, city, load_id, count(metric) as metric
+					'SELECT assoc_type, assoc_id, day, country_id, region, city, file_type, load_id, count(metric) as metric
 					FROM usage_stats_temporary_records WHERE load_id = ?
-					GROUP BY assoc_type, assoc_id, day, country_id, region, city, load_id',
+					GROUP BY assoc_type, assoc_id, day, country_id, region, city, file_type, load_id',
 		array($loadId)
 		);
 

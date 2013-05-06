@@ -37,6 +37,7 @@
     <field name="load_id" type="C2" size="255">
       <NOTNULL/>
     </field>
+    <field name="file_type" type="I1" />
     <descr>Usage stats temporary records</descr>
   </table>
 </schema>

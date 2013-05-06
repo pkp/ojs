@@ -86,10 +86,37 @@ class UsageStatsLoader extends FileLoader {
 			list($assocId, $assocType) = $this->_getAssocFromReferer($entryData['referer']);
 			if(!$assocId || !$assocType) continue;
 
-			$entryData['assocId'] = $assocId;
-			$entryData['assocType'] = $assocType;
 			list($countryCode, $cityName, $region) = $this->_geoLocationTool->getGeoLocation($entryData['ip']);
 			$day = date('Ymd', $entryData['date']);
+
+			// Check downloaded file type, if any.
+			$galley = null;
+			$type = null;
+			switch($assocType) {
+				case ASSOC_TYPE_GALLEY:
+					$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+					$galley = $articleGalleyDao->getGalley($assocId);
+					break;
+				case ASSOC_TYPE_ISSUE_GALLEY;
+					$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+					$galley = $issueGalleyDao->getById($assocId);
+					break;
+			}
+
+			if ($galley && !is_a($galley, 'ArticleGalley') && !is_a($galley, 'IssueGalley')) {
+				// This object id was tested before, why
+				// it is not the type we expect now?
+				assert(false);
+			} else if ($galley) {
+				if ($galley->isPdfGalley()) {
+					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF;
+				} else if (is_a($galley, 'ArticleGalley') && $galley->isHtmlGalley()) {
+					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_HTML;
+				} else {
+					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER;
+				}
+			}
+
 			$entryHash = $assocType . $assocId . $entryData['date'] . $entryData['ip'];
 
 			// Clean the last inserted entries, removing the entries that have
@@ -111,7 +138,7 @@ class UsageStatsLoader extends FileLoader {
 				}
 			}
 
-			$statsDao->insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $loadId);
+			$statsDao->insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $type, $loadId);
 		}
 
 		fclose($fhandle);
