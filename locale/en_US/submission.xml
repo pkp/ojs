@@ -12,6 +12,8 @@
 
 <locale name="en_US" full_name = "English">
 	<!-- Submission wizard -->
+	<message key="submission.submit.userGroup">Submit in my role as...</message>
+	<message key="submission.submit.userGroupDescription">Choose the capacity under which you are submitting this article.</message>
 	<message key="submission.upload.selectBookElement">Select article element</message>
 	<message key="submission.title">Article Title</message>
 	<message key="submission.title.tip"><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
