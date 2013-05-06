@@ -45,7 +45,6 @@ switch ($op) {
 	//
 	// Misc.
 	//
-	case 'index':
 	case 'gifts':
 	case 'redeemGift':
 	case 'subscriptions':

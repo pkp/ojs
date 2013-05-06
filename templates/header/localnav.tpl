@@ -30,7 +30,6 @@
 <div class="pkp_structure_head_localNav">
 	{if $isUserLoggedIn}
 		<ul class="sf-menu">
-			<li><a href="{url page="user"}">{translate key="navigation.userHome"}</a>
 			{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR), $userRoles)}
 				<li><a href="{url page="dashboard"}">{translate key="navigation.dashboard"}</a></li>
 			{/if}
