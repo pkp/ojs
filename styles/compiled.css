@@ -814,6 +814,92 @@ div.plupload div.plupload_header { display:none; }
 .large_sprite.review_reminder { background-position:-1152px -48px; }
 .large_sprite.openaccess { background-position:-1200px -48px; }
 .large_sprite.modal_wizard { background-position:-1632px -48px; }
+.pkp_page_header { position:relative; }
+.pkp_page_header ul.submission_actions {
+  position:relative;
+  z-index:20;
+}
+.pkp_page_header ul.submission_actions li {
+  line-height:24px;
+  margin-left:20px;
+  padding:5px 1px 4px 1px;
+}
+.pkp_page_header li.participants { margin-right:10px; }
+.pkp_page_header li.participants:hover, .pkp_page_header li.expandedIndicator {
+  background:#ffffff;
+  border:1px solid #999999;
+  border-bottom:1px solid #ffffff;
+  padding:4px 10px 3px 10px !important;
+  margin:0px 0px 0px 10px !important;
+}
+.pkp_page_header .participant_popover {
+  border:1px solid #999999;
+  width:300px;
+  right:0px;
+  top:34px;
+  margin-top:-2px;
+  position:absolute;
+  background-color:#ffffff;
+  z-index:10;
+}
+.pkp_page_header ul.submission_actions a { text-decoration:underline; }
+.pkp_page_header .submission_progress_wrapper {
+  clear:both;
+  padding-top:28px;
+}
+.pkp_page_header .submission_progress {
+  overflow:hidden;
+  display:table;
+  width:100%;
+  position:relative;
+}
+.pkp_page_header .submission_progress li {
+  height:37px;
+  line-height:12px;
+  width:19.5%;
+  background-image:url('../lib/pkp/templates/images/structure/workflow_inactive.png');
+  text-align:center;
+  color:#ffffff;
+  float:none;
+  vertical-align:middle;
+  display:table-cell;
+}
+.pkp_page_header .submission_progress li a {
+  text-decoration:none;
+  font-family:"Courier New", Courier, mono;
+  font-size:12px;
+  text-transform:uppercase;
+  color:#ffffff;
+  padding-left:5px;
+  padding-right:5px;
+}
+.pkp_page_header .submission_progress li.actionNeeded { background-image:url('../lib/pkp/templates/images/structure/workflow_actionNeeded.png'); }
+.pkp_page_header .submission_progress li.stageDisabled {
+  background-image:none;
+  background-color:#e5e1dd;
+}
+.pkp_page_header .submission_progress li.stageDisabled a { color:#999999; }
+.pkp_page_header .submission_progress li.productionReady { background-image:url('../lib/pkp/templates/images/structure/workflow_productionReady.png'); }
+.pkp_page_header .submission_progress li.current { background-image:url('../lib/pkp/templates/images/structure/workflow_current.png'); }
+.pkp_page_header .submission_progress li.current a { font-size:13px; }
+.pkp_page_header .submission_progress li.current.productionReady { background-image:url('../lib/pkp/templates/images/structure/workflow_productionReadyCurrent.png') !important; }
+.pkp_page_header .submission_progress li.complete a:after { background-color:#e5f4e5; }
+.pkp_page_header .submission_progress li.current a:after { background-color:#eaf3f8; }
+.pkp_page_header .submission_progress li:before {
+  margin-left:2px;
+  left:100%;
+  z-index:1;
+}
+.pkp_page_header .submission_progress li a:after {
+  background-color:white;
+  content:" ";
+  display:block;
+  width:1px;
+  top:0;
+  height:37px;
+  position:absolute;
+}
+#reviewTabs .ui-tabs-nav a.pkp_controllers_linkAction { line-height:0px; }
 .loading_container {
   text-align:center;
   padding-top:10px;
@@ -900,17 +986,6 @@ div.plupload div.plupload_header { display:none; }
   border:1px solid #cccccc;
   padding:2px;
   font-size:100%;
-}
-.pkp_structure_breadcrumb { margin:12px 0 12px 20px; }
-.pkp_structure_breadcrumb li {
-  padding:0 6px 0 2px;
-  font-size:85%;
-  list-style-type:square;
-  list-style-position:inside;
-}
-.pkp_structure_breadcrumb li.no_bullet {
-  list-style-type:none;
-  margin-right:-6px;
 }
 a { color:#569bbe; }
 img {
