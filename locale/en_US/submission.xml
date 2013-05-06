@@ -22,4 +22,5 @@
 	<message key="grid.action.workflow">Submission Workflow</message>
 
 	<message key="submission.catalogEntry">Submission Metadata</message>
+	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
 </locale>
