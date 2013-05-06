@@ -213,6 +213,63 @@ class ArticleMailTemplate extends MailTemplate {
 		}
 		return $returner;
 	}
+
+	/**
+	 *  Send this email to all assigned section editors in the given stage
+	 * @param $articleId int
+	 * @param $stageId int
+	 */
+	function toAssignedSectionEditors($articleId, $stageId) {
+		return $this->_addUsers($articleId, ROLE_ID_SUB_EDITOR, $stageId, 'addRecipient');
+	}
+
+	/**
+	 *  CC this email to all assigned section editors in the given stage
+	 * @param $articleId int
+	 * @param $stageId int
+	 * @return array of Users (note, this differs from OxS which returns EditAssignment objects)
+	 */
+	function ccAssignedSectionEditors($articleId, $stageId) {
+		return $this->_addUsers($articleId, ROLE_ID_SUB_EDITOR, $stageId, 'addCc');
+	}
+
+	/**
+	 *  BCC this email to all assigned section editors in the given stage
+	 * @param $articleId int
+	 * @param $stageId int
+	 */
+	function bccAssignedSectionEditors($articleId, $stageId) {
+		return $this->_addUsers($articleId, ROLE_ID_SUB_EDITOR, $stageId, 'addBcc');
+	}
+
+	/**
+	 * Private method to fetch the requested users and add to the email
+	 * @param $articleId int
+	 * @param $roleId int
+	 * @param $stageId int
+	 * @param $method string one of addRecipient, addCC, or addBCC
+	 * @return array of Users (note, this differs from OxS which returns EditAssignment objects)
+	 */
+	function _addUsers($articleId, $roleId, $stageId, $method) {
+		assert(in_array($method, array('addRecipient', 'addCc', 'addBcc')));
+
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$userGroups =& $userGroupDao->getByRoleId($this->journal->getId(), $roleId);
+
+		$returner = array();
+		// Cycle through all the userGroups for this role
+		while ( $userGroup =& $userGroups->next() ) {
+			$userStageAssignmentDao = DAORegistry::getDAO('UserStageAssignmentDAO');
+			// FIXME: #6692# Should this be getting users just for a specific user group?
+			$users = $userStageAssignmentDao->getUsersBySubmissionAndStageId($articleId, $stageId, $userGroup->getId());
+			while ($user = $users->next()) {
+				$this->$method($user->getEmail(), $user->getFullName());
+				$returner[] = $user;
+			}
+			unset($userGroup);
+		}
+		return $returner;
+	}
 }
 
 ?>

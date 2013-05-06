@@ -37,7 +37,7 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$sectionEditorAction = new SectionEditorAction();
 		$sectionEditorAction->assignDefaultStageParticipants($submission, WORKFLOW_STAGE_ID_SUBMISSION, $request);
-		parent::assignDefaultParticipants();
+		parent::assignDefaultParticipants($submission, $request);
 	}
 
 	/**
@@ -49,6 +49,7 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 	function execute($args, $request) {
 		parent::execute($args, $request);
 
+		$submission = $this->submission;
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK');
