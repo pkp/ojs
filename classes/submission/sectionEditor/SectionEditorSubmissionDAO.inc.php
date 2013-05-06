@@ -62,11 +62,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$result =& $this->retrieve(
-			'SELECT	a.*,
+			'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
 				r2.review_revision
 			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN review_rounds r2 ON (a.article_id = r2.submission_id AND a.current_round = r2.round)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
