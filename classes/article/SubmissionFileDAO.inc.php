@@ -134,7 +134,7 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	/**
 	 * @see PKPSubmissionFileDAO::fromRow()
 	 */
-	function &fromRow($row) {
+	function fromRow($row) {
 		$fileImplementation = 'ArticleFile';
 
 		// Let the superclass instantiate the file.
