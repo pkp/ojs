@@ -29,7 +29,7 @@ class IndexHandler extends Handler {
 	 * @param $request Request
 	 */
 	function index($args, $request) {
-		$this->validate();
+		$this->validate(null, $request);
 		$this->setupTemplate($request);
 
 		$router = $request->getRouter();
