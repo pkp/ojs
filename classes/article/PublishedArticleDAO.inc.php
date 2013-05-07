@@ -793,57 +793,6 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all authors from published articles
-	 * @param $issueId int
-	 * @return $authors array Author Objects
-	 */
-	function getPublishedArticleAuthors($issueId) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-
-		$authors = array();
-		$result =& $this->retrieve(
-			'SELECT	aa.*,
-				aspl.setting_value AS affiliation_pl,
-				asl.setting_value AS affiliation_l
-			FROM	authors aa
-				LEFT JOIN published_articles pa ON (pa.article_id = aa.submission_id)
-				LEFT JOIN author_settings aspl ON (aspl.author_id = aa.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
-				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ? AND asl.locale = ?)
-			WHERE	pa.issue_id = ? ORDER BY pa.issue_id',
-			array(
-				'affiliation', $primaryLocale,
-				'affiliation', $locale,
-				(int) $issueId
-			)
-		);
-
-		$authorDao = DAORegistry::getDAO('AuthorDAO');
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$author = $authorDao->newDataObject();
-			$author->setId($row['author_id']);
-			$author->setSubmissionId($row['article_id']);
-			$author->setFirstName($row['first_name']);
-			$author->setMiddleName($row['middle_name']);
-			$author->setLastName($row['last_name']);
-			$author->setAffiliation($row['affiliation_pl'], $primaryLocale);
-			$author->setAffiliation($row['affiliation_l'], $locale);
-			$author->setEmail($row['email']);
-			$author->setBiography($row['biography']);
-			$author->setPrimaryContact($row['primary_contact']);
-			$author->setSequence($row['seq']);
-			$authors[] = $author;
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $authors;
-	}
-
-	/**
 	 * Increment the views count for a galley.
 	 * @param $articleId int
 	 */
