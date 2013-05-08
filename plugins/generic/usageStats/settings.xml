@@ -24,9 +24,5 @@
 		<name>logFileParseRegex</name>
 		<value>/^(\S+) \S+ \S+ \[(.*?)\] "(\S+).*?" \d+ \d+ "(.*?)" "(.*?)"/</value>
 	</setting>
-	<setting type="int">
-		<name>minTimeBetweenRequests</name>
-		<value>5</value>
-	</setting>
 </plugin_settings>
 

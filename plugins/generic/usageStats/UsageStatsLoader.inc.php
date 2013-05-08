@@ -19,17 +19,24 @@ import('lib.pkp.classes.task.FileLoader');
  * will work with no modification required. */
 include('GeoLocationTool.inc.php');
 
-class UsageStatsLoader extends FileLoader {
+/** These are rules defined by the COUNTER project.
+ * See http://www.projectcounter.org/code_practice.htmlcode */
+define('COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_HTML', 10);
+define('COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_OTHER', 30);
 
-	/** @var int Minimum time between same requests with the same ip to
-	 * consider a valid request. */
-	var $_minTimeBetweenRequests;
+class UsageStatsLoader extends FileLoader {
 
 	/** @var A GeoLocationTool object instance to provide geo location based on ip. */
 	var $_geoLocationTool;
 
 	/** @var $_plugin Plugin */
 	var $_plugin;
+
+	/** @var $_counterRobotsListFile string */
+	var $_counterRobotsListFile;
+
+	/** @var $_journalsByPath array */
+	var $_journalsByPath;
 
 	/**
 	 * Constructor.
@@ -45,11 +52,19 @@ class UsageStatsLoader extends FileLoader {
 		PluginRegistry::loadCategory('reports');
 		$this->_plugin = $plugin;
 
-		$this->_minTimeBetweenRequests = $plugin->getSetting(0, 'minTimeBetweenRequests');
-
 		$this->_plugin->import('UsageStatsTemporaryRecordDAO');
 		$statsDao = new UsageStatsTemporaryRecordDAO();
 		DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
+
+		$this->_counterRobotsListFile = $this->_getCounterRobotListFile();
+
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$journalFactory = $journalDao->getAll(); /* @var $journalFactory DAOResultFactory */
+		$journalsByPath = array();
+		while ($journal = $journalFactory->next()) { /* @var $journal Journal */
+			$journalsByPath[$journal->getPath()] = $journal;
+		}
+		$this->_journalsByPath = $journalsByPath;
 
 		$this->checkFolderStructure(true);
 	}
@@ -83,10 +98,13 @@ class UsageStatsLoader extends FileLoader {
 					array('file' => $filePath, 'lineNumber' => $lineNumber)));
 			}
 
-			list($assocId, $assocType) = $this->_getAssocFromReferer($entryData['referer']);
+			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $entryData['userAgent']);
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $this->_geoLocationTool->getGeoLocation($entryData['ip']);
+			if (!$countryCode) {
+				echo ($lineNumber . ' - ' . $entryData['ip'] . PHP_EOL);
+			}
 			$day = date('Ymd', $entryData['date']);
 
 			// Check downloaded file type, if any.
@@ -117,12 +135,13 @@ class UsageStatsLoader extends FileLoader {
 				}
 			}
 
-			$entryHash = $assocType . $assocId . $entryData['date'] . $entryData['ip'];
+			$entryHash = $assocType . $assocId . $entryData['ip'];
 
 			// Clean the last inserted entries, removing the entries that have
 			// no importance for the time between requests check.
+			$biggestTimeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_OTHER;
 			foreach($lastInsertedEntries as $hash => $time) {
-				if ($time + $this->_minTimeBetweenRequests < $entryData['date']) {
+				if ($time + $biggestTimeFilter < $entryData['date']) {
 					unset($lastInsertedEntries[$hash]);
 				}
 			}
@@ -131,7 +150,13 @@ class UsageStatsLoader extends FileLoader {
 			if (!isset($lastInsertedEntries[$entryHash])) {
 				 $lastInsertedEntries[$entryHash] = $entryData['date'];
 			} else {
-				if ($entryData['date'] - $lastInsertedEntries[$entryHash] > $this->_minTimeBetweenRequests) {
+				// Decide what time filter to use, depending on object type.
+				if ($type == USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF || $type == USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER) {
+					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_OTHER;
+				} else {
+					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_HTML;
+				}
+				if ($entryData['date'] - $lastInsertedEntries[$entryHash] > $timeFilter) {
 					$lastInsertedEntries[$entryHash] = $entryData['date'];
 				} else {
 					continue;
@@ -190,32 +215,33 @@ class UsageStatsLoader extends FileLoader {
 		}
 
 		// The default regex will parse only apache log files in combined format.
-		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+.*?" \d+ \d+ "(.*?)"/';
+		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" \S+ \S+ ".*?" "(.*?)"/';
 
 		$returner = array();
 		if (preg_match($parseRegex, $entry, $m)) {
 			$returner['ip'] = $m[1];
 			$returner['date'] = strtotime($m[2]);
-			$returner['referer'] = $m[3];
+			$returner['url'] = $m[3];
+			$returner['userAgent'] = $m[4];
 		}
 
 		return $returner;
 	}
 
 	/**
-	 * Get the expected referer from the stats plugin.
+	 * Get the expected url from the stats plugin.
 	 * They are grouped by the object type constant that
 	 * they give access to.
 	 * @return array
-	 * @todo The plugin will also need to know the expected referer, so we
-	 * might want to retrieve this from an unique place.
 	 */
-	private function _getExpectedReferer() {
+	private function _getExpectedUrl() {
 		return array(ASSOC_TYPE_ARTICLE => array(
 				'/article/view/',
 				'/article/viewArticle/',
 				'/article/viewDownloadInterstitial/',
 				'/article/download/'),
+			ASSOC_TYPE_GALLEY => array(
+				'/article/viewFile'),
 			ASSOC_TYPE_SUPP_FILE => array(
 				'/article/downloadSuppFile/'),
 			ASSOC_TYPE_ISSUE => array(
@@ -228,33 +254,33 @@ class UsageStatsLoader extends FileLoader {
 
 	/**
 	 * Get the assoc type and id of the object that
-	 * is accessed through the passed referer.
-	 * @param $referer string
+	 * is accessed through the passed url, skiping bots.
+	 * @param $url string
+	 * @param $userAgent string
 	 * @return array
 	 */
-	private function _getAssocFromReferer($referer) {
-		// Check the passed referer.
-		$assocId = $assocType = false;
-		$expectedReferer = $this->_getExpectedReferer();
+	private function _getAssocFromUrl($url, $userAgent) {
+		// Check the passed url.
+		$assocId = $assocType = $journalId = false;
+		$expectedUrl = $this->_getExpectedUrl();
 
-		// Is it a request to our current site?
-		$baseUrl = Config::getVar('general', 'base_url');
-		if (strpos($referer, $baseUrl) !== false) {
-			$refererCheck = false;
+		// We are looking for system access only.
+		if (strpos($url, '/index.php/') !== false) {
+			$urlCheck = false;
 			// It matches the expected ones?
-			foreach ($expectedReferer as $workingAssocType => $workingReferers) {
-				foreach($workingReferers as $workingReferer) {
-					if (strpos($referer, $workingReferer) !== false) {
-						// Expected referer, don't look any futher.
-						$refererCheck = true;
+			foreach ($expectedUrl as $workingAssocType => $workingUrls) {
+				foreach($workingUrls as $workingUrl) {
+					if (strpos($url, $workingUrl) !== false) {
+						// Expected url, don't look any futher.
+						$urlCheck = true;
 						break 2;
 					}
 				}
 			}
 
-			if ($refererCheck) {
-				// Get the assoc id inside the passed referer.
-				$explodedString = explode($workingReferer, $referer);
+			if ($urlCheck) {
+				// Get the assoc id inside the passed url.
+				$explodedString = explode($workingUrl, $url);
 				$assocId = $explodedString[1];
 
 				// Check if we are not dealing with supp files or galleys.
@@ -275,15 +301,19 @@ class UsageStatsLoader extends FileLoader {
 				}
 
 				// Get the journal object.
-				$journalPath = explode('index.php/', $referer);
+				$journalPath = explode('index.php/', $url);
 				$journalPath = explode('/', $journalPath[1]);
 				$journalPath = $journalPath[0];
-				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-				$journal = $journalDao->getByPath($journalPath);
-				if (!is_a($journal, 'Journal')) {
-					return array(false, false);
-				} else {
+				if (isset($this->_journalsByPath[$journalPath])) {
+					$journal = $this->_journalsByPath[$journalPath];
 					$journalId = $journal->getId();
+				} else {
+					return array(false, false);
+				}
+
+				// Skip bots.
+				if (Core::isUserAgentBot($userAgent, $this->_counterRobotsListFile)) {
+					return array(false, false);
 				}
 
 				// Get the internal object id (avoiding public ids).
@@ -324,7 +354,7 @@ class UsageStatsLoader extends FileLoader {
 						// Couldn't retrieve galley,
 						// count as article view.
 						$assocType = ASSOC_TYPE_ARTICLE;
-						$assocId = $parentObjectId;
+						$assocId = $articleId;
 					case ASSOC_TYPE_ARTICLE:
 						$assocId = $this->_getInternalArticleId($assocId, $journal);
 						break;
@@ -341,13 +371,13 @@ class UsageStatsLoader extends FileLoader {
 							$galley = $galleyDao->getById($assocId, $issueId);
 						}
 						if (is_a($galley, 'IssueGalley')) {
-							$assocId = $issue->getId();
+							$assocId = $galley->getId();
 							break;
 						} else {
 							// Count as a issue view. Don't break
 							// so the issue case will be handled.
 							$assocType = ASSOC_TYPE_ISSUE;
-							$assocId = $parentObjectId;
+							$assocId = $issueId;
 						}
 					case ASSOC_TYPE_ISSUE:
 						$assocId = $this->_getInternalIssueId($assocId, $journal);
@@ -426,6 +456,28 @@ class UsageStatsLoader extends FileLoader {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Get the COUNTER robot list file.
+	 * @return mixed string or false in case of error.
+	 */
+	private function _getCounterRobotListFile() {
+		$file = null;
+		$dir = $this->_plugin->getPluginPath() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'counter';
+		if (is_dir($dir)) {
+			if (!$dh = opendir($dir)) return false;
+			$file = readdir($dh);
+			while ($file == '.' || $file == '..') {
+				$file = readdir($dh);
+			}
+		}
+		if (!$file) {
+			// No file or more than one file in the directory.
+			return false;
+		}
+
+		return $dir . DIRECTORY_SEPARATOR . $file;
 	}
 }
 ?>

@@ -51,7 +51,7 @@ class GeoLocationTool {
 		return array(
 			$record->country_code,
 			$record->city,
-			$regionName
+			$record->region
 		);
 	}
 }
