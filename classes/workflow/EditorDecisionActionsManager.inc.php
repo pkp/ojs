@@ -134,7 +134,7 @@ class EditorDecisionActionsManager {
 	 * Define and return editor decisions for the review stage.
 	 * @return array
 	 */
-	function _externalReviewStageDecision() {
+	function _externalReviewStageDecisions() {
 		static $decisions = array(
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
 				'operation' => 'sendReviewsInReview',
