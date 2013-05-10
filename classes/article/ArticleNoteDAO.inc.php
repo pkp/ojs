@@ -63,8 +63,6 @@ class ArticleNoteDAO extends NoteDAO {
 	function insertArticleNote(&$articleNote) {
 		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function');
 		$articleNote->setAssocType(ASSOC_TYPE_ARTICLE);
-		$journal =& Request::getJournal();
-		$articleNote->setContextId($journal->getId());
 		return $this->insertObject($articleNote);
 	}
 
