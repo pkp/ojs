@@ -1841,7 +1841,6 @@ class SectionEditorAction extends Action {
 		$note->setAssocType(ASSOC_TYPE_ARTICLE);
 		$note->setAssocId($articleId);
 		$note->setUserId($user->getId());
-		$note->setContextId($journal->getId());
 		$note->setDateCreated(Core::getCurrentDate());
 		$note->setDateModified(Core::getCurrentDate());
 		$note->setTitle($request->getUserVar('title'));
@@ -1898,7 +1897,6 @@ class SectionEditorAction extends Action {
 		$note->setAssocId($articleId);
 		$note->setUserId($user->getId());
 		$note->setDateModified(Core::getCurrentDate());
-		$note->setContextId($journal->getId());
 		$note->setTitle($request->getUserVar('title'));
 		$note->setContents($request->getUserVar('note'));
 		$note->setFileId($request->getUserVar('fileId'));
