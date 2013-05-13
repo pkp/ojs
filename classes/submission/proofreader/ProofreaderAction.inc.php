@@ -36,9 +36,9 @@ class ProofreaderAction extends Action {
 			$userDao = DAORegistry::getDAO('UserDAO');
 			$proofreader =& $userDao->getById($userId);
 			if (!isset($proofreader)) return;
-			import('classes.log.ArticleLog');
+			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry');
-			ArticleLog::logEvent($request, $article, SUBMISSION_LOG_PROOFREAD_ASSIGN, 'log.proofread.assign', array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName()));
+			SubmissionLog::logEvent($request, $article, SUBMISSION_LOG_PROOFREAD_ASSIGN, 'log.proofread.assign', array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName()));
 		}
 	}
 

@@ -139,8 +139,8 @@ class AuthorAction extends Action {
 				$email->send($request);
 			}
 			// Add log entry
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $authorSubmission, SUBMISSION_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $authorSubmission, SUBMISSION_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId));
 		}
 	}
 
@@ -185,8 +185,8 @@ class AuthorAction extends Action {
 			$signoffDao->updateObject($finalSignoff);
 
 			// Add log entry
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $authorSubmission, SUBMISSION_LOG_COPYEDIT_REVISION, 'log.copyedit.authorFile');
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $authorSubmission, SUBMISSION_LOG_COPYEDIT_REVISION, 'log.copyedit.authorFile');
 
 			return true;
 		} else {

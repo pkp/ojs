@@ -66,8 +66,8 @@ class ReviewerAction extends Action {
 				$reviewAssignmentDao->updateObject($reviewAssignment);
 
 				// Add log
-				import('classes.log.ArticleLog');
-				ArticleLog::logEvent($request, $reviewerSubmission, $decline?SUBMISSION_LOG_REVIEW_DECLINE:SUBMISSION_LOG_REVIEW_ACCEPT, $decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
+				import('lib.pkp.classes.log.SubmissionLog');
+				SubmissionLog::logEvent($request, $reviewerSubmission, $decline?SUBMISSION_LOG_REVIEW_DECLINE:SUBMISSION_LOG_REVIEW_ACCEPT, $decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 				return true;
 			} else {
 				if (!$request->getUserVar('continued')) {
@@ -145,8 +145,8 @@ class ReviewerAction extends Action {
 				$reviewAssignmentDao->updateObject($reviewAssignment);
 
 				// Add log
-				import('classes.log.ArticleLog');
-				ArticleLog::logEvent($request, $reviewerSubmission, SUBMISSION_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
+				import('lib.pkp.classes.log.SubmissionLog');
+				SubmissionLog::logEvent($request, $reviewerSubmission, SUBMISSION_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 			} else {
 				if (!$request->getUserVar('continued')) {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
@@ -216,8 +216,8 @@ class ReviewerAction extends Action {
 			$reviewer = $userDao->getById($reviewAssignment->getReviewerId());
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $reviewerSubmission, SUBMISSION_LOG_REVIEW_FILE, 'log.review.reviewerFile', array('reviewId' => $reviewAssignment->getId()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $reviewerSubmission, SUBMISSION_LOG_REVIEW_FILE, 'log.review.reviewerFile', array('reviewId' => $reviewAssignment->getId()));
 		}
 	}
 

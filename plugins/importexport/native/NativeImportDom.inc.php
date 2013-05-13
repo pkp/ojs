@@ -835,8 +835,8 @@ class NativeImportDom {
 		$signoffDao->updateObject($layoutProofSignoff);
 
 		// Log the import in the article event log.
-		import('classes.log.ArticleLog');
-		ArticleLog::logEventHeadless(
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEventHeadless(
 			$journal, $user->getId(), $article,
 			SUBMISSION_LOG_ARTICLE_IMPORT,
 			'log.imported',

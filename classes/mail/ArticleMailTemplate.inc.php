@@ -133,7 +133,7 @@ class ArticleMailTemplate extends MailTemplate {
 		}
 
 		// Add log entry
-		import('classes.log.ArticleLog');
+		import('lib.pkp.classes.log.SubmissionLog');
 		$logEntryId = $articleEmailLogDao->insertObject($entry);
 
 		// Add attachments

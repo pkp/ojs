@@ -34,9 +34,9 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 		parent::execute($submission, $request);
 
 		// Log the modification event.
-		import('classes.log.ArticleLog');
+		import('lib.pkp.classes.log.SubmissionLog');
 		import('classes.log.SubmissionEventLogEntry');
-		ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_METADATA_UPDATE, 'submission.event.general.metadataUpdated');
+		SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_METADATA_UPDATE, 'submission.event.general.metadataUpdated');
 	}
 }
 

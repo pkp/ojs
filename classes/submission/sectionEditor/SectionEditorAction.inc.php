@@ -142,9 +142,9 @@ class SectionEditorAction extends Action {
 
 			$decisions = SectionEditorSubmission::getEditorDecisionOptions();
 			// Add log
-			import('classes.log.ArticleLog');
+			import('lib.pkp.classes.log.SubmissionLog');
 			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])));
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])));
 		}
 	}
 
@@ -199,8 +199,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($sectionEditorSubmission->getId(), $reviewerId, $round);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()));
 		}
 	}
 
@@ -225,9 +225,9 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 			// Add log
-			import('classes.log.ArticleLog');
+			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_CLEAR, 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_CLEAR, 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -406,9 +406,9 @@ class SectionEditorAction extends Action {
 					$reviewAssignmentDao->updateObject($reviewAssignment);
 
 					// Add log
-					import('classes.log.ArticleLog');
+					import('lib.pkp.classes.log.SubmissionLog');
 					import('classes.log.SubmissionEventLogEntry');
-					ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_CANCEL, 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
+					SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_CANCEL, 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
 				} else {
 					if (!$request->getUserVar('continued')) {
 						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -612,9 +612,9 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
-			import('classes.log.ArticleLog');
+			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_RATE, 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_RATE, 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -695,9 +695,9 @@ class SectionEditorAction extends Action {
 				// Add log
 				$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 				$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-				import('classes.log.ArticleLog');
+				import('lib.pkp.classes.log.SubmissionLog');
 				import('classes.log.SubmissionEventLogEntry');
-				ArticleLog::logEvent(
+				SubmissionLog::logEvent(
 					$request,
 					$sectionEditorSubmission,
 					SUBMISSION_LOG_REVIEW_SET_DUE_DATE,
@@ -807,8 +807,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'round' => $reviewAssignment->getRound()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 
@@ -910,9 +910,9 @@ class SectionEditorAction extends Action {
 			$signoffDao->updateObject($copyeditSignoff);
 
 			// Add log
-			import('classes.log.ArticleLog');
+			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_SET_FILE, 'log.copyedit.copyeditFileSet');
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_SET_FILE, 'log.copyedit.copyeditFileSet');
 		}
 	}
 
@@ -969,8 +969,8 @@ class SectionEditorAction extends Action {
 
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_RESUBMIT, 'log.review.resubmit');
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_RESUBMIT, 'log.review.resubmit');
 		}
 	}
 
@@ -999,8 +999,8 @@ class SectionEditorAction extends Action {
 			$copyeditor =& $userDao->getById($copyeditorId);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_ASSIGN, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_ASSIGN, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName()));
 		}
 	}
 
@@ -1362,8 +1362,8 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_FILE, 'log.editor.editorFile', array('fileId' => $sectionEditorSubmission->getEditorFileId()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_FILE, 'log.editor.editorFile', array('fileId' => $sectionEditorSubmission->getEditorFileId()));
 		}
 	}
 
@@ -1435,8 +1435,8 @@ class SectionEditorAction extends Action {
 		$signoffDao->updateObject($signoff);
 
 		// Add log entry
-		import('classes.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
 	}
 
 	/**
@@ -1474,8 +1474,8 @@ class SectionEditorAction extends Action {
 		}
 
 		// Add log entry
-		import('classes.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', array('copyeditorName' => $user->getFullName()));
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', array('copyeditorName' => $user->getFullName()));
 	}
 
 	/**
@@ -1508,8 +1508,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 		// Add log
-		import('classes.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_ARCHIVE, 'log.editor.archived');
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_ARCHIVE, 'log.editor.archived');
 	}
 
 	/**
@@ -1549,8 +1549,8 @@ class SectionEditorAction extends Action {
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
 		// Add log
-		import('classes.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_RESTORE, 'log.editor.restored');
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_RESTORE, 'log.editor.restored');
 	}
 
 	/**
@@ -1622,7 +1622,7 @@ class SectionEditorAction extends Action {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		if (HookRegistry::call('SectionEditorAction::assignLayoutEditor', array(&$submission, &$editorId))) return;
 
-		import('classes.log.ArticleLog');
+		import('lib.pkp.classes.log.SubmissionLog');
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
@@ -1630,7 +1630,7 @@ class SectionEditorAction extends Action {
 			$layoutEditor = $userDao->getById($layoutSignoff->getUserId());
 
 			// Add log entry
-			ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_UNASSIGN, 'log.layout.layoutEditorUnassigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_UNASSIGN, 'log.layout.layoutEditorUnassigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
 		}
 
 		$layoutSignoff->setUserId($editorId);
@@ -1649,7 +1649,7 @@ class SectionEditorAction extends Action {
 		$layoutEditor = $userDao->getById($layoutSignoff->getUserId());
 
 		// Add log entry
-		ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_ASSIGN, 'log.layout.layoutEditorAssigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
+		SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_LAYOUT_ASSIGN, 'log.layout.layoutEditorAssigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
 	}
 
 	/**
@@ -2427,8 +2427,8 @@ class SectionEditorAction extends Action {
 			$article = $articleDao->getById($reviewAssignment->getSubmissionId());
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
 		}
 	}
 
@@ -2474,8 +2474,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateObject($reviewAssignment);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $article, SUBMISSION_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
 		}
 	}
 }

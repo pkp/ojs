@@ -66,8 +66,8 @@ class EditorAction extends SectionEditorAction {
 			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 
 			// Add log
-			import('classes.log.ArticleLog');
-			ArticleLog::logEvent($request, $editorSubmission, SUBMISSION_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId));
+			import('lib.pkp.classes.log.SubmissionLog');
+			SubmissionLog::logEvent($request, $editorSubmission, SUBMISSION_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId));
 			return true;
 		} else {
 			if (!$request->getUserVar('continued')) {
@@ -104,9 +104,9 @@ class EditorAction extends SectionEditorAction {
 		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
 		// Add a log entry before doing anything.
-		import('classes.log.ArticleLog');
+		import('lib.pkp.classes.log.SubmissionLog');
 		import('classes.log.SubmissionEventLogEntry');
-		ArticleLog::logEvent($request, $article, SUBMISSION_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', array('editorName' => $user->getFullName()));
+		SubmissionLog::logEvent($request, $article, SUBMISSION_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', array('editorName' => $user->getFullName()));
 
 		// 1. Ensure that an editor is assigned.
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();

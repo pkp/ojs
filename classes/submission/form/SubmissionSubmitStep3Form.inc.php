@@ -116,8 +116,8 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 		}
 
 		// Log submission.
-		import('classes.log.ArticleLog');
-		ArticleLog::logEvent($request, $submission, SUBMISSION_LOG_SUBMISSION_SUBMIT, 'submission.event.articleSubmitted');
+		import('lib.pkp.classes.log.SubmissionLog');
+		SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_SUBMISSION_SUBMIT, 'submission.event.articleSubmitted');
 
 		return $this->submissionId;
 	}
