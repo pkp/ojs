@@ -43,7 +43,7 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 
 		import('classes.submission.sectionEditor.SectionEditorAction');
 		$sectionEditorAction = new SectionEditorAction();
-		$sectionEditorAction->recordDecision($submission, $this->_decision, $request);
+		$sectionEditorAction->recordDecision($request, $submission, $this->_decision, $actionLabels);
 
 		// Move to the internal review stage.
 		$sectionEditorAction->incrementWorkflowStage($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request);

@@ -114,40 +114,6 @@ class SectionEditorAction extends Action {
 		$this->assignDefaultStageParticipants($submission, $newStage, $request);
 	}
 
-
-	/**
-	 * Records an editor's submission decision.
-	 * @param $sectionEditorSubmission object
-	 * @param $decision int
-	 * @param $request object
-	 */
-	function recordDecision(&$sectionEditorSubmission, $decision, $request) {
-		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
-		if (empty($editAssignments)) return;
-
-		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$user = $request->getUser();
-		$editorDecision = array(
-			'editDecisionId' => null,
-			'editorId' => $user->getId(),
-			'decision' => $decision,
-			'dateDecided' => date(Core::getCurrentDate())
-		);
-
-		if (!HookRegistry::call('SectionEditorAction::recordDecision', array(&$sectionEditorSubmission, $editorDecision))) {
-			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
-			$sectionEditorSubmission->stampStatusModified();
-			$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-
-			$decisions = SectionEditorSubmission::getEditorDecisionOptions();
-			// Add log
-			import('lib.pkp.classes.log.SubmissionLog');
-			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
-			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])));
-		}
-	}
-
 	/**
 	 * Assigns a reviewer to a submission.
 	 * @param $sectionEditorSubmission object
