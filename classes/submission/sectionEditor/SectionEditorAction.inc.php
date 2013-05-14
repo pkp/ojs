@@ -608,54 +608,6 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
-	 * Sets the due date for a review assignment.
-	 * @param $articleId int
-	 * @param $reviewId int
-	 * @param $dueDate string
-	 * @param $numWeeks int
-	 * @param $logEntry boolean
-	 * @param $request object
-	 */
-	function setDueDate($articleId, $reviewId, $dueDate, $numWeeks, $logEntry, $request) {
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$user = $request->getUser();
-
-		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
-		if (!isset($reviewer)) return false;
-
-		if ($reviewAssignment->getSubmissionId() == $articleId && !HookRegistry::call('SectionEditorAction::setDueDate', array(&$reviewAssignment, &$reviewer, &$dueDate, &$numWeeks))) {
-			$dueDate = SectionEditorAction::getReviewDueDate($dueDate, $numWeeks);
-			$reviewAssignment->setDateDue($dueDate);
-
-			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateObject($reviewAssignment);
-
-			if ($logEntry) {
-				// Add log
-				$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-				$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-				import('lib.pkp.classes.log.SubmissionLog');
-				import('classes.log.SubmissionEventLogEntry');
-				SubmissionLog::logEvent(
-					$request,
-					$sectionEditorSubmission,
-					SUBMISSION_LOG_REVIEW_SET_DUE_DATE,
-					'log.review.reviewDueDateSet',
-					array(
-						'reviewerName' => $reviewer->getFullName(),
-						'dueDate' => strftime(Config::getVar('general', 'date_format_short'),
-						strtotime($reviewAssignment->getDateDue())),
-						'articleId' => $articleId,
-						'round' => $reviewAssignment->getRound()
-					)
-				);
-			}
-		}
-	}
-
-	/**
 	 * Remove cover page from article
 	 * @param $submission object
 	 * @param $formLocale string
