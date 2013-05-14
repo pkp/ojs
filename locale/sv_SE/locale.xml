@@ -247,7 +247,7 @@
 	<message key="submission.event.logLevel.error">Fel</message>
 	
 	<message key="submission.event.general.defaultEvent">Manuskriptstatus</message>
-	<message key="submission.event.general.articleSubmitted">Artikel inskickad</message>
+	<message key="submission.event.submissionSubmitted">Artikel inskickad</message>
 	<message key="submission.event.general.issueScheduled">Manuskript placerad i kö för kommande nummer</message>
 	<message key="submission.event.general.issueAssigned">Manuskript planerat för nummer</message>
 	<message key="submission.event.general.articlePublished">Artikel publicerad</message>

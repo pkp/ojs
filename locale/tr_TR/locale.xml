@@ -275,7 +275,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Gönderi Durumu</message>
-	<message key="submission.event.general.articleSubmitted">Makale Gönderildi</message>
+	<message key="submission.event.submissionSubmitted">Makale Gönderildi</message>
 	<message key="submission.event.general.issueScheduled">Gönderi sayı zamanlama kuyruğuna gönderdi.</message>
 	<message key="submission.event.general.issueAssigned">Gönderi sayıya eklendi</message>
 	<message key="submission.event.general.articlePublished">Makale yayımlandı</message>

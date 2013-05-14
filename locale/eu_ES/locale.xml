@@ -247,7 +247,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Bidalketako gertaera</message>
-	<message key="submission.event.general.articleSubmitted">Artikulua bidali</message>
+	<message key="submission.event.submissionSubmitted">Artikulua bidali</message>
 	<message key="submission.event.general.issueScheduled">Artikulua argitaratzera bidali</message>
 	<message key="submission.event.general.issueAssigned">Artikulua zenbaki batera esleitu</message>
 	<message key="submission.event.general.articlePublished">Artikulua argitaratu</message>

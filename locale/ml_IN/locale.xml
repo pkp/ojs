@@ -282,7 +282,7 @@
 	<message key="submission.event.logLevel.error">തെറ്റ്</message>
 	
 	<message key="submission.event.general.defaultEvent">സബ്മിഷന്‍ ഇവന്റ്</message>
-	<message key="submission.event.general.articleSubmitted">ലേഖനം സബ്മിറ്റ് ചെയ്തു</message>
+	<message key="submission.event.submissionSubmitted">ലേഖനം സബ്മിറ്റ് ചെയ്തു</message>
 	<message key="submission.event.general.issueScheduled">സബ്മിഷന്‍ ഇഷ്യൂ ഷെഡ്യൂലിങ്ങ് ക്യൂവിലേക്ക് അയച്ചിരിക്കുന്നു</message>
 	<message key="submission.event.general.issueAssigned">സബ്മിഷന്‍ ഇഷ്യുവിലേക്ക് അസൈന്‍ ചെയ്തു കൊടുത്തത്</message>
 	<message key="submission.event.general.articlePublished">ലേഖനം പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു</message>

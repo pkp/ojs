@@ -321,7 +321,9 @@ class QuickSubmitForm extends Form {
 		$articleFileManager = new ArticleFileManager($articleId);
 		$sectionEditorSubmission->setReviewFile($articleFileManager->getFile($article->getSubmissionFileId()));
 		import('classes.submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT, $this->request);
+
+		assert(false); // FIXME: $decisionLabels missing from call below.
+		SectionEditorAction::recordDecision($this->request, $sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 
 		// Create signoff infrastructure
 		$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);

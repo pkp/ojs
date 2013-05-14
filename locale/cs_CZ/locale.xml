@@ -214,7 +214,7 @@
 	<message key="submission.event.logLevel.error">Chyba</message>
 	
 	<message key="submission.event.general.defaultEvent">Událost příspěvku</message>
-	<message key="submission.event.general.articleSubmitted">Článek odeslán</message>
+	<message key="submission.event.submissionSubmitted">Článek odeslán</message>
 	<message key="submission.event.general.issueScheduled">Příspěvek odeslán do fronty pro naplánování publikace</message>
 	<message key="submission.event.general.issueAssigned">Příspěvek zařazen do čísla</message>
 	<message key="submission.event.general.articlePublished">Článek publikován</message>

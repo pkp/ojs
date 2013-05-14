@@ -201,7 +201,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Evento di Submission</message>
-	<message key="submission.event.general.articleSubmitted">Articolo Inviato</message>
+	<message key="submission.event.submissionSubmitted">Articolo Inviato</message>
 	<message key="submission.event.general.issueScheduled">Contributo inserito nella programmazione del fascicolo corrente</message>
 	<message key="submission.event.general.issueAssigned">COntributo assegnato al fascicolo</message>
 	<message key="submission.event.general.articlePublished">Articolo pubblicato</message>

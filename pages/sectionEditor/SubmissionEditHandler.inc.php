@@ -686,7 +686,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($request, $articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		$submission =& $this->submission;
 
-		SectionEditorAction::clearReview($submission, $reviewId, $request);
+		SectionEditorAction::clearReview($request, $submission->getId(), $reviewId);
 
 		$request->redirect(null, null, 'submissionReview', $articleId);
 	}

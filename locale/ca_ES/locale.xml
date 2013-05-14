@@ -258,7 +258,7 @@
 	<message key="submission.event.logLevel.error">Error</message>
 	
 	<message key="submission.event.general.defaultEvent">Esdeveniment</message>
-	<message key="submission.event.general.articleSubmitted">Article tramès</message>
+	<message key="submission.event.submissionSubmitted">Article tramès</message>
 	<message key="submission.event.general.issueScheduled">Tramesa enviada a la cua de planificació de números</message>
 	<message key="submission.event.general.issueAssigned">Tramesa assignada a un número</message>
 	<message key="submission.event.general.articlePublished">Article publicat</message>

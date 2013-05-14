@@ -208,7 +208,7 @@
 	<message key="submission.event.logLevel.error">Erreur</message>
 	
 	<message key="submission.event.general.defaultEvent">Événement de soumission</message>
-	<message key="submission.event.general.articleSubmitted">Article soumis</message>
+	<message key="submission.event.submissionSubmitted">Article soumis</message>
 	<message key="submission.event.general.issueScheduled">Soumission envoyée en attente de planification de publication</message>
 	<message key="submission.event.general.issueAssigned">Soumission assignée à un numéro</message>
 	<message key="submission.event.general.articlePublished">Article publié</message>

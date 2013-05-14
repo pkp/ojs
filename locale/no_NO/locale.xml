@@ -201,7 +201,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Manuskripthendelse</message>
-	<message key="submission.event.general.articleSubmitted">Artikkel innsendt</message>
+	<message key="submission.event.submissionSubmitted">Artikkel innsendt</message>
 	<message key="submission.event.general.issueScheduled">Manuskript sendt til publiseringsplanen</message>
 	<message key="submission.event.general.issueAssigned">Manuskript utvalgt til utgave</message>
 	<message key="submission.event.general.articlePublished">Artikkel publisert</message>

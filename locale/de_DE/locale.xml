@@ -277,7 +277,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Neuzugang</message>
-	<message key="submission.event.general.articleSubmitted">Artikel eingegangen</message>
+	<message key="submission.event.submissionSubmitted">Artikel eingegangen</message>
 	<message key="submission.event.general.issueScheduled">Beitrag an die Warteliste für die Ausgabenplanung geschickt</message>
 	<message key="submission.event.general.issueAssigned">Beitrag einer Ausgabe zugewiesen</message>
 	<message key="submission.event.general.articlePublished">Artikel veröffentlicht</message>

@@ -287,7 +287,7 @@
 	<message key="submission.event.logLevel.error">Eroare</message>
 	
 	<message key="submission.event.general.defaultEvent">Depunere de propunere</message>
-	<message key="submission.event.general.articleSubmitted">Articol propus</message>
+	<message key="submission.event.submissionSubmitted">Articol propus</message>
 	<message key="submission.event.general.issueScheduled">Propunere trimisă pentru a genera lista cu programări</message>
 	<message key="submission.event.general.issueAssigned">Propunere alipită la un număr</message>
 	<message key="submission.event.general.articlePublished">Articol publicat</message>

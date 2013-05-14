@@ -71,14 +71,16 @@ class SectionEditorAction extends Action {
 
 		$notificationMgr = new NotificationManager();
 		$notificationMgr->updateNotification(
-				$request,
-				array(NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION,
-						NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW,
-						NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING,
-						NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION),
-				null,
-				ASSOC_TYPE_SUBMISSION,
-				$submission->getId()
+			$request,
+			array(
+				NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION,
+				NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW,
+				NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING,
+				NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION
+			),
+			null,
+			ASSOC_TYPE_SUBMISSION,
+			$submission->getId()
 		);
 
 		// Reviewer roles -- Do nothing. Reviewers are not included in the stage participant list, they
@@ -92,7 +94,7 @@ class SectionEditorAction extends Action {
 			if ($userGroup->getRoleId() == ROLE_ID_AUTHOR) {
 				$stageAssignmentDao->build($submission->getId(), $userGroup->getId(), $assignment->getUserId());
 				// Only assign them once, since otherwise we'll one assignment for each previous stage.
-				// And as long as they are assigned once, they will get access to their article.
+				// And as long as they are assigned once, they will get access to their submission.
 				break;
 			}
 		}
@@ -167,33 +169,6 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('lib.pkp.classes.log.SubmissionLog');
 			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()));
-		}
-	}
-
-	/**
-	 * Clears a review assignment from a submission.
-	 * @param $sectionEditorSubmission object
-	 * @param $reviewId int
-	 * @param $request object
-	 */
-	function clearReview($sectionEditorSubmission, $reviewId, $request) {
-		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$user = $request->getUser();
-
-		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-
-		if (isset($reviewAssignment) && $reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId() && !HookRegistry::call('SectionEditorAction::clearReview', array(&$sectionEditorSubmission, $reviewAssignment))) {
-			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
-			if (!isset($reviewer)) return false;
-			$sectionEditorSubmission->removeReviewAssignment($reviewId);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-
-			// Add log
-			import('lib.pkp.classes.log.SubmissionLog');
-			import('classes.log.SubmissionEventLogEntry');
-			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_CLEAR, 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 

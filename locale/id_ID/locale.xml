@@ -263,7 +263,7 @@
 	<message key="submission.event.logLevel.error">Kesalahan</message>
 	
 	<message key="submission.event.general.defaultEvent">Acara Penyerahan</message>
-	<message key="submission.event.general.articleSubmitted">Artikel yang diserahkan</message>
+	<message key="submission.event.submissionSubmitted">Artikel yang diserahkan</message>
 	<message key="submission.event.general.issueScheduled">Naskah dikirimkan ke antrian penjadwalan terbitan</message>
 	<message key="submission.event.general.issueAssigned">Naskah yang ditugaskan ke terbitan</message>
 	<message key="submission.event.general.articlePublished">Artikel yang terbit</message>

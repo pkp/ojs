@@ -207,7 +207,7 @@
 	<message key="submission.event.logLevel.error">Pogreška</message>
 	
 	<message key="submission.event.general.defaultEvent">Podnošenje događaja</message>
-	<message key="submission.event.general.articleSubmitted">Članak podnesen</message>
+	<message key="submission.event.submissionSubmitted">Članak podnesen</message>
 	<message key="submission.event.general.issueScheduled">Prijava je stavljena u red čekanja u rasporedu časopisa</message>
 	<message key="submission.event.general.issueAssigned">Prijava je dodijeljena broju časopisa</message>
 	<message key="submission.event.general.articlePublished">Članak objavljen</message>

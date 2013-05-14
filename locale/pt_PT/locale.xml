@@ -195,7 +195,7 @@
 	<message key="submission.event.logLevel.error">Erro</message>
 	
 	<message key="submission.event.general.defaultEvent">Evento da submissão</message>
-	<message key="submission.event.general.articleSubmitted">Artigo submetido</message>
+	<message key="submission.event.submissionSubmitted">Artigo submetido</message>
 	<message key="submission.event.general.issueScheduled">Submissão enviada à fila de espera</message>
 	<message key="submission.event.general.issueAssigned">Submissão designada à edição</message>
 	<message key="submission.event.general.articlePublished">Artigo publicado</message>

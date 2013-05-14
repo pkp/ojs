@@ -219,7 +219,7 @@
         <message key="submission.event.logLevel.error">Σφάλμα</message>
         
         <message key="submission.event.general.defaultEvent">Συμβάν Υποβολής</message>
-        <message key="submission.event.general.articleSubmitted">Υποβολή Άρθρου</message>
+        <message key="submission.event.submissionSubmitted">Υποβολή Άρθρου</message>
         <message key="submission.event.general.issueScheduled">Το άρθρο βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση</message>
         <message key="submission.event.general.issueAssigned">Προγραμματισμένο για δημοσίευση</message>
         <message key="submission.event.general.articlePublished">Το άρθρο δημοσιεύτηκε</message>

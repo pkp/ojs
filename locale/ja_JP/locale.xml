@@ -187,7 +187,7 @@
   <message key="submission.event.logLevel.warning">Warning</message>
   <message key="submission.event.logLevel.error">Error</message>
   <message key="submission.event.general.defaultEvent">投稿イベント</message>
-  <message key="submission.event.general.articleSubmitted">投稿論文</message>
+  <message key="submission.event.submissionSubmitted">投稿論文</message>
   <message key="submission.event.general.issueScheduled">投稿物が巻号スケジューリングキューに送られた</message>
   <message key="submission.event.general.issueAssigned">投稿物が巻号に割り付けられた</message>
   <message key="submission.event.general.articlePublished">論文が出版された</message>

@@ -276,7 +276,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">投稿事件</message>
-	<message key="submission.event.general.articleSubmitted">文章已提交</message>
+	<message key="submission.event.submissionSubmitted">文章已提交</message>
 	<message key="submission.event.general.issueScheduled">投稿已经发送的刊期计划队列中</message>
 	<message key="submission.event.general.issueAssigned">投稿已经指派到期刊</message>
 	<message key="submission.event.general.articlePublished">文章已经发布</message>

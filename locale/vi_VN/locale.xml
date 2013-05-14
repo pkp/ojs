@@ -211,7 +211,7 @@
 	<message key="submission.event.logLevel.error">Lỗi</message>
 	
 	<message key="submission.event.general.defaultEvent">Sự kiện về bài viết</message>
-	<message key="submission.event.general.articleSubmitted">Bài viết đã nộp</message>
+	<message key="submission.event.submissionSubmitted">Bài viết đã nộp</message>
 	<message key="submission.event.general.issueScheduled">Bài nộp đã được chuyển sang chờ xếp bài</message>
 	<message key="submission.event.general.issueAssigned">Bài nộp đã được xếp vào số tạp chí</message>
 	<message key="submission.event.general.articlePublished">Bài viết đã xuất bản</message>

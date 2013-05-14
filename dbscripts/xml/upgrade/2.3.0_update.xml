@@ -67,4 +67,8 @@
 	<sql>
 		<query>UPDATE versions SET product_type = 'core', product = 'ojs2' WHERE product_type IS NULL AND product IS NULL</query>
 	</sql>
+	<!-- Bug #8212: Log standardization -->
+	<sql>
+		<query>UPDATE event_log SET message='submission.event.submissionSubmitted' WHERE message='submission.event.general.articleSubmitted'</query>
+	</sql>
 </data>

@@ -185,7 +185,7 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	 -->	<message key="submission.event.general.defaultEvent">Dešavanja prilikom predaje</message>
-	<message key="submission.event.general.articleSubmitted">Članak predat</message>
+	<message key="submission.event.submissionSubmitted">Članak predat</message>
 	<message key="submission.event.general.issueScheduled">Rad je stavljen u red čekanja u rasporedu časopisa</message>
 	<message key="submission.event.general.issueAssigned">Rad je dodeljen broju časopisa</message>
 	<message key="submission.event.general.articlePublished">Članak objavljen</message>

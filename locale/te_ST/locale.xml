@@ -436,7 +436,7 @@
 	<message key="submission.event.logLevel.warning">Wårñîñg</message>
 	<message key="submission.event.logLevel.error">Érrór</message>
 	<message key="submission.event.general.defaultEvent">ßübmîþþîóñ èvèñt</message>
-	<message key="submission.event.general.articleSubmitted">Ærtîçlè þübmîttèð</message>
+	<message key="submission.event.submissionSubmitted">Ærtîçlè þübmîttèð</message>
 	<message key="submission.event.general.metadataUpdated">ßübmîþþîóñ mètåðåtå üpðåtèð</message>
 	<message key="submission.event.general.suppFileUpdated">ßübmîþþîóñ fîlè üpðåtèð</message>
 	<message key="submission.event.general.issueScheduled">ßübmîþþîóñ þèñt tó îþþüè þçhèðülîñg qüèüè</message>
