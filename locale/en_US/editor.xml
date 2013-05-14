@@ -227,4 +227,5 @@
 	<message key="editor.article.remove.confirm">Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</message>
 	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
 	<message key="editor.issues.editIssueGalley">Edit Issue Galley</message>
+	<message key="editor.externalReview.introduction">In External Review, the editor assign reviewers external to the journal to the submission files and consider the resulting reviews, before selecting the appropriate action (which includes notifying the author): Request Revisions (revisions reviewed by editor alone); Resubmit for Review (revisions initiate another round of reviews); Accept for Submission (entails selecting files for Editorial stage); or Decline Submission (editor archives submission).</message>
 </locale>
