@@ -84,7 +84,7 @@ class EditorDecisionActionsManager {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
 				return self::_submissionStageDecisions();
-			case WORKFLOW_STAGE_ID_REVIEW:
+			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
 				return self::_externalReviewStageDecisions();
 			case WORKFLOW_STAGE_ID_EDITING:
 				return self::_editorialStageDecisions();
