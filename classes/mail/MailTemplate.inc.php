@@ -15,9 +15,6 @@
 import('lib.pkp.classes.mail.PKPMailTemplate');
 
 class MailTemplate extends PKPMailTemplate {
-	/** @var $journal object The journal this message relates to */
-	var $journal;
-
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -28,79 +25,7 @@ class MailTemplate extends PKPMailTemplate {
 	 * @param $ignorePostedData boolean optional
 	 */
 	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true, $ignorePostedData = false) {
-		parent::PKPMailTemplate($emailKey, $locale, $enableAttachments, $includeSignature);
-
-		// If a journal wasn't specified, use the current request.
-		if ($journal === null) $journal = Request::getJournal();
-
-		if (isset($this->emailKey)) {
-			$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate =& $emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getId());
-		}
-
-		$userSig = '';
-		$user = Request::getUser();
-		if ($user && $includeSignature) {
-			$userSig = $user->getLocalizedSignature();
-			if (!empty($userSig)) $userSig = "\n" . $userSig;
-		}
-
-		if (isset($emailTemplate) && ($ignorePostedData || (Request::getUserVar('subject')==null && Request::getUserVar('body')==null))) {
-			$this->setSubject($emailTemplate->getSubject());
-			$this->setBody($emailTemplate->getBody() . $userSig);
-			$this->enabled = $emailTemplate->getEnabled();
-
-			if (Request::getUserVar('usePostedAddresses')) {
-				$to = Request::getUserVar('to');
-				if (is_array($to)) {
-					$this->setRecipients($this->processAddresses ($this->getRecipients(), $to));
-				}
-				$cc = Request::getUserVar('cc');
-				if (is_array($cc)) {
-					$this->setCcs($this->processAddresses ($this->getCcs(), $cc));
-				}
-				$bcc = Request::getUserVar('bcc');
-				if (is_array($bcc)) {
-					$this->setBccs($this->processAddresses ($this->getBccs(), $bcc));
-				}
-			}
-		} else {
-			$this->setSubject(Request::getUserVar('subject'));
-			$body = Request::getUserVar('body');
-			if (empty($body)) $this->setBody($userSig);
-			else $this->setBody($body);
-			$this->skip = (($tmp = Request::getUserVar('send')) && is_array($tmp) && isset($tmp['skip']));
-			$this->enabled = true;
-
-			if (is_array($toEmails = Request::getUserVar('to'))) {
-				$this->setRecipients($this->processAddresses ($this->getRecipients(), $toEmails));
-			}
-			if (is_array($ccEmails = Request::getUserVar('cc'))) {
-				$this->setCcs($this->processAddresses ($this->getCcs(), $ccEmails));
-			}
-			if (is_array($bccEmails = Request::getUserVar('bcc'))) {
-				$this->setBccs($this->processAddresses ($this->getBccs(), $bccEmails));
-			}
-		}
-
-		// Default "From" to user if available, otherwise site/journal principal contact
-		$user = Request::getUser();
-		if ($user) {
-			$this->setReplyTo($user->getEmail(), $user->getFullName());
-		}
-		if (is_null($journal) || is_null($journal->getSetting('contactEmail'))) {
-			$site = Request::getSite();
-			$this->setFrom($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
-
-		} else {
-			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-		}
-
-		if ($journal && !Request::getUserVar('continued')) {
-			$this->setSubject('[' . $journal->getLocalizedAcronym() . '] ' . $this->getSubject());
-		}
-
-		$this->journal = $journal;
+		parent::PKPMailTemplate($emailKey, $locale, $enableAttachments, $journal, $includeSignature);
 	}
 
 	/**
@@ -110,64 +35,13 @@ class MailTemplate extends PKPMailTemplate {
 	 */
 	function assignParams($paramArray = array()) {
 		// Add commonly-used variables to the list
-		if (isset($this->journal)) {
+		if (isset($this->context)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $this->journal->getLocalizedName();
-			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
-		} else {
-			$site = Request::getSite();
-			$paramArray['principalContactSignature'] = $site->getLocalizedContactName();
+			$paramArray['journalName'] = $this->context->getLocalizedName();
 		}
 		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::url(Request::getRequestedJournalPath());
 
 		return parent::assignParams($paramArray);
-	}
-
-	/**
-	 * Displays an edit form to customize the email.
-	 * @param $formActionUrl string
-	 * @param $hiddenFormParams array
-	 * @return void
-	 */
-	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
-		$templateMgr = TemplateManager::getManager();
-
-		parent::displayEditForm($formActionUrl, $hiddenFormParams, $alternateTemplate, $additionalParameters);
-	}
-
-	/**
-	 * Send the email.
-	 * Aside from calling the parent method, this actually attaches
-	 * the persistent attachments if they are used.
-	 * @param $clearAttachments boolean Whether to delete attachments after
-	 */
-	function send($clearAttachments = true) {
-		if (isset($this->journal)) {
-			//If {$templateSignature} and/or {$templateHeader}
-			// exist in the body of the message, replace them with
-			// the journal signature; otherwise just pre/append
-			// them. This is here to accomodate MIME-encoded
-			// messages or other cases where the signature cannot
-			// just be appended.
-			$header = $this->journal->getSetting('emailHeader');
-			if (strstr($this->getBody(), '{$templateHeader}') === false) {
-				$this->setBody($header . "\n" . $this->getBody());
-			} else {
-				$this->setBody(str_replace('{$templateHeader}', $header, $this->getBody()));
-			}
-
-			$signature = $this->journal->getSetting('emailSignature');
-			if (strstr($this->getBody(), '{$templateSignature}') === false) {
-				$this->setBody($this->getBody() . "\n" . $signature);
-			} else {
-				$this->setBody(str_replace('{$templateSignature}', $signature, $this->getBody()));
-			}
-
-			$envelopeSender = $this->journal->getSetting('envelopeSender');
-			if (!empty($envelopeSender) && Config::getVar('email', 'allow_envelope_sender')) $this->setEnvelopeSender($envelopeSender);
-		}
-
-		return parent::send($clearAttachments);
 	}
 }
 
