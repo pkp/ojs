@@ -217,6 +217,95 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	function getReviewRoundJoin() {
 		return 'r.submission_id = r2.submission_id AND r.round = r2.round';
 	}
+
+	/**
+	 * Get the last assigned and last completed dates for all reviewers of the given context.
+	 * @param $contextId int
+	 * @return array
+	 */
+	function getReviewerStatistics($contextId) {
+		// Build an array of all reviewers and provide a placeholder for all statistics (so even if they don't
+		//  have a value, it will be filled in as 0
+		$statistics = array();
+		$reviewerStatsPlaceholder = array('last_notified' => null, 'incomplete' => 0, 'total_span' => 0, 'completed_review_count' => 0, 'average_span' => 0);
+
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$allReviewers = $userDao->getAllReviewers($contextId);
+		while($reviewer = $allReviewers->next()) {
+			$statistics[$reviewer->getId()] = $reviewerStatsPlaceholder;
+		}
+
+		// Get counts of completed submissions
+		$result = $this->retrieve(
+				'SELECT	r.reviewer_id, MAX(r.date_notified) AS last_notified
+				FROM	review_assignments r, articles a
+				WHERE	r.submission_id = a.article_id AND
+					a.journal_id = ?
+				GROUP BY r.reviewer_id',
+				(int) $contextId
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = $reviewerStatsPlaceholder;
+			$statistics[$row['reviewer_id']]['last_notified'] = $this->datetimeFromDB($row['last_notified']);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Get completion status
+		$result = $this->retrieve(
+				'SELECT	r.reviewer_id, COUNT(*) AS incomplete
+				FROM	review_assignments r, articles a
+				WHERE	r.submission_id = a.article_id AND
+				r.date_notified IS NOT NULL AND
+				r.date_completed IS NULL AND
+				r.cancelled = 0 AND
+				a.journal_id = ?
+				GROUP BY r.reviewer_id',
+				(int) $contextId
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = $reviewerStatsPlaceholder;
+			$statistics[$row['reviewer_id']]['incomplete'] = $row['incomplete'];
+			$result->MoveNext();
+		}
+
+		$result->Close();
+
+		// Calculate time taken for completed reviews
+		$result = $this->retrieve(
+				'SELECT	r.reviewer_id, r.date_notified, r.date_completed
+				FROM	review_assignments r, articles a
+				WHERE	r.submission_id = a.article_id AND
+				r.date_notified IS NOT NULL AND
+				r.date_completed IS NOT NULL AND
+				r.declined = 0 AND
+				a.journal_id = ?',
+				(int) $contextId
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = $reviewerStatsPlaceholder;
+
+			$completed = strtotime($this->datetimeFromDB($row['date_completed']));
+			$notified = strtotime($this->datetimeFromDB($row['date_notified']));
+			if (isset($statistics[$row['reviewer_id']]['total_span'])) {
+				$statistics[$row['reviewer_id']]['total_span'] += $completed - $notified;
+				$statistics[$row['reviewer_id']]['completed_review_count'] += 1;
+			} else {
+				$statistics[$row['reviewer_id']]['total_span'] = $completed - $notified;
+				$statistics[$row['reviewer_id']]['completed_review_count'] = 1;
+			}
+
+			// Calculate the average length of review in days.
+			$statistics[$row['reviewer_id']]['average_span'] = round(($statistics[$row['reviewer_id']]['total_span'] / $statistics[$row['reviewer_id']]['completed_review_count']) / 86400);
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		return $statistics;
+	}
 }
 
 ?>
