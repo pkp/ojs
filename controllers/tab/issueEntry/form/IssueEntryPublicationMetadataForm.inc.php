@@ -64,6 +64,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('submissionId', $this->getSubmission()->getId());
 		$templateMgr->assign('stageId', $this->getStageId());
 		$templateMgr->assign('formParams', $this->getFormParams());
+		$templateMgr->assign_by_ref('context', $context);
 
 		// include issue possibilities
 		import('classes.issue.IssueAction');
@@ -73,6 +74,15 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$publishedArticle =& $this->getPublishedArticle();
 		if ($publishedArticle) {
 			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			if ($issue) {
+				$templateMgr->assign('issueAccess', $issue->getAccessStatus());
+				$templateMgr->assign('accessOptions', array(
+					ARTICLE_ACCESS_ISSUE_DEFAULT => __('editor.issues.default'),
+					ARTICLE_ACCESS_OPEN => __('editor.issues.open')
+				));
+			}
 		}
 
 		// include payment information
@@ -141,7 +151,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * @see Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished'));
+		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished', 'accessStatus'));
 	}
 
 	/**
@@ -202,6 +212,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
 
+			// define the access status for the article if none is set.
+			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
+
 			if ($issue) {
 
 				// Schedule against an issue.
@@ -209,6 +222,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle->setIssueId($issueId);
 					$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
+					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 					// Re-index the published article metadata.
@@ -219,7 +233,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle->setIssueId($issueId);
 					$publishedArticle->setDatePublished(Core::getCurrentDate());
 					$publishedArticle->setSeq(REALLY_BIG_NUMBER);
-					$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);
+					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
 
 					$publishedArticleDao->insertPublishedArticle($publishedArticle);
