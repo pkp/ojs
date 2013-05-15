@@ -62,23 +62,25 @@ class OJSPaymentManager extends PaymentManager {
 		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
 		$payment->setJournalId($journalId);
 		$payment->setType($type);
+		$router = $this->request->getRouter();
+		$dispatcher = $router->getDispatcher();
 
-	 	switch ($type) {
+		switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl($this->request->url(null, 'article', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				$payment->setRequestUrl($this->request->url(null, 'issue', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
-				$payment->setRequestUrl($this->request->url(null, 'user'));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user'));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl($this->request->url(null, 'user', 'subscriptions'));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
 			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl($this->request->url(null, 'donations', 'thankYou'));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'donations', 'thankYou'));
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
@@ -86,13 +88,13 @@ class OJSPaymentManager extends PaymentManager {
 				$authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
 				$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($assocId);
 				if ($authorSubmission->getSubmissionProgress()!=0) {
-					$payment->setRequestUrl($this->request->url(null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
+					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author', 'submit', $authorSubmission->getSubmissionProgress(), array('articleId' => $assocId)));
 				} else {
-					$payment->setRequestUrl($this->request->url(null, 'author'));
+					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author'));
 				}
 				break;
 			case PAYMENT_TYPE_GIFT:
-				$payment->setRequestUrl($this->request->url(null, 'gifts', 'thankYou'));
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'gifts', 'thankYou'));
 				break;
 			default:
 				// Invalid payment type
