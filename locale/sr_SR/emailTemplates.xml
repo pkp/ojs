@@ -54,7 +54,7 @@ Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}
 		<subject>Obaveštenje o pretplati</subject>
 		<body>{$subscriberName}:
 
-Registrovani ste kao pretplatnik u sistemu {$journalName}, sa sledećim pretplatama:
+Registrovani ste kao pretplatnik u sistemu {$contextName}, sa sledećim pretplatama:
 
 {$subscriptionType}
 

@@ -280,7 +280,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$email = new MailTemplate('EMAIL_LINK');
 
 		if ($request->getUserVar('send') && !$email->hasErrors()) {
@@ -330,7 +330,7 @@ class RTHandler extends ArticleHandler {
 			$request->redirect(null, $router->getRequestedPage($request));
 		}
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$email = new MailTemplate();
 		$email->setAddressFieldsEnabled(false);
 

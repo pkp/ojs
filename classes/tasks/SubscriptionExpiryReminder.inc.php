@@ -66,7 +66,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			'subscriptionContactSignature' => $subscriptionContactSignature 
 		);
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale());
 		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());

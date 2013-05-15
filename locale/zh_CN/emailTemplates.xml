@@ -74,7 +74,7 @@
 		<subject>新用户注册</subject>
 		<body>{$userFullName}
 
-谢谢您注册成为《{$journalName}》的一个用户。请保管好这份用户名称和密码，它对于使用本站的所有功能来说是非常必要的。
+谢谢您注册成为《{$contextName}》的一个用户。请保管好这份用户名称和密码，它对于使用本站的所有功能来说是非常必要的。
 
 用户名称：{$username}
 密码：{$password}
@@ -87,7 +87,7 @@
 		<subject>验证您的账户</subject>
 		<body>{$userFullName}
 
-您已经在《{$journalName}》创建了账户, 在开始使用前，您需要验证您的电子邮件账号。要做到这一点，只需按照下面的链接：
+您已经在《{$contextName}》创建了账户, 在开始使用前，您需要验证您的电子邮件账号。要做到这一点，只需按照下面的链接：
 
 {$activateUrl}
 
@@ -96,8 +96,8 @@
 		<description>这封电子邮件发送给新注册用户。欢迎他们的加入并提供关于他们的用户名和密码的记录。</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>在《{$journalName}》注册为审稿人</subject>
-		<body>基于您的经验, 我们已经注册您的名字到期刊《{$journalName}》的审稿人数据库. 这并不意味着您那方面的任何形式的承诺，只代表我们可以通知您相关投稿的审阅. 在被邀请审稿时，您可以看到稿件的标题和摘要，您可以作出是否对稿件进行审阅的决定。您也可以在任何时候请求从审稿人列表中移除您的名字.
+		<subject>在《{$contextName}》注册为审稿人</subject>
+		<body>基于您的经验, 我们已经注册您的名字到期刊《{$contextName}》的审稿人数据库. 这并不意味着您那方面的任何形式的承诺，只代表我们可以通知您相关投稿的审阅. 在被邀请审稿时，您可以看到稿件的标题和摘要，您可以作出是否对稿件进行审阅的决定。您也可以在任何时候请求从审稿人列表中移除您的名字.
 
 我们将提供给您用户名和密码，用于您所有在本期刊网站的活动。例如，您可以更新您的账户信息，或者更改您的审稿方向.
 
@@ -112,17 +112,17 @@
 		<subject>新一期期刊已出版</subject>
 		<body>亲爱的读者您好：
 
-《{$journalName}》已经出版了最新一期的期刊，请见{$journalUrl}。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。
+《{$contextName}》已经出版了最新一期的期刊，请见{$journalUrl}。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。
 
 感谢您持续地关注我们的作品，
 {$editorialContactSignature}</body>
 		<description>这封电子邮件是透过编辑的「用户首页」页面中的「通知用户」链接，寄发给注册用户。此邮件通知读者有新一期的内容并邀请他们以内附的网址查看期刊。</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>请存档《{$journalName}》</subject>
+		<subject>请存档《{$contextName}》</subject>
 		<body>Dear [University Librarian]
 
-《{$journalName}》 &lt;{$journalUrl}&gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。
+《{$contextName}》 &lt;{$journalUrl}&gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。
 
 [期刊的简介]
 
@@ -135,10 +135,10 @@
 		<description>这封电子邮件要求一个洛克斯存档的维护者考虑将这份期刊纳入其存档库中。邮件中提供了链接到 「洛克斯出版品一览」的网址。</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>请存档《{$journalName}》</subject>
+		<subject>请存档《{$contextName}》</subject>
 		<body>亲爱的[大学图书馆]：
 
-《{$journalName}》 &lt;{$journalUrl}&gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。
+《{$contextName}》 &lt;{$journalUrl}&gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。
 
 [期刊的简介]
 
@@ -154,7 +154,7 @@
 		<subject>投稿致谢函</subject>
 		<body>{$authorName}:
 
-感谢您将稿件 〈{$articleTitle}〉 投稿至《{$journalName}》。透过我们所使用的期刊管理系统，您将能够登入期刊网站来追踪稿件的编辑进度：
+感谢您将稿件 〈{$submissionTitle}〉 投稿至《{$contextName}》。透过我们所使用的期刊管理系统，您将能够登入期刊网站来追踪稿件的编辑进度：
 
 稿件网址：{$submissionUrl}
 用户名称：{$authorUsername}
@@ -168,7 +168,7 @@
 		<subject>不适合的稿件</subject>
 		<body>{$authorName}:
 
-我们针对〈{$articleTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$journalName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。
+我们针对〈{$submissionTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$contextName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -176,14 +176,14 @@
 		<subject>稿件评论</subject>
 		<body>{$name}:
 
-{$commentName}已新增了一份对于《{$journalName}》中〈〈{$articleTitle}〉的稿件评论 ：
+{$commentName}已新增了一份对于《{$contextName}》中〈〈{$submissionTitle}〉的稿件评论 ：
 
 {$comments}</body>
 		<description>这封电子邮件通知参与稿件编辑作业的许多人说，有了一份新评论。</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>对于〈{$articleTitle}〉的决定意见</subject>
-		<body>您身为投稿到《{$journalName}》之稿件〈{$articleTitle}〉的审查人之一，我寄给您已经寄发给作者的审查意见书以及编辑决定意见。再次感谢您对这个审查程序所做出的重要贡献。
+		<subject>对于〈{$submissionTitle}〉的决定意见</subject>
+		<body>您身为投稿到《{$contextName}》之稿件〈{$submissionTitle}〉的审查人之一，我寄给您已经寄发给作者的审查意见书以及编辑决定意见。再次感谢您对这个审查程序所做出的重要贡献。
 
 {$editorialContactSignature}
 
@@ -194,7 +194,7 @@
 		<subject>指派编辑任务</subject>
 		<body>{$editorialContactName}:
 
-我们已经将投稿到《{$journalName}》的稿件〈{$articleTitle}〉指派给您进行编辑工作，请在您的「区段编辑」介面中进行编辑工作。
+我们已经将投稿到《{$contextName}》的稿件〈{$submissionTitle}〉指派给您进行编辑工作，请在您的「区段编辑」介面中进行编辑工作。
 
 稿件网址：{$submissionUrl}
 用户名称：{$editorUsername}
@@ -207,7 +207,7 @@
 		<subject>邀请您审查稿件</subject>
 		<body>{$reviewerName}您好：
 
-《{$journalName}》的编辑团队相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。
+《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。
 
 无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：{$journalUrl}
 
@@ -223,17 +223,17 @@
 
 
 
-〈{$articleTitle}〉
+〈{$submissionTitle}〉
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项时，才会用到这份消息。(否则请见：REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>审稿请求</subject>
 		<body>{$reviewerName}:
 
-《{$journalName}》的编辑团队相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这项对我们来说相当重要的工作。
+《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这项对我们来说相当重要的工作。
 
 无论您是否接受审查工作与否，都请在{$weekLaterDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。
 
@@ -246,17 +246,17 @@
 
 
 
-〈{$articleTitle}〉
+〈{$submissionTitle}〉
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>这封电子邮件这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项，并且启用「审查人一点即往」的功能，才会用到这份消息。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>邀请您审查稿件</subject>
 		<body>{$reviewerName}:
 
-我相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳审查人选，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。该份期刊的审查指引已经附列如下，而稿件随附在这封电子邮件的附加档案之中。如果您接受这份审查工作，麻烦您在{$reviewDueDate}之前，将您对这份稿件的审查意见书以及编辑建议寄给我们。
+我相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。该份期刊的审查指引已经附列如下，而稿件随附在这封电子邮件的附加档案之中。如果您接受这份审查工作，麻烦您在{$reviewDueDate}之前，将您对这份稿件的审查意见书以及编辑建议寄给我们。
 
 无论您是否接受审查工作与否，都请在{$weekLaterDate}之内回复此封电子邮件给我们，告知我们您是否愿意进行审查工作。
 
@@ -273,7 +273,7 @@
 		<subject>请取消审查工作</subject>
 		<body>{$reviewerName}:
 
-出于种种考量，我们目前已经取消了邀请您进行投稿《{$journalName}》之稿件〈{$articleTitle}〉的审查工作。造成您的不便，我们感到十分抱歉，同时我们希望在未来仍能够请您协助审查这份期刊的稿件。
+出于种种考量，我们目前已经取消了邀请您进行投稿《{$contextName}》之稿件〈{$submissionTitle}〉的审查工作。造成您的不便，我们感到十分抱歉，同时我们希望在未来仍能够请您协助审查这份期刊的稿件。
 
 如果您有任何问题，请与我们联络。
 
@@ -284,7 +284,7 @@
 		<subject>可以进行审查工作</subject>
 		<body>{$editorialContactName}:
 
-我可以并且愿意为《{$journalName}》审查稿件〈{$articleTitle}〉。谢谢您考虑我当审查人，而我计划在审查截止日{$reviewDueDate}前完成审查。
+我可以并且愿意为《{$contextName}》审查稿件〈{$submissionTitle}〉。谢谢您考虑我当审查人，而我计划在审查截止日{$reviewDueDate}前完成审查。
 
 {$reviewerName}</body>
 		<description>这封电子邮件是由一位审查人寄给区段编辑，回复一份审查邀请，并通知区段编辑说已经接受审查邀请而且会在特定的日期之前完成工作。</description>
@@ -293,7 +293,7 @@
 		<subject>无法进行审查工作</subject>
 		<body>{$editorialContactName}:
 
-我恐怕在这个时候无法为《{$journalName}》进行稿件〈{$articleTitle}〉的审查工作。谢谢您考虑我担任审查人，有机会我仍乐意接受审查工作。
+我恐怕在这个时候无法为《{$contextName}》进行稿件〈{$submissionTitle}〉的审查工作。谢谢您考虑我担任审查人，有机会我仍乐意接受审查工作。
 
 {$reviewerName}</body>
 		<description>这封电子邮件是由一位审查人寄给区段编辑以回复一份审查邀请，并通知区段编辑要婉谢审查邀请。</description>
@@ -302,7 +302,7 @@
 		<subject>已完成文章审查工作</subject>
 		<body>{$editorialContactName}:
 
-我目前已经为 《{$journalName}》完成稿件〈{$articleTitle}〉的审查工作，并提出了我的建议：「{$recommendation}」
+我目前已经为 《{$contextName}》完成稿件〈{$submissionTitle}〉的审查工作，并提出了我的建议：「{$recommendation}」
 
 {$reviewerName}</body>
 		<description>这封电子邮件是由一位审查人寄给区段编辑以通知他们说已经完成一份审查工作，而审查意见舒和编辑建议已经记录在网站上了。</description>
@@ -311,7 +311,7 @@
 		<subject>文章审查感谢函</subject>
 		<body>{$reviewerName}:
 
-感谢您为《{$journalName}》完成了稿件〈{$articleTitle}〉的审查工作。我们非常感激您对我们出版文章之品质的重要贡献。
+感谢您为《{$contextName}》完成了稿件〈{$submissionTitle}〉的审查工作。我们非常感激您对我们出版文章之品质的重要贡献。
 
 {$editorialContactSignature}</body>
 		<description>这封电子邮件是由一位区段编辑发出，确认收到已完成审查工作的回条，并感谢审查人之贡献。</description>
@@ -320,7 +320,7 @@
 		<subject>稿件审查提醒函</subject>
 		<body>{$reviewerName}:
 
-这封信只是礼貌地提醒您，我们已邀请您为《{$journalName}》审查稿件〈{$articleTitle}〉。我们希望您
+这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。
 
 如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}
@@ -336,7 +336,7 @@
 		<subject>稿件审查提醒函</subject>
 		<body>{$reviewerName}:
 
-这封信只是礼貌地提醒您，我们已邀请您为《{$journalName}》审查稿件〈{$articleTitle}〉。我们希望您
+这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。
 
 稿件网址：{$submissionReviewUrl}
@@ -350,7 +350,7 @@
 		<subject>自动发出的稿件审查提醒函</subject>
 		<body>{$reviewerName}:
 
-这封信只是礼貌地提醒您，我们已邀请您为《{$journalName}》审查稿件〈{$articleTitle}〉。我们希望您
+这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。
 
 如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}
@@ -366,7 +366,7 @@
 		<subject>自动发出的稿件审查提醒函</subject>
 		<body>{$reviewerName}:
 
-这封信只是礼貌地提醒您，我们已邀请您为《{$journalName}》审查稿件〈{$articleTitle}〉。我们希望您
+这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。
 
 稿件网址：{$submissionReviewUrl}
@@ -379,7 +379,7 @@
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>编辑决定</subject>
 		<body>{$authorName}:
-我们对于您在《{$journalTitle}》提交的〈{$articleTitle}〉达成一项决定。
+我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。
 
 我们的决定是：
 
@@ -391,7 +391,7 @@
 		<subject>编辑决定</subject>
 		<body>{$authorName}:
 
-我们对于您在《{$journalTitle}》提交的〈{$articleTitle}〉达成一项决定。
+我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。
 
 我们的决定是：
 
@@ -403,7 +403,7 @@
 		<subject>编辑决定</subject>
 		<body>{$authorName}:
 
-我们对于您在《{$journalTitle}》提交的〈{$articleTitle}〉达成一项决定。
+我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。
 
 我们的决定是：
 
@@ -415,7 +415,7 @@
 		<subject>编辑决定</subject>
 		<body>{$authorName}:
 
-我们对于您在《{$journalTitle}》提交的〈{$articleTitle}〉达成一项决定。
+我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。
 
 我们的决定是：
 
@@ -427,7 +427,7 @@
 		<subject>编辑要求</subject>
 		<body>{$copyeditorName}您好：
 
-我想请您为《{$journalName}》担任稿件〈{$articleTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。
+我想请您为《{$contextName}》担任稿件〈{$submissionTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。
 
 稿件网址：{$submissionCopyeditingUrl}
 用户名称：{$copyeditorUsername}
@@ -441,7 +441,7 @@
 		<subject>文字编辑工作已完成</subject>
 		<body>{$editorialContactName}:
 
-我们现在已经完成您投到{$journalName}的"{$articleTitle}" 的文字编辑.通过如下步骤，审查拟议的修改并回复到作者质询:
+我们现在已经完成您投到{$contextName}的"{$submissionTitle}" 的文字编辑.通过如下步骤，审查拟议的修改并回复到作者质询:
 
 1. 通过下面的期刊URL以您的用户名和密码登录到指定期刊 (需要的时候可以使用忘记链接).
 2. 点击起始文字编辑文件并下载文件1，并且打开文字编辑版本.
@@ -462,7 +462,7 @@
 		<subject>校样编辑工作感谢函</subject>
 		<body>{$copyeditorName}:
 
-非常感谢您为《{$journalName}》完成稿件〈{$articleTitle}〉的校样工作。这对本期刊的品质有非常重要的贡献。
+非常感谢您为《{$contextName}》完成稿件〈{$submissionTitle}〉的校样工作。这对本期刊的品质有非常重要的贡献。
 
 谢谢您
 
@@ -473,7 +473,7 @@
 		<subject>请复阅校样稿</subject>
 		<body>{$authorName}:
 
-您投向{$journalName}的稿件"{$articleTitle}"已经通过第一部的文字编辑，通过如下步骤您可以审阅该内容
+您投向{$contextName}的稿件"{$submissionTitle}"已经通过第一部的文字编辑，通过如下步骤您可以审阅该内容
 
 1. 点击下面的投稿URL.
 2. 登录到期刊并且点击显示在步骤1的文件.
@@ -498,7 +498,7 @@
 		<subject>已完成复阅校样槁</subject>
 		<body>{$editorialContactName}:
 
-我目前已经复阅过投稿《{$journalName}》之稿件〈{$articleTitle}〉的复阅工作，而稿件已经可以进行最后阶段的校样，并准备进行排版工作。
+我目前已经复阅过投稿《{$contextName}》之稿件〈{$submissionTitle}〉的复阅工作，而稿件已经可以进行最后阶段的校样，并准备进行排版工作。
 
 感谢您对本文的付出
 {$authorName}</body>
@@ -508,7 +508,7 @@
 		<subject>复阅校样槁感谢函</subject>
 		<body>{$authorName}:
 
-谢谢您复阅您投稿至 《{$journalName}》之稿件〈{$articleTitle}〉的校样槁。我们会期盼能够继续进行出版这份作品的工作。
+谢谢您复阅您投稿至 《{$contextName}》之稿件〈{$submissionTitle}〉的校样槁。我们会期盼能够继续进行出版这份作品的工作。
 
 {$editorialContactSignature}</body>
 		<description>这封电子邮件是由区段编辑寄给稿件的作者，确认作者校样流程已经完成，并且感谢他们的付出。</description>
@@ -517,7 +517,7 @@
 		<subject>校样槁的最后复阅工作</subject>
 		<body>{$copyeditorName}:
 
-作者和编辑已经完成了来自《{$journalName}》期刊的稿件{$articleTitle}的文字编辑工作.一个“完善”的新稿件已经准备好进行排版，请按照如下步骤完成排版任务：
+作者和编辑已经完成了来自《{$contextName}》期刊的稿件{$submissionTitle}的文字编辑工作.一个“完善”的新稿件已经准备好进行排版，请按照如下步骤完成排版任务：
 1. 点击下面的稿件URL.
 2. 登录到期刊并且点击出现在步骤2的文件.
 3. 打开已经下载的文件，并且合并所有文字编辑与质询回复.
@@ -525,7 +525,7 @@
 5. 点击元数据（METADATA），检查索引信息(保存任何更正).
 6. 发送完成电子邮件给编辑.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 稿件URL: {$submissionCopyeditingUrl}
 用户名: {$copyeditorUsername}
 
@@ -536,7 +536,7 @@
 		<subject>已完成最后的校样复阅工作</subject>
 		<body>{$editorialContactName}:
 
-我目前已经就投稿《{$journalName}》之稿件〈{$articleTitle}〉，备妥了一份清样版本。此稿件已经可以交给版面编辑，并准备进行排版工作。
+我目前已经就投稿《{$contextName}》之稿件〈{$submissionTitle}〉，备妥了一份清样版本。此稿件已经可以交给版面编辑，并准备进行排版工作。
 
 {$copyeditorName}</body>
 		<description>这封电子邮件是由校样编辑寄给区段编辑，通知他们最后一次的校样工作已经完成，并且现在可以开始排版的流程。</description>
@@ -545,7 +545,7 @@
 		<subject>校样定稿感谢函</subject>
 		<body>{$copyeditorName}:
 
-非常感谢您完成了投稿《{$journalName}》之稿件〈{$articleTitle}〉的校样工作。这份为排版进行的「文字清理」预备工作在编辑流程中非常的重要。
+非常感谢您完成了投稿《{$contextName}》之稿件〈{$submissionTitle}〉的校样工作。这份为排版进行的「文字清理」预备工作在编辑流程中非常的重要。
 
 谢谢您
 
@@ -556,12 +556,12 @@
 		<subject>请进行排版工作</subject>
 		<body>{$layoutEditorName}:
 
-投递到 {$journalName}的稿件 "{$articleTitle}" 现在按照如下步骤进行排版：
+投递到 {$contextName}的稿件 "{$submissionTitle}" 现在按照如下步骤进行排版：
 1. 点击下面的投稿URL.
 2. 登录到期刊，并且使用排版版本文件根据期刊标准来创建样稿.
 3. 发送完成稿件给编辑.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 稿件URL: {$submissionLayoutUrl}
 用户名: {$layoutEditorUsername}
 
@@ -574,7 +574,7 @@
 		<subject>已完成制版</subject>
 		<body>{$editorialContactName}:
 
-目前已经为投稿《{$journalName}》的稿件〈{$articleTitle}〉完成制版工作，可以进行校对工作了。
+目前已经为投稿《{$contextName}》的稿件〈{$submissionTitle}〉完成制版工作，可以进行校对工作了。
 
 如果您有任何问题，请与我们联络。
 
@@ -585,7 +585,7 @@
 		<subject>排版工作致谢</subject>
 		<body>{$layoutEditorName}:
 
-感谢您为对投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了制版的工作。这份工作在出版的过程中有著相当重要的贡献。
+感谢您为对投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了制版的工作。这份工作在出版的过程中有著相当重要的贡献。
 
 谢谢您
 
@@ -596,7 +596,7 @@
 		<subject>请作者进行校对工作</subject>
 		<body>{$authorName}:
 
-您的稿件"{$articleTitle}" t（投向《{$journalName}》）现在需要通过如下步骤进行校对：
+您的稿件"{$submissionTitle}" t（投向《{$contextName}》）现在需要通过如下步骤进行校对：
 
 1. 点击下面稿件URL.
 2. 登录到期刊并阅读校对向导（PROOFING INSTRUCTIONS）
@@ -615,7 +615,7 @@
 		<subject>作者已完成校对工作</subject>
 		<body>{$editorialContactName}:
 
-我目前已经为投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校对工作。排版稿目前已经可以让校对者与版面编辑进行任何的最后修订。
+我目前已经为投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校对工作。排版稿目前已经可以让校对者与版面编辑进行任何的最后修订。
 
 {$authorName}</body>
 		<description>这封电子邮件是由作者寄发给校对者与编辑，通知他们作者端的校对已经完成，而细节可以参见文章的评论意见。</description>
@@ -624,7 +624,7 @@
 		<subject>作者校对致谢</subject>
 		<body>{$authorName}:
 
-感谢您为您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校对工作。短期内我们将会很快地出版您的作品。
+感谢您为您投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校对工作。短期内我们将会很快地出版您的作品。
 
 如果您有订阅我们的出版通知服务，您将会在期刊出版的时候收到一封附有目录的电子邮件通知。如果您有任何问题，请与我们联络。
 
@@ -635,7 +635,7 @@
 		<subject>请进行文章校对工作</subject>
 		<body>{$proofreaderName}:
 
-稿件 "{$articleTitle}" （投稿《{$journalName}》）现在需要通过如下步骤进行校对：
+稿件 "{$submissionTitle}" （投稿《{$contextName}》）现在需要通过如下步骤进行校对：
 1. 点击下面的稿件URL.
 2. 登录到期刊并查看校对向导（PROOFING INSTRUCTIONS）.
 3. 点击查看校样（VIEW PROOF），可以是一种或者多种校样并存.
@@ -655,7 +655,7 @@
 		<subject>已完成校对工作</subject>
 		<body>{$editorialContactName}:
 
-我已经完成投稿《{$journalName}》之稿件〈{$articleTitle}〉的校对工作。排版稿目前已经可以由版面编辑进行最后的修订。
+我已经完成投稿《{$contextName}》之稿件〈{$submissionTitle}〉的校对工作。排版稿目前已经可以由版面编辑进行最后的修订。
 
 {$proofreaderName}</body>
 		<description>这封电子邮件是由校对者寄发给区段编辑，通知他们校对者已经完成校对流程。</description>
@@ -664,7 +664,7 @@
 		<subject>校对致谢</subject>
 		<body>{$proofreaderName}:
 
-感谢您为您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校对工作。这份工作对本期刊的品质有著很重要的贡献。
+感谢您为您投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校对工作。这份工作对本期刊的品质有著很重要的贡献。
 
 谢谢您
 
@@ -675,13 +675,13 @@
 		<subject>请版面编辑进行校对工作</subject>
 		<body>{$layoutEditorName}:
 
-稿件"{$articleTitle}" （投向{$journalName}）已经被作者于校对人员校对完，请按照如下步骤完成所有更正.
+稿件"{$submissionTitle}" （投向{$contextName}）已经被作者于校对人员校对完，请按照如下步骤完成所有更正.
 1. 点击下面的稿件URL.
 2. 登录到期刊，参考校对更正来创建更正的样稿。
 3. 上传修订完的样稿.
 4. 在校对步骤3里发送完成电邮给编辑.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 Subnmission URL: {$submissionUrl}
 Username: {$layoutEditorUsername}
 
@@ -694,7 +694,7 @@ Username: {$layoutEditorUsername}
 		<subject>版面编辑的校对工作已经完成</subject>
 		<body>{$editorialContactName}:
 
-投稿《{$journalName}》之稿件〈{$articleTitle}〉的排版稿已经依照校对结果完成修订。这篇文章现在已经可以出版了。
+投稿《{$contextName}》之稿件〈{$submissionTitle}〉的排版稿已经依照校对结果完成修订。这篇文章现在已经可以出版了。
 
 {$layoutEditorName}</body>
 		<description>>这封电子邮件是由版面编辑寄发给区段编辑，通知他们已经完成了最后的校对阶段以及文章目前已经可以出版了。</description>
@@ -703,7 +703,7 @@ Username: {$layoutEditorUsername}
 		<subject>版面编辑校对工作致谢</subject>
 		<body>{$layoutEditorName}:
 
-感谢您为您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校对修订的工作。这份工作对本期刊的品质有著很重要的贡献。
+感谢您为您投稿《{$contextName}》之稿件〈{$submissionTitle}〉完成了校对修订的工作。这份工作对本期刊的品质有著很重要的贡献。
 
 谢谢您
 
@@ -712,14 +712,14 @@ Username: {$layoutEditorUsername}
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>您可能会感兴趣的期刊文章</subject>
-		<body>我想您会有兴趣想看看{$authorName}所写的〈{$articleTitle}〉，刊行在《{$journalName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： "{$articleUrl}".</body>
+		<body>我想您会有兴趣想看看{$authorName}所写的〈{$submissionTitle}〉，刊行在《{$contextName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： "{$articleUrl}".</body>
 		<description>这份电子邮件样版让一个注册的读者有机会将有关一篇文章的相关信息寄给可能会感兴趣的人。这可以透过「阅读工具」进行，并且一定要由期刊管理员在「阅读工具管理」页面中启用这项功能。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>期刊订阅通知信</subject>
 		<body>{$subscriberName}:
 
-您目前以下列的订阅信息，注册登记成为我们线上期刊网站《{$journalName}》的一个订户：
+您目前以下列的订阅信息，注册登记成为我们线上期刊网站《{$contextName}》的一个订户：
 
 {$subscriptionType}
 
@@ -740,7 +740,7 @@ Username: {$layoutEditorUsername}
 		<subject>本期内容已经开放访问</subject>
 		<body>亲爱的读者您好：
 
-《{$journalName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 ({$journalUrl}) ，阅读文章以及您感兴趣的项目。
+《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 ({$journalUrl}) ，阅读文章以及您感兴趣的项目。
 
 感谢您持续地关注本期刊
 
@@ -751,7 +751,7 @@ Username: {$layoutEditorUsername}
 		<subject>订阅到期通知</subject>
 		<body>{$subscriberName}:
 
-您订阅《{$journalName}》的期限将要到期。
+您订阅《{$contextName}》的期限将要到期。
 
 {$subscriptionType}
 到期日：{$expiryDate}
@@ -767,7 +767,7 @@ Username: {$layoutEditorUsername}
 		<subject>订阅时间已经过期</subject>
 		<body>{$subscriberName}:
 
-您订阅《{$journalName}》的期限已经过期。
+您订阅《{$contextName}》的期限已经过期。
 
 {$subscriptionType}
 到期日：{$expiryDate}
@@ -783,7 +783,7 @@ Username: {$layoutEditorUsername}
 		<subject>订阅时间已经过期—最后提醒</subject>
 		<body>{$subscriberName}:
 
-您订阅《{$journalName}》的期限已经过期。
+您订阅《{$contextName}》的期限已经过期。
 请注意，这是最后一封寄发给您的提醒信函。
 
 {$subscriptionType}
@@ -798,7 +798,7 @@ Username: {$layoutEditorUsername}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>订阅购买:个人</subject>
-		<body>一个《{$journalName} 》的个人订阅已经被在线购买，详细如下：
+		<body>一个《{$contextName} 》的个人订阅已经被在线购买，详细如下：
 
 订阅类型:
 {$subscriptionType}
@@ -817,7 +817,7 @@ Username: {$layoutEditorUsername}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>订阅购买: 团体</subject>
-		<body>一个《{$journalName} 》的团体订阅已经被在线购买，详细如下：
+		<body>一个《{$contextName} 》的团体订阅已经被在线购买，详细如下：
 		激活这个订阅, 请使用提供的订阅URL，并且设置订阅状态为'激活（Active）'.
 
 订阅类型:
@@ -847,7 +847,7 @@ IP范围(可选):
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>订阅续订: 个人</subject>
-		<body>《{$journalName}》的一个个人订阅已经被续订了，详细信息如下：
+		<body>《{$contextName}》的一个个人订阅已经被续订了，详细信息如下：
 
 订阅类型:
 {$subscriptionType}
@@ -866,7 +866,7 @@ IP范围(可选):
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>订阅续订: 团体</subject>
-		<body>《{$journalName}》的一个团体订阅已经在线续订了，详细信息如下：
+		<body>《{$contextName}》的一个团体订阅已经在线续订了，详细信息如下：
 
 订阅类型:
 {$subscriptionType}
@@ -897,21 +897,21 @@ IP范围(可选):
 		<subject>引文编辑</subject>
 		<body>{$authorFirstName},
 
-对于下面的在您文章里列出的参考文献，请您验证并提供给我们正确的引用, {$articleTitle}:
+对于下面的在您文章里列出的参考文献，请您验证并提供给我们正确的引用, {$submissionTitle}:
 
 {$rawCitation}
 
 谢谢!
 
 {$userFirstName}
-Copy-Editor, {$journalName}</body>
+Copy-Editor, {$contextName}</body>
 		<description>本邮件允许文字编辑向作者要求参考文献的其他信息</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>文章审稿请求</subject>
 		<body>{$reviewerName}:
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
 
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
 
@@ -929,17 +929,17 @@ Thank you for considering this request.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>文章审稿请求</subject>
 		<body>{$reviewerName}:
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
 
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
 
@@ -980,7 +980,7 @@ We hope that you enjoy your gift!
 		<subject>稿件审稿要求</subject>
 		<body>{$reviewerName}:
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
 
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
 
@@ -996,10 +996,10 @@ Thank you for considering this request.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
@@ -1045,7 +1045,7 @@ We hope that you enjoy your gift!
 		<subject>修订版上传</subject>
 		<body>{$editorialContactName}:
 
-A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
+A revised version of "{$submissionTitle}" has been uploaded by the author {$authorName}.
 
 Submission URL: {$submissionUrl}
 

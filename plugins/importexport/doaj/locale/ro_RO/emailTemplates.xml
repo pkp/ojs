@@ -14,11 +14,11 @@
 		<subject>Contribuirea la DOAJ cu informații privind revista</subject>
 		<body>Dragă Sonja, 
 			
-Acest mesaj a fost trimis pentru a te înștiința că dorim să includem {$journalName} în DOAJ. Pentru a crește viteza procesului de evaluare, am dori să-ți oferim câteva informații despre revista noastră.
+Acest mesaj a fost trimis pentru a te înștiința că dorim să includem {$contextName} în DOAJ. Pentru a crește viteza procesului de evaluare, am dori să-ți oferim câteva informații despre revista noastră.
 
 Acces deschis (nu taxează cititorii sau instituțiile din care fac parte pentru acces) (da/nu): {$isOpenAccess}
 
-Titlul revistei: {$journalName}
+Titlul revistei: {$contextName}
 
 Titlul alternativ al revistei (folosește-l dacă revista are un al doilea nume care este foarte cunoscut): {$altTitle}
 

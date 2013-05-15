@@ -4,7 +4,7 @@
 <email_texts locale="id_ID"> 
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION"> 
 		<subject> Pemberitahuan Pembayaran Manual </subject> 
-		<body> Pembayaran manual harus diproses untuk jurnal dan {$journalName} pengguna {$userFullName} (nama pengguna "{$userName}").
+		<body> Pembayaran manual harus diproses untuk jurnal dan {$contextName} pengguna {$userFullName} (nama pengguna "{$userName}").
 The item being paid for "{$itemName}". 
 Biaya adalah {$itemCost} ({$itemCurrencyCode}). 
 Surat elektronik ini dibuat oleh plugin pembayaran manual IOJS.</body>

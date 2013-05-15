@@ -12,7 +12,7 @@
 <email_texts locale="es_ES">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notificación de depósito</subject>
-		<body>Enhorabuena por la aceptación de su presentación, "($ articleTitle)", para su publicación en {$journalName}. Si lo desea, puede depositar de forma automática su presentación en uno o varios repositorios.
+		<body>Enhorabuena por la aceptación de su presentación, "($ submissionTitle)", para su publicación en {$contextName}. Si lo desea, puede depositar de forma automática su presentación en uno o varios repositorios.
 
 Vaya a {$swordDepositUrl} para proceder.
 

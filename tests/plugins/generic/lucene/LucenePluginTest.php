@@ -180,7 +180,7 @@ class LucenePluginTest extends DatabaseTestCase {
 			'LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION',
 			null, null, null, true, true
 		);
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$techInfoMail = $this->getMock('MailTemplate', array('send'), $constructorArgs); /* @var $techInfoMail MailTemplate */
 		$techInfoMail->expects($this->exactly(2))
 		             ->method('send')

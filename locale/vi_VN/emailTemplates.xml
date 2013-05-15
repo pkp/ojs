@@ -35,7 +35,7 @@ Mật khẩu: {$password}
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>Đăng ký mới</subject>
-		<body>Cảm ơn quý vị đã đăng ký làm bạn đọc của tạp chí {$journalName}. Vui lòng lưu giữ bí danh và mật khẩu của quý vị vì nó cần để đăng nhập vào tạp chí này.
+		<body>Cảm ơn quý vị đã đăng ký làm bạn đọc của tạp chí {$contextName}. Vui lòng lưu giữ bí danh và mật khẩu của quý vị vì nó cần để đăng nhập vào tạp chí này.
 
 Bí danh: {$username}
 Mật khẩu: {$password}
@@ -48,17 +48,17 @@ Xin cảm ơn,
 		<subject>Số tạp chí mới ra</subject>
 		<body>Bạn đọc kính mến:
 
-{$journalName} vừa mới xuất bản số mới nhất tại địa chỉ {$journalUrl}. Xin mời quý vị xem Mục lục gửi kèm đây và truy cập vào website của chúng tôi để xem bài viết mà quý vị quan tâm.
+{$contextName} vừa mới xuất bản số mới nhất tại địa chỉ {$journalUrl}. Xin mời quý vị xem Mục lục gửi kèm đây và truy cập vào website của chúng tôi để xem bài viết mà quý vị quan tâm.
 
 Xin trân trọng cảm ơn sự quan tâm của quý vị,
 {$editorialContactSignature}</body>
 		<description>Email này được gửi tới những bạn đọc đã đăng ký bằng cách nhấp chuột vào đường dẫn "Thông báo cho bạn đọc" trên trang riêng của BTV. Email báo cho bạn đọc biết về số mới xuất bản và mời họ truy cập vào tạp chí ở địa chỉ nêu trong thư.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Đề nghị lưu trữ tạp chí {$journalName}</subject>
+		<subject>Đề nghị lưu trữ tạp chí {$contextName}</subject>
 		<body>Kính gửi [Giám đốc TV Đại học]
 
-{$journalName} &lt;{$journalUrl}&gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.
+{$contextName} &lt;{$journalUrl}&gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.
 
 [Mô tả ngắn gọn về tạp chí]
 
@@ -71,10 +71,10 @@ Trân trọng cảm ơn,
 		<description>Email này gửi một đơn vị lưu trữ kho tài liệu theo chuẩn LOCKSS đề nghị đưa tạp chí này vào kho lưu trữ. Email cung cấp địa chỉ URL dẫn tới LOCKSS Publisher Manifest của tạp chí.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Đề nghị lưu trữ tạp chí {$journalName}</subject>
+		<subject>Đề nghị lưu trữ tạp chí {$contextName}</subject>
 		<body>Kính gửi [Giám đốc TV Đại học]
 
-{$journalName} &lt;{$journalUrl}&gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.
+{$contextName} &lt;{$journalUrl}&gt;, là một tạp chí mà một giảng viên của trường quý vị,[tên giảng viên], tham gia với tư cách [chức vụ]. Tạp chí mong muốn xây dựng một kho lưu trữ theo nguyên tắc LOCKSS (Lots of Copies Keep Stuff Safe - Nhiều bản sao giữ cho tài liệu an toàn) với thư viện của quý vị và các thư viện đại học khác.
 
 [Mô tả ngắn gọn về tạp chí]
 
@@ -90,7 +90,7 @@ Trân trọng cảm ơn,
 		<subject>Xác nhận bài nộp</subject>
 		<body>{$authorName}:
 
-Cảm ơn vì đã nộp bản thảo bài viết, "{$articleTitle}" cho {$journalName}. Với phần mềmm quản lý tạp chí trực tuyến mà chúng tôi đang sử dụng, quý vị có thể theo dõi toàn bộ tiến trình biên tập bằng cách đăng nhập vào website của tạp chí:
+Cảm ơn vì đã nộp bản thảo bài viết, "{$submissionTitle}" cho {$contextName}. Với phần mềmm quản lý tạp chí trực tuyến mà chúng tôi đang sử dụng, quý vị có thể theo dõi toàn bộ tiến trình biên tập bằng cách đăng nhập vào website của tạp chí:
 
 Đường dẫn (URL) của bản thảo: {$submissionUrl}
 Bí danh: {$authorUsername}
@@ -104,7 +104,7 @@ Nếu quý vị có thắc mắc nào, xin vui lòng liên hệ với tôi. Cả
 		<subject>Bài nộp không phù hợp</subject>
 		<body>{$authorName}:
 
-Theo nhận xét sơ bộ, bài viết "{$articleTitle}" không phù hợp với phạm vị và trọng tâm của tạp chí {$journalName}. Xin đề nghị quý vị xem lại phần mô tả tạp chí ở dưới mục Giới thiệu và nội dung hiện có của tạp chí để hiểu thêm về các tác phẩm mà tạp chí xuất bản. Quý vị cũng có thể cân nhắc nộp bản thảo này cho một tạp chí khác phù hợp hơn.
+Theo nhận xét sơ bộ, bài viết "{$submissionTitle}" không phù hợp với phạm vị và trọng tâm của tạp chí {$contextName}. Xin đề nghị quý vị xem lại phần mô tả tạp chí ở dưới mục Giới thiệu và nội dung hiện có của tạp chí để hiểu thêm về các tác phẩm mà tạp chí xuất bản. Quý vị cũng có thể cân nhắc nộp bản thảo này cho một tạp chí khác phù hợp hơn.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -112,14 +112,14 @@ Theo nhận xét sơ bộ, bài viết "{$articleTitle}" không phù hợp với
 		<subject>Bình luận về bài nộp</subject>
 		<body>{$name}:
 
-{$commentName} có lời bình về bài nộp, "{$articleTitle}" cho tạp chí {$journalName}:
+{$commentName} có lời bình về bài nộp, "{$submissionTitle}" cho tạp chí {$contextName}:
 
 {$comments}</body>
 		<description>Email này thông báo cho những người liên quan tới quá trình biên tập một bản thảo rằng vừa mới có thêm một lời bình về bản thảo này.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Quyết định về bài viết "{$articleTitle}"</subject>
-		<body>Là một trong những người phản biện bài "{$articleTitle}," cho tạp chí {$journalName}, xin gửi tới quý vị những nhận xét phản biện và quyết định của BBT đã được gửi cho tác giả bài viết. Một lần nữa xin cảm ơn về sự đóng góp quan trọng của quý vị trong quá trình biên tập này.
+		<subject>Quyết định về bài viết "{$submissionTitle}"</subject>
+		<body>Là một trong những người phản biện bài "{$submissionTitle}," cho tạp chí {$contextName}, xin gửi tới quý vị những nhận xét phản biện và quyết định của BBT đã được gửi cho tác giả bài viết. Một lần nữa xin cảm ơn về sự đóng góp quan trọng của quý vị trong quá trình biên tập này.
  
 {$editorialContactSignature}
 
@@ -130,7 +130,7 @@ Theo nhận xét sơ bộ, bài viết "{$articleTitle}" không phù hợp với
 		<subject>Giao bài</subject>
 		<body>{$editorialContactName}:
 
-Bài viết, "{$articleTitle}," gửi cho tạp chí {$journalName} đã được giao cho quý vị để theo dõi toàn bộ quá trình biên tập với vai trò là BTV Chuyên mục.  
+Bài viết, "{$submissionTitle}," gửi cho tạp chí {$contextName} đã được giao cho quý vị để theo dõi toàn bộ quá trình biên tập với vai trò là BTV Chuyên mục.  
 
 Đường dẫn (URL) bài viết: {$submissionUrl}
 Bí danh: {$editorUsername}
@@ -143,7 +143,7 @@ Xin trân trọng cảm ơn,
 		<subject>Đề nghị phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
+Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$submissionTitle}," nộp cho tạp chí {$contextName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
 
 Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là {$journalUrl}
 
@@ -159,17 +159,17 @@ Cảm ơn vì đã xem xét đề nghị này.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2. (Nếu không, xem REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Đề nghị phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," nộp cho tạp chí {$journalName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
+Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$submissionTitle}," nộp cho tạp chí {$contextName}. Tóm tắt của bài nộp được kèm ở cuối thư, hy vọng rằng quý vị sẽ cân nhắc nhận giúp cho công việc quan trọng này.
 
 Xin vui lòng đăng nhập vào website trước ngày {$weekLaterDate} để báo cho BBT biết liệu quý vị có nhận lời phản biện hay không, đồng thời truy cập vào bài nộp, ghi lại lời phản biện và đề xuất. Địa chỉ của website là {$journalUrl}
 
@@ -183,17 +183,17 @@ Cảm ơn vì đã xem xét đề nghị này.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2, và chức năng truy cập bằng một nhấp chuột dành cho người phản biện được kích hoạt.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Đề nghị phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$articleTitle}," và tôi xin đề nghị quý vị nhận giúp công việc quan trọng này. Bản Hướng dẫn Phản biện cho tạp chí này được gửi kèm sau đây và bài nộp được gửi trong file đính kèm. Xin gửi phản biện về bài nộp cùng với khuyến nghị của quý vị về cho tôi trước ngày {$reviewDueDate}.
+Tôi tin rằng quý vị sẽ là người phản biện xuất sắc đối với bản thảo bài viết, "{$submissionTitle}," và tôi xin đề nghị quý vị nhận giúp công việc quan trọng này. Bản Hướng dẫn Phản biện cho tạp chí này được gửi kèm sau đây và bài nộp được gửi trong file đính kèm. Xin gửi phản biện về bài nộp cùng với khuyến nghị của quý vị về cho tôi trước ngày {$reviewDueDate}.
 
 xin vui lòng khẳng định trong email hồi âm trước ngày {$weekLaterDate} liệu quý vị có thể và sẵn sàng phản biện bài viết hay không.
 
@@ -211,7 +211,7 @@ Hướng dẫn phản biện
 		<subject>Hủy đề nghị phản biện</subject>
 		<body>{$reviewerName}:
 
-Chúng tôi đã quyết định kể từ thời điểm này thôi không còn đề nghị quý vị phản biện cho bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi thành thực xin lỗi về mọi sự bất tiện có thể gây ra cho quý vị và hi vọng rằng sẽ có thể tiếp tục nhờ quý vị giúp đỡ trong việc phản biện các bài viết trên tạp chí trong tương lai.
+Chúng tôi đã quyết định kể từ thời điểm này thôi không còn đề nghị quý vị phản biện cho bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi thành thực xin lỗi về mọi sự bất tiện có thể gây ra cho quý vị và hi vọng rằng sẽ có thể tiếp tục nhờ quý vị giúp đỡ trong việc phản biện các bài viết trên tạp chí trong tương lai.
 
 Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với tôi.
 
@@ -222,7 +222,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Nhận lời phản biện</subject>
 		<body>{$editorialContactName}:
 
-Tôi có thể và sẵn sàng phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Cám ơn quý vị đã lưu tâm đến tôi, và tôi dự kiến sẽ hoàn thành việc phản biện trước thời  hạn {$reviewDueDate}.
+Tôi có thể và sẵn sàng phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Cám ơn quý vị đã lưu tâm đến tôi, và tôi dự kiến sẽ hoàn thành việc phản biện trước thời  hạn {$reviewDueDate}.
 
 {$reviewerName}</body>
 		<description>Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục rằng Người phản biện nhận lời và sẽ hoàn thành phản biện trước ngày được nêu.</description>
@@ -231,7 +231,7 @@ Tôi có thể và sẵn sàng phản biện bài nộp, "{$articleTitle}," cho 
 		<subject>Từ chối phản biện</subject>
 		<body>{$editorialContactName}:
 
-Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName} được. Cảm ơn quý vị đã lưu tâm đến tôi, và tôi rất sẵn lòng được tham gia phản biện vào thời điểm khác.
+Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName} được. Cảm ơn quý vị đã lưu tâm đến tôi, và tôi rất sẵn lòng được tham gia phản biện vào thời điểm khác.
 
 {$reviewerName}</body>
 		<description>Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục biết Người phản biện từ chối phản biện bài nộp.</description>
@@ -240,7 +240,7 @@ Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài n
 		<subject>Hoàn thành phản biện bài nộp</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã hoàn thành phản biện bài viết "{$articleTitle}" cho tạp chí {$journalName}, và đã gửi khuyến nghị, "{$recommendation}."
+Tôi đã hoàn thành phản biện bài viết "{$submissionTitle}" cho tạp chí {$contextName}, và đã gửi khuyến nghị, "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Email này được Người phản biện gửi cho BTV chuyên mục thông báo rằng bài phản biện đã hoàn thành và lời bình cũng như khuyến nghị đã được ghi lại trên website của tạp chí.</description>
@@ -249,7 +249,7 @@ Tôi đã hoàn thành phản biện bài viết "{$articleTitle}" cho tạp ch�
 		<subject>Khẳng định đã nhận được phản biện</subject>
 		<body>{$reviewerName}:
 
-Cảm ơn quý vị đã hoàn thành phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi biết ơn sự đóng góp của quý vị cho chất lượng của tác phẩm mà chúng tôi xuất bản.
+Cảm ơn quý vị đã hoàn thành phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi biết ơn sự đóng góp của quý vị cho chất lượng của tác phẩm mà chúng tôi xuất bản.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi để báo đã nhận được bài phản biện hoàn chính và cám ơn người phản biện về sự đóng góp của họ.</description>
@@ -258,7 +258,7 @@ Cảm ơn quý vị đã hoàn thành phản biện bài nộp, "{$articleTitle}
 		<subject>Nhắc nhở phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Xin được phép nhắc lại đề nghị phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hi vọng nhận được bài phản biện trước ngày {$reviewDueDate}, và sẽ rất vui lòng nhận được bài phản biện ngay khi quý vị đã chuẩn bị xong.
+Xin được phép nhắc lại đề nghị phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi hi vọng nhận được bài phản biện trước ngày {$reviewDueDate}, và sẽ rất vui lòng nhận được bài phản biện ngay khi quý vị đã chuẩn bị xong.
 
 Nếu quý vị chưa có bí danh và mật khẩu trên website của tạp chí, quý vị có thể sử dụng đường dẫn này để tạo lại mật khẩu (sẽ được gửi tới email của quý vị kèm theo bí danh). {$passwordResetUrl}
 
@@ -280,7 +280,7 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		<subject>Tự động nhắc nhở phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.
+Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.
 
 Nếu quý vị chưa có bí danh và mật khẩu trên website của tạp chí, quý vị có thể sử dụng đường dẫn này để tạo lại mật khẩu (sẽ được gửi tới email của quý vị kèm theo bí danh). {$passwordResetUrl}
 
@@ -295,7 +295,7 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		<subject>Tự động nhắc nhở phản biện bài nộp</subject>
 		<body>{$reviewerName}:
 
-Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.
+Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.
 
 Đường dẫn của bài nộp: {$submissionReviewUrl}
 
@@ -308,7 +308,7 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		<subject>Đề nghị biên tập bản thảo</subject>
 		<body>{$copyeditorName}:
 
-Tôi xin đề nghị quý vị biên tập bản thảo bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Bài nộp có thể tìm thấy trên website của tạp chí cùng với Hướng dẫn biên tập bản thảo.
+Tôi xin đề nghị quý vị biên tập bản thảo bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Bài nộp có thể tìm thấy trên website của tạp chí cùng với Hướng dẫn biên tập bản thảo.
 
 Đường dẫn của bản thảo: {$submissionCopyeditingUrl}
 Bí danh: {$copyeditorUsername}
@@ -322,7 +322,7 @@ Nếu quý vị không thể thực hiện công việc vào lúc này hoặc c�
 		<subject>Hoàn thành biên tập bản thảo</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã hoàn thành vòng biên tập bản thảo đầu tiên của bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Bài nộp bây giờ đã sẵn sàng để tác giả và BTV chính xem lại những thay đổi và thắc mắc. 
+Tôi đã hoàn thành vòng biên tập bản thảo đầu tiên của bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Bài nộp bây giờ đã sẵn sàng để tác giả và BTV chính xem lại những thay đổi và thắc mắc. 
 
 Trân trọng cảm ơn,
 {$copyeditorName}</body>
@@ -331,7 +331,7 @@ Trân trọng cảm ơn,
 		<subject>Xác nhận biên tập bản thảo</subject>
 		<body>{$copyeditorName}:
 			
-Trân trọng cảm ơn quý vị đã biên tập bản thảo bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Công việc của quý vị góp phần rất quan trọng vào chất lượng của tạp chí.
+Trân trọng cảm ơn quý vị đã biên tập bản thảo bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Công việc của quý vị góp phần rất quan trọng vào chất lượng của tạp chí.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi cho BTV bản thảo của một bài viết để xác nhận BTV bản thảo đã hoàn thành quá trình biên tập bản thảo và cảm ơn vì sự đóng góp của BTV này.</description>
@@ -340,7 +340,7 @@ Trân trọng cảm ơn quý vị đã biên tập bản thảo bài viết, "{$
 		<subject>Đề nghị duyệt lại bản thảo</subject>
 		<body>{$authorName}:
 
-Chúng tôi đã biên tập bài nộp của quý vị, "{$articleTitle}," gửi cho tạp chí {$journalName}. Để duyệt lại những đề xuất thay đổi và hồi âm những Thắc mắc với Tác giả, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Tải xuống và mở File biên tập bản thảo sơ bộ. Sau khi duyệt biên tập bản thảo, tải lại file ở Bước 2 và gửi email KẾT THÚC cho BTV.
+Chúng tôi đã biên tập bài nộp của quý vị, "{$submissionTitle}," gửi cho tạp chí {$contextName}. Để duyệt lại những đề xuất thay đổi và hồi âm những Thắc mắc với Tác giả, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Tải xuống và mở File biên tập bản thảo sơ bộ. Sau khi duyệt biên tập bản thảo, tải lại file ở Bước 2 và gửi email KẾT THÚC cho BTV.
 
 Đây là cơ hội cuối cùng để quý vị có thể sửa đổi lớn với bài viết. Quý vị sẽ được đề nghị đọc soát lỗi các bản bông, nhưng ở bước đó chúng tôi chỉ có thể sửa những lỗi đánh máy và lỗi trình bày nhỏ mà thôi.
 
@@ -356,7 +356,7 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 		<subject>Duyệt biên tập bản thảo hoàn tất</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã duyệt biên tập bản thảo của bài viết, "{$articleTitle}," for {$journalName}, và bản thảo này đã sẵn sàng cho vòng biên tập bản thảo cuối cùng và chuẩn bị cho trình bày.
+Tôi đã duyệt biên tập bản thảo của bài viết, "{$submissionTitle}," for {$contextName}, và bản thảo này đã sẵn sàng cho vòng biên tập bản thảo cuối cùng và chuẩn bị cho trình bày.
 
 Cảm ơn quý vị về sự đóng góp này cho công trình của tôi,
 {$authorName}</body>
@@ -366,7 +366,7 @@ Cảm ơn quý vị về sự đóng góp này cho công trình của tôi,
 		<subject>Xác nhận duyệt biên tập bản thảo</subject>
 		<body>{$authorName}:
 
-Cảm ơn quý vị vì đã duyệt biên tập bản thảo bài viết của quý vị, "{$articleTitle}," gửi cho tạp chí {$journalName}. Chúng tôi rất mong sớm xuất bản tác phẩm này.
+Cảm ơn quý vị vì đã duyệt biên tập bản thảo bài viết của quý vị, "{$submissionTitle}," gửi cho tạp chí {$contextName}. Chúng tôi rất mong sớm xuất bản tác phẩm này.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi cho Tác giả một bài nộp để sự kết thúc của quá trình duyệt biên tập bản thảo và cảm ơn sự đóng góp của tác giả.</description>
@@ -375,7 +375,7 @@ Cảm ơn quý vị vì đã duyệt biên tập bản thảo bài viết của 
 		<subject>Duyệt biên tập bản thảo lần cuối</subject>
 		<body>{$copyeditorName}:
 
-Tác giả và BTV đã hoàn thành việc duyệt biên tập bản thảo bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Bản thảo cuối cùng "sạch sẽ" có thể sẵn sàng cho khâu trình bày.
+Tác giả và BTV đã hoàn thành việc duyệt biên tập bản thảo bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Bản thảo cuối cùng "sạch sẽ" có thể sẵn sàng cho khâu trình bày.
 
 Đường dẫn tới bản thảo: {$submissionCopyeditingUrl}
 Bí danh: {$copyeditorUsername}
@@ -389,7 +389,7 @@ Thay mặt tạp chí xin trân trọng cảm ơn
 		<subject>Duyệt biên tập bản thảo cuối cùng hoàn tất</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã chuẩn bị xong một bản thảo sạch lỗi, đã được biên tập của bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Bản thảo này sẵn sàng cho trình bày và chuẩn bị các bản bông.
+Tôi đã chuẩn bị xong một bản thảo sạch lỗi, đã được biên tập của bài nộp, "{$submissionTitle}," cho tạp chí {$contextName}. Bản thảo này sẵn sàng cho trình bày và chuẩn bị các bản bông.
 
 {$copyeditorName}</body>
 		<description>Email này từ BTV bản thảo gửi BTV chuyên mục thông báo rằng vòng biên tập bản thảo cuối cùng đã hoàn tất và quá trình trình bày có thể bắt đầu.</description>
@@ -398,7 +398,7 @@ Tôi đã chuẩn bị xong một bản thảo sạch lỗi, đã được biên
 		<subject>Xác nhận duyệt biên tập bản thảo lần cuối</subject>
 		<body>{$copyeditorName}:
 
-Cảm ơn quý vị đã hoàn thành việc biên tập bản thảo bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Việc chuẩn bị một bản thảo "sạch" để trình bày là một bước quan trọng trong quá trình biên tập.
+Cảm ơn quý vị đã hoàn thành việc biên tập bản thảo bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Việc chuẩn bị một bản thảo "sạch" để trình bày là một bước quan trọng trong quá trình biên tập.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi cho BTV trình bày xác nhận việc hoàn thành vòng biên tập bản thảo cuối cùng và cảm ơn sự đóng góp của họ.</description>
@@ -407,7 +407,7 @@ Cảm ơn quý vị đã hoàn thành việc biên tập bản thảo bài viế
 		<subject>Đề nghị chuẩn bị bản bông</subject>
 		<body>{$layoutEditorName}:
 
-Tôi xin đề nghị quý vị chuẩn bị các bản bông cho bản thảo bài viết, "{$articleTitle}," cho tạp chí {$journalName}.
+Tôi xin đề nghị quý vị chuẩn bị các bản bông cho bản thảo bài viết, "{$submissionTitle}," cho tạp chí {$contextName}.
 
 Đường dẫn của bản thảo: {$submissionLayoutUrl}
 Bí danh: {$layoutEditorUsername}
@@ -421,7 +421,7 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 		<subject>Hoàn thành bản bông</subject>
 		<body>{$editorialContactName}:
 
-Các bản bông đã được chuẩn bị cho bài viết, "{$articleTitle}," cho tạp chí {$journalName} và sẵn sàng để soát lỗi. 
+Các bản bông đã được chuẩn bị cho bài viết, "{$submissionTitle}," cho tạp chí {$contextName} và sẵn sàng để soát lỗi. 
 
 Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi.
 
@@ -432,7 +432,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên hệ với t
 		<subject>Xác nhận trình bày</subject>
 		<body>{$layoutEditorName}:
 
-Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Đây là một đóng góp quan trọng cho quá trình xuất bản.
+Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Đây là một đóng góp quan trọng cho quá trình xuất bản.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi BTV trình bày xác nhận việc hoàn thành quá trình biên tập trình bày và cảm ơn BTV trình bầy về sự đóng góp cho tạp chí.</description>
@@ -441,7 +441,7 @@ Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, "{$artic
 		<subject>Đề nghị soát lỗi (Tác giả)</subject>
 		<body>{$authorName}:
 
-Chúng tôi xin đề nghị quý vị đọc soát lỗi các bản bông cho bài nộp của quý vị, "{$articleTitle}," cho tạp chí {$journalName}. Để xem các bản bông, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Sử dụng liên kết Xem bản soát lỗi để đọc bản sẽ được xuất bản để tìm các lỗi đánh máy và trình bày. Ghi lại những lỗi này trong ô Sửa soát lỗi theo các hướng dẫn soát lỗi được cung cấp.
+Chúng tôi xin đề nghị quý vị đọc soát lỗi các bản bông cho bài nộp của quý vị, "{$submissionTitle}," cho tạp chí {$contextName}. Để xem các bản bông, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Sử dụng liên kết Xem bản soát lỗi để đọc bản sẽ được xuất bản để tìm các lỗi đánh máy và trình bày. Ghi lại những lỗi này trong ô Sửa soát lỗi theo các hướng dẫn soát lỗi được cung cấp.
 
 Đường dẫn tới bản thảo: {$submissionUrl}
 Bí danh: {$authorUsername}
@@ -455,7 +455,7 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 		<subject>Hoàn thành soát lỗi (Tác giả)</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã hoàn thành soát lỗi các bản bông cho bản thảo của tôi, "{$articleTitle}," cho tạp chí {$journalName}. Các bản bông đã sẵn sàng để Người soát lỗi và BTV trình bày sửa lần cuối cùng.
+Tôi đã hoàn thành soát lỗi các bản bông cho bản thảo của tôi, "{$submissionTitle}," cho tạp chí {$contextName}. Các bản bông đã sẵn sàng để Người soát lỗi và BTV trình bày sửa lần cuối cùng.
 
 {$authorName}</body>
 		<description>Email này được Tác giả gửi cho Người soát lỗi và BTV chính thông báo rằng tác giả đã hoàn thành soát lỗi các bản bông và chi tiết có thể xem trong lời bình về bài viết.</description>
@@ -464,7 +464,7 @@ Tôi đã hoàn thành soát lỗi các bản bông cho bản thảo của tôi,
 		<subject>Xác nhận xoát lỗi (Tác giả)</subject>
 		<body>{$authorName}:
 
-Cảm ơn quý vị đã soát lỗi các bản bông cho bản thảo của quý vị, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hy vọng sẽ xuất bản bài viết của quý vị trong thời gian rất sớm.
+Cảm ơn quý vị đã soát lỗi các bản bông cho bản thảo của quý vị, "{$submissionTitle}," cho tạp chí {$contextName}. Chúng tôi hy vọng sẽ xuất bản bài viết của quý vị trong thời gian rất sớm.
 
 Nếu quý vị đăng ký dịch vụ thông báo của chúng tôi, quý vị sẽ nhận được email có Mục lục của tạp chí ngay khi xuất bản. Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với tôi.
 
@@ -475,7 +475,7 @@ Nếu quý vị đăng ký dịch vụ thông báo của chúng tôi, quý vị 
 		<subject>Đề nghị soát lỗi</subject>
 		<body>{$proofreaderName}:
 
-Tôi xin đề nghị quý vị soát lỗi các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName}. 
+Tôi xin đề nghị quý vị soát lỗi các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. 
 
 Đường dẫn tới bản thảo: {$submissionUrl}
 Bí danh: {$proofreaderUsername}
@@ -489,7 +489,7 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 		<subject>Hoàn thành soát lỗi</subject>
 		<body>{$editorialContactName}:
 
-Tôi đã hoàn thành việc soát lỗi các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Các bản bông đã sẵn sàng để BTV trình bày sửa lại lần cuối.
+Tôi đã hoàn thành việc soát lỗi các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Các bản bông đã sẵn sàng để BTV trình bày sửa lại lần cuối.
 
 {$proofreaderName}</body>
 		<description>Email này được Người soát lỗi gửi BTV chuyên mục thông báo rằng quá trình soát lỗi đã hoàn thành.</description>
@@ -498,7 +498,7 @@ Tôi đã hoàn thành việc soát lỗi các bản bông của bài viết, "{
 		<subject>Xác nhận soát lỗi</subject>
 		<body>{$proofreaderName}:
 
-Cảm ơn quý vị đã soát lỗi các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Công việc này góp phần quan trọng vào chất lượng của tạp chí.
+Cảm ơn quý vị đã soát lỗi các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Công việc này góp phần quan trọng vào chất lượng của tạp chí.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi Người soát lỗi khẳng định việc soát lỗi đã hoàn thành và cảm ơn sự đóng góp của họ.</description>
@@ -507,7 +507,7 @@ Cảm ơn quý vị đã soát lỗi các bản bông của bài viết, "{$arti
 		<subject>Đề nghị soát lỗi (BTV trình bày)</subject>
 		<body>{$layoutEditorName}:
 
-Chúng tôi xin đề nghị quý vị sửa bất kỳ lỗi nào cần thiết từ kết quả soát lỗi các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName}.
+Chúng tôi xin đề nghị quý vị sửa bất kỳ lỗi nào cần thiết từ kết quả soát lỗi các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName}.
 
 Đường dẫn tới bản thảo: {$submissionUrl}
 Bí danh: {$layoutEditorUsername}
@@ -520,7 +520,7 @@ Nếu quý vị không thể thực hiện được công việc vào thời đi
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Hoàn thành soát lỗi (BTV trình bày)</subject>
 		<body>{$editorialContactName}:
-Dựa thao kết quả soát lỗi, các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName} đã được sửa lỗi. Bản cuối cùng này đã sẵn sàng để xuất bản.
+Dựa thao kết quả soát lỗi, các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName} đã được sửa lỗi. Bản cuối cùng này đã sẵn sàng để xuất bản.
 
 {$layoutEditorName}</body>
 		<description>Email này được BTV trình bày gửi cho BTV chuyên mục thông báo rằng bước soát lỗi cuối cùng đã hoàn thành và bài viết sẵn sàng để xuất bản.</description>
@@ -529,21 +529,21 @@ Dựa thao kết quả soát lỗi, các bản bông của bài viết, "{$artic
 		<subject>Xác nhận soát lỗi (BTV trình bày)</subject>
 		<body>{$layoutEditorName}:
 
-Cảm ơn quý vị đã hoàn thành việc sửa các lỗi đã soát cho các bản bông của bài viết, "{$articleTitle}," cho tạp chí {$journalName}. Đây là một sự đóng góp quan trọng vào công việc của tạp chí.
+Cảm ơn quý vị đã hoàn thành việc sửa các lỗi đã soát cho các bản bông của bài viết, "{$submissionTitle}," cho tạp chí {$contextName}. Đây là một sự đóng góp quan trọng vào công việc của tạp chí.
 
 {$editorialContactSignature}</body>
 		<description>Email này được BTV chuyên mục gửi BTV trình bày xác nhận việc hoàn thành bước soát lỗi cuối cùng và cảm ơn BTV trình bày vì sự đóng góp cho tạp chí.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Bài viết có thể quan tâm</subject>
-		<body>Có thể quý vị muốn xem bài viết "{$articleTitle}" của tác giả {$authorName} xuất bản trong Tập {$volume}, Số {$number} ({$year}) của tạp chí {$journalName} tại địa chỉ "{$articleUrl}".</body>
+		<body>Có thể quý vị muốn xem bài viết "{$submissionTitle}" của tác giả {$authorName} xuất bản trong Tập {$volume}, Số {$number} ({$year}) của tạp chí {$contextName} tại địa chỉ "{$articleUrl}".</body>
 		<description>Mẫu thư này giúp một bạn đọc đã đăng ký gửi thông tin về một bài viết cho một người nào đó có thể quan tâm. Tác vụ này có trong các Công cụ đọc và phải được Tổng biên tập kích hoạt trong trang Quản trị các công cụ đọc.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Thông báo đặt tạp chí</subject>
 		<body>{$subscriberName}:
 
-Quý vị đã đăng ký sử dụng tạp chí {$journalName} trong hệ thống quản lý tạp chí trực tuyến của chúng tôi, với hình thức đăng ký sau:
+Quý vị đã đăng ký sử dụng tạp chí {$contextName} trong hệ thống quản lý tạp chí trực tuyến của chúng tôi, với hình thức đăng ký sau:
 
 {$subscriptionType}
 
@@ -562,7 +562,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Số tạp chí đã được truy cập tự do</subject>
 		<body>Bạn đọc:
 
-Tạp chí {$journalName} đã cho phép truy cập tự do đối với số tạp chí sau đây. Chúng tôi xin mời quý vị xem Mục lục của số này ở đây và sau đó ghé thăm website ({$journalUrl}) để xem những bài viết mà quý vị quan tâm.
+Tạp chí {$contextName} đã cho phép truy cập tự do đối với số tạp chí sau đây. Chúng tôi xin mời quý vị xem Mục lục của số này ở đây và sau đó ghé thăm website ({$journalUrl}) để xem những bài viết mà quý vị quan tâm.
 
 Xin cảm ơn quý vị đã dành sự quan tâm cho tạp chí,
 {$editorialContactSignature}</body>
@@ -572,7 +572,7 @@ Xin cảm ơn quý vị đã dành sự quan tâm cho tạp chí,
 		<subject>Thông báo hết hạn đặt tạp chí</subject>
 		<body>{$subscriberName}:
 
-Tài khoản đặt tạp chí {$journalName} của quý vị chuẩn bị hết hạn.
+Tài khoản đặt tạp chí {$contextName} của quý vị chuẩn bị hết hạn.
 
 {$subscriptionType}
 Ngày hết hạn: {$expiryDate}
@@ -588,7 +588,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Tài khoản đặt tạp chí hết hạn</subject>
 		<body>{$subscriberName}:
 
-Tài khoản đặt tạp chí {$journalName} của quý vị đã hết hạn.
+Tài khoản đặt tạp chí {$contextName} của quý vị đã hết hạn.
 
 {$subscriptionType}
 Ngày hết hạn: {$expiryDate}
@@ -604,7 +604,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Tài khoản đặt tạp chí hết hạn - Thông báo lần cuối</subject>
 		<body>{$subscriberName}:
 
-Tài khoản đặt tạp chí {$journalName} đã hết hạn.
+Tài khoản đặt tạp chí {$contextName} đã hết hạn.
 Xin lưu ý rằng đây là thông báo cuối cùng gửi tới email của quý vị.
 
 {$subscriptionType}
@@ -621,7 +621,7 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		<subject>Xác nhận tài khoản</subject>
 		<body>{$userFullName}
 
-Quý vị đã khởi tạo một tài khoản với tạp chí {$journalName}, tuy nhiên trước khi quý vị sử dụng tài khoản, quý vị cần xác nhận địa chỉ email của quý vị. Để làm việc này, quý vị chỉ cần nhấp chuột vào đường dẫn sau:
+Quý vị đã khởi tạo một tài khoản với tạp chí {$contextName}, tuy nhiên trước khi quý vị sử dụng tài khoản, quý vị cần xác nhận địa chỉ email của quý vị. Để làm việc này, quý vị chỉ cần nhấp chuột vào đường dẫn sau:
 
 {$activateUrl}
 
@@ -630,8 +630,8 @@ Trân trọng cảm ơn,
 		<description>Email này được gửi tới những người dùng mới đăng ký để chào mừng họ đến với hệ thống phần mềm và cung cấp thông tin về bí danh và mật khẩu.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Đăng ký làm Người phản biện với tạp chí {$journalName}</subject>
-		<body>Trên cơ sở chuyên môn của quý vị, chúng tôi đã tự đăng ký tên quý vị vào cơ sở dữ liệu người phản biện cho tạp chí {$journalName}. Việc này không hình thành bất kỳ cam kết nào về phía quý vị, mà đơn giản chỉ là cho phép chúng tôi có cơ hội đề nghị quý vị phản biện một bài nộp cho tạp chí. Khi được mời phản biện, quý vị sẽ được xem tiêu đề và tóm tắt của bài viết, và quý vị luôn có quyền nhận lời hoặc từ chối lời mời phản biện. Quý vị cũng có thể yêu cầu đưa tên quý vị ra khỏi danh sách người phản biện bất cứ lúc nào.
+		<subject>Đăng ký làm Người phản biện với tạp chí {$contextName}</subject>
+		<body>Trên cơ sở chuyên môn của quý vị, chúng tôi đã tự đăng ký tên quý vị vào cơ sở dữ liệu người phản biện cho tạp chí {$contextName}. Việc này không hình thành bất kỳ cam kết nào về phía quý vị, mà đơn giản chỉ là cho phép chúng tôi có cơ hội đề nghị quý vị phản biện một bài nộp cho tạp chí. Khi được mời phản biện, quý vị sẽ được xem tiêu đề và tóm tắt của bài viết, và quý vị luôn có quyền nhận lời hoặc từ chối lời mời phản biện. Quý vị cũng có thể yêu cầu đưa tên quý vị ra khỏi danh sách người phản biện bất cứ lúc nào.
 
 Chúng tôi cung cấp cho quý vị một bí danh và mật khẩu sẽ được sử dụng trong tất cả các giao tiếp của quý vị với tạp chí thông qua website. Ví dụ, quý vị có thể cập nhật hồ sơ cá nhân và những chủ đề muốn phản biện
 

@@ -12,7 +12,7 @@
 <email_texts locale="es_ES">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Presentación de resúmen de Tesis</subject>
-		<body>Este correo fué generado automáticamente por el formulario de envío de resúmenes de tesis de {$journalName} 
+		<body>Este correo fué generado automáticamente por el formulario de envío de resúmenes de tesis de {$contextName} 
 
 Por favor, confirme que la información enviada es correcta. Tras recibir su confirmación, el resúmen será publicado en la edición online de la revista.
 

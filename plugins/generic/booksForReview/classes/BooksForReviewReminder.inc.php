@@ -37,7 +37,7 @@ class BooksForReviewReminder extends ScheduledTask {
 			'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
 		);
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey);
 
 		$mail->setReplyTo($book->getEditorEmail(), $book->getEditorFullName());

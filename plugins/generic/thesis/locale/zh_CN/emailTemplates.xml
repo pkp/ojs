@@ -12,7 +12,7 @@
 <email_texts locale="zh_CN">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>论文摘要提交</subject>
-		<body>这封电子邮件是由 {$journalName} 论文摘要提交表单自动生成的。
+		<body>这封电子邮件是由 {$contextName} 论文摘要提交表单自动生成的。
 
 请确认所提交的信息是正确的。一收到您的确认信息，这篇摘要将会被出版到期刊的在线版。
 

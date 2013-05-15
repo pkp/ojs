@@ -348,7 +348,7 @@ class UserManagementForm extends Form {
 
 			if ($sendNotify) {
 				// Send welcome email to user
-				import('classes.mail.MailTemplate');
+				import('lib.pkp.classes.mail.MailTemplate');
 				$mail = new MailTemplate('USER_REGISTER');
 				$mail->setReplyTo(null);
 				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $password, 'userFullName' => $user->getFullName()));

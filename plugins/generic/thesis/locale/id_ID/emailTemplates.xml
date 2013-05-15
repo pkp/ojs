@@ -13,7 +13,7 @@
 <email_texts locale="id_ID">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Penyerahan Abstrak Tesis</subject>
-		<body>Email ini secara otomatis dihasilkan oleh formulir penyerahan abstrak tesis{$journalName}.
+		<body>Email ini secara otomatis dihasilkan oleh formulir penyerahan abstrak tesis{$contextName}.
 
 Konfirmasi bahwa informasi yang diserahkan benar. Saat menerima konfirmasi Anda, abstrak akan diterbitkan di edisi online jurnal.
 

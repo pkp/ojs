@@ -76,7 +76,7 @@ Noua parolă: {$password}
 		<subject>Înregistrarea la revistă</subject>
 		<body>{$userFullName}
 
-Ați fost înregistrat ca utilizator la {$journalName}. Am inclus numele de utilizator și parola în acest email, care sunt necesare pentru a opera cu revista prin intermediul siteului său. Puteți fi scos din lista utilizatorilor revistei contactându-mă.
+Ați fost înregistrat ca utilizator la {$contextName}. Am inclus numele de utilizator și parola în acest email, care sunt necesare pentru a opera cu revista prin intermediul siteului său. Puteți fi scos din lista utilizatorilor revistei contactându-mă.
 
 Nume utilizator: {$username}
 Parolă: {$password}
@@ -89,7 +89,7 @@ Vă mulțumim,
 		<subject>Validează contul propriu</subject>
 		<body>{$userFullName}
 
-Ați creat un cont la {$journalName}, dar înainte de a-l utiliza, trebuie să validați contul personal de email. Pentru a face acest lucru, urmați linkul de mai jos:
+Ați creat un cont la {$contextName}, dar înainte de a-l utiliza, trebuie să validați contul personal de email. Pentru a face acest lucru, urmați linkul de mai jos:
 
 {$activateUrl}
 
@@ -98,8 +98,8 @@ Vă mulțumim,
 		<description>Acest email este trimis unui utilizator nou înregistrat pentru a-i ura bun venit și pentru a-i oferi datele necesare autentificării pe site: nume utilizator și parola.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Înregistrare ca evaluator la {$journalName}</subject>
-		<body>Recunoscând nivelul expertizei dumneavoastră în domeniu, am considerat oportună înregistrarea numelui dumneavoastră în baza noastră de date cu evaluatori pentru {$journalName}. Acest lucru nu implică nicio obligație, ci pur și simplu ne permite să vă abordăm cu câte o propunere de articol, care ar fi interesant pentru dumneavoastră să o evaluați. Fiind invitat să faceți o evaluare veți avea oportunitatea de a vedea titlul și abstractul lucrării în cauză și veți putea oricând să acceptați sau să respingeți invitația. Puteți solicita în orice moment scoaterea numelui dumneavoastră de pe această listă.
+		<subject>Înregistrare ca evaluator la {$contextName}</subject>
+		<body>Recunoscând nivelul expertizei dumneavoastră în domeniu, am considerat oportună înregistrarea numelui dumneavoastră în baza noastră de date cu evaluatori pentru {$contextName}. Acest lucru nu implică nicio obligație, ci pur și simplu ne permite să vă abordăm cu câte o propunere de articol, care ar fi interesant pentru dumneavoastră să o evaluați. Fiind invitat să faceți o evaluare veți avea oportunitatea de a vedea titlul și abstractul lucrării în cauză și veți putea oricând să acceptați sau să respingeți invitația. Puteți solicita în orice moment scoaterea numelui dumneavoastră de pe această listă.
 
 Mai jos găsiți numele de utilizator și parola necesare pentru interacțiunea cu revista prin intermediul siteului asociat. Veți putea dori să vă actualizați profilul, incluzând câteva puncte de interes pentru dumneavoastră.
 
@@ -114,17 +114,17 @@ Vă mulțumim,
 		<subject>A fost publicat un nou număr</subject>
 		<body>Cititorii:
 
-{$journalName} tocmai a publicat ultimul număr accesibil la {$journalUrl}. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.
+{$contextName} tocmai a publicat ultimul număr accesibil la {$journalUrl}. Vă invităm să parcurgeți cuprinsul și apoi să vizitați siteul pentru a vedea articolele și punctele de interes.
 
 Vă mulțumim pentru interesul manifestat față de eforturile noastre,
 {$editorialContactSignature}</body>
 		<description>Acest email este trimis cititorilor înregistrați prin intermediul linkului „înștiințează utilizatorii” din pagina redactorului. Ca efect este semnalarea utilizatorilor privind apariția unui nou număr și îi invită să viziteze revista prin intermediul URL-ului menționat.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Arhivarea solicitării pentru {$journalName}</subject>
+		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body>Stimate [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.
+{$contextName} &lt;{$journalUrl}&gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) împreună cu instituția dumneavoastră și cu alte biblioteci universitare.
 
 [Brief description of journal]
 
@@ -137,10 +137,10 @@ Vă mulțumim,
 		<description>Acest email solicită managerului arhivei LOCKSS să ia în considerare includerea acestei reviste în arhiva proprie. Este menționat URL-ul către manifestul editorial LOCKSS.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Arhivarea solicitării pentru {$journalName}</subject>
+		<subject>Arhivarea solicitării pentru {$contextName}</subject>
 		<body>Stimate [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.
+{$contextName} &lt;{$journalUrl}&gt;, este o revistă pentru care unul din membrii facultății noastre [name of member], este [title of position]. Revista dorește să inițieze o arhivă conformă LOCKSS (Lots of Copies Keep Stuff Safe) cu instituția dumneavoastră și cu alte biblioteci universitare.
 
 [Brief description of journal]
 
@@ -156,7 +156,7 @@ Vă mulțumim,
 		<subject>Propunere luată la cunoștință</subject>
 		<body>{$authorName}:
 
-Vă mulțumim pentru depunerea manuscrisului "{$articleTitle}" la {$journalName}. Folosind sistemul de management online al revistei, vom putea urmări evoluția prin întreg procesul editorial prin autentificarea pe siteul revistei:
+Vă mulțumim pentru depunerea manuscrisului "{$submissionTitle}" la {$contextName}. Folosind sistemul de management online al revistei, vom putea urmări evoluția prin întreg procesul editorial prin autentificarea pe siteul revistei:
 
 URL-ul manuscrisului: {$submissionUrl}
 Nume utilizator: {$authorUsername}
@@ -170,7 +170,7 @@ Dacă aveți întrebări, vă rog să mă contactați. Vă mulțumim că ați lu
 		<subject>Propuneri neconforme</subject>
 		<body>{$authorName}:
 
-O evaluare inițială pentru "{$articleTitle}" a scos la iveală faptul că propunerea nu se încadrează în tematica și obiectivele revistei {$journalName}. Vă fac recomandarea să consultați descrierea acestei reviste de la secțiunea „despre”, precum și conținutul existent pentru a înțelege mai bine ce lucrări publicăm. Puteți opta pentru a trimite manuscrisul la altă revistă care este potrivită conținutului.
+O evaluare inițială pentru "{$submissionTitle}" a scos la iveală faptul că propunerea nu se încadrează în tematica și obiectivele revistei {$contextName}. Vă fac recomandarea să consultați descrierea acestei reviste de la secțiunea „despre”, precum și conținutul existent pentru a înțelege mai bine ce lucrări publicăm. Puteți opta pentru a trimite manuscrisul la altă revistă care este potrivită conținutului.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -178,14 +178,14 @@ O evaluare inițială pentru "{$articleTitle}" a scos la iveală faptul că prop
 		<subject>Comentariu la propunere</subject>
 		<body>{$name}:
 
-{$commentName} a adăugat un comentariu la "{$articleTitle}" din revista {$journalName}:
+{$commentName} a adăugat un comentariu la "{$submissionTitle}" din revista {$contextName}:
 
 {$comments}</body>
 		<description>Acest email anunță diferitele persoane implicate în procesul de redactare a propunerii de faptul că a fost pus un nou comentariu.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Decizia asupra "{$articleTitle}"</subject>
-		<body>În calitatea de evaluator pentru propunerea intitulată "{$articleTitle}," pentru {$journalName}, vă trimit evaluarea și decizia care au fost transmise autorului acestei lucrări. Vă mulțumesc încă o dată pentru contribuția importantă la acest proces.
+		<subject>Decizia asupra "{$submissionTitle}"</subject>
+		<body>În calitatea de evaluator pentru propunerea intitulată "{$submissionTitle}," pentru {$contextName}, vă trimit evaluarea și decizia care au fost transmise autorului acestei lucrări. Vă mulțumesc încă o dată pentru contribuția importantă la acest proces.
 
 {$editorialContactSignature}
 
@@ -196,7 +196,7 @@ O evaluare inițială pentru "{$articleTitle}" a scos la iveală faptul că prop
 		<subject>Sarcină redacțională</subject>
 		<body>{$editorialContactName}:
 
-Propunerea intitulată "{$articleTitle}" trimisă revistei {$journalName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.
+Propunerea intitulată "{$submissionTitle}" trimisă revistei {$contextName} v-a fost trimisă pentru a o superviza de-a lungul procesului editorial în calitatea de redactor de secțiune.
 
 URL-ul propunerii: {$submissionUrl}
 Nume utilizator: {$editorUsername}
@@ -209,7 +209,7 @@ Vă mulțumim,
 		<subject>Solicitare pentru evaluarea articolului</subject>
 		<body>{$reviewerName}:
 
-Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$articleTitle}", care a fost trimis revistei {$journalName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
+Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$submissionTitle}", care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
 
 Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările. Siteul web se află la {$journalUrl}
 
@@ -225,17 +225,17 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Conține informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesată propunerea. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2. (Altfel, vezi REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Solicitare pentru evaluarea articolului</subject>
 		<body>{$reviewerName}:
 
-Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$articleTitle}," care a fost trimis revistei {$journalName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
+Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$submissionTitle}," care a fost trimis revistei {$contextName}. Abstractul propunerii este introdus mai jos și sperăm că veți accepta această misiune importantă.
 
 Vă rugăm să vă autentificați pe siteul revistei prin {$weekLaterDate} pentru a indica dacă veți face evaluarea sau nu. De asemenea, veți putea accesa propunerea și veți putea înregistra evaluarea precum și recomandările.
 
@@ -249,17 +249,17 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Sunt incluse informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesat materialul în sine. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2 fiind oferit evaluatorului accesul printr-un singur clic.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Solicitare pentru evaluarea articolului</subject>
 		<body>{$reviewerName}:
 
-Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$articleTitle}" și vă rugăm să acceptați această misiune importantă pentru noi. Îndrumările pentru evaluare sunt adăugate mai jos iar propunerea este atașată la acest email. Evaluarea propunerii împreună cu recomandarea ar trebui să-mi fie expediate până la {$reviewDueDate}.
+Suntem încredințați că ați putea face evaluarea acestui manuscris intitulat "{$submissionTitle}" și vă rugăm să acceptați această misiune importantă pentru noi. Îndrumările pentru evaluare sunt adăugate mai jos iar propunerea este atașată la acest email. Evaluarea propunerii împreună cu recomandarea ar trebui să-mi fie expediate până la {$reviewDueDate}.
 
 Indicați într-un email de răspuns până la data de {$weekLaterDate} dacă puteți și doriți să faceți evaluarea.
 
@@ -278,7 +278,7 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 		<subject>Solicitare pentru evaluare anulată</subject>
 		<body>{$reviewerName}:
 
-Am decis ca în acest moment să anulăm solicitarea care v-am făcut-o pentru a evalua propunerea cu titlul "{$articleTitle}," pentru {$journalName}. Ne cerem scuze pentru orice inconveniențe și nădăjduim ca pe viitor să putem apela din nou la dumneavoastră pentru a ne ajuta în procesul de evaluare.
+Am decis ca în acest moment să anulăm solicitarea care v-am făcut-o pentru a evalua propunerea cu titlul "{$submissionTitle}," pentru {$contextName}. Ne cerem scuze pentru orice inconveniențe și nădăjduim ca pe viitor să putem apela din nou la dumneavoastră pentru a ne ajuta în procesul de evaluare.
 
 Dacă aveți vreo întrebare, contactați-mă.
 
@@ -289,7 +289,7 @@ Dacă aveți vreo întrebare, contactați-mă.
 		<subject>Disponibil pentru a face evaluarea</subject>
 		<body>{$editorialContactName}:
 
-Sunt disponibil și doresc să fac această evaluare pentru articolul intitulat "{$articleTitle}" din {$journalName}. Vă mulțumesc pentru solicitare și intenționez să fac evaluarea până la data limită {$reviewDueDate}, dar nu mai înainte.
+Sunt disponibil și doresc să fac această evaluare pentru articolul intitulat "{$submissionTitle}" din {$contextName}. Vă mulțumesc pentru solicitare și intenționez să fac evaluarea până la data limită {$reviewDueDate}, dar nu mai înainte.
 
 {$reviewerName}</body>
 		<description>Acest email este trimis de către un evaluator redactorului de secțiune ca răspuns la o solicitare de evaluare cu scopul de a-l înștiința pe acesta asupra faptului că solicitarea de evaluare a fost acceptată și va fi încheiată la data specificată.</description>
@@ -298,7 +298,7 @@ Sunt disponibil și doresc să fac această evaluare pentru articolul intitulat 
 		<subject>În imposibilitatea de a face evaluarea</subject>
 		<body>{$editorialContactName}:
 
-Mă tem că în acest moment nu pot să dau curs solicitării de a evalua propunerea intitulată "{$articleTitle}" pentru {$journalName}. Vă mulțumesc pentru solicitare și aștept să mă contactați și altă dată.
+Mă tem că în acest moment nu pot să dau curs solicitării de a evalua propunerea intitulată "{$submissionTitle}" pentru {$contextName}. Vă mulțumesc pentru solicitare și aștept să mă contactați și altă dată.
 
 {$reviewerName}</body>
 		<description>Acest email este trimis de un evaluator către redactorul secțiunii ca răspuns la o solicitare privind o evaluare și pentru a-l înștiința pe acesta asupra faptului că solicitarea a fost declinată.</description>
@@ -307,7 +307,7 @@ Mă tem că în acest moment nu pot să dau curs solicitării de a evalua propun
 		<subject>Evaluarea articolului s-a încheiat</subject>
 		<body>{$editorialContactName}:
 
-Am încheiat evaluarea articolului intitulat "{$articleTitle}" pentru {$journalName} și v-am trimis recomandarea "{$recommendation}."
+Am încheiat evaluarea articolului intitulat "{$submissionTitle}" pentru {$contextName} și v-am trimis recomandarea "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Acest email este trimis de către evaluator redactorului de secțiune pentru a-l înștiința asupra faptului că evaluarea s-a încheiat iar comentariile și recomandările au fost înregistrate pe siteul revistei.</description>
@@ -316,7 +316,7 @@ Am încheiat evaluarea articolului intitulat "{$articleTitle}" pentru {$journalN
 		<subject>Confirmarea primirii evaluării articolului</subject>
 		<body>{$reviewerName}:
 
-Vă mulțumim pentru că ați finalizat evaluarea propunerii intitulate "{$articleTitle}" pentru {$journalName}. Apreciem contribuția dumneavoastră la calitatea lucrărilor pe care le publicăm.
+Vă mulțumim pentru că ați finalizat evaluarea propunerii intitulate "{$submissionTitle}" pentru {$contextName}. Apreciem contribuția dumneavoastră la calitatea lucrărilor pe care le publicăm.
 
 {$editorialContactSignature}</body>
 		<description>Acest email este trimis de către redactorul secțiunii pentru a confirma primirea unei evaluări complete și pentru a mulțumi evaluatorului pentru contribuție.</description>
@@ -325,7 +325,7 @@ Vă mulțumim pentru că ați finalizat evaluarea propunerii intitulate "{$artic
 		<subject>Semnalare privind evaluarea propunerii</subject>
 		<body>{$reviewerName}:
 
-Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate} și am fi încântați să o primim mai devreme.
+Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$submissionTitle}" pentru {$contextName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate} și am fi încântați să o primim mai devreme.
 
 Dacă nu aveți un nume de utilizator și o parolă pentru siteul revistei, puteți folosi acest link pentru a vă reseta parola (care mai apoi vă va fi trimisă prin email împreună cu numele de utilizator). {$passwordResetUrl}
 
@@ -340,7 +340,7 @@ Vă rugăm să ne confirmați posibilitatea de a vă implica în această import
 		<subject>Semnalare privind evaluarea propunerii</subject>
 		<body>{$reviewerName}:
 
-Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate} și am fi încântați să o primim mai devreme.
+Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$submissionTitle}" pentru {$contextName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate} și am fi încântați să o primim mai devreme.
 
 URL-ul propunerii: {$submissionReviewUrl}
 
@@ -353,7 +353,7 @@ Vă rugăm să ne confirmați posibilitatea de a vă implica în această import
 		<subject>Semnalare automată privind depunerea evaluării</subject>
 		<body>{$reviewerName}:
 
-Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate}. Acest email a fost generat și trimis automat la momentul depășirii termenului. Am fi foarte încântați să o primim cât mai repede.
+Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$submissionTitle}" pentru {$contextName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate}. Acest email a fost generat și trimis automat la momentul depășirii termenului. Am fi foarte încântați să o primim cât mai repede.
 
 Dacă nu aveți un nume de utilizator și o parolă pentru siteul revistei, puteți folosi acest link pentru a vă reseta parola (care mai apoi vă va fi trimisă prin email împreună cu numele de utilizator). {$passwordResetUrl}
 
@@ -368,7 +368,7 @@ Vă rugăm să ne confirmați posibilitatea de a vă implica în această import
 		<subject>Semnalare automată privind depunerea evaluării</subject>
 		<body>{$reviewerName}:
 
-Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate}. Acest email a fost generat și trimis automat la momentul depășirii termenului. Am fi foarte încântați să o primim cât mai repede.
+Am dori să vă aducem aminte de solicitarea pe care v-am adresat-o privind evaluarea propunerii intitulată "{$submissionTitle}" pentru {$contextName}. Nădăjduim că vom primi evaluarea până la data de {$reviewDueDate}. Acest email a fost generat și trimis automat la momentul depășirii termenului. Am fi foarte încântați să o primim cât mai repede.
 
 URL-ul propunerii: {$submissionReviewUrl}
 
@@ -381,7 +381,7 @@ Vă rugăm să ne confirmați posibilitatea de a vă implica în această import
 		<subject>Decizia redactorului</subject>
 		<body>{$authorName}:
 
-Am ajuns la o concluzie privind propunerea intitulată "{$articleTitle}" făcută revistei {$journalTitle}.
+Am ajuns la o concluzie privind propunerea intitulată "{$submissionTitle}" făcută revistei {$journalTitle}.
 
 Decizia noastră este:
 
@@ -392,7 +392,7 @@ Decizia noastră este:
 		<subject>Decizia redactorului</subject>
 		<body>{$authorName}:
 
-Am ajuns la o decizie privind propunerea făcută revistei {$journalTitle} intitulată "{$articleTitle}".
+Am ajuns la o decizie privind propunerea făcută revistei {$journalTitle} intitulată "{$submissionTitle}".
 
 Decizia noastră este:
 
@@ -404,7 +404,7 @@ Decizia noastră este:
 		<subject>Decizia redactorului</subject>
 		<body>{$authorName}:
 
-Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată "{$articleTitle}".
+Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată "{$submissionTitle}".
 
 Decizia noastră este:
 
@@ -416,7 +416,7 @@ Decizia noastră este:
 		<subject>Decizia redactorului</subject>
 		<body>{$authorName}:
 
-Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată "{$articleTitle}".
+Am ajuns la o decizie privind propunerea făcută către {$journalTitle} intitulată "{$submissionTitle}".
 
 Decizia noastră este:
 
@@ -428,7 +428,7 @@ Decizia noastră este:
 		<subject>Solicitare pentru (tehno)redactare</subject>
 		<body>{$copyeditorName}:
 
-Vă solicităm inițierea (tehno)redactării articolului intitulat "{$articleTitle}" pentru {$journalName}, urmând următorii pași.
+Vă solicităm inițierea (tehno)redactării articolului intitulat "{$submissionTitle}" pentru {$contextName}, urmând următorii pași.
 1. Clic pe URL-ul propunerii mai jos.
 2. Autentificați-vă la revistă și clic pe fișierul care apare la pasul 1.
 3. Consultați instrucțiunile privind (tehno)redactarea postate pe pagină.
@@ -436,7 +436,7 @@ Vă solicităm inițierea (tehno)redactării articolului intitulat "{$articleTit
 5. Salvați fișierul (tehno)redactat și încărcați-l la pasul 1 corspunzător (tehno)redactării.
 6. Trimiteți un email complet cu toate neclaritățile redactorului.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL-ul propunerii: {$submissionCopyeditingUrl}
 Nume utilizator: {$copyeditorUsername}
 
@@ -447,7 +447,7 @@ Nume utilizator: {$copyeditorUsername}
 		<subject>(Tehno)redactare încheiată</subject>
 		<body>{$editorialContactName}:
 
-Am făcut (tehno)redactarea propunerii intitulată "{$articleTitle}" pentru {$journalName}. Pentru a trece în revistă modificările propuse și pentru a răspunde la întrebările pentru autor, urmați următorii pași:
+Am făcut (tehno)redactarea propunerii intitulată "{$submissionTitle}" pentru {$contextName}. Pentru a trece în revistă modificările propuse și pentru a răspunde la întrebările pentru autor, urmați următorii pași:
 
 1. Autentificați-vă la revistă urmând URL-ul de mai jos folosind numele de utilizator și parola proprie (la nevoie folosește linkul „am uitat”).
 2. Clic pe fișierul de la pasul 1. Este fișierul inițial al (tehno)redactării pentru a fi descărcat și deschis.
@@ -469,7 +469,7 @@ contactați-mă. Mulțumim pentru contribuția la revistă.
 		<subject>Confirmarea (tehno)redactării</subject>
 		<body>{$copyeditorName}:
 
-Mulțumim pentru (tehno)redactarea manuscrisului intitulat "{$articleTitle}" pentru {$journalName}. Va fi o contribuție importantă la creșterea calității acestei reviste.
+Mulțumim pentru (tehno)redactarea manuscrisului intitulat "{$submissionTitle}" pentru {$contextName}. Va fi o contribuție importantă la creșterea calității acestei reviste.
 
 {$editorialContactSignature}</body>
 		<description>Acest email este trimis de redactorul de secțiune către (tehno)redactorul unei propuneri pentru a-l anunța asupra încheierii cu succes a procesului și pentru a-i mulțumi pentru contribuție.</description>
@@ -478,7 +478,7 @@ Mulțumim pentru (tehno)redactarea manuscrisului intitulat "{$articleTitle}" pen
 		<subject>Solicitare pentru evaluarea (tehno)redactării</subject>
 		<body>{$authorName}:
 
-Propunerea dumneavoastră intitulată "{$articleTitle}" pentru {$journalName} a trecut prin prima etapă de (tehno)redactare și este disponibilă pentru revizuire urmând pașii de mai jos:
+Propunerea dumneavoastră intitulată "{$submissionTitle}" pentru {$contextName} a trecut prin prima etapă de (tehno)redactare și este disponibilă pentru revizuire urmând pașii de mai jos:
 
 1. Clic de URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă și dă clic pe fișierul care apare la pasul 1.
@@ -503,7 +503,7 @@ Dacă puteți îndeplini această sarcină la acest moment sau aveți orice înt
 		<subject>Revizuirea (tehno)redactării încheiată</subject>
 		<body>{$editorialContactName}:
 
-Am revizuit (tehno)redactarea manuscrisului intitulat "{$articleTitle}" pentru {$journalName}, fiind pregătit pentru ultima sesiune de (tehno)redactare și pregătirea acestuia pentru machetare.
+Am revizuit (tehno)redactarea manuscrisului intitulat "{$submissionTitle}" pentru {$contextName}, fiind pregătit pentru ultima sesiune de (tehno)redactare și pregătirea acestuia pentru machetare.
 
 Mulțumim pentru contribuția dumneavoastră la lucrarea personală,
 {$authorName}</body>
@@ -513,7 +513,7 @@ Mulțumim pentru contribuția dumneavoastră la lucrarea personală,
 		<subject>Confirmarea revizuirii (tehno)redactării</subject>
 		<body>{$authorName}:
 
-Mulțumim pentru evaluarea (tehno)redactării manuscrisului intitulat "{$articleTitle}" pentru {$journalName}. Așteptăm publicarea acestei lucrări.
+Mulțumim pentru evaluarea (tehno)redactării manuscrisului intitulat "{$submissionTitle}" pentru {$contextName}. Așteptăm publicarea acestei lucrări.
 
 {$editorialContactSignature}</body>
 		<description>Acest email este expediat de redactorul de secțiune către autorul propunerii pentru a confirma încheierea procesului de (tehno)redactare și pentru a-i mulțumi pentru contribuție.</description>
@@ -522,7 +522,7 @@ Mulțumim pentru evaluarea (tehno)redactării manuscrisului intitulat "{$article
 		<subject>Revizuirea finală a (tehno)redactării</subject>
 		<body>{$copyeditorName}:
 
-Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articolul "{$articleTitle}" trimis revistei {$journalName}. În acest moment este nevoie să fie pregătită o „copie curată” pentru machetare urmând următorii pași:
+Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articolul "{$submissionTitle}" trimis revistei {$contextName}. În acest moment este nevoie să fie pregătită o „copie curată” pentru machetare urmând următorii pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă și dă clic pe fișierul care apare la pasul 2.
 3. Deschide fișierul descărcat și incorporează toate modificările de (tehno)redactare și răspunsurile la întrebările puse.
@@ -530,7 +530,7 @@ Autorul și redactorul au încheiat revizuirea (tehno)redactării pentru articol
 5. Clic pe METADATE pentru a verifica informația de indexare (salvând corecturile).
 6. Trimite emailul de ÎNCHEIERE către redactor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL-ul propunerii: {$submissionCopyeditingUrl}
 Nume utilizator: {$copyeditorUsername}
 
@@ -541,7 +541,7 @@ Nume utilizator: {$copyeditorUsername}
 		<subject>(Tehno)redactarea revizuirii finale a fost încheiată</subject>
 		<body>{$editorialContactName}:
 
-Am pregătit o versiune curată de (tehno)redactare a manuscrisului intitulat "{$articleTitle}" pentru {$journalName}. Versiunea este pregătită pentru machetare și gata de asamblare.
+Am pregătit o versiune curată de (tehno)redactare a manuscrisului intitulat "{$submissionTitle}" pentru {$contextName}. Versiunea este pregătită pentru machetare și gata de asamblare.
 
 {$copyeditorName}</body>
 		<description>Acest email a fost trimis de (tehno)redactor către redactorul de secțiune înștiințându-l asupra faptului că sesiunea finală de (tehno)redactare a fost încheiată și că procesul de machetare poate fi inițiat.</description>
@@ -550,7 +550,7 @@ Am pregătit o versiune curată de (tehno)redactare a manuscrisului intitulat "{
 		<subject>Confirmarea de primire a reviziei finale pentru (tehno)redactare</subject>
 		<body>{$copyeditorName}:
 
-Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat "{$articleTitle}" pentru {$journalName}. Pregătirea unei „copii curate” pentru machetare este un pas important în procesul editorial.
+Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat "{$submissionTitle}" pentru {$contextName}. Pregătirea unei „copii curate” pentru machetare este un pas important în procesul editorial.
 
 {$editorialContactSignature}</body>
 		<description>Acest email trimis de la redactorul de secțiune către (tehno)redactor recunoaște încheierea ultimei sesiuni de (tehno)redactare și mulțumește pentru contribuție.</description>
@@ -559,12 +559,12 @@ Mulțumim pentru încheierea (tehno)redactării manuscrisului inititulat "{$arti
 		<subject>Solitare pentru asamblare</subject>
 		<body>{$layoutEditorName}:
 
-Propunerea intitulată "{$articleTitle}" făcută revistei {$journalName} are nevoie să fie asamblată urmând următorii pași:
+Propunerea intitulată "{$submissionTitle}" făcută revistei {$contextName} are nevoie să fie asamblată urmând următorii pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă și folosește fișierul de machetare pentru a crea asamblarea urmând standardele revistei.
 3. Trimite emailul de ÎNCHEIERE către redactor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL-ul propunerii: {$submissionLayoutUrl}
 Nume utilizator: {$layoutEditorUsername}
 
@@ -577,7 +577,7 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 		<subject>Asamblare încheiată</subject>
 		<body>{$editorialContactName}:
 
-Asamblarea a fost pregătită pentru manuscrisul intitulat "{$articleTitle}" propus revistei {$journalName} și este gata de corectură.
+Asamblarea a fost pregătită pentru manuscrisul intitulat "{$submissionTitle}" propus revistei {$contextName} și este gata de corectură.
 
 Dacă sunt întrebări, contactați-mă.
 
@@ -588,7 +588,7 @@ Dacă sunt întrebări, contactați-mă.
 		<subject>Confirmare privind machetarea</subject>
 		<body>{$layoutEditorName}:
 
-Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitulat "{$articleTitle}" propus {$journalName}. Aceasta este o contribuție importantă la procesul de publicare.
+Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitulat "{$submissionTitle}" propus {$contextName}. Aceasta este o contribuție importantă la procesul de publicare.
 
 {$editorialContactSignature}</body>
 		<description>Acest email este trimis de redactorul de secțiune către redactorul de machetare prin care este confirmată finalizarea procesului de editare a machetei și mulțumește redactorului de machetă pentru contribuția sa.</description>
@@ -597,7 +597,7 @@ Mulțumim pentru efortul de pregătire a asamblărilor pentru manuscrisul intitu
 		<subject>Solicitare pentru corectură (de la autor)</subject>
 		<body>{$authorName}:
 
-Propunerea intitulată "{$articleTitle}" înaintată revistei {$journalName} trebuie să fie corectată urmând acești pași:
+Propunerea intitulată "{$submissionTitle}" înaintată revistei {$contextName} trebuie să fie corectată urmând acești pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te pe siteul revistei și consultă INSTRUCȚIUNILE PENTRU CORECTURĂ.
 3. Clic pe VEZI REZULTATUL în machetă și inspectează asamblarea într-unul dintre formatele deja propuse.
@@ -615,7 +615,7 @@ Nume utilizator: {$authorUsername}
 		<subject>Corectură încheiată (a autorului)</subject>
 		<body>{$editorialContactName}:
 
-Am încheiat corectura asamblărilor pentru manuscrisul meu intitulat "{$articleTitle}" trimis revistei {$journalName}. Asamblările sunt pregătite în acest moment pentru a li se aduce ultimele modificări de către corector și redactorul de machetă.
+Am încheiat corectura asamblărilor pentru manuscrisul meu intitulat "{$submissionTitle}" trimis revistei {$contextName}. Asamblările sunt pregătite în acest moment pentru a li se aduce ultimele modificări de către corector și redactorul de machetă.
 
 {$authorName}</body>
 		<description>Acest email de la autor este trimis redactorului înștiințându-l asupra faptului că au fost încheiate corecturile (făcute de autor) iar detaliile pot fi găsite în comentariile articolului.</description>
@@ -624,7 +624,7 @@ Am încheiat corectura asamblărilor pentru manuscrisul meu intitulat "{$article
 		<subject>Confirmarea corecturii (autorul)</subject>
 		<body>{$authorName}:
 
-Mulțumesc pentru corecturile aduse la asamblările manuscrisului intitulat "{$articleTitle}" pentru {$journalName}. Așteptăm publicarea în curând a lucrării.
+Mulțumesc pentru corecturile aduse la asamblările manuscrisului intitulat "{$submissionTitle}" pentru {$contextName}. Așteptăm publicarea în curând a lucrării.
 
 Dacă te înscrii la serviciul nostru de notificare, vei primi un email conținând cuprinsul de îndată ce acesta va fi publicat. Pentru orice întrebări, contactează-mă.
 
@@ -635,7 +635,7 @@ Dacă te înscrii la serviciul nostru de notificare, vei primi un email conțin�
 		<subject>Solicitare pentru corectură</subject>
 		<body>{$proofreaderName}:
 
-Propunerea intitulată "{$articleTitle}" trimisă {$journalName} are nevoie în acest moment de corectură urmându-se următorii pași:
+Propunerea intitulată "{$submissionTitle}" trimisă {$contextName} are nevoie în acest moment de corectură urmându-se următorii pași:
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă și consultă INSTRUCȚIUNILE PENTRU CORECTURĂ.
 3. Clic pe VEZI REZULTATUL în machetă și corectează asamblarea într-unul dintre formatele deja propuse.
@@ -655,7 +655,7 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 		<subject>Corectură încheiată</subject>
 		<body>{$editorialContactName}:
 
-Am încheiat corectura asamblărilor pentru manuscrisul intitulat "{$articleTitle}" trimis {$journalName}. Asamblările sunt pregătite în acest moment pentru corectura finală făcută de redactorul de machetă.
+Am încheiat corectura asamblărilor pentru manuscrisul intitulat "{$submissionTitle}" trimis {$contextName}. Asamblările sunt pregătite în acest moment pentru corectura finală făcută de redactorul de machetă.
 
 {$proofreaderName}</body>
 		<description>Acest email este trimis de corector redactorului de secțiune prin care-l înștiințează asupra faptului că s-a încheiat corectura.</description>
@@ -664,7 +664,7 @@ Am încheiat corectura asamblărilor pentru manuscrisul intitulat "{$articleTitl
 		<subject>Confirmarea corecturii</subject>
 		<body>{$proofreaderName}:
 
-Mulțumesc pentru corecturile aduse asamblărilor pentru manuscrisul intitulat "{$articleTitle}" trimis revistei {$journalName}. Aceasta este o contribuție importantă la ridicarea nivelului de calitate al revistei.
+Mulțumesc pentru corecturile aduse asamblărilor pentru manuscrisul intitulat "{$submissionTitle}" trimis revistei {$contextName}. Aceasta este o contribuție importantă la ridicarea nivelului de calitate al revistei.
 
 {$editorialContactSignature}</body>
 		<description>Acest email trimis de redactorul secțiunii corectorului confirmă încheierea procesului de corectură întreprins de corector și îi mulțumește acestuia.</description>
@@ -673,13 +673,13 @@ Mulțumesc pentru corecturile aduse asamblărilor pentru manuscrisul intitulat "
 		<subject>Solicitare pentru corectură (redactorul machetei)</subject>
 		<body>{$layoutEditorName}:
 
-Propunerea intitulată "{$articleTitle}" trimisă revistei {$journalName}, a fost corectată de către autor și corector iar oricare alte corecturi care ar trebui făcute, ar trebui să urmeze următorii pași.
+Propunerea intitulată "{$submissionTitle}" trimisă revistei {$contextName}, a fost corectată de către autor și corector iar oricare alte corecturi care ar trebui făcute, ar trebui să urmeze următorii pași.
 1. Clic pe URL-ul propunerii de mai jos.
 2. Autentifică-te la revistă consultând indicațiile privind corecturile pentru a crea asamblările corectate.
 3. Încarcă asamblările revizuite.
 4. Trimite emailul de ÎNCHEIERE de la pasul 3 al sesiunii de corectură către redactor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL-ul propunerii: {$submissionUrl}
 Nume utilizatorilor: {$layoutEditorUsername}
 
@@ -692,7 +692,7 @@ Dacă nu puteți îndeplini această sarcină în acest moment sau aveți între
 		<subject>Corectură încheiată (redactorul de machetă)</subject>
 		<body>{$editorialContactName}:
 
-Asamblările au fost corectate după ce au fost corectate pentru manuscrisul intitulat "{$articleTitle}" pentru {$journalName}. Acest articol este gata pentru a fi publicat.
+Asamblările au fost corectate după ce au fost corectate pentru manuscrisul intitulat "{$submissionTitle}" pentru {$contextName}. Acest articol este gata pentru a fi publicat.
 
 {$layoutEditorName}</body>
 		<description>Acest email trimis de redactorul machetei pentru redactorul de secțiune, îl înștiințează pe acesta asupra faptului că a fost încheiată ultima etapă a corecturii și articolul este pregătit pentru publicare.</description>
@@ -701,21 +701,21 @@ Asamblările au fost corectate după ce au fost corectate pentru manuscrisul int
 		<subject>Confirmarea corecturii (redactorul de machetă)</subject>
 		<body>{$layoutEditorName}:
 
-Mulțumim pentru încheierea corecturilor pentru asamblările asociate cu manuscrisul intitulat "{$articleTitle}" pentru {$journalName}. Mulțumim pentru contribuția dumneavoastră la această revistă.
+Mulțumim pentru încheierea corecturilor pentru asamblările asociate cu manuscrisul intitulat "{$submissionTitle}" pentru {$contextName}. Mulțumim pentru contribuția dumneavoastră la această revistă.
 
 {$editorialContactSignature}</body>
 		<description>Acest email trimis de redactorul secțiunii către redactorul de machetă recunoaște încheierea acestei etape finale a corecturii și mulțumește pentru contribuția adusă.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Articolul probabil prezintă interes</subject>
-		<body>Cred că ai putea fi interesat să consulți articolul intitulat "{$articleTitle}" scris de {$authorName} și publicat în Vol {$volume}, Nr {$number} ({$year}) al revistei {$journalName} localizat la "{$articleUrl}".</body>
+		<body>Cred că ai putea fi interesat să consulți articolul intitulat "{$submissionTitle}" scris de {$authorName} și publicat în Vol {$volume}, Nr {$number} ({$year}) al revistei {$contextName} localizat la "{$articleUrl}".</body>
 		<description>Acest șablon de email oferă unui utilizator înregistrat posibilitatea de a trimite informații despre un articol cuiva care poate fi interesat. Este accesibil din instrumentele pentru lectură din pagina de administrare.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Înștiințare pentru abonament</subject>
 		<body>{$subscriberName}:
 
-Ați fost înregistrat ca abonat la sistemul nostru de manangenet al revistelor online, mai exact la {$journalName} beneficiind de următorul abonament:
+Ați fost înregistrat ca abonat la sistemul nostru de manangenet al revistelor online, mai exact la {$contextName} beneficiind de următorul abonament:
 
 {$subscriptionType}
 
@@ -734,7 +734,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.
 		<subject>Număr de revistă acum cu acces deschis</subject>
 		<body>Cititori:
 
-{$journalName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web ({$journalUrl}) pentru a răsfoi articolele și punctele de interes.
+{$contextName} tocmai a publicat în regim de acces deschis acest număr. Vă invităm să consultați cuprinsul aici și să vizitați siteul web ({$journalUrl}) pentru a răsfoi articolele și punctele de interes.
 
 Mulțumim pentru interesul continuu arătat pentru efortul nostru,
 {$editorialContactSignature}</body>
@@ -744,7 +744,7 @@ Mulțumim pentru interesul continuu arătat pentru efortul nostru,
 		<subject>Anunț privind data expirării abonamentului</subject>
 		<body>{$subscriberName}:
 
-Abonamentul la {$journalName} este pe cale să expire.
+Abonamentul la {$contextName} este pe cale să expire.
 
 {$subscriptionType}
 Data expirării: {$expiryDate}
@@ -760,7 +760,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.
 		<subject>Abonament expirat</subject>
 		<body>{$subscriberName}:
 
-Abonamentul la {$journalName} a expirat.
+Abonamentul la {$contextName} a expirat.
 
 {$subscriptionType}
 Data expirării: {$expiryDate}
@@ -776,7 +776,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.
 		<subject>Abonament expirat - ultima înștiințare</subject>
 		<body>{$subscriberName}:
 
-Abonamentul la {$journalName} a expirat.
+Abonamentul la {$contextName} a expirat.
 Atenție, aceasta este ultima înștiințare care vă va mai fi trimisă.
 
 {$subscriptionType}
@@ -791,7 +791,7 @@ Dacă sunt întrebări, nu ezitați să mă contactați.
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Abonament contractat: individual</subject>
-		<body>A fost contractat online un abonament individual pentru {$journalName} cu următoarele detalii.
+		<body>A fost contractat online un abonament individual pentru {$contextName} cu următoarele detalii.
 
 Tipul abonamentului:
 {$subscriptionType}
@@ -810,7 +810,7 @@ URL-ul pentru abonament: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Abonament contractat: instituțional</subject>
-		<body>A fost contractat online un abonament instituțional pentru {$journalName} având următoarele detalii. Pentru a activa acest abonament, folosiți URL-ul corespondent și setați starea abonamentului la „activ”.
+		<body>A fost contractat online un abonament instituțional pentru {$contextName} având următoarele detalii. Pentru a activa acest abonament, folosiți URL-ul corespondent și setați starea abonamentului la „activ”.
 
 Tip de abonament:
 {$subscriptionType}
@@ -839,7 +839,7 @@ URL-ul abonamentului: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Reînnoirea abonamentului: individual</subject>
-		<body>A fost reînnoit online un abonament individual pentru {$journalName}, având următoarele detalii.
+		<body>A fost reînnoit online un abonament individual pentru {$contextName}, având următoarele detalii.
 
 Tipul abonamentului:
 {$subscriptionType}
@@ -858,7 +858,7 @@ URL-ul pentru abonament: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Reînnoirea abonamentului: instituțional</subject>
-		<body>A fost reînnoit online un abonament instituțional pentru {$journalName}, având următoarele detalii.
+		<body>A fost reînnoit online un abonament instituțional pentru {$contextName}, având următoarele detalii.
 
 Tipul abonamentului:
 {$subscriptionType}
@@ -889,13 +889,13 @@ URL-ul pentru abonament: {$subscriptionUrl}
 		<subject>Redactarea referințelor bibliografice</subject>
 		<body>{$authorFirstName},
 
-Puteți să verificați sau să ne dați referințele bibliografice pentru articolul {$articleTitle}:
+Puteți să verificați sau să ne dați referințele bibliografice pentru articolul {$submissionTitle}:
 
 {$rawCitation}
 
 Vă mulțumim!
 
 {$userFirstName}
-Redactor, {$journalName}</body>
+Redactor, {$contextName}</body>
 	</email_text>
 </email_texts>

@@ -13,7 +13,7 @@
 <email_texts locale="id_ID">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notifikasi Deposit</subject>
-		<body>Selamat atas diterimanya naskah Anda, "{$articleTitle}", untuk penerbitan di  {$journalName}. Jika Anda memilih, Anda boleh secara otomatis menyimpan naskah Anda di satu repositori atau lebih.  
+		<body>Selamat atas diterimanya naskah Anda, "{$submissionTitle}", untuk penerbitan di  {$contextName}. Jika Anda memilih, Anda boleh secara otomatis menyimpan naskah Anda di satu repositori atau lebih.  
 
 Pergi ke {$swordDepositUrl} untuk melanjutkan.
 

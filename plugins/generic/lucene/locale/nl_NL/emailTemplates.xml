@@ -19,14 +19,14 @@ Deze e-mail is gegenereerd door de Lucene zoekplugin van Open Journal Systems.</
 	</email_text>
 	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
 		<subject>Indexeerfout bij tijdschrift</subject>
-		<body>Er is een indexeerfout opgetreden bij het indexeren van het tijdschrift "{$journalName}".
+		<body>Er is een indexeerfout opgetreden bij het indexeren van het tijdschrift "{$contextName}".
 
 Deze e-mail is gegenereerd door de Lucene zoekplugin van Open Journal Systems.</body>
 		<description>Dit e-mail sjabloon wordt gebruikt om de technische contactpersoon op de hoogte te brengen van een fout bij het indexeren van het tijdschrift.</description>
 	</email_text>
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Artikel indexeerfout</subject>
-		<body>Er is een indexeerfout opgetreden bij het indexeren van het artikel "{$articleTitle}" in tijdschrift "{$journalName}".
+		<body>Er is een indexeerfout opgetreden bij het indexeren van het artikel "{$submissionTitle}" in tijdschrift "{$contextName}".
 
 Deze e-mail is gegenereerd door de Lucene zoekplugin van Open Journal Systems.</body>
 		<description>Dit e-mailsjabloon wordt gebruikt voor het op de hoogte brengen van  de technische contactpersoon van een tijdschrift van een indexeerfout van een artikel.</description>

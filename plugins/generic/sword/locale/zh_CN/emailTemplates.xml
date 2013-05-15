@@ -12,7 +12,7 @@
 <email_texts locale="zh_CN">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>存入通知</subject>
-		<body>恭喜您的文章"{$articleTitle}"已经被 {$journalName}录取。您可以选择这篇稿件自动存入一个或者多个仓储。
+		<body>恭喜您的文章"{$submissionTitle}"已经被 {$contextName}录取。您可以选择这篇稿件自动存入一个或者多个仓储。
 
 进入{$swordDepositUrl}继续。
 

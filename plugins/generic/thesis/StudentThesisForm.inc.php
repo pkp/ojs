@@ -279,7 +279,7 @@ class StudentThesisForm extends Form {
 				'thesisContactSignature' => $thesisContactSignature
 			);
 
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$mail = new MailTemplate('THESIS_ABSTRACT_CONFIRM');
 			$mail->setReplyTo($thesisEmail, $thesisName);
 			$mail->assignParams($paramArray);

@@ -11,7 +11,7 @@
 <email_texts locale="fa_IR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>اطلاع رسانی پرداخت دستی</subject>
-		<body>یک پرداخت دستی قرار است برای مجله {$journalName} از طرف کاربر {$userFullName} (username "{$userName}") صورت گیرد.
+		<body>یک پرداخت دستی قرار است برای مجله {$contextName} از طرف کاربر {$userFullName} (username "{$userName}") صورت گیرد.
 
 مورد خرید "{$itemName}".
 قیمت {$itemCost} ({$itemCurrencyCode}).

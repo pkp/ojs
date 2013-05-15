@@ -12,7 +12,7 @@
 <email_texts locale="nl_NL">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Thesis samenvatting inzending</subject>
-		<body>Deze e-mail is automatisch gegenereerd door het thesis samenvattingen formulier van {$journalName}. 
+		<body>Deze e-mail is automatisch gegenereerd door het thesis samenvattingen formulier van {$contextName}. 
 
 Gelieve te bevestigen dat de ingestuurde informatie correct is. De samenvatting zal gepubliceerd worden in de online editie van het tijdschrift nadat de bevestiging is ontvangen.
 

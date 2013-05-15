@@ -12,7 +12,7 @@
 <email_texts locale="ja_JP">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>学位論文要旨の投稿</subject>
-		<body>このメールは {$journalName} の学位論文要旨投稿フォームから自動的に生成されました。
+		<body>このメールは {$contextName} の学位論文要旨投稿フォームから自動的に生成されました。
 
 投稿された情報が正しいかどうか確認してください。確認がとれ次第，要旨は雑誌のオンライン版で公開されます。
 

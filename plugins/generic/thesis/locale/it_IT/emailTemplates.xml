@@ -12,7 +12,7 @@
 <email_texts locale="it_IT">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Richiesta conferma dei dati di una tesi</subject>
-		<body>Questa e-mail è generata automaticamente dal sistema di gestione degli abstract delle tesi di {$journalName}.
+		<body>Questa e-mail è generata automaticamente dal sistema di gestione degli abstract delle tesi di {$contextName}.
 
 Le chiediamo di confermare la correttezza delle informazioni inserite. Una volta ricevuta tale conferma, l'abstract verrà pubblicato nelle pagine web della rivista.
 

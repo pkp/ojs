@@ -11,7 +11,7 @@
 <email_texts locale="zh_CN">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>人工支付通知</subject>
-		<body>人工支付需要被{$journalName}期刊的{$userFullName}来处理（用户名“{$userName}”）。
+		<body>人工支付需要被{$contextName}期刊的{$userFullName}来处理（用户名“{$userName}”）。
 
 
 被支付的项目：“{$itemName}”；。

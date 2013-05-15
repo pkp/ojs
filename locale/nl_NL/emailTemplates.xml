@@ -37,7 +37,7 @@ Uw nieuwe wachtwoord: {$password}
 		<subject>Tijdschriftregistratie</subject>
 		<body>{$userFullName}
 
-U bent nu geregistreerd als gebruiker bij {$journalName}. We hebben uw gebruikersnaam en wachtwoord in deze e-mail opgenomen. U heeft die nodig om met het tijdschrift te werken. U kunt op ieder gewenst moment verwijderd worden van de lijst gebruikers van dit tijdschrift door contact met mij op te nemen
+U bent nu geregistreerd als gebruiker bij {$contextName}. We hebben uw gebruikersnaam en wachtwoord in deze e-mail opgenomen. U heeft die nodig om met het tijdschrift te werken. U kunt op ieder gewenst moment verwijderd worden van de lijst gebruikers van dit tijdschrift door contact met mij op te nemen
 
 Gebruikersnaam: {$username}
 Wachtwoord: {$password}
@@ -50,7 +50,7 @@ Dank u,
 		<subject>Valideer uw account</subject>
 		<body>{$userFullName}
 
-U hebt een account aangemaakt bij {$journalName}. Voordat u dat kunt gebruiken moet u uw account valideren. U doet dat door de link hieronder te volgen:
+U hebt een account aangemaakt bij {$contextName}. Voordat u dat kunt gebruiken moet u uw account valideren. U doet dat door de link hieronder te volgen:
 
 {$activateUrl}
 
@@ -59,8 +59,8 @@ Dank u,
 		<description>Deze e-mail wordt naar alle nieuwe gebruikers gestuurd om ze welkom te heten bij het systeem en om ze te voorzien van een kopie van hun gebruikersnaam en wachtwoord.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registratie als Reviewer bij {$journalName}</subject>
-		<body>Met het oog op uw expertise hebben wij de vrijheid genomen om uw naam op te nemen in de lijst met reviewers van {$journalName}. Dit verplicht u tot niets maar geeft ons de mogelijkheid u te benaderen met het verzoek eventueel een inzending te reviewen. Bij de uitnodiging krijgt u de gelegenheid de titel en samenvatting van het stuk in kwestie te bekijken. U kunt de uitnodiging te allen tijde accepteren of weigeren. U kunt ook altijd vragen om uw naam van deze lijst te laten verwijderen.
+		<subject>Registratie als Reviewer bij {$contextName}</subject>
+		<body>Met het oog op uw expertise hebben wij de vrijheid genomen om uw naam op te nemen in de lijst met reviewers van {$contextName}. Dit verplicht u tot niets maar geeft ons de mogelijkheid u te benaderen met het verzoek eventueel een inzending te reviewen. Bij de uitnodiging krijgt u de gelegenheid de titel en samenvatting van het stuk in kwestie te bekijken. U kunt de uitnodiging te allen tijde accepteren of weigeren. U kunt ook altijd vragen om uw naam van deze lijst te laten verwijderen.
 
 We geven u een gebruikersnaam en wachtwoord, die gebruikt worden voor alle interacties met de website van het tijdschrift. Zo kunt u bijvoorbeeld uw profiel bijwerken, waaronder uw review-interesses.
 
@@ -75,17 +75,17 @@ Dank u,
 		<subject>Nieuw nummer gepubliceerd</subject>
 		<body>Lezers:
 
-{$journalName} heeft zijn nieuwste nummer gepubliceerd op {$journalUrl}. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikelen en andere interessante items.
+{$contextName} heeft zijn nieuwste nummer gepubliceerd op {$journalUrl}. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikelen en andere interessante items.
 
 Dank voor uw interesse in ons werk,
 {$editorialContactSignature}</body>
 		<description>Deze e-mail wordt verstuurd naar de geregistreerde gebruikers via de "Bericht gebruikers" link op de gebruikerspagina van de redacteur. Het stelt lezers op de hoogte van het verschijnen van een nieuw nummer en nodigt ze uit om het tijdschrift te bezoeken via de bijgevoegde URL.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Verzoek tot archivering voor {$journalName}</subject>
+		<subject>Verzoek tot archivering voor {$contextName}</subject>
 		<body>Beste [Universiteitsbibliothecaris]
 
-{$journalName} &lt;{$journalUrl}&gt; is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
+{$contextName} &lt;{$journalUrl}&gt; is een tijdschrift waarvoor een lid van uw faculteit, [naam van het lid], fungeert als [titel van de positie]. Het tijdschrift streeft naar het starten van een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
 
 [Korte beschrijving van het tijdschrift]
 
@@ -98,10 +98,10 @@ Dank u,
 		<description>Deze e-mail vraagt aan de houder van een LOCKSS archief om dit tijdschrift op te nemen in het archief. De URL naar het LOCKS manifest van het tijdschrift wordt meegestuurd.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Verzoek voor archivering van {$journalName}</subject>
+		<subject>Verzoek voor archivering van {$contextName}</subject>
 		<body>Beste [Universiteitsbibliothecaris]
 
-{$journalName} &lt;{$journalUrl}&gt;, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [totel van de positie]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
+{$contextName} &lt;{$journalUrl}&gt;, is een tijdschrift waarbij een lid van uw faculteit, [naam van het lid] fungeert als [totel van de positie]. Het tijdschrift streeft naar een LOCKSS (Lots of Copies Keep Stuff Safe) archief met deze en andere universiteitsbibliotheken.
 
 [Korte beschrijving van het tijdschrift]
 
@@ -117,7 +117,7 @@ Dank u,
 		<subject>Bevestiging van inzending</subject>
 		<body>{$authorName}:
 
-Dank u voor het inzenden van het manuscript "{$articleTitle}" voor {$journalName}. Het online tijdschriftbeheersysteem dat wij gebruiken geeft u de mogelijkheid om de voortgang van het redactieproces te volgen door in te loggen op de website van het tijdschrift:
+Dank u voor het inzenden van het manuscript "{$submissionTitle}" voor {$contextName}. Het online tijdschriftbeheersysteem dat wij gebruiken geeft u de mogelijkheid om de voortgang van het redactieproces te volgen door in te loggen op de website van het tijdschrift:
 
 Manuscript URL: {$submissionUrl}
 Gebruikersnaam: {$authorUsername}
@@ -131,7 +131,7 @@ Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van
 		<subject>Ongeschikte inzending</subject>
 		<body>{$authorName}:
 
-Een eerste review van "{$articleTitle}" heeft duidelijk gemaakt dat deze inzending niet past binnen de scope en focus van {$journalName}. Ik raad u aan om kennis te nemen van de beschrijving van dit tijdschrift bij Over dit tijdschrift en van de actuele inhoud om meer te weten te komen over het werk dat we publiceren. U kunt overwegen om dit manuscript in te zenden bij een ander, meer geschikt tijdschrift.
+Een eerste review van "{$submissionTitle}" heeft duidelijk gemaakt dat deze inzending niet past binnen de scope en focus van {$contextName}. Ik raad u aan om kennis te nemen van de beschrijving van dit tijdschrift bij Over dit tijdschrift en van de actuele inhoud om meer te weten te komen over het werk dat we publiceren. U kunt overwegen om dit manuscript in te zenden bij een ander, meer geschikt tijdschrift.
 
 {$editorialContactSignature}</body>
 		<description/>
@@ -140,14 +140,14 @@ Een eerste review van "{$articleTitle}" heeft duidelijk gemaakt dat deze inzendi
 		<subject>Opmerking bij inzending</subject>
 		<body>{$name}:
 
-{$commentName} heeft een opmerking geplaatst bij de inzending, "{$articleTitle}" in {$journalName}:
+{$commentName} heeft een opmerking geplaatst bij de inzending, "{$submissionTitle}" in {$contextName}:
 
 {$comments}</body>
 		<description>Deze E-mail bericht de verschillende personen die betrokken zijn bij het redactieproces van een inzending dat een nieuwe opmerking is geplaatst.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Beslissing over "{$articleTitle}"</subject>
-		<body>Als een van de reviewers van inzending "{$articleTitle}" bij {$journalName}, stuur ik u de reviews en de redactionele beslissing die naar de auteur van dit stuk is gestuurd. Nogmaals dank voor uw belangrijke bijdrage aan dit proces.
+		<subject>Beslissing over "{$submissionTitle}"</subject>
+		<body>Als een van de reviewers van inzending "{$submissionTitle}" bij {$contextName}, stuur ik u de reviews en de redactionele beslissing die naar de auteur van dit stuk is gestuurd. Nogmaals dank voor uw belangrijke bijdrage aan dit proces.
 
 {$editorialContactSignature}
 
@@ -158,7 +158,7 @@ Een eerste review van "{$articleTitle}" heeft duidelijk gemaakt dat deze inzendi
 		<subject>Redactietaak</subject>
 		<body>{$editorialContactName}:
 
-De inzending "{$articleTitle}" voor {$journalName} is aan u toegewezen om in uw rol als sectieredacteur door het redactieproces te leiden.
+De inzending "{$submissionTitle}" voor {$contextName} is aan u toegewezen om in uw rol als sectieredacteur door het redactieproces te leiden.
 
 URL inzending: {$submissionUrl}
 Gebruikersnaam: {$editorUsername}
@@ -171,7 +171,7 @@ Dank u,
 		<subject>Artikel review verzoek</subject>
 		<body>{$reviewerName}:
 
-Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$submissionTitle}" dat is ingestuurd bij {$contextName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
 
 Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$journalUrl}
 
@@ -187,17 +187,17 @@ Dank u voor het overwegen van dit verzoek.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Artikel review verzoek</subject>
 		<body>{$reviewerName}:
 
-Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" dat is ingestuurd bij {$journalName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$submissionTitle}" dat is ingestuurd bij {$contextName}. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.
 
 Wilt u voor {$weekLaterDate} inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen.
 
@@ -211,17 +211,17 @@ Dank u voor het overwegen van dit verzoek.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift en de een-klik toegang voor de reviewer is ingeschakeld.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Artikel review verzoek</subject>
 		<body>{$reviewerName}:
 
-Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$articleTitle}" en ik wil u vragen om te overwegen deze belangrijke taak voor ons uit te voeren. De review richtlijnen voor dit tijdschrift staan hieronder en de inzending is als bijlage meegestuurd. Uw review van de inzending en uw aanbeveling zou naar mij gemaild moeten zijn op {$reviewDueDate}.
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript "{$submissionTitle}" en ik wil u vragen om te overwegen deze belangrijke taak voor ons uit te voeren. De review richtlijnen voor dit tijdschrift staan hieronder en de inzending is als bijlage meegestuurd. Uw review van de inzending en uw aanbeveling zou naar mij gemaild moeten zijn op {$reviewDueDate}.
 
 Wilt u voor {$weekLaterDate} in een retourbericht aangeven of u bereid en in staat bent om deze review te doen.
 
@@ -239,7 +239,7 @@ Review richtlijnen
 		<subject>Reviewverzoek ingetrokken</subject>
 		<body>{$reviewerName}:
 
-We hebben besloten om ons verzoek aan u om de inzending "{$articleTitle}" voor {$journalName}in te trekken. We verontschuldigen ons voor enig ongemak dat we daarmee veroorzaken en hopen dat we u in de toekomst mogen vragen om een bijdrage aan het reviewproces van dit tijdschrift.
+We hebben besloten om ons verzoek aan u om de inzending "{$submissionTitle}" voor {$contextName}in te trekken. We verontschuldigen ons voor enig ongemak dat we daarmee veroorzaken en hopen dat we u in de toekomst mogen vragen om een bijdrage aan het reviewproces van dit tijdschrift.
 
 Als u nog vragen heeft, kunt u contact met mij opnemen.
 
@@ -250,7 +250,7 @@ Als u nog vragen heeft, kunt u contact met mij opnemen.
 		<subject>Review mogelijk</subject>
 		<body>{$editorialContactName}:
 
-Ik ben bereid en in staat om een review te doen van de inzending "{$articleTitle}" voor {$journalName}. Dank u dat u aan mij gedacht heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, {$reviewDueDate}.
+Ik ben bereid en in staat om een review te doen van de inzending "{$submissionTitle}" voor {$contextName}. Dank u dat u aan mij gedacht heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, {$reviewDueDate}.
 
 {$reviewerName}</body>
 		<description>Deze e-mail wordt door een reviewer naar de sectieredacteur gestuurd als reactie op een review-verzoek dat geaccepteerd is en zal worden voltooid voor de gevraagde datum.</description>
@@ -259,7 +259,7 @@ Ik ben bereid en in staat om een review te doen van de inzending "{$articleTitle
 		<subject>Review niet mogelijk</subject>
 		<body>{$editorialContactName}:
 
-Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending "{$articleTitle}" voor {$journalName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.
+Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending "{$submissionTitle}" voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.
 
 {$reviewerName}</body>
 		<description>Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een review-verzoek om te laten weten dat het verzoek wordt afgewezen.</description>
@@ -268,7 +268,7 @@ Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inz
 		<subject>Artikel review gereed</subject>
 		<body>{$editorialContactName}:
 
-Ik heb mijn review van "{$articleTitle}" voor {$journalName} afgerond en mijn aanbeveling ingediend: "{$recommendation}."
+Ik heb mijn review van "{$submissionTitle}" voor {$contextName} afgerond en mijn aanbeveling ingediend: "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Deze e-mail wordt door een reviewer naar de sectieredacteur gestuurd om die te berichten dat de review gereed is en de commentaren en aanbevelingen zijn vastgelegd op de website van het tijdschrift.</description>
@@ -277,7 +277,7 @@ Ik heb mijn review van "{$articleTitle}" voor {$journalName} afgerond en mijn aa
 		<subject>Artikel review bevestiging</subject>
 		<body>{$reviewerName}:
 
-Dank u voor uw review van de inzending "{$articleTitle}" voor {$journalName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.
+Dank u voor uw review van de inzending "{$submissionTitle}" voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail wordt door de sectieredacteur verstuurd om de ontvangst van een review te bevestigen en de reviewer te bedanken voor zijn bijdrage.</description>
@@ -286,7 +286,7 @@ Dank u voor uw review van de inzending "{$articleTitle}" voor {$journalName}. We
 		<subject>Review herinnering</subject>
 		<body>{$reviewerName}:
 
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$articleTitle}" voor {$journalName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
+Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$submissionTitle}" voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
 
 Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}
 
@@ -301,7 +301,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 		<subject>Inzendingsreview herinnering</subject>
 		<body>{$reviewerName}:
 
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$articleTitle}" voor {$journalName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
+Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$submissionTitle}" voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
 
 URL inzending: {$submissionReviewUrl}
 
@@ -314,7 +314,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 		<subject>Geautomatiseerde review herinnering</subject>
 		<body>{$reviewerName}:
 
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$articleTitle}" voor {$journalName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
+Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$submissionTitle}" voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
 
 Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}
 
@@ -329,7 +329,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 		<subject>Geautomatiseerde review herinnering</subject>
 		<body>{$reviewerName}:
 
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$articleTitle}" voor {$journalName}. We hoopten dit review te hebben op {$reviewDueDate}. Deze e-mail is automatisch gegenereerd bij het verstrijken van die datum. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
+Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending "{$submissionTitle}" voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. Deze e-mail is automatisch gegenereerd bij het verstrijken van die datum. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.
 
 Inzendings-URL: {$submissionReviewUrl}
 
@@ -342,7 +342,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 		<subject>Tekstredactie verzoek</subject>
 		<body>{$copyeditorName}:
 
-Ik wil u vragen om de teksredactie uit te voeren voor artikel "{$articleTitle}" voor {$journalName} door deze stappen te volgen.
+Ik wil u vragen om de teksredactie uit te voeren voor artikel "{$submissionTitle}" voor {$contextName} door deze stappen te volgen.
 1. Klik op de inzendings-URL hieronder.
 2. Log in bij het tijdschrift en klik op het bestand dat verschijnt bij Stap 1.
 3. Raadpleeg de tekstredactie-instructies die op de webpagina staan.
@@ -350,7 +350,7 @@ Ik wil u vragen om de teksredactie uit te voeren voor artikel "{$articleTitle}" 
 5. Bewaar het bewerkte bestand en laad het bij stap 1 van Tekstredactie.
 6. Stuur de GEREED e-mail naar de redacteur.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL inzending: {$submissionCopyeditingUrl}
 Gerbruikersnaam: {$copyeditorUsername}
 
@@ -361,7 +361,7 @@ Gerbruikersnaam: {$copyeditorUsername}
 		<subject>Tekstredactie gereed</subject>
 		<body>{$editorialContactName}:
 
-We hebben de tekstredactie van uw inzending "{$articleTitle}" voor {$journalName} uitgevoerd. Volg deze stappen om de voorgestelde veranderingen te beoordelen en te reageren op de auteursvragen:
+We hebben de tekstredactie van uw inzending "{$submissionTitle}" voor {$contextName} uitgevoerd. Volg deze stappen om de voorgestelde veranderingen te beoordelen en te reageren op de auteursvragen:
 
 1. Log in bij het tijdschrift met de URL hieronder. Gebruik uw gebruikersnaam en wachtwoord (gebruik de Vergeten link indien nodig).
 2. Klik op het bestand bij 1. Initiële tekstredactie om het bestand te downloaden en open het.
@@ -383,7 +383,7 @@ Als u niet in staat bent op dit werk op dit moment te verrichten, of als u vrage
 		<subject>Tekstredactie bevestiging</subject>
 		<body>{$copyeditorName}:
 
-Dank u voor de tekstredactie van manuscript "{$articleTitle}" voor {$journalName}. Dit is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.
+Dank u voor de tekstredactie van manuscript "{$submissionTitle}" voor {$contextName}. Dit is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail wordt verstuurd door de sectieredacteur naar de tekstredacteur van de inzending om te bevestigen dat de de tekstredacteur zijn taak met succes heeft afgerond en bedankt hem voor zijn bijdrage</description>
@@ -392,7 +392,7 @@ Dank u voor de tekstredactie van manuscript "{$articleTitle}" voor {$journalName
 		<subject>Tekstredactie review verzoek</subject>
 		<body>{$authorName}:
 
-Uw inzending "{$articleTitle}" voor {$journalName} is door de eerste stappen van de tekstredactie en is voor beoordeling beschikbaar door deze stappen te volgen.
+Uw inzending "{$submissionTitle}" voor {$contextName} is door de eerste stappen van de tekstredactie en is voor beoordeling beschikbaar door deze stappen te volgen.
 
 1. Klik op de inzendings-URL hieronder.
 2. Log in bij het tijdschrift en klik op het bestand bij Stap 1.
@@ -417,7 +417,7 @@ Als u niet in staat bent om dit werk op dit moment uit te voeren of als u vragen
 		<subject>Tekstredactie review gereed</subject>
 		<body>{$editorialContactName}:
 
-Ik heb de review van de tekstredactie van het manuscript "{$articleTitle}" voor {$journalName} voltooid. Het is gereed voor de laatste tekstredactie en voorbereidingen voor de opmaak.
+Ik heb de review van de tekstredactie van het manuscript "{$submissionTitle}" voor {$contextName} voltooid. Het is gereed voor de laatste tekstredactie en voorbereidingen voor de opmaak.
 
 Dank u voor deze bijdrage aan mijn werk,
 {$authorName}</body>
@@ -427,7 +427,7 @@ Dank u voor deze bijdrage aan mijn werk,
 		<subject>Tekstredactie review bevestiging</subject>
 		<body>{$authorName}:
 
-Dank u voor het reviewen van de tekstredactie van uw manuscript "{$articleTitle}" voor {$journalName}. We kijken uit naar de publicatie van het werk.
+Dank u voor het reviewen van de tekstredactie van uw manuscript "{$submissionTitle}" voor {$contextName}. We kijken uit naar de publicatie van het werk.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail is verstuurd door de sectieredacteur naar de auteur van een inzending om de afronding van de tekstredactietaak van de auteur te bevestigen en de auteur te bedanken voor zijn bijdrage.</description>
@@ -436,7 +436,7 @@ Dank u voor het reviewen van de tekstredactie van uw manuscript "{$articleTitle}
 		<subject>Tekstredactie laatste review</subject>
 		<body>{$copyeditorName}:
 
-De auteur en redacteur hebben de opmaak-review van "{$articleTitle}" voor {$journalName} voltooid. Er moet nu een "schone kopie" voor opmaak voorbereid worden door.
+De auteur en redacteur hebben de opmaak-review van "{$submissionTitle}" voor {$contextName} voltooid. Er moet nu een "schone kopie" voor opmaak voorbereid worden door.
 1. Klik op de URL van de inzending hieronder.
 2. Log in op het tijdschrift en en klik op het bestand dat verschijnt bij Stap 2.
 3. Open het gedownloade bestand en verwerk alle tekstredacties en antwoorden op vragen.
@@ -444,7 +444,7 @@ De auteur en redacteur hebben de opmaak-review van "{$articleTitle}" voor {$jour
 5. Klik op METADATA om de indexeringsinformatie te controleren (bewaar alle aanpassingen).
 6. Stuur de GEREED e-mail naar de redacteur.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL inzending: {$submissionCopyeditingUrl}
 Gebruikersnaam: {$copyeditorUsername}
 
@@ -455,7 +455,7 @@ Gebruikersnaam: {$copyeditorUsername}
 		<subject>Tekstredactie laatste review gereed</subject>
 		<body>{$editorialContactName}:
 
-Ik heb nu een schone geredigeerde versie van het manuscript "{$articleTitle}" voor {$journalName} gereed, klaar voor Opmaak en het voorbereiden van de proeven.
+Ik heb nu een schone geredigeerde versie van het manuscript "{$submissionTitle}" voor {$contextName} gereed, klaar voor Opmaak en het voorbereiden van de proeven.
 
 {$copyeditorName}</body>
 		<description>Deze e-mail van de tekstredacteur aan de sectieredacteur bericht dat de laatste tekstredactieronde gereed is en dat de opmaak kan starten.</description>
@@ -464,7 +464,7 @@ Ik heb nu een schone geredigeerde versie van het manuscript "{$articleTitle}" vo
 		<subject>Tekstredactie laatste review bevestiging</subject>
 		<body>{$copyeditorName}:
 
-Dank u voor het voltooien van de tekstredactie van manuscript "{$articleTitle}" voor {$journalName}. Het maken van de "schone kopie" is een belangrijke stap in het redactieproces.
+Dank u voor het voltooien van de tekstredactie van manuscript "{$submissionTitle}" voor {$contextName}. Het maken van de "schone kopie" is een belangrijke stap in het redactieproces.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail van de sectieredacteur aan de tekstredacteur bevestigt het voltooien van de laatste ronde tekstredactie en bedankt hem voor zijn bijdrage.</description>
@@ -473,12 +473,12 @@ Dank u voor het voltooien van de tekstredactie van manuscript "{$articleTitle}" 
 		<subject>Verzoek aanmaken proeven</subject>
 		<body>{$layoutEditorName}:
 
-De proeven van inzending "{$articleTitle}" bij {$journalName} kunnen aangemaakt worden door de volgende stappen te doorlopen.
+De proeven van inzending "{$submissionTitle}" bij {$contextName} kunnen aangemaakt worden door de volgende stappen te doorlopen.
 1. Klik op de inzendings-URL hieronder.
 2. Log in bij het tijdschrift en gebruik het Layout versie bestand om de proeven aan te maken conform de regels van het tijdschrift.
 3. Stuur de GEREED e-mail naar de redacteur.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL inzending: {$submissionLayoutUrl}
 Gebruikersnaam: {$layoutEditorUsername}
 
@@ -491,7 +491,7 @@ Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft
 		<subject>Proeven gereed</subject>
 		<body>{$editorialContactName}:
 
-De proeven voor manuscript "{$articleTitle}" voor {$journalName} zijn gereed voor proeflezen.
+De proeven voor manuscript "{$submissionTitle}" voor {$contextName} zijn gereed voor proeflezen.
 
 Neemt u alstublieft contact met me op als u vragen heeft.
 
@@ -502,7 +502,7 @@ Neemt u alstublieft contact met me op als u vragen heeft.
 		<subject>Bevestiging opmaak</subject>
 		<body>{$layoutEditorName}:
 
-Dank u voor het maken van de proeven van manuscript "{$articleTitle}" voor {$journalName}. Dit is een belangrijke bijdrage aan het publicatieproces.
+Dank u voor het maken van de proeven van manuscript "{$submissionTitle}" voor {$contextName}. Dit is een belangrijke bijdrage aan het publicatieproces.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur bevestigt de voltooiing van de opmaak en bedankt de opmaakredacteur voor zijn bijdrage.</description>
@@ -511,7 +511,7 @@ Dank u voor het maken van de proeven van manuscript "{$articleTitle}" voor {$jou
 		<subject>Verzoek voor proeflezen (auteur)</subject>
 		<body>{$authorName}:
 
-Uw inzending "{$articleTitle}" voor {$journalName} kan proefgelezen worden door de volgende stappen te volgen.
+Uw inzending "{$submissionTitle}" voor {$contextName} kan proefgelezen worden door de volgende stappen te volgen.
 1. Klik op de URL van de inzending hieronder.
 2. Log in op het tijdschrift en bekijk PROEFLEESINSTRUCTIES.
 3. Klik op BEKIJK PROEF in Opmaak en beoordeel de proeven in de gebruikte formaaten.
@@ -529,7 +529,7 @@ Gebruikersnaam: {$authorUsername}
 		<subject>Proeflezen gereed (auteur)</subject>
 		<body>{$editorialContactName}:
 
-Ik heb het proeflezen van de proeven van mijn manuscript "{$articleTitle}" voor {$journalName} voltooid. De proeven zijn nu gereed voor de laatste correcties door de proeflezer en de opmaakredacteur.
+Ik heb het proeflezen van de proeven van mijn manuscript "{$submissionTitle}" voor {$contextName} voltooid. De proeven zijn nu gereed voor de laatste correcties door de proeflezer en de opmaakredacteur.
 
 {$authorName}</body>
 		<description>Deze e-mail van de auteur aan de proeflezer en redacteur meldt dat de auteur het proeflezen heeft voltooid en dat details daarover in de commentaren van het artikel staan</description>
@@ -538,7 +538,7 @@ Ik heb het proeflezen van de proeven van mijn manuscript "{$articleTitle}" voor 
 		<subject>Bevestiging proeflezen (auteur)</subject>
 		<body>{$authorName}:
 
-Dank u voor het proeflezen van de proeven van uw manuscript "{$articleTitle}" voor {$journalName}. We kijken er naar uit uw werk binnenkort te publiceren.
+Dank u voor het proeflezen van de proeven van uw manuscript "{$submissionTitle}" voor {$contextName}. We kijken er naar uit uw werk binnenkort te publiceren.
 
 Als u geabonneerd bent op de berichtendienst krijgt u een e-mail met de inhoudsopgave zodra het gepubliceerd is. Als nog vragen heeft, neem dan contact met me op.
 
@@ -549,7 +549,7 @@ Als u geabonneerd bent op de berichtendienst krijgt u een e-mail met de inhoudso
 		<subject>Verzoek voor proeflezen</subject>
 		<body>{$proofreaderName}:
 
-De inzending "{$articleTitle}" voor {$journalName} kan proefgelezen worden door de volgende stappen te volgen.
+De inzending "{$submissionTitle}" voor {$contextName} kan proefgelezen worden door de volgende stappen te volgen.
 1. Klik op de URL van de inzending hieronder.
 2. Log in op het tijdschrift en bekijk PROEFLEESINSTRUCTIES.
 3. Klik op BEKIJK PROEF in Opmaak en beoordeel de proeven in de gebruikte formaaten.
@@ -569,7 +569,7 @@ Als momenteel u niet in staat ben om dit werk uit te voeren of als u vragen heef
 		<subject>Proeflezen gereed</subject>
 		<body>{$editorialContactName}:
 
-Ik heb het proeflezen van de proeven van manuscript "{$articleTitle}" voor {$journalName} voltooid. De opmaakredacteur kan nu de laatste correcties aanbrengen.
+Ik heb het proeflezen van de proeven van manuscript "{$submissionTitle}" voor {$contextName} voltooid. De opmaakredacteur kan nu de laatste correcties aanbrengen.
 
 {$proofreaderName}</body>
 		<description>Deze e-mail van de proeflezer aan de sectieredacteur meldt dat de proeflezer het proeflezen voltooid heeft.</description>
@@ -578,7 +578,7 @@ Ik heb het proeflezen van de proeven van manuscript "{$articleTitle}" voor {$jou
 		<subject>Bevestiging proeflezen</subject>
 		<body>{$proofreaderName}:
 
-Dank u voor het proeflezen van de proeven van manuscript "{$articleTitle}" voor {$journalName}. Dit werk is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.
+Dank u voor het proeflezen van de proeven van manuscript "{$submissionTitle}" voor {$contextName}. Dit werk is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail van de sectieredacteur aan de proeflezer bevestigt de voltooiing van het proefleesproces en bedankt de proeflezer voor zijn bijdrage.</description>
@@ -587,13 +587,13 @@ Dank u voor het proeflezen van de proeven van manuscript "{$articleTitle}" voor 
 		<subject>Verzoek voor proeflezen (opmaakredacteur)</subject>
 		<body>{$layoutEditorName}:
 
-De inzending "{$articleTitle}" bij {$journalName} is proefgelezen door auteur en proeflezer. Correcties kunnen nu aangebracht worden door de volgende stapen te volgen.
+De inzending "{$submissionTitle}" bij {$contextName} is proefgelezen door auteur en proeflezer. Correcties kunnen nu aangebracht worden door de volgende stapen te volgen.
 1. Klik op de URL van de inzending hieronder.
 2. Log in bij het tijdschrift en bebijk Proefleescorrecties om gecorrigeerde proeven te maken.
 3. Laad de herziene proeven.
 4. Stuur de GEREED e-mail in Proeflezen stap 3 naar de redacteur.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL inzending: {$submissionUrl}
 Gebruikersnaam: {$layoutEditorUsername}
 
@@ -606,7 +606,7 @@ Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen hee
 		<subject>Proeflezen gereed (opmaakredacteur)</subject>
 		<body>{$editorialContactName}:
 
-De proeven zijn gecorrigeerd na het proeflezen van het manuscript "{$articleTitle}" voor {$journalName}. Dit stuk is gereed voor publicatie.
+De proeven zijn gecorrigeerd na het proeflezen van het manuscript "{$submissionTitle}" voor {$contextName}. Dit stuk is gereed voor publicatie.
 
 {$layoutEditorName}</body>
 		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur meldt dat het laatste stadium van proeflezen is voltooid en dat het artikel gereed is voor publicatie.</description>
@@ -615,21 +615,21 @@ De proeven zijn gecorrigeerd na het proeflezen van het manuscript "{$articleTitl
 		<subject>Bevestiging proeflezen (opmaakredacteur)</subject>
 		<body>{$layoutEditorName}:
 
-Dank u voor het voltooien van de proeflees-correcties voor de proeven van manuscript "{$articleTitle}" voor {$journalName}. Dit vertegenwoordigt een belangrijke bijdrage aan het werk van dit tijdschrift.
+Dank u voor het voltooien van de proeflees-correcties voor de proeven van manuscript "{$submissionTitle}" voor {$contextName}. Dit vertegenwoordigt een belangrijke bijdrage aan het werk van dit tijdschrift.
 
 {$editorialContactSignature}</body>
 		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur bevestigt de voltooiing van het laatste stadium van proeflezen en bedankt voor de bijdrage</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Mogelijk interessant artikel</subject>
-		<body>Ik denk dat u mogelijk geïnteresseerd bent in "{$articleTitle}" door {$authorName} gepubliceerd in Vol {$volume}, No {$number} ({$year}) van {$journalName} op "{$articleUrl}".</body>
+		<body>Ik denk dat u mogelijk geïnteresseerd bent in "{$submissionTitle}" door {$authorName} gepubliceerd in Vol {$volume}, No {$number} ({$year}) van {$contextName} op "{$articleUrl}".</body>
 		<description>Deze e-mail sjabloon geeft een lezer de mogelijkheid om informatie over een artikel naar iemand te sturen die daar mogelijk in geïnteresseerd is. Het is beschikbaar via de leesgereedschappen en moet ingeschakeld worden door de tijdschriftbeheerder (leesgereedschappen beheer pagina)</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Bevestiging abonnement</subject>
 		<body>{$subscriberName}:
 
-U bent in ons online tijdschriftsysteem geregistreerd als abonnee van {$journalName} met het volgende abonnement:
+U bent in ons online tijdschriftsysteem geregistreerd als abonnee van {$contextName} met het volgende abonnement:
 
 {$subscriptionType}
 
@@ -648,7 +648,7 @@ Als vragen heeft, neemt u dan alstublieft contact met me op.
 		<subject>Nummer nu Open Access</subject>
 		<body>Lezers:
 
-{$journalName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken ({$journalUrl}) voor de items en artikelen die u interesseren.
+{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken ({$journalUrl}) voor de items en artikelen die u interesseren.
 
 Bedankt voor de interesse in ons werk,
 {$editorialContactSignature}</body>
@@ -658,7 +658,7 @@ Bedankt voor de interesse in ons werk,
 		<subject>Bericht van aflopen abonnement</subject>
 		<body>{$subscriberName}:
 
-Uw abonnement op {$journalName} verloopt binnenkort.
+Uw abonnement op {$contextName} verloopt binnenkort.
 
 {$subscriptionType}
 Afloopdatum: {$expiryDate}
@@ -674,7 +674,7 @@ Aarzel niet om contact met me op te nemen als u vragen heeft.
 		<subject>Abonnement verlopen - laatste herinnering</subject>
 		<body>{$subscriberName}:
 
-Uw abonnement op {$journalName} is verlopen.
+Uw abonnement op {$contextName} is verlopen.
 
 {$subscriptionType}
 Afloopdatum: {$expiryDate}
@@ -690,7 +690,7 @@ Aarzel niet om contact met me op te nemen als u vragen heeft.
 		<subject>Abonnement verlopen - laatste herinnering</subject>
 		<body>{$subscriberName}:
 
-Uw abonnement op {$journalName} is verlopen.
+Uw abonnement op {$contextName} is verlopen.
 Dit is de laatste herinnering die naar u wordt verstuurd.
 
 {$subscriptionType}
@@ -741,7 +741,7 @@ Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsu
 		<subject>Redacteursbeslissing</subject>
 		<body>{$authorName}:
 
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$submissionTitle}".
 
 Onze beslissing is:
 
@@ -751,7 +751,7 @@ Onze beslissing is:
 		<subject>Redacteursbeslissing</subject>
 		<body>{$authorName}:
 
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$submissionTitle}".
 
 Onze beslissing is:
 
@@ -761,7 +761,7 @@ Onze beslissing is:
 		<subject>Redacteursbeslissing</subject>
 		<body>{$authorName}:
 
-We hebben een beslissing genomen over uw inzending voorv{$journalTitle}, "{$articleTitle}".
+We hebben een beslissing genomen over uw inzending voorv{$journalTitle}, "{$submissionTitle}".
 
 Onze beslissing is:
 
@@ -771,7 +771,7 @@ Onze beslissing is:
 		<subject>Redacteursbeslissing</subject>
 		<body>{$authorName}:
 
-We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$articleTitle}".
+We hebben een beslissing genomen over uw inzending voor {$journalTitle}, "{$submissionTitle}".
 
 Onze beslissing is:
 
@@ -779,7 +779,7 @@ Onze beslissing is:
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Aankoop abonnement: individueel</subject>
-		<body>Een individueel abonnement met de volgende details is online aangeschaft voor {$journalName}.
+		<body>Een individueel abonnement met de volgende details is online aangeschaft voor {$contextName}.
 
 Abonnementsoort:
 {$subscriptionType}
@@ -796,7 +796,7 @@ Abonnement URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Aankoop abonnement: institutioneel</subject>
-		<body>Er is online een institutioneel abonnement gekocht voor {$journalName} met de volgende details. Gebruik de abonnement-url om dit abonnement te activeren. Zet de status van het abonnement op 'Actief'.
+		<body>Er is online een institutioneel abonnement gekocht voor {$contextName} met de volgende details. Gebruik de abonnement-url om dit abonnement te activeren. Zet de status van het abonnement op 'Actief'.
 
 Abonnementsoort:
 {$subscriptionType}
@@ -823,7 +823,7 @@ Abonnement URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Verlenging abonnement: individueel</subject>
-		<body>Een individueel abonnement is met de volgende details online verlengd voor {$journalName}.
+		<body>Een individueel abonnement is met de volgende details online verlengd voor {$contextName}.
 
 Abonnementsoort:
 {$subscriptionType}
@@ -840,7 +840,7 @@ Abonnement URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Verlenging abonnement: institutioneel</subject>
-		<body>Een institutioneell abonnement voor {$journalName} is met de volgende gegevens online verlengd.
+		<body>Een institutioneell abonnement voor {$contextName} is met de volgende gegevens online verlengd.
 
 Abonnementsoort:
 {$subscriptionType}
@@ -869,20 +869,20 @@ Abonnement URL: {$subscriptionUrl}</body>
 		<subject>Citatie redactie</subject>
 		<body>{$authorFirstName},
 
-Kunt u de juiste citatie van de volgende referentie uit uw artikel {$articleTitle} verifiëren of verschaffen:
+Kunt u de juiste citatie van de volgende referentie uit uw artikel {$submissionTitle} verifiëren of verschaffen:
 
 {$rawCitation}
 
 Dank!
 
 {$userFirstName}
-Tekstredacteur, {$journalName}</body>
+Tekstredacteur, {$contextName}</body>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Verzoek tot reviewen van een artikel</subject>
 		<body>{$reviewerName}:
 
-Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+Dit betreft het manuscript "{$submissionTitle}," dat wordt overwogen door {$contextName}.
 
 Na de review van een vorige versie van hun manuscript hebben de auteurs een gereviseerde versie ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.
 
@@ -900,17 +900,17 @@ Hartelijk dank voor het overwegen van dit verzoek.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan de reviewer vraagt de reviewer een inzending voor een tweede of latere ronde te reviewen. Het bevat informatie over de inzending zoals titel en samenvatting, de uiterste datum voor de review en de gegevens om de inzending te benaderen. Dit bericht wordt gebruikt bij het standaard review proces, zoals gekozen in instellen, stap 2 (zie verder REVIEW_REQUEST_ATTACHED_SUBSEQUENT)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Verzoek tot reviewen van een artikel</subject>
 		<body>{$reviewerName}:
 
-Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+Dit betreft het manuscript "{$submissionTitle}," dat wordt overwogen door {$contextName}.
 
 Na een review van een eerdere versie van het manuscript hebben de auteurs een gereviseerde versie van hun manuscript ingestuurd. We zouden het waarderen als u wilt helpen die te evalueren.
 
@@ -925,17 +925,17 @@ Dan ku voor het overwegen van dit verzoek.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Deze e-mail van een sectieredacteur aan een reviewer vraagt de reviewer een review van een inzending in een tweede of latere ronde te accepteren of te weigeren. Het bevat informatie over de inzending zoals titel en samenvatting, een verloopdatum en hoe de inzending te vinden. Dit bericht wordt  gebruikt in Stap 2 van het instellen van een tijdschrift als een-klik reviewer toegang is ingeschakeld.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Verzoek tot reviewen van een artikel</subject>
 		<body>{$reviewerName}:
 
-Dit betreft het manuscript "{$articleTitle}," dat wordt overwogen door {$journalName}.
+Dit betreft het manuscript "{$submissionTitle}," dat wordt overwogen door {$contextName}.
 
 Na een review van een eerdere versie van het manuscript hebben de auteurs een gereviseerde versie van hun manuscript ingestuurd. We zouden het op prijs stellen als u wilt helen die te evalueren.
 
@@ -1015,7 +1015,7 @@ We wensen u veel plezier met uw gift!
 		<subject>Herziene versie geladen</subject>
 		<body>{$editorialContactName}:
 
-Een herziene versie van "{$articleTitle}" is geladen door de auteur {$authorName}.
+Een herziene versie van "{$submissionTitle}" is geladen door de auteur {$authorName}.
 
 URL van de inzending: {$submissionUrl}
 

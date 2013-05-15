@@ -596,7 +596,7 @@ class BooksForReviewEditorHandler extends Handler {
 			// Ensure user is an author for this journal
 			$roleDao = DAORegistry::getDAO('RoleDAO');
 			if ($roleDao->userHasRole($journalId, $userId, ROLE_ID_AUTHOR)) {
-				import('classes.mail.MailTemplate');
+				import('lib.pkp.classes.mail.MailTemplate');
 				$email = new MailTemplate('BFR_BOOK_ASSIGNED');
 				$send = $request->getUserVar('send');
 
@@ -686,7 +686,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$email = new MailTemplate('BFR_BOOK_DENIED');
 			$send = $request->getUserVar('send');
 
@@ -761,7 +761,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$email = new MailTemplate('BFR_BOOK_MAILED');
 			$send = $request->getUserVar('send');
 
@@ -848,7 +848,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$email = new MailTemplate('BFR_REVIEWER_REMOVED');
 			$send = $request->getUserVar('send');
 

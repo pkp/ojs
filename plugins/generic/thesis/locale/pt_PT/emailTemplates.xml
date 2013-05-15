@@ -12,7 +12,7 @@
 <email_texts locale="pt_PT">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Submissão de Resumo de Tese</subject>
-		<body>Esta mensagem é gerada automaticamente pelo sistema de envio de resumos de teses da revista {$journalName}.
+		<body>Esta mensagem é gerada automaticamente pelo sistema de envio de resumos de teses da revista {$contextName}.
 
 Confirme se os dados informados estão correctos. Ao receber a confirmação, o resumo será publicado na edição electrónica da revista.
 

@@ -39,7 +39,7 @@
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>新規ユーザの登録</subject>
-		<body>雑誌『{$journalName}』への登録ありがとうございました。
+		<body>雑誌『{$contextName}』への登録ありがとうございました。
 
 ユーザ名とパスワードは、この雑誌のすべての処理で必要となりますので、大切に保管してください。
 
@@ -57,7 +57,7 @@
 
 いつもご利用ありがとうございます。
 
-雑誌『{$journalName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。
+雑誌『{$contextName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。
 
 雑誌WebサイトのURLは、{$journalUrl} です。
 
@@ -66,10 +66,10 @@
 		<description>このメールは、編集者のユーザページにある「利用者への通知」リンクにより、登録ユーザに送信されるものです。このメールは、最新号の発行を読者に通知し、URLを示して雑誌にアクセスするよう案内します。</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>『{$journalName}』保存のお願い</subject>
+		<subject>『{$contextName}』保存のお願い</subject>
 		<body>[大学図書館長] 御中
 
-本誌『{$journalName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
+本誌『{$contextName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
 
 [雑誌の簡単な説明]
 
@@ -85,10 +85,10 @@
 		<description>このメールは、LOCKSSアーカイブの管理者にこの雑誌をアーカイブに追加することを検討してもらうことを依頼するものです。メールでは、雑誌のLOCKSS出版者宣言書のURLを提供します。</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>『{$journalName}』保存のお願い</subject>
+		<subject>『{$contextName}』保存のお願い</subject>
 		<body>[大学図書館長] 御中
 
-本誌『{$journalName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
+本誌『{$contextName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
 
 [雑誌の簡単な説明]
 
@@ -105,7 +105,7 @@
 		<subject>投稿のお礼</subject>
 		<body>{$authorName} 殿:
 
-雑誌『{$journalName}』に原稿「{$articleTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。
+雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。
 
 原稿のURL: {$submissionUrl}
 ユーザ名: {$authorUsername}
@@ -121,7 +121,7 @@
 		<subject>謝絶のご案内（雑誌に不適な投稿）</subject>
 		<body>{$authorName} 殿:
 
-ご投稿いただいた「{$articleTitle}」について審査しましたが、雑誌『{$journalName}』の範囲と対象からみて、貴殿の論文は明らかに雑誌にとって不適当なものであると判断いたしました。Webサイトに掲載している本雑誌の説明や既刊のコンテンツをあたって、本雑誌が出版の対象とする研究成果をご理解いただくようお願いいたします。また、本原稿を他のよりふさわしい雑誌に投稿することもご検討ください。
+ご投稿いただいた「{$submissionTitle}」について審査しましたが、雑誌『{$contextName}』の範囲と対象からみて、貴殿の論文は明らかに雑誌にとって不適当なものであると判断いたしました。Webサイトに掲載している本雑誌の説明や既刊のコンテンツをあたって、本雑誌が出版の対象とする研究成果をご理解いただくようお願いいたします。また、本原稿を他のよりふさわしい雑誌に投稿することもご検討ください。
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -129,14 +129,14 @@
 		<subject>投稿物へのコメント</subject>
 		<body>{$name} 殿:
 
-雑誌『{$journalName}』への投稿物「$articleTitle}」へのコメントに{$commentName} を追加しました。
+雑誌『{$contextName}』への投稿物「$submissionTitle}」へのコメントに{$commentName} を追加しました。
 
 {$comments}</body>
 		<description>このメールは、投稿物の編集プロセスに関わる様々な人々にコメントが投稿されたことを通知するものです。</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>「{$articleTitle}」に対する判断</subject>
-		<body>雑誌『{$journalName}』への投稿物「{$articleTitle}」の査読者の1人として、この投稿物の著者に送る査読結果と編集上の判断を送付します。本プロセスの遂行に当たって、貴殿の多大なるご協力に感謝いたします。
+		<subject>「{$submissionTitle}」に対する判断</subject>
+		<body>雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読者の1人として、この投稿物の著者に送る査読結果と編集上の判断を送付します。本プロセスの遂行に当たって、貴殿の多大なるご協力に感謝いたします。
 
 {$editorialContactSignature}
 
@@ -147,7 +147,7 @@
 		<subject>セクションエディタ任命のお知らせ</subject>
 		<body>{$editorialContactName} 殿:
 
-この度、雑誌『{$journalName}』への投稿論文「{$articleTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。
+この度、雑誌『{$contextName}』への投稿論文「{$submissionTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。
 
 投稿物のURL: {$submissionUrl}
 投稿者:      {$editorUsername}
@@ -160,7 +160,7 @@
 		<subject>論文査読のお願い</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
 
 {$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
 
@@ -177,17 +177,17 @@
 
 
 
-「{$articleTitle}」
+「{$submissionTitle}」
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST_ATTACHEDを参照してください）。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>論文査読のお願い</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
 
 {$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
 
@@ -201,17 +201,17 @@
 
 
 
-「{$articleTitle}」
+「{$submissionTitle}」
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択され、ワンクリック査読者アクセスが有効な場合に使用されます。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>論文査読のお願い</subject>
 		<body>{$reviewerName} 殿:
 
-原稿「{$articleTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。
+原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。
 
 査読をしていただけるか否かを、{$weekLaterDate}までにメールでご返事いただけるようお願いいたします。
 
@@ -230,7 +230,7 @@
 		<subject>査読依頼取消のお願い</subject>
 		<body>{$reviewerName} 殿:
 
-以前お願いしておりました、雑誌『{$journalName}』への投稿物「{$articleTitle}」の査読の件ですが、誠に勝手ながら事情により取り消させていただくことになりました。ご迷惑をおかけして、誠に申し訳ありませんでした。今後また査読をお願いすることがあろうかと思いますが、その節はよろしくお願いいたします。
+以前お願いしておりました、雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、誠に勝手ながら事情により取り消させていただくことになりました。ご迷惑をおかけして、誠に申し訳ありませんでした。今後また査読をお願いすることがあろうかと思いますが、その節はよろしくお願いいたします。
 
 何かご不明な点がございましたら、ご連絡ください。
 
@@ -243,7 +243,7 @@
 		<subject>査読依頼の受諾</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿物「{$articleTitle}」の査読の件ですが、喜んでやらせていただきます。査読者に選んでいただき、ありがとうございました。ご指定の査読期限、{$reviewDueDate}までには査読を終わらせるつもりです。
+雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、喜んでやらせていただきます。査読者に選んでいただき、ありがとうございました。ご指定の査読期限、{$reviewDueDate}までには査読を終わらせるつもりです。
 
 よろしくお願いします。
 
@@ -254,7 +254,7 @@
 		<subject>査読依頼の謝絶</subject>
 		<body>{$editorialContactName} 殿:
 
-申し訳ありませんが、今回は、雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をお受けすることはできません。査読者に選んでいただきありがとうございました。また、機会がございましたら、ご連絡ください。
+申し訳ありませんが、今回は、雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお受けすることはできません。査読者に選んでいただきありがとうございました。また、機会がございましたら、ご連絡ください。
 
 よろしくお願いいたします。
 
@@ -265,7 +265,7 @@
 		<subject>論文査読の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読を終え、答申「{$recommendation}」を提出したことをお伝えします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読を終え、答申「{$recommendation}」を提出したことをお伝えします。
 
 よろしくお願いいたします。
 
@@ -276,7 +276,7 @@
 		<subject>論文査読のお礼</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読をしていただき、ありがとうございました。本誌が発行する論文の品質向上に対する貴殿の貢献に対し感謝いたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をしていただき、ありがとうございました。本誌が発行する論文の品質向上に対する貴殿の貢献に対し感謝いたします。
 
 {$editorialContactSignature}</body>
 		<description>このメールは、セクションエディタから査読者に査読が完了したことを確認し、その貢献に感謝するものです。</description>
@@ -285,7 +285,7 @@
 		<subject>論文査読の督促</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
 
 雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： {$passwordResetUrl}
 
@@ -302,7 +302,7 @@
 		<subject>論文査読の督促</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
 
 投稿物のURL: {$submissionReviewUrl}
 
@@ -317,7 +317,7 @@
 		<subject>論文査読の督促（自動送信）</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
 
 雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： {$passwordResetUrl}
 
@@ -334,7 +334,7 @@
 		<subject>論文査読の督促（自動送信）</subject>
 		<body>{$reviewerName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
 
 投稿物のURL: {$submissionReviewUrl}
 
@@ -349,7 +349,7 @@
 		<subject>原稿整理のお願い</subject>
 		<body>{$copyeditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。
 
 原稿のURL: {$submissionCopyeditingUrl}
 ユーザ名: {$copyeditorUsername}
@@ -365,7 +365,7 @@
 		<subject>原稿整理の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の第1回目の原稿整理作業を終了しました。これで、著者と編集者が整理作業に伴う変更点と私からの質問をチェックする用意ができたことをご報告いたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の第1回目の原稿整理作業を終了しました。これで、著者と編集者が整理作業に伴う変更点と私からの質問をチェックする用意ができたことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -375,7 +375,7 @@
 		<subject>原稿整理のお礼</subject>
 		<body>{$copyeditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の原稿整理を行っていただき、ありがとうございました。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理を行っていただき、ありがとうございました。
 
 今後とも、よろしくお願いいたします。
 
@@ -386,7 +386,7 @@
 		<subject>原稿整理版のチェックのお願い</subject>
 		<body>{$authorName} 殿:
 
-雑誌『{$journalName}』へ投稿いただいた原稿「{$articleTitle}」の原稿整理作業が終了しました。下に示すリンクを使って雑誌のWebサイトにログインし、指摘された変更点の確認と質問への回答をお願いいたします。最初の原稿整理版ファイルをダウンロードして開いてください。原稿整理版のチェックが終了したら、ステップ2でファイルをアップロードしていただき、さらに編集者に「完了」メールを送信してください。
+雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理作業が終了しました。下に示すリンクを使って雑誌のWebサイトにログインし、指摘された変更点の確認と質問への回答をお願いいたします。最初の原稿整理版ファイルをダウンロードして開いてください。原稿整理版のチェックが終了したら、ステップ2でファイルをアップロードしていただき、さらに編集者に「完了」メールを送信してください。
 
 これは、大規模な変更を行うことができる最後のチャンスです。今後、ゲラの校正をお願いすることになりますが、その際は、ちょっとした文字やレイアウトの間違いしか修正することはできませんのでご注意ください。
 
@@ -404,7 +404,7 @@
 		<subject>原稿整理版のチェックの完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』へ投稿させていただいた「{$articleTitle}」の原稿整理版のチェックを終了しました。これで、原稿整理の最終ラウンドでレイアウト版を用意する準備ができたことをご報告いたします。
+雑誌『{$contextName}』へ投稿させていただいた「{$submissionTitle}」の原稿整理版のチェックを終了しました。これで、原稿整理の最終ラウンドでレイアウト版を用意する準備ができたことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -415,7 +415,7 @@
 		<subject>原稿整理版のチェックのお礼</subject>
 		<body>{$authorName} 殿:
 
-雑誌『{$journalName}』へ投稿いただいた原稿「{$articleTitle}」の原稿整理版のチェックを行っていただき、ありがとうございました。この原稿が出版されることを私も楽しみにしております。
+雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理版のチェックを行っていただき、ありがとうございました。この原稿が出版されることを私も楽しみにしております。
 
 今後とも、よろしくお願いいたします。
 
@@ -426,7 +426,7 @@
 		<subject>最終の原稿整理のお願い</subject>
 		<body>{$copyeditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。
 
 原稿のURL: {$submissionCopyeditingUrl}
 ユーザ名: {$copyeditorUsername}
@@ -440,7 +440,7 @@
 		<subject>最終の原稿整理の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のクリーンな原稿整理版の準備を終了しました。これで、レイアウト作業を行いゲラを用意する準備ができたことをご報告いたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のクリーンな原稿整理版の準備を終了しました。これで、レイアウト作業を行いゲラを用意する準備ができたことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -451,7 +451,7 @@
 		<subject>最終の原稿整理のお礼</subject>
 		<body>{$copyeditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。
 
 今後とも、よろしくお願いいたします。
 
@@ -462,7 +462,7 @@
 		<subject>ゲラ作成のお願い</subject>
 		<body>{$layoutEditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。
 
 原稿のURL: {$submissionLayoutUrl}
 ユーザ名: {$layoutEditorUsername}
@@ -478,7 +478,7 @@
 		<subject>ゲラ作成の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラを作成し、校正作業の準備ができたことをご報告いたします。。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成し、校正作業の準備ができたことをご報告いたします。。
 
 何かご不明な点がございましたら、ご連絡ください。
 
@@ -491,7 +491,7 @@
 		<subject>レイアウト作業のお礼</subject>
 		<body>{$layoutEditorName}:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。
 
 今後とも、よろしくお願いいたします。
 
@@ -502,7 +502,7 @@
 		<subject>著者校正のお願い</subject>
 		<body>{$authorName} 殿:
 
-雑誌『{$journalName}』に投稿いただいた原稿「{$articleTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。
+雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。
 
 原稿のURL: {$submissionUrl}
 ユーザ名: {$authorUsername}
@@ -518,7 +518,7 @@
 		<subject>著者校正の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』に投稿させていただいた原稿「{$articleTitle}」のゲラの校正が終了しました。これにより、校正者とレイアウトエディタによる最終修正ができるようになったことをご報告いたします。
+雑誌『{$contextName}』に投稿させていただいた原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、校正者とレイアウトエディタによる最終修正ができるようになったことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -529,7 +529,7 @@
 		<subject>著者校正のお礼</subject>
 		<body>{$authorName} 殿:
 
-雑誌『{$journalName}』に投稿いただいた原稿「{$articleTitle}」のゲラの校正作業をしていただき、ありがとうございました。近々出版できるものと期待しております。
+雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。近々出版できるものと期待しております。
 
 雑誌の通知サービスに登録されている場合は、雑誌が出版され次第、その目次をメールで受け取ることができます。何かご不明な点がございましたら、ご連絡ください。
 
@@ -542,7 +542,7 @@
 		<subject>校正のお願い</subject>
 		<body>{$proofreaderName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。
 
 原稿URL: {$submissionUrl}
 ユーザ名: {$proofreaderUsername}
@@ -558,7 +558,7 @@
 		<subject>校正の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラの校正が終了しました。これにより、レイアウトエディタによる最終修正ができるようになったことをご報告いたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、レイアウトエディタによる最終修正ができるようになったことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -569,7 +569,7 @@
 		<subject>校正のお礼</subject>
 		<body>{$proofreaderName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラの校正作業をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
 
 今後ともよろしくお願いいたします。
 
@@ -580,7 +580,7 @@
 		<subject>（レイアウトエディタ）校正のお願い</subject>
 		<body>{$layoutEditorName}:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。
 
 原稿のURL: {$submissionUrl}
 ユーザ名: {$layoutEditorUsername}
@@ -596,7 +596,7 @@
 		<subject>（レイアウトエディタ）校正の完了</subject>
 		<body>{$editorialContactName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」に対する校正作業の結果を修正しました。これで、出版の準備ができたことをご報告いたします。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」に対する校正作業の結果を修正しました。これで、出版の準備ができたことをご報告いたします。
 
 よろしくお願いいたします。
 
@@ -607,7 +607,7 @@
 		<subject>（レイアウトエディタ）校正のお礼</subject>
 		<body>{$layoutEditorName} 殿:
 
-雑誌『{$journalName}』への投稿原稿「{$articleTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
 
 今後ともよろしくお願いいたします。
 
@@ -618,7 +618,7 @@
 		<subject>論文の紹介</subject>
 		<body>以下の論文を紹介します。
 
-{$articleTitle} / {$authorName}. {$journalName}』, 第{$volume}巻{$number}号（{$year}）
+{$submissionTitle} / {$authorName}. {$contextName}』, 第{$volume}巻{$number}号（{$year}）
 
 この論文のURL: {$articleUrl}
 </body>
@@ -628,7 +628,7 @@
 		<subject>購読に関する通知</subject>
 		<body>{$subscriberName} 殿:
 
-貴殿は雑誌『{$journalName}』のオンラインジャーナル管理システムに、以下の条件の購読者として登録されました。
+貴殿は雑誌『{$contextName}』のオンラインジャーナル管理システムに、以下の条件の購読者として登録されました。
 
 {$subscriptionType}
 
@@ -649,7 +649,7 @@
 
 いつもご利用ありがとうございます。
 
-雑誌『{$journalName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。
+雑誌『{$contextName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。
 
  雑誌のWebサイト（{$journalUrl}）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。
 
@@ -664,7 +664,7 @@
 
 いつもご利用ありがとうございます。
 
-まもなく、雑誌『{$journalName}』の購読期間が終了します。
+まもなく、雑誌『{$contextName}』の購読期間が終了します。
 
 {$subscriptionType}
 購読期限日: {$expiryDate}
@@ -684,7 +684,7 @@
 
 いつもご利用ありがとうございます。
 
-雑誌『{$journalName}』の購読期間が終了しました。
+雑誌『{$contextName}』の購読期間が終了しました。
 
 {$subscriptionType}
 購読期限日: {$expiryDate}
@@ -704,7 +704,7 @@
 
 いつもご利用ありがとうございます。
 
-雑誌『{$journalName}』の購読期間が終了しました。
+雑誌『{$contextName}』の購読期間が終了しました。
 
 {$subscriptionType}
 購読期限日: {$expiryDate}
@@ -724,7 +724,7 @@
 		<subject>アカウントの確認</subject>
 		<body>{$userFullName} 様
 
-雑誌「{$journalName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。
+雑誌「{$contextName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。
 Y
 {$activateUrl}
 
@@ -734,10 +734,10 @@ Y
 		<description>このメールは、新規登録したユーザに送付され、ユーザ名とパスワードを通知します。</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>ユーザ名 "{$journalName}" で査読者として登録されました</subject>
+		<subject>ユーザ名 "{$contextName}" で査読者として登録されました</subject>
 		<body>突然のメールをお許しください。
 
-貴殿の専門性に鑑み、失礼ですが私どもの雑誌「{$journalName}」の査読者データベースにあなたの名前を登録させていただきました。これによりあなたに何らかの義務が発生することはありません。ただ、できたら査読をお願いできるようにしておきたかっただけです。査読をお願いする場合は、対象となる論文のタイトルと要旨を見る機会を持っていただきます。もちろん、査読の依頼に応じるか否かの判断は常に貴殿に委ねられます。また、任意の時点で、この査読者リストから貴殿の名前を削除することもできます。
+貴殿の専門性に鑑み、失礼ですが私どもの雑誌「{$contextName}」の査読者データベースにあなたの名前を登録させていただきました。これによりあなたに何らかの義務が発生することはありません。ただ、できたら査読をお願いできるようにしておきたかっただけです。査読をお願いする場合は、対象となる論文のタイトルと要旨を見る機会を持っていただきます。もちろん、査読の依頼に応じるか否かの判断は常に貴殿に委ねられます。また、任意の時点で、この査読者リストから貴殿の名前を削除することもできます。
 
 以下に、貴殿のユーザ名とパスワードをご報告いたします。これを使用することにより、雑誌のWebサイトであらゆる処理（例えば、査読対象分野の変更など、貴殿のプロフィールの更新）を行うことができます。
 
@@ -792,7 +792,7 @@ Link: {$url}
 		<subject>編集者の判断</subject>
 		<body>{$authorName}:
 
-私たちはあなたが {$journalTitle}, に投稿された "{$articleTitle}"
+私たちはあなたが {$journalTitle}, に投稿された "{$submissionTitle}"
 について結論に達しました。
 
 結果:
@@ -804,7 +804,7 @@ Link: {$url}
 		<subject>編集者の判断</subject>
 		<body>{$authorName}:
 
-私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, "{$articleTitle}".
+私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, "{$submissionTitle}".
 
 結果は:
 
@@ -816,7 +816,7 @@ Link: {$url}
 		<body>{$authorName}:
 
 私たちはあなたの下記の投稿について結論に達しました。
-{$journalTitle}, "{$articleTitle}".
+{$journalTitle}, "{$submissionTitle}".
 
 結果は:
 
@@ -826,7 +826,7 @@ Link: {$url}
 		<subject>編集者の判断</subject>
 		<body>{$authorName}:
 
-私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, "{$articleTitle}".
+私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, "{$submissionTitle}".
 
 結果は:
 
@@ -834,7 +834,7 @@ Link: {$url}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>購読申込: 個人</subject>
-		<body>オンラインで {$journalName}  に対する個人購読が申し込まれました。詳細は下記の通りです。
+		<body>オンラインで {$contextName}  に対する個人購読が申し込まれました。詳細は下記の通りです。
 
 購読種別:
 {$subscriptionType}
@@ -852,7 +852,7 @@ Link: {$url}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>購読申込: 機関</subject>
-		<body>オンラインで {$journalName} に対する機関購読申し込みがされました。詳細は下記の通りです。この購読を有効にするためには，下記の購読リンクから購読状態を「有効」に設定してください。
+		<body>オンラインで {$contextName} に対する機関購読申し込みがされました。詳細は下記の通りです。この購読を有効にするためには，下記の購読リンクから購読状態を「有効」に設定してください。
 
 購読種別:
 {$subscriptionType}
@@ -880,7 +880,7 @@ IPアドレス範囲 (ある場合):
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>購読更新: 個人</subject>
-		<body>オンラインで {$journalName} に対する個人購読の更新申込がされました。詳細は下記の通りです。
+		<body>オンラインで {$contextName} に対する個人購読の更新申込がされました。詳細は下記の通りです。
 
 購読種別:
 {$subscriptionType}
@@ -898,7 +898,7 @@ IPアドレス範囲 (ある場合):
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>購読更新: 機関</subject>
-		<body>オンラインで {$journalName} に対する機関購読の更新申込がおこなわれました。詳細は下記の通りです。
+		<body>オンラインで {$contextName} に対する機関購読の更新申込がおこなわれました。詳細は下記の通りです。
 
 購読種別:
 {$subscriptionType}
@@ -929,13 +929,13 @@ IPアドレス範囲 (ある場合):
 
 あなたの下記の論文に含まれる参考文献についてご確認いただき，正確な引用情報をご提供ください。
 
-{$articleTitle}:
+{$submissionTitle}:
 
 {$rawCitation}
 
 どうぞよろしくお願い致します。
 
 {$userFirstName}
-{$journalName} コピーエディタ</body>
+{$contextName} コピーエディタ</body>
 	</email_text>
 </email_texts>

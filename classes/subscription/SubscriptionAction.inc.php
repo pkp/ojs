@@ -635,7 +635,7 @@ class SubscriptionAction {
 				break;
 		}
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
 		$mail->setReplyTo($subscriptionContactEmail, $subscriptionContactName);
 		$mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);

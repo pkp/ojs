@@ -11,7 +11,7 @@
 <email_texts locale="de_DE">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Benachrichtigung über manuelle Zahlung</subject>
-		<body>Eine manuelle Zahlung ist für die Zeitschrift {$journalName} und den/die Benutzer/in {$userFullName} (Benutzer/innen-Name "{$userName}") angekündigt worden.
+		<body>Eine manuelle Zahlung ist für die Zeitschrift {$contextName} und den/die Benutzer/in {$userFullName} (Benutzer/innen-Name "{$userName}") angekündigt worden.
 
 Gezahlt werden soll für "{$itemName}".
 Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).

@@ -11,7 +11,7 @@
 <email_texts locale="cs_CZ">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Oznámení o manuální platbě</subject>
-		<body>Je třeba zpracovat manuální platbu pro časopis {$journalName} a uživatele {$userFullName} (uživatelské jméno "{$userName}").
+		<body>Je třeba zpracovat manuální platbu pro časopis {$contextName} a uživatele {$userFullName} (uživatelské jméno "{$userName}").
 
 Položka, za kterou je placeno "{$itemName}".
 Cena je {$itemCost} ({$itemCurrencyCode}).

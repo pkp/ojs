@@ -12,7 +12,7 @@
 <email_texts locale="en_US">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Manual Payment Notification</subject>
-		<body>A manual payment needs to be processed for the journal {$journalName} and the user {$userFullName} (username "{$userName}").
+		<body>A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username "{$userName}").
 
 The item being paid for is "{$itemName}".
 The cost is {$itemCost} ({$itemCurrencyCode}).

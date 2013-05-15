@@ -11,7 +11,7 @@
 <email_texts locale="ja_JP">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>手作業による料金支払い通知</subject>
-		<body>手作業による料金支払いでは 雑誌 {$journalName} とユーザ {$userFullName} (ユーザ名 "{$userName}") に対する処理が必要となります。
+		<body>手作業による料金支払いでは 雑誌 {$contextName} とユーザ {$userFullName} (ユーザ名 "{$userName}") に対する処理が必要となります。
 
  "{$itemName}" についての支払いです。
 料金は {$itemCost} ({$itemCurrencyCode}) です。

@@ -84,7 +84,7 @@ Your new password: {$password}
 		<subject>Journal Registration</subject>
 		<body>{$userFullName}
 
-You have now been registered as a user with {$journalName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
+You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
 
 Username: {$username}
 Password: {$password}
@@ -97,7 +97,7 @@ Thank you,
 		<subject>Validate Your Account</subject>
 		<body>{$userFullName}
 
-You have created an account with {$journalName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
+You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
 
 {$activateUrl}
 
@@ -106,8 +106,8 @@ Thank you,
 		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registration as Reviewer with {$journalName}</subject>
-		<body>In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
+		<subject>Registration as Reviewer with {$contextName}</subject>
+		<body>In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$contextName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
 
 We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.
 
@@ -122,17 +122,17 @@ Thank you,
 		<subject>New Issue Published</subject>
 		<body>Readers:
 
-{$journalName} has just published its latest issue at {$journalUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.
+{$contextName} has just published its latest issue at {$journalUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.
 
 Thanks for the continuing interest in our work,
 {$editorialContactSignature}</body>
 		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
+		<subject>Archiving Request for {$contextName}</subject>
 		<body>Dear [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+{$contextName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
 
 [Brief description of journal]
 
@@ -145,10 +145,10 @@ Thank you,
 		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
+		<subject>Archiving Request for {$contextName}</subject>
 		<body>Dear [University Librarian]
 
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+{$contextName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
 
 [Brief description of journal]
 
@@ -164,7 +164,7 @@ Thank you,
 		<subject>Submission Acknowledgement</subject>
 		<body>{$authorName}:
 
-Thank you for submitting the manuscript, "{$articleTitle}" to {$journalName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
+Thank you for submitting the manuscript, "{$submissionTitle}" to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
 
 Manuscript URL: {$submissionUrl}
 Username: {$authorUsername}
@@ -178,7 +178,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 		<subject>Unsuitable Submission</subject>
 		<body>{$authorName}:
 
-An initial review of "{$articleTitle}" has made it clear that this submission does not fit within the scope and focus of {$journalName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.
+An initial review of "{$submissionTitle}" has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -186,14 +186,14 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		<subject>Submission Comment</subject>
 		<body>{$name}:
 
-{$commentName} has added a comment to the submission, "{$articleTitle}" in {$journalName}:
+{$commentName} has added a comment to the submission, "{$submissionTitle}" in {$contextName}:
 
 {$comments}</body>
 		<description>This email notifies the various people involved in a submission's editing process that a new comment has been posted.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Decision on "{$articleTitle}"</subject>
-		<body>As one of the reviewers for the submission, "{$articleTitle}," to {$journalName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
+		<subject>Decision on "{$submissionTitle}"</subject>
+		<body>As one of the reviewers for the submission, "{$submissionTitle}," to {$contextName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
  
 {$editorialContactSignature}
 
@@ -204,7 +204,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		<subject>Editorial Assignment</subject>
 		<body>{$editorialContactName}:
 
-The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
+The submission, "{$submissionTitle}," to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.  
 
 Submission URL: {$submissionUrl}
 Username: {$editorUsername}
@@ -217,7 +217,7 @@ Thank you,
 		<subject>Article Review Request</subject>
 		<body>{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
 
 Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
 
@@ -233,17 +233,17 @@ Thank you for considering this request.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Article Review Request</subject>
 		<body>{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
 
 Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
 
@@ -257,17 +257,17 @@ Thank you for considering this request.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Article Review Request</subject>
 		<body>{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
 
 Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
 
@@ -286,7 +286,7 @@ Review Guidelines
 		<subject>Request for Review Cancelled</subject>
 		<body>{$reviewerName}:
 
-We have decided at this point to cancel our request for you to review the submission, "{$articleTitle}," for {$journalName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.
+We have decided at this point to cancel our request for you to review the submission, "{$submissionTitle}," for {$contextName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.
 
 If you have any questions, please contact me.
 
@@ -297,7 +297,7 @@ If you have any questions, please contact me.
 		<subject>Able to Review</subject>
 		<body>{$editorialContactName}:
 
-I am able and willing to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
+I am able and willing to review the submission, "{$submissionTitle}," for {$contextName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
 
 {$reviewerName}</body>
 		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</description>
@@ -306,7 +306,7 @@ I am able and willing to review the submission, "{$articleTitle}," for {$journal
 		<subject>Unable to Review</subject>
 		<body>{$editorialContactName}:
 
-I am afraid that at this time I am unable to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and another time feel free to call on me.
+I am afraid that at this time I am unable to review the submission, "{$submissionTitle}," for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.
 
 {$reviewerName}</body>
 		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</description>
@@ -315,7 +315,7 @@ I am afraid that at this time I am unable to review the submission, "{$articleTi
 		<subject>Article Review Completed</subject>
 		<body>{$editorialContactName}:
 
-I have now completed my review of "{$articleTitle}" for {$journalName}, and submitted my recommendation, "{$recommendation}."
+I have now completed my review of "{$submissionTitle}" for {$contextName}, and submitted my recommendation, "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</description>
@@ -324,7 +324,7 @@ I have now completed my review of "{$articleTitle}" for {$journalName}, and subm
 		<subject>Article Review Acknowledgement</subject>
 		<body>{$reviewerName}:
 
-Thank you for completing the review of the submission, "{$articleTitle}," for {$journalName}. We appreciate your contribution to the quality of the work that we publish.
+Thank you for completing the review of the submission, "{$submissionTitle}," for {$contextName}. We appreciate your contribution to the quality of the work that we publish.
 
 {$editorialContactSignature}</body>
 		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
@@ -333,7 +333,7 @@ Thank you for completing the review of the submission, "{$articleTitle}," for {$
 		<subject>Submission Review Reminder</subject>
 		<body>{$reviewerName}:
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
 
 If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
@@ -348,7 +348,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Submission Review Reminder</subject>
 		<body>{$reviewerName}:
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
 
 Submission URL: {$submissionReviewUrl}
 
@@ -361,7 +361,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Automated Submission Review Reminder</subject>
 		<body>{$reviewerName}:
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
 
 If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
@@ -376,7 +376,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Automated Submission Review Reminder</subject>
 		<body>{$reviewerName}:
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
 
 Submission URL: {$submissionReviewUrl}
 
@@ -389,7 +389,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Editor Decision</subject>
 		<body>{$authorName}:
 
-We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
 
 Our decision is to:
 
@@ -401,7 +401,7 @@ Our decision is to:
 		<subject>Editor Decision</subject>
 		<body>{$authorName}:
 
-We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
 
 Our decision is to:
 
@@ -413,7 +413,7 @@ Our decision is to:
 		<subject>Editor Decision</subject>
 		<body>{$authorName}:
 
-We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
 
 Our decision is to:
 
@@ -425,7 +425,7 @@ Our decision is to:
 		<subject>Editor Decision</subject>
 		<body>{$authorName}:
 
-We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
+We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
 
 Our decision is to:
 
@@ -437,7 +437,7 @@ Our decision is to:
 		<subject>Copyediting Request</subject>
 		<body>{$copyeditorName}:
 
-I would ask that you undertake the copyediting of "{$articleTitle}" for {$journalName} by following these steps.
+I would ask that you undertake the copyediting of "{$submissionTitle}" for {$contextName} by following these steps.
 1. Click on the Submission URL below.
 2. Log into the journal and click on the File that appears in Step 1.
 3. Consult Copyediting Instructions posted on webpage.
@@ -445,7 +445,7 @@ I would ask that you undertake the copyediting of "{$articleTitle}" for {$journa
 5. Save copyedited file, and upload to Step 1 of Copyediting.
 6. Send the COMPLETE email to the editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 Submission URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
 
@@ -456,7 +456,7 @@ Username: {$copyeditorUsername}
 		<subject>Copyediting Completed</subject>
 		<body>{$editorialContactName}:
 
-We have now copyedited your submission "{$articleTitle}" for {$journalName}. To review the proposed changes and respond to Author Queries, please follow these steps:
+We have now copyedited your submission "{$submissionTitle}" for {$contextName}. To review the proposed changes and respond to Author Queries, please follow these steps:
 
 1. Log into the journal using URL below with your username and password (use Forgot link if needed).
 2. Click on the file at 1. Initial Copyedit File to download and open copyedited version. 
@@ -478,7 +478,7 @@ please contact me. Thank you for your contribution to this journal.
 		<subject>Copyediting Acknowledgement</subject>
 		<body>{$copyeditorName}:
 
-Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}. It will make an important contribution to the quality of this journal.
+Thank you for copyediting the manuscript, "{$submissionTitle}," for {$contextName}. It will make an important contribution to the quality of this journal.
 
 {$editorialContactSignature}</body>
 		<description>This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</description>
@@ -487,7 +487,7 @@ Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}.
 		<subject>Copyediting Review Request</subject>
 		<body>{$authorName}:
 
-Your submission "{$articleTitle}" for {$journalName} has been through the first step of copyediting, and is available for you to review by following these steps.
+Your submission "{$submissionTitle}" for {$contextName} has been through the first step of copyediting, and is available for you to review by following these steps.
 
 1. Click on the Submission URL below.
 2. Log into the journal and click on the File that appears in Step 1.
@@ -512,7 +512,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Copyediting Review Completed</subject>
 		<body>{$editorialContactName}:
 
-I have now reviewed the copyediting of the manuscript, "{$articleTitle}," for {$journalName}, and it is ready for the final round of copyediting and preparation for Layout.
+I have now reviewed the copyediting of the manuscript, "{$submissionTitle}," for {$contextName}, and it is ready for the final round of copyediting and preparation for Layout.
 
 Thank you for this contribution to my work,
 {$authorName}</body>
@@ -522,7 +522,7 @@ Thank you for this contribution to my work,
 		<subject>Copyediting Review Acknowledgement</subject>
 		<body>{$authorName}:
 
-Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," for {$journalName}. We look forward to publishing this work.
+Thank you for reviewing the copyediting of your manuscript, "{$submissionTitle}," for {$contextName}. We look forward to publishing this work.
 
 {$editorialContactSignature}</body>
 		<description>This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</description>
@@ -531,7 +531,7 @@ Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," f
 		<subject>Copyediting Final Review</subject>
 		<body>{$copyeditorName}:
 
-The author and editor have now completed their copyediting review of "{$articleTitle}" for {$journalName}. A "clean copy" now needs to be prepared for Layout by going through the following steps.
+The author and editor have now completed their copyediting review of "{$submissionTitle}" for {$contextName}. A "clean copy" now needs to be prepared for Layout by going through the following steps.
 1. Click on the Submission URL below.
 2. Log into the journal and click on the File that appears in Step 2.
 3. Open the downloaded file and incorporate all copyedits and query responses.
@@ -539,7 +539,7 @@ The author and editor have now completed their copyediting review of "{$articleT
 5. Click on METADATA to check indexing information (saving any corrections).
 6. Send the COMPLETE email to the editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 Submission URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
 
@@ -550,7 +550,7 @@ Username: {$copyeditorUsername}
 		<subject>Copyediting Final Review Completed</subject>
 		<body>{$editorialContactName}:
 
-I have now prepared a clean, copyedited version of the manuscript, "{$articleTitle}," for {$journalName}. It is ready for Layout and the preparation of the galleys.
+I have now prepared a clean, copyedited version of the manuscript, "{$submissionTitle}," for {$contextName}. It is ready for Layout and the preparation of the galleys.
 
 {$copyeditorName}</body>
 		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
@@ -559,7 +559,7 @@ I have now prepared a clean, copyedited version of the manuscript, "{$articleTit
 		<subject>Copyediting Final Review Acknowledgement</subject>
 		<body>{$copyeditorName}:
 
-Thank you for completing the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. This preparation of a "clean copy" for Layout is an important step in the editorial process.
+Thank you for completing the copyediting of the manuscript, "{$submissionTitle}," for {$contextName}. This preparation of a "clean copy" for Layout is an important step in the editorial process.
 
 {$editorialContactSignature}</body>
 		<description>This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</description>
@@ -568,12 +568,12 @@ Thank you for completing the copyediting of the manuscript, "{$articleTitle}," f
 		<subject>Request Galleys</subject>
 		<body>{$layoutEditorName}:
 
-The submission "{$articleTitle}" to {$journalName} now needs galleys laid out by following these steps.
+The submission "{$submissionTitle}" to {$contextName} now needs galleys laid out by following these steps.
 1. Click on the Submission URL below.
 2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.
 3. Send the COMPLETE email to the editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 Submission URL: {$submissionLayoutUrl}
 Username: {$layoutEditorUsername}
 
@@ -586,7 +586,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Galleys Complete</subject>
 		<body>{$editorialContactName}:
 
-Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading. 
+Galleys have now been prepared for the manuscript, "{$submissionTitle}," for {$contextName} and are ready for proofreading. 
 
 If you have any questions, please contact me.
 
@@ -597,7 +597,7 @@ If you have any questions, please contact me.
 		<subject>Layout Acknowledgement</subject>
 		<body>{$layoutEditorName}:
 
-Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This is an important contribution to the publishing process.
+Thank you for preparing the galleys for the manuscript, "{$submissionTitle}," for {$contextName}. This is an important contribution to the publishing process.
 
 {$editorialContactSignature}</body>
 		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</description>
@@ -606,7 +606,7 @@ Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {
 		<subject>Proofreading Request (Author)</subject>
 		<body>{$authorName}:
 
-Your submission "{$articleTitle}" to {$journalName} now needs to be proofread by folllowing these steps.
+Your submission "{$submissionTitle}" to {$contextName} now needs to be proofread by folllowing these steps.
 1. Click on the Submission URL below.
 2. Log into the journal and view PROOFING INSTRUCTIONS
 3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
@@ -624,7 +624,7 @@ Username: {$authorUsername}
 		<subject>Proofreading Completed (Author)</subject>
 		<body>{$editorialContactName}:
 
-I have completed proofreading the galleys for my manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
+I have completed proofreading the galleys for my manuscript, "{$submissionTitle}," for {$contextName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
 
 {$authorName}</body>
 		<description>This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</description>
@@ -633,7 +633,7 @@ I have completed proofreading the galleys for my manuscript, "{$articleTitle}," 
 		<subject>Proofreading Acknowledgement (Author)</subject>
 		<body>{$authorName}:
 
-Thank you for proofreading the galleys for your manuscript, "{$articleTitle}," in {$journalName}. We are looking forward to publishing your work shortly.
+Thank you for proofreading the galleys for your manuscript, "{$submissionTitle}," in {$contextName}. We are looking forward to publishing your work shortly.
 
 If you subscribe to our notification service, you will receive an email of the Table of Contents as soon as it is published. If you have any questions, please contact me.
 
@@ -644,7 +644,7 @@ If you subscribe to our notification service, you will receive an email of the T
 		<subject>Proofreading Request</subject>
 		<body>{$proofreaderName}:
 
-The submission "{$articleTitle}" to {$journalName} now needs to be proofread by following these steps.
+The submission "{$submissionTitle}" to {$contextName} now needs to be proofread by following these steps.
 1. Click on the Submission URL below.
 2. Log into the journal and view PROOFING INSTRUCTIONS.
 3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
@@ -664,7 +664,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Proofreading Completed</subject>
 		<body>{$editorialContactName}:
 
-I have completed proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Layout Editor.
+I have completed proofreading the galleys for the manuscript, "{$submissionTitle}," for {$contextName}. The galleys are now ready to have any final corrections made by the Layout Editor.
 
 {$proofreaderName}</body>
 		<description>This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</description>
@@ -673,7 +673,7 @@ I have completed proofreading the galleys for the manuscript, "{$articleTitle},"
 		<subject>Proofreading Acknowledgement</subject>
 		<body>{$proofreaderName}:
 
-Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This work makes an important contribution to the quality of this journal.
+Thank you for proofreading the galleys for the manuscript, "{$submissionTitle}," for {$contextName}. This work makes an important contribution to the quality of this journal.
 
 {$editorialContactSignature}</body>
 		<description>This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</description>
@@ -682,13 +682,13 @@ Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," fo
 		<subject>Proofreading Request (Layout Editor)</subject>
 		<body>{$layoutEditorName}:
 
-The submission "{$articleTitle}" to {$journalName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.
+The submission "{$submissionTitle}" to {$contextName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.
 1. Click on the Submission URL below.
 2. Log into the journal consult Proofreading Corrections to create corrected galleys.
 3. Upload the revised galleys.
 4. Send the COMPLETE email in Proofreading Step 3 to the editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 Subnmission URL: {$submissionUrl}
 Username: {$layoutEditorUsername}
 
@@ -701,7 +701,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 		<subject>Proofreading Completed (Layout Editor)</subject>
 		<body>{$editorialContactName}:
 
-The galleys have now been corrected, following their proofreading, for the manuscript, "{$articleTitle}," for {$journalName}. This piece is now ready to publish.
+The galleys have now been corrected, following their proofreading, for the manuscript, "{$submissionTitle}," for {$contextName}. This piece is now ready to publish.
 
 {$layoutEditorName}</body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
@@ -710,21 +710,21 @@ The galleys have now been corrected, following their proofreading, for the manus
 		<subject>Proofreading Acknowledgement (Layout Editor)</subject>
 		<body>{$layoutEditorName}:
 
-Thank you for completing the proofreading corrections for the galleys associated with the manuscript, "{$articleTitle}," for {$journalName}. This represents an important contribution to the work of this journal.
+Thank you for completing the proofreading corrections for the galleys associated with the manuscript, "{$submissionTitle}," for {$contextName}. This represents an important contribution to the work of this journal.
 
 {$editorialContactSignature}</body>
 		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article of Possible Interest</subject>
-		<body>Thought you might be interested in seeing "{$articleTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$journalName} at "{$articleUrl}".</body>
+		<body>Thought you might be interested in seeing "{$submissionTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at "{$articleUrl}".</body>
 		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Subscription Notification</subject>
 		<body>{$subscriberName}:
 
-You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
+You have now been registered as a subscriber in our online journal management system for {$contextName}, with the following subscription:
 
 {$subscriptionType}
 
@@ -743,7 +743,7 @@ If you have any questions, please feel free to contact me.
 		<subject>Issue Now Open Access</subject>
 		<body>Readers:
 
-{$journalName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
+{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
 
 Thanks for the continuing interest in our work,
 {$editorialContactSignature}</body>
@@ -753,7 +753,7 @@ Thanks for the continuing interest in our work,
 		<subject>Notice of Subscription Expiry</subject>
 		<body>{$subscriberName}:
 
-Your {$journalName} subscription is about to expire.
+Your {$contextName} subscription is about to expire.
 
 {$subscriptionType}
 Expiry date: {$expiryDate}
@@ -769,7 +769,7 @@ If you have any questions, please feel free to contact me.
 		<subject>Subscription Expired</subject>
 		<body>{$subscriberName}:
 
-Your {$journalName} subscription has expired.
+Your {$contextName} subscription has expired.
 
 {$subscriptionType}
 Expiry date: {$expiryDate}
@@ -785,7 +785,7 @@ If you have any questions, please feel free to contact me.
 		<subject>Subscription Expired - Final Reminder</subject>
 		<body>{$subscriberName}:
 
-Your {$journalName} subscription has expired.
+Your {$contextName} subscription has expired.
 Please note that this is the final reminder that will be emailed to you.
 
 {$subscriptionType}
@@ -800,7 +800,7 @@ If you have any questions, please feel free to contact me.
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Subscription Purchase: Individual</subject>
-		<body>An individual subscription has been purchased online for {$journalName} with the following details.
+		<body>An individual subscription has been purchased online for {$contextName} with the following details.
 
 Subscription Type:
 {$subscriptionType}
@@ -819,7 +819,7 @@ Subscription URL: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Subscription Purchase: Institutional</subject>
-		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
+		<body>An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
 
 Subscription Type:
 {$subscriptionType}
@@ -848,7 +848,7 @@ Subscription URL: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Subscription Renewal: Individual</subject>
-		<body>An individual subscription has been renewed online for {$journalName} with the following details.
+		<body>An individual subscription has been renewed online for {$contextName} with the following details.
 
 Subscription Type:
 {$subscriptionType}
@@ -867,7 +867,7 @@ Subscription URL: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Subscription Renewal: Institutional</subject>
-		<body>An institutional subscription has been renewed online for {$journalName} with the following details.
+		<body>An institutional subscription has been renewed online for {$contextName} with the following details.
 
 Subscription Type:
 {$subscriptionType}
@@ -898,14 +898,14 @@ Subscription URL: {$subscriptionUrl}
 		<subject>Citation Editing</subject>
 		<body>{$authorFirstName},
 
-Could you please verify or provide us with the proper citation for the following reference from your article, {$articleTitle}:
+Could you please verify or provide us with the proper citation for the following reference from your article, {$submissionTitle}:
 
 {$rawCitation}
 
 Thanks!
 
 {$userFirstName}
-Copy-Editor, {$journalName}
+Copy-Editor, {$contextName}
 </body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>

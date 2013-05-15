@@ -12,7 +12,7 @@
 <email_texts locale="ja_JP">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>デポジット通知</subject>
-		<body>この度は， {$journalName} に  "{$articleTitle}" を投稿いただきまして誠に有難うございます。
+		<body>この度は， {$contextName} に  "{$submissionTitle}" を投稿いただきまして誠に有難うございます。
 
 ご希望の場合は，下記のURLから他のリポジトリにも自動的にデポジットすることができます。
 

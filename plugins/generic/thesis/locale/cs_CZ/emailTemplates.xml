@@ -12,7 +12,7 @@
 <email_texts locale="cs_CZ">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Odeslání abstraktu závěrečné práce</subject>
-		<body>Tento email byl automaticky vygenerován formulářem pro odesílání abstrakt závěrečných prací do {$journalName}.
+		<body>Tento email byl automaticky vygenerován formulářem pro odesílání abstrakt závěrečných prací do {$contextName}.
 
 Potvrďte prosím, že jsou odeslané informace správné. Po obdržení Vašeho potvrzení bude abstrakt publikován v online verzi časopisu.
 

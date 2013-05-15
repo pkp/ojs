@@ -11,7 +11,7 @@
 <email_texts locale="en_US">
        <email_text key="PAYPAL_INVESTIGATE_PAYMENT">
                <subject>Незвичайна активність PayPal</subject>
-               <body>Система Open Journal Systems помітила незвичайну активність у функціонуванні модуля платежів PayPal журналу {$journalName}. Може знадобитись подальше вивчення цього питання або ручне втручання.
+               <body>Система Open Journal Systems помітила незвичайну активність у функціонуванні модуля платежів PayPal журналу {$contextName}. Може знадобитись подальше вивчення цього питання або ручне втручання.
                        
 Цей лист створений модулем PayPal системи Open Journal Systems.
 

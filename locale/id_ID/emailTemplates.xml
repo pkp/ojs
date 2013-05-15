@@ -83,7 +83,7 @@ Kata sandi baru Anda: {$password}
 		<subject>Pendaftaran Jurnal</subject>
 		<body>{$userFullName}
 
-Anda sekarang telah terdaftar sebagai pengguna dengan {$journalName}. Kami telah memasukkan nama pengguna dan kata sandi Anda di email ini, yang dibutuhkan untuk semua pekerjaan dengan jurnal ini di dalam websitenya. Kapanpun, Anda dapat meminta untuk dipindahkan dari daftar pengguna jurnal dengan menghubungi saya. 
+Anda sekarang telah terdaftar sebagai pengguna dengan {$contextName}. Kami telah memasukkan nama pengguna dan kata sandi Anda di email ini, yang dibutuhkan untuk semua pekerjaan dengan jurnal ini di dalam websitenya. Kapanpun, Anda dapat meminta untuk dipindahkan dari daftar pengguna jurnal dengan menghubungi saya. 
 
 Nama pengguna: {$username}
 Kata Sandi: {$password}
@@ -96,7 +96,7 @@ Terima kasih,
 		<subject>Validasikan Akun Anda</subject>
 		<body>{$userFullName}
 
-Anda telah membuat satu akun dengan {$journalName}, tapi sebelum Anda dapat mulai menggunakannya, Anda perlu memvalidasi akun email Anda/ untuk melakukan ini, ikutilah tautan di bawah ini. 
+Anda telah membuat satu akun dengan {$contextName}, tapi sebelum Anda dapat mulai menggunakannya, Anda perlu memvalidasi akun email Anda/ untuk melakukan ini, ikutilah tautan di bawah ini. 
 
 {$activateUrl}
 
@@ -105,8 +105,8 @@ Terima kasih,
 		<description>Email ini dikirim untuk pengguna yang baru terdaftar untuk menyambut mereka ke sistem dan menyediakan catatan nama pengguna dan kata sandi mereka. </description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Pendaftaran sebagai Reviewer dengan {$journalName}</subject>
-		<body>Untuk alasan keahlian Anda, kami telah berinisiatif mendaftarkan nama Anda di database reviewer untuk {$journalName}. Ini tidak memerlukan bentuk komitmen apapun di pihak Anda, tapi hanya memudahkan kami untuk mendekati Anda dengan naskah untuk direview. Saat diundang untuk mereview, Anda akan mempunyai kesempatan untuk melihat judul dan abtrak makalah dalam pertanyaan, dan Anda akan selalu berada dalam posisi untuk menerima atau menolak undangan. Anda dapat juga meminta kapanpun agar nama Anda dipindahkan dari daftar reviewer. 
+		<subject>Pendaftaran sebagai Reviewer dengan {$contextName}</subject>
+		<body>Untuk alasan keahlian Anda, kami telah berinisiatif mendaftarkan nama Anda di database reviewer untuk {$contextName}. Ini tidak memerlukan bentuk komitmen apapun di pihak Anda, tapi hanya memudahkan kami untuk mendekati Anda dengan naskah untuk direview. Saat diundang untuk mereview, Anda akan mempunyai kesempatan untuk melihat judul dan abtrak makalah dalam pertanyaan, dan Anda akan selalu berada dalam posisi untuk menerima atau menolak undangan. Anda dapat juga meminta kapanpun agar nama Anda dipindahkan dari daftar reviewer. 
 
 Kami menyediakan Anda dengan nama pengguna dan kata sandi, yang digunakan di semua interaksi dengan jurnal di websitenya. Anda bisa, sebagai contoh, untuk mengupdate profil Anda, termasuk minat mereview Anda.  
 
@@ -121,17 +121,17 @@ Terima kasih,
 		<subject>tTerbitan Baru diterbitkan</subject>
 		<body>Pembaca:
 
-{$journalName} baru saja menerbitkan terbitan terbarunya di {$journalUrl}. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.
+{$contextName} baru saja menerbitkan terbitan terbarunya di {$journalUrl}. Kami mengundang Anda untuk mereview Daftar Isi dan kemudian mengunjungi web site kami untuk mereivew artikel dan item minat.
 
 Terima kasih untuk melanjutkan minat pada pekerjaan kami,
 {$editorialContactSignature}</body>
 		<description>Email ini dikirim untuk pembaca yang terdaftar melalui tautan "Beritahu Pengguna"  di User Home Editor. Email ini memberitahu pembaca tentang terbitan baru dan mengundang mereka untuk mengunjungi jurnal di URL yang telah disediakan. </description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Permintaan Pengarsipan untuk {$journalName}</subject>
+		<subject>Permintaan Pengarsipan untuk {$contextName}</subject>
 		<body>Kepada [Pustakawan Universitas]
 
-{$journalName} &lt;{$journalUrl}&gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.
+{$contextName} &lt;{$journalUrl}&gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member], berperan sebagai [nama posisi]. Jurnal akan membuat arsip LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.
 
 [Deskripsi singkat tentang jurnal]
 
@@ -144,10 +144,10 @@ Terima kasih,
 		<description>Email ini meminta penjaga arsip LOCKSS untuk mempertimbangkan memasukkan jurnal ini di arsip mereka. Email ini menyediakan URL ke LOCKSS Publisher Manifest jurnal.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Permintaan Mengarsipkan untuk {$journalName}</subject>
+		<subject>Permintaan Mengarsipkan untuk {$contextName}</subject>
 		<body>Kepada [Pustakawan Universitas]
 
-{$journalName} &lt;{$journalUrl}&gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.
+{$contextName} &lt;{$journalUrl}&gt;, adalah sebuah jurnal yang anggota fakultas Anda, [name of member] berperan sebagai [nama posisi]. Jurnal akan membuat arsip  LOCKSS (Lots of Copies Keep Stuff Safe) dengan ini dan perpustakaan universitas lain.
 
 [Deskripsi singkat tentang jurnal]
 
@@ -163,7 +163,7 @@ Terima kasih,
 		<subject>Pernyataan Naskah</subject>
 		<body>{$authorName}:
 
-Terima kasih untuk menyerahkan manuskrip, "{$articleTitle}" untuk {$journalName}. Dengan sistem manajemen jurnal online yang kami gunakan, Anda akan bisa melacak kemajuan naskah dalam proses editorial dengan login ke web site jurnal:
+Terima kasih untuk menyerahkan manuskrip, "{$submissionTitle}" untuk {$contextName}. Dengan sistem manajemen jurnal online yang kami gunakan, Anda akan bisa melacak kemajuan naskah dalam proses editorial dengan login ke web site jurnal:
 
 URL Manuskrip: {$submissionUrl}
 Nama pengguna Penulis: {$authorUsername}
@@ -177,21 +177,21 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya. Terima kasih untuk mempert
 		<subject>Naskah yang tidak cocok</subject>
 		<body>{$authorName}:
 
-Review awal "{$articleTitle}" telah memutuskan naskah ini tidak cocok dengan ruang lingkup dan fokus {$journalName}. Saya merekomendasikan Anda untuk melihat lagi deskripsi jurnal di bawah Tentang, serta kontennya yang sekarang, untuk mempelajari lebih jauh tentang karya yang kami terbitkan. Anda juga dapat mempertimbangkan untuk menyerahkan manuskrip ini ke jurnal lain yang lebih cocok. 
+Review awal "{$submissionTitle}" telah memutuskan naskah ini tidak cocok dengan ruang lingkup dan fokus {$contextName}. Saya merekomendasikan Anda untuk melihat lagi deskripsi jurnal di bawah Tentang, serta kontennya yang sekarang, untuk mempelajari lebih jauh tentang karya yang kami terbitkan. Anda juga dapat mempertimbangkan untuk menyerahkan manuskrip ini ke jurnal lain yang lebih cocok. 
 {$editorialContactSignature}</body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Komentar Naskah</subject>
 		<body>{$name}:
 
-{$commentName} telah menambahkan komentar ke naskah, "{$articleTitle}" di {$journalName}:
+{$commentName} telah menambahkan komentar ke naskah, "{$submissionTitle}" di {$contextName}:
 
 {$comments}</body>
 		<description>Email ini memberitahu berbagai orang yang terlibat di proses pengeditan naskah bahwa komentar baru telah diposting. </description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Keputusan di "{$articleTitle}"</subject>
-		<body>Sebagai salah satu reveiwer untuk naskah, "{$articleTitle}," untuk {$journalName}, saya mengirim Anda Review dan keputusan editorial yang dikirimkan untuk penulis bagian ini. Terima kasih lagi untuk kontribusi penting Anda untuk proses ini. 
+		<subject>Keputusan di "{$submissionTitle}"</subject>
+		<body>Sebagai salah satu reveiwer untuk naskah, "{$submissionTitle}," untuk {$contextName}, saya mengirim Anda Review dan keputusan editorial yang dikirimkan untuk penulis bagian ini. Terima kasih lagi untuk kontribusi penting Anda untuk proses ini. 
  
 {$editorialContactSignature}
 
@@ -202,7 +202,7 @@ Review awal "{$articleTitle}" telah memutuskan naskah ini tidak cocok dengan rua
 		<subject>Tugas Editorial</subject>
 		<body>{$editorialContactName}:
 
-Naskah, "{$articleTitle}," untuk {$journalName} telah ditugaskan kepada Anda untuk has been assigned to you to see through the editorial process in your role as Section Editor.  
+Naskah, "{$submissionTitle}," untuk {$contextName} telah ditugaskan kepada Anda untuk has been assigned to you to see through the editorial process in your role as Section Editor.  
 
 URL Penyerahan: {$submissionUrl}
 Nama Pengguna Editor: {$editorUsername}
@@ -215,7 +215,7 @@ Terima kasih,
 		<subject>Permintaan Review Artikel</subject>
 		<body>{$reviewerName}:
 
-Saya yakin Anda dapat menjadi reviewer handal manuskrip, "{$articleTitle}," yang telah diserahkan ke {$journalName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda mempertimbangkan untuk mengambil tugas penting ini untuk kami. 
+Saya yakin Anda dapat menjadi reviewer handal manuskrip, "{$submissionTitle}," yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda mempertimbangkan untuk mengambil tugas penting ini untuk kami. 
 
 
 Mohon login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil Review ini atau tidak, serta untuk mengakses naskah dan mencatat Review dan rekomendasi Anda. Web sitenya adalah {$journalUrl}
@@ -234,17 +234,17 @@ Terima kasih untuk mempertimbangkan permintaan ini.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo review, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2. (Jika tidak, lihat  REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Permintaan Review Artikel</subject>
 		<body>{$reviewerName}:
 
-Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, "{$articleTitle}," yang telah diserahkan ke {$journalName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda akan mempertimbangkan untuk mengambil tugas penting ini untuk kami.
+Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, "{$submissionTitle}," yang telah diserahkan ke {$contextName}. Abstrak naskah disertakan di bawah ini, dan saya harap Anda akan mempertimbangkan untuk mengambil tugas penting ini untuk kami.
 
 Login ke web site jurnal sebelum tanggal {$weekLaterDate} untuk menunjukkan apakah Anda akan mengambil review atau tidak, serta untuk mengakses naskah dan mencatat review dan rekomendasi Anda.
 
@@ -258,17 +258,17 @@ Terima kasih untuk mempertimbangkan permintaan ini.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo tijauan, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2 dan akses Reviewer satu kali klik dapat digunakan. </description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Permintaan Review Artikel</subject>
 		<body>{$reviewerName}:
 
-Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, "{$articleTitle}," dan saya meminta Anda untuk mempertimbangkan tugas penting ini untuk kami. Petunjuk Review untuk jurnal ini dilampirkan di bawah ini, dan naskah dilampirkan di email ini. Review naskah, beserta rekomendasi Anda harus diemail ke saya sebelum tanggal {$reviewDueDate}.
+Saya yakin Anda akan berperan sebagai Reviewer handal manuskrip, "{$submissionTitle}," dan saya meminta Anda untuk mempertimbangkan tugas penting ini untuk kami. Petunjuk Review untuk jurnal ini dilampirkan di bawah ini, dan naskah dilampirkan di email ini. Review naskah, beserta rekomendasi Anda harus diemail ke saya sebelum tanggal {$reviewDueDate}.
 
 Mohon tunjukkan di email balasan sebelum {$weekLaterDate} apakah Anda bisa atau bersedia melakukan review.
 
@@ -287,7 +287,7 @@ Petunjuk Review
 		<subject>Permintaan Review dibatalkan</subject>
 		<body>{$reviewerName}:
 
-Kami telah memutuskan saat ini untuk membatalkan permintaan kami untuk Anda mereview naskah, "{$articleTitle}," untuk {$journalName}. Kami meminta maaf untuk ketidaknyamanan ini dan kami harap bisa menghubungi Anda untuk membantu proses review jurnal ini di masa depan. 
+Kami telah memutuskan saat ini untuk membatalkan permintaan kami untuk Anda mereview naskah, "{$submissionTitle}," untuk {$contextName}. Kami meminta maaf untuk ketidaknyamanan ini dan kami harap bisa menghubungi Anda untuk membantu proses review jurnal ini di masa depan. 
 
 Jika Anda mempunyai pertanyaan, silakan hubungi saya. 
 
@@ -298,7 +298,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 		<subject>Bisa mereview</subject>
 		<body>{$editorialContactName}:
 
-Saya bisa dan bersedia mereview naskah, "{$articleTitle}," untuk {$journalName}. Terima kasih untuk memikirkan saya, dan saya berencana untuk menyelesaikan review sebelum tanggal jatuh temponya, {$reviewDueDate}, jika tidak sebelumnya.
+Saya bisa dan bersedia mereview naskah, "{$submissionTitle}," untuk {$contextName}. Terima kasih untuk memikirkan saya, dan saya berencana untuk menyelesaikan review sebelum tanggal jatuh temponya, {$reviewDueDate}, jika tidak sebelumnya.
 
 {$reviewerName}</body>
 		<description>Email ini dikirim oleh Reviewer untuk Editor Bagian sebagai respon pada permintaan review untuk memberitahu Editor Bagian yang permintaan reviewnya telah diterima dan akan diselesaikan sebelum tanggal yang ditentukan. </description>
@@ -307,7 +307,7 @@ Saya bisa dan bersedia mereview naskah, "{$articleTitle}," untuk {$journalName}.
 		<subject>Tidak bisa mereview</subject>
 		<body>{$editorialContactName}:
 
-Saya khawatir saat ini saya tidak bisa mereview naskah, "{$articleTitle}," untuk {$journalName}. Terima kasih untuk memikirkan saya dan di waktu yang lain silakan hubungi saya.
+Saya khawatir saat ini saya tidak bisa mereview naskah, "{$submissionTitle}," untuk {$contextName}. Terima kasih untuk memikirkan saya dan di waktu yang lain silakan hubungi saya.
 
 {$reviewerName}</body>
 		<description>Email ini dikriim oleh Reviewer untuk Editor Bagian sebagai respon pada permintaan review untuk memberitahu Editor Bagian yang permintaan reviewnya telah ditolak. .</description>
@@ -316,7 +316,7 @@ Saya khawatir saat ini saya tidak bisa mereview naskah, "{$articleTitle}," untuk
 		<subject>Review Artikel Selesai</subject>
 		<body>{$editorialContactName}:
 
-Saya telah menyelesaikan review saya tentang "{$articleTitle}" untuk {$journalName}, dan menyerahkan rekomendasi saya, "{$recommendation}."
+Saya telah menyelesaikan review saya tentang "{$submissionTitle}" untuk {$contextName}, dan menyerahkan rekomendasi saya, "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Email ini dikirim oleh Reviewer untuk Editor Bagian untuk memberitahu mereka bahwa review telah selesai dan komentar serta rekomendasi telah dicatat di web site jurnal. </description>
@@ -325,7 +325,7 @@ Saya telah menyelesaikan review saya tentang "{$articleTitle}" untuk {$journalNa
 		<subject>Pernyataan Review Artikel</subject>
 		<body>{$reviewerName}:
 
-Terima kasih telah menyelesaikan review naskah, "{$articleTitle}," untuk {$journalName}. Kami menghargai kontribusi Anda untuk kualitas karya yang kami terbitkan. 
+Terima kasih telah menyelesaikan review naskah, "{$submissionTitle}," untuk {$contextName}. Kami menghargai kontribusi Anda untuk kualitas karya yang kami terbitkan. 
 
 {$editorialContactSignature}</body>
 		<description>Email ini dikirim oleh Editor Bagian untuk mengkonfirmasi kuitansi review yang telah selesai dan berterima kasih kepada Reviewer untuk kontribusi mereka.</description>
@@ -334,7 +334,7 @@ Terima kasih telah menyelesaikan review naskah, "{$articleTitle}," untuk {$journ
 		<subject>Pengingat Review Naskah</subject>
 		<body>{$reviewerName}:
 
-Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$articleTitle},"  untuk  {$journalName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini.
+Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$submissionTitle},"  untuk  {$contextName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini.
 
 Jika Anda tidak punya nama pengguna dan kata sandi untuk web site jurnal, Anda dapat menggunakan tautan ini untuk mengatur ulang kata sandi Anda (yang kemudian akan diemail kepada Anda beserta nama pengguna Anda). {$passwordResetUrl}
 
@@ -349,7 +349,7 @@ Mohon konfirmasi kemampuan Anda untuk menyelesaikan kontribusi vital ini untuk p
 		<subject>Pengingat Review Naskah</subject>
 		<body>{$reviewerName}:
 
-Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$articleTitle},"  untuk  {$journalName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini.
+Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$submissionTitle},"  untuk  {$contextName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini.
 
 URL Penyerahan: {$submissionReviewUrl}
 
@@ -362,7 +362,7 @@ Mohon konfirmasi kemampuan Anda untuk menyelesaikan kontribusi vital ini untuk p
 		<subject>Pengingat Review Naskah Otomatis</subject>
 		<body>{$reviewerName}:
 
-Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$articleTitle},"  untuk  {$journalName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan email ini secara otomasti dihasilkan dan dikirim setelah melewati tanggal tersebut. Kami masih akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini. 
+Hanya sebagai pengingat tentang permintaan kami untuk review naskah Anda, "{$submissionTitle},"  untuk  {$contextName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan email ini secara otomasti dihasilkan dan dikirim setelah melewati tanggal tersebut. Kami masih akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini. 
 
 
 Jika Anda tidak punya nama pengguna dan kata sandi untuk web site jurnal, Anda dapat menggunakan tautan ini untuk mengatur ulang kata sandi Anda (yang kemudian akan diemail kepada Anda beserta nama pengguna Anda). {$passwordResetUrl}
@@ -379,7 +379,7 @@ Mohon konfirmasi kemampuan Anda untuk menyelesaikan kontribusi vital ini untuk p
 		<subject>Pengingat Review Naskah Otomatis</subject>
 		<body>{$reviewerName}:
 
-Hanya sebagai pengingat tentang permintaan kami untuk mereview naskah Anda, "{$articleTitle},"  untuk  {$journalName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan email ini secara otomatis dihasilkan dan dikirim setelah melewati tanggal tersebut. Kami masih akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini. 
+Hanya sebagai pengingat tentang permintaan kami untuk mereview naskah Anda, "{$submissionTitle},"  untuk  {$contextName}.  Kami berharap memiliki review ini sebelum tanggal {$reviewDueDate}, dan email ini secara otomatis dihasilkan dan dikirim setelah melewati tanggal tersebut. Kami masih akan senang untuk menerimanya secepat Anda bisa menyiapkan review ini. 
 
 URL Penyerahan: {$submissionReviewUrl}
 
@@ -393,7 +393,7 @@ Mohon konfirmasi kemampuan Anda untuk menyelesaikan kontribusi vital ini untuk p
 		<subject>Editor Decision</subject>
 		<body>{$authorName}:
 
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$articleTitle}".
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$submissionTitle}".
 
 Keputusan kami adalah:
 
@@ -405,7 +405,7 @@ Keputusan kami adalah:
 		<subject>Keputusan Editor</subject>
 		<body>{$authorName}:
 
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$articleTitle}".
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$submissionTitle}".
 
 Keputusan kami adalah:
 
@@ -417,7 +417,7 @@ Keputusan kami adalah:
 		<subject>Keputusan Editor</subject>
 		<body>{$authorName}:
 
-Kami telah mengambil keputusan mengenai naskah Anda untuk  {$journalTitle}, "{$articleTitle}".
+Kami telah mengambil keputusan mengenai naskah Anda untuk  {$journalTitle}, "{$submissionTitle}".
 
 Keputusan kami adalah:
 
@@ -429,7 +429,7 @@ Keputusan kami adalah:
 		<subject>Keputusan Editor</subject>
 		<body>{$authorName}:
 
-Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$articleTitle}".
+Kami telah mengambil keputusan mengenai naskah Anda untuk {$journalTitle}, "{$submissionTitle}".
 
 Keputusan kami adalah:
 
@@ -441,7 +441,7 @@ Keputusan kami adalah:
 		<subject>Copyediting Request</subject>
 		<body>{$copyeditorName}:
 
-Saya meminta Anda bertanggungjawab atas proses copyediting  "{$articleTitle}" untuk{$journalName} dengan mengikuti langkah-langkah berikut.
+Saya meminta Anda bertanggungjawab atas proses copyediting  "{$submissionTitle}" untuk{$contextName} dengan mengikuti langkah-langkah berikut.
 1. Klik URL Penyerahan di bawah ini.
 2. Login ke jurnal dan klik di file yang ditampilkan di Langkah 1. 
 3. Baca Instruksi Copyediting yang diposting di halaman web. 
@@ -449,7 +449,7 @@ Saya meminta Anda bertanggungjawab atas proses copyediting  "{$articleTitle}" un
 5. Simpan file yang telah dicopyedit, dan upload ke Langkah 1 copyediting.
 6. Kirim email LENGKAP kepada editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL Penyerahan: {$submissionCopyeditingUrl}
 Nama pengguna Copy Editor: {$copyeditorUsername}
 
@@ -460,7 +460,7 @@ Nama pengguna Copy Editor: {$copyeditorUsername}
 		<subject>Copyediting Selesai</subject>
 		<body>{$editorialContactName}:
 
-Kami sekarang telah meng-copyedit naskah Anda "{$articleTitle}" for {$journalName}. Untuk mereview perubahan yang diusulkan dan merespon Pertanyaan Penulis, ikuti langkah-langkah berikut ini: 
+Kami sekarang telah meng-copyedit naskah Anda "{$submissionTitle}" for {$contextName}. Untuk mereview perubahan yang diusulkan dan merespon Pertanyaan Penulis, ikuti langkah-langkah berikut ini: 
 
 1. Login ke jurnal dengan menggunakan URL di bawah ini dengan nama pengguna dan kata sandi Anda (gunakan tautan Lupa jika diperlukan). 
 2. Klik di file di 1. File Copyedit Awal untuk mengunduh dan membuka versi yang telah di-copyedit. 
@@ -481,7 +481,7 @@ Jika Anda tidak dapat bertanggungjawab atas pekerjaan ini sekarang atau mempunya
 		<subject>Pernyataan Copyediting</subject>
 		<body>{$copyeditorName}:
 
-Terima kasih untuk meng-copyedit manuskrip, "{$articleTitle}," untuk {$journalName}. Ini akan membuat kontribusi penting untuk kualitas jurnal ini. 
+Terima kasih untuk meng-copyedit manuskrip, "{$submissionTitle}," untuk {$contextName}. Ini akan membuat kontribusi penting untuk kualitas jurnal ini. 
 
 {$editorialContactSignature}</body>
 		<description>Email ini dikirim oleh Editor Bagian untuk Copyeditor naskah untuk menyatakan bahwa copyeditor telah menyelesaikan proses copyediting dengn sukses dan berterima kasih  untuk kontribusi mereka. </description>
@@ -489,7 +489,7 @@ Terima kasih untuk meng-copyedit manuskrip, "{$articleTitle}," untuk {$journalNa
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Permintaan Review Copyediting</subject>
 		<body>{$authorName}:
-Naskah Anda "{$articleTitle}" untuk {$journalName} telah melewati langkah pertama copyediting, dan tersedia untuk Anda untuk mereview dengan langkah-langkah berikut ini.
+Naskah Anda "{$submissionTitle}" untuk {$contextName} telah melewati langkah pertama copyediting, dan tersedia untuk Anda untuk mereview dengan langkah-langkah berikut ini.
 
 1. Klik URL Penyerahan di bawah ini.
 2. Login ke jurnal dan klik di File yang ditampilkan di langkah 1. 
@@ -514,7 +514,7 @@ Jika Anda tidak dapat bertanggung jawab atas pekerjaan ini saat ini atau mempuny
 		<subject>Review Copyediting Selesai</subject>
 		<body>{$editorialContactName}:
 
-Saya sekarang telah mereview copyediting manuskrip, "{$articleTitle}," untuk {$journalName}, dan siap untuk putaran terakhir copyediting dan persiapan layout. 
+Saya sekarang telah mereview copyediting manuskrip, "{$submissionTitle}," untuk {$contextName}, dan siap untuk putaran terakhir copyediting dan persiapan layout. 
 
 Terima kasih untuk kontribusi ini untuk karya saya.,
 {$authorName}</body>
@@ -524,7 +524,7 @@ Terima kasih untuk kontribusi ini untuk karya saya.,
 		<subject>Pernyataan Review Copyediting</subject>
 		<body>{$authorName}:
 
-Terima kasih telah mereview copyediting manuskrip Anda, "{$articleTitle}," untuk {$journalName}. Kami menunggu untuk menerbitkan karya ini.
+Terima kasih telah mereview copyediting manuskrip Anda, "{$submissionTitle}," untuk {$contextName}. Kami menunggu untuk menerbitkan karya ini.
 
 {$editorialContactSignature}</body>
 		<description>Email ini dikirim oleh Editor Bagian kepada Penulis naskah untuk mengkonfirmasi penyelesaian proses copyediting penulis dan berterima kasih untuk kontribusi mereka. </description>
@@ -533,7 +533,7 @@ Terima kasih telah mereview copyediting manuskrip Anda, "{$articleTitle}," untuk
 		<subject>Review Final Copyediting</subject>
 		<body>{$copyeditorName}:
 
-Penulis dan editor telah menyelesaikan review copyediting mereka tentang "{$articleTitle}" untuk {$journalName}. Salinan yang "bersih" perlu disiapkan untuk Layout dengan melewati langkah-langkah di bawah ini. 
+Penulis dan editor telah menyelesaikan review copyediting mereka tentang "{$submissionTitle}" untuk {$contextName}. Salinan yang "bersih" perlu disiapkan untuk Layout dengan melewati langkah-langkah di bawah ini. 
 
 1. Klik URL Penyerahan di bawah ini. 
 2. Login ke jurnal dan klik di File yang ditampilkan di Langkah 2. 
@@ -542,7 +542,7 @@ Penulis dan editor telah menyelesaikan review copyediting mereka tentang "{$arti
 5. Klik METADATA untuk mengecek informasi pengindeksan (menyimpan koreksi apapun)
 6. Kirim email LENGKAP kepada editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL Penyerahan: {$submissionCopyeditingUrl}
 Nama pengguna Copy Editor: {$copyeditorUsername}
 
@@ -553,7 +553,7 @@ Nama pengguna Copy Editor: {$copyeditorUsername}
 		<subject>Review Final Copyediting Selesai</subject>
 		<body>{$editorialContactName}:
 
-Saya telah menyiapkan versi copyedited manuskrip yang bersih, "{$articleTitle}," untuk {$journalName}. Ini siap untuk galley persiapan dan layout. 
+Saya telah menyiapkan versi copyedited manuskrip yang bersih, "{$submissionTitle}," untuk {$contextName}. Ini siap untuk galley persiapan dan layout. 
 
 {$copyeditorName}</body>
 		<description>Email ini dari Copyeditor kepada Editor Bagian yang memberitahu mereka bahwa putaran terakhir copyediting telah selesai dan proses layout boleh dimulai. </description>
@@ -562,7 +562,7 @@ Saya telah menyiapkan versi copyedited manuskrip yang bersih, "{$articleTitle},"
 		<subject>Pernyataan Review Final Copyediting</subject>
 		<body>{$copyeditorName}:
 
-Terima kasih telah menyelesaikan copyediting manuskrip, "{$articleTitle}," untuk {$journalName}. Persiapan "salinan bersih" untuk layout adalah sebuah langkah penting di proses editorial. 
+Terima kasih telah menyelesaikan copyediting manuskrip, "{$submissionTitle}," untuk {$contextName}. Persiapan "salinan bersih" untuk layout adalah sebuah langkah penting di proses editorial. 
 
 {$editorialContactSignature}</body>
 		<description>Email ini dari Editor Bagian kepada Copyeditor menyatakan putaran terakhir copyediting telah selesai dan berterima kasih  untuk kontribusi mereka. </description>
@@ -571,12 +571,12 @@ Terima kasih telah menyelesaikan copyediting manuskrip, "{$articleTitle}," untuk
 		<subject>Permintaan Galleys</subject>
 		<body>{$layoutEditorName}:
 
-Naskah "{$articleTitle}" ke {$journalName} sekarang membutuhkan galley yang dikeluarkan dengan langkah-langkah berikut ini. 
+Naskah "{$submissionTitle}" ke {$contextName} sekarang membutuhkan galley yang dikeluarkan dengan langkah-langkah berikut ini. 
 1. Klik URL Penyerahan di bawah ini.
 2. Login ke jurnal dan gunakan file versi layout untuk membuat galley menurut standar jurnal. 
 3. Kirim email LENGKAP kepada editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL Penyerahan: {$submissionLayoutUrl}
 Nama pengguna Layout Editor: {$layoutEditorUsername}
 
@@ -589,7 +589,7 @@ Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunya
 		<subject>Galley Lengkap</subject>
 		<body>{$editorialContactName}:
 
-Galley sekarang telah disiapkan untuk manuskrip, "{$articleTitle}," untuk {$journalName} dan siap untuk proofreading. 
+Galley sekarang telah disiapkan untuk manuskrip, "{$submissionTitle}," untuk {$contextName} dan siap untuk proofreading. 
 
 Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 
@@ -600,7 +600,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 		<subject>Pernyataan Layout</subject>
 		<body>{$layoutEditorName}:
 
-Terima kasih untuk menyiapkan galley untuk manuskrip, "{$articleTitle}," untuk {$journalName}. Ini adalah kontribusi penting untuk proses penerbitan. 
+Terima kasih untuk menyiapkan galley untuk manuskrip, "{$submissionTitle}," untuk {$contextName}. Ini adalah kontribusi penting untuk proses penerbitan. 
 
 {$editorialContactSignature}</body>
 		<description> Email ini dari Editor Bagian kepada Editor Layout yang menyatakan bahwa proses pengeditan layout telah selesai dan berterima kasih untuk kontribusi mereka.</description>
@@ -609,7 +609,7 @@ Terima kasih untuk menyiapkan galley untuk manuskrip, "{$articleTitle}," untuk {
 		<subject>Permintaan Proofreading (Penulis)</subject>
 		<body>{$authorName}:
 
-Naskah Anda "{$articleTitle}" untuk {$journalName} sekarang perlu di-proofread dengan mengikuti langkah-langkah berikut ini.
+Naskah Anda "{$submissionTitle}" untuk {$contextName} sekarang perlu di-proofread dengan mengikuti langkah-langkah berikut ini.
 1. Klik di URL Penyerahan berikut ini.
 2. Login ke jurnal dan lihar INSTRUKSI PROOFING .
 3. Klik di LIHAT PROOF di Layout dan galley proof di satu atau lebih format yang digunakan. 
@@ -627,7 +627,7 @@ Nama pengguna Penulis: {$authorUsername}
 		<subject>Proofreading Selesai (Penulis)</subject>
 		<body>{$editorialContactName}:
 
-Saya telah menyelesaikan proofreading galley untuk manuskrip saya, "{$articleTitle}," untuk {$journalName}. Galley sekarang siap untuk mendapatkan koreksi final oleh Proofreader dan Editor Layout.
+Saya telah menyelesaikan proofreading galley untuk manuskrip saya, "{$submissionTitle}," untuk {$contextName}. Galley sekarang siap untuk mendapatkan koreksi final oleh Proofreader dan Editor Layout.
 
 {$authorName}</body>
 		<description>Email ini dari Penulis untuk Proofreader dan Editor yang memberitahu mereka bahwa putaran proofreading Penulis telah selesai dan detail dapat ditemukan di komentar artikel.</description>
@@ -636,7 +636,7 @@ Saya telah menyelesaikan proofreading galley untuk manuskrip saya, "{$articleTit
 		<subject>Pernyataan Proofreading (Penulis)</subject>
 		<body>{$authorName}:
 
-Terima kasih telah mem-proofreading galley untuk manuskrip Anda, "{$articleTitle}," di {$journalName}. Kami menunggu untuk menerbitkan karya kami dalam waktu dekat ini. 
+Terima kasih telah mem-proofreading galley untuk manuskrip Anda, "{$submissionTitle}," di {$contextName}. Kami menunggu untuk menerbitkan karya kami dalam waktu dekat ini. 
 
 Jika Anda berlangganan layanan notifikasi kami, Anda akan menerima email tentang Daftar Isi secepat Daftar Isi itu diterbitkan. Jika Anda mempunyai pertanyaa, silakan hubungi saya. 
 
@@ -647,7 +647,7 @@ Jika Anda berlangganan layanan notifikasi kami, Anda akan menerima email tentang
 		<subject>Pemintaan Proofreading</subject>
 		<body>{$proofreaderName}:
 
-Naskah "{$articleTitle}"  untuk {$journalName} sekarang perlu di-proofread dengan langkah-langkah berikut ini.
+Naskah "{$submissionTitle}"  untuk {$contextName} sekarang perlu di-proofread dengan langkah-langkah berikut ini.
 1. Klik di URL Penyerahan di bawah ini.
 2. Login ke jurnal dan lihat INSTRUKSI PROOFING. 
 3. Klik di LIHAT PROOF di Layout dan proof galley di satu atau lebih format yang digunakan.  
@@ -667,7 +667,7 @@ Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini atau mempunyai pertany
 		<subject>Proofreading Selesai</subject>
 		<body>{$editorialContactName}:
 
-Saya telah menyelesaikan proses proofreading galley untuk manuskrip, "{$articleTitle}," untuk {$journalName}. Galley sekarang siap untuk koreksi final yang dibuat oleh Editor Layout. 
+Saya telah menyelesaikan proses proofreading galley untuk manuskrip, "{$submissionTitle}," untuk {$contextName}. Galley sekarang siap untuk koreksi final yang dibuat oleh Editor Layout. 
 
 {$proofreaderName}</body>
 		<description>Email ini dari Proofreader untuk Editor Bagian yang memberitahu mereka bahwa Proofreader telah menyelesaikan proses proofreading. </description>
@@ -676,7 +676,7 @@ Saya telah menyelesaikan proses proofreading galley untuk manuskrip, "{$articleT
 		<subject>Proofreading Acknowledgement</subject>
 		<body>{$proofreaderName}:
 
-Terima kasih telah mem-proofreading galley untuk manuskrip, "{$articleTitle}," untuk {$journalName}. Pekerjaan ini memberikan kontribusi penting pada kualitas jurnal ini. 
+Terima kasih telah mem-proofreading galley untuk manuskrip, "{$submissionTitle}," untuk {$contextName}. Pekerjaan ini memberikan kontribusi penting pada kualitas jurnal ini. 
 
 {$editorialContactSignature}</body>
 		<description>Email ini dari Editor Bagian untuk Proofreader mengkonfirmasi penyelesaian proses proofreading dan berterima kasih  untuk kontribusi mereka. </description>
@@ -685,13 +685,13 @@ Terima kasih telah mem-proofreading galley untuk manuskrip, "{$articleTitle}," u
 		<subject>Permintaan Proofreading (Editor Layout)</subject>
 		<body>{$layoutEditorName}:
 
-Naskah "{$articleTitle}" untuk {$journalName} telah diproofread oleh penulis dan proofreader, dan koreksi apapun harus dibuat dengan mengikuti langkah-langkah berikut ini. 
+Naskah "{$submissionTitle}" untuk {$contextName} telah diproofread oleh penulis dan proofreader, dan koreksi apapun harus dibuat dengan mengikuti langkah-langkah berikut ini. 
 1. Klik di URL Penyerahan di bawah ini. 
 2. Login ke jurnal baca Koreksi Proofreading untuk membuat galley yang dikoreksi. 
 3. Upload galley yang telah direvisi.
 4. Kirim email LENGKAP di Proofreading Langkah 3 kepada editor.
 
-{$journalName} URL: {$journalUrl}
+{$contextName} URL: {$journalUrl}
 URL Penyerahan: {$submissionUrl}
 Nama pengguna Layout Editor: {$layoutEditorUsername}
 
@@ -704,7 +704,7 @@ Jika Anda tidak bisa bertanggung jawab atas pekerjaan ini saat ini atau mempunya
 		<subject>Proofreading Selesai (Editor Layout)</subject>
 		<body>{$editorialContactName}:
 
-Galley sekarang telah dikoreksi, mengikuti proofreading mereka, untuk manuskrip, "{$articleTitle}," untuk {$journalName}. Bagian ini sekarang siap untuk diterbitkan.
+Galley sekarang telah dikoreksi, mengikuti proofreading mereka, untuk manuskrip, "{$submissionTitle}," untuk {$contextName}. Bagian ini sekarang siap untuk diterbitkan.
 
 {$layoutEditorName}</body>
 		<description>Email ini dari Editor Layout untuk Editor Bagian yang memberitahu mereka bahwa tahap akhir proofreading telah selesai dan artikel sekarang siap untuk diterbitkan. </description>
@@ -713,21 +713,21 @@ Galley sekarang telah dikoreksi, mengikuti proofreading mereka, untuk manuskrip,
 		<subject>Pernyataan Proofreading (Editor Layout)</subject>
 		<body>{$layoutEditorName}:
 
-Terima kasih untuk menyelesaikan koreksi proofreading untuk galley yang diasosiasikan dengan manuskrip, "{$articleTitle}," untuk {$journalName}. Ini mewakili kontribusi penting untuk karya jurnal ini. 
+Terima kasih untuk menyelesaikan koreksi proofreading untuk galley yang diasosiasikan dengan manuskrip, "{$submissionTitle}," untuk {$contextName}. Ini mewakili kontribusi penting untuk karya jurnal ini. 
 
 {$editorialContactSignature}</body>
 		<description>Email dari Editor Bagian untuk Editor Layout menyatakan bahwa tahap akhir proofreading telah selesai dan berterima kasih untuk kontribusi mereka. </description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artikel tentang Minat yang mungkin</subject>
-		<body>Mungkin Anda tertarik untuk membaca "{$articleTitle}" oleh {$authorName} diterbitkan di Vol {$volume}, No {$number} ({$year}) di {$journalName} di "{$articleUrl}".</body>
+		<body>Mungkin Anda tertarik untuk membaca "{$submissionTitle}" oleh {$authorName} diterbitkan di Vol {$volume}, No {$number} ({$year}) di {$contextName} di "{$articleUrl}".</body>
 		<description>Template email ini menyediakan pembaca yang telah terdaftar sebuah kesempatan untuk mengirimkan informasi tentang sebuah artikel untuk seseorang yang mungkin tertarik. Ini tersedia melalui Alat Baca dan harus diaktifkan oleh Manajer Jurnal di halaman Administrasi Alat Baca. </description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Notifikasi Langganan</subject>
 		<body>{$subscriberName}:
 
-Anda sekarang telah didaftar sebagai pelanggan di sistem manajemen jurnal online kami untuk  {$journalName}, dengan langganan sebagai berikut:
+Anda sekarang telah didaftar sebagai pelanggan di sistem manajemen jurnal online kami untuk  {$contextName}, dengan langganan sebagai berikut:
 
 {$subscriptionType}
 
@@ -746,7 +746,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 		<subject>Akses Terbuka Terbitan Terkini</subject>
 		<body>Pembaca:
 
-{$journalName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami({$journalUrl}) untuk mereview artikel dan item minat.
+{$contextName} telah membuat terbitan berikut ini tersedia di format akses terbuka. Kami mengundang Anda untuk mereview Daftar Isi di sini dan kemudian mengunjungi web site kami({$journalUrl}) untuk mereview artikel dan item minat.
 
 Terima kasih untuk melanjutkan minat Anda terhadap karya kami,
 {$editorialContactSignature}</body>
@@ -756,7 +756,7 @@ Terima kasih untuk melanjutkan minat Anda terhadap karya kami,
 		<subject>Pemberitahuan Masa Berakhir Langganan</subject>
 		<body>{$subscriberName}:
 
-Langganan {$journalName} Anda akan segera berakhir.
+Langganan {$contextName} Anda akan segera berakhir.
 
 {$subscriptionType}
 Tanggal Berakhir: {$expiryDate}
@@ -772,7 +772,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 		<subject>Langganan Berakhir</subject>
 		<body>{$subscriberName}:
 
-Langganan {$journalName} Anda telah berakhir.
+Langganan {$contextName} Anda telah berakhir.
 
 {$subscriptionType}
 Tanggal Berakhir: {$expiryDate}
@@ -788,7 +788,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 		<subject>Langganan Berakhir Pengingat Akhir</subject>
 		<body>{$subscriberName}:
 
-Langganan {$journalName} Anda telah berakhir.
+Langganan {$contextName} Anda telah berakhir.
 Perhatikan bahwa ini adalah pengingat akhir yang akan diemail kepada Anda. 
 
 {$subscriptionType}
@@ -803,7 +803,7 @@ Jika Anda mempunyai pertanyaan, silakan hubungi saya.
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Pembelian Langganan: Individu</subject>
-		<body>Langganan individu telah dibeli online untuk {$journalName} dengan detail berikut ini.
+		<body>Langganan individu telah dibeli online untuk {$contextName} dengan detail berikut ini.
 
 Tipe Langganan:
 {$subscriptionType}
@@ -822,7 +822,7 @@ URL Langganan: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Beli Langganan: Institusi</subject>
-		<body>Langganan Insititusi telah dibeli online untuk {$journalName} dengan detail berikut ini. Untuk mengaktifkan langganan ini, gunakan URL langganan yang telah disediakan dan atur status langganan menjadi 'Aktif'.  
+		<body>Langganan Insititusi telah dibeli online untuk {$contextName} dengan detail berikut ini. Untuk mengaktifkan langganan ini, gunakan URL langganan yang telah disediakan dan atur status langganan menjadi 'Aktif'.  
 
 Tipe Langganan:
 {$subscriptionType}
@@ -851,7 +851,7 @@ URL Langganan: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Pembaruan Langganan: Individu</subject>
-		<body>Langganan individu telah diperbarui online untuk {$journalName} dengan detail berikut ini.
+		<body>Langganan individu telah diperbarui online untuk {$contextName} dengan detail berikut ini.
 
 Tipe Langganan:
 {$subscriptionType}
@@ -870,7 +870,7 @@ URL Langganan: {$subscriptionUrl}
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Pembaruan Langganan: Institusional</subject>
-		<body>Langganan Institusional telah diperbarui online untuk {$journalName} dengan detail berikut ini.
+		<body>Langganan Institusional telah diperbarui online untuk {$contextName} dengan detail berikut ini.
 
 Tipe Langganan:
 {$subscriptionType}
@@ -901,14 +901,14 @@ URL Langganan: {$subscriptionUrl}
 		<subject>Pengeditan Sitiran</subject>
 		<body>{$authorFirstName},
 
-Dapatkah Anda memverifikasi atau menyediakan Sitiran yang tepat untuk kami untuk referensi berikut ini dari artikel Anda, {$articleTitle}:
+Dapatkah Anda memverifikasi atau menyediakan Sitiran yang tepat untuk kami untuk referensi berikut ini dari artikel Anda, {$submissionTitle}:
 
 {$rawCitation}
 
 Terima kasih!
 
 {$userFirstName}
-Copy-Editor, {$journalName}
+Copy-Editor, {$contextName}
 </body>
 		<description>Email ini memudahkan copyeditor untuk meminta informasi tambahan tentang referensi dari penulis.</description>
 	</email_text>

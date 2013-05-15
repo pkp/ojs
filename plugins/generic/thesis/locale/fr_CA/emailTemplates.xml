@@ -12,7 +12,7 @@
 <email_texts locale="fr_CA">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Soumission de résumé de thèse</subject>
-		<body>Ce courriel a été généré automatiquement par le formulaire de soumission de résumé de thèse de {$journalName}.
+		<body>Ce courriel a été généré automatiquement par le formulaire de soumission de résumé de thèse de {$contextName}.
 
 Veuillez confirmer que l'information soumise est correcte. Sur réception de votre confirmation, le résumé sera publié dans l'édition en ligne de la revue.
 

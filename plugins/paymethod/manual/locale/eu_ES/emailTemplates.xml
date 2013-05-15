@@ -11,7 +11,7 @@
 <email_texts locale="eu_ES">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Eskuzko ordainketaren jakinarazpena</subject>
-		<body>{$userFullName} erabiltzaileak ("{$userName}" erab.-iz.) {$journalName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.
+		<body>{$userFullName} erabiltzaileak ("{$userName}" erab.-iz.) {$contextName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.
 
 Ordaindu beharreko lana "{$itemName}" da.
 Kostua : {$itemCost} ({$itemCurrencyCode}).

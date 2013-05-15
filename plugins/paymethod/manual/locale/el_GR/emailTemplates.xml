@@ -11,7 +11,7 @@
 <email_texts locale="el_GR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Ειδοποίηση μη αυτόματης πληρωμής</subject>
-		<body>Μια μη αυτόματη διαδικασία πληρωμής για το περιοδικό {$journalName} από τον χρήση {$userFullName} (username "{$userName}") πρέπει να προωθηθεί.
+		<body>Μια μη αυτόματη διαδικασία πληρωμής για το περιοδικό {$contextName} από τον χρήση {$userFullName} (username "{$userName}") πρέπει να προωθηθεί.
 
 Η πληρωμή γίνεται για  "{$itemName}".
 Το κόστος είναι {$itemCost} ({$itemCurrencyCode}).

@@ -126,7 +126,7 @@ class EmailHandler extends UserHandler {
 		}
 
 		if ($email === null) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$email = new MailTemplate($template);
 		}
 

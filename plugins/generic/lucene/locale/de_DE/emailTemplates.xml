@@ -23,7 +23,7 @@ dass ein Fehler während der Artikelindizierung aufgetreten ist.</description>
 	</email_text>
 	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
 		<subject>Zeitschriftenindizierungsfehler</subject>
-		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung der Zeitschrift  "{$journalName}".
+		<body>Ein Indizierungsfehler ist aufgetreten bei der Indizierung der Zeitschrift  "{$contextName}".
 
 Die eventuell aufgetretene Fehlermeldung lautete: "{$error}"
 

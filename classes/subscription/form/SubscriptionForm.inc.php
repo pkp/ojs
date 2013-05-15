@@ -294,7 +294,7 @@ class SubscriptionForm extends Form {
 			'subscriptionContactSignature' => $subscriptionContactSignature
 		);
 
-		import('classes.mail.MailTemplate');
+		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
 		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());

@@ -12,14 +12,14 @@
 <email_texts locale="it_IT">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Errore nell'indicizzazione di un articolo</subject>
-		<body>Si è verificato un errore durante l'indicizzazione dell'articolo "{$articleTitle}" pubblicato in "{$journalName}".
+		<body>Si è verificato un errore durante l'indicizzazione dell'articolo "{$submissionTitle}" pubblicato in "{$contextName}".
 
 Questa email è generata automaticamente dal plugin Lucene search di OJS</body>
 		<description>Questo messaggio viene inviato al contatto tecnico di una rivista in caso di errori occorsi durante l'indicizzazione di un articolo.</description>
 	</email_text>
 	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
 		<subject>Errore nell'indicizzazione della rivista</subject>
-		<body>Si è verificato un errore durante l'indicizzazione di "{$journalName}".
+		<body>Si è verificato un errore durante l'indicizzazione di "{$contextName}".
 
 Questa email è stata generata automaticamente dal plugin Lucene search di OJS.</body>
 		<description>Email inviata al supporto tecnico di una rivista in caso di errori occorsi durante l'indicizzazione della rivista.</description>

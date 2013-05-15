@@ -187,7 +187,7 @@ class UserXMLParser {
 
 		if ($sendNotify) {
 			// Set up mail template to send to added users
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$mail = new MailTemplate('USER_REGISTER');
 
 			$journalDao = DAORegistry::getDAO('JournalDAO');

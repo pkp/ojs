@@ -12,7 +12,7 @@
 <email_texts locale="eu_ES">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Gordailuari buruzko jakinarazpena</subject>
-		<body>Zorionak zure aurkezpena, "{$articleTitle}, {$journalName} aldizkarian argitaratzeko onartu delako. Nahi izanez gero, zure aurkezpena automatikoki jar dezakezu gordailu batean edo gehiagotan.
+		<body>Zorionak zure aurkezpena, "{$submissionTitle}, {$contextName} aldizkarian argitaratzeko onartu delako. Nahi izanez gero, zure aurkezpena automatikoki jar dezakezu gordailu batean edo gehiagotan.
 
 Horretarako, joan zaitez hona: {$swordDepositUrl}.
 

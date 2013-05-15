@@ -12,7 +12,7 @@
 <email_texts locale="en_US">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Deposit Notification</subject>
-		<body>Congratulations on the acceptance of your submission, "{$articleTitle}", for publication in {$journalName}. If you choose, you may automatically deposit your submission in one or more repositories.
+		<body>Congratulations on the acceptance of your submission, "{$submissionTitle}", for publication in {$contextName}. If you choose, you may automatically deposit your submission in one or more repositories.
 
 Go to {$swordDepositUrl} to proceed.
 

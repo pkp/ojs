@@ -82,7 +82,7 @@ class BooksForReviewAuthorHandler extends Handler {
 
 		// Ensure book for review is for this journal
 		if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			$email = new MailTemplate('BFR_BOOK_REQUESTED');
 			$send = $request->getUserVar('send');
 

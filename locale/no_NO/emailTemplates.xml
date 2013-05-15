@@ -35,7 +35,7 @@ Ditt nye passord: {$password}
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>Du er nå registrert som bruker</subject>
-		<body>Takk for at du har registrert deg som bruker av nettstedet for {$journalName}. Ta godt vare på brukernavnet og passordet, som du vil trenge hver gang du skal utføre brukeroppgaver på nettstedet.
+		<body>Takk for at du har registrert deg som bruker av nettstedet for {$contextName}. Ta godt vare på brukernavnet og passordet, som du vil trenge hver gang du skal utføre brukeroppgaver på nettstedet.
 
 Brukernavn: {$username}
 Passord: {$password}
@@ -48,17 +48,17 @@ Vennlig hilsen,
 		<subject>Ny utgave</subject>
 		<body>Til registrerte lesere:
 
-{$journalName} har nettopp publisert en ny utgave på nettstedet {$journalUrl}. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.
+{$contextName} har nettopp publisert en ny utgave på nettstedet {$journalUrl}. Her kan du lese innholdsfortegnelsen, før du går videre til nettstedet for å se nærmere på innholdet.
 
 Takk for den interessen du viser  for arbeidet vårt,
 {$editorialContactSignature}</body>
 		<description>Denne e-posten sendes til registrerte brukere som har bedt om slikt varsel, via "Varsle Brukere"-lenken på den ansvarlige redaktørens brukerside. På denne måten får registrerte brukere varsel om den nye utgivelsen, og inviteres til å besøke nettstedet via en vedlagt URL-lenke.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Anmodning om arkivering av {$journalName}</subject>
+		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body>Kjære [oppgi universitetsbibliotekar]
 
-{$journalName} &lt;{$journalUrl}&gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
+{$contextName} &lt;{$journalUrl}&gt; er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
 
 [Gi en kort beskrivelse av tidsskriftet]
 
@@ -71,10 +71,10 @@ Vennlig hilsen,
 		<description>Denne e-posten ber ansvarshavende bibliotekar ved et LOCKSS arkiv om å vurdere å innlemme tidsskriftet i deres samling. E-posten oppgir URL-lenken til tidsskriftets LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Anmodning om arkivering av {$journalName}</subject>
+		<subject>Anmodning om arkivering av {$contextName}</subject>
 		<body>Kjære [oppgi universitetsbibliotekar]
 
-{$journalName} &lt;{$journalUrl}&gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
+{$contextName} &lt;{$journalUrl}&gt;, er et tidsskrift der en av deres fagansatte, [oppgi medlemsnavn], har påtatt seg å være [oppgi rolletittel]. Tidsskriftet ønsker å etablere et LOCKSS (Lots of Copies Keep Stuff Safe) arkiv, i samarbeid med flere universitetsbibliotek.
 
 [Gi en kort beskrivelse av tidsskriftet]
 
@@ -90,7 +90,7 @@ Vennlig hilsen,
 		<subject>Vi har mottatt ditt manuskript</subject>
 		<body>{$authorName}:
 
-Takk for at du har sendt inn manuskriptet "{$articleTitle}" til {$journalName}. Gjennom det nettbaserte publiseringssystemet vårt vil du kunne følge manuskriptet på sin vei gjennom den redasjonelle prosessen, ved å logge deg inn på tidsskriftets nettsted:
+Takk for at du har sendt inn manuskriptet "{$submissionTitle}" til {$contextName}. Gjennom det nettbaserte publiseringssystemet vårt vil du kunne følge manuskriptet på sin vei gjennom den redasjonelle prosessen, ved å logge deg inn på tidsskriftets nettsted:
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$authorUsername}
@@ -104,7 +104,7 @@ Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidss
 		<subject>Uegnet manuskript</subject>
 		<body>{$authorName}:
 
-Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi dessverre funnet at dette bidraget ikke passer med det faglige hovedfokuset og spennvidden for {$journalName}. For at du skal bli bedre kjent med vår faglige profil, vil jeg anbefale deg å se nærmere både på beskrivelsen av tidsskriftet vårt (under Om), og på våre tidligere utgaver. Du bør også vurdere om du kjenner til andre tidsskrift som egner seg bedre for publisering av dette bidraget.
+Ved den redaksjonelle gjennomgangen av ditt manuskript "{$submissionTitle}", har vi dessverre funnet at dette bidraget ikke passer med det faglige hovedfokuset og spennvidden for {$contextName}. For at du skal bli bedre kjent med vår faglige profil, vil jeg anbefale deg å se nærmere både på beskrivelsen av tidsskriftet vårt (under Om), og på våre tidligere utgaver. Du bør også vurdere om du kjenner til andre tidsskrift som egner seg bedre for publisering av dette bidraget.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -112,14 +112,14 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi
 		<subject>Kommentar til manuskript</subject>
 		<body>{$name}:
 
-{$commentName} har skrevet inn en kommentar til manuskriptet "{$articleTitle}" i {$journalName}:
+{$commentName} har skrevet inn en kommentar til manuskriptet "{$submissionTitle}" i {$contextName}:
 
 {$comments}</body>
 		<description>Denne e-posten varsler dem som er involvert i redigeringen av et manuskript om at en ny kommentar til manuskriptet er skrevet inn.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Redaksjonell beslutning om "{$articleTitle}"</subject>
-		<body>Fordi du har vært med på å vurdere manuskriptet "{$articleTitle}," for publisering i {$journalName}, sender jeg deg herved de samme uttalelsene og beslutningene som forfatteren har mottatt. Samtidig vil jeg igjen takke for at du bidrar til arbeidet med  {$journalName}.
+		<subject>Redaksjonell beslutning om "{$submissionTitle}"</subject>
+		<body>Fordi du har vært med på å vurdere manuskriptet "{$submissionTitle}," for publisering i {$contextName}, sender jeg deg herved de samme uttalelsene og beslutningene som forfatteren har mottatt. Samtidig vil jeg igjen takke for at du bidrar til arbeidet med  {$contextName}.
 
 {$editorialContactSignature}
 
@@ -130,7 +130,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript "{$articleTitle}", har vi
 		<subject>Redaksjonelt oppdrag</subject>
 		<body>{$editorialContactName}:
 
-Som seksjonsredaktør i {$journalName} er du herved oppnevnt til å føre det innsendte manuskriptet "{$articleTitle}" gjennom den redaksjonelle prosessen.
+Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å føre det innsendte manuskriptet "{$submissionTitle}" gjennom den redaksjonelle prosessen.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$editorUsername}
@@ -143,7 +143,7 @@ Vennlig hilsen,
 		<subject>Forespørsel om fagfellevurdering</subject>
 		<body>{$reviewerName}:
 
-Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
+Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet "{$submissionTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
 
 Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er {$journalUrl}
 
@@ -159,17 +159,17 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2. (Ellers: se e-posten REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Forespørsel om fagfellevurdering</subject>
 		<body>{$reviewerName}:
 
-Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
+Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet "{$submissionTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.
 
 Vennligst logg inn på tidsskriftets nettsted innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.
 
@@ -183,17 +183,17 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
+{$submissionAbstract}</body>
 		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2., og ettklikks tilgang for fagkonsulenter er slått på.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Forespørsel om fagfellevurdering</subject>
 		<body>{$reviewerName}:
 
-Vårt tidsskrift {$journalName} har fått tilsendt manuskriptet "{$articleTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.
+Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet "{$submissionTitle}". Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Tidsskriftets retningslinjer for fagfellevurdering følger nedenfor, og selve manuskriptet er vedlagt denne e-posten. Vurderingen og anbefalingen din returneres til meg som e-post, og er ventet ferdig innen {$reviewDueDate}.
 
 Vennligst send meg en svarpost innen {$weekLaterDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke.
 
@@ -212,7 +212,7 @@ Retningslinjer for fagvurdering
 		<subject>Forespørsel om fagfellevurdering - oppdrag avlyst</subject>
 		<body>{$reviewerName}:
 
-Vi vil med dette avlyse vurderingsoppdraget vi tidligere har bedt deg om å påta deg for {$journalName}, for manuskriptet "{$articleTitle}". Redaksjonen har bestemt at vi likevel ikke behøver din innsats i denne omgang. Vi beklager bryderiet, men håper at vi fortsatt kan be deg om å ta på deg vurderingsoppdrag for oss i fremtiden.
+Vi vil med dette avlyse vurderingsoppdraget vi tidligere har bedt deg om å påta deg for {$contextName}, for manuskriptet "{$submissionTitle}". Redaksjonen har bestemt at vi likevel ikke behøver din innsats i denne omgang. Vi beklager bryderiet, men håper at vi fortsatt kan be deg om å ta på deg vurderingsoppdrag for oss i fremtiden.
 
 Vennligst ta kontakt med meg, hvis du har spørsmål.
 
@@ -223,7 +223,7 @@ Vennligst ta kontakt med meg, hvis du har spørsmål.
 		<subject>Aksepterer vurderingsoppdrag</subject>
 		<body>{$editorialContactName}:
 
-Takk for forespørselen jeg har fått, om å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg sier meg med dette villig til å påta meg vurderingsoppdraget. Jeg tar sikte på å ferdigstille vurderingen min innen {$reviewDueDate}, om ikke før.
+Takk for forespørselen jeg har fått, om å fagfellevurdere manuskriptet "{$submissionTitle}" for {$contextName}. Jeg sier meg med dette villig til å påta meg vurderingsoppdraget. Jeg tar sikte på å ferdigstille vurderingen min innen {$reviewDueDate}, om ikke før.
 
 {$reviewerName}</body>
 		<description>Denne e-posten sendes fra en Fagkonsulent til Seksjonsredaktøren som svar på Forespørsel om fagfellevurdering for å varsle Seksjonsredaktøren om at forespørselen er mottatt og akseptert, og at vurderingen vil bli ferdigstilt innen angitt dato.</description>
@@ -232,7 +232,7 @@ Takk for forespørselen jeg har fått, om å fagfellevurdere manuskriptet "{$art
 		<subject>Kan ikke utføre vurderingsoppdraget</subject>
 		<body>{$editorialContactName}:
 
-Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet "{$articleTitle}," for {$journalName} ved denne anledningen. Jeg takker for forespørselen, og ser fram til å bli spurt ved en senere anledning.
+Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet "{$submissionTitle}," for {$contextName} ved denne anledningen. Jeg takker for forespørselen, og ser fram til å bli spurt ved en senere anledning.
 
 {$reviewerName}</body>
 		<description>Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren som svar på en forespørsel om fagfellevurdering, for å varsle redaktøren om at oppdraget er avslått.</description>
@@ -241,7 +241,7 @@ Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet "{$articl
 		<subject>Vurderingsoppdraget er fullført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå fullført fagfelelevurderingen av "{$articleTitle}" for {$journalName}, og jeg har anbefalt at manuskriptet "{$recommendation}."
+Jeg har nå fullført fagfelelevurderingen av "{$submissionTitle}" for {$contextName}, og jeg har anbefalt at manuskriptet "{$recommendation}."
 
 {$reviewerName}</body>
 		<description>Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren for å varsle om at oppdraget er fullført, og at kommentarer og anbefaling er registrert på tidsskriftets nettsted.</description>
@@ -250,7 +250,7 @@ Jeg har nå fullført fagfelelevurderingen av "{$articleTitle}" for {$journalNam
 		<subject>Bekrefter at du har fullført vurderingsoppdrag</subject>
 		<body>{$reviewerName}:
 
-Takk for at du har fullført fagfellevurderingen din av manuskriptet "{$articleTitle}" for {$journalName}. Vi setter stor pris på at du på denne måten bidrar til å sikre den faglige kvaliteten i våre publikasjoner.
+Takk for at du har fullført fagfellevurderingen din av manuskriptet "{$submissionTitle}" for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre den faglige kvaliteten i våre publikasjoner.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten sendes av en Seksjonsredaktør for å bekrefte at fagfellevurderingen er mottatt, og takke Fagkonsulenten for innsatsen.</description>
@@ -259,7 +259,7 @@ Takk for at du har fullført fagfellevurderingen din av manuskriptet "{$articleT
 		<subject>Fagfellevurdering - påminnelse</subject>
 		<body>{$reviewerName}:
 
-Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$submissionTitle}" for {$contextName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
 
 Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}
 
@@ -274,7 +274,7 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 		<subject>Fagfellevurdering - påminnelse</subject>
 		<body>{$reviewerName}:
 
-Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$submissionTitle}" for {$contextName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}, og ser fram til å motta vurderingen din så snart den er klar.
 
 Manuskriptets URL: {$submissionReviewUrl}
 
@@ -287,7 +287,7 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 		<subject>Fagfellevurdering - påminnelse (automatisk e-post)</subject>
 		<body>{$reviewerName}:
 
-Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$submissionTitle}" for {$contextName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
 
 Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}
 
@@ -302,7 +302,7 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 		<subject>Fagfellevurdering - påminnelse (automatisk e-post)</subject>
 		<body>{$reviewerName}:
 
-Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$articleTitle}" for {$journalName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
+Jeg vil med dette minne deg på at du har tatt på deg å fagfellevurdere manuskriptet "{$submissionTitle}" for {$contextName}. Jeg minner om at tidsfristen for oppdraget var satt til {$reviewDueDate}. Ved fristens utløp ble denne e-posten sendt automatisk. Jeg ser fortsatt fram til å motta vurderingen din, så snart du har den klar.
 
 Manuskriptets URL: {$submissionReviewUrl}
 
@@ -315,7 +315,7 @@ Vennligst bekreft om du fortsatt regner med å fullføre dette vurderingsoppdrag
 		<subject>Forespørsel om manusredigering</subject>
 		<body>{$copyeditorName}:
 
-Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet "{$articleTitle}" for {$journalName}. Du finner manuskriptet på tidsskriftets nettsted, sammen med vår Instruks for manusredigering.
+Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet "{$submissionTitle}" for {$contextName}. Du finner manuskriptet på tidsskriftets nettsted, sammen med vår Instruks for manusredigering.
 
 Manuskript URL: {$submissionCopyeditingUrl}
 Brukernavn: {$copyeditorUsername}
@@ -329,7 +329,7 @@ Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterlige
 		<subject>Manusredigeringen er fullført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå fullført første runde med manusredigering av  manuskriptet "{$articleTitle}" for {$journalName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer.
+Jeg har nå fullført første runde med manusredigering av  manuskriptet "{$submissionTitle}" for {$contextName}. Nå kan forfatter og redaktør gjennomgå mine spørsmål og forslag til endringer.
 
 Jeg vil samtidig benytte anledningen til å takke for oppdraget,
 {$copyeditorName}</body>
@@ -338,7 +338,7 @@ Jeg vil samtidig benytte anledningen til å takke for oppdraget,
 		<subject>Bekrefter at du har fullført manusredigering</subject>
 		<body>{$copyeditorName}:
 
-Takk for at du har manusredigert manuskriptet "{$articleTitle}" for {$journalName}. Vi setter stor pris på at du på denne måten bidrar til å sikre kvaliteten i våre publikasjoner.
+Takk for at du har manusredigert manuskriptet "{$submissionTitle}" for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre kvaliteten i våre publikasjoner.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten sendes av Seksjonsredaktøren til manuskriptets Manusredaktør for å bekrefte at Manusredaktøren har fullført oppdraget, og takke for det utførte arbeidet.</description>
@@ -347,7 +347,7 @@ Takk for at du har manusredigert manuskriptet "{$articleTitle}" for {$journalNam
 		<subject>Ditt redigerte manuskript - til gjennomgang</subject>
 		<body>{$authorName}:
 
-Vi har nå redigert ditt manuskript "{$articleTitle}" for {$journalName}. Vi ber deg nå om at du går inn på tidsskriftets nettsted (lenke nedenfor) for å gjennomgå forslagene til endringer og svare på redaktørens spørsmål til forfatteren. Der vil du også finne vår Instruks for manusredigering. Last ned og åpne filen til Første manusredigering. Etter at du har gjennomgått og bearbeidet det redigerte manuskriptet, laster du opp den bearbeidete filen til redigeringsfase 2, og sender e-posten UTFØRT til redaktøren.
+Vi har nå redigert ditt manuskript "{$submissionTitle}" for {$contextName}. Vi ber deg nå om at du går inn på tidsskriftets nettsted (lenke nedenfor) for å gjennomgå forslagene til endringer og svare på redaktørens spørsmål til forfatteren. Der vil du også finne vår Instruks for manusredigering. Last ned og åpne filen til Første manusredigering. Etter at du har gjennomgått og bearbeidet det redigerte manuskriptet, laster du opp den bearbeidete filen til redigeringsfase 2, og sender e-posten UTFØRT til redaktøren.
 
 Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige endringer i manuskriptet. Riktignok vil du senere også bli bedt om å korrekturlese de ferdig oppsatte sidene, men i den produksjonsfasen er det bare formatfeil og typografiske feil som kan korrigeres.
 
@@ -363,7 +363,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Gjennomgang av revidert manuskript er fullført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå gått igjennom de revisjonene manusredaktøren har bedt om for mitt manuskript "{$articleTitle}" for {$journalName}, og det er nå klart for siste runde manusredigering før layoutredigeringen settes i gang.
+Jeg har nå gått igjennom de revisjonene manusredaktøren har bedt om for mitt manuskript "{$submissionTitle}" for {$contextName}, og det er nå klart for siste runde manusredigering før layoutredigeringen settes i gang.
 
 Takk for deres bidrag til arbeidet mitt,
 {$authorName}</body>
@@ -373,7 +373,7 @@ Takk for deres bidrag til arbeidet mitt,
 		<subject>Bekrefter at du har fullført manusrevisjon</subject>
 		<body>{$authorName}:
 
-Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt manuskript "{$articleTitle}" for {$journalName}. Vi ser fram til å publisere arbeidet ditt.
+Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt manuskript "{$submissionTitle}" for {$contextName}. Vi ser fram til å publisere arbeidet ditt.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten sendes fra Seksjonsredaktøren til Forfatteren for å bekrefte at forfatterens revisjon er gjennomført, og for å takke for innsatsen.</description>
@@ -382,12 +382,12 @@ Takk for at du har fullført gjennomgangen din av revisjonsforslagene til ditt m
 		<subject>Manusredigering - siste gjennomgang</subject>
 		<body>{$copyeditorName}:
 
-Forfatteren og redaktøren har nå gått igjennom revisjonsforslagene til manuskriptet "{$articleTitle}" for {$journalName}. Nå er tiden inne til å gjøre klar manuskriptet i en "renkopi" for layout. Vi ber om at du foretar siste gjennomgang og rensing av manuskriptfilen, ved å bekrefte de endringene som er akseptert, og fjerne alle andre merknader, markeringer og overflødige formateringer. Manuskriptfilen som sendes til layoutredigering skal være så ren som mulig.
+Forfatteren og redaktøren har nå gått igjennom revisjonsforslagene til manuskriptet "{$submissionTitle}" for {$contextName}. Nå er tiden inne til å gjøre klar manuskriptet i en "renkopi" for layout. Vi ber om at du foretar siste gjennomgang og rensing av manuskriptfilen, ved å bekrefte de endringene som er akseptert, og fjerne alle andre merknader, markeringer og overflødige formateringer. Manuskriptfilen som sendes til layoutredigering skal være så ren som mulig.
 
 Manuskript URL: {$submissionCopyeditingUrl}
 Brukernavn: {$copyeditorUsername}
 
-{$journalName} takker deg for innsatsen,
+{$contextName} takker deg for innsatsen,
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Manusredaktøren bestiller siste gjennomgang og klargjøring av manuskriptet, før det kan sendes til layoutredigering.</description>
@@ -396,7 +396,7 @@ Brukernavn: {$copyeditorUsername}
 		<subject>Manusredigering - siste gjennomgang fullført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet "{$articleTitle}" for {$journalName}. Manuskriptet er nå klart for layoutredigering.
+Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet "{$submissionTitle}" for {$contextName}. Manuskriptet er nå klart for layoutredigering.
 
 {$copyeditorName}</body>
 		<description>Denne e-posten fra Manusredaktøren varsler Seksjonsredaktøren om at siste manusredigering av manuskriptet er fullført, og at layoutredigeringen kan settes i gang.</description>
@@ -405,7 +405,7 @@ Jeg har nå gjort klar en ren og ferdig redigert filversjon av manuskriptet "{$a
 		<subject>Bekrefter at siste manusgjennomgang er fullført</subject>
 		<body>{$copyeditorName}:
 
-Takk for at du har fullført siste manusredigering av manuskriptet "{$articleTitle}" for {$journalName}. Framstillingen av en slik god "renkopi" for layoutredigering er et viktig trinn i den redaksjonelle prosessen.
+Takk for at du har fullført siste manusredigering av manuskriptet "{$submissionTitle}" for {$contextName}. Framstillingen av en slik god "renkopi" for layoutredigering er et viktig trinn i den redaksjonelle prosessen.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Manusredaktøren bekrefter at siste manusredigering er fullført, og takker for innsatsen.</description>
@@ -414,7 +414,7 @@ Takk for at du har fullført siste manusredigering av manuskriptet "{$articleTit
 		<subject>Forespørsel om layoutredigering - sideoppsett</subject>
 		<body>{$layoutEditorName}:
 
-Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet "{$articleTitle}" for {$journalName}.
+Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet "{$submissionTitle}" for {$contextName}.
 
 Manuskript URL: {$submissionLayoutUrl}
 Brukernavn: {$layoutEditorUsername}
@@ -428,7 +428,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Sideoppsett fullført</subject>
 		<body>{$editorialContactName}:
 
-Sidene til manuskriptet "{$articleTitle}" er nå satt opp for {$journalName}, og er klare for korrekturlesing.
+Sidene til manuskriptet "{$submissionTitle}" er nå satt opp for {$contextName}, og er klare for korrekturlesing.
 
 Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter meg.
 
@@ -439,7 +439,7 @@ Hvis du har spørsmål til arbeidet jeg har utført, ber jeg om at du kontakter 
 		<subject>Bekrefter at layoutredigering er fullført</subject>
 		<body>{$layoutEditorName}:
 
-Takk for at du har satt opp sidene til manuskriptet "{$articleTitle}" for {$journalName}. Du har med dette gitt et viktig bidrag til publiseringsarbeidet vårt.
+Takk for at du har satt opp sidene til manuskriptet "{$submissionTitle}" for {$contextName}. Du har med dette gitt et viktig bidrag til publiseringsarbeidet vårt.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bekrefter at layoutredigeringen er fullført, og takker layoutredaktøren for innsatsen.</description>
@@ -448,7 +448,7 @@ Takk for at du har satt opp sidene til manuskriptet "{$articleTitle}" for {$jour
 		<subject>Sluttkorrektur av manuskript (Forfatter)</subject>
 		<body>{$authorName}:
 
-Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  "{$articleTitle}" for {$journalName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.
+Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  "{$submissionTitle}" for {$contextName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$authorUsername}
@@ -462,7 +462,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Sluttkorrektur gjennomført (Forfatter)</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}" for {$journalName}. Manuskriptfilen er nå klar for endelig korrekturlesing av korrekturleseren og layoutredaktøren.
+Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$submissionTitle}" for {$contextName}. Manuskriptfilen er nå klar for endelig korrekturlesing av korrekturleseren og layoutredaktøren.
 
 {$authorName}</body>
 		<description>Denne e-posten fra Forfatteren til Korrekturleseren og Redaktøren varsler dem om at Forfatteren har gjennomført sin korrekturlesing. De vil finne detaljene som kommentarer fra forfatteren til manuskriptfilen.</description>
@@ -471,7 +471,7 @@ Jeg har nå gjennomført min sluttkorrektur av mitt manuskript "{$articleTitle}"
 		<subject>Bekrefter gjennomført sluttkorrektur (Forfatter)</subject>
 		<body>{$authorName}:
 
-Takk for at du har gjennomført sluttkorrektur av ditt manuskript "{$articleTitle}" før publisering i {$journalName}. Vi ser nå fram til å publisere arbeidet ditt om ikke lenge.
+Takk for at du har gjennomført sluttkorrektur av ditt manuskript "{$submissionTitle}" før publisering i {$contextName}. Vi ser nå fram til å publisere arbeidet ditt om ikke lenge.
 
 Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgave blir publisert, vil du få innholdsfortegnelsen til nye utgaver av tidsskriftet så snart de blir utgitt. Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 
@@ -482,7 +482,7 @@ Hvis du har krysset av på din brukerside for å få e-post varsel når ny utgav
 		<subject>Forespørsel om korrekturlesning</subject>
 		<body>{$proofreaderName}:
 
-Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet "{$articleTitle}" for {$journalName}.
+Jeg ber deg med dette om å lese korrektur på de oppsatte sidene for manuskriptet "{$submissionTitle}" for {$contextName}.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$proofreaderUsername}
@@ -496,7 +496,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Korrektur gjennomført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nå gjennomført korrektur av manuskriptet "{$articleTitle}," for {$journalName}. Manuskriptfilen er nå klar for layoutredaktørens endelige korrektur.
+Jeg har nå gjennomført korrektur av manuskriptet "{$submissionTitle}," for {$contextName}. Manuskriptfilen er nå klar for layoutredaktørens endelige korrektur.
 
 {$proofreaderName}</body>
 		<description>Denne e-posten fra Korrekturleseren til Seksjonsredaktøren varsler om at korrekturen er gjennomført.</description>
@@ -505,7 +505,7 @@ Jeg har nå gjennomført korrektur av manuskriptet "{$articleTitle}," for {$jour
 		<subject>Bekrefter gjennomført korrektur</subject>
 		<body>{$proofreaderName}:
 
-Takk for at du har gjennomført korrektur av manuskriptet "{$articleTitle}" for {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
+Takk for at du har gjennomført korrektur av manuskriptet "{$submissionTitle}" for {$contextName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Korrekturleseren bekrefter at korrekturen er gjennomført, og takker for innsatsen.</description>
@@ -514,7 +514,7 @@ Takk for at du har gjennomført korrektur av manuskriptet "{$articleTitle}" for 
 		<subject>Forespørsel om korrektur (Layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet "{$articleTitle}" for {$journalName}.
+Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet "{$submissionTitle}" for {$contextName}.
 
 Manuskript URL: {$submissionUrl}
 Brukernavn: {$layoutEditorUsername}
@@ -528,7 +528,7 @@ Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har 
 		<subject>Korrektur ferdigstilt (Layoutredaktør)</subject>
 		<body>{$editorialContactName}:
 
-Sidekorrekturen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korrektur for {$journalName}. Manuskriptfilen er med dette klar til publisering.
+Sidekorrekturen til manuskriptet "{$submissionTitle}" er nå ferdigstilt etter korrektur for {$contextName}. Manuskriptfilen er med dette klar til publisering.
 
 {$layoutEditorName}</body>
 		<description>Denne e-posten fra Layoutredaktøren til Seksjonsredaktøren varsler om at de siste korrigeringene i manuskriptfilen er gjennomført, og at den dermed er klar for publisering.</description>
@@ -537,21 +537,21 @@ Sidekorrekturen til manuskriptet "{$articleTitle}" er nå ferdigstilt etter korr
 		<subject>Bekrefter ferdigstilt korrektur (Layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Takk for at du har ferdigstilt sidekorrekturen til manuskriptet "{$articleTitle}" for publisering i {$journalName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
+Takk for at du har ferdigstilt sidekorrekturen til manuskriptet "{$submissionTitle}" for publisering i {$contextName}. Med dette arbeidet har du gitt et viktig bidrag til publiseringsarbeidet vårt: takk for innsatsen.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bekrefter at manuskriptfilen er ferdigstilt for publisering, og takker for interessen.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>En artikkel som kan være av interesse for deg</subject>
-		<body>Jeg tenkte du kanskje kan være interessert i å lese artikkelen "{$articleTitle}". Den er skrevet av {$authorName} og publisert i Vol {$volume}, Nr {$number} ({$year}) av {$journalName}, og er tilgjengelig på nettet: "{$articleUrl}".</body>
+		<body>Jeg tenkte du kanskje kan være interessert i å lese artikkelen "{$submissionTitle}". Den er skrevet av {$authorName} og publisert i Vol {$volume}, Nr {$number} ({$year}) av {$contextName}, og er tilgjengelig på nettet: "{$articleUrl}".</body>
 		<description>Denne e-postmalen gir en registrert bruker muligheten til å sende e-post om en interessant artikkel til andre interesserte. Den er tilgjengelig via Leseverktøy, og må være slått på av Redaksjonslederen fra administrasjonssiden for Leseverktøy valg.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Varsel om nyopprettet abonnement</subject>
 		<body>{$subscriberName}:
 
-Du er nå registrert som abonnent hos det nettbaserte tidsskriftet {$journalName}, med denne abonnementstypen:
+Du er nå registrert som abonnent hos det nettbaserte tidsskriftet {$contextName}, med denne abonnementstypen:
 
 {$subscriptionType}
 
@@ -570,7 +570,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 		<subject>Ny utgave i Open Access</subject>
 		<body>Til våre lesere:
 
-{$journalName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt ({$journalUrl}) for å se nærmere på innholdet.
+{$contextName} har nå gjort følgende utgave tilgjengelig i open access format. Innholdsfortegnelsen er her vedlagt. Vi inviterer deg med det samme til å besøk nettstedet vårt ({$journalUrl}) for å se nærmere på innholdet.
 
 Takk for at du viser interesse for arbeidet vårt,
 {$editorialContactSignature}</body>
@@ -580,7 +580,7 @@ Takk for at du viser interesse for arbeidet vårt,
 		<subject>Varsel: abonnementet ditt utløper</subject>
 		<body>{$subscriberName}:
 
-Abonnementet ditt på {$journalName} utløper snart.
+Abonnementet ditt på {$contextName} utløper snart.
 
 {$subscriptionType}
 Utløpsdato: {$expiryDate}
@@ -596,7 +596,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 		<subject>Varsel: abonnementet ditt er utløpt</subject>
 		<body>{$subscriberName}:
 
-Abonnementet ditt på {$journalName} er utløpt.
+Abonnementet ditt på {$contextName} er utløpt.
 
 {$subscriptionType}
 Utløpsdato: {$expiryDate}
@@ -612,7 +612,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 		<subject>Abonnementet ditt er utløpt - siste varsel</subject>
 		<body>{$subscriberName}:
 
-Abonnementet ditt på {$journalName} er utløpt.
+Abonnementet ditt på {$contextName} er utløpt.
 Dette er det siste varselet du vil motta fra oss om dette.
 
 {$subscriptionType}
@@ -629,7 +629,7 @@ Hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg.
 		<subject>Bekreft brukerkontoen din</subject>
 		<body>{$userFullName}
 
-Du har opprettet en brukerkonto hos {$journalName}, men før du kan begynne å bruke den, må du først bekrefte e-postkontoen din. Følg lenken nedenfor for å bekrefte e-postkontoen din:
+Du har opprettet en brukerkonto hos {$contextName}, men før du kan begynne å bruke den, må du først bekrefte e-postkontoen din. Følg lenken nedenfor for å bekrefte e-postkontoen din:
 
 {$activateUrl}
 
@@ -638,10 +638,10 @@ Takk,
 		<description>Denne e-posten sendes til nyregistrerte brukere for å ønske dem velkommen til systemet og gi dem tilgang til en oversikt over deres eget brukernavn og passord.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registrering som fagkonsulent for {$journalName}</subject>
-		<body>På grunn av ditt faglige omdømme har vi tillatt oss å registrere navnet ditt databasen over potensielle fagkonsulenter for {$journalName}. Dette innebærer ingen form for forpliktelse fra din side, men gir oss en enkel mulighet til å henvende oss til deg hvis vi får manuskript vi tror du vil være interessert i være fagkonsulent for. Hvis du blir bedt om å påta deg et slikt oppdrag, vil du få mulighet til å se tittel og sammendrag for det aktuelle manuskriptet gjennom nettstedet vårt, og du vil alltid stå fritt til å akseptere eller avslå oppdraget. Du kan dessuten når som helst be om at navnet ditt blir fjernet fra databasen vår over potensielle fagkonsulenter.
+		<subject>Registrering som fagkonsulent for {$contextName}</subject>
+		<body>På grunn av ditt faglige omdømme har vi tillatt oss å registrere navnet ditt databasen over potensielle fagkonsulenter for {$contextName}. Dette innebærer ingen form for forpliktelse fra din side, men gir oss en enkel mulighet til å henvende oss til deg hvis vi får manuskript vi tror du vil være interessert i være fagkonsulent for. Hvis du blir bedt om å påta deg et slikt oppdrag, vil du få mulighet til å se tittel og sammendrag for det aktuelle manuskriptet gjennom nettstedet vårt, og du vil alltid stå fritt til å akseptere eller avslå oppdraget. Du kan dessuten når som helst be om at navnet ditt blir fjernet fra databasen vår over potensielle fagkonsulenter.
 
-Vi gir deg her et brukernavn og et passord til nettstedet vårt, som kan brukes til alt alminnelig samarbeid med {$journalName}. Der kan du også endre profilopplysningene dine; som for eksempel institusjonstilknytning og faginteresser.
+Vi gir deg her et brukernavn og et passord til nettstedet vårt, som kan brukes til alt alminnelig samarbeid med {$contextName}. Der kan du også endre profilopplysningene dine; som for eksempel institusjonstilknytning og faginteresser.
 
 Brukernavn: {$username}
 Passord: {$password}
@@ -689,7 +689,7 @@ Ditt passord for å slå av e-postmeldinger er: {$password}
 		<subject>Redaktørens beslutning</subject>
 		<body>{$authorName}:
 
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$articleTitle}".
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$submissionTitle}".
 
 Vår beslutning er:
 
@@ -699,7 +699,7 @@ Vår beslutning er:
 		<subject>Redaktørens beslutning</subject>
 		<body>{$authorName}:
 
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$articleTitle}".
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, "{$submissionTitle}".
 
 Vår beslutning er:
 
@@ -709,7 +709,7 @@ Vår beslutning er:
 		<subject>Redaktørens beslutning</subject>
 		<body>{$authorName}:
 
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$articleTitle}".
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$submissionTitle}".
 
 Vår beslutning er:
 
@@ -719,7 +719,7 @@ Vår beslutning er:
 		<subject>Redaktørens beslutning</subject>
 		<body>{$authorName}:
 
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$articleTitle}".
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, "{$submissionTitle}".
 
 Vår beslutning er:
 
@@ -727,7 +727,7 @@ Vår beslutning er:
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Abonnementskjøp: Individuelt abonnement</subject>
-		<body>Et individuelt abonnement på {$journalName} har blitt kjøpt online. Detaljer om kjøpet:
+		<body>Et individuelt abonnement på {$contextName} har blitt kjøpt online. Detaljer om kjøpet:
 
 Abonnementstype:
 {$subscriptionType}
@@ -744,7 +744,7 @@ Abonnements-URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Abonnementskjøp: Institusjonelt abonnement</subject>
-		<body>Et institusjonelt abonnement på {$journalName} har blitt kjøpt online. Detaljer om kjøpet nedenfor. For å aktivisere abonnementet, bruk den angitte abonnements-URLen og sett abonnementsstatus til «Aktiv».
+		<body>Et institusjonelt abonnement på {$contextName} har blitt kjøpt online. Detaljer om kjøpet nedenfor. For å aktivisere abonnementet, bruk den angitte abonnements-URLen og sett abonnementsstatus til «Aktiv».
 
 Abonnementstype:
 {$subscriptionType}
@@ -771,7 +771,7 @@ Abonnements-URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Abonnementsfornyelse: Individuelt abonnement</subject>
-		<body>Et individuelt abonnement på {$journalName} har blitt fornyet online. For mer informasjon se nedenfor.
+		<body>Et individuelt abonnement på {$contextName} har blitt fornyet online. For mer informasjon se nedenfor.
 
 Abonnementstype:
 {$subscriptionType}
@@ -788,7 +788,7 @@ Abonnements-URL: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Abonnementsfornyelse: Institusjonelt abonnement</subject>
-		<body>Et institusjonelt abonnement på {$journalName} har blitt fornyet online. For mer informasjon se nedenfor.
+		<body>Et institusjonelt abonnement på {$contextName} har blitt fornyet online. For mer informasjon se nedenfor.
 
 Abonnementstype:
 {$subscriptionType}

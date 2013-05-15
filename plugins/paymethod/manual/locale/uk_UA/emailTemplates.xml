@@ -14,7 +14,7 @@
 <email_texts locale="uk_UA">
        <email_text key="MANUAL_PAYMENT_NOTIFICATION">
                <subject>Інформування про платіж</subject>
-               <body>На рахунок журналу {$journalName} користувачем {$userFullName} (username "{$userName}") повинен бути перерахований платіж.
+               <body>На рахунок журналу {$contextName} користувачем {$userFullName} (username "{$userName}") повинен бути перерахований платіж.
 
 Це плата за "{$itemName}".
 Сума платежу {$itemCost} ({$itemCurrencyCode}).

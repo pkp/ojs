@@ -11,7 +11,7 @@
 <email_texts locale="ro_RO">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Activitate PayPal anormală</subject>
-		<body>Open Journal Systems a sesizat o activitate anormală privind suportul pentru plăți prin PayPal pentru revista {$journalName}. Această activitate necesită investigații sau intervenția manuală.
+		<body>Open Journal Systems a sesizat o activitate anormală privind suportul pentru plăți prin PayPal pentru revista {$contextName}. Această activitate necesită investigații sau intervenția manuală.
                        
 Acest email a fost generat de modulul pentru plăți prin PayPal al Open Journal Systems.
 

@@ -12,7 +12,7 @@
 <email_texts locale="de_DE">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Dissertations-Abstract-Einreichung</subject>
-		<body>Diese E-Mail wurde automatisch generiert durch das Dissertations-Abstract-Einreichungsformular von {$journalName}.
+		<body>Diese E-Mail wurde automatisch generiert durch das Dissertations-Abstract-Einreichungsformular von {$contextName}.
 
 Bitte bestätigen Sie, dass die eingegebenen Informationen korrekt sind. Nachdem wir Ihre Bestätigung erhalten haben, wird das Abstract in der Onlinefassung dieser Zeitschrift veröffentlicht.
 

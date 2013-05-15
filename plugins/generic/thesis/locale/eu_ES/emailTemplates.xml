@@ -12,7 +12,7 @@
 <email_texts locale="eu_ES">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Tesi-laburpenaren bidalketa</subject>
-		<body>Mezu hau automatikoki sortu du {$journalName} aldizkariko tesi-laburpena bidaltzeko inprimakiak.
+		<body>Mezu hau automatikoki sortu du {$contextName} aldizkariko tesi-laburpena bidaltzeko inprimakiak.
 
 Mesedez, berretsi bidali diguten informazioa zuzena dela. Zure berrespena jasotzen dugunean, laburpena aldizkariaren lineako edizioan argitaratuko da.
 

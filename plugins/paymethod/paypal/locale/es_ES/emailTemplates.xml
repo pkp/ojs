@@ -11,7 +11,7 @@
 <email_texts locale="es_ES">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Actividad inusual de PayPal</subject>
-		<body>Open Journal Systems ha notado una actividad inusual relacionada con el soporte de pago de PayPal para la revista {$journalName}.  Esta actividad puede necesitar de mayor investigación o intervención manual.
+		<body>Open Journal Systems ha notado una actividad inusual relacionada con el soporte de pago de PayPal para la revista {$contextName}.  Esta actividad puede necesitar de mayor investigación o intervención manual.
 
 Este email ha sido generado por el plugin de PayPal de Open Journal Systems.
 

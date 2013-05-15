@@ -11,7 +11,7 @@
 <email_texts locale="eu_ES">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Ezohiko PayPal jarduera</subject>
-		<body>Open Journal Systems-ek ezohiko jarduera sumatu du {$journalName} aldizkariaren PayPal ordainketa-zerbitzuan. Jarduera hori gehiago ikertu beharko da edo eskuz parte hartu beharko da.
+		<body>Open Journal Systems-ek ezohiko jarduera sumatu du {$contextName} aldizkariaren PayPal ordainketa-zerbitzuan. Jarduera hori gehiago ikertu beharko da edo eskuz parte hartu beharko da.
                        
 Mezu hau Open Journal Systems-en PayPal pluginak sortu du.
 

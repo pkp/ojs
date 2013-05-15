@@ -427,7 +427,7 @@ class OJSPaymentManager extends PaymentManager {
 				$giftJournalName = $journal->getName($giftLocale);
 				$giftContactSignature = $journal->getSetting('contactName');
 
-				import('classes.mail.MailTemplate');
+				import('lib.pkp.classes.mail.MailTemplate');
 				$mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
 				$mail->setReplyTo(null);
 				$mail->assignParams(array(

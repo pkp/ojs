@@ -12,7 +12,7 @@
 <email_texts locale="pt_BR">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notificação de depósito em repositório SWORD</subject>
-		<body>Parabéns pela aceitação de publicação de sua submissão "{$articleTitle}", na revista {$journalName}. 
+		<body>Parabéns pela aceitação de publicação de sua submissão "{$submissionTitle}", na revista {$contextName}. 
 Caso deseje, pode depositar automaticamente esta submissão em um ou mais repositórios.
 
 Acesse {$swordDepositUrl} para proceder.

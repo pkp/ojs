@@ -12,7 +12,7 @@
 <email_texts locale="ro_RO">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Depunerea abstractului pentru o teză</subject>
-		<body>Acest email a fost generat automat de formularul pentru depunerea abstractelor al {$journalName}.
+		<body>Acest email a fost generat automat de formularul pentru depunerea abstractelor al {$contextName}.
 
 Confirmă faptul că informația trimisă este corectă. La momentul primirii confirmării, abstractul va fi publicat în ediția ofline a revistei.
 

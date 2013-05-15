@@ -11,7 +11,7 @@
 <email_texts locale="fa_IR">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>فعالیت غیر عدی PayPal</subject>
-		<body>سیستم های مجله آزاد فعالیتی غیر عادی مربوط به قسمت پرداخت PayPal برای {$journalName} را کشف کرده است.
+		<body>سیستم های مجله آزاد فعالیتی غیر عادی مربوط به قسمت پرداخت PayPal برای {$contextName} را کشف کرده است.
 این فعالیت ممکن است بررسی بیشتر شما را ایجاب کند.
                        
 این ایمیل توسط پلاگین PayPal سیستم های مجله آزاد تولید شده است.

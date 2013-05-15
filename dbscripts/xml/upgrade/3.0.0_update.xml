@@ -43,4 +43,22 @@
 		<!-- note files -->
 		<query>UPDATE article_files SET file_stage = '3' WHERE file_stage = '8'</query>
 	</sql>
+	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
+	<sql>
+		<!-- journalName becomes contextName -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalName}', '{$contextName}'), subject=REPLACE(subject, '{$journalName}', '{$contextName}')</query>
+		<!-- journalUrl becomes contextUrl -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$journalUrl}', '{$contextUrl}'), subject=REPLACE(subject, '{$journalUrl}', '{$contextUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$journalUrl}', '{$contextUrl}'), subject=REPLACE(subject, '{$journalUrl}', '{$contextUrl}')</query>
+		<!-- articleTitle becomes submissionTitle -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$articleTitle}', '{$submissionTitle}'), subject=REPLACE(subject, '{$articleTitle}', '{$submissionTitle}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$articleTitle}', '{$submissionTitle}'), subject=REPLACE(subject, '{$articleTitle}', '{$submissionTitle}')</query>
+		<!-- articleId becomes submissionId -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$articleId}', '{$submissionId}'), subject=REPLACE(subject, '{$articleId}', '{$submissionId}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$articleId}', '{$submissionId}'), subject=REPLACE(subject, '{$articleId}', '{$submissionId}')</query>
+		<!-- articleAbstract becomes submissionAbstract -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
+	</sql>
 </data>

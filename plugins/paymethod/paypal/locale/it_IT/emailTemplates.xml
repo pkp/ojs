@@ -11,7 +11,7 @@
 <email_texts locale="it_IT">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Attività PayPal sospetta</subject>
-		<body>Open Journal Systems ha riscontrato un'attivtà sospetta sul conto PayPal della rivista {$journalName}. Ciò può richiedere ulteriori indagini o un intervento manuale.
+		<body>Open Journal Systems ha riscontrato un'attivtà sospetta sul conto PayPal della rivista {$contextName}. Ciò può richiedere ulteriori indagini o un intervento manuale.
 
 Questa email è stata generata da Open Journal Systems' PayPal plugin
 

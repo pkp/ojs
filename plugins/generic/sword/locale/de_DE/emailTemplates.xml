@@ -12,7 +12,7 @@
 <email_texts locale="de_DE">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Archivierungsbenachrichtigung</subject>
-		<body>Herzlichen Glückwunsch zur Annahme Ihres Beitrags "{$articleTitle}" zur Veröffentlichung in {$journalName}. Wenn Sie möchten, können Sie Ihren Beitrag automatisch in einem oder mehreren Repositorien archivieren.
+		<body>Herzlichen Glückwunsch zur Annahme Ihres Beitrags "{$submissionTitle}" zur Veröffentlichung in {$contextName}. Wenn Sie möchten, können Sie Ihren Beitrag automatisch in einem oder mehreren Repositorien archivieren.
 
 Fahren Sie unter {$swordDepositUrl} fort.
 

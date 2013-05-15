@@ -11,7 +11,7 @@
 <email_texts locale="zh_CN">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>不正常的PayPal活动</subject>
-		<body>开放期刊系统遇到不正常的活动，是关于{$journalName}期刊的PayPal支付支持。此活动肯需要进一步调查或者人工干预。
+		<body>开放期刊系统遇到不正常的活动，是关于{$contextName}期刊的PayPal支付支持。此活动肯需要进一步调查或者人工干预。
 
 此电子邮件是由开放期刊系统的PayPal插件生成的。
 

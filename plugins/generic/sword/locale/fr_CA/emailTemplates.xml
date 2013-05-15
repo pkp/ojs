@@ -12,7 +12,7 @@
 <email_texts locale="fr_CA">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Avis de dépôt</subject>
-		<body>Félicitations pour l'acceptation de votre soumission, "{$articleTitle}", pour publication dans la revue {$journalName}. Si vous le souhaitez, vous pouvez déposer automatiquement votre soumission dans un ou plusieurs de nos services d'archivage.
+		<body>Félicitations pour l'acceptation de votre soumission, "{$submissionTitle}", pour publication dans la revue {$contextName}. Si vous le souhaitez, vous pouvez déposer automatiquement votre soumission dans un ou plusieurs de nos services d'archivage.
 
 Aller à {$swordDepositUrl} afin de procéder.
 

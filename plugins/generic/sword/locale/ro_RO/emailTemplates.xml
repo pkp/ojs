@@ -12,7 +12,7 @@
 <email_texts locale="ro_RO">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Înștiințare pentru depozitare</subject>
-		<body>Felicitări pentru acceptul propunerii de articol "{$articleTitle}" pentru a fi publicat în  {$journalName}. Dacă doriți, puteți depozita automat propunerea în unul sau mai multe depozite.
+		<body>Felicitări pentru acceptul propunerii de articol "{$submissionTitle}" pentru a fi publicat în  {$contextName}. Dacă doriți, puteți depozita automat propunerea în unul sau mai multe depozite.
 
 Mergi la {$swordDepositUrl} pentru a proceda.
 

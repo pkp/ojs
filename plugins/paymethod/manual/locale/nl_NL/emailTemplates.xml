@@ -11,7 +11,7 @@
 <email_texts locale="nl_NL">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Bericht van handmatige betaling</subject>
-		<body>Er moet een handmatige betaling verwerkt worden voor tijdschrift {$journalName} en gebruiker {$userFullName} (gebruikersnaam "{$userName}").
+		<body>Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$userFullName} (gebruikersnaam "{$userName}").
 
 Er wordt betaald voor "{$itemName}".
 De prijs is {$itemCost} ({$itemCurrencyCode}).

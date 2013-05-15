@@ -35,7 +35,7 @@ Dit brugernavn: {$username} Din nye adgangskode: {$password}
 		<subject>Tidsskriftsregistrering</subject>
 		<body>{$userFullName}
 
-Du er nu registreret som bruger hos {$journalName}. Vi har anført dit brugernavn og din adgangskode i denne e-mail, som du skal bruge til alt arbejde i forbindelse med dette tidsskrift via tidsskriftets websted. Du kan til enhver tid bede om at blive fjernet fra tidsskriftets liste over brugere ved at kontakte mig.
+Du er nu registreret som bruger hos {$contextName}. Vi har anført dit brugernavn og din adgangskode i denne e-mail, som du skal bruge til alt arbejde i forbindelse med dette tidsskrift via tidsskriftets websted. Du kan til enhver tid bede om at blive fjernet fra tidsskriftets liste over brugere ved at kontakte mig.
 
 Brugernavn: {$username} Adgangskode: {$password}
 
@@ -46,7 +46,7 @@ Tak. {$principalContactSignature}</body>
 		<subject>Valider din konto</subject>
 		<body>{$userFullName}
 
-Du har oprettet en konto hos {$journalName}, men inden du kan benytte den, skal du validere din e-mail-konto. Det gør du ved blot at følge linket nedenfor:
+Du har oprettet en konto hos {$contextName}, men inden du kan benytte den, skal du validere din e-mail-konto. Det gør du ved blot at følge linket nedenfor:
 
 {$activateUrl}
 
@@ -54,8 +54,8 @@ Tak. {$principalContactSignature}</body>
 		<description>Denne e-mail sendes til netop registrerede brugere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registrering som bedømmer hos {$journalName}</subject>
-		<body>På baggrund af din ekspertise har vi taget den frihed at registrere dit navn i bedømmerdatabasen for {$journalName}. Dette stiller ikke krav om nogen form for engagement fra din side, men gør det blot muligt for os at kontakte dig med hensyn til en eventuelt bedømmelse af et manuskript. Hvis du inviteres til at foretage en bedømmelse, vil du have mulighed for at se titlen på og et resumé af det pågældende manuskript, og du vil altid kunne acceptere eller afvise invitationen. Du kan til enhver tid også bede om at få dit navn fjernet fra listen over bedømmere.
+		<subject>Registrering som bedømmer hos {$contextName}</subject>
+		<body>På baggrund af din ekspertise har vi taget den frihed at registrere dit navn i bedømmerdatabasen for {$contextName}. Dette stiller ikke krav om nogen form for engagement fra din side, men gør det blot muligt for os at kontakte dig med hensyn til en eventuelt bedømmelse af et manuskript. Hvis du inviteres til at foretage en bedømmelse, vil du have mulighed for at se titlen på og et resumé af det pågældende manuskript, og du vil altid kunne acceptere eller afvise invitationen. Du kan til enhver tid også bede om at få dit navn fjernet fra listen over bedømmere.
 
 Vi giver dig et brugernavn og en adgangskode, der skal bruges i forbindelse med alle interaktioner med tidsskriftet via tidsskriftets webside. Du kan f.eks. bede om at få opdateret din profil, herunder dine bedømmelsesinteresser.
 
@@ -68,16 +68,16 @@ Tak. {$principalContactSignature}</body>
 		<subject>Ny udgave er blevet publiceret</subject>
 		<body>Læsere:
 
-{$journalName} har lige publiceret den seneste udgave på {$journalUrl}. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler og elementer, der har din interesse.
+{$contextName} har lige publiceret den seneste udgave på {$journalUrl}. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler og elementer, der har din interesse.
 
 Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes til registrerede læsere via linket "Underret brugere" på redaktørens brugerstartside. Den underretter læsere om en ny udgave og inviterer dem til at besøge tidsskriftet på en angiven URL-adresse.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Forespørgsel om arkivering af {$journalName}</subject>
+		<subject>Forespørgsel om arkivering af {$contextName}</subject>
 		<body>Kære [universitetsbibliotekar]
 
-{$journalName} &lt;{$journalUrl}&gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.
+{$contextName} &lt;{$journalUrl}&gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.
 
 [Kort beskrivelse af tidsskrift]
 
@@ -90,10 +90,10 @@ Tak.
 		<description>Denne e-mail anmoder den ansvarlige for et LOCKSS-arkiv om at overveje at inkludere dette tidsskrift i deres arkiv. Den indeholder URL-adressen til tidsskriftets LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Forespørgsel om arkivering af {$journalName}</subject>
+		<subject>Forespørgsel om arkivering af {$contextName}</subject>
 		<body>Kære [universitetsbibliotekar]
 
-{$journalName} &lt;{$journalUrl}&gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.
+{$contextName} &lt;{$journalUrl}&gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.
 
 [Kort beskrivelse af tidsskrift]
 
@@ -109,7 +109,7 @@ Tak.
 		<subject>Bekræftelse af manuskript</subject>
 		<body>{$authorName}:
 
-Tak, fordi du har fremsendt manuskriptet "{$articleTitle}" til {$journalName}. Ved hjælp af det onlinetidsskriftsstyringssystem, vi bruger, kan du følge manuskriptet igennem den redaktionelle proces ved at logge på tidsskriftets websted:
+Tak, fordi du har fremsendt manuskriptet "{$submissionTitle}" til {$contextName}. Ved hjælp af det onlinetidsskriftsstyringssystem, vi bruger, kan du følge manuskriptet igennem den redaktionelle proces ved at logge på tidsskriftets websted:
 
 Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}
 
@@ -122,7 +122,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Uegnet manuskript</subject>
 		<body>{$authorName}:
 
-En indledende bedømmelse af "{$articleTitle}" viser, at dette manuskript ikke stemmer overens med {$journalName}'s område og fokus. Jeg anbefaler, at du læser beskrivelsen af dette tidsskrift under Om samt dets aktuelle indhold for at få mere at vide om de artikler, vi publicerer. Du kan også overveje at sende manuskriptet til et andet og mere velegnet tidsskrift.
+En indledende bedømmelse af "{$submissionTitle}" viser, at dette manuskript ikke stemmer overens med {$contextName}'s område og fokus. Jeg anbefaler, at du læser beskrivelsen af dette tidsskrift under Om samt dets aktuelle indhold for at få mere at vide om de artikler, vi publicerer. Du kan også overveje at sende manuskriptet til et andet og mere velegnet tidsskrift.
 
 {$editorialContactSignature}</body>
 	</email_text>
@@ -130,14 +130,14 @@ En indledende bedømmelse af "{$articleTitle}" viser, at dette manuskript ikke s
 		<subject>Kommentar til manuskript</subject>
 		<body>{$name}:
 
-{$commentName} har føjet en kommentar til manuskriptet "{$articleTitle}" i {$journalName}:
+{$commentName} har føjet en kommentar til manuskriptet "{$submissionTitle}" i {$contextName}:
 
 {$comments}</body>
 		<description>Denne e-mail underretter de personer, der er involveret i et manuskripts redigeringsproces, om, at der er sendt en ny kommentar.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Beslutning om "{$articleTitle}"</subject>
-		<body>Da du er en af bedømmerne af manuskriptet "{$articleTitle}" til {$journalName}, sender jeg dig de bedømmelser og den redaktionelle beslutning, der er sendt til forfatteren af manuskriptet. Vi takker dig endnu en gang for dit vigtige bidrag til denne proces.
+		<subject>Beslutning om "{$submissionTitle}"</subject>
+		<body>Da du er en af bedømmerne af manuskriptet "{$submissionTitle}" til {$contextName}, sender jeg dig de bedømmelser og den redaktionelle beslutning, der er sendt til forfatteren af manuskriptet. Vi takker dig endnu en gang for dit vigtige bidrag til denne proces.
  
 {$editorialContactSignature}
 
@@ -148,7 +148,7 @@ En indledende bedømmelse af "{$articleTitle}" viser, at dette manuskript ikke s
 		<subject>Redaktionel tildeling</subject>
 		<body>{$editorialContactName}:
 
-Som sektionsredaktør har du fået tildelt manuskriptet "{$articleTitle}", der er sendt til {$journalName}, og som du skal følge igennem den redaktionelle proces.  
+Som sektionsredaktør har du fået tildelt manuskriptet "{$submissionTitle}", der er sendt til {$contextName}, og som du skal følge igennem den redaktionelle proces.  
 
 Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$editorUsername}
 
@@ -159,7 +159,7 @@ Tak. {$editorialContactSignature}</body>
 		<subject>Forespørgsel om bedømmelse af artikel</subject>
 		<body>{$reviewerName}:
 
-Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$articleTitle}", der er blevet sendt til {$journalName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$submissionTitle}", der er blevet sendt til {$contextName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
 
 Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$journalUrl}
 
@@ -175,16 +175,16 @@ Tak for din overvejelse af denne forespørgsel.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
-{$abstractTermIfEnabled} {$articleAbstract}</body>
+{$abstractTermIfEnabled} {$submissionAbstract}</body>
 		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2. (Se ellers REVIEW_REQUEST_ATTACHED).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Forespørgsel om bedømmelse af artikel</subject>
 		<body>{$reviewerName}:
 
-Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$articleTitle}", der er blevet sendt til {$journalName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet "{$submissionTitle}", der er blevet sendt til {$contextName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.
 
 Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling.
 
@@ -198,16 +198,16 @@ Tak for din overvejelse af denne forespørgsel.
 
 
 
-"{$articleTitle}"
+"{$submissionTitle}"
 
-{$abstractTermIfEnabled} {$articleAbstract}</body>
+{$abstractTermIfEnabled} {$submissionAbstract}</body>
 		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2, og adgang for bedømmere ved hjælp af ét klik er aktiveret.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Forespørgsel om bedømmelse af artikel</subject>
 		<body>{$reviewerName}:
 
-Jeg tror, at du vil kunne være en fremragende bedømmer af manuskriptet "{$articleTitle}", og jeg beder dig om at overveje at påtage dig denne vigtige opgave for os. Dette tidsskrifts Retningslinjer for bedømmelser er angivet nedenfor, og manuskriptet er vedhæftet denne e-mail. Din bedømmelse af manuskriptet samt din anbefaling skal sendes til mig pr. e-mail senest den {$reviewDueDate}.
+Jeg tror, at du vil kunne være en fremragende bedømmer af manuskriptet "{$submissionTitle}", og jeg beder dig om at overveje at påtage dig denne vigtige opgave for os. Dette tidsskrifts Retningslinjer for bedømmelser er angivet nedenfor, og manuskriptet er vedhæftet denne e-mail. Din bedømmelse af manuskriptet samt din anbefaling skal sendes til mig pr. e-mail senest den {$reviewDueDate}.
 
 Meld venligst tilbage via e-mail inden den {$weekLaterDate}, om du kan og er villig til at foretage bedømmelsen.
 
@@ -226,7 +226,7 @@ Retningslinjer for bedømmelser
 		<subject>Annullering af forespørgsel om bedømmelse</subject>
 		<body>{$reviewerName}:
 
-På nuværende tidspunkt har vi valgt at annullere vores forespørgsel til dig om at bedømme manuskriptet "{$articleTitle}" til {$journalName}. Vi beklager den ulejlighed, dette eventuelt måtte forårsage, og vi håber, at vi må henvende os til dig i fremtiden og bede om din assistance i forbindelse med dette tidsskrifts bedømmelsesproces.
+På nuværende tidspunkt har vi valgt at annullere vores forespørgsel til dig om at bedømme manuskriptet "{$submissionTitle}" til {$contextName}. Vi beklager den ulejlighed, dette eventuelt måtte forårsage, og vi håber, at vi må henvende os til dig i fremtiden og bede om din assistance i forbindelse med dette tidsskrifts bedømmelsesproces.
 
 Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 
@@ -237,7 +237,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Kan foretage bedømmelse</subject>
 		<body>{$editorialContactName}:
 
-Jeg kan og er villig til at bedømme manuskriptet "{$articleTitle}" til {$journalName}. Tak, fordi du tænkte på mig, og jeg planlægger at være færdig med bedømmelsen senest på forfaldsdatoen, {$reviewDueDate}, hvis ikke før.
+Jeg kan og er villig til at bedømme manuskriptet "{$submissionTitle}" til {$contextName}. Tak, fordi du tænkte på mig, og jeg planlægger at være færdig med bedømmelsen senest på forfaldsdatoen, {$reviewDueDate}, hvis ikke før.
 
 {$reviewerName}</body>
 		<description>Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet accepteret, og at bedømmelsen vil være fuldført til den angivne dato.</description>
@@ -246,7 +246,7 @@ Jeg kan og er villig til at bedømme manuskriptet "{$articleTitle}" til {$journa
 		<subject>Kan ikke foretage bedømmelse</subject>
 		<body>{$editorialContactName}:
 
-Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet "{$articleTitle}" til {$journalName}. Tak, fordi du tænkte på mig, og du er altid velkommen til at kontakte mig en anden gang.
+Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet "{$submissionTitle}" til {$contextName}. Tak, fordi du tænkte på mig, og du er altid velkommen til at kontakte mig en anden gang.
 
 {$reviewerName}</body>
 		<description>Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet afvist.</description>
@@ -255,7 +255,7 @@ Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet "{$
 		<subject>Bedømmelse af artikel er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nu færdig med min bedømmelse af "{$articleTitle}" til {$journalName} og har fremsendt min anbefaling, "{$recommendation}".
+Jeg har nu færdig med min bedømmelse af "{$submissionTitle}" til {$contextName} og har fremsendt min anbefaling, "{$recommendation}".
 
 {$reviewerName}</body>
 		<description>Denne e-mail sendes af en bedømmer til sektionsredaktøren og underretter vedkommende om, at bedømmelsen er fuldført, og at kommentarerne og anbefalingerne er blevet registreret på tidsskriftets websted.</description>
@@ -264,7 +264,7 @@ Jeg har nu færdig med min bedømmelse af "{$articleTitle}" til {$journalName} o
 		<subject>Bekræftelse af bedømmelse af artikel</subject>
 		<body>{$reviewerName}:
 
-Tak, fordi du har fuldført bedømmelsen af manuskriptet "{$articleTitle}" til {$journalName}. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer.
+Tak, fordi du har fuldført bedømmelsen af manuskriptet "{$submissionTitle}" til {$contextName}. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes af sektionsredaktøren for at bekræfte modtagelsen af en fuldført bedømmelse og takker bedømmeren for sit bidrag.</description>
@@ -273,7 +273,7 @@ Tak, fordi du har fuldført bedømmelsen af manuskriptet "{$articleTitle}" til {
 		<subject>Påmindelse om bedømmelse af manuskript</subject>
 		<body>{$reviewerName}:
 
-Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$articleTitle}" til {$journalName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.
+Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$submissionTitle}" til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.
 
 Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}
 
@@ -288,7 +288,7 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 		<subject>Påmindelse om bedømmelse af manuskript</subject>
 		<body>{$reviewerName}:
 
-Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$articleTitle}" til {$journalName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.
+Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$submissionTitle}" til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.
 
 Manuskriptets URL-adresse: {$submissionReviewUrl}
 
@@ -301,7 +301,7 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 		<subject>Automatisk påmindelse om bedømmelse af manuskript</subject>
 		<body>{$reviewerName}:
 
-Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$articleTitle}" til {$journalName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.
+Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$submissionTitle}" til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.
 
 Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}
 
@@ -316,7 +316,7 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 		<subject>Automatisk påmindelse om bedømmelse af manuskript</subject>
 		<body>{$reviewerName}:
 
-Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$articleTitle}" til {$journalName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.
+Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet "{$submissionTitle}" til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.
 
 Manuskriptets URL-adresse: {$submissionReviewUrl}
 
@@ -329,9 +329,9 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 		<subject>Forespørgsel om manuskriptredigering</subject>
 		<body>{$copyeditorName}:
 
-Jeg vil bede dig om at foretage manuskriptredigering af "{$articleTitle}" til {$journalName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Se instruktionerne til manuskriptredigering, der findes på websiden. 4. Åbn den hentede fil, og rediger manuskriptet, idet du tilføjer forfatterforespørgsler efter behov. 5. Gem den manuskriptredigerede fil, og overfør den til trin 1 under Manuskriptredigering. 6. Send e-mailen under UDFØR til redaktøren.
+Jeg vil bede dig om at foretage manuskriptredigering af "{$submissionTitle}" til {$contextName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Se instruktionerne til manuskriptredigering, der findes på websiden. 4. Åbn den hentede fil, og rediger manuskriptet, idet du tilføjer forfatterforespørgsler efter behov. 5. Gem den manuskriptredigerede fil, og overfør den til trin 1 under Manuskriptredigering. 6. Send e-mailen under UDFØR til redaktøren.
 
-{$journalName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionCopyeditingUrl} Brugernavn: {$copyeditorUsername}
+{$contextName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionCopyeditingUrl} Brugernavn: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes af en sektionsredaktør til manuskriptredaktøren for et manuskript og beder vedkommende om at påbegynde manuskriptredigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til det.</description>
@@ -340,7 +340,7 @@ Jeg vil bede dig om at foretage manuskriptredigering af "{$articleTitle}" til {$
 		<subject>Manuskriptredigeringen er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Vi har nu redigeret dit manuskript "{$articleTitle}" til {$journalName}. Følg disse trin for at få vist de foreslåede ændringer og svare på forfatterforespørgsler:
+Vi har nu redigeret dit manuskript "{$submissionTitle}" til {$contextName}. Følg disse trin for at få vist de foreslåede ændringer og svare på forfatterforespørgsler:
 
 1. Log på tidsskriftet ved hjælp af URL-adressen nedenfor med dit brugernavn og din adgangskode (brug eventuelt linket Har du glemt din adgangskode). 2. Klik på filen under 1. Første manuskriptredigering for at hente og åbne den manuskriptredigerede version. 3. Gennemgå manuskriptredigeringen, idet du foretager ændringer ved hjælp af funktionen Ændringer i Word, og svar på forespørgsler. 4. Gem filen på computeren, og overfør den under 2. Forfatters manuskriptredigering. 5. Klik på e-mail-ikonet under UDFØR, og send e-mailen til redaktøren.
 
@@ -356,7 +356,7 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 		<subject>Bekræftelse af manuskriptredigering</subject>
 		<body>{$copyeditorName}:
 
-Tak, fordi du har redigeret manuskriptet "{$articleTitle}" til {$journalName}. Det har stor betydning for kvaliteten af dette tidsskrift.
+Tak, fordi du har redigeret manuskriptet "{$submissionTitle}" til {$contextName}. Det har stor betydning for kvaliteten af dette tidsskrift.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes af sektionsredaktøren til manuskriptredaktøren for et manuskript og bekræfter, at manuskriptredaktøren har fuldført manuskriptredigeringsprocessen samt takker vedkommende for sit bidrag.</description>
@@ -365,7 +365,7 @@ Tak, fordi du har redigeret manuskriptet "{$articleTitle}" til {$journalName}. D
 		<subject>Forespørgsel om gennemgang af manuskriptredigering</subject>
 		<body>{$authorName}:
 
-Dit manuskript "{$articleTitle}" til {$journalName} har gennemgået første trin i manuskriptredigeringsfasen, og du kan nu gennemgå det ved at følge disse trin.
+Dit manuskript "{$submissionTitle}" til {$contextName} har gennemgået første trin i manuskriptredigeringsfasen, og du kan nu gennemgå det ved at følge disse trin.
 
 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Åbn det hentede manuskript. 4. Gennemgå teksten, herunder manuskriptredigeringsforslag og forfatterforespørgsler. 5. Foretag eventuelle ændringer, der vil forbedre teksten yderligere. 6. Overfør filen i trin 2, når du er færdig med at foretage ændringer. 7. Klik på METADATA for at kontrollere, at indekseringsoplysningerne er fuldstændige og præcise. 8. Send e-mailen under UDFØR til redaktøren og manuskriptredaktøren.
 
@@ -382,7 +382,7 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 		<subject>Gennemgang af manuskriptredigering er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nu gennemgået redigeringen af manuskriptet "{$articleTitle}" til {$journalName}, og manuskriptet er klar til den sidste fase i manuskriptredigeringsprocessen og til forberedelse for layout.
+Jeg har nu gennemgået redigeringen af manuskriptet "{$submissionTitle}" til {$contextName}, og manuskriptet er klar til den sidste fase i manuskriptredigeringsprocessen og til forberedelse for layout.
 
 Tak for dette bidrag til min artikel. {$authorName}</body>
 		<description>Denne e-mail sendes af forfatteren til sektionsredaktøren for at underrette vedkommende om, at forfatterens manuskriptredigeringsproces er fuldført.</description>
@@ -391,7 +391,7 @@ Tak for dette bidrag til min artikel. {$authorName}</body>
 		<subject>Bekræftelse af gennemgang af manuskriptredigering</subject>
 		<body>{$authorName}:
 
-Tak, fordi du har gennemgået redigeringen af dit manuskript, "{$articleTitle}", til {$journalName}. Vi ser frem til at publicere denne artikel.
+Tak, fordi du har gennemgået redigeringen af dit manuskript, "{$submissionTitle}", til {$contextName}. Vi ser frem til at publicere denne artikel.
 
 {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes af sektionsredaktøren til forfatteren af et manuskript for at bekræfte, at forfatterens manuskriptredigeringsproces er fuldført og for at takke forfatteren for sit bidrag.</description>
@@ -400,9 +400,9 @@ Tak, fordi du har gennemgået redigeringen af dit manuskript, "{$articleTitle}",
 		<subject>Sidste gennemgang af manuskriptredigering</subject>
 		<body>{$copyeditorName}:
 
-Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af manuskriptet "{$articleTitle}" til {$journalName}. Der skal nu forberedes en "ren kopi" til layoutfasen ved at følge nedenstående trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 2. 3. Åbn den hentede fil, og indfør alle manuskriptredigeringer og forespørgselssvar. 4. Gem den rene fil, og overfør den til trin 3 under Manuskriptredigering. 5. Klik på METADATA for at kontrollere indekseringsoplysningerne (og gemme eventuelle rettelser). 6. Send e-mailen under UDFØR til redaktøren.
+Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af manuskriptet "{$submissionTitle}" til {$contextName}. Der skal nu forberedes en "ren kopi" til layoutfasen ved at følge nedenstående trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 2. 3. Åbn den hentede fil, og indfør alle manuskriptredigeringer og forespørgselssvar. 4. Gem den rene fil, og overfør den til trin 3 under Manuskriptredigering. 5. Klik på METADATA for at kontrollere indekseringsoplysningerne (og gemme eventuelle rettelser). 6. Send e-mailen under UDFØR til redaktøren.
 
-{$journalName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionCopyeditingUrl} Brugernavn: {$copyeditorUsername}
+{$contextName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionCopyeditingUrl} Brugernavn: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
 		<description>I denne e-mail fra sektionsredaktøren til manuskriptredaktøren bliver manuskriptredaktøren bedt om at foretage en sidste redigering af et manuskript, inden det går videre til layoutprocessen.</description>
@@ -411,7 +411,7 @@ Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af 
 		<subject>Sidste gennemgang af manuskriptredigering er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har nu forberedt en ren og redigeret version af manuskriptet "{$articleTitle}" til {$journalName}. Den er klar til layout og forberedelsen af satsskibene.
+Jeg har nu forberedt en ren og redigeret version af manuskriptet "{$submissionTitle}" til {$contextName}. Den er klar til layout og forberedelsen af satsskibene.
 
 {$copyeditorName}</body>
 		<description>Denne e-mail fra manuskriptredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at den sidste manuskriptredigeringsrunde er fuldført, og at layoutprocessen nu kan begynde.</description>
@@ -420,7 +420,7 @@ Jeg har nu forberedt en ren og redigeret version af manuskriptet "{$articleTitle
 		<subject>Bekræftelse af sidste gennemgang af manuskriptredigering</subject>
 		<body>{$copyeditorName}:
 
-Tak, fordi du har fuldført redigeringen af manuskriptet "{$articleTitle}" til {$journalName}. Forberedelsen af en "ren kopi" til layout er et vigtigt trin i den redaktionelle proces.
+Tak, fordi du har fuldført redigeringen af manuskriptet "{$submissionTitle}" til {$contextName}. Forberedelsen af en "ren kopi" til layout er et vigtigt trin i den redaktionelle proces.
 
 {$editorialContactSignature}</body>
 		<description>I denne e-mail fra sektionsredaktøren til manuskriptredaktøren bekræftes fuldførelsen af den sidste manuskriptredigeringsrunde, og sektionsredaktøren takker manuskriptredaktøren for sit bidrag.</description>
@@ -429,9 +429,9 @@ Tak, fordi du har fuldført redigeringen af manuskriptet "{$articleTitle}" til {
 		<subject>Forespørgsel om satsskibe</subject>
 		<body>{$layoutEditorName}:
 
-Der skal nu opsættes satsskibe for manuskriptet "{$articleTitle}" til {$journalName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og brug filen Layoutversion til at oprette satsskibene i henhold til tidsskriftets standarder. 3. Send e-mailen under UDFØR til redaktøren.
+Der skal nu opsættes satsskibe for manuskriptet "{$submissionTitle}" til {$contextName} ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og brug filen Layoutversion til at oprette satsskibene i henhold til tidsskriftets standarder. 3. Send e-mailen under UDFØR til redaktøren.
 
-{$journalName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionLayoutUrl} Brugernavn: {$layoutEditorUsername}
+{$contextName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionLayoutUrl} Brugernavn: {$layoutEditorUsername}
 
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.
  Tak for dit bidrag til dette tidsskrift.
@@ -442,7 +442,7 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 		<subject>Satsskibene er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Der er nu oprettet satsskibe til manuskriptet "{$articleTitle}" til {$journalName}, og de er klar til korrekturlæsning. 
+Der er nu oprettet satsskibe til manuskriptet "{$submissionTitle}" til {$contextName}, og de er klar til korrekturlæsning. 
 
 Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 
@@ -453,7 +453,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Bekræftelse af layout</subject>
 		<body>{$layoutEditorName}:
 
-Tak, fordi du har oprettet satsskibene for manuskriptet "{$articleTitle}" til {$journalName}. Dette er et vigtigt bidrag til publiceringsprocessen.
+Tak, fordi du har oprettet satsskibene for manuskriptet "{$submissionTitle}" til {$contextName}. Dette er et vigtigt bidrag til publiceringsprocessen.
 
 {$editorialContactSignature}</body>
 		<description>I denne e-mail fra sektionsredaktøren til layoutredaktøren bekræftes fuldførelsen af layoutredigeringsprocessen, og sektionsredaktøren takker layouttredaktøren for sit bidrag.</description>
@@ -462,7 +462,7 @@ Tak, fordi du har oprettet satsskibene for manuskriptet "{$articleTitle}" til {$
 		<subject>Forespørgsel om korrekturlæsning (forfatter)</subject>
 		<body>{$authorName}:
 
-Dit manuskript "{$articleTitle}" til {$journalName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren og korrekturlæseren. 6. Send e-mailen under UDFØR til redaktøren.
+Dit manuskript "{$submissionTitle}" til {$contextName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren og korrekturlæseren. 6. Send e-mailen under UDFØR til redaktøren.
 
 Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}
 
@@ -473,7 +473,7 @@ Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$authorUsername}
 		<subject>Korrekturlæsningen er fuldført (forfatter)</subject>
 		<body>{$editorialContactName}:
 
-Jeg har fuldført korrekturlæsningen af satsskibene for mit manuskript, "{$articleTitle}", til {$journalName}. Satsskibene er nu klar til, at korrekturlæseren og layoutredaktøren foretager de sidste rettelser til dem.
+Jeg har fuldført korrekturlæsningen af satsskibene for mit manuskript, "{$submissionTitle}", til {$contextName}. Satsskibene er nu klar til, at korrekturlæseren og layoutredaktøren foretager de sidste rettelser til dem.
 
 {$authorName}</body>
 		<description>Denne e-mail fra forfatteren til korrekturlæseren og redaktøren underretter dem om, at forfatterens korrekturlæsningsrunde er fuldført, og at detaljerne findes i kommentarerne til artiklen.</description>
@@ -482,7 +482,7 @@ Jeg har fuldført korrekturlæsningen af satsskibene for mit manuskript, "{$arti
 		<subject>Bekræftelse af korrekturlæsning (forfatter)</subject>
 		<body>{$authorName}:
 
-Tak, fordi du har læst korrektur på satsskibene for dit manuskript, "{$articleTitle}", i {$journalName}. Vi ser frem til at publicere din artikel i løbet af kort tid.
+Tak, fordi du har læst korrektur på satsskibene for dit manuskript, "{$submissionTitle}", i {$contextName}. Vi ser frem til at publicere din artikel i løbet af kort tid.
 
 Hvis du abonnerer på vores meddelelsestjeneste, modtager du en e-mail med indholdsfortegnelsen, så snart artiklen er publiceret. Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 
@@ -493,7 +493,7 @@ Hvis du abonnerer på vores meddelelsestjeneste, modtager du en e-mail med indho
 		<subject>Forespørgsel om korrekturlæsning</subject>
 		<body>{$proofreaderName}:
 
-Manuskriptet "{$articleTitle}" til {$journalName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING. 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren. 6. Send e-mailen under UDFØR til redaktøren.
+Manuskriptet "{$submissionTitle}" til {$contextName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING. 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren. 6. Send e-mailen under UDFØR til redaktøren.
 
 Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$proofreaderUsername}
 
@@ -506,7 +506,7 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 		<subject>Korrekturlæsningen er fuldført</subject>
 		<body>{$editorialContactName}:
 
-Jeg har fuldført korrekturlæsningen af satsskibene for manuskriptet "{$articleTitle}" til {$journalName}. Satsskibene er nu klar til, at layoutredaktøren foretager de sidste rettelser til dem.
+Jeg har fuldført korrekturlæsningen af satsskibene for manuskriptet "{$submissionTitle}" til {$contextName}. Satsskibene er nu klar til, at layoutredaktøren foretager de sidste rettelser til dem.
 
 {$proofreaderName}</body>
 		<description>Denne e-mail fra korrekturlæseren til sektionsredaktøren underretter sektionsredaktøren om, at korrekturlæseren har fuldført korrekturlæsningsprocessen.</description>
@@ -515,7 +515,7 @@ Jeg har fuldført korrekturlæsningen af satsskibene for manuskriptet "{$article
 		<subject>Bekræftelse af korrekturlæsning</subject>
 		<body>{$proofreaderName}:
 
-Tak, fordi du har læst korrektur på satsskibene for manuskriptet "{$articleTitle}" til {$journalName}. Dette arbejde har stor betydning for kvaliteten af dette tidsskrift.
+Tak, fordi du har læst korrektur på satsskibene for manuskriptet "{$submissionTitle}" til {$contextName}. Dette arbejde har stor betydning for kvaliteten af dette tidsskrift.
 
 {$editorialContactSignature}</body>
 		<description>I denne e-mail fra sektionsredaktøren til korrekturlæseren bekræftes fuldførelsen af korrekturlæserens korrekturlæsningsproces, og sektionsredaktøren takker korrekturlæseren for sit bidrag.</description>
@@ -524,9 +524,9 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet "{$articleTit
 		<subject>Forespørgsel om korrekturlæsning (layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Manuskriptet "{$articleTitle}" til {$journalName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.
+Manuskriptet "{$submissionTitle}" til {$contextName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.
 
-{$journalName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$layoutEditorUsername}
+{$contextName} URL-adresse: {$journalUrl} Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$layoutEditorUsername}
 
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.
  Tak for dit bidrag til dette tidsskrift.
@@ -537,7 +537,7 @@ Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunk
 		<subject>Korrekturlæsningen er fuldført (layoutredaktør)</subject>
 		<body>{$editorialContactName}:
 
-Satsskibene er nu blevet rettet, efter korrekturlæsning af dem, for manuskriptet "{$articleTitle}" til {$journalName}. Artiklen er nu klar til at blive publiceret.
+Satsskibene er nu blevet rettet, efter korrekturlæsning af dem, for manuskriptet "{$submissionTitle}" til {$contextName}. Artiklen er nu klar til at blive publiceret.
 
 {$layoutEditorName}</body>
 		<description>Denne e-mail fra layoutredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at den sidste korrekturlæsningsfase er fuldført, og at artiklen nu er klar til at blive publiceret.</description>
@@ -546,21 +546,21 @@ Satsskibene er nu blevet rettet, efter korrekturlæsning af dem, for manuskripte
 		<subject>Bekræftelse af korrekturlæsning (layoutredaktør)</subject>
 		<body>{$layoutEditorName}:
 
-Tak, fordi du har indført korrekturrettelserne i de satsskibe, der er tilknyttet manuskriptet "{$articleTitle}" til {$journalName}. Dette er et vigtigt bidrag til arbejdet i forbindelse med dette tidsskrift.
+Tak, fordi du har indført korrekturrettelserne i de satsskibe, der er tilknyttet manuskriptet "{$submissionTitle}" til {$contextName}. Dette er et vigtigt bidrag til arbejdet i forbindelse med dette tidsskrift.
 
 {$editorialContactSignature}</body>
 		<description>I denne e-mail fra sektionsredaktøren til layoutredaktøren bekræftes fuldførelsen af den sidste korrekturlæsningsfase, og sektionsredaktøren takker layoutredaktøren for sit bidrag.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artikel, der muligvis har din interesse</subject>
-		<body>Jeg tænkte, at du måske ville være interesseret i at læse "{$articleTitle}" af {$authorName}, der er publiceret i Årg. {$volume}, Nr. {$number} ({$year}) i {$journalName} på "{$articleUrl}".</body>
+		<body>Jeg tænkte, at du måske ville være interesseret i at læse "{$submissionTitle}" af {$authorName}, der er publiceret i Årg. {$volume}, Nr. {$number} ({$year}) i {$contextName} på "{$articleUrl}".</body>
 		<description>Denne e-mail-skabelon giver en registreret læser mulighed for at sende oplysninger om en artikel til en person, der muligvis er interesseret. Den er tilgængelig via læseværktøjerne og skal aktiveres af tidsskriftschefen på siden Administration af læseværktøjer.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Abonnementsmeddelelse</subject>
 		<body>{$subscriberName}:
 
-Du er nu registreret i vores onlinetidsskriftsstyringssystem som abonnent på {$journalName} med følgende abonnement:
+Du er nu registreret i vores onlinetidsskriftsstyringssystem som abonnent på {$contextName} med følgende abonnement:
 
 {$subscriptionType}
 
@@ -579,7 +579,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Udgave nu i Open Access-format</subject>
 		<body>Læsere:
 
-{$journalName} har netop udgivet følgende udgave i et Open Access-format. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted ({$journalUrl}), hvor du kan gennemse artikler og elementer, der har din interesse.
+{$contextName} har netop udgivet følgende udgave i et Open Access-format. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted ({$journalUrl}), hvor du kan gennemse artikler og elementer, der har din interesse.
 
 Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}</body>
 		<description>Denne e-mail sendes til registrerede læsere, der har anmodet om at modtage en e-mail-meddelelse, når en udgave udgives i et Open Access-format.</description>
@@ -588,7 +588,7 @@ Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}</b
 		<subject>Meddelelse om udløb af abonnement</subject>
 		<body>{$subscriberName}:
 
-Dit abonnement på {$journalName} udløber snart.
+Dit abonnement på {$contextName} udløber snart.
 
 {$subscriptionType} Udløbsdato: {$expiryDate}
 
@@ -603,7 +603,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Abonnementet er udløbet</subject>
 		<body>{$subscriberName}:
 
-Dit abonnement på {$journalName} er udløbet.
+Dit abonnement på {$contextName} er udløbet.
 
 {$subscriptionType} Udløbsdato: {$expiryDate}
 
@@ -618,7 +618,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.
 		<subject>Abonnementet er udløbet – sidste påmindelse</subject>
 		<body>{$subscriberName}:
 
-Dit abonnement på {$journalName} er udløbet. Vær opmærksom på, at dette er den sidste påmindelse, du vil modtage.
+Dit abonnement på {$contextName} er udløbet. Vær opmærksom på, at dette er den sidste påmindelse, du vil modtage.
 
 {$subscriptionType} Udløbsdato: {$expiryDate}
 
@@ -669,7 +669,7 @@ Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på
 		<subject>Redaktørbeslutning</subject>
 		<body>{$authorName}:
 
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$submissionTitle}".
 
 Vi har besluttet at:
 
@@ -680,7 +680,7 @@ Vi har besluttet at:
 		<subject>Redaktørbeslutning</subject>
 		<body>{$authorName}:
 
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$submissionTitle}".
 
 Vi har besluttet at:
 
@@ -691,7 +691,7 @@ Vi har besluttet at:
 		<subject>Redaktørbeslutning</subject>
 		<body>{$authorName}:
 
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$submissionTitle}".
 
 Vi har besluttet at:
 
@@ -702,7 +702,7 @@ Vi har besluttet at:
 		<subject>Redaktørbeslutning</subject>
 		<body>{$authorName}:
 
-Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$articleTitle}".
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$journalTitle}, "{$submissionTitle}".
 
 Vi har besluttet at:
 
@@ -711,7 +711,7 @@ Vi har besluttet at:
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Køb af abonnement: Individuelt</subject>
-		<body>Der er foretaget et online køb af et individuelt abonnement på {$journalName} med følgende oplysninger.
+		<body>Der er foretaget et online køb af et individuelt abonnement på {$contextName} med følgende oplysninger.
 
 Abonnementstype:
 {$subscriptionType}
@@ -729,7 +729,7 @@ Link til abonnement: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Køb af abonnement: Institution</subject>
-		<body>Der er foretaget et online køb af et institutionsabonnement på {$journalName} med følgende oplysninger. For at aktivere dette abonnement skal du anvende det angivne link til abonnementet og sætte abonnementsstatus til "Aktiv".
+		<body>Der er foretaget et online køb af et institutionsabonnement på {$contextName} med følgende oplysninger. For at aktivere dette abonnement skal du anvende det angivne link til abonnementet og sætte abonnementsstatus til "Aktiv".
 
 Abonnementstype:
 {$subscriptionType}
@@ -757,7 +757,7 @@ Link til abonnement: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Fornyelse af abonnement: Individuelt</subject>
-		<body>Der er foretaget en online fornyelse af et individuelt abonnement på {$journalName}med følgende oplysninger.
+		<body>Der er foretaget en online fornyelse af et individuelt abonnement på {$contextName}med følgende oplysninger.
 
 Abonnementstype:
 {$subscriptionType}
@@ -775,7 +775,7 @@ Link til abonnement: {$subscriptionUrl}</body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Fornyelse af abonnement: Institution</subject>
-		<body>Der er foretaget en online fornyelse af et institutionsabonnement på {$journalName} med følgende oplysninger.
+		<body>Der er foretaget en online fornyelse af et institutionsabonnement på {$contextName} med følgende oplysninger.
 
 Abonnementstype:
 {$subscriptionType}
@@ -805,14 +805,14 @@ Link til abonnement: {$subscriptionUrl}</body>
 		<subject>Referenceredigering</subject>
 		<body>{$authorFirstName},
 
-Du bedes verificere eller sende os de korrekte oplysninger i forbindelse med følgende reference i din artikel {$articleTitle}:
+Du bedes verificere eller sende os de korrekte oplysninger i forbindelse med følgende reference i din artikel {$submissionTitle}:
 
 {$rawCitation}
 
 På forhånd tak!
 
 {$userFirstName}
-Manuskriptredaktør, {$journalName}</body>
+Manuskriptredaktør, {$contextName}</body>
 		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
 	</email_text>
 </email_texts>

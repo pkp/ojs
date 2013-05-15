@@ -294,7 +294,7 @@ class RegistrationForm extends Form {
 		}
 
 		if (!$this->existingUser) {
-			import('classes.mail.MailTemplate');
+			import('lib.pkp.classes.mail.MailTemplate');
 			if ($requireValidation) {
 				// Create an access key
 				import('lib.pkp.classes.security.AccessKeyManager');
