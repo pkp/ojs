@@ -96,11 +96,7 @@ class UsageEventPlugin extends GenericPlugin {
 		if (array_key_exists('UsageEventPlugin::getUsageEvent', $hooks)) {
 
 			$usageEvent = $this->_buildUsageEvent($hookName, $args);
-
-			// If we have a real usage event, then let registered callbacks receive it.
-			if ($usageEvent) {
-				HookRegistry::call('UsageEventPlugin::getUsageEvent', array_merge(array($hookName, $usageEvent), $args));
-			}
+			HookRegistry::call('UsageEventPlugin::getUsageEvent', array_merge(array($hookName, $usageEvent), $args));
 		}
 		return false;
 	}
@@ -173,7 +169,7 @@ class UsageEventPlugin extends GenericPlugin {
 				$canonicalUrlOp = 'view';
 				break;
 
-				// Article galley (except for HTML and remote galley).
+			// Article galley (except for HTML and remote galley).
 			case 'ArticleHandler::viewFile':
 			case 'ArticleHandler::downloadFile':
 				$pubObject = $args[1];
@@ -184,7 +180,7 @@ class UsageEventPlugin extends GenericPlugin {
 				$idParams = array('a' . $article->getId(), 'g' . $pubObject->getId());
 				break;
 
-				// Supplementary file.
+			// Supplementary file.
 			case 'ArticleHandler::downloadSuppFile':
 				$pubObject = $args[1];
 				$assocType = ASSOC_TYPE_SUPP_FILE;
@@ -194,7 +190,7 @@ class UsageEventPlugin extends GenericPlugin {
 				$idParams = array('a' . $article->getId(), 's' . $pubObject->getId());
 				break;
 
-				// Issue galley.
+			// Issue galley.
 			case 'IssueHandler::viewFile':
 				$pubObject = $args[1];
 				$assocType = ASSOC_TYPE_ISSUE_GALLEY;
@@ -203,6 +199,12 @@ class UsageEventPlugin extends GenericPlugin {
 				$canonicalUrlParams = array($issue->getBestIssueId(), $pubObject->getBestGalleyId($journal));
 				$idParams = array('i' . $issue->getId(), 'ig' . $pubObject->getId());
 				break;
+
+			// Finished downloading a file.
+			case 'FileManager::downloadFileFinished':
+				// The usage event for this request is already build and
+				// passed to any other registered hook.
+				return null;
 
 			default:
 				// Why are we called from an unknown hook?
