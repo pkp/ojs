@@ -67,14 +67,14 @@ class ArticleSearchIndex {
 
 			// Update search index
 			$articleId = $article->getId();
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
 
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
-			$this->_updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
+			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
 			// FIXME Index sponsors too?
 		}
 	}
@@ -114,7 +114,7 @@ class ArticleSearchIndex {
 
 					$position = 0;
 					while(($text = $parser->read()) !== false) {
-						$this->_indexObjectKeywords($objectId, $text, $position);
+						ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
 					}
 					$parser->close();
 				}
@@ -146,9 +146,9 @@ class ArticleSearchIndex {
 			$files =& $fileDao->getSuppFilesByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					$this->articleFileChanged($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
+					ArticleSearchIndex::articleFileChanged($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
 				}
-				$this->suppFileMetadataChanged($file);
+				ArticleSearchIndex::suppFileMetadataChanged($file);
 			}
 			unset($files);
 
@@ -157,7 +157,7 @@ class ArticleSearchIndex {
 			$files =& $fileDao->getGalleysByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					$this->articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
+					ArticleSearchIndex::articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
 				}
 			}
 		}
@@ -209,7 +209,7 @@ class ArticleSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			// Update search index
 			$articleId = $suppFile->getArticleId();
-			$this->_updateTextIndex(
+			ArticleSearchIndex::_updateTextIndex(
 				$articleId,
 				ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
 				array_merge(
@@ -269,7 +269,7 @@ class ArticleSearchIndex {
 	 */
 	function &filterKeywords($text, $allowWildcards = false) {
 		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords =& $this->_loadStopwords();
+		$stopwords =& ArticleSearchIndex::_loadStopwords();
 
 		// Join multiple lines into a single string
 		if (is_array($text)) $text = join("\n", $text);
@@ -341,8 +341,8 @@ class ArticleSearchIndex {
 				$articles = $articleDao->getByJournalId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
-						$this->articleMetadataChanged($article);
-						$this->articleFilesChanged($article);
+						ArticleSearchIndex::articleMetadataChanged($article);
+						ArticleSearchIndex::articleFilesChanged($article);
 						$numIndexed++;
 					}
 				}
@@ -364,7 +364,7 @@ class ArticleSearchIndex {
 	 */
 	function _indexObjectKeywords($objectId, $text, &$position) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
-		$keywords =& $this->filterKeywords($text);
+		$keywords =& ArticleSearchIndex::filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
 				$position += 1;
@@ -383,7 +383,7 @@ class ArticleSearchIndex {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
-		$this->_indexObjectKeywords($objectId, $text, $position);
+		ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
 	}
 
 	/**
