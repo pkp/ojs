@@ -17,6 +17,10 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class UsageStatsPlugin extends GenericPlugin {
 
+	/** @var $_currentUsageEvent array */
+	var $_currentUsageEvent;
+
+
 	//
 	// Implement methods from PKPPlugin.
 	//
@@ -182,60 +186,30 @@ class UsageStatsPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function logUsageEvent($hookName, $args) {
+		$hookName = $args[0];
 		$usageEvent = $args[1];
-		$desiredParams = array($usageEvent['ip']);
 
-		if (isset($usageEvent['classification'])) {
-			$desiredParams[] = $usageEvent['classification'];
-		} else {
-			$desiredParams[] = '-';
-		}
-
-		if (isset($usageEvent['user'])) {
-			$desiredParams[] = $usageEvent['user']->getId();
-		} else {
-			$desiredParams[] = '-';
-		}
-
-		$desiredParams = array_merge($desiredParams,
-			array('"' . $usageEvent['time'] . '"', $usageEvent['canonicalUrl'],
-				'"' . $usageEvent['userAgent'] . '"'));
-
-		$usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;
-
-		import('lib.pkp.classes.file.PrivateFileManager');
-		$fileMgr = new PrivateFileManager();
-
-		// Get the current day filename.
-		$filename = 'usage_events_' . date("Ymd") . '.log';
-
-		// Check the plugin file directory.
-		$usageEventFilesPath = realpath($fileMgr->getBasePath()) .
-			DIRECTORY_SEPARATOR . 'usageStats' .
-		 	DIRECTORY_SEPARATOR . 'usageEventLogs';
-		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
-			$success = $fileMgr->mkdirtree($usageEventFilesPath);
-			if (!$success) {
-				// Files directory wrong configuration?
-				assert(false);
-				return false;
+		if ($hookName == 'FileManager::downloadFileFinished' && !$usageEvent && $this->_currentUsageEvent) {
+			// File download is finished, try to log the current usage event.
+			$downloadSuccess = $args[2];
+			if ($downloadSuccess && !connection_aborted()) {
+				$this->_currentUsageEvent['downloadSuccess'] = true;
+				$usageEvent = $this->_currentUsageEvent;
 			}
 		}
 
-		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
-		$fp = fopen($filePath, 'ab');
-		if (flock($fp, LOCK_EX)) {
-			fwrite($fp, $usageLogEntry);
-			flock($fp, LOCK_UN);
-		} else {
-			// Couldn't lock the file.
-			assert(false);
+		if ($usageEvent && !$usageEvent['downloadSuccess']) {
+			// Don't log until we get the download finished hook call.
+			$this->_currentUsageEvent = $usageEvent;
+			return false;
 		}
-		fclose($fp);
+
+		if ($usageEvent) {
+			$this->_writeUsageEventInLogFile($usageEvent);
+		}
 
 		return false;
 	}
-
 
 	/**
 	 * @see PKPPageRouter::route()
@@ -267,6 +241,64 @@ class UsageStatsPlugin extends GenericPlugin {
 		$handlerFile = $this->getPluginPath() . '/' . 'UsageStatsHandler.inc.php';
 	}
 
+
+	//
+	// Private helper methods.
+	//
+	/**
+	 * @param $usageEvent array
+	 */
+	private function _writeUsageEventInLogFile($usageEvent) {
+		$desiredParams = array($usageEvent['ip']);
+
+		if (isset($usageEvent['classification'])) {
+			$desiredParams[] = $usageEvent['classification'];
+		} else {
+			$desiredParams[] = '-';
+		}
+
+		if (isset($usageEvent['user'])) {
+			$desiredParams[] = $usageEvent['user']->getId();
+		} else {
+			$desiredParams[] = '-';
+		}
+
+		$desiredParams = array_merge($desiredParams,
+		array('"' . $usageEvent['time'] . '"', $usageEvent['canonicalUrl'],
+						'"' . $usageEvent['userAgent'] . '"'));
+
+		$usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;
+
+		import('lib.pkp.classes.file.PrivateFileManager');
+		$fileMgr = new PrivateFileManager();
+
+		// Get the current day filename.
+		$filename = 'usage_events_' . date("Ymd") . '.log';
+
+		// Check the plugin file directory.
+		$usageEventFilesPath = realpath($fileMgr->getBasePath()) .
+		DIRECTORY_SEPARATOR . 'usageStats' .
+		DIRECTORY_SEPARATOR . 'usageEventLogs';
+		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
+			$success = $fileMgr->mkdirtree($usageEventFilesPath);
+			if (!$success) {
+				// Files directory wrong configuration?
+				assert(false);
+				return false;
+			}
+		}
+
+		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
+		$fp = fopen($filePath, 'ab');
+		if (flock($fp, LOCK_EX)) {
+			fwrite($fp, $usageLogEntry);
+			flock($fp, LOCK_UN);
+		} else {
+			// Couldn't lock the file.
+			assert(false);
+		}
+		fclose($fp);
+	}
 }
 
 ?>
