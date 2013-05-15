@@ -40,17 +40,17 @@ class SubmissionEntryLinkAction extends LinkAction {
 		$modal = new AjaxModal(
 			$dispatcher->url(
 				$request, ROUTE_COMPONENT, null,
-				'modals.submissionMetadata.CatalogEntryHandler',
+				'modals.submissionMetadata.IssueEntryHandler',
 				'fetch', null,
 				$actionArgs
 			),
-			__('submission.catalogEntry'),
+			__('submission.issueEntry.modalTitle'),
 			'modal_more_info'
 		);
 
 		// Configure the link action.
-		$toolTip = ($image == 'completed') ? __('grid.action.formatInCatalogEntry') : null;
-		parent::LinkAction('catalogEntry', $modal, __('submission.catalogEntry'), $image, $toolTip);
+		$toolTip = ($image == 'completed') ? __('grid.action.galleyInIssueEntry') : null;
+		parent::LinkAction('issueEntry', $modal, __('submission.issueEntry'), $image, $toolTip);
 	}
 }
 

@@ -21,6 +21,15 @@
 	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$journalName}</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
 
-	<message key="submission.catalogEntry">Submission Metadata</message>
+	<message key="submission.issueEntry">Submission Metadata</message>
 	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
+	<message key="grid.action.galleyInIssueEntry">Galley appears in issue entry</message>
+	<message key="grid.action.issueEntry">View this submission's metadata</message>
+
+	<!-- Submission Information Modal -->
+	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
+	<message key="submission.issueEntry.submissionMetadata">Submission</message>
+	<message key="submission.issueEntry.publicationMetadata">Publication</message>
+	<message key="issue.manage.entryDescription">Detailed help test for managing a journal's metadata should go here.</message>
+	<message key="submission.issueEntry.confirm">Create an issue entry for this article based on the metadata below.</message>
 </locale>

@@ -1113,6 +1113,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.submissions">Submission Events</message>
 	<message key="notification.type.suppFileModified">"{$title}'s" supplementary file(s) has been modified.</message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
+	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
 
 	<!--
 	 *

@@ -39,7 +39,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$seriesOptions = array('0' => __('submission.submit.selectSection')) + $sectionDao->getSectionTitles($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $seriesOptions);
-		$templateMgr->assign('sectionId', $submission->getSeriesId());
+		$templateMgr->assign('sectionId', $submission->getSectionId());
 
 		return parent::fetch($request);
 	}
@@ -50,8 +50,6 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	function readInputData() {
 		parent::readInputData();
 		$this->readUserVars(array('sectionId'));
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
 	}
 
 	/**
