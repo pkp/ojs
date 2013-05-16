@@ -33,6 +33,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $galleyDao;
 	var $articleEmailLogDao;
 	var $articleCommentDao;
+	var $reviewRoundDao;
 
 	/**
 	 * Constructor.
@@ -51,6 +52,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
 	}
 
 	/**
@@ -143,8 +145,13 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setReviewRevision($row['review_revision']);
 
 		// Review Assignments
-		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getBySubmissionId($row['article_id'], $i), $i);
+		$reviewRounds = $this->reviewRoundDao->getBySubmissionId($row['article_id']);
+		while ($reviewRound = $reviewRounds->next()) {
+			$round = $reviewRound->getRound();
+			$sectionEditorSubmission->setReviewAssignments(
+				$this->reviewAssignmentDao->getBySubmissionId($row['article_id'], $round),
+				$round
+			);
 		}
 
 		// Layout Editing

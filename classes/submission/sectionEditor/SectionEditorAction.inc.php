@@ -117,62 +117,6 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
-	 * Assigns a reviewer to a submission.
-	 * @param $sectionEditorSubmission object
-	 * @param $reviewerId int
-	 * @param $round int or null to use current round
-	 * @param $request object
-	 */
-	function addReviewer($sectionEditorSubmission, $reviewerId, $round, $request) {
-		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$user = $request->getUser();
-
-		$reviewer =& $userDao->getById($reviewerId);
-
-		// Check to see if the requested reviewer is not already
-		// assigned to review this article.
-		if ($round == null) {
-			$round = $sectionEditorSubmission->getCurrentRound();
-		}
-
-		$assigned = $sectionEditorSubmissionDao->reviewerExists($sectionEditorSubmission->getId(), $reviewerId, $round);
-
-		// Only add the reviewer if he has not already
-		// been assigned to review this article.
-		if (!$assigned && isset($reviewer) && !HookRegistry::call('SectionEditorAction::addReviewer', array(&$sectionEditorSubmission, $reviewerId))) {
-			$reviewAssignment = $reviewAssignmentDao->newDataObject();
-			$reviewAssignment->setReviewerId($reviewerId);
-			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
-			$reviewAssignment->setRound($round);
-			$reviewAssignment->setDateDue(SectionEditorAction::getReviewDueDate());
-
-			// Assign review form automatically if needed
-			$journalId = $sectionEditorSubmission->getJournalId();
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
-
-			$sectionId = $sectionEditorSubmission->getSectionId();
-			$section = $sectionDao->getById($sectionId, $journalId);
-			if ($section && ($reviewFormId = (int) $section->getReviewFormId())) {
-				if ($reviewFormDao->reviewFormExists($reviewFormId, ASSOC_TYPE_JOURNAL, $journalId)) {
-					$reviewAssignment->setReviewFormId($reviewFormId);
-				}
-			}
-
-			$sectionEditorSubmission->addReviewAssignment($reviewAssignment);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-
-			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($sectionEditorSubmission->getId(), $reviewerId, $round);
-
-			// Add log
-			import('lib.pkp.classes.log.SubmissionLog');
-			SubmissionLog::logEvent($request, $sectionEditorSubmission, SUBMISSION_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()));
-		}
-	}
-
-	/**
 	 * Notifies a reviewer about a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
