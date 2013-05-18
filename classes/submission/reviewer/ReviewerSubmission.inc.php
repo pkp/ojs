@@ -17,13 +17,13 @@ import('classes.article.Article');
 
 class ReviewerSubmission extends Article {
 
-	/** @var array ArticleFiles reviewer file revisions of this article */
+	/** @var array SubmissionFile reviewer file revisions of this submission */
 	var $reviewerFileRevisions;
 
-	/** @var array ArticleComments peer review comments of this article */
+	/** @var array SubmissionComments peer review comments of this submission */
 	var $peerReviewComments;
 
-	/** @var array the editor decisions of this article */
+	/** @var array the editor decisions of this submission */
 	var $editorDecisions;
 
 	/**
@@ -38,24 +38,7 @@ class ReviewerSubmission extends Article {
 	 */
 
 	/**
-	 * Get edit assignments for this article.
-	 * @return array
-	 */
-	function &getEditAssignments() {
-		$editAssignments =& $this->getData('editAssignments');
-		return $editAssignments;
-	}
-
-	/**
-	 * Set edit assignments for this article.
-	 * @param $editAssignments array
-	 */
-	function setEditAssignments($editAssignments) {
-		return $this->setData('editAssignments', $editAssignments);
-	}
-
-	/**
-	 * Get the competing interests for this article.
+	 * Get the competing interests for this submission.
 	 * @return string
 	 */
 	function getCompetingInterests() {
@@ -122,13 +105,8 @@ class ReviewerSubmission extends Article {
 	 * Get editor decisions.
 	 * @return array
 	 */
-	function getDecisions($round = null) {
-		if ($round == null) {
-			return $this->editorDecisions;
-		} else {
-			if (isset($this->editorDecisions[$round])) return $this->editorDecisions[$round];
-			else return null;
-		}
+	function getDecisions() {
+		return $this->editorDecisions;
 	}
 
 	/**
@@ -136,22 +114,8 @@ class ReviewerSubmission extends Article {
 	 * @param $editorDecisions array
 	 * @param $round int
 	 */
-	function setDecisions($editorDecisions, $round) {
-		return $this->editorDecisions[$round] = $editorDecisions;
-	}
-
-	/**
-	 * Get the most recent decision.
-	 * @return int SUBMISSION_EDITOR_DECISION_...
-	 */
-	function getMostRecentDecision() {
-		$decisions = $this->getDecisions();
-		$decision = array_pop($decisions);
-		if (!empty($decision)) {
-			$latestDecision = array_pop($decision);
-			if (isset($latestDecision['decision'])) return $latestDecision['decision'];
-		}
-		return null;
+	function setDecisions($editorDecisions) {
+		return $this->editorDecisions = $editorDecisions;
 	}
 
 	/**
@@ -267,6 +231,22 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
+	 * Get the reviewer's response due date.
+	 * @return string
+	 */
+	function getDateResponseDue() {
+		return $this->getData('dateResponseDue');
+	}
+
+	/**
+	 * Set the reviewer's response due date.
+	 * @param $dateResponseDue string
+	 */
+	function setDateResponseDue($dateResponseDue) {
+		return $this->setData('dateResponseDue', $dateResponseDue);
+	}
+
+	/**
 	 * Get the declined value.
 	 * @return boolean
 	 */
@@ -346,6 +326,37 @@ class ReviewerSubmission extends Article {
 		return $this->setData('quality', $quality);
 	}
 
+	/**
+	 * Get stageId.
+	 * @return int
+	 */
+	function getStageId() {
+		return $this->getData('stageId');
+	}
+
+	/**
+	 * Set stageId.
+	 * @param $stageId int
+	 */
+	function setStageId($stageId) {
+		return $this->setData('stageId', $stageId);
+	}
+
+	/**
+	 * Get the method of the review (open, blind, or double-blind).
+	 * @return int
+	 */
+	function getReviewMethod() {
+		return $this->getData('reviewMethod');
+	}
+
+	/**
+	 * Set the type of review.
+	 * @param $method int
+	 */
+	function setReviewMethod($method) {
+		return $this->setData('reviewMethod', $method);
+	}
 
 	/**
 	 * Get round.
@@ -364,140 +375,19 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
-	 * Get review file id.
+	 * Get step.
 	 * @return int
 	 */
-	function getReviewFileId() {
-		return $this->getData('reviewFileId');
+	function getStep() {
+		return $this->getData('step');
 	}
 
 	/**
-	 * Set review file id.
-	 * @param $reviewFileId int
+	 * Set status.
+	 * @param $status int
 	 */
-	function setReviewFileId($reviewFileId) {
-		return $this->setData('reviewFileId', $reviewFileId);
-	}
-
-	/**
-	 * Get review revision.
-	 * @return int
-	 */
-	function getReviewRevision() {
-		return $this->getData('reviewRevision');
-	}
-
-	/**
-	 * Set review revision.
-	 * @param $reviewRevision int
-	 */
-	function setReviewRevision($reviewRevision) {
-		return $this->setData('reviewRevision', $reviewRevision);
-	}
-
-	//
-	// Files
-	//
-
-	/**
-	 * Get submission file for this article.
-	 * @return ArticleFile
-	 */
-	function &getSubmissionFile() {
-		$returner =& $this->getData('submissionFile');
-		return $returner;
-	}
-
-	/**
-	 * Set submission file for this article.
-	 * @param $submissionFile ArticleFile
-	 */
-	function setSubmissionFile($submissionFile) {
-		return $this->setData('submissionFile', $submissionFile);
-	}
-
-	/**
-	 * Get revised file for this article.
-	 * @return ArticleFile
-	 */
-	function &getRevisedFile() {
-		$returner =& $this->getData('revisedFile');
-		return $returner;
-	}
-
-	/**
-	 * Set revised file for this article.
-	 * @param $submissionFile ArticleFile
-	 */
-	function setRevisedFile($revisedFile) {
-		return $this->setData('revisedFile', $revisedFile);
-	}
-
-	/**
-	 * Get supplementary files for this article.
-	 * @return array SuppFiles
-	 */
-	function &getSuppFiles() {
-		$returner =& $this->getData('suppFiles');
-		return $returner;
-	}
-
-	/**
-	 * Set supplementary file for this article.
-	 * @param $suppFiles array SuppFiles
-	 */
-	function setSuppFiles($suppFiles) {
-		return $this->setData('suppFiles', $suppFiles);
-	}
-
-	/**
-	 * Get review file.
-	 * @return ArticleFile
-	 */
-	function &getReviewFile() {
-		$returner =& $this->getData('reviewFile');
-		return $returner;
-	}
-
-	/**
-	 * Set review file.
-	 * @param $reviewFile ArticleFile
-	 */
-	function setReviewFile($reviewFile) {
-		return $this->setData('reviewFile', $reviewFile);
-	}
-
-	/**
-	 * Get reviewer file.
-	 * @return ArticleFile
-	 */
-	function &getReviewerFile() {
-		$returner =& $this->getData('reviewerFile');
-		return $returner;
-	}
-
-	/**
-	 * Set reviewer file.
-	 * @param $reviewFile ArticleFile
-	 */
-	function setReviewerFile($reviewerFile) {
-		return $this->setData('reviewerFile', $reviewerFile);
-	}
-
-	/**
-	 * Get all reviewer file revisions.
-	 * @return array ArticleFiles
-	 */
-	function getReviewerFileRevisions() {
-		return $this->reviewerFileRevisions;
-	}
-
-	/**
-	 * Set all reviewer file revisions.
-	 * @param $reviewerFileRevisions array ArticleFiles
-	 */
-	function setReviewerFileRevisions($reviewerFileRevisions) {
-		return $this->reviewerFileRevisions = $reviewerFileRevisions;
+	function setStep($step) {
+		return $this->setData('step', $step);
 	}
 
 	//
@@ -506,7 +396,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Get most recent peer review comment.
-	 * @return ArticleComment
+	 * @return SubmissionComment
 	 */
 	function getMostRecentPeerReviewComment() {
 		return $this->getData('peerReviewComment');
@@ -514,7 +404,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Set most recent peer review comment.
-	 * @param $peerReviewComment ArticleComment
+	 * @param $peerReviewComment SubmissionComment
 	 */
 	function setMostRecentPeerReviewComment($peerReviewComment) {
 		return $this->setData('peerReviewComment', $peerReviewComment);

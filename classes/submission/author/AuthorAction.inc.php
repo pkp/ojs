@@ -372,18 +372,18 @@ class AuthorAction extends Action {
 			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$email));
 			$email->send($request);
 
-			$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-			$articleComment = new ArticleComment();
-			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
-			$articleComment->setRoleId(ROLE_ID_AUTHOR);
-			$articleComment->setArticleId($authorSubmission->getId());
-			$articleComment->setAuthorId($authorSubmission->getUserId());
-			$articleComment->setCommentTitle($email->getSubject());
-			$articleComment->setComments($email->getBody());
-			$articleComment->setDatePosted(Core::getCurrentDate());
-			$articleComment->setViewable(true);
-			$articleComment->setAssocId($authorSubmission->getId());
-			$articleCommentDao->insertArticleComment($articleComment);
+			$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
+			$submissionComment = new ArticleComment();
+			$submissionComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+			$submissionComment->setRoleId(ROLE_ID_AUTHOR);
+			$submissionComment->setArticleId($authorSubmission->getId());
+			$submissionComment->setAuthorId($authorSubmission->getUserId());
+			$submissionComment->setCommentTitle($email->getSubject());
+			$submissionComment->setComments($email->getBody());
+			$submissionComment->setDatePosted(Core::getCurrentDate());
+			$submissionComment->setViewable(true);
+			$submissionComment->setAssocId($authorSubmission->getId());
+			$submissionCommentDao->insertArticleComment($submissionComment);
 
 			return true;
 		} else {

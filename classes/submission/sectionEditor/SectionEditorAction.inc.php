@@ -1904,7 +1904,7 @@ class SectionEditorAction extends Action {
 	 */
 	function emailEditorDecisionComment($sectionEditorSubmission, $send, $request) {
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		$journal = $request->getJournal();
@@ -1953,7 +1953,7 @@ class SectionEditorAction extends Action {
 			$articleComment->setDatePosted(Core::getCurrentDate());
 			$articleComment->setViewable(true);
 			$articleComment->setAssocId($sectionEditorSubmission->getId());
-			$articleCommentDao->insertArticleComment($articleComment);
+			$submissionCommentDao->insertArticleComment($articleComment);
 
 			return true;
 		} else {
@@ -1976,7 +1976,7 @@ class SectionEditorAction extends Action {
 					// If the reviewer has completed the assignment, then import the review.
 					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 						// Get the comments associated with this review assignment
-						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getId());
+						$articleComments = $submissionCommentDao->getArticleComments($sectionEditorSubmission->getId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getId());
 						if($articleComments) {
 							$body .= "------------------------------------------------------\n";
 							$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getId()]))) . "\n";

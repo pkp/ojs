@@ -18,7 +18,7 @@ import('classes.submission.proofreader.ProofreaderSubmission');
 class ProofreaderSubmissionDAO extends DAO {
 	/** Helper DAOs */
 	var $articleDao;
-	var $articleCommentDao;
+	var $submissionCommentDao;
 	var $editAssignmentDao;
 	var $galleyDao;
 	var $suppFileDao;
@@ -30,7 +30,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		parent::DAO();
 
 		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
-		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
@@ -92,7 +92,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	function &_returnSubmissionFromRow($row) {
 		$submission = new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
-		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
+		$submission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
@@ -103,7 +103,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		$submission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
-		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$submission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		HookRegistry::call('ProofreaderSubmissionDAO::_returnProofreaderSubmissionFromRow', array(&$submission, &$row));
 

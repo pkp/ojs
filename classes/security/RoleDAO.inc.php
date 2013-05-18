@@ -142,24 +142,6 @@ class RoleDAO extends PKPRoleDAO {
 	}
 
 	/**
-	* Return an array of objects corresponding to the roles a given user has,
-	* grouped by context id.
-	* @param $userId int
-	* @return array
-	*/
-	function &getByUserIdGroupedByContext($userId) {
-		$roles = $this->getRolesByUserId($userId);
-
-		$groupedRoles = array();
-		foreach ($roles as $role) {
-			$groupedRoles[$role->getJournalId()][$role->getRoleId()] =& $role;
-			unset($role);
-		}
-
-		return $groupedRoles;
-	}
-
-	/**
 	 * Retrieve a list of users in a specified role.
 	 * @param $roleId int optional (can leave as null to get all users in journal)
 	 * @param $journalId int optional, include users only in this journal

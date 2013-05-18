@@ -234,12 +234,12 @@ class Action extends PKPAction {
 	function deleteComment($commentId, $user = null) {
 		if ($user == null) $user = Request::getUser();
 
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = $articleCommentDao->getArticleCommentById($commentId);
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
+		$comment = $submissionCommentDao->getArticleCommentById($commentId);
 
 		if ($comment->getAuthorId() == $user->getId()) {
 			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {
-				$articleCommentDao->deleteObject($comment);
+				$submissionCommentDao->deleteObject($comment);
 			}
 		}
 	}

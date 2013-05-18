@@ -83,10 +83,10 @@ class UserAction {
 		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
 		$articleEventLogDao->changeUser($oldUserId, $newUserId);
 
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		foreach ($articleCommentDao->getArticleCommentsByUserId($oldUserId) as $articleComment) {
-			$articleComment->setAuthorId($newUserId);
-			$articleCommentDao->updateArticleComment($articleComment);
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
+		foreach ($submissionCommentDao->getArticleCommentsByUserId($oldUserId) as $submissionComment) {
+			$submissionComment->setAuthorId($newUserId);
+			$submissionCommentDao->updateArticleComment($submissionComment);
 		}
 
 		$accessKeyDao = DAORegistry::getDAO('AccessKeyDAO');

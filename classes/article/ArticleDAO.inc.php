@@ -124,7 +124,7 @@ class ArticleDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -181,7 +181,7 @@ class ArticleDAO extends DAO {
 		$sql .= ' ORDER BY a.journal_id, a.article_id';
 		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
-		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -189,7 +189,7 @@ class ArticleDAO extends DAO {
 	 * @param $row array
 	 * @return Article
 	 */
-	function _returnArticleFromRow($row) {
+	function _fromRow($row) {
 		$article = $this->newDataObject();
 		$this->_articleFromRow($article, $row);
 		return $article;
@@ -237,7 +237,7 @@ class ArticleDAO extends DAO {
 
 		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
 
-		HookRegistry::call('ArticleDAO::_returnArticleFromRow', array(&$article, &$row));
+		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 
 	}
 
@@ -409,8 +409,8 @@ class ArticleDAO extends DAO {
 			if ($signoff) $signoffDao->deleteObject($signoff);
 		}
 
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$articleCommentDao->deleteByArticleId($articleId);
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
+		$submissionCommentDao->deleteByArticleId($articleId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteGalleysByArticle($articleId);
@@ -493,7 +493,7 @@ class ArticleDAO extends DAO {
 			$params
 		);
 
-		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -530,7 +530,7 @@ class ArticleDAO extends DAO {
 			)
 		);
 
-		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -781,9 +781,8 @@ class ArticleDAO extends DAO {
 			$params
 		);
 
-		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
-
 }
 
 ?>

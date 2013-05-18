@@ -8,7 +8,7 @@
  *
  * @class CommentForm
  * @ingroup submission_form
- * @see Comment, ArticleCommentDAO
+ * @see Comment, SubmissionCommentDAO
  *
  * @brief Comment form.
  */
@@ -70,8 +70,8 @@ class CommentForm extends Form {
 	function display() {
 		$article = $this->article;
 
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
-		$articleComments = $articleCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
+		$articleComments = $submissionCommentDao->getArticleComments($article->getId(), $this->commentType, $this->assocId);
 
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getId());
@@ -99,7 +99,7 @@ class CommentForm extends Form {
 	 * Add the comment.
 	 */
 	function execute() {
-		$commentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$article = $this->article;
 
 		// Insert new comment		
@@ -123,7 +123,7 @@ class CommentForm extends Form {
 	 */
 	function email($recipients, $request) {
 		$article = $this->article;
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$journal = Request::getJournal();
 
 		import('classes.mail.ArticleMailTemplate');

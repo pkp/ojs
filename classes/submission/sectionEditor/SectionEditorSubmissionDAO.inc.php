@@ -32,7 +32,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $signoffDao;
 	var $galleyDao;
 	var $articleEmailLogDao;
-	var $articleCommentDao;
+	var $submissionCommentDao;
 	var $reviewRoundDao;
 
 	/**
@@ -51,14 +51,14 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
-		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$this->reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
 	}
 
 	/**
 	 * Retrieve a section editor submission by article ID.
 	 * @param $articleId int
-	 * @return EditorSubmission
+	 * @return SectionEditorSubmission
 	 */
 	function &getSectionEditorSubmission($articleId) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
@@ -123,10 +123,10 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		// Comments
-		$sectionEditorSubmission->setMostRecentEditorDecisionComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentEditorDecisionComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 
 		// Files
 		$sectionEditorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
@@ -504,7 +504,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
-	 * @return array EditorSubmission
+	 * @return array SectionEditorSubmission
 	 */
 	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$result =& $this->_getUnfilteredSectionEditorSubmissions(
@@ -529,7 +529,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
-	 * @return array EditorSubmission
+	 * @return array SectionEditorSubmission
 	 */
 	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$result =& $this->_getUnfilteredSectionEditorSubmissions(
@@ -554,7 +554,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
-	 * @return array EditorSubmission
+	 * @return array SectionEditorSubmission
 	 */
 	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$result = $this->_getUnfilteredSectionEditorSubmissions(

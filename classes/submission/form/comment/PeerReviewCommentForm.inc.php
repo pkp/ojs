@@ -78,7 +78,7 @@ class PeerReviewCommentForm extends CommentForm {
 	function execute() {
 		// Personalized execute() method since now there are possibly two comments contained within each form submission.
 
-		$commentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$this->insertedComments = array();
 
 		// Assign all common information	

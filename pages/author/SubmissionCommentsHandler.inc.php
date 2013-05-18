@@ -185,7 +185,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		AuthorAction::saveComment($this->submission, $this->comment, $emailComment, $request);
 
 		// refresh the comment
-		$articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$comment =& $articleCommentDao->getArticleCommentById($commentId);
 
 		// Redirect back to initial comments page

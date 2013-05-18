@@ -96,7 +96,7 @@ class EditCommentForm extends Form {
 	 * Update the comment.
 	 */
 	function execute() {
-		$commentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$commentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 
 		// Update comment		
 		$comment = $this->comment;

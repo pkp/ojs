@@ -23,7 +23,7 @@ class AuthorSubmissionDAO extends DAO {
 	var $articleFileDao;
 	var $suppFileDao;
 	var $copyeditorSubmissionDao;
-	var $articleCommentDao;
+	var $submissionCommentDao;
 	var $galleyDao;
 
 	/**
@@ -39,7 +39,7 @@ class AuthorSubmissionDAO extends DAO {
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
@@ -113,10 +113,10 @@ class AuthorSubmissionDAO extends DAO {
 		}
 
 		// Comments
-		$authorSubmission->setMostRecentEditorDecisionComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
-		$authorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
-		$authorSubmission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
-		$authorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$authorSubmission->setMostRecentEditorDecisionComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
+		$authorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$authorSubmission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
+		$authorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		// Files
 		$authorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
