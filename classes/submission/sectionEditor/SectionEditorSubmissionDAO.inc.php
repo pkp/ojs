@@ -123,10 +123,10 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		// Comments
-		$sectionEditorSubmission->setMostRecentEditorDecisionComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
-		$sectionEditorSubmission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentEditorDecisionComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 
 		// Files
 		$sectionEditorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
