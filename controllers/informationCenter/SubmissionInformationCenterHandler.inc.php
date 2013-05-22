@@ -81,14 +81,13 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 	 */
 	function fetchTemplateBody($args, $request) {
 		$templateId = $request->getUserVar('template');
-		import('classes.mail.MonographMailTemplate');
-		$template = new MonographMailTemplate($this->_submission, $templateId);
+		import('lib.pkp.classes.mail.SubmissionMailTemplate');
+		$template = new SubmissionMailTemplate($this->_submission, $templateId);
 		if ($template) {
 			$user = $request->getUser();
 			$dispatcher = $request->getDispatcher();
 			$context = $request->getContext();
 			$template->assignParams(array(
-				'journalUrl' => $dispatcher->url($request, ROUTE_PAGE, $context->getPath()),
 				'editorialContactSignature' => $user->getContactSignature(),
 				'signatureFullName' => $user->getFullname(),
 			));
