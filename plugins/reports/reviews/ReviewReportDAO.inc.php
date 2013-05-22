@@ -13,7 +13,7 @@
  * @brief Review report DAO
  */
 
-import('classes.article.ArticleComment');
+import('lib.pkp.classes.submission.SubmissionComment');
 import('lib.pkp.classes.db.DBRowIterator');
 
 class ReviewReportDAO extends DAO {
