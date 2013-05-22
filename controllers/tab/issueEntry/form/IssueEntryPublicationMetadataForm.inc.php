@@ -66,6 +66,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('formParams', $this->getFormParams());
 		$templateMgr->assign_by_ref('context', $context);
 
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+		$enablePublicArticleId = $journalSettingsDao->getSetting($context->getId(),'enablePublicArticleId');
+		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
+		$enablePageNumber = $journalSettingsDao->getSetting($context->getId(), 'enablePageNumber');
+		$templateMgr->assign('enablePageNumber', $enablePageNumber);
+
 		// include issue possibilities
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -151,7 +157,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * @see Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished', 'accessStatus'));
+		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished', 'accessStatus', 'pages', 'publicArticleId'));
 	}
 
 	/**
@@ -215,6 +221,14 @@ class IssueEntryPublicationMetadataForm extends Form {
 			// define the access status for the article if none is set.
 			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
 
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			if (!is_null($this->getData('pages'))) {
+				$submission->setPages($this->getData('pages'));
+			}
+			if (!is_null($this->getData('publicArticleId'))) {
+				$articleDao->changePubId($submission->getId(), 'publisher-id', $this->getData('publicArticleId'));
+			}
+
 			if ($issue) {
 
 				// Schedule against an issue.
@@ -269,6 +283,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
 			$submission->stampStatusModified();
+			$articleDao->updateObject($submission);
 
 			if ($issue && $issue->getPublished()) {
 				$submission->setStatus(STATUS_PUBLISHED);

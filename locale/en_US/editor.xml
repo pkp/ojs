@@ -208,6 +208,7 @@
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>
+	<message key="editor.article.customJournalSettings">Custom identifiers and page information</message>
 	<message key="editor.article.display">Display</message>
 	<message key="editor.article.hideTocAuthorDescription">Omit author names from issue table of contents</message>
 	<message key="editor.article.hideTocAuthorDefault">Default</message>
