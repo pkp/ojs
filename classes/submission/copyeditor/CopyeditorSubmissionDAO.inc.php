@@ -102,8 +102,8 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setEditAssignments($editAssignments->toArray());
 
 		// Comments
-		$copyeditorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
-		$copyeditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$copyeditorSubmission->setMostRecentCopyeditComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$copyeditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		// Files
 
