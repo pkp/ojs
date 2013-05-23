@@ -34,7 +34,7 @@ define('SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE', 5);
 define('SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE', 6);
 define('SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE', 7);
 
-import('lib.pkp.classes.submission.common.PKPAction');
+import('lib.pkp.classes.submission.action.PKPAction');
 
 class Action extends PKPAction {
 	/**
