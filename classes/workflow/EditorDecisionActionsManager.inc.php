@@ -33,7 +33,7 @@ class EditorDecisionActionsManager {
 	 * @param $decisions
 	 * @return array
 	 */
-	function getActionLabels($decisions) {
+	static function getActionLabels($decisions) {
 		$allDecisionsData = array();
 		$allDecisionsData =
 			self::_submissionStageDecisions() +
@@ -58,7 +58,7 @@ class EditorDecisionActionsManager {
 	 * @param $decisions array
 	 * @return boolean
 	 */
-	function getEditorTakenActionInReviewRound($reviewRound, $decisions = array()) {
+	static function getEditorTakenActionInReviewRound($reviewRound, $decisions = array()) {
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		$editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
@@ -80,7 +80,7 @@ class EditorDecisionActionsManager {
 	 * Get the available decisions by stage ID.
 	 * @param $stageId int WORKFLOW_STAGE_ID_...
 	 */
-	function getStageDecisions($stageId) {
+	static function getStageDecisions($stageId) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
 				return self::_submissionStageDecisions();
@@ -100,7 +100,7 @@ class EditorDecisionActionsManager {
 	 * Define and return editor decisions for the submission stage.
 	 * @return array
 	 */
-	function _submissionStageDecisions() {
+	static function _submissionStageDecisions() {
 		static $decisions = array(
 			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => array(
 				'operation' => 'externalReview',
@@ -134,7 +134,7 @@ class EditorDecisionActionsManager {
 	 * Define and return editor decisions for the review stage.
 	 * @return array
 	 */
-	function _externalReviewStageDecisions() {
+	static function _externalReviewStageDecisions() {
 		static $decisions = array(
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
 				'operation' => 'sendReviewsInReview',
@@ -177,7 +177,7 @@ class EditorDecisionActionsManager {
 	 * Define and return editor decisions for the editorial stage.
 	 * @return array
 	 */
-	function _editorialStageDecisions() {
+	static function _editorialStageDecisions() {
 		static $decisions = array(
 			SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION => array(
 				'operation' => 'promote',
@@ -189,6 +189,20 @@ class EditorDecisionActionsManager {
 		);
 
 		return $decisions;
+	}
+
+	/**
+	 * Get the stage-level notification type constants.
+	 * @return array
+	 */
+	static function getStageNotifications() {
+		static $notifications = array(
+			NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION,
+			NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW,
+			NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING,
+			NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION
+		);
+		return $notifications;
 	}
 }
 

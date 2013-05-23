@@ -150,6 +150,20 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	protected function _getReviewNotificationTypes() {
 		return array(NOTIFICATION_TYPE_PENDING_EXTERNAL_REVISIONS);
 	}
+
+	/**
+	 * Get the fully-qualified import name for the given form name.
+	 * @param $formName Class name for the desired form.
+	 * @return string
+	 */
+	protected function _resolveEditorDecisionForm($formName) {
+		switch($formName) {
+			case 'InitiateExternalReviewForm':
+				return "controllers.modals.editorDecision.form.$formName";
+			default:
+				return parent::_resolveEditorDecisionForm($formName);
+		}
+	}
 }
 
 ?>

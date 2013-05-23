@@ -34,9 +34,9 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 	 */
 	function assignDefaultParticipants($submission, $request) {
 		// Assign the default users to the submission workflow stage
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$sectionEditorAction = new SectionEditorAction();
-		$sectionEditorAction->assignDefaultStageParticipants($submission, WORKFLOW_STAGE_ID_SUBMISSION, $request);
+		import('lib.pkp.classes.submission.action.EditorAction');
+		$editorAction = new EditorAction();
+		$editorAction->assignDefaultStageParticipants($submission, WORKFLOW_STAGE_ID_SUBMISSION, $request);
 		parent::assignDefaultParticipants($submission, $request);
 	}
 
