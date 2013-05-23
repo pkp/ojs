@@ -653,4 +653,6 @@
 	<message key="manager.setup.categories.description">Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</message>
 
 	<message key="grid.category.path">Path</message>
+	<message key="grid.action.addSection">Add Section</message>
+	<message key="manager.setup.section.description">Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</message>
 </locale>
