@@ -24,17 +24,6 @@ switch ($op) {
 		import('lib.pkp.pages.admin.PKPAdminContextHandler');
 		break;
 	//
-	// Authentication sources
-	//
-	case 'auth':
-	case 'updateAuthSources':
-	case 'createAuthSource':
-	case 'editAuthSource':
-	case 'updateAuthSource':
-	case 'deleteAuthSource':
-		define('HANDLER_CLASS', 'AuthSourcesHandler');
-		import('pages.admin.AuthSourcesHandler');
-	//
 	// Merge users
 	//
 	case 'mergeUsers':
