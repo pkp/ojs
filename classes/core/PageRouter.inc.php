@@ -40,7 +40,7 @@ class PageRouter extends PKPPageRouter {
 				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');
 				$request->redirect(null, $role->getPath());
 			} else {
-				$request->redirect(null, 'user');
+				$request->redirect(null, 'dashboard');
 			}
 		} else {
 			// The user is at the site context, check to see if they are
