@@ -41,12 +41,12 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 		import('classes.workflow.EditorDecisionActionsManager');
 		$actionLabels = EditorDecisionActionsManager::getActionLabels(array($this->_decision));
 
-		import('classes.submission.sectionEditor.SectionEditorAction');
-		$sectionEditorAction = new SectionEditorAction();
-		$sectionEditorAction->recordDecision($request, $submission, $this->_decision, $actionLabels);
+		import('lib.pkp.classes.submission.action.EditorAction');
+		$editorAction = new EditorAction();
+		$editorAction->recordDecision($request, $submission, $this->_decision, $actionLabels);
 
 		// Move to the internal review stage.
-		$sectionEditorAction->incrementWorkflowStage($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request);
+		$editorAction->incrementWorkflowStage($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request);
 
 		// Create an initial internal review round.
 		$this->_initiateReviewRound($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request, REVIEW_ROUND_STATUS_PENDING_REVIEWERS);
