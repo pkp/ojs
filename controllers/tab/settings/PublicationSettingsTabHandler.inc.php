@@ -26,7 +26,7 @@ class PublicationSettingsTabHandler extends ManagerSettingsTabHandler {
 			'submissionStage' => 'lib.pkp.controllers.tab.settings.submissionStage.form.SubmissionStageForm',
 			'contentIndexing' => 'controllers.tab.settings.contentIndexing.form.ContentIndexingForm',
 			'reviewStage' => 'controllers.tab.settings.reviewStage.form.OJSReviewStageForm',
-			'pressLibrary' => 'controllers/tab/settings/pressLibrary/pressLibrary.tpl',
+			'library' => 'controllers/tab/settings/library/library.tpl',
 			'productionStage' => 'controllers.tab.settings.productionStage.form.ProductionStageForm',
 			'emailTemplates' => 'lib.pkp.controllers.tab.settings.emailTemplates.form.EmailTemplatesForm'
 		));
