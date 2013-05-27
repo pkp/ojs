@@ -216,6 +216,7 @@ class ArticleDAO extends DAO {
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
+		$article->setStageId($row['stage_id']);
 		$article->setLanguage($row['language']);
 		$article->setCommentsToEditor($row['comments_to_ed']);
 		$article->setCitations($row['citations']);
@@ -249,15 +250,16 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(locale, user_id, journal_id, section_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status)
+				(locale, user_id, journal_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
-				$article->getUserId(),
-				$article->getJournalId(),
-				$article->getSectionId(),
+				(int) $article->getUserId(),
+				(int) $article->getJournalId(),
+				(int) $article->getSectionId(),
+				(int) $article->getStageId(),
 				$article->getLanguage(),
 				$article->getCommentsToEditor(),
 				$article->getCitations(),
@@ -299,6 +301,7 @@ class ArticleDAO extends DAO {
 				SET	locale = ?,
 					user_id = ?,
 					section_id = ?,
+					stage_id = ?,
 					language = ?,
 					comments_to_ed = ?,
 					citations = ?,
@@ -322,6 +325,7 @@ class ArticleDAO extends DAO {
 				$article->getLocale(),
 				(int) $article->getUserId(),
 				(int) $article->getSectionId(),
+				(int) $article->getStageId(),
 				$article->getLanguage(),
 				$article->getCommentsToEditor(),
 				$article->getCitations(),
@@ -336,7 +340,7 @@ class ArticleDAO extends DAO {
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
 				(int) $article->getCommentsStatus(),
-				$article->getId()
+				(int) $article->getId()
 			)
 		);
 

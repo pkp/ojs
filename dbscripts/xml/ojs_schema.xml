@@ -599,6 +599,10 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="stage_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
 		<descr>Journal articles.</descr>
 		<index name="articles_user_id">
 			<col>user_id</col>
