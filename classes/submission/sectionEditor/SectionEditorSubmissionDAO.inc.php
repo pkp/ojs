@@ -14,14 +14,14 @@
  */
 
 import('classes.submission.sectionEditor.SectionEditorSubmission');
+import('classes.article.ArticleDAO');
 
 // Bring in editor decision constants
 import('classes.submission.author.AuthorSubmission');
 import('classes.submission.common.Action');
 import('classes.submission.reviewer.ReviewerSubmission');
 
-class SectionEditorSubmissionDAO extends DAO {
-	var $articleDao;
+class SectionEditorSubmissionDAO extends ArticleDAO {
 	var $authorDao;
 	var $userDao;
 	var $editAssignmentDao;
@@ -39,8 +39,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Constructor.
 	 */
 	function SectionEditorSubmissionDAO() {
-		parent::DAO();
-		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
+		parent::ArticleDAO();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
@@ -53,6 +52,14 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
 		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 		$this->reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+	}
+
+	/**
+	 * Instantiate a new data object.
+	 * @return SectionEditorSubmission
+	 */
+	function newDataObject() {
+		return new SectionEditorSubmission();
 	}
 
 	/**
@@ -107,10 +114,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return SectionEditorSubmission
 	 */
 	function &_returnSectionEditorSubmissionFromRow($row) {
-		$sectionEditorSubmission = new SectionEditorSubmission();
-
 		// Article attributes
-		$this->articleDao->_articleFromRow($sectionEditorSubmission, $row);
+		$sectionEditorSubmission = parent::_fromRow($row);
 
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
@@ -250,7 +255,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Update article
 		if ($sectionEditorSubmission->getId()) {
 
-			$article = $this->articleDao->getById($sectionEditorSubmission->getId());
+			$article = parent::getById($sectionEditorSubmission->getId());
 
 			// Only update fields that can actually be edited.
 			$article->setSectionId($sectionEditorSubmission->getSectionId());
@@ -262,7 +267,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setLastModified($sectionEditorSubmission->getLastModified());
 			$article->setCommentsStatus($sectionEditorSubmission->getCommentsStatus());
 
-			$this->articleDao->updateObject($article);
+			parent::updateObject($article);
 		}
 
 	}

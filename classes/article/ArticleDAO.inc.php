@@ -13,13 +13,18 @@
  * @brief Operations for retrieving and modifying Article objects.
  */
 
-
 import('classes.article.Article');
+import('lib.pkp.classes.submission.SubmissionDAO');
 
-class ArticleDAO extends DAO {
-	var $authorDao;
-
+class ArticleDAO extends SubmissionDAO {
 	var $cache;
+
+	/**
+	 * Constructor.
+	 */
+	function ArticleDAO() {
+		parent::SubmissionDAO();
+	}
 
 	function _cacheMiss($cache, $id) {
 		$article = $this->getById($id, null, false);
@@ -36,34 +41,13 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Constructor.
-	 */
-	function ArticleDAO() {
-		parent::DAO();
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-	}
-
-	/**
 	 * Get a list of field names for which data is localized.
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
-			'title', 'cleanTitle', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'source', 'rights', 'sponsor', 'prefix', 'subtitle',
+		return parent::getLocaleFieldNames() + array(
+			'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 		);
-	}
-
-	/**
-	 * Get a list of additional fields that do not have
-	 * dedicated accessors.
-	 * @return array
-	 */
-	function getAdditionalFieldNames() {
-		$additionalFields = parent::getAdditionalFieldNames();
-		// FIXME: Move this to a PID plug-in.
-		$additionalFields[] = 'pub-id::publisher-id';
-		return $additionalFields;
 	}
 
 	/**
@@ -190,8 +174,23 @@ class ArticleDAO extends DAO {
 	 * @return Article
 	 */
 	function _fromRow($row) {
-		$article = $this->newDataObject();
-		$this->_articleFromRow($article, $row);
+		$article = parent::_fromRow();
+
+		$article->setId($row['article_id']);
+		$article->setJournalId($row['journal_id']);
+		$article->setSectionId($row['section_id']);
+		$article->setSectionTitle($row['section_title']);
+		$article->setSectionAbbrev($row['section_abbrev']);
+		$article->setCitations($row['citations']);
+		$article->setCurrentRound($row['current_round']);
+		$article->setPages($row['pages']);
+		$article->setFastTracked($row['fast_tracked']);
+		$article->setHideAuthor($row['hide_author']);
+		$article->setCommentsStatus($row['comments_status']);
+
+		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
+
+		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 		return $article;
 	}
 
@@ -201,45 +200,6 @@ class ArticleDAO extends DAO {
 	 */
 	function newDataObject() {
 		return new Article();
-	}
-
-	/**
-	 * Internal function to fill in the passed article object from the row.
-	 * @param $article Article output article
-	 * @param $row array input row
-	 */
-	function _articleFromRow($article, $row) {
-		$article->setId($row['article_id']);
-		$article->setLocale($row['locale']);
-		$article->setUserId($row['user_id']);
-		$article->setJournalId($row['journal_id']);
-		$article->setSectionId($row['section_id']);
-		$article->setSectionTitle($row['section_title']);
-		$article->setSectionAbbrev($row['section_abbrev']);
-		$article->setStageId($row['stage_id']);
-		$article->setLanguage($row['language']);
-		$article->setCommentsToEditor($row['comments_to_ed']);
-		$article->setCitations($row['citations']);
-		$article->setDateSubmitted($this->datetimeFromDB($row['date_submitted']));
-		$article->setDateStatusModified($this->datetimeFromDB($row['date_status_modified']));
-		$article->setDatePublished($this->datetimeFromDB($row['date_published']));
-		$article->setLastModified($this->datetimeFromDB($row['last_modified']));
-		$article->setStatus($row['status']);
-		$article->setSubmissionProgress($row['submission_progress']);
-		$article->setCurrentRound($row['current_round']);
-		$article->setSubmissionFileId($row['submission_file_id']);
-		$article->setRevisedFileId($row['revised_file_id']);
-		$article->setReviewFileId($row['review_file_id']);
-		$article->setEditorFileId($row['editor_file_id']);
-		$article->setPages($row['pages']);
-		$article->setFastTracked($row['fast_tracked']);
-		$article->setHideAuthor($row['hide_author']);
-		$article->setCommentsStatus($row['comments_status']);
-
-		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
-
-		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
-
 	}
 
 	/**
@@ -363,73 +323,20 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Delete an article.
-	 * @param $article Article
-	 */
-	function deleteObject($article) {
-		return $this->deleteById($article->getId());
-	}
-
-	/**
 	 * Delete an article by ID.
 	 * @param $articleId int
 	 */
 	function deleteById($articleId) {
-		$this->authorDao->deleteAuthorsBySubmission($articleId);
+		parent::deleteById($articleId);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
-
-		$commentDao = DAORegistry::getDAO('CommentDAO');
-		$commentDao->deleteBySubmissionId($articleId);
-
-		$noteDao = DAORegistry::getDAO('NoteDAO');
-		$noteDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
-
-		$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-		$reviewRoundDao->deleteBySubmissionId($articleId);
-
-		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
-		$editDecisionDao->deleteDecisionsBySubmissionId($articleId);
-
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignmentDao->deleteBySubmissionId($articleId);
-
-		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignmentDao->deleteEditAssignmentsByArticle($articleId);
-
-		// Delete copyedit, layout, and proofread signoffs
-		$signoffDao = DAORegistry::getDAO('SignoffDAO');
-		$copyedInitialSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-		$copyedAuthorSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
-		$copyedFinalSignoffs = $signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $articleId);
-		$layoutSignoffs = $signoffDao->getBySymbolic('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofreadAuthorSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofreadProofreaderSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofreadLayoutSignoffs = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		$signoffs = array($copyedInitialSignoffs, $copyedAuthorSignoffs, $copyedFinalSignoffs, $layoutSignoffs,
-						$proofreadAuthorSignoffs, $proofreadProofreaderSignoffs, $proofreadLayoutSignoffs);
-		foreach ($signoffs as $signoff) {
-			if ($signoff) $signoffDao->deleteObject($signoff);
-		}
-
-		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
-		$submissionCommentDao->deleteByArticleId($articleId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteGalleysByArticle($articleId);
 
 		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$articleSearchDao->deleteArticleKeywords($articleId);
-
-		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
-		$articleEventLogDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
-
-		$articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
-		$articleEmailLogDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
-
-		$notificationDao = DAORegistry::getDAO('NotificationDAO');
-		$notificationDao->deleteByAssoc(ASSOC_TYPE_ARTICLE, $articleId);
 
 		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$suppFileDao->deleteSuppFilesByArticle($articleId);
@@ -648,18 +555,6 @@ class ArticleDAO extends DAO {
 			);
 		}
 		$this->flushCache();
-	}
-
-	/**
-	 * Change the public ID of an article.
-	 * @param $articleId int
-	 * @param $pubIdType string One of the NLM pub-id-type values or
-	 * 'other::something' if not part of the official NLM list
-	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @param $pubId string
-	 */
-	function changePubId($articleId, $pubIdType, $pubId) {
-		$this->updateSetting($articleId, 'pub-id::'.$pubIdType, $pubId, 'string');
 	}
 
 	/**

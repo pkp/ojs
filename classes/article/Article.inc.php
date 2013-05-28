@@ -252,22 +252,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get editor file id.
-	 * @return int
-	 */
-	function getEditorFileId() {
-		return $this->getData('editorFileId');
-	}
-
-	/**
-	 * Set editor file id.
-	 * @param $editorFileId int
-	 */
-	function setEditorFileId($editorFileId) {
-		return $this->setData('editorFileId', $editorFileId);
-	}
-
-	/**
 	 * get expedited
 	 * @return boolean
 	 */
@@ -427,7 +411,7 @@ class Article extends Submission {
 	 * @param $idOnly boolean Return only file ID
 	 * @return ArticleFile
 	 */
-	function &getFileBySignoffType($signoffType, $idOnly = false) {
+	function getFileBySignoffType($signoffType, $idOnly = false) {
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
@@ -442,8 +426,7 @@ class Article extends Submission {
 			return $returner;
 		}
 
-		$articleFile =& $articleFileDao->getArticleFile($signoff->getFileId(), $signoff->getFileRevision());
-		return $articleFile;
+		return $articleFileDao->getArticleFile($signoff->getFileId(), $signoff->getFileRevision());
 	}
 
 	/**
@@ -451,7 +434,7 @@ class Article extends Submission {
 	 * @param $signoffType string
 	 * @return User
 	 */
-	function &getUserBySignoffType($signoffType) {
+	function getUserBySignoffType($signoffType) {
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 

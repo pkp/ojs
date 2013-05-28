@@ -14,9 +14,9 @@
  */
 
 import('classes.article.PublishedArticle');
+import('classes.article.ArticleDAO');
 
-class PublishedArticleDAO extends DAO {
-	var $articleDao;
+class PublishedArticleDAO extends ArticleDAO {
 	var $authorDao;
 	var $galleyDao;
 	var $suppFileDao;
@@ -24,15 +24,25 @@ class PublishedArticleDAO extends DAO {
 	var $articleCache;
 	var $articlesInSectionsCache;
 
+ 	/**
+	 * Constructor.
+	 */
+	function PublishedArticleDAO() {
+		parent::ArticleDAO();
+		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+	}
+
 	function _articleCacheMiss($cache, $id) {
-		$publishedArticle =& $this->getPublishedArticleByBestArticleId(null, $id, null);
+		$publishedArticle = $this->getPublishedArticleByBestArticleId(null, $id, null);
 		$cache->setCache($id, $publishedArticle);
 		return $publishedArticle;
 	}
 
 	function &_getPublishedArticleCache() {
 		if (!isset($this->articleCache)) {
-			$cacheManager =& CacheManager::getManager();
+			$cacheManager = CacheManager::getManager();
 			$this->articleCache =& $cacheManager->getObjectCache('publishedArticles', 0, array($this, '_articleCacheMiss'));
 		}
 		return $this->articleCache;
@@ -46,20 +56,10 @@ class PublishedArticleDAO extends DAO {
 
 	function &_getArticlesInSectionsCache() {
 		if (!isset($this->articlesInSectionsCache)) {
-			$cacheManager =& CacheManager::getManager();
+			$cacheManager = CacheManager::getManager();
 			$this->articlesInSectionsCache =& $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_articlesInSectionsCacheMiss'));
 		}
 		return $this->articlesInSectionsCache;
-	}
- 	/**
-	 * Constructor.
-	 */
-	function PublishedArticleDAO() {
-		parent::DAO();
-		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 
 	/**
@@ -104,7 +104,7 @@ class PublishedArticleDAO extends DAO {
 				AND a.status <> ' . STATUS_ARCHIVED . '
 			ORDER BY section_seq ASC, pa.seq ASC';
 
-		$result =& $this->retrieve($sql, $params);
+		$result = $this->retrieve($sql, $params);
 
 		while (!$result->EOF) {
 			$publishedArticles[] = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
@@ -112,8 +112,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticles;
 	}
 
@@ -121,7 +119,7 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve a count of published articles in a journal.
 	 */
 	function getPublishedArticleCountByJournalId($journalId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
 			(int) $journalId
 		);
@@ -151,7 +149,7 @@ class PublishedArticleDAO extends DAO {
 			$locale
 		);
 		if ($journalId !== null) $params[] = (int) $journalId;
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT	pa.*,
 				a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -184,7 +182,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticlesInSections($issueId, $useCache = false) {
 		if ($useCache) {
-			$cache =& $this->_getArticlesInSectionsCache();
+			$cache = $this->_getArticlesInSectionsCache();
 			$returner = $cache->get($issueId);
 			return $returner;
 		}
@@ -194,7 +192,7 @@ class PublishedArticleDAO extends DAO {
 		$locale = AppLocale::getLocale();
 		$publishedArticles = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT DISTINCT
 				pa.*,
 				a.*,
@@ -253,8 +251,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticles;
 	}
 
@@ -271,7 +267,7 @@ class PublishedArticleDAO extends DAO {
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	pa.*,
 				a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -311,8 +307,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticles;
 	}
 
@@ -339,8 +333,6 @@ class PublishedArticleDAO extends DAO {
 		if (!$simple) $publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticle;
 	}
 
@@ -353,7 +345,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
-			$cache =& $this->_getPublishedArticleCache();
+			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
@@ -374,7 +366,7 @@ class PublishedArticleDAO extends DAO {
 		);
 		if ($journalId) $params[] = (int) $journalId;
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	pa.*,
 				a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -394,12 +386,10 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle =& $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticle = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticle;
 	}
 
@@ -415,7 +405,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
 		if ($useCache && $pubIdType == 'publisher-id') {
-			$cache =& $this->_getPublishedArticleCache();
+			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($pubId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
@@ -423,10 +413,10 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if (!empty($pubId)) {
-			$publishedArticles =& $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
+			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
 			if (!empty($publishedArticles)) {
 				assert(count($publishedArticles) == 1);
-				$publishedArticle =& $publishedArticles[0];
+				$publishedArticle = $publishedArticles[0];
 			}
 		}
 		return $publishedArticle;
@@ -479,7 +469,7 @@ class PublishedArticleDAO extends DAO {
 			$sql .= ' AND a.journal_id = ?';
 		}
 		$sql .= ' ORDER BY pa.issue_id, a.article_id';
-		$result =& $this->retrieve($sql, $params);
+		$result = $this->retrieve($sql, $params);
 
 		$publishedArticles = array();
 		while (!$result->EOF) {
@@ -500,7 +490,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
-		$article =& $this->getPublishedArticleByPubId('publisher-id', $articleId, (int) $journalId, $useCache);
+		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, (int) $journalId, $useCache);
 		if (!isset($article) && ctype_digit("$articleId")) $article =& $this->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, $useCache);
 		return $article;
 	}
@@ -523,7 +513,7 @@ class PublishedArticleDAO extends DAO {
 
 		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
-		$result =& $this->$functionName(
+		$result = $this->$functionName(
 			'SELECT	a.article_id AS pub_id,
 				COALESCE(atl.setting_value, atpl.setting_value) AS article_title
 			FROM	published_articles pa,
@@ -547,8 +537,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleIds;
 	}
 
@@ -563,7 +551,7 @@ class PublishedArticleDAO extends DAO {
 	function &getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
 		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
-		$result =& $this->$functionName(
+		$result = $this->$functionName(
 			'SELECT a.article_id AS pub_id FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY pa.date_published DESC',
 			isset($journalId)?(int) $journalId:false
 		);
@@ -575,8 +563,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleIds;
 	}
 	/**
@@ -588,7 +574,7 @@ class PublishedArticleDAO extends DAO {
 	function getPublishedArticleIdsBySection($sectionId, $useCache = true) {
 		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
-		$result =& $this->$functionName(
+		$result = $this->$functionName(
 			'SELECT a.article_id FROM published_articles pa, articles a, issues i WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.article_id = a.article_id AND a.section_id = ? ORDER BY pa.date_published DESC',
 			(int) $sectionId
 		);
@@ -600,8 +586,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleIds;
 	}
 
@@ -620,6 +604,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
+		$publishedArticle = parent::_fromRow($row);
 		$publishedArticle = $this->newDataObject();
 		$publishedArticle->setPublishedArticleId($row['published_article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -627,10 +612,6 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setAccessStatus($row['access_status']);
 
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
-
-		// Article attributes
-		$this->articleDao->_articleFromRow($publishedArticle, $row);
-
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
@@ -700,7 +681,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $sectionId int
 	 */
 	function deletePublishedArticlesBySectionId($sectionId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT pa.article_id AS article_id FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.section_id = ?', (int) $sectionId
 		);
 
@@ -712,8 +693,6 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		$this->flushCache();
 	}
 
@@ -774,7 +753,7 @@ class PublishedArticleDAO extends DAO {
 	 * Sequentially renumber published articles in their sequence order.
 	 */
 	function resequencePublishedArticles($sectionId, $issueId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT pa.published_article_id FROM published_articles pa, articles a WHERE a.section_id = ? AND a.article_id = pa.article_id AND pa.issue_id = ? ORDER BY pa.seq',
 			array((int) $sectionId, (int) $issueId)
 		);
@@ -809,15 +788,13 @@ class PublishedArticleDAO extends DAO {
 	 * @return array
 	 */
 	function getArticleYearRange($journalId = null) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT MAX(pa.date_published), MIN(pa.date_published) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':''),
 			isset($journalId)?(int) $journalId:false
 		);
 		$returner = array($result->fields[0], $result->fields[1]);
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 }
