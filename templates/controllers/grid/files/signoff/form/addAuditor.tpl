@@ -29,7 +29,7 @@
 		<!-- User autocomplete -->
 		<div id="userAutocomplete">
 			{fbvFormSection}
-				{fbvElement type="autocomplete" autocompleteUrl=$autocompleteUrl id="userId-GroupId" name="copyeditUserAutocomplete" label="editor.submission.addAuditor" value=$userNameString|escape}
+				{fbvElement type="autocomplete" autocompleteUrl=$autocompleteUrl id="userId-GroupId" name="copyeditUserAutocomplete" label="editor.submission.addAuditor" value=$userNameString|escape disableSync=true}
 			{/fbvFormSection}
 		</div>
 
