@@ -210,9 +210,9 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(locale, user_id, journal_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, pages, fast_tracked, hide_author, comments_status)
+				(locale, user_id, journal_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -226,10 +226,6 @@ class ArticleDAO extends SubmissionDAO {
 				$article->getStatus() === null ? STATUS_QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getCurrentRound() === null ? 1 : $article->getCurrentRound(),
-				$this->nullOrInt($article->getSubmissionFileId()),
-				$this->nullOrInt($article->getRevisedFileId()),
-				$this->nullOrInt($article->getReviewFileId()),
-				$this->nullOrInt($article->getEditorFileId()),
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
@@ -271,10 +267,6 @@ class ArticleDAO extends SubmissionDAO {
 					status = ?,
 					submission_progress = ?,
 					current_round = ?,
-					submission_file_id = ?,
-					revised_file_id = ?,
-					review_file_id = ?,
-					editor_file_id = ?,
 					pages = ?,
 					fast_tracked = ?,
 					hide_author = ?,
@@ -292,10 +284,6 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getStatus(),
 				(int) $article->getSubmissionProgress(),
 				(int) $article->getCurrentRound(),
-				$this->nullOrInt($article->getSubmissionFileId()),
-				$this->nullOrInt($article->getRevisedFileId()),
-				$this->nullOrInt($article->getReviewFileId()),
-				$this->nullOrInt($article->getEditorFileId()),
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
