@@ -13,15 +13,15 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
-import('classes.article.ArticleFile');
+import('lib.pkp.classes.submission.Representation');
 
-class ArticleGalley extends ArticleFile {
+class ArticleGalley extends Representation {
 
 	/**
 	 * Constructor.
 	 */
 	function ArticleGalley() {
-		parent::DataObject();
+		parent::Representation();
 	}
 
 	/**
