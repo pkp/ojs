@@ -199,7 +199,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			FROM	submissions a
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN submission_settings atl ON (atl.submission_id = a.submission_id AND atl.setting_name = ? AND atl.locale = ?)
-				LEFT JOIN section s ON (s.section_id = a.section_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)

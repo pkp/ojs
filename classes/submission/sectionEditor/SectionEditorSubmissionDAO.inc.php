@@ -17,7 +17,6 @@ import('classes.submission.sectionEditor.SectionEditorSubmission');
 import('classes.article.ArticleDAO');
 
 // Bring in editor decision constants
-import('classes.submission.author.AuthorSubmission');
 import('classes.submission.common.Action');
 import('classes.submission.reviewer.ReviewerSubmission');
 

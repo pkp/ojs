@@ -26,20 +26,6 @@ class ArticleDAO extends SubmissionDAO {
 		parent::SubmissionDAO();
 	}
 
-	function _cacheMiss($cache, $id) {
-		$article = $this->getById($id, null, false);
-		$cache->setCache($id, $article);
-		return $article;
-	}
-
-	function _getCache() {
-		if (!isset($this->cache)) {
-			$cacheManager = CacheManager::getManager();
-			$this->cache = $cacheManager->getObjectCache('articles', 0, array($this, '_cacheMiss'));
-		}
-		return $this->cache;
-	}
-
 	/**
 	 * Get a list of field names for which data is localized.
 	 * @return array
@@ -48,16 +34,6 @@ class ArticleDAO extends SubmissionDAO {
 		return parent::getLocaleFieldNames() + array(
 			'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 		);
-	}
-
-	/**
-	 * Update the settings for this object
-	 * @param $article object
-	 */
-	function updateLocaleFields($article) {
-		$this->updateDataObjectSettings('submission_settings', $article, array(
-			'submission_id' => $article->getId()
-		));
 	}
 
 	/**
@@ -174,9 +150,8 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function _fromRow($row) {
-		$article = parent::_fromRow();
+		$article = parent::_fromRow($row);
 
-		$article->setId($row['submission_id']);
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
@@ -187,8 +162,6 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
 		$article->setCommentsStatus($row['comments_status']);
-
-		$this->getDataObjectSettings('submission_settings', 'submission_id', $row['submission_id'], $article);
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 		return $article;
@@ -344,9 +317,6 @@ class ArticleDAO extends SubmissionDAO {
 		// Delete article citations.
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
-
-		$this->update('DELETE FROM submission_settings WHERE submission_id = ?', $articleId);
-		$this->update('DELETE FROM submissions WHERE submission_id = ?', $articleId);
 
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
@@ -610,19 +580,10 @@ class ArticleDAO extends SubmissionDAO {
 		$this->flushCache();
 	}
 
-	/**
-	 * Get the ID of the last inserted article.
-	 * @return int
-	 */
-	function getInsertId() {
-		return $this->_getInsertId('submissions', 'submission_id');
-	}
-
 	function flushCache() {
 		// Because both publishedArticles and articles are cached by
 		// article ID, flush both caches on update.
-		$cache = $this->_getCache();
-		$cache->flush();
+		parent::flushCache();
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$cache = $publishedArticleDao->_getPublishedArticleCache();
