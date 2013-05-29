@@ -655,60 +655,6 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
-
-	/**
-	 * For 3.0.0. upgrade - migrate submission files from the article_files tables to the submission_files one, maintaining relationships with galleys, etc.
-	 * @return boolean
-	 */
-	function migrateSubmissionFiles() {
-		$submissionFileDao =& DAORegistry::getDAO('SubmissionFileDAO');
-		# use direct queries to minimize memory usge.
-		$filesResult = $submissionFileDao->retrieve('SELECT * FROM article_files');
-		while (!$filesResult->EOF) {
-			$row = $filesResult->GetRowAssoc(false);
-			$submissionFileDao->update(
-					'INSERT INTO submission_files (
-						file_id,
-						revision,
-						source_file_id,
-						source_revision,
-						submission_id,
-						file_type,
-						genre_id,
-						file_size,
-						original_file_name,
-						file_stage,
-						viewable,
-						date_uploaded,
-						date_modified,
-						user_group_id,
-						uploader_user_id,
-						assoc_type,
-						assoc_id)
-					VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-					array(
-							(int) $row['file_id'],
-							(int) $row['revision'],
-							(int) $row['source_file_id'],
-							(int) $row['source_revision'],
-							(int) $row['article_id'],
-							$row['file_type'],
-							1, // the genre_id for 'article' from genres.xml
-							(int) $row['file_size'],
-							$row['original_file_name'],
-							$row['file_stage'],
-							$row['viewable'],
-							$row['date_uploaded'],
-							$row['date_modified'],
-							null,
-							null,
-							null,
-							null
-						));
-			$filesResult->MoveNext();
-		}
-		return true;
-	}
 }
 
 ?>

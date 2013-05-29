@@ -61,4 +61,9 @@
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$articleAbstract}', '{$submissionAbstract}'), subject=REPLACE(subject, '{$articleAbstract}', '{$submissionAbstract}')</query>
 	</sql>
+	<!--   Bug #8148: Submission process into PKP lib  -->
+	<sql>
+		<!-- the genre_id for 'article' from genres.xml -->
+		<query>UPDATE submission_files SET genre_id = '1'</query>
+	</sql>
 </data>

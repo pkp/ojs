@@ -181,7 +181,6 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');"/>
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" condition="return !$installer->tableExists('user_user_groups');"/>
-		<code function="migrateSubmissionFiles" condition="return !$installer->tableExists('user_user_groups');"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
