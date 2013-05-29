@@ -197,7 +197,7 @@ class ArticleSearch {
 			$resultCacheHours
 		);
 		while ($resuult = $results->next()) {
-			$articleId = $result['article_id'];
+			$articleId = $result['submission_id'];
 			if (!isset($mergedResults[$articleId])) {
 				$mergedResults[$articleId] = $result['count'];
 			} else {
@@ -426,7 +426,7 @@ class ArticleSearch {
 			}
 
 			// Fetch all the results from all the keywords into one array
-			// (mergedResults), where mergedResults[article_id]
+			// (mergedResults), where mergedResults[submission_id]
 			// = sum of all the occurences for all keywords associated with
 			// that article ID.
 			$mergedResults =& self::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo);

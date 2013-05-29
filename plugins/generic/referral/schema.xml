@@ -22,7 +22,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">
+		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="status" type="I2">
@@ -38,8 +38,8 @@
 			<NOTNULL/>
 		</field>
 		<descr>List of referrals for articles.</descr>
-		<index name="referral_article_id">
-			<col>article_id</col>
+		<index name="referral_submission_id">
+			<col>submission_id</col>
 			<col>url</col>
 			<UNIQUE/>
 		</index>

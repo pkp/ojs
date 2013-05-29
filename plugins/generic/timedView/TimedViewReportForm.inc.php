@@ -88,7 +88,7 @@ class TimedViewReportForm extends Form {
 
 		while ($row = $abstractViewCounts->next()) {
 			$galleyViewTotal = 0;
-			$articleId = $row['article_id'];
+			$articleId = $row['submission_id'];
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 			$issueId = $publishedArticle->getIssueId();
 			$issue = $issueDao->getById($issueId);

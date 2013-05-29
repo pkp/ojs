@@ -25,19 +25,19 @@ class ArticleSearchDAO extends DAO {
 		static $articleSearchKeywordIds = array();
 		if (isset($articleSearchKeywordIds[$keyword])) return $articleSearchKeywordIds[$keyword];
 		$result =& $this->retrieve(
-			'SELECT keyword_id FROM article_search_keyword_list WHERE keyword_text = ?',
+			'SELECT keyword_id FROM submission_search_keyword_list WHERE keyword_text = ?',
 			$keyword
 		);
 		if($result->RecordCount() == 0) {
 			$result->Close();
 			unset($result);
 			if ($this->update(
-				'INSERT INTO article_search_keyword_list (keyword_text) VALUES (?)',
+				'INSERT INTO submission_search_keyword_list (keyword_text) VALUES (?)',
 				$keyword,
 				true,
 				false
 			)) {
-				$keywordId = $this->_getInsertId('article_search_keyword_list', 'keyword_id');
+				$keywordId = $this->_getInsertId('submission_search_keyword_list', 'keyword_id');
 			} else {
 				$keywordId = null; // Bug #2324
 			}
@@ -74,7 +74,7 @@ class ArticleSearchDAO extends DAO {
 				$sqlFrom .= ', ';
 				$sqlWhere .= ' AND ';
 			}
-			$sqlFrom .= 'article_search_object_keywords o'.$i.' NATURAL JOIN article_search_keyword_list k'.$i;
+			$sqlFrom .= 'submission_search_object_keywords o'.$i.' NATURAL JOIN submission_search_keyword_list k'.$i;
 			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
 			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
 			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
@@ -102,17 +102,17 @@ class ArticleSearchDAO extends DAO {
 
 		$result =& $this->retrieveCached(
 			'SELECT
-				o.article_id,
+				o.submission_id,
 				COUNT(*) AS count
 			FROM
-				published_articles pa,
+				published_submissions pa,
 				issues i,
-				article_search_objects o NATURAL JOIN ' . $sqlFrom . '
+				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				pa.article_id = o.article_id AND
+				pa.submission_id = o.submission_id AND
 				i.issue_id = pa.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
-			GROUP BY o.article_id
+			GROUP BY o.submission_id
 			ORDER BY count DESC
 			LIMIT ' . $limit,
 			$params,
@@ -130,7 +130,7 @@ class ArticleSearchDAO extends DAO {
 	 * @param $assocId int optional
 	 */
 	function deleteArticleKeywords($articleId, $type = null, $assocId = null) {
-		$sql = 'SELECT object_id FROM article_search_objects WHERE article_id = ?';
+		$sql = 'SELECT object_id FROM submission_search_objects WHERE submission_id = ?';
 		$params = array($articleId);
 
 		if (isset($type)) {
@@ -146,8 +146,8 @@ class ArticleSearchDAO extends DAO {
 		$result =& $this->retrieve($sql, $params);
 		while (!$result->EOF) {
 			$objectId = $result->fields[0];
-			$this->update('DELETE FROM article_search_object_keywords WHERE object_id = ?', $objectId);
-			$this->update('DELETE FROM article_search_objects WHERE object_id = ?', $objectId);
+			$this->update('DELETE FROM submission_search_object_keywords WHERE object_id = ?', $objectId);
+			$this->update('DELETE FROM submission_search_objects WHERE object_id = ?', $objectId);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -163,20 +163,20 @@ class ArticleSearchDAO extends DAO {
 	 */
 	function insertObject($articleId, $type, $assocId) {
 		$result =& $this->retrieve(
-			'SELECT object_id FROM article_search_objects WHERE article_id = ? AND type = ? AND assoc_id = ?',
+			'SELECT object_id FROM submission_search_objects WHERE submission_id = ? AND type = ? AND assoc_id = ?',
 			array($articleId, $type, $assocId)
 		);
 		if ($result->RecordCount() == 0) {
 			$this->update(
-				'INSERT INTO article_search_objects (article_id, type, assoc_id) VALUES (?, ?, ?)',
+				'INSERT INTO submission_search_objects (submission_id, type, assoc_id) VALUES (?, ?, ?)',
 				array($articleId, $type, (int) $assocId)
 			);
-			$objectId = $this->_getInsertId('article_search_objects', 'object_id');
+			$objectId = $this->_getInsertId('submission_search_objects', 'object_id');
 
 		} else {
 			$objectId = $result->fields[0];
 			$this->update(
-				'DELETE FROM article_search_object_keywords WHERE object_id = ?',
+				'DELETE FROM submission_search_object_keywords WHERE object_id = ?',
 				$objectId
 			);
 		}
@@ -197,7 +197,7 @@ class ArticleSearchDAO extends DAO {
 		$keywordId = $this->_insertKeyword($keyword);
 		if ($keywordId === null) return null; // Bug #2324
 		$this->update(
-			'INSERT INTO article_search_object_keywords (object_id, keyword_id, pos) VALUES (?, ?, ?)',
+			'INSERT INTO submission_search_object_keywords (object_id, keyword_id, pos) VALUES (?, ?, ?)',
 			array($objectId, $keywordId, $position)
 		);
 		return $keywordId;
@@ -207,9 +207,9 @@ class ArticleSearchDAO extends DAO {
 	 * Clear the search index.
 	 */
 	function clearIndex() {
-		$this->update('DELETE FROM article_search_object_keywords');
-		$this->update('DELETE FROM article_search_objects');
-		$this->update('DELETE FROM article_search_keyword_list');
+		$this->update('DELETE FROM submission_search_object_keywords');
+		$this->update('DELETE FROM submission_search_objects');
+		$this->update('DELETE FROM submission_search_keyword_list');
 		$this->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
 		$dataSource = $this->getDataSource();
 		$dataSource->CacheFlush();

@@ -26,11 +26,11 @@ class ReviewReportDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
-		$result =& $this->retrieve(
-			'SELECT	article_id,
+		$result = $this->retrieve(
+			'SELECT	submission_id,
 				comments,
 				author_id
-			FROM	article_comments
+			FROM	submission_comments
 			WHERE	comment_type = ?',
 			array(
 				COMMENT_TYPE_PEER_REVIEW
@@ -39,10 +39,10 @@ class ReviewReportDAO extends DAO {
 		import('lib.pkp.classes.db.DBRowIterator');
 		$commentsReturner = new DBRowIterator($result);
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT r.round AS round,
 				COALESCE(asl.setting_value, aspl.setting_value) AS article,
-				a.article_id AS articleId,
+				a.submission_id AS articleId,
 				u.user_id AS reviewerId,
 				u.username AS reviewer,
 				u.first_name AS firstName,
@@ -57,9 +57,9 @@ class ReviewReportDAO extends DAO {
 				(r.cancelled=1) AS cancelled,
 				r.recommendation AS recommendation
 			FROM	review_assignments r
-				LEFT JOIN articles a ON r.submission_id = a.article_id
-				LEFT JOIN article_settings asl ON (a.article_id=asl.article_id AND asl.locale=? AND asl.setting_name=?)
-				LEFT JOIN article_settings aspl ON (a.article_id=aspl.article_id AND aspl.locale=a.locale AND aspl.setting_name=?),
+				LEFT JOIN submissions a ON r.submission_id = a.submission_id
+				LEFT JOIN submission_settings asl ON (a.submission_id=asl.submission_id AND asl.locale=? AND asl.setting_name=?)
+				LEFT JOIN submission_settings aspl ON (a.submission_id=aspl.submission_id AND aspl.locale=a.locale AND aspl.setting_name=?),
 				users u
 			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ?
 			ORDER BY article',

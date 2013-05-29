@@ -92,7 +92,7 @@
       // If that's the case then mark the line for deletion
       // and bypass all further processing.
       var instId = row.get('inst_id');
-      var articleId = row.get('article_id');
+      var articleId = row.get('submission_id');
       var loadAction = String(row.get('loadAction'));
       if (loadAction === String('delete')) {
         row.put('$deleteDocById', instId + '-' + articleId);
@@ -102,7 +102,7 @@
 
       // Make IDs unique across installations.
       var journalId = row.get('journal_id');
-      row.put('article_id', instId + '-' + articleId);
+      row.put('submission_id', instId + '-' + articleId);
       row.put('journal_id', instId + '-' + journalId);
 
       // Add localized fields.
@@ -383,7 +383,7 @@
             onError="continue" >
 
       <!-- ID fields -->
-      <field column="article_id" xpath="/articleList/article/@id" multiValued="false" />
+      <field column="submission_id" xpath="/articleList/article/@id" multiValued="false" />
       <field column="section_id" xpath="/articleList/article/@sectionId" multiValued="false" />
       <field column="journal_id" xpath="/articleList/article/@journalId" multiValued="false" />
       <field column="inst_id" xpath="/articleList/article/@instId" multiValued="false" />
@@ -508,7 +508,7 @@
 
       <entity name="articlePostProcessing"
               dataSource="field"
-              dataField="article.article_id"
+              dataField="article.submission_id"
               processor="PlainTextEntityProcessor"
               transformer="script:postProcessArticle"
               onError="continue" >

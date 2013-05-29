@@ -34,7 +34,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		if ($revision == null) {
 			if ($articleId != null) {
 				$result =& $this->retrieveLimit(
-					'SELECT a.* FROM article_files a WHERE file_id = ? AND article_id = ? ORDER BY revision DESC',
+					'SELECT a.* FROM article_files a WHERE file_id = ? AND submission_id = ? ORDER BY revision DESC',
 					array($fileId, $articleId),
 					1
 				);
@@ -49,7 +49,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		} else {
 			if ($articleId != null) {
 				$result =& $this->retrieve(
-					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND article_id = ?',
+					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND submission_id = ?',
 					array($fileId, $revision, $articleId)
 				);
 			} else {
@@ -179,7 +179,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		$articleFiles = array();
 
 		$result =& $this->retrieve(
-			'SELECT * FROM article_files WHERE article_id = ?',
+			'SELECT * FROM article_files WHERE submission_id = ?',
 			$articleId
 		);
 
@@ -231,7 +231,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		$articleFile->setSourceFileId($row['source_file_id']);
 		$articleFile->setSourceRevision($row['source_revision']);
 		$articleFile->setRevision($row['revision']);
-		$articleFile->setArticleId($row['article_id']);
+		$articleFile->setArticleId($row['submission_id']);
 		$articleFile->setFileName($row['file_name']);
 		$articleFile->setFileType($row['file_type']);
 		$articleFile->setFileSize($row['file_size']);
@@ -274,7 +274,7 @@ class ArticleFileDAO extends PKPFileDAO {
 
 		$this->update(
 			sprintf('INSERT INTO article_files
-				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, file_stage, date_uploaded, date_modified, round, viewable, assoc_id)
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, submission_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, file_stage, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
 				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
@@ -296,7 +296,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		$this->update(
 			sprintf('UPDATE article_files
 				SET
-					article_id = ?,
+					submission_id = ?,
 					source_file_id = ?,
 					source_revision = ?,
 					file_name = ?,
@@ -363,7 +363,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 */
 	function deleteArticleFiles($articleId) {
 		return $this->update(
-			'DELETE FROM article_files WHERE article_id = ?', $articleId
+			'DELETE FROM article_files WHERE submission_id = ?', $articleId
 		);
 	}
 

@@ -48,7 +48,7 @@ class ReferralDAO extends DAO {
 	function &_returnReferralFromRow($row) {
 		$referral = new Referral();
 		$referral->setId($row['referral_id']);
-		$referral->setArticleId($row['article_id']);
+		$referral->setArticleId($row['submission_id']);
 		$referral->setStatus($row['status']);
 		$referral->setUrl($row['url']);
 		$referral->setDateAdded($this->datetimeFromDB($row['date_added']));
@@ -69,7 +69,7 @@ class ReferralDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	COUNT(*)
 			FROM	referrals
-			WHERE	article_id = ? AND
+			WHERE	submission_id = ? AND
 				url = ?',
 			array(
 				(int) $articleId,
@@ -92,7 +92,7 @@ class ReferralDAO extends DAO {
 	 */
 	function incrementReferralCount($articleId, $url) {
 		return $this->update(
-			'UPDATE referrals SET link_count = link_count + 1 WHERE article_id = ? AND url = ?',
+			'UPDATE referrals SET link_count = link_count + 1 WHERE submission_id = ? AND url = ?',
 			array((int) $articleId, $url)
 		);
 	}
@@ -118,12 +118,12 @@ class ReferralDAO extends DAO {
 			'referrals',
 			array(
 				'status' => (int) $referral->getStatus(),
-				'article_id' => (int) $referral->getArticleId(),
+				'submission_id' => (int) $referral->getArticleId(),
 				'url' => $referral->getUrl(),
 				'date_added' => $date,
 				'link_count' => (int) $referral->getLinkCount(),
 			),
-			array('article_id', 'url')
+			array('submission_id', 'url')
 		);
 
 		$referral->setId($this->getInsertId());
@@ -140,7 +140,7 @@ class ReferralDAO extends DAO {
 		$returner = $this->update(
 			sprintf('UPDATE	referrals
 				SET	status = ?,
-					article_id = ?,
+					submission_id = ?,
 					url = ?,
 					date_added = %s,
 					link_count = ?
@@ -193,8 +193,8 @@ class ReferralDAO extends DAO {
 		$result = $this->retrieveRange(
 			'SELECT	r.*
 			FROM	referrals r,
-				articles a
-			WHERE	r.article_id = a.article_id AND
+				submissions a
+			WHERE	r.submission_id = a.submission_id AND
 				a.user_id = ? AND
 				a.journal_id = ?' .
 				($status !== null?' AND r.status = ?':'') . '
@@ -216,7 +216,7 @@ class ReferralDAO extends DAO {
 		$result =& $this->retrieveRange(
 			'SELECT	r.*
 			FROM	referrals r
-			WHERE	r.article_id = ? AND
+			WHERE	r.submission_id = ? AND
 				r.status = ?',
 			array((int) $articleId, REFERRAL_STATUS_ACCEPT),
 			$rangeInfo

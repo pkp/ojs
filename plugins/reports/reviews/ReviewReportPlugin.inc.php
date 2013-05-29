@@ -63,10 +63,10 @@ class ReviewReportPlugin extends ReportPlugin {
 
 		$comments = array();
 		while ($row = $commentsIterator->next()) {
-			if (isset($comments[$row['article_id']][$row['author_id']])) {
-				$comments[$row['article_id']][$row['author_id']] .= "; " . $row['comments'];
+			if (isset($comments[$row['submission_id']][$row['author_id']])) {
+				$comments[$row['submission_id']][$row['author_id']] .= "; " . $row['comments'];
 			} else {
-				$comments[$row['article_id']][$row['author_id']] = $row['comments'];
+				$comments[$row['submission_id']][$row['author_id']] = $row['comments'];
 			}
 		}
 

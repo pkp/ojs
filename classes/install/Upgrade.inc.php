@@ -284,7 +284,7 @@ class Upgrade extends Installer {
 
 		$result = $signoffDao->retrieve(
 			'SELECT DISTINCT s.signoff_id
-			FROM articles a
+			FROM submissions a
 				JOIN signoffs s ON (a.article_id = s.assoc_id)
 			WHERE s.symbolic = ?
 				AND s.file_id = a.revised_file_id',
@@ -413,12 +413,12 @@ class Upgrade extends Installer {
 			if (empty($supportedLocales)) $supportedLocales = array($journal->getPrimaryLocale());
 			else if (!is_array($supportedLocales)) $supportedLocales = array($supportedLocales);
 
-			$result = $articleDao->retrieve('SELECT a.article_id FROM articles a WHERE a.journal_id = ?', array((int)$journal->getId()));
+			$result = $articleDao->retrieve('SELECT a.submission_id FROM submissions a WHERE a.journal_id = ?', array((int)$journal->getId()));
 			while (!$result->EOF) {
 				$row = $result->GetRowAssoc(false);
-				$articleId = (int)$row['article_id'];
+				$articleId = (int)$row['submission_id'];
 				$settings = array();
-				$settingResult = $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM article_settings WHERE article_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
+				$settingResult = $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM submission_settings WHERE submission_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
 				while (!$settingResult->EOF) {
 					$settingRow = $settingResult->GetRowAssoc(false);
 					$locale = $settingRow['locale'];
@@ -429,7 +429,7 @@ class Upgrade extends Installer {
 				}
 				$settingResult->Close();
 
-				$languageResult = $articleDao->retrieve('SELECT language FROM articles WHERE article_id = ?', array((int)$articleId));
+				$languageResult = $articleDao->retrieve('SELECT language FROM articles WHERE submission_id = ?', array((int)$articleId));
 				$languageRow = $languageResult->getRowAssoc(false);
 				// language is NOT localized originally.
 				$language = $languageRow['language'];

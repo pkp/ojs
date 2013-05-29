@@ -60,7 +60,7 @@
 		<field name="date_submitted" type="T"/>
 		<field name="user_id" type="I8"/>
 		<field name="editor_id" type="I8"/>
-		<field name="article_id" type="I8"/>
+		<field name="submission_id" type="I8"/>
 		<field name="notes" type="X"/>
 		<descr>Books available for review.</descr>
 		<index name="bfr_id">

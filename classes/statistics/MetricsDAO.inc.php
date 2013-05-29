@@ -267,7 +267,7 @@ class MetricsDAO extends DAO {
 		}
 		$recordToStore['journal_id'] = $journalId;
 		$recordToStore['issue_id'] = $issueId;
-		$recordToStore['article_id'] = $articleId;
+		$recordToStore['submission_id'] = $articleId;
 
 		// We require either month or day in the time dimension.
 		if (isset($record['day'])) {

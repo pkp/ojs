@@ -40,10 +40,10 @@ class ArticleGalleyDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-			FROM	article_galleys g
+			FROM	submission_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.galley_id = ?' .
-			($articleId !== null?' AND g.article_id = ?':''),
+			($articleId !== null?' AND g.submission_id = ?':''),
 			$params
 		);
 
@@ -75,8 +75,8 @@ class ArticleGalleyDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*)
 			FROM article_galley_settings ags
-				INNER JOIN article_galleys ag ON ags.galley_id = ag.galley_id
-				INNER JOIN articles a ON ag.article_id = a.article_id
+				INNER JOIN submission_galleys ag ON ags.galley_id = ag.galley_id
+				INNER JOIN submissions a ON ag.submission_id = a.submission_id
 			WHERE ags.setting_name = ? AND ags.setting_value = ? AND ags.galley_id <> ? AND a.journal_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
@@ -124,10 +124,10 @@ class ArticleGalleyDAO extends DAO {
 
 		$sql = 'SELECT	g.*,
 				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
-			FROM	article_galleys g
+			FROM	submission_galleys g
 				LEFT JOIN article_files af ON (g.file_id = af.file_id)
-				INNER JOIN articles a ON a.article_id = g.article_id
-				LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
+				INNER JOIN submissions a ON a.submission_id = g.submission_id
+				LEFT JOIN published_submissions pa ON g.submission_id = pa.submission_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
 				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
@@ -138,7 +138,7 @@ class ArticleGalleyDAO extends DAO {
 		}
 		if ($articleId) {
 			$params[] = (int) $articleId;
-			$sql .= ' AND g.article_id = ?';
+			$sql .= ' AND g.submission_id = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
@@ -168,9 +168,9 @@ class ArticleGalleyDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT g.*,
 			a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
-			FROM article_galleys g
+			FROM submission_galleys g
 			LEFT JOIN article_files a ON (g.file_id = a.file_id)
-			WHERE g.article_id = ? ORDER BY g.seq',
+			WHERE g.submission_id = ? ORDER BY g.seq',
 			(int) $articleId
 		);
 
@@ -197,9 +197,9 @@ class ArticleGalleyDAO extends DAO {
 			'SELECT
 				g.*,
 				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
-			FROM article_galleys g
+			FROM submission_galleys g
 			LEFT JOIN article_files af ON (g.file_id = af.file_id)
-			INNER JOIN articles a ON (g.article_id = a.article_id)
+			INNER JOIN submissions a ON (g.submission_id = a.submission_id)
 			WHERE a.journal_id = ?',
 			(int) $journalId
 		);
@@ -274,7 +274,7 @@ class ArticleGalleyDAO extends DAO {
 			$galley = new ArticleGalley();
 		}
 		$galley->setId($row['galley_id']);
-		$galley->setArticleId($row['article_id']);
+		$galley->setArticleId($row['submission_id']);
 		$galley->setLocale($row['locale']);
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
@@ -303,8 +303,8 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function insertGalley(&$galley) {
 		$this->update(
-			'INSERT INTO article_galleys
-				(article_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
+			'INSERT INTO submission_galleys
+				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -332,7 +332,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function updateGalley(&$galley) {
 		$this->update(
-			'UPDATE article_galleys
+			'UPDATE submission_galleys
 				SET
 					file_id = ?,
 					label = ?,
@@ -375,12 +375,12 @@ class ArticleGalleyDAO extends DAO {
 
 		if (isset($articleId)) {
 			$this->update(
-				'DELETE FROM article_galleys WHERE galley_id = ? AND article_id = ?',
+				'DELETE FROM submission_galleys WHERE galley_id = ? AND submission_id = ?',
 				array((int) $galleyId, (int) $articleId)
 			);
 		} else {
 			$this->update(
-				'DELETE FROM article_galleys WHERE galley_id = ?', (int) $galleyId
+				'DELETE FROM submission_galleys WHERE galley_id = ?', (int) $galleyId
 			);
 		}
 		if ($this->getAffectedRows()) {
@@ -409,8 +409,8 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function galleyExistsByFileId($articleId, $fileId) {
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM article_galleys
-			WHERE article_id = ? AND file_id = ?',
+			'SELECT COUNT(*) FROM submission_galleys
+			WHERE submission_id = ? AND file_id = ?',
 			array((int) $articleId, (int) $fileId)
 		);
 
@@ -429,7 +429,7 @@ class ArticleGalleyDAO extends DAO {
 	function incrementViews($galleyId) {
 		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {
 			return $this->update(
-				'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
+				'UPDATE submission_galleys SET views = views + 1 WHERE galley_id = ?',
 				(int) $galleyId
 			);
 		} else return false;
@@ -441,14 +441,14 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function resequenceGalleys($articleId) {
 		$result =& $this->retrieve(
-			'SELECT galley_id FROM article_galleys WHERE article_id = ? ORDER BY seq',
+			'SELECT galley_id FROM submission_galleys WHERE submission_id = ? ORDER BY seq',
 			(int) $articleId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
 			list($galleyId) = $result->fields;
 			$this->update(
-				'UPDATE article_galleys SET seq = ? WHERE galley_id = ?',
+				'UPDATE submission_galleys SET seq = ? WHERE galley_id = ?',
 				array($i, $galleyId)
 			);
 			$result->MoveNext();
@@ -463,7 +463,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function getNextGalleySequence($articleId) {
 		$result =& $this->retrieve(
-			'SELECT MAX(seq) + 1 FROM article_galleys WHERE article_id = ?',
+			'SELECT MAX(seq) + 1 FROM submission_galleys WHERE submission_id = ?',
 			(int) $articleId
 		);
 		$returner = floor($result->fields[0]);
@@ -479,7 +479,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertId() {
-		return $this->_getInsertId('article_galleys', 'galley_id');
+		return $this->_getInsertId('submission_galleys', 'galley_id');
 	}
 
 

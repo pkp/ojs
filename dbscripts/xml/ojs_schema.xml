@@ -535,7 +535,7 @@
         <field name="oai_identifier" type="C2" size="255">
             <NOTNULL />
         </field>
-        <descr>Archived, removed from TOC, unscheduled or uplublished journal articles.</descr>
+        <descr>Archived, removed from TOC, unscheduled or unpublished journal articles.</descr>
 		<index name="submission_tombstones_journal_id">
 			<col>journal_id</col>
 		</index>
@@ -546,11 +546,11 @@
 
 	<!--
 	  *
-	  * TABLE articles
+	  * TABLE submissions
 	  *
 	  -->
-	<table name="articles">
-		<field name="article_id" type="I8">
+	<table name="submissions">
+		<field name="submission_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
@@ -603,25 +603,25 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>
-		<descr>Journal articles.</descr>
-		<index name="articles_user_id">
+		<descr>Submissions</descr>
+		<index name="submissions_user_id">
 			<col>user_id</col>
 		</index>
-		<index name="articles_journal_id">
+		<index name="submissions_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="articles_section_id">
+		<index name="submissions_section_id">
 			<col>section_id</col>
 		</index>
 	</table>
 
 	<!--
 	  *
-	  * TABLE article_settings
+	  * TABLE submission_settings
 	  *
 	  -->
-	<table name="article_settings">
-		<field name="article_id" type="I8">
+	<table name="submission_settings">
+		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
@@ -636,12 +636,12 @@
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
-		<descr>Journal article metadata.</descr>
-		<index name="article_settings_article_id">
-			<col>article_id</col>
+		<descr>Submission metadata</descr>
+		<index name="submission_settings_submission_id">
+			<col>submission_id</col>
 		</index>
-		<index name="article_settings_pkey">
-			<col>article_id</col>
+		<index name="submission_settings_pkey">
+			<col>submission_id</col>
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
@@ -650,15 +650,15 @@
 
 	<!--
 	  *
-	  * TABLE published_articles
+	  * TABLE published_submissions
 	  *
 	  -->
-	<table name="published_articles">
-		<field name="published_article_id" type="I8">
+	<table name="published_submissions">
+		<field name="published_submission_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">
+		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="issue_id" type="I8">
@@ -673,184 +673,28 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<descr>Journal articles.</descr>
-		<index name="published_articles_article_id">
-			<col>article_id</col>
+		<descr>Published submissions</descr>
+		<index name="published_submissions_submission_id">
+			<col>submission_id</col>
 			<UNIQUE/>
 		</index>
-		<index name="published_articles_issue_id">
+		<index name="published_submissions_issue_id">
 			<col>issue_id</col>
 		</index>
 	</table>
 
 	<!--
 	  *
-	  * TABLE article_files
+	  * TABLE submission_galleys
 	  *
 	  -->
-	<table name="article_files">
-		<field name="file_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="revision" type="I8">
-			<KEY />
-		</field>
-		<field name="source_file_id" type="I8" />
-		<field name="source_revision" type="I8" />
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="file_name" type="C2" size="90">
-			<NOTNULL/>
-		</field>
-		<field name="file_type" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="file_size" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="original_file_name" type="C2" size="127"/>
-		<field name="file_stage" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="viewable" type="I1" />
-		<field name="date_uploaded" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="date_modified" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="round" type="I1">
-			<NOTNULL/>
-		</field>
-		<field name="assoc_id" type="I8"/>
-		<descr>Files associated with articles. Includes submission files, supplementary files, etc.</descr>
-		<index name="article_files_article_id">
-			<col>article_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE article_supplementary_files
-	  *
-	  -->
-	<table name="article_supplementary_files">
-		<field name="supp_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="file_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="type" type="C2" size="255"/>
-		<field name="language" type="C2" size="10"/>
-		<field name="remote_url" type="C2" size="255"/>
-		<field name="date_created" type="D"/>
-		<field name="show_reviewers" type="I1">
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="date_submitted" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<descr>Supplementary files attached to articles.</descr>
-		<index name="article_supplementary_files_file_id">
-			<col>file_id</col>
-		</index>
-		<index name="article_supplementary_files_article_id">
-			<col>article_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE article_supp_file_settings
-	  *
-	  -->
-	<table name="article_supp_file_settings">
-		<field name="supp_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="locale" type="C2" size="5">
-			<NOTNULL />
-			<DEFAULT VALUE=""/>
-		</field>
-		<field name="setting_name" type="C2" size="255">
-			<NOTNULL />
-		</field>
-		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C2" size="6">
-			<NOTNULL/>
-			<descr>(bool|int|float|string|object|date)</descr>
-		</field>
-		<descr>Article supplementary file metadata.</descr>
-		<index name="article_supp_file_settings_supp_id">
-			<col>supp_id</col>
-		</index>
-		<index name="article_supp_file_settings_pkey">
-			<col>supp_id</col>
-			<col>locale</col>
-			<col>setting_name</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE edit_assignments
-	  *
-	  -->
-	<table name="edit_assignments">
-		<field name="edit_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="editor_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="can_edit" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
-		</field>
-		<field name="can_review" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
-		</field>
-		<field name="date_assigned" type="T"/>
-		<field name="date_notified" type="T"/>
-		<field name="date_underway" type="T"/>
-		<descr>Editing assignments.</descr>
-		<index name="edit_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="edit_assignments_editor_id">
-			<col>editor_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE article_galleys
-	  *
-	  -->
-	<table name="article_galleys">
+	<table name="submission_galleys">
 		<field name="galley_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="locale" type="C2" size="5"/>
-		<field name="article_id" type="I8">
+		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="file_id" type="I8">
@@ -867,18 +711,18 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="remote_url" type="C2" size="255" />
-		<descr>Article galleys.</descr>
-		<index name="article_galleys_article_id">
-			<col>article_id</col>
+		<descr>Submission galleys</descr>
+		<index name="submission_galleys_submission_id">
+			<col>submission_id</col>
 		</index>
 	</table>
 
 	<!--
 	  *
-	  * TABLE article_galley_settings
+	  * TABLE submission_galley_settings
 	  *
 	  -->
-	<table name="article_galley_settings">
+	<table name="submission_galley_settings">
 		<field name="galley_id" type="I8">
 			<NOTNULL />
 		</field>
@@ -895,10 +739,10 @@
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Article galley metadata.</descr>
-		<index name="article_galley_settings_galley_id">
+		<index name="submission_galley_settings_galley_id">
 			<col>galley_id</col>
 		</index>
-		<index name="article_galley_settings_pkey">
+		<index name="submission_galley_settings_pkey">
 			<col>galley_id</col>
 			<col>locale</col>
 			<col>setting_name</col>
@@ -908,18 +752,18 @@
 
 	<!--
 	  *
-	  * TABLE article_html_galley_images
+	  * TABLE submission_html_galley_images
 	  *
 	  -->
-	<table name="article_html_galley_images">
+	<table name="submission_html_galley_images">
 		<field name="galley_id" type="I8">
 			<NOTNULL />
 		</field>
 		<field name="file_id" type="I8">
 			<NOTNULL />
 		</field>
-		<descr>Images associated with an article HTML galley.</descr>
-		<index name="article_html_galley_images_pkey">
+		<descr>Images associated with an submission HTML galley.</descr>
+		<index name="submission_html_galley_images_pkey">
 			<col>galley_id</col>
 			<col>file_id</col>
 			<UNIQUE/>
@@ -927,80 +771,11 @@
 	</table>
 
 	<!--
-	  *
-	  * TABLE article_event_log
-	  *
-	  -->
-	<table name="article_event_log">
-		<field name="log_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="user_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="date_logged" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="ip_address" type="C2" size="15">
-			<NOTNULL/>
-		</field>
-		<field name="log_level" type="C2" size="1"/>
-		<field name="event_type" type="I8"/>
-		<field name="assoc_type" type="I8"/>
-		<field name="assoc_id" type="I8"/>
-		<field name="message" type="X"/>
-		<descr>A log of all events associated with a submission.</descr>
-		<index name="article_event_log_article_id">
-			<col>article_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE article_comments
-	  *
-	  -->
-	<table name="article_comments">
-		<field name="comment_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="comment_type" type="I8"/>
-		<field name="role_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="article_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="assoc_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="author_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="comment_title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="comments" type="X"/>
-		<field name="date_posted" type="T"/>
-		<field name="date_modified" type="T"/>
-		<field name="viewable" type="I1" />
-		<descr>Comments posted on articles.</descr>
-		<index name="article_comments_article_id">
-			<col>article_id</col>
-		</index>
-	</table>
-
-	<!--
 	 *
-	 * TABLE article_search_keyword_list
+	 * TABLE submission_search_keyword_list
 	 *
 	 -->
-	<table name="article_search_keyword_list">
+	<table name="submission_search_keyword_list">
 		<field name="keyword_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
@@ -1009,7 +784,7 @@
 			<NOTNULL/>
 		</field>
 		<descr>List of all keywords.</descr>
-		<index name="article_search_keyword_text">
+		<index name="submission_search_keyword_text">
 			<col>keyword_text</col>
 			<UNIQUE/>
 		</index>
@@ -1017,15 +792,15 @@
 
 	<!--
 	 *
-	 * TABLE article_search_objects
+	 * TABLE submission_search_objects
 	 *
 	 -->
-	<table name="article_search_objects">
+	<table name="submission_search_objects">
 		<field name="object_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">
+		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
 		<field name="type" type="I4">
@@ -1040,10 +815,10 @@
 
 	<!--
 	 *
-	 * TABLE article_search_object_keywords
+	 * TABLE submission_search_object_keywords
 	 *
 	 -->
-	<table name="article_search_object_keywords">
+	<table name="submission_search_object_keywords">
 		<field name="object_id" type="I8">
 			<NOTNULL />
 		</field>
@@ -1055,10 +830,10 @@
 			<descr>Word position of the keyword in the object.</descr>
 		</field>
 		<descr>Keyword occurrences for each indexed object.</descr>
-		<index name="article_search_object_keywords_keyword_id">
+		<index name="submission_search_object_keywords_keyword_id">
 			<col>keyword_id</col>
 		</index>
-		<index name="article_search_object_keywords_pkey">
+		<index name="submission_search_object_keywords_pkey">
 			<col>object_id</col>
 			<col>pos</col>
 			<UNIQUE />

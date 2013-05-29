@@ -42,20 +42,20 @@ class JournalStatisticsDAO extends DAO {
 			$sectionSql .= ')';
 		} else $sectionSql = '';
 
-		$sql =	'SELECT	a.article_id,
+		$sql =	'SELECT	a.submission_id,
 				a.date_submitted,
 				pa.date_published,
-				pa.published_article_id,
+				pa.published_submission_id,
 				d.decision,
 				a.status
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-				LEFT JOIN edit_decisions d ON (d.submission_id = a.article_id)
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
+				LEFT JOIN edit_decisions d ON (d.submission_id = a.submission_id)
 			WHERE	a.journal_id = ?' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			$sectionSql .
-			' ORDER BY a.article_id, d.date_decided DESC';
+			' ORDER BY a.submission_id, d.date_decided DESC';
 
 		$result = $this->retrieve($sql, $params);
 
@@ -83,11 +83,11 @@ class JournalStatisticsDAO extends DAO {
 			// decision only and ignore the rest. Depends on sort
 			// order. FIXME -- there must be a better way of doing
 			// this that's database independent.
-			if (!in_array($row['article_id'], $articleIds)) {
-				$articleIds[] = $row['article_id'];
+			if (!in_array($row['submission_id'], $articleIds)) {
+				$articleIds[] = $row['submission_id'];
 				$returner['numSubmissions']++;
 
-				if (!empty($row['published_article_id']) && $row['status'] == STATUS_PUBLISHED) {
+				if (!empty($row['published_submission_id']) && $row['status'] == STATUS_PUBLISHED) {
 					$returner['numPublishedSubmissions']++;
 				}
 
@@ -283,7 +283,7 @@ class JournalStatisticsDAO extends DAO {
 			$sectionSql .= ')';
 		} else $sectionSql = '';
 
-		$sql =	'SELECT	a.article_id,
+		$sql =	'SELECT	a.submission_id,
 				af.date_uploaded AS date_rv_uploaded,
 				r.review_id,
 				u.date_registered,
@@ -291,13 +291,13 @@ class JournalStatisticsDAO extends DAO {
 				r.quality,
 				r.date_assigned,
 				r.date_completed
-			FROM	articles a,
-				article_files af,
+			FROM	submissions a,
+				submission_files af,
 				review_assignments r
 				LEFT JOIN users u ON (u.user_id = r.reviewer_id)
 			WHERE	a.journal_id = ?
-				AND r.submission_id = a.article_id
-				AND af.article_id = a.article_id
+				AND r.submission_id = a.submission_id
+				AND af.submission_id = a.submission_id
 				AND af.file_id = a.review_file_id
 				AND af.revision = 1' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
@@ -329,7 +329,7 @@ class JournalStatisticsDAO extends DAO {
 				$totalScore += $row['quality'];
 			}
 
-			$articleIds[] = $row['article_id'];
+			$articleIds[] = $row['submission_id'];
 
 			if (!empty($row['reviewer_id']) && !in_array($row['reviewer_id'], $reviewerList)) {
 				$returner['reviewerCount']++;

@@ -64,7 +64,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		$decisions = array();
 		foreach ($decisionsIteratorsArray as $decisionsIterator) {
 			while ($row = $decisionsIterator->next()) {
-				$decisions[$row['article_id']] = $row['decision'];
+				$decisions[$row['submission_id']] = $row['decision'];
 			}
 		}
 
@@ -80,7 +80,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		);
 
 		$columns = array(
-			'article_id' => __('article.submissionId'),
+			'submission_id' => __('article.submissionId'),
 			'title' => __('article.title'),
 			'abstract' => __('article.abstract')
 		);
@@ -113,12 +113,12 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		$authorIndex = 0;
 		while ($row = $articlesIterator->next()) {
-			$authors = $this->mergeAuthors($authorsIterator[$row['article_id']]->toArray());
+			$authors = $this->mergeAuthors($authorsIterator[$row['submission_id']]->toArray());
 
 			foreach ($columns as $index => $junk) {
 				if ($index == 'editor_decision') {
-					if (isset($decisions[$row['article_id']])) {
-						$columns[$index] = $decisionMessages[$decisions[$row['article_id']]];
+					if (isset($decisions[$row['submission_id']])) {
+						$columns[$index] = $decisionMessages[$decisions[$row['submission_id']]];
 					} else {
 						$columns[$index] = $decisionMessages[null];
 					}

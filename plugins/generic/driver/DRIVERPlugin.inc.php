@@ -169,7 +169,7 @@ class DRIVERPlugin extends GenericPlugin {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
-			$article = $publishedArticleDao->getPublishedArticleByArticleId($row['article_id']);
+			$article = $publishedArticleDao->getPublishedArticleByArticleId($row['submission_id']);
 			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access

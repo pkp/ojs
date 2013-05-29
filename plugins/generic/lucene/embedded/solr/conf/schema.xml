@@ -376,7 +376,7 @@
     -->
 
     <!-- Fields containing the unique document ID and other administrative IDs, e.g. a installation-specific GUID, the journal ID and the article ID -->
-    <field name="article_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+    <field name="submission_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="section_id" type="numId" indexed="true" stored="true" required="true" multiValued="false" />
     <dynamicField name="*_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
 
@@ -436,10 +436,10 @@
   <!-- Field to use to determine and enforce document uniqueness.
        Unless this field is marked with required="false", it will be a required field
     -->
-  <uniqueKey>article_id</uniqueKey>
+  <uniqueKey>submission_id</uniqueKey>
 
   <!-- Field for the QueryParser to use when an explicit fieldname is absent -->
-  <defaultSearchField>article_id</defaultSearchField>
+  <defaultSearchField>submission_id</defaultSearchField>
 
   <!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
   <solrQueryParser defaultOperator="AND"/>

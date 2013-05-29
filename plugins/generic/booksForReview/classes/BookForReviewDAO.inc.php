@@ -121,7 +121,7 @@ class BookForReviewDAO extends DAO {
 		$book->setEdition($row['edition']);
 		$book->setPages($row['pages']);
 		$book->setISBN($row['isbn']);
-		$book->setArticleId($row['article_id']);
+		$book->setArticleId($row['submission_id']);
 		$book->setNotes($row['notes']);
 		$book->setDateCreated($row['date_created']);
 		$book->setDateRequested($row['date_requested']);
@@ -161,7 +161,7 @@ class BookForReviewDAO extends DAO {
 					edition,
 					pages,
 					isbn,
-					article_id,
+					submission_id,
 					notes,
 					date_created,
 					date_requested,
@@ -231,7 +231,7 @@ class BookForReviewDAO extends DAO {
 					edition = ?,
 					pages = ?,
 					isbn = ?,
-					article_id = ?,
+					submission_id = ?,
 					notes = ?,
 					date_created = %s,
 					date_requested = %s,
@@ -506,7 +506,7 @@ class BookForReviewDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT *
 			FROM books_for_review
-			WHERE article_id = ?
+			WHERE submission_id = ?
 			AND status = ?
 			AND journal_id = ?',
 			array(
@@ -537,7 +537,7 @@ class BookForReviewDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT book_id 
 				FROM books_for_review 
-				WHERE article_id = ?
+				WHERE submission_id = ?
 				AND status = ?
 				AND journal_id = ?',
 			array(

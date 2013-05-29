@@ -50,8 +50,8 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				u.first_name, u.last_name,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN review_assignments r ON (a.article_id = r.submission_id)
+			FROM	submissions a
+				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
@@ -95,11 +95,11 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission = parent::_fromRow($row);
 
 		// Comments
-		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
+		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 
 		// Editor Decisions
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
-		$decisions = $editDecisionDao->getEditorDecisions($row['article_id']);
+		$decisions = $editDecisionDao->getEditorDecisions($row['submission_id']);
 		$reviewerSubmission->setDecisions($decisions);
 
 		// Review Assignment
@@ -196,9 +196,9 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				atl.setting_value AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN review_assignments r ON (a.article_id = r.submission_id)
-				LEFT JOIN article_settings atl ON (atl.article_id = a.article_id AND atl.setting_name = ? AND atl.locale = ?)
+			FROM	submissions a
+				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
+				LEFT JOIN submission_settings atl ON (atl.submission_id = a.submission_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN section s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
@@ -245,8 +245,8 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 
 		$result = $this->retrieve(
 			'SELECT	r.date_completed, r.declined, r.cancelled
-			FROM	articles a
-				LEFT JOIN review_assignments r ON (a.article_id = r.submission_id)
+			FROM	submissions a
+				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN section s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN review_rounds r2 ON (r.submission_id = r2.submission_id AND r.stage_id = r2.stage_id AND r.round = r2.round)
@@ -276,7 +276,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	 */
 	function getSortMapping($heading) {
 		switch ($heading) {
-			case 'id': return 'a.article_id';
+			case 'id': return 'a.submission_id';
 			case 'assignDate': return 'r.date_assigned';
 			case 'dueDate': return 'r.date_due';
 			case 'section': return 'section_abbrev';

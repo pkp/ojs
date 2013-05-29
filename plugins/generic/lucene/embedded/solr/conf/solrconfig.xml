@@ -198,7 +198,7 @@
     <lst name="invariants">
       <str name="echoParams">explicit</str> <!-- This is for debugging. You may switch it off ("none"). -->
       <str name="defType">edismax</str>
-      <str name="fl">article_id,journal_id,inst_id,score</str>
+      <str name="fl">submission_id,journal_id,inst_id,score</str>
       <str name="hl.mergeContinuous">true</str>
       <str name="facet.limit">15</str> <!-- Do not show more than 15 facets per category. You may change this according to your preference. -->
       <str name="facet.mincount">1</str> <!-- Only show a facet if it returns at least one result -->
@@ -249,7 +249,7 @@
       <str name="echoParams">none</str>
       <str name="defType">edismax</str>
       <str name="rows">0</str>
-      <str name="fl">article_id</str>
+      <str name="fl">submission_id</str>
       <str name="facet">on</str>
       <str name="facet.limit">5</str>
       <str name="facet.mincount">1</str>

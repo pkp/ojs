@@ -26,24 +26,24 @@ class TimedViewReportDAO extends DAO {
 	function getAbstractViewCount($journalId, $startDate = null, $endDate = null) {
 		if ($startDate && $endDate) {
 			$result =& $this->retrieve(
-				sprintf('SELECT tvl.article_id, COUNT(tvl.article_id) AS total_abstract_views
+				sprintf('SELECT tvl.submission_id, COUNT(tvl.submission_id) AS total_abstract_views
 						FROM timed_views_log tvl
 						WHERE tvl.galley_id IS NULL
 							AND tvl.journal_id = ?
 							AND tvl.date >= %s
 							AND tvl.date <= %s
-						GROUP BY article_id',
+						GROUP BY submission_id',
 						$this->datetimeToDB($startDate),
 						$this->datetimeToDB($endDate)),
 						array((int) $journalId)
 				);
 		} else {
 			$result =& $this->retrieve(
-				'SELECT tvl.article_id, COUNT(tvl.article_id) AS total_abstract_views
+				'SELECT tvl.submission_id, COUNT(tvl.submission_id) AS total_abstract_views
 						FROM timed_views_log tvl
 						WHERE tvl.galley_id IS NULL
 							AND tvl.journal_id = ?
-						GROUP BY article_id',
+						GROUP BY submission_id',
 				array((int) $journalId)
 			);
 		}
@@ -63,26 +63,26 @@ class TimedViewReportDAO extends DAO {
 	function getGalleyViewCountsForArticle($articleId, $startDate = null, $endDate = null) {
 		if ($startDate && $endDate) {
 			$result =& $this->retrieve(
-				sprintf('SELECT tvl.article_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
+				sprintf('SELECT tvl.submission_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
 						FROM timed_views_log tvl
-						LEFT JOIN article_galleys ag ON (tvl.galley_id = ag.galley_id)
+						LEFT JOIN submission_galleys ag ON (tvl.galley_id = ag.galley_id)
 						WHERE tvl.galley_id IS NOT NULL
 							AND tvl.date >= %s
 							AND tvl.date <= %s
-							AND tvl.article_id = ?
-						GROUP BY galley_id, article_id',
+							AND tvl.submission_id = ?
+						GROUP BY galley_id, submission_id',
 						$this->datetimeToDB($startDate),
 						$this->datetimeToDB($endDate)),
 						array((int) $articleId)
 				);
 		} else {
 			$result =& $this->retrieve(
-				'SELECT tvl.article_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
+				'SELECT tvl.submission_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
 						FROM timed_views_log tvl
-						LEFT JOIN article_galleys ag ON (tvl.galley_id = ag.galley_id)
+						LEFT JOIN submission_galleys ag ON (tvl.galley_id = ag.galley_id)
 						WHERE tvl.galley_id IS NOT NULL
-							AND tvl.article_id = ?
-						GROUP BY galley_id, article_id',
+							AND tvl.submission_id = ?
+						GROUP BY galley_id, submission_id',
 				array((int) $articleId)
 			);
 		}
@@ -102,7 +102,7 @@ class TimedViewReportDAO extends DAO {
 	function incrementViewCount($journalId, $articleId, $galleyId = null, $ipAddress = null, $userAgent = null) {
 		$this->update(
 			sprintf('INSERT INTO timed_views_log
-				(article_id, galley_id, journal_id, date, ip_address, user_agent)
+				(submission_id, galley_id, journal_id, date, ip_address, user_agent)
 				VALUES
 				(?, ?, ?, %s, ?, ?)',
 				$this->datetimeToDB(Core::getCurrentDate())),

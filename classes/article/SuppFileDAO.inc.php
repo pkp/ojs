@@ -77,8 +77,8 @@ class SuppFileDAO extends DAO {
 		$sql = 'SELECT s.*, af.file_name, af.original_file_name, af.file_type, af.file_size, af.date_uploaded, af.date_modified
 			FROM	article_supplementary_files s
 				LEFT JOIN article_files af ON s.file_id = af.file_id
-				INNER JOIN articles a ON a.article_id = s.article_id
-				LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
+				INNER JOIN submissions a ON a.submission_id = s.article_id
+				LEFT JOIN published_submissions pa ON s.article_id = pa.submission_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id AND sfs.setting_name = ?
 				WHERE	(sfs.setting_value IS NULL OR sfs.setting_value = "")';
@@ -144,7 +144,7 @@ class SuppFileDAO extends DAO {
 				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
 			FROM article_supplementary_files s
 			LEFT JOIN article_files af ON (s.file_id = af.file_id)
-			INNER JOIN articles a ON (s.article_id = a.article_id)
+			INNER JOIN submissions a ON (s.article_id = a.submission_id)
 			WHERE a.journal_id = ?',
 			(int) $journalId
 		);
@@ -414,7 +414,7 @@ class SuppFileDAO extends DAO {
 			'SELECT COUNT(*)
 			FROM article_supp_file_settings sfs
 				INNER JOIN article_supplementary_files f ON sfs.supp_id = f.supp_id
-				INNER JOIN articles a ON f.article_id = a.article_id
+				INNER JOIN submissions a ON f.article_id = a.submission_id
 			WHERE sfs.setting_name = ? AND sfs.setting_value = ? AND f.supp_id <> ? AND a.journal_id = ?',
 			array(
 				'pub-id::'.$pubIdType,

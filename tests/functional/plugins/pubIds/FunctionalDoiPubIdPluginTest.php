@@ -36,8 +36,8 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'journal_settings', 'plugin_settings', 'issues', 'issue_settings',
-			'published_articles', 'articles', 'article_settings',
-			'article_files', 'article_galleys', 'article_galley_settings',
+			'published_submissions', 'submissions', 'submission_settings',
+			'submission_files', 'submission_galleys', 'submission_galley_settings',
 			'article_supplementary_files', 'article_supp_file_settings',
 			'event_log', 'event_log_settings', 'notifications', 'sessions'
 		);

@@ -328,7 +328,7 @@ class SectionDAO extends DAO {
 	 */
 	function getByIssueId($issueId) {
 		$result = $this->retrieve(
-			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq',
+			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_submissions pa, submissions a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.submission_id = a.submission_id AND pa.issue_id = ? ORDER BY section_seq',
 			array((int) $issueId, (int) $issueId)
 		);
 
@@ -375,7 +375,7 @@ class SectionDAO extends DAO {
 	 */
 	function getEmptyByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT s.section_id FROM sections s LEFT JOIN articles a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
+			'SELECT s.section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
 			(int) $journalId
 		);
 

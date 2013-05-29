@@ -36,10 +36,10 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function getAffectedTables() {
 		return array(
-			'articles', 'article_files', 'article_galleys', 'article_galley_settings', 'article_search_object_keywords',
-			'article_search_objects', 'article_settings', 'article_supp_file_settings', 'article_supplementary_files',
+			'submissions', 'submission_files', 'submission_galleys', 'submission_galley_settings', 'submission_search_object_keywords',
+			'submission_search_objects', 'submission_settings', 'article_supp_file_settings', 'article_supplementary_files',
 			'authors', 'custom_issue_orders', 'custom_section_orders', 'event_log', 'event_log_settings',
-			'issue_settings', 'issues', 'published_articles', 'sessions', 'signoffs', 'temporary_files', 'users'
+			'issue_settings', 'issues', 'published_submissions', 'sessions', 'signoffs', 'temporary_files', 'users'
 		);
 	}
 

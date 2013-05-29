@@ -180,7 +180,7 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function getRecordSelectStatement() {
 		return 'SELECT	COALESCE(dot.date_deleted, a.last_modified) AS last_modified,
-			COALESCE(a.article_id, dot.data_object_id) AS article_id,
+			COALESCE(a.submission_id, dot.data_object_id) AS submission_id,
 			COALESCE(j.journal_id, tsoj.assoc_id) AS journal_id,
 			COALESCE(tsos.assoc_id, s.section_id) AS section_id,
 			i.issue_id,
@@ -198,8 +198,8 @@ class OAIDAO extends PKPOAIDAO {
 		} else {
 			list($journalId) = $setIds;
 		}
-		return 'LEFT JOIN published_articles pa ON (m.i=0' . (isset($articleId) ? ' AND pa.article_id = ?' : '') . ')
-			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') . (isset($sectionId) ? ' AND a.section_id = ?' : '') .')
+		return 'LEFT JOIN published_submissions pa ON (m.i=0' . (isset($articleId) ? ' AND pa.submission_id = ?' : '') . ')
+			LEFT JOIN submissions a ON (a.submission_id = pa.submission_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') . (isset($sectionId) ? ' AND a.section_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
@@ -230,7 +230,7 @@ class OAIDAO extends PKPOAIDAO {
 	function &setOAIData(&$record, $row, $isRecord = true) {
 		$journal = $this->getJournal($row['journal_id']);
 		$section = $this->getSection($row['section_id']);
-		$articleId = $row['article_id'];
+		$articleId = $row['submission_id'];
 
 		$record->identifier = $this->oai->articleIdToIdentifier($articleId);
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));

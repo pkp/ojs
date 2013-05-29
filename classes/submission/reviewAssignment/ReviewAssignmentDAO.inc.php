@@ -38,7 +38,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 */
 	function _getSubmissionReviewFileId($submissionId) {
 		$result =& $this->retrieve(
-			'SELECT review_file_id FROM articles WHERE article_id = ?',
+			'SELECT review_file_id FROM submissions WHERE submission_id = ?',
 			(int) $submissionId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : null;
@@ -59,10 +59,10 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 			'SELECT	f.*, r.round as round
 			FROM	review_rounds r,
 				article_files f,
-				articles a
-			WHERE	a.article_id = r.submission_id AND
+				submissions a
+			WHERE	a.submission_id = r.submission_id AND
 				r.submission_id = ? AND
-				r.submission_id = f.article_id AND
+				r.submission_id = f.submission_id AND
 				f.file_id = a.review_file_id AND
 				f.revision = r.review_revision',
 			(int) $articleId
@@ -129,8 +129,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		$averageQualityRatings = Array();
 		$result =& $this->retrieve(
 			'SELECT	r.reviewer_id, AVG(r.quality) AS average, COUNT(r.quality) AS count
-			FROM	review_assignments r, articles a
-			WHERE	r.submission_id = a.article_id AND
+			FROM	review_assignments r, submissions a
+			WHERE	r.submission_id = a.submission_id AND
 				a.journal_id = ?
 			GROUP BY r.reviewer_id',
 			(int) $journalId
@@ -157,8 +157,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		$result =& $this->retrieve(
 			'SELECT	r.reviewer_id, COUNT(r.review_id) AS count
 			FROM	review_assignments r,
-				articles a
-			WHERE	r.submission_id = a.article_id AND
+				submissions a
+			WHERE	r.submission_id = a.submission_id AND
 				a.journal_id = ? AND
 				r.date_completed IS NOT NULL AND
 				r.cancelled = 0
@@ -238,8 +238,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		// Get counts of completed submissions
 		$result = $this->retrieve(
 				'SELECT	r.reviewer_id, MAX(r.date_notified) AS last_notified
-				FROM	review_assignments r, articles a
-				WHERE	r.submission_id = a.article_id AND
+				FROM	review_assignments r, submissions a
+				WHERE	r.submission_id = a.submission_id AND
 					a.journal_id = ?
 				GROUP BY r.reviewer_id',
 				(int) $contextId
@@ -255,8 +255,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		// Get completion status
 		$result = $this->retrieve(
 				'SELECT	r.reviewer_id, COUNT(*) AS incomplete
-				FROM	review_assignments r, articles a
-				WHERE	r.submission_id = a.article_id AND
+				FROM	review_assignments r, submissions a
+				WHERE	r.submission_id = a.submission_id AND
 				r.date_notified IS NOT NULL AND
 				r.date_completed IS NULL AND
 				r.cancelled = 0 AND
@@ -276,8 +276,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		// Calculate time taken for completed reviews
 		$result = $this->retrieve(
 				'SELECT	r.reviewer_id, r.date_notified, r.date_completed
-				FROM	review_assignments r, articles a
-				WHERE	r.submission_id = a.article_id AND
+				FROM	review_assignments r, submissions a
+				WHERE	r.submission_id = a.submission_id AND
 				r.date_notified IS NOT NULL AND
 				r.date_completed IS NOT NULL AND
 				r.declined = 0 AND

@@ -34,8 +34,8 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 	 */
 	protected function getAffectedTables() {
 		return array(
-			'plugin_settings', 'article_search_keyword_list',
-			'article_search_object_keywords', 'article_search_objects'
+			'plugin_settings', 'submission_search_keyword_list',
+			'submission_search_object_keywords', 'submission_search_objects'
 		);
 	}
 

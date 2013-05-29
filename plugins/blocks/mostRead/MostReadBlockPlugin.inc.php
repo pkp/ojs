@@ -90,7 +90,7 @@ class MostReadBlockPlugin extends BlockPlugin {
 			// Add article meta-data to the results.
 			foreach ($articleRanking[$timeSpanName] as $articleIndex => &$articleInfo) {
 				$articleInfo['rank'] = $articleIndex + 1;
-				$articleId = $articleInfo['article_id'];
+				$articleId = $articleInfo['submission_id'];
 				$article = $articleDao->getById($articleId, $journal->getId(), true); /* @var $article Article */
 				if (!is_a($article, 'Article')) continue;
 				$articleInfo['title'] = $article->getLocalizedTitle();

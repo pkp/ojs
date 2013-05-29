@@ -15,10 +15,10 @@
 
 	<!--
 	 *
-	 * TABLE article_xml_galleys
+	 * TABLE submission_xml_galleys
 	 *
 	 -->
-	<table name="article_xml_galleys">
+	<table name="submission_xml_galleys">
 		<field name="xml_galley_id" type="I8">
 			<KEY/>
 			<AUTOINCREMENT/>
@@ -26,7 +26,7 @@
 		<field name="galley_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="article_id" type="I8">
+		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="32">

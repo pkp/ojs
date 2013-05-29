@@ -18,7 +18,7 @@
    *
    -->
   <table name="timed_views_log">
-    <field name="article_id" type="I8">
+    <field name="submission_id" type="I8">
       <NOTNULL/>
     </field>
     <field name="journal_id" type="I8">

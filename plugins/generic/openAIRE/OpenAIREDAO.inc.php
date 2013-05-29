@@ -54,20 +54,20 @@ class OpenAIREDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 		$result =& $this->retrieve(
-			'SELECT	pa.published_article_id,
+			'SELECT	pa.published_submission_id,
 					pa.date_published,
 					pa.seq,
 					pa.access_status,
 					COALESCE(st.date_deleted, a.last_modified) AS last_modified,
-					COALESCE(a.article_id, st.submission_id) AS article_id,
+					COALESCE(a.submission_id, st.submission_id) AS submission_id,
 					COALESCE(j.journal_id, st.journal_id) AS journal_id,
 					COALESCE(st.section_id, s.section_id) AS section_id,
 					i.issue_id,
 					st.tombstone_id,
 					st.set_spec
 			FROM mutex m
-			LEFT JOIN published_articles pa ON (m.i=0)
-			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
+			LEFT JOIN published_submissions pa ON (m.i=0)
+			LEFT JOIN submissions a ON (a.submission_id = pa.submission_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
@@ -113,20 +113,20 @@ class OpenAIREDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 		$result =& $this->retrieve(
-			'SELECT	pa.published_article_id,
+			'SELECT	pa.published_submission_id,
 					pa.date_published,
 					pa.seq,
 					pa.access_status,
 					COALESCE(st.date_deleted, a.last_modified) AS last_modified,
-					COALESCE(a.article_id, st.submission_id) AS article_id,
+					COALESCE(a.submission_id, st.submission_id) AS submission_id,
 					COALESCE(j.journal_id, st.journal_id) AS journal_id,
 					COALESCE(st.section_id, s.section_id) AS section_id,
 					i.issue_id,
 					st.tombstone_id,
 					st.set_spec
 			FROM mutex m
-			LEFT JOIN published_articles pa ON (m.i=0)
-			LEFT JOIN articles a ON (a.article_id = pa.article_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
+			LEFT JOIN published_submissions pa ON (m.i=0)
+			LEFT JOIN submissions a ON (a.submission_id = pa.submission_id' . (isset($journalId) ? ' AND a.journal_id = ?' : '') .')
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.journal_id)
@@ -161,9 +161,9 @@ class OpenAIREDAO extends OAIDAO {
 	 */
 	function isOpenAIRERecord($row) {
 		if (!isset($row['tombstone_id'])) {
-			$params = array('projectID', (int) $row['article_id']);
-			$result =& $this->retrieve(
-				'SELECT COUNT(*) FROM article_settings WHERE setting_name = ? AND setting_value IS NOT NULL AND setting_value <> \'\' AND article_id = ?',
+			$params = array('projectID', (int) $row['submission_id']);
+			$result = $this->retrieve(
+				'SELECT COUNT(*) FROM submission_settings WHERE setting_name = ? AND setting_value IS NOT NULL AND setting_value <> \'\' AND submission_id = ?',
 				$params
 			);
 			$returner = (isset($result->fields[0]) && $result->fields[0] == 1) ? true : false;
@@ -185,7 +185,7 @@ class OpenAIREDAO extends OAIDAO {
 	function isOpenAIREArticle($articleId) {
 		$params = array('projectID', (int) $articleId);
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM article_settings WHERE setting_name = ? AND setting_value IS NOT NULL AND setting_value <> \'\' AND article_id = ?',
+			'SELECT COUNT(*) FROM submission_settings WHERE setting_name = ? AND setting_value IS NOT NULL AND setting_value <> \'\' AND submission_id = ?',
 			$params
 		);
 		$returner = (isset($result->fields[0]) && $result->fields[0] == 1) ? true : false;

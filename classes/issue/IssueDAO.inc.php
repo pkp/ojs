@@ -534,11 +534,11 @@ class IssueDAO extends DAO {
 		$params = array((int) $articleId);
 		$sql = 'SELECT	i.*
 			FROM	issues i,
-				published_articles pa,
-				articles a
+				published_submissions pa,
+				submissions a
 			WHERE	i.issue_id = pa.issue_id AND
-				pa.article_id = ? AND
-				pa.article_id = a.article_id';
+				pa.submission_id = ? AND
+				pa.submission_id = a.submission_id';
 		if ($journalId !== null) {
 			$sql .= ' AND i.journal_id = ? AND a.journal_id = i.journal_id';
 			$params[] = (int) $journalId;
@@ -607,7 +607,7 @@ class IssueDAO extends DAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		$result = $this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', (int) $issueId);
+		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE issue_id = ?', (int) $issueId);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();
 		return $returner;

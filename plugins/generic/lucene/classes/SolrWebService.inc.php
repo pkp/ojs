@@ -424,14 +424,14 @@ class SolrWebService extends XmlWebService {
 		$scoredResults = array();
 		foreach($results as $resultIndex => $result) {
 			// We only need the article ID.
-			assert(isset($result['article_id']));
+			assert(isset($result['submission_id']));
 
 			// Use the result order to "score" results. This
 			// will do relevance sorting and field sorting.
 			$score = $itemsPerPage - $resultIndex;
 
 			// Transform the article ID into an integer.
-			$articleId = $result['article_id'];
+			$articleId = $result['submission_id'];
 			if (strpos($articleId, $this->_instId . '-') !== 0) continue;
 			$articleId = substr($articleId, strlen($this->_instId . '-'));
 			if (!is_numeric($articleId)) continue;

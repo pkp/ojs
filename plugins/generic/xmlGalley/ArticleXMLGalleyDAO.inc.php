@@ -55,11 +55,11 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				a.file_size,
 				a.date_uploaded,
 				a.date_modified
-			FROM	article_xml_galleys x
-				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+			FROM	submission_xml_galleys x
+				LEFT JOIN submission_galleys g ON (x.galley_id = g.galley_id)
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	x.galley_id = ?
-				' . ($articleId?' AND x.article_id = ?':''),
+				' . ($articleId?' AND x.submission_id = ?':''),
 			$params
 		);
 
@@ -91,9 +91,9 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				// get derived galleys from DB for this article
 				$result =& $this->retrieve(
 					'SELECT	galley_id
-					FROM	article_xml_galleys x
+					FROM	submission_xml_galleys x
 					WHERE	x.galley_id = ? AND
-						x.article_id = ?
+						x.submission_id = ?
 					ORDER BY galley_id',
 					array($galley->getId(), $articleId)
 				);
@@ -128,19 +128,19 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 	}
 
 	/**
-	 * Insert XML-derived galleys into article_xml_galleys
+	 * Insert XML-derived galleys into submission_xml_galleys
 	 */
 	function insertXMLGalleys($hookName, $args) {
 		$galley =& $args[0];
 		$galleyId =& $args[1];
 
-		// If the galley is an XML file, then insert rows in the article_xml_galleys table
+		// If the galley is an XML file, then insert rows in the submission_xml_galleys table
 		if ($galley->getLabel() == "XML") {
 
 			// create an XHTML galley
 			$this->update(
-				'INSERT INTO article_xml_galleys
-					(galley_id, article_id, label, galley_type)
+				'INSERT INTO submission_xml_galleys
+					(galley_id, submission_id, label, galley_type)
 					VALUES
 					(?, ?, ?, ?)',
 				array(
@@ -152,9 +152,9 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			);
 
 // WARNING: The below code is disabled because of bug #5152. When a galley
-// exists with the same galley_id as an entry in the article_xml_galleys table,
+// exists with the same galley_id as an entry in the submission_xml_galleys table,
 // editing the XML galley will corrupt the entry in the galleys table for the
-// same galley_id. This has been fixed by retiring the article_xml_galleys
+// same galley_id. This has been fixed by retiring the submission_xml_galleys
 // table's xml_galley_id in favour of using the galley_id instead, but this
 // means that only a single derived galley (=XHTML) is possible for an XML
 // galley upload.
@@ -170,8 +170,8 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 				// create a PDF galley
 				$this->update(
-					'INSERT INTO article_xml_galleys
-						(galley_id, article_id, label, galley_type)
+					'INSERT INTO submission_xml_galleys
+						(galley_id, submission_id, label, galley_type)
 						VALUES
 						(?, ?, ?, ?)',
 					array(
@@ -189,7 +189,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 	}
 
 	/**
-	 * Delete XML-derived galleys from article_xml_galleys 
+	 * Delete XML-derived galleys from submission_xml_galleys 
 	 * when the XML galley is deleted
 	 */
 	function deleteXMLGalleys($hookName, $args) {
@@ -198,13 +198,13 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 
 		if (isset($articleId)) {
 			$this->update(
-				'DELETE FROM article_xml_galleys WHERE galley_id = ? AND article_id = ?',
+				'DELETE FROM submission_xml_galleys WHERE galley_id = ? AND submission_id = ?',
 				array($galleyId, $articleId)
 			);
 
 		} else {
 			$this->update(
-				'DELETE FROM article_xml_galleys WHERE galley_id = ?', $galleyId
+				'DELETE FROM submission_xml_galleys WHERE galley_id = ?', $galleyId
 			);
 		}
 
@@ -217,7 +217,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		$galleyId =& $args[0];
 
 		return $this->update(
-			'UPDATE article_xml_galleys SET views = views + 1 WHERE galley_id = ?',
+			'UPDATE submission_xml_galleys SET views = views + 1 WHERE galley_id = ?',
 			$galleyId
 		);
 

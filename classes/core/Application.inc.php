@@ -37,7 +37,7 @@ define('CONTEXT_JOURNAL', 1);
 // 1) publication object dimension:
 define('STATISTICS_DIMENSION_JOURNAL_ID', 'journal_id');
 define('STATISTICS_DIMENSION_ISSUE_ID', 'issue_id');
-define('STATISTICS_DIMENSION_ARTICLE_ID', 'article_id');
+define('STATISTICS_DIMENSION_ARTICLE_ID', 'submission_id');
 define('STATISTICS_DIMENSION_ASSOC_TYPE', 'assoc_type');
 define('STATISTICS_DIMENSION_ASSOC_ID', 'assoc_id');
 // 2) time dimension:
@@ -122,7 +122,6 @@ class Application extends PKPApplication {
 			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
 			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'CopyeditorSubmissionDAO' => 'classes.submission.copyeditor.CopyeditorSubmissionDAO',
-			'EditAssignmentDAO' => 'classes.submission.editAssignment.EditAssignmentDAO',
 			'EditorSubmissionDAO' => 'classes.submission.editor.EditorSubmissionDAO',
 			'EmailTemplateDAO' => 'classes.mail.EmailTemplateDAO',
 			'FooterCategoryDAO' => 'lib.pkp.classes.context.FooterCategoryDAO',

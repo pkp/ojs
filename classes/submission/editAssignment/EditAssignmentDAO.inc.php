@@ -23,7 +23,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignment($editId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.edit_id = ? AND a.article_id = e.article_id',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a LEFT JOIN edit_assignments e ON (a.submission_id = e.submission_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.edit_id = ? AND a.submission_id = e.submission_id',
 			$editId
 			);
 
@@ -45,7 +45,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignmentsByArticleId($articleId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id ORDER BY e.date_notified ASC',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a LEFT JOIN edit_assignments e ON (a.submission_id = e.submission_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.submission_id = ? AND a.submission_id = e.submission_id ORDER BY e.date_notified ASC',
 			$articleId
 			);
 
@@ -60,7 +60,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditorAssignmentsByArticleId($articleId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND e.article_id = ? AND r.journal_id = a.journal_id AND a.article_id = e.article_id AND e.editor_id = u.user_id ORDER BY e.date_notified ASC',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND e.submission_id = ? AND r.journal_id = a.journal_id AND a.submission_id = e.submission_id AND e.editor_id = u.user_id ORDER BY e.date_notified ASC',
 			$articleId
 			);
 
@@ -76,7 +76,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getReviewingSectionEditorAssignmentsByArticleId($articleId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_review = 1 ORDER BY e.date_notified ASC',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a LEFT JOIN edit_assignments e ON (a.submission_id = e.submission_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.submission_id = ? AND a.submission_id = e.submission_id AND r.role_id IS NULL AND e.can_review = 1 ORDER BY e.date_notified ASC',
 			$articleId
 		);
 
@@ -92,7 +92,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditingSectionEditorAssignmentsByArticleId($articleId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.article_id = ? AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_edit = 1 ORDER BY e.date_notified ASC',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a LEFT JOIN edit_assignments e ON (a.submission_id = e.submission_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.submission_id = ? AND a.submission_id = e.submission_id AND r.role_id IS NULL AND e.can_edit = 1 ORDER BY e.date_notified ASC',
 			$articleId
 			);
 
@@ -107,7 +107,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignmentsByUserId($userId) {
 		$result =& $this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a LEFT JOIN edit_assignments e ON (a.article_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.editor_id = ? AND a.article_id = e.article_id ORDER BY e.date_notified ASC',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM submissions a LEFT JOIN edit_assignments e ON (a.submission_id = e.submission_id) LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = a.journal_id) WHERE e.editor_id = ? AND a.submission_id = e.submission_id ORDER BY e.date_notified ASC',
 			$userId
 			);
 
@@ -123,7 +123,7 @@ class EditAssignmentDAO extends DAO {
 	function &_returnEditAssignmentFromRow($row) {
 		$editAssignment = new EditAssignment();
 		$editAssignment->setEditId($row['edit_id']);
-		$editAssignment->setArticleId($row['article_id']);
+		$editAssignment->setArticleId($row['submission_id']);
 		$editAssignment->setEditorId($row['editor_id']);
 		$editAssignment->setCanReview($row['can_review']);
 		$editAssignment->setCanEdit($row['can_edit']);
@@ -148,7 +148,7 @@ class EditAssignmentDAO extends DAO {
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			sprintf('INSERT INTO edit_assignments
-				(article_id, editor_id, can_edit, can_review, date_notified, date_underway)
+				(submission_id, editor_id, can_edit, can_review, date_notified, date_underway)
 				VALUES
 				(?, ?, ?, ?, %s, %s)',
 				$this->datetimeToDB($editAssignment->getDateNotified()),
@@ -172,7 +172,7 @@ class EditAssignmentDAO extends DAO {
 	function updateEditAssignment(&$editAssignment) {
 		return $this->update(
 			sprintf('UPDATE edit_assignments
-				SET	article_id = ?,
+				SET	submission_id = ?,
 					editor_id = ?,
 					can_review = ?,
 					can_edit = ?,
@@ -208,7 +208,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function deleteEditAssignmentsByArticle($articleId) {
 		return $this->update(
-			'DELETE FROM edit_assignments WHERE article_id = ?',
+			'DELETE FROM edit_assignments WHERE submission_id = ?',
 			$articleId
 		);
 	}
@@ -231,10 +231,10 @@ class EditAssignmentDAO extends DAO {
 		// Get counts of completed submissions
 		$result =& $this->retrieve(
 			'SELECT	ea.editor_id,
-				COUNT(ea.article_id) AS complete
+				COUNT(ea.submission_id) AS complete
 			FROM	edit_assignments ea,
-				articles a
-			WHERE	ea.article_id = a.article_id AND
+				submissions a
+			WHERE	ea.submission_id = a.submission_id AND
 				a.journal_id = ? AND (
 					a.status = ' . STATUS_ARCHIVED . ' OR
 					a.status = ' . STATUS_PUBLISHED . ' OR
@@ -256,10 +256,10 @@ class EditAssignmentDAO extends DAO {
 		// Get counts of incomplete submissions
 		$result =& $this->retrieve(
 			'SELECT	ea.editor_id,
-				COUNT(ea.article_id) AS incomplete
+				COUNT(ea.submission_id) AS incomplete
 			FROM	edit_assignments ea,
-				articles a
-			WHERE	ea.article_id = a.article_id AND
+				submissions a
+			WHERE	ea.submission_id = a.submission_id AND
 				a.journal_id = ? AND
 				a.status = ' . STATUS_QUEUED . '
 			GROUP BY ea.editor_id',

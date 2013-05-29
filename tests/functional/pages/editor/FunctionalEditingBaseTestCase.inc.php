@@ -31,12 +31,12 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 	 */
 	protected function getAffectedTables() {
 		return array(
-			'articles', 'article_settings', 'article_files',
-			'article_galleys', 'article_galley_settings',
+			'submissions', 'submission_settings', 'submission_files',
+			'submission_galleys', 'submission_galley_settings',
 			'article_supplementary_files', 'article_supp_file_settings',
 			'authors', 'author_settings', 'edit_assignments',
 			'event_log', 'event_log_settings', 'issues',
-			'published_articles', 'signoffs', 'notifications',
+			'published_submissions', 'signoffs', 'notifications',
 			'sessions'
 		);
 	}

@@ -55,8 +55,8 @@ class ArticleDAO extends SubmissionDAO {
 	 * @param $article object
 	 */
 	function updateLocaleFields($article) {
-		$this->updateDataObjectSettings('article_settings', $article, array(
-			'article_id' => $article->getId()
+		$this->updateDataObjectSettings('submission_settings', $article, array(
+			'submission_id' => $article->getId()
 		));
 	}
 
@@ -91,14 +91,14 @@ class ArticleDAO extends SubmissionDAO {
 		$sql = 'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.article_id = ?';
+			WHERE	a.submission_id = ?';
 		if ($journalId !== null) {
 			$sql .= ' AND a.journal_id = ?';
 			$params[] = $journalId;
@@ -143,26 +143,26 @@ class ArticleDAO extends SubmissionDAO {
 		$sql = 'SELECT a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
 		if (is_null($settingValue)) {
-			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
+			$sql .= 'LEFT JOIN submission_settings ast ON a.submission_id = ast.submission_id AND ast.setting_name = ?
 				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
-			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
+			$sql .= 'INNER JOIN submission_settings ast ON a.submission_id = ast.submission_id
 				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
 			$sql .= ' AND a.journal_id = ?';
 		}
-		$sql .= ' ORDER BY a.journal_id, a.article_id';
+		$sql .= ' ORDER BY a.journal_id, a.submission_id';
 		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -176,7 +176,7 @@ class ArticleDAO extends SubmissionDAO {
 	function _fromRow($row) {
 		$article = parent::_fromRow();
 
-		$article->setId($row['article_id']);
+		$article->setId($row['submission_id']);
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
@@ -188,7 +188,7 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setHideAuthor($row['hide_author']);
 		$article->setCommentsStatus($row['comments_status']);
 
-		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
+		$this->getDataObjectSettings('submission_settings', 'submission_id', $row['submission_id'], $article);
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 		return $article;
@@ -209,7 +209,7 @@ class ArticleDAO extends SubmissionDAO {
 	function insertObject($article) {
 		$article->stampModified();
 		$this->update(
-			sprintf('INSERT INTO articles
+			sprintf('INSERT INTO submissions
 				(locale, user_id, journal_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
@@ -253,7 +253,7 @@ class ArticleDAO extends SubmissionDAO {
 	function updateObject($article) {
 		$article->stampModified();
 		$this->update(
-			sprintf('UPDATE articles
+			sprintf('UPDATE submissions
 				SET	locale = ?,
 					user_id = ?,
 					section_id = ?,
@@ -271,7 +271,7 @@ class ArticleDAO extends SubmissionDAO {
 					fast_tracked = ?,
 					hide_author = ?,
 					comments_status = ?
-				WHERE article_id = ?',
+				WHERE submission_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -345,8 +345,8 @@ class ArticleDAO extends SubmissionDAO {
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
 
-		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
-		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
+		$this->update('DELETE FROM submission_settings WHERE submission_id = ?', $articleId);
+		$this->update('DELETE FROM submissions WHERE submission_id = ?', $articleId);
 
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
@@ -381,8 +381,8 @@ class ArticleDAO extends SubmissionDAO {
 			'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -408,8 +408,8 @@ class ArticleDAO extends SubmissionDAO {
 			'SELECT	a.*, pa.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
@@ -450,7 +450,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function getJournalId($articleId) {
 		$result = $this->retrieve(
-			'SELECT journal_id FROM articles WHERE article_id = ?', (int) $articleId
+			'SELECT journal_id FROM submissions WHERE submission_id = ?', (int) $articleId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
@@ -467,7 +467,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function incompleteSubmissionExists($articleId, $userId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT submission_progress FROM articles WHERE article_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
+			'SELECT submission_progress FROM submissions WHERE submission_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
 			array((int) $articleId, (int) $userId, (int) $journalId)
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
@@ -483,7 +483,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function changeStatus($articleId, $status) {
 		$this->update(
-			'UPDATE articles SET status = ? WHERE article_id = ?',
+			'UPDATE submissions SET status = ? WHERE submission_id = ?',
 			array((int) $status, (int) $articleId)
 		);
 
@@ -515,13 +515,13 @@ class ArticleDAO extends SubmissionDAO {
 		}
 
 		// Update setting values.
-		$keyFields = array('setting_name', 'locale', 'article_id');
+		$keyFields = array('setting_name', 'locale', 'submission_id');
 		foreach ($values as $locale => $value) {
 			// Locale-specific entries will be deleted when no value exists.
 			// Non-localized settings will always be set.
 			if ($isLocalized) {
 				$this->update(
-					'DELETE FROM article_settings WHERE article_id = ? AND setting_name = ? AND locale = ?',
+					'DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = ? AND locale = ?',
 					array((int) $articleId, $name, $locale)
 				);
 				if (empty($value)) continue;
@@ -531,9 +531,9 @@ class ArticleDAO extends SubmissionDAO {
 			$value = $this->convertToDB($value, $type);
 
 			// Update the database.
-			$this->replace('article_settings',
+			$this->replace('submission_settings',
 				array(
-					'article_id' => $articleId,
+					'submission_id' => $articleId,
 					'setting_name' => $name,
 					'setting_value' => $value,
 					'setting_type' => $type,
@@ -559,9 +559,9 @@ class ArticleDAO extends SubmissionDAO {
 	function pubIdExists($pubIdType, $pubId, $articleId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
-			FROM article_settings ast
-				INNER JOIN articles a ON ast.article_id = a.article_id
-			WHERE ast.setting_name = ? and ast.setting_value = ? and ast.article_id <> ? AND a.journal_id = ?',
+			FROM submission_settings ast
+				INNER JOIN submissions a ON ast.submission_id = a.submission_id
+			WHERE ast.setting_name = ? and ast.setting_value = ? and ast.submission_id <> ? AND a.journal_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
@@ -580,7 +580,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function removeArticlesFromSection($sectionId) {
 		$this->update(
-			'UPDATE articles SET section_id = null WHERE section_id = ?', (int) $sectionId
+			'UPDATE submissions SET section_id = null WHERE section_id = ?', (int) $sectionId
 		);
 
 		$this->flushCache();
@@ -600,7 +600,7 @@ class ArticleDAO extends SubmissionDAO {
 		$articles = $this->getByJournalId($journalId);
 		while ($article = $articles->next()) {
 			$this->update(
-				'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
+				'DELETE FROM submission_settings WHERE setting_name = ? AND submission_id = ?',
 				array(
 					$settingName,
 					(int)$article->getId()
@@ -615,7 +615,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return int
 	 */
 	function getInsertId() {
-		return $this->_getInsertId('articles', 'article_id');
+		return $this->_getInsertId('submissions', 'submission_id');
 	}
 
 	function flushCache() {
@@ -652,19 +652,19 @@ class ArticleDAO extends SubmissionDAO {
 
 		$result = $this->retrieve(
 			'SELECT	a.*, pa.date_published
-			FROM	articles a
-				LEFT JOIN published_articles pa ON a.article_id = pa.article_id
+			FROM	submissions a
+				LEFT JOIN published_submissions pa ON a.submission_id = pa.submission_id
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN stage_assignments sa ON (a.article_id = sa.submission_id)
+				LEFT JOIN stage_assignments sa ON (a.submission_id = sa.submission_id)
 				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
 				' . ($subEditorId?' JOIN section_editors se ON (se.press_id = a.journal_id AND se.user_id = ? AND se.section_id = a.section_id)':'') . '
 			WHERE	a.date_submitted IS NOT NULL
 				' . ($pressId?' AND a.journal_id = ?':'') . '
-			GROUP BY a.article_id',
+			GROUP BY a.submission_id',
 			$params
 		);
 
