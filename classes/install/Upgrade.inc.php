@@ -606,7 +606,7 @@ class Upgrade extends Installer {
 			}
 
 			// Section Editors.
-			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_SECTION_EDITOR);
+			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SECTION_EDITOR);
 			$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));;
 			while (!$userResult->EOF) {
 				$row = $userResult->GetRowAssoc(false);
