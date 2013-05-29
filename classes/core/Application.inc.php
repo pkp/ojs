@@ -118,7 +118,6 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'AuthorSubmissionDAO' => 'classes.submission.author.AuthorSubmissionDAO',
 			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
 			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'CopyeditorSubmissionDAO' => 'classes.submission.copyeditor.CopyeditorSubmissionDAO',
@@ -199,16 +198,6 @@ class Application extends PKPApplication {
 			'reports',
 			'themes'
 		);
-	}
-
-	/**
-	 * Instantiate the help object for this application.
-	 * @return object
-	 */
-	function &instantiateHelp() {
-		import('classes.help.Help');
-		$help = new Help();
-		return $help;
 	}
 
 	/**
