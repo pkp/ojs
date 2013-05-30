@@ -30,7 +30,7 @@ class ReviewStageAccessPolicy extends ContextPolicy {
 		// role-specific access to submission stage operations.
 		$workflowStagePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
 
-		// Add the workflow policy, for editorial / press roles
+		// Add the workflow policy, for editorial / context roles
 		import('classes.security.authorization.WorkflowStageAccessPolicy');
 		$workflowStagePolicy->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, $submissionParameterName, $stageId));
 

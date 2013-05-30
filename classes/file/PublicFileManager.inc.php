@@ -33,7 +33,7 @@ class PublicFileManager extends PKPPublicFileManager {
 	}
 
 	/**
-	 * Get the path to a press' public files directory.
+	 * Get the path to a journal's public files directory.
 	 * @param $assocType int Assoc type for context
 	 * @param $contextId int Press ID
 	 * @return string

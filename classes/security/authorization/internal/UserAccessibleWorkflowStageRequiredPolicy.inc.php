@@ -48,7 +48,7 @@ class UserAccessibleWorkflowStageRequiredPolicy extends PKPUserAccessibleWorkflo
 				case ROLE_ID_SUB_EDITOR:
 					// The requested submission must be part of their series...
 					// and the requested workflow stage must be assigned to
-					// them in the press settings.
+					// them in the journal settings.
 					import('classes.security.authorization.internal.SectionAssignmentRule');
 					if (SectionAssignmentRule::effect($contextId, $submission->getSectionId(), $userId) &&
 					$userGroupDao->userAssignmentExists($contextId, $userId, $stageId)) {

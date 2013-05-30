@@ -8,7 +8,7 @@
  * @class SectionAssignmentPolicy
  * @ingroup security_authorization_internal
  *
- * @brief Class to control access to press series.
+ * @brief Class to control access to sections.
  *
  * NB: This policy expects a previously authorized article in the
  * authorization context.
@@ -40,7 +40,7 @@ class SectionAssignmentPolicy extends AuthorizationPolicy {
 		$user = $this->_request->getUser();
 		if (!is_a($user, 'PKPUser')) return AUTHORIZATION_DENY;
 
-		// Get the press
+		// Get the journal
 		$router = $this->_request->getRouter();
 		$context = $router->getContext($this->_request);
 		if (!is_a($context, 'Journal')) return AUTHORIZATION_DENY;

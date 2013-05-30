@@ -29,7 +29,7 @@ class OjsEditorDecisionAccessPolicy extends ContextPolicy {
 		import('classes.security.authorization.WorkflowStageAccessPolicy');
 		$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, $submissionParameterName, $stageId));
 
-		// An editor decision can only be made if there is a press editor assigned to the stage
+		// An editor decision can only be made if there is an editor assigned to the stage
 		import('lib.pkp.classes.security.authorization.internal.ManagerRequiredPolicy');
 		$this->addPolicy(new ManagerRequiredPolicy($request));
 	}

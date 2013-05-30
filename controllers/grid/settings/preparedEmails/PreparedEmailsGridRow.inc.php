@@ -26,7 +26,7 @@ class PreparedEmailsGridRow extends PKPPreparedEmailsGridRow {
 	// Overridden parent class methods
 	//
 	/**
-	 * Return the context (press) ID.
+	 * Return the context ID.
 	 * @param $request PKPRequest
 	 * @return int Journal ID.
 	 */

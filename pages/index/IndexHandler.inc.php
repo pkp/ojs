@@ -69,7 +69,7 @@ class IndexHandler extends Handler {
 				}
 			}
 
-			// Include any social media items that are configured for the press itself.
+			// Include any social media items that are configured for the context itself.
 			$socialMediaDao = DAORegistry::getDAO('SocialMediaDAO');
 			$socialMedia =& $socialMediaDao->getEnabledForContextByContextId($journal->getId());
 			$blocks = array();
