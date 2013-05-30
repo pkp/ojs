@@ -17,8 +17,6 @@ import('classes.article.Article');
 import('lib.pkp.classes.submission.SubmissionDAO');
 
 class ArticleDAO extends SubmissionDAO {
-	var $cache;
-
 	/**
 	 * Constructor.
 	 */
@@ -44,12 +42,8 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function getById($articleId, $journalId = null, $useCache = false) {
-		if ($useCache) {
-			$cache = $this->_getCache();
-			$returner = $cache->get($articleId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
-		}
+		$submission = parent::getById($articleId, $pressId, $useCache);
+		if ($submission) return $submission;
 
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();

@@ -13,21 +13,15 @@
  * @brief Describes basic section properties.
  */
 
-class Section extends DataObject {
+import('lib.pkp.classes.context.PKPSection');
+
+class Section extends PKPSection {
 
 	/**
 	 * Constructor.
 	 */
 	function Section() {
-		parent::DataObject();
-	}
-
-	/**
-	 * Get localized title of journal section.
-	 * @return string
-	 */
-	function getLocalizedTitle() {
-		return $this->getLocalizedData('title');
+		parent::PKPSection();
 	}
 
 	/**
@@ -48,7 +42,7 @@ class Section extends DataObject {
 	 * @return int
 	 */
 	function getJournalId() {
-		return $this->getData('journalId');
+		return $this->getContextId();
 	}
 
 	/**
@@ -56,7 +50,7 @@ class Section extends DataObject {
 	 * @param $journalId int
 	 */
 	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
+		return $this->setContextId($journalId);
 	}
 
 	/**
@@ -73,24 +67,6 @@ class Section extends DataObject {
 	 */
 	function setReviewFormId($reviewFormId) {
 		return $this->setData('reviewFormId', $reviewFormId);
-	}
-
-	/**
-	 * Get title of section.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getTitle($locale) {
-		return $this->getData('title', $locale);
-	}
-
-	/**
-	 * Set title of section.
-	 * @param $title string
-	 * @param $locale string
-	 */
-	function setTitle($title, $locale) {
-		return $this->setData('title', $title, $locale);
 	}
 
 	/**
