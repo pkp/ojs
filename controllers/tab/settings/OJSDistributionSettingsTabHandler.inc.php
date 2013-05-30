@@ -25,6 +25,7 @@ class OJSDistributionSettingsTabHandler extends DistributionSettingsTabHandler {
 			$this->getPageTabs(),
 			array(
 				'access' => 'controllers.tab.settings.access.form.AccessForm',
+				'identifiers' => 'controllers.tab.settings.identifiers.form.IdentifiersForm',
 			)
 		));
 	}

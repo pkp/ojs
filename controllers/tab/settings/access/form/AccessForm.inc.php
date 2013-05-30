@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file controllers/tab/settings/siteAccessOptions/form/AccessForm.inc.php
+ * @file controllers/tab/settings/access/form/AccessForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AccessForm
- * @ingroup controllers_tab_settings_siteAccessOptions_form
+ * @ingroup controllers_tab_settings_access_form
  *
  * @brief Form to edit site access options.
  */

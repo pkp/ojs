@@ -61,45 +61,6 @@
 
 <div class="separator"></div>
 
-<div id="publicIdentifier">
-<h3>4.3 {translate key="manager.setup.publicIdentifier"}</h3>
-<div id="uniqueIdentifier">
-<h4>{translate key="manager.setup.uniqueIdentifier"}</h4>
-
-<p>{translate key="manager.setup.uniqueIdentifierDescription"}</p>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="enablePublicIssueId" id="enablePublicIssueId" value="1"{if $enablePublicIssueId} checked="checked"{/if} /></td>
-		<td class="value"><label for="enablePublicIssueId">{translate key="manager.setup.enablePublicIssueId"}</label></td>
-	</tr>
-	<tr>
-		<td class="label"><input type="checkbox" name="enablePublicArticleId" id="enablePublicArticleId" value="1"{if $enablePublicArticleId} checked="checked"{/if} /></td>
-		<td class="value"><label for="enablePublicArticleId">{translate key="manager.setup.enablePublicArticleId"}</label></td>
-	</tr>
-	<tr>
-		<td class="label"><input type="checkbox" name="enablePublicGalleyId" id="enablePublicGalleyId" value="1"{if $enablePublicGalleyId} checked="checked"{/if} /></td>
-		<td class="value"><label for="enablePublicGalleyId">{translate key="manager.setup.enablePublicGalleyId"}</label></td>
-	</tr>
-	<tr>
-		<td class="label"><input type="checkbox" name="enablePublicSuppFileId" id="enablePublicSuppFileId" value="1"{if $enablePublicSuppFileId} checked="checked"{/if} /></td>
-		<td class="value"><label for="enablePublicSuppFileId">{translate key="manager.setup.enablePublicSuppFileId"}</label></td>
-	</tr>
-</table>
-</div><!-- uniqueIdentifier -->
-<br />
-<div id="pageNumberIdentifier">
-<h4>{translate key="manager.setup.pageNumberIdentifier"}</h4>
-
-<table class="data">
-	<tr>
-		<td width="5%" class="label"><input type="checkbox" name="enablePageNumber" id="enablePageNumber" value="1"{if $enablePageNumber} checked="checked"{/if} /></td>
-		<td class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
-	</tr>
-</table>
-</div><!-- pageNumberIdentifier -->
-</div><!-- publicIdentifier -->
-
 {if !$wizardMode}
 	{fbvFormButtons id="setupFormSubmit" submitText="common.save" hideCancel=true}
 {/if}
