@@ -42,7 +42,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function getById($articleId, $journalId = null, $useCache = false) {
-		$submission = parent::getById($articleId, $journal, $useCache);
+		$submission = parent::getById($articleId, $journalId, $useCache);
 		if ($submission) return $submission;
 
 		$primaryLocale = AppLocale::getPrimaryLocale();
