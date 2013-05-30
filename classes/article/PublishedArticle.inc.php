@@ -61,22 +61,6 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get section ID of the issue this article is in.
-	 * @return int
-	 */
-	function getSectionId() {
-		return $this->getData('sectionId');
-	}
-
-	/**
-	 * Set section ID of the issue this article is in.
-	 * @param $sectionId int
-	 */
-	function setSectionId($sectionId) {
-		return $this->setData('sectionId', $sectionId);
-	}
-
-	/**
 	 * Get sequence of article in table of contents.
 	 * @return float
 	 */
@@ -121,24 +105,23 @@ class PublishedArticle extends Article {
 	 * Get the galleys for an article.
 	 * @return array ArticleGalley
 	 */
-	function &getGalleys() {
-		$galleys =& $this->getData('galleys');
-		return $galleys;
+	function getGalleys() {
+		return $this->getData('galleys');
 	}
 
 	/**
 	 * Get the localized galleys for an article.
 	 * @return array ArticleGalley
 	 */
-	function &getLocalizedGalleys() {
+	function getLocalizedGalleys() {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 
-		$allGalleys =& $this->getData('galleys');
+		$allGalleys = $this->getData('galleys');
 		$galleys = array();
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $tryLocale) {
 			foreach (array_keys($allGalleys) as $key) {
 				if ($allGalleys[$key]->getLocale() == $tryLocale) {
-					$galleys[] =& $allGalleys[$key];
+					$galleys[] = $allGalleys[$key];
 				}
 			}
 			if (!empty($galleys)) {
@@ -154,25 +137,8 @@ class PublishedArticle extends Article {
 	 * Set the galleys for an article.
 	 * @param $galleys array ArticleGalley
 	 */
-	function setGalleys(&$galleys) {
+	function setGalleys($galleys) {
 		return $this->setData('galleys', $galleys);
-	}
-
-	/**
-	 * Get supplementary files for this article.
-	 * @return array SuppFiles
-	 */
-	function &getSuppFiles() {
-		$returner =& $this->getData('suppFiles');
-		return $returner;
-	}
-
-	/**
-	 * Set supplementary file for this article.
-	 * @param $suppFiles array SuppFiles
-	 */
-	function setSuppFiles($suppFiles) {
-		return $this->setData('suppFiles', $suppFiles);
 	}
 }
 

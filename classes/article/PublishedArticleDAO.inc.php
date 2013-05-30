@@ -19,7 +19,6 @@ import('classes.article.ArticleDAO');
 class PublishedArticleDAO extends ArticleDAO {
 	var $authorDao;
 	var $galleyDao;
-	var $suppFileDao;
 
 	var $articleCache;
 	var $articlesInSectionsCache;
@@ -31,7 +30,6 @@ class PublishedArticleDAO extends ArticleDAO {
 		parent::ArticleDAO();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 
 	function _articleCacheMiss($cache, $id) {
@@ -107,7 +105,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result = $this->retrieve($sql, $params);
 
 		while (!$result->EOF) {
-			$publishedArticles[] = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -170,7 +168,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
+		$returner = new DAOResultFactory($result, $this, '_fromRow');
 		return $returner;
 	}
 
@@ -232,7 +230,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$publishedArticle = $this->_returnPublishedArticleFromRow($row);
+			$publishedArticle = $this->_fromRow($row);
 			if ($publishedArticle->getSectionId() != $currSectionId) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
@@ -264,7 +262,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	function &getPublishedArticlesBySectionId($sectionId, $issueId, $simple = false) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_fromRow';
 		$publishedArticles = array();
 
 		$result = $this->retrieve(
@@ -330,8 +328,6 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
-		if (!$simple) $publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['submission_id']));
-
 		$result->Close();
 		return $publishedArticle;
 	}
@@ -386,7 +382,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticle = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -473,7 +469,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$publishedArticles = array();
 		while (!$result->EOF) {
-			$publishedArticles[] = $this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -598,21 +594,19 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * creates and returns a published article object from a row, including all supp files etc.
+	 * creates and returns a published article object from a row
 	 * @param $row array
 	 * @param $callHooks boolean Whether or not to call hooks
 	 * @return PublishedArticle object
 	 */
-	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
+	function _fromRow($row, $callHooks = true) {
 		$publishedArticle = parent::_fromRow($row);
-		$publishedArticle = $this->newDataObject();
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['submission_id']));
-		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['submission_id']));
 
 		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
 		return $publishedArticle;
