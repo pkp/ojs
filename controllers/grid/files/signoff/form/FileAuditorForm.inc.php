@@ -23,7 +23,7 @@ class FileAuditorForm extends PKPFileAuditorForm {
 	 */
 	function FileAuditorForm($submission, $fileStage, $stageId, $symbolic, $eventType, $assocId = null, $galleyId = null) {
 		parent::PKPFileAuditorForm($submission, $fileStage, $stageId, $symbolic, $eventType, $assocId);
-		$this->_galleyId = $galleId;
+		$this->_galleyId = $galleyId;
 	}
 
 	// Getters and Setters.
