@@ -42,7 +42,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function getById($articleId, $journalId = null, $useCache = false) {
-		$submission = parent::getById($articleId, $pressId, $useCache);
+		$submission = parent::getById($articleId, $journal, $useCache);
 		if ($submission) return $submission;
 
 		$primaryLocale = AppLocale::getPrimaryLocale();
@@ -586,7 +586,7 @@ class ArticleDAO extends SubmissionDAO {
 
 	/**
 	 * Get all unassigned submissions for a context or all contexts
-	 * @param $pressId int optional the ID of the press to query.
+	 * @param $journalId int optional the ID of the journal to query.
 	 * @param $subEditorId int optional the ID of the sub editor
 	 * 	whose section will be included in the results (excluding others).
 	 * @return DAOResultFactory containing matching Submissions
@@ -603,7 +603,7 @@ class ArticleDAO extends SubmissionDAO {
 			(int) ROLE_ID_MANAGER
 		);
 		if ($subEditorId) $params[] = (int) $subEditorId;
-		if ($pressId) $params[] = (int) $pressId;
+		if ($journalId) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
 			'SELECT	a.*, pa.date_published
@@ -616,9 +616,9 @@ class ArticleDAO extends SubmissionDAO {
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 				LEFT JOIN stage_assignments sa ON (a.submission_id = sa.submission_id)
 				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
-				' . ($subEditorId?' JOIN section_editors se ON (se.press_id = a.journal_id AND se.user_id = ? AND se.section_id = a.section_id)':'') . '
+				' . ($subEditorId?' JOIN section_editors se ON (se.journal_id = a.journal_id AND se.user_id = ? AND se.section_id = a.section_id)':'') . '
 			WHERE	a.date_submitted IS NOT NULL
-				' . ($pressId?' AND a.journal_id = ?':'') . '
+				' . ($journalId?' AND a.journal_id = ?':'') . '
 			GROUP BY a.submission_id',
 			$params
 		);
