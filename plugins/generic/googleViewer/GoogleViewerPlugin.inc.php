@@ -17,7 +17,8 @@ class GoogleViewerPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::include', array($this, '_callback'));
+				HookRegistry::register('TemplateManager::include', array(&$this, '_includeCallback'));
+				HookRegistry::register('TemplateManager::display', array(&$this, '_displayCallback'));
 			}
 
 			return true;
@@ -33,7 +34,7 @@ class GoogleViewerPlugin extends GenericPlugin {
 		return __('plugins.generic.googleViewer.description');
 	}
 
-	function _callback($hookName, $args) {
+	function _includeCallback($hookName, $args) {
 		if ($this->getEnabled()) {
 			$templateMgr =& $args[0];
 			$params =& $args[1];
@@ -43,6 +44,20 @@ class GoogleViewerPlugin extends GenericPlugin {
 			switch ($params['smarty_include_tpl_file']) {
 				case 'article/pdfViewer.tpl':
 					$params['smarty_include_tpl_file'] = $this->getTemplatePath() . 'index.tpl';
+					break;
+			}
+			return false;
+		}
+	}
+
+	function _displayCallback($hookName, $args) {
+		if ($this->getEnabled()) {
+			$templateMgr =& $args[0];
+			$template =& $args[1];
+
+			switch ($template) {
+				case 'issue/issueGalley.tpl':
+					$template = $this->getTemplatePath() . 'issueGalley.tpl';
 					break;
 			}
 			return false;
