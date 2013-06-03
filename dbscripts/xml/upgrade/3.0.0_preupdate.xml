@@ -16,7 +16,6 @@
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
 	</sql>
 	<!-- Bug #8235: Rename article* submission* -->
-	<sql>
 		<!-- article_files to submission_files -->
 		<rename table="article_files" to="submission_files" />
 		<rename table="submission_files" column="article_id" to="submission_id" />
