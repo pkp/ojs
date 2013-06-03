@@ -86,7 +86,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			$galley =& $galleys[$key];
 
 			// if the galley is an XML galley, append XML-derived galleys
-			if ($galley->getFileType() == "text/xml") {
+			if ($galley->getFileType() == "text/xml" || $galley->getFileType() == "application/xml") {
 
 				// get derived galleys from DB for this article
 				$result =& $this->retrieve(

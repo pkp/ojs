@@ -106,7 +106,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		// probably based on the current page/context, ie. editor pages
 
 		// If the galley is an XML file, then convert it from an HTML Galley to an XML Galley
-		if ($galley->getFileType() == "text/xml") {
+		if ($galley->getFileType() == "text/xml" || $galley->getFileType() == "application/xml") {
 			$galley = $this->_returnXMLGalleyFromArticleGalley($galley);
 			return true;
 		}
@@ -259,7 +259,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 						$fileName = $fileManager->getUploadedFileName('customXSL');
 						$extension = strtolower_codesafe($fileManager->getExtension($fileName));
 
-						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml' || $type == 'application/xslt+xml')
+						if (($type == 'text/xml' || $type == 'text/xsl' || $type == 'application/xml' || $type == 'application/xslt+xml')
 							&& $extension == 'xsl') {
 
 							// if there is an existing XSL file, delete it from the journal files folder
