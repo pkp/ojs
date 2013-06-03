@@ -17,7 +17,7 @@ import('lib.pkp.classes.security.PKPRole');
 
 /** ID codes for all user roles */
 define('ROLE_ID_EDITOR',		0x00000100);
-define('ROLE_ID_SECTION_EDITOR',	0x00000200);
+define('ROLE_ID_SECTION_EDITOR',	0x00000011);
 define('ROLE_ID_LAYOUT_EDITOR',		0x00000300);
 define('ROLE_ID_COPYEDITOR',		0x00002000);
 define('ROLE_ID_PROOFREADER',		0x00003000);
