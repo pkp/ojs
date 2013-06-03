@@ -285,7 +285,7 @@ class Upgrade extends Installer {
 		$result = $signoffDao->retrieve(
 			'SELECT DISTINCT s.signoff_id
 			FROM submissions a
-				JOIN signoffs s ON (a.article_id = s.assoc_id)
+				JOIN signoffs s ON (a.submission_id = s.assoc_id)
 			WHERE s.symbolic = ?
 				AND s.file_id = a.revised_file_id',
 			'SIGNOFF_COPYEDITING_INITIAL'
@@ -429,7 +429,7 @@ class Upgrade extends Installer {
 				}
 				$settingResult->Close();
 
-				$languageResult = $articleDao->retrieve('SELECT language FROM articles WHERE submission_id = ?', array((int)$articleId));
+				$languageResult = $articleDao->retrieve('SELECT language FROM submissions WHERE submission_id = ?', array((int)$articleId));
 				$languageRow = $languageResult->getRowAssoc(false);
 				// language is NOT localized originally.
 				$language = $languageRow['language'];

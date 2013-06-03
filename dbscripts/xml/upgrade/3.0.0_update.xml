@@ -20,28 +20,28 @@
 	</sql>
 	<!-- Bug #6013: Make published dates for articles consistent -->
 	<sql>
-		<query driver="mysql">UPDATE published_articles SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
+		<query driver="mysql">UPDATE published_submissions SET date_published = NULL WHERE date_published = '0000-00-00 00:00:00'</query>
 	</sql>
 	<!-- Re-map old ARTICLE_FILE_* constants to SUBMISSION_FILE_* ones.  The order here is important. -->
 	<sql>
 		<!-- attachment files -->
-		<query>UPDATE article_files SET file_stage = '13' WHERE file_stage = '9'</query>
+		<query>UPDATE submission_files SET file_stage = '13' WHERE file_stage = '9'</query>
 		<!-- supplement files -->
-		<query>UPDATE article_files SET file_stage = '16' WHERE file_stage = '6'</query>
+		<query>UPDATE submission_files SET file_stage = '16' WHERE file_stage = '6'</query>
 		<!-- layout files -->
-		<query>UPDATE article_files SET file_stage = '12' WHERE file_stage = '5'</query>
+		<query>UPDATE submission_files SET file_stage = '12' WHERE file_stage = '5'</query>
 		<!-- copyedit files -->
-		<query>UPDATE article_files SET file_stage = '9' WHERE file_stage = '4'</query>
+		<query>UPDATE submission_files SET file_stage = '9' WHERE file_stage = '4'</query>
 		<!-- editor files -->
-		<query>UPDATE article_files SET file_stage = '8' WHERE file_stage = '3'</query>
+		<query>UPDATE submission_files SET file_stage = '8' WHERE file_stage = '3'</query>
 		<!-- review files -->
-		<query>UPDATE article_files SET file_stage = '4' WHERE file_stage = '2'</query>
+		<query>UPDATE submission_files SET file_stage = '4' WHERE file_stage = '2'</query>
 		<!-- submission files -->
-		<query>UPDATE article_files SET file_stage = '2' WHERE file_stage = '1'</query>
+		<query>UPDATE submission_files SET file_stage = '2' WHERE file_stage = '1'</query>
 		<!-- public files -->
-		<query>UPDATE article_files SET file_stage = '1' WHERE file_stage = '7'</query>
+		<query>UPDATE submission_files SET file_stage = '1' WHERE file_stage = '7'</query>
 		<!-- note files -->
-		<query>UPDATE article_files SET file_stage = '3' WHERE file_stage = '8'</query>
+		<query>UPDATE submission_files SET file_stage = '3' WHERE file_stage = '8'</query>
 	</sql>
 	<!-- Bug #8212: Refactor MailTemplate code into PKP lib -->
 	<sql>

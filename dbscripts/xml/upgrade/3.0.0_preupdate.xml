@@ -14,6 +14,7 @@
 	<!-- Bug #8148: Submission process into PKP lib -->
 	<sql>
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
+	</sql>
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->
@@ -46,12 +47,11 @@
 		<!-- various table renames -->
 		<rename table="article_search_keyword_list" to="submission_search_keyword_list" />
 		<rename table="article_search_object_keywords" to="submission_search_object_keywords" />
-		<rename table="article_galleys" to="submission_galleys" />
 		<rename table="article_html_galley_images" to="submission_html_galley_images" />
 
 		<!-- FIXME: Make the following conditional on table/column existence; they're in plugins. -->
 		<rename table="referrals" column="article_id" to="submission_id" />
-		<rename table="timed_views" column="article_id" to="submission_id" />
+		<rename table="timed_views_log" column="article_id" to="submission_id" />
 		<rename table="books_for_review" column="article_id" to="submission_id" />
 	</sql>
 </data>
