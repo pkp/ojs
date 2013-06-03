@@ -237,17 +237,16 @@ class UsageStatsLoader extends FileLoader {
 	private function _getExpectedUrl() {
 		return array(ASSOC_TYPE_ARTICLE => array(
 				'/article/view/',
-				'/article/viewArticle/',
-				'/article/viewDownloadInterstitial/',
-				'/article/download/'),
+				'/article/viewArticle/'),
 			ASSOC_TYPE_GALLEY => array(
-				'/article/viewFile'),
+				'/article/viewFile/',
+				'/article/download/'),
 			ASSOC_TYPE_SUPP_FILE => array(
 				'/article/downloadSuppFile/'),
 			ASSOC_TYPE_ISSUE => array(
-				'issue/view/',
+				'issue/view/'),
+			ASSOC_TYPE_ISSUE_GALLEY => array(
 				'issue/viewFile/',
-				'issue/viewDownloadInterstitial/',
 				'issue/download/')
 			);
 	}
@@ -283,17 +282,18 @@ class UsageStatsLoader extends FileLoader {
 				$explodedString = explode($workingUrl, $url);
 				$assocId = $explodedString[1];
 
-				// Check if we are not dealing with supp files or galleys.
+				// Check if we have more than one url parameter.
 				$explodedString = explode('/', $assocId);
 				if (isset($explodedString[1]) && !is_null($explodedString[1])) {
-					$parentObjectId = $explodedString[0];
-					$assocId = $explodedString[1];
-					// Set the correct assoc type.
+					// Ŝet the correct object type.
 					if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
 						$assocType = ASSOC_TYPE_GALLEY;
 					} elseif ($workingAssocType == ASSOC_TYPE_ISSUE) {
 						$assocType = ASSOC_TYPE_ISSUE_GALLEY;
 					}
+
+					$parentObjectId = $explodedString[0];
+					$assocId = $explodedString[1];
 				}
 
 				if (!$assocType) {
@@ -384,6 +384,15 @@ class UsageStatsLoader extends FileLoader {
 						break;
 				}
 			}
+		}
+
+		// Only count article/view access with a galley if it's
+		// an html or pdf galley, otherwise we would be counting
+		// access before user really access the object.
+		$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
+		if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
+			$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+			$assocId = $assocType = false;
 		}
 
 		return array($assocId, $assocType);
