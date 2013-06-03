@@ -63,7 +63,7 @@
 		</div>
 
 		{if $categoriesEnabled}
-			{url|assign:categoriesUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.categories.CategoriesListbuilderHandler" op="fetch"}
+			{url|assign:categoriesUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.categories.CategoriesListbuilderHandler" op="fetch" escape=false}
 			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
 		{/if}
 	{/fbvFormArea}

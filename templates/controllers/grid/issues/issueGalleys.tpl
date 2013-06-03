@@ -7,5 +7,5 @@
  * Form for uploading and editing issue galleys
  *}
 
-{url|assign:issueGalleysGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issueGalleys.IssueGalleyGridHandler" op="fetchGrid" issueId=$issueId}
+{url|assign:issueGalleysGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issueGalleys.IssueGalleyGridHandler" op="fetchGrid" issueId=$issueId escape=false}
 {load_url_in_div id="IssueGalleysGridContainer" url=$issueGalleysGridUrl}

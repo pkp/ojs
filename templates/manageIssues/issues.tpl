@@ -24,11 +24,11 @@
 		<li><a href="#backIssuesDiv">{translate key="editor.navigation.issueArchive"}</a></li>
 	</ul>
 	<div id="futureIssuesDiv">
-		{url|assign:futureIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid"}
+		{url|assign:futureIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}
 		{load_url_in_div id="futureIssuesGridContainer" url=$futureIssuesGridUrl}
 	</div>
 	<div id="backIssuesDiv">
-		{url|assign:backIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid"}
+		{url|assign:backIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid" escape=false}
 		{load_url_in_div id="backIssuesGridContainer" url=$backIssuesGridUrl}
 	</div>
 </div>

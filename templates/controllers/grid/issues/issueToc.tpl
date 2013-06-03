@@ -13,5 +13,5 @@
 	{rdelim});
 </script>
 
-{url|assign:issueTocGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId()}
+{url|assign:issueTocGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId() escape=false}
 {load_url_in_div id="issueTocGridContainer" url=$issueTocGridUrl}

@@ -25,7 +25,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{url|assign:categoriesUrl router=$smarty.const.ROUTE_COMPONENT component="grid.admin.categories.AdminCategoriesGridHandler" op="fetchGrid"}
+	{url|assign:categoriesUrl router=$smarty.const.ROUTE_COMPONENT component="grid.admin.categories.AdminCategoriesGridHandler" op="fetchGrid" escape=false}
 	{load_url_in_div id="categoriesGridContainer" url=$categoriesUrl}
 
 	{if !$wizardMode}

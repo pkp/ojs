@@ -13,7 +13,7 @@
 {/strip}
 
 {if $canViewAuthors}
-	{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.author.AuthorGridHandler" op="fetchGrid" articleId=$articleId}
+	{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.author.AuthorGridHandler" op="fetchGrid" articleId=$articleId escape=false}
 	{load_url_in_div id="authorsGridContainer" url="$authorGridUrl"}
 </div>
 
