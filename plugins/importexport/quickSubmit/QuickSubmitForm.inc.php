@@ -185,7 +185,7 @@ class QuickSubmitForm extends Form {
 		$article->setUserId($user->getId());
 		$article->setJournalId($journal->getId());
 		$article->setSectionId($this->getData('sectionId'));
-		$article->setLanguage(String::substr($journal->getPrimaryLocale(), 0, 2));
+		$article->setLanguage($this->getData('language'));
 		$article->setTitle($this->getData('title'), null); // Localized
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 		$article->setDiscipline($this->getData('discipline'), null); // Localized
