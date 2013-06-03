@@ -200,8 +200,8 @@ class ArticleFileManager extends FileManager {
 	 * @return ArticleFile
 	 */
 	function &getFile($fileId, $revision = null) {
-		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile =& $articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$articleFile =& $submissionFileDao->getRevision($fileId, $revision, null, $this->articleId);
 		return $articleFile;
 	}
 
@@ -230,24 +230,24 @@ class ArticleFileManager extends FileManager {
 	 * @return int number of files removed
 	 */
 	function deleteFile($fileId, $revision = null) {
-		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 
 		$files = array();
 		if (isset($revision)) {
-			$file =& $articleFileDao->getArticleFile($fileId, $revision);
+			$file =& $submissionFileDao->getRevision($fileId, $revision);
 			if (isset($file)) {
 				$files[] = $file;
 			}
 
 		} else {
-			$files =& $articleFileDao->getArticleFileRevisions($fileId);
+			$files =& $submissionFileDao->getAllRevisions($fileId);
 		}
 
 		if ($files) foreach ($files as $f) {
 			parent::deleteFile($this->filesDir . $this->fileStageToPath($f->getFileStage()) . '/' . $f->getFileName());
 		}
 
-		$articleFileDao->deleteArticleFileById($fileId, $revision);
+		$submissionFileDao->deleteRevisionById($fileId, $revision);
 
 		return count($files);
 	}
@@ -369,20 +369,20 @@ class ArticleFileManager extends FileManager {
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $fileStage, $destFileId = null) {
 		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$fileStage, &$destFileId, &$result))) return $result;
 
-		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$articleFile = new ArticleFile();
 
 		$fileStagePath = $this->fileStageToPath($fileStage);
 		$destDir = $this->filesDir . $fileStagePath . '/';
 
 		if ($destFileId != null) {
-			$currentRevision = $articleFileDao->getRevisionNumber($destFileId);
+			$currentRevision = $submissionFileDao->getLatestRevisionNumber($destFileId);
 			$revision = $currentRevision + 1;
 		} else {
 			$revision = 1;
 		}
 
-		$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision, $this->articleId);
+		$sourceArticleFile = $submissionFileDao->getRevision($sourceFileId, $sourceRevision, null, $this->articleId);
 
 		if (!isset($sourceArticleFile)) {
 			return false;
@@ -406,7 +406,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setRound($this->article->getCurrentRound()); // FIXME This field is only applicable for review files?
 		$articleFile->setRevision($revision);
 
-		$fileId = $articleFileDao->insertArticleFile($articleFile);
+		$fileId = $submissionFileDao->insertObject($articleFile, $sourceDir.$sourceArticleFile->getFileName());
 
 		// Rename the file.
 		$fileExtension = $this->parseFileExtension($sourceArticleFile->getFileName());
