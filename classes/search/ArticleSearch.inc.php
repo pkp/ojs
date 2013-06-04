@@ -158,6 +158,14 @@ class ArticleSearch extends SubmissionSearch {
 		}
 		return $returner;
 	}
+
+	/**
+	 * Return the search DAO
+	 * @return DAO
+	 */
+	protected function getSearchDao() {
+		return DAORegistry::getDAO('ArticleSearchDAO');
+	}
 }
 
 ?>
