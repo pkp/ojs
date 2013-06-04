@@ -212,7 +212,7 @@ class MetricsDAO extends DAO {
 						throw new Exception('Cannot load record: invalid supplementary file id.');
 					}
 				}
-				$articleId = $articleFile->getArticleId();
+				$articleId = $articleFile->getSubmissionId();
 				$isArticleFile = true;
 				// Don't break but go on to retrieve the article.
 
@@ -261,6 +261,15 @@ class MetricsDAO extends DAO {
 					throw new Exception('Cannot load record: invalid issue id.');
 				}
 				$journalId = $issue->getJournalId();
+				break;
+			case ASSOC_TYPE_JOURNAL:
+				$articleId = $issueId = null;
+				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journal = $journalDao->getById($recordToStore['assoc_id']);
+				if (!$journal) {
+					throw new Exception('Cannot load record: invalid journal id.');
+				}
+				$journalId = $recordToStore['assoc_id'];
 				break;
 			default:
 				throw new Exception('Cannot load record: invalid association type.');

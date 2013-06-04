@@ -178,9 +178,11 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
-		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');"/>
+		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');" />
 		<code function="clearDataCache" />
-		<code function="migrateUserRoles" condition="return !$installer->tableExists('user_user_groups');"/>
+		<code function="migrateUserRoles" condition="return !$installer->tableExists('user_user_groups');" />
+		<schema file="plugins/generic/usageStats/schema.xml" />
+		<code function="migrateUsageStatistics" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

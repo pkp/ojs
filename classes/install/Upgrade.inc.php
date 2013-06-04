@@ -655,6 +655,97 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * For 2.4 upgrade: migrate COUNTER, timed view and OJS default view
+	 * statistics to the metrics table.
+	 */
+	function migrateUsageStatistics() {
+		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		$baseLoadIdString = '3.0.0-upgrade-';
+
+		// COUNTER
+		$counterPresentResult = $metricsDao->retrieve('SHOW TABLES LIKE ?', array('counter_monthly_log'));
+		if (!$counterPresentResult->EOF) {
+			$loadId = $baseLoadIdString . 'counter';
+			$metricsDao->purgeLoadBatch($loadId);
+			$fileTypeCounts = array(
+				'count_html' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_HTML,
+				'count_pdf' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF,
+				'count_other' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER
+			);
+
+			$result = $metricsDao->retrieve('SELECT * FROM counter_monthly_log');
+
+			while(!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				foreach ($fileTypeCounts as $countType => $fileType) {
+					$month = (string) $row['month'];
+					if (strlen($month) == 1) {
+						$month = '0' . $month;
+					}
+					if ($row[$countType]) {
+						$record = array(
+							'load_id' => $loadId,
+							'assoc_type' => ASSOC_TYPE_JOURNAL,
+							'assoc_id' => $row['journal_id'],
+							'metric_type' => 'legacyCounterPlugin::counter',
+							'metric' => $row[$countType],
+							'file_type' => $fileType,
+							'month' => $row['year'] . $month
+						);
+						$metricsDao->insertRecord($record);
+					}
+				}
+				$result->MoveNext();
+			}
+			unset($result);
+		}
+
+		// Timed View
+		$timedViewPresentResult = $metricsDao->retrieve('SHOW TABLES LIKE ?', array('timed_views_log'));
+		if (!$timedViewPresentResult->EOF) {
+			$loadId = $baseLoadIdString . 'timedViews';
+
+			$plugin = PluginRegistry::getPlugin('generic', 'usagestatsplugin');
+			$plugin->import('UsageStatsTemporaryRecordDAO');
+			$tempStatsDao = new UsageStatsTemporaryRecordDAO();
+			//$tempStatsDao->deleteByLoadId($loadId);
+
+			$metricsDao->purgeLoadBatch($loadId);
+
+			import('plugins.generic.usageStats.GeoLocationTool');
+			$geoLocationTool = new GeoLocationTool();
+
+			$result = $metricsDao->retrieve('SELECT * FROM timed_views_log');
+			while(!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				list($countryId, $cityName, $region) = $geoLocationTool->getGeoLocation($row['ip_address']);
+				if ($row['galley_id']) {
+					$assocType = ASSOC_TYPE_GALLEY;
+					$assocId = $row['galley_id'];
+				} else {
+					$assocType = ASSOC_TYPE_ARTICLE;
+					$assocId = $row['submission_id'];
+				};
+
+				$day = date('Ymd', strtotime($row['date']));
+				$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, null, $loadId);
+				$result->MoveNext();
+			}
+
+			unset($result);
+
+			while ($record = $tempStatsDao->getNextByLoadId($loadId)) {
+				$record['metric_type'] = 'ojs::timedViews';
+				$metricsDao->insertRecord($record);
+			}
+
+			$tempStatsDao->deleteByLoadId($loadId);
+		}
+
+		// OJS default views to be done here.
+	}
 }
 
 ?>
