@@ -69,22 +69,22 @@ class LucenePluginTest extends DatabaseTestCase {
 		$testCases = array(
 			// Simple Searches
 			array(null => 'test AND query'),
-			array(ARTICLE_SEARCH_AUTHOR => 'author'),
-			array(ARTICLE_SEARCH_TITLE => 'title'),
-			array(ARTICLE_SEARCH_ABSTRACT => 'abstract'),
-			array(ARTICLE_SEARCH_INDEX_TERMS => 'Nicht index terms'),
-			array(ARTICLE_SEARCH_GALLEY_FILE => 'full OR text'),
+			array(SUBMISSION_SEARCH_AUTHOR => 'author'),
+			array(SUBMISSION_SEARCH_TITLE => 'title'),
+			array(SUBMISSION_SEARCH_ABSTRACT => 'abstract'),
+			array(SUBMISSION_SEARCH_INDEX_TERMS => 'Nicht index terms'),
+			array(SUBMISSION_SEARCH_GALLEY_FILE => 'full OR text'),
 			// Advanced Search
 			array(
 				null => 'test query',
-				ARTICLE_SEARCH_AUTHOR => 'author',
-				ARTICLE_SEARCH_TITLE => 'title',
-				ARTICLE_SEARCH_DISCIPLINE => 'discipline',
-				ARTICLE_SEARCH_SUBJECT => 'subject',
-				ARTICLE_SEARCH_TYPE => 'type',
-				ARTICLE_SEARCH_COVERAGE => 'coverage',
-				ARTICLE_SEARCH_GALLEY_FILE => 'full text',
-				ARTICLE_SEARCH_SUPPLEMENTARY_FILE => 'supplementary files'
+				SUBMISSION_SEARCH_AUTHOR => 'author',
+				SUBMISSION_SEARCH_TITLE => 'title',
+				SUBMISSION_SEARCH_DISCIPLINE => 'discipline',
+				SUBMISSION_SEARCH_SUBJECT => 'subject',
+				SUBMISSION_SEARCH_TYPE => 'type',
+				SUBMISSION_SEARCH_COVERAGE => 'coverage',
+				SUBMISSION_SEARCH_GALLEY_FILE => 'full text',
+				SUBMISSION_SEARCH_SUPPLEMENTARY_FILE => 'supplementary files'
 			)
 		);
 
@@ -111,7 +111,7 @@ class LucenePluginTest extends DatabaseTestCase {
 		$journal = new Journal();
 		$fromDate = '2000-01-01 00:00:00';
 
-		$hook = 'ArticleSearch::retrieveResults';
+		$hook = 'SubmissionSearch::retrieveResults';
 		$totalResults = null;
 		$error = null;
 

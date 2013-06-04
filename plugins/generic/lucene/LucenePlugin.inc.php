@@ -125,7 +125,7 @@ class LucenePlugin extends GenericPlugin {
 			}
 
 			// Register callbacks (controller-level).
-			HookRegistry::register('ArticleSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
+			HookRegistry::register('SubmissionSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
 			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackArticleMetadataChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackArticleFileChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackArticleFileDeleted'));
@@ -409,10 +409,10 @@ class LucenePlugin extends GenericPlugin {
 	// Controller level hook implementations.
 	//
 	/**
-	 * @see ArticleSearch::retrieveResults()
+	 * @see SubmissionSearch::retrieveResults()
 	 */
 	function callbackRetrieveResults($hookName, $params) {
-		assert($hookName == 'ArticleSearch::retrieveResults');
+		assert($hookName == 'SubmissionSearch::retrieveResults');
 
 		// Unpack the parameters.
 		list($journal, $keywords, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
@@ -496,12 +496,13 @@ class LucenePlugin extends GenericPlugin {
 								$queryField = 'query';
 								break;
 
-							case ARTICLE_SEARCH_INDEX_TERMS:
+							case SUBMISSION_SEARCH_INDEX_TERMS:
 								$queryField = 'indexTerms';
 								break;
 
 							default:
-								$indexFieldMap = ArticleSearch::getIndexFieldMap();
+								$articleSearch = new ArticleSearch();
+								$indexFieldMap = $articleSearch->getIndexFieldMap();
 								assert(isset($indexFieldMap[$bitmap]));
 								$queryField = $indexFieldMap[$bitmap];
 						}

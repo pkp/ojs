@@ -75,8 +75,9 @@ class EruditExportPlugin extends ImportExportPlugin {
 				$totalArticles = count($articleIds);
 				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign_by_ref('articles', $iterator);
+				$articleSearch = new ArticleSearch();
+				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$templateMgr->assign('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 				break;
 		}

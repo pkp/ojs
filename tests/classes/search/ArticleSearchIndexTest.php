@@ -376,16 +376,16 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	private function registerMockArticleSearchDAO($clearIndexExpected, $deleteArticleExpected) {
 		// Mock an ArticleSearchDAO.
-		$articleSearchDao = $this->getMock('ArticleSearchDAO', array('clearIndex', 'deleteArticleKeywords'), array(), '', false);
+		$articleSearchDao = $this->getMock('ArticleSearchDAO', array('clearIndex', 'deleteSubmissionKeywords'), array(), '', false);
 
 		// Test the clearIndex() method.
 		$articleSearchDao->expects($clearIndexExpected)
 		                 ->method('clearIndex')
 		                 ->will($this->returnValue(null));
 
-		// Test the deleteArticleKeywords() method.
+		// Test the deleteSubmissionKeywords() method.
 		$articleSearchDao->expects($deleteArticleExpected)
-		                 ->method('deleteArticleKeywords')
+		                 ->method('deleteSubmissionKeywords')
 		                 ->will($this->returnValue(null));
 
 		// Register the mock DAO.

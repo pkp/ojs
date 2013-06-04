@@ -177,7 +177,8 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$articleSearch = new ArticleSearch();
+				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				foreach (array('swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys', 'swordDepositPoint') as $var) {
 					$templateMgr->assign($var, $request->getUserVar($var));
 				}

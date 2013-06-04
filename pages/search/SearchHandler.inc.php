@@ -130,15 +130,17 @@ class SearchHandler extends Handler {
 		$this->validate($request);
 
 		// Get and transform active filters.
-		$searchFilters = ArticleSearch::getSearchFilters($request);
-		$keywords = ArticleSearch::getKeywordsFromSearchFilters($searchFilters);
+		$articleSearch = new ArticleSearch();
+		$searchFilters = $articleSearch->getSearchFilters($request);
+		$keywords = $articleSearch->getKeywordsFromSearchFilters($searchFilters);
 
 		// Get the range info.
 		$rangeInfo = $this->getRangeInfo($request, 'search');
 
 		// Retrieve results.
 		$error = '';
-		$results =& ArticleSearch::retrieveResults(
+		$articleSearch = new ArticleSearch();
+		$results = $articleSearch->retrieveResults(
 			$searchFilters['searchJournal'], $keywords, $error,
 			$searchFilters['fromDate'], $searchFilters['toDate'],
 			$rangeInfo
@@ -262,14 +264,15 @@ class SearchHandler extends Handler {
 
 		$rangeInfo = $this->getRangeInfo($request, 'search');
 
-		$articleIds =& $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
+		$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
 		$totalResults = count($articleIds);
 		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		import('lib.pkp.classes.core.VirtualArrayIterator');
-		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+		$articleSearch = new ArticleSearch();
+		$results = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('results', $results);
+		$templateMgr->assign('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
 

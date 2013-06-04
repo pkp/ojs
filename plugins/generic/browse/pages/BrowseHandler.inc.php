@@ -33,15 +33,16 @@ class BrowseHandler extends Handler {
 				$sectionId = $request->getUserVar('sectionId');
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$section = $sectionDao->getById($sectionId);
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleIds = $publishedArticleDao->getPublishedArticleIdsBySection($sectionId);
 
 				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$articleSearch = new ArticleSearch();
+				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr = &TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('title', $section->getLocalizedTitle());
 				$templateMgr->assign('sectionId', $sectionId);
@@ -96,7 +97,7 @@ class BrowseHandler extends Handler {
 						$sections[] = $section;
 					}
 				}
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticleIds = array();
 				foreach ($sections as $section) {
 					$publishedArticleIdsBySection = $publishedArticleDao->getPublishedArticleIdsBySection($section->getId());
@@ -106,9 +107,10 @@ class BrowseHandler extends Handler {
 				$rangeInfo = $this->getRangeInfo($request, 'search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$articleSearch = new ArticleSearch();
+				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-				$templateMgr = &TemplateManager::getManager($request);
+				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign_by_ref('results', $results);
 				$templateMgr->assign('title', $identifyType);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);

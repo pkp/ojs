@@ -19,8 +19,8 @@ import('lib.pkp.tests.PKPTestCase');
 import('lib.pkp.classes.core.ArrayItemIterator');
 import('classes.search.ArticleSearch');
 
-define('ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE', 1);
-define('ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
+define('SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE', 1);
+define('SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
 
 class ArticleSearchTest extends PKPTestCase {
 	/** @var array */
@@ -74,7 +74,7 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	public function testRetrieveResults() {
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearch::retrieveResults');
+		HookRegistry::clear('SubmissionSearch::retrieveResults');
 
 		// Test a simple search with a mock database back-end.
 		$journal = new Journal();
@@ -87,7 +87,7 @@ class ArticleSearchTest extends PKPTestCase {
 		self::assertInstanceOf('ItemIterator', $searchResult);
 		$firstResult = $searchResult->next();
 		self::assertArrayHasKey('article', $firstResult);
-		self::assertEquals(ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
+		self::assertEquals(SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
 		self::assertEquals('', $error);
 
 		// Make sure that articles from unpublished issues will
@@ -104,7 +104,7 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	public function testRetrieveResultsViaPluginHook() {
 		// Diverting a search to the search plugin hook.
-		HookRegistry::register('ArticleSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
+		HookRegistry::register('SubmissionSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
 
 		$testCases = array(
 			array (null => 'query'), // Simple Search - "All"
@@ -142,7 +142,7 @@ class ArticleSearchTest extends PKPTestCase {
 
 			// Test and clear the call history of the hook registry.
 			$calledHooks = HookRegistry::getCalledHooks();
-			self::assertEquals('ArticleSearch::retrieveResults', $calledHooks[0][0]);
+			self::assertEquals('SubmissionSearch::retrieveResults', $calledHooks[0][0]);
 			HookRegistry::resetCalledHooks(true);
 
 			// Test whether the result from the hook is being returned.
@@ -154,12 +154,12 @@ class ArticleSearchTest extends PKPTestCase {
 			// Test the search result.
 			$firstResult = $searchResult->next();
 			self::assertArrayHasKey('article', $firstResult);
-			self::assertEquals(ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
+			self::assertEquals(SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN, $firstResult['article']->getId());
 			self::assertEquals('', $error);
 		}
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearch::retrieveResults');
+		HookRegistry::clear('SubmissionSearch::retrieveResults');
 	}
 
 
@@ -168,7 +168,7 @@ class ArticleSearchTest extends PKPTestCase {
 	//
 	/**
 	 * Simulate a search plug-ins "retrieve results" hook.
-	 * @see ArticleSearch::retrieveResults()
+	 * @see SubmissionSearch::retrieveResults()
 	 */
 	public function callbackRetrieveResults($hook, $params) {
 		// Save the test parameters
@@ -180,7 +180,7 @@ class ArticleSearchTest extends PKPTestCase {
 
 		// Mock a result set and return it.
 		$results = array(
-			3 => ARTICLE_SEARCH_TEST_ARTICLE_FROM_PLUGIN
+			3 => SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN
 		);
 		return $results;
 	}
@@ -212,7 +212,7 @@ class ArticleSearchTest extends PKPTestCase {
 
 		// Mock a result set.
 		$searchResult = array(
-			ARTICLE_SEARCH_TEST_DEFAULT_ARTICLE => array(
+			SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE => array(
 				'count' => 3,
 				'journal_id' => 2,
 				'issuePublicationDate' => '2013-05-01 20:30:00',

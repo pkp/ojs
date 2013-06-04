@@ -303,7 +303,7 @@ class QuickSubmitForm extends Form {
 			$articleSearchIndex = new ArticleSearchIndex();
 			if (isset($galley)) {
 				$articleSearchIndex->articleFileChanged(
-					$galley->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId()
+					$galley->getArticleId(), SUBMISSION_SEARCH_GALLEY_FILE, $galley->getFileId()
 				);
 			}
 			$articleSearchIndex->articleChangesFinished();

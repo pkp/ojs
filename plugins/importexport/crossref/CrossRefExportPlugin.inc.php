@@ -73,13 +73,15 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
-				$result = ArticleSearch::formatResults($articleIds);
+				$articleSearch = new ArticleSearch();
+				$result = $articleSearch->formatResults($articleIds);
 				$this->exportArticles($journal, $result);
 				break;
 			case 'exportArticles':
 				$articleIds = $request->getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				$results =& ArticleSearch::formatResults($articleIds);
+				$articleSearch = new ArticleSearch();
+				$results = $articleSearch->formatResults($articleIds);
 				$this->exportArticles($journal, $results);
 				break;
 			case 'issues':
@@ -99,7 +101,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$articleSearch = new ArticleSearch();
+				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
@@ -255,7 +258,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile != '') switch (array_shift($args)) {
 			case 'articles':
-				$results =& ArticleSearch::formatResults($args);
+				$articleSearch = new ArticleSearch();
+				$results = $articleSearch->formatResults($args);
 				if (!$this->exportArticles($journal, $results, $xmlFile)) {
 					echo __('plugins.importexport.crossref.cliError') . "\n";
 					echo __('plugins.importexport.crossref.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";

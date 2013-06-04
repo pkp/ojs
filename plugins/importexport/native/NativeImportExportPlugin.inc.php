@@ -76,14 +76,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
-				$result = array_shift(ArticleSearch::formatResults($articleIds));
+				$articleSearch = new ArticleSearch();
+				$result = array_shift($articleSearch->formatResults($articleIds));
 				if (!$result) $request->redirect();
 				$this->exportArticle($journal, $result['issue'], $result['section'], $result['publishedArticle']);
 				break;
 			case 'exportArticles':
 				$articleIds = $request->getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				$results =& ArticleSearch::formatResults($articleIds);
+				$articleSearch = new ArticleSearch();
+				$results = $articleSearch->formatResults($articleIds);
 				$this->exportArticles($results);
 				break;
 			case 'issues':
@@ -103,7 +105,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$articleSearch = new ArticleSearch();
+				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
@@ -448,7 +451,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						}
 						return;
 					case 'articles':
-						$results =& ArticleSearch::formatResults($args);
+						$articleSearch = new ArticleSearch();
+						$results = $articleSearch->formatResults($args);
 						if (!$this->exportArticles($results, $xmlFile)) {
 							echo __('plugins.importexport.native.cliError') . "\n";
 							echo __('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";

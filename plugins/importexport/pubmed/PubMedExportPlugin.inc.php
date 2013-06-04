@@ -73,13 +73,15 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
-				$result = ArticleSearch::formatResults($articleIds);
+				$articleSearch = new ArticleSearch();
+				$result = $articleSearch->formatResults($articleIds);
 				$this->exportArticles($result);
 				break;
 			case 'exportArticles':
 				$articleIds = $request->getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				$results =& ArticleSearch::formatResults($articleIds);
+				$articleSearch = new ArticleSearch();
+				$results = $articleSearch->formatResults($articleIds);
 				$this->exportArticles($results);
 				break;
 			case 'issues':
@@ -99,8 +101,9 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				$totalArticles = count($articleIds);
 				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign_by_ref('articles', $iterator);
+				$articleSearch = new ArticleSearch();
+				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$templateMgr->assign('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			default:
@@ -194,7 +197,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 		if ($xmlFile != '') switch (array_shift($args)) {
 			case 'articles':
-				$results =& ArticleSearch::formatResults($args);
+				$articleSearch = new ArticleSearch();
+				$results = $articleSearch->formatResults($args);
 				if (!$this->exportArticles($results, $xmlFile)) {
 					echo __('plugins.importexport.pubmed.cliError') . "\n";
 					echo __('plugins.importexport.pubmed.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";

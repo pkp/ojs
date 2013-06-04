@@ -49,7 +49,8 @@ class LuceneHandler extends Handler {
 		$enabled = (bool)$lucenePlugin->getSetting(0, 'autosuggest');
 		if ($enabled) {
 			// Retrieve search criteria from the user input.
-			$searchFilters = ArticleSearch::getSearchFilters($request);
+			$articleSearch = new ArticleSearch();
+			$searchFilters = $articleSearch->getSearchFilters($request);
 
 			// Get the autosuggest input and remove it from
 			// the filter array.
@@ -64,7 +65,7 @@ class LuceneHandler extends Handler {
 			$searchRequest->setJournal($searchFilters['searchJournal']);
 			$searchRequest->setFromDate($searchFilters['fromDate']);
 			$searchRequest->setToDate($searchFilters['toDate']);
-			$keywords = ArticleSearch::getKeywordsFromSearchFilters($searchFilters);
+			$keywords = $articleSearch->getKeywordsFromSearchFilters($searchFilters);
 			$searchRequest->addQueryFromKeywords($keywords);
 
 			// Get the web service.

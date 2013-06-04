@@ -328,13 +328,14 @@ class SolrSearchRequest {
 	//
 	/**
 	 * Configure the search request from a keywords
-	 * array as required by ArticleSearch::retrieveResults()
+	 * array as required by SubmissionSearch::retrieveResults()
 	 *
-	 * @param $keywords array See ArticleSearch::retrieveResults()
+	 * @param $keywords array See SubmissionSearch::retrieveResults()
 	 */
 	function addQueryFromKeywords($keywords) {
 		// Get a mapping of OJS search fields bitmaps to index fields.
-		$indexFieldMap = ArticleSearch::getIndexFieldMap();
+		$articleSearch = new ArticleSearch();
+		$indexFieldMap = $articleSearch->getIndexFieldMap();
 
 		// The keywords list is indexed with a search field bitmap.
 		foreach($keywords as $searchFieldBitmap => $searchPhrase) {

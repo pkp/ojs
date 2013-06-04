@@ -12,16 +12,9 @@
  * @brief Class to maintain the article search index.
  */
 
-import('lib.pkp.classes.search.SearchFileParser');
-import('lib.pkp.classes.search.SearchHTMLParser');
-import('lib.pkp.classes.search.SearchHelperParser');
+import('lib.pkp.classes.search.SubmissionSearchIndex');
 
-define('SEARCH_STOPWORDS_FILE', 'lib/pkp/registry/stopwords.txt');
-
-// Words are truncated to at most this length
-define('SEARCH_KEYWORD_MAX_LENGTH', 40);
-
-class ArticleSearchIndex {
+class ArticleSearchIndex extends SubmissionSearchIndex {
 
 	/**
 	 * Signal to the indexing back-end that the metadata of an
@@ -51,7 +44,7 @@ class ArticleSearchIndex {
 			$authorText = array();
 			$authors = $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
-				$author =& $authors[$i];
+				$author = $authors[$i];
 				array_push($authorText, $author->getFirstName());
 				array_push($authorText, $author->getMiddleName());
 				array_push($authorText, $author->getLastName());
@@ -67,14 +60,14 @@ class ArticleSearchIndex {
 
 			// Update search index
 			$articleId = $article->getId();
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_AUTHOR, $authorText);
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TITLE, $article->getTitle(null));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_ABSTRACT, $article->getAbstract(null));
 
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
-			ArticleSearchIndex::_updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TYPE, $article->getType(null));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
 			// FIXME Index sponsors too?
 		}
 	}
@@ -101,10 +94,10 @@ class ArticleSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			import('classes.file.ArticleFileManager');
 			$fileManager = new ArticleFileManager($articleId);
-			$file =& $fileManager->getFile($fileId);
+			$file = $fileManager->getFile($fileId);
 
 			if (isset($file)) {
-				$parser =& SearchFileParser::fromFile($file);
+				$parser = SearchFileParser::fromFile($file);
 			}
 
 			if (isset($parser)) {
@@ -114,7 +107,7 @@ class ArticleSearchIndex {
 
 					$position = 0;
 					while(($text = $parser->read()) !== false) {
-						ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
+						self::_indexObjectKeywords($objectId, $text, $position);
 					}
 					$parser->close();
 				}
@@ -143,21 +136,20 @@ class ArticleSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			// Index supplementary files
 			$fileDao = DAORegistry::getDAO('SuppFileDAO');
-			$files =& $fileDao->getSuppFilesByArticle($article->getId());
+			$files = $fileDao->getSuppFilesByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					ArticleSearchIndex::articleFileChanged($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
+					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
 				}
-				ArticleSearchIndex::suppFileMetadataChanged($file);
+				self::suppFileMetadataChanged($file);
 			}
-			unset($files);
 
 			// Index galley files
 			$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			$files =& $fileDao->getGalleysByArticle($article->getId());
+			$files = $fileDao->getGalleysByArticle($article->getId());
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					ArticleSearchIndex::articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
+					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
 				}
 			}
 		}
@@ -184,7 +176,7 @@ class ArticleSearchIndex {
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
 			$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
-			return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
+			return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
 		}
 	}
 
@@ -209,9 +201,9 @@ class ArticleSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			// Update search index
 			$articleId = $suppFile->getArticleId();
-			ArticleSearchIndex::_updateTextIndex(
+			self::_updateTextIndex(
 				$articleId,
-				ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
+				SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
 				array_merge(
 					array_values((array) $suppFile->getTitle(null)),
 					array_values((array) $suppFile->getCreator(null)),
@@ -262,42 +254,6 @@ class ArticleSearchIndex {
 	}
 
 	/**
-	 * Split a string into a clean array of keywords
-	 * @param $text string
-	 * @param $allowWildcards boolean
-	 * @return array of keywords
-	 */
-	function &filterKeywords($text, $allowWildcards = false) {
-		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords =& ArticleSearchIndex::_loadStopwords();
-
-		// Join multiple lines into a single string
-		if (is_array($text)) $text = join("\n", $text);
-
-		$cleanText = Core::cleanVar($text);
-
-		// Remove punctuation
-		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
-		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
-		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
-		$cleanText = String::strtolower($cleanText);
-
-		// Split into words
-		$words = String::regexp_split('/\s+/', $cleanText);
-
-		// FIXME Do not perform further filtering for some fields, e.g., author names?
-
-		// Remove stopwords
-		$keywords = array();
-		foreach ($words as $k) {
-			if (!isset($stopwords[$k]) && String::strlen($k) >= $minLength && !is_numeric($k)) {
-				$keywords[] = String::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
-			}
-		}
-		return $keywords;
-	}
-
-	/**
 	 * Rebuild the search index for one or all journals.
 	 * @param $log boolean Whether to display status information
 	 *  to stdout.
@@ -341,8 +297,8 @@ class ArticleSearchIndex {
 				$articles = $articleDao->getByJournalId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
-						ArticleSearchIndex::articleMetadataChanged($article);
-						ArticleSearchIndex::articleFilesChanged($article);
+						self::articleMetadataChanged($article);
+						self::articleFilesChanged($article);
 						$numIndexed++;
 					}
 				}
@@ -364,7 +320,7 @@ class ArticleSearchIndex {
 	 */
 	function _indexObjectKeywords($objectId, $text, &$position) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
-		$keywords =& ArticleSearchIndex::filterKeywords($text);
+		$keywords = self::filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
 				$position += 1;
@@ -383,24 +339,7 @@ class ArticleSearchIndex {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
-		ArticleSearchIndex::_indexObjectKeywords($objectId, $text, $position);
-	}
-
-	/**
-	 * Return list of stopwords.
-	 * FIXME: Should this be locale-specific?
-	 * @return array with stopwords as keys
-	 */
-	function &_loadStopwords() {
-		static $searchStopwords;
-
-		if (!isset($searchStopwords)) {
-			// Load stopwords only once per request (FIXME: Cache?)
-			$searchStopwords = array_count_values(array_filter(file(SEARCH_STOPWORDS_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';')));
-			$searchStopwords[''] = 1;
-		}
-
-		return $searchStopwords;
+		self::_indexObjectKeywords($objectId, $text, $position);
 	}
 }
 

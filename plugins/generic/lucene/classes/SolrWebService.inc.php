@@ -554,7 +554,8 @@ class SolrWebService extends XmlWebService {
 	 */
 	function getAutosuggestions($searchRequest, $fieldName, $userInput, $autosuggestType) {
 		// Validate input.
-		$allowedFieldNames = array_values(ArticleSearch::getIndexFieldMap());
+		$articleSearch = new ArticleSearch();
+		$allowedFieldNames = array_values($articleSearch->getIndexFieldMap());
 		$allowedFieldNames[] = 'query';
 		$allowedFieldNames[] = 'indexTerms';
 		if (!in_array($fieldName, $allowedFieldNames)) return array();
@@ -1921,7 +1922,8 @@ class SolrWebService extends XmlWebService {
 		switch ($fieldName) {
 			case 'query':
 				// The 'query' filter goes agains all fields.
-				$solrFields = array_values(ArticleSearch::getIndexFieldMap());
+				$articleSearch = new ArticleSearch();
+				$solrFields = array_values($articleSearch->getIndexFieldMap());
 				break;
 
 			case 'indexTerms':
