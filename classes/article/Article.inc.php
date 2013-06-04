@@ -54,13 +54,6 @@ class Article extends Submission {
 		parent::Submission();
 	}
 
-	/**
-	 * @see Submission::getAssocType()
-	 */
-	function getAssocType() {
-		return ASSOC_TYPE_ARTICLE;
-	}
-
 
 	//
 	// Get/set methods
