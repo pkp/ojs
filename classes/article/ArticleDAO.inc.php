@@ -35,58 +35,6 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
-	 * Retrieve an article by ID.
-	 * @param $articleId int
-	 * @param $journalId int optional
-	 * @param $useCache boolean optional
-	 * @return Article
-	 */
-	function getById($articleId, $journalId = null, $useCache = false) {
-		$submission = parent::getById($articleId, $journalId, $useCache);
-		if ($submission) return $submission;
-
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			$articleId
-		);
-		$sql = 'SELECT	a.*, pa.date_published,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	submissions a
-				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.submission_id = ?';
-		if ($journalId !== null) {
-			$sql .= ' AND a.journal_id = ?';
-			$params[] = $journalId;
-		}
-
-		$result = $this->retrieve($sql, $params);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
-	}
-
-
-	/**
 	 * Find articles by querying article settings.
 	 * @param $settingName string
 	 * @param $settingValue mixed
@@ -95,44 +43,28 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return array The articles identified by setting.
 	 */
 	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
+		$params = $this->_getFetchParameters();
+		$params[] = $settingName;
 
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			$settingName
-		);
+		$sql = 'SELECT s.*, ps.date_published,
+				' . $this->_getFetchColumns() . '
+			FROM	submissions s
+				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
+				' . $this->_getFetchJoins() . ' ';
 
-		$sql = 'SELECT a.*, pa.date_published,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	submissions a
-				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
 		if (is_null($settingValue)) {
-			$sql .= 'LEFT JOIN submission_settings ast ON a.submission_id = ast.submission_id AND ast.setting_name = ?
-				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
+			$sql .= 'LEFT JOIN submission_settings sst ON a.submission_id = sst.submission_id AND sst.setting_name = ?
+				WHERE	(sst.setting_value IS NULL OR sst.setting_value = \'\')';
 		} else {
 			$params[] = $settingValue;
-			$sql .= 'INNER JOIN submission_settings ast ON a.submission_id = ast.submission_id
-				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
+			$sql .= 'INNER JOIN submission_settings sst ON s.submission_id = sst.submission_id
+				WHERE	sst.setting_name = ? AND sst.setting_value = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
-			$sql .= ' AND a.journal_id = ?';
+			$sql .= ' AND s.context_id = ?';
 		}
-		$sql .= ' ORDER BY a.journal_id, a.submission_id';
+		$sql .= ' ORDER BY s.context_id, s.submission_id';
 		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -146,7 +78,6 @@ class ArticleDAO extends SubmissionDAO {
 	function _fromRow($row) {
 		$article = parent::_fromRow($row);
 
-		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
@@ -177,14 +108,14 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, user_id, journal_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
+				(locale, user_id, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
 				(int) $article->getUserId(),
-				(int) $article->getJournalId(),
+				(int) $article->getContextId(),
 				(int) $article->getSectionId(),
 				(int) $article->getStageId(),
 				$article->getLanguage(),
@@ -326,74 +257,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return DAOResultFactory containing matching Articles
 	 */
 	function getByJournalId($journalId = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale
-		);
-		if ($journalId !== null) $params[] = (int) $journalId;
-
-		$result = $this->retrieve(
-			'SELECT	a.*, pa.date_published,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	submissions a
-				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			' . ($journalId !== null ? 'WHERE a.journal_id = ?' : ''),
-			$params
-		);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
-	}
-
-	/**
-	 * Get all articles by user ID.
-	 * @param $journalId int
-	 * @return DAOResultFactory containing matching Articles
-	 */
-	function getByUserId($userId) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-
-		$result = $this->retrieve(
-			'SELECT	a.*, pa.date_published,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	submissions a
-				LEFT JOIN published_submissions pa ON (a.submission_id = pa.submission_id)
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE a.journal_id = ?',
-			array(
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				(int) $userId
-			)
-		);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return parent::getByContextId($journalId);
 	}
 
 	/**
@@ -414,7 +278,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function getJournalId($articleId) {
 		$result = $this->retrieve(
-			'SELECT journal_id FROM submissions WHERE submission_id = ?', (int) $articleId
+			'SELECT context_id FROM submissions WHERE submission_id = ?', (int) $articleId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
@@ -431,7 +295,7 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function incompleteSubmissionExists($articleId, $userId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT submission_progress FROM submissions WHERE submission_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
+			'SELECT submission_progress FROM submissions WHERE submission_id = ? AND user_id = ? AND context_id = ? AND date_submitted IS NULL',
 			array((int) $articleId, (int) $userId, (int) $journalId)
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
@@ -523,9 +387,9 @@ class ArticleDAO extends SubmissionDAO {
 	function pubIdExists($pubIdType, $pubId, $articleId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
-			FROM submission_settings ast
-				INNER JOIN submissions a ON ast.submission_id = a.submission_id
-			WHERE ast.setting_name = ? and ast.setting_value = ? and ast.submission_id <> ? AND a.journal_id = ?',
+			FROM submission_settings sst
+				INNER JOIN submissions s ON sst.submission_id = s.submission_id
+			WHERE sst.setting_name = ? and sst.setting_value = ? and sst.submission_id <> ? AND s.context_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
@@ -592,38 +456,66 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return DAOResultFactory containing matching Submissions
 	 */
 	function getBySubEditorId($journalId = null, $subEditorId = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-
-		$params = array(
-			'title', $primaryLocale, // Series title
-			'title', $locale, // Series title
-			'abbrev', $primaryLocale, // Series abbreviation
-			'abbrev', $locale, // Series abbreviation
-			(int) ROLE_ID_MANAGER
-		);
+		$params = $this->_getFetchParameters();
+		$params[] = ROLE_ID_MANAGER;
 		if ($subEditorId) $params[] = (int) $subEditorId;
 		if ($journalId) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
-			'SELECT	a.*, pa.date_published
-			FROM	submissions a
-				LEFT JOIN published_submissions pa ON a.submission_id = pa.submission_id
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN stage_assignments sa ON (a.submission_id = sa.submission_id)
+			'SELECT	s.*, ps.date_published,
+				' . $this->_getFetchColumns() . '
+			FROM	submissions s
+				LEFT JOIN published_submissions ps ON s.submission_id = ps.submission_id
+				' . $this->_getFetchJoins() . '
+				LEFT JOIN stage_assignments sa ON (s.submission_id = sa.submission_id)
 				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
-				' . ($subEditorId?' JOIN section_editors se ON (se.journal_id = a.journal_id AND se.user_id = ? AND se.section_id = a.section_id)':'') . '
-			WHERE	a.date_submitted IS NOT NULL
-				' . ($journalId?' AND a.journal_id = ?':'') . '
-			GROUP BY a.submission_id',
+				' . ($subEditorId?' JOIN section_editors se ON (se.journal_id = s.context_id AND se.user_id = ? AND se.section_id = s.section_id)':'') . '
+			WHERE	s.date_submitted IS NOT NULL
+				' . ($journalId?' AND s.context_id = ?':'') . '
+			GROUP BY s.submission_id',
 			$params
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
+	//
+	// Protected functions
+	//
+	/**
+	 * Return a list of extra parameters to bind to the submission fetch queries.
+	 * @return array
+	 */
+	protected function _getFetchParameters() {
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$locale = AppLocale::getLocale();
+		return array(
+			'title', $primaryLocale,
+			'title', $locale,
+			'abbrev', $primaryLocale,
+			'abbrev', $locale,
+		);
+	}
+
+	/**
+	 * Return a SQL snippet of extra columns to fetch during submission fetch queries.
+	 * @return string
+	 */
+	protected function _getFetchColumns() {
+		return 'COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+			COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev';
+	}
+
+	/**
+	 * Return a SQL snippet of extra joins to include during fetch queries.
+	 * @return string
+	 */
+	protected function _getFetchJoins() {
+		return 'LEFT JOIN sections se ON se.section_id = s.section_id
+			LEFT JOIN section_settings stpl ON (se.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+			LEFT JOIN section_settings stl ON (se.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+			LEFT JOIN section_settings sapl ON (se.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+			LEFT JOIN section_settings sal ON (se.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)';
 	}
 }
 
