@@ -511,7 +511,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return string
 	 */
 	protected function _getFetchJoins() {
-		return 'LEFT JOIN sections se ON se.section_id = s.section_id
+		return 'JOIN sections se ON se.section_id = s.section_id
 			LEFT JOIN section_settings stpl ON (se.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 			LEFT JOIN section_settings stl ON (se.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 			LEFT JOIN section_settings sapl ON (se.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
