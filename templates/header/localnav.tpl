@@ -70,6 +70,7 @@
 	{elseif !$notInstalled}{* !$isUserLoggedIn *}
 		<ul class="sf-menu">
 			{if $currentJournal}
+				<li><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 				<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 			{/if}
 			{$publicMenu}

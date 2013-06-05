@@ -48,6 +48,9 @@
 		<rename table="article_search_object_keywords" to="submission_search_object_keywords" />
 		<rename table="article_html_galley_images" to="submission_html_galley_images" />
 
+		<!-- context_id column renames -->
+		<rename table="submissions" column="journal_id" to="context_id" />
+
 		<!-- FIXME: Make the following conditional on table/column existence; they're in plugins. -->
 		<rename table="referrals" column="article_id" to="submission_id" />
 		<rename table="timed_views_log" column="article_id" to="submission_id" />
