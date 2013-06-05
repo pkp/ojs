@@ -14,7 +14,7 @@
 	<!-- Bug #8148: Submission process into PKP lib -->
 	<sql>
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
-	</sql>
+
 	<!-- Bug #8235: Rename article* submission* -->
 		<!-- article_files to submission_files -->
 		<rename table="article_files" to="submission_files" />
