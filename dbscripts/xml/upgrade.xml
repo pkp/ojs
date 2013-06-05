@@ -62,8 +62,10 @@
 	</upgrade>
 
 	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9">
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->tableExists('article_galleys');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
 	</upgrade>
+
 
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
@@ -182,7 +184,9 @@
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" condition="return !$installer->tableExists('user_user_groups');" />
 		<schema file="plugins/generic/usageStats/schema.xml" />
-		<code function="migrateUsageStatistics" />
+		<code function="migrateCounterPluginUsageStatistics" condition="return !$installer->tableExists('counter_monthly_log');" />
+		<code function="migrateTimedViewsUsageStatistics" condition="return !$installer->tableExists('timed_views_log');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_migrateUsageStatistics.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

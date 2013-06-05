@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_migrateUsageStatistics.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 database updates XML file; Migates all ojs default usage statistics.
+  *
+  -->
+
+<data>
+	<!-- Bug #8015: Statistics consolidation -->
+	<sql>
+		<!-- PDF article galleys -->
+		<query driver="mysql">
+			INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, journal_id, issue_id) 
+			SELECT 2, '3.0.0-upgrade-ojsViews', 'ojs::default', '260', ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id 
+			FROM article_galleys_stats_migration as ag 
+			LEFT JOIN submissions AS a ON ag.article_id = a.submission_id 
+			LEFT JOIN published_submissions as pa on ag.article_id = pa.submission_id 
+			LEFT JOIN submission_files as af on ag.file_id = af.file_id 
+			WHERE a.submission_id is not null AND ag.views > 0 AND ag.html_galley = 0 AND af.file_type IN ('application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+		</query>
+		<!-- HTML article galleys -->
+		<query driver="mysql">
+			INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, journal_id, issue_id) 
+			SELECT 1, '3.0.0-upgrade-ojsViews', 'ojs::default', '260', ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id 
+			FROM article_galleys_stats_migration as ag 
+			LEFT JOIN submissions AS a ON ag.article_id = a.submission_id 
+			LEFT JOIN published_submissions as pa on ag.article_id = pa.submission_id 
+			LEFT JOIN submission_files as af on ag.file_id = af.file_id 
+			WHERE a.submission_id is not null AND ag.views > 0 AND ag.html_galley = 1 AND af.file_type NOT IN ('application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+		</query>
+		<!-- Other article galleys -->
+		<query driver="mysql">
+			INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, journal_id, issue_id) 
+			SELECT 3, '3.0.0-upgrade-ojsViews', 'ojs::default', '260', ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id 
+			FROM article_galleys_stats_migration as ag 
+			LEFT JOIN submissions AS a ON ag.article_id = a.submission_id 
+			LEFT JOIN published_submissions as pa on ag.article_id = pa.submission_id 
+			LEFT JOIN submission_files as af on ag.file_id = af.file_id 
+			WHERE a.submission_id is not null AND ag.views > 0 AND ag.html_galley = 0 AND af.file_type NOT IN ('application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+		</query>
+		<!-- PDF issue galleys -->
+		<query driver="mysql">
+			INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, metric, journal_id, issue_id) 
+			SELECT 2, '3.0.0-upgrade-ojsViews', 'ojs::default', '261', ig.galley_id, ig.views, i.journal_id, ig.issue_id 
+			FROM issue_galleys_stats_migration AS ig 
+			LEFT JOIN issues AS i ON ig.issue_id = i.issue_id 
+			LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id 
+			WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type IN ('application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+		</query>
+		<!-- Other issue galleys -->
+		<query driver="mysql">
+			INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, metric, journal_id, issue_id) 
+			SELECT 3, '3.0.0-upgrade-ojsViews', 'ojs::default', '261', ig.galley_id, ig.views, i.journal_id, ig.issue_id 
+			FROM issue_galleys_stats_migration AS ig 
+			LEFT JOIN issues AS i ON ig.issue_id = i.issue_id 
+			LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id 
+			WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type NOT IN ('application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+		</query>
+		<!-- Published articles -->
+		<query driver="mysql">
+			INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, metric, journal_id, submission_id, issue_id) 
+			SELECT '3.0.0-upgrade-ojsViews', 'ojs::default', '1048585', pa.article_id, pa.views, i.journal_id, pa.article_id, pa.issue_id 
+			FROM published_articles_stats_migration as pa 
+			LEFT JOIN issues AS i ON pa.issue_id = i.issue_id 
+			WHERE pa.views > 0 AND i.issue_id is not null;
+		</query>
+		<drop table="article_galleys_stats_migration" />
+		<drop table="issue_galleys_stats_migration" />
+		<drop table="published_articles_stats_migration" />
+	</sql>
+</data>

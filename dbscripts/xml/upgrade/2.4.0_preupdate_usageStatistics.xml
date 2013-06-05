@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_preupdate_usageStatistics.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 database updates XML file; Make a copy of all tables that has ojs
+  * default usage statistics.
+  *
+  -->
+
+<data>
+	<!-- Bug #8015: Statistics consolidation -->
+	<sql>
+		<!-- Article galleys -->
+		<query driver="mysql">
+			CREATE TABLE article_galleys_stats_migration AS (SELECT * FROM article_galleys)
+		</query>
+		
+		<!-- Issue galleys -->
+		<query driver="mysql">
+			CREATE TABLE issue_galleys_stats_migration AS (SELECT * FROM issue_galleys)
+		</query>
+		
+		<!-- Published articles -->
+		<query driver="mysql">
+			CREATE TABLE published_articles_stats_migration AS (SELECT * FROM published_articles)
+		</query>
+	</sql>
+</data>
