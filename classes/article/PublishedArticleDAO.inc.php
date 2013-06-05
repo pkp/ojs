@@ -17,7 +17,6 @@ import('classes.article.PublishedArticle');
 import('classes.article.ArticleDAO');
 
 class PublishedArticleDAO extends ArticleDAO {
-	var $authorDao;
 	var $galleyDao;
 
 	var $articleCache;
@@ -28,7 +27,6 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function PublishedArticleDAO() {
 		parent::ArticleDAO();
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
@@ -38,10 +36,10 @@ class PublishedArticleDAO extends ArticleDAO {
 		return $publishedArticle;
 	}
 
-	function &_getPublishedArticleCache() {
+	function _getPublishedArticleCache() {
 		if (!isset($this->articleCache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->articleCache =& $cacheManager->getObjectCache('publishedArticles', 0, array($this, '_articleCacheMiss'));
+			$this->articleCache = $cacheManager->getObjectCache('publishedArticles', 0, array($this, '_articleCacheMiss'));
 		}
 		return $this->articleCache;
 	}
@@ -52,10 +50,10 @@ class PublishedArticleDAO extends ArticleDAO {
 		return $articlesInSections;
 	}
 
-	function &_getArticlesInSectionsCache() {
+	function _getArticlesInSectionsCache() {
 		if (!isset($this->articlesInSectionsCache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->articlesInSectionsCache =& $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_articlesInSectionsCacheMiss'));
+			$this->articlesInSectionsCache = $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_articlesInSectionsCacheMiss'));
 		}
 		return $this->articlesInSectionsCache;
 	}
@@ -65,42 +63,32 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $issueId int
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticles($issueId) {
+	function getPublishedArticles($issueId) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$publishedArticles = array();
 
-		$params = array(
-			(int) $issueId,
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			(int) $issueId
+		$params = array_merge(
+			$this->_getFetchParameters(),
+			array(
+				(int) $issueId,
+				(int) $issueId
+			)
 		);
 
 		$sql = 'SELECT DISTINCT
-				pa.*,
-				a.*,
-				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
-				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev,
+				ps.*,
+				s.*,
 				COALESCE(o.seq, s.seq) AS section_seq,
-				pa.seq
-			FROM	published_submissions pa,
-				submissions a LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?)
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	pa.submission_id = a.submission_id
-				AND pa.issue_id = ?
-				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY section_seq ASC, pa.seq ASC';
+				ps.seq,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				' . $this->_getFetchJoins() . '
+				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
+			WHERE	ps.submission_id = s.submission_id
+				AND ps.issue_id = ?
+				AND s.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY section_seq ASC, ps.seq ASC';
 
 		$result = $this->retrieve($sql, $params);
 
@@ -118,7 +106,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getPublishedArticleCountByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT count(*) FROM published_submissions pa, submissions a WHERE pa.submission_id = a.submission_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
+			'SELECT count(*) FROM published_submissions ps, submissions s WHERE ps.submission_id = s.submission_id AND s.context_id = ? AND s.status <> ' . STATUS_ARCHIVED,
 			(int) $journalId
 		);
 		list($count) = $result->fields;
@@ -133,43 +121,26 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $reverse boolean Whether to reverse the sort order
 	 * @return object
 	 */
-	function &getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale
-		);
-		if ($journalId !== null) $params[] = (int) $journalId;
+	function getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
+		$params = $this->_getFetchParameters();
+		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieveRange(
-			'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_submissions pa
-				LEFT JOIN submissions a ON pa.submission_id = a.submission_id
-				LEFT JOIN issues i ON pa.issue_id = i.issue_id
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			'SELECT	ps.*,
+				s.*,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
+				LEFT JOIN issues i ON ps.issue_id = i.issue_id
+				' . $this->_getFetchJoins() . '
 			WHERE 	i.published = 1
-				' . ($journalId !== null?'AND a.journal_id = ?':'') . '
-				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY date_published '. ($reverse?'DESC':'ASC'),
+				' . ($journalId?'AND s.context_id = ?':'') . '
+				AND s.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY ps.date_published '. ($reverse?'DESC':'ASC'),
 			$params,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_fromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -178,56 +149,38 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticlesInSections($issueId, $useCache = false) {
+	function getPublishedArticlesInSections($issueId, $useCache = false) {
 		if ($useCache) {
 			$cache = $this->_getArticlesInSectionsCache();
 			$returner = $cache->get($issueId);
 			return $returner;
 		}
 
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$publishedArticles = array();
-
 		$result = $this->retrieve(
 			'SELECT DISTINCT
-				pa.*,
-				a.*,
-				SUBSTRING(COALESCE(stl.setting_value, stpl.setting_value) FROM 1 FOR 255) AS section_title,
-				SUBSTRING(COALESCE(sal.setting_value, sapl.setting_value) FROM 1 FOR 255) AS section_abbrev,
-				s.abstracts_not_required AS abstracts_not_required,
-				s.hide_title AS section_hide_title,
-				s.hide_author AS section_hide_author,
+				ps.*,
+				s.*,
+				se.abstracts_not_required AS abstracts_not_required,
+				se.hide_title AS section_hide_title,
+				se.hide_author AS section_hide_author,
 				COALESCE(o.seq, s.seq) AS section_seq,
-				pa.seq
-			FROM	published_submissions pa,
-				submissions a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?)
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	pa.submission_id = a.submission_id
-				AND pa.issue_id = ?
-				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY section_seq ASC, pa.seq ASC',
-			array(
-				(int) $issueId,
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				(int) $issueId
+				ps.seq,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				' . $this->_getFetchJoins() . '
+				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND ps.issue_id = o.issue_id)
+			WHERE	ps.issue_id = ?
+				AND s.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY section_seq ASC, ps.seq ASC',
+			array_merge(
+				$this->_getFetchParameters(),
+				array((int) $issueId)
 			)
 		);
 
 		$currSectionId = 0;
+		$publishedArticles = array();
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$publishedArticle = $this->_fromRow($row);
@@ -256,51 +209,32 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Retrieve Published Articles by section id
 	 * @param $sectionId int
 	 * @param $issueId int
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticlesBySectionId($sectionId, $issueId, $simple = false) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$func = $simple?'_returnSimplePublishedArticleFromRow':'_fromRow';
-		$publishedArticles = array();
-
+	function getPublishedArticlesBySectionId($sectionId, $issueId) {
 		$result = $this->retrieve(
-			'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_submissions pa,
-				submissions a,
-				sections s
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	a.section_id = s.section_id
-				AND pa.submission_id = a.submission_id
-				AND a.section_id = ?
-				AND pa.issue_id = ?
-				AND a.status <> ' . STATUS_ARCHIVED . '
-			ORDER BY pa.seq ASC',
-			array(
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				'abbrev',
-				$primaryLocale,
-				'abbrev',
-				$locale,
-				(int) $sectionId,
-				(int) $issueId
+			'SELECT	ps.*,
+				s.*,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				' . $this->_getFetchJoins() . '
+			WHERE	se.section_id = ?
+				AND ps.issue_id = ?
+				AND s.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY ps.seq ASC',
+			array_merge(
+				$this->_getFetchParameters(),
+				array(
+					(int) $sectionId,
+					(int) $issueId
+				)
 			)
 		);
 
-		$currSectionId = 0;
+		$publishedArticles = array();
 		while (!$result->EOF) {
-			$publishedArticle = $this->$func($result->GetRowAssoc(false));
-			$publishedArticles[] = $publishedArticle;
+			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -314,7 +248,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleById($publishedArticleId, $simple = false) {
+	function getPublishedArticleById($publishedArticleId, $simple = false) {
 		$result = $this->retrieve(
 			'SELECT * FROM published_submissions WHERE published_submission_id = ?', (int) $publishedArticleId
 		);
@@ -339,7 +273,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
+	function getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
@@ -347,36 +281,19 @@ class PublishedArticleDAO extends ArticleDAO {
 			return $returner;
 		}
 
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			(int) $articleId
-		);
+		$params = $this->_getFetchParameters();
+		$params[] = (int) $articleId;
 		if ($journalId) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
-			'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_submissions pa,
-				submissions a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	pa.submission_id = a.submission_id
-				AND a.submission_id = ?' .
-				($journalId?' AND a.journal_id = ?':''),
+			'SELECT	ps.*,
+				s.*,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				' . $this->_getFetchJoins() . '
+			WHERE	s.submission_id = ?' .
+				($journalId?' AND s.context_id = ?':''),
 			$params
 		);
 
@@ -425,46 +342,30 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $journalId int optional
 	 * @return array The articles identified by setting.
 	 */
-	function &getBySetting($settingName, $settingValue, $journalId = null) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
+	function getBySetting($settingName, $settingValue, $journalId = null) {
+		$params = $this->_getFetchParameters();
+		$params[] = $settingName;
 
-		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
-			$settingName
-		);
+		$sql = 'SELECT	ps.*,
+				s.*,
+				' . $this->_getFetchColumns() . '
+			FROM	published_submissions ps
+				JOIN submissions s ON ps.submission_id = s.submission_id
+				' . $this->_getFetchJoins();
 
-		$sql = 'SELECT	pa.*,
-				a.*,
-				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
-				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
-			FROM	published_submissions pa
-				INNER JOIN submissions a ON pa.submission_id = a.submission_id
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
-				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
-				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
-				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?) ';
 		if (is_null($settingValue)) {
-			$sql .= 'LEFT JOIN submission_settings ast ON a.submission_id = ast.submission_id AND ast.setting_name = ?
-				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
+			$sql .= 'LEFT JOIN submission_settings sst ON s.submission_id = sst.submission_id AND sst.setting_name = ?
+				WHERE	(sst.setting_value IS NULL OR sst.setting_value = \'\')';
 		} else {
 			$params[] = $settingValue;
-			$sql .= 'INNER JOIN submission_settings ast ON a.submission_id = ast.submission_id
-				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
+			$sql .= 'INNER JOIN submission_settings sst ON s.submission_id = sst.submission_id
+				WHERE	sst.setting_name = ? AND sst.setting_value = ?';
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
-			$sql .= ' AND a.journal_id = ?';
+			$sql .= ' AND s.context_id = ?';
 		}
-		$sql .= ' ORDER BY pa.issue_id, a.submission_id';
+		$sql .= ' ORDER BY ps.issue_id, s.submission_id';
 		$result = $this->retrieve($sql, $params);
 
 		$publishedArticles = array();
@@ -485,9 +386,11 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
-		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, (int) $journalId, $useCache);
-		if (!isset($article) && ctype_digit("$articleId")) $article =& $this->getPublishedArticleByArticleId((int) $articleId, (int) $journalId, $useCache);
+	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
+		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache);
+		if (!$article && ctype_digit("$articleId")) {
+			return $this->getPublishedArticleByArticleId($articleId, $journalId, $useCache);
+		}
 		return $article;
 	}
 
@@ -500,32 +403,30 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return Array
 	 */
-	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
+	function getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$params = array(
 			'cleanTitle', AppLocale::getLocale(),
 			'cleanTitle'
 		);
-		if (isset($journalId)) $params[] = (int) $journalId;
+		if ($journalId) $params[] = (int) $journalId;
 
-		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = $this->$functionName(
-			'SELECT	a.submission_id AS pub_id,
-				COALESCE(atl.setting_value, atpl.setting_value) AS article_title
-			FROM	published_submissions pa,
-				issues i,
-				submissions a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				LEFT JOIN submission_settings atl ON (a.submission_id = atl.submission_id AND atl.setting_name = ? AND atl.locale = ?)
-				LEFT JOIN submission_settings atpl ON (a.submission_id = atpl.submission_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
-			WHERE	pa.submission_id = a.submission_id
-				AND i.issue_id = pa.issue_id
-				AND i.published = 1
-				AND s.section_id IS NOT NULL' .
-				(isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY article_title',
+			'SELECT	s.submission_id AS pub_id,
+				COALESCE(stl.setting_value, stpl.setting_value) AS submission_title
+			FROM	submissions s
+				JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
+				JOIN issues i ON (i.issue_id = ps.issue_id)
+				JOIN sections se ON se.section_id = s.section_id
+				LEFT JOIN submission_settings stl ON (s.submission_id = stl.submission_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN submission_settings stpl ON (s.submission_id = stpl.submission_id AND stpl.setting_name = ? AND stpl.locale = s.locale)
+			WHERE	i.published = 1' .
+				($journalId?' AND s.context_id = ?':'') . '
+			ORDER BY submission_title',
 			$params
 		);
 
+		$articleIds = array();
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['pub_id'];
@@ -544,14 +445,20 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $journalId int
 	 * @return Array
 	 */
-	function &getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
-		$articleIds = array();
+	function getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = $this->$functionName(
-			'SELECT a.submission_id AS pub_id FROM published_submissions pa, submissions a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.submission_id = a.submission_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY pa.date_published DESC',
+			'SELECT	s.submission_id AS pub_id
+			FROM	published_submissions ps
+				JOIN submissions s ON ps.submission_id = s.submission_id
+				JOIN sections se ON s.section_id = se.section_id
+			WHERE	ps.submission_id = s.submission_id
+				' . (isset($journalId)?' AND s.context_id = ?':'') . '
+			ORDER BY ps.date_published DESC',
 			isset($journalId)?(int) $journalId:false
 		);
 
+		$articleIds = array();
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['pub_id'];
@@ -568,13 +475,19 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return Array
 	 */
 	function getPublishedArticleIdsBySection($sectionId, $useCache = true) {
-		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = $this->$functionName(
-			'SELECT a.submission_id FROM published_submissions pa, submissions a, issues i WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.submission_id = a.submission_id AND a.section_id = ? ORDER BY pa.date_published DESC',
+			'SELECT	s.submission_id
+			FROM published_submissions ps
+				JOIN submissions s ON s.submission_id = ps.submission_id
+				JOIN issues i ON ps.issue_id = i.issue_id
+			WHERE	i.published = 1 AND
+				s.section_id = ?
+			ORDER BY ps.date_published DESC',
 			(int) $sectionId
 		);
 
+		$articleIds = array();
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$articleIds[] = $row['submission_id'];
@@ -676,7 +589,11 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function deletePublishedArticlesBySectionId($sectionId) {
 		$result = $this->retrieve(
-			'SELECT pa.submission_id AS submission_id FROM published_submissions pa, submissions a WHERE pa.submission_id = a.submission_id AND a.section_id = ?', (int) $sectionId
+			'SELECT	ps.submission_id AS submission_id
+			FROM	published_submissions ps
+				JOIN submissions s ON ps.submission_id = s.submission_id
+			WHERE	s.section_id = ?',
+			(int) $sectionId
 		);
 
 		while (!$result->EOF) {
@@ -748,7 +665,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function resequencePublishedArticles($sectionId, $issueId) {
 		$result = $this->retrieve(
-			'SELECT pa.published_submission_id FROM published_submissions pa, submissions a WHERE a.section_id = ? AND a.submission_id = pa.submission_id AND pa.issue_id = ? ORDER BY pa.seq',
+			'SELECT ps.published_submission_id FROM published_submissions ps, submissions s WHERE s.section_id = ? AND s.submission_id = ps.submission_id AND ps.issue_id = ? ORDER BY ps.seq',
 			array((int) $sectionId, (int) $issueId)
 		);
 
@@ -783,7 +700,12 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getArticleYearRange($journalId = null) {
 		$result = $this->retrieve(
-			'SELECT MAX(pa.date_published), MIN(pa.date_published) FROM published_submissions pa, submissions a WHERE pa.submission_id = a.submission_id' . (isset($journalId)?' AND a.journal_id = ?':''),
+			'SELECT	MAX(ps.date_published),
+				MIN(ps.date_published)
+			FROM	published_submissions ps,
+				submissions s
+			WHERE	ps.submission_id = s.submission_id
+				' . (isset($journalId)?' AND s.context_id = ?':''),
 			isset($journalId)?(int) $journalId:false
 		);
 		$returner = array($result->fields[0], $result->fields[1]);
