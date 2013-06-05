@@ -63,7 +63,6 @@ class ManagerHandler extends Handler {
 
 
 		$templateMgr->assign('newVersionAvailable', $newVersionAvailable);
-		$templateMgr->assign('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 		$templateMgr->assign('publishingMode', $journal->getSetting('publishingMode'));
 		$templateMgr->assign('announcementsEnabled', $journal->getSetting('enableAnnouncements'));
 		$session = $request->getSession();
