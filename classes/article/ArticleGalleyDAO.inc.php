@@ -100,12 +100,12 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
-		$galleys =& $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
-		if (empty($galleys)) {
+		$galleyFactory =& $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
+		if ($galleyFactory->wasEmpty()) {
 			$galley = null;
 		} else {
-			assert(count($galleys) == 1);
-			$galley =& $galleys[0];
+			assert($galleyFactory->getCount() == 1);
+			$galley =& $galleyFactory->next();
 		}
 
 		return $galley;
@@ -117,7 +117,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $settingValue mixed
 	 * @param $articleId int optional
 	 * @param $journalId int optional
-	 * @return array The galleys identified by setting.
+	 * @return DAOResultFactory The factory for galleys identified by setting.
 	 */
 	function &getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
 		$params = array($settingName);
@@ -147,14 +147,9 @@ class ArticleGalleyDAO extends DAO {
 		$sql .= ' ORDER BY a.journal_id, pa.issue_id, g.galley_id';
 		$result =& $this->retrieve($sql, $params);
 
-		$galleys = array();
-		while (!$result->EOF) {
-			$galleys[] = $this->_returnGalleyFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
 
-		return $galleys;
+		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return $returner;
 	}
 
 	/**

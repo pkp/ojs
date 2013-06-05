@@ -1153,11 +1153,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 	function &_getUnregisteredGalleys(&$journal) {
 		// Retrieve all galleys that have not yet been registered.
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleys = $galleyDao->getGalleysBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, null, $journal->getId());
+		$galleyFactory = $galleyDao->getGalleysBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, null, $journal->getId());
 
 		// Retrieve issues, articles and language for galleys.
 		$galleyData = array();
-		foreach ($galleys as $galley) {
+		while ($galley = $galleyFactory->next()) {
 			$preparedGalley =& $this->_prepareGalleyData($galley, $journal);
 			if (is_array($preparedGalley)) {
 				$galleyData[] =& $preparedGalley;
