@@ -40,11 +40,14 @@ define('STATISTICS_DIMENSION_ISSUE_ID', 'issue_id');
 define('STATISTICS_DIMENSION_ARTICLE_ID', 'submission_id');
 define('STATISTICS_DIMENSION_ASSOC_TYPE', 'assoc_type');
 define('STATISTICS_DIMENSION_ASSOC_ID', 'assoc_id');
+define('STATISTICS_DIMENSION_FILE_TYPE', 'file_type');
 // 2) time dimension:
 define('STATISTICS_DIMENSION_MONTH', 'month');
 define('STATISTICS_DIMENSION_DAY', 'day');
 // 3) geography dimension:
 define('STATISTICS_DIMENSION_COUNTRY', 'country_id');
+define('STATISTICS_DIMENSION_REGION', 'region');
+define('STATISTICS_DIMENSION_CITY', 'city');
 // 4) metric type dimension (non-additive!):
 define('STATISTICS_DIMENSION_METRIC_TYPE', 'metric_type');
 
@@ -57,6 +60,11 @@ define('STATISTICS_ORDER_DESC', 'DESC');
 
 // Global report size limit:
 define('STATISTICS_MAX_ROWS', 5000);
+
+// File type to be used in publication object dimension.
+define('STATISTICS_FILE_TYPE_HTML', 1);
+define('STATISTICS_FILE_TYPE_PDF', 2);
+define('STATISTICS_FILE_TYPE_OTHER', 3);
 
 
 class Application extends PKPApplication {

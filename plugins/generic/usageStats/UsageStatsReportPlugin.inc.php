@@ -16,9 +16,6 @@
 import('classes.plugins.ReportPlugin');
 
 define('OJS_METRIC_TYPE_COUNTER', 'ojs::counter');
-define('USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_HTML', 1);
-define('USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF', 2);
-define('USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER', 3);
 
 class UsageStatsReportPlugin extends ReportPlugin {
 

@@ -127,11 +127,11 @@ class UsageStatsLoader extends FileLoader {
 				assert(false);
 			} else if ($galley) {
 				if ($galley->isPdfGalley()) {
-					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF;
+					$type = STATISTICS_FILE_TYPE_PDF;
 				} else if (is_a($galley, 'ArticleGalley') && $galley->isHtmlGalley()) {
-					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_HTML;
+					$type = STATISTICS_FILE_TYPE_HTML;
 				} else {
-					$type = USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER;
+					$type = STATISTICS_FILE_TYPE_OTHER;
 				}
 			}
 
@@ -151,7 +151,7 @@ class UsageStatsLoader extends FileLoader {
 				 $lastInsertedEntries[$entryHash] = $entryData['date'];
 			} else {
 				// Decide what time filter to use, depending on object type.
-				if ($type == USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF || $type == USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER) {
+				if ($type == STATISTICS_FILE_TYPE_PDF || $type == STATISTICS_FILE_TYPE_OTHER) {
 					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_OTHER;
 				} else {
 					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_HTML;
