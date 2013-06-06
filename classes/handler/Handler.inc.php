@@ -67,16 +67,8 @@ class Handler extends PKPHandler {
 				$journal = $journals->next();
 			}
 			if (!$journal && $journalsCount > 1) {
-				// Decide which journal to return.
-				$user = $request->getUser();
-				if ($user) {
-					// We have a user (private access).
-					$journal = $this->getFirstUserContext($user, $journals->toArray());
-				}
-				if (!$journal) {
-					// Get the site redirect.
-					$journal = $this->getSiteRedirectContext($request);
-				}
+				// Get the site redirect, if one exists.
+				$journal = $this->getSiteRedirectContext($request);
 			}
 		} else {
 			// Return the requested journal.
