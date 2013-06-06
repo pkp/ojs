@@ -100,20 +100,6 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			// Put this user in the Manager group.
 			$this->_assignManagerGroup($journalId);
 
-			// Make the site administrator the journal manager of newly created journals
-			// FIXME: Deprecated role-based behavior; remove.
-			$sessionManager = SessionManager::getManager();
-			$userSession = $sessionManager->getUserSession();
-			if ($userSession->getUserId() != null && $userSession->getUserId() != 0 && !empty($journalId)) {
-				$role = new Role();
-				$role->setJournalId($journalId);
-				$role->setUserId($userSession->getUserId());
-				$role->setRoleId(ROLE_ID_MANAGER);
-
-				$roleDao = DAORegistry::getDAO('RoleDAO');
-				$roleDao->insertRole($role);
-			}
-
 			// Make the file directories for the journal
 			import('lib.pkp.classes.file.FileManager');
 			$fileManager = new FileManager();
