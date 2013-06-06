@@ -116,39 +116,6 @@
 
 	<!--
 	  *
-	  * TABLE roles
-	  *
-	  -->
-	<table name="roles">
-		<field name="journal_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="user_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="role_id" type="I8">
-			<NOTNULL />
-		</field>
-		<descr>User roles in journals.</descr>
-		<index name="roles_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="roles_user_id">
-			<col>user_id</col>
-		</index>
-		<index name="roles_role_id">
-			<col>role_id</col>
-		</index>
-		<index name="roles_pkey">
-			<col>journal_id</col>
-			<col>user_id</col>
-			<col>role_id</col>
-			<UNIQUE />
-		</index>
-	</table>
-
-	<!--
-	  *
 	  * TABLE sections
 	  *
 	  -->

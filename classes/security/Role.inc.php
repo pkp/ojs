@@ -88,42 +88,6 @@ class Role extends PKPRole {
 				return parent::getPath();
 		}
 	}
-
-	//
-	// Get/set methods
-	//
-
-	/**
-	 * Get journal ID associated with role.
-	 * @return int
-	 */
-	function getJournalId() {
-		return $this->getData('journalId');
-	}
-
-	/**
-	 * Set journal ID associated with role.
-	 * @param $journalId int
-	 */
-	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
-	}
-
-	/**
-	 * Get user ID associated with role.
-	 * @return int
-	 */
-	function getUserId() {
-		return $this->getData('userId');
-	}
-
-	/**
-	 * Set user ID associated with role.
-	 * @param $userId int
-	 */
-	function setUserId($userId) {
-		return $this->setData('userId', $userId);
-	}
 }
 
 ?>
