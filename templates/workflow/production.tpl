@@ -17,6 +17,18 @@
 
 	{url|assign:productionReadyFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.productionReady.ProductionReadyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}
 	{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
+
+	{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)}
+		{fbvFormArea id="galleys"}
+			{fbvFormSection}
+				<!--  Galleys -->
+				{url|assign:galleyGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
+				{load_url_in_div id="galleysGridContainer"|uniqid url=$galleyGridUrl}
+			{/fbvFormSection}
+		{/fbvFormArea}
+	{else}
+		<h3>{translate key="submission.publicationFormats"}</h3>
+	{/if}
 </div>
 
 {include file="common/footer.tpl"}

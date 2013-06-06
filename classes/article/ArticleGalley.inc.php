@@ -160,6 +160,22 @@ class ArticleGalley extends Representation {
 	function getRemoteURL() {
 		return $this->getData('remoteURL');
 	}
+
+	/**
+	 * Determines if a galley is available or not.
+	 * @return boolean
+	 */
+	function getIsAvailable() {
+		return $this->getData('isAvailable') ? true : false;
+	}
+
+	/**
+	 * Sets whether a galley is available or not.
+	 * @param boolean $isAvailable
+	 */
+	function setIsAvailable($isAvailable) {
+		return $this->setData('isAvailable', $isAvailable);
+	}
 }
 
 ?>

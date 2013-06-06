@@ -711,6 +711,10 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="remote_url" type="C2" size="255" />
+		<field name="is_available" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<descr>Submission galleys</descr>
 		<index name="submission_galleys_submission_id">
 			<col>submission_id</col>

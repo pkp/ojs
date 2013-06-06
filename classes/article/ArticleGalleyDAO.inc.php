@@ -29,6 +29,14 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Return a new data object.
+	 * @return ArticleGalley
+	 */
+	function newDataObject() {
+		return new ArticleGalley();
+	}
+
+	/**
 	 * Retrieve a galley by ID.
 	 * @param $galleyId int
 	 * @param $articleId int optional
@@ -183,6 +191,27 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all galleys for an article.
+	 * @param $articleId int
+	 * @return array ArticleGalleys
+	 */
+	function &getById($articleId) {
+		$galleys = array();
+
+		$result =& $this->retrieve(
+				'SELECT g.*,
+				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+				FROM submission_galleys g
+				LEFT JOIN article_files a ON (g.file_id = a.file_id)
+				WHERE g.submission_id = ? ORDER BY g.seq',
+				(int) $articleId
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Retrieve all galleys of a journal.
 	 * @param $journalId int
 	 * @return DAOResultFactory
@@ -269,21 +298,12 @@ class ArticleGalleyDAO extends DAO {
 			$galley = new ArticleGalley();
 		}
 		$galley->setId($row['galley_id']);
-		$galley->setArticleId($row['submission_id']);
+		$galley->setSubmissionId($row['submission_id']);
 		$galley->setLocale($row['locale']);
-		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
-		$galley->setFileStage($row['file_stage']);
 		$galley->setSequence($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
-
-		// ArticleFile set methods
-		$galley->setFileName($row['file_name']);
-		$galley->setOriginalFileName($row['original_file_name']);
-		$galley->setFileType($row['file_type']);
-		$galley->setFileSize($row['file_size']);
-		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
-		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
+		$galley->setIsAvailable($row['is_available']);
 
 		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
@@ -299,18 +319,19 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url)
+				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, is_available)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
-				(int) $galley->getArticleId(),
-				(int) $galley->getFileId(),
+				(int) $galley->getSubmissionId(),
+				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
-				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleId()) : $galley->getSequence(),
-				$galley->getRemoteURL()
+				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
+				$galley->getRemoteURL(),
+				$galley->getIsAvailable(),
 			)
 		);
 		$galley->setId($this->getInsertId());
@@ -335,17 +356,19 @@ class ArticleGalleyDAO extends DAO {
 					html_galley = ?,
 					style_file_id = ?,
 					seq = ?,
-					remote_url = ?
+					remote_url = ?,
+					is_available = ?
 				WHERE galley_id = ?',
 			array(
-				(int) $galley->getFileId(),
+				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
 				(int) $galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
 				$galley->getRemoteURL(),
-				(int) $galley->getId()
+				(int) $galley->getIsAvailable(),
+				(int) $galley->getId(),
 			)
 		);
 		$this->updateLocaleFields($galley);
@@ -491,7 +514,7 @@ class ArticleGalleyDAO extends DAO {
 		$images = array();
 
 		$result =& $this->retrieve(
-			'SELECT a.* FROM article_html_galley_images i, article_files a
+			'SELECT a.* FROM submission_galley_html_images i, article_files a
 			WHERE i.file_id = a.file_id AND i.galley_id = ?',
 			(int) $galleyId
 		);
@@ -514,7 +537,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function insertGalleyImage($galleyId, $fileId) {
 		return $this->update(
-			'INSERT INTO article_html_galley_images
+			'INSERT INTO submission_galley_html_images
 			(galley_id, file_id)
 			VALUES
 			(?, ?)',
@@ -529,7 +552,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function deleteGalleyImage($galleyId, $fileId) {
 		return $this->update(
-			'DELETE FROM article_html_galley_images
+			'DELETE FROM submission_galley_html_images
 			WHERE galley_id = ? AND file_id = ?',
 			array((int) $galleyId, (int) $fileId)
 		);
@@ -541,7 +564,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function deleteImagesByGalley($galleyId) {
 		return $this->update(
-			'DELETE FROM article_html_galley_images WHERE galley_id = ?',
+			'DELETE FROM submission_galley_html_images WHERE galley_id = ?',
 			(int) $galleyId
 		);
 	}

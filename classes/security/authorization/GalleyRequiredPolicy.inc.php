@@ -1,6 +1,6 @@
 <?php
 /**
- * @file classes/security/authorization/internal/GalleyRequiredPolicy.inc.php
+ * @file classes/security/authorization/GalleyRequiredPolicy.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -21,7 +21,7 @@ class GalleyRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @param $submissionParameterName string the request parameter we expect
 	 *  the submission id in.
 	 */
-	function GalleyRequiredPolicy($request, &$args, $parameterName = 'galleyId', $operations = null) {
+	function GalleyRequiredPolicy($request, &$args, $parameterName = 'articleGalleyId', $operations = null) {
 		parent::DataObjectRequiredPolicy($request, $args, $parameterName, 'user.authorization.invalidGalley', $operations);
 	}
 
