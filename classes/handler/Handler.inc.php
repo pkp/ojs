@@ -48,9 +48,10 @@ class Handler extends PKPHandler {
 	 * a request needs to have one in its context but may be in a site-level
 	 * context as specified in the URL.
 	 * @param $request Request
+	 * * @param $bestGuess true iff the function should make a best guess if no single context is appropriate
 	 * @return mixed Either a Journal or null if none could be determined.
 	 */
-	function getTargetContext($request) {
+	function getTargetContext($request, $bestGuess = false) {
 		// Get the requested path.
 		$router = $request->getRouter();
 		$requestedPath = $router->getRequestedContextPath($request);
@@ -67,8 +68,16 @@ class Handler extends PKPHandler {
 				$journal = $journals->next();
 			}
 			if (!$journal && $journalsCount > 1) {
-				// Get the site redirect, if one exists.
-				$journal = $this->getSiteRedirectContext($request);
+				// Decide wich press to return.
+				$user = $request->getUser();
+				if ($user && $bestGuess) {
+					// We have a user (private access).
+					$journal = $this->getFirstUserContext($user, $journals->toArray());
+				}
+				if (!$journal) {
+					// Get the site redirect.
+					$journal = $this->getSiteRedirectContext($request);
+				}
 			}
 		} else {
 			// Return the requested journal.
