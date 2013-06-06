@@ -36,7 +36,7 @@ class IndexHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
-		$journal = $router->getContext($request);
+		$journal = $this->getTargetContext($request);
 		if ($journal) {
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
@@ -77,7 +77,8 @@ class IndexHandler extends Handler {
 				$media->replaceCodeVars();
 				$blocks[] = $media->getCode();
 			}
-			$templateMgr->assign_by_ref('socialMediaBlocks', $blocks);
+			$templateMgr->assign('socialMediaBlocks', $blocks);
+			$templateMgr->assign('journal', $journal);
 
 			$templateMgr->display('index/journal.tpl');
 		} else {
