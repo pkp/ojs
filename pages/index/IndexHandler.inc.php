@@ -30,13 +30,22 @@ class IndexHandler extends Handler {
 	 */
 	function index($args, $request) {
 		$this->validate(null, $request);
-		$this->setupTemplate($request);
+		$journal = $request->getJournal();
+
+		if (!$journal) {
+			$journal = $this->getTargetContext($request);
+			if ($journal) {
+				// There's a target context but no journal in the current request. Redirect.
+				$request->redirect($journal->getPath());
+			}
+		}
 
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journalPath = $router->getRequestedContextPath($request);
-		$journal = $this->getTargetContext($request);
+		$this->setupTemplate($request);
+
 		if ($journal) {
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getLocalizedPageHeaderTitle(true));
@@ -78,7 +87,6 @@ class IndexHandler extends Handler {
 				$blocks[] = $media->getCode();
 			}
 			$templateMgr->assign('socialMediaBlocks', $blocks);
-			$templateMgr->assign('journal', $journal);
 
 			$templateMgr->display('index/journal.tpl');
 		} else {

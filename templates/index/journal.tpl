@@ -8,7 +8,7 @@
  *
  *}
 {strip}
-{assign var="pageTitleTranslated" value=$journal->getLocalizedName()}
+{assign var="pageTitleTranslated" value=$currentJournal->getLocalizedName()}
 {include file="common/header.tpl"}
 {/strip}
 
@@ -36,7 +36,7 @@
 	</div>
 {/if}
 
-{if $issue && $journal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+{if $issue && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	{* Display the table of contents or cover page of the current issue. *}
 	<br />
 	<h3>{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</h3>
