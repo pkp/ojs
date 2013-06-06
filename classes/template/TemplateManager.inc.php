@@ -53,8 +53,6 @@ class TemplateManager extends PKPTemplateManager {
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet($this->request->getBaseUrl() . '/' . $siteStyleFilename);
 
-			$this->assign('homeContext', array());
-
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
 			if (isset($context)) {
