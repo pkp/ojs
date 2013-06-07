@@ -29,7 +29,7 @@ class PiwikSettingsForm extends Form {
 	 */
 	function PiwikSettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
-		$this->plugin = &$plugin;
+		$this->plugin =& $plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
