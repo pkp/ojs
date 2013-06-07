@@ -46,10 +46,8 @@ class ArticleGalleyDAO extends DAO {
 		$params = array((int) $galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result =& $this->retrieve(
-			'SELECT	g.*,
-				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+			'SELECT	g.*
 			FROM	submission_galleys g
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE	g.galley_id = ?' .
 			($articleId !== null?' AND g.submission_id = ?':''),
 			$params
@@ -85,7 +83,7 @@ class ArticleGalleyDAO extends DAO {
 			FROM article_galley_settings ags
 				INNER JOIN submission_galleys ag ON ags.galley_id = ag.galley_id
 				INNER JOIN submissions a ON ag.submission_id = a.submission_id
-			WHERE ags.setting_name = ? AND ags.setting_value = ? AND ags.galley_id <> ? AND a.journal_id = ?',
+			WHERE ags.setting_name = ? AND ags.setting_value = ? AND ags.galley_id <> ? AND a.context_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
@@ -130,10 +128,8 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
 		$params = array($settingName);
 
-		$sql = 'SELECT	g.*,
-				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+		$sql = 'SELECT	g.*
 			FROM	submission_galleys g
-				LEFT JOIN article_files af ON (g.file_id = af.file_id)
 				INNER JOIN submissions a ON a.submission_id = g.submission_id
 				LEFT JOIN published_submissions pa ON g.submission_id = pa.submission_id ';
 		if (is_null($settingValue)) {
@@ -150,9 +146,9 @@ class ArticleGalleyDAO extends DAO {
 		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
-			$sql .= ' AND a.journal_id = ?';
+			$sql .= ' AND a.context_id = ?';
 		}
-		$sql .= ' ORDER BY a.journal_id, pa.issue_id, g.galley_id';
+		$sql .= ' ORDER BY a.context_id, pa.issue_id, g.galley_id';
 		$result =& $this->retrieve($sql, $params);
 
 
@@ -169,10 +165,8 @@ class ArticleGalleyDAO extends DAO {
 		$galleys = array();
 
 		$result =& $this->retrieve(
-			'SELECT g.*,
-			a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+			'SELECT g.*
 			FROM submission_galleys g
-			LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE g.submission_id = ? ORDER BY g.seq',
 			(int) $articleId
 		);
@@ -199,10 +193,8 @@ class ArticleGalleyDAO extends DAO {
 		$galleys = array();
 
 		$result =& $this->retrieve(
-				'SELECT g.*,
-				a.file_name, a.original_file_name, a.file_stage, a.file_type, a.file_size, a.date_uploaded, a.date_modified
+				'SELECT g.*
 				FROM submission_galleys g
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 				WHERE g.submission_id = ? ORDER BY g.seq',
 				(int) $articleId
 		);
@@ -219,12 +211,10 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleysByJournalId($journalId) {
 		$result =& $this->retrieve(
 			'SELECT
-				g.*,
-				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
+				g.*
 			FROM submission_galleys g
-			LEFT JOIN article_files af ON (g.file_id = af.file_id)
 			INNER JOIN submissions a ON (g.submission_id = a.submission_id)
-			WHERE a.journal_id = ?',
+			WHERE a.context_id = ?',
 			(int) $journalId
 		);
 
