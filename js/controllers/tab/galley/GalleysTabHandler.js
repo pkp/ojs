@@ -79,11 +79,11 @@
 			refreshTabsHandler_ = function(sourceElement, event) {
 
 		if (this.tabsUrl_) {
-			var publicationId = null,
+			var galleyId = null,
 					$element = this.getHtmlElement(),
 					$selectedTabLink = $('li.ui-tabs-selected',
 							this.getHtmlElement()).find('a'),
-					publicationElementId;
+					galleyElementId;
 
 			if ($selectedTabLink.length) {
 				galleyElementId = $selectedTabLink.attr('id');
