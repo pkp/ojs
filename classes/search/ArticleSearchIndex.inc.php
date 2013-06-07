@@ -145,8 +145,10 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			}
 
 			// Index galley files
-			$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			$files = $fileDao->getGalleysByArticle($article->getId());
+			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$files = $submissionFiles = $fileDao->getLatestRevisions(
+				$article->getId(), WORKFLOW_STAGE_ID_PRODUCTION
+			);
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
 					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
