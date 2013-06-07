@@ -53,6 +53,17 @@
 			<span class="instruct">{translate key="admin.settings.journalRedirectInstructions"}</span>
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{fbvFormArea id="journalListOptions" class="border"}
+		<p>{translate key="admin.settings.journalsList.description"}</p>
+
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" id="showTitle" name="showTitle" value=1 checked=$showTitle label="admin.settings.journalsList.showTitle"}
+			{fbvElement type="checkbox" id="showThumbnail" name="showThumbnail" value=1 checked=$showThumbnail label="admin.settings.journalsList.showThumbnail"}
+			{fbvElement type="checkbox" id="showDescription" name="showDescription" value=1 checked=$showDescription label="admin.settings.journalsList.showDescription"}
+		{/fbvFormSection}
+	{/fbvFormArea}
+
 	{fbvFormArea id="siteContact"}
 		{fbvFormSection title="admin.settings.contactName" required=true}
 			{fbvElement type="text" multilingual=true name="contactName" id="contatcName" value=$contactName}
@@ -69,7 +80,7 @@
 	{/fbvFormArea}
 	{fbvFormArea id="appearance"}
 		{fbvFormSection title="admin.settings.siteStyleSheet"}
-			<div id="{$uploadCssLinkAction->getId()} class="pkp_linkActions">
+			<div id="{$uploadCssLinkAction->getId()}" class="pkp_linkActions">
 				{include file="linkAction/linkAction.tpl" action=$uploadCssLinkAction contextId="siteSetupForm"}
 			</div>
 			<div id="siteStyleSheet">

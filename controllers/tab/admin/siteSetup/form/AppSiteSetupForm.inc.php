@@ -42,13 +42,18 @@ class AppSiteSetupForm extends SiteSetupForm {
 		$site = $request->getSite();
 		$siteDao = DAORegistry::getDAO('SiteDAO');
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
+
+		// Journal list display options
+		$this->setData('showTitle', $site->getSetting('showTitle'));
+		$this->setData('showThumbnail', $site->getSetting('showThumbnail'));
+		$this->setData('showDescription', $site->getSetting('showDescription'));
 	}
 
 	/**
 	 * @see SiteSetupForm::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('defaultMetricType'));
+		$this->readUserVars(array('defaultMetricType', 'showTitle', 'showThumbnail', 'showDescription'));
 		return parent::readInputData();
 	}
 
@@ -58,8 +63,13 @@ class AppSiteSetupForm extends SiteSetupForm {
 	function execute() {
 		parent::execute();
 
-		$siteSettingsDao =& $this->siteSettingsDao; /* @var $siteSettingsDao SiteSettingsDAO */
+		$siteSettingsDao = $this->siteSettingsDao; /* @var $siteSettingsDao SiteSettingsDAO */
 		$siteSettingsDao->updateSetting('defaultMetricType', $this->getData('defaultMetricType'), 'string');
+
+		// Journal list display options
+		$siteSettingsDao->updateSetting('showTitle', $this->getData('showTitle'), 'bool');
+		$siteSettingsDao->updateSetting('showThumbnail', $this->getData('showThumbnail'), 'bool');
+		$siteSettingsDao->updateSetting('showDescription', $this->getData('showDescription'), 'bool');
 	}
 }
 
