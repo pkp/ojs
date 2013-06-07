@@ -42,4 +42,10 @@
 	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.]]></message>
 	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>This galley will <em>be made available</em> to readers.]]></message>
 	<message key="grid.action.availableArticleGalley">Make this galley available</message>
+
+	<!-- galley files grid -->
+	<message key="submission.galleyFiles">Galley Files</message>
+	<message key="submission.proofReadingDescription"><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></message>
+	<message key="grid.action.approveProof">Approve this proof for inclusion in the galley.</message>
+	<message key="grid.action.pageProofApproved">This proof has been approved for inclusion in the galley.</message>
 </locale>

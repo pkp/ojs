@@ -29,7 +29,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			array_merge(array(
 				'externalReview', 'saveExternalReview',
 				'sendReviews', 'saveSendReviews',
-				'promote', 'savePromote'
+				'promote', 'savePromote', 'saveApproveProof'
 			), $this->_getReviewRoundOps())
 		);
 	}
@@ -73,6 +73,48 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 		return $this->_saveEditorDecision($args, $request, 'NewReviewRoundForm', $redirectOp, SUBMISSION_EDITOR_DECISION_RESUBMIT);
 	}
 
+	/**
+	 * Approve a galley submission file.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function saveApproveProof($args, $request) {
+		$submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+
+		// Make sure we only alter files associated with a galley.
+		if ($submissionFile->getAssocType() !== ASSOC_TYPE_GALLEY) {
+			fatalError('The requested file is not associated with any galley.');
+		}
+		if ($submissionFile->getViewable()) {
+
+			// No longer expose the file to readers.
+			$submissionFile->setViewable(false);
+		} else {
+
+			// Expose the file to readers (e.g. via e-commerce).
+			$submissionFile->setViewable(true);
+
+			// Log the approve proof event.
+			import('lib.pkp.classes.log.SubmissionLog');
+			import('classes.log.SubmissionEventLogEntry'); // constants
+			$user = $request->getUser();
+
+			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+			$galley = $articleGalleyDao->getGalleyByBestGalleyId($submissionFile->getAssocId(), $submission->getId());
+
+			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_PROOFS_APPROVED, 'submission.event.proofsApproved', array('formatName' => $galley->getLabel(),'name' => $user->getFullName(), 'username' => $user->getUsername()));
+		}
+
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao->updateObject($submissionFile);
+
+		// update the submission's file index
+		import('classes.search.ArticleSearchIndex');
+		ArticleSearchIndex::articleFilesChanged($submission);
+
+		return DAO::getDataChangedEvent($submissionFile->getId());
+	}
 
 	//
 	// Private helper methods

@@ -21,10 +21,15 @@ switch ($op) {
 	case 'externalReview':
 	case 'editorial':
 	case 'production':
+	case 'galleysTab':
 	case 'editorDecisionActions':
 	case 'submissionProgressBar':
 		define('HANDLER_CLASS', 'WorkflowHandler');
 		import('pages.workflow.WorkflowHandler');
+		break;
+	case 'fetchGalley':
+		define('HANDLER_CLASS', 'GalleyHandler');
+		import('pages.workflow.GalleyHandler');
 		break;
 }
 

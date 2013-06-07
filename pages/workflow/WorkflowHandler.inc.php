@@ -31,7 +31,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				'editorDecisionActions', // Submission & review
 				'externalReview', // review
 				'editorial',
-				'production', // Production
+				'production', 'galleysTab', // Production
 				'submissionProgressBar'
 			)
 		);
@@ -56,6 +56,11 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			),
 			NOTIFICATION_LEVEL_TRIVIAL => array()
 		);
+
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleys =& $galleyDao->getGalleysByArticle($submission->getId());
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('galleys', $galleys);
 
 		$templateMgr->assign('productionNotificationRequestOptions', $notificationRequestOptions);
 		$templateMgr->display('workflow/production.tpl');
@@ -87,6 +92,23 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$templateMgr->assign('submissionIsReady', true);
 		}
 		return $templateMgr->fetchJson('workflow/submissionProgressBar.tpl');
+	}
+
+	/**
+	 * Show the production stage accordion contents
+	 * @param $request PKPRequest
+	 * @param $args array
+	 */
+	function galleysTab(&$args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$galleys =& $galleyDao->getGalleysByArticle($submission->getId());
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('galleys', $galleys->toAssociativeArray());
+		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
+
+		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
 	}
 
 	/**

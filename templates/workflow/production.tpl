@@ -27,8 +27,12 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{else}
-		<h3>{translate key="submission.publicationFormats"}</h3>
+		<h3>{translate key="submission.galleys"}</h3>
 	{/if}
+
+	<div id='galleyTabsContainer'>
+		{include file="workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$galleys}
+	</div>
 </div>
 
 {include file="common/footer.tpl"}
