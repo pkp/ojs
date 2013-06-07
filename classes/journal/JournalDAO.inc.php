@@ -152,7 +152,7 @@ class JournalDAO extends ContextDAO {
 	 * @param $search string optional
 	 * @return DAOResultFactory containing matching journals
 	 */
-	function &getJournals($enabledOnly = false, $rangeInfo = null, $sortBy = JOURNAL_FIELD_SEQUENCE, $searchField = null, $searchMatch = null, $search = null) {
+	function getJournals($enabledOnly = false, $rangeInfo = null, $sortBy = JOURNAL_FIELD_SEQUENCE, $searchField = null, $searchMatch = null, $search = null) {
 		$joinSql = $whereSql = $orderBySql = '';
 		$params = array();
 		$needTitleJoin = false;
@@ -211,7 +211,7 @@ class JournalDAO extends ContextDAO {
 		// Clean up SQL strings
 		if ($whereSql) $whereSql = "WHERE $whereSql";
 		if ($orderBySql) $orderBySql = "ORDER BY $orderBySql";
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			"SELECT	j.*
 			FROM	journals j
 				$joinSql
@@ -220,8 +220,7 @@ class JournalDAO extends ContextDAO {
 			$params, $rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_fromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -249,7 +248,6 @@ class JournalDAO extends ContextDAO {
 		foreach($pubObjectDaos as $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);
-			unset($dao);
 		}
 	}
 
@@ -283,7 +281,6 @@ class JournalDAO extends ContextDAO {
 				$excludedId = 0;
 			}
 			if ($dao->pubIdExists($pubIdType, $pubId, $excludedId, $journalId)) return true;
-			unset($dao);
 		}
 		return false;
 	}
